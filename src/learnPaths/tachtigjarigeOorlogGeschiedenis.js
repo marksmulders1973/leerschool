@@ -181,7 +181,7 @@ const steps = [
         q: "Welke godsdienst werd vervolgd door Filips II?",
         options: ["Calvinisme (protestantisme)", "Katholicisme", "Jodendom", "Islam"],
         answer: 0,
-        wrongHints: [null, "Filips II was juist katholiek — hij beschermde dat geloof.", "Wel ook (joden), maar de hoofdvervolging in dit conflict betrof calvinisten.", "Niet relevant in 16e-eeuws NL."],
+        wrongHints: [null, "Filips II was juist katholiek — hij beschermde dat geloof.", "Wel ook (joden), maar dat was niet de hoofdvervolging in dit conflict.", "Niet relevant in 16e-eeuws NL."],
         uitlegPad: {
           stappen: [{ titel: "Calvinisten vervolgd", tekst: "In 16e eeuw verspreidde calvinisme (Johannes Calvijn, Zwitsers protestant) snel in Nederlanden. Filips II zag calvinisten als ketters + bedreiging katholieke kerk. Inquisitie pakte ze op, martelde, verbrandde op brandstapel. Vooral in steden Antwerpen, Gent." }],
           woorden: [{ woord: "calvinisme", uitleg: "Protestants geloof. Streng, sober, geen heiligenbeelden. Volgers van Calvijn (1509-1564)." }, { woord: "inquisitie", uitleg: "Kerkelijke rechtbank tegen ketters. Bekend om martelmethoden." }],
@@ -204,7 +204,7 @@ const steps = [
         q: "Wat gebeurde er bij de **Beeldenstorm** (1566)?",
         options: ["Calvinisten vernielden heiligenbeelden in katholieke kerken","Een aardbeving verwoestte kerken","Spaanse soldaten plunderden steden","Een grote stormvloed"],
         answer: 0,
-        wrongHints: [null, "Geen natuurramp — een opstand.", "Andersom — de Spanjaarden kwamen pas daarná wraak nemen.", "Niet 'storm' maar 'beeldenstorm' — vernieling van beelden."],
+        wrongHints: [null, "Geen natuurramp — een opstand.", "Andersom — de Spanjaarden kwamen pas daarná wraak nemen.", "Geen weer — denk aan wat er in de kerken gebeurde."],
         uitlegPad: {
           stappen: [{ titel: "Augustus 1566 — kerkvernielingen", tekst: "10 augustus 1566 begon Beeldenstorm in Steenvoorde (Vlaanderen). Calvinisten zagen heiligenbeelden + schilderijen als 'afgoderij' (verboden in protestantisme). Vernielden honderden kerken in weken: Antwerpen, Gent, Amsterdam, Utrecht. Plus uiting woede over vervolging + belastingen." }],
           woorden: [{ woord: "Beeldenstorm", uitleg: "Protestantse vernieling van katholieke kerkinrichting 1566." }, { woord: "afgoderij", uitleg: "Verering van beelden ipv God zelf. Calvinisten zagen heiligen als afgoderij." }],
@@ -218,7 +218,7 @@ const steps = [
         q: "Wat betekent de naam **'geuzen'**?",
         options: ["Bedelaars (oorspronkelijk spotnaam)","Krijgers","Edelen","Calvinistische dominees"],
         answer: 0,
-        wrongHints: [null, "Wel werden ze later strijders, maar dat was de oorspronkelijke betekenis niet.", "Andersom — edelen werden zo genoemd om ze te beledigen.", "Niet specifiek dominees."],
+        wrongHints: [null, "Wel werden ze later strijders, maar dat was de oorspronkelijke betekenis niet.", "Wel werden edelen zo genoemd — maar wat betekent het woord zelf?", "Niet specifiek dominees."],
         uitlegPad: {
           stappen: [{ titel: "Spotnaam → eretitel", tekst: "1566: lage adel diende bij landvoogdes Smeekschrift der Edelen (verzoek stop vervolging). Adviseur Berlaymont zei spottend 'ce ne sont que des gueux' (Frans: 'het zijn maar bedelaars'). NL adel pikte naam trots op: 'wij ZIJN geuzen!' Werd eretitel verzet." }],
           woorden: [{ woord: "geus", uitleg: "Frans 'gueux' = bedelaar. Spottend → eretitel verzet." }, { woord: "Watergeuzen", uitleg: "Geuzen die ter zee opereerden (1568-1572). Plunderden Spaanse schepen." }],
@@ -239,7 +239,7 @@ const steps = [
         q: "Wat was de **Bloedraad**?",
         options: ["Rechtbank van Alva die opstandelingen ter dood veroordeelde","Een vrijwilligersleger","Een Nederlandse opstandsbeweging","Een soort straat in Brussel"],
         answer: 0,
-        wrongHints: [null, "Geen leger — een rechtbank.", "Andersom — de Bloedraad **strafte** opstandelingen.", "Niet een straat — een bestuurslichaam."],
+        wrongHints: [null, "Geen leger — een rechtbank.", "Andersom — de Bloedraad stond aan de kant van Spanje.", "Niet een straat — een bestuurslichaam."],
         uitlegPad: {
           stappen: [{ titel: "Raad van Beroerten — Alva 1567", tekst: "Hertog van Alva stelde 1567 nieuwe rechtbank in: officieel 'Raad van Beroerten' (= 'onlusten'). NL noemden het Bloedraad omdat duizenden ter dood werden veroordeeld voor deelname Beeldenstorm. Bekendste slachtoffers: graven Egmond + Hoorne, onthoofd 1568 in Brussel." }],
           woorden: [{ woord: "Bloedraad", uitleg: "Bijnaam van Nederlanders voor Alva's rechtbank. Officieel: Raad van Beroerten." }, { woord: "Alva", uitleg: "Fernando Álvarez de Toledo, hertog van Alva. Spaanse generaal. Bijnaam 'IJzeren Hertog'." }],
@@ -346,7 +346,7 @@ const steps = [
         q: "Wat was de **Unie van Utrecht** (1579)?",
         options: ["Verbond van noordelijke protestantse provincies tegen Spanje","Een katholiek vredesverdrag","Een handelsverbond","Een Spaanse legereenheid"],
         answer: 0,
-        wrongHints: [null, "Andersom — Unie van Utrecht was protestants, anti-katholiek.", "Geen handelsverbond — politiek-militair.", "Niet Spaans — anti-Spaans."],
+        wrongHints: [null, "Nee — de katholieke zuidelijke provincies sloten een ándere unie.", "Geen handelsverbond — politiek-militair.", "Niet Spaans — anti-Spaans."],
         uitlegPad: {
           stappen: [{ titel: "Unie Utrecht — fundament Republiek", tekst: "Januari 1579: 7 noordelijke protestantse provincies tekenden Unie van Utrecht: Holland, Zeeland, Utrecht, Gelderland, Friesland, Groningen, Overijssel. Verbond tegen Spanje + voor godsdienstvrijheid. Werd 2 jaar later (1581) basis voor onafhankelijkheid. Tegelijk: Unie van Atrecht (zuidelijk + katholiek) bleef Filips trouw." }],
           woorden: [{ woord: "Unie van Utrecht", uitleg: "Verbond 7 noordelijke provincies 1579. Tegen Spanje." }, { woord: "Unie van Atrecht", uitleg: "Tegenpool 1579: zuidelijke katholieke provincies bleven Filips II trouw." }],
@@ -397,7 +397,7 @@ const steps = [
         q: "Hoeveel provincies had de Republiek?",
         options: ["7", "12", "3", "17"],
         answer: 0,
-        wrongHints: [null, "Te veel — er waren 7 noordelijke.", "Te weinig.", "Dat waren de 17 Provinciën onder Filips II — voordat het splitste."],
+        wrongHints: [null, "Te veel — dat is het aantal provincies van nu.", "Te weinig.", "Dat waren de 17 Provinciën onder Filips II — voordat het splitste."],
         uitlegPad: {
           stappen: [{ titel: "7 verenigde provincies", tekst: "Republiek der ZEVEN Verenigde Nederlanden, sinds Unie van Utrecht 1579: Holland, Zeeland, Utrecht, Gelderland, Friesland, Groningen, Overijssel. Plus Drenthe (eigen bestuur, geen stem) en 'Generaliteitslanden' (deel Brabant + Limburg): geen eigen stem, wel onder bestuur." }],
           woorden: [{ woord: "Republiek", uitleg: "Officieel: 'Republiek der Zeven Verenigde Nederlanden'. Bestond 1581-1795." }, { woord: "Generaliteitslanden", uitleg: "Gebieden onder bestuur Republiek maar zonder eigen Staten. Staats-Brabant, deel Limburg, Zeeuws-Vlaanderen." }],
@@ -518,7 +518,7 @@ const steps = [
         q: "Wat gebeurde er met de **Schelde** door de Vrede van Münster?",
         options: ["Gesloten — Antwerpen werd onbereikbaar voor schepen","Werd internationale rivier","Werd in tweeën gedeeld","Werd drooggelegd"],
         answer: 0,
-        wrongHints: [null, "Andersom — werd dicht.", "Geen splitsing — gewoon afgesloten.", "Niet drooggelegd — wel afgesloten."],
+        wrongHints: [null, "Andersom — denk aan wat de Republiek wilde met Antwerpen.", "Geen splitsing — wat had Amsterdam liever voor Antwerpen?", "Niet drooggelegd — de rivier bleef, maar wat veranderde voor schepen?"],
         uitlegPad: {
           stappen: [{ titel: "Schelde dicht — Amsterdam wint", tekst: "Vrede van Münster bepaalde: Schelde-rivier (stroomt langs Antwerpen) wordt GESLOTEN voor scheepvaart. Antwerpen onbereikbaar voor zeeschepen. Republiek (Zeeland controleerde monding) blokkeerde. Gevolg: Amsterdam werd grootste handelshaven (geen Antwerpse concurrentie). Antwerpen 200 jaar verarmd." }],
           woorden: [{ woord: "Schelde", uitleg: "Rivier door België, mondt uit in Zeeuwse wateren (Westerschelde)." }, { woord: "Antwerpen", uitleg: "Vlaamse havenstad. Vóór 1585 grootste handelsstad Lage Landen, daarna 200 jaar verarmd." }],
@@ -530,9 +530,9 @@ const steps = [
       },
       {
         q: "Welk beroemd schilderij toont de Eed bij de Vrede van Münster?",
-        options: ["De Eed van de Vrede van Münster door Gerard ter Borch","De Nachtwacht door Rembrandt","Het Melkmeisje door Vermeer","Geen specifiek schilderij"],
+        options: ["Een schilderij van Gerard ter Borch","De Nachtwacht door Rembrandt","Het Melkmeisje door Vermeer","Geen specifiek schilderij"],
         answer: 0,
-        wrongHints: [null, "Nachtwacht is van Rembrandt, ander onderwerp (schutterij).", "Melkmeisje is van Vermeer, dagelijks leven.", "Wel degelijk — Ter Borch."],
+        wrongHints: [null, "Nachtwacht is van Rembrandt, ander onderwerp (schutterij).", "Melkmeisje is van Vermeer, dagelijks leven.", "Wel degelijk — er was zelfs een schilder bij aanwezig."],
         uitlegPad: {
           stappen: [{ titel: "Ter Borch — vredeseed 1648", tekst: "Gerard ter Borch (1617-1681) schilderde 'De Eed van de Vrede van Münster' (1648). Toont het historische moment: NL+Spaanse diplomaten leggen vredeseed af. Klein schilderij (45×58 cm), nu in Rijksmuseum Amsterdam. Belangrijk Gouden Eeuw-werk, historisch document." }],
           woorden: [{ woord: "Gerard ter Borch", uitleg: "NL Gouden Eeuw-schilder. Geboren Zwolle. Was zelf in Münster bij vredestekening." }, { woord: "Rijksmuseum", uitleg: "Nationaal museum NL, Amsterdam. Heeft Nachtwacht + Melkmeisje + Eed van Münster." }],
@@ -581,7 +581,7 @@ const steps = [
       },
       {
         q: "Welke koning zwoer de Republiek af?",
-        options: ["Filips II — hij werd afgezworen door het Plakkaat","Alva","Willem van Oranje","Maurits"],
+        options: ["Filips II","Alva","Willem van Oranje","Maurits"],
         answer: 0,
         wrongHints: [null, "Alva was Spaanse landvoogd, geen koning.", "Willem was een Nederlandse leider — geen koning.", "Maurits was stadhouder, geen koning."],
         uitlegPad: {
@@ -597,7 +597,7 @@ const steps = [
         q: "De Vrede van Münster (1648) was onderdeel van een groter vredesakkoord. Hoe heette dat?",
         options: ["Vrede van Westfalen","Vrede van Versailles","Vrede van Wenen","Vrede van Parijs"],
         answer: 0,
-        wrongHints: [null, "Versailles was na WO1 (1919).", "Wenen was na Napoleon (1815).", "Verschillende vredesakkoorden in Parijs door de eeuwen, maar dit was Westfalen."],
+        wrongHints: [null, "Versailles was na WO1 (1919).", "Wenen was na Napoleon (1815).", "Verschillende vredesakkoorden in Parijs door de eeuwen, maar niet in 1648."],
         uitlegPad: {
           stappen: [{ titel: "Vrede van Westfalen 1648", tekst: "Vrede van Westfalen = verzamelnaam voor 2 vredesverdragen: (1) Vrede van Münster (NL-Spanje, 30 jan 1648; in oktober ook tussen keizer + Frankrijk). (2) Vrede van Osnabrück (Duitse + Zweedse zaken, 24 okt 1648). Samen einde TWEE oorlogen: Tachtigjarige Oorlog (NL) + Dertigjarige Oorlog (Duitsland)." }],
           woorden: [{ woord: "Vrede van Westfalen", uitleg: "Verzamelnaam vredesverdragen 1648. Naam regio Duitsland." }, { woord: "Dertigjarige Oorlog", uitleg: "1618-1648. Religieuze + politieke oorlog Duitsland. Miljoenen doden." }],
