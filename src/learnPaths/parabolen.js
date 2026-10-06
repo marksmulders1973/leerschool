@@ -93,7 +93,7 @@ const steps = [
   },
   {
     title: "Wat betekent x²?",
-    explanation: "Soms zie je een klein **2**-tje boven een getal of letter staan, zoals **3²** of **x²**. Dat 2-tje heet een **macht**. Het betekent: *vermenigvuldig met zichzelf*.\n\nDus:\n• **3²** = 3 · 3 = **9**\n• **5²** = 5 · 5 = **25**\n• **10²** = 10 · 10 = **100**\n\nBij **x²** doe je hetzelfde: x² betekent **x · x**. Vul een getal in voor x:\n• Als x = 4, dan x² = 4 · 4 = **16**\n• Als x = 7, dan x² = 7 · 7 = **49**\n\n**Waarom heet het 'kwadraat'?**\n\nKwadraat is een oud woord voor **vierkant**. En dat slaat ergens op: x² is namelijk de **oppervlakte van een vierkant** waarvan elke zijde lengte x heeft.\n\nKijk naar het plaatje hieronder: een vierkantje van 1 bij 1 heeft 1 hokje. Een vierkantje van 2 bij 2 heeft 2·2 = 4 hokjes. Een vierkantje van 5 bij 5 heeft al 25 hokjes. Hoe groter de zijde x, hoe **veel sneller** het aantal hokjes (de oppervlakte) groeit.",
+    explanation: "Soms zie je een klein **2**-tje boven een getal of letter staan, zoals **3²** of **x²**. Dat 2-tje heet een **macht**. Het betekent: *vermenigvuldig met zichzelf*.\n\nDus:\n• **3²** = 3 · 3 = **9**\n• **5²** = 5 · 5 = **25**\n• **10²** = 10 · 10 = **100**\n\nBij **x²** doe je hetzelfde: x² betekent **x · x**. Vul een getal in voor x:\n• Als x = 8, dan x² = 8 · 8 = **64**\n• Als x = 9, dan x² = 9 · 9 = **81**\n\n**Waarom heet het 'kwadraat'?**\n\nKwadraat is een oud woord voor **vierkant**. En dat slaat ergens op: x² is namelijk de **oppervlakte van een vierkant** waarvan elke zijde lengte x heeft.\n\nKijk naar het plaatje hieronder: een vierkantje van 1 bij 1 heeft 1 hokje. Een vierkantje van 2 bij 2 heeft 2·2 = 4 hokjes. Een vierkantje van 5 bij 5 heeft al 25 hokjes. Hoe groter de zijde x, hoe **veel sneller** het aantal hokjes (de oppervlakte) groeit.",
     svg: `<svg viewBox="0 0 300 200">
 <defs>
 <pattern id="cell" width="8" height="8" patternUnits="userSpaceOnUse">
@@ -126,7 +126,7 @@ const steps = [
           null,
           "Je hebt 4 + 4 gedaan. Maar x² betekent **vermenigvuldigen** met zichzelf, niet optellen.",
           "Je hebt 4 + 2 gedaan. Het kleine 2-tje is geen getal om bij op te tellen — het zegt: doe de macht.",
-          "Niet de cijfers naast elkaar zetten. 4² is 4 · 4. Hoeveel is 4 keer 4?",
+          "Niet de cijfers naast elkaar zetten. Het kleine 2-tje zegt: vermenigvuldig het getal met zichzelf.",
         ],
         uitlegPad: {
           stappen: [{ titel: "x² = x · x", tekst: "Het kleine 2-tje betekent: vermenigvuldig met zichzelf. 4² is dus 4 · 4 = 16." }],
@@ -144,8 +144,8 @@ const steps = [
         wrongHints: [
           null,
           "Je hebt 6 · 2 gedaan. Maar het 2-tje is geen vermenigvuldiger — het betekent: vermenigvuldig met **zichzelf**.",
-          "Hoe kom je aan 8? Probeer nog eens: 6 keer 6.",
-          "Niet de cijfers naast elkaar plakken. Reken: 6 · 6.",
+          "Hoe kom je aan 8? Je hebt 6 + 2 gedaan. Het 2-tje is geen getal om op te tellen — wat betekent het wél?",
+          "Niet de cijfers naast elkaar plakken. Het 2-tje betekent: vermenigvuldig met zichzelf.",
         ],
         uitlegPad: {
           stappen: [{ titel: "6² = 6 · 6 = 36", tekst: "Bij x = 6 vermenigvuldig je x met zichzelf: 6 × 6 = 36." }],
@@ -185,7 +185,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Niet de cijfers naast elkaar zetten. Doe gewoon: 3 + 5.",
+          "Niet de cijfers naast elkaar zetten. Wat betekent het plus-teken in de regel?",
           "5 is een deel van het antwoord. Wat moet je nog bij 5 optellen?",
           "Je hebt alleen x gegeven. Maar volgens de regel moet je nog +5 doen.",
         ],
@@ -232,9 +232,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je hebt 7 · 2 gedaan. Maar bij x² doe je x · **x**, dus 7 · 7.",
-          "Hoe kom je aan 9? Reken nog eens: 7 keer 7.",
-          "Niet de cijfers plakken. 7² is gewoon 7 · 7. Hoeveel is dat?",
+          "Je hebt 7 · 2 gedaan. Maar het 2-tje is geen vermenigvuldiger — x² betekent x keer **zichzelf**.",
+          "Hoe kom je aan 9? Je hebt 7 + 2 gedaan. Het 2-tje is geen getal om op te tellen.",
+          "Niet de cijfers plakken. Het 2-tje betekent: vermenigvuldig met zichzelf.",
         ],
         uitlegPad: {
           stappen: [{ titel: "7² = 49", tekst: "y = x² met x = 7 betekent y = 7 · 7 = 49." }],
@@ -306,7 +306,7 @@ ${gridSvg}
           null,
           "Je hebt het tweede getal gepakt. Maar de regel is: eerst x (rechts), dan y (omhoog). Welke staat **eerst**?",
           "Je hebt 5 + 2 gedaan. Maar het zijn geen getallen om op te tellen — het zijn twee aparte richtingen.",
-          "Hoe kom je aan 3? Het eerste getal in (5, 2) is gewoon de stap naar rechts.",
+          "Hoe kom je aan 3? Je hoeft niets af te trekken — één van de twee getallen geeft direct de stap naar rechts. Welke?",
         ],
         uitlegPad: {
           stappen: [{ titel: "(x, y): eerst x, dan y", tekst: "Bij coördinaten (5, 2): eerste getal is x (= 5, naar rechts), tweede is y (= 2, omhoog). Altijd in deze volgorde." }],
@@ -385,22 +385,22 @@ ${gridSvg}
 </svg>`,
     checks: [
       {
-        q: "Bij regel y = x²: als x = -2, wat is y?",
-        options: ["4", "-4", "-2", "2"],
+        q: "Bij regel y = x²: als x = -4, wat is y?",
+        options: ["16", "-16", "-4", "4"],
         answer: 0,
         wrongHints: [
           null,
-          "Pas op: -2 · -2 geeft een **plus**, niet een min. Twee minnen heffen elkaar op.",
-          "Je hebt alleen het minteken overgenomen. Maar je moet ook nog **kwadrateren** (vermenigvuldigen met zichzelf).",
-          "Je hebt het minteken weggehaald, maar daarna nog niet gekwadrateerd. -2 · -2 = ?",
+          "Pas op: wat krijg je als je twee negatieve getallen met elkaar vermenigvuldigt — een plus of een min?",
+          "Je hebt alleen x zelf overgenomen. Maar je moet ook nog **kwadrateren** (vermenigvuldigen met zichzelf).",
+          "Je hebt het minteken weggehaald, maar daarna nog niet gekwadrateerd.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "Min × min = plus", tekst: "(-2)² betekent -2 · -2. Twee mintekens heffen elkaar op → resultaat is +4. NIET -4." }],
+          stappen: [{ titel: "Min × min = plus", tekst: "(-4)² betekent -4 · -4. Twee mintekens heffen elkaar op → resultaat is +16. NIET -16." }],
           woorden: [{ woord: "kwadraat", uitleg: "altijd 0 of positief" }],
           theorie: "Elk getal in het kwadraat is positief: x² ≥ 0 voor elke x.",
           voorbeelden: [{ type: "voorbeeld", tekst: "(-5)² = 25. (-1)² = 1. 0² = 0" }],
           basiskennis: [{ onderwerp: "min × min", uitleg: "twee mintekens = plus" }],
-          niveaus: { basis: "4.", simpeler: "−2 × −2 = +4.", nogSimpeler: "Plus." },
+          niveaus: { basis: "16.", simpeler: "−4 × −4 = +16.", nogSimpeler: "Plus." },
         },
       },
     ],
@@ -427,7 +427,7 @@ ${gridSvg}
         wrongHints: [
           null,
           "Heb je de nul ook meegeteld? De oorsprong is ook een geldige x-waarde.",
-          "Schrijf ze allemaal op: -3, -2, -1, 0, 1, 2, 3 — en tel.",
+          "Schrijf alle gehele x-waarden van -3 tot en met 3 op een rij en tel ze nauwkeurig — heb je er één te veel?",
           "Heb je alleen de positieve gepakt? De negatieve tellen óók mee.",
         ],
         uitlegPad: {
@@ -498,7 +498,7 @@ ${baseAxes}
         wrongHints: [
           null,
           "Bij een hoek zou de lijn ineens van richting veranderen. Gebeurt dat in een parabool?",
-          "Een parabool heeft geen knikken — denk aan de U-vorm die we tekenden, dat ging vloeiend.",
+          "Denk aan de U-vorm die we tekenden. Zag je ergens een punt waar de lijn plotseling van richting wisselde?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Vloeiend = geen hoeken", tekst: "Een parabool is een vloeiende kromme — overal afgerond, nergens een scherpe hoek of knik. Helemaal glad, zoals de baan van een gegooid balletje." }],
@@ -527,13 +527,13 @@ ${gridSvg}
     checks: [
       {
         q: "Waar zit de top van een dalparabool?",
-        options: ["Onderaan (laagste punt)", "Bovenaan (hoogste punt)", "In het midden van de armen", "Op de y-as"],
+        options: ["Onderaan (laagste punt)", "Bovenaan (hoogste punt)", "Aan het eind van een arm", "Op de x-as"],
         answer: 0,
         wrongHints: [
           null,
           "Bovenaan zit de top bij een **berg**parabool. Bij een dal — wat doet een dal in een landschap?",
-          "Vaag — bekijk het plaatje: waar markeer ik de top?",
-          "De top van y = x² zit toevallig wel op de y-as, maar de **kenmerkende** plek is: hoog of laag?",
+          "De armen van een parabool lopen eindeloos door — ze hebben geen eind. Waar zit dan het bijzondere punt?",
+          "Soms raakt de top de x-as, maar lang niet altijd. Wat is kenmerkend voor de top van een dal: hoog of laag?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Dal-top = laagste punt", tekst: "Een dalparabool ziet eruit als een dal (U) — het laagste punt zit ONDERAAN. Dat is de top. Voor een bergparabool zit de top bovenaan." }],
@@ -565,7 +565,7 @@ ${gridSvg}
         wrongHints: [
           null,
           "Bijna! Het minteken vóór x² maakt het eindresultaat negatief. Bereken eerst x², pas daarna het minteken toe.",
-          "Je hebt 3·-2 of zoiets gedaan. Reken: -1 · (3 · 3).",
+          "Je hebt 3 · -2 gedaan. Maar het 2-tje is een macht: bereken eerst x², pas daarna het minteken.",
           "Alleen het minteken pakken is niet genoeg — je moet ook nog 3·3 doen.",
         ],
         uitlegPad: {
@@ -632,7 +632,7 @@ ${gridSvg}
   // ─── E. De "a" in y = ax² ────────────────────────────
   {
     title: 'Wat is "a" in y = ax²?',
-    explanation: "Wiskundigen schrijven vaak een **algemene vorm** met een letter, zoals **y = ax²**.\n\nDe letter **a** staat voor *het getal dat vóór x² staat*. Net zoals x een doosje is voor een onbekend getal, is **a** een doosje voor het getal vóór x².\n\nVoorbeelden:\n• y = **4**x² → hier is **a = 4**\n• y = **½**x² → hier is **a = ½**\n• y = **−2**x² → hier is **a = −2**\n• y = x² → hier is **a = 1** (de 1 schrijven we niet op, maar staat er stiekem)\n\nDe **a** is dus gewoon een getal — alleen weet je niet altijd vooraf welk. In een opgave staat hij er meestal gewoon (zoals de 4 in y = 4x²).",
+    explanation: "Wiskundigen schrijven vaak een **algemene vorm** met een letter, zoals **y = ax²**.\n\nDe letter **a** staat voor *het getal dat vóór x² staat*. Net zoals x een doosje is voor een onbekend getal, is **a** een doosje voor het getal vóór x².\n\nVoorbeelden:\n• y = **4**x² → hier is **a = 4**\n• y = **½**x² → hier is **a = ½**\n• y = **−2**x² → hier is **a = −2**\n• y = −x² → hier is **a = −1** (de 1 schrijven we niet op, maar staat er stiekem)\n\nDe **a** is dus gewoon een getal — alleen weet je niet altijd vooraf welk. In een opgave staat hij er meestal gewoon (zoals de 4 in y = 4x²).",
     svg: `<svg viewBox="0 0 300 200">
 <text x="150" y="50" text-anchor="middle" fill="${COLORS.text}" font-size="22" font-family="Arial">y = a · x²</text>
 <text x="135" y="48" text-anchor="middle" fill="${COLORS.curve}" font-size="22" font-family="Arial" font-weight="bold">a</text>
@@ -827,7 +827,7 @@ ${gridSvg}
         ],
         uitlegPad: {
           stappen: [{ titel: "y = ½x²: 8² eerst, dan /2", tekst: "Stap 1: 8² = 64. Stap 2: 64 / 2 = 32. Of: 64 × ½ = 32." }],
-          woorden: [{ woord: "½", uitleg: "delen door 2 of vermenigvuldigen met 0.5" }],
+          woorden: [{ woord: "½", uitleg: "delen door 2 of vermenigvuldigen met 0,5" }],
           theorie: "Eerst kwadrateren, dan a toepassen (delen of vermenigvuldigen).",
           voorbeelden: [{ type: "voorbeeld", tekst: "y = ½x² bij x=4: 16/2 = 8" }],
           basiskennis: [{ onderwerp: "volgorde", uitleg: "altijd kwadraat eerst" }],
@@ -899,7 +899,7 @@ ${gridSvg}
         answer: 0,
         wrongHints: [
           null,
-          "Het minteken vergeten? Bereken stap voor stap: eerst x² uitrekenen, dan het minteken-getal aftrekken.",
+          "Kijk goed naar het teken vóór de 4. Moet je die 4 optellen of aftrekken?",
           "Je hebt alleen x² uitgerekend. Maar er staat ook nog **− 4** achter.",
           "Je hebt 4² of 16 gepakt. Maar de 4 is geen kwadraat — het is de waarde die je aftrekt.",
         ],
@@ -940,7 +940,7 @@ ${gridSvg}
         answer: 0,
         wrongHints: [
           null,
-          "Het minteken hoort erbij. -6 is iets anders dan +6.",
+          "Kijk naar het teken vóór de 6. Hoort dat teken bij c of niet?",
           "0 is c als er geen verschuiving is. Maar er staat hier wel iets achter x².",
           "x is de variabele. c is het verschuifgetal — het getal dat los achter x² staat.",
         ],
@@ -960,8 +960,8 @@ ${gridSvg}
         wrongHints: [
           null,
           "(9, 0) is 9 naar rechts. Maar +c verschuift **verticaal** (omhoog), niet horizontaal.",
-          "(0, 0) is de top zonder verschuiving. Maar er staat +9 — dus omhoog!",
-          "+9 verschuift omhoog (positief), niet omlaag.",
+          "(0, 0) is de top zonder verschuiving. Wat doet de +9 met de parabool?",
+          "Kijk naar het teken vóór de 9. Schuift de parabool daardoor omhoog of omlaag?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Top = (0, c)", tekst: "Bij y = x² + 9 zit de top altijd op (0, c) = (0, 9). De +9 schuift de parabool 9 omhoog." }],
@@ -1034,7 +1034,7 @@ ${gridSvg}
         answer: 0,
         wrongHints: [
           null,
-          "Het min-teken vergeten? -8 is iets anders dan +8.",
+          "Kijk naar het teken vóór de 8. Schuift de top daardoor omhoog of omlaag?",
           "(-8, 0) is 8 naar links. Maar de c verschuift verticaal, niet horizontaal.",
           "(0, 0) is de top zonder verschuiving. Maar hier is er een c-waarde — in welke richting verschuift de top dan?",
         ],
@@ -1051,7 +1051,7 @@ ${gridSvg}
   },
   {
     title: 'Een nieuwe term: de "b"',
-    explanation: "Tot nu zagen we **y = ax² + c**. Nu voegen we een term toe die de top **horizontaal** kan verschuiven: **bx**.\n\nDe volledige algemene vorm is dan:\n\n$y = ax^2 + bx + c$\n\nDrie letters dus:\n• **a** = getal vóór x²\n• **b** = getal vóór x (zonder kwadraat)\n• **c** = los getal\n\nVoorbeelden:\n• y = x² + 4x → a = 1, b = 4, c = 0\n• y = 2x² − 6x + 1 → a = 2, b = -6, c = 1\n• y = x² + 5 → a = 1, b = 0 (geen x-term), c = 5\n\nDe **bx**-term zorgt dat de top niet meer netjes op de y-as zit, maar naar **links of rechts** schuift. Kijk naar het plaatje: drie parabolen, allemaal a = 1, maar met verschillende b. De top verspringt horizontaal.",
+    explanation: "Tot nu zagen we **y = ax² + c**. Nu voegen we een term toe die de top **horizontaal** kan verschuiven: **bx**.\n\nDe volledige algemene vorm is dan:\n\n$y = ax^2 + bx + c$\n\nDrie letters dus:\n• **a** = getal vóór x²\n• **b** = getal vóór x (zonder kwadraat)\n• **c** = los getal\n\nVoorbeelden:\n• y = x² + 4x → a = 1, b = 4, c = 0\n• y = 2x² − 6x + 1 → a = 2, b = -6, c = 1\n• y = 3x² − 2 → a = 3, b = 0 (geen x-term), c = −2\n\nDe **bx**-term zorgt dat de top niet meer netjes op de y-as zit, maar naar **links of rechts** schuift. Kijk naar het plaatje: drie parabolen, allemaal a = 1, maar met verschillende b. De top verspringt horizontaal.",
     svg: `<svg viewBox="0 0 300 200">
 ${baseAxes}
 ${gridSvg}
@@ -1153,7 +1153,7 @@ ${gridSvg}
           null,
           "b is hier −4 (mét minteken). Wat doet **−b** dan? Tegengesteld teken!",
           "Pas op met de tekens. −b betekent: tegengesteld teken van b. Wat is het tegengestelde van −4?",
-          "4 was bijna goed: je had 'm gedeeld door 1 in plaats van 2a = 2. Reken nog: 4/2 = ?",
+          "Je bent vergeten te delen door 2a. Wat is 2a in deze formule?",
         ],
         uitlegPad: {
           stappen: [{ titel: "x_top = −(−4)/2 = 4/2 = 2", tekst: "Voor y = x² − 4x + 1: a=1, b=−4. −b = −(−4) = +4. Dan 4 / (2×1) = 4/2 = 2." }],
@@ -1189,7 +1189,7 @@ ${gridSvg}
           null,
           "1 is geen speciale waarde voor de x-as. De x-as is de lijn waar y altijd dezelfde vaste waarde heeft — welke?",
           "x is geen y-waarde. De vraag is: wat is y bij een nulpunt?",
-          "Het is altijd hetzelfde — daarom heet het ook **nul**punt.",
+          "Het hangt niet van de parabool af: een nulpunt ligt altijd op dezelfde lijn in het assenstelsel. Welke y-waarde hoort bij die lijn?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Nulpunt = waar y = 0", tekst: "Op de x-as is y altijd 0. Een nulpunt is een punt waar de parabool de x-as raakt of snijdt — daar is y = 0." }],
@@ -1204,7 +1204,7 @@ ${gridSvg}
   },
   {
     title: "Nulpunten van y = x² − 9",
-    explanation: "Om de nulpunten te vinden, **stel y = 0** in en los op:\n\n**Voorbeeld**: y = x² − 9\n\n1. Stel y = 0: **x² − 9 = 0**\n2. Zet de 9 naar de andere kant: **x² = 9**\n3. Welke x maakt dat x² = 9? Dat zijn er **twee**: x = 3 of x = −3 (want 3·3 = 9 én −3·−3 = 9)\n\nDe nulpunten zijn dus **x = 3** en **x = −3**.\n\nIn het plaatje hieronder zie je het direct: de parabool zakt naar zijn top op (0, −9), en snijdt de x-as op precies twee plekken — die gele puntjes zijn de nulpunten.\n\n**Vuistregel** voor y = x² − getal: de nulpunten zijn ± de wortel van het getal.\n• y = x² − 16 → x² = 16 → x = ±4\n• y = x² − 25 → x² = 25 → x = ±5",
+    explanation: "Om de nulpunten te vinden, **stel y = 0** in en los op:\n\n**Voorbeeld**: y = x² − 9\n\n1. Stel y = 0: **x² − 9 = 0**\n2. Zet de 9 naar de andere kant: **x² = 9**\n3. Welke x maakt dat x² = 9? Dat zijn er **twee**: x = 3 of x = −3 (want 3·3 = 9 én −3·−3 = 9)\n\nDe nulpunten zijn dus **x = 3** en **x = −3**.\n\nIn het plaatje hieronder zie je het direct: de parabool zakt naar zijn top op (0, −9), en snijdt de x-as op precies twee plekken — die gele puntjes zijn de nulpunten.\n\n**Vuistregel** voor y = x² − getal: de nulpunten zijn ± de wortel van het getal.\n• y = x² − 100 → x² = 100 → x = ±10\n• y = x² − 25 → x² = 25 → x = ±5",
     svg: `<svg viewBox="0 0 300 200">
 ${baseAxes}
 ${gridSvg}
@@ -1276,7 +1276,7 @@ ${gridSvg}
         answer: 0,
         wrongHints: [
           null,
-          "Dat zou alleen kunnen als de top precies op de x-as zit (raken). Maar y = x² − 36 ligt 36 omlaag — hij snijdt twee keer.",
+          "Dat zou alleen kunnen als de top precies op de x-as zit (raken). Ligt de top van y = x² − 36 op de x-as?",
           "0 zou kloppen bij y = x² + iets (zwevend). Maar hier is een **min** — dus hij snijdt wel.",
           "36 is het getal in de vergelijking, niet het aantal nulpunten.",
         ],
@@ -1380,27 +1380,27 @@ ${gridSvg}
 </svg>`,
     checks: [
       {
-        q: "Welke beschrijving past bij y = x² − 4?",
+        q: "Welke beschrijving past bij y = x² − 9?",
         options: [
-          "Dalparabool, top (0, -4), nulpunten -2 en 2",
-          "Bergparabool, top (0, -4), nulpunten -2 en 2",
-          "Dalparabool, top (0, 4), nulpunten -2 en 2",
-          "Dalparabool, top (0, -4), geen nulpunten",
+          "Dalparabool, top (0, -9), nulpunten -3 en 3",
+          "Bergparabool, top (0, -9), nulpunten -3 en 3",
+          "Dalparabool, top (0, 9), nulpunten -3 en 3",
+          "Dalparabool, top (0, -9), geen nulpunten",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Soort klopt niet: er staat geen min vóór x², dus geen berg.",
-          "Top klopt niet: bij −4 schuift de top **omlaag**, niet omhoog.",
+          "Top klopt niet: kijk naar het teken vóór de 9. Schuift de top omhoog of omlaag?",
           "Geen nulpunten klopt niet: bij y = x² minus een positief getal zijn er altijd nulpunten. Stel y gelijk aan nul en herleid.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "y = x² − 4: dal + top (0,-4) + ±2", tekst: "1) Geen min vóór x² = dal. 2) c = -4 → top (0, -4). 3) x² = 4 → x = ±2 (nulpunten)." }],
+          stappen: [{ titel: "y = x² − 9: dal + top (0,-9) + ±3", tekst: "1) Geen min vóór x² = dal. 2) c = -9 → top (0, -9). 3) x² = 9 → x = ±3 (nulpunten)." }],
           woorden: [{ woord: "checklist", uitleg: "soort, top, nulpunten" }],
           theorie: "Drie vragen om elke parabool te beschrijven: dal/berg, top, nulpunten.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "y = x² - 9: dal, top (0,-9), nulpunten ±3" }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "y = x² - 4: dal, top (0,-4), nulpunten ±2" }],
           basiskennis: [{ onderwerp: "samenvatten", uitleg: "alle 3 elementen" }],
-          niveaus: { basis: "Dal, top (0,-4), nulpunten ±2.", simpeler: "Alle 3 elementen kloppen.", nogSimpeler: "Eerste optie." },
+          niveaus: { basis: "Dal, top (0,-9), nulpunten ±3.", simpeler: "Alle 3 elementen kloppen.", nogSimpeler: "Dal, top omlaag, twee nulpunten." },
         },
       },
     ],
@@ -1421,46 +1421,46 @@ ${gridSvg}
 </svg>`,
     checks: [
       {
-        q: "Wat is de top van y = x² + 6x?",
-        options: ["(-3, -9)", "(3, -9)", "(-3, 9)", "(6, 0)"],
+        q: "Wat is de top van y = x² − 8x?",
+        options: ["(4, -16)", "(-4, -16)", "(4, 16)", "(8, 0)"],
         answer: 0,
         wrongHints: [
           null,
-          "Pas op met het minteken in x_top = **−**b/(2a). Wat is −b als b positief is? Welk teken krijg je dan?",
-          "Controleer x_top met de formule. Vul die x daarna in de formule y = x² + 6x in om y_top te berekenen.",
-          "6 is alleen b. De top vind je via de hele formule: x_top = -b/(2a) = ?",
+          "Pas op met het minteken in x_top = **−**b/(2a). b is hier negatief — welk teken krijgt −b dan?",
+          "Controleer y_top: vul x_top in de formule y = x² − 8x in en reken zorgvuldig, ook met de tekens.",
+          "(8, 0) ligt op de x-as. Ligt de top van deze dalparabool daar, of lager?",
         ],
         uitlegPad: {
-          stappen: [{ titel: "Top (-3, -9) bij y = x² + 6x", tekst: "x_top = -6/2 = -3. Vul in: y = (-3)² + 6·(-3) = 9 - 18 = -9. Top = (-3, -9)." }],
+          stappen: [{ titel: "Top (4, -16) bij y = x² − 8x", tekst: "a = 1, b = -8. x_top = -(-8)/2 = 8/2 = 4. Vul in: y = 4² − 8·4 = 16 − 32 = -16. Top = (4, -16)." }],
           woorden: [{ woord: "y_top", uitleg: "vul x_top in om y_top te vinden" }],
           theorie: "Topbepaling: 1) x_top = -b/(2a). 2) y_top = invullen.",
           voorbeelden: [{ type: "voorbeeld", tekst: "y = x² - 4x: x_top=2, y_top = 4 - 8 = -4. Top (2, -4)" }],
           basiskennis: [{ onderwerp: "twee stappen", uitleg: "x eerst, dan y" }],
-          niveaus: { basis: "(-3, -9).", simpeler: "x=-3, y=-9.", nogSimpeler: "(-3, -9)." },
+          niveaus: { basis: "(4, -16).", simpeler: "x=4, y=-16.", nogSimpeler: "(4, -16)." },
         },
       },
       {
-        q: "Wat zijn de nulpunten van y = x² + 6x?",
+        q: "Wat zijn de nulpunten van y = x² − 8x?",
         options: [
-          "x = 0 en x = -6",
-          "x = 0 en x = 6",
-          "x = -3 (alleen)",
+          "x = 0 en x = 8",
+          "x = 0 en x = -8",
+          "x = 4 (alleen)",
           "Geen nulpunten",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Bijna! Haal x buiten haakjes zodat je twee factoren krijgt. Wanneer is een product van twee factoren gelijk aan nul?",
-          "-3 is x_top, niet een nulpunt. De top zit niet op de x-as bij deze parabool.",
+          "Bijna! Haal x buiten haakjes zodat je twee factoren krijgt. Wanneer is een product gelijk aan nul? Let goed op het teken.",
+          "4 is x_top, niet een nulpunt. De top zit niet op de x-as bij deze parabool.",
           "Er zijn wel nulpunten — stel y gelijk aan nul en zoek een eenvoudige x waarvoor de vergelijking klopt.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "Buiten haakjes: x(x+6) = 0", tekst: "y = x² + 6x = 0 → haal x buiten haakjes: x · (x + 6) = 0. Dit is 0 als x = 0 OF x + 6 = 0 → x = -6. Nulpunten: 0 en -6." }],
+          stappen: [{ titel: "Buiten haakjes: x(x−8) = 0", tekst: "x² − 8x = 0 → haal x buiten haakjes: x · (x − 8) = 0. Dit is 0 als x = 0 OF x − 8 = 0 → x = 8. Nulpunten: 0 en 8." }],
           woorden: [{ woord: "ontbinden", uitleg: "x buiten haakjes halen" }],
           theorie: "Truc: bij x² + bx = 0 kun je altijd x buiten haakjes halen.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "y = x² - 4x: x(x-4)=0 → x=0 of x=4" }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "y = x² + 6x: x(x+6)=0 → x=0 of x=-6" }],
           basiskennis: [{ onderwerp: "product = 0", uitleg: "één factor moet 0 zijn" }],
-          niveaus: { basis: "0 en -6.", simpeler: "x = 0 of x = -6.", nogSimpeler: "Twee nulpunten." },
+          niveaus: { basis: "0 en 8.", simpeler: "x = 0 of x = 8.", nogSimpeler: "Twee nulpunten." },
         },
       },
     ],

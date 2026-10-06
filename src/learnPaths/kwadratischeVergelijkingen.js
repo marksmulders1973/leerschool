@@ -77,7 +77,7 @@ const steps = [
         q: "In de vergelijking 3x² − 7x + 4 = 0, wat is b?",
         options: ["−7", "3", "4", "0"],
         answer: 0,
-        wrongHints: [null, "3 is a (het getal vóór x²). De b is het getal vóór x.", "4 is c (het losse getal). De b zit bij x.", "0 zou betekenen geen x-term. Maar er staat duidelijk −7x in."],
+        wrongHints: [null, "3 is a (het getal vóór x²). De b is het getal vóór x.", "4 is c (het losse getal). De b zit bij x.", "0 zou betekenen: geen x-term. Staat er een x-term in deze vergelijking?"],
         uitlegPad: {
           stappen: [{ titel: "ABC-rollen herkennen", tekst: "Standaardvorm: ax² + bx + c = 0. a = getal vóór x². b = getal vóór x. c = los getal. In 3x² − 7x + 4: a=3, b=−7, c=4. Let op: minteken HOORT bij coëfficiënt." }],
           woorden: [{ woord: "coëfficiënt", uitleg: "Getal dat voor een variabele staat. In 3x² is 3 de coëfficiënt." }, { woord: "constante term", uitleg: "Los getal zonder variabele. In 3x²−7x+4 is 4 de constante." }],
@@ -287,7 +287,7 @@ const steps = [
             { titel: "Factoriseer", tekst: "x² + 6x = 0 → x(x + 6) = 0." },
             { titel: "Product=0 regel", tekst: "x = 0 OF x + 6 = 0 → x = −6." },
           ],
-          woorden: [{ woord: "factoriseren-oplossen", tekst: "Klassieke combinatie voor vergelijkingen zonder los getal (c=0)." }],
+          woorden: [{ woord: "factoriseren-oplossen", uitleg: "Klassieke combinatie voor vergelijkingen zonder los getal (c=0)." }],
           theorie: "Stap-voor-stap herhaling: (1) is c=0? Ja → x buiten haakjes. (2) Een factor = 0. (3) Schrijf BEIDE oplossingen.",
           voorbeelden: [{ type: "check", tekst: "x=0: 0+0=0 ✓. x=−6: 36 + (−36) = 0 ✓. Beide kloppen." }],
           basiskennis: [{ onderwerp: "Teken-val", uitleg: "(x + 6) = 0 → x = −6. Niet +6! Verschil: positief in haakje → negatief antwoord." }],
@@ -347,7 +347,7 @@ const steps = [
     checks: [
       {
         q: "Welk paar getallen geeft som 5 én product 6?",
-        options: ["2 en 3", "5 en 1", "−2 en 3", "1 en 5"],
+        options: ["2 en 3", "5 en 1", "−2 en 3", "−2 en −3"],
         answer: 0,
         wrongHints: [null, "Controleer beide voorwaarden: klopt de som én het product? Probeer te rekenen.", "Klopt de som voor dit paar? Bereken som en product apart en vergelijk.", "Controleer beide voorwaarden: klopt de som én het product? Probeer te rekenen."],
         uitlegPad: {
@@ -472,7 +472,7 @@ const steps = [
         q: "Op welke tijden is de bal **op 15 m hoogte**?",
         options: ["Bij t = 1 én t = 3 sec", "Alleen bij t = 1 sec", "Alleen bij t = 3 sec", "Bij t = 0 én t = 4 sec"],
         answer: 0,
-        wrongHints: [null, "De bal passeert dezelfde hoogte twee keer: eenmaal omhoog en eenmaal omlaag. Beide tijden zijn het antwoord.", "Er zijn twee tijden — de bal gaat ook weer naar beneden.", "Die t-waarden horen bij de grond, niet bij een tussenhoogte. Stel h gelijk aan de gevraagde hoogte."],
+        wrongHints: [null, "Hoe vaak komt de bal langs 15 m: alleen op weg omhoog, of ook op weg omlaag?", "Er zijn twee tijden — de bal gaat ook weer naar beneden.", "Die t-waarden horen bij de grond, niet bij een tussenhoogte. Stel h gelijk aan de gevraagde hoogte."],
         uitlegPad: {
           stappen: [
             { titel: "Stel h = 15", tekst: "−5t² + 20t = 15 → −5t² + 20t − 15 = 0. Deel door −5: t² − 4t + 3 = 0." },
@@ -504,14 +504,14 @@ const steps = [
       },
       { q: "Los op: x² = 16", options: ["x = 4 of x = −4","x = 4","x = 8","x = 256"], answer: 0, wrongHints: [null, "Niet — vergeet niet de negatieve.", "Te hoog.", "x² niet kwadrateren."] },
       { q: "Los op: x² = 25", options: ["x = ±5","x = 5","x = 25","x = ±25"], answer: 0, wrongHints: [null, "Niet — vergeet negatieve.", "Niet — kwadraat al weg.", "Niet."] },
-      { q: "Wat is **factoriseren**?", options: ["x²+bx schrijven als x(x+b)","Optellen","Aftrekken","Delen"], answer: 0, wrongHints: [null, "Optellen is gewoon + doen — maar bij factoriseren splits je een uitdrukking juist op in stukjes die je vermenigvuldigt.", "Aftrekken is − doen; factoriseren gaat niet over wegnemen maar over herschrijven als een product.", "Delen is één losse bewerking; bij factoriseren zoek je een gemeenschappelijke factor om buiten haakjes te halen."] },
+      { q: "Wat is **factoriseren**?", options: ["Een uitdrukking schrijven als een product (iets × iets)","Haakjes wegwerken door uit te vermenigvuldigen","Alle termen naar één kant brengen","Gelijksoortige termen bij elkaar optellen"], answer: 0, wrongHints: [null, "Dat is juist het omgekeerde: uitwerken. Kijk naar x² + 4x = x(x + 4) — welke kant op ga je bij factoriseren?", "Dat doe je om de standaardvorm te krijgen. Wat verandert er aan de vorm bij x² + 4x = x(x + 4)?", "Dat heet herleiden. Wat verandert er aan de vorm bij x² + 4x = x(x + 4)?"] },
       { q: "Haal x buiten haakjes in x² + 5x:", options: ["x(x+5)","x·5","x² · 5","x+5"], answer: 0, wrongHints: [null, "Niet — kwadraat klopt niet.", "Andere bewerking.", "Niet — x weg."] },
       { q: "Los op: x(x − 3) = 0", options: ["x=0 of x=3","x=3","x=0","x=−3"], answer: 0, wrongHints: [null, "Niet — beide.", "Niet — beide.", "Niet — andersom teken."] },
       { q: "**Discriminant** = ?", options: ["b² − 4ac","b² + 4ac","4ac","b · ac"], answer: 0, wrongHints: [null, "Niet — min.", "Niet.", "Niet."] },
       { q: "Discriminant D > 0 betekent?", options: ["2 oplossingen","1 oplossing","Geen oplossingen","Oneindig"], answer: 0, wrongHints: [null, "Bij D=0.", "Bij D<0.", "Niet bij kwadratisch."] },
       { q: "**abc-formule** lost op?", options: ["ax² + bx + c = 0","ax + b","Alleen x² = 0","2x + 1"], answer: 0, wrongHints: [null, "Lineair.", "Niet algemeen.", "Lineair."] },
-      { q: "Discriminant van x² − 5x + 6 = ?", options: ["1","11","25","6"], answer: 0, wrongHints: [null, "Niet — niet plus.", "Alleen b².", "Niet."] },
-      { q: "x² + 6x + 9 = (x + 3)². Welke methode?", options: ["Volkomen kwadraat","abc-formule","Factoriseren met x","Wortels"], answer: 0, wrongHints: [null, "Werkt ook maar overkill.", "Niet — geen x los.", "Niet specifiek."] },
+      { q: "Discriminant van x² − 5x + 6 = ?", options: ["1","49","25","6"], answer: 0, wrongHints: [null, "Niet — het is b² mín 4ac, niet plus.", "Alleen b².", "Niet."] },
+      { q: "x² + 6x + 9 kun je schrijven als (x + 3)². Hoe heet zo'n vorm?", options: ["Volkomen kwadraat","Standaardvorm","Verschil van twee kwadraten","Lineaire vorm"], answer: 0, wrongHints: [null, "De standaardvorm is ax² + bx + c. Hoe heet de vorm (x + 3)²?", "Een verschil van twee kwadraten ziet eruit als a² − b². Staat hier een min?", "Lineair betekent: geen kwadraat. Hier staat wel een kwadraat."] },
       { q: "**Discriminant D = 0** betekent?", options: ["1 oplossing (dubbele wortel)","2 oplossingen","Geen oplossingen","Oneindig"], answer: 0, wrongHints: [null,"Bij D>0.","Bij D<0.","Niet bij kwadratisch."] },
       { q: "**D < 0** betekent (reëel)?", options: ["Geen reële oplossingen","2 oplossingen","1 oplossing","Oneindig"], answer: 0, wrongHints: [null,"Bij D>0.","Bij D=0.","Niet."] },
       { q: "**Top** van parabool y = (x − 2)² is op?", options: ["x=2","x=−2","x=0","x=4"], answer: 0, wrongHints: [null,"Andere kant.","Bij standaardvorm zonder shift.","Niet."] },

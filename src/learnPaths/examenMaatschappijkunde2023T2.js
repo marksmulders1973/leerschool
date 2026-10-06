@@ -17,7 +17,7 @@ const tekst2 = {
 const tekst4 = {
   titel: "T4 — Charles Michel als voorzitter Europese Raad (okt 2020)",
   body:
-    "De afbeelding is een foto uit oktober 2020 van **Charles Michel**. Hij is op dat moment voorzitter van de **Europese Raad** — het overlegorgaan waarin de regeringsleiders van alle EU-lidstaten bijeenkomen om strategische beslissingen te nemen. Op de foto geeft Michel een toespraak waarin hij de samenwerking tussen lidstaten oproept te versterken in coronatijd.",
+    "De afbeelding is een foto uit oktober 2020 van **Charles Michel**. Hij is op dat moment voorzitter van de **Europese Raad**. Op de foto geeft Michel een toespraak waarin hij oproept om in coronatijd de samenwerking tussen de lidstaten te versterken.",
 };
 
 const tekst7 = {

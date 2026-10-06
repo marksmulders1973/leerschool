@@ -244,7 +244,7 @@ const steps = [
           "Het houdt je warm",
         ],
         answer: 0,
-        wrongHints: [null, "Wrijving heeft niets met massa te maken.", "Het remt eerder dan dat het versnelt — maar je hebt het wél nodig om af te zetten.", "Wrijving geeft warmte, maar dat is geen reden om te lopen."],
+        wrongHints: [null, "Wrijving heeft niets met massa te maken.", "Je versnelt doordat je je afzet. Maar wat zorgt ervoor dat je voet bij dat afzetten op zijn plek blijft?", "Wrijving geeft warmte, maar dat is geen reden om te lopen."],
         uitlegPad: {
           stappen: [{ titel: "Wrijving = grip = lopen kan", tekst: "Bij lopen duw je je voet achteruit op de grond. De wrijving zorgt dat je voet niet wegslipt, en de grond duwt je terug naar voren (Newton 3). Geen wrijving = wegglijden." }],
           woorden: [{ woord: "grip", uitleg: "voldoende wrijving om af te zetten" }],

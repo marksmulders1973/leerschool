@@ -198,12 +198,12 @@ const steps = [
     checks: [
       {
         q: "Wat is de V2 van **cut**?",
-        options: ["cut", "cutted", "cut(ten)", "cuts"],
+        options: ["cut", "cutted", "cat", "cuts"],
         answer: 0,
         wrongHints: [
           null,
           "'cut' is onregelmatig — geen -ed.",
-          "Geen Engels.",
+          "Let op: dit is een ander woord (= kat), geen vorm van 'cut'.",
           "Dat is 3e persoon present (he cuts).",
         ],
         uitlegPad: {
@@ -429,7 +429,7 @@ const steps = [
       {
         q: "Welk werkwoord past **niet** bij het -ought/aught patroon?",
         options: [
-          "swim (drink-patroon, niet -ought)",
+          "swim",
           "think",
           "buy",
           "catch",

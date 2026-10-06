@@ -67,7 +67,7 @@ const steps = [
         q: "Welk **signaalwoord** wijst typisch op een betoog?",
         options: ["Ik vind dat","Aan de ene kant","Ten eerste","Bovendien"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is beschouwing.", "Niet — dat is uiteenzetting.", "Niet — kan alle drie."],
+        wrongHints: [null, "Niet — dat is beschouwing.", "Niet — opsommen doe je in alle drie.", "Niet — kan alle drie."],
         uitlegPad: {
           stappen: [{ titel: "'Ik vind' = mening = betoog", tekst: "**'Ik vind dat'**, 'het is duidelijk dat', 'zonder twijfel', 'daarom moet' = signalen dat schrijver een **stellige mening** heeft. Betoog-kenmerk." }],
           theorie: "Vergelijk met 'aan de ene kant' (beschouwing) of 'ten eerste/vervolgens' (uiteenzetting).",
@@ -130,7 +130,7 @@ const steps = [
         q: "Welk argument-type is **sterk**?",
         options: ["Feit-argument met onderzoek","Emotie-appel zonder bewijs","Persoonlijke ervaring zonder context","Algemene uitspraak"],
         answer: 0,
-        wrongHints: [null, "Zwak — geen bewijs.", "Wel context maar zwakker dan feit.", "Te vaag."],
+        wrongHints: [null, "Zwak — geen bewijs.", "Niet — één losse ervaring bewijst weinig.", "Te vaag."],
         uitlegPad: {
           stappen: [{ titel: "Hiërarchie argumenten", tekst: "Sterkste → zwakste: **feit** (onderzoek, statistiek) > **voorbeeld** (concrete case) > **autoriteit** (expert noemt) > **logica** (als-dan) > **emotie** (gevoel). De toets waardeert feit/voorbeeld het hoogst." }],
           niveaus: { basis: "Feit.", simpeler: "Feit-argument = sterkste", nogSimpeler: "Feit" },
@@ -167,12 +167,12 @@ const steps = [
         },
       },
       {
-        q: "*'Wie tegen migratie is, is racistisch.'* — welke drogreden?",
+        q: "*'Óf je stemt voor de nieuwe sporthal, óf sport voor kinderen kan je niets schelen.'* — welke drogreden?",
         options: ["Vals dilemma","Generalisatie","Stroman","Feit-argument"],
         answer: 0,
         wrongHints: [null, "Niet — geen 'iedereen'-uitspraak.", "Niet — argument wordt niet verdraaid.", "Niet — geen feit."],
         uitlegPad: {
-          stappen: [{ titel: "Of-of zonder middenweg", tekst: "**Vals dilemma**: doen alsof er maar 2 opties zijn (voor of tegen). In realiteit kun je migratie willen beperken ZONDER racistisch te zijn. Onterecht binair maken." }],
+          stappen: [{ titel: "Of-of zonder middenweg", tekst: "**Vals dilemma**: doen alsof er maar 2 opties zijn (voor of tegen). In realiteit kun je tegen déze sporthal zijn en sport voor kinderen tóch belangrijk vinden. Onterecht binair maken." }],
           theorie: "Toets-favoriet: vals dilemma + 'wie niet voor is, is tegen' / 'óf X óf Y' / 'er is geen andere optie'.",
           niveaus: { basis: "Vals dilemma.", simpeler: "Of-of zonder middenweg = vals dilemma", nogSimpeler: "Vals dilemma" },
         },
@@ -284,7 +284,7 @@ const steps = [
       "Mix van tekstsoorten + opbouw + drogredenen + stijl. CSE-stijl.\n\nVeel succes!",
     checks: [
       {
-        q: "*'Mijn opa zegt dat alle moderne muziek vreselijk is.'* — drogreden:",
+        q: "*'Alle moderne muziek is vreselijk, want dat zegt mijn opa.'* — drogreden:",
         options: ["Autoriteits-misbruik + generalisatie","Vals dilemma","Stroman","Goed argument"],
         answer: 0,
         wrongHints: [null, "Niet — geen of-of-keuze.", "Niet — geen verdraaiing.", "Niet — twee drogredenen tegelijk."],

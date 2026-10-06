@@ -72,7 +72,7 @@ const steps = [
           null,
           "Dat is het y-snijpunt (b in y=ax+b). Welke letter is de helling — a of b?",
           "Niet zomaar optellen — de helling staat als coëfficiënt vóór x.",
-          "Dat zou de loodrechte lijn zijn (omgekeerde-en-tegengesteld-truc).",
+          "Waarom zou je de helling omkeren? Kijk welke letter in y = ax + b de helling is.",
         ],
         uitlegPad: {
           stappen: [{ titel: "a in y = ax + b", tekst: "Helling = coëfficiënt voor x. y = 7x + 3 → helling = 7." }],
@@ -109,7 +109,7 @@ const steps = [
     checks: [
       {
         q: "*Bij de parabool y = x²: in welk punt is de helling 0?*",
-        options: ["(0, 0) — de top", "(1, 1)", "(-1, 1)", "(2, 4)"],
+        options: ["(0, 0)", "(1, 1)", "(-1, 1)", "(2, 4)"],
         answer: 0,
         wrongHints: [
           null,
@@ -299,7 +299,7 @@ const steps = [
         wrongHints: [
           null,
           "Je hebt opgeteld (6 + 4), maar de coëfficiënt en de exponent moeten vermenigvuldigd worden.",
-          "De coëfficiënt 6 blijft, maar je vermenigvuldigt 'm met de exponent (4): 6·4 = 24.",
+          "De coëfficiënt 6 blijft niet zomaar staan — wat doe je ermee volgens de regel a·xⁿ → a·n·xⁿ⁻¹?",
           "Verlaag de exponent (niet verhogen) — de regel zegt x^n → n·x^(n-1).",
         ],
         uitlegPad: {
@@ -382,7 +382,7 @@ const steps = [
           null,
           "De constante (7) verdwijnt bij differentiëren — die heeft helling 0.",
           "Verlaag de exponent met 1 (niet gelijk houden) — de regel is x^n → n·x^(n-1).",
-          "Vergeet de coëfficiënt 3 en 2 niet vermenigvuldigen met de exponent.",
+          "Vergeet niet de coëfficiënten 3 en 2 met de exponent te vermenigvuldigen.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Term voor term", tekst: "3x³ → 9x². -2x² → -4x. 7 → 0. Antwoord: 9x² − 4x." }],
@@ -455,15 +455,15 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dat is de coëfficiënt voor x in f. Je moet f'(x) = 0 oplossen: 2x - 6 = 0.",
-          "Dat is de constante in f. Voor minimum: f'(x) = 0 → x = 3.",
+          "Dat is de coëfficiënt voor x in f. Stel f'(x) = 0 en los die vergelijking op.",
+          "Dat is de constante in f. Voor een minimum zoek je waar f'(x) = 0.",
           "Bij x = 0 is f' = -6, niet 0.",
         ],
         uitlegPad: {
           stappen: [{ titel: "f'(x) = 0", tekst: "f'(x) = 2x − 6 = 0 → x = 3." }],
           woorden: [{ woord: "minimum", uitleg: "laagste punt van parabool" }],
           theorie: "Top/dal bij f'(x) = 0.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "Top van x²-6x+8 is bij x = 3" }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "Het dal van x² − 6x + 8 ligt bij x = 3" }],
           basiskennis: [{ onderwerp: "a > 0", uitleg: "dalparabool → dal/minimum" }],
           niveaus: { basis: "2x − 6 = 0 → x = 3.", simpeler: "Helling 0 op de top.", nogSimpeler: "x = 3." },
         },
@@ -492,7 +492,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Bijna goed — vergeet de b niet. f'(1) = 2, en door (1,1): 1 = 2·1 + b → b = -1.",
+          "Bijna goed — de helling klopt, maar gaat deze lijn wel door (1, 1)? Bepaal b met het raakpunt.",
           "Controleer de helling: is f'(1) gelijk aan 2 of 1? En vergeet de b niet — die bepaal je via het punt.",
           "Een raaklijn is een rechte lijn (y = ax + b), geen kromme.",
         ],
@@ -549,7 +549,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Vergeet de +1 niet — wat is de afgeleide van de losse x-term?",
+          "Je hebt x³ niet gedifferentieerd — wat is de afgeleide van x³?",
           "Dat is f(2), de y-waarde — niet de helling.",
           "Wat is de afgeleide van de term x alleen? Dat is niet 0.",
         ],
@@ -568,7 +568,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dat is de coëfficiënt vóór x. Voor minimum: f'(x) = 0 → 2x - 8 = 0 → x = 4.",
+          "Dat is de coëfficiënt vóór x. Voor een minimum stel je f'(x) = 0 en los je op.",
           "Dat is de constante in f. Voor minimum: f'(x) = 0.",
           "Bij x = 0 is f' = -8, niet 0.",
         ],
@@ -593,7 +593,7 @@ const steps = [
         wrongHints: [
           null,
           "Vergeet de b niet — vul het raakpunt in de lijn-vergelijking y = ax + b in om b te bepalen.",
-          "Helling klopt niet — f'(3) = 6, niet 3.",
+          "Helling klopt niet — bereken f'(3) met f'(x) = 2x.",
           "Een raaklijn is een rechte lijn (y = ax + b), geen parabool.",
         ],
         uitlegPad: {
@@ -722,8 +722,8 @@ const steps = [
         wrongHints: [
           null,
           "Je hebt f(1) uitgerekend, niet f'(1). Schrijf eerst de afgeleide op, vul dan x = 1 in.",
-          "Dat is de functiewaarde f(1), niet de helling. Bereken eerst f'(x), dan pas invullen.",
-          "Je hebt alleen de constante in f'(x) genomen, maar je moet ook de -6x-term invullen.",
+          "Controleer de afgeleide van -3x²: heb je de exponent 2 als factor meegenomen?",
+          "Je hebt alleen de constante term van f'(x) genomen — vul x = 1 ook in de andere term in.",
         ],
         uitlegPad: {
           stappen: [{ titel: "f'(x) = -6x + 12", tekst: "f'(1) = -6 + 12 = 6." }],
@@ -738,11 +738,11 @@ const steps = [
       { q: "Wat is de afgeleide van f(x) = 3x?", options: ["3","3x","x","0"], answer: 0, wrongHints: [null, "Niet — x weg.", "Niet — coëfficiënt blijft.", "Niet — niet 0."] },
       { q: "Wat is de afgeleide van f(x) = 5?", options: ["0","5","5x","1"], answer: 0, wrongHints: [null, "Niet — constante is verdwenen.", "Niet.", "Niet."] },
       { q: "**Helling** in punt is gelijk aan?", options: ["Waarde van afgeleide in dat punt","Y-waarde in dat punt","X-waarde","Som x + y"], answer: 0, wrongHints: [null, "Niet — y zelf, geen helling.", "Niet.", "Niet."] },
-      { q: "Afgeleide van f(x) = x³?", options: ["3x²","x²","3x","x⁴"], answer: 0, wrongHints: [null,"Exponent vergeten meenemen.","Coëfficiënt mist.","Verkeerde verandering exponent."] },
+      { q: "Afgeleide van f(x) = x³?", options: ["3x²","x²","3x","x⁴"], answer: 0, wrongHints: [null,"Exponent vergeten meenemen.","De exponent gaat maar 1 omlaag.","Verkeerde verandering exponent."] },
       { q: "Afgeleide van f(x) = 4x² + 7?", options: ["8x","8x + 7","8x²","4x"], answer: 0, wrongHints: [null,"Constante verdwijnt.","Niet — exponent ↓.","Coëfficiënt fout."] },
       { q: "Afgeleide van f(x) = x²+x?", options: ["2x + 1","2x","x + 1","2x²"], answer: 0, wrongHints: [null,"Mist afg van x.","Mist 2x.","Niet."] },
       { q: "**f'(x) = 0** wijst op?", options: ["Extreme waarde (max of min)","Snijpunt y-as","Asymptoot","Niets bijzonders"], answer: 0, wrongHints: [null,"Niet primair.","Niet relevant.","Wel relevant."] },
-      { q: "Wat is de **afgeleide** van een **constante** (bv 7)?", options: ["0","7","1","x"], answer: 0, wrongHints: [null,"Tegenovergesteld.","Niet.","Niet."] },
+      { q: "Wat is de **afgeleide** van een **constante** (bv 7)?", options: ["0","7","1","x"], answer: 0, wrongHints: [null,"Een constante verandert niet — hoe steil is die lijn dan?","Niet.","Niet."] },
       { q: "Afgeleide van f(x) = 2x⁵?", options: ["10x⁴","2x⁴","10x⁵","5x⁴"], answer: 0, wrongHints: [null,"Coëfficiënt fout.","Niet — exponent ↓.","Coëfficiënt fout."] },
       { q: "**Raaklijn** aan grafiek in punt heeft welke helling?", options: ["f'(x) in dat punt","y-waarde","x²","Constant"], answer: 0, wrongHints: [null,"De y-waarde is de hoogte van het punt, niet hoe steil de grafiek daar loopt. Welk begrip beschrijft de steilheid?","x² is de functie zelf, niet de steilheid ervan. Wat vertelt je juist iets over de helling in één punt?","Bij een kromme verandert de steilheid per punt — is de helling van een raaklijn dan wel overal hetzelfde?"] },
       { q: "**Open vraag**: bereken f'(2) als f(x) = x². Typ alleen het getal.", kind: "open", acceptedAnswers: ["4"], numericTolerance: 0, explanation: "f'(x) = 2x → f'(2) = 4." },

@@ -173,9 +173,9 @@ const steps = [
       },
       {
         q: "Welke is goed gespeld?",
-        options: ["boekenkast", "boekkast", "boekekast", "boekenkasten"],
+        options: ["boekenkast", "boekkast", "boekekast", "boekskast"],
         answer: 0,
-        wrongHints: [null, "Boek → boeken, dus met tussen-n.", "Het is -en-, niet alleen -e-.", "Dat is het meervoud."],
+        wrongHints: [null, "Wat is het meervoud van 'boek'? Hoor je dat stukje terug in het woord?", "Je hoort wel iets tussen 'boek' en 'kast' — welke letters horen daar precies?", "Hoor je echt een s tussen 'boek' en 'kast'? Denk aan het meervoud van 'boek'."],
         uitlegPad: {
           stappen: [{ titel: "boek → boeken → boekenkast", tekst: "Het meervoud van 'boek' is 'boeken'. Daarom boekenkast, met tussen-n." }],
           niveaus: {

@@ -208,7 +208,7 @@ const steps = [
     checks: [
       {
         q: "Welk hulpwerkwoord bij **'gehen' in Perfekt**?",
-        options: ["sein (beweging)", "haben", "werden", "machen"],
+        options: ["sein", "haben", "werden", "machen"],
         answer: 0,
         wrongHints: [null, "Niet voor beweging.", "Geen hulpwerkwoord hier.", "Geen hulpwerkwoord."],
       },
@@ -252,7 +252,7 @@ const steps = [
   {
     title: "Eind-opdracht — Duits werkwoorden mix",
     explanation:
-      "Mix-toets in Doorstroomtoets-stijl. Door elkaar: Präsens, Präteritum, Perfekt.\n\nVeel succes!",
+      "Mix-toets. Door elkaar: Präsens, Präteritum, Perfekt.\n\nVeel succes!",
     checks: [
       {
         q: "**du + machen** → ?",
@@ -282,7 +282,7 @@ const steps = [
         q: "**'Wir ___ ins Kino ___ .'** Perfekt 'gehen'.",
         options: ["sind ... gegangen", "haben ... gegangen", "sind ... gehen", "war ... gegangen"],
         answer: 0,
-        wrongHints: [null, "Niet haben.", "Niet infinitief.", "Niet Präteritum + Partizip mix."],
+        wrongHints: [null, "Niet haben.", "Niet infinitief.", "Dat is geen Perfekt — en bij 'wir' zou het 'waren' zijn."],
       },
       {
         q: "**er + lesen** in Präsens → ?",

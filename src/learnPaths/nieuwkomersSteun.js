@@ -2810,7 +2810,7 @@ const NIEUWKOMERS_STEUN = {
   "en": "I am happy.",
   "ar": "أنا سعيد.",
   "uk": "Я радий.",
-  "tr": "Mutluyum. (Ik ben blij.)",
+  "tr": "Mutluyum.",
   "ro": "Sunt fericit.",
   "bg": "Радостен съм."
  },
@@ -2818,7 +2818,7 @@ const NIEUWKOMERS_STEUN = {
   "en": "I have pain in my tummy.",
   "ar": "عندي ألم في بطني.",
   "uk": "У мене болить живіт.",
-  "tr": "Karnım ağrıyor. (Ik heb pijn in mijn buik.)",
+  "tr": "Karnım ağrıyor.",
   "ro": "Mă doare burta.",
   "bg": "Боли ме коремът."
  },
@@ -2850,7 +2850,7 @@ const NIEUWKOMERS_STEUN = {
   "en": "I have pain.",
   "ar": "عندي ألم.",
   "uk": "У мене болить.",
-  "tr": "Ağrım var. (Ik heb pijn.)",
+  "tr": "Ağrım var.",
   "ro": "Mă doare.",
   "bg": "Боли ме."
  },
@@ -2858,7 +2858,7 @@ const NIEUWKOMERS_STEUN = {
   "en": "I have hunger.",
   "ar": "أنا جائع.",
   "uk": "Я голодний.",
-  "tr": "Karnım aç. (Ik heb honger.)",
+  "tr": "Karnım aç.",
   "ro": "Mi-e foame.",
   "bg": "Гладен съм."
  },
@@ -2866,7 +2866,7 @@ const NIEUWKOMERS_STEUN = {
   "en": "I am done.",
   "ar": "انتهيت.",
   "uk": "Я закінчив.",
-  "tr": "Bitirdim. (Ik ben klaar.)",
+  "tr": "Bitirdim.",
   "ro": "Am terminat.",
   "bg": "Готов съм."
  },
@@ -2890,7 +2890,7 @@ const NIEUWKOMERS_STEUN = {
   "en": "I don't feel good.",
   "ar": "لا أشعر أنني بخير.",
   "uk": "Мені погано.",
-  "tr": "Kendimi iyi hissetmiyorum. (Ik voel me niet goed.)",
+  "tr": "Kendimi iyi hissetmiyorum.",
   "ro": "Nu mă simt bine.",
   "bg": "Не се чувствам добре."
  },
@@ -2930,7 +2930,7 @@ const NIEUWKOMERS_STEUN = {
   "en": "I am scared.",
   "ar": "أنا خائف.",
   "uk": "Мені страшно.",
-  "tr": "Korkuyorum. (Ik ben bang.)",
+  "tr": "Korkuyorum.",
   "ro": "Mi-e frică.",
   "bg": "Страх ме е."
  },
@@ -2954,7 +2954,7 @@ const NIEUWKOMERS_STEUN = {
   "en": "I am angry.",
   "ar": "أنا غاضب.",
   "uk": "Я сердитий.",
-  "tr": "Kızgınım. (Ik ben boos.)",
+  "tr": "Kızgınım.",
   "ro": "Sunt supărat.",
   "bg": "Ядосан съм."
  },
@@ -2962,7 +2962,7 @@ const NIEUWKOMERS_STEUN = {
   "en": "I am tired.",
   "ar": "أنا متعب.",
   "uk": "Я втомився.",
-  "tr": "Yorgunum. (Ik ben moe.)",
+  "tr": "Yorgunum.",
   "ro": "Sunt obosit.",
   "bg": "Уморен съм."
  },
@@ -3941,7 +3941,8 @@ const NIEUWKOMERS_STEUN = {
  "Hoe doe ik erbij tot 100?": {"en": "How do I add up to 100?", "ar": "كيف أجمع حتى 100؟", "uk": "Як мені додавати до 100?", "tr": "100'e kadar nasıl toplarım?", "ro": "Cum adun până la 100?", "bg": "Как събирам до 100?"},
  "Hoe doe ik eraf tot 100?": {"en": "How do I take away up to 100?", "ar": "كيف أطرح حتى 100؟", "uk": "Як мені віднімати до 100?", "tr": "100'e kadar nasıl çıkarırım?", "ro": "Cum scad până la 100?", "bg": "Как изваждам до 100?"},
  "Hoe reken ik over het tiental heen?": {"en": "How do I calculate past a ten?", "ar": "كيف أحسب بعد العشرة؟", "uk": "Як мені рахувати через десяток?", "tr": "Onluğu geçerek nasıl hesaplarım?", "ro": "Cum calculez peste zece?", "bg": "Как смятам през десетицата?"},
- "Hoe reken ik in de winkel?": {"en": "How do I calculate in the shop?", "ar": "كيف أحسب في المتجر؟", "uk": "Як мені рахувати в магазині?", "tr": "Markette nasıl hesap yaparım?", "ro": "Cum calculez la magazin?", "bg": "Как смятам в магазина?"},
+ "Hoe reken ik in de winkel?": {"en": "How do I calculate in the shop?", "ar": "كيف أحسب في المتجر؟", "uk": "Як мені рахувати в магазині?", "tr": "Markette nasıl hesap yaparım?", "ro": "Cum calculez la magazin?", "bg": "Как смятам в магазина?"}
+,
  // In de klas 2 (2 okt 2026) — door Claude vertaald, nog door moedertaalsprekers laten nakijken.
  "In de klas 2 — zelf werken en fijne gevoelens (nieuwkomers)": {"en":"In class 2 — working on your own and good feelings (newcomers)","ar":"في الصف 2 — العمل بنفسك والمشاعر الجميلة (للقادمين الجدد)","uk":"У класі 2 — працюємо самостійно і приємні почуття (новенькі)","tr":"Sınıfta 2 — kendi başına çalışmak ve güzel duygular (yeni gelenler)","ro":"În clasă 2 — lucrul singur și sentimente plăcute (nou-veniți)","bg":"В клас 2 — работа сам и хубави чувства (новодошли)"},
  "Zelf aan het werk, wat je doet als je klaar bent, wat je doet als de juf bezig is, en hoe je zegt dat je je fijn voelt. Met steun in je eigen taal. ~10 min.": {"en":"Working on your own, what to do when you are finished, what to do when the teacher is busy, and how to say you feel good. With help in your own language. ~10 min.","ar":"العمل بنفسك، ماذا تفعل عندما تنتهي، ماذا تفعل عندما تكون المعلمة مشغولة، وكيف تقول إنك تشعر بشعور جميل. مع مساعدة بلغتك. ~10 دقائق.","uk":"Працюєш сам, що робити, коли ти закінчив, що робити, коли вчителька зайнята, і як сказати, що тобі добре. З підтримкою твоєю мовою. ~10 хв.","tr":"Kendi başına çalışmak, bitirince ne yapacağın, öğretmen meşgulken ne yapacağın ve kendini iyi hissettiğini nasıl söyleyeceğin. Kendi dilinde destekle. ~10 dk.","ro":"Lucrezi singur, ce faci când ai terminat, ce faci când doamna învățătoare e ocupată și cum spui că te simți bine. Cu sprijin în limba ta. ~10 min.","bg":"Работиш сам, какво правиш, когато си готов, какво правиш, когато учителката е заета, и как казваш, че ти е хубаво. С помощ на твоя език. ~10 мин."},

@@ -33,7 +33,7 @@ const steps = [
         q: "Wat is een **Brønsted-zuur**?",
         options: ["H⁺-donor","H⁺-acceptor","Elektron-donor","OH⁻-donor"],
         answer: 0,
-        wrongHints: [null, "Dat is base.", "Niet — andere definitie (Lewis).", "Niet primair — Arrhenius-zicht."],
+        wrongHints: [null, "Dat is base.", "Niet — andere definitie (Lewis).", "Niet — dat lijkt op de oude definitie van een base (Arrhenius)."],
         uitlegPad: {
           stappen: [{ titel: "Zuur staat proton af", tekst: "**Brønsted-zuur** = stof die **H⁺ (proton) afstaat** aan andere stof. Voorbeeld: HCl + H₂O → Cl⁻ + H₃O⁺. HCl is zuur, geeft proton aan H₂O." }],
           theorie: "Toets-formulering: 'Brønsted-zuur = protondonor, Brønsted-base = protonacceptor'.",
@@ -136,7 +136,7 @@ const steps = [
       },
       {
         q: "Verdun 0,1 M HCl **10×**. Nieuwe pH?",
-        options: ["2 (was 1)","1","0,1","12"],
+        options: ["2","1","0,1","12"],
         answer: 0,
         wrongHints: [null, "Niet — pH stijgt na verdunnen.", "Niet pH.", "Niet — geen base."],
         uitlegPad: {
@@ -211,13 +211,13 @@ const steps = [
   {
     title: "Titratie + indicatoren",
     explanation:
-      "**Titratie** = analyse-techniek: bepaal onbekende concentratie zuur of base door druppelsgewijs sterk tegenmiddel toe te voegen tot equivalentie.\n\n**Uitvoering**:\n1. Bekend volume onbekende oplossing in erlenmeyer.\n2. Indicator (kleurstof die kleur verandert bij pH-omslag) toevoegen.\n3. Vul buret met titratieoplossing van bekende concentratie.\n4. Druppel langzaam toe, **roer** continu.\n5. Stop wanneer indicator (definitief) van kleur verandert = **eindpunt** bereikt.\n6. Volume toegevoegd aflezen → bereken onbekende concentratie.\n\n**Equivalentiepunt** vs **eindpunt**:\n• **Equivalentiepunt**: exact theoretisch punt waarop zuur en base evenredig zijn.\n• **Eindpunt**: wanneer indicator van kleur verandert (praktisch).\n• Goed gekozen indicator → eindpunt = equivalentiepunt.\n\n**Berekening**:\nC_zuur × V_zuur = C_base × V_base (voor 1-protonig)\n\nVoor meer-protonig zuur of base: factor erbij.\n\n**Voorbeeld**:\n10 mL onbekend HCl getitreerd met 0,1 M NaOH. Indicator slaat om bij 15 mL NaOH.\nC_HCl × 10 = 0,1 × 15 → C_HCl = 0,15 M.\n\n**Indicatoren** (zwak zuur waarvan de kleur afhangt van de pH):\n• **Lakmoes**: rood (zuur) ↔ blauw (basisch). Omslagpunt rond pH 5-8. Niet erg scherp.\n• **Fenolftaleïne**: kleurloos (pH<8) ↔ roze (pH>8,2). Voor titratie sterk zuur + sterke base.\n• **Methyloranje**: rood (pH<3,1) ↔ oranje-geel (pH>4,4). Voor titratie sterk zuur.\n• **BTB (broomthymolblauw)**: geel (pH<6) ↔ blauw (pH>7,6). Algemeen.\n• **Universeel indicator-papier**: meerdere kleuren over hele pH-bereik.\n\n**Indicator-keuze**:\n• Sterk zuur + sterke base (HCl + NaOH): equivalentiepunt = pH 7. Fenolftaleïne of methyloranje werken beide.\n• Sterk zuur + zwakke base (HCl + NH₃): equivalentiepunt < 7 (zuur zout). Methyloranje.\n• Zwak zuur + sterke base (azijn + NaOH): equivalentiepunt > 7 (basisch zout). Fenolftaleïne.\n• Zwak zuur + zwakke base: equivalentiepunt afhankelijk, vaak moeilijk visueel — gebruik pH-meter.\n\n**Titratiekromme** (pH vs toegevoegd volume):\n• Begint bij pH van oplossing.\n• Daalt/stijgt langzaam.\n• **Steile sprong** bij equivalentiepunt (pH springt ~3-7 binnen druppels).\n• Buffergebied (vlak deel) als zwak component aanwezig.\n• Bij zwak zuur + sterke base: pKa = pH bij half-equivalentiepunt.\n\n**Praktische foutbronnen**:\n• Te snel druppelen → voorbij equivalentiepunt.\n• Verkeerde indicator → eindpunt ≠ equivalentiepunt.\n• Erlenmeyer niet schoon → onbekende stoffen.\n• Buret niet gespoeld met titratie-oplossing → vermenging.\n\n**Pipet vs buret**:\n• Pipet: vast volume (10 mL, 25 mL).\n• Buret: variabel volume met aflezing.\n• Maatkolf: bekende totaal-volume (250 mL, 500 mL) — voor verdunning van standaard.",
+      "**Titratie** = analyse-techniek: bepaal onbekende concentratie zuur of base door druppelsgewijs sterk tegenmiddel toe te voegen tot equivalentie.\n\n**Uitvoering**:\n1. Bekend volume onbekende oplossing in erlenmeyer.\n2. Indicator (kleurstof die kleur verandert bij pH-omslag) toevoegen.\n3. Vul buret met titratieoplossing van bekende concentratie.\n4. Druppel langzaam toe, **roer** continu.\n5. Stop wanneer indicator (definitief) van kleur verandert = **eindpunt** bereikt.\n6. Volume toegevoegd aflezen → bereken onbekende concentratie.\n\n**Equivalentiepunt** vs **eindpunt**:\n• **Equivalentiepunt**: exact theoretisch punt waarop zuur en base in gelijkwaardige hoeveelheden (volgens de reactievergelijking) zijn samengebracht.\n• **Eindpunt**: wanneer indicator van kleur verandert (praktisch).\n• Goed gekozen indicator → eindpunt = equivalentiepunt.\n\n**Berekening**:\nC_zuur × V_zuur = C_base × V_base (voor 1-protonig)\n\nVoor meer-protonig zuur of base: factor erbij.\n\n**Voorbeeld**:\n10 mL onbekend HCl getitreerd met 0,1 M NaOH. Indicator slaat om bij 15 mL NaOH.\nC_HCl × 10 = 0,1 × 15 → C_HCl = 0,15 M.\n\n**Indicatoren** (zwak zuur waarvan de kleur afhangt van de pH):\n• **Lakmoes**: rood (zuur) ↔ blauw (basisch). Omslagpunt rond pH 5-8. Niet erg scherp.\n• **Fenolftaleïne**: kleurloos (pH<8) ↔ roze (pH>8,2). Voor titratie sterk zuur + sterke base.\n• **Methyloranje**: rood (pH<3,1) ↔ oranje-geel (pH>4,4). Voor titratie sterk zuur.\n• **BTB (broomthymolblauw)**: geel (pH<6) ↔ blauw (pH>7,6). Algemeen.\n• **Universeel indicator-papier**: meerdere kleuren over hele pH-bereik.\n\n**Indicator-keuze**:\n• Sterk zuur + sterke base (HCl + NaOH): equivalentiepunt = pH 7. Fenolftaleïne of methyloranje werken beide.\n• Sterk zuur + zwakke base (HCl + NH₃): equivalentiepunt < 7 (zuur zout). Methyloranje.\n• Zwak zuur + sterke base (azijn + NaOH): equivalentiepunt > 7 (basisch zout). Fenolftaleïne.\n• Zwak zuur + zwakke base: equivalentiepunt afhankelijk, vaak moeilijk visueel — gebruik pH-meter.\n\n**Titratiekromme** (pH vs toegevoegd volume):\n• Begint bij pH van oplossing.\n• Daalt/stijgt langzaam.\n• **Steile sprong** bij equivalentiepunt (pH springt ~3-7 binnen druppels).\n• Buffergebied (vlak deel) als zwak component aanwezig.\n• Bij zwak zuur + sterke base: pKa = pH bij half-equivalentiepunt.\n\n**Praktische foutbronnen**:\n• Te snel druppelen → voorbij equivalentiepunt.\n• Verkeerde indicator → eindpunt ≠ equivalentiepunt.\n• Erlenmeyer niet schoon → onbekende stoffen.\n• Buret niet gespoeld met titratie-oplossing → vermenging.\n\n**Pipet vs buret**:\n• Pipet: vast volume (10 mL, 25 mL).\n• Buret: variabel volume met aflezing.\n• Maatkolf: bekende totaal-volume (250 mL, 500 mL) — voor verdunning van standaard.",
     checks: [
       {
         q: "Wat is het **equivalentiepunt** in een titratie?",
-        options: ["Punt waarop zuur en base evenredig zijn","Begin van titratie","Bij pH 7 altijd","Bij omslagpunt indicator"],
+        options: ["Punt waarop zuur en base in gelijkwaardige hoeveelheden zijn toegevoegd","Begin van titratie","Bij pH 7 altijd","Bij omslagpunt indicator"],
         answer: 0,
-        wrongHints: [null, "Niet — begin = pH onbekend.", "Niet — alleen bij sterk-sterk.", "Eindpunt — niet hetzelfde."],
+        wrongHints: [null, "Niet — aan het begin is er nog niets toegevoegd.", "Niet — alleen bij sterk-sterk.", "Eindpunt — niet hetzelfde."],
         uitlegPad: {
           stappen: [{ titel: "Stoïchiometrisch", tekst: "**Equivalentiepunt** = exact moment waarop toegevoegde stof stoichiometrisch gelijk is aan beginstof. Bij sterk zuur + sterke base = pH 7. Bij zwak/sterk-combinaties anders." }],
           niveaus: { basis: "Stoichiometrisch evenwicht.", simpeler: "Equivalentie = even-veel", nogSimpeler: "Even" },
@@ -227,7 +227,7 @@ const steps = [
         q: "10 mL HCl getitreerd met **0,1 M NaOH**, indicator-omslag bij 15 mL. C(HCl)?",
         options: ["0,15 M","0,1 M","1,5 M","0,01 M"],
         answer: 0,
-        wrongHints: [null, "Niet — meer volume nodig.", "Niet — niet 10× verschil.", "Niet — wel substantieel zuur."],
+        wrongHints: [null, "Niet — er was méér NaOH nodig dan het volume HCl; wat zegt dat over de concentratie?", "Niet — niet 10× verschil.", "Niet — wel substantieel zuur."],
         uitlegPad: {
           stappen: [{ titel: "Cz·Vz = Cb·Vb", tekst: "1-protonig: **C_zuur × V_zuur = C_base × V_base**. C_HCl × 10 = 0,1 × 15 → C_HCl = 1,5/10 = **0,15 M**." }],
           niveaus: { basis: "0,15 M.", simpeler: "0,1·15/10 = 0,15", nogSimpeler: "0,15" },
@@ -257,7 +257,7 @@ const steps = [
         q: "Bij zwak zuur + sterke base, **pKa = pH op halfequivalentiepunt**?",
         options: ["Ja","Nee","Alleen bij neutralisatie","Onmogelijk te zeggen"],
         answer: 0,
-        wrongHints: [null, "Wel — vaste relatie.", "Niet — overal in zwak-zuur-titratie.", "Wel — bekende relatie."],
+        wrongHints: [null, "Niet — hoe verhouden [HA] en [A⁻] zich op het halfequivalentiepunt?", "Niet — denk aan de verhouding [HA] : [A⁻] op dat punt.", "Niet — met de buffervergelijking kun je het afleiden."],
         uitlegPad: {
           stappen: [{ titel: "Half-eq. = pKa", tekst: "Bij halfequivalentiepunt is precies de helft van zwak zuur omgezet in geconjugeerde base. Dan: [HA] = [A⁻] → Henderson-Hasselbalch: pH = pKa + log(1) = **pKa**. Handig om pKa experimenteel te bepalen." }],
           theorie: "Toets-toepassing: titratiekromme aflezen → punt waar pH=pKa.",
@@ -277,7 +277,7 @@ const steps = [
         q: "0,001 M **NaOH** in water. pH?",
         options: ["11","3","12","7"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is pOH.", "Niet — 0,01 M zou 12 zijn.", "Niet neutraal."],
+        wrongHints: [null, "Niet — dat is pOH.", "Niet — controleer de exponent van [OH⁻].", "Niet neutraal."],
         uitlegPad: {
           stappen: [{ titel: "Bereken via pOH", tekst: "[OH⁻] = 0,001 = 10⁻³ → pOH = 3 → pH = 14 − 3 = **11**." }],
           niveaus: { basis: "11.", simpeler: "pOH=3, pH=11", nogSimpeler: "11" },
@@ -287,7 +287,7 @@ const steps = [
         q: "Welke is **geconjugeerd zuur** van NH₃?",
         options: ["NH₄⁺","NH₂⁻","N₂","Geen"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is geconj. base.", "Niet relevant.", "Wel — NH₃ kan H⁺ opnemen."],
+        wrongHints: [null, "Niet — dat is geconj. base.", "Niet relevant.", "Niet — NH₃ is een base; wat ontstaat er als een base een H⁺ opneemt?"],
         uitlegPad: {
           stappen: [{ titel: "Base + H⁺ = geconj. zuur", tekst: "NH₃ + H⁺ → NH₄⁺ (ammonium-ion). Dus **NH₄⁺** = geconjugeerd zuur van NH₃. (Geconjugeerde base zou NH₂⁻ zijn — NH₃ als zuur, ongebruikelijk in water.)" }],
           niveaus: { basis: "NH₄⁺.", simpeler: "NH₃ + H⁺ = NH₄⁺", nogSimpeler: "NH₄⁺" },

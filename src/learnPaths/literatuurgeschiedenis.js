@@ -164,7 +164,7 @@ const steps = [
         wrongHints: [
           null,
           "Max Havelaar is van Multatuli (Romantiek/Realisme, ~1860).",
-          "De avonden is van Reve (postmodern, 1947).",
+          "De avonden is van Reve (naoorlogs proza, 1947).",
           "Eline Vere is van Couperus (Realisme/Naturalisme, ~1889).",
         ],
         uitlegPad: {
@@ -273,7 +273,7 @@ const steps = [
           null,
           "Max Havelaar is van 1860 — dat is Romantiek/realisme, niet meer Verlichting.",
           "Eline Vere is uit 1889 — Realisme/Naturalisme.",
-          "De avonden is naoorlogs (1947) — postmodern.",
+          "De avonden is naoorlogs proza (1947) — veel later dan de Verlichting.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Sara Burgerhart = Verlichting", tekst: "Wolff & Deken (1782) — eerste NL briefroman, opvoedend." }],
@@ -315,7 +315,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dat past niet bij Max Havelaar. De roman speelt deels in Indië en is een kritiek op het koloniale systeem.",
+          "Max Havelaar speelt niet in de Gouden Eeuw. In welk land werkte Multatuli zelf als ambtenaar?",
           "Een non die haar klooster verlaat is het verhaal van Beatrijs (Middeleeuwen).",
           "Ridderverhaal over Karel de Grote = Karel ende Elegast (Middeleeuwen).",
         ],
@@ -383,7 +383,7 @@ const steps = [
           null,
           "Vondel is van de Gouden Eeuw (~1600), niet de Tachtigers.",
           "Multatuli was prozaschrijver (Romantiek), niet dichter van Mei.",
-          "Lucebert is een Vijftiger (~1950), eeuwen na de Tachtigers.",
+          "Lucebert is een Vijftiger (~1950), ruim een halve eeuw na de Tachtigers.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Mei = Gorter (1889)", tekst: "Lang lyrisch lente-gedicht van Tachtiger Herman Gorter." }],
@@ -815,10 +815,10 @@ const steps = [
       { q: "Welk verschil is er tussen **'ik-perspectief'** en **'auctorieel'**?", options: ["Ik = 1e persoon binnenuit; auctorieel = alwetende verteller","Geen verschil","Ik is altijd onbetrouwbaar","Auctorieel = 1e persoon"], answer: 0, wrongHints: [null, "Wel verschil — eigen blik vs goden-blik.", "Niet altijd.", "Andersom."] },
       { q: "Een **stijlfiguur** zoals 'zo wit als sneeuw' heet?", options: ["Vergelijking","Metafoor","Personificatie","Ironie"], answer: 0, wrongHints: [null,"Zonder 'als' / 'zoals'.","Niet — geen menselijke eigenschap.","Niet ironisch."] },
       { q: "**Metafoor**: 'Hij is een leeuw' — wat is dat?", options: ["Vergelijking ZONDER 'als/zoals'","Met 'als/zoals'","Tegenstelling","Niets"], answer: 0, wrongHints: [null,"Dan is het vergelijking.","Niet.","Wel iets."] },
-      { q: "Wat is **personificatie**?", options: ["Niet-levend ding krijgt menselijke eigenschap","Mens wordt object","Vergelijking","Niet bestaand"], answer: 0, wrongHints: [null,"Tegenovergesteld.","Vergelijking.","Wel bestaat."] },
+      { q: "Wat is **personificatie**?", options: ["Niet-levend ding krijgt menselijke eigenschap","Mens wordt object","Vergelijking","Niet bestaand"], answer: 0, wrongHints: [null,"Tegenovergesteld.","Vergelijking.","Bestaat wel."] },
       { q: "Wie schreef **'Het Achterhuis'** (het dagboek uit de onderduik in de Tweede Wereldoorlog)?", options: ["Anne Frank","Multatuli","Vondel","Annie M.G. Schmidt"], answer: 0, wrongHints: [null,"19e eeuw.","17e eeuw.","Kinder-auteur 20e eeuw."] },
-      { q: "Een **roman** is meestal hoeveel pagina's?", options: ["100-500","1-10","1000+","Geen limiet"], answer: 0, wrongHints: [null,"Te kort — verhaal/novelle.","Heel zeldzaam.","Er is geen harde grens, maar de vraag is wat méestal geldt."] },
-      { q: "Welke is een **literaire stroming** uit de 19e eeuw?", options: ["Romantiek","Modernisme","Postmodernisme","Realisme én Romantiek (beide 19e)"], answer: 3, wrongHints: ["Klopt, maar er is een vollediger antwoord — realisme is óók 19e eeuw.", "20e eeuw.", "Eind 20e/begin 21e.", null] },
+      { q: "Een **roman** is meestal hoeveel pagina's?", options: ["100-500","1-10","1000+","Geen limiet"], answer: 0, wrongHints: [null,"Te kort — dat is hooguit een kort verhaal.","Heel zeldzaam.","Er is geen harde grens, maar de vraag is wat méestal geldt."] },
+      { q: "Welke is een **literaire stroming** uit de 19e eeuw?", options: ["Romantiek","Modernisme","Postmodernisme","Vijftigers"], answer: 0, wrongHints: [null, "20e eeuw.", "Eind 20e/begin 21e.", "Rond 1950 — 20e eeuw."] },
       { q: "**Open vraag**: noem 1 beroemde stijlfiguur (typ 1 woord).", kind: "open", acceptedAnswers: ["metafoor", "vergelijking", "personificatie", "ironie", "hyperbool", "litotes", "antithese", "rijm", "alliteratie", "tautologie"], explanation: "Vele opties: metafoor, vergelijking, personificatie, ironie, hyperbool, litotes, antithese." },
       { q: "**Open vraag**: in welke eeuw leefde Joost van den Vondel?", kind: "open", acceptedAnswers: ["17e", "17e eeuw", "17", "1600", "gouden eeuw", "17de"], explanation: "Vondel leefde 1587-1679 (17e eeuw, Gouden Eeuw)." },
     ],

@@ -162,7 +162,7 @@ const steps = [
       },
       {
         q: "**'Je ___ aller au cinéma.'** Welk werkwoord?",
-        options: ["vais (van aller — futur proche)", "suis", "ai", "vais aller"],
+        options: ["vais", "suis", "ai", "vais aller"],
         answer: 0,
         wrongHints: [null, "être past niet.", "avoir past niet.", "Niet dubbel."],
       },
@@ -254,7 +254,7 @@ const steps = [
   {
     title: "Eind-opdracht — Frans werkwoorden mix",
     explanation:
-      "Mix-toets in Doorstroomtoets-stijl. Door elkaar: Présent, Imparfait, Passé composé.\n\nVeel succes!",
+      "Mix-toets. Door elkaar: Présent, Imparfait, Passé composé.\n\nVeel succes!",
     checks: [
       {
         q: "**aimer + tu** in Présent → ?",

@@ -27,15 +27,15 @@ const steps = [
   {
     title: "Examen-format Duits CSE",
     explanation:
-      "**CSE Duits** HAVO/VWO test **leesvaardigheid** (zoals Frans, Engels). Andere vaardigheden in schoolexamens.\n\n**Tijdsduur**:\n• HAVO: 2,5 uur.\n• VWO: 3 uur.\n\n**Aantal teksten**:\n• ~9-12 teksten.\n• Totaal ~3000-4500 woorden Duits.\n• ~40-45 vragen.\n\n**Tekstsoorten**:\n• Nieuwsartikelen uit Süddeutsche Zeitung, Die Zeit, Der Spiegel, FAZ.\n• Reportages.\n• Wetenschapsteksten (vaak Spektrum der Wissenschaft).\n• Cultuur (theater, film, boekrecensies).\n• Maatschappij-debat.\n• Interviews.\n• Soms literair fragment op VWO.\n\n**Tekst-niveau**:\n• HAVO: B1 (zelfstandig taalgebruiker).\n• VWO: B2 (vaardig taalgebruiker).\n\n**Vraagtypes** (meestal in Nederlands):\n• Multiple choice (4 opties).\n• Open vraag (kort NL of korte Duitse zin).\n• Citaat met regelnummer.\n• Hoofdgedachte / alinea-functie.\n• Wat bedoelt de auteur met...\n• Welke uitspraak past bij persoon X.\n\n**Hulpmiddelen toegestaan**:\n• **Eentalig Duits woordenboek** (Duden, Wahrig).\n• **Tweetalig Duits-Nederlands woordenboek** (Van Dale).\n• Geen digitaal.\n\n**Strategie**:\n• 2,5 uur HAVO ÷ 10 teksten = 15 min/tekst.\n• Eerst snel doorlezen, dan vragen.\n• Duits is voor NL'ers relatief toegankelijk (Germaanse verwantschap) — gok daarom niet te makkelijk; cito-vragen testen vaak subtiele nuances.\n\n**Score + cijfer**:\n• Eindcijfer = (CSE + SE) / 2.\n• Slagen: gemiddeld 5,5+, maximaal 1× onvoldoende in kernvakken (Duits is geen kernvak).\n\n**Duits als examen-vak**:\n• HAVO E&M-profiel: keuzevak, vaak gekozen.\n• HAVO C&M-profiel: vaak verplicht of zwaarwegend.\n• VWO Gymnasium: keuze tussen klassieke/moderne talen.\n• Duits goed voor Duitsland-studies (HBO/WO), grenswerk Limburg/Twente.",
+      "**CSE Duits** HAVO/VWO test **leesvaardigheid** (zoals Frans, Engels). Andere vaardigheden in schoolexamens.\n\n**Tijdsduur**:\n• HAVO: 2,5 uur.\n• VWO: ook 2,5 uur.\n\n**Aantal teksten**:\n• ~9-12 teksten.\n• Totaal ~3000-4500 woorden Duits.\n• ~40-45 vragen.\n\n**Tekstsoorten**:\n• Nieuwsartikelen uit Süddeutsche Zeitung, Die Zeit, Der Spiegel, FAZ.\n• Reportages.\n• Wetenschapsteksten (vaak Spektrum der Wissenschaft).\n• Cultuur (theater, film, boekrecensies).\n• Maatschappij-debat.\n• Interviews.\n• Soms literair fragment op VWO.\n\n**Tekst-niveau**:\n• HAVO: B1 (zelfstandig taalgebruiker).\n• VWO: B2 (vaardig taalgebruiker).\n\n**Vraagtypes** (meestal in Nederlands):\n• Multiple choice (4 opties).\n• Open vraag (kort NL of korte Duitse zin).\n• Citaat met regelnummer.\n• Hoofdgedachte / alinea-functie.\n• Wat bedoelt de auteur met...\n• Welke uitspraak past bij persoon X.\n\n**Hulpmiddelen toegestaan**:\n• **Eentalig Duits woordenboek** (Duden, Wahrig).\n• **Tweetalig Duits-Nederlands woordenboek** (Van Dale).\n• Geen digitaal.\n\n**Strategie**:\n• 2,5 uur HAVO ÷ 10 teksten = 15 min/tekst.\n• Eerst snel doorlezen, dan vragen.\n• Duits is voor NL'ers relatief toegankelijk (Germaanse verwantschap) — gok daarom niet te makkelijk; cito-vragen testen vaak subtiele nuances.\n\n**Score + cijfer**:\n• Eindcijfer = (CSE + SE) / 2.\n• Slagen: gemiddeld 5,5+, maximaal 1× onvoldoende in kernvakken (Duits is geen kernvak).\n\n**Duits als examen-vak**:\n• HAVO E&M-profiel: keuzevak, vaak gekozen.\n• HAVO C&M-profiel: Duits of Frans is een verplicht profielvak.\n• VWO Gymnasium: keuze tussen klassieke/moderne talen.\n• Duits goed voor Duitsland-studies (HBO/WO), grenswerk Limburg/Twente.",
     checks: [
       {
         q: "Tijdsduur CSE Duits **HAVO**?",
         options: ["2,5 uur","2 uur","3 uur","4 uur"],
         answer: 0,
-        wrongHints: [null, "Te kort.", "Niet — VWO.", "Te lang."],
+        wrongHints: [null, "Te kort.", "Te lang — dat geldt ook niet voor VWO.", "Te lang."],
         uitlegPad: {
-          stappen: [{ titel: "Standaard", tekst: "**HAVO Duits CSE: 2,5 uur**. VWO: 3 uur. Bij dyslexie 30 min extra." }],
+          stappen: [{ titel: "Standaard", tekst: "**HAVO Duits CSE: 2,5 uur**. VWO: ook 2,5 uur. Bij dyslexie 30 min extra." }],
           niveaus: { basis: "2,5u.", simpeler: "HAVO=2,5u", nogSimpeler: "2,5" },
         },
       },
@@ -70,12 +70,12 @@ const steps = [
         },
       },
       {
-        q: "Welk profiel heeft Duits **vaak als kernvak**?",
-        options: ["HAVO C&M (Cultuur + Maatschappij)","HAVO N&T","VMBO BB","Geen"],
+        q: "In welk HAVO-profiel is Duits (of Frans) een **verplicht profielvak**?",
+        options: ["C&M (Cultuur en Maatschappij)","N&T (Natuur en Techniek)","N&G (Natuur en Gezondheid)","E&M (Economie en Maatschappij)"],
         answer: 0,
-        wrongHints: [null, "Niet — vaker natuur.", "Niet — keuze.", "Wel keuze."],
+        wrongHints: [null, "In dit profiel zitten vooral bèta-vakken.", "In dit profiel zitten vooral bèta-vakken.", "Hier is een tweede moderne vreemde taal geen verplicht profielvak. Welk profiel draait om cultuur en talen?"],
         uitlegPad: {
-          stappen: [{ titel: "C&M-profiel", tekst: "**HAVO C&M (Cultuur + Maatschappij)**: vaak Duits + Frans verplicht of zwaarwegend. E&M (Economie+Maatschappij): keuze. N&T (Natuur+Techniek): meestal niet. Talen-profielen kiezen vaak DU + FR." }],
+          stappen: [{ titel: "C&M-profiel", tekst: "**HAVO C&M (Cultuur en Maatschappij)**: Duits of Frans is een verplicht profielvak. E&M (Economie+Maatschappij): keuze. N&T (Natuur+Techniek): meestal niet. Talen-profielen kiezen vaak DU + FR." }],
           niveaus: { basis: "C&M.", simpeler: "C&M = talen", nogSimpeler: "C&M" },
         },
       },
@@ -103,7 +103,7 @@ const steps = [
         q: "*Bekommen* betekent in Duits:",
         options: ["Krijgen","Worden","Begrijpen","Vergeten"],
         answer: 0,
-        wrongHints: [null, "Faux ami! Dat is *werden*.", "Niet — dat is verstehen.", "Tegenovergesteld."],
+        wrongHints: [null, "Faux ami! Dat is *werden*.", "Niet — dat is verstehen.", "Niet — dat is *vergessen*."],
         uitlegPad: {
           stappen: [{ titel: "Faux ami klassiek", tekst: "**Bekommen** = krijgen, ontvangen. NIET 'worden' (dat is *werden*). NL'ers verwarren dit vaak. Voorbeeld: *Ich bekomme ein Geschenk* = Ik **krijg** een cadeau (NIET 'ik word een cadeau')." }],
           theorie: "Andere faux amis: das Gymnasium (school, niet zaal), die Mappe (tas, kan map), eventuell (mogelijk).",
@@ -136,7 +136,7 @@ const steps = [
         q: "Voorzetsel **für** vraagt:",
         options: ["Akkusativ","Dativ","Genitiv","Geen naamval"],
         answer: 0,
-        wrongHints: [null, "Niet — vaste Akk.", "Niet — vaste Akk.", "Wel naamval."],
+        wrongHints: [null, "Niet — für hoort bij het rijtje voorzetsels met één vaste naamval. Welke?", "Niet — für staat niet in het Dativ-rijtje (aus, bei, mit, nach, seit, von, zu).", "Wel naamval."],
         uitlegPad: {
           stappen: [{ titel: "FUDGOB-Akkusativ-set", tekst: "**Für, durch, gegen, ohne, um, bis** vragen altijd Akkusativ. Memo: *für **mich***, *ohne **dich***, *gegen **ihn***. Geen wisseling met beweging/plaats." }],
           niveaus: { basis: "Akkusativ.", simpeler: "für = Akk", nogSimpeler: "Akk" },
@@ -165,7 +165,7 @@ const steps = [
         q: "*Sie hätte gern einen Kaffee* — welke modus + functie?",
         options: ["Konjunktiv II — hoffelijkheid","Konjunktiv I","Imperatief","Indikativ"],
         answer: 0,
-        wrongHints: [null, "Niet — geen indirecte rede.", "Niet — geen bevel.", "Niet — irreëel."],
+        wrongHints: [null, "Niet — geen indirecte rede.", "Niet — geen bevel.", "Niet — de gewone vorm (Indikativ) zou *hat* zijn."],
         uitlegPad: {
           stappen: [{ titel: "Hoffelijk-Konjunktiv", tekst: "*Sie **hätte** gern...* = **Konjunktiv II** voor **hoffelijkheid**. Letterlijk 'zij zou graag hebben' = beleefde manier om te vragen. Vergelijk *Ich möchte...* (ik zou willen) en *Könnten Sie...* (zou u kunnen)." }],
           theorie: "Indikativ: *Ich will einen Kaffee* (te direct). Konjunktiv II: *Ich hätte gern...* (beleefd). Verschil komt vaak terug op CSE.",
@@ -190,7 +190,7 @@ const steps = [
         wrongHints: [null, "Niet — heel informeel.", "Niet relevant.", "Niet — afwijkend."],
         uitlegPad: {
           stappen: [{ titel: "Slang", tekst: "**Jugendsprache** = jongerentaal Duits. Voorbeelden: *krass* (heftig/cool), *geil* (super), *cringe* (gênant), *abhängen* (chillen), *Bock haben* (zin hebben). Komt op CSE alleen in zeer informele context (sociale media, jongeren-interviews)." }],
-          niveaus: { basis: "Jongerentaal.", simpeler: "Jugendsprache = jong slang", nogSimpeler: "A." },
+          niveaus: { basis: "Jongerentaal.", simpeler: "Jugendsprache = jong slang", nogSimpeler: "Taal van jongeren." },
         },
       },
       {
@@ -219,7 +219,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet — afkorting.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Acroniem 3 landen", tekst: "**DACH** = **D**eutschland + **A**ustria (Österreich) + **CH** (Schweiz, Confoederatio Helvetica). Drie Duitstalige landen samen genoemd. Soms ook FL (Liechtenstein) toegevoegd → DACHL." }],
-          niveaus: { basis: "DE+AT+CH.", simpeler: "DACH = drie landen", nogSimpeler: "A." },
+          niveaus: { basis: "DE+AT+CH.", simpeler: "DACH = drie landen", nogSimpeler: "Drie Duitstalige landen." },
         },
       },
       {
@@ -229,7 +229,7 @@ const steps = [
         wrongHints: [null, "De euro is de Duitse munt — zou een land zijn geld 'Bundestag' noemen?", "Een krant heeft een titel als Bild of FAZ — klinkt '-tag' (vergadering) daar als een krant?", "Bundestag is een plek waar politici besluiten nemen — past dat bij een dier?"],
         uitlegPad: {
           stappen: [{ titel: "Politiek Duits", tekst: "**Bundestag** = federaal parlement van Duitsland in Berlin (Reichstag-gebouw). Verkozen leden + Bondskanselier daar gekozen. Daarnaast **Bundesrat** = vertegenwoordiging van 16 deelstaten." }],
-          niveaus: { basis: "Federaal parlement.", simpeler: "Bundestag = parlement", nogSimpeler: "A." },
+          niveaus: { basis: "Federaal parlement.", simpeler: "Bundestag = parlement", nogSimpeler: "Parlement." },
         },
       },
       {
@@ -238,7 +238,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Te weinig.", "Te veel.", "Niet alleen Duits."],
         uitlegPad: {
-          stappen: [{ titel: "Vier-talig", tekst: "Zwitserland heeft **4 officiële talen**: Duits (63%), Frans (23%), Italiaans (8%), Reto-Romaans (0,5%). Dit weerspiegelt regionale verschillen — kantons hebben eigen voertaal. Op munten + identiteitsbewijs alle 4 vertaald." }],
+          stappen: [{ titel: "Vier-talig", tekst: "Zwitserland heeft **4 officiële talen**: Duits (63%), Frans (23%), Italiaans (8%), Reto-Romaans (0,5%). Dit weerspiegelt regionale verschillen — kantons hebben eigen voertaal." }],
           theorie: "Toets-favoriet: 'welk land in DACH heeft 4 talen?' → Zwitserland.",
           niveaus: { basis: "4.", simpeler: "CH = 4 talen", nogSimpeler: "4" },
         },
@@ -262,7 +262,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Energie-omslag", tekst: "**Energiewende** = Duits beleid sinds 2000: overstap van fossiel + kernenergie naar **hernieuwbaar** (zon, wind, biomassa). Versneld na Fukushima 2011. **Kernuitstap 2023** voltooid: laatste 3 kerncentrales gesloten. Hot topic: kost veel, leverde nog niet alles op." }],
           theorie: "Vergelijking: FR zet juist op kern (~70%), DE op hernieuwbaar. Politiek omstreden in DACH.",
-          niveaus: { basis: "Energie-omslag.", simpeler: "Energiewende = groen-overstap", nogSimpeler: "A." },
+          niveaus: { basis: "Energie-omslag.", simpeler: "Energiewende = groen-overstap", nogSimpeler: "Naar groene energie." },
         },
       },
     ],
@@ -281,7 +281,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Twijfel uitdrukken", tekst: "**Eventuell** = mogelijk, misschien (~50% kans). NL'ers verwarren soms met 'eventueel' (= 'als het zo uitkomt') — andere nuance. Voor 'definitief' gebruik *bestimmt, sicher, definitiv*." }],
-          niveaus: { basis: "Mogelijk.", simpeler: "Eventuell = mogelijk", nogSimpeler: "A." },
+          niveaus: { basis: "Mogelijk.", simpeler: "Eventuell = mogelijk", nogSimpeler: "Misschien." },
         },
       },
       {

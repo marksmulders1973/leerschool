@@ -39,7 +39,7 @@ const steps = [
         q: "Welke is een **zelfstandig naamwoord**?",
         options: ["fiets", "snel", "loopt", "de"],
         answer: 0,
-        wrongHints: [null, "Snel = bijwoord (beschrijft hoe).", "Loopt = werkwoord.", "De = lidwoord."],
+        wrongHints: [null, "Snel zegt hoe iets is of gaat — het is geen naam voor iets.", "Loopt = werkwoord.", "De = lidwoord."],
         uitlegPad: {
           stappen: [{ titel: "Fiets = ding = zn", tekst: "Fiets is een ding → zelfstandig naamwoord." }],
           woorden: [{ woord: "zelfstandig naamwoord", uitleg: "naam voor ding/persoon/dier/plaats" }],
@@ -84,7 +84,7 @@ const steps = [
         q: "Welke is een **zelfstandig naamwoord**?",
         options: ["bibliotheek", "groot", "rennen", "snel"],
         answer: 0,
-        wrongHints: [null, "Groot = bijvoeglijk nw.", "Rennen = werkwoord.", "Snel = bijwoord."],
+        wrongHints: [null, "Groot = bijvoeglijk nw.", "Rennen = werkwoord.", "Snel zegt hoe iets is of gaat — het is geen naam voor iets."],
         uitlegPad: {
           stappen: [{ titel: "Bibliotheek = plaats", tekst: "Bibliotheek is een plaats → zelfstandig naamwoord." }],
           woorden: [{ woord: "zn", uitleg: "ding/plaats/persoon/dier" }],
@@ -126,7 +126,7 @@ const steps = [
         q: "Welke is een **bijvoeglijk naamwoord** in: *de snelle auto*?",
         options: ["snelle", "de", "auto", "geen"],
         answer: 0,
-        wrongHints: [null, "De = lidwoord.", "Auto = zelfstandig nw.", "Snelle beschrijft auto = bn."],
+        wrongHints: [null, "De = lidwoord.", "Auto = zelfstandig nw.", "Er staat wél een woord dat zegt hoe de auto is."],
         uitlegPad: {
           stappen: [{ titel: "Snelle bij auto", tekst: "Snelle beschrijft 'auto' (zn) → bijvoeglijk naamwoord." }],
           woorden: [{ woord: "bn", uitleg: "beschrijft zelfstandig naamwoord" }],
@@ -174,7 +174,7 @@ const steps = [
         q: "Welk **bepaald** lidwoord (de of het) hoort bij **boekje**?",
         options: ["het", "de", "een", "geen"],
         answer: 0,
-        wrongHints: [null, "Verkleinwoorden zijn altijd het.", "Een kan ook ('een boekje'), maar 'het' is het bepaalde lidwoord.", "Boekje heeft wel een lidwoord."],
+        wrongHints: [null, "Boekje is een verkleinwoord. Welk lidwoord krijgen verkleinwoorden altijd?", "Een kan ook ('een boekje'), maar dat is een onbepaald lidwoord. Gevraagd is: de of het?", "Boekje heeft wel een lidwoord."],
         uitlegPad: {
           stappen: [{ titel: "Verkleinwoord = altijd 'het'", tekst: "Boekje = verkleinvorm → altijd 'het' boekje." }],
           woorden: [{ woord: "verkleinwoord", uitleg: "-je, -tje, -etje achteraan" }],
@@ -246,7 +246,7 @@ const steps = [
   },
   {
     title: "Persoonlijk voornaamwoord",
-    explanation: "Een **persoonlijk voornaamwoord** vervangt een persoon of ding waar je het over hebt. Zo voorkom je dat je steeds dezelfde naam herhaalt.\n\n*Sara is hier. **Zij** woont in Amsterdam.*\n\n**De vormen**:\n\n| Persoon | Onderwerp | Lijdend voorwerp |\n|---|---|---|\n| 1e enkelvoud | ik | mij / me |\n| 2e enkelvoud | jij / u | jou / u |\n| 3e enkelvoud m | hij | hem |\n| 3e enkelvoud v | zij / ze | haar |\n| 3e enkelvoud o | het | het |\n| 1e meervoud | wij / we | ons |\n| 2e meervoud | jullie | jullie |\n| 3e meervoud | zij / ze | hen / hun |\n\n**Onderwerp** = wie iets doet:\n• ***Ik** loop. **Hij** eet. **Wij** zingen.*\n\n**Lijdend / meewerkend voorwerp** = aan wie iets gebeurt:\n• *Sara helpt **mij**.*\n• *Ik zie **hem**.*\n• *Mama gaf **ons** een cadeau.*\n\n**Hen vs hun**: hen = lijdend voorwerp én na voorzetsel; hun = meewerkend voorwerp.\n• *Ik zie **hen**.* (lijdend)\n• *Ik geef **hun** een boek.* (meewerkend)\n• *Ik praat met **hen**.* (na voorzetsel)\n\n**Truc**: in spreektaal mag je 'ze' bijna altijd zeggen.",
+    explanation: "Een **persoonlijk voornaamwoord** vervangt een persoon of ding waar je het over hebt. Zo voorkom je dat je steeds dezelfde naam herhaalt.\n\n*Sara is hier. **Zij** woont in Amsterdam.*\n\n**De vormen**:\n\n| Persoon | Onderwerp | Lijdend voorwerp |\n|---|---|---|\n| 1e enkelvoud | ik | mij / me |\n| 2e enkelvoud | jij / u | jou / u |\n| 3e enkelvoud m | hij | hem |\n| 3e enkelvoud v | zij / ze | haar |\n| 3e enkelvoud o | het | het |\n| 1e meervoud | wij / we | ons |\n| 2e meervoud | jullie | jullie |\n| 3e meervoud | zij / ze | hen / ze |\n\n**Onderwerp** = wie iets doet:\n• ***Ik** loop. **Hij** eet. **Wij** zingen.*\n\n**Lijdend / meewerkend voorwerp** = aan wie iets gebeurt:\n• *Sara helpt **mij**.*\n• *Ik zie **hem**.*\n• *Mama gaf **ons** een cadeau.*\n\n**Hen vs hun**: hen = lijdend voorwerp én na voorzetsel; hun = meewerkend voorwerp.\n• *Ik zie **hen**.* (lijdend)\n• *Ik geef **hun** een boek.* (meewerkend)\n• *Ik praat met **hen**.* (na voorzetsel)\n\n**Truc**: in spreektaal mag je 'ze' bijna altijd zeggen.",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.vnw}" font-size="13" font-family="Arial" font-weight="bold">persoonlijk vnw</text>
 <text x="20" y="55" fill="${COLORS.text}" font-size="11" font-family="Arial">ik / mij — jij / jou</text>
@@ -258,9 +258,9 @@ const steps = [
     checks: [
       {
         q: "Welke woorden zijn **persoonlijke vnw** in: *Hij geeft mij een boek*?",
-        options: ["Hij én mij", "boek", "geeft", "een"],
+        options: ["Hij én mij", "Hij én boek", "geeft én mij", "een én boek"],
         answer: 0,
-        wrongHints: [null, "Boek = zn.", "Geeft = werkwoord.", "Een = lidwoord."],
+        wrongHints: [null, "Boek is een ding (zn); het vervangt geen persoon.", "Geeft is een werkwoord.", "Een is een lidwoord en boek een zn."],
         uitlegPad: {
           stappen: [{ titel: "Hij + mij = pers. vnw", tekst: "Beide vervangen een persoon → persoonlijke voornaamwoorden." }],
           woorden: [{ woord: "pers. vnw", uitleg: "ik, jij, hij, zij, mij, hem, haar" }],
@@ -272,9 +272,9 @@ const steps = [
       },
       {
         q: "Welke vorm is **goed**? — *Ik geef ___ een cadeau* (de jongens, meewerkend voorwerp)",
-        options: ["hun", "hen", "ze", "zij"],
+        options: ["hun", "hen", "hem", "zij"],
         answer: 0,
-        wrongHints: [null, "Hen = lijdend voorwerp/na voorzetsel.", "Ze kan informeel, hun is grammaticaal correct hier.", "Zij = onderwerp."],
+        wrongHints: [null, "Hen = lijdend voorwerp/na voorzetsel.", "Hem is enkelvoud — het gaat om meer jongens.", "Zij = onderwerp."],
         uitlegPad: {
           stappen: [{ titel: "Hun = meewerkend", tekst: "Ik geef hun een cadeau: hun = aan wie (mv)." }],
           woorden: [{ woord: "hen vs hun", uitleg: "hen=lijdend/na vz, hun=meewerkend" }],
@@ -388,7 +388,7 @@ const steps = [
         q: "Welk woord is een voegwoord?",
         options: ["omdat", "groter", "tafel", "snel"],
         answer: 0,
-        wrongHints: [null, "Bijvoeglijk nw.", "Zelfstandig nw.", "Bijwoord."],
+        wrongHints: [null, "Bijvoeglijk nw.", "Zelfstandig nw.", "Snel zegt hoe iets gaat — het verbindt niets."],
         uitlegPad: {
           stappen: [{ titel: "Omdat = vg", tekst: "Omdat verbindt twee zinnen → voegwoord." }],
           woorden: [{ woord: "voegwoord", uitleg: "verbindt zinnen of woordgroepen" }],
@@ -400,9 +400,9 @@ const steps = [
       },
       {
         q: "Welke is een **onderschikkend** voegwoord?",
-        options: ["als", "en", "of", "maar"],
+        options: ["als", "en", "want", "maar"],
         answer: 0,
-        wrongHints: [null, "En = nevenschikkend.", "Of = nevenschikkend.", "Maar = nevenschikkend."],
+        wrongHints: [null, "En = nevenschikkend.", "Want = nevenschikkend.", "Maar = nevenschikkend."],
         uitlegPad: {
           stappen: [{ titel: "Als = onderschikkend", tekst: "Als maakt een bijzin → onderschikkend voegwoord." }],
           woorden: [{ woord: "onderschikkend", uitleg: "maakt bijzin, ww achteraan" }],
@@ -446,7 +446,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Hij = persoonlijk vnw.", "Fietst = werkwoord.", "School = zelfstandig nw."],
         uitlegPad: {
-          stappen: [{ titel: "Vandaag = tijd = bw", tekst: "Vandaag zegt wanneer hij komt → bijwoord van tijd." }],
+          stappen: [{ titel: "Vandaag = tijd = bw", tekst: "Vandaag zegt wanneer hij fietst → bijwoord van tijd." }],
           woorden: [{ woord: "tijd-bijwoord", uitleg: "vandaag, gisteren, nu, soms" }],
           theorie: "Bw kan tijd/plaats/wijze/hoezeer.",
           voorbeelden: [{ type: "voorbeeld", tekst: "vandaag, morgen, gisteren = tijd-bw" }],

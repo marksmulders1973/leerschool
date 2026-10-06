@@ -103,7 +103,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Bij 'kam-men' eindigt de eerste lettergreep op een m — dat is een medeklinker, dus gesloten.",
+          "Kijk goed naar 'kam-men': op welke letter eindigt de eerste lettergreep echt — een klinker of een medeklinker?",
           "Halfopen bestaat niet als spellingbegrip.",
           "Eén van beide moet kloppen. Loop het rijtje: eindigt 'kam-' op een klinker of een medeklinker?",
         ],
@@ -186,7 +186,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "De oo-klank in 'boom' is lang. In een open lettergreep ('bo-men') volstaat één o.",
+          "De oo-klank in 'boom' is lang. Hoeveel o's heb je nodig als de lettergreep op de o eindigt?",
           "Bommen = van 'bom' (korte o). Dat is iets anders dan een boom!",
           "Het Nederlandse meervoud eindigt op -en, niet -s.",
         ],
@@ -258,7 +258,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Bij meervoud/lange vorm zie je 'lieve' met v. Maar aan het eind van het enkelvoud schrijf je f (regel: v wordt aan het eind een f).",
+          "In de lange vorm 'lieve' hoor je een v. Maar welke letter mag in het Nederlands niet aan het eind van een woord staan?",
           "Dubbele f is bij geen enkele lange vorm hier nodig.",
           "vt is geen normale eindcombinatie in het Nederlands.",
         ],
@@ -303,13 +303,13 @@ const steps = [
     checks: [
       {
         q: "*Strikvraag over ei/ij: hoe schrijf je het woord voor de witte drank die van een koe komt?*",
-        options: ["melk — geen ei/ij", "meilk", "mijlk", "mielk"],
+        options: ["melk", "meilk", "mijlk", "mielk"],
         answer: 0,
         wrongHints: [
           null,
-          "'Meilk' bestaat niet. Melk heeft helemaal geen ei/ij — alleen een korte e.",
-          "'Mijlk' bestaat ook niet. Melk is een gewoon woord met e.",
-          "'Mielk' bestaat ook niet. Melk schrijf je met een korte e.",
+          "'Meilk' bestaat niet. Spreek het woord langzaam uit: hoor je echt een ei-klank?",
+          "'Mijlk' bestaat ook niet. Hoor je in dit woord een ij-klank?",
+          "'Mielk' bestaat ook niet. Hoor je in dit woord een ie-klank?",
         ],
         uitlegPad: {
           stappen: [
@@ -333,7 +333,7 @@ const steps = [
         wrongHints: [
           null,
           "Past de 'ei' wel bij de regels voor deze klank? Denk aan vergelijkbare woorden.",
-          "De y wordt in modern Nederlands niet meer gebruikt voor deze klank — wel ij.",
+          "De y wordt in modern Nederlands niet meer gebruikt voor deze klank.",
           "De combinatie 'ey' bestaat niet in het Nederlands.",
         ],
         uitlegPad: {
@@ -382,7 +382,7 @@ const steps = [
           null,
           "Past dit bij de au-of-ou-regel? Denk aan andere woorden met dezelfde klank.",
           "Ouwto bestaat niet — geen 'w' in dit woord.",
-          "Auwto bestaat ook niet. Het is gewoon: au + to.",
+          "Auwto bestaat ook niet — er hoort geen w in dit woord.",
         ],
         uitlegPad: {
           stappen: [
@@ -405,8 +405,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Hoort 'au' of 'ou' bij deze klank? Vergelijk met 'oud' en 'kouder'.",
-          "Kowd bestaat niet in Nederlands. We gebruiken 'ou' voor deze klank.",
+          "Hoort 'au' of 'ou' bij deze klank? Vergelijk met een woord als 'oud'.",
+          "Kowd bestaat niet in het Nederlands — de w hoort hier niet.",
           "'Cowd' bestaat niet (Engels is 'cold'). Nederlands schrijft het anders.",
         ],
         uitlegPad: {
@@ -452,7 +452,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Vrijwel altijd schrijf je 'cht' wanneer er een t-klank na de g/ch komt. Dat hoor je in dit woord.",
+          "Er mist een letter: met welke twee letters schrijf je de ch-klank?",
           "Dubbele g + t bestaat niet in het Nederlands.",
           "Grakt zou met k zijn — maar de klank is een 'g/ch'-klank, geen k.",
         ],
@@ -522,9 +522,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Drie e's achter elkaar leest moeilijk — daarom komt er een koppelteken.",
+          "Drie e's achter elkaar leest moeilijk. Hoe los je dat op in een samenstelling?",
           "Een trema (¨) gebruik je niet bij samenstellingen, alleen bij gewone woorden zoals 'reëel'.",
-          "Samenstellingen schrijf je aaneen, geen spatie. Maar bij klinker-botsing: koppelteken.",
+          "Samenstellingen schrijf je niet met een spatie.",
         ],
         uitlegPad: {
           stappen: [
@@ -568,8 +568,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Sinds 2005 geldt: tussen-n als eerste deel meervoud op -en heeft. Pan → pannen, dus tussen-n.",
-          "Tussen-n moet, want pan heeft een meervoud op -en (pannen).",
+          "Sinds 2005 kijk je naar het meervoud van het eerste deel. Wat is het meervoud van 'pan'?",
+          "Let op de korte a in 'pan' — en kijk naar het meervoud van 'pan'.",
           "Geen koppelteken nodig — geen klinker-botsing.",
         ],
         uitlegPad: {
@@ -612,7 +612,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Spreek uit: \"mening-s-verschil\" — je hoort de s. Dat betekent: tussen-s.",
+          "Spreek het woord hardop uit: hoor je tussen de twee delen een extra klank?",
           "Geen koppelteken nodig — geen klinker-botsing.",
           "Samenstellingen aaneen, geen spatie.",
         ],
@@ -709,7 +709,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Na -m gebruik je -pje, niet -tje.",
+          "Na een m past -tje niet. Welke letter glijdt er bij het uitspreken vanzelf tussen m en -je?",
           "-petje bestaat niet als achtervoegsel.",
           "-je past niet na -m. Spreek uit: 'boom-je' klinkt onnatuurlijk.",
         ],
@@ -734,8 +734,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Na een lange klinker volgt -tje, maar er moet ook nog een extra letter ingevoegd worden om de klank lang te houden.",
-          "Na een klinker komt geen -je maar -tje. Plus: er is een extra letter nodig vóór -tje.",
+          "Spreek 'autotje' uit: blijft de o dan lang klinken?",
+          "Na een klinker past -je niet goed. En blijft de o dan lang?",
           "-tjepje bestaat niet — combinatie van twee uitgangen.",
         ],
         uitlegPad: {
@@ -780,9 +780,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Zonder apostrof zou je 'autos' lezen alsof de o kort is. Daarom apostrof om de lange klank te bewaren.",
+          "Zonder extra teken zou je 'autos' lezen alsof de o kort is. Hoe voorkom je dat?",
           "De extra o is overbodig — Nederlands kent geen 'oo' aan het eind van een woord op deze manier.",
-          "Een koppelteken hoort niet bij meervoudsvorming. Apostrof + s is de juiste vorm.",
+          "Een koppelteken hoort niet bij meervoudsvorming.",
         ],
         uitlegPad: {
           stappen: [
@@ -819,7 +819,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Eén d en geen tussen-n? Pad heeft meervoud 'padden' → tussen-n verplicht.",
+          "Eén d en geen tussen-n? Kijk naar het meervoud van 'pad' (het dier).",
           "Samenstellingen schrijf je aaneen, geen spatie.",
           "Geen koppelteken — geen klinker-botsing.",
         ],
@@ -846,7 +846,7 @@ const steps = [
           null,
           "Dat is meervoud van 'maan' (lange aa). Maar de vraag gaat over 'man' — korte a.",
           "Geen Nederlands meervoud eindigt op -ens.",
-          "Het Nederlandse meervoud eindigt op -en, niet -e. Plus: vanwege korte klank moet medeklinker verdubbeld.",
+          "Het Nederlandse meervoud eindigt op -en, niet -e.",
         ],
         uitlegPad: {
           stappen: [
@@ -869,7 +869,7 @@ const steps = [
       {
         q: "*Hoofdletters: \"In de zomer ga ik op vakantie naar frankrijk in Augustus.\" — Welke fouten?*",
         options: [
-          "Frankrijk moet Frankrijk (hoofdletter, eigennaam) en augustus klein (geen hoofdletter)",
+          "frankrijk moet Frankrijk (hoofdletter, eigennaam) en augustus klein (geen hoofdletter)",
           "Zomer moet Zomer en Vakantie moet Vakantie",
           "Alleen Augustus is fout — moet augustus",
           "Alleen Frankrijk is fout — moet frankrijk",
@@ -878,8 +878,8 @@ const steps = [
         wrongHints: [
           null,
           "Zomer (seizoen) en vakantie (algemeen woord) krijgen GEEN hoofdletter in NL.",
-          "Frankrijk is ook fout — landnaam, dus juist met hoofdletter.",
-          "Andersom: frankrijk moet juist een hoofdletter krijgen (eigennaam).",
+          "Kijk ook eens goed naar de landnaam in de zin.",
+          "Andersom: krijgt een landnaam een hoofdletter of niet? En kijk ook naar de maandnaam.",
         ],
         uitlegPad: {
           stappen: [
@@ -905,9 +905,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Na -o aan het eind van een woord vereist het meervoud een apostrof om de lange o-klank te bewaren.",
+          "Zonder extra teken lees je 'fotos' met een korte o. Hoe voorkom je dat?",
           "Geen extra o nodig vóór de apostrof.",
-          "Niet logisch — apostrofs's bestaat niet.",
+          "Twee keer een s is niet nodig.",
         ],
         uitlegPad: {
           stappen: [
@@ -973,9 +973,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Na een -y aan het eind volgt apostrof + s om de y-klank te bewaren in het meervoud.",
+          "Zonder extra teken kan de klank van de y veranderen. Wat zet je ertussen?",
           "Babies is Engelse spelling — Nederlands schrijft het anders.",
-          "Geen koppelteken voor meervoud — apostrof.",
+          "Een koppelteken hoort niet bij meervoudsvorming.",
         ],
         uitlegPad: {
           stappen: [
@@ -999,9 +999,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Bij -ing wordt het verkleinwoord -kje, met de g eruit en een k erin.",
-          "De g wordt vervangen door k bij verkleinwoorden eindigend op -ing.",
-          "-je past niet direct na -ing. De spelling wordt aangepast tot -kje.",
+          "Spreek het verkleinwoord hardop uit: welke klank hoor je vlak vóór -je?",
+          "Zeg je echt 'koningetje'? Luister naar de klank aan het eind van de stam.",
+          "Zeg je echt 'koning-je'? Luister naar de klank vlak vóór -je.",
         ],
         uitlegPad: {
           stappen: [
@@ -1019,14 +1019,14 @@ const steps = [
         },
       },
       {
-        q: "*Welk woord is met 'cht' geschreven?*",
+        q: "*Hoe spel je het woord voor de ruimte boven je hoofd, waar de wolken drijven?*",
         options: ["lucht", "luct", "lucgt", "lugt"],
         answer: 0,
         wrongHints: [
           null,
-          "Vóór een t-klank schrijf je in het Nederlands cht — niet alleen ct.",
+          "Er mist een letter in de ch-klank.",
           "cgt bestaat niet als combinatie in het Nederlands.",
-          "Bij een woord als dit schrijf je cht (gt zie je alleen bij werkwoorden zoals 'zegt').",
+          "gt zie je vooral bij werkwoorden zoals 'zegt'. Dit woord is geen werkwoord.",
         ],
         uitlegPad: {
           stappen: [

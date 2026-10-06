@@ -169,9 +169,9 @@ const steps = [
       },
       {
         q: "Wat is **'show, don't tell'**?",
-        options: ["Beschrijf wat personage doet/voelt i.p.v. zeggen", "Niet vertellen", "Plaatjes gebruiken", "Stel niet"],
+        options: ["Beschrijf wat personage doet/voelt i.p.v. zeggen", "Niet vertellen", "Plaatjes gebruiken", "Alleen dialoog gebruiken"],
         answer: 0,
-        wrongHints: [null, "Andere betekenis.", "Niet alleen plaatjes.", "Niet bedoeld."],
+        wrongHints: [null, "Andere betekenis.", "Niet alleen plaatjes.", "Dialoog kan helpen, maar daar gaat het niet om."],
       },
       {
         q: "Een **verhaal** heeft meestal welke 3 delen?",
@@ -198,7 +198,7 @@ const steps = [
         q: "Wat doe je met **voorbeelden** in samenvatting?",
         options: ["Weglaten", "Allemaal meenemen", "Letterlijk overnemen", "Eigen mening toevoegen"],
         answer: 0,
-        wrongHints: [null, "Te lang.", "Plagiat.", "Niet neutraal."],
+        wrongHints: [null, "Te lang.", "Plagiaat.", "Niet neutraal."],
       },
       {
         q: "Hoeveel kernpunten ongeveer in samenvatting?",
@@ -207,7 +207,7 @@ const steps = [
         wrongHints: [null, "Te veel.", "Te weinig.", "Te veel."],
       },
       {
-        q: "Wat is **plagiat** bij samenvatting?",
+        q: "Wat is **plagiaat** bij samenvatting?",
         options: ["Letterlijk overnemen uit tekst", "Eigen woorden", "Synoniemen gebruiken", "Korter maken"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld — wat moet.", "Goed — synoniemen helpen.", "Goed — samenvatten."],
@@ -221,8 +221,8 @@ const steps = [
       {
         q: "*'**Open vraag**: noem 1 signaalwoord voor reden in het Nederlands.'*",
         kind: "open",
-        acceptedAnswers: ["omdat", "doordat", "want"],
-        explanation: "Reden-signalen: omdat, doordat, want.",
+        acceptedAnswers: ["omdat", "want", "aangezien", "namelijk"],
+        explanation: "Reden-signalen: omdat, want, aangezien, namelijk. (Doordat geeft een oorzaak aan, geen reden.)",
       },
       {
         q: "*'**Open vraag**: hoe schrijf je een formele aanhef wanneer je de naam niet weet?'*",
@@ -241,13 +241,13 @@ const steps = [
     checks: [
       {
         q: "**Hij wordt** of **hij word**?",
-        options: ["Hij wordt (stam + t)", "Hij word", "Beide goed", "Hij worden"],
+        options: ["Hij wordt", "Hij word", "Beide goed", "Hij worden"],
         answer: 0,
         wrongHints: [null, "Mist t.", "Wel verschil.", "Meervoudsvorm — past niet bij 'hij'."],
       },
       {
         q: "**Groter dan ik** of **groter als ik**?",
-        options: ["Groter dan ik (vergelijken)", "Groter als ik", "Beide goed", "Geen van beide"],
+        options: ["Groter dan ik", "Groter als ik", "Beide goed", "Geen van beide"],
         answer: 0,
         wrongHints: [null, "Informeel/fout.", "Standaard taal: 'dan'.", "Wel — 'dan'."],
       },
@@ -258,10 +258,10 @@ const steps = [
         wrongHints: [null, "Wel verschil.", "Niet uitwisselbaar.", "Niet."],
       },
       {
-        q: "**Sinds** of **vanaf** 2020?",
-        options: ["Sinds (begin tot nu)", "Vanaf", "Beide", "Geen verschil"],
+        q: "*'Ik heb hem ___ 2020 niet meer gezien.'* — **sinds** of **vanaf**?",
+        options: ["Sinds", "Vanaf", "Beide", "Geen verschil"],
         answer: 0,
-        wrongHints: [null, "'Vanaf' gebruik je vooral voor een los startmoment.", "Klein verschil.", "Wel verschil."],
+        wrongHints: [null, "'Vanaf' gebruik je vooral voor een startmoment zonder 'tot nu toe', zoals 'vanaf morgen'.", "Hier past maar één van de twee.", "Wel verschil."],
       },
     ],
   },
@@ -291,14 +291,14 @@ const steps = [
         wrongHints: [null, "Eerste argument.", "Tegenstelling.", "Voorbeeld."],
       },
       {
-        q: "**Plagiat** in samenvatting = wat?",
+        q: "**Plagiaat** in samenvatting = wat?",
         options: ["Letterlijk overnemen", "Eigen woorden", "Korter maken", "Synoniemen"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Wel doel.", "Goed — synoniemen."],
       },
       {
         q: "**Ik fietste** of **ik fietsde**?",
-        options: ["Ik fietste ('t kofschip)", "Ik fietsde", "Beide", "Ik fiets"],
+        options: ["Ik fietste", "Ik fietsde", "Beide", "Ik fiets"],
         answer: 0,
         wrongHints: [null, "Verkeerde uitgang.", "1 is fout.", "Tegenwoordige tijd."],
       },

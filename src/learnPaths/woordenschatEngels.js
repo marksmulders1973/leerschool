@@ -97,9 +97,9 @@ const steps = [
       },
       {
         q: "Hoe zeg je **avondeten** in Engels?",
-        options: ["dinner", "breakfast", "lunch", "supper"],
+        options: ["dinner", "breakfast", "lunch", "snack"],
         answer: 0,
-        wrongHints: [null, "Breakfast = ontbijt.", "Lunch = lunch (middag).", "Supper kan, maar dinner is gangbaarder."],
+        wrongHints: [null, "Breakfast = ontbijt.", "Lunch = lunch (middag).", "Snack = tussendoortje, geen maaltijd."],
         uitlegPad: {
           stappen: [{ titel: "Drie maaltijden", tekst: "Breakfast (ochtend), lunch (middag), dinner (avond). Supper = ouderwetser woord voor avondeten." }],
           woorden: [{ woord: "dinner", uitleg: "Avondeten — hoofdmaaltijd van de dag in modern Engels." }],
@@ -137,7 +137,7 @@ const steps = [
         q: "Wat betekent **shoes**?",
         options: ["schoenen", "sokken", "shirt", "schoenpoets"],
         answer: 0,
-        wrongHints: [null, "Sokken = socks.", "Shirt = shirt.", "Geen Engels."],
+        wrongHints: [null, "Sokken = socks.", "Shirt = shirt.", "Schoenpoets = shoe polish."],
         uitlegPad: {
           stappen: [{ titel: "shoes = schoenen", tekst: "Shoes klinkt bijna als 'schoes' (sjoes). Engels heeft -s voor meervoud — shoe → shoes." }],
           woorden: [{ woord: "shoes", uitleg: "Schoenen (meervoud van shoe)." }],

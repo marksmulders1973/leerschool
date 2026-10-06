@@ -54,7 +54,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "*Een artikel in de wetenschapskatern legt stap voor stap uit hoe een hybride-motor werkt, zonder mening of voorkeur.* — Wat is het hoofddoel?",
+        q: "*Een artikel in de wetenschapskatern legt stap voor stap uit hoe een hybride motor werkt, zonder mening of voorkeur.* — Wat is het hoofddoel?",
         options: ["Uitleggen", "Overtuigen", "Beschouwen", "Onderhouden"],
         answer: 0,
         wrongHints: [
@@ -465,9 +465,9 @@ const steps = [
         ],
         answer: 1,
         wrongHints: [
-          "Dat is een controleerbaar getal. De juiste optie is iets dat je niet objectief kunt toetsen.",
+          "Dat is een controleerbaar gegeven. De juiste optie is iets dat je niet objectief kunt toetsen.",
           null,
-          "Wat in een onderzoeksrapport staat, is feitelijk — toetsbaar bij de bron. Welke optie is een waardeoordeel?",
+          "Of dit in het rapport staat, kun je bij de bron controleren. Welke optie is een waardeoordeel?",
           "Een wettelijke regeling met datum is feitelijk. Welke optie bevat een waardeoordeel?",
         ],
         uitlegPad: {
@@ -680,14 +680,14 @@ const steps = [
           "Een mening (vermomd als feit door \"iedereen weet\")",
           "Een feit",
           "Een argumentatie",
-          "Een drogreden",
+          "Een definitie",
         ],
         answer: 0,
         wrongHints: [
           null,
           "\"Beter\" is een waardeoordeel — niet objectief toetsbaar. Welke categorie past?",
           "Een argumentatie heeft *waarom*-onderbouwing. Hier wordt iets als vanzelfsprekend gepresenteerd zonder onderbouwing.",
-          "Drogredenen zijn onjuiste *argumentvormen* (zoals ad hominem). Hier is geen argumentvorm — alleen een opinie als feit verpakt.",
+          "Een definitie legt uit wat een woord betekent. Hier wordt iets beweerd — wat voor soort uitspraak is dat?",
         ],
         uitlegPad: {
           stappen: [{ titel: "'Iedereen weet' verraadt mening", tekst: "'Klassiek is beter' = waardeoordeel, vermomd als feit." }],

@@ -77,7 +77,7 @@ const steps = [
         q: "*'Tom is 11 jaar. Hij heeft 36 knikkers. Hij verliest er 8.'* Welk **getal is niet relevant**?",
         options: ["11","36","8","Geen"],
         answer: 0,
-        wrongHints: [null,"Dat is wel relevant — beginaantal knikkers.","Dat is wel relevant — verloren knikkers.","Wel — leeftijd doet er niet toe."],
+        wrongHints: [null,"Dat is wel relevant — beginaantal knikkers.","Dat is wel relevant — verloren knikkers.","Er is wél een getal dat je niet nodig hebt. Welk getal zegt niets over de knikkers?"],
         uitlegPad: {
           stappen: [
             { titel: "Toets-strik: extra info", tekst: "De toets stopt soms EXTRA cijfers in een vraag die NIET nodig zijn. Doel: testen of je goed leest + alleen het belangrijke pakt." },

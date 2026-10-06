@@ -82,7 +82,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "Welk geslacht heeft **die Zeitung** (krant)?",
+        q: "Welk geslacht heeft **Zeitung** (krant)?",
         options: ["Vrouwelijk", "Mannelijk", "Onzijdig", "Meervoud"],
         answer: 0,
         wrongHints: [null, "Niet — eindigt op -ung = vrouwelijk.", "Niet — -ung is vrouwelijk.", "Het is enkelvoud."],
@@ -318,10 +318,10 @@ ${["Nom", "Gen", "Dat", "Acc"].map((nv, i) => {
 </svg>`,
     checks: [
       {
-        q: "\"Mit ___ Auto\" — welke naamval?",
-        options: ["mit dem Auto (datief)", "mit das Auto", "mit den Auto", "mit der Auto"],
+        q: "\"Mit ___ Auto\" — welke vorm is goed?",
+        options: ["mit dem Auto", "mit das Auto", "mit den Auto", "mit der Auto"],
         answer: 0,
-        wrongHints: [null, "Mit eist datief.", "Mit eist datief — Auto is onzijdig → dem.", "Vrouwelijk vorm."],
+        wrongHints: [null, "Mit eist datief.", "Den is mannelijk accusatief. Mit eist datief, en Auto is onzijdig.", "Vrouwelijk vorm."],
         uitlegPad: {
           stappen: [{ titel: "Mit + datief", tekst: "Mit dem Auto. Mit eist altijd datief; Auto onzijdig → dem." }],
           woorden: [{ woord: "mit", uitleg: "voorzetsel + datief" }],
@@ -470,13 +470,13 @@ ${["Nom", "Gen", "Dat", "Acc"].map((nv, i) => {
       { q: "_____ Buch ist interessant. (NOM, onzijdig)", options: ["Das","Der","Die","Den"], answer: 0, wrongHints: [null,"'Der' is mannelijk — Buch is onzijdig.","'Die' is vrouwelijk — Buch is onzijdig.","'Den' is mannelijk accusatief."] },
       { q: "Ich gebe _____ Mann ein Buch. (DAT, mannelijk)", options: ["dem","den","der","das"], answer: 0, wrongHints: [null,"Niet — den = ACC mannelijk.","Niet — der = NOM mannelijk.","Niet — onzijdig."] },
       { q: "Mein Vater fährt mit _____ Auto. (mit + DAT onzijdig)", options: ["dem","das","der","den"], answer: 0, wrongHints: [null,"Niet — das = NOM/ACC onzijdig.","Niet.","Niet."] },
-      { q: "Hoeveel naamvallen heeft het **Duits**?", options: ["4 (Nom, Akk, Dat, Gen)","2","3","6"], answer: 0, wrongHints: [null,"Te weinig.","Te weinig.","Latijn/Russisch heeft meer."] },
+      { q: "Hoeveel naamvallen heeft het **Duits**?", options: ["4","2","3","6"], answer: 0, wrongHints: [null,"Te weinig.","Te weinig.","Zes naamvallen heeft bijvoorbeeld het Latijn — het Duits heeft er minder."] },
       { q: "**Nominatief** = ___?", options: ["Onderwerp van de zin","Lijdend voorwerp","Meewerkend voorwerp","Bezit"], answer: 0, wrongHints: [null,"Dat is Akkusativ.","Dat is Dativ.","Dat is Genitiv."] },
       { q: "**Akkusativ** = ___?", options: ["Lijdend voorwerp","Onderwerp","Meewerkend","Bezit"], answer: 0, wrongHints: [null,"Nominativ.","Dativ.","Genitiv."] },
       { q: "**Dativ** = ___?", options: ["Meewerkend voorwerp / na bepaalde voorzetsels","Onderwerp","Lijdend voorwerp","Bezit"], answer: 0, wrongHints: [null,"Nominativ.","Akkusativ.","Genitiv."] },
-      { q: "**Genitiv** wordt vooral gebruikt voor?", options: ["Bezit (des Vaters Buch)","Onderwerp","Lijdend","Meewerkend"], answer: 0, wrongHints: [null,"Nominativ.","Akkusativ.","Dativ."] },
+      { q: "**Genitiv** wordt vooral gebruikt voor?", options: ["Bezit (das Buch des Vaters)","Onderwerp","Lijdend","Meewerkend"], answer: 0, wrongHints: [null,"Nominativ.","Akkusativ.","Dativ."] },
       { q: "Lidwoord **vrouwelijk** verandert van NOM naar ACC?", options: ["die → die (blijft)","der → den","das → das","die → den"], answer: 0, wrongHints: [null,"Mannelijk.","Onzijdig.","Niet vrouwelijk."] },
-      { q: "**Mit** = welke naamval?", options: ["Dativ","Akkusativ","Nominativ","Genitiv"], answer: 0, wrongHints: [null,"für=Akk.","Lidwoord-context.","Voor bezit, niet 'mit'."] },
+      { q: "**Mit** = welke naamval?", options: ["Dativ","Akkusativ","Nominativ","Genitiv"], answer: 0, wrongHints: [null,"für=Akk.","Nominativ is voor het onderwerp, niet na een voorzetsel.","Voor bezit, niet 'mit'."] },
       { q: "**Open vraag**: in welke naamval staat 'den' (mannelijk)?", kind: "open", acceptedAnswers: ["akkusativ", "accusatief", "acc", "akkusatief"], explanation: "Mannelijk lidwoord 'der' wordt 'den' in Akkusativ." },
       { q: "**Open vraag**: noem 1 voorzetsel dat altijd Dativ vraagt.", kind: "open", acceptedAnswers: ["mit", "von", "zu", "bei", "nach", "aus", "seit"], explanation: "Vaste Dativ-voorzetsels: mit, von, zu, bei, nach, aus, seit." },
     ],

@@ -24,7 +24,7 @@ const steps = [
         q: "**2³ · 2⁴** = ?",
         options: ["2⁷", "2¹²", "4⁷", "16"],
         answer: 0,
-        wrongHints: [null, "Niet — m+n, niet m·n.", "Niet — grondtal blijft 2.", "Niet — controleer berekening 2⁷."],
+        wrongHints: [null, "Niet — m+n, niet m·n.", "Niet — grondtal blijft 2.", "Niet — 16 is maar 2⁴. Wat doe je met de exponenten als je machten vermenigvuldigt?"],
         uitlegPad: {
           stappen: [{ titel: "a^m · a^n = a^(m+n)", tekst: "2³ · 2⁴ = 2^(3+4) = **2⁷ = 128**. Bij MACHTEN-product: tellen op (zelfde grondtal)." }],
           niveaus: { basis: "2⁷.", simpeler: "Exponenten optellen: 3+4=7.", nogSimpeler: "2⁷" },
@@ -34,7 +34,7 @@ const steps = [
         q: "**Hoeveel is 5⁰**?",
         options: ["1", "0", "5", "Onbepaald"],
         answer: 0,
-        wrongHints: [null, "Niet — a⁰ is niet 0. Denk aan a^n / a^n.", "Niet — dat is 5¹.", "Niet — voor 5≠0 is bepaald."],
+        wrongHints: [null, "Niet — a⁰ is niet 0. Denk aan a^n / a^n.", "Niet — dat is 5¹.", "Niet — voor a ≠ 0 is a⁰ wel bepaald."],
         uitlegPad: {
           stappen: [{ titel: "Elke a⁰ = 1 (a≠0)", tekst: "Volgt uit regel a^n / a^n = a^(n-n) = a⁰ = (per definitie van delen) 1. Werkt voor elke a ≠ 0. 0⁰ is wiskundig onbepaald." }],
           niveaus: { basis: "1.", simpeler: "Elk getal-tot-de-nul = 1.", nogSimpeler: "1" },
@@ -110,7 +110,7 @@ const steps = [
         wrongHints: [null, "Niet — exponentieel, niet lineair.", "Te groot.", "Onmogelijk."],
         uitlegPad: {
           stappen: [
-            { titel: "Compound formula", tekst: "K = 1000 · 1,04¹⁰ = 1000 · 1,480 ≈ **€1480**. Vergelijking lineair (10×4%=40% = €1400): exponentieel geeft meer door 'rente op rente'." },
+            { titel: "Samengestelde rente", tekst: "K = 1000 · 1,04¹⁰ = 1000 · 1,480 ≈ **€1480**. Vergelijking lineair (10×4%=40% = €1400): exponentieel geeft meer door 'rente op rente'." },
           ],
           theorie: "Vuistregel: bij ~7% rente verdubbelt geld elke 10 jaar. Bij 4%: elke ~17 jaar (rule of 70 / 4 ≈ 17,5).",
           niveaus: { basis: "~1480.", simpeler: "Iets meer dan 40% groei.", nogSimpeler: "1480" },
@@ -120,7 +120,7 @@ const steps = [
         q: "**Verdubbelingstijd** bij 7% groei per jaar?",
         options: ["~10 jaar", "~7 jaar", "~14 jaar", "~70 jaar"],
         answer: 0,
-        wrongHints: [null, "Niet — verwarring met %.", "Niet — dat hoort bij 5% groei.", "Niet — formule is 70/r."],
+        wrongHints: [null, "Niet — verwarring met %.", "Niet — dat hoort bij 5% groei.", "Niet — 70 is het getal uit de vuistregel zelf, nog niet de verdubbelingstijd."],
         uitlegPad: {
           stappen: [{ titel: "Rule of 70", tekst: "Verdubbelingstijd ≈ 70 / groei-%. Bij 7%: 70/7 = **10 jaar**. Handige vuistregel — exact via t = ln(2)/ln(1+r) ≈ 0,693/0,0677 ≈ 10,2 jaar." }],
           niveaus: { basis: "~10 jaar.", simpeler: "70/7=10.", nogSimpeler: "10" },
@@ -128,7 +128,7 @@ const steps = [
       },
       {
         q: "Een functie y = 100 · (0,8)^x. Wat gebeurt bij grote x?",
-        options: ["y nadert 0 (verval)", "y stijgt explosief", "y is constant", "y wordt negatief"],
+        options: ["y nadert 0", "y stijgt explosief", "y is constant", "y wordt negatief"],
         answer: 0,
         wrongHints: [null, "Niet — b<1 = daling.", "Niet — daalt.", "Niet — exponentieel nooit negatief."],
         uitlegPad: {
@@ -147,9 +147,9 @@ const steps = [
     checks: [
       {
         q: "**log₂(32)** = ?",
-        options: ["5", "16", "2", "32/2"],
+        options: ["5", "16", "2", "6"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is helft.", "Niet — dat is het grondtal.", "Onzin."],
+        wrongHints: [null, "Niet — dat is helft.", "Niet — dat is het grondtal.", "Niet — controleer met de machten van 2."],
         uitlegPad: {
           stappen: [{ titel: "2^? = 32", tekst: "32 = 2 · 2 · 2 · 2 · 2 = 2⁵. Dus log₂(32) = **5**. Tot welke macht moet 2 verheven worden? 5." }],
           niveaus: { basis: "5.", simpeler: "2⁵=32, dus log₂(32)=5.", nogSimpeler: "5" },
@@ -167,7 +167,7 @@ const steps = [
       },
       {
         q: "Vereenvoudig **log(100) + log(10)**:",
-        options: ["3 (= log 1000)", "log 110", "1000", "2"],
+        options: ["3", "log 110", "1000", "2"],
         answer: 0,
         wrongHints: [null, "Niet — log(som) ≠ som(log).", "Niet — 1000 is het product; neem daar nog de log van.", "Niet — dat is alleen log(100)."],
         uitlegPad: {
@@ -211,7 +211,7 @@ const steps = [
     checks: [
       {
         q: "Bacteriën verdubbelen elke 20 min. Hoeveel keer na **2 uur** (120 min)?",
-        options: ["64× (= 2⁶)", "6×", "32×", "12×"],
+        options: ["64×", "6×", "32×", "12×"],
         answer: 0,
         wrongHints: [null, "Niet — exponentieel.", "Niet — verdubbeling 5×.", "Niet — controleer."],
         uitlegPad: {
@@ -224,7 +224,7 @@ const steps = [
         q: "Een isotoop heeft λ = 0,1 per jaar. Halveringstijd?",
         options: ["~6,93 jaar", "~0,1 jaar", "~10 jaar", "Onbepaald"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is λ zelf.", "Niet — dat is 1/λ, niet ln(2)/λ.", "Wel bepaald."],
+        wrongHints: [null, "Niet — dat is λ zelf.", "Niet — dat is 1/λ. Welke factor hoort er nog bij in de formule voor de halveringstijd?", "Wel bepaald."],
         uitlegPad: {
           stappen: [{ titel: "t½ = ln(2)/λ", tekst: "t½ = 0,693 / 0,1 = **6,93 jaar**. Na ~7 jaar helft over. Na ~14 jaar kwart over." }],
           niveaus: { basis: "ln(2)/0,1 ≈ 6,93.", simpeler: "0,693/0,1 = ~7.", nogSimpeler: "6,93" },
@@ -267,7 +267,7 @@ const steps = [
         wrongHints: [null, "Niet — 50% over.", "Niet — 25% over.", "Niet — al ver in tijd."],
         uitlegPad: {
           stappen: [
-            { titel: "12,5% = (½)³ = 3 halveringstijden", tekst: "100% → 50% → 25% → 12,5%. Drie halveringstijden = 3·5730 = **17 190 jaar**. Pre-historisch (laat-ijstijd)." },
+            { titel: "12,5% = (½)³ = 3 halveringstijden", tekst: "100% → 50% → 25% → 12,5%. Drie halveringstijden = 3·5730 = **17 190 jaar**. Prehistorisch (late ijstijd)." },
           ],
           niveaus: { basis: "17 190.", simpeler: "Drie halveringen × 5730 j.", nogSimpeler: "17k" },
         },
@@ -285,7 +285,7 @@ const steps = [
         q: "Een spaarrekening: **€500 sparen, 4% rente per jaar**. Na 5 jaar?",
         options: ["~€608", "~€500", "~€600", "~€700"],
         answer: 0,
-        wrongHints: [null, "Niet — rente erbij.", "Net iets meer.", "Te veel."],
+        wrongHints: [null, "Niet — rente erbij.", "Dat is 5 × 4% gewone rente. Vergeet je de rente op rente niet?", "Te veel."],
         uitlegPad: {
           stappen: [{ titel: "K · b^t", tekst: "500 · 1,04⁵ = 500 · 1,217 ≈ **€608**." }],
           niveaus: { basis: "608.", simpeler: "5 jaar 4% rente.", nogSimpeler: "608" },
@@ -293,9 +293,9 @@ const steps = [
       },
       {
         q: "**ln(e^7 · e^3)** = ?",
-        options: ["10", "21", "7·3=21", "ln(e^10)"],
+        options: ["10", "21", "e^10", "ln(10)"],
         answer: 0,
-        wrongHints: [null, "Niet — exponenten optellen, niet vermenigvuldigen.", "Idem.", "Niet — vraag voor getal."],
+        wrongHints: [null, "Niet — exponenten optellen, niet vermenigvuldigen.", "Niet — dat staat binnen de ln; pas de ln nog toe.", "Niet — de e mag je niet zomaar weglaten."],
         uitlegPad: {
           stappen: [
             { titel: "Eerst product simplificeren", tekst: "e^7 · e^3 = e^10. ln(e^10) = **10**. Macht-regel + ln-eigenschap." },

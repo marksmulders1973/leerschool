@@ -532,7 +532,7 @@ const steps = [
       { q: "Schrijf juist: 'De ring is van g___d.'", options: ["ou","au","aw","ow"], answer: 0, wrongHints: [null, "Niet — geen 'au'-woord.", "Engels.", "Engels."] },
       { q: "Schrijf juist: 'Het is k___d.'", options: ["ou","au","oe","ouw"], answer: 0, wrongHints: [null, "Bijna: koud schrijf je met ou, net als goud en oud.", "Met oe staat er 'koed' — dat is een ander woord.", "Koud heeft geen w."] },
       { q: "Schrijf juist: 'Zij is een vr___w.'", options: ["ou","au","ouw","aw"], answer: 0, wrongHints: [null, "Niet.", "Bijna — letter na ou is w.", "Engels."] },
-      { q: "Schrijf juist: 'Wat een bl___we lucht!'", options: ["au","ou","auw","ouw"], answer: 0, wrongHints: [null, "Niet — verkeerde klank.", "Bijna — letter na au is w.", "Niet."] },
+      { q: "Schrijf juist: 'Wat een bl___we lucht!'", options: ["au","ou","auw","ouw"], answer: 0, wrongHints: [null, "ou klinkt hetzelfde, maar zo schrijf je de kleur van de lucht niet.", "Bijna — kijk goed: de w staat al in de zin.", "Niet."] },
       { q: "Schrijf juist: 'Mijn k___s heeft een gat.'", options: ["ou","au","aw","ow"], answer: 0, wrongHints: [null, "Niet — verkeerde klank.", "Geen Nederlandse spelling.", "Geen Nederlandse spelling."] },
       { q: "Schrijf juist: 'De p___s woont in Rome.'", options: ["au","ou","aw","ow"], answer: 0, wrongHints: [null, "Niet — andere klank.", "Niet.", "Niet."] },
       { q: "Schrijf juist: 'Vergeet jouw bril niet, ___!'", options: ["wijsneus","weisneus","wijsneuws","wysneus"], answer: 0, wrongHints: [null, "Niet — geen 'ei'-woord.", "Niet — geen w.", "Niet — geen y."] },

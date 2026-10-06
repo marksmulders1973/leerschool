@@ -91,7 +91,7 @@ ${baseAxes}
         q: "Bij y = 3x + 2, wat is y als x = 4?",
         options: ["14", "12", "9", "24"],
         answer: 0,
-        wrongHints: [null, "Je bent de + 2 vergeten. Reken: 3·4 + 2.", "Je hebt 3 + 4 + 2 gedaan (optellen). Maar 3x betekent 3 keer x.", "Je hebt 3 · 4 · 2 gedaan. Maar de formule is 3x **+** 2 (plus, niet keer)."],
+        wrongHints: [null, "Je bent iets vergeten. Kijk nog eens wat er na 3x in de formule staat.", "Je hebt 3 + 4 + 2 gedaan (optellen). Maar 3x betekent 3 keer x.", "Je hebt 3 · 4 · 2 gedaan. Maar de formule is 3x **+** 2 (plus, niet keer)."],
         uitlegPad: {
           stappen: [{ titel: "Invullen + uitrekenen", tekst: "y = 3x + 2. Vul x=4: y = 3·4 + 2 = 12 + 2 = 14. Volgorde: × eerst, dan +." }],
           woorden: [{ woord: "invullen", uitleg: "Variabele x vervangen door getal." }],
@@ -123,10 +123,10 @@ ${baseAxes}
 </svg>`,
     checks: [
       {
-        q: "Welke tabel is lineair? (sprongen tussen y-waardes)",
-        options: ["y = 2, 5, 8, 11 (sprong +3 telkens)","y = 1, 2, 4, 8 (sprong verdubbelt)","y = 0, 1, 4, 9 (sprong groeit)","y = 1, 1, 1, 1 (geen verandering)"],
+        q: "x = 0, 1, 2, 3. Bij welke rij y-waarden hoort een **lineaire** formule? (kijk naar de sprongen)",
+        options: ["y = 2, 5, 8, 11","y = 1, 2, 4, 8","y = 0, 1, 4, 9","y = 10, 7, 5, 4"],
         answer: 0,
-        wrongHints: [null, "Verdubbeling is exponentieel — bij lineair zijn de sprongen telkens **gelijk**, niet groter en groter.", "Bij lineair zijn alle sprongen even groot. Reken de verschillen tussen opeenvolgende getallen — zijn ze gelijk?", "'Geen verandering' is een speciaal geval (y = constant). Lineair betekent gewoonlijk een constante stijging of daling."],
+        wrongHints: [null, "Verdubbeling is exponentieel — bij lineair zijn de sprongen telkens **gelijk**, niet groter en groter.", "Bij lineair zijn alle sprongen even groot. Reken de verschillen tussen opeenvolgende getallen — zijn ze gelijk?", "De rij daalt, maar reken de sprongen eens uit. Zijn ze telkens even groot?"],
         uitlegPad: {
           stappen: [{ titel: "Constante sprongen = lineair", tekst: "Tabel-test lineair: verschillen tussen y-waardes telkens GELIJK? 2,5,8,11 verschilt +3,+3,+3 → constant → lineair." }],
           woorden: [{ woord: "Δy", uitleg: "Verschil in y tussen 2 punten." }, { woord: "exponentieel", uitleg: "Verdubbeling per stap (1,2,4,8...). Andere formule-soort." }],
@@ -162,7 +162,7 @@ ${baseAxes}
         q: "In y = -2x + 7, wat is b?",
         options: ["7", "-2", "0", "x"],
         answer: 0,
-        wrongHints: [null, "−2 is **a** (de helling). De b is het losse getal achteraan.", "0 zou zijn als er geen los getal is. Maar er staat +7.", "x is de variabele. b is een getal, namelijk de y-waarde waar de lijn de y-as snijdt."],
+        wrongHints: [null, "−2 is **a** (de helling). De b is het losse getal achteraan.", "0 zou kloppen als er geen los getal is. Staat er hier een getal zonder x?", "x is de variabele. b is een getal, namelijk de y-waarde waar de lijn de y-as snijdt."],
         uitlegPad: {
           stappen: [{ titel: "b = los getal", tekst: "Formule y = ax + b. b = getal zonder x. In y = -2x + 7: −2 staat bij x (=a), 7 los achter (=b)." }],
           woorden: [{ woord: "b", uitleg: "Snijpunt y-as. Constante in y=ax+b." }],
@@ -207,7 +207,7 @@ ${baseAxes}
         q: "Welke formule heeft de **steilste** stijging?",
         options: ["y = 5x","y = 2x","y = ½x","y = 0,1x"],
         answer: 0,
-        wrongHints: [null, "2 is steiler dan ½ of 0,1, maar 5 is nog steiler.", "½ is een flauwe helling (helft van standaard). 5 is veel steiler.", "0,1 is heel flauw. Hoe groter de helling, hoe steiler — kies de grootste a."],
+        wrongHints: [null, "2 is steiler dan ½ of 0,1. Is er nog een formule met een grotere a?", "½ is een flauwe helling (helft van standaard). Welke formule heeft de grootste a?", "0,1 is heel flauw. Hoe groter de helling, hoe steiler — kies de grootste a."],
         uitlegPad: {
           stappen: [{ titel: "Grootste |a| = steilst", tekst: "Helling a bepaalt steilheid. Groter absoluut → steiler. 5 > 2 > ½ > 0,1. Dus y=5x het steilst." }],
           woorden: [{ woord: "steilheid", uitleg: "Hoe sterk de lijn stijgt. Groot |a| = veel verticaal per horizontaal." }],
@@ -385,7 +385,7 @@ ${baseAxes}
         q: "Los op: 2x + 3 = 11.",
         options: ["x = 4", "x = 7", "x = 14", "x = 11/2"],
         answer: 0,
-        wrongHints: [null, "Controleer je stappen: haal eerst 3 van beide kanten af en deel daarna door 2.", "Je hebt de verkeerde kant opgewerkt. Om de +3 weg te krijgen, doe je het tegenovergestelde.", "Je hebt te vroeg gedeeld. Werk eerst de 3 weg, daarna pas delen."],
+        wrongHints: [null, "Hoe kom je aan 7? Controleer: klopt 2 · 7 + 3 = 11? Werk de vergelijking stap voor stap uit met de balansmethode.", "Je hebt de verkeerde kant opgewerkt. Om de +3 weg te krijgen, doe je het tegenovergestelde.", "Je hebt te vroeg gedeeld. Werk eerst de 3 weg, daarna pas delen."],
         uitlegPad: {
           stappen: [
             { titel: "Min 3", tekst: "2x + 3 = 11. Beide kanten −3: 2x = 8." },
@@ -491,7 +491,7 @@ ${baseAxes}
         q: "Een telefoonabonnement: €10 per maand + €0,20 per minuut. Welke formule?",
         options: ["y = 0,20x + 10","y = 10x + 0,20","y = 10 + 0,20","y = 10x · 0,20"],
         answer: 0,
-        wrongHints: [null, "Je hebt a en b verwisseld. €10 is de **vaste** maandprijs (b). €0,20 is **per minuut** (a — vermenigvuldigt met x).", "Geen x — dan kun je de variabele kosten (per minuut) niet uitrekenen.", "Vermenigvuldigen ipv optellen — maar de €10 is een vaste prijs, geen factor."],
+        wrongHints: [null, "Je hebt de twee bedragen verwisseld. Welk bedrag betaal je per minuut — en hoort dat bedrag dus bij de x?", "Geen x — dan kun je de variabele kosten (per minuut) niet uitrekenen.", "Vermenigvuldigen ipv optellen — maar de €10 is een vaste prijs, geen factor."],
         uitlegPad: {
           stappen: [{ titel: "Vast + variabel", tekst: "€10/maand = VAST (b). €0,20/minuut = PER eenheid (a vermenigvuldigt met x=minuten). Dus y = 0,20x + 10. y=totaal, x=minuten." }],
           woorden: [{ woord: "vaste kosten", uitleg: "Bedrag dat je altijd betaalt, los van gebruik." }, { woord: "variabele kosten", uitleg: "Bedrag dat afhangt van gebruik. Per eenheid (per minuut/km/uur)." }],
@@ -555,7 +555,7 @@ ${baseAxes}
         q: "Los op: 5x − 3 = 2x + 9.",
         options: ["x = 4", "x = 6", "x = 12", "x = 2"],
         answer: 0,
-        wrongHints: [null, "Breng eerst alle x-termen naar één kant, dan de getallen, dan x alleen maken — welke stap doe je als eerste?", "Je hebt niet beide kanten 'op orde' gebracht. Probeer stap-voor-stap balans.", "Zonder de balansmethode kom je hier niet uit. Volg de stappen."],
+        wrongHints: [null, "Breng eerst alle x-termen naar één kant, dan de getallen, dan x alleen maken — welke stap doe je als eerste?", "Je bent halverwege gestopt — staat x al helemaal alleen?", "Je hebt de −3 aan de verkeerde kant weggewerkt. Wat is het tegenovergestelde van −3?"],
         uitlegPad: {
           stappen: [
             { titel: "−2x van beide", tekst: "5x − 3 = 2x + 9 → 3x − 3 = 9." },
@@ -606,7 +606,7 @@ ${baseAxes}
   // ─── F. Examenstijl — VMBO-GT CSE ─────────────────────────
   {
     title: "CSE-vraag — taxi-tarief",
-    explanation: "Klassieke CSE-context: een tarief met **startbedrag + per-eenheid-prijs**. De lineaire formule beschrijft de prijs perfect.\n\n> **Een taxibedrijf rekent €4,00 startbedrag plus €1,80 per gereden kilometer.**\n\n**Aanpak in 3 stappen:**\n1. **Formule opstellen**: prijs `p` = startbedrag + tarief × aantal km. Dus **p = 1,80k + 4**.\n2. **Prijs uitrekenen**: bij 12 km → p = 1,80 × 12 + 4 = 21,60 + 4 = **€25,60**.\n3. **Andersom — aantal km bij gegeven prijs**: bij €31 → 31 = 1,80k + 4 → 1,80k = 27 → k = **15 km**.\n\n**Examen-tips**:\n• Lees goed: wat is de **constante** (b, het startbedrag) en wat is per-eenheid (a, het km-tarief)?\n• Eenheden bij elk getal (€, km).\n• Bij omgekeerde vraag: balansmethode of `(p − b) / a`.",
+    explanation: "Klassieke CSE-context: een tarief met **startbedrag + per-eenheid-prijs**. De lineaire formule beschrijft de prijs perfect.\n\n> **Een taxibedrijf rekent €4,00 startbedrag plus €1,80 per gereden kilometer.**\n\n**Aanpak in 3 stappen:**\n1. **Formule opstellen**: prijs `p` = tarief × aantal km + startbedrag.\n2. **Prijs uitrekenen**: vul het aantal km in voor k en reken uit (eerst ×, dan +).\n3. **Andersom — aantal km bij gegeven prijs**: trek eerst het startbedrag van de prijs af en deel dan door het km-tarief.\n\n**Oefenvoorbeeld met een ander bedrijf** (€3 start + €2 per km):\n• Formule: **p = 2k + 3**.\n• 10 km → p = 2 × 10 + 3 = **€23**.\n• Prijs €29 → 29 − 3 = 26 → 26 / 2 = **13 km**.\n\n**Examen-tips**:\n• Lees goed: wat is de **constante** (b, het startbedrag) en wat is per-eenheid (a, het km-tarief)?\n• Eenheden bij elk getal (€, km).\n• Bij omgekeerde vraag: balansmethode of `(p − b) / a`.",
     svg: `<svg viewBox="0 0 300 200">
 ${baseAxes}
 <text x="155" y="38" fill="${COLORS.text}" font-size="11" font-family="Arial">prijs €</text>
@@ -622,9 +622,9 @@ ${baseAxes}
     checks: [
       {
         q: "Welke **formule** hoort bij dit taxi-tarief (€4 start + €1,80 per km)?",
-        options: ["p = 1,80k + 4","p = 4k + 1,80","p = 1,80 + 4k","p = 5,80k"],
+        options: ["p = 1,80k + 4","p = 4k + 1,80","p = 4 + 1,80","p = 5,80k"],
         answer: 0,
-        wrongHints: [null, "Je hebt a en b verwisseld. Welk bedrag is de vaste kosten en welk bedrag hangt af van de afstand?", "Kijk of het vaste bedrag of het km-tarief bij de variabele k staat.", "Je hebt de twee bedragen bij elkaar opgeteld als één getal — maar het startbedrag en het km-tarief spelen een andere rol."],
+        wrongHints: [null, "Je hebt a en b verwisseld. Welk bedrag is de vaste kosten en welk bedrag hangt af van de afstand?", "Waar is de k gebleven? De prijs hangt toch af van het aantal km?", "Je hebt de twee bedragen bij elkaar opgeteld als één getal — maar het startbedrag en het km-tarief spelen een andere rol."],
         uitlegPad: {
           stappen: [{ titel: "€4 vast, €1,80/km", tekst: "Start €4 = vaste kosten (b=4). €1,80/km = tarief per eenheid (a=1,80). Variabele = km (x=k). Formule: p = 1,80k + 4." }],
           woorden: [{ woord: "k", uitleg: "Kilometers. Variabele (zoals x)." }],
@@ -655,7 +655,7 @@ ${baseAxes}
         q: "Hoeveel km is een rit als de **prijs €31** is?",
         options: ["15 km", "17 km", "19 km", "12 km"],
         answer: 0,
-        wrongHints: [null, "Welk bedrag betaal je sowieso, los van de afstand? Trek dat eerst af voor je deelt.", "Heb je het startbedrag al meegenomen? Eerst aftrekken, dán delen.", "Bijna — heb je het juiste startbedrag afgetrokken voor je gaat delen?"],
+        wrongHints: [null, "Welk bedrag betaal je sowieso, los van de afstand? Trek dat eerst af voor je deelt.", "Heb je het startbedrag van de prijs afgetrokken, of erbij opgeteld?", "12 km was de rit uit de vorige vraag. Reken voor deze prijs opnieuw: wat haal je eerst van €31 af?"],
         uitlegPad: {
           stappen: [
             { titel: "Balansmethode", tekst: "31 = 1,80k + 4. Min 4: 27 = 1,80k." },
@@ -668,17 +668,17 @@ ${baseAxes}
           niveaus: { basis: "15 km.", simpeler: "31−4=27. 27/1,80=15.", nogSimpeler: "15" },
         },
       },
-      { q: "Formule y = 2x + 3. Wat is y als x=4?", options: ["11","8","7","5"], answer: 0, wrongHints: [null, "Niet — +3 vergeten.", "Niet.", "Niet."] },
-      { q: "Bij y = 3x + 5: wat is **helling**?", options: ["3","5","8","15"], answer: 0, wrongHints: [null, "Dat is constante (start).", "Niet.", "Niet."] },
-      { q: "Bij y = ax + b: wat is **b**?", options: ["Startwaarde (waar lijn y-as snijdt)","Helling","Aantal x-waarden","Onbekende"], answer: 0, wrongHints: [null, "Dat is a.", "Niet.", "Niet."] },
-      { q: "Los op: 3x + 4 = 19", options: ["x = 5","x = 7","x = 4","x = 15"], answer: 0, wrongHints: [null, "Niet — vergeet niet −4 eerst.", "Niet.", "Te hoog."] },
-      { q: "Een **horizontale lijn** y = 5 heeft welke helling?", options: ["0","5","1","Niet bepaald"], answer: 0, wrongHints: [null,"Dat is y-waarde.","Schuin omhoog.","Wel bepaald."] },
-      { q: "Snijpunt **y-as** van y = 2x − 7 is op?", options: ["(0, −7)","(0, 7)","(7, 0)","(2, 0)"], answer: 0, wrongHints: [null,"Plus i.p.v. min.","Op x-as.","Niet snijpunt y-as."] },
-      { q: "Bij y = ax + b: **b > 0** betekent?", options: ["Lijn snijdt y-as BOVEN oorsprong","Onder oorsprong","Door oorsprong","Niet relevant"], answer: 0, wrongHints: [null,"Dat is b<0.","Dat is b=0.","Wel relevant."] },
-      { q: "Punten (1, 5) en (3, 11) — wat is **helling**?", options: ["3","2","6","⅓"], answer: 0, wrongHints: [null,"x-verschil.","y-verschil totaal.","Andersom."] },
-      { q: "**Lineaire functies** hebben in een grafiek altijd?", options: ["Rechte lijn","Parabool","Cirkel","Knik"], answer: 0, wrongHints: [null,"Kwadratisch.","Geen functie.","Niet lineair."] },
-      { q: "**y = 4** is een ___?", options: ["Horizontale lijn","Verticale lijn","Parabool","Punt"], answer: 0, wrongHints: [null,"Een verticale lijn heeft een vergelijking zonder y — welke variabele ontbreekt in y=4?","Niet.","Lijn, niet punt."] },
-      { q: "**Stelsel** van 2 lineaire vergelijkingen heeft meestal?", options: ["1 snijpunt","Geen snijpunt","Oneindig veel","Niet bepaald"], answer: 0, wrongHints: [null,"Bij evenwijdige.","Bij identieke.","Wel bepaald."] },
+      { q: "Formule y = 2x + 3. Wat is y als x=4?", options: ["11","8","7","5"], answer: 0, wrongHints: [null, "Je hebt alleen 2 · 4 gedaan. Wat staat er nog meer in de formule?", "Je hebt 4 + 3 gedaan. Wat betekent 2x?", "Je hebt 2 + 3 gedaan. Waar is de x gebleven?"] },
+      { q: "Bij y = 3x + 5: wat is **helling**?", options: ["3","5","8","15"], answer: 0, wrongHints: [null, "5 is het losse getal (de startwaarde), niet de helling.", "Je hebt 3 + 5 gedaan. De helling is één getal uit de formule — welk?", "Je hebt 3 · 5 gedaan. De helling is één getal uit de formule — welk?"] },
+      { q: "Bij y = ax + b: wat is **b**?", options: ["Snijpunt met de y-as","Helling","Aantal x-waarden","Onbekende"], answer: 0, wrongHints: [null, "De helling is a, het getal vóór x.", "b is een vast getal in de formule, geen telling. Waar zie je b terug in de grafiek?", "De onbekende is x. b is een vast getal — waar zie je dat terug in de grafiek?"] },
+      { q: "Los op: 3x + 4 = 19", options: ["x = 5","x = 7","x = 4","x = 15"], answer: 0, wrongHints: [null, "Controleer: klopt 3 · 7 + 4 = 19? Werk stap voor stap met de balansmethode.", "Controleer: klopt 3 · 4 + 4 = 19?", "15 is 19 − 4. Staat x daarmee al alleen?"] },
+      { q: "Een **horizontale lijn** y = 5 heeft welke helling?", options: ["0","5","1","Niet bepaald"], answer: 0, wrongHints: [null,"5 is de y-waarde van de lijn, niet de helling.","Helling 1 hoort bij een lijn die schuin omhoog loopt. Loopt y = 5 schuin?","De helling is wel te bepalen. Hoeveel stijgt y als x 1 groter wordt?"] },
+      { q: "Snijpunt **y-as** van y = 2x − 7 is op?", options: ["(0, −7)","(0, 7)","(7, 0)","(2, 0)"], answer: 0, wrongHints: [null,"Kijk goed naar het teken vóór de 7.","(7, 0) ligt op de x-as. Op de y-as is x altijd 0.","(2, 0) ligt op de x-as. Welke x-waarde hoort bij de y-as?"] },
+      { q: "Bij y = ax + b: **b > 0** betekent?", options: ["Lijn snijdt y-as boven de oorsprong","Lijn snijdt y-as onder de oorsprong","Lijn gaat door de oorsprong","Zegt niets over de lijn"], answer: 0, wrongHints: [null,"Onder de oorsprong hoort bij een negatieve b.","Door de oorsprong hoort bij b = 0.","b zegt wel iets: het is de y-waarde waar de lijn de y-as snijdt."] },
+      { q: "Punten (1, 5) en (3, 11) — wat is **helling**?", options: ["3","2","6","⅓"], answer: 0, wrongHints: [null,"2 is alleen hoeveel x verandert. Kijk ook naar y.","6 is alleen hoeveel y verandert. Deel je dat nog ergens door?","Je hebt het x-verschil gedeeld door het y-verschil. Welke hoort boven de deelstreep?"] },
+      { q: "De grafiek van een **lineaire functie** is altijd een…?", options: ["Rechte lijn","Parabool","Cirkel","Lijn met een knik"], answer: 0, wrongHints: [null,"Een parabool hoort bij een kwadratische functie (met x²).","Een cirkel is geen grafiek van een functie. Denk aan het woord 'lineair'.","Een knik past niet bij een vaste helling. Wat betekent 'lineair'?"] },
+      { q: "**y = 4** is een ___?", options: ["Horizontale lijn","Verticale lijn","Parabool","Punt"], answer: 0, wrongHints: [null,"Een verticale lijn heeft een vergelijking zonder y — welke variabele ontbreekt in y=4?","Een parabool heeft een x² in de formule. Staat die hier?","Bij y = 4 mag x elke waarde hebben. Is dat één punt of heel veel punten?"] },
+      { q: "**Stelsel** van 2 lineaire vergelijkingen heeft meestal?", options: ["1 snijpunt","Geen snijpunt","Oneindig veel","Niet bepaald"], answer: 0, wrongHints: [null,"Geen snijpunt krijg je alleen als de lijnen evenwijdig zijn. Is dat meestal zo?","Oneindig veel krijg je alleen als de lijnen precies op elkaar liggen. Is dat meestal zo?","Het is wel te bepalen: hoe vaak kruisen twee rechte lijnen die niet evenwijdig zijn?"] },
       { q: "**Open vraag**: bereken y bij x=10 voor y=2x+5. Typ getal.", kind: "open", acceptedAnswers: ["25"], numericTolerance: 0, explanation: "y = 2·10 + 5 = 25." },
       { q: "**Open vraag**: helling van lijn door (0,0) en (4,8) — typ getal.", kind: "open", acceptedAnswers: ["2"], numericTolerance: 0, explanation: "(8−0)/(4−0) = 8/4 = 2." },
     ],

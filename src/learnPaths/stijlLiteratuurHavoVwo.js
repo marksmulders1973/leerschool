@@ -34,7 +34,7 @@ const steps = [
         q: "'Haar tanden zijn parels' is een:",
         options: ["Metafoor", "Vergelijking", "Hyperbool", "Personificatie"],
         answer: 0,
-        wrongHints: [null, "Niet — geen 'als'.", "Wel overdreven maar formeel = metafoor.", "Niet — tanden niet menselijk gemaakt."],
+        wrongHints: [null, "Niet — geen 'als'.", "Wordt hier vooral iets overdreven, of wordt de ene zaak door een beeld vervangen?", "Niet — tanden niet menselijk gemaakt."],
         uitlegPad: {
           stappen: [{ titel: "Geen signaalwoord = metafoor", tekst: "Bij **vergelijking**: 'haar tanden zijn ALS parels' (met als/gelijk/zoals). Bij **metafoor**: 'haar tanden ZIJN parels' (zonder signaalwoord — beeld vervangt zaak direct). Sterk beeld + compact." }],
           niveaus: { basis: "Metafoor.", simpeler: "Geen 'als' = metafoor.", nogSimpeler: "Meta" },
@@ -363,7 +363,7 @@ const steps = [
         q: "'Het regende katten en honden' is een:",
         options: ["Hyperbool", "Personificatie", "Metafoor", "Litotes"],
         answer: 0,
-        wrongHints: [null, "Niet — geen menselijking.", "Mogelijk metafoor maar primair = overdrijving.", "Tegenovergesteld."],
+        wrongHints: [null, "Niet — geen menselijking.", "Er zit wel een beeld in — maar wat doet de zin vooral met de hoeveelheid regen?", "Tegenovergesteld."],
         uitlegPad: {
           stappen: [{ titel: "Sterke overdrijving", tekst: "Het regent niet ECHT katten + honden — overdrijving voor 'het regent enorm hard'. Engelse uitdrukking ('it's raining cats and dogs'), in NL minder gebruikelijk. Primair: hyperbool. Een uitdrukking als deze noem je 'idioom' of 'cliché' als vaste taalvorm." }],
           niveaus: { basis: "Hyperbool.", simpeler: "Overdrijving.", nogSimpeler: "Hyperbool" },
