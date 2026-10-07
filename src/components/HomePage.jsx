@@ -754,7 +754,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             </div>
             <p style={{ margin: 0, fontFamily: "var(--font-body)", fontSize: 14, lineHeight: 1.6, color: "rgba(255,255,255,0.82)" }}>
               Gratis oefenen voor de <strong style={{ color: "#fff" }}>Doorstroomtoets (groep 6-8)</strong> en de{" "}
-              <strong style={{ color: "#fff" }}>VMBO-examens</strong>. Snapt je kind iets niet? Dan leggen we het uit op drie niveaus, tot het écht snapt. Een kwartier per dag is genoeg.
+              <strong style={{ color: "#fff" }}>VMBO-examens</strong>. Snapt je kind iets niet? Dan leggen we het uit op drie niveaus, tot je kind het écht snapt. Een kwartier per dag is genoeg.
             </p>
             <div style={{
               fontFamily: "var(--font-body)", fontSize: 12.5, lineHeight: 1.7,
