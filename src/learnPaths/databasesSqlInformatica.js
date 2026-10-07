@@ -30,7 +30,7 @@ const steps = [
       },
       {
         q: "In een tabel: wat is een **record**?",
-        options: ["Eén rij — één exemplaar (bv. één leerling)", "Eén kolom/eigenschap", "De naam van de tabel", "Een foutmelding"],
+        options: ["Eén rij: één exemplaar", "Eén kolom: één eigenschap", "De naam van de tabel", "Een foutmelding"],
         answer: 0,
         wrongHints: [null, "Dat is juist een veld (kolom).", "De tabelnaam is iets anders.", "Een record is gewoon data, geen fout."],
         uitlegPad: {
@@ -50,7 +50,7 @@ const steps = [
       },
       {
         q: "In een tabel: wat is een **veld**?",
-        options: ["Eén kolom — één eigenschap (bv. naam of groep)", "Eén rij/exemplaar", "De hele tabel", "Een foutmelding"],
+        options: ["Eén kolom: één eigenschap", "Eén rij: één exemplaar", "De hele tabel", "Een foutmelding"],
         answer: 0,
         wrongHints: [null, "Eén rij is juist een record.", "De tabel bevat velden én records — het is niet één veld.", "Een veld is data, geen fout."],
         uitlegPad: {
@@ -89,7 +89,7 @@ const steps = [
       },
       {
         q: "Een **foreign key** (verwijssleutel) wordt gebruikt om…",
-        options: ["Tabellen aan elkaar te koppelen (verwijzen naar een ander record)", "De database te beveiligen", "Een back-up te maken", "Tekst te versleutelen"],
+        options: ["Tabellen aan elkaar te koppelen", "De database te beveiligen", "Een back-up te maken", "Tekst te versleutelen"],
         answer: 0,
         wrongHints: [null, "Beveiliging is een andere zaak.", "Een back-up is iets anders.", "Versleuteling hoort bij beveiliging, niet bij sleutels-relaties."],
         uitlegPad: {
@@ -99,7 +99,7 @@ const steps = [
       },
       {
         q: "Waarom splits je gegevens op in meerdere gekoppelde tabellen?",
-        options: ["Om dubbele gegevens (redundantie) te voorkomen", "Om de database trager te maken", "Omdat één tabel niet mag", "Om meer wachtwoorden te hebben"],
+        options: ["Om dubbele gegevens te voorkomen", "Om de database trager te maken", "Omdat één tabel niet mag", "Om meer wachtwoorden te hebben"],
         answer: 0,
         wrongHints: [null, "Het maakt het juist beter, niet trager.", "Eén tabel mag prima — opsplitsen is een bewuste keuze. Welk probleem los je ermee op?", "Wachtwoorden hebben er niets mee te maken."],
         uitlegPad: {
@@ -119,7 +119,7 @@ const steps = [
       },
       {
         q: "Twee leerlingen heten allebei 'Sara'. Hoe houdt de database ze uit elkaar?",
-        options: ["Via hun unieke primaire sleutel (id)", "Dat kan de database niet", "Via de kleur van de rij", "Via hun wachtwoord"],
+        options: ["Via hun unieke primaire sleutel", "Dat kan de database niet", "Via de kleur van de rij", "Via hun wachtwoord"],
         answer: 0,
         wrongHints: [null, "Dat kan wél — denk aan het veld dat in elke tabel voor ieder record anders is.", "Rijen hebben geen kleur als kenmerk.", "Een wachtwoord is geen record-identificatie."],
         uitlegPad: {
@@ -217,7 +217,7 @@ const steps = [
       },
       {
         q: "Welke SQL-functie geeft het **aantal** records?",
-        options: ["COUNT(*)", "AVG", "DELETE", "ORDER BY"],
+        options: ["COUNT", "AVG", "DELETE", "ORDER BY"],
         answer: 0,
         wrongHints: [null, "AVG geeft het gemiddelde, niet het aantal.", "DELETE verwijdert.", "ORDER BY sorteert."],
         uitlegPad: {

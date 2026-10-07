@@ -73,9 +73,9 @@ const steps = [
       },
       {
         q: "**Stalin-Hitler-pact (Molotov-Ribbentrop)** 1939 betekende:",
-        options: ["Niet-aanvalsverdrag + geheime verdeling Oost-Europa","Direct verbond","Oorlog tegen elkaar","Vredesakkoord"],
+        options: ["Niet-aanvalsverdrag met geheime deal", "Militair bondgenootschap", "Oorlog tegen elkaar", "Handelsboycot"],
         answer: 0,
-        wrongHints: [null, "Niet — beperkter.", "Tegenovergesteld.", "Niet — beperkt."],
+        wrongHints: [null, "Niet — beperkter.", "Tegenovergesteld.", "Niet — ze gingen juist zaken met elkaar doen."],
         uitlegPad: {
           stappen: [{ titel: "23 augustus 1939", tekst: "**Molotov-Ribbentrop-pact** (23 aug 1939): niet-aanvalsverdrag DE + USSR. **Geheime bijlage**: verdeling Polen + Baltische staten in invloedssferen. 1 sept DE valt PL binnen, RU 17 sept ook → WO2. In 1941 valt Hitler USSR aan ondanks pact." }],
           niveaus: { basis: "Niet-aanval + verdeel.", simpeler: "M-R = niet-aanval+verdelen", nogSimpeler: "Pact + Polen verdelen" },
@@ -112,7 +112,7 @@ const steps = [
       },
       {
         q: "Welke gebeurtenis bracht **VS in WO2**?",
-        options: ["Pearl Harbor 7 dec 1941","Stalingrad","D-Day","Holocaust"],
+        options: ["Pearl Harbor", "Stalingrad", "D-Day", "Holocaust"],
         answer: 0,
         wrongHints: [null, "Niet — al in oorlog.", "Niet — al in oorlog.", "Niet — bekend later."],
         uitlegPad: {
@@ -123,7 +123,7 @@ const steps = [
       },
       {
         q: "Wat besloot de **Wannsee-Conferentie** (jan 1942)?",
-        options: ["Systematische uitroeiing Joden (Endlösung)","Inval Sovjet-Unie","Capitulatie","Vrede"],
+        options: ["Systematische uitroeiing Joden", "Inval Sovjet-Unie", "Capitulatie", "Vrede"],
         answer: 0,
         wrongHints: [null, "Was al 1941.", "Niet relevant.", "Niet — opbouw oorlog."],
         uitlegPad: {
@@ -152,7 +152,7 @@ const steps = [
       "**Koude Oorlog** = ideologische + politieke + militaire confrontatie tussen **VS (Westen)** en **Sovjet-Unie (Oost)** zonder directe oorlog. 1945-1991. Beïnvloedde hele wereld.\n\n**Oorzaken**:\n• Verschillende ideologie: kapitalisme vs communisme.\n• Stalin nam Oost-Europa in zijn macht (1944-48) → 'IJzeren Gordijn' (Churchill-rede Fulton 1946).\n• VS-vrees 'rode dreiging' verspreidt.\n• Kernwapen-monopolie verdwijnt 1949 (USSR test atoombom).\n\n**Truman-doctrine (1947)**:\n• President Truman: VS helpt landen 'vrij van communisme' te blijven.\n• **Marshall-Plan**: $13 mld economische hulp West-Europa 1948-52. NL ontving ~$1 mld. Tegenwicht tegen communisme.\n\n**Verdeling Duitsland + Berlijn**:\n• 1945: 4 bezettingszones (VS/UK/FR/USSR).\n• 1949: **BRD** (West-DE) + **DDR** (Oost-DE).\n• Berlijn midden in Oost-DE — ook in 4 zones verdeeld.\n• **Berlijnse Blokkade 1948-49**: USSR sluit West-Berlijn af. **Luchtbrug** VS+UK levert 1 jaar lang per vliegtuig.\n• **Bouw Muur 1961** (13 augustus): DDR bouwt Berlijnse Muur om vlucht naar West te stoppen. Symbool Koude Oorlog. ~140 mensen sterven bij vluchtpogingen.\n\n**Allianties**:\n• **NAVO** (1949): VS + Canada + West-Europese landen. NL lid sinds begin.\n• **Warschau-Pact** (1955): USSR + Oost-Europese satellieten. Reactie op DE-toelating NAVO.\n\n**Wapenwedloop**:\n• Beide blokken bouwen kernwapen-arsenalen.\n• 1952 VS waterstofbom, 1953 USSR.\n• 1957 USSR lanceert **Spoetnik** (1e satelliet) → space race.\n• 1969 VS Apollo 11 mens op Maan.\n• 1960s eind: ~30.000 kernkoppen totaal — genoeg voor 'mutual assured destruction' (MAD).\n\n**Cuba-crisis 1962**:\n• USSR plaatst raketten Cuba (90 mijl van Florida).\n• Kennedy blokkade → wereld dichtst bij kernoorlog ooit.\n• 13 dagen spanning.\n• Compromis: USSR trekt terug, VS belooft geen invasie Cuba + verwijdert raketten Turkije (geheim).\n• Daarna: 'hotline' Washington-Moskou.\n\n**Conflicten / proxy-oorlogen**:\n• **Korea-oorlog (1950-53)**: Noord-K (communistisch) valt Zuid-K binnen. VS + VN (zonder USSR die boycotte) hielpen Zuid. China hielp Noord. Wapenstilstand 1953 — nog steeds geen vrede. Demilitarized Zone (DMZ).\n• **Vietnam-oorlog (1955-75)**: VS steunde Zuid-Vietnam tegen communistische Noord (Ho Chi Minh + Vietcong). Eskalatie 1965. VS-trauma — eerste oorlog die op tv te zien was, anti-oorlogs-bewegingen. VS verloor 58.000 man. **1975 val Saigon** — Amerikanen vluchten per helikopter van de ambassade. Vietnam communistisch verenigd.\n• **Hongaarse Opstand 1956**: USSR slaat opstand neer.\n• **Praag-lente 1968**: Tsjechoslowakije probeert hervormingen ('communisme met menselijk gezicht'). USSR + Warschau-Pact troepen vallen binnen aug 1968.\n• **Afghanistan-oorlog 1979-89**: USSR steunde communistisch regime → 10 jaar oorlog tegen Mujahideen (gesteund door VS via Pakistan). USSR's 'Vietnam'. Verslagen 1989. Latere gevolgen: Taliban + Al Qaeda.\n• **Latijns-Amerika**: VS steunde rechtse dictaturen tegen linkse bewegingen (Chili 1973 Pinochet-coup, Argentinië, Brazilië, El Salvador, Nicaragua).\n• **Afrika**: dekolonisatie + Koude Oorlog vermengd. Bv. Angola, Mozambique met Cubaanse + Sovjet-hulp.\n\n**Wapenbeheersing**:\n• 1963 Limited Test Ban Treaty (geen atmosferische tests).\n• 1968 Non-Proliferation Treaty (NPT) — geen verspreiding kernwapens.\n• 1972 SALT-I (Strategic Arms Limitation Talks).\n• 1979 SALT-II.\n• 1987 INF-Treaty (middellangeafstandsraketten).\n• 1991 START-I.\n\n**NL in Koude Oorlog**:\n• Loyaal NAVO-lid.\n• Besluit plaatsing Amerikaanse kruisraketten (Woensdrecht, 1985) — grote protesten (550.000 mensen Den Haag 1983). Door INF-verdrag nooit geplaatst.\n• Niet primair betrokken bij gevechten, wel diplomatiek.\n\n**Indonesische onafhankelijkheid (relevant NL)**:\n• Soekarno + Hatta riepen onafhankelijkheid uit 17 aug 1945.\n• NL probeerde koloniaal gezag te herstellen ('politionele acties' 1947 + 1948).\n• Internationale druk (vooral VS) → NL erkende onafhankelijkheid 27 dec 1949.\n• NL bood in 2022 excuses aan voor geweld + oorlogsmisdaden in Indonesië 1945-49.",
     checks: [
       {
-        q: "Wat is de **'IJzeren Gordijn'** (Churchill 1946)?",
+        q: "Wat is het **'IJzeren Gordijn'** (Churchill 1946)?",
         options: ["Symbolische scheiding tussen West + Oost-Europa","Echte muur Berlijn","Wapen","Beleid"],
         answer: 0,
         wrongHints: [null, "Specifiek — IJG is bredere term.", "Niet relevant.", "Geen beleid — Churchill beschreef iets anders."],
@@ -193,9 +193,9 @@ const steps = [
       },
       {
         q: "**Vietnam-oorlog** eindigde in:",
-        options: ["1975 (val Saigon, Noord wint)","1969 (Apollo-11)","1989","1973"],
+        options: ["1975", "1969", "1989", "1973"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet — Muur valt.", "Wapenstilstand maar oorlog ging door."],
+        wrongHints: [null, "Niet — toen landde Apollo 11 op de maan.", "Niet — Muur valt.", "Wapenstilstand maar oorlog ging door."],
         uitlegPad: {
           stappen: [{ titel: "Val Saigon", tekst: "**30 april 1975: val Saigon** — Noord-Vietnamese troepen veroveren Zuid-Vietnam hoofdstad. Amerikanen vluchten per helikopter van de ambassade (iconisch beeld). Vietnam communistisch verenigd. VS' eerste verloren oorlog. 58.000 VS-doden + ~3 mln Vietnamezen + Cambodja's Khmer Rouge regime gevolg." }],
           niveaus: { basis: "1975.", simpeler: "Vietnam = 1975", nogSimpeler: "1975" },
@@ -242,7 +242,7 @@ const steps = [
       },
       {
         q: "**Srebrenica 1995** is NL-trauma omdat:",
-        options: ["NL Dutchbat-troepen konden 8.372 moslims niet beschermen tegen Servische troepen","NL was schuldig","NL won","Geen NL betrokken"],
+        options: ["Dutchbat kon de moslimmannen niet beschermen", "NL-soldaten pleegden de moord", "NL won een veldslag", "Er waren geen Nederlanders bij"],
         answer: 0,
         wrongHints: [null, "Niet — geen actieve dader.", "Niet relevant.", "Wel — er waren wel Nederlanders bij betrokken."],
         uitlegPad: {
@@ -282,7 +282,7 @@ const steps = [
       },
       {
         q: "Wat is de **NAVO** (NATO)?",
-        options: ["West-militaire alliantie sinds 1949","Communistisch blok","VN-onderdeel","Kerncentrale-organisatie"],
+        options: ["Westers militair bondgenootschap", "Communistisch blok", "VN-onderdeel", "Kerncentrale-organisatie"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Niet primair.", "Niet relevant."],
         uitlegPad: {
@@ -292,7 +292,7 @@ const steps = [
       },
       {
         q: "**Korea-oorlog** (1950-53) was tussen:",
-        options: ["Noord-K (communistisch) + Zuid-K (westers-geleund)","DDR + BRD","VS + Vietnam","NL + Indonesië"],
+        options: ["Noord-Korea + Zuid-Korea", "DDR + BRD", "VS + Vietnam", "NL + Indonesië"],
         answer: 0,
         wrongHints: [null, "Niet — ander conflict.", "Niet — andere.", "Niet — eerder."],
         uitlegPad: {

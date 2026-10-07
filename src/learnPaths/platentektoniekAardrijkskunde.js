@@ -213,7 +213,7 @@ const steps = [
       {
         q: "Hoe snel bewegen tektonische platen ongeveer?",
         options: [
-          "2-10 cm per jaar (vergelijkbaar met vingernagels)",
+          "2-10 cm per jaar",
           "1 km per dag",
           "100 m per jaar",
           "Helemaal niet — ze staan stil",
@@ -261,13 +261,13 @@ const steps = [
   },
   {
     title: "Tektonische platen — de puzzelstukken",
-    explanation: "De aardkorst is **niet één stuk**. Hij bestaat uit ongeveer **15 grote** en een paar kleinere **tektonische platen**, die als puzzelstukken op de mantel drijven.\n\n**De zeven grootste platen**:\n• **Pacifische Plaat** (grootste — bijna de hele Stille Oceaan)\n• **Noord-Amerikaanse Plaat**\n• **Zuid-Amerikaanse Plaat**\n• **Euraziatische Plaat** (Europa + Azië)\n• **Afrikaanse Plaat**\n• **Indo-Australische Plaat**\n• **Antarctische Plaat**\n\n**Twee soorten platen**:\n\n**A. Continentale platen** — *dik en licht*\n• Dragen de continenten.\n• Dikte ~30-70 km.\n• Voornamelijk graniet (lichter gesteente).\n\n**B. Oceanische platen** — *dun en zwaar*\n• Liggen onder oceanen.\n• Dikte ~5-10 km.\n• Voornamelijk basalt (zwaarder gesteente).\n\n**Belangrijk verschil**: oceanische platen zijn zwaarder. Daarom **duiken ze onder** continentale platen wanneer twee platen botsen — dat heet **subductie**, een proces dat we straks tegenkomen.\n\n**Wat gebeurt er aan de randen?**\nDe randen van platen zijn de **interessante zones** — daar gebeurt bijna alle aardbevings- en vulkanische activiteit. In het midden van een plaat is er weinig activiteit.\n\n**Nederland**: ligt midden op de Euraziatische Plaat — vandaar dat we vrijwel geen aardbevingen of vulkanen hebben. Wel kunnen er door **gaswinning** kunstmatige bevingen optreden in Groningen.",
+    explanation: "De aardkorst is **niet één stuk**. Hij bestaat uit ongeveer **15 grote** en een paar kleinere **tektonische platen**, die als puzzelstukken op de mantel drijven.\n\n**De zeven grootste platen**:\n• **Pacifische Plaat** (grootste — bijna de hele Stille Oceaan)\n• **Noord-Amerikaanse Plaat**\n• **Zuid-Amerikaanse Plaat**\n• **Euraziatische Plaat** (Europa + Azië)\n• **Afrikaanse Plaat**\n• **Indo-Australische Plaat**\n• **Antarctische Plaat**\n\n**Twee soorten platen**:\n\n**A. Continentale platen** — *dik en licht*\n• Dragen de continenten.\n• Korst ~30-70 km dik.\n• Voornamelijk graniet (lichter gesteente).\n\n**B. Oceanische platen** — *dun en zwaar*\n• Liggen onder oceanen.\n• Korst ~5-10 km dik.\n• Voornamelijk basalt (zwaarder gesteente).\n\n**Belangrijk verschil**: oceanische platen zijn zwaarder. Daarom **duiken ze onder** continentale platen wanneer twee platen botsen — dat heet **subductie**, een proces dat we straks tegenkomen.\n\n**Wat gebeurt er aan de randen?**\nDe randen van platen zijn de **interessante zones** — daar gebeurt bijna alle aardbevings- en vulkanische activiteit. In het midden van een plaat is er weinig activiteit.\n\n**Nederland**: ligt midden op de Euraziatische Plaat — vandaar dat we vrijwel geen aardbevingen of vulkanen hebben. Wel kunnen er door **gaswinning** kunstmatige bevingen optreden in Groningen.",
     svg: ringOfFireSvg(),
     checks: [
       {
         q: "Wat gebeurt er als een **oceanische** en een **continentale** plaat botsen?",
         options: [
-          "De zwaardere oceanische plaat duikt eronder (subductie)",
+          "De zwaardere oceanische plaat duikt eronder",
           "Ze stoppen allebei — kunnen niet bewegen",
           "De continentale plaat duikt eronder",
           "Ze versmelten tot één plaat",
@@ -369,7 +369,7 @@ const steps = [
       {
         q: "Wat is de **Marianentrog**?",
         options: [
-          "De diepste plek op aarde — 11 km diep, ontstaan door subductie",
+          "Een diepe trog in de oceaanbodem",
           "Een actieve vulkaan in Italië",
           "Een bergketen in Azië",
           "Een gletsjer op de Noordpool",
@@ -417,7 +417,7 @@ const steps = [
   // ─── D. Aardbevingen ───────────────
   {
     title: "Aardbevingen — hoe ze ontstaan en gemeten worden",
-    explanation: "Een **aardbeving** is een plotselinge schok in de aardkorst, veroorzaakt door **opgehoopte spanning** die in één keer vrijkomt.\n\n**Hoe werkt het?**\n1. Twee platen drukken/schuiven tegen elkaar maar de **wrijving** houdt ze vast.\n2. Spanning bouwt zich op (jaren tot eeuwen).\n3. De spanning wordt te groot → de platen **schieten los** met een ruk → schok.\n\n**Belangrijke begrippen**:\n• **Hypocentrum** (focus) = punt onder de grond waar de schok ontstaat.\n• **Epicentrum** = het punt aan het oppervlak **recht boven** het hypocentrum. Daar is de schok het sterkst voelbaar.\n• **Schokgolven** verspreiden zich vandaaruit door alle richtingen.\n\n**Hoe sterk?** — De Schaal van Richter\nVan **1 (niet voelbaar)** tot **10 (catastrofaal)**:\n• 1-3: niet of nauwelijks voelbaar (alleen seismografen)\n• 4: voelbaar, geen schade\n• 5: lichte schade aan oude gebouwen\n• 6: gebouwen kunnen instorten\n• 7+: zware schade over grote gebieden\n• 9+: catastrofale beving (zeldzaam)\n\nElk punt op de schaal is **10× sterker** dan de vorige! Een 7 is dus geen 'iets meer' dan een 6, maar **10× sterker**.\n\n**Aardbevingen in Nederland**\n• Door plaatbeweging vrijwel nooit (wij zitten in het rustige midden van de Euraziatische Plaat).\n• Wél **kunstmatige bevingen in Groningen** door **gaswinning** sinds de jaren '80. Daardoor schade aan tienduizenden huizen.\n• De gaswinning is daarom afgebouwd en grotendeels gestopt in 2024.\n\n**Tsunami's**\nAls een onderzeese aardbeving plaatsvindt, kan die enorme **vloedgolven** veroorzaken — tsunami's. Bij Japan-2011 (magnitude 9,1) ontstond een tsunami van wel 40 m hoog → kerncentrale Fukushima beschadigd.",
+    explanation: "Een **aardbeving** is een plotselinge schok in de aardkorst, veroorzaakt door **opgehoopte spanning** die in één keer vrijkomt.\n\n**Hoe werkt het?**\n1. Twee platen drukken/schuiven tegen elkaar maar de **wrijving** houdt ze vast.\n2. Spanning bouwt zich op (jaren tot eeuwen).\n3. De spanning wordt te groot → de platen **schieten los** met een ruk → schok.\n\n**Belangrijke begrippen**:\n• **Hypocentrum** (focus) = punt onder de grond waar de schok ontstaat.\n• **Epicentrum** = het punt aan het oppervlak **recht boven** het hypocentrum. Daar is de schok het sterkst voelbaar.\n• **Schokgolven** verspreiden zich vandaaruit door alle richtingen.\n\n**Hoe sterk?** — De Schaal van Richter\nVan **1 (niet voelbaar)** tot boven de **9 (catastrofaal)** — de schaal heeft geen bovengrens; de zwaarste ooit gemeten was 9,5 (Chili, 1960):\n• 1-3: niet of nauwelijks voelbaar (alleen seismografen)\n• 4: voelbaar, geen schade\n• 5: lichte schade aan oude gebouwen\n• 6: gebouwen kunnen instorten\n• 7+: zware schade over grote gebieden\n• 9+: catastrofale beving (zeldzaam)\n\nElk punt op de schaal is **10× sterker** dan de vorige! Een 7 is dus geen 'iets meer' dan een 6, maar **10× sterker**.\n\n**Aardbevingen in Nederland**\n• Door plaatbeweging vrijwel nooit (wij zitten in het rustige midden van de Euraziatische Plaat).\n• Wél **kunstmatige bevingen in Groningen** door **gaswinning** sinds de jaren '80. Daardoor schade aan tienduizenden huizen.\n• De gaswinning is daarom afgebouwd en grotendeels gestopt in 2024.\n\n**Tsunami's**\nAls een onderzeese aardbeving plaatsvindt, kan die enorme **vloedgolven** veroorzaken — tsunami's. Bij Japan-2011 (magnitude 9,1) ontstond een tsunami van wel 40 m hoog → kerncentrale Fukushima beschadigd.",
     svg: plaatgrenzenSvg(),
     checks: [
       {
@@ -536,7 +536,7 @@ const steps = [
       {
         q: "Wat veroorzaakte het 'jaar zonder zomer' (1816)?",
         options: [
-          "De Tambora-uitbarsting (1815) — aswolk koelde de hele aarde",
+          "De uitbarsting van de Tambora",
           "Een grote oorlog",
           "Een ijstijd",
           "Een meteoriet-inslag",
@@ -560,7 +560,7 @@ const steps = [
     checks: [
       {
         q: "Hoe snel reist een tsunami over open zee?",
-        options: ["~800 km/u (vergelijkbaar met een vliegtuig)", "~10 km/u", "~100 km/u", "~5.000 km/u"],
+        options: ["~800 km/u", "~10 km/u", "~100 km/u", "~5.000 km/u"],
         answer: 0,
         wrongHints: [
           null,
@@ -629,7 +629,7 @@ const steps = [
       {
         q: "De **San Andreas-breuk** in Californië is een voorbeeld van wat?",
         options: [
-          "Transform-grens (platen schuiven langs elkaar)",
+          "Transform-grens",
           "Divergent-grens",
           "Subductie-zone",
           "Een vulkanische eilandenboog",

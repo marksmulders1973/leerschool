@@ -58,7 +58,7 @@ const steps = [
     checks: [
       {
         q: "Een **webshop in handgemaakte sieraden** — welk type onderneming?",
-        options: ["Productie (je maakt zelf)", "Handel", "Diensten", "Geen van deze"],
+        options: ["Productie", "Handel", "Diensten", "Geen van deze"],
         answer: 0,
         wrongHints: [null, "Handel = inkopen en doorverkopen zonder zelf te maken.", "Diensten = iets ongrijpbaars (kapsel, advies).", "Het past wel in één van de drie types — maak je zelf iets, verkoop je door, of lever je een dienst?"],
         uitlegPad: {
@@ -100,7 +100,7 @@ const steps = [
       },
       {
         q: "Een ondernemer **neemt risico**. Wat betekent dat?",
-        options: ["Hij kan zijn investering verliezen als het bedrijf verliesgevend is", "Hij krijgt altijd zijn geld terug", "Hij betaalt geen belasting", "Hij hoeft niet te werken"],
+        options: ["Hij kan zijn geld verliezen", "Hij krijgt altijd zijn geld terug", "Hij betaalt geen belasting", "Hij hoeft niet te werken"],
         answer: 0,
         wrongHints: [null, "Geen garantie — anders was het geen risico.", "Ondernemers betalen wél belasting.", "Ondernemers werken vaak heel hard juist door risico."],
         uitlegPad: {
@@ -173,9 +173,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **deskresearch**?",
-        options: ["Onderzoek vanachter je computer (Google, CBS, sociale media)", "Onderzoek door interviews op straat", "Een soort meubel", "Een verplichte enquête"],
+        options: ["Bestaande informatie opzoeken, zoals cijfers van het CBS", "Onderzoek door interviews op straat", "Klanten observeren in de winkel", "Een verplichte enquête"],
         answer: 0,
-        wrongHints: [null, "Dat is veldonderzoek.", "Geen meubelvraag.", "Niet verplicht — een methode."],
+        wrongHints: [null, "Dat is veldonderzoek.", "Observeren is zelf nieuwe gegevens verzamelen.", "Niet verplicht — een methode."],
         uitlegPad: {
           stappen: [{ titel: "Achter je bureau zoeken", tekst: "Desk = bureau. Deskresearch = onderzoek dat je achter je computer doet: googelen, CBS-cijfers, sociale-media-scan, brancheorganisaties." }],
           woorden: [{ woord: "deskresearch", uitleg: "Marktonderzoek door bestaande informatie te zoeken — niet zelf interviewen." }, { woord: "veldonderzoek", uitleg: "Zelf data verzamelen via enquête, interview, observatie." }],
@@ -187,7 +187,7 @@ const steps = [
       },
       {
         q: "Sam zet een Instagram-poll uit. Welk type onderzoek is dat?",
-        options: ["Veldonderzoek (enquête)", "Deskresearch", "SWOT-analyse", "Boekhouding"],
+        options: ["Veldonderzoek", "Deskresearch", "SWOT-analyse", "Boekhouding"],
         answer: 0,
         wrongHints: [null, "Desk = bestaande info verzamelen.", "SWOT = analyse-methode, geen onderzoek-type.", "Boekhouding = administratie."],
         uitlegPad: {
@@ -201,7 +201,7 @@ const steps = [
       },
       {
         q: "Wat staat de **W** voor in een SWOT-analyse?",
-        options: ["Weaknesses (zwakke punten)", "Wins", "Wishes", "Workers"],
+        options: ["Weaknesses", "Wins", "Wishes", "Workers"],
         answer: 0,
         wrongHints: [null, "Niet wat het betekent.", "Niet de afkorting.", "Workers heeft niets met SWOT te maken."],
         uitlegPad: {
@@ -229,7 +229,7 @@ const steps = [
       },
       {
         q: "Waarom is **veldonderzoek** vaak nuttiger dan deskresearch alleen?",
-        options: ["Je krijgt antwoorden van JOUW potentiële klanten, niet algemene cijfers", "Het is gratis", "Het is altijd sneller", "Het is verplicht"],
+        options: ["Je hoort het van je eigen doelgroep", "Het is gratis", "Het is altijd sneller", "Het is verplicht"],
         answer: 0,
         wrongHints: [null, "Veldonderzoek kost juist meer.", "Tegendeel — interviews kosten tijd.", "Niet verplicht."],
         uitlegPad: {
@@ -298,9 +298,9 @@ const steps = [
       },
       {
         q: "De **4 P's** van marketing zijn:",
-        options: ["Product, Prijs, Plaats, Promotie", "Personeel, Productiviteit, Promotie, Pensioen", "Plan, Profit, Patent, People", "Print, Pop, Pin, Product"],
+        options: ["Product, Prijs, Plaats, Promotie", "Personeel, Productiviteit, Promotie, Pensioen", "Plan, Profit, Patent, People", "Product, Prijs, Plaats, Pakket"],
         answer: 0,
-        wrongHints: [null, "Personeel hoort bij personeelsbeleid.", "Internationale termen die niet in Pincode staan.", "Geen marketing-categorieën."],
+        wrongHints: [null, "Personeel hoort bij personeelsbeleid.", "Internationale termen die niet in Pincode staan.", "Een pakket is geen aparte P van de marketingmix."],
         uitlegPad: {
           stappen: [{ titel: "Vier instrumenten", tekst: "Marketing-mix = 4 P's. Product (wat verkoop je) + Prijs (wat vraag je) + Plaats (waar verkoop je) + Promotie (hoe maak je bekend)." }],
           woorden: [{ woord: "marketing-mix", uitleg: "De vier (of zes) instrumenten waarmee je je markt benadert." }, { woord: "4 P's", uitleg: "Product, Prijs, Plaats, Promotie. Soms uitgebreid met Personeel en Presentatie (6 P's)." }],
@@ -312,7 +312,7 @@ const steps = [
       },
       {
         q: "Wat is een **USP**?",
-        options: ["Unique Selling Point — wat maakt jou anders dan de rest", "Een soort BTW", "Een marktanalyse", "Een type lening"],
+        options: ["Wat jou anders maakt dan de concurrent", "Een soort BTW", "Een marktanalyse", "Een type lening"],
         answer: 0,
         wrongHints: [null, "USP heeft niets met BTW te maken.", "Een marktanalyse is iets breders.", "Geen lening-vorm."],
         uitlegPad: {
@@ -326,7 +326,7 @@ const steps = [
       },
       {
         q: "Een **hoge prijs** (€8 voor friet) past bij welke marketing-strategie?",
-        options: ["Exclusieve, kwaliteit-uitstraling — kleinere doelgroep", "Massa-verkoop", "Doelgroep met laag inkomen", "Laagste-prijs-strategie"],
+        options: ["Exclusieve kwaliteit-uitstraling", "Massa-verkoop", "Doelgroep met laag inkomen", "Laagste-prijs-strategie"],
         answer: 0,
         wrongHints: [null, "Massa = lage prijs, hoog volume.", "Lage inkomens kunnen hoge prijs niet vaak betalen.", "Tegenovergesteld."],
         uitlegPad: {
@@ -340,7 +340,7 @@ const steps = [
       },
       {
         q: "**Vuistregel klantenwerving**:",
-        options: ["Nieuwe klant kost ~5× meer dan bestaande klant tevreden houden", "Nieuwe klanten zijn altijd gratis", "Bestaande klanten kosten meer", "Alle klanten kosten hetzelfde"],
+        options: ["Een nieuwe klant werven is duurder", "Nieuwe klanten zijn altijd gratis", "Bestaande klanten kosten meer", "Alle klanten kosten hetzelfde"],
         answer: 0,
         wrongHints: [null, "Reclame en moeite kosten geld.", "Tegenovergesteld.", "Verschil is groot."],
         uitlegPad: {
@@ -354,7 +354,7 @@ const steps = [
       },
       {
         q: "Sam wil mensen op een festival bereiken. Welk promotie-kanaal werkt het beste?",
-        options: ["Instagram + TikTok — daar zit de doelgroep (16-35)", "Krantenadvertentie", "Telefoongids", "Brieven sturen"],
+        options: ["Instagram en TikTok", "Krantenadvertentie", "Telefoongids", "Brieven sturen"],
         answer: 0,
         wrongHints: [null, "Festivalbezoekers bereik je niet gericht via de krant.", "Niet meer in gebruik.", "Vaak ongelezen, hoge kosten."],
         uitlegPad: {
@@ -428,7 +428,7 @@ const steps = [
       },
       {
         q: "Het **break-even-punt** is wanneer:",
-        options: ["Omzet = totale kosten (geen winst, geen verlies)", "Winst maximaal", "Verkoop maximaal", "De ondernemer stopt"],
+        options: ["Omzet = totale kosten", "Winst maximaal", "Verkoop maximaal", "De ondernemer stopt"],
         answer: 0,
         wrongHints: [null, "Maximale winst zit hoger dan break-even.", "Bij break-even verkoop je niet het maximum — denk aan winst en verlies.", "Stoppen is geen economisch begrip."],
         uitlegPad: {
@@ -444,7 +444,7 @@ const steps = [
         q: "Sam verkoopt friet voor €5. Variabele kosten **€1,50** per friet. Vaste kosten **€140** per dag. **Hoeveel friet moet hij verkopen om break-even** te draaien?",
         options: ["40 friet", "28 friet", "94 friet", "100 friet"],
         answer: 0,
-        wrongHints: [null, "Te weinig — bereken eerst de dekking per friet (verkoopprijs min variabele kosten), deel daarna de vaste kosten door die dekking.", "Te veel — controleer de berekening.", "Te veel — controleer je deling."],
+        wrongHints: [null, "Te weinig — je deelde door de verkoopprijs. Welk deel van de €5 blijft per friet echt over?", "Te veel — controleer de berekening.", "Te veel — controleer je deling."],
         uitlegPad: {
           stappen: [{ titel: "Bereken in 2 stappen", tekst: "(1) Dekkingsbijdrage per friet: €5 − €1,50 = €3,50. (2) BEP: vaste kosten / dekkingsbijdrage = €140 / €3,50 = 40 frieten." }],
           woorden: [{ woord: "dekkingsbijdrage", uitleg: "Wat elke verkochte eenheid bijdraagt aan dekken van vaste kosten." }],
@@ -470,7 +470,7 @@ const steps = [
       },
       {
         q: "Wat is **omzet**?",
-        options: ["Aantal × prijs (totaal verkoopbedrag)", "Winst min belasting", "Wat de ondernemer overhoudt", "De vaste kosten"],
+        options: ["Aantal × prijs", "Winst min belasting", "Wat de ondernemer overhoudt", "De vaste kosten"],
         answer: 0,
         wrongHints: [null, "Winst is iets anders.", "Dat is netto winst, niet omzet.", "Vaste kosten zijn input, geen omzet."],
         uitlegPad: {
@@ -561,7 +561,7 @@ const steps = [
       },
       {
         q: "**Substituten** zijn:",
-        options: ["Producten die elkaar kunnen vervangen (Pepsi vs Coca-Cola)", "Producten die bij elkaar horen", "Gratis producten", "Belastingvrije producten"],
+        options: ["Producten die elkaar kunnen vervangen", "Producten die bij elkaar horen", "Gratis producten", "Belastingvrije producten"],
         answer: 0,
         wrongHints: [null, "Dat zijn complementen.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
@@ -575,7 +575,7 @@ const steps = [
       },
       {
         q: "Bij €3 per kg vragen kopers 100 kg, bij €1 vragen ze 400 kg. Wat heet dit?",
-        options: ["Wet van de vraag — hogere prijs, minder vraag", "Wet van het aanbod", "Inflatie", "Recessie"],
+        options: ["Wet van de vraag", "Wet van het aanbod", "Inflatie", "Recessie"],
         answer: 0,
         wrongHints: [null, "Verkeerde wet.", "Inflatie is iets anders.", "Recessie is iets anders."],
         uitlegPad: {
@@ -631,7 +631,7 @@ const steps = [
       },
       {
         q: "**Telecom** (KPN/Vodafone/Odido) is welke marktvorm?",
-        options: ["Oligopolie (weinig grote)", "Volkomen concurrentie", "Monopolie", "Monopolistische concurrentie"],
+        options: ["Oligopolie", "Volkomen concurrentie", "Monopolie", "Monopolistische concurrentie"],
         answer: 0,
         wrongHints: [null, "Te weinig spelers voor 'volkomen'.", "Niet 1, maar 3.", "Niet 'veel' aanbieders."],
         uitlegPad: {
@@ -645,9 +645,9 @@ const steps = [
       },
       {
         q: "**Monopolie** kenmerk:",
-        options: ["1 aanbieder bepaalt prijs", "Veel aanbieders", "Alleen consumenten", "Lage prijs"],
+        options: ["1 aanbieder bepaalt prijs", "Veel aanbieders", "Weinig grote aanbieders", "Lage prijs"],
         answer: 0,
-        wrongHints: [null, "Tegendeel.", "Onzin.", "Tegendeel — meestal hoog."],
+        wrongHints: [null, "Tegendeel.", "Dat is een oligopolie.", "Tegendeel — meestal hoog."],
         uitlegPad: {
           stappen: [{ titel: "Mono = 1", tekst: "Monopolie betekent letterlijk 'één verkoper'. Eén aanbieder = volledige macht over prijs. Geen concurrentie = hoge prijs mogelijk." }],
           woorden: [{ woord: "monopolie", uitleg: "Marktvorm met 1 aanbieder. Heeft volledige prijsmacht." }],
@@ -659,9 +659,9 @@ const steps = [
       },
       {
         q: "Wat doet de **ACM**?",
-        options: ["Voorkomt kartels + bewaakt eerlijke concurrentie", "Maakt wetten", "Int belasting", "Subsidies"],
+        options: ["Bewaakt eerlijke concurrentie", "Maakt wetten", "Int belasting", "Verdeelt subsidies"],
         answer: 0,
-        wrongHints: [null, "Wetten = parlement.", "Belastingdienst.", "Niet ACM."],
+        wrongHints: [null, "Wetten = parlement.", "Belastingdienst.", "Subsidies lopen via andere instanties, zoals RVO."],
         uitlegPad: {
           stappen: [{ titel: "Marktwaakhond", tekst: "Autoriteit Consument & Markt = overheidstoezichthouder. Voorkomt prijsafspraken (kartels) tussen concurrenten en zorgt dat fusies de markt niet domineren." }],
           woorden: [{ woord: "ACM", uitleg: "Autoriteit Consument & Markt. Onafhankelijke waakhond voor eerlijke markt." }, { woord: "kartel", uitleg: "Illegale prijsafspraak tussen concurrenten om gezamenlijk hogere prijs te vragen." }],
@@ -673,7 +673,7 @@ const steps = [
       },
       {
         q: "**Veel** kledingmerken (Nike, Adidas, Puma, ...): welke marktvorm?",
-        options: ["Monopolistische concurrentie (veel + gedifferentieerd)", "Volkomen concurrentie", "Oligopolie", "Monopolie"],
+        options: ["Monopolistische concurrentie", "Volkomen concurrentie", "Oligopolie", "Monopolie"],
         answer: 0,
         wrongHints: [null, "Producten verschillen wel.", "Te veel spelers.", "Veel meer dan 1."],
         uitlegPad: {
@@ -687,7 +687,7 @@ const steps = [
       },
       {
         q: "Bij welke marktvorm is **vergelijken** het meest waardevol?",
-        options: ["Oligopolie — kleine verschillen kunnen €100/jr schelen", "Volkomen concurrentie", "Monopolie", "Overal gelijk"],
+        options: ["Oligopolie", "Volkomen concurrentie", "Monopolie", "Overal gelijk"],
         answer: 0,
         wrongHints: [null, "Bij volkomen alles gelijke prijs.", "Geen alternatief.", "Wel verschil."],
         uitlegPad: {
@@ -750,7 +750,7 @@ const steps = [
       },
       {
         q: "Twee vrienden starten een **VOF** voor hun foodtruck. Wat is het belangrijkste risico?",
-        options: ["Beide vennoten zijn privé aansprakelijk — ook voor schulden van de ander", "Ze mogen geen winst maken", "Ze betalen dubbele belasting", "Ze hebben een notaris nodig"],
+        options: ["Ze zijn ook aansprakelijk voor elkaars schulden", "Ze mogen geen winst maken", "Ze betalen dubbele belasting", "Ze hebben een notaris nodig"],
         answer: 0,
         wrongHints: [null, "Winst maken is juist het doel.", "Bij VOF betaalt elk apart IB.", "Notaris is voor BV, niet VOF."],
         uitlegPad: {
@@ -778,7 +778,7 @@ const steps = [
       },
       {
         q: "Sam wil zelfstandig starten met **lage start-kosten**. Welke rechtsvorm is meest geschikt?",
-        options: ["Eenmanszaak (~€80 KvK, geen notaris)", "BV (notaris vereist)", "VOF (2 vennoten nodig)", "Stichting"],
+        options: ["Eenmanszaak", "BV", "VOF", "Stichting"],
         answer: 0,
         wrongHints: [null, "BV heeft notariskosten van €500-€1.500.", "VOF heeft 2 personen nodig — hij wil alleen.", "Stichting is voor non-profit, niet ondernemen."],
         uitlegPad: {
@@ -806,7 +806,7 @@ const steps = [
       },
       {
         q: "Wat is een **rechtspersoon**?",
-        options: ["Een bedrijf dat juridisch een aparte 'persoon' is — zoals een BV", "Een advocaat", "Een ondernemer met een diploma", "Een werknemer"],
+        options: ["Een bedrijf dat juridisch een eigen 'persoon' is", "Een advocaat", "Een ondernemer met een diploma", "Een werknemer"],
         answer: 0,
         wrongHints: [null, "Advocaat is een beroep, niet rechtsvorm.", "Niet diplomastatus.", "Werknemer = geen rechtspersoon."],
         uitlegPad: {
@@ -878,7 +878,7 @@ const steps = [
         q: "Hoeveel BTW zit in een product van **€121 inclusief 21% BTW**?",
         options: ["€21", "€25,41", "€121", "€100"],
         answer: 0,
-        wrongHints: [null, "Niet 21% van €121 — de 21% gaat over het bedrag zónder BTW. Reken eerst terug met €121 / 1,21.", "Dat is de hele prijs.", "Dat is exclusief BTW."],
+        wrongHints: [null, "Niet 21% van €121 — de 21% gaat over het bedrag zónder BTW. Met welk getal deel je de €121 dan?", "Dat is de hele prijs.", "Dat is exclusief BTW."],
         uitlegPad: {
           stappen: [{ titel: "Eerst excl, dan verschil", tekst: "Inclusief / 1,21 = exclusief. €121 / 1,21 = €100. BTW = incl − excl = €121 − €100 = €21." }],
           woorden: [{ woord: "BTW-berekening incl", uitleg: "BTW = incl − (incl / (1 + tarief))." }],
@@ -890,7 +890,7 @@ const steps = [
       },
       {
         q: "Wat is verplicht op een **factuur**?",
-        options: ["KvK-nummer, BTW-nummer, datum, factuurnummer, prijs + BTW", "Alleen het bedrag", "Alleen jouw naam", "Niets — vrije keuze"],
+        options: ["KvK-nummer, BTW-nummer, datum, factuurnummer, prijs + BTW", "Alleen het bedrag en de datum", "Alleen jouw naam en handtekening", "Niets — je kiest zelf wat erop staat"],
         answer: 0,
         wrongHints: [null, "Te weinig — wettelijk verplichte items.", "Te weinig.", "Wel verplichte items."],
         uitlegPad: {
@@ -904,7 +904,7 @@ const steps = [
       },
       {
         q: "Hoe lang moet je **bonnen en administratie bewaren**?",
-        options: ["7 jaar (wettelijke bewaarplicht)", "1 jaar", "Tot het volgende boekjaar", "Niet"],
+        options: ["7 jaar", "1 jaar", "Tot het volgende boekjaar", "Niet"],
         answer: 0,
         wrongHints: [null, "Veel te kort.", "Wettelijke termijn is langer.", "Wel verplicht."],
         uitlegPad: {
@@ -920,7 +920,7 @@ const steps = [
         q: "Sam ontvangt **€1.000 omzet inclusief 9% BTW** op een dag. Hoeveel houdt hij apart voor BTW?",
         options: ["Ongeveer €83", "€90", "€100", "€9"],
         answer: 0,
-        wrongHints: [null, "Niet 9% van €1000 — dat is incl. BTW. Reken: €1000 - €1000/1,09.", "Te veel.", "Te weinig."],
+        wrongHints: [null, "Niet 9% van €1.000 — die €1.000 is al inclusief BTW.", "Te veel.", "Te weinig."],
         uitlegPad: {
           stappen: [{ titel: "BTW eruit halen", tekst: "€1.000 incl 9% = €1.000 / 1,09 = €917,43 excl. BTW = €1.000 − €917,43 = €82,57. Sam houdt ~€83 apart." }],
           woorden: [{ woord: "BTW-deel", uitleg: "Deel van incl-bedrag dat naar Belastingdienst gaat." }],
@@ -970,7 +970,7 @@ const steps = [
       },
       {
         q: "Bij een **faillissement van een eenmanszaak**, wat is het belangrijkste verschil met een BV?",
-        options: ["Ook privé-bezittingen (huis, auto) kunnen verkocht worden", "Geen verschil", "Bij eenmanszaak gebeurt niets", "BV is altijd erger"],
+        options: ["Ook privé-bezittingen kunnen verkocht worden", "Geen verschil", "Bij eenmanszaak gebeurt niets", "BV is altijd erger"],
         answer: 0,
         wrongHints: [null, "Wel groot verschil — aansprakelijkheid.", "Curator komt ook bij eenmanszaak.", "BV beschermt juist meer."],
         uitlegPad: {
@@ -984,7 +984,7 @@ const steps = [
       },
       {
         q: "Wie wordt aangesteld bij een faillissement?",
-        options: ["Een curator (door de rechter)", "Een nieuwe ondernemer", "De accountant", "De Belastingdienst"],
+        options: ["Een curator", "Een nieuwe ondernemer", "De accountant", "De Belastingdienst"],
         answer: 0,
         wrongHints: [null, "Bedrijf wordt vaak gestopt, geen overname.", "Accountant is administratief.", "Belastingdienst is wel schuldeiser, niet curator."],
         uitlegPad: {

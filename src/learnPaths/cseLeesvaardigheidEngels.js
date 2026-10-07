@@ -185,7 +185,7 @@ const steps = [
       },
       {
         q: "*'He bought legumes, such as beans and lentils.'* Wat zijn **legumes**?",
-        options: ["Peulvruchten (bonen-familie)", "Fruit", "Vlees", "Brood"],
+        options: ["Peulvruchten", "Fruit", "Vlees", "Brood"],
         answer: 0,
         wrongHints: [null, "Geen fruit.", "Bonen en linzen zijn plantaardig, geen vlees.", "Niet brood."],
       },
@@ -197,7 +197,7 @@ const steps = [
       },
       {
         q: "*'un-'* aan begin van woord betekent meestal?",
-        options: ["Niet / tegenovergesteld (unhappy, unsafe)", "Heel erg", "Vroeger", "Tussen"],
+        options: ["Niet / het tegenovergestelde", "Heel erg", "Vroeger", "Tussen"],
         answer: 0,
         wrongHints: [null, "Daarvoor gebruik je eerder 'super-'.", "Dat is 'pre-'.", "Dat is 'inter-'."],
       },
@@ -236,7 +236,7 @@ const steps = [
       },
       {
         q: "Tekst: *'Bees are vital. They pollinate 90% of crops. Without bees, food would disappear.'* Wat is **hoofdgedachte**?",
-        options: ["Bijen zijn belangrijk voor voedsel", "Bijen bestuiven 90%", "Voedsel verdwijnt", "Bijen leven in netten"],
+        options: ["Bijen zijn belangrijk voor voedsel", "Bijen bestuiven 90%", "Voedsel verdwijnt", "Bijen leven in nesten"],
         answer: 0,
         wrongHints: [null, "Detail (specifiek getal).", "Gevolg/detail, geen hoofdpunt.", "Niet in tekst."],
       },
@@ -281,7 +281,7 @@ const steps = [
       },
       {
         q: "*'The exam was hard. The time was short. **This** is why students failed.'* Wat is **this**?",
-        options: ["De hele situatie (moeilijk + kort)", "De examenuitslag", "Alleen het tijd-element", "Alleen het moeilijk-element"],
+        options: ["Moeilijk examen én korte tijd", "De examenuitslag", "Alleen het tijd-element", "Alleen het moeilijk-element"],
         answer: 0,
         wrongHints: [null, "Niet expliciet genoemd.", "Te beperkt.", "Te beperkt."],
         uitlegPad: {
@@ -377,7 +377,7 @@ const steps = [
       {
         q: "*'**Open question**: complete the sentence — 'I __ to school every day.'* (typ het werkwoord)",
         kind: "open",
-        acceptedAnswers: ["go", "walk", "cycle"],
+        acceptedAnswers: ["go", "walk", "cycle", "ride", "bike", "run", "come", "drive"],
         explanation: "'I go/walk/cycle to school every day' — present simple voor routine.",
       },
     ],

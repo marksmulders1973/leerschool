@@ -30,7 +30,7 @@ const steps = [
     checks: [
       {
         q: "Wat is de **kans** op een **even getal** bij dobbelsteen?",
-        options: ["1/2 (50%)","1/3","1/6","2/3"],
+        options: ["1/2","1/3","1/6","2/3"],
         answer: 0,
         wrongHints: [null, "Te weinig — er zijn 3 even op 6.", "Niet — dat is kans op 1 specifiek getal.", "Te veel."],
         uitlegPad: {
@@ -92,9 +92,9 @@ const steps = [
     checks: [
       {
         q: "In een boomdiagram **vermenigvuldig** je kansen:",
-        options: ["Langs één pad","Tussen verschillende paden","Nooit","Alleen bij 6"],
+        options: ["Langs één pad","Tussen verschillende paden","Nooit","Alleen bij terugleggen"],
         answer: 0,
-        wrongHints: [null, "Niet — daar tel je op (som-regel).", "Wel — product-regel.", "Niet relevant."],
+        wrongHints: [null, "Niet — daar tel je op (som-regel).", "Wel — product-regel.", "Niet — ook zonder terugleggen vermenigvuldig je langs een pad."],
         uitlegPad: {
           stappen: [{ titel: "Pad = vermenigvuldigen", tekst: "**Langs één pad**: vermenigvuldig kansen (product-regel). **Tussen verschillende paden**: tel kansen op (som-regel)." }],
           theorie: "Onthoud: 'én' = ×, 'of' = +.",
@@ -115,7 +115,7 @@ const steps = [
         q: "Drie keer muntje gooien. Hoeveel paden in boom?",
         options: ["8","6","3","27"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is het aantal uitkomsten van één dobbelsteen.", "Niet — aantal worpen.", "Niet — dat is 3³, niet 2³."],
+        wrongHints: [null, "Niet — elke worp verdubbelt het aantal paden. Hoe vaak verdubbel je?", "Niet — aantal worpen.", "Niet — dat is 3³, niet 2³."],
         uitlegPad: {
           stappen: [{ titel: "2^n = paden", tekst: "Bij n worpen met 2 uitkomsten: **2^n paden**. 3 muntjes → 2³ = **8 paden** (KKK, KKM, ..., MMM)." }],
           theorie: "Formule: aantal paden = aantal-uitkomsten-per-stap ^ aantal-stappen.",
@@ -135,7 +135,7 @@ const steps = [
       },
       {
         q: "Voor 'minstens 1 succes in 3 pogingen' werk je het handigst met:",
-        options: ["Complement (1 − P(0 successen))","Direct optellen","Product-regel","Geen formule"],
+        options: ["Complement","Direct optellen","Product-regel","Geen formule"],
         answer: 0,
         wrongHints: [null, "Niet — veel paden = ingewikkeld.", "Niet — voor opeenvolgende, niet 'minstens'.", "Wel formule."],
         uitlegPad: {
@@ -187,9 +187,9 @@ const steps = [
       },
       {
         q: "Kentekenplaat: 2 letters + 3 cijfers + 2 letters. Hoeveel mogelijk (herhaling toegestaan, A-Z, 0-9)?",
-        options: ["26²×10³×26² = ~457 miljoen","Onbeperkt","26+10+26","100"],
+        options: ["26⁴ × 10³ ≈ 457 miljoen","26 × 10 × 26 = 6.760","26² + 10³ + 26² = 2.352","26⁴ + 10³ ≈ 458.000"],
         answer: 0,
-        wrongHints: [null, "Wel beperkt.", "Niet — dat is som, niet product.", "Niet — veel meer."],
+        wrongHints: [null, "Je telt elke groep maar één keer — maar er zijn 7 posities, elk met een eigen keuze.", "Optellen klopt niet — bij opeenvolgende keuzes vermenigvuldig je.", "Letters en cijfers staan samen op één plaat — tel je die op of vermenigvuldig je?"],
         uitlegPad: {
           stappen: [{ titel: "Productregel", tekst: "**26 letters × 26 × 10 cijfers × 10 × 10 × 26 × 26 = 26⁴ × 10³ = 456.976.000** mogelijke kentekens. In de praktijk minder, omdat verwarrende combinaties worden uitgesloten." }],
           theorie: "Toets-patroon: productregel voor 'aantal codes/wachtwoorden/etiketten' vragen.",
@@ -219,7 +219,7 @@ const steps = [
         q: "P(A) = 0,5, P(B) = 0,4, P(A en B) = 0,2. Wat is **P(A of B)**?",
         options: ["0,7","0,9","0,1","1,1"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet de aftrek.", "Niet — minder dan dat.", "Onmogelijk — kansen ≤1."],
+        wrongHints: [null, "Niet — vergeet de aftrek.", "Niet — heb je afgetrokken in plaats van opgeteld?", "Onmogelijk — kansen ≤1."],
         uitlegPad: {
           stappen: [{ titel: "Som-regel: tel + trek af", tekst: "P(A of B) = P(A) + P(B) − P(A en B) = 0,5 + 0,4 − 0,2 = **0,7**." }],
           theorie: "Toets-Venn-favoriet. Trek doorsnede af om dubbel-telling te voorkomen.",
@@ -238,7 +238,7 @@ const steps = [
         },
       },
       {
-        q: "Een **eerlijk spel** heeft E gelijk aan:",
+        q: "Een **eerlijk spel** heeft E(winst) gelijk aan:",
         options: ["0","1","0,5","Variabel"],
         answer: 0,
         wrongHints: [null, "Niet relevant.", "Niet — voor 50/50-kans, niet eerlijkheid.", "Niet specifiek."],
@@ -263,7 +263,7 @@ const steps = [
         q: "Lot kost €5. Win €20 met kans 1/10, anders niets. E(winst) = ?",
         options: ["−€3","€20","€2","−€5"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet inzet aftrek.", "Niet — vergeet kans.", "Niet — wel deels winst."],
+        wrongHints: [null, "Niet — vergeet inzet aftrek.", "Dat is de gemiddelde uitkering — trek de inzet nog af.", "Niet — wel deels winst."],
         uitlegPad: {
           stappen: [{ titel: "Winst = uitkomst − inzet", tekst: "Winnen: ontvang 20 − inzet 5 = +15 met kans 1/10. Niet winnen: verlies 5 met kans 9/10. E(winst) = 15×0,1 + (−5)×0,9 = 1,5 − 4,5 = **−3**. Speler verliest gemiddeld €3 per lot." }],
           theorie: "Tip: bij E-vragen altijd 'netto winst' uitrekenen (incl. inzet aftrek).",

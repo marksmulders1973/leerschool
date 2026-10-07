@@ -215,10 +215,10 @@ const steps = [
         },
       },
       {
-        q: "*'De fles was leeg na drie slokken — een belachelijk klein bekertje.'* — 'belachelijk' betekent hier:",
-        options: ["heel erg","grappig","gek","niet waar"],
+        q: "*'Mijn drinken was al op na drie slokken — wat een belachelijk klein bekertje!'* — 'belachelijk' betekent hier:",
+        options: ["heel erg","grappig","een beetje","niet waar"],
         answer: 0,
-        wrongHints: [null,"Niet de letterlijke betekenis — context zegt 'erg klein'.","Niet 'gek' maar 'extreem'.","Niet de letterlijke."],
+        wrongHints: [null,"Niet de letterlijke betekenis — context zegt 'erg klein'.","Andersom — belachelijk maakt 'klein' juist sterker.","Niet de letterlijke."],
         uitlegPad: {
           stappen: [{ titel: "Context: 'klein bekertje'", tekst: "Belachelijk versterkt 'klein' = HEEL ERG klein. Niet de letterlijke betekenis 'om te lachen'." }],
           woorden: [{ woord: "belachelijk", uitleg: "Letterlijk: om te lachen. In context: extreem, overdreven." }],
@@ -335,9 +335,9 @@ const steps = [
       },
       {
         q: "Wat betekent de **uitdrukking** 'De kat uit de boom kijken'?",
-        options: ["Eerst afwachten + observeren voor je iets doet","Letterlijk naar een kat in boom kijken","Boos worden","Slapen"],
+        options: ["Eerst afwachten en kijken voor je iets doet","Letterlijk naar een kat in een boom kijken","Meteen en zonder nadenken iets doen","Iemand anders de schuld geven"],
         answer: 0,
-        wrongHints: [null, "Niet letterlijk — spreekwoorden zijn figuurlijk.", "Niet — geen woedend gedrag.", "Niet — geen slaap-betekenis."],
+        wrongHints: [null, "Niet letterlijk — spreekwoorden zijn figuurlijk.", "Andersom — wie de kat uit de boom kijkt, wacht juist.", "Niet — het gaat niet over schuld."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een uitdrukking?", tekst: "Een **uitdrukking** (en ook een **spreekwoord**) is een **vaste woordgroep** met een **figuurlijke** (= overdrachtelijke) betekenis. Je begrijpt het niet door de woorden letterlijk te nemen.\n\nVoorbeeld: 'de kat uit de boom kijken' = NIET letterlijk naar een kat staren. Wel: **'voorzichtig afwachten + kijken hoe een situatie zich ontwikkelt voordat je actie onderneemt'**." },
@@ -360,9 +360,9 @@ const steps = [
       },
       {
         q: "Wat betekent **'een open boek'** in 'Floor is een open boek voor mij'?",
-        options: ["Ik begrijp haar makkelijk / ze verbergt niets","Ze leest veel","Ze heeft een boek open","Ze schrijft een boek"],
+        options: ["Ik begrijp haar makkelijk, ze verbergt niets","Ze houdt alles voor zichzelf","Ze heeft een boek open","Ze schrijft een boek"],
         answer: 0,
-        wrongHints: [null, "Niet — geen leesgewoonten.", "Niet letterlijk.", "Niet — geen schrijven."],
+        wrongHints: [null, "Andersom — dan zou ze een gesloten boek zijn.", "Niet letterlijk.", "Niet — geen schrijven."],
         uitlegPad: {
           stappen: [
             { titel: "Figuurlijke uitdrukking", tekst: "**'Een open boek'** betekent figuurlijk: **iemand of iets dat doorzichtig + makkelijk te begrijpen is**. Geen verborgen agenda. Eerlijk + voorspelbaar.\n\nIemand die 'een gesloten boek' is = ondoorgrondelijk, mysterieus." },
@@ -384,9 +384,9 @@ const steps = [
       },
       {
         q: "Wat is het **antoniem** van **'overvloed'**?",
-        options: ["Tekort / schaarste","Veel","Eten","Bos"],
+        options: ["Tekort","Veel","Rijkdom","Overschot"],
         answer: 0,
-        wrongHints: [null, "Niet — 'veel' is synoniem van overvloed.", "Niet — eten heeft niets met de tegenstelling te maken.", "Niet — bos is een plek."],
+        wrongHints: [null, "Niet — 'veel' is synoniem van overvloed.", "Niet — bij rijkdom is er juist veel.", "Niet — een overschot is juist méér dan nodig."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een antoniem?", tekst: "Een **antoniem** is een woord met **tegengestelde betekenis**. Het is het tegenovergestelde van een **synoniem** (zelfde betekenis).\n\nVoorbeeld:\n• 'Mooi' ↔ antoniem 'lelijk'\n• 'Snel' ↔ antoniem 'langzaam'\n• 'Veel' ↔ antoniem 'weinig'" },
@@ -410,16 +410,16 @@ const steps = [
       },
       { q: "Synoniem van **boos**?", options: ["kwaad","blij","verdrietig","bang"], answer: 0, wrongHints: [null, "Antoniem.", "Andere emotie.", "Andere emotie."] },
       { q: "Wat betekent 'pessimistisch'?", options: ["Verwacht het slechtste","Verwacht het beste","Lacht veel","Eet veel"], answer: 0, wrongHints: [null, "Dat is optimistisch.", "Heeft er niets mee te maken.", "Geen verband."] },
-      { q: "Wat is een **synoniem**?", options: ["Woord met dezelfde betekenis","Tegengestelde","Lang woord","Klein woord"], answer: 0, wrongHints: [null, "Dat is antoniem.", "Niet relevant.", "Niet relevant."] },
+      { q: "Wat is een **synoniem**?", options: ["Woord met dezelfde betekenis","Woord met tegengestelde betekenis","Woord met veel letters","Woord uit een andere taal"], answer: 0, wrongHints: [null, "Dat is antoniem.", "Niet relevant.", "Niet relevant."] },
       { q: "Wat is een **antoniem**?", options: ["Tegengestelde betekenis","Zelfde betekenis","Lang woord","Spreekwoord"], answer: 0, wrongHints: [null, "Synoniem.", "Niet.", "Niet."] },
       { q: "Synoniem van **snel**?", options: ["vlug","traag","stil","langzaam"], answer: 0, wrongHints: [null, "Antoniem.", "Niets met snelheid.", "Antoniem."] },
       { q: "Antoniem van **licht** (gewicht)?", options: ["zwaar","donker","helder","klein"], answer: 0, wrongHints: [null, "Andere betekenis (licht ↔ donker).", "Synoniem helderheid.", "Niet."] },
       { q: "Antoniem van **vol**?", options: ["leeg","gevuld","groot","klein"], answer: 0, wrongHints: [null, "Synoniem.", "Niet.", "Niet."] },
       { q: "Wat betekent **enthousiast**?", options: ["Vol energie en blij","Boos","Verdrietig","Verveeld"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Tegengestelde."] },
-      { q: "*Context*: 'De vissers haalden de buit binnen.' Wat betekent 'buit'?", options: ["Vangst / gevonden spullen","Boot","Net","Water"], answer: 0, wrongHints: [null, "Een boot is vervoer, geen buit.", "Een net is gereedschap, geen buit.", "Water is omgeving, geen buit."] },
+      { q: "*Context*: 'De vissers haalden de buit binnen.' Wat betekent 'buit'?", options: ["Vangst","Boot","Net","Water"], answer: 0, wrongHints: [null, "Een boot is vervoer, geen buit.", "Een net is gereedschap, geen buit.", "Water is omgeving, geen buit."] },
       { q: "Synoniem van **mooi**?", options: ["prachtig","lelijk","slim","groot"], answer: 0, wrongHints: [null, "Antoniem.", "Andere betekenis.", "Niet."] },
       { q: "*Context*: 'Hij is een fanatiek voetballer.' Fanatiek =?", options: ["Heel toegewijd","Lui","Onverschillig","Bang"], answer: 0, wrongHints: [null, "Tegengestelde.", "Tegengestelde.", "Niet."] },
-      { q: "Wat betekent **discreet**?", options: ["Onopvallend en voorzichtig (kan een geheim bewaren)","Luid","Boos","Onzeker"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Niet."] },
+      { q: "Wat betekent **discreet**?", options: ["Onopvallend en voorzichtig","Luid en opvallend","Snel boos","Onzeker"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Niet."] },
       { q: "Antoniem van **vroeg**?", options: ["laat","snel","wakker","nu"], answer: 0, wrongHints: [null, "Andere as.", "Niet over tijd-startmoment.", "Niet."] },
       { q: "**Verbazing** lijkt op?", options: ["verrassing","boosheid","verveling","angst"], answer: 0, wrongHints: [null, "Andere emotie.", "Niet.", "Niet."] },
       { q: "*Context*: 'Het was een schitterend feest.' Schitterend = ?", options: ["geweldig","saai","kort","duur"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Niet."] },

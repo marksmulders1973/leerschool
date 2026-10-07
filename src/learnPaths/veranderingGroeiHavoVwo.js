@@ -140,9 +140,9 @@ const steps = [
       },
       {
         q: "Welk wereld-fenomeen heeft **exponentiële groei** in 20e-21e eeuw?",
-        options: ["Computer-rekenkracht (Moore's wet)","Lineaire bevolkingsgroei","Onveranderd","Wereld-temperatuur"],
+        options: ["Rekenkracht van computerchips","Aantal uren in een dag","Lengte van een marathon","Wereldtemperatuur"],
         answer: 0,
-        wrongHints: [null, "Niet — exp tot ~1970.", "Niet relevant.", "Niet — wel lineaire stijging recent."],
+        wrongHints: [null, "Dat blijft altijd 24 — groeit dat wel?", "Die afstand ligt vast — groeit die wel?", "Die stijgt wel, maar ongeveer lineair, niet met een vaste factor."],
         uitlegPad: {
           stappen: [{ titel: "Moore's wet", tekst: "**Moore's wet** (1965): aantal transistors per chip verdubbelt ~elke 2 jaar. **Exponentiële groei**. Klopte ~50 jaar — sinds 2020 vertraagd vanwege fysieke grenzen (atomaire schaal). Vandaar specialisatie GPU/AI/quantum als opvolger." }],
           theorie: "Andere exp: internet-gebruikers tot ~2010, GenAI-modellen 2017-2024, zonne-energie-prijs dalend exp.",
@@ -257,7 +257,7 @@ const steps = [
       },
       {
         q: "Virus-uitbraak: aantal besmettingen verloopt typisch:",
-        options: ["Eerst exp → afvlakkend (logistisch)","Lineair","Periodiek alleen","Constant"],
+        options: ["Logistisch","Lineair","Periodiek alleen","Constant"],
         answer: 0,
         wrongHints: [null, "Niet — niet zonder beperking.", "Wel later golf, eerst monotoon.", "Niet — wel verandering."],
         uitlegPad: {
@@ -322,7 +322,7 @@ const steps = [
       },
       {
         q: "Welk model past bij **leerproces** (oefenen)?",
-        options: ["Logistisch (begin traag, midden snel, eind plateau)","Lineair","Periodiek","Kwadratisch"],
+        options: ["Logistisch","Lineair","Periodiek","Kwadratisch"],
         answer: 0,
         wrongHints: [null, "Niet — geen gelijke stappen.", "Niet — geen cyclus.", "Niet relevant."],
         uitlegPad: {
@@ -333,7 +333,7 @@ const steps = [
       },
       {
         q: "Vuistregel **70**: T_v ≈ 70/p werkt voor:",
-        options: ["Kleine groei-% (< ~10%)","Alleen percentages > 50%","Alleen lineair","Niet bestaand"],
+        options: ["Alleen kleine percentages","Alleen percentages > 50%","Alleen lineair","Niet bestaand"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Niet — voor exp.", "Wel bestaand."],
         uitlegPad: {

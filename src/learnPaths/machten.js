@@ -66,7 +66,7 @@ const steps = [
       },
       {
         q: "*Hoe spreek je 5² uit?*",
-        options: ["Vijf in het kwadraat (of: vijf tot de tweede)","Twee tot de vijfde","Vijf maal twee","Tweederde van vijf"],
+        options: ["Vijf in het kwadraat","Twee tot de vijfde","Vijf maal twee","Tweederde van vijf"],
         answer: 0,
         wrongHints: [null, "Andersom — welk getal staat onder en welk boven in 5²? Welke spreek je eerst uit?", "Niet vermenigvuldigen — 5² is geen 5 keer 2. Wat doet het kwadraat?", "Niet zinnig opgeschreven. Hoe spreek je een macht ECHT uit? Denk aan 'kwadraat'."],
         uitlegPad: {

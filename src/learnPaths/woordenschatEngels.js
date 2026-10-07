@@ -363,7 +363,7 @@ const steps = [
         q: "Hoeveel is **fifteen**?",
         options: ["15", "5", "50", "500"],
         answer: 0,
-        wrongHints: [null, "Five is het getal vijf — hoe klinkt vijftien in Engels anders?", "Fifty heeft -ty, niet -teen.", "Five hundred = vijfhonderd — fifteen is veel kleiner."],
+        wrongHints: [null, "Five is het getal vijf — wat doet het achtervoegsel -teen erbij?", "Fifty heeft -ty, niet -teen.", "Five hundred = vijfhonderd — fifteen is veel kleiner."],
         uitlegPad: {
           stappen: [{ titel: "fifteen = 15", tekst: "-teen achtervoegsel = tussen 13 en 19. Fif-teen = 15. Fif komt van five." }],
           woorden: [{ woord: "fifteen", uitleg: "15. Five (5) + teen-suffix = 15." }],
@@ -434,7 +434,7 @@ const steps = [
         q: "Wat betekent **You're welcome**?",
         options: ["Graag gedaan", "Welkom", "Je bent welkom thuis", "Goedemorgen"],
         answer: 0,
-        wrongHints: [null, "Welkom = welcome (los).", "Bijna letterlijk, maar als reactie op 'thanks' = graag gedaan.", "Goedemorgen = good morning."],
+        wrongHints: [null, "Welkom = welcome (los).", "Bijna letterlijk — maar wanneer zeg je 'You're welcome' meestal?", "Goedemorgen = good morning."],
         uitlegPad: {
           stappen: [{ titel: "Reactie op 'thanks'", tekst: "You're welcome = standaard reactie op 'thank you' = graag gedaan." }],
           woorden: [{ woord: "you're welcome", uitleg: "Letterlijk: 'jij bent welkom'. In context: 'graag gedaan'." }],

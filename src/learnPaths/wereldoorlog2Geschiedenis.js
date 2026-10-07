@@ -184,7 +184,7 @@ const steps = [
     checks: [
       {
         q: "Wat eiste het **Verdrag van Versailles** van Duitsland?",
-        options: ["Schuld bekennen, herstelbetalingen + klein leger", "Sovjet-Unie binnenvallen", "Een muur bouwen door Berlijn", "Atoomwapens ontwikkelen"],
+        options: ["Herstelbetalingen doen", "Sovjet-Unie binnenvallen", "Een muur bouwen door Berlijn", "Atoomwapens ontwikkelen"],
         answer: 0,
         wrongHints: [null, "Andersom — pas in 1941 viel Duitsland de Sovjet-Unie binnen.", "De muur werd pas in 1961 gebouwd — veel later.", "Atoomwapens kwamen pas later (door de VS, 1945)."],
         uitlegPad: {
@@ -219,7 +219,7 @@ const steps = [
     checks: [
       {
         q: "Wat gebeurde er in **oktober 1929**?",
-        options: ["De beurs in New York crashte → wereldwijde crisis", "Hitler werd Duits leider", "WO2 begon", "Nederland werd bezet"],
+        options: ["De beurs in New York crashte", "Hitler werd Duits leider", "WO2 begon", "Nederland werd bezet"],
         answer: 0,
         wrongHints: [null, "Hitler werd later kanselier (1933).", "WO2 begon in 1939.", "Bezetting NL was 1940."],
         uitlegPad: {
@@ -319,7 +319,7 @@ const steps = [
       },
       {
         q: "Wat is **Blitzkrieg**?",
-        options: ["Snelle oorlog: tanks + luchtmacht in één gecoördineerde aanval", "Een soort schuilkelder", "Het Duitse leger op de fiets", "Een vredesverdrag"],
+        options: ["Een snelle aanvalsoorlog", "Een soort schuilkelder", "Het Duitse leger op de fiets", "Een vredesverdrag"],
         answer: 0,
         wrongHints: [null, "'Blitz' = bliksem (snelheid), niet schuilen.", "Tanks en motorvoertuigen, niet fietsen.", "Het tegendeel — geen vrede."],
         uitlegPad: {
@@ -391,7 +391,7 @@ const steps = [
     checks: [
       {
         q: "Wat was de **NSB**?",
-        options: ["Nederlandse pro-Duitse partij die met bezetters samenwerkte", "Een Nederlands verzetsblad", "Naam van een concentratiekamp", "Een Engels leger"],
+        options: ["Een pro-Duitse partij", "Een Nederlands verzetsblad", "Naam van een concentratiekamp", "Een Engels leger"],
         answer: 0,
         wrongHints: [null, "Verzetsbladen waren *Het Parool*, *Trouw*, *Vrij Nederland*.", "Nederlandse kampen heetten Westerbork, Vught.", "Een leger was het niet — let op de 'B' van Beweging."],
         uitlegPad: {
@@ -405,7 +405,7 @@ const steps = [
       },
       {
         q: "Wat was bijzonder aan de **Februaristaking** (1941)?",
-        options: ["Het was de enige openlijke massastaking tegen jodenvervolging in bezet Europa", "Het was de eerste vakbondsstaking in NL", "Het lukte de Duitsers volledig te verdrijven", "Het was een staking in Duitsland zelf"],
+        options: ["Het was een staking tegen de jodenvervolging", "Het was de eerste vakbondsstaking in NL", "Het lukte de Duitsers volledig te verdrijven", "Het was een staking in Duitsland zelf"],
         answer: 0,
         wrongHints: [null, "Vakbondsstakingen waren er al lang vóór WO2.", "Helaas niet — Duitsers bleven nog 4 jaar.", "Ging om Amsterdam, niet Duitsland."],
         uitlegPad: {
@@ -456,7 +456,7 @@ const steps = [
       },
       {
         q: "Waar ging de slag bij **Stalingrad** over?",
-        options: ["Duitse stoot naar de Sovjet-Unie raakt vast → keerpunt op het oostfront", "Een aanval op Engeland", "Een poging Nederland te bevrijden", "Een atoombomtest"],
+        options: ["Een Duitse aanval in de Sovjet-Unie", "Een aanval op Engeland", "Een poging Nederland te bevrijden", "Een atoombomtest"],
         answer: 0,
         wrongHints: [null, "Stalingrad ligt in Rusland, ver van Engeland.", "Bevrijding NL was D-Day en Market Garden.", "Atoombommen kwamen pas in 1945, in Japan."],
         uitlegPad: {
@@ -470,7 +470,7 @@ const steps = [
       },
       {
         q: "Wat was de **Hongerwinter** in NL?",
-        options: ["Voedseltekort in bezet noord-NL, winter 1944-1945", "Een Duitse hongerstaking", "Een feestdag op 5 mei", "Een militair plan"],
+        options: ["Een tijd van grote honger in Nederland", "Een Duitse hongerstaking", "Een feestdag op 5 mei", "Een militair plan"],
         answer: 0,
         wrongHints: [null, "Niet de Duitsers leden honger — de bezette NL bevolking.", "5 mei is bevrijdingsdag, geen hongerwinter.", "Het was een gevolg van blokkades, geen militair plan op zich."],
         uitlegPad: {
@@ -505,11 +505,11 @@ const steps = [
       },
       {
         q: "Waarom herdenkt NL ook **15 augustus**?",
-        options: ["Einde van de oorlog in voormalig Nederlands-Indië (Japan capituleert)", "Hitler pleegt zelfmoord", "D-Day vindt plaats", "Begin van WO2"],
+        options: ["Einde van de oorlog in Nederlands-Indië", "Hitler pleegt zelfmoord", "D-Day vindt plaats", "Begin van WO2"],
         answer: 0,
         wrongHints: [null, "Hitler stierf 30 april 1945 — niet 15 augustus.", "D-Day was 6 juni 1944.", "WO2 begon op 1 september 1939."],
         uitlegPad: {
-          stappen: [{ titel: "15 augustus 1945 — Japan capituleert", tekst: "Na atoombommen Hiroshima (6 aug) + Nagasaki (9 aug) tekende Japan op 15 augustus 1945 capitulatie. Dit beëindigde WO2 in heel Azië. Ook Nederlands-Indië (huidig Indonesië) werd weer 'NL', maar Indonesische nationalisten riepen 2 dagen later (17 aug 1945) onafhankelijkheid uit. Voor NL-veteranen + nabestaanden Indië: pas DAN was oorlog écht voorbij." }],
+          stappen: [{ titel: "15 augustus 1945 — Japan capituleert", tekst: "Na atoombommen Hiroshima (6 aug) + Nagasaki (9 aug) maakte Japan op 15 augustus 1945 bekend zich over te geven (de capitulatie werd op 2 september getekend). Dit beëindigde WO2 in heel Azië. Ook Nederlands-Indië (huidig Indonesië) werd weer 'NL', maar Indonesische nationalisten riepen 2 dagen later (17 aug 1945) onafhankelijkheid uit. Voor NL-veteranen + nabestaanden Indië: pas DAN was oorlog écht voorbij." }],
           woorden: [{ woord: "Nederlands-Indië", uitleg: "NL-kolonie in Azië (VOC vanaf 1602, kolonie 1816-1949). Nu Indonesië. Was bezet door Japan 1942-1945." }, { woord: "Indiëgangers", uitleg: "NL'ers (vooral militairen) die in Indië gewerkt/gevochten hebben. Hun verhaal anders dan Europese oorlog." }, { woord: "Jappenkampen", uitleg: "Japanse interneringskampen voor NL'ers in Indië. Zware omstandigheden, veel doden." }],
           theorie: "15 augustus = 'tweede bevrijdingsdag' voor NL. Voor lang ondergewaardeerd — focus lag op Europa. Jaarlijkse herdenking bij het Indisch Monument in Den Haag. Belangrijk voor de honderdduizenden Nederlanders met Indische roots.",
           voorbeelden: [{ type: "context", tekst: "Voor mensen uit Jappenkampen was 5 mei 1945 GEEN bevrijding — ze zaten nog 3 maanden vast onder Japans bewind. 15 aug = hun moment." }],
@@ -519,9 +519,9 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen **4 mei** en **5 mei**?",
-        options: ["4 mei = herdenken (doden); 5 mei = vieren (vrijheid)", "4 mei = vieren; 5 mei = herdenken", "Beide hetzelfde — twee dagen vrij", "4 mei = oorlog begint; 5 mei = oorlog eindigt"],
+        options: ["4 mei = herdenken; 5 mei = vieren", "4 mei = vieren; 5 mei = herdenken", "Beide hetzelfde — twee dagen vrij", "4 mei = oorlog begint; 5 mei = oorlog eindigt"],
         answer: 0,
-        wrongHints: [null, "Denk aan de avond met twee minuten stilte — is dat feest of rouw?", "Ze hebben elk hun eigen betekenis.", "Geen — die data zijn allemaal in 1945."],
+        wrongHints: [null, "Denk aan de avond met twee minuten stilte — is dat feest of rouw?", "Ze hebben elk hun eigen betekenis.", "De oorlog begon in Nederland op 10 mei 1940, niet op 4 mei."],
         uitlegPad: {
           stappen: [{ titel: "4 mei = stil, 5 mei = feest", tekst: "4 mei = NL Dodenherdenking. 20:00-20:02 twee minuten stilte voor doden van WO2 + latere conflicten (waaronder VN-missies). Vlag halfstok. Plechtig. 5 mei = Bevrijdingsdag. Vlag in top. Festivals in elke provincie, oranje, feest. Vandaag bewust achter elkaar: eerst pijn benoemen, dan vieren." }],
           woorden: [{ woord: "Dodenherdenking", uitleg: "4 mei. NL-traditie sinds 1946. Centrale plechtigheid op de Dam in Amsterdam met koninklijk paar." }, { woord: "Bevrijdingsdag", uitleg: "5 mei. Sinds 1990 jaarlijkse nationale feestdag. Voor: om de 5 jaar." }, { woord: "twee minuten stilte", uitleg: "20:00-20:02 op 4 mei. Heel NL stopt: treinen rijden niet, tv stil, mensen op straat staan stil." }],
@@ -556,7 +556,7 @@ const steps = [
       },
       {
         q: "Wat was **Westerbork**?",
-        options: ["Doorgangskamp in Drenthe waar NL-joden naartoe werden gebracht voor transport", "Een verzetsorganisatie", "Een Duits eindkamp", "Een Engels vliegveld"],
+        options: ["Een doorgangskamp", "Een verzetsorganisatie", "Een Duits eindkamp", "Een Engels vliegveld"],
         answer: 0,
         wrongHints: [null, "Westerbork was een gevangenkamp, geen verzetsgroep.", "Bijna — maar vermoord werd vooral in kampen in bezet Polen. Welke rol had dit kamp in Drenthe dan?", "Westerbork lag in Drenthe (NL), geen Engels vliegveld."],
         uitlegPad: {
@@ -593,7 +593,7 @@ const steps = [
     checks: [
       {
         q: "Wat waren de **Neurenberg-processen**?",
-        options: ["Berechting van top-nazi's na de oorlog (oorlogsmisdaden + misdaden tegen menselijkheid)", "De rassenwetten van Hitler", "Een Duits sportevenement", "De toespraken van Hitler op partijbijeenkomsten"],
+        options: ["Rechtszaken tegen top-nazi's na de oorlog", "De rassenwetten van Hitler", "Een Duits sportevenement", "De toespraken van Hitler op partijbijeenkomsten"],
         answer: 0,
         wrongHints: [null, "Dat zijn de **Neurenberg-wetten** (1935), let op het verschil met de **Neurenberg-processen** (1945-46).", "Wel een sportevenement in Neurenberg geweest, maar daar gaat deze vraag niet over.", "De partijbijeenkomsten waren propaganda — geen rechtszaken."],
         uitlegPad: {
@@ -607,7 +607,7 @@ const steps = [
       },
       {
         q: "Wat is de **Koude Oorlog**?",
-        options: ["Spanning tussen VS (Westen) en Sovjet-Unie (Oosten) na WO2 — geen open oorlog", "Een oorlog op de Noordpool", "De oorlog van Napoleon tegen Rusland", "Een oorlog tussen Nederland en Duitsland"],
+        options: ["Spanning tussen de VS en de Sovjet-Unie", "Een oorlog op de Noordpool", "De oorlog van Napoleon tegen Rusland", "Een oorlog tussen Nederland en Duitsland"],
         answer: 0,
         wrongHints: [null, "'Koud' is figuurlijk — niet de temperatuur.", "Napoleon = ~1812, ander tijdperk.", "NL en Duitsland waren juist samen onderdeel van het Westen (NAVO)."],
         uitlegPad: {
@@ -672,7 +672,7 @@ const steps = [
       },
       {
         q: "Wat is een **direct gevolg** van WO2 voor Nederland?",
-        options: ["Verlies Nederlands-Indië → Indonesië onafhankelijk (1949)", "Nederland werd onderdeel van Duitsland", "Nederland werd communistisch", "Nederland kreeg een keizer"],
+        options: ["Indonesië werd onafhankelijk", "Nederland werd onderdeel van Duitsland", "Nederland werd communistisch", "Nederland kreeg een keizer"],
         answer: 0,
         wrongHints: [null, "Het tegendeel — NL was juist bevrijd, niet ingelijfd.", "NL kwam aan westelijke kant van het IJzeren Gordijn.", "NL is sinds 1815 een koninkrijk, geen keizerrijk."],
         uitlegPad: {

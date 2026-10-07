@@ -63,15 +63,15 @@ const steps = [
       },
       {
         q: "Hoeveel **warmer** is aarde sinds 1880?",
-        options: ["~1,1 °C", "10 °C", "0,1 °C", "Niet"],
+        options: ["~1,1 °C", "10 °C", "0,1 °C", "~3 °C"],
         answer: 0,
-        wrongHints: [null, "Veel te veel.", "Te weinig.", "Wel."],
+        wrongHints: [null, "Veel te veel.", "Te weinig.", "Te veel."],
       },
       {
         q: "Wat is **IPCC**?",
-        options: ["VN-klimaatpanel met wetenschappers", "Politiek partij", "Bedrijf", "Ster"],
+        options: ["VN-klimaatpanel met wetenschappers", "Politieke partij", "Bedrijf", "Milieu-actiegroep zoals Greenpeace"],
         answer: 0,
-        wrongHints: [null, "Geen verkiezingsclub — een onderzoeksgroep.", "Geen winstdoel — een wetenschappelijke commissie.", "Geen hemellichaam."],
+        wrongHints: [null, "Geen verkiezingsclub — een onderzoeksgroep.", "Geen winstdoel — een wetenschappelijke commissie.", "Geen actiegroep — wetenschappers die al het onderzoek samenvatten."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is IPCC?", tekst: "**IPCC** staat voor **Intergovernmental Panel on Climate Change** = Intergouvernementeel Panel voor Klimaatverandering. Het is een wetenschappelijk orgaan van de **Verenigde Naties** (VN)." },
@@ -97,22 +97,22 @@ const steps = [
       },
       {
         q: "Hoe weten we **historisch klimaat**?",
-        options: ["IJskernen + boomringen + koraal", "Gokken", "Romeinse teksten", "Internet"],
+        options: ["IJskernen + boomringen + koraal", "Weerberichten uit oude kranten", "Satellietfoto's", "Thermometers op elke plek ter wereld"],
         answer: 0,
-        wrongHints: [null, "Niet wetenschap.", "Te recent.", "Niet wetenschappelijk."],
+        wrongHints: [null, "Kranten bestaan pas een paar eeuwen — hoe kijk je honderdduizenden jaren terug?", "Satellieten bestaan pas sinds de jaren '60.", "Thermometers meten pas zo'n 150 tot 300 jaar."],
       },
     ],
   },
   {
     title: "Broeikaseffect + CO₂",
     explanation:
-      "Het **broeikaseffect** is **natuurlijk** + **noodzakelijk** — maar door mens **versterkt**.\n\n**Hoe werkt het?**\n\n1. **Zonlicht** komt op aarde.\n2. Aarde **verwarmt** + straalt warmte terug.\n3. **Broeikasgassen in atmosfeer** *(CO₂, methaan, waterdamp)* houden warmte vast.\n4. Aarde blijft warm genoeg *(zonder dit: -18°C, met dit: +15°C gemiddeld)*.\n\n**Probleem**: door mens komt er **veel meer broeikasgas** bij.\n→ **Meer warmte vastgehouden** → opwarming.\n\n**Belangrijkste broeikasgassen**:\n\n**1. Koolstofdioxide (CO₂)** 💨 — meest bekend.\n• Komt uit: **fossiele brandstoffen** *(olie, gas, kolen)*, ontbossing.\n• Concentratie in lucht: van 280 ppm (1850) → **420 ppm (2024)**.\n\n**2. Methaan (CH₄)** 🐄 — 25× sterker dan CO₂.\n• Komt uit: **vee** *(koeien-boeren-windjes)*, **rijstvelden**, gas-lekken, **moerassen**.\n• Veel in NL omdat veel koeien.\n\n**3. Lachgas (N₂O)** 🌾 — 265× sterker dan CO₂.\n• Komt uit: **mest** + kunstmest landbouw, verbranding.\n\n**4. F-gassen** — kunstmatig.\n• In koelkasten, airco's, schuim.\n• Worden uitgefaseerd.\n\n**5. Waterdamp** — meest in lucht.\n• Werkt als 'versterker' — warmere lucht houdt meer waterdamp = nog warmer.\n\n**Verdeling NL CO₂-uitstoot** *(globaal)*:\n• Energie (elektriciteit, gas-verwarming): ~30%.\n• Vervoer (auto's, vliegen): ~20%.\n• Industrie: ~25%.\n• Landbouw + voedsel: ~15%.\n• Huishoudens direct: ~10%.\n\n**Per persoon**:\nGemiddelde Nederlander: **~10 ton CO₂ per jaar**.\nGemiddelde wereldburger: ~5 ton.\nDoel Parijs-akkoord: < 2 ton per persoon tegen 2050.\n\n**Toets-feitje**:\nMethaan is **25x sterker** dan CO₂ maar **blijft korter** in atmosfeer. Reductie methaan = snelle winst voor klimaat. Daarom is veehouderij-beperking in NL discussie.",
+      "Het **broeikaseffect** is **natuurlijk** + **noodzakelijk** — maar door mens **versterkt**.\n\n**Hoe werkt het?**\n\n1. **Zonlicht** komt op aarde.\n2. Aarde **verwarmt** + straalt warmte terug.\n3. **Broeikasgassen in atmosfeer** *(CO₂, methaan, waterdamp)* houden warmte vast.\n4. Aarde blijft warm genoeg *(zonder dit: -18°C, met dit: +15°C gemiddeld)*.\n\n**Probleem**: door mens komt er **veel meer broeikasgas** bij.\n→ **Meer warmte vastgehouden** → opwarming.\n\n**Belangrijkste broeikasgassen**:\n\n**1. Koolstofdioxide (CO₂)** 💨 — meest bekend.\n• Komt uit: **fossiele brandstoffen** *(olie, gas, kolen)*, ontbossing.\n• Concentratie in lucht: van 280 ppm (1850) → **420 ppm (2024)**.\n\n**2. Methaan (CH₄)** 🐄 — 25× sterker dan CO₂.\n• Komt uit: **vee** *(koeien-boeren-windjes)*, **rijstvelden**, gas-lekken, **moerassen**.\n• Veel in NL omdat veel koeien.\n\n**3. Lachgas (N₂O)** 🌾 — 265× sterker dan CO₂.\n• Komt uit: **mest** + kunstmest landbouw, verbranding.\n\n**4. F-gassen** — kunstmatig.\n• In koelkasten, airco's, schuim.\n• Worden uitgefaseerd.\n\n**5. Waterdamp** — meest in lucht.\n• Werkt als 'versterker' — warmere lucht houdt meer waterdamp = nog warmer.\n\n**Verdeling NL CO₂-uitstoot** *(globaal)*:\n• Energie (elektriciteit, gas-verwarming): ~30%.\n• Vervoer (auto's, vliegen): ~20%.\n• Industrie: ~25%.\n• Landbouw + voedsel: ~15%.\n• Huishoudens direct: ~10%.\n\n**Per persoon**:\nGemiddelde Nederlander: **~10 ton CO₂ per jaar**.\nGemiddelde wereldburger: ~5 ton.\nOm de doelen van het Parijs-akkoord te halen: < 2 ton per persoon rond 2050.\n\n**Toets-feitje**:\nMethaan is **25x sterker** dan CO₂ maar **blijft korter** in atmosfeer. Reductie methaan = snelle winst voor klimaat. Daarom is veehouderij-beperking in NL discussie.",
     checks: [
       {
         q: "Wat is het **broeikaseffect**?",
-        options: ["Gassen houden zonne-warmte vast in atmosfeer", "Vervuiling", "Stoom", "Vulkaan"],
+        options: ["Gassen houden zonne-warmte vast in atmosfeer", "Gat in de ozonlaag door vervuiling", "Wolken die zonlicht tegenhouden", "Warmte uit vulkanen in de aarde"],
         answer: 0,
-        wrongHints: [null, "Wel relatie maar specifiek dit.", "Niet primair.", "Niet."],
+        wrongHints: [null, "Dat is een ander probleem — wat houdt de warmte vast?", "Dan zou het juist koeler worden.", "Het gaat om gassen in de lucht, niet om warmte uit de aarde."],
         uitlegPad: {
           stappen: [
             { titel: "Vergelijk met broeikas in tuin", tekst: "Een **broeikas** (glashuis voor planten) houdt **warmte vast** vanwege de ramen. Zonlicht komt erin, maar de warmte kan minder makkelijk eruit. Daarom is het binnen veel warmer dan buiten." },
@@ -149,10 +149,10 @@ const steps = [
         wrongHints: [null, "Veel meer.", "Te veel.", "Onmogelijk."],
       },
       {
-        q: "Wat is **sterker per molecuul** dan CO₂?",
-        options: ["Methaan (25× sterker)", "Stikstof", "Zuurstof", "Edelgas"],
+        q: "Welk gas houdt **per kilo** veel méér warmte vast dan CO₂?",
+        options: ["Methaan", "Stikstof", "Zuurstof", "Argon"],
         answer: 0,
-        wrongHints: [null, "Geen broeikas.", "Geen.", "Geen."],
+        wrongHints: [null, "Geen broeikasgas.", "Zuurstof is geen broeikasgas.", "Argon is een edelgas, geen broeikasgas."],
       },
     ],
   },
@@ -163,9 +163,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **kantelpunt** in klimaat?",
-        options: ["Punt waar verandering onomkeerbaar wordt", "Tijd op klok", "Berg", "Eind van klimaat"],
+        options: ["Punt waar verandering onomkeerbaar wordt", "Moment waarop het weer omslaat van zon naar regen", "Hoogste temperatuur ooit gemeten", "Eind van klimaat"],
         answer: 0,
-        wrongHints: [null, "Geen tijdseenheid.", "Geen landschapsvorm — een drempel.", "Klimaat eindigt niet — het verandert."],
+        wrongHints: [null, "Dat is weer, en dat draait vanzelf weer terug.", "Een record is geen drempel waarna alles anders blijft.", "Klimaat eindigt niet — het verandert."],
       },
       {
         q: "Hoeveel is **zeespiegel** sinds 1900 gestegen?",
@@ -175,22 +175,22 @@ const steps = [
       },
       {
         q: "Wat doet **smelten permafrost**?",
-        options: ["Geeft extra methaan vrij", "Niets", "Verkoelt aarde", "Maakt water schoon"],
+        options: ["Geeft extra methaan vrij", "Haalt CO₂ uit de lucht", "Verkoelt aarde", "Laat de zeespiegel dalen"],
         answer: 0,
-        wrongHints: [null, "Wel iets.", "Tegenovergesteld.", "Niet."],
+        wrongHints: [null, "Tegenovergesteld — er komen juist gassen vrij.", "Tegenovergesteld.", "Permafrost is bevroren bodem — wat komt er vrij als die ontdooit?"],
       },
       {
         q: "**Parijs-akkoord** doel?",
-        options: ["Onder 1,5 °C opwarming", "Geen doel", "5 °C", "Verkoelen"],
+        options: ["Ruim onder 2 °C, liefst 1,5 °C", "Onder 3 °C opwarming", "Onder 4 °C opwarming", "Terug naar de temperatuur van 1850"],
         answer: 0,
-        wrongHints: [null, "Wel doel.", "Te veel.", "Niet realistisch."],
+        wrongHints: [null, "Te veel — het doel is strenger.", "Veel te veel.", "Niet realistisch — een deel van de opwarming is al gebeurd."],
       },
     ],
   },
   {
     title: "Nederland + klimaatverandering",
     explanation:
-      "**Nederland** is extra kwetsbaar voor klimaatverandering.\n\n**Waarom kwetsbaar?**\n\n**1. Zeespiegel** 🌊\n• Een kwart NL **onder zeeniveau**.\n• Bij +1m zeespiegel: zonder dijken zou groot deel onder water staan.\n• Dijken moeten **versterkt + verhoogd**.\n\n**2. Rivieren** 🌊\n• Rijn + Maas hebben meer water *(door regenval bovenstrooms)*.\n• Overstromingsrisico's *(2021: Limburg overstromingen)*.\n\n**3. Hittegolven** ☀️\n• 2003, 2018, 2019, 2022 — recordwarme zomers.\n• 40°C bereikt in NL *(2019: Gilze-Rijen 40,7°C)*.\n• Stedelijke hitte-eilanden *(Rotterdam, Amsterdam centrum tot 8°C warmer)*.\n\n**4. Droogte** 🌵\n• Zomers worden droger.\n• Boeren + natuur lijden.\n• Drinkwater in gevaar.\n\n**Klimaatmaatregelen NL**:\n\n**1. Klimaatakkoord NL** *(2019)*:\n• Doel: **49% minder CO₂** in 2030 t.o.v. 1990.\n• **95% minder** in 2050.\n\n**2. Energietransitie** ⚡\n• Van gas **af** in huizen *(warmtepomp, all-electric)*.\n• Meer zonnepanelen + windmolens.\n• Sluiting Groningen-gasveld (2024).\n• Sluiting kolencentrales (2030).\n\n**3. Vervoer** 🚗\n• Stimulering elektrische auto *(geen MRB, lage bijtelling)*.\n• Investeringen in fietsen + OV.\n• Vanaf 2035: in de EU alleen nog uitstootvrije nieuwe auto's.\n\n**4. Industrie**:\n• Grote vervuilers moeten verminderen.\n• CO₂-opslag onder Noordzee.\n\n**5. Landbouw + veeteelt**:\n• Minder vee *(stikstof-crisis)*.\n• Plantaardige alternatieven aanmoedigen.\n\n**6. Klimaatadaptatie** *(aanpassen)*:\n• Dijken hoger + breder.\n• Klimaatbestendige steden *(meer groen, waterberging)*.\n• Andere gewassen *(droogte-bestendig)*.\n\n**Politieke discussie**:\n• Snel vs langzaam? Welke kosten?\n• Boeren-protesten *(stikstof-beleid)*.\n• Energie-armoede *(arme gezinnen kunnen warmtepomp niet betalen)*.\n• Vliegtuigvervoer beperken?\n\n**Toets-feitje**:\nNederland is **een van de meest dichtbevolkte + laaglig­gende** landen ter wereld. We hebben **veel ervaring met water beheersen** *(Deltawerken, dijken)* — voordeel bij klimaat-aanpassing.",
+      "**Nederland** is extra kwetsbaar voor klimaatverandering.\n\n**Waarom kwetsbaar?**\n\n**1. Zeespiegel** 🌊\n• Een kwart NL **onder zeeniveau**.\n• Bij +1m zeespiegel: zonder dijken zou groot deel onder water staan.\n• Dijken moeten **versterkt + verhoogd**.\n\n**2. Rivieren** 🌊\n• Rijn + Maas hebben meer water *(door regenval bovenstrooms)*.\n• Overstromingsrisico's *(2021: Limburg overstromingen)*.\n\n**3. Hittegolven** ☀️\n• 2003, 2018, 2019, 2022 — recordwarme zomers.\n• 40°C bereikt in NL *(2019: Gilze-Rijen 40,7°C)*.\n• Stedelijke hitte-eilanden *(Rotterdam, Amsterdam centrum tot 8°C warmer)*.\n\n**4. Droogte** 🌵\n• Zomers worden droger.\n• Boeren + natuur lijden.\n• Drinkwater in gevaar.\n\n**Klimaatmaatregelen NL**:\n\n**1. Klimaatakkoord NL** *(2019)*:\n• Doel: **49% minder CO₂** in 2030 t.o.v. 1990.\n• **95% minder** in 2050.\n\n**2. Energietransitie** ⚡\n• Van gas **af** in huizen *(warmtepomp, all-electric)*.\n• Meer zonnepanelen + windmolens.\n• Sluiting Groningen-gasveld (2024).\n• Sluiting kolencentrales (2030).\n\n**3. Vervoer** 🚗\n• Stimulering elektrische auto *(geen MRB, lage bijtelling)*.\n• Investeringen in fietsen + OV.\n• Vanaf 2035: in de EU alleen nog uitstootvrije nieuwe auto's.\n\n**4. Industrie**:\n• Grote vervuilers moeten verminderen.\n• CO₂-opslag onder Noordzee.\n\n**5. Landbouw + veeteelt**:\n• Minder vee *(stikstof-crisis)*.\n• Plantaardige alternatieven aanmoedigen.\n\n**6. Klimaatadaptatie** *(aanpassen)*:\n• Dijken hoger + breder.\n• Klimaatbestendige steden *(meer groen, waterberging)*.\n• Andere gewassen *(droogte-bestendig)*.\n\n**Politieke discussie**:\n• Snel vs langzaam? Welke kosten?\n• Boeren-protesten *(stikstof-beleid)*.\n• Energie-armoede *(arme gezinnen kunnen warmtepomp niet betalen)*.\n• Vliegtuigvervoer beperken?\n\n**Toets-feitje**:\nNederland is **een van de meest dichtbevolkte + laagliggende** landen ter wereld. We hebben **veel ervaring met water beheersen** *(Deltawerken, dijken)* — voordeel bij klimaat-aanpassing.",
     checks: [
       {
         q: "Waarom is **NL kwetsbaar**?",
@@ -237,13 +237,13 @@ const steps = [
       },
       {
         q: "Wat is een **NDC**?",
-        options: ["Nationaal klimaatplan per land", "Speciale auto", "App", "Belasting"],
+        options: ["Nationaal klimaatplan per land", "Internationale klimaatconferentie", "Wereldwijd klimaatverdrag", "Belasting"],
         answer: 0,
-        wrongHints: [null, "Geen voertuig.", "Geen software.", "Geen heffing — een plan."],
+        wrongHints: [null, "Dat is een COP.", "Een NDC is per land, niet wereldwijd.", "Geen heffing — een plan."],
       },
       {
         q: "Wie startte **'Fridays for Future'**?",
-        options: ["Greta Thunberg (2018)", "Mark Rutte", "Boris Johnson", "Bill Gates"],
+        options: ["Greta Thunberg", "Mark Rutte", "Boris Johnson", "Bill Gates"],
         answer: 0,
         wrongHints: [null, "Ex-premier NL — geen klimaatprotest-leider.", "Ex-premier UK — geen jongerenbeweging.", "Tech-miljardair, geen scholiere."],
       },
@@ -253,10 +253,10 @@ const steps = [
     title: "Eind-toets — klimaat mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
-      { q: "**Klimaat** vs **weer**?", options: ["Klimaat = gemiddelde jaren, weer = nu", "Geen verschil", "Beide hetzelfde", "Andersom"], answer: 0, wrongHints: [null, "Wel.", "Niet.", "Niet."] },
+      { q: "**Klimaat** vs **weer**?", options: ["Klimaat = gemiddelde jaren, weer = nu", "Geen verschil", "Klimaat = temperatuur, weer = regen", "Andersom"], answer: 0, wrongHints: [null, "Wel.", "Beide gaan over temperatuur én regen.", "Niet."] },
       { q: "Wat is **CO₂**?", options: ["Belangrijkste broeikasgas door de mens", "Zuurstof", "Stikstof", "Water"], answer: 0, wrongHints: [null, "Geen broeikas.", "Geen broeikas.", "Water is H₂O — welke letters staan er in CO₂?"] },
       { q: "**1,5 °C** doel komt uit?", options: ["Parijs-akkoord 2015", "Kyoto", "EU-wet", "NASA"], answer: 0, wrongHints: [null, "Eerder.", "Volgt op Parijs.", "Niet."] },
-      { q: "Wat is **kantelpunt** in klimaat?", options: ["Onomkeerbare verandering", "Tijdmeter", "Berg", "Klok"], answer: 0, wrongHints: [null, "Geen meting van tijd.", "Geen landschap — een drempel.", "Geen uurwerk — een grens-punt."] },
+      { q: "Wat is **kantelpunt** in klimaat?", options: ["Onomkeerbare verandering", "Omslag van zon naar regen", "Hoogste temperatuur ooit gemeten", "Wisseling van de seizoenen"], answer: 0, wrongHints: [null, "Dat is weer, en dat draait vanzelf weer terug.", "Een record is geen drempel waarna alles anders blijft.", "Seizoenen keren elk jaar terug — een kantelpunt niet."] },
       { q: "Welke is **hernieuwbare energie**?", options: ["Zonnepaneel + windmolen", "Kolen", "Olie", "Gas"], answer: 0, wrongHints: [null, "Uit oude mijnen — raakt op.", "Pomp je op uit putten — eindig.", "Uit ondergrond — voorraad eindig."] },
       { q: "Wat doet **smelten van landijs** (Groenland + Antarctica)?", options: ["Zeespiegel stijgt", "Niets", "Verkoelt aarde", "Zeespiegel daalt"], answer: 0, wrongHints: [null, "Wel.", "Niet.", "Waar blijft al dat smeltwater?"] },
     ],

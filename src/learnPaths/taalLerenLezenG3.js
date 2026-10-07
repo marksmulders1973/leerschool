@@ -26,7 +26,7 @@ const steps = [
         q: "Met welke letter begint **maan**?",
         options: ["m", "n", "a", "s"],
         answer: 0,
-        wrongHints: [null, "Die klank zit achteraan.", "Die klank zit in het midden.", "Zeg het woord langzaam: mmm-aan."],
+        wrongHints: [null, "Die klank zit achteraan.", "Die klank zit in het midden.", "Zeg het woord langzaam. Welke klank hoor je als eerste?"],
         uitlegPad: {
           stappen: [{ titel: "Luister vooraan", tekst: "Zeg langzaam: **mmm**-aan. De eerste klank is de **m**." }],
           niveaus: { basis: "maan begint met de m.", simpeler: "Zeg: mmm... maan!", nogSimpeler: "m" },
@@ -46,7 +46,7 @@ const steps = [
         q: "Welke klank hoor je **achteraan** bij **roos**?",
         options: ["s", "r", "oo", "t"],
         answer: 0,
-        wrongHints: [null, "Die klank zit juist vooraan.", "Die klank zit in het midden.", "Zeg het woord langzaam: roo-sss."],
+        wrongHints: [null, "Die klank zit juist vooraan.", "Die klank zit in het midden.", "Zeg het woord langzaam. Welke klank hoor je als laatste?"],
         uitlegPad: {
           stappen: [{ titel: "Luister achteraan", tekst: "Zeg langzaam: r-oo-**sss**. Achteraan hoor je de **s**." }],
           niveaus: { basis: "roos eindigt op de s.", simpeler: "Zeg: roo... sss!", nogSimpeler: "s" },

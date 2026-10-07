@@ -324,7 +324,7 @@ const steps = [
       {
         q: "*Een alinea begint met: \"Echter — er is ook een kant die vaak vergeten wordt. Tegenstanders stellen dat...\" — Welke functie heeft deze alinea?*",
         options: [
-          "Tegenstellend (introduceert tegenargument)",
+          "Tegenstellend",
           "Concluderend",
           "Inleidend",
           "Voorbeelden gevend",
@@ -370,7 +370,7 @@ const steps = [
       {
         q: "*Alinea 3 stelt: \"De maatregel zou kosteneffectief zijn.\" Alinea 4 begint met: \"Echter, uit cijfers blijkt dat de implementatie miljoenen kost.\" — Welk verband?*",
         options: [
-          "Tegenstellend (alinea 4 spreekt alinea 3 tegen)",
+          "Tegenstellend",
           "Toevoegend",
           "Oorzaak-gevolg",
           "Voorbeeld",
@@ -482,7 +482,7 @@ const steps = [
       {
         q: "*\"Iedereen weet inmiddels dat thuiswerken de productiviteit verhoogt.\"* — Wat is dit?",
         options: [
-          "Een mening (vermomd als feit door 'iedereen weet')",
+          "Een mening",
           "Een feit",
           "Een argumentatie",
           "Een conclusie",
@@ -569,14 +569,14 @@ const steps = [
         options: [
           "Het waardeoordeel \"schandalig\" + de versterker \"werkelijk\"",
           "De zin is te kort",
-          "Er staat een hoofdletter",
+          "Er wordt een controleerbaar feit genoemd",
           "Er ontbreekt een bron",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Lengte zegt niets over subjectiviteit. Welke woorden in de zin verraden een persoonlijk oordeel?",
-          "Hoofdletters zijn standaard. Ze maken een zin niet subjectief.",
+          "Kun je 'schandalig' controleren of meten? Kijk naar de woordkeus.",
           "Een ontbrekende bron is een aparte kritiek. Subjectiviteit zit in de woordkeus van de zin zelf.",
         ],
         uitlegPad: {
@@ -629,7 +629,7 @@ const steps = [
       {
         q: "*Alinea begint met: \"Concluderend kan worden gesteld dat de drie genoemde maatregelen samen de gewenste daling kunnen bewerkstelligen.\"* — Welke functie heeft deze alinea?",
         options: [
-          "Concluderend / samenvattend (slot)",
+          "Concluderend",
           "Inleidend",
           "Tegenstellend",
           "Voorbeelden gevend",
@@ -677,7 +677,7 @@ const steps = [
       {
         q: "*\"Iedereen weet dat klassieke muziek beter is dan moderne muziek.\"* — Wat is dit?",
         options: [
-          "Een mening (vermomd als feit door \"iedereen weet\")",
+          "Een mening",
           "Een feit",
           "Een argumentatie",
           "Een definitie",
@@ -704,7 +704,7 @@ const steps = [
       { q: "Wat is een **tekstdoel**?", options: ["Waarom de schrijver de tekst schreef","De titel","Het aantal woorden","De zinslengte"], answer: 0, wrongHints: [null, "Titel ≠ doel.", "Telling.", "Stijl."] },
       { q: "Welk signaalwoord geeft een **conclusie** aan?", options: ["dus","want","bijvoorbeeld","echter"], answer: 0, wrongHints: [null, "Reden.", "Voorbeeld.", "Tegenstelling."] },
       { q: "Wat is de **doelgroep** van een tekst?", options: ["Voor wie de tekst is bedoeld","Hoe lang de tekst is","Wat het tekstdoel is","Wie de tekst schreef"], answer: 0, wrongHints: [null, "Lengte.", "Dat is tekstdoel.", "Auteur."] },
-      { q: "Welke vraag stel je om de **hoofdvraag** te vinden?", options: ["Wat is de centrale vraag die de tekst beantwoordt?","Hoeveel alinea's heeft de tekst?","Wat staat in de eerste zin?","Welke kleuren komen voor?"], answer: 0, wrongHints: [null, "Telling.", "Te oppervlakkig.", "Onzinnig."] },
+      { q: "Welke vraag stel je om de **hoofdvraag** te vinden?", options: ["Wat is de centrale vraag die de tekst beantwoordt?","Hoeveel alinea's heeft de tekst?","Wat staat in de eerste zin?","Wie heeft de tekst geschreven?"], answer: 0, wrongHints: [null, "Telling.", "Te oppervlakkig.", "Dat gaat over de auteur, niet over de centrale vraag."] },
     ],
   },
 ];

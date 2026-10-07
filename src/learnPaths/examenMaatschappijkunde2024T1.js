@@ -84,7 +84,7 @@ const steps = [
         answer: 3,
         wrongHints: [
           "Regering = koning + ministers. Zit niet in de Staten-Generaal, maar regeert wel.",
-          "Kabinet = alleen de ministers + staatssecretarissen. Werken vóór de regering, niet ín het parlement.",
+          "Kabinet = alleen de ministers + staatssecretarissen. Die besturen het land, maar zitten niet ín het parlement.",
           "Stemmers = burgers die stemmen tijdens verkiezingen — niet de gekozenen zelf.",
           null,
         ],

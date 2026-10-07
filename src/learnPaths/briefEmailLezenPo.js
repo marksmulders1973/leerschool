@@ -179,12 +179,12 @@ Handig ezelsbruggetje: **de randen van de brief vertellen wie, wanneer en waarov
           woorden: [
             { woord: "onderwerpregel", uitleg: "De regel bovenaan een e-mail die in een paar woorden zegt waar het bericht over gaat." },
           ],
-          theorie: "**De vier vaste regels bovenaan een e-mail**\n\n| Regel | Vertelt |\n|---|---|\n| Van: | wie de e-mail stuurt (afzender) |\n| Aan: | voor wie de e-mail is (ontvanger) |\n| Datum: | wanneer de e-mail is verstuurd |\n| Onderwerp: | waar het bericht over gaat |\n\nEen brief op papier heeft geen onderwerpregel — dat is typisch iets van e-mail. Slim gebruiken: veel toetsvragen kun je beantwoorden zonder de hele e-mail te lezen, gewoon met deze vier regels.",
+          theorie: "**De vier vaste regels bovenaan een e-mail**\n\n| Regel | Vertelt |\n|---|---|\n| Van: | wie de e-mail stuurt (afzender) |\n| Aan: | voor wie de e-mail is (ontvanger) |\n| Datum: | wanneer de e-mail is verstuurd |\n| Onderwerp: | waar het bericht over gaat |\n\nZo'n vast rijtje Van/Aan/Datum/Onderwerp is typisch iets van e-mail (een zakelijke brief op papier heeft soms wel een regel 'Betreft:' of 'Onderwerp:'). Slim gebruiken: veel toetsvragen kun je beantwoorden zonder de hele e-mail te lezen, gewoon met deze vier regels.",
           voorbeelden: [
             { type: "onderwerpregel", tekst: "'Onderwerp: Uitnodiging opa's verjaardag' → je weet meteen: dit bericht gaat over een feestje." },
           ],
           basiskennis: [
-            { onderwerp: "E-mail vs brief", uitleg: "E-mail heeft Van/Aan/Datum/Onderwerp bovenaan; een papieren brief heeft alleen een datum en soms een adres." },
+            { onderwerp: "E-mail vs brief", uitleg: "E-mail heeft Van/Aan/Datum/Onderwerp bovenaan; een papieren brief heeft een datum, soms een adres en soms een regel 'Betreft:'." },
           ],
           niveaus: {
             basis: "Lees de regel nog eens: gaat het over een persoon, een dag — of over het thema van het bericht?",
@@ -252,10 +252,10 @@ Handig ezelsbruggetje: **de randen van de brief vertellen wie, wanneer en waarov
       {
         q: "Wat is een verschil tussen een e-mail en een papieren brief?",
         options: [
-          "Een e-mail heeft bovenaan vaste regels 'Van:', 'Aan:', 'Datum:' en 'Onderwerp:'",
-          "Een e-mail heeft geen aanhef",
-          "Een papieren brief heeft geen datum",
-          "Een e-mail heeft geen ondertekening",
+          "Een e-mail heeft bovenaan vaste regels zoals 'Van:' en 'Aan:'",
+          "Een e-mail begint nooit met een aanhef zoals 'Beste'",
+          "Een papieren brief heeft nooit een datum erop",
+          "Een e-mail eindigt nooit met de naam van de schrijver",
         ],
         answer: 0,
         wrongHints: [
@@ -271,7 +271,7 @@ Handig ezelsbruggetje: **de randen van de brief vertellen wie, wanneer en waarov
             { titel: "Waarom handig?", tekst: "De vier bovenste regels van een e-mail geven razendsnel antwoord op: wie stuurt het, voor wie is het, wanneer en waarover. Nuttig op de toets!" },
           ],
           niveaus: {
-            basis: "Kijk naar de e-mail van de zwemclub: welke vier regels staan er alléén bij een e-mail, niet bij een papieren brief?",
+            basis: "Denk aan een e-mail op een computer of telefoon: welke vier regels staan er alléén bij een e-mail, niet bij een papieren brief?",
             simpeler: "Een papieren brief begint meteen met de datum en de aanhef. Wat staat er bij een e-mail daarbóven nog meer?",
             nogSimpeler: "Zoek het antwoord dat vier vaste regels noemt die je alleen bij een e-mail ziet.",
           },
@@ -451,13 +451,13 @@ Beantwoord nu de vier vragen over de brief hierboven. Zoek het antwoord altijd �
       },
       {
         q: "Hoe laat begint de sportdag?",
-        options: ["Om 9 uur", "Om 14 uur", "Om 13 mei", "Om 4 mei"],
+        options: ["Om 9 uur", "Om 14 uur", "Om 12 uur", "Om 10 uur"],
         answer: 0,
         wrongHints: [
           null,
           "14 uur is de tijd van de prijs-uitreiking, niet de start. Zoek de zin met het woord 'beginnen'.",
           null,
-          "Een datum is geen tijdstip. Scan op het woord 'beginnen' in de brief.",
+          "Staat 10 uur ergens in de brief? Scan op het woord 'beginnen'.",
         ],
         uitlegPad: {
           stappen: [
@@ -898,7 +898,7 @@ Pak je vaste stappenplan erbij: kijk eerst naar de **randen** (Van, Aan, Datum, 
       {
         q: "Wat moet je DOEN als je wilt meedoen aan de Zwemvierdaagse?",
         options: [
-          "Je aanmelden vóór vrijdag 12 juni, via e-mail of met het formulier bij de balie",
+          "Je vóór vrijdag 12 juni aanmelden",
           "Vóór 12 juni € 3,50 overmaken",
           "Op maandag 22 juni pas aanmelden bij de kassa",
           "Een medaille ophalen bij de balie",

@@ -227,7 +227,7 @@ const steps = [
     checks: [
       {
         q: "Een advertentie roept: 'De allerbeste tandpasta ter wereld!' Is dat een feit of een mening?",
-        options: ["een mening (reclame)", "een bewezen feit", "een korting", "een voorwaarde"],
+        options: ["een mening", "een bewezen feit", "een korting", "een voorwaarde"],
         answer: 0,
         wrongHints: [null, "'Allerbeste' kun je niet nameten — het is wat de verkoper beweert.", "Het is geen prijsverlaging.", "Het is geen kleine-lettertjes-regel."],
         uitlegPad: {

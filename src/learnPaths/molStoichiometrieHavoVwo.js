@@ -109,13 +109,13 @@ const steps = [
       {
         q: "Wat behoudt **massa** + **aantal atomen** in een reactie?",
         options: [
-          "Atomen — alleen herschikt, niet vernietigd of gemaakt",
+          "Atomen blijven behouden",
           "Moleculen behouden",
-          "Energie behouden (Einstein)",
+          "Alleen energie blijft behouden",
           "Geen behoud"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — moleculen veranderen wel.", "Onjuist hier — energie wel, maar vraag was atomen.", "Onjuist — wel behoud."],
+        wrongHints: [null, "Niet — moleculen veranderen wel.", "Niet — energie blijft behouden, maar is dat het enige?", "Onjuist — wel behoud."],
         uitlegPad: {
           stappen: [{ titel: "Wet Lavoisier", tekst: "Atomen blijven hetzelfde; ze schuiven alleen naar nieuwe combinaties. Daarom telt links = rechts per element. Massa-behoud is gevolg." }],
           niveaus: { basis: "Atomen behouden.", simpeler: "Aantal atomen elk element gelijk.", nogSimpeler: "Atomen" },
@@ -204,7 +204,7 @@ const steps = [
         q: "Bij volledige verbranding van 1 mol methaan: hoeveel **L CO₂** ontstaat? (STP, 22,4 L/mol)",
         options: ["22,4 L", "44,8 L", "11,2 L", "1 L"],
         answer: 0,
-        wrongHints: [null, "Niet — kijk naar de molverhouding CH₄ : CO₂.", "Niet — half.", "Verkeerde eenheid."],
+        wrongHints: [null, "Niet — kijk naar de molverhouding CH₄ : CO₂.", "Niet — half.", "Niet — 1 mol gas neemt bij STP veel meer ruimte in."],
         uitlegPad: {
           stappen: [
             { titel: "1:1 CH₄:CO₂", tekst: "CH₄ + 2 O₂ → CO₂ + 2 H₂O. 1 mol CH₄ → 1 mol CO₂ → V = 1 · 22,4 = **22,4 L** bij STP." },
@@ -263,7 +263,7 @@ const steps = [
       {
         q: "Roesten van ijzer (Fe + O₂ + H₂O → roest): Fe **wordt**:",
         options: [
-          "Geoxideerd (van 0 naar +3)",
+          "Geoxideerd",
           "Gereduceerd",
           "Verzuurd",
           "Opgelost"
@@ -279,10 +279,10 @@ const steps = [
       {
         q: "In een batterij is de **anode**:",
         options: [
-          "De plek waar oxidatie plaatsvindt (− pool in cel)",
+          "De plek waar oxidatie plaatsvindt",
           "Altijd + pool",
           "Heeft geen functie",
-          "Vangt elektronen op"
+          "De plek waar reductie plaatsvindt"
         ],
         answer: 0,
         wrongHints: [null, "Niet — in batterij is anode −.", "Onjuist.", "Niet — dat is kathode."],
@@ -306,13 +306,13 @@ const steps = [
       {
         q: "Hoeveel **mol H₂** bij verbranding van **8 g** methaan (M=16)?",
         options: [
-          "Geen — methaan verbrandt naar CO₂ + H₂O, niet H₂",
+          "0 mol",
           "0,5 mol",
           "1 mol",
           "0,25 mol"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — geen H₂ als product.", "Niet — geen H₂.", "Niet — geen H₂."],
+        wrongHints: [null, "Niet — welke producten ontstaan er bij verbranding?", "Niet — schrijf eerst de reactievergelijking op.", "Niet — kijk goed welke stoffen rechts van de pijl staan."],
         uitlegPad: {
           stappen: [{ titel: "Trick-vraag", tekst: "CH₄ + 2 O₂ → CO₂ + 2 H₂O. Producten zijn CO₂ + H₂O. Geen H₂-gas. Stoichiometrie-vraag vereist eerst kijken: bestaat dat product? Hier: nee." }],
           niveaus: { basis: "Geen H₂.", simpeler: "Verbranding geeft water, niet H₂.", nogSimpeler: "0" },
@@ -321,7 +321,7 @@ const steps = [
       {
         q: "**N₂ + 3 H₂ ⇌ 2 NH₃** (exotherm). Druk verhoogt — evenwicht schuift:",
         options: [
-          "Naar rechts (richting NH₃, minder mol gas)",
+          "Naar rechts",
           "Naar links",
           "Geen verandering",
           "Hangt af van katalysator"
@@ -365,7 +365,7 @@ const steps = [
       {
         q: "Bij elektrolyse van **gesmolten NaCl**: aan **kathode** vormt zich:",
         options: [
-          "Na-metaal (reductie van Na⁺)",
+          "Na-metaal",
           "Cl₂-gas",
           "H₂-gas",
           "O₂-gas"

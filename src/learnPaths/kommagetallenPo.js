@@ -90,7 +90,7 @@ const steps = [
       },
       {
         q: "Wat betekent de **2** in 4,**2**?",
-        options: ["2 tienden (2/10)", "2 honderden", "2 eenheden", "2 tientallen"],
+        options: ["2 tienden", "2 honderden", "2 eenheden", "2 tientallen"],
         answer: 0,
         wrongHints: [null, "Cijfers ná komma zijn juist 'stukjes' — niet honderden.", "Eenheden staan vóór de komma — de 2 staat erachter.", "Te groot — ná de komma worden cijfers kleiner."],
         uitlegPad: {
@@ -154,7 +154,7 @@ const steps = [
         q: "**7,80 − 3,25** = ?",
         options: ["4,55", "4,65", "10,05", "5,45"],
         answer: 0,
-        wrongHints: [null, "Net niet — reken: 80 − 25 = ? en 7 − 3 = ? Zet die samen.", "Niet 10 — dat is opgeteld i.p.v. afgetrokken.", "Te veel — kijk goed naar het verschil tussen 7 en 3."],
+        wrongHints: [null, "Net niet — reken de cijfers ná de komma nog eens na.", "Niet 10 — dat is opgeteld i.p.v. afgetrokken.", "Te veel — kijk goed naar het verschil tussen 7 en 3."],
         uitlegPad: {
           stappen: [
             { titel: "Komma's uitlijnen", tekst: "7,80 - 3,25. Komma's recht onder elkaar. 80 - 25 = 55 (cijfers ná komma). 7 - 3 = 4. Antwoord: 4,55." },
@@ -227,9 +227,9 @@ const steps = [
       },
       {
         q: "Bij **0,5 × 0,2** tel je hoeveel **decimalen** op om de komma in het antwoord te plaatsen?",
-        options: ["2 (= 1 + 1)", "1", "0", "3"],
+        options: ["2", "1", "0", "3"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 0,5 én 0,2 hebben elk 1 decimaal.", "Allebei wél een komma — niet 0.", "Te veel — er zijn maar 2 decimalen in totaal."],
+        wrongHints: [null, "Te weinig — kijk naar beide getallen, niet maar naar één.", "Allebei wél een komma — niet 0.", "Te veel — tel per getal hoeveel cijfers er ná de komma staan."],
       },
     ],
   },
@@ -369,7 +369,7 @@ const steps = [
         q: "Een doos met **0,25 kg** koekjes. **4 dozen** wegen samen?",
         options: ["1 kg", "0,5 kg", "100 kg", "0,1 kg"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dat is pas 2 dozen.", "Komma weg — dat is 100× te veel.", "Te weinig — denk: 4 × 0,25 is bijna een rond getal."],
+        wrongHints: [null, "Te weinig — dat is pas 2 dozen.", "Komma weg — dat is 100× te veel.", "Te weinig — tel 0,25 vier keer bij elkaar op."],
       },
       {
         q: "**2,4 m** stof = **... cm**?",

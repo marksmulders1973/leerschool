@@ -60,7 +60,7 @@ const steps = [
         q: "Wat is de he/she/it-vorm van **study**?",
         options: ["studies", "studys", "studyes", "studyies"],
         answer: 0,
-        wrongHints: [null, "consonant + y → y wordt ies.", "Niet -es maar -ies bij consonant + y.", "Niet i + ies, alleen -ies."],
+        wrongHints: [null, "Study eindigt op medeklinker + y — wat gebeurt er dan met de y?", "Niet -es maar -ies bij consonant + y.", "Niet i + ies, alleen -ies."],
       },
       {
         q: "Welke is **goed**? — *She ___ TV every evening.* (watch)",
@@ -120,7 +120,7 @@ const steps = [
         q: "Wat is de -ing-vorm van **run**?",
         options: ["running", "runing", "runeing", "ran"],
         answer: 0,
-        wrongHints: [null, "Korte klank + medeklinker → verdubbel: running.", "Geen -e in run.", "Verleden tijd, geen -ing."],
+        wrongHints: [null, "Korte klank + één medeklinker aan het eind — wat gebeurt er dan met die medeklinker?", "Geen -e in run.", "Verleden tijd, geen -ing."],
       },
     ],
   },

@@ -52,7 +52,7 @@ const steps = [
         q: "Wat is de hoofdstad van de Europese Unie (waar de meeste organisaties zitten)?",
         options: ["Brussel (België)", "Den Haag (Nederland)", "Parijs (Frankrijk)", "Straatsburg (Frankrijk)"],
         answer: 0,
-        wrongHints: [null, "Den Haag heeft VN-organen (Internationaal Gerechtshof) — niet EU.", "Parijs heeft geen grote EU-instelling.", "Straatsburg heeft elke maand een week het Europees Parlement — niet 'hoofdstad'."],
+        wrongHints: [null, "Den Haag heeft VN-organen (Internationaal Gerechtshof) — niet EU.", "In Parijs zitten geen Commissie, Raad of Parlement.", "Straatsburg heeft elke maand een week het Europees Parlement — niet 'hoofdstad'."],
         explanation: "**Brussel** = de facto EU-hoofdstad. Europese Commissie, Raad van de EU, deel van het Parlement + NAVO zitten er. Straatsburg (FR) is 1 week per maand de vergaderplek van het Parlement (politiek compromis).",
         uitlegPad: compact(
           "Brussel = hart van de EU. Commissie + Raad + groot deel Parlement zitten hier.",
@@ -64,7 +64,7 @@ const steps = [
   },
   {
     title: "Stap 2 — De 4 vrijheden",
-    explanation: "De EU heeft 4 basisrechten — de **vier vrijheden**:\n\n1. **Vrij verkeer van personen** — elke EU-burger mag wonen + werken in elk ander EU-land. Geen werkvergunning nodig.\n2. **Vrij verkeer van goederen** — geen invoerheffingen tussen lidstaten. Een Spaanse sinaasappel kost in NL dus geen extra belasting.\n3. **Vrij verkeer van diensten** — een Nederlandse loodgieter mag in Duitsland werken.\n4. **Vrij verkeer van kapitaal** — geld + investeringen kunnen vrij stromen.\n\nDit is de **interne markt** — een groot economisch gebied zonder grenzen voor handel. Voordeel: meer welvaart + concurrentie. Nadeel: lokale banen verdwijnen soms (bv. NL-staal kon niet concurreren met goedkope import).",
+    explanation: "De EU heeft 4 basisrechten — de **vier vrijheden**:\n\n1. **Vrij verkeer van personen** — elke EU-burger mag wonen + werken in elk ander EU-land. Geen werkvergunning nodig.\n2. **Vrij verkeer van goederen** — geen invoerheffingen tussen lidstaten. Een Spaanse sinaasappel kost in NL dus geen extra belasting.\n3. **Vrij verkeer van diensten** — een Nederlandse loodgieter mag in Duitsland werken.\n4. **Vrij verkeer van kapitaal** — geld + investeringen kunnen vrij stromen.\n\nDit is de **interne markt** — een groot economisch gebied zonder grenzen voor handel. Voordeel: meer welvaart + concurrentie. Nadeel: lokale banen verdwijnen soms, omdat bedrijven uit andere EU-landen goedkoper kunnen zijn.",
     emoji: "🛂",
     checks: [
       {
@@ -150,7 +150,7 @@ const steps = [
   },
   {
     title: "Stap 4 — Europese Raad + Raad van de EU",
-    explanation: "Twee 'Raden' die makkelijk verward worden:\n\n**👑 Europese Raad** (regeringsleiders)\n- Bijeenkomst van **regeringsleiders** (president of premier) van alle 27 lidstaten.\n- Komt ~4× per jaar bijeen in Brussel.\n- Bepaalt **strategische richting** van de EU.\n- Voorzitter: **António Costa** (sinds december 2024, Portugees).\n- Voor NL: minister-president Dick Schoof (2024-).\n\n**🤝 Raad van de Europese Unie** (vakministers)\n- Ministers per onderwerp (bv. milieu, financiën, landbouw).\n- Wisselend voorzitter — elk land 6 maanden 'roulerend voorzitterschap'.\n- Stemt mee over Commissie-voorstellen (samen met Parlement).\n\n**Onthoud:**\n- Europese **Raad** = regeringsleiders (Costa)\n- **Raad** van EU = ministers (rouleert)\n- Commissie = ambtenaren (Von der Leyen)\n- Parlement = gekozen volk (Metsola)",
+    explanation: "Twee 'Raden' die makkelijk verward worden:\n\n**👑 Europese Raad** (regeringsleiders)\n- Bijeenkomst van **regeringsleiders** (president of premier) van alle 27 lidstaten.\n- Komt ~4× per jaar bijeen in Brussel.\n- Bepaalt **strategische richting** van de EU.\n- Voorzitter: **António Costa** (sinds december 2024, Portugees).\n- Voor NL: de minister-president.\n\n**🤝 Raad van de Europese Unie** (vakministers)\n- Ministers per onderwerp (bv. milieu, financiën, landbouw).\n- Wisselend voorzitter — elk land 6 maanden 'roulerend voorzitterschap'.\n- Stemt mee over Commissie-voorstellen (samen met Parlement).\n\n**Onthoud:**\n- Europese **Raad** = regeringsleiders (Costa)\n- **Raad** van EU = ministers (rouleert)\n- Commissie = ambtenaren (Von der Leyen)\n- Parlement = gekozen volk (Metsola)",
     emoji: "👑",
     checks: [
       {

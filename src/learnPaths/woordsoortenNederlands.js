@@ -140,7 +140,7 @@ const steps = [
         q: "Welke vorm is goed? — *een ___ kind* (klein)",
         options: ["klein", "kleine", "kleins", "kleinen"],
         answer: 0,
-        wrongHints: [null, "Bij 'een' + het-woord (kind = het) → geen -e.", "Geen Nederlands.", "Geen vorm."],
+        wrongHints: [null, "Bij 'een' + het-woord (kind = het) → geen -e.", "Kleins gebruik je alleen na 'iets' (iets kleins), niet vóór een zelfstandig naamwoord.", "Geen vorm."],
         uitlegPad: {
           stappen: [{ titel: "Een + het-woord = geen -e", tekst: "Kind = het-woord. Met 'een' ervoor: een klein kind (geen -e)." }],
           woorden: [{ woord: "verbuiging bn", uitleg: "regel met -e" }],
@@ -300,9 +300,9 @@ const steps = [
     checks: [
       {
         q: "Welke vorm hoort hier? — *___ huis is groot* (van ons, het-woord)",
-        options: ["Ons", "Onze", "Onser", "Onss"],
+        options: ["Ons", "Onze", "Hun", "Uw"],
         answer: 0,
-        wrongHints: [null, "Onze is voor de-woorden + meervoud. Huis = het-woord → ons.", "Bestaat niet.", "Bestaat niet."],
+        wrongHints: [null, "Onze is voor de-woorden + meervoud. Huis = het-woord → ons.", "Hun betekent 'van hen'. Het gaat om 'van ons'.", "Uw betekent 'van u'. Het gaat om 'van ons'."],
         uitlegPad: {
           stappen: [{ titel: "Ons + het-woord", tekst: "Huis = het-woord, dus 'ons huis' (zonder -e)." }],
           woorden: [{ woord: "ons vs onze", uitleg: "ons bij het-woorden" }],
@@ -428,7 +428,7 @@ const steps = [
     checks: [
       {
         q: "Welke is een **bijwoord**?",
-        options: ["snel (rent snel)", "snelle auto", "snelheid", "snelste"],
+        options: ["snel in 'hij rent snel'", "snelle in 'een snelle auto'", "snelheid", "snelste in 'de snelste auto'"],
         answer: 0,
         wrongHints: [null, "Snelle auto: snelle = bn (beschrijft auto).", "Snelheid = zn.", "Snelste = bn (overtreffende trap)."],
         uitlegPad: {
@@ -514,7 +514,7 @@ const steps = [
       },
       {
         q: "Welke woordsoort is **vandaag** in: *Ik werk vandaag*?",
-        options: ["bijwoord (tijd)", "zelfstandig nw", "bijvoeglijk nw", "lidwoord"],
+        options: ["bijwoord", "zelfstandig nw", "bijvoeglijk nw", "lidwoord"],
         answer: 0,
         wrongHints: [null, "Vandaag is geen ding, dus geen zn.", "Vandaag beschrijft geen zn, dus geen bn.", "Een lidwoord is de/het/een."],
         uitlegPad: {

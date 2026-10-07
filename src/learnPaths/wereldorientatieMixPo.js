@@ -27,7 +27,7 @@ const steps = [
   {
     title: "NL-geschiedenis — tijdvakken-overzicht",
     explanation:
-      "Op de Doorstroomtoets komen vragen over **wereldoriëntatie** in gemengde vorm. Geschiedenis + aardrijkskunde + natuur worden door elkaar gevraagd. Goed om **overzichts-kennis** te hebben.\n\n**Tien tijdvakken NL-geschiedenis** (officiële indeling sinds 2007):\n\n1. **Tijd van jagers + boeren** (tot 3000 v.Chr.): prehistorie, geen schrift.\n2. **Tijd van Grieken + Romeinen** (3000 v.Chr.-500 n.Chr.): Oudheid, Romeinen ook in NL.\n3. **Tijd van monniken + ridders** (500-1000): Vroege Middeleeuwen.\n4. **Tijd van steden + staten** (1000-1500): Late Middeleeuwen, kastelen, gilden.\n5. **Tijd van ontdekkers + hervormers** (1500-1600): Renaissance, Reformatie, ontdekkings-reizen.\n6. **Tijd van regenten + vorsten** (1600-1700): Gouden Eeuw, VOC, Rembrandt.\n7. **Tijd van pruiken + revoluties** (1700-1800): Verlichting, Franse Revolutie.\n8. **Tijd van burgers + stoommachines** (1800-1900): industriële revolutie, NL koninkrijk.\n9. **Tijd van wereldoorlogen** (1900-1950): WO1, WO2, crisis 1929.\n10. **Tijd van televisie + computer** (1950-nu): wederopbouw, EU, internet.\n\n**Belangrijke jaartallen** (Toets-favoriet):\n• **1492**: Columbus ontdekt Amerika.\n• **1602**: VOC opgericht in Amsterdam — eerste multinationale onderneming.\n• **1648**: Vrede van Münster — NL onafhankelijk van Spanje (na Tachtigjarige Oorlog 1568-1648).\n• **1789**: begin Franse Revolutie (bestorming Bastille 14 juli).\n• **1813**: NL bevrijd van Napoleon.\n• **1815**: Koninkrijk der Nederlanden gesticht (Willem I).\n• **1848**: nieuwe grondwet (Thorbecke), ministeriële verantwoordelijkheid.\n• **1914-1918**: Eerste Wereldoorlog (NL neutraal).\n• **1929**: beurskrach Wall Street, begin Crisis.\n• **1940-1945**: NL bezet door Duitsland in WO2.\n• **10 mei 1940**: Duitse inval NL.\n• **14 mei 1940**: bombardement Rotterdam.\n• **5 mei 1945**: NL bevrijd.\n• **1948**: Universele Verklaring Rechten Mens.\n• **1953**: Watersnoodramp Zeeland (1836 doden).\n• **1957**: oprichting EEG (basis EU).\n• **1969**: man op de maan (Apollo 11, VS).\n• **1989**: val Berlijnse Muur, einde Koude Oorlog symbolisch.\n• **2002**: euro-munt ingevoerd in NL.\n• **2020-2023**: COVID-19-pandemie.\n\n**Beroemde NL'ers**:\n• **Anne Frank** (1929-1945): Joodse onderduikster Amsterdam, dagboek bewaard, sterft Bergen-Belsen.\n• **Willem van Oranje** (1533-1584): leider 80-jarige oorlog, 'Vader des Vaderlands', vermoord Delft.\n• **Rembrandt van Rijn** (1606-1669): schilder Gouden Eeuw, *De Nachtwacht*.\n• **Johannes Vermeer** (1632-1675): schilder, *Meisje met de parel*.\n• **Vincent van Gogh** (1853-1890): post-impressionist, *Sterrennacht*, *Zonnebloemen*.\n• **Aletta Jacobs** (1854-1929): eerste vrouwelijke arts NL + vrouwenkiesrecht-activist.\n• **Mata Hari** (1876-1917): NL-spionne in WO1, geëxecuteerd door FR.\n• **Erasmus van Rotterdam** (1466-1536): Renaissance-humanist, *Lof der Zotheid*.\n• **Antoni van Leeuwenhoek** (1632-1723): Delftse microscoopbouwer, ontdekte bacteriën.\n\n**Toets-typische vraag**:\n'Op welk plaatje zie je een schilderij uit de Gouden Eeuw?'\n→ herken Rembrandt-stijl (clair-obscur, donkere achtergrond, NL-gezicht).",
+      "Wereldoriëntatie is geen apart onderdeel van de Doorstroomtoets (die toetst lezen, taalverzorging en rekenen), maar deze kennis helpt je wél bij het begrijpen van teksten. Hier worden geschiedenis + aardrijkskunde + natuur door elkaar gevraagd. Goed om **overzichts-kennis** te hebben.\n\n**Tien tijdvakken NL-geschiedenis** (officiële indeling sinds 2007):\n\n1. **Tijd van jagers + boeren** (tot 3000 v.Chr.): prehistorie, geen schrift.\n2. **Tijd van Grieken + Romeinen** (3000 v.Chr.-500 n.Chr.): Oudheid, Romeinen ook in NL.\n3. **Tijd van monniken + ridders** (500-1000): Vroege Middeleeuwen.\n4. **Tijd van steden + staten** (1000-1500): Late Middeleeuwen, kastelen, gilden.\n5. **Tijd van ontdekkers + hervormers** (1500-1600): Renaissance, Reformatie, ontdekkings-reizen.\n6. **Tijd van regenten + vorsten** (1600-1700): Gouden Eeuw, VOC, Rembrandt.\n7. **Tijd van pruiken + revoluties** (1700-1800): Verlichting, Franse Revolutie.\n8. **Tijd van burgers + stoommachines** (1800-1900): industriële revolutie, NL koninkrijk.\n9. **Tijd van wereldoorlogen** (1900-1950): WO1, WO2, crisis 1929.\n10. **Tijd van televisie + computer** (1950-nu): wederopbouw, EU, internet.\n\n**Belangrijke jaartallen** (Toets-favoriet):\n• **1492**: Columbus ontdekt Amerika.\n• **1602**: VOC opgericht in Amsterdam — eerste multinationale onderneming.\n• **1648**: Vrede van Münster — NL onafhankelijk van Spanje (na Tachtigjarige Oorlog 1568-1648).\n• **1789**: begin Franse Revolutie (bestorming Bastille 14 juli).\n• **1813**: NL bevrijd van Napoleon.\n• **1815**: Koninkrijk der Nederlanden gesticht (Willem I).\n• **1848**: nieuwe grondwet (Thorbecke), ministeriële verantwoordelijkheid.\n• **1914-1918**: Eerste Wereldoorlog (NL neutraal).\n• **1929**: beurskrach Wall Street, begin Crisis.\n• **1940-1945**: NL bezet door Duitsland in WO2.\n• **10 mei 1940**: Duitse inval NL.\n• **14 mei 1940**: bombardement Rotterdam.\n• **5 mei 1945**: NL bevrijd.\n• **1948**: Universele Verklaring Rechten Mens.\n• **1953**: Watersnoodramp Zeeland (1836 doden).\n• **1957**: oprichting EEG (basis EU).\n• **1969**: man op de maan (Apollo 11, VS).\n• **1989**: val Berlijnse Muur, einde Koude Oorlog symbolisch.\n• **2002**: euro-munt ingevoerd in NL.\n• **2020-2023**: COVID-19-pandemie.\n\n**Beroemde NL'ers**:\n• **Anne Frank** (1929-1945): Joodse onderduikster Amsterdam, dagboek bewaard, sterft Bergen-Belsen.\n• **Willem van Oranje** (1533-1584): leider 80-jarige oorlog, 'Vader des Vaderlands', vermoord Delft.\n• **Rembrandt van Rijn** (1606-1669): schilder Gouden Eeuw, *De Nachtwacht*.\n• **Johannes Vermeer** (1632-1675): schilder, *Meisje met de parel*.\n• **Vincent van Gogh** (1853-1890): post-impressionist, *Sterrennacht*, *Zonnebloemen*.\n• **Aletta Jacobs** (1854-1929): eerste vrouwelijke arts NL + vrouwenkiesrecht-activist.\n• **Mata Hari** (1876-1917): NL-spionne in WO1, geëxecuteerd door FR.\n• **Erasmus van Rotterdam** (1466-1536): Renaissance-humanist, *Lof der Zotheid*.\n• **Antoni van Leeuwenhoek** (1632-1723): Delftse microscoopbouwer, ontdekte bacteriën.\n\n**Toets-typische vraag**:\n'Op welk plaatje zie je een schilderij uit de Gouden Eeuw?'\n→ herken Rembrandt-stijl (clair-obscur, donkere achtergrond, NL-gezicht).",
     checks: [
       {
         q: "In welk **tijdvak** valt de Gouden Eeuw (1600s)?",
@@ -61,7 +61,7 @@ const steps = [
       },
       {
         q: "Wie was **Anne Frank**?",
-        options: ["Joodse onderduikster Amsterdam, dagboek bewaard","Schilder","Koningin","Schrijfster fantasy"],
+        options: ["Joodse onderduikster","Schilder","Koningin","Schrijfster fantasy"],
         answer: 0,
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet primair — wel schrijver."],
         uitlegPad: {
@@ -92,7 +92,7 @@ const steps = [
         q: "Hoeveel **provincies** heeft Nederland?",
         options: ["12","11","13","14"],
         answer: 0,
-        wrongHints: [null, "Niet correct (Flevoland erbij sinds 1986).", "Niet correct.", "Te veel."],
+        wrongHints: [null, "Tel nog eens — vergeet de jongste provincie niet.", "Niet correct.", "Te veel."],
         uitlegPad: {
           stappen: [{ titel: "Inclusief Flevoland", tekst: "**12 provincies NL**: Noord-Holland, Zuid-Holland, Utrecht, Gelderland, Overijssel, Drenthe, Groningen, Friesland, **Flevoland** (sinds 1986!), Noord-Brabant, Limburg, Zeeland. **Flevoland = jongste provincie**, ingepolderd 1957-1968." }],
           niveaus: { basis: "12.", simpeler: "NL = 12 prov", nogSimpeler: "12" },
@@ -110,7 +110,7 @@ const steps = [
       },
       {
         q: "Het **grootste werelddeel qua bevolking** is:",
-        options: ["Azië (~4,7 mld)","Afrika","Europa","Noord-Amerika"],
+        options: ["Azië","Afrika","Europa","Noord-Amerika"],
         answer: 0,
         wrongHints: [null, "Nummer 2 (~1,4 mld).", "Nummer 3 (~745 mln).", "~580 mln."],
         uitlegPad: {
@@ -179,7 +179,7 @@ const steps = [
       },
       {
         q: "Een **spin** is:",
-        options: ["Geen insect (8 poten, geen 6)","Insect","Vogel","Zoogdier"],
+        options: ["Geen insect","Insect","Vogel","Zoogdier"],
         answer: 0,
         wrongHints: [null, "Niet — insecten hebben 6 poten.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
@@ -238,7 +238,7 @@ const steps = [
       },
       {
         q: "**H₂O** is:",
-        options: ["Water (2 waterstof + 1 zuurstof)","Suiker","Zout","Lucht"],
+        options: ["Water","Suiker","Zout","Lucht"],
         answer: 0,
         wrongHints: [null, "Niet — andere chemische formule.", "Niet — NaCl.", "Mengsel, geen molecuul."],
         uitlegPad: {

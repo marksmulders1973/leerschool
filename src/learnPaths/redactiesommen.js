@@ -109,7 +109,7 @@ const steps = [
       },
       {
         q: "*'Een fles 1,5 L kost € 2,40. Hoeveel **per liter**?'* — bewerking?",
-        options: ["Delen (prijs ÷ liter)","Vermenigvuldigen","Optellen","Aftrekken"],
+        options: ["Delen","Vermenigvuldigen","Optellen","Aftrekken"],
         answer: 0,
         wrongHints: [null,"Niet vermenigvuldigen — je gaat van groot naar 'per stuk'.","Niet samenvoegen.","Niet aftrekken — vraag is per-eenheid-prijs."],
         uitlegPad: {
@@ -183,7 +183,7 @@ const steps = [
         q: "*'30 leerlingen verdelen € 90 eerlijk. Iedereen krijgt 1 ijsje van € 1,50. Hoeveel **over per kind**?'*",
         options: ["€ 1,50","€ 3","€ 0","€ 4,50"],
         answer: 0,
-        wrongHints: [null,"Te veel — eerst per kind: €90 ÷ 30 = €3. Dan €3 − €1,50.","Niet 0 — er blijft wat over per kind.","Je telde op — het ijsje kost geld, dus trek je af."],
+        wrongHints: [null,"Te veel — dat is wat ieder krijgt. Het ijsje moet er nog af.","Niet 0 — er blijft wat over per kind.","Je telde op — het ijsje kost geld, dus trek je af."],
       },
     ],
   },
@@ -208,13 +208,13 @@ const steps = [
         q: "*'Een vrachtwagen vervoert 24 dozen van 18 kg. Plus zijn eigen gewicht 1200 kg. **Totaal gewicht**?'*",
         options: ["1632 kg","432 kg","1212 kg","1800 kg"],
         answer: 0,
-        wrongHints: [null,"Te weinig — vergeet vrachtwagen-gewicht niet.","Klopt niet — vergeet vrachtwagen.","Veel te veel."],
+        wrongHints: [null,"Te weinig — vergeet vrachtwagen-gewicht niet.","Klopt niet — 24 dozen van 18 kg: hoeveel kg is dat samen?","Veel te veel."],
       },
       {
         q: "*'Drie vriendinnen verdelen € 75 eerlijk. Daarna koopt iedereen iets van € 12. **Hoeveel ieder over**?'*",
         options: ["€ 13","€ 25","€ 12","€ 39"],
         answer: 0,
-        wrongHints: [null,"Te veel — dat is per kind vóór de koop.","Bijna — controleer 25 − 12.","Veel te veel."],
+        wrongHints: [null,"Te veel — dat is per kind vóór de koop.","Bijna — hoeveel heeft ieder vóór de koop, en wat gaat eraf?","Veel te veel."],
       },
       {
         q: "*'Een trein vertrekt 09:35 en rijdt 2 uur 50 min. **Aankomst**?'*",
@@ -243,7 +243,7 @@ const steps = [
         q: "*'4 vrienden bestellen pizza voor **€ 38**. Bezorgkosten **€ 4**. Iedereen betaalt evenveel. **Per persoon**?'*",
         options: ["€ 10,50","€ 9,50","€ 8,50","€ 42"],
         answer: 0,
-        wrongHints: [null, "Te weinig — heb je bezorgkosten meegerekend?", "Te weinig — €38 ÷ 4 = €9,50, maar bezorgkosten missen.", "Dat is totaal, niet per persoon."],
+        wrongHints: [null, "Te weinig — heb je bezorgkosten meegerekend?", "Te weinig — de bezorgkosten komen erbij, niet eraf.", "Dat is totaal, niet per persoon."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: totaal", tekst: "Pizza + bezorging: €38 + €4 = **€42**." },
@@ -300,7 +300,7 @@ const steps = [
         q: "*'In groep 8 zitten **27 leerlingen**. **2/3** gaat naar VMBO, de rest naar HAVO/VWO. Hoeveel naar **HAVO/VWO**?'*",
         options: ["9","18","13","6"],
         answer: 0,
-        wrongHints: [null, "Dat is naar VMBO (2/3), niet de rest.", "Klopt niet — controleer 27 ÷ 3.", "Te weinig — controleer met 27 − 18."],
+        wrongHints: [null, "Dat is naar VMBO (2/3), niet de rest.", "Klopt niet — welk deel van de klas gaat naar HAVO/VWO?", "Te weinig — hoeveel gaan er naar VMBO, en hoeveel blijven er dan over?"],
         uitlegPad: {
           stappen: [
             { titel: "Wie zijn 'de rest'?", tekst: "2/3 naar VMBO → **1/3** naar HAVO/VWO. (Want 2/3 + 1/3 = 3/3 = alles.)" },

@@ -245,7 +245,7 @@ const steps = [
   // STAP 4: Inhoud
   {
     title: "Inhoud — L, dL, cL, mL",
-    explanation: "Inhoud is **hoeveel vloeistof ergens in zit**. Het trapje:\n\n**L → dL → cL → mL**\n\nIeder stapje is × 10. Dus:\n• 1 L = **10** dL\n• 1 dL = **10** cL\n• 1 cL = **10** mL\n• 1 L = **1000** mL  *(dat is 3 stappen ineens)*\n\n**Vaak gebruikte stappen**:\n• 1 L = **1000** mL  *(pak melk)*\n• 1 L = **100** cL  *(grote fles fris)*\n• 1 L = **10** dL  *(grote drinkbeker)*\n\n**Voorbeelden om te onthouden**:\n• Een glas water ≈ **200 mL** *(= 2 dL)*\n• Een pak melk = **1 L**.\n• Een autotank ≈ **50-60 L**.\n• Een eetlepel ≈ **15 mL**.\n• Een theelepel ≈ **5 mL**.\n\n**Toets-truc**:\n• Past in een glas → mL of cL.\n• Past in een fles → L.\n• Past in een bad → vele L (ongeveer 150 L).\n\n**Slimme weet**:\n• **1 mL = 1 cm³** *(1 kubieke centimeter)*. Dus een doosje van 1 cm × 1 cm × 1 cm bevat precies 1 mL water.\n• **1 L = 1 dm³** *(1 kubieke decimeter)*. Een melkpak van 10 cm × 10 cm × 10 cm = 1 L.\n\n**Veel-voorkomende fout**:\nVerwarring tussen cL en mL. **1 cL = 10 mL** *(niet 100!)*. En **1 dL = 100 mL**.",
+    explanation: "Inhoud is **hoeveel vloeistof ergens in zit**. Het trapje:\n\n**L → dL → cL → mL**\n\nIeder stapje is × 10. Dus:\n• 1 L = **10** dL\n• 1 dL = **10** cL\n• 1 cL = **10** mL\n• 1 L = **1000** mL  *(dat is 3 stappen ineens)*\n\n**Vaak gebruikte stappen**:\n• 1 L = **1000** mL  *(pak melk)*\n• 1 L = **100** cL  *(grote fles fris)*\n• 1 L = **10** dL  *(grote drinkbeker)*\n\n**Voorbeelden om te onthouden**:\n• Een glas water ≈ **200 mL** *(= 2 dL)*\n• Een pak melk = **1 L**.\n• Een autotank ≈ **50-60 L**.\n• Een eetlepel ≈ **15 mL**.\n• Een theelepel ≈ **5 mL**.\n\n**Toets-truc**:\n• Past in een glas → mL of cL.\n• Past in een fles → L.\n• Past in een bad → vele L (ongeveer 150 L).\n\n**Slimme weet**:\n• **1 mL = 1 cm³** *(1 kubieke centimeter)*. Dus een doosje van 1 cm × 1 cm × 1 cm bevat precies 1 mL water.\n• **1 L = 1 dm³** *(1 kubieke decimeter)*. Een doos van 10 cm × 10 cm × 10 cm = 1 L.\n\n**Veel-voorkomende fout**:\nVerwarring tussen cL en mL. **1 cL = 10 mL** *(niet 100!)*. En **1 dL = 100 mL**.",
     svg: trapjeSvg(["L","dL","cL","mL"], COLORS.inhoud, "Inhoud-trapje (× 10 per stap)"),
     checks: [
       {
@@ -351,7 +351,7 @@ const steps = [
         q: "Mike heeft van **16:45 tot 18:30** huiswerk gemaakt. Hoe lang?",
         options: ["1 uur 45 min","2 uur 15 min","1 uur 15 min","2 uur 45 min"],
         answer: 0,
-        wrongHints: [null,"Te lang — heb je niet 1 uur teveel meegeteld?","Te kort — vergeet de eerste 15 min naar 17:00 niet.","Te lang — denk: van 16:45 naar 18:00 is hoeveel?"],
+        wrongHints: [null,"Te lang — tel eerst tot het hele uur, dan de hele uren, dan de rest.","Te kort — tel je de minuten na 18:00 ook mee?","Te lang — denk: van 16:45 naar 18:00 is hoeveel?"],
         uitlegPad: {
           stappen: [{ titel: "Splits: tot uur + uren + rest", tekst: "16:45→17:00 = 15m. 17:00→18:00 = 1u. 18:00→18:30 = 30m. Totaal: 1u + 45m." }],
           woorden: [{ woord: "tel-vooruit", uitleg: "In stappen: tot heel uur, hele uren, eind-minuten." }],
@@ -463,7 +463,7 @@ const steps = [
         q: "Een fles van **2 L** wordt verdeeld over **bekers van 200 mL**. Hoeveel **bekers**?",
         options: ["10","100","20","2"],
         answer: 0,
-        wrongHints: [null,"Te veel — reken eerst 2 L om naar mL, en deel dan door de inhoud van één beker.","Veel te veel — heb je vergeten om L→mL om te rekenen?","Te weinig — 1 L geeft al 5 bekers."],
+        wrongHints: [null,"Te veel — reken eerst 2 L om naar mL, en deel dan door de inhoud van één beker.","Veel te veel — heb je vergeten om L→mL om te rekenen?","Te weinig — reken eerst 2 L om naar mL."],
         uitlegPad: {
           stappen: [{ titel: "L → mL → delen", tekst: "2 L = 2000 mL. 2000 ÷ 200 = 10 bekers." }],
           woorden: [{ woord: "verdelen", uitleg: "Totaal ÷ per-stuk = aantal stuks." }],
@@ -474,10 +474,10 @@ const steps = [
         },
       },
       {
-        q: "Sven loopt **3 km** in **45 minuten**. Hoeveel **m per minuut**?",
+        q: "Sven loopt **3 km** in **45 minuten**. Hoeveel **m per minuut** *(afgerond op 1 decimaal)*?",
         options: ["66,7","667","60","100"],
         answer: 0,
-        wrongHints: [null,"Te veel met factor 10 — controleer: 3000 ÷ 45.","Te weinig — denk: 1 km in 15 min, dus per minuut?","Klopt niet — reken 3000 m ÷ 45 min."],
+        wrongHints: [null,"Te veel met factor 10 — let op de plek van de komma.","Te weinig — denk: 1 km in 15 min, dus per minuut?","Klopt niet — reken eerst km om naar m en deel dan door het aantal minuten."],
         uitlegPad: {
           stappen: [{ titel: "km → m → delen", tekst: "3 km = 3000 m. 3000 ÷ 45 = 66,7 m per min." }],
           woorden: [{ woord: "snelheid", uitleg: "Afstand ÷ tijd = snelheid per tijdseenheid." }],
@@ -592,7 +592,7 @@ const steps = [
       { q: "Zet om: **2,5 m** in cm", options: ["250","25","2500","0,025"], answer: 0, wrongHints: [null, "×10.", "×1000.", "Verkeerde kant."] },
       { q: "Zet om: **500 g** in kg", options: ["0,5","5","50","0,05"], answer: 0, wrongHints: [null, "Te veel — hoeveel g zitten er in 1 kg? Deel dan 500 g daardoor.", "Veel te veel.", "Te weinig — controleer: hoeveel gram is jouw antwoord?"] },
       { q: "Zet om: **3.500 m** in km", options: ["3,5","350","35","0,35"], answer: 0, wrongHints: [null, "Niet — komma verkeerd.", "Niet.", "Niet."] },
-      { q: "Welke is meer: **0,5 kg** of **600 g**?", options: ["600 g (600g vs 500g)","0,5 kg","Gelijk","Niet te zeggen"], answer: 0, wrongHints: [null, "Niet — minder.", "Niet — verschil 100g.", "Wel — vergelijken."] },
+      { q: "Welke is meer: **0,5 kg** of **600 g**?", options: ["600 g","0,5 kg","Gelijk","Niet te zeggen"], answer: 0, wrongHints: [null, "Niet — reken 0,5 kg eerst om naar gram.", "Niet — reken 0,5 kg eerst om naar gram en vergelijk.", "Wel — vergelijken."] },
       { q: "Welke is langste: 1 m, 100 cm, 1.000 mm?", options: ["Allemaal gelijk","1 m","100 cm","1000 mm"], answer: 0, wrongHints: [null, "Zet alle maten om naar dezelfde eenheid — zijn ze echt ongelijk?", "100 cm — zet de andere twee ook om naar cm en vergelijk dan.", "1000 mm — zet de andere twee ook om naar mm en vergelijk dan."] },
       { q: "Een fles **1,5 L** = hoeveel mL?", options: ["1500","150","15","15.000"], answer: 0, wrongHints: [null, "Niet — ×1000.", "Niet.", "Te veel."] },
       { q: "Een sinaasappel weegt **ongeveer**?", options: ["150 g","150 kg","15 g","1,5 kg"], answer: 0, wrongHints: [null, "Veel te zwaar.", "Te licht.", "Te zwaar."] },

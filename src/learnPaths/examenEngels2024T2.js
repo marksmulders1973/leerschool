@@ -97,7 +97,7 @@ const steps = [
           stappen: [
             { titel: "Wat staat er over Japan?", tekst: "Alinea 3 zegt: *'Japan hopes that by introducing more robots into its workforce it can address the problem of its shrinking and rapidly ageing population.'* Hoop = doel = waarom AI wordt geïntroduceerd." },
             { titel: "Vertaal de kern", tekst: "**Shrinking and rapidly ageing population** = krimpende en snel ouder wordende bevolking = vergrijzing + bevolkingsdaling. Gevolg: te weinig werkenden (= personeelstekort). AI vult dat gat." },
-            { titel: "Waarom de andere opties fout zijn", tekst: "A (politieke besluiten): niet de hoofdreden, ministers gebruiken het slechts als hulpmiddel. B (overbezetting): tegengesteld — Japan heeft juist krimp, niet overbezetting. D (rekenfouten): niet genoemd in tekst." },
+            { titel: "Waarom de andere opties fout zijn", tekst: "Politieke besluiten: niet de hoofdreden, ministers gebruiken het slechts als hulpmiddel. Overbezetting: tegengesteld — Japan heeft juist krimp, niet overbezetting. Rekenfouten: niet genoemd in tekst." },
           ],
           woorden: [
             { woord: "workforce", uitleg: "Alle werkenden in een land/bedrijf — beroepsbevolking." },
@@ -107,12 +107,12 @@ const steps = [
           ],
           theorie: "Toets-truc bij waarom-vragen Engels: zoek in de tekst woorden als **hopes that / because / in order to / so that / to address**. Daar staat de oorzaak/het doel. Dan parafraseer naar de Nederlandse opties.",
           voorbeelden: [
-            { type: "stap", tekst: "Sleutel-zin alinea 3 → *'address the problem of shrinking population'* → personeelstekort door vergrijzing → C." },
+            { type: "stap", tekst: "Sleutel-zin alinea 3 → *'address the problem of shrinking population'* → personeelstekort door vergrijzing." },
             { type: "feit", tekst: "Japan heeft een van de oudste bevolkingen ter wereld: 29% is ouder dan 65 (NL: 20%, VS: 17%)." },
           ],
           basiskennis: [{ onderwerp: "Vergrijzing wereldwijd", uitleg: "Vergrijzing speelt in Japan, NL, Duitsland, Italië, Zuid-Korea — de rijke landen. Veel armere landen hebben juist jonge bevolking. AI/robots als oplossing: nog experimenteel." }],
           niveaus: {
-            basis: "Personeelstekort door vergrijzing → C.",
+            basis: "Personeelstekort door vergrijzing.",
             simpeler: "Japan vergrijst snel → te weinig werkenden → AI vult het gat.",
             nogSimpeler: "Vergrijzing",
           },
@@ -141,7 +141,7 @@ const steps = [
           "Geen claim over fabricage-vakmanschap — wel detail over de jurk maar geen 'showing off skill'.",
           "Mattel zegt nergens iets over steun voor de koninklijke familie. Lees alinea 3: waarvoor is de Tribute Collection bedoeld?",
         ],
-        explanation: "Alinea 3: '*The Queen doll forms part of Barbie's Tribute Collection, which launched in 2021 to celebrate visionary individuals with an outstanding impact and legacy within society.*' De Queen wordt eerbetoond als visionary individual met outstanding impact — dat is precies optie A ('influential and important person').",
+        explanation: "Alinea 3: '*The Queen doll forms part of Barbie's Tribute Collection, which launched in 2021 to celebrate visionary individuals with an outstanding impact and legacy within society.*' De Queen wordt eerbetoond als visionary individual met outstanding impact — dat is precies 'influential and important person'.",
         examenBron: BRON_LABEL(33),
         bronLink: BRON_LINK,
         bronTekst: tekst10,
@@ -155,7 +155,7 @@ const steps = [
           stappen: [
             { titel: "Vraag = motief van Mattel", tekst: "*'Why did Mattel make...?'* → reden / doel. Niet 'wanneer' of 'hoe' — alleen het waarom-motief." },
             { titel: "Zoek het motief in de tekst", tekst: "Alinea 3 zegt het letterlijk: *'Tribute Collection ... to celebrate visionary individuals with an outstanding impact and legacy within society'*. Dat zinnetje is het hele antwoord." },
-            { titel: "Parafraseer naar Nederlands → optie A", tekst: "**Visionary + outstanding impact + legacy** = **invloedrijk en belangrijk persoon**. Optie A is een directe samenvatting van die zin." },
+            { titel: "Parafraseer naar de opties", tekst: "**Visionary + outstanding impact + legacy** = **invloedrijk en belangrijk persoon**. Het juiste antwoord is een directe samenvatting van die zin." },
           ],
           woorden: [
             { woord: "to honour", uitleg: "Eerbetoon geven, vereren." },
@@ -168,7 +168,7 @@ const steps = [
           voorbeelden: [
             { type: "stap", tekst: "De naam zegt het al: 'Tribute Collection' = eerbetoon-collectie. Alle poppen in die reeks eren 'visionary individuals'." },
           ],
-          basiskennis: [{ onderwerp: "Wegstrepen", uitleg: "B (profit) en C (manufacturing skill) staan niet in de tekst. D (royal family support) is een politiek statement dat Mattel zorgvuldig niet maakt." }],
+          basiskennis: [{ onderwerp: "Wegstrepen", uitleg: "Profit en manufacturing skill staan niet in de tekst. Royal family support is een politiek statement dat Mattel zorgvuldig niet maakt." }],
           niveaus: {
             basis: "Eerbetoon aan invloedrijk persoon.",
             simpeler: "Tribute Collection viert visionary individuals = invloedrijke mensen. Queen = invloedrijk.",
@@ -199,7 +199,7 @@ const steps = [
           "Staat er iets over geheime informatie of militaire roem? Lees alinea 3: wat voor brieven waren het meestal?",
           "Over werkwijzen van de marine staat niets in de tekst. Aan wie waren de brieven gericht?",
         ],
-        explanation: "Alinea 3: *'The letters — most of them everyday correspondence between family, friends and loved ones.*' De kern van het verhaal is **alledaagse berichten** uit een historisch belangrijke tijd (WO2 — 1941). Optie B vat dit perfect samen.",
+        explanation: "Alinea 3: *'The letters — most of them everyday correspondence between family, friends and loved ones.*' De kern van het verhaal is **alledaagse berichten** uit een historisch belangrijke tijd (WO2 — 1941). Het juiste antwoord vat dit perfect samen.",
         examenBron: BRON_LABEL(25),
         bronLink: BRON_LINK,
         bronTekst: tekst8,
@@ -213,7 +213,7 @@ const steps = [
           stappen: [
             { titel: "Subtitel = hoofdgedachte-in-1-zin", tekst: "Een goede subtitel vat de **hoofdgedachte** samen — niet een detail uit één alinea. Vraag: wat is de essentie van dit verhaal?" },
             { titel: "Wat zijn deze brieven?", tekst: "**Everyday correspondence** — gewone post tussen familie + vrienden + geliefden. Geen geheime documenten. Tegelijk: tijdens WO2 (= historisch belangrijke tijd)." },
-            { titel: "Welke optie combineert beide?", tekst: "Optie B: **'Everyday messages written in times of historical importance'**. 'Everyday' = alledaags (past bij 'everyday correspondence'). 'Historical importance' = WO2 (past bij 1941, U-boat torpedo). Perfecte match." },
+            { titel: "Welke optie combineert beide?", tekst: "Het juiste antwoord: **'Everyday messages written in times of historical importance'**. 'Everyday' = alledaags (past bij 'everyday correspondence'). 'Historical importance' = WO2 (past bij 1941, U-boat torpedo). Perfecte match." },
           ],
           woorden: [
             { woord: "subtitle", uitleg: "Ondertitel — vat artikel samen." },
@@ -225,10 +225,10 @@ const steps = [
           voorbeelden: [
             { type: "stap", tekst: "Wartime brieven aan 'darling Iris' = liefdesbrief = alledaags (niet militair geheim). Tegelijk: 1941 WO2 = historisch belangrijke tijd." },
           ],
-          basiskennis: [{ onderwerp: "Wegstrepen", uitleg: "A: geen youngsters in tekst. C: brieven waren NIET classified. D: geen nieuwe naval routines onthuld — alleen brieven gevonden." }],
+          basiskennis: [{ onderwerp: "Wegstrepen", uitleg: "Youngsters: niet in tekst. Classified: brieven waren NIET geheim. Naval routines: geen nieuwe naval routines onthuld — alleen brieven gevonden." }],
           niveaus: {
-            basis: "B (alledaagse berichten in historisch belangrijke tijd).",
-            simpeler: "Brieven = alledaags. Tijd = WO2 historisch. B combineert beide.",
+            basis: "Alledaagse berichten in historisch belangrijke tijd.",
+            simpeler: "Brieven = alledaags. Tijd = WO2 historisch. Het juiste antwoord combineert beide.",
             nogSimpeler: "Everyday + historical",
           },
         },
@@ -256,7 +256,7 @@ const steps = [
           "Geen analyse van Ierlands wedstrijd-deelname of winst. Big Seven Travel = magazine-erkenning, geen competitie met prijzen.",
           "Puffins worden genoemd, maar gaat de tekst echt over natuurbescherming? Lees de eerste zin nog eens.",
         ],
-        explanation: "De tekst zegt: *'ONE OF Ireland's most spectacular landmarks has gained international recognition for its sheer beauty.*' Vervolgens: Big Seven Travel noemt het 'een van de mooiste film-locaties wereldwijd'. De essentie: Ierse schoonheid + wereldwijde erkenning. Optie B vat dat samen.",
+        explanation: "De tekst zegt: *'ONE OF Ireland's most spectacular landmarks has gained international recognition for its sheer beauty.*' Vervolgens: Big Seven Travel noemt het 'een van de mooiste film-locaties wereldwijd'. De essentie: Ierse schoonheid + wereldwijde erkenning. Het juiste antwoord vat dat samen.",
         examenBron: BRON_LABEL(40),
         bronLink: BRON_LINK,
         bronTekst: tekst13,
@@ -270,7 +270,7 @@ const steps = [
           stappen: [
             { titel: "Vraag = hoofdgedachte + toon", tekst: "'Best describes' = wat is de essentie + houding van de schrijver? Niet één detail." },
             { titel: "Wat is de toon?", tekst: "**'gained international recognition for its sheer beauty'** + **'most beautiful movie locations in the world'**. Beide positief — schrijver **viert** (celebrates) Ierlands schoonheid." },
-            { titel: "Waarom B en niet A/C/D?", tekst: "A 'analyses' = neutraal/onderzoekend — past niet, tekst is enthousiast. C 'profit' = geld-aspect — staat niet in tekst. D 'protects flora and fauna' = natuurbescherming — staat niet centraal." },
+            { titel: "Waarom niet de andere opties?", tekst: "'Analyses' = neutraal/onderzoekend — past niet, tekst is enthousiast. 'Profit' = geld-aspect — staat niet in tekst. 'Protects flora and fauna' = natuurbescherming — staat niet centraal." },
           ],
           woorden: [
             { woord: "celebrate", uitleg: "Vieren, prijzen (positief)." },
@@ -286,7 +286,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Toon-werkwoorden Engels", uitleg: "celebrate (positief) > praise (positief) > appreciate (positief) > analyse (neutraal) > criticise (negatief) > question (twijfelen). Van enthousiast aflopend tot negatief." }],
           niveaus: {
             basis: "Viert Ierse schoonheid wereldwijd.",
-            simpeler: "Toon = enthousiast positief. Optie B 'celebrates ... appreciated worldwide' past.",
+            simpeler: "Toon = enthousiast positief. 'Celebrates ... appreciated worldwide' past.",
             nogSimpeler: "Celebrates",
           },
         },
@@ -314,7 +314,7 @@ const steps = [
           "Geen 'purchased' — ze stal ze (took bits). Ook geen melding dat ze geen historische waarde hebben.",
           "Zoekt ze juist voorwerpen van gewelddadige gebeurtenissen? Lees wat ze schrijft over wat er na haar terugkeer gebeurde.",
         ],
-        explanation: "Alinea 2: *'After returning to Canada with them, she says she was plagued by misfortune, illness and financial struggles, hardships she attributes in part to the tiles she brought back.*' **Attributes hardships to the tiles** = geeft de tegels (deels) de schuld van haar tegenslagen. Tegels gepikt uit Pompeii = artifacts pinched from historic site. Optie A klopt.",
+        explanation: "Alinea 2: *'After returning to Canada with them, she says she was plagued by misfortune, illness and financial struggles, hardships she attributes in part to the tiles she brought back.*' **Attributes hardships to the tiles** = geeft de tegels (deels) de schuld van haar tegenslagen. Tegels gepikt uit Pompeii = artifacts pinched from historic site. Dat klopt.",
         examenBron: BRON_LABEL(8),
         bronLink: BRON_LINK,
         bronTekst: tekst4,
@@ -326,11 +326,11 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Sleutel-zin alinea 2", tekst: "*'plagued by misfortune, illness and financial struggles, hardships she **attributes** in part to the tiles she brought back'*. Attributes = geeft de schuld aan. Ze gelooft dat de tegels haar ongeluk veroorzaakten." },
-            { titel: "Pinched = gestolen (informeel)", tekst: "**To pinch** in informeel Engels = stelen/jatten. Niet 'knijpen'. Nicole nam (= pinched) artifacts uit Pompeii (= historic site). Optie A's woordkeus klopt." },
-            { titel: "Andere opties uitsluiten", tekst: "B: geen guilt over verkoop. C: geen ontdekking dat ze waardeloos zijn — ze stuurde ze terug. D: geen interesse in violent events." },
+            { titel: "Pinched = gestolen (informeel)", tekst: "**To pinch** in informeel Engels = stelen/jatten. Niet 'knijpen'. Nicole nam (= pinched) artifacts uit Pompeii (= historic site). De woordkeus 'pinched from a historic site' klopt dus." },
+            { titel: "Andere opties uitsluiten", tekst: "Verkoop: geen guilt over verkoop. Waardeloos: geen ontdekking dat ze waardeloos zijn — ze stuurde ze terug. Violent events: geen interesse in violent events." },
           ],
           woorden: [
-            { woord: "to pinch (slang)", uitleg: "Stelen / jatten (informeel BE)." },
+            { woord: "to pinch (slang)", uitleg: "Stelen / jatten (informeel Brits-Engels)." },
             { woord: "to attribute X to Y", uitleg: "X toeschrijven aan Y / Y de schuld geven van X." },
             { woord: "misfortune", uitleg: "Pech / tegenslag." },
             { woord: "artifact", uitleg: "Voorwerp uit het verleden — archeologisch object." },
@@ -340,7 +340,7 @@ const steps = [
             { type: "stap", tekst: "Nicole's letter: 'I took a piece of history captured in a time with so much negative energy attached to it' — zij denkt dat de negatieve energie haar tegenslag bracht." },
             { type: "feit", tekst: "Bij de uitbarsting van de Vesuvius (79 n.Chr.) kwamen duizenden mensen om in Pompeii en omgeving. De 'curse of Pompeii' is een bijgeloof — er zijn meer toeristen die meegenomen stukjes terugsturen omdat ze denken dat die pech brengen." },
           ],
-          basiskennis: [{ onderwerp: "Wegstrepen", uitleg: "Optie A is enige die letterlijk uit alinea 2 volgt (attributes hardships to tiles). Andere opties zijn vervormingen of niet-genoemde feiten." }],
+          basiskennis: [{ onderwerp: "Wegstrepen", uitleg: "Het juiste antwoord is het enige dat letterlijk uit alinea 2 volgt (attributes hardships to tiles). Andere opties zijn vervormingen of niet-genoemde feiten." }],
           niveaus: {
             basis: "Geeft tegels schuld voor pech.",
             simpeler: "Nicole geloofde dat de gestolen tegels haar ongeluk brachten — bijgeloof = curse.",
@@ -371,7 +371,7 @@ const steps = [
           null,
           "Niet onbeschoft / rude — wordt er iemand beledigd of aangevallen?",
         ],
-        explanation: "De zin *'good news for absolutely no-one'* is een **ironische grap** — uiteraard is meer toxiciteit van een gevaarlijke spin slecht nieuws voor iedereen. De schrijver gebruikt ironie (= playful) om het serieuze onderwerp luchtig te brengen. Optie C 'playful' (= speels, grappig) klopt.",
+        explanation: "De zin *'good news for absolutely no-one'* is een **ironische grap** — uiteraard is meer toxiciteit van een gevaarlijke spin slecht nieuws voor iedereen. De schrijver gebruikt ironie (= playful) om het serieuze onderwerp luchtig te brengen. 'Playful' (= speels, grappig) klopt.",
         examenBron: BRON_LABEL(4),
         bronLink: BRON_LINK,
         bronTekst: tekst3,

@@ -49,7 +49,7 @@ const steps = [
         q: "Hoeveel stippen zijn dit: **● ● ● ● ●**?",
         options: ["5","4","6","10"],
         answer: 0,
-        wrongHints: [null, "Tel nog eens: 1-2-3-4-**5**.", "Te veel — er staan er minder.", "Veel te veel."],
+        wrongHints: [null, "Bijna — tel nog eens, en wijs elke stip maar één keer aan.", "Te veel — er staan er minder.", "Veel te veel."],
         uitlegPad: {
           stappen: [{ titel: "Tellen", tekst: "Tel elke stip met je vinger: 1, 2, 3, 4, 5. Vijf stippen → cijfer 5." }],
           niveaus: { basis: "5 stippen.", simpeler: "Tel mee: 1-2-3-4-5.", nogSimpeler: "5" },
@@ -185,7 +185,7 @@ const steps = [
         q: "Wat is het **verschil** tussen **8 en 3**?",
         options: ["5","11","2","6"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is 8 + 3.", "Te weinig — bijna goed maar tel nog eens.", "Te veel — dat is 8 - 2."],
+        wrongHints: [null, "Niet — dat is 8 + 3.", "Te weinig — tel eens van 3 naar 8: hoeveel stappen zijn dat?", "Te veel — dat is 8 - 2."],
         uitlegPad: {
           stappen: [{ titel: "Verschil = aftrekken", tekst: "**Verschil** = groot min klein = 8 - 3 = **5**. Dus: 'wat is het verschil tussen X en Y?' altijd aftrekken." }],
           woorden: [{ woord: "verschil", uitleg: "Hoeveel meer/minder de ene is dan de ander." }],
@@ -297,7 +297,7 @@ const steps = [
         q: "**17 - 9** = ?",
         options: ["8","9","7","10"],
         answer: 0,
-        wrongHints: [null, "Te veel — je hebt te weinig afgetrokken.", "Te weinig — je hebt te veel afgetrokken.", "Te veel — controleer: is 17-7 gelijk aan 9?"],
+        wrongHints: [null, "Te veel — je hebt te weinig afgetrokken.", "Te weinig — je hebt te veel afgetrokken.", "Te veel — je hebt 7 afgetrokken in plaats van 9."],
         uitlegPad: {
           stappen: [{ titel: "Familie-som", tekst: "17 - 9 = **8** (want 9 + 8 = 17). Of: 17 - 7 = 10, 10 - 2 = 8." }],
           niveaus: { basis: "8.", simpeler: "17-9 = 8.", nogSimpeler: "8" },
@@ -349,7 +349,7 @@ const steps = [
       "Genoeg gedaan? Stoppen mag altijd.",
     interactiveComponent: makeRekenOefenRonde({ soort: ["optellen", "aftrekken"], aantal: 10, totMax: 20, emoji: "🎈", meervoud: "sommen", jong: true }),
     checks: [
-      { q: "7 + 6 = ?", options: ["13", "12", "14", "11"], answer: 0, wrongHints: [null, "Bijna — tel er nog eentje bij.", "Eentje te veel.", "Tel nog eens rustig."] },
+      { q: "7 + 6 = ?", options: ["13", "12", "14", "11"], answer: 0, wrongHints: [null, "Te weinig — tel nog eens verder vanaf 7.", "Te veel — tel nog eens precies.", "Tel nog eens rustig."] },
     ],
   },
 ];

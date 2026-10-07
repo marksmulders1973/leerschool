@@ -42,7 +42,7 @@ const steps = [
       { q: "Wat betekent **Goodbye**?", options: ["Tot ziens", "Hallo", "Hoe gaat het?", "Dank je"], answer: 0, wrongHints: [null, "Niet — dat is 'Hello'.", "Niet — vraag-zin.", "Dat is 'Thanks'."] },
       { q: "Hoe zeg je *'Hoe gaat het?'* in Engels?", options: ["How are you?", "Where are you?", "What is your name?", "How old are you?"], answer: 0, wrongHints: [null, "Waar ben je?", "Wat is je naam?", "Hoe oud ben je?"] },
       { q: "Wat antwoord je op 'How are you?'", options: ["I'm fine, thanks", "Hello", "Goodbye", "Yes"], answer: 0, wrongHints: [null, "Niet — antwoord op een vraag.", "Tegengestelde.", "Te kort."] },
-      { q: "Wat is *'My name is Tom'*?", options: ["Mijn naam is Tom", "Ik ben Tom", "Hallo Tom", "Tot ziens Tom"], answer: 0, wrongHints: [null, "Klopt qua betekenis maar letterlijk 'My name is'.", "Geen begroeting.", "Niet."] },
+      { q: "Wat is *'My name is Tom'*?", options: ["Mijn naam is Tom", "Zijn naam is Tom", "Hallo Tom", "Tot ziens Tom"], answer: 0, wrongHints: [null, "Kijk naar 'my' — is dat 'zijn'?", "Geen begroeting.", "Niet."] },
     ],
   },
   {
@@ -86,7 +86,7 @@ const steps = [
           },
         },
       },
-      { q: "Wat is **40** in Engels?", options: ["forty", "fourteen", "four", "fourty"], answer: 0, wrongHints: [null, "14 = fourteen (-teen-achtervoegsel).", "4 = four (de basisvorm zonder achtervoegsel).", "Veel mensen schrijven dit fout — Engels schrijft 'forty' ZONDER de u. Uitzondering!"],
+      { q: "Wat is **40** in Engels?", options: ["forty", "fourteen", "four", "fourty"], answer: 0, wrongHints: [null, "14 = fourteen (-teen-achtervoegsel).", "4 = four (de basisvorm zonder achtervoegsel).", "Let op de spelling: bij 40 gaat het anders dan bij four. Welke letter valt weg?"],
         uitlegPad: {
           stappen: [
             { titel: "20-90 = -ty-patroon", tekst: "Veelvouden van 10 eindigen op **-ty**: twenty (20), thirty (30), **forty (40)**, fifty (50), sixty (60), seventy (70), eighty (80), ninety (90)." },

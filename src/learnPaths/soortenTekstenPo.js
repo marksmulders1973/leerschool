@@ -373,7 +373,7 @@ const steps = [
         q: "Een folder die je een nieuwe telefoon wil laten kopen — welk soort tekst?",
         options: ["betogend (overtuigen)", "informatief (laten weten)", "instructief (laten doen)", "verhalend (vermaken)"],
         answer: 0,
-        wrongHints: [null, "Een folder wil je niet alleen informeren maar overhalen tot kopen.", "Er staan geen stappen in.", "Het is geen verhaal."],
+        wrongHints: [null, "Wil een folder je alleen iets laten weten, of wil hij nog iets anders van je?", "Er staan geen stappen in.", "Het is geen verhaal."],
         uitlegPad: {
           stappen: [{ titel: "Laten kopen = overtuigen", tekst: "Een folder wil je overhalen iets te kopen → betogende (overtuigende) tekst." }],
           niveaus: {

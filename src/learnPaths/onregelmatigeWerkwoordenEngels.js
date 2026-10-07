@@ -99,12 +99,12 @@ const steps = [
       },
       {
         q: "Wat is de past simple van **work**?",
-        options: ["worked", "wored", "wrought", "worken"],
+        options: ["worked", "wored", "werked", "worken"],
         answer: 0,
         wrongHints: [
           null,
-          "De stam blijft heel — alleen -ed erachter.",
-          "Bestaat als oud-Engels woord, maar niet de normale vorm.",
+          "Kijk goed: blijft de stam van work heel?",
+          "Bestaat niet — de klinker van work verandert niet.",
           "Geen Engelse vervoeging — het werkt anders.",
         ],
         uitlegPad: {
@@ -244,7 +244,7 @@ const steps = [
         wrongHints: [
           null,
           "Put is onregelmatig — geen -ed erachter.",
-          "Niet bestaand werkwoord.",
+          "Pat is een ander werkwoord (aaien) — geen vorm van put.",
           "Geen Engelse vervoeging.",
         ],
         uitlegPad: {
@@ -354,7 +354,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Klassieke val! Na 'has' moet V3 — en V3 = come (gelijk aan V1), niet 'came'.",
+          "Klassieke val! Na 'has' moet V3 — en bij come is V3 níét gelijk aan V2.",
           "V1 voor he/she/it in het heden. Hier staat 'has' — dan V3.",
           "Dat is de -ing-vorm. Past niet na 'has'.",
         ],
@@ -373,7 +373,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dat is V1 én V3. V2 verandert: r__n.",
+          "Dat is V1 én V3. V2 heeft een andere klinker.",
           "Run is onregelmatig — geen -ed.",
           "Niet bestaand woord.",
         ],
@@ -405,7 +405,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Bijna! Dat is V2. V3 heeft de u-klank.",
+          "Bijna! Dat is V2. Welke klinker hoort bij V3 in het rijtje i → a → …?",
           "Swim is onregelmatig.",
           "Dat is de -ing-vorm, niet V3.",
         ],
@@ -481,7 +481,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Bijna — dat is V2. V3 heeft -en erachter.",
+          "Bijna — dat is V2. Welke vorm komt er na have?",
           "Break is onregelmatig.",
           "Geen -ed bij onregelmatige werkwoorden.",
         ],
@@ -666,7 +666,7 @@ ${["be / am-is-are", "have / has", "do / does", "go / goes"].map((v, i) => `
         answer: 0,
         wrongHints: [
           null,
-          "V2 enkelvoud — past niet na 'have'. V3 van be is 'been'.",
+          "V2 enkelvoud — past niet na 'have'. Welke vorm is V3 van be?",
           "V2 meervoud — past niet na 'have'.",
           "V1 — niet juist na 'have'.",
         ],

@@ -44,7 +44,7 @@ const steps = [
       },
       {
         q: "Welk product was vooral **winstgevend** voor de VOC?",
-        options: ["Specerijen (nootmuskaat, kruidnagel, peper)","IJzer","Wol","Tabak"],
+        options: ["Specerijen","IJzer","Wol","Tabak"],
         answer: 0,
         wrongHints: [null, "Geen Aziatisch hoofdproduct.", "Niet uit Indonesië afkomstig.", "Wel handel maar geen kern-VOC-product."],
         uitlegPad: {
@@ -95,7 +95,7 @@ const steps = [
   {
     title: "Cultuurstelsel + ethische politiek",
     explanation:
-      "Tussen 1816-1942 had Nederland Indonesië als kolonie. Twee belangrijke perioden voor het VMBO-examen:\n\n**Cultuurstelsel (1830-1870)**:\n• Bedacht door gouverneur **Johannes van den Bosch** in 1830.\n• Indonesische boeren werden **gedwongen** om 20% van hun grond te gebruiken voor **export-gewassen** (koffie, suiker, indigo, thee).\n• Opbrengst ging naar Nederlandse staat — leverde het **Indisch batig slot** op (= overschot voor NL).\n• Met dit geld: bouw NL-spoorwegen, Schipholpolder, terugbetalen staatsschuld na Belgische opstand.\n• Nadeel voor Indonesië: hongersnoden, geen eigen voedsel-grond, dwangarbeid.\n\n**Multatuli 'Max Havelaar' (1860)**:\n• Pseudoniem van **Eduard Douwes Dekker** — voormalig assistent-resident op Java.\n• Roman als aanklacht tegen misbruik in cultuurstelsel.\n• Bekend citaat: 'De Javaan wordt mishandeld.'\n• Wakkerde publiek debat in NL aan over koloniale wreedheid.\n\n**Ethische politiek (1901-1942)**:\n• Koningin **Wilhelmina** in troonrede 1901: *'Nederland heeft een zedelijke roeping te vervullen.'*\n• Drie speerpunten: **Onderwijs, Irrigatie, Emigratie** (van Java naar Sumatra om bevolkingsdruk te verminderen).\n• In praktijk: nog steeds beperkt — alleen kleine inheemse elite kreeg toegang tot onderwijs.\n• Wel: opkomst nationalistische beweging vanuit deze elite (**Boedi Oetomo** 1908, Soekarno's PNI 1927).",
+      "Tussen 1816-1942 had Nederland Indonesië als kolonie. Twee belangrijke perioden voor het VMBO-examen:\n\n**Cultuurstelsel (1830-1870)**:\n• Bedacht door gouverneur **Johannes van den Bosch** in 1830.\n• Indonesische boeren werden **gedwongen** om 20% van hun grond te gebruiken voor **export-gewassen** (koffie, suiker, indigo, thee).\n• Opbrengst ging naar Nederlandse staat — leverde het **Indisch batig slot** op (= overschot voor NL).\n• Met dit geld: bouw NL-spoorwegen, drooglegging Haarlemmermeer, terugbetalen staatsschuld na Belgische opstand.\n• Nadeel voor Indonesië: hongersnoden, geen eigen voedsel-grond, dwangarbeid.\n\n**Multatuli 'Max Havelaar' (1860)**:\n• Pseudoniem van **Eduard Douwes Dekker** — voormalig assistent-resident op Java.\n• Roman als aanklacht tegen misbruik in cultuurstelsel.\n• Bekend citaat: 'De Javaan wordt mishandeld.'\n• Wakkerde publiek debat in NL aan over koloniale wreedheid.\n\n**Ethische politiek (1901-1942)**:\n• Koningin **Wilhelmina** in troonrede 1901: *'Nederland heeft een zedelijke roeping te vervullen.'*\n• Drie speerpunten: **Onderwijs, Irrigatie, Emigratie** (van Java naar Sumatra om bevolkingsdruk te verminderen).\n• In praktijk: nog steeds beperkt — alleen kleine inheemse elite kreeg toegang tot onderwijs.\n• Wel: opkomst nationalistische beweging vanuit deze elite (**Boedi Oetomo** 1908, Soekarno's PNI 1927).",
     checks: [
       {
         q: "Wie bedacht het **Cultuurstelsel** in 1830?",
@@ -110,20 +110,20 @@ const steps = [
       },
       {
         q: "Wat is het **batig slot**?",
-        options: ["Overschot uit Indonesië voor de Nederlandse staat","Cultuurstelsel-handboek","Indonesische muziek-stijl","Belasting-categorie"],
+        options: ["Winst voor de Nederlandse staat","Cultuurstelsel-handboek","Indonesische muziek-stijl","Belasting-categorie"],
         answer: 0,
         wrongHints: [null, "Niet — geen handboek.", "Niet — geen muziek.", "Niet — het is geen soort belasting, maar een uitkomst van de koloniale boekhouding."],
         uitlegPad: {
           stappen: [{ titel: "Batig slot = winst", tekst: "**Batig slot** = boekhoud-term voor 'wat overblijft' (overschot) na aftrek van kosten. In NL-koloniale context: het Indonesische geld dat overbleef nadat de kolonie-overheid haar kosten betaald had — ging naar Den Haag." }],
           woorden: [{ woord: "batig slot", uitleg: "Overschot in een begroting/kassa — positief saldo." }],
           theorie: "Tussen 1830-1870 leverde batig slot ~30% van de Nederlandse staats-inkomsten op. Critici noemden NL daarom 'parasitair' op kolonie.",
-          voorbeelden: [{ type: "feit", tekst: "Met batig slot werden o.a. NL-spoorwegen + Schiphol-droogmaking betaald." }],
+          voorbeelden: [{ type: "feit", tekst: "Met batig slot werden o.a. NL-spoorwegen + de drooglegging van de Haarlemmermeer betaald." }],
           niveaus: { basis: "Overschot voor NL.", simpeler: "Batig slot = winst die naar NL ging", nogSimpeler: "Winst voor NL" },
         },
       },
       {
         q: "*Max Havelaar* (1860) is geschreven door:",
-        options: ["Multatuli (Eduard Douwes Dekker)","Theo Thijssen","Annie M.G. Schmidt","Hella Haasse"],
+        options: ["Multatuli","Theo Thijssen","Annie M.G. Schmidt","Hella Haasse"],
         answer: 0,
         wrongHints: [null, "Niet — andere 20e-eeuwse auteur ('Kees de jongen').", "Niet — kinderboeken later (Pluk e.d.).", "Wel over Indonesië ('Oeroeg' 1948), maar niet Max Havelaar."],
         uitlegPad: {
@@ -163,7 +163,7 @@ const steps = [
   {
     title: "Japanse bezetting 1942-1945",
     explanation:
-      "Tijdens **Tweede Wereldoorlog** veroverde Japan in maart 1942 in 3 maanden tijd heel Nederlands-Indië. De Nederlandse koloniale macht stortte in.\n\n**Hoe het ging**:\n• 10 januari 1942: Japan valt aan via Borneo + Celebes.\n• 8 maart 1942: NL-overgave bij **Kalidjati** — generaal Ter Poorten capituleert.\n• Nederlandse + Brits-Indische militairen + burgers (~100.000) gaan **Japanse kampen** in.\n• Onmenselijke omstandigheden: dwangarbeid Birma-spoorweg, mishandeling, honger.\n• ~20.000 Nederlanders sterven in kampen + heel veel Indonesiërs door dwangarbeid (romusha, ~4 miljoen tewerkgesteld).\n\n**Effect op de kolonie**:\n• **Mythe van de witte overmacht doorbroken**: Aziatische macht versloeg Europeanen in 3 maanden.\n• Japan moedigde aanvankelijk Indonesisch nationalisme aan om bevolking tegen NL te keren.\n• **Soekarno + Hatta** kregen meer ruimte om Indonesische beweging te organiseren.\n• Vrouwen + meisjes gedwongen als **'troostmeisjes'** in Japanse legerbordelen — ook NL-vrouwen.\n\n**Augustus 1945**:\n• 6 + 9 augustus: VS gooien atoombommen op Hiroshima + Nagasaki.\n• 15 augustus: Japan capituleert (radiotoespraak van keizer Hirohito).\n• Plotseling **machts-vacuüm** in Indonesië — NL is nog niet terug, Japan vertrekt.",
+      "Tijdens **Tweede Wereldoorlog** veroverde Japan in maart 1942 in 3 maanden tijd heel Nederlands-Indië. De Nederlandse koloniale macht stortte in.\n\n**Hoe het ging**:\n• 10 januari 1942: Japan valt aan via Borneo + Celebes.\n• 8 maart 1942: NL-overgave bij **Kalidjati** — generaal Ter Poorten capituleert.\n• Nederlandse + Indische militairen + burgers (~100.000) gaan **Japanse kampen** in.\n• Onmenselijke omstandigheden: dwangarbeid Birma-spoorweg, mishandeling, honger.\n• ~20.000 Nederlanders sterven in kampen + heel veel Indonesiërs door dwangarbeid (romusha, ~4 miljoen tewerkgesteld).\n\n**Effect op de kolonie**:\n• **Mythe van de witte overmacht doorbroken**: Aziatische macht versloeg Europeanen in 3 maanden.\n• Japan moedigde aanvankelijk Indonesisch nationalisme aan om bevolking tegen NL te keren.\n• **Soekarno + Hatta** kregen meer ruimte om Indonesische beweging te organiseren.\n• Vrouwen + meisjes gedwongen als **'troostmeisjes'** in Japanse legerbordelen — ook NL-vrouwen.\n\n**Augustus 1945**:\n• 6 + 9 augustus: VS gooien atoombommen op Hiroshima + Nagasaki.\n• 15 augustus: Japan capituleert (radiotoespraak van keizer Hirohito).\n• Plotseling **machts-vacuüm** in Indonesië — NL is nog niet terug, Japan vertrekt.",
     checks: [
       {
         q: "In welk jaar viel **Japan** Nederlands-Indië binnen?",
@@ -193,7 +193,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — de uitbuiters.", "Niet — ambtenaren werden grotendeels behouden.", "Niet — krijgsgevangenen zaten in aparte kampen en heetten geen 'romusha'."],
         uitlegPad: {
-          stappen: [{ titel: "Romusha = dwangarbeider", tekst: "**Romusha** = Japans voor 'arbeider'. Tijdens Japanse bezetting werden ~4 miljoen Indonesiërs gedwongen voor de Japanners te werken (oa Birma-spoorweg, kustverdediging). ~2 miljoen kwamen om. Een **vergeten genocide** in NL-geschiedenisles." }],
+          stappen: [{ titel: "Romusha = dwangarbeider", tekst: "**Romusha** = Japans voor 'arbeider'. Tijdens Japanse bezetting werden ~4 miljoen Indonesiërs gedwongen voor de Japanners te werken (oa Birma-spoorweg, kustverdediging). ~2 miljoen kwamen om. Een vaak **vergeten** deel van de NL-geschiedenisles." }],
           woorden: [{ woord: "romusha", uitleg: "Indonesische dwangarbeider tijdens Japanse bezetting WO2." }],
           theorie: "Belangrijk voor balans: ~20.000 Nederlanders + ~2 miljoen Indonesiërs slachtoffer Japanse bezetting. Schade aan Indonesische bevolking veel groter.",
           niveaus: { basis: "Gedwongen dwangarbeiders.", simpeler: "Romusha = Indonesische slaaf-arbeiders Japan", nogSimpeler: "Dwangarbeider" },
@@ -212,7 +212,7 @@ const steps = [
       },
       {
         q: "Welk effect had Japanse bezetting op **NL-koloniale prestige**?",
-        options: ["Doorbroken — Aziaten konden Europeanen verslaan","Versterkt","Geen","Verdwenen volledig"],
+        options: ["Sterk verzwakt","Versterkt","Geen","Verdwenen volledig"],
         answer: 0,
         wrongHints: [null, "Niet — Japanse overmacht was juist een schok.", "Veel effect — psychologische omslag.", "Te sterk — Nederland probeerde na 1945 zelfs nog terug te keren."],
         uitlegPad: {
@@ -257,7 +257,7 @@ const steps = [
         q: "Wanneer erkende Nederland **officieel de soevereiniteit** van Indonesië?",
         options: ["27 december 1949","17 augustus 1945","15 augustus 2005","20 mei 1908"],
         answer: 0,
-        wrongHints: [null, "Onafhankelijkheidsverklaring zelf — NL erkende nog niet.", "Bijna — 60 jaar later sprak NL het uit als symbolische erkenning.", "Niet relevant."],
+        wrongHints: [null, "Onafhankelijkheidsverklaring zelf — NL erkende nog niet.", "In 2005 aanvaardde Nederland 17 augustus 1945 alleen politiek en moreel — wanneer was de officiële overdracht?", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Soevereiniteitsoverdracht Amsterdam", tekst: "**27 december 1949**: in **Paleis op de Dam, Amsterdam**, tekent **koningin Juliana** de overdracht. Sindsdien is Indonesië in NL-ogen officieel onafhankelijk. Indonesië zelf: officiële datum blijft 17-8-1945. **2005**: minister Ben Bot erkent symbolisch 17 augustus 1945 als juiste datum." }],
           theorie: "Spanning: NL viert 27-12-1949, Indonesië 17-8-1945. Verschil ~4 jaar van oorlog daartussen.",
@@ -318,9 +318,9 @@ const steps = [
       },
       {
         q: "Wie was de eerste **president** van Indonesië (1945-1967)?",
-        options: ["Soekarno","Hatta","Soeharto","Soeharno"],
+        options: ["Soekarno","Hatta","Soeharto","Habibie"],
         answer: 0,
-        wrongHints: [null, "Hatta was vicepresident.", "Soeharto = tweede president (1967-1998), na een machtsgreep.", "Bestaat niet — verwarring met Soekarno + Soeharto."],
+        wrongHints: [null, "Hatta was vicepresident.", "Soeharto = tweede president (1967-1998), na een machtsgreep.", "Habibie werd pas in 1998 president, na Soeharto."],
         uitlegPad: {
           stappen: [{ titel: "Soekarno = 1e, Soeharto = 2e", tekst: "**Soekarno** = eerste president 1945-1967. **Soeharto** = tweede president 1967-1998, na coup. Lijken op elkaar in naam maar zijn verschillend." }],
           niveaus: { basis: "Soekarno.", simpeler: "Eerste president = Soekarno", nogSimpeler: "Soekarno" },

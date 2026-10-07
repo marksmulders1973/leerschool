@@ -54,7 +54,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "−3 is laag, maar −10 is **nog lager**. Hoe meer naar links op de getallenlijn, hoe lager.",
+          "−3 is laag, maar staat er een getal nóg verder naar links op de getallenlijn? Hoe meer naar links, hoe lager.",
           "0 is hoger dan elk negatief getal.",
           "5 is positief, dus hoger dan 0 en alle negatieve getallen.",
         ],
@@ -101,9 +101,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "−7 ziet er met '7' groot uit, maar bij negatieve getallen is verder van nul juist kleiner. −2 staat dichter bij 0.",
+          "−7 ziet er met '7' groot uit, maar bij negatieve getallen is verder van nul juist kleiner. Welke van de twee staat dichter bij 0?",
           "Verschillende getallen op de getallenlijn.",
-          "Wiskunde is hier eenduidig: −2 staat rechts van −7, dus is groter.",
+          "Wiskunde is hier eenduidig: welk van de twee staat verder naar rechts op de getallenlijn?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Dichter bij 0 = groter (bij negatief)", tekst: "−2 staat rechts van −7 → −2 is groter." }],
@@ -140,7 +140,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Het tegengestelde is het andere teken. Voor −7 is dat +7.",
+          "Dat is hetzelfde getal. Het tegengestelde ligt even ver van 0, maar aan de andere kant — welk teken hoort daarbij?",
           "0 is alleen het tegengestelde van 0 zelf.",
           "Het tegengestelde verandert alleen het teken, niet de grootte.",
         ],
@@ -465,7 +465,7 @@ const steps = [
       { q: "(−15) ÷ (−3) = ?", options: ["5","−5","45","−45"], answer: 0, wrongHints: [null, "Tegengesteld — twee minnen = plus.", "Niet — delen, geen × .", "Idem."] },
       { q: "Temperatuur −12 °C wordt 8 graden warmer. Nieuwe temperatuur?", options: ["−4 °C","+4 °C","−20 °C","20 °C"], answer: 0, wrongHints: [null, "Te hoog — niet alle 12 graden weggewerkt.", "Tegenovergesteld — warmer = optellen, niet aftrekken.", "Veel te hoog."] },
       { q: "Een schuld van €25 + lening van €10 erbij. Totale schuld?", options: ["€35","€15","−€15","€25"], answer: 0, wrongHints: [null, "Te weinig — extra geld geleend, schuld stijgt.", "Een lening maakt je schuld groter, niet kleiner.", "Onveranderd — geleend erbij, dus hoger."] },
-      { q: "Duiker op −15 m stijgt 9 m. Nieuwe diepte?", options: ["−6 m","−24 m","6 m","24 m"], answer: 0, wrongHints: [null, "Tegenovergesteld — stijgen = richting 0.", "Niet — nog niet boven water.", "Veel te hoog."] },
+      { q: "Duiker op −15 m stijgt 9 m. Nieuwe diepte?", options: ["−6 m","−24 m","+6 m","+24 m"], answer: 0, wrongHints: [null, "Tegenovergesteld — stijgen = richting 0.", "Niet — nog niet boven water.", "Veel te hoog."] },
       { q: "Welk getal is HET GROOTST: −15, −3, 0, +2?", options: ["+2","−3","0","−15"], answer: 0, wrongHints: [null, "Negatief, dus kleiner dan 0.", "Wel groter dan negatieven, maar +2 is groter.", "Het kleinst."] },
       { q: "**Verschil** tussen −7 °C en +5 °C?", options: ["12 °C","2 °C","−12 °C","−2 °C"], answer: 0, wrongHints: [null, "Te weinig — vergeet niet de stappen onder nul.", "Niet — verschil = afstand, altijd positief.", "Idem."] },
       { q: "Reken: 10 − 4 × 3", options: ["−2","18","6","30"], answer: 0, wrongHints: [null, "Eerst −, dan × — verkeerde volgorde.", "Je bent de × 3 vergeten.", "Geen haakjes — × eerst."] },

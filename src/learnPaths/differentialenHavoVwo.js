@@ -34,9 +34,9 @@ const steps = [
         q: "Wat **betekent** f'(3) = 5?",
         options: [
           "Helling van f bij x=3 is 5 (functie stijgt 5 per eenheid x daar)",
-          "f(3) = 5",
-          "f(5) = 3",
-          "Snelheid is 3"
+          "f(3) = 5 (de grafiek gaat door het punt (3, 5))",
+          "f(5) = 3 (de grafiek gaat door het punt (5, 3))",
+          "De helling is overal 3 (de grafiek is een rechte lijn)"
         ],
         answer: 0,
         wrongHints: [null, "Niet — verwarring met functie-waarde.", "Niet — geen.", "Niet — context-onafhankelijk."],
@@ -83,7 +83,7 @@ const steps = [
   {
     title: "Rekenregels — machten + som + verschil",
     explanation:
-      "**Basis-regels**:\n\n**1. Macht-regel**:\n• (x^n)' = **n · x^(n-1)**.\n• (x³)' = 3x².\n• (x⁵)' = 5x⁴.\n• Werkt voor alle reële n (ook negatief + breuk):\n  - (x⁻¹)' = −1 · x⁻² = −1/x².\n  - (√x)' = (x^½)' = ½·x^(−½) = 1/(2√x).\n\n**2. Constante factor**:\n• (c · f(x))' = c · f'(x).\n• (5x³)' = 5 · 3x² = 15x².\n\n**3. Som- + verschil-regel**:\n• (f + g)' = f' + g'.\n• (f − g)' = f' − g'.\n• (x² + 3x − 7)' = 2x + 3 − 0 = 2x + 3.\n\n**4. Bijzondere functies**:\n• (e^x)' = e^x (= 'magische' eigenschap exponentiële functie).\n• (a^x)' = a^x · ln(a).\n• (ln x)' = 1/x.\n• (sin x)' = cos x.\n• (cos x)' = −sin x.\n• (tan x)' = 1/cos² x = sec² x.\n\n**Stap-voor-stap voor polynoom**:\nf(x) = 4x³ − 2x² + 5x − 1.\nf'(x) = 12x² − 4x + 5.\n\n**Niet differentiabel**:\n• |x| (absolute waarde) — knik op x=0.\n• 1/x op x=0 (singulariteit, divergeert).\n• Stapfunctie op sprong-plek.\n\n**Hogere afgeleiden**:\n• f''(x) = afgeleide van f'(x) = tweede afgeleide.\n• f''(x) = krommingsmaat:\n  - f''(x) > 0: bolling naar boven (concaaf op).\n  - f''(x) < 0: bolling naar beneden (concaaf neer).\n  - f''(x) = 0: buigpunt (bolling wisselt).\n\n**Voorbeeld**:\nf(x) = x³ → f'(x) = 3x² → f''(x) = 6x.\nBij x=0: f'(0)=0 (horizontale raaklijn), f''(0)=0 (buigpunt → niet top of dal!).\n\n**Veelgemaakte fout**: f'(x) = 0 NIET altijd top/dal — kan ook buigpunt zijn met horizontale raaklijn (zoals x³).",
+      "**Basis-regels**:\n\n**1. Macht-regel**:\n• (x^n)' = **n · x^(n-1)**.\n• (x³)' = 3x².\n• (x⁵)' = 5x⁴.\n• Werkt voor alle reële n (ook negatief + breuk):\n  - (x⁻¹)' = −1 · x⁻² = −1/x².\n  - (√x)' = (x^½)' = ½·x^(−½) = 1/(2√x).\n\n**2. Constante factor**:\n• (c · f(x))' = c · f'(x).\n• (5x³)' = 5 · 3x² = 15x².\n\n**3. Som- + verschil-regel**:\n• (f + g)' = f' + g'.\n• (f − g)' = f' − g'.\n• (x² + 3x − 7)' = 2x + 3 − 0 = 2x + 3.\n\n**4. Bijzondere functies**:\n• (e^x)' = e^x (= 'magische' eigenschap exponentiële functie).\n• (a^x)' = a^x · ln(a).\n• (ln x)' = 1/x.\n• (sin x)' = cos x.\n• (cos x)' = −sin x.\n• (tan x)' = 1/cos² x = sec² x.\n\n**Stap-voor-stap voor polynoom**:\nf(x) = 4x³ − 2x² + 5x − 1.\nf'(x) = 12x² − 4x + 5.\n\n**Niet differentiabel**:\n• |x| (absolute waarde) — knik op x=0.\n• 1/x op x=0 (singulariteit, divergeert).\n• Stapfunctie op sprong-plek.\n\n**Hogere afgeleiden**:\n• f''(x) = afgeleide van f'(x) = tweede afgeleide.\n• f''(x) = krommingsmaat:\n  - f''(x) > 0: dalvormig gekromd (zoals x², 'lacht').\n  - f''(x) < 0: bergvormig gekromd (zoals −x², 'frons').\n  - f''(x) wisselt van teken: buigpunt (kromming wisselt).\n\n**Voorbeeld**:\nf(x) = x³ → f'(x) = 3x² → f''(x) = 6x.\nBij x=0: f'(0)=0 (horizontale raaklijn), f''(0)=0 (buigpunt → niet top of dal!).\n\n**Veelgemaakte fout**: f'(x) = 0 NIET altijd top/dal — kan ook buigpunt zijn met horizontale raaklijn (zoals x³).",
     checks: [
       {
         q: "**Afgeleide van f(x) = 3x⁴ − 2x²**:",
@@ -132,8 +132,8 @@ const steps = [
       {
         q: "f''(x) > 0 betekent dat de grafiek:",
         options: [
-          "Naar boven bolt (concaaf op, 'lacht')",
-          "Naar beneden bolt",
+          "Dalvormig gekromd is, zoals y = x²",
+          "Bergvormig gekromd is, zoals y = −x²",
           "Constant is",
           "Daalt"
         ],
@@ -143,7 +143,7 @@ const steps = [
           stappen: [
             { titel: "Krommingsmaat", tekst: "f''(x) > 0: helling stijgt → grafiek 'lacht' (zoals x²). f''(x) < 0: helling daalt → 'frons' (zoals −x²). Buigpunt: f''=0 + wisselt teken." },
           ],
-          niveaus: { basis: "Lacht.", simpeler: "U-vorm.", nogSimpeler: "Bolling op" },
+          niveaus: { basis: "Lacht.", simpeler: "U-vorm.", nogSimpeler: "Dalvorm" },
         },
       },
     ],
@@ -236,7 +236,7 @@ const steps = [
       },
       {
         q: "f(x) = x² − 6x + 5. Waar is **minimum**?",
-        options: ["x = 3 (waarde −4)", "x = 0", "x = 6", "Geen minimum"],
+        options: ["x = 3", "x = 0", "x = 6", "Geen minimum"],
         answer: 0,
         wrongHints: [null, "Niet — geen extreem.", "Niet — geen extreem daar.", "Wel — parabool."],
         uitlegPad: {
@@ -261,7 +261,7 @@ const steps = [
       },
       {
         q: "**Max oppervlak** rechthoek met vaste omtrek 12: lengte = ?",
-        options: ["3 (vierkant)", "4", "2", "6"],
+        options: ["3", "4", "2", "6"],
         answer: 0,
         wrongHints: [null, "Niet — geen vierkant.", "Niet — geen optimum.", "Onmogelijk."],
         uitlegPad: {
@@ -274,7 +274,7 @@ const steps = [
       },
       {
         q: "**Helling raaklijn** aan y = sin(x) op x = π/2?",
-        options: ["0 (top sinus)", "1", "−1", "π/2"],
+        options: ["0", "1", "−1", "π/2"],
         answer: 0,
         wrongHints: [null, "Niet — controleer op welk punt je de afgeleide berekent.", "Niet — andere kant.", "Niet — een hoek."],
         uitlegPad: {
@@ -307,9 +307,9 @@ const steps = [
         q: "Voor max **winst**: marginale opbrengst R' = marginale kosten K'. Wat betekent dat?",
         options: [
           "Op die productie q* geeft elke extra eenheid zoveel kosten als opbrengst → geen voordeel meer om uit te breiden",
-          "Winst is nul",
-          "Geen productie",
-          "Onvoldoende info"
+          "Op die productie is de winst precies nul, omdat opbrengst en kosten daar gelijk zijn",
+          "Op die productie kun je beter helemaal stoppen, want extra eenheden leveren niets op",
+          "Met alleen R' en K' kun je niets zeggen over waar de winst het grootst is"
         ],
         answer: 0,
         wrongHints: [null, "Niet — winst niet nul, juist max.", "Niet — wel productie.", "Wel info."],
@@ -323,7 +323,7 @@ const steps = [
       {
         q: "Bevolking N(t) = 1000 · e^(0,02t). Groeisnelheid bij t=0?",
         options: [
-          "20 per jaar",
+          "20",
           "1000",
           "0,02",
           "0,02 · t"
@@ -339,7 +339,7 @@ const steps = [
       },
       {
         q: "Een harmonische trilling x(t) = sin(t). Wat is a(t)?",
-        options: ["−sin(t) = −x(t)", "cos(t)", "−cos(t)", "0"],
+        options: ["−sin(t)", "cos(t)", "−cos(t)", "0"],
         answer: 0,
         wrongHints: [null, "Niet — dat is v(t).", "Niet — verkeerd teken.", "Niet — wel versnelling."],
         uitlegPad: {

@@ -84,7 +84,7 @@ const steps = [
           { id: "wereldoorlog2-geschiedenis", title: "Wereldoorlog 2", niveau: "VMBO-GT eindexamen", why: "interbellum + opkomst Hitler + appeasement-beleid UK/FR — kern van deze examenvraag" },
         ],
         uitlegPad: {
-          stappen: [{ titel: "Cartoon = appeasement-kritiek", tekst: "Stapel laffe leiders + Hitler bovenop = leiders verzetten zich NIET tegen Hitlers groei. →" }],
+          stappen: [{ titel: "Cartoon = appeasement-kritiek", tekst: "Stapel laffe leiders + Hitler bovenop = leiders verzetten zich NIET tegen Hitlers groei." }],
           woorden: [{ woord: "appeasement", uitleg: "Beleid: Hitler tegemoetkomen om oorlog te vermijden." }, { woord: "machtsuitbreiding", uitleg: "Gebied/macht groter maken." }],
           theorie: "Cartoon-vraag: zoek wat HET BEELD letterlijk laat zien. Hitler op leiders = leiders dragen Hitler = passieve houding.",
           voorbeelden: [{ type: "context", tekst: "1936 Rijnland, 1938 Anschluss + Sudetenland — telkens niet ingegrepen." }],
@@ -124,7 +124,7 @@ const steps = [
           { id: "wereldoorlog2-geschiedenis", title: "Wereldoorlog 2", niveau: "VMBO-GT eindexamen", why: "voorgeschiedenis WO2: München 1938 + Sudetenland + 'peace for our time' — kern van deze examenvraag" },
         ],
         uitlegPad: {
-          stappen: [{ titel: "München = oorlog voorkomen", tekst: "Chamberlain wilde geen NIEUWE oorlog zoals WO1. Akkoord = Sudetenland aan Hitler om vrede te kopen. → C." }],
+          stappen: [{ titel: "München = oorlog voorkomen", tekst: "Chamberlain wilde geen NIEUWE oorlog zoals WO1. Akkoord = Sudetenland aan Hitler om vrede te kopen." }],
           woorden: [{ woord: "Conferentie van München", uitleg: "1938 akkoord: UK+FR+Italië+Duitsland over Sudetenland." }, { woord: "appeasement", uitleg: "Tegemoet komen om vrede te bewaren." }],
           theorie: "Achtergrond: WO1 (1914-1918) verschrikkelijk → UK/FR willen NOOIT meer oorlog → appeasement Hitler.",
           voorbeelden: [{ type: "feit", tekst: "Chamberlain riep na München: 'Peace for our time'. 1 jaar later begon WO2." }],
@@ -164,7 +164,7 @@ const steps = [
           { id: "wereldoorlog2-geschiedenis", title: "Wereldoorlog 2", niveau: "VMBO-GT eindexamen", why: "Sovjet-Unie in WO2 + Stalingrad + Stalin als 'redder van het moederland' — kern van deze examenvraag" },
         ],
         uitlegPad: {
-          stappen: [{ titel: "Stalin = WO2-winnaar", tekst: "Sovjets versloegen Hitler (Stalingrad, Berlijn 1945). Die overwinning bepaalde Stalins reputatie. → D." }],
+          stappen: [{ titel: "Stalin = WO2-winnaar", tekst: "Sovjets versloegen Hitler (Stalingrad, Berlijn 1945). Die overwinning bepaalde Stalins reputatie." }],
           woorden: [{ woord: "Stalingrad", uitleg: "Beslissende slag (1942-1943). Sovjet-overwinning keerde WO2." }],
           theorie: "Politieke realiteit: ondanks Goelag-slachtoffers werd Stalin gevierd om WO2-overwinning. Bevolking ondersteunde 'redder van moederland'.",
           voorbeelden: [{ type: "feit", tekst: "~27 miljoen Sovjet-doden in WO2. Geheugen van overwinning bleef Stalin steunen." }],
@@ -204,7 +204,7 @@ const steps = [
           { id: "tijdvakken-geschiedenis", title: "Tijdvakken geschiedenis", niveau: "VMBO-GT eindexamen", why: "tijdvak naoorlogs: Europese samenwerking 1951 EGKS → 1957 EEG → 1993 EU — kern van deze examenvraag" },
         ],
         uitlegPad: {
-          stappen: [{ titel: "Schuman = EGKS", tekst: "Schuman-plan (1950) → EGKS (1951). Frans plan voor Europese kolen+staal-samenwerking. → B." }],
+          stappen: [{ titel: "Schuman = EGKS", tekst: "Schuman-plan (1950) → EGKS (1951). Frans plan voor Europese kolen+staal-samenwerking." }],
           woorden: [{ woord: "EGKS", uitleg: "Europese Gemeenschap voor Kolen en Staal (1951). Voorloper EU." }],
           theorie: "EU-tijdlijn: 1951 EGKS → 1957 EEG → 1993 EU. Schuman-plan = startpunt.",
           voorbeelden: [{ type: "feit", tekst: "EGKS-leden: FR, BRD, IT, NL, BE, LUX. Voorkomen oorlog door grondstof-samenwerking." }],
@@ -244,7 +244,7 @@ const steps = [
           { id: "tijdvakken-geschiedenis", title: "Tijdvakken geschiedenis", niveau: "VMBO-GT eindexamen", why: "Koude Oorlog tijdlijn: 1949 DDR/NAVO, 1961 Muur, 1962 Cubacrisis, 1968 Praag — kern van deze examenvraag" },
         ],
         uitlegPad: {
-          stappen: [{ titel: "1962 + kernoorlog = Cubacrisis", tekst: "Sleuteljaar 1962 + kernoorlog-risico → Cubacrisis. → B." }],
+          stappen: [{ titel: "1962 + kernoorlog = Cubacrisis", tekst: "Sleuteljaar 1962 + kernoorlog-risico → Cubacrisis." }],
           woorden: [{ woord: "Cubacrisis", uitleg: "Oktober 1962. Sovjet-kernraketten op Cuba → 13 dagen op rand kernoorlog." }],
           theorie: "Koude Oorlog tijdlijn: 1949 DDR + NAVO. 1961 Berlijnse Muur. 1962 Cubacrisis. 1968 Praagse Lente.",
           voorbeelden: [{ type: "feit", tekst: "Kennedy zette een marine-blokkade in. Chroesjtsjov haalde raketten weg na onderhandelingen." }],

@@ -149,7 +149,7 @@ const steps = [
     explanation: "Veel breuken zien er **anders uit** maar zijn **gelijk**. Net als verhoudingen kun je breuken **vereenvoudigen**.\n\n**Voorbeelden van gelijke breuken**:\n• 1/2 = 2/4 = 3/6 = 4/8 = 50/100\n• 1/3 = 2/6 = 3/9 = 4/12\n• 2/4 = 1/2 *(door 2 vereenvoudigd)*\n• 6/8 = 3/4 *(door 2 vereenvoudigd)*\n• 4/12 = 1/3 *(door 4 vereenvoudigd)*\n\n**Truc**: deel teller én noemer door hetzelfde getal.\n\n• **6/9** → ÷ 3 → **2/3**\n• **8/12** → ÷ 4 → **2/3**\n• **15/20** → ÷ 5 → **3/4**\n• **10/100** → ÷ 10 → **1/10**\n\n**Toets-tip**:\nKijk altijd naar de **grootste gemeenschappelijke deler**. Dat scheelt stappen.\n\n**Voorbeeld**: 12/18.\n• Beide deelbaar door 2 → 6/9.\n• Beide deelbaar door 3 → 2/3. *(eindresultaat)*\n\nOf in één stap: beide deelbaar door 6 → 2/3.\n\n**Veel-voorkomende fout**:\nAlleen teller of alleen noemer delen. Dan klopt de breuk niet meer. Doe altijd **beide**.\n\n**Pittige toetsvraag**: *'Welke breuk is gelijk aan 4/6?'* Antwoorden zoals 2/3, 8/12, 6/9 zijn allemaal correct — maar de toets vraagt meestal de **vereenvoudigde** vorm.",
     checks: [
       {
-        q: "**12/16** vereenvoudigd?",
+        q: "**12/16** zo ver mogelijk vereenvoudigd?",
         options: ["3/4","6/8","12/16","2/3"],
         answer: 0,
         wrongHints: [null,"Niet de meest vereenvoudigde — kun je nog door 2 delen.","Niet vereenvoudigd — beide getallen kun je nog door 4 delen.","Andere breuk — past niet."],
@@ -215,7 +215,7 @@ const steps = [
         q: "**1/2 + 1/4** = ?",
         options: ["3/4","2/6","1/6","2/4"],
         answer: 0,
-        wrongHints: [null,"Niet beide tellers en noemers optellen — eerst gelijke noemer maken.","Niet correct — eerst 1/2 omschrijven naar /4.","Niet vereenvoudigd én ongelijk."],
+        wrongHints: [null,"Niet beide tellers en noemers optellen — eerst gelijke noemer maken.","Niet correct — eerst 1/2 omschrijven naar /4.","Dat is alleen de 1/2 — waar is de 1/4 gebleven?"],
         uitlegPad: {
           stappen: [{ titel: "Maak noemers gelijk", tekst: "1/2 = 2/4. Nu 2/4 + 1/4 = 3/4." }],
           woorden: [{ woord: "gelijknamig maken", uitleg: "Breuken zelfde noemer geven door teller én noemer keer hetzelfde." }],
@@ -229,7 +229,7 @@ const steps = [
         q: "**5/6 − 2/6** = ?",
         options: ["1/2","3/12","7/6","2/6"],
         answer: 0,
-        wrongHints: [null,"Niet beide aftrekken — alleen de tellers, de noemer blijft 6.","Klopt qua som maar nog niet vereenvoudigd — maak kleiner.","Verkeerde aftrekking — reken 5 − 2 in de teller."],
+        wrongHints: [null,"Je rekende ook met de noemers — de noemer blijft 6, alleen de tellers trek je af.","Je hebt opgeteld — maar het is een min-som.","Verkeerde aftrekking — reken 5 − 2 in de teller."],
         uitlegPad: {
           stappen: [{ titel: "Trek af + vereenvoudig", tekst: "5-2=3. Noemer blijft 6 → 3/6. Vereenvoudig: 3/6 → 1/2." }],
           woorden: [{ woord: "vereenvoudigen na", uitleg: "Antwoord altijd zo simpel mogelijk maken." }],
@@ -376,7 +376,7 @@ const steps = [
         q: "Op een toets van **40 vragen** maakt Sven **3/5 goed**. Hoeveel?",
         options: ["24","20","16","30"],
         answer: 0,
-        wrongHints: [null,"Te weinig — dat is precies de helft.","Te weinig.","Te veel — heb je meer dan 3/4 gerekend?"],
+        wrongHints: [null,"Te weinig — dat is precies de helft.","Te weinig.","Te veel — dat is 3/4, niet 3/5."],
         uitlegPad: {
           stappen: [{ titel: "Stap 1+2", tekst: "1/5 van 40 = 40÷5 = 8. 3/5 = 3 × 8 = 24." }],
           woorden: [{ woord: "3/5", uitleg: "Drie vijfde = 3 × 1/5. Eerst 1/5, dan keer 3." }],
@@ -415,7 +415,7 @@ const steps = [
         },
       },
       {
-        q: "**4/12** vereenvoudigd?",
+        q: "**4/12** zo ver mogelijk vereenvoudigd?",
         options: ["1/3","2/6","4/12","2/3"],
         answer: 0,
         wrongHints: [null,"Niet vereenvoudigd — kun je nog door 2 delen.","Niet vereenvoudigd.","Andere waarde — andersom."],
@@ -445,11 +445,11 @@ const steps = [
       { q: "½ + ¼ = ?", options: ["¾","⅙","⅔","¼"], answer: 0, wrongHints: [null, "Maak eerst gelijknamig — hoeveel kwarten is een half?", "Reken in kwarten — hoeveel kwarten is een halve?", "Je begint met ¼ en telt er ½ bij, dan wordt het méér dan je nu hebt."] },
       { q: "1 − ⅓ = ?", options: ["⅔","¼","½","⅓"], answer: 0, wrongHints: [null, "Schrijf 1 als ³⁄₃ en haal ⅓ eraf.", "Heel = ³⁄₃ — hoeveel derden hou je over na het weghalen van ⅓?", "Dat is wat je weghaalt."] },
       { q: "Welke breuk is groter: ½ of ⅓?", options: ["½","⅓","Gelijk","Niet te zeggen"], answer: 0, wrongHints: [null, "Denk aan een taart: is een hálve groter of kleiner dan een derde?", "½ en ⅓ zijn niet gelijk — verdeel dezelfde taart in 2 of in 3 stukken.", "Het is wél te bepalen: hoe groter de noemer, hoe kleiner elk stuk."] },
-      { q: "Vereenvoudig: ⁴⁄₈ = ?", options: ["½","⅓","¼","⅔"], answer: 0, wrongHints: [null, "Deel teller én noemer door hetzelfde getal — 4 en 8 allebei door 4.", "Hoe vaak past 4 in 8? Dat bepaalt de nieuwe noemer.", "Vereenvoudigen maakt de breuk niet groter — 4 is de helft van 8."] },
+      { q: "Vereenvoudig: ⁴⁄₈ = ?", options: ["½","⅓","¼","⅔"], answer: 0, wrongHints: [null, "Deel teller én noemer door hetzelfde getal — door welk getal kunnen 4 en 8 allebei?", "Hoe vaak past 4 in 8? Dat bepaalt de nieuwe noemer.", "Vereenvoudigen maakt de breuk niet groter — vergelijk de 4 eens met de 8."] },
       { q: "½ van 20 = ?", options: ["10","5","15","2"], answer: 0, wrongHints: [null, "Dat is ¼.", "Niet.", "Niet."] },
       { q: "¾ van 12 = ?", options: ["9","3","6","8"], answer: 0, wrongHints: [null, "Dat is ¼.", "Dat is ½.", "Niet."] },
-      { q: "⅓ + ⅓ = ?", options: ["⅔","⅙","⅓","1"], answer: 0, wrongHints: [null, "Niet — niet kruisen.", "Geen optellen?", "Niet — niet 3 derden."] },
-      { q: "Vereenvoudig: ⁶⁄₉ = ?", options: ["⅔","½","¾","⅓"], answer: 0, wrongHints: [null, "Niet — geen gemeen.", "Niet.", "Niet."] },
+      { q: "⅓ + ⅓ = ?", options: ["⅔","⅙","⅓","1"], answer: 0, wrongHints: [null, "Niet de noemers optellen — de noemer blijft 3.", "Geen optellen?", "Niet — niet 3 derden."] },
+      { q: "Vereenvoudig: ⁶⁄₉ = ?", options: ["⅔","½","¾","⅓"], answer: 0, wrongHints: [null, "Deel 6 en 9 door hetzelfde getal.", "Niet.", "Niet."] },
       { q: "Welke is **kleinst**: ¼, ½, of ¾?", options: ["¼","½","¾","Gelijk"], answer: 0, wrongHints: [null, "Helft.", "Grootste.", "Niet."] },
       { q: "Hoeveel **kwarten** zijn in 1 geheel?", options: ["4","2","8","3"], answer: 0, wrongHints: [null, "Twee halven.", "Achtsten misschien?", "Derden."] },
       { q: "1/10 als decimaal?", options: ["0,1","0,01","1,0","10,0"], answer: 0, wrongHints: [null, "Dat is ¹⁄₁₀₀ (een honderdste).", "Dat is 1 heel.", "Dat is tien hele — veel te veel."] },

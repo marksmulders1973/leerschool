@@ -179,7 +179,7 @@ const steps = [
       },
       {
         q: "Welke godsdienst werd vervolgd door Filips II?",
-        options: ["Calvinisme (protestantisme)", "Katholicisme", "Jodendom", "Islam"],
+        options: ["Calvinisme", "Katholicisme", "Jodendom", "Islam"],
         answer: 0,
         wrongHints: [null, "Filips II was juist katholiek — hij beschermde dat geloof.", "Wel ook (joden), maar dat was niet de hoofdvervolging in dit conflict.", "Niet relevant in 16e-eeuws NL."],
         uitlegPad: {
@@ -216,7 +216,7 @@ const steps = [
       },
       {
         q: "Wat betekent de naam **'geuzen'**?",
-        options: ["Bedelaars (oorspronkelijk spotnaam)","Krijgers","Edelen","Calvinistische dominees"],
+        options: ["Bedelaars","Krijgers","Edelen","Calvinistische dominees"],
         answer: 0,
         wrongHints: [null, "Wel werden ze later strijders, maar dat was de oorspronkelijke betekenis niet.", "Wel werden edelen zo genoemd — maar wat betekent het woord zelf?", "Niet specifiek dominees."],
         uitlegPad: {
@@ -237,7 +237,7 @@ const steps = [
     checks: [
       {
         q: "Wat was de **Bloedraad**?",
-        options: ["Rechtbank van Alva die opstandelingen ter dood veroordeelde","Een vrijwilligersleger","Een Nederlandse opstandsbeweging","Een soort straat in Brussel"],
+        options: ["Een rechtbank van Alva","Een vrijwilligersleger","Een Nederlandse opstandsbeweging","Een soort straat in Brussel"],
         answer: 0,
         wrongHints: [null, "Geen leger — een rechtbank.", "Andersom — de Bloedraad stond aan de kant van Spanje.", "Niet een straat — een bestuurslichaam."],
         uitlegPad: {
@@ -251,7 +251,7 @@ const steps = [
       },
       {
         q: "Wanneer begon de Tachtigjarige Oorlog officieel?",
-        options: ["1568 (Slag bij Heiligerlee)", "1566", "1572", "1581"],
+        options: ["1568", "1566", "1572", "1581"],
         answer: 0,
         wrongHints: [null, "Beeldenstorm was 1566, maar oorlog begon pas met de slag.", "Den Briel werd ingenomen in 1572, maar oorlog was al bezig.", "Plakkaat van Verlatinghe was 1581 — onafhankelijkheidsverklaring, geen begin."],
         uitlegPad: {
@@ -309,7 +309,7 @@ const steps = [
     checks: [
       {
         q: "Hoe werd Leiden in 1574 ontzet?",
-        options: ["Dijken doorsteken zodat schepen via overstroomd land konden komen","Een tunnel onder de Spanjaarden door","Ze gaven zich over","Door massaal protest"],
+        options: ["Door dijken door te steken","Een tunnel onder de Spanjaarden door","Ze gaven zich over","Door massaal protest"],
         answer: 0,
         wrongHints: [null, "Geen tunnel — het was een waterplan.", "Andersom — Leiden gaf zich juist NIET over.", "Geen protest, maar een militaire actie."],
         uitlegPad: {
@@ -344,7 +344,7 @@ const steps = [
     checks: [
       {
         q: "Wat was de **Unie van Utrecht** (1579)?",
-        options: ["Verbond van noordelijke protestantse provincies tegen Spanje","Een katholiek vredesverdrag","Een handelsverbond","Een Spaanse legereenheid"],
+        options: ["Een verbond tegen Spanje","Een katholiek vredesverdrag","Een handelsverbond","Een Spaanse legereenheid"],
         answer: 0,
         wrongHints: [null, "Nee — de katholieke zuidelijke provincies sloten een ándere unie.", "Geen handelsverbond — politiek-militair.", "Niet Spaans — anti-Spaans."],
         uitlegPad: {
@@ -409,7 +409,7 @@ const steps = [
       },
       {
         q: "Wie regeerde de Republiek?",
-        options: ["Staten-Generaal + stadhouder, geen koning","Een gekozen president","De paus","Filips II"],
+        options: ["Staten-Generaal en stadhouder","Een gekozen president","De paus","Filips II"],
         answer: 0,
         wrongHints: [null, "Presidenten kwamen veel later (vooral VS, Frankrijk).", "De paus regeerde Rome — niet Nederland.", "Filips II was juist afgezworen in 1581."],
         uitlegPad: {
@@ -467,7 +467,7 @@ const steps = [
     checks: [
       {
         q: "Wat was het **Twaalfjarig Bestand** (1609-1621)?",
-        options: ["Tijdelijke wapenstilstand tussen Republiek en Spanje","Een oorlog tussen NL en Engeland","Een handelsverdrag","Een nieuwe belasting"],
+        options: ["Een wapenstilstand","Een oorlog tussen NL en Engeland","Een handelsverdrag","Een nieuwe belasting"],
         answer: 0,
         wrongHints: [null, "Geen oorlog — juist een pauze.", "Wel was er handel, maar dit ging over oorlog/vrede.", "Niet over belasting."],
         uitlegPad: {
@@ -516,7 +516,7 @@ const steps = [
       },
       {
         q: "Wat gebeurde er met de **Schelde** door de Vrede van Münster?",
-        options: ["Gesloten — Antwerpen werd onbereikbaar voor schepen","Werd internationale rivier","Werd in tweeën gedeeld","Werd drooggelegd"],
+        options: ["Werd gesloten voor scheepvaart","Werd internationale rivier","Werd in tweeën gedeeld","Werd drooggelegd"],
         answer: 0,
         wrongHints: [null, "Andersom — denk aan wat de Republiek wilde met Antwerpen.", "Geen splitsing — wat had Amsterdam liever voor Antwerpen?", "Niet drooggelegd — de rivier bleef, maar wat veranderde voor schepen?"],
         uitlegPad: {
@@ -580,7 +580,7 @@ const steps = [
         },
       },
       {
-        q: "Welke koning zwoer de Republiek af?",
+        q: "Welke koning werd door de opstandelingen **afgezworen**?",
         options: ["Filips II","Alva","Willem van Oranje","Maurits"],
         answer: 0,
         wrongHints: [null, "Alva was Spaanse landvoogd, geen koning.", "Willem was een Nederlandse leider — geen koning.", "Maurits was stadhouder, geen koning."],

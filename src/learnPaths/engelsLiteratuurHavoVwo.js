@@ -32,7 +32,7 @@ const steps = [
       },
       {
         q: "**Beowulf** is uit welke periode?",
-        options: ["Old English (~700)", "Middle English", "Renaissance", "Modern"],
+        options: ["Old English", "Middle English", "Renaissance", "Modern"],
         answer: 0,
         wrongHints: [null, "Niet — eerder.", "Veel later.", "Veel later."],
         uitlegPad: {
@@ -78,10 +78,10 @@ const steps = [
           "Experimenteel, gebroken vorm, stream-of-consciousness",
           "Realistisch + chronologisch",
           "Religieus dominant",
-          "Korte simpele zinnen"
+          "Strakke klassieke vormregels"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — wel diverse thema's.", "Niet — Joyce had lange zinnen."],
+        wrongHints: [null, "Tegenovergesteld.", "Niet — wel diverse thema's.", "Denk aan wat WO1 deed met het vertrouwen in traditie."],
         uitlegPad: {
           stappen: [
             { titel: "Breken met traditie", tekst: "WO1 schokte vertrouwen in 'vooruitgang' → schrijvers experimenteren. Stream of consciousness = gedachten direct op papier (Joyce 'Ulysses', Woolf 'Mrs Dalloway'). Tijd-sprong, meerdere vertellers, ambiguïteit. T.S. Eliot 'The Waste Land' (1922) = hoogtepunt." },
@@ -131,7 +131,7 @@ const steps = [
       {
         q: "**Iambic pentameter** is:",
         options: [
-          "5 jamben per regel (10 lettergrepen, ta-DAH × 5)",
+          "5 jamben per regel",
           "Geen metrum",
           "Rijmend AABB",
           "Vrij vers"
@@ -186,7 +186,7 @@ const steps = [
       {
         q: "**Charles Dickens'** romans verschenen vaak als:",
         options: [
-          "Afleveringen (serial publication)",
+          "Losse afleveringen",
           "Eén dik boek tegelijk",
           "Korte verhalen alleen",
           "Toneelstukken"
@@ -229,7 +229,7 @@ const steps = [
       {
         q: "**'A Christmas Carol'** introduceert welke figuur?",
         options: [
-          "Ebenezer Scrooge (gierigaard)",
+          "Ebenezer Scrooge",
           "Sherlock Holmes",
           "Dracula",
           "Frankenstein"
@@ -308,7 +308,7 @@ const steps = [
       {
         q: "**Mark Twain's** Huckleberry Finn (1884) is bijzonder door:",
         options: [
-          "Eerste Amerikaanse roman in vernaculair Engels + sociaal-kritiek slavernij",
+          "Amerikaanse spreektaal + kritiek op slavernij",
           "Engelse koloniale stijl",
           "Vol Shakespeare-citaten",
           "Geen plot"

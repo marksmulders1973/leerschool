@@ -321,7 +321,7 @@ const steps = [
       },
       {
         q: "Op een kaart staat **N-pijl** naar links. Wat betekent dat?",
-        options: ["Noord is naar links (kaart is gedraaid)","Kaart is verkeerd","Noord is altijd boven","Kompas is kapot"],
+        options: ["Noord ligt aan de linkerkant","Kaart is verkeerd","Noord is altijd boven","Kompas is kapot"],
         answer: 0,
         wrongHints: [null,"Niet per se.","Niet altijd.","Geen reden."],
         uitlegPad: {
@@ -374,7 +374,7 @@ const steps = [
       },
       {
         q: "Een kaart toont **hoogtelijnen** dicht bij elkaar. Wat betekent dat?",
-        options: ["Steil hellend gebied (berg)","Plat landschap","Water","Bos"],
+        options: ["Een steile helling","Plat landschap","Water","Bos"],
         answer: 0,
         wrongHints: [null, "Niet — vlak gebied heeft hoogtelijnen ver uit elkaar.", "Niet — water meestal blauw + zonder hoogtelijnen.", "Niet — bos meestal groen, niet hoogtelijnen."],
         uitlegPad: {
@@ -399,9 +399,9 @@ const steps = [
       },
       {
         q: "Wat is de **windroos** op een kaart?",
-        options: ["Symbool dat noord, oost, zuid, west aanwijst","Bloem op kaart","Naam van wind","Soort kaart"],
+        options: ["Symbool dat noord, oost, zuid, west aanwijst","Versiering in de vorm van een bloem","Teken dat laat zien hoe hard het waait","Soort kaart"],
         answer: 0,
-        wrongHints: [null, "Niet — geen bloem.", "Niet — wind-richting is iets anders.", "Niet — onderdeel van kaart, niet kaart-type."],
+        wrongHints: [null, "Niet — hij lijkt op een bloem, maar heeft een taak.", "Niet — over hoe hard het waait zegt hij niets.", "Niet — onderdeel van kaart, niet kaart-type."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een windroos?", tekst: "Een **windroos** is een **klein kompas-symbool** in een hoek van de kaart. Toont:\n• **Noord (N)** — meestal boven (pijl ↑)\n• **Oost (O)** — rechts\n• **Zuid (Z)** — onder\n• **West (W)** — links\n\nOok soms 8 of 16 tussen-richtingen (NO, ZO, ZW, NW)." },
@@ -422,14 +422,14 @@ const steps = [
       },
       {
         q: "Met **Google Maps** of een **navigatie-app** in de auto — welk principe lijkt op een papieren kaart?",
-        options: ["Toont gebied met schaal + symbolen + jouw locatie","Maakt foto's","Filmt","Stuurt sms"],
+        options: ["Toont gebied met schaal + symbolen + jouw locatie","Maakt foto's van de omgeving","Filmt wat er onderweg gebeurt","Stuurt berichten naar andere auto's"],
         answer: 0,
         wrongHints: [null, "Niet — foto's apart (Google Street View wel).", "Niet — film is video.", "Niet — geen berichten-app."],
         uitlegPad: {
           stappen: [
             { titel: "Digitaal vs papier", tekst: "Een **digitale kaart** (Google Maps, Apple Maps, ANWB-app, BuienRadar) is net als papieren kaart maar:\n• **Inzoomen + uitzoomen** mogelijk (schaal verandert)\n• **Eigen locatie** via GPS zichtbaar (blauwe stip)\n• **Live verkeer** + werkzaamheden\n• **Route-planning** automatisch\n• **Spraak-aanwijzingen** ('Sla links af')\n\nMaar **basis is hetzelfde**: gebied + symbolen + schaal." },
             { titel: "Hoe weet je telefoon waar je bent?", tekst: "**GPS** (Global Positioning System) = ~30 satellieten rond aarde. Je telefoon ontvangt signaal van ≥3 satellieten + berekent positie (driehoek-meting). Nauwkeurigheid: **3-10 meter**.\n\nDriehoeksmeting-truc: als satelliet 1 zegt 'je bent 100 km van mij', satelliet 2 zegt 'je bent 120 km van mij', dan ben je op kruispunt van 2 cirkels. Met 3 satellieten = precies 1 punt." },
-            { titel: "Toets-feit: GPS-eigenaardig­heid", tekst: "**Belangrijke feitjes**:\n• GPS gemaakt door **VS-leger** in 1970s\n• Sinds 2000 vrij beschikbaar voor iedereen\n• EU heeft eigen versie: **Galileo** (sinds 2016)\n• China: **BeiDou**\n• Rusland: **GLONASS**\n• Modernste telefoons gebruiken meerdere systemen samen voor extra precisie\n• Werkt OOK zonder internet (alleen kaart-data moet je downloaden)" },
+            { titel: "Toets-feit: GPS-eigenaardigheid", tekst: "**Belangrijke feitjes**:\n• GPS gemaakt door **VS-leger** in 1970s\n• Sinds 2000 vrij beschikbaar voor iedereen\n• EU heeft eigen versie: **Galileo** (sinds 2016)\n• China: **BeiDou**\n• Rusland: **GLONASS**\n• Modernste telefoons gebruiken meerdere systemen samen voor extra precisie\n• Werkt OOK zonder internet (alleen kaart-data moet je downloaden)" },
           ],
           woorden: [
             { woord: "GPS", uitleg: "Global Positioning System. Satelliet-systeem om locatie te bepalen." },
@@ -448,15 +448,15 @@ const steps = [
       { q: "Welke kant is **noord** op een kaart meestal?", options: ["Bovenkant","Onderkant","Rechts","Links"], answer: 0, wrongHints: [null, "Dat is zuid.", "Dat is oost.", "Dat is west."] },
       { q: "Op de **kompasroos**: tegenover oost ligt?", options: ["West","Noord","Zuid","Noordoost"], answer: 0, wrongHints: [null, "Niet — boven.", "Niet — onder.", "Niet — tussen."] },
       { q: "Een **legenda** is?", options: ["Uitleg van symbolen op de kaart","De titel","Lijst landen","Aantal pagina's"], answer: 0, wrongHints: [null, "Dat is titel.", "Niet inhoud legenda.", "Niet."] },
-      { q: "Schaal 1:1.000 betekent: 1 cm op kaart = ___?", options: ["1.000 cm in werkelijkheid (=10 m)","1 m","1 km","100 cm"], answer: 0, wrongHints: [null, "Te weinig — hoeveel centimeter is één meter? Gebruik dat om de schaalverhouding te begrijpen.", "Te veel.", "Dat getal hoort bij een andere schaalverhouding."] },
+      { q: "Schaal 1:1.000 betekent: 1 cm op kaart = ___?", options: ["10 m","1 m","1 km","100 cm"], answer: 0, wrongHints: [null, "Te weinig — hoeveel centimeter is één meter? Gebruik dat om de schaalverhouding te begrijpen.", "Te veel.", "Dat getal hoort bij een andere schaalverhouding."] },
       { q: "Op kaart 5 cm bij schaal 1:50.000 = welke afstand?", options: ["2,5 km","250 m","25 km","50 m"], answer: 0, wrongHints: [null, "Niet — bereken nogmaals.", "Te veel.", "Niet."] },
       { q: "Welk symbool op de kaart is meestal voor een **kerk**?", options: ["†","△","∼","#"], answer: 0, wrongHints: [null, "Dat is berg/driehoek.", "Dat is water/golf.", "Niet."] },
       { q: "Tussen N en O ligt?", options: ["Noordoost","Noordwest","Zuidoost","Zuidwest"], answer: 0, wrongHints: [null, "Niet — W links van N.", "Niet — onder.", "Niet."] },
       { q: "Welke kant is **zuid** op de meeste kaarten?", options: ["Onderkant","Bovenkant","Links","Rechts"], answer: 0, wrongHints: [null, "Dat is noord.", "West.", "Oost."] },
       { q: "Op kaart 1 cm bij schaal 1:25.000 = ?", options: ["250 m","2,5 km","25 m","2.500 m"], answer: 0, wrongHints: [null, "Te veel.", "Te weinig.", "Dat is 2,5 km."] },
       { q: "Welke richting wijst de **rode kant** van een kompasnaald?", options: ["Noord","Zuid","Oost","Onder"], answer: 0, wrongHints: [null, "Dat is wit/andere kant.", "Niet relevant.", "Niet."] },
-      { q: "Een **plattegrond** is?", options: ["Kaart van klein gebied (huis/school)","Wereldkaart","Atlas","Geen kaart"], answer: 0, wrongHints: [null, "Veel groter.", "Boek met veel kaarten.", "Wel een kaart."] },
-      { q: "Wat is de afkorting van **kilometer**?", options: ["km","kg","kn","kml"], answer: 0, wrongHints: [null, "Dat is kilo-gram.", "Niet bestaand.", "Niet."] },
+      { q: "Een **plattegrond** is?", options: ["Kaart van een klein gebied","Wereldkaart","Atlas","Geen kaart"], answer: 0, wrongHints: [null, "Veel groter.", "Boek met veel kaarten.", "Wel een kaart."] },
+      { q: "Wat is de afkorting van **kilometer**?", options: ["km","kg","kn","kml"], answer: 0, wrongHints: [null, "Dat is kilo-gram.", "Kn hoort niet bij kilometer.", "Niet."] },
       { q: "Welke richting zit **tegenover** zuidoost?", options: ["Noordwest","Noordoost","Zuidwest","Zuid"], answer: 0, wrongHints: [null, "Draai beide helften om: zuid→noord én oost→west.", "De zuid/noord-helft draait wél, maar de oost/west-helft ook.", "Tegenover een diagonaal ligt weer een diagonaal, geen rechte richting."] },
       { q: "Wat doe je bij een **schaalbalk** op kaart?", options: ["Meten met liniaal om afstand te weten","Niets","Tekenen","Inkleuren"], answer: 0, wrongHints: [null, "Wel iets.", "Niet — meten.", "Kleuren helpt je niet om een afstand te weten."] },
       { q: "Welke schaal heeft een atlas-kaart van NL meestal?", options: ["1:500.000 of meer","1:10","1:100","1:50"], answer: 0, wrongHints: [null, "Bij die schaalverhouding zou één centimeter op de kaart maar een heel klein stukje in werkelijkheid zijn — past heel Nederland dan op één kaart?", "Ook bij die schaalverhouding kom je er niet mee — hoe groot moet het tweede getal zijn voor een landskaart?", "Hoe groter het tweede getal van de schaal, hoe meer werkelijk gebied op de kaart past."] },

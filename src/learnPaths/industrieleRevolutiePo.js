@@ -17,7 +17,7 @@ const steps = [
   {
     title: "Wat was er vóór de industriële revolutie?",
     explanation:
-      "**Industriële Revolutie** *(rond 1750-1900)* = grote omwenteling in hoe mensen werken en leven.\n\n**Vóór (1700)** — agrarisch + ambachtelijk:\n• De meeste mensen waren **boer** of werkten in eigen **werkplaats**.\n• Goederen werden **met de hand** gemaakt door **ambachtslieden**.\n• **Familie produceert thuis**: stof weven, schoenen maken.\n• **Reizen** ging te voet of met paard-en-wagen — Amsterdam-Parijs: 2 weken.\n• Zon + seizoen bepaalden de werktijden — gewone werkdag ~10 uur in zomer, kort in winter.\n• Veel mensen kenden alleen hun eigen dorp.\n\n**Waarom kwam de verandering?**\n\n1. **Bevolkings­groei** + **honger**: meer mensen voeden = meer voedsel + spullen nodig.\n2. **Uitvindingen** in landbouw: ploegen verbeterd, drainage → grotere oogsten.\n3. **Geld + handel**: rijke kooplieden hadden kapitaal om uitvindingen te bouwen.\n4. **Steenkool + ijzer** beschikbaar in **Engeland** *(geboorteplaats Industriële Revolutie)*.\n5. **Wetenschap** ontwikkelde zich: thermodynamica, mechanica.\n\n**Begin**: rond **1760-1780** in **Engeland**. Daarna verspreid naar West-Europa + VS. NL volgde later (~1870).\n\n**Tijdvakken** *(canon NL)*:\n• Industriële Revolutie zit in **Tijdvak 8: Tijd van burgers en stoommachines** (1800-1900).\n• Onderdeel van **canonvenster** in basisschool-curriculum.",
+      "**Industriële Revolutie** *(rond 1750-1900)* = grote omwenteling in hoe mensen werken en leven.\n\n**Vóór (1700)** — agrarisch + ambachtelijk:\n• De meeste mensen waren **boer** of werkten in eigen **werkplaats**.\n• Goederen werden **met de hand** gemaakt door **ambachtslieden**.\n• **Familie produceert thuis**: stof weven, schoenen maken.\n• **Reizen** ging te voet of met paard-en-wagen — Amsterdam-Parijs: 2 weken.\n• Zon + seizoen bepaalden de werktijden — gewone werkdag ~10 uur in zomer, kort in winter.\n• Veel mensen kenden alleen hun eigen dorp.\n\n**Waarom kwam de verandering?**\n\n1. **Bevolkingsgroei** + **honger**: meer mensen voeden = meer voedsel + spullen nodig.\n2. **Uitvindingen** in landbouw: ploegen verbeterd, drainage → grotere oogsten.\n3. **Geld + handel**: rijke kooplieden hadden kapitaal om uitvindingen te bouwen.\n4. **Steenkool + ijzer** beschikbaar in **Engeland** *(geboorteplaats Industriële Revolutie)*.\n5. **Wetenschap** ontwikkelde zich: thermodynamica, mechanica.\n\n**Begin**: rond **1760-1780** in **Engeland**. Daarna verspreid naar West-Europa + VS. NL volgde later (~1870).\n\n**Tijdvakken** *(canon NL)*:\n• Industriële Revolutie zit in **Tijdvak 8: Tijd van burgers en stoommachines** (1800-1900).\n• Onderdeel van **canonvenster** in basisschool-curriculum.",
     checks: [
       {
         q: "In welk **land** begon de Industriële Revolutie?",
@@ -55,9 +55,9 @@ const steps = [
       },
       {
         q: "Welk **tijdvak** is dit?",
-        options: ["Tijd van burgers en stoommachines (8)", "Romeinen", "Renaissance", "Toekomst"],
+        options: ["Tijd van burgers en stoommachines", "Tijd van Grieken en Romeinen", "Tijd van ontdekkers en hervormers", "Tijd van televisie en computer"],
         answer: 0,
-        wrongHints: [null, "Veel eerder.", "Eerder.", "Niet."],
+        wrongHints: [null, "Veel eerder.", "Eerder.", "Later."],
         uitlegPad: {
           stappen: [
             { titel: "De Tien Tijdvakken", tekst: "In NL leren we geschiedenis via **10 tijdvakken** (canon NL). Elk tijdvak heeft een herkenbare naam + ongeveer 1 'kenmerkende' periode." },
@@ -68,7 +68,7 @@ const steps = [
             { woord: "tijdvak", uitleg: "Een periode in geschiedenis met eigen kenmerken." },
             { woord: "canon NL", uitleg: "Officiële NL-canon: 50 vensters over 10 tijdvakken." },
           ],
-          theorie: "Toets-feit: de 10 tijdvakken zijn een vaste vraag op Doorstroomtoets. Tijdvak-naam onthouden + grof tijdperk. Industriële Revolutie zit in tijdvak 8.",
+          theorie: "Toets-feit: de 10 tijdvakken komen op school vaak terug bij geschiedenis. Tijdvak-naam onthouden + grof tijdperk. Industriële Revolutie zit in tijdvak 8.",
           voorbeelden: [
             { type: "stap", tekst: "Tijdvak 7 (pruiken + revoluties) = 1700s = Franse Revolutie + Verlichting." },
             { type: "stap", tekst: "Tijdvak 9 (wereldoorlogen) = 1900-1950 = WO1 + WO2." },
@@ -83,9 +83,9 @@ const steps = [
       },
       {
         q: "Wat hielp de **start**?",
-        options: ["Steenkool + ijzer in Engeland + kapitaal", "Niets", "Alleen geluk", "Religie"],
+        options: ["Steenkool + ijzer in Engeland + kapitaal", "Goed weer", "Alleen geluk", "Religie"],
         answer: 0,
-        wrongHints: [null, "Wel.", "Niet enkel.", "Niet hoofdfactor."],
+        wrongHints: [null, "Het weer was niet de oorzaak.", "Niet enkel.", "Niet hoofdfactor."],
       },
     ],
   },
@@ -96,7 +96,7 @@ const steps = [
     checks: [
       {
         q: "Wie **verbeterde** de stoommachine?",
-        options: ["James Watt (1769)", "Edison", "Bell", "Ford"],
+        options: ["James Watt", "Edison", "Bell", "Ford"],
         answer: 0,
         wrongHints: [null, "Gloeilamp.", "Telefoon.", "T-Ford."],
         uitlegPad: {
@@ -124,19 +124,19 @@ const steps = [
       },
       {
         q: "Wat is een **belangrijk** kenmerk van stoommachine?",
-        options: ["Krachtbron onafhankelijk van rivier/wind", "Werkt op zon", "Werkt op gas", "Niet bekend"],
+        options: ["Krachtbron onafhankelijk van rivier/wind", "Werkt op zon", "Werkt op gas", "Werkt op spierkracht"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet specifiek.", "Wel."],
+        wrongHints: [null, "Niet.", "Niet specifiek.", "Wat wordt er in de ketel verhit?"],
       },
       {
         q: "Eerste **NL spoorlijn**?",
-        options: ["Amsterdam-Haarlem (1839)", "Utrecht-Rotterdam", "Maastricht-Amsterdam", "Den Haag-Schiphol"],
+        options: ["Amsterdam-Haarlem", "Utrecht-Rotterdam", "Maastricht-Amsterdam", "Den Haag-Schiphol"],
         answer: 0,
-        wrongHints: [null, "Andere route — denk aan een kort proefstukje vanaf de hoofdstad.", "Dat zou meteen een enorme afstand zijn — de eerste lijn was juist kort.", "Schiphol als vliegveld bestond in 1839 nog lang niet!"],
+        wrongHints: [null, "Andere route — de eerste lijn was maar kort.", "Dat zou meteen een enorme afstand zijn — de eerste lijn was juist kort.", "Schiphol als vliegveld bestond in 1839 nog lang niet!"],
       },
       {
         q: "Wie maakte **gloeilamp**?",
-        options: ["Edison (1879)", "Watt", "Bell", "Morse"],
+        options: ["Edison", "Watt", "Bell", "Morse"],
         answer: 0,
         wrongHints: [null, "Stoom.", "Telefoon.", "Telegraaf."],
       },
@@ -145,7 +145,7 @@ const steps = [
   {
     title: "Fabrieken + samenleving",
     explanation:
-      "**Fabrieken** ontstonden — grote gebouwen waar veel machines + arbeiders samen werkten.\n\n**Verschil**:\n• **Vóór**: ambachtsman thuis, eigen tempo.\n• **Na**: fabriek, **lopende band**, vast tempo, **uurloon**, baas die toezicht houdt.\n\n**Werkomstandigheden** *(1800-1850)*:\n• Werkdag: **12-16 uur**, 6 dagen per week.\n• Gevaarlijk *(machines zonder beschermingen, ongelukken)*.\n• Stoffig + bedompt.\n• **Geen vakantiedagen**, geen ziekteverzekering, geen pensioen.\n• Laag loon *(amper genoeg om te eten)*.\n\n**Stadsgroei** *(verstedelijking)*:\n• Mensen trokken massaal naar **fabrieksteden** voor werk.\n• Londen: van 1 miljoen (1800) → 6,5 miljoen (1900).\n• In NL: Tilburg, Twente, Limburg groeiden mee.\n• **Krottenwijken**: arbeiders woonden in vieze, kleine huisjes.\n• **Hygiëne** slecht: cholera-epidemieën *(NL: 1832, 1849, 1866)*.\n\n**Sociale klassen**:\n• **Burgerij (bourgeoisie)**: fabriekseigenaren, kooplui, dokters. Rijk geworden.\n• **Arbeidersklasse (proletariaat)**: fabriekswerkers. Arm. Geen rechten.\n• Voor de Revolutie was er vooral: adel + boeren. Burgerij groeide enorm.\n\n**Voordelen** Industriële Revolutie:\n• Goedkopere goederen *(kleding, gereedschap, voedsel)*.\n• Snel reizen + communiceren.\n• Wetenschap + gezondheidszorg vooruit.\n• Op lange termijn: hogere levensstandaard.\n\n**Nadelen** *(vooral 1800-1850)*:\n• Slechte werkomstandigheden.\n• Kinderarbeid.\n• Vervuiling van lucht + rivieren.\n• Steden ongezond + onveilig.\n• Mensen vervreemd van eigen werk *(maakten 1 onderdeel, nooit hele product)*.\n\n**Toets-feitje**:\nDe gemiddelde levensverwachting in een Engelse fabrieksstad in 1850 was **30 jaar**. Op het platteland was het 50 jaar. Vervuiling + ziekte maakten stad ongezond.",
+      "**Fabrieken** ontstonden — grote gebouwen waar veel machines + arbeiders samen werkten.\n\n**Verschil**:\n• **Vóór**: ambachtsman thuis, eigen tempo.\n• **Na**: fabriek, **machines**, vast tempo, **uurloon**, baas die toezicht houdt.\n\n**Werkomstandigheden** *(1800-1850)*:\n• Werkdag: **12-16 uur**, 6 dagen per week.\n• Gevaarlijk *(machines zonder beschermingen, ongelukken)*.\n• Stoffig + bedompt.\n• **Geen vakantiedagen**, geen ziekteverzekering, geen pensioen.\n• Laag loon *(amper genoeg om te eten)*.\n\n**Stadsgroei** *(verstedelijking)*:\n• Mensen trokken massaal naar **fabrieksteden** voor werk.\n• Londen: van 1 miljoen (1800) → 6,5 miljoen (1900).\n• In NL: Tilburg, Twente, Limburg groeiden mee.\n• **Krottenwijken**: arbeiders woonden in vieze, kleine huisjes.\n• **Hygiëne** slecht: cholera-epidemieën *(NL: 1832, 1849, 1866)*.\n\n**Sociale klassen**:\n• **Burgerij (bourgeoisie)**: fabriekseigenaren, kooplui, dokters. Rijk geworden.\n• **Arbeidersklasse (proletariaat)**: fabriekswerkers. Arm. Geen rechten.\n• Voor de Revolutie was er vooral: adel + boeren. Burgerij groeide enorm.\n\n**Voordelen** Industriële Revolutie:\n• Goedkopere goederen *(kleding, gereedschap, voedsel)*.\n• Snel reizen + communiceren.\n• Wetenschap + gezondheidszorg vooruit.\n• Op lange termijn: hogere levensstandaard.\n\n**Nadelen** *(vooral 1800-1850)*:\n• Slechte werkomstandigheden.\n• Kinderarbeid.\n• Vervuiling van lucht + rivieren.\n• Steden ongezond + onveilig.\n• Mensen vervreemd van eigen werk *(maakten 1 onderdeel, nooit hele product)*.\n\n**Toets-feitje**:\nDe gemiddelde levensverwachting in een Engelse fabrieksstad in 1850 was **30 jaar**. Op het platteland was het 50 jaar. Vervuiling + ziekte maakten stad ongezond.",
     checks: [
       {
         q: "Werkdag in **vroege fabriek**?",
@@ -156,7 +156,7 @@ const steps = [
           stappen: [
             { titel: "Vroege fabriek: zeer lange dagen", tekst: "In de vroege Industriële Revolutie (1800-1850) werkten arbeiders **12 tot 16 uur per dag**, 6 dagen per week. Slechts 1 dag rust (zondag)." },
             { titel: "Geen rechten", tekst: "Geen vakantie, geen ziekteverzekering, geen pensioen. Bij ongeluk werd je gewoon ontslagen. Loon was laag — amper genoeg om te eten." },
-            { titel: "Pas eind 19e eeuw: regels", tekst: "Vanaf ongeveer 1880 kwamen er wetten: maximale werkdag, verbod op kinderarbeid, etc. Het **Kinderwetje van Van Houten** (NL, 1874) verbood arbeid voor kinderen onder 12." },
+            { titel: "Pas eind 19e eeuw: regels", tekst: "Vanaf ongeveer 1870 kwamen er wetten: maximale werkdag, verbod op kinderarbeid, etc. Het **Kinderwetje van Van Houten** (NL, 1874) verbood arbeid voor kinderen onder 12." },
           ],
           woorden: [
             { woord: "arbeider", uitleg: "Iemand die in fabriek werkt voor loon." },
@@ -206,9 +206,9 @@ const steps = [
       },
       {
         q: "Wat is **verstedelijking**?",
-        options: ["Mensen verhuizen naar steden", "Steden verlaten", "Boerderijen bouwen", "Niet bestaand"],
+        options: ["Mensen verhuizen naar steden", "Steden verlaten", "Boerderijen bouwen", "Steden groener maken"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet.", "Wel."],
+        wrongHints: [null, "Tegenovergesteld.", "Niet.", "Het gaat om waar mensen gaan wonen."],
       },
       {
         q: "Wat is **proletariaat**?",
@@ -278,9 +278,9 @@ const steps = [
     checks: [
       {
         q: "Waarom **later** NL?",
-        options: ["Geen steenkool/ijzer + handel-focus", "Wilde niet", "Te koud", "Niet bekend"],
+        options: ["Geen steenkool/ijzer + handel-focus", "Te veel oorlog", "Te koud", "Te weinig mensen"],
         answer: 0,
-        wrongHints: [null, "Wel.", "Geen reden.", "Wel."],
+        wrongHints: [null, "NL was in die tijd vrij rustig.", "Geen reden.", "Er woonden genoeg mensen."],
       },
       {
         q: "Welke industrie in **Twente**?",
@@ -290,7 +290,7 @@ const steps = [
       },
       {
         q: "**Philips** start in?",
-        options: ["1891 (Eindhoven)", "1700", "2000", "1500"],
+        options: ["1891", "1700", "2000", "1500"],
         answer: 0,
         wrongHints: [null, "Veel later.", "Te recent.", "Veel later."],
       },
@@ -308,24 +308,24 @@ const steps = [
     checks: [
       { q: "**Industriële Revolutie** ging vooral over?", options: ["Machines + fabrieken", "Computers", "Schepen", "Oorlog"], answer: 0, wrongHints: [null, "Veel later.", "Niet primair.", "Niet."] },
       { q: "Stoommachine **verbeterd** door?", options: ["James Watt", "Edison", "Marx", "Ford"], answer: 0, wrongHints: [null, "Gloeilamp.", "Filosoof.", "Auto."] },
-      { q: "**Kinderarbeid** verboden in NL onder?", options: ["12 jaar (vanaf 1874)", "Geen wet", "16 jaar", "8 jaar"], answer: 0, wrongHints: [null, "Wel.", "Iets later.", "Niet specifiek."] },
-      { q: "**Tijdvak** waarin dit valt?", options: ["8: Burgers + stoommachines", "Romeinen", "Renaissance", "Goud"], answer: 0, wrongHints: [null, "Te vroeg.", "Te vroeg.", "Iets eerder."] },
+      { q: "**Kinderarbeid** verboden in NL onder?", options: ["12 jaar", "Geen wet", "16 jaar", "8 jaar"], answer: 0, wrongHints: [null, "Wel.", "Iets later.", "Hoger."] },
+      { q: "**Tijdvak** waarin dit valt?", options: ["Burgers en stoommachines", "Grieken en Romeinen", "Ontdekkers en hervormers", "Regenten en vorsten"], answer: 0, wrongHints: [null, "Te vroeg.", "Te vroeg.", "Iets eerder."] },
       { q: "Wat is **bourgeoisie**?", options: ["Rijke burgers", "Boeren", "Adel", "Arbeiders"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Proletariaat."] },
-      { q: "**Philips** start in?", options: ["1891 Eindhoven", "1700", "2000", "Frankrijk"], answer: 0, wrongHints: [null, "Te vroeg.", "Te laat.", "Niet."] },
+      { q: "**Philips** start in?", options: ["1891", "1700", "2000", "1950"], answer: 0, wrongHints: [null, "Te vroeg.", "Te laat.", "Te laat."] },
       { q: "**Industriële Revolutie** begon in welk land?", options: ["Engeland","NL","Frankrijk","Duitsland"], answer: 0, wrongHints: [null, "Veel later.", "Later.", "Later."] },
-      { q: "Wat is **urbanisatie**?", options: ["Mensen verhuizen platteland → stad","Andersom","Niet relevant","Reclame"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Wel.", "Niet."] },
-      { q: "Wat doet een **spoorweg**?", options: ["Treinen + goederen verplaatsen","Wegen onderhouden","Niet relevant","Reclame"], answer: 0, wrongHints: [null, "Niet primair.", "Wel.", "Niet."] },
-      { q: "Eerste NL-spoorlijn was?", options: ["Amsterdam-Haarlem (1839)","Den Haag-Rotterdam","Niet bekend","2000"], answer: 0, wrongHints: [null, "Andere route.", "Wel bekend.", "Veel later."] },
-      { q: "Wat zijn **vakbonden**?", options: ["Organisaties voor werknemers-rechten","Werkgevers","Niet relevant","Reclame"], answer: 0, wrongHints: [null, "Andere kant.", "Wel.", "Niet."] },
-      { q: "**Twentse textiel** was vroeg NL-industrie in?", options: ["Enschede / Almelo","Amsterdam","Rotterdam","Niet bekend"], answer: 0, wrongHints: [null, "Niet primair.", "Niet.", "Wel."] },
-      { q: "Welke energiebron werd dominant in Industriële Revolutie?", options: ["Steenkool","Wind","Zon","Niet relevant"], answer: 0, wrongHints: [null, "Eerder.", "Later.", "Wel."] },
-      { q: "Wat is **kolonisatie** in deze tijd?", options: ["Andere landen onder controle nemen voor grondstoffen","Vrede","Niet relevant","Reclame"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Wel.", "Niet."] },
+      { q: "Wat is **urbanisatie**?", options: ["Mensen verhuizen platteland → stad","Andersom","Nieuwe wegen aanleggen","Boeren op het platteland helpen"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Het gaat om waar mensen wonen.", "Het Latijnse 'urbs' betekent stad."] },
+      { q: "Wat doet een **spoorweg**?", options: ["Treinen + goederen verplaatsen","Wegen onderhouden","Schepen laten varen","Stroom leveren aan huizen"], answer: 0, wrongHints: [null, "Niet primair.", "Dat gaat over water.", "Denk aan rails."] },
+      { q: "Eerste NL-spoorlijn was?", options: ["Amsterdam-Haarlem","Den Haag-Rotterdam","Utrecht-Arnhem","Groningen-Zwolle"], answer: 0, wrongHints: [null, "Andere route.", "Die kwam later.", "Die kwam later."] },
+      { q: "Wat zijn **vakbonden**?", options: ["Organisaties voor werknemers-rechten","Organisaties van fabriekseigenaren","Clubs voor sport","Winkels voor gereedschap"], answer: 0, wrongHints: [null, "Andere kant.", "Het gaat om werk.", "Geen winkel."] },
+      { q: "**Twentse textiel** was vroeg NL-industrie in?", options: ["Enschede / Almelo","Amsterdam","Rotterdam","Maastricht"], answer: 0, wrongHints: [null, "Niet primair.", "Niet.", "Limburg: vooral mijnbouw."] },
+      { q: "Welke energiebron werd dominant in Industriële Revolutie?", options: ["Steenkool","Wind","Zon","Aardgas"], answer: 0, wrongHints: [null, "Eerder.", "Later.", "Later (20e eeuw)."] },
+      { q: "Wat is **kolonisatie** in deze tijd?", options: ["Andere landen onder controle nemen voor grondstoffen","Vrede","Handel drijven met gelijke partners","Nieuwe steden bouwen in eigen land"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Was het wel gelijk?", "Het gaat om andere landen."] },
       { q: "**Karl Marx** schreef over?", options: ["Arbeiders en kapitalisme","Sterrenkunde","Evolutie van dieren","Ontdekkingsreizen"], answer: 0, wrongHints: [null, "Dat deed bijvoorbeeld Galileï.", "Dat was het onderwerp van Charles Darwin.", "Die waren al eeuwen eerder. Marx keek naar de fabrieken van zijn eigen tijd."] },
       { q: "Welke transportuitvinding kwam in de Industriële Revolutie?", options: ["Stoomtrein + stoomschip","Ruimteraket","Straalvliegtuig","Internet"], answer: 0, wrongHints: [null, "Veel later (20e eeuw).", "Veel later.", "Veel later."] },
-      { q: "Wat zijn **slechte gevolgen** Industriële Revolutie?", options: ["Vervuiling + lange werkdagen","Niet bestaand","Te veel vrije tijd","Niet relevant"], answer: 0, wrongHints: [null, "Wel.", "Tegenovergesteld.", "Niet."] },
-      { q: "Wat zijn **goede gevolgen**?", options: ["Betere voeding, kleding goedkoper, vooruitgang","Niets","Te veel oorlog","Niet relevant"], answer: 0, wrongHints: [null, "Wel goede.", "Niet hoofdgevolg.", "Wel."] },
-      { q: "Wanneer kwam **NL-industrialisering**?", options: ["~1850-1900","1500","2000","Voor jaar 1"], answer: 0, wrongHints: [null, "Te vroeg.", "Te laat.", "Onmogelijk."] },
-      { q: "Wat is **massa-productie**?", options: ["Veel producten snel maken met machines","1 product","Niet relevant","Reclame"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Wel.", "Niet."] },
+      { q: "Wat zijn **slechte gevolgen** Industriële Revolutie?", options: ["Vervuiling + lange werkdagen","Minder steden","Te veel vrije tijd","Duurdere kleding"], answer: 0, wrongHints: [null, "Steden groeiden juist.", "Tegenovergesteld.", "Kleding werd juist goedkoper."] },
+      { q: "Wat zijn **goede gevolgen**?", options: ["Betere voeding, kleding goedkoper, vooruitgang","Schonere lucht in de steden","Te veel oorlog","Meteen kortere werkdagen"], answer: 0, wrongHints: [null, "Fabrieken gaven juist veel rook.", "Niet hoofdgevolg.", "Werkdagen waren eerst juist heel lang."] },
+      { q: "Wanneer kwam **NL-industrialisering**?", options: ["~1850-1900","1500","2000","~1650-1700"], answer: 0, wrongHints: [null, "Te vroeg.", "Te laat.", "Te vroeg — dat is de Gouden Eeuw."] },
+      { q: "Wat is **massa-productie**?", options: ["Veel producten snel maken met machines","1 product","Producten alleen met de hand maken","Producten repareren"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Wat doen machines?", "Het gaat om maken."] },
     ],
   },
 ];

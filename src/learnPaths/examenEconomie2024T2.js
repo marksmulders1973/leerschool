@@ -41,7 +41,7 @@ const steps = [
           stappen: [
             { titel: "Wat is nationaal inkomen?", tekst: "Het totaal aan inkomen van iedereen in een land in 1 jaar. Stijgt als er meer geld het land binnen komt dan eruit gaat." },
             { titel: "Wanneer stijgt nationaal inkomen Kameroen?", tekst: "Als er GELD het land in stroomt — vanuit andere landen. Dat heet export (van producten of diensten)." },
-            { titel: "Loop opties langs", tekst: "Optie 1: Kameroen KOOPT in NL (geld weg uit Kameroen) ✗. Optie 2: eigen groente verbouwen (geen geldstroom) ✗. Optie 3: NL-toeristen GEVEN UIT in Kameroen (geld komt binnen) ✓." },
+            { titel: "Loop opties langs", tekst: "Helikopters: Kameroen KOOPT in NL (geld weg uit Kameroen) ✗. Eigen groente verbouwen (geen geldstroom) ✗. Toeristen: NL-toeristen GEVEN UIT in Kameroen (geld komt binnen) ✓." },
           ],
           woorden: [
             { woord: "nationaal inkomen", uitleg: "Totaal verdiend inkomen van alle mensen + bedrijven in een land per jaar. Maatstaf voor welvaart." },
@@ -215,7 +215,7 @@ const steps = [
           stappen: [
             { titel: "Wat is i/a-ratio?", tekst: "Verhouding INACTIEVEN (mensen met uitkering: werkloos, AOW, WIA) tegen ACTIEVEN (werkenden). Bv. 80 inactieven per 100 actieven = i/a 0,80." },
             { titel: "Wat als i/a STIJGT?", tekst: "Meer uitkeringsontvangers per werkende. Werkenden moeten via belasting/premies meer betalen voor minder collega's." },
-            { titel: "Wat doet dat met BETAALBAARHEID?", tekst: "Wordt MOEILIJKER om de uitkeringen te financieren. Antwoord B (neemt af)." },
+            { titel: "Wat doet dat met BETAALBAARHEID?", tekst: "Wordt MOEILIJKER om de uitkeringen te financieren. De betaalbaarheid neemt dus af." },
           ],
           woorden: [
             { woord: "i/a-ratio", uitleg: "Inactieven gedeeld door actieven. Maatstaf voor draagkracht van sociale zekerheid." },
@@ -316,7 +316,7 @@ const steps = [
           "Reken: -4% van €100k = -€4.000, -6% van €20k = -€1.200. Netto -€2.800. Vermogen DAALT.",
           null,
         ],
-        explanation: "Vermogen = bezittingen − schulden = €100.000 − €20.000 = €80.000.\n\nOptie C: bezittingen +2% = +€2.000 (nu €102.000), schulden +6% = +€1.200 (nu €21.200). Nieuw vermogen = €102.000 − €21.200 = €80.800. Toename van €800. ✓\n\nOptie A en B leiden allebei tot een vermogen-DALING.",
+        explanation: "Vermogen = bezittingen − schulden = €100.000 − €20.000 = €80.000.\n\nBezittingen +2% en schulden +6%: bezittingen +2% = +€2.000 (nu €102.000), schulden +6% = +€1.200 (nu €21.200). Nieuw vermogen = €102.000 − €21.200 = €80.800. Toename van €800. ✓\n\nDe twee opties waarin de bezittingen dalen, leiden allebei tot een vermogen-DALING.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 33",
         leerpadLink: { id: "pincode-geld-sparen-lenen", title: "Geld, sparen en lenen" },
         voorkennisKeten: [
@@ -328,7 +328,7 @@ const steps = [
           stappen: [
             { titel: "Wat is vermogen?", tekst: "Vermogen = BEZITTINGEN − SCHULDEN. Boot heeft €100k bezittingen + €20k schulden → vermogen €80.000." },
             { titel: "Wanneer STIJGT vermogen?", tekst: "Als bezittingen meer toenemen dan schulden. Of als schulden meer dalen dan bezittingen." },
-            { titel: "Reken elke optie uit", tekst: "A: bezit −€4.000, schuld +€800 = vermogen −€4.800 ✗. B: bezit −€4.000, schuld −€1.200 = −€2.800 ✗. C: bezit +€2.000, schuld +€1.200 = +€800 ✓." },
+            { titel: "Reken elke optie uit", tekst: "Bezit −4% / schuld +4%: bezit −€4.000, schuld +€800 = vermogen −€4.800 ✗. Bezit −4% / schuld −6%: bezit −€4.000, schuld −€1.200 = −€2.800 ✗. Bezit +2% / schuld +6%: bezit +€2.000, schuld +€1.200 = +€800 ✓." },
             { titel: "Tip bij %-vragen", tekst: "Reken altijd in EURO's, niet in %. 6% van €20.000 (€1.200) is veel kleiner dan 2% van €100.000 (€2.000)." },
           ],
           woorden: [
@@ -346,7 +346,7 @@ const steps = [
             { onderwerp: "% rekenen", uitleg: "Procent = per honderd. X% van Y = (X/100) × Y. Bv. 6% van 20 = 1,20." },
           ],
           niveaus: {
-            basis: "Vermogen stijgt als bezittingen méér in € groeien dan schulden. Optie C: +€2.000 vs +€1.200 = +€800.",
+            basis: "Vermogen stijgt als bezittingen méér in € groeien dan schulden. Bezit +2% en schuld +6%: +€2.000 vs +€1.200 = +€800.",
             simpeler: "De truc: zelfde % op verschillende bedragen = ander €-bedrag. 2% van €100.000 = €2.000 (groot bedrag, klein %). 6% van €20.000 = maar €1.200 (klein bedrag, hoog %). Bezit groeit MEER → vermogen stijgt.",
             nogSimpeler: "+2% × 100k > +6% × 20k = vermogen +800",
           },

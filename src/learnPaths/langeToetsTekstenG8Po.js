@@ -596,7 +596,7 @@ Acht vragen. Hou vol — dit is precies de training die je nodig hebt!`,
       {
         q: "*\"'Daar!' riep ze, veel te hard. Opa grinnikte. 'Die telt. Eén.'\"* — Waarnaar verwijst 'die'?",
         options: [
-          "De streep licht die net langs de hemel schoot",
+          "De vallende ster",
           "De thermoskan met chocolademelk",
           "De wens van Sanne",
           "Het luchtbed op het gras",
@@ -714,7 +714,7 @@ Acht vragen. Hou vol — dit is precies de training die je nodig hebt!`,
       {
         q: "Waar gaat dit verhaal vooral over?",
         options: [
-          "Een bijzondere nacht waarin Sanne en opa samen naar vallende sterren kijken",
+          "Sanne en opa die samen vallende sterren kijken",
           "Een recept voor warme chocolademelk",
           "Een ruzie tussen Sanne en opa Berend",
           "Hoe je een luchtbed moet opblazen",
@@ -793,25 +793,25 @@ Acht vragen. Hou vol — dit is precies de training die je nodig hebt!`,
       {
         q: "Stel dat de eerste alinea nog een zin had: *'Sanne stond op en deed het raam open, de kilte van de nacht naar binnen latend.'* Wat kun je daaruit het beste afleiden?",
         options: [
-          "Sanne wilde de sterren beter kunnen zien of horen",
+          "Sanne wilde alvast naar de hemel kijken",
           "Sanne wilde de kamer verwarmen",
           "Sanne was bang voor het donker",
-          "Sanne had het te warm en wilde afkoelen",
+          "Sanne wilde de buren roepen",
         ],
         answer: 0,
         wrongHints: [
           null,
           "De koude nachtlucht binnenlaten warmt je niet op — wat is dan de reden dat Sanne het raam opent?",
           "Staat er iets in de tekst over dat Sanne bang is? Kijk naar waar ze aan het begin van het verhaal mee bezig is.",
-          "De tekst noemt kilte, maar dat betekent niet dat ze het te warm heeft. Waarmee was Sanne aan het begin bezig?",
+          "Komen er ergens buren in het verhaal voor? Waarmee was Sanne aan het begin bezig?",
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Gebruik de context", tekst: "Aan het begin kijkt Sanne naar de vallende sterren. Raam opendoen = buiten dichterbij brengen. Wat wilde ze dan beter zien of beleven?" },
-            { titel: "Te-ver-test", tekst: "'Bang voor het donker' staat nergens in de tekst. 'Te warm' wordt niet gesuggereerd. Blijf bij aanwijzingen die de tekst geeft." },
+            { titel: "Gebruik de context", tekst: "Aan het begin kan Sanne niet slapen: vannacht gaat ze vallende sterren kijken, als het tenminste helder blijft. Raam opendoen = de hemel dichterbij brengen. Wat wilde ze dan alvast zien?" },
+            { titel: "Te-ver-test", tekst: "'Bang voor het donker' staat nergens in de tekst. Buren komen in het verhaal niet voor. Blijf bij aanwijzingen die de tekst geeft." },
           ],
           niveaus: {
-            basis: "Waar kijkt Sanne de hele tijd naar in het verhaal? En waarom doet ze het raam open?",
+            basis: "Waar denkt Sanne aan als ze niet kan slapen? En waarom doet ze dan het raam open?",
             simpeler: "Als je buiten een mooi vuurwerk wilt zien, zou jij dan je raam opendoen — of dichtlaten?",
             nogSimpeler: "Wat deed Sanne vlak voordat ze het raam opende? Wat was ze aan het doen?",
           },

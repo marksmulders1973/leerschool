@@ -56,7 +56,7 @@ const steps = [
       {
         q: "Constante van Planck (h) is fundamenteel omdat:",
         options: [
-          "Het de schaal van quantum-effecten bepaalt (heel klein)",
+          "Het de schaal van quantum-effecten bepaalt",
           "Het de lichtsnelheid bepaalt",
           "Het de gravitatie verklaart",
           "Het magnetische velden levert"
@@ -64,7 +64,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — c is een aparte constante.", "Onzin in dit kader.", "Onzin."],
         uitlegPad: {
-          stappen: [{ titel: "h = 6,626·10⁻³⁴ J·s — heel klein", tekst: "Omdat h zo klein is, zien wij op dagelijkse schaal geen quantum-effecten. Een tennisbal heeft de Broglie-golf van ~10⁻³⁵ m → onmeetbaar. Een elektron heeft λ ~10⁻¹⁰ m → wel meetbaar." }],
+          stappen: [{ titel: "h = 6,626·10⁻³⁴ J·s — heel klein", tekst: "Omdat h zo klein is, zien wij op dagelijkse schaal geen quantum-effecten. Een tennisbal heeft de Broglie-golf van ~10⁻³⁴ m → onmeetbaar. Een elektron heeft λ ~10⁻¹⁰ m → wel meetbaar." }],
           niveaus: { basis: "h is schaal van quantum.", simpeler: "Hele kleine constante = quantum-wereld.", nogSimpeler: "h" },
         },
       },
@@ -105,7 +105,7 @@ const steps = [
       {
         q: "Drempel-frequentie voor cesium (W=2,1 eV)?",
         options: [
-          "~5,1·10¹⁴ Hz (oranje-geel)",
+          "~5,1·10¹⁴ Hz",
           "~5,1·10⁸ Hz",
           "~5,1·10¹⁶ Hz",
           "Bestaat niet"
@@ -211,7 +211,7 @@ const steps = [
       {
         q: "Een **emissie-spectrum** ontstaat doordat:",
         options: [
-          "Aangeslagen atomen vallen terug naar lagere niveaus en stralen fotonen uit",
+          "Atomen vallen terug naar een lager niveau",
           "Atomen absorberen licht",
           "Elektronen bewegen langs banen",
           "Atomen botsen"
@@ -227,7 +227,7 @@ const steps = [
       {
         q: "Waarom faalt het **Bohr-model** voor atomen met meer dan één elektron?",
         options: [
-          "Onderlinge elektron-afstoting maakt rekening complex; vereist orbitalen + quantummechanica",
+          "Elektronen stoten elkaar af; dat kan het model niet aan",
           "Bohr-model is helemaal fout",
           "Zwaardere atomen volgen klassieke fysica",
           "Geen fotonen mogelijk"
@@ -248,7 +248,7 @@ const steps = [
   {
     title: "Spectraal-analyse — vingerafdrukken van atomen",
     explanation:
-      "**Drie soorten spectra**:\n\n1. **Continu spectrum**: hete vaste stof of dicht gas → alle kleuren (zoals zonnedisk, gloeilamp). Wien-piek bij T-afhankelijke λ.\n2. **Lijn-emissie-spectrum**: heet, dun gas (neon-buis, sterren-corona) → losse lijnen tegen donker.\n3. **Lijn-absorptie-spectrum**: continu spectrum door koud gas → donkere lijnen (Fraunhofer-lijnen in zonlicht).\n\n**Kirchhoff's wetten** (1859):\n• Heet dicht → continu.\n• Heet dun → emissielijnen.\n• Koud gas vóór een continue bron → absorptielijnen.\n\n**Toepassingen**:\n• **Astronomie**: spectraal-analyse onthult samenstelling sterren + temperatuur (via Wien-piek) + snelheid (Doppler-verschuiving).\n• **Spectrochemie**: bepaal welke metalen in monster via emissielijnen.\n• **Fraunhofer-lijnen**: ~25 000 donkere lijnen in zonlicht door koudere zon-atmosfeer (chromosfeer) → samenstelling van zon precies bepaald.\n\n**Doppler-shift in spectrum**:\n• Ster komt naar je toe → spectrum naar blauw (kortere λ).\n• Ster gaat weg → spectrum naar rood.\n• Mate van shift → snelheid (z = Δλ/λ).\n• Hubble (1929): bijna alle sterrenstelsels rood-verschoven → uitdijing heelal.\n\n**Toepassing kosmologie**: kosmische achtergrond-straling (~2,7 K) gevonden door Penzias + Wilson 1965 → bewijs Big Bang.\n\n**Natrium-lamp (oranje straatverlichting)**:\n• D-lijn op 589 nm → smal spectrum → energiezuinig (geen UV/IR-verlies) + monochroom (kleuren zijn er slecht in te herkennen).\n• Vervangen door wit-LED voor betere kleurweergave + nog zuiniger.\n\n**Astronomie-classificatie sterren** (O B A F G K M, van heet naar koel):\n• O-ster: ~30 000 K, blauw, sterke He-lijnen.\n• G-ster (zoals zon): ~5800 K, geel.\n• M-ster: ~3000 K, rood, sterke moleculaire banden.\n\n*Geheugen-truc*: Oh Be A Fine Girl, Kiss Me.",
+      "**Drie soorten spectra**:\n\n1. **Continu spectrum**: hete vaste stof of dicht gas → alle kleuren (zoals zonnedisk, gloeilamp). Wien-piek bij T-afhankelijke λ.\n2. **Lijn-emissie-spectrum**: heet, dun gas (neon-buis, sterren-corona) → losse lijnen tegen donker.\n3. **Lijn-absorptie-spectrum**: continu spectrum door koud gas → donkere lijnen (Fraunhofer-lijnen in zonlicht).\n\n**Kirchhoff's wetten** (1859):\n• Heet dicht → continu.\n• Heet dun → emissielijnen.\n• Koud gas vóór een continue bron → absorptielijnen.\n\n**Toepassingen**:\n• **Astronomie**: spectraal-analyse onthult samenstelling sterren + temperatuur (via Wien-piek) + snelheid (Doppler-verschuiving).\n• **Spectrochemie**: bepaal welke metalen in monster via emissielijnen.\n• **Fraunhofer-lijnen**: ~25 000 donkere lijnen in zonlicht door koudere buitenste zon-lagen → samenstelling van zon precies bepaald.\n\n**Doppler-shift in spectrum**:\n• Ster komt naar je toe → spectrum naar blauw (kortere λ).\n• Ster gaat weg → spectrum naar rood.\n• Mate van shift → snelheid (z = Δλ/λ).\n• Hubble (1929): bijna alle sterrenstelsels rood-verschoven → uitdijing heelal.\n\n**Toepassing kosmologie**: kosmische achtergrond-straling (~2,7 K) gevonden door Penzias + Wilson 1965 → bewijs Big Bang.\n\n**Natrium-lamp (oranje straatverlichting)**:\n• D-lijn op 589 nm → smal spectrum → energiezuinig (geen UV/IR-verlies) + monochroom (kleuren zijn er slecht in te herkennen).\n• Vervangen door wit-LED voor betere kleurweergave + nog zuiniger.\n\n**Astronomie-classificatie sterren** (O B A F G K M, van heet naar koel):\n• O-ster: ~30 000 K, blauw, sterke He-lijnen.\n• G-ster (zoals zon): ~5800 K, geel.\n• M-ster: ~3000 K, rood, sterke moleculaire banden.\n\n*Geheugen-truc*: Oh Be A Fine Girl, Kiss Me.",
     checks: [
       {
         q: "Een **neon-buis** geeft welk type spectrum?",
@@ -269,10 +269,10 @@ const steps = [
           "Verzonnen — bestaan niet"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — chromosfeer absorbeert.", "Niet — atmosfeer-rol klein.", "Bestaan wel."],
+        wrongHints: [null, "Niet — zijn de lijnen licht of donker?", "Niet — atmosfeer-rol klein.", "Bestaan wel."],
         uitlegPad: {
           stappen: [
-            { titel: "Continu + koudere absorptie", tekst: "Zon-bol (~6000 K, dicht) zendt continu spectrum uit. Daar bovenop ligt koudere chromosfeer (~4500 K, dunner gas) die specifieke λ absorbeert. Resultaat: continu met donkere strepen — Fraunhofer-lijnen, ~25 000 stuks (waterstof, helium, ijzer, calcium, etc.)." },
+            { titel: "Continu + koudere absorptie", tekst: "Zon-bol (~6000 K, dicht) zendt continu spectrum uit. Daar bovenop ligt een koudere buitenste gaslaag (~4500 K, dunner gas) die specifieke λ absorbeert. Resultaat: continu met donkere strepen — Fraunhofer-lijnen, ~25 000 stuks (waterstof, helium, ijzer, calcium, etc.)." },
           ],
           theorie: "Helium ('helios' = zon) werd ontdekt als gele lijn in het zonnespectrum (1868), vóórdat het op aarde was gevonden.",
           niveaus: { basis: "Donkere absorptielijnen.", simpeler: "Koude zon-buitenlaag slokt fotonen op.", nogSimpeler: "Absorptie" },
@@ -291,7 +291,7 @@ const steps = [
       {
         q: "Een **O-ster** is volgens classificatie:",
         options: [
-          "Heet + blauw (~30 000 K)",
+          "Heet + blauw",
           "Koel + rood",
           "Geel als zon",
           "Wit-dwerg"
@@ -366,7 +366,7 @@ const steps = [
       {
         q: "Heisenberg: ΔX · Δp ≥ ℏ/2 betekent:",
         options: [
-          "Plek + impuls niet gelijktijdig exact te bepalen — fundamentele natuurwet",
+          "Plek en impuls zijn nooit tegelijk exact bekend",
           "Meetinstrument is gewoon te slecht",
           "Geldt alleen voor lichte deeltjes",
           "Alleen op kwantumcomputers"

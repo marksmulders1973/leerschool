@@ -56,7 +56,7 @@ const steps = [
         q: "Bij een **scheve verdeling met uitschieters** is welke centrummaat beter?",
         options: ["Mediaan","Gemiddelde","Modus","Som"],
         answer: 0,
-        wrongHints: [null, "Niet — gevoelig voor uitschieters.", "Soms — maar mediaan algemener bij continue data.", "Niet — geen centrummaat."],
+        wrongHints: [null, "Niet — gevoelig voor uitschieters.", "De modus zegt alleen wat het vaakst voorkomt — niet waar het midden van de data ligt.", "Niet — geen centrummaat."],
         uitlegPad: {
           stappen: [{ titel: "Mediaan = robuust", tekst: "**Mediaan** is **niet beïnvloed** door uitschieters — alleen de middenwaarde telt. Gemiddelde wordt sterk getrokken. Bv: 1, 2, 3, 4, 100 → mediaan = 3, gemiddelde = 22." }],
           theorie: "Toepassing: inkomens, huizenprijzen, salaris-statistieken → mediaan gebruiken want enkele uitschieters (CEOs) verstoren gemiddelde.",
@@ -93,7 +93,7 @@ const steps = [
   {
     title: "Spreiding — standaardafwijking + boxplot",
     explanation:
-      "Centrum-maten zeggen waar data 'zit'. **Spreidings-maten** zeggen hoe **verspreid** ze zijn.\n\n**Variatiebreedte (range)**:\n• Hoogste − laagste waarde.\n• Eenvoudig maar gevoelig voor uitschieters.\n• Voorbeeld: 3, 5, 8, 12, 100 → range = 100 − 3 = 97 (door uitschieter).\n\n**Standaardafwijking** (σ of s):\n• **Gemiddelde afstand** van elke waarde tot het gemiddelde.\n• Formule: σ = √(Σ(x-x̄)² / n).\n• HAVO/VWO: alleen interpreteren, vaak met **GR** (grafische rekenmachine) of formule-blad.\n• Kleine σ = data dichtbij gemiddelde. Grote σ = data verspreid.\n• Eenheid = zelfde als data (cm, kg, euro).\n\n**Variantie** (s² of σ²):\n• Standaardafwijking gekwadrateerd.\n• Handiger maar geen logische eenheid (cm², kg², €²).\n• In wiskunde A: meestal tussenstap voor standaardafwijking.\n\n**Boxplot** (doosdiagram):\n• Visualisatie van **kwartielen + uitschieters**.\n• Onderkant box = Q1. Streep in box = mediaan (Q2). Bovenkant box = Q3.\n• Whiskers (\"snorhaarjes\"): tot 1,5·IQR boven Q3 + onder Q1.\n• Stippen buiten whiskers = uitschieters.\n\n**Boxplot-interpretatie**:\n• Lange box = grote spreiding middelste 50%.\n• Streep niet in midden = scheve verdeling.\n• Veel stippen = veel uitschieters.\n\n**HAVO/VWO-toets-favoriet**:\n• 'Gegeven boxplot: lees mediaan af.'\n• 'Bereken IQR uit boxplot.'\n• 'Is data symmetrisch?' → kijk waar mediaan-streep in box zit.",
+      "Centrum-maten zeggen waar data 'zit'. **Spreidings-maten** zeggen hoe **verspreid** ze zijn.\n\n**Variatiebreedte (range)**:\n• Hoogste − laagste waarde.\n• Eenvoudig maar gevoelig voor uitschieters.\n• Voorbeeld: 3, 5, 8, 12, 100 → range = 100 − 3 = 97 (door uitschieter).\n\n**Standaardafwijking** (σ of s):\n• Een soort **gemiddelde afstand** van de waarden tot het gemiddelde.\n• Formule: σ = √(Σ(x-x̄)² / n).\n• HAVO/VWO: alleen interpreteren, vaak met **GR** (grafische rekenmachine) of formule-blad.\n• Kleine σ = data dichtbij gemiddelde. Grote σ = data verspreid.\n• Eenheid = zelfde als data (cm, kg, euro).\n\n**Variantie** (s² of σ²):\n• Standaardafwijking gekwadrateerd.\n• Handiger maar geen logische eenheid (cm², kg², €²).\n• In wiskunde A: meestal tussenstap voor standaardafwijking.\n\n**Boxplot** (doosdiagram):\n• Visualisatie van **kwartielen + uitschieters**.\n• Onderkant box = Q1. Streep in box = mediaan (Q2). Bovenkant box = Q3.\n• Whiskers (\"snorhaarjes\"): tot 1,5·IQR boven Q3 + onder Q1.\n• Stippen buiten whiskers = uitschieters.\n\n**Boxplot-interpretatie**:\n• Lange box = grote spreiding middelste 50%.\n• Streep niet in midden = scheve verdeling.\n• Veel stippen = veel uitschieters.\n\n**HAVO/VWO-toets-favoriet**:\n• 'Gegeven boxplot: lees mediaan af.'\n• 'Bereken IQR uit boxplot.'\n• 'Is data symmetrisch?' → kijk waar mediaan-streep in box zit.",
     checks: [
       {
         q: "Wat is de **range** (variatiebreedte) van: 8, 15, 22, 30, 40?",
@@ -207,7 +207,7 @@ const steps = [
       },
       {
         q: "Wat zijn de **parameters** van een normaalverdeling?",
-        options: ["μ (gemiddelde) en σ (standaardafwijking)","Q1 en Q3","Modus en mediaan","Min en max"],
+        options: ["μ (gemiddelde) en σ (standaardafwijking)","Q1 (eerste kwartiel) en Q3 (derde kwartiel)","Modus (vaakst) en mediaan (midden)","Minimum (laagst) en maximum (hoogst)"],
         answer: 0,
         wrongHints: [null, "Geen normaalverdeling-parameters.", "Beschrijven centrum, geen volledige normaalverdeling.", "Onvolledig."],
         uitlegPad: {
@@ -251,7 +251,7 @@ const steps = [
         q: "Regressielijn **y = 2x + 5**. Wat is y als **x = 10**?",
         options: ["25","20","15","30"],
         answer: 0,
-        wrongHints: [null, "Niet — de formule heeft twee termen; heb je ze allebei gebruikt?", "Niet — je hebt alleen +5 gebruikt zonder de 2x-term.", "Te veel — welke x is er ingevuld? Controleer de berekening stap voor stap."],
+        wrongHints: [null, "Niet — de formule heeft twee termen; heb je ze allebei gebruikt?", "Niet — je hebt x wel opgeteld, maar niet met 2 vermenigvuldigd.", "Te veel — welke x is er ingevuld? Controleer de berekening stap voor stap."],
         uitlegPad: {
           stappen: [{ titel: "Substitueren", tekst: "y = 2·10 + 5 = 20 + 5 = **25**." }],
           theorie: "Lineaire vergelijking: y = ax + b. a = helling, b = y-snijpunt.",
@@ -293,7 +293,7 @@ const steps = [
         q: "Welke centrummaat is **gevoelig voor uitschieters**?",
         options: ["Gemiddelde","Mediaan","Modus","Geen"],
         answer: 0,
-        wrongHints: [null, "Niet — juist robuust.", "Niet relevant — frequentie.", "Wel — gemiddelde dus."],
+        wrongHints: [null, "Niet — juist robuust.", "Niet relevant — frequentie.", "Wel — denk na welke maat met álle waarden rekent."],
         uitlegPad: {
           stappen: [{ titel: "Gemiddelde = gevoelig", tekst: "Gemiddelde wordt direct beïnvloed door alle waarden — uitschieters tellen mee. Mediaan + modus niet." }],
           niveaus: { basis: "Gemiddelde.", simpeler: "Gemiddelde = uitschieter-gevoelig", nogSimpeler: "Gemiddelde" },
@@ -324,7 +324,7 @@ const steps = [
         q: "Regressie y = −0,5x + 20. Bij **x = 8**, y = ?",
         options: ["16","24","12","28"],
         answer: 0,
-        wrongHints: [null, "Niet — +0,5·8+20.", "Niet — vergeten teken.", "Niet."],
+        wrongHints: [null, "Niet — +0,5·8+20.", "Niet — vergeet de factor 0,5 niet.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "Substitueren met negatieve helling", tekst: "y = −0,5·8 + 20 = −4 + 20 = **16**." }],
           niveaus: { basis: "16.", simpeler: "−0,5·8+20 = 16", nogSimpeler: "16" },

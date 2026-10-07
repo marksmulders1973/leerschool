@@ -193,7 +193,7 @@ const steps = [
         "Te smal — gaat de tekst over ledenaantallen, of over iets wat de bieb bij jongeren wil bereiken?",
         "Te smal — scholen worden 1× genoemd (Davelaar). Het is vooral BIEB-actie (hiphopdans, leesclub).",
       ],
-      explanation: "De tekst gaat over hiphoplessen in de bieb, schoolbieb-acties, Onderwijsraad-advies — allemaal MANIEREN om jongeren weer aan het lezen te krijgen. Bibliotheek + school zijn de MIDDELEN, lezen is het DOEL.",
+      explanation: "De tekst gaat over hiphoplessen in de bieb, schoolbieb-acties, een advies over bibliotheken — allemaal MANIEREN om jongeren weer aan het lezen te krijgen. Bibliotheek + school zijn de MIDDELEN, lezen is het DOEL.",
       examenBron: BRON_LABEL(23),
       bronLink: BRON_LINK,
       bronTekst: tekst4,

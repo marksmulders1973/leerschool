@@ -216,7 +216,7 @@ Op de Doorstroomtoets krijg je vragen als: *"Waar gaat de tweede alinea over?"* 
           stappen: [
             { titel: "Tel de punten", tekst: "Na elk punt begint een nieuwe zin. Tel: 1e punt na 'eeuw', 2e punt na 'verbeterd', 3e punt na 'racemodellen', 4e punt na 'hetzelfde'. Vier punten = vier zinnen." },
             { titel: "Waarom is dit handig?", tekst: "Als je het aantal zinnen weet, kun je beter zien welke zin de paraplu-zin is en welke zinnen de details zijn." },
-            { titel: "Onthoud", tekst: "Één zin eindigt met een punt. Eén alinea heeft meerdere zinnen. Eén tekst heeft meerdere alinea's." },
+            { titel: "Onthoud", tekst: "Eén zin eindigt met een punt. Eén alinea heeft meerdere zinnen. Eén tekst heeft meerdere alinea's." },
           ],
           niveaus: {
             basis: "Zoek alle punten in de alinea en tel de zinnen die ze scheiden.",
@@ -236,7 +236,7 @@ Op de Doorstroomtoets krijg je vragen als: *"Waar gaat de tweede alinea over?"* 
         answer: 0,
         wrongHints: [
           null,
-          "Is de eerste zin bij alle alinea's in de egel-tekst de kortste? Kijk nog eens.",
+          "Is de eerste zin altijd de kortste? Kijk nog eens naar de voorbeeld-alinea's hierboven.",
           "Je wilt juist de kernzin lezen, niet overslaan. Waarom helpt het dat hij vooraan staat?",
           null,
         ],

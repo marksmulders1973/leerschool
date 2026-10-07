@@ -82,7 +82,7 @@ const steps = [
         "terreur + strafkampen",
       ],
       answer: 3,
-      wrongHints: ["Showprocessen = USSR-Stalin (1936-1938 grote zuiveringen), niet Nazi-Duitsland.", "Strafkampen klopt, maar Hitlerjugend-uniform-trots is GEEN indoctrinatie? Eigenlijk wel — maar de COMBINATIE met showprocessen klopt niet.", "Showprocessen = Stalin, niet Hitler.", null],
+      wrongHints: ["Showprocessen = USSR-Stalin (1936-1938 grote zuiveringen), niet Nazi-Duitsland.", "Strafkampen kloppen — kijk nog eens kritisch naar het andere begrip in deze combinatie.", "Showprocessen = Stalin, niet Hitler.", null],
       explanation: "Nazi-regime-kenmerken: **terreur** (Gestapo arresteerde willekeurig, Kristallnacht-pogroms), **strafkampen** (Dachau 1933, Auschwitz 1940 — concentratie- + vernietigingskampen). Showprocessen zijn juist Sovjet-Unie onder Stalin (geënsceneerde rechtszaken).",
       examenBron: BRON_LABEL(17),
       bronLink: BRON_LINK,

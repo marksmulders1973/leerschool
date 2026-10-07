@@ -18,14 +18,14 @@ const steps = [
   {
     title: "Fossiele brandstoffen — olie, gas, kolen",
     explanation:
-      "**Fossiele brandstoffen** = ontstaan miljoenen jaren geleden uit dode planten/dieren onder druk + warmte.\n\n**Drie hoofdtypes**:\n\n**1. Aardolie (petroleum)**:\n• Ontstaan uit zee-organismen 100-400 mln jaar geleden.\n• Vloeibaar, makkelijk te transporteren.\n• Raffinage geeft benzine, diesel, kerosine, asfalt, plastic-grondstof.\n• Hoofdbronnen: Saudi-Arabië, Rusland, VS (fracking), Iran, Irak, China, Brazilië, Venezuela.\n• ~100 mln vaten/dag wereldwijd (~13 mld L/dag).\n\n**2. Aardgas**:\n• Methaan (CH₄) + andere lichte koolwaterstoffen.\n• Ontstaan zoals olie.\n• Schoner branden dan kolen/olie (minder CO₂ + roet).\n• Hoofdbronnen: VS (shale-gas-revolutie), Rusland (export naar Europa), Iran, Qatar, Australië.\n• Nederland: Groningen-gasveld grootste van EU (gas-winning vermindert door aardbevingen sinds 2019).\n\n**3. Steenkool**:\n• Ontstaan uit veen-planten 300-360 mln jaar geleden (Carboon).\n• Veel CO₂ + giftige stoffen bij verbranding.\n• Hoofdbronnen: China (gigant), Australië, Indonesië, Rusland, India.\n• 30% wereldenergie nog steeds — vooral elektriciteit in arme + groeiende landen.\n\n**Voordelen fossiel**:\n• Hoge energiedichtheid.\n• Bestaande infrastructuur (raffinaderijen, pijpleidingen, tankstations).\n• Goedkoop bij beschikbaarheid.\n• Werkt 24/7 (in tegenstelling tot zon + wind).\n\n**Nadelen**:\n• **Eindig** — opraking binnen ~50 jaar bij huidig tempo (olie + gas), kolen ~150 jaar.\n• **Klimaatverandering** — CO₂-uitstoot hoofdoorzaak.\n• **Luchtvervuiling** — fijnstof, NOx, SOx.\n• **Geopolitieke spanning** — wie bezit, controleert.\n• **Olierampen** (Exxon Valdez 1989, BP Deepwater Horizon 2010).\n\n**Fracking (hydraulisch breken)**:\n• Water + chemicaliën onder hoge druk in gesteente → schalie barst → gas/olie vrij.\n• VS-revolutie: van importeur naar exporteur sinds 2015.\n• Kritiek: grondwater-vervuiling, aardbevingen (Oklahoma), methaan-lekken.\n\n**Groningen-gas**:\n• Ontdekt 1959, grootste EU-veld.\n• Decennia financierde NL-welvaartsstaat ('gasbel').\n• Sinds 2012 stijgend aantal aardbevingen door winning.\n• Productie stapsgewijs afgebouwd, 2024 vrijwel nul.\n• Schade-vergoeding > 6 mld €, nog steeds onvolledig.\n\n**Energie-eenheden** (CSE-tip):\n• Joule (J): SI-eenheid energie.\n• Kilowattuur (kWh): commercieel = 3,6 MJ.\n• Ton oliequivalent (toe): ~42 GJ. Vergelijkingseenheid voor fossiele brandstoffen.\n• BTU (British Thermal Unit): VS-gebruik.\n\n**Wereld-energie-mix** (2024, IEA):\n• Olie: 30%.\n• Steenkool: 27%.\n• Aardgas: 22%.\n• Hernieuwbaar (zon, wind, water, biomassa): 14%.\n• Nucleair: 4%.\n• Fossiel = ~79% nog steeds.",
+      "**Fossiele brandstoffen** = ontstaan miljoenen jaren geleden uit dode planten/dieren onder druk + warmte.\n\n**Drie hoofdtypes**:\n\n**1. Aardolie (petroleum)**:\n• Ontstaan uit zee-organismen 100-400 mln jaar geleden.\n• Vloeibaar, makkelijk te transporteren.\n• Raffinage geeft benzine, diesel, kerosine, asfalt, plastic-grondstof.\n• Hoofdbronnen: Saudi-Arabië, Rusland, VS (fracking), Iran, Irak, China, Brazilië, Venezuela.\n• ~100 mln vaten/dag wereldwijd (~16 mld L/dag).\n\n**2. Aardgas**:\n• Methaan (CH₄) + andere lichte koolwaterstoffen.\n• Ontstaan zoals olie.\n• Schoner branden dan kolen/olie (minder CO₂ + roet).\n• Hoofdbronnen: VS (shale-gas-revolutie), Rusland (export naar Europa), Iran, Qatar, Australië.\n• Nederland: Groningen-gasveld grootste van EU (gas-winning vermindert door aardbevingen sinds 2019).\n\n**3. Steenkool**:\n• Ontstaan uit veen-planten 300-360 mln jaar geleden (Carboon).\n• Veel CO₂ + giftige stoffen bij verbranding.\n• Hoofdbronnen: China (gigant), Australië, Indonesië, Rusland, India.\n• 30% wereldenergie nog steeds — vooral elektriciteit in arme + groeiende landen.\n\n**Voordelen fossiel**:\n• Hoge energiedichtheid.\n• Bestaande infrastructuur (raffinaderijen, pijpleidingen, tankstations).\n• Goedkoop bij beschikbaarheid.\n• Werkt 24/7 (in tegenstelling tot zon + wind).\n\n**Nadelen**:\n• **Eindig** — opraking binnen ~50 jaar bij huidig tempo (olie + gas), kolen ~150 jaar.\n• **Klimaatverandering** — CO₂-uitstoot hoofdoorzaak.\n• **Luchtvervuiling** — fijnstof, NOx, SOx.\n• **Geopolitieke spanning** — wie bezit, controleert.\n• **Olierampen** (Exxon Valdez 1989, BP Deepwater Horizon 2010).\n\n**Fracking (hydraulisch breken)**:\n• Water + chemicaliën onder hoge druk in gesteente → schalie barst → gas/olie vrij.\n• VS-revolutie: van importeur naar exporteur sinds 2015.\n• Kritiek: grondwater-vervuiling, aardbevingen (Oklahoma), methaan-lekken.\n\n**Groningen-gas**:\n• Ontdekt 1959, grootste EU-veld.\n• Decennia financierde NL-welvaartsstaat ('gasbel').\n• Sinds 2012 stijgend aantal aardbevingen door winning.\n• Productie stapsgewijs afgebouwd, 2024 vrijwel nul.\n• Schade-vergoeding > 6 mld €, nog steeds onvolledig.\n\n**Energie-eenheden** (CSE-tip):\n• Joule (J): SI-eenheid energie.\n• Kilowattuur (kWh): commercieel = 3,6 MJ.\n• Ton oliequivalent (toe): ~42 GJ. Vergelijkingseenheid voor fossiele brandstoffen.\n• BTU (British Thermal Unit): VS-gebruik.\n\n**Wereld-energie-mix** (2024, IEA):\n• Olie: 30%.\n• Steenkool: 27%.\n• Aardgas: 22%.\n• Hernieuwbaar (zon, wind, water, biomassa): 14%.\n• Nucleair: 4%.\n• Fossiel = ~79% nog steeds.",
     checks: [
       {
         q: "**Aardolie** ontstaat uit:",
         options: [
-          "Dode zee-organismen miljoenen jaren geleden (100-400 mln j)",
+          "Dode zee-organismen van miljoenen jaren geleden",
           "Vulkanen",
-          "Recente afval",
+          "Recent afval",
           "Dieren van afgelopen 1000 jaar"
         ],
         answer: 0,
@@ -40,10 +40,10 @@ const steps = [
       {
         q: "**Groningen-gas**:",
         options: [
-          "Grootste EU-veld, winning afgebouwd door aardbevingen",
-          "Klein veld",
-          "Nooit gewonnen",
-          "Olie ipv gas"
+          "Grootste gasveld van de EU, winning afgebouwd door aardbevingen",
+          "Een klein veld dat nauwelijks iets opleverde",
+          "Een veld waar nooit gas uit is gewonnen",
+          "Een olieveld in plaats van een gasveld"
         ],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Niet."],
@@ -58,9 +58,9 @@ const steps = [
         q: "**Aardgas** (CH₄) is **schoner** dan steenkool omdat:",
         options: [
           "Minder CO₂ + minder roet/zwavel per energie-eenheid",
-          "Geen CO₂",
-          "Hernieuwbaar",
-          "Geen verschil"
+          "Er komt bij verbranding helemaal geen CO₂ vrij",
+          "Aardgas is een hernieuwbare brandstof",
+          "Er is geen verschil tussen beide"
         ],
         answer: 0,
         wrongHints: [null, "Wel CO₂.", "Tegenovergesteld.", "Wel verschil."],
@@ -75,9 +75,9 @@ const steps = [
         q: "**Fracking** = ?",
         options: [
           "Water + chemicaliën onder druk in gesteente om olie/gas vrij te maken",
-          "Direct boren",
-          "Hernieuwbare techniek",
-          "Schoonmaken"
+          "Gewoon recht naar beneden boren zonder hulpmiddelen",
+          "Een hernieuwbare techniek om stroom op te wekken",
+          "Het schoonmaken van vervuild grondwater"
         ],
         answer: 0,
         wrongHints: [null, "Niet — geavanceerde techniek.", "Tegenovergesteld.", "Tegenovergesteld."],
@@ -116,7 +116,7 @@ const steps = [
     checks: [
       {
         q: "**Goedkoopste** energiebron 2024 (per MWh):",
-        options: ["Solar PV (~$30-40)", "Kolen", "Nucleair nieuw", "Olie"],
+        options: ["Zonnepanelen", "Kolen", "Nucleair nieuw", "Olie"],
         answer: 0,
         wrongHints: [null, "Niet — duurder.", "Veel duurder.", "Veel duurder."],
         uitlegPad: {
@@ -146,13 +146,13 @@ const steps = [
       {
         q: "**Intermittentie** = ?",
         options: [
-          "Hernieuwbaar (zon/wind) niet altijd beschikbaar → opslag nodig",
-          "Constante levering",
-          "Tijdmeting",
-          "Niets"
+          "Zon en wind zijn niet altijd beschikbaar",
+          "Stroom wordt altijd constant geleverd",
+          "Het meten hoe lang een centrale draait",
+          "Het verlies van stroom in lange kabels"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet specifiek.", "Wel."],
+        wrongHints: [null, "Tegenovergesteld.", "Nee — het gaat om het aanbod van stroom.", "Dat heet transportverlies."],
         uitlegPad: {
           stappen: [
             { titel: "Kern-uitdaging transitie", tekst: "Zon schijnt overdag. Wind waait soms wel/niet. Geen 24/7 zoals gas/kolen/kernenergie. Oplossingen: batterijen (Lithium-ion, opslag-uren), pumped hydro (water omhoog → omlaag bij vraag), waterstof (lange-termijn opslag), netwerk-koppeling (Europa: zon Spanje + wind Noordzee + waterkracht Noorwegen)." },
@@ -163,10 +163,10 @@ const steps = [
       {
         q: "**Biobrandstof** is controversieel als:",
         options: [
-          "Ontbossing voor palmolie of maïs-velden vs voedsel",
-          "Goedkoop",
-          "Schoon",
-          "Hernieuwbaar"
+          "Er bos of voedselgrond voor wordt opgeofferd",
+          "Het goedkoper is dan benzine",
+          "Het schoner verbrandt dan diesel",
+          "Het op duurzame wijze wordt geteeld"
         ],
         answer: 0,
         wrongHints: [null, "Niet kritiek-punt.", "Voordeel.", "Voordeel."],
@@ -180,10 +180,10 @@ const steps = [
       {
         q: "**Offshore wind** (op zee) voordeel boven onshore (op land):",
         options: [
-          "Meer + constantere wind + minder bezwaren bewoners",
-          "Goedkoper",
-          "Geen wind",
-          "Geen verschil"
+          "Meer en constantere wind + minder bezwaren van bewoners",
+          "Het is goedkoper om te bouwen en onderhouden",
+          "Op zee waait het juist minder",
+          "Er is geen verschil tussen beide"
         ],
         answer: 0,
         wrongHints: [null, "Duurder.", "Tegenovergesteld.", "Wel verschil."],
@@ -229,7 +229,7 @@ const steps = [
           "Aardbeving"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — politiek.", "Niet bestaand.", "Niet."],
+        wrongHints: [null, "Niet — politiek.", "Niet — dat speelde in 1973 niet.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Yom Kippoer-oorlog gevolg", tekst: "Egypte + Syrië vielen Israël aan okt 1973. VS + NL + andere westerse landen steunden Israël. Arabische OPEC reageerde met boycot → olie ×4. NL: autoloze zondagen, hamsteren. Begin van energie-bewustzijn West. Versnelde isolatie-techniek + alternatieven." },
@@ -241,9 +241,9 @@ const steps = [
         q: "**Oekraïne-oorlog 2022** + energie:",
         options: [
           "EU verloor Russisch gas → energie-crisis + diversificatie versneld",
-          "Geen impact",
-          "Olieprijzen daalden",
-          "VS minder gas-export"
+          "Er was nauwelijks impact op de energiemarkt",
+          "De olieprijzen daalden sterk",
+          "De VS exporteerde minder gas naar Europa"
         ],
         answer: 0,
         wrongHints: [null, "Sancties en dichtgedraaide gaskranen raakten een EU die ~40% van zijn gas uit Rusland haalde — kun je dan echt van 'geen impact' spreken?", "Als het grootste importblok plots op zoek moet naar dure alternatieven (LNG), gaan schaarse energieprijzen dan omhoog of omlaag?", "De VS werd juist een belangrijke LNG-leverancier voor Europa in 2022 — klopt 'minder export' dan wel?"],
@@ -256,7 +256,7 @@ const steps = [
       },
       {
         q: "Wie is **grootste olie- + gas-producent** wereld 2024?",
-        options: ["VS (door shale-revolutie)", "Saudi-Arabië", "Rusland", "China"],
+        options: ["VS", "Saudi-Arabië", "Rusland", "China"],
         answer: 0,
         wrongHints: [null, "Niet meer #1.", "Niet meer #1.", "Niet — importeur."],
         uitlegPad: {
@@ -269,13 +269,13 @@ const steps = [
       {
         q: "**Nord Stream-pijpleidingen** sept 2022:",
         options: [
-          "Sabotage/explosie in Oostzee — daders onduidelijk",
-          "Geopend",
-          "Verlengd",
-          "Geen relevant nieuws"
+          "Ze werden door sabotage opgeblazen in de Oostzee",
+          "Nord Stream 2 werd feestelijk in gebruik genomen",
+          "Ze werden doorgetrokken tot in Nederland",
+          "Ze gingen dicht voor gepland onderhoud"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Wel."],
+        wrongHints: [null, "Tegenovergesteld — Nord Stream 2 is nooit in gebruik genomen.", "Niet — er werd niets bijgebouwd.", "Niet — het was geen gepland besluit."],
         uitlegPad: {
           stappen: [
             { titel: "Mysterieuze sabotage", tekst: "Nord Stream 1 (operationeel) + Nord Stream 2 (klaar maar niet geopend wegens Oekraïne-oorlog) explodeerden gelijktijdig. Vier gaten in pijp, gas in Oostzee. Onderzoeken nog lopend. Verdachten: Rusland zelf? Oekraïne? VS? Eind 2024: forse focus op Oekraïens-gerelateerde actoren in onderzoek." },
@@ -295,13 +295,13 @@ const steps = [
       {
         q: "**Kobalt** voor batterijen komt vooral uit:",
         options: [
-          "DR Congo (~70% wereldproductie)",
+          "DR Congo",
           "Australië",
           "Saudi-Arabië",
           "Nederland"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — apart materiaal.", "Niet — olie.", "Niet."],
+        wrongHints: [null, "Australië produceert wat, maar lang niet het meeste.", "Niet — olie.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Ethisch debat", tekst: "DR Congo dominantie + slechte arbeidsomstandigheden in 'artisanale' mijnen (kinderen, geen veiligheid). Tesla, Apple proberen 'kobalt-vrije' batterijen (LFP-chemie). Politiek: hoe verantwoord inkopen? Mensenrechten-rapporten + supply-chain-audits versterken." },
@@ -324,7 +324,7 @@ const steps = [
       {
         q: "**Groene waterstof** wordt gemaakt door:",
         options: [
-          "Elektrolyse water met hernieuwbare elektriciteit (H₂O → H₂ + O₂)",
+          "Elektrolyse van water met groene stroom",
           "Aardgas-reformatie",
           "Olie-raffinage",
           "Direct uit lucht"
@@ -396,10 +396,10 @@ const steps = [
       {
         q: "**Grootste CO₂-uitstoter sector NL** is:",
         options: [
-          "Industrie (~30%)",
-          "Transport (~20%)",
-          "Gebouwde omgeving (~15%)",
-          "Landbouw (~15%)"
+          "Industrie",
+          "Transport",
+          "Gebouwde omgeving",
+          "Landbouw"
         ],
         answer: 0,
         wrongHints: [null, "Tweede.", "Derde-vierde.", "Idem."],
@@ -413,10 +413,10 @@ const steps = [
       {
         q: "**Netcongestie** in NL:",
         options: [
-          "Stroomnet vol — kan groei van zonne + EV niet aan",
-          "Geen probleem",
-          "Alleen 's nachts",
-          "Alleen op platteland"
+          "Stroomnet vol — kan groei van zonnestroom + EV niet aan",
+          "Er is geen enkel probleem met het stroomnet",
+          "Het net is alleen 's nachts overbelast",
+          "Het speelt alleen op het platteland"
         ],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Hele dag.", "Ook stad."],
@@ -442,10 +442,10 @@ const steps = [
       {
         q: "**Persoonlijke actie** met grootste klimaat-impact:",
         options: [
-          "Plantaardig dieet + minder vliegen + EV/fiets ipv auto",
-          "LED-lampen",
-          "Recyclen",
-          "Plastic vermijden"
+          "Minder vlees eten en minder vliegen",
+          "Overal LED-lampen gebruiken",
+          "Al je afval goed recyclen",
+          "Plastic tasjes en rietjes vermijden"
         ],
         answer: 0,
         wrongHints: [null, "Helpt iets maar marginaal.", "Idem.", "Idem."],

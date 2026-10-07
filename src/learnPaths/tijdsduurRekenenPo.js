@@ -113,7 +113,7 @@ const steps = [
         q: "**3 minuten** = ... **seconden**?",
         options: ["180 sec", "30 sec", "60 sec", "300 sec"],
         answer: 0,
-        wrongHints: [null, "Te weinig — hoeveel seconden zitten er in 1 minuut, en bereken dat dan voor 3 minuten.", "Dat is maar 1 minuut, niet 3.", "Te veel — bereken eens hoeveel 3 × 60 oplevert."],
+        wrongHints: [null, "Te weinig — hoeveel seconden zitten er in 1 minuut, en bereken dat dan voor 3 minuten.", "Dat is maar 1 minuut, niet 3.", "Te veel — tijd rekent niet met 100. Hoeveel seconden heeft 1 minuut?"],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: hoeveel sec in 1 min?", tekst: "**1 minuut = 60 seconden**. Vast feit." },
@@ -223,7 +223,7 @@ const steps = [
         q: "Van **13:20** tot **15:50** is hoe lang?",
         options: ["2 uur 30 min", "2 uur 70 min", "3 uur 30 min", "1 uur 30 min"],
         answer: 0,
-        wrongHints: [null, "Minuten boven 60 schrijven we anders — zet dit om naar uren en minuten.", "Te veel — reken stap voor stap van 13:20 naar 15:50.", "Te weinig — hoeveel uur zit er minimaal al tussen 13 uur en 15 uur?"],
+        wrongHints: [null, "Minuten boven de 60 bestaan niet in een tijdsduur — reken stap voor stap van 13:20 naar 15:50.", "Te veel — reken stap voor stap van 13:20 naar 15:50.", "Te weinig — hoeveel uur zit er minimaal al tussen 13 uur en 15 uur?"],
       },
       {
         q: "Van **11:50** tot **12:10** is hoe lang?",
@@ -352,7 +352,7 @@ const steps = [
         q: "Wedstrijd: **2× 30 min** met **15 min pauze**. Begint **15:00**. Eindigt?",
         options: ["16:15", "15:45", "16:00", "16:30"],
         answer: 0,
-        wrongHints: [null, "Te weinig — heb je ook de pauze én de tweede helft meegeteld?", "Te weinig — je hebt ook de tweede helft nog niet meegeteld.", "Te veel — tel de drie delen samen op en kijk hoeveel minuten dat is."],
+        wrongHints: [null, "Te weinig — heb je ook de pauze én de tweede helft meegeteld?", "Te weinig — heb je de pauze meegeteld?", "Te veel — tel de drie delen samen op en kijk hoeveel minuten dat is."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1", tekst: "15:00 + 30 min eerste helft = 15:30." },
@@ -421,7 +421,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Te veel — tel stap voor stap (eerst hele uren).", "Te weinig — vergeet het hele uur niet.", "Te veel — controleer."],
       },
-      { q: "**8:00 → 12:00**. Duur?", options: ["4 uur","3 uur","5 uur","2 uur"], answer: 0, wrongHints: [null, "Te weinig — tel het verschil 12 − 8.", "Te veel — niet 5.", "Te weinig — meer dan 2."] },
+      { q: "**8:00 → 12:00**. Duur?", options: ["4 uur","3 uur","5 uur","2 uur"], answer: 0, wrongHints: [null, "Te weinig — tel de hele uren van 8:00 tot 12:00 nog eens na.", "Te veel — niet 5.", "Te weinig — meer dan 2."] },
       { q: "Hardlopen van 17:50 → 18:25. Hoe lang?", options: ["35 min","45 min","25 min","1 uur"], answer: 0, wrongHints: [null, "Te veel.", "Te weinig.", "Te veel."] },
       { q: "Vlucht 6 uur 45 min. Vertrek 9:00. Aankomst?", options: ["15:45","16:00","14:45","15:00"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Te weinig — 1 uur vergeten?"] },
       { q: "**70 minuten** = ?", options: ["1 uur 10 min","1 uur 7 min","70 sec","2 uur"], answer: 0, wrongHints: [null, "Niet.", "Niet — minuten.", "Te veel."] },
@@ -429,10 +429,10 @@ const steps = [
       { q: "School 8:30 → 12:00, daarna 13:00 → 15:00. Totale lestijd?", options: ["5 uur 30 min","6 uur","4 uur","5 uur"], answer: 0, wrongHints: [null, "Te veel — de pauze telt niet mee.", "Niet.", "Bijna."] },
       { q: "Reis duurt 2 uur 50 min. Begint 14:25. Eindigt?", options: ["17:15","17:25","16:25","17:00"], answer: 0, wrongHints: [null, "Niet — 50 min ipv 60.", "Maar 2 uur.", "Niet."] },
       { q: "Hoeveel uur is **240 minuten**?", options: ["4 uur","3 uur","5 uur","2 uur"], answer: 0, wrongHints: [null, "Te weinig — hoeveel minuten zijn er in 1 uur, en deel dan 240 daardoor.", "Te veel — hoeveel minuten is 5 uur, en is dat meer of minder dan 240?", "Te weinig — hoeveel minuten is 2 uur, en is dat meer of minder dan 240?"] },
-      { q: "Wedstrijd 90 min + verlenging 30 min. Totaal?", options: ["2 uur","1 uur 30 min","1 uur","2 uur 30 min"], answer: 0, wrongHints: [null, "Te weinig — verlenging vergeten.", "Niet — alleen verlenging.", "Te veel."] },
+      { q: "Wedstrijd 90 min + verlenging 30 min. Totaal?", options: ["2 uur","1 uur 30 min","1 uur","2 uur 30 min"], answer: 0, wrongHints: [null, "Te weinig — verlenging vergeten.", "Te weinig — tel de wedstrijd én de verlenging bij elkaar.", "Te veel."] },
       { q: "Tussen **13:15** en **15:50**. Duur?", options: ["2 uur 35 min","2 uur 45 min","2 uur 25 min","3 uur"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Te veel."] },
       { q: "Bus elke 20 min. Eerste 7:00. Vierde?", options: ["8:00","7:40","7:20","8:20"], answer: 0, wrongHints: [null, "Derde.", "Tweede.", "Vijfde."] },
-      { q: "Film 02:15 lang. Begint 19:30. Klaar om?", options: ["21:45","21:30","21:15","22:00"], answer: 0, wrongHints: [null, "Maar 2 uur.", "Maar 1u45.", "Te lang."] },
+      { q: "Film duurt 2 uur 15 min. Begint 19:30. Klaar om?", options: ["21:45","21:30","21:15","22:00"], answer: 0, wrongHints: [null, "Maar 2 uur.", "Maar 1u45.", "Te lang."] },
       { q: "Hoeveel **uur** in 1 dag?", options: ["24","12","48","60"], answer: 0, wrongHints: [null, "Halve dag.", "2 dagen.", "Niet."] },
       { q: "Tussen **23:30** en **01:00** (volgende dag). Duur?", options: ["1 uur 30 min","30 min","1 uur","22 uur 30 min"], answer: 0, wrongHints: [null, "Te kort.", "Vergeet halfuur.", "Te lang."] },
     ],

@@ -21,7 +21,7 @@ const steps = [
         q: "Wat is een **beroep**?",
         options: ["Wat je geleerd hebt te doen voor werk", "Geld", "School", "Hobby"],
         answer: 0,
-        wrongHints: [null, "Wel maar specifiek dit.", "Niet primair.", "Geen werk."],
+        wrongHints: [null, "Geld verdien je mét je beroep — maar wat is het beroep zelf?", "Niet primair.", "Geen werk."],
       },
       {
         q: "Wat is een **ZZP'er**?",
@@ -53,15 +53,15 @@ const steps = [
       },
       {
         q: "Wat is een **vrijwilliger**?",
-        options: ["Werkt zonder betaling", "Topsalaris", "Werkt 80 uur", "Niet bestaand"],
+        options: ["Werkt zonder betaling", "Topsalaris", "Werkt 80 uur", "Werkt alleen 's nachts"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet.", "Wel."],
+        wrongHints: [null, "Tegenovergesteld.", "Gaat het om de werktijd of om betaling?", "Gaat het om de werktijd of om betaling?"],
       },
       {
         q: "Wat is **AOW**?",
-        options: ["Staatspensioen vanaf 67", "Banengeld", "Loon", "Belasting"],
+        options: ["Staatspensioen vanaf 67", "Uitkering als je je baan kwijt bent", "Loon", "Belasting"],
         answer: 0,
-        wrongHints: [null, "Wel maar specifiek dit.", "Niet primair.", "Niet."],
+        wrongHints: [null, "Dat is de WW (werkloosheidsuitkering).", "Loon krijg je zolang je werkt.", "Belasting betáál je juist."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is AOW?", tekst: "**AOW** is een afkorting voor **Algemene Ouderdomswet**. Het is een **staatspensioen** dat de overheid uitkeert aan iedereen die in NL gewoond/gewerkt heeft, vanaf hun pensioenleeftijd." },
@@ -95,19 +95,19 @@ const steps = [
     checks: [
       {
         q: "Wat is **primaire sector**?",
-        options: ["Werk in natuur (landbouw, visserij, mijnbouw)", "Diensten", "Maken", "Zorg"],
+        options: ["Werk in de natuur", "Diensten", "Maken", "Zorg"],
         answer: 0,
         wrongHints: [null, "Tertiair.", "Secundair.", "Quartair."],
       },
       {
         q: "Welk beroep hoort bij de **secundaire sector**?",
-        options: ["Timmerman (bouw)", "Verkoper winkel", "Leerkracht", "Boer"],
+        options: ["Timmerman", "Verkoper winkel", "Leerkracht", "Boer"],
         answer: 0,
         wrongHints: [null, "Tertiair.", "Quartair.", "Primair."],
       },
       {
         q: "**Grootste sector** in NL?",
-        options: ["Tertiair (~50%)", "Primair (~2%)", "Secundair", "Quartair"],
+        options: ["Tertiair", "Primair", "Secundair", "Quartair"],
         answer: 0,
         wrongHints: [null, "Klein.", "Iets minder.", "Iets minder."],
         uitlegPad: {
@@ -137,38 +137,38 @@ const steps = [
       },
       {
         q: "Welke beroepen **groeien**?",
-        options: ["IT + zorg + duurzaamheid", "Kassier", "Postbezorger", "Geen"],
+        options: ["IT + zorg + duurzaamheid", "Kassier", "Postbezorger", "Fabrieksarbeider"],
         answer: 0,
-        wrongHints: [null, "Krimpen.", "Krimpen.", "Wel."],
+        wrongHints: [null, "Krimpen.", "Krimpen.", "Krimpen."],
       },
     ],
   },
   {
     title: "Beroepen + opleiding",
     explanation:
-      "**Voor de meeste beroepen heb je opleiding nodig.**\n\n**Onderwijssysteem NL**:\n\n**1. Basisschool** *(groep 1-8, 4-12 jaar)*.\n**2. Middelbare school** *(klas 1-6, 12-18 jaar)*:\n• **VMBO** *(Voorbereidend Middelbaar Beroepsonderwijs, 4 jaar)*: leidt naar mbo.\n• **HAVO** *(Hoger Algemeen Voortgezet Onderwijs, 5 jaar)*: leidt naar hbo.\n• **VWO** *(Voorbereidend Wetenschappelijk Onderwijs, 6 jaar)*: leidt naar universiteit.\n\n**3. Vervolgonderwijs**:\n• **MBO** *(Middelbaar Beroepsonderwijs, 1-4 jaar)*: vakopleiding *(elektricien, kapper, monteur, ICT'er)*.\n• **HBO** *(Hoger Beroepsonderwijs, 4 jaar)*: leraar, verpleegkundige, ingenieur, journalist.\n• **WO** *(Wetenschappelijk Onderwijs, 3+2 jaar)*: dokter, advocaat, architect, wetenschapper.\n\n**Niveaus mbo**:\n• Niveau 1: hulparbeider *(1 jr)*.\n• Niveau 2: vakman *(2 jr)*.\n• Niveau 3: vakman met meer verantwoordelijkheid *(2-3 jr)*.\n• Niveau 4: middenkaderfunctionaris *(3-4 jr)* — kan doorstromen naar hbo.\n\n**Voorbeelden van beroepen + opleiding**:\n\n**MBO-beroepen**:\n• Kapper *(mbo-2/3)*.\n• Auto-monteur *(mbo-3)*.\n• Loodgieter *(mbo-2/3)*.\n• Kok *(mbo-2/3)*.\n• Politieagent *(mbo-3/4)*.\n• Verzorgende *(mbo-3)*.\n• Elektricien *(mbo-2/3)*.\n• Hovenier *(mbo-2/3)*.\n\n**HBO-beroepen**:\n• Leerkracht basisschool *(pabo)*.\n• Docent VO *(hbo lerarenopleiding)*.\n• Verpleegkundige *(hbo-V)*.\n• Verloskundige *(hbo)*.\n• Maatschappelijk werker.\n• Ingenieur *(constructie, elektrotechniek)*.\n• Journalist.\n• Marketeer.\n• ICT-developer.\n\n**WO-beroepen**:\n• Arts *(geneeskunde, 6 jaar)*.\n• Tandarts *(tandheelkunde, 6 jaar)*.\n• Advocaat *(rechten, 4-5 jaar)*.\n• Architect *(bouwkunde + master)*.\n• Wetenschapper *(promotie + onderzoek)*.\n• Psychiater *(arts + specialisatie psychiatrie)*.\n• Notaris *(rechten + master)*.\n\n**Beroepen zonder vaste opleiding**:\n• Ondernemer *(zelfstandige)*.\n• Verkoper *(meeste functies, mbo helpt)*.\n• Influencer *(YouTube, TikTok)*.\n• Schrijver *(talent)*.\n• Sporter *(talent + training)*.\n\n**Kiezen wat bij jou past**:\n• **Wat vind je leuk?** *(creatief, denkwerk, met mensen)*\n• **Wat kun je goed?** *(handig, sportief, taal)*\n• **Wat verdien je?** *(salaris-verschillen kunnen groot zijn)*\n• **Werktijden?** *(kantoor, ploegen, weekend)*\n• **Werkdruk?** *(stress vs rustig)*\n\n**Profielkeuze klas 3**:\n• **VMBO**: techniek / economie / zorg+welzijn / groen.\n• **HAVO/VWO**: N&T / N&G / E&M / C&M.\n\nProfielkeuze bepaalt richtingen vervolgopleiding.\n\n**Toets-feitje**:\n**Hoger opgeleid = hoger salaris** *(gemiddeld)*. Maar niet altijd! Een goede loodgieter verdient meer dan veel hbo'ers.",
+      "**Voor de meeste beroepen heb je opleiding nodig.**\n\n**Onderwijssysteem NL**:\n\n**1. Basisschool** *(groep 1-8, 4-12 jaar)*.\n**2. Middelbare school** *(klas 1-6, 12-18 jaar)*:\n• **VMBO** *(Voorbereidend Middelbaar Beroepsonderwijs, 4 jaar)*: leidt naar mbo.\n• **HAVO** *(Hoger Algemeen Voortgezet Onderwijs, 5 jaar)*: leidt naar hbo.\n• **VWO** *(Voorbereidend Wetenschappelijk Onderwijs, 6 jaar)*: leidt naar universiteit.\n\n**3. Vervolgonderwijs**:\n• **MBO** *(Middelbaar Beroepsonderwijs, 1-4 jaar)*: vakopleiding *(elektricien, kapper, monteur, ICT'er)*.\n• **HBO** *(Hoger Beroepsonderwijs, 4 jaar)*: leraar, verpleegkundige, ingenieur, journalist.\n• **WO** *(Wetenschappelijk Onderwijs, 3 jaar bachelor + 1-2 jaar master)*: dokter, advocaat, architect, wetenschapper.\n\n**Niveaus mbo**:\n• Niveau 1: hulparbeider *(1 jr)*.\n• Niveau 2: vakman *(2 jr)*.\n• Niveau 3: vakman met meer verantwoordelijkheid *(2-3 jr)*.\n• Niveau 4: middenkaderfunctionaris *(3-4 jr)* — kan doorstromen naar hbo.\n\n**Voorbeelden van beroepen + opleiding**:\n\n**MBO-beroepen**:\n• Kapper *(mbo-2/3)*.\n• Auto-monteur *(mbo-3)*.\n• Loodgieter *(mbo-2/3)*.\n• Kok *(mbo-2/3)*.\n• Politieagent *(mbo-3/4)*.\n• Verzorgende *(mbo-3)*.\n• Elektricien *(mbo-2/3)*.\n• Hovenier *(mbo-2/3)*.\n\n**HBO-beroepen**:\n• Leerkracht basisschool *(pabo)*.\n• Docent VO *(hbo lerarenopleiding)*.\n• Verpleegkundige *(hbo-V)*.\n• Verloskundige *(hbo)*.\n• Maatschappelijk werker.\n• Ingenieur *(constructie, elektrotechniek)*.\n• Journalist.\n• Marketeer.\n• ICT-developer.\n\n**WO-beroepen**:\n• Arts *(geneeskunde, 6 jaar)*.\n• Tandarts *(tandheelkunde, 6 jaar)*.\n• Advocaat *(rechten, 4-5 jaar)*.\n• Architect *(bouwkunde + master)*.\n• Wetenschapper *(promotie + onderzoek)*.\n• Psychiater *(arts + specialisatie psychiatrie)*.\n• Notaris *(rechten + master)*.\n\n**Beroepen zonder vaste opleiding**:\n• Ondernemer *(zelfstandige)*.\n• Verkoper *(meeste functies, mbo helpt)*.\n• Influencer *(YouTube, TikTok)*.\n• Schrijver *(talent)*.\n• Sporter *(talent + training)*.\n\n**Kiezen wat bij jou past**:\n• **Wat vind je leuk?** *(creatief, denkwerk, met mensen)*\n• **Wat kun je goed?** *(handig, sportief, taal)*\n• **Wat verdien je?** *(salaris-verschillen kunnen groot zijn)*\n• **Werktijden?** *(kantoor, ploegen, weekend)*\n• **Werkdruk?** *(stress vs rustig)*\n\n**Profielkeuze klas 3**:\n• **VMBO**: techniek / economie / zorg+welzijn / groen.\n• **HAVO/VWO**: N&T / N&G / E&M / C&M.\n\nProfielkeuze bepaalt richtingen vervolgopleiding.\n\n**Toets-feitje**:\n**Hoger opgeleid = hoger salaris** *(gemiddeld)*. Maar niet altijd! Een goede loodgieter verdient meer dan veel hbo'ers.",
     checks: [
       {
         q: "Wat is **MBO**?",
-        options: ["Middelbaar beroepsonderwijs (vakopleiding)", "Hoog", "Wetenschappelijk", "Basis"],
+        options: ["Middelbaar beroepsonderwijs", "Hoger beroepsonderwijs", "Wetenschappelijk onderwijs", "Basisonderwijs"],
         answer: 0,
-        wrongHints: [null, "HBO.", "WO.", "Primair."],
+        wrongHints: [null, "Dat is HBO.", "Dat is WO.", "Dat is de basisschool."],
       },
       {
         q: "Welke opleiding voor **arts**?",
-        options: ["WO geneeskunde (6 jaar)", "MBO", "HBO", "VMBO"],
+        options: ["WO", "MBO", "HBO", "VMBO"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Verpleegkundige wel.", "Niet."],
+        wrongHints: [null, "Op het mbo leer je praktijkberoepen — leer je daar dokter worden?", "Verpleegkundige wel — maar dokter?", "Het vmbo is middelbare school, nog geen beroepsopleiding voor dokter."],
       },
       {
         q: "Welke opleiding voor **loodgieter**?",
-        options: ["MBO niveau 2/3", "WO", "Geen opleiding nodig", "Universiteit"],
+        options: ["MBO", "WO", "Geen opleiding nodig", "HBO"],
         answer: 0,
-        wrongHints: [null, "Onnodig hoog.", "Wel.", "Onnodig hoog."],
+        wrongHints: [null, "Onnodig hoog.", "Gas en water veilig aansluiten moet je wél leren.", "Een loodgietersopleiding is praktisch — op welk niveau zit die?"],
       },
       {
         q: "Wat is **pabo**?",
-        options: ["HBO leerkracht basisschool", "WO", "MBO", "VMBO"],
+        options: ["HBO", "WO", "MBO", "VMBO"],
         answer: 0,
         wrongHints: [null, "WO is de universiteit — op welk ander niveau leer je juf of meester te worden?", "MBO leidt op tot veel praktijkberoepen, maar niet tot leerkracht basisschool.", "VMBO is zelf middelbare school — de pabo volg je pas daarná."],
       },
@@ -177,7 +177,7 @@ const steps = [
   {
     title: "Salaris + werkrechten",
     explanation:
-      "**Salaris** = geld dat je krijgt voor werk.\nOok wel **loon** of **inkomen**.\n\n**Hoe wordt salaris berekend?**\n• Per uur *(uurloon)*.\n• Per maand *(bruto-salaris)*.\n• Per jaar *(jaarsalaris)*.\n• Soms met **bonus** of **commissie**.\n\n**Bruto vs netto**:\n• **Bruto** = wat de baas betaalt voor jou.\n• **Belasting + premies** gaan eraf:\n  - Loonbelasting *(staat)*.\n  - Sociale premies *(WW, AOW, ZW)*.\n  - Pensioen.\n• **Netto** = wat overblijft op bankrekening.\n• Bij €3000 bruto blijft ~€2200 netto.\n\n**Minimumloon** *(2024)*:\n• Volwassene *(21+)*: ~€2100 bruto/maand fulltime.\n• Per uur: ~€14.\n• Jongeren: lager *(15 jaar: 30% van volwassen, 21 jaar: 100%)*.\n• **CAO** *(Collectieve ArbeidsOvereenkomst)*: vaak afspraken hoger dan minimum.\n\n**Gemiddeld bruto-salaris NL** *(2024)*:\n• Fulltime: ~€3000-3500/maand.\n• Verschillen enorm per beroep + opleiding.\n\n**Top-3 best betalende beroepen** *(2024)*:\n1. Specialist-arts *(€150.000+ /jaar)*.\n2. Piloot KLM *(€100.000+)*.\n3. Topmanager *(€100.000+)*.\n\n**Beroepen met lager salaris**:\n• Verkoopmedewerker.\n• Verpleegkundige *(stijgt, want tekort)*.\n• Schoonmaker.\n• Stagiair.\n\n**Wetten over werk**:\n\n**1. Arbeidstijden**:\n• Maximaal **12 uur per dag**.\n• Maximaal **60 uur per week** *(gemiddeld max. 48 uur)*.\n• Een gewone volle werkweek is 36-40 uur.\n• Onder 18 jr: korter *(school-dagen)*.\n\n**2. Pauzes**:\n• 30 min pauze na 5,5 uur werk.\n\n**3. Vakantiedagen**:\n• Minimaal **4× wekelijkse werkuren** *(20 dagen fulltime)*.\n• Bovenop: feestdagen.\n• Vakantiegeld: 8% van bruto-jaarloon.\n\n**4. Ontslag**:\n• Baas mag je niet zomaar ontslaan.\n• Reden nodig + procedure *(UWV of rechter)*.\n• **Opzegtermijn**: 1-4 maanden.\n• Soms **transitievergoeding** *(geld bij ontslag)*.\n\n**5. Bij ziekte**:\n• Maximaal 2 jaar **loondoorbetaling**.\n• Daarna eventueel WW of WIA *(uitkering)*.\n\n**6. Vakbond**:\n• Vereniging werknemers.\n• Onderhandelt CAO met werkgever.\n• Bekend: FNV, CNV.\n• Stakingen mogelijk bij conflict.\n\n**Pesten / discriminatie op werk**:\n• Verboden.\n• Klacht indienen bij baas → vertrouwenspersoon → UWV → rechter.\n• In zware gevallen: ontslag baas mogelijk.\n\n**Belasting**:\nNL heeft **progressieve belasting** — hoe meer je verdient, hoe hoger % belasting.\nLage inkomens: ~37%.\nHoge inkomens: tot ~49%.\n\nBelastinggeld gaat naar: zorg, onderwijs, wegen, defensie, AOW, uitkeringen, etc.\n\n**Toets-feitje**:\nIn NL mag je **wettelijk vanaf 13 jaar** wat licht werk doen *(bv. hond uitlaten, helpen in de tuin; kranten bezorgen mag pas vanaf 15)*. Vanaf 16 mag je echt werken. Veel jongeren bouwen ervaring op met **vakantiebaantjes** *(supermarkt, restaurant)*.",
+      "**Salaris** = geld dat je krijgt voor werk.\nOok wel **loon** of **inkomen**.\n\n**Hoe wordt salaris berekend?**\n• Per uur *(uurloon)*.\n• Per maand *(bruto-salaris)*.\n• Per jaar *(jaarsalaris)*.\n• Soms met **bonus** of **commissie**.\n\n**Bruto vs netto**:\n• **Bruto** = wat de baas betaalt voor jou.\n• **Belasting + premies** gaan eraf:\n  - Loonbelasting *(staat)*.\n  - Sociale premies *(WW, AOW, ZW)*.\n  - Pensioen.\n• **Netto** = wat overblijft op bankrekening.\n• Bij €3000 bruto blijft ~€2200 netto.\n\n**Minimumloon** *(2024)*:\n• Volwassene *(21+)*: ~€2300 bruto/maand fulltime.\n• Per uur: ~€14.\n• Jongeren: lager *(15 jaar: 30% van volwassen, 21 jaar: 100%)*.\n• **CAO** *(Collectieve ArbeidsOvereenkomst)*: vaak afspraken hoger dan minimum.\n\n**Gemiddeld bruto-salaris NL** *(2024)*:\n• Fulltime: ~€3000-3500/maand.\n• Verschillen enorm per beroep + opleiding.\n\n**Top-3 best betalende beroepen** *(2024)*:\n1. Specialist-arts *(€150.000+ /jaar)*.\n2. Piloot KLM *(€100.000+)*.\n3. Topmanager *(€100.000+)*.\n\n**Beroepen met lager salaris**:\n• Verkoopmedewerker.\n• Verpleegkundige *(stijgt, want tekort)*.\n• Schoonmaker.\n• Stagiair.\n\n**Wetten over werk**:\n\n**1. Arbeidstijden**:\n• Maximaal **12 uur per dag**.\n• Maximaal **60 uur per week** *(gemiddeld max. 48 uur)*.\n• Een gewone volle werkweek is 36-40 uur.\n• Onder 18 jr: korter *(school-dagen)*.\n\n**2. Pauzes**:\n• 30 min pauze na 5,5 uur werk.\n\n**3. Vakantiedagen**:\n• Minimaal **4× wekelijkse werkuren** *(20 dagen fulltime)*.\n• Bovenop: feestdagen.\n• Vakantiegeld: 8% van bruto-jaarloon.\n\n**4. Ontslag**:\n• Baas mag je niet zomaar ontslaan.\n• Reden nodig + procedure *(UWV of rechter)*.\n• **Opzegtermijn**: 1-4 maanden.\n• Soms **transitievergoeding** *(geld bij ontslag)*.\n\n**5. Bij ziekte**:\n• Maximaal 2 jaar **loondoorbetaling**.\n• Daarna eventueel WW of WIA *(uitkering)*.\n\n**6. Vakbond**:\n• Vereniging werknemers.\n• Onderhandelt CAO met werkgever.\n• Bekend: FNV, CNV.\n• Stakingen mogelijk bij conflict.\n\n**Pesten / discriminatie op werk**:\n• Verboden.\n• Klacht indienen bij baas → vertrouwenspersoon → UWV → rechter.\n• In zware gevallen: ontslag baas mogelijk.\n\n**Belasting**:\nNL heeft **progressieve belasting** — hoe meer je verdient, hoe hoger % belasting.\nLage inkomens: ~37%.\nHoge inkomens: tot ~49%.\n\nBelastinggeld gaat naar: zorg, onderwijs, wegen, defensie, AOW, uitkeringen, etc.\n\n**Toets-feitje**:\nIn NL mag je **wettelijk vanaf 13 jaar** wat licht werk doen *(bv. hond uitlaten, helpen in de tuin; kranten bezorgen mag pas vanaf 15)*. Vanaf 16 mag je echt werken. Veel jongeren bouwen ervaring op met **vakantiebaantjes** *(supermarkt, restaurant)*.",
     checks: [
       {
         q: "Wat is **bruto**?",
@@ -193,15 +193,15 @@ const steps = [
       },
       {
         q: "Wat is een **CAO**?",
-        options: ["Afspraken werkgever-werknemers (collectief)", "Belasting", "Salaris", "Werktijd"],
+        options: ["Afspraken tussen werkgevers en werknemers", "Een soort belasting", "Een vakantie-uitkering", "Een diploma"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Wel maar specifiek dit.", "Niet."],
+        wrongHints: [null, "Belasting gaat naar de overheid.", "Vakantiegeld is iets anders.", "Een diploma haal je op school."],
       },
       {
         q: "Vanaf welke leeftijd **licht werken** in NL?",
-        options: ["13 jaar (licht werk, bv. hond uitlaten)", "21 jaar", "8 jaar", "Mag niet"],
+        options: ["13 jaar", "21 jaar", "8 jaar", "Mag niet"],
         answer: 0,
-        wrongHints: [null, "Te oud.", "Te jong.", "Wel."],
+        wrongHints: [null, "Te oud.", "Te jong.", "Licht werk zoals hond uitlaten mag wél, vanaf een bepaalde leeftijd."],
       },
     ],
   },
@@ -214,12 +214,12 @@ const steps = [
       { q: "Wat is **ZZP'er**?", options: ["Zelfstandige zonder personeel", "Werknemer", "Stagiair", "Vrijwilliger"], answer: 0, wrongHints: [null, "Loondienst.", "Niet primair.", "Onbetaald."] },
       { q: "Wat is **AOW**?", options: ["Staatspensioen", "Salaris", "Belasting", "Bonus"], answer: 0, wrongHints: [null, "Salaris krijg je zolang je wérkt — AOW krijg je juist daarna. Van wie?", "Belasting betáál je — AOW ontváng je. Wanneer in je leven?", "Geen extraatje van de baas — een vaste uitkering. Voor welke leeftijdsgroep?"] },
       { q: "**Top-1 best betaalde** beroep NL?", options: ["Specialist-arts", "Verkoper", "Schoonmaker", "Stagiair"], answer: 0, wrongHints: [null, "Veel minder.", "Veel minder.", "Niet betaald."] },
-      { q: "Wat is **bruto**?", options: ["Salaris voor belasting", "Salaris na belasting", "Cadeau", "Niet bestaand"], answer: 0, wrongHints: [null, "Netto.", "Niet.", "Wel."] },
+      { q: "Wat is **bruto**?", options: ["Salaris voor belasting", "Salaris na belasting", "Cadeau", "Extra geld voor overuren"], answer: 0, wrongHints: [null, "Netto.", "Niet.", "Dat heet overwerktoeslag."] },
       {
         q: "Wat betekent **MBO/HBO/WO**?",
-        options: ["MBO=praktisch, HBO=hoger beroeps, WO=universitair", "Alle drie hetzelfde", "Niets bijzonders", "Type bedrijven"],
+        options: ["Drie niveaus van vervolgonderwijs", "Drie soorten belasting", "Drie soorten bedrijven", "Drie groepen van de basisschool"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — heel verschillende niveaus.", "Wel — onderwijsniveaus.", "Niet — dit zijn opleidingsniveaus."],
+        wrongHints: [null, "Heeft het met geld betalen te maken?", "Gaat het om bedrijven of om leren?", "Na groep 8 kom je niet meer op de basisschool."],
         uitlegPad: {
           stappen: [
             { titel: "3 niveaus vervolgonderwijs in NL", tekst: "Na de middelbare school kun je in NL kiezen uit drie hoofdniveaus:\n\n• **MBO** (**Middelbaar Beroeps­onderwijs**) — praktijkgericht. Niveau 1-4. Duur: 1-4 jaar. Bv. kapper, verpleegkunde, ICT-helpdesk.\n• **HBO** (**Hoger Beroeps­onderwijs**) — toegepaste theorie + praktijk. Duur: 4 jaar (bachelor). Bv. leraar basisschool, verpleegkundige niveau 6, marketing.\n• **WO** (**Wetenschappelijk Onderwijs**) — universiteit, theoretisch + onderzoek. Duur: 3 jaar bachelor + 1-2 jaar master. Bv. arts, advocaat, psycholoog." },
@@ -229,10 +229,10 @@ const steps = [
           woorden: [
             { woord: "MBO", uitleg: "Middelbaar Beroepsonderwijs. Praktijkgericht. ROC's, scholen voor specifieke beroepen." },
             { woord: "HBO", uitleg: "Hoger Beroepsonderwijs. Hogescholen. 4 jaar bachelor, toepassings­gericht." },
-            { woord: "WO", uitleg: "Wetenschappelijk Onderwijs. Universiteiten. 3+2 jaar bachelor+master, onderzoeks­gericht." },
+            { woord: "WO", uitleg: "Wetenschappelijk Onderwijs. Universiteiten. 3 jaar bachelor + 1-2 jaar master, onderzoeksgericht." },
             { woord: "stapelen", uitleg: "Doorgaan naar hoger niveau na een opleiding. VMBO→MBO→HBO bv." },
           ],
-          theorie: "NL-onderwijsniveaus van laag naar hoog (samenvatting):\n• Basisschool (groep 1-8)\n• **VMBO** (4 jr) → MBO\n• **HAVO** (5 jr) → HBO\n• **VWO** (6 jr) → WO\n• **MBO** (1-4 jr) → werk of HBO\n• **HBO** (4 jr bachelor) → werk of master/WO\n• **WO** (3+2 jr) → werk of PhD\n\nDoor stapelen kan iedereen elk niveau bereiken — niet alleen via 1 route.",
+          theorie: "NL-onderwijsniveaus van laag naar hoog (samenvatting):\n• Basisschool (groep 1-8)\n• **VMBO** (4 jr) → MBO\n• **HAVO** (5 jr) → HBO\n• **VWO** (6 jr) → WO\n• **MBO** (1-4 jr) → werk of HBO\n• **HBO** (4 jr bachelor) → werk of master/WO\n• **WO** (3 jr bachelor + 1-2 jr master) → werk of PhD\n\nDoor stapelen kan iedereen elk niveau bereiken — niet alleen via 1 route.",
           voorbeelden: [
             { type: "feit", tekst: "Oud-premier Mark Rutte studeerde geschiedenis aan de universiteit van Leiden (WO)." },
             { type: "feit", tekst: "Veel Nederlanders deden eerst VMBO/MBO en stapelden later door naar HBO of zelfs WO." },
@@ -243,9 +243,9 @@ const steps = [
       },
       {
         q: "Wat is een **CAO**?",
-        options: ["Collectieve Arbeidsovereenkomst — afspraken tussen werkgevers + vakbond", "Computer-Aided Onderwijs", "Cadeau-Aanbod-Order", "Belasting-soort"],
+        options: ["Afspraken tussen werkgevers en vakbonden", "Een mbo-diploma", "Een soort uitkering", "Belasting-soort"],
         answer: 0,
-        wrongHints: [null, "Niet — geen onderwijs-term.", "Niet — bedacht antwoord.", "Niet — geen belasting."],
+        wrongHints: [null, "Een diploma haal je op school.", "Een uitkering krijg je als je niet (meer) werkt.", "Niet — geen belasting."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een CAO?", tekst: "**CAO** = **Collectieve Arbeids­overeenkomst** — een **schriftelijke afspraak** tussen werkgevers (vaak via een werkgevers-organisatie) en werknemers (via een **vakbond**, bv. FNV of CNV).\n\nGeldt voor **alle werknemers** in een sector (zorg, bouw, onderwijs, supermarkten). Je hoeft niet apart te onderhandelen — CAO regelt het al." },
@@ -269,9 +269,9 @@ const steps = [
       },
       {
         q: "Op welke leeftijd mag je in NL beginnen met **werken voor geld**?",
-        options: ["Vanaf 13 jaar (licht werk) of 15 jaar (krant)", "16 jaar pas", "18 jaar pas", "Geen leeftijdsgrens"],
+        options: ["Vanaf 13 jaar", "16 jaar pas", "18 jaar pas", "Geen leeftijdsgrens"],
         answer: 0,
-        wrongHints: [null, "Te laat — vanaf 13 mag al beperkt.", "Te laat — vanaf 16 mag al veel.", "Niet — wel regels: maximaal aantal uur per week, geen nacht-werk."],
+        wrongHints: [null, "Denk aan licht werk zoals een hond uitlaten — mag dat al jonger?", "Te laat — vanaf 16 mag al veel.", "Niet — wel regels: maximaal aantal uur per week, geen nacht-werk."],
         uitlegPad: {
           stappen: [
             { titel: "NL-leeftijdsgrenzen werken", tekst: "Nederland heeft duidelijke regels per leeftijd:\n• **<13 jaar**: alleen huishoudelijke klusjes voor zakgeld\n• **13-14**: **licht werk** rondom huis (auto wassen voor buurman, hondenuitlater)\n• **15**: kranten/folders bezorgen, vakantie-werk\n• **16-17**: bijbaan met **beperkingen** (max 40 u/week vakantie, niet 's nachts)\n• **18+**: volwaardig werken zonder beperkingen" },
@@ -292,19 +292,19 @@ const steps = [
           niveaus: { basis: "13 jaar.", simpeler: "Vanaf 13 mag licht werk (klusjes), vanaf 15 krant/folder, vanaf 16 bijbaan met regels (max uur, geen nacht).", nogSimpeler: "13+ licht werk" },
         },
       },
-      { q: "Wat is een **CV** (curriculum vitae)?", options: ["Overzicht van opleiding/werk-ervaring","Auto","Reclame","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
+      { q: "Wat is een **CV** (curriculum vitae)?", options: ["Overzicht van opleiding/werk-ervaring","Een diploma","Een arbeidscontract","Een loonstrook"], answer: 0, wrongHints: [null, "Een diploma krijg je voor één opleiding — is dat een overzicht?", "Een contract teken je pas als je aangenomen bent.", "Een loonstrook laat zien wat je verdient."] },
       { q: "Wat is **MBO**?", options: ["Middelbaar Beroepsonderwijs","Hoger Onderwijs","Universiteit","Basisschool"], answer: 0, wrongHints: [null, "Dat is HBO/WO.", "Hoger.", "Niet."] },
       { q: "Wat is **HBO**?", options: ["Hoger Beroepsonderwijs","Universiteit","MBO","VMBO"], answer: 0, wrongHints: [null, "Dat is WO.", "Lager.", "Lager."] },
       { q: "Welk **beroep** werkt in een ziekenhuis?", options: ["Verpleegkundige","Bakker","Politieagent","Boer"], answer: 0, wrongHints: [null, "Bakkerij.", "Politiebureau.", "Boerderij."] },
       { q: "Welk **beroep** werkt met dieren?", options: ["Dierenarts","Bakker","Architect","Boekhouder"], answer: 0, wrongHints: [null, "Brood.", "Gebouwen.", "Cijfers."] },
       { q: "Wat doet een **architect**?", options: ["Gebouwen ontwerpen","Bouwen alleen","Schoonmaken","Lesgeven"], answer: 0, wrongHints: [null, "Aannemer.", "Schoonmaker.", "Leraar."] },
-      { q: "Wat is **vakantiegeld**?", options: ["8% extra salaris in mei","Niet bestaand","Buitenland-geld","Bonus"], answer: 0, wrongHints: [null, "Wel.", "Niet.", "Soort bonus maar wel wettelijk."] },
-      { q: "Wat is een **vrijwilliger**?", options: ["Iemand die onbetaald werkt voor een goed doel","Politicus","Niet werkend","Manager"], answer: 0, wrongHints: [null, "Niet primair.", "Wel werkend.", "Niet specifiek."] },
-      { q: "Welk **beroep** blust branden?", options: ["Brandweer","Politie","Ambulance","Niet relevant"], answer: 0, wrongHints: [null, "Andere taak.", "Andere taak.", "Wel."] },
+      { q: "Wat is **vakantiegeld**?", options: ["Extra loon, minstens 8% per jaar","Een uitkering bij ziekte","Buitenland-geld","Bonus voor goed werk"], answer: 0, wrongHints: [null, "Dat is ziektegeld.", "Dat is vreemd geld (valuta).", "Een bonus is niet verplicht — vakantiegeld wel."] },
+      { q: "Wat is een **vrijwilliger**?", options: ["Iemand die onbetaald werkt","Politicus","Niet werkend","Manager"], answer: 0, wrongHints: [null, "Niet primair.", "Wel werkend.", "Niet specifiek."] },
+      { q: "Welk **beroep** blust branden?", options: ["Brandweer","Politie","Ambulance","Postbode"], answer: 0, wrongHints: [null, "Andere taak.", "Andere taak.", "Andere taak."] },
       { q: "Welk **beroep** plant en oogst?", options: ["Boer","Bakker","Slager","Visser"], answer: 0, wrongHints: [null, "Verwerkt graan.", "Verwerkt vlees.", "Vis."] },
-      { q: "Wat is een **werkgever**?", options: ["Persoon/bedrijf dat iemand laat werken","Werknemer","Klant","Niet relevant"], answer: 0, wrongHints: [null, "Andere kant.", "Niet.", "Wel."] },
-      { q: "Wat is een **werknemer**?", options: ["Persoon die werkt voor werkgever","Werkgever","Klant","Niet relevant"], answer: 0, wrongHints: [null, "Andere kant.", "Niet.", "Wel."] },
-      { q: "Wat is **loon**?", options: ["Salaris (betaling voor werk)","Bonus","Vakantie","Niet relevant"], answer: 0, wrongHints: [null, "Extra.", "Niet betaling.", "Wel."] },
+      { q: "Wat is een **werkgever**?", options: ["Persoon/bedrijf dat iemand laat werken","Werknemer","Klant","Vakbond"], answer: 0, wrongHints: [null, "Andere kant.", "Niet.", "Een vakbond komt op vóór werknemers."] },
+      { q: "Wat is een **werknemer**?", options: ["Persoon die werkt voor werkgever","Werkgever","Klant","Vakbond"], answer: 0, wrongHints: [null, "Andere kant.", "Niet.", "Een vakbond is een vereniging, geen persoon."] },
+      { q: "Wat is **loon**?", options: ["Betaling voor werk","Bonus","Vakantie","Belasting"], answer: 0, wrongHints: [null, "Extra.", "Niet betaling.", "Belasting betaal je juist."] },
       { q: "Welk beroep helpt mensen leren?", options: ["Leraar/docent","Politicus","Bakker","Boer"], answer: 0, wrongHints: [null, "Een politicus bestuurt het land — wie staat er elke dag voor de klas?", "Een bakker maakt brood — wie legt je iets uit tot je het snapt?", "Een boer verbouwt voedsel — wie helpt je met rekenen en taal?"] },
       { q: "Wat is een **stage**?", options: ["Werkervaring opdoen tijdens opleiding","Vakantie","Loonstop","Reclame"], answer: 0, wrongHints: [null, "Niet werk.", "Niet.", "Niet."] },
     ],

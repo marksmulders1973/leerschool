@@ -111,7 +111,7 @@ const steps = [
         q: "Feit of mening? *De fiets is uitgevonden in de negentiende eeuw.*",
         options: ["feit", "mening", "geen van beide", "allebei"],
         answer: 0,
-        wrongHints: [null, "Dit kun je opzoeken in een geschiedenisboek.", "Het is te controleren — dus het is feit of mening, niet geen van beide.", "Een zin is óf feit óf mening."],
+        wrongHints: [null, "Dit kun je opzoeken in een geschiedenisboek.", "Het is te controleren — dan is het niet ‘geen van beide’.", "Een zin is óf feit óf mening."],
         uitlegPad: {
           stappen: [{ titel: "Opzoekbaar in de geschiedenis", tekst: "Wanneer de fiets is uitgevonden staat in boeken. Dat is te controleren, dus een feit." }],
           niveaus: {
@@ -426,19 +426,19 @@ const steps = [
         },
       },
       {
-        q: "In een tekst staat: *'Nederland heeft 18 miljoen inwoners. Het is het drukste land van Europa.'* Welk deel is een feit?",
+        q: "In een tekst staat: *'Nederland heeft 18 miljoen inwoners. Het is het fijnste land van Europa.'* Welk deel is een feit?",
         options: [
           "Nederland heeft 18 miljoen inwoners.",
-          "Het is het drukste land van Europa.",
+          "Het is het fijnste land van Europa.",
           "Allebei zijn feiten.",
           "Allebei zijn meningen.",
         ],
         answer: 0,
-        wrongHints: [null, "'Drukste' is een oordeel — dat is geen feit.", "Eén van de twee is een mening.", "Het inwoneraantal is te tellen — dat is geen mening."],
+        wrongHints: [null, "'Fijnste' is een oordeel — dat is geen feit.", "Eén van de twee is een mening.", "Het inwoneraantal is te tellen — dat is geen mening."],
         uitlegPad: {
-          stappen: [{ titel: "Tellen vs. oordelen", tekst: "18 miljoen inwoners kun je tellen (feit). 'Het drukste land' is een oordeel — niet iedereen is het daarmee eens (mening)." }],
+          stappen: [{ titel: "Tellen vs. oordelen", tekst: "18 miljoen inwoners kun je tellen (feit). 'Het fijnste land' is een oordeel — niet iedereen is het daarmee eens (mening)." }],
           niveaus: {
-            basis: "Inwoneraantal = feit; 'drukste' = mening.",
+            basis: "Inwoneraantal = feit; 'fijnste' = mening.",
             simpeler: "Welk deel is te controleren?",
             nogSimpeler: "Welke zin heeft een getal erin dat je kunt tellen?",
           },

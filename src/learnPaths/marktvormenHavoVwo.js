@@ -22,12 +22,7 @@ const steps = [
     checks: [
       {
         q: "Een **prijsstijging** leidt tot:",
-        options: [
-          "Daling Qd, stijging Qs (langs curves)",
-          "Stijging Qd",
-          "Daling Qs",
-          "Geen verandering"
-        ],
+        options: ["Daling Qd, stijging Qs (langs curves)", "Stijging Qd, daling Qs (langs curves)", "Daling Qd, daling Qs (langs curves)", "Qd en Qs blijven allebei gelijk"],
         answer: 0,
         wrongHints: [null, "Niet — wet van de vraag.", "Niet — wet van het aanbod.", "Niet — markten reageren."],
         uitlegPad: {
@@ -37,12 +32,7 @@ const steps = [
       },
       {
         q: "Wat is **prijselasticiteit van insuline** voor een diabeet?",
-        options: [
-          "Heel laag (inelastisch) — moet kopen ongeacht prijs",
-          "Heel hoog (elastisch)",
-          "Onbepaald",
-          "Precies 1 (proportioneel)"
-        ],
+        options: ["Heel laag (inelastisch) — moet kopen ongeacht prijs", "Heel hoog (elastisch) — stopt snel met kopen bij hogere prijs", "Onbepaald — elasticiteit is hier niet te berekenen", "Precies 1 (proportioneel) — vraag daalt even hard als prijs stijgt"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Wel te bepalen.", "Dan zou de vraag evenredig met de prijs dalen — past dat bij een levensreddend middel?"],
         uitlegPad: {
@@ -68,12 +58,7 @@ const steps = [
       },
       {
         q: "Boter + margarine zijn **substituten**. Boter-prijs stijgt. Wat met margarine?",
-        options: [
-          "Vraagcurve margarine schuift rechts → meer verkoop",
-          "Vraagcurve daalt",
-          "Geen effect",
-          "Margarine verdwijnt"
-        ],
+        options: ["Vraagcurve margarine schuift rechts → meer verkoop", "Vraagcurve margarine schuift links → minder verkoop", "Geen effect — margarine is een ander product", "Margarine verdwijnt helemaal van de markt"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Niet — wel effect.", "Onzin."],
         uitlegPad: {
@@ -84,12 +69,7 @@ const steps = [
       },
       {
         q: "Bij **prijsplafond** onder evenwichtsprijs (zoals huurprijsplafond):",
-        options: [
-          "Tekort op markt — minder aanbod dan vraag",
-          "Overschot — meer aanbod",
-          "Geen effect",
-          "Evenwicht herstelt zich snel"
-        ],
+        options: ["Tekort op markt — minder aanbod dan vraag", "Overschot op markt — meer aanbod dan vraag", "Geen effect — vraag en aanbod blijven gelijk", "Evenwicht herstelt zich snel vanzelf"],
         answer: 0,
         wrongHints: [null, "Niet — hoeveel willen kopers en verkopers bij zo'n lage prijs?", "Wel effect.", "Niet — plafond houdt prijs vast."],
         uitlegPad: {
@@ -123,12 +103,7 @@ const steps = [
       },
       {
         q: "**Volkomen concurrentie** vereist:",
-        options: [
-          "Veel kleine aanbieders, homogeen product, vrije toetreding",
-          "Eén aanbieder",
-          "Heel weinig spelers",
-          "Hoge prijzen"
-        ],
+        options: ["Veel kleine aanbieders, homogeen product, vrije toetreding", "Eén aanbieder, uniek product, geen toetreding mogelijk", "Weinig grote aanbieders die elkaars prijzen volgen", "Hoge prijzen en sterk verschillende merkproducten"],
         answer: 0,
         wrongHints: [null, "Niet — dat is monopolie.", "Niet — dat is oligopolie.", "Tegenovergesteld."],
         uitlegPad: {
@@ -138,12 +113,7 @@ const steps = [
       },
       {
         q: "**Monopolie** ontstaat vaak door:",
-        options: [
-          "Hoge toetredingsbarrières (schaal, octrooi, netwerk)",
-          "Lage prijzen",
-          "Veel concurrentie",
-          "Klanten-loyaliteit alleen"
-        ],
+        options: ["Hoge toetredingsbarrières voor nieuwe bedrijven", "Lage prijzen voor alle klanten", "Veel concurrentie tussen kleine bedrijven", "Alleen klantenloyaliteit aan een merk"],
         answer: 0,
         wrongHints: [null, "Niet — tegenovergesteld.", "Tegenovergesteld.", "Niet alleen."],
         uitlegPad: {
@@ -153,14 +123,9 @@ const steps = [
       },
       {
         q: "Een **kartel** is:",
-        options: [
-          "Geheime prijsafspraken tussen concurrenten — wettelijk verboden",
-          "Een legaal samenwerkingsverband",
-          "Een type monopolie",
-          "Een sociale beweging"
-        ],
+        options: ["Geheime prijsafspraken tussen concurrenten", "Een legaal samenwerkingsverband van bedrijven", "Eén bedrijf dat de enige aanbieder is", "Een sociale beweging van consumenten"],
         answer: 0,
-        wrongHints: [null, "Niet — illegaal in EU.", "Niet — apart van monopolie.", "Onzin."],
+        wrongHints: [null, "Niet — zulke afspraken zijn in de EU juist verboden.", "Niet — bij een kartel gaat het om meerdere bedrijven.", "Onzin."],
         uitlegPad: {
           stappen: [
             { titel: "Mededingingsautoriteit (ACM)", tekst: "EU + NL: prijsafspraken/marktverdeling tussen onafhankelijke bedrijven verboden onder mededingingsrecht. Boetes tot 10% wereldwijde omzet. Bekende boetes: liftbedrijven (€1 mld EU 2007), bierbrouwers (€273 mln NL 2007)." },
@@ -226,12 +191,7 @@ const steps = [
       },
       {
         q: "Tweedehands auto-handelaar verkoopt auto met verborgen gebreken. Type marktfalen?",
-        options: [
-          "Asymmetrische informatie (Akerlof's 'lemons')",
-          "Externaliteit",
-          "Monopolie",
-          "Collectief goed"
-        ],
+        options: ["Asymmetrische informatie", "Externaliteit", "Monopolie", "Collectief goed"],
         answer: 0,
         wrongHints: [null, "Niet — info-asymmetrie hier kern.", "Niet — geen monopolie nodig.", "Niet — het is juist een privé-transactie."],
         uitlegPad: {
@@ -244,12 +204,7 @@ const steps = [
       },
       {
         q: "Wat is **positieve externaliteit**?",
-        options: [
-          "Baten voor derden niet in prijs (bv. educatie, vaccinatie)",
-          "Negatieve schade",
-          "Overheidsbelasting",
-          "Privé-winst"
-        ],
+        options: ["Baten voor derden die niet in de prijs zitten", "Schade voor derden die niet in de prijs zit", "Een belasting die de overheid heft", "Winst die het bedrijf zelf houdt"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Niet — heffing.", "Niet — winst is intern."],
         uitlegPad: {
@@ -261,12 +216,7 @@ const steps = [
       },
       {
         q: "Wat is **Pigouvian-belasting**?",
-        options: [
-          "Belasting gelijk aan externe schade → internaliseert die in prijs",
-          "Vermogensbelasting",
-          "BTW",
-          "Importheffing"
-        ],
+        options: ["Belasting ter hoogte van de externe schade", "Belasting op het vermogen van burgers", "Belasting op wat consumenten kopen (btw)", "Heffing op producten uit het buitenland"],
         answer: 0,
         wrongHints: [null, "Niet — niet op vermogen.", "Niet — BTW is consumentenbelasting.", "Niet — voor handel."],
         uitlegPad: {
@@ -305,12 +255,7 @@ const steps = [
       },
       {
         q: "**ECB** verhoogt rente. Verwacht effect:",
-        options: [
-          "Minder lenen → minder vraag → lagere inflatie + werkloosheid kan stijgen",
-          "Meer lenen + hoog werk",
-          "Niets",
-          "Direct hogere prijzen"
-        ],
+        options: ["Minder lenen → minder vraag → lagere inflatie", "Meer lenen → meer vraag → minder werkloosheid", "Geen effect op lenen, vraag of prijzen", "Direct hogere prijzen in alle winkels"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Wel effect.", "Tegenovergesteld."],
         uitlegPad: {
@@ -322,7 +267,7 @@ const steps = [
       },
       {
         q: "**EU-Stabiliteits- en Groei Pact** zegt begrotingstekort max:",
-        options: ["3% van BBP", "10%", "1%", "Geen regel"],
+        options: ["3% van BBP", "10% van BBP", "1% van BBP", "Geen vaste grens"],
         answer: 0,
         wrongHints: [null, "Te hoog.", "Te laag.", "Wel een regel."],
         uitlegPad: {
@@ -334,12 +279,7 @@ const steps = [
       },
       {
         q: "**Keynesiaans beleid** in een recessie:",
-        options: [
-          "Overheidsuitgaven omhoog + belasting omlaag → economie stimuleren",
-          "Bezuinigen + belasting omhoog",
-          "Geen ingrijpen",
-          "Hogere rente"
-        ],
+        options: ["Overheidsuitgaven omhoog + belasting omlaag", "Bezuinigen + belasting omhoog", "Niet ingrijpen, markt herstelt zichzelf", "Rente omhoog via de centrale bank"],
         answer: 0,
         wrongHints: [null, "Niet — dat is austerity.", "Niet — Keynes vooral pro-interventie.", "Niet — monetair, niet fiscaal."],
         uitlegPad: {
@@ -352,12 +292,7 @@ const steps = [
       },
       {
         q: "**Privatisering** van energie-bedrijven sinds 1990s heeft als doel:",
-        options: [
-          "Marktwerking → efficiëntie + lagere prijzen (theoretisch)",
-          "Hogere prijzen",
-          "Meer ambtenaren",
-          "Sluiting bedrijven"
-        ],
+        options: ["Marktwerking → efficiëntie en lagere prijzen", "Hogere prijzen → meer winst voor de staat", "Meer ambtenaren in de energiesector", "Sluiting van energiebedrijven"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld bedoeld.", "Tegenovergesteld.", "Onzin."],
         uitlegPad: {
@@ -378,12 +313,7 @@ const steps = [
     checks: [
       {
         q: "**Gini-coëfficiënt** van 0 betekent:",
-        options: [
-          "Perfecte gelijkheid (iedereen zelfde inkomen)",
-          "Perfecte ongelijkheid",
-          "Recessie",
-          "Geen meting mogelijk"
-        ],
+        options: ["Perfecte gelijkheid", "Perfecte ongelijkheid", "Recessie", "Geen meting mogelijk"],
         answer: 0,
         wrongHints: [null, "Niet — 1.", "Niet — geen Gini-verband.", "Wel meting."],
         uitlegPad: {
@@ -403,12 +333,7 @@ const steps = [
       },
       {
         q: "Nederlandse Gini **na belasting + uitkeringen** is:",
-        options: [
-          "~0,30 (relatief gelijk)",
-          "~0,60",
-          "~0,15",
-          "~0,90"
-        ],
+        options: ["~0,30", "~0,60", "~0,15", "~0,90"],
         answer: 0,
         wrongHints: [null, "Niet — dat is Zuid-Afrika.", "Te gelijk — onmogelijk in praktijk.", "Onmogelijk."],
         uitlegPad: {
@@ -420,12 +345,7 @@ const steps = [
       },
       {
         q: "Piketty's stelling **r > g** betekent:",
-        options: [
-          "Rendement op kapitaal > economische groei → vermogen concentreert",
-          "Rente > groei → recessie",
-          "Geen verband",
-          "Salarissen stijgen"
-        ],
+        options: ["Rendement op kapitaal > economische groei → vermogen concentreert", "Rente > groei → er volgt altijd een recessie", "Geen verband tussen kapitaal en economische groei", "Salarissen stijgen sneller dan vermogens groeien"],
         answer: 0,
         wrongHints: [null, "Niet — onderbouwing voor ongelijkheid.", "Wel — bekend mechanisme.", "Tegenovergesteld."],
         uitlegPad: {
@@ -438,12 +358,7 @@ const steps = [
       },
       {
         q: "Wat is een argument **vóór** enige ongelijkheid?",
-        options: [
-          "Prikkels voor hard werken, ondernemen, risico nemen",
-          "Sociale rust",
-          "Gezondheid",
-          "Eenzaamheid"
-        ],
+        options: ["Prikkels voor hard werken, ondernemen, risico nemen", "Meer sociale rust in de samenleving", "Betere gezondheid van de bevolking", "Minder eenzaamheid onder mensen"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld — minder rust.", "Tegen — minder gezond.", "Niet relevant."],
         uitlegPad: {

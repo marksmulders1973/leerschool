@@ -228,7 +228,7 @@ const steps = [
       },
       {
         q: "Th-klank in 'think' is:",
-        options: ["Stemloos (tongtip tussen tanden)","Stemhebbend","Niet bestaand","Gelijk aan 's'"],
+        options: ["Stemloos","Stemhebbend","Niet bestaand","Gelijk aan 's'"],
         answer: 0,
         wrongHints: [null, "Niet — dat is 'this'.", "Bestaat wel.", "Anders dan s."],
         uitlegPad: {
@@ -277,12 +277,12 @@ const steps = [
       },
       {
         q: "**'Yours sincerely'** komt na:",
-        options: ["Dear Mr Smith / Dear Ms Johnson","Dear Sir or Madam","Best regards","Hi"],
+        options: ["Dear Mr Smith","Dear Sir or Madam","Best regards","Hi"],
         answer: 0,
         wrongHints: [null, "Niet — bij faithfully.", "Niet — afsluiting zelf.", "Niet — informeel."],
         uitlegPad: {
           stappen: [{ titel: "Sincerely + specifieke naam", tekst: "**'Yours sincerely'** = afsluiting wanneer je naam ontvanger weet ('Dear Mr Smith'). **'Yours faithfully'** = bij onbekende naam ('Dear Sir or Madam'). Memo: 'Sir' en 'Sincerely' gaan nooit samen (nooit twee s'en)." }],
-          niveaus: { basis: "Naam bekend.", simpeler: "Sincerely = naam", nogSimpeler: "A." },
+          niveaus: { basis: "Naam bekend.", simpeler: "Sincerely = naam", nogSimpeler: "Naam bekend = sincerely." },
         },
       },
       {

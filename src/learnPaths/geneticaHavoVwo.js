@@ -29,7 +29,7 @@ const steps = [
   {
     title: "DNA + genen + chromosomen — de basis",
     explanation:
-      "Erfelijkheid begint bij **DNA** (deoxyribonucleïnezuur), het molecuul dat alle erfelijke info bevat.\n\n**Structuur DNA**:\n• Dubbele helix — twee strengen om elkaar gedraaid (Watson + Crick 1953).\n• Opgebouwd uit **nucleotiden**: suiker (deoxyribose) + fosfaatgroep + **base**.\n• 4 basen: **A**denine, **T**hymine, **G**uanine, **C**ytosine.\n• Basenparing: **A-T** en **G-C** (regel van Chargaff) — A altijd tegenover T, G altijd tegenover C.\n• Volgorde basen = **genetische code**.\n\n**Gen vs chromosoom**:\n• **Gen** = stukje DNA dat codeert voor 1 eigenschap of eiwit. Bv. gen voor oogkleur.\n• **Chromosoom** = lang DNA-molecuul + eiwitten (histonen). 1 chromosoom = duizenden genen.\n• Mens heeft **46 chromosomen** = 23 paren = **diploïd** (2n).\n• Geslachtscellen (sperma + eicel) hebben 23 chromosomen = **haploïd** (n).\n\n**Allelen**:\n• Een **allel** = variant van een gen. Bv. allel voor blauwe ogen vs allel voor bruine ogen.\n• Mens heeft van elk gen **2 allelen** — 1 van vader, 1 van moeder.\n• **Homozygoot**: twee dezelfde allelen (BB of bb).\n• **Heterozygoot**: twee verschillende allelen (Bb).\n\n**Geslachtschromosomen**:\n• Vrouw: **XX** (paar 23).\n• Man: **XY**.\n• Y-chromosoom heeft veel minder genen dan X — vandaar geslachtsgebonden overerving (stap C).\n\n**Genotype vs fenotype**:\n• **Genotype** = welke allelen (Bb, BB, bb).\n• **Fenotype** = hoe het eruitziet (bruine ogen, blauwe ogen).\n• Welk fenotype bij een genotype hoort, hangt af van dominantie.",
+      "Erfelijkheid begint bij **DNA** (deoxyribonucleïnezuur), het molecuul dat alle erfelijke info bevat.\n\n**Structuur DNA**:\n• Dubbele helix — twee strengen om elkaar gedraaid (Watson + Crick 1953).\n• Opgebouwd uit **nucleotiden**: suiker (deoxyribose) + fosfaatgroep + **base**.\n• 4 basen: **A**denine, **T**hymine, **G**uanine, **C**ytosine.\n• Basenparing: **A-T** en **G-C** (regel van Chargaff) — A altijd tegenover T, G altijd tegenover C.\n• Volgorde basen = **genetische code**.\n\n**Gen vs chromosoom**:\n• **Gen** = stukje DNA dat codeert voor 1 eigenschap of eiwit. Bv. gen voor oogkleur.\n• **Chromosoom** = lang DNA-molecuul + eiwitten (histonen). 1 chromosoom = duizenden genen.\n• Mens heeft **46 chromosomen** = 23 paren = **diploïd** (2n).\n• Geslachtscellen (sperma + eicel) hebben 23 chromosomen = **haploïd** (n).\n\n**Allelen**:\n• Een **allel** = variant van een gen. Bv. allel voor blauwe ogen vs allel voor bruine ogen.\n• Mens heeft van elk gen **2 allelen** — 1 van vader, 1 van moeder.\n• **Homozygoot**: twee dezelfde allelen (BB of bb).\n• **Heterozygoot**: twee verschillende allelen (Bb).\n\n**Geslachtschromosomen**:\n• Vrouw: **XX** (paar 23).\n• Man: **XY**.\n• Y-chromosoom heeft veel minder genen dan X — vandaar geslachtsgebonden overerving (stap 3).\n\n**Genotype vs fenotype**:\n• **Genotype** = welke allelen (Bb, BB, bb).\n• **Fenotype** = hoe het eruitziet (bruine ogen, blauwe ogen).\n• Welk fenotype bij een genotype hoort, hangt af van dominantie.",
     checks: [
       {
         q: "Welke **basenparing** klopt in DNA?",
@@ -110,7 +110,7 @@ const steps = [
       },
       {
         q: "Kruising **BB × bb** levert in F1:",
-        options: ["100% Bb (heterozygoot)","75% BB, 25% bb","50% BB, 50% bb","Mendels uitzondering"],
+        options: ["100% Bb","75% BB, 25% bb","50% BB, 50% bb","Mendels uitzondering"],
         answer: 0,
         wrongHints: [null, "Niet — geen splitsing in F1.", "Niet — geen homozygoten in F1.", "Niet — Mendels uniformiteitswet voorspelt dit."],
         uitlegPad: {
@@ -121,7 +121,7 @@ const steps = [
       },
       {
         q: "Bij **onvolledige dominantie** rood (RR) × wit (rr) → F1:",
-        options: ["Roze (Rr)","Helft rood, helft wit","Alleen rood","Alleen wit"],
+        options: ["Roze","Helft rood, helft wit","Alleen rood","Alleen wit"],
         answer: 0,
         wrongHints: [null, "Niet — in F1 krijgen alle nakomelingen Rr.", "Niet — dat zou volledige dominantie zijn.", "Niet."],
         uitlegPad: {
@@ -133,7 +133,7 @@ const steps = [
       },
       {
         q: "Welk **bloedgroep**-systeem toont **co-dominantie**?",
-        options: ["AB (A + B beide actief)","O","A homozygoot","Negatief rhesus"],
+        options: ["AB","O","A homozygoot","Negatief rhesus"],
         answer: 0,
         wrongHints: [null, "Niet — O is dubbel-recessief.", "Niet — homozygoot is geen co-dominantie.", "Niet — apart systeem (Rh)."],
         uitlegPad: {
@@ -225,11 +225,11 @@ const steps = [
   {
     title: "Stamboomanalyse + mutaties + genetische ziekten",
     explanation:
-      "**Stamboom** (pedigree) = familie-tekening die toont wie welke eigenschap heeft. CSE-favoriet — bijna elk biologie-eindexamen heeft een stamboom-vraag.\n\n**Stamboom-symbolen**:\n• ○ = vrouw (cirkel)\n• □ = man (vierkant)\n• Ingevuld (●/■) = persoon met aandoening.\n• Halfvol = draagster (vooral bij geslachtsgebonden).\n• Lijn tussen ○ en □ = paar.\n• Verticale lijn naar onder = kinderen.\n\n**Analyseren**:\n1. Is aandoening **dominant of recessief**?\n   - Dominant: minstens 1 ouder ALTIJD aangedaan.\n   - Recessief: aangedane kind kan 2 gezond-lijkende dragers-ouders hebben.\n2. Is aandoening **autosomaal of geslachtsgebonden**?\n   - Autosomaal: jongens en meisjes ongeveer even vaak.\n   - X-gebonden recessief: vooral jongens. Moeder is draagster.\n   - X-gebonden dominant: meisjes 2× vaker (2 X-chromosomen).\n3. Bepaal **genotypes** waar mogelijk.\n\n**Voorbeeld**:\n• Twee gezonde ouders krijgen een aangedaan kind → recessief.\n• Vader aangedaan + moeder gezond + alle dochters draagster + alle zonen gezond → X-gebonden recessief.\n\n**Mutaties**:\nVeranderingen in DNA-volgorde. Bronnen: kopieer-fouten bij celdeling, straling, chemische stoffen, virussen.\n\n**Soorten mutaties**:\n• **Puntmutatie**: 1 base verandert. Kan stil zijn (zelfde aminozuur), missense (ander aminozuur) of nonsense (stopcodon).\n• **Frameshift**: invoeging of deletie van basen → hele leeskader verschuift → meestal ernstig.\n• **Chromosoom-mutaties**: hele stukken verloren, gedupliceerd, omgekeerd.\n• **Aneuploïdie**: verkeerd aantal chromosomen. Bv. **trisomie 21 = Down-syndroom** (3 ipv 2 van chromosoom 21).\n\n**Wanneer mutatie ernstig**:\n• In coderend DNA (gen) → eiwit-effect.\n• In niet-coderend DNA → meestal geen effect.\n• In geslachtscel → doorgegeven aan nageslacht.\n• In lichaamscel → alleen die persoon.\n\n**Bekende genetische ziekten**:\n• **Cystic fibrosis (taaislijmziekte)**: autosomaal recessief, 1 op 25 NL'ers is drager.\n• **Sikkelcelanemie**: autosomaal recessief, vooral Afrikaanse afkomst.\n• **Huntington**: autosomaal **dominant**, ziekte op latere leeftijd.\n• **Down-syndroom**: trisomie 21, niet erfelijk meestal.\n• **Hemofilie / Duchenne**: X-gebonden recessief (zie stap C).",
+      "**Stamboom** (pedigree) = familie-tekening die toont wie welke eigenschap heeft. CSE-favoriet — bijna elk biologie-eindexamen heeft een stamboom-vraag.\n\n**Stamboom-symbolen**:\n• ○ = vrouw (cirkel)\n• □ = man (vierkant)\n• Ingevuld (●/■) = persoon met aandoening.\n• Halfvol = draagster (vooral bij geslachtsgebonden).\n• Lijn tussen ○ en □ = paar.\n• Verticale lijn naar onder = kinderen.\n\n**Analyseren**:\n1. Is aandoening **dominant of recessief**?\n   - Dominant: minstens 1 ouder ALTIJD aangedaan.\n   - Recessief: aangedane kind kan 2 gezond-lijkende dragers-ouders hebben.\n2. Is aandoening **autosomaal of geslachtsgebonden**?\n   - Autosomaal: jongens en meisjes ongeveer even vaak.\n   - X-gebonden recessief: vooral jongens. Moeder is draagster.\n   - X-gebonden dominant: meisjes 2× vaker (2 X-chromosomen).\n3. Bepaal **genotypes** waar mogelijk.\n\n**Voorbeeld**:\n• Twee gezonde ouders krijgen een aangedaan kind → recessief.\n• Vader aangedaan + moeder gezond + alle dochters draagster + alle zonen gezond → X-gebonden recessief.\n\n**Mutaties**:\nVeranderingen in DNA-volgorde. Bronnen: kopieer-fouten bij celdeling, straling, chemische stoffen, virussen.\n\n**Soorten mutaties**:\n• **Puntmutatie**: 1 base verandert. Kan stil zijn (zelfde aminozuur), missense (ander aminozuur) of nonsense (stopcodon).\n• **Frameshift**: invoeging of deletie van basen → hele leeskader verschuift → meestal ernstig.\n• **Chromosoom-mutaties**: hele stukken verloren, gedupliceerd, omgekeerd.\n• **Aneuploïdie**: verkeerd aantal chromosomen. Bv. **trisomie 21 = Down-syndroom** (3 ipv 2 van chromosoom 21).\n\n**Wanneer mutatie ernstig**:\n• In coderend DNA (gen) → eiwit-effect.\n• In niet-coderend DNA → meestal geen effect.\n• In geslachtscel → doorgegeven aan nageslacht.\n• In lichaamscel → alleen die persoon.\n\n**Bekende genetische ziekten**:\n• **Cystic fibrosis (taaislijmziekte)**: autosomaal recessief, 1 op 25 NL'ers is drager.\n• **Sikkelcelanemie**: autosomaal recessief, vooral Afrikaanse afkomst.\n• **Huntington**: autosomaal **dominant**, ziekte op latere leeftijd.\n• **Down-syndroom**: trisomie 21, niet erfelijk meestal.\n• **Hemofilie / Duchenne**: X-gebonden recessief (zie stap 3).",
     checks: [
       {
         q: "In een stamboom: **2 gezonde ouders** krijgen een **aangedaan kind**. Wat zegt dit?",
-        options: ["Aandoening is recessief (verborgen bij de ouders)","Dominant","Geslachtsgebonden","Geen erfelijke aandoening"],
+        options: ["Recessief","Dominant","Geslachtsgebonden","Geen erfelijke aandoening"],
         answer: 0,
         wrongHints: [null, "Niet — dominant zou minstens 1 ouder aangedaan zijn.", "Niet noodzakelijk — kan autosomaal recessief zijn.", "Wel — patroon past bij erfelijkheid."],
         uitlegPad: {
@@ -304,7 +304,7 @@ const steps = [
       },
       {
         q: "Een vrouw met bloedgroep **A** krijgt kind met bloedgroep **O**. Welk genotype heeft de moeder?",
-        options: ["AO (heterozygoot)","AA","BB","OO"],
+        options: ["AO","AA","BB","OO"],
         answer: 0,
         wrongHints: [null, "Niet — een AA-moeder kan geen O-allel doorgeven.", "Niet — geen B in moeder.", "Niet — dan was moeder ook O, niet A."],
         uitlegPad: {

@@ -104,7 +104,7 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
       {
         q: "Wat is een conclusie bij het lezen?",
         options: [
-          "Iets dat niet letterlijk in de tekst staat, maar dat je afleidt uit aanwijzingen",
+          "Iets wat je zelf afleidt uit aanwijzingen",
           "De laatste zin van een tekst",
           "De mening van de schrijver",
           "Een opsomming van alle feiten uit de tekst",
@@ -383,7 +383,7 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
       {
         q: "Noor pakt het kiezelsteentje van de vensterbank en stopt het 'diep' in haar jaszak. Waarom benadrukt de schrijver het woord 'diep'?",
         options: [
-          "Om te laten zien dat Noor het steentje goed wil bewaren en niet wil verliezen",
+          "Om te laten zien dat het steentje kostbaar is voor Noor",
           "Omdat haar jaszak bijzonder diep is",
           "Om duidelijk te maken dat het steentje zwaar is",
           "Omdat papa gezegd had dat ze de vensterbank leeg moest maken",
@@ -542,7 +542,7 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
       {
         q: "Wanneer is een conclusie ONDERBOUWD?",
         options: [
-          "Als je aanwijzingen uit de tekst kunt aanwijzen die de conclusie steunen",
+          "Als je in de tekst bewijs kunt aanwijzen",
           "Als de conclusie logisch klinkt",
           "Als de meeste mensen het ermee eens zouden zijn",
           "Als de conclusie kort en duidelijk is",
@@ -582,7 +582,7 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
       {
         q: "Mila kijkt elke pauze naar de voetballers op het plein. Thuis oefent ze op straat, en boven haar bed hangen posters van voetbalsters. Welke conclusie kun je trekken?",
         options: [
-          "Mila houdt van voetbal en wil er misschien graag bij horen",
+          "Mila houdt erg van voetbal",
           "Mila is de beste voetbalster van de school",
           "Mila's ouders zijn allebei voetbaltrainer",
           "Mila vindt de pauzes op school saai",
@@ -820,7 +820,7 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
       {
         q: "De tellers vergeleken twee wijken 'met precies evenveel huizen'. Waarom is dat detail belangrijk?",
         options: [
-          "Zo weet je dat het verschil in mussen niet aan het aantal huizen ligt",
+          "Zo weet je dat het niet aan de grootte ligt",
           "Zo weet je dat beide wijken even oud zijn",
           "Zo weet je hoeveel mussen er per huis wonen",
           "Zo weet je dat de tellers overal zijn geweest",

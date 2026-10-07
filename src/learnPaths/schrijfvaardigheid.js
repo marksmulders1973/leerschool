@@ -165,7 +165,7 @@ const steps = [
       {
         q: "*Welk element ontbreekt in deze inleiding?*  \"Sociale media zijn niet meer weg te denken uit het leven van jongeren. In dit artikel bespreek ik eerst de risico's en daarna de voordelen.\"",
         options: [
-          "Aanleiding (waarom schrijf je hier nu over?)",
+          "Aanleiding",
           "Onderwerp",
           "Opbouw",
           "Slot",
@@ -235,14 +235,14 @@ const steps = [
         options: [
           "Er wordt een nieuw argument geïntroduceerd dat in het middenstuk hoort.",
           "Het slot is te kort.",
-          "Er staat geen advies in.",
+          "Er staat geen conclusie in.",
           "De toon is te informeel.",
         ],
         answer: 0,
         wrongHints: [
           null,
           "De lengte is acceptabel. De fout zit niet in lengte maar in *wat* er staat.",
-          "Misschien, maar er is een grotere fout. Wat gebeurt er in de tweede zin?",
+          "Er staat wel een conclusie (\"Concluderend: ...\"). Wat gebeurt er in de tweede zin?",
           "De toon is gewoon zakelijk. Zoek naar wat er in een slot *niet* hoort.",
         ],
       },
@@ -515,7 +515,7 @@ const steps = [
       {
         q: "*Welke alinea-volgorde is het sterkst voor een betoog vóór gratis kinderopvang?*",
         options: [
-          "Argument: gelijke kansen → argument: economische winst → argument: minder armoede onder kinderen (sterkste laatst)",
+          "Redelijk sterk eerst, ondersteunend in het midden, sterkste als laatste",
           "Argument: sterkste eerst, dan zwakste",
           "Tegenargumenten eerst, eigen argumenten daarna",
           "Willekeurig — volgorde maakt geen verschil",
@@ -565,7 +565,7 @@ const steps = [
       { q: "Een **beschouwing** geeft?", options: ["Verschillende kanten zonder definitieve keuze","Eén mening","Alleen feiten","Alleen voorbeelden"], answer: 0, wrongHints: [null, "Dat is betoog.", "Dat is uiteenzetting.", "Niet structuur."] },
       { q: "Welk **verbindingswoord** geeft een tegenstelling aan?", options: ["echter","want","bijvoorbeeld","ten eerste"], answer: 0, wrongHints: [null, "Reden, geen tegenstelling.", "Voorbeeld.", "Volgorde."] },
       { q: "Wat moet **in de inleiding** van een tekst?", options: ["Onderwerp + aanleiding + opbouw","De conclusie","Alle voorbeelden","De bronnen"], answer: 0, wrongHints: [null, "Dat is slot.", "Voorbeelden in kern.", "Bronnen achteraan."] },
-      { q: "Wat is een **topic sentence**?", options: ["De kernzin van een alinea","De titel","De laatste zin","De inleiding"], answer: 0, wrongHints: [null, "Niet specifiek genoeg.", "Niet altijd.", "Te groot."] },
+      { q: "Wat is een **topic sentence**?", options: ["De kernzin van een alinea","De titel","De laatste zin","De inleiding"], answer: 0, wrongHints: [null, "Niet specifiek genoeg.", "De kernzin staat meestal juist vooraan in de alinea.", "Te groot."] },
       { q: "Welke stap doe je bij **reviseren** als laatste?", options: ["Spelling + interpunctie checken","De argumenten bedenken","Structuur veranderen","Tekst schrijven"], answer: 0, wrongHints: [null, "Dat is begin.", "Eerder.", "Eerder."] },
     ],
   },

@@ -70,7 +70,7 @@ const steps = [
         "They have promised to donate the money they earn with their products to charity.",
       ],
       answer: 0,
-      wrongHints: [null, "'Reborn dolls comforted infertile women' wordt door MEVR. Ingham gezegd als rechtvaardiging — niet als design-doel. Lees zin met 'twisted' opnieuw.", "Tekst zegt niets over nieuwe volgers — wel over 1.2 miljoen bestaande. Geen 'gained' na geboorte.", "Tekst zegt 'profit would go to Jace as an adult' — naar het KIND, niet charity."],
+      wrongHints: [null, "'Reborn dolls comforted infertile women' wordt door MEVR. Ingham gezegd als rechtvaardiging — niet als design-doel. Lees zin met 'twisted' opnieuw.", "Tekst zegt niets over nieuwe volgers — wel over 1,2 miljoen bestaande. Geen 'gained' na geboorte.", "Tekst zegt 'profit would go to Jace as an adult' — naar het KIND, niet charity."],
       explanation: "**'The announcement drew hostile comments'** + voorbeelden ('Black Mirror', 'imagine finding out your parents sold dolls of you'). De doll-verkoop ontvangt negatieve reacties.",
       examenBron: BRON_LABEL(1),
       bronLink: BRON_LINK,
@@ -201,7 +201,7 @@ const steps = [
         { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen strategie", niveau: "po-2F", why: "specifieke reden in alinea 1 vinden" },
       ],
       uitlegPad: compact(
-        "70 dB = norm, 88 dB = werkelijk gemeten = te veel = boete = dicht. Drie andere opties (geen vergunning / trouble / ruimte voor flats) komen NIET voor in tekst.",
+        "70 dB = norm, 88 dB = werkelijk gemeten = te veel = boete = dicht. De andere opties (geen vergunning / trouble / ruimte voor flats) zijn in alinea 1 niet de reden: de flats worden wel genoemd, maar de speelplaats werd daarvoor al eerder verkleind.",
         { basis: "88 > 70 dB = te luid = dicht.", simpeler: "Decibels = geluid-meting. 88 boven de toegestane 70 = lawaai. Speelplaats dicht.", nogSimpeler: "Lawaai" },
         [{ woord: "exceed", uitleg: "Overschrijden, boven gaan." }, { woord: "council", uitleg: "Gemeenteraad." }],
       ),

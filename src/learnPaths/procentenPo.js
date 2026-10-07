@@ -80,7 +80,7 @@ const steps = [
   // STAP 1: Wat is %?
   {
     title: "% betekent 'per honderd'",
-    explanation: "Het teken **%** spreek je uit als 'procent'. Het betekent altijd hetzelfde: **per 100**.\n\nDus:\n• **30%** = 30 per 100\n• **50%** = 50 per 100 = de helft\n• **100%** = 100 per 100 = alles\n• **10%** = 10 per 100 = een tiende\n\n**Plaatje om te onthouden**:\nStel je hebt **100 snoepjes**. Je geeft er 30 weg. Dan heb je **30%** weggegeven.\n\n**Waarom % handig is**:\nMet procenten kun je **vergelijken** tussen dingen die verschillend groot zijn. Stel: \n• Klas A heeft 5 mensen met dieren — totaal 25 leerlingen.\n• Klas B heeft 4 mensen met dieren — totaal 20 leerlingen.\n\nWelke klas heeft *naar verhouding* meer dieren-bezitters? Met procenten is dat makkelijk: beide hebben **20%**. Dus gelijk!\n\n**Procent in het echt**:\n• 50% korting in de winkel\n• 80% van de klas slaagde\n• 25% kans op regen\n• 10% van de wereldbevolking spreekt Engels als moedertaal",
+    explanation: "Het teken **%** spreek je uit als 'procent'. Het betekent altijd hetzelfde: **per 100**.\n\nDus:\n• **30%** = 30 per 100\n• **50%** = 50 per 100 = de helft\n• **100%** = 100 per 100 = alles\n• **10%** = 10 per 100 = een tiende\n\n**Plaatje om te onthouden**:\nStel je hebt **100 snoepjes**. Je geeft er 30 weg. Dan heb je **30%** weggegeven.\n\n**Waarom % handig is**:\nMet procenten kun je **vergelijken** tussen dingen die verschillend groot zijn. Stel: \n• Klas A heeft 5 mensen met dieren — totaal 25 leerlingen.\n• Klas B heeft 4 mensen met dieren — totaal 20 leerlingen.\n\nWelke klas heeft *naar verhouding* meer dieren-bezitters? Met procenten is dat makkelijk: beide hebben **20%**. Dus gelijk!\n\n**Procent in het echt**:\n• 50% korting in de winkel\n• 80% van de klas slaagde\n• 25% kans op regen\n• ongeveer 5% van de wereldbevolking spreekt Engels als moedertaal",
     svg: gridSvg(30, "30 van de 100 vakjes"),
     checks: [
       {
@@ -146,7 +146,7 @@ const steps = [
         q: "Stel: 100 leerlingen op school — **45** zijn meisjes. Welk percentage is dat?",
         options: ["45%","50%","55%","4,5%"],
         answer: 0,
-        wrongHints: [null,"Niet automatisch de helft — tel rustig.","Te veel — als 45 meisjes en 55 jongens, hoeveel meisjes is dat?","Dat is tien keer te weinig: 45 van de 100 is 45%."],
+        wrongHints: [null,"Niet automatisch de helft — tel rustig.","Te veel — als 45 meisjes en 55 jongens, hoeveel meisjes is dat?","Dat is tien keer te weinig — hoeveel per 100 zijn het?"],
       },
     ],
   },
@@ -195,7 +195,7 @@ const steps = [
         q: "**60%** als kommagetal?",
         options: ["0,6","0,06","6","60"],
         answer: 0,
-        wrongHints: [null,"Komma 1 plek te ver — je had 2 plekken moeten verschuiven, niet 3.","Geen procent meer — eerst delen door 100.","Geen kommagetal — eerst delen door 100."],
+        wrongHints: [null,"Komma 1 plek te ver — je had 2 plekken moeten verschuiven, niet 3.","Je deelde door 10 — procent betekent per 100.","Geen kommagetal — eerst delen door 100."],
       },
     ],
   },
@@ -249,7 +249,7 @@ const steps = [
         q: "Op een toets van **40 vragen** maakt Lisa er **75% goed**. Hoeveel zijn dat?",
         options: ["30","25","35","20"],
         answer: 0,
-        wrongHints: [null,"Te weinig — 75% is meer dan de helft.","Te veel — heb je per ongeluk goed PLUS fout opgeteld?","Te weinig — 75% is bijna alles, 50% is 20."],
+        wrongHints: [null,"Te weinig — 75% is meer dan de helft.","Te veel — 75% is driekwart. Hoeveel is een kwart van 40?","Te weinig — 75% is bijna alles, 50% is 20."],
       },
     ],
   },
@@ -263,7 +263,7 @@ const steps = [
         q: "Een schoen normaal **€ 80**, met **25% korting**. Hoeveel **betaal je**?",
         options: ["€ 60","€ 20","€ 40","€ 75"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dat is wat je BESPAART, niet wat je betaalt. Trek af van €80.", "Te weinig — 25% van €80 = €20, dus je betaalt €80 − €20.", "Te veel — heb je überhaupt korting gepakt?"],
+        wrongHints: [null, "Te weinig — dat is wat je BESPAART, niet wat je betaalt. Trek af van €80.", "Te weinig — €40 is de halve prijs; bij 25% korting gaat er minder af.", "Te veel — heb je überhaupt korting gepakt?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is de vraag?", tekst: "**Hoeveel BETAAL je?** Niet 'hoeveel bespaar je'. Lees rustig — de toets test of je dit verschil herkent." },
@@ -373,7 +373,7 @@ const steps = [
         q: "Een laptop kost **€ 800**. Anna betaalt **€ 720**. Welk **kortings-percentage**?",
         options: ["10%","20%","80%","8%"],
         answer: 0,
-        wrongHints: [null,"Te veel — €800 − €720 = €80; vergelijk dat met €800.","Klopt niet — dat verwart het betaalde bedrag met de korting.","Klopt niet — vergelijk €80 met €800, niet andersom."],
+        wrongHints: [null,"Te veel — hoeveel euro korting is het precies? Vergelijk dat met €800.","Klopt niet — dat verwart het betaalde bedrag met de korting.","Klopt niet — vergelijk het kortingsbedrag met de oude prijs van €800."],
       },
       {
         q: "In een doos zitten **40 chocoladekoekjes**. **30% van de koekjes is van melkchocolade**. Hoeveel zijn dat?",

@@ -18,9 +18,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **algoritme**?",
-        options: ["Stappenplan om iets op te lossen", "Computer", "Brood", "Niet bestaand"],
+        options: ["Stappenplan om iets op te lossen", "Computer", "Brood", "Een soort rekenmachine"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Brood is geen stappenplan — het recept ervoor wel.", "Wel."],
+        wrongHints: [null, "Een computer vóért algoritmes uit, maar is zelf een apparaat.", "Brood is geen stappenplan — het recept ervoor wel.", "Een rekenmachine is een apparaat — is dat een rijtje stappen?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een algoritme?", tekst: "Een algoritme is een **stappenplan**: een rijtje stappen om een probleem op te lossen of een taak te doen. Klinkt fancy maar je gebruikt het ELKE DAG." },
@@ -52,9 +52,9 @@ const steps = [
       },
       {
         q: "Wie was **Edsger Dijkstra**?",
-        options: ["Beroemde NL-informaticus (Turing-award 1972)", "Voetballer", "F1", "Vondel"],
+        options: ["Nederlandse informaticus", "Voetballer", "Formule 1-coureur", "Dichter"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Schrijver."],
+        wrongHints: [null, "Werd hij beroemd op het voetbalveld?", "Reed hij in racewagens?", "Schreef hij gedichten of computerprogramma's?"],
       },
       {
         q: "Wat is **PageRank**?",
@@ -71,9 +71,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **variabele** in code?",
-        options: ["Opslag-plaats met naam + waarde", "Spel", "Boekenrij", "Niet bestaand"],
+        options: ["Opslagplaats met een naam en een waarde", "Een herhaling van stappen", "Een foutmelding", "Een soort spelletje"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet primair.", "Wel."],
+        wrongHints: [null, "Dat is een loop (lus).", "Een fout in code heet een bug.", "Gaat het om iets wat de computer onthoudt?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een variabele?", tekst: "Een variabele is een **opslag-plaats** in de computer met een NAAM en een WAARDE. Stel je voor: een doosje met een label, en iets erin." },
@@ -99,9 +99,9 @@ const steps = [
       },
       {
         q: "Wat doet **if-statement**?",
-        options: ["Iets doen ALS voorwaarde klopt", "Sneller", "Herhalen", "Niet"],
+        options: ["Iets doen ALS voorwaarde klopt", "De computer sneller maken", "Iets steeds herhalen", "Een waarde onthouden"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Loop.", "Wel iets."],
+        wrongHints: [null, "Gaat 'if' (als) over snelheid of over een keuze?", "Herhalen doet een loop.", "Onthouden doet een variabele."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een if-statement?", tekst: "**'If'** is Engels voor 'als'. Een **if-statement** = stukje code dat zegt: '**ALS** dit klopt, doe dan dat.' Het laat de computer **beslissingen** nemen." },
@@ -128,9 +128,9 @@ const steps = [
       },
       {
         q: "Wat doet een **loop**?",
-        options: ["Iets herhaaldelijk doen", "Sneller", "Controle", "Reken"],
+        options: ["Iets herhaaldelijk doen", "De computer sneller maken", "Een keuze maken (als-dan)", "Een waarde onthouden"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Conditie.", "Niet primair."],
+        wrongHints: [null, "Gaat een lus over snelheid?", "Kiezen doet een if-statement.", "Onthouden doet een variabele."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een loop?", tekst: "Een **loop** (lus) is een stuk code dat steeds OPNIEUW wordt uitgevoerd, totdat een voorwaarde klopt om te stoppen. Zo hoef je dezelfde regels niet steeds opnieuw te schrijven." },
@@ -157,7 +157,7 @@ const steps = [
       },
       {
         q: "Wie was **Ada Lovelace**?",
-        options: ["Eerste programmeur (jaren 1840, mathematicus)", "Eerste president", "Schilder", "Astronaut"],
+        options: ["De eerste programmeur", "Eerste president", "Schilder", "Astronaut"],
         answer: 0,
         wrongHints: [null, "Ada werkte niet in de politiek.", "Ada maakte geen kunst.", "Ada leefde in 1815-1852 — lang vóór de ruimtevaart."],
         uitlegPad: {
@@ -192,21 +192,21 @@ const steps = [
     checks: [
       {
         q: "Welke is **drag-and-drop** programmeer-taal voor kinderen?",
-        options: ["Scratch (MIT)", "Python", "C++", "Java"],
+        options: ["Scratch", "Python", "C++", "Java"],
         answer: 0,
-        wrongHints: [null, "Tekstgebaseerd.", "Moeilijk.", "Tekstgebaseerd."],
+        wrongHints: [null, "Tekstgebaseerd.", "Tekstgebaseerd.", "Tekstgebaseerd."],
       },
       {
         q: "Welke taal voor **AI**?",
-        options: ["Python (TensorFlow/PyTorch)", "HTML", "Scratch", "Excel"],
+        options: ["Python", "HTML", "Scratch", "Excel"],
         answer: 0,
         wrongHints: [null, "Niet AI.", "Niet voor AI.", "Wel data, niet AI-bouw."],
       },
       {
         q: "Wat is **HTML**?",
-        options: ["Structuur van website", "Programmeer-taal voor algoritmen", "Reken", "Game"],
+        options: ["Structuur van website", "Programmeer-taal voor algoritmen", "Een rekenprogramma", "Een spelletje"],
         answer: 0,
-        wrongHints: [null, "Niet echt programmeren.", "Niet.", "Niet."],
+        wrongHints: [null, "Niet echt programmeren.", "Waar zie je codes als <h1> en <p>?", "Waar zie je codes als <h1> en <p>?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is HTML?", tekst: "**HTML** = **HyperText Markup Language**. Het is de **structuur-taal** voor websites: welke tekst is een kop, welke een paragraaf, waar staan plaatjes, links. Elke website ter wereld gebruikt het." },
@@ -233,9 +233,9 @@ const steps = [
       },
       {
         q: "Wie schreef **Linux**?",
-        options: ["Linus Torvalds (1991, 21 jr)", "Bill Gates", "Steve Jobs", "Berners-Lee"],
+        options: ["Linus Torvalds", "Bill Gates", "Steve Jobs", "Tim Berners-Lee"],
         answer: 0,
-        wrongHints: [null, "Microsoft.", "Apple.", "WWW."],
+        wrongHints: [null, "Hij richtte Microsoft op.", "Hij richtte Apple op.", "Hij bedacht het wereldwijde web."],
       },
     ],
   },
@@ -243,12 +243,12 @@ const steps = [
     title: "Eind-toets — algoritme mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
-      { q: "Wat is een **algoritme**?", options: ["Stappenplan", "Spel", "Computer", "Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Niet primair.", "Wel."] },
+      { q: "Wat is een **algoritme**?", options: ["Stappenplan", "Spel", "Computer", "Een soort rekenmachine"], answer: 0, wrongHints: [null, "Een spel kán algoritmes gebruiken, maar is zelf geen stappenplan.", "Een computer vóért algoritmes uit.", "Een rekenmachine is een apparaat, geen rijtje stappen."] },
       { q: "Welke is **drag-and-drop** taal?", options: ["Scratch", "Python", "C++", "JavaScript"], answer: 0, wrongHints: [null, "Schrijf-taal voor data + AI.", "Schrijf-taal voor games + apps.", "Schrijf-taal voor websites."] },
-      { q: "Wat doet **loop**?", options: ["Iets herhalen", "Conditie", "Variabele", "Functie"], answer: 0, wrongHints: [null, "Niet primair.", "Niet.", "Niet primair."] },
-      { q: "Wie was **eerste programmeur**?", options: ["Ada Lovelace (jaren 1840)", "Gates", "Jobs", "Berners-Lee"], answer: 0, wrongHints: [null, "Veel later.", "Niet primair.", "Niet primair."] },
-      { q: "**Linux** door?", options: ["Linus Torvalds (1991)", "Microsoft", "Apple", "Google"], answer: 0, wrongHints: [null, "Denk aan één persoon, niet een groot bedrijf.", "Nee — geen bedrijf.", "Google gebruikt Linux wel (in Android), maar bedacht het niet."] },
-      { q: "**NL-informaticus** die kortste-pad-algoritme bedacht?", options: ["Edsger Dijkstra", "Cruijff", "Slat", "Tim Berners-Lee"], answer: 0, wrongHints: [null, "Voetbal.", "Niet primair.", "Niet NL."] },
+      { q: "Wat doet **loop**?", options: ["Iets herhalen", "Een keuze maken", "Een waarde onthouden", "Het programma afsluiten"], answer: 0, wrongHints: [null, "Kiezen doet een if-statement (als-dan).", "Onthouden doet een variabele.", "Denk aan het woord 'lus': rondgaan of stoppen?"] },
+      { q: "Wie was **eerste programmeur**?", options: ["Ada Lovelace", "Bill Gates", "Steve Jobs", "Tim Berners-Lee"], answer: 0, wrongHints: [null, "Bill Gates leefde veel later (20e eeuw).", "Steve Jobs leefde ook veel later.", "Tim Berners-Lee bedacht rond 1990 het web — was hij de allereerste?"] },
+      { q: "**Linux** door?", options: ["Linus Torvalds", "Microsoft", "Apple", "Google"], answer: 0, wrongHints: [null, "Denk aan één persoon, niet een groot bedrijf.", "Nee — geen bedrijf.", "Google gebruikt Linux wel (in Android), maar bedacht het niet."] },
+      { q: "**NL-informaticus** die kortste-pad-algoritme bedacht?", options: ["Edsger Dijkstra", "Johan Cruijff", "Boyan Slat", "Tim Berners-Lee"], answer: 0, wrongHints: [null, "Voetballer.", "Hij ruimt plastic op uit de oceaan.", "Hij is Engels en bedacht het web."] },
       {
         q: "Een **if-else**-instructie betekent?",
         options: ["ALS X dan dit, ANDERS dat", "Herhaal iets 10 keer", "Wacht 5 seconden", "Maak een variabele"],
@@ -258,7 +258,7 @@ const steps = [
           stappen: [
             { titel: "Wat is if-else?", tekst: "**If-else** (Engels voor 'als-anders') is een **beslissings-instructie** in elke programmeertaal. Computer checkt een **conditie** en kiest één van twee paden:\n\n```\nif (regen):\n    pak paraplu\nelse:\n    laat paraplu thuis\n```\n\nMens-vertaling: 'ALS het regent → paraplu mee. ANDERS → niet.'" },
             { titel: "Voorbeelden in dagelijks leven", tekst: "Computers doen if-else miljoenen keren per dag:\n• **Login**: ALS wachtwoord klopt → laat binnen, ANDERS → toon fout\n• **Spel**: ALS speler nog 0 levens → game over, ANDERS → ga door\n• **Webshop**: ALS in voorraad → toon 'koop', ANDERS → 'wachtlijst'\n• **Self-driving car**: ALS rood licht → stop, ANDERS → rij door" },
-            { titel: "Toets-tip: 3 belangrijke programmeer-bouwstenen", tekst: "Onthoud deze 3 voor de Doorstroomtoets:\n1. **Sequentie** — stappen in volgorde uitvoeren\n2. **Conditie** (if-else) — beslissing nemen\n3. **Loop** (herhaling) — iets X keer of zolang nodig herhalen\n\nAlle programma's combineren deze 3 dingen, hoe complex ook." },
+            { titel: "Toets-tip: 3 belangrijke programmeer-bouwstenen", tekst: "Onthoud deze 3:\n1. **Sequentie** — stappen in volgorde uitvoeren\n2. **Conditie** (if-else) — beslissing nemen\n3. **Loop** (herhaling) — iets X keer of zolang nodig herhalen\n\nAlle programma's combineren deze 3 dingen, hoe complex ook." },
           ],
           woorden: [
             { woord: "if-else", uitleg: "Programmeer-instructie voor beslissingen: ALS conditie → A, ANDERS → B." },
@@ -276,7 +276,7 @@ const steps = [
       },
       {
         q: "Een **bug** in software is?",
-        options: ["Fout in de code waardoor programma niet goed werkt", "Spinnetje in de computer", "Snelheid van de chip", "Wachtwoord-kraker"],
+        options: ["Fout in de code", "Spinnetje in de computer", "Snelheid van de chip", "Wachtwoord-kraker"],
         answer: 0,
         wrongHints: [null, "Niet letterlijk — kwam wel van echte mot in oude computer (1947).", "Dat is clock-snelheid (GHz).", "Dat is hacking-tool."],
         uitlegPad: {
@@ -301,14 +301,14 @@ const steps = [
       },
       {
         q: "Wat doet een **variabele** in code?",
-        options: ["Onthoudt een waarde met een naam (bv. score = 0)", "Voert berekening uit", "Toont bericht aan gebruiker", "Sluit programma af"],
+        options: ["Onthoudt een waarde onder een naam", "Voert berekening uit", "Toont bericht aan gebruiker", "Sluit programma af"],
         answer: 0,
         wrongHints: [null, "Dat is een functie/operator, niet een variabele.", "Dat is print/output.", "Dat is exit/quit."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een variabele?", tekst: "Een **variabele** is een **'doosje met naam'** in code. Computer onthoudt er een waarde in, en jij gebruikt de naam om de waarde op te halen.\n\nVoorbeeld:\n```\nscore = 0\nleven = 3\nspeler_naam = 'Floor'\n```\n\nLater in code: `score = score + 10` (score wordt 10)." },
             { titel: "Waarom 'variabele'?", tekst: "Heet zo omdat de waarde **kan veranderen** (variëren). Anders dan een **constante** (bv. π = 3,14, blijft altijd hetzelfde).\n\nIn games:\n• Score VERANDERT (variabele)\n• Maximum-leven KAN constant zijn (bv. altijd 3)\n• Speler-naam VERANDERT per speler" },
-            { titel: "Toets-feit: data-types", tekst: "Variabelen hebben **types** (soorten waarden):\n• **Getal** (int): score = 100\n• **Tekst** (string): naam = 'Floor'\n• **Waar/onwaar** (boolean): geactiveerd = True\n• **Lijst**: hoogste_scores = [100, 85, 70]\n\nElk type heeft eigen regels. De toets vraagt soms bij een voorbeeld: 'welk type is X?'" },
+            { titel: "Toets-feit: data-types", tekst: "Variabelen hebben **types** (soorten waarden):\n• **Getal** (int): score = 100\n• **Tekst** (string): naam = 'Floor'\n• **Waar/onwaar** (boolean): geactiveerd = True\n• **Lijst**: hoogste_scores = [100, 85, 70]\n\nElk type heeft eigen regels. Bij een voorbeeld kun je dan vragen: 'welk type is X?'" },
           ],
           woorden: [
             { woord: "variabele", uitleg: "Doosje met naam dat een waarde opslaat. Waarde kan veranderen." },
@@ -320,29 +320,29 @@ const steps = [
             { type: "feit", tekst: "Een game zoals Minecraft heeft tienduizenden variabelen tegelijk: positie speler, leven, item-inhoud, weer, dag/nacht, enzovoort." },
             { type: "feit", tekst: "Slimme namen helpen: 'score' > 's', 'aantal_levens' > 'al'. Code-leesbaarheid = belangrijk." },
           ],
-          basiskennis: [{ onderwerp: "Geen 'doos'-tegel-cito", uitleg: "De toets vraagt vaak op concept-niveau: 'wat doet een variabele?' Antwoord = 'onthoudt waarde met naam'." }],
+          basiskennis: [{ onderwerp: "Geen 'doos'-tegel-cito", uitleg: "Snap vooral het idee: 'wat doet een variabele?' Antwoord = 'onthoudt waarde met naam'." }],
           niveaus: { basis: "Onthoudt waarde.", simpeler: "Variabele = doosje met naam in code dat een waarde onthoudt. Bv. score = 0. Later: score = 10.", nogSimpeler: "Doosje met naam" },
         },
       },
-      { q: "Wat is een **algoritme**?", options: ["Stappenplan om iets op te lossen","Een spel","Een tafel","Een verhaal"], answer: 0, wrongHints: [null, "Niet specifiek.", "Niet.", "Niet."] },
+      { q: "Wat is een **algoritme**?", options: ["Stappenplan om iets op te lossen","Een spel","Een soort rekenmachine","Een verhaal"], answer: 0, wrongHints: [null, "Een spel kán algoritmes gebruiken, maar is zelf geen stappenplan.", "Een rekenmachine is een apparaat.", "Een verhaal vertelt iets — lost het een probleem op?"] },
       { q: "Welke programmeertaal is **kindvriendelijk** met sleep-blokjes?", options: ["Scratch","Python","JavaScript","C++"], answer: 0, wrongHints: [null, "Tekst-taal.", "Tekst-taal.", "Niet voor beginners."] },
       { q: "Wat is een **loop** (lus) in code?", options: ["Stappen herhalen","Een spel","Een variabele","Een fout"], answer: 0, wrongHints: [null, "Niet relevant.", "Andere bouwsteen.", "Niet."] },
       { q: "**Ada Lovelace** wordt gezien als?", options: ["Eerste programmeur","Eerste astronaut","Eerste president","Eerste schaker"], answer: 0, wrongHints: [null, "Geen ruimtevaart — leefde in 1815-1852.", "Geen politiek.", "Geen schaak-bekendheid."] },
-      { q: "Wat is een **if-else** in code?", options: ["Beslissing: ALS X DAN Y, ANDERS Z","Een lus","Een variabele","Niet bestaand"], answer: 0, wrongHints: [null, "Loop.", "Andere bouwsteen.", "Wel."] },
-      { q: "Wat is een **bug** in code?", options: ["Een fout","Een dier","Een feature","Niet bestaand"], answer: 0, wrongHints: [null, "Letterlijk wel een woord, maar bedoeld is fout.", "Tegengestelde.", "Wel."] },
-      { q: "Wie was **Linus Torvalds**?", options: ["Maker van Linux","Eerste astronaut","Niet bestaand","Componist"], answer: 0, wrongHints: [null, "Niet.", "Wel.", "Niet."] },
-      { q: "Wat is **open source**?", options: ["Code die iedereen mag zien + gebruiken","Code achter slot","Niet bestaand","Reclame"], answer: 0, wrongHints: [null, "Tegengestelde.", "Wel.", "Niet."] },
-      { q: "Wat is een **functie** in programmeren?", options: ["Stukje code dat een taak doet","Niet relevant","Een variabele","Een fout"], answer: 0, wrongHints: [null, "Wel.", "Andere bouwsteen.", "Niet."] },
+      { q: "Wat is een **if-else** in code?", options: ["Beslissing: ALS X DAN Y, ANDERS Z","Een lus","Een variabele","Een foutmelding"], answer: 0, wrongHints: [null, "Een lus herhaalt — beslist niet.", "Een variabele onthoudt — beslist niet.", "Een fout heet een bug."] },
+      { q: "Wat is een **bug** in code?", options: ["Een fout","Een dier","Een feature","Een snelle computer"], answer: 0, wrongHints: [null, "Letterlijk betekent bug 'beestje', maar in code bedoel je iets anders.", "Een feature is juist iets wat wél goed werkt.", "Gaat het om snelheid of om iets wat misgaat?"] },
+      { q: "Wie was **Linus Torvalds**?", options: ["Maker van Linux","Eerste astronaut","Oprichter van Apple","Componist"], answer: 0, wrongHints: [null, "Was hij in de ruimte?", "Dat was Steve Jobs.", "Maakte hij muziek of software?"] },
+      { q: "Wat is **open source**?", options: ["Code die iedereen mag zien + gebruiken","Code achter slot","Een computervirus","Reclame"], answer: 0, wrongHints: [null, "Tegengestelde.", "Een virus is schadelijke software — wat betekent 'open'?", "Wat betekent 'open' bij code?"] },
+      { q: "Wat is een **functie** in programmeren?", options: ["Stukje code dat een taak doet","Een herhaling van stappen","Een variabele","Een fout"], answer: 0, wrongHints: [null, "Dat is een loop (lus).", "Andere bouwsteen.", "Een fout heet een bug."] },
       { q: "Welke is **niet** een programmeertaal?", options: ["Excel","Python","JavaScript","Java"], answer: 0, wrongHints: [null, "Bekende schrijf-taal voor data + AI.", "Schrijf-taal voor websites (browser).", "Schrijf-taal voor Android-apps + servers."] },
-      { q: "**HTML** is voor?", options: ["Websites opmaken","Apps bouwen","Spellen","Niet relevant"], answer: 0, wrongHints: [null, "Wel deels.", "Niet primair.", "Wel."] },
-      { q: "Wat doet **Google's PageRank**-algoritme?", options: ["Webpagina's rangschikken op relevantie","Niets","Vertalen","Sturen"], answer: 0, wrongHints: [null, "Wel.", "Andere algoritme.", "Niet primair."] },
-      { q: "Wat is een **GPS-algoritme** (Dijkstra)?", options: ["Kortste pad-vinder","Niet relevant","Reclame","Spelletje"], answer: 0, wrongHints: [null, "Wel.", "Niet.", "Niet."] },
-      { q: "Wat is een **list/lijst** in code?", options: ["Geordende verzameling items","Eén item","Niet bestaand","Functie"], answer: 0, wrongHints: [null, "Niet.", "Wel.", "Andere bouwsteen."] },
+      { q: "**HTML** is voor?", options: ["De structuur van websites","Apps bouwen","Spellen","Rekenen"], answer: 0, wrongHints: [null, "Voor apps gebruik je meestal talen als Swift of Kotlin.", "Spellen maak je met talen als C++ of in Scratch.", "Heeft HTML met sommen te maken, of met webpagina's?"] },
+      { q: "Wat doet **Google's PageRank**-algoritme?", options: ["Webpagina's rangschikken op relevantie","Wachtwoorden kraken","Vertalen","E-mails versturen"], answer: 0, wrongHints: [null, "Is dat de taak van een zoekmachine?", "Vertalen doet een ander algoritme.", "Dat doet een mailprogramma."] },
+      { q: "Wat is een **GPS-algoritme** (Dijkstra)?", options: ["Kortste pad-vinder","Snelheidsmeter","Reclame tonen","Spelletje"], answer: 0, wrongHints: [null, "Waar heb je in een navigatie-app het meest aan?", "Waar heb je in een navigatie-app het meest aan?", "Waar heb je in een navigatie-app het meest aan?"] },
+      { q: "Wat is een **list/lijst** in code?", options: ["Geordende verzameling items","Eén item","Een foutmelding","Functie"], answer: 0, wrongHints: [null, "Een lijst bevat er meer dan één.", "Een fout heet een bug.", "Andere bouwsteen."] },
       { q: "Welk **probleem** lost een algoritme niet op?", options: ["Onmogelijke wiskunde","Sorteren","Zoeken","Patronen vinden"], answer: 0, wrongHints: [null, "Klassiek algoritme-toepassing (bubble-sort etc.).", "Klassiek algoritme-toepassing (binary search).", "Klassiek algoritme-toepassing (machine learning)."] },
-      { q: "Wat is **AI** (kunstmatige intelligentie)?", options: ["Software die patronen leert","Robot uit film","Niet bestaand","Reclame"], answer: 0, wrongHints: [null, "Niet specifiek.", "Wel.", "Niet."] },
-      { q: "Wat is een **hash** in computers?", options: ["Unieke digitale code","Niet bestaand","Eten","Reclame"], answer: 0, wrongHints: [null, "Wel.", "Niet.", "Niet."] },
+      { q: "Wat is **AI** (kunstmatige intelligentie)?", options: ["Software die patronen leert","Robot uit film","Een gewone rekenmachine","Reclame"], answer: 0, wrongHints: [null, "AI bestaat echt, niet alleen in films.", "Een rekenmachine volgt vaste regels — leert hij iets bij?", "Reclame kán AI gebruiken, maar is zelf geen AI."] },
+      { q: "Wat is een **hash** in computers?", options: ["Unieke digitale code","Een soort computerspel","Eten","Reclame"], answer: 0, wrongHints: [null, "Denk aan een vingerafdruk van een bestand.", "Denk aan een vingerafdruk van een bestand.", "Denk aan een vingerafdruk van een bestand."] },
       { q: "Wie ontwierp het **WWW** (web)?", options: ["Tim Berners-Lee","Bill Gates","Steve Jobs","Linus Torvalds"], answer: 0, wrongHints: [null, "Bill Gates is bekend van Microsoft en Windows op je computer — is dat hetzelfde als het web bedenken?", "Steve Jobs maakte de iPhone en Apple-computers — bouwde hij ook het wereldwijde web?", "Linus Torvalds maakte het besturingssysteem Linux — vond hij daarmee het web uit?"] },
-      { q: "Wat is een **stappenplan** in code (samenvatting)?", options: ["Geordende stappen om probleem op te lossen","Reclame","Niet bestaand","Game"], answer: 0, wrongHints: [null, "Niet.", "Wel.", "Niet primair."] },
+      { q: "Wat is een **stappenplan** in code (samenvatting)?", options: ["Geordende stappen om probleem op te lossen","Reclame","Een foutmelding","Game"], answer: 0, wrongHints: [null, "Is reclame een rijtje stappen?", "Een fout heet een bug.", "Een game kán stappenplannen gebruiken, maar is er zelf geen."] },
     ],
   },
 ];

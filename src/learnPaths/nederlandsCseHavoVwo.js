@@ -31,7 +31,7 @@ const steps = [
     checks: [
       {
         q: "Wat test CSE Nederlands?",
-        options: ["Leesvaardigheid (incl. samenvatten)","Alleen spreken","Alleen schrijven","Alleen luisteren"],
+        options: ["Leesvaardigheid","Alleen spreken","Alleen schrijven","Alleen luisteren"],
         answer: 0,
         wrongHints: [null, "Niet — dat is SE.", "Niet — SE.", "Niet — SE."],
         uitlegPad: {
@@ -71,7 +71,7 @@ const steps = [
       },
       {
         q: "Is Nederlands **kernvak** voor slagen?",
-        options: ["Ja (max 1× onvoldoende in kernvakken)","Nee","Alleen HAVO","Optioneel"],
+        options: ["Ja","Nee","Alleen HAVO","Optioneel"],
         answer: 0,
         wrongHints: [null, "Wel kernvak.", "Wel voor beide.", "Verplicht."],
         uitlegPad: {
@@ -90,7 +90,7 @@ const steps = [
     checks: [
       {
         q: "Wat is de functie van een **concessio-alinea**?",
-        options: ["Tegenargument erkennen + voorbereiden op weerlegging","Hoofdgedachte stellen","Conclusie trekken","Voorbeeld geven"],
+        options: ["Tegenargument erkennen","Hoofdgedachte stellen","Conclusie trekken","Voorbeeld geven"],
         answer: 0,
         wrongHints: [null, "Niet — andere functie.", "Niet — komt later.", "Niet — andere functie."],
         uitlegPad: {
@@ -180,7 +180,7 @@ const steps = [
       },
       {
         q: "Correlatie ≠ causatie — met welke drogreden is dit verwant?",
-        options: ["Post hoc (vals causaal verband)","Ad hominem","Stroman","Hellend vlak"],
+        options: ["Post hoc","Ad hominem","Stroman","Hellend vlak"],
         answer: 0,
         wrongHints: [null, "Persoon.", "Vertekening.", "Kettingdrogreden."],
         uitlegPad: {
@@ -205,7 +205,7 @@ const steps = [
   {
     title: "Samenvatten (CSE havo + vwo)",
     explanation:
-      "**Samenvatten** = een onderdeel van het **CSE Nederlands** op havo én vwo: je krijgt samenvattingsvragen met een **opgegeven maximum aantal woorden** (wat daarboven staat, telt niet mee). Een lange samenvatting van een hele tekst (~250 woorden) oefen je vooral voor het schoolexamen — de techniek is dezelfde.\n\n**Eis (oefen-samenvatting)**:\n• Hoofdtekst (~2000 woorden) → samenvatting **~250 woorden** (±10%).\n• Goede Nederlandse zinnen.\n• Geen citaten, eigen formulering.\n• Hoofdgedachte + hoofdargumenten dekken.\n• Geen voorbeelden / details / uitweidingen.\n\n**Methode** (stap voor stap):\n\n**Stap 1: Tekst grondig lezen** (~20 min):\n• Eerst snel doorlezen voor overzicht.\n• Daarna grondig: streep hoofdzinnen aan.\n\n**Stap 2: Structuur analyseren**:\n• Welk tekstpatroon? (probleem-oplossing / voor-tegen / chronologisch).\n• Hoofdgedachte vinden (vaak inleiding of slot).\n• Argument-lijst (5-7 punten).\n• Tegenargument + weerlegging (als aanwezig).\n• Conclusie.\n\n**Stap 3: Eigen schema**:\n• Op klad: kerngedachten in trefwoorden.\n• Niet zinnen overschrijven — concepten.\n• Bv:\n  ```\n  Inleiding: probleem klimaatverandering\n  Arg 1: CO2 uit fossiel\n  Arg 2: industrie 30% emissies\n  Tegenarg: kerncentrales-gevaar\n  Weerlegging: minder gevaar dan klimaatschade\n  Conclusie: overstap nodig\n  ```\n\n**Stap 4: Schrijven** (~25 min):\n• Eerste zin: kernzin / hoofdgedachte.\n• Logische volgorde behouden.\n• Verbindingswoorden gebruiken (echter, daarom, bovendien).\n• Korte zinnen.\n• Eigen woorden — geen citaten.\n• Voorbeelden + details weg, tenzij essentieel.\n• Mening auteur duidelijk maken (objectief weergeven, niet je eigen mening).\n\n**Stap 5: Checken** (~5 min):\n• Woordenaantal (~225-275 woorden, niet onder/over).\n• Hoofdpunten allemaal?\n• Geen voorbeelden meer?\n• Lopende NL-zinnen?\n• Eigen woorden (geen kopiëren)?\n• Spelling / interpunctie.\n\n**Veel-gemaakte fouten**:\n• **Te veel details** (voorbeelden, anekdotes uit tekst).\n• **Te lang** (>275 woorden).\n• **Citaten gebruiken** ipv eigen woorden.\n• **Eigen mening** toevoegen (samenvatting = weergeven, niet beoordelen).\n• **Hoofdgedachte missen**.\n• **Geen verbinding tussen punten** — losse zinnen.\n• **Slechte zinsbouw** (lange, complexe zinnen).\n\n**Beoordeling op het CSE**:\n• Punten voor de juiste hoofdpunten (volgens het correctievoorschrift).\n• Boven het maximum aantal woorden telt je antwoord niet meer mee.\n• Taalfouten kunnen aftrek opleveren — schrijf verzorgd.\n\n**Tip Toets-gangbaar onderwerp**:\n• Klimaat, gender, AI, migratie, opvoeding, taal-degeneratie, geluk-economie, populisme.\n• Lees recente Nederlandse opiniestukken (Volkskrant, NRC) als oefening.\n\n**Voorbeeld**:\n\nHoofdtekst: 2000-woord-artikel over AI-impact op werk.\nKern: AI maakt sommige beroepen overbodig maar creëert nieuwe; overheid moet omscholing faciliteren.\n\nSamenvatting (~250 w):\n*'Kunstmatige intelligentie verandert werk fundamenteel. Routinematige taken in administratie, klantenservice en zelfs juridisch werk kunnen door AI worden overgenomen. Dit betekent niet automatisch massa-werkloosheid: nieuwe beroepen ontstaan rond AI-onderhoud, ethische supervisie en creatieve toepassingen. Wel ligt een tweedeling op de loer tussen hoogopgeleide profiteurs en laaggeschoolde verliezers. Auteur betoogt dat de overheid actief moet inzetten op omscholing en levenslang leren. Bestaande sociale vangnetten zoals werkloosheidsuitkeringen volstaan niet — nodig is bredere financiering van beroepsonderwijs voor volwassenen. Tegenstanders stellen dat de markt zelf wel oplossingen vindt, maar de auteur wijst op de snelheid van AI-ontwikkeling die individuele aanpassing onmogelijk maakt. Internationale ervaringen, zoals het Deense flexicurity-model, tonen aan dat een combinatie van flexibele arbeidsmarkt en sterke sociale steun werkt. Voor Nederland zou dit betekenen: meer scholingsbudgetten, betere certificaatherkenning en bredere zekerheid voor zzp'ers. Conclusie: zonder actief beleid dreigt AI vooral bestaande ongelijkheden te versterken; met de juiste maatregelen kan het juist tot meer welvaart en interessanter werk leiden.'* (~225 woorden)",
+      "**Samenvatten** = een onderdeel van het **CSE Nederlands** op havo én vwo: je krijgt samenvattingsvragen met een **opgegeven maximum aantal woorden** (wat daarboven staat, telt niet mee). Een lange samenvatting van een hele tekst (~250 woorden) oefen je vooral voor het schoolexamen — de techniek is dezelfde.\n\n**Eis (oefen-samenvatting)**:\n• Hoofdtekst (~2000 woorden) → samenvatting **~250 woorden** (±10%).\n• Goede Nederlandse zinnen.\n• Geen citaten, eigen formulering.\n• Hoofdgedachte + hoofdargumenten dekken.\n• Geen voorbeelden / details / uitweidingen.\n\n**Methode** (stap voor stap):\n\n**Stap 1: Tekst grondig lezen** (~15 min):\n• Eerst snel doorlezen voor overzicht.\n• Daarna grondig: streep hoofdzinnen aan.\n\n**Stap 2: Structuur analyseren**:\n• Welk tekstpatroon? (probleem-oplossing / voor-tegen / chronologisch).\n• Hoofdgedachte vinden (vaak inleiding of slot).\n• Argument-lijst (5-7 punten).\n• Tegenargument + weerlegging (als aanwezig).\n• Conclusie.\n\n**Stap 3: Eigen schema**:\n• Op klad: kerngedachten in trefwoorden.\n• Niet zinnen overschrijven — concepten.\n• Bv:\n  ```\n  Inleiding: probleem klimaatverandering\n  Arg 1: CO2 uit fossiel\n  Arg 2: industrie 30% emissies\n  Tegenarg: kerncentrales-gevaar\n  Weerlegging: minder gevaar dan klimaatschade\n  Conclusie: overstap nodig\n  ```\n\n**Stap 4: Schrijven** (~25 min):\n• Eerste zin: kernzin / hoofdgedachte.\n• Logische volgorde behouden.\n• Verbindingswoorden gebruiken (echter, daarom, bovendien).\n• Korte zinnen.\n• Eigen woorden — geen citaten.\n• Voorbeelden + details weg, tenzij essentieel.\n• Mening auteur duidelijk maken (objectief weergeven, niet je eigen mening).\n\n**Stap 5: Checken** (~5 min):\n• Woordenaantal (~225-275 woorden, niet onder/over).\n• Hoofdpunten allemaal?\n• Geen voorbeelden meer?\n• Lopende NL-zinnen?\n• Eigen woorden (geen kopiëren)?\n• Spelling / interpunctie.\n\n**Veel-gemaakte fouten**:\n• **Te veel details** (voorbeelden, anekdotes uit tekst).\n• **Te lang** (>275 woorden).\n• **Citaten gebruiken** ipv eigen woorden.\n• **Eigen mening** toevoegen (samenvatting = weergeven, niet beoordelen).\n• **Hoofdgedachte missen**.\n• **Geen verbinding tussen punten** — losse zinnen.\n• **Slechte zinsbouw** (lange, complexe zinnen).\n\n**Beoordeling op het CSE**:\n• Punten voor de juiste hoofdpunten (volgens het correctievoorschrift).\n• Boven het maximum aantal woorden telt je antwoord niet meer mee.\n• Taalfouten kunnen aftrek opleveren — schrijf verzorgd.\n\n**Tip Toets-gangbaar onderwerp**:\n• Klimaat, gender, AI, migratie, opvoeding, taal-degeneratie, geluk-economie, populisme.\n• Lees recente Nederlandse opiniestukken (Volkskrant, NRC) als oefening.\n\n**Voorbeeld**:\n\nHoofdtekst: 2000-woord-artikel over AI-impact op werk.\nKern: AI maakt sommige beroepen overbodig maar creëert nieuwe; overheid moet omscholing faciliteren.\n\nSamenvatting (~250 w):\n*'Kunstmatige intelligentie verandert werk fundamenteel. Routinematige taken in administratie, klantenservice en zelfs juridisch werk kunnen door AI worden overgenomen. Dit betekent niet automatisch massa-werkloosheid: nieuwe beroepen ontstaan rond AI-onderhoud, ethische supervisie en creatieve toepassingen. Wel ligt een tweedeling op de loer tussen hoogopgeleide profiteurs en laaggeschoolde verliezers. Auteur betoogt dat de overheid actief moet inzetten op omscholing en levenslang leren. Bestaande sociale vangnetten zoals werkloosheidsuitkeringen volstaan niet — nodig is bredere financiering van beroepsonderwijs voor volwassenen. Tegenstanders stellen dat de markt zelf wel oplossingen vindt, maar de auteur wijst op de snelheid van AI-ontwikkeling die individuele aanpassing onmogelijk maakt. Internationale ervaringen, zoals het Deense flexicurity-model, tonen aan dat een combinatie van flexibele arbeidsmarkt en sterke sociale steun werkt. Voor Nederland zou dit betekenen: meer scholingsbudgetten, betere certificaatherkenning en bredere zekerheid voor zzp'ers. Conclusie: zonder actief beleid dreigt AI vooral bestaande ongelijkheden te versterken; met de juiste maatregelen kan het juist tot meer welvaart en interessanter werk leiden.'* (~225 woorden)",
     checks: [
       {
         q: "Wat staat er bij een **samenvattingsvraag** op het CSE altijd vermeld?",
@@ -249,12 +249,12 @@ const steps = [
       },
       {
         q: "Je hebt **45 minuten** voor een oefen-samenvatting van een hele tekst. Goede tijdsverdeling?",
-        options: ["20 min lezen+schema, 25 min schrijven, 5 min check","Alle 45 min schrijven","Direct schrijven","30 min lezen, 15 schrijven"],
+        options: ["15 min lezen+schema, 25 min schrijven, 5 min check","Alle 45 min schrijven","Direct schrijven","30 min lezen, 15 schrijven"],
         answer: 0,
         wrongHints: [null, "Niet — eerst denken.", "Niet — eerst lezen.", "Niet — te weinig tijd voor schrijven."],
         uitlegPad: {
-          stappen: [{ titel: "Plan tijd", tekst: "**45 min**:\n• 15-20 min: grondig lezen + structuur + schema maken.\n• 25 min: schrijven (~250 woorden).\n• 5 min: nakijken + tellen.\n\nVooraf goed denken = beter resultaat dan direct schrijven. Schema voorkomt dat je hoofdpunt mist." }],
-          niveaus: { basis: "20/25/5.", simpeler: "Tijdverdeling", nogSimpeler: "20/25/5" },
+          stappen: [{ titel: "Plan tijd", tekst: "**45 min**:\n• 15 min: grondig lezen + structuur + schema maken.\n• 25 min: schrijven (~250 woorden).\n• 5 min: nakijken + tellen.\n\nVooraf goed denken = beter resultaat dan direct schrijven. Schema voorkomt dat je hoofdpunt mist." }],
+          niveaus: { basis: "15/25/5.", simpeler: "Tijdverdeling", nogSimpeler: "15/25/5" },
         },
       },
     ],
@@ -268,7 +268,7 @@ const steps = [
     checks: [
       {
         q: "Bij **'iedereen vindt het, dus moet het waar zijn'** is dit:",
-        options: ["Ad populum (beroep op meerderheid)","Vals dilemma","Cirkelredenering","Hellend vlak"],
+        options: ["Ad populum","Vals dilemma","Cirkelredenering","Hellend vlak"],
         answer: 0,
         wrongHints: [null, "2 valse opties.", "Niet — geen cirkel.", "Niet — geen ketting."],
         uitlegPad: {

@@ -18,7 +18,7 @@ const steps = [
     checks: [
       {
         q: "Wie schreef **evolutietheorie** in boek?",
-        options: ["Charles Darwin (1859)", "Newton", "Einstein", "Mendel"],
+        options: ["Charles Darwin", "Newton", "Einstein", "Mendel"],
         answer: 0,
         wrongHints: [null, "Zwaartekracht.", "Relativiteit.", "Erfelijkheid."],
       },
@@ -80,7 +80,7 @@ const steps = [
       },
       {
         q: "Wat is de oorzaak dat de **dino's** uitstierven?",
-        options: ["Planetoïde-inslag 66 mln jr geleden", "Vulkaan alleen", "Mens", "Niet uitgestorven"],
+        options: ["Planetoïde-inslag", "Vulkaan alleen", "Mens", "Niet uitgestorven"],
         answer: 0,
         wrongHints: [null, "Hielp wel.", "Mens kwam later.", "Wel uitgestorven."],
         uitlegPad: {
@@ -111,13 +111,13 @@ const steps = [
   {
     title: "Mens uit aap? Gemeenschappelijke voorouder",
     explanation:
-      "**Belangrijke nuance**: mens stamt **NIET af van aap** zoals we die nu kennen.\n\n**Mens + chimpansee + gorilla** hebben een **gemeenschappelijke voorouder** ~**7 miljoen jaar geleden** *(een soort dier dat geen aap was zoals nu, en geen mens)*.\n\n**Mensen-stamboom** *(simpel)*:\n\n**Aap-achtige voorouder** *(~7 mln jr)*\n   ↓\n**Splitst** in:\n• → richting moderne aap *(chimpansee 99% DNA overeenkomst met mens)*.\n• → richting mens-achtigen *(hominide)*.\n\n**Hominiden** *(menselijke voorouders)*:\n\n**1. Australopithecus** *(4-2 mln jr geleden)*:\n• Beroemd: **'Lucy'** *(gevonden Ethiopië 1974)*.\n• 1 meter lang.\n• Liep al rechtop *(belangrijk!)*.\n• Maar wel klein brein.\n• 'Aap-mens' achtig.\n\n**2. Homo habilis** *('handige mens', 2,4-1,5 mln jr)*:\n• Maakte **eerste werktuigen** *(stenen schrapers)*.\n• Brein groter dan Australopithecus.\n\n**3. Homo erectus** *('rechtopgaande mens', 1,9 mln - 110.000 jr)*:\n• Eerste die **vuur** gebruikte.\n• Liep lang.\n• Zwierf van Afrika naar Azië + Europa.\n• Onze directe voorouder.\n\n**4. Neanderthaler** *(400.000 - 40.000 jr geleden)*:\n• Aparte soort, dichtbij moderne mens.\n• Vooral in **Europa**.\n• Maakte gereedschap, kunst, rituelen.\n• Groter brein dan moderne mens!\n• Stierf uit ~40.000 jaar geleden — onbekend precies waarom.\n• ~2% van **Europees DNA** komt van Neanderthaler *(door kruising)*.\n• Recent onderzoek: niet 'primitief' — wel intelligent.\n\n**5. Denisovan** *(in Azië)*:\n• Aparte soort.\n• Kruiste ook met moderne mens.\n• 5% DNA in **Aziatische + Pacifische** mensen.\n\n**6. Homo sapiens** *('wijze mens', 300.000+ jr geleden - nu)*:\n• **Onze soort**.\n• Ontstond in **Afrika**.\n• Verspreidde 70.000 jaar geleden over hele wereld.\n• Versloeg Neanderthaler + Denisovan.\n• Bouwde alle beschaving die we kennen.\n\n**Reis van mens** *(uit Afrika)*:\n• **70.000 jr geleden**: vanuit Afrika.\n• **60.000 jr**: Azië.\n• **50.000 jr**: Europa + Australië.\n• **15.000-20.000 jr**: Noord-Amerika via Bering-landbrug.\n• **12.000 jr**: Zuid-Amerika.\n\n**Belangrijke ontwikkelingen mensheid**:\n\n• **Rechtop lopen** *(~4 mln jr)*: handen vrij voor maken gereedschap.\n• **Vuur gebruiken** *(~1 mln jr)*: gekookt eten + warmte + bescherming.\n• **Werktuigen** *(2,5 mln jr)*: stenen messen, speren.\n• **Taal** *(~100.000 jr — schatting)*: samenwerken.\n• **Landbouw** *(~12.000 jr)*: vaste woonplaats + steden + beschaving.\n• **Schrift** *(~5.000 jr)*: kennis bewaren over generaties.\n• **Wetenschap + technologie** *(~500 jr)*: snelle vooruitgang.\n\n**Toets-feitje**:\nWe delen **~98,8% DNA met chimpansees**. Verschil is klein maar gevolgen enorm. Mensen hebben **veel grotere hersenen** *(3x zwaarder dan chimpansee-brein)*. Daarom kunnen we lezen, schrijven, denken over toekomst, leven in steden van miljoenen.",
+      "**Belangrijke nuance**: mens stamt **NIET af van aap** zoals we die nu kennen.\n\n**Mens + chimpansee + gorilla** hebben een **gemeenschappelijke voorouder** ~**7 miljoen jaar geleden** *(een soort dier dat geen aap was zoals nu, en geen mens)*.\n\n**Mensen-stamboom** *(simpel)*:\n\n**Aap-achtige voorouder** *(~7 mln jr)*\n   ↓\n**Splitst** in:\n• → richting moderne aap *(chimpansee 99% DNA overeenkomst met mens)*.\n• → richting mens-achtigen *(hominide)*.\n\n**Hominiden** *(menselijke voorouders)*:\n\n**1. Australopithecus** *(4-2 mln jr geleden)*:\n• Beroemd: **'Lucy'** *(gevonden Ethiopië 1974)*.\n• 1 meter lang.\n• Liep al rechtop *(belangrijk!)*.\n• Maar wel klein brein.\n• 'Aap-mens' achtig.\n\n**2. Homo habilis** *('handige mens', 2,4-1,5 mln jr)*:\n• Maakte **eerste werktuigen** *(stenen schrapers)*.\n• Brein groter dan Australopithecus.\n\n**3. Homo erectus** *('rechtopgaande mens', 1,9 mln - 110.000 jr)*:\n• Eerste die **vuur** gebruikte.\n• Liep lang.\n• Zwierf van Afrika naar Azië + Europa.\n• Onze directe voorouder.\n\n**4. Neanderthaler** *(400.000 - 40.000 jr geleden)*:\n• Aparte soort, dichtbij moderne mens.\n• Vooral in **Europa**.\n• Maakte gereedschap, kunst, rituelen.\n• Groter brein dan moderne mens!\n• Stierf uit ~40.000 jaar geleden — onbekend precies waarom.\n• ~2% van **Europees DNA** komt van Neanderthaler *(door kruising)*.\n• Recent onderzoek: niet 'primitief' — wel intelligent.\n\n**5. Denisovan** *(in Azië)*:\n• Aparte soort.\n• Kruiste ook met moderne mens.\n• Tot ~5% DNA bij mensen in **Papoea-Nieuw-Guinea** en omgeving; bij andere Aziaten veel minder.\n\n**6. Homo sapiens** *('wijze mens', 300.000+ jr geleden - nu)*:\n• **Onze soort**.\n• Ontstond in **Afrika**.\n• Verspreidde 70.000 jaar geleden over hele wereld.\n• Versloeg Neanderthaler + Denisovan.\n• Bouwde alle beschaving die we kennen.\n\n**Reis van mens** *(uit Afrika)*:\n• **70.000 jr geleden**: vanuit Afrika.\n• **60.000 jr**: Azië.\n• **50.000 jr**: Europa + Australië.\n• **15.000-20.000 jr**: Noord-Amerika via Bering-landbrug.\n• **12.000 jr**: Zuid-Amerika.\n\n**Belangrijke ontwikkelingen mensheid**:\n\n• **Rechtop lopen** *(~4 mln jr)*: handen vrij voor maken gereedschap.\n• **Vuur gebruiken** *(~1 mln jr)*: gekookt eten + warmte + bescherming.\n• **Werktuigen** *(2,5 mln jr)*: stenen messen, speren.\n• **Taal** *(~100.000 jr — schatting)*: samenwerken.\n• **Landbouw** *(~12.000 jr)*: vaste woonplaats + steden + beschaving.\n• **Schrift** *(~5.000 jr)*: kennis bewaren over generaties.\n• **Wetenschap + technologie** *(~500 jr)*: snelle vooruitgang.\n\n**Toets-feitje**:\nWe delen **~98,8% DNA met chimpansees**. Verschil is klein maar gevolgen enorm. Mensen hebben **veel grotere hersenen** *(3x zwaarder dan chimpansee-brein)*. Daarom kunnen we lezen, schrijven, denken over toekomst, leven in steden van miljoenen.",
     checks: [
       {
         q: "Stamt mens **af van aap** zoals nu?",
-        options: ["Nee — gemeenschappelijke voorouder ~7 mln jr", "Ja, van chimpansee", "Mens is helemaal apart", "Niet bekend"],
+        options: ["Nee, ze delen een voorouder", "Ja, van de chimpansee", "Nee, helemaal niet verwant", "Niet bekend"],
         answer: 0,
-        wrongHints: [null, "Niet — beide afstammelingen.", "Wel verwant.", "Wel."],
+        wrongHints: [null, "Niet — beide afstammelingen.", "Wel verwant.", "Wetenschappers weten dit wel."],
         uitlegPad: {
           stappen: [
             { titel: "Veelvoorkomend misverstand", tekst: "Veel mensen denken: 'mens stamt af van aap'. Maar dat klopt NIET. Mens en chimpansee zijn **NEEFJES**, niet **kind-en-ouder**." },
@@ -143,7 +143,7 @@ const steps = [
       },
       {
         q: "Wie was **Lucy**?",
-        options: ["Australopithecus-skelet uit Ethiopië 1974", "Eerste mens op maan", "Schilderij", "Auto"],
+        options: ["Een oud skelet uit Ethiopië", "Eerste mens op maan", "Een beroemd schilderij", "Een snelle sportauto"],
         answer: 0,
         wrongHints: [null, "Lucy hoort bij het verhaal van de mens miljoenen jaren geleden — bestond ruimtevaart toen al?", "Lucy is iets wat wetenschappers hebben opgegraven — hang je zoiets aan de muur?", "Deze naam hoort bij onderzoek naar waar de mens vandaan komt — heeft een auto daarmee te maken?"],
         uitlegPad: {
@@ -241,11 +241,11 @@ const steps = [
     title: "Eind-toets — evolutie mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
-      { q: "Wie schreef **evolutietheorie** boek?", options: ["Darwin (1859)", "Newton", "Mendel", "Einstein"], answer: 0, wrongHints: [null, "Niet.", "Erfelijkheid.", "Niet."] },
-      { q: "Stamt mens **af van moderne aap**?", options: ["Nee — gem. voorouder ~7 mln", "Ja", "Niet bekend", "Geen verband"], answer: 0, wrongHints: [null, "Niet.", "Wel.", "Wel verband."] },
+      { q: "Wie schreef **evolutietheorie** boek?", options: ["Darwin", "Newton", "Mendel", "Einstein"], answer: 0, wrongHints: [null, "Niet.", "Erfelijkheid.", "Niet."] },
+      { q: "Stamt mens **af van moderne aap**?", options: ["Nee, ze delen een voorouder", "Ja, van de chimpansee", "Dat weet niemand", "Nee, helemaal niet verwant"], answer: 0, wrongHints: [null, "Mens en chimpansee zijn neefjes, geen ouder en kind.", "Wetenschappers weten dit wel.", "Mens en aap zijn wel verwant."] },
       { q: "**'Lucy'** is welke voorouder?", options: ["Australopithecus", "Neanderthaler", "Homo sapiens", "Chimpansee"], answer: 0, wrongHints: [null, "Later.", "Wij.", "Andere tak."] },
-      { q: "Hoe oud is **aarde**?", options: ["~4,5 miljard jr", "6000", "1 miljoen", "Eeuwig"], answer: 0, wrongHints: [null, "Religieus.", "Te kort.", "Wel ouderdom."] },
-      { q: "**5e massa-uitsterving** = ?", options: ["Krijt 66 mln (dino's weg)", "Mens nu", "Geen ramp", "Vulkaan"], answer: 0, wrongHints: [null, "6e (huidige).", "Wel ramp.", "Wel bijdrage."] },
+      { q: "Hoe oud is **aarde**?", options: ["~4,5 miljard jr", "6000 jr", "1 miljoen jr", "Eeuwig"], answer: 0, wrongHints: [null, "Religieus.", "Te kort.", "Wel ouderdom."] },
+      { q: "**5e massa-uitsterving** = ?", options: ["Het einde van de dino's", "De uitsterving door de mens nu", "Het einde van de mammoeten", "Eén vulkaanuitbarsting"], answer: 0, wrongHints: [null, "Die noemen wetenschappers de 6e.", "Mammoeten stierven veel later uit, niet in één wereldramp.", "Eén vulkaan is te klein voor zo'n wereldramp."] },
       { q: "Hoeveel **mens-chimpansee DNA** overeenkomst?", options: ["~98,8%", "10%", "0%", "50%"], answer: 0, wrongHints: [null, "Te weinig.", "Wel.", "Te weinig."] },
       {
         q: "Wat zijn **fossielen**?",
@@ -274,7 +274,7 @@ const steps = [
       },
       {
         q: "**Natuurlijke selectie** — wat is dat?",
-        options: ["Dieren die best aangepast zijn aan omgeving krijgen meeste nakomelingen", "Wetenschappers kiezen welke dieren leven", "Mensen fokken dieren", "Toeval"],
+        options: ["Best aangepaste dieren krijgen meer jongen", "Wetenschappers kiezen welke dieren leven", "Mensen fokken dieren", "Toeval"],
         answer: 0,
         wrongHints: [null, "Niet — gebeurt zonder menselijke keuze.", "Dat is FOKKEN (artificiële selectie), niet natuurlijk.", "Niet helemaal toeval — selectie heeft richting."],
         uitlegPad: {
@@ -323,23 +323,23 @@ const steps = [
         },
       },
       { q: "Wie bedacht de **evolutie-theorie**?", options: ["Charles Darwin","Isaac Newton","Albert Einstein","Galileo"], answer: 0, wrongHints: [null, "Zwaartekracht.", "Relativiteit.", "Astronomie."] },
-      { q: "Wat is **natuurlijke selectie**?", options: ["Best aangepaste dieren overleven en krijgen meer nakomelingen","Toeval","Hard werken","Geluk"], answer: 0, wrongHints: [null, "Niet — patroon, geen toeval.", "Dieren werken niet.", "Wel maar systematisch."] },
+      { q: "Wat is **natuurlijke selectie**?", options: ["Best aangepast overleeft vaker", "Puur toeval bepaalt wie overleeft", "Wie het hardst werkt, overleeft", "Wie geluk heeft, krijgt jongen"], answer: 0, wrongHints: [null, "Er zit een patroon in, geen puur toeval.", "Dieren overleven niet door hard te werken.", "Geluk speelt soms mee, maar bepaalt de richting niet."] },
       { q: "Op welke eilanden onderzocht Darwin **vinken**?", options: ["Galapagos","Hawaï","IJsland","Cuba"], answer: 0, wrongHints: [null, "Hawaï ligt midden in de Grote Oceaan bij Amerika — maar Darwin voer met de Beagle langs de kust van Zuid-Amerika. Klopt dat?", "IJsland ligt koud in het hoge noorden — passen kleine zangvogeltjes bij zo'n ijzige plek?", "Cuba ligt in de Caraïbische Zee — maar Darwins eilanden liggen vlak bij de evenaar aan de westkant van Zuid-Amerika. Welke groep is dat?"] },
-      { q: "Wie was **Lucy**?", options: ["Een 3,2 mln jaar oud fossiel mens-voorouder","Een schilder","Een wetenschapper","Een schip"], answer: 0, wrongHints: [null, "Niet.", "Niet — een fossiel met bijnaam.", "Niet."] },
-      { q: "Wat is een **fossiel**?", options: ["Versteende rest van plant/dier","Steen","Levend organisme","Niet relevant"], answer: 0, wrongHints: [null, "Te algemeen.", "Niet — overblijfsel.", "Wel."] },
+      { q: "Wie was **Lucy**?", options: ["Een heel oud skelet", "Een schilder", "Een wetenschapper", "Een schip"], answer: 0, wrongHints: [null, "Niet.", "Lucy is zelf onderzocht; ze deed geen onderzoek.", "Niet."] },
+      { q: "Wat is een **fossiel**?", options: ["Versteende rest van plant/dier", "Steen", "Levend organisme", "Een plastic namaakbot"], answer: 0, wrongHints: [null, "Te algemeen.", "Niet — overblijfsel.", "Fossielen zijn echte resten."] },
       { q: "Wie is onze **dichtste verwant** in het dierenrijk?", options: ["Chimpansees","Honden","Katten","Krokodillen"], answer: 0, wrongHints: [null, "Verder weg.", "Verder weg.", "Veel verder."] },
       { q: "Wat zijn **Neanderthalers**?", options: ["Uitgestorven Homo-soort","Apen","Reptielen","Vissen"], answer: 0, wrongHints: [null, "Niet — Homo.", "Niet.", "Niet."] },
-      { q: "Wat is **uitsterven**?", options: ["Laatste van een soort sterft","Slapen","Niet relevant","Vermeerderen"], answer: 0, wrongHints: [null, "Niet.", "Wel.", "Tegengestelde."] },
+      { q: "Wat is **uitsterven**?", options: ["Laatste van een soort sterft", "Slapen", "Verhuizen naar een ander land", "Vermeerderen"], answer: 0, wrongHints: [null, "Niet.", "Dan is de soort nog niet weg.", "Tegengestelde."] },
       { q: "Wat veroorzaakte uitsterven **dinosaurussen** vermoedelijk?", options: ["Meteoriet-inslag","Mens","Klimaatverandering puur","Niets"], answer: 0, wrongHints: [null, "Te recent.", "Onderdeel.", "Wel oorzaak."] },
       { q: "Hoeveel jaar oud is de **aarde** ongeveer?", options: ["4,5 miljard jaar","100 mln","10.000","100.000"], answer: 0, wrongHints: [null, "Veel te jong.", "Te jong.", "Te jong."] },
-      { q: "**DNA** is?", options: ["Erfelijk materiaal in cellen","Een dier","Een plant","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
-      { q: "Wat is een **soort**?", options: ["Groep dieren die zich kan voortplanten","1 dier","Familie","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Bredere groep.", "Wel."] },
+      { q: "**DNA** is?", options: ["Erfelijk materiaal in cellen", "Een dier", "Een plant", "Een soort vitamine"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "DNA is geen voedingsstof."] },
+      { q: "Wat is een **soort**?", options: ["Groep dieren die samen jongen kunnen krijgen", "1 dier", "Familie", "Alle dieren op aarde"], answer: 0, wrongHints: [null, "Niet.", "Bredere groep.", "Veel te breed."] },
       { q: "Welk werelddeel was **wieg van mensheid**?", options: ["Afrika","Europa","Azië","Amerika"], answer: 0, wrongHints: [null, "Latere migratie.", "Latere migratie.", "Veel latere."] },
-      { q: "Wat zijn **restorganen** als bewijs voor evolutie?", options: ["Organen die functie verloren (bv. blindedarm)","Pijnlijke organen","Niet bestaand","Belangrijk"], answer: 0, wrongHints: [null, "Niet specifiek.", "Wel.", "Niet primair functie."] },
-      { q: "Welke **eigenschap** geeft voordeel bij voortplanting?", options: ["Aangepaste eigenschappen","Random eigenschappen","Niet bestaand","Niet relevant"], answer: 0, wrongHints: [null, "Niet — selectie selecteert.", "Wel.", "Wel."] },
-      { q: "**Mutaties** zijn?", options: ["Veranderingen in DNA","Trucs","Niet bestaand","Politiek"], answer: 0, wrongHints: [null, "Niet biologie.", "Wel.", "Niet."] },
-      { q: "**Pepermot** in Engeland (industrieel) — welk effect?", options: ["Donker overleefde beter (camouflage op roet)","Wit overleefde","Geen verandering","Uitgestorven"], answer: 0, wrongHints: [null, "Tegengestelde voor industrieel.", "Wel.", "Wel populatie veranderd."] },
-      { q: "Welke groep is **directe voorouder** van mens?", options: ["Australopithecus","Apen tegenwoordig","Reptielen","Vogels"], answer: 0, wrongHints: [null, "Niet — gemeenschappelijke voorouder.", "Veel verder.", "Veel verder."] },
+      { q: "Wat zijn **restorganen** als bewijs voor evolutie?", options: ["Organen die hun functie verloren", "Pijnlijke organen", "Organen die nooit bestonden", "Belangrijke organen"], answer: 0, wrongHints: [null, "Niet specifiek.", "Restorganen bestaan echt.", "Restorganen doen juist weinig meer."] },
+      { q: "Welke **eigenschap** geeft voordeel bij voortplanting?", options: ["Aangepaste eigenschappen", "Willekeurige eigenschappen", "Eigenschappen die je aanleert", "Helemaal geen eigenschap"], answer: 0, wrongHints: [null, "Niet — selectie selecteert.", "Aangeleerde dingen erf je niet.", "Eigenschappen maken wel verschil."] },
+      { q: "**Mutaties** zijn?", options: ["Veranderingen in DNA", "Trucs", "Nieuwe soorten voedsel", "Politiek"], answer: 0, wrongHints: [null, "Niet biologie.", "Mutaties gaan niet over eten.", "Niet."] },
+      { q: "**Pepermot** in Engeland (industrieel) — welk effect?", options: ["Donkere motten overleefden beter", "Witte motten overleefden beter", "Geen verandering", "Uitgestorven"], answer: 0, wrongHints: [null, "Tegengestelde voor industrieel.", "Wel.", "Wel populatie veranderd."] },
+      { q: "Welke groep is **directe voorouder** van mens?", options: ["Vroege mensachtigen", "Apen tegenwoordig", "Reptielen", "Vogels"], answer: 0, wrongHints: [null, "Niet — gemeenschappelijke voorouder.", "Veel verder.", "Veel verder."] },
       { q: "Hoeveel mensen leven nu **op aarde**?", options: ["~8 miljard","1 miljard","100 miljoen","30 miljard"], answer: 0, wrongHints: [null, "Te weinig.", "Te weinig.", "Te veel."] },
     ],
   },

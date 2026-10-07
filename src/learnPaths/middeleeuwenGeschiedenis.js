@@ -90,9 +90,9 @@ const steps = [
     checks: [
       {
         q: "Wie was de **machtigste** in middeleeuwen?",
-        options: ["Koning + Kerk", "Boeren", "Ridders", "Burgers in steden"],
+        options: ["Koning, adel en Kerk", "Boeren", "Ridders", "Burgers in steden"],
         answer: 0,
-        wrongHints: [null, "Hadden weinig macht.", "Hadden beetje, maar adel + kerk meest.", "Steden kwamen pas later op."],
+        wrongHints: [null, "Hadden weinig macht.", "Ridders waren de laagste adel — wie stonden er boven hen?", "Steden kwamen pas later op."],
       },
       {
         q: "Wat is een **vazal**?",
@@ -123,19 +123,19 @@ const steps = [
     checks: [
       {
         q: "Wat hadden ridders **als wapens**?",
-        options: ["Paard, harnas, zwaard, lans", "Pistool", "Atoombom", "Geen wapens"],
+        options: ["Zwaard en lans", "Pistool en geweer", "Tank en vliegtuig", "Alleen hun vuisten"],
         answer: 0,
-        wrongHints: [null, "Vuurwapens kwamen pas later.", "Geen middeleeuws.", "Wel."],
+        wrongHints: [null, "Vuurwapens kwamen pas later.", "Die bestonden nog lang niet.", "Ridders waren juist zwaar bewapend."],
       },
       {
         q: "Waarom waren er **kruistochten**?",
-        options: ["Religie + macht + land", "Olie", "Goud", "Klimaat"],
+        options: ["Religie + macht + land", "Olie", "Ontdekken van Amerika", "Klimaat"],
         answer: 0,
-        wrongHints: [null, "Geen olie destijds.", "Geen goud-doel.", "Geen klimaat."],
+        wrongHints: [null, "Geen olie destijds.", "Amerika kwam pas in 1492 in beeld.", "Geen klimaat."],
       },
       {
         q: "Waar gingen de kruisvaarders **heen**?",
-        options: ["Heilige Land (Jeruzalem)", "Amerika", "China", "Engeland"],
+        options: ["Het Heilige Land", "Amerika", "China", "Engeland"],
         answer: 0,
         wrongHints: [null, "Nog niet ontdekt.", "Niet kruistochten.", "Niet — daar kwamen juist veel kruisvaarders vandaan."],
       },
@@ -203,9 +203,9 @@ const steps = [
     checks: [
       {
         q: "Wat was de **Zwarte Dood**?",
-        options: ["Pest-pandemie (1347-1352)", "Heks-jacht", "Oorlog", "Klimaatverandering"],
+        options: ["Pest-pandemie", "Heks-jacht", "Oorlog", "Klimaatverandering"],
         answer: 0,
-        wrongHints: [null, "Niet de pest.", "Geen oorlog.", "Niet — denk aan iets waaraan miljoenen mensen in korte tijd stierven."],
+        wrongHints: [null, "Heksenjachten kwamen vooral later — waaraan stierven toen zoveel mensen?", "Geen oorlog.", "Niet — denk aan iets waaraan miljoenen mensen in korte tijd stierven."],
       },
       {
         q: "Hoeveel **% van Europa** stierf aan pest?",
@@ -221,7 +221,7 @@ const steps = [
       },
       {
         q: "Wie vond de **boekdrukkunst** uit?",
-        options: ["Gutenberg (~1450)", "Edison", "Da Vinci", "Newton"],
+        options: ["Gutenberg", "Edison", "Da Vinci", "Newton"],
         answer: 0,
         wrongHints: [null, "Veel later.", "Wel uitvinder maar niet boekdrukkunst.", "Veel later."],
       },
@@ -254,9 +254,9 @@ const steps = [
       },
       {
         q: "Wat was de **Zwarte Dood**?",
-        options: ["Pest 1347-1352", "Een ridder", "Een kerk", "Een berg"],
+        options: ["Pest 1347-1352", "Een oorlog in 1347", "Een hongersnood in 1347", "Een vulkaanuitbarsting in 1347"],
         answer: 0,
-        wrongHints: [null, "Niet ridder.", "Niet kerk.", "Niet berg."],
+        wrongHints: [null, "Geen oorlog — mensen stierven aan iets onzichtbaars.", "Er was wel honger, maar daaraan stierf niet een groot deel van Europa.", "Geen natuurramp — waarom stierven mensen in heel Europa tegelijk?"],
       },
       {
         q: "In welk jaar **viel Constantinopel** *(markeringspunt einde middeleeuwen)*?",
@@ -266,7 +266,7 @@ const steps = [
       },
       {
         q: "Welke uitvinding **veranderde de wereld** rond 1450?",
-        options: ["Boekdrukkunst (Gutenberg)", "Stoommachine", "Elektriciteit", "Auto"],
+        options: ["Boekdrukkunst", "Stoommachine", "Elektriciteit", "Auto"],
         answer: 0,
         wrongHints: [null, "18e eeuw.", "19e eeuw.", "19e eeuw."],
       },

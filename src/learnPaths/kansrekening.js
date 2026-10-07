@@ -94,7 +94,7 @@ const steps = [
   },
   {
     title: "Notatie P(A) — schrijven van kansen",
-    explanation: "**Notatie**: kansen schrijf je als **P(uitkomst)** of **P(gebeurtenis)**. P komt van het Engelse \"Probability\".\n\n**Voorbeelden**:\n• P(6) = 1/6 (kans op 6 bij dobbelsteen)\n• P(kop) = 1/2 (kans op kop bij munt)\n• P(rood) = 3/10 (kans op rode knikker)\n• P(harten en aas) = 1/52 (kans op de hartenaas uit kaartspel)\n\n**Wat is een 'gebeurtenis'?**\nEen gebeurtenis is een **deelverzameling van mogelijke uitkomsten**. Je bent vrij hoe je 'm definieert.\n\n**Voorbeelden bij een dobbelsteen**:\n• A = \"je gooit een 6\" → P(A) = 1/6\n• B = \"je gooit een even getal\" (= 2, 4, of 6) → P(B) = 3/6 = 1/2\n• C = \"je gooit een getal kleiner dan 4\" (= 1, 2, of 3) → P(C) = 3/6 = 1/2\n\n**Drie schrijfwijzen voor dezelfde kans**:\n• Breuk: 1/4\n• Decimaal: 0.25\n• Percentage: 25%\n\nAlle drie betekenen hetzelfde. Op de wiskunde-toets gebruik je vaak **breuk** (exact) of **decimaal** (rekenmachine-vriendelijk).\n\n**Vereenvoudigen**: 13/52 → 1/4. Schrijf altijd in vereenvoudigde vorm op een examen.",
+    explanation: "**Notatie**: kansen schrijf je als **P(uitkomst)** of **P(gebeurtenis)**. P komt van het Engelse \"Probability\".\n\n**Voorbeelden**:\n• P(6) = 1/6 (kans op 6 bij dobbelsteen)\n• P(kop) = 1/2 (kans op kop bij munt)\n• P(rood) = 3/10 (kans op rode knikker)\n• P(harten en aas) = 1/52 (kans op de hartenaas uit kaartspel)\n\n**Wat is een 'gebeurtenis'?**\nEen gebeurtenis is een **deelverzameling van mogelijke uitkomsten**. Je bent vrij hoe je 'm definieert.\n\n**Voorbeelden bij een dobbelsteen**:\n• A = \"je gooit een 6\" → P(A) = 1/6\n• B = \"je gooit een even getal\" (= 2, 4, of 6) → P(B) = 3/6 = 1/2\n• C = \"je gooit een getal kleiner dan 4\" (= 1, 2, of 3) → P(C) = 3/6 = 1/2\n\n**Drie schrijfwijzen voor dezelfde kans**:\n• Breuk: 1/4\n• Decimaal: 0,25\n• Percentage: 25%\n\nAlle drie betekenen hetzelfde. Op de wiskunde-toets gebruik je vaak **breuk** (exact) of **decimaal** (rekenmachine-vriendelijk).\n\n**Vereenvoudigen**: 13/52 → 1/4. Schrijf altijd in vereenvoudigde vorm op een examen.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">notatie P(A)</text>
@@ -131,7 +131,7 @@ const steps = [
   },
   {
     title: "Schaal van kansen — 0% tot 100%",
-    explanation: "Kansen liggen altijd tussen **0 en 1** (= 0% en 100%).\n\n**Speciale waardes**:\n\n**P = 0** → **onmogelijk**\n• \"Kans op een 7 bij een gewone dobbelsteen\" = 0 (er is geen 7).\n• \"Kans dat de zon morgen niet opkomt\" = (praktisch) 0.\n\n**P = 1** → **zeker**\n• \"Kans op een getal tussen 1 en 6 bij dobbelsteen\" = 1.\n• \"Kans dat 1 + 1 = 2\" = 1.\n\n**P = 1/2** → **even waarschijnlijk wel of niet** (= 50/50).\n• \"Kans op kop bij munt\" = 1/2.\n• \"Kans op rood bij roulette (zonder 0)\" = 1/2.\n\n**Klein** (P < 0.1): zelden, maar mogelijk.\n• \"Kans op 4× kop bij 4× munt-werpen\" = 1/16 ≈ 6%.\n\n**Groot** (P > 0.9): bijna zeker.\n• \"Kans dat je met twee dobbelstenen géén dubbel-zes gooit\" = 35/36 ≈ 97%.\n\n**Tip om in te schatten**: vraag jezelf af: *uit hoeveel pogingen verwacht ik 1 succes?*\n• Als je 1 keer per 6 pogingen succes verwacht → P = 1/6.\n• Als je 1 keer per 100 pogingen succes verwacht → P = 1/100 = 1%.\n\n**Rekenen met percentages**:\n• 1/4 → 100/4 = 25%\n• 1/3 → 100/3 ≈ 33.3%\n• 1/8 → 100/8 = 12.5%",
+    explanation: "Kansen liggen altijd tussen **0 en 1** (= 0% en 100%).\n\n**Speciale waardes**:\n\n**P = 0** → **onmogelijk**\n• \"Kans op een 7 bij een gewone dobbelsteen\" = 0 (er is geen 7).\n• \"Kans dat de zon morgen niet opkomt\" = (praktisch) 0.\n\n**P = 1** → **zeker**\n• \"Kans op een getal tussen 1 en 6 bij dobbelsteen\" = 1.\n• \"Kans dat 1 + 1 = 2\" = 1.\n\n**P = 1/2** → **even waarschijnlijk wel of niet** (= 50/50).\n• \"Kans op kop bij munt\" = 1/2.\n• \"Kans op rood bij roulette (zonder 0)\" = 1/2.\n\n**Klein** (P < 0,1): zelden, maar mogelijk.\n• \"Kans op 4× kop bij 4× munt-werpen\" = 1/16 ≈ 6%.\n\n**Groot** (P > 0,9): bijna zeker.\n• \"Kans dat je met twee dobbelstenen géén dubbel-zes gooit\" = 35/36 ≈ 97%.\n\n**Tip om in te schatten**: vraag jezelf af: *uit hoeveel pogingen verwacht ik 1 succes?*\n• Als je 1 keer per 6 pogingen succes verwacht → P = 1/6.\n• Als je 1 keer per 100 pogingen succes verwacht → P = 1/100 = 1%.\n\n**Rekenen met percentages**:\n• 1/4 → 100/4 = 25%\n• 1/3 → 100/3 ≈ 33,3%\n• 1/8 → 100/8 = 12,5%",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">schaal van kansen</text>
@@ -144,7 +144,7 @@ const steps = [
 <circle cx="260" cy="100" r="5" fill="${COLORS.good}"/>
 <text x="260" y="120" fill="${COLORS.good}" font-size="11" font-family="Arial" text-anchor="middle">1 (zeker)</text>
 <text x="150" y="85" fill="${COLORS.muted}" font-size="10" font-family="Arial" text-anchor="middle">→ groter = waarschijnlijker →</text>
-<text x="150" y="160" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">1/4 = 25% · 1/3 ≈ 33% · 1/8 = 12.5%</text>
+<text x="150" y="160" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">1/4 = 25% · 1/3 ≈ 33% · 1/8 = 12,5%</text>
 </svg>`,
     checks: [
       {
@@ -211,7 +211,7 @@ const steps = [
     checks: [
       {
         q: "*Wat is de kans op een getal kleiner dan 5 bij een dobbelsteen?*",
-        options: ["4/6 = 2/3", "5/6", "1/5", "5/12"],
+        options: ["2/3", "5/6", "1/5", "5/12"],
         answer: 0,
         wrongHints: [
           null,
@@ -232,7 +232,7 @@ const steps = [
   },
   {
     title: "Munt-werpen — alleen 2 uitkomsten",
-    explanation: "Een eerlijke **munt** heeft 2 uitkomsten: **kop** of **munt**. Elke kant heeft kans 1/2.\n\n**Eén worp**:\n• P(kop) = 1/2\n• P(munt) = 1/2\n\n**Twee worpen achter elkaar** — dan zijn er **4 mogelijke uitkomsten**:\n• KK (kop, kop)\n• KM (kop, munt)\n• MK (munt, kop)\n• MM (munt, munt)\n\nElk paar heeft kans 1/4.\n\n**Vragen over twee worpen**:\n• P(2× kop) = 1/4 (alleen KK)\n• P(2× munt) = 1/4 (alleen MM)\n• P(precies 1× kop) = 2/4 = 1/2 (KM of MK)\n• P(minstens 1× kop) = 3/4 (KK, KM, MK — alles behalve MM)\n\n**Drie worpen** — 8 mogelijke uitkomsten:\nKKK, KKM, KMK, KMM, MKK, MKM, MMK, MMM\n\n• P(3× kop) = 1/8\n• P(precies 2× kop) = 3/8 (KKM, KMK, MKK)\n• P(minstens 1× kop) = 7/8 (alles behalve MMM)\n\n**Algemene regel** voor n onafhankelijke munt-worpen:\n• Aantal mogelijke uitkomsten = 2^n.\n• P(specifieke combinatie zoals KKKK...) = 1 / 2^n.\n\n**Voorbeeld**: P(4× kop achter elkaar) = 1/2^4 = 1/16 ≈ 6.25%.",
+    explanation: "Een eerlijke **munt** heeft 2 uitkomsten: **kop** of **munt**. Elke kant heeft kans 1/2.\n\n**Eén worp**:\n• P(kop) = 1/2\n• P(munt) = 1/2\n\n**Twee worpen achter elkaar** — dan zijn er **4 mogelijke uitkomsten**:\n• KK (kop, kop)\n• KM (kop, munt)\n• MK (munt, kop)\n• MM (munt, munt)\n\nElk paar heeft kans 1/4.\n\n**Vragen over twee worpen**:\n• P(2× kop) = 1/4 (alleen KK)\n• P(2× munt) = 1/4 (alleen MM)\n• P(precies 1× kop) = 2/4 = 1/2 (KM of MK)\n• P(minstens 1× kop) = 3/4 (KK, KM, MK — alles behalve MM)\n\n**Drie worpen** — 8 mogelijke uitkomsten:\nKKK, KKM, KMK, KMM, MKK, MKM, MMK, MMM\n\n• P(3× kop) = 1/8\n• P(precies 2× kop) = 3/8 (KKM, KMK, MKK)\n• P(minstens 1× kop) = 7/8 (alles behalve MMM)\n\n**Algemene regel** voor n onafhankelijke munt-worpen:\n• Aantal mogelijke uitkomsten = 2^n.\n• P(specifieke combinatie zoals KKKK...) = 1 / 2^n.\n\n**Voorbeeld**: P(4× kop achter elkaar) = 1/2^4 = 1/16 ≈ 6,25%.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">munt — 2 uitkomsten</text>
@@ -387,7 +387,7 @@ const steps = [
         },
       },
       {
-        q: "*Twee dobbelstenen — kans op (3, 5)?*",
+        q: "*Je gooit een rode en een blauwe dobbelsteen. Kans op een 3 met de rode én een 5 met de blauwe?*",
         options: ["1/36", "1/12", "2/6", "1/6"],
         answer: 0,
         wrongHints: [
@@ -464,7 +464,7 @@ const steps = [
     checks: [
       {
         q: "*Bij dobbelsteen: P(2 of 4 of 6)?*",
-        options: ["3/6 = 1/2", "1/6", "2/6", "3/3"],
+        options: ["1/2", "1/6", "2/6", "3/3"],
         answer: 0,
         wrongHints: [
           null,
@@ -553,7 +553,7 @@ const steps = [
       },
       {
         q: "*Zak: 4 rood + 6 blauw. Twee knikkers met terugleggen. Kans 2× rood?*",
-        options: ["16/100 = 4/25", "4/10", "8/100", "1/25"],
+        options: ["4/25", "4/10", "8/100", "1/25"],
         answer: 0,
         wrongHints: [
           null,
@@ -645,7 +645,7 @@ const steps = [
         },
       },
       {
-        q: "*\"Een loterij: 1 op 100 lootjes wint. Je koopt 3 lootjes. Kans dat je geen prijs wint?\"*",
+        q: "*\"Een loterij met heel veel lootjes: elk lootje heeft, los van de andere, 1 op 100 kans op een prijs. Je koopt 3 lootjes. Kans dat je geen prijs wint?\"*",
         options: [
           "(99/100)³",
           "1 − 3/100 = 97/100",
@@ -655,7 +655,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dat is een ruwe schatting via aftrekken — maar bij onafhankelijke lootjes moet je 'alle 3 verlies' vermenigvuldigen.",
+          "Aftrekken zou kloppen als er precies 1 winnend lootje op 100 was. Hier heeft elk lootje los van de andere zijn eigen kans — dan moet je 'alle 3 verlies' vermenigvuldigen.",
           "3/100 is ongeveer de kans dat je wél wint. 'Geen prijs' betekent: alle 3 lootjes verliezen.",
           "100/103 is geen logische berekening voor deze setup.",
         ],

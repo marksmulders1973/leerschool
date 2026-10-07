@@ -16,15 +16,15 @@ const steps = [
   {
     title: "De onderdelen van een computer",
     explanation:
-      "Een computer bestaat uit **hardware** (de fysieke onderdelen) en **software** (de programma's). De belangrijkste onderdelen:\n\n• **CPU** (processor) — het 'brein': voert de instructies uit en rekent. Snelheid in **GHz** (miljarden bewerkingen per seconde), vaak met meerdere **cores** (kernen die parallel werken).\n• **RAM** (werkgeheugen) — snel **tijdelijk** geheugen waarin lopende programma's en data staan. **Vluchtig**: leeg bij uitzetten.\n• **Opslag** — bewaart bestanden **blijvend** (ook uit): een **SSD** (snel, geen bewegende delen) of een ouder **HDD** (schijf, langzamer).\n• **GPU** (grafische kaart) — rekent beeld/video, en is sterk in veel parallelle berekeningen (games, AI).\n• **Moederbord** — verbindt alle onderdelen.\n• **Voeding** — levert stroom.\n• **Randapparaten (peripherals)** — input (toetsenbord, muis, microfoon) en output (scherm, printer, speakers).\n\n**Belangrijk onderscheid:**\n• **RAM** = snel, tijdelijk, klein (bv. 8-16 GB) → voor wat je *nú* gebruikt.\n• **Opslag (SSD)** = blijvend, groot (bv. 512 GB-2 TB), langzamer → voor wat je *bewaart*.",
+      "Een computer bestaat uit **hardware** (de fysieke onderdelen) en **software** (de programma's). De belangrijkste onderdelen:\n\n• **CPU** (processor) — het 'brein': voert de instructies uit en rekent. Snelheid in **GHz** (miljarden klokcycli per seconde), vaak met meerdere **cores** (kernen die parallel werken).\n• **RAM** (werkgeheugen) — snel **tijdelijk** geheugen waarin lopende programma's en data staan. **Vluchtig**: leeg bij uitzetten.\n• **Opslag** — bewaart bestanden **blijvend** (ook uit): een **SSD** (snel, geen bewegende delen) of een ouder **HDD** (schijf, langzamer).\n• **GPU** (grafische kaart) — rekent beeld/video, en is sterk in veel parallelle berekeningen (games, AI).\n• **Moederbord** — verbindt alle onderdelen.\n• **Voeding** — levert stroom.\n• **Randapparaten (peripherals)** — input (toetsenbord, muis, microfoon) en output (scherm, printer, speakers).\n\n**Belangrijk onderscheid:**\n• **RAM** = snel, tijdelijk, klein (bv. 8-16 GB) → voor wat je *nú* gebruikt.\n• **Opslag (SSD)** = blijvend, groot (bv. 512 GB-2 TB), langzamer → voor wat je *bewaart*.",
     checks: [
       {
         q: "Welk onderdeel is het 'brein' dat instructies uitvoert?",
-        options: ["De CPU (processor)", "Het RAM", "De voeding", "Het scherm"],
+        options: ["De CPU", "Het RAM", "De voeding", "Het scherm"],
         answer: 0,
         wrongHints: [null, "RAM is werkgeheugen, het rekent niet.", "De voeding levert alleen stroom.", "Het scherm is output."],
         uitlegPad: {
-          stappen: [{ titel: "De processor rekent", tekst: "De **CPU** (Central Processing Unit, processor) is het 'brein': hij voert de instructies van programma's uit en rekent. Snelheid meet je in **GHz** (miljarden bewerkingen/sec), en moderne CPU's hebben meerdere **cores** die parallel werken." }],
+          stappen: [{ titel: "De processor rekent", tekst: "De **CPU** (Central Processing Unit, processor) is het 'brein': hij voert de instructies van programma's uit en rekent. Snelheid meet je in **GHz** (miljarden klokcycli per seconde), en moderne CPU's hebben meerdere **cores** die parallel werken." }],
           niveaus: { basis: "De CPU.", simpeler: "Brein = CPU", nogSimpeler: "De CPU" },
         },
       },
@@ -50,7 +50,7 @@ const steps = [
       },
       {
         q: "Waarvoor is de **GPU** (grafische kaart) vooral sterk?",
-        options: ["Beeld/video en veel parallelle berekeningen (games, AI)", "Het blijvend bewaren van bestanden", "Het leveren van stroom", "Het typen van tekst"],
+        options: ["Beeld en veel berekeningen tegelijk", "Het blijvend bewaren van bestanden", "Het leveren van stroom", "Het typen van tekst"],
         answer: 0,
         wrongHints: [null, "Bewaren doet de opslag (SSD/HDD).", "Stroom komt van de voeding.", "Typen is input, geen GPU-taak."],
         uitlegPad: {
@@ -109,7 +109,7 @@ const steps = [
       },
       {
         q: "Wat betekent de **kloksnelheid** (in GHz) van een CPU?",
-        options: ["Hoeveel cycli (bewerkingen) hij ongeveer per seconde doet", "Hoeveel bestanden erop passen", "Hoe groot het scherm is", "Hoeveel stroom hij levert"],
+        options: ["Hoeveel cycli hij per seconde doorloopt", "Hoeveel bestanden erop passen", "Hoe groot het scherm is", "Hoeveel stroom hij levert"],
         answer: 0,
         wrongHints: [null, "Opslagruimte is iets anders.", "Schermgrootte staat los van de CPU.", "De CPU levert geen stroom."],
         uitlegPad: {
@@ -119,7 +119,7 @@ const steps = [
       },
       {
         q: "Wat is het voordeel van meerdere **cores** in een CPU?",
-        options: ["Meerdere instructies tegelijk (parallel) uitvoeren", "Meer opslagruimte", "Een groter scherm", "Gegarandeerd minder stroomverbruik"],
+        options: ["Meerdere instructies tegelijk uitvoeren", "Meer opslagruimte", "Een groter scherm", "Gegarandeerd minder stroomverbruik"],
         answer: 0,
         wrongHints: [null, "Cores gaan over rekenen, niet over opslag.", "Schermgrootte staat los.", "Meer cores kunnen juist méér verbruiken."],
         uitlegPad: {
@@ -148,7 +148,7 @@ const steps = [
       },
       {
         q: "Dat meerdere programma's 'tegelijk' lijken te draaien, regelt het OS met…",
-        options: ["Multitasking (CPU-tijd verdelen over processen)", "Een snellere internetverbinding", "Meer schermen", "Een grotere SSD"],
+        options: ["Multitasking", "Een snellere internetverbinding", "Meer schermen", "Een grotere SSD"],
         answer: 0,
         wrongHints: [null, "Internet heeft er niets mee te maken.", "Schermen doen niet mee.", "Opslaggrootte regelt geen multitasking."],
         uitlegPad: {
@@ -217,7 +217,7 @@ const steps = [
       },
       {
         q: "Hoe beschrijf je waar een bestand staat in de mappenstructuur?",
-        options: ["Met een pad, bv. Documenten/School/verslag.docx", "Met de bestandsgrootte", "Met de extensie alleen", "Met het IP-adres"],
+        options: ["Met een pad", "Met de bestandsgrootte", "Met de extensie alleen", "Met het IP-adres"],
         answer: 0,
         wrongHints: [null, "Grootte zegt niets over de locatie.", "De extensie zegt het type, niet de plek.", "Een IP-adres hoort bij netwerken."],
         uitlegPad: {
@@ -227,7 +227,7 @@ const steps = [
       },
       {
         q: "Je hernoemt `foto.jpg` naar `foto.txt`. Wat gebeurt er met de inhoud?",
-        options: ["De echte inhoud blijft hetzelfde — alleen de naam verandert", "Het wordt automatisch een tekstbestand", "Het bestand wordt gewist", "Het wordt kleiner"],
+        options: ["De inhoud blijft gewoon hetzelfde", "Het wordt automatisch een tekstbestand", "Het bestand wordt gewist", "Het wordt kleiner"],
         answer: 0,
         wrongHints: [null, "Is een extensie een deel van de naam, of van de data zelf?", "Hernoemen wist niets.", "De grootte blijft gelijk."],
         uitlegPad: {

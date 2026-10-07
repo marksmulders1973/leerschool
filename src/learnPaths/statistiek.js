@@ -143,7 +143,7 @@ const steps = [
         q: "Bereken gemiddelde van: 4, 6, 8, 10.",
         options: ["7", "8", "28", "6"],
         answer: 0,
-        wrongHints: [null, "Te hoog — heb je gedeeld door het aantal getallen?", "Dat is alleen de som. Welke stap mis je nog voor het gemiddelde?", "Dat is een ander getalskenmerk. Wat doe je voor het gemiddelde — som verdelen over hoeveel?"],
+        wrongHints: [null, "Te hoog — heb je gedeeld door het aantal getallen?", "Dat is alleen de som. Welke stap mis je nog voor het gemiddelde?", "Te laag — tel alle getallen op en deel de som door hoeveel getallen er zijn."],
         uitlegPad: {
           stappen: [
             { titel: "Som", tekst: "4 + 6 + 8 + 10 = 28." },
@@ -326,7 +326,7 @@ const steps = [
     checks: [
       {
         q: "Twee klassen met zelfde gemiddelde maar verschillend bereik. Wat zegt dat?",
-        options: ["De klassen presteren even goed, maar prestaties zijn verschillend verdeeld","Een klas presteert beter","De klassen zijn gelijk","Geen verschil"],
+        options: ["Gemiddeld presteren ze even goed, maar de cijfers zijn anders verdeeld","De klas met het grootste bereik presteert gemiddeld beter","De klassen zijn in alles gelijk, want het gemiddelde is gelijk","Het bereik zegt niets, alleen het gemiddelde telt"],
         answer: 0,
         wrongHints: [null, "Niet noodzakelijk. Gem. is gelijk — geen klas is 'beter'. Spreiding verschilt.", "Niet identiek — de spreiding (bereik) verschilt.", "Bereik geeft wel verschil weer."],
         uitlegPad: {

@@ -18,7 +18,7 @@ const steps = [
   {
     title: "Lengte-maten — km, m, cm, mm omrekenen",
     explanation:
-      "**Lengte-eenheden (van groot naar klein)**:\n• **km** (kilometer) — 1 km = 1000 m. Afstanden tussen steden.\n• **hm** (hectometer) — 1 hm = 100 m. Wegmarkering (hectometerpaaltjes).\n• **dam** (decameter) — 1 dam = 10 m. Niet vaak gebruikt.\n• **m** (meter) — basis-eenheid.\n• **dm** (decimeter) — 1 dm = 0,1 m = 10 cm.\n• **cm** (centimeter) — 1 cm = 0,01 m = 10 mm.\n• **mm** (millimeter) — 1 mm = 0,001 m.\n\n**Geheugen-truc**: **K H D | M | d c m** (komma in midden bij m).\n• Naar **rechts** (kleinere eenheid): × 10 per stap.\n• Naar **links** (grotere eenheid): ÷ 10 per stap.\n\n**Tabel** (oefen-handig):\n• 1 km = 10 hm = 100 dam = 1000 m.\n• 1 m = 10 dm = 100 cm = 1000 mm.\n• 1 km = 1 000 000 mm.\n\n**Belangrijke omrekeningen**:\n• 2 km = 2000 m.\n• 5 m = 500 cm.\n• 30 mm = 3 cm.\n• 1,5 m = 150 cm = 1500 mm.\n• 0,75 km = 750 m.\n\n**toetsvraag-types**:\n• 'Reken 2,3 m om naar cm' (2,3 × 100 = 230 cm).\n• 'Hoeveel km is 1500 m?' (1500 / 1000 = 1,5 km).\n• 'Optellen verschillende eenheden': 1 km + 200 m = 1,2 km = 1200 m.\n\n**Praktijk-toepassing**:\n• **Schaal** op kaart: 1 cm = 1 km betekent: elke cm op kaart = 1 km echt.\n• Voorbeeld: kaart 1:100 000 → 1 cm op kaart = 100 000 cm = 1 km echt.\n\n**Toets-valkuilen**:\n• Verwarring tussen mm en cm: 30 mm ≠ 30 cm! 30 mm = 3 cm.\n• Decimale komma plaatsing: 1,5 km = 1500 m, NIET 15 m.\n• 1 m² ≠ 100 cm² (zie stap B — oppervlakte werkt anders).",
+      "**Lengte-eenheden (van groot naar klein)**:\n• **km** (kilometer) — 1 km = 1000 m. Afstanden tussen steden.\n• **hm** (hectometer) — 1 hm = 100 m. Wegmarkering (hectometerpaaltjes).\n• **dam** (decameter) — 1 dam = 10 m. Niet vaak gebruikt.\n• **m** (meter) — basis-eenheid.\n• **dm** (decimeter) — 1 dm = 0,1 m = 10 cm.\n• **cm** (centimeter) — 1 cm = 0,01 m = 10 mm.\n• **mm** (millimeter) — 1 mm = 0,001 m.\n\n**Geheugen-truc**: **K H D | M | d c m** (komma in midden bij m).\n• Naar **rechts** (kleinere eenheid): × 10 per stap.\n• Naar **links** (grotere eenheid): ÷ 10 per stap.\n\n**Tabel** (oefen-handig):\n• 1 km = 10 hm = 100 dam = 1000 m.\n• 1 m = 10 dm = 100 cm = 1000 mm.\n• 1 km = 1 000 000 mm.\n\n**Belangrijke omrekeningen**:\n• 2 km = 2000 m.\n• 5 m = 500 cm.\n• 30 mm = 3 cm.\n• 1,5 m = 150 cm = 1500 mm.\n• 0,75 km = 750 m.\n\n**toetsvraag-types**:\n• 'Reken 2,3 m om naar cm' (2,3 × 100 = 230 cm).\n• 'Hoeveel km is 1500 m?' (1500 / 1000 = 1,5 km).\n• 'Optellen verschillende eenheden': 1 km + 200 m = 1,2 km = 1200 m.\n\n**Praktijk-toepassing**:\n• **Schaal** op kaart: 1 cm = 1 km betekent: elke cm op kaart = 1 km echt.\n• Voorbeeld: kaart 1:100 000 → 1 cm op kaart = 100 000 cm = 1 km echt.\n\n**Toets-valkuilen**:\n• Verwarring tussen mm en cm: 30 mm ≠ 30 cm! 30 mm = 3 cm.\n• Decimale komma plaatsing: 1,5 km = 1500 m, NIET 15 m.\n• 1 m² ≠ 100 cm² (zie stap 2 — oppervlakte werkt anders).",
     checks: [
       {
         q: "**3,5 km** is hoeveel meter?",
@@ -227,7 +227,7 @@ const steps = [
       },
       {
         q: "Cirkel met **diameter 14 cm**. Omtrek? (π = 3,14)",
-        options: ["43,96 cm (~44)", "21,98 cm", "87,92 cm", "153,86 cm"],
+        options: ["43,96 cm", "21,98 cm", "87,92 cm", "153,86 cm"],
         answer: 0,
         wrongHints: [null, "Niet — vergeet diameter (× 2 straal).", "Te groot.", "Niet — dat is oppervlakte-orde."],
         uitlegPad: {
@@ -277,7 +277,7 @@ const steps = [
         },
       },
       {
-        q: "Een **halve cirkel** met straal 4 cm. Oppervlakte?",
+        q: "Een **halve cirkel** met straal 4 cm. Oppervlakte? (π = 3,14)",
         options: ["25,12 cm²", "50,24 cm²", "12,56 cm²", "8 cm²"],
         answer: 0,
         wrongHints: [null, "Niet — dat is hele cirkel.", "Te klein.", "Te klein, vergeet π."],

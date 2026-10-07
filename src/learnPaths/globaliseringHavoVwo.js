@@ -38,7 +38,7 @@ const steps = [
       {
         q: "Wat verlaagde drastisch transportkosten + maakte wereldhandel mogelijk (jaren 1960)?",
         options: [
-          "Containerisatie (standaard containers)",
+          "Containerisatie",
           "Telegraaf",
           "Internet",
           "Stoomschip"
@@ -55,7 +55,7 @@ const steps = [
       {
         q: "Extreme armoede wereld is sinds 1990:",
         options: [
-          "Ruim gehalveerd (1,9 mld → 700 mln)",
+          "Ruim gehalveerd",
           "Verdubbeld",
           "Gelijk gebleven",
           "Compleet verdwenen"
@@ -73,7 +73,7 @@ const steps = [
       {
         q: "Welke is een **politiek** aspect van globalisering?",
         options: [
-          "Internationale organisaties (VN, WHO, EU)",
+          "Internationale organisaties",
           "Hollywood-films",
           "iPhone-productie keten",
           "Internet"
@@ -115,9 +115,9 @@ const steps = [
         q: "Wat is **comparatief voordeel** (Ricardo)?",
         options: [
           "Elk land specialiseert in wat het relatief efficiënter produceert",
-          "Sterkste land wint altijd",
-          "Geen handel nodig",
-          "Alles produceren"
+          "Het sterkste land wint altijd de handel",
+          "Landen hoeven dan geen handel meer te drijven",
+          "Elk land produceert zelf alles wat het nodig heeft"
         ],
         answer: 0,
         wrongHints: [null, "Niet — beide kunnen winnen.", "Tegenovergesteld.", "Tegenovergesteld."],
@@ -148,11 +148,11 @@ const steps = [
         options: [
           "Productie verplaatsen naar lage-loon-land",
           "Productie terughalen",
-          "Naar zee-platform",
+          "Productie verplaatsen naar een buurland",
           "Belastingontwijking"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is re-shoring.", "Onzin.", "Niet — verwant maar anders."],
+        wrongHints: [null, "Niet — dat is re-shoring.", "Niet — dat is near-shoring.", "Niet — verwant maar anders."],
         uitlegPad: {
           stappen: [
             { titel: "Naar elders verhuizen", tekst: "Veel westerse bedrijven verplaatsten productie naar China/Vietnam/Bangladesh in jaren 1990-2010 voor lagere lonen. Resultaat: industriële banen-verlies in westen, opkomst Aziatische economieën. Recent: re-shoring trend door geopolitieke risico's." },
@@ -180,13 +180,13 @@ const steps = [
       {
         q: "Een **iPhone** wordt gemaakt via:",
         options: [
-          "Wereldwijde toeleveringsketen (chip Taiwan, assemblage China, ontwerp VS, mineralen Afrika)",
-          "Alles in VS",
-          "Alles in China",
-          "Alleen Europa"
+          "Een wereldwijde toeleveringsketen",
+          "Alles wordt in de VS gemaakt",
+          "Alles wordt in China gemaakt",
+          "Alles wordt in Europa gemaakt"
         ],
         answer: 0,
-        wrongHints: [null, "Niet correct.", "Niet — multi-land.", "Niet."],
+        wrongHints: [null, "Niet — alleen het ontwerp komt uit de VS.", "Niet — multi-land.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "200+ leveranciers wereldwijd", tekst: "Apple ontwerp in Cupertino. TSMC (Taiwan) maakt A-chip. Foxconn (China) assembleert. Schermen Samsung (Zuid-Korea). Camera Sony (Japan). Mineralen: cobalt (Congo), lithium (Chili). Verkoop wereldwijd. Voorbeeld van extreme globalisering." },
@@ -206,10 +206,10 @@ const steps = [
       {
         q: "Wat is **HDI**?",
         options: [
-          "Human Development Index — BBP + onderwijs + levensduur gecombineerd",
-          "Alleen BBP",
-          "Aantal soldaten",
-          "Olie-productie"
+          "Een index die BBP, onderwijs en levensduur combineert",
+          "Een index die alleen het BBP per inwoner meet",
+          "Een index van het aantal soldaten per land",
+          "Een index van de olieproductie per land"
         ],
         answer: 0,
         wrongHints: [null, "Onvolledig.", "Onzin.", "Onzin."],
@@ -223,10 +223,10 @@ const steps = [
       {
         q: "**Resource curse** = ?",
         options: [
-          "Landen met veel grondstoffen ontwikkelen vaak slecht (corruptie, conflict)",
-          "Geen grondstoffen = arm",
-          "Grondstoffen brengen welvaart",
-          "Geen verband"
+          "Veel grondstoffen leidt vaak tot slechte ontwikkeling",
+          "Landen zonder grondstoffen blijven altijd arm",
+          "Grondstoffen brengen altijd welvaart",
+          "Er is geen verband tussen grondstoffen en ontwikkeling"
         ],
         answer: 0,
         wrongHints: [null, "Niet altijd waar.", "Vaak tegenovergesteld.", "Wel verband."],
@@ -275,7 +275,7 @@ const steps = [
       {
         q: "**Volgens institutionele theorie** (Acemoglu) ligt verschil rijk/arm in:",
         options: [
-          "Soort instituties (inclusief vs extractief)",
+          "Het soort instituties",
           "Klimaat alleen",
           "Cultuur alleen",
           "Toeval"
@@ -296,7 +296,7 @@ const steps = [
   {
     title: "Migratie + Remittances",
     explanation:
-      "**Migratie** = mensen verhuizen tussen landen.\n\n**Types**:\n• **Economische migrant**: betere job zoeken.\n• **Vluchteling** (UNHCR): oorlog/vervolging, beschermd onder Vluchtelingenverdrag 1951.\n• **Asielzoeker**: aanvraag-procedure voor vluchteling-status.\n• **Statushouder**: erkend vluchteling met verblijfsvergunning.\n• **Klimaat-migrant**: door droogte, overstroming, zeespiegelstijging.\n\n**Wereldwijde cijfers** (UN 2024):\n• ~281 mln internationale migranten (~3,6% wereldbevolking).\n• ~117 mln gedwongen verplaatst (vluchtelingen + intern).\n• Oekraïne 2022+: 8+ mln vluchtelingen → grootste Europese crisis sinds WO2.\n• Syrië, Afghanistan, Venezuela, Zuid-Soedan grootste herkomstlanden.\n\n**Push-factoren** (waarom vertrekken):\n• Armoede + werkloosheid.\n• Oorlog + vervolging.\n• Natuurrampen + klimaat.\n• Politieke onderdrukking.\n\n**Pull-factoren** (waarom naar daar):\n• Beter werk + lonen.\n• Familie al daar.\n• Veiligheid + rechten.\n• Onderwijs + zorg.\n\n**Migratie-corridors**:\n• Mexico → VS.\n• Afrika → Europa (via Middellandse Zee).\n• Syrië → Turkije + Europa.\n• Filipijnen → Saudi-Arabië + Hong Kong (huishoudwerk).\n• Bangladesh + India → Golfstaten (bouw).\n\n**Remittances** (geld dat migranten naar familie thuis sturen):\n• Wereldwijd ~$650 mld/jaar (2023).\n• Top-ontvangers: India ($125 mld), Mexico ($63 mld), China ($50 mld), Filipijnen ($40 mld).\n• Voor sommige landen >20% BBP (Tonga, Kirgizië, Tadzjikistan, Haïti).\n• Vaak GROTER dan officiële ontwikkelingshulp + buitenlandse investering.\n• Direct effect armoedebestrijding: gaat naar families.\n\n**Brain drain vs brain gain**:\n• **Drain**: ontwikkeld land trekt hoog-opgeleiden weg (artsen, ingenieurs) → herkomstland verliest.\n• **Gain**: thuisland profiteert van remittances + return-migranten met nieuwe kennis.\n• Netto-effect debattabel; verschilt per geval.\n\n**Migratie + Europa**:\n• EU-vrij verkeer binnen Schengen-zone.\n• Externe migratie complex: Dublin-verdrag (asielaanvraag in eerste EU-land), Turkije-deal 2016.\n• Politiek explosief onderwerp.\n\n**Migratie-balans NL**:\n• Sinds 1960s netto-immigratie (eerst gastarbeiders Turkije/Marokko, dan EU-werkers, vluchtelingen).\n• 2024: ~17,9 mln inwoners, ~25% migratie-achtergrond (1e/2e generatie).\n\n**Demografische uitdagingen**:\n• Rijke landen verouderen (Duitsland, Japan, Italië).\n• Arme landen jong en groeien (Nigeria 2050: ~400 mln inwoners → 3e land wereld).\n• Migratie deels antwoord op westerse arbeidstekort.",
+      "**Migratie** = mensen verhuizen tussen landen.\n\n**Types**:\n• **Economische migrant**: betere job zoeken.\n• **Vluchteling** (UNHCR): oorlog/vervolging, beschermd onder Vluchtelingenverdrag 1951.\n• **Asielzoeker**: aanvraag-procedure voor vluchteling-status.\n• **Statushouder**: erkend vluchteling met verblijfsvergunning.\n• **Klimaat-migrant**: door droogte, overstroming, zeespiegelstijging.\n\n**Wereldwijde cijfers** (UN 2024):\n• ~281 mln internationale migranten (~3,6% wereldbevolking).\n• ~117 mln gedwongen verplaatst (vluchtelingen + intern).\n• Oekraïne 2022+: 8+ mln vluchtelingen → grootste Europese crisis sinds WO2.\n• Syrië, Afghanistan, Venezuela, Zuid-Soedan grootste herkomstlanden.\n\n**Push-factoren** (waarom vertrekken):\n• Armoede + werkloosheid.\n• Oorlog + vervolging.\n• Natuurrampen + klimaat.\n• Politieke onderdrukking.\n\n**Pull-factoren** (waarom naar daar):\n• Beter werk + lonen.\n• Familie al daar.\n• Veiligheid + rechten.\n• Onderwijs + zorg.\n\n**Migratie-corridors**:\n• Mexico → VS.\n• Afrika → Europa (via Middellandse Zee).\n• Syrië → Turkije + Europa.\n• Filipijnen → Saudi-Arabië + Hong Kong (huishoudwerk).\n• Bangladesh + India → Golfstaten (bouw).\n\n**Remittances** (geld dat migranten naar familie thuis sturen):\n• Wereldwijd ~$650 mld/jaar (2023).\n• Top-ontvangers: India ($125 mld), Mexico ($63 mld), China ($50 mld), Filipijnen ($40 mld).\n• Voor sommige landen >20% BBP (Tonga, Kirgizië, Tadzjikistan, Haïti).\n• Vaak GROTER dan officiële ontwikkelingshulp + buitenlandse investering.\n• Direct effect armoedebestrijding: gaat naar families.\n\n**Brain drain vs brain gain**:\n• **Drain**: ontwikkeld land trekt hoog-opgeleiden weg (artsen, ingenieurs) → herkomstland verliest.\n• **Gain**: thuisland profiteert van remittances + return-migranten met nieuwe kennis.\n• Netto-effect debattabel; verschilt per geval.\n\n**Migratie + Europa**:\n• EU-vrij verkeer binnen Schengen-zone.\n• Externe migratie complex: Dublin-verdrag (asielaanvraag in eerste EU-land), Turkije-deal 2016.\n• Politiek explosief onderwerp.\n\n**Migratie-balans NL**:\n• Sinds 1960s netto-immigratie (eerst gastarbeiders Turkije/Marokko, dan EU-werkers, vluchtelingen).\n• 2024: ~ruim 18 mln inwoners, ~25% migratie-achtergrond (1e/2e generatie).\n\n**Demografische uitdagingen**:\n• Rijke landen verouderen (Duitsland, Japan, Italië).\n• Arme landen jong en groeien (Nigeria 2050: ~400 mln inwoners → 3e land wereld).\n• Migratie deels antwoord op westerse arbeidstekort.",
     checks: [
       {
         q: "**Remittances** zijn:",
@@ -318,7 +318,7 @@ const steps = [
       {
         q: "Een **vluchteling** verschilt van **economische migrant** door:",
         options: [
-          "Vlucht voor oorlog/vervolging (beschermd door Vluchtelingenverdrag 1951)",
+          "Vlucht voor oorlog of vervolging",
           "Komt uit Afrika",
           "Heeft geen geld",
           "Geen verschil"
@@ -335,13 +335,13 @@ const steps = [
       {
         q: "**Brain drain** is:",
         options: [
-          "Verlies van hoog-opgeleiden uit herkomstland naar rijk land",
-          "Hersenoperatie",
-          "Computer-uitval",
-          "Geheugenverlies"
+          "Verlies van hoogopgeleiden uit het herkomstland",
+          "Hoogopgeleiden die terugkeren naar hun herkomstland",
+          "Geld dat migranten naar huis sturen",
+          "Laagopgeleiden die naar rijke landen trekken"
         ],
         answer: 0,
-        wrongHints: [null, "Niet medisch.", "Niet tech.", "Onzin."],
+        wrongHints: [null, "Dat is juist het omgekeerde (brain gain).", "Dat zijn remittances.", "Het gaat juist om hoogopgeleiden."],
         uitlegPad: {
           stappen: [
             { titel: "Talent-emigratie", tekst: "Klassiek voorbeeld: Filipijnse verpleegkundigen + dokters trekken naar VS/UK voor 5× zo hoog salaris → Filipijnen verliest gezondheidszorg-personeel. India: software-ingenieurs naar Silicon Valley. Tegenwicht: remittances + soms terugkeer met expertise (return-migrants)." },
@@ -351,9 +351,9 @@ const steps = [
       },
       {
         q: "Belangrijkste **Europese migratie-crisis sinds WO2** in 2022:",
-        options: ["Oekraïners vluchtend voor Russische invasie (8+ mln)", "Syriërs", "Afghanen", "Verkeersongelukken"],
+        options: ["Oekraïners", "Syriërs", "Afghanen", "Venezolanen"],
         answer: 0,
-        wrongHints: [null, "Niet 2022-piek.", "Niet 2022.", "Onzin."],
+        wrongHints: [null, "Niet 2022-piek.", "Niet 2022.", "Niet — die crisis speelde vooral in Zuid-Amerika."],
         uitlegPad: {
           stappen: [
             { titel: "Massa-vlucht binnen weken", tekst: "Russische invasie 24 feb 2022 → in 6 weken 5 mln Oekraïners weg (vooral vrouwen + kinderen). Polen alleen 3 mln. EU activeerde Temporary Protection Directive → directe rechten zonder asiel-procedure. NL ~100k. Cijfer 8+ mln blijft uit huis (intern + extern verplaatst)." },
@@ -398,7 +398,7 @@ const steps = [
       {
         q: "**SDGs** vervangen welke oudere doelen?",
         options: [
-          "Millennium Development Goals (2000-2015)",
+          "Millennium Development Goals",
           "Olympische idealen",
           "EU-richtlijnen",
           "WO2-akkoorden"
@@ -415,13 +415,13 @@ const steps = [
       {
         q: "**Carbon Border Adjustment** (EU 2026):",
         options: [
-          "Importbelasting op CO₂-intensieve goederen uit niet-klimaat-actieve landen",
-          "Vrijhandelsakkoord",
-          "Migratie-quota",
-          "Internet-belasting"
+          "Importheffing op CO₂-intensieve goederen",
+          "Een vrijhandelsakkoord met buurlanden",
+          "Een quotum voor arbeidsmigranten",
+          "Een belasting op internetgebruik"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — handelsbarrière.", "Onzin.", "Onzin."],
+        wrongHints: [null, "Tegenovergesteld — handelsbarrière.", "Niets met migratie te maken.", "Niets met internet te maken."],
         uitlegPad: {
           stappen: [
             { titel: "Voorkomt 'carbon leakage'", tekst: "EU-bedrijven hebben CO₂-prijs (ETS). Buiten EU vaak niet → bedrijven verhuizen → CO₂-uitstoot verplaatst (leakage). CBAM: importbelasting gelijk aan EU-CO₂-prijs voor staal, cement, aluminium etc. Druk op China/India om eigen klimaatbeleid → druk op globale klimaat-actie." },
@@ -432,7 +432,7 @@ const steps = [
       {
         q: "**Voortgang SDGs** in 2024:",
         options: [
-          "Slechts ~15% op koers — meeste achter",
+          "Slechts ~15% op koers",
           "Allemaal gehaald",
           "Niet gemeten",
           "Geen vertraging"
@@ -449,7 +449,7 @@ const steps = [
       {
         q: "**Re-shoring** is:",
         options: [
-          "Productie terug naar thuisland (omgekeerd off-shoring)",
+          "Productie terughalen naar het thuisland",
           "Klimaat-actie",
           "Migratie",
           "Off-shoring uitbreiden"

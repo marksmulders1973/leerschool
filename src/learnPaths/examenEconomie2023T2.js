@@ -103,7 +103,7 @@ const steps = [
             { titel: "Wat is WOZ-waarde?", tekst: "Geschatte waarde van je woning, vastgesteld door de gemeente. Wordt elk jaar opnieuw bepaald." },
             { titel: "Waarvoor gebruikt de gemeente de WOZ?", tekst: "Voor de OZB (gemeentebelasting voor huiseigenaren)." },
             { titel: "Waarvoor gebruikt de Belastingdienst (Rijk) de WOZ?", tekst: "Voor het 'eigenwoningforfait' — een fictief inkomen dat huiseigenaren bij hun belastbaar inkomen moeten optellen." },
-            { titel: "Loop opties langs", tekst: "Aftrekposten: nee. Heffingskortingen: nee (vast bedrag). Hypotheekrenteaftrek: gaat over BETAALDE rente, niet WOZ. Eigenwoningforfait: ja → antwoord D." },
+            { titel: "Loop opties langs", tekst: "Aftrekposten: nee. Heffingskortingen: nee (vast bedrag). Hypotheekrenteaftrek: gaat over BETAALDE rente, niet WOZ. Eigenwoningforfait: ja → dat is het antwoord." },
           ],
           woorden: [
             { woord: "WOZ-waarde", uitleg: "Waardering Onroerende Zaken — gemeentelijke schatting van de marktwaarde van je woning per 1 januari." },
@@ -121,7 +121,7 @@ const steps = [
           niveaus: {
             basis: "WOZ × percentage = eigenwoningforfait → bij inkomen → IB-berekening.",
             simpeler: "Bezit je een huis? Dan rekent de Belastingdienst alsof je dat huis je 'inkomen' geeft (een fictief bedrag). Dat heet eigenwoningforfait — en wordt berekend met de WOZ-waarde. Dus de WOZ heeft de Belastingdienst nodig om dat bedrag te bepalen.",
-            nogSimpeler: "WOZ → eigenwoningforfait → D.",
+            nogSimpeler: "WOZ → eigenwoningforfait.",
           },
         },
       },
@@ -352,7 +352,7 @@ const steps = [
           niveaus: {
             basis: "Heffing op Chinees staal → Chinees duurder → VS-bedrijven kopen meer eigen staal.",
             simpeler: "Stel je voor: Chinees staal kostte $1.000/ton. VS heft 25% heffing → kost nu $1.250 voor VS-bedrijven. Amerikaans staal kostte $1.100/ton — was duurder, nu relatief goedkoper. VS-bedrijven schuiven over naar Amerikaans staal.",
-            nogSimpeler: "Heffing maakt China duurder → koop meer eigen → B.",
+            nogSimpeler: "Heffing maakt China duurder → koop meer eigen.",
           },
         },
       },

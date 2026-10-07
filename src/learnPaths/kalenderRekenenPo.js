@@ -196,7 +196,7 @@ const steps = [
           voorbeelden: [
             { type: "stap", tekst: "2024 ÷ 4 = 506. Geen rest. Schrikkeljaar ✓." },
             { type: "stap", tekst: "2026 ÷ 4 = 506,5. Wel rest. Geen schrikkel." },
-            { type: "stap", tekst: "Olympische zomerspelen vallen elke 4 jaar — vaak in schrikkeljaar (2020, 2024, 2028)." },
+            { type: "stap", tekst: "Olympische zomerspelen vallen elke 4 jaar — vaak in schrikkeljaar (2016, 2024, 2028)." },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Deel door 4 = schrikkel. Niet deelbaar = gewoon. Heel snelle test." }],
           niveaus: {

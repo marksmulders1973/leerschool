@@ -41,9 +41,9 @@ const steps = [
       },
       {
         q: "**Montesquieu's** bijdrage aan staatsleer:",
-        options: ["Trias politica (scheiding der machten)","Vrije markt","Communisme","Geen overheid"],
+        options: ["Trias politica", "Vrije markt", "Communisme", "Volonté générale"],
         answer: 0,
-        wrongHints: [null, "Adam Smith.", "Niet relevant (later).", "Niet relevant."],
+        wrongHints: [null, "Adam Smith.", "Niet relevant (later).", "Dat is Rousseau."],
         uitlegPad: {
           stappen: [{ titel: "De l'esprit des lois 1748", tekst: "**Montesquieu** in *De geest van de wetten* (1748): trias politica — scheiding van **wetgevende, uitvoerende, rechterlijke** macht voorkomt tirannie. Inspireerde Amerikaanse Grondwet 1787 + Franse 1791." }],
           niveaus: { basis: "Trias politica.", simpeler: "Montesquieu = scheiding", nogSimpeler: "Trias politica." },
@@ -72,7 +72,7 @@ const steps = [
       },
       {
         q: "**Wollstonecraft** schreef over:",
-        options: ["Rechten van de vrouw (1792)","Rechten van de man","Rechten van de werkman","Rechten van de koning"],
+        options: ["Rechten van de vrouw", "Rechten van de man", "Rechten van de werkman", "Rechten van de koning"],
         answer: 0,
         wrongHints: [null, "Niet — al elders behandeld.", "Te vroeg.", "Tegenovergestelde."],
         uitlegPad: {
@@ -132,9 +132,9 @@ const steps = [
       },
       {
         q: "Wat is **hypocrisie** in Onafhankelijkheidsverklaring?",
-        options: ["'Alle mensen gelijk' maar slavernij bleef bestaan","Mensen waren niet gelijk","Geen leger","Geen koloniën"],
+        options: ["Gelijkheid beloofd, slavernij bleef", "Geen gelijkheid beloofd", "Geen leger opgericht", "Geen koloniën genoemd"],
         answer: 0,
-        wrongHints: [null, "Wel claim van gelijkheid.", "Bestond wel.", "Bestonden wel."],
+        wrongHints: [null, "Er werd juist wél gelijkheid beloofd.", "Er was wel een leger.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Slavernij + inheemsen", tekst: "Onafhankelijkheidsverklaring zegt **'all men are created equal'** — maar **slavernij** bleef bestaan tot 1865 (Amerikaanse Burgeroorlog + 13e Amendement), **inheemse Amerikanen** kregen geen burgerrechten tot 1924, vrouwen geen stemrecht tot 1920. 'Alle mensen' = praktisch alleen witte, mannelijke, bezittende protestanten." }],
           theorie: "Toets-favoriet: hypocrisie-onderwerp. Belangrijk om gelijktijdig ideaal én praktijk te zien.",
@@ -154,7 +154,7 @@ const steps = [
         q: "Wat staat **14 juli 1789** voor?",
         options: ["Bestorming Bastille","Onafhankelijkheidsverklaring VS","Begin WO1","Slag bij Waterloo"],
         answer: 0,
-        wrongHints: [null, "Niet — de Amerikaanse Onafhankelijkheidsverklaring vond al eerder plaats; denk aan de volgorde.", "Niet — dat jaartal hoort bij het begin van de Eerste Wereldoorlog.", "Niet — dat hoort bij een veldslag in de Napoleontische periode."],
+        wrongHints: [null, "Niet — de Amerikaanse Onafhankelijkheidsverklaring vond al eerder plaats; denk aan de volgorde.", "Niet — de Eerste Wereldoorlog begon pas in 1914.", "Niet — de Slag bij Waterloo was pas in 1815."],
         uitlegPad: {
           stappen: [{ titel: "Symbool revolutie", tekst: "**14 juli 1789** = bestorming Bastille (staatsgevangenis) in Parijs. Symbolisch begin Franse Revolutie. Nu nationale feestdag Frankrijk: *fête nationale*. Soms 'Quatorze Juillet' genoemd." }],
           niveaus: { basis: "Bestorming Bastille.", simpeler: "14-7-1789 = Bastille", nogSimpeler: "Bastille." },
@@ -171,7 +171,7 @@ const steps = [
         },
       },
       {
-        q: "Wie leidde de **Schrikbewind (Terreur)** 1793-94?",
+        q: "Wie leidde het **Schrikbewind (Terreur)** 1793-94?",
         options: ["Robespierre","Napoleon","Lodewijk XVI","Marie Antoinette"],
         answer: 0,
         wrongHints: [null, "Niet — kwam later.", "Niet — was zelf slachtoffer.", "Niet — zelf onthoofd."],
@@ -232,9 +232,9 @@ const steps = [
       },
       {
         q: "Wat is **Code Napoléon (1804)**?",
-        options: ["Burgerlijk wetboek met gelijkheid voor wet","Kledingcode leger","Recept","Wapen"],
+        options: ["Burgerlijk wetboek", "Kledingcode voor het leger", "Kookboek van het hof", "Geheime legercode"],
         answer: 0,
-        wrongHints: [null, "'Code' betekent hier geen kledingvoorschrift maar een verzameling regels — waar zou een keizer regels voor opstellen?", "Het is geen kookrecept; denk aan iets juridisch dat Napoleon in heel Europa invoerde.", "De Code Napoléon is geen wapen maar iets op papier dat de rechten van burgers vastlegde."],
+        wrongHints: [null, "'Code' betekent hier geen kledingvoorschrift maar een verzameling regels — waar zou een keizer regels voor opstellen?", "Het is geen kookrecept; denk aan iets juridisch dat Napoleon in heel Europa invoerde.", "Geen geheimschrift — denk aan iets op papier dat de rechten van burgers vastlegde."],
         uitlegPad: {
           stappen: [{ titel: "Burgerlijk recht", tekst: "**Code Napoléon (1804)** = burgerlijk wetboek. Verspreidde Verlichtings-principes: **gelijkheid voor de wet**, vrijheid van religie, eigendom, scheiding kerk-staat, burgerlijk huwelijk. Invloed in NL, BE, IT, DE, Latijns-Amerika. NL-BW 1838 daarop gebaseerd." }],
           niveaus: { basis: "Burgerlijk wetboek.", simpeler: "Code Napol = BW", nogSimpeler: "BW" },
@@ -242,9 +242,9 @@ const steps = [
       },
       {
         q: "Napoleon verloor **Russische veldtocht 1812** vooral door:",
-        options: ["Winter + 'verschroeide aarde' tactiek","Verraad","Britse luchtmacht","Ziekte alleen"],
+        options: ["Winter + 'verschroeide aarde' tactiek", "Verraad", "Britse vloot", "Ziekte alleen"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Bestond niet.", "Speelde rol maar niet primair."],
+        wrongHints: [null, "Niet primair.", "De Britse vloot kon niet tot diep in Rusland komen — wat hield Napoleon op het land tegen?", "Speelde rol maar niet primair."],
         uitlegPad: {
           stappen: [{ titel: "Russische strategie + winter", tekst: "**1812**: Napoleon valt Rusland binnen met 600.000 man. Russen ontwijken slag, branden eigen oogst + dorpen ('verschroeide aarde') zodat Frans leger geen voedsel kan vinden. Moskou bereikt maar in vlammen. Terugtocht in winter: vrieskou + honger + Russen-aanvallen. **Slechts ~30.000 keren terug**. Catastrofe." }],
           theorie: "Lessen herhaald: Hitler-invasie RU 1941-43 = vergelijkbaar mislukt om vergelijkbare redenen.",
@@ -253,7 +253,7 @@ const steps = [
       },
       {
         q: "Wat besliste **Congres van Wenen 1814-15** voor NL?",
-        options: ["Verenigd Koninkrijk der Nederlanden (NL+BE)","Ingelijfd bij Pruisen","Bij Frankrijk","Republiek Holland"],
+        options: ["Verenigd Koninkrijk der Nederlanden", "Ingelijfd bij Pruisen", "Bij Frankrijk", "Republiek Holland"],
         answer: 0,
         wrongHints: [null, "Niet — Pruisen kreeg wel gebied in het Rijnland, maar Nederland niet.", "Niet — Napoleon-tijdperk afgelopen.", "Niet — de tijd van de Republiek kwam niet terug."],
         uitlegPad: {
@@ -273,7 +273,7 @@ const steps = [
     checks: [
       {
         q: "Welke Verlichter beïnvloedde **Onafhankelijkheidsverklaring VS** vooral?",
-        options: ["John Locke (natuurrechten)","Voltaire alleen","Rousseau alleen","Newton"],
+        options: ["John Locke", "Voltaire alleen", "Rousseau alleen", "Newton"],
         answer: 0,
         wrongHints: [null, "Speelde wel rol, niet primair.", "Vooral later in Frankrijk belangrijk.", "Wetenschap, niet politiek."],
         uitlegPad: {
@@ -313,9 +313,9 @@ const steps = [
       },
       {
         q: "Wat is een **paradox** Verlichting + revoluties?",
-        options: ["Idealen 'alle mensen gelijk' maar slavernij + onderdrukking bleven","Verlichting bestond niet","Revoluties slaagden volledig","Geen idealen"],
+        options: ["Gelijkheid beloofd, maar slavernij bleef", "Iedereen kreeg direct stemrecht", "Revoluties slaagden volledig", "Kerk kreeg meer macht"],
         answer: 0,
-        wrongHints: [null, "Wel.", "Niet — onafgemaakt.", "Wel."],
+        wrongHints: [null, "Was dat maar zo — wie mochten er níét stemmen?", "Niet — onafgemaakt.", "Niet — de Verlichting was juist kritisch op de kerk."],
         uitlegPad: {
           stappen: [{ titel: "Onafgewerkte revolutie", tekst: "**Paradox**: Verlichtingsidealen 'alle mensen gelijk' werden geproclameerd, maar **slavernij bleef** in VS (tot 1865) + FR-koloniën (terug onder Napoleon 1802), **vrouwen kregen geen stemrecht**, **inheemse Amerikanen + kolonisaties** werden niet als gelijken behandeld. Postkoloniale kritiek: Verlichting was westers + mannelijk + bezittend, sloot anderen uit." }],
           theorie: "Toets-favoriet: ideaal vs praktijk evalueren. Belangrijk te zien dat strijd doorging in 19e + 20e eeuw (vrouwenkiesrecht 1919 NL, dekolonisatie 20e eeuw, civil rights 1960s VS).",

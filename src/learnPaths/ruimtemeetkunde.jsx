@@ -343,7 +343,7 @@ const steps = [
   },
   {
     title: "Omtrek van een cirkel",
-    explanation: "Bij een **cirkel** werkt het anders, want er is geen 'zijde' om op te tellen. De omtrek hangt af van de **straal** of **diameter**.\n\n• **straal (r)** = afstand van het midden naar de rand\n• **diameter (d)** = de hele lijn dwars door het midden = **2 × straal**\n\nDe omtrek van een cirkel is:\n\n**omtrek cirkel = 2 × π × r** (of: **π × d**)\n\nWat is **π** (uitspraak: pi)? Het is een speciaal getal: ongeveer **3,14**. Het komt op de wereld in elke cirkel die je kunt tekenen — heel bijzonder.\n\nVoorbeeld: een cirkel met straal 5 cm:\nomtrek = 2 × π × 5 = 10 × π ≈ 10 × 3,14 = **31,4 cm**\n\nMet een rekenmachine kun je de exacte π-knop gebruiken voor preciezer antwoord.",
+    explanation: "Bij een **cirkel** werkt het anders, want er is geen 'zijde' om op te tellen. De omtrek hangt af van de **straal** of **diameter**.\n\n• **straal (r)** = afstand van het midden naar de rand\n• **diameter (d)** = de hele lijn dwars door het midden = **2 × straal**\n\nDe omtrek van een cirkel is:\n\n**omtrek cirkel = 2 × π × r** (of: **π × d**)\n\nWat is **π** (uitspraak: pi)? Het is een speciaal getal: ongeveer **3,14**. Het zit in elke cirkel die je kunt tekenen — heel bijzonder.\n\nVoorbeeld: een cirkel met straal 5 cm:\nomtrek = 2 × π × 5 = 10 × π ≈ 10 × 3,14 = **31,4 cm**\n\nMet een rekenmachine kun je de exacte π-knop gebruiken voor preciezer antwoord.",
     svg: `<svg viewBox="0 0 300 200">
 <circle cx="100" cy="100" r="55" fill="rgba(0,200,83,0.15)" stroke="${COLORS.curve}" stroke-width="2.5"/>
 <line x1="100" y1="100" x2="155" y2="100" stroke="${COLORS.curveAlt}" stroke-width="2"/>
@@ -370,7 +370,7 @@ const steps = [
           null,
           "Je hebt π × r gedaan. Maar de formule is **2 × π × r** — vergeet de 2 niet.",
           "Je hebt dubbel gerekend (2 × 2 × π × r). Kijk nog eens naar de formule voor de omtrek.",
-          "Je bent de π vergeten. Welke formule hoort bij de omtrek van een cirkel?",
+          "16 is 4 × 4 — dat is r², geen omtrek. Welke formule hoort bij de omtrek van een cirkel?",
         ],
       },
     ],
@@ -871,7 +871,7 @@ const steps = [
   },
   {
     title: "Inhoud bij vergroten — k³ !",
-    explanation: "En bij **inhoud** (3D) gaat het nog verder. Vergroot je een 3D-figuur met factor k? Dan wordt de inhoud **k³** (k tot de derde) keer zo groot:\n\n**inhoud beeld = k³ × inhoud origineel**\n\nWaarom k³? Inhoud ontstaat uit **drie** lengtes (lengte × breedte × hoogte). Alle drie worden k× → k × k × k = **k³**.\n\nVoorbeeld: kubus zijde 2 cm, inhoud 8 cm³. Vergroot met k = 2.\n• Nieuwe zijde = 4 cm\n• Nieuwe inhoud = 4 × 4 × 4 = 64 cm³\n• Of via k³ = 2³ = 8: 8 × 8 = 64 ✓\n\n**Belangrijk inzicht**: een kubus 2× zo groot maken geeft een inhoud **8× zo groot**! Dat is waarom een 'iets grotere' fles ineens veel meer water bevat dan je denkt.\n\nDe reden waarom een baby zo licht is en een volwassene zoveel zwaarder: bij dubbele lengte word je 8× zo zwaar (volume × 8).",
+    explanation: "En bij **inhoud** (3D) gaat het nog verder. Vergroot je een 3D-figuur met factor k? Dan wordt de inhoud **k³** (k tot de derde) keer zo groot:\n\n**inhoud beeld = k³ × inhoud origineel**\n\nWaarom k³? Inhoud ontstaat uit **drie** lengtes (lengte × breedte × hoogte). Alle drie worden k× → k × k × k = **k³**.\n\nVoorbeeld: kubus zijde 2 cm, inhoud 8 cm³. Vergroot met k = 2.\n• Nieuwe zijde = 4 cm\n• Nieuwe inhoud = 4 × 4 × 4 = 64 cm³\n• Of via k³ = 2³ = 8: 8 × 8 = 64 ✓\n\n**Belangrijk inzicht**: een kubus 2× zo groot maken geeft een inhoud **8× zo groot**! Dat is waarom een 'iets grotere' fles ineens veel meer water bevat dan je denkt.\n\nZo passen er in een kubus met een twee keer zo lange zijde 8 keer zoveel blokjes.",
     svg: `<svg viewBox="0 0 300 200">
 <g transform="translate(20, 80)">
 <g stroke="${COLORS.curve}" stroke-width="1.5" fill="rgba(0,200,83,0.20)">

@@ -198,7 +198,7 @@ const steps = [
       },
       {
         q: "Wanneer was het **laatste grote Deltawerk** voltooid?",
-        options: ["1997 — Maeslantkering","1986 — Oosterscheldekering","1953 — eerste plan","2010 — Zandmotor"],
+        options: ["1997 — Maeslantkering","1986 — Oosterscheldekering","1953 — eerste plan","2011 — Zandmotor"],
         answer: 0,
         wrongHints: [null, "Bekendst, maar Maeslantkering is later.", "Begin proces.", "Wel later innovatie, maar niet Deltawerk in oorspronkelijke plan."],
         uitlegPad: {
@@ -229,7 +229,7 @@ const steps = [
     checks: [
       {
         q: "Wat wordt voorspeld als **zeespiegelstijging** in NL tot 2100?",
-        options: ["0,3 tot 1,2 meter (KNMI)","Niet meetbaar","5 meter","30 cm zeker"],
+        options: ["0,3 tot 1,2 meter","Niet meetbaar","5 meter","30 cm zeker"],
         answer: 0,
         wrongHints: [null, "Niet — wel meetbaar, ~3mm/jaar nu.", "Te extreem — wel mogelijk bij ramp.", "Lager dan realistisch — verschilt per scenario."],
         uitlegPad: {
@@ -253,7 +253,7 @@ const steps = [
       },
       {
         q: "Wat is **bodemdaling** in West-NL?",
-        options: ["Land zakt 5-10 mm/jaar door veen-inklinking","Aardbeving","Erosie","Klimaatcyclus"],
+        options: ["Land zakt door het inklinken van veen","Land zakt door aardbevingen","Land slijt weg door de zee (erosie)","Land gaat op en neer met de seizoenen"],
         answer: 0,
         wrongHints: [null, "Niet — wel in Groningen (gas), maar bodemdaling-veen anders.", "Niet — vooral zee-erosie elders.", "Niet — chronisch proces, geen cyclus."],
         uitlegPad: {
@@ -317,9 +317,9 @@ const steps = [
       },
       {
         q: "Wat is **NAP**?",
-        options: ["Normaal Amsterdams Peil — referentie zeeniveau","Naam voor polder","Nederlandse Atletiek Prijs","Nationaal Akkoord Pensioenen"],
+        options: ["Normaal Amsterdams Peil","Naam voor polder","Nationaal Afwateringsplan","Noordzee Afsluitprogramma"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet.", "Niet relevant."],
+        wrongHints: [null, "Niet — het gaat om een hoogtemaat, geen gebied.", "Niet — het is een meetpunt voor hoogte, geen plan.", "Niet — het is een meetpunt voor hoogte, geen bouwproject."],
         uitlegPad: {
           stappen: [{ titel: "NAP sinds 1684", tekst: "**NAP** = Normaal Amsterdams Peil. Begon als gemiddeld zomerhoogwater van het IJ in Amsterdam (1684). In de Stopera (stadhuis Amsterdam) kun je het NAP zien. Alle hoogtes in NL gemeten t.o.v. NAP." }],
           woorden: [{ woord: "NAP", uitleg: "Normaal Amsterdams Peil — zeeniveau-referentie in NL." }],

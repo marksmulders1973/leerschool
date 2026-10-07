@@ -18,9 +18,9 @@ const steps = [
     checks: [
       {
         q: "Wat was de **Koude Oorlog**?",
-        options: ["Spanning VS-USSR 1945-1991 zonder echte oorlog", "Echte oorlog", "Winter-oorlog", "Niet bestaand"],
+        options: ["Spanning tussen VS en USSR", "Echte oorlog tussen VS en USSR", "Oorlog in de winter", "Ruzie tussen VS en Engeland"],
         answer: 0,
-        wrongHints: [null, "Er was wél geweld via andere landen (proxy), maar geen rechtstreeks gevecht.", "De naam slaat niet op weer of seizoen.", "De Koude Oorlog bestond wel — denk aan VS tegenover Sovjet-Unie."],
+        wrongHints: [null, "Er was wél geweld via andere landen (proxy), maar geen rechtstreeks gevecht.", "De naam slaat niet op weer of seizoen.", "Engeland was juist een bondgenoot van de VS."],
         uitlegPad: {
           stappen: [
             { titel: "Waarom 'koud'?", tekst: "Twee supermachten (VS + USSR) waren elkaars tegenstander, maar vochten nooit direct. Daarom 'koud' — geen schoten tussen ze." },
@@ -47,9 +47,9 @@ const steps = [
       },
       {
         q: "Wat is de **NAVO**?",
-        options: ["Westerse militaire alliantie (1949)", "Sovjet-pact", "VN", "Niets"],
+        options: ["Westers militair bondgenootschap", "Sovjet-bondgenootschap", "Verenigde Naties", "Europese Unie"],
         answer: 0,
-        wrongHints: [null, "Dat was het Warschaupact — die hoorde bij USSR.", "VN = Verenigde Naties, een ander soort organisatie (vrede + overleg, geen militair bondgenootschap).", "De NAVO bestaat sinds 1949 en is heel belangrijk vandaag de dag."],
+        wrongHints: [null, "Dat was het Warschaupact — die hoorde bij USSR.", "VN = Verenigde Naties, een ander soort organisatie (vrede + overleg, geen militair bondgenootschap).", "De EU is vooral economische en politieke samenwerking, geen militair bondgenootschap."],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent NAVO?", tekst: "**NAVO** = Noord-Atlantische Verdragsorganisatie (Engels: NATO). Een militair bondgenootschap van westerse landen rond de Atlantische Oceaan." },
@@ -76,7 +76,7 @@ const steps = [
       },
       {
         q: "Wat is **'IJzeren Gordijn'**?",
-        options: ["Scheiding West-Oost Europa", "Echt gordijn", "Wapen", "Auto"],
+        options: ["Scheiding West-Oost Europa", "Echt gordijn", "Wapen", "Schip"],
         answer: 0,
         wrongHints: [null, "Geen letterlijk gordijn van ijzer — dit is beeldspraak voor een politieke grens.", "Geen wapen, maar een term over verdeling van Europa.", "Geen voertuig — het gaat over een grens in Europa na WO2."],
         uitlegPad: {
@@ -114,19 +114,19 @@ const steps = [
   {
     title: "Berlijnse Muur, Cuba, Vietnam — crises",
     explanation:
-      "Tijdens Koude Oorlog waren er **gevaarlijke momenten** dat het bijna echt oorlog werd.\n\n**1. Berlijnse blokkade + luchtbrug** *(1948-49)*:\n• USSR sloot wegen naar West-Berlijn af.\n• Wilden dat Westen wegging.\n• VS + bondgenoten **vlogen voorraden binnen** *(11 maanden lang!)*.\n• 277.000 vluchten.\n• USSR gaf op.\n\n**2. Berlijnse Muur** 🧱 *(1961-1989)*:\n• Berlijn was gedeeld: West *(vrij)* + Oost *(communistisch)*.\n• 1949: 2 Duitslanden *(West-Duitsland + Oost-Duitsland)*.\n• Berlijn was eiland van Westen in Oost-Duitsland.\n• Oost-Duitsers vluchtten naar West *(beter leven)*.\n• **1961**: Oost-Duitsland bouwde *(met steun van de USSR)* een **muur** door Berlijn.\n• 155 km lang, 3,6 m hoog, wachters.\n• Mensen aan Oost-kant **gevangen** in eigen land.\n• ~140 mensen gedood bij vluchtpoging.\n• Symbool van Koude Oorlog.\n\n**John F. Kennedy** in Berlijn *(1963)*:\n• Beroemde toespraak.\n• *'Ich bin ein Berliner'* *(Ik ben een Berlijner)* — solidariteit met West-Berlijn.\n\n**3. Cuba-crisis** *(oktober 1962)* — **dichtste bij kernoorlog OOIT!**\n\n**Wat gebeurde?**\n• Cuba *(Caraïbisch eiland, dicht bij VS)* werd communistisch in 1959 *(Fidel Castro)*.\n• USSR plaatste **kernraketten** op Cuba *(150 km van Florida)*.\n• VS-president **Kennedy** ontdekt dit met spion-vliegtuigen.\n• **13 dagen** spanning.\n• VS blokkeerde Cuba.\n• USSR-leider Chroesjtsjov + Kennedy onderhandelden.\n• Oplossing: USSR haalt raketten weg + VS haalt raketten Turkije weg + belooft geen invasie Cuba.\n\nAls 1 verkeerde stap → kernoorlog → einde wereld.\n\n**4. Vietnam-oorlog** *(1955-1975)* — bekendste proxy-oorlog:\n\n• Noord-Vietnam *(communistisch)* vs Zuid-Vietnam *(westers gesteund)*.\n• **VS hielp Zuid** met soldaten + bommen.\n• 1968: ~500.000 VS-soldaten in Vietnam.\n• Veel verzet thuis VS *('Stop de oorlog!')*.\n• **My Lai-bloedbad** *(1968)*: VS-soldaten doodden 500 burgers.\n• Beelden op TV: eerste 'tv-oorlog'.\n• **Noord-Vietnam won**: VS trok zich terug 1973-1975.\n• Vereniging: heel Vietnam communistisch onder Hanoi.\n• Doden: ~3 miljoen, vooral Vietnamezen.\n\n**Iconische foto's**:\n• **Naakt meisje, brandwonden van napalm** *(1972, Phan Thi Kim Phuc)*.\n• **Saigon-executie** *(1968)*.\n• **Helikopter-evacuatie ambassade VS** *(1975)*.\n\n**Hippie-beweging + tegenstand**:\n• Jongeren tegen oorlog.\n• 'Make love, not war'.\n• Beatmuziek + folk *(Bob Dylan, Joan Baez)*.\n• **Woodstock** *(1969)* = festival.\n• Vredesteken **✌️** populair.\n\n**5. Andere proxy-oorlogen**:\n• **Korea-oorlog** *(1950-53)*: Noord vs Zuid Korea — nog steeds gedeeld.\n• **Afghanistan** *(1979-89)*: USSR-invasie — verloren.\n• **Angola, Mozambique, Vietnam, Cuba, Nicaragua, El Salvador** — vele.\n\n**6. Olympische Spelen-boycot** *(1980 + 1984)*:\n• 1980 Moskou: VS + 65 landen weg uit protest tegen invasie Afghanistan.\n• 1984 Los Angeles: USSR + 14 landen weg uit wraak.\n• Sport + politiek gemengd.\n\n**Toets-feitje**:\nDe **Cubaanse Rakettencrisis** *(13-28 okt 1962)* was zo gevaarlijk dat de kapitein van een **Russische onderzeeër een kerntorpedo wilde afvuren**. Eén officier — **Vasili Arkhipov** — weigerde in te stemmen en verhinderde zo mogelijk **Wereldoorlog III**. Hij wordt 'de man die de wereld redde' genoemd.",
+      "Tijdens Koude Oorlog waren er **gevaarlijke momenten** dat het bijna echt oorlog werd.\n\n**1. Berlijnse blokkade + luchtbrug** *(1948-49)*:\n• USSR sloot wegen naar West-Berlijn af.\n• Wilden dat Westen wegging.\n• VS + bondgenoten **vlogen voorraden binnen** *(11 maanden lang!)*.\n• 277.000 vluchten.\n• USSR gaf op.\n\n**2. Berlijnse Muur** 🧱 *(1961-1989)*:\n• Berlijn was gedeeld: West *(vrij)* + Oost *(communistisch)*.\n• 1949: 2 Duitslanden *(West-Duitsland + Oost-Duitsland)*.\n• Berlijn was eiland van Westen in Oost-Duitsland.\n• Oost-Duitsers vluchtten naar West *(beter leven)*.\n• **1961**: Oost-Duitsland bouwde *(met steun van de USSR)* een **muur** door Berlijn.\n• 155 km lang, 3,6 m hoog, wachters.\n• Mensen aan Oost-kant **gevangen** in eigen land.\n• ~140 mensen gedood bij vluchtpoging.\n• Symbool van Koude Oorlog.\n\n**John F. Kennedy** in Berlijn *(1963)*:\n• Beroemde toespraak.\n• *'Ich bin ein Berliner'* *(Ik ben een Berlijner)* — solidariteit met West-Berlijn.\n\n**3. Cuba-crisis** *(oktober 1962)* — **dichtste bij kernoorlog OOIT!**\n\n**Wat gebeurde?**\n• Cuba *(Caraïbisch eiland, dicht bij VS)* werd communistisch in 1959 *(Fidel Castro)*.\n• USSR plaatste **kernraketten** op Cuba *(150 km van Florida)*.\n• VS-president **Kennedy** ontdekt dit met spion-vliegtuigen.\n• **13 dagen** spanning.\n• VS blokkeerde Cuba.\n• USSR-leider Chroesjtsjov + Kennedy onderhandelden.\n• Oplossing: USSR haalt raketten weg + VS haalt raketten Turkije weg + belooft geen invasie Cuba.\n\nAls 1 verkeerde stap → kernoorlog → einde wereld.\n\n**4. Vietnam-oorlog** *(1955-1975)* — bekendste proxy-oorlog:\n\n• Noord-Vietnam *(communistisch)* vs Zuid-Vietnam *(westers gesteund)*.\n• **VS hielp Zuid** met soldaten + bommen.\n• 1968: ~500.000 VS-soldaten in Vietnam.\n• Veel verzet thuis VS *('Stop de oorlog!')*.\n• **My Lai-bloedbad** *(1968)*: VS-soldaten doodden 500 burgers.\n• Beelden op TV: eerste 'tv-oorlog'.\n• **Noord-Vietnam won**: VS trok zich terug 1973-1975.\n• Vereniging: heel Vietnam communistisch onder Hanoi.\n• Doden: ~3 miljoen, vooral Vietnamezen.\n\n**Iconische foto's**:\n• **Naakt meisje, brandwonden van napalm** *(1972, Phan Thi Kim Phuc)*.\n• **Saigon-executie** *(1968)*.\n• **Helikopter-evacuatie ambassade VS** *(1975)*.\n\n**Hippie-beweging + tegenstand**:\n• Jongeren tegen oorlog.\n• 'Make love, not war'.\n• Beatmuziek + folk *(Bob Dylan, Joan Baez)*.\n• **Woodstock** *(1969)* = festival.\n• Vredesteken **✌️** populair.\n\n**5. Andere proxy-oorlogen**:\n• **Korea-oorlog** *(1950-53)*: Noord vs Zuid Korea — nog steeds gedeeld.\n• **Afghanistan** *(1979-89)*: USSR-invasie — verloren.\n• **Angola, Mozambique, Vietnam, Cuba, Nicaragua, El Salvador** — vele.\n\n**6. Olympische Spelen-boycot** *(1980 + 1984)*:\n• 1980 Moskou: VS + 65 landen weg uit protest tegen invasie Afghanistan.\n• 1984 Los Angeles: USSR + 14 landen weg uit wraak.\n• Sport + politiek gemengd.\n\n**Toets-feitje**:\nDe **Cubaanse Rakettencrisis** *(16-28 okt 1962)* was zo gevaarlijk dat de kapitein van een **Russische onderzeeër een kerntorpedo wilde afvuren**. Eén officier — **Vasili Arkhipov** — weigerde in te stemmen en verhinderde zo mogelijk **Wereldoorlog III**. Hij wordt 'de man die de wereld redde' genoemd.",
     checks: [
       {
         q: "Wanneer werd de **Berlijnse Muur gebouwd**?",
-        options: ["1961", "1945", "1989", "Nooit"],
+        options: ["1961", "1945", "1989", "1949"],
         answer: 0,
-        wrongHints: [null, "Te vroeg.", "Toen viel hij.", "Wel."],
+        wrongHints: [null, "Te vroeg.", "Toen viel hij.", "Toen ontstonden de twee Duitslanden — de muur kwam later."],
       },
       {
         q: "Wat was de **Cuba-crisis** (1962)?",
-        options: ["USSR-raketten op Cuba, bijna kernoorlog", "Echte oorlog", "Spel", "Niet bestaand"],
+        options: ["Bijna-kernoorlog om raketten op Cuba", "Echte oorlog tussen VS en Cuba", "Revolutie van Fidel Castro", "Orkaan die Cuba verwoestte"],
         answer: 0,
-        wrongHints: [null, "Echte oorlog werd nét voorkomen — dat is juist het verhaal.", "Geen spel — dit was 13 dagen waarin de wereld op springen stond.", "Bestond zeker — een van de spannendste momenten in de geschiedenis."],
+        wrongHints: [null, "Echte oorlog werd nét voorkomen — dat is juist het verhaal.", "Die revolutie was al in 1959 — wat gebeurde er in 1962?", "Geen natuurramp — dit was 13 dagen waarin de wereld op springen stond."],
         uitlegPad: {
           stappen: [
             { titel: "Wat was er aan de hand?", tekst: "Cuba werd in 1959 communistisch (Fidel Castro). De USSR plaatste daar kernraketten — slechts **150 km** van Florida (VS). De VS schrok zich rot." },
@@ -153,7 +153,7 @@ const steps = [
       },
       {
         q: "Wie won de **Vietnam-oorlog**?",
-        options: ["Noord-Vietnam (communistisch)", "VS", "Niemand", "Frankrijk"],
+        options: ["Noord-Vietnam", "VS", "Niemand", "Frankrijk"],
         answer: 0,
         wrongHints: [null, "De VS trok zich terug zonder de oorlog te winnen — pijnlijke nederlaag.", "Iemand won wel — kijk naar wie sinds 1975 heel Vietnam beheerste.", "Frankrijk had Vietnam eerder als kolonie maar verloor al in 1954 (Dien Bien Phu)."],
         uitlegPad: {
@@ -181,9 +181,9 @@ const steps = [
       },
       {
         q: "Wat zei **Kennedy in Berlijn** (1963)?",
-        options: ["'Ich bin ein Berliner'", "'We choose to go to the Moon'", "'I have a dream'", "Niets"],
+        options: ["'Ich bin ein Berliner'", "'We choose to go to the Moon'", "'I have a dream'", "'Tear down this wall!'"],
         answer: 0,
-        wrongHints: [null, "Dat zei Kennedy ook, maar over NASA — niet in Berlijn.", "Dat was Martin Luther King, niet Kennedy.", "Kennedy gaf juist een heel beroemde toespraak in Berlijn."],
+        wrongHints: [null, "Dat zei Kennedy ook, maar over NASA — niet in Berlijn.", "Dat was Martin Luther King, niet Kennedy.", "Dat zei president Reagan in 1987 — niet Kennedy."],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent het?", tekst: "**'Ich bin ein Berliner'** = 'Ik ben een Berlijner'. Kennedy zei dit op 26 juni 1963 voor een enorme menigte in West-Berlijn. Hij sprak Duits om solidariteit te tonen." },
@@ -221,9 +221,9 @@ const steps = [
       },
       {
         q: "Wie was **Gorbatsjov**?",
-        options: ["USSR-leider die hervormde (Glasnost/Perestrojka)", "VS-president", "Kennedy", "NL-premier"],
+        options: ["Leider van de Sovjet-Unie", "President van de VS", "Leider van Oost-Duitsland", "Premier van Nederland"],
         answer: 0,
-        wrongHints: [null, "Gorbatsjov leidde de Sovjet-Unie, niet de VS.", "Kennedy was 20 jaar eerder VS-president — andere periode.", "Gorbatsjov is Russisch, niet Nederlands."],
+        wrongHints: [null, "Gorbatsjov leidde de Sovjet-Unie, niet de VS.", "Oost-Duitsland had eigen leiders, zoals Honecker — Gorbatsjov zat in Moskou.", "Gorbatsjov is Russisch, niet Nederlands."],
         uitlegPad: {
           stappen: [
             { titel: "Wie was hij?", tekst: "**Mikhail Gorbatsjov** (1931-2022) werd in 1985 leider van de Sovjet-Unie. Hij begreep dat het systeem stond te wankelen — armoede, corruptie, achterstand op Westen." },
@@ -250,9 +250,9 @@ const steps = [
       },
       {
         q: "Wat gebeurde op **11 september 2001**?",
-        options: ["Aanslag Twin Towers NYC", "Berlijnse Muur viel", "Cuba-crisis", "Geen"],
+        options: ["Aanslag Twin Towers NYC", "Berlijnse Muur viel", "Cuba-crisis", "Sovjet-Unie viel uiteen"],
         answer: 0,
-        wrongHints: [null, "De Muur viel 12 jaar eerder (1989).", "Cuba-crisis was 1962, niet 2001.", "Er gebeurde wel degelijk iets enorms op die dag."],
+        wrongHints: [null, "De Muur viel 12 jaar eerder (1989).", "Cuba-crisis was 1962, niet 2001.", "De Sovjet-Unie viel al in 1991 uit elkaar."],
         uitlegPad: {
           stappen: [
             { titel: "Wat gebeurde er?", tekst: "Op dinsdag 11 september 2001 kaapten **19 terroristen van Al-Qaida** 4 vliegtuigen in de VS. Twee vlogen in de Twin Towers (World Trade Center, New York). Eén in het Pentagon. Eén crashte in Pennsylvania (passagiers vochten terug)." },
@@ -266,7 +266,7 @@ const steps = [
           ],
           theorie: "11 september wordt vaak gezien als de gebeurtenis die de 21e eeuw vormde — meer veiligheidschecks, langere oorlogen, andere internationale verhoudingen.",
           voorbeelden: [
-            { type: "concrete impact", tekst: "Sinds 9/11 moet je je schoenen + riem uittrekken op het vliegveld. Veiligheids­controles werden veel strenger." },
+            { type: "concrete impact", tekst: "Sinds 9/11 moet je je schoenen + riem uittrekken op het vliegveld. Veiligheidscontroles werden veel strenger." },
             { type: "NL deelname", tekst: "Nederland stuurde militairen naar Afghanistan (2001-2014). 25 NL-soldaten kwamen om." },
           ],
           basiskennis: [{ onderwerp: "Onthouden", uitleg: "9/11 = 11 september 2001 = Twin Towers New York = Al-Qaida = begin War on Terror." }],
@@ -289,16 +289,16 @@ const steps = [
     title: "Eind-toets — Koude Oorlog mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
-      { q: "**Koude Oorlog** = ?", options: ["VS-USSR spanning 1945-1991", "Echte oorlog", "Winter", "Geen"], answer: 0, wrongHints: [null, "Geen direct.", "Niet.", "Wel."] },
+      { q: "**Koude Oorlog** = ?", options: ["Spanning tussen VS en USSR", "Echte oorlog tussen VS en USSR", "Oorlog in de winter", "Ruzie tussen VS en Engeland"], answer: 0, wrongHints: [null, "Geen direct.", "De naam slaat niet op het weer.", "Engeland was juist een bondgenoot van de VS."] },
       { q: "Wanneer **viel de Berlijnse Muur**?", options: ["1989", "1961", "1945", "2001"], answer: 0, wrongHints: [null, "Gebouwd.", "WO2-einde.", "9/11."] },
-      { q: "Wie voorkwamen een **kernoorlog tijdens de Cuba-crisis (1962)**?", options: ["Kennedy + Chroesjtsjov + Arkhipov", "Stalin", "Gorbatsjov", "Hitler"], answer: 0, wrongHints: [null, "Eerder.", "Later.", "WO2."] },
-      { q: "Wat is **NAVO**?", options: ["Westerse militaire alliantie sinds 1949", "Sovjet-pact", "VN", "EU"], answer: 0, wrongHints: [null, "Warschau.", "Andere.", "Andere."] },
-      { q: "Wie won de **Vietnam-oorlog**?", options: ["Noord-Vietnam", "VS", "Frankrijk", "Niemand"], answer: 0, wrongHints: [null, "Verloor.", "Eerder weg.", "Wel."] },
+      { q: "Wie voorkwamen een **kernoorlog tijdens de Cuba-crisis (1962)**?", options: ["Kennedy en Chroesjtsjov", "Stalin en Truman", "Gorbatsjov en Reagan", "Hitler en Churchill"], answer: 0, wrongHints: [null, "Stalin was in 1953 al overleden.", "Die waren pas in de jaren '80 aan de macht.", "WO2."] },
+      { q: "Wat is **NAVO**?", options: ["Westers militair bondgenootschap", "Sovjet-bondgenootschap", "Verenigde Naties", "Europese Unie"], answer: 0, wrongHints: [null, "Warschau.", "Andere.", "De EU is vooral economische en politieke samenwerking."] },
+      { q: "Wie won de **Vietnam-oorlog**?", options: ["Noord-Vietnam", "VS", "Frankrijk", "Niemand"], answer: 0, wrongHints: [null, "Verloor.", "Eerder weg.", "Iemand won wel — wie beheerste sinds 1975 heel Vietnam?"] },
       { q: "Wanneer was **9/11**?", options: ["11 september 2001", "1989", "1945", "2022"], answer: 0, wrongHints: [null, "Muur viel.", "WO2.", "Oekraïne."] },
-      { q: "Wat was het **IJzeren Gordijn**?", options: ["Symbolische scheiding Oost en West Europa", "Een echt gordijn in een museum", "Een rivier", "Een berg"], answer: 0, wrongHints: [null, "Symbolisch, niet letterlijk.", "Niet.", "Niet."] },
+      { q: "Wat was het **IJzeren Gordijn**?", options: ["Symbolische scheiding Oost en West Europa", "Een echt gordijn in een museum", "Een rivier", "Een berg"], answer: 0, wrongHints: [null, "Geen echt gordijn — waar staat het woord voor?", "Niet.", "Niet."] },
       { q: "Welke leider leidde de **Sovjet-Unie** in WO2?", options: ["Stalin", "Hitler", "Roosevelt", "Churchill"], answer: 0, wrongHints: [null, "Duitsland.", "VS.", "VK."] },
       { q: "Welk land was **bondgenoot van de VS** in de NAVO?", options: ["West-Duitsland", "Oost-Duitsland", "Sovjet-Unie", "China"], answer: 0, wrongHints: [null, "Warschau-pact.", "Tegenstander VS.", "Communistisch."] },
-      { q: "Wat is een **dictatuur**?", options: ["Land geregeerd door één leider zonder eerlijke verkiezingen", "Een eerlijke democratie", "Een religie", "Een sport"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Niet politiek.", "Niet politiek."] },
+      { q: "Wat is een **dictatuur**?", options: ["Eén leider met alle macht", "Een eerlijke democratie", "Een soort religie", "Een soort sport"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Niet politiek.", "Niet politiek."] },
       { q: "Wanneer viel de **Sovjet-Unie uiteen**?", options: ["1991", "1945", "1989", "2000"], answer: 0, wrongHints: [null, "WO2.", "Berlijnse Muur.", "Te laat."] },
       { q: "Wie werd **leider van Cuba na de revolutie van 1959**?", options: ["Fidel Castro", "Kennedy", "Stalin", "Chroesjtsjov"], answer: 0, wrongHints: [null, "VS-president.", "Sovjet-leider eerder.", "Sovjet."] },
     ],

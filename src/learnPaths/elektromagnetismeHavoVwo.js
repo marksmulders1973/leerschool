@@ -123,7 +123,7 @@ const steps = [
         q: "Een draad van 0,40 m draagt I = 3,0 A loodrecht door B = 0,20 T. F op draad?",
         options: ["0,24 N", "2,4 N", "0,024 N", "1,5 N"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer eenheden.", "Te klein.", "Niet — formule is F=BIL, geen optellen."],
+        wrongHints: [null, "Niet — controleer eenheden.", "Te klein.", "Niet — vermenigvuldig B, I en L; niet delen."],
         uitlegPad: {
           stappen: [{ titel: "F = B·I·L", tekst: "F = 0,20 · 3,0 · 0,40 = **0,24 N**. Vergeet sin(α) niet wanneer hoek niet 90° is — hier wel." }],
           theorie: "Elektromotor-rotorprincipe: spoel in B-veld, F op zijden geven koppel. Sterk veld + dikke draad (hoge I) + veel windingen = krachtige motor.",
@@ -148,7 +148,7 @@ const steps = [
       {
         q: "Wanneer **draait een elektromotor om** als je een eenvoudige spoel gebruikt?",
         options: [
-          "Stroomrichting omkeren, of veld-richting omkeren (één van beide)",
+          "Stroom- of veldrichting omkeren",
           "Spoel sneller laten draaien",
           "Magneten dichter bij zetten",
           "Spoel zwaarder maken"
@@ -182,7 +182,7 @@ const steps = [
       {
         q: "Je duwt een magneet in een spoel. Inductie-stroom maakt een veld dat:",
         options: [
-          "De magneet afstoot (Lenz)",
+          "De magneet afstoot",
           "De magneet aantrekt",
           "Geen invloed heeft",
           "De spoel verwarmt zonder kracht"
@@ -266,7 +266,7 @@ const steps = [
       {
         q: "Waarom transport elektriciteit op **hoogspanning** (150-400 kV)?",
         options: [
-          "Lage stroom → minder warmte-verlies (P=I²R) in draden",
+          "Lage stroom → minder warmteverlies in draden",
           "Hogere spanning is veiliger",
           "Hogere spanning gaat sneller",
           "Apparaten werken alleen op hoogspanning"

@@ -37,7 +37,7 @@ const steps = [
         wrongHints: [null, "Niet — dat zijn activa.", "Niet — wel termen maar niet beide passiva.", "Niet — W&V."],
         uitlegPad: {
           stappen: [{ titel: "Rechts op balans", tekst: "**Passiva** (credit-zijde balans) = **hoe** bedrijf gefinancierd is: Eigen Vermogen + Vreemd Vermogen. Tegenover **activa** (debet) = **wat** bedrijf bezit: gebouwen, voorraad, debiteuren, etc. Balans altijd in evenwicht: A = P." }],
-          niveaus: { basis: "EV + VV.", simpeler: "Passiva = EV+VV", nogSimpeler: "A." },
+          niveaus: { basis: "EV + VV.", simpeler: "Passiva = EV+VV", nogSimpeler: "EV + VV." },
         },
       },
       {
@@ -47,7 +47,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is debt-equity-ratio.", "Niet — dat zegt niets over hoe het bedrijf gefinancierd is.", "Niet — winstmarge."],
         uitlegPad: {
           stappen: [{ titel: "Eigen vermogen-aandeel", tekst: "**Solvabiliteit** = **EV / Totaal vermogen × 100%**. Toont in welke mate bedrijf zijn schulden kan betalen bij faillissement. Vuistregel ≥25-30%. Banken eisen vaak 40%+ voor lening." }],
-          niveaus: { basis: "EV/TV ×100.", simpeler: "Solv = EV/TV", nogSimpeler: "A." },
+          niveaus: { basis: "EV/TV ×100.", simpeler: "Solv = EV/TV", nogSimpeler: "EV/TV ×100." },
         },
       },
       {
@@ -57,7 +57,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is nettowinst.", "Dat is een balans-begrip, geen winst-berekening.", null],
         uitlegPad: {
           stappen: [{ titel: "Verschil verkoop-inkoop", tekst: "**Brutowinst** = omzet − inkoopwaarde van verkochte producten. Bv: kocht voor €300k, verkocht voor €500k → brutowinst €200k. Daarvan moeten nog lonen, huur, afschrijvingen, rente, belasting af → nettowinst." }],
-          niveaus: { basis: "Omzet − inkoop.", simpeler: "Bruto = O − I", nogSimpeler: "A." },
+          niveaus: { basis: "Omzet − inkoop.", simpeler: "Bruto = O − I", nogSimpeler: "Omzet − inkoop." },
         },
       },
       {
@@ -67,12 +67,12 @@ const steps = [
         wrongHints: [null, "Afschrijven heeft niets met de fiscus te maken — wat gebeurt er met de waarde van een machine na jaren gebruik?", null, null],
         uitlegPad: {
           stappen: [{ titel: "Spreiding van kosten", tekst: "**Afschrijving** = jaarlijkse waardevermindering vaste activa (gebouw, machine, auto). Lineair: (aanschaf − restwaarde) / levensduur. Bv. machine €50k, restwaarde €5k, levensduur 10 jaar → €4500/jaar afschrijving. Spreiding van kosten over gebruiksperiode." }],
-          niveaus: { basis: "Waardeverlies activa.", simpeler: "Afschrijving = waarde-verlies", nogSimpeler: "A." },
+          niveaus: { basis: "Waardeverlies activa.", simpeler: "Afschrijving = waarde-verlies", nogSimpeler: "Waardeverlies activa." },
         },
       },
       {
         q: "**Current ratio** vlottende activa / kort vreemd vermogen. Wat is minimum?",
-        options: ["~1 (liefst 1,5+)","0","10","100"],
+        options: ["1", "0", "10", "100"],
         answer: 0,
         wrongHints: [null, "Bedrijf zou direct failliet gaan.", "Te hoog — kapitaalverspilling.", "Absurd."],
         uitlegPad: {
@@ -87,7 +87,7 @@ const steps = [
   {
     title: "Kostencalculatie + Break-even",
     explanation:
-      "Bedrijven moeten weten: **wat kost mijn product werkelijk?** Pas dan kun je prijs bepalen + winst maken.\n\n**Kosten-soorten**:\n\n**Constante (vaste) kosten**:\n• Onafhankelijk van productie-omvang.\n• Voorbeelden: huur pand, salaris vast personeel, verzekeringen, afschrijving machines.\n• Per stuk dalen ze als je meer produceert (gespreid).\n\n**Variabele kosten**:\n• Stijgen met productie.\n• Voorbeelden: grondstoffen, energie, productie-arbeid (uurloon).\n\n**Totale kosten** = constante + variabele kosten.\n\n**Voorbeeld T-shirts**:\n• Constante kosten /maand: €5.000 (huur + machines + vast personeel).\n• Variabele kosten /T-shirt: €4 (stof + naald + draad).\n• Verkoopprijs: €15.\n\nKostprijs / T-shirt bij 1000 stuks/maand:\n• Constant per stuk: 5000/1000 = €5.\n• Variabel: €4.\n• **Kostprijs**: €9.\n• Brutowinst per T-shirt: 15 − 9 = **€6**.\n\nKostprijs / T-shirt bij 500 stuks/maand:\n• Constant per stuk: 5000/500 = €10.\n• Variabel: €4.\n• **Kostprijs**: €14. Brutowinst: €1 — bijna geen marge.\n\n**→ Schaalvoordelen**: meer produceren verlaagt kostprijs (alleen door constante kosten gespreid).\n\n**Break-even-punt (BEP)** = aantal stuks waarbij omzet = totale kosten → geen winst, geen verlies.\n\n**Formule**: BEP = **constante kosten / (verkoopprijs − variabele kosten/stuk)**.\n\n• Noemer (P − V) = **dekkingsbijdrage per stuk** (deel van prijs dat bijdraagt aan dekken constante kosten).\n• Voorbeeld T-shirts: 5000 / (15 − 4) = 5000/11 ≈ **455 stuks/maand**.\n• Boven 455: winst. Onder: verlies.\n\n**BEP-omzet** = BEP × verkoopprijs = 455 × 15 = €6825 omzet om break-even te bereiken.\n\n**Dekkingsbijdrage (DB)**:\n• Totale DB = omzet − totale variabele kosten.\n• Eerst dekt DB de constante kosten, daarna = winst.\n\n**Verkoop-prijs-bepaling-methodes**:\n\n**Cost-plus-prijs** (kostprijs-plus):\n• Bereken kostprijs → tel winstopslag op.\n• Voorbeeld: kostprijs €9 + 30% opslag = €11,70.\n• Eenvoudig maar negeert markt.\n\n**Marktprijs**:\n• Wat concurrentie + klant accepteren.\n• Belangrijker in concurrerende markt.\n\n**Penetratiestrategie**:\n• Lage start-prijs om markt in te dringen.\n• Voorbeelden: Netflix-start NL, Aldi.\n\n**Skimming**:\n• Hoge start-prijs voor early-adopters.\n• Voorbeelden: nieuwe iPhone, Tesla-debut.\n\n**Promotionele prijs**:\n• Tijdelijke korting.\n• Acties: 1+1 gratis, 50% korting.\n\n**BTW + prijs**:\n• In NL BTW 21% (hoog), 9% (laag voor voedsel, boeken, OV, etc.), 0% (export).\n• Verkoopprijs **incl. BTW** vs **excl. BTW**.\n• Voor bedrijf is BTW doorgeefluik (consument betaalt, bedrijf draagt af).\n\n**Marges**:\n• **Brutomarge** = (omzet − inkoop) / omzet × 100%.\n• **Nettowinstmarge** = nettowinst / omzet × 100%.\n• Detailhandel: bruto 30-50%, netto 2-10%.\n• Tech: bruto 60-80%, netto 20-30%.\n• Auto-dealers: bruto 10-15%, netto 2-3%.\n\n**Toets-patroon**: bereken BEP + adviseer prijsstrategie.",
+      "Bedrijven moeten weten: **wat kost mijn product werkelijk?** Pas dan kun je prijs bepalen + winst maken.\n\n**Kosten-soorten**:\n\n**Constante (vaste) kosten**:\n• Onafhankelijk van productie-omvang.\n• Voorbeelden: huur pand, salaris vast personeel, verzekeringen, afschrijving machines.\n• Per stuk dalen ze als je meer produceert (gespreid).\n\n**Variabele kosten**:\n• Stijgen met productie.\n• Voorbeelden: grondstoffen, energie, productie-arbeid (uurloon).\n\n**Totale kosten** = constante + variabele kosten.\n\n**Voorbeeld T-shirts**:\n• Constante kosten /maand: €5.000 (huur + machines + vast personeel).\n• Variabele kosten /T-shirt: €4 (stof + naald + draad).\n• Verkoopprijs: €15.\n\nKostprijs / T-shirt bij 1000 stuks/maand:\n• Constant per stuk: 5000/1000 = €5.\n• Variabel: €4.\n• **Kostprijs**: €9.\n• Winst per T-shirt: 15 − 9 = **€6**.\n\nKostprijs / T-shirt bij 500 stuks/maand:\n• Constant per stuk: 5000/500 = €10.\n• Variabel: €4.\n• **Kostprijs**: €14. Winst per T-shirt: €1 — bijna geen marge.\n\n**→ Schaalvoordelen**: meer produceren verlaagt kostprijs (alleen door constante kosten gespreid).\n\n**Break-even-punt (BEP)** = aantal stuks waarbij omzet = totale kosten → geen winst, geen verlies.\n\n**Formule**: BEP = **constante kosten / (verkoopprijs − variabele kosten/stuk)**.\n\n• Noemer (P − V) = **dekkingsbijdrage per stuk** (deel van prijs dat bijdraagt aan dekken constante kosten).\n• Voorbeeld T-shirts: 5000 / (15 − 4) = 5000/11 ≈ **455 stuks/maand**.\n• Boven 455: winst. Onder: verlies.\n\n**BEP-omzet** = BEP × verkoopprijs = 455 × 15 = €6825 omzet om break-even te bereiken.\n\n**Dekkingsbijdrage (DB)**:\n• Totale DB = omzet − totale variabele kosten.\n• Eerst dekt DB de constante kosten, daarna = winst.\n\n**Verkoop-prijs-bepaling-methodes**:\n\n**Cost-plus-prijs** (kostprijs-plus):\n• Bereken kostprijs → tel winstopslag op.\n• Voorbeeld: kostprijs €9 + 30% opslag = €11,70.\n• Eenvoudig maar negeert markt.\n\n**Marktprijs**:\n• Wat concurrentie + klant accepteren.\n• Belangrijker in concurrerende markt.\n\n**Penetratiestrategie**:\n• Lage start-prijs om markt in te dringen.\n• Voorbeelden: Netflix-start NL, Aldi.\n\n**Skimming**:\n• Hoge start-prijs voor early-adopters.\n• Voorbeelden: nieuwe iPhone, Tesla-debut.\n\n**Promotionele prijs**:\n• Tijdelijke korting.\n• Acties: 1+1 gratis, 50% korting.\n\n**BTW + prijs**:\n• In NL BTW 21% (hoog), 9% (laag voor voedsel, boeken, OV, etc.), 0% (export).\n• Verkoopprijs **incl. BTW** vs **excl. BTW**.\n• Voor bedrijf is BTW doorgeefluik (consument betaalt, bedrijf draagt af).\n\n**Marges**:\n• **Brutomarge** = (omzet − inkoop) / omzet × 100%.\n• **Nettowinstmarge** = nettowinst / omzet × 100%.\n• Detailhandel: bruto 30-50%, netto 2-10%.\n• Tech: bruto 60-80%, netto 20-30%.\n• Auto-dealers: bruto 10-15%, netto 2-3%.\n\n**Toets-patroon**: bereken BEP + adviseer prijsstrategie.",
     checks: [
       {
         q: "**Constante kosten** zijn:",
@@ -101,17 +101,17 @@ const steps = [
       },
       {
         q: "**Break-even-punt-formule**:",
-        options: ["Constante kosten / (prijs − variabele kosten/stuk)","Omzet / kosten","Prijs × aantal","Winst / EV"],
+        options: ["Constante kosten / (prijs − variabele kosten/stuk)", "Constante kosten / verkoopprijs per stuk", "Omzet / totale kosten", "Winst / eigen vermogen × 100%"],
         answer: 0,
-        wrongHints: [null, "Niet — algemene rentabiliteit.", "Niet — omzet.", "Niet — REV."],
+        wrongHints: [null, "Bijna — maar wat moet je van de prijs eerst nog aftrekken?", "Niet — daar komt geen aantal stuks uit.", "Niet — dat is de rentabiliteit van het eigen vermogen."],
         uitlegPad: {
           stappen: [{ titel: "Constant ÷ dekkingsbijdrage", tekst: "**BEP** = **Constante kosten / (Prijs per stuk − Variabele kosten per stuk)**. Noemer = **dekkingsbijdrage per stuk** (DB). Hoeveel stuks moet je verkopen tot DB samen = constante kosten. Pas daarboven winst." }],
-          niveaus: { basis: "K/(P−V).", simpeler: "BEP = constant/DB", nogSimpeler: "A." },
+          niveaus: { basis: "K/(P−V).", simpeler: "BEP = constant/DB", nogSimpeler: "K/(P−V)." },
         },
       },
       {
         q: "Constante kosten €10.000, prijs €25, variabele €5/stuk. **BEP**?",
-        options: ["500 stuks","2.000","250","10.000"],
+        options: ["500 stuks", "2.000 stuks", "250 stuks", "10.000 stuks"],
         answer: 0,
         wrongHints: [null, "Niet — controleer formule.", "Te laag.", "Niet correct."],
         uitlegPad: {
@@ -126,7 +126,7 @@ const steps = [
         wrongHints: [null, "Niet — Apple kiest niet voor laag.", "Te eenvoudig — Apple denkt markt-strategisch.", "Wel."],
         uitlegPad: {
           stappen: [{ titel: "Premium-strategie", tekst: "**Skimming**: hoge start-prijs voor early-adopters bereid te betalen. Later prijsverlaging. Apple-classic: nieuwe iPhone €1200+, oudere modellen blijven beschikbaar lager. Tesla-debut zelfde patroon. **Penetratie**: tegenovergestelde — lage start om markt te winnen (Aldi, Netflix-NL-start)." }],
-          niveaus: { basis: "Skimming.", simpeler: "iPhone-nieuw = skimming", nogSimpeler: "A." },
+          niveaus: { basis: "Skimming.", simpeler: "iPhone-nieuw = skimming", nogSimpeler: "Skimming." },
         },
       },
       {
@@ -146,16 +146,16 @@ const steps = [
   {
     title: "Financiering + investering",
     explanation:
-      "Bedrijven hebben geld nodig — voor opstart, groei, vervanging machines. **Hoe** krijg je dat? **Welke** investering doe je?\n\n**Financiering-bronnen**:\n\n**Eigen vermogen (intern)**:\n• Eigen geld eigenaren bij start.\n• Ingehouden winst (niet uitgekeerd als dividend).\n• Aandelen (publiek of privé verkocht).\n• Geen rente, geen aflossing — maar verdunning eigenaarschap.\n\n**Vreemd vermogen (extern)**:\n• **Bank-lening**: vaste rente + aflossings-schema.\n• **Hypotheek**: lange-termijn-lening met onroerend goed als onderpand.\n• **Obligaties**: bedrijf geeft schuldpapieren uit, beleggers kopen.\n• **Leasen**: huren in plaats van kopen.\n• **Crediteuren**: leveranciers laten je later betalen.\n• **Crowdfunding**: vele kleine investeerders via online platform.\n• **Venture capital**: investeerders nemen aandeel in jonge bedrijven.\n• **Subsidies**: overheid (innovatie, duurzaam, regionale ontwikkeling).\n\n**Voorkeuren financiering**:\n• Starter: eigen geld + familie/vrienden + crowdfunding + soms VC.\n• MKB: bank-lening + leveranciers-krediet.\n• Beursgenoteerd: aandelen + obligaties.\n\n**Rente**:\n• **Enkelvoudig**: rente over hoofdsom alleen.\n• **Samengesteld**: rente over rente erbij. Lange termijn → enorm effect (exponentiële groei).\n• Formule: K_eind = K_start × (1 + r)^n.\n• Voorbeeld: €1000 bij 5%/jaar over 20 jaar → 1000 × 1,05²⁰ = €2653.\n\n**Investeringscriteria**:\n\n**Terugverdientijd (TVT, Payback Period)**:\n• Hoe lang om investering terug te verdienen via netto-cashflow.\n• Voorbeeld: machine €100k, jaarlijkse netto-besparing €25k → TVT = 4 jaar.\n• Simpel maar negeert lange-termijn-cashflow + tijdwaarde geld.\n\n**Netto Contante Waarde (NCW / NPV)**:\n• Toekomstige cashflows naar 'vandaag-waarde' brengen via discontering.\n• Formule: NCW = Σ (CF_t / (1+r)^t) − initiële investering.\n• Positief: investering rendabel.\n• Negatief: niet doen.\n\n**Interne Rentabiliteit (IRR)**:\n• Disconteringsvoet waarbij NCW = 0.\n• Vergelijk met vereiste rendement: hoger = doen.\n\n**Voorbeeld investerings-vraag** (Toets-patroon):\nMachine kost €50.000, levert €15.000 netto/jaar gedurende 5 jaar. TVT?\n→ 50.000 / 15.000 = **3,33 jaar**. Goed (< 5 jaar levensduur). Doen.\n\n**Werkkapitaal**:\n• Vlottende activa − kort VV.\n• Nodig om dagelijkse activiteiten te financieren (voorraad, debiteuren, kas).\n• Te weinig = liquiditeitsproblemen.\n• Te veel = kapitaal-verspilling.\n\n**Cashflow-management**:\n• **Cashflow** = werkelijke geld-in en -uit (anders dan winst!).\n• Winst kan hoog zijn maar geen cash (klanten nog niet betaald) — failliet ondanks winst.\n• 'Cash is king' — kasstroom belangrijkste indicator gezondheid.\n• Klanten sneller laten betalen (kortingen voor snel) + leveranciers later betalen = optimalisatie werkkapitaal.\n\n**Rechtsvormen**:\n• **Eenmanszaak**: 1 eigenaar, persoonlijk aansprakelijk. Eenvoudig + flexibel. Klein/start.\n• **VOF (Vennootschap onder Firma)**: 2+ vennoten, hoofdelijk aansprakelijk.\n• **BV (Besloten Vennootschap)**: aandelen niet vrij verhandelbaar. Aansprakelijkheid beperkt tot inleg. Veel MKB.\n• **NV (Naamloze Vennootschap)**: aandelen vrij verhandelbaar (kan op beurs). Voor grote bedrijven (Heineken, Philips, ASML).\n• **Coöperatie**: leden zijn eigenaar (boeren-coöperaties, bv. FrieslandCampina).\n• **Stichting**: geen winstoogmerk, geen leden, geen aandeelhouders.\n• **Vereniging**: leden, doel niet winst.\n\n**Belastingen op bedrijven**:\n• **Vennootschapsbelasting (vpb)**: 19% (laag, eerste €200k) / 25,8% (hoog) — 2024.\n• **BTW**: 21%, 9%, 0%.\n• **Loonbelasting + sociale premies**: ingehouden van werknemers-loon.\n• **Dividend**-belasting bij uitkering.\n• Bedrijven proberen door slimme structuren (NL-route, Ierland-route) belasting te minimaliseren — vaak controverse.",
+      "Bedrijven hebben geld nodig — voor opstart, groei, vervanging machines. **Hoe** krijg je dat? **Welke** investering doe je?\n\n**Financiering-bronnen**:\n\n**Eigen vermogen**:\n• Eigen geld eigenaren bij start.\n• Ingehouden winst (niet uitgekeerd als dividend).\n• Aandelen (publiek of privé verkocht).\n• Geen rente, geen aflossing — maar verdunning eigenaarschap.\n\n**Vreemd vermogen + andere bronnen van buiten**:\n• **Bank-lening**: vaste rente + aflossings-schema.\n• **Hypotheek**: lange-termijn-lening met onroerend goed als onderpand.\n• **Obligaties**: bedrijf geeft schuldpapieren uit, beleggers kopen.\n• **Leasen**: huren in plaats van kopen.\n• **Crediteuren**: leveranciers laten je later betalen.\n• **Crowdfunding**: vele kleine investeerders via online platform.\n• **Venture capital**: investeerders nemen aandeel in jonge bedrijven (dat is eigen vermogen van buiten, geen lening).\n• **Subsidies**: overheid (innovatie, duurzaam, regionale ontwikkeling).\n\n**Voorkeuren financiering**:\n• Starter: eigen geld + familie/vrienden + crowdfunding + soms VC.\n• MKB: bank-lening + leveranciers-krediet.\n• Beursgenoteerd: aandelen + obligaties.\n\n**Rente**:\n• **Enkelvoudig**: rente over hoofdsom alleen.\n• **Samengesteld**: rente over rente erbij. Lange termijn → enorm effect (exponentiële groei).\n• Formule: K_eind = K_start × (1 + r)^n.\n• Voorbeeld: €1000 bij 5%/jaar over 20 jaar → 1000 × 1,05²⁰ = €2653.\n\n**Investeringscriteria**:\n\n**Terugverdientijd (TVT, Payback Period)**:\n• Hoe lang om investering terug te verdienen via netto-cashflow.\n• Voorbeeld: machine €100k, jaarlijkse netto-besparing €25k → TVT = 4 jaar.\n• Simpel maar negeert lange-termijn-cashflow + tijdwaarde geld.\n\n**Netto Contante Waarde (NCW / NPV)**:\n• Toekomstige cashflows naar 'vandaag-waarde' brengen via discontering.\n• Formule: NCW = Σ (CF_t / (1+r)^t) − initiële investering.\n• Positief: investering rendabel.\n• Negatief: niet doen.\n\n**Interne Rentabiliteit (IRR)**:\n• Disconteringsvoet waarbij NCW = 0.\n• Vergelijk met vereiste rendement: hoger = doen.\n\n**Voorbeeld investerings-vraag** (Toets-patroon):\nMachine kost €50.000, levert €15.000 netto/jaar gedurende 5 jaar. TVT?\n→ 50.000 / 15.000 = **3,33 jaar**. Goed (< 5 jaar levensduur). Doen.\n\n**Werkkapitaal**:\n• Vlottende activa − kort VV.\n• Nodig om dagelijkse activiteiten te financieren (voorraad, debiteuren, kas).\n• Te weinig = liquiditeitsproblemen.\n• Te veel = kapitaal-verspilling.\n\n**Cashflow-management**:\n• **Cashflow** = werkelijke geld-in en -uit (anders dan winst!).\n• Winst kan hoog zijn maar geen cash (klanten nog niet betaald) — failliet ondanks winst.\n• 'Cash is king' — kasstroom belangrijkste indicator gezondheid.\n• Klanten sneller laten betalen (kortingen voor snel) + leveranciers later betalen = optimalisatie werkkapitaal.\n\n**Rechtsvormen**:\n• **Eenmanszaak**: 1 eigenaar, persoonlijk aansprakelijk. Eenvoudig + flexibel. Klein/start.\n• **VOF (Vennootschap onder Firma)**: 2+ vennoten, hoofdelijk aansprakelijk.\n• **BV (Besloten Vennootschap)**: aandelen niet vrij verhandelbaar. Aansprakelijkheid beperkt tot inleg. Veel MKB.\n• **NV (Naamloze Vennootschap)**: aandelen vrij verhandelbaar (kan op beurs). Voor grote bedrijven (Heineken, Philips, ASML).\n• **Coöperatie**: leden zijn eigenaar (boeren-coöperaties, bv. FrieslandCampina).\n• **Stichting**: geen winstoogmerk, geen leden, geen aandeelhouders.\n• **Vereniging**: leden, doel niet winst.\n\n**Belastingen op bedrijven**:\n• **Vennootschapsbelasting (vpb)**: 19% (laag, eerste €200k) / 25,8% (hoog) — 2024.\n• **BTW**: 21%, 9%, 0%.\n• **Loonbelasting + sociale premies**: ingehouden van werknemers-loon.\n• **Dividend**-belasting bij uitkering.\n• Bedrijven proberen door slimme structuren (NL-route, Ierland-route) belasting te minimaliseren — vaak controverse.",
     checks: [
       {
         q: "Wat is **eigen vermogen** financieren?",
-        options: ["Geld eigenaren + ingehouden winst","Bank-lening","Hypotheek","Obligaties"],
+        options: ["Geld eigenaren + ingehouden winst", "Lening van de bank", "Hypotheek op het bedrijfspand", "Uitgifte van obligaties aan beleggers"],
         answer: 0,
         wrongHints: [null, "Geld van de bank — is dat geld ván het bedrijf zelf, of van een buitenstaander die het terug wil?", "Ook geleend geld (met het pand als onderpand) — van wie ís dit vermogen eigenlijk?", "Wie koopt obligaties: de eigenaren zelf, of beleggers van buiten?"],
         uitlegPad: {
           stappen: [{ titel: "EV-bronnen", tekst: "**Eigen vermogen** (EV) = geld eigenaren (bij oprichting + ingehouden winst + aandelen). Geen rente, geen aflossing. **Vreemd vermogen** (VV) = geleend (bank, obligaties, leveranciers) — heeft rente + aflossings-plicht. EV is duurder (verdunning) maar veiliger." }],
-          niveaus: { basis: "Eigenaars + winst.", simpeler: "EV = eigenaars-geld", nogSimpeler: "A." },
+          niveaus: { basis: "Eigenaars + winst.", simpeler: "EV = eigenaars-geld", nogSimpeler: "Eigenaars + winst." },
         },
       },
       {
@@ -186,7 +186,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Winst ≠ cash", tekst: "**Winst** is boekhoudkundig (omzet − kosten), maar **cashflow** is werkelijk geld. Als klanten op factuur kopen (op rekening) maar nog niet betaald → winst staat in boek maar geen cash. Bedrijven kunnen failliet ondanks 'winstgevend' zijn. **'Cash is king'** — focus op kasstroom." }],
           theorie: "Klassieker: snel-groeiende bedrijven (groot werkkapitaal nodig) komen vaak in cash-tekort. Daarom externe financiering nodig.",
-          niveaus: { basis: "Klanten niet betaald.", simpeler: "Cashflow ≠ winst", nogSimpeler: "A." },
+          niveaus: { basis: "Klanten niet betaald.", simpeler: "Cashflow ≠ winst", nogSimpeler: "Klanten niet betaald." },
         },
       },
       {
@@ -196,7 +196,7 @@ const steps = [
         wrongHints: [null, "Niet — laag tarief.", "BTW.", "BTW laag."],
         uitlegPad: {
           stappen: [{ titel: "Twee schijven", tekst: "**Vennootschapsbelasting** (vpb) 2024:\n• **19%** over eerste €200.000 winst.\n• **25,8%** boven €200.000.\n\nBelastingplanning groot bij grote bedrijven — controverse over multinationals (Shell, Apple-NL-route)." }],
-          niveaus: { basis: "25,8%.", simpeler: "Vpb hoog = 25,8%", nogSimpeler: "A." },
+          niveaus: { basis: "25,8%.", simpeler: "Vpb hoog = 25,8%", nogSimpeler: "25,8%." },
         },
       },
     ],
@@ -215,7 +215,7 @@ const steps = [
         wrongHints: [null, "Push en pull zijn distributie-begrippen — niet dé vier P's van de marketing-mix.", null, "Wel populair (3P's MVO) maar niet originele 4P's."],
         uitlegPad: {
           stappen: [{ titel: "McCarthy 1960", tekst: "**4 P's** (Jerome McCarthy 1960): **Product, Prijs, Plaats, Promotie**. Marketing-mix-basis. Moderne uitbreidingen: People, Process, Physical evidence (vooral diensten)." }],
-          niveaus: { basis: "Prod/Prijs/Plaats/Promotie.", simpeler: "4P", nogSimpeler: "A." },
+          niveaus: { basis: "Prod/Prijs/Plaats/Promotie.", simpeler: "4P", nogSimpeler: "Prod/Prijs/Plaats/Promotie." },
         },
       },
       {
@@ -224,7 +224,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Het gaat niet om geheimhouding — het gaat om hoe de prijs op de klant óverkomt.", "Een tijdelijke prijs is een aanbieding — hier verandert niet de prijs maar de beleving.", null],
         uitlegPad: {
-          stappen: [{ titel: "Linksomafronding", tekst: "**Psychologische prijs**: ronding net onder een rond getal (€9,99 ipv €10). Hersenen lezen vooral eerste cijfer ('9') → voelt veel lager. Werkt bewezen — €9,99-prijs verkoopt 20-30% beter dan €10. Ook €99 vs €100, €499 vs €500." }],
+          stappen: [{ titel: "Linksomafronding", tekst: "**Psychologische prijs**: ronding net onder een rond getal (€9,99 ipv €10). Hersenen lezen vooral eerste cijfer ('9') → voelt veel lager. Uit onderzoek blijkt dat dit vaak beter verkoopt dan €10. Ook €99 vs €100, €499 vs €500." }],
           niveaus: { basis: "9,99 voelt lager.", simpeler: "Psy prijs", nogSimpeler: "9,99" },
         },
       },
@@ -235,18 +235,18 @@ const steps = [
         wrongHints: [null, "Niet — andere theorie.", "Boekhouden is registreren wat er gebeurde — Porter analyseert de markt óm je heen.", null],
         uitlegPad: {
           stappen: [{ titel: "Michael Porter 1979", tekst: "**5 Forces** (Porter): analyse-framework concurrentie sector.\n1. Concurrentie binnen sector.\n2. Macht leveranciers.\n3. Macht klanten.\n4. Dreiging nieuwe toetreders.\n5. Substituten.\n\nBedrijven analyseren hun positie via deze 5 invalshoeken." }],
-          niveaus: { basis: "Concurrentie.", simpeler: "5F = concurrentie-analyse", nogSimpeler: "A." },
+          niveaus: { basis: "Concurrentie.", simpeler: "5F = concurrentie-analyse", nogSimpeler: "Concurrentie." },
         },
       },
       {
         q: "**Just-in-time** (JIT) is een methode voor:",
-        options: ["Voorraad minimaliseren — geleverd wanneer nodig","Snel-bedrijfsstart","Klantkorting","Personeel"],
+        options: ["Voorraad minimaliseren — geleverd wanneer nodig", "Een bedrijf zo snel mogelijk opstarten", "Klanten korting geven bij snelle betaling", "Personeel precies op tijd laten beginnen"],
         answer: 0,
         wrongHints: [null, "JIT gaat niet over starten — het gaat over het magazijn. Wat wil je daar zo mín mogelijk hebben liggen?", "Geen korting — het draait om wannéér spullen geleverd worden.", null],
         uitlegPad: {
           stappen: [{ titel: "Toyota-methode", tekst: "**Just-in-time**: voorraad zo minimaal mogelijk; producten + onderdelen worden geleverd **op het moment dat ze nodig zijn**. Spaart opslagkosten + werkkapitaal. **Toyota pionier** vanaf jaren '50. Zwakte: kwetsbaar bij verstoring keten (COVID-19 + chiptekort 2020-22 toonde dit)." }],
           theorie: "Toets-actueel: discussie 'just-in-case' (meer voorraad voor zekerheid) als reactie op kwetsbaarheid JIT.",
-          niveaus: { basis: "Voorraad min.", simpeler: "JIT = min voorraad", nogSimpeler: "A." },
+          niveaus: { basis: "Voorraad min.", simpeler: "JIT = min voorraad", nogSimpeler: "Voorraad min." },
         },
       },
       {
@@ -256,7 +256,7 @@ const steps = [
         wrongHints: [null, "MVO gaat niet over marketing — het gaat over hoe een bedrijf omgaat met mens en milieu. Welke woorden passen daarbij?", null, "Dat zou een toezichthouder zijn — MVO is iets wat een bedrijf zélf doet."],
         uitlegPad: {
           stappen: [{ titel: "Triple bottom line", tekst: "**MVO** = Maatschappelijk Verantwoord Ondernemen (Engels CSR = Corporate Social Responsibility). Bedrijven hebben verantwoordelijkheid voor **People, Planet, Profit** (triple bottom line). Voorbeelden: Tony's Chocolonely (slavernijvrije chocolade), Triodos Bank, Patagonia. EU verplicht rapportage via CSRD sinds 2024 voor grote bedrijven." }],
-          niveaus: { basis: "MVO.", simpeler: "MVO = duurzaam ondernemen", nogSimpeler: "A." },
+          niveaus: { basis: "MVO.", simpeler: "MVO = duurzaam ondernemen", nogSimpeler: "MVO." },
         },
       },
     ],
@@ -275,27 +275,27 @@ const steps = [
         wrongHints: [null, "Vast actief.", "Vast actief.", "Eigen vermogen (passiva)."],
         uitlegPad: {
           stappen: [{ titel: "<1 jaar = vlottend", tekst: "**Vlottende activa**: < 1 jaar gebruikt. Voorraad, debiteuren, kas, bank. **Vaste activa**: > 1 jaar. Gebouwen, machines, voertuigen. Onderscheid belangrijk voor balans-analyse + liquiditeit." }],
-          niveaus: { basis: "Voorraad.", simpeler: "Voorraad = vlottend", nogSimpeler: "A." },
+          niveaus: { basis: "Voorraad.", simpeler: "Voorraad = vlottend", nogSimpeler: "Voorraad." },
         },
       },
       {
         q: "**Brutomarge** = ?",
-        options: ["(Omzet − inkoop) / omzet × 100%","Omzet / inkoop","Nettowinst / EV","Inkoop / omzet"],
+        options: ["(Omzet − inkoop) / omzet × 100%", "Omzet / inkoop × 100%", "Nettowinst / EV × 100%", "Inkoop / omzet × 100%"],
         answer: 0,
         wrongHints: [null, "Geen marge-formule.", "Niet — REV.", "Tegenovergesteld."],
         uitlegPad: {
           stappen: [{ titel: "Bruto-rendement op omzet", tekst: "**Brutomarge** = (Omzet − Inkoopwaarde) / Omzet × 100%. Toont % van elke euro omzet dat als brutowinst overblijft. Sectoren verschillen: tech 60-80%, detailhandel 30-50%, auto's 10-15%." }],
-          niveaus: { basis: "(O−I)/O ×100.", simpeler: "Bruto = (O−I)/O", nogSimpeler: "A." },
+          niveaus: { basis: "(O−I)/O ×100.", simpeler: "Bruto = (O−I)/O", nogSimpeler: "(O−I)/O ×100." },
         },
       },
       {
         q: "**Solvabiliteit van 60%** betekent:",
-        options: ["60% van vermogen is eigen vermogen","60% schuld","60% winst","60% liquide"],
+        options: ["60% van vermogen is eigen vermogen", "60% van vermogen is vreemd vermogen", "60% van de omzet is winst", "60% van de bezittingen is direct geld"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", null, "Niet — andere ratio."],
         uitlegPad: {
           stappen: [{ titel: "EV-aandeel", tekst: "**Solvabiliteit 60%** = EV / Totaal vermogen = 60%. Dus 60% gefinancierd met eigen geld, 40% met schuld. Sterk solvabel, banken zullen graag lenen. Vuistregel: ≥25-30% redelijk." }],
-          niveaus: { basis: "60% EV.", simpeler: "Solv 60% = 60% EV", nogSimpeler: "A." },
+          niveaus: { basis: "60% EV.", simpeler: "Solv 60% = 60% EV", nogSimpeler: "60% EV." },
         },
       },
       {
@@ -305,7 +305,7 @@ const steps = [
         wrongHints: [null, "Niet — vreemd = lenen.", "Niet hier.", "Wel financiering, intern."],
         uitlegPad: {
           stappen: [{ titel: "Self-funded", tekst: "**Ingehouden winst** = niet uitgekeerd aan eigenaren, geherinvesteerd in bedrijf. Vorm van **intern EV**. Voordeel: geen rente, geen verdunning. Nadeel: groei beperkt door winst. Veel familiebedrijven groeien zo. Externe financiering nodig voor snellere groei." }],
-          niveaus: { basis: "Intern.", simpeler: "Ingehouden winst = intern", nogSimpeler: "A." },
+          niveaus: { basis: "Intern.", simpeler: "Ingehouden winst = intern", nogSimpeler: "Intern." },
         },
       },
       {
@@ -315,7 +315,7 @@ const steps = [
         wrongHints: [null, "Penetratie = laag ínstappen met je prijs — de vraag zoekt juist iets dat géén prijs-strategie is.", "Skimming = afromen met een hoge príjs — dus wél een prijs-strategie.", "Cost-plus = kostprijs plus winstmarge — ook een prijs-methode. Wat stimuleert vraag zónder aan de prijs te zitten?"],
         uitlegPad: {
           stappen: [{ titel: "Promotie ≠ prijs", tekst: "**Reclame** zit in 4e P (Promotie), niet 2e (Prijs). Stimuleert vraag zonder per se prijs aan te passen. Andere genoemde opties zijn allemaal prijs-strategieën." }],
-          niveaus: { basis: "Reclame = promotie.", simpeler: "Reclame ≠ prijs", nogSimpeler: "A." },
+          niveaus: { basis: "Reclame = promotie.", simpeler: "Reclame ≠ prijs", nogSimpeler: "Reclame = promotie." },
         },
       },
     ],

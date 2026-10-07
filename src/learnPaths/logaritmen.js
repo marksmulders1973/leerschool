@@ -641,7 +641,7 @@ const steps = [
           null,
           "log(3x) = log(3) + log(x). Maar log(x³) heeft een macht, geen factor.",
           "log(x) + 3 = log(x · 1000). Maar x³ ≠ 1000x.",
-          "Geen geldige notatie. log(x)³ = (log(x))³ — anders dan log(x³).",
+          "Let op: log(x)³ betekent (log(x))³ — dat is iets anders dan log(x³).",
         ],
         uitlegPad: {
           stappen: [{ titel: "Exponent eruit", tekst: "log(x³) = 3 · log(x)." }],
@@ -749,7 +749,7 @@ const steps = [
           "2·log(x) + log(y) − log(z)",
           "log(x²·y/z)",
           "log(x²) + log(y/z)",
-          "Alle drie hierboven — ze zijn wiskundig gelijk",
+          "Alle drie de andere uitdrukkingen — ze zijn wiskundig gelijk",
         ],
         answer: 3,
         wrongHints: [
@@ -759,12 +759,12 @@ const steps = [
           null,
         ],
         uitlegPad: {
-          stappen: [{ titel: "Beide vormen kloppen", tekst: "log(x²·y) − log(z) = log(x²·y/z). Verder splitsen: 2·log(x) + log(y) − log(z)." }],
+          stappen: [{ titel: "Alle vormen kloppen", tekst: "log(x²·y) − log(z) = log(x²·y/z). Verder splitsen: 2·log(x) + log(y) − log(z), of log(x²) + log(y/z)." }],
           woorden: [{ woord: "alle 3 regels", uitleg: "product → som, deling → verschil, macht → factor" }],
           theorie: "Combineren van log-eigenschappen.",
           voorbeelden: [{ type: "voorbeeld", tekst: "log(a²b/c) = 2·log(a) + log(b) − log(c)" }],
           basiskennis: [{ onderwerp: "examen", uitleg: "vaak kloppen beide schrijfwijzen" }],
-          niveaus: { basis: "Beide vormen wiskundig gelijk.", simpeler: "Alle 3 regels toepassen.", nogSimpeler: "Mag op meerdere manieren." },
+          niveaus: { basis: "Alle drie de vormen zijn wiskundig gelijk.", simpeler: "Alle 3 regels toepassen.", nogSimpeler: "Mag op meerdere manieren." },
         },
       },
       {

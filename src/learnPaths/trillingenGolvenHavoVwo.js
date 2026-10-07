@@ -95,7 +95,7 @@ const steps = [
         q: "Een massa-veer-systeem heeft T = 0,5 s. Je **verdubbelt de massa**. Nieuwe T?",
         options: ["0,71 s", "1,0 s", "0,25 s", "0,5 s"],
         answer: 0,
-        wrongHints: [null, "Niet — T hangt niet rechtstreeks van m af. Kijk in de formule T = 2π·√(m/C) wat er met T gebeurt als m verdubbelt.", "Niet — dat zou kwart-versie zijn.", "Niet — er verandert wel iets."],
+        wrongHints: [null, "Niet — T hangt niet rechtstreeks van m af. Kijk in de formule T = 2π·√(m/C) wat er met T gebeurt als m verdubbelt.", "Niet — meer massa maakt de trilling juist trager.", "Niet — er verandert wel iets."],
         uitlegPad: {
           stappen: [
             { titel: "T ~ √m", tekst: "T = 2π·√(m/C). Verdubbelen van m geeft factor √2 ≈ 1,41 op T. Dus T_nieuw = 0,5 × √2 ≈ **0,71 s**." },
@@ -175,7 +175,7 @@ const steps = [
       {
         q: "Welke uitspraak over **golfsnelheid v** in een medium klopt?",
         options: [
-          "v hangt af van het medium, niet van de frequentie (bij gelijk medium)",
+          "v hangt af van het medium",
           "v hangt alleen af van de bron",
           "v wordt groter als f groter wordt",
           "v wordt groter als λ groter wordt",
@@ -197,7 +197,7 @@ const steps = [
       {
         q: "Geluidsgolven zijn **longitudinaal**. Hoe weet je dat?",
         options: [
-          "Lucht-deeltjes bewegen heen-en-weer in de richting van voortplanting (compressie + verdunning)",
+          "Lucht-deeltjes bewegen heen en weer in de voortplantingsrichting",
           "Lucht-deeltjes bewegen loodrecht op de voortplanting",
           "Geluid heeft geen golfeigenschappen",
           "Geluid kan zonder medium reizen",
@@ -335,7 +335,7 @@ const steps = [
       {
         q: "Resonantie betekent dat een object:",
         options: [
-          "Sterk meetrilt als de aansturende frequentie zijn eigenfrequentie raakt",
+          "Sterk meetrilt bij zijn eigenfrequentie",
           "Altijd trilt met dezelfde amplitude",
           "Geen energie kwijt raakt",
           "Zwakker reageert als de frequentie matcht",
@@ -361,7 +361,7 @@ const steps = [
         q: "Een **open buis** heeft λ-grondtoon = 2L. Een **buis met één gesloten kant** heeft λ-grondtoon = ?",
         options: ["4L", "2L", "L", "L/2"],
         answer: 0,
-        wrongHints: [null, "Niet — dat geldt bij een buik aan beide eindes; bij één dichte kant is de golflengte langer.", "Niet — de golflengte wordt juist langer, niet korter.", "Niet — niet kleiner dan L."],
+        wrongHints: [null, "Niet — dat geldt als beide kanten open zijn. Wat verandert een dichte kant?", "Niet — teken knoop en buik: welk deel van een golf past in de buis?", "Niet — niet kleiner dan L."],
         uitlegPad: {
           stappen: [
             { titel: "Dichte kant = knoop", tekst: "Aan een dichte kant moet de lucht in rust zijn → **knoop**. Aan open kant → **buik**. Het kortste patroon dat in een buis van L past met knoop+buik = kwart-golflengte → λ = 4L." },
@@ -393,7 +393,7 @@ const steps = [
       {
         q: "Een zangeres laat een wijnglas barsten. Dit is een voorbeeld van:",
         options: [
-          "Resonantie + amplitude-opbouw boven sterkte-grens",
+          "Resonantie",
           "Geluidssnelheid in glas",
           "Reflectie van geluid",
           "Doppler-effect",
@@ -487,7 +487,7 @@ const steps = [
       {
         q: "Voor een **half-open buis** (één kant dicht) klinkt de grondtoon **een octaaf lager** dan een open buis van dezelfde lengte. Waarom?",
         options: [
-          "Half-open: λ₁ = 4L; open: λ₁ = 2L → λ verdubbelt → f halveert (= octaaf lager)",
+          "De golflengte van de grondtoon is twee keer zo lang",
           "Beide hebben dezelfde grondtoon",
           "Half-open buis heeft 2× zo hoge frequentie",
           "Beide afhankelijk van temperatuur, niet van eindes",

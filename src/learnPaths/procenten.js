@@ -322,13 +322,13 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "€80 + 25% btw. Wat is het totaalbedrag?",
+        q: "€80 + 25% opslag. Wat is het totaalbedrag?",
         options: ["€100", "€60", "€20", "€105"],
         answer: 0,
         wrongHints: [
           null,
           "Bij +25% wordt het bedrag hoger, niet lager. Welke factor hoort bij + 25%?",
-          "Dat is alleen het btw-bedrag, niet het totaal. Wat moet je daar nog bij optellen?",
+          "Dat is alleen de opslag, niet het totaal. Wat moet je daar nog bij optellen?",
           "Je telde €25 op in plaats van 25%. Hoeveel euro is 25% van €80?",
         ],
       },
@@ -466,9 +466,9 @@ const steps = [
       { q: "**BTW** in NL standaard?", options: ["21%","9%","19%","25%"], answer: 0, wrongHints: [null, "Dat is het lage tarief (o.a. eten).", "Dat tarief bestaat hier niet.", "Net niet — geen Nederlands tarief."] },
       { q: "0,75 is welk percentage?", options: ["75%","7,5%","0,75%","750%"], answer: 0, wrongHints: [null, "Te laag.", "Te laag.", "Te hoog."] },
       { q: "Welk percentage is **½**?", options: ["50%","25%","20%","100%"], answer: 0, wrongHints: [null, "Dat is ¼.", "Dat is ⅕.", "Dat is het geheel."] },
-      { q: "Inflatie 5% per jaar. €100 wordt na 1 jaar?", options: ["€105","€95","€150","€100"], answer: 0, wrongHints: [null, "Niet — inflatie = stijging.", "Te veel — alleen 5%.", "Niet — er is iets veranderd."] },
+      { q: "Inflatie 5% per jaar. Iets kost nu €100. Wat kost het na 1 jaar?", options: ["€105","€95","€150","€100"], answer: 0, wrongHints: [null, "Niet — inflatie = stijging.", "Te veel — alleen 5%.", "Niet — er is iets veranderd."] },
       { q: "20% van een getal is 60. Wat is het hele getal?", options: ["300","12","80","30"], answer: 0, wrongHints: [null, "Je deelde 60 door 5. Moet het hele getal groter of kleiner zijn dan 60?", "Niet.", "Niet."] },
-      { q: "Auto kost €20.000 + 10% btw. Totaal?", options: ["€22.000","€20.100","€20.000","€18.000"], answer: 0, wrongHints: [null, "Niet — 10% niet 0,1%.", "Niet — btw moet erbij.", "Niet — btw komt erbij, niet eraf."] },
+      { q: "Auto kost €20.000 + 10% belasting. Totaal?", options: ["€22.000","€20.100","€20.000","€18.000"], answer: 0, wrongHints: [null, "Niet — 10% niet 0,1%.", "Niet — de belasting moet erbij.", "Niet — belasting komt erbij, niet eraf."] },
     ],
   },
 ];
