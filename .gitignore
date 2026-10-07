@@ -23,3 +23,6 @@ docs/rapporten/*.pdf
 *.keystore
 android/build/
 android/.gradle/
+android/uit/
+android/local.properties
+android/app/build/
