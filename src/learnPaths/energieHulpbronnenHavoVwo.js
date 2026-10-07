@@ -91,13 +91,13 @@ const steps = [
       {
         q: "Wereld-energie-mix 2024: fossiel + nucleair + hernieuwbaar:",
         options: [
-          "~79% fossiel + 4% nucleair + 14% hernieuwbaar",
-          "50/50 fossiel/hernieuwbaar",
-          "100% hernieuwbaar",
-          "100% fossiel"
+          "~79% fossiel, ~4% kernenergie, ~14% hernieuwbaar",
+          "~50% fossiel, ~10% kernenergie, ~40% hernieuwbaar",
+          "~30% fossiel, ~20% kernenergie, ~50% hernieuwbaar",
+          "~60% fossiel, ~25% kernenergie, ~15% hernieuwbaar"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld huidig.", "Niet helaas.", "Niet meer."],
+        wrongHints: [null, "Hernieuwbaar groeit snel, maar is nog lang niet zo groot.", "Dan zou de wereld al grotendeels van olie, gas en kolen af zijn — klopt dat?", "Kernenergie levert maar een klein deel van alle energie."],
         uitlegPad: {
           stappen: [
             { titel: "Transitie nog ver", tekst: "Ondanks wind + zon-boom: fossiel domineert wereldwijd. Olie ~30%, kolen ~27%, gas ~22%. Hernieuwbaar groeit snel maar van laag aandeel. Nucleair stabiel laag (~4%). EU ~22% hernieuwbaar, NL ~17% (groeiend)." },
@@ -206,13 +206,13 @@ const steps = [
       {
         q: "**OPEC** controleert ongeveer:",
         options: [
-          "~30% wereld-productie + ~80% bewezen reserves",
-          "100% wereld-olie",
-          "Niets",
-          "Alleen Amerikaanse olie"
+          "~30% van de olieproductie en ~80% van de bewezen reserves",
+          "~80% van de olieproductie en ~30% van de bewezen reserves",
+          "~5% van de olieproductie en ~10% van de bewezen reserves",
+          "~60% van de olieproductie en ~50% van de bewezen reserves"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Niet — VS apart."],
+        wrongHints: [null, "Precies omgedraaid — heeft OPEC vooral veel olie in de grond, of pompt het vooral veel op?", "Veel te weinig — OPEC kan met zijn quota de wereldprijs sturen.", "Te hoog voor de productie: ook de VS en Rusland pompen veel olie op."],
         uitlegPad: {
           stappen: [
             { titel: "Kartel met macht", tekst: "12 leden onder leiding Saudi-Arabië. Coördineren productie → invloed wereldprijs. Reservoirs vooral Midden-Oosten + Zuid-Amerika + Afrika. Productie-quota maandelijks beslist. Saudi heeft 'spare capacity' = kan extra produceren in crisis." },

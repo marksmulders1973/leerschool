@@ -3390,9 +3390,9 @@ const steps = [
       {
         q: "Waarvoor gebruik je het **register van een atlas**?",
         ref: "1F",
-        options: ["Om op te zoeken op welke kaart en in welk vak een plaats ligt", "Om te zien hoe laat het is", "Om woorden te vertalen", "Om de prijs van de atlas op te zoeken"],
+        options: ["Om te vinden op welke kaart en in welk vak een plaats ligt", "Om te zien wat de tekens op een kaart betekenen", "Om te zien hoe groot de afstanden in het echt zijn", "Om te zien op welke bladzijde elk werelddeel begint"],
         answer: 0,
-        wrongHints: [null, "Daar heb je een klok voor.", "Vertalen doe je met een vertaalwoordenboek.", "Prijzen staan in een winkel, niet in de atlas zelf."],
+        wrongHints: [null, "De betekenis van de tekens staat in de legenda, bij de kaart zelf.", "Afstanden reken je uit met de schaal van de kaart.", "Dat staat in de inhoudsopgave voorin. Het register staat achterin en is anders opgebouwd."],
         explanation: "Het atlas-register zegt bijvoorbeeld 'Zwolle 23 C4': **kaart 23, vak C4**. Zo vind je elke plaats snel.",
       },
       {

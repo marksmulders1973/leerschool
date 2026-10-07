@@ -334,7 +334,7 @@ const steps = [
       { q: "Wat is **AVG** (privacy-wet)?", options: ["EU-regels voor persoonsgegevens","Game","Reclame","Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
       { q: "Wat is een **browser**?", options: ["Programma om websites te openen","Een toetsenbord","Camera","Niet bestaand"], answer: 0, wrongHints: [null, "Hardware.", "Niet.", "Wel."] },
       { q: "Wat is een **URL**?", options: ["Webadres (bv. google.com)","Pagina","Toetsenbord","Niet bestaand"], answer: 0, wrongHints: [null, "Inhoud.", "Niet.", "Wel."] },
-      { q: "Wat is **CPU**?", options: ["Centrale Processor / 'brein' computer","Scherm","Toetsenbord","Software"], answer: 0, wrongHints: [null, "Output.", "Input.", "Programma."] },
+      { q: "Wat is **CPU**?", options: ["De chip die alle berekeningen doet","Het scherm waarop je beelden ziet","Het toetsenbord waarmee je typt","Een programma dat je installeert"], answer: 0, wrongHints: [null, "Het scherm is output: het laat zien wat de computer doet.", "Het toetsenbord is input: daarmee geef je opdrachten.", "Een programma is software, geen onderdeel in de computerkast."] },
       { q: "Wat is een **download**?", options: ["Bestand binnenhalen van internet","Bestand verzenden","Niet relevant","Reclame"], answer: 0, wrongHints: [null, "Upload.", "Wel.", "Niet."] },
       { q: "Wat is een **cookie** op websites?", options: ["Klein bestandje dat info onthoudt","Eten","Niet bestaand","Reclame"], answer: 0, wrongHints: [null, "Letterlijk wel, maar bedoeld is digitaal.", "Wel.", "Niet primair."] },
       { q: "Wat is een **virus** (software)?", options: ["Schadelijk programma","Ziekte","Niet bestaand","Game"], answer: 0, wrongHints: [null, "Letterlijk wel, hier digitaal.", "Wel.", "Niet."] },

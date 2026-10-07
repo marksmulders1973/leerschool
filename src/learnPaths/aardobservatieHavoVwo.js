@@ -136,7 +136,7 @@ const steps = [
       },
       {
         q: "Wat is **El Niño**?",
-        options: ["Verwarmend Pacific-water → mondiale weers-effecten","Spaanse vulkaan","Hurricane-naam","Klimaatmodel"],
+        options: ["Opwarming van de Grote Oceaan die het weer wereldwijd verandert","Een Spaanse vulkaan die om de paar jaar uitbarst","De naam van een zware orkaan boven Mexico","Een computermodel dat het klimaat voorspelt"],
         answer: 0,
         wrongHints: [null, "'El Niño' is wel Spaans, maar geen berg — denk aan de oceaan.", "Orkanen krijgen persoonsnamen, maar dit verschijnsel keert elke paar jaar terug — wat gebeurt er dan met het zeewater?", "Geen rekenmodel — het is een écht natuurverschijnsel in de Grote Oceaan."],
         uitlegPad: {

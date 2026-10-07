@@ -23,13 +23,13 @@ const steps = [
       {
         q: "**Socrates** geloofde dat:",
         options: [
-          "Vragen stellen leidt tot waarheid ('socratische methode')",
-          "Boeken schrijven essentieel",
-          "Geld is doel van leven",
-          "Wetenschap belangrijker dan filosofie"
+          "Je door vragen te stellen dichter bij de waarheid komt",
+          "Je kennis vooral vastlegt door boeken te schrijven",
+          "Rijkdom het hoogste doel van het leven is",
+          "Wetenschap belangrijker is dan filosofie"
         ],
         answer: 0,
-        wrongHints: [null, "Schreef niets zelf.", "Tegenovergesteld.", "Filosofie + wetenschap waren één."],
+        wrongHints: [null, "Socrates schreef zelf niets op — wat we van hem weten, komt van zijn leerling Plato.", "Socrates leefde juist sober en vond een goed leven belangrijker dan geld.", "In zijn tijd waren filosofie en wetenschap nog één geheel."],
         uitlegPad: {
           stappen: [{ titel: "'Maieutiek' = vroedvrouw-methode", tekst: "Socrates vergeleek zichzelf met vroedvrouw: niet zelf bevallen maar anderen helpen hun ideeën 'baren'. Door vragen te stellen ontdekt mens zelf wat hij denkt. 'Ik weet dat ik niets weet' = vertrekpunt voor eerlijk onderzoek." }],
           niveaus: { basis: "Vragen stellen.", simpeler: "Socratisch = vraag-methode.", nogSimpeler: "Vragen" },

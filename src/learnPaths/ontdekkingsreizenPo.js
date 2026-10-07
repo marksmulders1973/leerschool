@@ -178,7 +178,7 @@ const steps = [
       { q: "Wie zeilde als **eerste rond de aarde**?", options: ["Magellan-expeditie", "Columbus", "Cook", "Hudson"], answer: 0, wrongHints: [null, "Niet.", "Veel later.", "Niet."] },
       { q: "**VOC** stond voor?", options: ["Verenigde Oostindische Compagnie", "Vereniging Oude Cargo", "Veiligheidsdienst", "Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
       { q: "Wat ontdekte **Abel Tasman**?", options: ["Nieuw-Zeeland + Tasmanië", "Amerika", "India", "Australië-zuid"], answer: 0, wrongHints: [null, "Columbus.", "Vasco da Gama.", "Janszoon noord."] },
-      { q: "**Verdrag van Tordesillas** deed wat?", options: ["Wereld verdeeld Portugal/Spanje 1494", "Vrede in Europa", "Slavernij stop", "Niets"], answer: 0, wrongHints: [null, "Niet primair.", "Niet.", "Wel iets."] },
+      { q: "**Verdrag van Tordesillas** deed wat?", options: ["Spanje en Portugal verdeelden de nieuw ontdekte landen (1494)", "Het maakte een einde aan de Tachtigjarige Oorlog (1648)", "Het verbood de slavenhandel in alle koloniën (1814)", "Het gaf Nederland een eigen handelscompagnie (1602)"], answer: 0, wrongHints: [null, "Dat was de Vrede van Münster.", "Tordesillas is veel ouder — het ging over pas ontdekte landen.", "In 1602 werd de VOC opgericht; dat was geen verdrag tussen landen."] },
       { q: "**Slavernij in NL** afgeschaft?", options: ["1863", "1492", "2024", "Nooit"], answer: 0, wrongHints: [null, "Te vroeg.", "Veel te laat — de afschaffing was al in de 19e eeuw.", "Wel afgeschaft."] },
       {
         q: "Wat was het doel van **ontdekkingsreizen** (15e-17e eeuw)?",

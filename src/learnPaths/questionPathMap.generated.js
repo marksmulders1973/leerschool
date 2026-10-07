@@ -3,9 +3,37 @@
 // Run het script opnieuw na nieuwe paden of nieuwe vragen.
 
 export const QUESTION_PATH_MAP = {
+  "Welk getal ontbreekt: 1, 2, __, 4?": {
+    "pathId": "rekenen-tot-20-nieuwkomers",
+    "stepIdx": 1
+  },
   "Wat is het dubbele van 3?": {
     "pathId": "getallen-tot-20-po",
     "stepIdx": 1
+  },
+  "Welk getal ontbreekt: 10, 9, __, 7?": {
+    "pathId": "rekenen-tot-20-nieuwkomers",
+    "stepIdx": 2
+  },
+  "Welk getal ontbreekt: 5, __, 15, 20?": {
+    "pathId": "rekenen-tot-20-nieuwkomers",
+    "stepIdx": 1
+  },
+  "Hoeveel is 8 + 5?": {
+    "pathId": "rekenen-tot-20-nieuwkomers",
+    "stepIdx": 1
+  },
+  "Hoeveel is 14 - 6?": {
+    "pathId": "rekenen-tot-20-nieuwkomers",
+    "stepIdx": 2
+  },
+  "Hoeveel is 9 + 7?": {
+    "pathId": "rekenen-tot-20-nieuwkomers",
+    "stepIdx": 1
+  },
+  "Hoeveel is 12 - 5?": {
+    "pathId": "rekenen-tot-20-nieuwkomers",
+    "stepIdx": 2
   },
   "Wat is het dubbele van 6?": {
     "pathId": "getallen-tot-20-po",
@@ -19,15 +47,27 @@ export const QUESTION_PATH_MAP = {
     "pathId": "getallen-tot-20-po",
     "stepIdx": 1
   },
+  "Welk getal ontbreekt: 12, 14, __, 18?": {
+    "pathId": "rekenen-tot-20-nieuwkomers",
+    "stepIdx": 1
+  },
+  "Welk getal ontbreekt: 20, 18, 16, __?": {
+    "pathId": "rekenen-tot-20-nieuwkomers",
+    "stepIdx": 2
+  },
   "Hoeveel is 10 + 7?": {
     "pathId": "schatten-afronden",
     "stepIdx": 0
+  },
+  "Hoeveel is 15 - 15?": {
+    "pathId": "rekenen-tot-20-nieuwkomers",
+    "stepIdx": 3
   },
   "Hoeveel is 7 + 7?": {
     "pathId": "getallen-tot-20-po",
     "stepIdx": 0
   },
-  "Welk getal is groter: 34 of 43?": {
+  "Welk getal is het grootst?": {
     "pathId": "schatten-afronden",
     "stepIdx": 1
   },
@@ -35,12 +75,28 @@ export const QUESTION_PATH_MAP = {
     "pathId": "schatten-afronden",
     "stepIdx": 1
   },
+  "Hoeveel is 6 + 8?": {
+    "pathId": "rekenen-tot-20-nieuwkomers",
+    "stepIdx": 1
+  },
+  "Hoeveel is 11 - 4?": {
+    "pathId": "rekenen-tot-20-nieuwkomers",
+    "stepIdx": 2
+  },
   "Wat is het dubbele van 9?": {
     "pathId": "getallen-tot-20-po",
     "stepIdx": 1
   },
+  "Welk getal ontbreekt: 5, 10, 15, __?": {
+    "pathId": "rekenen-tot-20-nieuwkomers",
+    "stepIdx": 1
+  },
   "Het is 3 uur. Waar staat de kleine wijzer?": {
     "pathId": "tijdsduur-rekenen-po",
+    "stepIdx": 0
+  },
+  "Hoeveel is 13 + 6?": {
+    "pathId": "rekenen-tot-20-nieuwkomers",
     "stepIdx": 1
   },
   "Welk getal is even?": {
@@ -115,11 +171,19 @@ export const QUESTION_PATH_MAP = {
     "pathId": "tafels-po",
     "stepIdx": 0
   },
+  "Welk getal ontbreekt: 10, 20, __, 40?": {
+    "pathId": "rekenen-tot-20-nieuwkomers",
+    "stepIdx": 1
+  },
   "Hoeveel is 9 × 2?": {
     "pathId": "tafels-po",
     "stepIdx": 0
   },
   "Hoeveel is 4 × 10?": {
+    "pathId": "tafels-po",
+    "stepIdx": 0
+  },
+  "Hoeveel is 7 × 10?": {
     "pathId": "tafels-po",
     "stepIdx": 0
   },
@@ -151,7 +215,11 @@ export const QUESTION_PATH_MAP = {
     "pathId": "getallen-tot-20-po",
     "stepIdx": 1
   },
-  "Hoeveel seconden zitten in 3 minuten?": {
+  "Welk getal ontbreekt: 5, 10, 15, __, 25?": {
+    "pathId": "rekenen-tot-20-nieuwkomers",
+    "stepIdx": 1
+  },
+  "Hoeveel seconden zitten er in 3 minuten?": {
     "pathId": "klokkijken",
     "stepIdx": 0
   },
@@ -165,6 +233,10 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat is het dubbele van 65?": {
     "pathId": "getallen-tot-20-po",
+    "stepIdx": 1
+  },
+  "Welk getal ontbreekt: 3, 6, 9, __, 15?": {
+    "pathId": "rekenen-tot-20-nieuwkomers",
     "stepIdx": 1
   },
   "Hoeveel seconden zijn er in 2 minuten?": {
@@ -267,7 +339,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "breuken-po",
     "stepIdx": 3
   },
-  "Wat is de oppervlakte van een driehoek met basis 14 en hoogte 8?": {
+  "Wat is de oppervlakte van een driehoek met basis 14 cm en hoogte 8 cm?": {
     "pathId": "vlakke-figuren-po",
     "stepIdx": 2
   },
@@ -279,7 +351,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "procenten-po",
     "stepIdx": 3
   },
-  "Wat is de verhouding 12:18 in laagste termen?": {
+  "Wat is de verhouding 12:18 zo eenvoudig mogelijk geschreven?": {
     "pathId": "procenten-po",
     "stepIdx": 0
   },
@@ -323,7 +395,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "procenten-po",
     "stepIdx": 4
   },
-  "Een fiets kost €350. Na een korting van 14% wat is de prijs?": {
+  "Een fiets kost €350. Wat is de prijs na een korting van 14%?": {
     "pathId": "procenten-po",
     "stepIdx": 3
   },
@@ -393,7 +465,7 @@ export const QUESTION_PATH_MAP = {
   },
   "Een aquarium is 80 × 40 × 50 cm. Hoeveel liter water past erin?": {
     "pathId": "meetkunde-bouwsels",
-    "stepIdx": 4
+    "stepIdx": 0
   },
   "Een kubus heeft een ribbe van 7 cm. Wat is het volume?": {
     "pathId": "meetkunde-bouwsels",
@@ -443,9 +515,9 @@ export const QUESTION_PATH_MAP = {
     "pathId": "kwadraten-wortels",
     "stepIdx": 17
   },
-  "Wat is de y-intercept van y = 2x + 6?": {
-    "pathId": "lineaire-formules",
-    "stepIdx": 1
+  "Wat is het startgetal (snijpunt met de y-as) van y = 2x + 6?": {
+    "pathId": "coordinatenstelsel",
+    "stepIdx": 9
   },
   "Hoeveel is -3 × (-4)?": {
     "pathId": "negatieve-getallen",
@@ -459,7 +531,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "negatieve-getallen",
     "stepIdx": 0
   },
-  "Welke lijn heeft geen helling?": {
+  "Welke lijn heeft helling 0?": {
     "pathId": "lineaire-formules",
     "stepIdx": 4
   },
@@ -475,11 +547,11 @@ export const QUESTION_PATH_MAP = {
     "pathId": "coordinatenstelsel",
     "stepIdx": 0
   },
-  "Wat is de oppervlakte van een driehoek met b=6 en h=9?": {
+  "Wat is de oppervlakte van een driehoek met basis 6 cm en hoogte 9 cm?": {
     "pathId": "breuken",
     "stepIdx": 0
   },
-  "Bereken de omtrek van een rechthoek met lengte 12 en breedte 7.": {
+  "Bereken de omtrek van een rechthoek met lengte 12 cm en breedte 7 cm.": {
     "pathId": "ruimtemeetkunde",
     "stepIdx": 3
   },
@@ -491,7 +563,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "kwadraten-wortels",
     "stepIdx": 3
   },
-  "Wat is de gemiddelde van 5, 8, 11, 14, 17?": {
+  "Wat is het gemiddelde van 5, 8, 11, 14, 17?": {
     "pathId": "statistiek",
     "stepIdx": 3
   },
@@ -668,7 +740,7 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 0
   },
   "Welk woord is een lichaamsdeel?": {
-    "pathId": "woordenschat-po",
+    "pathId": "woorden-2-nieuwkomers",
     "stepIdx": 0
   },
   "Welk woord hoort bij de school?": {
@@ -688,8 +760,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 0
   },
   "Welk woord hoort bij het eten?": {
-    "pathId": "woordenschat-po",
-    "stepIdx": 0
+    "pathId": "woorden-2-nieuwkomers",
+    "stepIdx": 1
   },
   "Welk woord is een seizoen?": {
     "pathId": "woordenschat-po",
@@ -715,10 +787,6 @@ export const QUESTION_PATH_MAP = {
     "pathId": "woordenschat-po",
     "stepIdx": 0
   },
-  "Welk woord is het grootste?": {
-    "pathId": "woordenschat-po",
-    "stepIdx": 3
-  },
   "Welk woord schrijf je met een hoofdletter?": {
     "pathId": "interpunctie-po",
     "stepIdx": 1
@@ -732,8 +800,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 1
   },
   "Welk woord is fout gespeld?": {
-    "pathId": "verhoudingen-po",
-    "stepIdx": 1
+    "pathId": "woordenschat-po",
+    "stepIdx": 4
   },
   "Wat is een woord voor water uit de lucht?": {
     "pathId": "woordenschat-po",
@@ -743,9 +811,9 @@ export const QUESTION_PATH_MAP = {
     "pathId": "woordenschat-po",
     "stepIdx": 0
   },
-  "Welk woord is het langst?": {
+  "Welk woord heeft de meeste letters?": {
     "pathId": "rijmen-letters-kleuters-po",
-    "stepIdx": 0
+    "stepIdx": 2
   },
   "Welke zin is correct?": {
     "pathId": "werkwoordsspelling-dt",
@@ -771,7 +839,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "woordenschat-po",
     "stepIdx": 0
   },
-  "Wat betekent 'koud'?": {
+  "Wat is het tegenovergestelde van 'koud'?": {
     "pathId": "synoniemen-tegenstellingen-po",
     "stepIdx": 2
   },
@@ -779,9 +847,9 @@ export const QUESTION_PATH_MAP = {
     "pathId": "woordenschat-po",
     "stepIdx": 0
   },
-  "Wat betekent 'zacht'?": {
+  "Wat is het tegenovergestelde van 'zacht'?": {
     "pathId": "synoniemen-tegenstellingen-po",
-    "stepIdx": 0
+    "stepIdx": 2
   },
   "Welke zin heeft een punt aan het einde?": {
     "pathId": "interpunctie-po",
@@ -789,7 +857,7 @@ export const QUESTION_PATH_MAP = {
   },
   "Welk woord is fout geschreven?": {
     "pathId": "woordenschat-po",
-    "stepIdx": 3
+    "stepIdx": 1
   },
   "Welk woord is een bijvoeglijk naamwoord?": {
     "pathId": "woordsoorten-po",
@@ -807,8 +875,8 @@ export const QUESTION_PATH_MAP = {
     "pathId": "synoniemen-tegenstellingen-po",
     "stepIdx": 2
   },
-  "Wat is een werkwoord?": {
-    "pathId": "werkwoord-tijden-po",
+  "Welk woord is een werkwoord?": {
+    "pathId": "werkwoordsvervoeging",
     "stepIdx": 0
   },
   "Hoe schrijf je dit woord correct?": {
@@ -824,14 +892,18 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 2
   },
   "Wat is een samengesteld woord?": {
-    "pathId": "woordenschat-po",
+    "pathId": "woorden-2-nieuwkomers",
     "stepIdx": 0
+  },
+  "In welke zin wijst het woord 'daar' of 'er' een duidelijke plek aan?": {
+    "pathId": "woordenschat-po",
+    "stepIdx": 1
   },
   "Welke zin gebruikt een actieve werkwoordsvorm?": {
     "pathId": "werkwoord-tijden-po",
     "stepIdx": 0
   },
-  "Wat is het verschil tussen een werkwoord en een bijwoord?": {
+  "Welk woord is een bijwoord in: 'De hond rent snel.'?": {
     "pathId": "werkwoord-tijden-po",
     "stepIdx": 0
   },
@@ -848,14 +920,14 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 2
   },
   "Welke zin heeft een d/t-fout?": {
-    "pathId": "werkwoordsspelling-dt",
-    "stepIdx": 5
+    "pathId": "werkwoord-tijden-po",
+    "stepIdx": 2
   },
   "Wat is de verleden tijd van 'lopen'?": {
     "pathId": "werkwoord-tijden-po",
     "stepIdx": 3
   },
-  "Welk lidwoord hoort bij 'huis'?": {
+  "Welk lidwoord hoort bij 'huis': de of het?": {
     "pathId": "woordenschat-po",
     "stepIdx": 0
   },
@@ -876,8 +948,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 2
   },
   "Wat is een lidwoord?": {
-    "pathId": "woordsoorten-po",
-    "stepIdx": 3
+    "pathId": "woorden-2-nieuwkomers",
+    "stepIdx": 2
   },
   "Welk woord is het tegendeel van 'licht'?": {
     "pathId": "woordenschat-po",
@@ -895,10 +967,6 @@ export const QUESTION_PATH_MAP = {
     "pathId": "woordenschat-po",
     "stepIdx": 0
   },
-  "Wat is het meervoud van 'blad'?": {
-    "pathId": "synoniemen-tegenstellingen-po",
-    "stepIdx": 1
-  },
   "Welke zin is correct gespeld?": {
     "pathId": "werkwoord-tijden-po",
     "stepIdx": 2
@@ -915,13 +983,9 @@ export const QUESTION_PATH_MAP = {
     "pathId": "synoniemen-tegenstellingen-po",
     "stepIdx": 2
   },
-  "Welk woord is een werkwoord?": {
-    "pathId": "werkwoordsvervoeging",
-    "stepIdx": 0
-  },
-  "Welk woord krijgt -heid?": {
-    "pathId": "woordenschat-po",
-    "stepIdx": 3
+  "Van welk woord kun je met -heid een zelfstandig naamwoord maken?": {
+    "pathId": "woordsoorten-po",
+    "stepIdx": 2
   },
   "Welk woord is een voegwoord?": {
     "pathId": "woordenschat-po",
@@ -933,13 +997,13 @@ export const QUESTION_PATH_MAP = {
   },
   "Welke schrijfwijze klopt?": {
     "pathId": "werkwoord-tijden-po",
-    "stepIdx": 2
+    "stepIdx": 1
   },
   "Wat is het onderwerp in: 'De leraar geeft les'?": {
     "pathId": "samenvatten-hoofdgedachte-po",
     "stepIdx": 0
   },
-  "Welk woord heeft een d aan het einde bij uitspreken?": {
+  "Welk woord schrijf je met een d aan het einde, al hoor je een t?": {
     "pathId": "woordenschat-po",
     "stepIdx": 1
   },
@@ -955,21 +1019,21 @@ export const QUESTION_PATH_MAP = {
     "pathId": "werkwoord-tijden-po",
     "stepIdx": 0
   },
-  "Welk woord is een bijwoord?": {
-    "pathId": "woordenschat-po",
-    "stepIdx": 0
+  "In welke zin is 'snel' een bijwoord?": {
+    "pathId": "woordsoorten-po",
+    "stepIdx": 2
   },
   "Hoeveel zinsdelen zijn er in: 'De hond blaft luid in de tuin'?": {
-    "pathId": "cijferend-rekenen",
-    "stepIdx": 4
+    "pathId": "samenvatten-hoofdgedachte-po",
+    "stepIdx": 2
   },
   "Welk woord past: 'Ik heb de brief al ...'?": {
     "pathId": "schrijven-teksten-po",
     "stepIdx": 1
   },
-  "Wat is het verschil tussen 'haar' en 'hun'?": {
-    "pathId": "tabellen-grafieken",
-    "stepIdx": 2
+  "Welk woord past: 'Tim en Sara pakken ___ fietsen.'?": {
+    "pathId": "woordsoorten-po",
+    "stepIdx": 3
   },
   "Wat is de stijlfiguur in: 'stille storm'?": {
     "pathId": "redactiesommen-pad",
@@ -999,33 +1063,33 @@ export const QUESTION_PATH_MAP = {
     "pathId": "werkwoordsspelling-dt",
     "stepIdx": 2
   },
-  "Wat is het suffix '-elijk' in 'duidelijk'?": {
-    "pathId": "woordsoorten-po",
+  "Wat is '-elijk' in het woord 'duidelijk'?": {
+    "pathId": "woorden-2-nieuwkomers",
     "stepIdx": 0
   },
   "Wat is een afgeleid woord?": {
     "pathId": "woordenschat-po",
     "stepIdx": 0
   },
-  "Welke spelling is correct bij 'jij' als inversie?": {
+  "Welke vraag is goed gespeld?": {
     "pathId": "werkwoord-tijden-po",
-    "stepIdx": 2
+    "stepIdx": 3
   },
   "Wat is een homoniem?": {
     "pathId": "synoniemen-tegenstellingen-po",
-    "stepIdx": 1
-  },
-  "Wat is een samengesteld werkwoord?": {
-    "pathId": "vvn-verkeersexamen-po",
     "stepIdx": 0
   },
-  "Wat is het verschil tussen 'als' en 'dan' in vergelijkingen?": {
+  "Welk woord is een samengesteld werkwoord?": {
+    "pathId": "woordsoorten-po",
+    "stepIdx": 1
+  },
+  "Welke vergelijking is goed?": {
     "pathId": "tabellen-grafieken",
     "stepIdx": 4
   },
-  "Welke stijlfiguur is dit: 'De tijd vliegt.'?": {
+  "Welke stijlfiguur is dit: 'Zij is het zonnetje in huis.'?": {
     "pathId": "spreekwoorden-uitdrukkingen-po",
-    "stepIdx": 4
+    "stepIdx": 0
   },
   "Wat is een directe rede?": {
     "pathId": "interpunctie-po",
@@ -1044,14 +1108,14 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 5
   },
   "Wat is een epanalepsis?": {
-    "pathId": "woordenschat-po",
-    "stepIdx": 0
+    "pathId": "synoniemen-tegenstellingen-po",
+    "stepIdx": 3
   },
   "Vul in: 'Gisteren ___ ik naar de markt.'": {
     "pathId": "werkwoord-tijden-po",
     "stepIdx": 2
   },
-  "Vul in: 'De brief ___ door de leraar voorgelezen.'": {
+  "Vul in: 'Gisteren ___ de brief door de leraar voorgelezen.'": {
     "pathId": "schrijven-teksten-po",
     "stepIdx": 1
   },
@@ -1060,16 +1124,16 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 1
   },
   "Vul in: 'De kinderen ___ in het zwembad.'": {
-    "pathId": "werkwoord-tijden-po",
-    "stepIdx": 1
+    "pathId": "opdrachtwoorden-nieuwkomers",
+    "stepIdx": 0
   },
   "Welke zin bevat een fout?": {
     "pathId": "woordsoorten-po",
     "stepIdx": 0
   },
   "Welk woord is correct gespeld?": {
-    "pathId": "woordenschat-po",
-    "stepIdx": 0
+    "pathId": "getallen-tot-20-po",
+    "stepIdx": 4
   },
   "Hoe schrijf je dit woord?": {
     "pathId": "woordenschat-po",
@@ -1095,7 +1159,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "spreekwoorden-uitdrukkingen-po",
     "stepIdx": 0
   },
-  "Welk stijlfiguur is 'broodmagere mensen' (overdrijving)?": {
+  "Welke stijlfiguur is: 'Ik heb het je al duizend keer gezegd!'?": {
     "pathId": "dichten-poezie-rijmen-po",
     "stepIdx": 2
   },
@@ -1103,23 +1167,27 @@ export const QUESTION_PATH_MAP = {
     "pathId": "dichten-poezie-rijmen-po",
     "stepIdx": 1
   },
-  "Welk teken hoort op de stippen: 'Pas op___ er ligt een plas!'?": {
+  "Welk teken hoort op de stippen: 'Pas op___ Er ligt een plas!'?": {
     "pathId": "interpunctie-po",
-    "stepIdx": 2
+    "stepIdx": 3
   },
   "Welke zin is een vraagzin?": {
     "pathId": "interpunctie-po",
     "stepIdx": 2
   },
-  "Welk lidwoord hoort bij 'museum'?": {
+  "Is het 'de museum' of 'het museum'?": {
     "pathId": "woordenschat-po",
     "stepIdx": 0
   },
-  "Welk voornaamwoord past: '___ moeder maakt eten.'": {
+  "Welk voornaamwoord past: 'Lisa is ziek, dus ___ moeder haalt haar op.'": {
     "pathId": "woordsoorten-po",
     "stepIdx": 3
   },
-  "Wat betekent het spreekwoord 'Het regent pijpenstelen'?": {
+  "Welke zin gebruikt 'die' correct?": {
+    "pathId": "woorden-2-nieuwkomers",
+    "stepIdx": 0
+  },
+  "Wat betekent de uitdrukking 'Het regent pijpenstelen'?": {
     "pathId": "spreekwoorden-uitdrukkingen-po",
     "stepIdx": 0
   },
@@ -1143,6 +1211,14 @@ export const QUESTION_PATH_MAP = {
     "pathId": "woordsoorten-nederlands",
     "stepIdx": 6
   },
+  "Wat is een prefix (voorvoegsel)?": {
+    "pathId": "werkwoordsvervoeging",
+    "stepIdx": 4
+  },
+  "Welke zin staat correct in de verleden tijd?": {
+    "pathId": "werkwoordsvervoeging",
+    "stepIdx": 6
+  },
   "Wat is een onbepaald voornaamwoord?": {
     "pathId": "woordsoorten-nederlands",
     "stepIdx": 5
@@ -1159,7 +1235,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "zinsontleding",
     "stepIdx": 1
   },
-  "Welk zinsdeel is het meewerkend voorwerp?": {
+  "Welk zinsdeel is het meewerkend voorwerp in: 'Jan geeft zijn moeder de bloemen'?": {
     "pathId": "zinsontleding",
     "stepIdx": 7
   },
@@ -1171,21 +1247,21 @@ export const QUESTION_PATH_MAP = {
     "pathId": "zinsontleding",
     "stepIdx": 6
   },
-  "Welke tekstvorm heeft een inleiding, kern en slot?": {
+  "Welke tekstsoort bestaat uit een inleiding, een kern met argumenten en een slot met een conclusie?": {
     "pathId": "cse-leesvaardigheid-nederlands",
-    "stepIdx": 4
+    "stepIdx": 3
   },
-  "Wat is een dt-regel bij 'jij' als inversie?": {
+  "Wat gebeurt er met de -t bij inversie met 'jij'?": {
     "pathId": "werkwoordsvervoeging",
-    "stepIdx": 12
+    "stepIdx": 10
   },
-  "Wat is de stijlfiguur in: 'de nacht-zwarte raven'?": {
-    "pathId": "woordsoorten-nederlands",
-    "stepIdx": 1
+  "Wat is de stijlfiguur in: 'de nachtzwarte raven'?": {
+    "pathId": "zinsontleding",
+    "stepIdx": 10
   },
-  "Wat is het verschil tussen 'hebben' en 'zijn' als hulpwerkwoord?": {
+  "Wanneer gebruik je 'zijn' als hulpwerkwoord in de voltooide tijd?": {
     "pathId": "werkwoordsvervoeging",
-    "stepIdx": 8
+    "stepIdx": 7
   },
   "Welk woord is een concessief voegwoord?": {
     "pathId": "woordsoorten-nederlands",
@@ -1197,27 +1273,31 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat is syntactische inversie?": {
     "pathId": "zinsontleding",
-    "stepIdx": 4
-  },
-  "Wat is focus in een tekst?": {
-    "pathId": "werkwoordsvervoeging",
-    "stepIdx": 0
+    "stepIdx": 1
   },
   "Welk woord is een modaal werkwoord?": {
     "pathId": "werkwoordsvervoeging",
     "stepIdx": 6
   },
-  "Wat is een zeugma?": {
+  "Hoe heet het verschil tussen de volgorde waarin dingen gebeuren en de volgorde waarin ze verteld worden?": {
     "pathId": "werkwoordsvervoeging",
-    "stepIdx": 0
+    "stepIdx": 9
   },
-  "Welk begrip beschrijft de tijdversnelling in een verhaal?": {
+  "Wat is een alinea in een betoog of essay?": {
+    "pathId": "cse-schrijfvaardigheid-nederlands",
+    "stepIdx": 1
+  },
+  "Welk begrip beschrijft het overslaan van een stuk tijd in een verhaal?": {
     "pathId": "werkwoordsvervoeging",
     "stepIdx": 9
   },
   "Wat is een concessieve structuur in een betoog?": {
     "pathId": "cse-schrijfvaardigheid-nederlands",
     "stepIdx": 1
+  },
+  "Welk begrippenpaar uit de verhaalanalyse beschrijft het verschil tussen wát er gebeurt en hóé het verteld wordt?": {
+    "pathId": "werkwoordsvervoeging",
+    "stepIdx": 10
   },
   "Wat is 'verfremdung' (vervreemding) als literair concept?": {
     "pathId": "werkwoordsvervoeging",
@@ -1247,6 +1327,10 @@ export const QUESTION_PATH_MAP = {
     "pathId": "werelddelen-landen-po",
     "stepIdx": 1
   },
+  "Hoe heet het grote project waarbij Nederland land won uit de Zuiderzee?": {
+    "pathId": "water-erfgoed-nederland-po",
+    "stepIdx": 0
+  },
   "In welke provincie ligt Rotterdam?": {
     "pathId": "topografie-nederland",
     "stepIdx": 1
@@ -1255,9 +1339,9 @@ export const QUESTION_PATH_MAP = {
     "pathId": "nederland-water-vo",
     "stepIdx": 3
   },
-  "Welke provincie is de grootste van Nederland?": {
+  "Welke provincie heeft de meeste oppervlakte aan land (zonder water)?": {
     "pathId": "topografie-nederland",
-    "stepIdx": 1
+    "stepIdx": 0
   },
   "Wat is het hoogste punt van Nederland?": {
     "pathId": "topografie-nederland",
@@ -1287,7 +1371,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "topografie-nederland",
     "stepIdx": 0
   },
-  "Wat is de naam van de Nederlandse wateren tussen de vastekust en de Waddeneilanden?": {
+  "Wat is de naam van de Nederlandse wateren tussen de vaste kust en de Waddeneilanden?": {
     "pathId": "topografie-nederland",
     "stepIdx": 4
   },
@@ -1303,13 +1387,13 @@ export const QUESTION_PATH_MAP = {
     "pathId": "topografie-nederland",
     "stepIdx": 1
   },
-  "Welke rivier stroomt door Utrecht?": {
+  "Welke rivier stroomt door de provincie Utrecht?": {
     "pathId": "topografie-nederland",
     "stepIdx": 1
   },
-  "Wat is de Delta?": {
-    "pathId": "topografie-nederland",
-    "stepIdx": 4
+  "Wat is een delta?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 1
   },
   "Welk land grenst aan de zuidkant van Nederland?": {
     "pathId": "werelddelen-landen-po",
@@ -1331,9 +1415,13 @@ export const QUESTION_PATH_MAP = {
     "pathId": "topografie-nederland",
     "stepIdx": 1
   },
-  "Wat is de functie van een dijk?": {
+  "Wat is een dijk?": {
     "pathId": "water-erfgoed-nederland-po",
     "stepIdx": 1
+  },
+  "Wat is een sluis?": {
+    "pathId": "water-erfgoed-nederland-po",
+    "stepIdx": 3
   },
   "Wat is een estuarium?": {
     "pathId": "topografie-nederland",
@@ -1347,25 +1435,25 @@ export const QUESTION_PATH_MAP = {
     "pathId": "topografie-nederland",
     "stepIdx": 1
   },
-  "Wat is de Rijn in Nederland?": {
+  "Bij welke plaats komt de Rijn Nederland binnen?": {
     "pathId": "topografie-nederland",
-    "stepIdx": 0
+    "stepIdx": 4
   },
   "Wat is het laagste punt van Nederland?": {
     "pathId": "water-erfgoed-nederland-po",
     "stepIdx": 0
   },
-  "Wat is NAP?": {
+  "Wat is het NAP (Normaal Amsterdams Peil)?": {
     "pathId": "water-erfgoed-nederland-po",
-    "stepIdx": 4
+    "stepIdx": 0
   },
-  "Welke stad is de thuishaven van de grootste haven van Europa?": {
+  "Welke stad heeft de grootste haven van Europa?": {
     "pathId": "continenten-wereld-po",
     "stepIdx": 1
   },
-  "Welke rivier vormt de grens tussen Noord- en Zuid-Holland?": {
-    "pathId": "kaartlezen-po",
-    "stepIdx": 1
+  "Welk water ligt tussen het centrum van Amsterdam en Amsterdam-Noord?": {
+    "pathId": "topografie-nederland",
+    "stepIdx": 3
   },
   "Wat zijn de Waddeneilanden?": {
     "pathId": "topografie-nederland",
@@ -1383,7 +1471,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "topografie-nederland",
     "stepIdx": 6
   },
-  "Wat is de Randstad?": {
+  "Welke stad hoort bij de Randstad?": {
     "pathId": "topografie-nederland",
     "stepIdx": 6
   },
@@ -1393,7 +1481,7 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat is de langste rivier ter wereld?": {
     "pathId": "maten-omtrek-oppervlakte-po",
-    "stepIdx": 0
+    "stepIdx": 2
   },
   "Op welk continent ligt Brazilië?": {
     "pathId": "werelddelen-landen-po",
@@ -1415,8 +1503,8 @@ export const QUESTION_PATH_MAP = {
     "pathId": "continenten-wereld-po",
     "stepIdx": 2
   },
-  "Welke woestijn is de grootste ter wereld?": {
-    "pathId": "continenten-wereld-po",
+  "Welke woestijn is de grootste hete woestijn ter wereld?": {
+    "pathId": "maten-omtrek-oppervlakte-po",
     "stepIdx": 0
   },
   "Wat is de hoofdstad van China?": {
@@ -1475,17 +1563,17 @@ export const QUESTION_PATH_MAP = {
     "pathId": "werelddelen-landen-po",
     "stepIdx": 1
   },
-  "Door welk land stroomt de Amazone?": {
+  "Door welk land stroomt het grootste deel van de Amazone?": {
     "pathId": "werelddelen-landen-po",
-    "stepIdx": 2
+    "stepIdx": 0
   },
   "Wat is de hoofdstad van India?": {
     "pathId": "werelddelen-landen-po",
     "stepIdx": 1
   },
-  "Welk gebergte scheidt Europa en Azië?": {
+  "Welk gebergte vormt de grens tussen Europa en Azië?": {
     "pathId": "continenten-wereld-po",
-    "stepIdx": 0
+    "stepIdx": 1
   },
   "Wat is de hoofdstad van Mexico?": {
     "pathId": "werelddelen-landen-po",
@@ -1509,13 +1597,13 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat is de Amazone?": {
     "pathId": "werelddelen-landen-po",
-    "stepIdx": 2
+    "stepIdx": 0
   },
-  "Welke bergketen vormt de grens tussen Europa en Azië?": {
+  "Welke bergketen ligt op de grens tussen Europa en Azië?": {
     "pathId": "continenten-wereld-po",
     "stepIdx": 1
   },
-  "Wat is de hoofdstad van Zuid-Afrika?": {
+  "Wat is de regeringshoofdstad (uitvoerende hoofdstad) van Zuid-Afrika?": {
     "pathId": "werelddelen-landen-po",
     "stepIdx": 2
   },
@@ -1533,23 +1621,19 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat is de hoofdstad van Egypte?": {
     "pathId": "werelddelen-landen-po",
-    "stepIdx": 1
-  },
-  "Welke berg is de hoogste in Europa (buiten de Kaukasus)?": {
-    "pathId": "continenten-wereld-po",
-    "stepIdx": 3
+    "stepIdx": 2
   },
   "Wat is de hoofdstad van Argentinië?": {
     "pathId": "werelddelen-landen-po",
     "stepIdx": 2
   },
-  "Welk land heeft het meeste zoet water?": {
-    "pathId": "werelddelen-landen-po",
+  "Welk land heeft de meeste meren ter wereld?": {
+    "pathId": "redactiesommen-pad",
     "stepIdx": 0
   },
   "Wat is de Sahel?": {
     "pathId": "werelddelen-landen-po",
-    "stepIdx": 2
+    "stepIdx": 0
   },
   "Welk continent heeft de hoogste gemiddelde hoogte?": {
     "pathId": "continenten-wereld-po",
@@ -1563,7 +1647,11 @@ export const QUESTION_PATH_MAP = {
     "pathId": "werelddelen-landen-po",
     "stepIdx": 2
   },
-  "Welk land heeft een unieke geografische ligging als landlocked continent?": {
+  "Welk land heeft geen kust (het is helemaal door land ingesloten)?": {
+    "pathId": "werelddelen-landen-po",
+    "stepIdx": 0
+  },
+  "Wat is het Groot Barrièrerif voor de kust van Australië?": {
     "pathId": "werelddelen-landen-po",
     "stepIdx": 0
   },
@@ -1575,7 +1663,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "topografie-nederland",
     "stepIdx": 1
   },
-  "Welke 12 provincies heeft Nederland?": {
+  "Hoeveel provincies heeft Nederland?": {
     "pathId": "water-erfgoed-nederland-po",
     "stepIdx": 4
   },
@@ -1583,7 +1671,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "topografie-nederland",
     "stepIdx": 4
   },
-  "Wat is het IJsselmeer voorheen?": {
+  "Wat was het IJsselmeer vroeger?": {
     "pathId": "water-erfgoed-nederland-po",
     "stepIdx": 0
   },
@@ -1591,15 +1679,15 @@ export const QUESTION_PATH_MAP = {
     "pathId": "topografie-nederland",
     "stepIdx": 5
   },
-  "Wat is de hoogste berg/heuvel van Nederland?": {
-    "pathId": "topografie-nederland",
-    "stepIdx": 0
+  "Wat is het hoogste punt van Europees Nederland?": {
+    "pathId": "vulkanen-po",
+    "stepIdx": 1
   },
   "In welke provincie ligt de stad Maastricht?": {
     "pathId": "topografie-nederland",
     "stepIdx": 3
   },
-  "Wat zijn de Waddeneilanden bekend om?": {
+  "Waar staan de Waddeneilanden om bekend?": {
     "pathId": "topografie-nederland",
     "stepIdx": 5
   },
@@ -1615,13 +1703,9 @@ export const QUESTION_PATH_MAP = {
     "pathId": "werelddelen-landen-po",
     "stepIdx": 0
   },
-  "Welke oceaan is het grootste?": {
-    "pathId": "continenten-wereld-po",
-    "stepIdx": 1
-  },
-  "Welk land heeft de meeste inwoners (per 2024)?": {
+  "Welke oceaan is het grootst?": {
     "pathId": "werelddelen-landen-po",
-    "stepIdx": 1
+    "stepIdx": 0
   },
   "Welke woestijn is het grootste warme woestijngebied?": {
     "pathId": "werelddelen-landen-po",
@@ -1630,10 +1714,6 @@ export const QUESTION_PATH_MAP = {
   "Door welk land stroomt de rivier de Nijl?": {
     "pathId": "werelddelen-landen-po",
     "stepIdx": 2
-  },
-  "Wat zijn 'de drie polen' van de aarde?": {
-    "pathId": "kaartlezen-po",
-    "stepIdx": 0
   },
   "Wat is een vulkaan?": {
     "pathId": "platentektoniek-aardrijkskunde",
@@ -1651,7 +1731,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "klimaten-aardrijkskunde",
     "stepIdx": 2
   },
-  "Wat is een aardschors?": {
+  "Wat is de aardkorst?": {
     "pathId": "platentektoniek-aardrijkskunde",
     "stepIdx": 2
   },
@@ -1671,7 +1751,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "klimaten-aardrijkskunde",
     "stepIdx": 3
   },
-  "Wat is een vulkanische ring of fire?": {
+  "Wat is de Ring van Vuur?": {
     "pathId": "platentektoniek-aardrijkskunde",
     "stepIdx": 8
   },
@@ -1689,35 +1769,31 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat is het verschil tussen een zeeklimaat en een landklimaat?": {
     "pathId": "klimaten-aardrijkskunde",
-    "stepIdx": 4
+    "stepIdx": 5
   },
   "Wat is een broeikasgas?": {
     "pathId": "klimaatverandering-aardrijkskunde",
     "stepIdx": 1
   },
-  "Wat is het gematigd klimaat?": {
+  "Welk klimaat heeft vier seizoenen, matige temperaturen en regen verspreid over het jaar?": {
     "pathId": "klimaten-aardrijkskunde",
     "stepIdx": 4
   },
-  "Wat is een klimaatgrafiek?": {
+  "Wat laat een klimaatgrafiek zien?": {
     "pathId": "klimaten-aardrijkskunde",
     "stepIdx": 0
   },
   "Wat is bodemdaling?": {
     "pathId": "platentektoniek-aardrijkskunde",
-    "stepIdx": 2
+    "stepIdx": 6
   },
   "Wat is een migratienetwerk?": {
     "pathId": "bevolking-migratie-aardrijkskunde",
     "stepIdx": 3
   },
-  "Wat is het verschil tussen een 'natural hazard' en een 'disaster'?": {
+  "Wat is het verschil tussen een natuurgevaar en een natuurramp?": {
     "pathId": "platentektoniek-aardrijkskunde",
     "stepIdx": 6
-  },
-  "Wat is een corridor in geografie?": {
-    "pathId": "bevolking-migratie-aardrijkskunde",
-    "stepIdx": 2
   },
   "Wat is het broeikaseffect?": {
     "pathId": "atmosfeer-klimaat-havo-vwo",
@@ -1731,15 +1807,11 @@ export const QUESTION_PATH_MAP = {
     "pathId": "bevolking-migratie-aardrijkskunde",
     "stepIdx": 3
   },
-  "Wat is het Kyoto-protocol?": {
-    "pathId": "klimaten-aardrijkskunde",
-    "stepIdx": 0
-  },
   "Wat is een tipping point in het klimaat?": {
     "pathId": "klimaten-aardrijkskunde",
     "stepIdx": 8
   },
-  "Wat is een klimaatrefugee?": {
+  "Wat is een klimaatvluchteling?": {
     "pathId": "klimaten-aardrijkskunde",
     "stepIdx": 8
   },
@@ -1751,15 +1823,15 @@ export const QUESTION_PATH_MAP = {
     "pathId": "klimaatverandering-aardrijkskunde",
     "stepIdx": 4
   },
-  "Wat zijn greenhouse gases?": {
-    "pathId": "klimaten-aardrijkskunde",
-    "stepIdx": 8
+  "Wat zijn broeikasgassen?": {
+    "pathId": "klimaatverandering-aardrijkskunde",
+    "stepIdx": 1
   },
   "Wat is een transitiezone?": {
     "pathId": "klimaten-aardrijkskunde",
     "stepIdx": 2
   },
-  "Wat is het verschil tussen pull- en push-factoren bij migratie?": {
+  "Wat is het verschil tussen push- en pull-factoren bij migratie?": {
     "pathId": "bevolking-migratie-aardrijkskunde",
     "stepIdx": 3
   },
@@ -1767,27 +1839,19 @@ export const QUESTION_PATH_MAP = {
     "pathId": "klimaten-aardrijkskunde",
     "stepIdx": 0
   },
-  "Wat is de footloose industry?": {
-    "pathId": "klimaten-aardrijkskunde",
-    "stepIdx": 0
-  },
-  "Wat is het begrip 'shrinking cities'?": {
-    "pathId": "bevolking-migratie-aardrijkskunde",
-    "stepIdx": 0
-  },
-  "Wat is het 'gravity model' in migratietheorie?": {
+  "Wat zegt het 'gravity model' over migratie?": {
     "pathId": "bevolking-migratie-aardrijkskunde",
     "stepIdx": 2
   },
-  "Wat is het verschil tussen migratie en vluchtelingenstroom geopolitiek?": {
+  "Wat is het verschil tussen een migrant en een vluchteling?": {
     "pathId": "bevolking-migratie-aardrijkskunde",
     "stepIdx": 2
   },
   "Wat veroorzaakt het broeikaseffect?": {
-    "pathId": "aardobservatie-risico-havo-vwo",
-    "stepIdx": 2
+    "pathId": "atmosfeer-klimaat-havo-vwo",
+    "stepIdx": 0
   },
-  "Welk gas is het belangrijkste door menselijke uitstoot opgewarmd broeikasgas?": {
+  "Welk broeikasgas uit menselijke uitstoot draagt het meest bij aan de opwarming?": {
     "pathId": "atmosfeer-klimaat-havo-vwo",
     "stepIdx": 4
   },
@@ -1815,10 +1879,6 @@ export const QUESTION_PATH_MAP = {
     "pathId": "atmosfeer-klimaat-havo-vwo",
     "stepIdx": 3
   },
-  "Wat is een delta?": {
-    "pathId": "dieren-seizoenen-natuur",
-    "stepIdx": 1
-  },
   "Wie was Willem van Oranje?": {
     "pathId": "tijdvakken-nederland-po",
     "stepIdx": 2
@@ -1839,7 +1899,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "ontdekkingsreizen-po",
     "stepIdx": 1
   },
-  "Wat was de Middeleeuwen?": {
+  "Wanneer waren de Middeleeuwen?": {
     "pathId": "tijdvakken-nederland-po",
     "stepIdx": 1
   },
@@ -1863,13 +1923,17 @@ export const QUESTION_PATH_MAP = {
     "pathId": "koude-oorlog-modern-po",
     "stepIdx": 1
   },
-  "Wat was de rol van Anne Frank?": {
+  "Wie was Anne Frank?": {
     "pathId": "bekende-boeken-literatuur-po",
     "stepIdx": 2
   },
   "Wanneer was WO1?": {
     "pathId": "tijdvakken-nederland-po",
     "stepIdx": 3
+  },
+  "Wat was het IJzeren Gordijn?": {
+    "pathId": "woorden-2-nieuwkomers",
+    "stepIdx": 0
   },
   "Wie was Rembrandt van Rijn?": {
     "pathId": "nederlandse-kunstenaars-po",
@@ -1885,7 +1949,7 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat is slavernij?": {
     "pathId": "ontdekkingsreizen-po",
-    "stepIdx": 1
+    "stepIdx": 2
   },
   "Wanneer vond de Ontdekkingsreis van Columbus plaats?": {
     "pathId": "ontdekkingsreizen-po",
@@ -1903,6 +1967,10 @@ export const QUESTION_PATH_MAP = {
     "pathId": "koude-oorlog-modern-po",
     "stepIdx": 0
   },
+  "Wie was Koningin Beatrix?": {
+    "pathId": "politiek-democratie-po",
+    "stepIdx": 2
+  },
   "Wat waren concentratiekampen in WO2?": {
     "pathId": "tijdvakken-nederland-po",
     "stepIdx": 1
@@ -1915,13 +1983,9 @@ export const QUESTION_PATH_MAP = {
     "pathId": "tijdvakken-nederland-po",
     "stepIdx": 0
   },
-  "Wat is de Tweede Kamer in historisch perspectief?": {
+  "Wat is de Tweede Kamer?": {
     "pathId": "politiek-democratie-po",
     "stepIdx": 2
-  },
-  "Wat was de oorzaak van WO1?": {
-    "pathId": "tijdvakken-nederland-po",
-    "stepIdx": 3
   },
   "Wat was de Vrede van Munster?": {
     "pathId": "tijdvakken-nederland-po",
@@ -1935,7 +1999,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "politiek-democratie-po",
     "stepIdx": 2
   },
-  "Wanneer begon de Gouden Eeuw?": {
+  "In welke eeuw was de Nederlandse Gouden Eeuw?": {
     "pathId": "wereldorientatie-mix-po",
     "stepIdx": 0
   },
@@ -1967,11 +2031,11 @@ export const QUESTION_PATH_MAP = {
     "pathId": "tijdvakken-nederland-po",
     "stepIdx": 3
   },
-  "Welk verdrag beëindigde WO1?": {
+  "Met welk verdrag werd na WO1 vrede gesloten met Duitsland?": {
     "pathId": "tijdvakken-nederland-po",
     "stepIdx": 0
   },
-  "Wat was de Olympische Spelen van 1936?": {
+  "Wat waren de Olympische Spelen van 1936?": {
     "pathId": "olympische-spelen-po",
     "stepIdx": 0
   },
@@ -1987,15 +2051,11 @@ export const QUESTION_PATH_MAP = {
     "pathId": "wereldorientatie-mix-po",
     "stepIdx": 0
   },
-  "Wat was het IJzeren Gordijn?": {
-    "pathId": "continenten-wereld-po",
-    "stepIdx": 0
-  },
-  "Wat was het Weimar-probleem?": {
+  "Wat maakte de Weimarrepubliek zwak?": {
     "pathId": "politiek-democratie-po",
     "stepIdx": 1
   },
-  "Wanneer werd Nederland bevrijd in WO2?": {
+  "Wanneer was heel Nederland bevrijd in WO2?": {
     "pathId": "delen-po",
     "stepIdx": 3
   },
@@ -2004,8 +2064,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 0
   },
   "Wat was de rol van propaganda in WO2?": {
-    "pathId": "tijdvakken-nederland-po",
-    "stepIdx": 3
+    "pathId": "koude-oorlog-modern-po",
+    "stepIdx": 0
   },
   "Wat was de oorzaak van de Russische Revolutie van 1917?": {
     "pathId": "tijdvakken-nederland-po",
@@ -2013,10 +2073,6 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat was het belang van de Suezcrisis (1956)?": {
     "pathId": "koude-oorlog-modern-po",
-    "stepIdx": 0
-  },
-  "Wat was de impact van de computerrevolutie op de maatschappij?": {
-    "pathId": "digitale-geletterdheid-po",
     "stepIdx": 0
   },
   "Wat was de Gouden Eeuw?": {
@@ -2031,25 +2087,25 @@ export const QUESTION_PATH_MAP = {
     "pathId": "tijdvakken-nederland-po",
     "stepIdx": 3
   },
+  "Wie was het langst minister-president van Nederland?": {
+    "pathId": "bekende-nederlanders-po",
+    "stepIdx": 2
+  },
   "Wie was Adolf Hitler?": {
     "pathId": "tijdvakken-nederland-po",
     "stepIdx": 0
   },
-  "Welk tijdvak was eerst: de Middeleeuwen of de Oudheid?": {
+  "Welk tijdvak kwam het eerst?": {
     "pathId": "tijdvakken-nederland-po",
     "stepIdx": 1
   },
   "Wat is de Industriële Revolutie?": {
     "pathId": "industriele-revolutie-po",
-    "stepIdx": 1
+    "stepIdx": 0
   },
   "Wat was de Eerste Wereldoorlog ook wel genoemd?": {
     "pathId": "tijdvakken-nederland-po",
     "stepIdx": 3
-  },
-  "Wie was Anne Frank?": {
-    "pathId": "bekende-boeken-literatuur-po",
-    "stepIdx": 2
   },
   "Wat was de Verlichting?": {
     "pathId": "tijdvakken-geschiedenis",
@@ -2060,6 +2116,10 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 2
   },
   "Wat was de dekolonisatie?": {
+    "pathId": "wereldoorlog2-geschiedenis",
+    "stepIdx": 9
+  },
+  "Wanneer werd de NAVO opgericht?": {
     "pathId": "wereldoorlog2-geschiedenis",
     "stepIdx": 9
   },
@@ -2075,9 +2135,9 @@ export const QUESTION_PATH_MAP = {
     "pathId": "tijdvakken-geschiedenis",
     "stepIdx": 5
   },
-  "Wat was het Versailles-vredesverdrag een reactie op?": {
-    "pathId": "tijdvakken-geschiedenis",
-    "stepIdx": 9
+  "Na welke oorlog werd het Verdrag van Versailles (1919) gesloten?": {
+    "pathId": "wereldoorlog2-geschiedenis",
+    "stepIdx": 0
   },
   "Wat was de Grote Depressie?": {
     "pathId": "wereldoorlog2-geschiedenis",
@@ -2087,21 +2147,25 @@ export const QUESTION_PATH_MAP = {
     "pathId": "wereldoorlog2-geschiedenis",
     "stepIdx": 6
   },
-  "Wat was de Oost-Indische Compagnie (VOC) de eerste van?": {
-    "pathId": "tijdvakken-geschiedenis",
-    "stepIdx": 6
+  "Waarvan wordt de VOC (1602) vaak 'de eerste' genoemd?": {
+    "pathId": "gouden-eeuw-geschiedenis",
+    "stepIdx": 0
   },
   "Wat was de Vichy-regering in WO2?": {
-    "pathId": "tijdvakken-geschiedenis",
+    "pathId": "wereldoorlog2-geschiedenis",
     "stepIdx": 4
   },
   "Wanneer was de Griekse onafhankelijkheid?": {
     "pathId": "tijdvakken-geschiedenis",
     "stepIdx": 0
   },
-  "Wat was de Schwarze Tod en welk gevolg had het voor Europa?": {
+  "Wat was de Zwarte Dood?": {
     "pathId": "middeleeuwen-geschiedenis",
     "stepIdx": 4
+  },
+  "Wat was de Kristallnacht (1938)?": {
+    "pathId": "wereldoorlog2-geschiedenis",
+    "stepIdx": 2
   },
   "Wat was de invloed van de Franse Revolutie op Europa?": {
     "pathId": "tijdvakken-geschiedenis",
@@ -2112,20 +2176,16 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 9
   },
   "Wat was de impact van WO2 op Nederland?": {
-    "pathId": "tijdvakken-geschiedenis",
-    "stepIdx": 2
+    "pathId": "wereldoorlog2-geschiedenis",
+    "stepIdx": 5
   },
-  "Wat was de betekenis van het Congres van Wenen (1815)?": {
-    "pathId": "tijdvakken-geschiedenis",
-    "stepIdx": 7
-  },
-  "Wat was de IJzeren Gordijn in praktijk?": {
+  "Wat was het IJzeren Gordijn in de praktijk?": {
     "pathId": "tijdvakken-geschiedenis",
     "stepIdx": 10
   },
   "Wat was de rol van de VS na WO2?": {
-    "pathId": "tijdvakken-geschiedenis",
-    "stepIdx": 8
+    "pathId": "wereldoorlog2-geschiedenis",
+    "stepIdx": 9
   },
   "Wat was de betekenis van de val van de Berlijnse Muur (1989)?": {
     "pathId": "tijdvakken-geschiedenis",
@@ -2139,7 +2199,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "wereldoorlog2-geschiedenis",
     "stepIdx": 2
   },
-  "Wanneer begon de Koude Oorlog formeel?": {
+  "In welk jaar kondigden de Verenigde Staten de Truman-doctrine aan, vaak gezien als het begin van de Koude Oorlog?": {
     "pathId": "tijdvakken-geschiedenis",
     "stepIdx": 9
   },
@@ -2159,13 +2219,17 @@ export const QUESTION_PATH_MAP = {
     "pathId": "wereldoorlog2-geschiedenis",
     "stepIdx": 9
   },
+  "Wat was het Dawes Plan?": {
+    "pathId": "tijdvakken-geschiedenis",
+    "stepIdx": 9
+  },
   "Wat was de Volksrepubliek China?": {
     "pathId": "tachtigjarige-oorlog-geschiedenis",
     "stepIdx": 0
   },
-  "Wat was de Zwarte Dood?": {
-    "pathId": "middeleeuwen-geschiedenis",
-    "stepIdx": 4
+  "Wat is het Internationaal Gerechtshof in Den Haag?": {
+    "pathId": "wereldoorlog2-geschiedenis",
+    "stepIdx": 9
   },
   "Wat is de term voor het systematisch vernietigen van een bevolkingsgroep?": {
     "pathId": "wereldoorlog2-geschiedenis",
@@ -2183,15 +2247,15 @@ export const QUESTION_PATH_MAP = {
     "pathId": "wereldoorlog1-geschiedenis",
     "stepIdx": 0
   },
-  "Wat is het debat over intentionalisme vs. functionalisme bij de Holocaust?": {
+  "Waarover gaat het historici-debat 'intentionalisme tegenover functionalisme' bij de Holocaust?": {
     "pathId": "wereldoorlog2-geschiedenis",
     "stepIdx": 8
   },
   "Wat was het belang van de uitvinding van de drukpers voor de Reformatie?": {
     "pathId": "tijdvakken-geschiedenis",
-    "stepIdx": 11
+    "stepIdx": 3
   },
-  "Wat was het Versailles-trauma en zijn gevolgen?": {
+  "Wat was een gevolg van het 'Versailles-trauma' in Duitsland?": {
     "pathId": "wereldoorlog2-geschiedenis",
     "stepIdx": 0
   },
@@ -2203,9 +2267,9 @@ export const QUESTION_PATH_MAP = {
     "pathId": "tijdvakken-geschiedenis",
     "stepIdx": 9
   },
-  "Wat was de 'stab in the back myth' (Dolchstoßlegende)?": {
+  "Wat was de Dolchstoßlegende (dolkstootlegende)?": {
     "pathId": "tijdvakken-geschiedenis",
-    "stepIdx": 2
+    "stepIdx": 9
   },
   "Wat was het effect van de Koude Oorlog op de dekolonisatie?": {
     "pathId": "wereldoorlog2-geschiedenis",
@@ -2279,9 +2343,9 @@ export const QUESTION_PATH_MAP = {
     "pathId": "dierenklassen-po",
     "stepIdx": 1
   },
-  "Wat zijn blaadjes op een boom?": {
+  "Wat doen de blaadjes van een boom?": {
     "pathId": "dieren-seizoenen-natuur",
-    "stepIdx": 8
+    "stepIdx": 9
   },
   "Welk seizoen volgt op de winter?": {
     "pathId": "dieren-seizoenen-natuur",
@@ -2303,7 +2367,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 2
   },
-  "Wat maakt een kikker?": {
+  "Welk geluid maakt een kikker?": {
     "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 5
   },
@@ -2323,7 +2387,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 2
   },
-  "Welk seizoen is het als de bladeren groen zijn en bloemen bloeien?": {
+  "In welk seizoen komen de blaadjes weer aan de bomen en gaan de eerste bloemen bloeien?": {
     "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 6
   },
@@ -2371,19 +2435,19 @@ export const QUESTION_PATH_MAP = {
     "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 8
   },
-  "Welk dier springt op zijn achterpoten?": {
+  "Welk dier hupt rond op zijn twee achterpoten?": {
     "pathId": "dierenklassen-po",
     "stepIdx": 1
   },
-  "Wat is zaad bij een plant?": {
+  "Wat kan er uit een zaadje groeien?": {
     "pathId": "dieren-seizoenen-natuur",
-    "stepIdx": 8
+    "stepIdx": 0
   },
   "Welk dier heeft een stekelig lichaam?": {
     "pathId": "lichaam-gezondheid-po",
     "stepIdx": 0
   },
-  "Wat maakt een kikker met zijn tong?": {
+  "Wat doet een kikker met zijn tong?": {
     "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 3
   },
@@ -2393,7 +2457,7 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat is het verschil tussen een planteneter en een vleesetend dier?": {
     "pathId": "dierenklassen-po",
-    "stepIdx": 1
+    "stepIdx": 4
   },
   "Waarom zijn bijen belangrijk voor bloemen?": {
     "pathId": "dieren-seizoenen-natuur",
@@ -2403,7 +2467,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "dierenklassen-po",
     "stepIdx": 1
   },
-  "Wat is een kiemdraad bij een zaadje?": {
+  "Wat is een kiempje bij een zaadje?": {
     "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 8
   },
@@ -2440,7 +2504,7 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 0
   },
   "Wat is condensatie?": {
-    "pathId": "waterkringloop-po",
+    "pathId": "water-erfgoed-nederland-po",
     "stepIdx": 0
   },
   "Welk dier is een insect?": {
@@ -2467,7 +2531,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "lichaam-gezondheid-po",
     "stepIdx": 0
   },
-  "Wat veroorzaakt regen?": {
+  "Wat is regen?": {
     "pathId": "waterkringloop-po",
     "stepIdx": 1
   },
@@ -2476,7 +2540,7 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 1
   },
   "Hoelang duurt één dag op aarde?": {
-    "pathId": "sterren-planeten",
+    "pathId": "vulkanen-po",
     "stepIdx": 3
   },
   "Wat is een magneet?": {
@@ -2507,7 +2571,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "dierenklassen-po",
     "stepIdx": 5
   },
-  "Welke planeet heeft ringen?": {
+  "Welke planeet is beroemd om zijn grote, duidelijk zichtbare ringen?": {
     "pathId": "toestand-stoffen-po",
     "stepIdx": 1
   },
@@ -2529,9 +2593,9 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat is de functie van de wortels van een plant?": {
     "pathId": "lichaam-gezondheid-po",
-    "stepIdx": 0
+    "stepIdx": 2
   },
-  "Wat is het leven van een vlinder (metamorfose)?": {
+  "Wat is de levenscyclus van een vlinder (metamorfose)?": {
     "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 5
   },
@@ -2543,7 +2607,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 1
   },
-  "Wat is de rol van een decomponent (afbreker)?": {
+  "Wat doet een afbreker (reducent) in de natuur?": {
     "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 9
   },
@@ -2564,8 +2628,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 1
   },
   "Wat is het verschil tussen een vis en een amfibie?": {
-    "pathId": "dierenklassen-po",
-    "stepIdx": 2
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 3
   },
   "Wat is de rol van de zon in het leven op aarde?": {
     "pathId": "dieren-seizoenen-natuur",
@@ -2575,13 +2639,13 @@ export const QUESTION_PATH_MAP = {
     "pathId": "lichaam-gezondheid-po",
     "stepIdx": 0
   },
-  "Wat is een ader en wat is een slagader?": {
+  "Wat is het verschil tussen een ader en een slagader?": {
     "pathId": "lichaam-gezondheid-po",
     "stepIdx": 1
   },
-  "Wat is een kelk, meeldraden en stamper bij een bloem?": {
+  "Wat maken de meeldraden van een bloem?": {
     "pathId": "dieren-seizoenen-natuur",
-    "stepIdx": 6
+    "stepIdx": 8
   },
   "Wat is het verschil tussen prooi en predator?": {
     "pathId": "dieren-seizoenen-natuur",
@@ -2591,6 +2655,10 @@ export const QUESTION_PATH_MAP = {
     "pathId": "tabellen-grafieken",
     "stepIdx": 1
   },
+  "Wat is een ecosysteem?": {
+    "pathId": "redactiesommen-pad",
+    "stepIdx": 0
+  },
   "Wat is een voedselweb?": {
     "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 9
@@ -2599,13 +2667,13 @@ export const QUESTION_PATH_MAP = {
     "pathId": "toestand-stoffen-po",
     "stepIdx": 0
   },
-  "Wat is een producent in een voedselketen?": {
+  "Welke van deze is een producent in een voedselketen?": {
     "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 9
   },
   "Wat is osmose?": {
     "pathId": "water-erfgoed-nederland-po",
-    "stepIdx": 0
+    "stepIdx": 2
   },
   "Wat is een molecuul?": {
     "pathId": "energiebronnen-po",
@@ -2616,11 +2684,15 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 1
   },
   "Wat is een chemische reactie?": {
-    "pathId": "tellen-kleuters-po",
-    "stepIdx": 2
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 8
   },
   "Wat is gravitatie?": {
     "pathId": "bekende-wetenschappers-po",
+    "stepIdx": 1
+  },
+  "Wat is een atoom?": {
+    "pathId": "weersvoorspelling-po",
     "stepIdx": 1
   },
   "Wat is een exotherme reactie?": {
@@ -2631,7 +2703,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 8
   },
-  "Wat is een neerslag?": {
+  "Wat is neerslag?": {
     "pathId": "waterkringloop-po",
     "stepIdx": 1
   },
@@ -2639,17 +2711,17 @@ export const QUESTION_PATH_MAP = {
     "pathId": "waterkringloop-po",
     "stepIdx": 0
   },
-  "Wat is een decompositie (ontbinding)?": {
+  "Wat is decompositie (ontbinding)?": {
     "pathId": "lichaam-gezondheid-po",
     "stepIdx": 1
   },
-  "Wat is zwerkracht / zwaartekracht?": {
+  "Waarom valt een appel uit een boom naar beneden?": {
     "pathId": "bekende-wetenschappers-po",
     "stepIdx": 1
   },
   "Wat is de kringloop van koolstof?": {
-    "pathId": "wereldorientatie-mix-po",
-    "stepIdx": 2
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 8
   },
   "Wat is een biotoop?": {
     "pathId": "water-erfgoed-nederland-po",
@@ -2661,50 +2733,62 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat is het verschil tussen fotosynthese en celademhaling?": {
     "pathId": "tabellen-grafieken",
-    "stepIdx": 2
+    "stepIdx": 0
   },
   "Wat is de pH-schaal?": {
-    "pathId": "tabellen-grafieken",
-    "stepIdx": 2
+    "pathId": "verhoudingen-po",
+    "stepIdx": 1
   },
   "Wat is het verschil tussen geleiders en isolatoren?": {
     "pathId": "tabellen-grafieken",
     "stepIdx": 3
   },
   "Wat is magnetisme?": {
-    "pathId": "breuken-po",
-    "stepIdx": 3
+    "pathId": "kaartlezen-po",
+    "stepIdx": 0
   },
-  "Wat zijn elementen op het periodiek systeem?": {
+  "Wat is een element (zoals in het periodiek systeem)?": {
     "pathId": "redactiesommen-pad",
+    "stepIdx": 1
+  },
+  "Wat gebeurt er bij een chemische reactie?": {
+    "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 0
   },
   "Wat is het verschil tussen organische en anorganische stoffen?": {
     "pathId": "tabellen-grafieken",
-    "stepIdx": 2
+    "stepIdx": 0
   },
   "Wat is erosie?": {
     "pathId": "water-erfgoed-nederland-po",
-    "stepIdx": 3
+    "stepIdx": 0
   },
-  "Wat is de kringloop van water?": {
+  "Welke stap in de waterkringloop komt direct na verdamping?": {
     "pathId": "waterkringloop-po",
+    "stepIdx": 1
+  },
+  "Wat is biodiversiteit?": {
+    "pathId": "tabellen-grafieken",
     "stepIdx": 0
   },
   "Wat is de ozonlaag en waarom is ze belangrijk?": {
-    "pathId": "procenten-po",
-    "stepIdx": 0
+    "pathId": "vlakke-figuren-po",
+    "stepIdx": 2
   },
   "Wat is het verschil tussen een zwak en sterk zuur?": {
     "pathId": "tabellen-grafieken",
-    "stepIdx": 2
-  },
-  "Wat is een voedingsstof voor planten?": {
-    "pathId": "lichaam-gezondheid-po",
     "stepIdx": 3
   },
+  "Welke voedingsstoffen nemen planten op uit de bodem?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 8
+  },
+  "Wat is het verschil tussen uitgestorven en bedreigd?": {
+    "pathId": "tabellen-grafieken",
+    "stepIdx": 0
+  },
   "Wat is het effect van luchtvervuiling op mensen?": {
-    "pathId": "redactiesommen-pad",
+    "pathId": "lichaam-gezondheid-po",
     "stepIdx": 1
   },
   "Wat is adaptatie bij dieren?": {
@@ -2716,7 +2800,7 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 4
   },
   "Wat is het verschil tussen een kernreactie en een chemische reactie?": {
-    "pathId": "energiebronnen-po",
+    "pathId": "tabellen-grafieken",
     "stepIdx": 3
   },
   "Welk orgaan pompt bloed door je lichaam?": {
@@ -2755,13 +2839,9 @@ export const QUESTION_PATH_MAP = {
     "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 1
   },
-  "Wat is een ecosysteem?": {
-    "pathId": "redactiesommen-pad",
-    "stepIdx": 0
-  },
   "Wat doen wormen voor de bodem?": {
     "pathId": "dieren-seizoenen-natuur",
-    "stepIdx": 4
+    "stepIdx": 9
   },
   "Hoeveel planeten draaien er om de zon?": {
     "pathId": "sterren-planeten",
@@ -2771,11 +2851,11 @@ export const QUESTION_PATH_MAP = {
     "pathId": "sterren-planeten",
     "stepIdx": 2
   },
-  "Hoe heet onze melkweg?": {
+  "Hoe heet het sterrenstelsel waarin de zon en de aarde staan?": {
     "pathId": "sterren-planeten",
     "stepIdx": 0
   },
-  "Wat veroorzaakt eb en vloed?": {
+  "Wat veroorzaakt vooral eb en vloed?": {
     "pathId": "sterren-planeten",
     "stepIdx": 3
   },
@@ -2784,16 +2864,16 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 6
   },
   "Wat zijn fossiele brandstoffen?": {
-    "pathId": "energie-hulpbronnen-havo-vwo",
-    "stepIdx": 0
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 1
   },
   "Welke energiebron is hernieuwbaar?": {
     "pathId": "energiebronnen-po",
     "stepIdx": 1
   },
-  "Wat is de drie aggregatietoestanden van water?": {
+  "Wat zijn de drie aggregatietoestanden van water?": {
     "pathId": "toestand-stoffen-po",
-    "stepIdx": 0
+    "stepIdx": 3
   },
   "Wat is DNA?": {
     "pathId": "genetica-erfelijkheid-biologie",
@@ -2811,6 +2891,10 @@ export const QUESTION_PATH_MAP = {
     "pathId": "fotosynthese-biologie",
     "stepIdx": 0
   },
+  "Wat is celademhaling (celrespiratie)?": {
+    "pathId": "mens-biologie-vmbo",
+    "stepIdx": 3
+  },
   "Wat is een enzym?": {
     "pathId": "mens-biologie-vmbo",
     "stepIdx": 3
@@ -2819,7 +2903,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "cel-biologie",
     "stepIdx": 6
   },
-  "Wat is een aardlaag?": {
+  "Welke laag van de aarde ligt direct onder de aardkorst?": {
     "pathId": "platentektoniek-aardrijkskunde",
     "stepIdx": 1
   },
@@ -2835,6 +2919,10 @@ export const QUESTION_PATH_MAP = {
     "pathId": "cel-biologie",
     "stepIdx": 7
   },
+  "Wat is een gameet?": {
+    "pathId": "genetica-erfelijkheid-biologie",
+    "stepIdx": 1
+  },
   "Wat is een genotype?": {
     "pathId": "genetica-erfelijkheid-biologie",
     "stepIdx": 1
@@ -2846,6 +2934,14 @@ export const QUESTION_PATH_MAP = {
   "Wat is de rol van enzymen in de spijsvertering?": {
     "pathId": "mens-biologie-vmbo",
     "stepIdx": 3
+  },
+  "Wat is het verschil tussen een fysische en chemische verandering?": {
+    "pathId": "fotosynthese-biologie",
+    "stepIdx": 3
+  },
+  "Wat is een protist?": {
+    "pathId": "cel-biologie",
+    "stepIdx": 1
   },
   "Wat is mitose?": {
     "pathId": "cel-biologie",
@@ -2863,6 +2959,10 @@ export const QUESTION_PATH_MAP = {
     "pathId": "genetica-erfelijkheid-biologie",
     "stepIdx": 2
   },
+  "Wat is een neutrino?": {
+    "pathId": "cel-biologie",
+    "stepIdx": 8
+  },
   "Wat is een RNA-transcript?": {
     "pathId": "genetica-erfelijkheid-biologie",
     "stepIdx": 0
@@ -2871,9 +2971,17 @@ export const QUESTION_PATH_MAP = {
     "pathId": "fotosynthese-biologie",
     "stepIdx": 2
   },
-  "Wat is transductie in biologie?": {
+  "Wat is elektrolyse?": {
+    "pathId": "chemische-reacties-scheikunde",
+    "stepIdx": 6
+  },
+  "Wat is transductie bij bacteriën?": {
     "pathId": "genetica-erfelijkheid-biologie",
-    "stepIdx": 5
+    "stepIdx": 3
+  },
+  "Wat is een ligand in de biochemie?": {
+    "pathId": "voortplanting-hormonen-biologie",
+    "stepIdx": 0
   },
   "Wat is een transcriptiefactor?": {
     "pathId": "genetica-erfelijkheid-biologie",
@@ -2884,8 +2992,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 7
   },
   "Wat is het verschil tussen aerobe en anaerobe ademhaling?": {
-    "pathId": "mens-biologie-vmbo",
-    "stepIdx": 2
+    "pathId": "fotosynthese-biologie",
+    "stepIdx": 3
   },
   "Wat is apoptose?": {
     "pathId": "cel-biologie",
@@ -2911,9 +3019,9 @@ export const QUESTION_PATH_MAP = {
     "pathId": "klimaatverandering-aardrijkskunde",
     "stepIdx": 2
   },
-  "Wat is een lac-operon?": {
+  "Wat is het lac-operon?": {
     "pathId": "genetica-erfelijkheid-biologie",
-    "stepIdx": 1
+    "stepIdx": 6
   },
   "Choose the correct verb: 'She ___ to school every day.'": {
     "pathId": "basis-grammatica-engels-po",
@@ -2933,7 +3041,7 @@ export const QUESTION_PATH_MAP = {
   },
   "What is the plural of 'child'?": {
     "pathId": "onregelmatige-werkwoorden-engels",
-    "stepIdx": 0
+    "stepIdx": 9
   },
   "What is the passive voice of 'They built the house'?": {
     "pathId": "woordenschat-engels",
@@ -2955,7 +3063,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "onregelmatige-werkwoorden-v2-engels",
     "stepIdx": 1
   },
-  "What is 'indirect speech' of: 'I will come tomorrow'?": {
+  "What is the indirect speech of: He said: 'I will come tomorrow'?": {
     "pathId": "conditionals-engels",
     "stepIdx": 1
   },
@@ -3003,11 +3111,11 @@ export const QUESTION_PATH_MAP = {
     "pathId": "naamvallen-duits",
     "stepIdx": 4
   },
-  "Wat is het verleden tijd (Perfekt) van 'gehen'?": {
+  "Wat is de voltooide tijd (Perfekt) van 'gehen'?": {
     "pathId": "werkwoordsvervoeging-duits",
-    "stepIdx": 3
+    "stepIdx": 4
   },
-  "Hoe verander je een bijvoeglijk naamwoord na 'der' (sterk)?": {
+  "Welke uitgang krijgt een bijvoeglijk naamwoord na 'der' in de nominatief mannelijk (zwakke verbuiging)?": {
     "pathId": "naamvallen-duits",
     "stepIdx": 3
   },
@@ -3043,11 +3151,11 @@ export const QUESTION_PATH_MAP = {
     "pathId": "werkwoordsvervoeging-duits",
     "stepIdx": 2
   },
-  "Hoe zeg je 'ik wil naar huis gaan' in het Duits?": {
+  "Hoe zeg je beleefd 'ik wil graag naar huis gaan' in het Duits?": {
     "pathId": "naamvallen-duits",
     "stepIdx": 0
   },
-  "Welk hulpwerkwoord gebruik je bij 'können'?": {
+  "Welk hulpwerkwoord krijgt 'können' in het Perfekt?": {
     "pathId": "werkwoordsvervoeging-duits",
     "stepIdx": 2
   },
@@ -3075,21 +3183,17 @@ export const QUESTION_PATH_MAP = {
     "pathId": "werkwoordsvervoeging-duits",
     "stepIdx": 3
   },
-  "Welke voorzetsels nemen Dativ in het Duits?": {
-    "pathId": "naamvallen-duits",
-    "stepIdx": 0
-  },
   "Wat is het Partizip II van 'schreiben'?": {
     "pathId": "werkwoordsvervoeging-duits",
     "stepIdx": 2
   },
-  "Wat is een modale partikkel in het Duits?": {
-    "pathId": "naamvallen-duits",
-    "stepIdx": 0
-  },
-  "Wat is het Genitief van 'die Frau'?": {
+  "Wat is een modale partikel in het Duits?": {
     "pathId": "naamvallen-duits",
     "stepIdx": 4
+  },
+  "Wat is de Genitief van 'die Frau'?": {
+    "pathId": "naamvallen-duits",
+    "stepIdx": 5
   },
   "Hoe zeg je 'Ik houd van haar' in het Duits?": {
     "pathId": "naamvallen-duits",
@@ -3100,6 +3204,10 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 0
   },
   "Hoe zeg je 'Als ik rijk was...' (hypothetisch) in het Duits?": {
+    "pathId": "naamvallen-duits",
+    "stepIdx": 0
+  },
+  "Hoe ontken je 'Ich habe Geld' in het Duits?": {
     "pathId": "naamvallen-duits",
     "stepIdx": 0
   },
@@ -3123,7 +3231,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "werkwoordsvervoeging-duits",
     "stepIdx": 2
   },
-  "Hoe verschilt 'während' van 'während' als voegwoord vs. als voorzetsel?": {
+  "Wat is het verschil tussen 'während' als voegwoord en als voorzetsel?": {
     "pathId": "naamvallen-duits",
     "stepIdx": 6
   },
@@ -3143,9 +3251,9 @@ export const QUESTION_PATH_MAP = {
     "pathId": "naamvallen-duits",
     "stepIdx": 0
   },
-  "Wat is het doel van Konjunktiv I in het Duits?": {
-    "pathId": "naamvallen-duits",
-    "stepIdx": 0
+  "Wat is de Konjunktiv I van 'sein' bij 'er'?": {
+    "pathId": "werkwoordsvervoeging-duits",
+    "stepIdx": 2
   },
   "Hoe verschilt het Futur II van het Futur I?": {
     "pathId": "werkwoordsvervoeging-duits",
@@ -3160,10 +3268,6 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 2
   },
   "Wat is een Relativpronomen in het Duits en hoe past het zich aan?": {
-    "pathId": "naamvallen-duits",
-    "stepIdx": 0
-  },
-  "Wat is Ellipse in de Duits taal?": {
     "pathId": "naamvallen-duits",
     "stepIdx": 0
   },
@@ -3200,14 +3304,14 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 0
   },
   "Welke werkwoorden nemen être in passé composé?": {
-    "pathId": "passe-compose-frans",
-    "stepIdx": 3
+    "pathId": "werkwoordsvervoeging-frans",
+    "stepIdx": 2
   },
   "Hoe zeg je 'Ik hoop dat...' in het Frans?": {
     "pathId": "passe-compose-frans",
     "stepIdx": 0
   },
-  "Welk tijdsvorm gebruik je voor een voltooide actie vóór een andere verleden actie?": {
+  "Welke tijdsvorm gebruik je voor een voltooide actie vóór een andere verleden actie?": {
     "pathId": "passe-compose-frans",
     "stepIdx": 1
   },
@@ -3335,17 +3439,13 @@ export const QUESTION_PATH_MAP = {
     "pathId": "nederlandse-staat-maatschappijleer",
     "stepIdx": 3
   },
-  "Wat is het verschil tussen ethnocentrisme en cultureel relativisme?": {
+  "Wat is het verschil tussen etnocentrisme en cultureel relativisme?": {
     "pathId": "mensenrechten-maatschappijleer",
     "stepIdx": 0
   },
   "Wat is de rol van de Europese Commissie?": {
     "pathId": "nederlandse-staat-maatschappijleer",
     "stepIdx": 9
-  },
-  "Wat is het verschil tussen soft power en hard power?": {
-    "pathId": "nederlandse-staat-maatschappijleer",
-    "stepIdx": 6
   },
   "Wat is een civil society?": {
     "pathId": "nederlandse-staat-maatschappijleer",
@@ -3355,7 +3455,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "nederlandse-staat-maatschappijleer",
     "stepIdx": 6
   },
-  "Wat is een consensus democratie?": {
+  "Wat is een consensusdemocratie?": {
     "pathId": "nederlandse-staat-maatschappijleer",
     "stepIdx": 10
   },
@@ -3391,7 +3491,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "nederlandse-staat-maatschappijleer",
     "stepIdx": 7
   },
-  "Wat is de trias politica in de praktijk?": {
+  "Wat houdt de trias politica in?": {
     "pathId": "nederlandse-staat-maatschappijleer",
     "stepIdx": 2
   },
@@ -3425,9 +3525,17 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat is het verschil tussen een confederatie en een federatie?": {
     "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 7
+  },
+  "Wat is electorale volatiliteit?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
     "stepIdx": 1
   },
   "Wat is een rechtsstaat in crisis (democratic backsliding)?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 7
+  },
+  "Wat is neorealisme in de internationale betrekkingen?": {
     "pathId": "nederlandse-staat-maatschappijleer",
     "stepIdx": 7
   },
@@ -3467,7 +3575,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "maatschappijwetenschappen-havo-vwo",
     "stepIdx": 0
   },
-  "Wat zijn media's belangrijkste rollen in een democratie?": {
+  "Wat zijn de belangrijkste rollen van de media in een democratie?": {
     "pathId": "maatschappijwetenschappen-havo-vwo",
     "stepIdx": 0
   },
@@ -3483,17 +3591,17 @@ export const QUESTION_PATH_MAP = {
     "pathId": "mens-biologie-vmbo",
     "stepIdx": 1
   },
-  "Wat produceert de long?": {
+  "Welk gas neemt het bloed in de longen op uit de lucht?": {
     "pathId": "mens-biologie-vmbo",
-    "stepIdx": 2
+    "stepIdx": 1
   },
   "Wat zijn producenten in een voedselketen?": {
     "pathId": "fotosynthese-biologie",
     "stepIdx": 4
   },
   "Wat is de functie van rode bloedcellen?": {
-    "pathId": "mens-biologie-vmbo",
-    "stepIdx": 1
+    "pathId": "fotosynthese-biologie",
+    "stepIdx": 3
   },
   "Hoe verloopt de spijsvertering in de maag?": {
     "pathId": "mens-biologie-vmbo",
@@ -3501,7 +3609,7 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat is de functie van de nieren?": {
     "pathId": "mens-biologie-vmbo",
-    "stepIdx": 4
+    "stepIdx": 1
   },
   "Welke cel bevat geen celkern?": {
     "pathId": "cel-biologie",
@@ -3511,9 +3619,9 @@ export const QUESTION_PATH_MAP = {
     "pathId": "cel-biologie",
     "stepIdx": 5
   },
-  "Hoe heet de opname van zuurstof door cellen?": {
+  "Hoe heet het proces waarbij cellen met zuurstof energie vrijmaken uit glucose?": {
     "pathId": "cel-biologie",
-    "stepIdx": 5
+    "stepIdx": 4
   },
   "Wat is een reflex?": {
     "pathId": "mens-biologie-vmbo",
@@ -3543,6 +3651,14 @@ export const QUESTION_PATH_MAP = {
     "pathId": "voortplanting-hormonen-biologie",
     "stepIdx": 7
   },
+  "Welke stof in rode bloedcellen bindt zuurstof?": {
+    "pathId": "mens-biologie-vmbo",
+    "stepIdx": 1
+  },
+  "Welke afvalstof halen de nieren vooral uit het bloed?": {
+    "pathId": "mens-biologie-vmbo",
+    "stepIdx": 4
+  },
   "Wat is een reflexboog?": {
     "pathId": "mens-biologie-vmbo",
     "stepIdx": 0
@@ -3555,9 +3671,13 @@ export const QUESTION_PATH_MAP = {
     "pathId": "mens-biologie-vmbo",
     "stepIdx": 3
   },
-  "Wat is de functie van chloroplasten in plantencellen?": {
-    "pathId": "cel-biologie",
-    "stepIdx": 5
+  "Welke van deze is een abiotische factor in een ecosysteem?": {
+    "pathId": "ecosystemen-biologie",
+    "stepIdx": 0
+  },
+  "Welke stof in de chloroplasten vangt het licht op?": {
+    "pathId": "fotosynthese-biologie",
+    "stepIdx": 0
   },
   "Wat is het verschil tussen aseksuele en seksuele voortplanting?": {
     "pathId": "voortplanting-hormonen-biologie",
@@ -3599,6 +3719,10 @@ export const QUESTION_PATH_MAP = {
     "pathId": "ecosystemen-biologie",
     "stepIdx": 0
   },
+  "Wat is bioaccumulatie?": {
+    "pathId": "fotosynthese-biologie",
+    "stepIdx": 4
+  },
   "Wat is de rol van mitochondriën?": {
     "pathId": "cel-biologie",
     "stepIdx": 4
@@ -3611,7 +3735,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "genetica-erfelijkheid-biologie",
     "stepIdx": 2
   },
-  "Wat is het zenuwstelsel verdeeld in?": {
+  "In welke twee delen verdeel je het zenuwstelsel naar ligging?": {
     "pathId": "mens-biologie-vmbo",
     "stepIdx": 0
   },
@@ -3665,7 +3789,7 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat is de endosymbiosetheorie?": {
     "pathId": "cel-biologie",
-    "stepIdx": 5
+    "stepIdx": 4
   },
   "Wat is een chromosoom?": {
     "pathId": "genetica-havo-vwo",
@@ -3702,10 +3826,6 @@ export const QUESTION_PATH_MAP = {
   "Wat is de rol van een afbreker (decomposer)?": {
     "pathId": "ecosystemen-havo-vwo",
     "stepIdx": 0
-  },
-  "Wat is biodiversiteit?": {
-    "pathId": "ecosystemen-havo-vwo",
-    "stepIdx": 3
   },
   "Wat doet de huid bij de mens?": {
     "pathId": "immuunsysteem-havo-vwo",
@@ -3755,7 +3875,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "statistiek",
     "stepIdx": 5
   },
-  "Een rechthoekige driehoek heeft zijden 3 en 4. Hoe lang is de hypotenusa?": {
+  "Een rechthoekige driehoek heeft rechthoekszijden 3 en 4. Hoe lang is de hypotenusa?": {
     "pathId": "pythagoras",
     "stepIdx": 4
   },
@@ -3829,7 +3949,7 @@ export const QUESTION_PATH_MAP = {
   },
   "Hoeveel is 1/4 + 1/3?": {
     "pathId": "breuken",
-    "stepIdx": 1
+    "stepIdx": 5
   },
   "Een driehoek heeft basis 8 cm en hoogte 5 cm. Wat is de oppervlakte?": {
     "pathId": "breuken",
@@ -3859,7 +3979,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "negatieve-getallen",
     "stepIdx": 0
   },
-  "Wat is de exponentiële groei als formule?": {
+  "Welke formule hoort bij exponentiële groei?": {
     "pathId": "exponentieel",
     "stepIdx": 1
   },
@@ -3889,15 +4009,19 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat is de standaardafwijking een maat voor?": {
     "pathId": "statistiek",
-    "stepIdx": 6
+    "stepIdx": 3
   },
   "Wat stelt het begrip 'rico' (richtingscoëfficiënt) voor?": {
     "pathId": "negatieve-getallen",
-    "stepIdx": 0
+    "stepIdx": 1
   },
   "Bereken: √(50) in vereenvoudigde vorm.": {
     "pathId": "kwadraten-wortels",
     "stepIdx": 17
+  },
+  "Wat is de formule voor samengestelde interest na t jaar?": {
+    "pathId": "exponentieel",
+    "stepIdx": 7
   },
   "Wat is een goniometrische vergelijking?": {
     "pathId": "vergelijkingen-oplossen",
@@ -3937,7 +4061,7 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat is de integraal van f(x) = 2x?": {
     "pathId": "kwadraten-wortels",
-    "stepIdx": 15
+    "stepIdx": 16
   },
   "Hoeveel is de som van de meetkundige reeks: 1 + ½ + ¼ + ⅛ + ... (oneindig)?": {
     "pathId": "breuken",
@@ -3947,7 +4071,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "negatieve-getallen",
     "stepIdx": 3
   },
-  "Wat is e (het getal van Euler) benadering?": {
+  "Wat is bij benadering e (het getal van Euler)?": {
     "pathId": "machten",
     "stepIdx": 1
   },
@@ -3955,7 +4079,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "goniometrie",
     "stepIdx": 0
   },
-  "Wat is een parametervergelijking?": {
+  "Wat is een parametervoorstelling van een kromme?": {
     "pathId": "goniometrie",
     "stepIdx": 8
   },
@@ -3971,7 +4095,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "negatieve-getallen",
     "stepIdx": 0
   },
-  "Wat is een poolstelsel?": {
+  "Wat zijn poolcoördinaten?": {
     "pathId": "coordinatenstelsel",
     "stepIdx": 10
   },
@@ -3995,7 +4119,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "statistiek",
     "stepIdx": 6
   },
-  "Wat is de vectoriele optelling van a⃗ = (2,3) en b⃗ = (−1,4)?": {
+  "Wat is de vectoriële optelling van a⃗ = (2,3) en b⃗ = (−1,4)?": {
     "pathId": "negatieve-getallen",
     "stepIdx": 0
   },
@@ -4004,8 +4128,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 3
   },
   "Wat is de limiet van (sin x)/x als x → 0?": {
-    "pathId": "goniometrie",
-    "stepIdx": 0
+    "pathId": "breuken",
+    "stepIdx": 2
   },
   "Los op: x² − 5x + 6 = 0.": {
     "pathId": "algebra-vergelijkingen-havo-vwo",
@@ -4069,7 +4193,7 @@ export const QUESTION_PATH_MAP = {
   },
   "Welke stof is een goede elektrische geleider?": {
     "pathId": "elektriciteit-natuurkunde",
-    "stepIdx": 0
+    "stepIdx": 4
   },
   "Wat is de formule voor snelheid?": {
     "pathId": "bewegingen-snelheid-natuurkunde",
@@ -4079,7 +4203,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "atoombouw-scheikunde",
     "stepIdx": 0
   },
-  "Hoe heet het proces waarbij ijs smelt?": {
+  "Hoe heet het proces waarbij ijs in water verandert?": {
     "pathId": "stoffen-mengsels-scheikunde",
     "stepIdx": 3
   },
@@ -4131,7 +4255,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "stoffen-mengsels-scheikunde",
     "stepIdx": 0
   },
-  "Wat is dichtheid en hoe bereken je het?": {
+  "Wat is dichtheid en hoe bereken je die?": {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 1
   },
@@ -4147,17 +4271,17 @@ export const QUESTION_PATH_MAP = {
     "pathId": "elektriciteit-natuurkunde",
     "stepIdx": 1
   },
-  "Wat is een zuur en hoe herken je het aan de pH?": {
+  "Welke pH heeft een zure oplossing?": {
+    "pathId": "stoffen-mengsels-scheikunde",
+    "stepIdx": 3
+  },
+  "Welke pH heeft een basische oplossing (loog)?": {
     "pathId": "stoffen-mengsels-scheikunde",
     "stepIdx": 3
   },
   "Wat is verbranding als chemische reactie?": {
     "pathId": "atoombouw-scheikunde",
     "stepIdx": 8
-  },
-  "Wat zijn voedingsstoffen en noem er drie voorbeelden.": {
-    "pathId": "cel-biologie",
-    "stepIdx": 4
   },
   "Wat is het verschil tussen massa en gewicht?": {
     "pathId": "krachten-natuurkunde",
@@ -4168,7 +4292,7 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 4
   },
   "Wat is het atoommodel van Bohr?": {
-    "pathId": "atoombouw-scheikunde",
+    "pathId": "elektriciteit-natuurkunde",
     "stepIdx": 3
   },
   "Uit welke deeltjes bestaat een atoomkern?": {
@@ -4188,8 +4312,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 3
   },
   "Wat is het verschil tussen serie- en parallelschakeling?": {
-    "pathId": "redactiesommen-pad",
-    "stepIdx": 0
+    "pathId": "tabellen-grafieken",
+    "stepIdx": 2
   },
   "Wat is de eenheid van energie?": {
     "pathId": "mechanica-havo-vwo",
@@ -4207,17 +4331,17 @@ export const QUESTION_PATH_MAP = {
     "pathId": "mechanica-havo-vwo",
     "stepIdx": 2
   },
-  "Hoe heet de weerstand die altijd aanwezig is bij beweging op een oppervlak?": {
+  "Hoe heet de kracht tussen twee oppervlakken die over elkaar schuiven en de beweging tegenwerkt?": {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 4
   },
-  "Wat is het SI-symbool voor stroomsterkte?": {
+  "Wat is het symbool van de eenheid van stroomsterkte?": {
     "pathId": "elektriciteit-natuurkunde",
     "stepIdx": 3
   },
-  "Welk fenomeen verklaart waarom een lepel in water 'gebroken' lijkt?": {
+  "Welk verschijnsel verklaart waarom een lepel in water 'geknakt' lijkt?": {
     "pathId": "licht-geluid-natuurkunde",
-    "stepIdx": 1
+    "stepIdx": 0
   },
   "Wat is de formule voor druk?": {
     "pathId": "krachten-natuurkunde",
@@ -4231,23 +4355,27 @@ export const QUESTION_PATH_MAP = {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 0
   },
+  "Wat is het principe van energiebehoud?": {
+    "pathId": "bewegingen-snelheid-natuurkunde",
+    "stepIdx": 3
+  },
   "Wat is een geluidsgolf?": {
     "pathId": "licht-geluid-natuurkunde",
     "stepIdx": 0
   },
-  "Wat is Ohm's wet?": {
+  "Wat is de wet van Ohm?": {
     "pathId": "elektriciteit-natuurkunde",
     "stepIdx": 3
+  },
+  "Welke uitspraak over massa en gewicht is juist (in de natuurkunde)?": {
+    "pathId": "krachten-natuurkunde",
+    "stepIdx": 1
   },
   "Wat is de formule voor vermogen?": {
     "pathId": "elektriciteit-natuurkunde",
     "stepIdx": 7
   },
-  "Wat is een elektrisch circuit?": {
-    "pathId": "elektriciteit-natuurkunde",
-    "stepIdx": 1
-  },
-  "Wat is het verschil tussen een geleider en een isolator?": {
+  "Welke uitspraak over geleiders en isolatoren is juist?": {
     "pathId": "elektriciteit-natuurkunde",
     "stepIdx": 0
   },
@@ -4265,9 +4393,9 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat is de zwaartekrachtsversnelling op aarde?": {
     "pathId": "krachten-natuurkunde",
-    "stepIdx": 5
+    "stepIdx": 1
   },
-  "Wat is een parallelle schakeling?": {
+  "Wat is een parallelschakeling?": {
     "pathId": "elektriciteit-natuurkunde",
     "stepIdx": 6
   },
@@ -4275,9 +4403,13 @@ export const QUESTION_PATH_MAP = {
     "pathId": "elektriciteit-natuurkunde",
     "stepIdx": 6
   },
-  "Wat is het principe van impuls (Newton)?": {
+  "Wat geldt bij een volkomen elastische botsing?": {
+    "pathId": "bewegingen-snelheid-natuurkunde",
+    "stepIdx": 4
+  },
+  "Hoe bereken je de stoot die een kracht op een voorwerp geeft?": {
     "pathId": "krachten-natuurkunde",
-    "stepIdx": 6
+    "stepIdx": 0
   },
   "Wat is de wet van de universele gravitatie (Newton)?": {
     "pathId": "krachten-natuurkunde",
@@ -4285,17 +4417,17 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat is een spectrometer?": {
     "pathId": "licht-geluid-natuurkunde",
-    "stepIdx": 3
+    "stepIdx": 1
   },
   "Wat is de wet van behoud van lading?": {
     "pathId": "elektriciteit-natuurkunde",
-    "stepIdx": 0
+    "stepIdx": 2
   },
-  "Wat is de brekingshoek afhankelijk van?": {
+  "Waar hangt de brekingshoek van licht vooral van af?": {
     "pathId": "licht-geluid-natuurkunde",
-    "stepIdx": 0
+    "stepIdx": 1
   },
-  "Wat is het verschil tussen een magneet en een elektromagneet?": {
+  "Wat is het verschil tussen een permanente magneet en een elektromagneet?": {
     "pathId": "elektriciteit-natuurkunde",
     "stepIdx": 1
   },
@@ -4304,10 +4436,10 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 3
   },
   "Wat is een sinusgolf?": {
-    "pathId": "licht-geluid-natuurkunde",
-    "stepIdx": 5
+    "pathId": "elektriciteit-natuurkunde",
+    "stepIdx": 2
   },
-  "Wat is een vector in de fysica?": {
+  "Wat is een vector in de natuurkunde?": {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 0
   },
@@ -4315,11 +4447,11 @@ export const QUESTION_PATH_MAP = {
     "pathId": "elektriciteit-natuurkunde",
     "stepIdx": 7
   },
-  "Wat is het verschil tussen een longitudinale en transversale golf?": {
+  "Wat is het verschil tussen een longitudinale en een transversale golf?": {
     "pathId": "licht-geluid-natuurkunde",
     "stepIdx": 0
   },
-  "Wat is een veer (federaal) en de wet van Hooke?": {
+  "Wat zegt de wet van Hooke over een veer?": {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 5
   },
@@ -4335,9 +4467,9 @@ export const QUESTION_PATH_MAP = {
     "pathId": "licht-geluid-natuurkunde",
     "stepIdx": 1
   },
-  "Wat is het begrip 'resonantie' in de fysica?": {
+  "Wat is resonantie in de natuurkunde?": {
     "pathId": "licht-geluid-natuurkunde",
-    "stepIdx": 0
+    "stepIdx": 4
   },
   "Wat beschrijft de wet van Coulomb?": {
     "pathId": "krachten-natuurkunde",
@@ -4347,29 +4479,29 @@ export const QUESTION_PATH_MAP = {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 6
   },
+  "Wat is inductie (Faraday)?": {
+    "pathId": "elektriciteit-natuurkunde",
+    "stepIdx": 0
+  },
   "Wat is de formule voor golfsnelheid?": {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 1
   },
-  "Wat is het fotonenmodel van licht?": {
+  "Wat zegt het fotonenmodel van licht?": {
     "pathId": "licht-geluid-natuurkunde",
     "stepIdx": 1
   },
-  "Wat is het principe van behoud van impuls?": {
-    "pathId": "krachten-natuurkunde",
-    "stepIdx": 9
-  },
-  "Wat beschrijft de wet van Lenz?": {
-    "pathId": "elektriciteit-natuurkunde",
-    "stepIdx": 1
-  },
-  "Wat is het verband tussen golflengte en frequentie?": {
+  "Wat zegt de wet van behoud van impuls voor een gesloten systeem?": {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 2
   },
-  "Wat is het verschil tussen AC en DC stroom?": {
-    "pathId": "elektriciteit-natuurkunde",
-    "stepIdx": 1
+  "Wat is een coherente lichtbron?": {
+    "pathId": "licht-geluid-natuurkunde",
+    "stepIdx": 0
+  },
+  "Wat is het verband tussen golflengte en frequentie bij gelijke golfsnelheid?": {
+    "pathId": "krachten-natuurkunde",
+    "stepIdx": 2
   },
   "Wat is de brekingsindex?": {
     "pathId": "licht-geluid-natuurkunde",
@@ -4379,53 +4511,49 @@ export const QUESTION_PATH_MAP = {
     "pathId": "elektriciteit-natuurkunde",
     "stepIdx": 1
   },
-  "Wat is superpositie van golven?": {
+  "Wat is het verschil tussen ioniserende en niet-ioniserende straling?": {
     "pathId": "licht-geluid-natuurkunde",
-    "stepIdx": 0
+    "stepIdx": 3
   },
-  "Wat is een inductor en zijn werking in wisselstroom?": {
+  "Wat doet een condensator in een stroomkring?": {
     "pathId": "elektriciteit-natuurkunde",
-    "stepIdx": 4
+    "stepIdx": 1
+  },
+  "Wat doet een spoel in een wisselstroomkring?": {
+    "pathId": "elektriciteit-natuurkunde",
+    "stepIdx": 3
   },
   "Wat is een foton?": {
-    "pathId": "bewegingen-snelheid-natuurkunde",
-    "stepIdx": 3
-  },
-  "Wat is het fotoëlektrisch effect?": {
-    "pathId": "elektriciteit-natuurkunde",
-    "stepIdx": 3
-  },
-  "Wat is tunneling (kwantum)?": {
-    "pathId": "elektriciteit-natuurkunde",
-    "stepIdx": 3
-  },
-  "Wat is het Bohr-model van het waterstofatoom?": {
-    "pathId": "elektriciteit-natuurkunde",
-    "stepIdx": 3
-  },
-  "Wat is het verschil tussen centripetale en centrifugale kracht?": {
     "pathId": "krachten-natuurkunde",
-    "stepIdx": 5
+    "stepIdx": 1
   },
-  "Wat is een gelijkrichter?": {
+  "Wat is het foto-elektrisch effect?": {
     "pathId": "elektriciteit-natuurkunde",
-    "stepIdx": 6
+    "stepIdx": 3
+  },
+  "Wat is de De Broglie-golflengte?": {
+    "pathId": "elektriciteit-natuurkunde",
+    "stepIdx": 0
+  },
+  "Welke uitspraak over centripetale en centrifugale kracht is juist?": {
+    "pathId": "krachten-natuurkunde",
+    "stepIdx": 4
   },
   "Wat is tijddilatatie (speciale relativiteit)?": {
     "pathId": "bewegingen-snelheid-natuurkunde",
-    "stepIdx": 3
+    "stepIdx": 1
   },
   "Wat is een halfgeleider?": {
     "pathId": "elektriciteit-natuurkunde",
-    "stepIdx": 0
+    "stepIdx": 1
   },
-  "Wat is p-n junctie?": {
+  "Wat is een pn-overgang?": {
     "pathId": "elektriciteit-natuurkunde",
     "stepIdx": 1
   },
   "Wat is een transistor?": {
     "pathId": "elektriciteit-natuurkunde",
-    "stepIdx": 3
+    "stepIdx": 1
   },
   "Wat is interferentie van licht?": {
     "pathId": "licht-geluid-natuurkunde",
@@ -4435,17 +4563,25 @@ export const QUESTION_PATH_MAP = {
     "pathId": "licht-geluid-natuurkunde",
     "stepIdx": 1
   },
-  "Wat is de formule voor cirkelbeweging?": {
+  "Wat is de formule voor de middelpuntzoekende kracht bij een cirkelbeweging?": {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 3
   },
-  "Wat is het principe van equivalentie (Einstein)?": {
+  "Wat is een zwart lichaam in de natuurkunde?": {
+    "pathId": "krachten-natuurkunde",
+    "stepIdx": 6
+  },
+  "Wat is het equivalentieprincipe (Einstein)?": {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 0
   },
   "Wat is een graviton (theoretisch)?": {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 3
+  },
+  "Hoe hangen inductieve en capacitieve reactantie af van de frequentie?": {
+    "pathId": "licht-geluid-natuurkunde",
+    "stepIdx": 0
   },
   "Welke wet beschrijft F = m × a?": {
     "pathId": "mechanica-havo-vwo",
@@ -4471,11 +4607,11 @@ export const QUESTION_PATH_MAP = {
     "pathId": "mechanica-havo-vwo",
     "stepIdx": 2
   },
-  "Wat is het vermogen?": {
+  "Wat is vermogen?": {
     "pathId": "mechanica-havo-vwo",
     "stepIdx": 2
   },
-  "Een lift hijst 200 kg over 10 m hoogte. Hoeveel arbeid? (g = 10)": {
+  "Een lift hijst 200 kg over 10 m hoogte. Hoeveel arbeid? (g = 10 m/s²)": {
     "pathId": "mechanica-havo-vwo",
     "stepIdx": 2
   },
@@ -4495,17 +4631,17 @@ export const QUESTION_PATH_MAP = {
     "pathId": "optica-havo-vwo",
     "stepIdx": 1
   },
-  "Wat is de hoogste toon: hoge of lage frequentie?": {
+  "Welk verband tussen frequentie en toonhoogte klopt?": {
     "pathId": "trillingen-golven-havo-vwo",
     "stepIdx": 0
   },
-  "Wat is het atoommassa-getal?": {
+  "Wat is het massagetal van een atoom?": {
     "pathId": "atoombouw-scheikunde",
     "stepIdx": 2
   },
   "Wat is een ion?": {
     "pathId": "atoombouw-scheikunde",
-    "stepIdx": 0
+    "stepIdx": 3
   },
   "Wat is de wet van behoud van massa?": {
     "pathId": "chemische-reacties-scheikunde",
@@ -4516,8 +4652,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 7
   },
   "Wat is oxidatie in chemische zin?": {
-    "pathId": "chemische-reacties-scheikunde",
-    "stepIdx": 0
+    "pathId": "atoombouw-scheikunde",
+    "stepIdx": 3
   },
   "Wat is een katalysator?": {
     "pathId": "chemische-reacties-scheikunde",
@@ -4533,11 +4669,11 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat is destillatie?": {
     "pathId": "stoffen-mengsels-scheikunde",
-    "stepIdx": 3
+    "stepIdx": 0
   },
   "Wat is een bufferoplossing?": {
     "pathId": "stoffen-mengsels-scheikunde",
-    "stepIdx": 0
+    "stepIdx": 3
   },
   "Wat is een redoxreactie?": {
     "pathId": "mol-stoichiometrie-havo-vwo",
@@ -4565,21 +4701,17 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat is chromatografie?": {
     "pathId": "atoombouw-scheikunde",
-    "stepIdx": 4
+    "stepIdx": 2
   },
   "Wat is de oxidatietoestand van stikstof in HNO3?": {
     "pathId": "chemische-reacties-scheikunde",
     "stepIdx": 2
   },
-  "Wat is elektrolyse?": {
-    "pathId": "chemische-reacties-scheikunde",
-    "stepIdx": 6
-  },
   "Wat is de molaire massa van H2SO4?": {
     "pathId": "chemische-reacties-scheikunde",
     "stepIdx": 1
   },
-  "Wat is hybridisatie van koolstof in methaan (CH4)?": {
+  "Wat is de hybridisatie van koolstof in methaan (CH4)?": {
     "pathId": "chemische-reacties-scheikunde",
     "stepIdx": 2
   },
@@ -4591,7 +4723,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "atoombouw-scheikunde",
     "stepIdx": 8
   },
-  "Wat is de reactie-enthalpy (ΔH) van een reactie?": {
+  "Wat is de reactie-enthalpie (ΔH) van een reactie?": {
     "pathId": "chemische-reacties-scheikunde",
     "stepIdx": 7
   },
@@ -4603,6 +4735,10 @@ export const QUESTION_PATH_MAP = {
     "pathId": "atoombouw-scheikunde",
     "stepIdx": 0
   },
+  "Wat is een condensatiereactie?": {
+    "pathId": "atoombouw-scheikunde",
+    "stepIdx": 7
+  },
   "Wat is het onderscheid tussen homolytische en heterolytische binding-splitsing?": {
     "pathId": "atoombouw-scheikunde",
     "stepIdx": 5
@@ -4611,11 +4747,15 @@ export const QUESTION_PATH_MAP = {
     "pathId": "atoombouw-scheikunde",
     "stepIdx": 7
   },
+  "Wat is spectroscopie?": {
+    "pathId": "atoombouw-scheikunde",
+    "stepIdx": 7
+  },
   "Wat is het Aufbau-principe?": {
     "pathId": "atoombouw-scheikunde",
     "stepIdx": 3
   },
-  "Wat is de Beer-Lambert wet?": {
+  "Wat is de wet van Lambert-Beer?": {
     "pathId": "chemische-reacties-scheikunde",
     "stepIdx": 0
   },
@@ -4635,7 +4775,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "mol-stoichiometrie-havo-vwo",
     "stepIdx": 3
   },
-  "Hoeveel atomen zit in 1 mol?": {
+  "Hoeveel deeltjes zitten er in 1 mol?": {
     "pathId": "mol-stoichiometrie-havo-vwo",
     "stepIdx": 0
   },
@@ -4661,15 +4801,15 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat is een complementair goed van koffie?": {
     "pathId": "marktvormen-havo-vwo",
-    "stepIdx": 0
+    "stepIdx": 2
   },
   "Wat is de prijselasticiteit van de vraag?": {
     "pathId": "marktvormen-havo-vwo",
     "stepIdx": 0
   },
-  "Welke markt is volledig concurrerend?": {
-    "pathId": "vraag-aanbod-economie",
-    "stepIdx": 3
+  "Welke kenmerken horen bij volledige concurrentie?": {
+    "pathId": "pincode-ondernemen",
+    "stepIdx": 5
   },
   "Wat is een monopolie?": {
     "pathId": "pincode-ondernemen",
@@ -4683,7 +4823,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "pincode-ondernemen",
     "stepIdx": 3
   },
-  "Wat is het break-even punt?": {
+  "Wat is het break-evenpunt?": {
     "pathId": "pincode-ondernemen",
     "stepIdx": 3
   },
@@ -4707,7 +4847,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "pincode-geld-sparen-lenen",
     "stepIdx": 2
   },
-  "Wat is bruto binnenlands product (bbp)?": {
+  "Wat is het bruto binnenlands product (bbp)?": {
     "pathId": "pincode-inkomen-welvaart",
     "stepIdx": 5
   },
@@ -4719,11 +4859,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "pincode-overheid",
     "stepIdx": 4
   },
-  "Wat is werkloosheid?": {
-    "pathId": "bbp-conjunctuur-economie",
-    "stepIdx": 3
-  },
-  "Wat doet een centrale bank bij hoge inflatie?": {
+  "Wat doet een centrale bank meestal bij hoge inflatie?": {
     "pathId": "pincode-geld-sparen-lenen",
     "stepIdx": 5
   },
@@ -4736,10 +4872,10 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 2
   },
   "Wat is een hoofdzin?": {
-    "pathId": "zinsontleding",
-    "stepIdx": 1
+    "pathId": "werkwoordsvervoeging",
+    "stepIdx": 2
   },
-  "Wat is de verleden tijd van 'rijden'?": {
+  "Wat is de onvoltooid verleden tijd van 'rijden'?": {
     "pathId": "werkwoordsvervoeging",
     "stepIdx": 6
   },
@@ -4749,7 +4885,7 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat is een passieve zin?": {
     "pathId": "werkwoordsvervoeging",
-    "stepIdx": 0
+    "stepIdx": 8
   },
   "Wat is een enkelvoudig onderwerp?": {
     "pathId": "zinsontleding",
@@ -4764,24 +4900,32 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 5
   },
   "Wat is het verschil tussen 'hun' en 'hen'?": {
-    "pathId": "woordsoorten-nederlands",
+    "pathId": "zinsontleding",
     "stepIdx": 7
   },
-  "Wat is een verkleinwoord (diminutief)?": {
+  "Wat is een bijzin?": {
+    "pathId": "woordsoorten-nederlands",
+    "stepIdx": 8
+  },
+  "Wat is een verkleinwoord?": {
     "pathId": "spelling",
     "stepIdx": 10
   },
-  "Wat is een abstracte zelfstandig naamwoord?": {
+  "Wat is een abstract zelfstandig naamwoord?": {
     "pathId": "woordsoorten-nederlands",
     "stepIdx": 1
   },
-  "Wat is het verschil tussen een enkelvoudige en samengestelde zin?": {
+  "Wat is het verschil tussen een enkelvoudige en een samengestelde zin?": {
     "pathId": "werkwoordsvervoeging",
-    "stepIdx": 4
+    "stepIdx": 2
   },
-  "Wat is het doel van een inleiding in een betoog?": {
+  "Wat is het doel van de inleiding van een betoog?": {
     "pathId": "werkwoordsvervoeging",
-    "stepIdx": 10
+    "stepIdx": 0
+  },
+  "Welk rijtje bevat drie zakelijke tekstsoorten?": {
+    "pathId": "zinsontleding",
+    "stepIdx": 0
   },
   "Wat is een signaalwoord voor tegenstelling?": {
     "pathId": "cse-leesvaardigheid-nederlands",
@@ -4793,46 +4937,42 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat is een participiumzin?": {
     "pathId": "werkwoordsvervoeging",
-    "stepIdx": 0
+    "stepIdx": 2
   },
-  "Wat is een parafrase?": {
-    "pathId": "cse-leesvaardigheid-nederlands",
-    "stepIdx": 1
-  },
-  "Wat is de zinsontleding van 'De kat bijt de hond'?": {
+  "Wat zijn het onderwerp en het lijdend voorwerp in 'De kat bijt de hond'?": {
     "pathId": "zinsontleding",
     "stepIdx": 6
   },
-  "Wat is de functie van de conclusie in een betoog?": {
+  "Wat is de functie van het slot van een betoog?": {
     "pathId": "cse-leesvaardigheid-nederlands",
-    "stepIdx": 3
-  },
-  "Wat is de betekenis van een spreekwoord versus een gezegde?": {
-    "pathId": "zinsontleding",
     "stepIdx": 4
   },
-  "Wat is een inversie in zinsbouw?": {
+  "Wat is het verschil tussen een spreekwoord en een gezegde?": {
+    "pathId": "werkwoordsvervoeging",
+    "stepIdx": 6
+  },
+  "Wat is inversie?": {
     "pathId": "zinsontleding",
     "stepIdx": 0
   },
-  "Wat is beeldspraak in het algemeen?": {
+  "Wat is een troop?": {
     "pathId": "werkwoordsvervoeging",
     "stepIdx": 0
   },
-  "Wat is het verschil tussen directe en indirecte rede?": {
+  "Wat is het doel van een betogende tekst?": {
+    "pathId": "cse-leesvaardigheid-nederlands",
+    "stepIdx": 4
+  },
+  "Wat gebeurt er bij enjambement in een gedicht?": {
+    "pathId": "werkwoordsvervoeging",
+    "stepIdx": 10
+  },
+  "Wat is een novelle?": {
     "pathId": "werkwoordsvervoeging",
     "stepIdx": 2
   },
-  "Wat is de cliffhanger als narratieve techniek?": {
-    "pathId": "werkwoordsvervoeging",
-    "stepIdx": 0
-  },
-  "Wat is het 'in medias res' starten van een verhaal?": {
-    "pathId": "werkwoordsvervoeging",
-    "stepIdx": 0
-  },
   "Wat is een essay?": {
-    "pathId": "cse-schrijfvaardigheid-nederlands",
+    "pathId": "zinsontleding",
     "stepIdx": 1
   },
   "Wat is een argument?": {
@@ -4843,15 +4983,15 @@ export const QUESTION_PATH_MAP = {
     "pathId": "nederlands-cse-havo-vwo",
     "stepIdx": 2
   },
-  "Wat is een ad hominem-drogreden?": {
+  "Wat gebeurt er bij de drogreden 'ad hominem'?": {
     "pathId": "nederlands-cse-havo-vwo",
     "stepIdx": 2
   },
-  "Wat is een feit en wat is een mening?": {
-    "pathId": "nederlands-cse-havo-vwo",
-    "stepIdx": 2
+  "Wat is het verschil tussen een feit en een mening?": {
+    "pathId": "betoog-beschouwing-havo-vwo",
+    "stepIdx": 0
   },
-  "Wat is een autoriteitsdrogreden?": {
+  "Wat is een onjuist beroep op autoriteit?": {
     "pathId": "argumentatieleer",
     "stepIdx": 12
   },
@@ -4867,7 +5007,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "nederlands-cse-havo-vwo",
     "stepIdx": 1
   },
-  "Wat is het doel van een tekstsoort 'beschouwing'?": {
+  "Wat is het doel van een beschouwing?": {
     "pathId": "betoog-beschouwing-havo-vwo",
     "stepIdx": 0
   },
@@ -4907,7 +5047,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "logaritmen-exponentieel-havo-vwo",
     "stepIdx": 1
   },
-  "Wat is de correlatiebeslissing als r ≈ 0,9?": {
+  "Wat betekent een correlatiecoëfficiënt van r ≈ 0,9?": {
     "pathId": "statistiek-havo-vwo",
     "stepIdx": 3
   },
@@ -4931,7 +5071,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "logaritmen-exponentieel-havo-vwo",
     "stepIdx": 2
   },
-  "Wat is de definitie van een kans in de kansrekening?": {
+  "Welke waarden kan een kans P(A) aannemen?": {
     "pathId": "kansrekening-havo-vwo",
     "stepIdx": 0
   },
@@ -4939,7 +5079,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "kansrekening-havo-vwo",
     "stepIdx": 0
   },
-  "Wat is het gemiddelde (verwachtingswaarde) van een discrete kansveranderlijke?": {
+  "Hoe bereken je de verwachtingswaarde E(X) van een discrete kansvariabele X?": {
     "pathId": "kansrekening-havo-vwo",
     "stepIdx": 3
   },
@@ -4967,7 +5107,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "differentialen-havo-vwo",
     "stepIdx": 3
   },
-  "Wat is de productfunctieregel voor differentiëren?": {
+  "Wat is de productregel voor differentiëren?": {
     "pathId": "goniometrie-havo-vwo",
     "stepIdx": 0
   },
@@ -4983,9 +5123,9 @@ export const QUESTION_PATH_MAP = {
     "pathId": "goniometrie-havo-vwo",
     "stepIdx": 0
   },
-  "Wat zijn de nulpunten van sin(x) = 0?": {
+  "Wat zijn de oplossingen van sin(x) = 0?": {
     "pathId": "goniometrie-havo-vwo",
-    "stepIdx": 3
+    "stepIdx": 2
   },
   "Wat is partieel integreren?": {
     "pathId": "integralen-havo-vwo",
@@ -5023,7 +5163,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "interpunctie-po",
     "stepIdx": 1
   },
-  "Zij springt. Welk woord is het werkwoord?": {
+  "Zij springt over de sloot. Welk woord is het werkwoord?": {
     "pathId": "werkwoord-tijden-po",
     "stepIdx": 0
   },
@@ -5031,9 +5171,17 @@ export const QUESTION_PATH_MAP = {
     "pathId": "interpunctie-po",
     "stepIdx": 0
   },
-  "Hij slaapt. Welk woord is het werkwoord?": {
+  "Hij slaapt in zijn bed. Welk woord is het werkwoord?": {
     "pathId": "werkwoord-tijden-po",
     "stepIdx": 0
+  },
+  "Hoe schrijf je wat je gebruikt om soep mee te eten?": {
+    "pathId": "woorden-2-nieuwkomers",
+    "stepIdx": 1
+  },
+  "Hoe schrijf je het meervoud van 'tafel'?": {
+    "pathId": "tafels-po",
+    "stepIdx": 3
   },
   "Kies de correcte spelling: 'Ze _____ hard.'": {
     "pathId": "werkwoord-tijden-po",
@@ -5059,7 +5207,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "kommagetallen-po",
     "stepIdx": 0
   },
-  "Welke zin heeft de juiste punt?": {
+  "Welke zin heeft het juiste leesteken?": {
     "pathId": "interpunctie-po",
     "stepIdx": 2
   },
@@ -5075,9 +5223,13 @@ export const QUESTION_PATH_MAP = {
     "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 8
   },
+  "Lees het dagboekfragment:\n\n\"Maandag 14 mei\nVandaag had ik mijn eerste zwemles. Ik was zo zenuwachtig dat ik bijna niet in het water wilde stappen. De juf was gelukkig heel aardig en hielp me. Uiteindelijk zwom ik twee baantjes! Ik ben er trots op, maar mijn handen trillen nog van de spanning.\"\n\nHoe voelde het kind aan het begin van de les?": {
+    "pathId": "woorden-2-nieuwkomers",
+    "stepIdx": 0
+  },
   "Lees het dagboekfragment:\n\n\"Maandag 14 mei\nVandaag had ik mijn eerste zwemles. Ik was zo zenuwachtig dat ik bijna niet in het water wilde stappen. De juf was gelukkig heel aardig en hielp me. Uiteindelijk zwom ik twee baantjes! Ik ben er trots op, maar mijn handen trillen nog van de spanning.\"\n\nWat is het doel van een dagboek als tekstsoort?": {
-    "pathId": "water-erfgoed-nederland-po",
-    "stepIdx": 2
+    "pathId": "in-de-klas-2-nieuwkomers",
+    "stepIdx": 3
   },
   "Lees het nieuwsbericht:\n\n\"De wolf is terug in Nederland. Na meer dan honderd jaar afwezig te zijn geweest, werden de eerste wolven rond 2015 weer gesignaleerd op de Veluwe. Inmiddels leven er meerdere roedels. Schapenhouders maken zich zorgen, want wolven vallen soms vee aan. Natuurorganisaties zijn juist blij: de wolf hoort van nature in ons ecosysteem.\"\n\nWaarom zijn schapenhouders bezorgd?": {
     "pathId": "kalender-rekenen-po",
@@ -5104,6 +5256,10 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 0
   },
   "Lees het verhaalfragment:\n\n\"In de tuin stond een oude eikenboom. Sander had er altijd in geklommen, maar nu stond er een man met een zaag. 'Die boom moet weg,' zei zijn vader. 'De wortels beschadigen de fundering.' Sander slikte. Hij keek naar het litteken in de schors waar hij zijn naam had gegraveerd. 'Mag ik nog even afscheid nemen?' vroeg hij.\"\n\nWat vertelt het detail van 'het litteken in de schors' aan de lezer?": {
+    "pathId": "redactiesommen-pad",
+    "stepIdx": 0
+  },
+  "Lees het verhaalfragment:\n\n\"In de tuin stond een oude eikenboom. Sander had er altijd in geklommen, maar nu stond er een man met een zaag. 'Die boom moet weg,' zei zijn vader. 'De wortels beschadigen de fundering.' Sander slikte. Hij keek naar het litteken in de schors waar hij zijn naam had gegraveerd. 'Mag ik nog even afscheid nemen?' vroeg hij.\"\n\nWat voelt Sander waarschijnlijk in dit fragment?": {
     "pathId": "redactiesommen-pad",
     "stepIdx": 0
   },
@@ -5156,8 +5312,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 1
   },
   "Lees de twee zinnen:\n\nZin A: 'Nederland telt meer dan 17 miljoen inwoners.'\nZin B: 'Nederland is een van de fijnste landen om in te wonen.'\n\nWelke zin is een feit en welke een mening?": {
-    "pathId": "woordsoorten-po",
-    "stepIdx": 0
+    "pathId": "rekenverhaaltjes-nieuwkomers",
+    "stepIdx": 2
   },
   "Lees de tekst:\n\n\"Elk jaar wordt Sint Nicolaas in Nederland gevierd op 5 december. Kinderen zetten hun schoen en krijgen cadeautjes. Sommige mensen vinden dit feest achterhaald, terwijl anderen het een prachtige traditie vinden.\"\n\nWelk gedeelte van de tekst bevat een mening?": {
     "pathId": "redactiesommen-pad",
@@ -5251,13 +5407,13 @@ export const QUESTION_PATH_MAP = {
     "pathId": "maten-eenheden",
     "stepIdx": 0
   },
-  "Welk woord heeft een dubbele medeklinker als meervoud?": {
+  "Wat is het juiste meervoud van 'bal'?": {
     "pathId": "getallen-tot-20-po",
-    "stepIdx": 3
+    "stepIdx": 2
   },
   "Welk woord is een samenstelling?": {
-    "pathId": "woordenschat-po",
-    "stepIdx": 1
+    "pathId": "woorden-2-nieuwkomers",
+    "stepIdx": 0
   },
   "Welke zin bevat een hoofdletterfout?": {
     "pathId": "interpunctie-po",
@@ -5271,20 +5427,20 @@ export const QUESTION_PATH_MAP = {
     "pathId": "werkwoord-tijden-po",
     "stepIdx": 1
   },
-  "Kies het juiste woord: 'De leerling ___ gisteren zijn huiswerk vergeten.'": {
-    "pathId": "tijdsduur-rekenen-po",
-    "stepIdx": 2
+  "Kies het juiste hulpwerkwoord: 'Het ijs ___ in de zon gesmolten.'": {
+    "pathId": "toestand-stoffen-po",
+    "stepIdx": 3
   },
   "Wat is het antoniem van 'spaarzaam'?": {
     "pathId": "synoniemen-tegenstellingen-po",
     "stepIdx": 2
   },
-  "Welk lidwoord hoort bij 'fiets'?": {
+  "Welk bepaald lidwoord hoort bij 'fiets'?": {
     "pathId": "vvn-verkeersexamen-po",
     "stepIdx": 2
   },
   "Kies het juiste betrekkelijk voornaamwoord: 'De film ___ ik zag was spannend.'": {
-    "pathId": "woordsoorten-po",
+    "pathId": "woorden-2-nieuwkomers",
     "stepIdx": 0
   },
   "Lees de tekst:\n\n\"Iedereen gaapt weleens. Maar waarom gaap je eigenlijk? Wetenschappers zijn het er niet over eens. Vroeger dachten mensen dat gapen kwam doordat de hersenen te weinig zuurstof kregen. Maar dat blijkt niet te kloppen. Een andere theorie is dat gapen helpt om de hersenen af te koelen, net zoals een ventilator een computer koel houdt.\n\nWat zeker is, is dat gapen aanstekelijk werkt. Als jij iemand ziet gapen, ga je zelf ook gapen. Zelfs als je erover leest! Wetenschappers denken dat dit te maken heeft met empathie: het vermogen om je in te leven in een ander. Mensen die meer empathie hebben, zijn ook gevoeliger voor aanstekelijk gapen.\"\n\nWat was de vroegere verklaring voor gapen?": {
@@ -5307,7 +5463,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "bekende-wetenschappers-po",
     "stepIdx": 0
   },
-  "Lees de tekst:\n\n\"Op de basisschool van meester Kees is een bijzondere regel. De klas die een spelletje basketbal verliest, moet zich 10 keer opdrukken. In het begin vonden de leerlingen dit maar niks. Maar al snel merkten ze dat ze steeds sneller en sterker werden. De verliezers trainden eigenlijk het hardst!\n\nMeester Kees legde uit: 'In het leven verlies je ook weleens. Het gaat er niet om dat je altijd wint, maar dat je blijft proberen en leert van je fouten.' De leerlingen gingen steeds harder hun best doen — niet om te winnen, maar om niet te verliezen en zo de opdrukjes te ontlopen.\"\n\nWaarom moeten de verliezers zich opdrukken?": {
+  "Lees de tekst:\n\n\"Op de basisschool van meester Kees is een bijzondere regel. De klas die een spelletje basketbal verliest, moet zich 10 keer opdrukken. In het begin vonden de leerlingen dit maar niks. Maar al snel merkten ze dat ze steeds sneller en sterker werden. De verliezers trainden eigenlijk het hardst!\n\nMeester Kees legde uit: 'In het leven verlies je ook weleens. Het gaat er niet om dat je altijd wint, maar dat je blijft proberen en leert van je fouten.' De leerlingen gingen steeds harder hun best doen — niet om te winnen, maar om niet te verliezen en zo de opdrukjes te ontlopen.\"\n\nVan wie komt de regel dat de verliezers zich moeten opdrukken?": {
     "pathId": "tafels-po",
     "stepIdx": 0
   },
@@ -5403,19 +5559,19 @@ export const QUESTION_PATH_MAP = {
     "pathId": "beroepen-werk-po",
     "stepIdx": 0
   },
+  "Hoe heet de stuwwal uit de ijstijd die van Amersfoort naar Rhenen loopt?": {
+    "pathId": "topografie-nederland",
+    "stepIdx": 5
+  },
   "Wat is de functie van de nieren in het menselijk lichaam?": {
     "pathId": "lichaam-gezondheid-po",
-    "stepIdx": 2
-  },
-  "Welk verdrag legde na de Tweede Wereldoorlog de basis voor de Europese samenwerking?": {
-    "pathId": "vlakke-figuren-po",
     "stepIdx": 2
   },
   "Wat is de fotosynthese-vergelijking (vereenvoudigd)?": {
     "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 8
   },
-  "Hoe heet de periode van 1000-1500 in de Europese geschiedenis?": {
+  "Hoe heet de periode van ongeveer 500 tot 1500 in de Europese geschiedenis?": {
     "pathId": "tijdvakken-nederland-po",
     "stepIdx": 1
   },
@@ -5437,7 +5593,7 @@ export const QUESTION_PATH_MAP = {
   },
   "Hoeveel kubieke centimeter is een doos van 25 × 20 × 8 cm?": {
     "pathId": "meetkunde-bouwsels",
-    "stepIdx": 4
+    "stepIdx": 0
   },
   "Vul in: 'De jongen ___ door zijn klasgenoten geholpen toen hij viel.'": {
     "pathId": "werkwoord-tijden-po",
@@ -5449,7 +5605,7 @@ export const QUESTION_PATH_MAP = {
   },
   "'De zon lacht door de wolken.' — Wat voor stijlfiguur is dit?": {
     "pathId": "dichten-poezie-rijmen-po",
-    "stepIdx": 0
+    "stepIdx": 2
   },
   "Lees de tekst:\n\n\"Elk jaar belandt er ongeveer 8 miljoen ton plastic in de oceanen. Dit plastic breekt langzaam af in steeds kleinere stukjes, microplastics genoemd. Vissen eten deze microplastics, en uiteindelijk komt het plastic ook op ons bord terecht. Wetenschappers ontdekten dat in 1 portie mosselen gemiddeld 90 stukjes plastic zitten.\n\nIn de oceaan tussen Hawaï en Californië drijft de grootste plasticsoep ter wereld: 1,6 miljoen vierkante kilometer groot — drie keer Frankrijk. Schoonmaakprojecten zoals 'The Ocean Cleanup' van de Nederlander Boyan Slat proberen het plastic op te ruimen, maar dat gaat langzaam. Veel sneller is voorkomen dat plastic in zee terechtkomt: minder eenmalig plastic gebruiken en betere afvalverwerking.\"\n\nWat zijn microplastics?": {
     "pathId": "recyclen-afval-po",
@@ -5487,16 +5643,20 @@ export const QUESTION_PATH_MAP = {
     "pathId": "grafieken-lezen-po",
     "stepIdx": 1
   },
-  "Welke groep organismen is GEEN plant en GEEN dier?": {
+  "Welk van deze organismen is GEEN plant en GEEN dier?": {
     "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 8
   },
-  "In welk jaar werd Nederland bevrijd van de Duitse bezetting?": {
+  "In welk jaar was heel Nederland bevrijd van de Duitse bezetting?": {
     "pathId": "kalender-rekenen-po",
     "stepIdx": 2
   },
   "Hoe lang duurt 1 omwenteling van de aarde om zijn eigen as?": {
-    "pathId": "tijdsduur-rekenen-po",
+    "pathId": "sterren-planeten",
+    "stepIdx": 3
+  },
+  "Welk hormoon zorgt ervoor dat je bloedsuiker daalt na het eten?": {
+    "pathId": "gezonde-voeding-po",
     "stepIdx": 0
   },
   "Welke landen vormen samen de Benelux?": {
@@ -5587,7 +5747,11 @@ export const QUESTION_PATH_MAP = {
     "pathId": "weersvoorspelling-po",
     "stepIdx": 0
   },
-  "Welk woord eindigt op een open lettergreep?": {
+  "Vul in: 'Mijn moeder is langer ___ mijn vader.'": {
+    "pathId": "opdrachtwoorden-nieuwkomers",
+    "stepIdx": 2
+  },
+  "Welk woord heeft een open lettergreep?": {
     "pathId": "woordenschat-po",
     "stepIdx": 0
   },
@@ -5599,7 +5763,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "procenten-po",
     "stepIdx": 3
   },
-  "Wat is een hoofdletter-fout in de zin: 'we gaan op vakantie naar parijs.'?": {
+  "Welke woorden moeten een hoofdletter krijgen in: 'we gaan op vakantie naar parijs.'?": {
     "pathId": "interpunctie-po",
     "stepIdx": 1
   },
@@ -5608,8 +5772,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 0
   },
   "Welk werkwoord is een **hulpwerkwoord**?": {
-    "pathId": "werkwoord-tijden-po",
-    "stepIdx": 3
+    "pathId": "woorden-2-nieuwkomers",
+    "stepIdx": 0
   },
   "Wat is een 'pleonasme'?": {
     "pathId": "grafieken-lezen-po",
@@ -5676,14 +5840,14 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 1
   },
   "Welk woord heeft een 'ij'?": {
-    "pathId": "werkwoord-tijden-po",
-    "stepIdx": 3
+    "pathId": "woorden-2-nieuwkomers",
+    "stepIdx": 1
   },
   "Wat is een synoniem van 'snel'?": {
     "pathId": "synoniemen-tegenstellingen-po",
     "stepIdx": 0
   },
-  "Hoe schrijf je: 'iets dat je doet voor de lol'?": {
+  "Hoe schrijf je het woord dat 'lol' of 'pret' betekent?": {
     "pathId": "maten-omtrek-oppervlakte-po",
     "stepIdx": 0
   },
@@ -5691,7 +5855,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "werkwoord-tijden-po",
     "stepIdx": 3
   },
-  "Welk leesteken hoort er aan einde van: 'Ga je mee naar het strand'?": {
+  "Welk leesteken hoort er aan het einde van: 'Ga je mee naar het strand'?": {
     "pathId": "interpunctie-po",
     "stepIdx": 2
   },
@@ -5699,13 +5863,17 @@ export const QUESTION_PATH_MAP = {
     "pathId": "woordsoorten-po",
     "stepIdx": 2
   },
-  "Welk woord rijmt op 'kous'?": {
-    "pathId": "synoniemen-tegenstellingen-po",
-    "stepIdx": 0
+  "Welk woord rijmt op 'thuis'?": {
+    "pathId": "woordenschat-po",
+    "stepIdx": 1
   },
   "Welk woord is een **zelfstandig naamwoord**?": {
     "pathId": "woordsoorten-po",
     "stepIdx": 2
+  },
+  "Welk kledingstuk hoort bij koud weer?": {
+    "pathId": "woorden-2-nieuwkomers",
+    "stepIdx": 0
   },
   "Waar worden eitjes aangemaakt bij vrouwen?": {
     "pathId": "voortplanting-hormonen-biologie",
@@ -5797,9 +5965,9 @@ export const QUESTION_PATH_MAP = {
   },
   "Welke klier produceert groeihormoon?": {
     "pathId": "voortplanting-hormonen-biologie",
-    "stepIdx": 6
+    "stepIdx": 1
   },
-  "Wat is de eerste menstruatie?": {
+  "Hoe heet de eerste menstruatie?": {
     "pathId": "voortplanting-hormonen-biologie",
     "stepIdx": 4
   },
@@ -5827,7 +5995,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "hart-bloed-ademhaling-havo-vwo",
     "stepIdx": 3
   },
-  "Hoe herken je een beroerte? (gebruik FAST)": {
+  "Waar staat FAST voor bij het herkennen van een beroerte?": {
     "pathId": "hart-bloed-ademhaling-havo-vwo",
     "stepIdx": 4
   },
@@ -5843,16 +6011,12 @@ export const QUESTION_PATH_MAP = {
     "pathId": "klimaten-aardrijkskunde",
     "stepIdx": 8
   },
-  "Wat is een duurzame energiebron?": {
-    "pathId": "atmosfeer-klimaat-havo-vwo",
-    "stepIdx": 0
+  "Welke energiebron raakt niet op?": {
+    "pathId": "energie-hulpbronnen-havo-vwo",
+    "stepIdx": 1
   },
   "Wat zijn klimaatvluchtelingen?": {
     "pathId": "aardobservatie-risico-havo-vwo",
-    "stepIdx": 1
-  },
-  "Wat doet zonne-energie?": {
-    "pathId": "energie-hulpbronnen-havo-vwo",
     "stepIdx": 1
   },
   "Hoe helpt minder vlees eten het klimaat?": {
@@ -5876,8 +6040,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 2
   },
   "Waarom is 1,5°C opwarming zo belangrijk?": {
-    "pathId": "bekende-wetenschappers-po",
-    "stepIdx": 1
+    "pathId": "aardobservatie-risico-havo-vwo",
+    "stepIdx": 3
   },
   "Wat is cyberpesten?": {
     "pathId": "emoties-sociaal-po",
@@ -5886,6 +6050,10 @@ export const QUESTION_PATH_MAP = {
   "Wat kun je doen als je gepest wordt?": {
     "pathId": "emoties-sociaal-po",
     "stepIdx": 2
+  },
+  "Welke drie voedingsstoffen leveren je lichaam energie?": {
+    "pathId": "gezonde-voeding-po",
+    "stepIdx": 0
   },
   "Wat zijn koolhydraten?": {
     "pathId": "energiebronnen-po",
@@ -5896,8 +6064,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 1
   },
   "Wat is overgewicht?": {
-    "pathId": "voortplanting-hormonen-biologie",
-    "stepIdx": 7
+    "pathId": "maten-eenheden",
+    "stepIdx": 1
   },
   "Wat is BMI?": {
     "pathId": "maten-eenheden",
@@ -5923,7 +6091,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "zenuwstelsel-hormonen-havo-vwo",
     "stepIdx": 2
   },
-  "Wat is sociale media?": {
+  "Wat zijn sociale media?": {
     "pathId": "maatschappijleer-havo-vwo",
     "stepIdx": 4
   },
@@ -5955,7 +6123,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "maatschappijleer-havo-vwo",
     "stepIdx": 4
   },
-  "Wat is een filter bubble?": {
+  "Wat is een filterbubbel?": {
     "pathId": "algoritmen-pseudocode-informatica",
     "stepIdx": 3
   },
@@ -5971,21 +6139,17 @@ export const QUESTION_PATH_MAP = {
     "pathId": "cybersecurity-encryptie-informatica",
     "stepIdx": 0
   },
-  "Er vliegen 34 vogels op een boom. Er komen 27 bij. Hoeveel zijn er nu?": {
+  "Er zitten 34 vogels in een boom. Er komen er 27 bij. Hoeveel vogels zitten er nu in de boom?": {
     "pathId": "dieren-seizoenen-natuur",
-    "stepIdx": 1
+    "stepIdx": 2
   },
-  "Een tuin is 250 m² groot. 85 m² wordt betegeld. Hoeveel m² is nog gras?": {
+  "Een tuin is 250 m² groot. Er wordt 85 m² betegeld, de rest is gras. Hoeveel m² is gras?": {
     "pathId": "vlakke-figuren-po",
     "stepIdx": 1
   },
   "Een fiets kost €125. Hoeveel kosten 4 fietsen?": {
     "pathId": "vvn-verkeersexamen-po",
     "stepIdx": 2
-  },
-  "48 leerlingen worden verdeeld over 6 groepen. Hoeveel per groep?": {
-    "pathId": "redactiesommen-pad",
-    "stepIdx": 0
   },
   "96 koekjes worden eerlijk verdeeld over 8 kinderen. Hoeveel per kind?": {
     "pathId": "redactiesommen-pad",
@@ -5995,47 +6159,23 @@ export const QUESTION_PATH_MAP = {
     "pathId": "redactiesommen-pad",
     "stepIdx": 2
   },
-  "Een snoepzak heeft 63 snoepjes. Ze worden verdeeld over 9 vrienden. Hoeveel per vriend?": {
-    "pathId": "redactiesommen-pad",
-    "stepIdx": 2
-  },
   "€540 spaargeld wordt gelijk verdeeld over 6 broers. Hoeveel krijgt elk?": {
     "pathId": "redactiesommen-pad",
     "stepIdx": 0
-  },
-  "Een bakker heeft 96 broodjes over 8 rekken verdeeld. Hoeveel per rek?": {
-    "pathId": "redactiesommen-pad",
-    "stepIdx": 0
-  },
-  "168 boeken worden verdeeld over 7 kasten. Hoeveel per kast?": {
-    "pathId": "redactiesommen-pad",
-    "stepIdx": 1
   },
   "€120 wordt gelijk verdeeld over 8 kinderen. Hoeveel per kind?": {
     "pathId": "redactiesommen-pad",
     "stepIdx": 2
   },
-  "225 knikkers worden verdeeld over 9 kinderen. Hoeveel per kind?": {
+  "225 knikkers worden eerlijk verdeeld over 9 kinderen. Hoeveel knikkers krijgt elk kind?": {
     "pathId": "redactiesommen-pad",
     "stepIdx": 2
-  },
-  "Een school heeft 5 groepen van samen 185 leerlingen. Gemiddeld hoeveel per groep?": {
-    "pathId": "redactiesommen-pad",
-    "stepIdx": 0
-  },
-  "270 stoelen worden verdeeld over 9 zalen. Hoeveel stoelen per zaal?": {
-    "pathId": "redactiesommen-pad",
-    "stepIdx": 3
   },
   "€54 wordt gelijk verdeeld over 6 personen. Hoeveel per persoon?": {
     "pathId": "redactiesommen-pad",
     "stepIdx": 0
   },
-  "€350 spaargeld wordt gelijk verdeeld over 7 maanden. Hoeveel per maand?": {
-    "pathId": "redactiesommen-pad",
-    "stepIdx": 0
-  },
-  "88 foto's worden verdeeld over 4 albums. Hoeveel per album?": {
+  "88 foto's worden eerlijk verdeeld over 4 albums. Hoeveel foto's komen er in elk album?": {
     "pathId": "redactiesommen-pad",
     "stepIdx": 3
   },
@@ -6051,7 +6191,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "procenten-po",
     "stepIdx": 2
   },
-  "Vier vrienden betalen samen €62. Hoeveel betaalt elk?": {
+  "Vier vrienden betalen samen €62. Ieder betaalt evenveel. Hoeveel betaalt elk?": {
     "pathId": "redactiesommen-pad",
     "stepIdx": 3
   },
@@ -6077,15 +6217,19 @@ export const QUESTION_PATH_MAP = {
   },
   "Het is nu 13:20. Over 2 uur en 40 minuten begint het feest. Hoe laat is dat?": {
     "pathId": "tijdsduur-rekenen-po",
-    "stepIdx": 1
+    "stepIdx": 2
   },
   "Een treinrit duurt 55 minuten. De trein vertrekt om 9:15. Hoe laat is hij er?": {
     "pathId": "tijdsduur-rekenen-po",
-    "stepIdx": 3
+    "stepIdx": 2
   },
   "Een wedstrijd duurt 2 uur en 15 minuten. Hoeveel minuten is dat?": {
     "pathId": "tijdsduur-rekenen-po",
     "stepIdx": 0
+  },
+  "Tom sliep van 22:00 tot 7:30. Hoe lang heeft hij geslapen?": {
+    "pathId": "tijdsduur-rekenen-po",
+    "stepIdx": 1
   },
   "Een trein vertrekt om 14:55 en rijdt 1 uur 20 minuten. Hoe laat is hij er?": {
     "pathId": "tijdsduur-rekenen-po",
@@ -6103,28 +6247,52 @@ export const QUESTION_PATH_MAP = {
     "pathId": "tijdsduur-rekenen-po",
     "stepIdx": 2
   },
-  "Een trein heeft 3 stops van 4 minuten en rijdt 55 minuten. Hoe lang duurt de rit?": {
+  "Een trein rijdt 55 minuten en stopt onderweg 3 keer 4 minuten. Hoe lang duurt de hele rit?": {
+    "pathId": "tijdsduur-rekenen-po",
+    "stepIdx": 1
+  },
+  "Het is nu 16:30. De film in de bioscoop begint over 1 uur 50 minuten. Hoe laat begint de film?": {
+    "pathId": "tijdsduur-rekenen-po",
+    "stepIdx": 2
+  },
+  "Een school begint om 8:30 en eindigt om 15:15. Hoeveel minuten duurt de schooldag?": {
+    "pathId": "tijdsduur-rekenen-po",
+    "stepIdx": 4
+  },
+  "Tom vertrekt om 9:15 en komt om 11:05 aan. Hoe lang was de rit?": {
     "pathId": "tijdsduur-rekenen-po",
     "stepIdx": 3
   },
-  "Het is nu 16:30. De bioscoop begint over 1 uur 50 minuten. Hoe laat?": {
-    "pathId": "tijdsduur-rekenen-po",
-    "stepIdx": 1
-  },
-  "Een tuin heeft een omtrek van 40 meter. Het is een vierkant. Hoe lang is elke zijde?": {
+  "Een kamer is 4 meter lang en 3 meter breed. Hoe groot is de oppervlakte van de kamer?": {
     "pathId": "maten-omtrek-oppervlakte-po",
     "stepIdx": 1
+  },
+  "Een vierkante tuin heeft een omtrek van 40 meter. Hoe lang is elke zijde?": {
+    "pathId": "maten-omtrek-oppervlakte-po",
+    "stepIdx": 1
+  },
+  "Een plank is 3,60 meter lang. Er worden stukken van 40 cm afgezaagd. Hoeveel stukken?": {
+    "pathId": "mol-stoichiometrie-havo-vwo",
+    "stepIdx": 2
   },
   "Een rechthoek is 12 cm lang en 5 cm breed. Hoe groot is de omtrek?": {
     "pathId": "vlakke-figuren-po",
     "stepIdx": 0
   },
-  "Een akker is 80 m lang en 50 m breed. Hoe groot is de akker?": {
+  "Tom is 1,45 meter. Zijn broer is 18 cm langer. Hoe lang is zijn broer?": {
     "pathId": "mol-stoichiometrie-havo-vwo",
-    "stepIdx": 2
+    "stepIdx": 0
+  },
+  "Een akker is 80 m lang en 50 m breed. Hoe groot is de oppervlakte van de akker?": {
+    "pathId": "vlakke-figuren-po",
+    "stepIdx": 0
+  },
+  "Een zwembad is 25 meter lang en 8 meter breed. Hoe groot is het oppervlak?": {
+    "pathId": "maten-omtrek-oppervlakte-po",
+    "stepIdx": 1
   },
   "Een wandeling is 4,8 km. Hoeveel meter is dat?": {
-    "pathId": "maten-omtrek-oppervlakte-po",
+    "pathId": "mol-stoichiometrie-havo-vwo",
     "stepIdx": 0
   },
   "Een rechthoek is 8 m lang en 5 m breed. Hoe groot is de oppervlakte?": {
@@ -6143,16 +6311,16 @@ export const QUESTION_PATH_MAP = {
     "pathId": "vlakke-figuren-po",
     "stepIdx": 0
   },
-  "Een zwembad is 25 m lang, 10 m breed en 1,5 m diep. Hoeveel m³ water?": {
+  "Een zwembad is 25 m lang, 10 m breed en overal 1,5 m diep. Hoeveel m³ water past erin?": {
     "pathId": "meetkunde-bouwsels",
     "stepIdx": 4
   },
   "Een muur is 6 m lang en 3 m hoog. Hoe groot is het oppervlak?": {
-    "pathId": "mol-stoichiometrie-havo-vwo",
-    "stepIdx": 2
+    "pathId": "vlakke-figuren-po",
+    "stepIdx": 0
   },
   "Een kamer is 5,5 m lang en 4 m breed. Hoe groot is de oppervlakte?": {
-    "pathId": "mol-stoichiometrie-havo-vwo",
+    "pathId": "vlakke-figuren-po",
     "stepIdx": 0
   },
   "Een kubus heeft zijden van 4 cm. Hoe groot is het volume?": {
@@ -6160,18 +6328,22 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 1
   },
   "Een tuin heeft een oppervlakte van 48 m². De breedte is 6 m. Hoe lang is de tuin?": {
-    "pathId": "vlakke-figuren-po",
+    "pathId": "maten-omtrek-oppervlakte-po",
     "stepIdx": 0
   },
   "Een kamer heeft een vloer van 5 m × 4 m. Er liggen tegels van 50×50 cm. Hoeveel tegels?": {
     "pathId": "vlakke-figuren-po",
     "stepIdx": 1
   },
-  "Een trein rijdt 120 km per uur. Na 2,5 uur, hoeveel km is er afgelegd?": {
+  "Vijf planken van elk 85 cm worden achter elkaar gelegd. Hoe lang is dat samen?": {
+    "pathId": "redactiesommen-pad",
+    "stepIdx": 3
+  },
+  "Een trein rijdt 120 km per uur. Hoeveel km legt hij af in 2,5 uur?": {
     "pathId": "tijdsduur-rekenen-po",
     "stepIdx": 3
   },
-  "Er zijn 5 dozen met elk 24 koekjes. Ze worden verdeeld over 8 klassen. Hoeveel per klas?": {
+  "Er zijn 5 dozen met elk 24 koekjes. Ze worden eerlijk verdeeld over 8 klassen. Hoeveel koekjes krijgt elke klas?": {
     "pathId": "redactiesommen-pad",
     "stepIdx": 2
   },
@@ -6183,9 +6355,9 @@ export const QUESTION_PATH_MAP = {
     "pathId": "mol-stoichiometrie-havo-vwo",
     "stepIdx": 0
   },
-  "Een auto rijdt 80 km per uur. Na 2 uur 30 minuten, hoeveel km?": {
-    "pathId": "tijdsduur-rekenen-po",
-    "stepIdx": 0
+  "Een auto rijdt 80 km per uur. Hoeveel km legt hij af in 2 uur en 30 minuten?": {
+    "pathId": "klokkijken",
+    "stepIdx": 2
   },
   "Meerdere vissen. Hoe schrijf je dat?": {
     "pathId": "dieren-seizoenen-natuur",
@@ -6198,10 +6370,6 @@ export const QUESTION_PATH_MAP = {
   "Hoe schrijf je het meervoud van 'boom'?": {
     "pathId": "spelling",
     "stepIdx": 1
-  },
-  "Hoe schrijf je het meervoud van 'tafel'?": {
-    "pathId": "tafels-po",
-    "stepIdx": 0
   },
   "Hoe schrijf je het meervoud van 'boek'?": {
     "pathId": "bekende-boeken-literatuur-po",
@@ -6228,10 +6396,6 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 0
   },
   "Wat is een synoniem voor 'beginnen'?": {
-    "pathId": "synoniemen-tegenstellingen-po",
-    "stepIdx": 0
-  },
-  "Wat is een synoniem voor 'beseffen'?": {
     "pathId": "synoniemen-tegenstellingen-po",
     "stepIdx": 0
   },
@@ -6275,6 +6439,10 @@ export const QUESTION_PATH_MAP = {
     "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 2
   },
+  "Wat is een synoniem voor 'beseffen'?": {
+    "pathId": "synoniemen-tegenstellingen-po",
+    "stepIdx": 0
+  },
   "Wat is een synoniem voor 'aarzelend'?": {
     "pathId": "schrijven-teksten-po",
     "stepIdx": 0
@@ -6311,13 +6479,13 @@ export const QUESTION_PATH_MAP = {
     "pathId": "synoniemen-tegenstellingen-po",
     "stepIdx": 0
   },
-  "Wat is het tegenovergestelde van 'chronologisch'?": {
+  "Wat betekent 'chronologisch'?": {
     "pathId": "tijdsduur-rekenen-po",
     "stepIdx": 0
   },
   "Wat betekent 'empathie'?": {
-    "pathId": "emoties-sociaal-po",
-    "stepIdx": 0
+    "pathId": "in-de-klas-2-nieuwkomers",
+    "stepIdx": 3
   },
   "Wat is een synoniem voor 'overbodig'?": {
     "pathId": "synoniemen-tegenstellingen-po",
@@ -6343,17 +6511,9 @@ export const QUESTION_PATH_MAP = {
     "pathId": "ruimtevaart-po",
     "stepIdx": 1
   },
-  "Lees het dagboekfragment:\n\n\"Maandag 14 mei\nVandaag had ik mijn eerste zwemles. Ik was zo zenuwachtig dat ik bijna niet in het water wilde stappen. De juf was gelukkig heel aardig en hielp me. Uiteindelijk zwom ik twee baantjes! Ik ben er trots op, maar mijn handen trillen nog van de spanning.\"\n\nHoe voelde het kind aan het begin van de les?": {
-    "pathId": "water-erfgoed-nederland-po",
-    "stepIdx": 3
-  },
   "Lees het dagboekfragment:\n\n\"Maandag 14 mei\nVandaag had ik mijn eerste zwemles. Ik was zo zenuwachtig dat ik bijna niet in het water wilde stappen. De juf was gelukkig heel aardig en hielp me. Uiteindelijk zwom ik twee baantjes! Ik ben er trots op, maar mijn handen trillen nog van de spanning.\"\n\nWat laat de zin 'mijn handen trillen nog van de spanning' zien?": {
     "pathId": "water-erfgoed-nederland-po",
     "stepIdx": 2
-  },
-  "Lees het verhaalfragment:\n\n\"In de tuin stond een oude eikenboom. Sander had er altijd in geklommen, maar nu stond er een man met een zaag. 'Die boom moet weg,' zei zijn vader. 'De wortels beschadigen de fundering.' Sander slikte. Hij keek naar het litteken in de schors waar hij zijn naam had gegraveerd. 'Mag ik nog even afscheid nemen?' vroeg hij.\"\n\nWat voelt Sander waarschijnlijk in dit fragment?": {
-    "pathId": "redactiesommen-pad",
-    "stepIdx": 0
   },
   "Welke zin is grammaticaal correct?": {
     "pathId": "dieren-seizoenen-natuur",
@@ -6363,13 +6523,17 @@ export const QUESTION_PATH_MAP = {
     "pathId": "maten-omtrek-oppervlakte-po",
     "stepIdx": 3
   },
-  "Wat was de Watersnoodramp?": {
+  "Wanneer was de Watersnoodramp?": {
     "pathId": "topografie-nederland",
     "stepIdx": 3
   },
   "Wanneer vond de bestorming van de Bastille plaats?": {
     "pathId": "bekende-wetenschappers-po",
     "stepIdx": 0
+  },
+  "Wat was de Holocaust?": {
+    "pathId": "godsdiensten-culturen-po",
+    "stepIdx": 2
   },
   "Wie was Martin Luther King Jr.?": {
     "pathId": "continenten-wereld-po",
@@ -6400,10 +6564,10 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 3
   },
   "Wat was het doel van de SS-Einsatzgruppen?": {
-    "pathId": "continenten-wereld-po",
-    "stepIdx": 0
+    "pathId": "rekenverhaaltjes-nieuwkomers",
+    "stepIdx": 2
   },
-  "Wat was het Ottoman-rijk?": {
+  "Wat was het Ottomaanse Rijk?": {
     "pathId": "continenten-wereld-po",
     "stepIdx": 2
   },
@@ -6415,8 +6579,20 @@ export const QUESTION_PATH_MAP = {
     "pathId": "continenten-wereld-po",
     "stepIdx": 0
   },
+  "Wat was de Haagse Conferentie van 1907?": {
+    "pathId": "toestand-stoffen-po",
+    "stepIdx": 0
+  },
+  "Wat is het VN-Vluchtelingenverdrag (1951)?": {
+    "pathId": "toestand-stoffen-po",
+    "stepIdx": 0
+  },
   "Wat was de Cubaanse Revolutie (1959)?": {
     "pathId": "bekende-wetenschappers-po",
+    "stepIdx": 0
+  },
+  "Wat was de impact van de computerrevolutie op de maatschappij?": {
+    "pathId": "digitale-geletterdheid-po",
     "stepIdx": 0
   },
   "Wat was het systeem van apartheid in Zuid-Afrika?": {
@@ -6435,12 +6611,8 @@ export const QUESTION_PATH_MAP = {
     "pathId": "meetkunde-bouwsels",
     "stepIdx": 0
   },
-  "Wat is een atoom?": {
+  "Waaruit bestaat een atoom?": {
     "pathId": "redactiesommen-pad",
-    "stepIdx": 0
-  },
-  "Wat is het verschil tussen uitsterven en bedreigd zijn?": {
-    "pathId": "tabellen-grafieken",
     "stepIdx": 0
   },
   "Bekijk de tabel. Welke stad heeft de hoogste temperatuur?": {
@@ -6463,21 +6635,21 @@ export const QUESTION_PATH_MAP = {
     "pathId": "tabellen-grafieken",
     "stepIdx": 0
   },
-  "Bekijk de voetbalstand. Welk team staat bovenaan?": {
-    "pathId": "sterren-planeten",
+  "Bekijk de competitiestand. Hoe vaak speelde Dynamo gelijk?": {
+    "pathId": "tafels-po",
     "stepIdx": 0
   },
   "Hoeveel regendagen zijn er die week volgens de weersvoorspelling?": {
     "pathId": "kalender-rekenen-po",
     "stepIdx": 0
   },
-  "Bekijk de tabel. Hoeveel stickers heeft Pieter meer dan Sara?": {
+  "Bekijk de tabel. Hoeveel stickerkaarten heeft Pieter meer dan Sara?": {
     "pathId": "tabellen-grafieken",
     "stepIdx": 0
   },
   "Bekijk de zwemtijden. Wie wint de gouden medaille? (laagste tijd wint)": {
     "pathId": "tijdsduur-rekenen-po",
-    "stepIdx": 0
+    "stepIdx": 1
   },
   "Bekijk de tabel. Welk fruit zit er het meest in de mand?": {
     "pathId": "tabellen-grafieken",
@@ -6551,33 +6723,33 @@ export const QUESTION_PATH_MAP = {
     "pathId": "tabellen-grafieken",
     "stepIdx": 3
   },
-  "Bekijk het cirkeldiagram. Hoeveel procent van de schooltijd gaat naar Rekenen?": {
+  "Bekijk het cirkeldiagram. Hoeveel procent van de schooltijd gaat naar Taal en Lezen samen?": {
     "pathId": "procenten-po",
-    "stepIdx": 2
+    "stepIdx": 4
   },
   "Bekijk het cirkeldiagram. Er zijn 20 leerlingen in de klas. Hoeveel hebben een kat?": {
     "pathId": "tabellen-grafieken",
     "stepIdx": 4
   },
   "Bekijk het cirkeldiagram. Welk seizoen is het populairst?": {
-    "pathId": "dieren-seizoenen-natuur",
-    "stepIdx": 6
+    "pathId": "grafieken-lezen-po",
+    "stepIdx": 3
   },
-  "Bekijk het cirkeldiagram. Hoeveel procent fietst naar school?": {
+  "Bekijk het cirkeldiagram. Op deze school zitten 200 leerlingen. Hoeveel van hen gaan met de bus naar school?": {
+    "pathId": "tabellen-grafieken",
+    "stepIdx": 4
+  },
+  "Bekijk het cirkeldiagram. Welk deel van het aardoppervlak is ongeveer bedekt met water?": {
+    "pathId": "grafieken-lezen-po",
+    "stepIdx": 3
+  },
+  "Bekijk het cirkeldiagram. Hoeveel procent is NIET tegen huiswerk?": {
     "pathId": "procenten-po",
     "stepIdx": 1
   },
-  "Bekijk het cirkeldiagram. Hoeveel procent van de aarde is bedekt met water?": {
-    "pathId": "procenten-po",
-    "stepIdx": 1
-  },
-  "Bekijk het cirkeldiagram. Hoeveel procent is TEGEN huiswerk?": {
-    "pathId": "procenten-po",
-    "stepIdx": 1
-  },
-  "Bekijk de tijdlijn. In welk jaar werd Nederland bevrijd?": {
+  "Bekijk de tijdlijn. Hoeveel jaar was Nederland bezet?": {
     "pathId": "kalender-rekenen-po",
-    "stepIdx": 0
+    "stepIdx": 2
   },
   "Bekijk de tijdlijn. Hoe oud was Anne Frank toen ze zich verstopte?": {
     "pathId": "tijdvakken-nederland-po",
@@ -6591,15 +6763,15 @@ export const QUESTION_PATH_MAP = {
     "pathId": "tijdvakken-nederland-po",
     "stepIdx": 4
   },
-  "Bekijk de tijdlijn. Hoe oud was hij toen zijn eerste kind werd geboren?": {
+  "Bekijk de tijdlijn van het leven van een man. Hoe oud was hij toen zijn eerste kind werd geboren?": {
     "pathId": "kalender-rekenen-po",
     "stepIdx": 2
   },
-  "Bekijk de kaartlegenda. Welk symbool staat voor een ziekenhuis?": {
-    "pathId": "negatieve-getallen-po",
+  "Bekijk de kaart en de legenda. Hoeveel ziekenhuizen staan er op de kaart?": {
+    "pathId": "kaartlezen-po",
     "stepIdx": 3
   },
-  "Bekijk de stadskaart. Hoeveel metrostops zijn er van Station Noord naar het Ziekenhuis?": {
+  "Bekijk de metrokaart. Je stapt in bij Station Noord. Bij de hoeveelste halte stap je uit voor het Ziekenhuis?": {
     "pathId": "kaartlezen-po",
     "stepIdx": 0
   },
@@ -6608,8 +6780,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 0
   },
   "Bekijk de hoogtekaart. Welk punt ligt het hoogst?": {
-    "pathId": "verhoudingen-po",
-    "stepIdx": 4
+    "pathId": "interpunctie-po",
+    "stepIdx": 2
   },
   "Bekijk het rooster. Welk vak heeft Anna op woensdag in het 3e uur?": {
     "pathId": "tijdsduur-rekenen-po",
@@ -6653,7 +6825,7 @@ export const QUESTION_PATH_MAP = {
   },
   "Welke uitvinding van Johannes Gutenberg (±1450) veranderde de wereld?": {
     "pathId": "bekende-boeken-literatuur-po",
-    "stepIdx": 0
+    "stepIdx": 1
   },
   "20 van de 25 kinderen in groep 8 hebben hun weektaak af. Hoeveel procent is dat?": {
     "pathId": "procenten-po",
@@ -6663,9 +6835,9 @@ export const QUESTION_PATH_MAP = {
     "pathId": "maten-omtrek-oppervlakte-po",
     "stepIdx": 4
   },
-  "220.009 − 6.099 − 4.987 ≈ ?": {
-    "pathId": "negatieve-getallen-po",
-    "stepIdx": 0
+  "220.009 − 6.099 − 4.987 ≈ ? (rond af op duizendtallen)": {
+    "pathId": "schatten-afronden",
+    "stepIdx": 1
   },
   "Een fietspad heeft een oppervlakte van 6.000 m² en een breedte van 4 m. Hoe lang is het pad?": {
     "pathId": "vlakke-figuren-po",
@@ -6703,7 +6875,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "klokkijken",
     "stepIdx": 2
   },
-  "De afstand tussen 2 bruggen is op een kaart 4 cm. De schaal is 1:200.000. Hoeveel km?": {
+  "De afstand tussen 2 bruggen is op een kaart 4 cm. De schaal is 1:200.000. Hoeveel km is dat in werkelijkheid?": {
     "pathId": "maten-omtrek-oppervlakte-po",
     "stepIdx": 0
   },
@@ -6749,7 +6921,7 @@ export const QUESTION_PATH_MAP = {
   },
   "Lees de tekst:\n\n\"Plastic soep is een verzamelnaam voor kleine stukjes plastic die in zee drijven. Elk jaar belanden miljoenen tonnen plastic in de oceanen. Dit plastic breekt af tot steeds kleinere stukjes, maar verdwijnt nooit volledig. Vissen en vogels eten de deeltjes, waarna het plastic ook in de voedselketen van de mens terechtkomt. Wetenschappers zoeken naar oplossingen, maar zijn het er niet over eens of opruimen of voorkomen van nieuw plastic de beste aanpak is.\"\n\nWat is de hoofdgedachte van deze tekst?": {
     "pathId": "dieren-seizoenen-natuur",
-    "stepIdx": 9
+    "stepIdx": 0
   },
   "Lees de tekst:\n\n\"Plastic soep is een verzamelnaam voor kleine stukjes plastic die in zee drijven. Elk jaar belanden miljoenen tonnen plastic in de oceanen. Dit plastic breekt af tot steeds kleinere stukjes, maar verdwijnt nooit volledig. Vissen en vogels eten de deeltjes, waarna het plastic ook in de voedselketen van de mens terechtkomt. Wetenschappers zoeken naar oplossingen, maar zijn het er niet over eens of opruimen of voorkomen van nieuw plastic de beste aanpak is.\"\n\nWaarom is plastic soep gevaarlijk voor mensen?": {
     "pathId": "dieren-seizoenen-natuur",
@@ -6759,37 +6931,25 @@ export const QUESTION_PATH_MAP = {
     "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 9
   },
-  "Welk land ligt in het noorden van Afrika en grenst aan de Middellandse Zee én de Sahara?": {
+  "Welk land ligt in Noord-Afrika aan de Middellandse Zee en bestaat grotendeels uit woestijn?": {
     "pathId": "werelddelen-landen-po",
     "stepIdx": 2
-  },
-  "Hoe heet de langgerekte heuvelrug in de provincie Utrecht, ontstaan als stuwwal in de ijstijd?": {
-    "pathId": "topografie-nederland",
-    "stepIdx": 1
   },
   "Welk land heeft de meeste inwoners ter wereld?": {
     "pathId": "werelddelen-landen-po",
     "stepIdx": 0
   },
   "Wat is de Golfstroom?": {
-    "pathId": "kaartlezen-po",
+    "pathId": "continenten-wereld-po",
     "stepIdx": 0
   },
   "Welke grondstof wordt gewonnen in de Groningse bodem en veroorzaakte aardbevingen?": {
     "pathId": "energiebronnen-po",
     "stepIdx": 1
   },
-  "Welk hormoon regelt de bloedsuikerspiegel?": {
-    "pathId": "lichaam-gezondheid-po",
-    "stepIdx": 1
-  },
-  "Welk land heeft de meeste tijdzones?": {
-    "pathId": "werelddelen-landen-po",
-    "stepIdx": 0
-  },
-  "Vul in: 'Mijn moeder is langer ___ mijn vader.'": {
-    "pathId": "dieren-seizoenen-natuur",
-    "stepIdx": 5
+  "Welk van deze landen heeft de meeste tijdzones?": {
+    "pathId": "continenten-wereld-po",
+    "stepIdx": 3
   },
   "Welke planeet wordt 'de rode planeet' genoemd?": {
     "pathId": "ruimtevaart-po",
@@ -6811,11 +6971,11 @@ export const QUESTION_PATH_MAP = {
     "pathId": "continenten-wereld-po",
     "stepIdx": 1
   },
-  "Welk Nederlandse rivier mondt uit bij Rotterdam?": {
+  "Hoe heet de rivier die door Rotterdam stroomt?": {
     "pathId": "topografie-nederland",
     "stepIdx": 4
   },
-  "Hoeveel staten heeft de Verenigde Staten?": {
+  "Uit hoeveel staten bestaan de Verenigde Staten?": {
     "pathId": "werelddelen-landen-po",
     "stepIdx": 2
   },
@@ -6824,19 +6984,19 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 3
   },
   "Wat gebeurt er bij **vulkanisme**?": {
-    "pathId": "dieren-seizoenen-natuur",
-    "stepIdx": 5
+    "pathId": "vulkanen-po",
+    "stepIdx": 2
   },
   "Welke gebeurtenis was in 1969 wereldnieuws?": {
     "pathId": "ruimtevaart-po",
     "stepIdx": 1
   },
+  "Welke zee ligt tussen Italië en Noord-Afrika?": {
+    "pathId": "continenten-wereld-po",
+    "stepIdx": 2
+  },
   "Hoe heet de hoofdstad van België?": {
     "pathId": "werelddelen-landen-po",
-    "stepIdx": 1
-  },
-  "Welk kledingstuk hoort bij koud weer?": {
-    "pathId": "weersvoorspelling-po",
     "stepIdx": 1
   },
   "Wat is de hoofdstad van Frankrijk?": {
@@ -6846,10 +7006,6 @@ export const QUESTION_PATH_MAP = {
   "Wat is een **fossiel**?": {
     "pathId": "lichaam-gezondheid-po",
     "stepIdx": 0
-  },
-  "Welke plaats hoort bij Noorwegen?": {
-    "pathId": "dieren-seizoenen-natuur",
-    "stepIdx": 2
   },
   "Wat is een **democratie**?": {
     "pathId": "politiek-democratie-po",

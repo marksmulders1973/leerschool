@@ -161,7 +161,7 @@ const steps = [
       },
       {
         q: "**Spinning Jenny** (Hargreaves 1764) was uitvinding in welke sector?",
-        options: ["Textiel — spinnen van garen", "Mijnbouw", "Transport", "Landbouw"],
+        options: ["Textiel", "Mijnbouw", "Transport", "Landbouw"],
         answer: 0,
         wrongHints: [null, "Niet — andere uitvindingen daar.", "Niet — Stephenson.", "Niet — eerder."],
         uitlegPad: {

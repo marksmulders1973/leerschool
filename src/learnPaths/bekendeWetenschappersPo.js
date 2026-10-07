@@ -284,7 +284,7 @@ const steps = [
       { q: "Wie kreeg **2 Nobelprijzen**?", options: ["Marie Curie", "Einstein", "Newton", "Darwin"], answer: 0, wrongHints: [null, "Slechts 1.", "Geen Nobel (leefde vóór die bestond).", "Geen."] },
       {
         q: "Wie ontwikkelde de **theorie van de relativiteit** (E=mc²)?",
-        options: ["Albert Einstein (1905, 1915)", "Isaac Newton", "Charles Darwin", "Marie Curie"],
+        options: ["Albert Einstein", "Isaac Newton", "Charles Darwin", "Marie Curie"],
         answer: 0,
         wrongHints: [null, "Newton vóór Einstein — andere natuurkunde.", "Darwin = evolutie, geen natuurkunde.", "Curie = radioactiviteit."],
         uitlegPad: {

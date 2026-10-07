@@ -349,13 +349,13 @@ const steps = [
       {
         q: "Een **moleculaire klok** gebruikt:",
         options: [
-          "Voorspelbaar tempo van DNA-mutaties om datering tussen soorten te bepalen",
-          "Echt uurwerk-mechanisme",
-          "Aantal organen",
-          "Hartslag"
+          "Het vaste tempo van DNA-mutaties om te schatten wanneer soorten uit elkaar gingen",
+          "Het aantal jaarringen in fossiel hout om aardlagen te dateren",
+          "Het verval van radioactieve stoffen om de leeftijd van gesteente te bepalen",
+          "Het aantal organen van een soort om te bepalen hoe oud die soort is"
         ],
         answer: 0,
-        wrongHints: [null, "Onzin.", "Niet — DNA.", "Onzin."],
+        wrongHints: [null, "Jaarringen tellen is een andere dateringsmethode. Een moleculaire klok kijkt naar moleculen in cellen.", "Radioactief verval dateert gesteente, niet de verwantschap tussen soorten. Welk molecuul verandert langzaam per generatie?", "Organen tellen zegt weinig over tijd. Welk molecuul geef je door aan je nakomelingen?"],
         uitlegPad: {
           stappen: [
             { titel: "Mutatie-snelheid ~ constant", tekst: "Bepaalde DNA-sequenties muteren in voorspelbaar tempo (bv. mitochondriaal DNA 1 mutatie per 6500 jaar). Door verschillen tussen soorten te tellen → datering van splitsing. Mens + chimp splitsing ~6-7 mln j geleden volgens deze methode." },

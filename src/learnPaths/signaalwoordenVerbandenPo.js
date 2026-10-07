@@ -151,7 +151,7 @@ const steps = [
         },
       },
       {
-        q: "Welk woord wijst op een **gevolg** (en dus …)?",
+        q: "Welk woord wijst op een **gevolg**?",
         options: ["dus", "omdat", "want", "doordat"],
         answer: 0,
         wrongHints: [null, "Dat geeft juist de reden/oorzaak.", "Ook een reden-woord.", "Ook een oorzaak-woord."],

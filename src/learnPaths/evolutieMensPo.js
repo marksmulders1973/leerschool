@@ -24,9 +24,9 @@ const steps = [
       },
       {
         q: "Wat is **natuurlijke selectie**?",
-        options: ["Best aangepast overleeft + plant zich voort", "Toeval", "Snel", "Niet bestaand"],
+        options: ["Wie het best is aangepast, overleeft en krijgt meer jongen", "Dieren kiezen zelf welke eigenschappen ze krijgen", "Mensen kiezen welke dieren jongen mogen krijgen", "Alle dieren veranderen even snel, wat er ook gebeurt"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet specifiek.", "Wel."],
+        wrongHints: [null, "Dieren kunnen hun eigenschappen niet kiezen — ze worden ermee geboren.", "Dat is kunstmatige selectie (fokken). Wie 'kiest' er bij natuurlijke selectie?", "Kijk naar het woord 'selectie': wordt er dan niets uitgekozen?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is natuurlijke selectie?", tekst: "Natuurlijke selectie is de belangrijkste motor van evolutie. Het gaat zo: in elke generatie zijn er **kleine verschillen** tussen individuen." },

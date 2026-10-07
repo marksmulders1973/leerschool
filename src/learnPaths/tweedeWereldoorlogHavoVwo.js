@@ -82,7 +82,7 @@ const steps = [
       },
       {
         q: "**WO2 begon** met DE-invasie van:",
-        options: ["Polen (1 sept 1939)", "Frankrijk", "USSR", "Nederland"],
+        options: ["Polen", "Frankrijk", "USSR", "Nederland"],
         answer: 0,
         wrongHints: [null, "Niet — mei 1940.", "Niet — juni 1941.", "Niet — mei 1940."],
         uitlegPad: {
@@ -335,13 +335,13 @@ const steps = [
       {
         q: "**Bloedbad van Nanjing** (dec 1937):",
         options: [
-          "Japanse troepen vermoordden ~300k Chinezen in 6 weken — oorlogsmisdaad",
-          "Chinese overwinning",
-          "Vrede getekend",
-          "Geen relevant feit"
+          "Massamoord door Japanse troepen op Chinezen",
+          "Grote Chinese overwinning op Japan",
+          "Vredesverdrag tussen China en Japan",
+          "Duits bombardement op een Chinese stad"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Wel zeer relevant."],
+        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Niet Duits — in China vochten in 1937 Japan en China tegen elkaar."],
         uitlegPad: {
           stappen: [
             { titel: "'Rape of Nanking'", tekst: "Toen Japanse leger de Chinese hoofdstad Nanjing innam: massamoord + verkrachting van Chinese burgers + krijgsgevangenen. Schattingen 200-300k doden in 6 weken. Eén van ergste oorlogsmisdaden 20e eeuw. Belangrijke reden voor naoorlogse anti-Japan-sentiment in China. Sommige Japanse nationalisten ontkennen schaal nog steeds — diplomatiek spanningsveld." },

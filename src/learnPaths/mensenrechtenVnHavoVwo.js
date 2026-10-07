@@ -292,13 +292,13 @@ const steps = [
       {
         q: "**Mahsa Amini-protesten** Iran (2022):",
         options: [
-          "Vrouwen + jeugd tegen verplichte hijab + regime",
-          "Klimaatprotesten",
-          "Economisch protest",
-          "Niet relevant"
+          "Protest tegen de verplichte hoofddoek en het regime",
+          "Protest tegen klimaatverandering",
+          "Protest tegen hoge prijzen",
+          "Protest tegen een oorlog met een buurland"
         ],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet primair.", "Wel."],
+        wrongHints: [null, "Niet primair.", "Niet primair.", "Niet — het begon na de dood van een jonge vrouw die door de zedenpolitie was opgepakt."],
         uitlegPad: {
           stappen: [
             { titel: "'Vrouw, leven, vrijheid'", tekst: "Mahsa Amini stierf 22 j oud na arrestatie zedenpolitie wegens 'verkeerd' dragen hijab. Wekenlang massa-protesten in Iran-steden. Slogan Zan-Zendegi-Azadi (Vrouw-Leven-Vrijheid) wereldwijd bekend. Honderden doden, duizenden gevangen. Internationale solidariteit." },

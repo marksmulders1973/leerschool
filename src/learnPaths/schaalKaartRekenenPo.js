@@ -325,7 +325,7 @@ const steps = [
         q: "Schaal 1 : 1.000. Een weg is 50 m lang. Hoe lang op de kaart?",
         options: ["5 cm", "50 cm", "0,5 cm", "500 cm"],
         answer: 0,
-        wrongHints: [null, "Reken 50 m eerst naar cm (5.000), dan ÷ 1.000.", "Je vergat door de schaal te delen.", "Te klein."],
+        wrongHints: [null, "Reken 50 m eerst naar cm (5.000), dan ÷ 1.000.", "Te klein — 50 m is 5.000 cm, niet 500 cm. Reken eerst goed om.", "Veel te groot — 500 cm is 5 meter op de kaart. Deel 5.000 cm door 1.000."],
         uitlegPad: {
           stappen: [
             { titel: "Eerst naar centimeter", tekst: "Zet de echte lengte om naar centimeter, want het schaalgetal werkt met centimeters." },

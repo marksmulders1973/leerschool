@@ -271,7 +271,7 @@ const steps = [
       { q: "Wie was **eerste man-koning** NL sinds 1890?", options: ["Willem-Alexander (2013)", "Beatrix", "Juliana", "Wilhelmina"], answer: 0, wrongHints: [null, "Koningin vóór Willem-Alexander.", "Eerder maar nog steeds een koningin.", "Begin 20e eeuw."] },
       {
         q: "Wie schreef **Max Havelaar** (1860) — boek tegen koloniale uitbuiting?",
-        options: ["Multatuli (Eduard Douwes Dekker)", "Anne Frank", "Willem Frederik Hermans", "Annie M.G. Schmidt"],
+        options: ["Multatuli", "Anne Frank", "Willem Frederik Hermans", "Annie M.G. Schmidt"],
         answer: 0,
         wrongHints: [null, "Andere periode — 2e Wereldoorlog dagboek.", "Andere generatie — na 1945.", "Kinderboeken (Jip & Janneke)."],
         uitlegPad: {
