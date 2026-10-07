@@ -158,7 +158,7 @@ function maakVraagBlok(vraag) {
 function maakMail(rij, welkom, niveauSectie = null, oefenvraag = null) {
   const vraagBlok = maakVraagBlok(oefenvraag);
   const naam = esc(rij.kind_voornaam) || "";
-  const hoi = naam ? `Hoi ${naam}-ouder,` : "Hoi,";
+  const hoi = naam ? `Hoi ouder of verzorger van ${naam},` : "Hoi,";
   const ref = encodeURIComponent(rij.unsubscribe_token || "");
   const utm = `utm_source=email&utm_campaign=${welkom ? "welkom" : "weekmail"}`;
   // 🚪 In de welkomstmail loopt elke inhoudsknop langs /api/bevestig met een
@@ -242,7 +242,7 @@ Tik je hierboven op het Weekpakket of de vraag van vandaag, dan telt dat ook als
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Geen mail meer? <a href="${uit}" style="color:#9fb0c6;">Uitschrijven</a> — direct geregeld.</p>
   </div></body></html>`;
 
-  const text = `${naam ? `Hoi ${naam}-ouder,` : "Hoi,"}\n\n${welkom ? "Leuk dat je erbij bent! " : ""}Je gratis oefenkwartiertje:\n\n${vraagBlok.text}${weekpakketBlok.text}Meer oefenen:\n- Vraag van vandaag: ${vandaag}\n- Gratis oefentoets: ${toets}\n${bevestigBlok.text}\nHeb je een idee om Leerkwartier beter te maken? Tip de maker: ${tip}\nWil je Leerkwartier doorgeven aan een klas, school of organisatie? ${SITE}/doorgeven.html\n\nUitschrijven: ${uit}\nLeerkwartier — een kwartier per dag leren, een leven lang slimmer.`;
+  const text = `${naam ? `Hoi ouder of verzorger van ${naam},` : "Hoi,"}\n\n${welkom ? "Leuk dat je erbij bent! " : ""}Je gratis oefenkwartiertje:\n\n${vraagBlok.text}${weekpakketBlok.text}Meer oefenen:\n- Vraag van vandaag: ${vandaag}\n- Gratis oefentoets: ${toets}\n${bevestigBlok.text}\nHeb je een idee om Leerkwartier beter te maken? Tip de maker: ${tip}\nWil je Leerkwartier doorgeven aan een klas, school of organisatie? ${SITE}/doorgeven.html\n\nUitschrijven: ${uit}\nLeerkwartier — een kwartier per dag leren, een leven lang slimmer.`;
 
   return { onderwerp, html, text };
 }

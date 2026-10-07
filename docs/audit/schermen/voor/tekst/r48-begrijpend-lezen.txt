@@ -1,0 +1,38 @@
+# Route /begrijpend-lezen (vers apparaat)
+# http://localhost:4173/begrijpend-lezen
+Spring naar hoofdinhoud
+←
+Begrijpend Lezen
+Groep 5–8
+🏠
+📈
+Stap voor stap — begin heel kort
+Start met 1-2 zinnen en lees elke stap iets meer. Kies je onderwerp en lengte.
+›
+Voortgang
+0 / 3 beheerst
+⬜ Nog niet geoefend
+🟧 Bezig
+🟩 Beheerst ≥70%
+📰
+Informatief
+Feiten, beschrijvingen
+📖
+Verhalend
+Verhalen, dagboek, nieuws
+✉️
+Functioneel
+Brief, instructie, reclame
+🔀 Mix — alle tekstsoorten door elkaar
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244
+🏠
+Home
+📚
+Leren
+Toets
+🎮
+Spelletje
+Mijn pagina

@@ -491,7 +491,7 @@ function kiesRandomMissies(n = 3) {
 // maar voeg per biome een 'tijdperk'-overlay toe: jaar + denker + plek.
 // Kid leert passief 10 namen. Vivaldi-barok-muziek past bij 'ontdekkers'.
 const BIOME_TIJDPERK = [
-  { jaar: "1859", denker: "Charles Darwin",    plek: "Galapagos eilanden" },
+  { jaar: "1859", denker: "Charles Darwin",    plek: "Galápagoseilanden" },
   { jaar: "1610", denker: "Galileo Galilei",   plek: "Sterren door telescoop" },
   { jaar: "1752", denker: "Benjamin Franklin", plek: "Bliksem-experiment" },
   { jaar: "~250 v.Chr.", denker: "Archimedes", plek: "Strand van Syracuse" },
@@ -3646,7 +3646,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const naam = namen[idx];
       const rang = idx + 1;
       const naamUp = String(naam).toUpperCase().slice(0, 14);
-      const tekst = `GEFELICITEERD ${naamUp} MET JE HIGH SCORE ${rang}E PLAATS!`;
+      const tekst = `GEFELICITEERD ${naamUp} MET JE ${rang}E PLAATS IN DE HIGHSCORES!`;
       // Banner-breedte schaalt mee met tekstlengte (ruwweg)
       const tekstW = Math.max(280, tekst.length * 14) * SCHAAL;
       fans.push({
@@ -7036,7 +7036,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             kp.opgepakt = true;
             gedragenSprite.veilig = true;
             // 🗣️ Violetide juicht als-ie veilig is (Brian 2026-06-27)
-            if (gedragenSprite.id === "violetide") violetideSpeech = { tekst: "YES IM SAFE!", frames: 130, kleur: "#69f0ae" };
+            if (gedragenSprite.id === "violetide") violetideSpeech = { tekst: "YES I'M SAFE!", frames: 130, kleur: "#69f0ae" };
             try { bankSpriteRef.current(gedragenSprite.id, gedragenSprite.niveau); } catch {}
             const meta = SPRITE_BY_ID[gedragenSprite.id] || {};
             try { grabbelBannerRef.current({ ...meta, niveau: gedragenSprite.niveau, gewonnen: true, isNew: false, veiliggesteld: true }); } catch {}
@@ -10466,7 +10466,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             filter: "drop-shadow(0 0 6px rgba(255,80,40,0.8))"
           }}>OBLITERATOR</span>
           <div style={{ display: "flex", gap: 4 }}>
-            <button onClick={toggleFullscreen} title={isFullscreen ? "Sluit fullscreen" : "Open fullscreen"} style={{
+            <button onClick={toggleFullscreen} title={isFullscreen ? "Volledig scherm sluiten" : "Volledig scherm openen"} style={{
               background: "none", border: "none", color: "#ffcc40", fontSize: 18, cursor: "pointer",
               padding: "0 6px", lineHeight: 1
             }}>{isFullscreen ? "↙" : "⛶"}</button>
@@ -11730,7 +11730,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                   border: `1px solid ${vraagBeloning ? "#00c853" : "rgba(255,180,60,0.4)"}`
                 }}>
                   <p style={{ color: vraagBeloning ? "#69f0ae" : "#ffcc40", fontSize: 14, fontWeight: 700, marginBottom: 6 }}>
-                    {vraagBeloning ? "🎉 Goed! +1 extra leven volgende keer ❤️" : "Geen straf — je leert door 💪"}
+                    {vraagBeloning ? "🎉 Goed! +1 extra leven volgende keer ❤️" : "Geen straf — hier leer je van 💪"}
                   </p>
                   {vraag.explanation && (
                     <p style={{ color: "rgba(255,255,255,0.7)", fontSize: 13, lineHeight: 1.4 }}>
@@ -12722,7 +12722,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               Hoe heet jij?
             </div>
             <div style={{ fontSize: 13, opacity: 0.85, marginTop: 8, lineHeight: 1.45 }}>
-              Anders verschijn je in de high-score als <strong>"Speler"</strong> — beetje saai voor zo'n top-record.
+              Anders verschijn je in de highscorelijst als <strong>"Speler"</strong> — beetje saai voor zo'n top-record.
             </div>
             <input
               type="text"
@@ -12749,7 +12749,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 borderRadius: 10, color: "#fff", fontSize: 13,
                 fontFamily: "'Fredoka', sans-serif", fontWeight: 600,
                 cursor: "pointer",
-              }}>Skip — speel als Speler</button>
+              }}>Overslaan — speel als Speler</button>
               <button onClick={bevestigNaamEnStart} disabled={!naamInput.trim()} style={{
                 flex: 1, padding: "10px 16px",
                 background: naamInput.trim()
@@ -12797,7 +12797,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           }}>
             <div style={{ fontSize: 86, marginBottom: 6 }}>{prizeRevealed.emoji}</div>
             <div style={{ fontSize: 12, opacity: 0.7, letterSpacing: 2, textTransform: "uppercase" }}>
-              {prizeRevealed.isNew ? "🎉 Nieuw!" : "Dubbele — al verzameld"}
+              {prizeRevealed.isNew ? "🎉 Nieuw!" : "Dubbel — al verzameld"}
             </div>
             <div style={{ fontSize: 22, fontWeight: 800, color: "#ffd54f", marginTop: 4 }}>
               {prizeRevealed.naam}
@@ -12858,7 +12858,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                     Uitgerust: {SPRITE_BY_ID[uitgerustId].emoji} {SPRITE_BY_ID[uitgerustId].naam} Lv {verzameling[uitgerustId]}
                   </div>
                   <div style={{ fontSize: 12, marginTop: 4, opacity: 0.95, lineHeight: 1.35 }}>
-                    ⚡ <b>Ability:</b> {SPRITE_BY_ID[uitgerustId].ability}
+                    ⚡ <b>Kracht:</b> {SPRITE_BY_ID[uitgerustId].ability}
                   </div>
                   {SPRITE_EFFECT_LABEL[SPRITE_EFFECT[uitgerustId]] && (
                     <div style={{

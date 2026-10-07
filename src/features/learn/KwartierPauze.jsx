@@ -196,7 +196,7 @@ export default function KwartierPauze({ player, pathId, stepIdx, onStopForToday,
           >
             ⏸️ 5 min later weer
             <div style={{ fontFamily: "var(--font-body)", fontSize: 11, fontWeight: 500, color: "rgba(255,255,255,0.65)", marginTop: 2 }}>
-              Pauze van 5 min, daarna deze prompt weer.
+              Pauze van 5 min, daarna vraag ik het opnieuw.
             </div>
           </button>
           <button
@@ -217,7 +217,7 @@ export default function KwartierPauze({ player, pathId, stepIdx, onStopForToday,
           >
             ▶️ Door, ik heb zin in meer
             <div style={{ fontFamily: "var(--font-body)", fontSize: 11, fontWeight: 500, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
-              Ik vraag het niet meer deze sessie.
+              Ik vraag het deze keer niet meer.
             </div>
           </button>
         </div>

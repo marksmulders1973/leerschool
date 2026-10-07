@@ -23,7 +23,7 @@ export const VRIJSPEEL_DIEREN = [
   // beloning — je "speelt ze vrij" door te leren. Niet aan één pad gekoppeld
   // maar aan een mijlpaal: hoe meer leer-stappen je af hebt, hoe groter de dino
   // die je ontgrendelt. `stappen` = aantal unieke voltooide leer-stappen nodig.
-  { assetId: "triceratops",    emoji: "🦕", naam: "Triceratops",   stappen: 10, waarom: "Je hebt al 10 lesjes af — de Triceratops is van jou! Deze dino kun je niet kopen, alleen vrij spelen door te leren." },
+  { assetId: "triceratops",    emoji: "🦕", naam: "Triceratops",   stappen: 10, waarom: "Je hebt al 10 lesjes af — de Triceratops is van jou! Deze dino kun je niet kopen, alleen vrijspelen door te leren." },
   { assetId: "stegosaurus",    emoji: "🦕", naam: "Stegosaurus",   stappen: 18, waarom: "18 lesjes geleerd! De Stegosaurus stampt je park binnen. Vrijgespeeld door te leren — niet te koop." },
   { assetId: "parasaurolophus", emoji: "🦕", naam: "Parasaurus",   stappen: 28, waarom: "28 lesjes — knap volgehouden! De Parasaurus is je beloning. Alleen te verdienen door te leren." },
   { assetId: "trex",           emoji: "🦖", naam: "T-Rex",         stappen: 40, waarom: "40 lesjes geleerd! De machtige T-Rex brult in jouw dierentuin. De koning van de vrijspeel-dino's." },

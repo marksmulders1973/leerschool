@@ -1,0 +1,28 @@
+# Route /dictee (vers apparaat)
+# http://localhost:4174/dictee
+Spring naar hoofdinhoud
+← Terug
+🐕
+Dictee met Charley
+Charley zegt een zin en dan één woord. Jij typt dat woord.
+Zo werkt het: 10 woorden. Je hoort de zin, je ziet de zin met een gat, en je typt het woord dat Charley zegt. Fout? Dan zie je meteen hoe het wél moet, en waarom.
+In welke groep zit je?
+Groep 4
+Groep 5
+Groep 6
+Groep 7
+Groep 8
+🔑 Code gekregen van thuis of van school?
+▶ Start
+📋 Woorden van school Familie · nu gratis
+Plak of typ de dicteewoorden van deze week (uit Parro, de mail of het papiertje). Charley leest ze voor en je kind oefent precies wat op school komt.
+Klinkt een woord als een ander woord (mail/meel, hart/hard)? Zet erachter tussen haakjes waar het over gaat: mail (computer). Charley zegt dat er dan bij. Bekende twijfelwoorden krijgen vanzelf een zin.
+0 woorden herkend · minstens 3 nodig
+Bewaar de lijst
+🔤 Werkwoordspellingtest →
+Zoals de test op school: zin met een gat, tussen haakjes het werkwoord en de tijd, jij typt de vorm. Score per vorm (○ □ △ ▢).
+Tip: zet het geluid aan. Tik op 🔊 als je Charley niet goed verstaat. 30 woorden per groep; elke keer een andere mix.
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244

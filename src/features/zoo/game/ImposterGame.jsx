@@ -425,7 +425,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
                     <div style={{ marginTop: 8 }}><button onClick={() => { try { track("game_samen_knop", {}); } catch { /* */ } window.dispatchEvent(new CustomEvent("lk-samen-spelen")); }} style={{ ...KNOP, background: "linear-gradient(135deg,#25d366,#128c7e)", padding: "9px 14px", font: "800 13.5px system-ui" }}>📲 Met vrienden spelen</button></div>
                   </div>
                   <p style={{ margin: "0 0 8px", background: "#f4faf6", border: "1px solid #cde3d6", borderRadius: 10, padding: "8px 12px", fontSize: 13.5 }}>🤖 <b>Alleen spelen kan ook</b>, gewoon nu: vijf bots doen mee, en bij "Verras me" kan één van hen de bedrieger zijn. Je hebt niemand anders nodig.</p>
-                  <p style={{ margin: "0 0 8px" }}>Zes spelers in het park: jij en vijf maatjes. Eén is de <b>bedrieger</b>. <b>Bouwers</b> doen taken bij de gele posten: drie vragen op jouw niveau. De bedrieger doet alsof en kan een bouwer <b>tikken</b> als niemand kijkt: die is af en kijkt mee vanuit de zeppelin. Wie uitgestemd wordt ook.</p>
+                  <p style={{ margin: "0 0 8px" }}>Zes spelers in het park: jij en vijf maatjes. Eén is de <b>bedrieger</b>. <b>Bouwers</b> doen taken bij de gele posten: drie vragen op jouw niveau. De bedrieger doet alsof en kan een bouwer <b>tikken</b> als niemand kijkt: die is af en kijkt mee vanuit de zeppelin. Wie uitgestemd wordt, ook.</p>
                   <p style={{ margin: "0 0 8px" }}>Zie je iets verdachts? Druk op 🚨 en stem. Bedrieger uitgestemd of alle taken klaar = bouwers winnen. Tijd om of twee keer verkeerd gestemd = bedrieger wint. Elk goed antwoord = 10 punten, punten worden munten.</p>
                 </>
               )}
@@ -487,7 +487,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
               // 🕵️ vaste tik-knop rechtsonder (rechterduim), altijd zichtbaar: grijs mét reden, rood als het mag.
               // Voorheen stond de knop alleen in de rij onderin zodra het mocht — op een telefoon onder de joystick, en zonder uitleg waarom hij ontbrak.
               const mag = !!doelTik;
-              const hint = mag ? "" : !tikInfo || !tikInfo.doel || tikInfo.reden === "ver" ? "🕵️ Zoek een bouwer die alleen is" : tikInfo.reden === "ogen" ? `👀 ${tikInfo.kijker ? tikInfo.kijker.naam : "Iemand"} kijkt mee — wacht tot ${tikInfo.doel.naam} alleen is` : tikInfo.reden === "dichterbij" ? `🏃 Ga dichter naar ${tikInfo.doel.naam}` : "🕵️ Zoek een bouwer die alleen is";
+              const hint = mag ? "" : !tikInfo || !tikInfo.doel || tikInfo.reden === "ver" ? "🕵️ Zoek een bouwer die alleen is" : tikInfo.reden === "ogen" ? `👀 ${tikInfo.kijker ? tikInfo.kijker.naam : "Iemand"} kijkt mee — wacht tot ${tikInfo.doel.naam} alleen is` : tikInfo.reden === "dichterbij" ? `🏃 Ga dichter bij ${tikInfo.doel.naam} staan` : "🕵️ Zoek een bouwer die alleen is";
               return (
                 <div style={{ position: "absolute", right: 14, bottom: "calc(150px + env(safe-area-inset-bottom))", display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 6, pointerEvents: "none" }}>
                   {!mag && <div style={{ background: "rgba(20,28,40,.85)", color: "#fff", borderRadius: 999, padding: "6px 12px", font: "800 12.5px system-ui", maxWidth: 230, textAlign: "right" }}>{hint}</div>}
@@ -547,7 +547,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
               <div style={{ display: "grid", gap: 6 }}>
                 {actieveSpelers(st).filter((s) => s.id !== mijnId).map((s) => (
                   <button key={s.id} disabled={isAf(mij) || st.vergadering.stemmen[mijnId] !== undefined} onClick={() => stemOp(s.id, "👀")} style={{ pointerEvents: "auto", textAlign: "left", border: "2px solid " + (st.vergadering.stemmen[mijnId] === s.id ? "#b0332a" : "#d7dee8"), borderRadius: 12, padding: "9px 12px", font: "700 15px system-ui", background: st.vergadering.stemmen[mijnId] === s.id ? "#f8cfcf" : "#fff", color: "#1c2840", cursor: "pointer" }}>
-                    {s.bot ? "" : "👤 "}{s.naam}{s.bevroren > 0 ? " ❄️" : ""}{s.id === mij.zagTik ? " · 👀 stond dichtbij toen iemand af ging" : ""}
+                    {s.bot ? "" : "👤 "}{s.naam}{s.bevroren > 0 ? " ❄️" : ""}{s.id === mij.zagTik ? " · 👀 stond dichtbij toen iemand afging" : ""}
                   </button>
                 ))}
                 <button disabled={isAf(mij) || st.vergadering.stemmen[mijnId] !== undefined} onClick={() => stemOp(null, "🤷")} style={{ ...KNOP_GRIJS, justifySelf: "start" }}>🤷 Ik weet het niet</button>

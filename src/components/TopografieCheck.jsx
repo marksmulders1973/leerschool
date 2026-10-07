@@ -159,7 +159,7 @@ export default function TopografieCheck() {
           <p style={{ margin: "0 0 12px", fontSize: 14.5, color: C.zacht, lineHeight: 1.5 }}>
             {perfect
               ? "Wil je 10 nieuwe oefenvragen mét uitleg om scherp te blijven? Vul je e-mail in — je krijgt ze meteen toegestuurd."
-              : <>Wil je de <b>{foutIds.length} {foutIds.length === 1 ? "vraag" : "vragen"}</b> waar het misging — aangevuld tot 10 — mét uitleg in je mail? Vul je (ouder-)e-mail in.</>}
+              : <>Wil je de <b>{foutIds.length} {foutIds.length === 1 ? "vraag" : "vragen"}</b> waar het misging — aangevuld tot 10 — mét uitleg in je mail? Vul het e-mailadres van een ouder of verzorger in.</>}
           </p>
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
             <input

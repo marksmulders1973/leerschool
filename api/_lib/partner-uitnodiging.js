@@ -73,7 +73,7 @@ export async function handlePartnerUitnodiging(req, res) {
     <div style="font-size:22px;font-weight:800;color:#fff;margin-bottom:6px;">Leerkwartier</div>
     <div style="font-size:13px;color:#69f0ae;font-weight:700;margin-bottom:20px;">Een kwartier per dag leren, een leven lang slimmer.</div>
     <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 14px;"><strong>${esc(ouderEmail)}</strong> gebruikt Leerkwartier om ${esc(namen)} te helpen oefenen voor school, en wil dat jij het wekelijkse rapport ook krijgt.</p>
-    <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 22px;">Elke maandag één mail: wat er geoefend is, wat al goed gaat en wat aandacht verdient. Wil je meelezen? Tik dan op de knop. Doe je niets, dan krijg je verder geen mail van ons.</p>
+    <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 22px;">Elke vrijdag één mail: wat er geoefend is, wat al goed gaat en wat aandacht verdient. Wil je meelezen? Tik dan op de knop. Doe je niets, dan krijg je verder geen mail van ons.</p>
     <a href="${esc(bevestig)}" style="display:block;text-align:center;background:linear-gradient(135deg,#00C853,#00a846);color:#fff;text-decoration:none;font-weight:800;font-size:16px;padding:14px;border-radius:12px;margin-bottom:22px;">✅ Ja, ik lees mee</a>
     ${mailTaglineHtml()}
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Je kreeg deze mail omdat ${esc(ouderEmail)} jouw adres invulde op leerkwartier.app. Dit is de enige mail zonder jouw bevestiging.</p>

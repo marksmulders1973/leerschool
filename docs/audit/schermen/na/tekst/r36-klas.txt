@@ -1,0 +1,24 @@
+# Route /klas (vers apparaat)
+# http://localhost:4174/klas
+Spring naar hoofdinhoud
+🏫 Voor de klas · groep 7
+Stop ✕
+Welke groep?
+groep 6
+groep 7
+groep 8
+5 vragen voor groep 7. Tik je antwoord. Fout? Dan krijg je uitleg.
+Vraag 1 van 5 · Rekenen
+Welk getal is het grootst?
+0,45
+0,5
+0,09
+0,4
+🚩 Klopt er iets niet?
+🙋 Met de hele klas tegelijk? Kinderen houden een A-, B-, C- of D-kaartje omhoog, jij telt, en je ziet meteen hoeveel procent het goed had. Klassikaal met kaartjes →
+👩‍🏫 Juf of meester? Wil je zien hoe je klas het deed? Zet een klascode: dan oefent iedereen dezelfde lijst en zie jij per leerling wat goed ging. Klascode maken →
+🌍 Nieuwkomer in je klas? Er is een eigen startpunt met voorlezen en steun in zes talen. Naar het startpunt →
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244

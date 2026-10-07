@@ -93,7 +93,7 @@ export default function BegrijpendLezenLadder({ onBack, onHome, onNaarTeksten })
             <span style={caretStyle} aria-hidden="true">▼</span>
           </div>
 
-          <label style={labelStyle}>Hoe lang wil je beginnen?</label>
+          <label style={labelStyle}>Met hoeveel tekst wil je beginnen?</label>
           <div style={{ position: "relative", marginBottom: 8 }}>
             <select value={startNiveau} onChange={(e) => setStartNiveau(Number(e.target.value))} style={selectStyle} aria-label="Startlengte">
               {LADDER_NIVEAUS.map((n) => (

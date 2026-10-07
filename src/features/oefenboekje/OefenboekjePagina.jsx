@@ -357,7 +357,7 @@ export default function OefenboekjePagina({ setPage }) {
           {/* Antwoordblad */}
           <div className="boekje-pagina" style={vel}>
             <h3 style={kop}>✅ Antwoorden</h3>
-            <div style={{ fontSize: 13, color: "#777", marginBottom: 12 }}>Voor de ouder/begeleider — kijk samen na.</div>
+            <div style={{ fontSize: 13, color: "#777", marginBottom: 12 }}>Voor de ouder of verzorger — kijk samen na.</div>
             {items.map((it, i) => (
               <div key={i} style={{ marginBottom: 10, fontSize: 14.5, color: "#222", lineHeight: 1.5 }}>
                 <b>{i + 1}. {LETTERS[it.goedIdx]} — {it.goedTekst}</b>

@@ -520,7 +520,7 @@ export default function OefenpakketPage({ setPage } = {}) {
 
         {/* Ouder-instructiepagina */}
         <Sheet>
-          <SectieKop emoji="👪" label="Voor de ouder — zo gebruik je dit werkboek" />
+          <SectieKop emoji="👪" label="Voor thuis — zo gebruik je dit werkboek" />
           <Alinea titel="Wat is de Doorstroomtoets?">
             De Doorstroomtoets (sinds 2024 — vroeger de Eindtoets) wordt
             gemaakt in groep 8, van eind januari tot half februari (in 2027:

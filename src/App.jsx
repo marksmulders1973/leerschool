@@ -1110,7 +1110,7 @@ export default function App() {
               questions = shuffle(poolRows.map(poolRowToQuestion)).slice(0, poolCount);
             }
             if (!questions?.length && hasTopic && !isOffline) {
-              alert(`❌ Kon geen vragen maken over "${quiz.topic}".\n\nFoutmelding: ${err.message}\n\nControleer of de API key nog actief is in het Vercel dashboard.`);
+              alert(`❌ Kon geen vragen maken over "${quiz.topic}".\n\nFoutmelding: ${err.message}\n\nProbeer het zo nog eens.`);
               return;
             }
             console.warn("AI fout, terugval op standaardvragen:", err.message);
@@ -1998,7 +1998,7 @@ export default function App() {
               } catch (err) {
                 setLoading(false);
                 if (abortControllerRef.current?.signal.aborted) return;
-                alert(`❌ Kon geen vragen genereren.\n\nFoutmelding: ${err.message}\n\nControleer of de API key nog actief is in het Vercel dashboard.`);
+                alert(`❌ Kon geen vragen genereren.\n\nFoutmelding: ${err.message}\n\nProbeer het zo nog eens.`);
                 return;
               }
             }
@@ -2786,7 +2786,7 @@ export default function App() {
               Top — je kwartier zit erop!
             </div>
             <div style={{ fontSize: 12, opacity: 0.85, marginTop: 2 }}>
-              {KWARTIER_TARGET_MIN} minuten geoefend — je verdiende 🪙 park tokens! Klaar voor vandaag, of even naar je park?
+              {KWARTIER_TARGET_MIN} minuten geoefend — je verdiende 🪙 munten voor je park! Klaar voor vandaag, of even naar je park?
             </div>
           </div>
         </div>

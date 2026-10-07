@@ -36,7 +36,7 @@ bèta
         <p style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 14, lineHeight: 1.6, marginTop: 6 }}>
           Familie is het pakket voor thuis: je ziet hoe je kind ervoor staat en krijgt elke vrijdag een weekrapport.
           Tot 1 januari 2027 is alles gratis, ook Familie, dus probeer het gerust. Daarna kost Familie{" "}
-          <b>€ 39 per jaar voor het hele gezin.</b> Oefenen zelf blijft gratis, gegarandeerd t/m 2031.
+          <b>€ 39 voor 12 maanden, voor het hele gezin</b> — één keer betalen, stopt vanzelf. Oefenen zelf blijft gratis, gegarandeerd t/m 2031.
         </p>
         <div style={{ marginBottom: 12 }}>
           <FamilieAfsluiten plek="familiehub" variant="knop" />
@@ -94,7 +94,7 @@ bèta
         </div>
 
         <div style={{ marginTop: 20, fontSize: 12, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
-          ✨ Bèta — gratis om uit te proberen. We verbeteren dit nog; straks onderdeel van het Familie-pakket.
+          ✨ Bèta — gratis om uit te proberen. We verbeteren dit nog.
         </div>
         <FamilieAfsluiten plek="familiehub-onder" variant="regel" style={{ marginTop: 14 }} />
       </div>

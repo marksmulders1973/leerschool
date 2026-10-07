@@ -1,0 +1,34 @@
+# Route /spelling (vers apparaat)
+# http://localhost:4173/spelling
+Spring naar hoofdinhoud
+←
+Spelling
+Groep 3–8
+🏠
+Voortgang
+0 / 3 beheerst
+⬜ Nog niet geoefend
+🟧 Bezig
+🟩 Beheerst ≥70%
+✍️
+Werkwoorden & dt
+Dt-regels, werkwoordvormen
+📚
+Meervoud
+Meervoudsvorming (katten, rozen, muizen)
+🔡
+Spelling & woorden
+Hoofdletters, moeilijke woorden
+🔀 Mix — alle categorieën door elkaar
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244
+🏠
+Home
+📚
+Leren
+Toets
+🎮
+Spelletje
+Mijn pagina

@@ -138,7 +138,7 @@ function IntroScherm({ email, naam, groep, onStart }) {
           <GratisBadge size="md" style={{ marginLeft: 10 }} />
         </h1>
         <p style={{ fontSize: 14, color: "rgba(255,255,255,0.6)", lineHeight: 1.6, margin: 0 }}>
-          Ontdek in ~15 minuten per onderwerp of jouw kind het <em>beheerst</em>,{" "}
+          Ontdek in ~15 minuten, per onderwerp, of jouw kind het <em>beheerst</em>,{" "}
           <em>bijna snapt</em> of nog <em>extra oefening</em> nodig heeft.
           Daarna krijg je per e-mail een persoonlijk weekschema.
         </p>

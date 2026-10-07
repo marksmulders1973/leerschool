@@ -1,0 +1,90 @@
+# Route /leerkracht/toets-maken (vers apparaat)
+# http://localhost:4173/leerkracht/toets-maken
+Spring naar hoofdinhoud
+←
+Nieuwe Toets
+Stap 1 van 4
+🏠
+🎯
+Zelf een onderwerp kiezen
+AI
+Elk onderwerp — ook buiten de standaard vakken
+→
+✖️
+Tafels oefenen
+Geef een specifieke tafel op als oefening
+→
+of kies een standaard vak
+🔢
+Rekenen
+📝
+Taal
+📐
+Wiskunde
+📖
+Nederlands
+🌍
+Aardrijkskunde
+🏛️
+Geschiedenis
+🔬
+Natuur & Techniek
+🧬
+Biologie
+⚛️
+Natuurkunde
+🧪
+Scheikunde
+💶
+Economie
+📈
+Bedrijfseconomie
+📕
+Engels
+📘
+Duits
+📗
+Frans
+🏛️
+Maatschappijleer
+🔭
+NaSk / Science
+📙
+Spaans
+🏺
+Grieks
+📜
+Latijn
+📊
+Wiskunde A
+📐
+Wiskunde B
+🌐
+Mens & Maatschappij
+🕊️
+Levensbeschouwing
+📊
+MAW
+🗺️
+Topografie
+🔡
+Spelling
+📖
+Begrijpend Lezen
+🚦
+Verkeer
+🎯
+Doorstroomtoets Oefenen
+Volgende →
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244
+🏠
+Home
+📚
+Leren
+Toets
+🎮
+Spelletje
+Mijn pagina

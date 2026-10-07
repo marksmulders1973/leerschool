@@ -201,7 +201,7 @@ export function StudentProgressView({ progress, userName, onBack, onHome }) {
 
   return (
     <div style={styles.page}>
-      <Header title="Mijn Voortgang 📊" subtitle="Tik op een vak voor details" onBack={onBack} onHome={onHome} />
+      <Header title="Mijn voortgang 📊" subtitle="Tik op een vak voor details" onBack={onBack} onHome={onHome} />
       <div style={styles.content}>
         {progress.length === 0 ? (
           <div style={styles.emptyState}>
@@ -583,7 +583,7 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                                   {isMe && (
                                     <div style={{ marginTop: 8 }}>
                                       <div style={{ fontSize: 10, fontWeight: 800, color: "#ffd700", fontFamily: "var(--font-display)", marginBottom: 4, textAlign: "center" }}>
-                                        🎉 Deel je super resultaat!
+                                        🎉 Deel je superresultaat!
                                       </div>
                                       <div style={{ display: "flex", gap: 5 }}>
                                         <a href={`https://wa.me/?text=${encodeURIComponent(myShareText)}`} target="_blank" rel="noopener noreferrer"
@@ -665,7 +665,7 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                       const subjectLabel = subj?.label || entry.subject;
                       const levelLabel = LEVELS.find((l) => l.id === entry.level)?.label || entry.level;
                       const timeTxt = entry.timeTaken ? ` in ${entry.timeTaken < 60 ? entry.timeTaken + "s" : Math.floor(entry.timeTaken / 60) + "m " + (entry.timeTaken % 60) + "s"}` : "";
-                      const myShareText = `🏆 Kijk mijn super resultaat op ${BRAND.name}!\n\n${i === 0 ? "Ik sta op #1!" : `Ik sta op #${i + 1}`} — ${subjectLabel} - ${levelLabel} - ${entry.percentage}%${timeTxt}\n\nKun jij mij verslaan? 💪\nhttps://${BRAND.domain}`;
+                      const myShareText = `🏆 Bekijk mijn superresultaat op ${BRAND.name}!\n\n${i === 0 ? "Ik sta op #1!" : `Ik sta op #${i + 1}`} — ${subjectLabel} - ${levelLabel} - ${entry.percentage}%${timeTxt}\n\nKun jij mij verslaan? 💪\nhttps://${BRAND.domain}`;
                       const challengeShareText = `Kun jij ${entry.player} verslaan op ${BRAND.name}?\n\n${entry.player} staat #${i + 1}: ${subjectLabel} - ${levelLabel} - ${entry.percentage}%${timeTxt}\n\nDoe de uitdaging!\nhttps://${BRAND.domain}`;
                       const shareText = isMe ? myShareText : challengeShareText;
                       return (
@@ -696,7 +696,7 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                           {isMe && (
                             <div style={{ marginTop: 4 }}>
                               <div style={{ fontSize: 9, fontWeight: 800, color: "#ffd700", fontFamily: "var(--font-display)", marginBottom: 3, textAlign: "center" }}>
-                                🎉 Deel je super resultaat!
+                                🎉 Deel je superresultaat!
                               </div>
                               <div style={{ display: "flex", gap: 4 }}>
                                 <a href={`https://wa.me/?text=${encodeURIComponent(myShareText)}`} target="_blank" rel="noopener noreferrer"
@@ -777,7 +777,7 @@ async function deelKampioenKaart({ playerName, subjectIcon, subjectLabel, levelL
     // KAMPIOEN titel
     ctx.font = "bold 56px Arial, sans-serif";
     ctx.fillStyle = "#ffd700";
-    ctx.fillText("STUDIEBOL KAMPIOEN", W / 2, 310);
+    ctx.fillText("LEERKWARTIER KAMPIOEN", W / 2, 310);
 
     // Periode
     ctx.font = "34px Arial, sans-serif";
@@ -1367,7 +1367,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                   {i === 0 && !isMe && canChallenge && (
                     <div style={{ marginTop: 12, padding: "12px 14px", borderRadius: 10, background: "rgba(255,215,0,0.08)", border: "1px solid rgba(255,215,0,0.2)" }}>
                       <div style={{ fontSize: 11, color: "#aaa", marginBottom: 8 }}>
-                        {activePeriod === "jaar" ? "👑 Kroon dit jaar — kan jij dit verslaan?" : `🔥 Toppositie ${current.label.toLowerCase()} — kan jij dit verslaan?`}
+                        {activePeriod === "jaar" ? "👑 Kroon dit jaar — kun jij dit verslaan?" : `🔥 Toppositie ${current.label.toLowerCase()} — kun jij dit verslaan?`}
                       </div>
                       <button onClick={() => onChallenge({ subject: entry.subject, level: entry.level, topic: null }, hofEntry.questions)}
                         style={{ width: "100%", padding: "7px 10px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "var(--font-display)", fontSize: 11, fontWeight: 700, cursor: "pointer" }}>
@@ -1388,7 +1388,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                               {"⭐".repeat(Math.min(k.aantal, 10))} {k.aantal} felicitatie{k.aantal === 1 ? "" : "s"} ontvangen
                             </div>
                             <div style={{ fontSize: 11, color: "rgba(255,255,255,0.6)", marginTop: 2 }}>
-                              {k.gevers.slice(0, 5).join(", ")}{k.gevers.length > 5 ? ` vinden +${k.gevers.length - 5} anderen` : ""} {k.aantal === 1 ? "vindt" : "vinden"} dat je het goed hebt gedaan!
+                              {k.gevers.slice(0, 5).join(", ")}{k.gevers.length > 5 ? ` en ${k.gevers.length - 5} anderen` : ""} {k.aantal === 1 ? "vindt" : "vinden"} dat je het goed hebt gedaan!
                             </div>
                           </div>
                         );

@@ -78,7 +78,7 @@ class TeaserErrorBoundary extends Component {
 // leren, rekenen/taal-onderwerpen die Toets-ouder herkent.
 const TICKER_ITEMS = [
   { icon: "⏱", text: "Elk kwartier slimmer" },
-  { icon: <DoorstroomtoetsLogo size={15} />, text: "Oefenen voor de eindtoets (groep 6-8)" },
+  { icon: <DoorstroomtoetsLogo size={15} />, text: "Oefenen voor de Doorstroomtoets (groep 6-8)" },
   { icon: "📅", text: "15 minuten per dag is genoeg" },
   { icon: "🧠", text: "Een rustige bijlesdocent in je broekzak" },
   { icon: "📖", text: "Begrijpend lezen groep 5 t/m 8" },
@@ -94,7 +94,7 @@ const TICKER_ITEMS = [
 // (showOnboarding default false). Examen/scorebord-jargon paste niet bij Toets-ouder ICP.
 // Stappen behouden voor mogelijke toekomstige rondleiding-knop.
 const ONBOARDING_STEPS = [
-  { emoji: "📚", title: "Welkom bij Leerkwartier", desc: "Een rustige bijlesdocent in je broekzak. 15 minuten per dag leren, een leven lang slimmer." },
+  { emoji: "📚", title: "Welkom bij Leerkwartier", desc: "Een rustige bijlesdocent in je broekzak. Een kwartier per dag leren, een leven lang slimmer." },
 ];
 
 // Probeer-meteen-een-vraag-kaart op de home (Mark 2026-06-14, voorstel 3 uit
@@ -609,7 +609,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               color: "rgba(255,255,255,0.8)", marginBottom: 6,
             }}>
               {/* Alleen het oortje; de uitleg staat lager bij "Wat is Leerkwartier?" (Mark 30 sep: logo, slogan, code, zoekbalk, Mijn pagina). */}
-              <VoorleesBlok tekst={`${BRAND.slogan}. Gratis oefenen voor de Doorstroomtoets en de VMBO-examens, met uitleg op drie niveaus. Vul een code in, zoek wat je wilt oefenen, of ga naar Mijn pagina.`} accent="#ffd54f" />
+              <VoorleesBlok tekst={`${BRAND.slogan} Gratis oefenen voor de Doorstroomtoets en de VMBO-examens, met uitleg op drie niveaus. Vul een code in, zoek wat je wilt oefenen, of ga naar Mijn pagina.`} accent="#ffd54f" />
             </div>
           </div>
         )}
@@ -800,7 +800,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   {ins.steps.map((s, i) => <li key={i} style={{ marginBottom: 4 }}>{s}</li>)}
                 </ol>
                 <p style={{ fontSize: 12, color: "var(--color-text-muted)", margin: "0 0 14px" }}>
-                  Daarna kun je {BRAND.name} openen als een echte app, ook offline. Browser detected: <strong style={{ color: "#00d4ff" }}>{pwa.browser}</strong> op <strong style={{ color: "#00d4ff" }}>{pwa.platform}</strong>.
+                  Daarna kun je {BRAND.name} openen als een echte app, ook offline. Gevonden browser: <strong style={{ color: "#00d4ff" }}>{pwa.browser}</strong> op <strong style={{ color: "#00d4ff" }}>{pwa.platform}</strong>.
                 </p>
                 <div style={{ display: "flex", gap: 10 }}>
                   {pwa.canPromptNatively && (

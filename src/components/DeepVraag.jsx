@@ -247,7 +247,7 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad, actueelEerst = f
       {/* Denkprikkel of felicitatie */}
       {isFout && (
         <div style={{ fontSize: 14, color: "#ffcc80", background: "rgba(255,167,38,0.10)", border: "1px solid rgba(255,167,38,0.30)", borderRadius: 10, padding: "10px 14px", marginBottom: 14 }}>
-          💭 {vraag.wrongHints?.[gekozen] || "Bijna! Kijk nog eens goed naar de vraag."}
+          💭 {vraag.wrongHints?.[gekozen] || "Bijna! Kijk hieronder hoe het zit."}
         </div>
       )}
       {isGoed && (

@@ -1,0 +1,461 @@
+[
+ {
+  "bestand": "public/drukwerk/flyer-ALKMAAR2027.html",
+  "zoek": "U betaalt nooit iets.",
+  "vervang": "Er gaat nooit zomaar geld af.",
+  "reden": "Eenmalige partnerflyer. \"U betaalt nooit iets\" is een eeuwige gratis-belofte (botst met huisregel: nooit 'altijd gratis') en spreekt de zin ervoor (gratis t/m 31-12-2027) tegen; zelfde formule als de andere flyers.",
+  "ernst": 3,
+  "voor": "Gratis voor uw gezin, tot en met 31 december 2027. U betaalt nooit iets.",
+  "na": "Gratis voor uw gezin, tot en met 31 december 2027. Er gaat nooit zomaar geld af."
+ },
+ {
+  "bestand": "public/drukwerk/flyer-KINDERHULP2027.html",
+  "zoek": "U betaalt nooit iets.",
+  "vervang": "Er gaat nooit zomaar geld af.",
+  "reden": "Eenmalige partnerflyer. \"U betaalt nooit iets\" is een eeuwige gratis-belofte (botst met huisregel: nooit 'altijd gratis') en spreekt de zin ervoor (gratis t/m 31-12-2027) tegen; zelfde formule als de andere flyers.",
+  "ernst": 3,
+  "voor": "Gratis voor uw gezin, tot en met 31 december 2027. U betaalt nooit iets.",
+  "na": "Gratis voor uw gezin, tot en met 31 december 2027. Er gaat nooit zomaar geld af."
+ },
+ {
+  "bestand": "public/drukwerk/flyer-BREDA2027.html",
+  "zoek": "helpt als je kind vastloopt",
+  "vervang": "helpt als uw kind vastloopt",
+  "reden": "Sjabloon hulporganisaties-flyer (+bulk): hele flyer spreekt met \"u\", hier ineens \"je\".",
+  "ernst": 1,
+  "voor": "Een leermaatje dat helpt als je kind vastloopt",
+  "na": "Een leermaatje dat helpt als uw kind vastloopt"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-DONGEN2027-drukwerk.html",
+  "zoek": "helpt als je kind vastloopt",
+  "vervang": "helpt als uw kind vastloopt",
+  "reden": "Sjabloon hulporganisaties-flyer (+bulk): hele flyer spreekt met \"u\", hier ineens \"je\".",
+  "ernst": 1,
+  "voor": "Een leermaatje dat helpt als je kind vastloopt",
+  "na": "Een leermaatje dat helpt als uw kind vastloopt"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-DONGEN2027.html",
+  "zoek": "helpt als je kind vastloopt",
+  "vervang": "helpt als uw kind vastloopt",
+  "reden": "Sjabloon hulporganisaties-flyer (+bulk): hele flyer spreekt met \"u\", hier ineens \"je\".",
+  "ernst": 1,
+  "voor": "Een leermaatje dat helpt als je kind vastloopt",
+  "na": "Een leermaatje dat helpt als uw kind vastloopt"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-HUMANITAS2027.html",
+  "zoek": "helpt als je kind vastloopt",
+  "vervang": "helpt als uw kind vastloopt",
+  "reden": "Sjabloon hulporganisaties-flyer (+bulk): hele flyer spreekt met \"u\", hier ineens \"je\".",
+  "ernst": 1,
+  "voor": "Een leermaatje dat helpt als je kind vastloopt",
+  "na": "Een leermaatje dat helpt als uw kind vastloopt"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-ICHTHUS2027.html",
+  "zoek": "helpt als je kind vastloopt",
+  "vervang": "helpt als uw kind vastloopt",
+  "reden": "Sjabloon hulporganisaties-flyer (+bulk): hele flyer spreekt met \"u\", hier ineens \"je\".",
+  "ernst": 1,
+  "voor": "Een leermaatje dat helpt als je kind vastloopt",
+  "na": "Een leermaatje dat helpt als uw kind vastloopt"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-IMC2027.html",
+  "zoek": "helpt als je kind vastloopt",
+  "vervang": "helpt als uw kind vastloopt",
+  "reden": "Sjabloon hulporganisaties-flyer (+bulk): hele flyer spreekt met \"u\", hier ineens \"je\".",
+  "ernst": 1,
+  "voor": "Een leermaatje dat helpt als je kind vastloopt",
+  "na": "Een leermaatje dat helpt als uw kind vastloopt"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-JEF2027.html",
+  "zoek": "helpt als je kind vastloopt",
+  "vervang": "helpt als uw kind vastloopt",
+  "reden": "Sjabloon hulporganisaties-flyer (+bulk): hele flyer spreekt met \"u\", hier ineens \"je\".",
+  "ernst": 1,
+  "voor": "Een leermaatje dat helpt als je kind vastloopt",
+  "na": "Een leermaatje dat helpt als uw kind vastloopt"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-JINC2027.html",
+  "zoek": "helpt als je kind vastloopt",
+  "vervang": "helpt als uw kind vastloopt",
+  "reden": "Sjabloon hulporganisaties-flyer (+bulk): hele flyer spreekt met \"u\", hier ineens \"je\".",
+  "ernst": 1,
+  "voor": "Een leermaatje dat helpt als je kind vastloopt",
+  "na": "Een leermaatje dat helpt als uw kind vastloopt"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-KINDERZWERFBOEK2027.html",
+  "zoek": "helpt als je kind vastloopt",
+  "vervang": "helpt als uw kind vastloopt",
+  "reden": "Sjabloon hulporganisaties-flyer (+bulk): hele flyer spreekt met \"u\", hier ineens \"je\".",
+  "ernst": 1,
+  "voor": "Een leermaatje dat helpt als je kind vastloopt",
+  "na": "Een leermaatje dat helpt als uw kind vastloopt"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-LEUDAL2027.html",
+  "zoek": "helpt als je kind vastloopt",
+  "vervang": "helpt als uw kind vastloopt",
+  "reden": "Sjabloon hulporganisaties-flyer (+bulk): hele flyer spreekt met \"u\", hier ineens \"je\".",
+  "ernst": 1,
+  "voor": "Een leermaatje dat helpt als je kind vastloopt",
+  "na": "Een leermaatje dat helpt als uw kind vastloopt"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-OOIEVAAR2027.html",
+  "zoek": "helpt als je kind vastloopt",
+  "vervang": "helpt als uw kind vastloopt",
+  "reden": "Sjabloon hulporganisaties-flyer (+bulk): hele flyer spreekt met \"u\", hier ineens \"je\".",
+  "ernst": 1,
+  "voor": "Een leermaatje dat helpt als je kind vastloopt",
+  "na": "Een leermaatje dat helpt als uw kind vastloopt"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-ROTTERDAMPAS2027.html",
+  "zoek": "helpt als je kind vastloopt",
+  "vervang": "helpt als uw kind vastloopt",
+  "reden": "Sjabloon hulporganisaties-flyer (+bulk): hele flyer spreekt met \"u\", hier ineens \"je\".",
+  "ernst": 1,
+  "voor": "Een leermaatje dat helpt als je kind vastloopt",
+  "na": "Een leermaatje dat helpt als uw kind vastloopt"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-SAM2027.html",
+  "zoek": "helpt als je kind vastloopt",
+  "vervang": "helpt als uw kind vastloopt",
+  "reden": "Sjabloon hulporganisaties-flyer (+bulk): hele flyer spreekt met \"u\", hier ineens \"je\".",
+  "ernst": 1,
+  "voor": "Een leermaatje dat helpt als je kind vastloopt",
+  "na": "Een leermaatje dat helpt als uw kind vastloopt"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-VLUCHTELINGEN2027.html",
+  "zoek": "helpt als je kind vastloopt",
+  "vervang": "helpt als uw kind vastloopt",
+  "reden": "Sjabloon hulporganisaties-flyer (+bulk): hele flyer spreekt met \"u\", hier ineens \"je\".",
+  "ernst": 1,
+  "voor": "Een leermaatje dat helpt als je kind vastloopt",
+  "na": "Een leermaatje dat helpt als uw kind vastloopt"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-bulk.html",
+  "zoek": "helpt als je kind vastloopt",
+  "vervang": "helpt als uw kind vastloopt",
+  "reden": "Sjabloon hulporganisaties-flyer (+bulk): hele flyer spreekt met \"u\", hier ineens \"je\".",
+  "ernst": 1,
+  "voor": "Een leermaatje dat helpt als je kind vastloopt",
+  "na": "Een leermaatje dat helpt als uw kind vastloopt"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-BREDA2027.html",
+  "zoek": "<li>100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "vervang": "<li>Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "reden": "Sjabloon hulporganisaties-flyer: \"100% gratis in 2026\" is verouderd voor een volgende druk (het is al okt 2026) en vervangen door de vaste belofte uit de huisregels.",
+  "ernst": 3,
+  "voor": "100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens",
+  "na": "Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-DONGEN2027-drukwerk.html",
+  "zoek": "<li>100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "vervang": "<li>Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "reden": "Sjabloon hulporganisaties-flyer: \"100% gratis in 2026\" is verouderd voor een volgende druk (het is al okt 2026) en vervangen door de vaste belofte uit de huisregels.",
+  "ernst": 3,
+  "voor": "100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens",
+  "na": "Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-DONGEN2027.html",
+  "zoek": "<li>100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "vervang": "<li>Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "reden": "Sjabloon hulporganisaties-flyer: \"100% gratis in 2026\" is verouderd voor een volgende druk (het is al okt 2026) en vervangen door de vaste belofte uit de huisregels.",
+  "ernst": 3,
+  "voor": "100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens",
+  "na": "Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-HUMANITAS2027.html",
+  "zoek": "<li>100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "vervang": "<li>Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "reden": "Sjabloon hulporganisaties-flyer: \"100% gratis in 2026\" is verouderd voor een volgende druk (het is al okt 2026) en vervangen door de vaste belofte uit de huisregels.",
+  "ernst": 3,
+  "voor": "100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens",
+  "na": "Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-ICHTHUS2027.html",
+  "zoek": "<li>100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "vervang": "<li>Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "reden": "Sjabloon hulporganisaties-flyer: \"100% gratis in 2026\" is verouderd voor een volgende druk (het is al okt 2026) en vervangen door de vaste belofte uit de huisregels.",
+  "ernst": 3,
+  "voor": "100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens",
+  "na": "Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-IMC2027.html",
+  "zoek": "<li>100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "vervang": "<li>Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "reden": "Sjabloon hulporganisaties-flyer: \"100% gratis in 2026\" is verouderd voor een volgende druk (het is al okt 2026) en vervangen door de vaste belofte uit de huisregels.",
+  "ernst": 3,
+  "voor": "100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens",
+  "na": "Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-JEF2027.html",
+  "zoek": "<li>100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "vervang": "<li>Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "reden": "Sjabloon hulporganisaties-flyer: \"100% gratis in 2026\" is verouderd voor een volgende druk (het is al okt 2026) en vervangen door de vaste belofte uit de huisregels.",
+  "ernst": 3,
+  "voor": "100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens",
+  "na": "Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-JINC2027.html",
+  "zoek": "<li>100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "vervang": "<li>Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "reden": "Sjabloon hulporganisaties-flyer: \"100% gratis in 2026\" is verouderd voor een volgende druk (het is al okt 2026) en vervangen door de vaste belofte uit de huisregels.",
+  "ernst": 3,
+  "voor": "100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens",
+  "na": "Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-KINDERZWERFBOEK2027.html",
+  "zoek": "<li>100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "vervang": "<li>Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "reden": "Sjabloon hulporganisaties-flyer: \"100% gratis in 2026\" is verouderd voor een volgende druk (het is al okt 2026) en vervangen door de vaste belofte uit de huisregels.",
+  "ernst": 3,
+  "voor": "100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens",
+  "na": "Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-LEUDAL2027.html",
+  "zoek": "<li>100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "vervang": "<li>Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "reden": "Sjabloon hulporganisaties-flyer: \"100% gratis in 2026\" is verouderd voor een volgende druk (het is al okt 2026) en vervangen door de vaste belofte uit de huisregels.",
+  "ernst": 3,
+  "voor": "100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens",
+  "na": "Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-OOIEVAAR2027.html",
+  "zoek": "<li>100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "vervang": "<li>Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "reden": "Sjabloon hulporganisaties-flyer: \"100% gratis in 2026\" is verouderd voor een volgende druk (het is al okt 2026) en vervangen door de vaste belofte uit de huisregels.",
+  "ernst": 3,
+  "voor": "100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens",
+  "na": "Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-ROTTERDAMPAS2027.html",
+  "zoek": "<li>100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "vervang": "<li>Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "reden": "Sjabloon hulporganisaties-flyer: \"100% gratis in 2026\" is verouderd voor een volgende druk (het is al okt 2026) en vervangen door de vaste belofte uit de huisregels.",
+  "ernst": 3,
+  "voor": "100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens",
+  "na": "Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-SAM2027.html",
+  "zoek": "<li>100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "vervang": "<li>Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "reden": "Sjabloon hulporganisaties-flyer: \"100% gratis in 2026\" is verouderd voor een volgende druk (het is al okt 2026) en vervangen door de vaste belofte uit de huisregels.",
+  "ernst": 3,
+  "voor": "100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens",
+  "na": "Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens"
+ },
+ {
+  "bestand": "public/drukwerk/flyer-VLUCHTELINGEN2027.html",
+  "zoek": "<li>100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "vervang": "<li>Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens</li>",
+  "reden": "Sjabloon hulporganisaties-flyer: \"100% gratis in 2026\" is verouderd voor een volgende druk (het is al okt 2026) en vervangen door de vaste belofte uit de huisregels.",
+  "ernst": 3,
+  "voor": "100% gratis in 2026 — geen proefperiode, geen abonnement, geen betaalgegevens",
+  "na": "Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement, geen betaalgegevens"
+ },
+ {
+  "bestand": "public/drukwerk/folder-enschede.html",
+  "zoek": "<li>100% gratis in 2026 — geen proefperiode, geen abonnement</li>",
+  "vervang": "<li>Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement</li>",
+  "reden": "Eenmalige folder Enschede: \"100% gratis in 2026\" is verouderd voor een volgende druk; vaste belofte uit de huisregels.",
+  "ernst": 3,
+  "voor": "100% gratis in 2026 — geen proefperiode, geen abonnement",
+  "na": "Oefenen is gratis, gegarandeerd t/m 2031 — geen proefperiode, geen abonnement"
+ },
+ {
+  "bestand": "public/drukwerk/_template-flyer-b1.html",
+  "zoek": "<strong>oefen-toets</strong> maken",
+  "vervang": "<strong>oefentoets</strong> maken",
+  "reden": "Spelling: \"oefentoets\" is één woord (de nieuwere Buurtgezinnen-varianten hebben het al goed). Sjabloon.",
+  "ernst": 1,
+  "voor": "Een oefen-toets maken.",
+  "na": "Een oefentoets maken."
+ },
+ {
+  "bestand": "public/drukwerk/flyer-ALKMAAR2027.html",
+  "zoek": "<strong>oefen-toets</strong> maken",
+  "vervang": "<strong>oefentoets</strong> maken",
+  "reden": "Spelling: \"oefentoets\" is één woord (de nieuwere Buurtgezinnen-varianten hebben het al goed). Partnerflyer.",
+  "ernst": 1,
+  "voor": "Een oefen-toets maken.",
+  "na": "Een oefentoets maken."
+ },
+ {
+  "bestand": "public/drukwerk/flyer-BUURTGEZINNEN2027.template.html",
+  "zoek": "<strong>oefen-toets</strong> maken",
+  "vervang": "<strong>oefentoets</strong> maken",
+  "reden": "Spelling: \"oefentoets\" is één woord (de nieuwere Buurtgezinnen-varianten hebben het al goed). Sjabloon.",
+  "ernst": 1,
+  "voor": "Een oefen-toets maken.",
+  "na": "Een oefentoets maken."
+ },
+ {
+  "bestand": "public/drukwerk/flyer-HAARLEMMERMEER2027-DRUK.html",
+  "zoek": "<strong>oefen-toets</strong> maken",
+  "vervang": "<strong>oefentoets</strong> maken",
+  "reden": "Spelling: \"oefentoets\" is één woord (de nieuwere Buurtgezinnen-varianten hebben het al goed). Partnerflyer.",
+  "ernst": 1,
+  "voor": "Een oefen-toets maken.",
+  "na": "Een oefentoets maken."
+ },
+ {
+  "bestand": "public/drukwerk/flyer-HAARLEMMERMEER2027.html",
+  "zoek": "<strong>oefen-toets</strong> maken",
+  "vervang": "<strong>oefentoets</strong> maken",
+  "reden": "Spelling: \"oefentoets\" is één woord (de nieuwere Buurtgezinnen-varianten hebben het al goed). Partnerflyer.",
+  "ernst": 1,
+  "voor": "Een oefen-toets maken.",
+  "na": "Een oefentoets maken."
+ },
+ {
+  "bestand": "public/drukwerk/flyer-KINDERHULP2027.html",
+  "zoek": "<strong>oefen-toets</strong> maken",
+  "vervang": "<strong>oefentoets</strong> maken",
+  "reden": "Spelling: \"oefentoets\" is één woord (de nieuwere Buurtgezinnen-varianten hebben het al goed). Partnerflyer.",
+  "ernst": 1,
+  "voor": "Een oefen-toets maken.",
+  "na": "Een oefentoets maken."
+ },
+ {
+  "bestand": "public/drukwerk/flyer-SCHOOLSCOOL2027.html",
+  "zoek": "<strong>oefen-toets</strong> maken",
+  "vervang": "<strong>oefentoets</strong> maken",
+  "reden": "Spelling: \"oefentoets\" is één woord (de nieuwere Buurtgezinnen-varianten hebben het al goed). Partnerflyer.",
+  "ernst": 1,
+  "voor": "Een oefen-toets maken.",
+  "na": "Een oefentoets maken."
+ },
+ {
+  "bestand": "public/drukwerk/flyer-ZAANSTREEK2027.html",
+  "zoek": "<strong>oefen-toets</strong> maken",
+  "vervang": "<strong>oefentoets</strong> maken",
+  "reden": "Spelling: \"oefentoets\" is één woord (de nieuwere Buurtgezinnen-varianten hebben het al goed). Partnerflyer.",
+  "ernst": 1,
+  "voor": "Een oefen-toets maken.",
+  "na": "Een oefentoets maken."
+ },
+ {
+  "bestand": "public/drukwerk/poster-DONGEN2027-drukwerk.html",
+  "zoek": "<strong>oefen-toets</strong> die",
+  "vervang": "<strong>oefentoets</strong> die",
+  "reden": "Spelling: \"oefentoets\" is één woord. Partnerposter.",
+  "ernst": 1,
+  "voor": "Een oefen-toets die op de echte Doorstroomtoets lijkt.",
+  "na": "Een oefentoets die op de echte Doorstroomtoets lijkt."
+ },
+ {
+  "bestand": "public/drukwerk/poster-DONGEN2027.html",
+  "zoek": "<strong>oefen-toets</strong> die",
+  "vervang": "<strong>oefentoets</strong> die",
+  "reden": "Spelling: \"oefentoets\" is één woord. Partnerposter.",
+  "ernst": 1,
+  "voor": "Een oefen-toets die op de echte Doorstroomtoets lijkt.",
+  "na": "Een oefentoets die op de echte Doorstroomtoets lijkt."
+ },
+ {
+  "bestand": "public/drukwerk/poster-leerkwartier.html",
+  "zoek": "<strong>oefen-toets</strong> die",
+  "vervang": "<strong>oefentoets</strong> die",
+  "reden": "Spelling: \"oefentoets\" is één woord. Sjabloon-poster.",
+  "ernst": 1,
+  "voor": "Een oefen-toets die op de echte Doorstroomtoets lijkt.",
+  "na": "Een oefentoets die op de echte Doorstroomtoets lijkt."
+ },
+ {
+  "bestand": "public/drukwerk/juf-start-A4.html",
+  "zoek": "tot je het echt begrijpt",
+  "vervang": "tot de leerling het echt begrijpt",
+  "reden": "Juf-start A4 (sjabloon): zin begint over \"een leerling\" en de leerkracht wordt met \"u\" aangesproken; \"je\" verwijst nergens naar.",
+  "ernst": 2,
+  "voor": "Maakt een leerling een fout? Dan wordt de uitleg steeds simpeler, tot je het echt begrijpt.",
+  "na": "Maakt een leerling een fout? Dan wordt de uitleg steeds simpeler, tot de leerling het echt begrijpt."
+ },
+ {
+  "bestand": "public/drukwerk/juf-start-A4.html",
+  "zoek": "Dan zet u een klascode",
+  "vervang": "Dan maakt u een klascode aan",
+  "reden": "Juf-start A4: \"een klascode zetten\" loopt niet; de code krijgt u bij het klaarzetten.",
+  "ernst": 2,
+  "voor": "Wilt u daarna zien wie wat deed? Dan zet u een klascode (hieronder).",
+  "na": "Wilt u daarna zien wie wat deed? Dan maakt u een klascode aan (hieronder)."
+ },
+ {
+  "bestand": "public/drukwerk/nieuwkomers-thuisbrief.html",
+  "zoek": "of tik de code WELKOMNIEUWKOMER",
+  "vervang": "of typ de code WELKOMNIEUWKOMER",
+  "reden": "Nieuwkomers-thuisbrief (sjabloon): \"tik de code\" zonder \"in\" loopt niet; elders op het drukwerk staat steeds \"typ\".",
+  "ernst": 1,
+  "voor": "of tik de code WELKOMNIEUWKOMER",
+  "na": "of typ de code WELKOMNIEUWKOMER"
+ },
+ {
+  "bestand": "public/drukwerk/nieuwkomers-thuisbrief.html",
+  "zoek": "Free, guaranteed until 31 December 2028.",
+  "vervang": "Free, guaranteed through 2031.",
+  "reden": "Nieuwkomers-thuisbrief: Nederlandse tekst én NieuwkomersPage zeggen \"gegarandeerd t/m 2031\"; de vertaling zegt 2028.",
+  "ernst": 3,
+  "voor": "Free, guaranteed until 31 December 2028.",
+  "na": "Free, guaranteed through 2031."
+ },
+ {
+  "bestand": "public/drukwerk/nieuwkomers-thuisbrief.html",
+  "zoek": "31 Aralık 2028'e kadar garantili",
+  "vervang": "31 Aralık 2031'e kadar garantili",
+  "reden": "Nieuwkomers-thuisbrief: Turkse vertaling zegt 2028, Nederlandse tekst en app zeggen t/m 2031.",
+  "ernst": 3,
+  "voor": "Ücretsiz, 31 Aralık 2028'e kadar garantili.",
+  "na": "Ücretsiz, 31 Aralık 2031'e kadar garantili."
+ },
+ {
+  "bestand": "public/drukwerk/nieuwkomers-thuisbrief.html",
+  "zoek": "до 31 грудня 2028 року",
+  "vervang": "до 31 грудня 2031 року",
+  "reden": "Nieuwkomers-thuisbrief: Oekraïense vertaling zegt 2028, Nederlandse tekst en app zeggen t/m 2031.",
+  "ernst": 3,
+  "voor": "Безкоштовно, гарантовано до 31 грудня 2028 року.",
+  "na": "Безкоштовно, гарантовано до 31 грудня 2031 року."
+ },
+ {
+  "bestand": "public/drukwerk/nieuwkomers-thuisbrief.html",
+  "zoek": "٣١ ديسمبر ٢٠٢٨",
+  "vervang": "٣١ ديسمبر ٢٠٣١",
+  "reden": "Nieuwkomers-thuisbrief: Arabische vertaling zegt 2028, Nederlandse tekst en app zeggen t/m 2031.",
+  "ernst": 3,
+  "voor": "مجاني ومضمون حتى ٣١ ديسمبر ٢٠٢٨.",
+  "na": "مجاني ومضمون حتى ٣١ ديسمبر ٢٠٣١."
+ },
+ {
+  "bestand": "public/drukwerk/flyer-bulk.html",
+  "zoek": "<div class=\"scan\">Scan met de camera<br />van je telefoon</div>",
+  "vervang": "<div class=\"scan\">Scan met de camera<br />van uw telefoon</div>",
+  "reden": "Bulk-flyer (sjabloon): rest van de flyer spreekt met \"u\".",
+  "ernst": 1,
+  "voor": "Scan met de camera van je telefoon",
+  "na": "Scan met de camera van uw telefoon"
+ }
+]

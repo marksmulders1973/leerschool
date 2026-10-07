@@ -197,7 +197,7 @@ export async function dailyQuotaCheck(endpoint, opts = {}) {
       console.warn(`[quota] LIMIT HIT ${endpoint}: ${count}/${limit}`);
       return new Response(
         JSON.stringify({
-          error: opts.bericht || "Daglimit AI-tutor bereikt — probeer morgen opnieuw of upgrade naar premium.",
+          error: opts.bericht || "Daglimiet AI-hulp bereikt — probeer het morgen opnieuw.",
           retryAfterHours: 24,
           ...(opts.rem ? { rem: opts.rem } : {}),
         }),

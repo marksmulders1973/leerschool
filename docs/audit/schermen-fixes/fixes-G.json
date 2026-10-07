@@ -1,0 +1,227 @@
+[
+  {
+    "bestand": "api/_guard.js",
+    "zoek": "Daglimit AI-tutor bereikt — probeer morgen opnieuw of upgrade naar premium.",
+    "vervang": "Daglimiet AI-hulp bereikt — probeer het morgen opnieuw.",
+    "reden": "'Premium' bestaat niet (huisregel prijs), er is geen upgrade; spelfout 'Daglimit'",
+    "ernst": 3,
+    "voor": "Daglimit AI-tutor bereikt — probeer morgen opnieuw of upgrade naar premium.",
+    "na": "Daglimiet AI-hulp bereikt — probeer het morgen opnieuw."
+  },
+  {
+    "bestand": "api/_lib/bevestig.js",
+    "zoek": "Vanaf nu krijg jij elke maandag óók het weekrapport",
+    "vervang": "Vanaf nu krijg jij elke vrijdag óók het weekrapport",
+    "reden": "Weekrapport gaat sinds 30 sep 2026 op vrijdag (workflow ouder-weekrapport.yml), niet maandag",
+    "ernst": 3,
+    "voor": "Vanaf nu krijg jij elke maandag óók het weekrapport van Sam: …",
+    "na": "Vanaf nu krijg jij elke vrijdag óók het weekrapport van Sam: …"
+  },
+  {
+    "bestand": "api/_lib/partner-uitnodiging.js",
+    "zoek": "Elke maandag één mail: wat er geoefend is",
+    "vervang": "Elke vrijdag één mail: wat er geoefend is",
+    "reden": "Weekrapport gaat sinds 30 sep 2026 op vrijdag, niet maandag",
+    "ernst": 3,
+    "voor": "Elke maandag één mail: wat er geoefend is, …",
+    "na": "Elke vrijdag één mail: wat er geoefend is, …"
+  },
+  {
+    "bestand": "api/send-ouder-rapport.js",
+    "zoek": "de weekmail per kind uit (📩-knopje bij je kind)",
+    "vervang": "de weekmail per kind uit (knopje 'weekrapport aan' bij je kind)",
+    "reden": "Er bestaat geen 📩-knopje; de knop in OuderInzicht heet 'weekrapport aan/uit'",
+    "ernst": 3,
+    "voor": "Zet in het ouder-dashboard de weekmail per kind uit (📩-knopje bij je kind)",
+    "na": "Zet in het ouder-dashboard de weekmail per kind uit (knopje 'weekrapport aan' bij je kind)"
+  },
+  {
+    "bestand": "api/send-ouder-rapport.js",
+    "zoek": "Deel jouw persoonlijke link met een ouder uit de klas. Zodra",
+    "vervang": "Deel jouw persoonlijke link met een ander gezin uit de klas. Zodra",
+    "reden": "Nooit alléén 'ouder'; sluit aan op kop 'Geef een ander gezin…'",
+    "ernst": 2,
+    "voor": "Deel jouw persoonlijke link met een ouder uit de klas.",
+    "na": "Deel jouw persoonlijke link met een ander gezin uit de klas."
+  },
+  {
+    "bestand": "api/send-ouder-rapport.js",
+    "zoek": "gratis tot augustus 2027 (straks ± € 39 per jaar).</p>",
+    "vervang": "gratis tot augustus 2027 (straks € 39 voor 12 maanden).</p>",
+    "reden": "Prijs is exact € 39 voor 12 maanden, eenmalig; 'per jaar' en '±' suggereren een doorlopend/onzeker abonnement",
+    "ernst": 2,
+    "voor": "(straks ± € 39 per jaar)",
+    "na": "(straks € 39 voor 12 maanden)"
+  },
+  {
+    "bestand": "api/send-ouder-rapport.js",
+    "zoek": "💚 Ken je een ouder uit de klas die dit ook zou willen? Leerkwartier is gratis — stuur",
+    "vervang": "💚 Ken je een ander gezin uit de klas dat dit ook zou willen? Oefenen bij Leerkwartier is gratis — stuur",
+    "reden": "Nooit alléén 'ouder'; 'Leerkwartier is gratis' te breed (Familie kost € 39) → oefenen is gratis",
+    "ernst": 2,
+    "voor": "Ken je een ouder uit de klas die dit ook zou willen? Leerkwartier is gratis — stuur leerkwartier.app gerust door.",
+    "na": "Ken je een ander gezin uit de klas dat dit ook zou willen? Oefenen bij Leerkwartier is gratis — stuur leerkwartier.app gerust door."
+  },
+  {
+    "bestand": "api/send-ouder-rapport.js",
+    "zoek": "`Ken je een ouder uit de klas die dit ook zou willen? Leerkwartier is gratis: https://leerkwartier.app`",
+    "vervang": "`Ken je een ander gezin uit de klas dat dit ook zou willen? Oefenen bij Leerkwartier is gratis: https://leerkwartier.app`",
+    "reden": "Idem, tekstversie van de mail",
+    "ernst": 2,
+    "voor": "Ken je een ouder uit de klas die dit ook zou willen? Leerkwartier is gratis: https://leerkwartier.app",
+    "na": "Ken je een ander gezin uit de klas dat dit ook zou willen? Oefenen bij Leerkwartier is gratis: https://leerkwartier.app"
+  },
+  {
+    "bestand": "api/kwartiercheck-mail.js",
+    "zoek": "Deel jouw persoonlijke link met een ouder uit de klas: zodra",
+    "vervang": "Deel jouw persoonlijke link met een ander gezin uit de klas: zodra",
+    "reden": "Nooit alléén 'ouder'; sluit aan op kop 'Geef een ander gezin…'",
+    "ernst": 2,
+    "voor": "Deel jouw persoonlijke link met een ouder uit de klas: …",
+    "na": "Deel jouw persoonlijke link met een ander gezin uit de klas: …"
+  },
+  {
+    "bestand": "api/kwartiercheck-mail.js",
+    "zoek": "gratis tot augustus 2027 (straks ± € 39 per jaar).",
+    "vervang": "gratis tot augustus 2027 (straks € 39 voor 12 maanden).",
+    "reden": "Prijs is exact € 39 voor 12 maanden, eenmalig; niet 'per jaar' of '±'",
+    "ernst": 2,
+    "voor": "(straks ± € 39 per jaar)",
+    "na": "(straks € 39 voor 12 maanden)"
+  },
+  {
+    "bestand": "api/send-doorstroom-countdown.js",
+    "zoek": "Leerkwartier blijft gewoon gratis te gebruiken.",
+    "vervang": "Oefenen bij Leerkwartier blijft gratis, gegarandeerd t/m 2031.",
+    "reden": "Onbegrensde gratis-belofte botst met huisregel ('oefenen gratis, gegarandeerd t/m 2031')",
+    "ernst": 3,
+    "voor": "Leerkwartier blijft gewoon gratis te gebruiken.",
+    "na": "Oefenen bij Leerkwartier blijft gratis, gegarandeerd t/m 2031."
+  },
+  {
+    "bestand": "api/send-doorstroom-countdown.js",
+    "zoek": "const hoi = naam ? `Hoi ${naam}-ouder,` : \"Hoi,\";",
+    "vervang": "const hoi = naam ? `Hoi ouder of verzorger van ${naam},` : \"Hoi,\";",
+    "reden": "Lezer nooit alléén als 'ouder' aanspreken",
+    "ernst": 3,
+    "voor": "Hoi Sam-ouder,",
+    "na": "Hoi ouder of verzorger van Sam,"
+  },
+  {
+    "bestand": "api/send-weekly-lesmateriaal.js",
+    "zoek": "const hoi = naam ? `Hoi ${naam}-ouder,` : \"Hoi,\";",
+    "vervang": "const hoi = naam ? `Hoi ouder of verzorger van ${naam},` : \"Hoi,\";",
+    "reden": "Lezer nooit alléén als 'ouder' aanspreken",
+    "ernst": 3,
+    "voor": "Hoi Sam-ouder,",
+    "na": "Hoi ouder of verzorger van Sam,"
+  },
+  {
+    "bestand": "api/send-weekly-lesmateriaal.js",
+    "zoek": "${naam ? `Hoi ${naam}-ouder,` : \"Hoi,\"}",
+    "vervang": "${naam ? `Hoi ouder of verzorger van ${naam},` : \"Hoi,\"}",
+    "reden": "Idem, tekstversie van de mail",
+    "ernst": 3,
+    "voor": "Hoi Sam-ouder,",
+    "na": "Hoi ouder of verzorger van Sam,"
+  },
+  {
+    "bestand": "api/send-oefenblad.js",
+    "zoek": "✅ Antwoorden + uitleg — voor de ouder</div>",
+    "vervang": "✅ Antwoorden + uitleg — voor de ouder of verzorger</div>",
+    "reden": "Nooit alléén 'ouder' (weekpakket zegt al 'ouder of verzorger')",
+    "ernst": 2,
+    "voor": "Antwoorden + uitleg — voor de ouder",
+    "na": "Antwoorden + uitleg — voor de ouder of verzorger"
+  },
+  {
+    "bestand": "api/send-oefenblad.js",
+    "zoek": "ANTWOORDEN + UITLEG (voor de ouder):",
+    "vervang": "ANTWOORDEN + UITLEG (voor de ouder of verzorger):",
+    "reden": "Idem, tekstversie",
+    "ernst": 2,
+    "voor": "ANTWOORDEN + UITLEG (voor de ouder):",
+    "na": "ANTWOORDEN + UITLEG (voor de ouder of verzorger):"
+  },
+  {
+    "bestand": "api/send-leesladder-pakket.js",
+    "zoek": "✅ Antwoordblad — voor de ouder (pas nakijken ná het maken)",
+    "vervang": "✅ Antwoordblad — voor de ouder of verzorger (pas nakijken ná het maken)",
+    "reden": "Nooit alléén 'ouder'",
+    "ernst": 2,
+    "voor": "Antwoordblad — voor de ouder (pas nakijken ná het maken)",
+    "na": "Antwoordblad — voor de ouder of verzorger (pas nakijken ná het maken)"
+  },
+  {
+    "bestand": "api/send-leesladder-pakket.js",
+    "zoek": "--- ANTWOORDBLAD (voor de ouder) ---",
+    "vervang": "--- ANTWOORDBLAD (voor de ouder of verzorger) ---",
+    "reden": "Idem, tekstversie",
+    "ernst": 2,
+    "voor": "--- ANTWOORDBLAD (voor de ouder) ---",
+    "na": "--- ANTWOORDBLAD (voor de ouder of verzorger) ---"
+  },
+  {
+    "bestand": "api/unsubscribe.js",
+    "zoek": "De ouder zelf blijft het gewoon ontvangen.",
+    "vervang": "Wie je uitnodigde, blijft het gewoon ontvangen.",
+    "reden": "Nooit alléén 'ouder' (kan ook verzorger zijn)",
+    "ernst": 2,
+    "voor": "De ouder zelf blijft het gewoon ontvangen.",
+    "na": "Wie je uitnodigde, blijft het gewoon ontvangen."
+  },
+  {
+    "bestand": "api/unsubscribe.js",
+    "zoek": "Wil je later toch weer meelezen? Dan kan de ouder je opnieuw uitnodigen.",
+    "vervang": "Wil je later toch weer meelezen? Vraag dan om een nieuwe uitnodiging.",
+    "reden": "Nooit alléén 'ouder'",
+    "ernst": 2,
+    "voor": "Wil je later toch weer meelezen? Dan kan de ouder je opnieuw uitnodigen.",
+    "na": "Wil je later toch weer meelezen? Vraag dan om een nieuwe uitnodiging."
+  },
+  {
+    "bestand": "api/unsubscribe.js",
+    "zoek": "of mail ons via de site.",
+    "vervang": "of mail ons op hallo@leerkwartier.app.",
+    "reden": "Contactadres expliciet noemen i.p.v. vaag 'via de site'",
+    "ernst": 2,
+    "voor": "…of mail ons via de site.",
+    "na": "…of mail ons op hallo@leerkwartier.app."
+  },
+  {
+    "bestand": "api/send-weekpakket-code.js",
+    "zoek": "blijft gewoon gratis; dit pakket is extra post voor abonnees.",
+    "vervang": "blijft gewoon gratis; dit pakket is extra post voor mail-abonnees.",
+    "reden": "'abonnees' klinkt als betaald abonnement; weekpakket-pagina zegt 'mail-abonnees'",
+    "ernst": 1,
+    "voor": "dit pakket is extra post voor abonnees.",
+    "na": "dit pakket is extra post voor mail-abonnees."
+  },
+  {
+    "bestand": "api/send-weekpakket-code.js",
+    "zoek": "blijft gratis; dit pakket is extra post voor abonnees.",
+    "vervang": "blijft gratis; dit pakket is extra post voor mail-abonnees.",
+    "reden": "Idem, tekstversie",
+    "ernst": 1,
+    "voor": "dit pakket is extra post voor abonnees.",
+    "na": "dit pakket is extra post voor mail-abonnees."
+  },
+  {
+    "bestand": "api/kind-overzicht-mail.js",
+    "zoek": "· top ${Number(v.beste) || 0}%",
+    "vervang": "· beste ${Number(v.beste) || 0}%",
+    "reden": "Engels 'top' → Nederlands 'beste'",
+    "ernst": 1,
+    "voor": "gem. 72% · top 90%",
+    "na": "gem. 72% · beste 90%"
+  },
+  {
+    "bestand": "api/buddy-chat.js",
+    "zoek": "praat er alsjeblieft over met je vader, moeder, juf of meester.",
+    "vervang": "praat er alsjeblieft over met je vader, moeder, verzorger, juf of meester.",
+    "reden": "Niet elk kind woont bij vader/moeder (huisregel ouder of verzorger)",
+    "ernst": 2,
+    "voor": "praat er alsjeblieft over met je vader, moeder, juf of meester.",
+    "na": "praat er alsjeblieft over met je vader, moeder, verzorger, juf of meester."
+  }
+]

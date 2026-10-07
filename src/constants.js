@@ -12,7 +12,7 @@ export const LAUNCH_PROMO_END = new Date("2027-01-01T00:00:00");
 // (drie losse bronnen: deze datum, PAYWALL_ACTIVE en de subscriptions-tabel).
 export const isLaunchPromoActive = () => !PAYWALL_ACTIVE || Date.now() < LAUNCH_PROMO_END.getTime();
 export const LAUNCH_PROMO_SHORT = "🎉 Dit jaar gratis wegens lancering";
-export const LAUNCH_PROMO_LONG = "Alle extra's (Familie én Pro) gratis t/m 31 december 2026 — geen betaling, gewoon proberen.";
+export const LAUNCH_PROMO_LONG = "Alle Familie-extra's gratis t/m 31 december 2026 — geen betaling, gewoon proberen.";
 
 // ─── Subjects & Levels ──────────────────────────────────────────
 export const SUBJECTS = [

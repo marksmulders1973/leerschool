@@ -1,0 +1,218 @@
+[
+  {
+    "bestand": "src/components/CitoPage.jsx",
+    "zoek": "De Doorstroomtoets (sinds 2024 — vroeger Doorstroomtoets) wordt",
+    "vervang": "De Doorstroomtoets (sinds 2024 — vroeger Cito-eindtoets) wordt",
+    "reden": "Zegt dat de Doorstroomtoets vroeger 'Doorstroomtoets' heette; oude naam is Cito-eindtoets (zoek-vervang-ongeluk)",
+    "ernst": 3,
+    "voor": "De Doorstroomtoets (sinds 2024 — vroeger Doorstroomtoets) wordt gemaakt in groep 8",
+    "na": "De Doorstroomtoets (sinds 2024 — vroeger Cito-eindtoets) wordt gemaakt in groep 8"
+  },
+  {
+    "bestand": "src/components/ExamensPage.jsx",
+    "zoek": "<strong style={{ color: C.text }}>Doorstroomtoets</strong> (vroeger\n              Doorstroomtoets) belangrijker.",
+    "vervang": "<strong style={{ color: C.text }}>Doorstroomtoets</strong> (vroeger\n              Cito-eindtoets) belangrijker.",
+    "reden": "Zelfde zoek-vervang-ongeluk: 'Doorstroomtoets (vroeger Doorstroomtoets)'",
+    "ernst": 3,
+    "voor": "Voor de basisschool is de Doorstroomtoets (vroeger Doorstroomtoets) belangrijker.",
+    "na": "Voor de basisschool is de Doorstroomtoets (vroeger Cito-eindtoets) belangrijker."
+  },
+  {
+    "bestand": "src/features/practice/ResultsPage.jsx",
+    "zoek": "CITO-SIMULATIE · RUWE INDICATIE (1 OEFENING)",
+    "vervang": "DOORSTROOMTOETS-SIMULATIE · RUWE INDICATIE (1 OEFENING)",
+    "reden": "Huisregel: 'Doorstroomtoets' i.p.v. 'Cito' in zichtbare tekst (zelfde banner in CitoLeerpadToets zegt al DOORSTROOMTOETS-SIMULATIE)",
+    "ernst": 3,
+    "voor": "CITO-SIMULATIE · RUWE INDICATIE (1 OEFENING)",
+    "na": "DOORSTROOMTOETS-SIMULATIE · RUWE INDICATIE (1 OEFENING)"
+  },
+  {
+    "bestand": "src/features/practice/ResultsPage.jsx",
+    "zoek": "Oefen dit onderdeel vaker om je eindtoets score te verhogen.",
+    "vervang": "Oefen dit onderdeel vaker om je Doorstroomtoets-score te verhogen.",
+    "reden": "Oude naam 'eindtoets' + losgeschreven samenstelling 'eindtoets score'",
+    "ernst": 2,
+    "voor": "Oefen dit onderdeel vaker om je eindtoets score te verhogen.",
+    "na": "Oefen dit onderdeel vaker om je Doorstroomtoets-score te verhogen."
+  },
+  {
+    "bestand": "src/features/practice/ResultsPage.jsx",
+    "zoek": "Alles gratis t/m eind 2026!",
+    "vervang": "Oefenen gratis, gegarandeerd t/m 2031!",
+    "reden": "Verouderde gratis-belofte (eind 2026) botst met huisregel 'oefenen gratis, gegarandeerd t/m 2031'; ook 'Alles gratis' te breed (Familie is betaald)",
+    "ernst": 3,
+    "voor": "Gratis oefenen voor groep 3-8 en klas 1-6 (MAVO, HAVO, VWO, gymnasium). Alles gratis t/m eind 2026!",
+    "na": "Gratis oefenen voor groep 3-8 en klas 1-6 (MAVO, HAVO, VWO, gymnasium). Oefenen gratis, gegarandeerd t/m 2031!"
+  },
+  {
+    "bestand": "src/features/practice/ResultsPage.jsx",
+    "zoek": "📬 Stuur resultaat naar leraar/ouder",
+    "vervang": "📬 Stuur resultaat naar leerkracht, ouder of verzorger",
+    "reden": "Huisregel: niet alléén 'ouder'; en 'leraar' vs 'leerkracht' (rest van het scherm zegt leerkracht)",
+    "ernst": 2,
+    "voor": "📬 Stuur resultaat naar leraar/ouder",
+    "na": "📬 Stuur resultaat naar leerkracht, ouder of verzorger"
+  },
+  {
+    "bestand": "src/features/practice/ResultsPage.jsx",
+    "zoek": "Vraag hulp aan je leerkracht of ouder — niemand",
+    "vervang": "Vraag hulp aan je leerkracht, ouder of verzorger — niemand",
+    "reden": "Huisregel: kind niet alléén naar 'ouder' verwijzen",
+    "ernst": 2,
+    "voor": "Vraag hulp aan je leerkracht of ouder — niemand hoeft het te weten, jij stuurt het zelf!",
+    "na": "Vraag hulp aan je leerkracht, ouder of verzorger — niemand hoeft het te weten, jij stuurt het zelf!"
+  },
+  {
+    "bestand": "src/features/practice/ResultsPage.jsx",
+    "zoek": "Log in om je voortgang en streak bij te houden",
+    "vervang": "Log in om je voortgang en je reeks bij te houden",
+    "reden": "Engels woord 'streak' in kindertekst; elders in de app heet het '🔥-reeks'",
+    "ernst": 1,
+    "voor": "Log in om je voortgang en streak bij te houden",
+    "na": "Log in om je voortgang en je reeks bij te houden"
+  },
+  {
+    "bestand": "src/features/practice/ResultsPage.jsx",
+    "zoek": "wereldorientatie: \"Wereld Oriëntatie\" };",
+    "vervang": "wereldorientatie: \"Wereldoriëntatie\" };",
+    "reden": "Spelling: wereldoriëntatie is één woord",
+    "ernst": 1,
+    "voor": "💪 Wereld Oriëntatie verdient meer oefening",
+    "na": "💪 Wereldoriëntatie verdient meer oefening"
+  },
+  {
+    "bestand": "src/features/practice/ResultsPage.jsx",
+    "zoek": "\"begrijpend-lezen\": \"Wereld Oriëntatie\"",
+    "vervang": "\"begrijpend-lezen\": \"Wereldoriëntatie\"",
+    "reden": "Spelling: wereldoriëntatie is één woord",
+    "ernst": 1,
+    "voor": "Je scoort goed hier! Ga nu Wereld Oriëntatie oefenen.",
+    "na": "Je scoort goed hier! Ga nu Wereldoriëntatie oefenen."
+  },
+  {
+    "bestand": "src/components/CitoPage.jsx",
+    "zoek": "label: \"Wereld Oriëntatie\",",
+    "vervang": "label: \"Wereldoriëntatie\",",
+    "reden": "Spelling: wereldoriëntatie is één woord (info-blok op dezelfde pagina schrijft het al goed)",
+    "ernst": 1,
+    "voor": "Wereld Oriëntatie",
+    "na": "Wereldoriëntatie"
+  },
+  {
+    "bestand": "src/components/CitoLeerpadToets.jsx",
+    "zoek": "Klik op <strong style={{ color: \"#5db3ff\" }}>\"▼ Meer uitleg & leerpad\"</strong>",
+    "vervang": "Klik op <strong style={{ color: \"#5db3ff\" }}>\"▼ Meer uitleg\"</strong>",
+    "reden": "Verwijst naar knop '▼ Meer uitleg & leerpad', maar de knop heet '▼ Meer uitleg'",
+    "ernst": 2,
+    "voor": "Per fout zie je de hint. Klik op \"▼ Meer uitleg & leerpad\" voor de volledige uitleg + naar het leerpad.",
+    "na": "Per fout zie je de hint. Klik op \"▼ Meer uitleg\" voor de volledige uitleg + naar het leerpad."
+  },
+  {
+    "bestand": "src/components/CitoLeerpadToets.jsx",
+    "zoek": "                    Goede antwoord: <span",
+    "vervang": "                    Goed antwoord: <span",
+    "reden": "Grammatica: zonder lidwoord 'Goed antwoord' (zoals in ResultsPage)",
+    "ernst": 1,
+    "voor": "Goede antwoord: …",
+    "na": "Goed antwoord: …"
+  },
+  {
+    "bestand": "src/features/practice/PlayQuiz.jsx",
+    "zoek": ">✅ Goede antwoord</div>",
+    "vervang": ">✅ Goed antwoord</div>",
+    "reden": "Grammatica: zonder lidwoord 'Goed antwoord'",
+    "ernst": 1,
+    "voor": "✅ GOEDE ANTWOORD",
+    "na": "✅ GOED ANTWOORD"
+  },
+  {
+    "bestand": "src/components/CitoLeerpadToets.jsx",
+    "zoek": "<li><strong>60 minuten</strong> countdown (zoals de echte Doorstroomtoets)</li>",
+    "vervang": "<li><strong>60 minuten</strong> met een klok die aftelt (zoals de echte Doorstroomtoets)</li>",
+    "reden": "Engels woord 'countdown' waar Nederlands kan",
+    "ernst": 1,
+    "voor": "60 minuten countdown (zoals de echte Doorstroomtoets)",
+    "na": "60 minuten met een klok die aftelt (zoals de echte Doorstroomtoets)"
+  },
+  {
+    "bestand": "src/features/practice/PlayQuiz.jsx",
+    "zoek": "{isLast ? \"📊 Bekijk je resultaten\" : \"↩️ Keer terug naar vragen\"}",
+    "vervang": "{isLast ? \"📊 Bekijk je resultaten\" : \"👉 Door naar volgende vraag\"}",
+    "reden": "Knop sluit de uitleg én roept goToNext() aan — je gaat dus naar de volgende vraag, niet 'terug naar vragen' (zelfde label als de andere doorgaan-knop)",
+    "ernst": 2,
+    "voor": "↩️ Keer terug naar vragen",
+    "na": "👉 Door naar volgende vraag"
+  },
+  {
+    "bestand": "src/features/practice/PlayQuiz.jsx",
+    "zoek": "↩️ Kom terug via de <strong style={{ color: \"var(--color-text-muted)\" }}>← terug-knop</strong> van je browser",
+    "vervang": "↩️ Video en melden openen in een nieuw tabblad — sluit dat tabblad om hier verder te gaan",
+    "reden": "YouTube en Fout melden openen met target=_blank in een nieuw tabblad; de terug-knop van de browser brengt je dan níet terug",
+    "ernst": 2,
+    "voor": "↩️ Kom terug via de ← terug-knop van je browser",
+    "na": "↩️ Video en melden openen in een nieuw tabblad — sluit dat tabblad om hier verder te gaan"
+  },
+  {
+    "bestand": "src/components/ExamensPage.jsx",
+    "zoek": "oefen eerst met de groene\n",
+    "vervang": "oefen eerst met de blauwe\n",
+    "reden": "De 🎯-knop 'Maak dit examen' is blauw (C.oefen = #00b0ff), niet groen",
+    "ernst": 2,
+    "voor": "Tip: oefen eerst met de groene 🎯-knop — bij een fout antwoord opent een uitleg …",
+    "na": "Tip: oefen eerst met de blauwe 🎯-knop — bij een fout antwoord opent een uitleg …"
+  },
+  {
+    "bestand": "src/components/DeepVraag.jsx",
+    "zoek": "|| \"Bijna! Kijk nog eens goed naar de vraag.\"}",
+    "vervang": "|| \"Bijna! Kijk hieronder hoe het zit.\"}",
+    "reden": "Na een fout antwoord zijn de knoppen vergrendeld; 'kijk nog eens goed naar de vraag' geeft geen richting. Uitleg staat eronder (zelfde tekst als VraagVanDeDag)",
+    "ernst": 2,
+    "voor": "💭 Bijna! Kijk nog eens goed naar de vraag.",
+    "na": "💭 Bijna! Kijk hieronder hoe het zit."
+  },
+  {
+    "bestand": "src/components/TopografieCheck.jsx",
+    "zoek": "mét uitleg in je mail? Vul je (ouder-)e-mail in.",
+    "vervang": "mét uitleg in je mail? Vul het e-mailadres van een ouder of verzorger in.",
+    "reden": "Huisregel: niet alléén 'ouder'; '(ouder-)e-mail' leest bovendien stroef",
+    "ernst": 2,
+    "voor": "… mét uitleg in je mail? Vul je (ouder-)e-mail in.",
+    "na": "… mét uitleg in je mail? Vul het e-mailadres van een ouder of verzorger in."
+  },
+  {
+    "bestand": "src/components/SelfStudy.jsx",
+    "zoek": "Handig voor basisschool en VO, maar ook",
+    "vervang": "Handig voor basisschool en middelbare school, maar ook",
+    "reden": "Afkorting 'VO' onbekend voor kinderen; huisregel: 'VO' → 'middelbare school'",
+    "ernst": 1,
+    "voor": "Handig voor basisschool en VO, maar ook voor MBO- en HBO-studenten …",
+    "na": "Handig voor basisschool en middelbare school, maar ook voor MBO- en HBO-studenten …"
+  },
+  {
+    "bestand": "src/components/SelfStudy.jsx",
+    "zoek": "marginBottom: 8 }}>Basisschool &amp; VO</div>",
+    "vervang": "marginBottom: 8 }}>Basisschool &amp; middelbare school</div>",
+    "reden": "Afkorting 'VO' onbekend voor kinderen; huisregel: 'VO' → 'middelbare school'",
+    "ernst": 1,
+    "voor": "Basisschool & VO",
+    "na": "Basisschool & middelbare school"
+  },
+  {
+    "bestand": "src/features/practice/TextbookQuiz.jsx",
+    "zoek": "opacity: 0.85 }}>zoek topic</span>",
+    "vervang": "opacity: 0.85 }}>zoek onderwerp</span>",
+    "reden": "Engels woord 'topic' waar Nederlands kan",
+    "ernst": 1,
+    "voor": "Per onderwerp · zoek topic",
+    "na": "Per onderwerp · zoek onderwerp"
+  },
+  {
+    "bestand": "src/features/kwartiercheck/KwartiercheckPage.jsx",
+    "zoek": "Ontdek in ~15 minuten per onderwerp of jouw kind het",
+    "vervang": "Ontdek in ~15 minuten, per onderwerp, of jouw kind het",
+    "reden": "Leest als '15 minuten per onderwerp' (bij max 3 vragen per onderwerp onjuist); komma's maken duidelijk dat de uitslag per onderwerp is",
+    "ernst": 2,
+    "voor": "Ontdek in ~15 minuten per onderwerp of jouw kind het beheerst, bijna snapt of nog extra oefening nodig heeft.",
+    "na": "Ontdek in ~15 minuten, per onderwerp, of jouw kind het beheerst, bijna snapt of nog extra oefening nodig heeft."
+  }
+]

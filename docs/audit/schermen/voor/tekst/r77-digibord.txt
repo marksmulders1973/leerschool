@@ -1,0 +1,34 @@
+# Route /klassikaal/bord (vers apparaat)
+# http://localhost:4173/klassikaal/bord
+Spring naar hoofdinhoud
+🙋 Klassikaal op het digibord
+← Terug
+Kies een setje van tien vragen. Zet het op het digibord, de kinderen houden een A-, B-, C- of D-kaartje omhoog (of steken hun hand op), jij telt en tikt de aantallen in. Je ziet meteen hoeveel procent van de klas het goed had. Geen account nodig.
+Welke groep?
+groep 6
+groep 7
+groep 8
+Doorstroomtoets-mix groep 7
+Rekenen, taal, lezen en wereld door elkaar.
+Rekenen groep 7
+Tien rekenvragen op groepsniveau.
+Taal groep 7
+Tien taalvragen op groepsniveau.
+Voor de taalklas (nieuwkomers)
+Taalklas: eerste woorden
+Waar zit je op? Waarmee schrijf je? Voor nieuwkomers.
+Taalklas: zinnen in de klas
+Mag ik naar de wc? Ik snap het niet. Voor nieuwkomers.
+Taalklas: hoe voel je je?
+Blij, verdrietig, boos, bang, moe. Ik voel me niet goed. Voor nieuwkomers.
+Taalklas: rekentaal
+Meer, minder, samen, weg, verdelen. Voor nieuwkomers.
+Taalklas: meer woorden
+Kleding, eten, thuis, buiten, je lichaam. Voor nieuwkomers.
+Taalklas: letters en klanken
+Welke klank hoor je? t-a-s wordt tas. aa, oo, oe. Voor nieuwkomers.
+Liever je eigen vragen, in je eigen volgorde? Maak een toets → Bij elke toets staat de knop "Klassikaal op het digibord".
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244

@@ -1,0 +1,39 @@
+# Route /supporter (vers apparaat)
+# http://localhost:4173/supporter
+Spring naar hoofdinhoud
+← Home
+🌊 Leerkwartier
+🏆 Supporter van de maand: Sahasra 💛
+Speciaal spelletje — alleen deze maand. Help de kikker veilig oversteken!
+🏁 Score: 0
+❤️❤️❤️
+⭐ Best: 0
+🏁 hierheen 🏁
+🚗
+🚗
+🚙
+🚙
+🚕
+🚕
+🚌
+🚌
+🛻
+🛻
+🐸
+🐸 Kikker Oversteek
+Breng de kikker naar de groene overkant 🏁. Daar rust je heel even — dan gaan de auto's sneller en moet je weer terug! Elke overkant = 10 punten. Hoe vaker, hoe sneller en spannender.
+▶ Start
+▲
+◀
+▼
+▶
+🐸
+Kikker Oversteek
+Spel van de maand
+🏆 Toppers van de maand
+Nog geen scores — wees de eerste! 🐸
+Tip: spatie = vooruit naar de overkant 🏁. Pijltjes (of WASD) voor alle kanten. Op de telefoon gebruik je de knoppen hierboven.
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244

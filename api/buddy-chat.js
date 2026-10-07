@@ -261,7 +261,7 @@ export default async function handler(req) {
   // ZORG-signaal (kind uit iets ernstigs over zichzelf) → warm, serieus
   // antwoord met de Kindertelefoon. Nooit een vrolijke afleiding.
   if (lastUser && isZorg(lastUser.content)) {
-    return json({ reply: "Wat goed dat je me dit vertelt. Dit is te groot voor mij — praat er alsjeblieft over met je vader, moeder, juf of meester. Je kunt ook gratis bellen of chatten met de Kindertelefoon: 0800-0432. Ik ben er voor je. 💛", safe: true });
+    return json({ reply: "Wat goed dat je me dit vertelt. Dit is te groot voor mij — praat er alsjeblieft over met je vader, moeder, verzorger, juf of meester. Je kunt ook gratis bellen of chatten met de Kindertelefoon: 0800-0432. Ik ben er voor je. 💛", safe: true });
   }
   if (lastUser && !isClean(lastUser.content)) {
     return json({ reply: `Hihi, daar wil ik het liever niet over hebben. Zullen we iets leuks in het park doen of samen een vraagje oefenen? 🌟`, safe: true });

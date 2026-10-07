@@ -89,7 +89,7 @@ export default function PiramideInhoud() {
 
       {/* schuiven */}
       <label style={{ display: "block", fontSize: 12.5, fontWeight: 700, color: "#6b5b2a", margin: "8px 0 2px" }}>
-        Zijde van de grondvlak: {zijde} m
+        Zijde van het grondvlak: {zijde} m
         <input type="range" min="2" max="12" step="1" value={zijde} onChange={(e) => setZijde(+e.target.value)} style={{ width: "100%", accentColor: "#c9862e" }} />
       </label>
       <label style={{ display: "block", fontSize: 12.5, fontWeight: 700, color: "#6b5b2a", margin: "4px 0 2px" }}>

@@ -1,0 +1,11 @@
+# Route /parken (vers apparaat)
+# http://localhost:4174/parken
+Spring naar hoofdinhoud
+🌍 Park-galerij
+← Terug
+Bekijk de parken die andere kinderen hebben gebouwd — klik erop om erin rond te lopen (alleen kijken). Wil je jouw park hier ook? Ga naar je eigen park → ☰ → 📤 Delen & samen bouwen → "Zet mijn park in de galerij".
+Nog geen parken in de galerij. Wees de eerste — meld je park aan in het deel-scherm! 🌱
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244

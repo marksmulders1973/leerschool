@@ -1,0 +1,196 @@
+# Nieuwkomer: eerste oefening
+# http://localhost:4174/nieuwkomers
+Spring naar hoofdinhoud
+← Terug
+Leerkwartier, het startpunt voor nieuwkomers
+Gratis. Geen account. Korte zinnen. Elke som met uitleg.
+Free. No account. Short sentences. Every sum with an explanation.
+Ik kan nog niet (goed) lezen
+Tik hier: dan leest de app elke vraag en elk antwoord voor.
+Can't read (well) yet? Tap this button: then the app reads the questions and answers aloud.
+Welke taal spreek je thuis?
+Which language do you speak at home?
+Nederlands
+English
+العربية
+Українська
+Türkçe
+Română
+Български
+Alles blijft Nederlands. Tik op een zin of op het knopje bij een antwoord. Dan zie je jouw taal.
+Everything stays in Dutch. Tap a sentence, or the small button next to an answer, to see your language.
+Dit is voor kinderen die nog Nederlands leren. Begin bij 1. Doe elke dag een beetje.
+This is for children who are still learning Dutch. Start at 1. Do a little every day.
+My points
+ 0 points
+Show the teacher
+Done
+No points yet. Do the picture dictation or listen and choose!
+Look and listen
+Also if you cannot read yet.
+Word cards
+Listen and choose
+Picture dictation
+Sentences
+?
+Nieuw hier? Doe het instap-testje
+Een paar vragen. Dan weet je waar je begint.
+New here? Do the starting test — A few questions. Then you know where to start.
+›
+🎯 Wat kan ik al?
+What can I do already?
+Trede 1 van 3 · daarna de gewone Leerkwartier
+Step 1 of 3 · then the normal Leerkwartier
+Trede 1 · Welkom
+○
+Ik kan vragen wat ik nodig heb in de klas.
+I can ask for what I need in class.
+○
+Ik ken mijn eerste Nederlandse woorden.
+I know my first Dutch words.
+○
+Ik ken rekenwoorden als meer, minder en samen.
+I know maths words like more, less and together.
+○
+Ik kan rekenen tot 20.
+I can do sums up to 20.
+Trede 2 · Letters en woorden
+○
+Ik hoor de klanken in een woord.
+I hear the sounds in a word.
+○
+Ik kan korte woorden lezen.
+I can read short words.
+○
+Ik kan korte woorden schrijven.
+I can write short words.
+Trede 3 · De brug naar de klas
+○
+Ik snap wat er op mijn werkblad staat.
+I understand what my worksheet says.
+○
+Ik snap een som in een verhaaltje.
+I understand a sum in a story.
+○
+Ik kan vragen uit de gewone app maken.
+I can do questions from the normal app.
+🪜 Trede 1 · Welkom
+Step 1 · Welcome
+1
+In de klas
+Wat zeg je tegen de juf? Hoe maak je vrienden?
+In class — What do you say to the teacher? How do you make friends?
+›
+2
+Woorden
+Je eerste Nederlandse woorden. Tik op het knopje naast een woord: dan zie je het in jouw taal.
+Words — Your first Dutch words. Tap the small button next to a word to see it in your language.
+›
+3
+Rekentaal
+Meer, minder, samen, weg, verdelen: de woorden in elke rekenles.
+Maths words — More, less, together, away, sharing: the words in every maths lesson.
+›
+4
+Rekenen tot 20
+Tellen, erbij en eraf. Met je vingers mag.
+Counting to 20 — Counting, adding and taking away. You may use your fingers.
+›
+?
+Trede-testje
+Klaar met 1 tot en met 4? Doe het testje en haal je diploma.
+Step test — Done with 1 to 4? Do the test and get your certificate.
+›
+🪜 Trede 2 · Letters en woorden
+Step 2 · Letters and words
+5
+Letters en klanken
+Welke klank hoor je? t-a-s wordt tas.
+Letters and sounds — Which sound do you hear? t-a-s becomes tas.
+›
+6
+Meer woorden
+Kleding, eten, thuis, buiten en je lichaam.
+More words — Clothes, food, home, outside and your body.
+›
+7
+Dictee
+Charley zegt een woord. Jij schrijft het. Elke letter is een klank.
+Dictation — Charley says a word. You write it. Every letter is a sound.
+›
+?
+Trede-testje
+Klaar met 5 tot en met 7? Doe het testje en haal je diploma.
+Step test — Done with 5 to 7? Do the test and get your certificate.
+›
+Verder oefenen
+Keep practising
+8
+In de klas 2
+Zelf werken, klaar en wat nu, de juf is bezig, en fijne gevoelens.
+In class 2 — Working on your own, finished and what now, the teacher is busy, and good feelings.
+›
+9
+Woorden 3
+Kleuren, vormen, groot en klein, gisteren en vandaag, denken en vertellen.
+Words 3 — Colours, shapes, big and small, yesterday and today, thinking and telling.
+›
+10
+Rekenen tot 100
+Tientallen en eenheden. Sprongen van 10.
+Counting to 100 — Tens and ones. Jumps of 10.
+›
+11
+Lezen
+Begin met vijf korte zinnen. De knop leest voor.
+Reading — Start with five short sentences. The button reads them aloud.
+›
+12
+Tafels
+Steeds een stukje.
+Times tables — A little bit at a time.
+›
+🌉 Trede 3 · De brug naar de klas
+Step 3 · The bridge to the class
+13
+Opdrachtwoorden
+Wat staat er op je blad? Omcirkel, vul in, kruis aan en meer.
+Task words — What does your sheet say? Circle, fill in, tick and more.
+›
+14
+Rekenverhaaltjes
+Sommen in een kort verhaal. Komt er iets bij of gaat er iets af?
+Maths stories — Sums in a short story. Is something added or taken away?
+›
+?
+Trede-testje
+Klaar met 13 en 14? Doe het brugtestje: ben je klaar voor de gewone Leerkwartier?
+Step test — Done with 13 and 14? Do the bridge test: are you ready for the normal Leerkwartier?
+›
+🚀 Klaar voor de gewone Leerkwartier?
+Rekenen en taal zoals in je klas. Alles staat in het Nederlands. Bij de eerste vragen kun je nog op de vertaalknop tikken. Je kunt altijd terug naar deze pagina.
+Ready for the normal Leerkwartier? — Maths and language like in your class. Everything is in Dutch. At the first questions you can still tap the translate button. You can always come back to this page.
+In welke groep zit je?
+Which class (groep) are you in?
+Groep 3
+Groep 4
+Groep 5
+Groep 6
+Groep 7
+Groep 8
+Kun je nog niet (goed) lezen? Zet bovenaan de knop 'Ik kan nog niet (goed) lezen' aan. Dan leest de app de vragen voor. Tik op een luidspreker: dan hoor je het nog een keer.
+Can't read (well) yet? Turn on the button 'Ik kan nog niet (goed) lezen' (I can't read well yet) at the top. Then the app reads the questions aloud. Tap a speaker to hear it again.
+Voor de leerkracht: alles op deze pagina is gratis, ook op het digibord, gegarandeerd tot en met 2031. Zet de code WELKOMNIEUWKOMER op het bord; ieder kind komt dan hier.
+For the teacher: everything on this page is free, also on the classroom board, guaranteed until 2031. Write the code WELKOMNIEUWKOMER on the board; every child will come here.
+🖨️ Voor de leerkracht: print het briefje voor thuis (5 talen)
+Ken je een school of gezin voor wie dit handig is? Deel deze pagina:
+WhatsApp
+LinkedIn
+Deel of kopieer link
+💬 Tip, wens, of klopt er iets niet?
+Tip, wish, or is something wrong? Write it here (any language is fine).
+Plaatjes: Mulberry Symbols (Steve Lee), CC BY-SA 4.0 — mulberrysymbols.org
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244

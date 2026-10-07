@@ -1,0 +1,9 @@
+# Route /vandaag-kwartier (vers apparaat)
+# http://localhost:4174/vandaag-kwartier
+Spring naar hoofdinhoud
+Er staat nog geen kwartier klaar voor vandaag. Op je eigen pagina kies je 'Start je kwartier van vandaag'.
+Naar mijn pagina
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244

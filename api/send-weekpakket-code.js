@@ -101,7 +101,7 @@ export default async function handler(req, res) {
       <div style="font-size:34px;font-weight:800;color:#0a7d3c;letter-spacing:0.15em;margin:6px 0;">${esc(code)}</div>
       <a href="${esc(link)}" style="display:inline-block;background:#0a7d3c;color:#fff;text-decoration:none;font-weight:800;font-size:15px;padding:12px 22px;border-radius:10px;margin-top:6px;">Open het pakket van deze week →</a>
     </div>
-    <p style="font-size:13px;line-height:1.6;color:#9fb0c6;">De code wisselt elke week — de nieuwe staat steeds in de weekmail. Oefenen in de app blijft gewoon gratis; dit pakket is extra post voor abonnees.</p>
+    <p style="font-size:13px;line-height:1.6;color:#9fb0c6;">De code wisselt elke week — de nieuwe staat steeds in de weekmail. Oefenen in de app blijft gewoon gratis; dit pakket is extra post voor mail-abonnees.</p>
     <div style="background:rgba(105,240,174,0.08);border:1.5px solid #00C853;border-radius:12px;padding:14px 16px;margin:0 0 18px;">
       <div style="font-size:14px;font-weight:800;color:#69f0ae;margin-bottom:6px;">Wil je élke week de nieuwe code?</div>
       <div style="font-size:13.5px;line-height:1.55;color:#cdd6e5;margin-bottom:10px;">Tik één keer op de knop — zo weten we zeker dat jij dit adres bent. Zonder tik krijg je verder geen mail.</div>
@@ -111,7 +111,7 @@ export default async function handler(req, res) {
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;">Geen mail meer? <a href="${esc(uit)}" style="color:#9fb0c6;">Uitschrijven</a> — direct geregeld.</p>
   </div></body></html>`;
 
-  const text = `Welkom bij het Weekpakket van Leerkwartier!\n\nJouw code voor deze week: ${code}\nOpen het pakket: ${link}\n\nDe code wisselt elke week — de nieuwe staat steeds in de weekmail.\nWil je die elke week? Bevestig hier (zonder tik krijg je geen mail meer): ${bevestig}\nOefenen in de app blijft gratis; dit pakket is extra post voor abonnees.\nUitschrijven: ${uit}`;
+  const text = `Welkom bij het Weekpakket van Leerkwartier!\n\nJouw code voor deze week: ${code}\nOpen het pakket: ${link}\n\nDe code wisselt elke week — de nieuwe staat steeds in de weekmail.\nWil je die elke week? Bevestig hier (zonder tik krijg je geen mail meer): ${bevestig}\nOefenen in de app blijft gratis; dit pakket is extra post voor mail-abonnees.\nUitschrijven: ${uit}`;
 
   try {
     const r = await fetch("https://api.resend.com/emails", {

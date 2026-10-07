@@ -309,7 +309,7 @@ export default function RedactiebladenPage({ setPage } = {}) {
         </Sheet>
 
         <Sheet>
-          <SectieKop emoji="👪" label="Voor de ouder — het stappenplan" />
+          <SectieKop emoji="👪" label="Voor thuis — het stappenplan" />
           <Alinea titel="Waarom zijn verhaaltjessommen zo lastig?">
             Niet door het rekenen, maar door het lezen: je kind moet zélf bedenken
             wélke som er in het verhaal verstopt zit. Dat is precies wat de

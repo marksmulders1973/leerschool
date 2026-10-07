@@ -394,7 +394,7 @@ export function buddyPraatje(soort, facts) {
   } else if (soort === "fenix") {
     o.push(
       { e: "🔥", t: `Voel je de energie, ${hoi}? Op naar dat kwartier!` },
-      { e: "🪶", t: "Fout gemaakt? Een fenix staat altijd weer op. Wij ook!" },
+      { e: "🪶", t: "Fout gemaakt? Een feniks staat altijd weer op. Wij ook!" },
       { e: "☀️", t: f.zwakVak ? `${cap(f.zwakVak)} verbranden we samen!` : "Klaar om te vliegen?" },
       { e: "✨", t: `Jij straalt vandaag, ${hoi}!` },
     );

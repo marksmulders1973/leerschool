@@ -64,27 +64,27 @@ const KERN_PADEN = [
   { file: "doorstroomtoetsRekenenG8", pitch: "Rekenen voor de Doorstroomtoets groep 8 — getallen, breuken, procenten, redactiesommen." },
   { file: "doorstroomtoetsTaalG8", pitch: "Taalverzorging voor de Doorstroomtoets groep 8 — woordenschat, begrijpend lezen, spelling, grammatica." },
   { file: "doorstroomtoetsStudievaardighedenG8", pitch: "Studievaardigheden voor de Doorstroomtoets — informatie zoeken in tabellen, kaarten, schema's." },
-  { file: "begrijpendLezenTekstenPo", pitch: "Begrijpend lezen groep 5-8 — hoofdgedachte, signaalwoorden, Cito-strategie per tekstsoort." },
-  { file: "samenvattenHoofdgedachtePo", pitch: "Hoofdgedachte herkennen en samenvatten — kern-strategie voor Cito-begrijpend-lezen." },
+  { file: "begrijpendLezenTekstenPo", pitch: "Begrijpend lezen groep 5-8 — hoofdgedachte, signaalwoorden, strategie per tekstsoort voor de Doorstroomtoets." },
+  { file: "samenvattenHoofdgedachtePo", pitch: "Hoofdgedachte herkennen en samenvatten — kernstrategie voor begrijpend lezen op de Doorstroomtoets." },
   { file: "tafelsPo", pitch: "Tafels groep 3-6 — alle vermenigvuldigtafels van 1 t/m 12 met trucs per tafel." },
   { file: "procentenPo", pitch: "Procenten groep 6-8 — 10%, 25%, 50%, korting berekenen en procent omdraaien." },
   { file: "breukenPo", pitch: "Breuken groep 6-8 — gelijkwaardige breuken, optellen, vermenigvuldigen, breuk-decimaal-procent." },
   { file: "verhoudingenPo", pitch: "Verhoudingen groep 6-8 — recept omrekenen, schaal lezen, eenheidsprijs." },
   { file: "kommagetallenPo", pitch: "Kommagetallen groep 6-8 — decimalen lezen, optellen, vermenigvuldigen met komma's." },
-  { file: "gemiddeldenStatistiekPo", pitch: "Gemiddelde, modus en mediaan — Cito-statistiek groep 6-8 met directe voorbeelden." },
+  { file: "gemiddeldenStatistiekPo", pitch: "Gemiddelde, modus en mediaan — statistiek voor de Doorstroomtoets, groep 6-8, met directe voorbeelden." },
   { file: "grafiekenLezenPo", pitch: "Grafieken lezen groep 6-8 — staaf, lijn, cirkel: assen, waarden, hoofdgedachte." },
   { file: "kaartlezenPo", pitch: "Kaartlezen groep 6-8 — schaal, legenda, windrichtingen, topografische kaart." },
-  { file: "tijdvakkenNederlandPo", pitch: "10 tijdvakken Nederlandse geschiedenis — Cito-tijdlijn van jagers-verzamelaars tot nu." },
+  { file: "tijdvakkenNederlandPo", pitch: "10 tijdvakken Nederlandse geschiedenis — tijdlijn van jagers-verzamelaars tot nu." },
   { file: "woordenschatPo", pitch: "Woordenschat groep 6-8 — synoniemen, tegenstellingen, spreekwoorden, context-truc." },
   // 2e ronde uitbreiding 2026-05-16 — 5 extra Cito-relevante paden
-  { file: "synoniemenTegenstellingenPo", pitch: "Synoniemen + tegenstellingen groep 5-7 — Cito-taal kern met 'on-' truc en context-zin." },
+  { file: "synoniemenTegenstellingenPo", pitch: "Synoniemen + tegenstellingen groep 5-7 — kern van de taalvragen op de Doorstroomtoets, met de 'on-'-truc en een zin als context." },
   { file: "spellingOverigePo", pitch: "Spelling groep 6-8 — ei/ij, au/ou, c/k en moeilijke woorden voor de Doorstroomtoets." },
   { file: "werkwoordTijdenPo", pitch: "Werkwoordstijden groep 6-8 — tegenwoordige tijd, verleden tijd, voltooid deelwoord met d/t-regel." },
   { file: "interpunctiePo", pitch: "Leestekens groep 5-7 — punt, komma, vraagteken, uitroepteken + dubbele punt + aanhalingstekens." },
   { file: "tijdsduurRekenenPo", pitch: "Tijdsduur berekenen groep 6-8 — van klok-tijd 9:15 tot 10:45, uren+minuten optellen met 60-stap." },
   // 3e ronde uitbreiding 2026-05-16 — 4 wereldoriëntatie + geschiedenis-paden
   { file: "delenPo", pitch: "Delen groep 4-6 — door 2/5/10 met trucs, daarna delen door 3-9 + grotere getallen." },
-  { file: "dierenklassenPo", pitch: "Dierenklassen groep 5-7 — zoogdier vs vogel vs reptiel vs vis, met koudbloedig/warmbloedig + Cito-strikvraag-trucs." },
+  { file: "dierenklassenPo", pitch: "Dierenklassen groep 5-7 — zoogdier vs vogel vs reptiel vs vis, met koudbloedig/warmbloedig + trucs voor strikvragen op de Doorstroomtoets." },
   { file: "lichaamGezondheidPo", pitch: "Lichaam + gezondheid groep 6-8 — skelet, spieren, organen, schijf van vijf, ademhaling en bloedsomloop." },
   { file: "continentenWereldPo", pitch: "Continenten + oceanen groep 6-8 — 7 continenten + 5 oceanen, hoofdsteden, tijdzones en bekende landen." },
   // 4e ronde uitbreiding 2026-05-17 — 4 nieuwe Cito-PO paden uit sessie 16/05
@@ -95,9 +95,9 @@ const KERN_PADEN = [
   // 5e ronde uitbreiding 2026-05-17 — 10 Cito-PO paden voor SEO/AI-discovery
   { file: "begrijpendLezenStrategie", pitch: "Begrijpend lezen strategieën groep 5-8 — signaalwoorden, hoofdgedachte, skim+scan voor Doorstroomtoets-pijler." },
   { file: "cijferendRekenen", pitch: "Cijferend rekenen groep 6-8 — onder elkaar optellen, aftrekken, vermenigvuldigen en delen met overhouden." },
-  { file: "geldRekenen", pitch: "Geld rekenen groep 5-8 — euro's + centen, wisselgeld, korting in euro berekenen voor Cito-redactiesommen." },
+  { file: "geldRekenen", pitch: "Geld rekenen groep 5-8 — euro's + centen, wisselgeld, korting in euro berekenen voor redactiesommen op de Doorstroomtoets." },
   { file: "klokkijken", pitch: "Klokkijken groep 3-5 — analoog + digitaal, kwart over, half, kwartieren, NL-stijl tijd-aanduiding." },
-  { file: "matenEenheden", pitch: "Maten en eenheden groep 7-8 — mm/cm/m/km omrekenen, gram/kg/ton, ml/l, hectare voor Cito-meetkunde." },
+  { file: "matenEenheden", pitch: "Maten en eenheden groep 7-8 — mm/cm/m/km omrekenen, gram/kg/ton, ml/l, hectare voor meetkunde op de Doorstroomtoets." },
   { file: "werkwoordsspellingDT", pitch: "Werkwoordspelling d/t groep 5-7 — 't kofschip-regel, word/wordt, voltooid deelwoord-vragen." },
   { file: "politiekDemocratiePo", pitch: "Politiek + democratie groep 7-8 — Tweede Kamer, kabinet, gemeente, koning + 3 machten Trias Politica." },
   { file: "industrieleRevolutiePo", pitch: "Industriële Revolutie groep 7-8 — stoommachine, fabrieken, kinderarbeid + impact op Nederland." },
@@ -215,7 +215,7 @@ function renderHtml({ pathData, pitch }) {
         <ul>
           ${(eersteVraag.options || []).map((o, i) => `<li><span class="lk-letter">${["A", "B", "C", "D"][i]}.</span> ${mdToHtml(o)}</li>`).join("")}
         </ul>
-        <p class="lk-cta-mini">Wil je het antwoord en uitleg op 3 niveaus? <a href="${oefenenUrl}">Open dit pad in de app →</a></p>
+        <p class="lk-cta-mini">Wil je het antwoord en de uitleg op 3 niveaus? <a href="${oefenenUrl}">Open dit pad in de app →</a></p>
       </div>
     </section>`
     : "";

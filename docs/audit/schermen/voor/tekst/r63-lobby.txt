@@ -1,0 +1,26 @@
+# Route /lobby (vers apparaat)
+# http://localhost:4173/lobby
+Spring naar hoofdinhoud
+🎯
+Wachtkamer
+Wachten tot de leerkracht start...
+1 speler
+SPELERS
+👑
+⏳
+Wachten tot de leerkracht start...
+💡 Tip: Deel je scherm naar de TV zodat iedereen de vragen kan zien
+← Terug
+🏠 Home
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244
+🏠
+Home
+📚
+Leren
+Toets
+🎮
+Spelletje
+Mijn pagina

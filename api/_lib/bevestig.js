@@ -74,7 +74,7 @@ export async function handleBevestig(req, res) {
         return res.status(200).send(pagina("Deze link is niet (meer) geldig", "Misschien is het adres inmiddels gewijzigd. Vraag degene die je uitnodigde om het opnieuw te doen.", false));
       }
       const namen = [...new Set(rows.map((x) => x.child_name).filter(Boolean))].join(" en ");
-      return res.status(200).send(pagina("Je leest mee", `Vanaf nu krijg jij elke maandag óók het weekrapport${namen ? ` van ${namen}` : ""}: wat er geoefend is, wat goed gaat en wat aandacht verdient. Onderaan elke mail staat een afmeld-link.`));
+      return res.status(200).send(pagina("Je leest mee", `Vanaf nu krijg jij elke vrijdag óók het weekrapport${namen ? ` van ${namen}` : ""}: wat er geoefend is, wat goed gaat en wat aandacht verdient. Onderaan elke mail staat een afmeld-link.`));
     }
 
     if (token && token.length >= 8) {

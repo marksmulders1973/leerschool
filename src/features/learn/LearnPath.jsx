@@ -1377,7 +1377,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             )}
             {retrievalChallenge.feedback === "bad" && (
               <div style={{ marginTop: 10, padding: "8px 12px", background: "rgba(255,82,82,0.10)", border: "1px solid rgba(255,82,82,0.40)", borderRadius: 8, fontSize: 13, color: C.text }}>
-                Niet erg — je kunt dit terug-vinden bij deel {retrievalChallenge.fromStepIdx + 1}.
+                Niet erg — je kunt dit terugvinden bij deel {retrievalChallenge.fromStepIdx + 1}.
                 <button
                   onClick={() => setRetrievalChallenge(null)}
                   style={{ marginLeft: 12, padding: "4px 10px", background: "transparent", color: C.text, border: `1px solid ${C.border}`, borderRadius: 6, cursor: "pointer", fontSize: 12 }}
@@ -1495,7 +1495,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             </div>
             <div style={{ padding: "12px 14px", borderRadius: 10, background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.30)", color: "rgba(255,255,255,0.7)", fontSize: 13, lineHeight: 1.5 }}>
               ⏸ De interactieve 3D-versie van deze check staat tijdelijk uit.
-              Lees de uitleg van de stap nog eens en klik dan 'Stap voltooid' onderin.
+              Lees de uitleg van de stap nog eens en klik dan hieronder op 'Stap voltooid'.
             </div>
             <button
               onClick={() => handleInteractiveAnswer(true)}
@@ -1915,7 +1915,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                   fontFamily: "var(--font-display)",
                   listStyle: "none",
                 }}>
-                  📖 Leg uit (officiële uitleg uit correctievoorschrift)
+                  📖 Leg uit (officiële uitleg uit het correctievoorschrift)
                 </summary>
                 <div style={{
                   marginTop: 8,
@@ -2039,7 +2039,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                   fontFamily: "var(--font-display)",
                   listStyle: "none",
                 }}>
-                  📖 Leg uit (officiële uitleg uit correctievoorschrift)
+                  📖 Leg uit (officiële uitleg uit het correctievoorschrift)
                 </summary>
                 <div style={{
                   marginTop: 8,
@@ -2199,8 +2199,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               )}
               <NextStepCard
                 eyebrow="Overzicht"
-                title={path.steunTeksten ? "Terug naar het overzicht" : "Terug naar paden"}
-                hint={path.steunTeksten ? "Kies een ander deel" : "Andere stap kiezen"}
+                title={path.steunTeksten ? "Terug naar het overzicht" : "Terug naar het overzicht"}
+                hint={path.steunTeksten ? "Kies een ander deel" : "Kies een ander deel"}
                 accent={C.muted}
                 onClick={goOverview}
               />
@@ -2384,7 +2384,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
             <div style={{ fontSize: 32, marginBottom: 6 }}>🎉</div>
             <div style={{ fontWeight: 700, color: C.good, marginBottom: 4 }}>Alles voltooid!</div>
             <div style={{ fontSize: 13, color: C.muted }}>
-              Je kunt elke stap nog eens herhalen door erop te klikken hieronder.
+              Je kunt elk deel nog eens herhalen door hieronder erop te klikken.
             </div>
           </div>
         )}

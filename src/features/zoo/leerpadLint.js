@@ -24,7 +24,7 @@ export const LINT_BANDEN = [
   { id: "g6", kleur: "#00c853", tekstKleur: "#0b3d20", groep: "Groep 6", start: "breuken · oppervlakte" },
   { id: "g7", kleur: "#26c6da", tekstKleur: "#06333b", groep: "Groep 7", start: "inhoud · verhoudingen" },
   { id: "g8", kleur: "#29b6f6", tekstKleur: "#06304a", groep: "Groep 8", start: "procenten · de piramide" },
-  { id: "brug", kleur: "#42a5f5", tekstKleur: "#0b2a4a", groep: "Brugklas & examens", start: "landmarks · tot parabolen" },
+  { id: "brug", kleur: "#42a5f5", tekstKleur: "#0b2a4a", groep: "Brugklas & examens", start: "bouwwerken · tot parabolen" },
 ];
 
 // Waypoints als [celX, celZ, bandIndex]. Ze rijgen de bestaande stations aan

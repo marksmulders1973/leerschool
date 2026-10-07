@@ -1,0 +1,49 @@
+# Route /tafels (vers apparaat)
+# http://localhost:4173/tafels
+Spring naar hoofdinhoud
+←
+Tafels oefenen
+Groep 3 t/m 6
+🏠
+Voortgang
+0 / 12 beheerst
+⬜ Nog niet geoefend
+🟧 Bezig
+🟩 Beheerst ≥70%
+tafel van
+1
+tafel van
+2
+tafel van
+3
+tafel van
+4
+tafel van
+5
+tafel van
+6
+tafel van
+7
+tafel van
+8
+tafel van
+9
+tafel van
+10
+tafel van
+11
+tafel van
+12
+🔀 Mix — alle tafels door elkaar
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244
+🏠
+Home
+📚
+Leren
+Toets
+🎮
+Spelletje
+Mijn pagina

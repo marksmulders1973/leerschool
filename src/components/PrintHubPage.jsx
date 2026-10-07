@@ -55,7 +55,7 @@ const GRATIS = [
     emoji: "🔤",
     titel: "Spelling-dictees",
     groep: "groep 5-8",
-    tekst: "Zes voorlees-dictees per spellingregel (ei/ij, au/ou, d/t, bomen/bommen, verkleinwoorden, weetwoorden). Jij leest voor van het ouderblad, je kind schrijft op het invulblad.",
+    tekst: "Zes voorlees-dictees per spellingregel (ei/ij, au/ou, d/t, bomen/bommen, verkleinwoorden, weetwoorden). Jij leest voor van het voorleesblad, je kind schrijft op het invulblad.",
     accent: "#ef5350",
   },
   {

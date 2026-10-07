@@ -1,0 +1,24 @@
+# Route /oefenen (vers apparaat)
+# http://localhost:4173/oefenen
+Spring naar hoofdinhoud
+←
+Uit je boek 📕
+Stap 1 van 3
+🏠
+🎒 Basisschool
+groep 1–8
+🎓 Voortgezet onderwijs
+klas 1–6
+Kies hierboven basisschool of voortgezet onderwijs
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244
+🏠
+Home
+📚
+Leren
+Toets
+🎮
+Spelletje
+Mijn pagina

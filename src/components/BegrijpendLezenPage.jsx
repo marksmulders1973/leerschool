@@ -45,7 +45,7 @@ export default function BegrijpendLezenPage({ userName, studentProgress = [], on
 
   return (
     <div style={{ minHeight: "100dvh", background: "#0d1f3c", fontFamily: "var(--font-body)" }}>
-      <Header title="Begrijpend Lezen" subtitle="Groep 5–8" onBack={onBack} onHome={onHome} />
+      <Header title="Begrijpend lezen" subtitle="Groep 5–8" onBack={onBack} onHome={onHome} />
       <div style={{ maxWidth: 480, margin: "0 auto", padding: "0 16px 32px" }}>
 
         {/* Opbouwend pad — begin heel kort (voor wie gewone teksten te lang vindt) */}

@@ -57,7 +57,7 @@ function MailHaakje({ score, totaal }) {
     try {
       const { error } = await supabase.from("upgrade_waitlist").insert({ email: m, plan: "dictee", source: "werkwoorden-eindscherm", consent_at: new Date().toISOString() });
       if (error) throw error;
-      setStand("✓ Gelukt! Het eerste weekrapport komt maandag."); setEmail("");
+      setStand("✓ Gelukt! Het eerste weekrapport komt vrijdag."); setEmail("");
       try { track("ww_email", { score, totaal }); } catch { /* */ }
     } catch { setStand("Ging niet door — probeer het later nog eens."); }
   };
@@ -130,7 +130,7 @@ function LijstCode({ onGeladen }) {
   }, []); // eslint-disable-line
   return (
     <div style={{ ...KAART, margin: "14px 0 0" }}>
-      <div style={{ font: "900 15px system-ui" }}>🔑 Code gekregen van je ouder of juf?</div>
+      <div style={{ font: "900 15px system-ui" }}>🔑 Code gekregen van thuis of van school?</div>
       <div style={{ display: "flex", gap: 8, marginTop: 8 }}>
         <input value={code} onChange={(e) => setCode(e.target.value.toUpperCase())} placeholder="bijv. K7PX2M" maxLength={6} autoCapitalize="characters" autoCorrect="off" spellCheck={false} style={{ flex: "1 1 120px", padding: "10px 12px", borderRadius: 10, border: "2px solid #9fb0c6", font: "800 18px system-ui", letterSpacing: 2, background: "#fff", color: "#1c2840", minWidth: 0 }} />
         <button onClick={() => laad(code)} disabled={code.length !== 6} style={{ ...KNOP, opacity: code.length !== 6 ? .5 : 1 }}>▶ Start</button>
@@ -219,7 +219,7 @@ function SchoolWerkwoorden({ onStart }) {
           {vormen.length > 0 && (
             <div style={{ overflowX: "auto", margin: "0 0 10px" }}>
               <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }}>
-                <thead><tr style={{ color: "#556" }}><th style={{ textAlign: "left", padding: "4px 6px" }}>werkwoord</th><th style={{ textAlign: "left", padding: "4px 6px" }}>○ hij/zij (t.t.)</th><th style={{ textAlign: "left", padding: "4px 6px" }}>□ v.t.</th><th style={{ textAlign: "left", padding: "4px 6px" }}>△ vd</th></tr></thead>
+                <thead><tr style={{ color: "#556" }}><th style={{ textAlign: "left", padding: "4px 6px" }}>werkwoord</th><th style={{ textAlign: "left", padding: "4px 6px" }}>○ hij/zij (t.t.)</th><th style={{ textAlign: "left", padding: "4px 6px" }}>□ v.t.</th><th style={{ textAlign: "left", padding: "4px 6px" }}>△ v.d.</th></tr></thead>
                 <tbody>
                   {vormen.map((v) => (
                     <tr key={v.inf}>

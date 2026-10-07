@@ -325,7 +325,7 @@ export function makeRekenOefenRonde({ soort = "keer", aantal = 12, tafels = [2, 
                 />
                 <button type="button" onClick={check}
                   style={{ padding: "14px 20px", borderRadius: 12, border: "none", background: C.goed, color: "#fff", fontSize: 16, fontWeight: 800, cursor: "pointer", fontFamily: "inherit" }}>
-                  Check
+                  Nakijken
                 </button>
               </div>
               {foutFlits && !toonAntwoord && (

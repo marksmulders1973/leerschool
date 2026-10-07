@@ -162,7 +162,7 @@ export default function TafelbladenPage({ setPage } = {}) {
         </h1>
         <p style={{ color: "var(--color-text-muted, #8899aa)", margin: "0 0 18px", lineHeight: 1.5 }}>
           Kies de tafels en print per tafel een werkblad met <strong style={{ color: "var(--color-text, #e8edf5)" }}>op volgorde · door
-          elkaar{metDelen ? " · deelsommen" : ""}</strong>, plus een mix-blad, {metTempo ? "een tempo-toets " : ""}en een invulbaar
+          elkaar{metDelen ? " · deelsommen" : ""}</strong>, plus een mix-blad{metTempo ? ", een tempo-toets " : " "}en een invulbaar
           <strong style={{ color: "var(--color-text, #e8edf5)" }}> tafeldiploma</strong> 🏆. Elke keer verse sommen — dus print zo vaak je wilt.
         </p>
 
@@ -345,10 +345,10 @@ export default function TafelbladenPage({ setPage } = {}) {
             </div>
             <div style={{ display: "flex", justifyContent: "space-around", marginTop: 34, fontSize: 14, color: "#3a4658" }}>
               <span>Datum: ______________</span>
-              <span>Handtekening juf/meester/ouder: ______________</span>
+              <span>Handtekening juf/meester/ouder/verzorger: ______________</span>
             </div>
             <div style={{ marginTop: 22, fontSize: 12, color: "#9aa6b4" }}>
-              Tip voor de ouder: één tafel per keer aftekenen — klein succes, groot effect. · {BRAND.domain}
+              Tip voor thuis: één tafel per keer aftekenen — klein succes, groot effect. · {BRAND.domain}
             </div>
           </div>
         </Sheet>

@@ -227,7 +227,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
         {/* Exclusief Pro blok */}
         <div style={{ borderRadius: 14, border: "1px solid rgba(255,183,77,0.25)", background: "rgba(255,183,77,0.06)", padding: "14px 16px", marginBottom: 20 }}>
           <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#ffb74d", marginBottom: 8 }}>
-            ⭐ Exclusief voor Pro-gebruikers
+            ⭐ Alleen met Familie
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
             {[
@@ -247,7 +247,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
             <span style={{ fontSize: 22 }}>ℹ️</span>
             <div>
               <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "rgba(255,255,255,0.7)", marginBottom: 2 }}>Proefperiode al gebruikt</div>
-              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.4)" }}>Je hebt eerder al een gratis proefperiode gehad. Neem een abonnement om door te gaan.</div>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.4)" }}>Je hebt eerder al een gratis proefperiode gehad. Kies Familie om door te gaan: € 39 voor 12 maanden, één keer betalen.</div>
             </div>
           </div>
         ) : trialDone ? (

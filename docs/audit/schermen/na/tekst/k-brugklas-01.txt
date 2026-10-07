@@ -1,0 +1,36 @@
+# brugklas: naam + niveau ingevuld
+# http://localhost:4174/
+Spring naar hoofdinhoud
+Je koos:
+student
+← terug
+Wat is je naam?
+Welke klas zit je in?
+sla over →
+1
+2
+3
+4
+5
+6
+Later aanpassen kan altijd op je eigen pagina.
+Welk type onderwijs volg je?
+VMBO-TL
+HAVO
+HAVO/VWO
+VWO
+Gymnasium
+Doorgaan als gast
+Inloggen met Google
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244
+🏠
+Home
+📚
+Leren
+Toets
+🎮
+Spelletje
+Mijn pagina

@@ -260,8 +260,8 @@ export default function Startfoto({ parentUserId, childName, heeftBaseline, onCl
                   </div>
                 ))}
                 <div style={{ fontSize: 11.5, color: "rgba(255,255,255,0.45)", marginTop: 8, lineHeight: 1.5 }}>
-                  In de volgende update maakt Leerkwartier hier automatisch een dag-voor-dag
-                  kwartierplan van. Je kind vindt deze onderwerpen nu al via 📚 Leren.
+                  Hiervan maakt Leerkwartier in stap 3 van het kwartierplan een weekplan
+                  van vijf kwartiertjes. Je kind vindt deze onderwerpen nu al via 📚 Leren.
                 </div>
               </div>
             )}

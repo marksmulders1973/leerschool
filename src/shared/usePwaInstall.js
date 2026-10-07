@@ -217,9 +217,9 @@ export default function usePwaInstall() {
     }
     if (browser === "firefox") {
       return {
-        title: "Firefox ondersteunt geen install",
+        title: "Firefox kan dit niet installeren",
         steps: [
-          "Firefox desktop heeft geen ingebouwde PWA-install. Maak in plaats daarvan een bladwijzer (Ctrl/Cmd+D) of gebruik Chrome / Edge.",
+          "Firefox op de computer kan een website niet als app installeren. Maak in plaats daarvan een bladwijzer (Ctrl/Cmd+D) of gebruik Chrome / Edge.",
         ],
       };
     }

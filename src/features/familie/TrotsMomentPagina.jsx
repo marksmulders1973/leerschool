@@ -31,7 +31,7 @@ export default function TrotsMomentPagina({ setPage }) {
         </div>
 
         <div style={{ marginTop: 22, fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.55 }}>
-          ✨ Bèta — het eerste moment (foutloos een pad afronden) is live. Meer mijlpalen (streak, onderwerp gehaald)
+          ✨ Bèta — het eerste moment (foutloos een onderwerp afronden) is live. Meer mijlpalen (elke dag oefenen, onderwerp gehaald)
           komen erbij. Nooit een seintje dat straft: alleen aanmoediging.
         </div>
       </div>

@@ -206,7 +206,7 @@ export default function BrugklasPage({ setPage } = {}) {
               <p style={{ margin: "0 0 4px" }}><strong>Naam:</strong> ______________________________</p>
               <p style={{ margin: 0 }}><strong>Datum:</strong> ______________________________</p>
             </div>
-            <div style={{ marginTop: 44, color: "#9aa6b4", fontSize: 12 }}>© {BRAND.publisher} · {BRAND.domain} · Eigen oefenvragen in stijl van de brugklas.</div>
+            <div style={{ marginTop: 44, color: "#9aa6b4", fontSize: 12 }}>© {BRAND.publisher} · {BRAND.domain} · Eigen oefenvragen op brugklasniveau.</div>
           </div>
         </Sheet>
 

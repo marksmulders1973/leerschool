@@ -37,7 +37,7 @@ export default function ParkGalerij({ authUser, onHome }) {
         </div>
         <p style={{ color: "rgba(255,255,255,0.72)", font: "500 14px/1.6 system-ui", marginTop: 0 }}>
           Bekijk de parken die andere kinderen hebben gebouwd — klik erop om erin rond te lopen (alleen kijken).
-          Wil je jouw park hier ook? Ga naar je eigen park → <b>📤 Deel</b> → "Zet mijn park in de galerij".
+          Wil je jouw park hier ook? Ga naar je eigen park → <b>☰</b> → <b>📤 Delen & samen bouwen</b> → "Zet mijn park in de galerij".
         </p>
 
         {isAdmin && pending.length > 0 && (

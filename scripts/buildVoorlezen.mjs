@@ -164,7 +164,7 @@ const html = `<!DOCTYPE html>
 <div class="cijfers">
   <div class="cijfer"><b>${totTeksten}</b><span>korte teksten</span></div>
   <div class="cijfer"><b>${totVragen}</b><span>begripsvragen met uitleg</span></div>
-  <div class="cijfer"><b>${l1.versies + l2.versies} × 4</b><span>versies × treden — klimt mee</span></div>
+  <div class="cijfer"><b>${l1.versies + l2.versies} versies</b><span>van elk 4 treden — klimt mee</span></div>
   <div class="cijfer"><b>🔊</b><span>voorleesknop bij elke tekst</span></div>
 </div>
 

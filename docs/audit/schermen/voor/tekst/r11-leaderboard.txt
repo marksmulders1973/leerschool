@@ -1,0 +1,27 @@
+# Route /scorebord (vers apparaat)
+# http://localhost:4173/scorebord
+Spring naar hoofdinhoud
+←
+Scorebord 🏆
+🌐 Wereldwijd · Top 50
+🏠
+👤 Mijn
+🌐 Wereldwijd
+🛸 OBLITERATOR
+👑
+Kampioenen — dag · week · maand · jaar
+👑
+🏆
+Nog geen scores! Doe een toets om op het scorebord te komen.
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244
+🏠
+Home
+📚
+Leren
+Toets
+🎮
+Spelletje
+Mijn pagina

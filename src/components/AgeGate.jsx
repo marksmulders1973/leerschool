@@ -62,7 +62,7 @@ export default function AgeGate({ open = false, onConsent, onClose }) {
   const onParentSubmit = () => {
     const email = parentEmail.trim();
     if (email && !/^\S+@\S+\.\S+$/.test(email)) {
-      setEmailErr("Vul een geldig e-mailadres in (of laat leeg als ouder erbij is).");
+      setEmailErr("Vul een geldig e-mailadres in, of laat het veld leeg.");
       return;
     }
     opslaan({ ageGroup, parentPresent: true, parentEmail: email || null });
@@ -104,7 +104,7 @@ export default function AgeGate({ open = false, onConsent, onClose }) {
           textAlign: "center", lineHeight: 1.5, margin: "0 0 20px",
         }}>
           Voordat we je voortgang bewaren, vragen we even hoe oud je bent.
-          Voor kinderen onder de 16 vragen we ook of een ouder er bij is.
+          Voor kinderen onder de 16 vragen we ook of een ouder of verzorger erbij is.
         </p>
 
         {step === "age" && (
@@ -154,7 +154,7 @@ export default function AgeGate({ open = false, onConsent, onClose }) {
               een ouder of verzorger om hier akkoord te geven. (Dit vraagt de privacywet.)
             </div>
             <p style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", margin: "0 0 8px" }}>
-              <strong>E-mail van ouder</strong> (optioneel — helpt ons later contact te zoeken)
+              <strong>E-mail van ouder of verzorger</strong> (optioneel — dan kunnen we later contact opnemen)
             </p>
             <input
               type="email"
@@ -192,7 +192,7 @@ export default function AgeGate({ open = false, onConsent, onClose }) {
                 boxShadow: "0 6px 20px rgba(0,200,83,0.4)",
               }}
             >
-              ✅ Mijn ouder is erbij — verder
+              ✅ Mijn ouder of verzorger is erbij — verder
             </button>
             <button
               onClick={() => { setStep("age"); setAgeGroup(null); }}

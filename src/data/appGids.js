@@ -35,7 +35,7 @@ export const APP_GIDS = [
     id: "weekmail",
     rol: "ouder",
     vraag: "Krijg ik vanzelf bericht over de voortgang?",
-    antwoord: "Ja — elke maandag krijg je per gekoppeld kind een weekrapport in je mail: wat er geoefend is, het sterkste onderwerp en één aandachtspunt. Aan of uit te zetten per kind, en je kunt een tweede adres (partner of medeverzorger) toevoegen.",
+    antwoord: "Ja — elke vrijdagmiddag krijg je per gekoppeld kind een weekrapport in je mail: wat er geoefend is, het sterkste onderwerp en één aandachtspunt. Aan of uit te zetten per kind, en je kunt een tweede adres (partner of medeverzorger) toevoegen.",
   },
   {
     id: "printen",
@@ -53,7 +53,7 @@ export const APP_GIDS = [
     id: "doorstroomtoets",
     rol: "beide",
     vraag: "Wanneer is de Doorstroomtoets en hoe oefen ik ervoor?",
-    antwoord: "De Doorstroomtoets is in de eerste twee weken van februari (groep 8). In de app kun je per onderdeel oefenen mét uitleg op 3 niveaus, of een hele proeftoets doen. Een kwartier per dag vanaf november is genoeg — korte sessies werken beter dan lange.",
+    antwoord: "De Doorstroomtoets is voor groep 8, tussen eind januari en half februari (in 2027: 25 januari t/m 12 februari). In de app kun je per onderdeel oefenen mét uitleg op 3 niveaus, of een hele proeftoets doen. Een kwartier per dag vanaf november is genoeg — korte sessies werken beter dan lange.",
   },
   {
     id: "leesladder",

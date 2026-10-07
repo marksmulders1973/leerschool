@@ -54,7 +54,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
   const canShowInstall = !isStandalone && !installed;
 
   const appShareUrl = `https://${BRAND.domain}/welkom.html`;
-  const appShareText = "Gratis oefenen voor groep 3-8 en klas 1-6 (MAVO, HAVO, VWO, gymnasium). Alles gratis t/m eind 2026!";
+  const appShareText = "Gratis oefenen voor groep 3-8 en klas 1-6 (MAVO, HAVO, VWO, gymnasium). Oefenen gratis, gegarandeerd t/m 2031!";
   const canNativeShare = typeof navigator !== "undefined" && typeof navigator.share === "function";
 
   const logShareEvent = (platform) => {
@@ -275,7 +275,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
                   border: `1px solid ${kleur}60`,
                 }}>
                   <div style={{ fontFamily: "var(--font-display)", fontSize: 13, color: "rgba(255,255,255,0.6)", marginBottom: 4, letterSpacing: 0.3 }}>
-                    CITO-SIMULATIE · RUWE INDICATIE (1 OEFENING)
+                    DOORSTROOMTOETS-SIMULATIE · RUWE INDICATIE (1 OEFENING)
                   </div>
                   <div style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 800, color: kleur, marginBottom: 6 }}>
                     {emoji} Past nu bij {advies}
@@ -429,7 +429,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
         {/* Deel resultaat naar leraar */}
         <div style={{ marginTop: 12, padding: 16, background: "#0a1f30", borderRadius: 16, border: "1px solid rgba(0,212,255,0.2)" }}>
           <p style={{ fontSize: 13, color: "var(--color-text-muted)", fontWeight: 700, marginBottom: 10, textAlign: "center", margin: "0 0 10px" }}>
-            📬 Stuur resultaat naar leraar/ouder
+            📬 Stuur resultaat naar leerkracht, ouder of verzorger
           </p>
           <div style={{ display: "flex", gap: 8 }}>
             <button onClick={sendViaWhatsApp} style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#25D366", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
@@ -525,7 +525,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
         {(
           <div style={{ marginTop: 20, padding: 18, background: "#2a1500", borderRadius: 16, border: "2px solid #ff9800", animation: "slideUp 0.4s ease" }}>
             <div style={{ fontFamily: "var(--font-display)", fontSize: 17, color: "#ffb74d", fontWeight: 700, marginBottom: 4 }}>😕 Hier heb ik moeite mee</div>
-            <div style={{ fontSize: 13, color: "var(--color-text-muted)", marginBottom: 14 }}>Vraag hulp aan je leerkracht of ouder — niemand hoeft het te weten, jij stuurt het zelf!</div>
+            <div style={{ fontSize: 13, color: "var(--color-text-muted)", marginBottom: 14 }}>Vraag hulp aan je leerkracht, ouder of verzorger — niemand hoeft het te weten, jij stuurt het zelf!</div>
             <div style={{ display: "flex", gap: 8 }}>
               <button onClick={() => {
                 const msg = `Hoi! 👋\n\nIk ben ${userName} en ik heb geoefend op ${BRAND.name}.\n\nIk heb moeite met: ${subjLabel}\nMijn score was: ${latest.score}/${latest.total} (${latest.percentage}%)${wrongQuestionsBlock}\n\nKun je me helpen? 🙏`;
@@ -551,9 +551,9 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
         {/* Cito smart aanbeveling */}
         {quiz?.citoId && (() => {
           const pct = latest.percentage;
-          const onderdelen = { gemengd: "Alles gemengd", rekenen: "Rekenen & Wiskunde", taal: "Taal", "begrijpend-lezen": "Begrijpend Lezen", wereldorientatie: "Wereld Oriëntatie" };
+          const onderdelen = { gemengd: "Alles gemengd", rekenen: "Rekenen & Wiskunde", taal: "Taal", "begrijpend-lezen": "Begrijpend Lezen", wereldorientatie: "Wereldoriëntatie" };
           const label = onderdelen[quiz.citoId] || "Doorstroomtoets";
-          const nextSuggestions = { rekenen: "Taal", taal: "Begrijpend Lezen", "begrijpend-lezen": "Wereld Oriëntatie", wereldorientatie: "Alles gemengd", gemengd: null };
+          const nextSuggestions = { rekenen: "Taal", taal: "Begrijpend Lezen", "begrijpend-lezen": "Wereldoriëntatie", wereldorientatie: "Alles gemengd", gemengd: null };
           const next = nextSuggestions[quiz.citoId];
           return (
             <div style={{ marginTop: 20, padding: "16px 18px", borderRadius: 16, background: pct >= 70 ? "rgba(0,200,83,0.1)" : "rgba(255,152,0,0.12)", border: `1px solid ${pct >= 70 ? "rgba(0,200,83,0.3)" : "rgba(255,152,0,0.35)"}` }}>
@@ -561,7 +561,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
                 {pct >= 80 ? `🏆 Geweldig bij ${label}!` : pct >= 60 ? `👍 Goed bezig bij ${label}` : `💪 ${label} verdient meer oefening`}
               </div>
               <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.55)", lineHeight: 1.5 }}>
-                {pct >= 80 && next ? `Je scoort goed hier! Ga nu ${next} oefenen.` : pct < 60 ? `Oefen dit onderdeel vaker om je eindtoets score te verhogen.` : `Nog een rondje om het vast te zetten, dan verder naar het volgende onderdeel.`}
+                {pct >= 80 && next ? `Je scoort goed hier! Ga nu ${next} oefenen.` : pct < 60 ? `Oefen dit onderdeel vaker om je Doorstroomtoets-score te verhogen.` : `Nog een rondje om het vast te zetten, dan verder naar het volgende onderdeel.`}
               </div>
               <button onClick={pct >= 80 && next ? onBack : onRetry} style={{ marginTop: 10, padding: "9px 16px", borderRadius: 12, border: "none", background: pct >= 70 ? "var(--color-brand-primary)" : "#ff9800", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, cursor: "pointer" }}>
                 {pct >= 80 && next ? `Probeer ${next} →` : `Nog een keer ${label}`}
@@ -662,7 +662,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
                 🏆 Bewaar je score
               </div>
               <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", lineHeight: 1.4 }}>
-                Log in om je voortgang en streak bij te houden
+                Log in om je voortgang en je reeks bij te houden
               </div>
             </div>
             <button onClick={onLogin} style={{

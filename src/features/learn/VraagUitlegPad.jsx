@@ -143,7 +143,7 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
           lineHeight: 1.5,
           color: "var(--color-text)",
         }}>
-          💪 Probeer het straks eerst zelf. Hieronder staat hulp om de vraag te
+          💪 Probeer het eerst zelf. Hieronder staat hulp om de vraag te
           begrijpen — de korte uitleg met het antwoord verschijnt pas ná je eerste poging.
         </div></SteunTekst>
       )}

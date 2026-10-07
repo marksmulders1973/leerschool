@@ -1286,7 +1286,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     if (alleGevoerd) { flits("Alle dieren zijn vandaag al gevoerd 🌾"); return; }
     const terugAantal = dieren.filter((it) => it.verstopt).length;
     setPlacedItems((items) => items.map((it) => (isDierItem(it) ? { ...it, fed: vandaag(), verstopt: false } : it)));
-    flits(terugAantal > 0 ? `🎉 Alle dieren gevoerd — je vond ${terugAantal} verstopt dier${terugAantal > 1 ? "en" : ""}! ❤️` : "Alle dieren gevoerd! 🌾");
+    flits(terugAantal > 0 ? `🎉 Alle dieren gevoerd — je vond ${terugAantal} ${terugAantal > 1 ? "verstopte dieren" : "verstopt dier"}! ❤️` : "Alle dieren gevoerd! 🌾");
   };
 
   // 😋 Zelf klant zijn bij je eigen kraam (Mark 26 aug: "ik wil in het park ook
@@ -1380,7 +1380,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     flits(isHond
       ? `🦴 WOEF! ${naam} kwispelt wild en kluift smullend op het bot! ❤️`
       : `🦴 ${naam} vindt het bot prachtig en bewaart 'm als schat! ❤️`);
-    spreek(isHond ? "Woef woef! Mijn lievelingsbot! Dank je wel!" : "Wauw, een echt bot! Die bewaar ik als schat.");
+    spreek(isHond ? "Woef woef! Mijn lievelingsbot! Dank je wel!" : "Wauw, een echt bot! Dat bewaar ik als schat.");
     try { track("park_voer_gegeven", { type: "bot", aan: "maatje", buddy: buddyId }); } catch { /* */ }
   };
 
@@ -1601,7 +1601,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     const it = placedItems[selectedIdx];
     // gedeeld park: alleen je eigen bouwsels (of alles als je het park maakte); nooit
     // muntjes terug voor iets dat een ander kocht
-    if (samen && it.by && it.by !== userId && room?.eigenaar !== userId) { flits("Dat is niet van jou - je kunt alleen je eigen bouwsels weghalen"); return; }
+    if (samen && it.by && it.by !== userId && room?.eigenaar !== userId) { flits("Dat is niet van jou — je kunt alleen je eigen bouwsels weghalen"); return; }
     const terug = samen && it.by && it.by !== userId ? 0 : (it.price ?? prijsVan(it.assetId));
     setMeta((m) => (m ? { ...m, coins: m.coins + terug } : m));
     setPlacedItems((items) => items.filter((_, i) => i !== selectedIdx));
@@ -2416,7 +2416,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         <div style={{ position: "absolute", left: "50%", bottom: 150, transform: "translateX(-50%)", zIndex: 9, display: "flex", flexDirection: "column", alignItems: "center", gap: 2, pointerEvents: "none", maxWidth: "92%" }}>
           <div style={{ pointerEvents: "auto", display: "flex", alignItems: "center", gap: 10, background: "#fffef8", color: "#234", borderRadius: 14, padding: "10px 12px 10px 14px", boxShadow: "0 6px 20px rgba(0,0,0,.28)", font: "800 13.5px system-ui" }}>
             <span style={{ fontSize: 20 }}>👋</span>
-            <span>Welkom{naam ? ` ${naam}` : ""}! Tik hieronder op 🦊 Dieren en zet een dier in je park</span>
+            <span>Welkom{naam ? `, ${naam}` : ""}! Tik hieronder op 🦊 Dieren en zet een dier in je park</span>
             <button onClick={() => setWelkomWeg(true)} style={{ border: "none", borderRadius: 999, width: 26, height: 26, font: "700 13px system-ui", background: "#eee", cursor: "pointer", flex: "0 0 auto" }}>✕</button>
           </div>
           <span style={{ fontSize: 22, lineHeight: 1, filter: "drop-shadow(0 2px 3px rgba(0,0,0,.3))" }}>⬇️</span>
@@ -2513,7 +2513,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                 <Rij label="Opbrengst" sub="(alles wat binnenkwam)" waarde={`${st.opbrengst} 🪙`} kleur="#0a7d3c" />
                 <Rij label={`Inkoopkosten`} sub={`(${st.count} × ${kr.inkoop} 🪙)`} waarde={`− ${st.inkoopkosten} 🪙`} kleur="#c0392b" />
                 <Rij label="Brutowinst" waarde={`${brutowinst} 🪙`} sterk kleur={brutowinst >= 0 ? "#0a7d3c" : "#c0392b"} />
-                <Rij label="🧑 Verkopers-loon" sub="(vaste kost / dag)" waarde={`− ${VERKOPER_LOON} 🪙`} kleur="#c0392b" />
+                <Rij label="🧑 Verkopers-loon" sub="(vaste kosten per dag)" waarde={`− ${VERKOPER_LOON} 🪙`} kleur="#c0392b" />
                 <Rij label="Nettowinst" waarde={`${netto} 🪙`} sterk kleur={netto >= 0 ? "#0a7d3c" : "#c0392b"} />
               </div>
               <div style={{ margin: "8px 18px 0", padding: "9px 12px", background: "#fff8e6", border: "1px solid #f3e0a8", borderRadius: 12, font: "600 12px system-ui", color: "#7a5b00", lineHeight: 1.45 }}>
@@ -2630,7 +2630,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             setZeppelinRit(v);
             if (v) { setBouwen(false); setShopCat(null); setPlacing(null); setSelectedIdx(null); setMenuOpen(false); setFirstPerson(false); setBuddyEye(false); }
           }}
-          onContextLost={() => flits("Het park viel even stil — blijft het beeld bevroren? Doe de pagina dan opnieuw (veeg omlaag of druk F5), je park is veilig opgeslagen.")}
+          onContextLost={() => flits("Het park viel even stil — blijft het beeld bevroren? Laad de pagina dan opnieuw (veeg omlaag of druk F5), je park is veilig opgeslagen.")}
         />
       </Suspense>
       </ParkErrorBoundary>
@@ -3176,7 +3176,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                   {dialoog.step === 0
                     ? `${naam ? "Hoi " + naam + "! " : "Hoi! "}Hoe gaat het met ${String(praatVak).toLowerCase()}?`
                     : dialoog.reply === "lastig"
-                      ? "Niet erg — samen oefenen maakt het zo makkelijker. Zullen we?"
+                      ? "Niet erg — samen oefenen maakt het een stuk makkelijker. Zullen we?"
                       : "Knap! Nog even oefenen om het goed vast te houden?"}
                 </p>
               </div>
@@ -3371,7 +3371,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             <div style={{ font: "700 11.5px system-ui", color: "#8a4a8a", marginTop: 2 }}>💛 Voor jou klaargezet door je juf of meester!</div>
           )}
           {wandelStop.reden === "klaargezet-thuis" && (
-            <div style={{ font: "700 11.5px system-ui", color: "#8a4a8a", marginTop: 2 }}>💛 Voor jou klaargezet door thuis!</div>
+            <div style={{ font: "700 11.5px system-ui", color: "#8a4a8a", marginTop: 2 }}>💛 Thuis voor jou klaargezet!</div>
           )}
           {wandelStop.reden === "herhalen" && (
             <div style={{ font: "700 11.5px system-ui", color: "#8a6d1a", marginTop: 2 }}>🔁 Die ken je al een beetje — even opfrissen!</div>
@@ -3577,7 +3577,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
             {tafereel.souvenirAssetId && (
               <div style={{ margin: "8px 0 0", background: unlockedDieren.includes(tafereel.souvenirAssetId) ? "rgba(246,200,76,0.18)" : "rgba(0,0,0,0.045)", borderRadius: 12, padding: "9px 13px", font: "700 12.5px/1.5 system-ui", color: unlockedDieren.includes(tafereel.souvenirAssetId) ? "#7a5b00" : "#567" }}>
                 {unlockedDieren.includes(tafereel.souvenirAssetId)
-                  ? <>🎁 Je souvenir <b>{TAFEREEL_BY_ID[tafereel.id].souvenirNaam}</b> is vrijgespeeld — zet 'm neer via Bouwen → Dieren ✨</>
+                  ? <>🎁 Je souvenir is vrijgespeeld: <b>{TAFEREEL_BY_ID[tafereel.id].souvenirNaam}</b> — zet 'm neer via Bouwen → Dieren ✨</>
                   : <>🎁 Rond <b>{tafereel.leerLabel}</b> helemaal af en de kabouters bouwen een <b>{tafereel.souvenirNaam}</b> voor jouw eigen park.</>}
               </div>
             )}
@@ -3804,7 +3804,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                     </>
                   )}
                 </div>
-                <p style={{ color: "#777", fontSize: 12, marginBottom: 0, marginTop: 12 }}>De link toont geen naam en niemand kan je park veranderen. Wil je 'm niet meer delen? Vraag het me dan — we kunnen een nieuwe link maken.</p>
+                <p style={{ color: "#777", fontSize: 12, marginBottom: 0, marginTop: 12 }}>De link toont geen naam en niemand kan je park veranderen. Wil je 'm niet meer delen? Vraag het dan aan de maker via hallo@leerkwartier.app — we kunnen een nieuwe link maken.</p>
               </div>
             )}
           </div>
@@ -3864,7 +3864,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               );
             })}
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: 10 }}>
-              <button onClick={() => setBouwPlannen(maakBouwplannen())} title="Andere huisjes, dieren en kleuren" style={{ border: "none", borderRadius: 999, padding: "9px 14px", font: "800 13px system-ui", color: "#234", background: "#eaf3ea", cursor: "pointer" }}>🎲 Verras me met andere</button>
+              <button onClick={() => setBouwPlannen(maakBouwplannen())} title="Andere huisjes, dieren en kleuren" style={{ border: "none", borderRadius: 999, padding: "9px 14px", font: "800 13px system-ui", color: "#234", background: "#eaf3ea", cursor: "pointer" }}>🎲 Verras me opnieuw</button>
               <button onClick={() => setPanel(null)} style={{ border: "none", borderRadius: 999, padding: "9px 16px", font: "800 13px system-ui", color: "#234", background: "#eee", cursor: "pointer" }}>Klaar</button>
             </div>
           </div>

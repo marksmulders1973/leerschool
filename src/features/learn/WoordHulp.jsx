@@ -124,7 +124,7 @@ export default function WoordHulpSheet({ item, les, buddy, onLes, onBuddy, onClo
                 fontFamily: "var(--font-display)", cursor: "pointer", textAlign: "left",
               }}
             >
-              📚 Er is een hele les over dit! → {les.emoji ? `${les.emoji} ` : ""}{les.title}
+              📚 Er is een hele les over dit woord! → {les.emoji ? `${les.emoji} ` : ""}{les.title}
             </button>
           )}
           {typeof onBuddy === "function" && (

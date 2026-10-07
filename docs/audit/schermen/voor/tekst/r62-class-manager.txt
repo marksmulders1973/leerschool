@@ -1,0 +1,21 @@
+# Route /leerkracht/klassen (vers apparaat)
+# http://localhost:4173/leerkracht/klassen
+Spring naar hoofdinhoud
+←
+👥 Mijn Klassen
+Leerlingen beheren
+🏠
++
+Nieuwe klas aanmaken
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244
+🏠
+Home
+📚
+Leren
+Toets
+🎮
+Spelletje
+Mijn pagina

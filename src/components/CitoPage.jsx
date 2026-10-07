@@ -66,7 +66,7 @@ const ONDERDELEN = [
   {
     id: "wereldorientatie",
     icon: "🌍",
-    label: "Wereld Oriëntatie",
+    label: "Wereldoriëntatie",
     sub: "Aardrijkskunde, geschiedenis, natuur",
     color: "#2bbd7e",
     subject: "aardrijkskunde",
@@ -714,7 +714,7 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
             💡 Over de Doorstroomtoets
           </div>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", lineHeight: 1.6 }}>
-            De Doorstroomtoets (sinds 2024 — vroeger Doorstroomtoets) wordt gemaakt in groep 8 (begin februari).
+            De Doorstroomtoets (sinds 2024 — vroeger Cito-eindtoets) wordt gemaakt in groep 8 (begin februari).
             Vragen zijn in Cito/IEP/Route 8-stijl: meerkeuze over rekenen, taal, begrijpend lezen en wereldoriëntatie.
             Vragen komen uit een vaste vragenbank van 450+ items.
           </div>

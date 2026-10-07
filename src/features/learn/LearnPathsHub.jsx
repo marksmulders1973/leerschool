@@ -780,7 +780,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
           {/* Toets-pijler-pillen */}
           <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 8 }}>
             <span style={{ fontSize: 11, color: C.muted, fontWeight: 700, alignSelf: "center", marginRight: 4 }}>
-              CITO:
+              Doorstroomtoets:
             </span>
             {Object.entries(CITO_PIJLERS).map(([key, info]) => (
               <ClassFilterPill
@@ -1115,7 +1115,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
                       {(effectivePo ? myPoGroup : myBucket) && stats.mine !== stats.count
                         ? (stats.mine > 0
                           ? `${stats.mine} voor jouw ${effectivePo ? "groep" : "klas"} · ${stats.count} in totaal`
-                          : `nog niets voor jouw ${effectivePo ? "groep" : "klas"} · ${stats.count} in andere`)
+                          : `nog niets voor jouw ${effectivePo ? "groep" : "klas"} · ${stats.count} in totaal`)
                         : `${stats.count} onderwerp${stats.count === 1 ? "" : "en"}`}
                       {hasProgress && ` · ${pct}%`}
                     </div>
@@ -1759,7 +1759,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
         <div style={{ marginTop: 18, padding: "14px 14px", background: "rgba(255,255,255,0.02)", borderRadius: 12, border: `1px dashed ${C.border}`, textAlign: "center" }}>
           <div style={{ fontSize: 13, color: C.muted, lineHeight: 1.5 }}>
             Meer onderwerpen volgen.<br />
-            <span style={{ fontSize: 11 }}>Mis je iets? Geef het door via "Tip aan de maker" op de homepage.</span>
+            <span style={{ fontSize: 11 }}>Mis je iets? Geef het door via "Tip aan de maker" op de startpagina.</span>
           </div>
         </div>
       </div>

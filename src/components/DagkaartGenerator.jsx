@@ -267,7 +267,7 @@ export default function DagkaartGenerator({ setPage } = {}) {
 
       <h1 style={{ fontSize: 24, margin: "0 0 6px", color: "var(--color-text, #e8edf5)" }}>🖼️ Dagkaart maken</h1>
       <p style={{ color: "var(--color-text-muted, #8899aa)", margin: "0 0 16px", lineHeight: 1.5, fontSize: 14 }}>
-        Een branded Leerkwartier-kaart van de vraag van de dag — klaar om op Instagram/Facebook/Threads te posten.
+        Een Leerkwartier-kaart in huisstijl van de vraag van de dag — klaar om op Instagram/Facebook/Threads te posten.
         {vraag?.actueel ? " Vandaag: de actuele nieuwsvraag (mét bronvermelding; géén nieuwsfoto)." : " Vandaag: de vaste dagvraag."}
       </p>
 

@@ -152,7 +152,7 @@ export const OUDERKAARTEN = {
     zegDit:
       "Deze klank kun je niet horen, dus die leren we uit ons hoofd. 'Trein' schrijf je met de korte ei — die onthouden we samen.",
     valkuil:
-      "Ouders zoeken naar een sluitende regel die er niet is. Beter: gok niet op de klank, maar leer de veelvoorkomende woorden per stuk (net als losse woordbeelden).",
+      "Ouders en verzorgers zoeken vaak naar een sluitende regel die er niet is. Beter: gok niet op de klank, maar leer de veelvoorkomende woorden per stuk (net als losse woordbeelden).",
     voorbeeld:
       "Maak samen twee lijstjes op de koelkast: één met 'ei'-woorden (trein, klein, reis) en één met 'ij'-woorden (fijn, wijn, tijd). Vul ze de komende week aan.",
     woorden: [

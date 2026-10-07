@@ -60,7 +60,7 @@ export function ClassManager({ classes, onSave, onBack, onHome }) {
 
   return (
     <div style={styles.page}>
-      <Header title="👥 Mijn Klassen" subtitle="Leerlingen beheren" onBack={onBack} onHome={onHome} />
+      <Header title="👥 Mijn klassen" subtitle="Leerlingen beheren" onBack={onBack} onHome={onHome} />
       <div style={styles.content}>
 
         {classes.map(klas => (
@@ -94,7 +94,7 @@ export function ClassManager({ classes, onSave, onBack, onHome }) {
                   <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
                     <input style={{ ...styles.textInput, margin: 0 }} placeholder="Naam" value={editName} onChange={e => setEditName(e.target.value)} />
                     <input style={{ ...styles.textInput, margin: 0 }} placeholder="E-mailadres" type="email" value={editEmail} onChange={e => setEditEmail(e.target.value)} />
-                    <input style={{ ...styles.textInput, margin: 0 }} placeholder="WhatsApp nummer (bijv. 0612345678)" type="tel" value={editPhone} onChange={e => setEditPhone(e.target.value)} />
+                    <input style={{ ...styles.textInput, margin: 0 }} placeholder="WhatsApp-nummer (bijv. 0612345678)" type="tel" value={editPhone} onChange={e => setEditPhone(e.target.value)} />
                     <div style={{ display: "flex", gap: 6 }}>
                       <button style={styles.smallButton} onClick={() => saveStudent(klas.id, student.id)}>✓ Opslaan</button>
                       <button style={styles.smallButtonAlt} onClick={() => setEditingStudent(null)}>✕ Annuleer</button>
@@ -125,7 +125,7 @@ export function ClassManager({ classes, onSave, onBack, onHome }) {
                 <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
                   <input style={{ ...styles.textInput, margin: 0 }} placeholder="Naam leerling" value={newStudentName} onChange={e => setNewStudentName(e.target.value)} />
                   <input style={{ ...styles.textInput, margin: 0 }} placeholder="E-mailadres leerling" type="email" value={newStudentEmail} onChange={e => setNewStudentEmail(e.target.value)} />
-                  <input style={{ ...styles.textInput, margin: 0 }} placeholder="WhatsApp nummer (bijv. 0612345678)" type="tel" value={newStudentPhone} onChange={e => setNewStudentPhone(e.target.value)} />
+                  <input style={{ ...styles.textInput, margin: 0 }} placeholder="WhatsApp-nummer (bijv. 0612345678)" type="tel" value={newStudentPhone} onChange={e => setNewStudentPhone(e.target.value)} />
                   <div style={{ display: "flex", gap: 6 }}>
                     <button style={styles.smallButton} onClick={() => addStudent(klas.id)}>+ Toevoegen</button>
                     <button style={styles.smallButtonAlt} onClick={() => setNewStudentClassId(null)}>✕</button>
@@ -276,7 +276,7 @@ export function QuizPreview({ quizConfig, onConfirm, onBack, onHome }) {
   const confirmPaste = () => {
     const parsed = pastePreview && pastePreview.length > 0 ? pastePreview : parsePastedQuestions(pasteText);
     if (parsed.length === 0) {
-      alert("⚠️ Kon geen vragen herkennen.\n\nGebruik dit patroon:\n\n1. Vraag-tekst?\nA. Optie A\nB. Optie B *\nC. Optie C\nD. Optie D\n\n(* = correct antwoord)");
+      alert("⚠️ Kon geen vragen herkennen.\n\nGebruik dit patroon:\n\n1. Vraag-tekst?\nA. Optie A\nB. Optie B *\nC. Optie C\nD. Optie D\n\n(* = het goede antwoord)");
       return;
     }
     setQuestions(prev => [
@@ -700,7 +700,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
 
   return (
     <div style={styles.page}>
-      <Header title="Nieuwe Toets" subtitle={`Stap ${displayStep} van ${totalSteps}`} onBack={onBack} onHome={onHome} />
+      <Header title="Nieuwe toets" subtitle={`Stap ${displayStep} van ${totalSteps}`} onBack={onBack} onHome={onHome} />
       <div style={styles.content}>
         <div style={styles.progressBar}>
           <div style={{ ...styles.progressFill, width: `${(displayStep / totalSteps) * 100}%` }} />
@@ -1337,7 +1337,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                   </select>
                   {selectedClassId && (
                     <p style={{ fontSize: 11, color: "#00e676", marginTop: 6 }}>
-                      ✅ Na aanmaken verschijnt "📧 Mail klas" knop in je dashboard.
+                      ✅ Na aanmaken verschijnt de knop "📧 Mail klas" bij je toets.
                     </p>
                   )}
                 </div>

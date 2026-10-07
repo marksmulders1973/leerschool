@@ -41,7 +41,7 @@ function DicteeMailHaakje({ groep, score, totaal }) {
     try {
       const { error } = await supabase.from("upgrade_waitlist").insert({ email: m, plan: "dictee", source: "dictee-eindscherm", kind_groep: String(groep || ""), consent_at: new Date().toISOString() });
       if (error) throw error;
-      setStand("✓ Gelukt! Het eerste weekrapport komt maandag."); setEmail("");
+      setStand("✓ Gelukt! Het eerste weekrapport komt vrijdag."); setEmail("");
       try { track("dictee_email", { groep, score, totaal }); } catch { /* */ }
     } catch { setStand("Ging niet door — probeer het later nog eens."); }
   };
@@ -169,7 +169,7 @@ function LijstCode({ onGeladen }) {
   }, []); // eslint-disable-line
   return (
     <div style={{ background: "#fff", border: "2px solid #cde3d6", borderRadius: 14, padding: "12px 16px", margin: "14px 0 0", color: "#1c2840" }}>
-      <div style={{ font: "900 15px system-ui" }}>🔑 Code gekregen van je ouder of juf?</div>
+      <div style={{ font: "900 15px system-ui" }}>🔑 Code gekregen van thuis of van school?</div>
       <div style={{ display: "flex", gap: 8, marginTop: 8 }}>
         <input value={code} onChange={(e) => setCode(e.target.value.toUpperCase())} placeholder="bijv. K7PX2M" maxLength={6} autoCapitalize="characters" autoCorrect="off" spellCheck={false} style={{ flex: "1 1 120px", padding: "10px 12px", borderRadius: 10, border: "1px solid #cbd5e1", background: "#fff", color: "#1c2840", colorScheme: "light", font: "800 18px system-ui", letterSpacing: 3, minWidth: 0 }} />
         <button onClick={() => laad(code)} disabled={code.length !== 6} style={{ ...KNOP, opacity: code.length !== 6 ? .5 : 1 }}>▶ Start</button>
@@ -360,7 +360,7 @@ const DICTEE_UI = {
   "Ik hoor niets → lees-dictee": S4("I hear nothing → reading dictation", "لا أسمع شيئًا ← إملاء بالقراءة", "Я нічого не чую → диктант для читання", "Hiçbir şey duymuyorum → okuma diktesi", "Nu aud nimic → dictare de citit", "Не чувам нищо → диктовка за четене"),
   "Luister goed…": S4("Listen carefully…", "استمع جيدًا…", "Слухай уважно…", "İyi dinle…", "Ascultă cu atenție…", "Слушай внимателно…"),
   "Charley komt eraan…": S4("Charley is coming…", "تشارلي قادم…", "Чарлі вже йде…", "Charley geliyor…", "Charley vine…", "Чарли идва…"),
-  "Schrijf op het woord dat je hoorde.": S4("Write the word you heard.", "اكتب الكلمة التي سمعتها.", "Напиши слово, яке ти почув.", "Duyduğun kelimeyi yaz.", "Scrie cuvântul pe care l-ai auzit.", "Напиши думата, която чу."),
+  "Schrijf het woord op dat je hoorde.": S4("Write the word you heard.", "اكتب الكلمة التي سمعتها.", "Напиши слово, яке ти почув.", "Duyduğun kelimeyi yaz.", "Scrie cuvântul pe care l-ai auzit.", "Напиши думата, която чу."),
   "Goed zo!": S4("Well done!", "أحسنت!", "Молодець!", "Aferin!", "Bravo!", "Браво!"),
   "Controleer": S4("Check", "تحقّق", "Перевірити", "Kontrol et", "Verifică", "Провери"),
   "Volgende": S4("Next", "التالي", "Далі", "Sonraki", "Următoarea", "Напред"),
@@ -639,7 +639,7 @@ function DicteeInhoud({ userName = "", userLevel = "", onTerug, onVolgendBlok })
         <div style={{ flex: 1, background: "#fff", border: "2px solid #cde3d6", borderRadius: 16, padding: "12px 14px", fontSize: 15, lineHeight: 1.5, color: "#1c2840" }}>
           {status === "luister" && !leesModus && <Tik nl={spreekt ? "Luister goed…" : "Charley komt eraan…"}><span>{spreekt ? "🔊 Luister goed…" : "Charley komt eraan…"}</span></Tik>}
           {leesModus && toonZin && <span><b>Lees goed:</b> {item.zin}</span>}
-          {(status === "typen" || (leesModus && !toonZin && status !== "goed" && status !== "fout")) && <Tik nl="Schrijf op het woord dat je hoorde."><span>Schrijf op het woord dat je hoorde.{hint ? <> Het begint met een <b style={{ fontSize: 18 }}>{item.woord[0]}</b>.</> : null}</span></Tik>}
+          {(status === "typen" || (leesModus && !toonZin && status !== "goed" && status !== "fout")) && <Tik nl="Schrijf het woord op dat je hoorde."><span>Schrijf het woord op dat je hoorde.{hint ? <> Het begint met een <b style={{ fontSize: 18 }}>{item.woord[0]}</b>.</> : null}</span></Tik>}
           {status === "goed" && <Tik nl="Goed zo!"><span style={{ color: "#146c43", fontWeight: 800 }}>✅ Goed zo!</span></Tik>}
           {status === "fout" && <Tik nl={`Bijna! Het is ${item.woord}. ${item.regel}`}><span><span style={{ color: "#b42318", fontWeight: 800 }}>Bijna!</span> Het is <b>{item.woord}</b>. {item.regel}</span></Tik>}
         </div>

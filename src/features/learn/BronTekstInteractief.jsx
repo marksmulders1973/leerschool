@@ -286,7 +286,7 @@ export default function BronTekstInteractief({ body, woorden, resetKey }) {
               color: "var(--color-text-muted)", borderRadius: 6,
               padding: "2px 8px", fontSize: 10, cursor: "pointer",
               fontFamily: "var(--font-body)",
-            }}>Wis alle</button>
+            }}>Wis alles</button>
           )}
         </div>
       </div>

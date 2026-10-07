@@ -299,7 +299,7 @@ export default function TeacherHome({ userName, authUser, onLogin, quizzes, clas
                 </ul>
               </div>
               <div style={{ gridColumn: "1 / -1", padding: "10px 12px", background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.25)", borderRadius: 8, fontSize: 12.5, lineHeight: 1.5, color: "rgba(255,255,255,0.8)" }}>
-                <strong style={{ color: "#ffd54f" }}>✨ Wat Leerkwartier anders doet:</strong> bij een fout krijgt je leerling geen "fout!" + door, maar uitleg op 3 niveaus om zelf op door te klikken — als een bijlesdocent in de broekzak. En in 2026 is alles gratis (basis blijft daarna ook gratis). Plus complete leerpaden waar elk onderwerp van A tot Z wordt uitgelegd.
+                <strong style={{ color: "#ffd54f" }}>✨ Wat Leerkwartier anders doet:</strong> bij een fout krijgt je leerling geen "fout!" + door, maar uitleg op 3 niveaus om zelf op door te klikken — als een bijlesdocent in de broekzak. Voor scholen is alles gratis, gegarandeerd t/m 2031. Plus complete leerpaden waar elk onderwerp van A tot Z wordt uitgelegd.
               </div>
               {onRondleiding && (
                 <div style={{ gridColumn: "1 / -1", marginTop: 4, display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center" }}>
@@ -412,7 +412,7 @@ export default function TeacherHome({ userName, authUser, onLogin, quizzes, clas
         <div style={styles.actionRow}>
           <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, var(--color-brand-primary), #00e676)" }} onClick={onCreateQuiz}>
             <span style={{ fontSize: 28 }}>📝</span>
-            <span style={{ fontWeight: 700 }}>Nieuwe Toets</span>
+            <span style={{ fontWeight: 700 }}>Nieuwe toets</span>
           </button>
           <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, var(--color-brand-primary), #00a844)" }} onClick={onViewProgress}>
             <span style={{ fontSize: 28 }}>📊</span>
@@ -421,7 +421,7 @@ export default function TeacherHome({ userName, authUser, onLogin, quizzes, clas
         </div>
         <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #1565c0, #1e88e5)", width: "100%", marginBottom: 12 }} onClick={onManageClasses}>
           <span style={{ fontSize: 28 }}>👥</span>
-          <span style={{ fontWeight: 700 }}>Mijn Klassen{classes.length > 0 ? ` (${classes.length})` : ""}</span>
+          <span style={{ fontWeight: 700 }}>Mijn klassen{classes.length > 0 ? ` (${classes.length})` : ""}</span>
         </button>
         {/* Takenlijst (Brian's idee 2026-06-28): zet een lijstje leerpaden klaar
             voor de klas i.p.v. alleen een toets. */}
@@ -429,7 +429,7 @@ export default function TeacherHome({ userName, authUser, onLogin, quizzes, clas
           <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #7b1fa2, #9c27b0)", width: "100%", marginBottom: 12 }} onClick={onCreateTakenlijst}>
             <span style={{ fontSize: 28 }}>📋</span>
             <span style={{ fontWeight: 700, display: "inline-flex", alignItems: "center", gap: 8 }}>
-              Nieuwe Takenlijst
+              Nieuwe takenlijst
               {/* leerpaden klaarzetten blijft gratis t/m zeker 2031 (doorrol) — hét contrast naast de Pro-features */}
               <GratisBadge />
             </span>
@@ -538,7 +538,7 @@ export default function TeacherHome({ userName, authUser, onLogin, quizzes, clas
                         const vak = q.topic || subj?.label || "Vrij onderwerp";
                         const niveau = LEVELS.find(l => l.id === q.level)?.label || "";
                         const deadline = q.deadline ? `\n📅 Deadline: ${formatDate(q.deadline)}` : "";
-                        const text = `🎓 *${BRAND.name}* — Toets klaarstaan!\n\n📚 ${vak}${niveau ? ` · ${niveau}` : ""}${deadline}\n\nKlik op de link en start direct:\n👉 https://www.${BRAND.domain}?code=${q.code}`;
+                        const text = `🎓 *${BRAND.name}* — Toets staat klaar!\n\n📚 ${vak}${niveau ? ` · ${niveau}` : ""}${deadline}\n\nKlik op de link en start direct:\n👉 https://www.${BRAND.domain}?code=${q.code}`;
                         window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
                       }}>💬 Deel</button>
                       {q.classId && (() => {

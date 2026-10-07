@@ -1,0 +1,998 @@
+[
+ {
+  "id": "r01-home",
+  "titel": "Route / (vers apparaat)",
+  "url": "/",
+  "tekens": 1124,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r02-home-v2",
+  "titel": "Route /v2 (vers apparaat)",
+  "url": "/v2",
+  "tekens": 772,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r03-home-v3",
+  "titel": "Route /v3 (vers apparaat)",
+  "url": "/v3",
+  "tekens": 771,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r04-learn-paths-hub",
+  "titel": "Route /leren (vers apparaat)",
+  "url": "/leren",
+  "tekens": 931,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r05-learn-path",
+  "titel": "Route /leren/pad (vers apparaat)",
+  "url": "/leren",
+  "tekens": 931,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r06-curriculum",
+  "titel": "Route /leerlijn (vers apparaat)",
+  "url": "/leerlijn",
+  "tekens": 99,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r07-learn-meebezig",
+  "titel": "Route /komt-eraan (vers apparaat)",
+  "url": "/komt-eraan",
+  "tekens": 147,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r08-my-mastery",
+  "titel": "Route /voortgang (vers apparaat)",
+  "url": "/voortgang",
+  "tekens": 265,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r09-mijn-pagina",
+  "titel": "Route /mijn (vers apparaat)",
+  "url": "/mijn",
+  "tekens": 1362,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r10-kampioenen",
+  "titel": "Route /kampioenen (vers apparaat)",
+  "url": "/kampioenen",
+  "tekens": 471,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r11-leaderboard",
+  "titel": "Route /scorebord (vers apparaat)",
+  "url": "/scorebord",
+  "tekens": 334,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r12-student-progress",
+  "titel": "Route /voortgang/leerling (vers apparaat)",
+  "url": "/voortgang/leerling",
+  "tekens": 240,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r13-teacher-progress",
+  "titel": "Route /voortgang/leerkracht (vers apparaat)",
+  "url": "/voortgang/leerkracht",
+  "tekens": 249,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r14-student-home",
+  "titel": "Route /leerling (vers apparaat)",
+  "url": "/",
+  "tekens": 1124,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r15-teacher-home",
+  "titel": "Route /leerkracht (vers apparaat)",
+  "url": "/leerkracht",
+  "tekens": 3194,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r16-ouder-dashboard",
+  "titel": "Route /ouder (vers apparaat)",
+  "url": "/ouder",
+  "tekens": 728,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r17-self-study",
+  "titel": "Route /zelfstudie (vers apparaat)",
+  "url": "/zelfstudie",
+  "tekens": 927,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r18-textbook",
+  "titel": "Route /oefenen (vers apparaat)",
+  "url": "/oefenen",
+  "tekens": 289,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r19-cito",
+  "titel": "Route /cito (vers apparaat)",
+  "url": "/cito",
+  "tekens": 2339,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r20-examens",
+  "titel": "Route /examens (vers apparaat)",
+  "url": "/examens",
+  "tekens": 915,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r21-herkansing",
+  "titel": "Route /herkansing (vers apparaat)",
+  "url": "/herkansing",
+  "tekens": 1490,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r22-cito-leerpad-toets",
+  "titel": "Route /doorstroomtoets-oefentoets (vers apparaat)",
+  "url": "/doorstroomtoets-oefentoets",
+  "tekens": 685,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r23-rondleiding",
+  "titel": "Route /rondleiding (vers apparaat)",
+  "url": "/rondleiding",
+  "tekens": 1790,
+  "fouten": []
+ },
+ {
+  "id": "r24-oefenpakket",
+  "titel": "Route /oefenpakket (vers apparaat)",
+  "url": "/oefenpakket",
+  "tekens": 3449,
+  "fouten": []
+ },
+ {
+  "id": "r25-leesladder",
+  "titel": "Route /leesladder (vers apparaat)",
+  "url": "/leesladder",
+  "tekens": 4092,
+  "fouten": []
+ },
+ {
+  "id": "r26-dictee",
+  "titel": "Route /dictee (vers apparaat)",
+  "url": "/dictee",
+  "tekens": 1180,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r27-werkwoorden",
+  "titel": "Route /werkwoorden (vers apparaat)",
+  "url": "/werkwoorden",
+  "tekens": 1383,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r28-vandaag-kwartier",
+  "titel": "Route /vandaag-kwartier (vers apparaat)",
+  "url": "/vandaag-kwartier",
+  "tekens": 223,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r29-printen",
+  "titel": "Route /printen (vers apparaat)",
+  "url": "/printen",
+  "tekens": 4307,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r30-tafelbladen",
+  "titel": "Route /tafelbladen (vers apparaat)",
+  "url": "/tafelbladen",
+  "tekens": 10655,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r31-redactiebladen",
+  "titel": "Route /redactiebladen (vers apparaat)",
+  "url": "/redactiebladen",
+  "tekens": 8311,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r32-dictees",
+  "titel": "Route /dictees (vers apparaat)",
+  "url": "/dictees",
+  "tekens": 9210,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r33-familie",
+  "titel": "Route /familie (vers apparaat)",
+  "url": "/familie",
+  "tekens": 2868,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r34-paraatheid",
+  "titel": "Route /familie/paraatheid (vers apparaat)",
+  "url": "/familie/paraatheid",
+  "tekens": 1274,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r35-oefenboekje",
+  "titel": "Route /oefenboekje (vers apparaat)",
+  "url": "/oefenboekje",
+  "tekens": 1928,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r36-diploma",
+  "titel": "Route /diploma (vers apparaat)",
+  "url": "/diploma",
+  "tekens": 1610,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r37-ouderkaart",
+  "titel": "Route /ouderkaart (vers apparaat)",
+  "url": "/ouderkaart",
+  "tekens": 2630,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r38-ouderadvies",
+  "titel": "Route /ouderadvies (vers apparaat)",
+  "url": "/",
+  "tekens": 1124,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r39-weekschema",
+  "titel": "Route /weekschema (vers apparaat)",
+  "url": "/weekschema",
+  "tekens": 1613,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r40-trots",
+  "titel": "Route /trots (vers apparaat)",
+  "url": "/trots",
+  "tekens": 1064,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r41-vonk",
+  "titel": "Route /vonk (vers apparaat)",
+  "url": "/vonk",
+  "tekens": 1570,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r42-brugklas",
+  "titel": "Route /brugklas (vers apparaat)",
+  "url": "/brugklas",
+  "tekens": 4828,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r43-dagkaart",
+  "titel": "Route /dagkaart (vers apparaat)",
+  "url": "/dagkaart",
+  "tekens": 499,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r44-tafels",
+  "titel": "Route /tafels (vers apparaat)",
+  "url": "/tafels",
+  "tekens": 433,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r45-redactiesommen",
+  "titel": "Route /redactiesommen (vers apparaat)",
+  "url": "/redactiesommen",
+  "tekens": 377,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r46-spelling",
+  "titel": "Route /spelling (vers apparaat)",
+  "url": "/spelling",
+  "tekens": 434,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r47-woordenschat",
+  "titel": "Route /woordenschat (vers apparaat)",
+  "url": "/woordenschat",
+  "tekens": 427,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r48-begrijpend-lezen",
+  "titel": "Route /begrijpend-lezen (vers apparaat)",
+  "url": "/begrijpend-lezen",
+  "tekens": 525,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r49-play",
+  "titel": "Route /quiz (vers apparaat)",
+  "url": "/",
+  "tekens": 1124,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r50-results",
+  "titel": "Route /resultaat (vers apparaat)",
+  "url": "/",
+  "tekens": 1124,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r51-obliteratorPlay",
+  "titel": "Route /obliterator (vers apparaat)",
+  "url": "/obliterator",
+  "tekens": 274,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r52-supporterGame",
+  "titel": "Route /supporter (vers apparaat)",
+  "url": "/supporter",
+  "tekens": 758,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r53-zoo",
+  "titel": "Route /dierentuin (vers apparaat)",
+  "url": "/dierentuin",
+  "tekens": 1214,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r54-spelletje",
+  "titel": "Route /spelletje (vers apparaat)",
+  "url": "/spelletje",
+  "tekens": 219,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r55-nieuwkomers",
+  "titel": "Route /nieuwkomers (vers apparaat)",
+  "url": "/nieuwkomers",
+  "tekens": 3647,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r56-imposter",
+  "titel": "Route /spelletje/imposter (vers apparaat)",
+  "url": "/spelletje/imposter",
+  "tekens": 458,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r57-galerij",
+  "titel": "Route /parken (vers apparaat)",
+  "url": "/parken",
+  "tekens": 406,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r58-maatje",
+  "titel": "Route /maatje (vers apparaat)",
+  "url": "/maatje",
+  "tekens": 402,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r59-werkblad",
+  "titel": "Route /leerkracht/werkblad (vers apparaat)",
+  "url": "/leerkracht/werkblad",
+  "tekens": 534,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r60-create-quiz",
+  "titel": "Route /leerkracht/toets-maken (vers apparaat)",
+  "url": "/leerkracht/toets-maken",
+  "tekens": 794,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r61-quiz-preview",
+  "titel": "Route /leerkracht/toets-preview (vers apparaat)",
+  "url": "/leerkracht/toets-preview",
+  "tekens": 147,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r62-class-manager",
+  "titel": "Route /leerkracht/klassen (vers apparaat)",
+  "url": "/leerkracht/klassen",
+  "tekens": 210,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r63-lobby",
+  "titel": "Route /lobby (vers apparaat)",
+  "url": "/lobby",
+  "tekens": 337,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r64-pro",
+  "titel": "Route /pro (vers apparaat)",
+  "url": "/pro",
+  "tekens": 3464,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r65-upgrade",
+  "titel": "Route /upgrade (vers apparaat)",
+  "url": "/upgrade",
+  "tekens": 99,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r66-admin-feedback",
+  "titel": "Route /admin/feedback (vers apparaat)",
+  "url": "/admin/feedback",
+  "tekens": 195,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r67-admin-stats",
+  "titel": "Route /admin/stats (vers apparaat)",
+  "url": "/admin/stats",
+  "tekens": 136,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r68-admin-ai-referrers",
+  "titel": "Route /admin/ai-referrers (vers apparaat)",
+  "url": "/admin/ai-referrers",
+  "tekens": 552,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r69-wishes",
+  "titel": "Route /tips (vers apparaat)",
+  "url": "/tips",
+  "tekens": 1201,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r70-actie",
+  "titel": "Route /actie (vers apparaat)",
+  "url": "/actie",
+  "tekens": 742,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r71-dank",
+  "titel": "Route /dank (vers apparaat)",
+  "url": "/dank",
+  "tekens": 635,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r72-vandaag",
+  "titel": "Route /vandaag (vers apparaat)",
+  "url": "/vandaag",
+  "tekens": 276,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r73-kwartiercheck",
+  "titel": "Route /kwartiercheck (vers apparaat)",
+  "url": "/kwartiercheck",
+  "tekens": 1861,
+  "fouten": []
+ },
+ {
+  "id": "r74-start-kwartier",
+  "titel": "Route /start (vers apparaat)",
+  "url": "/start",
+  "tekens": 303,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r75-klas",
+  "titel": "Route /klas (vers apparaat)",
+  "url": "/klas",
+  "tekens": 769,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r76-klassikaal",
+  "titel": "Route /klassikaal (vers apparaat)",
+  "url": "/klassikaal",
+  "tekens": 1259,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r77-digibord",
+  "titel": "Route /klassikaal/bord (vers apparaat)",
+  "url": "/klassikaal/bord",
+  "tekens": 1259,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "k-groep4-01",
+  "titel": "groep4: naam + niveau ingevuld",
+  "url": "/",
+  "tekens": 1124,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "k-groep4-02",
+  "titel": "groep4: eerste scherm na 'Doorgaan als gast'",
+  "url": "/",
+  "tekens": 1124,
+  "fouten": []
+ },
+ {
+  "id": "k-groep4-03-fout1",
+  "titel": "Expres fout antwoord (🎟️ Code gekregen? \nVul hem hier in) — feedback lezen",
+  "url": "/",
+  "tekens": 1447,
+  "fouten": []
+ },
+ {
+  "id": "k-groep4-04",
+  "titel": "groep4: na het start-kwartier",
+  "url": "/",
+  "tekens": 1447,
+  "fouten": []
+ },
+ {
+  "id": "k-groep4-10",
+  "titel": "groep4: /mijn na start",
+  "url": "/mijn",
+  "tekens": 1362,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "k-groep4-11",
+  "titel": "groep4: /vandaag-kwartier na start",
+  "url": "/vandaag-kwartier",
+  "tekens": 223,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "k-groep4-12",
+  "titel": "groep4: /leren na start",
+  "url": "/leren",
+  "tekens": 931,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "k-groep8-01",
+  "titel": "groep8: naam + niveau ingevuld",
+  "url": "/",
+  "tekens": 1124,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "k-groep8-02",
+  "titel": "groep8: eerste scherm na 'Doorgaan als gast'",
+  "url": "/",
+  "tekens": 1124,
+  "fouten": []
+ },
+ {
+  "id": "k-groep8-03-fout1",
+  "titel": "Expres fout antwoord (🎟️ Code gekregen? \nVul hem hier in) — feedback lezen",
+  "url": "/",
+  "tekens": 1447,
+  "fouten": []
+ },
+ {
+  "id": "k-groep8-04",
+  "titel": "groep8: na het start-kwartier",
+  "url": "/",
+  "tekens": 1447,
+  "fouten": []
+ },
+ {
+  "id": "k-groep8-10",
+  "titel": "groep8: /mijn na start",
+  "url": "/mijn",
+  "tekens": 1362,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "k-groep8-11",
+  "titel": "groep8: /vandaag-kwartier na start",
+  "url": "/vandaag-kwartier",
+  "tekens": 223,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "k-groep8-12",
+  "titel": "groep8: /leren na start",
+  "url": "/leren",
+  "tekens": 931,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "k-brugklas-01",
+  "titel": "brugklas: naam + niveau ingevuld",
+  "url": "/",
+  "tekens": 1124,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "k-brugklas-02",
+  "titel": "brugklas: eerste scherm na 'Doorgaan als gast'",
+  "url": "/",
+  "tekens": 1124,
+  "fouten": []
+ },
+ {
+  "id": "k-brugklas-03-fout1",
+  "titel": "Expres fout antwoord (🎟️ Code gekregen? \nVul hem hier in) — feedback lezen",
+  "url": "/",
+  "tekens": 1447,
+  "fouten": []
+ },
+ {
+  "id": "k-brugklas-04",
+  "titel": "brugklas: na het start-kwartier",
+  "url": "/",
+  "tekens": 1447,
+  "fouten": []
+ },
+ {
+  "id": "k-brugklas-10",
+  "titel": "brugklas: /mijn na start",
+  "url": "/mijn",
+  "tekens": 1362,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "k-brugklas-11",
+  "titel": "brugklas: /vandaag-kwartier na start",
+  "url": "/vandaag-kwartier",
+  "tekens": 223,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "k-brugklas-12",
+  "titel": "brugklas: /leren na start",
+  "url": "/leren",
+  "tekens": 931,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "g8-toets-01",
+  "titel": "Groep 8: Doorstroomtoets-oefentoets",
+  "url": "/doorstroomtoets-oefentoets",
+  "tekens": 685,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "g8-toets-02-fout1",
+  "titel": "Expres fout antwoord (A.25 min werk + 5 min pauze) — feedback lezen",
+  "url": "/doorstroomtoets-oefentoets",
+  "tekens": 281,
+  "fouten": []
+ },
+ {
+  "id": "g8-toets-02-fout2",
+  "titel": "Expres fout antwoord (A.Afrika) — feedback lezen",
+  "url": "/doorstroomtoets-oefentoets",
+  "tekens": 291,
+  "fouten": []
+ },
+ {
+  "id": "g8-toets-02-fout3",
+  "titel": "Expres fout antwoord (A.37,5 km/h) — feedback lezen",
+  "url": "/doorstroomtoets-oefentoets",
+  "tekens": 311,
+  "fouten": []
+ },
+ {
+  "id": "pad-01",
+  "titel": "Leren-overzicht",
+  "url": "/leren",
+  "tekens": 931,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "ouder-01",
+  "titel": "Ouder: tikt 'ouder of verzorger'",
+  "url": "/ouder",
+  "tekens": 728,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "ouder-02",
+  "titel": "Ouder: /ouder op vers apparaat (niet ingelogd)",
+  "url": "/ouder",
+  "tekens": 728,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "ouder-03",
+  "titel": "Ouder: Kwartiercheck",
+  "url": "/kwartiercheck",
+  "tekens": 1861,
+  "fouten": []
+ },
+ {
+  "id": "nieuwk-01",
+  "titel": "Nieuwkomer: na 'Ik ben nieuwkomer'",
+  "url": "/nieuwkomers",
+  "tekens": 3647,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "nieuwk-02",
+  "titel": "Nieuwkomer: eerste oefening",
+  "url": "/nieuwkomers",
+  "tekens": 6486,
+  "fouten": []
+ },
+ {
+  "id": "nieuwk-03-fout1",
+  "titel": "Expres fout antwoord (← Terug) — feedback lezen",
+  "url": "/",
+  "tekens": 1124,
+  "fouten": []
+ },
+ {
+  "id": "juf-01",
+  "titel": "Leerkracht: /klas",
+  "url": "/klas",
+  "tekens": 769,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "juf-02",
+  "titel": "Leerkracht: /leerkracht",
+  "url": "/leerkracht",
+  "tekens": 3194,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "geenplaatjes-1",
+  "titel": "Plaatjes geblokkeerd: /",
+  "url": "/",
+  "tekens": 1124,
+  "fouten": []
+ },
+ {
+  "id": "geenplaatjes-2",
+  "titel": "Plaatjes geblokkeerd: /nieuwkomers",
+  "url": "/nieuwkomers",
+  "tekens": 3647,
+  "fouten": []
+ },
+ {
+  "id": "geenplaatjes-3",
+  "titel": "Plaatjes geblokkeerd: /tafelbladen",
+  "url": "/tafelbladen",
+  "tekens": 10655,
+  "fouten": []
+ },
+ {
+  "id": "geenplaatjes-4",
+  "titel": "Plaatjes geblokkeerd: /dierentuin",
+  "url": "/dierentuin",
+  "tekens": 1214,
+  "fouten": []
+ },
+ {
+  "id": "geenplaatjes-5",
+  "titel": "Plaatjes geblokkeerd: /mijn",
+  "url": "/mijn",
+  "tekens": 1362,
+  "fouten": []
+ }
+]

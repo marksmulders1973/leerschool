@@ -1,0 +1,22 @@
+# Route /spelletje (vers apparaat)
+# http://localhost:4173/spelletje
+Spring naar hoofdinhoud
+🎮 Spelletje
+Wat wil je spelen?
+🐾
+Park
+🕵️
+Bedrieger
+← Terug naar Home
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244
+🏠
+Home
+📚
+Leren
+Toets
+🎮
+Spelletje
+Mijn pagina

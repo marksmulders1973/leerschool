@@ -43,7 +43,7 @@ export default function KindAcceptBanner({ userName }) {
         .update({ verified: true })
         .eq("id", id);
       setPending((prev) => prev.filter((p) => p.id !== id));
-      setDoneMsg("✓ Bevestigd. Je ouder kan nu je scores zien.");
+      setDoneMsg("✓ Bevestigd. Je ouder of verzorger kan nu je scores zien.");
     } catch {
       setDoneMsg("Er ging iets mis. Probeer later opnieuw.");
     }
@@ -51,7 +51,7 @@ export default function KindAcceptBanner({ userName }) {
   };
 
   const reject = async (id) => {
-    if (!window.confirm("Weet je zeker dat je deze koppeling wilt weigeren? De ouder kan opnieuw vragen.")) return;
+    if (!window.confirm("Weet je zeker dat je deze koppeling wilt weigeren? De ouder of verzorger kan het opnieuw vragen.")) return;
     setLoading(true);
     try {
       await supabase

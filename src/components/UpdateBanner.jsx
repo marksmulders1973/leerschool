@@ -75,7 +75,7 @@ export default function UpdateBanner() {
               textOverflow: "ellipsis",
             }}
           >
-            Tik vernieuwen voor de laatste functies
+            Tik op Vernieuw voor de laatste functies
           </div>
         </div>
       </div>

@@ -164,7 +164,7 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
             </h2>
             <p style={{ fontSize: 14, color: C.muted, lineHeight: 1.55, marginBottom: 18 }}>
               Voor de basisschool is de <strong style={{ color: C.text }}>Doorstroomtoets</strong> (vroeger
-              Doorstroomtoets) belangrijker. Daar oefen je voor in 15 minuten per dag.
+              Cito-eindtoets) belangrijker. Daar oefen je voor in 15 minuten per dag.
             </p>
             {onGoCito && (
               <button
@@ -469,7 +469,7 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
           borderRadius: 12,
           fontSize: 12, color: C.muted, lineHeight: 1.5,
         }}>
-          💡 <strong style={{ color: C.warm }}>Tip</strong>: oefen eerst met de groene
+          💡 <strong style={{ color: C.warm }}>Tip</strong>: oefen eerst met de blauwe
           🎯-knop — bij een fout antwoord opent een uitleg en kun je doorklikken
           naar het leerpad over dat onderwerp. Voor de eindsprint: print de PDF
           en maak het examen op papier.

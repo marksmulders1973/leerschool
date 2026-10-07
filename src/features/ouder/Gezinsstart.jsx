@@ -76,7 +76,7 @@ export function VoorkeurEditor({ groep, voorkeur, onOpslaan, onAnnuleer, bezig =
   const ok = v.app_kiest || v.vakken.length > 0 || String(v.vrij || "").trim();
   return (
     <div onClick={(e) => e.stopPropagation()} style={{ marginTop: 10, padding: "12px", borderRadius: 12, border: "1px solid rgba(105,240,174,0.3)", background: "rgba(105,240,174,0.05)" }}>
-      <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.6)", marginBottom: 8 }}>Waar ligt de nadruk op?</div>
+      <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.6)", marginBottom: 8 }}>Waar moet de nadruk op liggen?</div>
       <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
         {VOORKEUR_VAKKEN.filter((x) => !x.alleenGroep || x.alleenGroep.includes(+groep)).map((x) => (
           <button key={x.id} type="button" onClick={() => toggle(x.id)} aria-pressed={v.vakken.includes(x.id)} style={{ ...F.chip(v.vakken.includes(x.id)), fontSize: 12.5, padding: "6px 11px" }}>{x.label}</button>
@@ -168,7 +168,7 @@ export default function Gezinsstart({ authUser, bestaandAantal = 0, bestaandeNam
     const voorkeur = v.app_kiest ? { vakken: [], vrij: "", tot: v.tot, app_kiest: true } : { vakken: v.vakken, vrij: v.vrij.trim(), tot: v.tot, app_kiest: false };
     const { data, error } = await supabase.rpc("gezin_koppel_zelfde_apparaat", { p_child_name: kind.naam, p_groep: kind.groep, p_voorkeur: voorkeur, p_verified: verified });
     if (error || !data) {
-      const msg = /maximaal 3/i.test(error?.message || "") ? "Je gezin zit aan de 3 kinderen." : "Opslaan lukte niet. Probeer het zo nog eens.";
+      const msg = /maximaal 3/i.test(error?.message || "") ? "Je gezin heeft al het maximum van 3 kinderen." : "Opslaan lukte niet. Probeer het zo nog eens.";
       throw new Error(msg);
     }
     return { linkId: data, voorkeur };
@@ -247,7 +247,7 @@ export default function Gezinsstart({ authUser, bestaandAantal = 0, bestaandeNam
 
       {stap === 2 && (
         <div>
-          <div style={F.kop}>Waar wil je bij {kind.naam} de eerste twee maanden de nadruk op?{kindLabel}</div>
+          <div style={F.kop}>Waar wil je bij {kind.naam} de eerste twee maanden de nadruk op leggen?{kindLabel}</div>
           <div style={F.sub}>Kies één of meer. Het dagelijkse kwartier haalt er dan minstens twee van de drie onderdelen uit — tot {new Date(kind.voorkeur.tot).toLocaleDateString("nl-NL", { day: "numeric", month: "long" })}. Daarna kiest de app weer zelf.</div>
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
             {VOORKEUR_VAKKEN.filter((v) => !v.alleenGroep || v.alleenGroep.includes(+kind.groep)).map((v) => (

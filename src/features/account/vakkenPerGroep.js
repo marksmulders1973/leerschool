@@ -77,7 +77,7 @@ export const VAK_NOTITIE = {
   "7|aardrijkskunde": "topografie van Europa",
   "8|rekenen": "grote getallen, procenten en rente, samengestelde sommen",
   "8|taal": "herhaling en verdieping — klaar voor de brugklas",
-  "8|studievaardigheden": "vast onderdeel van de doorstroomtoets (februari!)",
+  "8|studievaardigheden": "vast onderdeel van de Doorstroomtoets (februari!)",
   "8|aardrijkskunde": "topografie van de wereld",
 };
 

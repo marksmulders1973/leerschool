@@ -120,7 +120,7 @@ function RecommendedCard({ player, record, onPickPath, variant = "default" }) {
   const eyebrow = isHero
     ? `↪ Doorgaan waar je was, ${player}`
     : isRefresher
-      ? `🔁 Tijd voor refresher, ${player}:`
+      ? `🔁 Tijd om te herhalen, ${player}:`
       : `Vandaag, ${player}:`;
   const subText = isRefresher
     ? `Eerder ${meta.emoji} ${meta.label}${record.attempts > 0 ? ` — ${pct}% goed` : ""} · opnieuw oefenen`

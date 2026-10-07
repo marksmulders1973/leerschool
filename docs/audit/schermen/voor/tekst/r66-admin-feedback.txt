@@ -1,0 +1,15 @@
+# Route /admin/feedback (vers apparaat)
+# http://localhost:4173/admin/feedback
+Spring naar hoofdinhoud
+💡 Tips & Feedback
+← Terug
+🏠 Home
+Open
+Afgehandeld
+Geblokkeerd
+Alles
+Geen openstaande tips. 🎉
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244

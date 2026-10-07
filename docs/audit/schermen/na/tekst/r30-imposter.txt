@@ -1,0 +1,22 @@
+# Route /spelletje/imposter (vers apparaat)
+# http://localhost:4174/spelletje/imposter
+Spring naar hoofdinhoud
+Milan
+Finn
+Liv
+Zoë
+Sem
+Daan
+Noor
+Wie is de bedrieger?
+8 in de kamer · wacht op de leider
+← Terug
+🕵️ Bedrieger · 8 spelers
+Jij bent de leider
+7 bots doen mee. Vrienden erbij? Tandwiel → code. Straks komt er één som op de muur: wie hem het snelst goed heeft, is de bedrieger. Bots rekenen langzaam.
+▶ Start spel
+links slepen = lopen · rechts slepen = kijken
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244

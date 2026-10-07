@@ -107,9 +107,9 @@ export default function RondleidingPage({ setPage } = {}) {
             margin: "0 0 var(--space-4) 0",
           }}
         >
-          Doorstroomtoets in januari — vijftien minuten per dag is genoeg, als
+          Doorstroomtoets vanaf eind januari — vijftien minuten per dag is genoeg, als
           ze écht begrijpen wat ze doen. Geen drilloefeningen. Geen reclame.
-          Drie uitleg-niveaus tot je het echt begrijpt.
+          Drie uitleg-niveaus, tot ze het echt begrijpen.
         </p>
         <div style={{ display: "flex", gap: "var(--space-3)", flexWrap: "wrap" }}>
           <Button onClick={() => go("learn-paths-hub")}>
@@ -147,8 +147,8 @@ export default function RondleidingPage({ setPage } = {}) {
             <p style={uspBody}>
               VMBO-examens van examenblad.nl, geen verzonnen oefenvragen. Elke
               examenvraag is gekoppeld aan een leerpad-stap die het concept
-              eerst rustig uitlegt. Gele bron-banner laat zien welk examen en
-              welke vraag.
+              eerst rustig uitlegt. Een gele bron-banner laat zien om welk examen en
+              welke vraag het gaat.
             </p>
           </Card>
           <Card padding="lg">
@@ -174,7 +174,7 @@ export default function RondleidingPage({ setPage } = {}) {
           }}
         >
           <Card variant="ghost" padding="lg">
-            <h3 style={uspH3}>Ouder</h3>
+            <h3 style={uspH3}>Ouder of verzorger</h3>
             <p style={uspBody}>
               Koppel je kind met een korte code en zie welke onderwerpen
               vooruitgaan. Geen rapportages doorspitten — alleen wat je echt

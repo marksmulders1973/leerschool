@@ -1,0 +1,182 @@
+[
+ {
+  "bestand": "src/components/OefenpakketPage.jsx",
+  "zoek": "label=\"Voor de ouder — zo gebruik je dit werkboek\"",
+  "vervang": "label=\"Voor thuis — zo gebruik je dit werkboek\"",
+  "reden": "Huisregel: niet alléén 'ouder'; Brugklas-bundel gebruikt al 'Voor thuis'",
+  "ernst": 3,
+  "voor": "Voor de ouder — zo gebruik je dit werkboek",
+  "na": "Voor thuis — zo gebruik je dit werkboek"
+ },
+ {
+  "bestand": "src/components/LeesladderPage.jsx",
+  "zoek": "label=\"Voor de ouder — zo werkt de Leesladder\"",
+  "vervang": "label=\"Voor thuis — zo werkt de Leesladder\"",
+  "reden": "Huisregel: niet alléén 'ouder'",
+  "ernst": 3,
+  "voor": "Voor de ouder — zo werkt de Leesladder",
+  "na": "Voor thuis — zo werkt de Leesladder"
+ },
+ {
+  "bestand": "src/components/LeesladderPage.jsx",
+  "zoek": "als ouder óók kunt voordoen",
+  "vervang": "als ouder of verzorger óók kunt voordoen",
+  "reden": "Huisregel: lezer niet alléén als 'ouder' aanspreken",
+  "ernst": 3,
+  "voor": "…zodat jij het als ouder óók kunt voordoen.",
+  "na": "…zodat jij het als ouder of verzorger óók kunt voordoen."
+ },
+ {
+  "bestand": "src/components/LeesladderPage.jsx",
+  "zoek": "Tip voor de ouder: laat je kind",
+  "vervang": "Tip voor thuis: laat je kind",
+  "reden": "Huisregel: niet alléén 'ouder'",
+  "ernst": 3,
+  "voor": "Tip voor de ouder: laat je kind het woord zélf opzoeken",
+  "na": "Tip voor thuis: laat je kind het woord zélf opzoeken"
+ },
+ {
+  "bestand": "src/components/LeesladderPage.jsx",
+  "zoek": "daarna verschijnen ze <strong>direct onder elke vraag</strong> en",
+  "vervang": "daarna verschijnen ze <strong>achterin op een eigen antwoordblad</strong> en",
+  "reden": "Onwaar: de antwoorden komen op een apart antwoordblad achteraan (code + opt-in-tekst 'onderaan deze pagina'), niet onder elke vraag",
+  "ernst": 3,
+  "voor": "…daarna verschijnen ze direct onder elke vraag en printen ze gewoon mee.",
+  "na": "…daarna verschijnen ze achterin op een eigen antwoordblad en printen ze gewoon mee."
+ },
+ {
+  "bestand": "src/components/RedactiebladenPage.jsx",
+  "zoek": "label=\"Voor de ouder — het stappenplan\"",
+  "vervang": "label=\"Voor thuis — het stappenplan\"",
+  "reden": "Huisregel: niet alléén 'ouder'",
+  "ernst": 3,
+  "voor": "Voor de ouder — het stappenplan",
+  "na": "Voor thuis — het stappenplan"
+ },
+ {
+  "bestand": "src/components/TafelbladenPage.jsx",
+  "zoek": "Tip voor de ouder: één tafel per keer",
+  "vervang": "Tip voor thuis: één tafel per keer",
+  "reden": "Huisregel: niet alléén 'ouder'",
+  "ernst": 3,
+  "voor": "Tip voor de ouder: één tafel per keer aftekenen",
+  "na": "Tip voor thuis: één tafel per keer aftekenen"
+ },
+ {
+  "bestand": "src/components/TafelbladenPage.jsx",
+  "zoek": "Handtekening juf/meester/ouder:",
+  "vervang": "Handtekening juf/meester/ouder/verzorger:",
+  "reden": "Huisregel: 'ouder' alleen sluit verzorgers uit (diploma-handtekening)",
+  "ernst": 2,
+  "voor": "Handtekening juf/meester/ouder:",
+  "na": "Handtekening juf/meester/ouder/verzorger:"
+ },
+ {
+  "bestand": "src/components/TafelbladenPage.jsx",
+  "zoek": "plus een mix-blad, {metTempo ? \"een tempo-toets \" : \"\"}en een invulbaar",
+  "vervang": "plus een mix-blad{metTempo ? \", een tempo-toets \" : \" \"}en een invulbaar",
+  "reden": "Zonder tempo-toets staat er een komma vóór 'en': 'plus een mix-blad, en een invulbaar tafeldiploma'",
+  "ernst": 1,
+  "voor": "…plus een mix-blad, en een invulbaar tafeldiploma 🏆.",
+  "na": "…plus een mix-blad en een invulbaar tafeldiploma 🏆."
+ },
+ {
+  "bestand": "src/components/PrintHubPage.jsx",
+  "zoek": "Jij leest voor van het ouderblad, je kind",
+  "vervang": "Jij leest voor van het voorleesblad, je kind",
+  "reden": "Het blad heet op de dictee-pagina zelf 'voorleesblad'; bovendien huisregel 'ouder'",
+  "ernst": 2,
+  "voor": "Jij leest voor van het ouderblad, je kind schrijft op het invulblad.",
+  "na": "Jij leest voor van het voorleesblad, je kind schrijft op het invulblad."
+ },
+ {
+  "bestand": "src/features/dictee/DicteePage.jsx",
+  "zoek": "Het eerste weekrapport komt maandag.",
+  "vervang": "Het eerste weekrapport komt vrijdag.",
+  "reden": "Botst met de kop erboven ('Elke vrijdag…'); weekrapport gaat sinds 30 sep op vrijdag",
+  "ernst": 3,
+  "voor": "✓ Gelukt! Het eerste weekrapport komt maandag.",
+  "na": "✓ Gelukt! Het eerste weekrapport komt vrijdag."
+ },
+ {
+  "bestand": "src/features/dictee/WerkwoordenPage.jsx",
+  "zoek": "Het eerste weekrapport komt maandag.",
+  "vervang": "Het eerste weekrapport komt vrijdag.",
+  "reden": "Botst met de kop erboven ('Elke vrijdag…'); weekrapport gaat sinds 30 sep op vrijdag",
+  "ernst": 3,
+  "voor": "✓ Gelukt! Het eerste weekrapport komt maandag.",
+  "na": "✓ Gelukt! Het eerste weekrapport komt vrijdag."
+ },
+ {
+  "bestand": "src/features/dictee/DicteePage.jsx",
+  "zoek": "Code gekregen van je ouder of juf?",
+  "vervang": "Code gekregen van thuis of van school?",
+  "reden": "Huisregel: niet alléén 'ouder'; 'juf' sluit meester uit. Zelfde formule als elders in de app ('Code gekregen van thuis?')",
+  "ernst": 3,
+  "voor": "🔑 Code gekregen van je ouder of juf?",
+  "na": "🔑 Code gekregen van thuis of van school?"
+ },
+ {
+  "bestand": "src/features/dictee/WerkwoordenPage.jsx",
+  "zoek": "Code gekregen van je ouder of juf?",
+  "vervang": "Code gekregen van thuis of van school?",
+  "reden": "Huisregel: niet alléén 'ouder'; 'juf' sluit meester uit",
+  "ernst": 3,
+  "voor": "🔑 Code gekregen van je ouder of juf?",
+  "na": "🔑 Code gekregen van thuis of van school?"
+ },
+ {
+  "bestand": "src/features/dictee/DicteePage.jsx",
+  "zoek": "<Tik nl=\"Schrijf op het woord dat je hoorde.\"><span>Schrijf op het woord dat je hoorde.",
+  "vervang": "<Tik nl=\"Schrijf het woord op dat je hoorde.\"><span>Schrijf het woord op dat je hoorde.",
+  "reden": "Woordvolgorde loopt niet ('Schrijf op het woord dat…')",
+  "ernst": 1,
+  "voor": "Schrijf op het woord dat je hoorde.",
+  "na": "Schrijf het woord op dat je hoorde."
+ },
+ {
+  "bestand": "src/components/BegrijpendLezenLadder.jsx",
+  "zoek": "Hoe lang wil je beginnen?",
+  "vervang": "Met hoeveel tekst wil je beginnen?",
+  "reden": "'Hoe lang' leest als tijdsduur; het gaat om tekstlengte (intro zegt 'hoe kort je wilt beginnen')",
+  "ernst": 2,
+  "voor": "Hoe lang wil je beginnen?",
+  "na": "Met hoeveel tekst wil je beginnen?"
+ },
+ {
+  "bestand": "src/components/BegrijpendLezenPage.jsx",
+  "zoek": "title=\"Begrijpend Lezen\"",
+  "vervang": "title=\"Begrijpend lezen\"",
+  "reden": "Hoofdletter midden in titel; elders 'Begrijpend lezen'",
+  "ernst": 1,
+  "voor": "Begrijpend Lezen",
+  "na": "Begrijpend lezen"
+ },
+ {
+  "bestand": "src/features/dictee/WerkwoordenPage.jsx",
+  "zoek": ">△ vd</th>",
+  "vervang": ">△ v.d.</th>",
+  "reden": "Inconsequente afkorting naast 't.t.' en 'v.t.'",
+  "ernst": 1,
+  "voor": "△ vd",
+  "na": "△ v.d."
+ },
+ {
+  "bestand": "src/components/BrugklasPage.jsx",
+  "zoek": "Eigen oefenvragen in stijl van de brugklas.",
+  "vervang": "Eigen oefenvragen op brugklasniveau.",
+  "reden": "'In stijl van de brugklas' loopt niet (een klas heeft geen stijl)",
+  "ernst": 2,
+  "voor": "Eigen oefenvragen in stijl van de brugklas.",
+  "na": "Eigen oefenvragen op brugklasniveau."
+ },
+ {
+  "bestand": "src/components/DagkaartGenerator.jsx",
+  "zoek": "Een branded Leerkwartier-kaart",
+  "vervang": "Een Leerkwartier-kaart in huisstijl",
+  "reden": "Engels woord waar Nederlands kan",
+  "ernst": 1,
+  "voor": "Een branded Leerkwartier-kaart van de vraag van de dag…",
+  "na": "Een Leerkwartier-kaart in huisstijl van de vraag van de dag…"
+ }
+]

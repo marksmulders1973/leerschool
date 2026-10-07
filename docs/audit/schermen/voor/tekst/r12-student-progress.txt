@@ -1,0 +1,21 @@
+# Route /voortgang/leerling (vers apparaat)
+# http://localhost:4173/voortgang/leerling
+Spring naar hoofdinhoud
+←
+Mijn Voortgang 📊
+Tik op een vak voor details
+🏠
+🌱
+Je bent nog niet begonnen. Ga oefenen!
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244
+🏠
+Home
+📚
+Leren
+Toets
+🎮
+Spelletje
+Mijn pagina

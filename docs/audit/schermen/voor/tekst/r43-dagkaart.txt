@@ -1,0 +1,15 @@
+# Route /dagkaart (vers apparaat)
+# http://localhost:4173/dagkaart
+Spring naar hoofdinhoud
+Leerkwartier
+· naar home
+🖼️ Dagkaart maken
+Een branded Leerkwartier-kaart van de vraag van de dag — klaar om op Instagram/Facebook/Threads te posten. Vandaag: de vaste dagvraag.
+Vierkant 1:1
+✓ Staand 4:5 (feed)
+⬇️ Download PNG
+💡 Op Instagram: download de PNG en post 'm via de app (link in bio → leerkwartier.app/vandaag). Op Facebook/Threads kun je de kaart met een klikbare /vandaag-link posten.
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244

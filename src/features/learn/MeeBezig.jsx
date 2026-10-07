@@ -169,7 +169,7 @@ export default function MeeBezig({
             {waitCount === null
               ? "Anderen die hierop wachten worden geteld…"
               : waitCount === 0
-                ? "Jij kan de eerste zijn die zich aanmeldt."
+                ? "Jij kunt de eerste zijn die zich aanmeldt."
                 : waitCount === 1
                   ? "1 andere leerling wacht hier ook op."
                   : `${waitCount} andere leerlingen wachten hier ook op.`}

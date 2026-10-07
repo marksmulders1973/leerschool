@@ -319,7 +319,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
               </div>
               <ul style={{ margin: "0 0 8px 0", paddingLeft: 18, fontSize: 13, lineHeight: 1.6 }}>
                 <li><strong>50 vragen</strong> — mix van rekenen + taal + studievaardigheden</li>
-                <li><strong>60 minuten</strong> countdown (zoals de echte Doorstroomtoets)</li>
+                <li><strong>60 minuten</strong> met een klok die aftelt (zoals de echte Doorstroomtoets)</li>
                 <li>Score per onderdeel + indicatie richting vmbo / havo / vwo</li>
                 <li>Per foute vraag: uitleg + doorklikken naar leerpad</li>
               </ul>
@@ -513,7 +513,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
               📚 Vragen die fout gingen
             </div>
             <div style={{ fontSize: 13, color: C.muted, marginBottom: 10 }}>
-              Per fout zie je de hint. Klik op <strong style={{ color: "#5db3ff" }}>"▼ Meer uitleg & leerpad"</strong> voor de volledige uitleg + naar het leerpad.
+              Per fout zie je de hint. Klik op <strong style={{ color: "#5db3ff" }}>"▼ Meer uitleg"</strong> voor de volledige uitleg + naar het leerpad.
             </div>
             {questions.map((q, i) => {
               const wrong = answers[i] !== q.answer;
@@ -558,7 +558,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
                     )}
                   </div>
                   <div style={{ fontSize: 12, color: C.muted, marginBottom: hint ? 6 : 4 }}>
-                    Goede antwoord: <span style={{ color: C.good, fontWeight: 700 }}><MdInline text={correctLabel} /></span>
+                    Goed antwoord: <span style={{ color: C.good, fontWeight: 700 }}><MdInline text={correctLabel} /></span>
                   </div>
                   {hint && (
                     <div

@@ -1,0 +1,236 @@
+[
+  {
+    "bestand": "src/components/CodeBalk.jsx",
+    "zoek": "\"Straks samen met uw kind?\"",
+    "vervang": "\"Straks samen met je kind?\"",
+    "reden": "u-vorm botst met huisregel (ouderteksten in je-vorm)",
+    "ernst": 3,
+    "voor": "Straks samen met uw kind?",
+    "na": "Straks samen met je kind?"
+  },
+  {
+    "bestand": "src/components/CodeBalk.jsx",
+    "zoek": "\"Stuur uzelf de link. De code zit erin, dus het Familie-pakket start zodra uw kind gaat oefenen.\"",
+    "vervang": "\"Stuur jezelf de link. De code zit erin, dus het Familie-pakket start zodra je kind gaat oefenen.\"",
+    "reden": "u-vorm botst met huisregel",
+    "ernst": 3,
+    "voor": "Stuur uzelf de link. … zodra uw kind gaat oefenen.",
+    "na": "Stuur jezelf de link. … zodra je kind gaat oefenen."
+  },
+  {
+    "bestand": "src/components/CodeBalk.jsx",
+    "zoek": "Wat fijn dat u ons heeft gevonden via",
+    "vervang": "Wat fijn dat je ons hebt gevonden via",
+    "reden": "u-vorm botst met huisregel",
+    "ernst": 3,
+    "voor": "Wat fijn dat u ons heeft gevonden via …",
+    "na": "Wat fijn dat je ons hebt gevonden via …"
+  },
+  {
+    "bestand": "src/components/CodeBalk.jsx",
+    "zoek": "heeft uw gezin een Ooievaarspas?",
+    "vervang": "heeft jouw gezin een Ooievaarspas?",
+    "reden": "u-vorm botst met huisregel (zie twijfel: tekst lijkt op gemeente-landingspagina)",
+    "ernst": 3,
+    "voor": "Onze afspraak met de gemeente Den Haag: heeft uw gezin een Ooievaarspas?",
+    "na": "Onze afspraak met de gemeente Den Haag: heeft jouw gezin een Ooievaarspas?"
+  },
+  {
+    "bestand": "src/components/CodeBalk.jsx",
+    "zoek": "voor uw gezin <strong style={{ color: \"#3f7015\" }}>blijvend gratis",
+    "vervang": "voor jouw gezin <strong style={{ color: \"#3f7015\" }}>blijvend gratis",
+    "reden": "u-vorm botst met huisregel",
+    "ernst": 3,
+    "voor": "Dankzij hen is het Familie-pakket voor uw gezin blijvend gratis.",
+    "na": "Dankzij hen is het Familie-pakket voor jouw gezin blijvend gratis."
+  },
+  {
+    "bestand": "src/components/CodeBalk.jsx",
+    "zoek": "voor uw gezin <strong style={{ color: \"#3f7015\" }}>gratis, ",
+    "vervang": "voor jouw gezin <strong style={{ color: \"#3f7015\" }}>gratis, ",
+    "reden": "u-vorm botst met huisregel; stand 2 van dezelfde balk zegt al 'jouw gezin'",
+    "ernst": 3,
+    "voor": "Dankzij hen is het Familie-pakket voor uw gezin gratis, heel 2027 (…).",
+    "na": "Dankzij hen is het Familie-pakket voor jouw gezin gratis, heel 2027 (…)."
+  },
+  {
+    "bestand": "src/components/CodeBalk.jsx",
+    "zoek": "\"Is uw kind erbij? Probeer meteen één vraag:\"",
+    "vervang": "\"Is je kind erbij? Probeer meteen één vraag:\"",
+    "reden": "u-vorm botst met huisregel",
+    "ernst": 3,
+    "voor": "Is uw kind erbij? Probeer meteen één vraag:",
+    "na": "Is je kind erbij? Probeer meteen één vraag:"
+  },
+  {
+    "bestand": "src/components/CodeBalk.jsx",
+    "zoek": "óf de koppelcode van je vader, moeder, juf of meester:",
+    "vervang": "óf de koppelcode van thuis of van je juf of meester:",
+    "reden": "'vader, moeder' sluit verzorgers/voogden uit (huisregel ouder of verzorger); rest van de balk zegt al 'thuis of school'",
+    "ernst": 2,
+    "voor": "… óf de koppelcode van je vader, moeder, juf of meester:",
+    "na": "… óf de koppelcode van thuis of van je juf of meester:"
+  },
+  {
+    "bestand": "src/components/CodeBalk.jsx",
+    "zoek": "Tik bovenaan op \"Ik ben leerling\" en kies je naam",
+    "vervang": "Tik bovenaan op \"Leerling\" en kies je naam",
+    "reden": "Knop 'Ik ben leerling' bestaat niet; op home heet de tegel 'Leerling' (de regel 'Ik ben: leerling' verschijnt alleen als de rol onbekend is)",
+    "ernst": 2,
+    "voor": "Tik bovenaan op \"Ik ben leerling\" en kies je naam",
+    "na": "Tik bovenaan op \"Leerling\" en kies je naam"
+  },
+  {
+    "bestand": "src/components/KindAcceptBanner.jsx",
+    "zoek": "\"✓ Bevestigd. Je ouder kan nu je scores zien.\"",
+    "vervang": "\"✓ Bevestigd. Je ouder of verzorger kan nu je scores zien.\"",
+    "reden": "Nooit alleen 'ouder' (huisregel); de banner zelf zegt al 'ouder of verzorger'",
+    "ernst": 2,
+    "voor": "✓ Bevestigd. Je ouder kan nu je scores zien.",
+    "na": "✓ Bevestigd. Je ouder of verzorger kan nu je scores zien."
+  },
+  {
+    "bestand": "src/components/KindAcceptBanner.jsx",
+    "zoek": "De ouder kan opnieuw vragen.",
+    "vervang": "De ouder of verzorger kan het opnieuw vragen.",
+    "reden": "Nooit alleen 'ouder'; zin mist 'het'",
+    "ernst": 2,
+    "voor": "… wilt weigeren? De ouder kan opnieuw vragen.",
+    "na": "… wilt weigeren? De ouder of verzorger kan het opnieuw vragen."
+  },
+  {
+    "bestand": "src/components/KoppelcodeBanner.jsx",
+    "zoek": "\"Vul de hele code in (6 letters).\"",
+    "vervang": "\"Vul de hele code in (6 tekens).\"",
+    "reden": "Code bestaat uit letters én cijfers (stap 1 zegt '6 tekens (letters en cijfers)', voorbeeld ABC123)",
+    "ernst": 2,
+    "voor": "Vul de hele code in (6 letters).",
+    "na": "Vul de hele code in (6 tekens)."
+  },
+  {
+    "bestand": "src/components/KoppelcodeBanner.jsx",
+    "zoek": "om een nieuwe — die maak je zo weer aan.",
+    "vervang": "om een nieuwe — die is zo weer aangemaakt.",
+    "reden": "Verkeerde verwijzing: het kind leest dit, maar de ouder/leerkracht maakt de code aan",
+    "ernst": 2,
+    "voor": "Vraag thuis (of je juf/meester) om een nieuwe — die maak je zo weer aan.",
+    "na": "Vraag thuis (of je juf/meester) om een nieuwe — die is zo weer aangemaakt."
+  },
+  {
+    "bestand": "src/components/KoppelcodeBanner.jsx",
+    "zoek": "\"Geen verbinding met de koppel-server. Probeer het zo nog eens.\"",
+    "vervang": "\"Even geen verbinding. Probeer het zo nog eens.\"",
+    "reden": "Dev-jargon 'koppel-server' in kindertekst",
+    "ernst": 1,
+    "voor": "Geen verbinding met de koppel-server. Probeer het zo nog eens.",
+    "na": "Even geen verbinding. Probeer het zo nog eens."
+  },
+  {
+    "bestand": "src/features/familie/FamilieHub.jsx",
+    "zoek": "<b>€ 39 per jaar voor het hele gezin.</b>",
+    "vervang": "<b>€ 39 voor 12 maanden, voor het hele gezin</b> — één keer betalen, stopt vanzelf.",
+    "reden": "'per jaar' suggereert doorlopend abonnement; prijs = €39 per 12 maanden, eenmalig, niet stilzwijgend verlengd (zelfde formulering als PakketUitleg/ProPage)",
+    "ernst": 3,
+    "voor": "Daarna kost Familie € 39 per jaar voor het hele gezin.",
+    "na": "Daarna kost Familie € 39 voor 12 maanden, voor het hele gezin — één keer betalen, stopt vanzelf."
+  },
+  {
+    "bestand": "src/features/familie/FamilieHub.jsx",
+    "zoek": "We verbeteren dit nog; straks onderdeel van het Familie-pakket.",
+    "vervang": "We verbeteren dit nog.",
+    "reden": "Dit ís de Familie-pakket-pagina; 'straks onderdeel van het Familie-pakket' klopt hier niet",
+    "ernst": 2,
+    "voor": "✨ Bèta — gratis om uit te proberen. We verbeteren dit nog; straks onderdeel van het Familie-pakket.",
+    "na": "✨ Bèta — gratis om uit te proberen. We verbeteren dit nog."
+  },
+  {
+    "bestand": "src/features/familie/VonkPagina.jsx",
+    "zoek": "voor ± <b>€39 per jaar</b>.",
+    "vervang": "voor <b>€39 per 12 maanden</b> (één keer betalen).",
+    "reden": "Prijs is exact €39 per 12 maanden, eenmalig — '±' en 'per jaar' (doorlopend) botsen met prijsregel",
+    "ernst": 3,
+    "voor": "… voor het héle gezin, voor ± €39 per jaar.",
+    "na": "… voor het héle gezin, voor €39 per 12 maanden (één keer betalen)."
+  },
+  {
+    "bestand": "src/features/familie/familieFeatures.js",
+    "zoek": "€37/uur bijles vs €39/jaar.",
+    "vervang": "€37 per uur bijles tegenover €39 voor 12 maanden.",
+    "reden": "'per jaar' botst met prijsregel (12 maanden, eenmalig); 'vs' is Engels",
+    "ernst": 3,
+    "voor": "De AI-bijlesdocent altijd beschikbaar — €37/uur bijles vs €39/jaar.",
+    "na": "De AI-bijlesdocent altijd beschikbaar — €37 per uur bijles tegenover €39 voor 12 maanden."
+  },
+  {
+    "bestand": "src/features/familie/familieFeatures.js",
+    "zoek": "van cijfer naar to-do",
+    "vervang": "van cijfer naar takenlijstje",
+    "reden": "Engels woord waar gewoon Nederlands kan",
+    "ernst": 1,
+    "voor": "Zit nu in je vrijdag-weekmail: van cijfer naar to-do — …",
+    "na": "Zit nu in je vrijdag-weekmail: van cijfer naar takenlijstje — …"
+  },
+  {
+    "bestand": "src/features/familie/TrotsMomentPagina.jsx",
+    "zoek": "(foutloos een pad afronden) is live. Meer mijlpalen (streak, onderwerp gehaald)",
+    "vervang": "(foutloos een onderwerp afronden) is live. Meer mijlpalen (elke dag oefenen, onderwerp gehaald)",
+    "reden": "Dev-jargon 'pad' en Engels 'streak' in oudertekst",
+    "ernst": 1,
+    "voor": "… het eerste moment (foutloos een pad afronden) is live. Meer mijlpalen (streak, onderwerp gehaald) komen erbij.",
+    "na": "… het eerste moment (foutloos een onderwerp afronden) is live. Meer mijlpalen (elke dag oefenen, onderwerp gehaald) komen erbij."
+  },
+  {
+    "bestand": "src/features/familie/paraatheid.js",
+    "zoek": "`${label} ziet er sterk uit — blijf onderhouden.`",
+    "vervang": "`${label} ziet er sterk uit — blijf het bijhouden.`",
+    "reden": "'blijf onderhouden' mist een lijdend voorwerp, loopt niet",
+    "ernst": 1,
+    "voor": "Taal & lezen ziet er sterk uit — blijf onderhouden.",
+    "na": "Taal & lezen ziet er sterk uit — blijf het bijhouden."
+  },
+  {
+    "bestand": "src/features/familie/paraatheid.js",
+    "zoek": "`${l} vraagt aandacht",
+    "vervang": "`${label} vraagt aandacht",
+    "reden": "Zin begint met kleine letter (lowercase label aan zinsbegin), anders dan de groene/oranje zinnen",
+    "ernst": 1,
+    "voor": "taal & lezen vraagt aandacht — hier valt de meeste winst te halen.",
+    "na": "Taal & lezen vraagt aandacht — hier valt de meeste winst te halen."
+  },
+  {
+    "bestand": "src/features/familie/ouderkaartContent.js",
+    "zoek": "\"Ouders zoeken naar een sluitende regel die er niet is.",
+    "vervang": "\"Ouders en verzorgers zoeken vaak naar een sluitende regel die er niet is.",
+    "reden": "Benoemt de lezer met alleen 'ouders' (huisregel ouder of verzorger) — aanspreektekst, geen lesinhoud",
+    "ernst": 2,
+    "voor": "Ouders zoeken naar een sluitende regel die er niet is.",
+    "na": "Ouders en verzorgers zoeken vaak naar een sluitende regel die er niet is."
+  },
+  {
+    "bestand": "src/features/kwartierplan/Startfoto.jsx",
+    "zoek": "                  In de volgende update maakt Leerkwartier hier automatisch een dag-voor-dag\n                  kwartierplan van.",
+    "vervang": "                  Hiervan maakt Leerkwartier in stap 3 van het kwartierplan een weekplan\n                  van vijf kwartiertjes.",
+    "reden": "Verouderd: het weekplan (stap 3 in KwartierplanSectie) bestaat al; 'volgende update' klopt niet meer",
+    "ernst": 3,
+    "voor": "In de volgende update maakt Leerkwartier hier automatisch een dag-voor-dag kwartierplan van.",
+    "na": "Hiervan maakt Leerkwartier in stap 3 van het kwartierplan een weekplan van vijf kwartiertjes."
+  },
+  {
+    "bestand": "src/features/oefenboekje/OefenboekjePagina.jsx",
+    "zoek": "Voor de ouder/begeleider — kijk samen na.",
+    "vervang": "Voor de ouder of verzorger — kijk samen na.",
+    "reden": "Huisregel 'ouder of verzorger' (consistent met rest van Familie)",
+    "ernst": 2,
+    "voor": "Voor de ouder/begeleider — kijk samen na.",
+    "na": "Voor de ouder of verzorger — kijk samen na."
+  },
+  {
+    "bestand": "src/features/oefenboekje/OefenboekjeTrigger.jsx",
+    "zoek": "<b>{titel.toLowerCase()}</b> ging nog niet vlot.",
+    "vervang": "Het onderwerp <b>{titel.toLowerCase()}</b> ging nog niet vlot.",
+    "reden": "Zin begint met kleine letter ('breuken ging…'), meervoud/enkelvoud loopt niet",
+    "ernst": 1,
+    "voor": "breuken ging nog niet vlot. Print een oefenboekje op maat …",
+    "na": "Het onderwerp breuken ging nog niet vlot. Print een oefenboekje op maat …"
+  }
+]

@@ -1,0 +1,39 @@
+# Route /kampioenen (vers apparaat)
+# http://localhost:4173/kampioenen
+Spring naar hoofdinhoud
+←
+Kampioenen 👑
+De beste spelers per periode
+🏠
+☀️
+Vandaag
+📅
+Week
+🗓️
+Maand
+👑
+Jaar
+👽
+Obliterator
+🏆 TOP 6 TOETSEN — VANDAAG 🏆
+🏆
+Nog geen toets-scores vandaag.
+👽 TOP 6 OBLITERATOR — VANDAAG 🛸
+👽
+Nog geen game-scores vandaag.
+🌟 TOP 6 DELERS — VANDAAG 🌟
+🌟
+Nog geen delers vandaag.
+Deel via een knop om hier te komen!
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244
+🏠
+Home
+📚
+Leren
+Toets
+🎮
+Spelletje
+Mijn pagina

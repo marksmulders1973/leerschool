@@ -1,0 +1,191 @@
+[
+ {
+  "bestand": "src/components/ObliteratorGame.jsx",
+  "zoek": "`GEFELICITEERD ${naamUp} MET JE HIGH SCORE ${rang}E PLAATS!`",
+  "vervang": "`GEFELICITEERD ${naamUp} MET JE ${rang}E PLAATS IN DE HIGHSCORES!`",
+  "reden": "Zin loopt niet: 'met je high score 2e plaats'",
+  "ernst": 2,
+  "voor": "GEFELICITEERD SAM MET JE HIGH SCORE 2E PLAATS!",
+  "na": "GEFELICITEERD SAM MET JE 2E PLAATS IN DE HIGHSCORES!"
+ },
+ {
+  "bestand": "src/components/ObliteratorGame.jsx",
+  "zoek": "\"YES IM SAFE!\"",
+  "vervang": "\"YES I'M SAFE!\"",
+  "reden": "Apostrof ontbreekt in Engelse uitroep (spel-sfeer blijft)",
+  "ernst": 1,
+  "voor": "YES IM SAFE!",
+  "na": "YES I'M SAFE!"
+ },
+ {
+  "bestand": "src/components/ObliteratorGame.jsx",
+  "zoek": "\"Geen straf — je leert door 💪\"",
+  "vervang": "\"Geen straf — hier leer je van 💪\"",
+  "reden": "'je leert door' is dubbelzinnig (doorleren? waardoor?)",
+  "ernst": 2,
+  "voor": "Geen straf — je leert door 💪",
+  "na": "Geen straf — hier leer je van 💪"
+ },
+ {
+  "bestand": "src/components/ObliteratorGame.jsx",
+  "zoek": "}}>Skip — speel als Speler</button>",
+  "vervang": "}}>Overslaan — speel als Speler</button>",
+  "reden": "Engels woord in knop waar Nederlands vanzelfsprekend is",
+  "ernst": 1,
+  "voor": "Skip — speel als Speler",
+  "na": "Overslaan — speel als Speler"
+ },
+ {
+  "bestand": "src/components/ObliteratorGame.jsx",
+  "zoek": "\"Dubbele — al verzameld\"",
+  "vervang": "\"Dubbel — al verzameld\"",
+  "reden": "Bijvoeglijk naamwoord zonder zelfstandig naamwoord: 'Dubbel'",
+  "ernst": 1,
+  "voor": "Dubbele — al verzameld",
+  "na": "Dubbel — al verzameld"
+ },
+ {
+  "bestand": "src/components/ObliteratorGame.jsx",
+  "zoek": "<b>Ability:</b>",
+  "vervang": "<b>Kracht:</b>",
+  "reden": "Engels label; elders in het spel heet dit 'kracht'",
+  "ernst": 1,
+  "voor": "⚡ Ability: Stroomstoot — …",
+  "na": "⚡ Kracht: Stroomstoot — …"
+ },
+ {
+  "bestand": "src/components/ObliteratorGame.jsx",
+  "zoek": "title={isFullscreen ? \"Sluit fullscreen\" : \"Open fullscreen\"}",
+  "vervang": "title={isFullscreen ? \"Volledig scherm sluiten\" : \"Volledig scherm openen\"}",
+  "reden": "Engelse knop-tooltip; Nederlands is vanzelfsprekend",
+  "ernst": 1,
+  "voor": "Open fullscreen",
+  "na": "Volledig scherm openen"
+ },
+ {
+  "bestand": "src/components/ObliteratorGame.jsx",
+  "zoek": "Anders verschijn je in de high-score als",
+  "vervang": "Anders verschijn je in de highscorelijst als",
+  "reden": "'in de high-score' loopt niet; bedoeld is de lijst",
+  "ernst": 1,
+  "voor": "Anders verschijn je in de high-score als \"Speler\"",
+  "na": "Anders verschijn je in de highscorelijst als \"Speler\""
+ },
+ {
+  "bestand": "src/components/ObliteratorGame.jsx",
+  "zoek": "plek: \"Galapagos eilanden\"",
+  "vervang": "plek: \"Galápagoseilanden\"",
+  "reden": "Spelling aardrijkskundige naam (één woord, met accent)",
+  "ernst": 1,
+  "voor": "Galapagos eilanden",
+  "na": "Galápagoseilanden"
+ },
+ {
+  "bestand": "src/components/ZookwartierGame.jsx",
+  "zoek": "verstopt dier${terugAantal > 1 ? \"en\" : \"\"}! ❤️",
+  "vervang": "${terugAantal > 1 ? \"verstopte dieren\" : \"verstopt dier\"}! ❤️",
+  "reden": "Meervoud fout: 'je vond 2 verstopt dieren'",
+  "ernst": 1,
+  "voor": "Alle dieren gevoerd — je vond 2 verstopt dieren! ❤️",
+  "na": "Alle dieren gevoerd — je vond 2 verstopte dieren! ❤️"
+ },
+ {
+  "bestand": "src/components/ZookwartierGame.jsx",
+  "zoek": "\"Wauw, een echt bot! Die bewaar ik als schat.\"",
+  "vervang": "\"Wauw, een echt bot! Dat bewaar ik als schat.\"",
+  "reden": "'het bot' → 'dat', niet 'die'",
+  "ernst": 1,
+  "voor": "Wauw, een echt bot! Die bewaar ik als schat.",
+  "na": "Wauw, een echt bot! Dat bewaar ik als schat."
+ },
+ {
+  "bestand": "src/components/ZookwartierGame.jsx",
+  "zoek": "flits(\"Dat is niet van jou - je kunt alleen je eigen bouwsels weghalen\")",
+  "vervang": "flits(\"Dat is niet van jou — je kunt alleen je eigen bouwsels weghalen\")",
+  "reden": "Streepje inconsequent; zelfde melding elders met gedachtestreepje",
+  "ernst": 1,
+  "voor": "Dat is niet van jou - je kunt …",
+  "na": "Dat is niet van jou — je kunt …"
+ },
+ {
+  "bestand": "src/components/ZookwartierGame.jsx",
+  "zoek": "<span>Welkom{naam ? ` ${naam}` : \"\"}! Tik",
+  "vervang": "<span>Welkom{naam ? `, ${naam}` : \"\"}! Tik",
+  "reden": "Komma voor aanspreeknaam ontbreekt",
+  "ernst": 1,
+  "voor": "Welkom Sam! Tik hieronder op 🦊 Dieren …",
+  "na": "Welkom, Sam! Tik hieronder op 🦊 Dieren …"
+ },
+ {
+  "bestand": "src/components/ZookwartierGame.jsx",
+  "zoek": "sub=\"(vaste kost / dag)\"",
+  "vervang": "sub=\"(vaste kosten per dag)\"",
+  "reden": "'vaste kost' is Vlaams; in het Nederlands 'vaste kosten'",
+  "ernst": 1,
+  "voor": "(vaste kost / dag)",
+  "na": "(vaste kosten per dag)"
+ },
+ {
+  "bestand": "src/components/ZookwartierGame.jsx",
+  "zoek": "Doe de pagina dan opnieuw (veeg omlaag of druk F5)",
+  "vervang": "Laad de pagina dan opnieuw (veeg omlaag of druk F5)",
+  "reden": "'de pagina opnieuw doen' loopt niet",
+  "ernst": 2,
+  "voor": "Doe de pagina dan opnieuw (veeg omlaag of druk F5)",
+  "na": "Laad de pagina dan opnieuw (veeg omlaag of druk F5)"
+ },
+ {
+  "bestand": "src/components/ZookwartierGame.jsx",
+  "zoek": "\"Niet erg — samen oefenen maakt het zo makkelijker. Zullen we?\"",
+  "vervang": "\"Niet erg — samen oefenen maakt het een stuk makkelijker. Zullen we?\"",
+  "reden": "'maakt het zo makkelijker' loopt niet",
+  "ernst": 2,
+  "voor": "Niet erg — samen oefenen maakt het zo makkelijker. Zullen we?",
+  "na": "Niet erg — samen oefenen maakt het een stuk makkelijker. Zullen we?"
+ },
+ {
+  "bestand": "src/components/ZookwartierGame.jsx",
+  "zoek": "💛 Voor jou klaargezet door thuis!",
+  "vervang": "💛 Thuis voor jou klaargezet!",
+  "reden": "'klaargezet door thuis' loopt niet",
+  "ernst": 2,
+  "voor": "💛 Voor jou klaargezet door thuis!",
+  "na": "💛 Thuis voor jou klaargezet!"
+ },
+ {
+  "bestand": "src/components/ZookwartierGame.jsx",
+  "zoek": "Wil je 'm niet meer delen? Vraag het me dan — we kunnen een nieuwe link maken.",
+  "vervang": "Wil je 'm niet meer delen? Vraag het dan aan de maker via hallo@leerkwartier.app — we kunnen een nieuwe link maken.",
+  "reden": "'Vraag het me' — onduidelijk wie 'me' is; geen manier om dat te vragen",
+  "ernst": 2,
+  "voor": "Wil je 'm niet meer delen? Vraag het me dan — we kunnen een nieuwe link maken.",
+  "na": "Wil je 'm niet meer delen? Vraag het dan aan de maker via hallo@leerkwartier.app — we kunnen een nieuwe link maken."
+ },
+ {
+  "bestand": "src/components/ZookwartierGame.jsx",
+  "zoek": ">🎲 Verras me met andere</button>",
+  "vervang": ">🎲 Verras me opnieuw</button>",
+  "reden": "'met andere' — zin houdt halverwege op",
+  "ernst": 2,
+  "voor": "🎲 Verras me met andere",
+  "na": "🎲 Verras me opnieuw"
+ },
+ {
+  "bestand": "src/components/ZookwartierGame.jsx",
+  "zoek": "de kabouters bouwen een <b>{tafereel.souvenirNaam}</b>",
+  "vervang": "de kabouters bouwen <b>{tafereel.souvenirNaam}</b>",
+  "reden": "Dubbel 'een': souvenirNaam begint al met 'een' (bv. 'een mini-stoomloc 🚂')",
+  "ernst": 2,
+  "voor": "… en de kabouters bouwen een een mini-stoomloc 🚂 voor jouw eigen park.",
+  "na": "… en de kabouters bouwen een mini-stoomloc 🚂 voor jouw eigen park."
+ },
+ {
+  "bestand": "src/components/ZookwartierGame.jsx",
+  "zoek": "🎁 Je souvenir <b>{TAFEREEL_BY_ID[tafereel.id].souvenirNaam}</b> is vrijgespeeld",
+  "vervang": "🎁 Je souvenir is vrijgespeeld: <b>{TAFEREEL_BY_ID[tafereel.id].souvenirNaam}</b>",
+  "reden": "souvenirNaam begint met 'een' → 'Je souvenir een mini-stoomloc is vrijgespeeld' loopt niet",
+  "ernst": 2,
+  "voor": "🎁 Je souvenir een mini-stoomloc 🚂 is vrijgespeeld — zet 'm neer via Bouwen → Dieren ✨",
+  "na": "🎁 Je souvenir is vrijgespeeld: een mini-stoomloc 🚂 — zet 'm neer via Bouwen → Dieren ✨"
+ }
+]

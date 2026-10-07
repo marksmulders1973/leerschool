@@ -126,7 +126,7 @@ function pakketHtml(token) {
     </div>
 
     <div style="background:#fff8e6;border:1px solid #f0e0b0;border-radius:12px;padding:14px 16px 8px;margin:0 0 22px;">
-      <div style="font-size:13px;font-weight:800;color:#9a7b00;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:8px;">✅ Antwoordblad — voor de ouder (pas nakijken ná het maken)</div>
+      <div style="font-size:13px;font-weight:800;color:#9a7b00;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:8px;">✅ Antwoordblad — voor de ouder of verzorger (pas nakijken ná het maken)</div>
       ${sleutel}
     </div>
 
@@ -145,7 +145,7 @@ function pakketHtml(token) {
         tx.vragen.map((v) => `${v.nr}. ${v.q}\n   ${v.options.map((o, i) => `${LETTERS[i]}. ${o}`).join("  ")}`).join("\n")
       ).join("\n\n")
     ).join("\n\n") +
-    `\n\n--- ANTWOORDBLAD (voor de ouder) ---\n` +
+    `\n\n--- ANTWOORDBLAD (voor de ouder of verzorger) ---\n` +
     tredes.map((t) => t.teksten.map((tx) => tx.vragen.map((v) => `${v.nr}. ${LETTERS[v.answer]} (${v.options[v.answer]}) — truc: ${v.type} — ${v.uitleg}`).join("\n")).join("\n")).join("\n") +
     `\n\nUitschrijven: ${uit}\nLeerkwartier — een kwartier per dag leren, een leven lang slimmer.`;
 

@@ -1,0 +1,7 @@
+# Route /leerlijn (vers apparaat)
+# http://localhost:4173/leerlijn
+Spring naar hoofdinhoud
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244

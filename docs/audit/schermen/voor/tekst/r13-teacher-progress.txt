@@ -1,0 +1,21 @@
+# Route /voortgang/leerkracht (vers apparaat)
+# http://localhost:4173/voortgang/leerkracht
+Spring naar hoofdinhoud
+←
+Voortgang 📊
+Bekijk hoe je klas het doet
+🏠
+📭
+Nog geen resultaten. Maak een toets en deel de code!
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244
+🏠
+Home
+📚
+Leren
+Toets
+🎮
+Spelletje
+Mijn pagina

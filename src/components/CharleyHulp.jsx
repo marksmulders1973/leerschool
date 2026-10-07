@@ -45,7 +45,7 @@ export default function CharleyHulp({ open, onClose }) {
     const t = invoer.trim();
     if (!t || busy) return;
     if (aiCapBereikt()) {
-      setAiAntwoord({ vraag: t, antwoord: "Je hebt vandaag al veel gevraagd — morgen kan ik weer meedenken! Kijk anders bij de vragen hierboven, of op leerkwartier.app/over. 🐾" });
+      setAiAntwoord({ vraag: t, antwoord: "Je hebt vandaag al veel gevraagd — morgen kan ik weer meedenken! Kijk anders bij de vragen hierboven, of op leerkwartier.app/over.html. 🐾" });
       setInvoer("");
       return;
     }
@@ -59,7 +59,7 @@ export default function CharleyHulp({ open, onClose }) {
         body: JSON.stringify({ vraag: t }),
       });
       const data = await r.json().catch(() => ({}));
-      setAiAntwoord({ vraag: t, antwoord: data?.reply || "Hm, dat weet ik zo niet — kijk eens bij de vragen hierboven, of op leerkwartier.app/over. 🐾" });
+      setAiAntwoord({ vraag: t, antwoord: data?.reply || "Hm, dat weet ik zo niet — kijk eens bij de vragen hierboven, of op leerkwartier.app/over.html. 🐾" });
       setInvoer("");
     } catch {
       setAiAntwoord({ vraag: t, antwoord: "Ik kan even niet nadenken — probeer het zo nog eens. 🙏" });

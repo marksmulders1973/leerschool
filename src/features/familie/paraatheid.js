@@ -67,9 +67,9 @@ function bepaalStatus({ pogingen, pct, onderwerpen }) {
 function zinVoor(status, label) {
   const l = label.toLowerCase();
   switch (status) {
-    case "groen": return `${label} ziet er sterk uit — blijf onderhouden.`;
+    case "groen": return `${label} ziet er sterk uit — blijf het bijhouden.`;
     case "oranje": return `${label} is op de goede weg; nog wat oefening helpt.`;
-    case "rood": return `${l} vraagt aandacht — hier valt de meeste winst te halen.`;
+    case "rood": return `${label} vraagt aandacht — hier valt de meeste winst te halen.`;
     default: return `Nog te weinig geoefend voor ${l} om iets te kunnen zeggen.`;
   }
 }

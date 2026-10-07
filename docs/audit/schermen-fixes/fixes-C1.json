@@ -1,0 +1,209 @@
+[
+ {
+  "bestand": "src/components/learn/PiramideInhoud.jsx",
+  "zoek": "Zijde van de grondvlak:",
+  "vervang": "Zijde van het grondvlak:",
+  "reden": "Lidwoord: het grondvlak (elders in hetzelfde scherm ook 'grondvlak' als het-woord)",
+  "ernst": 1,
+  "voor": "Zijde van de grondvlak: 4 m",
+  "na": "Zijde van het grondvlak: 4 m"
+ },
+ {
+  "bestand": "src/components/learn/RekenOefenRonde.jsx",
+  "zoek": "                  Check\n",
+  "vervang": "                  Nakijken\n",
+  "reden": "Engels woord op knop voor jonge kinderen; gewoon Nederlands kan",
+  "ernst": 1,
+  "voor": "[Check]",
+  "na": "[Nakijken]"
+ },
+ {
+  "bestand": "src/features/learn/LearnPathsHub.jsx",
+  "zoek": "              CITO:\n",
+  "vervang": "              Doorstroomtoets:\n",
+  "reden": "Huisregel: 'Doorstroomtoets' i.p.v. 'Cito' in zichtbare tekst (filter-label boven de toets-pijler-pillen)",
+  "ernst": 3,
+  "voor": "CITO: [Taal] [Rekenen] …",
+  "na": "Doorstroomtoets: [Taal] [Rekenen] …"
+ },
+ {
+  "bestand": "src/features/learn/LearnPathsHub.jsx",
+  "zoek": ": `nog niets voor jouw ${effectivePo ? \"groep\" : \"klas\"} · ${stats.count} in andere`)",
+  "vervang": ": `nog niets voor jouw ${effectivePo ? \"groep\" : \"klas\"} · ${stats.count} in totaal`)",
+  "reden": "'5 in andere' loopt niet (andere wat?); bij 0 eigen zijn alle onderwerpen in totaal — sluit aan bij de andere variant",
+  "ernst": 2,
+  "voor": "nog niets voor jouw groep · 5 in andere",
+  "na": "nog niets voor jouw groep · 5 in totaal"
+ },
+ {
+  "bestand": "src/features/learn/LearnPathsHub.jsx",
+  "zoek": "Geef het door via \"Tip aan de maker\" op de homepage.",
+  "vervang": "Geef het door via \"Tip aan de maker\" op de startpagina.",
+  "reden": "Engels woord waar Nederlands kan",
+  "ernst": 1,
+  "voor": "Mis je iets? Geef het door via \"Tip aan de maker\" op de homepage.",
+  "na": "Mis je iets? Geef het door via \"Tip aan de maker\" op de startpagina."
+ },
+ {
+  "bestand": "src/features/learn/LearnPath.jsx",
+  "zoek": "Niet erg — je kunt dit terug-vinden bij deel",
+  "vervang": "Niet erg — je kunt dit terugvinden bij deel",
+  "reden": "Spelling: terugvinden is één woord zonder streepje",
+  "ernst": 1,
+  "voor": "Niet erg — je kunt dit terug-vinden bij deel 2.",
+  "na": "Niet erg — je kunt dit terugvinden bij deel 2."
+ },
+ {
+  "bestand": "src/features/learn/LearnPath.jsx",
+  "zoek": "            {selected !== null && selected === currentCheck.answer && currentCheck.examenBron && currentCheck.explanation && (\n              <details style={{ marginTop: 10 }}>\n                <summary style={{\n                  cursor: \"pointer\",\n                  padding: \"8px 12px\",\n                  background: \"rgba(255,213,79,0.10)\",\n                  border: \"1px solid rgba(255,213,79,0.35)\",\n                  borderRadius: 8,\n                  color: \"#ffd54f\",\n                  fontWeight: 700,\n                  fontSize: 13,\n                  fontFamily: \"var(--font-display)\",\n                  listStyle: \"none\",\n                }}>\n                  📖 Leg uit (officiële uitleg uit correctievoorschrift)",
+  "vervang": "            {selected !== null && selected === currentCheck.answer && currentCheck.examenBron && currentCheck.explanation && (\n              <details style={{ marginTop: 10 }}>\n                <summary style={{\n                  cursor: \"pointer\",\n                  padding: \"8px 12px\",\n                  background: \"rgba(255,213,79,0.10)\",\n                  border: \"1px solid rgba(255,213,79,0.35)\",\n                  borderRadius: 8,\n                  color: \"#ffd54f\",\n                  fontWeight: 700,\n                  fontSize: 13,\n                  fontFamily: \"var(--font-display)\",\n                  listStyle: \"none\",\n                }}>\n                  📖 Leg uit (officiële uitleg uit het correctievoorschrift)",
+  "reden": "Lidwoord ontbreekt",
+  "ernst": 1,
+  "voor": "📖 Leg uit (officiële uitleg uit correctievoorschrift)",
+  "na": "📖 Leg uit (officiële uitleg uit het correctievoorschrift)"
+ },
+ {
+  "bestand": "src/features/learn/LearnPath.jsx",
+  "zoek": "            {currentCheck.examenBron && currentCheck.explanation && (\n              <details style={{ marginTop: 10 }}>\n                <summary style={{\n                  cursor: \"pointer\",\n                  padding: \"8px 12px\",\n                  background: \"rgba(255,213,79,0.10)\",\n                  border: \"1px solid rgba(255,213,79,0.35)\",\n                  borderRadius: 8,\n                  color: \"#ffd54f\",\n                  fontWeight: 700,\n                  fontSize: 13,\n                  fontFamily: \"var(--font-display)\",\n                  listStyle: \"none\",\n                }}>\n                  📖 Leg uit (officiële uitleg uit correctievoorschrift)",
+  "vervang": "            {currentCheck.examenBron && currentCheck.explanation && (\n              <details style={{ marginTop: 10 }}>\n                <summary style={{\n                  cursor: \"pointer\",\n                  padding: \"8px 12px\",\n                  background: \"rgba(255,213,79,0.10)\",\n                  border: \"1px solid rgba(255,213,79,0.35)\",\n                  borderRadius: 8,\n                  color: \"#ffd54f\",\n                  fontWeight: 700,\n                  fontSize: 13,\n                  fontFamily: \"var(--font-display)\",\n                  listStyle: \"none\",\n                }}>\n                  📖 Leg uit (officiële uitleg uit het correctievoorschrift)",
+  "reden": "Lidwoord ontbreekt (tweede plek, na fout antwoord)",
+  "ernst": 1,
+  "voor": "📖 Leg uit (officiële uitleg uit correctievoorschrift)",
+  "na": "📖 Leg uit (officiële uitleg uit het correctievoorschrift)"
+ },
+ {
+  "bestand": "src/features/learn/LearnPath.jsx",
+  "zoek": "title={path.steunTeksten ? \"Terug naar het overzicht\" : \"Terug naar paden\"}\n                hint={path.steunTeksten ? \"Kies een ander deel\" : \"Andere stap kiezen\"}",
+  "vervang": "title={path.steunTeksten ? \"Terug naar het overzicht\" : \"Terug naar het overzicht\"}\n                hint={path.steunTeksten ? \"Kies een ander deel\" : \"Kies een ander deel\"}",
+  "reden": "Knop (goOverview) gaat naar het overzicht van dít onderwerp, niet naar een lijst 'paden'; 'paden'/'stap' is bovendien dev-jargon. Zelfde tekst als de nieuwkomer-variant",
+  "ernst": 2,
+  "voor": "Overzicht · Terug naar paden · Andere stap kiezen",
+  "na": "Overzicht · Terug naar het overzicht · Kies een ander deel"
+ },
+ {
+  "bestand": "src/features/learn/LearnPath.jsx",
+  "zoek": "Je kunt elke stap nog eens herhalen door erop te klikken hieronder.",
+  "vervang": "Je kunt elk deel nog eens herhalen door hieronder erop te klikken.",
+  "reden": "Woordvolgorde loopt niet ('door erop te klikken hieronder'); 'stap' → 'deel' zoals elders op dit scherm",
+  "ernst": 1,
+  "voor": "Je kunt elke stap nog eens herhalen door erop te klikken hieronder.",
+  "na": "Je kunt elk deel nog eens herhalen door hieronder erop te klikken."
+ },
+ {
+  "bestand": "src/features/learn/LearnPath.jsx",
+  "zoek": "Lees de uitleg van de stap nog eens en klik dan 'Stap voltooid' onderin.",
+  "vervang": "Lees de uitleg van de stap nog eens en klik dan hieronder op 'Stap voltooid'.",
+  "reden": "De knop staat direct onder de melding in dezelfde kaart, niet 'onderin'; 'klik op' ontbrak",
+  "ernst": 1,
+  "voor": "… klik dan 'Stap voltooid' onderin.",
+  "na": "… klik dan hieronder op 'Stap voltooid'."
+ },
+ {
+  "bestand": "src/features/learn/KwartierPauze.jsx",
+  "zoek": "Pauze van 5 min, daarna deze prompt weer.",
+  "vervang": "Pauze van 5 min, daarna vraag ik het opnieuw.",
+  "reden": "'prompt' is dev-jargon/Engels; kind begrijpt het niet",
+  "ernst": 2,
+  "voor": "Pauze van 5 min, daarna deze prompt weer.",
+  "na": "Pauze van 5 min, daarna vraag ik het opnieuw."
+ },
+ {
+  "bestand": "src/features/learn/KwartierPauze.jsx",
+  "zoek": "Ik vraag het niet meer deze sessie.",
+  "vervang": "Ik vraag het deze keer niet meer.",
+  "reden": "'sessie' is jargon; woordvolgorde stroef",
+  "ernst": 1,
+  "voor": "Ik vraag het niet meer deze sessie.",
+  "na": "Ik vraag het deze keer niet meer."
+ },
+ {
+  "bestand": "src/features/learn/BronTekstInteractief.jsx",
+  "zoek": "}}>Wis alle</button>",
+  "vervang": "}}>Wis alles</button>",
+  "reden": "Onvolledig: 'Wis alle' mist een woord",
+  "ernst": 1,
+  "voor": "[Wis alle]",
+  "na": "[Wis alles]"
+ },
+ {
+  "bestand": "src/features/learn/MeeBezig.jsx",
+  "zoek": "\"Jij kan de eerste zijn die zich aanmeldt.\"",
+  "vervang": "\"Jij kunt de eerste zijn die zich aanmeldt.\"",
+  "reden": "Spelling/stijl: jij kunt",
+  "ernst": 1,
+  "voor": "Jij kan de eerste zijn die zich aanmeldt.",
+  "na": "Jij kunt de eerste zijn die zich aanmeldt."
+ },
+ {
+  "bestand": "src/features/learn/VraagUitlegPad.jsx",
+  "zoek": "💪 Probeer het straks eerst zelf.",
+  "vervang": "💪 Probeer het eerst zelf.",
+  "reden": "'straks eerst' botst (staat vóór de eerste poging); loopt niet",
+  "ernst": 2,
+  "voor": "💪 Probeer het straks eerst zelf. Hieronder staat hulp …",
+  "na": "💪 Probeer het eerst zelf. Hieronder staat hulp …"
+ },
+ {
+  "bestand": "src/features/learn/WoordHulp.jsx",
+  "zoek": "📚 Er is een hele les over dit! →",
+  "vervang": "📚 Er is een hele les over dit woord! →",
+  "reden": "'over dit!' loopt niet (verwijzing mist zelfstandig naamwoord)",
+  "ernst": 1,
+  "voor": "📚 Er is een hele les over dit! → Breuken",
+  "na": "📚 Er is een hele les over dit woord! → Breuken"
+ },
+ {
+  "bestand": "src/features/mastery/MyMastery.jsx",
+  "zoek": "`Hi ${player}`",
+  "vervang": "`Hoi ${player}`",
+  "reden": "Engels; elders in de app 'Hoi'",
+  "ernst": 1,
+  "voor": "Hi Sara",
+  "na": "Hoi Sara"
+ },
+ {
+  "bestand": "src/features/mastery/MasteryCTABanner.jsx",
+  "zoek": "`🔁 Tijd voor refresher, ${player}:`",
+  "vervang": "`🔁 Tijd om te herhalen, ${player}:`",
+  "reden": "Engels woord waar Nederlands kan; 'Tijd voor refresher' mist ook een lidwoord",
+  "ernst": 2,
+  "voor": "🔁 Tijd voor refresher, Sara:",
+  "na": "🔁 Tijd om te herhalen, Sara:"
+ },
+ {
+  "bestand": "src/features/mastery/DailyChallengeBanner.jsx",
+  "zoek": "\"Streak gestart 🎉\"",
+  "vervang": "\"Reeks gestart 🎉\"",
+  "reden": "Engels; de app zegt elders 'reeks' (KwartierPauze, einde-scherm)",
+  "ernst": 1,
+  "voor": "Streak gestart 🎉",
+  "na": "Reeks gestart 🎉"
+ },
+ {
+  "bestand": "src/features/mastery/DailyChallengeBanner.jsx",
+  "zoek": "\"STREAK NIET VERBREKEN\"",
+  "vervang": "\"REEKS NIET VERBREKEN\"",
+  "reden": "Engels; consistent met 'reeks' elders",
+  "ernst": 1,
+  "voor": "STREAK NIET VERBREKEN",
+  "na": "REEKS NIET VERBREKEN"
+ },
+ {
+  "bestand": "src/features/mastery/DailyChallengeBanner.jsx",
+  "zoek": "\"Een paar vragen om de streak te houden\"",
+  "vervang": "\"Een paar vragen om je reeks te houden\"",
+  "reden": "Engels; consistent met 'reeks' elders",
+  "ernst": 1,
+  "voor": "Een paar vragen om de streak te houden",
+  "na": "Een paar vragen om je reeks te houden"
+ },
+ {
+  "bestand": "src/features/mastery/DailyChallengeBanner.jsx",
+  "zoek": "\"Begin je streak — een paar vragen, klein en concreet.\"",
+  "vervang": "\"Begin je reeks — een paar vragen, klein en concreet.\"",
+  "reden": "Engels; consistent met 'reeks' elders",
+  "ernst": 1,
+  "voor": "Begin je streak — een paar vragen, klein en concreet.",
+  "na": "Begin je reeks — een paar vragen, klein en concreet."
+ }
+]

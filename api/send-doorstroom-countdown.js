@@ -91,7 +91,7 @@ const FASES = [
     punten: [
       "De uitslag komt meestal in maart; het advies kan omhoog worden bijgesteld.",
       "Blijf in een rustig tempo oefenen — fijn voor de start op de middelbare school.",
-      "Leerkwartier blijft gewoon gratis te gebruiken.",
+      "Oefenen bij Leerkwartier blijft gratis, gegarandeerd t/m 2031.",
     ],
     cta: "Blijf oefenen in je eigen tempo",
   },
@@ -132,7 +132,7 @@ function huidigeFase(today) {
 
 function maakMail(rij, fase) {
   const naam = esc(rij.kind_voornaam) || "";
-  const hoi = naam ? `Hoi ${naam}-ouder,` : "Hoi,";
+  const hoi = naam ? `Hoi ouder of verzorger van ${naam},` : "Hoi,";
   const ref = encodeURIComponent(rij.unsubscribe_token || "");
   const utm = `utm_source=email&utm_campaign=doorstroom-aftelreeks&utm_content=fase${fase.n}`;
   const oefen = `${SITE}/vandaag?${utm}`;

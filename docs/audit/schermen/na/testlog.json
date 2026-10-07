@@ -1,0 +1,318 @@
+[
+ {
+  "id": "r01-home",
+  "titel": "Route / (vers apparaat)",
+  "url": "/",
+  "tekens": 1124,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r02-learn-paths-hub",
+  "titel": "Route /leren (vers apparaat)",
+  "url": "/leren",
+  "tekens": 942,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r03-mijn-pagina",
+  "titel": "Route /mijn (vers apparaat)",
+  "url": "/mijn",
+  "tekens": 1382,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r04-teacher-home",
+  "titel": "Route /leerkracht (vers apparaat)",
+  "url": "/leerkracht",
+  "tekens": 3187,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r05-ouder-dashboard",
+  "titel": "Route /ouder (vers apparaat)",
+  "url": "/ouder",
+  "tekens": 720,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r06-self-study",
+  "titel": "Route /zelfstudie (vers apparaat)",
+  "url": "/zelfstudie",
+  "tekens": 927,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r07-cito",
+  "titel": "Route /cito (vers apparaat)",
+  "url": "/cito",
+  "tekens": 2337,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r08-examens",
+  "titel": "Route /examens (vers apparaat)",
+  "url": "/examens",
+  "tekens": 915,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r09-cito-leerpad-toets",
+  "titel": "Route /doorstroomtoets-oefentoets (vers apparaat)",
+  "url": "/doorstroomtoets-oefentoets",
+  "tekens": 685,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r10-rondleiding",
+  "titel": "Route /rondleiding (vers apparaat)",
+  "url": "/rondleiding",
+  "tekens": 1790,
+  "fouten": []
+ },
+ {
+  "id": "r11-oefenpakket",
+  "titel": "Route /oefenpakket (vers apparaat)",
+  "url": "/oefenpakket",
+  "tekens": 3449,
+  "fouten": []
+ },
+ {
+  "id": "r12-leesladder",
+  "titel": "Route /leesladder (vers apparaat)",
+  "url": "/leesladder",
+  "tekens": 4110,
+  "fouten": []
+ },
+ {
+  "id": "r13-dictee",
+  "titel": "Route /dictee (vers apparaat)",
+  "url": "/dictee",
+  "tekens": 1184,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r14-werkwoorden",
+  "titel": "Route /werkwoorden (vers apparaat)",
+  "url": "/werkwoorden",
+  "tekens": 1387,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r15-vandaag-kwartier",
+  "titel": "Route /vandaag-kwartier (vers apparaat)",
+  "url": "/vandaag-kwartier",
+  "tekens": 223,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r16-printen",
+  "titel": "Route /printen (vers apparaat)",
+  "url": "/printen",
+  "tekens": 4310,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r17-tafelbladen",
+  "titel": "Route /tafelbladen (vers apparaat)",
+  "url": "/tafelbladen",
+  "tekens": 10662,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r18-redactiebladen",
+  "titel": "Route /redactiebladen (vers apparaat)",
+  "url": "/redactiebladen",
+  "tekens": 8308,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r19-familie",
+  "titel": "Route /familie (vers apparaat)",
+  "url": "/familie",
+  "tekens": 2898,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r20-diploma",
+  "titel": "Route /diploma (vers apparaat)",
+  "url": "/diploma",
+  "tekens": 1610,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r21-ouderkaart",
+  "titel": "Route /ouderkaart (vers apparaat)",
+  "url": "/ouderkaart",
+  "tekens": 2630,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r22-weekschema",
+  "titel": "Route /weekschema (vers apparaat)",
+  "url": "/weekschema",
+  "tekens": 1613,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r23-trots",
+  "titel": "Route /trots (vers apparaat)",
+  "url": "/trots",
+  "tekens": 1080,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r24-vonk",
+  "titel": "Route /vonk (vers apparaat)",
+  "url": "/vonk",
+  "tekens": 1593,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r25-brugklas",
+  "titel": "Route /brugklas (vers apparaat)",
+  "url": "/brugklas",
+  "tekens": 4821,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r26-results",
+  "titel": "Route /resultaat (vers apparaat)",
+  "url": "/",
+  "tekens": 1124,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r27-zoo",
+  "titel": "Route /dierentuin (vers apparaat)",
+  "url": "/dierentuin",
+  "tekens": 1215,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r28-spelletje",
+  "titel": "Route /spelletje (vers apparaat)",
+  "url": "/spelletje",
+  "tekens": 219,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r29-nieuwkomers",
+  "titel": "Route /nieuwkomers (vers apparaat)",
+  "url": "/nieuwkomers",
+  "tekens": 3647,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r30-imposter",
+  "titel": "Route /spelletje/imposter (vers apparaat)",
+  "url": "/spelletje/imposter",
+  "tekens": 456,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r31-galerij",
+  "titel": "Route /parken (vers apparaat)",
+  "url": "/parken",
+  "tekens": 426,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r32-maatje",
+  "titel": "Route /maatje (vers apparaat)",
+  "url": "/maatje",
+  "tekens": 402,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r33-wishes",
+  "titel": "Route /tips (vers apparaat)",
+  "url": "/tips",
+  "tekens": 1201,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r34-kwartiercheck",
+  "titel": "Route /kwartiercheck (vers apparaat)",
+  "url": "/kwartiercheck",
+  "tekens": 1880,
+  "fouten": []
+ },
+ {
+  "id": "r35-start-kwartier",
+  "titel": "Route /start (vers apparaat)",
+  "url": "/start",
+  "tekens": 303,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "r36-klas",
+  "titel": "Route /klas (vers apparaat)",
+  "url": "/klas",
+  "tekens": 769,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ }
+]

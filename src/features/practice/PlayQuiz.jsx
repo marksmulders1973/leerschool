@@ -778,7 +778,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               <span>🚩</span> Fout melden
             </a>
             <div style={{ fontSize: 11, color: "var(--color-text-muted)", textAlign: "center", marginTop: 6 }}>
-              ↩️ Kom terug via de <strong style={{ color: "var(--color-text-muted)" }}>← terug-knop</strong> van je browser
+              ↩️ Video en melden openen in een nieuw tabblad — sluit dat tabblad om hier verder te gaan
             </div>
           </div>
         )}
@@ -840,7 +840,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
                 </div>
               </div>
               <div style={{ background: "#0f2a18", borderRadius: 12, padding: "12px 14px", border: "2px solid #28a745" }}>
-                <div style={{ fontSize: 10, color: "var(--color-brand-primary-100)", fontWeight: 800, marginBottom: 5, textTransform: "uppercase", letterSpacing: 0.5 }}>✅ Goede antwoord</div>
+                <div style={{ fontSize: 10, color: "var(--color-brand-primary-100)", fontWeight: 800, marginBottom: 5, textTransform: "uppercase", letterSpacing: 0.5 }}>✅ Goed antwoord</div>
                 <div style={{ fontSize: 13, color: "#6fcf87", lineHeight: 1.4 }}>
                   {question.options[question.answer]}
                 </div>
@@ -943,7 +943,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               onClick={() => { setShowWrongOverlay(false); goToNext(); }}
               style={{ width: "100%", padding: "16px", background: "linear-gradient(135deg, var(--color-brand-primary), #00a844)", border: "none", borderRadius: 14, color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700, cursor: "pointer", letterSpacing: 0.3 }}
             >
-              {isLast ? "📊 Bekijk je resultaten" : "↩️ Keer terug naar vragen"}
+              {isLast ? "📊 Bekijk je resultaten" : "👉 Door naar volgende vraag"}
             </button>
           </div>
         </div>

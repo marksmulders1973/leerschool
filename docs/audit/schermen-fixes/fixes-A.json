@@ -1,0 +1,434 @@
+[
+ {
+  "bestand": "src/data/appGids.js",
+  "zoek": "Ja — elke maandag krijg je per gekoppeld kind",
+  "vervang": "Ja — elke vrijdagmiddag krijg je per gekoppeld kind",
+  "reden": "Weekrapport gaat sinds 30 sep op vrijdag 16:00 (send-ouder-rapport + proPlan zeggen vrijdag)",
+  "ernst": 3,
+  "voor": "Ja — elke maandag krijg je per gekoppeld kind een weekrapport in je mail",
+  "na": "Ja — elke vrijdagmiddag krijg je per gekoppeld kind een weekrapport in je mail"
+ },
+ {
+  "bestand": "src/data/appGids.js",
+  "zoek": "De Doorstroomtoets is in de eerste twee weken van februari (groep 8).",
+  "vervang": "De Doorstroomtoets is voor groep 8, tussen eind januari en half februari (in 2027: 25 januari t/m 12 februari).",
+  "reden": "Verouderde afnameperiode; overige pagina's (aftelweken, cito-toets-oefenen, Rondleiding) noemen 25 jan t/m 12 feb 2027",
+  "ernst": 3,
+  "voor": "De Doorstroomtoets is in de eerste twee weken van februari (groep 8).",
+  "na": "De Doorstroomtoets is voor groep 8, tussen eind januari en half februari (in 2027: 25 januari t/m 12 februari)."
+ },
+ {
+  "bestand": "src/components/FamilieUitleg.jsx",
+  "zoek": "nl: [\"Weekmail op maandag\"",
+  "vervang": "nl: [\"Weekmail op vrijdag\"",
+  "reden": "Weekrapport gaat op vrijdag, niet maandag",
+  "ernst": 3,
+  "voor": "Weekmail op maandag",
+  "na": "Weekmail op vrijdag"
+ },
+ {
+  "bestand": "src/components/FamilieUitleg.jsx",
+  "zoek": "en: [\"Monday e-mail\"",
+  "vervang": "en: [\"Friday e-mail\"",
+  "reden": "Engelse variant idem: weekrapport gaat op vrijdag",
+  "ernst": 3,
+  "voor": "Monday e-mail",
+  "na": "Friday e-mail"
+ },
+ {
+  "bestand": "src/components/PakketUitleg.jsx",
+  "zoek": "\"Uitleg op 3 niveaus: makkelijk, gewoon en uitgebreid\"",
+  "vervang": "\"Uitleg op 3 niveaus: gewoon, simpeler en nog simpeler\"",
+  "reden": "Klopt niet met de echte niveaus (basis/simpeler/nog simpeler); 'uitgebreid' bestaat niet",
+  "ernst": 2,
+  "voor": "Uitleg op 3 niveaus: makkelijk, gewoon en uitgebreid",
+  "na": "Uitleg op 3 niveaus: gewoon, simpeler en nog simpeler"
+ },
+ {
+  "bestand": "src/components/ProPage.jsx",
+  "zoek": "⭐ Exclusief voor Pro-gebruikers",
+  "vervang": "⭐ Alleen met Familie",
+  "reden": "'Pro' bestaat niet meer; enige betaalde product heet Familie (blok staat achter PAYWALL_ACTIVE)",
+  "ernst": 3,
+  "voor": "⭐ Exclusief voor Pro-gebruikers",
+  "na": "⭐ Alleen met Familie"
+ },
+ {
+  "bestand": "src/components/ProPage.jsx",
+  "zoek": "Neem een abonnement om door te gaan.",
+  "vervang": "Kies Familie om door te gaan: € 39 voor 12 maanden, één keer betalen.",
+  "reden": "Botst met huisregel: geen abonnement, Familie = eenmalig € 39 voor 12 maanden",
+  "ernst": 3,
+  "voor": "Je hebt eerder al een gratis proefperiode gehad. Neem een abonnement om door te gaan.",
+  "na": "Je hebt eerder al een gratis proefperiode gehad. Kies Familie om door te gaan: € 39 voor 12 maanden, één keer betalen."
+ },
+ {
+  "bestand": "src/constants.js",
+  "zoek": "Alle extra's (Familie én Pro) gratis t/m 31 december 2026",
+  "vervang": "Alle Familie-extra's gratis t/m 31 december 2026",
+  "reden": "'Pro' bestaat niet meer (tekst staat klaar, nu niet getoond)",
+  "ernst": 1,
+  "voor": "Alle extra's (Familie én Pro) gratis t/m 31 december 2026 — geen betaling, gewoon proberen.",
+  "na": "Alle Familie-extra's gratis t/m 31 december 2026 — geen betaling, gewoon proberen."
+ },
+ {
+  "bestand": "src/subscription/PaywallGate.jsx",
+  "zoek": "aria-label={`${label} vereist premium`}",
+  "vervang": "aria-label={`${label} is een betaalde extra`}",
+  "reden": "'premium' botst met huisregel (geen Premium); schermlezer-tekst",
+  "ernst": 1,
+  "voor": "… vereist premium",
+  "na": "… is een betaalde extra"
+ },
+ {
+  "bestand": "src/subscription/PaywallGate.jsx",
+  "zoek": "\"unlimited-paths\": \"Onbeperkt leerpaden\"",
+  "vervang": "\"unlimited-paths\": \"Onbeperkt oefenen\"",
+  "reden": "Loopt niet ('Onbeperkt leerpaden') + dev-jargon; proPlan zegt 'Onbeperkt oefenen per dag'",
+  "ernst": 1,
+  "voor": "Onbeperkt leerpaden",
+  "na": "Onbeperkt oefenen"
+ },
+ {
+  "bestand": "src/components/HomePage.jsx",
+  "zoek": "text: \"Oefenen voor de eindtoets (groep 6-8)\"",
+  "vervang": "text: \"Oefenen voor de Doorstroomtoets (groep 6-8)\"",
+  "reden": "Huisregel: 'Doorstroomtoets' i.p.v. eindtoets (staat ook naast het Doorstroomtoets-logo)",
+  "ernst": 2,
+  "voor": "Oefenen voor de eindtoets (groep 6-8)",
+  "na": "Oefenen voor de Doorstroomtoets (groep 6-8)"
+ },
+ {
+  "bestand": "src/components/HomePage.jsx",
+  "zoek": "ook offline. Browser detected: <strong",
+  "vervang": "ook offline. Gevonden browser: <strong",
+  "reden": "Engelse tekst in Nederlandse uitleg",
+  "ernst": 2,
+  "voor": "…ook offline. Browser detected: Chrome op Android.",
+  "na": "…ook offline. Gevonden browser: Chrome op Android."
+ },
+ {
+  "bestand": "src/components/HomePage.jsx",
+  "zoek": "tekst={`${BRAND.slogan}. Gratis oefenen",
+  "vervang": "tekst={`${BRAND.slogan} Gratis oefenen",
+  "reden": "Slogan eindigt al op een punt → dubbele punt 'slimmer.. Gratis'",
+  "ernst": 1,
+  "voor": "Een kwartier per dag leren, een leven lang slimmer.. Gratis oefenen…",
+  "na": "Een kwartier per dag leren, een leven lang slimmer. Gratis oefenen…"
+ },
+ {
+  "bestand": "src/components/HomePage.jsx",
+  "zoek": "desc: \"Een rustige bijlesdocent in je broekzak. 15 minuten per dag leren, een leven lang slimmer.\"",
+  "vervang": "desc: \"Een rustige bijlesdocent in je broekzak. Een kwartier per dag leren, een leven lang slimmer.\"",
+  "reden": "Slogan exact houden (staat in uitgezette onboarding, nu niet zichtbaar)",
+  "ernst": 1,
+  "voor": "15 minuten per dag leren, een leven lang slimmer.",
+  "na": "Een kwartier per dag leren, een leven lang slimmer."
+ },
+ {
+  "bestand": "src/App.jsx",
+  "zoek": "alert(`❌ Kon geen vragen maken over \"${quiz.topic}\".\\n\\nFoutmelding: ${err.message}\\n\\nControleer of de API key nog actief is in het Vercel dashboard.`);",
+  "vervang": "alert(`❌ Kon geen vragen maken over \"${quiz.topic}\".\\n\\nFoutmelding: ${err.message}\\n\\nProbeer het zo nog eens.`);",
+  "reden": "Leerkracht krijgt een beheerdersinstructie (API key/Vercel) die hij niet kan uitvoeren",
+  "ernst": 2,
+  "voor": "… Controleer of de API key nog actief is in het Vercel dashboard.",
+  "na": "… Probeer het zo nog eens."
+ },
+ {
+  "bestand": "src/App.jsx",
+  "zoek": "alert(`❌ Kon geen vragen genereren.\\n\\nFoutmelding: ${err.message}\\n\\nControleer of de API key nog actief is in het Vercel dashboard.`);",
+  "vervang": "alert(`❌ Kon geen vragen genereren.\\n\\nFoutmelding: ${err.message}\\n\\nProbeer het zo nog eens.`);",
+  "reden": "Idem: dev-instructie in foutmelding voor de gebruiker",
+  "ernst": 2,
+  "voor": "… Controleer of de API key nog actief is in het Vercel dashboard.",
+  "na": "… Probeer het zo nog eens."
+ },
+ {
+  "bestand": "src/App.jsx",
+  "zoek": "je verdiende 🪙 park tokens!",
+  "vervang": "je verdiende 🪙 munten voor je park!",
+  "reden": "Engels woord; in het park heten ze overal 'munten/muntjes'",
+  "ernst": 1,
+  "voor": "15 minuten geoefend — je verdiende 🪙 park tokens!",
+  "na": "15 minuten geoefend — je verdiende 🪙 munten voor je park!"
+ },
+ {
+  "bestand": "src/components/AgeGate.jsx",
+  "zoek": "vragen we ook of een ouder er bij is.",
+  "vervang": "vragen we ook of een ouder of verzorger erbij is.",
+  "reden": "'erbij' is één woord + huisregel 'ouder of verzorger'",
+  "ernst": 1,
+  "voor": "…vragen we ook of een ouder er bij is.",
+  "na": "…vragen we ook of een ouder of verzorger erbij is."
+ },
+ {
+  "bestand": "src/components/AgeGate.jsx",
+  "zoek": "\"Vul een geldig e-mailadres in (of laat leeg als ouder erbij is).\"",
+  "vervang": "\"Vul een geldig e-mailadres in, of laat het veld leeg.\"",
+  "reden": "Loopt niet ('laat leeg als ouder erbij is'); veld is optioneel",
+  "ernst": 2,
+  "voor": "Vul een geldig e-mailadres in (of laat leeg als ouder erbij is).",
+  "na": "Vul een geldig e-mailadres in, of laat het veld leeg."
+ },
+ {
+  "bestand": "src/components/AgeGate.jsx",
+  "zoek": "<strong>E-mail van ouder</strong> (optioneel — helpt ons later contact te zoeken)",
+  "vervang": "<strong>E-mail van ouder of verzorger</strong> (optioneel — dan kunnen we later contact opnemen)",
+  "reden": "'contact zoeken' loopt niet + 'ouder of verzorger'",
+  "ernst": 1,
+  "voor": "E-mail van ouder (optioneel — helpt ons later contact te zoeken)",
+  "na": "E-mail van ouder of verzorger (optioneel — dan kunnen we later contact opnemen)"
+ },
+ {
+  "bestand": "src/components/AgeGate.jsx",
+  "zoek": "✅ Mijn ouder is erbij — verder",
+  "vervang": "✅ Mijn ouder of verzorger is erbij — verder",
+  "reden": "Huisregel 'ouder of verzorger' (kind kan bij voogd/pleegouder wonen)",
+  "ernst": 1,
+  "voor": "✅ Mijn ouder is erbij — verder",
+  "na": "✅ Mijn ouder of verzorger is erbij — verder"
+ },
+ {
+  "bestand": "src/components/MetDankAan.jsx",
+  "zoek": "Deel je Leerkwartier met anderen?",
+  "vervang": "Deel jij Leerkwartier met anderen?",
+  "reden": "'Deel je Leerkwartier' leest als 'jouw Leerkwartier'",
+  "ernst": 2,
+  "voor": "Deel je Leerkwartier met anderen?",
+  "na": "Deel jij Leerkwartier met anderen?"
+ },
+ {
+  "bestand": "src/components/UpdateBanner.jsx",
+  "zoek": "Tik vernieuwen voor de laatste functies",
+  "vervang": "Tik op Vernieuw voor de laatste functies",
+  "reden": "Woord mist + knop heet 'Vernieuw'",
+  "ernst": 1,
+  "voor": "Tik vernieuwen voor de laatste functies",
+  "na": "Tik op Vernieuw voor de laatste functies"
+ },
+ {
+  "bestand": "src/components/UspDemo.jsx",
+  "zoek": "uit — tot je het echt begrijpt.",
+  "vervang": "uit — tot je kind het echt begrijpt.",
+  "reden": "Zelfde fout als de welkomstzin: onderwerp springt van 'je kind' naar 'je'",
+  "ernst": 2,
+  "voor": "Snapt je kind iets niet? Wij leggen het op 3 niveaus uit — tot je het echt begrijpt.",
+  "na": "Snapt je kind iets niet? Wij leggen het op 3 niveaus uit — tot je kind het echt begrijpt."
+ },
+ {
+  "bestand": "src/components/RondleidingPage.jsx",
+  "zoek": "Doorstroomtoets in januari — vijftien minuten per dag is genoeg, als",
+  "vervang": "Doorstroomtoets vanaf eind januari — vijftien minuten per dag is genoeg, als",
+  "reden": "Toets loopt 25 jan t/m 12 feb (eigen FAQ op deze pagina zegt 'eind januari, begin februari')",
+  "ernst": 2,
+  "voor": "Doorstroomtoets in januari — …",
+  "na": "Doorstroomtoets vanaf eind januari — …"
+ },
+ {
+  "bestand": "src/components/RondleidingPage.jsx",
+  "zoek": "Drie uitleg-niveaus tot je het echt begrijpt.",
+  "vervang": "Drie uitleg-niveaus, tot ze het echt begrijpen.",
+  "reden": "Onderwerp springt van 'ze' (kinderen) naar 'je'",
+  "ernst": 2,
+  "voor": "…als ze écht begrijpen wat ze doen. … Drie uitleg-niveaus tot je het echt begrijpt.",
+  "na": "…als ze écht begrijpen wat ze doen. … Drie uitleg-niveaus, tot ze het echt begrijpen."
+ },
+ {
+  "bestand": "src/components/RondleidingPage.jsx",
+  "zoek": "eerst rustig uitlegt. Gele bron-banner laat zien welk examen en\n              welke vraag.",
+  "vervang": "eerst rustig uitlegt. Een gele bron-banner laat zien om welk examen en\n              welke vraag het gaat.",
+  "reden": "Zin mist lidwoord en werkwoord-afsluiting",
+  "ernst": 1,
+  "voor": "Gele bron-banner laat zien welk examen en welke vraag.",
+  "na": "Een gele bron-banner laat zien om welk examen en welke vraag het gaat."
+ },
+ {
+  "bestand": "src/components/RondleidingPage.jsx",
+  "zoek": "<h3 style={uspH3}>Ouder</h3>",
+  "vervang": "<h3 style={uspH3}>Ouder of verzorger</h3>",
+  "reden": "Huisregel: nooit alléén 'ouder' als doelgroep-benoeming",
+  "ernst": 1,
+  "voor": "Ouder",
+  "na": "Ouder of verzorger"
+ },
+ {
+  "bestand": "src/components/StudentHome.jsx",
+  "zoek": "</span> Laat je ouder je voortgang volgen</>",
+  "vervang": "</span> Laat je ouder of verzorger je voortgang volgen</>",
+  "reden": "Huisregel 'ouder of verzorger' (kind-tekst)",
+  "ernst": 1,
+  "voor": "📩 Laat je ouder je voortgang volgen",
+  "na": "📩 Laat je ouder of verzorger je voortgang volgen"
+ },
+ {
+  "bestand": "src/components/StudentHome.jsx",
+  "zoek": "? \"Andere niveau? Bekijk middelbaar →\"",
+  "vervang": "? \"Ander niveau? Bekijk middelbaar →\"",
+  "reden": "'het niveau' → 'ander niveau'",
+  "ernst": 1,
+  "voor": "Andere niveau? Bekijk middelbaar →",
+  "na": "Ander niveau? Bekijk middelbaar →"
+ },
+ {
+  "bestand": "src/components/StudentHome.jsx",
+  "zoek": ": \"Andere niveau? Bekijk basisschool →\"",
+  "vervang": ": \"Ander niveau? Bekijk basisschool →\"",
+  "reden": "'het niveau' → 'ander niveau'",
+  "ernst": 1,
+  "voor": "Andere niveau? Bekijk basisschool →",
+  "na": "Ander niveau? Bekijk basisschool →"
+ },
+ {
+  "bestand": "src/components/StudentHome.jsx",
+  "zoek": "Kies bovenaan een vak en tik <strong>📚 Leren</strong>",
+  "vervang": "Kies bovenaan een vak en tik op <strong>📚 Leren</strong>",
+  "reden": "Voorzetsel 'op' ontbreekt",
+  "ernst": 1,
+  "voor": "Kies bovenaan een vak en tik 📚 Leren voor uitleg…",
+  "na": "Kies bovenaan een vak en tik op 📚 Leren voor uitleg…"
+ },
+ {
+  "bestand": "src/features/onboarding/StartKwartier.jsx",
+  "zoek": "\"Klaar voor de doorstroomtoets.\"",
+  "vervang": "\"Klaar voor de Doorstroomtoets.\"",
+  "reden": "Naam met hoofdletter, zoals overal in de app",
+  "ernst": 1,
+  "voor": "Klaar voor de doorstroomtoets.",
+  "na": "Klaar voor de Doorstroomtoets."
+ },
+ {
+  "bestand": "src/features/onboarding/StartKwartier.jsx",
+  "zoek": "oefen je hier de doorstroomtoets in de stijl",
+  "vervang": "oefen je hier de Doorstroomtoets in de stijl",
+  "reden": "Naam met hoofdletter",
+  "ernst": 1,
+  "voor": "In groep 7 en 8 oefen je hier de doorstroomtoets…",
+  "na": "In groep 7 en 8 oefen je hier de Doorstroomtoets…"
+ },
+ {
+  "bestand": "src/shared/niveauIndicatie.js",
+  "zoek": "niet als oordeel over uw kind.",
+  "vervang": "niet als oordeel over je kind.",
+  "reden": "Huisregel: geen 'u', ouderteksten in je-vorm",
+  "ernst": 1,
+  "voor": "…niet als oordeel over uw kind.",
+  "na": "…niet als oordeel over je kind."
+ },
+ {
+  "bestand": "src/shared/usePwaInstall.js",
+  "zoek": "title: \"Firefox ondersteunt geen install\",",
+  "vervang": "title: \"Firefox kan dit niet installeren\",",
+  "reden": "Engels woord 'install' in kop",
+  "ernst": 1,
+  "voor": "Firefox ondersteunt geen install",
+  "na": "Firefox kan dit niet installeren"
+ },
+ {
+  "bestand": "src/shared/usePwaInstall.js",
+  "zoek": "Firefox desktop heeft geen ingebouwde PWA-install. Maak",
+  "vervang": "Firefox op de computer kan een website niet als app installeren. Maak",
+  "reden": "Dev-jargon (PWA-install, desktop) voor ouders/kinderen",
+  "ernst": 2,
+  "voor": "Firefox desktop heeft geen ingebouwde PWA-install.",
+  "na": "Firefox op de computer kan een website niet als app installeren."
+ },
+ {
+  "bestand": "src/shared/ui/VoorkennisKeten.jsx",
+  "zoek": "Tik op een stap om naar dat onderwerp te oefenen",
+  "vervang": "Tik op een stap om dat onderwerp te oefenen",
+  "reden": "'naar … te oefenen' loopt niet",
+  "ernst": 2,
+  "voor": "Tik op een stap om naar dat onderwerp te oefenen — daarna terug naar deze vraag.",
+  "na": "Tik op een stap om dat onderwerp te oefenen — daarna terug naar deze vraag."
+ },
+ {
+  "bestand": "src/app/ErrorBoundary.jsx",
+  "zoek": "als het blijft, deel de boodschap hieronder met de maker.",
+  "vervang": "als het blijft, mail de boodschap hieronder naar hallo@leerkwartier.app.",
+  "reden": "Zegt niet hóé je de maker bereikt; huisregel contactadres hallo@",
+  "ernst": 2,
+  "voor": "…als het blijft, deel de boodschap hieronder met de maker.",
+  "na": "…als het blijft, mail de boodschap hieronder naar hallo@leerkwartier.app."
+ },
+ {
+  "bestand": "src/components/HomeV2.jsx",
+  "zoek": "· gratis tot 2027 · 15 min per dag",
+  "vervang": "· basis gratis t/m 2031 · 15 min per dag",
+  "reden": "Onwaar/verouderd: basis is gratis gegarandeerd t/m 2031 (design-preview-route)",
+  "ernst": 2,
+  "voor": "leerkwartier · gratis tot 2027 · 15 min per dag · slim leren",
+  "na": "leerkwartier · basis gratis t/m 2031 · 15 min per dag · slim leren"
+ },
+ {
+  "bestand": "src/components/HomeV3.jsx",
+  "zoek": "· gratis tot 2027 · 15 min per dag",
+  "vervang": "· basis gratis t/m 2031 · 15 min per dag",
+  "reden": "Idem (route home-v3)",
+  "ernst": 2,
+  "voor": "leerkwartier · gratis tot 2027 · 15 min per dag · slim leren",
+  "na": "leerkwartier · basis gratis t/m 2031 · 15 min per dag · slim leren"
+ },
+ {
+  "bestand": "index.html",
+  "zoek": "Gratis oefenen in 2026, met latere optionele extra's voor ouders, leerkrachten en scholen.",
+  "vervang": "De basis is gratis, gegarandeerd t/m 2031; vanaf 2027 is er een optioneel Familie-pakket voor thuis.",
+  "reden": "Botst: scholen/leerkrachten betalen niets; 'gratis in 2026' suggereert dat het daarna betaald wordt",
+  "ernst": 3,
+  "voor": "Gratis oefenen in 2026, met latere optionele extra's voor ouders, leerkrachten en scholen.",
+  "na": "De basis is gratis, gegarandeerd t/m 2031; vanaf 2027 is er een optioneel Familie-pakket voor thuis."
+ },
+ {
+  "bestand": "index.html",
+  "zoek": "in de stijl van de Cito Doorstroomtoets, gericht op rekenen, taal en begrijpend lezen.\"",
+  "vervang": "in de stijl van de Cito Doorstroomtoets.\"",
+  "reden": "Dubbel: 'rekenen, taal en begrijpend lezen' staat twee keer in één zin",
+  "ernst": 2,
+  "voor": "…op het gebied van rekenen, taal en begrijpend lezen, in de stijl van de Cito Doorstroomtoets, gericht op rekenen, taal en begrijpend lezen.",
+  "na": "…op het gebied van rekenen, taal en begrijpend lezen, in de stijl van de Cito Doorstroomtoets."
+ },
+ {
+  "bestand": "index.html",
+  "zoek": "\"text\": \"De Doorstroomtoets 2027 wordt afgenomen in de eerste twee weken van februari 2027: week 6 (1-5 februari) en/of week 7 (8-12 februari). Alle",
+  "vervang": "\"text\": \"De Doorstroomtoets 2027 wordt afgenomen van 25 januari t/m 12 februari 2027 (de papieren toets is op 26 en 27 januari). Alle",
+  "reden": "Verouderde afnameperiode (overige pagina's: 25 jan t/m 12 feb 2027)",
+  "ernst": 3,
+  "voor": "…in de eerste twee weken van februari 2027: week 6 (1-5 februari) en/of week 7 (8-12 februari).",
+  "na": "…van 25 januari t/m 12 februari 2027 (de papieren toets is op 26 en 27 januari)."
+ },
+ {
+  "bestand": "index.html",
+  "zoek": "Afname in eerste twee weken februari 2027 (week 6+7).",
+  "vervang": "Afname van 25 januari t/m 12 februari 2027.",
+  "reden": "Verouderde afnameperiode",
+  "ernst": 3,
+  "voor": "Afname in eerste twee weken februari 2027 (week 6+7).",
+  "na": "Afname van 25 januari t/m 12 februari 2027."
+ },
+ {
+  "bestand": "index.html",
+  "zoek": "wordt afgenomen in de eerste twee weken van februari 2027 — week 6 (1-5 februari) en/of week 7 (8-12 februari). Alle",
+  "vervang": "wordt afgenomen van 25 januari t/m 12 februari 2027 (de papieren toets is op 26 en 27 januari). Alle",
+  "reden": "Verouderde afnameperiode",
+  "ernst": 3,
+  "voor": "…in de eerste twee weken van februari 2027 — week 6 (1-5 februari) en/of week 7 (8-12 februari).",
+  "na": "…van 25 januari t/m 12 februari 2027 (de papieren toets is op 26 en 27 januari)."
+ },
+ {
+  "bestand": "index.html",
+  "zoek": "zijn in 2026 gratis te gebruiken. Geen reclame voor kinderen, geen registratie verplicht. Optionele extra's voor ouders en leerkrachten worden later betaald,",
+  "vervang": "zijn gratis te gebruiken, gegarandeerd t/m 2031. Geen reclame voor kinderen, geen registratie verplicht. Een optioneel Familie-pakket voor thuis wordt vanaf 2027 betaald,",
+  "reden": "Botst: leerkrachten betalen niets; 'in 2026 gratis' ondergraaft de t/m-2031-belofte",
+  "ernst": 3,
+  "voor": "…zijn in 2026 gratis te gebruiken. … Optionele extra's voor ouders en leerkrachten worden later betaald, maar het oefenen zelf is gratis.",
+  "na": "…zijn gratis te gebruiken, gegarandeerd t/m 2031. … Een optioneel Familie-pakket voor thuis wordt vanaf 2027 betaald, maar het oefenen zelf is gratis."
+ },
+ {
+  "bestand": "index.html",
+  "zoek": "Een rustige bijlesdocent in je broekzak, 15 minuten per dag is genoeg.",
+  "vervang": "Een rustige bijlesdocent in je broekzak. 15 minuten per dag is genoeg.",
+  "reden": "Kommafout (twee hoofdzinnen); payoff zoals in brand.js",
+  "ernst": 1,
+  "voor": "Een rustige bijlesdocent in je broekzak, 15 minuten per dag is genoeg.",
+  "na": "Een rustige bijlesdocent in je broekzak. 15 minuten per dag is genoeg."
+ }
+]

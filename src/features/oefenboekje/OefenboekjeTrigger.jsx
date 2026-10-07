@@ -49,7 +49,7 @@ export default function OefenboekjeTrigger({ conceptId, conceptTitel, fouten = 0
             </span>
           </div>
           <div style={{ fontSize: 13.5, color: "var(--color-text-muted, #9aa4c7)", lineHeight: 1.5, marginTop: 2 }}>
-            <b>{titel.toLowerCase()}</b> ging nog niet vlot. Print een oefenboekje op maat — extra opgaven met een
+            Het onderwerp <b>{titel.toLowerCase()}</b> ging nog niet vlot. Print een oefenboekje op maat — extra opgaven met een
             uitgewerkt voorbeeld en een antwoordblad voor thuis.
           </div>
         </div>

@@ -1,0 +1,19 @@
+# Route /vandaag (vers apparaat)
+# http://localhost:4173/vandaag
+Spring naar hoofdinhoud
+Leerkwartier
+GEEF HIER JE ANTWOORD 👇
+Een rechthoekige tuin is 8 meter lang en 5 meter breed. Hoe groot is de oppervlakte?
+A
+26 m²
+B
+13 m²
+C
+40 m²
+D
+40 m
+🚩 Klopt er iets niet?
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244

@@ -1,0 +1,68 @@
+# Route /examens (vers apparaat)
+# http://localhost:4173/examens
+Spring naar hoofdinhoud
+←
+Examens 🎓
+Per vak: échte examens oefenen mét uitleg óf inzien als PDF
+🏠
+🎓 Eindexamens VMBO GL/TL — twee manieren om te leren
+Gratis
+⭐
+Op mijn pagina
+🎯 Maak dit examen — echte examenvragen mét uitleg + leerpad
+📄 PDF inzien — hele examen + correctievoorschrift
+VAK
+Alle vakken
+Biologie
+Economie
+Engels
+Geschiedenis
+Nederlands
+Wiskunde
+Aardrijkskunde
+Maatschappijleer
+🧬
+Biologie
+🎯 8/8
+📄 8/8
+›
+📈
+Economie
+🎯 8/8
+📄 8/8
+›
+📕
+Engels
+🎯 8/8
+📄 8/8
+›
+🏛️
+Geschiedenis
+🎯 8/8
+📄 8/8
+›
+📝
+Nederlands
+🎯 8/8
+📄 8/8
+›
+⚖️
+Maatschappijleer
+🎯 8
+📄 8
+›
+🔢
+Wiskunde
+🎯 0/8
+📄 8/8
+›
+🌍
+Aardrijkskunde
+🎯 0/8
+📄 8/8
+›
+💡 Tip: oefen eerst met de groene 🎯-knop — bij een fout antwoord opent een uitleg en kun je doorklikken naar het leerpad over dat onderwerp. Voor de eindsprint: print de PDF en maak het examen op papier.
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244

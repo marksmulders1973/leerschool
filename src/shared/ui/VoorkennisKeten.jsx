@@ -192,7 +192,7 @@ export default function VoorkennisKeten({ keten, onJumpToPath, everSeenIds }) {
         marginTop: 8,
         fontStyle: "italic",
       }}>
-        Tik op een stap om naar dat onderwerp te oefenen — daarna terug naar deze vraag.
+        Tik op een stap om dat onderwerp te oefenen — daarna terug naar deze vraag.
       </div>
     </div>
   );

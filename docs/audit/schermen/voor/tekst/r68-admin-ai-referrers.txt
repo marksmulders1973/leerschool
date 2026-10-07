@@ -1,0 +1,19 @@
+# Route /admin/ai-referrers (vers apparaat)
+# http://localhost:4173/admin/ai-referrers
+Spring naar hoofdinhoud
+🤖 AI-verkeer
+← Terug
+🏠 Home
+Welke AI-engines hebben naar leerkwartier.app verwezen? Crawlers (bots die zelf bezoeken voor training) + doorklikkers (mensen uit een AI-chat).
+Laatste 7 dagen
+Laatste 30 dagen
+Laatste 90 dagen
+Alles
+🤖 Crawlers
+👤 Doorklikkers
+Nog geen AI-verkeer gemeten in deze periode.
+Dit kan komen doordat (1) de log net actief is en nog niets is binnengekomen, of (2) AI-engines de site nog niet vinden. Check terug over 1-2 weken.
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244

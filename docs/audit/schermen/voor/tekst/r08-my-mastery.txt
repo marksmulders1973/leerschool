@@ -1,0 +1,20 @@
+# Route /voortgang (vers apparaat)
+# http://localhost:4173/voortgang
+Spring naar hoofdinhoud
+←
+📈 Mijn voortgang
+Voer eerst een naam in
+🏠
+Vul eerst je naam in (op de startpagina) om je voortgang bij te houden.
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244
+🏠
+Home
+📚
+Leren
+Toets
+🎮
+Spelletje
+Mijn pagina

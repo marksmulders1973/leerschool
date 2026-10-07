@@ -41,7 +41,7 @@ function bevestigPagina(token, soort = "lijst") {
   <body style="margin:0;background:#0a0f1e;color:#e8edf5;font-family:-apple-system,Segoe UI,Roboto,sans-serif;display:flex;min-height:100vh;align-items:center;justify-content:center;">
     <div style="max-width:420px;padding:32px 24px;text-align:center;">
       <div style="font-size:22px;font-weight:800;color:#fff;margin-bottom:14px;">${partner ? "Niet meer meelezen?" : "Wil je je uitschrijven?"}</div>
-      <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 22px;">${partner ? "Dan krijg je het wekelijkse ouder-rapport van Leerkwartier niet meer op dit adres. De ouder zelf blijft het gewoon ontvangen." : "Dan stoppen alle lesmateriaal- en oefen-mails van Leerkwartier naar dit adres. Oefenen op de site blijft gewoon gratis."}</p>
+      <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 22px;">${partner ? "Dan krijg je het wekelijkse ouder-rapport van Leerkwartier niet meer op dit adres. Wie je uitnodigde, blijft het gewoon ontvangen." : "Dan stoppen alle lesmateriaal- en oefen-mails van Leerkwartier naar dit adres. Oefenen op de site blijft gewoon gratis."}</p>
       <form method="post" action="/api/unsubscribe?${partner ? "partner" : "token"}=${t}" style="margin:0 0 14px;">
         <button type="submit" style="background:linear-gradient(135deg,#ff5252,#d32f2f);color:#fff;border:none;font-weight:800;padding:12px 22px;border-radius:12px;font-size:15px;cursor:pointer;">Ja, schrijf me uit</button>
       </form>
@@ -84,7 +84,7 @@ export default async function handler(req, res) {
     } catch {
       return res.status(500).send(pagina("Even niet gelukt", "We konden je afmelding niet verwerken. Probeer het later nog eens."));
     }
-    return res.status(200).send(pagina("Je leest niet meer mee ✅", "Je krijgt het weekrapport niet meer. Wil je later toch weer meelezen? Dan kan de ouder je opnieuw uitnodigen."));
+    return res.status(200).send(pagina("Je leest niet meer mee ✅", "Je krijgt het weekrapport niet meer. Wil je later toch weer meelezen? Vraag dan om een nieuwe uitnodiging."));
   }
   const token = (req.query && req.query.token) || "";
   if (!token || String(token).length < 8) {
@@ -127,7 +127,7 @@ export default async function handler(req, res) {
       email = Array.isArray(rijenKc) && rijenKc[0]?.email;
     }
     if (!email) {
-      return res.status(404).send(pagina("Link niet gevonden", "Deze uitschrijf-link is niet (meer) geldig. Open de link direct vanuit de nieuwste e-mail, of mail ons via de site."));
+      return res.status(404).send(pagina("Link niet gevonden", "Deze uitschrijf-link is niet (meer) geldig. Open de link direct vanuit de nieuwste e-mail, of mail ons op hallo@leerkwartier.app."));
     }
     // ILIKE-wildcards (%/_) escapen — een underscore in een e-mailadres mag
     // niet als joker matchen op andermans adres.

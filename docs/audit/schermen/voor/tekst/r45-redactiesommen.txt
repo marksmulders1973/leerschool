@@ -1,0 +1,41 @@
+# Route /redactiesommen (vers apparaat)
+# http://localhost:4173/redactiesommen
+Spring naar hoofdinhoud
+←
+Redactiesommen
+Groep 4 t/m 8
+🏠
+Voortgang
+0 / 8 beheerst
+⬜ Nog niet geoefend
+🟧 Bezig
+🟩 Beheerst ≥70%
+➕
+Optellen
+➖
+Aftrekken
+✖️
+Vermenigvuldigen
+➗
+Delen
+💶
+Geld
+🕐
+Tijd
+📏
+Meten
+🔢
+Gemengd
+🔀 Mix — alle categorieën door elkaar
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244
+🏠
+Home
+📚
+Leren
+Toets
+🎮
+Spelletje
+Mijn pagina

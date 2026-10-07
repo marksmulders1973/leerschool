@@ -1,0 +1,200 @@
+[
+ {
+  "bestand": "src/features/account/MijnPagina.jsx",
+  "zoek": "met elke maandag een weekrapport? Log in",
+  "vervang": "met elke vrijdag een weekrapport? Log in",
+  "reden": "Weekrapport gaat sinds 30 sep op vrijdag 16:00 (workflow ouder-weekrapport.yml), niet maandag",
+  "ernst": 3,
+  "voor": "Wil je dit ook op je eigen telefoon zien, met elke maandag een weekrapport?",
+  "na": "Wil je dit ook op je eigen telefoon zien, met elke vrijdag een weekrapport?"
+ },
+ {
+  "bestand": "src/features/ouder/OuderInzicht.jsx",
+  "zoek": "Je ziet dan geen voortgang meer en het maandag-weekrapport voor dit kind stopt.",
+  "vervang": "Je ziet dan geen voortgang meer en het weekrapport voor dit kind stopt.",
+  "reden": "Weekrapport komt op vrijdag, niet maandag (zelfde scherm zegt 'Elke vrijdag om 16:00')",
+  "ernst": 3,
+  "voor": "...en het maandag-weekrapport voor dit kind stopt.",
+  "na": "...en het weekrapport voor dit kind stopt."
+ },
+ {
+  "bestand": "src/features/ouder/OuderInzicht.jsx",
+  "zoek": "oefenen kan altijd gratis, zonder account</strong>",
+  "vervang": "oefenen is gratis, zonder account</strong>",
+  "reden": "Huisregel: nooit 'altijd gratis'",
+  "ernst": 3,
+  "voor": "Alleen dit thuis-overzicht vraagt een account — oefenen kan altijd gratis, zonder account.",
+  "na": "Alleen dit thuis-overzicht vraagt een account — oefenen is gratis, zonder account."
+ },
+ {
+  "bestand": "src/features/ouder/OuderInzicht.jsx",
+  "zoek": "Meer nodig? Laat het weten via <em>Tips aan maker</em>.",
+  "vervang": "Meer nodig? Mail ons: hallo@leerkwartier.app.",
+  "reden": "Contact via hallo@leerkwartier.app (huisregel); Mijn pagina zegt ook 'mail ons, zonder meerprijs'; 'Tips aan maker' staat niet op dit scherm",
+  "ernst": 2,
+  "voor": "Meer nodig? Laat het weten via Tips aan maker.",
+  "na": "Meer nodig? Mail ons: hallo@leerkwartier.app."
+ },
+ {
+  "bestand": "src/features/ouder/OuderInzicht.jsx",
+  "zoek": ">VOOR JOU ALS OUDER</div>",
+  "vervang": ">VOOR JOU ALS OUDER OF VERZORGER</div>",
+  "reden": "Nooit alleen 'ouder' als aanspreking van de lezer",
+  "ernst": 2,
+  "voor": "VOOR JOU ALS OUDER",
+  "na": "VOOR JOU ALS OUDER OF VERZORGER"
+ },
+ {
+  "bestand": "src/features/ouder/OuderInzicht.jsx",
+  "zoek": "<BlokKop>Ouders</BlokKop>",
+  "vervang": "<BlokKop>Ouders of verzorgers</BlokKop>",
+  "reden": "Nooit alleen 'ouder(s)' als benoeming van de lezer; blok bevat ook 'Tweede ouder of verzorger'",
+  "ernst": 2,
+  "voor": "Ouders",
+  "na": "Ouders of verzorgers"
+ },
+ {
+  "bestand": "src/features/ouder/OuderInzicht.jsx",
+  "zoek": "\"begrijpend-lezen\": \"Begrijpend Lezen\"",
+  "vervang": "\"begrijpend-lezen\": \"Begrijpend lezen\"",
+  "reden": "Geen hoofdletter midden in vaknaam; elders 'Begrijpend lezen'",
+  "ernst": 1,
+  "voor": "Begrijpend Lezen",
+  "na": "Begrijpend lezen"
+ },
+ {
+  "bestand": "src/features/ouder/OuderInzicht.jsx",
+  "zoek": "<li>📵 Werkt ook offline (PWA)</li>",
+  "vervang": "<li>📵 Werkt ook offline</li>",
+  "reden": "Dev-jargon 'PWA' zegt een ouder of verzorger niets",
+  "ernst": 1,
+  "voor": "Werkt ook offline (PWA)",
+  "na": "Werkt ook offline"
+ },
+ {
+  "bestand": "src/features/ouder/OuderInzicht.jsx",
+  "zoek": "`${hoi} Open ${BRAND.name} (${BRAND.domain}) tik op",
+  "vervang": "`${hoi} Open ${BRAND.name} (${BRAND.domain}), tik op",
+  "reden": "Komma ontbreekt in WhatsApp-bericht aan kind",
+  "ernst": 1,
+  "voor": "Hoi Sam! Open Leerkwartier (leerkwartier.app) tik op 'Code gekregen?'",
+  "na": "Hoi Sam! Open Leerkwartier (leerkwartier.app), tik op 'Code gekregen?'"
+ },
+ {
+  "bestand": "src/features/ouder/OuderInzicht.jsx",
+  "zoek": "`Hoi!\\n\\nOpen ${BRAND.name} (${BRAND.domain}) tik op",
+  "vervang": "`Hoi!\\n\\nOpen ${BRAND.name} (${BRAND.domain}), tik op",
+  "reden": "Komma ontbreekt in e-mail met koppelcode",
+  "ernst": 1,
+  "voor": "Open Leerkwartier (leerkwartier.app) tik op 'Code gekregen?'",
+  "na": "Open Leerkwartier (leerkwartier.app), tik op 'Code gekregen?'"
+ },
+ {
+  "bestand": "src/features/account/MijnPagina.jsx",
+  "zoek": "sub: \"wat je juf, meester of ouder voor je klaarzet\"",
+  "vervang": "sub: \"wat iemand thuis of je juf of meester voor je klaarzet\"",
+  "reden": "Niet alleen 'ouder' (kind kan bij voogd/pleegouder wonen); elders op deze pagina 'van thuis'",
+  "ernst": 2,
+  "voor": "Voor jou klaargezet — wat je juf, meester of ouder voor je klaarzet",
+  "na": "Voor jou klaargezet — wat iemand thuis of je juf of meester voor je klaarzet"
+ },
+ {
+  "bestand": "src/features/account/MijnPagina.jsx",
+  "zoek": "0.25)\" }}>\n                <div style={eyebrowStijl}>Van je ouder of leerkracht</div>",
+  "vervang": "0.25)\" }}>\n                <div style={eyebrowStijl}>Van thuis of school</div>",
+  "reden": "Niet alleen 'ouder'; het commentaar en de kaart zelf zeggen 'van thuis of school'",
+  "ernst": 2,
+  "voor": "Van je ouder of leerkracht",
+  "na": "Van thuis of school"
+ },
+ {
+  "bestand": "src/features/account/MijnPagina.jsx",
+  "zoek": "0.08)\") }}>\n                <div style={eyebrowStijl}>Van je ouder of leerkracht</div>",
+  "vervang": "0.08)\") }}>\n                <div style={eyebrowStijl}>Van thuis of school</div>",
+  "reden": "Niet alleen 'ouder'; labels in de kaart zijn '💛 van thuis' / '🍎 van je juf of meester'",
+  "ernst": 2,
+  "voor": "Van je ouder of leerkracht",
+  "na": "Van thuis of school"
+ },
+ {
+  "bestand": "src/features/account/MijnPagina.jsx",
+  "zoek": "Heb je hier al eerder geoefend? Vul je naam in",
+  "vervang": "Heb je op dit apparaat al eerder geoefend? Vul je naam in",
+  "reden": "Voortgang zonder account staat alleen op dit apparaat; 'hier' wekt de indruk dat het van elk apparaat terugkomt",
+  "ernst": 2,
+  "voor": "Heb je hier al eerder geoefend? Vul je naam in, dan halen we jouw voortgang erbij.",
+  "na": "Heb je op dit apparaat al eerder geoefend? Vul je naam in, dan halen we jouw voortgang erbij."
+ },
+ {
+  "bestand": "src/features/account/MijnPagina.jsx",
+  "zoek": "\"week\" : \"weken\"} tot de doorstroomtoets",
+  "vervang": "\"week\" : \"weken\"} tot de Doorstroomtoets",
+  "reden": "Eigennaam Doorstroomtoets met hoofdletter (zoals elders in de app)",
+  "ernst": 1,
+  "voor": "Nog 16 weken tot de doorstroomtoets",
+  "na": "Nog 16 weken tot de Doorstroomtoets"
+ },
+ {
+  "bestand": "src/features/account/MijnPagina.jsx",
+  "zoek": "                    Oefen in doorstroomtoets-stijl →",
+  "vervang": "                    Oefen in Doorstroomtoets-stijl →",
+  "reden": "Eigennaam Doorstroomtoets met hoofdletter",
+  "ernst": 1,
+  "voor": "Oefen in doorstroomtoets-stijl →",
+  "na": "Oefen in Doorstroomtoets-stijl →"
+ },
+ {
+  "bestand": "src/features/account/vakkenPerGroep.js",
+  "zoek": "\"vast onderdeel van de doorstroomtoets (februari!)\"",
+  "vervang": "\"vast onderdeel van de Doorstroomtoets (februari!)\"",
+  "reden": "Eigennaam Doorstroomtoets met hoofdletter (maand: zie twijfel)",
+  "ernst": 1,
+  "voor": "vast onderdeel van de doorstroomtoets (februari!)",
+  "na": "vast onderdeel van de Doorstroomtoets (februari!)"
+ },
+ {
+  "bestand": "src/features/account/MijnPagina.jsx",
+  "zoek": "— vooral voor oudere leerlingen, ouders en leerkrachten.",
+  "vervang": "— vooral voor oudere leerlingen, ouders, verzorgers en leerkrachten.",
+  "reden": "Niet alleen 'ouders'",
+  "ernst": 1,
+  "voor": "vooral voor oudere leerlingen, ouders en leerkrachten.",
+  "na": "vooral voor oudere leerlingen, ouders, verzorgers en leerkrachten."
+ },
+ {
+  "bestand": "src/features/ouder/Gezinsstart.jsx",
+  "zoek": "de eerste twee maanden de nadruk op?{kindLabel}",
+  "vervang": "de eerste twee maanden de nadruk op leggen?{kindLabel}",
+  "reden": "Werkwoord ontbreekt: 'de nadruk op' → 'de nadruk op leggen'",
+  "ernst": 2,
+  "voor": "Waar wil je bij Sam de eerste twee maanden de nadruk op?",
+  "na": "Waar wil je bij Sam de eerste twee maanden de nadruk op leggen?"
+ },
+ {
+  "bestand": "src/features/ouder/Gezinsstart.jsx",
+  "zoek": ">Waar ligt de nadruk op?</div>",
+  "vervang": ">Waar moet de nadruk op liggen?</div>",
+  "reden": "Dubbel voorzetsel ('Waar ... op' + 'ligt de nadruk op')",
+  "ernst": 1,
+  "voor": "Waar ligt de nadruk op?",
+  "na": "Waar moet de nadruk op liggen?"
+ },
+ {
+  "bestand": "src/features/ouder/Gezinsstart.jsx",
+  "zoek": "\"Je gezin zit aan de 3 kinderen.\"",
+  "vervang": "\"Je gezin heeft al het maximum van 3 kinderen.\"",
+  "reden": "'zit aan de 3 kinderen' is spreektaal en zegt niet dat het een maximum is",
+  "ernst": 1,
+  "voor": "Je gezin zit aan de 3 kinderen.",
+  "na": "Je gezin heeft al het maximum van 3 kinderen."
+ },
+ {
+  "bestand": "src/features/ouder/ouderadvies/teksten.js",
+  "zoek": "`Staat klaar op dit apparaat. ${naam} ziet het hier als ${naam} gaat oefenen.`",
+  "vervang": "`Staat klaar op dit apparaat. ${naam} ziet het hier bij de volgende keer oefenen.`",
+  "reden": "Naam twee keer in één zin; 'als' leest als 'in de rol van'",
+  "ernst": 1,
+  "voor": "Staat klaar op dit apparaat. Sam ziet het hier als Sam gaat oefenen.",
+  "na": "Staat klaar op dit apparaat. Sam ziet het hier bij de volgende keer oefenen."
+ }
+]

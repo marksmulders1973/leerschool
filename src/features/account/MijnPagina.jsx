@@ -261,7 +261,7 @@ const TIER_PITCH = {
 const LEGE_VOORPROEFJE = [
   { emoji: "⏱️", titel: "Jouw kwartier van vandaag", sub: "wat je nu gaat doen, in blokjes van vijf minuten" },
   { emoji: "📊", titel: "Waar je staat", sub: "per vak, opgebouwd terwijl je oefent" },
-  { emoji: "💛", titel: "Voor jou klaargezet", sub: "wat je juf, meester of ouder voor je klaarzet" },
+  { emoji: "💛", titel: "Voor jou klaargezet", sub: "wat iemand thuis of je juf of meester voor je klaarzet" },
   { emoji: "🏆", titel: "Je diploma's", sub: "alles wat je al af hebt" },
 ];
 
@@ -342,7 +342,7 @@ function LegeMijnPagina({ onStartKwartier, onNaamInvullen }) {
       <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
         <form onSubmit={openMet}>
           <label htmlFor="mijn-leeg-naam" style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 13.5, lineHeight: 1.5, color: "var(--color-text-muted, #8899aa)", marginBottom: 8 }}>
-            Heb je hier al eerder geoefend? Vul je naam in, dan halen we jouw voortgang erbij.
+            Heb je op dit apparaat al eerder geoefend? Vul je naam in, dan halen we jouw voortgang erbij.
           </label>
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
             <input
@@ -1634,7 +1634,7 @@ export default function MijnPagina({
                     </label>
                   )}
                   <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", marginTop: 6, lineHeight: 1.5 }}>
-                    🔒 Een eigen foto blijft <strong style={{ color: "var(--color-text)" }}>alleen op dit apparaat</strong> — vooral voor oudere leerlingen, ouders en leerkrachten.
+                    🔒 Een eigen foto blijft <strong style={{ color: "var(--color-text)" }}>alleen op dit apparaat</strong> — vooral voor oudere leerlingen, ouders, verzorgers en leerkrachten.
                   </div>
                 </div>
               </Card>
@@ -1903,7 +1903,7 @@ export default function MijnPagina({
             {/* Lege staat (1 okt 2026): een leerling ziet altijd wat er van thuis of school klaarstaat. */}
             {thuisKlaargezet.length === 0 && (rolKey === "leerling" || rolKey === "student") && (
               <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,105,135,0.25)" }}>
-                <div style={eyebrowStijl}>Van je ouder of leerkracht</div>
+                <div style={eyebrowStijl}>Van thuis of school</div>
                 <div style={{ fontSize: 14, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
                   Nog niets voor je klaargezet. Je ouder, verzorger of juf kan hier oefeningen voor je klaarzetten.
                 </div>
@@ -1911,7 +1911,7 @@ export default function MijnPagina({
             )}
             {thuisKlaargezet.length > 0 && (
               <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,105,135,0.4)", background: kaartBg("rgba(255,105,135,0.08)") }}>
-                <div style={eyebrowStijl}>Van je ouder of leerkracht</div>
+                <div style={eyebrowStijl}>Van thuis of school</div>
                 <div style={kaartTitelStijl}>💛 Speciaal voor jou klaargezet</div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: 4 }}>
                   {thuisKlaargezet.map((it) => {
@@ -2179,7 +2179,7 @@ export default function MijnPagina({
               {countdown ? (
                 <>
                   <div style={{ fontSize: 16, fontWeight: 800, color: "var(--color-text-strong)", margin: "4px 0 4px", fontFamily: "var(--font-display)" }}>
-                    Nog {countdown.weken} {countdown.weken === 1 ? "week" : "weken"} tot de doorstroomtoets
+                    Nog {countdown.weken} {countdown.weken === 1 ? "week" : "weken"} tot de Doorstroomtoets
                   </div>
                   <div style={{ fontSize: 13, color: "var(--color-text-muted, #8899aa)", marginBottom: 10, lineHeight: 1.5 }}>
                     Dát is je doel: laten zien wat je kunt op de toets, eind januari {countdown.jaar}{groep === 7 ? " (jij zit dan in groep 8)" : ""}. Het kwartier per dag is hoe je er komt — begin bij het onderwerp waar het meest te winnen valt.
@@ -2192,7 +2192,7 @@ export default function MijnPagina({
                       fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, width: "100%",
                     }}
                   >
-                    Oefen in doorstroomtoets-stijl →
+                    Oefen in Doorstroomtoets-stijl →
                   </button>
                 </>
               ) : (
@@ -2632,7 +2632,7 @@ export default function MijnPagina({
                 <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
                   {authUser?.id
                     ? "Tik op een naam — je ziet dan meteen de oefentijd en waar dat kind nog aan moet werken. Wil je iemand ook op je eigen telefoon volgen? Koppel hem hieronder met een code. Zet de juf of meester iets klaar? Met de koppelcode van school ziet je kind dat thuis ook."
-                    : "Tik op een naam — je ziet dan meteen de oefentijd en waar dat kind nog aan moet werken. Wil je dit ook op je eigen telefoon zien, met elke maandag een weekrapport? Log in of maak gratis een account — zie hieronder."}
+                    : "Tik op een naam — je ziet dan meteen de oefentijd en waar dat kind nog aan moet werken. Wil je dit ook op je eigen telefoon zien, met elke vrijdag een weekrapport? Log in of maak gratis een account — zie hieronder."}
                 </div>
               </Card>
             )}

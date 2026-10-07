@@ -40,7 +40,7 @@ const GROEP_OPTIES = ["3", "4", "5", "6", "7", "8", "brugklas"];
 const SUBJECT_LABELS = {
   rekenen: "Rekenen", taal: "Taal", aardrijkskunde: "Aardrijkskunde",
   geschiedenis: "Geschiedenis", natuur: "Natuur", engels: "Engels",
-  spelling: "Spelling", "begrijpend-lezen": "Begrijpend Lezen",
+  spelling: "Spelling", "begrijpend-lezen": "Begrijpend lezen",
   cito: "Doorstroomtoets", wiskunde: "Wiskunde", biologie: "Biologie",
 };
 
@@ -340,7 +340,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
 
   const removeChild = async (id) => {
     const kind = children.find((c) => c.id === id);
-    if (!window.confirm(`Koppeling met ${kind?.child_name || "dit kind"} verwijderen?\n\nJe ziet dan geen voortgang meer en het maandag-weekrapport voor dit kind stopt. De voortgang van je kind zelf blijft gewoon bestaan.`)) return;
+    if (!window.confirm(`Koppeling met ${kind?.child_name || "dit kind"} verwijderen?\n\nJe ziet dan geen voortgang meer en het weekrapport voor dit kind stopt. De voortgang van je kind zelf blijft gewoon bestaan.`)) return;
     await supabase.from("parent_child_links").delete().eq("id", id);
     setChildren(prev => prev.filter(c => c.id !== id));
     setSelectedChild(prev => children.find(c => c.id !== id)?.child_name || null);
@@ -543,7 +543,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // code op eigen regel, plat, makkelijk over te typen vanuit WhatsApp.
   const sendWhatsApp = (code, naam) => {
     const hoi = naam ? `Hoi ${naam}!` : "Hoi!";
-    const msg = encodeURIComponent(`${hoi} Open ${BRAND.name} (${BRAND.domain}) tik op 'Code gekregen?' en vul deze koppelcode in:\n\n${code}\n\nDan kan ik jouw voortgang zien 😊 (de code is 48 uur geldig)`);
+    const msg = encodeURIComponent(`${hoi} Open ${BRAND.name} (${BRAND.domain}), tik op 'Code gekregen?' en vul deze koppelcode in:\n\n${code}\n\nDan kan ik jouw voortgang zien 😊 (de code is 48 uur geldig)`);
     window.open(`https://wa.me/?text=${msg}`, "_blank");
     try { track("ouder_koppelcode_deel", { via: "whatsapp" }); } catch { /* */ }
   };
@@ -562,7 +562,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   const sendEmailCode = (code) => {
     const subject = encodeURIComponent(`Koppelcode voor ${BRAND.name}`);
     const body = encodeURIComponent(
-      `Hoi!\n\nOpen ${BRAND.name} (${BRAND.domain}) tik op 'Code gekregen?' en vul de koppelcode ${code} in. Dan kan ik jouw voortgang volgen.\n\n(De code is 48 uur geldig.)`
+      `Hoi!\n\nOpen ${BRAND.name} (${BRAND.domain}), tik op 'Code gekregen?' en vul de koppelcode ${code} in. Dan kan ik jouw voortgang volgen.\n\n(De code is 48 uur geldig.)`
     );
     window.location.href = `mailto:?subject=${subject}&body=${body}`;
     try { track("ouder_koppelcode_deel", { via: "mail" }); } catch { /* */ }
@@ -639,7 +639,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
           <li>💛 Zet oefeningen voor je kind klaar</li>
         </ul>
         <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.45)", maxWidth: 290, lineHeight: 1.6 }}>
-          Alleen dit thuis-overzicht vraagt een account — <strong style={{ color: "rgba(255,255,255,0.65)" }}>oefenen kan altijd gratis, zonder account</strong>.
+          Alleen dit thuis-overzicht vraagt een account — <strong style={{ color: "rgba(255,255,255,0.65)" }}>oefenen is gratis, zonder account</strong>.
         </div>
         <button
           onClick={onLogin}
@@ -754,7 +754,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
 
       {/* ── Ouders ─────────────────────────────────────────────────────── */}
       <div style={{ borderRadius: 16, border: "1px solid rgba(255,255,255,0.1)", background: "rgba(255,255,255,0.03)", padding: "16px" }}>
-        <BlokKop>Ouders</BlokKop>
+        <BlokKop>Ouders of verzorgers</BlokKop>
         <div style={{ display: "flex", alignItems: "flex-start", gap: 10, padding: "10px 12px", borderRadius: 12, background: "rgba(105,240,174,0.06)", border: "1px solid rgba(105,240,174,0.25)" }}>
           <Bolletje kleur="#69f0ae" size={16} />
           <div style={{ minWidth: 0 }}>
@@ -956,7 +956,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
 
           {kindKaarten.length >= MAX_KINDEREN && (
             <div style={{ borderRadius: 12, border: "1px solid rgba(105,240,174,0.3)", background: "rgba(105,240,174,0.06)", padding: "12px 14px", fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.7)", lineHeight: 1.5 }}>
-              Je hebt het maximum van {MAX_KINDEREN} kinderen — genoeg voor de meeste gezinnen. Meer nodig? Laat het weten via <em>Tips aan maker</em>.
+              Je hebt het maximum van {MAX_KINDEREN} kinderen — genoeg voor de meeste gezinnen. Meer nodig? Mail ons: hallo@leerkwartier.app.
             </div>
           )}
         </div>
@@ -1201,13 +1201,13 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
         {!welcomeCollapsed && (
           <div style={{ marginTop: 14, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 14 }}>
             <div>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: 12, color: "#69f0ae", fontWeight: 700, marginBottom: 6, letterSpacing: 0.5 }}>VOOR JOU ALS OUDER</div>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 12, color: "#69f0ae", fontWeight: 700, marginBottom: 6, letterSpacing: 0.5 }}>VOOR JOU ALS OUDER OF VERZORGER</div>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: 13, lineHeight: 1.8, color: "rgba(255,255,255,0.85)" }}>
                 <li>🔑 Koppel je kind met één korte code</li>
                 <li>📊 Voortgang in één oogopslag</li>
                 <li>🆓 De basis blijft gratis, gegarandeerd t/m 2031 · extra’s later in Familie</li>
                 <li>🔒 Geen reclame, AVG-veilig</li>
-                <li>📵 Werkt ook offline (PWA)</li>
+                <li>📵 Werkt ook offline</li>
               </ul>
             </div>
             <div>

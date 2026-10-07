@@ -62,13 +62,13 @@ export default function KoppelcodeBanner({ userName }) {
       setMsg({ ok: true, rol: r.rol, vanWie: r.vanWie });
       setCode("");
     } else if (r.fout === "leeg") {
-      setMsg({ ok: false, text: "Vul de hele code in (6 letters)." });
+      setMsg({ ok: false, text: "Vul de hele code in (6 tekens)." });
     } else if (r.fout === "alGekoppeld") {
       setMsg({ ok: false, text: "Deze code is al gebruikt, maar je bent op dit apparaat al gekoppeld. Je hoeft niets meer te doen." });
     } else if (r.fout === "verlopen") {
-      setMsg({ ok: false, text: "Deze code werkt niet meer. Vraag thuis (of je juf/meester) om een nieuwe — die maak je zo weer aan." });
+      setMsg({ ok: false, text: "Deze code werkt niet meer. Vraag thuis (of je juf/meester) om een nieuwe — die is zo weer aangemaakt." });
     } else if (r.fout === "geenVerbinding") {
-      setMsg({ ok: false, text: "Geen verbinding met de koppel-server. Probeer het zo nog eens." });
+      setMsg({ ok: false, text: "Even geen verbinding. Probeer het zo nog eens." });
     } else {
       setMsg({ ok: false, text: "Er ging iets mis. Probeer het zo nog eens." });
     }

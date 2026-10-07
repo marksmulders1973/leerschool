@@ -1,0 +1,21 @@
+# Route /leerkracht/werkblad (vers apparaat)
+# http://localhost:4173/leerkracht/werkblad
+Spring naar hoofdinhoud
+← terug
+🖨️ Werkblad voor je klas
+Kies een onderwerp en print een werkblad met 12 opgaven — plus een apart antwoordblad voor jou. Onderaan het blad staat een QR-code, zodat leerlingen thuis gratis verder kunnen oefenen.
+Waar wil je een werkblad over?
+🍕 Breuken
+💯 Procenten
+🔢 Kommagetallen
+🔁 Breuk ↔ procent ↔ komma
+📖 Verhaaltjessommen
+✏️ d/t + 't kofschip
+⏰ Werkwoordstijden
+📝 ei/ij + au/ou
+📚 Begrijpend lezen
+👉 Verwijswoorden
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244

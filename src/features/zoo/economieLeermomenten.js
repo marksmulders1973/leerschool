@@ -14,7 +14,7 @@ export const LEERMOMENTEN = {
   brutoloon: {
     titel: "Brutoloon",
     uitleg: {
-      po: "Dit is je hele loon vóórdat er iets af gaat. Het bedrag dat je 'verdient'.",
+      po: "Dit is je hele loon vóórdat er iets afgaat. Het bedrag dat je 'verdient'.",
       vo: "Het brutoloon is je loon vóór inhoudingen (loonheffing en premies).",
     },
     leerpad: { po: "financiele-vorming-po", vo: "financiele-vorming-po" },

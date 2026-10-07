@@ -1,0 +1,1298 @@
+[
+ {
+  "bestand": "public/abonnement.html",
+  "zoek": "Onbeperkte uitleg van Charley (oefenen zelf is altijd gratis)",
+  "vervang": "Onbeperkte uitleg van Charley (oefenen zelf blijft gratis, gegarandeerd t/m 2031)",
+  "reden": "Huisregel: nooit 'altijd gratis'",
+  "ernst": 3,
+  "voor": "Onbeperkte uitleg van Charley (oefenen zelf is altijd gratis)",
+  "na": "Onbeperkte uitleg van Charley (oefenen zelf blijft gratis, gegarandeerd t/m 2031)"
+ },
+ {
+  "bestand": "public/abonnement.html",
+  "zoek": "<span class=\"lk-tier tier-pro\">Bent u een school?</span>",
+  "vervang": "<span class=\"lk-tier tier-pro\">Ben je een school?</span>",
+  "reden": "Huisregel: geen 'u'; rest van de pagina is je-vorm",
+  "ernst": 3,
+  "voor": "Bent u een school?",
+  "na": "Ben je een school?"
+ },
+ {
+  "bestand": "public/abonnement.html",
+  "zoek": "<strong>Scholen:</strong> betalen nooit",
+  "vervang": "<strong>Scholen:</strong> betalen niets",
+  "reden": "'nooit' belooft meer dan de garantie t/m 2031; huisregel-formulering is 'betalen niets'",
+  "ernst": 2,
+  "voor": "Scholen: betalen nooit",
+  "na": "Scholen: betalen niets"
+ },
+ {
+  "bestand": "public/abonnement.html",
+  "zoek": "<option value=\"parent_pro\">Ouder — Familie (per gezin)</option>",
+  "vervang": "<option value=\"parent_pro\">Ouder of verzorger — Familie (per gezin)</option>",
+  "reden": "Huisregel: nooit alléén 'ouder'",
+  "ernst": 2,
+  "voor": "Ouder — Familie (per gezin)",
+  "na": "Ouder of verzorger — Familie (per gezin)"
+ },
+ {
+  "bestand": "public/abonnement.html",
+  "zoek": "Leerkwartier is een Nederlands leer-platform voor Cito Doorstroomtoets,",
+  "vervang": "Leerkwartier is een Nederlands leer-platform voor de Doorstroomtoets,",
+  "reden": "Zichtbare tekst: 'Doorstroomtoets' i.p.v. 'Cito'",
+  "ernst": 2,
+  "voor": "…leer-platform voor Cito Doorstroomtoets, VMBO/HAVO/VWO-examens…",
+  "na": "…leer-platform voor de Doorstroomtoets, VMBO/HAVO/VWO-examens…"
+ },
+ {
+  "bestand": "public/abonnement.html",
+  "zoek": "\"description\":\"Pricing-informatie voor Leerkwartier",
+  "vervang": "\"description\":\"Prijsinformatie voor Leerkwartier",
+  "reden": "Engels woord waar Nederlands kan",
+  "ernst": 1,
+  "voor": "Pricing-informatie voor Leerkwartier — …",
+  "na": "Prijsinformatie voor Leerkwartier — …"
+ },
+ {
+  "bestand": "public/abonnement.html",
+  "zoek": "    Tot dan: helemaal gratis, geen advertenties.</p>",
+  "vervang": "    Tot 1 januari 2027: helemaal gratis, geen advertenties.</p>",
+  "reden": "'Tot dan' verwijst na 'gegarandeerd t/m 2031' naar het verkeerde moment",
+  "ernst": 2,
+  "voor": "…gegarandeerd t/m 2031. Tot dan: helemaal gratis, geen advertenties.",
+  "na": "…gegarandeerd t/m 2031. Tot 1 januari 2027: helemaal gratis, geen advertenties."
+ },
+ {
+  "bestand": "public/aftelweken.html",
+  "zoek": "In 2026 is Leerkwartier helemaal gratis; daarna blijft oefenen voor de Doorstroomtoets gratis.</p>",
+  "vervang": "In 2026 is Leerkwartier helemaal gratis; daarna blijft oefenen voor de Doorstroomtoets gratis, gegarandeerd t/m 2031.</p>",
+  "reden": "Onbegrensde gratis-belofte; huisregel: 'gegarandeerd t/m 2031'",
+  "ernst": 2,
+  "voor": "…daarna blijft oefenen voor de Doorstroomtoets gratis.",
+  "na": "…daarna blijft oefenen voor de Doorstroomtoets gratis, gegarandeerd t/m 2031."
+ },
+ {
+  "bestand": "public/begrijpend-lezen-doorstroomtoets.html",
+  "zoek": "content=\"Cito's grootste pijler oefenen — in 15 min/dag, gratis.\"",
+  "vervang": "content=\"De grootste pijler van de Doorstroomtoets oefenen — in 15 min/dag, gratis.\"",
+  "reden": "Zichtbare (deel)tekst: 'Doorstroomtoets' i.p.v. 'Cito'",
+  "ernst": 2,
+  "voor": "Cito's grootste pijler oefenen — in 15 min/dag, gratis.",
+  "na": "De grootste pijler van de Doorstroomtoets oefenen — in 15 min/dag, gratis."
+ },
+ {
+  "bestand": "public/begrijpend-lezen-doorstroomtoets.html",
+  "zoek": "Oefen dagelijks 15 minuten met echte Cito-stijl teksten.",
+  "vervang": "Oefen dagelijks 15 minuten met teksten in Doorstroomtoets-stijl.",
+  "reden": "'echte Cito-stijl' suggereert echte Cito-teksten (copyright-beleid) + Cito-naam",
+  "ernst": 2,
+  "voor": "Oefen dagelijks 15 minuten met echte Cito-stijl teksten.",
+  "na": "Oefen dagelijks 15 minuten met teksten in Doorstroomtoets-stijl."
+ },
+ {
+  "bestand": "public/begrijpend-lezen-doorstroomtoets.html",
+  "zoek": "Investeer in lezen = verbeter je hele Cito-score.",
+  "vervang": "Investeer in lezen = verbeter je hele Doorstroomtoets-score.",
+  "reden": "Zichtbare tekst: 'Doorstroomtoets' i.p.v. 'Cito'",
+  "ernst": 2,
+  "voor": "Investeer in lezen = verbeter je hele Cito-score.",
+  "na": "Investeer in lezen = verbeter je hele Doorstroomtoets-score."
+ },
+ {
+  "bestand": "public/begrijpend-lezen-doorstroomtoets.html",
+  "zoek": "dan verbeter je je hele Cito-score.",
+  "vervang": "dan verbeter je je hele Doorstroomtoets-score.",
+  "reden": "FAQ-tekst (zoekresultaat): 'Doorstroomtoets' i.p.v. 'Cito'",
+  "ernst": 1,
+  "voor": "…dan verbeter je je hele Cito-score.",
+  "na": "…dan verbeter je je hele Doorstroomtoets-score."
+ },
+ {
+  "bestand": "public/begrijpend-lezen-doorstroomtoets.html",
+  "zoek": "Elk heeft een eigen vraag-format.",
+  "vervang": "Elke soort heeft eigen vraagtypen.",
+  "reden": "'Elk' hoort bij 'tekstsoorten' (de) + Engels 'format'",
+  "ernst": 1,
+  "voor": "Elk heeft een eigen vraag-format.",
+  "na": "Elke soort heeft eigen vraagtypen."
+ },
+ {
+  "bestand": "public/begrijpend-lezen-doorstroomtoets.html",
+  "zoek": "<h3>📰 1. Zakelijke tekst — informatieve</h3>",
+  "vervang": "<h3>📰 1. Zakelijke tekst — informatief</h3>",
+  "reden": "Bijvoeglijk naamwoord hangt los ('informatieve' zonder zelfstandig naamwoord)",
+  "ernst": 1,
+  "voor": "1. Zakelijke tekst — informatieve",
+  "na": "1. Zakelijke tekst — informatief"
+ },
+ {
+  "bestand": "public/begrijpend-lezen-doorstroomtoets.html",
+  "zoek": "<strong>Cito-truc:</strong> lees eerst de vraag",
+  "vervang": "<strong>Toetstruc:</strong> lees eerst de vraag",
+  "reden": "Zichtbare tekst: geen 'Cito' (het is geen truc van Cito)",
+  "ernst": 1,
+  "voor": "Cito-truc: lees eerst de vraag, dan pas de tekst.",
+  "na": "Toetstruc: lees eerst de vraag, dan pas de tekst."
+ },
+ {
+  "bestand": "public/begrijpend-lezen-doorstroomtoets.html",
+  "zoek": "wat is het belangrijkste punt? Vaak bij eind van tekst.",
+  "vervang": "wat is het belangrijkste punt? Vaak aan het eind van de tekst.",
+  "reden": "Lidwoorden ontbreken",
+  "ernst": 1,
+  "voor": "Vaak bij eind van tekst.",
+  "na": "Vaak aan het eind van de tekst."
+ },
+ {
+  "bestand": "public/begrijpend-lezen-doorstroomtoets.html",
+  "zoek": "\"text\": \"Moderne Doorstroomtoets gebruikt veel diverse teksten:",
+  "vervang": "\"text\": \"De moderne Doorstroomtoets gebruikt veel verschillende teksten:",
+  "reden": "Lidwoord ontbreekt; 'veel diverse' is dubbelop",
+  "ernst": 1,
+  "voor": "Moderne Doorstroomtoets gebruikt veel diverse teksten: …",
+  "na": "De moderne Doorstroomtoets gebruikt veel verschillende teksten: …"
+ },
+ {
+  "bestand": "public/begrijpend-lezen-oefenen.html",
+  "zoek": "Goede voorbereiding op de Cito.\"",
+  "vervang": "Goede voorbereiding op de Doorstroomtoets.\"",
+  "reden": "Zichtbare zoekresultaat-tekst: 'Doorstroomtoets' i.p.v. 'Cito'",
+  "ernst": 2,
+  "voor": "Goede voorbereiding op de Cito.",
+  "na": "Goede voorbereiding op de Doorstroomtoets."
+ },
+ {
+  "bestand": "public/begrijpend-lezen-oefenen.html",
+  "zoek": "en een groot onderdeel van de Cito eindtoets.",
+  "vervang": "en een groot onderdeel van de Doorstroomtoets.",
+  "reden": "Verouderde naam (sinds 2024 Doorstroomtoets)",
+  "ernst": 3,
+  "voor": "…en een groot onderdeel van de Cito eindtoets.",
+  "na": "…en een groot onderdeel van de Doorstroomtoets."
+ },
+ {
+  "bestand": "public/begrijpend-lezen-oefenen.html",
+  "zoek": "voorbereiding op middelbaar onderwijs en Cito</li>",
+  "vervang": "voorbereiding op middelbaar onderwijs en de Doorstroomtoets</li>",
+  "reden": "Zichtbare tekst: 'Doorstroomtoets' i.p.v. 'Cito'",
+  "ernst": 2,
+  "voor": "Groep 7 — voorbereiding op middelbaar onderwijs en Cito",
+  "na": "Groep 7 — voorbereiding op middelbaar onderwijs en de Doorstroomtoets"
+ },
+ {
+  "bestand": "public/begrijpend-lezen-oefenen.html",
+  "zoek": "— Cito-niveau teksten met afleiders",
+  "vervang": "— teksten op Doorstroomtoets-niveau met afleiders",
+  "reden": "Zichtbare tekst: 'Doorstroomtoets' i.p.v. 'Cito'",
+  "ernst": 2,
+  "voor": "Groep 8 — Cito-niveau teksten met afleiders en interpretatievragen",
+  "na": "Groep 8 — teksten op Doorstroomtoets-niveau met afleiders en interpretatievragen"
+ },
+ {
+  "bestand": "public/begrijpend-lezen-oefenen.html",
+  "zoek": "<h2>De 4 tekstsoorten op de Cito en in groep 8</h2>",
+  "vervang": "<h2>De 4 tekstsoorten op de Doorstroomtoets en in groep 8</h2>",
+  "reden": "Zichtbare kop: 'Doorstroomtoets' i.p.v. 'Cito'",
+  "ernst": 2,
+  "voor": "De 4 tekstsoorten op de Cito en in groep 8",
+  "na": "De 4 tekstsoorten op de Doorstroomtoets en in groep 8"
+ },
+ {
+  "bestand": "public/begrijpend-lezen-oefenen.html",
+  "zoek": "'daarna', 'tenslotte'",
+  "vervang": "'daarna', 'ten slotte'",
+  "reden": "Spelling: 'ten slotte' (twee woorden)",
+  "ernst": 1,
+  "voor": "'eerst', 'daarna', 'tenslotte'",
+  "na": "'eerst', 'daarna', 'ten slotte'"
+ },
+ {
+  "bestand": "public/begrijpend-lezen-oefenen.html",
+  "zoek": "Doe dat nooit op een Cito-vraag:",
+  "vervang": "Doe dat nooit op een toetsvraag:",
+  "reden": "Zichtbare tekst: geen 'Cito'",
+  "ernst": 2,
+  "voor": "Doe dat nooit op een Cito-vraag: …",
+  "na": "Doe dat nooit op een toetsvraag: …"
+ },
+ {
+  "bestand": "public/begrijpend-lezen-oefenen.html",
+  "zoek": "<p>Drie typische valstrikken die Cito gebruikt:</p>",
+  "vervang": "<p>Drie typische valstrikken in toetsvragen:</p>",
+  "reden": "Zichtbare tekst: geen 'Cito' (geldt voor alle aanbieders)",
+  "ernst": 2,
+  "voor": "Drie typische valstrikken die Cito gebruikt:",
+  "na": "Drie typische valstrikken in toetsvragen:"
+ },
+ {
+  "bestand": "public/cito-eindtoets-oefenen.html",
+  "zoek": "alle vier de onderdelen die in de toets terugkomen,",
+  "vervang": "lezen, taal en rekenen — de onderdelen van de toets — plus wereldoriëntatie,",
+  "reden": "Onwaar: wereldoriëntatie zit niet in de Doorstroomtoets (drie verplichte onderdelen: lezen, taalverzorging, rekenen)",
+  "ernst": 3,
+  "voor": "…oefen je gratis alle vier de onderdelen die in de toets terugkomen, zonder account…",
+  "na": "…oefen je gratis lezen, taal en rekenen — de onderdelen van de toets — plus wereldoriëntatie, zonder account…"
+ },
+ {
+  "bestand": "public/cito-eindtoets-oefenen.html",
+  "zoek": "Alle vragen zijn gemaakt op het niveau van de Cito eindtoets groep 8.",
+  "vervang": "Alle vragen zijn gemaakt op het niveau van de Doorstroomtoets in groep 8.",
+  "reden": "Zichtbare tekst: 'Doorstroomtoets' i.p.v. 'Cito eindtoets'",
+  "ernst": 2,
+  "voor": "Alle vragen zijn gemaakt op het niveau van de Cito eindtoets groep 8.",
+  "na": "Alle vragen zijn gemaakt op het niveau van de Doorstroomtoets in groep 8."
+ },
+ {
+  "bestand": "public/cito-eindtoets-oefenen.html",
+  "zoek": "daarom hebben we beide URLs",
+  "vervang": "daarom hebben we beide pagina's",
+  "reden": "Engels/vaktaal + spelling (URL's); voor ouders is 'pagina's' duidelijker",
+  "ernst": 1,
+  "voor": "…daarom hebben we beide URLs (deze pagina en /doorstroomtoets-oefenen.html).",
+  "na": "…daarom hebben we beide pagina's (deze pagina en /doorstroomtoets-oefenen.html)."
+ },
+ {
+  "bestand": "public/cito-eindtoets-oefenen.html",
+  "zoek": "Vraag je leerkracht naar het schooladvies",
+  "vervang": "Vraag de leerkracht naar het schooladvies",
+  "reden": "Lezer is ouder of verzorger: 'je leerkracht' klopt niet",
+  "ernst": 1,
+  "voor": "Vraag je leerkracht naar het schooladvies vóórdat de toets wordt afgenomen…",
+  "na": "Vraag de leerkracht naar het schooladvies vóórdat de toets wordt afgenomen…"
+ },
+ {
+  "bestand": "public/cito-eindtoets-oefenen.html",
+  "zoek": "vermindert onbekendheid (Cito-vraag-format herkennen) en bouwt vertrouwen op. Vermijd avond-vóór-de-toets cramming",
+  "vervang": "vermindert onbekendheid (de vraagvorm van de toets herkennen) en bouwt vertrouwen op. Vermijd stampen op de avond vóór de toets",
+  "reden": "Engelse woorden (format, cramming) + 'Cito' in zichtbare tekst",
+  "ernst": 1,
+  "voor": "…(Cito-vraag-format herkennen)… Vermijd avond-vóór-de-toets cramming…",
+  "na": "…(de vraagvorm van de toets herkennen)… Vermijd stampen op de avond vóór de toets…"
+ },
+ {
+  "bestand": "public/cito-eindtoets-oefenen.html",
+  "zoek": "🚀 Start gratis Cito-oefening",
+  "vervang": "🚀 Start gratis met oefenen",
+  "reden": "Knop: 'Doorstroomtoets' i.p.v. 'Cito' (bestemming /?go=cito blijft)",
+  "ernst": 2,
+  "voor": "🚀 Start gratis Cito-oefening",
+  "na": "🚀 Start gratis met oefenen"
+ },
+ {
+  "bestand": "public/cito-toets-oefenen.html",
+  "zoek": "is er een optioneel Familie-pakket voor thuis (vanaf 2027).",
+  "vervang": "is er een optioneel Familie-pakket voor thuis.",
+  "reden": "'vanaf 2027' staat twee keer in één zin",
+  "ernst": 2,
+  "voor": "…vanaf 2027 is er een optioneel Familie-pakket voor thuis (vanaf 2027).",
+  "na": "…vanaf 2027 is er een optioneel Familie-pakket voor thuis."
+ },
+ {
+  "bestand": "public/cito-toets-oefenen.html",
+  "zoek": "Dan komt de Doorstroomtoets in februari.",
+  "vervang": "Dan komt de Doorstroomtoets, eind januari of begin februari.",
+  "reden": "Toets begint 25 januari (papier 26-27 jan); 'in februari' klopt niet",
+  "ernst": 2,
+  "voor": "Dan komt de Doorstroomtoets in februari.",
+  "na": "Dan komt de Doorstroomtoets, eind januari of begin februari."
+ },
+ {
+  "bestand": "public/cito-toets-oefenen.html",
+  "zoek": "Dagelijks 15 min vanaf november. Februari = afname.",
+  "vervang": "Dagelijks 15 min vanaf november. Eind januari/februari = afname.",
+  "reden": "Afname start 25 januari",
+  "ernst": 2,
+  "voor": "Februari = afname.",
+  "na": "Eind januari/februari = afname."
+ },
+ {
+  "bestand": "public/cito-toets-oefenen.html",
+  "zoek": "voorlopig schooladvies in januari → Doorstroomtoets in februari →",
+  "vervang": "voorlopig schooladvies in januari → Doorstroomtoets eind januari/februari →",
+  "reden": "Afname start 25 januari",
+  "ernst": 2,
+  "voor": "…→ Doorstroomtoets in februari → …",
+  "na": "…→ Doorstroomtoets eind januari/februari → …"
+ },
+ {
+  "bestand": "public/cito-toets-oefenen.html",
+  "zoek": "<h3>🎯 Authentieke Cito-stijl-vragen</h3>",
+  "vervang": "<h3>🎯 Vragen in Doorstroomtoets-stijl</h3>",
+  "reden": "Onwaar: het zijn eigen vragen 'in stijl van', niet authentiek (copyright-beleid) + Cito-naam",
+  "ernst": 3,
+  "voor": "🎯 Authentieke Cito-stijl-vragen",
+  "na": "🎯 Vragen in Doorstroomtoets-stijl"
+ },
+ {
+  "bestand": "public/cito-toets-oefenen.html",
+  "zoek": "vragen in exact format dat Cito gebruikt:",
+  "vervang": "vragen in dezelfde vorm als de echte toets:",
+  "reden": "Engels 'format', 'Cito' + loopt niet",
+  "ernst": 2,
+  "voor": "…vragen in exact format dat Cito gebruikt: meerkeuze met 4 opties…",
+  "na": "…vragen in dezelfde vorm als de echte toets: meerkeuze met 4 opties…"
+ },
+ {
+  "bestand": "public/cito-toets-oefenen.html",
+  "zoek": "Bij een fout antwoord opent een uitlegPad: \"basis\"",
+  "vervang": "Bij een fout antwoord opent een uitleg: \"basis\"",
+  "reden": "Dev-jargon (code-naam 'uitlegPad') in zichtbare tekst",
+  "ernst": 2,
+  "voor": "Bij een fout antwoord opent een uitlegPad: \"basis\", …",
+  "na": "Bij een fout antwoord opent een uitleg: \"basis\", …"
+ },
+ {
+  "bestand": "public/cito-toets-oefenen.html",
+  "zoek": "Op Leerkwartier doet de uitlegPad dit automatisch.",
+  "vervang": "Op Leerkwartier doet de uitleg dit automatisch.",
+  "reden": "Dev-jargon (code-naam 'uitlegPad') in zichtbare tekst",
+  "ernst": 2,
+  "voor": "Op Leerkwartier doet de uitlegPad dit automatisch.",
+  "na": "Op Leerkwartier doet de uitleg dit automatisch."
+ },
+ {
+  "bestand": "public/cito-toets-oefenen.html",
+  "zoek": "In groep 6 worden de bouwstenen gelegd. Reken:",
+  "vervang": "In groep 6 worden de bouwstenen gelegd. Rekenen:",
+  "reden": "Kopje-woord onvolledig ('Reken:' naast 'Taal:' en 'Lezen:')",
+  "ernst": 1,
+  "voor": "Reken: alle tafels van 1 t/m 10…",
+  "na": "Rekenen: alle tafels van 1 t/m 10…"
+ },
+ {
+  "bestand": "public/cito-toets-oefenen.html",
+  "zoek": "hun adviezen vormen. Reken:",
+  "vervang": "hun adviezen vormen. Rekenen:",
+  "reden": "Kopje-woord onvolledig",
+  "ernst": 1,
+  "voor": "Reken: redactiesommen met 2 bewerkingen…",
+  "na": "Rekenen: redactiesommen met 2 bewerkingen…"
+ },
+ {
+  "bestand": "public/cito-toets-oefenen.html",
+  "zoek": "de Cito-LVS af (Leerling Volg Systeem, juni en januari)",
+  "vervang": "de Cito-LVS af (leerlingvolgsysteem, juni en januari)",
+  "reden": "Spelling: 'leerlingvolgsysteem' is één woord",
+  "ernst": 1,
+  "voor": "(Leerling Volg Systeem, juni en januari)",
+  "na": "(leerlingvolgsysteem, juni en januari)"
+ },
+ {
+  "bestand": "public/cito-toets-oefenen.html",
+  "zoek": "De Cito-LVS (Leerling Volg Systeem) zijn",
+  "vervang": "De Cito-LVS (leerlingvolgsysteem) zijn",
+  "reden": "Spelling: 'leerlingvolgsysteem' is één woord",
+  "ernst": 1,
+  "voor": "De Cito-LVS (Leerling Volg Systeem) zijn de toetsen…",
+  "na": "De Cito-LVS (leerlingvolgsysteem) zijn de toetsen…"
+ },
+ {
+  "bestand": "public/cito-toets-oefenen.html",
+  "zoek": "zit dezelfde leerpaden",
+  "vervang": "zit in dezelfde leerpaden",
+  "reden": "Woord 'in' ontbreekt",
+  "ernst": 2,
+  "voor": "…de Doorstroomtoets-stof (eindniveau groep 8) zit dezelfde leerpaden…",
+  "na": "…de Doorstroomtoets-stof (eindniveau groep 8) zit in dezelfde leerpaden…"
+ },
+ {
+  "bestand": "public/cito-toets-oefenen.html",
+  "zoek": "maar een verkennen van waar je kind",
+  "vervang": "maar een verkenning van waar je kind",
+  "reden": "Zin loopt niet ('een verkennen')",
+  "ernst": 2,
+  "voor": "…maar een verkennen van waar je kind structureel staat.",
+  "na": "…maar een verkenning van waar je kind structureel staat."
+ },
+ {
+  "bestand": "public/cito-toets-oefenen.html",
+  "zoek": "Zo zien ze er uit:",
+  "vervang": "Zo zien ze eruit:",
+  "reden": "Spelling: 'eruit' aaneen",
+  "ernst": 1,
+  "voor": "Zo zien ze er uit:",
+  "na": "Zo zien ze eruit:"
+ },
+ {
+  "bestand": "public/cito-toets-oefenen.html",
+  "zoek": "gymnasium met latijn/grieks.",
+  "vervang": "gymnasium met Latijn/Grieks.",
+  "reden": "Talen met hoofdletter",
+  "ernst": 1,
+  "voor": "gymnasium met latijn/grieks",
+  "na": "gymnasium met Latijn/Grieks"
+ },
+ {
+  "bestand": "public/cito-toets-oefenen.html",
+  "zoek": "heeft elke jaar opnieuw kans",
+  "vervang": "heeft elk jaar opnieuw kans",
+  "reden": "'jaar' is het-woord: 'elk jaar'",
+  "ernst": 1,
+  "voor": "…heeft elke jaar opnieuw kans op heroverweging…",
+  "na": "…heeft elk jaar opnieuw kans op heroverweging…"
+ },
+ {
+  "bestand": "public/cito-toets-oefenen.html",
+  "zoek": "is de éénmalige toets in groep 8",
+  "vervang": "is de eenmalige toets in groep 8",
+  "reden": "Spelling: 'eenmalig' zonder klemtoontekens",
+  "ernst": 1,
+  "voor": "…is de éénmalige toets in groep 8…",
+  "na": "…is de eenmalige toets in groep 8…"
+ },
+ {
+  "bestand": "public/cito-toets-oefenen.html",
+  "zoek": "In 2026 is alles gratis; daarna blijft het oefenen gratis en komt er",
+  "vervang": "In 2026 is alles gratis; daarna blijft het oefenen gratis (gegarandeerd t/m 2031) en komt er",
+  "reden": "Onbegrensde gratis-belofte; huisregel: 'gegarandeerd t/m 2031'",
+  "ernst": 2,
+  "voor": "…daarna blijft het oefenen gratis en komt er een optioneel Familie-pakket…",
+  "na": "…daarna blijft het oefenen gratis (gegarandeerd t/m 2031) en komt er een optioneel Familie-pakket…"
+ },
+ {
+  "bestand": "public/contact.html",
+  "zoek": "<p>U mailt rechtstreeks met de maker van Leerkwartier.</p>",
+  "vervang": "<p>Je mailt rechtstreeks met de maker van Leerkwartier.</p>",
+  "reden": "Huisregel: geen 'u'",
+  "ernst": 3,
+  "voor": "U mailt rechtstreeks met de maker van Leerkwartier.",
+  "na": "Je mailt rechtstreeks met de maker van Leerkwartier."
+ },
+ {
+  "bestand": "public/contact.html",
+  "zoek": "<h2>Waarover kunt u mailen?</h2>",
+  "vervang": "<h2>Waarover kun je mailen?</h2>",
+  "reden": "Huisregel: geen 'u'",
+  "ernst": 3,
+  "voor": "Waarover kunt u mailen?",
+  "na": "Waarover kun je mailen?"
+ },
+ {
+  "bestand": "public/contact.html",
+  "zoek": "<p>Wat u bij ons kunt verwachten, staat in de",
+  "vervang": "<p>Wat je bij ons kunt verwachten, staat in de",
+  "reden": "Huisregel: geen 'u'",
+  "ernst": 3,
+  "voor": "Wat u bij ons kunt verwachten, staat in de voorwaarden…",
+  "na": "Wat je bij ons kunt verwachten, staat in de voorwaarden…"
+ },
+ {
+  "bestand": "public/dictee-oefenen.html",
+  "zoek": "<b>📬 Elke maandag het dictee-resultaat van je kind in je mail?</b>",
+  "vervang": "<b>📬 Elke vrijdag het dictee-resultaat van je kind in je mail?</b>",
+  "reden": "Onwaar: het weekrapport gaat op vrijdag (api/send-ouder-rapport.js, abonnement.html)",
+  "ernst": 3,
+  "voor": "📬 Elke maandag het dictee-resultaat van je kind in je mail?",
+  "na": "📬 Elke vrijdag het dictee-resultaat van je kind in je mail?"
+ },
+ {
+  "bestand": "public/dictee-oefenen.html",
+  "zoek": "Het eerste rapport komt maandag.",
+  "vervang": "Het eerste rapport komt vrijdag.",
+  "reden": "Onwaar: het weekrapport gaat op vrijdag",
+  "ernst": 3,
+  "voor": "✓ Gelukt! Het eerste rapport komt maandag.",
+  "na": "✓ Gelukt! Het eerste rapport komt vrijdag."
+ },
+ {
+  "bestand": "public/doorgeven.html",
+  "zoek": "\"text\":\"Heeft uw organisatie een partnercode?",
+  "vervang": "\"text\":\"Heeft je organisatie een partnercode?",
+  "reden": "Huisregel: geen 'u'; pagina begint in je-vorm ('Werk je bij…')",
+  "ernst": 2,
+  "voor": "Heeft uw organisatie een partnercode?",
+  "na": "Heeft je organisatie een partnercode?"
+ },
+ {
+  "bestand": "public/doorgeven.html",
+  "zoek": "Werkt uw organisatie samen met Nationaal Fonds Kinderhulp?",
+  "vervang": "Werkt je organisatie samen met Nationaal Fonds Kinderhulp?",
+  "reden": "Huisregel: geen 'u'; je/u door elkaar op deze pagina",
+  "ernst": 2,
+  "voor": "Werkt uw organisatie samen met Nationaal Fonds Kinderhulp?",
+  "na": "Werkt je organisatie samen met Nationaal Fonds Kinderhulp?"
+ },
+ {
+  "bestand": "public/doorgeven.html",
+  "zoek": "Beeld en korte tekst voor uw eigen nieuwsbrief:",
+  "vervang": "Beeld en korte tekst voor je eigen nieuwsbrief:",
+  "reden": "Huisregel: geen 'u'",
+  "ernst": 2,
+  "voor": "Beeld en korte tekst voor uw eigen nieuwsbrief:",
+  "na": "Beeld en korte tekst voor je eigen nieuwsbrief:"
+ },
+ {
+  "bestand": "public/doorgeven.html",
+  "zoek": "    Heeft uw organisatie een <b>partnercode</b>",
+  "vervang": "    Heeft je organisatie een <b>partnercode</b>",
+  "reden": "Huisregel: geen 'u'",
+  "ernst": 2,
+  "voor": "Heeft uw organisatie een partnercode van Leerkwartier gekregen…",
+  "na": "Heeft je organisatie een partnercode van Leerkwartier gekregen…"
+ },
+ {
+  "bestand": "public/doorgeven.html",
+  "zoek": "Nog geen code voor uw organisatie?",
+  "vervang": "Nog geen code voor je organisatie?",
+  "reden": "Huisregel: geen 'u'",
+  "ernst": 2,
+  "voor": "Nog geen code voor uw organisatie?",
+  "na": "Nog geen code voor je organisatie?"
+ },
+ {
+  "bestand": "public/doorgeven.html",
+  "zoek": ". U krijgt binnen een dag een code",
+  "vervang": ". Je krijgt binnen een dag een code",
+  "reden": "Huisregel: geen 'u'",
+  "ernst": 2,
+  "voor": "U krijgt binnen een dag een code en een flyer op maat…",
+  "na": "Je krijgt binnen een dag een code en een flyer op maat…"
+ },
+ {
+  "bestand": "public/doorgeven.html",
+  "zoek": "<h2>4. Werkt u bij een organisatie? Blijf op de hoogte</h2>",
+  "vervang": "<h2>4. Werk je bij een organisatie? Blijf op de hoogte</h2>",
+  "reden": "Huisregel: geen 'u'",
+  "ernst": 2,
+  "voor": "4. Werkt u bij een organisatie? Blijf op de hoogte",
+  "na": "4. Werk je bij een organisatie? Blijf op de hoogte"
+ },
+ {
+  "bestand": "public/doorgeven.html",
+  "zoek": "<p>Laat uw e-mailadres achter. U krijgt dan de flyer",
+  "vervang": "<p>Laat je e-mailadres achter. Je krijgt dan de flyer",
+  "reden": "Huisregel: geen 'u'",
+  "ernst": 2,
+  "voor": "Laat uw e-mailadres achter. U krijgt dan de flyer als PDF…",
+  "na": "Laat je e-mailadres achter. Je krijgt dan de flyer als PDF…"
+ },
+ {
+  "bestand": "public/doorgeven.html",
+  "zoek": "placeholder=\"uw werk-e-mailadres\"",
+  "vervang": "placeholder=\"je werk-e-mailadres\"",
+  "reden": "Huisregel: geen 'u'",
+  "ernst": 2,
+  "voor": "uw werk-e-mailadres",
+  "na": "je werk-e-mailadres"
+ },
+ {
+  "bestand": "public/doorgeven.html",
+  "zoek": "st.textContent='Dank u. De flyer",
+  "vervang": "st.textContent='Dank je. De flyer",
+  "reden": "Huisregel: geen 'u'",
+  "ernst": 2,
+  "voor": "Dank u. De flyer en de updates komen naar …",
+  "na": "Dank je. De flyer en de updates komen naar …"
+ },
+ {
+  "bestand": "public/doorstroomtoets-2027-gids.html",
+  "zoek": "<p>Sinds 2024 alle vijf aanbieders volledig digitaal. School zorgt voor apparaten.</p>",
+  "vervang": "<p>Meestal digitaal; er is ook een papieren versie (26 en 27 januari 2027). School zorgt voor apparaten.</p>",
+  "reden": "Botst met dezelfde gids (papieren toetsen op 26-27 januari) en de officiële planning",
+  "ernst": 3,
+  "voor": "Papier of digitaal? Sinds 2024 alle vijf aanbieders volledig digitaal.",
+  "na": "Papier of digitaal? Meestal digitaal; er is ook een papieren versie (26 en 27 januari 2027)."
+ },
+ {
+  "bestand": "public/doorstroomtoets-2027-gids.html",
+  "zoek": "<p class=\"lead\">Februari 2027 is dichterbij dan je denkt.",
+  "vervang": "<p class=\"lead\">Eind januari 2027 is dichterbij dan je denkt.",
+  "reden": "De toets begint op 25 januari 2027, niet in februari",
+  "ernst": 2,
+  "voor": "Februari 2027 is dichterbij dan je denkt.",
+  "na": "Eind januari 2027 is dichterbij dan je denkt."
+ },
+ {
+  "bestand": "public/doorstroomtoets-2027-gids.html",
+  "zoek": "<div class=\"meta\">Geüpdatet: 13 mei 2026",
+  "vervang": "<div class=\"meta\">Bijgewerkt: 13 mei 2026",
+  "reden": "Engels leenwoord waar Nederlands kan",
+  "ernst": 1,
+  "voor": "Geüpdatet: 13 mei 2026",
+  "na": "Bijgewerkt: 13 mei 2026"
+ },
+ {
+  "bestand": "public/doorstroomtoets-2027-gids.html",
+  "zoek": "Lees meer over Cito LiB →",
+  "vervang": "Lees meer over Leerling in Beeld →",
+  "reden": "Onbekende afkorting 'LiB' voor ouders",
+  "ernst": 1,
+  "voor": "Lees meer over Cito LiB →",
+  "na": "Lees meer over Leerling in Beeld →"
+ },
+ {
+  "bestand": "public/doorstroomtoets-2027-gids.html",
+  "zoek": "pauze nemen, water drinken en een korte rust nemen —",
+  "vervang": "pauze nemen en water drinken —",
+  "reden": "Dubbelop: 'pauze nemen' en 'een korte rust nemen'",
+  "ernst": 1,
+  "voor": "…mag de leerling pauze nemen, water drinken en een korte rust nemen — …",
+  "na": "…mag de leerling pauze nemen en water drinken — …"
+ },
+ {
+  "bestand": "public/doorstroomtoets-2027-gids.html",
+  "zoek": "Spelen ze met decimalen?",
+  "vervang": "Hebben ze moeite met decimalen?",
+  "reden": "'Spelen ze met' zegt niet wat bedoeld wordt",
+  "ernst": 2,
+  "voor": "Spelen ze met decimalen?",
+  "na": "Hebben ze moeite met decimalen?"
+ },
+ {
+  "bestand": "public/doorstroomtoets-2027-gids.html",
+  "zoek": "daarna rekenen, dan taal-verzorging.",
+  "vervang": "daarna rekenen, dan taalverzorging.",
+  "reden": "Spelling: 'taalverzorging' aaneen (zoals elders op de pagina)",
+  "ernst": 1,
+  "voor": "…dan taal-verzorging.",
+  "na": "…dan taalverzorging."
+ },
+ {
+  "bestand": "public/doorstroomtoets-2027-gids.html",
+  "zoek": "📅 Laatste week — rust + 1-2 mock-toetsen",
+  "vervang": "📅 Laatste week — rust + 1-2 oefentoetsen",
+  "reden": "Engels woord waar Nederlands kan",
+  "ernst": 1,
+  "voor": "Laatste week — rust + 1-2 mock-toetsen",
+  "na": "Laatste week — rust + 1-2 oefentoetsen"
+ },
+ {
+  "bestand": "public/doorstroomtoets-2027-gids.html",
+  "zoek": "Vermijd avonddoor-cramming —",
+  "vervang": "Vermijd stampen tot laat in de avond —",
+  "reden": "Engels/verzonnen woord",
+  "ernst": 1,
+  "voor": "Vermijd avonddoor-cramming — …",
+  "na": "Vermijd stampen tot laat in de avond — …"
+ },
+ {
+  "bestand": "public/doorstroomtoets-2027-gids.html",
+  "zoek": "\"Het is een momentopname, niet een examen voor de rest van je leven.\"",
+  "vervang": "\"Het is een momentopname, geen examen voor de rest van je leven.\"",
+  "reden": "'niet een' → 'geen'",
+  "ernst": 1,
+  "voor": "…niet een examen voor de rest van je leven.",
+  "na": "…geen examen voor de rest van je leven."
+ },
+ {
+  "bestand": "public/doorstroomtoets-2027-gids.html",
+  "zoek": "geven rust. Vermijd ad-hoc-cramming.",
+  "vervang": "geven rust. Vermijd stampen op het laatste moment.",
+  "reden": "Engels woord waar Nederlands kan",
+  "ernst": 1,
+  "voor": "Vermijd ad-hoc-cramming.",
+  "na": "Vermijd stampen op het laatste moment."
+ },
+ {
+  "bestand": "public/doorstroomtoets-2027-gids.html",
+  "zoek": "dan een ge-cramd kind.",
+  "vervang": "dan een kind dat tot het laatst heeft zitten stampen.",
+  "reden": "Engels/verzonnen woord",
+  "ernst": 1,
+  "voor": "…scoort merkbaar beter dan een ge-cramd kind.",
+  "na": "…scoort merkbaar beter dan een kind dat tot het laatst heeft zitten stampen."
+ },
+ {
+  "bestand": "public/doorstroomtoets-2027-gids.html",
+  "zoek": "Slaap en rust werken beter dan cramming.</p>",
+  "vervang": "Slaap en rust werken beter dan stampen.</p>",
+  "reden": "Engels woord waar Nederlands kan",
+  "ernst": 1,
+  "voor": "Slaap en rust werken beter dan cramming.",
+  "na": "Slaap en rust werken beter dan stampen."
+ },
+ {
+  "bestand": "public/doorstroomtoets-2027-gids.html",
+  "zoek": "examen-stress, dyslexie, of concentratie-issues",
+  "vervang": "examen-stress, dyslexie, of concentratieproblemen",
+  "reden": "Engels woord waar Nederlands kan",
+  "ernst": 1,
+  "voor": "…of concentratie-issues — …",
+  "na": "…of concentratieproblemen — …"
+ },
+ {
+  "bestand": "public/doorstroomtoets-2027-gids.html",
+  "zoek": "📘 Naar de oefen-modules",
+  "vervang": "📘 Naar het oefenen",
+  "reden": "Dev-jargon 'modules' in knoptekst",
+  "ernst": 2,
+  "voor": "📘 Naar de oefen-modules",
+  "na": "📘 Naar het oefenen"
+ },
+ {
+  "bestand": "public/doorstroomtoets-amn.html",
+  "zoek": "Een mentor-rapport (aparte PDF) die meegestuurd",
+  "vervang": "Een mentor-rapport (aparte PDF) dat meegestuurd",
+  "reden": "Verwijzing: 'het rapport' → 'dat'",
+  "ernst": 1,
+  "voor": "Een mentor-rapport (aparte PDF) die meegestuurd kan worden…",
+  "na": "Een mentor-rapport (aparte PDF) dat meegestuurd kan worden…"
+ },
+ {
+  "bestand": "public/doorstroomtoets-cito-leerling-in-beeld.html",
+  "zoek": "Dagelijks 1 oefenvraag per soort gewenningseffect groot.",
+  "vervang": "Dagelijks 1 oefenvraag per soort geeft al een groot gewenningseffect.",
+  "reden": "Werkwoord ontbreekt; zin loopt niet",
+  "ernst": 2,
+  "voor": "Dagelijks 1 oefenvraag per soort gewenningseffect groot.",
+  "na": "Dagelijks 1 oefenvraag per soort geeft al een groot gewenningseffect."
+ },
+ {
+  "bestand": "public/doorstroomtoets-cito-leerling-in-beeld.html",
+  "zoek": "worden door het ministerie geïjkt op dezelfde referentieniveaus. De vraag-vorm verschilt — bv. Cito gebruikt meer doorlopende teksten, IEP meer geïllustreerde vragen — maar het niveau is geijkt op gelijk.",
+  "vervang": "worden door het ministerie geijkt op dezelfde referentieniveaus. De vraag-vorm verschilt — bv. Cito gebruikt meer doorlopende teksten, IEP meer geïllustreerde vragen — maar het niveau is gelijk.",
+  "reden": "Spelling 'geijkt' (zonder trema) + 'geijkt op gelijk' loopt niet",
+  "ernst": 2,
+  "voor": "…geïjkt op dezelfde referentieniveaus… maar het niveau is geijkt op gelijk.",
+  "na": "…geijkt op dezelfde referentieniveaus… maar het niveau is gelijk."
+ },
+ {
+  "bestand": "public/doorstroomtoets-cito-leerling-in-beeld.html",
+  "zoek": "De Cito-LVS (Leerling Volg Systeem) toetst",
+  "vervang": "De Cito-LVS (leerlingvolgsysteem) toetst",
+  "reden": "Spelling: 'leerlingvolgsysteem' is één woord",
+  "ernst": 1,
+  "voor": "De Cito-LVS (Leerling Volg Systeem) toetst…",
+  "na": "De Cito-LVS (leerlingvolgsysteem) toetst…"
+ },
+ {
+  "bestand": "public/doorstroomtoets-dia.html",
+  "zoek": "kinderen met concentratie-issues",
+  "vervang": "kinderen met concentratieproblemen",
+  "reden": "Engels woord waar Nederlands kan",
+  "ernst": 1,
+  "voor": "…kinderen met concentratie-issues…",
+  "na": "…kinderen met concentratieproblemen…"
+ },
+ {
+  "bestand": "public/doorstroomtoets-dia.html",
+  "zoek": "Dia laat niet vragen overslaan en terugkomen.",
+  "vervang": "Bij Dia kun je geen vragen overslaan en later terugkomen.",
+  "reden": "Woordvolgorde loopt niet",
+  "ernst": 2,
+  "voor": "Dia laat niet vragen overslaan en terugkomen.",
+  "na": "Bij Dia kun je geen vragen overslaan en later terugkomen."
+ },
+ {
+  "bestand": "public/doorstroomtoets-dia.html",
+  "zoek": "Het advies van een erkend Doorstroomtoets-aanbieder",
+  "vervang": "Het advies van een erkende Doorstroomtoets-aanbieder",
+  "reden": "'de aanbieder' → 'erkende'",
+  "ernst": 1,
+  "voor": "Het advies van een erkend Doorstroomtoets-aanbieder…",
+  "na": "Het advies van een erkende Doorstroomtoets-aanbieder…"
+ },
+ {
+  "bestand": "public/doorstroomtoets-iep.html",
+  "zoek": "(1F, 1S, 2F) als Cito, IEP en de andere aanbieders.",
+  "vervang": "(1F, 1S, 2F) als Cito en de andere aanbieders.",
+  "reden": "Op de IEP-pagina wordt IEP met zichzelf vergeleken",
+  "ernst": 2,
+  "voor": "…dezelfde referentieniveaus (1F, 1S, 2F) als Cito, IEP en de andere aanbieders.",
+  "na": "…dezelfde referentieniveaus (1F, 1S, 2F) als Cito en de andere aanbieders."
+ },
+ {
+  "bestand": "public/doorstroomtoets-iep.html",
+  "zoek": "Op specifieke school-website staat soms onder Toetsen welke aanbieder wordt gebruikt — anders vraag de leerkracht.",
+  "vervang": "Op de website van de school staat soms onder Toetsen welke aanbieder wordt gebruikt — vraag het anders de leerkracht.",
+  "reden": "Lidwoord ontbreekt; zin loopt niet",
+  "ernst": 2,
+  "voor": "Op specifieke school-website staat soms… — anders vraag de leerkracht.",
+  "na": "Op de website van de school staat soms… — vraag het anders de leerkracht."
+ },
+ {
+  "bestand": "public/doorstroomtoets-route-8.html",
+  "zoek": "<h2>Hoe Route-8 ouder-impact verschilt</h2>",
+  "vervang": "<h2>Wat Route 8 anders maakt voor jou als ouder of verzorger</h2>",
+  "reden": "Kop loopt niet (telegramstijl) + 'ouder' alleen",
+  "ernst": 2,
+  "voor": "Hoe Route-8 ouder-impact verschilt",
+  "na": "Wat Route 8 anders maakt voor jou als ouder of verzorger"
+ },
+ {
+  "bestand": "public/doorstroomtoets-route-8.html",
+  "zoek": "niet skippen en later terugkomen. Een vraag overslaan = wordt fout gerekend.",
+  "vervang": "niet overslaan en later terugkomen. Een overgeslagen vraag wordt fout gerekend.",
+  "reden": "Engels 'skippen' + zin loopt niet",
+  "ernst": 2,
+  "voor": "…niet skippen en later terugkomen. Een vraag overslaan = wordt fout gerekend.",
+  "na": "…niet overslaan en later terugkomen. Een overgeslagen vraag wordt fout gerekend."
+ },
+ {
+  "bestand": "public/doorstroomtoets-route-8.html",
+  "zoek": "Maak dat van te voren duidelijk.",
+  "vervang": "Maak dat van tevoren duidelijk.",
+  "reden": "Spelling: 'tevoren' aaneen",
+  "ernst": 1,
+  "voor": "Maak dat van te voren duidelijk.",
+  "na": "Maak dat van tevoren duidelijk."
+ },
+ {
+  "bestand": "public/doorstroomtoets-route-8.html",
+  "zoek": "te grillig om hard te conclusie te trekken",
+  "vervang": "te grillig om een harde conclusie te trekken",
+  "reden": "Zin loopt niet",
+  "ernst": 2,
+  "voor": "…mogelijk te grillig om hard te conclusie te trekken.",
+  "na": "…mogelijk te grillig om een harde conclusie te trekken."
+ },
+ {
+  "bestand": "public/doorstroomtoets-route-8.html",
+  "zoek": "met 4-keuze MC-vragen waar",
+  "vervang": "met meerkeuzevragen met 4 opties waar",
+  "reden": "Onbekende afkorting 'MC'",
+  "ernst": 1,
+  "voor": "…oefen je dit met 4-keuze MC-vragen waar je kind altijd moet kiezen.",
+  "na": "…oefen je dit met meerkeuzevragen met 4 opties waar je kind altijd moet kiezen."
+ },
+ {
+  "bestand": "public/doorstroomtoets-oefenen-groep-7.html",
+  "zoek": "opent een <strong style=\"color:#fff\">uitlegPad op 3 niveaus</strong>",
+  "vervang": "opent een <strong style=\"color:#fff\">uitleg op 3 niveaus</strong>",
+  "reden": "Dev-jargon (code-naam 'uitlegPad') in zichtbare tekst",
+  "ernst": 2,
+  "voor": "…bij elke fout opent een uitlegPad op 3 niveaus…",
+  "na": "…bij elke fout opent een uitleg op 3 niveaus…"
+ },
+ {
+  "bestand": "public/doorstroomtoets-oefenen-groep-7.html",
+  "zoek": "Bij elke fout opent een uitlegPad op 3 niveaus, zodat",
+  "vervang": "Bij elke fout opent een uitleg op 3 niveaus, zodat",
+  "reden": "Dev-jargon (code-naam 'uitlegPad') in zichtbare tekst",
+  "ernst": 2,
+  "voor": "Bij elke fout opent een uitlegPad op 3 niveaus…",
+  "na": "Bij elke fout opent een uitleg op 3 niveaus…"
+ },
+ {
+  "bestand": "public/doorstroomtoets-oefenen-groep-7.html",
+  "zoek": "Op Leerkwartier opent bij elke fout een uitlegPad op 3 niveaus",
+  "vervang": "Op Leerkwartier opent bij elke fout een uitleg op 3 niveaus",
+  "reden": "Dev-jargon in FAQ-tekst (zoekresultaat)",
+  "ernst": 1,
+  "voor": "…opent bij elke fout een uitlegPad op 3 niveaus…",
+  "na": "…opent bij elke fout een uitleg op 3 niveaus…"
+ },
+ {
+  "bestand": "public/doorstroomtoets-oefenen-groep-7.html",
+  "zoek": "👪 Zo leg je 't uit (voor ouders)</a>",
+  "vervang": "👪 Zo leg je 't uit (voor thuis)</a>",
+  "reden": "Huisregel: nooit alléén 'ouder'",
+  "ernst": 2,
+  "voor": "👪 Zo leg je 't uit (voor ouders)",
+  "na": "👪 Zo leg je 't uit (voor thuis)"
+ },
+ {
+  "bestand": "public/doorstroomtoets-oefenen.html",
+  "zoek": "referentieniveau 1F (fundamenteel) en 2F (streefniveau).",
+  "vervang": "referentieniveau 1F (fundamenteel) en 1S/2F (streefniveau).",
+  "reden": "Onjuist: streefniveau is 1S (rekenen) / 2F (taal); gids noemt 1S als streefniveau",
+  "ernst": 2,
+  "voor": "…test referentieniveau 1F (fundamenteel) en 2F (streefniveau).",
+  "na": "…test referentieniveau 1F (fundamenteel) en 1S/2F (streefniveau)."
+ },
+ {
+  "bestand": "public/doorstroomtoets-oefenen.html",
+  "zoek": "een fiets van €240 met 25% korting kosten uitrekenen",
+  "vervang": "de prijs van een fiets van €240 met 25% korting uitrekenen",
+  "reden": "Zin loopt niet ('korting kosten uitrekenen')",
+  "ernst": 2,
+  "voor": "…een fiets van €240 met 25% korting kosten uitrekenen…",
+  "na": "…de prijs van een fiets van €240 met 25% korting uitrekenen…"
+ },
+ {
+  "bestand": "public/doorstroomtoets-oefenen.html",
+  "zoek": "Cito stelt deze vragen vaak in de vorm van redactiesommen",
+  "vervang": "De toets stelt deze vragen vaak in de vorm van redactiesommen",
+  "reden": "Zichtbare tekst: geen 'Cito' (geldt voor alle aanbieders)",
+  "ernst": 2,
+  "voor": "Cito stelt deze vragen vaak in de vorm van redactiesommen…",
+  "na": "De toets stelt deze vragen vaak in de vorm van redactiesommen…"
+ },
+ {
+  "bestand": "public/doorstroomtoets-oefenen.html",
+  "zoek": "— niet meer pushen.",
+  "vervang": "— niet meer opjagen.",
+  "reden": "Engels woord waar Nederlands kan",
+  "ernst": 1,
+  "voor": "Februari (week voor de toets) — niet meer pushen.",
+  "na": "Februari (week voor de toets) — niet meer opjagen."
+ },
+ {
+  "bestand": "public/doorstroomtoets-oefenen.html",
+  "zoek": "De Doorstroomtoets geeft een advies — niet een vonnis.",
+  "vervang": "De Doorstroomtoets geeft een advies — geen vonnis.",
+  "reden": "'niet een' → 'geen'",
+  "ernst": 1,
+  "voor": "…geeft een advies — niet een vonnis.",
+  "na": "…geeft een advies — geen vonnis."
+ },
+ {
+  "bestand": "public/doorstroomtoets-oefenen.html",
+  "zoek": "Een lagere score leidt niet automatisch tot een lager advies. Komt de uitslag tegen?",
+  "vervang": "Een lagere score leidt nooit tot een lager advies. Valt de uitslag tegen?",
+  "reden": "'niet automatisch' suggereert dat het kan (elders: 'nooit'); 'Komt de uitslag tegen' is geen Nederlands",
+  "ernst": 2,
+  "voor": "Een lagere score leidt niet automatisch tot een lager advies. Komt de uitslag tegen?",
+  "na": "Een lagere score leidt nooit tot een lager advies. Valt de uitslag tegen?"
+ },
+ {
+  "bestand": "public/doorstroomtoets-oefenen.html",
+  "zoek": "De toets is verplicht en wordt in februari afgenomen.",
+  "vervang": "De toets is verplicht en wordt eind januari/begin februari afgenomen.",
+  "reden": "Afname 2027: 25 januari t/m 12 februari",
+  "ernst": 2,
+  "voor": "De toets is verplicht en wordt in februari afgenomen.",
+  "na": "De toets is verplicht en wordt eind januari/begin februari afgenomen."
+ },
+ {
+  "bestand": "public/doorstroomtoets-oefenen.html",
+  "zoek": "kun je tot 4 kinderen koppelen aan één ouder-account.",
+  "vervang": "kun je tot 3 kinderen koppelen aan één account.",
+  "reden": "Onwaar: maximum is 3 kinderen (MAX_KINDEREN = 3; Familie 'tot 3 kinderen') + 'ouder' alleen",
+  "ernst": 3,
+  "voor": "Bij Leerkwartier kun je tot 4 kinderen koppelen aan één ouder-account.",
+  "na": "Bij Leerkwartier kun je tot 3 kinderen koppelen aan één account."
+ },
+ {
+  "bestand": "public/doorstroomtoets-oefenen.html",
+  "zoek": "kinderen verwerken stress beter met realistische framing.",
+  "vervang": "kinderen verwerken stress beter met een realistische kijk.",
+  "reden": "Engels woord waar Nederlands kan",
+  "ernst": 1,
+  "voor": "…beter met realistische framing.",
+  "na": "…beter met een realistische kijk."
+ },
+ {
+  "bestand": "public/doorstroomtoets-oefenen.html",
+  "zoek": "👪 Voor ouders: zo leg je de lastigste onderwerpen uit aan je kind →",
+  "vervang": "👪 Voor thuis: zo leg je de lastigste onderwerpen uit aan je kind →",
+  "reden": "Huisregel: nooit alléén 'ouder'",
+  "ernst": 2,
+  "voor": "👪 Voor ouders: zo leg je de lastigste onderwerpen uit aan je kind →",
+  "na": "👪 Voor thuis: zo leg je de lastigste onderwerpen uit aan je kind →"
+ },
+ {
+  "bestand": "public/doorstroomtoets-oefenen.html",
+  "zoek": "methodetoetsen (CITO-LVS)",
+  "vervang": "methodetoetsen (Cito-LVS)",
+  "reden": "Schrijfwijze 'Cito' consequent",
+  "ernst": 1,
+  "voor": "…methodetoetsen (CITO-LVS)…",
+  "na": "…methodetoetsen (Cito-LVS)…"
+ },
+ {
+  "bestand": "public/gratis.html",
+  "zoek": "Richtprijzen — definitief vóór de lancering in januari 2027. Bestaande gebruikers krijgen 30 dagen gratis proberen.",
+  "vervang": "Vanaf januari 2027 kun je Familie een week gratis proberen, zonder betaalgegevens.",
+  "reden": "Botst met huisregel/abonnement.html: prijs staat vast (€39), proefweek is 7 dagen zonder betaalgegevens",
+  "ernst": 3,
+  "voor": "Richtprijzen — definitief vóór de lancering in januari 2027. Bestaande gebruikers krijgen 30 dagen gratis proberen.",
+  "na": "Vanaf januari 2027 kun je Familie een week gratis proberen, zonder betaalgegevens."
+ },
+ {
+  "bestand": "public/gratis.html",
+  "zoek": "Er zijn drie lagen. De eerste is gratis, gegarandeerd t/m 2031. De andere twee zijn optioneel en voor wie meer wil.",
+  "vervang": "Er zijn drie lagen. Gratis en Voor scholen kosten niets, gegarandeerd t/m 2031. Familie is optioneel, voor wie thuis meer wil.",
+  "reden": "Onwaar: de laag 'Voor scholen' is ook gratis, niet 'optioneel voor wie meer wil'",
+  "ernst": 2,
+  "voor": "De eerste is gratis… De andere twee zijn optioneel en voor wie meer wil.",
+  "na": "Gratis en Voor scholen kosten niets, gegarandeerd t/m 2031. Familie is optioneel, voor wie thuis meer wil."
+ },
+ {
+  "bestand": "public/gratis.html",
+  "zoek": "<li class=\"ja\">Weekmail op maandag voor ouder of verzorger</li>",
+  "vervang": "<li class=\"ja\">Weekmail op vrijdag voor ouder of verzorger</li>",
+  "reden": "Onwaar: het weekrapport gaat op vrijdag",
+  "ernst": 3,
+  "voor": "Weekmail op maandag voor ouder of verzorger",
+  "na": "Weekmail op vrijdag voor ouder of verzorger"
+ },
+ {
+  "bestand": "public/gratis.html",
+  "zoek": "<strong>Weekmail op maandag</strong>",
+  "vervang": "<strong>Weekmail op vrijdag</strong>",
+  "reden": "Onwaar: het weekrapport gaat op vrijdag",
+  "ernst": 3,
+  "voor": "Weekmail op maandag: wat je kind deed…",
+  "na": "Weekmail op vrijdag: wat je kind deed…"
+ },
+ {
+  "bestand": "public/gratis-bijles.html",
+  "zoek": "Bedoeld als informatie voor ouders.",
+  "vervang": "Bedoeld als informatie voor ouders en verzorgers.",
+  "reden": "Huisregel: nooit alléén 'ouder'",
+  "ernst": 2,
+  "voor": "Bedoeld als informatie voor ouders.",
+  "na": "Bedoeld als informatie voor ouders en verzorgers."
+ },
+ {
+  "bestand": "public/klaar-voor-de-brugklas.html",
+  "zoek": "In 2026 is Leerkwartier helemaal gratis; daarna blijft de basis gratis.</p>",
+  "vervang": "In 2026 is Leerkwartier helemaal gratis; daarna blijft de basis gratis, gegarandeerd t/m 2031.</p>",
+  "reden": "Onbegrensde gratis-belofte; huisregel: 'gegarandeerd t/m 2031'",
+  "ernst": 2,
+  "voor": "…daarna blijft de basis gratis.",
+  "na": "…daarna blijft de basis gratis, gegarandeerd t/m 2031."
+ },
+ {
+  "bestand": "public/klassikaal-digibord.html",
+  "zoek": "omhoog, u ziet meteen hoeveel procent het goed had.",
+  "vervang": "omhoog, je ziet meteen hoeveel procent het goed had.",
+  "reden": "Huisregel: geen 'u'",
+  "ernst": 2,
+  "voor": "…kaartje omhoog, u ziet meteen hoeveel procent het goed had.",
+  "na": "…kaartje omhoog, je ziet meteen hoeveel procent het goed had."
+ },
+ {
+  "bestand": "public/klassikaal-digibord.html",
+  "zoek": "omhoog, u telt, en de app",
+  "vervang": "omhoog, jij telt, en de app",
+  "reden": "Huisregel: geen 'u'",
+  "ernst": 2,
+  "voor": "…kaartje omhoog, u telt, en de app laat meteen zien…",
+  "na": "…kaartje omhoog, jij telt, en de app laat meteen zien…"
+ },
+ {
+  "bestand": "public/klassikaal-digibord.html",
+  "zoek": ": u ziet het goede antwoord",
+  "vervang": ": je ziet het goede antwoord",
+  "reden": "Huisregel: geen 'u'",
+  "ernst": 2,
+  "voor": "Toon uitslag: u ziet het goede antwoord…",
+  "na": "Toon uitslag: je ziet het goede antwoord…"
+ },
+ {
+  "bestand": "public/klassikaal-digibord.html",
+  "zoek": "De uitslag kunt u printen.",
+  "vervang": "De uitslag kun je printen.",
+  "reden": "Huisregel: geen 'u'",
+  "ernst": 2,
+  "voor": "De uitslag kunt u printen.",
+  "na": "De uitslag kun je printen."
+ },
+ {
+  "bestand": "public/kwartiercheck.html",
+  "zoek": "wij sturen een scorekaart + 4-weekse oefenplan met directe leerpad-links.",
+  "vervang": "wij sturen een scorekaart + een oefenplan voor 4 weken met directe links.",
+  "reden": "Lidwoord ontbreekt / 'een … 4-weekse oefenplan' klopt niet + dev-jargon 'leerpad-links'",
+  "ernst": 2,
+  "voor": "…wij sturen een scorekaart + 4-weekse oefenplan met directe leerpad-links.",
+  "na": "…wij sturen een scorekaart + een oefenplan voor 4 weken met directe links."
+ },
+ {
+  "bestand": "public/kwartiercheck.html",
+  "zoek": "<li>Deeplinks naar gratis leerpaden op Leerkwartier</li>",
+  "vervang": "<li>Directe links naar gratis oefeningen op Leerkwartier</li>",
+  "reden": "Engels/vaktaal ('Deeplinks') + dev-jargon",
+  "ernst": 1,
+  "voor": "Deeplinks naar gratis leerpaden op Leerkwartier",
+  "na": "Directe links naar gratis oefeningen op Leerkwartier"
+ },
+ {
+  "bestand": "public/kwartiercheck.html",
+  "zoek": "De Kwartiercheck is een manier om ouders te laten",
+  "vervang": "De Kwartiercheck is een manier om ouders en verzorgers te laten",
+  "reden": "Huisregel: nooit alléén 'ouder'",
+  "ernst": 2,
+  "voor": "…een manier om ouders te laten zien wat hun kind echt nodig heeft…",
+  "na": "…een manier om ouders en verzorgers te laten zien wat hun kind echt nodig heeft…"
+ },
+ {
+  "bestand": "public/leergeld-flyer.html",
+  "zoek": "Oefenen zelf is altijd gratis, gegarandeerd tot en met 2031.",
+  "vervang": "Oefenen zelf blijft gratis, gegarandeerd tot en met 2031.",
+  "reden": "Huisregel: nooit 'altijd gratis'",
+  "ernst": 3,
+  "voor": "Oefenen zelf is altijd gratis, gegarandeerd tot en met 2031.",
+  "na": "Oefenen zelf blijft gratis, gegarandeerd tot en met 2031."
+ },
+ {
+  "bestand": "public/leergeld-flyer.html",
+  "zoek": "met de camera van uw telefoon",
+  "vervang": "met de camera van je telefoon",
+  "reden": "Huisregel: geen 'u'",
+  "ernst": 2,
+  "voor": "Scan de QR-code met de camera van uw telefoon",
+  "na": "Scan de QR-code met de camera van je telefoon"
+ },
+ {
+  "bestand": "public/leergeld-flyer.html",
+  "zoek": "Uw code <span",
+  "vervang": "Je code <span",
+  "reden": "Huisregel: geen 'u'",
+  "ernst": 2,
+  "voor": "Uw code … wordt automatisch geactiveerd",
+  "na": "Je code … wordt automatisch geactiveerd"
+ },
+ {
+  "bestand": "public/leergeld-flyer.html",
+  "zoek": "daarmee krijgt uw gezin ook",
+  "vervang": "daarmee krijgt je gezin ook",
+  "reden": "Huisregel: geen 'u'",
+  "ernst": 2,
+  "voor": "…daarmee krijgt uw gezin ook het Familie-pakket…",
+  "na": "…daarmee krijgt je gezin ook het Familie-pakket…"
+ },
+ {
+  "bestand": "public/leergeld-flyer.html",
+  "zoek": "Zo bereikt u onbeperkt gezinnen",
+  "vervang": "Zo bereik je onbeperkt gezinnen",
+  "reden": "Huisregel: geen 'u'",
+  "ernst": 2,
+  "voor": "Zo bereikt u onbeperkt gezinnen…",
+  "na": "Zo bereik je onbeperkt gezinnen…"
+ },
+ {
+  "bestand": "public/leergeld-flyer.html",
+  "zoek": "Vragen van uw stichting beantwoord ik persoonlijk.",
+  "vervang": "Vragen van je stichting beantwoord ik persoonlijk.",
+  "reden": "Huisregel: geen 'u'",
+  "ernst": 2,
+  "voor": "Vragen van uw stichting beantwoord ik persoonlijk.",
+  "na": "Vragen van je stichting beantwoord ik persoonlijk."
+ },
+ {
+  "bestand": "public/leermaatje.html",
+  "zoek": "Zo weet je als ouder zeker",
+  "vervang": "Zo weet je als ouder of verzorger zeker",
+  "reden": "Huisregel: nooit alléén 'ouder'",
+  "ernst": 2,
+  "voor": "Zo weet je als ouder zeker dat een goed resultaat écht van je kind is.",
+  "na": "Zo weet je als ouder of verzorger zeker dat een goed resultaat écht van je kind is."
+ },
+ {
+  "bestand": "public/leesladder.html",
+  "zoek": "(basis → simpeler → nog simpeler), tot je het echt begrijpt.",
+  "vervang": "(basis → simpeler → nog simpeler), tot je kind het echt begrijpt.",
+  "reden": "Verwijzing klopt niet: zin gaat over 'je kind', niet over de lezer (zelfde soort fout als de tester vond)",
+  "ernst": 2,
+  "voor": "Na elke fout krijgt je kind uitleg op 3 niveaus …, tot je het echt begrijpt.",
+  "na": "Na elke fout krijgt je kind uitleg op 3 niveaus …, tot je kind het echt begrijpt."
+ },
+ {
+  "bestand": "public/leesladder.html",
+  "zoek": "Zo kun je als ouder een fout",
+  "vervang": "Zo kun je als ouder of verzorger een fout",
+  "reden": "Huisregel: nooit alléén 'ouder'",
+  "ernst": 2,
+  "voor": "Zo kun je als ouder een fout écht nabespreken…",
+  "na": "Zo kun je als ouder of verzorger een fout écht nabespreken…"
+ },
+ {
+  "bestand": "public/leren-15-minuten.html",
+  "zoek": "Over die maanden = 60+ uur effectieve oefentijd,",
+  "vervang": "Over die maanden = ruim 20 uur effectieve oefentijd,",
+  "reden": "Rekenfout: 3 maanden × 15 min/dag ≈ 22 uur (pagina zegt zelf elders ~22 uur)",
+  "ernst": 3,
+  "voor": "Over die maanden = 60+ uur effectieve oefentijd…",
+  "na": "Over die maanden = ruim 20 uur effectieve oefentijd…"
+ },
+ {
+  "bestand": "public/leren-15-minuten.html",
+  "zoek": "<strong style=\"color:#fff\">Cito-ouders</strong> met kinderen",
+  "vervang": "<strong style=\"color:#fff\">Ouders en verzorgers</strong> met kinderen",
+  "reden": "Zichtbare tekst: geen 'Cito'; nooit alléén 'ouder'",
+  "ernst": 2,
+  "voor": "Cito-ouders met kinderen in groep 6-8…",
+  "na": "Ouders en verzorgers met kinderen in groep 6-8…"
+ },
+ {
+  "bestand": "public/leren-15-minuten.html",
+  "zoek": "<p>Bij Cito-stof voor de Doorstroomtoets is",
+  "vervang": "<p>Bij de stof voor de Doorstroomtoets is",
+  "reden": "Zichtbare tekst: geen 'Cito'",
+  "ernst": 2,
+  "voor": "Bij Cito-stof voor de Doorstroomtoets is het verschil dramatisch…",
+  "na": "Bij de stof voor de Doorstroomtoets is het verschil dramatisch…"
+ },
+ {
+  "bestand": "public/leren-15-minuten.html",
+  "zoek": "— een Cito-stijl oefenvraag of authentieke examenvraag.",
+  "vervang": "— een oefenvraag in Doorstroomtoets-stijl of een echte examenvraag.",
+  "reden": "Zichtbare tekst: geen 'Cito'",
+  "ernst": 2,
+  "voor": "Vraag — een Cito-stijl oefenvraag of authentieke examenvraag.",
+  "na": "Vraag — een oefenvraag in Doorstroomtoets-stijl of een echte examenvraag."
+ },
+ {
+  "bestand": "public/leren-15-minuten.html",
+  "zoek": "— bij een fout opent een uitlegPad: 'basis'",
+  "vervang": "— bij een fout opent een uitleg: 'basis'",
+  "reden": "Dev-jargon (code-naam 'uitlegPad') in zichtbare tekst",
+  "ernst": 2,
+  "voor": "…bij een fout opent een uitlegPad: 'basis', …",
+  "na": "…bij een fout opent een uitleg: 'basis', …"
+ },
+ {
+  "bestand": "public/leren-15-minuten.html",
+  "zoek": "vraag → bij fout een uitlegPad op 3 niveaus →",
+  "vervang": "vraag → bij fout een uitleg op 3 niveaus →",
+  "reden": "Dev-jargon in FAQ-tekst (zoekresultaat)",
+  "ernst": 1,
+  "voor": "…bij fout een uitlegPad op 3 niveaus…",
+  "na": "…bij fout een uitleg op 3 niveaus…"
+ },
+ {
+  "bestand": "public/leren-15-minuten.html",
+  "zoek": "geen gamification-stressors,",
+  "vervang": "geen stress van punten en levels,",
+  "reden": "Engels woord waar Nederlands kan",
+  "ernst": 1,
+  "voor": "…geen gamification-stressors, geen reclame.",
+  "na": "…geen stress van punten en levels, geen reclame."
+ },
+ {
+  "bestand": "public/leren-15-minuten.html",
+  "zoek": "15 min = sweet spot.",
+  "vervang": "15 min = precies goed.",
+  "reden": "Engels woord waar Nederlands kan",
+  "ernst": 1,
+  "voor": "15 min = sweet spot.",
+  "na": "15 min = precies goed."
+ },
+ {
+  "bestand": "public/leren-15-minuten.html",
+  "zoek": "stoppen wanneer focus zakt, niet pushen.",
+  "vervang": "stoppen wanneer focus zakt, niet doordrukken.",
+  "reden": "Engels woord waar Nederlands kan",
+  "ernst": 1,
+  "voor": "…niet pushen.",
+  "na": "…niet doordrukken."
+ },
+ {
+  "bestand": "public/leren-15-minuten.html",
+  "zoek": "niveaus · tijdslijn · FAQ",
+  "vervang": "niveaus · tijdlijn · FAQ",
+  "reden": "Spelling: 'tijdlijn'",
+  "ernst": 1,
+  "voor": "… · tijdslijn · FAQ",
+  "na": "… · tijdlijn · FAQ"
+ },
+ {
+  "bestand": "public/leren-15-minuten.html",
+  "zoek": "~50% van Cito-score",
+  "vervang": "~50% van de toetsscore",
+  "reden": "Zichtbare tekst: geen 'Cito'",
+  "ernst": 2,
+  "voor": "~50% van Cito-score · 4 tekstsoorten…",
+  "na": "~50% van de toetsscore · 4 tekstsoorten…"
+ },
+ {
+  "bestand": "public/maak-icoon.html",
+  "zoek": "<title>Icoon generator — Studiebol</title>",
+  "vervang": "<title>Icoon generator — Leerkwartier</title>",
+  "reden": "Oude merknaam (Studiebol)",
+  "ernst": 1,
+  "voor": "Icoon generator — Studiebol",
+  "na": "Icoon generator — Leerkwartier"
+ },
+ {
+  "bestand": "public/maak-icoon.html",
+  "zoek": "Studiebol icoon generator</h2>",
+  "vervang": "Leerkwartier icoon generator</h2>",
+  "reden": "Oude merknaam (Studiebol)",
+  "ernst": 1,
+  "voor": "Studiebol icoon generator",
+  "na": "Leerkwartier icoon generator"
+ }
+]

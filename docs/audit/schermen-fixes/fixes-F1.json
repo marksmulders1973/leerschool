@@ -1,0 +1,101 @@
+[
+ {
+  "bestand": "src/components/ParkGalerij.jsx",
+  "zoek": "Ga naar je eigen park → <b>📤 Deel</b> →",
+  "vervang": "Ga naar je eigen park → <b>☰</b> → <b>📤 Delen & samen bouwen</b> →",
+  "reden": "Knop '📤 Deel' bestaat niet; in het ☰-menu heet de tegel '📤 Delen & samen bouwen'",
+  "ernst": 3,
+  "voor": "Wil je jouw park hier ook? Ga naar je eigen park → 📤 Deel → \"Zet mijn park in de galerij\".",
+  "na": "Wil je jouw park hier ook? Ga naar je eigen park → ☰ → 📤 Delen & samen bouwen → \"Zet mijn park in de galerij\"."
+ },
+ {
+  "bestand": "src/components/CharleyHulp.jsx",
+  "zoek": "morgen kan ik weer meedenken! Kijk anders bij de vragen hierboven, of op leerkwartier.app/over.",
+  "vervang": "morgen kan ik weer meedenken! Kijk anders bij de vragen hierboven, of op leerkwartier.app/over.html.",
+  "reden": "leerkwartier.app/over bestaat niet als route (valt terug op het beginscherm); de pagina is /over.html",
+  "ernst": 2,
+  "voor": "… Kijk anders bij de vragen hierboven, of op leerkwartier.app/over. 🐾",
+  "na": "… Kijk anders bij de vragen hierboven, of op leerkwartier.app/over.html. 🐾"
+ },
+ {
+  "bestand": "src/components/CharleyHulp.jsx",
+  "zoek": "kijk eens bij de vragen hierboven, of op leerkwartier.app/over.",
+  "vervang": "kijk eens bij de vragen hierboven, of op leerkwartier.app/over.html.",
+  "reden": "leerkwartier.app/over bestaat niet als route; de pagina is /over.html",
+  "ernst": 2,
+  "voor": "Hm, dat weet ik zo niet — kijk eens bij de vragen hierboven, of op leerkwartier.app/over. 🐾",
+  "na": "Hm, dat weet ik zo niet — kijk eens bij de vragen hierboven, of op leerkwartier.app/over.html. 🐾"
+ },
+ {
+  "bestand": "src/features/zoo/game/ImposterGame.jsx",
+  "zoek": "kijkt mee vanuit de zeppelin. Wie uitgestemd wordt ook.",
+  "vervang": "kijkt mee vanuit de zeppelin. Wie uitgestemd wordt, ook.",
+  "reden": "Komma ontbreekt; zin leest nu als 'wordt ook uitgestemd'",
+  "ernst": 1,
+  "voor": "… die is af en kijkt mee vanuit de zeppelin. Wie uitgestemd wordt ook.",
+  "na": "… die is af en kijkt mee vanuit de zeppelin. Wie uitgestemd wordt, ook."
+ },
+ {
+  "bestand": "src/features/zoo/game/ImposterGame.jsx",
+  "zoek": "stond dichtbij toen iemand af ging",
+  "vervang": "stond dichtbij toen iemand afging",
+  "reden": "Spelling: 'afging' is één woord",
+  "ernst": 1,
+  "voor": "· 👀 stond dichtbij toen iemand af ging",
+  "na": "· 👀 stond dichtbij toen iemand afging"
+ },
+ {
+  "bestand": "src/features/zoo/game/ImposterGame.jsx",
+  "zoek": "`🏃 Ga dichter naar ${tikInfo.doel.naam}`",
+  "vervang": "`🏃 Ga dichter bij ${tikInfo.doel.naam} staan`",
+  "reden": "'dichter naar iemand' loopt niet; 'dichter bij … staan'",
+  "ernst": 1,
+  "voor": "🏃 Ga dichter naar Mila",
+  "na": "🏃 Ga dichter bij Mila staan"
+ },
+ {
+  "bestand": "src/features/zoo/buddies.js",
+  "zoek": "Een fenix staat altijd weer op.",
+  "vervang": "Een feniks staat altijd weer op.",
+  "reden": "Spelling (Groene Boekje): feniks",
+  "ernst": 1,
+  "voor": "Fout gemaakt? Een fenix staat altijd weer op. Wij ook!",
+  "na": "Fout gemaakt? Een feniks staat altijd weer op. Wij ook!"
+ },
+ {
+  "bestand": "src/features/zoo/unlocks.js",
+  "zoek": "alleen vrij spelen door te leren.",
+  "vervang": "alleen vrijspelen door te leren.",
+  "reden": "Spelling: werkwoord 'vrijspelen' is één woord (vgl. 'vrijspeel-dino's' elders)",
+  "ernst": 1,
+  "voor": "Deze dino kun je niet kopen, alleen vrij spelen door te leren.",
+  "na": "Deze dino kun je niet kopen, alleen vrijspelen door te leren."
+ },
+ {
+  "bestand": "src/features/zoo/economieLeermomenten.js",
+  "zoek": "vóórdat er iets af gaat.",
+  "vervang": "vóórdat er iets afgaat.",
+  "reden": "Spelling: 'afgaat' is één woord",
+  "ernst": 1,
+  "voor": "Dit is je hele loon vóórdat er iets af gaat.",
+  "na": "Dit is je hele loon vóórdat er iets afgaat."
+ },
+ {
+  "bestand": "src/features/zoo/leerpadLint.js",
+  "zoek": "start: \"landmarks · tot parabolen\"",
+  "vervang": "start: \"bouwwerken · tot parabolen\"",
+  "reden": "Engels woord in kindertekst; Nederlands kan gewoon",
+  "ernst": 1,
+  "voor": "Brugklas & examens — landmarks · tot parabolen",
+  "na": "Brugklas & examens — bouwwerken · tot parabolen"
+ },
+ {
+  "bestand": "src/components/ParkBezoek.jsx",
+  "zoek": "en kijk rustig rond — sleep om te draaien",
+  "vervang": "en kijk rustig om je heen — sleep om te draaien",
+  "reden": "'rond' twee keer in één zin ('Loop rond … kijk rustig rond')",
+  "ernst": 1,
+  "voor": "Loop rond met de joystick (of de pijltjes) en kijk rustig rond — sleep om te draaien, knijp om te zoomen.",
+  "na": "Loop rond met de joystick (of de pijltjes) en kijk rustig om je heen — sleep om te draaien, knijp om te zoomen."
+ }
+]

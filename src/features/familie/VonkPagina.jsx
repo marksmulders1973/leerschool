@@ -24,7 +24,7 @@ export default function VonkPagina({ setPage }) {
           <div style={{ fontSize: 14.5, fontWeight: 800, color: "#69f0ae", marginBottom: 6 }}>💶 Wat het waard is</div>
           <p style={{ fontSize: 14, lineHeight: 1.6, color: "var(--color-text-muted, #cbd3e6)", margin: 0 }}>
             Een echte bijles kost al gauw <b>€37 per uur</b>. In <b>Leerkwartier Familie</b> zit Vonk straks onbeperkt —
-            voor het héle gezin, voor ± <b>€39 per jaar</b>. <b style={{ color: "#fff" }}>Nu gratis om te proberen</b>
+            voor het héle gezin, voor <b>€39 per 12 maanden</b> (één keer betalen). <b style={{ color: "#fff" }}>Nu gratis om te proberen</b>
             (tot 2027).
           </p>
         </div>

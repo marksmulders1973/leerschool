@@ -188,7 +188,7 @@ export default class ErrorBoundary extends Component {
             </h2>
             <p style={{ fontSize: 14, lineHeight: 1.5, color: "#bcd", margin: "0 0 16px" }}>
               De app is een fout tegengekomen en kan niet verder. Probeer opnieuw te laden;
-              als het blijft, deel de boodschap hieronder met de maker.
+              als het blijft, mail de boodschap hieronder naar hallo@leerkwartier.app.
             </p>
             <pre
               style={{

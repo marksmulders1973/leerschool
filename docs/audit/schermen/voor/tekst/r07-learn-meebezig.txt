@@ -1,0 +1,15 @@
+# Route /komt-eraan (vers apparaat)
+# http://localhost:4173/komt-eraan
+Spring naar hoofdinhoud
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244
+🏠
+Home
+📚
+Leren
+Toets
+🎮
+Spelletje
+Mijn pagina

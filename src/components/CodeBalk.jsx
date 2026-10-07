@@ -78,10 +78,10 @@ function EerBewaar({ code, en, donker }) {
   const meet = (kanaal) => { setKlaar(kanaal); try { track("partner_eer_bewaar", { code, kanaal }); } catch { /* */ } };
   return (
     <div style={{ marginTop: 22 }}>
-      <div style={{ font: "800 16px system-ui", color: donker ? "#fff" : "#14283c" }}>{en ? "Later, together with your child?" : "Straks samen met uw kind?"}</div>
+      <div style={{ font: "800 16px system-ui", color: donker ? "#fff" : "#14283c" }}>{en ? "Later, together with your child?" : "Straks samen met je kind?"}</div>
       <div style={{ font: "600 13.5px/1.5 system-ui", color: donker ? "#b9c6d4" : "#5a6775", margin: "4px 0 10px" }}>
         {en ? "Send yourself the link. The code is in it, so the Family package starts as soon as your child practises."
-            : "Stuur uzelf de link. De code zit erin, dus het Familie-pakket start zodra uw kind gaat oefenen."}
+            : "Stuur jezelf de link. De code zit erin, dus het Familie-pakket start zodra je kind gaat oefenen."}
       </div>
       <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
         <a href={"https://wa.me/?text=" + encodeURIComponent(tekst)} target="_blank" rel="noopener" onClick={() => meet("whatsapp")} style={knop}>📲 WhatsApp</a>
@@ -168,22 +168,22 @@ function EerScherm({ code, onVerder }) {
         <p style={{ font: "600 15px/1.6 system-ui", color: tekstKleur, margin: 0 }}>
           {isEN
             ? <>How wonderful that you found us through <strong style={{ color: "#0a7d43" }}>the Queen Wilhelmina Library</strong>.</>
-            : <>Wat fijn dat u ons heeft gevonden via <strong style={{ color: donker ? "#fff" : "#0a7d43" }}>{naam || "een van onze partners"}</strong>.</>}
+            : <>Wat fijn dat je ons hebt gevonden via <strong style={{ color: donker ? "#fff" : "#0a7d43" }}>{naam || "een van onze partners"}</strong>.</>}
         </p>
         <div style={{ background: donker ? "rgba(122,181,45,0.16)" : "#f2f8ec", border: "2px solid " + (donker ? "rgba(122,181,45,0.55)" : "#bcd99a"), borderRadius: 14, padding: "16px 18px", margin: "18px 0 0" }}>
           <div style={{ font: "600 14.5px/1.55 system-ui", color: donker ? "#eaf3dc" : "#3a4658", margin: 0 }}>
             {isOP
-              ? <>Onze afspraak met de gemeente Den Haag: heeft uw gezin een Ooievaarspas? Dan is het {famKnop("Familie-pakket")} van Leerkwartier <strong style={{ color: donker ? "#b8e07a" : "#3f7015" }}>blijvend gratis</strong>.</>
+              ? <>Onze afspraak met de gemeente Den Haag: heeft jouw gezin een Ooievaarspas? Dan is het {famKnop("Familie-pakket")} van Leerkwartier <strong style={{ color: donker ? "#b8e07a" : "#3f7015" }}>blijvend gratis</strong>.</>
               : isEN
                 ? <>Thanks to them, the {famKnop("Family package")} is <strong style={{ color: "#3f7015" }}>free for your family {partnerFamilieTotLabel(partnerFamilieTot(), true)}</strong>.</>
                 : blijvend
-                  ? <>Dankzij hen is het {famKnop("Familie-pakket")} voor uw gezin <strong style={{ color: "#3f7015" }}>blijvend gratis</strong>.</>
-                  : <>Dankzij hen is het {famKnop("Familie-pakket")} voor uw gezin <strong style={{ color: "#3f7015" }}>gratis, {partnerFamilieTotLabel(partnerFamilieTot())}</strong>.</>}
+                  ? <>Dankzij hen is het {famKnop("Familie-pakket")} voor jouw gezin <strong style={{ color: "#3f7015" }}>blijvend gratis</strong>.</>
+                  : <>Dankzij hen is het {famKnop("Familie-pakket")} voor jouw gezin <strong style={{ color: "#3f7015" }}>gratis, {partnerFamilieTotLabel(partnerFamilieTot())}</strong>.</>}
           </div>
           <FamilieLijst open={famOpen} en={isEN} donker={donker} voorNavigeren={() => { try { sessionStorage.setItem(KEY_EER, "1"); } catch { /* */ } }} />
         </div>
         {/* Weg 1: kind erbij → meteen één vraag (i.p.v. eerst een knop). */}
-        <div style={{ font: "800 16px system-ui", color: donker ? "#fff" : "#14283c", marginTop: 24 }}>{isEN ? "Is your child with you? Try one question:" : "Is uw kind erbij? Probeer meteen één vraag:"}</div>
+        <div style={{ font: "800 16px system-ui", color: donker ? "#fff" : "#14283c", marginTop: 24 }}>{isEN ? "Is your child with you? Try one question:" : "Is je kind erbij? Probeer meteen één vraag:"}</div>
         <EerVraag code={code} en={isEN} donker={donker} onVerder={onVerder} />
         {/* Weg 2: ouder zonder kind → link met code bewaren. */}
         <EerBewaar code={code} en={isEN} donker={donker} />
@@ -422,7 +422,7 @@ export default function CodeBalk({ rustig = false }) {
       ) : (
         <div>
           <div style={{ font: "800 13.5px/1.4 system-ui", color: "#7a5b00", marginBottom: 4 }}>
-            🎟️ Vul je code in — van je gemeente, de voedselbank of de bibliotheek, óf de koppelcode van je vader, moeder, juf of meester:
+            🎟️ Vul je code in — van je gemeente, de voedselbank of de bibliotheek, óf de koppelcode van thuis of van je juf of meester:
           </div>
           {/* Geruststelling (28 aug 2026): mensen openden de balk zonder code
               en dachten dat ze er één nodig hadden om te mogen oefenen. */}
@@ -457,7 +457,7 @@ export default function CodeBalk({ rustig = false }) {
           ) : (
             <div style={{ marginTop: 8, background: "rgba(124,58,237,0.08)", border: "1.5px solid rgba(124,58,237,0.4)", borderRadius: 10, padding: "10px 12px" }}>
               <div style={{ font: "700 12.5px/1.45 system-ui", color: "#5b21b6" }}>
-                🔐 Dit is een <strong>koppelcode</strong> van thuis of school — die hoort bij jóuw naam. Tik bovenaan op "Ik ben leerling" en kies je naam; daarna koppelen we je meteen. Je hoeft de code niet nog een keer in te typen, we hebben hem onthouden.
+                🔐 Dit is een <strong>koppelcode</strong> van thuis of school — die hoort bij jóuw naam. Tik bovenaan op "Leerling" en kies je naam; daarna koppelen we je meteen. Je hoeft de code niet nog een keer in te typen, we hebben hem onthouden.
               </div>
             </div>
           ))}

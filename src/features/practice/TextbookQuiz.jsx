@@ -541,7 +541,7 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                           >
                             <span style={{ fontSize: 15 }}>🔍</span>
                             <span>Per onderwerp</span>
-                            <span style={{ fontSize: 9, fontWeight: 500, opacity: 0.85 }}>zoek topic</span>
+                            <span style={{ fontSize: 9, fontWeight: 500, opacity: 0.85 }}>zoek onderwerp</span>
                           </button>
                           <button
                             onClick={onOefenen}

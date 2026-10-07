@@ -274,13 +274,13 @@ function maakRapportMail(parentEmail, kindSecties, niveauSectie, vriendCode, too
   const deelHtml = deelLink
     ? `<div style="background:rgba(0,200,83,0.07);border:1px solid rgba(0,200,83,0.35);border-radius:12px;padding:14px 16px;margin:0 0 22px;">
         <div style="font-size:14px;font-weight:800;color:#69f0ae;margin-bottom:6px;">🤝 Geef een ander gezin Familie gratis — en krijg het zelf ook</div>
-        <p style="font-size:13px;line-height:1.6;color:#cdd6e5;margin:0 0 10px;">Deel jouw persoonlijke link met een ouder uit de klas. Zodra iemand via jouw link écht oefent, krijgen jullie <strong style="color:#fff;">allebei</strong> <a href="${SITE}/abonnement.html#familie" style="color:#ffd54f;">Leerkwartier Familie</a> gratis tot augustus 2027 (straks ± € 39 per jaar).</p>
+        <p style="font-size:13px;line-height:1.6;color:#cdd6e5;margin:0 0 10px;">Deel jouw persoonlijke link met een ander gezin uit de klas. Zodra iemand via jouw link écht oefent, krijgen jullie <strong style="color:#fff;">allebei</strong> <a href="${SITE}/abonnement.html#familie" style="color:#ffd54f;">Leerkwartier Familie</a> gratis tot augustus 2027 (straks € 39 voor 12 maanden).</p>
         <a href="${deelLink}&utm_source=email&utm_campaign=ouder-rapport-deel" style="display:block;text-align:center;background:rgba(0,200,83,0.10);border:1.5px solid #00C853;color:#69f0ae;text-decoration:none;font-weight:800;font-size:13.5px;padding:10px;border-radius:10px;word-break:break-all;">${esc(deelLink)}</a>
       </div>`
-    : `<p style="font-size:12.5px;line-height:1.6;color:#9fb0c6;margin:0 0 14px;">💚 Ken je een ouder uit de klas die dit ook zou willen? Leerkwartier is gratis — stuur <a href="https://leerkwartier.app/?utm_source=ouder_rapport" style="color:#69f0ae;">leerkwartier.app</a> gerust door.</p>`;
+    : `<p style="font-size:12.5px;line-height:1.6;color:#9fb0c6;margin:0 0 14px;">💚 Ken je een ander gezin uit de klas dat dit ook zou willen? Oefenen bij Leerkwartier is gratis — stuur <a href="https://leerkwartier.app/?utm_source=ouder_rapport" style="color:#69f0ae;">leerkwartier.app</a> gerust door.</p>`;
   const deelText = deelLink
     ? `Geef een ander gezin Familie gratis — en krijg het zelf ook. Deel jouw persoonlijke link; zodra iemand via jouw link oefent, krijgen jullie allebei Familie gratis tot augustus 2027: ${deelLink}`
-    : `Ken je een ouder uit de klas die dit ook zou willen? Leerkwartier is gratis: https://leerkwartier.app`;
+    : `Ken je een ander gezin uit de klas dat dit ook zou willen? Oefenen bij Leerkwartier is gratis: https://leerkwartier.app`;
   // ✉️ Reageer-knop (Mark 8 sep 2026): wie liever iets anders of persoonlijker
   // wil, laat het per mail weten — antwoorden komen op hallo@ binnen (reply_to)
   // en Mark leest ze zelf. Zo wordt het rapport een gesprek, geen eenrichtingsmail.
@@ -308,7 +308,7 @@ function maakRapportMail(parentEmail, kindSecties, niveauSectie, vriendCode, too
     ${deelHtml}
     ${toonFamilie ? familieRegelHtml("ouder-rapport") : ""}
     ${mailTaglineHtml()}
-    <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Je krijgt dit rapport omdat je op leerkwartier.app een kind aan je account koppelde. Liever geen rapport meer? Zet in het <a href="${dashboard}" style="color:#9fb0c6;">ouder-dashboard</a> de weekmail per kind uit (📩-knopje bij je kind) — de koppeling en je inzicht blijven gewoon bestaan.</p>
+    <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Je krijgt dit rapport omdat je op leerkwartier.app een kind aan je account koppelde. Liever geen rapport meer? Zet in het <a href="${dashboard}" style="color:#9fb0c6;">ouder-dashboard</a> de weekmail per kind uit (knopje 'weekrapport aan' bij je kind) — de koppeling en je inzicht blijven gewoon bestaan.</p>
   </div></body></html>`;
   const text = `Leerkwartier — wekelijks ouder-rapport\n\n${kindSecties.map((s) => s.text).join("\n")}\nAlles bekijken: ${dashboard}\n\nLiever iets anders of persoonlijker? Beantwoord deze mail (hallo@leerkwartier.app), Mark leest elk bericht zelf.\n\nWat vind jij van Leerkwartier? Vertel het in één zin door te antwoorden; met jouw toestemming zetten we hem (alleen met je voornaam) op de site.\n\n${deelText}${toonFamilie ? `\n\n${familieRegelText("ouder-rapport")}` : ""}\n\nLiever geen rapport meer? Zet de weekmail per kind uit in het ouder-dashboard (koppeling blijft bestaan).`;
   return { onderwerp, html, text };

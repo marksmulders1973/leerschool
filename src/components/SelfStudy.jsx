@@ -191,7 +191,7 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
         {showHoeWerkt && (
           <div style={{ marginBottom: 12, padding: "12px 14px", background: "#111e2e", borderRadius: 12, border: "1px solid #2a3f5f", fontSize: 12, color: "#99bbcc", lineHeight: 1.7 }}>
             De AI maakt <strong style={{ color: "var(--color-text-strong)" }}>vragen op maat</strong> over elk onderwerp dat je typt — van zout en fotosynthese tot bedrijfseconomie of JavaScript.<br />
-            Handig voor basisschool en VO, maar ook voor <strong style={{ color: "var(--color-brand-primary)" }}>MBO- en HBO-studenten</strong> die willen oefenen voor een tentamen of toets.
+            Handig voor basisschool en middelbare school, maar ook voor <strong style={{ color: "var(--color-brand-primary)" }}>MBO- en HBO-studenten</strong> die willen oefenen voor een tentamen of toets.
           </div>
         )}
 
@@ -201,7 +201,7 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
             <div style={{ fontSize: 11, color: "#7aaa88", marginBottom: 10, lineHeight: 1.5 }}>
               💡 <strong>Tip:</strong> omschrijf het onderwerp zo duidelijk mogelijk. Bijv. <em>"De Franse Revolutie"</em> of <em>"fotosynthese bij planten"</em> of <em>"mijn fabriek: wij verwerken dierlijk vet tot veevoer"</em>. Hoe meer context, hoe beter de vragen!
             </div>
-            <div style={{ color: "#556677", fontSize: 11, marginBottom: 8 }}>Basisschool &amp; VO</div>
+            <div style={{ color: "#556677", fontSize: 11, marginBottom: 8 }}>Basisschool &amp; middelbare school</div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 10 }}>
               {/* B3.1 (7-bots-review): gevoelige thema's (seksuele voorlichting,
                   roken & drugs, puberteit) alleen tonen vanaf groep 7 of VO —

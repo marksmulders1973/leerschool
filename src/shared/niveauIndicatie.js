@@ -111,5 +111,5 @@ export function maakOuderMailSectie(resultaten) {
     <p style="line-height:1.6">Op basis van het oefenwerk tot nu toe wijst de
     richting naar: <strong>${band}</strong>. Dit is nadrukkelijk een indicatie
     onder voorbehoud — bedoeld om te zien waar extra oefenen het meest helpt,
-    niet als oordeel over uw kind.</p>${uitlegBlok}`;
+    niet als oordeel over je kind.</p>${uitlegBlok}`;
 }

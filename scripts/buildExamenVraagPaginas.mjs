@@ -219,7 +219,7 @@ function renderHtml({ pathMeta, check, vraagNr, vraagOnderwerp, totalVragen }) {
 </nav>
 
 <header>
-  <p style="opacity:.7;font-size:.9em;margin-bottom:.5em">${escapeHtml(vakLabel)} eindexamen ${escapeHtml(niveauLabel)} ${jaar} tijdvak ${tijdvak} — vraag ${vraagNr} van ${totalVragen}</p>
+  <p style="opacity:.7;font-size:.9em;margin-bottom:.5em">${escapeHtml(vakLabel)} eindexamen ${escapeHtml(niveauLabel)} ${jaar} tijdvak ${tijdvak} — vraag ${vraagNr}</p>
   <h1>${escapeHtml(check.q)}</h1>
 </header>
 
@@ -250,7 +250,7 @@ ${ebUrl ? `<section class="lk-bron">
 <a class="lk-cta" href="${oefenenUrl}">Oefen deze vraag interactief in Leerkwartier →</a>
 
 <footer>
-  Leerkwartier is een gratis examen-oefenplatform voor VMBO, HAVO, VWO en de Doorstroomtoets.
+  Leerkwartier is een gratis oefen-app voor de VMBO-examens en de Doorstroomtoets.
   <a href="/">Naar de homepage</a> · <a href="/over.html">Over Leerkwartier</a> · KvK 42176244
 </footer>
 </body>

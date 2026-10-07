@@ -1,0 +1,327 @@
+[
+ {
+  "id": "k-groep4-01",
+  "titel": "groep4: naam + niveau ingevuld",
+  "url": "/",
+  "tekens": 324,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "k-groep4-02",
+  "titel": "groep4: eerste scherm na 'Doorgaan als gast'",
+  "url": "/start",
+  "tekens": 289,
+  "fouten": []
+ },
+ {
+  "id": "k-groep4-03-fout1",
+  "titel": "Expres fout antwoord (6) — feedback lezen",
+  "url": "/start",
+  "tekens": 390,
+  "fouten": []
+ },
+ {
+  "id": "k-groep4-03-fout2",
+  "titel": "Expres fout antwoord (Bekijk de leerpaden) — feedback lezen",
+  "url": "/leren",
+  "tekens": 1127,
+  "fouten": []
+ },
+ {
+  "id": "k-groep4-04",
+  "titel": "groep4: na het start-kwartier",
+  "url": "/leren",
+  "tekens": 1127,
+  "fouten": []
+ },
+ {
+  "id": "k-groep4-10",
+  "titel": "groep4: /mijn na start",
+  "url": "/mijn",
+  "tekens": 1399,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "k-groep4-11",
+  "titel": "groep4: /vandaag-kwartier na start",
+  "url": "/vandaag-kwartier",
+  "tekens": 249,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "k-groep4-12",
+  "titel": "groep4: /leren na start",
+  "url": "/leren",
+  "tekens": 942,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "k-groep8-01",
+  "titel": "groep8: naam + niveau ingevuld",
+  "url": "/",
+  "tekens": 324,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "k-groep8-02",
+  "titel": "groep8: eerste scherm na 'Doorgaan als gast'",
+  "url": "/start",
+  "tekens": 326,
+  "fouten": []
+ },
+ {
+  "id": "k-groep8-03-fout1",
+  "titel": "Expres fout antwoord (heel rustig) — feedback lezen",
+  "url": "/start",
+  "tekens": 450,
+  "fouten": []
+ },
+ {
+  "id": "k-groep8-03-fout2",
+  "titel": "Expres fout antwoord (Bekijk de leerpaden) — feedback lezen",
+  "url": "/leren",
+  "tekens": 1000,
+  "fouten": []
+ },
+ {
+  "id": "k-groep8-04",
+  "titel": "groep8: na het start-kwartier",
+  "url": "/leren",
+  "tekens": 1000,
+  "fouten": []
+ },
+ {
+  "id": "k-groep8-10",
+  "titel": "groep8: /mijn na start",
+  "url": "/mijn",
+  "tekens": 1399,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "k-groep8-11",
+  "titel": "groep8: /vandaag-kwartier na start",
+  "url": "/vandaag-kwartier",
+  "tekens": 249,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "k-groep8-12",
+  "titel": "groep8: /leren na start",
+  "url": "/leren",
+  "tekens": 942,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "k-brugklas-01",
+  "titel": "brugklas: naam + niveau ingevuld",
+  "url": "/",
+  "tekens": 383,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "k-brugklas-02",
+  "titel": "brugklas: eerste scherm na 'Doorgaan als gast'",
+  "url": "/mijn",
+  "tekens": 2329,
+  "fouten": []
+ },
+ {
+  "id": "k-brugklas-03-fout1",
+  "titel": "Expres fout antwoord (Testbrugklas\nleerling · klas 1) — feedback lezen",
+  "url": "/mijn",
+  "tekens": 1993,
+  "fouten": []
+ },
+ {
+  "id": "k-brugklas-04",
+  "titel": "brugklas: na het start-kwartier",
+  "url": "/mijn",
+  "tekens": 1993,
+  "fouten": []
+ },
+ {
+  "id": "k-brugklas-10",
+  "titel": "brugklas: /mijn na start",
+  "url": "/mijn",
+  "tekens": 1400,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "k-brugklas-11",
+  "titel": "brugklas: /vandaag-kwartier na start",
+  "url": "/vandaag-kwartier",
+  "tekens": 223,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "k-brugklas-12",
+  "titel": "brugklas: /leren na start",
+  "url": "/leren",
+  "tekens": 942,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "g8-toets-01",
+  "titel": "Groep 8: Doorstroomtoets-oefentoets",
+  "url": "/doorstroomtoets-oefentoets",
+  "tekens": 685,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "g8-toets-02-fout1",
+  "titel": "Expres fout antwoord (A.7/6) — feedback lezen",
+  "url": "/doorstroomtoets-oefentoets",
+  "tekens": 257,
+  "fouten": []
+ },
+ {
+  "id": "g8-toets-02-fout2",
+  "titel": "Expres fout antwoord (A.Dinsdag) — feedback lezen",
+  "url": "/doorstroomtoets-oefentoets",
+  "tekens": 367,
+  "fouten": []
+ },
+ {
+  "id": "g8-toets-02-fout3",
+  "titel": "Expres fout antwoord (A.Ster die uitdooft) — feedback lezen",
+  "url": "/doorstroomtoets-oefentoets",
+  "tekens": 334,
+  "fouten": []
+ },
+ {
+  "id": "pad-01",
+  "titel": "Leren-overzicht",
+  "url": "/leren",
+  "tekens": 942,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "ouder-01",
+  "titel": "Ouder: tikt 'ouder of verzorger'",
+  "url": "/ouder",
+  "tekens": 720,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "ouder-02",
+  "titel": "Ouder: /ouder op vers apparaat (niet ingelogd)",
+  "url": "/ouder",
+  "tekens": 720,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "ouder-03",
+  "titel": "Ouder: Kwartiercheck",
+  "url": "/kwartiercheck",
+  "tekens": 1880,
+  "fouten": []
+ },
+ {
+  "id": "nieuwk-01",
+  "titel": "Nieuwkomer: na 'Ik ben nieuwkomer'",
+  "url": "/nieuwkomers",
+  "tekens": 3647,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "nieuwk-02",
+  "titel": "Nieuwkomer: eerste oefening",
+  "url": "/nieuwkomers",
+  "tekens": 6486,
+  "fouten": []
+ },
+ {
+  "id": "nieuwk-03-fout1",
+  "titel": "Expres fout antwoord (← Terug) — feedback lezen",
+  "url": "/",
+  "tekens": 1124,
+  "fouten": []
+ },
+ {
+  "id": "juf-01",
+  "titel": "Leerkracht: /klas",
+  "url": "/klas",
+  "tekens": 769,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "juf-02",
+  "titel": "Leerkracht: /leerkracht",
+  "url": "/leerkracht",
+  "tekens": 3187,
+  "fouten": [
+   "Unexpected token '<'"
+  ]
+ },
+ {
+  "id": "geenplaatjes-1",
+  "titel": "Plaatjes geblokkeerd: /",
+  "url": "/",
+  "tekens": 1124,
+  "fouten": []
+ },
+ {
+  "id": "geenplaatjes-2",
+  "titel": "Plaatjes geblokkeerd: /nieuwkomers",
+  "url": "/nieuwkomers",
+  "tekens": 3647,
+  "fouten": []
+ },
+ {
+  "id": "geenplaatjes-3",
+  "titel": "Plaatjes geblokkeerd: /tafelbladen",
+  "url": "/tafelbladen",
+  "tekens": 10662,
+  "fouten": []
+ },
+ {
+  "id": "geenplaatjes-4",
+  "titel": "Plaatjes geblokkeerd: /dierentuin",
+  "url": "/dierentuin",
+  "tekens": 1215,
+  "fouten": []
+ },
+ {
+  "id": "geenplaatjes-5",
+  "titel": "Plaatjes geblokkeerd: /mijn",
+  "url": "/mijn",
+  "tekens": 1382,
+  "fouten": []
+ }
+]

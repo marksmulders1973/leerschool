@@ -1,0 +1,173 @@
+[
+ {
+  "bestand": "src/features/teacher/TeacherHome.jsx",
+  "zoek": "En in 2026 is alles gratis (basis blijft daarna ook gratis).",
+  "vervang": "Voor scholen is alles gratis, gegarandeerd t/m 2031.",
+  "reden": "Verouderd en botst met huisregel: scholen betalen niets, gegarandeerd t/m 2031 (staat ook verderop op hetzelfde scherm)",
+  "ernst": 3,
+  "voor": "En in 2026 is alles gratis (basis blijft daarna ook gratis).",
+  "na": "Voor scholen is alles gratis, gegarandeerd t/m 2031."
+ },
+ {
+  "bestand": "src/features/teacher/StudentProgress.jsx",
+  "zoek": "ctx.fillText(\"STUDIEBOL KAMPIOEN\", W / 2, 310);",
+  "vervang": "ctx.fillText(\"LEERKWARTIER KAMPIOEN\", W / 2, 310);",
+  "reden": "Oude merknaam Studiebol op het deelbare kampioensplaatje (canvas 1080 px breed, past)",
+  "ernst": 3,
+  "voor": "STUDIEBOL KAMPIOEN",
+  "na": "LEERKWARTIER KAMPIOEN"
+ },
+ {
+  "bestand": "src/features/teacher/TeacherHome.jsx",
+  "zoek": "— Toets klaarstaan!",
+  "vervang": "— Toets staat klaar!",
+  "reden": "Grammaticaal fout in WhatsApp-bericht naar leerlingen",
+  "ernst": 2,
+  "voor": "🎓 Leerkwartier — Toets klaarstaan!",
+  "na": "🎓 Leerkwartier — Toets staat klaar!"
+ },
+ {
+  "bestand": "src/features/teacher/StudentProgress.jsx",
+  "zoek": "` vinden +${k.gevers.length - 5} anderen`",
+  "vervang": "` en ${k.gevers.length - 5} anderen`",
+  "reden": "Bij meer dan 5 gevers staat 'vinden' dubbel: '… vinden +3 anderen vinden dat …'",
+  "ernst": 2,
+  "voor": "Anna, Bo, Cas, Dex, Eva vinden +3 anderen vinden dat je het goed hebt gedaan!",
+  "na": "Anna, Bo, Cas, Dex, Eva en 3 anderen vinden dat je het goed hebt gedaan!"
+ },
+ {
+  "bestand": "src/features/teacher/KlasParkcode.jsx",
+  "zoek": "en het aantal imposters.",
+  "vervang": "en het aantal bedriegers.",
+  "reden": "Engels woord; het spel heet zelf 'Wie is de bedrieger?'",
+  "ernst": 1,
+  "voor": "… en het aantal imposters.",
+  "na": "… en het aantal bedriegers."
+ },
+ {
+  "bestand": "src/features/teacher/StudentProgress.jsx",
+  "zoek": "🏆 Kijk mijn super resultaat op ${BRAND.name}!",
+  "vervang": "🏆 Bekijk mijn superresultaat op ${BRAND.name}!",
+  "reden": "'Kijk mijn' loopt niet; 'superresultaat' is één woord",
+  "ernst": 1,
+  "voor": "🏆 Kijk mijn super resultaat op Leerkwartier!",
+  "na": "🏆 Bekijk mijn superresultaat op Leerkwartier!"
+ },
+ {
+  "bestand": "src/features/teacher/StudentProgress.jsx",
+  "zoek": "\n                                        🎉 Deel je super resultaat!",
+  "vervang": "\n                                        🎉 Deel je superresultaat!",
+  "reden": "'superresultaat' is één woord",
+  "ernst": 1,
+  "voor": "🎉 Deel je super resultaat!",
+  "na": "🎉 Deel je superresultaat!"
+ },
+ {
+  "bestand": "src/features/teacher/StudentProgress.jsx",
+  "zoek": "\n                                🎉 Deel je super resultaat!",
+  "vervang": "\n                                🎉 Deel je superresultaat!",
+  "reden": "'superresultaat' is één woord (tweede plek)",
+  "ernst": 1,
+  "voor": "🎉 Deel je super resultaat!",
+  "na": "🎉 Deel je superresultaat!"
+ },
+ {
+  "bestand": "src/features/teacher/StudentProgress.jsx",
+  "zoek": "\"👑 Kroon dit jaar — kan jij dit verslaan?\" : `🔥 Toppositie ${current.label.toLowerCase()} — kan jij dit verslaan?`",
+  "vervang": "\"👑 Kroon dit jaar — kun jij dit verslaan?\" : `🔥 Toppositie ${current.label.toLowerCase()} — kun jij dit verslaan?`",
+  "reden": "Consistent met 'Kun jij mij verslaan?' elders op het scherm",
+  "ernst": 1,
+  "voor": "kan jij dit verslaan?",
+  "na": "kun jij dit verslaan?"
+ },
+ {
+  "bestand": "src/features/teacher/StudentProgress.jsx",
+  "zoek": "title=\"Mijn Voortgang 📊\"",
+  "vervang": "title=\"Mijn voortgang 📊\"",
+  "reden": "Geen hoofdletter midden in een Nederlandse titel",
+  "ernst": 1,
+  "voor": "Mijn Voortgang",
+  "na": "Mijn voortgang"
+ },
+ {
+  "bestand": "src/features/teacher/TeacherHome.jsx",
+  "zoek": "<span style={{ fontWeight: 700 }}>Nieuwe Toets</span>",
+  "vervang": "<span style={{ fontWeight: 700 }}>Nieuwe toets</span>",
+  "reden": "Geen hoofdletter midden in een Nederlandse knop",
+  "ernst": 1,
+  "voor": "Nieuwe Toets",
+  "na": "Nieuwe toets"
+ },
+ {
+  "bestand": "src/features/teacher/TeacherHome.jsx",
+  "zoek": ">Mijn Klassen{",
+  "vervang": ">Mijn klassen{",
+  "reden": "Geen hoofdletter midden in een Nederlandse knop",
+  "ernst": 1,
+  "voor": "Mijn Klassen",
+  "na": "Mijn klassen"
+ },
+ {
+  "bestand": "src/features/teacher/TeacherHome.jsx",
+  "zoek": "Nieuwe Takenlijst",
+  "vervang": "Nieuwe takenlijst",
+  "reden": "Geen hoofdletter midden in een Nederlandse knop",
+  "ernst": 1,
+  "voor": "Nieuwe Takenlijst",
+  "na": "Nieuwe takenlijst"
+ },
+ {
+  "bestand": "src/features/teacher/TeacherComponents.jsx",
+  "zoek": "title=\"👥 Mijn Klassen\"",
+  "vervang": "title=\"👥 Mijn klassen\"",
+  "reden": "Geen hoofdletter midden in een Nederlandse titel",
+  "ernst": 1,
+  "voor": "Mijn Klassen",
+  "na": "Mijn klassen"
+ },
+ {
+  "bestand": "src/features/teacher/TeacherComponents.jsx",
+  "zoek": "<Header title=\"Nieuwe Toets\"",
+  "vervang": "<Header title=\"Nieuwe toets\"",
+  "reden": "Geen hoofdletter midden in een Nederlandse titel",
+  "ernst": 1,
+  "voor": "Nieuwe Toets",
+  "na": "Nieuwe toets"
+ },
+ {
+  "bestand": "src/features/teacher/TeacherComponents.jsx",
+  "zoek": "placeholder=\"WhatsApp nummer (bijv. 0612345678)\" type=\"tel\" value={editPhone}",
+  "vervang": "placeholder=\"WhatsApp-nummer (bijv. 0612345678)\" type=\"tel\" value={editPhone}",
+  "reden": "Samenstelling met koppelteken",
+  "ernst": 1,
+  "voor": "WhatsApp nummer (bijv. 0612345678)",
+  "na": "WhatsApp-nummer (bijv. 0612345678)"
+ },
+ {
+  "bestand": "src/features/teacher/TeacherComponents.jsx",
+  "zoek": "placeholder=\"WhatsApp nummer (bijv. 0612345678)\" type=\"tel\" value={newStudentPhone}",
+  "vervang": "placeholder=\"WhatsApp-nummer (bijv. 0612345678)\" type=\"tel\" value={newStudentPhone}",
+  "reden": "Samenstelling met koppelteken",
+  "ernst": 1,
+  "voor": "WhatsApp nummer (bijv. 0612345678)",
+  "na": "WhatsApp-nummer (bijv. 0612345678)"
+ },
+ {
+  "bestand": "src/features/teacher/TeacherComponents.jsx",
+  "zoek": "(* = correct antwoord)",
+  "vervang": "(* = het goede antwoord)",
+  "reden": "'correct antwoord' mist buigings-e; elders in de app 'het goede antwoord'",
+  "ernst": 1,
+  "voor": "(* = correct antwoord)",
+  "na": "(* = het goede antwoord)"
+ },
+ {
+  "bestand": "src/features/teacher/TeacherComponents.jsx",
+  "zoek": "✅ Na aanmaken verschijnt \"📧 Mail klas\" knop in je dashboard.",
+  "vervang": "✅ Na aanmaken verschijnt de knop \"📧 Mail klas\" bij je toets.",
+  "reden": "Lidwoord ontbreekt; 'dashboard' is Engels — de knop staat bij de toets in 'Jouw toetsen'",
+  "ernst": 1,
+  "voor": "Na aanmaken verschijnt \"📧 Mail klas\" knop in je dashboard.",
+  "na": "Na aanmaken verschijnt de knop \"📧 Mail klas\" bij je toets."
+ }
+]

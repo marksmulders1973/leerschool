@@ -111,7 +111,7 @@ export default function ParkBezoek({ code, onHome }) {
       {/* Info onderaan. */}
       <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 10, padding: "12px 14px calc(12px + env(safe-area-inset-bottom))", display: "flex", alignItems: "center", justifyContent: "center", background: "linear-gradient(0deg, rgba(0,0,0,0.22), rgba(0,0,0,0))", pointerEvents: "none" }}>
         <span style={{ color: "#fff", font: "700 13px system-ui", textShadow: "0 1px 4px rgba(0,0,0,.4)", textAlign: "center" }}>
-          Loop rond met de joystick (of de pijltjes) en kijk rustig rond — sleep om te draaien, knijp om te zoomen.
+          Loop rond met de joystick (of de pijltjes) en kijk rustig om je heen — sleep om te draaien, knijp om te zoomen.
         </span>
       </div>
 

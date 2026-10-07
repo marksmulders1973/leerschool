@@ -54,7 +54,7 @@ const styles = {
 const FEATURE_LABELS = {
   "ai-tutor": "AI-leerassistent",
   "exam-mode": "Examen-modus",
-  "unlimited-paths": "Onbeperkt leerpaden",
+  "unlimited-paths": "Onbeperkt oefenen",
   "voorkennis-keten": "Voorkennis-keten",
   "parent-dashboard": "Ouder-dashboard",
   "school-dashboard": "Docent-dashboard",
@@ -141,7 +141,7 @@ export default function PaywallGate({ feature, authUser = null, children, fallba
 
   const label = FEATURE_LABELS[feature] || feature;
   return (
-    <div style={styles.card} role="region" aria-label={`${label} vereist premium`}>
+    <div style={styles.card} role="region" aria-label={`${label} is een betaalde extra`}>
       <div style={styles.title}>🔒 {label} — betaalde extra</div>
       {/* B1.1 (7-bots-review): geen maand-/jaarprijzen meer — prijsmodel is
           per-kwartier-bijkopen zonder abonnement (proPlan.js = bron). */}

@@ -98,7 +98,7 @@ function bouwMail({ vakLabel, score, totaal, vragen, token }) {
       ${vragenHtml}
     </div>
     <div style="background:#fff8e6;border:1px solid #f0e0b0;border-radius:14px;padding:18px 20px 10px;margin:0 0 22px;">
-      <div style="font-size:13px;font-weight:800;color:#9a7b00;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:12px;">✅ Antwoorden + uitleg — voor de ouder</div>
+      <div style="font-size:13px;font-weight:800;color:#9a7b00;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:12px;">✅ Antwoorden + uitleg — voor de ouder of verzorger</div>
       ${antwoordHtml}
     </div>
     <a href="${esc(opnieuw)}" style="display:block;text-align:center;background:linear-gradient(135deg,#00C853,#00a846);color:#fff;text-decoration:none;font-weight:800;font-size:16px;padding:14px;border-radius:12px;margin-bottom:14px;">🌍 Doe de check volgende week opnieuw →</a>
@@ -115,7 +115,7 @@ function bouwMail({ vakLabel, score, totaal, vragen, token }) {
     `Hoi,\n\nJe kind deed de ${vakLabel}-check: ${score}/${totaal} goed.\n\n` +
     `OEFENBLAD (laat je kind invullen):\n` +
     vragen.map((v, i) => `${i + 1}. ${v.vraag}\n   Antwoord: __________`).join("\n") +
-    `\n\nANTWOORDEN + UITLEG (voor de ouder):\n` +
+    `\n\nANTWOORDEN + UITLEG (voor de ouder of verzorger):\n` +
     vragen.map((v, i) => `${i + 1}. ${v.goed}${v.uitleg ? " — " + v.uitleg : ""}`).join("\n") +
     `\n\nElke week een nieuwe oefenset? Bevestig hier (zonder tik krijg je geen mail meer): ${bevestig}` +
     `\n\nDoe de check opnieuw: ${opnieuw}\nUitschrijven: ${uit}\nLeerkwartier — een kwartier per dag leren, een leven lang slimmer.`;

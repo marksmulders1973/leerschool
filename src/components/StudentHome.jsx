@@ -498,7 +498,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
                   <GratisLesmateriaal
                     source="kwartier-behaald"
                     compact
-                    title={<><span aria-hidden="true">📩</span> Laat je ouder je voortgang volgen</>}
+                    title={<><span aria-hidden="true">📩</span> Laat je ouder of verzorger je voortgang volgen</>}
                     onSubmitted={() => setKwMailHide(true)}
                   />
                   <button
@@ -870,8 +870,8 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
               }}
             >
               {vakModus === "po"
-                ? "Andere niveau? Bekijk middelbaar →"
-                : "Andere niveau? Bekijk basisschool →"}
+                ? "Ander niveau? Bekijk middelbaar →"
+                : "Ander niveau? Bekijk basisschool →"}
             </button>
           </div>
         )}
@@ -1329,7 +1329,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
               Klaar voor je eerste oefening?
             </div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.65)", lineHeight: 1.4 }}>
-              Kies bovenaan een vak en tik <strong>📚 Leren</strong> voor uitleg of <strong>🎯 Oefenen</strong> voor vragen uit je boek.
+              Kies bovenaan een vak en tik op <strong>📚 Leren</strong> voor uitleg of <strong>🎯 Oefenen</strong> voor vragen uit je boek.
             </div>
           </div>
         )}

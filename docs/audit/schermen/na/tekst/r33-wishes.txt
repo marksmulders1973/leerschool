@@ -1,0 +1,23 @@
+# Route /tips (vers apparaat)
+# http://localhost:4174/tips
+Spring naar hoofdinhoud
+💬 Tips aan de maker
+← Terug
+🏠
+Wat mis je, wat kan beter, of wat vind je juist top? Laat het weten — iedereen mag meelezen en beleefd reageren.
+Bij genoeg steun passen we het aan naar jullie wens.
+ℹ️ Sommige vragen worden door AI gemaakt en kunnen een foutje bevatten. Niet alles is altijd te herstellen, maar waar het kan verbeteren we de vraag en zetten 'm vast in onze vragenbank. Zie je iets fouts? Meld het hier — bedankt dat je meedenkt! 🙏
+🕵️ Wie is wie? Tips en reacties komen van bezoekers zoals jij. Staat er 👤 bezoeker zonder naam? Dan heeft iemand geen naam ingevuld — dat mag, maar het is niet de maker. De maker (Mark, die deze app bouwt) herken je altijd aan het gele blok 💛 Dank van de maker met het ✔ maker-vinkje. De maker doet nooit stiekem mee als bezoeker.
+Ik mis uitleg over…
+Het zou fijn zijn als…
+Ik snap … nog niet goed
+Kunnen jullie … toevoegen?
+Cijfer voor de app (optioneel):
+★★★★★
+👀 Je bericht verschijnt pas nadat wij het hebben bekeken. Houd het vriendelijk — onbeleefde berichten plaatsen we niet.
+Verstuur mijn tip →
+Nog geen tips op het bord — wees de eerste! 👆
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244

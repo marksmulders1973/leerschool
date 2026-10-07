@@ -58,7 +58,7 @@ export default function MyMastery({ userName, viewedPlayer, onPickPath, onBack, 
     <div style={styles.page}>
       <Header
         title={isParentView ? "👨‍👩‍👧 Voortgang" : "📈 Mijn voortgang"}
-        subtitle={isParentView ? `Voortgang van ${player}` : (player ? `Hi ${player}` : "Voer eerst een naam in")}
+        subtitle={isParentView ? `Voortgang van ${player}` : (player ? `Hoi ${player}` : "Voer eerst een naam in")}
         onBack={onBack}
         onHome={onHome}
       />

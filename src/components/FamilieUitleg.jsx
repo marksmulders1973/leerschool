@@ -12,7 +12,7 @@ export const FAMILIE_ONDERDELEN = [
   { emoji: "🚦", nl: ["Komt het goed?", "in één blik groen, oranje of rood per onderdeel van de Doorstroomtoets"], en: ["Ready for the test?", "green, orange or red per subject, at a glance"] },
   { emoji: "📄", nl: ["Oefenboekje op maat", "printbaar, met precies waar je kind moeite mee heeft"], en: ["Custom practice booklet", "printable, with exactly what your child finds hard"] },
   { emoji: "👪", nl: ["Kaart voor thuis", "zo leg je een onderwerp uit in gewone woorden"], en: ["Card for home", "how to explain a topic in everyday words"] },
-  { emoji: "✉️", nl: ["Weekmail op maandag", "wat je kind deed en waar je deze week op let"], en: ["Monday e-mail", "what your child did and what to focus on this week"] },
+  { emoji: "✉️", nl: ["Weekmail op vrijdag", "wat je kind deed en waar je deze week op let"], en: ["Friday e-mail", "what your child did and what to focus on this week"] },
   { emoji: "📅", nl: ["Weekschema voor de koelkast", "een kwartier per dag, om af te vinken"], en: ["Fridge schedule", "fifteen minutes a day, to tick off"] },
   { emoji: "📋", nl: ["Dictee met de woorden van school", "Charley leest ze voor"], en: ["Spelling test with the school words", "Charley reads them aloud"] },
   { emoji: "🐉", nl: ["AI-bijlesdocent onbeperkt", "uitleg op jouw manier, zo vaak als je wilt"], en: ["Unlimited AI tutor", "explanations your way, as often as you like"] },

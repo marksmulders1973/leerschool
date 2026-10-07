@@ -301,7 +301,7 @@ export default function LeesladderPage({ setPage } = {}) {
                 De hele Leesladder print je <strong style={{ color: "var(--color-text, #e8edf5)" }}>gratis</strong>.
                 Vul je e-mail in en de <strong style={{ color: "var(--color-text, #e8edf5)" }}>antwoordsleutel met uitleg
                 per vraag verschijnt <em>meteen</em> op deze pagina</strong> — geen wachten op een mailtje, zodat jij het
-                als ouder óók kunt voordoen. Als bonus krijg je elke week een nieuw oefenkwartiertje in je mail.
+                als ouder of verzorger óók kunt voordoen. Als bonus krijg je elke week een nieuw oefenkwartiertje in je mail.
               </div>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                 <input
@@ -398,7 +398,7 @@ export default function LeesladderPage({ setPage } = {}) {
 
         {/* Ouder-pagina: de ladder-methode */}
         <Sheet>
-          <SectieKop emoji="👪" label="Voor de ouder — zo werkt de Leesladder" />
+          <SectieKop emoji="👪" label="Voor thuis — zo werkt de Leesladder" />
           <Alinea titel="Waarom klein beginnen?">
             Veel kinderen kúnnen best lezen, maar haken af op de lengte van de
             tekst. Bij een tekst van vijf zinnen lukt het wél — en dat
@@ -524,7 +524,7 @@ export default function LeesladderPage({ setPage } = {}) {
             <p style={{ color: "#6b7785", fontSize: 14, lineHeight: 1.6, marginTop: -4 }}>
               De antwoorden — met per vraag de goede letter, de <strong>lees-truc</strong> en
               een korte uitleg — zijn nog <strong>vergrendeld</strong>. Vul je e-mailadres in om ze
-              gratis te ontgrendelen; daarna verschijnen ze <strong>direct onder elke vraag</strong> en
+              gratis te ontgrendelen; daarna verschijnen ze <strong>achterin op een eigen antwoordblad</strong> en
               printen ze gewoon mee.
             </p>
             <button
@@ -547,7 +547,7 @@ export default function LeesladderPage({ setPage } = {}) {
           <SectieKop emoji="🔍" label="Woordenlijst — de stippellijn-woorden" />
           <p style={{ color: "#6b7785", fontSize: 13, marginTop: -8, marginBottom: 16 }}>
             Alle woorden met een stippellijntje uit dit pakket, op alfabet. Eerst zelf
-            raden uit de zin — hier opzoeken mag altijd. Tip voor de ouder: laat je kind
+            raden uit de zin — hier opzoeken mag altijd. Tip voor thuis: laat je kind
             het woord zélf opzoeken; op alfabet zoeken is óók oefenen.
           </p>
           <div style={{ columnCount: 2, columnGap: 26 }}>

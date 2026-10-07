@@ -1,0 +1,63 @@
+# Route /herkansing (vers apparaat)
+# http://localhost:4173/herkansing
+Spring naar hoofdinhoud
+←
+Herkansing 💪
+🏠
+💪
+Herkansing? Je hoeft niet álles opnieuw te leren.
+Pak alleen het vak dat net niet lukte. Hier oefen je met echte examenvragen van de afgelopen jaren — en bij elke fout krijg je uitleg in drie niveaus, net zolang tot je het snapt. De basis blijft gratis (gegarandeerd t/m 2031), zonder account.
+1️⃣Kies hieronder je vak
+2️⃣Oefen echte examens van vorige jaren
+3️⃣Fout? Dan krijg je uitleg tot je het snapt
+🇬🇧 Engels
+🎓 2025 · tijdvak 2
+🎓 2025 · tijdvak 1
+🎓 2024 · tijdvak 2
+🎓 2024 · tijdvak 1
+🎓 2023 · tijdvak 2
+🎓 2023 · tijdvak 1
+🎓 2022 · tijdvak 2
+🎓 2022 · tijdvak 1
+💶 Economie
+🎓 2025 · tijdvak 2
+🎓 2025 · tijdvak 1
+🎓 2024 · tijdvak 2
+🎓 2024 · tijdvak 1
+🎓 2023 · tijdvak 2
+🎓 2023 · tijdvak 1
+🎓 2022 · tijdvak 2
+🎓 2022 · tijdvak 1
+🌱 Biologie
+🎓 2025 · tijdvak 2
+🎓 2025 · tijdvak 1
+🎓 2024 · tijdvak 2
+🎓 2024 · tijdvak 1
+🎓 2023 · tijdvak 2
+🎓 2023 · tijdvak 1
+🎓 2022 · tijdvak 2
+🎓 2022 · tijdvak 1
+🏛️ Geschiedenis
+🎓 2025 · tijdvak 2
+🎓 2025 · tijdvak 1
+🎓 2024 · tijdvak 2
+🎓 2024 · tijdvak 1
+🎓 2023 · tijdvak 2
+🎓 2023 · tijdvak 1
+🎓 2022 · tijdvak 2
+🎓 2022 · tijdvak 1
+🗳️ Maatschappijkunde
+🎓 2025 · tijdvak 2
+🎓 2025 · tijdvak 1
+🎓 2024 · tijdvak 2
+🎓 2024 · tijdvak 1
+🎓 2023 · tijdvak 2
+🎓 2023 · tijdvak 1
+🎓 2022 · tijdvak 2
+🎓 2022 · tijdvak 1
+Liever het hele examen als PDF erbij, mét correctievoorschrift?
+📜 Alle examens bekijken
+Over Leerkwartier
+📬 Weekpakket
+Privacybeleid
+© Leerkwartier · KvK 42176244

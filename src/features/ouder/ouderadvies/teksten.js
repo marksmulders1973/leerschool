@@ -63,7 +63,7 @@ export function teksten(groep, naam = "je kind") {
       wisselTerug: "Toch niet wisselen",
       knopAkkoord: "Goed zo",
       akkoordKlaar: `Staat klaar. ${naam} ziet het bij "voor jou klaargezet".`,
-      akkoordLokaal: `Staat klaar op dit apparaat. ${naam} ziet het hier als ${naam} gaat oefenen.`,
+      akkoordLokaal: `Staat klaar op dit apparaat. ${naam} ziet het hier bij de volgende keer oefenen.`,
       reden: {
         "nog-niet": "Dit lukte in de nulmeting nog niet. Hier begint de les bij het begin.",
         wankel: "Dit ging half goed. Een korte les maakt het steviger.",

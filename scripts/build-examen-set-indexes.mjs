@@ -87,7 +87,7 @@ function renderIndex({ vak, set, meta, vragen, ctaUrl, ebUrl }) {
   const { niveauLabel, jaar, tijdvak } = meta;
   const canonical = `${SITE}/examen/${vak}/${set}/`;
   const pageTitle = `${label} ${niveauLabel} ${jaar} tijdvak ${tijdvak} — examenvragen met uitleg — Leerkwartier`;
-  const metaDesc = `De ${vragen.length} examenvragen uit het eindexamen ${vak} ${niveauLabel} ${jaar} tijdvak ${tijdvak}, met antwoord en stap-voor-stap uitleg. Gratis oefenen op Leerkwartier.`;
+  const metaDesc = `${vragen.length} examenvragen uit het eindexamen ${vak} ${niveauLabel} ${jaar} tijdvak ${tijdvak}, met antwoord en stap-voor-stap uitleg. Gratis oefenen op Leerkwartier.`;
 
   const breadcrumbs = {
     "@context": "https://schema.org",
@@ -164,7 +164,7 @@ function renderIndex({ vak, set, meta, vragen, ctaUrl, ebUrl }) {
 </header>
 
 <section>
-  <h2>Alle ${vragen.length} vragen van dit examen</h2>
+  <h2>${vragen.length} vragen uit dit examen</h2>
   <ol class="lk-vragen">
 ${lijst}
   </ol>
@@ -182,7 +182,7 @@ ${ebUrl ? `<section class="lk-bron">
 ${ctaUrl ? `<a class="lk-cta" href="${escapeHtml(ctaUrl)}">Oefen dit examen interactief in Leerkwartier →</a>` : ""}
 
 <footer>
-  Leerkwartier is een gratis examen-oefenplatform voor VMBO, HAVO, VWO en de Doorstroomtoets.
+  Leerkwartier is een gratis oefen-app voor de VMBO-examens en de Doorstroomtoets.
   <a href="/">Naar de homepage</a> · <a href="/over.html">Over Leerkwartier</a> · KvK 42176244
 </footer>
 </body>

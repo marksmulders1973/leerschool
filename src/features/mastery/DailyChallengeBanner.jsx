@@ -99,7 +99,7 @@ export default function DailyChallengeBanner({ userName, onStart }) {
       eyebrow: "VANDAAG ✓ GEDAAN",
       eyebrowColor: "#69F0AE",
       title: streakInfo.streak === 1
-        ? "Streak gestart 🎉"
+        ? "Reeks gestart 🎉"
         : `${streakInfo.streak} dagen op rij`,
       sub: "Mooi — je hebt je 15 minuten van vandaag al gedaan.",
       cta: null,
@@ -108,14 +108,14 @@ export default function DailyChallengeBanner({ userName, onStart }) {
       bg: "linear-gradient(135deg, #ff6b35, #ef6c00)",
       border: "#ef6c00",
       flame: "#ffd54f",
-      eyebrow: "STREAK NIET VERBREKEN",
+      eyebrow: "REEKS NIET VERBREKEN",
       eyebrowColor: "#fff",
       title: `${streakInfo.streak} dagen 🔥 — doe je 15 min`,
       sub: dueCount > 0
         ? `${dueCount} ${dueCount === 1 ? "onderwerp" : "onderwerpen"} klaar om te herhalen${recommendedPath ? ` — start met ${recommendedPath.title}` : ""}`
         : (recommendedPath
           ? `Vandaag: ${recommendedPath.title}`
-          : "Een paar vragen om de streak te houden"),
+          : "Een paar vragen om je reeks te houden"),
       cta: "Start nu",
     },
     NIEUW: {
@@ -125,7 +125,7 @@ export default function DailyChallengeBanner({ userName, onStart }) {
       eyebrow: "DAGELIJKSE UITDAGING",
       eyebrowColor: "rgba(255,255,255,0.85)",
       title: "15 minuten per dag",
-      sub: "Begin je streak — een paar vragen, klein en concreet.",
+      sub: "Begin je reeks — een paar vragen, klein en concreet.",
       cta: "Start vandaag",
     },
   };

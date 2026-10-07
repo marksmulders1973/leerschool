@@ -251,11 +251,11 @@ function ShowcaseKaart({ id, groep, onGa, onVerder }) {
   return (
     <Card variant="study" padding="md">
       {kop("Echte toetsen")}
-      <h3 style={S.showKop}>{g78 ? "Klaar voor de doorstroomtoets." : "Oefenen zoals op de echte toets."}</h3>
+      <h3 style={S.showKop}>{g78 ? "Klaar voor de Doorstroomtoets." : "Oefenen zoals op de echte toets."}</h3>
       <p style={S.showTekst}>
         {g78
           ? "Oefen in de stijl van Cito, IEP, DIA en AMN: rekenen, taal, lezen en studievaardigheden, met uitleg bij elke fout."
-          : "In groep 7 en 8 oefen je hier de doorstroomtoets in de stijl van Cito, IEP, DIA en AMN, met uitleg bij elke fout."}
+          : "In groep 7 en 8 oefen je hier de Doorstroomtoets in de stijl van Cito, IEP, DIA en AMN, met uitleg bij elke fout."}
       </p>
       <div style={{ display: "flex", gap: 12, alignItems: "center", marginBottom: 14 }}>
         <img src="/examens/bio-2025-t1-luis.jpg" alt="Fragment uit een echt examen" width={96} style={{ borderRadius: 8, border: "1px solid var(--color-border-soft)", flexShrink: 0 }} />
