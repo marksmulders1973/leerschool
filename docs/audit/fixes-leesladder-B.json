@@ -1,0 +1,14 @@
+[
+  { "bestand": "src/components/leesladderData.js", "tekst": "De schoolbieb moet vaker open (een mening!)", "vraag": 0, "ernst": 3,
+    "zoek": "Toch staat onze prachtige bieb vier dagen per week op slot.",
+    "vervang": "Toch staat onze prachtige bieb drie dagen per week op slot.",
+    "reden": "Getalfout: de bieb is twee ochtenden per week open, dus in een schoolweek van vijf dagen is hij drie (niet vier) dagen op slot; het aantal spreekt zin 1 tegen." },
+  { "bestand": "src/components/leesladderData.js", "tekst": "Kauwgom", "vraag": 1, "ernst": 2,
+    "zoek": "options: [\"Ingedikt boomsap (chicle)\", \"Hars van de Grieken\"",
+    "vervang": "options: [\"Ingedikt boomsap\", \"Hars van de Grieken\"",
+    "reden": "Weggever: de goede optie was als enige voorzien van een toelichting tussen haakjes." },
+  { "bestand": "src/components/leesladderData.js", "tekst": "De schoolbieb moet vaker open (een mening!)", "vraag": 0, "ernst": 1,
+    "zoek": "Juf Ria, die de bieb runt, doet dat naast haar gewone lessen",
+    "vervang": "Juf Ria, die de bieb beheert, doet dat naast haar gewone lessen",
+    "reden": "Stijl: 'runt' is een Engels leenwoord waar een gewoon Nederlands woord kan." }
+]

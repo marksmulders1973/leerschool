@@ -1,0 +1,18 @@
+[
+  { "bestand": "src/components/leesladderData.js", "tekst": "Het ruimtestation", "vraag": 2, "ernst": 1,
+    "zoek": "In zin 3 staat: 'Zij doen daar proefjes.' Wie zijn 'zij'?",
+    "vervang": "In zin 3 staat: 'Zij doen daar proefjes die op aarde niet kunnen.' Wie zijn 'zij'?",
+    "reden": "Citaat stond niet letterlijk in de tekst: zin 3 is afgekapt en kreeg een punt die er niet staat." },
+  { "bestand": "src/components/leesladderData.js", "tekst": "Fietsband plakken", "vraag": 0, "ernst": 1,
+    "zoek": "Waar belletjes omhoog komen, zit het lek.",
+    "vervang": "Waar belletjes omhoogkomen, zit het lek.",
+    "reden": "Spelling: 'omhoogkomen' is één woord (Woordenlijst)." },
+  { "bestand": "src/components/leesladderData.js", "tekst": "De uitvinding van het ijshoorntje", "vraag": 1, "ernst": 1,
+    "zoek": "Het woord 'maar toen' markeert het beginpunt van het probleem.",
+    "vervang": "De woorden 'maar toen' markeren het beginpunt van het probleem.",
+    "reden": "'Maar toen' zijn twee woorden; 'het woord ... markeert' klopt grammaticaal niet." },
+  { "bestand": "src/components/leesladderData.js", "tekst": "Het spreekbeurt-geheim", "vraag": 0, "ernst": 2,
+    "zoek": "Haar onderwerp is de octopus, het slimste dier van de zee.",
+    "vervang": "Haar onderwerp is de octopus, een van de slimste dieren van de zee.",
+    "reden": "Feitelijk aanvechtbaar in vertellersstem: dolfijnen en orka's gelden als slimmer; 'een van de slimste' is wél verdedigbaar." }
+]

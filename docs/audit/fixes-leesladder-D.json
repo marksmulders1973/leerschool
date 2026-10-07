@@ -1,0 +1,18 @@
+[
+  { "bestand": "src/components/leesladder2/versieD.js", "tekst": "De wissel", "vraag": 3, "ernst": 2,
+    "zoek": "q: \"'Tóch gaat het nergens anders over dan over háár wissel.' Waarom past het woord 'toch' hier?\"",
+    "vervang": "q: \"'Toch gaat het in de kleedkamer nergens anders over dan over háár wissel.' Waarom past het woord 'toch' hier?\"",
+    "reden": "Het citaat stond niet letterlijk in de tekst ('Tóch' met accent en 'in de kleedkamer' weggelaten)." },
+  { "bestand": "src/components/leesladder2/versieD.js", "tekst": "De eerste zet", "vraag": 3, "ernst": 2,
+    "zoek": "q: \"'Ravi verloor drie potjes op rij, en desondanks fietste hij zingend naar huis.' Wat laat 'desondanks' zien?\"",
+    "vervang": "q: \"'Ravi verloor die middag drie potjes op rij, en desondanks fietste hij zingend naar huis.' Wat laat 'desondanks' zien?\"",
+    "reden": "Het citaat stond niet letterlijk in de tekst ('die middag' ontbrak)." },
+  { "bestand": "src/components/leesladder2/versieD.js", "tekst": "Het balkon", "vraag": 4, "ernst": 2,
+    "zoek": "q: \"'Ze heeft nog nooit zo mooi gespeeld.' Wat is dit volgens de tekst?\"",
+    "vervang": "q: \"'Haar vader beweert dat ze nog nooit zo mooi heeft gespeeld.' Wat is die bewering volgens de tekst?\"",
+    "reden": "De aangehaalde zin staat nergens in de tekst; de tekst zegt het in de indirecte rede ('Haar vader beweert dat ze nog nooit zo mooi heeft gespeeld')." },
+  { "bestand": "src/components/leesladder2/versieD.js", "tekst": "Het balkon", "vraag": 2, "ernst": 1,
+    "zoek": "het echoot een detail van drie alinea's terug: het vaste duimpje vóór de eerste noot.",
+    "vervang": "het echoot een detail van twee alinea's terug: het vaste duimpje vóór de eerste noot.",
+    "reden": "De zin 'Haar duim is al omhoog' staat in alinea 3 en het duimpje-detail in alinea 1: dat is twee alinea's terug, niet drie." }
+]

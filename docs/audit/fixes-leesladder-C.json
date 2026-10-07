@@ -1,0 +1,22 @@
+[
+  { "bestand": "src/components/leesladderData.js", "tekst": "De duikboot", "vraag": 2, "ernst": 1,
+    "zoek": "In zin 4 staat: 'Zij blazen de tanks weer leeg.' Wie zijn 'zij'?",
+    "vervang": "In zin 4 staat: 'Zij blazen de tanks weer leeg met lucht om omhoog te komen.' Wie zijn 'zij'?",
+    "reden": "Citaat was een halve zin met een punt erachter; nu staat zin 4 letterlijk zoals in de tekst." },
+  { "bestand": "src/components/leesladderData.js", "tekst": "Kippenvel", "vraag": 1, "ernst": 2,
+    "zoek": "De bultjes zijn die aangespannen spiertjes.",
+    "vervang": "De bultjes ontstaan doordat die spiertjes de huid bij elk haartje omhoogtrekken.",
+    "reden": "Uitleg was feitelijk onjuist: de bultjes zijn niet de spiertjes zelf, maar de huid die door het samentrekken omhoog wordt getrokken." },
+  { "bestand": "src/components/leesladderData.js", "tekst": "Kippenvel", "vraag": 3, "ernst": 2,
+    "zoek": "\"Kippen krijgen er ook bultjes van\"",
+    "vervang": "\"Het is de naam van een ziekte bij kippen\"",
+    "reden": "Afleider was dubbelzinnig: de tekst zegt letterlijk dat een geplukte kip 'precies dezelfde bultjes' heeft, dus een kind kon deze optie verdedigen." },
+  { "bestand": "src/components/leesladderData.js", "tekst": "Kippenvel", "vraag": 3, "ernst": 1,
+    "zoek": "answer: 0, type: \"woord uit de zin halen\", uitleg: \"De laatste zinnen beantwoorden precies deze vraag.",
+    "vervang": "answer: 0, type: \"detail opzoeken\", uitleg: \"De laatste zinnen beantwoorden precies deze vraag.",
+    "reden": "Label klopte niet: 'Waarom heet het kippenvel?' is geen woordbetekenis-vraag maar een detail dat je in de laatste zinnen opzoekt (de uitleg legt ook die truc uit)." },
+  { "bestand": "src/components/leesladderData.js", "tekst": "Statiegeld op flesjes", "vraag": 5, "ernst": 2,
+    "zoek": "Wat bedoelt de schrijver met 'opruimen niet braaf, maar slim'?",
+    "vervang": "Wat bedoelt de schrijver met 'opruimen niet braaf, maar gewoon slim'?",
+    "reden": "Citaat stond niet letterlijk in de tekst (het woord 'gewoon' ontbrak)." }
+]

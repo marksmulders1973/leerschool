@@ -21,7 +21,7 @@ export const VERSIE_E = [
           ],
           answer: 0,
           type: "hoofdgedachte",
-          uitleg: "Het hengeltje en de lichtflits zijn maar vóórbeelden. De laatste zin is de paraplu waar alles onder past: licht is een middel om te overleven. Pas op voor antwoorden die wél letterlijk in de tekst staan, maar maar één klein stukje ervan zijn.",
+          uitleg: "Het hengeltje en de lichtflits zijn maar vóórbeelden. De laatste zin is de paraplu waar alles onder past: licht is een middel om te overleven. Pas op voor antwoorden die wél letterlijk in de tekst staan, terwijl ze maar één klein stukje ervan zijn.",
         },
         {
           q: "Wat wordt bedoeld met 'dat wordt hun laatste vergissing'?",
@@ -152,7 +152,7 @@ export const VERSIE_E = [
         {
           q: "Waarom liggen de bonen dagenlang onder bladeren?",
           options: [
-            "Daardoor krijgen ze hun smaak",
+            "Dat geeft de bonen hun smaak",
             "Om ze koel te houden voor de reis",
             "Zodat vogels ze niet kunnen vinden",
             "Omdat het schip nog niet klaarligt",
@@ -171,7 +171,7 @@ export const VERSIE_E = [
           ],
           answer: 0,
           type: "signaalwoord",
-          uitleg: "'Namelijk' (en ook 'immers') zegt: let op, ik leg nu uit waaróm dat zo is. Waarom is suiker en melk nodig? Namelijk: verse bonen smaken bitter.",
+          uitleg: "'Namelijk' (en ook 'immers') zegt: let op, ik leg nu uit waaróm dat zo is. Waarom zijn suiker en melk nodig? Namelijk: verse bonen smaken bitter.",
         },
       ],
     },
@@ -311,7 +311,7 @@ export const VERSIE_E = [
   [
     {
       titel: "Bezoek aan het diepste punt",
-      tekst: "Het diepste punt van de oceaan ligt bijna elf kilometer onder het wateroppervlak. Zou je de hoogste berg van de wereld in die trog laten zakken, dan stak zijn top nog niet eens boven het water uit. Op zulke diepten drukt het water met een enorme kracht: het voelt alsof er honderden olifanten op een postzegel staan. Gewone duikboten zouden er in elkaar worden gedrukt als een leeg drinkpakje.\n\nDesondanks zijn er onderzoekers afgedaald, in speciale duikboten met wanden van dik staal. Wat zij aantroffen, verraste iedereen. Zelfs op de bodem van de trog krioelt het van het leven: doorzichtige zeekomkommers, garnalen en visjes die tegen de kou en de druk kunnen. Veel van die dieren had nog nooit iemand gezien. Eén vondst maakte de onderzoekers minder vrolijk: op het diepste punt van de aarde lag een plastic tasje.\n\nJe zou denken dat zo'n verre, donkere plek ons niet aangaat. Het tegendeel is waar. De diepzee helpt het klimaat op aarde in evenwicht te houden, en veel vissen die wij kennen, vinden er hun voedsel. Wie de diepzee beschadigt, raakt dus uiteindelijk ook de wereld boven water. Daarom vragen wetenschappers om zuinig te zijn op een plek die bijna niemand ooit met eigen ogen zal zien — maar waar iedereen iets aan heeft.",
+      tekst: "Het diepste punt van de oceaan ligt bijna elf kilometer onder het wateroppervlak. Zou je de hoogste berg van de wereld in die trog laten zakken, dan stak zijn top nog niet eens boven het water uit. Op zulke diepten drukt het water met een enorme kracht: het voelt alsof er een olifant op een postzegel staat. Gewone duikboten zouden er in elkaar worden gedrukt als een leeg drinkpakje.\n\nDesondanks zijn er onderzoekers afgedaald, in speciale duikboten met wanden van dik staal. Wat zij aantroffen, verraste iedereen. Zelfs op de bodem van de trog krioelt het van het leven: doorzichtige zeekomkommers, garnalen en visjes die tegen de kou en de druk kunnen. Veel van die dieren had nog nooit iemand gezien. Eén vondst maakte de onderzoekers minder vrolijk: op het diepste punt van de aarde lag een plastic tasje.\n\nJe zou denken dat zo'n verre, donkere plek ons niet aangaat. Het tegendeel is waar. De diepzee helpt het klimaat op aarde in evenwicht te houden, en veel vissen die wij kennen, vinden er hun voedsel. Wie de diepzee beschadigt, raakt dus uiteindelijk ook de wereld boven water. Daarom vragen wetenschappers om zuinig te zijn op een plek die bijna niemand ooit met eigen ogen zal zien — maar waar iedereen iets aan heeft.",
       vragen: [
         {
           q: "Waarom noemt de schrijver de hoogste berg van de wereld?",
@@ -347,7 +347,7 @@ export const VERSIE_E = [
           ],
           answer: 0,
           type: "verwijswoord",
-          uitleg: "'Het tegendeel' wijst terug naar de zin ervoor: 'je zou denken dat die plek ons niet aangaat'. Het tegendeel daarvan is dus: hij gaat ons wél aan — en de rest van de alinea legt uit waarom.",
+          uitleg: "'Het tegendeel' wijst terug naar de zin ervoor: 'je zou denken dat zo'n verre, donkere plek ons niet aangaat'. Het tegendeel daarvan is dus: hij gaat ons wél aan — en de rest van de alinea legt uit waarom.",
         },
         {
           q: "Wat wil de schrijver met de laatste alinea bereiken?",
@@ -543,7 +543,7 @@ export const VERSIE_E = [
     },
     {
       titel: "Het duet",
-      tekst: "Al vanaf groep vijf zitten Yara en Selin naast elkaar op dwarsfluitles. Ze zijn zo op elkaar ingespeeld dat hun juf hen 'de tweeling' noemt, hoewel ze niet eens familie zijn. Voor de grote voorspeelavond in maart studeren ze een duet in: een snel stuk met een lastig middendeel, waarin de een moet ademen precies wanneer de ander speelt. Het gaat zo vlug dat ze het eerst in slow motion moesten leren. Wekenlang oefenen ze elke woensdag bij Selin thuis, met de kat als enig publiek. De uitnodigingen voor de avond zijn al verstuurd; hun namen staan er naast elkaar op gedrukt.\n\nTwee weken voor het optreden gaat het mis. Selin glijdt uit bij gym en breekt haar pols. 'Een duet met één fluit bestaat niet,' zegt Yara somber tegen haar moeder, 'dus we moeten wel afzeggen.' Maar die avond stuurt Selin een filmpje. Ze houdt haar dwarsfluit met haar goede hand vast en speelt, met veel gepiep, drie lange noten. 'Die lukken nog,' schrijft ze erbij. 'Als jij nou alle snelle loopjes doet?'\n\nWat volgt zijn de gekste oefenmiddagen ooit. Ze schuiven de partijen door elkaar: Yara neemt alle vlugge stukjes, Selin de rustige, lange noten die ze met één hand kan spelen. De kat vlucht de eerste middag onder de bank. Het klinkt dan ook eerst als een ruzie tussen twee wekkers. Maar langzaam ontstaat er iets nieuws: een versie die geen componist ooit zo heeft bedacht.\n\nOp de voorspeelavond kondigt de juf hen aan met een klein lachje: 'En dan nu de tweeling, in een uitvoering die u nergens anders zult horen.' Zodra de meisjes hun fluiten heffen, wordt het muisstil in de zaal. Halverwege het lastige middendeel kijken ze elkaar even aan, precies zoals altijd, en op dat moment weet Yara het zeker: afzeggen was het makkelijkst geweest, maar dit is duizend keer mooier. Het applaus is niet het hardste van de avond. Het duurt wel het langst. En terwijl ze buigen, fluistert Selin: 'Volgend jaar weer? Dan mag jij de lange noten.'",
+      tekst: "Al vanaf groep vijf zitten Yara en Selin naast elkaar op dwarsfluitles. Ze zijn zo op elkaar ingespeeld dat hun juf hen 'de tweeling' noemt, hoewel ze niet eens familie zijn. Voor de grote voorspeelavond in maart studeren ze een duet in: een snel stuk met een lastig middendeel, waarin de een moet ademen precies wanneer de ander speelt. Het gaat zo vlug dat ze het eerst heel langzaam moesten leren. Wekenlang oefenen ze elke woensdag bij Selin thuis, met de kat als enig publiek. De uitnodigingen voor de avond zijn al verstuurd; hun namen staan er naast elkaar op gedrukt.\n\nTwee weken voor het optreden gaat het mis. Selin glijdt uit bij gym en breekt haar pols. 'Een duet met één fluit bestaat niet,' zegt Yara somber tegen haar moeder, 'dus we moeten wel afzeggen.' Maar die avond stuurt Selin een filmpje. Ze houdt haar dwarsfluit met haar goede hand vast en speelt, met veel gepiep, drie lange noten. 'Die lukken nog,' schrijft ze erbij. 'Als jij nou alle snelle loopjes doet?'\n\nWat volgt zijn de gekste oefenmiddagen ooit. Ze schuiven de partijen door elkaar: Yara neemt alle vlugge stukjes, Selin de rustige, lange noten die ze met één hand kan spelen. De kat vlucht de eerste middag onder de bank. Het klinkt dan ook eerst als een ruzie tussen twee wekkers. Maar langzaam ontstaat er iets nieuws: een versie die geen componist ooit zo heeft bedacht.\n\nOp de voorspeelavond kondigt de juf hen aan met een klein lachje: 'En dan nu de tweeling, in een uitvoering die u nergens anders zult horen.' Zodra de meisjes hun fluiten heffen, wordt het muisstil in de zaal. Halverwege het lastige middendeel kijken ze elkaar even aan, precies zoals altijd, en op dat moment weet Yara het zeker: afzeggen was het makkelijkst geweest, maar dit is duizend keer mooier. Het applaus is niet het hardste van de avond. Het duurt wel het langst. En terwijl ze buigen, fluistert Selin: 'Volgend jaar weer? Dan mag jij de lange noten.'",
       vragen: [
         {
           q: "Welke boodschap zit verstopt in dit verhaal?",
@@ -574,7 +574,7 @@ export const VERSIE_E = [
           options: [
             "Hun nieuwe verdeling klinkt in het begin rommelig en schel",
             "De meisjes maken tijdens het oefenen ruzie met elkaar",
-            "Er staan twee wekkers af in de kamer",
+            "Er gaan twee wekkers af in de kamer",
             "Ze spelen expres zo vals mogelijk",
           ],
           answer: 0,
