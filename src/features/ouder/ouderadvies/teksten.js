@@ -38,7 +38,7 @@ export function teksten(groep, naam = "je kind") {
     : "";
   const derdeUitleg = ["7", "8", "brugklas"].includes(g)
     ? "studievaardigheden (opzoeken, tabellen en kaarten lezen)"
-    : "spelling en woordenschat";
+    : g === "3" ? "klanken en woordjes schrijven" : "spelling en woordenschat";
 
   return {
     // ── Ouderkant: eerste voorstel ─────────────────────────────────────────
@@ -46,7 +46,7 @@ export function teksten(groep, naam = "je kind") {
       paginaTitel: "Advies voor thuis",
       intro: `Ik denk graag met je mee. Je hoeft niets uit te zoeken: ik doe steeds een kort voorstel, jij zegt "goed zo" of je wisselt iets.`,
       adviesNulmeting: `Ik adviseer je om ${naam} te laten beginnen met een korte basistest, een nulmeting. Dan weten we ongeveer hoe het gaat.`,
-      nulmetingUitleg: `De nulmeting bestaat uit drie blokjes van vijf minuten: ${bl(1).volwassene}, ${bl(2).volwassene} en ${derdeUitleg}. Eén blokje per dag is genoeg. Wil ${naam} meer doen, dan mag dat.${brugklasNoot}`,
+      nulmetingUitleg: `De nulmeting bestaat uit drie blokjes van vijf minuten. Blokje 1: ${bl(1).volwassene}. Blokje 2: ${bl(2).volwassene}. Blokje 3: ${derdeUitleg}. Eén blokje per dag is genoeg. Wil ${naam} meer doen, dan mag dat.${brugklasNoot}`,
       eerlijk: "Eerlijk is eerlijk: vijf minuten per vak is kort. Het zegt alleen of het goed gaat, wankel is of nog niet lukt. Het is geen cijfer en geen niveau.",
       knopStart: `Laat ${naam} beginnen`,
       knopLater: "Later",

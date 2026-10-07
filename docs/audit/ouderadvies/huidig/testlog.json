@@ -1,5 +1,5 @@
 {
-  "wanneer": "2026-10-07T16:44:18.248Z",
+  "wanneer": "2026-10-07T16:53:42.274Z",
   "code": "main @ b8ea17a (lokaal)",
   "regels": [
     {
@@ -11,7 +11,7 @@
     {
       "nr": 2,
       "titel": "Moeder: tikt 'ouder of verzorger' — wat ziet ze?",
-      "sec": 1.7,
+      "sec": 1.6,
       "bestand": "huidig-02.png"
     },
     {
@@ -80,7 +80,7 @@
     {
       "nr": 11,
       "titel": "Kind: typt code mét spatie (\"XXX XXX\")",
-      "sec": 1.6,
+      "sec": 1.7,
       "bestand": "huidig-11.png"
     },
     {
@@ -138,7 +138,7 @@
       "bestand": "huidig-17.png"
     },
     {
-      "notitie": "Moeder ziet 'Testkind': true · tekst bij 'nog niets gedaan' noemt inloggen met hetzelfde account: true"
+      "notitie": "Moeder ziet 'Testkind': true · tekst bij 'nog niets gedaan' noemt inloggen met hetzelfde account: true · nieuwe tekst 'nog niet geoefend': false"
     }
   ],
   "serverlog": [
@@ -148,8 +148,8 @@
     "moeder POST /rest/v1/rpc/klasgolf_actief",
     "moeder POST /rest/v1/rpc/gezin_overzicht",
     "moeder POST /rest/v1/rpc/mijn_partner_recht",
-    "moeder POST /rest/v1/rpc/is_household_account",
     "moeder GET /rest/v1/link_codes",
+    "moeder POST /rest/v1/rpc/is_household_account",
     "moeder POST /rest/v1/rpc/gezin_koppel_zelfde_apparaat",
     "moeder POST /rest/v1/link_codes",
     "moeder POST /rest/v1/rpc/gezin_overzicht",

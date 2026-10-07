@@ -63,7 +63,16 @@ export default function OuderVoorstellen({ naam, groep, blokken = {}, linkId = n
   useEffect(() => { setKeuzes(leesKeuzes(naam)); }, [naam]);
 
   const basis = useMemo(() => drietal(groep, blokken), [groep, blokken]);
-  const voorstellen = basis.map((v) => overrides[v.blok] || v);
+  // Een eerder gemaakte keuze (bv. na blok 1 al gewisseld + "goed zo") blijft staan.
+  const eerder = useMemo(() => {
+    const uit = {};
+    for (const v of basis) {
+      const k = keuzes.find((x) => x.blok === v.blok);
+      if (k && k.padId !== v.padId) uit[v.blok] = wissel(groep, blokken[v.blok], v, k.padId, { anderen: basis.filter((x) => x.blok !== v.blok).map((x) => x.padId) });
+    }
+    return uit;
+  }, [basis, keuzes, groep, blokken]);
+  const voorstellen = basis.map((v) => overrides[v.blok] || eerder[v.blok] || v);
 
   const doeWissel = (v, padId) => {
     const anderen = voorstellen.filter((x) => x.blok !== v.blok).map((x) => x.padId);
@@ -102,7 +111,11 @@ export default function OuderVoorstellen({ naam, groep, blokken = {}, linkId = n
   }
 
   // ── Wekelijks vervolg (er zijn al keuzes) ───────────────────────────
-  const week = keuzes.length && voortgang ? weekVervolg(groep, keuzes, voortgang, blokken) : null;
+  // Pas als de ouder het volledige drietal heeft goedgekeurd (ná blok 3), wordt
+  // het een wekelijks vervolg. Een keuze van na blok 1 is nog een voorlopig voorstel.
+  const laatsteBlok = Math.max(0, ...Object.values(blokken).map((b) => Date.parse(b?.klaarOp || 0) || 0));
+  const drietalGekozen = klaar.length === 3 && keuzes.length > 0 && keuzes.every((k) => (k.at || 0) >= laatsteBlok);
+  const week = drietalGekozen && voortgang ? weekVervolg(groep, keuzes, voortgang, blokken) : null;
 
   return (
     <div data-ouder-stand={klaar.length === 3 ? "drietal" : "voorlopig"}>

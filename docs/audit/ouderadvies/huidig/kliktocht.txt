@@ -1,0 +1,29 @@
+ 1. Moeder: startpagina (telefoon) — 1.8s (huidig-01.png)
+ 2. Moeder: tikt 'ouder of verzorger' — wat ziet ze? — 1.6s (huidig-02.png)
+   · Na 'ouder of verzorger': URL http://localhost:4174/ouder · inlog-muur zichtbaar: true
+ 3. Moeder: onderkant van die pagina — 0.4s (huidig-03.png)
+ 4. Moeder: na inloggen (nagebootst) — Gezinsstart stap 1 — 2.8s (huidig-04.png)
+ 5. Moeder: voornaam + groep ingevuld — 0.1s (huidig-05.png)
+ 6. Moeder: stap 2 — nadruk kiezen (5 keuzes + vrij veld) — 0.6s (huidig-06.png)
+ 7. Moeder: stap 3 — welk apparaat? — 0.6s (huidig-07.png)
+ 8. Moeder: na 'Nee, op een ander apparaat' — 1.3s (huidig-08.png)
+   · Wizard nog open na kiezen 'ander apparaat': false · code ergens op het scherm: true
+ 9. Moeder: waar staat de code? — 0.1s (huidig-09.png)
+   · Koppelcode aangemaakt: ja (6 tekens)
+   · Instructie aan moeder noemt knop 'Koppel met ouder': true · noemt 'Code gekregen?': false
+10. Kind: opent de app op eigen telefoon — 1.8s (huidig-10.png)
+   · Kind ziet ergens 'Koppel met ouder': false
+11. Kind: typt code mét spatie ("XXX XXX") — 1.7s (huidig-11.png)
+   · Melding bij code met spatie: "Die code klopt niet helemaal — kijk de spelling even na."
+12. Kind: typt code zonder spatie (nog geen naam op dit apparaat) — 1.3s (huidig-12.png)
+   · Kind krijgt: "Dit is een koppelcode van thuis of school — die hoort bij jóuw naam. Tik bovenaan op "Ik ben leerling" en kies je naam; daarna koppelen we je meteen. Je hoeft de code niet nog een keer in te typen, we hebben hem onthouden."
+13. Kind: tikt 'leerling' — 1.6s (huidig-13.png)
+   · Na 'leerling': URL http://localhost:4174/ · vraagt om naam: true
+14. Kind: naam ingevuld — 1.6s (huidig-14.png)
+   · Na naam: kind gekoppeld? false · scherm: Spring naar hoofdinhoud 🚀 Start-kwartier van Testkind Stop 
+15. Kind: tikt 'Stop' in het start-kwartier — 2.1s (huidig-15.png)
+   · Kind gekoppeld (link in store): true · feestscherm zichtbaar: true
+16. Kind: eindstand — 1.5s (huidig-16.png)
+   · Kon 'Andere code' op /mijn niet vinden voor de dubbel-koppel-test.
+17. Moeder: overzicht na koppelen (kind heeft nog niets gedaan) — 5.1s (huidig-17.png)
+   · Moeder ziet 'Testkind': true · tekst bij 'nog niets gedaan' noemt inloggen met hetzelfde account: true · nieuwe tekst 'nog niet geoefend': false

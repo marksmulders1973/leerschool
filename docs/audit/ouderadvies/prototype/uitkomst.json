@@ -1,0 +1,160 @@
+{
+  "wanneer": "2026-10-07T16:54:43.948Z",
+  "uitkomst": [
+    {
+      "naam": "(a) twee kinderprofielen op één apparaat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(a) drempel houdt fout antwoord tegen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(a) advies-zin letterlijk zoals de maker vroeg",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(a) eerlijk: geen cijfer, geen niveau",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(a) blok 1 bewaard en kind krijgt keuze 'nog een?'",
+      "ok": true,
+      "detail": "3 vragen"
+    },
+    {
+      "naam": "(a) blok 1 staat in de opslag zodra het af is",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(a) standaard één blok per dag, wel 'toch nu verder'",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(a) na blok 1 precies één voorlopig voorstel",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(a) wisselen toont twee alternatieven",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(a) één tik wisselt het voorstel",
+      "ok": true,
+      "detail": "breuken-po → kommagetallen-po"
+    },
+    {
+      "naam": "(a) zonder account: keuze bewaard op dit apparaat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(a) pincode werkt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(a) kind ziet de gekozen les bij 'voor jou klaargezet'",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(a) na 3 blokjes: drietal (3 voorstellen), eerdere wissel blijft staan",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(a) na goedkeuren drietal: wekelijks vervolg, zonder schuldgevoel als er niets gedaan is",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(a) ouder ziet uitslag per vak in woorden (geen cijfer)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(b) moeder krijgt een koppelcode in de wizard",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(b) code met spatie/kleine letters koppelt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(b) naam van de koppeling wint (één kind, geen 'testkind'-dubbel)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(rand) tweede keer dezelfde code: 'al gekoppeld' i.p.v. 'werkt niet'",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(rand) verlopen code: uitleg in gewone taal",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(b) blok 1 op de server bewaard (kan op ander apparaat verder)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(b) moeder ziet het voorlopige voorstel op haar eigen telefoon",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(b) 'Goed zo' zet de les klaar via de bestaande klaarzet-tabel",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(c) moeder krijgt een kind-sleutel van 8 tekens",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(c) school weet dat blok 2 openstaat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(c) schoolcomputer is het kind weer vergeten",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(b/c) telefoon weet dat blok 2 op school is gedaan",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(b/c) moeder ziet 2 van 3 blokjes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(terugval) zonder de nieuwe RPC's: netjes lokaal bewaard, geen foutmelding",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "naam": "(week) vervolg noemt goed, nog niet en voorstel voor volgende week",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

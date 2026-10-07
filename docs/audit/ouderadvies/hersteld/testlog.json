@@ -1,5 +1,5 @@
 {
-  "wanneer": "2026-10-07T16:44:50.736Z",
+  "wanneer": "2026-10-07T16:54:14.925Z",
   "code": "branch audit3/ouderadvies (lokaal)",
   "regels": [
     {
@@ -11,7 +11,7 @@
     {
       "nr": 2,
       "titel": "Moeder: tikt 'ouder of verzorger' — wat ziet ze?",
-      "sec": 1.6,
+      "sec": 1.7,
       "bestand": "hersteld-02.png"
     },
     {
@@ -26,7 +26,7 @@
     {
       "nr": 4,
       "titel": "Moeder: na inloggen (nagebootst) — Gezinsstart stap 1",
-      "sec": 2.8,
+      "sec": 2.7,
       "bestand": "hersteld-04.png"
     },
     {
@@ -50,7 +50,7 @@
     {
       "nr": 8,
       "titel": "Moeder: na 'Nee, op een ander apparaat'",
-      "sec": 1.2,
+      "sec": 1.3,
       "bestand": "hersteld-08.png"
     },
     {
@@ -134,11 +134,11 @@
     {
       "nr": 17,
       "titel": "Moeder: overzicht na koppelen (kind heeft nog niets gedaan)",
-      "sec": 5.1,
+      "sec": 5.2,
       "bestand": "hersteld-17.png"
     },
     {
-      "notitie": "Moeder ziet 'Testkind': true · tekst bij 'nog niets gedaan' noemt inloggen met hetzelfde account: true"
+      "notitie": "Moeder ziet 'Testkind': true · tekst bij 'nog niets gedaan' noemt inloggen met hetzelfde account: false · nieuwe tekst 'nog niet geoefend': true"
     }
   ],
   "serverlog": [

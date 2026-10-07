@@ -312,7 +312,9 @@ export default function OuderAdvies({ authUser, onTerug, onOefenen }) {
   useEffect(() => { try { track("ouderadvies_open", {}); } catch { /* */ } }, []);
   useEffect(() => { if (demo) setView("ouder"); }, [demo]);
 
-  const naarOuder = () => { if (isOpen()) setView("ouder"); else setView("drempel"); };
+  // Drempel alleen als er kinderprofielen op dit apparaat staan (gedeeld apparaat).
+  // Op de eigen telefoon van de ouder of verzorger is er niets af te schermen.
+  const naarOuder = () => { if (isOpen() || profielen.length === 0) setView("ouder"); else setView("drempel"); };
   const kiesKind = (p) => { setKind(p); setView("kind"); };
   const T = teksten(kind?.groep || "7", kind?.naam || "");
 

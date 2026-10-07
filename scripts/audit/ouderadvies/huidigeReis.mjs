@@ -117,7 +117,7 @@ try {
   await m.goto(BASIS + "/ouder"); await m.waitForTimeout(2500);
   await L.stap(m, "Moeder: overzicht na koppelen (kind heeft nog niets gedaan)");
   const mt = await tekst(m);
-  L.notitie(`Moeder ziet 'Testkind': ${mt.includes("Testkind")} · tekst bij 'nog niets gedaan' noemt inloggen met hetzelfde account: ${/inloggen met hetzelfde account/.test(mt)}`);
+  L.notitie(`Moeder ziet 'Testkind': ${mt.includes("Testkind")} · tekst bij 'nog niets gedaan' noemt inloggen met hetzelfde account: ${/inloggen met hetzelfde account/.test(mt)} · nieuwe tekst 'nog niet geoefend': ${/Heeft Testkind nog niet geoefend\?/.test(mt)}`);
 } catch (e) {
   L.notitie("FOUT in kliktocht: " + e.message.split("\n")[0]);
   await L.stap(m, "Moeder: stand bij fout").catch(() => {});

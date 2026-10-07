@@ -1,0 +1,128 @@
+[
+  {
+    "nr": 1,
+    "titel": "Gedeeld apparaat: wie gaat er oefenen? (leeg)",
+    "sec": 0.8,
+    "bestand": "a-01.png"
+  },
+  {
+    "nr": 2,
+    "titel": "Kind toevoegen: voornaam + groep",
+    "sec": 0.1,
+    "bestand": "a-02.png"
+  },
+  {
+    "nr": 3,
+    "titel": "Twee kinderprofielen, wisselen zonder inloggen",
+    "sec": 0.2,
+    "bestand": "a-03.png"
+  },
+  {
+    "nr": 4,
+    "titel": "Drempel: fout antwoord (kind probeert het)",
+    "sec": 0.1,
+    "bestand": "a-04.png"
+  },
+  {
+    "nr": 5,
+    "titel": "Ouderweergave: eerste advies = nulmeting",
+    "sec": 0.1,
+    "bestand": "a-05.png"
+  },
+  {
+    "nr": 6,
+    "titel": "Kind: uitleg nulmeting (geen toets)",
+    "sec": 0.1,
+    "bestand": "a-06.png"
+  },
+  {
+    "nr": 7,
+    "titel": "Kind blok 1 (rekenen): eerste vraag",
+    "sec": 0.1,
+    "bestand": "a-07.png"
+  },
+  {
+    "nr": 8,
+    "titel": "Kind: blokje 1 klaar — wil je nog een?",
+    "sec": 0.6,
+    "bestand": "a-08.png"
+  },
+  {
+    "nr": 9,
+    "titel": "Kind stopt na blok 1",
+    "sec": 0,
+    "bestand": "a-09.png"
+  },
+  {
+    "nr": 10,
+    "titel": "Kind komt dezelfde dag terug: 'morgen weer' (mag toch)",
+    "sec": 0.1,
+    "bestand": "a-10.png"
+  },
+  {
+    "nr": 11,
+    "titel": "Ouder: voorlopig voorstel na blok 1",
+    "sec": 0.2,
+    "bestand": "a-11.png"
+  },
+  {
+    "nr": 12,
+    "titel": "Ouder tikt op het voorstel: twee alternatieven",
+    "sec": 0.1,
+    "bestand": "a-12.png"
+  },
+  {
+    "nr": 13,
+    "titel": "Ouder heeft gewisseld",
+    "sec": 0.1,
+    "bestand": "a-13.png"
+  },
+  {
+    "nr": 14,
+    "titel": "Ouder: 'Goed zo'",
+    "sec": 0,
+    "bestand": "a-14.png"
+  },
+  {
+    "nr": 15,
+    "titel": "Drempel vraagt nu om de pincode",
+    "sec": 0.2,
+    "bestand": "a-15.png"
+  },
+  {
+    "nr": 16,
+    "titel": "Kind blok 2 (begrijpend lezen): eerste vraag",
+    "sec": 0.3,
+    "bestand": "a-16.png"
+  },
+  {
+    "nr": 17,
+    "titel": "Kind blok 3 (studievaardigheden): eerste vraag",
+    "sec": 0.3,
+    "bestand": "a-17.png"
+  },
+  {
+    "nr": 18,
+    "titel": "Kind: blok 3 klaar",
+    "sec": 0.9,
+    "bestand": "a-18.png"
+  },
+  {
+    "nr": 19,
+    "titel": "Kind: alle drie klaar + wat er voor je klaarstaat",
+    "sec": 0,
+    "bestand": "a-19.png"
+  },
+  {
+    "nr": 20,
+    "titel": "Ouder: na 3 blokjes — het drietal",
+    "sec": 0.2,
+    "bestand": "a-20.png"
+  },
+  {
+    "nr": 21,
+    "titel": "Ouder: na 'Goed zo' op het drietal → wekelijks vervolg (kind deed nog niets)",
+    "sec": 0.5,
+    "bestand": "a-21.png"
+  }
+]

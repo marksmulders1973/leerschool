@@ -1,0 +1,98 @@
+[
+  {
+    "nr": 1,
+    "titel": "Moeder: code voor Testkind (eigen telefoon)",
+    "sec": 2.3,
+    "bestand": "b-01.png"
+  },
+  {
+    "nr": 2,
+    "titel": "Kind (eigen telefoon): code met spatie + naam in kleine letters",
+    "sec": 0.7,
+    "bestand": "b-02.png"
+  },
+  {
+    "nr": 3,
+    "titel": "Kind: gekoppeld",
+    "sec": 0.1,
+    "bestand": "b-03.png"
+  },
+  {
+    "nr": 4,
+    "titel": "Randgeval: dezelfde code nog eens",
+    "sec": 0.6,
+    "bestand": "b-04.png"
+  },
+  {
+    "nr": 5,
+    "titel": "Randgeval: verlopen code",
+    "sec": 0.6,
+    "bestand": "b-05.png"
+  },
+  {
+    "nr": 6,
+    "titel": "Kind (telefoon) blok 1: eerste vraag",
+    "sec": 0.1,
+    "bestand": "b-06.png"
+  },
+  {
+    "nr": 7,
+    "titel": "Kind (telefoon): blok 1 klaar, bewaard op de server",
+    "sec": 0.7,
+    "bestand": "b-07.png"
+  },
+  {
+    "nr": 8,
+    "titel": "Moeder (eigen telefoon): voorlopig voorstel na blok 1",
+    "sec": 0.5,
+    "bestand": "b-08.png"
+  },
+  {
+    "nr": 9,
+    "titel": "Moeder: 'Goed zo' → klaargezet voor Testkind",
+    "sec": 0.1,
+    "bestand": "b-09.png"
+  },
+  {
+    "nr": 10,
+    "titel": "Moeder: kind-sleutel voor school",
+    "sec": 0.4,
+    "bestand": "b-10.png"
+  },
+  {
+    "nr": 11,
+    "titel": "School: kind-sleutel + 'computer van school'",
+    "sec": 0.8,
+    "bestand": "b-11.png"
+  },
+  {
+    "nr": 12,
+    "titel": "School: 'Ga verder met blokje 2' (thuis gestopt na blok 1)",
+    "sec": 0.2,
+    "bestand": "b-12.png"
+  },
+  {
+    "nr": 13,
+    "titel": "School blok 2: eerste vraag",
+    "sec": 0.1,
+    "bestand": "b-13.png"
+  },
+  {
+    "nr": 14,
+    "titel": "School: 'vergeet mij' na afloop",
+    "sec": 0.4,
+    "bestand": "b-14.png"
+  },
+  {
+    "nr": 15,
+    "titel": "Kind (telefoon) volgende dag: blokje 3 staat open",
+    "sec": 0.4,
+    "bestand": "b-15.png"
+  },
+  {
+    "nr": 16,
+    "titel": "Moeder: ziet ook het blok van school",
+    "sec": 0.4,
+    "bestand": "b-16.png"
+  }
+]

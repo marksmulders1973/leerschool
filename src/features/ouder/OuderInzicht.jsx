@@ -966,10 +966,13 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
             Tip A: kind gekoppeld maar 0 resultaten → account-uitleg (de
             Deianera-verwarring van 31 aug). Tip B: kind oefent wél maar er is
             nog nooit iets klaargezet → klaarzetten + printen ontdekken. */}
+        {/* Audit 7 okt 2026: de oude tekst ("laat je kind inloggen met hetzelfde
+            account") klopte niet — koppelen werkt zonder inloggen, en meestal
+            heeft het kind gewoon nog niet geoefend. */}
         {selectedChildVerified && scoresGeladen && childScores.length === 0 && (
           <CharleyTip
             id="ouder-kind-geen-resultaten"
-            tekst={`${selectedChild} is gekoppeld, maar op dit account staan nog geen resultaten. Laat ${selectedChild} op het eigen toestel inloggen met hetzelfde account — dan verschijnt hier alles vanzelf. Lukt dat niet? Met een verse koppelcode schuift de koppeling automatisch mee naar het juiste account.`}
+            tekst={`${selectedChild} is gekoppeld, maar er staan nog geen resultaten. Heeft ${selectedChild} nog niet geoefend? Dan verschijnt alles hier zodra ${selectedChild} begint. Oefent ${selectedChild} wél al? Dan gebeurt dat op een apparaat dat nog niet gekoppeld is: met een verse koppelcode op dát apparaat schuift de koppeling mee.`}
             actieLabel="🔗 maak een verse koppelcode"
             onActie={() => maakHerstelCode(selectedChild)}
           />

@@ -1,0 +1,33 @@
+✅ (a) twee kinderprofielen op één apparaat
+✅ (a) drempel houdt fout antwoord tegen
+✅ (a) advies-zin letterlijk zoals de maker vroeg
+✅ (a) eerlijk: geen cijfer, geen niveau
+✅ (a) blok 1 bewaard en kind krijgt keuze 'nog een?' — 3 vragen
+✅ (a) blok 1 staat in de opslag zodra het af is
+✅ (a) standaard één blok per dag, wel 'toch nu verder'
+✅ (a) na blok 1 precies één voorlopig voorstel
+✅ (a) wisselen toont twee alternatieven
+✅ (a) één tik wisselt het voorstel — breuken-po → kommagetallen-po
+✅ (a) zonder account: keuze bewaard op dit apparaat
+✅ (a) pincode werkt
+✅ (a) kind ziet de gekozen les bij 'voor jou klaargezet'
+✅ (a) na 3 blokjes: drietal (3 voorstellen), eerdere wissel blijft staan
+✅ (a) na goedkeuren drietal: wekelijks vervolg, zonder schuldgevoel als er niets gedaan is
+✅ (a) ouder ziet uitslag per vak in woorden (geen cijfer)
+✅ (b) moeder krijgt een koppelcode in de wizard
+✅ (b) code met spatie/kleine letters koppelt
+✅ (b) naam van de koppeling wint (één kind, geen 'testkind'-dubbel)
+✅ (rand) tweede keer dezelfde code: 'al gekoppeld' i.p.v. 'werkt niet'
+✅ (rand) verlopen code: uitleg in gewone taal
+✅ (b) blok 1 op de server bewaard (kan op ander apparaat verder)
+✅ (b) moeder ziet het voorlopige voorstel op haar eigen telefoon
+✅ (b) 'Goed zo' zet de les klaar via de bestaande klaarzet-tabel
+✅ (c) moeder krijgt een kind-sleutel van 8 tekens
+✅ (c) school weet dat blok 2 openstaat
+✅ (c) schoolcomputer is het kind weer vergeten
+✅ (b/c) telefoon weet dat blok 2 op school is gedaan
+✅ (b/c) moeder ziet 2 van 3 blokjes
+✅ (terugval) zonder de nieuwe RPC's: netjes lokaal bewaard, geen foutmelding
+✅ (week) vervolg noemt goed, nog niet en voorstel voor volgende week
+
+31 van 31 controles geslaagd

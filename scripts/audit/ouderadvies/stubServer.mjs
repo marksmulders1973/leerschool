@@ -146,5 +146,5 @@ export function maakLog(map, prefix) {
   };
 }
 
-export const TELEFOON = { viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, locale: "nl-NL" };
+export const TELEFOON = { viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, isMobile: true, hasTouch: true, locale: "nl-NL" };
 export const CHROMIUM = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome";
