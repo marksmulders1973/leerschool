@@ -117,6 +117,10 @@ function PinInstellen({ T }) {
   );
 }
 
+// 🏫 Mark 7 okt 2026: "voor school nog nee" — de kind-sleutel (situatie c) staat UIT.
+// De code blijft staan voor later; alleen de knoppen/teksten zijn verborgen.
+const SCHOOL_AAN = false;
+
 // ── Kind-sleutel (ouder, situatie c) ────────────────────────────────────
 function KindSleutelBlok({ naam, linkId }) {
   const T = teksten("7", naam);
@@ -205,14 +209,16 @@ function WieOefent({ profielen, onKies, onOuder, onToegevoegd }) {
       )}
 
       {!codeOpen ? (
-        <button type="button" onClick={() => setCodeOpen(true)} style={F.link} data-code-open>Code gekregen van thuis? (eigen telefoon of schoolcomputer)</button>
+        <button type="button" onClick={() => setCodeOpen(true)} style={F.link} data-code-open>{SCHOOL_AAN ? "Code gekregen van thuis? (eigen telefoon of schoolcomputer)" : "Code gekregen van thuis? (eigen telefoon)"}</button>
       ) : (
         <form onSubmit={koppel} style={{ ...F.kaartRustig, marginTop: 10 }} data-code-form>
           <input value={codeNaam} onChange={(e) => setCodeNaam(e.target.value)} placeholder="Jouw voornaam" aria-label="Jouw voornaam" style={F.input} />
           <input value={code} onChange={(e) => setCode(e.target.value.toUpperCase())} placeholder="CODE" aria-label="Code" maxLength={11} autoComplete="off" spellCheck={false} style={{ ...F.input, marginTop: 8, letterSpacing: 3, textAlign: "center" }} />
-          <label style={{ ...F.sub, display: "flex", gap: 8, alignItems: "center", marginTop: 8 }}>
-            <input type="checkbox" checked={openbaar} onChange={(e) => setOpenbaar(e.target.checked)} /> Dit is een computer van school (niet van mij)
-          </label>
+          {SCHOOL_AAN && (
+            <label style={{ ...F.sub, display: "flex", gap: 8, alignItems: "center", marginTop: 8 }}>
+              <input type="checkbox" checked={openbaar} onChange={(e) => setOpenbaar(e.target.checked)} /> Dit is een computer van school (niet van mij)
+            </label>
+          )}
           <button type="submit" disabled={bezig || normaliseerKoppelcode(code).length < 4 || !codeNaam.trim()} style={F.primair(bezig || normaliseerKoppelcode(code).length < 4 || !codeNaam.trim())}>{bezig ? "Even…" : "Koppel"}</button>
           {melding && <div style={melding.ok ? F.ok : F.fout} data-koppel-melding={melding.ok ? "ok" : "fout"}>{melding.tekst}</div>}
         </form>
@@ -272,7 +278,7 @@ function OuderWeergave({ authUser, profielen, onLaatBeginnen, demo }) {
         <div key={k.naam} style={{ marginBottom: 22 }} data-ouder-kind={k.naam}>
           <div style={{ ...F.stapje, marginBottom: 6 }}>{k.naam} · {k.groep === "brugklas" ? "brugklas" : `groep ${k.groep}`}</div>
           <OuderVoorstellen naam={k.naam} groep={k.groep} blokken={k.blokken} linkId={k.linkId} ouderAccount={ouderAccount} voortgang={k.voortgang} opDitApparaat={k.opDitApparaat} onLaatBeginnen={k.opDitApparaat ? () => onLaatBeginnen({ naam: k.naam, groep: k.groep }) : null} />
-          {ouderAccount && k.linkId && <KindSleutelBlok naam={k.naam} linkId={k.linkId} />}
+          {SCHOOL_AAN && ouderAccount && k.linkId && <KindSleutelBlok naam={k.naam} linkId={k.linkId} />}
         </div>
       ))}
       <PinInstellen T={T} />
