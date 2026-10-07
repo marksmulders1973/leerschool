@@ -1,0 +1,176 @@
+{
+  "wanneer": "2026-10-07T16:44:18.248Z",
+  "code": "main @ b8ea17a (lokaal)",
+  "regels": [
+    {
+      "nr": 1,
+      "titel": "Moeder: startpagina (telefoon)",
+      "sec": 1.8,
+      "bestand": "huidig-01.png"
+    },
+    {
+      "nr": 2,
+      "titel": "Moeder: tikt 'ouder of verzorger' — wat ziet ze?",
+      "sec": 1.7,
+      "bestand": "huidig-02.png"
+    },
+    {
+      "notitie": "Na 'ouder of verzorger': URL http://localhost:4174/ouder · inlog-muur zichtbaar: true"
+    },
+    {
+      "nr": 3,
+      "titel": "Moeder: onderkant van die pagina",
+      "sec": 0.4,
+      "bestand": "huidig-03.png"
+    },
+    {
+      "nr": 4,
+      "titel": "Moeder: na inloggen (nagebootst) — Gezinsstart stap 1",
+      "sec": 2.8,
+      "bestand": "huidig-04.png"
+    },
+    {
+      "nr": 5,
+      "titel": "Moeder: voornaam + groep ingevuld",
+      "sec": 0.1,
+      "bestand": "huidig-05.png"
+    },
+    {
+      "nr": 6,
+      "titel": "Moeder: stap 2 — nadruk kiezen (5 keuzes + vrij veld)",
+      "sec": 0.6,
+      "bestand": "huidig-06.png"
+    },
+    {
+      "nr": 7,
+      "titel": "Moeder: stap 3 — welk apparaat?",
+      "sec": 0.6,
+      "bestand": "huidig-07.png"
+    },
+    {
+      "nr": 8,
+      "titel": "Moeder: na 'Nee, op een ander apparaat'",
+      "sec": 1.3,
+      "bestand": "huidig-08.png"
+    },
+    {
+      "notitie": "Wizard nog open na kiezen 'ander apparaat': false · code ergens op het scherm: true"
+    },
+    {
+      "nr": 9,
+      "titel": "Moeder: waar staat de code?",
+      "sec": 0.1,
+      "bestand": "huidig-09.png"
+    },
+    {
+      "notitie": "Koppelcode aangemaakt: ja (6 tekens)"
+    },
+    {
+      "notitie": "Instructie aan moeder noemt knop 'Koppel met ouder': true · noemt 'Code gekregen?': false"
+    },
+    {
+      "nr": 10,
+      "titel": "Kind: opent de app op eigen telefoon",
+      "sec": 1.8,
+      "bestand": "huidig-10.png"
+    },
+    {
+      "notitie": "Kind ziet ergens 'Koppel met ouder': false"
+    },
+    {
+      "nr": 11,
+      "titel": "Kind: typt code mét spatie (\"XXX XXX\")",
+      "sec": 1.6,
+      "bestand": "huidig-11.png"
+    },
+    {
+      "notitie": "Melding bij code met spatie: \"Die code klopt niet helemaal — kijk de spelling even na.\""
+    },
+    {
+      "nr": 12,
+      "titel": "Kind: typt code zonder spatie (nog geen naam op dit apparaat)",
+      "sec": 1.3,
+      "bestand": "huidig-12.png"
+    },
+    {
+      "notitie": "Kind krijgt: \"Dit is een koppelcode van thuis of school — die hoort bij jóuw naam. Tik bovenaan op \"Ik ben leerling\" en kies je naam; daarna koppelen we je meteen. Je hoeft de code niet nog een keer in te typen, we hebben hem onthouden.\""
+    },
+    {
+      "nr": 13,
+      "titel": "Kind: tikt 'leerling'",
+      "sec": 1.6,
+      "bestand": "huidig-13.png"
+    },
+    {
+      "notitie": "Na 'leerling': URL http://localhost:4174/ · vraagt om naam: true"
+    },
+    {
+      "nr": 14,
+      "titel": "Kind: naam ingevuld",
+      "sec": 1.6,
+      "bestand": "huidig-14.png"
+    },
+    {
+      "notitie": "Na naam: kind gekoppeld? false · scherm: Spring naar hoofdinhoud 🚀 Start-kwartier van Testkind Stop "
+    },
+    {
+      "nr": 15,
+      "titel": "Kind: tikt 'Stop' in het start-kwartier",
+      "sec": 2.1,
+      "bestand": "huidig-15.png"
+    },
+    {
+      "notitie": "Kind gekoppeld (link in store): true · feestscherm zichtbaar: true"
+    },
+    {
+      "nr": 16,
+      "titel": "Kind: eindstand",
+      "sec": 1.5,
+      "bestand": "huidig-16.png"
+    },
+    {
+      "notitie": "Kon 'Andere code' op /mijn niet vinden voor de dubbel-koppel-test."
+    },
+    {
+      "nr": 17,
+      "titel": "Moeder: overzicht na koppelen (kind heeft nog niets gedaan)",
+      "sec": 5.1,
+      "bestand": "huidig-17.png"
+    },
+    {
+      "notitie": "Moeder ziet 'Testkind': true · tekst bij 'nog niets gedaan' noemt inloggen met hetzelfde account: true"
+    }
+  ],
+  "serverlog": [
+    "moeder POST /rest/v1/rpc/get_visitor_count",
+    "moeder POST /rest/v1/rpc/klasgolf_actief",
+    "moeder POST /rest/v1/rpc/get_visitor_count",
+    "moeder POST /rest/v1/rpc/klasgolf_actief",
+    "moeder POST /rest/v1/rpc/gezin_overzicht",
+    "moeder POST /rest/v1/rpc/mijn_partner_recht",
+    "moeder POST /rest/v1/rpc/is_household_account",
+    "moeder GET /rest/v1/link_codes",
+    "moeder POST /rest/v1/rpc/gezin_koppel_zelfde_apparaat",
+    "moeder POST /rest/v1/link_codes",
+    "moeder POST /rest/v1/rpc/gezin_overzicht",
+    "moeder GET /rest/v1/link_codes",
+    "kind POST /rest/v1/rpc/get_visitor_count",
+    "kind POST /rest/v1/rpc/klasgolf_actief",
+    "kind POST /rest/v1/rpc/get_visitor_count",
+    "kind POST /rest/v1/rpc/klasgolf_actief",
+    "moeder POST /rest/v1/rpc/gezin_overzicht",
+    "moeder GET /rest/v1/link_codes",
+    "kind POST /rest/v1/rpc/claim_link_code",
+    "kind POST /rest/v1/rpc/voor_jou_klaargezet",
+    "kind POST /rest/v1/rpc/koppel_mijn_data",
+    "moeder POST /rest/v1/rpc/gezin_overzicht",
+    "moeder GET /rest/v1/link_codes",
+    "moeder GET /rest/v1/ouder_klaargezet",
+    "moeder GET /rest/v1/ouder_klaargezet",
+    "moeder POST /rest/v1/rpc/gezin_overzicht",
+    "moeder GET /rest/v1/link_codes",
+    "moeder POST /rest/v1/rpc/is_household_account",
+    "moeder GET /rest/v1/ouder_klaargezet",
+    "moeder GET /rest/v1/ouder_klaargezet"
+  ]
+}

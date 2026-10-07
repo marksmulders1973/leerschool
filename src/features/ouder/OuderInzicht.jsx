@@ -610,6 +610,14 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   const strongSubjects = Object.entries(subjectStats).filter(([, v]) => Math.max(...v.scores) >= 80).map(([, v]) => v.label);
   const weakSubjects = Object.entries(subjectStats).filter(([, v]) => Math.max(...v.scores) < 60 && v.scores.length >= 2).map(([, v]) => v.label);
 
+  // Audit 7 okt 2026: de Gezinsstart ging vanzelf open bij 0 kinderen, maar in
+  // stap 3 maakt hij zelf de koppeling aan — dan is er 1 kind en verdween de
+  // wizard midden in de stap (code + WhatsApp-knop en stap 4 nooit te zien).
+  // Eenmaal vanzelf geopend blijft hij nu open tot "Later" of "Naar mijn overzicht".
+  // (Hier, vóór de vroege return hieronder: hooks mogen niet achter een return.)
+  const leegGezin = overzichtGeladen && children.length === 0 && openInvites.length === 0;
+  useEffect(() => { if (gezinsstartOpen === null && leegGezin) setGezinsstartOpen(true); }, [gezinsstartOpen, leegGezin]);
+
   // Bug-jacht 7/7: anonieme park-sessies tellen óók als authUser, waardoor een
   // ouder koppelingen/doelen aan een wegwerp-anon-account kon hangen die na
   // een echte Google-login onbereikbaar zijn. Ouder-inzicht = altijd met
