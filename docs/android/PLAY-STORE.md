@@ -60,7 +60,7 @@ VOOR THUIS EN VOOR DE KLAS
 • Leerkrachten kunnen oefeningen klaarzetten voor de klas.
 
 RUSTIG EN OVERZICHTELIJK
-Leerkwartier is gemaakt om rustig te oefenen: duidelijke knoppen, korte vragen en geen afleiding. Een rustige bijlesdocent in je broekzak. 15 minuten per dag is genoeg.
+Leerkwartier is gemaakt om rustig te oefenen: duidelijke knoppen, korte vragen en geen afleiding. 15 minuten per dag is genoeg.
 
 Vragen of tips? Mail ons op hallo@leerkwartier.app. We lezen alles.
 ```
