@@ -1118,3 +1118,5 @@ Volledig in `docs/audit/TWIJFEL-schermen.md` (~301 punten; eerst de eindredactie
 - scripts/audit/schermen/statisch.mjs
 - scripts/audit/schermen/verken.mjs
 - scripts/audit/schermen/verken2.mjs
+
+> Schermafbeeldingen (209 png, 27 MB) staan niet op main; ze blijven op branch `audit3/schermen-teksten` (map docs/audit/schermen/voor en na).

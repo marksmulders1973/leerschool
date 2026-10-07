@@ -7,5 +7,5 @@
 // - BOUW_STEMPEL: wat de bezoeker rechtsboven ziet. Mark 5 okt 2026: "versie 923"
 //   leest als "923 keer iets mis" → vanaf 6 okt een datum. Eerste uitrol van een
 //   dag = "6 okt", tweede = "6 okt b", derde "6 okt c".
-export const BOUW_VERSIE = 929;
-export const BOUW_STEMPEL = "7 okt d";
+export const BOUW_VERSIE = 930;
+export const BOUW_STEMPEL = "7 okt e";
