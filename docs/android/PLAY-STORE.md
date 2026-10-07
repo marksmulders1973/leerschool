@@ -159,3 +159,13 @@ Gecontroleerd in de code: `src/utils.js` → `track()` (eigen events-tabel in Su
 8. **14 dagen** laten lopen met ≥ 12 testers die de app echt geïnstalleerd houden en gebruiken.
 9. **Productietoegang aanvragen** (*Dashboard → Productie aanvragen*): een paar vragen over de test beantwoorden.
 10. **Productie-release**: dezelfde bundle (of een nieuwe met hoger `appVersionCode`) promoveren naar Productie. Review duurt meestal 1-7 dagen.
+
+---
+
+## Status 7 okt 2026
+
+- App aangemaakt in Play Console (app-ID 4973180433502331886, pakket app.leerkwartier.twa). Alle 10 app-content-verklaringen, Store-instellingen (Onderwijs, hallo@, website) en de standaard winkelvermelding (teksten + icoon + banner + 6 schermen) ingevuld.
+- Classificatie: PEGI 3 / Iedereen / USK 0. Doelgroep 6-8 t/m 18+ (gezinsbeleid). Veiligheid van gegevens via CSV-import (`docs/android/data_safety_leerkwartier.csv`-aanpak: hallo@ niet als account; PSL_HAS_OUTSIDE_APP_ACCOUNTS leeg laten).
+- Gesloten test Alpha: release 1 (1.0.0) met `app-release-bundle-signed.aab`, landen NL+BE, testerslijst "Leerkwartier testers". **Automatische beveiliging (Play) uitgezet** omdat de TWA minSdk 21 heeft; bij een herbouw met minSdk 24 weer aanzetten.
+- 14 wijzigingen ter beoordeling gestuurd (17:00). Tester-adressen moeten Google-accounts zijn.
+- Open: standaardtaal vermelding staat op en-US (teksten zijn Nederlands) → via "Talen beheren" nl-NL toevoegen en als standaard zetten.
