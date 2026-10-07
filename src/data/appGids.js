@@ -11,7 +11,7 @@ export const APP_GIDS = [
     id: "koppelcode",
     rol: "ouder",
     vraag: "Hoe koppel ik mijn kind?",
-    antwoord: "Ga naar je thuis-overzicht (leerkwartier.app/ouder) en log in. Tik op \"Voeg je kind toe\" — je krijgt één korte code. Je kind voert die code in op het eigen toestel (bij \"Koppel met ouder\") en bevestigt. Daarna zie je de voortgang vanzelf.",
+    antwoord: "Ga naar je thuis-overzicht (leerkwartier.app/ouder) en log in. Vul de voornaam en groep van je kind in en kies bij de vraag over het apparaat \"Nee, op een ander apparaat\" — je krijgt één korte code. Je kind vult die code in op het eigen toestel (bij \"Code gekregen?\" op de startpagina). Daarna zie je de voortgang vanzelf.",
   },
   {
     id: "koppeling-werkt-niet",

@@ -13,6 +13,7 @@
 import { useMemo, useState } from "react";
 import supabase from "../supabase.js";
 import { bewaarKoppeling } from "../shared/koppeling.js";
+import { normaliseerKoppelcode } from "../shared/koppelcode.js";
 import { actievePartnerCode, partnerFamilieTot, partnerFamilieTotLabel, zetPartnerCodeHandmatig, codeUitUrl } from "../features/referral/partnerCode.js";
 import { PARTNER_NAMEN } from "./PartnerWelkom.jsx";
 import { track } from "../utils.js";
@@ -306,7 +307,9 @@ export default function CodeBalk({ rustig = false }) {
       window.location.href = "/nieuwkomers?via=" + encodeURIComponent(nkCode);
       return;
     }
-    if (/^[A-Z0-9]{4,8}$/.test(kaal) && !kaal.includes("2027")) {
+    // Audit 7 okt 2026: "ABC 123" / "ABC-123" (overgetypt uit WhatsApp) is ook een koppelcode.
+    const koppelKaal = normaliseerKoppelcode(kaal);
+    if (/^[A-Z0-9]{4,8}$/.test(koppelKaal) && !koppelKaal.includes("2027")) {
       // 🔐 Koppelcode (thuis/school). Fix 27 aug: een harde sprong naar
       // /leerling kaatst bij een koude landing bewust terug naar home
       // (Mark-besluit 7 aug) — dus als er al een kind-naam op dit apparaat
@@ -317,7 +320,7 @@ export default function CodeBalk({ rustig = false }) {
       try { naam = (JSON.parse(localStorage.getItem("ls_user") || "{}").name || "").trim() || null; } catch { /* */ }
       if (naam) {
         try {
-          const { data, error } = await supabase.rpc("claim_link_code", { p_code: kaal, p_child_name: naam });
+          const { data, error } = await supabase.rpc("claim_link_code", { p_code: koppelKaal, p_child_name: naam });
           if (!error && data?.ok) {
             bewaarKoppeling({ naam, linkId: data.link_id, rol: data.rol || "ouder", vanWie: data.van_wie });
             setKoppelTip({ klaar: true, rol: data.rol, naam });
@@ -325,14 +328,14 @@ export default function CodeBalk({ rustig = false }) {
             return;
           }
           if (!error && data?.error === "code_invalid_or_expired") {
-            if (await probeerWeekpakket(kaal)) return;
+            if (await probeerWeekpakket(koppelKaal)) return;
             setFout("Deze code herkennen we niet. Kijk de spelling even na. Let op: de code uit de wekelijkse mail wisselt elke week.");
             return;
           }
         } catch { /* val terug op de uitleg-route hieronder */ }
       }
-      if (await probeerWeekpakket(kaal)) return;
-      try { sessionStorage.setItem("lk_koppelcode_voorstel", kaal); } catch { /* */ }
+      if (await probeerWeekpakket(koppelKaal)) return;
+      try { sessionStorage.setItem("lk_koppelcode_voorstel", koppelKaal); } catch { /* */ }
       setKoppelTip({ klaar: false });
       return;
     }

@@ -1,0 +1,30 @@
+Voorbeeld: per blok is het eerste onderdeel 'nog niet' en de rest 'gaat goed'. Gegenereerd door de echte advies-code (7 okt 2026).
+
+groep 3 | blokken: rekenen[g3-getallen-tot-20,g3-plus-min-tot-10,g3-geld-en-klok] ; lezen[g3-letters-klanken,g3-woordjes-zinnen-lezen] ; taal[g3-klanken-rijmen,g3-woorden-schrijven]
+    rekenen → getallen-tot-20-po (nog-niet) | wissel: klokkijken (verder), tafels-po (verder)
+    lezen → taal-leren-lezen-g3 (nog-niet) | wissel: korte-teksten-snappen-g4 (verder), spelling-eerste-woorden-g3 (verder)
+    taal → spelling-eerste-woorden-g3 (verder) | wissel: korte-teksten-snappen-g4 (verder), taal-woorden-zinnen-g4 (verder)
+groep 4 | blokken: rekenen[g4-getallen-tot-100,g4-plus-min-tot-100,g4-tafels-1-2-5-10] ; begrijpend-lezen[g4-korte-tekst] ; taal[g4-spelling,g4-woorden-en-zinnen]
+    rekenen → rekenen-tot-100-nieuwkomers (nog-niet) | wissel: klokkijken (niet-gemeten), getallen-tot-20-po (verder)
+    begrijpend-lezen → korte-teksten-snappen-g4 (nog-niet) | wissel: taal-leren-lezen-g3 (makkelijker), taal-woorden-zinnen-g4 (verder)
+    taal → spelling-ei-ij-au-ou (nog-niet) | wissel: taal-woorden-zinnen-g4 (verder), spelling-eerste-woorden-g3 (makkelijker)
+groep 5 | blokken: rekenen[g5-getallen-tot-1000,g5-plus-min-tot-1000,g5-tafels-en-delen] ; begrijpend-lezen[g5-tekst-begrijpen] ; taal[g5-spelling,g5-woordsoorten,g5-woordenschat]
+    rekenen → schatten-afronden (nog-niet) | wissel: klokkijken (niet-gemeten), getallen-tot-20-po (verder)
+    begrijpend-lezen → begrijpend-lezen-strategie (nog-niet) | wissel: korte-teksten-snappen-g4 (verder), samenvatten-hoofdgedachte-po (verder)
+    taal → spelling-overige-po (nog-niet) | wissel: taal-woorden-zinnen-g4 (verder), synoniemen-tegenstellingen-po (verder)
+groep 6 | blokken: rekenen[g6-grote-getallen,g6-keer-en-delen,g6-breuken] ; begrijpend-lezen[g6-informatie-in-tekst] ; taal[g6-werkwoorden-nu,g6-spelling,g6-woordsoorten]
+    rekenen → schatten-afronden (nog-niet) | wissel: maten-eenheden (niet-gemeten), maten-omtrek-oppervlakte-po (verder)
+    begrijpend-lezen → feiten-details-opzoeken-po (nog-niet) | wissel: tekstverbanden-oorzaak-gevolg-po (verder), samenvatten-hoofdgedachte-po (verder)
+    taal → werkwoordsspelling-dt (nog-niet) | wissel: spelling-overige-po (verder), synoniemen-tegenstellingen-po (verder)
+groep 7 | blokken: rekenen[g7-breuken,g7-kommagetallen,g7-procenten] ; begrijpend-lezen[g7-hoofdgedachte-verbanden] ; studievaardigheden[g8-tabellen-grafieken,sv-alfabet-woordenboek,sv-kaartlezen]
+    rekenen → breuken-po (nog-niet) | wissel: maten-omtrek-oppervlakte-po (niet-gemeten), kommagetallen-po (verder)
+    begrijpend-lezen → samenvatten-hoofdgedachte-po (nog-niet) | wissel: feiten-details-opzoeken-po (verder), tekstverbanden-oorzaak-gevolg-po (verder)
+    studievaardigheden → tabellen-grafieken (nog-niet) | wissel: alfabet-woordenboek-po (verder), betrouwbaarheid-bronnen-po (verder)
+groep 8 | blokken: rekenen[breuken,procenten,verhoudingen] ; begrijpend-lezen[hoofdgedachte] ; studievaardigheden[g8-tabellen-grafieken,sv-alfabet-woordenboek,sv-kaartlezen]
+    rekenen → breuken-po (nog-niet) | wissel: maten-eenheden (niet-gemeten), maten-omtrek-oppervlakte-po (verder)
+    begrijpend-lezen → samenvatten-hoofdgedachte-po (nog-niet) | wissel: feiten-details-opzoeken-po (verder), tekstverbanden-oorzaak-gevolg-po (verder)
+    studievaardigheden → tabellen-grafieken (nog-niet) | wissel: alfabet-woordenboek-po (verder), betrouwbaarheid-bronnen-po (verder)
+groep brugklas | blokken: rekenen[breuken,procenten,verhoudingen] ; begrijpend-lezen[hoofdgedachte] ; studievaardigheden[g8-tabellen-grafieken,sv-alfabet-woordenboek,sv-kaartlezen]
+    rekenen → breuken-po (nog-niet) | wissel: maten-eenheden (niet-gemeten), maten-omtrek-oppervlakte-po (verder)
+    begrijpend-lezen → samenvatten-hoofdgedachte-po (nog-niet) | wissel: feiten-details-opzoeken-po (verder), tekstverbanden-oorzaak-gevolg-po (verder)
+    studievaardigheden → tabellen-grafieken (nog-niet) | wissel: alfabet-woordenboek-po (verder), betrouwbaarheid-bronnen-po (verder)

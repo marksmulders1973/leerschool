@@ -59,6 +59,8 @@ export const PAGE_TO_PATH = {
   diploma: "/diploma",
   // Ouderkaart "zo leg je 't uit" — feature 3, geheim (alleen via ?familie=1 of admin).
   ouderkaart: "/ouderkaart",
+  // Ouderadvies — PROTOTYPE (7 okt 2026), alleen na /ouderadvies?proto=1; niet in de navigatie.
+  ouderadvies: "/ouderadvies",
   // Koelkast-weekschema — feature 5, bèta-live.
   weekschema: "/weekschema",
   // Trots-momenten — feature 6, bèta-live (hub-preview; echte momenten in-flow).

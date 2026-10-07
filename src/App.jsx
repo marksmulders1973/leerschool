@@ -97,6 +97,9 @@ const FamilieHub = lazy(() => import("./features/familie/FamilieHub.jsx"));
 const Paraatheidsmeter = lazy(() => import("./features/familie/Paraatheidsmeter.jsx"));
 const DiplomaPagina = lazy(() => import("./features/familie/DiplomaPagina.jsx"));
 const OuderkaartPagina = lazy(() => import("./features/familie/OuderkaartPagina.jsx"));
+// Ouderadvies — PROTOTYPE (7 okt 2026), alleen via /ouderadvies?proto=1 (vlag op het apparaat).
+const OuderAdvies = lazy(() => import("./features/ouder/OuderAdvies.jsx"));
+import { ouderadviesZichtbaar } from "./features/ouder/ouderadvies/vlag.js";
 const WeekschemaPagina = lazy(() => import("./features/familie/WeekschemaPagina.jsx"));
 const TrotsMomentPagina = lazy(() => import("./features/familie/TrotsMomentPagina.jsx"));
 const VonkPagina = lazy(() => import("./features/familie/VonkPagina.jsx"));
@@ -752,6 +755,8 @@ export default function App() {
   // "← terug" op een Familie-pagina (die naar de hub of home wil) je terug naar Mijn pagina.
   const FAMILIE_PAGINAS = ["familie", "paraatheid", "oefenboekje", "diploma", "ouderkaart", "weekschema", "trots", "vonk"];
   const familieBronRef = useRef(null);
+  // Ouderadvies-prototype: zonder vlag op dit apparaat gewoon naar home.
+  useEffect(() => { if (page === "ouderadvies" && !ouderadviesZichtbaar()) setPage("home"); }, [page]);
   useEffect(() => { if (!FAMILIE_PAGINAS.includes(page)) familieBronRef.current = null; }, [page]); // eslint-disable-line react-hooks/exhaustive-deps
   const familieSetPage = (p) => {
     if ((p === "familie" || p === "home") && familieBronRef.current) { const t = familieBronRef.current; familieBronRef.current = null; setPage(t); return; }
@@ -2647,6 +2652,10 @@ export default function App() {
       {page === "oefenboekje" && <OefenboekjePagina setPage={familieSetPage} />}
       {page === "diploma" && <DiplomaPagina setPage={familieSetPage} />}
       {page === "ouderkaart" && <OuderkaartPagina setPage={familieSetPage} />}
+      {page === "ouderadvies" && ouderadviesZichtbaar() && (
+        <OuderAdvies authUser={authUser} onTerug={() => setPage("home")}
+            onOefenen={(naam, id) => { wisselProfiel(naam); setActiveLearnPathId(id); setActiveLearnStepIdx(null); setLearnPathReturnPage("ouderadvies"); setPage("learn-path"); }} />
+      )}
       {page === "weekschema" && <WeekschemaPagina setPage={familieSetPage} />}
       {page === "trots" && <TrotsMomentPagina setPage={familieSetPage} />}
       {page === "vonk" && <VonkPagina setPage={familieSetPage} />}

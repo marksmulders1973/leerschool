@@ -288,7 +288,7 @@ export default function Gezinsstart({ authUser, bestaandAantal = 0, bestaandeNam
           )}
           {kind.apparaat === "ander" && (
             <>
-              <div style={F.sub}>Stuur deze code naar {kind.naam}. In de app: <strong>Koppel met ouder</strong>, code invoeren, klaar. De code is 48 uur geldig.</div>
+              <div style={F.sub}>Stuur deze code naar {kind.naam}. In de app: <strong>Code gekregen?</strong>, code invoeren, klaar. De code is 48 uur geldig.</div>
               <div style={{ textAlign: "center", padding: "6px 0 10px" }}>
                 <div style={{ fontFamily: "var(--font-display)", fontSize: 32, fontWeight: 700, color: "#00b0ff", letterSpacing: 6 }}>{kind.code}</div>
               </div>

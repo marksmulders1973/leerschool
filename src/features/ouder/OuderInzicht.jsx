@@ -543,7 +543,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // code op eigen regel, plat, makkelijk over te typen vanuit WhatsApp.
   const sendWhatsApp = (code, naam) => {
     const hoi = naam ? `Hoi ${naam}!` : "Hoi!";
-    const msg = encodeURIComponent(`${hoi} Open ${BRAND.name} (${BRAND.domain}) en voer deze koppelcode in bij 'Koppel met ouder':\n\n${code}\n\nDan kan ik jouw voortgang zien 😊 (de code is 48 uur geldig)`);
+    const msg = encodeURIComponent(`${hoi} Open ${BRAND.name} (${BRAND.domain}) tik op 'Code gekregen?' en vul deze koppelcode in:\n\n${code}\n\nDan kan ik jouw voortgang zien 😊 (de code is 48 uur geldig)`);
     window.open(`https://wa.me/?text=${msg}`, "_blank");
     try { track("ouder_koppelcode_deel", { via: "whatsapp" }); } catch { /* */ }
   };
@@ -552,7 +552,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // keer — "je code staat nog klaar" — zodat het kind 'm alsnog invoert.
   const stuurHerinnering = (code, naam) => {
     const hoi = naam ? `Hoi ${naam}!` : "Hoi!";
-    const msg = encodeURIComponent(`${hoi} Je koppelcode voor ${BRAND.name} staat nog klaar:\n\n${code}\n\nOpen de app en voer 'm in bij 'Koppel met ouder' 😊 (nog even geldig)`);
+    const msg = encodeURIComponent(`${hoi} Je koppelcode voor ${BRAND.name} staat nog klaar:\n\n${code}\n\nOpen de app, tik op 'Code gekregen?' en vul 'm in 😊 (nog even geldig)`);
     window.open(`https://wa.me/?text=${msg}`, "_blank");
     try { track("ouder_koppelcode_herinnering", {}); } catch { /* */ }
   };
@@ -562,7 +562,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   const sendEmailCode = (code) => {
     const subject = encodeURIComponent(`Koppelcode voor ${BRAND.name}`);
     const body = encodeURIComponent(
-      `Hoi!\n\nOpen ${BRAND.name} (${BRAND.domain}) en voer de koppelcode ${code} in bij 'Koppel met ouder'. Dan kan ik jouw voortgang volgen.\n\n(De code is 48 uur geldig.)`
+      `Hoi!\n\nOpen ${BRAND.name} (${BRAND.domain}) tik op 'Code gekregen?' en vul de koppelcode ${code} in. Dan kan ik jouw voortgang volgen.\n\n(De code is 48 uur geldig.)`
     );
     window.location.href = `mailto:?subject=${subject}&body=${body}`;
     try { track("ouder_koppelcode_deel", { via: "mail" }); } catch { /* */ }
@@ -854,7 +854,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                     {iv ? (
                       <>
                         <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.7)", lineHeight: 1.5 }}>
-                          Stuur deze code naar {naam}. In de app: <strong>Koppel met ouder</strong>, code invoeren, klaar.{geldigheidsTekst(iv.expires_at) ? ` De code is ${geldigheidsTekst(iv.expires_at)}.` : ""}
+                          Stuur deze code naar {naam}. In de app: <strong>Code gekregen?</strong>, code invoeren, klaar.{geldigheidsTekst(iv.expires_at) ? ` De code is ${geldigheidsTekst(iv.expires_at)}.` : ""}
                         </div>
                         <div style={{ textAlign: "center", padding: "6px 0 8px" }}>
                           <div style={{ fontFamily: "var(--font-display)", fontSize: 30, fontWeight: 700, color: "#00b0ff", letterSpacing: 5 }}>{iv.code}</div>
@@ -915,7 +915,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                 {gekoppeld && herstelCode?.childName === c.child_name && (
                   <div onClick={(e) => e.stopPropagation()} style={{ marginTop: 10, padding: "11px 13px", borderRadius: 11, border: "1px solid rgba(0,176,255,0.35)", background: "rgba(0,176,255,0.07)" }}>
                     <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.75)", lineHeight: 1.5, marginBottom: 8 }}>
-                      Nieuw toestel, of ziet {naam} niks van jou? Laat {naam} deze verse code invoeren op het toestel dat hij/zij <strong>nu</strong> gebruikt (bij <strong>Koppel met ouder</strong>). De koppeling schuift dan vanzelf mee naar dat account — je hoeft niets te verwijderen.
+                      Nieuw toestel, of ziet {naam} niks van jou? Laat {naam} deze verse code invoeren op het toestel dat hij/zij <strong>nu</strong> gebruikt (bij <strong>Code gekregen?</strong>). De koppeling schuift dan vanzelf mee naar dat account — je hoeft niets te verwijderen.
                     </div>
                     <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.5)", lineHeight: 1.5, marginBottom: 8 }}>
                       Oefent {naam} op <strong>meer</strong> toestellen (eigen telefoon én de tablet)? Elk toestel heeft één keer zo'n code nodig; daarna telt alles bij elkaar op. Op <strong>dit</strong> toestel hoeft dat niet: gebruik "laat {naam} hier oefenen".
@@ -1285,7 +1285,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
           <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.65)", lineHeight: 1.5, maxWidth: 320, margin: "0 auto" }}>
             Voor de privacy van je kind zie je pas scores zodra je kind de
             koppeling bevestigt. Stuur de koppelcode (hierboven) en laat 'm
-            die in de app invoeren bij <strong>Instellingen → Koppel met ouder</strong>.
+            die in de app invoeren bij <strong>Code gekregen?</strong> (startpagina) of <strong>Koppelcode van thuis of school?</strong> (eigen pagina).
           </div>
         </div>
       )}
