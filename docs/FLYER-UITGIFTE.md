@@ -24,7 +24,7 @@
 | Voedselbank Almelo | ALMELO2027 | Rita van Oosterom (secretaris) | digitaal (link in bedankmail) | 5 okt | — | 5 okt: na verhuizing; overleg intake-vrijwilligers + flyer uitdelen; fysiek pas op hun vraag |
 | Voedselbank Dongen | DONGEN2027 | ? | digitaal | 14 aug | 50 | vroeg zelf om flyer |
 | Voedselbank Zaanstreek | ZAANSTREEK2027 | ? | digitaal | 11 aug | 100 | via uitdeelpunt-medewerkers |
-| Leergeld Haarlemmermeer (Spark Fest) | HAARLEMMERMEER2027 | 1000 | print | 23 jul | 1000 | goodybags 18 okt — nog te drukken |
+| Leergeld Haarlemmermeer (Spark Fest) | HAARLEMMERMEER2027 | 1000 | print | 23 jul | 1000 | gedrukt bij de drukker en al in de goodiebags (Mark 7 okt); uitdelen 18 okt |
 | Queen Wilhelmina Library (Saba) | SABA2027 | 100 | print (post) | 20 aug | 50 | + A3-poster; wacht op adres |
 | Voedselbank Smallingerland | SMALLINGERLAND2027 | ? | digitaal | 16 jul | 100 | |
 | Voedselbank Breda | BREDA2027 | ? | digitaal | 16 jul | 50 | |
