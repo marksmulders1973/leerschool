@@ -106,6 +106,272 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet nul — pas op.", "Elk getal gedeeld door zichzelf: hoeveel keer past het getal in zichzelf?", "Vermenigvuldiging."],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke keersom hoort bij **15 ÷ 3 = 5**?",
+        options: ["5 × 3 = 15", "15 × 3 = 45", "5 + 3 = 8", "15 − 3 = 12"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk naar de uitkomst. Moet daar 15 uitkomen of iets anders?",
+          null,
+          "Dit is een minsom. Welke som is het omgekeerde van delen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Delen is keer andersom",
+              tekst: "Delen is het **omgekeerde** van keer. Bij **15 ÷ 3 = 5** hoort een keersom met dezelfde drie getallen: 3, 5 en 15.",
+            },
+            {
+              titel: "Zet de getallen op hun plek",
+              tekst: "De uitkomst van de keersom is het grote getal: **15**. Dus: **5 × 3 = 15**.",
+            },
+            {
+              titel: "Check",
+              tekst: "Klopt het? 5 × 3 = 15 ✓. En 15 ÷ 3 = 5 ✓. Dezelfde drie getallen, twee kanten op.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "omgekeerde",
+              uitleg: "De andere kant op: keer en delen horen bij elkaar.",
+            },
+          ],
+          theorie: "Toets-truc: bij elke deling hoort een keersom. Als **4 × 3 = 12**, dan **12 ÷ 3 = 4** en **12 ÷ 4 = 3**.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "**20 ÷ 4 = 5** hoort bij **5 × 4 = 20**.",
+            },
+            {
+              type: "stap",
+              tekst: "**18 ÷ 6 = 3** hoort bij **3 × 6 = 18**.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Het grootste getal staat bij delen vooraan, en bij keer achter het = teken.",
+            },
+          ],
+          niveaus: {
+            basis: "5 × 3 = 15.",
+            simpeler: "15 ÷ 3 = 5, dus 5 keer 3 is weer 15.",
+            nogSimpeler: "5 × 3 = 15",
+          },
+        },
+      },
+      {
+        q: "Wat is **0 ÷ 5**?",
+        options: ["0", "5", "1", "Dat mag niet"],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Elk getal gedeeld door zichzelf is 1. Maar is 0 hetzelfde als 5?",
+          "Je verdeelt niets over 5 kinderen. Mag dat? Wat krijgt elk kind dan?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat betekent 0 ÷ 5?",
+              tekst: "**0 ÷ 5** = **0 verdelen over 5**. Je hebt 0 snoepjes en 5 kinderen.",
+            },
+            {
+              titel: "Hoeveel krijgt elk kind?",
+              tekst: "Er is niets om te verdelen. Elk kind krijgt **0**.",
+            },
+            {
+              titel: "Check met de tafel",
+              tekst: "Wat keer 5 is 0? **0 × 5 = 0**. Dus 0 ÷ 5 = **0**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "0",
+              uitleg: "Niets. 0 verdeeld over een groep geeft 0.",
+            },
+          ],
+          theorie: "Let op het verschil: **0 ÷ 5 = 0** mag wel. **5 ÷ 0** mag niet: delen door 0 bestaat niet.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "**0 ÷ 7 = 0**.",
+            },
+            {
+              type: "stap",
+              tekst: "**0 ÷ 2 = 0**.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Regel",
+              uitleg: "0 gedeeld door een getal is altijd 0.",
+            },
+          ],
+          niveaus: {
+            basis: "0 ÷ 5 = 0.",
+            simpeler: "Niets verdelen over 5 kinderen: elk kind krijgt 0.",
+            nogSimpeler: "0",
+          },
+        },
+      },
+      {
+        q: "Welke som **mag niet**?",
+        options: ["6 ÷ 0", "0 ÷ 6", "6 ÷ 1", "6 ÷ 6"],
+        answer: 0,
+        wrongHints: [null, "Je verdeelt niets over 6 kinderen. Kan dat?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Delen door 1 en door zichzelf",
+              tekst: "**6 ÷ 1 = 6** en **6 ÷ 6 = 1**. Die mogen allebei.",
+            },
+            {
+              titel: "0 delen",
+              tekst: "**0 ÷ 6 = 0**. Niets verdelen over 6 kinderen geeft 0 per kind. Dat mag ook.",
+            },
+            {
+              titel: "Delen door 0",
+              tekst: "**6 ÷ 0**: 6 snoepjes verdelen over 0 kinderen. Er is niemand om het aan te geven. Delen door 0 **bestaat niet**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "delen door 0",
+              uitleg: "Mag niet. Daar komt geen antwoord uit.",
+            },
+          ],
+          theorie: "Onthoud: **0 ÷ getal = 0** (mag). **Getal ÷ 0** mag niet.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "**7 ÷ 0** mag niet.",
+            },
+            {
+              type: "stap",
+              tekst: "**0 ÷ 7 = 0** mag wel.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Regel",
+              uitleg: "Je kunt nooit door 0 delen.",
+            },
+          ],
+          niveaus: {
+            basis: "6 ÷ 0 mag niet.",
+            simpeler: "Delen door 0 bestaat niet.",
+            nogSimpeler: "6 ÷ 0",
+          },
+        },
+      },
+      {
+        q: "Je verdeelt **14 knikkers** eerlijk over **2 kinderen**. Hoeveel knikkers krijgt elk kind?",
+        options: ["7", "12", "16", "28"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dit is 14 min 2. Maar je moet de knikkers verdelen.",
+          null,
+          "Krijgt elk kind dan meer knikkers dan er zijn?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welke som is het?",
+              tekst: "Eerlijk verdelen = **delen**. De som is **14 ÷ 2**.",
+            },
+            {
+              titel: "Tafel terug",
+              tekst: "Denk: '**wat keer 2 is 14?**'. **7 × 2 = 14**. Dus 14 ÷ 2 = **7**.",
+            },
+            {
+              titel: "Check",
+              tekst: "2 kinderen × 7 knikkers = 14 knikkers ✓.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "eerlijk verdelen",
+              uitleg: "Iedereen krijgt evenveel.",
+            },
+          ],
+          theorie: "Toets-truc: bij 'verdelen over' is het een deelsom. Zoek de tafel terug.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "**10 ÷ 2 = 5** (want 5 × 2 = 10).",
+            },
+            {
+              type: "stap",
+              tekst: "**16 ÷ 2 = 8** (want 8 × 2 = 16).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Verdelen over 2 = de helft pakken.",
+            },
+          ],
+          niveaus: {
+            basis: "14 ÷ 2 = 7 knikkers per kind.",
+            simpeler: "14 knikkers over 2 kinderen: elk kind krijgt 7.",
+            nogSimpeler: "7",
+          },
+        },
+      },
+      {
+        q: "**20 : 4** betekent hetzelfde als …",
+        options: ["20 ÷ 4", "20 × 4", "20 − 4", "20 + 4"],
+        answer: 0,
+        wrongHints: [null, "Het teken : is geen keerteken. Waar staat het voor?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Drie deeltekens",
+              tekst: "Delen kun je op drie manieren schrijven: **÷**, **/** en **:**.",
+            },
+            {
+              titel: "Dus",
+              tekst: "**20 : 4** = **20 ÷ 4** = **20 / 4**. Allemaal hetzelfde: 20 delen door 4.",
+            },
+            {
+              titel: "Uitkomst",
+              tekst: "20 ÷ 4 = **5**, want 5 × 4 = 20.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "deelteken",
+              uitleg: "Het teken voor delen: ÷ of / of :.",
+            },
+          ],
+          theorie: "Toets-truc: zie je **:** of **/** tussen twee getallen? Dan is het een deelsom.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "**30 : 5** = 30 ÷ 5 = 6.",
+            },
+            {
+              type: "stap",
+              tekst: "**12 / 3** = 12 ÷ 3 = 4.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Let op",
+              uitleg: "In de toets kom je alle drie de tekens tegen.",
+            },
+          ],
+          niveaus: {
+            basis: "20 : 4 = 20 ÷ 4.",
+            simpeler: "Het teken : betekent delen.",
+            nogSimpeler: "20 ÷ 4",
+          },
+        },
+      },
     ],
   },
 
@@ -193,6 +459,324 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Te weinig.", "Vermenigvuldiging.", "Optelling."],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**70 ÷ 10** = ?",
+        options: ["7", "60", "700", "80"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is aftrekking, niet delen — hoe verander je een getal als je het door 10 deelt?",
+          "Dat is vermenigvuldigen, niet delen — bij ÷ 10 wordt het getal kleiner.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Delen door 10",
+              tekst: "Bij delen door 10 haal je **een 0 weg**. 70 → **7**.",
+            },
+            {
+              titel: "Check terug",
+              tekst: "7 × 10 = 70 ✓.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "÷ 10",
+              uitleg: "Een 0 weghalen, of de komma 1 plek naar links.",
+            },
+          ],
+          theorie: "Toets-truc: ÷ 10 = laatste 0 weghalen. 30 ÷ 10 = 3. 100 ÷ 10 = 10.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "80 ÷ 10 = 8.",
+            },
+            {
+              type: "stap",
+              tekst: "250 ÷ 10 = 25.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Tafel-10 terug: wat × 10 = 70? → 7.",
+            },
+          ],
+          niveaus: {
+            basis: "70 ÷ 10 = 7.",
+            simpeler: "Haal de 0 weg: 70 wordt 7.",
+            nogSimpeler: "7",
+          },
+        },
+      },
+      {
+        q: "**30 ÷ 2** = ?",
+        options: ["15", "28", "60", "32"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is aftrekking, niet delen — welke bewerking hoort bij '÷ 2'?",
+          "Dat is vermenigvuldigen, niet delen — bij ÷ 2 wordt het getal kleiner.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Delen door 2 = halveren",
+              tekst: "Delen door 2 betekent de **helft** pakken. Helft van 30 = **15**.",
+            },
+            {
+              titel: "Truc voor halveren",
+              tekst: "Splits het getal: 30 = 20 + 10 → helft = 10 + 5 = **15**.",
+            },
+            {
+              titel: "Check terug",
+              tekst: "15 × 2 = 30 ✓.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "halveren",
+              uitleg: "In 2 gelijke stukken splitsen.",
+            },
+          ],
+          theorie: "Toets-truc: ÷ 2 = halveren. Splits een groot getal in makkelijke stukken en halveer elk stuk.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "18 ÷ 2 = 9.",
+            },
+            {
+              type: "stap",
+              tekst: "40 ÷ 2 = 20.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "15 + 15 = 30. Twee gelijke helften.",
+            },
+          ],
+          niveaus: {
+            basis: "30 ÷ 2 = 15 (helft).",
+            simpeler: "Helft van 30 = 15.",
+            nogSimpeler: "15",
+          },
+        },
+      },
+      {
+        q: "**45 ÷ 5** = ?",
+        options: ["9", "40", "50", "225"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is aftrekking, niet delen — welk getal maal 5 geeft 45?",
+          null,
+          "Dat is vermenigvuldigen, niet delen — bij ÷ 5 wordt het getal kleiner.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tafel-5 terug",
+              tekst: "Denk: '**wat × 5 = 45?**'. Tafel van 5: 5, 10, 15, 20, 25, 30, 35, 40, **45**. Dat is de 9e.",
+            },
+            {
+              titel: "Andere truc",
+              tekst: "Verdubbelen en dan ÷ 10: 45 × 2 = 90, 90 ÷ 10 = **9**.",
+            },
+            {
+              titel: "Check terug",
+              tekst: "9 × 5 = 45 ✓.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tafel terugzoeken",
+              uitleg: "Zoek welk getal keer 5 het deeltal geeft.",
+            },
+          ],
+          theorie: "Toets-truc: ÷ 5 = eerst × 2, dan ÷ 10. Of de tafel van 5 terugzoeken.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "35 ÷ 5 = 7 (want 7 × 5 = 35).",
+            },
+            {
+              type: "stap",
+              tekst: "50 ÷ 5 = 10.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Elk getal in de tafel van 5 eindigt op 0 of 5.",
+            },
+          ],
+          niveaus: {
+            basis: "45 ÷ 5 = 9.",
+            simpeler: "9 × 5 = 45, dus 45 ÷ 5 = 9.",
+            nogSimpeler: "9",
+          },
+        },
+      },
+      {
+        q: "**250 ÷ 10** = ?",
+        options: ["25", "240", "2500", "260"],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Dat is vermenigvuldigen, niet delen — bij ÷ 10 wordt het getal kleiner.",
+          "Dat is optelling, niet delen — hoe verander je een getal als je het door 10 deelt?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Delen door 10",
+              tekst: "Bij delen door 10 haal je de **laatste 0 weg**. 250 → **25**.",
+            },
+            {
+              titel: "Check terug",
+              tekst: "25 × 10 = 250 ✓.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "÷ 10",
+              uitleg: "Een 0 weghalen, of de komma 1 plek naar links.",
+            },
+          ],
+          theorie: "Toets-truc: ÷ 10 = laatste 0 weghalen. Ook bij grote getallen: 400 ÷ 10 = 40.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "300 ÷ 10 = 30.",
+            },
+            {
+              type: "stap",
+              tekst: "120 ÷ 10 = 12.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Let op",
+              uitleg: "Haal alleen de **laatste** 0 weg, niet de 5 of de 2.",
+            },
+          ],
+          niveaus: {
+            basis: "250 ÷ 10 = 25.",
+            simpeler: "Haal de laatste 0 weg: 250 wordt 25.",
+            nogSimpeler: "25",
+          },
+        },
+      },
+      {
+        q: "**60 ÷ 5** = ?",
+        options: ["12", "55", "65", "300"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is aftrekking, niet delen — welk getal maal 5 geeft 60?",
+          null,
+          "Dat is vermenigvuldigen, niet delen — bij ÷ 5 wordt het getal kleiner.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Truc: × 2 en ÷ 10",
+              tekst: "Delen door 5: eerst **verdubbelen**, dan **÷ 10**. 60 × 2 = 120.",
+            },
+            {
+              titel: "Dan ÷ 10",
+              tekst: "120 ÷ 10 = **12**.",
+            },
+            {
+              titel: "Check terug",
+              tekst: "12 × 5 = 60 ✓.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "verdubbelen",
+              uitleg: "Keer 2 doen.",
+            },
+          ],
+          theorie: "Toets-truc: ÷ 5 = × 2 en dan ÷ 10. Of andersom: 60 ÷ 10 = 6, en 6 × 2 = 12.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "40 ÷ 5 = 80 ÷ 10 = 8.",
+            },
+            {
+              type: "stap",
+              tekst: "70 ÷ 5 = 140 ÷ 10 = 14.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "5 is de helft van 10. Dus ÷ 5 geeft het dubbele van ÷ 10.",
+            },
+          ],
+          niveaus: {
+            basis: "60 ÷ 5 = 12.",
+            simpeler: "60 ÷ 10 = 6, en 6 × 2 = 12.",
+            nogSimpeler: "12",
+          },
+        },
+      },
+      {
+        q: "Welke deling heeft als uitkomst **8**?",
+        options: ["80 ÷ 10", "60 ÷ 10", "18 ÷ 2", "50 ÷ 5"],
+        answer: 0,
+        wrongHints: [null, "Haal de 0 weg. Welk getal hou je over?", null, "Wat keer 5 is 50?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Reken elke deling uit",
+              tekst: "80 ÷ 10 = **8**. 60 ÷ 10 = 6. 18 ÷ 2 = 9. 50 ÷ 5 = 10.",
+            },
+            {
+              titel: "Welke is 8?",
+              tekst: "Alleen **80 ÷ 10** geeft 8.",
+            },
+            {
+              titel: "Check terug",
+              tekst: "8 × 10 = 80 ✓.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "uitkomst",
+              uitleg: "Het antwoord van de som.",
+            },
+          ],
+          theorie: "Toets-truc: reken bij zo'n vraag elke optie kort uit. ÷ 10 = 0 weg, ÷ 2 = halveren, ÷ 5 = tafel-5 terug.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "16 ÷ 2 = 8.",
+            },
+            {
+              type: "stap",
+              tekst: "40 ÷ 5 = 8.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Check je keuze met keer: 8 × 10 = 80.",
+            },
+          ],
+          niveaus: {
+            basis: "80 ÷ 10 = 8.",
+            simpeler: "Haal de 0 van 80 weg: 8.",
+            nogSimpeler: "80 ÷ 10",
+          },
+        },
+      },
     ],
   },
 
@@ -261,6 +845,241 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Aftrekking.", "Optelling.", "Net niet."],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**28 ÷ 7** = ?",
+        options: ["4", "21", "35", "5"],
+        answer: 0,
+        wrongHints: [null, "Aftrekking.", "Optelling.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tafel-7 terug",
+              tekst: "Denk: '**wat × 7 = 28?**'. Tafel van 7: 7, 14, 21, **28**. Dat is de 4e.",
+            },
+            {
+              titel: "Check",
+              tekst: "4 × 7 = 28 ✓. Dus 28 ÷ 7 = **4**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tafel terugzoeken",
+              uitleg: "Bij delen: welk getal keer 7 geeft het deeltal?",
+            },
+          ],
+          theorie: "Toets-truc: zeg de tafel van 7 op tot je het deeltal hoort, en tel hoeveel stappen het waren.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "**21 ÷ 7** = 3.",
+            },
+            {
+              type: "stap",
+              tekst: "**35 ÷ 7** = 5.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Tafel-7: 7, 14, 21, 28, 35, 42, 49, 56, 63, 70.",
+            },
+          ],
+          niveaus: {
+            basis: "28 ÷ 7 = 4.",
+            simpeler: "Tel tafel-7: 7, 14, 21, 28. 28 is de 4e.",
+            nogSimpeler: "4",
+          },
+        },
+      },
+      {
+        q: "**32 ÷ 4** = ?",
+        options: ["8", "28", "36", "7"],
+        answer: 0,
+        wrongHints: [null, "Aftrekking.", "Optelling.", "Net niet — controleer."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tafel-4 terug",
+              tekst: "Denk: '**wat × 4 = 32?**'. Tafel van 4: 4, 8, 12, 16, 20, 24, 28, **32**. Dat is de 8e.",
+            },
+            {
+              titel: "Check",
+              tekst: "8 × 4 = 32 ✓. Dus 32 ÷ 4 = **8**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tafel terugzoeken",
+              uitleg: "Bij delen: welk getal keer 4 geeft het deeltal?",
+            },
+          ],
+          theorie: "Toets-truc: ÷ 4 is ook twee keer halveren. 32 → 16 → **8**.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "**24 ÷ 4** = 6.",
+            },
+            {
+              type: "stap",
+              tekst: "**36 ÷ 4** = 9.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Tafel-4: 4, 8, 12, 16, 20, 24, 28, 32, 36, 40.",
+            },
+          ],
+          niveaus: {
+            basis: "32 ÷ 4 = 8.",
+            simpeler: "Halveer 32: 16. Halveer nog eens: 8.",
+            nogSimpeler: "8",
+          },
+        },
+      },
+      {
+        q: "**54 ÷ 6** = ?",
+        options: ["9", "48", "60", "8"],
+        answer: 0,
+        wrongHints: [null, "Aftrekking.", "Optelling.", "Net niet."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tafel-6 terug",
+              tekst: "Denk: '**wat × 6 = 54?**'. Tafel van 6: 6, 12, 18, 24, 30, 36, 42, 48, **54**. Dat is de 9e.",
+            },
+            {
+              titel: "Schatten",
+              tekst: "60 ÷ 6 = 10. 54 is iets minder dan 60, dus het antwoord is iets onder 10: **9**.",
+            },
+            {
+              titel: "Check",
+              tekst: "9 × 6 = 54 ✓.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schatten",
+              uitleg: "Eerst ongeveer uitrekenen met een rond getal.",
+            },
+          ],
+          theorie: "Toets-truc: bij grote getallen eerst schatten met een rond getal (60 ÷ 6 = 10), dan precies uitrekenen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "**42 ÷ 6** = 7.",
+            },
+            {
+              type: "stap",
+              tekst: "**30 ÷ 6** = 5.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Tafel-6: 6, 12, 18, 24, 30, 36, 42, 48, 54, 60.",
+            },
+          ],
+          niveaus: {
+            basis: "54 ÷ 6 = 9.",
+            simpeler: "9 × 6 = 54, dus 54 ÷ 6 = 9.",
+            nogSimpeler: "9",
+          },
+        },
+      },
+      {
+        q: "**27 ÷ 3** = ?",
+        options: ["9", "24", "30", "8"],
+        answer: 0,
+        wrongHints: [null, "Aftrekking.", "Optelling.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tafel-3 terug",
+              tekst: "Denk: '**wat × 3 = 27?**'. Tafel van 3: 3, 6, 9, 12, 15, 18, 21, 24, **27**. Dat is de 9e.",
+            },
+            {
+              titel: "Check",
+              tekst: "9 × 3 = 27 ✓. Dus 27 ÷ 3 = **9**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tafel terugzoeken",
+              uitleg: "Bij delen: welk getal keer 3 geeft het deeltal?",
+            },
+          ],
+          theorie: "Toets-truc: 30 ÷ 3 = 10. 27 is 3 minder dan 30, dus één stap minder: **9**.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "**21 ÷ 3** = 7.",
+            },
+            {
+              type: "stap",
+              tekst: "**15 ÷ 3** = 5.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Tafel-3: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30.",
+            },
+          ],
+          niveaus: {
+            basis: "27 ÷ 3 = 9.",
+            simpeler: "Tel tafel-3 tot 27: dat is de 9e stap.",
+            nogSimpeler: "9",
+          },
+        },
+      },
+      {
+        q: "**42 ÷ 6** = ?",
+        options: ["7", "36", "48", "6"],
+        answer: 0,
+        wrongHints: [null, "Aftrekking.", "Optelling.", "Net niet — controleer."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tafel-6 terug",
+              tekst: "Denk: '**wat × 6 = 42?**'. Tafel van 6: 6, 12, 18, 24, 30, 36, **42**. Dat is de 7e.",
+            },
+            {
+              titel: "Check",
+              tekst: "7 × 6 = 42 ✓. Dus 42 ÷ 6 = **7**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tafel terugzoeken",
+              uitleg: "Bij delen: welk getal keer 6 geeft het deeltal?",
+            },
+          ],
+          theorie: "Toets-truc: ken je 6 × 7 = 42? Dan weet je meteen 42 ÷ 6 = 7 en 42 ÷ 7 = 6.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "**36 ÷ 6** = 6.",
+            },
+            {
+              type: "stap",
+              tekst: "**48 ÷ 6** = 8.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Tafel-6: 6, 12, 18, 24, 30, 36, 42, 48, 54, 60.",
+            },
+          ],
+          niveaus: {
+            basis: "42 ÷ 6 = 7.",
+            simpeler: "7 × 6 = 42, dus 42 ÷ 6 = 7.",
+            nogSimpeler: "7",
+          },
+        },
+      },
     ],
   },
 
@@ -306,6 +1125,263 @@ const steps = [
             basis: "4 dozen.",
             simpeler: "20 eieren ÷ 6 per doos = 3 dozen vol + 2 eieren over. Die 2 ook in een doos = 4 dozen totaal.",
             nogSimpeler: "4 dozen",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**22 ÷ 4** = ?",
+        options: ["5 rest 2", "6 rest 2", "5 rest 1", "4 rest 2"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — hoeveel is 6 keer 4?",
+          "Reken na: hoeveel is 5 groepjes van 4, en hoeveel scheelt dat met 22?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Grootste tafel-keer",
+              tekst: "Tafel van 4: 4 × 5 = 20 *(net niet 22)*. 4 × 6 = 24 *(te veel)*. Dus 5 keer.",
+            },
+            {
+              titel: "Rest uitrekenen",
+              tekst: "22 − 20 = **2**. Dus 22 ÷ 4 = **5 rest 2**.",
+            },
+            {
+              titel: "Check",
+              tekst: "4 × 5 + 2 = 22 ✓.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "rest",
+              uitleg: "Wat er overblijft als de deling niet precies opgaat.",
+            },
+          ],
+          theorie: "Stappenplan: 1) zoek de grootste tafel-keer die niet groter is dan het deeltal, 2) trek af, 3) schrijf 'rest'.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "**17 ÷ 5** = 3 rest 2 (want 5 × 3 = 15).",
+            },
+            {
+              type: "stap",
+              tekst: "**30 ÷ 7** = 4 rest 2 (want 7 × 4 = 28).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Let op",
+              uitleg: "De rest is altijd kleiner dan het getal waardoor je deelt.",
+            },
+          ],
+          niveaus: {
+            basis: "22 ÷ 4 = 5 rest 2.",
+            simpeler: "5 × 4 = 20. 22 − 20 = 2 over.",
+            nogSimpeler: "5 rest 2",
+          },
+        },
+      },
+      {
+        q: "**19 ÷ 4** = ?",
+        options: ["4 rest 3", "5 rest 1", "4 rest 2", "3 rest 3"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — dat keer 4 is al groter dan 19.",
+          "Reken na: hoeveel is 4 groepjes van 4, en hoeveel scheelt dat met 19?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Grootste tafel-keer",
+              tekst: "Tafel van 4: 4 × 4 = 16 *(net niet 19)*. 4 × 5 = 20 *(te veel)*. Dus 4 keer.",
+            },
+            {
+              titel: "Rest uitrekenen",
+              tekst: "19 − 16 = **3**. Dus 19 ÷ 4 = **4 rest 3**.",
+            },
+            {
+              titel: "Check",
+              tekst: "4 × 4 + 3 = 19 ✓.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "rest",
+              uitleg: "Wat er overblijft als de deling niet precies opgaat.",
+            },
+          ],
+          theorie: "Stappenplan: 1) grootste tafel-keer zoeken, 2) aftrekken, 3) 'rest' opschrijven.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "**11 ÷ 3** = 3 rest 2.",
+            },
+            {
+              type: "stap",
+              tekst: "**22 ÷ 4** = 5 rest 2.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Let op",
+              uitleg: "Rest 3 bij delen door 4 mag: de rest is kleiner dan 4.",
+            },
+          ],
+          niveaus: {
+            basis: "19 ÷ 4 = 4 rest 3.",
+            simpeler: "4 × 4 = 16. 19 − 16 = 3 over.",
+            nogSimpeler: "4 rest 3",
+          },
+        },
+      },
+      {
+        q: "**30 ÷ 7** = ?",
+        options: ["4 rest 2", "5 rest 0", "4 rest 1", "3 rest 2"],
+        answer: 0,
+        wrongHints: [null, "Te veel — hoeveel is 5 keer 7?", null, "Reken na: past 7 niet vaker in 30?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Grootste tafel-keer",
+              tekst: "Tafel van 7: 7 × 4 = 28 *(net niet 30)*. 7 × 5 = 35 *(te veel)*. Dus 4 keer.",
+            },
+            {
+              titel: "Rest uitrekenen",
+              tekst: "30 − 28 = **2**. Dus 30 ÷ 7 = **4 rest 2**.",
+            },
+            {
+              titel: "Check",
+              tekst: "7 × 4 + 2 = 30 ✓.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "rest",
+              uitleg: "Wat er overblijft als de deling niet precies opgaat.",
+            },
+          ],
+          theorie: "Stappenplan: 1) grootste tafel-keer zoeken, 2) aftrekken, 3) 'rest' opschrijven.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "**50 ÷ 8** = 6 rest 2 (want 8 × 6 = 48).",
+            },
+            {
+              type: "stap",
+              tekst: "**17 ÷ 5** = 3 rest 2.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Let op",
+              uitleg: "De rest is altijd kleiner dan het getal waardoor je deelt.",
+            },
+          ],
+          niveaus: {
+            basis: "30 ÷ 7 = 4 rest 2.",
+            simpeler: "4 × 7 = 28. 30 − 28 = 2 over.",
+            nogSimpeler: "4 rest 2",
+          },
+        },
+      },
+      {
+        q: "Wat is de **rest** bij **29 ÷ 6**?",
+        options: ["5", "4", "3", "1"],
+        answer: 0,
+        wrongHints: [null, "Dat is hoe vaak 6 in 29 past. Maar wat blijft er over?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Grootste tafel-keer",
+              tekst: "Tafel van 6: 6 × 4 = 24 *(net niet 29)*. 6 × 5 = 30 *(te veel)*. Dus 4 keer.",
+            },
+            {
+              titel: "Rest uitrekenen",
+              tekst: "29 − 24 = **5**. De rest is **5**.",
+            },
+            {
+              titel: "Check",
+              tekst: "6 × 4 + 5 = 29 ✓. En 5 is kleiner dan 6, dus het klopt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "rest",
+              uitleg: "Wat er overblijft als de deling niet precies opgaat.",
+            },
+          ],
+          theorie: "Let op wat de vraag wil: **hoe vaak** het past (4) of **wat overblijft** (de rest, 5).",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Rest bij **23 ÷ 5** = 3.",
+            },
+            {
+              type: "stap",
+              tekst: "Rest bij **30 ÷ 4** = 2.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Let op",
+              uitleg: "De rest is altijd kleiner dan het getal waardoor je deelt.",
+            },
+          ],
+          niveaus: {
+            basis: "De rest is 5.",
+            simpeler: "29 ÷ 6 = 4 rest 5.",
+            nogSimpeler: "5",
+          },
+        },
+      },
+      {
+        q: "**26 kinderen** gaan met auto's naar het zwembad. In elke auto is plek voor **4 kinderen**. Hoeveel auto's zijn er nodig?",
+        options: ["7 auto's", "6 auto's", "8 auto's", "4 auto's"],
+        answer: 0,
+        wrongHints: [null, "Hoeveel kinderen passen in 6 auto's? Kunnen er dan kinderen mee?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Deel met rest",
+              tekst: "26 ÷ 4 = **6 rest 2**. In 6 auto's passen 24 kinderen. 2 kinderen blijven over.",
+            },
+            {
+              titel: "Naar boven afronden",
+              tekst: "Die 2 kinderen moeten ook mee. Dus 6 auto's + 1 extra = **7 auto's**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "afronden naar boven",
+              uitleg: "Er blijft iets over, dus je hebt er nog één nodig.",
+            },
+          ],
+          theorie: "Toets-strikvraag: bij 'hoeveel heb je nodig?' en een rest: **+1**. Niemand blijft achter.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "20 ballen, 6 per doos: 3 rest 2 → 4 dozen.",
+            },
+            {
+              type: "stap",
+              tekst: "50 ballen, 8 per doos: 6 rest 2 → 7 dozen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet achterlaten",
+              uitleg: "Je kunt geen kind thuislaten omdat de auto vol is.",
+            },
+          ],
+          niveaus: {
+            basis: "7 auto's.",
+            simpeler: "26 ÷ 4 = 6 rest 2. De 2 kinderen hebben ook een auto nodig: 7.",
+            nogSimpeler: "7 auto's",
           },
         },
       },
@@ -363,6 +1439,277 @@ const steps = [
         options: ["7 dozen", "6 dozen", "5 dozen", "8 dozen"],
         answer: 0,
         wrongHints: [null, "Te weinig — hoeveel chocolaatjes passen daarin, en hoeveel blijven er dan over?", "Te weinig.", "Te veel — hoeveel dozen heb je werkelijk nodig?"],
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**3 schriften** kosten samen **€6**. Hoeveel kost **1 schrift**?",
+        options: ["€2", "€3", "€18", "€9"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoeveel kosten 3 schriften dan samen? Is dat €6?",
+          "Dat is €6 keer 3. Wordt 1 schrift duurder dan alle 3 samen?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welke som?",
+              tekst: "Prijs **per** stuk = **delen**. De som: **€6 ÷ 3**.",
+            },
+            {
+              titel: "Reken",
+              tekst: "Wat × 3 = 6? **2 × 3 = 6**. Dus 1 schrift kost **€2**.",
+            },
+            {
+              titel: "Check",
+              tekst: "3 schriften × €2 = €6 ✓.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "per stuk",
+              uitleg: "Voor één ding. Signaalwoord voor delen.",
+            },
+          ],
+          theorie: "Toets-truc: totaalprijs ÷ aantal = prijs per stuk.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "5 boeken kosten €25 → €25 ÷ 5 = €5 per boek.",
+            },
+            {
+              type: "stap",
+              tekst: "4 pennen kosten €8 → €8 ÷ 4 = €2 per pen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Eén ding is altijd goedkoper dan alles samen.",
+            },
+          ],
+          niveaus: {
+            basis: "€6 ÷ 3 = €2 per schrift.",
+            simpeler: "€6 verdelen over 3 schriften = €2.",
+            nogSimpeler: "€2",
+          },
+        },
+      },
+      {
+        q: "In 1 bus passen **40 kinderen**. Er gaan **160 kinderen** mee op schoolreis. Hoeveel bussen zijn er nodig?",
+        options: ["4 bussen", "3 bussen", "5 bussen", "120 bussen"],
+        answer: 0,
+        wrongHints: [null, "Hoeveel kinderen passen in 3 bussen? Kan iedereen dan mee?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welke som?",
+              tekst: "Hoeveel keer passen 40 kinderen in 160? De som: **160 ÷ 40**.",
+            },
+            {
+              titel: "Reken",
+              tekst: "Wat × 40 = 160? 4 × 40 = 160. Dus **4 bussen**.",
+            },
+            {
+              titel: "Check",
+              tekst: "4 bussen × 40 kinderen = 160 kinderen ✓. Precies vol, niemand blijft over.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "hoeveel passen erin",
+              uitleg: "Hoe vaak een groep in het totaal past = delen.",
+            },
+          ],
+          theorie: "Toets-truc: tel in stappen van 40: 40, 80, 120, 160. Dat zijn **4** stappen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "200 kinderen, 50 per bus → 200 ÷ 50 = 4 bussen.",
+            },
+            {
+              type: "stap",
+              tekst: "90 kinderen, 30 per bus → 90 ÷ 30 = 3 bussen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Grote getallen? Tel in sprongen van de groepsgrootte.",
+            },
+          ],
+          niveaus: {
+            basis: "160 ÷ 40 = 4 bussen.",
+            simpeler: "40, 80, 120, 160: 4 bussen.",
+            nogSimpeler: "4 bussen",
+          },
+        },
+      },
+      {
+        q: "De juf maakt **groepjes van 5**. De klas heeft **30 kinderen**. Hoeveel **groepjes** zijn er?",
+        options: ["6 groepjes", "5 groepjes", "25 groepjes", "150 groepjes"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoeveel kinderen zitten er in 5 groepjes van 5?",
+          null,
+          "Dat is 30 keer 5. Kunnen er meer groepjes dan kinderen zijn?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welke som?",
+              tekst: "Hoeveel **groepjes van 5**? Dat is delen: **30 ÷ 5**.",
+            },
+            {
+              titel: "Reken",
+              tekst: "Wat × 5 = 30? **6 × 5 = 30**. Dus **6 groepjes**.",
+            },
+            {
+              titel: "Check",
+              tekst: "6 groepjes × 5 kinderen = 30 ✓.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "groepjes van",
+              uitleg: "Signaalwoord voor delen.",
+            },
+          ],
+          theorie: "Toets-truc: 'hoeveel groepjes van X?' → totaal ÷ X.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "28 kinderen in groepjes van 4 → 28 ÷ 4 = 7 groepjes.",
+            },
+            {
+              type: "stap",
+              tekst: "24 kinderen in groepjes van 6 → 24 ÷ 6 = 4 groepjes.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Tafel van 5 terug: 5, 10, 15, 20, 25, 30 → 6 stappen.",
+            },
+          ],
+          niveaus: {
+            basis: "30 ÷ 5 = 6 groepjes.",
+            simpeler: "30 kinderen, steeds 5 bij elkaar: 6 groepjes.",
+            nogSimpeler: "6 groepjes",
+          },
+        },
+      },
+      {
+        q: "In 1 doos passen **8 ballen**. Hoeveel **dozen** heb je nodig voor **34 ballen**?",
+        options: ["5 dozen", "4 dozen", "6 dozen", "8 dozen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — hoeveel ballen passen in 4 dozen, en hoeveel blijven er dan over?",
+          null,
+          "Te veel — hoeveel dozen heb je werkelijk nodig?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Deel met rest",
+              tekst: "34 ÷ 8 = **4 rest 2**. In 4 dozen passen 32 ballen. 2 ballen blijven over.",
+            },
+            {
+              titel: "Naar boven afronden",
+              tekst: "Die 2 ballen moeten ook in een doos. Dus 4 + 1 = **5 dozen**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "afronden naar boven",
+              uitleg: "Bij 'hoeveel dozen nodig': is er een rest, dan nog 1 doos erbij.",
+            },
+          ],
+          theorie: "Toets-tip: 'hoeveel dozen/zakjes nodig?' → delen + naar **boven** afronden.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "50 ballen, 8 per doos: 6 rest 2 → 7 dozen.",
+            },
+            {
+              type: "stap",
+              tekst: "20 eieren, 6 per doos: 3 rest 2 → 4 dozen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet afsnijden",
+              uitleg: "De laatste doos is niet vol, maar je hebt hem wel nodig.",
+            },
+          ],
+          niveaus: {
+            basis: "5 dozen.",
+            simpeler: "34 ÷ 8 = 4 rest 2. Die 2 ballen ook in een doos: 5 dozen.",
+            nogSimpeler: "5 dozen",
+          },
+        },
+      },
+      {
+        q: "Een zak met **42 dropjes** verdeel je eerlijk over **7 kinderen**. Hoeveel dropjes krijgt **elk kind**?",
+        options: ["6 dropjes", "35 dropjes", "49 dropjes", "7 dropjes"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is 42 min 7. Maar je verdeelt de dropjes.",
+          null,
+          "Hoeveel dropjes zijn dat samen voor 7 kinderen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welke som?",
+              tekst: "Eerlijk verdelen = **delen**. De som: **42 ÷ 7**.",
+            },
+            {
+              titel: "Reken",
+              tekst: "Tafel terug: wat × 7 = 42? Tafel-7: 7, 14, 21, 28, 35, **42**. De 6e stap. Dus **6 dropjes**.",
+            },
+            {
+              titel: "Check",
+              tekst: "7 kinderen × 6 dropjes = 42 ✓. Er blijft niets over.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "eerlijk verdelen",
+              uitleg: "Iedereen krijgt evenveel = delen.",
+            },
+            {
+              woord: "per kind",
+              uitleg: "Hoeveel één kind krijgt.",
+            },
+          ],
+          theorie: "Toets-truc redactiesommen: 'eerlijk verdelen over X' → delen door X. Zoek de tafel terug.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "24 dropjes over 4 kinderen → 24 ÷ 4 = 6.",
+            },
+            {
+              type: "stap",
+              tekst: "32 koekjes over 8 kinderen → 32 ÷ 8 = 4.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Schrijf de verhaalsom eerst om naar een gewone som met ÷.",
+            },
+          ],
+          niveaus: {
+            basis: "42 ÷ 7 = 6 dropjes per kind.",
+            simpeler: "42 dropjes over 7 kinderen: elk kind krijgt 6.",
+            nogSimpeler: "6 dropjes",
+          },
+        },
       },
     ],
   },

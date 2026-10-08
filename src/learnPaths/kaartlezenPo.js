@@ -67,6 +67,240 @@ const steps = [
           niveaus: { basis: "Titel + legenda.", simpeler: "Eerst titel (=onderwerp) + legenda (=symbolen). Dan kun je kaart goed lezen.", nogSimpeler: "Titel+legenda" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een kaart is een tekening van een stuk van de wereld. Vanaf welke kant kijk je dan?",
+        options: ["Van bovenaf", "Van opzij", "Van onderaf", "Van binnenuit"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zie je dan waar alle straten en huizen liggen?",
+          null,
+          "Denk aan een vogel die over de stad vliegt.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vogelvlucht",
+              tekst: "Een kaart is getekend alsof je als een vogel boven het land vliegt en naar beneden kijkt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vogelvlucht",
+              uitleg: "Kijken van bovenaf, zoals een vogel in de lucht.",
+            },
+          ],
+          theorie: "Een kaart laat van bovenaf zien waar dingen liggen.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Een plattegrond van je school laat alle lokalen van bovenaf zien.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Kaart",
+              uitleg: "Een tekening van een stuk van de wereld, van bovenaf.",
+            },
+          ],
+          niveaus: {
+            basis: "Van bovenaf.",
+            simpeler: "Een kaart is getekend alsof je erboven vliegt: van bovenaf, net als een vogel.",
+            nogSimpeler: "Bovenaf",
+          },
+        },
+      },
+      {
+        q: "Welk onderdeel van een kaart vertelt je **waar de kaart over gaat**?",
+        options: ["De titel", "De schaal", "De kompasroos", "De legenda"],
+        answer: 0,
+        wrongHints: [null, "Die gaat over afstanden.", "Die gaat over richtingen.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Titel = onderwerp",
+              tekst: "De titel staat bovenaan en zegt waar de kaart over gaat, bijvoorbeeld 'Fietsroutes in Drenthe'.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "titel",
+              uitleg: "De naam of kop van de kaart.",
+            },
+          ],
+          theorie: "Onderdelen: titel (onderwerp), kompasroos (richting), schaal (afstand), legenda (symbolen).",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Titel: 'Rivieren van Nederland' → je weet: deze kaart gaat over rivieren.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Toets-tip",
+              uitleg: "Lees eerst de titel, dan weet je wat je ziet.",
+            },
+          ],
+          niveaus: {
+            basis: "De titel.",
+            simpeler: "De titel is de kop van de kaart. Die zegt waar de kaart over gaat.",
+            nogSimpeler: "Titel",
+          },
+        },
+      },
+      {
+        q: "Welk onderdeel van een kaart vertelt je hoeveel **km** 1 cm op de kaart is?",
+        options: ["De schaal", "De titel", "De legenda", "De kompasroos"],
+        answer: 0,
+        wrongHints: [null, "Die zegt alleen waar de kaart over gaat.", null, "Die wijst richtingen aan."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Schaal = afstand",
+              tekst: "De schaal zegt hoeveel kleiner alles getekend is. Daarmee reken je uit hoe ver iets echt is.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schaal",
+              uitleg: "Hoeveel 1 cm op de kaart in het echt is.",
+            },
+          ],
+          theorie: "Schaal gaat over afstand. Kompasroos over richting. Legenda over symbolen.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Schaal 1:100.000 → 1 cm op de kaart is 1 km in het echt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Onthouden",
+              uitleg: "Schaal = hoe ver.",
+            },
+          ],
+          niveaus: {
+            basis: "De schaal.",
+            simpeler: "Wil je weten hoe ver iets echt is? Dan kijk je naar de schaal.",
+            nogSimpeler: "Schaal",
+          },
+        },
+      },
+      {
+        q: "Sommige kaarten hebben een raster met letters en cijfers, zoals **B3** of **C5**. Hoe heet dat?",
+        options: ["Coördinaten", "Legenda", "Schaal", "Kompasroos"],
+        answer: 0,
+        wrongHints: [null, "Die legt de kleuren en symbolen uit.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vakjes zoeken",
+              tekst: "Met een letter en een cijfer zoek je een vakje op de kaart. B3 = kolom B, rij 3.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "coördinaten",
+              uitleg: "Letters en cijfers waarmee je een plek op de kaart terugvindt.",
+            },
+          ],
+          theorie: "Het raster verdeelt de kaart in vakjes. Elk vakje heeft een letter en een cijfer.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "'De kerk ligt in C5' → zoek letter C en cijfer 5, daar is het vakje.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Raster",
+              uitleg: "Een net van lijnen over de kaart.",
+            },
+          ],
+          niveaus: {
+            basis: "Coördinaten.",
+            simpeler: "B3 en C5 zijn coördinaten: een letter en een cijfer die samen een vakje aanwijzen.",
+            nogSimpeler: "Coördinaten",
+          },
+        },
+      },
+      {
+        q: "Wat betekent **geel of bruin** op een kaart meestal?",
+        options: ["Bergen of hoogland", "Water", "Weiland of laagland", "Hoofdwegen"],
+        answer: 0,
+        wrongHints: [null, "Welke kleur heeft water op een kaart?", null, "Hoofdwegen zijn meestal rood."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Geel/bruin = hoog",
+              tekst: "Op veel kaarten zijn hoge gebieden geel of bruin. Laag land is groen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "hoogland",
+              uitleg: "Hoog gelegen land, zoals bergen.",
+            },
+          ],
+          theorie: "Kleuren: blauw = water, groen = laagland, geel/bruin = bergen, rood = hoofdwegen.",
+          voorbeelden: [
+            {
+              type: "tabel",
+              tekst: "Blauw = water. Groen = laag. Geel/bruin = hoog. Wit = sneeuw.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Kleurregel",
+              uitleg: "Hoe hoger het land, hoe meer geel en bruin.",
+            },
+          ],
+          niveaus: {
+            basis: "Bergen of hoogland.",
+            simpeler: "Geel of bruin op een kaart = hoog land, zoals bergen. Groen is juist laag land.",
+            nogSimpeler: "Bergen",
+          },
+        },
+      },
+      {
+        q: "Wat betekent **wit** op een kaart meestal?",
+        options: ["Sneeuw", "Water", "Bos", "Snelweg"],
+        answer: 0,
+        wrongHints: [null, "Water heeft een andere kleur.", null, "Welke kleur hebben hoofdwegen?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wit = sneeuw",
+              tekst: "Wit op een kaart is meestal sneeuw (hoog in de bergen) of een stuk waar geen informatie over is.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kleurcode",
+              uitleg: "Een vaste kleur met een vaste betekenis op de kaart.",
+            },
+          ],
+          theorie: "Kleuren: blauw = water, groen = laagland, geel/bruin = bergen, wit = sneeuw of geen info, rood = hoofdwegen.",
+          voorbeelden: [
+            {
+              type: "tabel",
+              tekst: "Wit = sneeuw/geen info. Blauw = water. Rood = hoofdweg.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Toets-tip",
+              uitleg: "Twijfel je over een kleur? Kijk in de legenda.",
+            },
+          ],
+          niveaus: {
+            basis: "Sneeuw.",
+            simpeler: "Wit betekent meestal sneeuw, of dat er over dat stuk niets bekend is.",
+            nogSimpeler: "Sneeuw",
+          },
+        },
+      },
     ],
   },
 
@@ -128,6 +362,202 @@ const steps = [
           voorbeelden: [{ type: "kompas", tekst: "Tussen elke 2 hoofdrichtingen: tussenrichting met dubbele letter." }],
           basiskennis: [{ onderwerp: "Logica", uitleg: "Tussenpunt heet naar beide hoofdrichtingen ernaast." }],
           niveaus: { basis: "NO.", simpeler: "Tussen Noord en Oost = NoordOost (NO). Letterlijk de hoek ertussen.", nogSimpeler: "NO" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Op een normale kaart: welke richting ligt aan de **linkerkant**?",
+        options: ["West", "Oost", "Noord", "Zuid"],
+        answer: 0,
+        wrongHints: [null, "Die ligt aan de andere kant.", "Die ligt bovenaan.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Links = West",
+              tekst: "Op een normale kaart: boven = N, onder = Z, rechts = O, links = W.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "west",
+              uitleg: "De richting aan de linkerkant van een normale kaart.",
+            },
+          ],
+          theorie: "Vier hoofdrichtingen: Noord (boven), Oost (rechts), Zuid (onder), West (links).",
+          voorbeelden: [
+            {
+              type: "kompas",
+              tekst: "Boven=N, rechts=O, onder=Z, links=W.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Ezelsbrug",
+              uitleg: "'Nooit Op Zondag Werken' — N-O-Z-W met de klok mee vanaf boven.",
+            },
+          ],
+          niveaus: {
+            basis: "West.",
+            simpeler: "Links op de kaart is West. Rechts is Oost.",
+            nogSimpeler: "West",
+          },
+        },
+      },
+      {
+        q: "Op een **Engelse** kaart staat de letter **S**. Welke richting is dat?",
+        options: ["Zuid", "Oost", "West", "Noord"],
+        answer: 0,
+        wrongHints: [null, "Oost is in het Engels 'east'.", null, "Noord is in het Engels 'north'."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "S = south",
+              tekst: "S staat voor 'south'. Dat is Engels voor Zuid.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "south",
+              uitleg: "Engels woord voor zuid.",
+            },
+          ],
+          theorie: "Engels: N = north (noord), S = south (zuid), E = east (oost), W = west (west).",
+          voorbeelden: [
+            {
+              type: "tabel",
+              tekst: "N=noord. S=zuid. E=oost. W=west.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Let op",
+              uitleg: "Op een Nederlandse kaart is het Z, op een Engelse kaart S.",
+            },
+          ],
+          niveaus: {
+            basis: "Zuid.",
+            simpeler: "S is de eerste letter van 'south'. Dat is Engels voor Zuid.",
+            nogSimpeler: "Zuid",
+          },
+        },
+      },
+      {
+        q: "Utrecht ligt **rechts** van Den Haag op de kaart. In welke richting reis je van Den Haag naar Utrecht?",
+        options: ["Naar het oosten", "Naar het westen", "Naar het noorden", "Naar het zuiden"],
+        answer: 0,
+        wrongHints: [null, "Dat is naar links.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Rechts = Oost",
+              tekst: "Rechts op de kaart is Oost. Utrecht ligt rechts van Den Haag, dus je reist naar het oosten.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "oosten",
+              uitleg: "De richting aan de rechterkant van een normale kaart.",
+            },
+          ],
+          theorie: "Richting bepalen: kijk waar het doel ligt ten opzichte van waar je begint.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Den Haag → Utrecht: naar rechts = naar het oosten.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Andersom",
+              uitleg: "Van Utrecht naar Den Haag is dus naar het westen.",
+            },
+          ],
+          niveaus: {
+            basis: "Naar het oosten.",
+            simpeler: "Utrecht ligt rechts van Den Haag. Rechts = oost. Dus naar het oosten.",
+            nogSimpeler: "Oost",
+          },
+        },
+      },
+      {
+        q: "Het trucje **'Nooit Op Zondag Werken'** geeft de richtingen met de klok mee. Welke richting komt na **Zuid**?",
+        options: ["West", "Oost", "Noord", "Noordwest"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk naar de woorden van het trucje: wat komt na 'Zondag'?",
+          null,
+          "Zit er een tussenrichting in het trucje?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "N-O-Z-W",
+              tekst: "Nooit (N) - Op (O) - Zondag (Z) - Werken (W). Na Zondag komt Werken: West.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "met de klok mee",
+              uitleg: "Draaien in dezelfde richting als de wijzers van een klok.",
+            },
+          ],
+          theorie: "Met de klok mee vanaf boven: Noord, Oost, Zuid, West.",
+          voorbeelden: [
+            {
+              type: "kompas",
+              tekst: "N (boven) → O (rechts) → Z (onder) → W (links).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Ezelsbrug",
+              uitleg: "De eerste letter van elk woord is een richting.",
+            },
+          ],
+          niveaus: {
+            basis: "West.",
+            simpeler: "N-O-Z-W: na Z (Zondag) komt W (Werken) = West.",
+            nogSimpeler: "West",
+          },
+        },
+      },
+      {
+        q: "Waar op een normale kaart ligt **ZW** (zuidwest)?",
+        options: ["Links-onder", "Rechts-onder", "Links-boven", "Rechts-boven"],
+        answer: 0,
+        wrongHints: [null, "Is rechts west of oost?", null, "Ligt zuid boven of onder?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zuid + West",
+              tekst: "Zuid = onder. West = links. Zuidwest = links-onder.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tussenrichting",
+              uitleg: "Combinatie van twee hoofdrichtingen: NO, ZO, ZW, NW.",
+            },
+          ],
+          theorie: "Hoeken: NO = rechts-boven, ZO = rechts-onder, ZW = links-onder, NW = links-boven.",
+          voorbeelden: [
+            {
+              type: "kompas",
+              tekst: "NW | NO. ZW | ZO. (ZW = links-onder).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Twee letters",
+              uitleg: "Z zegt boven of onder, W zegt links of rechts.",
+            },
+          ],
+          niveaus: {
+            basis: "Links-onder.",
+            simpeler: "Z = onder en W = links. Samen: links-onder.",
+            nogSimpeler: "Links-onder",
+          },
         },
       },
     ],
@@ -193,6 +623,164 @@ const steps = [
           niveaus: { basis: "1:50.000.000.", simpeler: "Wereld is heel groot → schaal-getal heel groot (50 miljoen).", nogSimpeler: "1:50.000.000" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Schaal **1:1.000.000**. 1 cm op de kaart = ___ in het echt.",
+        options: ["10 km", "1 km", "100 km", "1.000 km"],
+        answer: 0,
+        wrongHints: [null, "Dat hoort bij 1:100.000.", null, "Te groot."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "1.000.000 cm = 10 km",
+              tekst: "1 cm × 1.000.000 = 1.000.000 cm = 10.000 m = 10 km.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "1:1.000.000",
+              uitleg: "1 cm op de kaart is 1.000.000 cm in het echt.",
+            },
+          ],
+          theorie: "100 cm = 1 m en 1.000 m = 1 km. Dus 100.000 cm = 1 km en 1.000.000 cm = 10 km.",
+          voorbeelden: [
+            {
+              type: "tabel",
+              tekst: "1:100.000 → 1 cm = 1 km. 1:1.000.000 → 1 cm = 10 km.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tien keer zo veel",
+              uitleg: "1.000.000 is tien keer 100.000, dus ook tien keer zo ver.",
+            },
+          ],
+          niveaus: {
+            basis: "10 km.",
+            simpeler: "Bij 1:100.000 is 1 cm = 1 km. 1:1.000.000 is tien keer zo veel: 10 km.",
+            nogSimpeler: "10 km",
+          },
+        },
+      },
+      {
+        q: "Schaal **1:25.000**. **4 cm** op de kaart = ___ in het echt.",
+        options: ["1 km", "4 km", "100 m", "10 km"],
+        answer: 0,
+        wrongHints: [null, "Bij welke schaal is 1 cm precies 1 km?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "4 × 250 m",
+              tekst: "Bij 1:25.000 is 1 cm = 250 m. Dus 4 cm = 4 × 250 m = 1.000 m = 1 km.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "1:25.000",
+              uitleg: "1 cm op de kaart is 25.000 cm = 250 m in het echt.",
+            },
+          ],
+          theorie: "4 cm × 25.000 = 100.000 cm = 1.000 m = 1 km.",
+          voorbeelden: [
+            {
+              type: "tabel",
+              tekst: "1 cm = 250 m. 2 cm = 500 m. 4 cm = 1 km.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "1.000 m = 1 km",
+              uitleg: "Duizend meter is één kilometer.",
+            },
+          ],
+          niveaus: {
+            basis: "1 km.",
+            simpeler: "1 cm = 250 m. 4 keer 250 m = 1.000 m. Dat is 1 km.",
+            nogSimpeler: "1 km",
+          },
+        },
+      },
+      {
+        q: "Op een **schaalbalk** is elk stukje **1 km**. Tussen twee huizen passen precies **3 stukjes**. Hoe ver liggen de huizen uit elkaar?",
+        options: ["3 km", "1 km", "30 km", "300 m"],
+        answer: 0,
+        wrongHints: [null, "Dat is maar één stukje.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stukjes tellen",
+              tekst: "Elk stukje is 1 km. 3 stukjes = 3 × 1 km = 3 km.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schaalbalk",
+              uitleg: "Balk met streepjes op de kaart die laat zien hoeveel km een stukje is.",
+            },
+          ],
+          theorie: "Met een schaalbalk hoef je niet met de schaal te rekenen: tel hoe vaak een stukje past.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1) Kijk hoeveel 1 stukje is. 2) Tel de stukjes. 3) Keer elkaar.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tip",
+              uitleg: "Leg een strookje papier tussen de punten en houd het tegen de balk.",
+            },
+          ],
+          niveaus: {
+            basis: "3 km.",
+            simpeler: "3 stukjes van 1 km = 3 km.",
+            nogSimpeler: "3 km",
+          },
+        },
+      },
+      {
+        q: "Welke schaal past bij een **plattegrond van een huis**?",
+        options: ["1:50", "1:200.000", "1:1.000.000", "1:50.000.000"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat hoort bij een wegenkaart van een provincie.",
+          null,
+          "Daarmee past de hele wereld op het papier.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Klein gebied = klein getal",
+              tekst: "Een huis is klein. Dan hoeft er weinig verkleind te worden: een klein getal achter de ':'.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "plattegrond",
+              uitleg: "Kaart van een gebouw, van bovenaf.",
+            },
+          ],
+          theorie: "Hoe groter het getal achter de ':', hoe groter het stuk wereld op de kaart.",
+          voorbeelden: [
+            {
+              type: "tabel",
+              tekst: "Huis: 1:50. Stad: 1:10.000. Provincie: 1:200.000. Wereld: 1:50.000.000.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "1:50",
+              uitleg: "1 cm op de tekening = 50 cm in het echt.",
+            },
+          ],
+          niveaus: {
+            basis: "1:50.",
+            simpeler: "Een huis is klein, dus een klein getal: 1:50.",
+            nogSimpeler: "1:50",
+          },
+        },
+      },
     ],
   },
 
@@ -254,6 +842,45 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Symbool zie je → naar legenda → 'Aha, dat is een molen'." }],
           basiskennis: [{ onderwerp: "Niet gokken", uitleg: "De toets wil precieze antwoorden. Gokken = punten verliezen." }],
           niveaus: { basis: "Legenda.", simpeler: "Onbekend symbool? Kijk in de legenda (uitleg-vakje). Niet gokken.", nogSimpeler: "Legenda" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat betekent een **anker** op een kaart?",
+        options: ["Haven", "Vliegveld", "Kerk", "Camping"],
+        answer: 0,
+        wrongHints: [null, "Daar hoort een vliegtuigje bij.", null, "Waar liggen schepen stil?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Anker = haven",
+              tekst: "Een anker gooi je uit bij een schip. Daarom betekent een anker op een kaart: haven.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "haven",
+              uitleg: "Plek waar schepen aanleggen.",
+            },
+          ],
+          theorie: "Symbolen lijken op het ding zelf: anker = haven, vliegtuig = vliegveld, boompje = bos.",
+          voorbeelden: [
+            {
+              type: "tabel",
+              tekst: "Anker = haven. Vliegtuig = vliegveld. Boompje = bos.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Legenda",
+              uitleg: "Weet je het niet zeker? Kijk in de legenda.",
+            },
+          ],
+          niveaus: {
+            basis: "Haven.",
+            simpeler: "Een anker hoort bij een schip. Schepen liggen in een haven.",
+            nogSimpeler: "Haven",
+          },
         },
       },
     ],
