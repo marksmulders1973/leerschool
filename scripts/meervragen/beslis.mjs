@@ -8,6 +8,8 @@ const [map, id, reviewMap = map] = process.argv.slice(2);
 const lees = (f, m = map) => JSON.parse(fs.readFileSync(path.join(m, f), "utf8"));
 const ctx = lees(`${id}.context.json`), kand = lees(`${id}.kandidaten.json`);
 const A = new Map(lees(`${id}.review-A.json`, reviewMap).map((r) => [r.id, r])), B = new Map(lees(`${id}.review-B.json`, reviewMap).map((r) => [r.id, r]));
+// Handmatig afgekeurd door de coördinator (twijfel die de nakijkers wel noemden maar niet als bezwaar gaven).
+const hand = fs.existsSync(path.join(map, `${id}.handmatig.json`)) ? JSON.parse(fs.readFileSync(path.join(map, `${id}.handmatig.json`), "utf8")) : {};
 const bestaand = new Set(ctx.stappen.flatMap((s) => s.bestaandeVragen.map((c) => norm(c.q))));
 const opgenomen = [], afgekeurd = [];
 kand.forEach((k, i) => {
@@ -35,6 +37,7 @@ kand.forEach((k, i) => {
     if (norm(r.keuze) !== norm(k.options?.[0])) red.push(`nakijker ${naam} koos "${r.keuze}"`);
     if (r.bezwaar && String(r.bezwaar).trim()) red.push(`nakijker ${naam}: ${r.bezwaar}`);
   }
+  if (hand[vid]) red.push("coördinator: " + hand[vid]);
   if (red.length) afgekeurd.push({ id: vid, stap: k.stap, q: k.q, redenen: red });
   else opgenomen.push({ ...k, id: vid });
 });
