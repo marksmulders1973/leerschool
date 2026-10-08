@@ -1,0 +1,362 @@
+[
+  {
+    "bestand": "src/learnPaths/lichaamGezondheidPo.js",
+    "zoek": "Schedel = 22 botten samen (lijkt 1 bot maar is gefuseerd). Wervelkolom = 33 losse wervels op een kolom.",
+    "vervang": "Schedel = 22 botten (de meeste zijn aan elkaar vastgegroeid). Wervelkolom = 33 wervels boven elkaar.",
+    "reden": "Feit: de wervels zijn niet allemaal los (heiligbeen en stuitje zijn vergroeid) en de onderkaak is niet vastgegroeid; 'gefuseerd' is onnodig jargon.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/lichaamGezondheidPo.js",
+    "zoek": "Schedel: lijkt 1 bot, maar bestaat eigenlijk uit 22 botten die samengegroeid zijn.",
+    "vervang": "Schedel: lijkt 1 bot, maar bestaat eigenlijk uit 22 botten. Bijna allemaal zijn ze samengegroeid — alleen je onderkaak kan bewegen.",
+    "reden": "Feit: niet alle 22 schedelbotten zijn samengegroeid; de onderkaak beweegt.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/lichaamGezondheidPo.js",
+    "zoek": "Allemaal lange botten in de extremiteiten.",
+    "vervang": "Allemaal lange botten in je armen en benen.",
+    "reden": "Jargon 'extremiteiten' voor groep 6-8.",
+    "ernst": 1,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/lichaamGezondheidPo.js",
+    "zoek": "• Heeft 4 kamers: 2 boezems + 2 kamers.",
+    "vervang": "• Heeft 4 ruimtes: 2 boezems + 2 kamers.",
+    "reden": "'4 kamers: 2 boezems + 2 kamers' spreekt zichzelf tegen (boezems zijn geen kamers); verwarrend bij toetsvragen over boezems/kamers.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/lichaamGezondheidPo.js",
+    "zoek": "Hart heeft 4 kamers: 2 boezems (boven) + 2 kamers (onder).",
+    "vervang": "Hart heeft 4 ruimtes: 2 boezems (boven) + 2 kamers (onder).",
+    "reden": "Zelfde tegenspraak in uitlegPad-voorbeeld.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/lichaamGezondheidPo.js",
+    "zoek": "Bloedvaten WEG van het hart, dragen zuurstofrijk bloed.",
+    "vervang": "Bloedvaten die bloed WEG van het hart brengen (meestal zuurstofrijk bloed).",
+    "reden": "Feit: niet elke slagader draagt zuurstofrijk bloed (longslagader); richting is het kenmerk.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/lichaamGezondheidPo.js",
+    "zoek": "Bloedvaten NAAR het hart, dragen zuurstofarm bloed terug.",
+    "vervang": "Bloedvaten die bloed NAAR het hart terugbrengen (meestal zuurstofarm bloed).",
+    "reden": "Feit: longaders dragen zuurstofrijk bloed; richting is het kenmerk.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/lichaamGezondheidPo.js",
+    "zoek": "Memoriseer dit ezelsbruggetje: H-L-M-H.",
+    "vervang": "Onthoud het rijtje: hart, longen, maag, hersenen.",
+    "reden": "Moeilijk woord 'memoriseer' + onduidelijke afkorting.",
+    "ernst": 1,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/lichaamGezondheidPo.js",
+    "zoek": "**Lever** — filtert bloed, maakt gal.",
+    "vervang": "**Lever** — ruimt gifstoffen uit je bloed op, maakt gal.",
+    "reden": "Het 'filtert bloed'-antwoord is op toetsen de nier; lever beter omschrijven als opruimen van gifstoffen (voorkomt verwarring met nieren).",
+    "ernst": 1,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/lichaamGezondheidPo.js",
+    "zoek": "In de rug.\\n• **Blaas**",
+    "vervang": "Achter in je buik, tegen je rug.\\n• **Blaas**",
+    "reden": "Feit: nieren zitten achter in de buikholte, niet 'in de rug'.",
+    "ernst": 1,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/lichaamGezondheidPo.js",
+    "zoek": "*'Welk orgaan filtert bloed?'* → Lever (of nieren bij urine).",
+    "vervang": "*'Welk orgaan filtert bloed en maakt urine?'* → Nieren.\\n*'Welk orgaan ruimt gifstoffen op en maakt gal?'* → Lever.",
+    "reden": "Leert een misleidend toets-antwoord: op 'welk orgaan filtert bloed' verwacht een toets de nieren.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/lichaamGezondheidPo.js",
+    "zoek": "font-family=\"Arial\">filtert bloed</text>",
+    "vervang": "font-family=\"Arial\">ruimt gif op</text>",
+    "reden": "SVG-label consistent met uitleg (filteren = nieren).",
+    "ernst": 1,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/lichaamGezondheidPo.js",
+    "zoek": "Allemaal in de torso (romp)",
+    "vervang": "Hersenen in je hoofd, de rest in je romp",
+    "reden": "Feitfout in SVG: de hersenen (in dezelfde tekening) zitten niet in de romp.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/lichaamGezondheidPo.js",
+    "zoek": "• Ouders geven vaak een limiet",
+    "vervang": "• Ouders of verzorgers geven vaak een limiet",
+    "reden": "Copy-regel: nooit alleen 'ouder'.",
+    "ernst": 1,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/lichaamGezondheidPo.js",
+    "zoek": "options: [\"3 (rood, wit, plaatjes)\", \"1 (alleen rood)\", \"5\", \"10\"],\n        answer: 0,\n        wrongHints: [null, \"Te weinig.\", \"Te veel — 3 hoofdsoorten.\", \"Veel te veel.\"],",
+    "vervang": "options: [\"3\", \"1\", \"5\", \"10\"],\n        answer: 0,\n        wrongHints: [null, \"Te weinig — bloed is meer dan alleen rode cellen.\", \"Te veel.\", \"Veel te veel.\"],",
+    "reden": "Goede optie verraadt zich (enige met toelichting) en de hint bij '5' noemt het antwoord ('3 hoofdsoorten').",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/lichaamGezondheidPo.js",
+    "zoek": "{ q: \"Wat heet **diabetes**?\"",
+    "vervang": "{ q: \"Hoe heet **diabetes** in gewone woorden?\"",
+    "reden": "Vraag onduidelijk geformuleerd.",
+    "ernst": 1,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/lichaamGezondheidPo.js",
+    "zoek": "{ q: \"Wat is **transpireren** voor?\"",
+    "vervang": "{ q: \"Waarvoor dient **zweten** (transpireren)?\"",
+    "reden": "'Transpireren' wordt in dit pad nergens uitgelegd; gewone woord erbij.",
+    "ernst": 1,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/lichaamGezondheidPo.js",
+    "zoek": "\"Zweten verbrandt geen vet.\", \"Niet primair.\"",
+    "vervang": "\"Zweten verbrandt geen vet.\", \"Zweten bouwt geen spieren.\"",
+    "reden": "Hint 'Niet primair' suggereert dat zweten een beetje spieren bouwt.",
+    "ernst": 1,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/gezondeVoedingPo.js",
+    "zoek": "**Vitamine D**: botten *(zon, vis)* — in NL vaak supplement nodig in winter.",
+    "vervang": "**Vitamine D**: botten *(zon, vis)* — sommige mensen, zoals kinderen tot 4 jaar, krijgen in NL extra vitamine D.",
+    "reden": "Feit: er is geen algemeen winter-supplementadvies voor gezonde kinderen vanaf 4 jaar die buiten komen; advies geldt voor bepaalde groepen.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/gezondeVoedingPo.js",
+    "zoek": "{ titel: \"In Nederland: in winter supplement\", tekst: \"Omdat de zon in NL in herfst/winter te zwak is, raden artsen aan om vitamine D in te nemen (druppeltjes/pilletje).\" }",
+    "vervang": "{ titel: \"In Nederland: soms extra vitamine D\", tekst: \"In herfst en winter is de zon in NL zwak, dus maakt je huid dan weinig vitamine D. Voor sommige groepen raden artsen extra vitamine D aan (druppeltjes/pilletje), zoals kinderen tot 4 jaar en mensen die weinig buiten komen.\" }",
+    "reden": "Feit: supplementadvies geldt voor bepaalde groepen, niet voor iedereen.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/gezondeVoedingPo.js",
+    "zoek": "Tekort aan vitamine D in winter = vermoeid + zwakke botten. Daarom drogist-supplement aanbevolen.",
+    "vervang": "Te weinig vitamine D = zwakkere botten. Kom je weinig buiten? Vraag de huisarts of je extra vitamine D nodig hebt.",
+    "reden": "Feit: geen algemeen drogist-supplementadvies; 'vermoeid' is geen vast kenmerk.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/gezondeVoedingPo.js",
+    "zoek": "**2 stuks fruit** per dag *(1 = 80 g).*",
+    "vervang": "**2 stuks fruit** per dag *(1 stuk = ongeveer 100 g).*",
+    "reden": "Feit: Voedingscentrum rekent 2 stuks fruit = ~200 g; 80 g is een (WHO-)portie, geen stuk fruit.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/gezondeVoedingPo.js",
+    "zoek": "(1 stuk = ongeveer 80 gram, bv. een appel)",
+    "vervang": "(1 stuk = ongeveer 100 gram, bv. een kleine appel)",
+    "reden": "Feit: een stuk fruit ≈ 100 g; een appel weegt meer dan 80 g.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/gezondeVoedingPo.js",
+    "zoek": "• Vers > diepvries > blik.",
+    "vervang": "• Vers en diepvries zijn allebei prima. Uit blik of pot mag ook — let dan op zout en suiker.",
+    "reden": "Feit: diepvriesgroente is even voedzaam als vers (Voedingscentrum); rangorde klopt niet.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/gezondeVoedingPo.js",
+    "zoek": "• Minder boter/margarine.",
+    "vervang": "• Liever zachte margarine of halvarine dan roomboter.",
+    "reden": "Zachte margarine/halvarine hoort juist in de Schijf; roomboter niet.",
+    "ernst": 1,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/gezondeVoedingPo.js",
+    "zoek": "• Snoep, frisdrank, koek, frituur, chips, alcohol.\\n• Niet **schadelijk in kleine hoeveelheden** maar bevatten weinig goede stoffen.",
+    "vervang": "• Snoep, frisdrank, koek, frituur, chips.\\n• Af en toe een beetje kan, maar ze bevatten weinig goede stoffen.\\n• Alcohol staat er ook buiten — en is voor kinderen helemaal niet.",
+    "reden": "Tegenspraak/feit: alcohol 'niet schadelijk in kleine hoeveelheden' botst met het 0,0-advies verderop (en Gezondheidsraad: liever geen alcohol).",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/gezondeVoedingPo.js",
+    "zoek": "2. Smeer- en kookvetten ✓ (boter op brood)\\n3. Zuivel/vis/peulvruchten/vlees/ei ✓ (kaas, ei, melk/yoghurt)\\n4. Brood/granen/aardappelen ✓ (volkoren brood)",
+    "vervang": "2. Brood/granen/aardappelen ✓ (volkoren brood)\\n3. Zuivel/vis/peulvruchten/vlees/ei ✓ (kaas, ei, melk/yoghurt)\\n4. Smeer- en kookvetten ✓ (halvarine of zachte margarine op brood)",
+    "reden": "Feit: roomboter staat niet in de Schijf van Vijf; vaknummers kloppen niet met de uitleg (vak 2 = brood, vak 4 = vetten).",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/gezondeVoedingPo.js",
+    "zoek": "q: \"Een **gemiddeld ontbijt** voor groep 7-8 zou bestaan uit?\"",
+    "vervang": "q: \"Wat is een **gezond ontbijt** voor een kind in groep 7-8?\"",
+    "reden": "'Gemiddeld ontbijt' betekent wat kinderen gemiddeld eten (en dat is vaak niet het goede antwoord); de vraag bedoelt gezond.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/gezondeVoedingPo.js",
+    "zoek": "Cornflakes/cruesli lijken gezond maar bevatten vaak 25-40% suiker.",
+    "vervang": "Cruesli en gezoete ontbijtgranen lijken gezond maar bevatten vaak veel suiker.",
+    "reden": "Feit: gewone cornflakes bevatten ongeveer 8% suiker, niet 25-40%; percentage weggelaten.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/gezondeVoedingPo.js",
+    "zoek": "Etiket-rode-vlaggen (Voedingscentrum):",
+    "vervang": "Etiket-rode-vlaggen (vuistregel):",
+    "reden": "Bron klopt niet: deze grenzen (22,5 / 17,5 / 1,5 g per 100 g) komen van het Britse stoplicht-etiket, niet van het Voedingscentrum.",
+    "ernst": 1,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/gezondeVoedingPo.js",
+    "zoek": "onderwerp: \"Niet 'light' = 'mag onbeperkt'\"",
+    "vervang": "onderwerp: \"'Light' ≠ 'mag onbeperkt'\"",
+    "reden": "Kop zegt het omgekeerde van wat bedoeld wordt.",
+    "ernst": 1,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/gezondeVoedingPo.js",
+    "zoek": "q: \"**Diabetes type 2** kan voorkomen worden door?\"",
+    "vervang": "q: \"Waardoor wordt de kans op **diabetes type 2** kleiner?\"",
+    "reden": "Te stellig: leefstijl verkleint de kans, maar voorkomt type 2 niet altijd (erfelijkheid speelt ook mee).",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/gezondeVoedingPo.js",
+    "zoek": "\"Type 1 deels erfelijk, type 2 vooral leefstijl.\"",
+    "vervang": "\"Erfelijkheid speelt mee, maar je leefstijl maakt veel uit.\"",
+    "reden": "Feit: ook type 2 heeft een sterke erfelijke kant; hint consistent met nieuwe vraag.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/gezondeVoedingPo.js",
+    "zoek": "simpeler: \"Gezond eten + bewegen + niet roken voorkomt type-2-diabetes voor 80%+.\"",
+    "vervang": "simpeler: \"Gezond eten + bewegen + niet roken maakt de kans op type-2-diabetes veel kleiner.\"",
+    "reden": "Onbewezen percentage + te stellig 'voorkomt'.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/gezondeVoedingPo.js",
+    "zoek": "• Praat met ouder, schoolarts, huisarts.",
+    "vervang": "• Praat met je ouder of verzorger, schoolarts, huisarts.",
+    "reden": "Copy-regel: nooit alleen 'ouder'.",
+    "ernst": 1,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/gezondeVoedingPo.js",
+    "zoek": "q: \"1 glas frisdrank = **hoeveel suikerklontjes**?\"",
+    "vervang": "q: \"1 blikje cola = **hoeveel suikerklontjes**?\"",
+    "reden": "Uitleg noemt '1 blikje cola = 7 suikerklontjes'; een glas (250 ml) is eerder ~6. Vraag laten aansluiten.",
+    "ernst": 1,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/pubertijdGroeiPo.js",
+    "zoek": "*(in 1900 begon puberteit gemiddeld op 14, nu op 11)* — onbekend precies waarom.",
+    "vervang": "*(rond 1900 kregen meisjes hun eerste menstruatie gemiddeld rond 14-15 jaar, nu rond 13)* — vooral door betere voeding en gezondheid.",
+    "reden": "Feit: vergelijkt eerste menstruatie toen met het begin van de puberteit nu; 'onbekend waarom' spreekt de uitlegPad-theorie (betere voeding) tegen.",
+    "ernst": 2,
+    "groep": "groep7-8"
+  },
+  {
+    "bestand": "src/learnPaths/pubertijdGroeiPo.js",
+    "zoek": "(1900: rond 14-15, nu: 11)",
+    "vervang": "(eerste menstruatie rond 1900: ~14-15 jaar, nu: ~13 jaar)",
+    "reden": "Zelfde appels-met-peren-vergelijking in theorie.",
+    "ernst": 2,
+    "groep": "groep7-8"
+  },
+  {
+    "bestand": "src/learnPaths/pubertijdGroeiPo.js",
+    "zoek": "simpeler: \"Meisjes 8-13 jaar, jongens 9-15 jaar.\"",
+    "vervang": "simpeler: \"Meisjes 8-13 jaar, jongens 9-14 jaar.\"",
+    "reden": "Inconsistent met uitleg (jongens 9-14).",
+    "ernst": 1,
+    "groep": "groep7-8"
+  },
+  {
+    "bestand": "src/learnPaths/pubertijdGroeiPo.js",
+    "zoek": "• Praat met ouders / vertrouwde volwassene als je vragen hebt.",
+    "vervang": "• Praat met je ouders of verzorgers / een vertrouwde volwassene als je vragen hebt.",
+    "reden": "Copy-regel: nooit alleen 'ouder'.",
+    "ernst": 1,
+    "groep": "groep7-8"
+  },
+  {
+    "bestand": "src/learnPaths/pubertijdGroeiPo.js",
+    "zoek": "• **Sperma** wordt in de testikels gemaakt.",
+    "vervang": "• **Zaadcellen** worden in de testikels gemaakt.",
+    "reden": "Feit: zaadcellen komen uit de testikels; het meeste vocht van sperma komt uit andere klieren.",
+    "ernst": 1,
+    "groep": "groep7-8"
+  },
+  {
+    "bestand": "src/learnPaths/pubertijdGroeiPo.js",
+    "zoek": "**3. Boos op ouders** 😤",
+    "vervang": "**3. Boos op ouders of verzorgers** 😤",
+    "reden": "Copy-regel: nooit alleen 'ouder'.",
+    "ernst": 1,
+    "groep": "groep7-8"
+  },
+  {
+    "bestand": "src/learnPaths/pubertijdGroeiPo.js",
+    "zoek": "• Ouders zien jou nog als kind",
+    "vervang": "• Ouders of verzorgers zien jou nog als kind",
+    "reden": "Copy-regel: nooit alleen 'ouder'.",
+    "ernst": 1,
+    "groep": "groep7-8"
+  },
+  {
+    "bestand": "src/learnPaths/pubertijdGroeiPo.js",
+    "zoek": "• **Praten** met ouder, vriend, mentor.",
+    "vervang": "• **Praten** met ouder of verzorger, vriend, mentor.",
+    "reden": "Copy-regel: nooit alleen 'ouder'.",
+    "ernst": 1,
+    "groep": "groep7-8"
+  },
+  {
+    "bestand": "src/learnPaths/pubertijdGroeiPo.js",
+    "zoek": "q: \"Welke **hormonen** spelen vooral een rol bij **jongens in de puberteit**?\"",
+    "vervang": "q: \"Welk **hormoon** speelt vooral een rol bij **jongens in de puberteit**?\"",
+    "reden": "Meervoud in vraag, maar één goed antwoord.",
+    "ernst": 1,
+    "groep": "groep7-8"
+  }
+]
