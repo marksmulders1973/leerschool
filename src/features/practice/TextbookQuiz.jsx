@@ -16,8 +16,11 @@ const schoolTypeMatchesBook = (bookName, schoolType) => {
   // Boek heeft expliciet schooltype in de naam → exacte match
   const hasTypeInName = n.includes("mavo") || n.includes("vmbo") || n.includes("havo") || n.includes("vwo") || n.includes("gym");
   if (!hasTypeInName) return true; // universeel boek: geschikt voor elk niveau
-  if (schoolType === "mavo") return n.includes("mavo") || n.includes("vmbo");
+  // Nieuwe niveaus (8 okt 2026): vmbo-gt/vmbo-bk/vmbo-havo/havo-vwo naast de oude mavo/gym.
+  if (schoolType === "mavo" || schoolType === "vmbo-gt" || schoolType === "vmbo-bk") return n.includes("mavo") || n.includes("vmbo");
+  if (schoolType === "vmbo-havo") return n.includes("mavo") || n.includes("vmbo") || n.includes("havo");
   if (schoolType === "havo") return n.includes("havo");
+  if (schoolType === "havo-vwo") return n.includes("havo") || n.includes("vwo");
   if (schoolType === "vwo") return n.includes("vwo");
   if (schoolType === "gym") return n.includes("vwo") || n.includes("gym");
   return false;

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { voKeuzes, maxJaar } from "../shared/voNiveau.js";
 
 // P0-4 (4-agent-audit 2026-05-18): 3-vragen-onboarding-wizard die de
 // niveau-keuze auto-zet voor leerlingen die op "sla over" klikten of via
@@ -25,28 +26,14 @@ const PO_GROEPEN = [
   { key: "groep8", label: "Groep 8" },
 ];
 
-const VO_KLASSEN = [
-  { key: "klas1", label: "Klas 1" },
-  { key: "klas2", label: "Klas 2" },
-  { key: "klas3", label: "Klas 3" },
-  { key: "klas4", label: "Klas 4" },
-  { key: "klas5", label: "Klas 5" },
-  { key: "klas6", label: "Klas 6" },
-];
-
-// Gelijk aan de keuze in het profiel (HomePage): incl. HAVO/VWO-combi en
-// Gymnasium. Sleutels matchen de downstream-labels/kleuren in StudentHome.
-const VO_NIVEAUS = [
-  { key: "mavo", label: "VMBO-TL" },
-  { key: "havo", label: "HAVO" },
-  { key: "havo-vwo", label: "HAVO/VWO" },
-  { key: "vwo", label: "VWO" },
-  { key: "gym", label: "Gymnasium" },
-];
+// Middelbare school = niveau + leerjaar (Noa 8 okt 2026): eerst het niveau, dan alleen de
+// leerjaren die daarbij bestaan (mavo 1-4, havo 1-5, vwo 1-6, gemengde brugklas 1-2).
+const VO_NIVEAUS = voKeuzes().map(({ type }) => ({ key: type.key, label: type.label }));
 
 export default function NiveauWizardBanner({ onSetLevel, onSetSchoolType }) {
   const [stap, setStap] = useState(0); // 0=intro, 1=schoolsoort, 2=klas, 3=niveau
   const [schoolsoort, setSchoolsoort] = useState(null); // "po" | "vo"
+  const [voType, setVoType] = useState(null);
 
   const dismiss = () => {
     try { localStorage.setItem("lk_niveau_wizard_done", "1"); } catch {}
@@ -81,7 +68,7 @@ export default function NiveauWizardBanner({ onSetLevel, onSetSchoolType }) {
               Snel de juiste vragen vinden
             </div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.7)", marginTop: 2 }}>
-              In 2 vragen kies je de groep of klas — dan krijg je vragen op jouw niveau.
+              In een paar tikken kies je je groep, of je niveau en leerjaar — dan krijg je vragen op jouw niveau.
             </div>
           </div>
         </div>
@@ -100,7 +87,7 @@ export default function NiveauWizardBanner({ onSetLevel, onSetSchoolType }) {
               cursor: "pointer",
             }}
           >
-            ▶ Start (2 vragen)
+            ▶ Start
           </button>
           <button
             onClick={dismiss}
@@ -126,7 +113,7 @@ export default function NiveauWizardBanner({ onSetLevel, onSetSchoolType }) {
   if (stap === 1) {
     return (
       <div style={containerStyle()}>
-        <Header n="1 van 2" titel="Op welke school zit je?" />
+        <Header n="Vraag 1" titel="Op welke school zit je?" />
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
           <KeuzeKnop
             emoji="🎒"
@@ -151,7 +138,7 @@ export default function NiveauWizardBanner({ onSetLevel, onSetSchoolType }) {
   if (stap === 2 && schoolsoort === "po") {
     return (
       <div style={containerStyle()}>
-        <Header n="2 van 2" titel="In welke groep zit je?" onBack={() => setStap(1)} />
+        <Header n="Vraag 2" titel="In welke groep zit je?" onBack={() => setStap(1)} />
         <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 8 }}>
           {PO_GROEPEN.map((g) => (
             <button key={g.key} onClick={() => kiesGroep(g.key)} style={pillStyle("#00b0ff")}>
@@ -163,42 +150,35 @@ export default function NiveauWizardBanner({ onSetLevel, onSetSchoolType }) {
     );
   }
 
-  // Stap 2 VO: kies klas eerst, dan niveau.
+  // Stap 2 VO: eerst het niveau.
   if (stap === 2 && schoolsoort === "vo") {
     return (
       <div style={containerStyle()}>
-        <Header n="2 van 2" titel="Welke klas + niveau?" onBack={() => setStap(1)} />
-        <div style={{ fontSize: 11, color: "rgba(255,255,255,0.55)", marginBottom: 6, fontWeight: 700, letterSpacing: 0.4, textTransform: "uppercase" }}>Klas</div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: 6, marginBottom: 10 }}>
-          {VO_KLASSEN.map((k) => (
-            <button key={k.key} onClick={() => setStap(3 + parseInt(k.key.replace("klas",""), 10))} style={pillStyle("#7c3aed")}>
-              {k.label.replace("Klas ","")}
+        <Header n="Vraag 2" titel="Welk niveau doe je?" onBack={() => setStap(1)} />
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+          {VO_NIVEAUS.map((n) => (
+            <button key={n.key} onClick={() => { setVoType(n.key); setStap(3); }} style={{ ...pillStyle("#7c3aed"), flex: "1 1 40%", minWidth: 120 }}>
+              {n.label}
             </button>
           ))}
-        </div>
-        <div style={{ fontSize: 11, color: "rgba(255,255,255,0.45)", marginTop: 4, lineHeight: 1.4 }}>
-          Kies eerst je klas; daarna vragen we VMBO/HAVO/VWO.
         </div>
       </div>
     );
   }
 
-  // Stap 3+: VO niveau (klasKey gecodeerd in stap 3..8).
-  if (stap >= 4 && schoolsoort === "vo") {
-    const klasNr = stap - 3;
-    const klasKey = `klas${klasNr}`;
+  // Stap 3 VO: leerjaar, alleen de jaren die bij dat niveau bestaan.
+  if (stap === 3 && schoolsoort === "vo" && voType) {
+    const jaren = Array.from({ length: maxJaar(voType) }, (_, i) => i + 1);
+    const label = VO_NIVEAUS.find((n) => n.key === voType)?.label || "";
     return (
       <div style={containerStyle()}>
-        <Header n="Bijna klaar" titel={`Klas ${klasNr} — welk niveau?`} onBack={() => setStap(2)} />
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-          {VO_NIVEAUS.map((n) => (
-            <button key={n.key} onClick={() => kiesNiveau(klasKey, n.key)} style={{ ...pillStyle("#7c3aed"), flex: "1 1 28%", minWidth: 90 }}>
-              {n.label}
+        <Header n="Vraag 3" titel={`In welk leerjaar zit je (${label})?`} onBack={() => setStap(2)} />
+        <div style={{ display: "grid", gridTemplateColumns: `repeat(${jaren.length}, 1fr)`, gap: 6 }}>
+          {jaren.map((j) => (
+            <button key={j} onClick={() => kiesNiveau(`klas${j}`, voType)} style={pillStyle("#7c3aed")}>
+              {j}
             </button>
           ))}
-        </div>
-        <div style={{ fontSize: 11, color: "rgba(255,255,255,0.45)", marginTop: 8, lineHeight: 1.4 }}>
-          Zit je in een gemengde brugklas? Kies <strong>HAVO/VWO</strong>.
         </div>
       </div>
     );

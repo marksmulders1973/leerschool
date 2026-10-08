@@ -180,7 +180,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
   // A8 (10-agent circulariteit-review 2026-05-10): laatste activiteit voor "verder waar je was"-card.
   const lastActivity = recentProgress[0] || null;
   // A10: examen-trainer alleen voor VMBO-mavo klas 4 (Mark's primaire dochter-use-case).
-  const isVmboGt4 = userSchoolType === "mavo" && String(userLevel || "") === "4";
+  const isVmboGt4 = (userSchoolType === "mavo" || userSchoolType === "vmbo-gt") && String(userLevel || "") === "4";
   // A11-snoei (visie-bewaker maand 1): srDueCount banner verwijderd.
   // Bestaande topic-niveau dueCount + DailyChallengeBanner-flow heeft al
   // echte quiz-trigger (onHerhaalQuiz). Twee banners = verwarring (STOPLIST §5).
@@ -259,11 +259,11 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
     return subj ? { ...subj, avg: weakAvg } : null;
   })();
 
-  const schoolTypeLabel = { mavo: "VMBO-TL", havo: "HAVO", "havo-vwo": "HAVO/VWO", vwo: "VWO", gym: "Gymnasium" }[userSchoolType] || "";
+  const schoolTypeLabel = { mavo: "VMBO-TL", "vmbo-gt": "Mavo", "vmbo-bk": "VMBO basis/kader", "vmbo-havo": "Mavo/havo", havo: "HAVO", "havo-vwo": "HAVO/VWO", vwo: "VWO", gym: "Gymnasium" }[userSchoolType] || "";
   // Fallback hier expliciet hex (niet de token) want elders worden
   // template-suffixen gebruikt zoals `${schoolTypeColor}18` voor opacity —
   // CSS-variables ondersteunen dat niet.
-  const schoolTypeColor = { mavo: "#f59e0b", havo: "#3b82f6", "havo-vwo": "#6366f1", vwo: "#8b5cf6", gym: "#ec4899" }[userSchoolType] || "#3B82F6";
+  const schoolTypeColor = { mavo: "#f59e0b", "vmbo-gt": "#f59e0b", "vmbo-bk": "#f97316", "vmbo-havo": "#10b981", havo: "#3b82f6", "havo-vwo": "#6366f1", vwo: "#8b5cf6", gym: "#ec4899" }[userSchoolType] || "#3B82F6";
   // PO (basisschool) gebruikt "Groep", VO (met schoolType) gebruikt "Klas".
   const niveauWoord = schoolTypeLabel ? "Klas" : "Groep";
   const profileBadge = userLevel && schoolTypeLabel
