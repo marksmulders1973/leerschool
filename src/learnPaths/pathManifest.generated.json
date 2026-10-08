@@ -474,7 +474,7 @@
     ],
     "intro": "Vier echte oefenteksten van ~200 woorden + 4 Doorstroomtoets-stijl vragen elk: zakelijk, instructief, betogend, verhalend. Plus een gemixte eindopdracht. Perfect voor groep 7-8 die zich voorbereidt op",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 64,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
@@ -804,9 +804,9 @@
     ],
     "intro": "Breuken voor groep 5-8: wat is een breuk, vereenvoudigen, optellen/aftrekken met gelijke en ongelijke noemers, breuk-van-een-getal. Met Doorstroomtoets-stijl praktijksommen. ~15 min.",
     "stepCount": 7,
-    "checkCount": 40,
+    "checkCount": 73,
     "chapterCount": 5,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "brief-email-lezen-po",
@@ -978,9 +978,9 @@
     ],
     "intro": "Hoe je slim met de Doorstroomtoets omgaat: pacing, eliminatie bij meerkeuze, slimme aanpak voor begrijpend lezen + rekenen, omgaan met twijfel + tijdgebrek. Niet alleen 'kennen', ook 'aanpakken'.",
     "stepCount": 7,
-    "checkCount": 40,
+    "checkCount": 70,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "comparatives-engels",
@@ -1394,9 +1394,9 @@
     ],
     "intro": "Delen voor groep 5-6 — wat is delen, makkelijke (÷2/5/10), tafel-terug (÷3-9), delen met rest, praktijksommen. Bouwt voort op tafelsPo. ~15 min.",
     "stepCount": 7,
-    "checkCount": 41,
+    "checkCount": 67,
     "chapterCount": 7,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "dichten-poezie-rijmen-po",
@@ -1468,9 +1468,9 @@
     ],
     "intro": "Wereld & Natuur voor de basisschool: wat is leven, de diergroepen (zoogdieren, vogels, vissen, reptielen+amfibieën, insecten), levensstadia + metamorfose, de vier seizoenen, planten met fotosynthese, ",
     "stepCount": 11,
-    "checkCount": 40,
+    "checkCount": 103,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 30
   },
   {
     "id": "dierenklassen-po",
@@ -3653,7 +3653,7 @@
     ],
     "intro": "Eerste rekensommen — getallen 0 tot 20, plus en min, splitsen + dubbele + truc 'eerst tien maken'. Voor groep 3-4. ~15 min.",
     "stepCount": 6,
-    "checkCount": 26,
+    "checkCount": 46,
     "chapterCount": 6,
     "estimatedMinutes": 15
   },
@@ -4232,7 +4232,7 @@
     ],
     "intro": "Kompasroos, schaal, legenda en symbolen op kaarten begrijpen. Doorstroomtoets-stijl. ~12 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 56,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
@@ -4464,9 +4464,9 @@
     ],
     "intro": "Leer de klok lezen — analoog (met wijzers) én digitaal. Hele uren, halve, kwartieren, minuten en het 24-uurs format. Plus tijd uitrekenen (hoe lang duurt iets?). Voor groep 3 t/m 5.",
     "stepCount": 8,
-    "checkCount": 45,
+    "checkCount": 76,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "kolonie-indonesie",
@@ -4543,9 +4543,9 @@
     ],
     "intro": "Eerste stappen begrijpend lezen: van één zin naar een echt tekstje. Wie, wat, waar — het antwoord opzoeken — en wat gebeurde eerst? Voor groep 4. ~15 min.",
     "stepCount": 5,
-    "checkCount": 20,
+    "checkCount": 37,
     "chapterCount": 5,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "koude-oorlog-modern-po",
@@ -4737,7 +4737,7 @@
     ],
     "intro": "Op de echte Doorstroomtoets zijn de leesteksten lang: 300 tot 400 woorden met 4 tot 6 vragen per tekst. Hier train je het uithoudingsvermogen én de slimme aanpak: eerst globaal lezen, per vraag terugz",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 35,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -6473,9 +6473,9 @@
     ],
     "intro": "Procenten voor groep 5-8 — wat % betekent, hoe je ermee rekent, korting in de winkel, hoeveel % is X van Y. Met Doorstroomtoets-stijl praktijksommen. ~15 min.",
     "stepCount": 7,
-    "checkCount": 40,
+    "checkCount": 72,
     "chapterCount": 5,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "programmeren-basis-informatica",
@@ -6850,7 +6850,7 @@
     ],
     "intro": "Spelen met woorden voor kleuters: rijmen, klanken horen, letters herkennen en woorden kennen. Lekker samen doen — een ouder of verzorger leest voor (of druk op de voorlees-knop) en jij mag antwoorden!",
     "stepCount": 5,
-    "checkCount": 25,
+    "checkCount": 43,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
@@ -6995,7 +6995,7 @@
     ],
     "intro": "Hoofdgedachte vinden, hoofd/bijzaken scheiden, samenvatting maken. Doorstroomtoets-stijl. ~12 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 60,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
@@ -7265,9 +7265,9 @@
     ],
     "intro": "Je eerste woorden schrijven: schrijf wat je hoort (k-a-t → kat), lange klanken (maan, boom), oe/ie/eu-woorden en de lastige vriendjes sch- en -ng. Voor groep 3. ~15 min.",
     "stepCount": 5,
-    "checkCount": 20,
+    "checkCount": 44,
     "chapterCount": 5,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "spelling-ei-ij-au-ou",
@@ -7294,9 +7294,9 @@
     ],
     "intro": "De vier klassieke homofoon-paren in het Nederlands: ei vs ij (reist vs rijst) en au vs ou (paus vs pous). Met woordlijsten, trucjes (voornaamwoorden = ij, -oud + -ouw = ou) en context-voorbeelden. Voo",
     "stepCount": 9,
-    "checkCount": 40,
+    "checkCount": 70,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "spelling-overige-po",
@@ -7654,9 +7654,9 @@
     ],
     "intro": "Taal voor groep 4: het alfabet, meervoud (boek → boeken), verkleinwoorden (boompje), tegenstellingen (warm ↔ koud) en goede zinnen maken. ~15 min.",
     "stepCount": 5,
-    "checkCount": 21,
+    "checkCount": 45,
     "chapterCount": 5,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "tabellen-grafieken",
@@ -7735,9 +7735,9 @@
     ],
     "intro": "Tafels 1 t/m 10 voor groep 4-5 — wat is een tafel, makkelijke (2/5/10), basis (3/4), lastig (6/7/8/9), slimme trucs (splitsen, 9-truc, verdubbelen). ~15 min.",
     "stepCount": 7,
-    "checkCount": 41,
+    "checkCount": 63,
     "chapterCount": 7,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "tekstanalyse",
@@ -7851,7 +7851,7 @@
     ],
     "intro": "Samen tellen, vormen zoeken en spelen — voor kleuters in groep 1 en 2. Druk op 🔊 om alles voor te laten lezen; samen doen met een ouder of verzorger mag natuurlijk ook. ~15 min.",
     "stepCount": 5,
-    "checkCount": 21,
+    "checkCount": 36,
     "chapterCount": 5,
     "estimatedMinutes": 10
   },
@@ -8063,9 +8063,9 @@
     ],
     "intro": "Alles over Nederland in één leerpad: 12 provincies + hoofdsteden, 3 grote rivieren, 5 grootste steden, Waddeneilanden, Deltawerken en de buurlanden. toets-relevant voor groep 7-8.",
     "stepCount": 9,
-    "checkCount": 40,
+    "checkCount": 79,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 30
   },
   {
     "id": "topografie-nederland-provincies-po",
@@ -8916,9 +8916,9 @@
     ],
     "intro": "De d/t-regels: tegenwoordige tijd (stam + t bij hij/zij), verleden tijd ('t kofschip — t, k, f, s, ch, p → -te), voltooid deelwoord (ge-stam-t/d). Plus de klassieke valkuil word vs wordt. Voor groep 5",
     "stepCount": 8,
-    "checkCount": 40,
+    "checkCount": 81,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "werkwoordsvervoeging",
