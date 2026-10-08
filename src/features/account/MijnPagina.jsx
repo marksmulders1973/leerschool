@@ -25,7 +25,7 @@ import { VAK_INFO, vakkenVoorGroep, vakNotitie, VAK_INFO_KLAS, vakkenVoorKlas, k
 import { leesLijstje, toggleLijstje, LIJSTJE_EVENT } from "../../shared/mijnLijstje.js";
 import { bepaalPlan, planSamenvatting } from "../vandaag/vandaagPlan.js";
 import { leesVoorkeur, ververseVoorkeur, VOORKEUR_EVENT } from "../vandaag/voorkeur.js";
-import { startKwartierPlan, kwartierGedaanVandaag, kwartierActief, kwartierStand } from "../vandaag/kwartier.js";
+import { startKwartierPlan, kwartierGedaanVandaag, kwartierActief, kwartierStand, stopKwartier } from "../vandaag/kwartier.js";
 import { haalKlaargezetVoorKind, markeerGedaan, KLAARGEZET_EVENT } from "../../shared/ouderKlaargezet.js";
 import { buddyWeetjes, BUDDY_BY_ID, buddyNaam as buddyNaamVan, gekozenBuddy } from "../zoo/buddies.js";
 import { THEMAS, themaVan, kiesThema, goudVerdiend, THEMA_EVENT, TOP_BLOKKEN, leesTopBlok, kiesTopBlok } from "../../shared/mijnThema.js";
@@ -1787,6 +1787,13 @@ export default function MijnPagina({
                     {(() => {
                       const motorAan = !!onVandaagKwartier && (niveau?.soort !== "klas" || true);
                       if (!motorAan) return null;
+                      // VO-leerling met een vandaag al gestart kwartier vol basisschoolpaden (oude versie, Noa 8 okt):
+                      // dat kwartier opruimen, zodat de knop meteen een plan van de eigen klas start.
+                      if (niveau?.soort === "klas" && kwartierActief()) {
+                        const eigen = new Set(niveauPaden(niveau).map((p) => p.id));
+                        const st = kwartierStand();
+                        if (st?.blokjes?.some((b) => b.soort === "vragen" && b.pathId && !eigen.has(b.pathId))) stopKwartier();
+                      }
                       const bezig = kwartierActief();
                       const gedaan = kwartierGedaanVandaag();
                       const plan = bepaalPlan({
@@ -1794,6 +1801,7 @@ export default function MijnPagina({
                         dicteeSchool: (() => { try { return !!localStorage.getItem("lk_dictee_school"); } catch { return false; } })(),
                         wwSchool: (() => { try { return !!localStorage.getItem("lk_ww_school"); } catch { return false; } })(),
                         metSchoolvakken: niveau?.soort === "klas",
+                        klasPaden: niveau?.soort === "klas" ? niveauPaden(niveau).filter((p) => !/-nieuwkomers$/.test(p.id)).map((p) => p.id) : null,
                         voorkeur: gezinVoorkeur,
                       });
                       const stand = bezig ? kwartierStand() : null;
