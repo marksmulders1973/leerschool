@@ -1533,6 +1533,7 @@ export default function App() {
         <MijnPagina
           key={userName || "geen-naam"}
           userName={userName}
+          userSchoolType={userSchoolType}
           userLevel={
             userLevel && /^\d+$/.test(String(userLevel))
               ? (userSchoolType ? `klas${userLevel}` : `groep${userLevel}`)

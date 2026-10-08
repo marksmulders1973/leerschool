@@ -9,6 +9,7 @@ import { updateTeacherClasses } from "../../data/repos/profilesRepo.js";
 import { loadMasteryForPlayer, recommendNextTopic, MASTERY_LABELS } from "../mastery/mastery.js";
 import { loadResumeGewoon as loadResume } from "../learn/KwartierPauze.jsx";
 import pathManifest from "../../learnPaths/pathManifest.generated.json";
+import { voKeuzes, voLabel, padPastBijSchoolType, isVoType, maxJaar, normType } from "../../shared/voNiveau.js";
 import { SUBJECTS as SUBJECT_LABELS } from "../../shared/subjects.js";
 import { track } from "../../utils.js";
 import { AvatarSvg, loadAvatarConfig, saveAvatarConfig, saveAvatarFoto, saveAvatarKiezerBeeld } from "./avatar.jsx";
@@ -104,7 +105,8 @@ function padBijGroep(level, groep) {
 
 // Hoort dit pad bij deze klas? VO-levels zijn bont: "klas1-2", "klas2-3-vmbo-
 // vwo", "havo4-5-vwo", "havo-vwo-4-5", "vmbo-gt-4", "vwo" — allemaal vangen.
-function padBijKlas(level, klas) {
+function padBijKlas(level, klas, schoolType = "") {
+  if (!padPastBijSchoolType(level, schoolType)) return false;
   const l = String(level || "").toLowerCase();
   const m = l.match(/klas\s*(\d)(?:\s*-\s*(\d))?/);
   if (m) {
@@ -127,7 +129,7 @@ function korteTitel(t) {
 function niveauPaden(niveau) {
   if (!niveau) return [];
   const vakken = niveau.soort === "klas" ? Object.keys(VAK_INFO_KLAS) : CURRICULUM_VAKKEN;
-  const past = (p) => (niveau.soort === "klas" ? padBijKlas(p.level, niveau.nr) : padBijGroep(p.level, niveau.nr));
+  const past = (p) => (niveau.soort === "klas" ? padBijKlas(p.level, niveau.nr, niveau.schoolType) : padBijGroep(p.level, niveau.nr));
   // Binnen een vak: Cito-/leerlijn-kernpaden (referentieniveau of "Cito" in de
   // titel) vóór de uitstapjes — zodat "Belasting snappen" niet vóór "Breuken" komt.
   const kern = (p) => (/cito|doorstroomtoets/i.test(p.title || "") ? 0 : p.referentieNiveau ? 1 : 2);
@@ -394,6 +396,7 @@ export default function MijnPagina({
   onVerwijderProfiel,
   onSetLevel,
   onSetRole,
+  userSchoolType = "",
   onPraatMaatje,
   onOpenHub,
   onBack,
@@ -402,10 +405,14 @@ export default function MijnPagina({
   onNaamInvullen,
 }) {
   const player = (userName || "").trim();
-  const niveau = useMemo(() => parseNiveau(userLevel), [userLevel]);
+  const niveau = useMemo(() => {
+    const n = parseNiveau(userLevel);
+    // Middelbare school: niveau (havo, mavo…) hoort erbij (Noa 8 okt 2026).
+    return n && n.soort === "klas" ? { ...n, schoolType: userSchoolType || "", label: isVoType(userSchoolType) ? voLabel(userSchoolType, n.nr) : n.label } : n;
+  }, [userLevel, userSchoolType]);
   const groep = niveau?.soort === "groep" ? niveau.nr : null;
   // "groep 4" of "klas 2" — voor alle zichtbare teksten op de kaart.
-  const niveauLabel = niveau ? `${niveau.soort} ${niveau.nr}` : null;
+  const niveauLabel = niveau ? (niveau.soort === "klas" && isVoType(niveau.schoolType) ? voLabel(niveau.schoolType, niveau.nr).toLowerCase() : `${niveau.soort} ${niveau.nr}`) : null;
   const vakMeta = (vak) => (niveau?.soort === "klas" ? VAK_INFO_KLAS[vak] : VAK_INFO[vak]) || VAK_INFO[vak] || { titel: vak, emoji: "📘" };
   const notitieVoor = (vak) => (niveau ? (niveau.soort === "klas" ? klasNotitie(niveau.nr, vak) : vakNotitie(niveau.nr, vak)) : "");
   const [records, setRecords] = useState([]);
@@ -458,6 +465,7 @@ export default function MijnPagina({
   // 🎒 Groep aanpassen op je eigen pagina (Mark 13 aug) + schoolstart-kaart:
   // rond de zomerwissel schuift iedereen een groep op — één tik en alles klopt.
   const [groepKiezerOpen, setGroepKiezerOpen] = useState(false);
+  const [kiesVoType, setKiesVoType] = useState(null); // middelbare school: eerst niveau, dan leerjaar
   // Nieuwe naam direct op deze pagina (Mark 13 aug: "waarom kan ik daar niet
   // wisselen?") — via onWisselProfiel, die kent onbekende namen al.
   const [nieuweNaam, setNieuweNaam] = useState("");
@@ -1433,11 +1441,47 @@ export default function MijnPagina({
                     </button>
                     {groepKiezerOpen && onSetLevel && (
                       <div style={{ marginTop: 8 }}>
+                        {kiesSoort === "klas" && (() => {
+                          // Middelbare school (Noa 8 okt 2026): eerst het niveau, dan het leerjaar.
+                          const typeNu = kiesVoType || (isVoType(niveau?.schoolType) ? normType(niveau.schoolType) : null);
+                          return (
+                            <>
+                              <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", marginBottom: 5 }}>Welk niveau doe je?</div>
+                              <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 10 }}>
+                                {voKeuzes().map(({ type }) => (
+                                  <button key={type.key} type="button" onClick={() => setKiesVoType(type.key)} style={{
+                                    padding: "7px 11px", borderRadius: 999, cursor: "pointer", fontFamily: "inherit", fontSize: 13, fontWeight: 700,
+                                    border: typeNu === type.key ? "2px solid #ffd54f" : "1px solid rgba(255,255,255,0.2)",
+                                    background: typeNu === type.key ? "rgba(255,213,79,0.15)" : "rgba(255,255,255,0.05)",
+                                    color: typeNu === type.key ? "#ffd54f" : "var(--color-text, #e8edf5)",
+                                  }}>{type.label}</button>
+                                ))}
+                              </div>
+                              {typeNu && <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", marginBottom: 5 }}>In welk leerjaar zit je?</div>}
+                              {typeNu && (
+                                <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                                  {Array.from({ length: maxJaar(typeNu) }, (_, i) => i + 1).map((n) => {
+                                    const aan = niveau?.nr === n && normType(niveau?.schoolType) === typeNu;
+                                    return (
+                                      <button key={n} type="button" onClick={() => { kiesNiveau("klas", n, typeNu); setKiesVoType(null); }} style={{
+                                        width: 40, height: 40, borderRadius: 10, cursor: "pointer", fontFamily: "inherit",
+                                        border: aan ? "2px solid #ffd54f" : "1px solid rgba(255,255,255,0.2)",
+                                        background: aan ? "rgba(255,213,79,0.15)" : "rgba(255,255,255,0.05)",
+                                        color: aan ? "#ffd54f" : "var(--color-text, #e8edf5)", fontSize: 15, fontWeight: 800,
+                                      }}>{n}</button>
+                                    );
+                                  })}
+                                </div>
+                              )}
+                            </>
+                          );
+                        })()}
+                        {kiesSoort !== "klas" && <>
                         <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", marginBottom: 5 }}>
-                          {kiesSoort === "klas" ? "In welke klas zit je?" : "In welke groep zit je?"}
+                          In welke groep zit je?
                         </div>
                         <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-                          {(kiesSoort === "klas" ? [1, 2, 3, 4, 5, 6] : [1, 2, 3, 4, 5, 6, 7, 8]).map((n) => (
+                          {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
                             <button
                               key={n}
                               onClick={() => kiesNiveau(kiesSoort, n)}
@@ -1452,8 +1496,9 @@ export default function MijnPagina({
                             </button>
                           ))}
                         </div>
+                        </>}
                         <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", marginTop: 6 }}>
-                          Zo kloppen je vakken en oefeningen meteen weer bij jouw {kiesSoort === "klas" ? "klas" : "groep"}.
+                          Zo kloppen je vakken en oefeningen meteen weer bij jouw {kiesSoort === "klas" ? "niveau en leerjaar" : "groep"}.
                         </div>
                       </div>
                     )}

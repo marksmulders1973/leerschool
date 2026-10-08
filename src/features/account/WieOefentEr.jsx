@@ -10,6 +10,7 @@
 // - Opslag zoals de rest van de app: lk_namen + lk_profiel:<naam>; voorkeur via voorkeur.js
 //   (de vandaag-motor gebruikt die al).
 
+import { voKeuzes, voLabel, isVoType } from "../../shared/voNiveau.js";
 import { useMemo, useState } from "react";
 import { AvatarSvg, loadAvatarConfig } from "./avatar.jsx";
 import { VOORKEUR_VAKKEN, bewaarVoorkeur, standaardTot } from "../vandaag/voorkeur.js";
@@ -34,11 +35,28 @@ const ROL_KNOPPEN = [
   { key: "teacher", label: "Leerkracht", uitleg: "Ik heb een klas" },
 ];
 
-const NIVEAUS = [
+// Basisschool = groep; middelbare school = niveau + leerjaar (Noa 8 okt 2026: "mavo heeft 4 leerjaren,
+// havo 5, vwo en gymnasium 6"). Waarde "klas4|havo" → app-niveau "4" + schoolType "havo".
+const GROEPEN = [
   { level: "groep12", label: "Groep 1-2" },
   ...[3, 4, 5, 6, 7, 8].map((g) => ({ level: `groep${g}`, label: `Groep ${g}` })),
-  ...[1, 2, 3, 4, 5, 6].map((k) => ({ level: `klas${k}`, label: k === 1 ? "Klas 1 (brugklas)" : `Klas ${k}` })),
 ];
+const VO_OPTIES = voKeuzes().flatMap(({ opties }) => opties.map((o) => ({ level: o.value, label: o.label })));
+const NIVEAUS = [...GROEPEN, ...VO_OPTIES];
+function NiveauOpties() {
+  return (
+    <>
+      <optgroup label="Basisschool">
+        {GROEPEN.map((n) => <option key={n.level} value={n.level}>{n.label}</option>)}
+      </optgroup>
+      {voKeuzes().map(({ type, opties }) => (
+        <optgroup key={type.key} label={`Middelbare school: ${type.label}`}>
+          {opties.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
+        </optgroup>
+      ))}
+    </>
+  );
+}
 
 // Leeftijd → gebruikelijke groep/klas (voorstel, aan te passen).
 function niveauBijLeeftijd(l) {
@@ -46,7 +64,7 @@ function niveauBijLeeftijd(l) {
   if (!n) return "";
   if (n <= 5) return "groep12";
   if (n <= 11) return `groep${n - 3}`;
-  return `klas${Math.min(6, n - 11)}`;
+  return ""; // middelbare school: niveau kiest het kind zelf (mavo, havo, vwo…)
 }
 
 // Kliktocht 1 okt 2026: de app bewaart het niveau als los cijfer ("6") + schoolType voor
@@ -55,6 +73,8 @@ function naarAppNiveau(level) {
   if (level === "groep12") return { level: "2", schoolType: "" };
   const g = (level || "").match(/^groep(\d)$/);
   if (g) return { level: g[1], schoolType: "" };
+  const vo = (level || "").match(/^klas(\d)\|([a-z-]+)$/);
+  if (vo) return { level: vo[1], schoolType: vo[2] };
   const k = (level || "").match(/^klas(\d)$/);
   if (k) return { level: k[1], schoolType: "havo-vwo" };
   return { level: "", schoolType: "" };
@@ -65,6 +85,7 @@ const rolWoord = (p) => {
   if (p.role === "teacher") return "leerkracht";
   const niv = NIVEAUS.find((x) => x.level === p.level);
   if (niv) return `leerling · ${niv.label.toLowerCase()}`;
+  if (/^\d+$/.test(String(p.level || "")) && isVoType(p.schoolType)) return `leerling · ${voLabel(p.schoolType, p.level).toLowerCase()}`;
   if (/^\d+$/.test(String(p.level || ""))) return `leerling · ${p.role === "student" || p.schoolType ? "klas" : "groep"} ${p.level}`;
   return "leerling";
 };
@@ -176,7 +197,7 @@ function ProfielKaart({ bestaand, onKlaar, onTerug, vasteRol = null }) {
               <label style={label} htmlFor="wie-groep">Groep of klas</label>
               <select id="wie-groep" style={veld} value={level} onChange={(e) => setLevel(e.target.value)}>
                 <option value="">Kies…</option>
-                {NIVEAUS.map((n) => <option key={n.level} value={n.level}>{n.label}</option>)}
+                <NiveauOpties />
               </select>
             </div>
           </div>
@@ -205,7 +226,7 @@ function ProfielKaart({ bestaand, onKlaar, onTerug, vasteRol = null }) {
           <label style={label} htmlFor="wie-klas">Welke groep geef je les? <span style={{ fontWeight: 500, color: "rgba(255,255,255,0.45)" }}>(mag leeg)</span></label>
           <select id="wie-klas" style={veld} value={level} onChange={(e) => setLevel(e.target.value)}>
             <option value="">Kies…</option>
-            {NIVEAUS.map((n) => <option key={n.level} value={n.level}>{n.label}</option>)}
+            <NiveauOpties />
           </select>
         </>
       )}
@@ -266,7 +287,7 @@ export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder,
       lijst.unshift(naam);
       localStorage.setItem("lk_namen", JSON.stringify(lijst.slice(0, 8)));
       // Zelfde groep-vorm als Gezinsstart: "6" (getal als tekst), brugklas voor klas 1.
-      const groepVoorkeur = /^groep12$/.test(level) ? "2" : (level.match(/^groep(\d)$/) || [])[1] || (level === "klas1" ? "brugklas" : null);
+      const groepVoorkeur = /^groep12$/.test(level) ? "2" : (level.match(/^groep(\d)$/) || [])[1] || (/^klas1(\||$)/.test(level) ? "brugklas" : null);
       if (vakken.length) bewaarVoorkeur(naam, { groep: groepVoorkeur, voorkeur: { vakken, vrij: "", tot: standaardTot(), app_kiest: false } });
     } catch { /* */ }
     try { track("profiel_aangemaakt", { rol: role, leeftijd: !!leeftijd, groep: !!level, vakken: vakken.length, aantal: profielen.length + 1 }); } catch { /* */ }
