@@ -40,3 +40,20 @@ describe("Vandaag-motor — ladder", () => {
     expect(dagenTotToets(new Date(2026, 8, 10))).toBe(137);
   });
 });
+
+describe("Vandaag-motor — middelbare school (Noa, 8 okt 2026)", () => {
+  const klasPaden = ["aardobservatie-risico-havo-vwo", "algebra-vergelijkingen-havo-vwo", "argumentatieleer", "bbp-conjunctuur-economie", "atmosfeer-klimaat-havo-vwo"];
+  it("klas 5 krijgt nooit basisschoolpaden, ook niet met PO-meetgegevens", () => {
+    const p = bepaalPlan({ level: "klas5", metSchoolvakken: true, klasPaden, vandaag: new Date(2026, 9, 8), mastery: [rec("dieren-seizoenen-natuur", 10, 2, "Dieren", "wereld")] });
+    const ids = p.blokjes.map((b) => b.pathId);
+    expect(ids.length).toBeGreaterThanOrEqual(2);
+    for (const id of ids) expect(klasPaden).toContain(id);
+  });
+  it("klas 5 met een zwak eigen-klas-pad: dat eerst, daarna andere vakken", () => {
+    const p = bepaalPlan({ level: "klas5", metSchoolvakken: true, klasPaden, vandaag: new Date(2026, 9, 5), mastery: [rec("bbp-conjunctuur-economie", 10, 2, "BBP", "economie")] });
+    expect(p.blokjes[0].pathId).toBe("bbp-conjunctuur-economie");
+    expect(p.blokjes.length).toBeGreaterThanOrEqual(2);
+    const vakken = p.blokjes.map((b) => b.pathId);
+    expect(new Set(vakken).size).toBe(vakken.length);
+  });
+});

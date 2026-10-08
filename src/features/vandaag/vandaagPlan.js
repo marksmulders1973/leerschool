@@ -136,10 +136,49 @@ function conceptVoorVandaag(concepten, weekdag) {
  * @param {object} [o.voorkeur]            Gezinsstart-voorkeur {vakken, vrij, tot, app_kiest} (zie voorkeur.js)
  * @returns {{reden:string, uitleg:string, blokjes:Array, voorkeur?:boolean}}
  */
-export function bepaalPlan({ level, vandaag = new Date(), klaargezet = [], mastery = [], dicteeSchool = false, wwSchool = false, metSchoolvakken = false, voorkeur = null } = {}) {
+export function bepaalPlan({ level, vandaag = new Date(), klaargezet = [], mastery = [], dicteeSchool = false, wwSchool = false, metSchoolvakken = false, voorkeur = null, klasPaden = null } = {}) {
   const groep = parseGroep(level) ?? 6;
   const open = (klaargezet || []).filter((k) => !k.gedaan);
   const weekdag = vandaag.getDay();
+
+  // 🎒 Middelbare school (Noa, testgroep 8 okt 2026: profiel "Klas 5" kreeg groep-4/5-stof —
+  // "klas5" werd hierboven als groep 5 gelezen). VO-leerlingen krijgen alleen paden van hun
+  // eigen klas (klasPaden, zelfde lijst als de vak-tegels op /mijn), nooit basisschoolpaden.
+  if (metSchoolvakken && Array.isArray(klasPaden) && klasPaden.length) {
+    if (open.length) {
+      return {
+        reden: "klaargezet",
+        uitleg: open.some((k) => k.bron === "leraar") ? "Je docent heeft iets voor je klaargezet." : "Thuis is iets voor je klaargezet.",
+        blokjes: [{ soort: "klaargezet", items: open.slice(0, 3), titel: "💛 Voor jou klaargezet" }],
+      };
+    }
+    const toegestaan = new Set(klasPaden);
+    // Eén pad per vak, elke dag bij een ander vak beginnen.
+    const perVak = [];
+    const vakGehad = new Set();
+    for (let i = 0; i < klasPaden.length; i++) {
+      const id = klasPaden[(i + weekdag * 7) % klasPaden.length];
+      const vak = PATHS_BY_ID[id]?.subject || id;
+      if (vakGehad.has(vak)) continue;
+      vakGehad.add(vak); perVak.push(id);
+    }
+    const zwak = kiesZwakkeConcepten(mastery, { maxConcepten: 6, minPogingen: 3, drempelPct: 101 })
+      .filter((c) => toegestaan.has(c.id));
+    const gekozen = conceptVoorVandaag(zwak, weekdag);
+    if (gekozen) {
+      const rest = perVak.filter((id) => id !== gekozen.id && PATHS_BY_ID[id]?.subject !== PATHS_BY_ID[gekozen.id]?.subject).slice(0, 2);
+      return {
+        reden: "weekschema",
+        uitleg: "Eerst je lastigste onderwerp, dan twee andere vakken van jouw klas.",
+        blokjes: [vragenBlok(gekozen.id), ...rest.map((id) => vragenBlok(id))],
+      };
+    }
+    return {
+      reden: "mix",
+      uitleg: "Nog weinig gemeten: een mix van vakken van jouw klas.",
+      blokjes: perVak.slice(0, 3).map((id) => vragenBlok(id)),
+    };
+  }
   const vk = !metSchoolvakken && voorkeurActief(voorkeur, vandaag) ? voorkeur : null;
   const vkVakken = vk && Array.isArray(vk.vakken) ? vk.vakken : [];
   const vkPaden = vk ? voorkeurPaden(groep, vk) : [];
