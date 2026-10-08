@@ -200,6 +200,177 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Je koopt een bal in voor **€11**. Bij welke **verkoopprijs** maak je **verlies**?",
+        options: ["€10", "€11", "€12", "€15"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Wat houd je over als verkoop en inkoop even groot zijn?",
+          null,
+          "Is deze prijs hoger of lager dan wat de bal jou kostte?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wanneer is het verlies?",
+              tekst: "Je maakt verlies als je verkoopt voor **minder** dan de inkoopprijs.",
+            },
+            {
+              titel: "Vergelijk met €11",
+              tekst: "€10 is lager dan €11. €11 is gelijk (quitte). €12 en €15 zijn hoger (winst).",
+            },
+            {
+              titel: "Reken na",
+              tekst: "€10 − €11 = −€1. Een min-getal betekent **verlies**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "verlies",
+              uitleg: "Je raakt geld kwijt, omdat je verkoopt voor minder dan het jou kostte.",
+            },
+          ],
+          theorie: "Toets-kern: verkoop lager dan inkoop → verlies. Verkoop gelijk aan inkoop → quitte. Verkoop hoger dan inkoop → winst.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Inkoop €8, verkoop €7 → €1 verlies.",
+            },
+            {
+              type: "stap",
+              tekst: "Inkoop €8, verkoop €9 → €1 winst.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Zoek de verkoopprijs die onder de inkoopprijs ligt. Die geeft verlies.",
+            },
+          ],
+          niveaus: {
+            basis: "€10, want dat is minder dan de inkoop van €11 (€10 − €11 = −€1).",
+            simpeler: "De bal kostte jou €11. Krijg je er maar €10 voor? Dan ben je €1 kwijt.",
+            nogSimpeler: "€10",
+          },
+        },
+      },
+      {
+        q: "Vier kraampjes verkopen elk één ding. Welk kraampje maakt de **meeste winst**?",
+        options: [
+          "Inkoop €3, verkoop €8",
+          "Inkoop €6, verkoop €10",
+          "Inkoop €1, verkoop €4",
+          "Inkoop €9, verkoop €11",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "De hoogste verkoopprijs is niet vanzelf de meeste winst. Reken verkoop − inkoop.",
+          "De laagste inkoop is niet vanzelf de meeste winst. Reken het verschil uit.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Reken per kraampje de winst",
+              tekst: "Winst = verkoopprijs − inkoopprijs. Doe dat voor alle vier.",
+            },
+            {
+              titel: "De vier winsten",
+              tekst: "€8 − €3 = €5. €10 − €6 = €4. €4 − €1 = €3. €11 − €9 = €2.",
+            },
+            {
+              titel: "Vergelijk",
+              tekst: "€5 is het meest. Dus het kraampje met inkoop €3 en verkoop €8 maakt de meeste winst.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "winst",
+              uitleg: "Wat je overhoudt: verkoopprijs − inkoopprijs.",
+            },
+          ],
+          theorie: "Toets-valkuil: kijk niet alleen naar de hoogste verkoopprijs. Winst is het verschil tussen verkoop en inkoop.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Inkoop €2, verkoop €9 → winst €7.",
+            },
+            {
+              type: "stap",
+              tekst: "Inkoop €10, verkoop €12 → winst €2.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Schrijf bij elk kraampje de winst erbij. Kies daarna het grootste getal.",
+            },
+          ],
+          niveaus: {
+            basis: "Inkoop €3, verkoop €8: winst €5. De andere maken €4, €3 en €2.",
+            simpeler: "Reken bij elk: verkoop min inkoop. Het grootste antwoord is €5.",
+            nogSimpeler: "€8 − €3 = €5",
+          },
+        },
+      },
+      {
+        q: "Je koopt een spel in voor **€20** en verkoopt het voor **€14**. Hoeveel **verlies** maak je?",
+        options: ["€6", "€34", "€14", "€20"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Moet je hier optellen of het verschil zoeken?",
+          null,
+          "Dat is wat het spel jou kostte. Hoeveel kreeg je terug?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Reken de winst-som",
+              tekst: "Winst = verkoop − inkoop = €14 − €20 = −€6.",
+            },
+            {
+              titel: "Min-getal = verlies",
+              tekst: "Het antwoord is negatief. Je bent dus **€6** kwijt: €6 verlies.",
+            },
+            {
+              titel: "Check",
+              tekst: "Je betaalde €20 en kreeg €14 terug. Van €14 naar €20 is €6. Klopt!",
+            },
+          ],
+          woorden: [
+            {
+              woord: "verlies",
+              uitleg: "Het tegenovergestelde van winst: je raakt geld kwijt.",
+            },
+          ],
+          theorie: "Toets-kern: is de verkoop lager dan de inkoop, dan is het verschil je verlies. Verlies = inkoop − verkoop.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Inkoop €12, verkoop €9 → €3 verlies.",
+            },
+            {
+              type: "stap",
+              tekst: "Inkoop €30, verkoop €25 → €5 verlies.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Bij verlies zoek je ook het verschil tussen inkoop en verkoop, alleen de andere kant op.",
+            },
+          ],
+          niveaus: {
+            basis: "€6 verlies (€14 − €20 = −€6).",
+            simpeler: "Je betaalde €20 en kreeg maar €14. Je bent €6 kwijt.",
+            nogSimpeler: "€6",
+          },
+        },
+      },
     ],
   },
 
@@ -367,6 +538,125 @@ const steps = [
             basis: "€0,50 (€6 ÷ 12).",
             simpeler: "Deel de totale winst door het aantal: €6 ÷ 12 = €0,50.",
             nogSimpeler: "€0,50",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Je verkoopt **6 armbandjes** voor **€2** per stuk. De inkoop was samen **€5**. Hoeveel **winst** maak je?",
+        options: ["€7", "€12", "€5", "€17"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is al het geld dat binnenkomt. Is dat ook wat je overhoudt?",
+          null,
+          "Moet de inkoop erbij of eraf?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst de opbrengst",
+              tekst: "Opbrengst = verkoopprijs × aantal = €2 × 6 = €12.",
+            },
+            {
+              titel: "Dan de winst",
+              tekst: "Winst = opbrengst − inkoopkosten = €12 − €5 = **€7**.",
+            },
+            {
+              titel: "Check",
+              tekst: "€5 inkoop + €7 winst = €12 opbrengst. Klopt!",
+            },
+          ],
+          woorden: [
+            {
+              woord: "opbrengst",
+              uitleg: "Al het geld dat binnenkomt: verkoopprijs × aantal.",
+            },
+            {
+              woord: "winst",
+              uitleg: "Wat overblijft ná de inkoopkosten.",
+            },
+          ],
+          theorie: "Toets-valkuil: de opbrengst (€12) is nog niet je winst. Trek de inkoop van alles samen eraf: €12 − €5 = €7.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "5 kaarten × €3 = €15 opbrengst. Inkoop samen €6 → winst €9.",
+            },
+            {
+              type: "stap",
+              tekst: "4 bekers × €5 = €20 opbrengst. Inkoop samen €8 → winst €12.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Twee stappen: eerst opbrengst (prijs × aantal), dan de inkoop eraf.",
+            },
+          ],
+          niveaus: {
+            basis: "€7 (€2 × 6 = €12, en €12 − €5 = €7).",
+            simpeler: "Er komt €12 binnen. Je had €5 betaald. €12 − €5 = €7 over.",
+            nogSimpeler: "€7",
+          },
+        },
+      },
+      {
+        q: "Een flesje drinken koop je in voor **€0,60** en verkoop je voor **€1,00**. Je verkoopt er **15**. Hoeveel **totale winst**?",
+        options: ["€6", "€15", "€9", "€0,40"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is al het geld dat binnenkomt. De inkoop moet er nog af.",
+          "Dat is wat alle flesjes jou samen kostten.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Winst per flesje",
+              tekst: "€1,00 − €0,60 = €0,40 per flesje.",
+            },
+            {
+              titel: "Totale winst",
+              tekst: "€0,40 × 15 = **€6**. In centen: 40 × 15 = 600 cent = €6.",
+            },
+            {
+              titel: "Check",
+              tekst: "Opbrengst €1,00 × 15 = €15. Inkoop €0,60 × 15 = €9. €15 − €9 = €6. Klopt!",
+            },
+          ],
+          woorden: [
+            {
+              woord: "winst per stuk",
+              uitleg: "Verkoopprijs − inkoopprijs van één ding.",
+            },
+            {
+              woord: "totale winst",
+              uitleg: "De winst van alle stuks samen.",
+            },
+          ],
+          theorie: "Toets-truc: eerst de winst per stuk, dan keer het aantal. Reken bij kleine bedragen in centen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Inkoop €0,30, verkoop €0,80 → €0,50 winst per stuk. 6 stuks → €3.",
+            },
+            {
+              type: "stap",
+              tekst: "Inkoop €1, verkoop €1,20 → €0,20 winst per stuk. 20 stuks → €4.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Winst per stuk × aantal = totale winst.",
+            },
+          ],
+          niveaus: {
+            basis: "€6 (€0,40 winst per flesje × 15).",
+            simpeler: "Elk flesje levert 40 cent op. 15 × 40 cent = 600 cent = €6.",
+            nogSimpeler: "€6",
           },
         },
       },
