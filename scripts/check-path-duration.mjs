@@ -18,7 +18,7 @@
 //   node scripts/check-path-duration.mjs --update-baseline → herijk baseline naar nu
 //
 // Gate faalt als:
-//   (a) een bestaand pad LANGER werd dan zijn baseline, OF
+//   (a) een bestaand pad LANGER werd dan zijn baseline én dan 15 min, OF
 //   (b) een NIEUW pad (niet in baseline) >15 min duurt.
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 
@@ -69,7 +69,9 @@ for (const p of manifest) {
   const b = base[p.id];
   if (b === undefined) {
     if (p.estimatedMinutes > BELOFTE_MIN) nieuweLang.push(`${p.id}: ${p.estimatedMinutes}m (nieuw pad > ${BELOFTE_MIN}m)`);
-  } else if (p.estimatedMinutes > b) {
+  } else if (p.estimatedMinutes > Math.max(b, BELOFTE_MIN)) {
+    // Q12a (8 okt 2026): langer worden tot de 15-min-belofte mag — een stap met 4 vragen die er 10
+    // krijgt, toont per bezoek 5 (geziendeVragen.js) en schuift zo soms een bucket op, binnen de belofte.
     regressies.push(`${p.id}: ${b}m → ${p.estimatedMinutes}m (werd langer)`);
   }
 }
