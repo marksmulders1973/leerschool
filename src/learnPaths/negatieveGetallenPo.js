@@ -104,6 +104,255 @@ const steps = [
           niveaus: { basis: "−10.", simpeler: "Op getalslijn: −10 ← −1 ← 0 ← +5. Kleinst = verste links = −10.", nogSimpeler: "−10" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke zin **klopt**?",
+        options: ["−4 is groter dan −9", "−9 is groter dan −4", "−4 is kleiner dan −9", "−9 is groter dan 0"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Welk van de twee ligt dichter bij 0?",
+          null,
+          "Kan een getal onder nul groter zijn dan 0?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Dichter bij 0 = groter",
+              tekst: "−4 ligt dichter bij 0 dan −9. Dus −4 is groter.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "groter",
+              uitleg: "Op de getalslijn ligt het grotere getal rechts.",
+            },
+          ],
+          theorie: "Op de getalslijn ligt −4 rechts van −9. Rechts = groter.",
+          voorbeelden: [
+            {
+              type: "thermometer",
+              tekst: "−4 °C is warmer dan −9 °C. Warmer = groter.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Elke negatieve is kleiner dan 0",
+              uitleg: "Een getal onder nul is altijd kleiner dan 0.",
+            },
+          ],
+          niveaus: {
+            basis: "−4 is groter dan −9.",
+            simpeler: "Denk aan de thermometer: −4 °C is minder koud dan −9 °C. Dus −4 is groter.",
+            nogSimpeler: "−4 is groter dan −9",
+          },
+        },
+      },
+      {
+        q: "Hoe schrijf je **'min vijftien'** als getal?",
+        options: ["−15", "+15", "−50", "−5"],
+        answer: 0,
+        wrongHints: [null, "'Min' hoort bij een getal onder nul.", "Luister goed: vijftien of vijftig?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Min = onder nul",
+              tekst: "'Min' betekent: onder nul. 'Vijftien' = 15. Samen: −15.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "min",
+              uitleg: "Het teken − voor een getal: het getal ligt onder nul.",
+            },
+          ],
+          theorie: "Je schrijft een min-teken en dan het getal: 'min vijftien' = −15.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'Min vier' = −4. 'Min vijftien' = −15.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Plus of min",
+              uitleg: "'Plus' = boven nul, 'min' = onder nul.",
+            },
+          ],
+          niveaus: {
+            basis: "−15.",
+            simpeler: "Eerst het min-teken, dan 15. Dus −15.",
+            nogSimpeler: "−15",
+          },
+        },
+      },
+      {
+        q: "Je stapt in de lift en drukt op **−1**. Waar kom je uit?",
+        options: ["Onder de grond", "Op de begane grond", "Op de eerste verdieping", "Op het dak"],
+        answer: 0,
+        wrongHints: [null, "Ligt −1 boven of onder nul?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Onder nul = onder de grond",
+              tekst: "De begane grond is 0. Alles met een min-teken ligt daaronder.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kelder",
+              uitleg: "Een ruimte onder de grond.",
+            },
+          ],
+          theorie: "Verdieping 0 is de begane grond. −1 is één verdieping lager: onder de grond.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Verdieping −2 = twee verdiepingen onder de grond.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Hoogte en min",
+              uitleg: "Min bij hoogte = onder de grond (of onder de zee).",
+            },
+          ],
+          niveaus: {
+            basis: "Onder de grond.",
+            simpeler: "0 is de begane grond. −1 is één verdieping lager: onder de grond.",
+            nogSimpeler: "Onder de grond",
+          },
+        },
+      },
+      {
+        q: "Tim houdt bij hoeveel geld hij heeft. Hij schrijft op: **−€ 10**. Wat betekent dat?",
+        options: [
+          "Tim moet nog 10 euro betalen",
+          "Tim heeft 10 euro in zijn portemonnee",
+          "Tim heeft precies 0 euro",
+          "Tim krijgt nog 10 euro",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Wat betekent het min-teken bij geld?",
+          null,
+          "Denk aan een schuld: krijg je dan geld of moet je betalen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Min bij geld = schuld",
+              tekst: "−€ 10 betekent: een schuld van 10 euro. Tim moet 10 euro betalen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schuld",
+              uitleg: "Geld dat je nog moet betalen.",
+            },
+          ],
+          theorie: "Bij geld is een negatief getal een schuld.",
+          voorbeelden: [
+            {
+              type: "geld",
+              tekst: "−€ 50 = je moet 50 euro betalen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Geld en min",
+              uitleg: "Plus = geld dat je hebt. Min = geld dat je moet betalen.",
+            },
+          ],
+          niveaus: {
+            basis: "Tim moet 10 euro betalen.",
+            simpeler: "Een min-teken bij geld = een schuld. Tim moet dus nog 10 euro betalen.",
+            nogSimpeler: "Tim moet 10 euro betalen",
+          },
+        },
+      },
+      {
+        q: "Welk getal is **niet negatief**?",
+        options: ["+2", "−2", "−20", "−1"],
+        answer: 0,
+        wrongHints: [null, "Kijk naar het teken voor het getal.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kijk naar het teken",
+              tekst: "Negatief = met een min-teken. +2 heeft een plus-teken.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "negatief",
+              uitleg: "Kleiner dan 0, met een min-teken.",
+            },
+          ],
+          theorie: "Negatieve getallen hebben een min-teken. +2 ligt boven nul.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "−1, −2 en −20 liggen links van 0. +2 ligt rechts van 0.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Plus-teken",
+              uitleg: "+3 is hetzelfde als gewoon 3: een positief getal.",
+            },
+          ],
+          niveaus: {
+            basis: "+2.",
+            simpeler: "Alleen +2 heeft geen min-teken. Het ligt boven nul.",
+            nogSimpeler: "+2",
+          },
+        },
+      },
+      {
+        q: "Welk getal ligt op de getalslijn precies **tussen −3 en −1**?",
+        options: ["−2", "+2", "0", "−4"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zoek tussen de twee getallen, aan de min-kant.",
+          null,
+          "Ligt dat getal tussen −3 en −1, of ernaast?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kijk op de getalslijn",
+              tekst: "… −4  −3  −2  −1  0 … Tussen −3 en −1 staat −2.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "getalslijn",
+              uitleg: "Een lijn met alle getallen op volgorde, met 0 in het midden.",
+            },
+          ],
+          theorie: "Op de getalslijn staan de negatieve getallen links van 0: −3, −2, −1, 0.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Tussen −5 en −3 ligt −4.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Volgorde",
+              uitleg: "Links van 0: −1, dan −2, dan −3, steeds verder weg.",
+            },
+          ],
+          niveaus: {
+            basis: "−2.",
+            simpeler: "Tel van −3 naar −1: −3, −2, −1. In het midden staat −2.",
+            nogSimpeler: "−2",
+          },
+        },
+      },
     ],
   },
 
@@ -152,6 +401,298 @@ const steps = [
           voorbeelden: [{ type: "truc", tekst: "Beide negatief denken: −5 + (−4) = −9. Of: schuld 5 + schuld 4 = schuld 9." }],
           basiskennis: [{ onderwerp: "Schuld-truc", uitleg: "Schuld €5 + schuld €4 = schuld €9 = saldo −€9." }],
           niveaus: { basis: "−9.", simpeler: "−5 − 4: vanaf −5 vier stappen links = −9.", nogSimpeler: "−9" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**2 − 7** = ?",
+        options: ["−5", "+5", "+9", "−9"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "7 is meer dan 2: kom je boven of onder nul uit?",
+          null,
+          "Ga je 7 stappen naar links vanaf 2, of vanaf −2?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Naar links",
+              tekst: "Begin op 2. 7 stappen links: 2→1→0→−1→−2→−3→−4→−5.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "aftrekken",
+              uitleg: "Min = naar links lopen op de getalslijn.",
+            },
+          ],
+          theorie: "2 − 7: eerst 2 stappen tot 0, dan nog 5 stappen onder nul → −5.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2 − 2 = 0. 0 − 5 = −5. Dus 2 − 7 = −5.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Splits-truc",
+              uitleg: "Splits 7 in 2 + 5. Eerst 2 naar 0, dan de rest.",
+            },
+          ],
+          niveaus: {
+            basis: "−5.",
+            simpeler: "Van 2 naar 0 zijn 2 stappen. Nog 5 stappen verder: −5.",
+            nogSimpeler: "−5",
+          },
+        },
+      },
+      {
+        q: "**−6 + 4** = ?",
+        options: ["−2", "+2", "−10", "+10"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kom je met 4 stappen naar rechts vanaf −6 al voorbij 0?",
+          "Plus = welke kant op?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Naar rechts",
+              tekst: "Begin op −6. 4 stappen rechts: −6→−5→−4→−3→−2.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "optellen",
+              uitleg: "Plus = naar rechts lopen op de getalslijn.",
+            },
+          ],
+          theorie: "Van −6 naar 0 zijn 6 stappen. Je loopt er maar 4, dus je blijft onder nul: −2.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "−6 + 6 = 0. Met 4 stappen kom je 2 tekort: −2.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Nog onder nul?",
+              uitleg: "Is het getal na de plus kleiner dan de afstand tot 0, dan blijf je negatief.",
+            },
+          ],
+          niveaus: {
+            basis: "−2.",
+            simpeler: "Vanaf −6 vier stappen naar rechts: −5, −4, −3, −2.",
+            nogSimpeler: "−2",
+          },
+        },
+      },
+      {
+        q: "**−1 − 6** = ?",
+        options: ["−7", "−5", "+7", "+5"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Ga je bij min naar links of naar rechts?",
+          null,
+          "Kom je ooit boven nul als je naar links loopt vanaf −1?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Verder naar links",
+              tekst: "Begin op −1. 6 stappen links: −1→−2→−3→−4→−5→−6→−7.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "aftrekken vanaf negatief",
+              uitleg: "Min vanaf een negatief getal = nog verder van 0.",
+            },
+          ],
+          theorie: "Je begint al onder nul en gaat nog verder omlaag: −1 − 6 = −7.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Schuld van 1 euro, nog 6 euro schuld erbij = schuld van 7 euro.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Verder van 0",
+              uitleg: "Twee keer omlaag: het getal na de min wordt groter.",
+            },
+          ],
+          niveaus: {
+            basis: "−7.",
+            simpeler: "Vanaf −1 zes stappen naar links: je komt op −7.",
+            nogSimpeler: "−7",
+          },
+        },
+      },
+      {
+        q: "**−2 + 8** = ?",
+        options: ["+6", "−6", "+10", "−10"],
+        answer: 0,
+        wrongHints: [null, "Na 2 stappen ben je al bij 0. Hoeveel stappen heb je dan nog over?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Naar rechts, over 0 heen",
+              tekst: "Begin op −2. 8 stappen rechts: −2→−1→0→1→2→3→4→5→6.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "optellen",
+              uitleg: "Plus = naar rechts lopen op de getalslijn.",
+            },
+          ],
+          theorie: "−2 + 8: eerst 2 stappen tot 0, dan nog 6 → +6.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "−2 + 2 = 0. 0 + 6 = 6. Dus −2 + 8 = 6.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Splits-truc",
+              uitleg: "Splits 8 in 2 + 6. Eerst 2 naar 0, dan de rest.",
+            },
+          ],
+          niveaus: {
+            basis: "+6.",
+            simpeler: "Van −2 naar 0 zijn 2 stappen. Nog 6 stappen verder: +6.",
+            nogSimpeler: "+6",
+          },
+        },
+      },
+      {
+        q: "Je staat op **−4** op de getalslijn. Je loopt **3 stappen naar links**. Waar kom je uit?",
+        options: ["−7", "−1", "+1", "+7"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Links is de kant van de kleinere getallen.",
+          null,
+          "Je begint onder nul en gaat naar links. Kom je dan boven nul?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel de stappen",
+              tekst: "−4 → −5 → −6 → −7. Na 3 stappen sta je op −7.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "naar links",
+              uitleg: "Op de getalslijn: richting de kleinere getallen.",
+            },
+          ],
+          theorie: "3 stappen naar links vanaf −4 is hetzelfde als −4 − 3 = −7.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Vanaf −2 drie stappen naar links: −3, −4, −5.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Links = kleiner",
+              uitleg: "Hoe verder naar links, hoe kleiner het getal.",
+            },
+          ],
+          niveaus: {
+            basis: "−7.",
+            simpeler: "Vanaf −4 tellen: −5, −6, −7.",
+            nogSimpeler: "−7",
+          },
+        },
+      },
+      {
+        q: "Je staat op **2** op de getalslijn. Hoeveel stappen naar links moet je lopen om op **−3** te komen?",
+        options: ["5", "1", "3", "4"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Tel eerst de stappen tot 0, en dan de stappen onder nul.",
+          null,
+          "Vergeet je de stap van 0 naar −1 niet?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tot 0 en dan verder",
+              tekst: "Van 2 naar 0 = 2 stappen. Van 0 naar −3 = 3 stappen. Samen 5.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "stappen tellen",
+              uitleg: "Elke stap op de getalslijn is 1.",
+            },
+          ],
+          theorie: "Splits het in twee stukken: het stuk boven nul en het stuk onder nul. Tel ze op.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2 → 1 → 0 → −1 → −2 → −3: dat zijn 5 stappen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Over 0 heen",
+              uitleg: "Tel 0 niet als stap: je stapt van 1 naar 0, en van 0 naar −1.",
+            },
+          ],
+          niveaus: {
+            basis: "5 stappen.",
+            simpeler: "2 stappen naar 0, dan 3 stappen naar −3. 2 + 3 = 5.",
+            nogSimpeler: "5",
+          },
+        },
+      },
+      {
+        q: "Welke som hoort bij: **begin op 1 en loop 4 stappen naar links**?",
+        options: ["1 − 4", "1 + 4", "4 − 1", "−1 + 4"],
+        answer: 0,
+        wrongHints: [null, "Naar links lopen hoort bij plus of bij min?", null, "Bij welk getal begin je?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Begin + richting",
+              tekst: "Het eerste getal is waar je begint (1). Naar links = min. Dus 1 − 4.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "naar links",
+              uitleg: "Op de getalslijn naar links lopen = aftrekken.",
+            },
+          ],
+          theorie: "Optellen = naar rechts. Aftrekken = naar links. Het startgetal staat vooraan.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Begin op 5 en loop 2 stappen naar rechts = 5 + 2.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Startgetal vooraan",
+              uitleg: "In een som staat het getal waar je begint altijd eerst.",
+            },
+          ],
+          niveaus: {
+            basis: "1 − 4.",
+            simpeler: "Je begint op 1 en gaat naar links. Naar links = min. Dus 1 − 4.",
+            nogSimpeler: "1 − 4",
+          },
         },
       },
     ],
@@ -203,6 +744,240 @@ const steps = [
           niveaus: { basis: "+3.", simpeler: "5 + (−2) = 5 − 2 = 3 (plus een min wordt min).", nogSimpeler: "+3" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**6 − (−2)** = ?",
+        options: ["8", "4", "−8", "−4"],
+        answer: 0,
+        wrongHints: [null, "Kijk naar de twee min-tekens op rij.", null, "Twee min-tekens samen worden…?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "− − = +",
+              tekst: "−(−2) wordt +2. Dus 6 − (−2) = 6 + 2 = 8.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "min een minus",
+              uitleg: "Twee min-tekens op rij worden plus.",
+            },
+          ],
+          theorie: "Tekens-regel: − − = +. Je trekt een negatief getal af, dus je telt erbij op.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "6 − (−2) = 6 + 2 = 8.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Schuld weg",
+              uitleg: "Valt een schuld van € 2 weg, dan heb je € 2 méér.",
+            },
+          ],
+          niveaus: {
+            basis: "8.",
+            simpeler: "Twee minnen worden plus: 6 + 2 = 8.",
+            nogSimpeler: "8",
+          },
+        },
+      },
+      {
+        q: "**2 + (−5)** = ?",
+        options: ["−3", "+7", "+3", "−7"],
+        answer: 0,
+        wrongHints: [null, "Plus en min op rij worden samen…?", null, "Begin je op 2 of op −2?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "+ − = −",
+              tekst: "+(−5) wordt −5. Dus 2 + (−5) = 2 − 5 = −3.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "plus een minus",
+              uitleg: "Plus voor een negatief getal = aftrekken.",
+            },
+          ],
+          theorie: "Tekens-regel: + − = −. Dan wordt het 2 − 5.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2 − 5: van 2 naar 0 zijn 2 stappen, nog 3 verder → −3.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Aftrekken voorbij 0",
+              uitleg: "Trek je meer af dan je hebt, dan kom je onder nul.",
+            },
+          ],
+          niveaus: {
+            basis: "−3.",
+            simpeler: "+(−5) wordt −5. 2 − 5 = −3.",
+            nogSimpeler: "−3",
+          },
+        },
+      },
+      {
+        q: "**−3 − (−1)** = ?",
+        options: ["−2", "−4", "+2", "+4"],
+        answer: 0,
+        wrongHints: [null, "Wat gebeurt er met de twee min-tekens in het midden?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "− − = +",
+              tekst: "−(−1) wordt +1. Dus −3 − (−1) = −3 + 1 = −2.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "min een minus",
+              uitleg: "Twee min-tekens op rij worden plus.",
+            },
+          ],
+          theorie: "Tekens-regel: − − = +. Je loopt 1 stap naar rechts vanaf −3.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "−3 + 1: vanaf −3 één stap naar rechts → −2.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Schuld wordt kleiner",
+              uitleg: "Schuld van € 3, € 1 schuld valt weg: nog € 2 schuld.",
+            },
+          ],
+          niveaus: {
+            basis: "−2.",
+            simpeler: "Twee minnen worden plus: −3 + 1 = −2.",
+            nogSimpeler: "−2",
+          },
+        },
+      },
+      {
+        q: "**−5 + (−2)** = ?",
+        options: ["−7", "−3", "+7", "+3"],
+        answer: 0,
+        wrongHints: [null, "Wordt + − samen plus of min?", null, "Je begint op −5. Kom je dan boven nul?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "+ − = −",
+              tekst: "+(−2) wordt −2. Dus −5 + (−2) = −5 − 2 = −7.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "plus een minus",
+              uitleg: "Plus voor een negatief getal = aftrekken.",
+            },
+          ],
+          theorie: "Tekens-regel: + − = −. Vanaf −5 nog 2 stappen naar links.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "−5 − 2 = −7.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Schuld-stapelen",
+              uitleg: "Schuld € 5 + schuld € 2 = schuld € 7 = saldo −€ 7.",
+            },
+          ],
+          niveaus: {
+            basis: "−7.",
+            simpeler: "+(−2) wordt −2. −5 − 2 = −7.",
+            nogSimpeler: "−7",
+          },
+        },
+      },
+      {
+        q: "**9 − (−1)** = ?",
+        options: ["10", "8", "−10", "−8"],
+        answer: 0,
+        wrongHints: [null, "Er staan twee min-tekens op rij. Wat worden die samen?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "− − = +",
+              tekst: "−(−1) wordt +1. Dus 9 − (−1) = 9 + 1 = 10.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "min een minus",
+              uitleg: "Twee min-tekens op rij worden plus.",
+            },
+          ],
+          theorie: "Tekens-regel: − − = +. Je telt er 1 bij op.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "9 − (−1) = 9 + 1 = 10.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Schuld weg",
+              uitleg: "Valt een schuld van € 1 weg, dan heb je € 1 méér.",
+            },
+          ],
+          niveaus: {
+            basis: "10.",
+            simpeler: "Twee minnen worden plus: 9 + 1 = 10.",
+            nogSimpeler: "10",
+          },
+        },
+      },
+      {
+        q: "**10 − (−6)** kun je ook schrijven als…",
+        options: ["10 + 6", "10 − 6", "−10 + 6", "−10 − 6"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk naar de twee tekens tussen 10 en 6.",
+          null,
+          "Verandert het eerste getal, de 10?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "− − = +",
+              tekst: "De twee min-tekens tussen 10 en 6 worden samen plus: 10 + 6.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tekens-regel",
+              uitleg: "Twee tekens op rij worden één teken.",
+            },
+          ],
+          theorie: "− − = +. Het eerste getal (10) blijft hetzelfde.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "8 − (−5) = 8 + 5.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Alleen het middelste",
+              uitleg: "De regel gaat over de twee tekens op rij in het midden, niet over het eerste getal.",
+            },
+          ],
+          niveaus: {
+            basis: "10 + 6.",
+            simpeler: "Min een minus = plus. Dus 10 − (−6) = 10 + 6.",
+            nogSimpeler: "10 + 6",
+          },
+        },
+      },
     ],
   },
 
@@ -250,6 +1025,255 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "−30 + 30 = 0 (schuld weg). +50 over. Totaal +€50." }],
           basiskennis: [{ onderwerp: "Echt geld", uitleg: "Eerst schuld terugbetalen, dan kun je nog €50 uitgeven." }],
           niveaus: { basis: "+€50.", simpeler: "Schuld €30 + zakgeld €80 = €30 schuld weg + €50 over = +€50.", nogSimpeler: "+€50" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Overdag is het **+4 °C**. 's Nachts is het **−5 °C**. Hoeveel graden is de temperatuur **gedaald**?",
+        options: ["9 graden", "1 graad", "−1 graad", "−9 graden"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Tel het stuk boven nul en het stuk onder nul allebei mee.",
+          null,
+          "Kan het aantal graden dat het daalt negatief zijn?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel beide stukken",
+              tekst: "+4 → 0 = 4 graden. 0 → −5 = 5 graden. Samen 4 + 5 = 9.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "dalen",
+              uitleg: "De temperatuur gaat omlaag.",
+            },
+          ],
+          theorie: "Verschil = grootste − kleinste: 4 − (−5) = 4 + 5 = 9.",
+          voorbeelden: [
+            {
+              type: "thermometer",
+              tekst: "4 − (−5) = 4 + 5 = 9 graden.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Altijd positief",
+              uitleg: "Hoeveel graden het daalt is een afstand: altijd een positief getal.",
+            },
+          ],
+          niveaus: {
+            basis: "9 graden.",
+            simpeler: "Eerst 4 graden omlaag naar 0, dan nog 5 graden omlaag naar −5. Samen 9.",
+            nogSimpeler: "9 graden",
+          },
+        },
+      },
+      {
+        q: "Sanne heeft **€ 10** op haar rekening. Ze betaalt **€ 18**. Wat is haar saldo nu?",
+        options: ["−€ 8", "+€ 8", "−€ 28", "+€ 28"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Ze betaalt meer dan ze heeft. Staat ze dan rood of niet?",
+          null,
+          "Gaat er geld bij of af?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Onder nul",
+              tekst: "10 − 18: eerst 10 eraf tot 0, nog 8 eraf → −€ 8.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "saldo",
+              uitleg: "Hoeveel geld er op je rekening staat.",
+            },
+          ],
+          theorie: "Betaal je meer dan je hebt, dan wordt je saldo negatief (rood staan).",
+          voorbeelden: [
+            {
+              type: "geld",
+              tekst: "10 − 10 = 0. 0 − 8 = −8.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Rood staan",
+              uitleg: "Een saldo onder nul = je moet de bank geld terugbetalen.",
+            },
+          ],
+          niveaus: {
+            basis: "−€ 8.",
+            simpeler: "€ 10 is op na € 10 betalen. Er moet nog € 8 betaald worden: −€ 8.",
+            nogSimpeler: "−€ 8",
+          },
+        },
+      },
+      {
+        q: "Op de rekening van Joris staat **−€ 12**. Hij krijgt **€ 25**. Wat is zijn saldo nu?",
+        options: ["+€ 13", "−€ 13", "+€ 37", "−€ 37"],
+        answer: 0,
+        wrongHints: [null, "Met de eerste € 12 is zijn schuld weg. Hoeveel blijft er dan over?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst de schuld weg",
+              tekst: "−12 + 25: eerst 12 tot 0, dan nog 13 → +€ 13.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "saldo",
+              uitleg: "Hoeveel geld er op je rekening staat.",
+            },
+          ],
+          theorie: "Geld erbij = naar rechts op de getalslijn. Eerst tot 0, dan verder.",
+          voorbeelden: [
+            {
+              type: "geld",
+              tekst: "−12 + 12 = 0. 0 + 13 = 13.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Splits-truc",
+              uitleg: "Splits 25 in 12 + 13. Met 12 is de schuld weg.",
+            },
+          ],
+          niveaus: {
+            basis: "+€ 13.",
+            simpeler: "€ 12 gaat naar de schuld. Er blijft € 13 over: +€ 13.",
+            nogSimpeler: "+€ 13",
+          },
+        },
+      },
+      {
+        q: "Een meeuw vliegt **7 m boven** de zeespiegel. Een vis zwemt **5 m onder** de zeespiegel. Hoeveel meter zit er **tussen** de meeuw en de vis?",
+        options: ["12 m", "2 m", "−2 m", "−12 m"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "De zeespiegel is 0. Tel het stuk erboven en het stuk eronder.",
+          null,
+          "Kan een afstand negatief zijn?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Boven + onder",
+              tekst: "Meeuw: +7 m. Vis: −5 m. Van +7 naar 0 = 7 m, van 0 naar −5 = 5 m. Samen 12 m.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "zeespiegel",
+              uitleg: "De hoogte van het zeewater: dat is 0.",
+            },
+          ],
+          theorie: "Verschil = grootste − kleinste: 7 − (−5) = 7 + 5 = 12.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "7 − (−5) = 7 + 5 = 12 m.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Boven en onder",
+              uitleg: "Boven de zeespiegel = plus, onder de zeespiegel = min.",
+            },
+          ],
+          niveaus: {
+            basis: "12 m.",
+            simpeler: "7 m tot het water, en nog 5 m onder water. 7 + 5 = 12 m.",
+            nogSimpeler: "12 m",
+          },
+        },
+      },
+      {
+        q: "'s Ochtends is het **−6 °C**. 's Middags is het **5 graden warmer**. Hoe warm is het dan?",
+        options: ["−1 °C", "+1 °C", "−11 °C", "+11 °C"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kom je met 5 graden omhoog vanaf −6 al boven nul?",
+          null,
+          "Warmer = omhoog of omlaag op de thermometer?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Omhoog vanaf −6",
+              tekst: "−6 + 5: −6→−5→−4→−3→−2→−1.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "warmer",
+              uitleg: "Hoger op de thermometer = optellen.",
+            },
+          ],
+          theorie: "Van −6 naar 0 zijn 6 graden. 5 graden omhoog is net te weinig: −1.",
+          voorbeelden: [
+            {
+              type: "thermometer",
+              tekst: "−6 + 6 = 0. Met 5 kom je 1 tekort: −1.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Nog onder nul?",
+              uitleg: "Stijgt het minder dan de afstand tot 0, dan blijft het vriezen.",
+            },
+          ],
+          niveaus: {
+            basis: "−1 °C.",
+            simpeler: "Vanaf −6 vijf graden omhoog: −5, −4, −3, −2, −1.",
+            nogSimpeler: "−1 °C",
+          },
+        },
+      },
+      {
+        q: "Het is **−2 °C**. Het wordt **6 graden kouder**. Hoe koud is het dan?",
+        options: ["−8 °C", "+4 °C", "−4 °C", "+8 °C"],
+        answer: 0,
+        wrongHints: [null, "Kouder = omhoog of omlaag op de thermometer?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Omlaag vanaf −2",
+              tekst: "−2 − 6: nog 6 graden verder onder nul → −8.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kouder",
+              uitleg: "Lager op de thermometer = aftrekken.",
+            },
+          ],
+          theorie: "Je begint al onder nul. Kouder = nog verder omlaag: −2 − 6 = −8.",
+          voorbeelden: [
+            {
+              type: "thermometer",
+              tekst: "−2 − 6 = −8.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Verder van 0",
+              uitleg: "Twee keer onder nul: de graden onder nul tel je op (2 + 6 = 8).",
+            },
+          ],
+          niveaus: {
+            basis: "−8 °C.",
+            simpeler: "Al 2 graden onder nul, nog 6 erbij onder nul: 8 graden onder nul.",
+            nogSimpeler: "−8 °C",
+          },
         },
       },
     ],

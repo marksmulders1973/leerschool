@@ -124,6 +124,343 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Fysiek.", "Fysiek.", "Niet geld."],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Je kijkt naar twee fietsen. De ene kost €180, de andere €140. Welke **functie** van geld gebruik je als je ze vergelijkt?",
+        options: ["Rekeneenheid", "Ruilmiddel", "Spaarmiddel", "Digitaal geld"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Ruil je nu al iets, of kijk je alleen naar de prijzen?",
+          null,
+          "Is dat een functie of een soort geld?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat doe je hier?",
+              tekst: "Je koopt nog niets en je bewaart ook niets. Je kijkt alleen welke fiets duurder is.",
+            },
+            {
+              titel: "Prijzen vergelijken",
+              tekst: "Omdat allebei de fietsen een **prijs in geld** hebben, zie je meteen het verschil: €180 − €140 = €40.",
+            },
+            {
+              titel: "Welke functie?",
+              tekst: "Geld gebruiken om prijzen te vergelijken heet **rekeneenheid**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "rekeneenheid",
+              uitleg: "Geld als maat om prijzen te vergelijken.",
+            },
+            {
+              woord: "ruilmiddel",
+              uitleg: "Geld om iets mee te kopen.",
+            },
+          ],
+          theorie: "De drie functies: ruilmiddel (kopen), rekeneenheid (vergelijken), spaarmiddel (bewaren). Munten, biljetten en digitaal geld zijn soorten geld, geen functies.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Een boek kost €8 in de ene winkel en €10 in de andere. Vergelijken = rekeneenheid.",
+            },
+            {
+              type: "stap",
+              tekst: "Je betaalt het boek = ruilmiddel.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Vergelijken = rekenen = rekeneenheid.",
+            },
+          ],
+          niveaus: {
+            basis: "Prijzen vergelijken = rekeneenheid.",
+            simpeler: "Je kijkt welke fiets duurder is. Dan gebruik je geld om te rekenen.",
+            nogSimpeler: "Vergelijken = rekenen.",
+          },
+        },
+      },
+      {
+        q: "Lisa stopt elke week €2 in een potje voor later. Welke **functie** van geld gebruikt ze?",
+        options: ["Spaarmiddel", "Ruilmiddel", "Rekeneenheid", "Munten"],
+        answer: 0,
+        wrongHints: [null, "Koopt Lisa er nu iets mee?", null, "Is dat een functie of een soort geld?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat doet Lisa?",
+              tekst: "Lisa geeft het geld niet uit. Ze **bewaart** het voor later.",
+            },
+            {
+              titel: "Bewaren = sparen",
+              tekst: "Geld kun je bewaren en later gebruiken. Daarom is geld een **spaarmiddel**.",
+            },
+            {
+              titel: "De andere functies",
+              tekst: "Ruilmiddel = iets kopen. Rekeneenheid = prijzen vergelijken. Dat doet Lisa hier niet.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "spaarmiddel",
+              uitleg: "Geld om te bewaren voor later.",
+            },
+            {
+              woord: "sparen",
+              uitleg: "Geld niet uitgeven maar bewaren.",
+            },
+          ],
+          theorie: "Drie functies van geld: ruilen (kopen), rekenen (vergelijken), sparen (bewaren).",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Tim legt zijn verjaardagsgeld opzij voor een nieuwe fiets = spaarmiddel.",
+            },
+            {
+              type: "stap",
+              tekst: "Tim koopt later de fiets = ruilmiddel.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Bewaren voor later = spaarmiddel.",
+            },
+          ],
+          niveaus: {
+            basis: "Geld bewaren = spaarmiddel.",
+            simpeler: "Lisa koopt niets. Ze bewaart het geld voor later.",
+            nogSimpeler: "Bewaren = sparen.",
+          },
+        },
+      },
+      {
+        q: "Vroeger ruilden mensen spullen met elkaar, zonder geld. Wat was daar een **probleem** bij?",
+        options: [
+          "De ander wil jouw spullen misschien niet hebben",
+          "Je mocht alleen ruilen met je familie",
+          "Je moest bij elke ruil rente betalen",
+          "Je moest eerst een bankrekening hebben",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Was ruilen alleen binnen de familie?",
+          null,
+          "Bestonden banken toen al voor iedereen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Ruilen zonder geld",
+              tekst: "Een boer heeft graan en wil schoenen. Hij moet iemand vinden die schoenen heeft én graan wil.",
+            },
+            {
+              titel: "Het probleem",
+              tekst: "Wil de schoenmaker geen graan? Dan lukt de ruil niet. De ander wil jouw spullen misschien niet.",
+            },
+            {
+              titel: "Geld lost het op",
+              tekst: "Met geld heeft alles een **prijs**. De boer verkoopt zijn graan voor geld en koopt met dat geld schoenen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "ruilen",
+              uitleg: "Iets geven en er iets anders voor terugkrijgen.",
+            },
+            {
+              woord: "ruilmiddel",
+              uitleg: "Iets waarmee je kunt ruilen, zoals geld.",
+            },
+          ],
+          theorie: "Geld als ruilmiddel: iedereen wil geld hebben, dus je kunt er alles mee kopen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Jij hebt stickers en wilt een stuiterbal. Je vriend wil geen stickers. Met geld kun je de bal toch kopen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Ruilen werkt alleen als allebei willen wat de ander heeft. Geld werkt altijd.",
+            },
+          ],
+          niveaus: {
+            basis: "De ander wil jouw spullen misschien niet.",
+            simpeler: "Jij wilt iets van de ander, maar de ander wil niet wat jij hebt.",
+            nogSimpeler: "Ander wil het niet.",
+          },
+        },
+      },
+      {
+        q: "Welk bedrag bestaat **NIET** als eurobiljet?",
+        options: ["€25", "€5", "€50", "€200"],
+        answer: 0,
+        wrongHints: [null, "Dat is het kleinste biljet.", null, "Dit biljet bestaat wel, al zie je het weinig."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eurobiljetten",
+              tekst: "Er zijn eurobiljetten van €5, €10, €20, €50, €100, €200 en €500.",
+            },
+            {
+              titel: "Kijk naar het rijtje",
+              tekst: "Steeds 5, 10, 20, 50 en dan weer ×10. Een biljet van €25 zit er niet tussen.",
+            },
+            {
+              titel: "Conclusie",
+              tekst: "€25 bestaat niet als biljet.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "biljet",
+              uitleg: "Geld van papier.",
+            },
+            {
+              woord: "munt",
+              uitleg: "Geld van metaal.",
+            },
+          ],
+          theorie: "Biljetten: €5, €10, €20, €50, €100, €200, €500. Munten: 1, 2, 5, 10, 20, 50 cent en €1 en €2.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "€30 betaal je met een biljet van €20 en een biljet van €10.",
+            },
+            {
+              type: "stap",
+              tekst: "€25 betaal je met een biljet van €20 en een biljet van €5.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Biljetten: 5 - 10 - 20 - 50 - 100 - 200 - 500.",
+            },
+          ],
+          niveaus: {
+            basis: "Een biljet van €25 bestaat niet.",
+            simpeler: "Biljetten zijn €5, €10, €20, €50, €100, €200, €500. Geen €25.",
+            nogSimpeler: "Geen €25-biljet.",
+          },
+        },
+      },
+      {
+        q: "Waarom wordt er in Nederland bij **contant betalen** vaak afgerond op 5 cent?",
+        options: [
+          "Munten van 1 en 2 cent worden bijna niet gebruikt",
+          "Biljetten van €5 zijn te groot voor de kassa",
+          "De winkel verdient zo altijd meer",
+          "Munten van 5 cent zijn bijna op",
+        ],
+        answer: 0,
+        wrongHints: [null, "Wat hebben biljetten met centen te maken?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kleine munten",
+              tekst: "Er bestaan munten van 1 en 2 cent. Maar in Nederland worden die bijna niet gebruikt.",
+            },
+            {
+              titel: "Afronden",
+              tekst: "Daarom ronden winkels het bedrag bij contant betalen af op 5 cent. Dan heb je die kleine muntjes niet nodig.",
+            },
+            {
+              titel: "Pinnen",
+              tekst: "Betaal je met de pinpas? Dan betaal je het precieze bedrag.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "contant",
+              uitleg: "Betalen met munten en biljetten.",
+            },
+            {
+              woord: "afronden",
+              uitleg: "Een bedrag een beetje veranderen naar een rond getal.",
+            },
+          ],
+          theorie: "Munten: 1, 2, 5, 10, 20, 50 cent, €1 en €2. In Nederland worden 1 en 2 cent bijna niet gebruikt, dus wordt er afgerond op 5 cent.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Je betaalt contant voor een snoepje. De kassa rondt af op 5 cent, zodat je geen 1- of 2-centmunten nodig hebt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Geen 1 en 2 cent in je portemonnee = afronden op 5 cent.",
+            },
+          ],
+          niveaus: {
+            basis: "Omdat 1 en 2 cent bijna niet gebruikt worden.",
+            simpeler: "Kleine muntjes gebruikt bijna niemand. Daarom ronden ze af.",
+            nogSimpeler: "Geen 1 en 2 cent.",
+          },
+        },
+      },
+      {
+        q: "Welk land in de Europese Unie gebruikt de euro **NIET**?",
+        options: ["Zweden", "België", "Duitsland", "Spanje"],
+        answer: 0,
+        wrongHints: [null, "Wat betaal je in een winkel in Brussel?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "EU en eurozone",
+              tekst: "Niet alle landen van de Europese Unie (EU) gebruiken de euro. De landen met de euro heten samen de **eurozone**.",
+            },
+            {
+              titel: "Met euro",
+              tekst: "België, Duitsland en Spanje gebruiken de euro, net als Nederland.",
+            },
+            {
+              titel: "Zonder euro",
+              tekst: "Zweden zit wel in de EU, maar gebruikt de euro niet. Zweden heeft een eigen munt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "EU",
+              uitleg: "Europese Unie — een groep landen in Europa die samenwerken.",
+            },
+            {
+              woord: "eurozone",
+              uitleg: "De EU-landen die de euro gebruiken.",
+            },
+          ],
+          theorie: "Niet-euro in de EU: Zweden, Denemarken, Polen, Tsjechië, Hongarije, Roemenië.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Ga je op vakantie naar België? Dan betaal je gewoon met euro's.",
+            },
+            {
+              type: "stap",
+              tekst: "Ga je naar Zweden? Dan heb je ander geld nodig.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "In de EU zitten ≠ de euro hebben.",
+            },
+          ],
+          niveaus: {
+            basis: "Zweden gebruikt de euro niet.",
+            simpeler: "Zweden zit in de EU, maar heeft eigen geld.",
+            nogSimpeler: "Zweden: geen euro.",
+          },
+        },
+      },
     ],
   },
 
@@ -178,6 +515,337 @@ const steps = [
         options: ["Boekje bijhouden + doelen stellen", "Alles uitgeven", "Bij ouders vragen", "Niet leren"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Leer juist zelf.", "Wel leerbaar."],
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat kun je leren van **zakgeld** krijgen?",
+        options: [
+          "Zelf kiezen waar je je geld aan uitgeeft",
+          "Hoe je een lening afsluit",
+          "Hoe je belasting moet betalen",
+          "Hoe je rente betaalt aan de bank",
+        ],
+        answer: 0,
+        wrongHints: [null, "Leen je geld als je zakgeld krijgt?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat is zakgeld?",
+              tekst: "Zakgeld is geld dat je van je ouder of verzorger krijgt om **zelf** te beheren.",
+            },
+            {
+              titel: "Wat leer je ervan?",
+              tekst: "Je leert **kiezen** (koop ik dit wel of niet?), **wachten** (sparen voor iets groters) en wat écht belangrijk is.",
+            },
+            {
+              titel: "Verantwoordelijkheid",
+              tekst: "Is je geld op? Dan moet je wachten tot je weer zakgeld krijgt. Zo leer je goed opletten.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "zakgeld",
+              uitleg: "Geld dat je krijgt om zelf te beheren.",
+            },
+            {
+              woord: "beheren",
+              uitleg: "Goed opletten waar je geld naartoe gaat.",
+            },
+          ],
+          theorie: "Zakgeld leert: kiezen, wachten, prioriteit (wat is echt belangrijk) en verantwoordelijkheid.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Je hebt €4. Koop je nu snoep, of spaar je voor een boek? Die keuze maak jij zelf.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Zakgeld = oefenen met kiezen.",
+            },
+          ],
+          niveaus: {
+            basis: "Je leert zelf kiezen wat je met je geld doet.",
+            simpeler: "Met zakgeld beslis jij: kopen of sparen?",
+            nogSimpeler: "Zelf kiezen.",
+          },
+        },
+      },
+      {
+        q: "Wat is een **nadeel** als je voor élk klusje thuis geld krijgt?",
+        options: [
+          "Gewoon thuis helpen lijkt dan op betaald werk",
+          "Je leert er helemaal niet van werken",
+          "Je mag dan geen spaarpot meer hebben",
+          "Je moet dan statiegeld betalen",
+        ],
+        answer: 0,
+        wrongHints: [null, "Leer je wél iets van werken voor geld?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Klusjes voor zakgeld",
+              tekst: "Sommige ouders of verzorgers geven zakgeld voor klusjes, zoals de vaatwasser uitruimen of de tafel dekken.",
+            },
+            {
+              titel: "Voordeel",
+              tekst: "Je leert dat je voor geld moet werken.",
+            },
+            {
+              titel: "Nadeel",
+              tekst: "Gewone hulp in huis gaat lijken op betaald werk. Dan help je misschien alleen nog als je er geld voor krijgt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "klusje",
+              uitleg: "Een kleine taak, bijvoorbeeld de hond uitlaten.",
+            },
+            {
+              woord: "nadeel",
+              uitleg: "Iets wat minder goed is.",
+            },
+          ],
+          theorie: "Zakgeld voor klusjes: voordeel = leert werken. Nadeel = alledaagse hulp lijkt op betaald werk.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Je ruimt de tafel af. Krijg je daar steeds geld voor? Dan voelt helpen thuis als een baantje.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Voordeel: je leert werken. Nadeel: helpen wordt een baantje.",
+            },
+          ],
+          niveaus: {
+            basis: "Thuis helpen lijkt dan op betaald werk.",
+            simpeler: "Als je voor alles geld krijgt, help je misschien alleen nog voor geld.",
+            nogSimpeler: "Helpen wordt werk.",
+          },
+        },
+      },
+      {
+        q: "Tot hoe laat mag iemand van **16 of 17 jaar** in Nederland werken?",
+        options: ["Tot 23.00 uur", "Tot 18.00 uur", "Tot 20.00 uur", "Tot 2.00 uur 's nachts"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Mogen 16- en 17-jarigen ook 's avonds werken?",
+          null,
+          "Mag je als tiener midden in de nacht werken?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Regels voor werk",
+              tekst: "In Nederland zijn er regels hoe lang en hoe laat jongeren mogen werken.",
+            },
+            {
+              titel: "16 en 17 jaar",
+              tekst: "Vanaf 16 jaar mag je ook in het weekend en 's avonds werken. Maar niet na **23.00 uur**, en hoogstens 9 uur per dag.",
+            },
+            {
+              titel: "Jonger",
+              tekst: "Met 15 jaar mag je nog geen avondwerk doen. Met 13 en 14 jaar alleen licht werk.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "avondwerk",
+              uitleg: "Werken in de avond.",
+            },
+            {
+              woord: "licht werk",
+              uitleg: "Makkelijk werk, zoals de krant bezorgen of oppassen.",
+            },
+          ],
+          theorie: "Werk en leeftijd: 13-14 jaar licht werk, 15 jaar geen avondwerk, 16-17 jaar ook avondwerk maar niet na 23.00 uur.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Sanne is 17 en werkt in een snackbar. Om 23.00 uur moet zij stoppen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "16-17 jaar: avondwerk mag, tot 23.00 uur.",
+            },
+          ],
+          niveaus: {
+            basis: "Tot 23.00 uur.",
+            simpeler: "Met 16 of 17 jaar mag je 's avonds werken, maar na 23.00 uur niet meer.",
+            nogSimpeler: "23.00 uur.",
+          },
+        },
+      },
+      {
+        q: "Je gooit een lege plastic fles met statiegeld in de **prullenbak**. Wat gebeurt er met het statiegeld?",
+        options: [
+          "Je krijgt het niet terug",
+          "Je krijgt het later thuisgestuurd",
+          "De winkel betaalt het je toch uit",
+          "Je krijgt het dubbel terug",
+        ],
+        answer: 0,
+        wrongHints: [null, "Hoe weet de winkel dat jij die fles had?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Statiegeld",
+              tekst: "Bij een fles of blikje met statiegeld betaal je een extra bedrag.",
+            },
+            {
+              titel: "Terugkrijgen",
+              tekst: "Dat geld krijg je pas terug als je de lege fles **inlevert**, bijvoorbeeld in een automaat in de supermarkt.",
+            },
+            {
+              titel: "Weggooien",
+              tekst: "Gooi je de fles weg? Dan ben je dat geld kwijt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "statiegeld",
+              uitleg: "Geld dat je terugkrijgt als je een lege fles of blik inlevert.",
+            },
+            {
+              woord: "inleveren",
+              uitleg: "Terugbrengen naar de winkel.",
+            },
+          ],
+          theorie: "Statiegeld is jouw eigen geld dat even 'vastzit' in de fles. Alleen inleveren geeft het terug.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Je drinkt een blikje leeg en neemt het mee naar de supermarkt. In de automaat krijg je je statiegeld terug.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Inleveren = geld terug. Weggooien = geld weg.",
+            },
+          ],
+          niveaus: {
+            basis: "Je krijgt het niet terug.",
+            simpeler: "Alleen als je de fles inlevert, krijg je je geld terug.",
+            nogSimpeler: "Weggooien = geld weg.",
+          },
+        },
+      },
+      {
+        q: "Je levert **4 blikjes** in. Elk blikje heeft €0,15 statiegeld. Hoeveel krijg je terug?",
+        options: ["€0,60", "€0,40", "€0,15", "€1,00"],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Is dat voor één blikje of voor alle vier?",
+          "Reken je met het bedrag van een blikje?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat weet je?",
+              tekst: "Eén blikje = €0,15 statiegeld. Je hebt 4 blikjes.",
+            },
+            {
+              titel: "Rekenen",
+              tekst: "4 × €0,15. Reken in centen: 4 × 15 cent = 60 cent.",
+            },
+            {
+              titel: "Antwoord",
+              tekst: "60 cent = **€0,60**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "statiegeld",
+              uitleg: "Geld terug bij inleveren van een lege fles of blik.",
+            },
+            {
+              woord: "cent",
+              uitleg: "100 cent = 1 euro.",
+            },
+          ],
+          theorie: "Rekenen met kleine bedragen: reken in centen en zet het daarna terug in euro's.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "3 blikjes: 3 × 15 cent = 45 cent = €0,45.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Rekenen met centen is makkelijker dan met komma's.",
+            },
+          ],
+          niveaus: {
+            basis: "€0,60.",
+            simpeler: "4 × 15 cent = 60 cent.",
+            nogSimpeler: "60 cent.",
+          },
+        },
+      },
+      {
+        q: "Welk werk mag je in Nederland vanaf **13 jaar** doen?",
+        options: [
+          "Kranten bezorgen",
+          "In een fabriek aan een machine werken",
+          "Op een bouwplaats werken",
+          "Een vrachtwagen besturen",
+        ],
+        answer: 0,
+        wrongHints: [null, "Is dat licht werk, of zwaar en gevaarlijk?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Licht werk",
+              tekst: "Met 13 en 14 jaar mag je alleen **licht werk** doen. Dat is makkelijk werk dat niet gevaarlijk is.",
+            },
+            {
+              titel: "Voorbeelden",
+              tekst: "Kranten bezorgen, oppassen en een hondje uitlaten zijn licht werk.",
+            },
+            {
+              titel: "Niet toegestaan",
+              tekst: "Zwaar of gevaarlijk werk, zoals met machines of op een bouwplaats, mag je dan nog niet.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "licht werk",
+              uitleg: "Makkelijk, veilig werk voor jongeren.",
+            },
+            {
+              woord: "vakantiewerk",
+              uitleg: "Werk dat je in de schoolvakantie doet.",
+            },
+          ],
+          theorie: "13-14 jaar: licht werk (krant, oppassen, hond uitlaten). In de vakantie hoogstens 7 uur per dag.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Joris is 13 en past op het buurmeisje. Dat is licht werk.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "13 jaar = licht en veilig werk.",
+            },
+          ],
+          niveaus: {
+            basis: "Kranten bezorgen.",
+            simpeler: "Dat is licht werk. Dat mag vanaf 13 jaar.",
+            nogSimpeler: "Krant.",
+          },
+        },
       },
     ],
   },
@@ -281,6 +949,327 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Waarom geef je geld op een **kinderspaarrekening** minder snel zomaar uit?",
+        options: [
+          "Je moet het eerst via de bank opnemen",
+          "De bank kiest waar je het aan uitgeeft",
+          "Het geld wordt daar elke week minder",
+          "Je kunt het daar niet meer terugzien",
+        ],
+        answer: 0,
+        wrongHints: [null, "Wie beslist waar jouw geld aan opgaat?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Spaarpot of rekening",
+              tekst: "In een spaarpot zit het geld thuis. Je pakt het er zo uit.",
+            },
+            {
+              titel: "Spaarrekening",
+              tekst: "Op een kinderspaarrekening staat het geld bij de **bank**. Wil je het gebruiken, dan moet het eerst via de bank.",
+            },
+            {
+              titel: "Waarom handig?",
+              tekst: "Omdat het niet zo snel gaat, koop je minder snel iets zonder na te denken.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kinderspaarrekening",
+              uitleg: "Een spaarrekening bij de bank voor kinderen.",
+            },
+            {
+              woord: "opnemen",
+              uitleg: "Geld van je rekening halen.",
+            },
+          ],
+          theorie: "Kinderspaarrekening: je krijgt rente, het is veiliger dan thuis en je geeft het niet impulsief uit, want het moet via de bank.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Je wilt een zakje snoep. Je spaargeld staat op de bank. Je moet eerst je ouder of verzorger vragen het geld over te zetten. Zo denk je er nog even over na.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Geld op de bank = even wachten = minder snel uitgeven.",
+            },
+          ],
+          niveaus: {
+            basis: "Je moet het eerst via de bank halen.",
+            simpeler: "Het geld zit niet in je zak. Daardoor geef je het minder snel uit.",
+            nogSimpeler: "Eerst via de bank.",
+          },
+        },
+      },
+      {
+        q: "Wat is een **risico** als je al je geld in een spaarpot thuis bewaart?",
+        options: [
+          "Het kan gestolen worden of kwijtraken",
+          "Je moet er rente over betalen",
+          "De bank kan het geld uitlenen",
+          "Je mag er geen biljetten in doen",
+        ],
+        answer: 0,
+        wrongHints: [null, "Betaal je rente over geld in je eigen spaarpot?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Spaarpot",
+              tekst: "In een spaarpot bewaar je munten en biljetten thuis. Je ziet het groeien, dat is leuk.",
+            },
+            {
+              titel: "Geen rente",
+              tekst: "Je krijgt er geen rente over.",
+            },
+            {
+              titel: "Risico",
+              tekst: "Het geld kan **gestolen** worden of je kunt de spaarpot **kwijtraken**. Op een spaarrekening is het veiliger.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "risico",
+              uitleg: "Kans dat er iets misgaat.",
+            },
+            {
+              woord: "spaarpot",
+              uitleg: "Potje om thuis geld in te bewaren.",
+            },
+          ],
+          theorie: "Spaarpot: geen rente, wel zichtbaar, risico op diefstal of verlies. Spaarrekening: rente, veiliger.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Bij een verhuizing raakt de spaarpot van Noor zoek. Al haar spaargeld is weg.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Thuis = zichtbaar maar minder veilig. Bank = veiliger.",
+            },
+          ],
+          niveaus: {
+            basis: "Het kan gestolen worden of kwijtraken.",
+            simpeler: "Geld thuis is minder veilig dan op de bank.",
+            nogSimpeler: "Kwijt of gestolen.",
+          },
+        },
+      },
+      {
+        q: "Waarom geeft de bank je **rente** over je spaargeld?",
+        options: [
+          "De bank leent jouw geld uit aan anderen",
+          "De bank wil je geld nooit teruggeven",
+          "Je betaalt de bank daarvoor elke maand",
+          "De overheid verplicht je om te sparen",
+        ],
+        answer: 0,
+        wrongHints: [null, "Krijg je je spaargeld later gewoon terug?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Rente",
+              tekst: "Rente is een beloning voor sparen: je krijgt een **percentage** extra.",
+            },
+            {
+              titel: "Wat doet de bank met je geld?",
+              tekst: "De bank gebruikt jouw spaargeld om **uit te lenen** aan andere mensen.",
+            },
+            {
+              titel: "In ruil",
+              tekst: "Omdat de bank jouw geld mag gebruiken, krijg jij er rente voor.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "rente",
+              uitleg: "Extra geld over je spaargeld.",
+            },
+            {
+              woord: "uitlenen",
+              uitleg: "Geld aan iemand geven die het later terugbetaalt.",
+            },
+          ],
+          theorie: "Rente bij sparen = beloning. De bank leent jouw geld uit en geeft jou daarvoor een klein percentage.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Jouw spaargeld helpt de bank om iemand een lening te geven. Als bedankje krijg jij rente.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Jouw geld wordt uitgeleend → jij krijgt rente.",
+            },
+          ],
+          niveaus: {
+            basis: "De bank leent jouw geld uit.",
+            simpeler: "De bank gebruikt jouw geld voor leningen. Daarom krijg jij rente.",
+            nogSimpeler: "Uitlenen.",
+          },
+        },
+      },
+      {
+        q: "Je spaart voor een **noodgeval**. Waarvoor is dat geld bedoeld?",
+        options: [
+          "Voor als er onverwacht iets stukgaat",
+          "Voor snoep bij de kassa",
+          "Voor een uitje dit weekend",
+          "Voor een nieuwe game die net uit is",
+        ],
+        answer: 0,
+        wrongHints: [null, "Is dat een noodgeval, of iets leuks?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Waarom sparen?",
+              tekst: "Je spaart voor een groot doel, voor de toekomst of voor een **noodgeval**.",
+            },
+            {
+              titel: "Wat is een noodgeval?",
+              tekst: "Iets wat je niet had verwacht en wat toch betaald moet worden, bijvoorbeeld als je fiets kapotgaat.",
+            },
+            {
+              titel: "Geen leuke dingen",
+              tekst: "Snoep, een uitje of een game zijn leuk, maar geen noodgeval.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "noodgeval",
+              uitleg: "Iets onverwachts dat geld kost.",
+            },
+            {
+              woord: "onverwacht",
+              uitleg: "Wat je niet zag aankomen.",
+            },
+          ],
+          theorie: "Drie redenen om te sparen: groot doel, noodgeval, toekomst.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "De band van je fiets is lek. Je betaalt de reparatie van je noodgeld.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Noodgeld = voor als iets misgaat.",
+            },
+          ],
+          niveaus: {
+            basis: "Voor als er onverwacht iets stukgaat.",
+            simpeler: "Noodgeld gebruik je als er iets kapotgaat wat je niet had verwacht.",
+            nogSimpeler: "Iets kapot.",
+          },
+        },
+      },
+      {
+        q: "Je ziet bij de kassa snoep liggen en koopt het zonder na te denken. Hoe heet zo'n aankoop?",
+        options: ["Een impulsaankoop", "Een spaardoel", "Een begroting", "Een lening"],
+        answer: 0,
+        wrongHints: [null, "Spaar je hier ergens voor?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Verleiding",
+              tekst: "Bij de kassa liggen vaak snoep en kleine dingen. Die zijn er om je te verleiden.",
+            },
+            {
+              titel: "Impulsaankoop",
+              tekst: "Iets kopen zonder erover na te denken heet een **impulsaankoop**.",
+            },
+            {
+              titel: "Waarom opletten?",
+              tekst: "Impulsaankopen maken je spaargeld kleiner zonder dat je het merkt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "impulsaankoop",
+              uitleg: "Iets snel kopen zonder nadenken.",
+            },
+            {
+              woord: "verleiding",
+              uitleg: "Iets wat je zin geeft om te kopen.",
+            },
+          ],
+          theorie: "Verleidingen: reclame, vrienden met nieuwe spullen en snoep bij de kassa. Eerst nadenken, dan pas kopen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Je komt voor brood en gaat naar huis met brood én een reep chocola. Die reep is een impulsaankoop.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Impuls = opeens, zonder nadenken.",
+            },
+          ],
+          niveaus: {
+            basis: "Een impulsaankoop.",
+            simpeler: "Iets kopen zonder nadenken heet een impulsaankoop.",
+            nogSimpeler: "Impuls.",
+          },
+        },
+      },
+      {
+        q: "Je wilt een skateboard van **€48**. Je spaart **€4 per week**. Hoeveel weken moet je sparen?",
+        options: ["12 weken", "44 weken", "52 weken", "16 weken"],
+        answer: 0,
+        wrongHints: [null, "Moet je hier aftrekken of delen?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Spaarplan",
+              tekst: "Een spaarplan: 1) wat wil je, 2) hoeveel spaar je per week, 3) hoe lang duurt het.",
+            },
+            {
+              titel: "Rekenen",
+              tekst: "Je deelt de prijs door wat je per week spaart: €48 ÷ €4.",
+            },
+            {
+              titel: "Antwoord",
+              tekst: "€48 ÷ €4 = **12** weken. Controle: 12 × €4 = €48.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "spaarplan",
+              uitleg: "Plan hoe je voor iets spaart.",
+            },
+            {
+              woord: "delen",
+              uitleg: "Uitrekenen hoe vaak iets in een getal past.",
+            },
+          ],
+          theorie: "Hoe lang sparen? Prijs ÷ bedrag per week = aantal weken.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Een bal van €20 en je spaart €5 per week: €20 ÷ €5 = 4 weken.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Controleer met keer: weken × bedrag per week = prijs.",
+            },
+          ],
+          niveaus: {
+            basis: "12 weken.",
+            simpeler: "€48 ÷ €4 = 12.",
+            nogSimpeler: "12.",
+          },
+        },
+      },
     ],
   },
 
@@ -315,6 +1304,57 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Dat is 'leuk'.", "Apart.", "Dat is 'leuk'."],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Deze week krijg je **€8**. Je geeft €2 uit aan snoep en €3 aan een uitje. De rest spaar je. Hoeveel spaar je?",
+        options: ["€3", "€5", "€13", "€2"],
+        answer: 0,
+        wrongHints: [null, "Is dat wat je uitgeeft of wat overblijft?", null, null],
+      },
+      {
+        q: "In welke groep van de 50/30/20-regel hoort een **busabonnement** om naar school te reizen?",
+        options: ["NODIG", "LEUK", "SPAREN", "LENEN"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kun je zonder, of heb je het nodig om op school te komen?",
+          null,
+          "Hoort dit bij de drie groepen?",
+        ],
+      },
+      {
+        q: "Welke uitgave hoort bij **LEUK**?",
+        options: [
+          "Een ijsje op het strand",
+          "Brood voor je lunch",
+          "Een schrift voor school",
+          "Een fietsband voor je schoolfiets",
+        ],
+        answer: 0,
+        wrongHints: [null, "Heb je dit nodig om te eten?", null, null],
+      },
+      {
+        q: "Aan het eind van de maand heb je een **tekort**. Wat doe je volgende maand?",
+        options: [
+          "Minder uitgeven aan leuke dingen",
+          "Minder sparen en meer snoep kopen",
+          "Geld lenen voor een uitje",
+          "Je begroting niet meer bijhouden",
+        ],
+        answer: 0,
+        wrongHints: [null, "Wordt je tekort dan kleiner of groter?", null, null],
+      },
+      {
+        q: "Waarom kan **tweedehands** kopen slim zijn?",
+        options: [
+          "Het is vaak veel goedkoper",
+          "Het is altijd gloednieuw",
+          "Je krijgt er rente over",
+          "Het is altijd van betere kwaliteit",
+        ],
+        answer: 0,
+        wrongHints: [null, "Wat betekent tweedehands?", null, null],
+      },
     ],
   },
 
@@ -347,6 +1387,62 @@ const steps = [
         options: ["Lening voor een huis", "Spaarrekening", "Belasting", "Lening voor auto"],
         answer: 0,
         wrongHints: [null, "Niet lenen.", "Niet hypotheek.", "Persoonlijke lening."],
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Waarom **kost** lenen geld?",
+        options: [
+          "Je betaalt rente over wat je leent",
+          "Je krijgt rente van de bank",
+          "De bank geeft je korting",
+          "Je moet statiegeld betalen",
+        ],
+        answer: 0,
+        wrongHints: [null, "Krijg je rente bij lenen, of bij sparen?", null, null],
+      },
+      {
+        q: "Wat betekent **rood staan** bij de bank?",
+        options: [
+          "Je hebt minder dan nul euro op je rekening",
+          "Je hebt extra veel gespaard",
+          "Je pinpas is kapot",
+          "Je hebt rente gekregen",
+        ],
+        answer: 0,
+        wrongHints: [null, "Is rood staan iets goeds of iets wat je wilt vermijden?", null, null],
+      },
+      {
+        q: "Waarom zijn influencers die een product aanprijzen **niet altijd eerlijk**?",
+        options: [
+          "Ze krijgen vaak geld om het aan te prijzen",
+          "Ze mogen geen eigen mening hebben",
+          "Ze zijn allemaal jonger dan 18 jaar",
+          "Ze werken allemaal bij dezelfde winkel",
+        ],
+        answer: 0,
+        wrongHints: [null, "Mag een influencer zeggen wat hij of zij vindt?", null, null],
+      },
+      {
+        q: "Een winkel roept: **'Mis dit aanbod niet!'** Wat wil de winkel daarmee?",
+        options: [
+          "Dat je snel koopt uit angst iets te missen",
+          "Dat je eerst rustig gaat sparen",
+          "Dat je prijzen gaat vergelijken",
+          "Dat je een week wacht met kopen",
+        ],
+        answer: 0,
+        wrongHints: [null, "Wil de winkel dat je langzaam beslist?", null, null],
+      },
+      {
+        q: "Je krijgt een mail: **'Speciaal voor jou!'** Wat is meestal waar?",
+        options: [
+          "Heel veel mensen krijgen dezelfde mail",
+          "Alleen jij krijgt deze mail",
+          "De winkel kent jou persoonlijk",
+          "Je krijgt het product gratis",
+        ],
+        answer: 0,
+        wrongHints: [null, "Hoeveel klanten heeft een winkel?", null, null],
       },
     ],
   },
