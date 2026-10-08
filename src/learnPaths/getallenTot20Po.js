@@ -87,6 +87,88 @@ const steps = [
           niveaus: { basis: "10 + 10 = 20.", simpeler: "Twee tientallen = 20.", nogSimpeler: "10" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welk getal komt **voor 13**?",
+        options: ["12", "14", "11", "3"],
+        answer: 0,
+        wrongHints: [null, "Dat komt NA 13.", null, "Kijk goed: 13 is meer dan 10."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel terug",
+              tekst: "Telrij: 10, 11, **12, 13**, 14, 15. Vlak voor 13 staat 12.",
+            },
+          ],
+          niveaus: {
+            basis: "12 komt voor 13.",
+            simpeler: "Tel: 11, 12, 13. Voor 13 komt 12.",
+            nogSimpeler: "12",
+          },
+        },
+      },
+      {
+        q: "Welk getal is het **grootst**?",
+        options: ["18", "15", "9", "12"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk welk getal het laatst komt in de telrij.",
+          null,
+          "Er is een getal dat nog later komt.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "In de telrij",
+              tekst: "Zet ze op volgorde: 9, 12, 15, **18**. Het laatste getal is het grootst.",
+            },
+          ],
+          niveaus: {
+            basis: "18 is het grootst.",
+            simpeler: "18 komt het laatst in de telrij.",
+            nogSimpeler: "18",
+          },
+        },
+      },
+      {
+        q: "Tel verder: 17, 18, 19, ___",
+        options: ["20", "21", "10", "18"],
+        answer: 0,
+        wrongHints: [null, "Dat is twee verder dan 19.", null, "Dat getal had je al."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel op",
+              tekst: "17, 18, 19, **20**. Elke keer 1 erbij.",
+            },
+          ],
+          niveaus: {
+            basis: "Na 19 komt 20.",
+            simpeler: "19 + 1 = 20.",
+            nogSimpeler: "20",
+          },
+        },
+      },
+      {
+        q: "Hoe schrijf je **twaalf** in cijfers?",
+        options: ["12", "21", "102", "11"],
+        answer: 0,
+        wrongHints: [null, "Dat is eenentwintig.", null, "Dat is elf."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Twaalf",
+              tekst: "Twaalf = 10 + 2 = **12**. Eerst de 1 van het tiental, dan de 2.",
+            },
+          ],
+          niveaus: {
+            basis: "Twaalf = 12.",
+            simpeler: "10 en nog 2 = 12.",
+            nogSimpeler: "12",
+          },
+        },
+      },
     ],
   },
 
@@ -151,6 +233,64 @@ const steps = [
           niveaus: { basis: "7 + 3 = 3 + 7 = 10.", simpeler: "Volgorde mag wisselen.", nogSimpeler: "7" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke som is **niet** samen 10?",
+        options: ["6 + 3", "3 + 7", "8 + 2", "5 + 5"],
+        answer: 0,
+        wrongHints: [null, "Reken na: 3 + 7 = ?", null, "Dat is een dubbele: 5 + 5 = ?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Reken ze na",
+              tekst: "3 + 7 = 10. 8 + 2 = 10. 5 + 5 = 10. Maar **6 + 3 = 9**.",
+            },
+          ],
+          niveaus: {
+            basis: "6 + 3 = 9, geen 10.",
+            simpeler: "De andere drie zijn samen 10.",
+            nogSimpeler: "6 + 3",
+          },
+        },
+      },
+      {
+        q: "**8 + 1** = ?",
+        options: ["9", "8", "10", "7"],
+        answer: 0,
+        wrongHints: [null, "Er komt wel iets bij: 1.", "Dat is 8 + 2.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Plus 1",
+              tekst: "Plus 1 = het volgende getal. Na 8 komt **9**.",
+            },
+          ],
+          niveaus: {
+            basis: "8 + 1 = 9.",
+            simpeler: "Tel: 8, 9.",
+            nogSimpeler: "9",
+          },
+        },
+      },
+      {
+        q: "Lisa heeft 3 appels. Ze krijgt er 3 bij. Hoeveel appels heeft ze nu?",
+        options: ["6", "5", "7", "0"],
+        answer: 0,
+        wrongHints: [null, null, "Te veel — tel nog eens.", "Ze krijgt er juist appels bij."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Dubbele",
+              tekst: "Erbij krijgen = optellen. 3 + 3 = **6**. Dat is een dubbele.",
+            },
+          ],
+          niveaus: {
+            basis: "3 + 3 = 6.",
+            simpeler: "3 appels en nog 3 appels = 6 appels.",
+            nogSimpeler: "6",
+          },
+        },
+      },
     ],
   },
 
@@ -210,6 +350,88 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Familie-som omkeren", tekst: "7 - ? = 3 → wat moet er weg om 3 over te houden? 7 - **4** = 3. Familie: 3 + 4 = 7, dus 7 - 4 = 3 en 7 - 3 = 4." }],
           niveaus: { basis: "4.", simpeler: "7 - 4 = 3", nogSimpeler: "4" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**5 - 0** = ?",
+        options: ["5", "0", "4", "6"],
+        answer: 0,
+        wrongHints: [null, "Er gaat niets af.", null, "Bij min komt er niets bij."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Min 0",
+              tekst: "Min 0 = er gaat niets af. Dus 5 - 0 = **5**.",
+            },
+          ],
+          niveaus: {
+            basis: "5 - 0 = 5.",
+            simpeler: "Niets eraf, dus het blijft 5.",
+            nogSimpeler: "5",
+          },
+        },
+      },
+      {
+        q: "Je weet: **2 + 5 = 7**. Wat is dan **7 - 5**?",
+        options: ["2", "5", "12", "3"],
+        answer: 0,
+        wrongHints: [null, "Dat getal haal je er juist af.", "Dat is plus, geen min.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Familie-som",
+              tekst: "2 + 5 = 7 hoort bij 7 - 5 = **2** en 7 - 2 = 5. Dat is één familie.",
+            },
+          ],
+          niveaus: {
+            basis: "7 - 5 = 2.",
+            simpeler: "2 en 5 maken samen 7. Haal je 5 weg, dan blijft 2 over.",
+            nogSimpeler: "2",
+          },
+        },
+      },
+      {
+        q: "**9 - 3** = ?",
+        options: ["6", "5", "7", "12"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — tel 3 stappen terug, niet 4.",
+          "Te veel — tel 3 stappen terug, niet 2.",
+          "Dat is 9 + 3.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel terug",
+              tekst: "Begin bij 9 en tel 3 terug: 8, 7, **6**.",
+            },
+          ],
+          niveaus: {
+            basis: "9 - 3 = 6.",
+            simpeler: "Tel terug vanaf 9: 8, 7, 6.",
+            nogSimpeler: "6",
+          },
+        },
+      },
+      {
+        q: "Welke som is **goed**?",
+        options: ["10 - 4 = 6", "10 - 4 = 5", "10 - 4 = 7", "10 - 4 = 14"],
+        answer: 0,
+        wrongHints: [null, "Reken na: tel vanaf 10 precies 4 stappen terug.", null, "Dat is 10 + 4."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel terug",
+              tekst: "10 - 4 → 9, 8, 7, **6**. Check: 6 + 4 = 10 ✓.",
+            },
+          ],
+          niveaus: {
+            basis: "10 - 4 = 6.",
+            simpeler: "6 + 4 = 10, dus 10 - 4 = 6.",
+            nogSimpeler: "6",
+          },
         },
       },
     ],
@@ -274,6 +496,83 @@ const steps = [
           niveaus: { basis: "13.", simpeler: "13 < 17.", nogSimpeler: "13" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**8 + 4** = ?",
+        options: ["12", "11", "13", "14"],
+        answer: 0,
+        wrongHints: [null, "Te weinig — maak eerst 10 en tel dan verder.", "Te veel — dat is 8 + 5.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Maak eerst 10",
+              tekst: "8 + 4 → splits 4 in 2 + 2. 8 + 2 = 10. 10 + 2 = **12**.",
+            },
+          ],
+          niveaus: {
+            basis: "8 + 4 = 12.",
+            simpeler: "8 + 2 = 10, 10 + 2 = 12.",
+            nogSimpeler: "12",
+          },
+        },
+      },
+      {
+        q: "**13 + 4** = ?",
+        options: ["17", "16", "18", "9"],
+        answer: 0,
+        wrongHints: [null, "Te weinig — reken eerst 3 + 4 uit.", null, "Dat is 13 - 4."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Splits 13",
+              tekst: "13 = 10 + 3. Dus 13 + 4 = 10 + 3 + 4 = 10 + 7 = **17**.",
+            },
+          ],
+          niveaus: {
+            basis: "13 + 4 = 17.",
+            simpeler: "3 + 4 = 7, en 10 + 7 = 17.",
+            nogSimpeler: "17",
+          },
+        },
+      },
+      {
+        q: "In de klas zitten 9 jongens en 6 meisjes. Hoeveel kinderen zijn dat samen?",
+        options: ["15", "14", "16", "3"],
+        answer: 0,
+        wrongHints: [null, "Te weinig — maak eerst 10: 9 + 1.", null, "Samen = erbij, niet eraf."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Samen = plus",
+              tekst: "9 + 6 → splits 6 in 1 + 5. 9 + 1 = 10. 10 + 5 = **15**.",
+            },
+          ],
+          niveaus: {
+            basis: "9 + 6 = 15 kinderen.",
+            simpeler: "9 + 1 = 10, 10 + 5 = 15.",
+            nogSimpeler: "15",
+          },
+        },
+      },
+      {
+        q: "Hoe reken je **8 + 6** handig uit?",
+        options: ["8 + 2 + 4", "8 + 3 + 4", "8 + 1 + 6", "8 + 6 + 2"],
+        answer: 0,
+        wrongHints: [null, "Reken na: zijn 3 en 4 samen 6?", null, "Dan doe je er te veel bij."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Splits het tweede getal",
+              tekst: "Splits 6 in 2 + 4. 8 + 2 = 10. 10 + 4 = **14**. Dus 8 + 6 = 8 + 2 + 4.",
+            },
+          ],
+          niveaus: {
+            basis: "8 + 6 = 8 + 2 + 4 = 14.",
+            simpeler: "8 + 2 = 10, en dan nog 4 erbij.",
+            nogSimpeler: "8 + 2 + 4",
+          },
+        },
+      },
     ],
   },
 
@@ -331,6 +630,102 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Dubbele 6", tekst: "Dubbele = 2x. 6 + 6 = **12**. Of: 2 × 6 = 12 (vermenigvuldigen later)." }],
           niveaus: { basis: "12.", simpeler: "Dubbele 6 = 12.", nogSimpeler: "12" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**9 + 8** = ?",
+        options: ["17", "16", "18", "1"],
+        answer: 0,
+        wrongHints: [null, "Te weinig — maak eerst 10 en tel dan verder.", null, "Dat is 9 - 8."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Maak 10",
+              tekst: "9 + 8 = 9 + 1 + 7 = 10 + 7 = **17**.",
+            },
+          ],
+          niveaus: {
+            basis: "17.",
+            simpeler: "9+8=17.",
+            nogSimpeler: "17",
+          },
+        },
+      },
+      {
+        q: "**16 - 8** = ?",
+        options: ["8", "7", "9", "24"],
+        answer: 0,
+        wrongHints: [null, "Te weinig — dat is 16 - 9.", "Te veel — dat is 16 - 7.", "Dat is 16 + 8."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst naar 10",
+              tekst: "16 - 8 = 16 - 6 - 2 = 10 - 2 = **8**.",
+            },
+          ],
+          niveaus: {
+            basis: "8.",
+            simpeler: "16-8=8.",
+            nogSimpeler: "8",
+          },
+        },
+      },
+      {
+        q: "Er zitten 14 vogels in een boom. Er vliegen er 6 weg. Hoeveel vogels zitten er nog?",
+        options: ["8", "20", "9", "7"],
+        answer: 0,
+        wrongHints: [null, "Wegvliegen is eraf, niet erbij.", null, "Te weinig — tel nog eens precies 6 terug."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wegvliegen = min",
+              tekst: "14 - 6 = 14 - 4 - 2 = 10 - 2 = **8**.",
+            },
+          ],
+          niveaus: {
+            basis: "8.",
+            simpeler: "14-6=8.",
+            nogSimpeler: "8",
+          },
+        },
+      },
+      {
+        q: "**11 + 7** = ?",
+        options: ["18", "17", "19", "4"],
+        answer: 0,
+        wrongHints: [null, "Te weinig — reken eerst 1 + 7 uit.", null, "Dat is 11 - 7."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Splits 11",
+              tekst: "11 = 10 + 1. Dus 11 + 7 = 10 + 1 + 7 = 10 + 8 = **18**.",
+            },
+          ],
+          niveaus: {
+            basis: "18.",
+            simpeler: "11+7=18.",
+            nogSimpeler: "18",
+          },
+        },
+      },
+      {
+        q: "Welke som heeft als uitkomst **10**?",
+        options: ["15 - 5", "15 - 4", "6 + 5", "12 - 3"],
+        answer: 0,
+        wrongHints: [null, "Reken na: 15 - 4 = ?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Reken ze na",
+              tekst: "15 - 5 = **10**. 15 - 4 = 11. 6 + 5 = 11. 12 - 3 = 9.",
+            },
+          ],
+          niveaus: {
+            basis: "15 - 5 = 10.",
+            simpeler: "15 = 10 + 5. Haal je de 5 weg, dan blijft 10.",
+            nogSimpeler: "15 - 5",
+          },
         },
       },
     ],
