@@ -15,6 +15,7 @@ import { AvatarSvg, loadAvatarConfig } from "../features/account/avatar.jsx";
 import usePwaInstall from "../shared/usePwaInstall.js";
 import useFocusTrap from "../shared/hooks/useFocusTrap.js";
 import EmailLogin from "../auth/EmailLogin.jsx";
+import { maxJaar } from "../shared/voNiveau.js";
 
 // Three.js zit in een aparte chunk — alleen geladen voor nieuwe bezoekers die
 // de homepage in beeld krijgen. Houdt initial-bundle klein voor snelle conversie.
@@ -285,7 +286,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   };
 
   const roleLabels = { leerling: "leerling", student: "student", teacher: "leerkracht" };
-  const levelOptions = { leerling: [1,2,3,4,5,6,7,8], student: [1,2,3,4,5,6], teacher: [] };
+  // Middelbare school: alleen de leerjaren die bij het niveau horen (Noa 8 okt 2026: mavo 4, havo 5, vwo 6).
+  const levelOptions = { leerling: [1,2,3,4,5,6,7,8], student: Array.from({ length: schoolType ? maxJaar(schoolType) : 6 }, (_, i) => i + 1), teacher: [] };
 
   useEffect(() => {
     try {
@@ -947,7 +949,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 <label style={{ ...styles.inputLabel, marginBottom: 0 }}>Welk type onderwijs volg je?</label>
                 <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                   {[
-                    { id: "mavo",     label: "VMBO-TL",   color: "#f59e0b" },
+                    { id: "vmbo-bk",  label: "VMBO basis/kader", color: "#f97316" },
+                    { id: "mavo",     label: "Mavo (vmbo-gt)",   color: "#f59e0b" },
+                    { id: "vmbo-havo", label: "Brugklas mavo/havo", color: "#10b981" },
                     { id: "havo",     label: "HAVO",      color: "#3b82f6" },
                     { id: "havo-vwo", label: "HAVO/VWO",  color: "#6366f1" },
                     { id: "vwo",      label: "VWO",       color: "#8b5cf6" },
@@ -955,7 +959,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   ].map(({ id, label, color }) => {
                     const sel = schoolType === id;
                     return (
-                      <button key={id} onClick={() => setSchoolType(sel ? "" : id)} style={{
+                      <button key={id} onClick={() => { const nieuw = sel ? "" : id; setSchoolType(nieuw); if (nieuw && Number(level) > maxJaar(nieuw)) setLevel(""); }} style={{
                         padding: "7px 14px", borderRadius: 10, cursor: "pointer",
                         border: sel ? `2px solid ${color}` : "1px solid rgba(255,255,255,0.15)",
                         background: sel ? `${color}22` : "rgba(255,255,255,0.05)",
