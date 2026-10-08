@@ -160,6 +160,199 @@ const steps = [
           niveaus: { basis: "Titel + assen eerst.", simpeler: "Stap 1 grafiek-vraag = titel + assen lezen voor context.", nogSimpeler: "Eerst lezen" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Je wilt de **precieze getallen** van elke dag kunnen opzoeken. Welke vorm past daar het best bij?",
+        options: ["Tabel", "Lijngrafiek", "Cirkeldiagram", "Staafdiagram"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een lijn laat vooral zien of iets stijgt of daalt. Zie je daar meteen het precieze getal?",
+          null,
+          "Balken zijn handig om te vergelijken. Maar waar staan de getallen precies in?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tabel = precieze getallen",
+              tekst: "In een **tabel** staan de getallen zelf in rijen en kolommen. Je leest het precieze getal direct af.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tabel",
+              uitleg: "Getallen in rijen en kolommen.",
+            },
+            {
+              woord: "precies",
+              uitleg: "Het echte getal, niet ongeveer.",
+            },
+          ],
+          theorie: "Welke vorm wanneer: precieze getallen = TABEL. Vergelijken = STAAFDIAGRAM. Verloop in de tijd = LIJNGRAFIEK. Delen van een geheel = CIRKELDIAGRAM.",
+          voorbeelden: [
+            {
+              type: "praktijk",
+              tekst: "Een rooster met per dag hoeveel kaartjes er verkocht zijn: in een tabel zie je bij elke dag het precieze aantal.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet anders",
+              uitleg: "Een grafiek is een plaatje: je ziet snel wat groot of klein is, maar het precieze getal lees je beter in een tabel.",
+            },
+          ],
+          niveaus: {
+            basis: "Tabel.",
+            simpeler: "Precieze getallen opzoeken = tabel.",
+            nogSimpeler: "Tabel",
+          },
+        },
+      },
+      {
+        q: "Een **cirkeldiagram** heeft nog een andere naam. Welke?",
+        options: ["Taartdiagram", "Balkdiagram", "Puntdiagram", "Rijdiagram"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Balken horen bij een andere soort grafiek. Waar lijkt een cirkel in stukken op?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Cirkel in stukken",
+              tekst: "Een cirkeldiagram is een cirkel die in stukken is verdeeld, net als een taart. Daarom heet het ook **taartdiagram**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "cirkeldiagram",
+              uitleg: "Een cirkel verdeeld in stukken. Elk stuk is een deel van het geheel.",
+            },
+            {
+              woord: "taartstuk",
+              uitleg: "Eén stuk van de cirkel.",
+            },
+          ],
+          theorie: "Cirkeldiagram = taartdiagram. Je gebruikt het voor delen van een geheel.",
+          voorbeelden: [
+            {
+              type: "beeld",
+              tekst: "Denk aan een taart op een verjaardag: een groot stuk voor de ene groep, een klein stuk voor de andere.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet verwarren",
+              uitleg: "Balken horen bij een staafdiagram. Punten met lijnen horen bij een lijngrafiek.",
+            },
+          ],
+          niveaus: {
+            basis: "Taartdiagram.",
+            simpeler: "Een cirkel in stukken lijkt op een taart: taartdiagram.",
+            nogSimpeler: "Taart",
+          },
+        },
+      },
+      {
+        q: "De vraag is: '**Hoeveel meer** jongens dan meisjes?' Je hebt beide getallen al afgelezen. Wat doe je nu?",
+        options: ["Aftrekken", "Optellen", "Vermenigvuldigen", "Niets, alleen één getal aflezen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Bij optellen krijg je samen. Wordt er gevraagd naar samen?",
+          null,
+          "Is één getal genoeg om te weten hoeveel méér het is?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lees de vraag rustig",
+              tekst: "'Hoeveel meer' vraagt naar het **verschil** tussen twee getallen.",
+            },
+            {
+              titel: "Verschil = aftrekken",
+              tekst: "Groter getal min kleiner getal.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "verschil",
+              uitleg: "Hoeveel meer of minder iets is.",
+            },
+            {
+              woord: "aftrekken",
+              uitleg: "Min-som: groter min kleiner.",
+            },
+          ],
+          theorie: "'Hoeveel meer/minder?' = aftrekken. 'Samen?' = optellen.",
+          voorbeelden: [
+            {
+              type: "som",
+              tekst: "Jongens 16, meisjes 12. Hoeveel meer jongens? 16 − 12 = 4.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Valkuil",
+              uitleg: "Veel kinderen lezen alleen één getal af en vergeten dat de vraag over het verschil gaat.",
+            },
+          ],
+          niveaus: {
+            basis: "Aftrekken.",
+            simpeler: "Hoeveel meer = verschil = aftrekken.",
+            nogSimpeler: "Min",
+          },
+        },
+      },
+      {
+        q: "Waaruit is een **tabel** opgebouwd?",
+        options: ["Rijen en kolommen", "Balken en assen", "Punten en lijnen", "Taartstukken"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Balken horen bij een andere vorm. Hoe staan de getallen in een tabel?",
+          null,
+          "Taartstukken horen bij een cirkel. Is een tabel rond?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Rijen en kolommen",
+              tekst: "Een tabel heeft **rijen** (van links naar rechts) en **kolommen** (van boven naar onder). Daar staan de getallen in.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "rij",
+              uitleg: "Horizontaal, van links naar rechts.",
+            },
+            {
+              woord: "kolom",
+              uitleg: "Verticaal, van boven naar onder.",
+            },
+          ],
+          theorie: "Tabel = rijen + kolommen. Staafdiagram = balken. Lijngrafiek = punten met lijnen. Cirkeldiagram = taartstukken.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Bovenaan staan de dagen (kolommen), links de namen (rijen). Waar ze elkaar kruisen staat het getal.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Onthouden",
+              uitleg: "Elke vorm heeft zijn eigen bouwstenen. Een tabel is de enige met rijen en kolommen vol getallen.",
+            },
+          ],
+          niveaus: {
+            basis: "Rijen en kolommen.",
+            simpeler: "Een tabel heeft rijen (horizontaal) en kolommen (verticaal).",
+            nogSimpeler: "Rijen en kolommen",
+          },
+        },
+      },
     ],
   },
 
@@ -219,6 +412,244 @@ const steps = [
           voorbeelden: [{ type: "check", tekst: "Vergelijking: vanille = 5+8+4+6+9 = 32. Aardbei = 3+6+3+5+7 = 24. Chocolade meest (44) — past." }],
           basiskennis: [{ onderwerp: "Tellen", uitleg: "Tel niet 'gevoel'-matig. Pen + papier of vingers gebruiken. De toets waardeert nauwkeurigheid." }],
           niveaus: { basis: "44 (rij choco).", simpeler: "7+10+5+9+13 = 44.", nogSimpeler: "44" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Tabel 'gelezen boeken'. **Sanne**: september 3, oktober 5, november 2. **Daan**: september 4, oktober 1, november 6. Hoeveel boeken las **Daan in oktober**?",
+        options: ["1", "5", "4", "6"],
+        answer: 0,
+        wrongHints: [null, "Zit je wel in de rij van Daan?", null, "Welke kolom hoort bij oktober?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Rij + kolom",
+              tekst: "Zoek de rij van **Daan**: 4, 1, 6. Zoek de kolom **oktober** (de tweede). Waar ze kruisen staat 1.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "rij",
+              uitleg: "Horizontale lijn in een tabel, hier per kind.",
+            },
+            {
+              woord: "kolom",
+              uitleg: "Verticale lijn in een tabel, hier per maand.",
+            },
+          ],
+          theorie: "Tabel lezen: (1) goede rij, (2) goede kolom, (3) kruispunt = antwoord. Wijs met je vinger.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Daan: september 4, oktober 1, november 6. Oktober = 1.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Valkuil",
+              uitleg: "5 is de oktober van Sanne. Let op dat je in de goede rij blijft.",
+            },
+          ],
+          niveaus: {
+            basis: "1 boek.",
+            simpeler: "Rij Daan + kolom oktober = 1.",
+            nogSimpeler: "1",
+          },
+        },
+      },
+      {
+        q: "Tabel 'bezoekers zwembad': woensdag 95, vrijdag 120, zaterdag 140, zondag 165. Op welke dag kwamen er **de minste** bezoekers?",
+        options: ["woensdag", "vrijdag", "zaterdag", "zondag"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is dat het kleinste getal in de tabel?",
+          null,
+          "Zoek je het grootste of het kleinste getal?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vergelijk de getallen",
+              tekst: "95, 120, 140, 165. Het kleinste getal is 95. Dat hoort bij woensdag.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "minste",
+              uitleg: "Het kleinste aantal.",
+            },
+            {
+              woord: "vergelijken",
+              uitleg: "Kijken welk getal groter of kleiner is.",
+            },
+          ],
+          theorie: "'Meeste' = grootste getal zoeken. 'Minste' = kleinste getal zoeken.",
+          voorbeelden: [
+            {
+              type: "ranglijst",
+              tekst: "Van weinig naar veel: woensdag 95, vrijdag 120, zaterdag 140, zondag 165.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lees de vraag",
+              uitleg: "Onderstreep 'minste'. Wie snel leest, pakt per ongeluk het grootste getal.",
+            },
+          ],
+          niveaus: {
+            basis: "Woensdag (95).",
+            simpeler: "Kleinste getal = 95 = woensdag.",
+            nogSimpeler: "Woensdag",
+          },
+        },
+      },
+      {
+        q: "Tabel 'fruit verkocht op dinsdag': appels 14, peren 9, bananen 17. Hoeveel stuks fruit werden er **samen** verkocht?",
+        options: ["40", "31", "26", "42"],
+        answer: 0,
+        wrongHints: [null, "Heb je alle drie de soorten meegeteld?", null, "Reken nog eens na: 14 + 9 + 17."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Alles optellen",
+              tekst: "Samen = alle getallen optellen: 14 + 9 + 17.",
+            },
+            {
+              titel: "Slim rekenen",
+              tekst: "14 + 17 = 31. 31 + 9 = 40.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "samen",
+              uitleg: "Alle getallen bij elkaar optellen.",
+            },
+            {
+              woord: "totaal",
+              uitleg: "De uitkomst als je alles optelt.",
+            },
+          ],
+          theorie: "'Samen'- of 'totaal'-vraag = alle getallen in die rij of kolom optellen. Sla er geen over.",
+          voorbeelden: [
+            {
+              type: "check",
+              tekst: "40 − 9 = 31 en 31 − 17 = 14. Klopt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Valkuil",
+              uitleg: "31 krijg je als je de peren vergeet. Tel na hoeveel getallen je hebt opgeteld.",
+            },
+          ],
+          niveaus: {
+            basis: "40.",
+            simpeler: "14 + 9 + 17 = 40.",
+            nogSimpeler: "40",
+          },
+        },
+      },
+      {
+        q: "Tabel 'lengte in cm': Iris 142, Bram 135, Lotte 150. Hoeveel cm is **Lotte langer dan Bram**?",
+        options: ["15", "8", "7", "285"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Welke twee kinderen worden er vergeleken?",
+          null,
+          "Moet je hier optellen of aftrekken?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Twee getallen zoeken",
+              tekst: "Lotte = 150 cm. Bram = 135 cm.",
+            },
+            {
+              titel: "Aftrekken",
+              tekst: "150 − 135 = 15 cm.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "langer dan",
+              uitleg: "Hoeveel meer: groter getal min kleiner getal.",
+            },
+            {
+              woord: "verschil",
+              uitleg: "Het stuk dat de een meer heeft dan de ander.",
+            },
+          ],
+          theorie: "'Hoeveel langer/meer?' = verschil = aftrekken. Kijk goed welke twee namen in de vraag staan.",
+          voorbeelden: [
+            {
+              type: "check",
+              tekst: "135 + 15 = 150. Klopt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Valkuil",
+              uitleg: "Iris staat er ook in, maar de vraag gaat alleen over Lotte en Bram.",
+            },
+          ],
+          niveaus: {
+            basis: "15 cm.",
+            simpeler: "Lotte 150 − Bram 135 = 15.",
+            nogSimpeler: "15",
+          },
+        },
+      },
+      {
+        q: "Tabel 'kinderen die overblijven'. **Groep 6**: maandag 12, dinsdag 15. **Groep 7**: maandag 10, dinsdag 18. Hoeveel kinderen bleven er **op dinsdag** meer over in groep 7 dan in groep 6?",
+        options: ["3", "2", "33", "8"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk je wel naar de kolom dinsdag?",
+          null,
+          "Je vergelijkt twee groepen op dezelfde dag. Welke getallen horen daarbij?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kolom dinsdag",
+              tekst: "Dinsdag: groep 6 = 15, groep 7 = 18.",
+            },
+            {
+              titel: "Verschil",
+              tekst: "18 − 15 = 3.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kolom",
+              uitleg: "Hier: alle getallen van één dag onder elkaar.",
+            },
+            {
+              woord: "meer dan",
+              uitleg: "Verschil = aftrekken.",
+            },
+          ],
+          theorie: "Eerst de goede kolom (dag) kiezen, dan de twee rijen (groepen) aflezen, dan pas rekenen.",
+          voorbeelden: [
+            {
+              type: "check",
+              tekst: "15 + 3 = 18. Klopt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Valkuil",
+              uitleg: "2 is het verschil op maandag. Wijs met je vinger de goede kolom aan.",
+            },
+          ],
+          niveaus: {
+            basis: "3.",
+            simpeler: "Dinsdag: 18 − 15 = 3.",
+            nogSimpeler: "3",
+          },
         },
       },
     ],
@@ -281,6 +712,189 @@ const steps = [
           voorbeelden: [{ type: "check", tekst: "Methode A: 15+12+8 = 35. Methode B: 85-50 = 35. Beide kloppen ✓." }],
           basiskennis: [{ onderwerp: "Lees woord 'NIET'", uitleg: "Examen-val: 'NIET' makkelijk te missen. Onderstreep negatie-woorden bij lezen." }],
           niveaus: { basis: "35 (andere balken).", simpeler: "NIET voet/zwem = tennis+hockey+judo = 15+12+8 = 35.", nogSimpeler: "35" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Staafdiagram 'lievelingsfruit': appel 9, banaan 14, druif 6, peer 11. Welk fruit werd **het minst** gekozen?",
+        options: ["Druif", "Appel", "Peer", "Banaan"],
+        answer: 0,
+        wrongHints: [null, "Is dat wel de laagste balk?", null, "Zoek je de hoogste of de laagste balk?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Laagste balk",
+              tekst: "Minst gekozen = laagste balk. Druif (6) is het laagst.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "minst",
+              uitleg: "Het kleinste aantal. In een staafdiagram: de laagste balk.",
+            },
+          ],
+          theorie: "'Meest' = hoogste balk. 'Minst' = laagste balk.",
+          voorbeelden: [
+            {
+              type: "ranglijst",
+              tekst: "Banaan 14, peer 11, appel 9, druif 6.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Visueel",
+              uitleg: "Bij een staafdiagram zie je de laagste balk vaak al zonder getallen te lezen.",
+            },
+          ],
+          niveaus: {
+            basis: "Druif (6).",
+            simpeler: "Laagste balk = druif.",
+            nogSimpeler: "Druif",
+          },
+        },
+      },
+      {
+        q: "Staafdiagram 'oud papier': groep 6 haalde 45 kg, groep 7 haalde 60 kg en groep 8 haalde 38 kg. Hoeveel kg haalden de drie groepen **samen**?",
+        options: ["143", "105", "98", "133"],
+        answer: 0,
+        wrongHints: [null, "Heb je alle drie de balken opgeteld?", null, "Reken nog eens na: 45 + 60 + 38."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Drie balken aflezen",
+              tekst: "Groep 6 = 45, groep 7 = 60, groep 8 = 38.",
+            },
+            {
+              titel: "Optellen",
+              tekst: "45 + 60 = 105. 105 + 38 = 143.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "samen",
+              uitleg: "Alles bij elkaar optellen.",
+            },
+          ],
+          theorie: "'Samen'-vraag bij een staafdiagram: elke balk aflezen en alles optellen.",
+          voorbeelden: [
+            {
+              type: "check",
+              tekst: "143 − 38 = 105 en 105 − 60 = 45. Klopt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Valkuil",
+              uitleg: "105 krijg je als je groep 8 vergeet.",
+            },
+            {
+              onderwerp: "Rekenen",
+              uitleg: "Tel netjes onder elkaar of in stapjes.",
+            },
+          ],
+          niveaus: {
+            basis: "143 kg.",
+            simpeler: "45 + 60 + 38 = 143.",
+            nogSimpeler: "143",
+          },
+        },
+      },
+      {
+        q: "Op de y-as van een staafdiagram staan de getallen 0, 100, 200 en 300. Een balk komt **precies halverwege** tussen 100 en 200. Hoeveel is dat?",
+        options: ["150", "15", "105", "1500"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "De as gaat in stappen van 100. Kan het antwoord dan zo klein zijn?",
+          null,
+          "Wat ligt er precies in het midden tussen 100 en 200?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kijk naar de schaal",
+              tekst: "De as springt per 100: 0, 100, 200, 300.",
+            },
+            {
+              titel: "Halverwege",
+              tekst: "Het midden tussen 100 en 200 is 150.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schaal",
+              uitleg: "De stappen op de as, hier per 100.",
+            },
+            {
+              woord: "halverwege",
+              uitleg: "Precies in het midden.",
+            },
+          ],
+          theorie: "Kijk altijd eerst naar de stappen op de y-as. Bij stappen van 100 is een klein stukje al veel.",
+          voorbeelden: [
+            {
+              type: "vergelijk",
+              tekst: "Bij stappen van 10 ligt het midden tussen 10 en 20 op 15. Bij stappen van 100 ligt het midden tussen 100 en 200 op 150.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Valkuil",
+              uitleg: "Wie niet naar de schaal kijkt, denkt dat de balk 15 is.",
+            },
+          ],
+          niveaus: {
+            basis: "150.",
+            simpeler: "Midden tussen 100 en 200 = 150.",
+            nogSimpeler: "150",
+          },
+        },
+      },
+      {
+        q: "Staafdiagram 'verkochte loten': Fatima 23, Jesse 31, Mees 17. Hoeveel loten verkocht **Jesse meer dan Mees**?",
+        options: ["14", "8", "6", "48"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Welke twee namen staan in de vraag?",
+          null,
+          "Moet je bij 'meer dan' optellen of aftrekken?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Twee balken aflezen",
+              tekst: "Jesse = 31. Mees = 17.",
+            },
+            {
+              titel: "Aftrekken",
+              tekst: "31 − 17 = 14.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "meer dan",
+              uitleg: "Verschil: groter getal min kleiner getal.",
+            },
+          ],
+          theorie: "'Hoeveel meer?' = aftrekken. Lees eerst goed welke twee balken je nodig hebt.",
+          voorbeelden: [
+            {
+              type: "check",
+              tekst: "17 + 14 = 31. Klopt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Valkuil",
+              uitleg: "Fatima staat er ook in, maar die heb je hier niet nodig.",
+            },
+          ],
+          niveaus: {
+            basis: "14.",
+            simpeler: "Jesse 31 − Mees 17 = 14.",
+            nogSimpeler: "14",
+          },
         },
       },
     ],
@@ -353,6 +967,357 @@ const steps = [
           niveaus: { basis: "Do + zo (lijn omlaag).", simpeler: "Daling = lijn omlaag. Donderdag (22→18) + zondag (27→23).", nogSimpeler: "Do+zo" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat betekent het als de lijn in een lijngrafiek **vlak** loopt?",
+        options: [
+          "Er verandert niets",
+          "De waarde wordt groter",
+          "De waarde wordt kleiner",
+          "De lijn verandert van richting",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dan zou de lijn omhoog gaan. Doet een vlakke lijn dat?",
+          null,
+          "Dan zou je een knik zien. Is dat bij een vlakke lijn zo?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vlak = gelijk",
+              tekst: "Een vlakke lijn gaat niet omhoog en niet omlaag. De waarde blijft hetzelfde.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vlak",
+              uitleg: "Recht naar opzij, zonder omhoog of omlaag.",
+            },
+            {
+              woord: "stijgen",
+              uitleg: "Omhoog gaan: de waarde wordt groter.",
+            },
+          ],
+          theorie: "Lijn omhoog = stijgen. Lijn omlaag = dalen. Lijn vlak = geen verandering. Knik = verandering van richting.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Dinsdag 20 graden, woensdag 20 graden: tussen die dagen loopt de lijn vlak.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Onthouden",
+              uitleg: "Kijk naar de richting van de lijn tussen twee punten.",
+            },
+          ],
+          niveaus: {
+            basis: "Er verandert niets.",
+            simpeler: "Vlakke lijn = de waarde blijft gelijk.",
+            nogSimpeler: "Gelijk",
+          },
+        },
+      },
+      {
+        q: "Wat staat er bij een lijngrafiek op de **x-as** (de horizontale as)?",
+        options: ["De tijd", "De aantallen", "De titel", "De prijzen"],
+        answer: 0,
+        wrongHints: [null, "Aantallen lees je af langs de as die omhoog gaat. Welke as is dat?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tijd op de x-as",
+              tekst: "Bij een lijngrafiek staat de **tijd** op de x-as: dagen, weken, maanden of jaren.",
+            },
+            {
+              titel: "Waarde op de y-as",
+              tekst: "De aantallen, prijzen of temperaturen staan op de y-as (verticaal).",
+            },
+          ],
+          woorden: [
+            {
+              woord: "x-as",
+              uitleg: "De horizontale as, van links naar rechts.",
+            },
+            {
+              woord: "y-as",
+              uitleg: "De verticale as, van onder naar boven.",
+            },
+          ],
+          theorie: "Lijngrafiek: x-as = tijd, y-as = waarde. Draai ze niet om.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Temperatuur per dag: onderaan ma, di, wo (tijd). Links de graden (waarde).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Valkuil",
+              uitleg: "Een veelgemaakte fout is de assen omdraaien. Tijd staat altijd op de x-as.",
+            },
+          ],
+          niveaus: {
+            basis: "De tijd.",
+            simpeler: "Lijngrafiek: tijd van links naar rechts op de x-as.",
+            nogSimpeler: "Tijd",
+          },
+        },
+      },
+      {
+        q: "Lijngrafiek 'lengte van een plantje': week 1: 4 cm, week 2: 7 cm, week 3: 11 cm, week 4: 12 cm. Hoeveel cm groeide het plantje **van week 1 tot week 4**?",
+        options: ["8", "12", "16", "4"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is hoe lang het plantje in week 4 is. Hoeveel is het erbij gekomen?",
+          null,
+          "Dat is de lengte in week 1. Hoeveel is het daarna gegroeid?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Twee punten aflezen",
+              tekst: "Week 1 = 4 cm. Week 4 = 12 cm.",
+            },
+            {
+              titel: "Aftrekken",
+              tekst: "12 − 4 = 8 cm gegroeid.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "groeien",
+              uitleg: "Groter worden. Hoeveel erbij = verschil.",
+            },
+            {
+              woord: "verschil",
+              uitleg: "Groter getal min kleiner getal.",
+            },
+          ],
+          theorie: "'Hoeveel gegroeid/gestegen tussen twee momenten?' = lees beide punten af en trek af.",
+          voorbeelden: [
+            {
+              type: "check",
+              tekst: "4 + 8 = 12. Klopt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Valkuil",
+              uitleg: "12 is de lengte, niet hoeveel het plantje gegroeid is.",
+            },
+          ],
+          niveaus: {
+            basis: "8 cm.",
+            simpeler: "12 − 4 = 8.",
+            nogSimpeler: "8",
+          },
+        },
+      },
+      {
+        q: "Lijngrafiek 'bezoekers bibliotheek': maandag 30, dinsdag 45, woensdag 45, donderdag 25, vrijdag 40. Tussen welke twee dagen loopt de lijn **vlak**?",
+        options: [
+          "dinsdag en woensdag",
+          "maandag en dinsdag",
+          "woensdag en donderdag",
+          "donderdag en vrijdag",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Bleef het aantal tussen die dagen gelijk, of ging het omhoog?",
+          null,
+          "Bleef het aantal tussen die dagen gelijk?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Paren vergelijken",
+              tekst: "ma→di: 30→45 omhoog. di→wo: 45→45 gelijk. wo→do: 45→25 omlaag. do→vr: 25→40 omhoog.",
+            },
+            {
+              titel: "Vlak",
+              tekst: "Alleen tussen dinsdag en woensdag blijft het getal gelijk.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vlak",
+              uitleg: "Geen verandering: twee keer hetzelfde getal.",
+            },
+            {
+              woord: "opeenvolgend",
+              uitleg: "Dagen direct na elkaar.",
+            },
+          ],
+          theorie: "Vlakke lijn = twee opeenvolgende punten met dezelfde waarde.",
+          voorbeelden: [
+            {
+              type: "visueel",
+              tekst: "Op de grafiek loopt de lijn tussen di en wo recht naar opzij.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Werkwijze",
+              uitleg: "Vergelijk steeds twee dagen naast elkaar. Hetzelfde getal = vlak.",
+            },
+          ],
+          niveaus: {
+            basis: "Dinsdag en woensdag.",
+            simpeler: "45 en 45: gelijk, dus vlak.",
+            nogSimpeler: "Di en wo",
+          },
+        },
+      },
+      {
+        q: "Lijngrafiek 'temperatuur 's ochtends': maandag 8, dinsdag 6, woensdag 3, donderdag 5, vrijdag 9 graden. Op welke dag was het **het koudst**?",
+        options: ["woensdag", "maandag", "dinsdag", "donderdag"],
+        answer: 0,
+        wrongHints: [null, "Is dat wel het laagste punt?", null, "Zoek het laagste getal van alle dagen."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Laagste punt",
+              tekst: "Koudst = laagste temperatuur = laagste punt op de lijn. Dat is 3 graden op woensdag.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "koudst",
+              uitleg: "De laagste temperatuur.",
+            },
+            {
+              woord: "laagste punt",
+              uitleg: "Het punt dat het laagst ligt op de lijn.",
+            },
+          ],
+          theorie: "Warmst = hoogste punt. Koudst = laagste punt. Bekijk alle dagen.",
+          voorbeelden: [
+            {
+              type: "ranglijst",
+              tekst: "Van koud naar warm: wo 3, do 5, di 6, ma 8, vr 9.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Valkuil",
+              uitleg: "Vergelijk alle dagen, niet alleen de eerste paar.",
+            },
+          ],
+          niveaus: {
+            basis: "Woensdag (3 graden).",
+            simpeler: "Laagste punt = 3 = woensdag.",
+            nogSimpeler: "Woensdag",
+          },
+        },
+      },
+      {
+        q: "Wat betekent het als de lijn van een lijngrafiek **omlaag** gaat?",
+        options: [
+          "De waarde wordt kleiner",
+          "De waarde wordt groter",
+          "De waarde blijft gelijk",
+          "De tijd gaat terug",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dan zou de lijn juist omhoog gaan.",
+          null,
+          "Op de x-as gaat de tijd altijd vooruit, van links naar rechts.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Omlaag = dalen",
+              tekst: "Een lijn die omlaag gaat betekent dat de waarde **kleiner** wordt. Dat heet dalen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "dalen",
+              uitleg: "Kleiner worden. De lijn gaat omlaag.",
+            },
+            {
+              woord: "stijgen",
+              uitleg: "Groter worden. De lijn gaat omhoog.",
+            },
+          ],
+          theorie: "Omhoog = stijgen (groter). Omlaag = dalen (kleiner). Vlak = gelijk.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Het aantal blaadjes aan een boom in de herfst: 100, 70, 40. De lijn gaat omlaag.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tijd",
+              uitleg: "De tijd loopt van links naar rechts, altijd vooruit. Alleen de waarde gaat omhoog of omlaag.",
+            },
+          ],
+          niveaus: {
+            basis: "De waarde wordt kleiner.",
+            simpeler: "Lijn omlaag = dalen = kleiner.",
+            nogSimpeler: "Kleiner",
+          },
+        },
+      },
+      {
+        q: "Lijngrafiek 'zwemmers in het zwembad': om 10 uur 20, om 11 uur 35, om 12 uur 50, om 13 uur 30. Op welk tijdstip gaat de lijn van **stijgen naar dalen**?",
+        options: ["om 12 uur", "om 11 uur", "om 13 uur", "om 10 uur"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Gaat de lijn na dit tijdstip nog verder omhoog?",
+          null,
+          "Kijk naar het hoogste punt: daar draait de lijn om.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Richting per stuk",
+              tekst: "10→11: 20→35 omhoog. 11→12: 35→50 omhoog. 12→13: 50→30 omlaag.",
+            },
+            {
+              titel: "Knik",
+              tekst: "Om 12 uur stopt het stijgen en begint het dalen. Daar zit de knik.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "knik",
+              uitleg: "Plek waar de lijn van richting verandert.",
+            },
+            {
+              woord: "piek",
+              uitleg: "Het hoogste punt van de lijn.",
+            },
+          ],
+          theorie: "Een knik van stijgen naar dalen zit altijd bij het hoogste punt.",
+          voorbeelden: [
+            {
+              type: "visueel",
+              tekst: "De lijn gaat omhoog tot 12 uur (50) en daarna omlaag naar 30.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Werkwijze",
+              uitleg: "Bekijk elk stukje lijn: omhoog of omlaag? Waar het wisselt, zit de knik.",
+            },
+          ],
+          niveaus: {
+            basis: "Om 12 uur.",
+            simpeler: "Tot 12 uur omhoog, daarna omlaag.",
+            nogSimpeler: "12 uur",
+          },
+        },
+      },
     ],
   },
 
@@ -400,6 +1365,300 @@ const steps = [
           voorbeelden: [{ type: "check", tekst: "8 van 20 leerlingen = 8/20 = 2/5 = 40% ✓." }],
           basiskennis: [{ onderwerp: "Realiteit", uitleg: "40% van 20 is meer dan kwart (5) maar minder dan helft (10). 8 past." }],
           niveaus: { basis: "8 (40% × 20).", simpeler: "10% van 20 = 2. 40% = 4 × 2 = 8.", nogSimpeler: "8" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "In een cirkeldiagram beslaat één stuk **driekwart** van de cirkel. Welk percentage is dat?",
+        options: ["75%", "25%", "50%", "70%"],
+        answer: 0,
+        wrongHints: [null, "Dat is één kwart. Hoeveel kwarten zijn driekwart?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kwarten",
+              tekst: "De hele cirkel = 100%. Een kwart = 25%.",
+            },
+            {
+              titel: "Driekwart",
+              tekst: "Driekwart = 3 kwarten = 3 × 25% = 75%.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kwart",
+              uitleg: "Een vierde deel = 25%.",
+            },
+            {
+              woord: "driekwart",
+              uitleg: "Drie van de vier kwarten = 75%.",
+            },
+          ],
+          theorie: "Sleutel-percentages: halve cirkel = 50%, kwart = 25%, driekwart = 75%.",
+          voorbeelden: [
+            {
+              type: "check",
+              tekst: "75% + 25% = 100%. Driekwart + een kwart = de hele cirkel.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Onthouden",
+              uitleg: "Denk aan een klok: van 12 tot 9 uur is driekwart rondje.",
+            },
+          ],
+          niveaus: {
+            basis: "75%.",
+            simpeler: "3 × 25% = 75%.",
+            nogSimpeler: "75%",
+          },
+        },
+      },
+      {
+        q: "Cirkeldiagram 'zo komen we naar school': fiets 45%, lopen 30%, de rest komt met de auto. Welk percentage komt met de **auto**?",
+        options: ["25%", "75%", "15%", "35%"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat zijn fiets en lopen samen. Hoeveel blijft er over?",
+          null,
+          "Reken na: 100% − 45% − 30%.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Samen 100%",
+              tekst: "De hele cirkel is 100%.",
+            },
+            {
+              titel: "Rest uitrekenen",
+              tekst: "Fiets + lopen = 45% + 30% = 75%. Auto = 100% − 75% = 25%.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "rest",
+              uitleg: "Wat overblijft van het geheel.",
+            },
+            {
+              woord: "100%",
+              uitleg: "De hele cirkel.",
+            },
+          ],
+          theorie: "Ontbrekend stuk = 100% min alle andere stukken.",
+          voorbeelden: [
+            {
+              type: "check",
+              tekst: "45% + 30% + 25% = 100%. Klopt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Valkuil",
+              uitleg: "75% is het deel dat níét met de auto komt.",
+            },
+          ],
+          niveaus: {
+            basis: "25%.",
+            simpeler: "100% − 75% = 25%.",
+            nogSimpeler: "25%",
+          },
+        },
+      },
+      {
+        q: "Op een feest zijn **60 kinderen**. In het cirkeldiagram is het stuk 'limonade' **50%**. Hoeveel kinderen kozen limonade?",
+        options: ["30", "50", "15", "25"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het percentage. Hoeveel kinderen is dat?",
+          null,
+          "Dat is een kwart van 60. Hoeveel is de helft?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "50% = de helft",
+              tekst: "50% is een halve cirkel, dus de helft.",
+            },
+            {
+              titel: "Uitrekenen",
+              tekst: "De helft van 60 = 60 ÷ 2 = 30.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "50%",
+              uitleg: "De helft.",
+            },
+            {
+              woord: "percentage",
+              uitleg: "Hoeveel van elke 100.",
+            },
+          ],
+          theorie: "50% = ÷ 2. 25% = ÷ 4. 10% = ÷ 10.",
+          voorbeelden: [
+            {
+              type: "check",
+              tekst: "30 + 30 = 60. De helft klopt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet verwarren",
+              uitleg: "50% is geen 50 kinderen. Reken het percentage om naar een aantal.",
+            },
+          ],
+          niveaus: {
+            basis: "30 kinderen.",
+            simpeler: "50% van 60 = 60 ÷ 2 = 30.",
+            nogSimpeler: "30",
+          },
+        },
+      },
+      {
+        q: "Een school heeft **200 leerlingen**. In het cirkeldiagram is het stuk 'bus' **10%**. Hoeveel leerlingen komen met de bus?",
+        options: ["20", "10", "2", "100"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het percentage. Hoeveel leerlingen is dat?",
+          null,
+          "Dat zou de helft zijn. Is 10% de helft?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "10% = ÷ 10",
+              tekst: "10% is één tiende deel. Deel door 10.",
+            },
+            {
+              titel: "Uitrekenen",
+              tekst: "200 ÷ 10 = 20.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "10%",
+              uitleg: "Eén van elke tien.",
+            },
+            {
+              woord: "tiende deel",
+              uitleg: "Iets in 10 gelijke stukken verdelen, en dan 1 stuk nemen.",
+            },
+          ],
+          theorie: "10% van een getal = dat getal ÷ 10. Handig om ook 20%, 30% enz. te maken.",
+          voorbeelden: [
+            {
+              type: "check",
+              tekst: "10 × 20 = 200. Klopt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet verwarren",
+              uitleg: "10% is geen 10 leerlingen. Het hangt af van het totaal.",
+            },
+          ],
+          niveaus: {
+            basis: "20 leerlingen.",
+            simpeler: "10% van 200 = 200 ÷ 10 = 20.",
+            nogSimpeler: "20",
+          },
+        },
+      },
+      {
+        q: "Cirkeldiagram 'wat doe je na school?': gamen 35%, lezen 30%, sporten 20%, tekenen 15%. Welk taartstuk is **het grootst**?",
+        options: ["Gamen", "Lezen", "Sporten", "Tekenen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Vergelijk de percentages: is er een groter getal?",
+          null,
+          "Is dat het grootste of het kleinste percentage?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Grootste percentage",
+              tekst: "Grootste stuk = grootste percentage. 35% (gamen) is het grootst.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "taartstuk",
+              uitleg: "Eén deel van het cirkeldiagram.",
+            },
+            {
+              woord: "grootst",
+              uitleg: "Het hoogste percentage.",
+            },
+          ],
+          theorie: "Hoe groter het percentage, hoe groter het taartstuk.",
+          voorbeelden: [
+            {
+              type: "ranglijst",
+              tekst: "Gamen 35%, lezen 30%, sporten 20%, tekenen 15%. Samen 100%.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check",
+              uitleg: "Tel op: 35 + 30 + 20 + 15 = 100. Het diagram klopt.",
+            },
+          ],
+          niveaus: {
+            basis: "Gamen (35%).",
+            simpeler: "Grootste percentage = 35% = gamen.",
+            nogSimpeler: "Gamen",
+          },
+        },
+      },
+      {
+        q: "Een cirkeldiagram heeft maar drie stukken: **40%, 30% en 20%**. Klopt dit diagram?",
+        options: ["Nee, er mist 10%", "Ja, het klopt precies", "Nee, het is 10% te veel", "Nee, er mist 20%"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Tel de drie percentages eens op. Is dat de hele cirkel?",
+          null,
+          "Reken na: 40 + 30 + 20 = ?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Optellen",
+              tekst: "40% + 30% + 20% = 90%.",
+            },
+            {
+              titel: "Vergelijk met 100%",
+              tekst: "De hele cirkel is 100%. 100% − 90% = 10% ontbreekt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "100%",
+              uitleg: "Alle stukken samen: de hele cirkel.",
+            },
+          ],
+          theorie: "Belangrijke check: alle percentages van een cirkeldiagram samen = 100%. Anders klopt het niet.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "50% + 30% + 20% = 100% → klopt wel.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Werkwijze",
+              uitleg: "Tel alle stukken op en vergelijk met 100%.",
+            },
+          ],
+          niveaus: {
+            basis: "Nee, er mist 10%.",
+            simpeler: "Samen 90%, dus 10% te weinig.",
+            nogSimpeler: "Mist 10%",
+          },
         },
       },
     ],
@@ -454,6 +1713,309 @@ const steps = [
           voorbeelden: [{ type: "check", tekst: "19 → 17: daling van 2 graden. Lijn knikt visueel omlaag tussen dag 3 en 4." }],
           basiskennis: [{ onderwerp: "Visueel", uitleg: "Bij lijngrafiek: lijn naar BENEDEN = daling. Lijn naar BOVEN = stijging." }],
           niveaus: { basis: "Dag 3→4 (19→17).", simpeler: "Enige daling: dag 3 (19°) → dag 4 (17°).", nogSimpeler: "3→4" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Tabel 'verkochte koekjes': maandag 14, dinsdag 10, woensdag 16, donderdag 20. Wat is het **gemiddelde per dag**?",
+        options: ["15", "16", "14", "60"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is één dag. Heb je alle dagen gebruikt?",
+          null,
+          "Dat is de som. Wat moet je daarna nog doen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Som",
+              tekst: "14 + 10 + 16 + 20 = 60.",
+            },
+            {
+              titel: "Delen",
+              tekst: "Er zijn 4 dagen. 60 ÷ 4 = 15.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "gemiddelde",
+              uitleg: "Alles optellen en delen door het aantal.",
+            },
+            {
+              woord: "som",
+              uitleg: "Alles bij elkaar opgeteld.",
+            },
+          ],
+          theorie: "Gemiddelde = som ÷ aantal. Tel alle dagen mee.",
+          voorbeelden: [
+            {
+              type: "check",
+              tekst: "15 ligt tussen de laagste (10) en de hoogste (20). Logisch.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Valkuil",
+              uitleg: "Na het optellen nog delen door het aantal dagen. Anders heb je de som.",
+            },
+          ],
+          niveaus: {
+            basis: "15.",
+            simpeler: "60 ÷ 4 = 15.",
+            nogSimpeler: "15",
+          },
+        },
+      },
+      {
+        q: "Staafdiagram 'lievelingseten': van de **50 kinderen** kozen er **20** voor pizza. Welk **percentage** koos pizza?",
+        options: ["40%", "20%", "30%", "50%"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het aantal kinderen. Hoeveel procent is dat van 50?",
+          null,
+          "Dat zou de helft zijn. Is 20 de helft van 50?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Deel ÷ geheel",
+              tekst: "20 van de 50. 20 ÷ 50 = 0,4.",
+            },
+            {
+              titel: "× 100",
+              tekst: "0,4 × 100 = 40%.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "deel",
+              uitleg: "Het aantal in de groep: 20.",
+            },
+            {
+              woord: "geheel",
+              uitleg: "Het totaal: 50.",
+            },
+          ],
+          theorie: "Percentage = deel ÷ geheel × 100. Truc: 50 kinderen → elk kind is 2%.",
+          voorbeelden: [
+            {
+              type: "check",
+              tekst: "Elk kind = 2%. 20 kinderen × 2% = 40%.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet verwarren",
+              uitleg: "20 kinderen is geen 20%. Het totaal is 50, niet 100.",
+            },
+          ],
+          niveaus: {
+            basis: "40%.",
+            simpeler: "20 ÷ 50 × 100 = 40%.",
+            nogSimpeler: "40%",
+          },
+        },
+      },
+      {
+        q: "Lijngrafiek 'temperatuur': om 9 uur was het **12 graden**, om 15 uur **21 graden**. Hoeveel graden is de temperatuur **gestegen**?",
+        options: ["9", "33", "6", "21"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Moet je bij 'gestegen' optellen of aftrekken?",
+          null,
+          "Dat is de temperatuur om 15 uur. Hoeveel kwam erbij?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Twee punten",
+              tekst: "Om 9 uur 12 graden. Om 15 uur 21 graden.",
+            },
+            {
+              titel: "Aftrekken",
+              tekst: "21 − 12 = 9 graden gestegen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "stijgen",
+              uitleg: "Hoger worden. Hoeveel erbij = verschil.",
+            },
+          ],
+          theorie: "Hoeveel gestegen? Lees beide punten af en trek af: later min eerder.",
+          voorbeelden: [
+            {
+              type: "check",
+              tekst: "12 + 9 = 21. Klopt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Valkuil",
+              uitleg: "6 is het verschil in uren (15 − 9), niet in graden. Lees goed wat er gevraagd wordt.",
+            },
+          ],
+          niveaus: {
+            basis: "9 graden.",
+            simpeler: "21 − 12 = 9.",
+            nogSimpeler: "9",
+          },
+        },
+      },
+      {
+        q: "Cirkeldiagram in een klas van **20 kinderen**: 50% kiest pannenkoeken, 25% kiest patat en de rest kiest soep. Hoeveel **kinderen** kiezen soep?",
+        options: ["5", "25", "15", "10"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is een percentage. Hoeveel kinderen is dat?",
+          null,
+          "Dat is het aantal voor pannenkoeken. Hoeveel blijft er over voor soep?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Percentage soep",
+              tekst: "Pannenkoeken + patat = 50% + 25% = 75%. Soep = 100% − 75% = 25%.",
+            },
+            {
+              titel: "Aantal",
+              tekst: "25% = een kwart. 20 ÷ 4 = 5 kinderen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "rest",
+              uitleg: "Wat overblijft.",
+            },
+            {
+              woord: "25%",
+              uitleg: "Een kwart: ÷ 4.",
+            },
+          ],
+          theorie: "Eerst het ontbrekende percentage, dan omrekenen naar een aantal.",
+          voorbeelden: [
+            {
+              type: "check",
+              tekst: "Pannenkoeken 10 + patat 5 + soep 5 = 20. Klopt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Valkuil",
+              uitleg: "25 is het percentage, geen aantal kinderen.",
+            },
+          ],
+          niveaus: {
+            basis: "5 kinderen.",
+            simpeler: "Soep = 25%. 25% van 20 = 5.",
+            nogSimpeler: "5",
+          },
+        },
+      },
+      {
+        q: "Tabel 'statiegeldflessen': week 1: 18, week 2: 24, week 3: 30. De klas wil **100 flessen** halen. Hoeveel flessen missen er nog?",
+        options: ["28", "72", "32", "38"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is hoeveel ze al hebben. Hoeveel moeten er nog bij?",
+          null,
+          "Reken na: eerst optellen, dan 100 min de som.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Optellen",
+              tekst: "18 + 24 + 30 = 72 flessen al gehaald.",
+            },
+            {
+              titel: "Aftrekken",
+              tekst: "100 − 72 = 28 flessen missen er nog.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "missen",
+              uitleg: "Wat er nog nodig is om het doel te halen.",
+            },
+            {
+              woord: "doel",
+              uitleg: "Hier: 100 flessen.",
+            },
+          ],
+          theorie: "Twee stappen: (1) optellen wat er al is, (2) doel min dat getal.",
+          voorbeelden: [
+            {
+              type: "check",
+              tekst: "72 + 28 = 100. Klopt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Valkuil",
+              uitleg: "Stop niet na stap 1. 72 is wat ze hebben, niet wat ze missen.",
+            },
+          ],
+          niveaus: {
+            basis: "28 flessen.",
+            simpeler: "100 − 72 = 28.",
+            nogSimpeler: "28",
+          },
+        },
+      },
+      {
+        q: "Staafdiagram 'verkochte dozen eieren': maandag 4 dozen, dinsdag 7 dozen. In elke doos zitten **6 eieren**. Hoeveel **eieren** werden er op dinsdag verkocht?",
+        options: ["42", "13", "66", "24"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Bij 'in elke doos zitten er 6' moet je niet optellen.",
+          null,
+          "Dat is maandag. Welke dag vraagt de vraag?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Aflezen",
+              tekst: "Dinsdag = 7 dozen.",
+            },
+            {
+              titel: "Vermenigvuldigen",
+              tekst: "7 dozen × 6 eieren = 42 eieren.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "per doos",
+              uitleg: "In elke doos evenveel.",
+            },
+            {
+              woord: "vermenigvuldigen",
+              uitleg: "Keer-som: 7 × 6.",
+            },
+          ],
+          theorie: "Aflezen + bewerking: eerst het goede getal, dan de som die de vraag vraagt.",
+          voorbeelden: [
+            {
+              type: "check",
+              tekst: "42 ÷ 6 = 7 dozen. Klopt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Valkuil",
+              uitleg: "66 krijg je als je maandag en dinsdag samen neemt. De vraag gaat alleen over dinsdag.",
+            },
+          ],
+          niveaus: {
+            basis: "42 eieren.",
+            simpeler: "7 × 6 = 42.",
+            nogSimpeler: "42",
+          },
         },
       },
     ],

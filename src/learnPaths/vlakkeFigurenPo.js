@@ -95,6 +95,265 @@ const steps = [
           niveaus: { basis: "5 cm.", simpeler: "Vierkant heeft 4 gelijke zijden. Omtrek 20 ÷ 4 zijden = 5 cm per zijde.", nogSimpeler: "5" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een vierkant heeft zijden van **8 cm**. Wat is de **oppervlakte**?",
+        options: ["64 cm²", "32 cm²", "16 cm²", "64 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is 4 × 8 — is dat de rand of het vlak?",
+          null,
+          "Kijk goed naar de eenheid bij oppervlakte.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zijde × zijde",
+              tekst: "Oppervlakte vierkant = zijde × zijde = 8 × 8 = 64 cm².",
+            },
+          ],
+          woorden: [
+            {
+              woord: "oppervlakte",
+              uitleg: "Hoeveel plek een figuur inneemt. Eenheid: cm², m².",
+            },
+          ],
+          theorie: "Vierkant: oppervlakte = zijde × zijde. Omtrek = 4 × zijde.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "8 × 8 = 64 cm². (4 × 8 = 32 cm is de omtrek.)",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Eenheid",
+              uitleg: "Oppervlakte in cm² (vierkante centimeter), omtrek in cm.",
+            },
+          ],
+          niveaus: {
+            basis: "64 cm².",
+            simpeler: "Vierkant: zijde × zijde = 8 × 8 = 64 cm².",
+            nogSimpeler: "64",
+          },
+        },
+      },
+      {
+        q: "Een rechthoek is **9 m** lang en **3 m** breed. Wat is de **omtrek**?",
+        options: ["24 m", "27 m", "12 m", "21 m"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is 9 × 3 — zo reken je de oppervlakte uit.",
+          "Je hebt nu maar 2 zijden opgeteld. Een rechthoek heeft er 4.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "2 × (lengte + breedte)",
+              tekst: "Omtrek = 2 × (9 + 3) = 2 × 12 = 24 m.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "omtrek rechthoek",
+              uitleg: "2 × (lengte + breedte): je telt alle 4 zijden op.",
+            },
+          ],
+          theorie: "Rechthoek: omtrek = 2 × (lengte + breedte). Oppervlakte = lengte × breedte.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "9 + 3 + 9 + 3 = 24 m.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Alle 4 zijden",
+              uitleg: "Een rechthoek heeft 2 lange en 2 korte zijden. Tel ze alle 4 op.",
+            },
+          ],
+          niveaus: {
+            basis: "24 m.",
+            simpeler: "Tel alle zijden op: 9 + 3 + 9 + 3 = 24 m.",
+            nogSimpeler: "24",
+          },
+        },
+      },
+      {
+        q: "Een rechthoek is **7 cm** lang en **2 cm** breed. Wat is de **oppervlakte**?",
+        options: ["14 cm²", "18 cm²", "9 cm²", "49 cm²"],
+        answer: 0,
+        wrongHints: [null, "Dat is de omtrek: alle zijden opgeteld.", "Bij oppervlakte tel je niet op.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lengte × breedte",
+              tekst: "Oppervlakte = 7 × 2 = 14 cm².",
+            },
+          ],
+          woorden: [
+            {
+              woord: "oppervlakte rechthoek",
+              uitleg: "Lengte × breedte. Eenheid: cm² of m².",
+            },
+          ],
+          theorie: "Rechthoek: oppervlakte = lengte × breedte.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "7 × 2 = 14 cm². (2 × (7 + 2) = 18 cm is de omtrek.)",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet optellen",
+              uitleg: "Bij oppervlakte vermenigvuldig je lengte en breedte.",
+            },
+          ],
+          niveaus: {
+            basis: "14 cm².",
+            simpeler: "Oppervlakte = lengte × breedte = 7 × 2 = 14 cm².",
+            nogSimpeler: "14",
+          },
+        },
+      },
+      {
+        q: "Een vierkant heeft zijden van **3 m**. Welke zin klopt?",
+        options: [
+          "De omtrek is 12 m en de oppervlakte is 9 m²",
+          "De omtrek is 9 m en de oppervlakte is 12 m²",
+          "De omtrek is 12 m² en de oppervlakte is 9 m",
+          "De omtrek is 6 m en de oppervlakte is 9 m²",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Welke van de twee reken je uit met 4 × zijde?",
+          null,
+          "Hoeveel zijden heeft een vierkant?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Twee maten",
+              tekst: "Omtrek = 4 × 3 = 12 m. Oppervlakte = 3 × 3 = 9 m².",
+            },
+          ],
+          woorden: [
+            {
+              woord: "eenheid",
+              uitleg: "Omtrek in m, oppervlakte in m².",
+            },
+          ],
+          theorie: "Vierkant: omtrek = 4 × zijde, oppervlakte = zijde × zijde.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "4 × 3 = 12 m (rand). 3 × 3 = 9 m² (vlak).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Let op de eenheid",
+              uitleg: "Omtrek krijgt m, oppervlakte krijgt m².",
+            },
+          ],
+          niveaus: {
+            basis: "Omtrek 12 m, oppervlakte 9 m².",
+            simpeler: "Omtrek: 4 × 3 = 12 m. Oppervlakte: 3 × 3 = 9 m².",
+            nogSimpeler: "12 m en 9 m²",
+          },
+        },
+      },
+      {
+        q: "Met welke som reken je de **omtrek** van een **rechthoek** uit?",
+        options: ["2 × (lengte + breedte)", "lengte × breedte", "lengte + breedte", "4 × lengte"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zo reken je hoeveel plek de rechthoek inneemt.",
+          "Dan heb je nog niet alle zijden geteld.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Alle zijden",
+              tekst: "Een rechthoek heeft 2 lange en 2 korte zijden. Omtrek = 2 × (lengte + breedte).",
+            },
+          ],
+          woorden: [
+            {
+              woord: "omtrek",
+              uitleg: "Lengte rondom het figuur.",
+            },
+          ],
+          theorie: "Rechthoek: omtrek = 2 × (lengte + breedte). Oppervlakte = lengte × breedte.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Rechthoek 5 × 2: omtrek = 2 × (5 + 2) = 14.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lengte + breedte",
+              uitleg: "Lengte + breedte is maar de helft van de rand.",
+            },
+          ],
+          niveaus: {
+            basis: "2 × (lengte + breedte).",
+            simpeler: "Tel lengte en breedte op en doe dat keer 2, want elke zijde komt 2 keer voor.",
+            nogSimpeler: "2 × (l + b)",
+          },
+        },
+      },
+      {
+        q: "Figuur A is een rechthoek van **7 m × 1 m**. Figuur B is een vierkant met zijden van **4 m**. Wat klopt?",
+        options: [
+          "Ze hebben dezelfde omtrek, maar B heeft een grotere oppervlakte",
+          "Ze hebben dezelfde oppervlakte, maar A heeft een grotere omtrek",
+          "A heeft een grotere omtrek en een grotere oppervlakte",
+          "Ze hebben dezelfde omtrek en dezelfde oppervlakte",
+        ],
+        answer: 0,
+        wrongHints: [null, "Reken van allebei eerst de omtrek uit, en daarna de oppervlakte.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Allebei uitrekenen",
+              tekst: "A: omtrek 2 × (7 + 1) = 16 m, oppervlakte 7 × 1 = 7 m². B: omtrek 4 × 4 = 16 m, oppervlakte 4 × 4 = 16 m².",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vergelijken",
+              uitleg: "Reken van elk figuur dezelfde maat uit en zet ze naast elkaar.",
+            },
+          ],
+          theorie: "Dezelfde omtrek betekent niet dezelfde oppervlakte.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Omtrek: 16 m en 16 m (gelijk). Oppervlakte: 7 m² en 16 m² (B groter).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Omtrek ≠ oppervlakte",
+              uitleg: "Twee figuren met even lange randen kunnen toch verschillend veel plek innemen.",
+            },
+          ],
+          niveaus: {
+            basis: "Zelfde omtrek, B grotere oppervlakte.",
+            simpeler: "Allebei omtrek 16 m. Oppervlakte A = 7 m², B = 16 m².",
+            nogSimpeler: "B is groter",
+          },
+        },
+      },
     ],
   },
 
@@ -142,6 +401,260 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "4 × 6 = 24 m." }],
           basiskennis: [{ onderwerp: "Niet oppervlakte", uitleg: "36 m² = oppervlakte (6×6). Vraag wil omtrek (m)." }],
           niveaus: { basis: "24 m.", simpeler: "Vierkant 4 × zijde = 4×6 = 24 m omtrek.", nogSimpeler: "24" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Bij welke klus moet je de **omtrek** weten?",
+        options: [
+          "Een rand van lint om een prikbord plakken",
+          "Tapijt leggen in een kamer",
+          "Een muur verven",
+          "Een veld met gras inzaaien",
+        ],
+        answer: 0,
+        wrongHints: [null, "Ga je dan langs de rand, of over het hele vlak?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Rand of vlak?",
+              tekst: "Lint gaat langs de rand van het prikbord = omtrek. Tapijt, verf en gras gaan over het hele vlak = oppervlakte.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "rand",
+              uitleg: "De buitenkant van een figuur. Langs de rand = omtrek.",
+            },
+          ],
+          theorie: "'Hek', 'lijst', 'rand' → omtrek. 'Gras', 'tegels', 'verf', 'tapijt' → oppervlakte.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Lint om het prikbord = langs de rand = omtrek.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Langs de rand",
+              uitleg: "Meet je langs de rand? Dan is het omtrek.",
+            },
+          ],
+          niveaus: {
+            basis: "Een rand van lint om een prikbord.",
+            simpeler: "Lint gaat rondom, langs de rand. Dat is omtrek.",
+            nogSimpeler: "Lint",
+          },
+        },
+      },
+      {
+        q: "Een grasveld is **9 m** lang en **7 m** breed. Hoeveel m² **graszoden** heb je nodig?",
+        options: ["63 m²", "32 m", "16 m²", "72 m²"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is de lengte van de rand. Gras ligt op het hele veld.",
+          "Bij oppervlakte tel je niet op.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Gras = oppervlakte",
+              tekst: "Graszoden liggen op het hele veld = oppervlakte = 9 × 7 = 63 m².",
+            },
+          ],
+          woorden: [
+            {
+              woord: "graszoden",
+              uitleg: "Stukken gras die je neerlegt. Je rekent ze in m².",
+            },
+          ],
+          theorie: "Gras → oppervlakte = lengte × breedte.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "9 × 7 = 63 m².",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet de omtrek",
+              uitleg: "2 × (9 + 7) = 32 m is de rand, niet het vlak.",
+            },
+          ],
+          niveaus: {
+            basis: "63 m².",
+            simpeler: "Gras = oppervlakte = 9 × 7 = 63 m².",
+            nogSimpeler: "63",
+          },
+        },
+      },
+      {
+        q: "Een foto is **30 cm × 20 cm**. Er komt een lijst **rondom**. Hoeveel cm lijst heb je nodig?",
+        options: ["100 cm", "600 cm", "50 cm", "80 cm"],
+        answer: 0,
+        wrongHints: [null, "Dat is de oppervlakte van de foto.", "Dat is maar de helft van de rand.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lijst = omtrek",
+              tekst: "Lijst gaat rondom = omtrek = 2 × (30 + 20) = 2 × 50 = 100 cm.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "lijst",
+              uitleg: "Rand om een foto. Je meet langs de rand = omtrek.",
+            },
+          ],
+          theorie: "'Rondom' = omtrek. Rechthoek: 2 × (lengte + breedte).",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "30 + 20 + 30 + 20 = 100 cm.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Alle 4 zijden",
+              uitleg: "Een lijst gaat langs alle 4 de zijden.",
+            },
+          ],
+          niveaus: {
+            basis: "100 cm.",
+            simpeler: "Lijst = omtrek = 2 × (30 + 20) = 100 cm.",
+            nogSimpeler: "100",
+          },
+        },
+      },
+      {
+        q: "Een **vierkant** tafelblad heeft zijden van **80 cm**. Je plakt tape langs **alle zijden**. Hoeveel cm tape heb je nodig?",
+        options: ["320 cm", "160 cm", "240 cm", "6400 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoeveel zijden heeft een vierkant?",
+          null,
+          "Tape gaat langs de rand, niet over het vlak.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "4 × zijde",
+              tekst: "Tape langs alle zijden = omtrek = 4 × 80 = 320 cm.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vierkant",
+              uitleg: "4 gelijke zijden.",
+            },
+          ],
+          theorie: "Vierkant: omtrek = 4 × zijde.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "80 + 80 + 80 + 80 = 320 cm.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Rand, geen vlak",
+              uitleg: "80 × 80 is de oppervlakte. Tape meet je in cm.",
+            },
+          ],
+          niveaus: {
+            basis: "320 cm.",
+            simpeler: "Vierkant heeft 4 zijden van 80 cm: 4 × 80 = 320 cm.",
+            nogSimpeler: "320",
+          },
+        },
+      },
+      {
+        q: "Een gang is **4 m** lang en **1 m** breed. Je legt tegels van **50 cm × 50 cm**. Hoeveel tegels heb je nodig?",
+        options: ["16", "8", "4", "10"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoeveel tegels passen er naast elkaar in de breedte?",
+          null,
+          "Tegels liggen op het hele vlak. Heb je de rand uitgerekend?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Per richting tellen",
+              tekst: "Lengte 4 m = 400 cm → 400 ÷ 50 = 8 tegels. Breedte 1 m = 100 cm → 100 ÷ 50 = 2 tegels. 8 × 2 = 16 tegels.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tegel van 50 cm",
+              uitleg: "Een vierkante tegel met zijden van een halve meter.",
+            },
+          ],
+          theorie: "Tegels = oppervlakte. Reken eerst om naar cm en tel per richting hoeveel tegels passen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Gang 400 cm × 100 cm. 8 tegels lang, 2 tegels breed: 8 × 2 = 16.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Andere manier",
+              uitleg: "Gang = 4 m² = 40.000 cm². Tegel = 2.500 cm². 40.000 ÷ 2.500 = 16.",
+            },
+          ],
+          niveaus: {
+            basis: "16 tegels.",
+            simpeler: "In de lengte passen 8 tegels, in de breedte 2. 8 × 2 = 16.",
+            nogSimpeler: "16",
+          },
+        },
+      },
+      {
+        q: "Rondom een speelveld van **25 m × 16 m** kalkt de meester een witte lijn. Hoe lang is die lijn?",
+        options: ["82 m", "400 m", "41 m", "66 m"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is hoeveel plek het veld inneemt. Een lijn rondom meet je in meters.",
+          "Heb je alle 4 de zijden meegeteld?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Rondom = omtrek",
+              tekst: "Omtrek = 2 × (25 + 16) = 2 × 41 = 82 m.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kalken",
+              uitleg: "Een witte lijn op het gras zetten.",
+            },
+          ],
+          theorie: "'Rondom' = omtrek = 2 × (lengte + breedte).",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "25 + 16 + 25 + 16 = 82 m.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet de oppervlakte",
+              uitleg: "25 × 16 = 400 m² is het vlak, niet de rand.",
+            },
+          ],
+          niveaus: {
+            basis: "82 m.",
+            simpeler: "Lijn rondom = omtrek = 2 × (25 + 16) = 82 m.",
+            nogSimpeler: "82",
+          },
         },
       },
     ],
@@ -194,6 +707,245 @@ const steps = [
           niveaus: { basis: "27 m².", simpeler: "Driehoek = (6×9)÷2 = 54÷2 = 27 m² gras.", nogSimpeler: "27" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een driehoek heeft een **basis van 4 m** en een **hoogte van 3 m**. Wat is de **oppervlakte**?",
+        options: ["6 m²", "12 m²", "7 m²", "24 m²"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Basis × hoogte is goed begonnen. Wat moet er daarna nog?",
+          "Bij oppervlakte tel je niet op.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "B × H ÷ 2",
+              tekst: "4 × 3 = 12. 12 ÷ 2 = 6 m².",
+            },
+          ],
+          woorden: [
+            {
+              woord: "driehoek-formule",
+              uitleg: "Oppervlakte = (basis × hoogte) ÷ 2.",
+            },
+          ],
+          theorie: "Driehoek = halve rechthoek. Daarom ÷ 2.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "4 × 3 = 12. 12 ÷ 2 = 6 m².",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Vergeet ÷2 niet",
+              uitleg: "12 m² is de rechthoek met dezelfde maten. De driehoek is de helft.",
+            },
+          ],
+          niveaus: {
+            basis: "6 m².",
+            simpeler: "(4 × 3) ÷ 2 = 12 ÷ 2 = 6 m².",
+            nogSimpeler: "6",
+          },
+        },
+      },
+      {
+        q: "Een driehoek heeft een **basis van 7 cm** en een **hoogte van 2 cm**. Wat is de **oppervlakte**?",
+        options: ["7 cm²", "14 cm²", "9 cm²", "3,5 cm²"],
+        answer: 0,
+        wrongHints: [null, "Vergeet niet te delen door 2.", null, "Heb je twee keer door 2 gedeeld?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "B × H ÷ 2",
+              tekst: "7 × 2 = 14. 14 ÷ 2 = 7 cm².",
+            },
+          ],
+          woorden: [
+            {
+              woord: "basis",
+              uitleg: "De onderste zijde van de driehoek.",
+            },
+          ],
+          theorie: "Oppervlakte driehoek = (basis × hoogte) ÷ 2.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Handig: eerst 2 ÷ 2 = 1, dan 7 × 1 = 7 cm².",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Slim rekenen",
+              uitleg: "Is één getal even? Deel dat eerst door 2.",
+            },
+          ],
+          niveaus: {
+            basis: "7 cm².",
+            simpeler: "(7 × 2) ÷ 2 = 14 ÷ 2 = 7 cm².",
+            nogSimpeler: "7",
+          },
+        },
+      },
+      {
+        q: "Waarom deel je bij de **oppervlakte van een driehoek** door 2?",
+        options: [
+          "Een driehoek is de helft van een rechthoek",
+          "Een driehoek heeft twee schuine zijden",
+          "Een driehoek heeft drie hoeken",
+          "De basis telt maar half mee",
+        ],
+        answer: 0,
+        wrongHints: [null, "Denk aan een rechthoek die je van hoek tot hoek doorknipt.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Halve rechthoek",
+              tekst: "Knip een rechthoek van hoek tot hoek door. Je krijgt 2 gelijke driehoeken. Elke driehoek is de helft.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "diagonaal",
+              uitleg: "Lijn van de ene hoek naar de hoek er schuin tegenover.",
+            },
+          ],
+          theorie: "Driehoek = halve rechthoek. Daarom (basis × hoogte) ÷ 2.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Rechthoek 6 × 4 = 24. Doormidden = 2 driehoeken van 12.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Formule",
+              uitleg: "Oppervlakte = (basis × hoogte) ÷ 2.",
+            },
+          ],
+          niveaus: {
+            basis: "Een driehoek is de helft van een rechthoek.",
+            simpeler: "Knip een rechthoek schuin door: twee driehoeken, elk de helft.",
+            nogSimpeler: "Helft",
+          },
+        },
+      },
+      {
+        q: "Een driehoek heeft zijden van **6 cm**, **7 cm** en **8 cm**. Wat is de **omtrek**?",
+        options: ["21 cm", "15 cm", "42 cm", "336 cm"],
+        answer: 0,
+        wrongHints: [null, "Heb je alle drie de zijden meegeteld?", null, "Bij omtrek vermenigvuldig je niet."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zijden optellen",
+              tekst: "Omtrek = 6 + 7 + 8 = 21 cm.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "omtrek",
+              uitleg: "Lengte rondom het figuur.",
+            },
+          ],
+          theorie: "Omtrek driehoek = de som van alle 3 zijden.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "6 + 7 = 13. 13 + 8 = 21 cm.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Geen ÷2",
+              uitleg: "De ÷ 2 hoort alleen bij de oppervlakte van een driehoek.",
+            },
+          ],
+          niveaus: {
+            basis: "21 cm.",
+            simpeler: "Tel de 3 zijden op: 6 + 7 + 8 = 21 cm.",
+            nogSimpeler: "21",
+          },
+        },
+      },
+      {
+        q: "Een driehoek heeft een **basis van 8 cm** en een **hoogte van 3 cm**. De twee **schuine zijden** zijn allebei **5 cm**. Wat is de **oppervlakte**?",
+        options: ["12 cm²", "20 cm²", "24 cm²", "18 cm²"],
+        answer: 0,
+        wrongHints: [null, "Is een schuine zijde de hoogte?", "Vergeet niet te delen door 2.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Hoogte, niet schuin",
+              tekst: "Gebruik de hoogte (3 cm), niet de schuine zijde. (8 × 3) ÷ 2 = 24 ÷ 2 = 12 cm².",
+            },
+          ],
+          woorden: [
+            {
+              woord: "hoogte",
+              uitleg: "Loodrechte afstand van de top naar de basis.",
+            },
+          ],
+          theorie: "Oppervlakte = (basis × hoogte) ÷ 2. De schuine zijden heb je hier niet nodig.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "8 × 3 = 24. 24 ÷ 2 = 12 cm².",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Schuine zijden",
+              uitleg: "Die heb je alleen nodig voor de omtrek: 8 + 5 + 5 = 18 cm.",
+            },
+          ],
+          niveaus: {
+            basis: "12 cm².",
+            simpeler: "(basis × hoogte) ÷ 2 = (8 × 3) ÷ 2 = 12 cm².",
+            nogSimpeler: "12",
+          },
+        },
+      },
+      {
+        q: "Een driehoekig vlaggetje heeft een **basis van 20 cm** en een **hoogte van 30 cm**. Hoeveel cm² stof is het vlaggetje?",
+        options: ["300 cm²", "600 cm²", "50 cm²", "150 cm²"],
+        answer: 0,
+        wrongHints: [null, "Wat moet je na basis × hoogte nog doen?", "Bij oppervlakte tel je niet op.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "B × H ÷ 2",
+              tekst: "20 × 30 = 600. 600 ÷ 2 = 300 cm².",
+            },
+          ],
+          woorden: [
+            {
+              woord: "stof",
+              uitleg: "Het vlaggetje is van stof. Hoeveel stof = oppervlakte.",
+            },
+          ],
+          theorie: "Driehoek: oppervlakte = (basis × hoogte) ÷ 2.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Handig: 20 ÷ 2 = 10. 10 × 30 = 300 cm².",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Vergeet ÷2 niet",
+              uitleg: "600 cm² is de rechthoek eromheen. Het vlaggetje is de helft.",
+            },
+          ],
+          niveaus: {
+            basis: "300 cm².",
+            simpeler: "(20 × 30) ÷ 2 = 600 ÷ 2 = 300 cm².",
+            nogSimpeler: "300",
+          },
+        },
+      },
     ],
   },
 
@@ -241,6 +993,293 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "(10×4)÷2 = 20 m². 20×€6 = €120." }],
           basiskennis: [{ onderwerp: "÷2 niet vergeten", uitleg: "Zonder ÷2 = 40 m² → €240 (fout)." }],
           niveaus: { basis: "€120.", simpeler: "Driehoek = (10×4)÷2 = 20 m². Kosten = 20 × €6 = €120.", nogSimpeler: "€120" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een muur is **8 m** breed en **3 m** hoog. Met **1 liter** verf doe je **6 m²**. Hoeveel liter verf heb je nodig?",
+        options: ["4 L", "24 L", "2 L", "6 L"],
+        answer: 0,
+        wrongHints: [null, "Dat is de oppervlakte van de muur. Hoeveel m² doe je met 1 liter?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Oppervlakte ÷ dekking",
+              tekst: "Muur = 8 × 3 = 24 m². 24 ÷ 6 = 4 liter.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "verf",
+              uitleg: "Verf gaat over het hele vlak = oppervlakte.",
+            },
+          ],
+          theorie: "Stappenplan: 1) oppervlakte uitrekenen. 2) delen door wat 1 liter doet.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "8 × 3 = 24 m². 24 ÷ 6 = 4 L.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Controle",
+              uitleg: "4 liter × 6 m² = 24 m². Klopt!",
+            },
+          ],
+          niveaus: {
+            basis: "4 L.",
+            simpeler: "Muur = 24 m². Elke liter doet 6 m². 24 ÷ 6 = 4 liter.",
+            nogSimpeler: "4",
+          },
+        },
+      },
+      {
+        q: "Een moestuin is **9 m × 6 m**. Een hek kost **€ 5 per meter**. Wat kost het hek?",
+        options: ["€ 150", "€ 270", "€ 75", "€ 45"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Voor een hek heb je de rand nodig, niet het vlak.",
+          "Heb je alle 4 de zijden meegeteld?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Omtrek × prijs",
+              tekst: "Hek = omtrek = 2 × (9 + 6) = 30 m. Kosten = 30 × € 5 = € 150.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "hekkosten",
+              uitleg: "Lengte hek (m) × prijs per meter.",
+            },
+          ],
+          theorie: "2 stappen: 1) omtrek uitrekenen. 2) keer de prijs per meter.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2 × (9 + 6) = 30 m. 30 × € 5 = € 150.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet × oppervlakte",
+              uitleg: "9 × 6 = 54 m² is het vlak. Een hek meet je in meters.",
+            },
+          ],
+          niveaus: {
+            basis: "€ 150.",
+            simpeler: "Hek = omtrek = 30 m. 30 × € 5 = € 150.",
+            nogSimpeler: "€ 150",
+          },
+        },
+      },
+      {
+        q: "Een kamer is **5 m × 3 m**. Tapijt kost **€ 20 per m²**. Wat kost het tapijt?",
+        options: ["€ 300", "€ 320", "€ 160", "€ 100"],
+        answer: 0,
+        wrongHints: [null, "Ligt tapijt langs de rand of over de hele vloer?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Oppervlakte × prijs",
+              tekst: "Tapijt = oppervlakte = 5 × 3 = 15 m². Kosten = 15 × € 20 = € 300.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tapijt",
+              uitleg: "Vloerbedekking over de hele vloer = oppervlakte.",
+            },
+          ],
+          theorie: "2 stappen: 1) oppervlakte uitrekenen. 2) keer de prijs per m².",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "5 × 3 = 15 m². 15 × € 20 = € 300.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet de omtrek",
+              uitleg: "2 × (5 + 3) = 16 m is de rand. Tapijt ligt op het vlak.",
+            },
+          ],
+          niveaus: {
+            basis: "€ 300.",
+            simpeler: "Tapijt = 15 m². 15 × € 20 = € 300.",
+            nogSimpeler: "€ 300",
+          },
+        },
+      },
+      {
+        q: "Een veldje is **10 m × 5 m**. Gras kost **€ 2 per m²** en een hek eromheen kost **€ 3 per meter**. Wat kost het **samen**?",
+        options: ["€ 190", "€ 100", "€ 90", "€ 250"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Heb je allebei de onderdelen meegeteld?",
+          null,
+          "Gras en hek reken je met een andere maat uit.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Twee onderdelen",
+              tekst: "Gras: 10 × 5 = 50 m² → 50 × € 2 = € 100. Hek: 2 × (10 + 5) = 30 m → 30 × € 3 = € 90. Samen € 190.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "samen",
+              uitleg: "Alle onderdelen bij elkaar optellen.",
+            },
+          ],
+          theorie: "Stappenplan: gras = oppervlakte, hek = omtrek. Elk keer de eigen prijs, dan optellen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "€ 100 (gras) + € 90 (hek) = € 190.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Eigen maat per onderdeel",
+              uitleg: "Gras in m², hek in m. Niet allebei met dezelfde maat rekenen.",
+            },
+          ],
+          niveaus: {
+            basis: "€ 190.",
+            simpeler: "Gras € 100 + hek € 90 = € 190.",
+            nogSimpeler: "€ 190",
+          },
+        },
+      },
+      {
+        q: "Een **vierkante** zandbak heeft zijden van **3 m**. Er komt een rand van planken omheen. Planken kosten **€ 4 per meter**. Wat kosten de planken?",
+        options: ["€ 48", "€ 36", "€ 12", "€ 24"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een rand gaat rondom. Heb je de rand uitgerekend of het vlak?",
+          null,
+          "Hoeveel zijden heeft een vierkant?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Omtrek × prijs",
+              tekst: "Rand = omtrek = 4 × 3 = 12 m. Kosten = 12 × € 4 = € 48.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "rand",
+              uitleg: "Gaat rondom = omtrek.",
+            },
+          ],
+          theorie: "Vierkant: omtrek = 4 × zijde. Daarna keer de prijs per meter.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "4 × 3 = 12 m. 12 × € 4 = € 48.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet × oppervlakte",
+              uitleg: "3 × 3 = 9 m² is het zand, niet de rand.",
+            },
+          ],
+          niveaus: {
+            basis: "€ 48.",
+            simpeler: "Rand = 4 × 3 = 12 m. 12 × € 4 = € 48.",
+            nogSimpeler: "€ 48",
+          },
+        },
+      },
+      {
+        q: "Een vloer is **7 m × 4 m**. Eén pak laminaat is genoeg voor **2 m²**. Hoeveel pakken heb je nodig?",
+        options: ["14", "11", "28", "56"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Laminaat ligt op de hele vloer. Welke maat heb je dan nodig?",
+          "Hoeveel m² doe je met 1 pak?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Oppervlakte ÷ 2",
+              tekst: "Vloer = 7 × 4 = 28 m². 28 ÷ 2 = 14 pakken.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "laminaat",
+              uitleg: "Planken voor op de vloer = oppervlakte.",
+            },
+          ],
+          theorie: "Eerst oppervlakte, dan delen door wat 1 pak doet.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "7 × 4 = 28 m². 28 ÷ 2 = 14.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Controle",
+              uitleg: "14 pakken × 2 m² = 28 m². Klopt!",
+            },
+          ],
+          niveaus: {
+            basis: "14 pakken.",
+            simpeler: "Vloer = 28 m². Elk pak doet 2 m². 28 ÷ 2 = 14.",
+            nogSimpeler: "14",
+          },
+        },
+      },
+      {
+        q: "Een **driehoekig** stuk muur heeft een **basis van 6 m** en een **hoogte van 4 m**. Met **1 liter** verf doe je **4 m²**. Hoeveel liter verf heb je nodig?",
+        options: ["3 L", "6 L", "12 L", "24 L"],
+        answer: 0,
+        wrongHints: [null, "Heb je de oppervlakte van de driehoek door 2 gedeeld?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Driehoek ÷ dekking",
+              tekst: "Oppervlakte = (6 × 4) ÷ 2 = 12 m². 12 ÷ 4 = 3 liter.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "driehoek",
+              uitleg: "Oppervlakte = (basis × hoogte) ÷ 2.",
+            },
+          ],
+          theorie: "Stappenplan: 1) oppervlakte driehoek. 2) delen door wat 1 liter doet.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "(6 × 4) ÷ 2 = 12 m². 12 ÷ 4 = 3 L.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Vergeet ÷2 niet",
+              uitleg: "6 × 4 = 24 m² is een rechthoek. De driehoek is de helft.",
+            },
+          ],
+          niveaus: {
+            basis: "3 L.",
+            simpeler: "Driehoek = 12 m². Elke liter doet 4 m². 12 ÷ 4 = 3 liter.",
+            nogSimpeler: "3",
+          },
         },
       },
     ],
