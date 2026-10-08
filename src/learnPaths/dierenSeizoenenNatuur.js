@@ -266,7 +266,7 @@ const steps = [
   // C
   {
     title: "Levensstadia — van baby tot volwassen",
-    explanation: "Dieren beginnen hun leven anders. Een paar belangrijke voorbeelden:\n\n**Mensen + zoogdieren** (levend baren):\n• baby → peuter → kind → tiener → volwassen.\n\n**Vogels**:\n• ei → kuiken → jonge vogel → volwassen.\n• Een **moedervogel broedt** op het ei (warm houden) tot het uitkomt.\n\n**Vissen**:\n• ei → larve → volwassen vis.\n\n**Amfibieën** (kikker als voorbeeld):\n• ei → **kikkervisje** (in water, met staart) → kikker met poten → volwassen kikker.\n• Dit heet **gedaanteverwisseling** (metamorfose): het dier verandert van vorm.\n\n**Insecten** (vlinder als voorbeeld):\n• ei → **rups** → **pop** (cocon) → volwassen vlinder.\n• Ook gedaanteverwisseling — heel beroemd.\n\n**Veel dieren bij geboorte**:\n• **Nestblijvers** (vogel-kuiken, mens-baby): kunnen niets, ouders zorgen.\n• **Nestvlieders** (kuiken van eend): kunnen meteen lopen.\n\n**Paartijd**: dieren willen zich voortplanten. Vogels zingen, herten vechten, kikkers kwaken — allemaal om een partner te vinden.",
+    explanation: "Dieren beginnen hun leven anders. Een paar belangrijke voorbeelden:\n\n**Mensen + zoogdieren** (levend baren):\n• baby → peuter → kind → tiener → volwassen.\n\n**Vogels**:\n• ei → kuiken → jonge vogel → volwassen.\n• Een **moedervogel broedt** op het ei (warm houden) tot het uitkomt.\n\n**Vissen**:\n• ei → larve → volwassen vis.\n\n**Amfibieën** (kikker als voorbeeld):\n• ei → **kikkervisje** (in water, met staart) → kikker met poten → volwassen kikker.\n• Dit heet **gedaanteverwisseling** (metamorfose): het dier verandert van vorm.\n\n**Insecten** (vlinder als voorbeeld):\n• ei → **rups** → **pop** → volwassen vlinder.\n• Ook gedaanteverwisseling — heel beroemd.\n\n**Veel dieren bij geboorte**:\n• **Nestblijvers** (vogel-kuiken, mens-baby): kunnen niets, ouders zorgen.\n• **Nestvlieders** (kuiken van eend): kunnen meteen lopen.\n\n**Paartijd**: dieren willen zich voortplanten. Vogels zingen, herten vechten, kikkers kwaken — allemaal om een partner te vinden.",
     svg: `<svg viewBox="0 0 300 200">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">levensstadia</text>
 <text x="20" y="55" fill="${COLORS.text}" font-size="11" font-family="Arial">vogel: ei → kuiken → volwassen</text>
@@ -278,17 +278,17 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "Wat zit er **tussen** rups en vlinder?",
+        q: "Welk **stadium** komt tussen rups en vlinder?",
         options: ["pop", "ei", "kuiken", "kikkervisje"],
         answer: 0,
-        wrongHints: [null, "Ei is daarvoor.", "Kuiken is voor vogels.", "Kikkervisje is voor kikker."],
+        wrongHints: [null, "Het ei komt vóór de rups.", "Een kuiken komt uit een vogelei.", "Een kikkervisje wordt een kikker."],
         uitlegPad: {
-          stappen: [{ titel: "Ei → rups → pop → vlinder", tekst: "Vlinder-cyclus heeft 4 fases. Tussen rups en vlinder = pop (cocon)." }],
-          woorden: [{ woord: "pop", uitleg: "Tussenfase in cocon. Rups verandert binnen tot vlinder." }],
-          theorie: "Vlinder-cyclus: ei → rups → pop → vlinder. Pop is wonderbaarlijke verandering.",
-          voorbeelden: [{ type: "stap", tekst: "Vlinder legt ei → komt rups uit → eet veel → maakt cocon (pop) → vlinder uit." }],
-          basiskennis: [{ onderwerp: "Cocon", uitleg: "Pop hangt vaak aan blaadje of takje, beschermd in cocon." }],
-          niveaus: { basis: "pop.", simpeler: "Volgorde: ei → rups → POP → vlinder. Pop is tussenfase in cocon.", nogSimpeler: "Pop" },
+          stappen: [{ titel: "Ei → rups → pop → vlinder", tekst: "Een vlinder groeit op in 4 stadia. Tussen rups en vlinder zit het popstadium." }],
+          woorden: [{ woord: "pop", uitleg: "Het stadium waarin de rups stil hangt en van binnen verandert in een vlinder." }],
+          theorie: "Vlinder: ei → rups → pop → vlinder. In de pop verandert de rups helemaal van vorm.",
+          voorbeelden: [{ type: "stap", tekst: "Vlinder legt een ei → er komt een rups uit → de rups eet veel → hij verpopt zich → er komt een vlinder uit de pop." }],
+          basiskennis: [{ onderwerp: "Pop of cocon?", uitleg: "Bij de meeste vlinders hangt de pop vrij aan een takje of blad. Alleen sommige nachtvlinders, zoals de zijderups, spinnen er een cocon van draad omheen." }],
+          niveaus: { basis: "pop.", simpeler: "Volgorde: ei → rups → POP → vlinder. In de pop verandert de rups in een vlinder.", nogSimpeler: "Pop" },
         },
       },
       {
@@ -504,17 +504,17 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "Wat is een **planteneter**?",
-        options: ["herbivoor", "carnivoor", "omnivoor", "producent"],
+        q: "Welk dier is een **planteneter**?",
+        options: ["konijn", "vos", "uil", "haai"],
         answer: 0,
-        wrongHints: [null, "Carnivoor = vleeseter.", "Omnivoor = alles.", "Producent = plant."],
+        wrongHints: [null, "Een vos eet vooral andere dieren, zoals konijnen en muizen.", "Een uil vangt muizen: dat is een vleeseter.", "Een haai eet vissen: dat is een vleeseter."],
         uitlegPad: {
-          stappen: [{ titel: "Herbi = plant", tekst: "Herbivoor = planteneter. Herba = Latijn voor plant." }],
-          woorden: [{ woord: "herbivoor", uitleg: "Eet alleen planten. Voorbeelden: koe, konijn, schaap." }],
-          theorie: "3 soorten eters: herbivoor (planten), carnivoor (vlees), omnivoor (allebei).",
-          voorbeelden: [{ type: "tabel", tekst: "Herbi: koe, konijn, ree. Carni: vos, leeuw. Omni: mens, beer, varken." }],
-          basiskennis: [{ onderwerp: "Latijnse stammen", uitleg: "Herba=plant, carne=vlees, omni=alles." }],
-          niveaus: { basis: "herbivoor.", simpeler: "Planteneter = herbivoor. Carnivoor=vlees, omnivoor=alles.", nogSimpeler: "Herbivoor" },
+          stappen: [{ titel: "Wat eet het dier?", tekst: "Een planteneter eet alleen planten, zoals gras, blaadjes en wortels. Een konijn eet gras en groente." }],
+          woorden: [{ woord: "planteneter", uitleg: "Een dier dat alleen planten eet. Voorbeelden: koe, konijn, schaap." }],
+          theorie: "Er zijn planteneters (alleen planten), vleeseters (vlees) en alleseters (planten én vlees).",
+          voorbeelden: [{ type: "tabel", tekst: "Planteneter: koe, konijn, ree. Vleeseter: vos, uil, haai. Alleseter: mens, beer, varken." }],
+          basiskennis: [{ onderwerp: "Moeilijk woord, voor wie wil", uitleg: "Een planteneter heet ook wel herbivoor. Een vleeseter heet carnivoor, een alleseter omnivoor." }],
+          niveaus: { basis: "konijn.", simpeler: "Een konijn eet gras en groente: alleen planten.", nogSimpeler: "Konijn" },
         },
       },
       {
