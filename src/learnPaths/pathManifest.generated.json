@@ -71,7 +71,7 @@
     "stepCount": 4,
     "checkCount": 25,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "algebra-vergelijkingen-havo-vwo",
@@ -129,7 +129,7 @@
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "algoritmen-pseudocode-informatica",
@@ -216,7 +216,7 @@
     "stepCount": 15,
     "checkCount": 34,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "atmosfeer-klimaat-havo-vwo",
@@ -274,7 +274,7 @@
     "stepCount": 10,
     "checkCount": 35,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "balans-beco",
@@ -303,7 +303,7 @@
     "stepCount": 10,
     "checkCount": 35,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "basis-grammatica-engels-po",
@@ -361,7 +361,7 @@
     "stepCount": 6,
     "checkCount": 42,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "bedrijfseconomie-havo-vwo",
@@ -448,7 +448,7 @@
     "stepCount": 7,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "begrijpend-lezen-teksten-po",
@@ -476,7 +476,7 @@
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "bekende-boeken-literatuur-po",
@@ -505,7 +505,7 @@
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "bekende-nederlanders-po",
@@ -534,7 +534,7 @@
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "bekende-wetenschappers-po",
@@ -563,7 +563,7 @@
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "belasting-po",
@@ -620,7 +620,7 @@
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "betoog-beschouwing-havo-vwo",
@@ -665,7 +665,7 @@
     "stepCount": 4,
     "checkCount": 25,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "bevolking-migratie-aardrijkskunde",
@@ -694,7 +694,7 @@
     "stepCount": 6,
     "checkCount": 33,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "bewegingen-snelheid-natuurkunde",
@@ -777,7 +777,7 @@
     "stepCount": 15,
     "checkCount": 33,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "breuken-po",
@@ -806,7 +806,7 @@
     "stepCount": 7,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "brief-email-lezen-po",
@@ -864,7 +864,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "cel-biologie",
@@ -922,7 +922,7 @@
     "stepCount": 9,
     "checkCount": 35,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "cijferend-rekenen",
@@ -951,7 +951,7 @@
     "stepCount": 8,
     "checkCount": 41,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "cito-strategieen-groep8",
@@ -980,7 +980,7 @@
     "stepCount": 7,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "comparatives-engels",
@@ -1008,7 +1008,7 @@
     "stepCount": 6,
     "checkCount": 35,
     "chapterCount": 6,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "conclusies-trekken-po",
@@ -1094,7 +1094,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "coordinatenstelsel",
@@ -1122,7 +1122,7 @@
     "stepCount": 14,
     "checkCount": 34,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "crypto-blockchain-geld-beco",
@@ -1165,7 +1165,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "cse-leesvaardigheid-nederlands",
@@ -1218,7 +1218,7 @@
     "stepCount": 6,
     "checkCount": 37,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "cse-schrijfvaardigheid-nederlands",
@@ -1371,7 +1371,7 @@
     "stepCount": 4,
     "checkCount": 26,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "delen-po",
@@ -1396,7 +1396,7 @@
     "stepCount": 7,
     "checkCount": 41,
     "chapterCount": 7,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "dichten-poezie-rijmen-po",
@@ -1425,7 +1425,7 @@
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "dienstregeling-roosters-po",
@@ -1441,7 +1441,7 @@
     "stepCount": 4,
     "checkCount": 25,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "dieren-seizoenen-natuur",
@@ -1470,7 +1470,7 @@
     "stepCount": 11,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "dierenklassen-po",
@@ -1499,7 +1499,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "differentialen-havo-vwo",
@@ -1556,7 +1556,7 @@
     "stepCount": 14,
     "checkCount": 34,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "digitale-geletterdheid-po",
@@ -1585,7 +1585,7 @@
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "doorstroomtoets-rekenen-g8",
@@ -1614,7 +1614,7 @@
     "stepCount": 6,
     "checkCount": 264,
     "chapterCount": 4,
-    "estimatedMinutes": 120
+    "estimatedMinutes": 20
   },
   {
     "id": "doorstroomtoets-studievaardigheden-g8",
@@ -1643,7 +1643,7 @@
     "stepCount": 10,
     "checkCount": 330,
     "chapterCount": 10,
-    "estimatedMinutes": 150
+    "estimatedMinutes": 30
   },
   {
     "id": "doorstroomtoets-taal-g8",
@@ -1671,7 +1671,7 @@
     "stepCount": 5,
     "checkCount": 237,
     "chapterCount": 4,
-    "estimatedMinutes": 105
+    "estimatedMinutes": 15
   },
   {
     "id": "duits-cse-havo-vwo",
@@ -1729,7 +1729,7 @@
     "stepCount": 6,
     "checkCount": 33,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "ecosystemen-havo-vwo",
@@ -1787,7 +1787,7 @@
     "stepCount": 4,
     "checkCount": 25,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "elektriciteit-natuurkunde",
@@ -1874,7 +1874,7 @@
     "stepCount": 4,
     "checkCount": 24,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "energie-hulpbronnen-havo-vwo",
@@ -1932,7 +1932,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "engels-cse-havo-vwo",
@@ -2101,7 +2101,7 @@
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "examen-biologie-2022-t1",
@@ -3256,7 +3256,7 @@
     "stepCount": 14,
     "checkCount": 34,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "feit-mening-po",
@@ -3272,7 +3272,7 @@
     "stepCount": 4,
     "checkCount": 26,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "feiten-details-opzoeken-po",
@@ -3386,7 +3386,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "folder-bon-advertentie-po",
@@ -3402,7 +3402,7 @@
     "stepCount": 4,
     "checkCount": 25,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "fotosynthese-biologie",
@@ -3517,7 +3517,7 @@
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "gemiddelden-statistiek-po",
@@ -3543,7 +3543,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "genetica-erfelijkheid-biologie",
@@ -3572,7 +3572,7 @@
     "stepCount": 9,
     "checkCount": 35,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "genetica-havo-vwo",
@@ -3684,7 +3684,7 @@
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "globalisering-havo-vwo",
@@ -3767,7 +3767,7 @@
     "stepCount": 11,
     "checkCount": 34,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "goniometrie-havo-vwo",
@@ -3854,7 +3854,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "grieks-vwo",
@@ -4076,7 +4076,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "informatica-havo-vwo",
@@ -4150,7 +4150,7 @@
     "stepCount": 4,
     "checkCount": 25,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "integralen-havo-vwo",
@@ -4205,7 +4205,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "kaartlezen-po",
@@ -4234,7 +4234,7 @@
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "kalender-rekenen-po",
@@ -4263,7 +4263,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "kansrekening",
@@ -4350,7 +4350,7 @@
     "stepCount": 4,
     "checkCount": 25,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "kleur-licht-compositie-kunst",
@@ -4437,7 +4437,7 @@
     "stepCount": 10,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "klokkijken",
@@ -4466,7 +4466,7 @@
     "stepCount": 8,
     "checkCount": 45,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "kolonie-indonesie",
@@ -4520,7 +4520,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "korte-teksten-snappen-g4",
@@ -4574,7 +4574,7 @@
     "stepCount": 4,
     "checkCount": 24,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "krachten-natuurkunde",
@@ -4603,7 +4603,7 @@
     "stepCount": 10,
     "checkCount": 34,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "kritisch-denken-po",
@@ -4632,7 +4632,7 @@
     "stepCount": 4,
     "checkCount": 39,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "kunst-havo-vwo",
@@ -4710,7 +4710,7 @@
     "stepCount": 13,
     "checkCount": 32,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "lange-toets-teksten-g8-po",
@@ -4739,7 +4739,7 @@
     "stepCount": 4,
     "checkCount": 26,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "latijn-vwo",
@@ -4784,7 +4784,7 @@
     "stepCount": 4,
     "checkCount": 26,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "lettergrepen-klemtoon-po",
@@ -4800,7 +4800,7 @@
     "stepCount": 4,
     "checkCount": 26,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "letters-klanken-nieuwkomers",
@@ -4852,7 +4852,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "licht-geluid-natuurkunde",
@@ -4905,7 +4905,7 @@
     "stepCount": 17,
     "checkCount": 34,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "literatuurgeschiedenis",
@@ -4934,7 +4934,7 @@
     "stepCount": 14,
     "checkCount": 33,
     "chapterCount": 5,
-    "estimatedMinutes": 30
+    "estimatedMinutes": 25
   },
   {
     "id": "logaritmen",
@@ -4963,7 +4963,7 @@
     "stepCount": 14,
     "checkCount": 34,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "logaritmen-exponentieel-havo-vwo",
@@ -5079,7 +5079,7 @@
     "stepCount": 13,
     "checkCount": 35,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "marktvormen-havo-vwo",
@@ -5137,7 +5137,7 @@
     "stepCount": 8,
     "checkCount": 42,
     "chapterCount": 7,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "maten-omtrek-oppervlakte-po",
@@ -5253,7 +5253,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "mens-biologie-vmbo",
@@ -5356,7 +5356,7 @@
     "stepCount": 4,
     "checkCount": 26,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "middeleeuwen-geschiedenis",
@@ -5459,7 +5459,7 @@
     "stepCount": 9,
     "checkCount": 34,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "nederland-water-vo",
@@ -5546,7 +5546,7 @@
     "stepCount": 5,
     "checkCount": 25,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "nederlandse-staat-maatschappijleer",
@@ -5575,7 +5575,7 @@
     "stepCount": 11,
     "checkCount": 34,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "negatieve-getallen",
@@ -5598,7 +5598,7 @@
     "stepCount": 10,
     "checkCount": 34,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 10
   },
   {
     "id": "negatieve-getallen-po",
@@ -5624,7 +5624,7 @@
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 10
   },
   {
     "id": "netwerken-internet-informatica",
@@ -5727,7 +5727,7 @@
     "stepCount": 4,
     "checkCount": 26,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "onderwijs-niveaus-vmbo-havo-vwo",
@@ -5756,7 +5756,7 @@
     "stepCount": 5,
     "checkCount": 26,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "onregelmatige-werkwoorden-engels",
@@ -5814,7 +5814,7 @@
     "stepCount": 9,
     "checkCount": 34,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "ontdekkingsreizen-po",
@@ -5843,7 +5843,7 @@
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "opdrachtwoorden-nieuwkomers",
@@ -5979,7 +5979,7 @@
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "parabolen",
@@ -6032,7 +6032,7 @@
     "stepCount": 10,
     "checkCount": 34,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "past-tenses-engels",
@@ -6061,7 +6061,7 @@
     "stepCount": 10,
     "checkCount": 34,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "periodiek",
@@ -6090,7 +6090,7 @@
     "stepCount": 14,
     "checkCount": 35,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "pincode-belasting",
@@ -6119,7 +6119,7 @@
     "stepCount": 7,
     "checkCount": 42,
     "chapterCount": 5,
-    "estimatedMinutes": 30
+    "estimatedMinutes": 25
   },
   {
     "id": "pincode-buitenland-eu",
@@ -6148,7 +6148,7 @@
     "stepCount": 7,
     "checkCount": 42,
     "chapterCount": 4,
-    "estimatedMinutes": 30
+    "estimatedMinutes": 25
   },
   {
     "id": "pincode-geld-sparen-lenen",
@@ -6235,7 +6235,7 @@
     "stepCount": 9,
     "checkCount": 54,
     "chapterCount": 4,
-    "estimatedMinutes": 45
+    "estimatedMinutes": 30
   },
   {
     "id": "pincode-ontwikkelingslanden",
@@ -6264,7 +6264,7 @@
     "stepCount": 7,
     "checkCount": 42,
     "chapterCount": 4,
-    "estimatedMinutes": 30
+    "estimatedMinutes": 25
   },
   {
     "id": "pincode-overheid",
@@ -6367,7 +6367,7 @@
     "stepCount": 4,
     "checkCount": 25,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "politiek-democratie-po",
@@ -6396,7 +6396,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "present-tenses-engels",
@@ -6449,7 +6449,7 @@
     "stepCount": 13,
     "checkCount": 25,
     "chapterCount": 6,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "procenten-po",
@@ -6475,7 +6475,7 @@
     "stepCount": 7,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "programmeren-basis-informatica",
@@ -6533,7 +6533,7 @@
     "stepCount": 4,
     "checkCount": 25,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "pythagoras",
@@ -6672,7 +6672,7 @@
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "redactiesommen-pad",
@@ -6698,7 +6698,7 @@
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 10
   },
   {
     "id": "rekenen-met-letters",
@@ -6722,7 +6722,7 @@
     "stepCount": 15,
     "checkCount": 25,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "rekenen-tot-100-nieuwkomers",
@@ -6897,7 +6897,7 @@
     "stepCount": 4,
     "checkCount": 26,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "ruimtemeetkunde",
@@ -6954,7 +6954,7 @@
     "stepCount": 4,
     "checkCount": 24,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "samenstellingen-tussenletters-po",
@@ -6970,7 +6970,7 @@
     "stepCount": 4,
     "checkCount": 26,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "samenvatten-hoofdgedachte-po",
@@ -6997,7 +6997,7 @@
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "schaal-kaart-rekenen-po",
@@ -7013,7 +7013,7 @@
     "stepCount": 4,
     "checkCount": 26,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "schatten-afronden",
@@ -7038,7 +7038,7 @@
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 10
   },
   {
     "id": "schema-tekst-combi-po",
@@ -7093,7 +7093,7 @@
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "schrijfvaardigheid",
@@ -7167,7 +7167,7 @@
     "stepCount": 4,
     "checkCount": 25,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "sociale-zekerheid-nl",
@@ -7212,7 +7212,7 @@
     "stepCount": 4,
     "checkCount": 28,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "spelling",
@@ -7296,7 +7296,7 @@
     "stepCount": 9,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "spelling-overige-po",
@@ -7325,7 +7325,7 @@
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "spreekwoorden-uitdrukkingen-po",
@@ -7353,7 +7353,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "staatsinrichting-1848",
@@ -7406,7 +7406,7 @@
     "stepCount": 12,
     "checkCount": 25,
     "chapterCount": 6,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "statistiek-havo-vwo",
@@ -7602,7 +7602,7 @@
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "taal-leren-lezen-g3",
@@ -7684,7 +7684,7 @@
     "stepCount": 7,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "tachtigjarige-oorlog-geschiedenis",
@@ -7737,7 +7737,7 @@
     "stepCount": 7,
     "checkCount": 41,
     "chapterCount": 7,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "tekstanalyse",
@@ -7766,7 +7766,7 @@
     "stepCount": 13,
     "checkCount": 25,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "tekstdoel-schrijversdoel-po",
@@ -7911,7 +7911,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "tijdvakken-geschiedenis",
@@ -7969,7 +7969,7 @@
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "toestand-stoffen-po",
@@ -7998,7 +7998,7 @@
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "topografie-europa-landen-po",
@@ -8065,7 +8065,7 @@
     "stepCount": 9,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "topografie-nederland-provincies-po",
@@ -8113,7 +8113,7 @@
     "stepCount": 4,
     "checkCount": 28,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "trillingen-golven-havo-vwo",
@@ -8305,7 +8305,7 @@
     "stepCount": 10,
     "checkCount": 25,
     "chapterCount": 5,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "verhoudingen-po",
@@ -8331,7 +8331,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "verlichting-revoluties-havo-vwo",
@@ -8405,7 +8405,7 @@
     "stepCount": 4,
     "checkCount": 25,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "vlakke-figuren",
@@ -8461,7 +8461,7 @@
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 3,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 10
   },
   {
     "id": "volgorde-bewerkingen",
@@ -8490,7 +8490,7 @@
     "stepCount": 7,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "voortplanting-hormonen-biologie",
@@ -8635,7 +8635,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "waterkringloop-po",
@@ -8664,7 +8664,7 @@
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "weersvoorspelling-po",
@@ -8693,7 +8693,7 @@
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "wereld-globalisering-havo-vwo",
@@ -8751,7 +8751,7 @@
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "wereldoorlog1-geschiedenis",
@@ -8889,7 +8889,7 @@
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 10
   },
   {
     "id": "werkwoordsspelling-dt",
@@ -8918,7 +8918,7 @@
     "stepCount": 8,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "werkwoordsvervoeging",
@@ -9032,7 +9032,7 @@
     "stepCount": 3,
     "checkCount": 26,
     "chapterCount": 3,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "wiskunde-d-vwo",
@@ -9222,7 +9222,7 @@
     "stepCount": 8,
     "checkCount": 45,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "woordenschat-po",
@@ -9247,7 +9247,7 @@
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "woordsoorten-nederlands",
@@ -9302,7 +9302,7 @@
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "zenuwstelsel-hormonen-havo-vwo",
@@ -9376,7 +9376,7 @@
     "stepCount": 4,
     "checkCount": 28,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "zuren-basen-havo-vwo",
