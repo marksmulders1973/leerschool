@@ -67,7 +67,7 @@ function organenSvg() {
 <!-- Lever -->
 <rect x="50" y="115" width="60" height="35" rx="5" fill="${COLORS.liver}" opacity="0.7"/>
 <text x="80" y="135" text-anchor="middle" fill="#0e1014" font-size="9" font-family="Arial" font-weight="bold">lever</text>
-<text x="80" y="158" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">filtert bloed</text>
+<text x="80" y="158" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">ruimt gif op</text>
 <!-- Maag -->
 <ellipse cx="180" cy="130" rx="30" ry="18" fill="${COLORS.curve}" opacity="0.6"/>
 <text x="180" y="135" text-anchor="middle" fill="#0e1014" font-size="9" font-family="Arial" font-weight="bold">maag</text>
@@ -76,7 +76,7 @@ function organenSvg() {
 <ellipse cx="270" cy="125" rx="12" ry="18" fill="${COLORS.blood}" opacity="0.7"/>
 <text x="270" y="130" text-anchor="middle" fill="#0e1014" font-size="9" font-family="Arial" font-weight="bold">nier</text>
 <text x="270" y="158" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">maakt urine</text>
-<text x="160" y="200" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">Allemaal in de torso (romp)</text>
+<text x="160" y="200" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">Hersenen in je hoofd, de rest in je romp</text>
 </svg>`;
 }
 
@@ -105,7 +105,7 @@ const steps = [
           ],
           theorie: "Toets-truc bot-aantallen: 50 of 100 = te weinig (handen alleen al hebben meer). 1000 = te veel. **Tussen 200 en 300 = correct**. Bij 'meer dan 200' = ja.",
           voorbeelden: [
-            { type: "stap", tekst: "Schedel: lijkt 1 bot, maar bestaat eigenlijk uit 22 botten die samengegroeid zijn." },
+            { type: "stap", tekst: "Schedel: lijkt 1 bot, maar bestaat eigenlijk uit 22 botten. Bijna allemaal zijn ze samengegroeid — alleen je onderkaak kan bewegen." },
             { type: "stap", tekst: "Grootste bot = dijbeen (~46 cm bij volwassene). Kleinste = stijgbeugel in je oor (3 mm)." },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Onthoud 206. Of in elk geval: 'meer dan 200, minder dan 300'." }],
@@ -125,10 +125,10 @@ const steps = [
           stappen: [
             { titel: "Dijbeen = grootste", tekst: "Het **dijbeen** (de bovenkant van je been, tussen heup en knie) is het grootste, langste en sterkste bot in je lichaam — ongeveer **46 cm** bij een volwassene." },
             { titel: "Waarom dijbeen zo groot?", tekst: "Het dijbeen draagt al je gewicht bij staan, lopen, springen. Hoe meer kracht een bot moet dragen, hoe groter en sterker het is. Er is heel veel kracht nodig om een dijbeen te breken." },
-            { titel: "Geen schedel / wervelkolom", tekst: "Schedel = 22 botten samen (lijkt 1 bot maar is gefuseerd). Wervelkolom = 33 losse wervels op een kolom. Beide zijn dus geen 'één bot'." },
+            { titel: "Geen schedel / wervelkolom", tekst: "Schedel = 22 botten (de meeste zijn aan elkaar vastgegroeid). Wervelkolom = 33 wervels boven elkaar. Beide zijn dus geen 'één bot'." },
           ],
           woorden: [{ woord: "dijbeen", uitleg: "Bot tussen heup en knie — grootste van je lichaam." }],
-          theorie: "Toets-truc bot-grootte: dijbeen > scheenbeen > kuitbeen > opperarmbot. Allemaal lange botten in de extremiteiten.",
+          theorie: "Toets-truc bot-grootte: dijbeen > scheenbeen > kuitbeen > opperarmbot. Allemaal lange botten in je armen en benen.",
           voorbeelden: [
             { type: "stap", tekst: "Bij een volwassene 1,80 m lang is het dijbeen ongeveer 46 cm = een kwart van je hele lengte!" },
             { type: "stap", tekst: "Tegenover dijbeen: stijgbeugel in oor = 3 mm = kleinste bot van het lichaam." },
@@ -204,7 +204,7 @@ const steps = [
   {
     title: "Spieren en bloed",
     explanation:
-      "**Spieren** zorgen dat je kunt **bewegen**. Ze zitten vast aan botten en kunnen samentrekken *(korter worden)* of ontspannen.\n\n**Hoeveel spieren?**\nMeer dan **600** in je lichaam!\n\n**3 soorten spieren**:\n1. **Skeletspieren** — om te bewegen *(armen, benen, gezicht)*. Je kunt ze bewust besturen.\n2. **Hartspier** — alleen in het hart. Werkt automatisch.\n3. **Gladde spieren** — in maag, darmen, bloedvaten. Werken automatisch.\n\n**Voorbeelden van bekende spieren**:\n• **Biceps** — bovenarm, voorkant.\n• **Triceps** — bovenarm, achterkant.\n• **Buikspieren** *(rechte buikspier = 'sixpack')*.\n• **Bilspieren** — grootste spier van je lichaam.\n• **Kuitspier** — achterkant onderbeen.\n• **Kaakspier (masseter)** — de sterkste spier in verhouding tot zijn grootte.\n\n**Bloed — wat zit erin?**\n• **Rode bloedcellen** — vervoeren zuurstof.\n• **Witte bloedcellen** — vechten tegen ziektes.\n• **Plaatjes** — zorgen voor stolling *(korst bij wondjes)*.\n• **Plasma** — vloeistof, vervoert voedingsstoffen.\n\n**Bloedsomloop**:\n1. Hart pompt bloed door je lichaam via **slagaders**.\n2. Bloed brengt zuurstof + voeding naar alle cellen.\n3. Op terugweg pakt bloed afval (zoals CO₂) op.\n4. Bloed gaat terug naar hart via **aders**.\n5. Bloed gaat naar longen om CO₂ uit te ademen + nieuwe zuurstof op te halen.\n\n**Hart-feitjes**:\n• Klopt ongeveer **70 keer per minuut** *(in rust)*.\n• Pompt **5 liter bloed per minuut**.\n• Heeft 4 kamers: 2 boezems + 2 kamers.\n\n**toetsvraag**: 'Wat doet je hart?' → Bloed pompen door je lichaam.",
+      "**Spieren** zorgen dat je kunt **bewegen**. Ze zitten vast aan botten en kunnen samentrekken *(korter worden)* of ontspannen.\n\n**Hoeveel spieren?**\nMeer dan **600** in je lichaam!\n\n**3 soorten spieren**:\n1. **Skeletspieren** — om te bewegen *(armen, benen, gezicht)*. Je kunt ze bewust besturen.\n2. **Hartspier** — alleen in het hart. Werkt automatisch.\n3. **Gladde spieren** — in maag, darmen, bloedvaten. Werken automatisch.\n\n**Voorbeelden van bekende spieren**:\n• **Biceps** — bovenarm, voorkant.\n• **Triceps** — bovenarm, achterkant.\n• **Buikspieren** *(rechte buikspier = 'sixpack')*.\n• **Bilspieren** — grootste spier van je lichaam.\n• **Kuitspier** — achterkant onderbeen.\n• **Kaakspier (masseter)** — de sterkste spier in verhouding tot zijn grootte.\n\n**Bloed — wat zit erin?**\n• **Rode bloedcellen** — vervoeren zuurstof.\n• **Witte bloedcellen** — vechten tegen ziektes.\n• **Plaatjes** — zorgen voor stolling *(korst bij wondjes)*.\n• **Plasma** — vloeistof, vervoert voedingsstoffen.\n\n**Bloedsomloop**:\n1. Hart pompt bloed door je lichaam via **slagaders**.\n2. Bloed brengt zuurstof + voeding naar alle cellen.\n3. Op terugweg pakt bloed afval (zoals CO₂) op.\n4. Bloed gaat terug naar hart via **aders**.\n5. Bloed gaat naar longen om CO₂ uit te ademen + nieuwe zuurstof op te halen.\n\n**Hart-feitjes**:\n• Klopt ongeveer **70 keer per minuut** *(in rust)*.\n• Pompt **5 liter bloed per minuut**.\n• Heeft 4 ruimtes: 2 boezems + 2 kamers.\n\n**toetsvraag**: 'Wat doet je hart?' → Bloed pompen door je lichaam.",
     checks: [
       {
         q: "Hoeveel spieren heeft een mens ongeveer?",
@@ -225,15 +225,15 @@ const steps = [
           ],
           woorden: [
             { woord: "hart", uitleg: "Spier die bloed pompt." },
-            { woord: "slagaders", uitleg: "Bloedvaten WEG van het hart, dragen zuurstofrijk bloed." },
-            { woord: "aders", uitleg: "Bloedvaten NAAR het hart, dragen zuurstofarm bloed terug." },
+            { woord: "slagaders", uitleg: "Bloedvaten die bloed WEG van het hart brengen (meestal zuurstofrijk bloed)." },
+            { woord: "aders", uitleg: "Bloedvaten die bloed NAAR het hart terugbrengen (meestal zuurstofarm bloed)." },
           ],
           theorie: "Toets-feit: hart-functie = **bloed pompen**. Niet ademen (longen), niet verteren (maag), niet denken (hersenen). Elk orgaan heeft 1 hoofdtaak — onthoud die.",
           voorbeelden: [
             { type: "stap", tekst: "5 liter bloed pompt het hart per minuut. In een dag = ~7000 liter — gelijk aan vullen van 35 badkuipen!" },
-            { type: "stap", tekst: "Hart heeft 4 kamers: 2 boezems (boven) + 2 kamers (onder). Linkerkant pompt naar lichaam, rechterkant naar longen." },
+            { type: "stap", tekst: "Hart heeft 4 ruimtes: 2 boezems (boven) + 2 kamers (onder). Linkerkant pompt naar lichaam, rechterkant naar longen." },
           ],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Hart = pomp. Longen = ademen. Maag = verteren. Hersenen = denken. Memoriseer dit ezelsbruggetje: H-L-M-H." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Hart = pomp. Longen = ademen. Maag = verteren. Hersenen = denken. Onthoud het rijtje: hart, longen, maag, hersenen." }],
           niveaus: {
             basis: "Hart pompt bloed door het lichaam.",
             simpeler: "Het hart is een spier-pomp. Bloed gaat rond, brengt zuurstof + voeding.",
@@ -260,7 +260,7 @@ const steps = [
   {
     title: "De organen — wat doet elk?",
     explanation:
-      "Organen zijn **delen van je lichaam** met een speciale taak.\n\n**De belangrijkste organen** *(uit je hoofd!)*:\n\n• **Hersenen** — denken, voelen, besturen. In je hoofd.\n• **Hart** — pompt bloed. In je borst, iets links.\n• **Longen** — ademen *(zuurstof in, CO₂ uit)*. In je borst.\n• **Maag** — verteert eten *(eerste stap)*. Boven in de buik.\n• **Darmen** — nemen voedingsstoffen op + maken poep. In de buik.\n• **Lever** — filtert bloed, maakt gal. Rechtsboven in buik.\n• **Nieren** — filteren het bloed en maken urine *(je hebt er 2)*. In de rug.\n• **Blaas** — slaat urine op. Onder in buik.\n• **Huid** — beschermt je hele lichaam. Grootste 'orgaan'.\n• **Ogen** — zien.\n• **Oren** — horen + evenwicht.\n• **Neus** — ruiken + ademen.\n• **Tong** — proeven + praten + slikken.\n\n**toetsvragen — kerntaak per orgaan**:\n*'Welk orgaan filtert bloed?'* → Lever (of nieren bij urine).\n*'Welk orgaan kneedt en verteert eten?'* → Maag.\n*'Welk orgaan pompt bloed?'* → Hart.\n*'Welk orgaan vat zuurstof op uit lucht?'* → Longen.\n\n**Zintuigen** *(5 stuks)*:\n• Zien — ogen.\n• Horen — oren.\n• Ruiken — neus.\n• Proeven — tong.\n• Voelen — huid.\n\n**Hoeveel organen?**\nNiet precies te zeggen — afhankelijk hoe je telt. Maar de **bovenstaande lijst** is wat je moet kennen voor de Doorstroomtoets.",
+      "Organen zijn **delen van je lichaam** met een speciale taak.\n\n**De belangrijkste organen** *(uit je hoofd!)*:\n\n• **Hersenen** — denken, voelen, besturen. In je hoofd.\n• **Hart** — pompt bloed. In je borst, iets links.\n• **Longen** — ademen *(zuurstof in, CO₂ uit)*. In je borst.\n• **Maag** — verteert eten *(eerste stap)*. Boven in de buik.\n• **Darmen** — nemen voedingsstoffen op + maken poep. In de buik.\n• **Lever** — ruimt gifstoffen uit je bloed op, maakt gal. Rechtsboven in buik.\n• **Nieren** — filteren het bloed en maken urine *(je hebt er 2)*. Achter in je buik, tegen je rug.\n• **Blaas** — slaat urine op. Onder in buik.\n• **Huid** — beschermt je hele lichaam. Grootste 'orgaan'.\n• **Ogen** — zien.\n• **Oren** — horen + evenwicht.\n• **Neus** — ruiken + ademen.\n• **Tong** — proeven + praten + slikken.\n\n**toetsvragen — kerntaak per orgaan**:\n*'Welk orgaan filtert bloed en maakt urine?'* → Nieren.\n*'Welk orgaan ruimt gifstoffen op en maakt gal?'* → Lever.\n*'Welk orgaan kneedt en verteert eten?'* → Maag.\n*'Welk orgaan pompt bloed?'* → Hart.\n*'Welk orgaan vat zuurstof op uit lucht?'* → Longen.\n\n**Zintuigen** *(5 stuks)*:\n• Zien — ogen.\n• Horen — oren.\n• Ruiken — neus.\n• Proeven — tong.\n• Voelen — huid.\n\n**Hoeveel organen?**\nNiet precies te zeggen — afhankelijk hoe je telt. Maar de **bovenstaande lijst** is wat je moet kennen voor de Doorstroomtoets.",
     svg: organenSvg(),
     checks: [
       {
@@ -349,7 +349,7 @@ const steps = [
   {
     title: "Hygiëne, slaap en bewegen",
     explanation:
-      "Naast eten zijn er andere dingen die belangrijk zijn voor **gezond blijven**.\n\n**Hygiëne — schoonhouden**:\n• **Handen wassen** vóór eten + na toilet + na buiten zijn. Met **zeep**, **20 seconden**. Hierdoor minder ziektes.\n• **Tanden poetsen** 2× per dag, 2 minuten lang. Voorkomt gaatjes.\n• **Douchen** of in bad — minimaal een paar keer per week.\n• **Schone kleren** — bacteriën gaan in vuile kleren groeien.\n• **Niezen in elleboog** — om druppeltjes niet rond te slingeren.\n\n**Slaap**:\n• Kinderen *(6-12 jr)*: **9-11 uur** per nacht.\n• Tieners: 8-10 uur.\n• Volwassenen: 7-9 uur.\n• Tijdens slaap **herstelt** het lichaam + verwerken hersenen wat je geleerd hebt.\n• **Te weinig slaap** = moe, niet goed kunnen leren, vaker ziek.\n\n**Sporten + bewegen**:\n• **Elke dag** minimaal 1 uur bewegen voor kinderen.\n• Voorbeelden: fietsen naar school, voetbal, dansen, zwemmen, springen.\n• Voordelen:\n  - Sterkere spieren + botten.\n  - Betere conditie.\n  - Beter slapen.\n  - Vrolijker gevoel *(geluksstofjes in de hersenen)*.\n• **Te lang stilzitten** = niet gezond.\n\n**Beeldscherm-tijd**:\n• Niet te veel TV / tablet / telefoon.\n• Vooral niet vlak voor slapengaan *(blauw licht houdt je wakker)*.\n• Ouders geven vaak een limiet — bv. 1-2 uur op een schooldag.\n\n**toetsvraag**: 'Waarom handen wassen?' → om bacteriën weg te krijgen en ziekte te voorkomen.",
+      "Naast eten zijn er andere dingen die belangrijk zijn voor **gezond blijven**.\n\n**Hygiëne — schoonhouden**:\n• **Handen wassen** vóór eten + na toilet + na buiten zijn. Met **zeep**, **20 seconden**. Hierdoor minder ziektes.\n• **Tanden poetsen** 2× per dag, 2 minuten lang. Voorkomt gaatjes.\n• **Douchen** of in bad — minimaal een paar keer per week.\n• **Schone kleren** — bacteriën gaan in vuile kleren groeien.\n• **Niezen in elleboog** — om druppeltjes niet rond te slingeren.\n\n**Slaap**:\n• Kinderen *(6-12 jr)*: **9-11 uur** per nacht.\n• Tieners: 8-10 uur.\n• Volwassenen: 7-9 uur.\n• Tijdens slaap **herstelt** het lichaam + verwerken hersenen wat je geleerd hebt.\n• **Te weinig slaap** = moe, niet goed kunnen leren, vaker ziek.\n\n**Sporten + bewegen**:\n• **Elke dag** minimaal 1 uur bewegen voor kinderen.\n• Voorbeelden: fietsen naar school, voetbal, dansen, zwemmen, springen.\n• Voordelen:\n  - Sterkere spieren + botten.\n  - Betere conditie.\n  - Beter slapen.\n  - Vrolijker gevoel *(geluksstofjes in de hersenen)*.\n• **Te lang stilzitten** = niet gezond.\n\n**Beeldscherm-tijd**:\n• Niet te veel TV / tablet / telefoon.\n• Vooral niet vlak voor slapengaan *(blauw licht houdt je wakker)*.\n• Ouders of verzorgers geven vaak een limiet — bv. 1-2 uur op een schooldag.\n\n**toetsvraag**: 'Waarom handen wassen?' → om bacteriën weg te krijgen en ziekte te voorkomen.",
     checks: [
       {
         q: "Hoe lang moet je je handen **minstens** wassen (met zeep)?",
@@ -404,9 +404,9 @@ const steps = [
       },
       {
         q: "Hoeveel belangrijke **soorten bloedcellen** zijn er?",
-        options: ["3 (rood, wit, plaatjes)", "1 (alleen rood)", "5", "10"],
+        options: ["3", "1", "5", "10"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te veel — 3 hoofdsoorten.", "Veel te veel."],
+        wrongHints: [null, "Te weinig — bloed is meer dan alleen rode cellen.", "Te veel.", "Veel te veel."],
         uitlegPad: {
           stappen: [
             { titel: "3 hoofdsoorten", tekst: "Rood: zuurstof vervoeren. Wit: bacteriën doden (afweer). Plaatjes: stolling bij wondjes (korst maken)." },
@@ -440,10 +440,10 @@ const steps = [
       { q: "Hoeveel **botten** heeft een volwassen mens ongeveer?", options: ["206","100","500","1.000"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Veel te veel."] },
       { q: "Welke voeding is goed voor **botten**?", options: ["Melk en kaas", "Snoep", "Cola", "Chips"], answer: 0, wrongHints: [null, "Niet voor botten.", "Niet.", "Niet."] },
       { q: "Hoeveel **uur slaap** heeft een 10-jarige nodig?", options: ["9-11 uur","4-5 uur","12-14 uur","6 uur"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel (baby).", "Te weinig."] },
-      { q: "Wat heet **diabetes**?", options: ["Suikerziekte","Hartziekte","Botbreuk","Verkoudheid"], answer: 0, wrongHints: [null, "Hartziekte heeft eigen naam (bv. infarct).", "Botbreuk = fractuur, geen ziekte.", "Verkoudheid komt door een virus, geen suikerprobleem."] },
+      { q: "Hoe heet **diabetes** in gewone woorden?", options: ["Suikerziekte","Hartziekte","Botbreuk","Verkoudheid"], answer: 0, wrongHints: [null, "Hartziekte heeft eigen naam (bv. infarct).", "Botbreuk = fractuur, geen ziekte.", "Verkoudheid komt door een virus, geen suikerprobleem."] },
       { q: "Hoeveel **zintuigen** noemen we meestal?", options: ["5", "2", "3", "10"], answer: 0, wrongHints: [null, "Te weinig.", "Te weinig.", "Te veel."] },
       { q: "Welke spier in je lichaam **werkt continu**?", options: ["Hartspier","Beenspier","Armspier","Geen enkele spier"], answer: 0, wrongHints: [null, "Beenspier rust 's nachts als je slaapt.", "Armspier rust 's nachts als je slaapt.", "Eén spier rust nooit — denk: wat moet 24/7 doorgaan?"] },
-      { q: "Wat is **transpireren** voor?", options: ["Lichaam koelen", "Warm worden", "Vet verbranden", "Spieren bouwen"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Zweten verbrandt geen vet.", "Niet primair."] },
+      { q: "Waarvoor dient **zweten** (transpireren)?", options: ["Lichaam koelen", "Warm worden", "Vet verbranden", "Spieren bouwen"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Zweten verbrandt geen vet.", "Zweten bouwt geen spieren."] },
       { q: "Wat doe je bij een **wond** met bloeding?", options: ["Schoonspoelen + verband","Negeren","Schreeuwen","Likken"], answer: 0, wrongHints: [null, "Niet.", "Niet primair.", "Niet."] },
       { q: "Welke **vitamine** krijg je van de zon?", options: ["D","C","A","B"], answer: 0, wrongHints: [null, "Fruit.", "Wortels.", "Volkoren."] },
       { q: "Wat doen **witte bloedcellen**?", options: ["Afweer tegen ziekte", "Zuurstof transporteren", "Stollen", "Voedsel verteren"], answer: 0, wrongHints: [null, "Dat zijn rode.", "Plaatjes.", "Dat doen maag en darmen."] },

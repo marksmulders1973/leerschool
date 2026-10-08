@@ -66,23 +66,23 @@ const steps = [
   {
     title: "De 6 dierenklassen",
     explanation:
-      "Dieren worden in **groepen** ingedeeld op basis van hun **lichaam + gedrag**.\n\n**De 6 belangrijkste klassen** *(uit je hoofd!)*:\n\n1. **Zoogdieren** *(zogen jongen met melk, haren/vacht)*\n   • Hond, kat, koe, paard, mens, walvis, dolfijn, leeuw, olifant.\n\n2. **Vogels** *(veren, eieren, snavel, meestal vliegen)*\n   • Mus, kip, eend, adelaar, pinguïn, struisvogel.\n\n3. **Vissen** *(schubben, kieuwen, zwemmen in water)*\n   • Goudvis, haai, zalm, makreel, paling.\n\n4. **Reptielen** *(droge schubben, koudbloedig, eieren)*\n   • Slang, hagedis, krokodil, schildpad.\n\n5. **Amfibieën** *(vochtige huid, jongen in water, volwassen op land)*\n   • Kikker, pad, salamander.\n\n6. **Insecten** *(6 poten, 3 lichaamsdelen, vaak vleugels)*\n   • Bij, vlieg, mier, kever, vlinder.\n\n**Belangrijke verschillen**:\n• **Warmbloedig** *(zoogdieren + vogels)* → houden eigen lichaamstemperatuur.\n• **Koudbloedig** *(vissen, reptielen, amfibieën, insecten)* → lichaamstemperatuur = omgevingstemperatuur.\n\n**Toets-strikvraag**:\n*'Een vleermuis vliegt — is het een vogel?'*\n→ **Nee!** Vleermuizen zijn **zoogdieren** *(haren, baren levende jongen, zogen met melk)*. Vliegen maakt het niet automatisch een vogel.\n\n*'Een walvis leeft in zee — is het een vis?'*\n→ **Nee!** Walvissen zijn **zoogdieren** *(ademen lucht, baren levende jongen, zogen met melk)*.\n\n*'Een pinguïn zwemt — is het een vis?'*\n→ **Nee!** Pinguïns zijn **vogels** *(veren, eieren)* die niet kunnen vliegen.",
+      "Dieren worden in **groepen** ingedeeld op basis van hun **lichaam + gedrag**.\n\n**De 6 belangrijkste klassen** *(uit je hoofd!)*:\n\n1. **Zoogdieren** *(zogen jongen met melk, haren/vacht)*\n   • Hond, kat, koe, paard, mens, walvis, dolfijn, leeuw, olifant.\n\n2. **Vogels** *(veren, eieren, snavel, meestal vliegen)*\n   • Mus, kip, eend, adelaar, pinguïn, struisvogel.\n\n3. **Vissen** *(schubben, kieuwen, zwemmen in water)*\n   • Goudvis, haai, zalm, makreel, paling.\n\n4. **Reptielen** *(droge schubben, koudbloedig, eieren)*\n   • Slang, hagedis, krokodil, schildpad.\n\n5. **Amfibieën** *(vochtige huid, jongen in water, volwassen op land)*\n   • Kikker, pad, salamander.\n\n6. **Insecten** *(6 poten, 3 lichaamsdelen, vaak vleugels)*\n   • Bij, vlieg, mier, kever, vlinder.\n\n**Belangrijke verschillen**:\n• **Warmbloedig** *(zoogdieren + vogels)* → houden eigen lichaamstemperatuur.\n• **Koudbloedig** *(vissen, reptielen, amfibieën, insecten)* → lichaamstemperatuur volgt de omgeving (in de zon warmen ze op).\n\n**Toets-strikvraag**:\n*'Een vleermuis vliegt — is het een vogel?'*\n→ **Nee!** Vleermuizen zijn **zoogdieren** *(haren, baren levende jongen, zogen met melk)*. Vliegen maakt het niet automatisch een vogel.\n\n*'Een walvis leeft in zee — is het een vis?'*\n→ **Nee!** Walvissen zijn **zoogdieren** *(ademen lucht, baren levende jongen, zogen met melk)*.\n\n*'Een pinguïn zwemt — is het een vis?'*\n→ **Nee!** Pinguïns zijn **vogels** *(veren, eieren)* die niet kunnen vliegen.",
     svg: dierenklassenSvg(),
     checks: [
       {
         q: "Een **vleermuis** is een ... ?",
         options: ["Zoogdier", "Vogel", "Reptiel", "Insect"],
         answer: 0,
-        wrongHints: [null, "Vliegt, maar geen vogel — geen veren.", "Heeft geen schubben.", "Te groot."],
+        wrongHints: [null, "Vliegt, maar geen vogel — geen veren.", "Heeft geen schubben.", "Tel de poten: een insect heeft er 6."],
         uitlegPad: {
           stappen: [
             { titel: "Vliegt ≠ vogel", tekst: "Veel mensen denken: 'het vliegt, dus het is een vogel'. **Niet waar!** De groep waarbij een dier hoort, hangt niet af van wat het kan (vliegen/zwemmen), maar van **lichaams-eigenschappen**." },
             { titel: "Kenmerken van een vleermuis", tekst: "Een vleermuis heeft:\n• **Haren / vacht** (geen veren!)\n• **Baart levende jongen** (geen eieren!)\n• **Zoogt jongen met melk** (typische zoogdier-eigenschap!)\n→ Dat zijn allemaal zoogdier-kenmerken." },
-            { titel: "Het 'wapen' van een vleermuis", tekst: "Vleermuizen hebben **gewrichten in hun vinger** waaraan een dunne huid zit — een vleugel-huid. Geen veren. De vleugel is dus een soort uitgestrekte hand. Echte vogels hebben veren-vleugels." },
+            { titel: "Het 'wapen' van een vleermuis", tekst: "Vleermuizen hebben **heel lange vingers** met een dunne huid ertussen — een vleugel-huid. Geen veren. De vleugel is dus een soort uitgestrekte hand. Echte vogels hebben veren-vleugels." },
           ],
           woorden: [
             { woord: "zoogdier", uitleg: "Dier dat jongen met melk zoogt + haren heeft." },
-            { woord: "vleermuis", uitleg: "Enig zoogdier dat ECHT kan vliegen (eekhoorns zweven alleen)." },
+            { woord: "vleermuis", uitleg: "Enig zoogdier dat ECHT kan vliegen (vliegende eekhoorns kunnen alleen zweven)." },
           ],
           theorie: "Toets-strikvraag: 'Vliegt het + heeft het veren?' = vogel. 'Vliegt het + heeft het haar + melk?' = zoogdier (vleermuis). 'Vliegt het + heeft het 6 poten?' = insect.",
           voorbeelden: [
@@ -124,7 +124,7 @@ const steps = [
         wrongHints: [null, "Honden zijn zoogdieren — warmbloedig.", "Mussen zijn vogels — warmbloedig.", "Walvissen zijn zoogdieren — warmbloedig."],
         uitlegPad: {
           stappen: [
-            { titel: "Wat is koudbloedig?", tekst: "**Koudbloedig** = lichaamstemperatuur = omgevingstemperatuur. Als het buiten koud is, koelt het dier af. Als het warm is, warmt het op." },
+            { titel: "Wat is koudbloedig?", tekst: "**Koudbloedig** = lichaamstemperatuur volgt de omgeving. Als het buiten koud is, koelt het dier af. Als het warm is, warmt het op." },
             { titel: "Welke groepen?", tekst: "**Koudbloedig**: reptielen (slang, hagedis), vissen, amfibieën (kikker), insecten. **Warmbloedig**: zoogdieren + vogels — die houden hun temperatuur stabiel." },
             { titel: "Slang = reptiel", tekst: "Slangen zijn reptielen → koudbloedig. Daarom liggen ze graag in de zon: ze gebruiken de zonne-warmte om actief te worden." },
           ],
@@ -141,7 +141,7 @@ const steps = [
           niveaus: {
             basis: "Slang = reptiel = koudbloedig.",
             simpeler: "Hond/mus/walvis = warmbloedig (vacht of veren). Slang = reptiel = koudbloedig.",
-            nogSimpeler: "Slang = A. Kruipt op grond + schubben = koudbloedig.",
+            nogSimpeler: "Slang. Kruipt op grond + schubben = koudbloedig.",
           },
         },
       },
@@ -169,7 +169,7 @@ const steps = [
           niveaus: {
             basis: "Insect heeft 6 poten.",
             simpeler: "Een insect = 6 poten + 3 lichaamsdelen. Spin = 8 poten (geen insect).",
-            nogSimpeler: "6 poten = insect. Spin = 8 poten. A = 6.",
+            nogSimpeler: "6 poten = insect. Spin = 8 poten.",
           },
         },
       },
@@ -218,7 +218,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Wat is een zoogdier?", tekst: "Een **zoogdier** zoogt zijn jongen met **melk** uit melkklieren, heeft **haren of vacht**, is **warmbloedig**, en baart meestal levende jongen." },
-            { titel: "Olifant is een zoogdier", tekst: "Olifanten: vacht (klein), zogen kalveren met melk, warmbloedig, baren 1 jong na ~22 maanden zwangerschap. Klassiek zoogdier." },
+            { titel: "Olifant is een zoogdier", tekst: "Olifanten: een paar stugge haren, zogen kalveren met melk, warmbloedig, baren 1 jong na ~22 maanden zwangerschap. Klassiek zoogdier." },
             { titel: "Andere opties checken", tekst: "Slang = reptiel (schubben, koudbloedig). Mus = vogel (veren). Vis = vis (schubben + kieuwen)." },
           ],
           woorden: [{ woord: "zoogdier", uitleg: "Dier dat melk geeft + haren heeft + warmbloedig is." }],
@@ -272,7 +272,7 @@ const steps = [
           stappen: [
             { titel: "Niet alle vogels vliegen", tekst: "We denken vaak dat **alle vogels vliegen**, maar dat is niet zo. Sommige vogels zijn vogels zónder vlieg-vermogen. Hun vleugels zijn aangepast voor iets anders, of veel te klein." },
             { titel: "Pinguïn = zwem-vogel", tekst: "De **pinguïn** is een vogel: hij heeft VEREN, legt EIEREN, heeft een SNAVEL. Maar zijn vleugels zijn **flippers** geworden — perfect voor onder-water-zwemmen, niet voor vliegen." },
-            { titel: "Andere niet-vliegende vogels", tekst: "• **Struisvogel** — te groot/zwaar om te vliegen, maar rent ~70 km/u.\n• **Kiwi** — kleine NZ-vogel, vleugels piepklein.\n• **Emoe** + **kasuaris** (Australië/NG)." },
+            { titel: "Andere niet-vliegende vogels", tekst: "• **Struisvogel** — te groot/zwaar om te vliegen, maar rent ~70 km/u.\n• **Kiwi** — kleine vogel uit Nieuw-Zeeland, vleugels piepklein.\n• **Emoe** + **kasuaris** (Australië en Nieuw-Guinea)." },
           ],
           woorden: [
             { woord: "pinguïn", uitleg: "Vogel die zwemt i.p.v. vliegt." },
@@ -304,7 +304,7 @@ const steps = [
         q: "Hoe ademen **vissen**?",
         options: ["Met kieuwen", "Met longen", "Door de huid", "Via vinnen"],
         answer: 0,
-        wrongHints: [null, "Vissen hebben geen longen.", "Sommige doen huidademhaling maar primair: kieuwen.", "Vinnen zijn voor zwemmen."],
+        wrongHints: [null, "Bijna alle vissen hebben geen longen.", "Sommige doen huidademhaling, maar vooral: kieuwen.", "Vinnen zijn voor zwemmen."],
       },
       {
         q: "Een **kikkervisje** wordt later ... ?",
@@ -331,7 +331,7 @@ const steps = [
   {
     title: "Reptielen + insecten",
     explanation:
-      "**Reptielen** — kenmerken:\n• **Droge schubben** *(of huidplaten zoals krokodil)*.\n• **Koudbloedig** *(zonnen om op te warmen)*.\n• Leggen meestal **eieren op land** *(met harde of leerachtige schaal)*.\n• Ademen **altijd met longen** *(ook degene die in water leven)*.\n• Geen externe oren.\n\n**Voorbeelden**:\n• **Slang** *(geen poten)*.\n• **Hagedis** *(4 poten, staart)*.\n• **Krokodil + alligator** *(groot, water+land)*.\n• **Schildpad** *(met schild)*.\n\n**Insecten** — kenmerken:\n• **6 poten** *(altijd!)*.\n• **3 lichaamsdelen**: kop, borststuk, achterlijf.\n• Vaak **vleugels** *(2 paar, bij sommige insecten)*.\n• **Sprieten / antennes** op het hoofd.\n• Geen ruggengraat *(ongewervelden)*.\n• Klein.\n• Planten zich voort met **eieren**; bij veel insecten volgt een **gedaanteverwisseling**.\n\n**Voorbeelden van insecten**:\n• Vliegen: bij, vlieg, mug, vlinder, libel.\n• Lopen: mier, kever, oorworm.\n• Springen: sprinkhaan.\n\n**Pas op — wat is GEEN insect?**\n• **Spinnen** = 8 poten, geen insect *(behoren tot 'spinachtigen')*.\n• **Wormen** = geen poten, geen insect.\n• **Slakken** = weekdier.\n• **Pissebed** = kreeftje, geen insect.\n\n**Toets-strikvraag**:\n*'Is een spin een insect?'* → **Nee!** 8 poten = geen insect. Spin is een spinachtige.\n\n**Vlindergroei — gedaanteverwisseling**:\n1. Vlinder legt **eitje** op blad.\n2. Eitje wordt **rups** *(eet veel)*.\n3. Rups wordt **pop** *(in cocon)*.\n4. Uit pop komt een **vlinder**.\n\nKlassiek Toets-voorbeeld!",
+      "**Reptielen** — kenmerken:\n• **Droge schubben** *(of huidplaten zoals krokodil)*.\n• **Koudbloedig** *(zonnen om op te warmen)*.\n• Leggen meestal **eieren op land** *(met harde of leerachtige schaal)*.\n• Ademen **altijd met longen** *(ook degene die in water leven)*.\n• Geen externe oren.\n\n**Voorbeelden**:\n• **Slang** *(geen poten)*.\n• **Hagedis** *(4 poten, staart)*.\n• **Krokodil + alligator** *(groot, water+land)*.\n• **Schildpad** *(met schild)*.\n\n**Insecten** — kenmerken:\n• **6 poten** *(altijd!)*.\n• **3 lichaamsdelen**: kop, borststuk, achterlijf.\n• Vaak **vleugels** *(2 paar, bij sommige insecten)*.\n• **Sprieten / antennes** op het hoofd.\n• Geen ruggengraat *(ongewervelden)*.\n• Klein.\n• Planten zich voort met **eieren**; bij veel insecten volgt een **gedaanteverwisseling**.\n\n**Voorbeelden van insecten**:\n• Vliegen: bij, vlieg, mug, vlinder, libel.\n• Lopen: mier, kever, oorworm.\n• Springen: sprinkhaan.\n\n**Pas op — wat is GEEN insect?**\n• **Spinnen** = 8 poten, geen insect *(behoren tot 'spinachtigen')*.\n• **Wormen** = geen poten, geen insect.\n• **Slakken** = weekdier.\n• **Pissebed** = kreeftje, geen insect.\n\n**Toets-strikvraag**:\n*'Is een spin een insect?'* → **Nee!** 8 poten = geen insect. Spin is een spinachtige.\n\n**Vlindergroei — gedaanteverwisseling**:\n1. Vlinder legt **eitje** op blad.\n2. Eitje wordt **rups** *(eet veel)*.\n3. Rups wordt **pop** *(hangt stil aan een takje of blad)*.\n4. Uit pop komt een **vlinder**.\n\nKlassiek Toets-voorbeeld!",
     checks: [
       {
         q: "Hoeveel **poten** heeft een spin?",
@@ -371,7 +371,7 @@ const steps = [
         q: "Een **rups** wordt later ... ?",
         options: ["Vlinder", "Vlieg", "Mier", "Kever"],
         answer: 0,
-        wrongHints: [null, "Niet — uit een vliegeneitje komt een made, geen rups.", "Niet — jonge mieren zijn larven, geen rupsen.", "Kever heeft andere cyclus."],
+        wrongHints: [null, "Niet — uit een vliegeneitje komt een made, geen rups.", "Niet — jonge mieren zijn larven, geen rupsen.", "Uit een kevereitje komt een larve, geen rups."],
       },
       {
         q: "Hoeveel **lichaamsdelen** heeft een insect?",
@@ -386,13 +386,13 @@ const steps = [
   {
     title: "Voedselketens en biotopen",
     explanation:
-      "Dieren eten elkaar of planten — dit heet een **voedselketen**.\n\n**Voorbeeld voedselketen** *(gras → muis → uil)*:\n• **Gras** *(plant)* groeit met zonlicht + water.\n• **Muis** eet gras.\n• **Uil** eet muis.\n\nDe **pijl** in een voedselketen wijst **naar wie het eet** *(de eter)*. Dus: gras → muis betekent muis eet gras.\n\n**Termen om te kennen**:\n• **Producent** = plant *(maakt zijn eigen voedsel met zonlicht)*.\n• **Consument** = dier dat planten of andere dieren eet.\n• **Herbivoor** = eet alleen planten *(koe, paard, konijn)*.\n• **Carnivoor** = eet alleen vlees *(leeuw, haai, valk)*.\n• **Omnivoor** = eet beide *(mens, beer, varken)*.\n\n**Toets-truc — wat zit waar in de keten?**\n• **Onderaan**: planten.\n• **Daarboven**: planten-eters *(herbivoren)*.\n• **Daarboven**: vleeseters *(carnivoren)*.\n• **Toproofdier**: niemand eet die zelf *(bv. leeuw, orka, haai)*.\n\n**Biotopen — waar dieren leven**:\n• **Bos**: vos, hert, eekhoorn, vlinder.\n• **Wei + akker**: koe, schaap, muis, kraai.\n• **Sloot + meer**: kikker, vis, eend, libel.\n• **Zee**: vis, walvis, dolfijn, krab.\n• **Woestijn**: kameel, slang, hagedis.\n• **Bergen**: berggeit, adelaar, sneeuwluipaard.\n• **Pool**: ijsbeer, pinguïn, robben.\n\n**Voedselweb**:\nIn werkelijkheid eet niet alles 1-op-1. Een **voedselweb** laat zien dat meerdere ketens met elkaar verbonden zijn. Bv. een vos eet konijnen + muizen + vogels + bessen.\n\n**toetsvraag**:\n*'Wat gebeurt als de muizen allemaal sterven in deze keten?'*\n→ Uilen krijgen minder eten *(hongerig)*. Grasplant kan harder groeien *(meer plant)*. Verstoring in keten.",
+      "Dieren eten elkaar of planten — dit heet een **voedselketen**.\n\n**Voorbeeld voedselketen** *(gras → muis → uil)*:\n• **Gras** *(plant)* groeit met zonlicht + water.\n• **Muis** eet gras.\n• **Uil** eet muis.\n\nDe **pijl** in een voedselketen wijst **naar wie het eet** *(de eter)*. Dus: gras → muis betekent muis eet gras.\n\n**Termen om te kennen**:\n• **Producent** = plant *(maakt zijn eigen voedsel met zonlicht)*.\n• **Consument** = dier dat planten of andere dieren eet.\n• **Herbivoor** = eet alleen planten *(koe, paard, konijn)*.\n• **Carnivoor** = eet alleen vlees *(leeuw, haai, valk)*.\n• **Omnivoor** = eet beide *(mens, beer, varken)*.\n\n**Toets-truc — wat zit waar in de keten?**\n• **Onderaan**: planten.\n• **Daarboven**: planten-eters *(herbivoren)*.\n• **Daarboven**: vleeseters *(carnivoren)*.\n• **Toproofdier**: een volwassen dier wordt bijna nooit door een ander dier gegeten *(bv. leeuw, orka)*.\n\n**Biotopen — waar dieren leven**:\n• **Bos**: vos, hert, eekhoorn, vlinder.\n• **Wei + akker**: koe, schaap, muis, kraai.\n• **Sloot + meer**: kikker, vis, eend, libel.\n• **Zee**: vis, walvis, dolfijn, krab.\n• **Woestijn**: kameel, slang, hagedis.\n• **Bergen**: berggeit, adelaar, sneeuwluipaard.\n• **Pool**: ijsbeer *(Noordpool)*, pinguïn *(Zuidpool)*, robben.\n\n**Voedselweb**:\nIn werkelijkheid eet niet alles 1-op-1. Een **voedselweb** laat zien dat meerdere ketens met elkaar verbonden zijn. Bv. een vos eet konijnen + muizen + vogels + bessen.\n\n**toetsvraag**:\n*'Wat gebeurt als de muizen allemaal sterven in deze keten?'*\n→ Uilen krijgen minder eten *(hongerig)*. Grasplant kan harder groeien *(meer plant)*. Verstoring in keten.",
     checks: [
       {
         q: "In de keten *'gras → muis → uil'*: wat eet de **uil**?",
         options: ["Muis", "Gras", "Andere uilen", "Alles"],
         answer: 0,
-        wrongHints: [null, "Uilen eten geen gras — alleen plantenetende dieren wel.", "Andere uilen niet — kannibalisme komt zelden voor.", "Niet alles — uilen zijn kieskeurig."],
+        wrongHints: [null, "Uilen eten geen gras. Wie eet het gras in deze keten?", "Kijk naar de pijl: welk dier staat vlak vóór de uil?", "Kijk naar de pijl: de uil eet wat er vlak vóór hem staat."],
       },
       {
         q: "Een **koe** is een ... ?",
@@ -457,7 +457,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Hond is wel zoogdier — heeft vacht en zoogt jongen.", "Kat is wel zoogdier — heeft vacht en zoogt jongen.", "Koe is wel zoogdier — geeft melk aan kalveren."],
       },
-      { q: "Hoeveel **diergroepen** zijn er (gewervelden)?", options: ["5","2","10","3"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Te weinig."] },
+      { q: "Hoeveel groepen **gewervelde dieren** (dieren met een ruggengraat) zijn er?", options: ["5","2","10","3"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Te weinig."] },
       { q: "Een **walvis** is een?", options: ["Zoogdier","Vis","Reptiel","Insect"], answer: 0, wrongHints: [null, "Niet — leeft in water, maar geen vis.", "Niet.", "Niet."] },
       { q: "Een **slang** is een?", options: ["Reptiel","Amfibie","Vis","Zoogdier"], answer: 0, wrongHints: [null, "Vochtige huid is amfibie.", "Niet.", "Niet."] },
       { q: "Een **vlinder** is een?", options: ["Insect","Vogel","Reptiel","Zoogdier"], answer: 0, wrongHints: [null, "Vogels hebben veren, vlinders niet.", "Reptielen hebben schubben.", "Zoogdieren hebben vacht en zogen jongen."] },
@@ -466,9 +466,9 @@ const steps = [
       { q: "Welke diergroep heeft **schubben**?", options: ["Vissen + reptielen","Vogels","Zoogdieren","Insecten"], answer: 0, wrongHints: [null, "Veren.", "Haar.", "Een hard pantser."] },
       { q: "Hoeveel **lichaamsdelen** heeft een insect?", options: ["3","2","4","6"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Aantal poten."] },
       { q: "Een **spin** is een?", options: ["Geen insect","Insect","Reptiel","Zoogdier"], answer: 0, wrongHints: [null, "Tel de poten: insecten hebben er 6.", "Niet.", "Niet."] },
-      { q: "Wat is een **planteneter**?", options: ["Herbivoor","Carnivoor","Omnivoor","Roofdier"], answer: 0, wrongHints: [null, "Vleeseter.", "Alleseter.", "Vleeseter."] },
-      { q: "Wat is een **alleseter**?", options: ["Omnivoor","Herbivoor","Carnivoor","Predator"], answer: 0, wrongHints: [null, "Plant.", "Vlees.", "Vlees."] },
-      { q: "Hoe planten zoogdieren zich voort?", options: ["Levende jongen baren","Eieren leggen","Zich in tweeën delen","Zaadjes maken"], answer: 0, wrongHints: [null, "Vogel/reptiel/vis (bij zoogdieren alleen het vogelbekdier).", "Zo doen bacteriën het.", "Zo doen planten het."] },
+      { q: "Welk dier is een **planteneter**?", options: ["Konijn","Vos","Uil","Haai"], answer: 0, wrongHints: [null, "Een vos eet vooral andere dieren, zoals konijnen en muizen.", "Een uil vangt muizen: dat is een vleeseter.", "Een haai eet vissen: dat is een vleeseter."] },
+      { q: "Welk dier is een **alleseter**?", options: ["Varken","Koe","Konijn","Leeuw"], answer: 0, wrongHints: [null, "Een koe eet alleen gras en andere planten.", "Een konijn eet alleen planten.", "Een leeuw eet alleen vlees."] },
+      { q: "Hoe planten zoogdieren zich voort?", options: ["Levende jongen baren","Eieren leggen","Zich in tweeën delen","Zaadjes maken"], answer: 0, wrongHints: [null, "Vogel/reptiel/vis (bij zoogdieren alleen het vogelbekdier en de mierenegel).", "Zo doen bacteriën het.", "Zo doen planten het."] },
       { q: "Welke diergroep **ademt door longen ÉN huid**?", options: ["Amfibieën","Vogels","Vissen","Insecten"], answer: 0, wrongHints: [null, "Alleen longen.", "Kieuwen.", "Via buisjes in hun lijf."] },
       { q: "Wat is een **roofdier** (predator)?", options: ["Dier dat op andere dieren jaagt","Planten-eter","Aaseter","Allesvreter"], answer: 0, wrongHints: [null, "Tegengestelde.", "Een aaseter jaagt niet — hij eet dieren die al dood zijn.", "Een allesvreter eet ook planten — dat is breder."] },
     ],

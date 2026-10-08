@@ -94,9 +94,9 @@ const steps = [
     checks: [
       {
         q: "Waaruit komt **wind**?",
-        options: ["Drukverschil + opwarming", "Magie", "Vulkaan", "Niet bestaand"],
+        options: ["Drukverschil + opwarming", "Bewegende bomen", "Draaiende windmolens", "Golven op zee"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet primair.", "Wel."],
+        wrongHints: [null, "Bomen bewegen dóór de wind. Wat zet de lucht zelf in beweging?", "Windmolens draaien dóór de wind, ze maken geen wind.", "Golven ontstaan juist door de wind."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is wind?", tekst: "**Wind** = bewegende lucht. Lucht stroomt van een gebied met HOGE druk naar een gebied met LAGE druk." },
@@ -308,7 +308,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Wat is een storm?", tekst: "Volgens **KNMI** is er storm bij **windkracht 9 op Beaufort-schaal** = **75-88 km/u**.\n• **Zware storm** = Beaufort 10 (89-102 km/u)\n• **Zeer zware storm** = Beaufort 11 (103-117 km/u)\n• **Orkaan** = Beaufort 12 (>117 km/u)\n\nIn NL komt orkaankracht (gemiddelde wind) bijna nooit voor." },
-            { titel: "KNMI-waarschuwingen", tekst: "**KNMI** geeft waarschuwingen uit:\n• **Code geel** — wees voorbereid (kans op gevaar)\n• **Code oranje** — wees alert (echt gevaar)\n• **Code rood** — neem actie (extreme situatie, kans op slachtoffers)\n\nBij code rood: blijf binnen, ga niet op de weg. Vaak gegeven bij storm + sneeuw." },
+            { titel: "KNMI-waarschuwingen", tekst: "**KNMI** geeft waarschuwingen uit:\n• **Code geel** — wees alert (kans op gevaarlijk weer)\n• **Code oranje** — wees voorbereid (grote kans op schade of letsel)\n• **Code rood** — neem actie (extreme situatie, kans op slachtoffers)\n\nBij code rood: blijf binnen, ga niet op de weg. Vaak gegeven bij storm + sneeuw." },
             { titel: "Toets-feit: bekende NL-stormen", tekst: "Beroemde stormen in NL:\n• **31 jan 1953**: Watersnoodramp (zware storm + springtij, 1.836 doden)\n• **18 jan 2007**: Storm Kyrill, ook doden in NL\n• **18 jan 2018**: Storm Friederike, code rood in meerdere provincies\n• **18 feb 2022**: Storm Eunice, NS legde alle treinen plat\n\nNL krijgt vaak namen via NL-België-VK-systeem (vanaf 2019)." },
           ],
           woorden: [
@@ -328,7 +328,7 @@ const steps = [
       },
       { q: "Welk instituut doet **weersvoorspellingen** in Nederland?", options: ["KNMI","RIVM","CBS","NS"], answer: 0, wrongHints: [null, "Volksgezondheid.", "Statistiek.", "Spoorwegen."] },
       { q: "Welke schaal meet **windkracht**?", options: ["Beaufort","Richter","Celsius","Kelvin"], answer: 0, wrongHints: [null, "Aardbevingen.", "Temperatuur.", "Temperatuur."] },
-      { q: "**Bliksem** is sneller dan **donder** omdat?", options: ["Licht reist sneller dan geluid","Bliksem komt eerst","Donder is verzonnen","Geen verschil"], answer: 0, wrongHints: [null, "Wel — maar wat is de REDEN?", "Donder bestaat wel.", "Wel verschil."] },
+      { q: "Waarom zie je de **bliksem** eerder dan je de **donder** hoort?", options: ["Licht reist sneller dan geluid","Bliksem komt eerst","Donder is verzonnen","Geen verschil"], answer: 0, wrongHints: [null, "Wel — maar wat is de REDEN?", "Donder bestaat wel.", "Wel verschil."] },
       { q: "Welk weersymbool betekent **regenbui**?", options: ["Wolk met druppels","Zon","Sneeuwvlok","Streep"], answer: 0, wrongHints: [null, "Mooi weer.", "Sneeuw.", "Niet."] },
       { q: "Wat is **luchtdruk**?", options: ["Kracht waarmee lucht drukt","Wind","Temperatuur","Vochtigheid"], answer: 0, wrongHints: [null, "Beweging lucht.", "Warmte.", "Vocht."] },
       { q: "Hoge luchtdruk = welk weer?", options: ["Mooi/droog","Storm","Onweer","Regen"], answer: 0, wrongHints: [null, "Storm hoort bij lágedruk, niet hoge.", "Onweer komt bij lagedruk en opstijgende lucht.", "Regen hoort bij lagedruk — wat doet hoge druk dan?"] },

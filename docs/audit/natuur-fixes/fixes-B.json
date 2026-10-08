@@ -280,14 +280,6 @@
     "groep": "groep6-8"
   },
   {
-    "bestand": "src/learnPaths/gezondeVoedingPo.js",
-    "zoek": "q: \"1 glas frisdrank = **hoeveel suikerklontjes**?\"",
-    "vervang": "q: \"1 blikje cola = **hoeveel suikerklontjes**?\"",
-    "reden": "Uitleg noemt '1 blikje cola = 7 suikerklontjes'; een glas (250 ml) is eerder ~6. Vraag laten aansluiten.",
-    "ernst": 1,
-    "groep": "groep6-8"
-  },
-  {
     "bestand": "src/learnPaths/pubertijdGroeiPo.js",
     "zoek": "*(in 1900 begon puberteit gemiddeld op 14, nu op 11)* — onbekend precies waarom.",
     "vervang": "*(rond 1900 kregen meisjes hun eerste menstruatie gemiddeld rond 14-15 jaar, nu rond 13)* — vooral door betere voeding en gezondheid.",

@@ -339,7 +339,7 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
           "Energie maken (verbranding van glucose)",
           "DNA bewaren",
           "Voedsel verteren",
-          "Foto-synthese (zonlicht omzetten)",
+          "Fotosynthese (zonlicht omzetten)",
         ],
         answer: 0,
         wrongHints: [
@@ -462,7 +462,7 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
   // ─── C. Plantcel, dierlijke cel & bacterie ───────────────
   {
     title: "Plantcel vs dierlijke cel — drie verschillen",
-    explanation: "Plant- en dierlijke cellen lijken erg op elkaar (beide hebben kern, mitochondriën, cytoplasma, celmembraan), maar er zijn **drie grote verschillen**:\n\n| | Plantcel | Dierlijke cel |\n|---|---|---|\n| Celwand (cellulose) | ✅ | ❌ |\n| Chloroplasten | ✅ | ❌ |\n| Grote vacuole | ✅ (één grote) | ❌ (kleine of geen) |\n\n**Celwand** = stevige buitenwand van cellulose. Geeft de plant zijn vorm — daarom kan een boomstam staan. Dieren bewegen, dus zij hebben een flexibel celmembraan zonder stevige wand.\n\n**Chloroplasten** = plantcellen maken hun eigen voedsel via fotosynthese. Dieren eten andere organismen, dus hebben dat niet nodig.\n\n**Vacuole** = grote vloeistofzak in de plantcel die het cytoplasma 'opspant' tegen de celwand (zodat de plant rechtop staat). Wanneer een plant verlept, is de vacuole leeg.\n\n**Geheugentruc**: \"PCV is plant\" — Plantcel = Celwand + Chloroplasten + Vacuole.",
+    explanation: "Plant- en dierlijke cellen lijken erg op elkaar (beide hebben kern, mitochondriën, cytoplasma, celmembraan), maar er zijn **drie grote verschillen**:\n\n| | Plantcel | Dierlijke cel |\n|---|---|---|\n| Celwand (cellulose) | ✅ | ❌ |\n| Chloroplasten | ✅ | ❌ |\n| Grote vacuole | ✅ (één grote) | ❌ (kleine of geen) |\n\n**Celwand** = stevige buitenwand van cellulose. Geeft de plant zijn vorm — daarom kan een boomstam staan. Dieren bewegen, dus zij hebben een flexibel celmembraan zonder stevige wand.\n\n**Chloroplasten** = plantcellen maken hun eigen voedsel via fotosynthese. Dieren eten andere organismen, dus hebben dat niet nodig.\n\n**Vacuole** = grote vloeistofzak in de plantcel die het cytoplasma 'opspant' tegen de celwand (zodat de plant rechtop staat). Wanneer een plant verlept, zijn de vacuoles water kwijtgeraakt.\n\n**Geheugentruc**: \"PCV is plant\" — Plantcel = Celwand + Chloroplasten + Vacuole.",
     svg: `<svg viewBox="0 0 320 200">
 <!-- ===== PLANTCEL: hoekig, dikke celwand ===== -->
 <text x="78" y="18" text-anchor="middle" fill="${COLORS.chloro}" font-size="12" font-family="Arial" font-weight="bold">plantcel</text>
@@ -519,7 +519,7 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
       {
         q: "Een plant verwelkt. Wat is er gebeurd?",
         options: [
-          "De vacuole is leeg, de cellen zijn niet meer opgespannen",
+          "De vacuoles hebben water verloren",
           "De celkern is verdwenen",
           "Er zijn geen mitochondriën meer",
           "De celwand is afgebroken",
@@ -534,10 +534,10 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
         uitlegPad: {
           stappen: [{ titel: "Vacuole leeg = verwelken", tekst: "De grote vacuole drukt het cytoplasma tegen de celwand → plant staat stevig. Bij watergebrek loopt de vacuole leeg → plant verwelkt. Water geven → herstelt." }],
           woorden: [{ woord: "vacuole", uitleg: "vloeistofzak in plantcel" }],
-          theorie: "Volle vacuole = turgor (spanning). Lege vacuole = slap.",
+          theorie: "Volle vacuole = turgor (spanning). Vacuole water kwijt = slap.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Sla in koelkast: stevig. Sla uit koelkast op aanrecht: slap" }],
           basiskennis: [{ onderwerp: "water = stevigheid", uitleg: "geen water = geen druk" }],
-          niveaus: { basis: "Vacuole is leeg.", simpeler: "Geen water in cel.", nogSimpeler: "Plant heeft dorst." },
+          niveaus: { basis: "De vacuoles zijn water kwijt.", simpeler: "Geen water in cel.", nogSimpeler: "Plant heeft dorst." },
         },
       },
     ],
@@ -667,7 +667,7 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
   // ─── D. Hoe groeit een organisme? ───────────────
   {
     title: "Celdeling — zo groeit een organisme",
-    explanation: "Een baby is bij geboorte ongeveer 50 cm. Een volwassene is ~1,70 m. Hoe wordt iemand groter? Door **celdeling**: één cel splitst in twee, die twee delen zich weer en dan zijn het er vier, enzovoort.\n\n**Stappen van een eenvoudige celdeling (mitose)**:\n1. **DNA verdubbelt** — er komen twee identieke kopieën in de kern.\n2. **DNA wordt verdeeld** — elke helft gaat naar een andere kant van de cel.\n3. **Cel knijpt zich af** — middenin ontstaat een scheidingswand.\n4. **Twee dochtercellen** — beide hebben hetzelfde DNA als de moedercel.\n\n**Wanneer gebeurt het?**\n• Groei: kind wordt groter\n• Herstel: na een wond worden nieuwe huidcellen gemaakt\n• Vervanging: huidcellen, bloedcellen worden voortdurend vernieuwd\n\n**Belangrijk**: bij mitose krijg je **twee identieke** cellen. Bij voortplanting (mens) gaat het anders — daar krijg je geslachtscellen via *meiose*. Maar dat is voor later.",
+    explanation: "Een baby is bij geboorte ongeveer 50 cm. Een volwassene is ~1,70 m. Hoe wordt iemand groter? Door **celdeling**: één cel splitst in twee, die twee delen zich weer en dan zijn het er vier, enzovoort.\n\n**Stappen van een eenvoudige celdeling (mitose)**:\n1. **DNA verdubbelt** — er komen twee identieke kopieën in de kern.\n2. **DNA wordt verdeeld** — elke helft gaat naar een andere kant van de cel.\n3. **Cel deelt zich in tweeën** — een dierlijke cel snoert middenin in; bij een plantcel groeit middenin een nieuwe celwand.\n4. **Twee dochtercellen** — beide hebben hetzelfde DNA als de moedercel.\n\n**Wanneer gebeurt het?**\n• Groei: kind wordt groter\n• Herstel: na een wond worden nieuwe huidcellen gemaakt\n• Vervanging: huidcellen, bloedcellen worden voortdurend vernieuwd\n\n**Belangrijk**: bij mitose krijg je **twee identieke** cellen. Bij voortplanting (mens) gaat het anders — daar krijg je geslachtscellen via *meiose*. Maar dat is voor later.",
     svg: `<svg viewBox="0 0 320 180">
 <ellipse cx="50" cy="90" rx="30" ry="32" fill="${COLORS.cyto}" stroke="${COLORS.membrane}" stroke-width="1.5"/>
 <circle cx="50" cy="90" r="10" fill="${COLORS.nucleus}" opacity="0.7"/>
@@ -734,7 +734,7 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
   // ─── E. Eindopdracht ───────────────
   {
     title: "Eindopdracht — alles op een rij",
-    explanation: "Tijd om alles te combineren! Bij elke vraag: bedenk welk type cel het is en bij welk celdeel het hoort.\n\n**Snelle checklist**:\n• Heeft het een celwand? → plant of bacterie.\n• Heeft het chloroplasten? → plant.\n• Heeft het géén kern? → bacterie.\n• Maakt het zelf voedsel met zonlicht? → plant (chloroplast).\n• Verbrandt het glucose voor energie? → mitochondriën.\n• Slaat DNA op? → kern.\n\nVeel succes!",
+    explanation: "Tijd om alles te combineren! Bij elke vraag: bedenk welk type cel het is en bij welk celdeel het hoort.\n\n**Snelle checklist**:\n• Heeft het een celwand? → plant, schimmel of bacterie.\n• Heeft het chloroplasten? → plant.\n• Heeft het géén kern? → bacterie.\n• Maakt het zelf voedsel met zonlicht? → plant (chloroplast).\n• Verbrandt het glucose voor energie? → mitochondriën.\n• Slaat DNA op? → kern.\n\nVeel succes!",
     svg: `<svg viewBox="0 0 300 200">
 <text x="150" y="24" text-anchor="middle" fill="${COLORS.warm}" font-size="14" font-family="Arial" font-weight="bold">eindopdracht — combineer alles</text>
 <text x="20" y="58" fill="${COLORS.text}" font-size="11" font-family="Arial">1. Welk type cel?</text>

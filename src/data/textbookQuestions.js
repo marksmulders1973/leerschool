@@ -228,7 +228,7 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Wat is een ecosysteem?", options: ["Levende wezens samen met hun omgeving", "Alleen de planten in een gebied", "Alleen de dieren in een gebied", "Een machine die het milieu meet"], answer: 0, explanation: "Een ecosysteem is een gebied waarin planten, dieren en hun omgeving op elkaar reageren — bv. een vijver, bos of woestijn." },
       { q: "Welk gas zorgt voor opwarming van de aarde?", options: ["CO₂ (koolstofdioxide)", "Zuurstof (O₂)", "Stikstof (N₂)", "Helium"], answer: 0, explanation: "CO₂ houdt warmte vast in de atmosfeer. Door uitlaatgassen + fabrieken stijgt CO₂ → aarde warmt op." },
       { q: "Wat is afval scheiden goed voor?", options: ["Zo kunnen we materialen hergebruiken", "Het is verplicht door de buurman", "Het scheelt geld voor de winkel", "Niets, het maakt geen verschil"], answer: 0, explanation: "Door afval te scheiden (papier, plastic, glas, GFT) kunnen materialen worden hergebruikt → minder nieuwe grondstoffen nodig." },
-      { q: "Wat zijn duurzame energiebronnen?", options: ["Zon en wind", "Olie en gas", "Steenkool", "Kernenergie"], answer: 0, explanation: "Zon en wind zijn duurzaam (raken nooit op). Olie/gas/steenkool zijn fossiel (raken op + geven CO₂). Kernenergie is niet fossiel maar geeft afval." },
+      { q: "Welke energiebronnen raken nooit op?", options: ["Zon en wind", "Olie en gas", "Steenkool", "Kernenergie"], answer: 0, explanation: "Zon en wind zijn duurzaam (raken nooit op). Olie/gas/steenkool zijn fossiel (raken op + geven CO₂). Kernenergie is niet fossiel, maar uranium raakt ook op en er blijft afval over." },
     ],
     3: [
       // Weer en seizoenen
@@ -954,12 +954,12 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Welk spiertype werkt zonder dat je eraan denkt?", options: ["Hartspier", "Biceps", "Knie-strekker", "Kuit"], answer: 0, explanation: "Hartspier + gladde spieren (darmen, bloedvaten) werken automatisch. Skeletspieren zijn willekeurig." },
     ],
     5: [
-      { q: "Welk zintuig zit in je TONG?", options: ["Smaak", "Reuk", "Tast", "Gehoor"], answer: 0, explanation: "Smaakpapillen op tong → zoet/zout/zuur/bitter/umami. Reuk = neus." },
+      { q: "Welk zintuig zit in je TONG?", options: ["Smaak", "Reuk", "Zicht", "Gehoor"], answer: 0, explanation: "Smaakpapillen op tong → zoet/zout/zuur/bitter/umami. Reuk = neus." },
       { q: "Wat doen HORMONEN?", options: ["Boodschapper-stoffen die organen aansturen", "Spieren maken", "Botten bouwen", "Niets"], answer: 0, explanation: "Hormonen (insuline, adrenaline, oestrogeen) regelen processen via bloed. Bv. groei, vertering, stress." },
     ],
     6: [
-      { q: "Hoe planten BLOEMPLANTEN zich voort?", options: ["Bestuiving + bevruchting → zaad", "Door verdeling", "Via wortels", "Niet"], answer: 0, explanation: "Stuifmeel (man) → stempel (vrouw) → bevruchting van eicel → zaad → nieuwe plant." },
-      { q: "Wie produceert zaad-cellen bij dieren?", options: ["Mannetje", "Vrouwtje", "Beide gelijk", "Niemand"], answer: 0, explanation: "Mannetjes maken zaadcellen (in de teelballen). Vrouwtjes maken eicellen. Bevruchting = samenkomen." },
+      { q: "Hoe planten BLOEMPLANTEN zich GESLACHTELIJK voort?", options: ["Bestuiving + bevruchting → zaad", "Door verdeling", "Via wortels", "Niet"], answer: 0, explanation: "Stuifmeel (man) → stempel (vrouw) → bevruchting van eicel → zaad → nieuwe plant." },
+      { q: "Wie produceert zaadcellen bij dieren?", options: ["Mannetje", "Vrouwtje", "Beide gelijk", "Niemand"], answer: 0, explanation: "Mannetjes maken zaadcellen (in de teelballen). Vrouwtjes maken eicellen. Bevruchting = samenkomen." },
     ],
   },
 

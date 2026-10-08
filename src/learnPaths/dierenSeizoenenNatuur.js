@@ -23,7 +23,7 @@ const chapters = [
 const steps = [
   {
     title: "Wat is leven?",
-    explanation: "Sommige dingen **leven**, andere niet. Levende dingen zijn anders dan stenen of water.\n\n**Wat alle levende wezens doen** (zes kenmerken):\n1. **Eten** — voedsel opnemen.\n2. **Ademen** — zuurstof gebruiken.\n3. **Groeien** — groter worden.\n4. **Bewegen** — al is het maar inwendig (planten ook!).\n5. **Reageren** — op licht, warmte, gevaar.\n6. **Voortplanten** — nieuwe wezens maken.\n\n**Vier groepen levende wezens**:\n• **Mensen** — wij!\n• **Dieren** — hond, vogel, vis, mier.\n• **Planten** — bomen, gras, bloemen.\n• **Schimmels en bacteriën** — paddenstoelen, gist, bacteriën.\n\n**Niet levend**: stenen, water, wolken, plastic, metalen. Die ademen niet, eten niet, groeien niet zelf.\n\n**Leuk weetje**: een ei waar een kuiken in groeit, is wel levend.",
+    explanation: "Sommige dingen **leven**, andere niet. Levende dingen zijn anders dan stenen of water.\n\n**Wat alle levende wezens doen** (zes kenmerken):\n1. **Eten** — voedsel opnemen.\n2. **Ademen** — zuurstof gebruiken.\n3. **Groeien** — groter worden.\n4. **Bewegen** — al is het maar inwendig (planten ook!).\n5. **Reageren** — op licht, warmte, gevaar.\n6. **Voortplanten** — nieuwe wezens maken.\n\n**Groepen levende wezens**:\n• **Dieren** — hond, vogel, vis, mier. Ook wij **mensen** horen bij de dieren!\n• **Planten** — bomen, gras, bloemen.\n• **Schimmels** — paddenstoelen, gist.\n• **Bacteriën** — piepklein, alleen te zien met een microscoop.\n\n**Niet levend**: stenen, water, wolken, plastic, metalen. Die ademen niet, eten niet, groeien niet zelf.\n\n**Leuk weetje**: een ei waar een kuiken in groeit, is wel levend.",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="14" font-family="Arial" font-weight="bold">leven = 6 kenmerken</text>
 <text x="20" y="55" fill="${COLORS.text}" font-size="11" font-family="Arial">1. eten 🍴</text>
@@ -32,7 +32,7 @@ const steps = [
 <text x="160" y="75" fill="${COLORS.text}" font-size="11" font-family="Arial">4. bewegen 🏃</text>
 <text x="20" y="95" fill="${COLORS.text}" font-size="11" font-family="Arial">5. reageren 👀</text>
 <text x="160" y="95" fill="${COLORS.text}" font-size="11" font-family="Arial">6. voortplanten 👶</text>
-<text x="150" y="135" text-anchor="middle" fill="${COLORS.good}" font-size="12" font-family="Arial">mensen · dieren · planten · schimmels</text>
+<text x="150" y="135" text-anchor="middle" fill="${COLORS.good}" font-size="12" font-family="Arial">dieren (ook mensen) · planten · schimmels</text>
 <text x="150" y="160" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial">niet levend: steen, water, plastic</text>
 </svg>`,
     checks: [
@@ -46,7 +46,7 @@ const steps = [
           woorden: [{ woord: "levend", uitleg: "Voldoet aan 6 kenmerken: eten, ademen, groeien, bewegen, reageren, voortplanten." }],
           theorie: "Levend = dier/plant/schimmel/bacterie. Niet levend = steen/water/lucht/plastic.",
           voorbeelden: [{ type: "tabel", tekst: "Levend: mier, boom, paddenstoel. Niet: steen, wolk, plastic." }],
-          basiskennis: [{ onderwerp: "Schimmel = levend", uitleg: "Paddenstoel is schimmel — wel levend (groeit, voortplant via sporen)." }],
+          basiskennis: [{ onderwerp: "Schimmel = levend", uitleg: "Paddenstoel is schimmel — wel levend (groeit, plant zich voort met sporen)." }],
           niveaus: { basis: "Steen.", simpeler: "Steen leeft niet (geen ademen/groeien). Mier/boom/paddenstoel zijn wel levend.", nogSimpeler: "Steen" },
         },
       },
@@ -70,7 +70,7 @@ const steps = [
   // B
   {
     title: "Zoogdieren — wat zijn dat?",
-    explanation: "**Zoogdieren** (of: zogenden) zijn de groep waar **wij ook bij horen**. Kenmerken:\n\n• **Vacht of haren** op het lichaam.\n• **Warm bloed** — lichaamstemperatuur is altijd ~37 °C.\n• **Levend baren** — geen eieren leggen.\n• **Zogen**: moeder geeft melk aan haar baby.\n• **Ademen met longen** (ook bij walvissen!).\n• **Zorgen voor jongen** — vaak lang.\n\n**Voorbeelden**:\n• Op land: hond, kat, koe, paard, leeuw, mens, olifant, beer, muis.\n• In water: walvis, dolfijn, zeehond, zeekoe.\n• In de lucht: vleermuis (enige zoogdier dat kan vliegen!).\n\n**Niet alle zoogdieren zien er hetzelfde uit**, maar deze kenmerken delen ze bijna allemaal (het vogelbekdier legt bijvoorbeeld wél eieren).\n\n**Leuk weetje**: het kleinste zoogdier is de hommelvleermuis (~2 g). Het grootste is de blauwe vinvis (~150.000 kg).",
+    explanation: "**Zoogdieren** (of: zogenden) zijn de groep waar **wij ook bij horen**. Kenmerken:\n\n• **Vacht of haren** op het lichaam.\n• **Warm bloed** — hun lichaam blijft vanzelf warm, ook als het buiten koud is (bij ons ongeveer 37 °C).\n• **Levend baren** — geen eieren leggen.\n• **Zogen**: moeder geeft melk aan haar baby.\n• **Ademen met longen** (ook bij walvissen!).\n• **Zorgen voor jongen** — vaak lang.\n\n**Voorbeelden**:\n• Op land: hond, kat, koe, paard, leeuw, mens, olifant, beer, muis.\n• In water: walvis, dolfijn, zeehond, zeekoe.\n• In de lucht: vleermuis (enige zoogdier dat kan vliegen!).\n\n**Niet alle zoogdieren zien er hetzelfde uit**, maar deze kenmerken delen ze bijna allemaal (het vogelbekdier legt bijvoorbeeld wél eieren).\n\n**Leuk weetje**: het kleinste zoogdier is de hommelvleermuis (~2 g). Het grootste is de blauwe vinvis (~150.000 kg).",
     svg: `<svg viewBox="0 0 300 180">
 <rect x="20" y="40" width="260" height="50" rx="8" fill="${COLORS.zoog}" opacity="0.18" stroke="${COLORS.zoog}" stroke-width="2"/>
 <text x="150" y="68" text-anchor="middle" fill="${COLORS.zoog}" font-size="14" font-family="Arial" font-weight="bold">ZOOGDIEREN 🐶</text>
@@ -117,14 +117,14 @@ const steps = [
   },
   {
     title: "Vogels",
-    explanation: "**Vogels** kun je makkelijk herkennen:\n\n• **Veren** — alleen vogels hebben veren!\n• **Twee vleugels** (wel of niet kunnen vliegen).\n• **Snavel** in plaats van bek met tanden.\n• **Twee poten** met klauwen.\n• **Eieren leggen**.\n• **Warm bloed** (zoals zoogdieren).\n• **Ademen met longen**.\n\n**Voorbeelden**:\n• Klein: mus, mees, roodborstje, koolmees.\n• Groot: roofvogel (havik, buizerd), uil, kraai.\n• Watervogel: eend, gans, zwaan, reiger.\n• Vliegen niet: pinguïn, struisvogel, kip.\n\n**Wat eten vogels?**\nVerschilt per soort:\n• Zaadeters (mus): zaden uit planten.\n• Insecteters (mees): kleine insecten.\n• Vleeseters (havik): kleine dieren.\n• Aaseters (kraai): dode dieren.\n\n**Trekvogels**: vliegen 's winters naar warme landen (zwaluw, ooievaar). **Standvogels** blijven (mus, kraai).",
+    explanation: "**Vogels** kun je makkelijk herkennen:\n\n• **Veren** — alleen vogels hebben veren!\n• **Twee vleugels** (wel of niet kunnen vliegen).\n• **Snavel** in plaats van bek met tanden.\n• **Twee poten** met klauwen.\n• **Eieren leggen**.\n• **Warm bloed** (zoals zoogdieren).\n• **Ademen met longen**.\n\n**Voorbeelden**:\n• Klein: mus, mees, roodborstje, koolmees.\n• Groot: roofvogel (havik, buizerd), uil, kraai.\n• Watervogel: eend, gans, zwaan, reiger.\n• Vliegen niet: pinguïn, struisvogel, kiwi.\n\n**Wat eten vogels?**\nVerschilt per soort:\n• Zaadeters (mus): zaden uit planten.\n• Insecteters (mees): kleine insecten.\n• Vleeseters (havik): kleine dieren.\n• Aaseters (kraai): dode dieren.\n\n**Trekvogels**: vliegen 's winters naar warme landen (zwaluw, ooievaar). **Standvogels** blijven (mus, kraai).",
     svg: `<svg viewBox="0 0 300 180">
 <rect x="20" y="40" width="260" height="50" rx="8" fill="${COLORS.vogel}" opacity="0.18" stroke="${COLORS.vogel}" stroke-width="2"/>
 <text x="150" y="68" text-anchor="middle" fill="${COLORS.vogel}" font-size="14" font-family="Arial" font-weight="bold">VOGELS 🐦</text>
 <text x="150" y="84" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">veren · 2 vleugels · snavel · eieren</text>
 <text x="20" y="115" fill="${COLORS.text}" font-size="11" font-family="Arial">klein: mus, mees</text>
 <text x="20" y="133" fill="${COLORS.text}" font-size="11" font-family="Arial">groot: havik, uil</text>
-<text x="20" y="151" fill="${COLORS.text}" font-size="11" font-family="Arial">vliegt niet: pinguïn, kip</text>
+<text x="20" y="151" fill="${COLORS.text}" font-size="11" font-family="Arial">vliegt niet: pinguïn, struisvogel</text>
 </svg>`,
     checks: [
       {
@@ -149,7 +149,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Pinguïn = zwemt", tekst: "Pinguïn heeft vleugels die als 'flippers' werken — zwemmen, niet vliegen." }],
           woorden: [{ woord: "pinguïn", uitleg: "Vogel die niet vliegt. Leeft op het zuidelijk halfrond, zwemt heel goed." }],
-          theorie: "Niet alle vogels vliegen: pinguïn, struisvogel, kip, kiwi.",
+          theorie: "Niet alle vogels vliegen: pinguïn, struisvogel, kiwi.",
           voorbeelden: [{ type: "feit", tekst: "Pinguïn-vleugels evolueerden tot flippers voor zwemmen." }],
           basiskennis: [{ onderwerp: "Wel vogel", uitleg: "Pinguïn heeft veren + snavel + legt eieren → echt vogel, ondanks niet-vliegen." }],
           niveaus: { basis: "pinguïn.", simpeler: "Pinguïn is vogel maar kan niet vliegen — gebruikt vleugels om te zwemmen.", nogSimpeler: "Pinguïn" },
@@ -159,7 +159,7 @@ const steps = [
   },
   {
     title: "Vissen, reptielen en amfibieën",
-    explanation: "**Vissen** 🐠:\n• Leven in water.\n• **Kieuwen** — om zuurstof uit water te halen.\n• **Schubben** op het lichaam.\n• **Vinnen** om te zwemmen.\n• **Koud bloed** — temperatuur volgt water.\n• Eieren leggen.\n• Voorbeelden: forel, baars, zalm, haring.\n\n**Reptielen** 🦎:\n• **Schubben** of harde huid.\n• **Koud bloed** — opwarmen in zon.\n• **Eieren leggen** (op land, in zand).\n• Ademen met longen.\n• Voorbeelden: hagedis, slang, krokodil, schildpad.\n\n**Amfibieën** 🐸:\n• **Twee levens**: jong in water (kieuwen), volwassen op land (longen).\n• **Glibberige huid** — geen schubben.\n• **Koud bloed**.\n• **Eieren in water**.\n• Voorbeelden: kikker, salamander, pad.\n\n**Insecten** 🐞:\n• **6 poten** (precies — dat is dé manier om ze te herkennen).\n• Vaak vleugels (4 of 2).\n• Hard pantser (geen botten binnenin).\n• Voorbeelden: mier, vlinder, bij, kever.\n\n**Spinnen** zijn GEEN insecten — ze hebben **8 poten**.",
+    explanation: "**Vissen** 🐠:\n• Leven in water.\n• **Kieuwen** — om zuurstof uit water te halen.\n• **Schubben** op het lichaam.\n• **Vinnen** om te zwemmen.\n• **Koud bloed** — temperatuur volgt water.\n• Eieren leggen.\n• Voorbeelden: forel, baars, zalm, haring.\n\n**Reptielen** 🦎:\n• **Schubben** of harde huid.\n• **Koud bloed** — opwarmen in zon.\n• Meestal **eieren leggen** (op land, in zand).\n• Ademen met longen.\n• Voorbeelden: hagedis, slang, krokodil, schildpad.\n\n**Amfibieën** 🐸:\n• **Twee levens**: jong in water (kieuwen), volwassen op land (longen).\n• **Glibberige huid** — geen schubben.\n• **Koud bloed**.\n• **Eieren in water**.\n• Voorbeelden: kikker, salamander, pad.\n\n**Insecten** 🐞:\n• **6 poten** (precies — dat is dé manier om ze te herkennen).\n• Vaak vleugels (4 of 2).\n• Hard pantser (geen botten binnenin).\n• Voorbeelden: mier, vlinder, bij, kever.\n\n**Spinnen** zijn GEEN insecten — ze hebben **8 poten**.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="40" width="120" height="50" rx="6" fill="${COLORS.vis}" opacity="0.18"/>
 <text x="80" y="62" text-anchor="middle" fill="${COLORS.vis}" font-size="11" font-family="Arial" font-weight="bold">VISSEN</text>
@@ -205,8 +205,8 @@ const steps = [
         },
       },
       {
-        q: "Wat is een **spin**?",
-        options: ["Geen insect", "Een insect", "Een reptiel", "Een vogel"],
+        q: "Wat klopt over een **spin**?",
+        options: ["Het is geen insect", "Het is een insect", "Het is een reptiel", "Het is een vogel"],
         answer: 0,
         wrongHints: [null, "Spinnen zijn aparte groep (spinachtigen).", "Spinnen hebben geen schubben.", "Spinnen hebben geen veren."],
         uitlegPad: {
@@ -222,7 +222,7 @@ const steps = [
   },
   {
     title: "Andere diergroepen",
-    explanation: "Naast die 5 hoofdgroepen zijn er nog kleinere:\n\n**Weekdieren** 🐌:\n• Zacht lichaam, vaak in een schelp.\n• Voorbeelden: slak, mossel, octopus, inktvis.\n\n**Schaaldieren** 🦀:\n• Pantser om lichaam.\n• Veel poten.\n• Vaak in water.\n• Voorbeelden: krab, kreeft, garnaal.\n\n**Wormen** 🪱:\n• Lang, geen poten.\n• Voorbeelden: regenworm, lintworm.\n\n**Stekelhuidigen** ⭐:\n• In zee, sterachtig.\n• Voorbeelden: zeester, zee-egel.\n\nDeze groepen zien er anders uit, maar zijn ook 'dieren'.\n\n**Even bedenken**: alle dieren zijn:\n• Levend (eten, ademen, groeien...).\n• Niet planten (kunnen geen fotosynthese).\n• Niet schimmels.\n\nDe diversiteit is enorm. Op aarde leven naar schatting **8 miljoen** verschillende diersoorten — de meeste zijn insecten.",
+    explanation: "Naast deze groepen zijn er nog andere:\n\n**Weekdieren** 🐌:\n• Zacht lichaam, vaak in een schelp.\n• Voorbeelden: slak, mossel, octopus, inktvis.\n\n**Schaaldieren** 🦀:\n• Pantser om lichaam.\n• Veel poten.\n• Vaak in water.\n• Voorbeelden: krab, kreeft, garnaal.\n\n**Wormen** 🪱:\n• Lang, geen poten.\n• Voorbeelden: regenworm, lintworm.\n\n**Stekelhuidigen** ⭐:\n• In zee, sterachtig.\n• Voorbeelden: zeester, zee-egel.\n\nDeze groepen zien er anders uit, maar zijn ook 'dieren'.\n\n**Even bedenken**: alle dieren zijn:\n• Levend (eten, ademen, groeien...).\n• Niet planten (kunnen geen fotosynthese).\n• Niet schimmels.\n\nDe diversiteit is enorm. Op aarde leven naar schatting **8 miljoen** verschillende diersoorten — de meeste zijn insecten.",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">andere diergroepen</text>
 <text x="20" y="55" fill="${COLORS.text}" font-size="11" font-family="Arial">🐌 weekdieren — slak, mossel</text>
@@ -250,7 +250,7 @@ const steps = [
         q: "Tot welke groep hoort een **krab**?",
         options: ["Schaaldieren", "Weekdieren", "Vissen", "Zoogdieren"],
         answer: 0,
-        wrongHints: [null, "Geen schelp zoals een slak (weekdier).", "Geen kieuwen + schubben zoals een vis.", "Geen vacht zoals een zoogdier."],
+        wrongHints: [null, "Geen schelp zoals een slak (weekdier).", "Geen schubben en vinnen zoals een vis.", "Geen vacht zoals een zoogdier."],
         uitlegPad: {
           stappen: [{ titel: "Pantser = schaaldier", tekst: "Krab heeft hard pantser + veel poten = schaaldier." }],
           woorden: [{ woord: "schaaldier", uitleg: "Pantser, veel poten, vaak in water. Krab, kreeft, garnaal." }],
@@ -266,14 +266,14 @@ const steps = [
   // C
   {
     title: "Levensstadia — van baby tot volwassen",
-    explanation: "Dieren beginnen hun leven anders. Een paar belangrijke voorbeelden:\n\n**Mensen + zoogdieren** (levend baren):\n• baby → peuter → kind → tiener → volwassen.\n\n**Vogels**:\n• ei → kuiken → jonge vogel → volwassen.\n• Een **moedervogel broedt** op het ei (warm houden) tot het uitkomt.\n\n**Vissen**:\n• ei → larve → volwassen vis.\n\n**Amfibieën** (kikker als voorbeeld):\n• ei → **kikkervisje** (in water, met staart) → kikker met poten → volwassen kikker.\n• Dit heet **gedaanteverwisseling** (metamorfose): het dier verandert van vorm.\n\n**Insecten** (vlinder als voorbeeld):\n• ei → **rups** → **pop** → volwassen vlinder.\n• Ook gedaanteverwisseling — heel beroemd.\n\n**Veel dieren bij geboorte**:\n• **Nestblijvers** (vogel-kuiken, mens-baby): kunnen niets, ouders zorgen.\n• **Nestvlieders** (kuiken van eend): kunnen meteen lopen.\n\n**Paartijd**: dieren willen zich voortplanten. Vogels zingen, herten vechten, kikkers kwaken — allemaal om een partner te vinden.",
+    explanation: "Dieren beginnen hun leven anders. Een paar belangrijke voorbeelden:\n\n**Mensen + zoogdieren** (levend baren):\n• baby → peuter → kind → tiener → volwassen.\n\n**Vogels**:\n• ei → kuiken → jonge vogel → volwassen.\n• Een **moedervogel broedt** op het ei (warm houden) tot het uitkomt.\n\n**Vissen**:\n• ei → larve → volwassen vis.\n\n**Amfibieën** (kikker als voorbeeld):\n• ei → **kikkervisje** (in water, met staart) → kikker met poten → volwassen kikker.\n• Dit heet **gedaanteverwisseling** (metamorfose): het dier verandert van vorm.\n\n**Insecten** (vlinder als voorbeeld):\n• ei → **rups** → **pop** → volwassen vlinder.\n• Ook gedaanteverwisseling — heel beroemd.\n\n**Veel dieren bij geboorte**:\n• **Nestblijvers** (jonge merel of mus, mensenbaby): kunnen nog niets, de ouders zorgen voor alles.\n• **Nestvlieders** (kuiken van kip of eend): kunnen meteen lopen.\n\n**Paartijd**: dieren willen zich voortplanten. Vogels zingen, herten vechten, kikkers kwaken — allemaal om een partner te vinden.",
     svg: `<svg viewBox="0 0 300 200">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">levensstadia</text>
 <text x="20" y="55" fill="${COLORS.text}" font-size="11" font-family="Arial">vogel: ei → kuiken → volwassen</text>
 <text x="20" y="75" fill="${COLORS.text}" font-size="11" font-family="Arial">kikker: ei → kikkervisje → kikker</text>
 <text x="20" y="95" fill="${COLORS.text}" font-size="11" font-family="Arial">vlinder: ei → rups → pop → vlinder</text>
 <text x="20" y="115" fill="${COLORS.text}" font-size="11" font-family="Arial">mens: baby → kind → tiener → volwassen</text>
-<text x="150" y="155" text-anchor="middle" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">metamorfose: van vorm veranderen</text>
+<text x="150" y="155" text-anchor="middle" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">gedaanteverwisseling: van vorm veranderen</text>
 <text x="150" y="175" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial">kikker + vlinder doen dat</text>
 </svg>`,
     checks: [
@@ -292,7 +292,7 @@ const steps = [
         },
       },
       {
-        q: "Wat heet **gedaanteverwisseling**?",
+        q: "Wat betekent **gedaanteverwisseling**?",
         options: [
           "Een dier dat tijdens zijn leven van vorm verandert",
           "Een dier dat oud wordt",
@@ -369,7 +369,7 @@ const steps = [
   },
   {
     title: "Herfst en winter",
-    explanation: "**HERFST 🍂** (september, oktober, november):\n• Wordt **kouder**, dagen worden korter.\n• Bladeren van bomen worden geel/oranje en **vallen af**.\n• **Trekvogels** vliegen naar warme landen.\n• Sommige dieren leggen voorraad aan: eekhoorn verstopt nootjes.\n• Anderen worden vetter voor de winter (egel, dassen).\n• Veel paddenstoelen.\n\n**WINTER ❄️** (december, januari, februari):\n• Koud, soms vorst en sneeuw.\n• **Bomen kaal** (alleen naaldbomen blijven groen).\n• Veel dieren slapen in **winterslaap** (egel, vleermuis, beer in koudere streken).\n• Andere dieren passen vacht aan: dikker, soms wit (sneeuwhaas).\n• Vogels die blijven (mus, mees) hebben moeite om voedsel te vinden.\n• Mensen kunnen helpen: vogelvoer in de tuin.\n\n**Wat is winterslaap?**\nDieren laten hun **lichaamstemperatuur dalen** en bewegen bijna niet. Hun hart klopt langzaam. Zo gebruiken ze weinig energie. In de lente worden ze wakker.\n\n**Waarom vallen bladeren?**\nBomen sparen energie. In winter is er weinig zonlicht voor fotosynthese. Bladeren zouden alleen energie kosten. Naaldbomen behouden hun naalden omdat die met minder energie kunnen.",
+    explanation: "**HERFST 🍂** (september, oktober, november):\n• Wordt **kouder**, dagen worden korter.\n• Bladeren van bomen worden geel/oranje en **vallen af**.\n• **Trekvogels** vliegen naar warme landen.\n• Sommige dieren leggen voorraad aan: eekhoorn verstopt nootjes.\n• Anderen worden vetter voor de winter (egel, dassen).\n• Veel paddenstoelen.\n\n**WINTER ❄️** (december, januari, februari):\n• Koud, soms vorst en sneeuw.\n• **Bomen kaal** (de meeste naaldbomen blijven groen).\n• Sommige dieren houden **winterslaap** (egel, vleermuis, hamster).\n• De eekhoorn en de beer houden **winterrust**: ze slapen veel, maar worden af en toe wakker om te eten.\n• Andere dieren passen vacht aan: dikker, soms wit (sneeuwhaas).\n• Vogels die blijven (mus, mees) hebben moeite om voedsel te vinden.\n• Mensen kunnen helpen: vogelvoer in de tuin.\n\n**Wat is winterslaap?**\nDieren laten hun **lichaamstemperatuur dalen** en bewegen bijna niet. Hun hart klopt langzaam. Zo gebruiken ze weinig energie. In de lente worden ze wakker.\n\n**Waarom vallen bladeren?**\nBomen sparen energie. In winter is er weinig zonlicht voor fotosynthese. Bladeren zouden alleen energie kosten. Naaldbomen behouden hun naalden omdat die met minder energie kunnen.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="40" width="120" height="120" rx="10" fill="${COLORS.herfst}" opacity="0.30" stroke="${COLORS.herfst}" stroke-width="2"/>
 <text x="80" y="62" text-anchor="middle" fill="#bf360c" font-size="13" font-family="Arial" font-weight="bold">HERFST 🍂</text>
@@ -386,7 +386,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "Welk dier slaapt **winterslaap**?",
+        q: "Welk dier houdt **winterslaap**?",
         options: ["egel", "kraai", "ree", "merel"],
         answer: 0,
         wrongHints: [null, "Kraai blijft actief in de winter.", "Ree blijft actief, zoekt eten in bos.", "De merel blijft de hele winter wakker en zoekt eten."],
@@ -422,7 +422,7 @@ const steps = [
   },
   {
     title: "Planten en bomen",
-    explanation: "**Planten** zijn levende wezens die anders zijn dan dieren:\n• **Maken eigen voedsel** uit zonlicht (fotosynthese).\n• Geen hart, maag of hersenen zoals dieren.\n• Bewegen niet weg, blijven op één plek.\n• Hebben bladeren, stengels, wortels, bloemen.\n\n**Onderdelen van een plant**:\n• **Wortel**: in de grond — pakt water + voedingsstoffen op.\n• **Stengel/stam**: draagt de plant.\n• **Blad**: vangt zonlicht — fotosynthese.\n• **Bloem**: voor voortplanting.\n• **Vrucht/zaad**: nieuwe plant.\n\n**Twee soorten bomen**:\n• **Loofbomen** — bladeren in zomer, kaal in winter. Eik, beuk, esdoorn, berk.\n• **Naaldbomen** — naalden, blijven groen ('s winters ook). Den, spar, taxus.\n\n**Fotosynthese** (foto = licht, synthese = maken):\n• water + koolstofdioxide + zonlicht → suiker + zuurstof.\n• Daarom geven planten ons zuurstof om te ademen!\n\n**Bestuiving**: bijen, hommels en vlinders brengen stuifmeel van bloem naar bloem. Zonder hen geen vruchten en zaden — geen nieuwe planten.",
+    explanation: "**Planten** zijn levende wezens die anders zijn dan dieren:\n• **Maken eigen voedsel** uit zonlicht (fotosynthese).\n• Geen hart, maag of hersenen zoals dieren.\n• Bewegen niet weg, blijven op één plek.\n• Hebben bladeren, stengels, wortels, bloemen.\n\n**Onderdelen van een plant**:\n• **Wortel**: in de grond — pakt water + voedingsstoffen op.\n• **Stengel/stam**: draagt de plant.\n• **Blad**: vangt zonlicht — fotosynthese.\n• **Bloem**: voor voortplanting.\n• **Vrucht/zaad**: nieuwe plant.\n\n**Twee soorten bomen**:\n• **Loofbomen** — bladeren in zomer, kaal in winter. Eik, beuk, esdoorn, berk.\n• **Naaldbomen** — naalden, blijven groen ('s winters ook). Den, spar, taxus.\n\n**Fotosynthese** (foto = licht, synthese = maken):\n• water + koolstofdioxide + zonlicht → suiker + zuurstof.\n• Daarom geven planten ons zuurstof om te ademen!\n\n**Bestuiving**: bijen, hommels en vlinders brengen stuifmeel van bloem naar bloem. Zonder hen maken veel planten geen vruchten en zaden.",
     svg: `<svg viewBox="0 0 300 200">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="14" font-family="Arial" font-weight="bold">plant 🌱</text>
 <line x1="150" y1="50" x2="150" y2="160" stroke="#5d4037" stroke-width="3"/>
@@ -523,12 +523,12 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Gras is producent (begin).", "Konijn eet gras maar wordt zelf gegeten.", "Zon geeft energie maar leeft niet."],
         uitlegPad: {
-          stappen: [{ titel: "Vos = top", tekst: "Vos eet konijn, niemand eet vos. → vos staat bovenaan." }],
-          woorden: [{ woord: "toppredator", uitleg: "Dier dat geen natuurlijke vijand heeft." }],
+          stappen: [{ titel: "Vos = top", tekst: "De vos eet het konijn. In deze keten eet niemand de vos. → vos staat bovenaan." }],
+          woorden: [{ woord: "toppredator", uitleg: "Dier bovenaan de keten: een volwassen dier wordt bijna nooit door een ander dier gegeten." }],
           theorie: "Voedselketen-volgorde: producent → consument → toppredator. Pijl wijst van prooi naar eter.",
           voorbeelden: [{ type: "stap", tekst: "Gras→konijn→vos. Gras=begin. Konijn=midden. Vos=top." }],
           basiskennis: [{ onderwerp: "Energie stroomt op", uitleg: "Energie van zon → gras → konijn → vos. Vos krijgt minste deel." }],
-          niveaus: { basis: "vos.", simpeler: "Vos eet konijn, niemand eet vos → vos bovenaan keten.", nogSimpeler: "Vos" },
+          niveaus: { basis: "vos.", simpeler: "Vos eet konijn. In deze keten eet niemand de vos → vos staat bovenaan.", nogSimpeler: "Vos" },
         },
       },
       {
@@ -556,7 +556,7 @@ const steps = [
   // E
   {
     title: "Eindopdracht — natuur door elkaar",
-    explanation: "Tijd om alles door elkaar te toetsen!\n\n**Wat je hebt geleerd**:\n• 6 kenmerken van leven.\n• 5 hoofd-diergroepen: zoogdieren, vogels, vissen, reptielen+amfibieën, insecten.\n• Plus weekdieren, schaaldieren, wormen.\n• Levensstadia + metamorfose (kikker, vlinder).\n• 4 seizoenen — wat gebeurt waar.\n• Plant-onderdelen + fotosynthese.\n• Voedselketen + producent/herbivoor/carnivoor.\n\nVeel succes!",
+    explanation: "Tijd om alles door elkaar te toetsen!\n\n**Wat je hebt geleerd**:\n• 6 kenmerken van leven.\n• 6 hoofd-diergroepen: zoogdieren, vogels, vissen, reptielen, amfibieën, insecten.\n• Plus weekdieren, schaaldieren, wormen.\n• Levensstadia + metamorfose (kikker, vlinder).\n• 4 seizoenen — wat gebeurt waar.\n• Plant-onderdelen + fotosynthese.\n• Voedselketen + producent/planteneter/vleeseter.\n\nVeel succes!",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="24" text-anchor="middle" fill="${COLORS.warm}" font-size="14" font-family="Arial" font-weight="bold">eindtoets</text>
 <text x="150" y="60" text-anchor="middle" fill="${COLORS.text}" font-size="12" font-family="Arial">leven · groepen · seizoenen</text>
@@ -568,7 +568,7 @@ const steps = [
         q: "Tot welke groep behoort een **vleermuis**?",
         options: ["zoogdier", "vogel", "insect", "reptiel"],
         answer: 0,
-        wrongHints: [null, "Geen veren — denk aan vacht + zogen.", "Geen 6 poten + geen exoskelet.", "Geen schubben + warmbloedig."],
+        wrongHints: [null, "Geen veren — denk aan vacht + zogen.", "Geen 6 poten en geen hard pantser.", "Geen schubben + warmbloedig."],
         uitlegPad: {
           stappen: [{ titel: "Vleermuis = enige vliegende zoogdier", tekst: "Vleermuis lijkt op vogel maar heeft vacht + zoogt → zoogdier (enige zoogdier dat kan vliegen)." }],
           woorden: [{ woord: "vleermuis", uitleg: "Enige zoogdier dat kan vliegen. Vacht, geen veren." }],
@@ -586,7 +586,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Bestuiving = sleutel", tekst: "Bij vliegt van bloem naar bloem en brengt stuifmeel mee → bevruchting → vrucht/zaad." }],
           woorden: [{ woord: "bestuiving", uitleg: "Stuifmeel van ene bloem naar andere → bloem kan vrucht/zaad maken." }],
-          theorie: "Zonder bestuivers (bij/hommel/vlinder): geen vruchten en zaden = geen nieuwe planten.",
+          theorie: "Zonder bestuivers (bij/hommel/vlinder) maken veel planten geen vruchten en zaden.",
           voorbeelden: [{ type: "feit", tekst: "Veel ons voedsel (appel, aardbei, tomaat) bestaat dankzij bijen." }],
           basiskennis: [{ onderwerp: "Bijen sterven", uitleg: "Wereldwijd dalen bijen-aantallen → groot probleem voor voedselproductie." }],
           niveaus: { basis: "Bestuiven.", simpeler: "Bijen brengen stuifmeel van bloem naar bloem → bevruchting → vrucht/zaad → nieuwe planten.", nogSimpeler: "Bestuiven" },
@@ -637,15 +637,15 @@ const steps = [
       { q: "Welk seizoen begint **rond 21 maart**?", options: ["Lente","Zomer","Herfst","Winter"], answer: 0, wrongHints: [null, "21 juni.", "21 sept.", "21 dec."] },
       { q: "Welk seizoen heeft **bladval**?", options: ["Herfst","Lente","Zomer","Winter"], answer: 0, wrongHints: [null, "Bloesem.", "Volle bladeren.", "Geen bladeren meer."] },
       { q: "Wat doet een **trekvogel** in de winter?", options: ["Vliegt naar warmer land","Slaapt","Verandert kleur","Niets"], answer: 0, wrongHints: [null, "Winterslaap is iets voor egels, niet voor vogels.", "Van kleur wisselen doet een sneeuwhaas — denk aan wat 'trek' in trekvogel betekent.", "Hij doet juist iets groots — denk aan het woord 'trek'."] },
-      { q: "Wat is **winterslaap**?", options: ["Langdurige rust met lage activiteit","Korte slaap","Wakker blijven","Vlucht"], answer: 0, wrongHints: [null, "Niet — lang.", "Tegengestelde.", "Trekvogels."] },
+      { q: "Wat is **winterslaap**?", options: ["Langdurige rust met lage activiteit","Korte slaap","Wakker blijven","Vlucht"], answer: 0, wrongHints: [null, "Winterslaap duurt geen nacht, maar maanden.", "Bij winterslaap blijft het dier juist niet wakker.", "Wegvliegen naar een warm land doen trekvogels."] },
       { q: "Welk dier houdt **winterslaap** in NL?", options: ["Egel","Vos","Konijn","Eekhoorn"], answer: 0, wrongHints: [null, "Blijft actief.", "Blijft actief.", "Blijft actief — eet van zijn wintervoorraad."] },
       { q: "Welk seizoen is in Nederland meestal het **droogst**?", options: ["Lente","Winter","Zomer","Herfst"], answer: 0, wrongHints: [null, "In de winter valt er vaker regen dan in de lente.", "Verrassend: in de zomer valt juist veel regen, door onweersbuien.", "De herfst is vaak het natst."] },
       { q: "Wat doet een **kikkervisje** in de lente?", options: ["Groeit uit tot kikker","Slaapt","Verstopt zich","Vliegt"], answer: 0, wrongHints: [null, "Het is juist actief: zwemmen + groeien.", "Het zwemt rond in het water, niet verborgen.", "Kikkers zijn geen vliegers."] },
       { q: "Welke vogel **trekt** in de herfst weg uit NL?", options: ["Ooievaar","Mus","Merel","Koolmees"], answer: 0, wrongHints: [null, "Mussen blijven heel jaar in NL — standvogel.", "Merels blijven hier — bij voederplankjes zie je ze 's winters ook.", "Koolmezen blijven het hele jaar — je ziet ze 's winters bij de pindakaaspot."] },
       { q: "In welk seizoen gaan de **knoppen** aan een tak open (lopen ze uit)?", options: ["Lente","Zomer","Herfst","Winter"], answer: 0, wrongHints: [null, "Dan zijn de bladeren al volgroeid.", "Dan vallen de bladeren juist.", "Dan zitten de knoppen nog dicht te wachten."] },
-      { q: "Welk seizoen heeft **kortste dagen** in NL?", options: ["Winter","Zomer","Lente","Herfst"], answer: 0, wrongHints: [null, "Langste dagen.", "Half.", "Korter dan zomer."] },
+      { q: "Welk seizoen heeft **kortste dagen** in NL?", options: ["Winter","Zomer","Lente","Herfst"], answer: 0, wrongHints: [null, "In de zomer zijn de dagen juist het langst.", "In de lente worden de dagen steeds langer.", "In de herfst worden de dagen korter, maar de kortste dag (rond 21 december) valt in de winter."] },
       { q: "Wat is een **standvogel**?", options: ["Vogel die het hele jaar in NL blijft","Vogel die in de winter wegtrekt","Vogel die alleen insecten eet","Vogel die niet kan vliegen"], answer: 0, wrongHints: [null, "Dat is juist een trekvogel.", "Wat een vogel eet, heeft niets met 'stand' te maken.", "Kunnen vliegen heeft niets met 'stand' te maken."] },
-      { q: "Wat doet een **rups** uiteindelijk?", options: ["Wordt vlinder","Sterft direct","Wordt bij","Wordt spin"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Spinnen hebben geen rups-fase."] },
+      { q: "Wat doet een **rups** uiteindelijk?", options: ["Wordt vlinder","Sterft direct","Wordt bij","Wordt spin"], answer: 0, wrongHints: [null, "De rups eet en groeit eerst een hele tijd — en dan verandert hij.", "Uit een bijeneitje komt een larve, geen rups.", "Spinnen hebben geen rups-fase."] },
     ],
   },
 ];

@@ -82,7 +82,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Statiegeld = bewaard geld", tekst: "**Statiegeld** is geen belasting + geen boete + geen extra kosten. Het is **JOUW eigen geld** dat tijdelijk bij de fles 'in bewaring' staat. Bij **inleveren** krijg je het terug." },
-            { titel: "Bedragen in NL (2024)", tekst: "• **Plastic fles 0,5L**: €0,15\n• **Plastic fles 1L+**: €0,25\n• **Glasfles bier**: €0,10\n• **Glasfles statiegeld-frisdrank**: €0,25-1,00\n• **Blikje** (sinds 2023): €0,15" },
+            { titel: "Bedragen in NL (2024)", tekst: "• **Plastic fles tot en met 1 liter**: €0,15\n• **Plastic fles groter dan 1 liter**: €0,25\n• **Glasfles bier**: €0,10\n• **Glasfles statiegeld-frisdrank**: €0,25-1,00\n• **Blikje** (sinds 2023): €0,15" },
             { titel: "Waarom werkt het?", tekst: "Mensen leveren flessen + blikjes IN (om hun geld terug te krijgen) ipv weg te gooien. Resultaat: **minder zwerfafval** + **meer recycling**. Sinds het blikjes-statiegeld liggen er flink minder blikjes in de natuur." },
           ],
           woorden: [
@@ -244,7 +244,7 @@ const steps = [
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
       { q: "Wat hoort in **GFT-bak**?", options: ["Schillen", "Plastic", "Glas", "Batterij"], answer: 0, wrongHints: [null, "PMD.", "Glasbak.", "KCA."] },
-      { q: "Wat is **statiegeld** op een grote plastic fles (1 liter of meer)?", options: ["€0,25", "Niks", "€10", "€1"], answer: 0, wrongHints: [null, "Wel.", "Te veel.", "Te veel."] },
+      { q: "Wat is **statiegeld** op een grote plastic fles (meer dan 1 liter)?", options: ["€0,25", "Niks", "€10", "€1"], answer: 0, wrongHints: [null, "Wel.", "Te veel.", "Te veel."] },
       { q: "**Beste optie** Ladder van Lansink?", options: ["Voorkomen", "Verbranden", "Storten", "Recyclen"], answer: 0, wrongHints: [null, "Slecht.", "Slechtste.", "Goed maar niet beste."] },
       { q: "**Plastic fles** vergaat in?", options: ["~450 jr", "1 maand", "10 dagen", "~50 jr"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Veel langer — eeuwen."] },
       { q: "Wie startte **Ocean Cleanup**?", options: ["Boyan Slat", "Verstappen", "Cruijff", "Geen NL'er"], answer: 0, wrongHints: [null, "F1.", "Voetbal.", "Wel NL!"] },
