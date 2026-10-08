@@ -126,6 +126,74 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welk Romeins symbool heeft de **grootste** waarde?",
+        options: ["M", "D", "C", "L"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is 500 — er is er nog één die meer waard is.",
+          null,
+          "Kijk in de tabel: welk symbool staat helemaal onderaan?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek de grootste",
+              tekst: "De waarden zijn: I = 1, V = 5, X = 10, L = 50, C = 100, D = 500, M = 1000. De grootste is M = 1000.",
+            },
+          ],
+          niveaus: {
+            basis: "M = 1000, dat is meer dan D (500), C (100) en L (50).",
+            simpeler: "In het ezelsbruggetje I-V-X-L-C-D-M staat het grootste symbool achteraan.",
+            nogSimpeler: "Wat is meer: 1000, 500, 100 of 50?",
+          },
+        },
+      },
+      {
+        q: "Welke letter is **geen** Romeins cijfer?",
+        options: ["B", "L", "D", "C"],
+        answer: 0,
+        wrongHints: [null, "L hoort in het rijtje I-V-X-L-C-D-M. Welke letter niet?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "De zeven symbolen",
+              tekst: "De Romeinse cijfers zijn I, V, X, L, C, D en M. De letter B hoort daar niet bij.",
+            },
+          ],
+          niveaus: {
+            basis: "L = 50, D = 500 en C = 100. B is geen Romeins cijfer.",
+            simpeler: "Loop het ezelsbruggetje I-V-X-L-C-D-M na: welke letter zit er niet in?",
+            nogSimpeler: "Zit de B in I-V-X-L-C-D-M?",
+          },
+        },
+      },
+      {
+        q: "Welk rijtje staat van **klein naar groot**?",
+        options: ["I, V, X, L", "I, X, V, L", "V, I, X, L", "I, V, L, X"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Wat is meer waard: X of V?",
+          "Begint dit rijtje wel met het kleinste symbool?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Waarden opzoeken",
+              tekst: "I = 1, V = 5, X = 10, L = 50. Van klein naar groot is dat I, V, X, L.",
+            },
+          ],
+          niveaus: {
+            basis: "1, 5, 10, 50 hoort bij I, V, X, L.",
+            simpeler: "Het ezelsbruggetje begint zo: I Vond Xander Leuk.",
+            nogSimpeler: "Zet 1, 5, 10 en 50 op volgorde.",
+          },
+        },
+      },
     ],
   },
 
@@ -224,6 +292,103 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is **XXXI**?",
+        options: ["31", "29", "33", "21"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Staat de I vóór of ná de X'en?",
+          "Hoeveel I'tjes staan er achteraan?",
+          "Tel het aantal X'en nog eens.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "10 + 10 + 10 + 1",
+              tekst: "Drie keer X is 30. De I staat erachter, dus erbij: 30 + 1 = 31.",
+            },
+          ],
+          niveaus: {
+            basis: "XXX = 30 en I = 1, samen 31.",
+            simpeler: "Elke X is 10. Tel de drie X'en en dan de I erbij.",
+            nogSimpeler: "10 + 10 + 10 + 1 = ?",
+          },
+        },
+      },
+      {
+        q: "Hoe schrijf je **23** in Romeinse cijfers?",
+        options: ["XXIII", "XXII", "XXXIII", "IIIXX"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Tel de I'tjes: hoeveel heb je nodig voor 3?",
+          "Hoeveel X'en heb je nodig voor 20?",
+          "Bij optellen staat het kleinere symbool achteraan.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "20 + 3",
+              tekst: "20 = XX en 3 = III. Grote symbolen eerst: XXIII.",
+            },
+          ],
+          niveaus: {
+            basis: "XX (20) + III (3) = XXIII.",
+            simpeler: "Eerst de tientallen (X'en), dan de enen (I'tjes).",
+            nogSimpeler: "Twee keer X en drie keer I.",
+          },
+        },
+      },
+      {
+        q: "Wat is **CLV**?",
+        options: ["155", "145", "165", "255"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Er staat geen kleiner symbool vóór een groter — hoef je hier af te trekken?",
+          "Staat er een X in dit getal?",
+          "Hoeveel C'tjes staan er?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "100 + 50 + 5",
+              tekst: "C = 100, L = 50, V = 5. Steeds kleiner ná groter, dus optellen: 155.",
+            },
+          ],
+          niveaus: {
+            basis: "C + L + V = 100 + 50 + 5 = 155.",
+            simpeler: "Zoek de waarde van elke letter op en tel ze bij elkaar.",
+            nogSimpeler: "100 + 50 + 5 = ?",
+          },
+        },
+      },
+      {
+        q: "Welk Romeins getal is het **grootst**?",
+        options: ["XXII", "XVIII", "XXI", "XVI"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Reken het eerst uit: X + V + I + I + I.",
+          null,
+          "Reken ze alle vier uit en vergelijk.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Alle vier uitrekenen",
+              tekst: "XXII = 22, XVIII = 18, XXI = 21, XVI = 16. Het grootste is 22, dus XXII.",
+            },
+          ],
+          niveaus: {
+            basis: "22 is meer dan 21, 18 en 16.",
+            simpeler: "Maak van elk Romeins getal eerst een gewoon getal.",
+            nogSimpeler: "Wat is het meest: 22, 18, 21 of 16?",
+          },
+        },
+      },
     ],
   },
 
@@ -319,6 +484,79 @@ const steps = [
             basis: "C vóór D betekent 500 − 100 = 400.",
             simpeler: "Kleine C links van de D → eraf halen.",
             nogSimpeler: "500 − 100 = ?",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is **XIX**?",
+        options: ["19", "21", "11", "9"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk naar IX: staat de I vóór of ná de X?",
+          "Er staan twee X'en — tel je beide mee?",
+          "Vergeet de eerste X niet.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "10 + (10 − 1)",
+              tekst: "Eerst X = 10. Dan IX: de I staat vóór de X, dus 10 − 1 = 9. Samen 10 + 9 = 19.",
+            },
+          ],
+          niveaus: {
+            basis: "X = 10 en IX = 9, samen 19.",
+            simpeler: "Splits het in X en IX. Reken elk stukje uit.",
+            nogSimpeler: "10 + 9 = ?",
+          },
+        },
+      },
+      {
+        q: "Hoe schrijf je **44** in Romeinse cijfers?",
+        options: ["XLIV", "XXXXIV", "LXIV", "XLVI"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Vier dezelfde letters achter elkaar mag niet.",
+          "Staat de X hier vóór of ná de L?",
+          "Is VI 4 of 6?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "40 + 4",
+              tekst: "40 = XL (50 − 10) en 4 = IV (5 − 1). Samen: XLIV.",
+            },
+          ],
+          niveaus: {
+            basis: "XL (40) + IV (4) = XLIV.",
+            simpeler: "Maak eerst 40 en dan 4, allebei met aftrekken.",
+            nogSimpeler: "40 = XL en 4 = IV. Zet ze achter elkaar.",
+          },
+        },
+      },
+      {
+        q: "In welk Romeins getal moet je ergens **aftrekken**?",
+        options: ["LIV", "LVI", "LXI", "CLI"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Staat er in LVI een kleiner symbool vóór een groter?",
+          null,
+          "Kijk per letter: wordt de letter rechts ervan steeds kleiner?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek kleiner vóór groter",
+              tekst: "In LIV staat de I vóór de V. Dat is aftrekken: IV = 4, dus LIV = 54. In de andere getallen staat steeds kleiner ná groter.",
+            },
+          ],
+          niveaus: {
+            basis: "LIV bevat IV (5 − 1), dus daar trek je af.",
+            simpeler: "Zoek een kleine letter die links van een grotere letter staat.",
+            nogSimpeler: "Staat de I vóór of ná de V?",
           },
         },
       },
@@ -430,6 +668,64 @@ const steps = [
             basis: "MM = 2000, XX = 20, IV = 4. Samen MMXXIV.",
             simpeler: "Splits: 2000 (MM), 20 (XX), 4 (IV). Plak aan elkaar.",
             nogSimpeler: "Wat zijn de Romeinse symbolen voor 2000, 20 en 4?",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "In een geschiedenisboek staat: de **XVII**e eeuw. Welke eeuw is dat?",
+        options: ["17e eeuw", "16e eeuw", "12e eeuw", "22e eeuw"],
+        answer: 0,
+        wrongHints: [null, "Staat de I hier vóór of ná de V?", "Vergeet de V niet.", "Hoeveel X'en staan er?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "10 + 5 + 1 + 1",
+              tekst: "X = 10, V = 5, I = 1, I = 1. Alles optellen: 17. Het is dus de 17e eeuw.",
+            },
+          ],
+          niveaus: {
+            basis: "XVII = 10 + 5 + 2 = 17.",
+            simpeler: "Lees stuk voor stuk: X, dan V, dan twee I'tjes. Alles staat kleiner ná groter.",
+            nogSimpeler: "10 + 5 + 1 + 1 = ?",
+          },
+        },
+      },
+      {
+        q: "Welk Romeins cijfer staat op een klok op de plek van **11**?",
+        options: ["XI", "IX", "XII", "X"],
+        answer: 0,
+        wrongHints: [null, "Dat is 9: de I staat vóór de X.", "Dat is 12.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "10 + 1",
+              tekst: "11 = 10 + 1. Je zet de I ná de X, dus optellen: XI.",
+            },
+          ],
+          niveaus: {
+            basis: "X (10) met I (1) erachter = XI = 11.",
+            simpeler: "Optellen = de kleine letter staat rechts.",
+            nogSimpeler: "10 en dan 1 erbij.",
+          },
+        },
+      },
+      {
+        q: "Op een oud gebouw staat het bouwjaar **MDCCL**. Welk jaar is dat?",
+        options: ["1750", "1550", "1700", "1250"],
+        answer: 0,
+        wrongHints: [null, "Hoeveel C'tjes staan er?", "Vergeet de L aan het eind niet.", "Vergeet de D niet."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "1000 + 500 + 100 + 100 + 50",
+              tekst: "M = 1000, D = 500, C = 100, C = 100, L = 50. Overal kleiner ná groter, dus optellen: 1750.",
+            },
+          ],
+          niveaus: {
+            basis: "M + D + CC + L = 1000 + 500 + 200 + 50 = 1750.",
+            simpeler: "Lees stuk voor stuk en tel alles bij elkaar.",
+            nogSimpeler: "1000 + 500 + 200 + 50 = ?",
           },
         },
       },
