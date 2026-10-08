@@ -1,0 +1,122 @@
+[
+  {
+    "bestand": "src/learnPaths/weersvoorspellingPo.js",
+    "zoek": "• **Code geel** — wees voorbereid (kans op gevaar)\\n• **Code oranje** — wees alert (echt gevaar)",
+    "vervang": "• **Code geel** — wees alert (kans op gevaarlijk weer)\\n• **Code oranje** — wees voorbereid (grote kans op schade of letsel)",
+    "reden": "Feitfout: bij het KNMI is code geel 'wees alert' en code oranje 'wees voorbereid' (code rood 'neem actie'). Hier waren geel en oranje omgedraaid.",
+    "ernst": 3,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/weersvoorspellingPo.js",
+    "zoek": "options: [\"Drukverschil + opwarming\", \"Magie\", \"Vulkaan\", \"Niet bestaand\"],\n        answer: 0,\n        wrongHints: [null, \"Niet.\", \"Niet primair.\", \"Wel.\"],",
+    "vervang": "options: [\"Drukverschil + opwarming\", \"Bewegende bomen\", \"Draaiende windmolens\", \"Golven op zee\"],\n        answer: 0,\n        wrongHints: [null, \"Bomen bewegen dóór de wind. Wat zet de lucht zelf in beweging?\", \"Windmolens draaien dóór de wind, ze maken geen wind.\", \"Golven ontstaan juist door de wind.\"],",
+    "reden": "Afleiders 'Magie'/'Niet bestaand' zijn ongeloofwaardig en verraden het antwoord; vervangen door echte kindermisvattingen (bomen/windmolens/golven maken wind). Hints aangepast.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/weersvoorspellingPo.js",
+    "zoek": "q: \"**Bliksem** is sneller dan **donder** omdat?\"",
+    "vervang": "q: \"Waarom zie je de **bliksem** eerder dan je de **donder** hoort?\"",
+    "reden": "Vraag was krom/onduidelijk ('bliksem is sneller dan donder'); nu eenduidig gevraagd naar de reden (licht sneller dan geluid).",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/waterkringloopPo.js",
+    "zoek": "  - **Mist** *(wolk op grondniveau)*.",
+    "vervang": "  - **Mist** *(wolk op grondniveau — valt niet naar beneden, dus eigenlijk geen neerslag)*.",
+    "reden": "Mist stond in het lijstje 'vormen van neerslag', maar mist hangt in de lucht en valt niet; botst met eind-toetsvraag 'Wat is neerslag? Regen + sneeuw + hagel'.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/waterkringloopPo.js",
+    "zoek": "\"Wel sommige plekken, niet gemiddeld.\"",
+    "vervang": "\"Eeuwen kan water in de oceaan blijven, maar niet in de lucht.\"",
+    "reden": "Hint suggereerde dat water op sommige plekken eeuwen in de lucht blijft; dat klopt niet (eeuwen = oceaan/ijs, lucht = dagen).",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/evolutieMensPo.js",
+    "zoek": "• **Ötzi** *(de IJsman, 5300 jr)*: gevonden in Alpen 1991, intact!",
+    "vervang": "• **Ötzi** *(de IJsman, 5300 jr)*: gevonden in Alpen 1991 — geen versteend fossiel maar een ijsmummie, bevroren bewaard!",
+    "reden": "Feitfout: Ötzi stond onder 'Bekende fossielen' maar is een ijsmummie (niet versteend), terwijl de les een fossiel juist definieert als versteende rest.",
+    "ernst": 3,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/evolutieMensPo.js",
+    "zoek": "• **Ötzi** (de IJsman, 5300 jr, intact in Alpen-gletsjer).",
+    "vervang": "• **Ötzi** (de IJsman, 5300 jr) — let op: geen fossiel maar een ijsmummie uit een Alpen-gletsjer.",
+    "reden": "Zelfde feitfout in theorie van de fossielen-vraag: Ötzi is geen (versteend) fossiel.",
+    "ernst": 3,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/evolutieMensPo.js",
+    "zoek": "**Mens + chimpansee + gorilla** hebben een **gemeenschappelijke voorouder** ~**7 miljoen jaar geleden**",
+    "vervang": "**Mens + chimpansee** *(en bonobo)* hebben een **gemeenschappelijke voorouder** ~**7 miljoen jaar geleden**",
+    "reden": "Feitfout: de gorilla-lijn splitste eerder af (~8-10 mln jaar). De gezamenlijke voorouder van ~7 mln jaar geleden geldt voor mens en chimpansee/bonobo (zo staat het ook in de uitlegPad).",
+    "ernst": 3,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/evolutieMensPo.js",
+    "zoek": "• Versloeg Neanderthaler + Denisovan.",
+    "vervang": "• Leefde een tijd naast Neanderthaler + Denisovan (en kreeg soms kinderen met hen); die soorten stierven later uit.",
+    "reden": "'Versloeg' is te stellig/onjuist (suggereert oorlog); waarom Neanderthalers uitstierven is onbekend (staat zelf in de tekst) en er was kruising.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/evolutieMensPo.js",
+    "zoek": "Onze soort ontstond in **Afrika** (vooral oost-Afrika, omgeving Ethiopië/Kenia).",
+    "vervang": "Onze soort ontstond in **Afrika**. De oudste fossielen van onze soort komen uit Marokko en Ethiopië.",
+    "reden": "'Vooral Oost-Afrika' is verouderd en botst met de eigen eind-toets-uitleg (oudste sapiens-fossiel Jebel Irhoud, Marokko, ~300.000 jaar).",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/evolutieMensPo.js",
+    "zoek": "options: [\"Planetoïde-inslag\", \"Vulkaan alleen\", \"Mens\", \"Niet uitgestorven\"],\n        answer: 0,\n        wrongHints: [null, \"Hielp wel.\", \"Mens kwam later.\", \"Wel uitgestorven.\"],",
+    "vervang": "options: [\"Planetoïde-inslag\", \"Vulkaan alleen\", \"Mens\", \"Een ijstijd\"],\n        answer: 0,\n        wrongHints: [null, \"Hielp wel.\", \"Mens kwam later.\", \"De ijstijden met mammoeten kwamen pas veel later.\"],",
+    "reden": "Afleider 'Niet uitgestorven' botst met de eigen uitleg 'vogels zijn eigenlijk nog dino's' (dan is die optie verdedigbaar). Vervangen door eenduidig foute afleider.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/evolutieMensPo.js",
+    "zoek": "• Organen die **nog bestaan** maar **geen functie** meer hebben.",
+    "vervang": "• Organen die **nog bestaan** maar hun **oude functie** (bijna) kwijt zijn.",
+    "reden": "Te stellig: de blindedarm (wormvormig aanhangsel) heeft wel nog een kleine functie (afweer). Restorgaan = oude functie (grotendeels) verloren; sluit aan op eind-toetsoptie 'organen die hun functie verloren'.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/evolutieMensPo.js",
+    "zoek": "**Galápagos-vinken** snavels nog steeds aanpassend door klimaatverandering.",
+    "vervang": "**Galápagos-vinken**: snavels veranderen nog steeds mee met droge en natte jaren.",
+    "reden": "Gemeten snavelveranderingen (Grant) kwamen door droogtes/natte jaren (El Niño), niet door klimaatverandering.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/evolutieMensPo.js",
+    "zoek": "\"Te lang — eerdere Homo-soorten leefden tot 1 mln jr terug.\"",
+    "vervang": "\"Te lang — 1 miljoen jaar geleden leefden er wel andere mensachtigen, maar nog geen Homo sapiens.\"",
+    "reden": "Hint was verwarrend/onjuist geformuleerd ('leefden tot 1 mln jr terug'; Homo erectus leefde tot ~110.000 jaar geleden).",
+    "ernst": 1,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/evolutieMensPo.js",
+    "zoek": "Op eiland met **harde noten**",
+    "vervang": "Op eiland met **harde zaden**",
+    "reden": "Grondvinken op de Galápagos kraken harde zaden, geen noten.",
+    "ernst": 1,
+    "groep": "groep6-8"
+  }
+]

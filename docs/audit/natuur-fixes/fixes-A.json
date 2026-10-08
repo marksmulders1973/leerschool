@@ -1,0 +1,386 @@
+[
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "**Vier groepen levende wezens**:\\n• **Mensen** — wij!\\n• **Dieren** — hond, vogel, vis, mier.",
+    "vervang": "**Groepen levende wezens**:\\n• **Dieren** — hond, vogel, vis, mier. Ook wij **mensen** horen bij de dieren!",
+    "reden": "Mensen staan als aparte groep naast dieren, terwijl stap 2 zegt dat wij zoogdieren zijn. Tegenstrijdig en biologisch onjuist.",
+    "ernst": 2,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "• **Schimmels en bacteriën** — paddenstoelen, gist, bacteriën.",
+    "vervang": "• **Schimmels** — paddenstoelen, gist.\\n• **Bacteriën** — piepklein, alleen te zien met een microscoop.",
+    "reden": "Bacteriën zijn geen schimmels. Ze staan nu als twee aparte groepen.",
+    "ernst": 2,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "Arial\">mensen · dieren · planten · schimmels</text>",
+    "vervang": "Arial\">dieren (ook mensen) · planten · schimmels</text>",
+    "reden": "SVG zet mensen naast dieren. Aangepast zodat het klopt met de uitleg.",
+    "ernst": 2,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "voortplant via sporen",
+    "vervang": "plant zich voort met sporen",
+    "reden": "Taalfout ('voortplant').",
+    "ernst": 1,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "• **Warm bloed** — lichaamstemperatuur is altijd ~37 °C.",
+    "vervang": "• **Warm bloed** — hun lichaam blijft vanzelf warm, ook als het buiten koud is (bij ons ongeveer 37 °C).",
+    "reden": "'Altijd ~37 °C' klopt niet voor alle zoogdieren en botst met de winterslaap-stap, waarin de egel juist afkoelt.",
+    "ernst": 2,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "• Vliegen niet: pinguïn, struisvogel, kip.",
+    "vervang": "• Vliegen niet: pinguïn, struisvogel, kiwi.",
+    "reden": "Een kip kan wel een stukje fladderen of vliegen. In dierenklassenPo staat 'kip (beetje)'. Nu een vogel die echt niet vliegt.",
+    "ernst": 2,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "font-family=\"Arial\">vliegt niet: pinguïn, kip</text>",
+    "vervang": "font-family=\"Arial\">vliegt niet: pinguïn, struisvogel</text>",
+    "reden": "SVG: een kip kan een stukje vliegen.",
+    "ernst": 2,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "Niet alle vogels vliegen: pinguïn, struisvogel, kip, kiwi.",
+    "vervang": "Niet alle vogels vliegen: pinguïn, struisvogel, kiwi.",
+    "reden": "Een kip kan een stukje vliegen (uitlegPad theorie).",
+    "ernst": 2,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "• **Eieren leggen** (op land, in zand).",
+    "vervang": "• Meestal **eieren leggen** (op land, in zand).",
+    "reden": "Niet alle reptielen leggen eieren: de adder en de levendbarende hagedis in Nederland krijgen levende jongen.",
+    "ernst": 1,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "Naast die 5 hoofdgroepen zijn er nog kleinere:",
+    "vervang": "Naast deze groepen zijn er nog andere:",
+    "reden": "In de stappen ervoor staan 6 groepen (zoogdieren, vogels, vissen, reptielen, amfibieën, insecten). 'Die 5' klopt niet en botst met dierenklassenPo (6 klassen).",
+    "ernst": 1,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "• 5 hoofd-diergroepen: zoogdieren, vogels, vissen, reptielen+amfibieën, insecten.",
+    "vervang": "• 6 hoofd-diergroepen: zoogdieren, vogels, vissen, reptielen, amfibieën, insecten.",
+    "reden": "Reptielen en amfibieën zijn twee verschillende groepen (stap 4 legt dat zelf ook uit).",
+    "ernst": 1,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "q: \"Wat is een **spin**?\",\n        options: [\"Geen insect\", \"Een insect\", \"Een reptiel\", \"Een vogel\"],",
+    "vervang": "q: \"Wat klopt over een **spin**?\",\n        options: [\"Het is geen insect\", \"Het is een insect\", \"Het is een reptiel\", \"Het is een vogel\"],",
+    "reden": "Op 'Wat is een spin?' is 'Geen insect' een raar antwoord. Vraag en opties lopen nu goed.",
+    "ernst": 2,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "\"Geen kieuwen + schubben zoals een vis.\"",
+    "vervang": "\"Geen schubben en vinnen zoals een vis.\"",
+    "reden": "Feitfout in de hint: een krab ademt wél met kieuwen.",
+    "ernst": 2,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "• **Nestblijvers** (vogel-kuiken, mens-baby): kunnen niets, ouders zorgen.\\n• **Nestvlieders** (kuiken van eend): kunnen meteen lopen.",
+    "vervang": "• **Nestblijvers** (jonge merel of mus, mensenbaby): kunnen nog niets, de ouders zorgen voor alles.\\n• **Nestvlieders** (kuiken van kip of eend): kunnen meteen lopen.",
+    "reden": "'Vogel-kuiken' bij nestblijvers botst met 'kuiken' bij nestvlieders. Een kippenkuiken is juist een nestvlieder.",
+    "ernst": 2,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "font-weight=\"bold\">metamorfose: van vorm veranderen</text>",
+    "vervang": "font-weight=\"bold\">gedaanteverwisseling: van vorm veranderen</text>",
+    "reden": "Het Latijnse woord was de kern van de SVG-tekst (groep 4/5). Nu het Nederlandse woord dat de uitleg gebruikt.",
+    "ernst": 1,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "q: \"Wat heet **gedaanteverwisseling**?\",",
+    "vervang": "q: \"Wat betekent **gedaanteverwisseling**?\",",
+    "reden": "Zinsbouw: het moet 'Wat betekent' zijn.",
+    "ernst": 1,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "• **Bomen kaal** (alleen naaldbomen blijven groen).",
+    "vervang": "• **Bomen kaal** (de meeste naaldbomen blijven groen).",
+    "reden": "'Alleen' is te stellig: de lariks verliest zijn naalden en hulst en klimop blijven ook groen.",
+    "ernst": 1,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "• Veel dieren slapen in **winterslaap** (egel, vleermuis, beer in koudere streken).",
+    "vervang": "• Sommige dieren houden **winterslaap** (egel, vleermuis, hamster).\\n• De eekhoorn en de beer houden **winterrust**: ze slapen veel, maar worden af en toe wakker om te eten.",
+    "reden": "Feitfout: een beer houdt winterrust, geen echte winterslaap (zijn temperatuur daalt maar een klein beetje).",
+    "ernst": 3,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "q: \"Welk dier slaapt **winterslaap**?\",",
+    "vervang": "q: \"Welk dier houdt **winterslaap**?\",",
+    "reden": "Taal: je houdt winterslaap, je slaapt geen winterslaap.",
+    "ernst": 1,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "brengen stuifmeel van bloem naar bloem. Zonder hen geen vruchten en zaden — geen nieuwe planten.",
+    "vervang": "brengen stuifmeel van bloem naar bloem. Zonder hen maken veel planten geen vruchten en zaden.",
+    "reden": "Te stellig: gras, granen en veel bomen worden door de wind bestoven.",
+    "ernst": 2,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "theorie: \"Zonder bestuivers (bij/hommel/vlinder): geen vruchten en zaden = geen nieuwe planten.\",",
+    "vervang": "theorie: \"Zonder bestuivers (bij/hommel/vlinder) maken veel planten geen vruchten en zaden.\",",
+    "reden": "Te stellig: windbestuiving bestaat ook (gras, granen).",
+    "ernst": 2,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "stappen: [{ titel: \"Vos = top\", tekst: \"Vos eet konijn, niemand eet vos. → vos staat bovenaan.\" }],",
+    "vervang": "stappen: [{ titel: \"Vos = top\", tekst: \"De vos eet het konijn. In deze keten eet niemand de vos. → vos staat bovenaan.\" }],",
+    "reden": "'Niemand eet de vos' is te stellig: een oehoe of wolf pakt soms een (jonge) vos. Nu beperkt tot deze keten.",
+    "ernst": 2,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "woorden: [{ woord: \"toppredator\", uitleg: \"Dier dat geen natuurlijke vijand heeft.\" }],",
+    "vervang": "woorden: [{ woord: \"toppredator\", uitleg: \"Dier bovenaan de keten: een volwassen dier wordt bijna nooit door een ander dier gegeten.\" }],",
+    "reden": "Te stellig ('geen natuurlijke vijand'). Jonge dieren worden wel gegeten, en in Nederland is de wolf terug.",
+    "ernst": 2,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "simpeler: \"Vos eet konijn, niemand eet vos → vos bovenaan keten.\"",
+    "vervang": "simpeler: \"Vos eet konijn. In deze keten eet niemand de vos → vos staat bovenaan.\"",
+    "reden": "Zelfde te stellige bewering in niveau 'simpeler'.",
+    "ernst": 2,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "• Voedselketen + producent/herbivoor/carnivoor.",
+    "vervang": "• Voedselketen + producent/planteneter/vleeseter.",
+    "reden": "Latijnse woorden in de samenvatting voor groep 4/5. Na de fix van 8 okt gebruikt de vraag Nederlandse woorden.",
+    "ernst": 1,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "\"Geen 6 poten + geen exoskelet.\"",
+    "vervang": "\"Geen 6 poten en geen hard pantser.\"",
+    "reden": "'Exoskelet' is jargon voor groep 4/5. De uitleg zegt 'hard pantser'.",
+    "ernst": 1,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "wrongHints: [null, \"Niet — lang.\", \"Tegengestelde.\", \"Trekvogels.\"] },",
+    "vervang": "wrongHints: [null, \"Winterslaap duurt geen nacht, maar maanden.\", \"Bij winterslaap blijft het dier juist niet wakker.\", \"Wegvliegen naar een warm land doen trekvogels.\"] },",
+    "reden": "Hints waren onbegrijpelijk voor een kind ('Niet — lang.', 'Tegengestelde.').",
+    "ernst": 1,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "wrongHints: [null, \"Langste dagen.\", \"Half.\", \"Korter dan zomer.\"] },",
+    "vervang": "wrongHints: [null, \"In de zomer zijn de dagen juist het langst.\", \"In de lente worden de dagen steeds langer.\", \"In de herfst worden de dagen korter, maar de kortste dag (rond 21 december) valt in de winter.\"] },",
+    "reden": "Hints waren cryptisch ('Half.'). De herfst-hint gaf geen reden waarom het fout is.",
+    "ernst": 1,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenSeizoenenNatuur.js",
+    "zoek": "options: [\"Wordt vlinder\",\"Sterft direct\",\"Wordt bij\",\"Wordt spin\"], answer: 0, wrongHints: [null, \"Niet.\", \"Niet.\", \"Spinnen hebben geen rups-fase.\"] },",
+    "vervang": "options: [\"Wordt vlinder\",\"Sterft direct\",\"Wordt bij\",\"Wordt spin\"], answer: 0, wrongHints: [null, \"De rups eet en groeit eerst een hele tijd — en dan verandert hij.\", \"Uit een bijeneitje komt een larve, geen rups.\", \"Spinnen hebben geen rups-fase.\"] },",
+    "reden": "Hints 'Niet.' geven geen richting.",
+    "ernst": 1,
+    "groep": "groep4-7"
+  },
+  {
+    "bestand": "src/learnPaths/dierenklassenPo.js",
+    "zoek": "• **Koudbloedig** *(vissen, reptielen, amfibieën, insecten)* → lichaamstemperatuur = omgevingstemperatuur.",
+    "vervang": "• **Koudbloedig** *(vissen, reptielen, amfibieën, insecten)* → lichaamstemperatuur volgt de omgeving (in de zon warmen ze op).",
+    "reden": "Nuance 'koudbloedig': de temperatuur volgt de omgeving, maar is niet gelijk aan de omgeving (een hagedis in de zon wordt warmer dan de lucht).",
+    "ernst": 2,
+    "groep": "groep5-8"
+  },
+  {
+    "bestand": "src/learnPaths/dierenklassenPo.js",
+    "zoek": "tekst: \"**Koudbloedig** = lichaamstemperatuur = omgevingstemperatuur. Als het buiten koud is",
+    "vervang": "tekst: \"**Koudbloedig** = lichaamstemperatuur volgt de omgeving. Als het buiten koud is",
+    "reden": "Zelfde nuance als hierboven (uitlegPad).",
+    "ernst": 2,
+    "groep": "groep5-8"
+  },
+  {
+    "bestand": "src/learnPaths/dierenklassenPo.js",
+    "zoek": "wrongHints: [null, \"Vliegt, maar geen vogel — geen veren.\", \"Heeft geen schubben.\", \"Te groot.\"],",
+    "vervang": "wrongHints: [null, \"Vliegt, maar geen vogel — geen veren.\", \"Heeft geen schubben.\", \"Tel de poten: een insect heeft er 6.\"],",
+    "reden": "'Te groot' is een verkeerde denkwijze: de groep hangt niet af van de grootte (de hommelvleermuis is kleiner dan sommige insecten).",
+    "ernst": 2,
+    "groep": "groep5-8"
+  },
+  {
+    "bestand": "src/learnPaths/dierenklassenPo.js",
+    "zoek": "{ woord: \"vleermuis\", uitleg: \"Enig zoogdier dat ECHT kan vliegen (eekhoorns zweven alleen).\" },",
+    "vervang": "{ woord: \"vleermuis\", uitleg: \"Enig zoogdier dat ECHT kan vliegen (vliegende eekhoorns kunnen alleen zweven).\" },",
+    "reden": "Feitfout: een gewone eekhoorn zweeft niet. Het gaat om de vliegende eekhoorn.",
+    "ernst": 2,
+    "groep": "groep5-8"
+  },
+  {
+    "bestand": "src/learnPaths/dierenklassenPo.js",
+    "zoek": "tekst: \"Vleermuizen hebben **gewrichten in hun vinger** waaraan een dunne huid zit — een vleugel-huid.",
+    "vervang": "tekst: \"Vleermuizen hebben **heel lange vingers** met een dunne huid ertussen — een vleugel-huid.",
+    "reden": "'Gewrichten in hun vinger waaraan huid zit' is onduidelijk. De vleugel is huid tussen lange vingers.",
+    "ernst": 1,
+    "groep": "groep5-8"
+  },
+  {
+    "bestand": "src/learnPaths/dierenklassenPo.js",
+    "zoek": "nogSimpeler: \"Slang = A. Kruipt op grond + schubben = koudbloedig.\",",
+    "vervang": "nogSimpeler: \"Slang. Kruipt op grond + schubben = koudbloedig.\",",
+    "reden": "LearnPath.jsx schudt de opties (shuffleOptions), dus 'A' is vaak niet de slang.",
+    "ernst": 2,
+    "groep": "groep5-8"
+  },
+  {
+    "bestand": "src/learnPaths/dierenklassenPo.js",
+    "zoek": "nogSimpeler: \"6 poten = insect. Spin = 8 poten. A = 6.\",",
+    "vervang": "nogSimpeler: \"6 poten = insect. Spin = 8 poten.\",",
+    "reden": "De opties worden geschud: 'A = 6' klopt dan vaak niet.",
+    "ernst": 2,
+    "groep": "groep5-8"
+  },
+  {
+    "bestand": "src/learnPaths/dierenklassenPo.js",
+    "zoek": "• **Kiwi** — kleine NZ-vogel, vleugels piepklein.\\n• **Emoe** + **kasuaris** (Australië/NG).",
+    "vervang": "• **Kiwi** — kleine vogel uit Nieuw-Zeeland, vleugels piepklein.\\n• **Emoe** + **kasuaris** (Australië en Nieuw-Guinea).",
+    "reden": "Afkortingen NZ/NG zijn onbekend voor kinderen.",
+    "ernst": 1,
+    "groep": "groep5-8"
+  },
+  {
+    "bestand": "src/learnPaths/dierenklassenPo.js",
+    "zoek": "tekst: \"Olifanten: vacht (klein), zogen kalveren met melk,",
+    "vervang": "tekst: \"Olifanten: een paar stugge haren, zogen kalveren met melk,",
+    "reden": "Een olifant heeft geen vacht, alleen losse haren.",
+    "ernst": 1,
+    "groep": "groep5-8"
+  },
+  {
+    "bestand": "src/learnPaths/dierenklassenPo.js",
+    "zoek": "wrongHints: [null, \"Vissen hebben geen longen.\", \"Sommige doen huidademhaling maar primair: kieuwen.\", \"Vinnen zijn voor zwemmen.\"],",
+    "vervang": "wrongHints: [null, \"Bijna alle vissen hebben geen longen.\", \"Sommige doen huidademhaling, maar vooral: kieuwen.\", \"Vinnen zijn voor zwemmen.\"],",
+    "reden": "Longvissen bestaan. Ook 'primair' is jargon.",
+    "ernst": 1,
+    "groep": "groep5-8"
+  },
+  {
+    "bestand": "src/learnPaths/dierenklassenPo.js",
+    "zoek": "3. Rups wordt **pop** *(in cocon)*.",
+    "vervang": "3. Rups wordt **pop** *(hangt stil aan een takje of blad)*.",
+    "reden": "Klassieke fout: bij dagvlinders hangt de pop vrij, zonder cocon. Alleen sommige nachtvlinders, zoals de zijderups, spinnen een cocon. Zelfde fix als 4a3551ca.",
+    "ernst": 3,
+    "groep": "groep5-8"
+  },
+  {
+    "bestand": "src/learnPaths/dierenklassenPo.js",
+    "zoek": "\"Kever heeft andere cyclus.\"",
+    "vervang": "\"Uit een kevereitje komt een larve, geen rups.\"",
+    "reden": "Feitfout: een kever heeft dezelfde soort cyclus (ei → larve → pop → kever). Het verschil is dat de larve geen rups heet.",
+    "ernst": 2,
+    "groep": "groep5-8"
+  },
+  {
+    "bestand": "src/learnPaths/dierenklassenPo.js",
+    "zoek": "• **Toproofdier**: niemand eet die zelf *(bv. leeuw, orka, haai)*.",
+    "vervang": "• **Toproofdier**: een volwassen dier wordt bijna nooit door een ander dier gegeten *(bv. leeuw, orka)*.",
+    "reden": "Te stellig. Veel haaien worden door orka's of grotere haaien gegeten, en leeuwenwelpen door hyena's.",
+    "ernst": 2,
+    "groep": "groep5-8"
+  },
+  {
+    "bestand": "src/learnPaths/dierenklassenPo.js",
+    "zoek": "• **Pool**: ijsbeer, pinguïn, robben.",
+    "vervang": "• **Pool**: ijsbeer *(Noordpool)*, pinguïn *(Zuidpool)*, robben.",
+    "reden": "De check 'Welk dier leeft op de Noordpool?' rekent de pinguïn fout, terwijl de uitleg hem zonder onderscheid bij 'Pool' zet.",
+    "ernst": 2,
+    "groep": "groep5-8"
+  },
+  {
+    "bestand": "src/learnPaths/dierenklassenPo.js",
+    "zoek": "wrongHints: [null, \"Uilen eten geen gras — alleen plantenetende dieren wel.\", \"Andere uilen niet — kannibalisme komt zelden voor.\", \"Niet alles — uilen zijn kieskeurig.\"],",
+    "vervang": "wrongHints: [null, \"Uilen eten geen gras. Wie eet het gras in deze keten?\", \"Kijk naar de pijl: welk dier staat vlak vóór de uil?\", \"Kijk naar de pijl: de uil eet wat er vlak vóór hem staat.\"],",
+    "reden": "'Kannibalisme' is jargon en 'uilen zijn kieskeurig' klopt niet (uilen eten muizen, vogels, kikkers en insecten).",
+    "ernst": 1,
+    "groep": "groep5-8"
+  },
+  {
+    "bestand": "src/learnPaths/dierenklassenPo.js",
+    "zoek": "{ q: \"Hoeveel **diergroepen** zijn er (gewervelden)?\",",
+    "vervang": "{ q: \"Hoeveel groepen **gewervelde dieren** (dieren met een ruggengraat) zijn er?\",",
+    "reden": "Vaag: het pad leert '6 dierenklassen', en 'gewervelden' wordt nergens uitgelegd. Met de uitleg in de vraag is het antwoord 5 eenduidig.",
+    "ernst": 2,
+    "groep": "groep5-8"
+  },
+  {
+    "bestand": "src/learnPaths/dierenklassenPo.js",
+    "zoek": "{ q: \"Wat is een **planteneter**?\", options: [\"Herbivoor\",\"Carnivoor\",\"Omnivoor\",\"Roofdier\"], answer: 0, wrongHints: [null, \"Vleeseter.\", \"Alleseter.\", \"Vleeseter.\"] },",
+    "vervang": "{ q: \"Welk dier is een **planteneter**?\", options: [\"Konijn\",\"Vos\",\"Uil\",\"Haai\"], answer: 0, wrongHints: [null, \"Een vos eet vooral andere dieren, zoals konijnen en muizen.\", \"Een uil vangt muizen: dat is een vleeseter.\", \"Een haai eet vissen: dat is een vleeseter.\"] },",
+    "reden": "Latijnse term (herbivoor) als enige goede antwoord, terwijl het pad ook aan groep 5-6 wordt aangeboden. Zelfde aanpak als 4a3551ca.",
+    "ernst": 3,
+    "groep": "groep5-8"
+  },
+  {
+    "bestand": "src/learnPaths/dierenklassenPo.js",
+    "zoek": "{ q: \"Wat is een **alleseter**?\", options: [\"Omnivoor\",\"Herbivoor\",\"Carnivoor\",\"Predator\"], answer: 0, wrongHints: [null, \"Plant.\", \"Vlees.\", \"Vlees.\"] },",
+    "vervang": "{ q: \"Welk dier is een **alleseter**?\", options: [\"Varken\",\"Koe\",\"Konijn\",\"Leeuw\"], answer: 0, wrongHints: [null, \"Een koe eet alleen gras en andere planten.\", \"Een konijn eet alleen planten.\", \"Een leeuw eet alleen vlees.\"] },",
+    "reden": "Latijnse term (omnivoor) als enige goede antwoord voor groep 5-6. De hints ('Plant.', 'Vlees.') waren cryptisch.",
+    "ernst": 3,
+    "groep": "groep5-8"
+  },
+  {
+    "bestand": "src/learnPaths/dierenklassenPo.js",
+    "zoek": "\"Vogel/reptiel/vis (bij zoogdieren alleen het vogelbekdier).\",",
+    "vervang": "\"Vogel/reptiel/vis (bij zoogdieren alleen het vogelbekdier en de mierenegel).\",",
+    "reden": "De mierenegel legt ook eieren.",
+    "ernst": 1,
+    "groep": "groep5-8"
+  }
+]
