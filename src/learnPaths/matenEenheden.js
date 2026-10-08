@@ -137,6 +137,250 @@ const steps = [
           niveaus: { basis: "1000.", simpeler: "Kilo = 1000. Dus 1 km = 1000 m. (1 m = 100 cm — andere eenheid).", nogSimpeler: "1000" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke eenheid past het beste bij **hoeveel water er in een emmer zit**?",
+        options: ["L", "kg", "m", "uur"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is een gewicht — dat zegt hoe zwaar iets is, niet hoeveel erin past.",
+          null,
+          "Dat zegt hoe lang iets duurt.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Inhoud = L",
+              tekst: "Hoeveel vloeistof ergens in zit, heet inhoud. Inhoud meet je in L (liter).",
+            },
+          ],
+          woorden: [
+            {
+              woord: "inhoud",
+              uitleg: "Hoeveel vloeistof ergens in zit. Eenheden: L, dL, cL, mL.",
+            },
+          ],
+          theorie: "Lengte: km, m, cm, mm. Gewicht: ton, kg, g, mg. Inhoud: L, dL, cL, mL. Tijd: uur, minuut, seconde.",
+          voorbeelden: [
+            {
+              type: "tabel",
+              tekst: "Emmer water → L. Glas melk → mL of dL. Pak sap → L.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet kg",
+              uitleg: "Kg vertelt hoe zwaar iets is, niet hoeveel vloeistof erin zit.",
+            },
+          ],
+          niveaus: {
+            basis: "L.",
+            simpeler: "Water in een emmer is vloeistof. Vloeistof meet je in liter (L).",
+            nogSimpeler: "L",
+          },
+        },
+      },
+      {
+        q: "Wat meet je met de eenheid **kg**?",
+        options: ["Gewicht", "Lengte", "Inhoud", "Tijd"],
+        answer: 0,
+        wrongHints: [null, "Lengte meet je in km, m, cm of mm.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "kg = gewicht",
+              tekst: "Kg (kilogram) vertelt hoe zwaar iets is. Dat heet gewicht.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kg",
+              uitleg: "Kilogram. Een eenheid van gewicht.",
+            },
+          ],
+          theorie: "Elke soort meting heeft eigen eenheden. Gewicht: ton, kg, g, mg.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Een zak aardappels weegt een paar kg. Een mens weegt tientallen kg.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet verwarren",
+              uitleg: "L en mL zijn voor inhoud, m en cm voor lengte, uur en minuut voor tijd.",
+            },
+          ],
+          niveaus: {
+            basis: "Gewicht.",
+            simpeler: "Met kg meet je hoe zwaar iets is: het gewicht.",
+            nogSimpeler: "Gewicht",
+          },
+        },
+      },
+      {
+        q: "Welke eenheid is **geen** lengte-eenheid?",
+        options: ["mL", "km", "mm", "cm"],
+        answer: 0,
+        wrongHints: [null, "Met km meet je hoe ver iets is. Is dat lengte?", null, "Past dit op een liniaal?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek de vreemde eend",
+              tekst: "Km, mm en cm meten allemaal hoe lang of hoe ver iets is. mL meet hoeveel vloeistof ergens in zit.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "mL",
+              uitleg: "Milliliter. Een eenheid van inhoud, heel klein: een paar druppels.",
+            },
+          ],
+          theorie: "Lengte: km, m, cm, mm. Inhoud: L, dL, cL, mL.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "km = afstand, cm = liniaal, mm = heel klein stukje. mL = een beetje vloeistof.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Let op de m",
+              uitleg: "Ook mm heeft een m erin, maar mm is millimeter (lengte). mL is milliliter (inhoud).",
+            },
+          ],
+          niveaus: {
+            basis: "mL.",
+            simpeler: "mL is milliliter. Dat is inhoud (vloeistof), geen lengte.",
+            nogSimpeler: "mL",
+          },
+        },
+      },
+      {
+        q: "Welke eenheid past het beste bij **hoe lang een liedje duurt**?",
+        options: ["minuut", "meter", "liter", "gram"],
+        answer: 0,
+        wrongHints: [null, "Dat is een lengte — hoe lang iets is, niet hoe lang iets duurt.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Duur = tijd",
+              tekst: "Hoe lang iets duurt, is tijd. Een liedje duurt een paar minuten.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "duren",
+              uitleg: "Hoe lang iets bezig is. Dat meet je in tijd: uur, minuut, seconde.",
+            },
+          ],
+          theorie: "Tijd-eenheden: uur, minuut, seconde. Meter is lengte, liter is inhoud, gram is gewicht.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Liedje ≈ 3 minuten. Les ≈ 45 minuten. Film ≈ 2 uur.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lang ≠ lang",
+              uitleg: "'Hoe lang is het' (lengte, meter) is iets anders dan 'hoe lang duurt het' (tijd, minuut).",
+            },
+          ],
+          niveaus: {
+            basis: "minuut.",
+            simpeler: "Een liedje duurt een paar minuten. Duren = tijd.",
+            nogSimpeler: "minuut",
+          },
+        },
+      },
+      {
+        q: "Welke eenheid past het beste bij **de afstand van Utrecht naar Groningen**?",
+        options: ["km", "cm", "kg", "dL"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat past op een liniaal. Is de afstand tussen twee steden zo klein?",
+          null,
+          "Dat is een inhoud, voor vloeistof.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Ver weg = km",
+              tekst: "Afstanden tussen steden zijn heel groot. Die meet je in km (kilometer).",
+            },
+          ],
+          woorden: [
+            {
+              woord: "km",
+              uitleg: "Kilometer. 1 km = 1000 m. Voor grote afstanden.",
+            },
+          ],
+          theorie: "Lengte: km voor afstanden tussen plaatsen, m voor een kamer, cm en mm voor kleine dingen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Naar een andere stad → km. Lengte van een tafel → cm of m.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet kg of dL",
+              uitleg: "Kg is gewicht en dL is inhoud. Afstand is lengte.",
+            },
+          ],
+          niveaus: {
+            basis: "km.",
+            simpeler: "Tussen twee steden zit een grote afstand. Die meet je in kilometer.",
+            nogSimpeler: "km",
+          },
+        },
+      },
+      {
+        q: "Welke eenheid past het beste bij **het gewicht van een olifant**?",
+        options: ["ton", "mg", "g", "cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is voor heel lichte dingen, zoals een medicijn.",
+          null,
+          "Dat is een lengte, geen gewicht.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Heel zwaar = ton",
+              tekst: "Een olifant is heel zwaar: duizenden kilo's. Dat zeg je makkelijk in ton.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "ton",
+              uitleg: "1 ton = 1000 kg. Voor heel zware dingen.",
+            },
+          ],
+          theorie: "Gewicht van zwaar naar licht: ton, kg, g, mg.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Vrachtwagen → ton. Appel → g. Medicijn → mg.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet g",
+              uitleg: "In gram zou je een heel groot getal krijgen. Dat is lastig te lezen.",
+            },
+          ],
+          niveaus: {
+            basis: "ton.",
+            simpeler: "Een olifant weegt duizenden kilo's. Voor zo'n zwaar dier gebruik je ton.",
+            nogSimpeler: "ton",
+          },
+        },
+      },
     ],
   },
 
@@ -186,6 +430,174 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "18 × 10 = 180 mm. Of: komma 1 plek rechts: 18 → 180." }],
           basiskennis: [{ onderwerp: "Logica-check", uitleg: "Mm is kleiner dan cm → er passen méér mm in dezelfde lengte." }],
           niveaus: { basis: "180.", simpeler: "1 cm = 10 mm. 18 cm × 10 = 180 mm.", nogSimpeler: "180" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**7 m** is hoeveel **mm**?",
+        options: ["7000", "700", "70", "70.000"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het aantal cm. mm is nog kleiner.",
+          null,
+          "Te veel — tel de stapjes van m naar mm nog eens.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "× 1000",
+              tekst: "1 m = 1000 mm. 7 m = 7 × 1000 = 7000 mm.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "m → mm",
+              uitleg: "3 stapjes op het trapje (m → dm → cm → mm) = × 1000.",
+            },
+          ],
+          theorie: "m naar dm = × 10. m naar cm = × 100. m naar mm = × 1000.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1 m = 1000 mm. 2 m = 2000 mm. 7 m = 7000 mm.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet × 100",
+              uitleg: "× 100 brengt je van m naar cm, niet naar mm.",
+            },
+          ],
+          niveaus: {
+            basis: "7000.",
+            simpeler: "1 m = 1000 mm. 7 m = 7 × 1000 = 7000 mm.",
+            nogSimpeler: "7000",
+          },
+        },
+      },
+      {
+        q: "Hoeveel **cm** is **60 mm**?",
+        options: ["6", "600", "60", "0,6"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Andersom — cm is groter dan mm, dus je krijgt een kleiner getal.",
+          null,
+          "Te weinig — 1 cm is 10 mm. Hoe vaak past 10 in 60?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "÷ 10",
+              tekst: "10 mm = 1 cm. 60 mm = 60 ÷ 10 = 6 cm.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "mm → cm",
+              uitleg: "1 stapje omhoog op het trapje = ÷ 10.",
+            },
+          ],
+          theorie: "Naar een grotere eenheid → delen. cm naar mm = × 10, mm naar cm = ÷ 10.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "20 mm = 2 cm. 90 mm = 9 cm. 60 mm = 6 cm.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Grotere eenheid",
+              uitleg: "Naar een grotere eenheid → het getal wordt kleiner.",
+            },
+          ],
+          niveaus: {
+            basis: "6.",
+            simpeler: "1 cm = 10 mm. 60 ÷ 10 = 6 cm.",
+            nogSimpeler: "6",
+          },
+        },
+      },
+      {
+        q: "Hoeveel **dm** is **1 m**?",
+        options: ["10", "100", "1000", "1"],
+        answer: 0,
+        wrongHints: [null, "Dat is het aantal cm in 1 m.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "1 stapje = × 10",
+              tekst: "Op het trapje staat dm direct onder m. Eén stapje is × 10. Dus 1 m = 10 dm.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "dm",
+              uitleg: "Decimeter. Een tiende van een meter: 10 cm.",
+            },
+          ],
+          theorie: "km → hm → dam → m → dm → cm → mm. Ieder stapje is × 10.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1 m = 10 dm = 100 cm = 1000 mm.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet verwarren",
+              uitleg: "1 m = 100 cm, maar 1 m = 10 dm. dm is groter dan cm.",
+            },
+          ],
+          niveaus: {
+            basis: "10.",
+            simpeler: "dm staat één stapje onder m. 1 stapje = × 10. Dus 10 dm.",
+            nogSimpeler: "10",
+          },
+        },
+      },
+      {
+        q: "Welke maat is het **langst**?",
+        options: ["2 m", "150 cm", "1900 mm", "18 dm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zet alles om naar cm. Hoeveel cm is 2 m?",
+          "Zet 1900 mm om naar cm en vergelijk.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Alles naar cm",
+              tekst: "2 m = 200 cm. 1900 mm = 190 cm. 18 dm = 180 cm. 150 cm blijft 150 cm. 200 cm is het langst.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vergelijken",
+              uitleg: "Maten kun je pas eerlijk vergelijken als ze dezelfde eenheid hebben.",
+            },
+          ],
+          theorie: "Eerst omrekenen naar één eenheid, dan vergelijken.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "200 cm > 190 cm > 180 cm > 150 cm.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Groot getal ≠ lang",
+              uitleg: "1900 is een groot getal, maar in mm is het maar 190 cm.",
+            },
+          ],
+          niveaus: {
+            basis: "2 m.",
+            simpeler: "Zet alles om naar cm: 200, 150, 190 en 180. Het langst is 200 cm = 2 m.",
+            nogSimpeler: "2 m",
+          },
         },
       },
     ],
@@ -239,6 +651,217 @@ const steps = [
           niveaus: { basis: "0,5 g.", simpeler: "1000 mg = 1 g. 500 mg = halve g = 0,5 g.", nogSimpeler: "0,5" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**7000 g** is hoeveel **kg**?",
+        options: ["7", "70", "700", "0,7"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — bij gewicht is elke stap × 1000, niet × 100.",
+          null,
+          "Te weinig — hoeveel keer past 1000 g in 7000 g?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "÷ 1000",
+              tekst: "1000 g = 1 kg. 7000 g = 7000 ÷ 1000 = 7 kg.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "g → kg",
+              uitleg: "Naar de grotere eenheid kg → delen door 1000.",
+            },
+          ],
+          theorie: "kg → g = × 1000. g → kg = ÷ 1000.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2000 g = 2 kg. 4000 g = 4 kg. 7000 g = 7 kg.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet ÷ 100",
+              uitleg: "Bij gewicht is de stap tussen g en kg × 1000, niet × 100.",
+            },
+          ],
+          niveaus: {
+            basis: "7.",
+            simpeler: "1 kg = 1000 g. 7000 ÷ 1000 = 7 kg.",
+            nogSimpeler: "7",
+          },
+        },
+      },
+      {
+        q: "**3 g** is hoeveel **mg**?",
+        options: ["3000", "300", "30", "30.000"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — bij gewicht is de stap g → mg × 1000.",
+          null,
+          "Te veel — heb je een nul te veel?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "× 1000",
+              tekst: "1 g = 1000 mg. 3 g = 3 × 1000 = 3000 mg.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "mg",
+              uitleg: "Milligram. Heel klein gewicht, bijvoorbeeld bij medicijnen.",
+            },
+          ],
+          theorie: "g naar mg = × 1000.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1 g = 1000 mg. 2 g = 2000 mg. 3 g = 3000 mg.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Kleinere eenheid",
+              uitleg: "Naar een kleinere eenheid → groter getal.",
+            },
+          ],
+          niveaus: {
+            basis: "3000.",
+            simpeler: "1 g = 1000 mg. 3 × 1000 = 3000 mg.",
+            nogSimpeler: "3000",
+          },
+        },
+      },
+      {
+        q: "Welk gewicht is het **zwaarst**?",
+        options: ["2 kg", "1800 g", "1950 g", "1500 g"],
+        answer: 0,
+        wrongHints: [null, "Reken 2 kg om naar gram en vergelijk.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Alles naar g",
+              tekst: "2 kg = 2000 g. Dat is meer dan 1950 g, 1800 g en 1500 g.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vergelijken",
+              uitleg: "Eerst alles in dezelfde eenheid zetten, dan kijken wat het grootst is.",
+            },
+          ],
+          theorie: "kg → g = × 1000.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2000 g > 1950 g > 1800 g > 1500 g.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Klein getal ≠ licht",
+              uitleg: "2 lijkt klein, maar 2 kg is 2000 g.",
+            },
+          ],
+          niveaus: {
+            basis: "2 kg.",
+            simpeler: "2 kg = 2000 g. Dat is het zwaarst.",
+            nogSimpeler: "2 kg",
+          },
+        },
+      },
+      {
+        q: "Een bus weegt **12.000 kg**. Hoeveel **ton** is dat?",
+        options: ["12", "120", "1200", "1,2"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — 1 ton is 1000 kg, niet 100 kg.",
+          null,
+          "Te weinig — hoe vaak past 1000 kg in 12.000 kg?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "÷ 1000",
+              tekst: "1000 kg = 1 ton. 12.000 kg = 12.000 ÷ 1000 = 12 ton.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "ton",
+              uitleg: "1 ton = 1000 kg. Voor heel zware dingen.",
+            },
+          ],
+          theorie: "ton → kg = × 1000. kg → ton = ÷ 1000.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "3000 kg = 3 ton. 8000 kg = 8 ton. 12.000 kg = 12 ton.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet ÷ 100",
+              uitleg: "Ook tussen ton en kg zit × 1000.",
+            },
+          ],
+          niveaus: {
+            basis: "12.",
+            simpeler: "1 ton = 1000 kg. 12.000 ÷ 1000 = 12 ton.",
+            nogSimpeler: "12",
+          },
+        },
+      },
+      {
+        q: "Welke eenheid past het beste bij **het gewicht van een volle boodschappentas**?",
+        options: ["kg", "mg", "ton", "mL"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is voor heel lichte dingen, zoals een medicijn.",
+          null,
+          "Dat is een inhoud, geen gewicht.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tillen = kg",
+              tekst: "Een volle tas kun je tillen, maar niet heel lang. Dat past bij kg.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kg",
+              uitleg: "Kilogram. 1 kg = 1000 g.",
+            },
+          ],
+          theorie: "Optillen met 1 vinger → g of mg. Tillen, maar niet lang → kg. Hijskraan nodig → ton.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Boodschappentas → kg. Paperclip → g. Vrachtwagen → ton.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet mL",
+              uitleg: "mL is inhoud (vloeistof), geen gewicht.",
+            },
+          ],
+          niveaus: {
+            basis: "kg.",
+            simpeler: "Een volle tas weegt een paar kilo. Dus kg.",
+            nogSimpeler: "kg",
+          },
+        },
+      },
     ],
   },
 
@@ -288,6 +911,207 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "5 mL ÷ 10 = 0,5 cL." }],
           basiskennis: [{ onderwerp: "Logica-check", uitleg: "Theelepel = klein, kleiner dan 1 cL. Antwoord moet < 1 cL zijn." }],
           niveaus: { basis: "0,5 cL.", simpeler: "1 cL = 10 mL. 5 mL = halve cL = 0,5 cL.", nogSimpeler: "0,5" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**3 L** is hoeveel **dL**?",
+        options: ["30", "300", "3000", "3"],
+        answer: 0,
+        wrongHints: [null, "Te veel — dat is het aantal cL.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "× 10",
+              tekst: "1 L = 10 dL. 3 L = 3 × 10 = 30 dL.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "dL",
+              uitleg: "Deciliter. Een tiende liter: 100 mL.",
+            },
+          ],
+          theorie: "L → dL → cL → mL. Ieder stapje is × 10.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1 L = 10 dL. 2 L = 20 dL. 3 L = 30 dL.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "1 stapje",
+              uitleg: "Van L naar dL is maar 1 stapje: × 10.",
+            },
+          ],
+          niveaus: {
+            basis: "30.",
+            simpeler: "1 L = 10 dL. 3 × 10 = 30 dL.",
+            nogSimpeler: "30",
+          },
+        },
+      },
+      {
+        q: "**4 cL** is hoeveel **mL**?",
+        options: ["40", "400", "4", "0,4"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — 1 cL is 10 mL, niet 100 mL.",
+          null,
+          "Andersom — mL is kleiner dan cL, dus je krijgt een groter getal.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "× 10",
+              tekst: "1 cL = 10 mL. 4 cL = 4 × 10 = 40 mL.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "cL → mL",
+              uitleg: "1 stapje omlaag op het trapje = × 10.",
+            },
+          ],
+          theorie: "1 cL = 10 mL. 1 dL = 100 mL. 1 L = 1000 mL.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2 cL = 20 mL. 3 cL = 30 mL. 4 cL = 40 mL.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet × 100",
+              uitleg: "Veel kinderen denken 1 cL = 100 mL. Het is 10 mL.",
+            },
+          ],
+          niveaus: {
+            basis: "40.",
+            simpeler: "1 cL = 10 mL. 4 × 10 = 40 mL.",
+            nogSimpeler: "40",
+          },
+        },
+      },
+      {
+        q: "**2 L** is hoeveel **cL**?",
+        options: ["200", "20", "2000", "20.000"],
+        answer: 0,
+        wrongHints: [null, "Te weinig — dat is het aantal dL.", "Te veel — dat is het aantal mL.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "× 100",
+              tekst: "1 L = 100 cL. 2 L = 2 × 100 = 200 cL.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "L → cL",
+              uitleg: "2 stapjes op het trapje (L → dL → cL) = × 100.",
+            },
+          ],
+          theorie: "L naar dL = × 10. L naar cL = × 100. L naar mL = × 1000.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1 L = 100 cL. 3 L = 300 cL. 2 L = 200 cL.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Stapjes tellen",
+              uitleg: "Tel de stapjes: L → dL → cL = 2 stapjes = × 100.",
+            },
+          ],
+          niveaus: {
+            basis: "200.",
+            simpeler: "1 L = 100 cL. 2 × 100 = 200 cL.",
+            nogSimpeler: "200",
+          },
+        },
+      },
+      {
+        q: "**600 mL** is hoeveel **dL**?",
+        options: ["6", "60", "0,6", "6000"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het aantal cL.",
+          null,
+          "Andersom — dL is groter dan mL, dus het getal wordt kleiner.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "÷ 100",
+              tekst: "1 dL = 100 mL. 600 mL = 600 ÷ 100 = 6 dL.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "mL → dL",
+              uitleg: "2 stapjes omhoog (mL → cL → dL) = ÷ 100.",
+            },
+          ],
+          theorie: "1 dL = 100 mL. Naar een grotere eenheid → delen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "200 mL = 2 dL. 400 mL = 4 dL. 600 mL = 6 dL.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Grotere eenheid",
+              uitleg: "Naar een grotere eenheid → kleiner getal.",
+            },
+          ],
+          niveaus: {
+            basis: "6.",
+            simpeler: "1 dL = 100 mL. 600 ÷ 100 = 6 dL.",
+            nogSimpeler: "6",
+          },
+        },
+      },
+      {
+        q: "Welke hoeveelheid is het **meest**?",
+        options: ["1 L", "90 cL", "8 dL", "950 mL"],
+        answer: 0,
+        wrongHints: [null, "Reken 90 cL om naar mL en vergelijk.", null, "Bijna! Hoeveel mL is 1 L?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Alles naar mL",
+              tekst: "1 L = 1000 mL. 90 cL = 900 mL. 8 dL = 800 mL. 950 mL blijft 950 mL. 1000 mL is het meest.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vergelijken",
+              uitleg: "Eerst alles in dezelfde eenheid, dan vergelijken.",
+            },
+          ],
+          theorie: "1 L = 1000 mL. 1 dL = 100 mL. 1 cL = 10 mL.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1000 mL > 950 mL > 900 mL > 800 mL.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Groot getal ≠ meer",
+              uitleg: "950 is een groter getal dan 1, maar 950 mL is minder dan 1 L.",
+            },
+          ],
+          niveaus: {
+            basis: "1 L.",
+            simpeler: "Zet alles om naar mL: 1000, 900, 800 en 950. 1 L is het meest.",
+            nogSimpeler: "1 L",
+          },
         },
       },
     ],
@@ -359,6 +1183,298 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "16:45 + 15m = 17:00. + 1u = 18:00. + 30m = 18:30. Som: 1u 45m." }],
           basiskennis: [{ onderwerp: "Niet 18-16=2", uitleg: "Niet de uren simpel aftrekken — minuten meetellen." }],
           niveaus: { basis: "1 uur 45 min.", simpeler: "16:45→17:00=15m, →18:00=1u, →18:30=30m. Som = 1u 45m.", nogSimpeler: "1u45m" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Hoeveel **seconden** zijn **3 minuten**?",
+        options: ["180", "300", "30", "120"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Tijd gaat niet in stappen van 100. Hoeveel seconden zitten er in 1 minuut?",
+          null,
+          "Dat zijn maar 2 minuten.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "× 60",
+              tekst: "1 minuut = 60 seconden. 3 minuten = 3 × 60 = 180 seconden.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "seconde",
+              uitleg: "Een heel korte tijd. 60 seconden = 1 minuut.",
+            },
+          ],
+          theorie: "1 uur = 60 minuten. 1 minuut = 60 seconden.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1 min = 60 sec. 2 min = 120 sec. 3 min = 180 sec.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet × 100",
+              uitleg: "Tijd werkt met 60, niet met 10 of 100.",
+            },
+          ],
+          niveaus: {
+            basis: "180.",
+            simpeler: "1 minuut = 60 seconden. 3 × 60 = 180 seconden.",
+            nogSimpeler: "180",
+          },
+        },
+      },
+      {
+        q: "Hoeveel **uur** zijn **2 dagen**?",
+        options: ["48", "24", "40", "72"],
+        answer: 0,
+        wrongHints: [null, "Dat is maar 1 dag.", null, "Dat zijn 3 dagen."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "× 24",
+              tekst: "1 dag = 24 uur. 2 dagen = 2 × 24 = 48 uur.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "dag",
+              uitleg: "Een dag heeft 24 uur (dag en nacht samen).",
+            },
+          ],
+          theorie: "1 dag = 24 uur. 1 week = 7 dagen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1 dag = 24 uur. 2 dagen = 48 uur. 3 dagen = 72 uur.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet × 20",
+              uitleg: "Een dag heeft 24 uur, niet 20.",
+            },
+          ],
+          niveaus: {
+            basis: "48.",
+            simpeler: "1 dag = 24 uur. 2 × 24 = 48 uur.",
+            nogSimpeler: "48",
+          },
+        },
+      },
+      {
+        q: "Hoeveel **minuten** is **1 uur en 20 minuten**?",
+        options: ["80", "120", "20", "100"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is 2 uur.",
+          "Vergeet het hele uur niet.",
+          "Tijd werkt niet met 100. Hoeveel minuten heeft 1 uur?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "60 + 20",
+              tekst: "1 uur = 60 minuten. 60 + 20 = 80 minuten.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "uur",
+              uitleg: "1 uur = 60 minuten.",
+            },
+          ],
+          theorie: "Uren omrekenen naar minuten: × 60. Daarna de losse minuten erbij.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1 uur 10 min = 70 min. 1 uur 20 min = 80 min. 1 uur 40 min = 100 min.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet 100",
+              uitleg: "Een uur is 60 minuten, geen 100.",
+            },
+          ],
+          niveaus: {
+            basis: "80.",
+            simpeler: "1 uur = 60 minuten. Plus 20 minuten = 80 minuten.",
+            nogSimpeler: "80",
+          },
+        },
+      },
+      {
+        q: "Hoeveel **dagen** zijn **3 weken**?",
+        options: ["21", "30", "10", "18"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een week heeft geen 10 dagen. Hoeveel dagen heeft 1 week?",
+          "Heb je 3 + 7 gedaan?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "× 7",
+              tekst: "1 week = 7 dagen. 3 weken = 3 × 7 = 21 dagen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "week",
+              uitleg: "Een week heeft 7 dagen: maandag tot en met zondag.",
+            },
+          ],
+          theorie: "1 week = 7 dagen. 1 dag = 24 uur.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1 week = 7 dagen. 2 weken = 14 dagen. 3 weken = 21 dagen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Keer, niet plus",
+              uitleg: "3 weken is 3 keer 7 dagen, niet 3 + 7.",
+            },
+          ],
+          niveaus: {
+            basis: "21.",
+            simpeler: "1 week = 7 dagen. 3 × 7 = 21 dagen.",
+            nogSimpeler: "21",
+          },
+        },
+      },
+      {
+        q: "Een les begint om **09:15** en duurt **50 minuten**. Hoe laat is de les afgelopen?",
+        options: ["10:05", "09:65", "10:15", "09:55"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kan dat? Een uur heeft maar 60 minuten.",
+          null,
+          "Te vroeg — tel je echt 50 minuten op?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst naar het hele uur",
+              tekst: "Van 09:15 tot 10:00 is 45 minuten. Er blijven nog 5 minuten over. 10:00 + 5 min = 10:05.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tijdsom",
+              uitleg: "Je telt een tijdsduur op bij een begintijd.",
+            },
+          ],
+          theorie: "Tel eerst door tot het hele uur, dan de rest erbij.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "09:15 → 10:00 = 45 min. Nog 5 min → 10:05.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Geen 65 minuten",
+              uitleg: "Na 59 minuten begint een nieuw uur.",
+            },
+          ],
+          niveaus: {
+            basis: "10:05.",
+            simpeler: "09:15 + 45 min = 10:00. Nog 5 min erbij = 10:05.",
+            nogSimpeler: "10:05",
+          },
+        },
+      },
+      {
+        q: "Jip voetbalt van **13:40** tot **15:10**. Hoe lang voetbalt hij?",
+        options: ["1 uur 30 min", "2 uur 30 min", "1 uur 10 min", "2 uur 10 min"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te lang — tel eerst tot het hele uur, dan de hele uren, dan de rest.",
+          null,
+          "Te lang — hoeveel minuten is het van 13:40 tot 14:00?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tijd-balkje",
+              tekst: "13:40 → 14:00 = 20 min. 14:00 → 15:00 = 1 uur. 15:00 → 15:10 = 10 min. Samen: 1 uur 30 min.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "duur",
+              uitleg: "Hoe lang iets duurt, van begin tot eind.",
+            },
+          ],
+          theorie: "Eerst tot het hele uur, dan de hele uren, dan het laatste stukje.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "20 min + 1 uur + 10 min = 1 uur 30 min.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet 15 − 13",
+              uitleg: "15 − 13 = 2 geeft te veel: hij begon pas om 13:40, niet om 13:00.",
+            },
+          ],
+          niveaus: {
+            basis: "1 uur 30 min.",
+            simpeler: "20 min tot 14:00, 1 uur tot 15:00, 10 min tot 15:10. Samen 1 uur 30 min.",
+            nogSimpeler: "1 uur 30 min",
+          },
+        },
+      },
+      {
+        q: "Welke tijd duurt het **langst**?",
+        options: ["2 uur", "100 minuten", "1,5 uur", "110 minuten"],
+        answer: 0,
+        wrongHints: [null, "Reken 2 uur om naar minuten en vergelijk.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Alles naar minuten",
+              tekst: "2 uur = 120 min. 1,5 uur = 90 min. 100 en 110 min blijven gelijk. 120 min is het langst.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vergelijken",
+              uitleg: "Eerst alles in minuten, dan kijken wat het grootst is.",
+            },
+          ],
+          theorie: "1 uur = 60 minuten. Een half uur = 30 minuten.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "120 min > 110 min > 100 min > 90 min.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "1,5 uur",
+              uitleg: "1,5 uur = 1 uur en 30 minuten = 90 minuten.",
+            },
+          ],
+          niveaus: {
+            basis: "2 uur.",
+            simpeler: "Alles in minuten: 120, 100, 90 en 110. 2 uur is het langst.",
+            nogSimpeler: "2 uur",
+          },
         },
       },
     ],
@@ -437,6 +1553,308 @@ const steps = [
           niveaus: { basis: "4,5 m.", simpeler: "4500 mm ÷ 1000 = 4,5 m (komma 3 plekken naar links).", nogSimpeler: "4,5" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**275 cm** in **m**?",
+        options: ["2,75", "27,5", "0,275", "2750"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — heb je de komma maar 1 plek verschoven? cm → m is 2 stappen.",
+          null,
+          "Andersom — m is groter dan cm, dus het getal wordt kleiner.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Komma 2 naar links",
+              tekst: "cm → dm → m = 2 stappen omhoog. Komma 2 plekken naar links: 275 → 2,75 m.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "komma verschuiven",
+              uitleg: "Per stapje op het trapje schuift de komma 1 plek.",
+            },
+          ],
+          theorie: "Grotere eenheid → komma naar links. Kleinere eenheid → komma naar rechts.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "150 cm = 1,50 m. 275 cm = 2,75 m.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Welke kant?",
+              uitleg: "Grotere eenheid → kleiner getal.",
+            },
+          ],
+          niveaus: {
+            basis: "2,75.",
+            simpeler: "cm naar m = 2 stappen omhoog. Komma 2 naar links: 2,75 m.",
+            nogSimpeler: "2,75",
+          },
+        },
+      },
+      {
+        q: "**0,6 kg** in **g**?",
+        options: ["600", "60", "6000", "6"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — kg → g is 3 stappen, dus komma 3 naar rechts.",
+          "Te veel — heb je de komma 4 plekken verschoven?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Komma 3 naar rechts",
+              tekst: "kg → g = 3 stappen omlaag. Komma 3 plekken naar rechts: 0,6 → 600 g.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kg → g",
+              uitleg: "3 stapjes = × 1000 = komma 3 plekken naar rechts.",
+            },
+          ],
+          theorie: "Kleinere eenheid → komma naar rechts → groter getal.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "0,2 kg = 200 g. 0,6 kg = 600 g.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Nullen aanvullen",
+              uitleg: "Is er geen cijfer meer? Schrijf een 0 bij: 0,6 → 6 → 60 → 600.",
+            },
+          ],
+          niveaus: {
+            basis: "600.",
+            simpeler: "0,6 kg: komma 3 naar rechts = 600 g.",
+            nogSimpeler: "600",
+          },
+        },
+      },
+      {
+        q: "**3,25 L** in **mL**?",
+        options: ["3250", "325", "32.500", "32,5"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — L → mL is 3 stappen, heb je er maar 2 gedaan?",
+          null,
+          "Te weinig — heb je de komma maar 1 plek verschoven?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Komma 3 naar rechts",
+              tekst: "L → dL → cL → mL = 3 stappen omlaag. Komma 3 naar rechts: 3,25 → 3250 mL.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "L → mL",
+              uitleg: "3 stapjes = komma 3 plekken naar rechts.",
+            },
+          ],
+          theorie: "Kleinere eenheid → komma naar rechts.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2,4 L = 2400 mL. 3,25 L = 3250 mL.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Nul erbij",
+              uitleg: "Na 3,25 zijn er maar 2 cijfers achter de komma. Voor de 3e plek schrijf je een 0.",
+            },
+          ],
+          niveaus: {
+            basis: "3250.",
+            simpeler: "L naar mL = 3 stappen. Komma 3 naar rechts: 3250 mL.",
+            nogSimpeler: "3250",
+          },
+        },
+      },
+      {
+        q: "**85 mm** in **cm**?",
+        options: ["8,5", "0,85", "850", "0,085"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — mm → cm is maar 1 stapje.",
+          null,
+          "Veel te weinig — heb je 3 plekken verschoven?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Komma 1 naar links",
+              tekst: "mm → cm = 1 stapje omhoog. Komma 1 plek naar links: 85 → 8,5 cm.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "mm → cm",
+              uitleg: "1 stapje = komma 1 plek.",
+            },
+          ],
+          theorie: "Grotere eenheid → komma naar links.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "40 mm = 4 cm. 85 mm = 8,5 cm.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Welke kant?",
+              uitleg: "cm is groter dan mm, dus het getal wordt kleiner.",
+            },
+          ],
+          niveaus: {
+            basis: "8,5.",
+            simpeler: "mm naar cm = 1 stapje. Komma 1 naar links: 8,5 cm.",
+            nogSimpeler: "8,5",
+          },
+        },
+      },
+      {
+        q: "**6,4 km** in **m**?",
+        options: ["6400", "640", "64.000", "64"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — km → m is 3 stappen. Heb je er maar 2 gedaan?",
+          null,
+          "Te weinig — heb je de komma maar 1 plek verschoven?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Komma 3 naar rechts",
+              tekst: "km → hm → dam → m = 3 stappen omlaag. Komma 3 naar rechts: 6,4 → 6400 m.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "km → m",
+              uitleg: "3 stapjes = komma 3 plekken naar rechts.",
+            },
+          ],
+          theorie: "Kleinere eenheid → komma naar rechts → groter getal.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1,5 km = 1500 m. 6,4 km = 6400 m.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Nullen aanvullen",
+              uitleg: "6,4 → 64 → 640 → 6400. Elke lege plek wordt een 0.",
+            },
+          ],
+          niveaus: {
+            basis: "6400.",
+            simpeler: "km naar m = 3 stappen. Komma 3 naar rechts: 6400 m.",
+            nogSimpeler: "6400",
+          },
+        },
+      },
+      {
+        q: "**45 cL** in **L**?",
+        options: ["0,45", "4,5", "0,045", "450"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — cL → L is 2 stappen. Heb je er maar 1 gedaan?",
+          null,
+          "Andersom — L is groter dan cL, dus het getal wordt kleiner.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Komma 2 naar links",
+              tekst: "cL → dL → L = 2 stappen omhoog. Komma 2 naar links: 45 → 0,45 L.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "cL → L",
+              uitleg: "2 stapjes omhoog = komma 2 plekken naar links.",
+            },
+          ],
+          theorie: "Grotere eenheid → komma naar links.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "100 cL = 1 L. 45 cL = 0,45 L.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "0 ervoor",
+              uitleg: "Schuift de komma voorbij het eerste cijfer? Zet er een 0 voor: 0,45.",
+            },
+          ],
+          niveaus: {
+            basis: "0,45.",
+            simpeler: "cL naar L = 2 stappen. Komma 2 naar links: 0,45 L.",
+            nogSimpeler: "0,45",
+          },
+        },
+      },
+      {
+        q: "**1,08 m** in **cm**?",
+        options: ["108", "10,8", "1080", "180"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — m → cm is 2 stappen. Heb je er maar 1 gedaan?",
+          null,
+          "Kijk goed naar de 0 na de komma. Mag die weg?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Komma 2 naar rechts",
+              tekst: "m → dm → cm = 2 stappen omlaag. Komma 2 naar rechts: 1,08 → 108 cm.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "m → cm",
+              uitleg: "2 stapjes = komma 2 plekken naar rechts.",
+            },
+          ],
+          theorie: "Kleinere eenheid → komma naar rechts.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1,25 m = 125 cm. 1,08 m = 108 cm.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "De 0 telt",
+              uitleg: "1,08 is niet hetzelfde als 1,8. De 0 blijft staan.",
+            },
+          ],
+          niveaus: {
+            basis: "108.",
+            simpeler: "m naar cm = 2 stappen. Komma 2 naar rechts: 108 cm.",
+            nogSimpeler: "108",
+          },
+        },
+      },
     ],
   },
 
@@ -499,6 +1917,174 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "25 × 10 × 1,5 = 375 m³. ×1000 L/m³ = 375.000 L." }],
           basiskennis: [{ onderwerp: "Realiteit", uitleg: "Zwembad heeft veel water — 375.000 L = 375 ton water." }],
           niveaus: { basis: "375.000 L.", simpeler: "Zwembad-volume = 25×10×1,5 = 375 m³. × 1000 L/m³ = 375.000 L.", nogSimpeler: "375.000" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Lisa heeft een lint van **3 m**. Ze knipt het in stukjes van **25 cm**. Hoeveel stukjes krijgt ze?",
+        options: ["12", "75", "1,2", "120"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Heb je 3 × 25 gedaan? Ze knipt het lint juist in stukjes.",
+          null,
+          "Te veel — hoeveel cm is 3 m precies?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst gelijke eenheid",
+              tekst: "3 m = 300 cm. 300 ÷ 25 = 12 stukjes.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "redactiesom",
+              uitleg: "Verhalende som met meerdere stappen + eenheid-omrekening.",
+            },
+          ],
+          theorie: "Stap 1: alles in cm. Stap 2: delen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "3 m = 300 cm. 300 ÷ 25 = 12.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet 3 ÷ 25",
+              uitleg: "Eerst omrekenen: m en cm kun je niet zomaar door elkaar delen.",
+            },
+          ],
+          niveaus: {
+            basis: "12.",
+            simpeler: "3 m = 300 cm. 300 ÷ 25 = 12 stukjes.",
+            nogSimpeler: "12",
+          },
+        },
+      },
+      {
+        q: "Oma gebruikt **250 g** boter, **0,3 kg** suiker en **450 g** meel. Hoeveel **kg** is dat samen?",
+        options: ["1", "0,7", "1,7", "3,7"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — heb je de suiker meegeteld?",
+          null,
+          "Te veel — hoeveel g is 0,3 kg precies?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst gelijke eenheid",
+              tekst: "0,3 kg = 300 g. 250 + 300 + 450 = 1000 g = 1 kg.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "redactiesom",
+              uitleg: "Verhalende som met meerdere stappen + eenheid-omrekening.",
+            },
+          ],
+          theorie: "Stap 1: alles in g. Stap 2: optellen. Stap 3: terug naar kg.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "250 g + 300 g + 450 g = 1000 g = 1 kg.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Gevraagde eenheid",
+              uitleg: "Het antwoord moet in kg. 1000 g = 1 kg.",
+            },
+          ],
+          niveaus: {
+            basis: "1 kg.",
+            simpeler: "0,3 kg = 300 g. 250 + 300 + 450 = 1000 g. Dat is 1 kg.",
+            nogSimpeler: "1",
+          },
+        },
+      },
+      {
+        q: "Noor loopt elke dag **800 m** naar school en **800 m** terug. Hoeveel **km** loopt ze in **5 schooldagen**?",
+        options: ["8", "4", "1,6", "80"],
+        answer: 0,
+        wrongHints: [null, "Te weinig — loopt ze ook terug naar huis?", "Dat is maar 1 dag.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst gelijke eenheid",
+              tekst: "Per dag: 800 + 800 = 1600 m. 5 dagen: 5 × 1600 = 8000 m = 8 km.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "redactiesom",
+              uitleg: "Verhalende som met meerdere stappen + eenheid-omrekening.",
+            },
+          ],
+          theorie: "Stap 1: per dag optellen. Stap 2: keer 5. Stap 3: m naar km (÷ 1000).",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1600 m × 5 = 8000 m = 8 km.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Heen én terug",
+              uitleg: "Lees goed: ze loopt heen én terug.",
+            },
+          ],
+          niveaus: {
+            basis: "8 km.",
+            simpeler: "1600 m per dag × 5 = 8000 m. Dat is 8 km.",
+            nogSimpeler: "8",
+          },
+        },
+      },
+      {
+        q: "Een pakje boter weegt **250 g**. Hoeveel pakjes heb je nodig voor **2 kg** boter?",
+        options: ["8", "4", "80", "500"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — met 4 pakjes heb je pas 1 kg.",
+          null,
+          "Heb je 2000 ÷ 4 gedaan? Je deelt door het gewicht van één pakje.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst gelijke eenheid",
+              tekst: "2 kg = 2000 g. 2000 ÷ 250 = 8 pakjes.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "redactiesom",
+              uitleg: "Verhalende som met meerdere stappen + eenheid-omrekening.",
+            },
+          ],
+          theorie: "Stap 1: alles in g. Stap 2: delen door het gewicht van één pakje.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2 kg = 2000 g. 2000 ÷ 250 = 8.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Controle",
+              uitleg: "8 × 250 g = 2000 g = 2 kg. Klopt!",
+            },
+          ],
+          niveaus: {
+            basis: "8.",
+            simpeler: "2 kg = 2000 g. 2000 ÷ 250 = 8 pakjes.",
+            nogSimpeler: "8",
+          },
         },
       },
     ],
