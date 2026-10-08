@@ -10,6 +10,7 @@
 
 import { getLearnPath } from "../../learnPaths/pathLoaders.js";
 import { shuffleOpties } from "../../shared/shuffleOpties.js";
+import { ongezienEerst, vraagSleutel } from "../../shared/geziendeVragen.js";
 
 function shuffle(arr) {
   const a = arr.slice();
@@ -68,7 +69,12 @@ export async function buildTopicQuiz({ pathId, aantal = null, shuffleQuestions =
   if (valide.length === 0) {
     throw new Error(`buildTopicQuiz: geen geldige vragen in '${pathId}'`);
   }
-  const ordered = shuffleQuestions ? shuffle(valide) : valide;
+  // 👀 Nieuwe vragen eerst (Mark 8 okt 2026): eerst wat dit apparaat nog nooit beantwoordde,
+  // dan de langst geleden geziene. Binnen "nieuw" blijft de (geschudde) volgorde staan.
+  // "Gezien" wordt pas gezet bij het beantwoorden (VandaagKwartier, start-kwartier), niet hier:
+  // een kwartier dat halverwege stopt, laat de niet-getoonde vragen dan nieuw.
+  const metSleutel = valide.map((c) => ({ ...c, geziensleutel: vraagSleutel(pathId, c.q) }));
+  const ordered = ongezienEerst(shuffleQuestions ? shuffle(metSleutel) : metSleutel, (c) => c.geziensleutel);
   const selectie = aantal != null ? ordered.slice(0, Math.min(aantal, ordered.length)) : ordered;
   // Behoud uitlegPad (oefen-modus is didactisch — geen strip).
   // Opties per vraag schudden: in de pad-data staat het juiste antwoord
