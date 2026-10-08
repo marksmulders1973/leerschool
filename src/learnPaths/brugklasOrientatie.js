@@ -76,6 +76,88 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet onderwijs.", "Activiteit.", "Niet."],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Hoe gaat het meestal met **lokalen** op de middelbare school?",
+        options: [
+          "Je gaat vaak naar een ander lokaal",
+          "Je zit de hele dag in één lokaal",
+          "Je krijgt alle lessen in de aula",
+          "Je kiest elke dag zelf een lokaal",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zo gaat het vaak op de basisschool. Wat volg je op de middelbare school?",
+          null,
+          "Wie bepaalt waar je les hebt? Kijk naar je rooster.",
+        ],
+      },
+      {
+        q: "Hoeveel tijd ben je in **klas 1** per dag ongeveer met huiswerk bezig?",
+        options: ["1-2 uur", "5 minuten", "5-6 uur", "Geen tijd, er is geen huiswerk"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Op de middelbare school krijg je juist méér huiswerk dan op de basisschool.",
+          null,
+          "Huiswerk hoort er wel bij.",
+        ],
+      },
+      {
+        q: "Hoeveel **vakken** heb je ongeveer op de middelbare school?",
+        options: ["13-15", "2-3", "40", "1"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat lijkt meer op de basisschool: rekenen en taal.",
+          null,
+          "Denk aan wiskunde, Engels, biologie, gym…",
+        ],
+      },
+      {
+        q: "Wat is een **brugklaskamp**?",
+        options: [
+          "Een uitje om je klas en school te leren kennen",
+          "Een toets aan het eind van het jaar",
+          "Een vak dat op je rooster staat",
+          "Een week zonder school in de zomer",
+        ],
+        answer: 0,
+        wrongHints: [null, "Bij een kamp hoort geen cijfer. Waarvoor is het in de eerste week?", null, null],
+      },
+      {
+        q: "Wat is het **gymnasium**?",
+        options: [
+          "Vwo met Latijn en Grieks",
+          "Havo met extra gymlessen",
+          "Vmbo met veel sport",
+          "Een zaal om te sporten",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Het woord lijkt op 'gym', maar het gaat om een niveau. Welke talen krijg je erbij?",
+          null,
+          null,
+        ],
+      },
+      {
+        q: "Je haalt je **eerste cijfer** en het valt tegen. Wat is een goede houding?",
+        options: [
+          "Rustig blijven, wennen kost tijd",
+          "Meteen naar een andere school",
+          "Dat vak niet meer leren",
+          "Het cijfer voor iedereen verstoppen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Eén cijfer zegt nog niet alles. Wat heb je in het begin nodig?",
+          null,
+          "Erover praten helpt juist vaak.",
+        ],
+      },
     ],
   },
   {
@@ -106,6 +188,29 @@ const steps = [
         options: ["Direct in les", "'s Avonds uit hoofd", "Bij thuiskomst", "Volgende dag"],
         answer: 0,
         wrongHints: [null, "Vergeet je vaak.", "Soms te laat.", "Te laat."],
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Waarom is het slim om je huiswerk te **spreiden** over de week?",
+        options: [
+          "Dan wordt geen dag te zwaar",
+          "Dan krijg je minder huiswerk",
+          "Dan krijg je geen toetsen",
+          "Dan heb je geen agenda nodig",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Het huiswerk blijft even veel. Wat verandert er wél?",
+          null,
+          "Juist bij spreiden helpt een agenda.",
+        ],
+      },
+      {
+        q: "Je moet je werkstuk op **vrijdag** inleveren. Wanneer doe je de laatste check?",
+        options: ["Donderdag", "Vrijdag na het inleveren", "Zaterdag", "De week erna"],
+        answer: 0,
+        wrongHints: [null, "Kun je dan nog iets verbeteren?", null, "Tel terug vanaf de deadline."],
       },
     ],
   },
@@ -138,6 +243,68 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Slecht idee.", "Te weinig.", "Dan slaap je helemaal niet — slecht voor je geheugen."],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat hoort bij goed **samenvatten**?",
+        options: [
+          "In eigen woorden opschrijven",
+          "De hele tekst overschrijven",
+          "Alleen de plaatjes overtrekken",
+          "Niets opschrijven",
+        ],
+        answer: 0,
+        wrongHints: [null, "Dan wordt het niet korter. Wat maakt een samenvatting kort?", null, null],
+      },
+      {
+        q: "Bij welke leertechniek hoort een **mindmap**?",
+        options: ["Visueel leren", "Stampen", "Multitasking", "Passief overlezen"],
+        answer: 0,
+        wrongHints: [null, "Een mindmap maak je met schema's en lijnen. Wat zie je dan?", null, null],
+      },
+      {
+        q: "Waarom werkt alles op één avond **stampen** slecht?",
+        options: [
+          "Je vergeet de stof snel weer",
+          "Het mag niet van school",
+          "Je krijgt er geen cijfer voor",
+          "Je leert er te veel van",
+        ],
+        answer: 0,
+        wrongHints: [null, "Het mag wel, maar wat gebeurt er na een week?", null, null],
+      },
+      {
+        q: "Wat werkt beter dan een tekst vijf keer **overlezen**?",
+        options: [
+          "Lezen en jezelf vragen stellen",
+          "De tekst nog vaker lezen",
+          "Alleen de titel lezen",
+          "De tekst snel doorbladeren",
+        ],
+        answer: 0,
+        wrongHints: [null, "Meer van hetzelfde helpt niet. Hoe word je zelf actief?", null, null],
+      },
+      {
+        q: "Je maakt een fout bij het **oefenen**. Hoe kijk je daar het best naar?",
+        options: [
+          "Je kunt ervan leren",
+          "Je moet hem verstoppen",
+          "Hij laat zien dat je dom bent",
+          "Je moet dan stoppen met oefenen",
+        ],
+        answer: 0,
+        wrongHints: [null, "Wat kun je met een fout doen om het de volgende keer beter te doen?", null, null],
+      },
+      {
+        q: "Wat helpt om nieuwe stof beter te **onthouden**?",
+        options: [
+          "Koppelen aan iets wat je al kent",
+          "Alleen snel doorbladeren",
+          "Steeds iets anders tegelijk doen",
+          "Pas op de toetsdag beginnen",
+        ],
+        answer: 0,
+        wrongHints: [null, "Snel kijken blijft niet hangen.", null, "Dan heb je geen tijd om te herhalen."],
+      },
     ],
   },
   {
@@ -169,6 +336,78 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Juist veel kinderen vinden de eerste weken druk: nieuwe school, nieuwe vakken, nieuwe mensen.", "Het heeft niets met slim of niet slim te maken — alles is nieuw.", "Na een paar weken went het meestal; praat erover met je mentor."],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke vraag aan je docent is het **duidelijkst**?",
+        options: [
+          "Kunt u stap 2 op blz. 15 uitleggen?",
+          "Ik snap helemaal niets van dit vak.",
+          "Kunt u alles nog een keer doen?",
+          "Wat moest ik ook alweer doen?",
+        ],
+        answer: 0,
+        wrongHints: [null, "Weet de docent dan wát je niet snapt?", null, "Welk stukje precies?"],
+      },
+      {
+        q: "Hoe leer je het best voor **wiskunde**?",
+        options: [
+          "Veel opgaven maken",
+          "Alleen de uitleg lezen",
+          "Alles op de laatste avond doen",
+          "Woordjes stampen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Lezen alleen is niet genoeg bij een exact vak. Wat moet je doen?",
+          null,
+          "Woordjes horen bij een taalvak.",
+        ],
+      },
+      {
+        q: "Wat helpt je goed bij **geschiedenis**?",
+        options: [
+          "Een tijdlijn maken",
+          "Alleen sommen oefenen",
+          "Je gymspullen inpakken",
+          "Het boek dicht laten",
+        ],
+        answer: 0,
+        wrongHints: [null, "Bij geschiedenis gaat het om wat er wanneer gebeurde.", null, null],
+      },
+      {
+        q: "De ene docent is **streng**, de andere is grappig. Wat doe je?",
+        options: [
+          "Je houding per les aanpassen",
+          "Brutaal zijn bij de strenge docent",
+          "Alleen opletten bij de grappige",
+          "Bij iedereen over de docenten klagen",
+        ],
+        answer: 0,
+        wrongHints: [null, "Wat gebeurt er als je brutaal bent tegen een strenge docent?", null, null],
+      },
+      {
+        q: "Hoe onthoud je in de eerste weken al je **docenten**?",
+        options: [
+          "Een lijst maken met naam en vak",
+          "Iedereen gewoon 'meester' noemen",
+          "Alleen de naam van je mentor onthouden",
+          "Wachten tot het vanzelf lukt",
+        ],
+        answer: 0,
+        wrongHints: [null, "Er zijn ook vrouwelijke docenten, en zo leer je de namen niet.", null, null],
+      },
+      {
+        q: "Je hebt rustig met een docent gepraat, maar het **conflict** is niet opgelost. Naar wie ga je dan?",
+        options: ["Je mentor", "Een klasgenoot", "Niemand meer", "De conciërge"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een klasgenoot kan luisteren, maar wie is je vaste contactpersoon op school?",
+          null,
+          null,
+        ],
+      },
     ],
   },
   {
@@ -199,6 +438,52 @@ const steps = [
         options: ["0800-0432", "112", "0900-9292", "Onbekend"],
         answer: 0,
         wrongHints: [null, "Spoed.", "Reisinformatie openbaar vervoer.", "Wel bekend."],
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke is een **teken van stress**?",
+        options: ["Slecht slapen", "Lekker eten", "Zin hebben in school", "Je goed kunnen concentreren"],
+        answer: 0,
+        wrongHints: [null, "Dat klinkt juist alsof het goed gaat.", null, null],
+      },
+      {
+        q: "Hoeveel **beweging** per dag helpt je brein en je stemming?",
+        options: ["30-60 minuten", "5 minuten", "5 uur", "Helemaal geen"],
+        answer: 0,
+        wrongHints: [null, "Dat is heel kort.", null, "Fietsen naar school telt ook al mee."],
+      },
+      {
+        q: "Je werkstuk moet **morgen** af zijn en is nog niet klaar. Wat zegt de Eisenhower-matrix?",
+        options: [
+          "Doe het nu",
+          "Doe het later of niet",
+          "Plan het in voor volgende maand",
+          "Laat het helemaal liggen",
+        ],
+        answer: 0,
+        wrongHints: [null, "Is dit belangrijk? En moet het snel?", null, null],
+      },
+      {
+        q: "Waarom is **ontbijten** belangrijk?",
+        options: [
+          "Het geeft focus en energie",
+          "Dan hoef je niet te lunchen",
+          "Dan mag je eerder naar huis",
+          "Het is verplicht op school",
+        ],
+        answer: 0,
+        wrongHints: [null, "Vaste maaltijden horen er allemaal bij.", null, null],
+      },
+      {
+        q: "Je hebt te veel clubs na school en voelt **stress**. Wat is een goede tip?",
+        options: [
+          "Iets schrappen",
+          "Er nog een club bij nemen",
+          "Minder gaan slapen",
+          "Je huiswerk overslaan",
+        ],
+        answer: 0,
+        wrongHints: [null, "Wordt het dan rustiger of drukker?", null, null],
       },
     ],
   },
