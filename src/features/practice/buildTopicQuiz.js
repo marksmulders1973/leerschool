@@ -32,19 +32,25 @@ function shuffle(arr) {
 const VERWIJST_NAAR_PLAATJE = /tabel|kaart|grafiek|plaatje|tekening|figuur|afbeelding|hieronder|hierboven|diagram|klok|getallenlijn|schema|staaf|cirkel/i;
 const STAP_MET_TEKST = /(op basis van (de|het) (tekst|verhaal)|lees (eerst |nog eens |nogmaals )?(de|het) (tekst|verhaal)|beantwoord de \d+ vragen)/i;
 
-export async function buildTopicQuiz({ pathId, aantal = null, shuffleQuestions = true, alleenEersteStappen = null, stapIndexen = null, stapPlaatje = "bij-verwijzing" }) {
+// `groep` (8 okt 2026, Mark: "zit je in groep 5, dan alleen groep-5-stof"): stappen en vragen met
+// `vanafGroep` hoger dan de groep van het kind vallen weg. Zonder groep (middelbare school, of
+// onbekend) blijft alles staan. Valt alles weg, dan toch het hele pad (liever iets dan niets).
+export async function buildTopicQuiz({ pathId, aantal = null, shuffleQuestions = true, alleenEersteStappen = null, stapIndexen = null, stapPlaatje = "bij-verwijzing", groep = null }) {
   const pad = await getLearnPath(pathId);
   if (!pad) {
     throw new Error(`buildTopicQuiz: leerpad '${pathId}' niet gevonden`);
   }
   // Neem step.svg mee per check (zelfde infra-fix als sample-flows 2026-05-18).
   const alle = pad.steps || [];
-  const stappen = stapIndexen ? alle.filter((_, i) => stapIndexen.includes(i)) : alleenEersteStappen ? alle.slice(0, alleenEersteStappen) : alle;
+  const pastBijGroep = (x) => !(groep && x && Number(x.vanafGroep) > groep);
+  const stappenRuw = stapIndexen ? alle.filter((_, i) => stapIndexen.includes(i)) : alleenEersteStappen ? alle.slice(0, alleenEersteStappen) : alle;
+  const stappenGroep = stappenRuw.filter(pastBijGroep);
+  const stappen = stappenGroep.length ? stappenGroep : stappenRuw;
   const alleChecks = stappen.flatMap((s) => {
     // `s.leesTekst` (4 okt 2026, meldingen lange-toets-teksten-g8-po): een stap kan zijn leestekst
     // ook expliciet meegeven — dan hangt het niet af van een zinnetje in de uitleg.
     const metTekst = !!s.leesTekst || STAP_MET_TEKST.test(String(s.explanation || ""));
-    return (s.checks || []).map((c) => ({ ...c, svg: c.svg || ((stapPlaatje === "altijd" || VERWIJST_NAAR_PLAATJE.test(String(c.q || ""))) ? s.svg : null) || null,
+    return (s.checks || []).filter(pastBijGroep).map((c) => ({ ...c, svg: c.svg || ((stapPlaatje === "altijd" || VERWIJST_NAAR_PLAATJE.test(String(c.q || ""))) ? s.svg : null) || null,
       // Vraag hoort bij een leestekst in de stap-uitleg (kliktest 26 sep 2026: "Wat heb je nodig om de
       // armband te maken?" stond zonder tekst op het digibord). Klassikaal slaat zulke vragen over.
       stapTekst: metTekst || undefined,

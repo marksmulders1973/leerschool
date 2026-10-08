@@ -40,8 +40,8 @@ function titelVan(pathId, fallback = "") {
   const p = PATHS_BY_ID[pathId];
   return p ? `${p.emoji ? p.emoji + " " : ""}${p.title}` : fallback || pathId;
 }
-function vragenBlok(pathId, n = ITEMS_PER_BLOK) {
-  return { soort: "vragen", pathId, n, titel: titelVan(pathId) };
+function vragenBlok(pathId, n = ITEMS_PER_BLOK, groep = null) {
+  return { soort: "vragen", pathId, n, titel: titelVan(pathId), ...(groep ? { groep } : {}) };
 }
 function dicteeBlok(groep, n = ITEMS_PER_BLOK, school = false) {
   return { soort: "dictee", groep, n, school, titel: school ? "✍️ Dictee met de woorden van school" : "✍️ Dictee met Charley" };
@@ -137,6 +137,9 @@ function conceptVoorVandaag(concepten, weekdag) {
  * @returns {{reden:string, uitleg:string, blokjes:Array, voorkeur?:boolean}}
  */
 export function bepaalPlan({ level, vandaag = new Date(), klaargezet = [], mastery = [], dicteeSchool = false, wwSchool = false, metSchoolvakken = false, voorkeur = null, klasPaden = null } = {}) {
+  // Elk vragen-blokje krijgt de groep mee, zodat stappen boven die groep wegvallen (vanafGroep).
+  const vbGroep = metSchoolvakken || /klas/i.test(String(level)) ? null : parseGroep(level);
+  const vb = (id, n = ITEMS_PER_BLOK) => vragenBlok(id, n, vbGroep);
   const groep = parseGroep(level) ?? 6;
   const open = (klaargezet || []).filter((k) => !k.gedaan);
   const weekdag = vandaag.getDay();
@@ -170,13 +173,13 @@ export function bepaalPlan({ level, vandaag = new Date(), klaargezet = [], maste
       return {
         reden: "weekschema",
         uitleg: "Eerst je lastigste onderwerp, dan twee andere vakken van jouw klas.",
-        blokjes: [vragenBlok(gekozen.id), ...rest.map((id) => vragenBlok(id))],
+        blokjes: [vb(gekozen.id), ...rest.map((id) => vb(id))],
       };
     }
     return {
       reden: "mix",
       uitleg: "Nog weinig gemeten: een mix van vakken van jouw klas.",
-      blokjes: perVak.slice(0, 3).map((id) => vragenBlok(id)),
+      blokjes: perVak.slice(0, 3).map((id) => vb(id)),
     };
   }
   const vk = !metSchoolvakken && voorkeurActief(voorkeur, vandaag) ? voorkeur : null;
@@ -207,7 +210,7 @@ export function bepaalPlan({ level, vandaag = new Date(), klaargezet = [], maste
   };
   const tweedeTaalBlok = () => (metSchoolvakken || groep < 4 ? null : groep >= 6 ? dicteeBlok(groep, ITEMS_PER_BLOK, dicteeSchool) : null);
   // Blokje uit de voorkeur-paden, per weekdag doorgeschoven zodat het niet elke dag hetzelfde is.
-  const vkBlok = (offset) => (vkPaden.length ? vragenBlok(vkPaden[(weekdag + offset) % vkPaden.length]) : null);
+  const vkBlok = (offset) => (vkPaden.length ? vb(vkPaden[(weekdag + offset) % vkPaden.length]) : null);
 
   // 2. Doorstroomtoets binnen 8 weken (groep 7/8)
   const dagen = dagenTotToets(vandaag);
@@ -216,7 +219,7 @@ export function bepaalPlan({ level, vandaag = new Date(), klaargezet = [], maste
     return {
       reden: "toets",
       uitleg: `Nog ${dagen} dagen tot de Doorstroomtoets: vandaag oefenen in toets-stijl.`,
-      blokjes: [vragenBlok(paden[0]), vragenBlok(paden[1]), taalBlok()].filter(Boolean),
+      blokjes: [vb(paden[0]), vb(paden[1]), taalBlok()].filter(Boolean),
     };
   }
 
@@ -241,11 +244,11 @@ export function bepaalPlan({ level, vandaag = new Date(), klaargezet = [], maste
       // Minstens 2 van de 3 uit de voorkeur: het (voorkeur-)concept + één voorkeur-pad, dan taal.
       const eersteInVoorkeur = padMatchtVoorkeur(gekozen.id, vk);
       const extra = vkPaden.filter((id) => id !== gekozen.id);
-      const b2 = extra.length ? vragenBlok(extra[weekdag % extra.length]) : null;
-      const b3 = eersteInVoorkeur ? taal : (extra.length > 1 ? vragenBlok(extra[(weekdag + 1) % extra.length]) : taal);
-      return { reden: "weekschema", voorkeur: true, uitleg: `${uitleg} Met extra aandacht voor ${vkLabel()}.`, blokjes: [vragenBlok(gekozen.id), b2, b3].filter(Boolean) };
+      const b2 = extra.length ? vb(extra[weekdag % extra.length]) : null;
+      const b3 = eersteInVoorkeur ? taal : (extra.length > 1 ? vb(extra[(weekdag + 1) % extra.length]) : taal);
+      return { reden: "weekschema", voorkeur: true, uitleg: `${uitleg} Met extra aandacht voor ${vkLabel()}.`, blokjes: [vb(gekozen.id), b2, b3].filter(Boolean) };
     }
-    return { reden: "weekschema", uitleg, blokjes: [vragenBlok(gekozen.id), taal, taal2].filter(Boolean) };
+    return { reden: "weekschema", uitleg, blokjes: [vb(gekozen.id), taal, taal2].filter(Boolean) };
   }
 
   // 5. gezonde mix per groep (zelfde paden als het start-kwartier)
@@ -254,15 +257,15 @@ export function bepaalPlan({ level, vandaag = new Date(), klaargezet = [], maste
   if (vk && (vkPaden.length || taalBlok())) {
     // Voorkeur-mix: twee blokjes uit de gekozen vakken (of één + werkwoorden/dictee), dan de rest.
     const b1 = vkBlok(0);
-    const b2 = vkPaden.length > 1 ? vkBlok(1) : vragenBlok(paden[start % paden.length]);
+    const b2 = vkPaden.length > 1 ? vkBlok(1) : vb(paden[start % paden.length]);
     const blokjes = [b1, b2, taalBlok()].filter(Boolean);
-    if (blokjes.length < 2) blokjes.push(vragenBlok(paden[(start + 1) % paden.length]));
+    if (blokjes.length < 2) blokjes.push(vb(paden[(start + 1) % paden.length]));
     return { reden: "mix", voorkeur: true, uitleg: `Vandaag extra aandacht voor ${vkLabel()}.`, blokjes };
   }
   return {
     reden: "mix",
     uitleg: "Nog weinig gemeten: een mix van rekenen, taal en lezen voor jouw groep.",
-    blokjes: [vragenBlok(paden[start % paden.length]), vragenBlok(paden[(start + 1) % paden.length]), taalBlok()].filter(Boolean),
+    blokjes: [vb(paden[start % paden.length]), vb(paden[(start + 1) % paden.length]), taalBlok()].filter(Boolean),
   };
 }
 

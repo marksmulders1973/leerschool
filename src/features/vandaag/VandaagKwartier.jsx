@@ -32,7 +32,7 @@ function VragenBlok({ blok, userName, authUser, onKlaar }) {
   const score = useRef({ goed: 0, totaal: 0 });
   useEffect(() => {
     let dood = false;
-    buildTopicQuiz({ pathId: blok.pathId, aantal: blok.n })
+    buildTopicQuiz({ pathId: blok.pathId, aantal: blok.n, groep: blok.groep || null })
       .then(({ quiz, questions }) => { if (!dood) setVragen(questions.slice(0, blok.n).map((q) => ({ ...q, pathId: blok.pathId, padTitel: quiz.title }))); })
       .catch(() => { if (!dood) setVragen([]); });
     return () => { dood = true; };

@@ -159,6 +159,7 @@ const steps = [
   },
   {
     title: "Vissen, reptielen en amfibieën",
+    vanafGroep: 6, // niveau-filter (audit natuur 8 okt 2026): lager dan deze groep slaat het kwartier deze stap over
     explanation: "**Vissen** 🐠:\n• Leven in water.\n• **Kieuwen** — om zuurstof uit water te halen.\n• **Schubben** op het lichaam.\n• **Vinnen** om te zwemmen.\n• **Koud bloed** — temperatuur volgt water.\n• Eieren leggen.\n• Voorbeelden: forel, baars, zalm, haring.\n\n**Reptielen** 🦎:\n• **Schubben** of harde huid.\n• **Koud bloed** — opwarmen in zon.\n• Meestal **eieren leggen** (op land, in zand).\n• Ademen met longen.\n• Voorbeelden: hagedis, slang, krokodil, schildpad.\n\n**Amfibieën** 🐸:\n• **Twee levens**: jong in water (kieuwen), volwassen op land (longen).\n• **Glibberige huid** — geen schubben.\n• **Koud bloed**.\n• **Eieren in water**.\n• Voorbeelden: kikker, salamander, pad.\n\n**Insecten** 🐞:\n• **6 poten** (precies — dat is dé manier om ze te herkennen).\n• Vaak vleugels (4 of 2).\n• Hard pantser (geen botten binnenin).\n• Voorbeelden: mier, vlinder, bij, kever.\n\n**Spinnen** zijn GEEN insecten — ze hebben **8 poten**.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="40" width="120" height="50" rx="6" fill="${COLORS.vis}" opacity="0.18"/>
@@ -222,6 +223,7 @@ const steps = [
   },
   {
     title: "Andere diergroepen",
+    vanafGroep: 6, // niveau-filter (audit natuur 8 okt 2026): lager dan deze groep slaat het kwartier deze stap over
     explanation: "Naast deze groepen zijn er nog andere:\n\n**Weekdieren** 🐌:\n• Zacht lichaam, vaak in een schelp.\n• Voorbeelden: slak, mossel, octopus, inktvis.\n\n**Schaaldieren** 🦀:\n• Pantser om lichaam.\n• Veel poten.\n• Vaak in water.\n• Voorbeelden: krab, kreeft, garnaal.\n\n**Wormen** 🪱:\n• Lang, geen poten.\n• Voorbeelden: regenworm, lintworm.\n\n**Stekelhuidigen** ⭐:\n• In zee, sterachtig.\n• Voorbeelden: zeester, zee-egel.\n\nDeze groepen zien er anders uit, maar zijn ook 'dieren'.\n\n**Even bedenken**: alle dieren zijn:\n• Levend (eten, ademen, groeien...).\n• Niet planten (kunnen geen fotosynthese).\n• Niet schimmels.\n\nDe diversiteit is enorm. Op aarde leven naar schatting **8 miljoen** verschillende diersoorten — de meeste zijn insecten.",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">andere diergroepen</text>
@@ -347,6 +349,7 @@ const steps = [
         },
       },
       {
+        vanafGroep: 7, // schuine aardas = groep-7/8-stof
         q: "Waarom is het in de zomer warmer?",
         options: [
           "Onze kant van de aarde staat naar de zon",
@@ -422,6 +425,7 @@ const steps = [
   },
   {
     title: "Planten en bomen",
+    vanafGroep: 6, // niveau-filter (audit natuur 8 okt 2026): lager dan deze groep slaat het kwartier deze stap over
     explanation: "**Planten** zijn levende wezens die anders zijn dan dieren:\n• **Maken eigen voedsel** uit zonlicht (fotosynthese).\n• Geen hart, maag of hersenen zoals dieren.\n• Bewegen niet weg, blijven op één plek.\n• Hebben bladeren, stengels, wortels, bloemen.\n\n**Onderdelen van een plant**:\n• **Wortel**: in de grond — pakt water + voedingsstoffen op.\n• **Stengel/stam**: draagt de plant.\n• **Blad**: vangt zonlicht — fotosynthese.\n• **Bloem**: voor voortplanting.\n• **Vrucht/zaad**: nieuwe plant.\n\n**Twee soorten bomen**:\n• **Loofbomen** — bladeren in zomer, kaal in winter. Eik, beuk, esdoorn, berk.\n• **Naaldbomen** — naalden, blijven groen ('s winters ook). Den, spar, taxus.\n\n**Fotosynthese** (foto = licht, synthese = maken):\n• water + koolstofdioxide + zonlicht → suiker + zuurstof.\n• Daarom geven planten ons zuurstof om te ademen!\n\n**Bestuiving**: bijen, hommels en vlinders brengen stuifmeel van bloem naar bloem. Zonder hen maken veel planten geen vruchten en zaden.",
     svg: `<svg viewBox="0 0 300 200">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="14" font-family="Arial" font-weight="bold">plant 🌱</text>
@@ -487,6 +491,7 @@ const steps = [
   },
   {
     title: "Voedselketen — wie eet wat?",
+    vanafGroep: 6, // niveau-filter (audit natuur 8 okt 2026): lager dan deze groep slaat het kwartier deze stap over
     explanation: "Een **voedselketen** laat zien wie wat eet. Energie stroomt van zon naar dier naar dier.\n\n**Voorbeeld voedselketen** (weiland):\n• zon → gras → konijn → vos\n• De zon geeft energie aan **gras** (planten).\n• Het **konijn** eet gras.\n• De **vos** eet konijnen.\n\n**Begrippen**:\n• **Producent**: maakt zelf voedsel = plant.\n• **Planteneter** (herbivoor): koe, konijn, schaap, hert, rups, ree.\n• **Vleeseter** (carnivoor): vos, leeuw, havik, krokodil.\n• **Alleseter** (omnivoor): mens, beer, varken, kraai.\n• **Aaseter**: eet dode dieren (kraai, gier).\n• **Afbreker**: schimmels, bacteriën, regenwormen — maken dode resten weer tot grond.\n\n**Voedselweb**: meerdere ketens die elkaar kruisen. In de natuur eet niet alleen één dier één ander — het is een netwerk.\n\n**Belangrijk**: als één schakel verdwijnt, raakt het hele netwerk uit balans. Daarom zijn ALLE dieren belangrijk, ook insecten en wormen.",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">voedselketen</text>
@@ -656,7 +661,7 @@ const dierenSeizoenenNatuur = {
   id: "dieren-seizoenen-natuur",
   title: "Dieren en seizoenen",
   emoji: "🌿",
-  level: "groep4-7",
+  level: "groep5-7",
   subject: "natuur",
   // SLO-kerndoelen (sprint-4 G4a): 39-42 (oriëntatie op jezelf en de wereld
   // — natuur en techniek, milieu, levenscyclus). Geen referentieniveau-
