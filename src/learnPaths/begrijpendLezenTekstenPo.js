@@ -253,6 +253,380 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Waarom werd de eerste fiets ook wel 'loopfiets' genoemd?",
+        options: [
+          "Je zette je met je voeten af van de grond",
+          "Je moest de fiets naast je meelopen",
+          "Hij was alleen bedoeld om mee te wandelen",
+          "Hij had pedalen waar je op kon lopen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Lees de zin vóór 'loopfiets' nog eens. Wat deden je voeten?",
+          null,
+          "Had de eerste fiets al pedalen? Kijk in alinea 1.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk type vraag?",
+              tekst: "Een 'waarom-vraag'. De reden staat in de tekst, vlak bij het woord 'loopfiets'.",
+            },
+            {
+              titel: "Zoek het kernwoord",
+              tekst: "Zoek 'loopfiets' in alinea 1. Het woord 'Daarom' ervoor laat zien dat de reden in de zin daarvóór staat.",
+            },
+            {
+              titel: "Lees de zin ervoor",
+              tekst: "'Zijn fiets had nog geen pedalen — je moest jezelf met je voeten afzetten van de grond.' Dat is de reden.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "loopfiets",
+              uitleg: "De allereerste fiets, zonder pedalen. Je duwde jezelf vooruit met je voeten op de grond.",
+            },
+            {
+              woord: "afzetten",
+              uitleg: "Met je voet tegen de grond duwen om vooruit te komen, zoals op een step.",
+            },
+            {
+              woord: "daarom",
+              uitleg: "Signaalwoord: de reden staat er vlak vóór.",
+            },
+          ],
+          theorie: "**Waarom-vragen: let op het woord 'daarom'**\n\nStaat er 'daarom' in de tekst? Dan staat de REDEN in de zin ervoor.\n\nVoorbeeld: 'Het regende. Daarom nam ik een paraplu.' → reden = het regende.\n\nValstrik: opties die logisch klinken maar niet in de tekst staan.",
+          voorbeelden: [
+            {
+              type: "vinden",
+              tekst: "'...je voeten afzetten van de grond. Daarom werd hij ook wel loopfiets genoemd.' → reden = met je voeten afzetten.",
+            },
+            {
+              type: "valstrik",
+              tekst: "'Pedalen waar je op kon lopen' kan niet: de tekst zegt dat de eerste fiets nog GEEN pedalen had.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Daarom = reden ervoor",
+              uitleg: "Het signaalwoord 'daarom' wijst terug naar de reden in de zin ervoor.",
+            },
+          ],
+          niveaus: {
+            basis: "Zin voor 'daarom': je zette je met je voeten af van de grond.",
+            simpeler: "Er waren nog geen pedalen. Je duwde jezelf vooruit met je voeten, net als lopen. Daarom heette het een loopfiets.",
+            nogSimpeler: "Geen pedalen = voeten op de grond",
+          },
+        },
+      },
+      {
+        q: "Uit welk land kwam Karl von Drais?",
+        options: ["Duitsland", "Frankrijk", "Engeland", "Nederland"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Er komt een Franse smid in de tekst voor, maar was dat Karl von Drais?",
+          null,
+          "Zoek de naam Karl von Drais op in de tekst. Welk woord staat er vlak voor?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk type vraag?",
+              tekst: "Een letterlijke vraag: het antwoord staat in de tekst.",
+            },
+            {
+              titel: "Zoek de naam",
+              tekst: "Zoek 'Karl von Drais' in alinea 1: 'de Duitse uitvinder Karl von Drais'.",
+            },
+            {
+              titel: "Wat zegt 'Duitse'?",
+              tekst: "Iemand die Duits is, komt uit Duitsland.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "uitvinder",
+              uitleg: "Iemand die iets nieuws bedenkt dat er nog niet was.",
+            },
+            {
+              woord: "Duits",
+              uitleg: "Uit Duitsland. Zo is 'Frans' uit Frankrijk en 'Engels' uit Engeland.",
+            },
+          ],
+          theorie: "**Letterlijke vragen: zoek-strategie**\n\n1. Wat is het KERNWOORD in de vraag?\n2. Zoek dat woord (of een woord dat hetzelfde betekent) in de tekst.\n3. Het antwoord staat in DEZELFDE zin of de zin erna.\n\nLet op valstrikken: foute opties gebruiken vaak woorden die óók in de tekst staan, maar bij iets anders horen.",
+          voorbeelden: [
+            {
+              type: "vinden",
+              tekst: "'de Duitse uitvinder Karl von Drais' → Duits → Duitsland.",
+            },
+            {
+              type: "valstrik",
+              tekst: "De Franse smid (alinea 2) en de Engelsman John Kemp Starley (alinea 3) zijn andere personen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Land en bijvoeglijk woord",
+              uitleg: "Duitsland → Duits, Frankrijk → Frans, Engeland → Engels. Het woord vóór een naam vertelt vaak waar iemand vandaan komt.",
+            },
+          ],
+          niveaus: {
+            basis: "Tekst: 'de Duitse uitvinder Karl von Drais' → Duitsland.",
+            simpeler: "Zoek de naam Karl von Drais. Ervoor staat 'de Duitse uitvinder'. Duits hoort bij Duitsland.",
+            nogSimpeler: "Duits = Duitsland",
+          },
+        },
+      },
+      {
+        q: "Wat deed de ketting bij de moderne fiets?",
+        options: [
+          "Hij bracht de kracht van de pedalen naar het achterwiel",
+          "Hij maakte het voorwiel groter dan het achterwiel",
+          "Hij hield de fiets op slot als je hem neerzette",
+          "Hij zorgde dat je je met je voeten afzette",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Juist door de ketting was een groot voorwiel NIET meer nodig. Lees alinea 3.",
+          null,
+          "Dat hoort bij de allereerste fiets, niet bij de moderne.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk type vraag?",
+              tekst: "Een letterlijke vraag over wat iets DOET.",
+            },
+            {
+              titel: "Zoek het kernwoord",
+              tekst: "Zoek 'ketting' in alinea 3.",
+            },
+            {
+              titel: "Lees de zin",
+              tekst: "'De ketting bracht de kracht van de pedalen over op het achterwiel.' Dat is het antwoord.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "ketting",
+              uitleg: "Een rij kleine schakels die om twee tandwielen loopt en het wiel laat draaien.",
+            },
+            {
+              woord: "kracht overbrengen",
+              uitleg: "De kracht van het ene ding doorgeven aan een ander ding.",
+            },
+          ],
+          theorie: "**Letterlijke vragen: zoek-strategie**\n\n1. Wat is het KERNWOORD in de vraag?\n2. Zoek dat woord (of een woord dat hetzelfde betekent) in de tekst.\n3. Het antwoord staat in DEZELFDE zin of de zin erna.\n\nLet op valstrikken: foute opties gebruiken vaak woorden die óók in de tekst staan, maar bij iets anders horen.",
+          voorbeelden: [
+            {
+              type: "vinden",
+              tekst: "Alinea 3: 'De ketting bracht de kracht van de pedalen over op het achterwiel.'",
+            },
+            {
+              type: "valstrik",
+              tekst: "Een groter voorwiel hoort bij de hoge bi. Door de ketting was dat juist niet meer nodig.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Eerst zoeken, dan kiezen",
+              uitleg: "Zoek eerst het antwoord in de tekst. Kijk daarna pas naar de opties.",
+            },
+          ],
+          niveaus: {
+            basis: "Ketting = kracht van de pedalen naar het achterwiel.",
+            simpeler: "Zoek 'ketting' in alinea 3. Daar staat dat de ketting de kracht van de pedalen naar het achterwiel bracht.",
+            nogSimpeler: "Pedalen → ketting → achterwiel",
+          },
+        },
+      },
+      {
+        q: "Wie bedacht de fiets met twee even grote wielen en een ketting?",
+        options: ["John Kemp Starley", "Karl von Drais", "Een Franse smid", "Een Nederlandse uitvinder"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hij maakte de allereerste fiets, nog zonder pedalen.",
+          "De smid maakte pedalen aan het voorwiel. Was dat ook de fiets met een ketting?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk type vraag?",
+              tekst: "Een letterlijke 'wie-vraag': zoek een naam.",
+            },
+            {
+              titel: "Zoek het kernwoord",
+              tekst: "Zoek 'even grote wielen' of 'ketting'. Dat staat in alinea 3.",
+            },
+            {
+              titel: "Lees de zin",
+              tekst: "'De Engelsman John Kemp Starley bedacht een fiets met twee even grote wielen en een ketting.'",
+            },
+          ],
+          woorden: [
+            {
+              woord: "moderne fiets",
+              uitleg: "De fiets zoals wij die nu kennen: twee even grote wielen en een ketting.",
+            },
+            {
+              woord: "Engelsman",
+              uitleg: "Iemand uit Engeland.",
+            },
+          ],
+          theorie: "**Letterlijke vragen: zoek-strategie**\n\n1. Wat is het KERNWOORD in de vraag?\n2. Zoek dat woord (of een woord dat hetzelfde betekent) in de tekst.\n3. Het antwoord staat in DEZELFDE zin of de zin erna.\n\nLet op valstrikken: foute opties gebruiken vaak woorden die óók in de tekst staan, maar bij iets anders horen.\n\nBij een wie-vraag staan er vaak meerdere namen in de tekst. Kijk welke naam bij precies DIE uitvinding hoort.",
+          voorbeelden: [
+            {
+              type: "vinden",
+              tekst: "Alinea 3: John Kemp Starley → twee even grote wielen + ketting.",
+            },
+            {
+              type: "valstrik",
+              tekst: "Karl von Drais = loopfiets (1817). Franse smid = pedalen (1860). Andere uitvindingen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Elke naam hoort bij iets",
+              uitleg: "Maak in je hoofd een lijstje: wie deed wat? Dan kies je makkelijk de goede naam.",
+            },
+          ],
+          niveaus: {
+            basis: "Alinea 3: John Kemp Starley bedacht de fiets met even grote wielen en een ketting.",
+            simpeler: "Er staan drie uitvinders in de tekst. Alleen bij John Kemp Starley staat 'twee even grote wielen en een ketting'.",
+            nogSimpeler: "Ketting = Starley",
+          },
+        },
+      },
+      {
+        q: "Wat was door de ketting NIET meer nodig?",
+        options: ["Een groot voorwiel", "Pedalen", "Een achterwiel", "Twee wielen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Waar bracht de ketting de kracht vandaan? Die onderdelen bleven dus nodig.",
+          null,
+          "De moderne fiets had 'twee even grote wielen'. Lees alinea 3 nog eens.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk type vraag?",
+              tekst: "Een letterlijke vraag met het woord NIET. Lees de vraag extra goed.",
+            },
+            {
+              titel: "Zoek het kernwoord",
+              tekst: "Zoek 'niet meer nodig' in alinea 3.",
+            },
+            {
+              titel: "Lees de zin",
+              tekst: "'Hierdoor was het niet meer nodig om een groot voorwiel te hebben.' 'Hierdoor' = door de ketting.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "hierdoor",
+              uitleg: "Verwijswoord: door wat er net genoemd is. Hier: door de ketting.",
+            },
+            {
+              woord: "voorwiel",
+              uitleg: "Het wiel aan de voorkant van de fiets, waar het stuur aan zit.",
+            },
+          ],
+          theorie: "**Vragen met NIET**\n\nLees de vraag twee keer. Bij 'NIET' zoek je het ene ding dat wegviel of ontbrak.\n\nTip: zoek de woorden 'niet meer' of 'niet nodig' in de tekst.",
+          voorbeelden: [
+            {
+              type: "vinden",
+              tekst: "Alinea 3: 'Hierdoor was het niet meer nodig om een groot voorwiel te hebben.'",
+            },
+            {
+              type: "valstrik",
+              tekst: "Pedalen en het achterwiel bleven juist nodig: de ketting bracht de kracht van de pedalen naar het achterwiel.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Verwijswoorden",
+              uitleg: "Woorden als 'hierdoor', 'dit' en 'daarom' verwijzen naar iets wat net genoemd is.",
+            },
+          ],
+          niveaus: {
+            basis: "Door de ketting was een groot voorwiel niet meer nodig.",
+            simpeler: "Zoek 'niet meer nodig' in alinea 3. Daar staat: een groot voorwiel. 'Hierdoor' betekent: door de ketting.",
+            nogSimpeler: "Ketting → geen groot voorwiel",
+          },
+        },
+      },
+      {
+        q: "Welke verandering kwam volgens de tekst als eerste NA de loopfiets?",
+        options: [
+          "Pedalen aan het voorwiel",
+          "Een ketting naar het achterwiel",
+          "Twee even grote wielen",
+          "Fietsen voor bijna iedere Nederlander",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat staat in alinea 3. Wat staat er in alinea 2?",
+          null,
+          "Dat staat helemaal aan het eind van de tekst.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk type vraag?",
+              tekst: "Een volgorde-vraag: wat kwam er WANNEER?",
+            },
+            {
+              titel: "Zet de jaartallen op een rij",
+              tekst: "1817 loopfiets → 1860 pedalen → 1885 ketting en even grote wielen → rond 1900 populair in Nederland.",
+            },
+            {
+              titel: "Wat komt direct na 1817?",
+              tekst: "1860: een Franse smid maakte pedalen aan het voorwiel.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "volgorde",
+              uitleg: "Welke dingen eerst gebeuren en welke daarna.",
+            },
+            {
+              woord: "jaartal",
+              uitleg: "Een getal dat een jaar aangeeft, zoals 1817.",
+            },
+          ],
+          theorie: "**Volgorde-vragen: gebruik de jaartallen**\n\nIn een tekst over geschiedenis helpen jaartallen je. Zet ze op een rij van vroeg naar laat. Kijk dan wat er direct na het genoemde moment komt.\n\nSignaalwoorden: 'eerst', 'daarna', 'pas', 'tegenwoordig'.",
+          voorbeelden: [
+            {
+              type: "volgorde",
+              tekst: "1817 → 1860 → 1885 → 1900. Na de loopfiets (1817) komt 1860: pedalen aan het voorwiel.",
+            },
+            {
+              type: "valstrik",
+              tekst: "Ketting en even grote wielen kwamen pas rond 1885. Dat is later.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tijdlijn in je hoofd",
+              uitleg: "Bij een geschiedenistekst maak je in je hoofd een tijdlijn. Dan zie je de volgorde meteen.",
+            },
+          ],
+          niveaus: {
+            basis: "Na 1817 (loopfiets) komt 1860: pedalen aan het voorwiel.",
+            simpeler: "Alinea 1 = loopfiets. Alinea 2 = de volgende stap: pedalen aan het voorwiel. Alinea 3 komt pas daarna.",
+            nogSimpeler: "Na loopfiets = pedalen",
+          },
+        },
+      },
     ],
   },
 
@@ -425,6 +799,380 @@ const steps = [
             basis: "Tekst geeft stappen om iets te maken = instrueren",
             simpeler: "Lees de tekst. Wat doet hij vooral? 'Doe dit, doe dat, maak nu...'. Hij vertelt je STAP VOOR STAP hoe je iets maakt. Dat heet instrueren.",
             nogSimpeler: "Stappen om iets te maken = instructie",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Hoe lang moet het stukje touw voor de sluiting ongeveer zijn?",
+        options: [
+          "Zo'n tien centimeter",
+          "Zo'n twintig centimeter",
+          "Zo'n vijf centimeter",
+          "Zo'n dertig centimeter",
+        ],
+        answer: 0,
+        wrongHints: [null, "Twintig staat wel in de tekst, maar waar ging dat over?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk type vraag?",
+              tekst: "Een letterlijke vraag: zoek een getal in de tekst.",
+            },
+            {
+              titel: "Zoek het kernwoord",
+              tekst: "Zoek 'touw' bij de sluiting, in de laatste alinea.",
+            },
+            {
+              titel: "Lees de zin",
+              tekst: "'Knip een stukje touw van zo'n tien centimeter af.'",
+            },
+          ],
+          woorden: [
+            {
+              woord: "sluiting",
+              uitleg: "Het slot dat de armband om je pols bij elkaar houdt.",
+            },
+            {
+              woord: "centimeter",
+              uitleg: "Een maat voor lengte. Een liniaal heeft vaak 30 centimeter.",
+            },
+          ],
+          theorie: "**Getallen in een tekst**\n\nStaan er meerdere getallen in een tekst? Kijk dan goed WAARBIJ elk getal hoort.\n\nIn deze tekst: twintig = aantal paperclips, tien = centimeter touw.",
+          voorbeelden: [
+            {
+              type: "vinden",
+              tekst: "Laatste alinea: 'een stukje touw van zo'n tien centimeter'.",
+            },
+            {
+              type: "valstrik",
+              tekst: "Twintig gaat over het aantal paperclips, niet over het touw.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Getal + woord erbij",
+              uitleg: "Lees altijd het woord dat bij een getal staat: twintig paperclips, tien centimeter.",
+            },
+          ],
+          niveaus: {
+            basis: "Touw voor de sluiting: zo'n tien centimeter.",
+            simpeler: "Zoek in de laatste alinea het woord 'touw'. Daar staat: knip een stukje van zo'n tien centimeter af.",
+            nogSimpeler: "Touw = tien centimeter",
+          },
+        },
+      },
+      {
+        q: "Hoe moet de armband volgens de tekst om je pols zitten?",
+        options: [
+          "Ruim, zodat je pols goed kan bewegen",
+          "Strak, zodat hij niet kan afglijden",
+          "Zo strak dat hij niet kan draaien",
+          "Precies passend, zonder ruimte",
+        ],
+        answer: 0,
+        wrongHints: [null, "Lees de derde alinea. Welk woord zegt hoe de armband moet zitten?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk type vraag?",
+              tekst: "Een letterlijke vraag: het antwoord staat in de tekst.",
+            },
+            {
+              titel: "Zoek het kernwoord",
+              tekst: "Zoek 'pols' in alinea 3.",
+            },
+            {
+              titel: "Lees de zin",
+              tekst: "'Hij moet ruim zitten — je polsbeweging mag niet beperkt worden.'",
+            },
+          ],
+          woorden: [
+            {
+              woord: "ruim",
+              uitleg: "Met wat ruimte, niet strak.",
+            },
+            {
+              woord: "beperkt",
+              uitleg: "Minder vrij. Als je beweging beperkt wordt, kun je niet goed bewegen.",
+            },
+            {
+              woord: "polsbeweging",
+              uitleg: "Hoe je je pols draait en buigt.",
+            },
+          ],
+          theorie: "**Letterlijke vragen: zoek-strategie**\n\n1. Wat is het KERNWOORD in de vraag?\n2. Zoek dat woord (of een woord dat hetzelfde betekent) in de tekst.\n3. Het antwoord staat in DEZELFDE zin of de zin erna.\n\nLet op valstrikken: foute opties gebruiken vaak woorden die óók in de tekst staan, maar bij iets anders horen.",
+          voorbeelden: [
+            {
+              type: "vinden",
+              tekst: "Alinea 3: 'Hij moet ruim zitten.' Dat past bij 'ruim, zodat je pols goed kan bewegen'.",
+            },
+            {
+              type: "valstrik",
+              tekst: "Strak lijkt handig tegen afglijden, maar de tekst zegt juist het omgekeerde.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tekst boven eigen mening",
+              uitleg: "Misschien vind jij een strakke armband fijner. Maar het antwoord moet uit DEZE tekst komen.",
+            },
+          ],
+          niveaus: {
+            basis: "Tekst: 'Hij moet ruim zitten.'",
+            simpeler: "Zoek in alinea 3 wat er over je pols staat. Daar staat 'ruim' en dat je pols vrij moet kunnen bewegen.",
+            nogSimpeler: "Ruim = goed bewegen",
+          },
+        },
+      },
+      {
+        q: "Wanneer moet je de paperclips verven als je de armband mooier wilt maken?",
+        options: [
+          "Voordat je begint",
+          "Nadat je de knoop hebt gelegd",
+          "Terwijl je de keten om je pols meet",
+          "Na elke vijf paperclips",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Deze tip staat aan het eind van de tekst. Maar staat er ook dat je het aan het eind DOET?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk type vraag?",
+              tekst: "Een 'wanneer-vraag' over de volgorde.",
+            },
+            {
+              titel: "Zoek het kernwoord",
+              tekst: "Zoek 'mooier' of 'verf' in de laatste alinea.",
+            },
+            {
+              titel: "Lees de hele zin",
+              tekst: "'Verf de paperclips dan met nagellak voordat je begint.' Let op de laatste woorden: voordat je begint.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "nagellak",
+              uitleg: "Gekleurde lak voor nagels. Je kunt er ook kleine dingen mee verven.",
+            },
+            {
+              woord: "voordat",
+              uitleg: "Eerder dan. 'Voordat je begint' = nog vóór de eerste stap.",
+            },
+          ],
+          theorie: "**Let op de plek in de tekst**\n\nEen tip kan aan het EIND van een tekst staan, terwijl je hem aan het BEGIN moet doen. Lees dus de hele zin, ook de woorden na de komma.\n\nSignaalwoorden voor tijd: 'voordat', 'nadat', 'eerst', 'daarna'.",
+          voorbeelden: [
+            {
+              type: "vinden",
+              tekst: "Laatste alinea: 'Verf de paperclips dan met nagellak voordat je begint.'",
+            },
+            {
+              type: "valstrik",
+              tekst: "De zin staat na de knoop, maar het verven doe je juist als allereerste.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Signaalwoorden voor tijd",
+              uitleg: "'Voordat' en 'nadat' vertellen je de volgorde, ook als de zin ergens anders in de tekst staat.",
+            },
+          ],
+          niveaus: {
+            basis: "Verven: 'voordat je begint'.",
+            simpeler: "De tip over verven staat aan het eind. Maar in die zin staat 'voordat je begint'. Je verft dus eerst, nog voor het haken.",
+            nogSimpeler: "Verven = eerst",
+          },
+        },
+      },
+      {
+        q: "Waar steek je het touw doorheen om de sluiting te maken?",
+        options: [
+          "Door de eerste én de laatste paperclip",
+          "Alleen door de middelste paperclip",
+          "Door elke paperclip van de keten",
+          "Alleen door de laatste paperclip",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Moet het touw door de hele keten, of alleen de twee uiteinden verbinden?",
+          "Met één paperclip maak je geen rondje. Lees de laatste alinea nog eens.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk type vraag?",
+              tekst: "Een letterlijke vraag over een stap.",
+            },
+            {
+              titel: "Zoek het kernwoord",
+              tekst: "Zoek 'touw' en 'steek' in de laatste alinea.",
+            },
+            {
+              titel: "Lees de zin",
+              tekst: "'Steek het touw door de eerste én de laatste paperclip.'",
+            },
+          ],
+          woorden: [
+            {
+              woord: "sluiting",
+              uitleg: "Het slot dat de armband om je pols bij elkaar houdt.",
+            },
+            {
+              woord: "keten",
+              uitleg: "Een rij dingen die aan elkaar vastzitten, zoals de paperclips.",
+            },
+          ],
+          theorie: "**Letterlijke vragen: zoek-strategie**\n\n1. Wat is het KERNWOORD in de vraag?\n2. Zoek dat woord (of een woord dat hetzelfde betekent) in de tekst.\n3. Het antwoord staat in DEZELFDE zin of de zin erna.\n\nLet op valstrikken: foute opties gebruiken vaak woorden die óók in de tekst staan, maar bij iets anders horen.",
+          voorbeelden: [
+            {
+              type: "vinden",
+              tekst: "Laatste alinea: 'door de eerste én de laatste paperclip'.",
+            },
+            {
+              type: "begrijpen",
+              tekst: "Zo maak je van de rij paperclips een rondje om je pols.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Het woordje 'én'",
+              uitleg: "Staat er 'én' met een streepje? Dan horen ze allebei bij elkaar: de eerste én de laatste.",
+            },
+          ],
+          niveaus: {
+            basis: "Touw door de eerste én de laatste paperclip.",
+            simpeler: "Je wilt van de rij een rondje maken. Daarom steek je het touw door de eerste én de laatste paperclip en leg je een knoop.",
+            nogSimpeler: "Eerste + laatste",
+          },
+        },
+      },
+      {
+        q: "Waar moet je op letten als je de tweede paperclip door de eerste schuift?",
+        options: [
+          "Dat de eerste clip niet openbuigt",
+          "Dat beide clips dezelfde kleur hebben",
+          "Dat het touw al klaarligt",
+          "Dat je de schaar bij de hand hebt",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Wanneer gebruik je het touw pas? Lees de laatste alinea.",
+          "De schaar staat wel in het lijstje, maar waarvoor gebruik je hem?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk type vraag?",
+              tekst: "Een letterlijke vraag over een stap.",
+            },
+            {
+              titel: "Zoek de stap",
+              tekst: "Alinea 2: 'Schuif er een tweede paperclip doorheen, zodat ze in elkaar haken.'",
+            },
+            {
+              titel: "Lees de zin erna",
+              tekst: "'Doe dit voorzichtig: je wilt niet dat de eerste clip openbuigt.' Dat is waar je op let.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "openbuigen",
+              uitleg: "Uit zijn vorm gaan, zodat de clip open gaat staan.",
+            },
+            {
+              woord: "in elkaar haken",
+              uitleg: "Zo vastmaken dat ze aan elkaar blijven hangen.",
+            },
+          ],
+          theorie: "**In een instructie staan vaak waarschuwingen**\n\nWoorden als 'voorzichtig', 'let op' of 'je wilt niet dat' vertellen waar je op moet letten.\n\nDie waarschuwing staat meestal vlak bij de stap waar hij over gaat.",
+          voorbeelden: [
+            {
+              type: "vinden",
+              tekst: "Alinea 2: 'Doe dit voorzichtig: je wilt niet dat de eerste clip openbuigt.'",
+            },
+            {
+              type: "valstrik",
+              tekst: "Touw en schaar heb je pas nodig bij de sluiting, aan het eind.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Waarschuwingswoorden",
+              uitleg: "'Voorzichtig', 'let op' en 'niet' wijzen op iets wat mis kan gaan.",
+            },
+          ],
+          niveaus: {
+            basis: "Alinea 2: voorzichtig, de eerste clip mag niet openbuigen.",
+            simpeler: "Zoek de stap met de tweede paperclip. Direct erna staat: doe dit voorzichtig, want de eerste clip mag niet openbuigen.",
+            nogSimpeler: "Voorzichtig = clip niet open",
+          },
+        },
+      },
+      {
+        q: "Wat kun je volgens de tekst doen als de armband na het meten nog iets te kort is?",
+        options: [
+          "Nog een of twee paperclips toevoegen",
+          "Een paar paperclips weghalen",
+          "De paperclips verder openbuigen",
+          "Helemaal opnieuw beginnen",
+        ],
+        answer: 0,
+        wrongHints: [null, "Wordt een keten langer of korter als je clips weghaalt?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk type vraag?",
+              tekst: "Een letterlijke vraag: wat zegt de tekst dat je kunt doen?",
+            },
+            {
+              titel: "Zoek de plek",
+              tekst: "Het meten staat in alinea 3. Zoek wat er na het meten staat.",
+            },
+            {
+              titel: "Lees de zin",
+              tekst: "'Voeg eventueel nog een of twee paperclips toe.' Zo wordt de armband langer.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "eventueel",
+              uitleg: "Als het nodig is. Het hoeft niet altijd.",
+            },
+            {
+              woord: "toevoegen",
+              uitleg: "Er iets bij doen.",
+            },
+          ],
+          theorie: "**Letterlijke vragen: zoek-strategie**\n\n1. Wat is het KERNWOORD in de vraag?\n2. Zoek dat woord (of een woord dat hetzelfde betekent) in de tekst.\n3. Het antwoord staat in DEZELFDE zin of de zin erna.\n\nLet op valstrikken: foute opties gebruiken vaak woorden die óók in de tekst staan, maar bij iets anders horen.",
+          voorbeelden: [
+            {
+              type: "vinden",
+              tekst: "Alinea 3, laatste zin: 'Voeg eventueel nog een of twee paperclips toe.'",
+            },
+            {
+              type: "valstrik",
+              tekst: "Clips weghalen maakt de armband juist korter.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Antwoord uit de tekst",
+              uitleg: "Misschien kun je zelf ook iets anders bedenken. Maar de vraag zegt 'volgens de tekst'. Kies dus wat er staat.",
+            },
+          ],
+          niveaus: {
+            basis: "Te kort? Voeg nog een of twee paperclips toe.",
+            simpeler: "In alinea 3 meet je de armband om je pols. De zin erna zegt: voeg eventueel nog een of twee paperclips toe. Dan wordt hij langer.",
+            nogSimpeler: "Te kort = clips erbij",
           },
         },
       },
@@ -602,6 +1350,394 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat doet volgens de schrijver zelfs een uitgeschakelde telefoon op tafel?",
+        options: [
+          "Hij zorgt toch voor afleiding",
+          "Hij zorgt voor ruzie in de klas",
+          "Hij helpt kinderen om rustig te worden",
+          "Hij maakt helemaal geen verschil",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Lees alinea 2. Is de schrijver positief of negatief over telefoons?",
+          "Het woordje 'zelfs' is een hint: de schrijver vindt dat het WEL uitmaakt.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk type vraag?",
+              tekst: "Een letterlijke vraag over een argument.",
+            },
+            {
+              titel: "Zoek het kernwoord",
+              tekst: "Zoek 'uitgeschakelde telefoon' in alinea 2.",
+            },
+            {
+              titel: "Lees de zin",
+              tekst: "'Zelfs een uitgeschakelde telefoon op tafel zorgt voor afleiding.'",
+            },
+          ],
+          woorden: [
+            {
+              woord: "uitgeschakeld",
+              uitleg: "Uitgezet, niet aan.",
+            },
+            {
+              woord: "afleiding",
+              uitleg: "Iets waardoor je niet meer goed oplet.",
+            },
+            {
+              woord: "zelfs",
+              uitleg: "Dit woord laat zien dat iets meer is dan je zou denken.",
+            },
+          ],
+          theorie: "**Letterlijke vragen: zoek-strategie**\n\n1. Wat is het KERNWOORD in de vraag?\n2. Zoek dat woord (of een woord dat hetzelfde betekent) in de tekst.\n3. Het antwoord staat in DEZELFDE zin of de zin erna.\n\nLet op valstrikken: foute opties gebruiken vaak woorden die óók in de tekst staan, maar bij iets anders horen.\n\nBij een betogende tekst horen zulke zinnen bij een ARGUMENT: ze steunen de mening van de schrijver.",
+          voorbeelden: [
+            {
+              type: "vinden",
+              tekst: "Alinea 2: 'Zelfs een uitgeschakelde telefoon op tafel zorgt voor afleiding.'",
+            },
+            {
+              type: "waarom",
+              tekst: "De schrijver legt uit: kinderen denken aan wat er straks misschien op staat.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Argument steunt de mening",
+              uitleg: "De schrijver vindt telefoons slecht op school. Dit argument maakt dat sterker.",
+            },
+          ],
+          niveaus: {
+            basis: "Alinea 2: ook uitgeschakeld zorgt een telefoon voor afleiding.",
+            simpeler: "Zoek 'uitgeschakelde telefoon'. De schrijver zegt dat kinderen er toch aan denken. Dus de telefoon leidt nog steeds af.",
+            nogSimpeler: "Uit = toch afleiding",
+          },
+        },
+      },
+      {
+        q: "Met welke woorden begint de schrijver zijn tweede argument?",
+        options: ["Ten tweede", "Daarom", "Dat klopt, maar", "De eerste reden"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dit woord staat in de laatste alinea. Begint daar een argument of de conclusie?",
+          null,
+          "Hiermee begint het eerste argument, niet het tweede.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk type vraag?",
+              tekst: "Een vraag over signaalwoorden: woorden die laten zien hoe de tekst in elkaar zit.",
+            },
+            {
+              titel: "Tel de argumenten",
+              tekst: "Alinea 2 begint met 'De eerste reden'. Alinea 3 begint met het tweede argument.",
+            },
+            {
+              titel: "Lees het begin van alinea 3",
+              tekst: "'Ten tweede schaadt schermtijd het sociale leven.'",
+            },
+          ],
+          woorden: [
+            {
+              woord: "argument",
+              uitleg: "Een reden die een mening steunt.",
+            },
+            {
+              woord: "signaalwoord",
+              uitleg: "Een woord dat laat zien wat er komt: een reden, een tegenstelling, een conclusie of een opsomming.",
+            },
+          ],
+          theorie: "**Signaalwoorden in een betoog**\n\n- Opsomming van argumenten: 'de eerste reden', 'ten tweede', 'ook'\n- Tegenstelling: 'maar', 'toch'\n- Conclusie: 'daarom', 'dus'\n\nZo zie je snel hoe een betogende tekst is opgebouwd.",
+          voorbeelden: [
+            {
+              type: "vinden",
+              tekst: "Alinea 3 begint met 'Ten tweede'.",
+            },
+            {
+              type: "valstrik",
+              tekst: "'Daarom' begint de conclusie (laatste alinea). 'Dat klopt, maar' hoort bij het tegenargument.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Opbouw van een betoog",
+              uitleg: "Mening → argumenten → tegenargument → conclusie. Signaalwoorden laten zien waar elk deel begint.",
+            },
+          ],
+          niveaus: {
+            basis: "Alinea 3 begint met 'Ten tweede'.",
+            simpeler: "Het eerste argument begint met 'De eerste reden'. Het volgende argument begint met 'Ten tweede'. Dat telt door: één, twee.",
+            nogSimpeler: "Tweede = ten tweede",
+          },
+        },
+      },
+      {
+        q: "Wat moet er volgens de schrijver op een basisschool juist gebeuren?",
+        options: [
+          "Er moet gespeeld worden",
+          "Kinderen moeten leren omgaan met technologie",
+          "Er moet meer met schermen gewerkt worden",
+          "Kinderen moeten in de pauze binnen blijven",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat zeggen de tegenstanders. Waar vindt de schrijver dat dat moet gebeuren?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk type vraag?",
+              tekst: "Een letterlijke vraag over wat de SCHRIJVER vindt.",
+            },
+            {
+              titel: "Zoek het kernwoord",
+              tekst: "Zoek 'basisschool' en 'juist' in alinea 3.",
+            },
+            {
+              titel: "Lees de zin",
+              tekst: "'Op een basisschool moet juist gespeeld worden.'",
+            },
+          ],
+          woorden: [
+            {
+              woord: "juist",
+              uitleg: "Hier: dat is wat er eigenlijk hoort te gebeuren.",
+            },
+            {
+              woord: "tegenstanders",
+              uitleg: "Mensen die het niet eens zijn met de schrijver.",
+            },
+          ],
+          theorie: "**Wie zegt wat?**\n\nIn een betogende tekst staat soms ook wat ANDERE mensen vinden (de tegenstanders). Let goed op: is dit de mening van de schrijver, of van iemand anders?\n\nSignaal: 'Tegenstanders zeggen...' = niet de schrijver zelf.",
+          voorbeelden: [
+            {
+              type: "vinden",
+              tekst: "Alinea 3: 'Op een basisschool moet juist gespeeld worden.'",
+            },
+            {
+              type: "valstrik",
+              tekst: "'Leren omgaan met technologie' zeggen de tegenstanders. De schrijver vindt dat dat thuis kan, niet op school.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Mening schrijver ≠ mening tegenstander",
+              uitleg: "Lees bij elke zin: wie vindt dit?",
+            },
+          ],
+          niveaus: {
+            basis: "Schrijver: op een basisschool moet juist gespeeld worden.",
+            simpeler: "In alinea 3 schrijft de schrijver over de pauze. Hij eindigt met: op een basisschool moet juist gespeeld worden.",
+            nogSimpeler: "Basisschool = spelen",
+          },
+        },
+      },
+      {
+        q: "Waar mag de telefoon volgens de laatste alinea wél blijven?",
+        options: [
+          "Thuis of in de tas",
+          "In de klas, in een la",
+          "Op tafel, als hij uitstaat",
+          "In de klas, op stil",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Lees de laatste alinea. Wat zegt de schrijver over de klas?",
+          "Wat vertelt alinea 2 over een uitgeschakelde telefoon op tafel?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk type vraag?",
+              tekst: "Een letterlijke vraag over de conclusie.",
+            },
+            {
+              titel: "Zoek de laatste alinea",
+              tekst: "Die begint met 'Daarom:'. Daar staat de conclusie van de schrijver.",
+            },
+            {
+              titel: "Lees de zinnen",
+              tekst: "'Laat de telefoon thuis. Of in de tas. Maar niet in de klas.'",
+            },
+          ],
+          woorden: [
+            {
+              woord: "conclusie",
+              uitleg: "Het slot van een betoog: wat de schrijver uiteindelijk vindt of vraagt.",
+            },
+            {
+              woord: "daarom",
+              uitleg: "Signaalwoord voor een conclusie.",
+            },
+          ],
+          theorie: "**De conclusie staat meestal aan het eind**\n\nIn een betogende tekst begint de conclusie vaak met 'daarom' of 'dus'. Daar herhaalt de schrijver zijn mening of zegt hij wat je moet doen.",
+          voorbeelden: [
+            {
+              type: "vinden",
+              tekst: "Laatste alinea: 'laat de telefoon thuis. Of in de tas.'",
+            },
+            {
+              type: "valstrik",
+              tekst: "Alle opties met 'in de klas' kloppen niet: 'Maar niet in de klas.'",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Conclusie = mening nog één keer",
+              uitleg: "Aan het eind zegt de schrijver nog één keer kort wat hij vindt.",
+            },
+          ],
+          niveaus: {
+            basis: "Laatste alinea: thuis of in de tas, maar niet in de klas.",
+            simpeler: "Zoek de alinea met 'Daarom'. De schrijver zegt: laat hem thuis, of in de tas. In de klas mag hij niet.",
+            nogSimpeler: "Thuis of tas, niet klas",
+          },
+        },
+      },
+      {
+        q: "Welke zin uit de tekst is een FEIT en geen mening?",
+        options: [
+          "Steeds meer kinderen hebben tegenwoordig een eigen smartphone.",
+          "Telefoons horen niet thuis op de basisschool.",
+          "Op school is leren belangrijker.",
+          "Onze kinderen hebben recht op een schoolomgeving zonder schermen.",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dit is wat de schrijver vindt. Kan iemand anders dit ook anders vinden?",
+          "Is dit iets wat je kunt nameten, of wat iemand vindt?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat is het verschil?",
+              tekst: "Een FEIT kun je controleren: het is waar of niet waar. Een MENING is wat iemand vindt; een ander kan het anders vinden.",
+            },
+            {
+              titel: "Test elke zin",
+              tekst: "Vraag bij elke zin: kun je dit nagaan, of is dit iemands oordeel?",
+            },
+            {
+              titel: "Pas toe",
+              tekst: "'Steeds meer kinderen hebben een smartphone' kun je nagaan door te tellen. De andere drie zinnen zijn oordelen van de schrijver.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "feit",
+              uitleg: "Iets wat je kunt controleren, bijvoorbeeld door te tellen of te meten.",
+            },
+            {
+              woord: "mening",
+              uitleg: "Wat iemand vindt. Een ander kan het er niet mee eens zijn.",
+            },
+            {
+              woord: "smartphone",
+              uitleg: "Een mobiele telefoon waarmee je ook op internet kunt.",
+            },
+          ],
+          theorie: "**Feit of mening?**\n\n| Feit | Mening |\n|---|---|\n| kun je controleren | is wat iemand vindt |\n| 'Er zijn 20 kinderen in de klas.' | 'Onze klas is de leukste.' |\n\nSignaalwoorden voor een mening: 'horen (niet)', 'belangrijker', 'moet', 'recht op', 'ik vind'.",
+          voorbeelden: [
+            {
+              type: "feit",
+              tekst: "'Steeds meer kinderen hebben een eigen smartphone.' Je kunt tellen of dat klopt.",
+            },
+            {
+              type: "mening",
+              tekst: "'Op school is leren belangrijker.' Iemand anders kan dat anders vinden.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Ook in een betoog staan feiten",
+              uitleg: "Een betoog begint vaak met een feit. Daarna komt de mening van de schrijver.",
+            },
+          ],
+          niveaus: {
+            basis: "Feit = te controleren: steeds meer kinderen hebben een smartphone.",
+            simpeler: "Kun je het tellen of nagaan? Dan is het een feit. 'Steeds meer kinderen hebben een smartphone' kun je tellen. De rest is wat de schrijver vindt.",
+            nogSimpeler: "Tellen kan = feit",
+          },
+        },
+      },
+      {
+        q: "Wat bedoelt de schrijver met 'tegenstanders'?",
+        options: [
+          "Mensen die het niet met de schrijver eens zijn",
+          "Kinderen die in de pauze ruzie maken",
+          "Scholen die telefoons al verbieden",
+          "Leerlingen die geen telefoon hebben",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Zijn scholen die telefoons verbieden het met de schrijver eens of oneens?",
+          "Wat zeggen de tegenstanders in alinea 4? Past dat bij deze kinderen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk type vraag?",
+              tekst: "Een woordbetekenis-vraag. De zinnen eromheen helpen je.",
+            },
+            {
+              titel: "Zoek het woord",
+              tekst: "Alinea 4: 'Tegenstanders zeggen dat kinderen moeten leren omgaan met technologie.'",
+            },
+            {
+              titel: "Wat zeggen ze?",
+              tekst: "Zij zeggen iets anders dan de schrijver. De schrijver reageert met 'Dat klopt, maar...'. Tegenstanders zijn dus mensen met een andere mening.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tegenstander",
+              uitleg: "Iemand die tegen jouw mening is.",
+            },
+            {
+              woord: "tegenargument",
+              uitleg: "Een reden van iemand die het niet met je eens is.",
+            },
+          ],
+          theorie: "**Woordbetekenis: splits en kijk naar de zin**\n\n1. Splits: tegen + standers → mensen die er TEGEN zijn.\n2. Lees de zin eromheen: wat zeggen ze?\n3. Kijk hoe de schrijver reageert: 'Dat klopt, maar...' = hij reageert op een andere mening.",
+          voorbeelden: [
+            {
+              type: "splits",
+              tekst: "'Tegen' + 'standers': mensen die tegen het standpunt van de schrijver zijn.",
+            },
+            {
+              type: "context",
+              tekst: "Ze vinden dat kinderen met technologie moeten leren omgaan, ook op school. De schrijver niet.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tegenargument in een betoog",
+              uitleg: "Een goede schrijver noemt ook wat tegenstanders vinden, en legt uit waarom hij het toch anders ziet.",
+            },
+          ],
+          niveaus: {
+            basis: "Tegenstanders = mensen die het niet met de schrijver eens zijn.",
+            simpeler: "Tegen-standers zijn er TEGEN. In alinea 4 zeggen zij iets anders dan de schrijver. Dus: mensen met een andere mening.",
+            nogSimpeler: "Tegen = andere mening",
+          },
+        },
+      },
     ],
   },
 
@@ -772,6 +1908,379 @@ const steps = [
             basis: "Klein gebaar (halve boterham) → grote impact (vriendschap).",
             simpeler: "Wat blijft hangen na dit verhaal? Tom doet iets KLEINS, maar het maakt voor Sara veel uit. Boodschap: kleine vriendelijkheden tellen.",
             nogSimpeler: "Klein gebaar = grote betekenis",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat had Tom in de eerste pauze bij zich om te eten?",
+        options: [
+          "Een dubbele boterham met kaas",
+          "Een appel",
+          "Een boterham met hagelslag",
+          "Een krentenbol",
+        ],
+        answer: 0,
+        wrongHints: [null, "Wie knabbelde er op een appel? Lees alinea 2 nog eens.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk type vraag?",
+              tekst: "Een letterlijke vraag over een personage.",
+            },
+            {
+              titel: "Zoek de naam",
+              tekst: "Zoek 'Tom' in alinea 2.",
+            },
+            {
+              titel: "Lees de zin",
+              tekst: "'Tom had een dubbele boterham met kaas.'",
+            },
+          ],
+          woorden: [
+            {
+              woord: "personage",
+              uitleg: "Een persoon in een verhaal, zoals Sara, Tom en Lisa.",
+            },
+            {
+              woord: "dubbele boterham",
+              uitleg: "Twee sneetjes brood op elkaar, met beleg ertussen.",
+            },
+          ],
+          theorie: "**Letterlijke vragen: zoek-strategie**\n\n1. Wat is het KERNWOORD in de vraag?\n2. Zoek dat woord (of een woord dat hetzelfde betekent) in de tekst.\n3. Het antwoord staat in DEZELFDE zin of de zin erna.\n\nLet op valstrikken: foute opties gebruiken vaak woorden die óók in de tekst staan, maar bij iets anders horen.\n\nIn een verhaal staan vaak meerdere personages. Kijk goed welk detail bij WELK personage hoort.",
+          voorbeelden: [
+            {
+              type: "vinden",
+              tekst: "Alinea 2: 'Tom had een dubbele boterham met kaas.'",
+            },
+            {
+              type: "valstrik",
+              tekst: "De appel was van Lisa, niet van Tom.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Wie hoort bij wat?",
+              uitleg: "Maak in je hoofd een lijstje: Tom = boterham met kaas, Lisa = appel, Sara = niets.",
+            },
+          ],
+          niveaus: {
+            basis: "Tom: dubbele boterham met kaas.",
+            simpeler: "In alinea 2 staat wat iedereen eet. Tom had een dubbele boterham met kaas. Lisa had een appel.",
+            nogSimpeler: "Tom = kaas",
+          },
+        },
+      },
+      {
+        q: "Waardoor keek Tom op in de pauze?",
+        options: [
+          "Sara's buik knorde hardop",
+          "Sara begon te huilen",
+          "Lisa riep zijn naam",
+          "Sara vroeg om zijn boterham",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Wat deed Lisa in de pauze? Lees alinea 2.",
+          "Wilde Sara laten merken dat ze honger had?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk type vraag?",
+              tekst: "Een oorzaak-vraag: wat gebeurde er vlak voordat Tom opkeek?",
+            },
+            {
+              titel: "Zoek het kernwoord",
+              tekst: "Zoek 'keek op' aan het eind van alinea 2.",
+            },
+            {
+              titel: "Lees wat ervoor staat",
+              tekst: "'...maar haar buik knorde. Hardop. Tom keek op.' Het knorren gebeurde vlak ervoor.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "opkijken",
+              uitleg: "Je hoofd optillen om te zien wat er gebeurt.",
+            },
+            {
+              woord: "knorren",
+              uitleg: "Het geluid dat je buik maakt als je honger hebt.",
+            },
+          ],
+          theorie: "**Oorzaak en gevolg in een verhaal**\n\nIn een verhaal staat vaak eerst wat er gebeurt (oorzaak) en daarna wat iemand doet (gevolg).\n\nZoek het gevolg ('Tom keek op') en lees dan de zin ervoor: daar staat de oorzaak.",
+          voorbeelden: [
+            {
+              type: "vinden",
+              tekst: "'haar buik knorde. Hardop. Tom keek op.' → oorzaak = het knorren.",
+            },
+            {
+              type: "valstrik",
+              tekst: "Sara vroeg niets: ze probeerde juist te doen alsof ze geen honger had.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Korte zinnen",
+              uitleg: "Een schrijver gebruikt soms hele korte zinnen, zoals 'Hardop.' Dat maakt iets extra belangrijk.",
+            },
+          ],
+          niveaus: {
+            basis: "Vlak voor 'Tom keek op': haar buik knorde hardop.",
+            simpeler: "Sara deed alsof ze geen honger had. Maar haar buik knorde, heel hard. Daarna keek Tom op.",
+            nogSimpeler: "Buik knort → Tom kijkt",
+          },
+        },
+      },
+      {
+        q: "Waarom aarzelde Sara toen Tom haar de halve boterham aanbood?",
+        options: [
+          "Ze wilde geen medelijden",
+          "Ze lustte geen kaas",
+          "Ze had al iets gegeten",
+          "Ze was boos op Tom",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Staat er in het verhaal iets over wat Sara wel of niet lust?",
+          "Sara had geen brood mee. Wat deed haar buik net nog?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk type vraag?",
+              tekst: "Een vraag naar het motief: WAAROM doet een personage iets?",
+            },
+            {
+              titel: "Zoek het kernwoord",
+              tekst: "Zoek 'aarzelde' in alinea 5.",
+            },
+            {
+              titel: "Lees de zin erna",
+              tekst: "'Ze wilde geen medelijden.' Dat is de reden.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "aarzelen",
+              uitleg: "Even twijfelen voordat je iets doet.",
+            },
+            {
+              woord: "medelijden",
+              uitleg: "Als iemand zielig over je doet, omdat het jou slecht gaat.",
+            },
+            {
+              woord: "motief",
+              uitleg: "De reden waarom iemand iets doet.",
+            },
+          ],
+          theorie: "**Motieven in een verhaal**\n\nBij een waarom-vraag over een personage zoek je de zin vlak vóór of vlak ná wat het personage doet. Daar staat vaak wat het denkt of voelt.\n\nValstrik: een reden die logisch klinkt maar niet in het verhaal staat.",
+          voorbeelden: [
+            {
+              type: "vinden",
+              tekst: "'Sara aarzelde. Ze wilde geen medelijden.' → reden direct in de zin erna.",
+            },
+            {
+              type: "valstrik",
+              tekst: "Of Sara kaas lust, staat nergens in het verhaal.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Gevoel staat vaak vlak erbij",
+              uitleg: "Wat een personage voelt, staat meestal in de zin voor of na wat het doet.",
+            },
+          ],
+          niveaus: {
+            basis: "Zin na 'aarzelde': ze wilde geen medelijden.",
+            simpeler: "Sara twijfelde even. In de zin erna staat waarom: ze wilde niet dat Tom haar zielig vond.",
+            nogSimpeler: "Aarzelen = geen medelijden",
+          },
+        },
+      },
+      {
+        q: "Wat legde Sara de volgende dag op Toms tafel?",
+        options: [
+          "Een briefje met 'Bedankt!' erop",
+          "Een halve boterham",
+          "Een appel",
+          "Een nieuwe lunchtrommel",
+        ],
+        answer: 0,
+        wrongHints: [null, "Wat had Sara's moeder de middag ervoor gemaakt?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk type vraag?",
+              tekst: "Een letterlijke vraag over wat er gebeurt.",
+            },
+            {
+              titel: "Zoek het kernwoord",
+              tekst: "Zoek 'de volgende dag' in de laatste alinea.",
+            },
+            {
+              titel: "Lees terug",
+              tekst: "'De volgende dag legde Sara het briefje op Toms tafel.' Welk briefje? Dat van haar moeder, met 'Bedankt!' en een hartje.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "briefje",
+              uitleg: "Een klein papiertje met een korte boodschap.",
+            },
+            {
+              woord: "de volgende dag",
+              uitleg: "De dag erna.",
+            },
+          ],
+          theorie: "**Letterlijke vragen: zoek-strategie**\n\n1. Wat is het KERNWOORD in de vraag?\n2. Zoek dat woord (of een woord dat hetzelfde betekent) in de tekst.\n3. Het antwoord staat in DEZELFDE zin of de zin erna.\n\nLet op valstrikken: foute opties gebruiken vaak woorden die óók in de tekst staan, maar bij iets anders horen.\n\nSoms moet je één alinea terug lezen. 'Het briefje' verwijst naar het briefje dat al eerder genoemd is.",
+          voorbeelden: [
+            {
+              type: "vinden",
+              tekst: "Laatste alinea: 'legde Sara het briefje op Toms tafel'.",
+            },
+            {
+              type: "terug lezen",
+              tekst: "De alinea ervoor: moeder schreef 'Bedankt!' op een briefje.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "'Het' wijst terug",
+              uitleg: "'Het briefje' betekent: het briefje waar je al over gelezen hebt.",
+            },
+          ],
+          niveaus: {
+            basis: "Sara legde het 'Bedankt!'-briefje op Toms tafel.",
+            simpeler: "Moeder schreef 'Bedankt!' op een briefje. De volgende dag legde Sara dat briefje op Toms tafel.",
+            nogSimpeler: "Briefje = bedankt",
+          },
+        },
+      },
+      {
+        q: "Wie schreef waarschijnlijk het briefje 'Graag gedaan' in Sara's etui?",
+        options: ["Tom", "Lisa", "Sara's moeder", "Sara zelf"],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Moeder schreef 'Bedankt!'. Wie zou daarop 'Graag gedaan' terugschrijven?",
+          "Waarom zou Sara zichzelf 'Graag gedaan' schrijven?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk type vraag?",
+              tekst: "Een inferentie-vraag: het staat er niet letterlijk, je moet het afleiden.",
+            },
+            {
+              titel: "Wat ging eraan vooraf?",
+              tekst: "Sara gaf Tom een briefje met 'Bedankt!'. Tom las het en glimlachte.",
+            },
+            {
+              titel: "Wat past erbij?",
+              tekst: "Op 'Bedankt!' zeg je 'Graag gedaan'. Dat zegt degene die geholpen heeft: Tom.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "waarschijnlijk",
+              uitleg: "Het staat er niet precies, maar het is wel het meest logisch.",
+            },
+            {
+              woord: "inferentie",
+              uitleg: "Iets afleiden uit wat er in de tekst staat.",
+            },
+            {
+              woord: "etui",
+              uitleg: "Een tasje of doosje voor pennen en potloden.",
+            },
+          ],
+          theorie: "**Inferentie: lees tussen de regels**\n\nSoms zegt een verhaal iets niet hardop. Dan gebruik je wat er wél staat.\n\n1. Wat gebeurde er vlak ervoor?\n2. Wie had een reden om dit te doen?\n3. Kies het antwoord dat het best past bij de tekst.",
+          voorbeelden: [
+            {
+              type: "afleiden",
+              tekst: "'Bedankt!' van Sara → Tom glimlacht → 'Graag gedaan' in Sara's etui. Tom antwoordt op het bedankje.",
+            },
+            {
+              type: "valstrik",
+              tekst: "Moeder schreef het eerste briefje ('Bedankt!'), niet het antwoord.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Bedankt → graag gedaan",
+              uitleg: "Wie bedankt wordt, zegt 'graag gedaan'. Tom werd bedankt.",
+            },
+          ],
+          niveaus: {
+            basis: "'Graag gedaan' is het antwoord op 'Bedankt!'. Tom werd bedankt, dus Tom schreef het.",
+            simpeler: "Sara bedankte Tom met een briefje. Als iemand jou bedankt, zeg je 'graag gedaan'. Dus het briefje kwam van Tom.",
+            nogSimpeler: "Bedankt aan Tom → Tom schrijft terug",
+          },
+        },
+      },
+      {
+        q: "Hoe gedroeg Sara zich in de eerste pauze, toen iedereen om haar heen at?",
+        options: [
+          "Ze deed alsof ze geen honger had",
+          "Ze vroeg iedereen om een hapje",
+          "Ze ging alleen op de gang zitten",
+          "Ze vertelde de juf dat ze geen eten had",
+        ],
+        answer: 0,
+        wrongHints: [null, "Wilde Sara dat de anderen merkten dat ze geen eten had?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk type vraag?",
+              tekst: "Een vraag over wat een personage doet en voelt.",
+            },
+            {
+              titel: "Zoek de plek",
+              tekst: "Alinea 2 gaat over de eerste pauze.",
+            },
+            {
+              titel: "Lees de zin",
+              tekst: "'Sara probeerde te doen alsof ze geen honger had, maar haar buik knorde.'",
+            },
+          ],
+          woorden: [
+            {
+              woord: "doen alsof",
+              uitleg: "Net doen of iets zo is, terwijl het niet zo is.",
+            },
+            {
+              woord: "gedragen",
+              uitleg: "Hoe iemand iets doet.",
+            },
+          ],
+          theorie: "**Gedrag en gevoel in een verhaal**\n\nWat een personage DOET, zegt vaak iets over wat het VOELT. Sara deed alsof ze geen honger had. Dat laat zien dat ze niet wilde dat anderen het merkten.\n\nLet op het woord 'maar': daarna komt wat er echt aan de hand was.",
+          voorbeelden: [
+            {
+              type: "vinden",
+              tekst: "Alinea 2: 'Sara probeerde te doen alsof ze geen honger had.'",
+            },
+            {
+              type: "valstrik",
+              tekst: "Een juf komt niet voor in het verhaal.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Het woord 'maar'",
+              uitleg: "Na 'maar' komt vaak een tegenstelling: Sara deed alsof, maar haar buik knorde.",
+            },
+          ],
+          niveaus: {
+            basis: "Alinea 2: Sara deed alsof ze geen honger had.",
+            simpeler: "Iedereen at, Sara niet. Ze wilde niet dat het opviel. Daarom deed ze alsof ze geen honger had.",
+            nogSimpeler: "Doen alsof = geen honger",
           },
         },
       },
