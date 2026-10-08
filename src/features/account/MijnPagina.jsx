@@ -1787,23 +1787,27 @@ export default function MijnPagina({
                     {(() => {
                       const motorAan = !!onVandaagKwartier && (niveau?.soort !== "klas" || true);
                       if (!motorAan) return null;
-                      // VO-leerling met een vandaag al gestart kwartier vol basisschoolpaden (oude versie, Noa 8 okt):
-                      // dat kwartier opruimen, zodat de knop meteen een plan van de eigen klas start.
-                      if (niveau?.soort === "klas" && kwartierActief()) {
-                        const eigen = new Set(niveauPaden(niveau).map((p) => p.id));
+                      // Een al gestart kwartier hoort bij één groep/klas (Noa 8 okt: wissel van een klas-5-profiel
+                      // naar groep 7 en je kreeg nog havo/vwo-stof). Ander niveau → opruimen, de knop start een nieuw plan.
+                      if (kwartierActief()) {
                         const st = kwartierStand();
-                        if (st?.blokjes?.some((b) => b.soort === "vragen" && b.pathId && !eigen.has(b.pathId))) stopKwartier();
+                        const isVoPad = (id) => /klas|havo|vwo|vmbo/i.test(String(PATHS_BY_ID[id]?.level || ""));
+                        const anderNiveau = st?.level != null && String(st.level) !== String(userLevel);
+                        const vragenIds = (st?.blokjes || []).filter((b) => b.soort === "vragen" && b.pathId).map((b) => b.pathId);
+                        const eigenKlas = niveau?.soort === "klas" ? new Set(niveauPaden(niveau).map((p) => p.id)) : null;
+                        const oudVerkeerd = st?.level == null && (eigenKlas ? vragenIds.some((id) => !eigenKlas.has(id)) : vragenIds.some(isVoPad));
+                        if (anderNiveau || oudVerkeerd) stopKwartier();
                       }
                       const bezig = kwartierActief();
                       const gedaan = kwartierGedaanVandaag();
-                      const plan = bepaalPlan({
+                      const plan = { level: userLevel, ...bepaalPlan({
                         level: userLevel, klaargezet: thuisKlaargezet, mastery: records,
                         dicteeSchool: (() => { try { return !!localStorage.getItem("lk_dictee_school"); } catch { return false; } })(),
                         wwSchool: (() => { try { return !!localStorage.getItem("lk_ww_school"); } catch { return false; } })(),
                         metSchoolvakken: niveau?.soort === "klas",
                         klasPaden: niveau?.soort === "klas" ? niveauPaden(niveau).filter((p) => !/-nieuwkomers$/.test(p.id)).map((p) => p.id) : null,
                         voorkeur: gezinVoorkeur,
-                      });
+                      }) };
                       const stand = bezig ? kwartierStand() : null;
                       return (
                         <>

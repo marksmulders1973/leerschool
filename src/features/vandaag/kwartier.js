@@ -13,7 +13,8 @@ function lees() {
 function schrijf(k) { try { localStorage.setItem(KEY, JSON.stringify(k)); } catch { /* */ } }
 
 export function startKwartierPlan(plan) {
-  const k = { datum: vandaagStr(), reden: plan.reden, uitleg: plan.uitleg, blokjes: plan.blokjes, idx: 0, resultaten: [], klaar: false, gestart: Date.now() };
+  // `level` (8 okt 2026, Noa): het kwartier hoort bij één groep/klas; wissel je van profiel, dan ruimt /mijn het op.
+  const k = { datum: vandaagStr(), reden: plan.reden, uitleg: plan.uitleg, blokjes: plan.blokjes, idx: 0, resultaten: [], klaar: false, gestart: Date.now(), level: plan.level ?? null };
   schrijf(k);
   try { track("vandaag_start", { reden: plan.reden, blokjes: plan.blokjes.map((b) => b.soort).join(","), n: plan.blokjes.length }); } catch { /* */ }
   return k;
