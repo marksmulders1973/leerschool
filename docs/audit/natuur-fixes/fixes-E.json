@@ -1,0 +1,170 @@
+[
+  {
+    "bestand": "src/learnPaths/celBiologie.js",
+    "zoek": "\"Foto-synthese (zonlicht omzetten)\",",
+    "vervang": "\"Fotosynthese (zonlicht omzetten)\",",
+    "reden": "Spelfout: 'fotosynthese' is één woord (vraag 'Wat doen mitochondriën?').",
+    "ernst": 1,
+    "groep": "klas1-3"
+  },
+  {
+    "bestand": "src/learnPaths/celBiologie.js",
+    "zoek": "\"De vacuole is leeg, de cellen zijn niet meer opgespannen\",",
+    "vervang": "\"De vacuoles hebben water verloren\",",
+    "reden": "Vraag 'Een plant verwelkt': de vacuole is bij verwelken niet 'leeg' maar heeft water verloren (te stellig). Bovendien was het goede antwoord als enige lang mét toelichting en verraadde het zich; nu even kort als de afleiders.",
+    "ernst": 2,
+    "groep": "klas1-3"
+  },
+  {
+    "bestand": "src/learnPaths/celBiologie.js",
+    "zoek": "Wanneer een plant verlept, is de vacuole leeg.",
+    "vervang": "Wanneer een plant verlept, zijn de vacuoles water kwijtgeraakt.",
+    "reden": "Stap-uitleg consistent met de verbeterde optie: vacuole verliest water, wordt niet helemaal leeg.",
+    "ernst": 2,
+    "groep": "klas1-3"
+  },
+  {
+    "bestand": "src/learnPaths/celBiologie.js",
+    "zoek": "theorie: \"Volle vacuole = turgor (spanning). Lege vacuole = slap.\",",
+    "vervang": "theorie: \"Volle vacuole = turgor (spanning). Vacuole water kwijt = slap.\",",
+    "reden": "uitlegPad consistent met verbeterde optie (vacuole verliest water, is niet leeg).",
+    "ernst": 2,
+    "groep": "klas1-3"
+  },
+  {
+    "bestand": "src/learnPaths/celBiologie.js",
+    "zoek": "niveaus: { basis: \"Vacuole is leeg.\",",
+    "vervang": "niveaus: { basis: \"De vacuoles zijn water kwijt.\",",
+    "reden": "Niveau 'basis' consistent met de nieuwe optietekst.",
+    "ernst": 2,
+    "groep": "klas1-3"
+  },
+  {
+    "bestand": "src/learnPaths/celBiologie.js",
+    "zoek": "3. **Cel knijpt zich af** — middenin ontstaat een scheidingswand.",
+    "vervang": "3. **Cel deelt zich in tweeën** — een dierlijke cel snoert middenin in; bij een plantcel groeit middenin een nieuwe celwand.",
+    "reden": "Feitelijk onjuist gemengd: een dierlijke cel snoert in (geen scheidingswand); alleen bij een plantcel ontstaat een nieuwe wand.",
+    "ernst": 2,
+    "groep": "klas1-3"
+  },
+  {
+    "bestand": "src/learnPaths/celBiologie.js",
+    "zoek": "• Heeft het een celwand? → plant of bacterie.",
+    "vervang": "• Heeft het een celwand? → plant, schimmel of bacterie.",
+    "reden": "Onvolledig: schimmels hebben ook een celwand (van chitine, staat zelfs in de uitlegPad van de peptidoglycaan-vraag).",
+    "ernst": 2,
+    "groep": "klas1-3"
+  },
+  {
+    "bestand": "src/learnPaths/fotosyntheseBiologie.js",
+    "zoek": "• 's Nachts gebruiken planten wel zuurstof *(net als wij ademen)*, maar veel minder.",
+    "vervang": "• Planten ademen dag én nacht, dus ze gebruiken altijd een beetje zuurstof *(net als wij)*. Overdag maken ze veel méér zuurstof dan ze gebruiken.",
+    "reden": "Misconceptie 'planten ademen alleen 's nachts': ademhaling (verbranding) gaat bij planten dag en nacht door.",
+    "ernst": 2,
+    "groep": "klas1-2"
+  },
+  {
+    "bestand": "src/learnPaths/fotosyntheseBiologie.js",
+    "zoek": "• Plant 'ademt' CO₂ in via blad-poriën *(huidmondjes)*.",
+    "vervang": "• Plant neemt CO₂ op via blad-poriën *(huidmondjes)*.",
+    "reden": "CO₂ opnemen voor fotosynthese is geen ademhaling; 'ademt CO₂ in' versterkt de bekende misconceptie dat planten andersom ademen.",
+    "ernst": 2,
+    "groep": "klas1-2"
+  },
+  {
+    "bestand": "src/learnPaths/fotosyntheseBiologie.js",
+    "zoek": "Wel een beetje voor 's nachts, maar fotosynthese gebruikt geen O₂.",
+    "vervang": "Wel voor hun ademhaling *(dag én nacht, ook in de wortels)*, maar fotosynthese gebruikt geen O₂.",
+    "reden": "Feitfout: planten hebben niet alleen 's nachts zuurstof nodig; ademhaling gaat dag en nacht door, ook in de wortels (daarom rotten wortels in natte, zuurstofloze grond).",
+    "ernst": 3,
+    "groep": "klas1-2"
+  },
+  {
+    "bestand": "src/learnPaths/fotosyntheseBiologie.js",
+    "zoek": "• Plant 'ademt' CO₂ in en O₂ uit.",
+    "vervang": "• Plant neemt hierdoor CO₂ op en geeft O₂ af *(overdag)*.",
+    "reden": "Gasuitwisseling voor fotosynthese is geen ademhaling; 'ademt CO₂ in en O₂ uit' leert de misconceptie dat planten omgekeerd ademen.",
+    "ernst": 2,
+    "groep": "klas1-2"
+  },
+  {
+    "bestand": "src/learnPaths/fotosyntheseBiologie.js",
+    "zoek": "\"**Planten en dieren** ademen allebei, maar **andersom**.\\n\\n**Mensen + dieren** *(en planten 's nachts)*:\\n• Ademen **zuurstof (O₂) IN**.\\n• Ademen **koolstofdioxide (CO₂) UIT**.\\n• Voor energie verkrijgen uit voedsel.\\n\\n**Planten overdag**:",
+    "vervang": "\"**Planten en dieren** ademen allebei, dag én nacht, op dezelfde manier. Maar planten doen overdag óók iets wat **andersom** werkt: fotosynthese.\\n\\n**Ademhaling** *(mensen, dieren én planten — altijd)*:\\n• Nemen **zuurstof (O₂)** op.\\n• Geven **koolstofdioxide (CO₂)** af.\\n• Zo halen ze energie uit voedsel.\\n\\n**Fotosynthese** *(alleen planten, overdag)*:",
+    "reden": "Feitfout/kernmisconceptie: planten ademen niet 'andersom' en niet alleen 's nachts. Ademhaling (O₂ in, CO₂ uit) doen planten altijd; fotosynthese is het omgekeerde proces, alleen bij licht.",
+    "ernst": 3,
+    "groep": "klas1-2"
+  },
+  {
+    "bestand": "src/learnPaths/fotosyntheseBiologie.js",
+    "zoek": "gebruiken zelf ook bij ademhaling 's nachts.",
+    "vervang": "gebruiken zelf ook zuurstof bij hun ademhaling *(dag én nacht)*.",
+    "reden": "Planten ademen niet alleen 's nachts; zin was bovendien grammaticaal onvolledig ('gebruiken zelf ook bij ademhaling').",
+    "ernst": 2,
+    "groep": "klas1-2"
+  },
+  {
+    "bestand": "src/learnPaths/fotosyntheseBiologie.js",
+    "zoek": "Plant ademt dan zelfs wat zuurstof in *(net als wij)*.",
+    "vervang": "De plant ademt dan alleen: hij gebruikt wat zuurstof *(net als wij — dat doet hij overdag ook)*.",
+    "reden": "'zelfs' suggereert dat ademen alleen 's nachts gebeurt; consistent maken met 'ademhaling dag én nacht'.",
+    "ernst": 2,
+    "groep": "klas1-2"
+  },
+  {
+    "bestand": "src/learnPaths/fotosyntheseBiologie.js",
+    "zoek": "q: \"Welke boom **verliest GEEN bladeren** in herfst?\",",
+    "vervang": "q: \"Welke boom is in de winter **nog groen**?\",",
+    "reden": "Een den verliest wél (oude) naalden, vaak juist in de herfst — dat zegt de eindvraag van hetzelfde pad ook ('verliezen wel beetje per jaar'). Vraag was dus feitelijk onjuist en in tegenspraak met de eindvraag.",
+    "ernst": 2,
+    "groep": "klas1-2"
+  },
+  {
+    "bestand": "src/learnPaths/fotosyntheseBiologie.js",
+    "zoek": "q: \"Een **den** *(naaldboom)* verliest in de herfst ... ?\",\n        options: [\"Niet al zijn naalden\", \"Alle naalden tegelijk\", \"Alleen in zomer\", \"Nooit naalden\"],\n        answer: 0,\n        wrongHints: [null, \"Niet allemaal tegelijk.\", \"Nee, behouden zomer en winter.\", \"Verliezen wel beetje per jaar.\"],",
+    "vervang": "q: \"Hoe verliest een **den** *(naaldboom)* zijn naalden?\",\n        options: [\"Steeds een paar tegelijk\", \"Allemaal in de herfst\", \"Allemaal in de lente\", \"Nooit één naald\"],\n        answer: 0,\n        wrongHints: [null, \"Dan zou een den 's winters kaal staan. Is dat zo?\", \"Zie je in de lente kale dennen staan?\", \"Kijk eens wat er onder een dennenboom op de grond ligt.\"],",
+    "reden": "Vraag + opties liepen niet: '... verliest in de herfst ... Alleen in zomer' is onzin als antwoord, en de hint 'Nee, behouden zomer en winter' hoorde bij geen enkele optie. Nu eenduidige vraag met vier passende opties; goed antwoord blijft op index 0.",
+    "ernst": 2,
+    "groep": "klas1-2"
+  },
+  {
+    "bestand": "src/data/sampleQuestions.js",
+    "zoek": "als de biceps buigt, strekt de triceps. Ze controleren elkaars beweging.",
+    "vervang": "trekt de biceps samen, dan buigt je arm en ontspant de triceps; trekt de triceps samen, dan strekt je arm en ontspant de biceps.",
+    "reden": "Feitfout in uitleg: biceps en triceps werken niet tegelijk ('biceps buigt, triceps strekt'). Bij een antagonistisch paar trekt de één samen terwijl de ander ontspant.",
+    "ernst": 3,
+    "groep": "klas1"
+  },
+  {
+    "bestand": "src/data/sampleQuestions.js",
+    "zoek": "options: [\"Vezels (~2 kcal/g)\", \"Vetten (~9 kcal/g)\", \"Koolhydraten (~4 kcal/g)\", \"Eiwitten (~4 kcal/g)\"]",
+    "vervang": "options: [\"Vezels\", \"Vetten\", \"Koolhydraten\", \"Eiwitten\"]",
+    "reden": "De kcal-getallen in de opties verraden het antwoord (9 is het hoogste). Getallen staan al in de uitleg. answer blijft 1 (Vetten).",
+    "ernst": 2,
+    "groep": "klas1"
+  },
+  {
+    "bestand": "src/data/textbookQuestions.js",
+    "zoek": "options: [\"Smaak\", \"Reuk\", \"Tast\", \"Gehoor\"]",
+    "vervang": "options: [\"Smaak\", \"Reuk\", \"Zicht\", \"Gehoor\"]",
+    "reden": "Twee goede antwoorden: in je tong zit ook tast (je voelt warm/koud en de vorm van eten). 'Tast' vervangen door 'Zicht'; answer blijft 0 (Smaak).",
+    "ernst": 3,
+    "groep": "klas1 (havo/vwo)"
+  },
+  {
+    "bestand": "src/data/textbookQuestions.js",
+    "zoek": "q: \"Hoe planten BLOEMPLANTEN zich voort?\"",
+    "vervang": "q: \"Hoe planten BLOEMPLANTEN zich GESLACHTELIJK voort?\"",
+    "reden": "Veel bloemplanten planten zich ook ongeslachtelijk voort (uitlopers, wortelstokken, knollen), dus 'Via wortels' en 'Door verdeling' waren deels verdedigbaar. Met 'geslachtelijk' (BvJ-term klas 1) is er één goed antwoord.",
+    "ernst": 2,
+    "groep": "klas1 (havo/vwo)"
+  },
+  {
+    "bestand": "src/data/textbookQuestions.js",
+    "zoek": "\"Wie produceert zaad-cellen bij dieren?\"",
+    "vervang": "\"Wie produceert zaadcellen bij dieren?\"",
+    "reden": "Spelling: 'zaadcellen' zonder koppelteken.",
+    "ernst": 1,
+    "groep": "klas1 (havo/vwo)"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "bestand": "src/learnPaths/recyclenAfvalPo.js",
+    "zoek": "(1 liter of meer)?\"",
+    "vervang": "(meer dan 1 liter)?\"",
+    "reden": "Feitfout: een plastic fles van precies 1 liter heeft €0,15 statiegeld; €0,25 geldt pas voor flessen GROTER dan 1 liter. Met '1 liter of meer' is het antwoord €0,25 fout voor een literfles.",
+    "ernst": 3,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/recyclenAfvalPo.js",
+    "zoek": "• **Plastic fles 0,5L**: €0,15\\n• **Plastic fles 1L+**: €0,25",
+    "vervang": "• **Plastic fles tot en met 1 liter**: €0,15\\n• **Plastic fles groter dan 1 liter**: €0,25",
+    "reden": "Feitfout in uitlegPad: grens ligt bij 'groter dan 1 liter' (literfles = €0,15), niet bij '1L+'. Consistent met de gecorrigeerde eind-toetsvraag.",
+    "ernst": 3,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/wereldorientatieMixPo.js",
+    "zoek": "Vindt plaats in **chloroplasten** (groene cellen) met **chlorofyl** (groen pigment). Zonder fotosynthese geen leven op aarde — alle voedsel begint hier.",
+    "vervang": "Vindt plaats in **bladgroenkorrels** (chloroplasten: groene korreltjes ín de cellen van het blad) met **bladgroen** (chlorofyl). Zonder fotosynthese bijna geen leven op aarde — bijna al ons voedsel begint hier.",
+    "reden": "Feitfout: chloroplasten zijn geen 'groene cellen' maar korreltjes ín de cel. 'Geen leven / alle voedsel' is te stellig (er bestaat leven zonder zonlicht, bv. bij diepzeebronnen). Nederlandse woorden bladgroenkorrel/bladgroen erbij voor groep 7-8.",
+    "ernst": 3,
+    "groep": "groep7-8"
+  },
+  {
+    "bestand": "src/learnPaths/wereldorientatieMixPo.js",
+    "zoek": "\"Onderdeel maar niet fotosynthese.\"",
+    "vervang": "\"Bloemen openen heeft met bloeien te maken, niet met voedsel maken.\"",
+    "reden": "Hint is fout: bloemen openen is géén onderdeel van fotosynthese. Hint suggereert dat wel.",
+    "ernst": 2,
+    "groep": "groep7-8"
+  },
+  {
+    "bestand": "src/learnPaths/wereldorientatieMixPo.js",
+    "zoek": "• **Reptielen**: koudbloedig, schubben.",
+    "vervang": "• **Reptielen**: koudbloedig (hun lichaamstemperatuur volgt de omgeving), schubben.",
+    "reden": "'Koudbloedig' zonder nuance: reptielen zijn niet koud, hun temperatuur volgt de omgeving.",
+    "ernst": 1,
+    "groep": "groep7-8"
+  },
+  {
+    "bestand": "src/learnPaths/sterrenPlaneten.js",
+    "zoek": "wrongHints: [null, \"Niet primair.\", \"Bijna onveranderd.\", \"Wolken veranderen het weer, niet de seizoenen.\"]",
+    "vervang": "wrongHints: [null, \"De maan zorgt voor eb en vloed, niet voor de seizoenen.\", \"De afstand tot de zon verandert bijna niet. In onze winter staan we zelfs het dichtst bij de zon!\", \"Wolken veranderen het weer, niet de seizoenen.\"]",
+    "reden": "Hint 'Niet primair' bij Maan suggereert dat de maan een bijoorzaak van de seizoenen is (fout). 'Bijna onveranderd' is vaag voor groep 5. Nieuwe hints geven richting zonder het antwoord te noemen; aarde staat begin januari het dichtst bij de zon.",
+    "ernst": 2,
+    "groep": "groep5-8"
+  },
+  {
+    "bestand": "src/learnPaths/sterrenPlaneten.js",
+    "zoek": "\"Aarde heeft 23° schuine stand.",
+    "vervang": "\"Aarde heeft 23,5° schuine stand.",
+    "reden": "Inconsistent met de stap-uitleg (23,5°).",
+    "ernst": 1,
+    "groep": "groep5-8"
+  },
+  {
+    "bestand": "src/learnPaths/bekendeWetenschappersPo.js",
+    "zoek": "• Wezens met slechte eigenschappen **sterven uit**.",
+    "vervang": "• Wezens met minder handige eigenschappen **overleven minder vaak** en krijgen minder jongen.",
+    "reden": "Biologisch onjuist: een individu 'sterft niet uit'; natuurlijke selectie = minder overleven en minder nakomelingen.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/bekendeWetenschappersPo.js",
+    "zoek": "Slechte eigenschappen sterven uit. Dat heet",
+    "vervang": "Wezens met minder handige eigenschappen krijgen minder jongen. Dat heet",
+    "reden": "Zelfde onjuistheid in uitlegPad van 'Wat bedacht Darwin?': eigenschappen 'sterven niet uit'.",
+    "ernst": 2,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/bekendeWetenschappersPo.js",
+    "zoek": "• Vinkjes met dikke snavel = kunnen harde noten kraken.",
+    "vervang": "• Vinkjes met dikke snavel = kunnen harde zaden kraken.",
+    "reden": "Darwinvinken met dikke snavel kraken harde zaden, geen noten.",
+    "ernst": 1,
+    "groep": "groep6-8"
+  },
+  {
+    "bestand": "src/learnPaths/bekendeWetenschappersPo.js",
+    "zoek": "snavel = beter in noten kraken",
+    "vervang": "snavel = beter in harde zaden kraken",
+    "reden": "Idem in uitlegPad-voorbeeld (zaden, geen noten).",
+    "ernst": 1,
+    "groep": "groep6-8"
+  }
+]

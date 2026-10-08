@@ -1,0 +1,178 @@
+[
+  {
+    "bestand": "src/data/sampleQuestions.js",
+    "zoek": "options: [\"Varens\", \"Cactus\", \"Tulp\", \"Kerstboom\"]",
+    "vervang": "options: [\"Varens\", \"Zonnebloem\", \"Tulp\", \"Kerstboom\"]",
+    "reden": "Veel cactussen bloeien juist in de lente: twee verdedigbare antwoorden. Zonnebloem bloeit in de zomer en is eenduidig fout.",
+    "ernst": 2,
+    "groep": "groep3+groep4 (groep4 valt via alias terug op groep3)"
+  },
+  {
+    "bestand": "src/data/sampleQuestions.js",
+    "zoek": "water, zonlicht en lucht (CO2) nodig om te groeien.",
+    "vervang": "water, zonlicht en lucht nodig om te groeien.",
+    "reden": "Groep 3/4: 'CO2' is een vakterm die hier niets toevoegt.",
+    "ernst": 1,
+    "groep": "groep3+groep4 (groep4 valt via alias terug op groep3)"
+  },
+  {
+    "bestand": "src/data/sampleQuestions.js",
+    "zoek": "Gras is groen door de kleurstof chlorofyl.",
+    "vervang": "Gras is groen door bladgroen.",
+    "reden": "Groep 3/4: 'chlorofyl' vervangen door het alledaagse 'bladgroen'.",
+    "ernst": 1,
+    "groep": "groep3+groep4 (groep4 valt via alias terug op groep3)"
+  },
+  {
+    "bestand": "src/data/sampleQuestions.js",
+    "zoek": "\"Een jonge vlinder, nog vóór de pop\", \"Een soort worm\"], answer: 2, explanation: \"Een rups is de larve van een vlinder of mot — hij verpopt zich en verandert in een vlinder.\"",
+    "vervang": "\"Een jonge vlinder\", \"Een soort worm\"], answer: 2, explanation: \"Een rups komt uit het eitje van een vlinder. Later wordt de rups een pop, en uit de pop komt een vlinder.\"",
+    "reden": "Het goede antwoord was als enige lang en met toelichting (verraadt zich). Uitleg gebruikte 'larve' en 'verpopt': te moeilijk voor groep 3/4.",
+    "ernst": 2,
+    "groep": "groep3+groep4 (groep4 valt via alias terug op groep3)"
+  },
+  {
+    "bestand": "src/data/sampleQuestions.js",
+    "zoek": "q: \"Wat is de functie van vleugels bij vogels?\"",
+    "vervang": "q: \"Waarvoor gebruikt een vogel zijn vleugels?\"",
+    "reden": "Groep 3/4: 'functie' is geen alledaags woord.",
+    "ernst": 1,
+    "groep": "groep3+groep4 (groep4 valt via alias terug op groep3)"
+  },
+  {
+    "bestand": "src/data/sampleQuestions.js",
+    "zoek": "q: \"Wat is de functie van de bek bij een vogel?\"",
+    "vervang": "q: \"Waarvoor gebruikt een vogel zijn bek?\"",
+    "reden": "Groep 3/4: 'functie' is geen alledaags woord.",
+    "ernst": 1,
+    "groep": "groep3+groep4 (groep4 valt via alias terug op groep3)"
+  },
+  {
+    "bestand": "src/data/sampleQuestions.js",
+    "zoek": "Paddenstoelen zijn schimmels — geen planten. Ze maken geen fotosynthese.",
+    "vervang": "Paddenstoelen zijn schimmels, geen planten. Ze hebben geen bladgroen.",
+    "reden": "Groep 3/4: 'fotosynthese' is te moeilijk; 'geen bladgroen' zegt hetzelfde in kindertaal.",
+    "ernst": 1,
+    "groep": "groep3+groep4 (groep4 valt via alias terug op groep3)"
+  },
+  {
+    "bestand": "src/data/sampleQuestions.js",
+    "zoek": "Bestuiving door bijen stelt planten in staat vruchten en zaden te maken.",
+    "vervang": "Bijen brengen stuifmeel van bloem naar bloem. Daardoor kan een plant zaadjes en vruchten maken.",
+    "reden": "Groep 3/4: lange, ambtelijke zin ('stelt in staat') vervangen door twee korte zinnen.",
+    "ernst": 1,
+    "groep": "groep3+groep4 (groep4 valt via alias terug op groep3)"
+  },
+  {
+    "bestand": "src/data/sampleQuestions.js",
+    "zoek": "\"Een dier dat zijn jong zoogt\"",
+    "vervang": "\"Een dier dat zijn jongen melk geeft\"",
+    "reden": "Het goede antwoord herhaalt het woord uit de vraag (zoogdier → zoogt) en verraadt zich zo.",
+    "ernst": 2,
+    "groep": "groep5 (niveau 'Groep 5-6')"
+  },
+  {
+    "bestand": "src/data/sampleQuestions.js",
+    "zoek": "{ q: \"Wat is een herbivoor?\", options: [\"Een alleseter\", \"Een vleesetend dier\", \"Een planteneter\", \"Een insectenetende plant\"], answer: 2, explanation: \"Herbivoren eten alleen planten.\" }",
+    "vervang": "{ q: \"Welk dier is een **planteneter**?\", options: [\"Uil\", \"Vos\", \"Koe\", \"Haai\"], answer: 2, explanation: \"Een koe eet alleen planten, zoals gras. Zo'n dier heet een planteneter (moeilijk woord: herbivoor). Een uil, een vos en een haai eten vooral andere dieren.\" }",
+    "reden": "Latijns woord 'herbivoor' was de kern van de vraag in groep 5-6. Zelfde aanpak als in commit 4a3551ca: vraag met diernamen, Latijnse term alleen als extra in de uitleg. Antwoord blijft op index 2.",
+    "ernst": 3,
+    "groep": "groep5 (niveau 'Groep 5-6')"
+  },
+  {
+    "bestand": "src/data/sampleQuestions.js",
+    "zoek": "{ q: \"Wat is een carnivoor?\", options: [\"Vleesetend dier\", \"Alleseter\", \"Koudbloedig dier\", \"Planteneter\"], answer: 0, explanation: \"Carnivoren eten vlees.\" }",
+    "vervang": "{ q: \"Welk dier is een **vleeseter**?\", options: [\"Uil\", \"Koe\", \"Konijn\", \"Schaap\"], answer: 0, explanation: \"Een uil vangt muizen en andere kleine dieren: hij eet vlees. Zo'n dier heet een vleeseter (moeilijk woord: carnivoor). Een koe, een konijn en een schaap eten planten.\" }",
+    "reden": "Latijns woord 'carnivoor' was de kern van de vraag in groep 5-6. Vraag met diernamen; antwoord blijft op index 0.",
+    "ernst": 3,
+    "groep": "groep5 (niveau 'Groep 5-6')"
+  },
+  {
+    "bestand": "src/data/sampleQuestions.js",
+    "zoek": "{ q: \"Wat is een omnivoor?\", options: [\"Een dier dat in het water leeft\", \"Een dier dat zowel planten als dieren eet\", \"Een plantenetend dier\", \"Een vleesetend dier\"], answer: 1, explanation: \"Omnivoren eten alles: mensen, varkens, beren zijn omnivoren.\" }",
+    "vervang": "{ q: \"Welk dier is een **alleseter**?\", options: [\"Koe\", \"Varken\", \"Konijn\", \"Uil\"], answer: 1, explanation: \"Een varken eet planten, maar ook wormen en vlees. Zo'n dier heet een alleseter (moeilijk woord: omnivoor). Ook mensen en beren zijn alleseters. Een koe en een konijn eten planten, een uil eet vlees.\" }",
+    "reden": "Latijns woord 'omnivoor' was de kern van de vraag in groep 5-6. Vraag met diernamen; antwoord blijft op index 1.",
+    "ernst": 3,
+    "groep": "groep5 (niveau 'Groep 5-6')"
+  },
+  {
+    "bestand": "src/data/sampleQuestions.js",
+    "zoek": "{ q: \"Wat is het verschil tussen een carnivoor, herbivoor en omnivoor?\", options: [\"Herbivoor eet dieren; carnivoor eet planten; omnivoor eet beide\", \"Ze verschillen alleen in grootte\", \"Herbivoor eet beide; carnivoor eet planten; omnivoor eet dieren\", \"Herbivoor eet planten; carnivoor eet dieren; omnivoor eet beide\"], answer: 3, explanation: \"Herbivoor (planteneters): konijn, koe. Carnivoor (vleeseters): leeuw, uil. Omnivoor (alleseters): mens, vos, beer.\" }",
+    "vervang": "{ q: \"Wat eten een konijn, een uil en een mens?\", options: [\"Konijn: dieren; uil: planten; mens: allebei\", \"Ze eten alle drie precies hetzelfde\", \"Konijn: allebei; uil: planten; mens: dieren\", \"Konijn: planten; uil: dieren; mens: allebei\"], answer: 3, explanation: \"Een konijn is een planteneter (herbivoor), een uil is een vleeseter (carnivoor) en een mens is een alleseter (omnivoor): hij eet planten én vlees.\" }",
+    "reden": "Drie Latijnse termen waren de kern van de vraag in groep 5-6. Met diernamen getoetst; Latijnse woorden alleen nog als extra in de uitleg. Antwoord blijft op index 3.",
+    "ernst": 3,
+    "groep": "groep5 (niveau 'Groep 5-6')"
+  },
+  {
+    "bestand": "src/data/sampleQuestions.js",
+    "zoek": "{ q: \"Wat is evaporatie?\", options: [\"Bevriezing\", \"Smelten\", \"Verdamping\", \"Condensatie\"], answer: 2, explanation: \"Evaporatie = verdamping van vloeibaar water.\" }",
+    "vervang": "{ q: \"Hoe heet het als water in de warmte verandert in waterdamp?\", options: [\"Bevriezing\", \"Smelten\", \"Verdamping\", \"Condensatie\"], answer: 2, explanation: \"Dat heet verdamping: vloeibaar water wordt waterdamp, een gas dat je niet ziet. (Een moeilijk woord hiervoor is evaporatie.)\" }",
+    "reden": "'Evaporatie' is een Latijns/Engels vakwoord dat in de Nederlandse basisschool niet gebruikt wordt; het was de kern van de vraag in groep 5-6. Antwoord blijft op index 2.",
+    "ernst": 3,
+    "groep": "groep5 (niveau 'Groep 5-6')"
+  },
+  {
+    "bestand": "src/data/sampleQuestions.js",
+    "zoek": "Paddenstoelen zijn de vruchtlichamen van schimmels. Ze verspreiden sporen en leven van dood organisch materiaal (het zijn afbrekers of opruimers).",
+    "vervang": "Een paddenstoel is het deel van een schimmel dat je boven de grond ziet. Onder de hoed zitten sporen: daaruit groeien nieuwe schimmels. Veel schimmels ruimen dode bladeren en hout op (het zijn afbrekers).",
+    "reden": "Uitleg te stellig (niet alle schimmels leven van dood materiaal; sommige leven samen met boomwortels of als parasiet) en met jargon ('vruchtlichamen', 'organisch materiaal') voor groep 5-6.",
+    "ernst": 1,
+    "groep": "groep5 (niveau 'Groep 5-6')"
+  },
+  {
+    "bestand": "src/data/sampleQuestions.js",
+    "zoek": "Decomponenten (bacteriën, schimmels, regenwormen) breken dood organisch materiaal af tot eenvoudige mineralen die terugkeren in de bodem en gebruikt worden door planten.",
+    "vervang": "Afbrekers (bacteriën en schimmels) breken dode planten en dieren af tot mineralen. Die komen terug in de bodem en planten gebruiken ze weer. Regenwormen helpen mee: zij maken dode bladeren klein.",
+    "reden": "Regenwormen zijn geen afbrekers (reducenten) in de schoolbiologie maar opruimers/afvaleters; uitleg gebruikte ook nog een derde term 'decomponenten'.",
+    "ernst": 2,
+    "groep": "groep5 (niveau 'Groep 5-6')"
+  },
+  {
+    "bestand": "src/data/sampleQuestions.js",
+    "zoek": "Dagdieren (vogels, eekhoorns)",
+    "vervang": "Dagdieren (de meeste vogels, eekhoorns)",
+    "reden": "Uitleg sprak zichzelf tegen: 'vogels' als dagdieren en daarna uilen als nachtdieren.",
+    "ernst": 1,
+    "groep": "groep5 (niveau 'Groep 5-6')"
+  },
+  {
+    "bestand": "src/data/sampleQuestions.js",
+    "zoek": "q: \"Wat is het verschil tussen een vis en een amfibie?\"",
+    "vervang": "q: \"Wat is het verschil tussen een vis en een amfibie (zoals een kikker)?\"",
+    "reden": "'Amfibie' zonder uitleg is in groep 5-6 een onbekend woord; een voorbeeld in de vraag maakt hem oplosbaar.",
+    "ernst": 2,
+    "groep": "groep5 (niveau 'Groep 5-6')"
+  },
+  {
+    "bestand": "src/data/sampleQuestions.js",
+    "zoek": "options: [\"Diercel heeft chloroplasten\", \"Plantencel heeft geen kern\", \"Plantencel heeft celwand en chloroplasten\", \"Diercel heeft een celwand\"], answer: 2, explanation: \"Plantencellen hebben celwand en chloroplasten voor fotosynthese.\"",
+    "vervang": "options: [\"Een dierencel heeft bladgroenkorrels\", \"Een plantencel heeft geen kern\", \"Een plantencel heeft een celwand en bladgroenkorrels\", \"Een dierencel heeft een celwand\"], answer: 2, explanation: \"Een plantencel heeft een stevige celwand en bladgroenkorrels (moeilijk woord: chloroplasten). Met die bladgroenkorrels maakt de plant voedsel uit zonlicht. Een dierencel heeft die niet.\"",
+    "reden": "Groep 7-8: 'chloroplasten' (VO-term) was de kern van alle opties; vervangen door 'bladgroenkorrels', Latijnse term alleen als extra in de uitleg. Antwoord blijft op index 2.",
+    "ernst": 2,
+    "groep": "groep7 (niveau 'Groep 7-8' + Doorstroomtoets-wereldoriëntatie-mix)"
+  },
+  {
+    "bestand": "src/data/sampleQuestions.js",
+    "zoek": "Vogels leggen kalkschaal-eieren. Reptielen ook (lederachtige schaal).",
+    "vervang": "Vogels leggen eieren met een harde kalkschaal. Veel reptielen (slangen, hagedissen) leggen eieren met een zachtere, leerachtige schaal.",
+    "reden": "Uitleg sprak zichzelf tegen: 'reptielen ook' (harde schaal) en tegelijk 'lederachtige schaal'.",
+    "ernst": 1,
+    "groep": "groep8 (natuur.groep8-pool)"
+  },
+  {
+    "bestand": "src/data/textbookQuestions.js",
+    "zoek": "{ q: \"Wat zijn duurzame energiebronnen?\"",
+    "vervang": "{ q: \"Welke energiebronnen raken nooit op?\"",
+    "reden": "'Duurzaam' is rekbaar: kernenergie wordt in het Nederlandse debat soms ook duurzaam/CO2-arm genoemd, dus twee verdedigbare antwoorden. 'Raken nooit op' is eenduidig en sluit aan bij de uitleg.",
+    "ernst": 2,
+    "groep": "groep5-8 (Naut/Meander/Brandaan, defaultLevel groep5)"
+  },
+  {
+    "bestand": "src/data/textbookQuestions.js",
+    "zoek": "Kernenergie is niet fossiel maar geeft afval.",
+    "vervang": "Kernenergie is niet fossiel, maar uranium raakt ook op en er blijft afval over.",
+    "reden": "Uitleg consistent maken met de nieuwe vraag ('raken nooit op'): uranium raakt ook op.",
+    "ernst": 1,
+    "groep": "groep5-8 (Naut/Meander/Brandaan, defaultLevel groep5)"
+  }
+]
