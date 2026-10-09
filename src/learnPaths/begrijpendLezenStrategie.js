@@ -120,6 +120,337 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Bij welk soort lezen maak je van letters woorden, en van woorden zinnen?",
+        options: ["Technisch lezen", "Begrijpend lezen", "Studerend lezen", "Snel lezen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Gaat begrijpend lezen over letters aan elkaar plakken, of over snappen wat er bedoeld wordt?",
+          "Gaat studerend lezen over letters, of over onthouden wat je leest?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Drie soorten lezen",
+              tekst: "Technisch lezen, begrijpend lezen en studerend lezen. Elk soort heeft een eigen doel.",
+            },
+            {
+              titel: "Letters en woorden",
+              tekst: "Van letters woorden maken en van woorden zinnen: dat is TECHNISCH lezen. Dat leer je in groep 3-4.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "technisch lezen",
+              uitleg: "Letters en woorden goed kunnen lezen.",
+            },
+            {
+              woord: "studerend lezen",
+              uitleg: "Lezen om iets te onthouden en later te gebruiken.",
+            },
+          ],
+          theorie: "Technisch lezen = wat er staat. Begrijpend lezen = wat de schrijver bedoelt. Studerend lezen = onthouden en toepassen.",
+          voorbeelden: [
+            {
+              type: "technisch",
+              tekst: "Een kind in groep 3 leest 'b-oo-m' en zegt 'boom'. Dat is technisch lezen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Eerst technisch",
+              uitleg: "Je moet eerst de woorden kunnen lezen, daarna kun je pas snappen wat ze samen betekenen.",
+            },
+          ],
+          niveaus: {
+            basis: "Letters → woorden → zinnen = technisch lezen.",
+            simpeler: "Als je letters aan elkaar plakt tot een woord, ben je technisch aan het lezen. Snappen wat het betekent komt daarna.",
+            nogSimpeler: "Letters lezen = technisch",
+          },
+        },
+      },
+      {
+        q: "Je leest een tekst om hem te onthouden, omdat je er morgen een toets over hebt. Welk soort lezen is dat?",
+        options: ["Studerend lezen", "Technisch lezen", "Voorlezen", "Snel lezen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Gaat technisch lezen over onthouden, of over letters en woorden?",
+          null,
+          "Onthoud je een tekst beter als je er snel doorheen gaat?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat wil je met de tekst?",
+              tekst: "Je wilt hem ONTHOUDEN en later gebruiken, voor een toets.",
+            },
+            {
+              titel: "Welk soort lezen hoort daarbij?",
+              tekst: "Onthouden en toepassen = STUDEREND lezen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "studerend lezen",
+              uitleg: "Lezen om iets te onthouden en later te gebruiken, bijvoorbeeld voor een toets.",
+            },
+            {
+              woord: "toepassen",
+              uitleg: "Gebruiken wat je geleerd hebt.",
+            },
+          ],
+          theorie: "Drie niveaus: technisch (wat staat er), begrijpend (wat bedoelt de schrijver), studerend (onthouden en gebruiken).",
+          voorbeelden: [
+            {
+              type: "studerend",
+              tekst: "Je leest een tekst over de Romeinen en maakt er aantekeningen bij voor de toets. Dat is studerend lezen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Volgorde",
+              uitleg: "Eerst technisch, dan begrijpend, dan studerend. Elk niveau bouwt op het vorige.",
+            },
+          ],
+          niveaus: {
+            basis: "Onthouden voor een toets = studerend lezen.",
+            simpeler: "Lees je om iets te leren en te onthouden? Dan ben je aan het studeren. Dat heet studerend lezen.",
+            nogSimpeler: "Onthouden = studerend",
+          },
+        },
+      },
+      {
+        q: "Wat betekent **'tussen de regels lezen'**?",
+        options: [
+          "Snappen wat niet letterlijk in de tekst staat",
+          "Alleen de vetgedrukte woorden lezen",
+          "Elke tweede regel overslaan",
+          "De tekst van onder naar boven lezen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Begrijp je een tekst beter als je alleen een paar woorden leest?",
+          null,
+          "Gaat het om de volgorde waarin je leest, of om wat je ervan snapt?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Het staat er niet letterlijk",
+              tekst: "Soms zegt een schrijver iets niet precies, maar je kunt het wel snappen uit de tekst.",
+            },
+            {
+              titel: "Zelf afleiden",
+              tekst: "Dat zelf snappen heet 'tussen de regels lezen'. Er staat niets tussen de regels: het is een uitdrukking.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "letterlijk",
+              uitleg: "Precies zo, woord voor woord.",
+            },
+            {
+              woord: "uitdrukking",
+              uitleg: "Een groepje woorden met een andere betekenis dan de losse woorden.",
+            },
+          ],
+          theorie: "De boodschap zit niet altijd letterlijk in de tekst. Dan moet je tussen de regels lezen: zelf bedenken wat de schrijver bedoelt.",
+          voorbeelden: [
+            {
+              type: "afleiden",
+              tekst: "Tekst: 'Sem gaapte en wreef in zijn ogen.' Er staat niet dat Sem moe is, maar dat snap je wel.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Uitdrukking",
+              uitleg: "'Tussen de regels lezen' is een uitdrukking. Je kijkt niet echt naar de witte ruimte tussen de zinnen.",
+            },
+          ],
+          niveaus: {
+            basis: "Tussen de regels lezen = snappen wat er niet letterlijk staat.",
+            simpeler: "Een vriend zucht en kijkt steeds op de klok. Hij zegt niet dat hij zich verveelt, maar je snapt het wel. Zo werkt tussen de regels lezen ook bij een tekst.",
+            nogSimpeler: "Zelf snappen",
+          },
+        },
+      },
+      {
+        q: "Tekst: *'Tim keek naar buiten. De lucht was donkergrijs. Hij pakte snel zijn paraplu.'*\n\nWat kun je **tussen de regels** lezen?",
+        options: [
+          "Tim verwacht dat het gaat regenen",
+          "Tim heeft het heel erg warm",
+          "Tim gaat in de zon liggen",
+          "Tim is zijn paraplu kwijt",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Staat er iets in de tekst over warmte?",
+          "Past een donkergrijze lucht bij in de zon liggen?",
+          "Wat doet Tim aan het eind met zijn paraplu?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek de hints",
+              tekst: "Er staat: *'De lucht was donkergrijs.'* en *'Hij pakte snel zijn paraplu.'*",
+            },
+            {
+              titel: "Wat betekenen de hints samen?",
+              tekst: "Een donkergrijze lucht en een paraplu pakken: Tim denkt dat er regen komt. Dat staat er niet letterlijk, maar je snapt het wel.",
+            },
+            {
+              titel: "Klopt de rest?",
+              tekst: "Warm, in de zon liggen of paraplu kwijt: daar zijn geen hints voor. Hij pakt zijn paraplu juist.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "hint",
+              uitleg: "Een aanwijzing die je helpt iets te snappen.",
+            },
+            {
+              woord: "afleiden",
+              uitleg: "Iets snappen uit aanwijzingen, ook al staat het er niet letterlijk.",
+            },
+          ],
+          theorie: "Bij tussen de regels lezen zoek je hints in de tekst en bedenk je wat ze samen betekenen.",
+          voorbeelden: [
+            {
+              type: "hints",
+              tekst: "'Noor trok haar muts en wanten aan.' → het is waarschijnlijk koud buiten.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Bewijs uit de tekst",
+              uitleg: "Je antwoord moet altijd te verklaren zijn met woorden uit de tekst.",
+            },
+          ],
+          niveaus: {
+            basis: "Tim verwacht regen.",
+            simpeler: "Grijze lucht + paraplu pakken. Waarom pak je een paraplu? Omdat je denkt dat het gaat regenen.",
+            nogSimpeler: "Paraplu = regen",
+          },
+        },
+      },
+      {
+        q: "Wat maakt begrijpend lezen **vaak lastig**?",
+        options: [
+          "Moeilijke woorden en lange zinnen",
+          "Te weinig plaatjes bij de tekst",
+          "Een saaie kleur papier",
+          "Een te groot lettertype",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Heb je plaatjes nodig om een tekst te snappen?",
+          null,
+          "Is grote letters lezen moeilijker dan kleine?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat maakt het lastig?",
+              tekst: "Moeilijke woorden zoals 'desondanks' of 'echter', en lange zinnen met veel komma's.",
+            },
+            {
+              titel: "En nog meer",
+              tekst: "De boodschap staat niet altijd letterlijk in de tekst, en de vragen testen of je het echt begrepen hebt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "desondanks",
+              uitleg: "Toch, ondanks dat.",
+            },
+            {
+              woord: "bijzin",
+              uitleg: "Een stukje zin dat bij een andere zin hoort, vaak na een komma.",
+            },
+          ],
+          theorie: "Begrijpend lezen is lastig door moeilijke woorden, lange zinnen en boodschappen die je tussen de regels moet lezen. Het goede nieuws: je kunt het leren.",
+          voorbeelden: [
+            {
+              type: "lange zin",
+              tekst: "'Hoewel het regende, gingen de kinderen, die allemaal een jas aanhadden, toch naar buiten.' Veel komma's: lees rustig.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Oefenen helpt",
+              uitleg: "Begrijpend lezen is een vaardigheid. Hoe vaker je oefent, hoe makkelijker het wordt.",
+            },
+          ],
+          niveaus: {
+            basis: "Moeilijke woorden en lange zinnen.",
+            simpeler: "Een tekst wordt lastig als er woorden in staan die je niet kent, of zinnen die heel lang zijn. Dan moet je goed opletten.",
+            nogSimpeler: "Moeilijke woorden",
+          },
+        },
+      },
+      {
+        q: "Wat is het **goede nieuws** over begrijpend lezen?",
+        options: [
+          "Je kunt het leren door slim aan te pakken",
+          "Alleen heel slimme kinderen kunnen het",
+          "Het lukt pas als je volwassen bent",
+          "Oefenen helpt er helemaal niet bij",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Heb je een speciaal soort hersenen nodig, of kan iedereen het oefenen?",
+          null,
+          "Wat gebeurt er meestal als je iets vaak oefent?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Een vaardigheid",
+              tekst: "Begrijpend lezen is een vaardigheid. Dat is iets wat je kunt leren door te oefenen.",
+            },
+            {
+              titel: "Slim aanpakken",
+              tekst: "Het gaat niet om slimmer zijn, maar om een slimme aanpak: tekstsoort herkennen, signaalwoorden, skimmen en scannen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vaardigheid",
+              uitleg: "Iets wat je kunt door te oefenen.",
+            },
+            {
+              woord: "aanpak",
+              uitleg: "De manier waarop je iets doet.",
+            },
+          ],
+          theorie: "Begrijpend lezen leer je door slim aan te pakken: weet welke tekst je leest, let op signaalwoorden en zoek gericht.",
+          voorbeelden: [
+            {
+              type: "oefenen",
+              tekst: "Net als fietsen: eerst wiebel je, maar na veel oefenen gaat het vanzelf.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Iedereen kan het",
+              uitleg: "Je hoeft niet slimmer te zijn. Met de goede aanpak kan iedereen beter worden in lezen.",
+            },
+          ],
+          niveaus: {
+            basis: "Je kunt het leren met een slimme aanpak.",
+            simpeler: "Begrijpend lezen is als fietsen: je leert het door te oefenen, niet doordat je extra slim bent.",
+            nogSimpeler: "Oefenen helpt",
+          },
+        },
+      },
     ],
   },
   {
@@ -197,6 +528,285 @@ const steps = [
             basis: "Emotioneel woord = mening = betogend.",
             simpeler: "Welk woord laat een GEVOEL zien? 'Fantastisch' (super positief) of 'verschrikkelijk' (super negatief). Die woorden gebruikt iemand alleen als hij een mening heeft. Dus = betogend.",
             nogSimpeler: "Emotie = mening",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Tekst: *'Een giraf is het hoogste dier op het land. Hij eet bladeren uit hoge bomen.'*\n\nWat wil de schrijver met deze tekst?",
+        options: [
+          "Je informatie geven",
+          "Je overtuigen van een mening",
+          "Je een verhaal vertellen",
+          "Je aan het lachen maken",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zie je ergens 'ik vind' of een woord als 'fantastisch'?",
+          "Zijn er personages, en gebeurt er iets spannends?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat staat er?",
+              tekst: "Twee feiten over de giraf: hij is het hoogste landdier, en hij eet bladeren uit hoge bomen.",
+            },
+            {
+              titel: "Wat is het doel?",
+              tekst: "Feiten geven = informatie geven. Dit is een INFORMATIEVE tekst.",
+            },
+            {
+              titel: "Geen mening, geen verhaal",
+              tekst: "Er staan geen emotionele woorden in en er is geen personage dat iets meemaakt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "informatief",
+              uitleg: "Een tekst die feiten en informatie geeft.",
+            },
+            {
+              woord: "feit",
+              uitleg: "Iets wat waar is en wat je kunt nakijken.",
+            },
+          ],
+          theorie: "Veel feiten, cijfers en namen = informatief. Mening en emotionele woorden = betogend. Personages en gebeurtenissen = verhalend.",
+          voorbeelden: [
+            {
+              type: "informatief",
+              tekst: "'Amsterdam is de hoofdstad van Nederland.' = een feit = informatief.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Doel van een tekst",
+              uitleg: "Elke tekst heeft een doel: informeren, overtuigen of vermaken.",
+            },
+          ],
+          niveaus: {
+            basis: "Feiten = informatief = informatie geven.",
+            simpeler: "De tekst vertelt alleen hoe het zit met de giraf. Geen mening, geen verhaal. Dus: de schrijver geeft je informatie.",
+            nogSimpeler: "Feiten = informatie",
+          },
+        },
+      },
+      {
+        q: "Tekst: *'Alle scholen moeten een moestuin krijgen! Het is leerzaam, gezond en superleuk.'*\n\nWelke tekstsoort is dit?",
+        options: ["Betogend", "Informatief", "Verhalend", "Een gedicht"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Geeft deze tekst alleen feiten, of vindt de schrijver iets?",
+          "Is er een personage dat iets meemaakt?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek de mening",
+              tekst: "*'Alle scholen moeten een moestuin krijgen!'* Dat vindt de schrijver: het is een mening.",
+            },
+            {
+              titel: "Zoek de argumenten",
+              tekst: "Leerzaam, gezond en superleuk: dat zijn argumenten om je te overtuigen. 'Superleuk' is ook een emotioneel woord.",
+            },
+            {
+              titel: "Conclusie",
+              tekst: "Mening + argumenten = BETOGEND.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "betogend",
+              uitleg: "Een tekst met een mening en argumenten. De schrijver wil je overtuigen.",
+            },
+            {
+              woord: "argument",
+              uitleg: "Een reden die een mening ondersteunt.",
+            },
+          ],
+          theorie: "Betogende teksten herken je aan een mening van de schrijver, argumenten en emotionele woorden zoals 'fantastisch' of 'verschrikkelijk'.",
+          voorbeelden: [
+            {
+              type: "betogend",
+              tekst: "'Iedereen zou meer fruit moeten eten. Het is gezond en lekker!' = betogend.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lees kritisch",
+              uitleg: "Bij een betogende tekst hoef je niet alles te geloven. Kijk of de argumenten echt kloppen.",
+            },
+          ],
+          niveaus: {
+            basis: "Mening + argumenten = betogend.",
+            simpeler: "De schrijver vindt dat scholen een moestuin moeten krijgen en geeft redenen. Hij wil jou overtuigen. Dat is betogend.",
+            nogSimpeler: "Moeten! = betogend",
+          },
+        },
+      },
+      {
+        q: "Waaraan herken je een **verhalende** tekst?",
+        options: [
+          "Er zijn personages en er gebeurt iets",
+          "Er staan veel cijfers en jaartallen in",
+          "De schrijver geeft vooral zijn mening",
+          "Er staan veel argumenten in",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Bij welke tekstsoort horen veel cijfers en feiten?",
+          "Wil een verhaal je overtuigen, of je meenemen in wat er gebeurt?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat doet een verhaal?",
+              tekst: "Een verhaal vertelt wat er gebeurt met iemand. Het wil je vermaken of meevoeren.",
+            },
+            {
+              titel: "Waar let je op?",
+              tekst: "Personages (wie?), het plot (wat gebeurt er?) en soms een boodschap.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "personage",
+              uitleg: "Iemand die in een verhaal meedoet, zoals Sara of een pratend konijn.",
+            },
+            {
+              woord: "plot",
+              uitleg: "Wat er in een verhaal gebeurt.",
+            },
+          ],
+          theorie: "Personages + gebeurtenissen + dialoog = verhalend. Cijfers en feiten = informatief. Mening en argumenten = betogend.",
+          voorbeelden: [
+            {
+              type: "verhalend",
+              tekst: "'Sara was bang. Toen sprong er een konijn tevoorschijn.' = personage + gebeurtenis = verhalend.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Gemengde teksten",
+              uitleg: "Soms is een verhaal ook een beetje informatief, zoals een verhaal dat zich vroeger afspeelt.",
+            },
+          ],
+          niveaus: {
+            basis: "Personages + gebeurtenissen = verhalend.",
+            simpeler: "In een verhaal is er iemand (een personage) en er gebeurt iets met die persoon. Zo herken je het.",
+            nogSimpeler: "Wie + wat gebeurt",
+          },
+        },
+      },
+      {
+        q: "Welke tekst is meestal **verhalend**?",
+        options: ["Een sprookje", "Een recept", "Een encyclopedie", "Een advertentie"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Wat wil een recept: je vermaken, of uitleggen hoe je iets maakt?",
+          null,
+          "Wat wil een advertentie dat jij doet?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat is verhalend?",
+              tekst: "Een tekst die een verhaal vertelt, met personages en gebeurtenissen.",
+            },
+            {
+              titel: "Welke tekst past?",
+              tekst: "Een sprookje vertelt een verhaal. Een recept en een encyclopedie geven informatie. Een advertentie wil je overtuigen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "encyclopedie",
+              uitleg: "Een boek of website vol feiten over allerlei onderwerpen.",
+            },
+            {
+              woord: "advertentie",
+              uitleg: "Reclame: een tekst die je iets wil laten kopen of doen.",
+            },
+          ],
+          theorie: "Voorbeelden van verhalende teksten: roman, kort verhaal, sprookje, dagboek.",
+          voorbeelden: [
+            {
+              type: "verhalend",
+              tekst: "'Er was eens een prinses die in een hoge toren woonde...' = sprookje = verhalend.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Drie doelen",
+              uitleg: "Informatief = weten. Betogend = overtuigen. Verhalend = vermaken.",
+            },
+          ],
+          niveaus: {
+            basis: "Sprookje = verhalend.",
+            simpeler: "Bij een sprookje hoor je een verhaal: er was eens... Dat is verhalend.",
+            nogSimpeler: "Er was eens = verhaal",
+          },
+        },
+      },
+      {
+        q: "Je leest een **betogende** tekst. Waar let je vooral op?",
+        options: [
+          "De mening en argumenten van de schrijver",
+          "De personages en wat er gebeurt",
+          "Alleen de jaartallen in de tekst",
+          "Het aantal alinea's",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Bij welke tekstsoort horen personages?",
+          null,
+          "Vertelt het aantal alinea's je wat de schrijver wil?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Doel van betogend",
+              tekst: "De schrijver wil jou overtuigen van zijn mening.",
+            },
+            {
+              titel: "Waar zoek je dus naar?",
+              tekst: "Naar zijn MENING en de ARGUMENTEN die hij geeft. En lees kritisch: geloof niet alles meteen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "mening",
+              uitleg: "Wat iemand vindt of denkt.",
+            },
+            {
+              woord: "kritisch lezen",
+              uitleg: "Goed nadenken of iets wat je leest wel klopt.",
+            },
+          ],
+          theorie: "Per tekstsoort lees je anders: informatief → feiten zoeken; betogend → mening en argumenten; verhalend → personages, plot en boodschap.",
+          voorbeelden: [
+            {
+              type: "argumenten",
+              tekst: "'Sport is goed, want je wordt fit en je maakt vrienden.' Mening: sport is goed. Argumenten: fit worden, vrienden maken.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Pas op",
+              uitleg: "Emotionele woorden en argumenten van maar één kant zijn trucjes om je over te halen.",
+            },
+          ],
+          niveaus: {
+            basis: "Betogend → let op mening + argumenten.",
+            simpeler: "Iemand wil je overtuigen. Dan wil je weten: wat vindt hij, en welke redenen geeft hij daarvoor?",
+            nogSimpeler: "Mening + redenen",
           },
         },
       },
@@ -280,6 +890,169 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welk woord past op de puntjes?\n\n*'Het sneeuwde heel hard. ... bleef de school gewoon open.'*",
+        options: ["Toch", "Daarom", "Bijvoorbeeld", "Ten eerste"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Blijft een school open OMDAT het hard sneeuwt?",
+          null,
+          "Begint hier een rijtje met redenen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat verwacht je?",
+              tekst: "Als het heel hard sneeuwt, verwacht je misschien dat de school dichtgaat.",
+            },
+            {
+              titel: "Wat gebeurt er?",
+              tekst: "De school blijft gewoon open. Dat is ONVERWACHT. Daar past een tegenstelling-woord bij: 'toch'.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tegenstelling",
+              uitleg: "Iets wat anders is dan je verwacht, of het tegenovergestelde.",
+            },
+            {
+              woord: "toch",
+              uitleg: "Ondanks dat; je verwacht iets anders.",
+            },
+          ],
+          theorie: "Tegenstelling-signaalwoorden: maar, echter, toch, hoewel, desondanks, daarentegen.",
+          voorbeelden: [
+            {
+              type: "toch",
+              tekst: "'Het regent, maar we gaan toch buiten spelen.' → onverwacht.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lees de zin hardop",
+              uitleg: "Probeer elk woord op de puntjes. Welke zin klinkt logisch?",
+            },
+          ],
+          niveaus: {
+            basis: "'Toch' = tegenstelling.",
+            simpeler: "Hard sneeuwen en dan blijft de school open: dat verwacht je niet. Bij iets onverwachts past 'toch'.",
+            nogSimpeler: "Onverwacht = toch",
+          },
+        },
+      },
+      {
+        q: "Welk signaalwoord betekent ongeveer hetzelfde als **'bijvoorbeeld'**?",
+        options: ["zoals", "maar", "daarna", "dus"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Komt er na 'maar' een voorbeeld, of een tegenstelling?",
+          null,
+          "Trekt 'dus' een conclusie, of geeft het een voorbeeld?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat doet 'bijvoorbeeld'?",
+              tekst: "Na 'bijvoorbeeld' komt een voorbeeld of toelichting.",
+            },
+            {
+              titel: "Welk woord doet hetzelfde?",
+              tekst: "'Zoals' kondigt ook een voorbeeld aan: 'dieren zoals de egel'.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "voorbeeld",
+              uitleg: "Iets wat laat zien wat je bedoelt.",
+            },
+            {
+              woord: "toelichting",
+              uitleg: "Extra uitleg.",
+            },
+          ],
+          theorie: "Voorbeeld-signaalwoorden: bijvoorbeeld, zoals, namelijk, bijv.",
+          voorbeelden: [
+            {
+              type: "zoals",
+              tekst: "'Sommige dieren houden een winterslaap, zoals de egel.' = 'bijvoorbeeld de egel'.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Zes groepen",
+              uitleg: "Tijd, oorzaak/gevolg, opsomming, tegenstelling, voorbeeld, conclusie.",
+            },
+          ],
+          niveaus: {
+            basis: "'Zoals' = 'bijvoorbeeld'.",
+            simpeler: "'Fruit, bijvoorbeeld appels' en 'fruit, zoals appels' betekenen hetzelfde.",
+            nogSimpeler: "Zoals = bijvoorbeeld",
+          },
+        },
+      },
+      {
+        q: "Tekst: *'Omdat de bus te laat was, kwam Noor te laat op school.'*\n\nWat is hier de **oorzaak**?",
+        options: [
+          "De bus was te laat",
+          "Noor kwam te laat op school",
+          "Noor fietste naar school",
+          "De school begon later",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is dit de reden, of wat eruit volgt?",
+          "Staat in de tekst hoe Noor naar school ging?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek het signaalwoord",
+              tekst: "Het woord *'Omdat'* zegt: nu komt de reden.",
+            },
+            {
+              titel: "Wat is de reden?",
+              tekst: "Na 'omdat' staat: *'de bus te laat was'*. Dat is de oorzaak.",
+            },
+            {
+              titel: "En het gevolg?",
+              tekst: "Wat eruit volgt: *'kwam Noor te laat op school'*. Dat is het gevolg.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "oorzaak",
+              uitleg: "De reden waardoor iets gebeurt.",
+            },
+            {
+              woord: "gevolg",
+              uitleg: "Wat er gebeurt door de oorzaak.",
+            },
+          ],
+          theorie: "Oorzaak/gevolg-signaalwoorden: omdat, doordat, daardoor, dus, daarom, vandaar. Na 'omdat' en 'doordat' komt de oorzaak.",
+          voorbeelden: [
+            {
+              type: "omdat",
+              tekst: "'Omdat het regende, werd de wedstrijd afgelast.' Oorzaak: regen. Gevolg: afgelast.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Vraag het jezelf",
+              uitleg: "Waardoor gebeurde het? = oorzaak. Wat gebeurde er daardoor? = gevolg.",
+            },
+          ],
+          niveaus: {
+            basis: "Oorzaak = de bus was te laat.",
+            simpeler: "Waarom kwam Noor te laat? Omdat de bus te laat was. Het antwoord op 'waarom?' is de oorzaak.",
+            nogSimpeler: "Waarom? = oorzaak",
+          },
+        },
+      },
     ],
   },
   {
@@ -357,6 +1130,122 @@ const steps = [
             basis: "Eerste + laatste zin per alinea.",
             simpeler: "Niet alle 200 woorden lezen. Lees alleen de eerste zin van elke alinea — daar staat meestal het hoofdpunt. Plus de laatste zin (die vat vaak samen).",
             nogSimpeler: "Skim eerste/laatste zinnen",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Uit welke **drie delen** bestaat een tekst meestal?",
+        options: [
+          "Inleiding, kern en slot",
+          "Titel, plaatje en naam",
+          "Vraag, antwoord en uitleg",
+          "Woord, zin en letter",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zijn een plaatje en een naam delen van de tekst zelf?",
+          null,
+          "Gaat dit over de opbouw van een tekst, of over kleine stukjes taal?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Begin",
+              tekst: "De INLEIDING vertelt waar de tekst over gaat.",
+            },
+            {
+              titel: "Midden",
+              tekst: "De KERN geeft uitleg, voorbeelden en details.",
+            },
+            {
+              titel: "Eind",
+              tekst: "Het SLOT vat samen of trekt een conclusie.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "inleiding",
+              uitleg: "Het begin van een tekst.",
+            },
+            {
+              woord: "kern",
+              uitleg: "Het middelste, grootste deel van een tekst.",
+            },
+            {
+              woord: "slot",
+              uitleg: "Het einde van een tekst.",
+            },
+          ],
+          theorie: "Standaard tekstopbouw: inleiding → kern → slot. De hoofdgedachte staat vaak in de inleiding of in het slot.",
+          voorbeelden: [
+            {
+              type: "opbouw",
+              tekst: "Tekst over water drinken: inleiding 'water is belangrijk', kern 'je hebt elke dag water nodig', slot 'kortom: drink genoeg'.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Net als een boterham",
+              uitleg: "Brood, beleg, brood: het begin en eind houden het midden bij elkaar.",
+            },
+          ],
+          niveaus: {
+            basis: "Inleiding + kern + slot.",
+            simpeler: "Een tekst heeft een begin, een midden en een eind. Die heten inleiding, kern en slot.",
+            nogSimpeler: "Begin, midden, eind",
+          },
+        },
+      },
+      {
+        q: "In welk deel van een tekst staan meestal de **uitleg, voorbeelden en details**?",
+        options: ["In de kern", "In de titel", "In de inleiding", "In het slot"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Past er veel uitleg in een paar woorden boven de tekst?",
+          "Wat doet de inleiding vooral: vertellen waar het over gaat, of alles uitleggen?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Drie delen",
+              tekst: "Inleiding (waar gaat het over?), kern (uitleg) en slot (samenvatting).",
+            },
+            {
+              titel: "Waar staat de uitleg?",
+              tekst: "In de KERN, de middelste alinea's. Daar staan uitleg, voorbeelden, argumenten en details.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kern",
+              uitleg: "Het middelste deel van een tekst, met de meeste informatie.",
+            },
+            {
+              woord: "detail",
+              uitleg: "Een klein feit.",
+            },
+          ],
+          theorie: "In de kern staan de antwoorden op de meeste tekstvragen. De hoofdgedachte vind je vaker in de inleiding of het slot.",
+          voorbeelden: [
+            {
+              type: "kern",
+              tekst: "Tekst over water: 'Zonder water krijg je hoofdpijn en word je sneller moe.' Dat is uitleg uit de kern.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Slim zoeken",
+              uitleg: "Een detailvraag? Kijk in de kern. Een hoofdgedachte-vraag? Kijk naar begin en eind.",
+            },
+          ],
+          niveaus: {
+            basis: "Uitleg en details = kern.",
+            simpeler: "Het midden van de tekst is het grootste stuk. Daar legt de schrijver alles uit.",
+            nogSimpeler: "Midden = uitleg",
           },
         },
       },
@@ -438,6 +1327,221 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Vraag bij een tekst: *'In welk jaar werd de brug gebouwd?'*\n\nWelke techniek gebruik je het best?",
+        options: ["Scannen", "Skimmen", "Alles woord voor woord lezen", "Alleen de titel lezen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Geeft skimmen je één precies antwoord, of vooral een overzicht?",
+          "Heb je daar op een toets genoeg tijd voor?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat voor vraag is het?",
+              tekst: "Je zoekt één specifiek ding: een jaartal.",
+            },
+            {
+              titel: "Welke techniek past?",
+              tekst: "Gericht zoeken naar één ding = SCANNEN. Je oog zoekt naar een jaartal of het woord 'brug'.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "scannen",
+              uitleg: "Gericht zoeken naar één specifiek antwoord.",
+            },
+            {
+              woord: "skimmen",
+              uitleg: "Snel een overzicht krijgen van de hele tekst.",
+            },
+          ],
+          theorie: "Skimmen = snel overzicht (aan het begin). Scannen = gericht zoeken (per vraag). Bij specifieke vragen scan je.",
+          voorbeelden: [
+            {
+              type: "scannen",
+              tekst: "Vraag: 'Hoeveel jaar leeft een hond gemiddeld?' → scan naar een getal en het woord 'jaar'.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Kernwoord",
+              uitleg: "Kies een kernwoord uit de vraag en zoek dat in de tekst.",
+            },
+          ],
+          niveaus: {
+            basis: "Eén specifiek ding zoeken = scannen.",
+            simpeler: "Je wilt alleen een jaartal weten. Dan laat je je ogen snel zoeken naar een getal. Dat is scannen.",
+            nogSimpeler: "Scan naar het jaartal",
+          },
+        },
+      },
+      {
+        q: "Je kunt het antwoord op een vraag **niet vinden** in de tekst. Wat is een goede volgende stap?",
+        options: [
+          "Het stukje eromheen nog eens lezen",
+          "Een antwoord kiezen zonder te lezen",
+          "Stoppen met de hele toets",
+          "De tekst helemaal overschrijven",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is een antwoord kiezen zonder te lezen een slimme aanpak?",
+          null,
+          "Heb je op een toets tijd om een tekst over te schrijven?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Niet meteen opgeven",
+              tekst: "Soms zit het antwoord verstopt in de zinnen eromheen.",
+            },
+            {
+              titel: "Andere woorden",
+              tekst: "Het antwoord kan ook in andere woorden staan dan in de vraag. Lees dus rustig het stukje rond het kernwoord.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kernwoord",
+              uitleg: "Het belangrijkste woord uit de vraag.",
+            },
+            {
+              woord: "verstopt",
+              uitleg: "Niet meteen te zien.",
+            },
+          ],
+          theorie: "Geen antwoord gevonden? 1) Lees de zinnen eromheen. 2) Denk aan andere woorden voor hetzelfde. 3) Lukt het echt niet? Sla de vraag over en kom later terug.",
+          voorbeelden: [
+            {
+              type: "andere woorden",
+              tekst: "Vraag: 'Hoe oud wordt een kat?' Tekst: 'Katten leven zo'n vijftien jaar.' Het woord 'oud' staat er niet, het antwoord wel.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Antwoord staat in de tekst",
+              uitleg: "Het antwoord staat altijd in de tekst, of je kunt het logisch afleiden.",
+            },
+          ],
+          niveaus: {
+            basis: "Lees de zinnen eromheen.",
+            simpeler: "Vind je het niet meteen? Lees het stukje rond het woord nog eens rustig. Vaak staat het er net iets anders.",
+            nogSimpeler: "Lees eromheen",
+          },
+        },
+      },
+      {
+        q: "Hoe lang duurt het ongeveer om een hele tekst te **skimmen**?",
+        options: [
+          "Ongeveer 30 seconden",
+          "Ongeveer 10 minuten",
+          "Ongeveer een uur",
+          "Ongeveer een halve dag",
+        ],
+        answer: 0,
+        wrongHints: [null, "Is skimmen snel of langzaam?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Skimmen is snel",
+              tekst: "Je leest niet alles, alleen de titel en de eerste zinnen.",
+            },
+            {
+              titel: "Hoe lang?",
+              tekst: "Daar heb je zo'n 30 seconden voor nodig.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "skimmen",
+              uitleg: "Snel overzicht krijgen van een tekst.",
+            },
+            {
+              woord: "seconde",
+              uitleg: "Heel korte tijd: 60 seconden is 1 minuut.",
+            },
+          ],
+          theorie: "Ideale volgorde: skimmen (~30 sec) → vragen lezen (~30 sec) → scannen per vraag (1-2 min).",
+          voorbeelden: [
+            {
+              type: "tijd",
+              tekst: "Tekst met 5 alinea's: titel + 5 eerste zinnen lezen. Dat kost ongeveer 30 seconden.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tijd is kostbaar",
+              uitleg: "Op de Doorstroomtoets heb je zo'n 5-7 minuten per tekst. Skimmen moet dus snel gaan.",
+            },
+          ],
+          niveaus: {
+            basis: "Ongeveer 30 seconden.",
+            simpeler: "Skimmen is snel even kijken. Een halve minuut is genoeg om te weten waar de tekst over gaat.",
+            nogSimpeler: "Halve minuut",
+          },
+        },
+      },
+      {
+        q: "Welke aanpak kost op de toets **veel te veel tijd**?",
+        options: [
+          "Elke tekst woord voor woord lezen",
+          "Eerst de tekst skimmen",
+          "Gericht scannen naar het antwoord",
+          "De vragen vooraf bekijken",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kost skimmen veel of weinig tijd?",
+          null,
+          "Helpt het om te weten wat je moet zoeken?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "De veelgemaakte fout",
+              tekst: "Alle teksten woord voor woord lezen, van de eerste tot de laatste zin.",
+            },
+            {
+              titel: "Waarom is dat niet slim?",
+              tekst: "Dat kost veel te veel tijd. Skimmen, vragen lezen en gericht scannen gaat veel sneller.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "woord voor woord",
+              uitleg: "Elk woord lezen, niets overslaan.",
+            },
+            {
+              woord: "gericht",
+              uitleg: "Met een doel; je weet wat je zoekt.",
+            },
+          ],
+          theorie: "Slimme volgorde: 1) skim de tekst, 2) lees de vragen, 3) scan voor elk antwoord, 4) bij twijfel lees je het stukje eromheen nog eens.",
+          voorbeelden: [
+            {
+              type: "tijd",
+              tekst: "Skimmen 30 sec + vragen 30 sec + scannen = een paar minuten. Alles woord voor woord lezen duurt veel langer.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Slim > snel",
+              uitleg: "Je hoeft niet sneller te lezen, maar slimmer.",
+            },
+          ],
+          niveaus: {
+            basis: "Woord voor woord lezen kost te veel tijd.",
+            simpeler: "Op een toets heb je niet genoeg tijd om elk woord te lezen. Daarom eerst skimmen en dan gericht zoeken.",
+            nogSimpeler: "Niet alles lezen",
+          },
+        },
+      },
     ],
   },
   {
@@ -514,6 +1618,340 @@ const steps = [
             basis: "Strikvraag = bedoeld om je af te leiden.",
             simpeler: "Stel: een vraag is zo geformuleerd dat je het verkeerde antwoord kiest. Dat heet strikvraag. Niet om je te plagen — om te testen of je goed leest.",
             nogSimpeler: "Misleidend = strik",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Vraag bij een tekst: *'Hoeveel inwoners heeft het dorp?'*\n\nWat voor soort vraag is dit?",
+        options: [
+          "Een letterlijke vraag",
+          "Een hoofdgedachte-vraag",
+          "Een woordbetekenis-vraag",
+          "Een tekstopbouw-vraag",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Vraagt dit naar de boodschap van de hele tekst?",
+          null,
+          "Gaat dit over hoe de alinea's na elkaar komen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat vraagt de vraag?",
+              tekst: "Een getal: het aantal inwoners. Dat staat precies zo in de tekst.",
+            },
+            {
+              titel: "Welke soort?",
+              tekst: "Antwoord staat letterlijk in de tekst = LETTERLIJKE vraag. Aanpak: scannen naar het kernwoord 'inwoners'.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "letterlijk",
+              uitleg: "Precies zo, woord voor woord.",
+            },
+            {
+              woord: "inwoner",
+              uitleg: "Iemand die ergens woont.",
+            },
+          ],
+          theorie: "5 vraagsoorten: letterlijk, inferentie (tussen de regels), hoofdgedachte, woordbetekenis, tekstopbouw. Elk een eigen aanpak.",
+          voorbeelden: [
+            {
+              type: "letterlijk",
+              tekst: "'Hoeveel inwoners heeft Brussel?' → scan naar 'inwoners' of een groot getal.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Aanpak",
+              uitleg: "Bij een letterlijke vraag: scan naar het kernwoord en lees die zin.",
+            },
+          ],
+          niveaus: {
+            basis: "Letterlijke vraag: het antwoord staat erin.",
+            simpeler: "Je zoekt één getal dat gewoon in de tekst staat. Dan is het een letterlijke vraag.",
+            nogSimpeler: "Staat erin = letterlijk",
+          },
+        },
+      },
+      {
+        q: "Vraag: *'Wat betekent het woord **desondanks** in regel 3?'*\n\nHoe pak je deze vraag aan?",
+        options: [
+          "Kijk naar de zin rond het woord",
+          "Tel de letters van het woord",
+          "Kies het langste antwoord",
+          "Sla die zin juist over",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zegt het aantal letters iets over de betekenis?",
+          "Is het langste antwoord altijd goed?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Woordbetekenis-vraag",
+              tekst: "Je moet weten wat een woord betekent op die plek in de tekst.",
+            },
+            {
+              titel: "Aanpak",
+              tekst: "Lees de zin waar het woord in staat, en de zin ervoor. Wat past daar? Vaak geeft het soort signaalwoord al een hint.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "desondanks",
+              uitleg: "Toch, ondanks dat. Een tegenstelling-signaalwoord.",
+            },
+            {
+              woord: "context",
+              uitleg: "De zinnen rond een woord.",
+            },
+          ],
+          theorie: "Bij een woordbetekenis-vraag kijk je naar de zin eromheen. Wat past in die zin?",
+          voorbeelden: [
+            {
+              type: "context",
+              tekst: "'Het regende hard. Desondanks gingen we fietsen.' → er komt iets onverwachts: desondanks = toch.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Vervang-truc",
+              uitleg: "Zet elk antwoord op de plek van het woord. Welke zin blijft logisch?",
+            },
+          ],
+          niveaus: {
+            basis: "Kijk naar de zin rond het woord.",
+            simpeler: "Weet je een woord niet? Lees de zin eromheen. Daaruit kun je vaak raden wat het betekent.",
+            nogSimpeler: "Zin eromheen",
+          },
+        },
+      },
+      {
+        q: "Alinea 1 vertelt dat er veel zwerfafval in het park ligt. Alinea 2 vertelt hoe de buurt het park samen schoon gaat maken.\n\nHoe is deze tekst opgebouwd?",
+        options: [
+          "Probleem-oplossing",
+          "Voor en tegen",
+          "Algemeen → specifiek",
+          "Standpunt → argumenten → conclusie",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Staan er argumenten vóór en tegen iets in?",
+          null,
+          "Geeft de schrijver een mening met redenen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat staat in alinea 1?",
+              tekst: "Er ligt veel zwerfafval in het park. Dat is een PROBLEEM.",
+            },
+            {
+              titel: "Wat staat in alinea 2?",
+              tekst: "De buurt gaat het park samen schoonmaken. Dat is een OPLOSSING.",
+            },
+            {
+              titel: "Conclusie",
+              tekst: "Eerst een probleem, dan een oplossing = probleem-oplossing.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "zwerfafval",
+              uitleg: "Afval dat zomaar op straat of in de natuur ligt.",
+            },
+            {
+              woord: "tekstopbouw",
+              uitleg: "In welke volgorde de alinea's iets vertellen.",
+            },
+          ],
+          theorie: "Opbouw-patronen: chronologisch, argumentatief, probleem-oplossing, voor en tegen, algemeen → specifiek. Kijk naar wat elke alinea doet.",
+          voorbeelden: [
+            {
+              type: "probleem-oplossing",
+              tekst: "Alinea 1: 'Veel kinderen drinken te weinig.' Alinea 2: 'Zet een bidon op je tafel.'",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Aanpak",
+              uitleg: "Schrijf per alinea in een paar woorden waar hij over gaat. Dan zie je het patroon.",
+            },
+          ],
+          niveaus: {
+            basis: "Probleem (afval) → oplossing (schoonmaken).",
+            simpeler: "Eerst hoor je wat er mis is: afval. Daarna hoor je wat eraan gedaan wordt. Dat is probleem-oplossing.",
+            nogSimpeler: "Probleem → oplossing",
+          },
+        },
+      },
+      {
+        q: "Een tekst noemt eerst alle redenen om een hond te nemen, en daarna alle redenen om het niet te doen. Welke opbouw is dit?",
+        options: ["Voor en tegen", "Chronologisch", "Probleem-oplossing", "Algemeen → specifiek"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Gaat deze tekst over dingen die na elkaar gebeurden?",
+          "Wordt er een probleem opgelost?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerste deel",
+              tekst: "Redenen om een hond te nemen: argumenten VOOR.",
+            },
+            {
+              titel: "Tweede deel",
+              tekst: "Redenen om het niet te doen: argumenten TEGEN.",
+            },
+            {
+              titel: "Conclusie",
+              tekst: "Argumenten pro, dan argumenten contra = voor en tegen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "pro",
+              uitleg: "Vóór iets.",
+            },
+            {
+              woord: "contra",
+              uitleg: "Tegen iets.",
+            },
+            {
+              woord: "chronologisch",
+              uitleg: "In de volgorde waarin het gebeurde.",
+            },
+          ],
+          theorie: "Voor en tegen: argumenten pro → argumenten contra. Je ziet vaak signaalwoorden als 'maar', 'echter' of 'daarentegen' bij de omslag.",
+          voorbeelden: [
+            {
+              type: "voor en tegen",
+              tekst: "'Een hond is gezellig en je wandelt meer. Maar hij kost geld en je moet elke dag uit.'",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Let op de omslag",
+              uitleg: "Zie je ineens 'maar' of 'aan de andere kant'? Dan begint vaak het tegen-deel.",
+            },
+          ],
+          niveaus: {
+            basis: "Redenen voor + redenen tegen = voor en tegen.",
+            simpeler: "De tekst vertelt eerst wat goed is aan een hond, en dan wat minder handig is. Zo zet je voor en tegen naast elkaar.",
+            nogSimpeler: "Voor + tegen",
+          },
+        },
+      },
+      {
+        q: "Tekst: *'Lotte smeet haar tas in de hoek en sloeg de deur hard dicht.'*\n\nHoe voelt Lotte zich waarschijnlijk?",
+        options: ["Boos", "Blij", "Slaperig", "Trots"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Gooi je je tas in de hoek als je blij bent?",
+          "Doe je hard en snel dingen als je slaperig bent?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Dit is een inferentie-vraag",
+              tekst: "Er staat niet hoe Lotte zich voelt. Je moet het afleiden uit de hints.",
+            },
+            {
+              titel: "Zoek de hints",
+              tekst: "*'smeet haar tas in de hoek'* en *'sloeg de deur hard dicht'*. Dat doe je als je boos bent.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "inferentie",
+              uitleg: "Iets afleiden uit wat er staat.",
+            },
+            {
+              woord: "smijten",
+              uitleg: "Hard gooien.",
+            },
+          ],
+          theorie: "Bij een inferentie-vraag zoek je hints: wat doet iemand, welke woorden gebruikt de schrijver? Samen geven ze het antwoord.",
+          voorbeelden: [
+            {
+              type: "afleiden",
+              tekst: "'Sara liet haar hoofd hangen.' → Sara is waarschijnlijk verdrietig.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Bewijs",
+              uitleg: "Kun je je antwoord aanwijzen met woorden uit de tekst? Dan zit je goed.",
+            },
+          ],
+          niveaus: {
+            basis: "Lotte is boos.",
+            simpeler: "Hard gooien en een deur dichtslaan: zo doe je als je boos bent. Dat staat er niet, maar je snapt het wel.",
+            nogSimpeler: "Deur dicht = boos",
+          },
+        },
+      },
+      {
+        q: "Vraag: *'Wat zou de schrijver vinden van ...?'*\n\nWaarop baseer je je antwoord?",
+        options: [
+          "Op de toon en het standpunt in de tekst",
+          "Op wat jij er zelf van vindt",
+          "Op wat je vriend ervan denkt",
+          "Op het aantal alinea's",
+        ],
+        answer: 0,
+        wrongHints: [null, "Vraagt de vraag naar jouw mening, of naar die van de schrijver?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wie zijn mening?",
+              tekst: "De vraag gaat over de SCHRIJVER, niet over jou.",
+            },
+            {
+              titel: "Waar vind je die?",
+              tekst: "In de toon en het standpunt van de tekst: welke woorden kiest de schrijver, wat vindt hij?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "standpunt",
+              uitleg: "Wat iemand ergens van vindt.",
+            },
+            {
+              woord: "toon",
+              uitleg: "De manier waarop iets geschreven is: vrolijk, boos, positief, negatief.",
+            },
+          ],
+          theorie: "Meningvraag (strikvraag): gebruik de toon en het standpunt uit de tekst, niet je eigen mening.",
+          voorbeelden: [
+            {
+              type: "toon",
+              tekst: "Schrijver noemt snoep 'verschrikkelijk ongezond'. Wat vindt hij van een snoepautomaat op school? Waarschijnlijk geen goed idee.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Strikvraag",
+              uitleg: "Je eigen mening voelt logisch, maar telt hier niet. Kijk wat de tekst zegt.",
+            },
+          ],
+          niveaus: {
+            basis: "Toon en standpunt uit de tekst.",
+            simpeler: "Je moet denken als de schrijver. Wat vindt hij? Dat zie je aan zijn woorden, niet aan wat jij zelf vindt.",
+            nogSimpeler: "Denk als de schrijver",
           },
         },
       },

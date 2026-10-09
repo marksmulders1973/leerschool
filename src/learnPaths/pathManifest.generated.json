@@ -446,9 +446,9 @@
     ],
     "intro": "Hoe je slim leest in plaats van alles woord-voor-woord. Tekstsoorten herkennen (informatief/betogend/verhalend), 6 groepen signaalwoorden, hoofdgedachte vinden, skim+scan-techniek, en 5 vraagsoorten m",
     "stepCount": 7,
-    "checkCount": 40,
+    "checkCount": 66,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "begrijpend-lezen-teksten-po",
@@ -6995,7 +6995,7 @@
     ],
     "intro": "Hoofdgedachte vinden, hoofd/bijzaken scheiden, samenvatting maken. Doorstroomtoets-stijl. ~12 min.",
     "stepCount": 5,
-    "checkCount": 56,
+    "checkCount": 61,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
