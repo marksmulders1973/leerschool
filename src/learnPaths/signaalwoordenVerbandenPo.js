@@ -155,30 +155,6 @@ const steps = [
           },
         },
       },
-      {
-        q: "Welk woord past? *Ik heb twee redenen om te sporten. Ten eerste is het gezond. ___ is het gezellig.*",
-        options: ["Ten tweede", "Echter", "Doordat", "Hoewel"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Botst 'gezellig' met 'gezond'? Of is het nog een reden erbij?",
-          null,
-          "Er staat 'ten eerste'. Wat komt daar meestal na?",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Ten eerste → ten tweede",
-              tekst: "Er worden twee redenen opgesomd. Na 'ten eerste' komt de tweede reden: 'ten tweede'. Dat is een opsomming.",
-            },
-          ],
-          niveaus: {
-            basis: "Een rijtje redenen → opsomming: ten eerste, ten tweede.",
-            simpeler: "Je noemt reden 1 en daarna reden 2. Welk woord hoort bij reden 2?",
-            nogSimpeler: "Ten eerste … ten …?",
-          },
-        },
-      },
     ],
   },
 
@@ -301,30 +277,6 @@ const steps = [
             basis: "Het tweede deel is wat er dán gebeurt → gevolg: zodat.",
             simpeler: "Wat gebeurt er doordat je de wekker zet?",
             nogSimpeler: "Wekker aan … en dan word ik op tijd wakker. Welk woord hoort bij 'en dan'?",
-          },
-        },
-      },
-      {
-        q: "Welk woord past? *___ de storm bleef de veerboot in de haven.*",
-        options: ["Vanwege", "Daarom", "Hoewel", "Dus"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Kan dit woord vóór 'de storm' staan?",
-          "Bleef de boot binnen ondanks de storm, of juist dóór de storm?",
-          null,
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Storm → boot blijft binnen",
-              tekst: "Waarom bleef de veerboot in de haven? Door de storm. 'Vanwege' geeft de reden aan.",
-            },
-          ],
-          niveaus: {
-            basis: "De storm is de reden → oorzaak: vanwege.",
-            simpeler: "Vraag: waarom bleef de boot in de haven? Het antwoord is de oorzaak.",
-            nogSimpeler: "Door de storm bleef de boot binnen. Welk woord betekent 'door'?",
           },
         },
       },

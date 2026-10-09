@@ -343,30 +343,6 @@ const steps = [
         },
       },
       {
-        q: "Wat kun je **niet** doen met een mening?",
-        options: [
-          "hem nameten of opzoeken",
-          "hem aan iemand vertellen",
-          "er anders over denken dan een ander",
-          "hem uitleggen met een reden",
-        ],
-        answer: 0,
-        wrongHints: [null, "Mag je je mening aan iemand vertellen?", null, null],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Een mening is niet te meten",
-              tekst: "Je kunt je mening vertellen en uitleggen, en een ander mag er anders over denken. Maar nameten of opzoeken kan niet: het is wat iemand vindt.",
-            },
-          ],
-          niveaus: {
-            basis: "Een mening kun je niet nameten of opzoeken.",
-            simpeler: "Kun je met een liniaal meten wat iemand vindt?",
-            nogSimpeler: "Kun je in een boek opzoeken wat jij lekker vindt?",
-          },
-        },
-      },
-      {
         q: "Welke zin over de dierentuin is een mening?",
         options: [
           "Een dagje dierentuin is het fijnste uitje.",

@@ -280,70 +280,6 @@ const steps = [
         },
       },
       {
-        q: "Welke zin is een **metafoor**?",
-        options: [
-          "Hij is een leeuw",
-          "Hij is zo sterk als een leeuw",
-          "Hij ziet een leeuw in de dierentuin",
-          "Beter laat dan nooit",
-        ],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Kijk goed: staat er 'als' in deze zin?",
-          "Is dit beeldspraak, of gebeurt het echt?",
-          null,
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Wat is een metafoor?",
-              tekst: "Bij een **metafoor** zeg je dat iets iets anders IS, zonder 'als'.",
-            },
-            {
-              titel: "Vergelijk de zinnen",
-              tekst: "'Hij is zo sterk als een leeuw' heeft 'als': dat is een vergelijking. 'Hij is een leeuw' heeft geen 'als': dat is een metafoor.",
-            },
-            {
-              titel: "Wat bedoel je?",
-              tekst: "Hij is natuurlijk geen echt dier. Je bedoelt dat hij sterk of dapper is.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "metafoor",
-              uitleg: "Beeldspraak zonder 'als': A is B.",
-            },
-            {
-              woord: "vergelijking",
-              uitleg: "Beeldspraak met 'zo ... als'.",
-            },
-          ],
-          theorie: "Test op 'als'. Met 'als' = vergelijking. Zonder 'als' = metafoor.",
-          voorbeelden: [
-            {
-              type: "stap",
-              tekst: "'Ze is een engel' = metafoor.",
-            },
-            {
-              type: "stap",
-              tekst: "'Hij vecht als een leeuw' = vergelijking.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Truc",
-              uitleg: "Geen 'als', wel beeldspraak? Dan is het een metafoor.",
-            },
-          ],
-          niveaus: {
-            basis: "'Hij is een leeuw' is een metafoor.",
-            simpeler: "Zonder 'als' en niet echt bedoeld = metafoor.",
-            nogSimpeler: "Hij is een leeuw.",
-          },
-        },
-      },
-      {
         q: "*'Het loopt in de papieren.'* Wat betekent dit?",
         options: ["Het wordt duur", "Er is veel papier nodig", "Het gaat heel snel", "Het wordt makkelijk"],
         answer: 0,
@@ -498,18 +434,6 @@ const steps = [
         answer: 0,
         wrongHints: [null, null, "Dat is letterlijk gedacht.", null],
       },
-      {
-        q: "*'Voet bij stuk houden'* — wat betekent dit?",
-        options: ["Niet toegeven", "Snel weglopen", "Toch toegeven", "Stil blijven staan"],
-        answer: 0,
-        wrongHints: [null, null, "Andersom.", "Dat is te letterlijk."],
-      },
-      {
-        q: "*'Iets onder de pet houden'* — wat betekent dit?",
-        options: ["Iets geheim houden", "Iets aan iedereen vertellen", "Een pet opzetten", "Iets kwijtraken"],
-        answer: 0,
-        wrongHints: [null, "Andersom.", "Dat is letterlijk — denk figuurlijk.", null],
-      },
     ],
   },
   {
@@ -576,17 +500,6 @@ const steps = [
         wrongHints: [null, "Andersom — is haast hier iets goeds?", null, null],
       },
       {
-        q: "*'Eigen haard is goud waard'* — wat betekent dit?",
-        options: [
-          "Thuis is het het fijnst",
-          "Een open haard is heel duur",
-          "Je moet zuinig zijn met goud",
-          "Op vakantie is het het leukst",
-        ],
-        answer: 0,
-        wrongHints: [null, "Dat is letterlijk — het gaat niet echt om een haard.", null, "Andersom."],
-      },
-      {
         q: "*'In nood leert men zijn vrienden kennen'* — wat is de les?",
         options: [
           "Echte vrienden helpen je als het moeilijk is",
@@ -607,17 +520,6 @@ const steps = [
         ],
         answer: 0,
         wrongHints: [null, "Te letterlijk — het gaat niet om echt tellen.", null, null],
-      },
-      {
-        q: "*'Jong geleerd, oud gedaan'* — wat is de les?",
-        options: [
-          "Wat je jong leert, kun je je hele leven",
-          "Alleen oude mensen kunnen goed leren",
-          "Kinderen hoeven nog niet te leren",
-          "Oude mensen weten alles al",
-        ],
-        answer: 0,
-        wrongHints: [null, null, "Andersom — wanneer leer je het in dit spreekwoord?", null],
       },
     ],
   },

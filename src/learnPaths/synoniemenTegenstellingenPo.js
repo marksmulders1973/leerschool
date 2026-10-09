@@ -405,61 +405,6 @@ const steps = [
           },
         },
       },
-      {
-        q: "Betekenen synoniemen altijd **precies** hetzelfde?",
-        options: [
-          "Nee, ze lijken op elkaar maar zijn niet gelijk",
-          "Ja, ze betekenen altijd precies hetzelfde",
-          "Nee, ze betekenen juist het omgekeerde",
-          "Ja, maar alleen bij doe-woorden",
-        ],
-        answer: 0,
-        wrongHints: [null, null, "Dat is een tegenstelling.", null],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Bijna hetzelfde",
-              tekst: "Een synoniem betekent **bijna** hetzelfde als een ander woord, niet altijd precies.",
-            },
-            {
-              titel: "Voorbeeld",
-              tekst: "'Lekker eten' kun je ook 'goed eten' noemen. Maar 'lekker weer' noem je niet snel 'goed weer'.",
-            },
-            {
-              titel: "Conclusie",
-              tekst: "Synoniemen lijken op elkaar, maar zijn niet altijd helemaal hetzelfde. Lees daarom de zin goed.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "synoniem",
-              uitleg: "Woord dat bijna hetzelfde betekent als een ander woord.",
-            },
-            {
-              woord: "nuance",
-              uitleg: "Een klein verschil in betekenis.",
-            },
-          ],
-          theorie: "Synoniemen lijken op elkaar maar zijn niet identiek. Probeer het woord altijd in de zin.",
-          voorbeelden: [
-            {
-              type: "stap",
-              tekst: "Een mooie bloem en een prachtige bloem: prachtig is net iets sterker.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Truc",
-              uitleg: "Twijfel? Vul het woord in de zin in en kijk of het natuurlijk klinkt.",
-            },
-          ],
-          niveaus: {
-            basis: "Nee, synoniemen betekenen bijna hetzelfde.",
-            simpeler: "Ze lijken op elkaar, maar zijn niet altijd gelijk.",
-            nogSimpeler: "Bijna hetzelfde.",
-          },
-        },
-      },
     ],
   },
 
@@ -848,12 +793,6 @@ const steps = [
         options: ["rennen + hollen", "komen + gaan", "licht + donker", "alles + niets"],
         answer: 0,
         wrongHints: [null, null, null, null],
-      },
-      {
-        q: "Wat is het **tegenovergestelde** van **'voorzichtig'**?",
-        options: ["Onvoorzichtig", "Rustig", "Zorgvuldig", "Langzaam"],
-        answer: 0,
-        wrongHints: [null, null, "Zorgvuldig lijkt juist op voorzichtig.", null],
       },
     ],
   },

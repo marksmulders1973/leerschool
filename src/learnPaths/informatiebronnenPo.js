@@ -137,49 +137,6 @@ const steps = [
         },
       },
       {
-        q: "In jouw dorp is **deze week een nieuwe sporthal geopend**. Waar lees je daar het meest over?",
-        options: ["Krant uit je eigen regio", "Atlas", "Woordenboek", "Encyclopedie"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Staat nieuws van deze week op een kaart?",
-          null,
-          "Een encyclopedie gaat over algemene onderwerpen. Staat nieuws van deze week er al in?",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Nieuws = krant",
-              tekst: "Iets dat **deze week** gebeurde, is **actueel nieuws**. Dat lees je in de **krant** of op een nieuwssite. Over je eigen dorp schrijft vooral de krant uit je regio.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "actueel",
-              uitleg: "Van nu, van de laatste tijd.",
-            },
-          ],
-          theorie: "Toets-regel: gebeurde het pas (gisteren, deze week, deze maand)? Dan kies je de krant.",
-          voorbeelden: [
-            {
-              type: "voorbeeld",
-              tekst: "Wat besloot de gemeente gisteren? → krant of nieuwssite.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Waarom geen encyclopedie?",
-              uitleg: "Een encyclopedie geeft brede info over een onderwerp. Nieuws van deze week staat daar meestal nog niet in.",
-            },
-          ],
-          niveaus: {
-            basis: "Nieuws van deze week = krant.",
-            simpeler: "Pas gebeurd? Kijk in de krant.",
-            nogSimpeler: "Krant",
-          },
-        },
-      },
-      {
         q: "Je snapt de uitleg over **breuken** niet goed en wilt het nog eens **op jouw niveau** lezen. Welke bron past het best?",
         options: ["Je rekenboek van school", "Atlas", "Krant", "Wetenschappelijk artikel"],
         answer: 0,
@@ -939,43 +896,6 @@ const steps = [
         },
       },
       {
-        q: "Welke schrijver is het **meest betrouwbaar** voor een tekst over gezond eten?",
-        options: [
-          "Een arts met naam en functie",
-          "Een schrijver zonder naam",
-          "Een snoepfabriek in een reclame",
-          "Een filmpje zonder bron",
-        ],
-        answer: 0,
-        wrongHints: [null, "Kun je nagaan wie dit schreef?", "Wat wil een fabriek met een reclame?", null],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "WIE schreef het?",
-              tekst: "Een **arts** weet veel van gezondheid, en met **naam en functie** kun je nagaan wie het is. Zonder naam of met iets te verkopen is een tekst minder betrouwbaar.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "betrouwbaar",
-              uitleg: "Je kunt erop vertrouwen dat het klopt.",
-            },
-          ],
-          theorie: "Check-vraag 1: wie schreef het? Een expert met naam en functie is betrouwbaarder dan iemand zonder naam.",
-          voorbeelden: [
-            {
-              type: "voorbeeld",
-              tekst: "Over het weer: een weerkundige met naam > een anoniem bericht.",
-            },
-          ],
-          niveaus: {
-            basis: "Arts met naam en functie.",
-            simpeler: "Expert + naam = betrouwbaar.",
-            nogSimpeler: "Arts",
-          },
-        },
-      },
-      {
         q: "Wat betekent het als een AI-chatbot **'hallucineert'**?",
         options: [
           "Hij verzint dingen die niet kloppen",
@@ -1093,35 +1013,6 @@ const steps = [
             basis: "vitamine (vis < vit < vla).",
             simpeler: "Na vis, vóór vlag → vitamine.",
             nogSimpeler: "Vitamine",
-          },
-        },
-      },
-      {
-        q: "Welk tweetal hoort **goed bij elkaar**?",
-        options: [
-          "Index — waar een woord in het boek staat",
-          "Atlas — wat een woord betekent",
-          "Woordenboek — nieuws van gisteren",
-          "Inhoudsopgave — moeilijke woorden met uitleg",
-        ],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Wat staat er in een atlas: kaarten of betekenissen?",
-          null,
-          "Moeilijke woorden met uitleg staan in het glossarium. Wat staat in de inhoudsopgave?",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Elke bron zijn eigen taak",
-              tekst: "**Index** = op welke bladzijden een woord staat. Atlas = kaarten. Woordenboek = betekenis en spelling. Inhoudsopgave = lijst met hoofdstukken.",
-            },
-          ],
-          niveaus: {
-            basis: "Index — waar een woord in het boek staat.",
-            simpeler: "Index wijst de bladzijden van een woord aan.",
-            nogSimpeler: "Index",
           },
         },
       },

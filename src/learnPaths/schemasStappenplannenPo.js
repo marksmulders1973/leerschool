@@ -1064,17 +1064,6 @@ const steps = [
         ],
       },
       {
-        q: "Stamboom (de pijl betekent 'heeft als kind'):\nOma Els → Sara\nSara → Daan en Mila\n\nWat zijn **Daan en Mila** van elkaar?",
-        options: ["Broer en zus", "Neef en nicht", "Vader en dochter", "Opa en kleindochter"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Hebben Daan en Mila dezelfde moeder?",
-          null,
-          "Staan Daan en Mila op dezelfde plek in de stamboom?",
-        ],
-      },
-      {
         q: "Stamboom (de pijl betekent 'heeft als kind'):\nKees → Bram en Ilse\nBram → Lars\n\nWat is **Ilse** van Lars?",
         options: ["Zijn tante", "Zijn zus", "Zijn moeder", "Zijn oma"],
         answer: 0,

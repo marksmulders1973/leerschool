@@ -665,53 +665,6 @@ const steps = [
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "Waar staat de **kern-zin** van een alinea vaak?",
-        options: [
-          "Aan het begin van de alinea",
-          "Midden in een voorbeeld",
-          "Tussen haakjes achter een woord",
-          "Onder een plaatje",
-        ],
-        answer: 0,
-        wrongHints: [null, "Is een voorbeeld de kern, of een detail?", null, null],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Kern-zin vooraan",
-              tekst: "Per alinea staat de belangrijkste zin, de kern-zin, vaak als eerste zin.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "kern-zin",
-              uitleg: "De belangrijkste zin van een alinea.",
-            },
-            {
-              woord: "alinea",
-              uitleg: "Een stukje tekst over één punt.",
-            },
-          ],
-          theorie: "Stappenplan samenvatten: per alinea de kern-zin zoeken (vaak de eerste zin).",
-          voorbeelden: [
-            {
-              type: "voorbeeld",
-              tekst: "'Honden zijn trouwe dieren. Ze blijven bij hun baasje...' → kern-zin = eerste zin.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Voorbeelden",
-              uitleg: "Voorbeelden zijn details, geen kern.",
-            },
-          ],
-          niveaus: {
-            basis: "Kern-zin = vaak eerste zin.",
-            simpeler: "Kijk bij elke alinea eerst naar de eerste zin. Daar staat vaak het belangrijkste.",
-            nogSimpeler: "Begin",
-          },
-        },
-      },
-      {
         q: "*'Honden zijn fijne huisdieren. Ze zijn trouw en spelen graag. Mijn hond Bobby haalt bijvoorbeeld de krant. Ook passen ze goed op het huis.'* Welke zin laat je **weg** in een samenvatting?",
         options: [
           "Mijn hond Bobby haalt bijvoorbeeld de krant.",

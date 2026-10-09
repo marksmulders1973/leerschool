@@ -124,30 +124,6 @@ const steps = [
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "Wat is de persoonsvorm? *Mijn oma bakt elke zondag een taart.*",
-        options: ["bakt", "oma", "zondag", "taart"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Dat is wie het doet. Welk woord zegt wat ze dóét?",
-          null,
-          "Dat is wat er gemaakt wordt. Verandert dat woord als je de tijd verandert?",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Verander de tijd",
-              tekst: "Zet de zin in de verleden tijd: 'Mijn oma bakte elke zondag een taart.' Alleen 'bakt' verandert. Dat is de persoonsvorm.",
-            },
-          ],
-          niveaus: {
-            basis: "De persoonsvorm verandert als je de tijd verandert: bakt wordt bakte.",
-            simpeler: "Wat doet oma elke zondag? Dat woord is het werkwoord.",
-            nogSimpeler: "Welk woord wordt anders in de verleden tijd?",
-          },
-        },
-      },
-      {
         q: "Er staan twee werkwoorden in: *De kinderen zijn naar huis gegaan.* Wat is de persoonsvorm?",
         options: ["zijn", "gegaan", "kinderen", "huis"],
         answer: 0,

@@ -112,30 +112,6 @@ const steps = [
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "Hoeveel lettergrepen heeft 'paraplu'?",
-        options: ["3", "2", "4", "1"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Klap nog eens mee en tel — het zijn er meer.",
-          "Zo veel klappen hoor je niet.",
-          null,
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "pa-ra-plu",
-              tekst: "Pa (1), ra (2), plu (3): drie klappen, dus 3 lettergrepen.",
-            },
-          ],
-          niveaus: {
-            basis: "pa-ra-plu = 3 lettergrepen.",
-            simpeler: "Klap mee bij 'paraplu': hoeveel stukjes?",
-            nogSimpeler: "pa — ra — plu: hoeveel klappen?",
-          },
-        },
-      },
-      {
         q: "Welk woord heeft 4 lettergrepen?",
         options: ["televisie", "kabouter", "potlood", "sleutel"],
         answer: 0,
@@ -180,30 +156,6 @@ const steps = [
             basis: "ko-nijn = 2 lettergrepen.",
             simpeler: "Klap elk woord mee: bij welk woord hoor je precies twee klappen?",
             nogSimpeler: "ko — nijn: hoeveel klappen?",
-          },
-        },
-      },
-      {
-        q: "Hoeveel lettergrepen heeft 'dinosaurus'?",
-        options: ["4", "3", "5", "2"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Klap nog eens mee en tel — het zijn er meer.",
-          "Zo veel klappen hoor je niet.",
-          null,
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "di-no-sau-rus",
-              tekst: "Di (1), no (2), sau (3), rus (4): vier klappen, dus 4 lettergrepen.",
-            },
-          ],
-          niveaus: {
-            basis: "di-no-sau-rus = 4 lettergrepen.",
-            simpeler: "Klap mee bij 'dinosaurus': hoeveel stukjes?",
-            nogSimpeler: "di — no — sau — rus: hoeveel klappen?",
           },
         },
       },
@@ -552,30 +504,6 @@ const steps = [
             basis: "Afbreken: kik-ker (tussen de twee lettergrepen).",
             simpeler: "Waar zit de grens tussen de klappen van 'kikker'?",
             nogSimpeler: "kik … ker — breek daar af.",
-          },
-        },
-      },
-      {
-        q: "Welke afbreking van 'telefoon' is goed?",
-        options: ["tele-foon", "tel-efoon", "telef-oon", "t-elefoon"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Klap mee: valt daar echt een grens tussen twee klappen?",
-          null,
-          "Een losse t mag niet.",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "te-le-foon",
-              tekst: "Telefoon = te-le-foon. Je mag afbreken tussen lettergrepen, dus 'tele-foon' is goed.",
-            },
-          ],
-          niveaus: {
-            basis: "tele-foon breekt af op een lettergreepgrens.",
-            simpeler: "Spreek uit: te — le — foon. Breek op zo'n grens af.",
-            nogSimpeler: "Bij welke staat 'foon' heel op de volgende regel?",
           },
         },
       },

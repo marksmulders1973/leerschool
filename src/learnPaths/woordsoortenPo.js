@@ -107,82 +107,6 @@ const steps = [
         },
       },
       {
-        q: "Welk woord is een **eigennaam**?",
-        options: ["Spanje", "land", "stad", "jongen"],
-        answer: 0,
-        wrongHints: [null, "Bedoel je hiermee één bepaald land, of elk land?", null, null],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Bepaald of willekeurig?",
-              tekst: "Spanje is de naam van één bepaald land. Land, stad en jongen kunnen over elk land, elke stad of elke jongen gaan.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "eigennaam",
-              uitleg: "Specifieke naam van een persoon of plaats. Met hoofdletter.",
-            },
-          ],
-          theorie: "'jongen' = elke willekeurige jongen. 'Tom' = één bepaalde jongen. Zo is 'land' algemeen en 'Spanje' een eigennaam.",
-          voorbeelden: [
-            {
-              type: "verschil",
-              tekst: "land → Spanje. stad → Amsterdam. jongen → Tom.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Hoofdletter",
-              uitleg: "Eigennamen schrijf je met een hoofdletter.",
-            },
-          ],
-          niveaus: {
-            basis: "Spanje = eigennaam.",
-            simpeler: "Spanje is de naam van één land. Daarom een eigennaam, met hoofdletter.",
-            nogSimpeler: "Spanje",
-          },
-        },
-      },
-      {
-        q: "Welk woord is een zelfstandig naamwoord in het **meervoud**?",
-        options: ["boeken", "boek", "lezen", "leest"],
-        answer: 0,
-        wrongHints: [null, "Gaat dit over één ding of over meer dingen?", null, null],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Meervoud",
-              tekst: "Boek → boeken. Boeken is het meervoud: meer dan één boek.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "meervoud",
-              uitleg: "Meer dan één.",
-            },
-          ],
-          theorie: "Van een zelfstandig naamwoord kun je meestal een meervoud maken: boek → boeken, kat → katten, kind → kinderen.",
-          voorbeelden: [
-            {
-              type: "tabel",
-              tekst: "boek → boeken, vis → vissen, kind → kinderen.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Werkwoord",
-              uitleg: "Lezen en leest zijn werkwoorden: je kunt er 'ik' voor zetten.",
-            },
-          ],
-          niveaus: {
-            basis: "boeken = meervoud.",
-            simpeler: "Eén boek, twee boeken. Boeken is het meervoud van het zelfstandig naamwoord boek.",
-            nogSimpeler: "Boeken",
-          },
-        },
-      },
-      {
         q: "*'Wij rennen snel naar het park.'* — welk woord is een zelfstandig naamwoord?",
         options: ["park", "rennen", "snel", "Wij"],
         answer: 0,
@@ -619,44 +543,6 @@ const steps = [
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
-      {
-        q: "*'Het water is koud.'* — welk woord is het bijvoeglijk naamwoord?",
-        options: ["koud", "water", "is", "Het"],
-        answer: 0,
-        wrongHints: [null, "Welk woord vertelt hoe het water is?", null, null],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Hoe is het water?",
-              tekst: "Koud zegt hoe het water is: een eigenschap. Dus bijvoeglijk naamwoord.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "bijvoeglijk naamwoord",
-              uitleg: "Woord dat een eigenschap beschrijft: mooi, groot, koud.",
-            },
-          ],
-          theorie: "Een bijvoeglijk naamwoord kan na 'is' of 'wordt' staan: 'Het water is koud.' Of vóór het zelfst. naamwoord: 'het koude water'.",
-          voorbeelden: [
-            {
-              type: "test",
-              tekst: "Het water is koud ✓. Het koude water ✓.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Twee plekken",
-              uitleg: "Vóór het zelfstandig naamwoord of na een werkwoord als 'is'.",
-            },
-          ],
-          niveaus: {
-            basis: "koud = bijvoeglijk.",
-            simpeler: "Hoe is het water? Koud. Dat is een eigenschap, dus bijvoeglijk naamwoord.",
-            nogSimpeler: "Koud",
-          },
-        },
-      },
       {
         q: "*'Van alle torens in de stad is deze het ___.'* — welke vorm van 'hoog' past?",
         options: ["hoogst", "hoger", "hoogt", "hoogs"],

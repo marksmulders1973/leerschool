@@ -379,44 +379,6 @@ const steps = [
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "Welk woord schrijf je **altijd** met een hoofdletter?",
-        options: ["Afrika", "winter", "vrijdag", "straat"],
-        answer: 0,
-        wrongHints: [null, "Seizoenen krijgen geen hoofdletter.", null, "Is dit een naam, of een gewoon woord?"],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Werelddelen zijn namen",
-              tekst: "**Afrika** is de naam van een **werelddeel**, net als Europa en Azië. Namen krijgen altijd een hoofdletter.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "werelddeel",
-              uitleg: "Een heel groot stuk land op aarde, zoals Europa of Afrika.",
-            },
-          ],
-          theorie: "Hoofdletter bij namen van werelddelen, landen, steden en straten. Geen hoofdletter bij dagen, maanden en seizoenen.",
-          voorbeelden: [
-            {
-              type: "stap",
-              tekst: "'We gaan naar Azië in de zomer.' → Azië wel, zomer niet.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Truc",
-              uitleg: "Een naam van één bepaalde plek = hoofdletter.",
-            },
-          ],
-          niveaus: {
-            basis: "Afrika",
-            simpeler: "Afrika is de naam van een werelddeel. Dagen en seizoenen krijgen geen hoofdletter.",
-            nogSimpeler: "Afrika",
-          },
-        },
-      },
-      {
         q: "Welke woorden krijgen een hoofdletter in: *'wij wonen in de kerkstraat'*?",
         options: ["Wij en Kerkstraat", "Alleen Wij", "Alleen Kerkstraat", "Wij, Wonen en Kerkstraat"],
         answer: 0,
@@ -599,44 +561,6 @@ const steps = [
             basis: "?",
             simpeler: "Het is een vraag (begint met 'Hoe'), dus een vraagteken.",
             nogSimpeler: "?",
-          },
-        },
-      },
-      {
-        q: "*'Help, ik val'* — welk leesteken hoort aan het eind?",
-        options: ["!", ".", "?", ","],
-        answer: 0,
-        wrongHints: [null, "Is dit een rustige zin? Denk aan schrik.", null, null],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Schrik = uitroepteken",
-              tekst: "Wie 'Help' roept, schrikt en wil snel hulp. Bij **schrik, verbazing of blijdschap** zet je een **uitroepteken (!)**.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "uitroep",
-              uitleg: "Een zin vol gevoel: schrik, blijdschap of verbazing.",
-            },
-          ],
-          theorie: "Uitroep → !. Rustige zin → . Vraag → ?.",
-          voorbeelden: [
-            {
-              type: "stap",
-              tekst: "'Au, mijn vinger!' → schrik → !",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Truc",
-              uitleg: "Zou je het roepen? Dan een uitroepteken.",
-            },
-          ],
-          niveaus: {
-            basis: "!",
-            simpeler: "'Help' roep je als je schrikt. Bij schrik hoort een uitroepteken.",
-            nogSimpeler: "!",
           },
         },
       },

@@ -132,35 +132,6 @@ const steps = [
         },
       },
       {
-        q: "In welke rij staan alleen samenstellingen?",
-        options: [
-          "deurbel, regenboog, sleutelbos",
-          "deurbel, lopen, sleutelbos",
-          "regenboog, mooi, deurbel",
-          "zingen, sleutelbos, regenboog",
-        ],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Kun je 'lopen' knippen in twee echte woorden?",
-          null,
-          "Kijk naar elk woord in de rij: is het gemaakt van twee woorden?",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Elk woord nakijken",
-              tekst: "deur + bel, regen + boog, sleutel + bos: alle drie gemaakt van twee woorden. 'Lopen', 'mooi' en 'zingen' kun je niet in twee woorden knippen.",
-            },
-          ],
-          niveaus: {
-            basis: "Alleen in de eerste rij is elk woord gemaakt van twee woorden.",
-            simpeler: "Zoek de rij zonder een woord als 'lopen', 'mooi' of 'zingen'.",
-            nogSimpeler: "deur + bel, regen + boog, sleutel + bos.",
-          },
-        },
-      },
-      {
         q: "Je plakt 'boom' en 'hut' aan elkaar. Welk woord krijg je?",
         options: ["boomhut", "hutboom", "boom hut", "boomshut"],
         answer: 0,
@@ -375,35 +346,6 @@ const steps = [
             basis: "eend → eenden, dus eendenvijver heeft een tussen-n.",
             simpeler: "Zoek het woord met -en- in het midden.",
             nogSimpeler: "eenden + vijver = ?",
-          },
-        },
-      },
-      {
-        q: "Je twijfelt: 'kattenbak' of 'kattebak'? Wat helpt je het best?",
-        options: [
-          "het meervoud van 'kat' is 'katten', dus kattenbak",
-          "'kat' heeft geen meervoud, dus kattebak",
-          "je hoort de n bijna niet, dus kattebak",
-          "dierennamen krijgen nooit een tussen-n, dus kattebak",
-        ],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Hoe zeg je het als er twee zijn: één kat, twee ...?",
-          "Waar kijk je naar bij de tussen-n: naar wat je hoort, of naar het meervoud?",
-          null,
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Maak het meervoud",
-              tekst: "Twijfel je over -en-? Maak het eerste woord meervoud: kat → katten. Dat -en- komt erin: kattenbak.",
-            },
-          ],
-          niveaus: {
-            basis: "kat → katten, dus kattenbak.",
-            simpeler: "Eén kat, twee ...? Dat -en- komt erin.",
-            nogSimpeler: "katten + bak = ?",
           },
         },
       },
