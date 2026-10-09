@@ -917,6 +917,96 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een schoenenwinkel verkoopt op zaterdag deze maten: **36, 38, 37, 38, 39, 36, 38, 40**. Welke maat is de **modus**?",
+        options: ["38", "36", "40", "37"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Tel hoe vaak 36 voorkomt. Is er een maat die nog vaker voorkomt?",
+          "40 is de grootste maat. Is de modus altijd het grootste getal?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel hoe vaak",
+              tekst: "36: 2×. 37: 1×. 38: 3×. 39: 1×. 40: 1×.",
+            },
+            {
+              titel: "Modus = vaakst",
+              tekst: "Maat 38 komt het vaakst voor. De modus is dus 38.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "modus",
+              uitleg: "Het getal dat het vaakst voorkomt in een rijtje.",
+            },
+          ],
+          theorie: "Modus ≠ hoogste of laagste. Modus = vaakste.",
+          voorbeelden: [
+            {
+              type: "streepjes",
+              tekst: "Zet een streepje per verkochte maat. De maat met de meeste streepjes is de modus.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Handig bij schoenmaten",
+              uitleg: "Een winkel wil weten welke maat het meest verkocht wordt. Daarvoor gebruik je de modus.",
+            },
+          ],
+          niveaus: {
+            basis: "38 (komt 3× voor).",
+            simpeler: "Tel: 38 komt 3× voor, 36 maar 2×, de rest 1×. Modus = 38.",
+            nogSimpeler: "38",
+          },
+        },
+      },
+      {
+        q: "Vijf kinderen gooien elk één keer met een dobbelsteen: **4, 6, 1, 5, 3**. Wat is de **modus**?",
+        options: ["Geen modus", "6", "4", "1 en 3"],
+        answer: 0,
+        wrongHints: [null, "6 is het hoogste getal. Komt 6 vaker voor dan de andere getallen?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel hoe vaak",
+              tekst: "4: 1×. 6: 1×. 1: 1×. 5: 1×. 3: 1×. Elk getal komt maar één keer voor.",
+            },
+            {
+              titel: "Speciaal geval",
+              tekst: "Komt elk getal maar 1× voor, dan is er geen modus.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "modus",
+              uitleg: "Het getal dat het vaakst voorkomt in een rijtje.",
+            },
+          ],
+          theorie: "Er is alleen een modus als een getal vaker voorkomt dan andere getallen.",
+          voorbeelden: [
+            {
+              type: "streepjes",
+              tekst: "Bij 2, 4, 4, 6 komt 4 twee keer voor. Dan is de modus 4.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Speciale gevallen",
+              uitleg: "Twee getallen even vaak = twee modussen. Alles maar 1× = geen modus.",
+            },
+          ],
+          niveaus: {
+            basis: "Geen modus (alles komt 1× voor).",
+            simpeler: "Elk getal staat er maar één keer. Geen enkel getal komt het vaakst voor. Dus: geen modus.",
+            nogSimpeler: "Geen",
+          },
+        },
+      },
     ],
   },
 
@@ -1226,6 +1316,54 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Zeven kinderen rennen 60 meter. Hun tijden in seconden zijn: **11, 9, 14, 10, 12, 9, 13**. Wat is de **mediaan**?",
+        options: ["11 seconden", "10 seconden", "9 seconden", "14 seconden"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat getal staat in het midden van de rij zoals hij er nu staat. Heb je de tijden eerst op volgorde gezet?",
+          "Dat getal komt het vaakst voor. Hoe heet dat begrip?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Op volgorde",
+              tekst: "9, 9, 10, 11, 12, 13, 14.",
+            },
+            {
+              titel: "Middelste",
+              tekst: "7 getallen = oneven. Het middelste is het 4e getal: 11.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "mediaan",
+              uitleg: "Het middelste getal als je alles op volgorde zet.",
+            },
+          ],
+          theorie: "Bij een oneven aantal is er precies één middelste getal.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "9, 9, 10, **11**, 12, 13, 14 → 3 getallen links, 3 getallen rechts.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Sorteren",
+              uitleg: "Altijd eerst op volgorde zetten!",
+            },
+          ],
+          niveaus: {
+            basis: "11 seconden.",
+            simpeler: "Op volgorde: 9, 9, 10, 11, 12, 13, 14. Het middelste getal is 11.",
+            nogSimpeler: "11",
+          },
+        },
+      },
     ],
   },
 
@@ -1300,6 +1438,23 @@ const steps = [
           null,
           "Bij het gemiddelde tel je op en deel je. Vraagt de vraag daarom?",
           "Dat begrip hoort bij 'meest' of 'vaakst'.",
+          null,
+        ],
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is een **voordeel** van het **gemiddelde**?",
+        options: [
+          "Het gebruikt alle getallen",
+          "Het werkt ook bij kleuren",
+          "Een uitschieter verandert het niet",
+          "Je hoeft er niet voor te rekenen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Bij welk begrip kun je met kleuren werken?",
+          "Is het gemiddelde gevoelig voor uitschieters of juist niet?",
           null,
         ],
       },

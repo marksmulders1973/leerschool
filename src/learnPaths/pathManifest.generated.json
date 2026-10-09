@@ -3541,7 +3541,7 @@
     ],
     "intro": "Statistiek voor groep 7-8 — gemiddelde uitrekenen, modus (vaakst voorkomend), mediaan (middelste). Met praktijksommen over cijfers, temperatuur, zakgeld, schoenmaat. ~15 min.",
     "stepCount": 6,
-    "checkCount": 60,
+    "checkCount": 64,
     "chapterCount": 6,
     "estimatedMinutes": 20
   },
@@ -6774,7 +6774,7 @@
     ],
     "intro": "Tellen tot 20, erbij en eraf tot 10, over de 10 heen, en sommen met woorden. Korte zinnen, elke som met uitleg. Ook voor kinderen die nog Nederlands leren. ~10 min.",
     "stepCount": 5,
-    "checkCount": 25,
+    "checkCount": 32,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
@@ -7909,9 +7909,9 @@
     ],
     "intro": "Tijdsduur voor groep 6-8 — hoe lang duurt iets, tussen 2 klokken, optellen+aftrekken met 60-stap, 24-uurs format, praktijksommen school/reizen/sport. ~15 min.",
     "stepCount": 6,
-    "checkCount": 45,
+    "checkCount": 67,
     "chapterCount": 6,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "tijdvakken-geschiedenis",

@@ -433,6 +433,58 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een liedje duurt **170 seconden**. Hoeveel is dat in minuten en seconden?",
+        options: [
+          "2 minuten en 50 seconden",
+          "2 minuten en 10 seconden",
+          "3 minuten en 10 seconden",
+          "1 minuut en 50 seconden",
+        ],
+        answer: 0,
+        wrongHints: [null, null, "Hoeveel seconden zijn 3 minuten? Is dat meer of minder dan 170?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: hoeveel hele minuten?",
+              tekst: "1 minuut = 60 seconden. 2 minuten = 120 seconden. 3 minuten = 180 seconden, dat is meer dan 170. Er passen dus 2 hele minuten in.",
+            },
+            {
+              titel: "Stap 2: wat blijft er over?",
+              tekst: "170 − 120 = 50 seconden.",
+            },
+            {
+              titel: "Stap 3: samen",
+              tekst: "2 minuten en 50 seconden.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "seconde",
+              uitleg: "Een heel korte tijd. 60 seconden = 1 minuut.",
+            },
+          ],
+          theorie: "Seconden naar minuten: kijk hoeveel keer 60 erin past. Wat overblijft, zijn de losse seconden.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "130 seconden = 120 + 10 = 2 minuten en 10 seconden.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet 100",
+              uitleg: "Een minuut heeft 60 seconden, niet 100.",
+            },
+          ],
+          niveaus: {
+            basis: "2 minuten en 50 seconden.",
+            simpeler: "2 × 60 = 120. 170 − 120 = 50. Dus 2 minuten en 50 seconden.",
+            nogSimpeler: "2 min 50 s",
+          },
+        },
+      },
     ],
   },
 
@@ -484,6 +536,305 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet 1u40 — het is kort over de 12 heen.", "Te veel — het is minder dan een uur.", "Te weinig — reken vóór 12 + ná 12 samen op."],
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "De zwemles begint om **15:35** en is om **16:15** afgelopen. Hoe lang duurt de zwemles?",
+        options: ["40 min", "1 uur 20 min", "35 min", "50 min"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Heb je de tijden van elkaar afgetrokken alsof een uur 100 minuten heeft?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: naar het hele uur",
+              tekst: "15:35 → 16:00 = 25 minuten.",
+            },
+            {
+              titel: "Stap 2: de rest",
+              tekst: "16:00 → 16:15 = 15 minuten.",
+            },
+            {
+              titel: "Stap 3: optellen",
+              tekst: "25 + 15 = 40 minuten.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "opklimmen",
+              uitleg: "Stap voor stap van de begintijd via hele uren naar de eindtijd tellen.",
+            },
+          ],
+          theorie: "Tel eerst door tot het volgende hele uur, dan de minuten die daarna nog komen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "15:35 → 16:00 → 16:15 = 25 + 15 = 40 minuten.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Geen 100",
+              uitleg: "Een uur heeft 60 minuten. Daarom kun je 1615 − 1535 niet zomaar uitrekenen.",
+            },
+          ],
+          niveaus: {
+            basis: "40 minuten.",
+            simpeler: "Van 15:35 tot 16:00 is 25 minuten. Van 16:00 tot 16:15 is 15 minuten. Samen 40 minuten.",
+            nogSimpeler: "40 min",
+          },
+        },
+      },
+      {
+        q: "Een trein vertrekt om **6:40** en komt om **9:05** aan. Hoe lang duurt de reis?",
+        options: ["2 uur 25 min", "3 uur 25 min", "2 uur 35 min", "1 uur 25 min"],
+        answer: 0,
+        wrongHints: [null, "Tel de hele uren nog eens: van 7:00 tot 9:00 is hoeveel uur?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: naar het hele uur",
+              tekst: "6:40 → 7:00 = 20 minuten.",
+            },
+            {
+              titel: "Stap 2: hele uren",
+              tekst: "7:00 → 9:00 = 2 uur.",
+            },
+            {
+              titel: "Stap 3: de rest",
+              tekst: "9:00 → 9:05 = 5 minuten.",
+            },
+            {
+              titel: "Stap 4: optellen",
+              tekst: "20 min + 2 uur + 5 min = 2 uur 25 min.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "opklimmen",
+              uitleg: "Stap voor stap van de begintijd via hele uren naar de eindtijd tellen.",
+            },
+          ],
+          theorie: "Splits in drie stukken: tot het hele uur, de hele uren, en de minuten die overblijven.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "6:40 → 7:00 (20 min) → 9:00 (2 uur) → 9:05 (5 min) = 2 uur 25 min.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Kladpapier",
+              uitleg: "Schrijf de tussenstappen op, dan vergeet je geen stukje.",
+            },
+          ],
+          niveaus: {
+            basis: "2 uur 25 min.",
+            simpeler: "20 minuten tot 7:00, dan 2 hele uren tot 9:00, dan nog 5 minuten. Samen 2 uur 25 min.",
+            nogSimpeler: "2u 25m",
+          },
+        },
+      },
+      {
+        q: "Welke busrit duurt **precies 50 minuten**?",
+        options: ["van 9:40 tot 10:30", "van 9:40 tot 10:50", "van 9:50 tot 10:30", "van 9:40 tot 10:10"],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          null,
+          "Van 9:40 tot 10:00 is 20 minuten. Hoeveel minuten komen er na 10:00 nog bij?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: reken elke rit uit",
+              tekst: "Gebruik opklimmen: eerst tot 10:00, dan de minuten na 10:00.",
+            },
+            {
+              titel: "Stap 2: de goede rit",
+              tekst: "9:40 → 10:00 = 20 min. 10:00 → 10:30 = 30 min. 20 + 30 = 50 minuten.",
+            },
+            {
+              titel: "Stap 3: de andere ritten",
+              tekst: "9:40 tot 10:50 = 70 min. 9:50 tot 10:30 = 40 min. 9:40 tot 10:10 = 30 min.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "opklimmen",
+              uitleg: "Stap voor stap van de begintijd via hele uren naar de eindtijd tellen.",
+            },
+          ],
+          theorie: "Bij een keuzevraag reken je elke mogelijkheid uit en vergelijk je met wat er gevraagd wordt.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "9:40 → 10:00 → 10:30 = 20 + 30 = 50 minuten.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Via het hele uur",
+              uitleg: "Tel altijd eerst door tot het hele uur, dat is het makkelijkst.",
+            },
+          ],
+          niveaus: {
+            basis: "Van 9:40 tot 10:30.",
+            simpeler: "Van 9:40 tot 10:00 is 20 minuten, van 10:00 tot 10:30 is 30 minuten. Samen 50.",
+            nogSimpeler: "9:40 – 10:30",
+          },
+        },
+      },
+      {
+        q: "Welke wandeling duurt **precies 1 uur en 10 minuten**?",
+        options: ["van 10:55 tot 12:05", "van 10:55 tot 12:10", "van 11:05 tot 12:05", "van 10:50 tot 12:10"],
+        answer: 0,
+        wrongHints: [null, null, "Van 11:05 tot 12:05 is een heel uur. Komen daar nog minuten bij?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: naar het hele uur",
+              tekst: "10:55 → 11:00 = 5 minuten.",
+            },
+            {
+              titel: "Stap 2: heel uur",
+              tekst: "11:00 → 12:00 = 1 uur.",
+            },
+            {
+              titel: "Stap 3: de rest",
+              tekst: "12:00 → 12:05 = 5 minuten.",
+            },
+            {
+              titel: "Stap 4: optellen",
+              tekst: "5 min + 1 uur + 5 min = 1 uur 10 min.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "opklimmen",
+              uitleg: "Stap voor stap van de begintijd via hele uren naar de eindtijd tellen.",
+            },
+          ],
+          theorie: "Reken elke wandeling uit met opklimmen en kijk welke precies 1 uur 10 minuten is.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "10:55 tot 12:10 = 5 + 60 + 10 = 1 uur 15 min. Dat is 5 minuten te lang voor deze vraag.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Kleine stukjes",
+              uitleg: "Kleine stukjes van 5 minuten aan het begin en eind vergeet je snel. Tel ze altijd mee.",
+            },
+          ],
+          niveaus: {
+            basis: "Van 10:55 tot 12:05.",
+            simpeler: "5 minuten tot 11:00, 1 uur tot 12:00, nog 5 minuten tot 12:05. Samen 1 uur 10 min.",
+            nogSimpeler: "10:55 – 12:05",
+          },
+        },
+      },
+      {
+        q: "Het is nu **11:35**. Om **13:00** begint de gymles. Hoe lang moet je nog wachten?",
+        options: ["1 uur 25 min", "1 uur 35 min", "2 uur 25 min", "25 min"],
+        answer: 0,
+        wrongHints: [null, "Van 11:35 tot 12:00 — hoeveel minuten zijn dat precies?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: naar het hele uur",
+              tekst: "11:35 → 12:00 = 25 minuten.",
+            },
+            {
+              titel: "Stap 2: heel uur",
+              tekst: "12:00 → 13:00 = 1 uur.",
+            },
+            {
+              titel: "Stap 3: optellen",
+              tekst: "25 min + 1 uur = 1 uur 25 min.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "opklimmen",
+              uitleg: "Stap voor stap van de begintijd via hele uren naar de eindtijd tellen.",
+            },
+          ],
+          theorie: "Van een tijd naar het volgende hele uur: 60 minuten − de minuten die er al zijn. 60 − 35 = 25.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "11:35 → 12:00 (25 min) → 13:00 (1 uur) = 1 uur 25 min.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "60 − minuten",
+              uitleg: "Tot het hele uur reken je 60 minuten − het aantal minuten. Bij :35 is dat 25.",
+            },
+          ],
+          niveaus: {
+            basis: "1 uur 25 min.",
+            simpeler: "Tot 12:00 is 25 minuten. Van 12:00 tot 13:00 is 1 uur. Samen 1 uur 25 min.",
+            nogSimpeler: "1u 25m",
+          },
+        },
+      },
+      {
+        q: "Een appeltaart staat van **16:40** tot **18:15** in de oven. Hoe lang is dat?",
+        options: ["1 uur 35 min", "2 uur 35 min", "1 uur 25 min", "1 uur 45 min"],
+        answer: 0,
+        wrongHints: [null, "Hoeveel hele uren passen er tussen 17:00 en 18:00?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: naar het hele uur",
+              tekst: "16:40 → 17:00 = 20 minuten.",
+            },
+            {
+              titel: "Stap 2: heel uur",
+              tekst: "17:00 → 18:00 = 1 uur.",
+            },
+            {
+              titel: "Stap 3: de rest",
+              tekst: "18:00 → 18:15 = 15 minuten.",
+            },
+            {
+              titel: "Stap 4: optellen",
+              tekst: "20 min + 1 uur + 15 min = 1 uur 35 min.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "opklimmen",
+              uitleg: "Stap voor stap van de begintijd via hele uren naar de eindtijd tellen.",
+            },
+          ],
+          theorie: "Tot het hele uur, dan de hele uren, dan de minuten die overblijven. Tel alles op.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "16:40 → 17:00 (20 min) → 18:00 (1 uur) → 18:15 (15 min) = 1 uur 35 min.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Minuten optellen",
+              uitleg: "20 + 15 = 35 minuten. Dat is minder dan 60, dus het blijft 35 minuten.",
+            },
+          ],
+          niveaus: {
+            basis: "1 uur 35 min.",
+            simpeler: "20 minuten tot 17:00, 1 uur tot 18:00, 15 minuten tot 18:15. Samen 1 uur 35 min.",
+            nogSimpeler: "1u 35m",
+          },
+        },
+      },
     ],
   },
 
@@ -532,6 +883,268 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Te veel — je kunt de minuten niet zomaar aftrekken, je moet eerst een uur 'lenen' om voldoende minuten te hebben.", "Te weinig — vergeet het lenen niet.", "Te veel — controleer."],
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Je begint om **13:50** aan een puzzel. Na **1 uur en 25 minuten** is hij af. Hoe laat is het dan?",
+        options: ["15:15", "14:15", "15:25", "16:15"],
+        answer: 0,
+        wrongHints: [null, "Heb je het hele uur ook opgeteld?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: eerst het uur",
+              tekst: "13:50 + 1 uur = 14:50.",
+            },
+            {
+              titel: "Stap 2: dan de minuten",
+              tekst: "14:50 + 10 minuten = 15:00. Er blijven nog 15 minuten over: 15:00 + 15 minuten = 15:15.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "overdragen",
+              uitleg: "Komen de minuten boven de 60, dan wordt dat een uur erbij.",
+            },
+          ],
+          theorie: "Tijd optellen: eerst de uren, dan de minuten. Kom je over het hele uur, dan tel je door in het volgende uur.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "13:50 + 1 uur 25 min → 14:50 → 15:15.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "60, niet 100",
+              uitleg: "50 + 25 = 75 minuten = 1 uur en 15 minuten.",
+            },
+          ],
+          niveaus: {
+            basis: "15:15.",
+            simpeler: "13:50 plus 1 uur is 14:50. Plus 25 minuten: 10 minuten tot 15:00 en nog 15 minuten. Dat is 15:15.",
+            nogSimpeler: "15:15",
+          },
+        },
+      },
+      {
+        q: "Lisa oefent op maandag **45 minuten** piano en op dinsdag **50 minuten**. Hoe lang oefent ze samen?",
+        options: ["1 uur 35 min", "1 uur 45 min", "1 uur 5 min", "2 uur 35 min"],
+        answer: 0,
+        wrongHints: [null, null, "Hoeveel minuten is 45 + 50? En hoeveel minuten zitten er in 1 uur?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: minuten optellen",
+              tekst: "45 + 50 = 95 minuten.",
+            },
+            {
+              titel: "Stap 2: omzetten",
+              tekst: "95 minuten = 60 minuten + 35 minuten = 1 uur 35 min.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "overdragen",
+              uitleg: "Komen de minuten boven de 60, dan haal je 60 minuten eraf en tel je 1 uur erbij.",
+            },
+          ],
+          theorie: "Tel eerst de minuten op. Is het 60 of meer? Maak er dan uren en minuten van.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "45 + 50 = 95 min = 1 uur 35 min.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "60, niet 100",
+              uitleg: "95 minuten is geen '0 uur 95', want een uur heeft 60 minuten.",
+            },
+          ],
+          niveaus: {
+            basis: "1 uur 35 min.",
+            simpeler: "45 + 50 = 95 minuten. 95 − 60 = 35. Dus 1 uur en 35 minuten.",
+            nogSimpeler: "1u 35m",
+          },
+        },
+      },
+      {
+        q: "De voorstelling begint om **19:15**. Je wilt **40 minuten** eerder in het theater zijn. Hoe laat moet je er zijn?",
+        options: ["18:35", "18:25", "19:55", "18:45"],
+        answer: 0,
+        wrongHints: [null, null, "Moet je er eerder of later zijn dan 19:15?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: eerst naar het hele uur terug",
+              tekst: "19:15 − 15 minuten = 19:00.",
+            },
+            {
+              titel: "Stap 2: de rest eraf",
+              tekst: "Je moest 40 minuten terug. 40 − 15 = 25 minuten. 19:00 − 25 minuten = 18:35.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "lenen",
+              uitleg: "Gaan de minuten niet, dan leen je 60 minuten van het uur ervoor.",
+            },
+          ],
+          theorie: "Eerder = terugrekenen (aftrekken). Ga eerst terug naar het hele uur, dan de rest.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "19:15 → 19:00 (15 min terug) → 18:35 (nog 25 min terug).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Eerder = aftrekken",
+              uitleg: "Wil je eerder ergens zijn, dan wordt de tijd kleiner.",
+            },
+          ],
+          niveaus: {
+            basis: "18:35.",
+            simpeler: "19:15 − 15 minuten is 19:00. Nog 25 minuten terug: 18:35.",
+            nogSimpeler: "18:35",
+          },
+        },
+      },
+      {
+        q: "Een busreis duurt **2 uur en 15 minuten**. Na **1 uur en 30 minuten** stopt de bus bij een tankstation. Hoe lang moet de bus daarna nog rijden?",
+        options: ["45 min", "1 uur 45 min", "1 uur 15 min", "35 min"],
+        answer: 0,
+        wrongHints: [null, null, "Heb je ook de 30 minuten afgetrokken?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: eerst het uur eraf",
+              tekst: "2 uur 15 min − 1 uur = 1 uur 15 min.",
+            },
+            {
+              titel: "Stap 2: dan de minuten eraf",
+              tekst: "1 uur 15 min − 30 minuten. 15 − 30 gaat niet, dus leen een uur: 75 minuten − 30 minuten = 45 minuten.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "lenen",
+              uitleg: "Gaan de minuten niet, dan maak je van 1 uur 60 minuten.",
+            },
+          ],
+          theorie: "Tijdsduur aftrekken: eerst de uren, dan de minuten. Gaat het niet, leen dan 60 minuten.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2 uur 15 min = 135 minuten. 1 uur 30 min = 90 minuten. 135 − 90 = 45 minuten.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Alles in minuten",
+              uitleg: "Je kunt ook alles in minuten omzetten en dan aftrekken.",
+            },
+          ],
+          niveaus: {
+            basis: "45 minuten.",
+            simpeler: "2 uur 15 min is 135 minuten. 1 uur 30 min is 90 minuten. 135 − 90 = 45 minuten.",
+            nogSimpeler: "45 min",
+          },
+        },
+      },
+      {
+        q: "Het eten moet om **18:00** op tafel staan. De ovenschotel moet **1 uur en 25 minuten** in de oven. Hoe laat moet hij er op zijn laatst in?",
+        options: ["16:35", "16:45", "17:35", "16:25"],
+        answer: 0,
+        wrongHints: [null, null, "Heb je het hele uur ook teruggerekend?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: eerst het uur terug",
+              tekst: "18:00 − 1 uur = 17:00.",
+            },
+            {
+              titel: "Stap 2: dan de minuten terug",
+              tekst: "17:00 − 25 minuten = 16:35.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "terugrekenen",
+              uitleg: "Vanaf de eindtijd de tijdsduur aftrekken om de begintijd te vinden.",
+            },
+          ],
+          theorie: "Weet je wanneer iets klaar moet zijn? Trek de tijdsduur af van die eindtijd.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "18:00 → 17:00 (1 uur terug) → 16:35 (25 min terug).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Vanaf een heel uur",
+              uitleg: "25 minuten vóór een heel uur is :35, want 60 − 25 = 35.",
+            },
+          ],
+          niveaus: {
+            basis: "16:35.",
+            simpeler: "18:00 terug 1 uur is 17:00. Nog 25 minuten terug is 16:35.",
+            nogSimpeler: "16:35",
+          },
+        },
+      },
+      {
+        q: "Een fietstocht heeft twee stukken: het eerste stuk duurt **1 uur 35 min** en het tweede **1 uur 45 min**. Hoe lang duurt de hele tocht?",
+        options: ["3 uur 20 min", "2 uur 20 min", "3 uur 10 min", "4 uur 20 min"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "35 + 45 minuten is meer dan een uur. Heb je dat extra uur bij de uren opgeteld?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: uren optellen",
+              tekst: "1 uur + 1 uur = 2 uur.",
+            },
+            {
+              titel: "Stap 2: minuten optellen",
+              tekst: "35 + 45 = 80 minuten = 1 uur 20 min.",
+            },
+            {
+              titel: "Stap 3: samen",
+              tekst: "2 uur + 1 uur 20 min = 3 uur 20 min.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "overdragen",
+              uitleg: "Komen de minuten boven de 60, dan wordt dat een uur erbij.",
+            },
+          ],
+          theorie: "Tel uren bij uren en minuten bij minuten. Zijn de minuten 60 of meer: maak er een uur van.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1 uur 35 + 1 uur 45 → 2 uur + 80 min → 3 uur 20 min.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "60, niet 100",
+              uitleg: "80 minuten = 60 + 20 = 1 uur en 20 minuten.",
+            },
+          ],
+          niveaus: {
+            basis: "3 uur 20 min.",
+            simpeler: "Uren: 1 + 1 = 2. Minuten: 35 + 45 = 80 = 1 uur 20 min. Samen 3 uur 20 min.",
+            nogSimpeler: "3u 20m",
+          },
+        },
+      },
     ],
   },
 
@@ -577,6 +1190,298 @@ const steps = [
             basis: "00:25.",
             simpeler: "23:45 + 15 min = 00:00 (middernacht). Nog 25 min: 00:00 + 25 min = 00:25.",
             nogSimpeler: "00:25",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Hoe schrijf je **half negen 's avonds** in 24-uurs tijd?",
+        options: ["20:30", "21:30", "08:30", "19:30"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "'Half negen' is een half uur vóór negen uur. Welk uur hoort daarbij?",
+          "Is dit 's ochtends of 's avonds?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: wat is half negen?",
+              tekst: "Half negen = een half uur vóór negen = 8:30.",
+            },
+            {
+              titel: "Stap 2: 's avonds",
+              tekst: "Na 12 uur 's middags tel je 12 erbij: 8 + 12 = 20.",
+            },
+            {
+              titel: "Stap 3: samen",
+              tekst: "Half negen 's avonds = 20:30.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "24-uurs tijd",
+              uitleg: "Tijd van 00:00 tot 23:59, zonder 'ochtend' of 'avond' erbij.",
+            },
+          ],
+          theorie: "Middag- en avonduren in 24-uurs tijd: tel 12 op bij het gewone uur.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'s avonds 7 uur = 19:00. Half acht 's avonds = 19:30.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Half",
+              uitleg: "Half negen is 8:30, niet 9:30. 'Half' betekent een half uur vóór het hele uur.",
+            },
+          ],
+          niveaus: {
+            basis: "20:30.",
+            simpeler: "Half negen is 8:30. 's Avonds: 8 + 12 = 20. Dus 20:30.",
+            nogSimpeler: "20:30",
+          },
+        },
+      },
+      {
+        q: "De laatste bus vertrekt om **21:15**. Hoe zeg je die tijd in gewone woorden?",
+        options: [
+          "kwart over negen 's avonds",
+          "kwart over elf 's avonds",
+          "kwart over negen 's ochtends",
+          "kwart voor tien 's avonds",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Welk getal haal je van 21 af om het gewone uur te vinden?",
+          null,
+          "Staat er :15 of :45 achter de 21?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: het uur",
+              tekst: "21 − 12 = 9. Het is dus 9 uur 's avonds.",
+            },
+            {
+              titel: "Stap 2: de minuten",
+              tekst: ":15 = kwart over.",
+            },
+            {
+              titel: "Stap 3: samen",
+              tekst: "21:15 = kwart over negen 's avonds.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "24-uurs tijd",
+              uitleg: "Tijd van 00:00 tot 23:59. Na 12:00 gaan de uren door: 13, 14, ... 23.",
+            },
+          ],
+          theorie: "24-uurs tijd terug naar gewone tijd: is het uur groter dan 12, haal er dan 12 af.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "19:00 = 7 uur 's avonds. 22:00 = 10 uur 's avonds.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Kwart",
+              uitleg: "':15' = kwart over. ':45' = kwart voor het volgende uur.",
+            },
+          ],
+          niveaus: {
+            basis: "Kwart over negen 's avonds.",
+            simpeler: "21 − 12 = 9, dus negen uur 's avonds. :15 is kwart over. Kwart over negen 's avonds.",
+            nogSimpeler: "kwart over 9",
+          },
+        },
+      },
+      {
+        q: "Een nachttrein vertrekt om **21:40** en rijdt **4 uur en 35 minuten**. Hoe laat komt de trein aan?",
+        options: ["02:15", "01:15", "02:35", "03:15"],
+        answer: 0,
+        wrongHints: [null, "Tel de uren één voor één: hoeveel uur zit er tussen 21:40 en 01:40?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: de uren erbij",
+              tekst: "21:40 + 4 uur = 25:40. Na 23:59 begint een nieuwe dag, dus 25:40 = 01:40 (de volgende dag).",
+            },
+            {
+              titel: "Stap 2: de minuten erbij",
+              tekst: "01:40 + 20 minuten = 02:00. Nog 15 minuten: 02:15.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "middernacht",
+              uitleg: "00:00 — het begin van een nieuwe dag. Na 23:59 komt 00:00.",
+            },
+          ],
+          theorie: "Kom je boven de 24 uur uit? Haal er 24 af, dan heb je de tijd op de volgende dag.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "22:30 + 3 uur 15 min = 01:45 (volgende dag).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Volgende dag",
+              uitleg: "Een tijd als 25:40 bestaat niet. Dat is 01:40 de volgende dag.",
+            },
+          ],
+          niveaus: {
+            basis: "02:15.",
+            simpeler: "21:40 + 4 uur = 01:40 (na middernacht). Plus 35 minuten = 02:15.",
+            nogSimpeler: "02:15",
+          },
+        },
+      },
+      {
+        q: "Een concert duurt van **20:30** tot **00:15**. Hoe lang duurt het concert?",
+        options: ["3 uur 45 min", "4 uur 15 min", "3 uur 15 min", "2 uur 45 min"],
+        answer: 0,
+        wrongHints: [null, null, null, "Van 21:00 tot 00:00 — hoeveel hele uren zijn dat?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: naar het hele uur",
+              tekst: "20:30 → 21:00 = 30 minuten.",
+            },
+            {
+              titel: "Stap 2: hele uren tot middernacht",
+              tekst: "21:00 → 00:00 = 3 uur (22, 23, 24).",
+            },
+            {
+              titel: "Stap 3: na middernacht",
+              tekst: "00:00 → 00:15 = 15 minuten.",
+            },
+            {
+              titel: "Stap 4: optellen",
+              tekst: "30 min + 3 uur + 15 min = 3 uur 45 min.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "middernacht",
+              uitleg: "00:00 — het begin van een nieuwe dag. Dat is hetzelfde moment als 24:00.",
+            },
+          ],
+          theorie: "Over middernacht: reken eerst tot 00:00, en tel daarna de tijd op de nieuwe dag erbij.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "22:45 → 00:00 (1 uur 15 min) → 00:30 (30 min) = 1 uur 45 min.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Geen gewone aftreksom",
+              uitleg: "00:15 − 20:30 kun je niet zomaar uitrekenen. Opklimmen via middernacht werkt wel.",
+            },
+          ],
+          niveaus: {
+            basis: "3 uur 45 min.",
+            simpeler: "30 minuten tot 21:00, 3 uur tot middernacht, nog 15 minuten. Samen 3 uur 45 min.",
+            nogSimpeler: "3u 45m",
+          },
+        },
+      },
+      {
+        q: "Welke tijd is **later op de dag** dan **kwart over vier 's middags**?",
+        options: ["16:30", "16:00", "04:30", "14:15"],
+        answer: 0,
+        wrongHints: [null, null, "Is 04:30 's ochtends of 's middags?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: omzetten",
+              tekst: "Kwart over vier 's middags = 4:15 + 12 uur = 16:15.",
+            },
+            {
+              titel: "Stap 2: vergelijken",
+              tekst: "16:30 komt na 16:15. 16:00 en 14:15 komen ervoor. 04:30 is heel vroeg in de ochtend.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "24-uurs tijd",
+              uitleg: "Tijd van 00:00 tot 23:59. Hoe hoger het getal, hoe later op de dag.",
+            },
+          ],
+          theorie: "Zet eerst alles in 24-uurs tijd. Dan kun je de getallen gewoon vergelijken.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'s middags 1 uur = 13:00. 's middags 4 uur = 16:00.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Vergelijken",
+              uitleg: "In 24-uurs tijd is 16:30 later dan 16:15, en 04:30 veel eerder.",
+            },
+          ],
+          niveaus: {
+            basis: "16:30.",
+            simpeler: "Kwart over vier 's middags is 16:15. 16:30 is een kwartier later.",
+            nogSimpeler: "16:30",
+          },
+        },
+      },
+      {
+        q: "Een schoolbus naar een pretpark in Duitsland vertrekt om **07:50** en komt om **13:20** aan. Hoe lang duurt de busreis?",
+        options: ["5 uur 30 min", "6 uur 30 min", "5 uur 20 min", "4 uur 30 min"],
+        answer: 0,
+        wrongHints: [null, "Tel de hele uren van 08:00 tot 13:00 nog eens na.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: naar het hele uur",
+              tekst: "07:50 → 08:00 = 10 minuten.",
+            },
+            {
+              titel: "Stap 2: hele uren",
+              tekst: "08:00 → 13:00 = 5 uur.",
+            },
+            {
+              titel: "Stap 3: de rest",
+              tekst: "13:00 → 13:20 = 20 minuten.",
+            },
+            {
+              titel: "Stap 4: optellen",
+              tekst: "10 min + 5 uur + 20 min = 5 uur 30 min.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "opklimmen",
+              uitleg: "Stap voor stap van de begintijd via hele uren naar de eindtijd tellen.",
+            },
+          ],
+          theorie: "Ook met 24-uurs tijden werkt opklimmen: tot het hele uur, de hele uren, de rest.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "07:50 → 08:00 (10 min) → 13:00 (5 uur) → 13:20 (20 min) = 5 uur 30 min.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Hele uren tellen",
+              uitleg: "Van 8 tot 13 tel je: 9, 10, 11, 12, 13 = 5 uur.",
+            },
+          ],
+          niveaus: {
+            basis: "5 uur 30 min.",
+            simpeler: "10 minuten tot 08:00, 5 uur tot 13:00, nog 20 minuten. Samen 5 uur 30 min.",
+            nogSimpeler: "5u 30m",
           },
         },
       },
@@ -628,6 +1533,150 @@ const steps = [
         options: ["7 uur 30 min", "8 uur 30 min", "7 uur", "6 uur 30 min"],
         answer: 0,
         wrongHints: [null, "Te veel — reken stap voor stap van 9:30 naar 17:00.", "Te weinig — vergeet het halve uur niet mee te tellen.", "Te weinig — controleer."],
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "De juf leest elke schooldag **20 minuten** voor. Hoeveel tijd is dat in een week met **5 schooldagen**?",
+        options: ["1 uur 40 min", "1 uur", "2 uur 40 min", "1 uur 20 min"],
+        answer: 0,
+        wrongHints: [null, "Heeft een uur 100 minuten?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: keer 5",
+              tekst: "5 × 20 minuten = 100 minuten.",
+            },
+            {
+              titel: "Stap 2: omzetten",
+              tekst: "100 minuten = 60 minuten + 40 minuten = 1 uur 40 min.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "omrekenen",
+              uitleg: "Minuten naar uren en minuten: haal er steeds 60 vanaf voor elk uur.",
+            },
+          ],
+          theorie: "Reken eerst alles in minuten uit. Maak er daarna uren en minuten van.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "4 × 25 minuten = 100 minuten = 1 uur 40 min.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "60, niet 100",
+              uitleg: "100 minuten is méér dan 1 uur, want een uur heeft maar 60 minuten.",
+            },
+          ],
+          niveaus: {
+            basis: "1 uur 40 min.",
+            simpeler: "5 × 20 = 100 minuten. 100 − 60 = 40. Dus 1 uur en 40 minuten.",
+            nogSimpeler: "1u 40m",
+          },
+        },
+      },
+      {
+        q: "De speeltuin is open van **9:30** tot **12:30** en van **13:30** tot **17:00**. Hoe lang is de speeltuin per dag open?",
+        options: ["6 uur 30 min", "7 uur 30 min", "6 uur", "5 uur 30 min"],
+        answer: 0,
+        wrongHints: [null, "Was de speeltuin tussen 12:30 en 13:30 ook open?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: ochtend",
+              tekst: "9:30 → 12:30 = 3 uur.",
+            },
+            {
+              titel: "Stap 2: middag",
+              tekst: "13:30 → 17:00 = 30 min + 3 uur = 3 uur 30 min.",
+            },
+            {
+              titel: "Stap 3: optellen",
+              tekst: "3 uur + 3 uur 30 min = 6 uur 30 min.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "openingstijd",
+              uitleg: "De tijd dat iets open is, van openen tot sluiten.",
+            },
+          ],
+          theorie: "Bij twee blokken met een pauze ertussen: reken elk blok apart uit en tel ze op. De pauze telt niet mee.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "9:00 → 12:00 (3 uur) + 13:00 → 15:00 (2 uur) = 5 uur.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Pauze eruit",
+              uitleg: "Tussen 12:30 en 13:30 is de speeltuin dicht. Dat uur tel je niet mee.",
+            },
+          ],
+          niveaus: {
+            basis: "6 uur 30 min.",
+            simpeler: "Ochtend: 3 uur. Middag: 3 uur 30 min. Samen 6 uur 30 min.",
+            nogSimpeler: "6u 30m",
+          },
+        },
+      },
+      {
+        q: "Je gaat om **20:15** naar bed en je staat om **7:00** op. Hoe lang lig je in bed?",
+        options: ["10 uur 45 min", "11 uur 15 min", "9 uur 45 min", "13 uur 15 min"],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          null,
+          "Heb je de twee tijden gewoon van elkaar afgetrokken? Denk aan middernacht.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: naar het hele uur",
+              tekst: "20:15 → 21:00 = 45 minuten.",
+            },
+            {
+              titel: "Stap 2: tot middernacht",
+              tekst: "21:00 → 00:00 = 3 uur.",
+            },
+            {
+              titel: "Stap 3: na middernacht",
+              tekst: "00:00 → 7:00 = 7 uur.",
+            },
+            {
+              titel: "Stap 4: optellen",
+              tekst: "45 min + 3 uur + 7 uur = 10 uur 45 min.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "middernacht",
+              uitleg: "00:00 — het begin van een nieuwe dag.",
+            },
+          ],
+          theorie: "Gaat een tijdsduur over de nacht heen? Reken eerst tot middernacht en tel daarna de uren van de nieuwe dag erbij.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "21:00 → 00:00 (3 uur) → 6:00 (6 uur) = 9 uur.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Over de nacht",
+              uitleg: "De nacht gaat over 00:00 heen. Splits daarom op middernacht.",
+            },
+          ],
+          niveaus: {
+            basis: "10 uur 45 min.",
+            simpeler: "45 minuten tot 21:00, 3 uur tot middernacht, 7 uur tot 7:00. Samen 10 uur 45 min.",
+            nogSimpeler: "10u 45m",
+          },
+        },
       },
     ],
   },
