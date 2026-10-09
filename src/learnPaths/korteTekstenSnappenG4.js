@@ -125,6 +125,64 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*Bram geeft zijn zus een cadeau.*\n\n**Wie** geeft het cadeau?",
+        options: ["Bram", "zijn zus", "Daan", "het cadeau"],
+        answer: 0,
+        wrongHints: [null, "Krijgt zij iets, of geeft zij iets?", "Staat Daan in de zin?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wie-vraag",
+              tekst: "Vraag: wie geeft er iets? **Bram.** Zijn zus krijgt het cadeau.",
+            },
+          ],
+          niveaus: {
+            basis: "Bram geeft het cadeau.",
+            simpeler: "Wie geeft? Wie krijgt? Zijn zus krijgt het.",
+            nogSimpeler: "Bram",
+          },
+        },
+      },
+      {
+        q: "*Na school speelt Eva op het plein.*\n\n**Wanneer** speelt Eva?",
+        options: ["na school", "op het plein", "voor het eten", "in de pauze"],
+        answer: 0,
+        wrongHints: [null, "Dat zegt waar ze speelt. Maar wanneer?", null, "Staat dat er echt?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wanneer-vraag",
+              tekst: "De zin begint met: *Na school*. Dat is het antwoord op de wanneer-vraag. *Op het plein* zegt waar ze speelt.",
+            },
+          ],
+          niveaus: {
+            basis: "Na school.",
+            simpeler: "De zin begint ermee: Na…",
+            nogSimpeler: "na school",
+          },
+        },
+      },
+      {
+        q: "*De kat drinkt melk uit een schaaltje.*\n\n**Wat** drinkt de kat?",
+        options: ["melk", "water", "een schaaltje", "thee"],
+        answer: 0,
+        wrongHints: [null, "Staat dat er echt?", "Kun je dat drinken?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat-vraag",
+              tekst: "De kat drinkt **melk**. Het schaaltje is waar de melk in zit.",
+            },
+          ],
+          niveaus: {
+            basis: "De kat drinkt melk.",
+            simpeler: "De kat drinkt… uit een schaaltje.",
+            nogSimpeler: "melk",
+          },
+        },
+      },
     ],
   },
 
@@ -394,6 +452,64 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*Een uil slaapt overdag. 's Nachts gaat hij op jacht. Hij eet graag muizen. Een uil kan heel goed zien in het donker.*\n\n**Wanneer** gaat de uil op jacht?",
+        options: ["'s nachts", "overdag", "'s middags", "'s ochtends vroeg"],
+        answer: 0,
+        wrongHints: [null, "Wat doet de uil overdag?", null, "Staat dat in de tekst?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek het woord",
+              tekst: "De vraag gaat over *op jacht*. In de tekst staat: *'s Nachts gaat hij op jacht.* Overdag slaapt hij juist.",
+            },
+          ],
+          niveaus: {
+            basis: "'s Nachts.",
+            simpeler: "Zoek de zin met 'jacht'.",
+            nogSimpeler: "'s nachts",
+          },
+        },
+      },
+      {
+        q: "*Mo heeft een moestuin. Hij plant tomaten en bonen. Elke avond geeft hij de plantjes water. In de zomer plukt hij de tomaten.*\n\n**Wanneer** geeft Mo de plantjes water?",
+        options: ["elke avond", "in de zomer", "elke ochtend", "als het regent"],
+        answer: 0,
+        wrongHints: [null, "Wat doet Mo in de zomer?", null, "Staat dat in de tekst?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek het woord",
+              tekst: "De vraag gaat over *water*. In de tekst staat: *Elke avond geeft hij de plantjes water.*",
+            },
+          ],
+          niveaus: {
+            basis: "Elke avond.",
+            simpeler: "Zoek de zin met 'water'.",
+            nogSimpeler: "elke avond",
+          },
+        },
+      },
+      {
+        q: "*In het museum mag je niet rennen. Je mag ook niets aanraken. Foto's maken mag wel. Het museum is open tot vijf uur.*\n\nWat **mag** je wel in het museum?",
+        options: ["foto's maken", "rennen", "dingen aanraken", "eten en drinken"],
+        answer: 0,
+        wrongHints: [null, "Lees de eerste zin nog eens. Mag dat?", null, "Staat dat in de tekst?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek het woord",
+              tekst: "De vraag gaat over wat *wel* mag. In de tekst staat: *Foto's maken mag wel.* Rennen en aanraken mogen niet.",
+            },
+          ],
+          niveaus: {
+            basis: "Foto's maken.",
+            simpeler: "Zoek de zin met 'mag wel'.",
+            nogSimpeler: "foto's maken",
+          },
+        },
+      },
     ],
   },
 
@@ -559,6 +675,31 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*Eerst wast Lisa haar handen. Daarna snijdt ze een appel. Ten slotte eet ze de stukjes op.*\n\nWat doet Lisa **na** het handen wassen?",
+        options: ["een appel snijden", "de stukjes opeten", "haar handen afdrogen", "de appel wassen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat doet ze ten slotte. Komt dat meteen na het wassen?",
+          null,
+          "Staat dat in de tekst?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stapjes volgen",
+              tekst: "1. handen wassen → 2. **appel snijden** → 3. stukjes opeten. Het woordje *daarna* zegt: dit komt na het wassen.",
+            },
+          ],
+          niveaus: {
+            basis: "Na het wassen snijdt Lisa een appel.",
+            simpeler: "Handen wassen → … → opeten.",
+            nogSimpeler: "appel snijden",
+          },
+        },
+      },
     ],
   },
 
@@ -635,6 +776,50 @@ const steps = [
             },
           ],
           theorie: "Het antwoord staat in de tekst. Zoek de zin waarin de dierentuin voor het eerst genoemd wordt.",
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*Vandaag is de schoolreis. Eerst rijdt de bus naar de dierentuin. Daar ziet groep 4 de apen en de olifanten. Lena vindt de apen het leukst, want ze doen gek. Daarna eet iedereen een broodje in het gras. Ten slotte rijdt de bus weer terug naar school.*\n\n**Wie** vindt de apen het leukst?",
+        options: ["Lena", "Tim", "groep 4", "de juf"],
+        answer: 0,
+        wrongHints: [null, "Staat Tim in de tekst?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek 'het leukst'",
+              tekst: "In de tekst staat: ***Lena** vindt de apen het leukst.* Groep 4 ziet de apen, maar Lena vindt ze het leukst.",
+            },
+          ],
+          niveaus: {
+            basis: "Lena vindt de apen het leukst.",
+            simpeler: "Zoek de zin met 'het leukst'.",
+            nogSimpeler: "Lena",
+          },
+        },
+      },
+      {
+        q: "*Vandaag is de schoolreis. Eerst rijdt de bus naar de dierentuin. Daar ziet groep 4 de apen en de olifanten. Lena vindt de apen het leukst, want ze doen gek. Daarna eet iedereen een broodje in het gras. Ten slotte rijdt de bus weer terug naar school.*\n\nWat gebeurt er het **eerst**?",
+        options: [
+          "de bus rijdt naar de dierentuin",
+          "iedereen eet een broodje",
+          "de bus rijdt terug naar school",
+          "Lena kijkt naar de apen",
+        ],
+        answer: 0,
+        wrongHints: [null, "Welk woordje staat in de zin met het broodje?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek 'eerst'",
+              tekst: "In de tekst staat: ***Eerst** rijdt de bus naar de dierentuin.* Het woordje *eerst* verklapt het.",
+            },
+          ],
+          niveaus: {
+            basis: "Eerst rijdt de bus naar de dierentuin.",
+            simpeler: "Welke zin begint met 'Eerst'?",
+            nogSimpeler: "naar de dierentuin",
+          },
         },
       },
     ],

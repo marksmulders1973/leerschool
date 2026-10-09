@@ -110,6 +110,30 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Dat is de route via vwo.", "Dat gaat via havo.", "Dat is zijdelings mogelijk via vmbo-tl, maar niet de meest gekozen route na het vmbo als geheel."],
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welk niveau duurt het **kortst**?",
+        options: ["vmbo", "havo", "vwo", "Ze duren alle drie even lang"],
+        answer: 0,
+        wrongHints: [null, "Hoeveel jaar duurt havo, en hoeveel jaar duurt vmbo?", null, null],
+      },
+      {
+        q: "Waarin verschillen vmbo, havo en vwo **vooral**?",
+        options: [
+          "In hoe snel en hoe theoretisch de stof gaat",
+          "In hoe slim of dom de leerlingen zijn",
+          "In hoe groot het schoolgebouw is",
+          "In hoe laat de lessen beginnen",
+        ],
+        answer: 0,
+        wrongHints: [null, "Noemt de uitleg een niveau 'slim' of 'dom'?", null, null],
+      },
+      {
+        q: "Na welk niveau kun je **meteen** naar de universiteit?",
+        options: ["vwo", "vmbo", "havo", "Na alle drie"],
+        answer: 0,
+        wrongHints: [null, null, "Waar ga je na de havo meestal naartoe?", null],
+      },
     ],
   },
   {
@@ -152,6 +176,30 @@ const steps = [
         options: ["Theoretische leerweg (tl)", "Basisberoepsgerichte leerweg (bb)", "Gemengde leerweg (gl)", "Kaderberoepsgerichte leerweg (kb)"],
         answer: 0,
         wrongHints: [null, "De bijnaam 'mavo' hoort bij de leerweg met de meeste theorie.", "Niet de gemengde variant.", "Niet de kader-variant."],
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Hoeveel leerlingen in Nederland zitten ongeveer op het **vmbo**?",
+        options: ["Ongeveer de helft", "Bijna niemand", "Ongeveer een tiende", "Bijna alle leerlingen"],
+        answer: 0,
+        wrongHints: [null, "Het vmbo is het grootste niveau. Past dat hierbij?", null, null],
+      },
+      {
+        q: "Welke van deze is een **richting** die je op het vmbo kunt kiezen?",
+        options: ["Techniek", "Gymnasium", "Atheneum", "Universiteit"],
+        answer: 0,
+        wrongHints: [null, null, null, "Hoort de universiteit bij de middelbare school?"],
+      },
+      {
+        q: "Wat leer je op het **mbo**, na je vmbo-diploma?",
+        options: [
+          "Een vak, zoals kok of monteur",
+          "Latijn en Grieks",
+          "Weer de stof van groep 8",
+          "Alleen maar sporten",
+        ],
+        answer: 0,
+        wrongHints: [null, null, null, null],
       },
     ],
   },
@@ -196,6 +244,40 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Havo is een apart niveau; mavo is de bijnaam voor vmbo-tl.", "Dat zijn vmbo-leerwegen.", "Dat zijn profielen, geen smaken van vwo."],
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Waarin zit vooral het verschil tussen **havo en vwo**?",
+        options: [
+          "In tempo en diepte",
+          "Op de havo krijg je geen theorie",
+          "Op het vwo krijg je geen boeken",
+          "Havo duurt langer dan vwo",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Leer je op de havo ook uit boeken?",
+          null,
+          "Hoeveel jaar duurt havo, en hoeveel jaar vwo?",
+        ],
+      },
+      {
+        q: "Waar staat de **C** in het profiel C&M voor?",
+        options: ["Cultuur", "Computer", "Chemie", "Cijfers"],
+        answer: 0,
+        wrongHints: [null, null, null, "Welke vakken horen bij C&M: talen en kunst, of rekenen?"],
+      },
+      {
+        q: "Wat zijn **Latijn en Grieks**?",
+        options: [
+          "Talen van de oude Romeinen en Grieken",
+          "Twee profielen op de havo",
+          "Twee leerwegen op het vmbo",
+          "Twee soorten sport op school",
+        ],
+        answer: 0,
+        wrongHints: [null, "Welke vier profielen zijn er op havo en vwo?", null, null],
+      },
     ],
   },
   {
@@ -226,6 +308,57 @@ const steps = [
         options: ["Ja — als het bij jou past", "Nee, alleen met vwo", "Nee, alleen met havo", "Nee, alleen met de universiteit"],
         answer: 0,
         wrongHints: [null, "Ken je een fijne kapper, kok of monteur? Welke opleiding hadden die nodig?", "Ook zonder havo zijn er duizenden mooie beroepen — waar hangt 'fijn' écht van af?", "De meeste mensen in Nederland hebben géén universiteit gedaan — zijn al hun banen dan niet fijn?"],
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Waar staat **hbo** voor?",
+        options: [
+          "Hoger beroepsonderwijs",
+          "Hoger basisonderwijs",
+          "Heel belangrijke opleiding",
+          "Havo-bovenbouwopleiding",
+        ],
+        answer: 0,
+        wrongHints: [null, "Ga je na de havo nog naar de basisschool?", null, null],
+      },
+      {
+        q: "Hoeveel **niveaus** heeft het mbo?",
+        options: ["Vier", "Twee", "Drie", "Zes"],
+        answer: 0,
+        wrongHints: [null, null, null, "Zes jaar duurt het vwo. Is dat ook het aantal mbo-niveaus?"],
+      },
+      {
+        q: "Wat is een **stage**?",
+        options: [
+          "Werken om te leren",
+          "Een podium voor toneel",
+          "Een toets aan het eind van het jaar",
+          "Een schoolreis in de vakantie",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Het woord lijkt op het Engelse woord voor podium. Maar wat betekent het op het mbo?",
+          null,
+          null,
+        ],
+      },
+      {
+        q: "Welk beroep hoort bij de route **vwo → universiteit**?",
+        options: ["Rechter", "Kapper", "Kok", "Monteur"],
+        answer: 0,
+        wrongHints: [null, "Na welke opleiding word je meestal kapper?", null, null],
+      },
+      {
+        q: "Waar staat **wo** voor?",
+        options: [
+          "Wetenschappelijk onderwijs",
+          "Werkend onderwijs",
+          "Wereldwijd onderwijs",
+          "Wiskunde-onderwijs",
+        ],
+        answer: 0,
+        wrongHints: [null, null, null, "Leer je op de universiteit alleen wiskunde?"],
       },
     ],
   },
@@ -258,6 +391,62 @@ const steps = [
         options: ["Slim kiezen wat bij je past, geen mislukking", "Altijd een mislukking", "Verboden", "Alleen voor luie kinderen"],
         answer: 0,
         wrongHints: [null, "Is een schoen die knelt houden slimmer dan een maat wisselen die wél past?", "Wisselen mag gewoon — scholen helpen er zelfs bij. Wat zegt dat over deze keuze?", "Iemand die kiest voor een plek waar hij beter leert — klinkt dat lui of juist slim?"],
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is een **brugklas**?",
+        options: [
+          "Een klas waarin je niveau nog kan veranderen",
+          "De laatste klas van de basisschool",
+          "Een klas waar je alleen gymles hebt",
+          "Een klas die je na je diploma volgt",
+        ],
+        answer: 0,
+        wrongHints: [null, "Zit de brugklas op de basisschool, of op de middelbare school?", null, null],
+      },
+      {
+        q: "Moet je in groep 8 al weten wat je **later wilt worden**?",
+        options: [
+          "Nee, dat ontdek je onderweg",
+          "Ja, anders mag je niet naar de brugklas",
+          "Nee, dat beslist je juf of meester voor je",
+          "Ja, dat staat in je schooladvies",
+        ],
+        answer: 0,
+        wrongHints: [null, null, "Wie leert jou steeds beter kennen: jijzelf, of je juf of meester?", null],
+      },
+      {
+        q: "Sem zit op de havo en het gaat **heel makkelijk**. Wat kan dan soms?",
+        options: [
+          "Overstappen naar het vwo",
+          "Teruggaan naar groep 8",
+          "Meteen naar de universiteit",
+          "Een jaar vrij nemen van school",
+        ],
+        answer: 0,
+        wrongHints: [null, null, "Kun je zonder diploma van de middelbare school naar de universiteit?", null],
+      },
+      {
+        q: "Welke route is **stapelen via het beroepsonderwijs**?",
+        options: [
+          "mbo → hbo → universiteit",
+          "universiteit → hbo → mbo",
+          "vwo → havo → vmbo",
+          "hbo → mbo → basisschool",
+        ],
+        answer: 0,
+        wrongHints: [null, "Ga je bij stapelen een stapje hoger, of lager?", null, null],
+      },
+      {
+        q: "Je keuze na de Doorstroomtoets is volgens de uitleg...",
+        options: [
+          "een start, geen eindpunt",
+          "voor de rest van je leven vast",
+          "het einde van je schooltijd",
+          "een gok die niet meetelt",
+        ],
+        answer: 0,
+        wrongHints: [null, "Kun je later nog stapelen of switchen?", null, null],
       },
     ],
   },

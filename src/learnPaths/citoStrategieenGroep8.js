@@ -367,6 +367,96 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welk hulpmiddel mag je **niet** gebruiken bij de Doorstroomtoets?",
+        options: ["Een rekenmachine", "Kladpapier", "Een potlood", "Een gum"],
+        answer: 0,
+        wrongHints: [null, "Waar zou je anders de tussenstappen van een lastige som opschrijven?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Uit je hoofd of op papier",
+              tekst: "Bij de toets reken je zonder rekenmachine: uit je hoofd of op papier.",
+            },
+            {
+              titel: "Kladpapier",
+              tekst: "Kladpapier mag meestal wel. Gebruik het voor je tussenstappen!",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kladpapier",
+              uitleg: "Papier waarop je mag rekenen en dingen opschrijven. Het wordt niet nagekeken.",
+            },
+          ],
+          theorie: "Bij de Doorstroomtoets mag je geen rekenmachine gebruiken. Je rekent alles uit je hoofd of op papier.",
+          voorbeelden: [
+            {
+              type: "rekenen",
+              tekst: "Een lastige som? Schrijf de stappen op je kladpapier, dan raak je de draad niet kwijt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Oefenen zonder rekenmachine",
+              uitleg: "Oefen thuis ook sommen zonder rekenmachine, dan ben je eraan gewend.",
+            },
+          ],
+          niveaus: {
+            basis: "Geen rekenmachine.",
+            simpeler: "Je rekent zelf: in je hoofd of op papier. Een rekenmachine mag niet mee.",
+            nogSimpeler: "Geen rekenmachine",
+          },
+        },
+      },
+      {
+        q: "Wat moet je volgens de uitleg **wel** kunnen voor de Doorstroomtoets?",
+        options: [
+          "Een tabel of grafiek lezen",
+          "Heel diepgaande wereldkennis hebben",
+          "Een Engelse tekst vertalen",
+          "Een spreekbeurt houden",
+        ],
+        answer: 0,
+        wrongHints: [null, "Hoeveel wereldkennis heb je nodig: heel veel, of vooral de basis?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat je wel moet kunnen",
+              tekst: "Tekst lezen, rekenen, spellen en informatie opzoeken in tabellen, grafieken en kaarten.",
+            },
+            {
+              titel: "Wat niet hoeft",
+              tekst: "Heel diepgaande wereldkennis is niet nodig. De basis is genoeg.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tabel",
+              uitleg: "Een overzicht met rijen en kolommen, waarin je gegevens kunt opzoeken.",
+            },
+          ],
+          theorie: "Informatie opzoeken in tabellen, grafieken en kaarten komt terug in lees- en rekenvragen.",
+          voorbeelden: [
+            {
+              type: "tabel",
+              tekst: "In een tabel zoek je op hoe laat de bus vertrekt. Dat is informatie opzoeken.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Basis is genoeg",
+              uitleg: "Van wereldoriëntatie hoef je vooral de basis te kennen.",
+            },
+          ],
+          niveaus: {
+            basis: "Tabellen en grafieken lezen.",
+            simpeler: "Je moet informatie kunnen vinden in een tabel, een grafiek of een kaart. Dat komt vaak terug in de toets.",
+            nogSimpeler: "Tabel lezen",
+          },
+        },
+      },
     ],
   },
   {
@@ -415,6 +505,30 @@ const steps = [
         options: ["Lezen en taal", "Rekenen", "Wereldoriëntatie", "Studievaardigheden"],
         answer: 0,
         wrongHints: [null, "Gaat een stijlfiguur over getallen, of over hoe iets geschreven is?", null, null],
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Je moet uitrekenen hoeveel km per uur een fietser rijdt. Bij welk onderdeel hoort die vraag?",
+        options: ["Rekenen", "Taalverzorging", "Lezen", "Studievaardigheden"],
+        answer: 0,
+        wrongHints: [null, "Moet je bij deze vraag schrijven, of iets uitrekenen?", null, null],
+      },
+      {
+        q: "Wat hoort **niet** bij taalverzorging?",
+        options: ["Breuken vereenvoudigen", "Hoofdletters", "Leestekens", "Werkwoordsvormen"],
+        answer: 0,
+        wrongHints: [null, "Moet je bij het schrijven van een zin op hoofdletters letten?", null, null],
+      },
+      {
+        q: "Wat hoort bij **wereldoriëntatie**?",
+        options: [
+          "De provincies van Nederland",
+          "Procenten uitrekenen",
+          "De d/t-regels",
+          "Een register gebruiken",
+        ],
+        answer: 0,
+        wrongHints: [null, null, null, "Bij welk extra onderdeel hoort zoeken in een register?"],
       },
     ],
   },
@@ -986,6 +1100,106 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat zegt de uitleg over de trucjes voor meerkeuzevragen?",
+        options: [
+          "Ze helpen, maar eerst denk je zelf na",
+          "Daardoor hoef je niet meer te leren",
+          "Je mag ze niet gebruiken in de toets",
+          "Je gebruikt ze voordat je de vraag leest",
+        ],
+        answer: 0,
+        wrongHints: [null, "Kun je foute opties herkennen als je niets van het onderwerp weet?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Hulpmiddel",
+              tekst: "De trucjes zijn een hulpmiddel, geen vervanger voor kennis.",
+            },
+            {
+              titel: "Volgorde",
+              tekst: "Eerst denken, dan eliminatie als hulp.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "hulpmiddel",
+              uitleg: "Iets dat je helpt, maar het werk niet helemaal voor je doet.",
+            },
+          ],
+          theorie: "Met kennis kun je foute opties herkennen. De trucjes helpen je daarbij, maar ze vervangen het leren niet.",
+          voorbeelden: [
+            {
+              type: "kennis",
+              tekst: "Weet je dat Pearl Harbor in de Tweede Wereldoorlog was? Dan kun je die optie bij een vraag over de Eerste Wereldoorlog wegstrepen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Leren blijft nodig",
+              uitleg: "Hoe meer je weet, hoe beter eliminatie werkt.",
+            },
+          ],
+          niveaus: {
+            basis: "Eerst denken, trucjes als hulp.",
+            simpeler: "De trucjes zijn handig, maar je moet nog steeds zelf nadenken en dingen weten.",
+            nogSimpeler: "Eerst denken",
+          },
+        },
+      },
+      {
+        q: "Vraag: 'Welk dier is een zoogdier?' Je weet niet meteen het antwoord, maar je weet zeker dat een **haai** een vis is. Wat doe je met de optie 'haai'?",
+        options: [
+          "Wegstrepen, want die kan niet goed zijn",
+          "Kiezen, want dat dier ken je",
+          "Laten staan tot het eind van de toets",
+          "Samen met een andere optie aankruisen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Lees de vraag nog eens: welk soort dier wordt er gezocht?",
+          null,
+          "Hoeveel opties mag je bij één vraag kiezen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat weet je zeker?",
+              tekst: "Een haai is een vis. De vraag zoekt een zoogdier.",
+            },
+            {
+              titel: "Wegstrepen",
+              tekst: "Een vis is geen zoogdier. Dus streep je 'haai' door.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "eliminatie",
+              uitleg: "Foute antwoorden uitsluiten.",
+            },
+          ],
+          theorie: "Je hoeft het goede antwoord niet meteen te weten. Elke optie die zeker fout is, streep je weg. Zo blijft er minder over.",
+          voorbeelden: [
+            {
+              type: "eliminatie",
+              tekst: "Weet je ook dat een mus een vogel is? Dan streep je die ook weg. Zo houd je er nog maar twee over.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Wat je wél weet",
+              uitleg: "Gebruik wat je zeker weet om foute opties te vinden.",
+            },
+          ],
+          niveaus: {
+            basis: "Een haai is een vis, dus wegstrepen.",
+            simpeler: "De vraag zoekt een zoogdier. Een haai is een vis. Die kan dus niet goed zijn.",
+            nogSimpeler: "Haai weg",
+          },
+        },
+      },
     ],
   },
   {
@@ -1252,6 +1466,101 @@ const steps = [
             basis: "Vergelijk met de tekst.",
             simpeler: "Kijk nog even terug in de tekst. Staat jouw antwoord er echt? Dan is het goed.",
             nogSimpeler: "Terugkijken",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een vraag is: 'Waarom doet de hoofdpersoon dat?' Het staat niet letterlijk in de tekst. Wat doe je?",
+        options: [
+          "Tussen de regels lezen",
+          "Je eigen mening opschrijven",
+          "Alleen naar de titel kijken",
+          "De vraag overslaan, het staat er niet",
+        ],
+        answer: 0,
+        wrongHints: [null, "Telt bij begrijpend lezen wat jij vindt, of wat de tekst laat zien?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Niet letterlijk",
+              tekst: "Bij een waarom-vraag staat het antwoord soms niet letterlijk in de tekst.",
+            },
+            {
+              titel: "Tussen de regels",
+              tekst: "Let op woorden die laten zien wat iemand voelt of vindt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tussen de regels lezen",
+              uitleg: "Snappen wat de tekst bedoelt, ook als het er niet precies zo staat.",
+            },
+          ],
+          theorie: "Bij een vraag naar wat iemand denkt of waarom iemand iets doet, kijk je naar woorden met emotie of een mening.",
+          voorbeelden: [
+            {
+              type: "tussen de regels",
+              tekst: "'Tom smeet zijn tas in de hoek en zei niets.' Er staat niet dat Tom boos is, maar je kunt het wel uit de tekst halen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Het bewijs zit in de tekst",
+              uitleg: "Ook als het niet letterlijk staat, haal je het antwoord uit de tekst, niet uit je eigen mening.",
+            },
+          ],
+          niveaus: {
+            basis: "Lees tussen de regels.",
+            simpeler: "Staat het er niet precies? Kijk dan naar wat iemand doet of zegt. Daaruit kun je opmaken waarom.",
+            nogSimpeler: "Tussen de regels",
+          },
+        },
+      },
+      {
+        q: "Een tekst beschrijft eerst een **probleem** en daarna een **oplossing**. Bij welke vraag helpt je dat?",
+        options: [
+          "Hoe is de tekst opgebouwd?",
+          "Wat betekent een moeilijk woord?",
+          "Wat staat er niet in de tekst?",
+          "Hoeveel alinea's heeft de tekst?",
+        ],
+        answer: 0,
+        wrongHints: [null, "Gaat dit over één woord, of over de hele tekst?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tekstopbouw",
+              tekst: "Bij een vraag over de opbouw kijk je naar de volgorde van de alinea's.",
+            },
+            {
+              titel: "Soorten opbouw",
+              tekst: "Bijvoorbeeld: probleem en oplossing, voor en tegen, of een tijdlijn.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "opbouw",
+              uitleg: "Hoe de delen van een tekst na elkaar komen.",
+            },
+          ],
+          theorie: "Een tekst heeft vaak een vaste opbouw. Herken je die, dan kun je een opbouwvraag snel beantwoorden.",
+          voorbeelden: [
+            {
+              type: "probleem-oplossing",
+              tekst: "Alinea 1: er ligt veel afval op het plein. Alinea 2: de klas zet extra prullenbakken neer. Dat is probleem en oplossing.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Kijk naar de volgorde",
+              uitleg: "Waar gaat de eerste alinea over, en waar de volgende?",
+            },
+          ],
+          niveaus: {
+            basis: "Bij de opbouw van de tekst.",
+            simpeler: "Eerst een probleem, dan een oplossing: dat zegt iets over hoe de tekst in elkaar zit.",
+            nogSimpeler: "Opbouw",
           },
         },
       },
@@ -1590,6 +1899,49 @@ const steps = [
             basis: "15/60 = 1/4 = 25%.",
             simpeler: "15 past 4 keer in 60. Dus het is een kwart. Een kwart is 25%.",
             nogSimpeler: "25%",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een bak heeft een inhoud van **2 m³**. Hoeveel liter is dat?",
+        options: ["2.000 liter", "200 liter", "20 liter", "20.000 liter"],
+        answer: 0,
+        wrongHints: [null, "Hoeveel liter past er in 1 m³?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "1 m³",
+              tekst: "1 m³ = 1.000 liter.",
+            },
+            {
+              titel: "2 m³",
+              tekst: "2 × 1.000 = 2.000 liter.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "m³",
+              uitleg: "Kubieke meter: een kubus van 1 meter lang, 1 meter breed en 1 meter hoog.",
+            },
+          ],
+          theorie: "Eenheden omrekenen: 1 m³ = 1.000 liter. Vermenigvuldig met het aantal m³.",
+          voorbeelden: [
+            {
+              type: "omrekenen",
+              tekst: "3 m³ = 3.000 liter. 5 m³ = 5.000 liter.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check de eenheid",
+              uitleg: "Vraagt de som om liter? Zet dan liter achter je antwoord, niet m³.",
+            },
+          ],
+          niveaus: {
+            basis: "2 × 1.000 = 2.000 liter.",
+            simpeler: "In 1 m³ past 1.000 liter. Je hebt er 2, dus 2.000 liter.",
+            nogSimpeler: "2.000 liter",
           },
         },
       },
