@@ -1,0 +1,649 @@
+{
+ "pathId": "spreekwoorden-uitdrukkingen-po",
+ "geschreven": 29,
+ "opgenomen": [
+  {
+   "stap": 0,
+   "q": "Welke zin is **letterlijk** bedoeld?",
+   "options": [
+    "Ik drink een glas melk",
+    "Ik heb vlinders in mijn buik",
+    "Het regent pijpenstelen",
+    "Ze is een engel"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Zitten er echt vlinders in je buik? Denk na.",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Letterlijk of figuurlijk?",
+      "tekst": "Bij **letterlijk** betekenen de woorden precies wat er staat. Bij **figuurlijk** bedoel je iets anders — een soort plaatje in taal."
+     },
+     {
+      "titel": "Test elke zin",
+      "tekst": "Vraag bij elke zin: kan dit écht zo gebeuren? Een glas melk drinken kan echt. Vlinders in je buik, pijpen uit de lucht of een mens die een engel is: dat kan niet echt."
+     },
+     {
+      "titel": "Conclusie",
+      "tekst": "'Ik drink een glas melk' is de enige zin die precies betekent wat er staat. Die is dus letterlijk."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "letterlijk",
+      "uitleg": "De woorden betekenen precies wat er staat."
+     },
+     {
+      "woord": "figuurlijk",
+      "uitleg": "De woorden betekenen iets anders dan er staat."
+     }
+    ],
+    "theorie": "Klinkt een zin raar als je hem precies zo neemt? Dan is hij figuurlijk bedoeld.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "'Ik eet een appel' = letterlijk."
+     },
+     {
+      "type": "stap",
+      "tekst": "'Ik heb vlinders in mijn buik' = figuurlijk: je bent zenuwachtig of verliefd."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Vraag jezelf: kan dit echt zo gebeuren? Ja = letterlijk. Nee = figuurlijk."
+     }
+    ],
+    "niveaus": {
+     "basis": "'Ik drink een glas melk' is letterlijk: het gebeurt echt.",
+     "simpeler": "Alleen bij de melk gebeurt echt wat er staat.",
+     "nogSimpeler": "Melk drinken = echt."
+    }
+   },
+   "id": "spreekwoorden-uitdrukkingen-po#0"
+  },
+  {
+   "stap": 0,
+   "q": "*'Ik heb vlinders in mijn buik.'* Wat bedoelt iemand die dit zegt?",
+   "options": [
+    "Ik ben zenuwachtig of verliefd",
+    "Ik heb een vlinder ingeslikt",
+    "Ik heb buikpijn van het eten",
+    "Ik heb heel erge honger"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Kan dat echt? Denk figuurlijk.",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Kan dit letterlijk?",
+      "tekst": "Er zitten geen echte vlinders in je buik. Dus is de zin **figuurlijk** bedoeld."
+     },
+     {
+      "titel": "Het plaatje",
+      "tekst": "Vlinders fladderen heen en weer. Zo kriebelt het in je buik als je spannend vindt wat er komt."
+     },
+     {
+      "titel": "De betekenis",
+      "tekst": "'Vlinders in je buik hebben' betekent: je bent **zenuwachtig of verliefd**."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "figuurlijk",
+      "uitleg": "Iets anders bedoelen dan er staat."
+     },
+     {
+      "woord": "zenuwachtig",
+      "uitleg": "Een kriebelig, gespannen gevoel."
+     }
+    ],
+    "theorie": "Bij figuurlijke zinnen zoek je de bedoelde betekenis, niet de letterlijke.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "'Ik heb vlinders in mijn buik voor de musical' = ik ben zenuwachtig voor de musical."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Kan het niet echt zo gebeuren? Zoek dan het gevoel dat ermee bedoeld wordt."
+     }
+    ],
+    "niveaus": {
+     "basis": "Zenuwachtig of verliefd zijn.",
+     "simpeler": "Kriebels in je buik door spanning of verliefdheid.",
+     "nogSimpeler": "Zenuwachtig of verliefd."
+    }
+   },
+   "id": "spreekwoorden-uitdrukkingen-po#1"
+  },
+  {
+   "stap": 0,
+   "q": "*'Zo wit als sneeuw'* — wat voor soort beeldspraak is dit?",
+   "options": [
+    "Vergelijking",
+    "Metafoor",
+    "Spreekwoord",
+    "Letterlijk"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Kijk of er 'als' in staat.",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Zoek naar 'als'",
+      "tekst": "In 'zo wit als sneeuw' staan de woorden **zo** en **als**."
+     },
+     {
+      "titel": "Vergelijking",
+      "tekst": "Een **vergelijking** maak je met 'zo + bijvoeglijk naamwoord + als + zelfstandig naamwoord': zo wit als sneeuw, zo zwart als roet."
+     },
+     {
+      "titel": "Geen metafoor",
+      "tekst": "Bij een metafoor staat er geen 'als', bijvoorbeeld 'ze is een engel'."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "vergelijking",
+      "uitleg": "Beeldspraak met 'zo ... als'."
+     },
+     {
+      "woord": "metafoor",
+      "uitleg": "Beeldspraak zonder 'als'."
+     }
+    ],
+    "theorie": "Staat er 'zo ... als'? Dan is het een vergelijking.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "'Zo zwart als roet' = vergelijking."
+     },
+     {
+      "type": "stap",
+      "tekst": "'Hij is een leeuw' = metafoor (geen 'als')."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Met 'als' = vergelijking. Zonder 'als' = metafoor."
+     }
+    ],
+    "niveaus": {
+     "basis": "Vergelijking: er staat 'zo ... als'.",
+     "simpeler": "'Zo wit als' heeft 'als', dus vergelijking.",
+     "nogSimpeler": "Vergelijking."
+    }
+   },
+   "id": "spreekwoorden-uitdrukkingen-po#2"
+  },
+  {
+   "stap": 0,
+   "q": "Welke zin is een **metafoor**?",
+   "options": [
+    "Hij is een leeuw",
+    "Hij is zo sterk als een leeuw",
+    "Hij ziet een leeuw in de dierentuin",
+    "Beter laat dan nooit"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Kijk goed: staat er 'als' in deze zin?",
+    "Is dit beeldspraak, of gebeurt het echt?",
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Wat is een metafoor?",
+      "tekst": "Bij een **metafoor** zeg je dat iets iets anders IS, zonder 'als'."
+     },
+     {
+      "titel": "Vergelijk de zinnen",
+      "tekst": "'Hij is zo sterk als een leeuw' heeft 'als': dat is een vergelijking. 'Hij is een leeuw' heeft geen 'als': dat is een metafoor."
+     },
+     {
+      "titel": "Wat bedoel je?",
+      "tekst": "Hij is natuurlijk geen echt dier. Je bedoelt dat hij sterk of dapper is."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "metafoor",
+      "uitleg": "Beeldspraak zonder 'als': A is B."
+     },
+     {
+      "woord": "vergelijking",
+      "uitleg": "Beeldspraak met 'zo ... als'."
+     }
+    ],
+    "theorie": "Test op 'als'. Met 'als' = vergelijking. Zonder 'als' = metafoor.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "'Ze is een engel' = metafoor."
+     },
+     {
+      "type": "stap",
+      "tekst": "'Hij vecht als een leeuw' = vergelijking."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Geen 'als', wel beeldspraak? Dan is het een metafoor."
+     }
+    ],
+    "niveaus": {
+     "basis": "'Hij is een leeuw' is een metafoor.",
+     "simpeler": "Zonder 'als' en niet echt bedoeld = metafoor.",
+     "nogSimpeler": "Hij is een leeuw."
+    }
+   },
+   "id": "spreekwoorden-uitdrukkingen-po#4"
+  },
+  {
+   "stap": 0,
+   "q": "*'Het loopt in de papieren.'* Wat betekent dit?",
+   "options": [
+    "Het wordt duur",
+    "Er is veel papier nodig",
+    "Het gaat heel snel",
+    "Het wordt makkelijk"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Dat is letterlijk gedacht.",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Een uitdrukking",
+      "tekst": "'Het loopt in de papieren' is een **uitdrukking**: een vaste groep woorden met een betekenis die je niet uit de losse woorden haalt."
+     },
+     {
+      "titel": "Letterlijk klopt niet",
+      "tekst": "Het gaat niet om echt papier."
+     },
+     {
+      "titel": "De betekenis",
+      "tekst": "'Het loopt in de papieren' betekent: **het wordt duur**."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "uitdrukking",
+      "uitleg": "Vaste groep woorden met een figuurlijke betekenis."
+     },
+     {
+      "woord": "figuurlijk",
+      "uitleg": "Iets anders bedoelen dan er staat."
+     }
+    ],
+    "theorie": "Bij een uitdrukking is de letterlijke betekenis bijna altijd fout.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "'Een nieuwe fiets, een helm en een slot: dat loopt in de papieren' = dat wordt duur."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Leer uitdrukkingen als een geheel: woorden + betekenis."
+     }
+    ],
+    "niveaus": {
+     "basis": "Het wordt duur.",
+     "simpeler": "Het gaat veel geld kosten.",
+     "nogSimpeler": "Duur."
+    }
+   },
+   "id": "spreekwoorden-uitdrukkingen-po#5"
+  },
+  {
+   "stap": 1,
+   "q": "*'Iets uit je duim zuigen'* — wat betekent dit?",
+   "options": [
+    "Iets verzinnen",
+    "Op je duim sabbelen",
+    "Iets goed onthouden",
+    "Iets eerlijk vertellen"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Dat is letterlijk — denk figuurlijk.",
+    null,
+    "Is wat je uit je duim zuigt echt gebeurd?"
+   ],
+   "id": "spreekwoorden-uitdrukkingen-po#6"
+  },
+  {
+   "stap": 1,
+   "q": "*'De kat uit de boom kijken'* — wat betekent dit?",
+   "options": [
+    "Afwachten",
+    "Meteen ingrijpen",
+    "Naar dieren kijken",
+    "Iemand redden"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    "Dat is te letterlijk.",
+    null
+   ],
+   "id": "spreekwoorden-uitdrukkingen-po#8"
+  },
+  {
+   "stap": 1,
+   "q": "*'Met de mond vol tanden staan'* — wat betekent dit?",
+   "options": [
+    "Niet weten wat je moet zeggen",
+    "Heel veel praten",
+    "Een nieuwe tand krijgen",
+    "Met volle mond eten"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    "Dat is letterlijk gedacht.",
+    null
+   ],
+   "id": "spreekwoorden-uitdrukkingen-po#9"
+  },
+  {
+   "stap": 1,
+   "q": "*'Voet bij stuk houden'* — wat betekent dit?",
+   "options": [
+    "Niet toegeven",
+    "Snel weglopen",
+    "Toch toegeven",
+    "Stil blijven staan"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    "Andersom.",
+    "Dat is te letterlijk."
+   ],
+   "id": "spreekwoorden-uitdrukkingen-po#10"
+  },
+  {
+   "stap": 1,
+   "q": "*'Iets onder de pet houden'* — wat betekent dit?",
+   "options": [
+    "Iets geheim houden",
+    "Iets aan iedereen vertellen",
+    "Een pet opzetten",
+    "Iets kwijtraken"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Andersom.",
+    "Dat is letterlijk — denk figuurlijk.",
+    null
+   ],
+   "id": "spreekwoorden-uitdrukkingen-po#11"
+  },
+  {
+   "stap": 2,
+   "q": "*'Haastige spoed is zelden goed'* — wat is de les?",
+   "options": [
+    "Als je te snel werkt, maak je fouten",
+    "Wie snel werkt, is eerder klaar",
+    "Je moet altijd op tijd komen",
+    "Langzaam werken is saai"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Andersom — is haast hier iets goeds?",
+    null,
+    null
+   ],
+   "id": "spreekwoorden-uitdrukkingen-po#12"
+  },
+  {
+   "stap": 2,
+   "q": "*'Eigen haard is goud waard'* — wat betekent dit?",
+   "options": [
+    "Thuis is het het fijnst",
+    "Een open haard is heel duur",
+    "Je moet zuinig zijn met goud",
+    "Op vakantie is het het leukst"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Dat is letterlijk — het gaat niet echt om een haard.",
+    null,
+    "Andersom."
+   ],
+   "id": "spreekwoorden-uitdrukkingen-po#14"
+  },
+  {
+   "stap": 2,
+   "q": "*'In nood leert men zijn vrienden kennen'* — wat is de les?",
+   "options": [
+    "Echte vrienden helpen je als het moeilijk is",
+    "Op een feest maak je nieuwe vrienden",
+    "Vrienden moet je niet om hulp vragen",
+    "Hoe meer vrienden, hoe beter"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    null,
+    "Het gaat niet om het aantal — wat betekent 'in nood'?"
+   ],
+   "id": "spreekwoorden-uitdrukkingen-po#15"
+  },
+  {
+   "stap": 2,
+   "q": "*'Een gewaarschuwd man telt voor twee'* — wat is de les?",
+   "options": [
+    "Wie gewaarschuwd is, kan zich voorbereiden",
+    "Twee mannen zijn sterker dan één",
+    "Je moet anderen nooit waarschuwen",
+    "Wie waarschuwt, moet dubbel betalen"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Te letterlijk — het gaat niet om echt tellen.",
+    null,
+    null
+   ],
+   "id": "spreekwoorden-uitdrukkingen-po#16"
+  },
+  {
+   "stap": 2,
+   "q": "*'Jong geleerd, oud gedaan'* — wat is de les?",
+   "options": [
+    "Wat je jong leert, kun je je hele leven",
+    "Alleen oude mensen kunnen goed leren",
+    "Kinderen hoeven nog niet te leren",
+    "Oude mensen weten alles al"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    "Andersom — wanneer leer je het in dit spreekwoord?",
+    null
+   ],
+   "id": "spreekwoorden-uitdrukkingen-po#17"
+  },
+  {
+   "stap": 4,
+   "q": "*'Iets met een korreltje zout nemen'* — wat betekent dit?",
+   "options": [
+    "Niet alles zomaar geloven",
+    "Zout over je eten strooien",
+    "Iets heel zuinig gebruiken",
+    "Iets snel opeten"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Dat is letterlijk — streep het weg.",
+    null,
+    null
+   ],
+   "id": "spreekwoorden-uitdrukkingen-po#27"
+  },
+  {
+   "stap": 4,
+   "q": "*'Komt tijd, komt raad'* — wat betekent dit?",
+   "options": [
+    "Wacht maar af, er komt vanzelf een oplossing",
+    "Je moet altijd op tijd komen",
+    "Vraag meteen iemand om advies",
+    "Tijd is het belangrijkste wat er is"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Te letterlijk — het gaat niet over op tijd komen.",
+    null,
+    null
+   ],
+   "id": "spreekwoorden-uitdrukkingen-po#28"
+  }
+ ],
+ "afgekeurd": [
+  {
+   "id": "spreekwoorden-uitdrukkingen-po#3",
+   "stap": 0,
+   "q": "Wat is een **spreekwoord**?",
+   "redenen": [
+    "nakijker A: Fase 2: uitlegPad-theorie zegt 'Een spreekwoord is figuurlijk' - klopt niet altijd (bv. 'Haastige spoed is zelden goed', 'Beter laat dan nooit' zijn letterlijk bedoeld). Formuleer als 'vaak figuurlijk'."
+   ]
+  },
+  {
+   "id": "spreekwoorden-uitdrukkingen-po#7",
+   "stap": 1,
+   "q": "*'Van een mug een olifant maken'* — wat betekent dit?",
+   "redenen": [
+    "nakijker A: Fase 2: wrongHint 'Wat is groter: een mug of een olifant?' wijst het antwoord (iets groter maken = overdrijven) vrijwel direct aan."
+   ]
+  },
+  {
+   "id": "spreekwoorden-uitdrukkingen-po#13",
+   "stap": 2,
+   "q": "*'Al doende leert men'* — wat is de les?",
+   "redenen": [
+    "nakijker A: Fase 2: wrongHint 'Kijk naar het woord doende' wijst het goede antwoord ('Door iets te doen...') vrijwel direct aan.",
+    "nakijker B: FASE 2: wrongHint 'Kijk naar het woord doende' wijst vrij direct naar het goede antwoord (licht)."
+   ]
+  },
+  {
+   "id": "spreekwoorden-uitdrukkingen-po#18",
+   "stap": 3,
+   "q": "Sem wilde zijn werkstuk in tien minuten afmaken. Hij schreef zo snel dat er overal fouten in stonden. Welk spreekwoord past?",
+   "redenen": [
+    "nakijker B: FASE 2: wrongHint wijst het kernelement van het goede spreekwoord vrijwel direct aan ('kijk wat er gebeurt als Sem zo snel werkt' -> haastige spoed)."
+   ]
+  },
+  {
+   "id": "spreekwoorden-uitdrukkingen-po#19",
+   "stap": 3,
+   "q": "Noor was drie weken op kamp. Het was leuk, maar toen ze weer in haar eigen bed lag, zuchtte ze: 'Heerlijk, weer thuis!' Welk spreekwoord past?",
+   "redenen": [
+    "nakijker B: FASE 2: wrongHint wijst het kernelement van het goede spreekwoord vrijwel direct aan ('kijk waar Noor zo blij mee is' -> thuis/eigen haard)."
+   ]
+  },
+  {
+   "id": "spreekwoorden-uitdrukkingen-po#20",
+   "stap": 3,
+   "q": "Ali had zijn been gebroken. Zijn vriend Joris bracht elke dag zijn huiswerk en hielp hem de trap op. Welk spreekwoord past?",
+   "redenen": [
+    "nakijker A: Fase 2: wrongHint 'Kijk wat Joris doet nu Ali hulp nodig heeft' parafraseert 'in nood ... vrienden' en verraadt het antwoord.",
+    "nakijker B: FASE 2: wrongHint wijst het kernelement van het goede spreekwoord vrijwel direct aan ('nu Ali hulp nodig heeft' -> in nood)."
+   ]
+  },
+  {
+   "id": "spreekwoorden-uitdrukkingen-po#21",
+   "stap": 3,
+   "q": "Het huis van de familie Jansen liep onder water. Hun vrienden woonden ver weg, maar de buurvrouw kwam meteen helpen dweilen. Welk spreekwoord past?",
+   "redenen": [
+    "nakijker A: Fase 2: wrongHint 'Kijk wie er komt helpen' (de buurvrouw) wijst direct naar 'Een goede buur...'.",
+    "nakijker B: FASE 2: wrongHint wijst het kernelement van het goede spreekwoord vrijwel direct aan ('kijk wie er komt helpen' -> de buurvrouw/goede buur)."
+   ]
+  },
+  {
+   "id": "spreekwoorden-uitdrukkingen-po#22",
+   "stap": 3,
+   "q": "Opa leerde als kind fietsen. Nu is hij tachtig en fietst hij nog elke dag zonder moeite. Welk spreekwoord past?",
+   "redenen": [
+    "nakijker A: Fase 2: wrongHint 'Kijk wanneer opa het fietsen leerde' (als kind) wijst direct naar 'Jong geleerd...'.",
+    "nakijker B: FASE 2: wrongHint wijst het kernelement van het goede spreekwoord vrijwel direct aan ('kijk wanneer opa het fietsen leerde' -> jong geleerd)."
+   ]
+  },
+  {
+   "id": "spreekwoorden-uitdrukkingen-po#23",
+   "stap": 3,
+   "q": "De weerman zei dat het zou gaan stormen. Daarom zette Fleur haar tuinstoelen op tijd in de schuur. Na de storm was alles nog heel. Welk spreekwoord past?",
+   "redenen": [
+    "nakijker A: Fase 2: wrongHint 'Kijk wat Fleur vooraf hoorde' (een waarschuwing) wijst direct naar 'Een gewaarschuwd man...'.",
+    "nakijker B: FASE 2: wrongHint wijst het kernelement van het goede spreekwoord vrijwel direct aan ('kijk wat Fleur vooraf hoorde' -> gewaarschuwd)."
+   ]
+  },
+  {
+   "id": "spreekwoorden-uitdrukkingen-po#24",
+   "stap": 4,
+   "q": "In een verhaal staat: *'Iedereen hielp samen mee...'* Over welk onderwerp gaat het passende spreekwoord waarschijnlijk?",
+   "redenen": [
+    "nakijker A: Verraadt zich: de vraagtekst bevat 'samen' ('Iedereen hielp samen mee'), optie 'Samenwerken' herhaalt dat woord letterlijk; toetst niets. Fase 2: wrongHint 'Kijk naar het signaalwoord samen' geeft het antwoord letterlijk weg.",
+    "nakijker B: Licht: het woord 'samen' in de vraag wijst vrijwel direct naar 'Samenwerken' (weinig denkwerk). | FASE 2: wrongHint bij 'Geduld' ('Kijk naar het signaalwoord samen') geeft het antwoord direct weg."
+   ]
+  },
+  {
+   "id": "spreekwoorden-uitdrukkingen-po#25",
+   "stap": 4,
+   "q": "Welk soort antwoord is bij een spreekwoord-vraag **niet** fout?",
+   "redenen": [
+    "nakijker A: Onhandige formulering met ontkenning ('welk soort antwoord is niet fout') en het goede antwoord is het enige positief geformuleerde, dus direct herkenbaar; overlapt bovendien sterk met bestaande vraag over 'letterlijk uitsluiten'.",
+    "nakijker B: Onhandige dubbele ontkenning ('niet fout'); beter 'Welk soort antwoord is goed?'. Bovendien triviaal: de goede optie is de enige positieve en verraadt zich direct."
+   ]
+  },
+  {
+   "id": "spreekwoorden-uitdrukkingen-po#26",
+   "stap": 4,
+   "q": "Je kent een spreekwoord niet, maar er staat het woord *'geld'* in. Waar gaat het dan waarschijnlijk over?",
+   "redenen": [
+    "nakijker A: Heuristiek 'geld = zuinigheid' is inhoudelijk aanvechtbaar (bv. 'Geld moet rollen', 'Geld maakt niet gelukkig' gaan niet over zuinig zijn); leert een onbetrouwbare gok-truc als feit. Liever schrappen of formuleren als 'volgens de tip in de uitleg'."
+   ]
+  }
+ ]
+}
