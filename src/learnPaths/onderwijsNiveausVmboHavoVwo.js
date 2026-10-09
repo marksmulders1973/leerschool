@@ -245,39 +245,6 @@ const steps = [
         wrongHints: [null, "Havo is een apart niveau; mavo is de bijnaam voor vmbo-tl.", "Dat zijn vmbo-leerwegen.", "Dat zijn profielen, geen smaken van vwo."],
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
-      {
-        q: "Waarin zit vooral het verschil tussen **havo en vwo**?",
-        options: [
-          "In tempo en diepte",
-          "Op de havo krijg je geen theorie",
-          "Op het vwo krijg je geen boeken",
-          "Havo duurt langer dan vwo",
-        ],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Leer je op de havo ook uit boeken?",
-          null,
-          "Hoeveel jaar duurt havo, en hoeveel jaar vwo?",
-        ],
-      },
-      {
-        q: "Waar staat de **C** in het profiel C&M voor?",
-        options: ["Cultuur", "Computer", "Chemie", "Cijfers"],
-        answer: 0,
-        wrongHints: [null, null, null, "Welke vakken horen bij C&M: talen en kunst, of rekenen?"],
-      },
-      {
-        q: "Wat zijn **Latijn en Grieks**?",
-        options: [
-          "Talen van de oude Romeinen en Grieken",
-          "Twee profielen op de havo",
-          "Twee leerwegen op het vmbo",
-          "Twee soorten sport op school",
-        ],
-        answer: 0,
-        wrongHints: [null, "Welke vier profielen zijn er op havo en vwo?", null, null],
-      },
     ],
   },
   {

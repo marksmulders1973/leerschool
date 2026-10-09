@@ -339,57 +339,6 @@ Heb je een getal nodig? Lijst! Wil je weten wat er mag of geldt? Tekst! Probeer 
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
-      {
-        q: "Kijk naar de openingstijden van Bibliotheek De Boekenberg. Op welke twee dagen gaat de bibliotheek al om 10.00 uur open?",
-        options: ["Woensdag en zaterdag", "Maandag en vrijdag", "Woensdag en vrijdag", "Maandag en zaterdag"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Op die twee dagen gaat de bibliotheek pas 's middags open. Kijk naar het getal vóór het streepje.",
-          null,
-          null,
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Zoek het gegeven",
-              tekst: "Nu zoek je geen dag, maar een openingstijd: 10.00 uur. Die staat steeds vóór het streepje.",
-            },
-            {
-              titel: "Loop de rijen langs",
-              tekst: "Kijk bij elke dag naar het eerste getal: maandag 13.00, woensdag 10.00, vrijdag 13.00, zaterdag 10.00.",
-            },
-            {
-              titel: "Tel de dagen",
-              tekst: "Bij welke twee dagen staat er 10.00 vóór het streepje?",
-            },
-          ],
-          woorden: [
-            {
-              woord: "streepje",
-              uitleg: "Bij tijden betekent het streepje 'tot'. 10.00 – 16.00 uur is dus: van 10 uur tot 4 uur 's middags.",
-            },
-          ],
-          theorie: "**Kruispunt-lezen andersom**\n\nMeestal weet je de dag en zoek je de tijd. Maar het kan ook andersom: je weet de tijd en zoekt de dagen. Kijk dan in de kolom met openingstijden en lees bij elk getal welke dag erbij hoort.",
-          voorbeelden: [
-            {
-              type: "andersom",
-              tekst: "Welke dag sluit om 20.00 uur? Zoek 20.00 achter het streepje → dat is vrijdag.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Voor of na het streepje",
-              uitleg: "Vóór het streepje staat de openingstijd, erna de sluitingstijd. Haal ze niet door elkaar.",
-            },
-          ],
-          niveaus: {
-            basis: "Kijk bij elke dag naar het getal vóór het streepje. Waar staat 10.00?",
-            simpeler: "Maandag begint om 13.00, vrijdag ook. Welke twee dagen beginnen eerder?",
-            nogSimpeler: "Zoek de twee regels die met 10.00 beginnen. Welke dagen zijn dat?",
-          },
-        },
-      },
     ],
   },
 
@@ -1442,62 +1391,6 @@ Neem rustig de tijd om terug te zoeken in de tekst hierboven — dat opzoeken ho
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
-      {
-        q: "Waar geef je je op als je wilt meedoen aan de talentenjacht?",
-        options: [
-          "Bij de kraam van meneer Baris, naast de feesttent",
-          "Bij mevrouw Kalden op het podium",
-          "Bij de burgemeester op het plein",
-          "Bij de ingang van het grasveld",
-        ],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Mevrouw Kalden zit in de feestcommissie. Maar noemt de tekst haar bij het opgeven?",
-          null,
-          null,
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Lijst of tekst?",
-              tekst: "Het programma geeft tijden en plekken van de activiteiten. Hoe je je opgeeft, is een regel: die staat in de tekst.",
-            },
-            {
-              titel: "Zoek de zin",
-              tekst: "Lees de alinea onder het programma. Zoek naar het woord 'opgeven' of 'geef je op'.",
-            },
-            {
-              titel: "Lees precies",
-              tekst: "Daar staat bij wiens kraam je je opgeeft, en waar die kraam staat.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "talentenjacht",
-              uitleg: "Een wedstrijd waarbij mensen laten zien wat ze goed kunnen, zoals zingen of goochelen.",
-            },
-          ],
-          theorie: "**Plek van de activiteit ≠ plek van het opgeven**\n\nDe talentenjacht zelf is op het podium (bij regen in de feesttent). Maar opgeven doe je ergens anders. Dat staat niet in het programma, alleen in de tekst.",
-          voorbeelden: [
-            {
-              type: "twee-plekken",
-              tekst: "Op een sportdag doe je mee op het veld, maar je meldt je misschien aan bij de tafel van de meester.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Regels in de tekst",
-              uitleg: "Wil je weten wat je moet doen om mee te mogen doen? Kijk dan in de tekst, niet alleen in de lijst.",
-            },
-          ],
-          niveaus: {
-            basis: "Zoek de zin met 'Geef je dan vóór 12.00 uur op'. Bij wie is dat?",
-            simpeler: "Bij welke kraam geef je je op, en naast welke tent staat die?",
-            nogSimpeler: "De tekst noemt een meneer met een kraam. Welke optie noemt hem?",
-          },
-        },
-      },
       {
         q: "Wat kost de toegang tot het buurtfeest in de Vlinderwijk?",
         options: [

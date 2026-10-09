@@ -860,57 +860,6 @@ const steps = [
         },
       },
       {
-        q: "Welke zin uit de folder **informeert** alleen, zonder dat er iets verkocht wordt?",
-        options: [
-          "\"Een goed ontbijt bevat granen, fruit en zuivel.\"",
-          "\"Kies voor Ochtendkracht: de slimme start van elke schooldag!\"",
-          "\"Haal deze week een pak Ochtendkracht bij supermarkt De Knabbelhoek.\"",
-          "\"Kinderen zijn er dol op — en jij straks ook!\"",
-        ],
-        answer: 0,
-        wrongHints: [null, "Er wordt een merknaam genoemd. Wat wil die zin dat je doet?", null, null],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Zoek de koop-signalen",
-              tekst: "Een merknaam, een winkelnaam of een opdracht om iets te halen: dat zijn signalen dat een zin wil verkopen.",
-            },
-            {
-              titel: "Controleer elke zin",
-              tekst: "Welke zin noemt geen merk, geen winkel en vraagt je niets te doen?",
-            },
-            {
-              titel: "Wat blijft er over?",
-              tekst: "Een algemene uitleg over wat er in een goed ontbijt zit. Die zin zou ook in een schoolboek kunnen staan.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "informeren",
-              uitleg: "De lezer iets leren of uitleggen, met feiten en zonder mening of verkoop.",
-            },
-          ],
-          theorie: "**Een folder heeft twee soorten zinnen**\n\n- Informerende zinnen: algemene feiten en uitleg (alinea 1).\n- Overtuigende zinnen: merknaam, winkel, 'haal', 'kies', 'wees er snel bij' (alinea 2 en 3).\n\nDe informerende zinnen zijn de aanloop; de overtuigende zinnen zijn het eindpunt.",
-          voorbeelden: [
-            {
-              type: "schoolboek-test",
-              tekst: "Zou de zin ook in je schoolboek kunnen staan? Dan informeert hij. Staat er een merk of winkel in? Dan wil hij verkopen.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Schoolboek-test",
-              uitleg: "Stel je voor dat de zin in een schoolboek staat. Klinkt hij dan nog gewoon? Dan is het een informerende zin.",
-            },
-          ],
-          niveaus: {
-            basis: "Welke zin noemt geen merk en geen winkel?",
-            simpeler: "Zou de zin ook in een schoolboek over gezond eten kunnen staan? Probeer het bij elke zin.",
-            nogSimpeler: "Zoek de zin waarin alleen staat wat er in een goed ontbijt zit.",
-          },
-        },
-      },
-      {
         q: "Stel: precies dezelfde eerste alinea over ontbijten staat in je schoolboek, zonder merknaam en zonder winkel. Wat is dan het doel van die tekst?",
         options: ["Informeren", "Overtuigen", "Amuseren", "Instrueren"],
         answer: 0,

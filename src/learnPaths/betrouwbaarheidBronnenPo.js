@@ -159,30 +159,6 @@ const steps = [
         },
       },
       {
-        q: "Waarom moet je oppassen met informatie van iemand die er geld aan wil verdienen?",
-        options: [
-          "die wil je iets verkopen",
-          "die schrijft te moeilijk",
-          "die heeft geen computer",
-          "die woont te ver weg",
-        ],
-        answer: 0,
-        wrongHints: [null, "Of iets moeilijk geschreven is, zegt niet of het klopt.", null, null],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Geld verdienen = verkopen",
-              tekst: "Wie geld wil verdienen, wil je iets verkopen. Die vertelt vooral de goede kanten van zijn product. Daarom is die informatie minder betrouwbaar.",
-            },
-          ],
-          niveaus: {
-            basis: "Wie geld wil verdienen, wil je iets verkopen. Daarom ben je voorzichtig.",
-            simpeler: "Wat wil iemand die geld wil verdienen van jou?",
-            nogSimpeler: "Wil een verkoper dat jij iets koopt?",
-          },
-        },
-      },
-      {
         q: "Op een website staat: 'Volgens dokter Jansen van het ziekenhuis in Utrecht is het gezond om elke dag te bewegen.' Wat maakt dit betrouwbaarder?",
         options: [
           "de naam van een deskundige",
@@ -749,30 +725,6 @@ const steps = [
             basis: "Een encyclopedie geeft gecontroleerde feiten over Mars.",
             simpeler: "Welke bron controleert haar informatie?",
             nogSimpeler: "Waar vind je feiten: in een encyclopedie of in een advertentie?",
-          },
-        },
-      },
-      {
-        q: "Een website over honden wordt gemaakt door een merk dat hondenvoer verkoopt. Welke vraag maakt je hier voorzichtig?",
-        options: [
-          "Wil de bron iets verkopen?",
-          "Is de tekst lang genoeg?",
-          "Staan er veel foto's op?",
-          "Heeft de site mooie kleuren?",
-        ],
-        answer: 0,
-        wrongHints: [null, "Zegt de lengte van een tekst of die klopt?", null, null],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Wil de bron iets verkopen?",
-              tekst: "Het merk verdient geld aan hondenvoer. Het kan dus vooral goede dingen over zijn eigen voer schrijven. Daarom vraag je je af of de bron iets wil verkopen.",
-            },
-          ],
-          niveaus: {
-            basis: "Een merk dat hondenvoer verkoopt, wil iets verkopen: daar let je op.",
-            simpeler: "Wat wil een bedrijf dat hondenvoer maakt het liefst?",
-            nogSimpeler: "Wil een verkoper dat je iets koopt?",
           },
         },
       },

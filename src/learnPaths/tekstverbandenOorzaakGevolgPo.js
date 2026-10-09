@@ -1064,62 +1064,6 @@ De strategie blijft: zoek de wegwijzer (of stel zelf de waardoor-vraag), teken d
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "*\"De wedstrijd werd afgelast, doordat het veld onder water stond.\"* — Welke zin betekent precies hetzelfde?",
-        options: [
-          "Doordat het veld onder water stond, werd de wedstrijd afgelast.",
-          "Doordat de wedstrijd werd afgelast, stond het veld onder water.",
-          "Het veld stond onder water, maar de wedstrijd ging gewoon door.",
-          "Eerst werd de wedstrijd afgelast, daarna liep het veld onder water.",
-        ],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Kijk naar de richting van de pijl. Kan een afgelaste wedstrijd een veld onder water zetten?",
-          null,
-          null,
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Vind de oorzaak",
-              tekst: "Achter 'doordat' staat de oorzaak: het veld stond onder water. Het afgelasten is het gevolg.",
-            },
-            {
-              titel: "Gebruik de omdraai-truc",
-              tekst: "Zet de oorzaak vooraan, maar houd 'doordat' bij de oorzaak. Dan blijft de betekenis hetzelfde.",
-            },
-            {
-              titel: "Controleer de pijl",
-              tekst: "Pijl: water op het veld → wedstrijd afgelast. Zoek de zin waarin de pijl precies zo loopt.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "afgelast",
-              uitleg: "Niet door laten gaan. Een afgelaste wedstrijd wordt niet gespeeld.",
-            },
-          ],
-          theorie: "**De omdraai-truc**\n\n'Sanne bleef thuis, omdat ze koorts had.'\n= 'Omdat ze koorts had, bleef Sanne thuis.'\n\nDe volgorde in de zin verandert, de pijl niet. Het signaalwoord blijft bij de oorzaak staan.",
-          voorbeelden: [
-            {
-              type: "omdraaien",
-              tekst: "'De weg was glad, doordat het gesneeuwd had.' = 'Doordat het gesneeuwd had, was de weg glad.'",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Signaalwoord blijft bij de oorzaak",
-              uitleg: "Verhuist 'doordat' naar het gevolg? Dan draait de pijl om en verandert de betekenis.",
-            },
-          ],
-          niveaus: {
-            basis: "Achter welk stukje staat 'doordat' in de oorspronkelijke zin? Waar staat het in de nieuwe zin?",
-            simpeler: "De oorzaak is het water op het veld. In welke nieuwe zin staat 'doordat' nog steeds vóór het water?",
-            nogSimpeler: "Zoek de zin die begint met 'Doordat het veld onder water stond'.",
-          },
-        },
-      },
-      {
         q: "Bij welk zinnenpaar gebeurt het tweede alleen ná het eerste, en níét dóór het eerste?",
         options: [
           "Lotte poetste haar tanden. Daarna trok ze haar jas aan.",

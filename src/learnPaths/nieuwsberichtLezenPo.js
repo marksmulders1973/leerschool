@@ -1069,62 +1069,6 @@ De vragen hieronder gaan over precies deze drie valkuilen.`,
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "De kop luidt: *\"Hele school ligt plat door griep\"*. In de tekst staat: *\"Op basisschool De Linde zaten dinsdag elf van de tweehonderd leerlingen met griep thuis.\"* Wat kun je hierover zeggen?",
-        options: [
-          "De kop overdrijft: maar elf van de tweehonderd leerlingen zaten thuis",
-          "De school was dinsdag helemaal dicht door de griep",
-          "Alle tweehonderd leerlingen zaten met griep thuis",
-          "De tekst overdrijft en de kop klopt precies",
-        ],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Staat er in de tekst dat de school dicht was? Lees de zin nog eens precies.",
-          null,
-          "Wie gebruikt de grote woorden: de kop of de tekst? En waar staan de precieze getallen?",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Lees de kop",
-              tekst: "De kop zegt: de hele school ligt plat. Dat klinkt alsof bijna niemand er was.",
-            },
-            {
-              titel: "Lees de tekst",
-              tekst: "De tekst noemt precieze getallen: elf van de tweehonderd leerlingen zaten met griep thuis.",
-            },
-            {
-              titel: "Vergelijk",
-              tekst: "Elf van de tweehonderd is maar een klein deel. De kop maakt het nieuws dus groter dan het is.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "overdrijven",
-              uitleg: "Iets groter of erger maken dan het echt is.",
-            },
-          ],
-          theorie: "**Koppen overdrijven soms**\n\nEen kop moet kort en pakkend zijn. Daarom kiezen journalisten soms grote woorden. De precieze informatie, zoals getallen, staat in de tekst.\n\nTwijfel je? Vertrouw dan de tekst, niet de kop.",
-          voorbeelden: [
-            {
-              type: "overdrijvende kop",
-              tekst: "Kop: 'Dorp onder water'. Tekst: 'In twee kelders stond een laagje water.' De kop maakt het nieuws groter.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Kop en tekst vergelijken",
-              uitleg: "Op de toets krijg je vaak een vraag waarbij je de kop naast de tekst moet leggen. Kijk dan naar de getallen in de tekst.",
-            },
-          ],
-          niveaus: {
-            basis: "Hoeveel leerlingen waren er volgens de tekst ziek, en hoeveel zitten er op school?",
-            simpeler: "Elf van de tweehonderd: is dat 'de hele school'? Wie zegt hier iets groters dan het is?",
-            nogSimpeler: "De tekst geeft de echte getallen. Klopt 'hele school' daarmee?",
-          },
-        },
-      },
-      {
         q: "In een nieuwsbericht staat: *\"'Onze ijsbaan is vierhonderd meter lang', zegt beheerder Kees.\"* — Is dit een feit of een mening?",
         options: [
           "Een feit — je kunt nameten hoe lang de baan is",
@@ -1536,57 +1480,6 @@ Pak bij elke vraag je vaste aanpak erbij: **bedenk** welke gouden vraag het is, 
             basis: "Lees de derde alinea. Waar hoorden de kinderen geritsel?",
             simpeler: "De kinderen voetbalden op straat. Maar waar stond Berry, kauwend op een krop sla?",
             nogSimpeler: "Zoek de zin met 'moestuin'. Van wie was die moestuin?",
-          },
-        },
-      },
-      {
-        q: "Welke beloning kregen de twee kinderen die Berry vonden?",
-        options: [
-          "Ze mogen Berry voortaan elke week komen borstelen",
-          "Ze kregen een krop sla uit de moestuin",
-          "Ze mochten Berry een weekend mee naar huis",
-          "Ze kregen een geldbedrag van boer Teun",
-        ],
-        answer: 0,
-        wrongHints: [null, "De krop sla speelt een rol in het verhaal, maar wie at die op?", null, null],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Wat zoek je?",
-              tekst: "Een beloning: wat de vinders kregen.",
-            },
-            {
-              titel: "Waar staat het?",
-              tekst: "Dit is een detail aan het einde van het verhaal. Kijk in de laatste alinea.",
-            },
-            {
-              titel: "Lees precies",
-              tekst: "Daar staat wat de twee vinders voortaan mogen doen.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "beloning",
-              uitleg: "Iets wat je krijgt als dank voor iets goeds dat je hebt gedaan.",
-            },
-          ],
-          theorie: "**Het slot van een nieuwsbericht**\n\nOnderaan een nieuwsbericht staan vaak de laatste weetjes: hoe het afliep en wat er daarna nog gebeurde. Zoek je zo'n afloop-detail? Kijk dan in de laatste alinea.",
-          voorbeelden: [
-            {
-              type: "afloop",
-              tekst: "'Het kapotte hek is inmiddels gerepareerd.' — ook dat is een afloop-detail uit de laatste alinea.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Opzoeken",
-              uitleg: "Twijfel je tussen opties? Zoek het woord 'beloning' op in de tekst en lees de zin erachter.",
-            },
-          ],
-          niveaus: {
-            basis: "Lees de laatste alinea. Wat mogen de twee vinders voortaan doen?",
-            simpeler: "Zoek het woord 'beloning' in de tekst. Wat staat er direct achter?",
-            nogSimpeler: "Wat mogen de kinderen elke week met Berry doen?",
           },
         },
       },

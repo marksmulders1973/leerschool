@@ -283,61 +283,6 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
-      {
-        q: "Lees: *\"Na een uur wachten werd Sam ongeduldig en liep hij steeds heen en weer.\"* — Wat betekent 'ongeduldig'?",
-        options: [
-          "Niet langer rustig kunnen wachten",
-          "Heel blij en vrolijk",
-          "Moe en slaperig",
-          "Bang voor wat er komt",
-        ],
-        answer: 0,
-        wrongHints: [null, null, "Wie moe en slaperig is, gaat zitten. Wat doet Sam?", null],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Haal het woord uit elkaar",
-              tekst: "on + geduldig. 'On-' betekent 'niet'. Ongeduldig is dus: niet geduldig.",
-            },
-            {
-              titel: "Wat is geduldig?",
-              tekst: "Geduldig zijn betekent rustig kunnen wachten. Ongeduldig is dan: niet meer rustig kunnen wachten.",
-            },
-            {
-              titel: "Controleer met de zin",
-              tekst: "Sam heeft al een uur gewacht en loopt steeds heen en weer. Dat past: hij kan niet meer rustig blijven.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "on-",
-              uitleg: "Een stukje voor een woord dat 'niet' betekent: onaardig, onmogelijk.",
-            },
-            {
-              woord: "geduldig",
-              uitleg: "Rustig kunnen wachten zonder boos of onrustig te worden.",
-            },
-          ],
-          theorie: "**Truc 4: haal het woord uit elkaar.**\n\nVeel lange woorden bestaan uit stukjes die je al kent:\n- **on-** = niet (onaardig, onzichtbaar)\n- twee woorden aan elkaar (regenjas, fietsbel)\n\nZoek het stukje dat je kent, en controleer daarna met de zin.",
-          voorbeelden: [
-            {
-              type: "on-",
-              tekst: "'Het werk was onaf.' → on + af = niet af.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "On- = niet",
-              uitleg: "Begint een woord met 'on-'? Haal dat eraf en zet er 'niet' voor.",
-            },
-          ],
-          niveaus: {
-            basis: "Haal het woord uit elkaar: on + geduldig. Wat betekent geduldig, en wat doet 'on-' ermee?",
-            simpeler: "Geduldig is rustig wachten. 'On-' betekent 'niet'. Wat is ongeduldig dan?",
-            nogSimpeler: "Kan Sam nog rustig blijven wachten?",
-          },
-        },
-      },
     ],
   },
 
