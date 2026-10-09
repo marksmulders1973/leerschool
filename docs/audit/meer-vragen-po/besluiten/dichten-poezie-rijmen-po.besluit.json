@@ -1,0 +1,1216 @@
+{
+ "pathId": "dichten-poezie-rijmen-po",
+ "geschreven": 23,
+ "opgenomen": [
+  {
+   "stap": 0,
+   "q": "Hoe heet de **lege ruimte** tussen twee coupletten?",
+   "options": [
+    "Wit",
+    "Refrein",
+    "Versregel",
+    "Strofe"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Een refrein komt steeds terug. Is lege ruimte iets wat terugkomt?",
+    null,
+    "Een strofe is een groepje regels. Staan er in lege ruimte regels?"
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Coupletten met ruimte ertussen",
+      "tekst": "Een gedicht bestaat vaak uit een paar **coupletten** (groepjes regels). Tussen twee coupletten staat een lege regel."
+     },
+     {
+      "titel": "Die ruimte heet wit",
+      "tekst": "Die lege ruimte heet **wit**. Het wit is niet zomaar leeg: het geeft een **pauze** in het gedicht."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "wit",
+      "uitleg": "Lege ruimte tussen coupletten."
+     },
+     {
+      "woord": "couplet / strofe",
+      "uitleg": "Groepje regels bij elkaar."
+     }
+    ],
+    "theorie": "Toets-tip: wit hoort bij de bouwstenen van een gedicht, net als versregel, couplet en refrein.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "Couplet 1 (vier regels) — lege regel — couplet 2 (vier regels). Die lege regel is het wit."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Wit = waar het **wit** van het papier te zien is: geen woorden, wel een pauze."
+     }
+    ],
+    "niveaus": {
+     "basis": "De lege ruimte tussen coupletten heet wit.",
+     "simpeler": "Tussen twee groepjes regels staat niets. Dat heet wit.",
+     "nogSimpeler": "Lege ruimte = wit"
+    }
+   },
+   "id": "dichten-poezie-rijmen-po#0"
+  },
+  {
+   "stap": 0,
+   "q": "Waarom rijmen veel **kinderliedjes**?",
+   "options": [
+    "Rijm helpt je de tekst te onthouden",
+    "Rijm maakt het liedje langer",
+    "Rijm is verplicht in elk liedje",
+    "Rijm maakt de woorden moeilijker"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Wordt een liedje echt langer als de woorden op elkaar rijmen?",
+    "Ken je ook liedjes of gedichten zonder rijm?",
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Rijm blijft hangen",
+      "tekst": "Woorden die op elkaar rijmen, klinken hetzelfde aan het eind. Dat blijft makkelijk in je hoofd hangen."
+     },
+     {
+      "titel": "Daarom rijmen liedjes",
+      "tekst": "Daarom rijmen kinderliedjes vaak: je kunt ze dan beter **onthouden**. Reclames en leuzes doen dat ook."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "rijm",
+      "uitleg": "Woorden die hetzelfde klinken aan het eind."
+     },
+     {
+      "woord": "onthouden",
+      "uitleg": "Iets in je hoofd houden."
+     }
+    ],
+    "theorie": "Rijm is niet verplicht (een vrij vers rijmt niet), maar het helpt wel bij onthouden.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "'... met je knecht / ... even recht': knecht en recht rijmen, en zo onthoud je de regels."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Rijm = geheugensteuntje."
+     }
+    ],
+    "niveaus": {
+     "basis": "Rijm helpt je om een tekst te onthouden.",
+     "simpeler": "Woorden die rijmen, onthoud je makkelijker.",
+     "nogSimpeler": "Rijm helpt onthouden"
+    }
+   },
+   "id": "dichten-poezie-rijmen-po#1"
+  },
+  {
+   "stap": 0,
+   "q": "Hoe heet een couplet van **vier** regels?",
+   "options": [
+    "Kwatrijn",
+    "Terzine",
+    "Sextet",
+    "Refrein"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Tel nog eens: over hoeveel regels gaat het hier?",
+    null,
+    "Een refrein is een stuk dat steeds terugkomt. Gaat het daar hier om?"
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Een couplet heeft regels",
+      "tekst": "Een **couplet** is een groepje regels. Het aantal regels kan verschillen."
+     },
+     {
+      "titel": "Namen per aantal",
+      "tekst": "• 4 regels = **kwatrijn** (meest gebruikt)\n• 3 regels = terzine\n• 6 regels = sextet"
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "kwatrijn",
+      "uitleg": "Couplet van 4 regels."
+     },
+     {
+      "woord": "terzine",
+      "uitleg": "Couplet van 3 regels."
+     },
+     {
+      "woord": "sextet",
+      "uitleg": "Couplet van 6 regels."
+     }
+    ],
+    "theorie": "De meeste coupletten hebben 4 regels. Zo'n couplet heet een kwatrijn.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "Een couplet met regel 1, 2, 3 en 4 = een kwatrijn."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Kwa-trijn: denk aan 'kwart', vier stukjes."
+     }
+    ],
+    "niveaus": {
+     "basis": "Een couplet van vier regels heet een kwatrijn.",
+     "simpeler": "4 regels samen = kwatrijn.",
+     "nogSimpeler": "4 regels = kwatrijn"
+    }
+   },
+   "id": "dichten-poezie-rijmen-po#2"
+  },
+  {
+   "stap": 0,
+   "q": "Wie schreef het gedicht **'Herinnering aan Holland'**?",
+   "options": [
+    "Hendrik Marsman",
+    "Annie M.G. Schmidt",
+    "Joost van den Vondel",
+    "Toon Tellegen"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Zij is vooral bekend van kindergedichten. Is dit een kindergedicht?",
+    "Hij leefde in de Gouden Eeuw. Dit gedicht is van veel later.",
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Een beroemd gedicht",
+      "tekst": "'Herinnering aan Holland' begint met: 'Denkend aan Holland zie ik brede rivieren traag door oneindig laagland gaan'."
+     },
+     {
+      "titel": "De dichter",
+      "tekst": "Het is geschreven door **Hendrik Marsman**. Het werd in 2000 gekozen tot 'gedicht van de eeuw'."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "Hendrik Marsman",
+      "uitleg": "Nederlandse dichter van 'Herinnering aan Holland'."
+     },
+     {
+      "woord": "Annie M.G. Schmidt",
+      "uitleg": "Dichter van kindergedichten."
+     }
+    ],
+    "theorie": "Bekende dichters: Annie M.G. Schmidt (kindergedichten), Vondel (Gouden Eeuw), Marsman ('Herinnering aan Holland'), Toon Tellegen (dieren).",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "'Denkend aan Holland ...' = de beginregel van het gedicht van Marsman."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Holland en Marsman: denk aan 'Denkend aan Holland'."
+     }
+    ],
+    "niveaus": {
+     "basis": "'Herinnering aan Holland' is van Hendrik Marsman.",
+     "simpeler": "Het gedicht 'Denkend aan Holland ...' is van Marsman.",
+     "nogSimpeler": "Marsman"
+    }
+   },
+   "id": "dichten-poezie-rijmen-po#3"
+  },
+  {
+   "stap": 0,
+   "q": "In welke tijd leefde de dichter **Joost van den Vondel**?",
+   "options": [
+    "In de Gouden Eeuw",
+    "In de Middeleeuwen",
+    "In de tijd van de Romeinen",
+    "Na het jaar 2000"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    "Vondel schreef in het Nederlands. Spraken de Romeinen al Nederlands?",
+    "Leeft deze dichter nu nog? Kijk naar zijn jaartallen in de uitleg."
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Vondel",
+      "tekst": "**Joost van den Vondel** is een beroemde Nederlandse dichter. Hij leefde van 1587 tot 1679."
+     },
+     {
+      "titel": "De Gouden Eeuw",
+      "tekst": "De jaren 1600 heten in Nederland de **Gouden Eeuw**. Vondel leefde precies in die tijd. Hij schreef onder andere 'Gysbreght van Aemstel'."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "Gouden Eeuw",
+      "uitleg": "De jaren 1600 in Nederland."
+     },
+     {
+      "woord": "dichter",
+      "uitleg": "Iemand die gedichten schrijft."
+     }
+    ],
+    "theorie": "Vondel = Gouden Eeuw. Annie M.G. Schmidt en Marsman leefden veel later.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "Vondel: 1587-1679 → de Gouden Eeuw."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Vondel = oud, uit de Gouden Eeuw."
+     }
+    ],
+    "niveaus": {
+     "basis": "Vondel leefde in de Gouden Eeuw (1587-1679).",
+     "simpeler": "Vondel is een dichter van heel lang geleden: de Gouden Eeuw.",
+     "nogSimpeler": "Gouden Eeuw"
+    }
+   },
+   "id": "dichten-poezie-rijmen-po#4"
+  },
+  {
+   "stap": 1,
+   "q": "Wat is **binnenrijm**?",
+   "options": [
+    "Rijm midden in een regel",
+    "Rijm aan het eind van twee regels",
+    "Woorden die met dezelfde letter beginnen",
+    "Een vast patroon van klemtonen"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Waar staan de woorden die rijmen: aan het eind of ergens anders?",
+    null,
+    "Klemtonen horen bij ritme. Gaat het hier over ritme?"
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Rijm kan op meer plekken",
+      "tekst": "Meestal rijmen de woorden aan het eind van de regels (eindrijm). Maar het kan ook anders."
+     },
+     {
+      "titel": "Binnenrijm",
+      "tekst": "Bij **binnenrijm** staan de woorden die rijmen **midden in** één regel. Bijvoorbeeld: 'Er liep een beer met een veer in de wei.' (beer – veer)"
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "binnenrijm",
+      "uitleg": "Rijm midden in een regel."
+     },
+     {
+      "woord": "eindrijm",
+      "uitleg": "Rijm aan het eind van regels."
+     },
+     {
+      "woord": "alliteratie",
+      "uitleg": "Woorden beginnen met dezelfde letter."
+     }
+    ],
+    "theorie": "Drie soorten rijm: eindrijm (eind van de regel), beginrijm/alliteratie (begin van woorden), binnenrijm (midden in de regel).",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "'Ik zag een muis in ons huis heel snel weglopen.' muis – huis staan midden in de regel = binnenrijm."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Binnen-rijm = rijm **binnen** in de regel."
+     }
+    ],
+    "niveaus": {
+     "basis": "Binnenrijm = rijm midden in een regel.",
+     "simpeler": "Twee woorden in dezelfde regel rijmen op elkaar.",
+     "nogSimpeler": "Rijm in het midden"
+    }
+   },
+   "id": "dichten-poezie-rijmen-po#5"
+  },
+  {
+   "stap": 1,
+   "q": "*'De poes ligt op de **mat** / Ze droomt van een **muis** / Die woont in ons **huis** / Wat een luie **kat**!'* Welk rijmschema is dit?",
+   "options": [
+    "ABBA",
+    "ABAB",
+    "AABB",
+    "ABCD"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Rijmt regel 1 op regel 3? Zeg mat en huis eens hardop.",
+    null,
+    "Kijk of er eindwoorden zijn die wél op elkaar rijmen."
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Eindwoorden zoeken",
+      "tekst": "De eindwoorden zijn: **mat**, **muis**, **huis**, **kat**."
+     },
+     {
+      "titel": "Letters geven",
+      "tekst": "mat = A. muis rijmt niet op mat = B. huis rijmt op muis = B. kat rijmt op mat = A."
+     },
+     {
+      "titel": "Het schema",
+      "tekst": "Samen: A B B A. De buitenste regels rijmen en de middelste regels rijmen. Dat heet **omarmend rijm**."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "rijmschema",
+      "uitleg": "Patroon van rijm in een gedicht."
+     },
+     {
+      "woord": "omarmend (ABBA)",
+      "uitleg": "Regel 1 met 4, regel 2 met 3."
+     }
+    ],
+    "theorie": "Stappenplan: eerste eindwoord = A. Nieuw rijmgeluid = nieuwe letter. Zelfde rijmgeluid als eerder = zelfde letter.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "mat (A) – muis (B) – huis (B) – kat (A) = ABBA."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Schrijf de letter achter elk eindwoord. Dan lees je het schema zo af."
+     }
+    ],
+    "niveaus": {
+     "basis": "mat-kat rijmen (A), muis-huis rijmen (B): ABBA.",
+     "simpeler": "Regel 1 en 4 rijmen, regel 2 en 3 rijmen.",
+     "nogSimpeler": "ABBA"
+    }
+   },
+   "id": "dichten-poezie-rijmen-po#6"
+  },
+  {
+   "stap": 1,
+   "q": "*'Ik zie een **boot** / Hij vaart op **zee** / De boot is **groot** / Ik ga graag **mee**.'* Welk rijmschema is dit?",
+   "options": [
+    "ABAB",
+    "ABBA",
+    "AABB",
+    "AAAA"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Rijmt regel 2 op regel 3? Zeg zee en groot eens hardop.",
+    null,
+    "Rijmen alle vier de eindwoorden op elkaar?"
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Eindwoorden zoeken",
+      "tekst": "De eindwoorden zijn: **boot**, **zee**, **groot**, **mee**."
+     },
+     {
+      "titel": "Letters geven",
+      "tekst": "boot = A. zee rijmt niet op boot = B. groot rijmt op boot = A. mee rijmt op zee = B."
+     },
+     {
+      "titel": "Het schema",
+      "tekst": "Samen: A B A B. Het rijm wisselt steeds. Dat heet **gekruist rijm**."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "gekruist (ABAB)",
+      "uitleg": "Regel 1 met 3, regel 2 met 4."
+     },
+     {
+      "woord": "paarrijm (AABB)",
+      "uitleg": "Twee regels achter elkaar rijmen."
+     }
+    ],
+    "theorie": "Stappenplan: eerste eindwoord = A. Nieuw rijmgeluid = nieuwe letter. Zelfde rijmgeluid als eerder = zelfde letter.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "boot (A) – zee (B) – groot (A) – mee (B) = ABAB."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Wisselt het rijm steeds om? Dan is het ABAB."
+     }
+    ],
+    "niveaus": {
+     "basis": "boot-groot rijmen (A), zee-mee rijmen (B): ABAB.",
+     "simpeler": "Regel 1 en 3 rijmen, regel 2 en 4 rijmen.",
+     "nogSimpeler": "ABAB"
+    }
+   },
+   "id": "dichten-poezie-rijmen-po#7"
+  },
+  {
+   "stap": 1,
+   "q": "*'Ik zag een grote beer / Hij liep maar heen en ...'* Welk woord past hier en **rijmt**?",
+   "options": [
+    "weer",
+    "terug",
+    "rond",
+    "snel"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Zeg 'beer' en 'terug' hardop. Klinken ze hetzelfde aan het eind?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Waar moet het rijmen?",
+      "tekst": "Het laatste woord moet rijmen op **beer**, het eindwoord van de eerste regel."
+     },
+     {
+      "titel": "Hardop zeggen",
+      "tekst": "beer – weer: allebei **-eer**. Dat rijmt. 'Heen en weer' is ook een bekende uitdrukking."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "eindrijm",
+      "uitleg": "Eindwoorden klinken hetzelfde."
+     }
+    ],
+    "theorie": "Toets-tip: zeg de eindwoorden hardop. Hoor je dezelfde klank aan het eind? Dan rijmt het.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "beer – weer (-eer) = rijm."
+     },
+     {
+      "type": "stap",
+      "tekst": "beer – rond = geen rijm."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Zoek een woord dat op dezelfde klank eindigt als beer."
+     }
+    ],
+    "niveaus": {
+     "basis": "Weer rijmt op beer (allebei -eer).",
+     "simpeler": "beer ... weer: dezelfde eindklank.",
+     "nogSimpeler": "weer"
+    }
+   },
+   "id": "dichten-poezie-rijmen-po#8"
+  },
+  {
+   "stap": 1,
+   "q": "In welke zin staat **alliteratie**?",
+   "options": [
+    "Kleine Kees kookt koffie.",
+    "Ik drink een glas melk.",
+    "De zon schijnt op het dak.",
+    "Wij gaan vandaag naar het bos."
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Kijk naar de eerste letter van elk woord. Komt dezelfde letter een paar keer achter elkaar?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Wat is alliteratie?",
+      "tekst": "Bij **alliteratie** beginnen woorden achter elkaar met **dezelfde letter** (of klank)."
+     },
+     {
+      "titel": "Kijk naar de beginletters",
+      "tekst": "Kleine – Kees – kookt – koffie: K – K – K – K. Vier keer dezelfde beginletter."
+     },
+     {
+      "titel": "De andere zinnen",
+      "tekst": "In de andere zinnen begint niet steeds een woord met dezelfde letter."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "alliteratie",
+      "uitleg": "Woorden beginnen met dezelfde letter."
+     },
+     {
+      "woord": "beginrijm",
+      "uitleg": "Ander woord voor alliteratie."
+     }
+    ],
+    "theorie": "Toets-tip: zet je vinger onder de eerste letter van elk woord. Zie je dezelfde letter steeds terug? Alliteratie!",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "'Kleine Kees kookt koffie' = K-K-K-K = alliteratie."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Alliteratie = beginletters gelijk."
+     }
+    ],
+    "niveaus": {
+     "basis": "Kleine Kees kookt koffie: steeds de K.",
+     "simpeler": "Kijk naar de eerste letters: K, K, K, K.",
+     "nogSimpeler": "Zelfde beginletter"
+    }
+   },
+   "id": "dichten-poezie-rijmen-po#9"
+  },
+  {
+   "stap": 1,
+   "q": "Je zoekt het rijmschema. Het eerste eindwoord krijgt de letter **A**. Het tweede eindwoord rijmt daar **niet** op. Welke letter krijgt het tweede eindwoord?",
+   "options": [
+    "B",
+    "A",
+    "C",
+    "D"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "De letter A is voor woorden die op het eerste eindwoord rijmen. Rijmt dit woord daarop?",
+    "Is er al een letter vóór C gebruikt voor een nieuw rijmgeluid?",
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Het stappenplan",
+      "tekst": "1. Zoek de eindwoorden.\n2. Eerste eindwoord = **A**.\n3. Nieuw rijmgeluid = **volgende letter**.\n4. Zelfde rijmgeluid als eerder = zelfde letter."
+     },
+     {
+      "titel": "Toepassen",
+      "tekst": "Het tweede eindwoord rijmt niet op A. Het is dus een nieuw rijmgeluid. De volgende letter na A is **B**."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "rijmschema",
+      "uitleg": "Patroon van rijm, met letters."
+     },
+     {
+      "woord": "eindwoord",
+      "uitleg": "Laatste woord van een regel."
+     }
+    ],
+    "theorie": "Nieuwe klank? Dan neem je de eerstvolgende letter die nog niet gebruikt is: A, dan B, dan C.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "boom (A) – kat (B): kat rijmt niet op boom, dus B."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Letters gaan op volgorde: A, B, C, D."
+     }
+    ],
+    "niveaus": {
+     "basis": "Nieuw rijmgeluid na A = B.",
+     "simpeler": "Rijmt niet op A? Dan is het B.",
+     "nogSimpeler": "B"
+    }
+   },
+   "id": "dichten-poezie-rijmen-po#10"
+  },
+  {
+   "stap": 2,
+   "q": "In welke zin staat een **vergelijking**?",
+   "options": [
+    "Haar ogen glinsteren als sterren.",
+    "Haar ogen zijn twee sterren.",
+    "De bomen dansen in de wind.",
+    "Ik heb wel duizend vragen."
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Zoek het woordje dat bij een vergelijking hoort. Staat dat in deze zin?",
+    null,
+    "Heb je echt duizend vragen? Welke soort beeldspraak is dat?"
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Vergelijking herkennen",
+      "tekst": "Bij een **vergelijking** staat er **'als'** of **'zo ... als'** in de zin."
+     },
+     {
+      "titel": "Kijk naar de zinnen",
+      "tekst": "'Haar ogen glinsteren **als** sterren' = vergelijking.\n'Haar ogen zijn twee sterren' = metafoor (geen 'als').\n'De bomen dansen' = personificatie.\n'Duizend vragen' = hyperbool."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "vergelijking",
+      "uitleg": "Beeldspraak met 'als'."
+     },
+     {
+      "woord": "metafoor",
+      "uitleg": "Beeldspraak zonder 'als'."
+     }
+    ],
+    "theorie": "Personificatie = ding doet als mens. Vergelijking = met 'als'. Metafoor = zonder 'als'. Hyperbool = overdrijving.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "'Zo zacht als een kussen' = vergelijking."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Zie je 'als'? Dan is het een vergelijking."
+     }
+    ],
+    "niveaus": {
+     "basis": "Met 'als' = vergelijking.",
+     "simpeler": "Zoek het woordje 'als'.",
+     "nogSimpeler": "Als = vergelijking"
+    }
+   },
+   "id": "dichten-poezie-rijmen-po#12"
+  },
+  {
+   "stap": 2,
+   "q": "Een gedicht gaat over **donkere wolken**, **regen** en een **lege straat**. Welke sfeer past daar het best?",
+   "options": [
+    "Somber",
+    "Vrolijk",
+    "Grappig",
+    "Feestelijk"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Word je blij van donkere wolken en een lege straat?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Wat is sfeer?",
+      "tekst": "De **sfeer** van een gedicht is de stemming: vrolijk, droevig, somber, spannend."
+     },
+     {
+      "titel": "Kijk naar de woorden",
+      "tekst": "Donkere wolken, regen, een lege straat: dat zijn woorden die je een **sombere** stemming geven."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "sfeer",
+      "uitleg": "De stemming van een gedicht."
+     },
+     {
+      "woord": "somber",
+      "uitleg": "Donker en een beetje droevig."
+     }
+    ],
+    "theorie": "Toets-tip: let op de woorden die de dichter kiest. 'Zonnig' en 'bloemen' = vrolijk. 'Donker' en 'donderwolken' = somber.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "'De zon schijnt, de bloemen bloeien' = vrolijke sfeer."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Donkere woorden = sombere sfeer."
+     }
+    ],
+    "niveaus": {
+     "basis": "Donkere wolken en regen geven een sombere sfeer.",
+     "simpeler": "Donker en nat = somber.",
+     "nogSimpeler": "Somber"
+    }
+   },
+   "id": "dichten-poezie-rijmen-po#14"
+  },
+  {
+   "stap": 2,
+   "q": "*'Ik sterf van de honger!'* Wat bedoelt de spreker?",
+   "options": [
+    "Ik heb heel erge honger",
+    "Ik ben heel erg ziek",
+    "Ik heb net veel gegeten",
+    "Ik ben heel erg moe"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Gaat iemand die dit roept echt dood? Waarom zegt hij het dan?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Overdrijving",
+      "tekst": "Niemand gaat echt dood als hij dit zegt. Het is een **hyperbool**: een overdrijving."
+     },
+     {
+      "titel": "Wat wordt bedoeld?",
+      "tekst": "De spreker wil laten merken dat hij **heel erge honger** heeft."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "hyperbool",
+      "uitleg": "Overdrijving."
+     },
+     {
+      "woord": "figuurlijk",
+      "uitleg": "Niet echt zo bedoeld."
+     }
+    ],
+    "theorie": "Hyperbool = overdrijven om iets sterker te zeggen. 'Ik heb het honderd keer gezegd' is ook een hyperbool.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "'Ik heb wel duizend vragen' = ik heb veel vragen."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Overdrijving? Haal de overdrijving weg: wat blijft er over?"
+     }
+    ],
+    "niveaus": {
+     "basis": "Het is een overdrijving: hij heeft heel erge honger.",
+     "simpeler": "Hij overdrijft: hij heeft veel honger.",
+     "nogSimpeler": "Veel honger"
+    }
+   },
+   "id": "dichten-poezie-rijmen-po#16"
+  },
+  {
+   "stap": 3,
+   "q": "Een gedicht dat iemand of iets **eert** (een eerbetoon) heet een ...",
+   "options": [
+    "ode",
+    "ballade",
+    "haiku",
+    "limerick"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Een ballade vertelt een verhaal. Gaat het hier om een verhaal?",
+    null,
+    "Een limerick is grappig. Is een eerbetoon grappig bedoeld?"
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Eerbetoon",
+      "tekst": "Een **eerbetoon** is iets wat je maakt om te laten zien hoe belangrijk of bijzonder iemand of iets is."
+     },
+     {
+      "titel": "De ode",
+      "tekst": "Een gedicht ter ere van iemand of iets heet een **ode**. Bijvoorbeeld 'Ode aan mijn moeder'."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "ode",
+      "uitleg": "Gedicht ter ere van iemand of iets."
+     },
+     {
+      "woord": "ballade",
+      "uitleg": "Gedicht dat een verhaal vertelt."
+     }
+    ],
+    "theorie": "Soorten: ode = eerbetoon, elegie = droevig, ballade = verhaal, limerick = grappig, haiku = Japans 5-7-5.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "'Ode aan de vrijheid' = een gedicht dat de vrijheid eert."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Ode = 'O, wat ben jij mooi!'"
+     }
+    ],
+    "niveaus": {
+     "basis": "Een ode is een gedicht ter ere van iemand of iets.",
+     "simpeler": "Ode = eerbetoon.",
+     "nogSimpeler": "Ode"
+    }
+   },
+   "id": "dichten-poezie-rijmen-po#17"
+  },
+  {
+   "stap": 3,
+   "q": "Wat is een **elegie**?",
+   "options": [
+    "Een droevig gedicht over verlies of dood",
+    "Een grappig gedicht van vijf regels",
+    "Een Japans gedicht van drie regels",
+    "Een gedicht dat een woord vormt met de eerste letters"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Grappige gedichten van vijf regels hebben een andere naam. Welke?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Droevige gedichten",
+      "tekst": "Een **elegie** is een **droevig** gedicht. Het gaat over **verlies** of **dood**."
+     },
+     {
+      "titel": "Wanneer?",
+      "tekst": "Een elegie wordt vaak geschreven voor iemand die is overleden."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "elegie",
+      "uitleg": "Droevig gedicht over verlies."
+     },
+     {
+      "woord": "limerick",
+      "uitleg": "Grappig gedicht van 5 regels."
+     },
+     {
+      "woord": "haiku",
+      "uitleg": "Japans gedicht, 5-7-5."
+     }
+    ],
+    "theorie": "Soorten: ode = eerbetoon, elegie = droevig, ballade = verhaal, limerick = grappig, haiku = Japans.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "Een gedicht over het afscheid van een overleden opa kan een elegie zijn."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Elegie = verdriet."
+     }
+    ],
+    "niveaus": {
+     "basis": "Een elegie is een droevig gedicht over verlies of dood.",
+     "simpeler": "Droevig gedicht = elegie.",
+     "nogSimpeler": "Droevig gedicht"
+    }
+   },
+   "id": "dichten-poezie-rijmen-po#18"
+  },
+  {
+   "stap": 3,
+   "q": "Je maakt een naamgedicht (acrostichon) voor **TIM**. Met welke letter begint de **tweede** regel?",
+   "options": [
+    "I",
+    "T",
+    "M",
+    "E"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Met de T begint de eerste regel. Welke letter komt daarna in de naam?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Wat is een acrostichon?",
+      "tekst": "Bij een **acrostichon** vormen de **eerste letters** van alle regels samen een woord. Van boven naar beneden lees je het woord."
+     },
+     {
+      "titel": "Voor TIM",
+      "tekst": "Regel 1 begint met **T**, regel 2 met **I**, regel 3 met **M**."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "acrostichon",
+      "uitleg": "Naamgedicht: eerste letters vormen een woord."
+     }
+    ],
+    "theorie": "Toets-tip: schrijf het woord verticaal op. Elke letter is het begin van één regel.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "Voor MAMA: regel 1 M, regel 2 A, regel 3 M, regel 4 A."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Lees de naam letter voor letter: elke letter is één regel."
+     }
+    ],
+    "niveaus": {
+     "basis": "T-I-M: de tweede regel begint met I.",
+     "simpeler": "Tweede letter van TIM = I.",
+     "nogSimpeler": "I"
+    }
+   },
+   "id": "dichten-poezie-rijmen-po#19"
+  },
+  {
+   "stap": 3,
+   "q": "Een gedicht over een boom is gedrukt in de **vorm** van een boom. Hoe heet zo'n gedicht?",
+   "options": [
+    "Een beeldgedicht",
+    "Een limerick",
+    "Een elegie",
+    "Een sonnet"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Een limerick heeft 5 regels en is grappig. Gaat het hier om rijm en grapjes?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Vorm doet mee",
+      "tekst": "Bij sommige gedichten is de **vorm** op het papier ook deel van de betekenis."
+     },
+     {
+      "titel": "Beeldgedicht",
+      "tekst": "Zo'n gedicht heet een **beeldgedicht** (ook: concrete poëzie). Bijvoorbeeld regels in de vorm van een boom voor een gedicht over een boom."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "beeldgedicht",
+      "uitleg": "Gedicht waarvan de vorm een plaatje maakt."
+     },
+     {
+      "woord": "concrete poëzie",
+      "uitleg": "Ander woord voor beeldgedicht."
+     }
+    ],
+    "theorie": "Bij een beeldgedicht kijk je niet alleen naar de woorden, maar ook naar de vorm.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "Een gedicht over regen met de woorden als druppels naar beneden = beeldgedicht."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Beeld-gedicht: het gedicht is ook een beeld."
+     }
+    ],
+    "niveaus": {
+     "basis": "Een gedicht in de vorm van wat het beschrijft = beeldgedicht.",
+     "simpeler": "De vorm is een plaatje: beeldgedicht.",
+     "nogSimpeler": "Beeldgedicht"
+    }
+   },
+   "id": "dichten-poezie-rijmen-po#20"
+  },
+  {
+   "stap": 3,
+   "q": "Waaruit bestaat een **sonnet** meestal?",
+   "options": [
+    "Twee kwatrijnen en twee terzinen",
+    "Drie regels van 5-7-5 lettergrepen",
+    "Vijf grappige regels die rijmen",
+    "Regels zonder rijm of vaste maat"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Dat is de vorm van een Japans gedicht. Welk?",
+    null,
+    "Zo'n gedicht heet een vrij vers. Heeft een sonnet geen vaste vorm?"
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Het sonnet",
+      "tekst": "Een **sonnet** is een deftig gedicht van **14 regels**, met een vaste versmaat en een vast rijmschema."
+     },
+     {
+      "titel": "De bouw",
+      "tekst": "Meestal: **2 kwatrijnen** (4 regels) + **2 terzinen** (3 regels). 4 + 4 + 3 + 3 = 14."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "kwatrijn",
+      "uitleg": "Couplet van 4 regels."
+     },
+     {
+      "woord": "terzine",
+      "uitleg": "Couplet van 3 regels."
+     },
+     {
+      "woord": "sonnet",
+      "uitleg": "Deftig gedicht van 14 regels."
+     }
+    ],
+    "theorie": "Haiku = 3 regels (5-7-5). Limerick = 5 regels, grappig. Sonnet = 14 regels. Vrij vers = geen vaste vorm.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "4 + 4 + 3 + 3 = 14 regels = sonnet."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Tel het na: twee keer 4 en twee keer 3 is 14."
+     }
+    ],
+    "niveaus": {
+     "basis": "Een sonnet: 2 kwatrijnen + 2 terzinen = 14 regels.",
+     "simpeler": "Twee groepjes van 4 en twee van 3.",
+     "nogSimpeler": "4-4-3-3"
+    }
+   },
+   "id": "dichten-poezie-rijmen-po#21"
+  },
+  {
+   "stap": 3,
+   "q": "De **eerste** regel van een haiku heeft 5 lettergrepen. Welke regel past daar?",
+   "options": [
+    "Het blad valt omlaag",
+    "De herfst is gekomen hier",
+    "De gele blaadjes vallen zacht",
+    "Regen valt"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Klap de lettergrepen: de-herfst-is-ge-ko-men-hier. Hoeveel zijn het?",
+    null,
+    "Tel de lettergrepen: re-gen-valt. Is dat genoeg?"
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Het haiku-patroon",
+      "tekst": "Een **haiku** heeft 3 regels: **5 - 7 - 5** lettergrepen. De eerste regel heeft er dus **5**."
+     },
+     {
+      "titel": "Klappen",
+      "tekst": "Het-blad-valt-om-laag = **5** lettergrepen.\nDe-herfst-is-ge-ko-men-hier = 7.\nDe-ge-le-blaad-jes-val-len-zacht = 8.\nRe-gen-valt = 3."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "haiku",
+      "uitleg": "Japans gedicht met 3 regels: 5-7-5 lettergrepen."
+     },
+     {
+      "woord": "lettergreep",
+      "uitleg": "Stukje van een woord met één klinkerklank."
+     }
+    ],
+    "theorie": "Toets-tip: klap bij elke lettergreep in je handen en tel mee.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "'Klank van het water' = klank-van-het-wa-ter = 5."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Klap en tel: 5 klappen = goede eerste regel."
+     }
+    ],
+    "niveaus": {
+     "basis": "'Het blad valt omlaag' heeft 5 lettergrepen.",
+     "simpeler": "Klap mee: het-blad-valt-om-laag = 5.",
+     "nogSimpeler": "5 klappen"
+    }
+   },
+   "id": "dichten-poezie-rijmen-po#22"
+  }
+ ],
+ "afgekeurd": [
+  {
+   "id": "dichten-poezie-rijmen-po#11",
+   "stap": 2,
+   "q": "*'Jouw tekening is niet lelijk.'* Wat bedoelt de spreker?",
+   "redenen": [
+    "nakijker A: Fase 2 (licht): wrongHint bij 'heel lelijk' ('Wat is het tegenovergestelde van lelijk?') wijst het antwoord (mooi) vrijwel direct aan."
+   ]
+  },
+  {
+   "id": "dichten-poezie-rijmen-po#13",
+   "stap": 2,
+   "q": "Waar staat een **vogel** vaak voor in een gedicht?",
+   "redenen": [
+    "nakijker B: Fase 2 (klein): de hint bij 'Verdriet' ('waar gaat hij naartoe als hij wil?') wijst zo goed als direct naar 'Vrijheid'."
+   ]
+  },
+  {
+   "id": "dichten-poezie-rijmen-po#15",
+   "stap": 2,
+   "q": "*'Bij het opruimen is mijn broertje een slak.'* Wat bedoelt de spreker?",
+   "redenen": [
+    "nakijker A: Fase 2 (licht): wrongHint bij 'snel' ('Hoe snel beweegt een slak?') geeft het antwoord (langzaam) vrijwel weg."
+   ]
+  }
+ ]
+}

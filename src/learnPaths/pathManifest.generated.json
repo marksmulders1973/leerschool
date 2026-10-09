@@ -1423,9 +1423,9 @@
     ],
     "intro": "Dichten + poëzie voor Doorstroomtoets groep 5-8 — wat is gedicht (proza vs gedicht, bekende dichters) + rijm + ritme (eind/begin/binnenrijm, AABB/ABAB/ABBA) + beeldspraak (personificatie/hyperbool/met",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 60,
     "chapterCount": 5,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "dienstregeling-roosters-po",
@@ -3270,7 +3270,7 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 39,
     "chapterCount": 4,
     "estimatedMinutes": 10
   },
@@ -4132,7 +4132,7 @@
     ],
     "intro": "Bronnen voor de Doorstroomtoets — woordenboek, atlas, encyclopedie, inhoudsopgave + index, betrouwbaarheid + fake news. 5 stappen × ~5 vragen. ~15 min.",
     "stepCount": 5,
-    "checkCount": 25,
+    "checkCount": 45,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
@@ -4203,9 +4203,9 @@
     ],
     "intro": "Interpunctie voor groep 5-7 — hoofdletters, punt, vraagteken, uitroepteken, komma's, aanhalingstekens. Met Doorstroomtoets-stijl oefenvragen en duidelijke regels. ~15 min.",
     "stepCount": 6,
-    "checkCount": 40,
+    "checkCount": 60,
     "chapterCount": 6,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "kaartlezen-po",
@@ -4782,7 +4782,7 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 39,
     "chapterCount": 4,
     "estimatedMinutes": 10
   },
@@ -4798,7 +4798,7 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 40,
     "chapterCount": 4,
     "estimatedMinutes": 10
   },
@@ -6968,7 +6968,7 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 36,
     "chapterCount": 4,
     "estimatedMinutes": 10
   },
@@ -7091,7 +7091,7 @@
     ],
     "intro": "Schema's, stappenplannen, beslisbomen en tijdslijnen lezen. Doorstroomtoets-stijl. ~12 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 64,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
@@ -7165,7 +7165,7 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 25,
+    "checkCount": 38,
     "chapterCount": 4,
     "estimatedMinutes": 10
   },

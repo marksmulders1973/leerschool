@@ -111,6 +111,108 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Uit welke twee woorden bestaat 'zandkasteel'?",
+        options: ["zand + kasteel", "zan + dkasteel", "zandkas + teel", "zandka + steel"],
+        answer: 0,
+        wrongHints: [null, "Is 'zan' een echt woord?", null, "Zijn allebei de stukjes echte woorden?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Knippen",
+              tekst: "Knip op de plek waar twee echte woorden ontstaan: zand + kasteel = zandkasteel.",
+            },
+          ],
+          niveaus: {
+            basis: "zandkasteel = zand + kasteel: twee echte woorden.",
+            simpeler: "Waar bouw je een kasteel van op het strand? Van zand.",
+            nogSimpeler: "zand + kasteel = ?",
+          },
+        },
+      },
+      {
+        q: "In welke rij staan alleen samenstellingen?",
+        options: [
+          "deurbel, regenboog, sleutelbos",
+          "deurbel, lopen, sleutelbos",
+          "regenboog, mooi, deurbel",
+          "zingen, sleutelbos, regenboog",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kun je 'lopen' knippen in twee echte woorden?",
+          null,
+          "Kijk naar elk woord in de rij: is het gemaakt van twee woorden?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Elk woord nakijken",
+              tekst: "deur + bel, regen + boog, sleutel + bos: alle drie gemaakt van twee woorden. 'Lopen', 'mooi' en 'zingen' kun je niet in twee woorden knippen.",
+            },
+          ],
+          niveaus: {
+            basis: "Alleen in de eerste rij is elk woord gemaakt van twee woorden.",
+            simpeler: "Zoek de rij zonder een woord als 'lopen', 'mooi' of 'zingen'.",
+            nogSimpeler: "deur + bel, regen + boog, sleutel + bos.",
+          },
+        },
+      },
+      {
+        q: "Je plakt 'boom' en 'hut' aan elkaar. Welk woord krijg je?",
+        options: ["boomhut", "hutboom", "boom hut", "boomshut"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Welk woord komt eerst: 'boom' of 'hut'?",
+          "Hoe schrijf je een samenstelling: los of aan elkaar?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Aan elkaar",
+              tekst: "Een hut in een boom is een boomhut: boom + hut, als één woord geschreven.",
+            },
+          ],
+          niveaus: {
+            basis: "boom + hut = boomhut, aan elkaar.",
+            simpeler: "Een hut in een boom heet een ...",
+            nogSimpeler: "boom + hut = ?",
+          },
+        },
+      },
+      {
+        q: "Waarom is 'huisdeur' een samenstelling?",
+        options: [
+          "het bestaat uit 'huis' en 'deur'",
+          "het is een heel lang woord",
+          "het begint met de letter h",
+          "het is de naam van een ding",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is elk lang woord een samenstelling?",
+          null,
+          "Waar is een samenstelling van gemaakt?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Twee woorden",
+              tekst: "Een samenstelling is één woord gemaakt van twee losse woorden: huis + deur = huisdeur.",
+            },
+          ],
+          niveaus: {
+            basis: "huis + deur = huisdeur: twee woorden samen.",
+            simpeler: "Welke twee woorden zie je in 'huisdeur'?",
+            nogSimpeler: "huis + deur = ?",
+          },
+        },
+      },
     ],
   },
 
@@ -213,6 +315,98 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Hoe schrijf je: het hok voor de kippen?",
+        options: ["kippenhok", "kiphok", "kippehok", "kipshok"],
+        answer: 0,
+        wrongHints: [null, "Wat is het meervoud van 'kip'?", "Hoe eindigt het meervoud van 'kip'?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "kip → kippen → kippenhok",
+              tekst: "Het meervoud van 'kip' is 'kippen'. Dat -en- komt in het woord: kippenhok.",
+            },
+          ],
+          niveaus: {
+            basis: "kip → kippen, dus kippenhok.",
+            simpeler: "Meervoud van 'kip'? Dat -en- komt erin.",
+            nogSimpeler: "kippen + hok = ?",
+          },
+        },
+      },
+      {
+        q: "Hoe schrijf je: de borstel voor je tanden?",
+        options: ["tandenborstel", "tandeborstel", "tandsborstel", "tanden borstel"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoe eindigt het meervoud van 'tand'?",
+          null,
+          "Schrijf je een samenstelling los of aan elkaar?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "tand → tanden → tandenborstel",
+              tekst: "Het meervoud van 'tand' is 'tanden'. Daarom tandenborstel, met tussen-n, aan elkaar.",
+            },
+          ],
+          niveaus: {
+            basis: "tand → tanden, dus tandenborstel.",
+            simpeler: "Meervoud van 'tand'? Dat -en- komt erin.",
+            nogSimpeler: "tanden + borstel = ?",
+          },
+        },
+      },
+      {
+        q: "In welk woord zit een tussen-n?",
+        options: ["eendenvijver", "verkeerslicht", "deurbel", "zandbak"],
+        answer: 0,
+        wrongHints: [null, "Welke tussenletter hoor je hier?", null, "Zit hier wel een tussenletter in?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "eend → eenden",
+              tekst: "Het meervoud van 'eend' is 'eenden'. Dat -en- zit in eendenvijver. Verkeerslicht heeft een tussen-s; deurbel en zandbak hebben geen tussenletter.",
+            },
+          ],
+          niveaus: {
+            basis: "eend → eenden, dus eendenvijver heeft een tussen-n.",
+            simpeler: "Zoek het woord met -en- in het midden.",
+            nogSimpeler: "eenden + vijver = ?",
+          },
+        },
+      },
+      {
+        q: "Je twijfelt: 'kattenbak' of 'kattebak'? Wat helpt je het best?",
+        options: [
+          "het meervoud van 'kat' is 'katten', dus kattenbak",
+          "'kat' heeft geen meervoud, dus kattebak",
+          "je hoort de n bijna niet, dus kattebak",
+          "dierennamen krijgen nooit een tussen-n, dus kattebak",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoe zeg je het als er twee zijn: één kat, twee ...?",
+          "Waar kijk je naar bij de tussen-n: naar wat je hoort, of naar het meervoud?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Maak het meervoud",
+              tekst: "Twijfel je over -en-? Maak het eerste woord meervoud: kat → katten. Dat -en- komt erin: kattenbak.",
+            },
+          ],
+          niveaus: {
+            basis: "kat → katten, dus kattenbak.",
+            simpeler: "Eén kat, twee ...? Dat -en- komt erin.",
+            nogSimpeler: "katten + bak = ?",
+          },
+        },
+      },
     ],
   },
 
@@ -307,6 +501,55 @@ const steps = [
             basis: "'verjaardagstaart' heeft een tussen-s.",
             simpeler: "Hoor je bij welk woord een -s- ertussen?",
             nogSimpeler: "Bij welk woord hoor je 'verjaardags' (met s) ertussen?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Het lied van een land, dat je zingt bij een grote wedstrijd, heet het...",
+        options: ["volkslied", "volklied", "volkenlied", "volkeslied"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Spreek het uit: hoor je een s tussen 'volk' en 'lied'?",
+          "Hoor je hier -en- of een -s-?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "volks-lied",
+              tekst: "Zeg 'volk...lied': je hoort een s. Dus volkslied, met tussen-s.",
+            },
+          ],
+          niveaus: {
+            basis: "Je hoort een -s-: volkslied.",
+            simpeler: "Zeg het hardop: 'volkslied'. Hoor je de s?",
+            nogSimpeler: "volk + s + lied = ?",
+          },
+        },
+      },
+      {
+        q: "Welk woord is FOUT gespeld, omdat de tussen-s ontbreekt?",
+        options: ["oorlogschip", "fietsbel", "kerstboom", "dorpsstraat"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Spreek dit woord uit: hoor je een extra s tussen de twee delen?",
+          null,
+          "Kijk goed: staat de s die je hoort er al in?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "oorlogs-schip",
+              tekst: "Zeg 'oorlog...schip': je hoort een s. Dus het moet 'oorlogsschip' zijn. Bij fietsbel en kerstboom hoor je geen extra s; dorpsstraat heeft de s al.",
+            },
+          ],
+          niveaus: {
+            basis: "oorlog + s + schip = oorlogsschip. Daar ontbreekt de s.",
+            simpeler: "Zeg 'oorlogsschip' hardop. Staat die s in het woord?",
+            nogSimpeler: "Hoor je een s na 'oorlog'?",
           },
         },
       },

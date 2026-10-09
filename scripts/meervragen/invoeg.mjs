@@ -41,7 +41,7 @@ for (const [stapS, vragen] of Object.entries(perStap)) {
   const regelStart = src.lastIndexOf("\n", laatste.start) + 1; const ind = src.slice(regelStart, laatste.start).match(/^\s*/)[0];
   const tussen = src.slice(laatste.end, arr.end - 1); const heeftKomma = /^\s*,/.test(tussen);
   const objs = vragen.map(({ stap: _s, id: _i, ...v }) => ({ q: v.q, options: v.options, answer: 0, wrongHints: v.wrongHints, ...(v.uitlegPad ? { uitlegPad: v.uitlegPad } : {}) }));
-  const tekst = (heeftKomma ? "" : ",") + "\n" + ind + "// Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.\n" + objs.map((o) => ind + js(o, ind)).join(",\n") + ",";
+  const tekst = (heeftKomma ? "" : ",") + "\n" + ind + "// Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.\n" + objs.map((o) => ind + js(o, ind)).join(",\n") + ",";
   const plek = heeftKomma ? laatste.end + tussen.indexOf(",") + 1 : laatste.end;
   invoegingen.push({ plek, tekst, stap, n: objs.length, qs: objs.map((o) => o.q) });
 }

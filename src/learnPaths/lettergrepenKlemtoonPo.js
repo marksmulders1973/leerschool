@@ -110,6 +110,103 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Hoeveel lettergrepen heeft 'paraplu'?",
+        options: ["3", "2", "4", "1"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Klap nog eens mee en tel — het zijn er meer.",
+          "Zo veel klappen hoor je niet.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "pa-ra-plu",
+              tekst: "Pa (1), ra (2), plu (3): drie klappen, dus 3 lettergrepen.",
+            },
+          ],
+          niveaus: {
+            basis: "pa-ra-plu = 3 lettergrepen.",
+            simpeler: "Klap mee bij 'paraplu': hoeveel stukjes?",
+            nogSimpeler: "pa — ra — plu: hoeveel klappen?",
+          },
+        },
+      },
+      {
+        q: "Welk woord heeft 4 lettergrepen?",
+        options: ["televisie", "kabouter", "potlood", "sleutel"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Klap dit woord eens mee — kom je echt tot vier?",
+          null,
+          "Tel de klappen nog eens: dat zijn er minder.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "te-le-vi-sie",
+              tekst: "Te (1), le (2), vi (3), sie (4): vier klappen. ka-bou-ter heeft er 3, pot-lood en sleu-tel hebben er 2.",
+            },
+          ],
+          niveaus: {
+            basis: "te-le-vi-sie = 4 lettergrepen.",
+            simpeler: "Klap elk woord mee en tel de klappen.",
+            nogSimpeler: "te — le — vi — sie: hoeveel klappen?",
+          },
+        },
+      },
+      {
+        q: "Welk woord heeft precies 2 lettergrepen?",
+        options: ["konijn", "boterham", "boom", "limonade"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Klap mee: hoor je daar niet meer dan twee klappen?",
+          "Hoeveel klappen hoor je bij dit korte woord?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "ko-nijn",
+              tekst: "Ko (1) en nijn (2): twee klappen. bo-ter-ham heeft er 3, boom 1 en li-mo-na-de 4.",
+            },
+          ],
+          niveaus: {
+            basis: "ko-nijn = 2 lettergrepen.",
+            simpeler: "Klap elk woord mee: bij welk woord hoor je precies twee klappen?",
+            nogSimpeler: "ko — nijn: hoeveel klappen?",
+          },
+        },
+      },
+      {
+        q: "Hoeveel lettergrepen heeft 'dinosaurus'?",
+        options: ["4", "3", "5", "2"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Klap nog eens mee en tel — het zijn er meer.",
+          "Zo veel klappen hoor je niet.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "di-no-sau-rus",
+              tekst: "Di (1), no (2), sau (3), rus (4): vier klappen, dus 4 lettergrepen.",
+            },
+          ],
+          niveaus: {
+            basis: "di-no-sau-rus = 4 lettergrepen.",
+            simpeler: "Klap mee bij 'dinosaurus': hoeveel stukjes?",
+            nogSimpeler: "di — no — sau — rus: hoeveel klappen?",
+          },
+        },
+      },
     ],
   },
 
@@ -206,6 +303,103 @@ const steps = [
             basis: "mu-ziek: de z gaat mee naar de tweede klap.",
             simpeler: "Klap mee: mu — ziek.",
             nogSimpeler: "Waar valt de tweede klap in 'muziek'?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Verdeel 'koning' in lettergrepen.",
+        options: ["ko-ning", "kon-ing", "k-oning", "koni-ng"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Er staat één medeklinker (n) tussen twee klinkers. Waar gaat die heen?",
+          null,
+          "Kun je 'ng' los uitspreken als klap?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "ko-ning",
+              tekst: "Eén medeklinker (n) tussen twee klinkers (o en i) gaat naar de volgende lettergreep: ko-ning.",
+            },
+          ],
+          niveaus: {
+            basis: "ko-ning: de n gaat mee naar de tweede klap.",
+            simpeler: "Spreek 'koning' rustig uit: ko … ning.",
+            nogSimpeler: "Waar valt de tweede klap in 'koning'?",
+          },
+        },
+      },
+      {
+        q: "Verdeel 'lepel' in lettergrepen.",
+        options: ["le-pel", "lep-el", "l-epel", "lepe-l"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Bij één medeklinker tussen twee klinkers: gaat die naar voren of naar achteren?",
+          null,
+          "Kun je een losse l uitspreken als klap?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "le-pel",
+              tekst: "Eén medeklinker (p) tussen twee klinkers gaat naar de volgende lettergreep: le-pel.",
+            },
+          ],
+          niveaus: {
+            basis: "le-pel: de p gaat naar de tweede klap.",
+            simpeler: "Spreek 'lepel' rustig uit: le … pel.",
+            nogSimpeler: "Hoort de p bij 'le' of bij 'pel'?",
+          },
+        },
+      },
+      {
+        q: "Verdeel 'bakker' in lettergrepen.",
+        options: ["bak-ker", "ba-kker", "bakk-er", "b-akker"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Er staan twee medeklinkers (kk) tussen de klinkers. Waar splits je dan?",
+          null,
+          "Kun je een losse b uitspreken als klap?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "bak-ker",
+              tekst: "Twee medeklinkers (kk) tussen klinkers → splits ertussen: bak-ker.",
+            },
+          ],
+          niveaus: {
+            basis: "bak-ker: twee medeklinkers ertussen → deel ertussen.",
+            simpeler: "Klap mee: bak — ker.",
+            nogSimpeler: "Waar valt de tweede klap in 'bakker'?",
+          },
+        },
+      },
+      {
+        q: "Welke verdeling van 'pannenkoek' in lettergrepen is goed?",
+        options: ["pan-nen-koek", "pa-nnen-koek", "pann-en-koek", "pan-ne-nkoek"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Twee medeklinkers (nn) tussen klinkers: waar splits je dan?",
+          null,
+          "Kun je 'nkoek' als één klap uitspreken?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "pan-nen-koek",
+              tekst: "Drie klappen: pan (1), nen (2), koek (3). Bij twee medeklinkers (nn) splits je ertussen: pan-nen.",
+            },
+          ],
+          niveaus: {
+            basis: "pan-nen-koek = 3 lettergrepen.",
+            simpeler: "Klap mee: pan — nen — koek.",
+            nogSimpeler: "Hoeveel klappen in 'pannenkoek'? Verdeel zo.",
           },
         },
       },
@@ -314,6 +508,98 @@ const steps = [
             basis: "bi-bli-o-theek: breek af na 'bi', 'bibli' of 'biblio'.",
             simpeler: "Klap mee: bi — bli — o — theek. Je breekt af op zo'n grens.",
             nogSimpeler: "Welke knipt af na de eerste lettergreep 'bi-'?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welk woord mag je NIET afbreken aan het eind van een regel?",
+        options: ["fiets", "kikker", "wortel", "sleutel"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Klap dit woord mee: hoeveel lettergrepen heeft het?",
+          null,
+          "Tel de klappen: kun je dit woord in twee stukjes knippen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eén lettergreep = niet afbreken",
+              tekst: "'Fiets' is één klap (1 lettergreep), dus je kunt het niet afbreken. kik-ker, wor-tel en sleu-tel hebben er twee.",
+            },
+          ],
+          niveaus: {
+            basis: "Een woord met 1 lettergreep breek je nooit af.",
+            simpeler: "Welk woord heeft maar één klap?",
+            nogSimpeler: "Kun je 'fiets' in twee klappen splitsen? Nee.",
+          },
+        },
+      },
+      {
+        q: "Hoe breek je 'kikker' goed af aan het eind van een regel?",
+        options: ["kik-ker", "ki-kker", "kikk-er", "k-ikker"],
+        answer: 0,
+        wrongHints: [null, "Dat knipt midden in een lettergreep.", null, "Een losse k mag niet."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Op de lettergreepgrens",
+              tekst: "Kikker = kik-ker. Je breekt af tussen kik en ker: kik-ker.",
+            },
+          ],
+          niveaus: {
+            basis: "Afbreken: kik-ker (tussen de twee lettergrepen).",
+            simpeler: "Waar zit de grens tussen de klappen van 'kikker'?",
+            nogSimpeler: "kik … ker — breek daar af.",
+          },
+        },
+      },
+      {
+        q: "Welke afbreking van 'telefoon' is goed?",
+        options: ["tele-foon", "tel-efoon", "telef-oon", "t-elefoon"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Klap mee: valt daar echt een grens tussen twee klappen?",
+          null,
+          "Een losse t mag niet.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "te-le-foon",
+              tekst: "Telefoon = te-le-foon. Je mag afbreken tussen lettergrepen, dus 'tele-foon' is goed.",
+            },
+          ],
+          niveaus: {
+            basis: "tele-foon breekt af op een lettergreepgrens.",
+            simpeler: "Spreek uit: te — le — foon. Breek op zo'n grens af.",
+            nogSimpeler: "Bij welke staat 'foon' heel op de volgende regel?",
+          },
+        },
+      },
+      {
+        q: "Je schrijft 'appelsap', maar het past niet meer op de regel. Welke afbreking is goed?",
+        options: ["appel-sap", "appe-lsap", "app-elsap", "a-ppelsap"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kun je 'lsap' als één klap uitspreken?",
+          null,
+          "Dat knipt midden in de eerste lettergreep.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "ap-pel-sap",
+              tekst: "Appelsap = ap-pel-sap. Je mag afbreken tussen lettergrepen, dus 'appel-sap' is goed.",
+            },
+          ],
+          niveaus: {
+            basis: "appel-sap breekt af op een lettergreepgrens.",
+            simpeler: "Klap mee: ap — pel — sap. Breek op zo'n grens af.",
+            nogSimpeler: "Bij welke staat 'sap' heel op de volgende regel?",
           },
         },
       },
@@ -449,6 +735,60 @@ const steps = [
             basis: "De klemtoon ligt op 'kan' (de tweede lettergreep).",
             simpeler: "Welk stukje klinkt harder: va, kan of tie?",
             nogSimpeler: "Zeg 'vakantie' — welk stukje springt eruit?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Waar ligt de klemtoon in 'olifant' (o-li-fant)?",
+        options: [
+          "op 'o' (de eerste)",
+          "op 'li' (de tweede)",
+          "op 'fant' (de derde)",
+          "op allebei de laatste twee",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zeg het woord hardop: klinkt 'li' echt het hardst?",
+          "Zeg het woord hardop: klinkt 'fant' echt het hardst?",
+          "Er is maar één klemtoon.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Ó-li-fant",
+              tekst: "Je zegt 'Ólifant', met de nadruk op 'o'. Dat is de eerste lettergreep.",
+            },
+          ],
+          niveaus: {
+            basis: "De klemtoon ligt op 'o' (de eerste lettergreep).",
+            simpeler: "Welk stukje klinkt harder: o, li of fant?",
+            nogSimpeler: "Zeg 'olifant' — welk stukje springt eruit?",
+          },
+        },
+      },
+      {
+        q: "Bij welk woord ligt de klemtoon op de eerste lettergreep?",
+        options: ["appel", "konijn", "giraf", "kabouter"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zeg het hardop: klinkt 'ko' harder dan 'nijn'?",
+          null,
+          "Zeg het hardop: welk stukje springt eruit, 'ka', 'bou' of 'ter'?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "ÁP-pel",
+              tekst: "Je zegt 'ÁPpel', met de nadruk op 'ap'. Bij ko-NIJN, gi-RÁF en ka-BOU-ter ligt de klemtoon op de tweede lettergreep.",
+            },
+          ],
+          niveaus: {
+            basis: "In 'appel' ligt de klemtoon op 'ap' (de eerste lettergreep).",
+            simpeler: "Zeg elk woord hardop: bij welk woord klinkt het eerste stukje het hardst?",
+            nogSimpeler: "Zeg 'appel' — klinkt 'ap' of 'pel' harder?",
           },
         },
       },

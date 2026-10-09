@@ -106,6 +106,79 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welk woord past? *In mijn tas zitten mijn boeken. ___ zit mijn etui erin.*",
+        options: ["Daarnaast", "Maar", "Omdat", "Dus"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Botst het etui met de boeken? Of komt er gewoon iets bij?",
+          null,
+          "Is het etui een gevolg van de boeken?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Er komt iets bij → opsomming",
+              tekst: "Eerst noem je de boeken, dan komt het etui erbij. Dat is een rijtje: een opsomming. 'Daarnaast' betekent: er komt nog iets bij.",
+            },
+          ],
+          niveaus: {
+            basis: "Er komt iets bij → opsomming: daarnaast.",
+            simpeler: "Boeken én een etui. Botst dat, of is het een rijtje?",
+            nogSimpeler: "Boeken … en nog iets. Welk woord betekent 'er komt nog iets bij'?",
+          },
+        },
+      },
+      {
+        q: "Welk woord past? *Het was erg koud buiten. ___ droeg Sanne geen jas.*",
+        options: ["Toch", "Daarom", "Dus", "Want"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Laat je je jas thuis omdát het koud is?",
+          null,
+          "Kan dit woord vooraan staan met 'droeg' direct erachter?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Koud, toch geen jas → tegenstelling",
+              tekst: "Als het koud is, verwacht je dat Sanne een jas draagt. Ze doet het niet. Dat botst: 'toch' is een tegenstelling-woord.",
+            },
+          ],
+          niveaus: {
+            basis: "Het tweede deel is anders dan je verwacht → tegenstelling: toch.",
+            simpeler: "Wat doe je normaal als het koud is? En wat doet Sanne?",
+            nogSimpeler: "Koud … geen jas. Dat klopt niet met elkaar. Welk woordje past daarbij?",
+          },
+        },
+      },
+      {
+        q: "Welk woord past? *Ik heb twee redenen om te sporten. Ten eerste is het gezond. ___ is het gezellig.*",
+        options: ["Ten tweede", "Echter", "Doordat", "Hoewel"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Botst 'gezellig' met 'gezond'? Of is het nog een reden erbij?",
+          null,
+          "Er staat 'ten eerste'. Wat komt daar meestal na?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Ten eerste → ten tweede",
+              tekst: "Er worden twee redenen opgesomd. Na 'ten eerste' komt de tweede reden: 'ten tweede'. Dat is een opsomming.",
+            },
+          ],
+          niveaus: {
+            basis: "Een rijtje redenen → opsomming: ten eerste, ten tweede.",
+            simpeler: "Je noemt reden 1 en daarna reden 2. Welk woord hoort bij reden 2?",
+            nogSimpeler: "Ten eerste … ten …?",
+          },
+        },
+      },
     ],
   },
 
@@ -206,6 +279,108 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welk woord past? *Ik zet de wekker, ___ ik op tijd wakker word.*",
+        options: ["zodat", "hoewel", "doordat", "maar"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Botst wakker worden met de wekker zetten?",
+          "Word je wakker en zet je dáárom de wekker? Of andersom?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wekker zetten → op tijd wakker",
+              tekst: "Je zet de wekker. Het gevolg is dat je op tijd wakker wordt. 'Zodat' wijst op het gevolg.",
+            },
+          ],
+          niveaus: {
+            basis: "Het tweede deel is wat er dán gebeurt → gevolg: zodat.",
+            simpeler: "Wat gebeurt er doordat je de wekker zet?",
+            nogSimpeler: "Wekker aan … en dan word ik op tijd wakker. Welk woord hoort bij 'en dan'?",
+          },
+        },
+      },
+      {
+        q: "Welk woord past? *___ de storm bleef de veerboot in de haven.*",
+        options: ["Vanwege", "Daarom", "Hoewel", "Dus"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kan dit woord vóór 'de storm' staan?",
+          "Bleef de boot binnen ondanks de storm, of juist dóór de storm?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Storm → boot blijft binnen",
+              tekst: "Waarom bleef de veerboot in de haven? Door de storm. 'Vanwege' geeft de reden aan.",
+            },
+          ],
+          niveaus: {
+            basis: "De storm is de reden → oorzaak: vanwege.",
+            simpeler: "Vraag: waarom bleef de boot in de haven? Het antwoord is de oorzaak.",
+            nogSimpeler: "Door de storm bleef de boot binnen. Welk woord betekent 'door'?",
+          },
+        },
+      },
+      {
+        q: "Welke zin laat een **oorzaak en gevolg** zien?",
+        options: [
+          "De bal ging kapot doordat de hond erin beet.",
+          "De bal is rood en de hond is bruin.",
+          "De bal is nieuw, maar de hond is oud.",
+          "Speelt de hond met de bal of met een touw?",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zorgt de kleur van de bal voor de kleur van de hond?",
+          null,
+          "Wordt hier iets veroorzaakt, of moet je kiezen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Gebruik de waarom-truc",
+              tekst: "Waarom ging de bal kapot? Omdat de hond erin beet. Het ene deel is het antwoord op 'waarom?' van het andere deel. Dat is oorzaak en gevolg.",
+            },
+          ],
+          niveaus: {
+            basis: "Zoek de zin waarin het ene deel het andere veroorzaakt.",
+            simpeler: "Stel bij elke zin de vraag 'waarom?'. Bij welke zin geeft het andere deel het antwoord?",
+            nogSimpeler: "Bij welke zin gebeurt er iets dóór iets anders?",
+          },
+        },
+      },
+      {
+        q: "*Lisa moet lachen, want de clown valt om.* Wat is de **oorzaak**?",
+        options: ["de clown valt om", "Lisa moet lachen", "Lisa valt om", "de clown moet lachen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is dat de reden, of is dat wat er dáárdoor gebeurt?",
+          "Lees de zin nog eens: wie valt er om?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Waarom lacht Lisa?",
+              tekst: "Vraag: waarom moet Lisa lachen? Omdat de clown omvalt. Dat is de oorzaak. Lisa's lachen is het gevolg. Na 'want' komt de reden.",
+            },
+          ],
+          niveaus: {
+            basis: "Na 'want' staat de reden → de clown valt om is de oorzaak.",
+            simpeler: "Vraag 'waarom moet Lisa lachen?'. Het antwoord is de oorzaak.",
+            nogSimpeler: "Wat gebeurde er eerst, waardoor Lisa ging lachen?",
+          },
+        },
+      },
     ],
   },
 
@@ -299,6 +474,79 @@ const steps = [
             basis: "'Echter' hoort bij tegenstelling, niet bij volgorde.",
             simpeler: "Welk woord betekent 'maar' i.p.v. een stap in de tijd?",
             nogSimpeler: "Drie woorden zijn stappen; welke is dat niet?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*Papa kookte het eten. Intussen dekte ik de tafel.* Wat betekent 'intussen' hier?",
+        options: ["op hetzelfde moment", "daarvoor", "als laatste", "daardoor"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dekte je de tafel vóórdat papa begon te koken?",
+          null,
+          "Gaat het om een reden, of om wanneer iets gebeurt?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Intussen = tegelijk",
+              tekst: "Papa is aan het koken en ondertussen dek jij de tafel. Twee dingen gebeuren tegelijk. 'Intussen' betekent: op hetzelfde moment.",
+            },
+          ],
+          niveaus: {
+            basis: "Intussen = terwijl het andere gebeurt → op hetzelfde moment.",
+            simpeler: "Kookt papa nog als jij de tafel dekt?",
+            nogSimpeler: "Papa kookt … en ik dek de tafel. Is dat na elkaar of tegelijk?",
+          },
+        },
+      },
+      {
+        q: "Welk woord past? *We gingen naar huis ___ de film was afgelopen.*",
+        options: ["nadat", "daarom", "eerst", "ten slotte"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Gaat het om een reden, of om wannéér we naar huis gingen?",
+          "Past dit woord midden in deze zin, vóór 'de film was afgelopen'?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst de film, daarna naar huis",
+              tekst: "De film was eerst afgelopen. Daarna gingen we naar huis. 'Nadat' laat zien dat het ene ná het andere gebeurt.",
+            },
+          ],
+          niveaus: {
+            basis: "Eerst was de film klaar, toen gingen we naar huis → nadat.",
+            simpeler: "Wat gebeurde er eerst: de film afgelopen of naar huis gaan?",
+            nogSimpeler: "We gingen naar huis toen de film … klaar wás. Welk woord betekent 'na het moment dat'?",
+          },
+        },
+      },
+      {
+        q: "Welk woord past? *Oma las de krant ___ opa de afwas deed.*",
+        options: ["terwijl", "daarna", "eerst", "vervolgens"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kan dit woord midden in de zin staan, met 'opa de afwas deed' erachter?",
+          null,
+          "Past dit woord hier, of hoort het aan het begin van een nieuwe stap?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Twee dingen tegelijk",
+              tekst: "Oma leest en opa wast af, op hetzelfde moment. 'Terwijl' laat zien dat twee dingen tegelijk gebeuren.",
+            },
+          ],
+          niveaus: {
+            basis: "Twee dingen tegelijk → terwijl.",
+            simpeler: "Gebeuren het krant lezen en de afwas na elkaar of tegelijk?",
+            nogSimpeler: "Oma leest … en op hetzelfde moment wast opa af. Welk woord betekent 'op hetzelfde moment'?",
           },
         },
       },
@@ -411,6 +659,79 @@ const steps = [
             basis: "Het een veroorzaakt het ander → oorzaak en gevolg.",
             simpeler: "Waaróm ging de plant dood? Dan is het oorzaak-gevolg.",
             nogSimpeler: "Wat zorgde ervoor dat de plant doodging?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*Fietsen is gezond. Bovendien is het goed voor het milieu.* Welk verband geeft 'bovendien' aan?",
+        options: ["opsomming", "tegenstelling", "oorzaak en gevolg", "tijd/volgorde"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Botst 'goed voor het milieu' met 'gezond'?",
+          null,
+          "Gaat het om stappen in de tijd?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Nog een voordeel erbij",
+              tekst: "Eerst wordt gezegd dat fietsen gezond is. Daarna komt er nog een voordeel bij. 'Bovendien' voegt iets toe: opsomming.",
+            },
+          ],
+          niveaus: {
+            basis: "Er komt iets bij → opsomming.",
+            simpeler: "Komt er een tweede goed punt bij, of botst het?",
+            nogSimpeler: "Gezond … én goed voor het milieu. Is dat een rijtje?",
+          },
+        },
+      },
+      {
+        q: "*Ik neem een paraplu mee, want het gaat regenen.* Welk verband geeft 'want' aan?",
+        options: ["oorzaak en gevolg", "opsomming", "tegenstelling", "tijd/volgorde"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Wordt er gewoon iets opgeteld?",
+          null,
+          "Gaat het om wat eerst en wat daarna gebeurt?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Waarom een paraplu?",
+              tekst: "Waarom neem je een paraplu mee? Omdat het gaat regenen. 'Want' geeft de reden: oorzaak en gevolg.",
+            },
+          ],
+          niveaus: {
+            basis: "'Want' geeft een reden → oorzaak en gevolg.",
+            simpeler: "Stel de vraag 'waarom?'. Geeft het tweede deel het antwoord?",
+            nogSimpeler: "Waarom de paraplu? Het gaat regenen. Is dat een reden?",
+          },
+        },
+      },
+      {
+        q: "*We aten pannenkoeken. Toen gingen we naar de speeltuin.* Welk verband geeft 'toen' aan?",
+        options: ["tijd/volgorde", "tegenstelling", "oorzaak en gevolg", "opsomming"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Botst de speeltuin met de pannenkoeken?",
+          "Gingen we naar de speeltuin dóór de pannenkoeken?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst eten, toen spelen",
+              tekst: "Eerst aten we pannenkoeken. Daarna gingen we naar de speeltuin. 'Toen' laat zien wat er daarna gebeurde: tijd/volgorde.",
+            },
+          ],
+          niveaus: {
+            basis: "'Toen' vertelt wanneer → tijd/volgorde.",
+            simpeler: "Vertelt 'toen' een reden, of wat er daarna gebeurde?",
+            nogSimpeler: "Eerst pannenkoeken, toen de speeltuin. Gaat het om de volgorde?",
           },
         },
       },
