@@ -7909,7 +7909,7 @@
     ],
     "intro": "Tijdsduur voor groep 6-8 — hoe lang duurt iets, tussen 2 klokken, optellen+aftrekken met 60-stap, 24-uurs format, praktijksommen school/reizen/sport. ~15 min.",
     "stepCount": 6,
-    "checkCount": 40,
+    "checkCount": 45,
     "chapterCount": 6,
     "estimatedMinutes": 15
   },
@@ -8329,9 +8329,9 @@
     ],
     "intro": "Verhoudingen voor groep 5-8: wat is een verhouding, recepten omrekenen, verhoudingstabellen, schaal op de kaart. Doorstroomtoets-stijl praktijksommen. ~15 min.",
     "stepCount": 6,
-    "checkCount": 40,
+    "checkCount": 66,
     "chapterCount": 5,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "verlichting-revoluties-havo-vwo",
@@ -8488,9 +8488,9 @@
     ],
     "intro": "Wat doe je eerst — × of +? De volgorde-regel HMVDOA: Haakjes, Machten, ×÷, +−. Met haakjes om volgorde te forceren, machten als kwadraat, en de bekende valkuilen. toets-relevant voor groep 5-7.",
     "stepCount": 7,
-    "checkCount": 40,
+    "checkCount": 74,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "voortplanting-hormonen-biologie",

@@ -180,6 +180,259 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke zin gaat over een **tijdstip**?",
+        options: [
+          "De les begint om 10:15 uur.",
+          "De les duurt 45 minuten.",
+          "De film duurt 2 uur.",
+          "Ik slaap 9 uur per nacht.",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Gaat deze zin over 'wanneer' of over 'hoe lang'?",
+          "Gaat deze zin over 'wanneer' of over 'hoe lang'?",
+          "Gaat deze zin over 'wanneer' of over 'hoe lang'?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tijdstip = wanneer",
+              tekst: "Een tijdstip zegt wanneer iets gebeurt, zoals 'om 10:15 uur'.",
+            },
+            {
+              titel: "Tijdsduur = hoe lang",
+              tekst: "Woorden als 'duurt' en '9 uur per nacht' gaan over hoe lang iets is.",
+            },
+            {
+              titel: "Kijk naar de woorden",
+              tekst: "'Om' + kloktijd → tijdstip. 'Duurt' → tijdsduur.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tijdstip",
+              uitleg: "Wanneer iets gebeurt (een kloktijd).",
+            },
+          ],
+          theorie: "Tijdstip = wanneer? Tijdsduur = hoe lang?",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'Om 10:15 uur' = tijdstip. '45 minuten' = tijdsduur.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Kun je 'hoe laat?' vragen? Dan is het een tijdstip.",
+            },
+          ],
+          niveaus: {
+            basis: "De les begint om 10:15 uur.",
+            simpeler: "'Om 10:15 uur' zegt wanneer. Dat is een tijdstip.",
+            nogSimpeler: "Om 10:15",
+          },
+        },
+      },
+      {
+        q: "Welke eenheid gebruik je om te zeggen hoe lang **een knipoog** duurt?",
+        options: ["seconden", "minuten", "uren", "dagen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Duurt een knipoog lang of heel kort?",
+          "Duurt een knipoog lang of heel kort?",
+          "Duurt een knipoog lang of heel kort?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Heel kort",
+              tekst: "Een knipoog duurt minder dan 1 seconde (ongeveer 0,3 s).",
+            },
+            {
+              titel: "Kleinste eenheid",
+              tekst: "Voor heel korte dingen gebruik je seconden.",
+            },
+            {
+              titel: "Rijtje",
+              tekst: "seconden < minuten < uren < dagen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "seconde",
+              uitleg: "Een heel korte tijd. 60 seconden = 1 minuut.",
+            },
+          ],
+          theorie: "Kies de eenheid die past bij hoe lang iets duurt: kort → seconden, lang → uren of dagen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Knipoog: seconden. Les: minuten. Schooldag: uren. Vakantie: dagen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Past het?",
+              uitleg: "Een knipoog van 1 minuut zou heel raar zijn.",
+            },
+          ],
+          niveaus: {
+            basis: "Seconden.",
+            simpeler: "Een knipoog is heel kort. Dus seconden.",
+            nogSimpeler: "seconden",
+          },
+        },
+      },
+      {
+        q: "Hoeveel **seconden** zitten er in **1 uur**?",
+        options: ["3600", "60", "600", "6000"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het aantal minuten in een uur — en elke minuut heeft ook nog seconden.",
+          "Hoeveel minuten heeft een uur? En hoeveel seconden heeft elke minuut?",
+          "Rekende je ergens met 100 in plaats van 60?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1",
+              tekst: "1 uur = 60 minuten.",
+            },
+            {
+              titel: "Stap 2",
+              tekst: "1 minuut = 60 seconden.",
+            },
+            {
+              titel: "Stap 3",
+              tekst: "60 × 60 = 3600 seconden.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "seconde",
+              uitleg: "60 seconden = 1 minuut.",
+            },
+          ],
+          theorie: "Uur → minuten: × 60. Minuten → seconden: nog eens × 60.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1 uur = 60 min = 60 × 60 = 3600 seconden.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "6 × 6 = 36, met twee nullen erachter: 3600.",
+            },
+          ],
+          niveaus: {
+            basis: "3600 seconden.",
+            simpeler: "60 minuten, elk 60 seconden: 60 × 60 = 3600.",
+            nogSimpeler: "3600",
+          },
+        },
+      },
+      {
+        q: "Hoeveel **uur** zitten er in **2 dagen**?",
+        options: ["48", "24", "120", "200"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is maar 1 dag.",
+          "Rekende je met 60? Hoeveel uur heeft 1 dag?",
+          "Een dag heeft geen 100 uur.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1",
+              tekst: "1 dag = 24 uur.",
+            },
+            {
+              titel: "Stap 2",
+              tekst: "2 dagen = 2 × 24 = 48 uur.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "dag",
+              uitleg: "Een dag duurt 24 uur.",
+            },
+          ],
+          theorie: "Dagen → uren: × 24 (niet × 60 en niet × 100).",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2 dagen = 24 + 24 = 48 uur.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Onthouden",
+              uitleg: "1 dag = 24 uur. 1 week = 7 dagen.",
+            },
+          ],
+          niveaus: {
+            basis: "48 uur.",
+            simpeler: "24 + 24 = 48.",
+            nogSimpeler: "48",
+          },
+        },
+      },
+      {
+        q: "Hoeveel minuten is **3 uur en 20 minuten** samen?",
+        options: ["200", "320", "180", "80"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je schreef de getallen achter elkaar — maar 1 uur is 60 minuten.",
+          "Je bent de 20 minuten vergeten.",
+          "Hoeveel minuten zijn 3 uur, niet 1 uur?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: uren",
+              tekst: "3 uur = 3 × 60 = 180 min.",
+            },
+            {
+              titel: "Stap 2: minuten erbij",
+              tekst: "180 + 20 = 200 min.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "omrekenen",
+              uitleg: "Uren naar minuten: keer 60.",
+            },
+          ],
+          theorie: "Uren × 60, en dan de losse minuten erbij optellen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "3 uur 20 min = 180 + 20 = 200 min.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet 320",
+              uitleg: "3 uur is geen 300 minuten. 1 uur = 60 min.",
+            },
+          ],
+          niveaus: {
+            basis: "200 minuten.",
+            simpeler: "3 × 60 = 180. 180 + 20 = 200.",
+            nogSimpeler: "200",
+          },
+        },
+      },
     ],
   },
 
