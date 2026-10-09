@@ -295,62 +295,6 @@ Op de Doorstroomtoets krijg je vragen als: *"Waar gaat de tweede alinea over?"* 
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "Een tekst over honden heeft drie alinea's: één over voeding, één over uitlaten en één over spelen. Nu wil de schrijver iets vertellen over een bezoek aan de dierenarts. Wat doet hij het best?",
-        options: [
-          "Hij begint een nieuwe alinea",
-          "Hij zet het midden in de alinea over voeding",
-          "Hij zet het in de titel boven de tekst",
-          "Hij haalt alle witregels uit de tekst",
-        ],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Gaat een bezoek aan de dierenarts over voeding? Hoeveel deelonderwerpen horen er in één alinea?",
-          null,
-          "Waar dienen de witregels juist voor? Denk aan de stukjes waaruit een tekst bestaat.",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Wat is nieuw?",
-              tekst: "De dierenarts is een nieuw deelonderwerp. Het gaat niet over voeding, niet over uitlaten en niet over spelen.",
-            },
-            {
-              titel: "De gouden regel",
-              tekst: "Eén alinea gaat over één deelonderwerp. Begint de schrijver over iets nieuws, dan begint er ook een nieuw stukje tekst.",
-            },
-            {
-              titel: "Zo zie je het",
-              tekst: "Het nieuwe stukje herken je aan een witregel of doordat de tekst op een nieuwe regel begint.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "deelonderwerp",
-              uitleg: "Een klein onderwerp binnen het grote onderwerp. Groot onderwerp: honden. Deelonderwerpen: voeding, uitlaten, spelen, de dierenarts.",
-            },
-          ],
-          theorie: "**Nieuw deelonderwerp = nieuwe alinea**\n\nEen schrijver deelt zijn tekst op in stukjes. Elk stukje gaat over één deelonderwerp. Zo kan de lezer snel vinden wat hij zoekt.\n\nZou de schrijver de dierenarts midden in het stukje over voeding zetten, dan klopt dat stukje niet meer: het gaat dan over twee dingen tegelijk.",
-          voorbeelden: [
-            {
-              type: "herkennen",
-              tekst: "Een tekst over de zee: één alinea over golven, één over vissen. Wil de schrijver iets vertellen over schelpen zoeken? Dan begint hij een derde alinea.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Eén alinea = één deelonderwerp",
-              uitleg: "Verandert het deelonderwerp, dan begint er een nieuwe alinea.",
-            },
-          ],
-          niveaus: {
-            basis: "De dierenarts is een nieuw deelonderwerp. Wat doet een schrijver als hij over iets nieuws begint?",
-            simpeler: "Elk stukje tussen de witregels gaat over één ding. Past de dierenarts in een stukje dat al over iets anders gaat?",
-            nogSimpeler: "Nieuw onderwerp, nieuw stukje tekst. Hoe heet zo'n stukje?",
-          },
-        },
-      },
-      {
         q: "*\"Wist je dat een kameel dagenlang zonder drinken kan? Een kameel is helemaal gemaakt voor het leven in de woestijn. Zijn brede voeten zakken niet weg in het zand. Lange wimpers houden het zand uit zijn ogen.\"* — Wat doet de eerste zin van deze alinea?",
         options: [
           "Hij maakt je nieuwsgierig met een weetje",
@@ -814,62 +758,6 @@ Beantwoord nu de vragen over de egel-tekst hierboven.`,
         },
       },
       {
-        q: "De laatste alinea van een tekst over egels luidt: *\"Je weet nu hoe de egel de tuin helpt. Wil je zelf iets doen? Laat dan in de herfst een stapel bladeren liggen.\"* Welke functie heeft deze alinea?",
-        options: [
-          "Het slot: de tekst wordt afgerond met een tip",
-          "De inleiding: de lezer maakt kennis met het onderwerp",
-          "Een voorbeeld uit de tuin van één persoon",
-          "Uitleggen hoe bladeren ontstaan",
-        ],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Staat deze alinea aan het begin van de tekst? Wat zegt 'Je weet nu...' over wat er al geweest is?",
-          "Wordt hier een naam of een echte tuin genoemd?",
-          null,
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Kijk naar de plek",
-              tekst: "Dit is de laatste alinea van de tekst. Daar rondt de schrijver vaak af.",
-            },
-            {
-              titel: "Kijk naar de inhoud",
-              tekst: "'Je weet nu...' vat kort samen wat je gelezen hebt. Daarna komt er een tip: laat een stapel bladeren liggen.",
-            },
-            {
-              titel: "Herken de functie",
-              tekst: "Samenvatten en een tip geven aan het einde: zo sluit een schrijver een tekst af.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "slot",
-              uitleg: "Het einde van een tekst: de tekst wordt afgerond, vaak met een korte samenvatting of een tip.",
-            },
-          ],
-          theorie: "**Het slot herkennen**\n\nEen slot-alinea doet vaak één of twee dingen:\n\n1. **Kort samenvatten** — 'Je weet nu...', 'Kortom...'\n2. **Een tip of oproep** — 'Wil je zelf iets doen? Dan...'\n\nStaat zo'n alinea aan het einde? Dan is de functie bijna zeker: afsluiten.",
-          voorbeelden: [
-            {
-              type: "slot",
-              tekst: "'Nu weet je waarom bijen zo belangrijk zijn. Zet dus wat bloemen in je tuin!' → samenvatting plus tip aan het einde.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Plek helpt, inhoud beslist",
-              uitleg: "De laatste alinea is vaak het slot. Controleer of hij echt afrondt.",
-            },
-          ],
-          niveaus: {
-            basis: "Deze alinea staat aan het einde en zegt 'Je weet nu...'. Wat doet de schrijver daarmee?",
-            simpeler: "Hij vat kort samen en geeft daarna een tip. Bij welke taak hoort dat?",
-            nogSimpeler: "Hoe heet het stuk waarmee een tekst eindigt?",
-          },
-        },
-      },
-      {
         q: "Een alinea uit een tekst over afval luidt: *\"Kijk maar naar basisschool De Linde. Daar staan in elk lokaal drie prullenbakken: voor papier, voor plastic en voor de rest. Sinds de kinderen hun afval scheiden, gaat er veel minder in de grijze container.\"* Wat doet de schrijver in deze alinea?",
         options: [
           "Hij geeft een voorbeeld",
@@ -1153,57 +1041,6 @@ Oefen nu met de vragen hieronder. Let goed op de te-smalle en te-brede instinker
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
-      {
-        q: "*\"Een mol leeft bijna zijn hele leven onder de grond. Met zijn grote voorpoten graaft hij lange gangen. In die gangen zoekt hij naar regenwormen. Zelfs zijn nest maakt hij onder de grond.\"* — Welk tussenkopje past het best boven deze alinea?",
-        options: ["Leven onder de grond", "Grote voorpoten", "Dieren in Nederland", "Vliegen in de nacht"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Dat gaat maar over één zinnetje. Past dit kopje ook bij de wormen en het nest?",
-          "Zou dit kopje niet boven honderden andere teksten passen?",
-          null,
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Vind de kernzin",
-              tekst: "De eerste zin zegt: een mol leeft bijna zijn hele leven onder de grond. De andere zinnen vertellen wat hij daar doet.",
-            },
-            {
-              titel: "Doe de pas-test",
-              tekst: "Graven, wormen zoeken, een nest maken: alles gebeurt onder de grond. Het goede kopje past bij al die zinnen.",
-            },
-            {
-              titel: "Streep de instinkers weg",
-              tekst: "Eén kopje gaat maar over één zin (te smal). Eén kopje past boven bijna elke dierentekst (te breed). Eén kopje gaat over iets wat niet in de alinea staat.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "tussenkopje",
-              uitleg: "Een paar woorden boven een alinea die vertellen waar het stukje over gaat.",
-            },
-          ],
-          theorie: "**De pas-test**\n\nEen goed tussenkopje:\n\n- past bij **álle zinnen** van de alinea (niet te smal);\n- past **alleen** bij deze alinea (niet te breed).\n\nTip: vind de kernzin en maak hem kort. Dan heb je bijna altijd het goede kopje.",
-          voorbeelden: [
-            {
-              type: "te smal",
-              tekst: "Bij deze alinea is 'Regenwormen' te smal: het gaat maar over één zin.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Kernzin kort maken",
-              uitleg: "De kernzin kort maken geeft je meestal het beste tussenkopje.",
-            },
-          ],
-          niveaus: {
-            basis: "Lees de eerste zin. Hoe zou je die in een paar woorden zeggen?",
-            simpeler: "Gebeurt het graven, het wormen zoeken en het nest maken allemaal op dezelfde plek? Welke plek?",
-            nogSimpeler: "Welk kopje past bij álle vier de zinnen?",
-          },
-        },
-      },
       {
         q: "Een tussenkopje gaat maar over één zinnetje uit de alinea. Hoe noem je zo'n kopje?",
         options: ["Te smal", "Te breed", "Precies goed", "Te lang"],

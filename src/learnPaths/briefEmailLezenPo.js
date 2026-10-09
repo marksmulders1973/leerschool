@@ -643,62 +643,6 @@ Beantwoord nu de vier vragen over de brief hierboven. Zoek het antwoord altijd �
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "Waar wordt de sportdag gehouden?",
-        options: [
-          "Op sportpark De Weide",
-          "Op het schoolplein van De Vlinderboom",
-          "In de gymzaal van de school",
-          "Aan de Lindelaan in Zonnedorp",
-        ],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Staat het schoolplein ergens in de brief? Scan op het woord 'sportdag'.",
-          null,
-          "Dat is het adres van de school, bovenaan de brief. Wordt de sportdag ook daar gehouden?",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Zoekwoord",
-              tekst: "De vraag gaat over de plek van de sportdag. Zoek in de kern de zin waarin de sportdag genoemd wordt.",
-            },
-            {
-              titel: "Precies lezen",
-              tekst: "Daar staat: 'Op vrijdag 22 mei houden wij onze jaarlijkse sportdag op sportpark De Weide.'",
-            },
-            {
-              titel: "Pas op voor het adres",
-              tekst: "Bovenaan staat ook een plek: Lindelaan 12, Zonnedorp. Dat is het adres van de school, de afzender. Het zegt niets over waar de sportdag is.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "sportpark",
-              uitleg: "Een terrein met velden en banen om op te sporten.",
-            },
-          ],
-          theorie: "**Twee soorten plekken in een brief**\n\n- **Bovenaan**: het adres van de afzender (waar de school staat).\n- **In de kern**: de plek waar iets gebeurt (waar de sportdag is).\n\nVraagt de toets waar iets gebeurt? Zoek dan in de kern, niet bovenaan.",
-          voorbeelden: [
-            {
-              type: "plek",
-              tekst: "'Basisschool De Linde, Kerkstraat 3' bovenaan → adres. 'De voorstelling is in het theater' in de kern → plek van de voorstelling.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Kern = wat er gebeurt",
-              uitleg: "Wat, waar en wanneer iets gebeurt, lees je in het middenstuk van de brief.",
-            },
-          ],
-          niveaus: {
-            basis: "Zoek de zin waarin het woord 'sportdag' voor het eerst staat. Welke plek wordt daar genoemd?",
-            simpeler: "Het adres bovenaan is van de school. Waar gaan de kinderen op 22 mei naartoe?",
-            nogSimpeler: "Lees de eerste zin na 'Beste ouders en verzorgers,'. Welke plek staat daarin?",
-          },
-        },
-      },
-      {
         q: "Voor wie is deze brief bedoeld?",
         options: [
           "Voor de ouders en verzorgers",
@@ -1162,61 +1106,6 @@ Oefen deze drie gevallen hieronder met korte stukjes brief.`,
             basis: "Welke vraag stelt Lotte aan Mira? Wat wil ze daarmee?",
             simpeler: "Er staan een dag, een tijd en een plek in. Wat voor briefje is dat meestal?",
             nogSimpeler: "Wat wil Lotte dat Mira op zaterdag doet?",
-          },
-        },
-      },
-      {
-        q: "Je schrijft een e-mail aan je beste vriend Daan. Welke aanhef past het best?",
-        options: ["Beste Daan,", "Geachte heer De Wit,", "Geachte directie,", "Zeer geachte mevrouw,"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "'Geachte' schrijf je aan iemand die je niet goed kent. Is dat zo bij je beste vriend?",
-          null,
-          null,
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Wie is de ontvanger?",
-              tekst: "Daan is je beste vriend. Jullie kennen elkaar heel goed.",
-            },
-            {
-              titel: "Deftig of gewoon?",
-              tekst: "Aan iemand die je niet goed kent schrijf je deftig: 'Geachte'. Aan vrienden en familie schrijf je gewoon: 'Beste' of 'Lieve'.",
-            },
-            {
-              titel: "Kies de aanhef",
-              tekst: "Bij een vriend past een gewone aanhef met zijn voornaam.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "aanhef",
-              uitleg: "De begroeting waarmee een brief of e-mail begint.",
-            },
-            {
-              woord: "formeel",
-              uitleg: "Deftig, netjes. Zo schrijf je aan iemand die je niet goed kent.",
-            },
-          ],
-          theorie: "**Deftig of gewoon?**\n\n| Ontvanger | Aanhef | Aanspreken |\n|---|---|---|\n| iemand die je niet goed kent | Geachte heer / mevrouw | u |\n| vriend of familie | Beste / Lieve | je |\n\nAan de aanhef zie je meteen hoe goed de schrijver en de ontvanger elkaar kennen.",
-          voorbeelden: [
-            {
-              type: "gewoon",
-              tekst: "Een kaartje aan je oma begint met 'Lieve oma,'.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Aanhef past bij de ontvanger",
-              uitleg: "Hoe beter je iemand kent, hoe gewoner je aanhef.",
-            },
-          ],
-          niveaus: {
-            basis: "Ken je je beste vriend goed of niet goed? Welke soort aanhef past daarbij?",
-            simpeler: "Drie aanheffen beginnen met 'Geachte'. Aan wie schrijf je 'Geachte'?",
-            nogSimpeler: "Welke aanhef noemt alleen de voornaam van je vriend?",
           },
         },
       },

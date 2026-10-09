@@ -310,66 +310,6 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
           },
         },
       },
-      {
-        q: "Welke twee dingen gebruik je als je een conclusie trekt?",
-        options: [
-          "Aanwijzingen uit de tekst en je eigen kennis",
-          "Alleen de titel en de laatste zin",
-          "Alleen wat jij zelf het leukst vindt",
-          "De plaatjes en het aantal bladzijden",
-        ],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Staan aanwijzingen alleen in de titel en de laatste zin? Waar kunnen ze nog meer staan?",
-          "Gaat een conclusie over wat je leuk vindt, of over wat je kunt onderbouwen?",
-          null,
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Ding 1",
-              tekst: "Je gebruikt aanwijzingen uit de tekst: woorden en zinnen die iets verklappen, zoals 'een kletsnatte jas'.",
-            },
-            {
-              titel: "Ding 2",
-              tekst: "Je gebruikt je eigen kennis: jij weet bijvoorbeeld dat regen dingen nat maakt.",
-            },
-            {
-              titel: "Samen",
-              tekst: "Aanwijzing plus eigen kennis geeft een conclusie die je kunt onderbouwen.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "eigen kennis",
-              uitleg: "Wat je zelf al weet over de wereld, zoals dat ijs smelt in de zon.",
-            },
-            {
-              woord: "onderbouwen",
-              uitleg: "Laten zien met wélke aanwijzingen je je conclusie kunt bewijzen.",
-            },
-          ],
-          theorie: "**Twee ingrediënten**\n\n1. **Aanwijzingen uit de tekst** — overal in de tekst, niet alleen in de titel.\n2. **Je eigen kennis** — wat je al weet.\n\nWat je leuk vindt of hoopt, telt niet mee. Een conclusie moet je kunnen onderbouwen.",
-          voorbeelden: [
-            {
-              type: "ingrediënten",
-              tekst: "Tekst: 'Op tafel ligt een leeg bord met kruimels.' Eigen kennis: kruimels blijven over na het eten. Conclusie: hier heeft iemand gegeten.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Tekst + kennis",
-              uitleg: "Een conclusie maak je met aanwijzingen uit de tekst en wat jij al weet.",
-            },
-          ],
-          niveaus: {
-            basis: "Waar komen aanwijzingen vandaan? En wat weet jij zelf al?",
-            simpeler: "Denk aan de natte jas: wat haalde je uit de tekst, en wat wist je zelf al over regen?",
-            nogSimpeler: "Welk antwoord noemt de tekst én wat jij al weet?",
-          },
-        },
-      },
     ],
   },
 
@@ -1016,62 +956,6 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
             basis: "Wat weet je zeker over die zaterdagavond?",
             simpeler: "Doe de te-ver-test: welke antwoorden zeggen iets over smaak, andere avonden of geld?",
             nogSimpeler: "Wat betekent een rij wachtende mensen voor de deur?",
-          },
-        },
-      },
-      {
-        q: "Je denkt dat een personage in een verhaal boos is. Hoe controleer je of die conclusie ONDERBOUWD is?",
-        options: [
-          "Je zoekt zinnen in de tekst die op boosheid wijzen",
-          "Je bedenkt of jij zelf boos zou zijn",
-          "Je kiest het antwoord dat het spannendst klinkt",
-          "Je kijkt of het woord 'boos' in de titel staat",
-        ],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Zou jij in dezelfde situatie hetzelfde voelen als het personage? Waar moet het bewijs vandaan komen?",
-          null,
-          "Een titel zegt iets over de hele tekst. Waar zoek je bewijs voor wat één personage voelt?",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "De wijs-test",
-              tekst: "Een onderbouwde conclusie steunt op aanwijzingen die je kunt aanwijzen in de tekst.",
-            },
-            {
-              titel: "Zoek gedrag",
-              tekst: "Bij boosheid kun je zoeken naar zinnen als 'hij stampte', 'ze werd rood' of 'hij smeet de deur dicht'.",
-            },
-            {
-              titel: "Wat telt niet?",
-              tekst: "Wat jij zelf zou voelen of wat spannend klinkt, is geen bewijs uit de tekst.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "personage",
-              uitleg: "Iemand die in een verhaal voorkomt.",
-            },
-          ],
-          theorie: "**De wijs-test**\n\n1. Lees je conclusie: 'het personage is boos'.\n2. Zoek de zinnen die dat steunen.\n3. Vind je ze? Onderbouwd. Vind je niets? Dan is het een gok.\n\nToetsmakers zetten er graag een spannend antwoord tussen. Spannend is geen bewijs.",
-          voorbeelden: [
-            {
-              type: "onderbouwd",
-              tekst: "'Hij smeet zijn tas op de grond en stampte de trap op.' → je kunt aanwijzen dat hij boos is.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Bewijs uit de tekst",
-              uitleg: "Een conclusie over een personage controleer je altijd met zinnen uit de tekst.",
-            },
-          ],
-          niveaus: {
-            basis: "Waar moet het bewijs voor een conclusie altijd vandaan komen?",
-            simpeler: "Denk aan de wijs-test: wat moet je kunnen aanwijzen?",
-            nogSimpeler: "Welk antwoord zoekt in de tekst zelf?",
           },
         },
       },
