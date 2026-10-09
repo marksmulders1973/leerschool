@@ -356,3 +356,5 @@ Gevonden door de nakijkers van de vervolgsessie in de **stap-uitleg of bestaande
 - **spreekwoorden-uitdrukkingen-po, stap 0:** 'is het grote niet weert' moet 'weerd' zijn.
 - **schrijven-teksten-po, stap 2:** 'kern-zin' moet 'kernzin' zijn (ook in de stap-uitleg).
 - **Nieuwkomers-rekenpaden (alle bestaande vragen):** `rekenReden()` in `src/learnPaths/nieuwkomersFoutUitleg.js` zet bij elk fout antwoord automatisch een uitleg als 'Nee, 7 is één te weinig' voor de hint. Daarmee ligt na één fout het antwoord vast. Dat is een ontwerpkeuze (25 sep, 'Nee, <waarom niet>'), maar het botst met de regel 'hints geven het antwoord niet weg'. Mark: bewust zo laten?
+- **cito-strategieen-groep8, stap-uitleg:** 'elke vraag geeft evenveel punten' (en overslaan/terugkomen) staat er stellig, maar de digitale Cito-Doorstroomtoets is deels adaptief; dat geldt dus niet voor elke aanbieder/versie.
+- **onderwijs-niveaus-vmbo-havo-vwo, stap-uitleg:** 'je kiest een richting in klas 3' — op het vmbo kies je meestal aan het eind van klas 2 en volg je de richting vanaf klas 3.
