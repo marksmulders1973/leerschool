@@ -1,0 +1,392 @@
+[
+ {
+  "stap": 0,
+  "q": "Welk woord in deze zin moet nog een hoofdletter krijgen? *In oktober varen we over de maas.*",
+  "options": [
+   "maas",
+   "oktober",
+   "varen",
+   "we"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Hoe schrijf je een maand in het Nederlands?",
+   null,
+   "Staat dit woord aan het begin van de zin?"
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Zinsbegin en rivier groot, maand klein",
+     "tekst": "De zin begint met een hoofdletter (In). De Maas is een rivier, dus een naam: hoofdletter. Oktober is een maand, en maanden schrijf je in het Nederlands klein."
+    }
+   ],
+   "niveaus": {
+    "basis": "Zinsbegin = hoofdletter. Rivieren = hoofdletter. Maanden = klein.",
+    "simpeler": "Loop de woorden langs: begint hier de zin? Is het een naam van een rivier, stad of land? Zo niet, dan klein.",
+    "nogSimpeler": "Welk woord is de naam van een rivier?"
+   }
+  }
+ },
+ {
+  "stap": 0,
+  "q": "*Op woensdag krijgt Anna les in het engels.* Welk woord is hier fout geschreven?",
+  "options": [
+   "engels",
+   "woensdag",
+   "les",
+   "krijgt"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Krijgt een dag van de week een hoofdletter?",
+   null,
+   "Zou een werkwoord midden in de zin een hoofdletter krijgen?"
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Naam en taal groot, dag klein",
+     "tekst": "Engels is de naam van een taal, en talen schrijf je met een hoofdletter: in het Engels. Woensdag is een dag, en dagen schrijf je klein. Anna heeft als naam al een hoofdletter."
+    }
+   ],
+   "niveaus": {
+    "basis": "Zinsbegin, namen van mensen en talen krijgen een hoofdletter. Dagen niet.",
+    "simpeler": "Welke woorden zijn een naam of een taal? Die worden groot. De dag blijft klein.",
+    "nogSimpeler": "Welk woord is de naam van een taal?"
+   }
+  }
+ },
+ {
+  "stap": 0,
+  "q": "In welke zin is een hoofdletter **fout** gebruikt?",
+  "options": [
+   "Het was koud, Dus we bleven binnen.",
+   "Het regent. We blijven binnen.",
+   "Kom je ook, Daan?",
+   "Ik ben moe, dus ik ga slapen."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wat begint er na een punt?",
+   "Is Daan een gewoon woord of een naam?",
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Na een komma gaat de zin door",
+     "tekst": "Na een komma begint geen nieuwe zin. Daarom krijgt 'dus' daar géén hoofdletter. Na een punt begint wél een nieuwe zin (We), en een naam (Daan) is altijd groot."
+    }
+   ],
+   "niveaus": {
+    "basis": "Na een komma: kleine letter (behalve bij een naam). Na een punt: hoofdletter.",
+    "simpeler": "Kijk naar het woord na elk leesteken. Is het een punt? Dan groot. Is het een komma en geen naam? Dan klein.",
+    "nogSimpeler": "In welke zin staat na een komma een hoofdletter bij een gewoon woord?"
+   }
+  }
+ },
+ {
+  "stap": 0,
+  "q": "Welk woord hoort met een hoofdletter? *In de winter gaan veel nederlanders schaatsen.*",
+  "options": [
+   "nederlanders",
+   "winter",
+   "schaatsen",
+   "veel"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Krijgt een seizoen een hoofdletter?",
+   null,
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Volk groot, seizoen klein",
+     "tekst": "Nederlanders is de naam van een volk, dus met een hoofdletter. Winter is een seizoen, en seizoenen schrijf je klein."
+    }
+   ],
+   "niveaus": {
+    "basis": "Volken en talen = hoofdletter. Seizoenen = klein.",
+    "simpeler": "Is het woord de naam van een volk? Dan groot. Is het lente, zomer, herfst of winter? Dan klein.",
+    "nogSimpeler": "Welk woord is de naam van een volk?"
+   }
+  }
+ },
+ {
+  "stap": 1,
+  "q": "Welk teken hoort aan het eind? *Heb jij mijn gum gezien___*",
+  "options": [
+   "?",
+   ".",
+   "!",
+   ":"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Staat het werkwoord vooraan? Wat voor zin is het dan?",
+   null,
+   "Een dubbele punt sluit geen zin af."
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Werkwoord vooraan = vraag",
+     "tekst": "De zin begint met het werkwoord 'Heb'. Zo herken je vaak een vraag. Een vraag sluit je af met een vraagteken."
+    }
+   ],
+   "niveaus": {
+    "basis": "Staat het werkwoord vooraan, dan is het vaak een vraag: vraagteken.",
+    "simpeler": "Wil de spreker iets te weten komen? Dan is het een vraag en zet je een vraagteken.",
+    "nogSimpeler": "Wordt hier iets gevraagd? Welk teken hoort bij een vraag?"
+   }
+  }
+ },
+ {
+  "stap": 1,
+  "q": "Welke zin is een **vraag** en krijgt dus een vraagteken?",
+  "options": [
+   "Lust jij ook pannenkoeken",
+   "Ik lust geen pannenkoeken",
+   "Wat zijn die pannenkoeken lekker",
+   "Mijn opa bakt pannenkoeken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wordt hier iets gevraagd of verteld?",
+   "Begint elke zin met 'wat' als vraag? Of zegt iemand hier iets met veel gevoel?",
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Wie wil iets weten?",
+     "tekst": "In 'Lust jij ook pannenkoeken' staat het werkwoord vooraan en wil de spreker iets weten. Dat is een vraag. 'Wat zijn die pannenkoeken lekker' is een uitroep: de spreker vraagt niets, hij vindt ze heel lekker."
+    }
+   ],
+   "niveaus": {
+    "basis": "Een vraag wil iets te weten komen. Vaak staat het werkwoord vooraan.",
+    "simpeler": "Kun je op de zin antwoorden met ja of nee? Dan is het meestal een vraag.",
+    "nogSimpeler": "Bij welke zin kun je 'ja' of 'nee' antwoorden?"
+   }
+  }
+ },
+ {
+  "stap": 1,
+  "q": "Welke zin heeft het **verkeerde** eindteken?",
+  "options": [
+   "Waar woont jouw tante.",
+   "Mijn tante woont in Zwolle.",
+   "Help, ik val!",
+   "Woont jouw tante ook in Zwolle?"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wordt er in deze zin iets gevraagd?",
+   null,
+   "Staat het werkwoord vooraan? Wat voor zin is het dan?"
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Vraagwoord = vraagteken",
+     "tekst": "'Waar woont jouw tante' begint met het vraagwoord 'waar'. Het is dus een vraag en hoort een vraagteken te krijgen, geen punt."
+    }
+   ],
+   "niveaus": {
+    "basis": "Begint een zin met wie, wat, waar, wanneer, hoe of waarom, dan is het vaak een vraag: vraagteken.",
+    "simpeler": "Lees elke zin: is het een mededeling, een vraag of een uitroep? Past het teken erbij?",
+    "nogSimpeler": "Welke zin is een vraag, maar eindigt op een punt?"
+   }
+  }
+ },
+ {
+  "stap": 2,
+  "q": "Waar hoort de komma? *Ja dat vind ik ook.*",
+  "options": [
+   "Ja, dat vind ik ook.",
+   "Ja dat, vind ik ook.",
+   "Ja dat vind, ik ook.",
+   "Ja dat vind ik, ook."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Lees de zin hardop: waar haal je echt even adem?",
+   null,
+   "Zou je vlak voor het laatste woord pauzeren?"
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Komma na een tussenwerpsel",
+     "tekst": "'Ja' is een tussenwerpsel, net als 'nou' en 'oké'. Daarna pauzeer je even, dus daar komt de komma: Ja, dat vind ik ook."
+    }
+   ],
+   "niveaus": {
+    "basis": "Na een tussenwerpsel (ja, nee, nou, oké) zet je een komma.",
+    "simpeler": "Zeg de zin hardop. Na 'Ja' wacht je heel even. Daar hoort de komma.",
+    "nogSimpeler": "Komt de komma direct na 'Ja'?"
+   }
+  }
+ },
+ {
+  "stap": 2,
+  "q": "Welke zin heeft de komma op de goede plek?",
+  "options": [
+   "Als het morgen sneeuwt, bouwen we een sneeuwpop.",
+   "Als het morgen, sneeuwt bouwen we een sneeuwpop.",
+   "Als, het morgen sneeuwt bouwen we een sneeuwpop.",
+   "Als het morgen sneeuwt bouwen, we een sneeuwpop."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Is het eerste zinsdeel daar al klaar?",
+   null,
+   "Pauzeer je tussen 'bouwen' en 'we'?"
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Komma tussen twee zinsdelen",
+     "tekst": "Het eerste deel is 'Als het morgen sneeuwt'. Daarna begint het tweede deel: 'bouwen we een sneeuwpop'. Tussen die twee delen pauzeer je, dus daar staat de komma."
+    }
+   ],
+   "niveaus": {
+    "basis": "Staan er twee zinsdelen achter elkaar, dan komt de komma waar het eerste deel ophoudt.",
+    "simpeler": "Lees hardop. Waar eindigt het stukje met 'als'? Daar komt de komma.",
+    "nogSimpeler": "Staat de komma direct na 'sneeuwt'?"
+   }
+  }
+ },
+ {
+  "stap": 2,
+  "q": "Je spreekt de juf aan. Welke zin is goed?",
+  "options": [
+   "Juf, mag ik even naar buiten?",
+   "Juf mag, ik even naar buiten?",
+   "Juf mag ik, even naar buiten?",
+   "Juf mag ik even, naar buiten?"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wie spreek je hier aan, en waar staat dat woord?",
+   null,
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Komma na wie je aanspreekt",
+     "tekst": "Je spreekt de juf aan. Het woord 'Juf' staat vooraan, dus de komma komt direct erna: Juf, mag ik even naar buiten?"
+    }
+   ],
+   "niveaus": {
+    "basis": "Spreek je iemand aan, dan scheid je dat woord met een komma van de rest van de zin.",
+    "simpeler": "Wie spreek je aan? Zet daar de komma achter.",
+    "nogSimpeler": "Staat de komma direct na 'Juf'?"
+   }
+  }
+ },
+ {
+  "stap": 2,
+  "q": "Welke zin heeft **geen** komma nodig?",
+  "options": [
+   "Mijn zus fietst naar school.",
+   "Nou dat had ik niet gedacht.",
+   "Kom je mee Sem?",
+   "Toen het donker werd gingen we slapen."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wat doe je na een tussenwerpsel zoals 'Nou'?",
+   "Wordt hier iemand aangesproken?",
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Waar pauzeer je niet?",
+     "tekst": "'Mijn zus fietst naar school' lees je in één keer. Er is geen opsomming, niemand wordt aangesproken en er is geen tussenwerpsel. De andere zinnen missen wél een komma: na 'Nou', vóór 'Sem' en na 'werd'."
+    }
+   ],
+   "niveaus": {
+    "basis": "Een komma hoort bij een opsomming, bij aanspreken, na een tussenwerpsel of tussen twee zinsdelen.",
+    "simpeler": "Lees elke zin hardop. In welke zin haal je nergens even adem?",
+    "nogSimpeler": "Welke zin is kort en gewoon, zonder pauze?"
+   }
+  }
+ },
+ {
+  "stap": 3,
+  "q": "In welke zin staat de **directe rede**?",
+  "options": [
+   "Sam zei: \"Ik heb honger.\"",
+   "Sam zei dat hij honger had.",
+   "Sam had erge honger.",
+   "Sam vertelde over zijn honger."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Staan hier de woorden precies zoals Sam ze zelf zei?",
+   null,
+   "Zie je aanhalingstekens?"
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Letterlijk wat iemand zegt",
+     "tekst": "Bij directe rede schrijf je precies op wat iemand zegt, met een dubbele punt en aanhalingstekens: Sam zei: \"Ik heb honger.\" In de andere zinnen vertelt iemand anders er alleen over."
+    }
+   ],
+   "niveaus": {
+    "basis": "Directe rede = de letterlijke woorden van iemand, tussen aanhalingstekens.",
+    "simpeler": "Zoek de zin met een dubbele punt en aanhalingstekens.",
+    "nogSimpeler": "In welke zin staan aanhalingstekens?"
+   }
+  }
+ },
+ {
+  "stap": 3,
+  "q": "Waarom krijgt *Kom* een hoofdletter in: Oma zei: \"Kom maar binnen.\"",
+  "options": [
+   "Daar begint de zin die oma zegt.",
+   "Kom is de naam van iemand.",
+   "Na een dubbele punt komt altijd een hoofdletter.",
+   "Kom is het belangrijkste woord."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Is 'kom' een naam of een gewoon woord?",
+   "Denk aan de opsomming: 'Ik neem mee: brood, kaas en fruit.' Staat daar een hoofdletter?",
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Een nieuwe gesproken zin",
+     "tekst": "Binnen de aanhalingstekens begint de zin die oma uitspreekt. Het eerste woord daarvan krijgt een hoofdletter. Bij een opsomming na een dubbele punt is dat niet zo: daar begint geen nieuwe zin."
+    }
+   ],
+   "niveaus": {
+    "basis": "Het eerste woord binnen de aanhalingstekens krijgt een hoofdletter, want daar begint de uitgesproken zin.",
+    "simpeler": "Wat zegt oma precies? Haar zin begint met 'Kom'. Elke zin begint met een hoofdletter.",
+    "nogSimpeler": "Begint hier de zin die oma zegt?"
+   }
+  }
+ }
+]
