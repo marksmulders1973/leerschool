@@ -1,0 +1,357 @@
+{
+ "pathId": "soorten-teksten-po",
+ "geschreven": 12,
+ "opgenomen": [
+  {
+   "stap": 0,
+   "q": "Je wilt weten hoeveel poten een spin heeft. Welk soort tekst zoek je dan op?",
+   "options": [
+    "een informatieve tekst",
+    "een instructieve tekst",
+    "een verhalende tekst",
+    "een betogende tekst"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    "Zoek je een verzonnen verhaal, of wil je iets te weten komen?",
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Iets willen weten = informatief",
+      "tekst": "Je wilt een feit te weten komen. Een tekst die je iets laat weten, is een informatieve tekst."
+     }
+    ],
+    "niveaus": {
+     "basis": "Iets opzoeken om het te weten → informatieve tekst.",
+     "simpeler": "Wil je hier iets wéten of iets dóén?",
+     "nogSimpeler": "Welk soort tekst geeft je informatie?"
+    }
+   },
+   "id": "soorten-teksten-po#0"
+  },
+  {
+   "stap": 0,
+   "q": "Welke zin komt uit een informatieve tekst?",
+   "options": [
+    "Een walvis is een zoogdier en ademt met longen.",
+    "Er was eens een walvis die heel graag wilde vliegen.",
+    "Kom naar het walvismuseum, want daar is het echt het leukst!",
+    "Knip de walvis uit en plak hem op een blauw vel."
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    "Vertelt deze zin je een feit, of wil hij je ergens naartoe krijgen?",
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Feiten = informatief",
+      "tekst": "'Een walvis is een zoogdier en ademt met longen' is een feit. Er staat geen verhaal, geen mening en geen opdracht in → informatief."
+     }
+    ],
+    "niveaus": {
+     "basis": "De zin met het feit over de walvis is informatief.",
+     "simpeler": "Welke zin vertelt je gewoon iets dat waar is?",
+     "nogSimpeler": "Welke zin leert je iets over walvissen?"
+    }
+   },
+   "id": "soorten-teksten-po#1"
+  },
+  {
+   "stap": 0,
+   "q": "Welke titel past het best bij een informatieve tekst?",
+   "options": [
+    "Waarom hebben zebra's strepen?",
+    "De zebra die zijn strepen kwijt was",
+    "Teken in vijf stappen een zebra",
+    "Bezoek ons zebrapark: het leukste uitje!"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Klinkt dit als het begin van een verhaal of als uitleg?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Een titel die iets uitlegt",
+      "tekst": "'Waarom hebben zebra's strepen?' belooft uitleg over iets echts. Je leest die tekst om iets te weten → informatief."
+     }
+    ],
+    "niveaus": {
+     "basis": "Een titel die een 'waarom'-vraag over de natuur stelt, hoort bij uitleg → informatief.",
+     "simpeler": "Bij welke titel verwacht je uitleg en feiten?",
+     "nogSimpeler": "Welke titel belooft dat je iets leert?"
+    }
+   },
+   "id": "soorten-teksten-po#2"
+  },
+  {
+   "stap": 1,
+   "q": "Je wilt een tent opzetten, maar je weet niet hoe dat moet. Wat lees je?",
+   "options": [
+    "de handleiding die bij de tent zit",
+    "een verhaal over een kampeervakantie",
+    "een advertentie voor nieuwe tenten",
+    "een artikel over de geschiedenis van kamperen"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    null,
+    "Leer je daarvan hoe je jouw tent opzet, of iets over vroeger?"
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Iets doen = instructief",
+      "tekst": "Een handleiding vertelt je stap voor stap hoe je iets doet. Daarmee kun je de tent echt opzetten → instructieve tekst."
+     }
+    ],
+    "niveaus": {
+     "basis": "Om iets te kunnen doen lees je een handleiding (instructief).",
+     "simpeler": "Welke tekst vertelt je wat je moet doen, stap voor stap?",
+     "nogSimpeler": "Welke tekst helpt je de tent op te zetten?"
+    }
+   },
+   "id": "soorten-teksten-po#3"
+  },
+  {
+   "stap": 1,
+   "q": "Welke zin is een stap uit een recept?",
+   "options": [
+    "Meng de bloem met de melk en roer tot er geen klontjes meer zijn.",
+    "Er was eens een pannenkoek die van de pan af sprong.",
+    "Pannenkoeken zijn het lekkerste eten, dus eet ze vaker!",
+    "In Nederland eten veel mensen graag pannenkoeken."
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    "Zegt deze zin wat je moet doen, of wat de schrijver ervan vindt?",
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Opdracht-werkwoorden",
+      "tekst": "Een recept is een instructieve tekst. Je herkent het aan werkwoorden die een opdracht geven, zoals 'meng' en 'roer'."
+     }
+    ],
+    "niveaus": {
+     "basis": "'Meng' en 'roer' zijn opdrachten → die zin komt uit een recept.",
+     "simpeler": "In welke zin staat wat jij moet doen?",
+     "nogSimpeler": "Welke zin begint met een opdracht?"
+    }
+   },
+   "id": "soorten-teksten-po#4"
+  },
+  {
+   "stap": 1,
+   "q": "Je leest een stappenplan om een papieren bootje te vouwen. Waarom lees je dat?",
+   "options": [
+    "om iets te kunnen doen",
+    "om iets te weten over boten",
+    "om de mening van de schrijver te horen",
+    "om te lachen om een grappig verhaal"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Wat ga jij doen terwijl je dit stappenplan leest?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Stappenplan = doen",
+      "tekst": "Een stappenplan vertelt hoe je iets maakt. Je leest het om het zelf te kunnen doen → instructieve tekst."
+     }
+    ],
+    "niveaus": {
+     "basis": "Een stappenplan lees je om iets te kunnen doen.",
+     "simpeler": "Ga je na het lezen zelf iets vouwen?",
+     "nogSimpeler": "Lees je het om te doen of om te lachen?"
+    }
+   },
+   "id": "soorten-teksten-po#5"
+  },
+  {
+   "stap": 2,
+   "q": "Op een poster staat: 'Stem op Jayden als klassenvertegenwoordiger, want hij luistert naar iedereen!' Wat wil de schrijver?",
+   "options": [
+    "je overtuigen",
+    "je vermaken",
+    "je uitleggen hoe iets werkt",
+    "je laten zien hoe je iets maakt"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Staat er een verhaal op de poster?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Mening + argument = overtuigen",
+      "tekst": "'Stem op Jayden' is wat de schrijver wil. 'Want hij luistert naar iedereen' is het argument. Zo probeert hij je over te halen → betogend."
+     }
+    ],
+    "niveaus": {
+     "basis": "De poster wil je overtuigen om op Jayden te stemmen.",
+     "simpeler": "Wil de poster dat jij iets gaat vinden of doen?",
+     "nogSimpeler": "Wil de schrijver dat je op Jayden stemt?"
+    }
+   },
+   "id": "soorten-teksten-po#6"
+  },
+  {
+   "stap": 2,
+   "q": "'Honden zijn de beste huisdieren, want ze maken je altijd blij.' Wat is dit?",
+   "options": [
+    "een mening met een argument",
+    "een feit uit een encyclopedie",
+    "een stap uit een handleiding",
+    "het begin van een sprookje"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Is iedereen het hiermee eens, of vindt de schrijver dit?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Mening + 'want'",
+      "tekst": "'Honden zijn de beste huisdieren' is wat de schrijver vindt: een mening. Met 'want ze maken je altijd blij' geeft hij een argument. Dat hoort bij een betogende tekst."
+     }
+    ],
+    "niveaus": {
+     "basis": "Mening + argument (met 'want') → betogend.",
+     "simpeler": "Vindt de schrijver iets, of vertelt hij iets wat zeker waar is?",
+     "nogSimpeler": "Staat er 'want' achter een mening?"
+    }
+   },
+   "id": "soorten-teksten-po#8"
+  },
+  {
+   "stap": 3,
+   "q": "Op een kaartje bij een plant staat: 'Geef één keer per week water. Zet de plant in de zon.' Welk soort tekst is dit?",
+   "options": [
+    "instructief (laten doen)",
+    "informatief (laten weten)",
+    "betogend (overtuigen)",
+    "verhalend (vermaken)"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Vertelt het kaartje je alleen iets, of moet jij er ook iets mee doen?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Opdrachten = instructief",
+      "tekst": "'Geef' en 'zet' zijn opdrachten. Het kaartje vertelt wat jij moet doen om voor de plant te zorgen → instructief."
+     }
+    ],
+    "niveaus": {
+     "basis": "Opdrachten op het kaartje → instructief.",
+     "simpeler": "Moet je iets dóén met wat er op het kaartje staat?",
+     "nogSimpeler": "Staan er opdrachten zoals 'geef' en 'zet'?"
+    }
+   },
+   "id": "soorten-teksten-po#9"
+  },
+  {
+   "stap": 3,
+   "q": "Op een bord in de dierentuin staat: 'IJsberen kunnen goed zwemmen. Ze hebben een dikke vetlaag tegen de kou.' Welk soort tekst is dit?",
+   "options": [
+    "informatief (laten weten)",
+    "instructief (laten doen)",
+    "betogend (overtuigen)",
+    "verhalend (vermaken)"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    "Probeert het bord je ergens toe over te halen?",
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Feiten = informatief",
+      "tekst": "Het bord vertelt feiten over ijsberen. Er staat geen opdracht, geen mening en geen verhaal → informatief."
+     }
+    ],
+    "niveaus": {
+     "basis": "Feiten over ijsberen → informatief.",
+     "simpeler": "Leer je hier iets over ijsberen?",
+     "nogSimpeler": "Geeft het bord je kennis of een mening?"
+    }
+   },
+   "id": "soorten-teksten-po#10"
+  },
+  {
+   "stap": 3,
+   "q": "Een boek begint zo: 'Lang geleden woonde er in een klein dorp een jongen die met dieren kon praten.' Welk soort tekst is dit?",
+   "options": [
+    "verhalend (vermaken)",
+    "informatief (laten weten)",
+    "betogend (overtuigen)",
+    "instructief (laten doen)"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Leer je hier echte feiten over een dorp?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "'Lang geleden …' = verhaal",
+      "tekst": "Een jongen die met dieren kan praten is verzonnen. 'Lang geleden woonde er …' is een begin zoals 'er was eens' → verhalend."
+     }
+    ],
+    "niveaus": {
+     "basis": "Een verzonnen verhaal → verhalend.",
+     "simpeler": "Begint dit als een sprookje of verhaal?",
+     "nogSimpeler": "Kan een jongen echt met dieren praten?"
+    }
+   },
+   "id": "soorten-teksten-po#11"
+  }
+ ],
+ "afgekeurd": [
+  {
+   "id": "soorten-teksten-po#7",
+   "stap": 2,
+   "q": "In een tekst beleven een ridder en een draak samen een groot avontuur. Wat is het doel van die tekst?",
+   "redenen": [
+    "nakijker B: Bijna-dubbel met bestaande vraag 'Een strip-verhaal over twee kinderen die op avontuur gaan is een...' (avontuurverhaal -> verhalend/vermaken)."
+   ]
+  }
+ ]
+}
