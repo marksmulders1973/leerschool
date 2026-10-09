@@ -986,49 +986,6 @@ const steps = [
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "Een cake voor **6 personen** gebruikt **3 eieren**. Hoeveel eieren voor **12 personen**?",
-        options: ["6", "9", "4", "12"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Je mag niet zomaar optellen. Hoe vaak past 6 personen in 12 personen?",
-          "Hoe vaak past 6 personen in 12 personen? Doe de eieren ook zoveel keer.",
-          "Dat is het aantal personen. De vraag gaat over eieren.",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Factor",
-              tekst: "12 ÷ 6 = 2. Alles × 2. Eieren: 3 × 2 = 6.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "factor",
-              uitleg: "Nieuw aantal personen ÷ oud aantal personen.",
-            },
-          ],
-          theorie: "Recept omrekenen: zoek de factor, doe alle ingrediënten keer die factor.",
-          voorbeelden: [
-            {
-              type: "stap",
-              tekst: "6 personen → 3 eieren. 12 personen → 6 eieren.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Alles keer 2",
-              uitleg: "Ook de rest van het recept gaat × 2.",
-            },
-          ],
-          niveaus: {
-            basis: "6.",
-            simpeler: "12 is 2 × 6. Dus 2 × 3 eieren = 6.",
-            nogSimpeler: "6",
-          },
-        },
-      },
-      {
         q: "Soep voor **4 personen** gebruikt **800 mL** water. Hoeveel water voor **2 personen**?",
         options: ["400 mL", "200 mL", "600 mL", "1600 mL"],
         answer: 0,

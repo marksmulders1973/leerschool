@@ -1246,62 +1246,6 @@ const steps = [
         },
       },
       {
-        q: "De laatste bus vertrekt om **21:15**. Hoe zeg je die tijd in gewone woorden?",
-        options: [
-          "kwart over negen 's avonds",
-          "kwart over elf 's avonds",
-          "kwart over negen 's ochtends",
-          "kwart voor tien 's avonds",
-        ],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Welk getal haal je van 21 af om het gewone uur te vinden?",
-          null,
-          "Staat er :15 of :45 achter de 21?",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Stap 1: het uur",
-              tekst: "21 − 12 = 9. Het is dus 9 uur 's avonds.",
-            },
-            {
-              titel: "Stap 2: de minuten",
-              tekst: ":15 = kwart over.",
-            },
-            {
-              titel: "Stap 3: samen",
-              tekst: "21:15 = kwart over negen 's avonds.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "24-uurs tijd",
-              uitleg: "Tijd van 00:00 tot 23:59. Na 12:00 gaan de uren door: 13, 14, ... 23.",
-            },
-          ],
-          theorie: "24-uurs tijd terug naar gewone tijd: is het uur groter dan 12, haal er dan 12 af.",
-          voorbeelden: [
-            {
-              type: "stap",
-              tekst: "19:00 = 7 uur 's avonds. 22:00 = 10 uur 's avonds.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Kwart",
-              uitleg: "':15' = kwart over. ':45' = kwart voor het volgende uur.",
-            },
-          ],
-          niveaus: {
-            basis: "Kwart over negen 's avonds.",
-            simpeler: "21 − 12 = 9, dus negen uur 's avonds. :15 is kwart over. Kwart over negen 's avonds.",
-            nogSimpeler: "kwart over 9",
-          },
-        },
-      },
-      {
         q: "Een nachttrein vertrekt om **21:40** en rijdt **4 uur en 35 minuten**. Hoe laat komt de trein aan?",
         options: ["02:15", "01:15", "02:35", "03:15"],
         answer: 0,

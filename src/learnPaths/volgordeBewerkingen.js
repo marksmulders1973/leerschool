@@ -323,54 +323,6 @@ const steps = [
           },
         },
       },
-      {
-        q: "Tim zegt: 'Ik reken altijd van links naar rechts, net als bij lezen.' Klopt dat bij **3 + 5 × 2**?",
-        options: [
-          "Nee, je doet eerst 5 × 2",
-          "Ja, je doet eerst 3 + 5",
-          "Ja, links staat altijd eerst",
-          "Nee, je doet eerst 3 × 2",
-        ],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Welke bewerking is sterker: + of ×?",
-          "Welke bewerking is sterker: + of ×?",
-          "Kijk welke getallen echt naast het ×-teken staan.",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "× eerst",
-              tekst: "5 × 2 = 10. Dan 3 + 10 = 13.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "volgorde-regel",
-              uitleg: "× en ÷ gaan vóór + en −.",
-            },
-          ],
-          theorie: "Bij rekenen geldt niet 'links eerst', maar de volgorde-regel.",
-          voorbeelden: [
-            {
-              type: "stap",
-              tekst: "3 + 5×2 = 3 + 10 = 13. (Tim krijgt 8 × 2 = 16 — fout.)",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Lezen ≠ rekenen",
-              uitleg: "Bij lezen ga je van links naar rechts, bij gemengde sommen niet.",
-            },
-          ],
-          niveaus: {
-            basis: "Nee, eerst 5 × 2.",
-            simpeler: "× is sterker dan +. Dus eerst 5 × 2 = 10, dan 3 + 10 = 13.",
-            nogSimpeler: "Nee",
-          },
-        },
-      },
     ],
   },
   {
@@ -425,49 +377,6 @@ const steps = [
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
-      {
-        q: "Lisa koopt **3 schriften van 2 euro** en **één pen van 4 euro**. Welke som past hierbij?",
-        options: ["3 × 2 + 4", "3 + 2 × 4", "3 × 4 + 2", "3 + 2 + 4"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Hoeveel schriften kost ze, en voor hoeveel euro per stuk?",
-          "Kost de pen 4 euro, of kosten de schriften elk 4 euro?",
-          "Telt het aantal schriften als euro's?",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Schriften, dan pen",
-              tekst: "3 schriften × 2 euro = 6 euro. Plus de pen: 6 + 4 = 10 euro.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "× eerst",
-              uitleg: "Eerst 3 × 2, dan + 4.",
-            },
-          ],
-          theorie: "Bij 3 × 2 + 4 reken je eerst 3 × 2 = 6, dan + 4 = 10.",
-          voorbeelden: [
-            {
-              type: "stap",
-              tekst: "3 × 2 + 4 = 6 + 4 = 10 euro.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Past de som?",
-              uitleg: "Lees het verhaal en kijk wat er keer moet en wat erbij moet.",
-            },
-          ],
-          niveaus: {
-            basis: "3 × 2 + 4.",
-            simpeler: "3 schriften keer 2 euro, plus 4 euro voor de pen.",
-            nogSimpeler: "3 × 2 + 4",
-          },
-        },
-      },
       {
         q: "**36 ÷ 6 ÷ 2** = ?",
         options: ["3", "12", "6", "18"],
@@ -737,49 +646,6 @@ const steps = [
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
-      {
-        q: "Welke som past bij: **'tel eerst 5 en 3 op, en doe dat dan keer 4'**?",
-        options: ["(5 + 3) × 4", "5 + 3 × 4", "5 + (3 × 4)", "5 × 4 + 3"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Als je niets doet, welke bewerking gaat dan eerst: + of ×?",
-          "Wat staat hier tussen de haakjes: de optelling of de keer?",
-          "Wordt hier eerst opgeteld?",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Haakjes om de +",
-              tekst: "Het optellen moet eerst. Daarom zet je haakjes om 5 + 3: (5 + 3) × 4 = 8 × 4 = 32.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "haakjes",
-              uitleg: "Wat tussen haakjes staat, doe je eerst.",
-            },
-          ],
-          theorie: "Haakjes forceren de volgorde. Zonder haakjes gaat × vóór +.",
-          voorbeelden: [
-            {
-              type: "stap",
-              tekst: "(5 + 3) × 4 = 32. Maar 5 + 3 × 4 = 5 + 12 = 17.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Waarom haakjes?",
-              uitleg: "Zonder haakjes zou je eerst 3 × 4 doen.",
-            },
-          ],
-          niveaus: {
-            basis: "(5 + 3) × 4.",
-            simpeler: "Eerst optellen? Dan haakjes om 5 + 3.",
-            nogSimpeler: "(5 + 3) × 4",
-          },
-        },
-      },
       {
         q: "Bij welke som maken de haakjes **niets uit**? (Zonder haakjes komt er hetzelfde uit.)",
         options: ["2 + (3 × 4)", "(2 + 3) × 4", "(10 − 4) ÷ 2", "(6 + 2) × 5"],
@@ -1585,49 +1451,6 @@ const steps = [
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "**60 − 4 × (2 + 3²)** = ?",
-        options: ["16", "28", "61", "616"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Is 3² hetzelfde als 3 × 2?",
-          "Hoort de 3² bij de haakjes? Reken eerst alles binnen de haakjes uit.",
-          "Rekende je eerst 60 − 4? De − komt als laatste.",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Binnen de haakjes eerst",
-              tekst: "3² = 9. 2 + 9 = 11. 4 × 11 = 44. 60 − 44 = 16.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "binnen-volgorde",
-              uitleg: "Binnen haakjes geldt ook de volgorde-regel.",
-            },
-          ],
-          theorie: "Haakjes eerst — en daarbinnen eerst de macht.",
-          voorbeelden: [
-            {
-              type: "stap",
-              tekst: "60 − 4 × (2 + 3²) = 60 − 4 × 11 = 60 − 44 = 16.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Controle",
-              uitleg: "44 is minder dan 60, dus het antwoord is klein. 16 kan kloppen.",
-            },
-          ],
-          niveaus: {
-            basis: "16.",
-            simpeler: "3² = 9. 2 + 9 = 11. 4 × 11 = 44. 60 − 44 = 16.",
-            nogSimpeler: "16",
-          },
-        },
-      },
-      {
         q: "**3 × (2 + (5 − 1))** = ?",
         options: ["18", "10", "20", "12"],
         answer: 0,
@@ -1667,49 +1490,6 @@ const steps = [
             basis: "18.",
             simpeler: "5 − 1 = 4. 2 + 4 = 6. 3 × 6 = 18.",
             nogSimpeler: "18",
-          },
-        },
-      },
-      {
-        q: "**(4 + 2)² ÷ (5 − 2)** = ?",
-        options: ["12", "4", "18", "3"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Is 6² hetzelfde als 6 × 2?",
-          "Waar is de 5 gebleven? Reken de tweede haakjes uit.",
-          "Dat is alleen de tweede haakjes.",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "H → M → ÷",
-              tekst: "Haakjes: 6 en 3. Macht: 6² = 36. ÷: 36 ÷ 3 = 12.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "kwadraat",
-              uitleg: "6² = 6 × 6 = 36.",
-            },
-          ],
-          theorie: "Eerst beide haakjes, dan de macht, dan delen.",
-          voorbeelden: [
-            {
-              type: "stap",
-              tekst: "(4 + 2)² ÷ (5 − 2) = 6² ÷ 3 = 36 ÷ 3 = 12.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Niet 6 × 2",
-              uitleg: "6² = 36, niet 12.",
-            },
-          ],
-          niveaus: {
-            basis: "12.",
-            simpeler: "6² = 36. 36 ÷ 3 = 12.",
-            nogSimpeler: "12",
           },
         },
       },

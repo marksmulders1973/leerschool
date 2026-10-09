@@ -3541,7 +3541,7 @@
     ],
     "intro": "Statistiek voor groep 7-8 — gemiddelde uitrekenen, modus (vaakst voorkomend), mediaan (middelste). Met praktijksommen over cijfers, temperatuur, zakgeld, schoenmaat. ~15 min.",
     "stepCount": 6,
-    "checkCount": 64,
+    "checkCount": 63,
     "chapterCount": 6,
     "estimatedMinutes": 20
   },
@@ -6746,7 +6746,7 @@
     ],
     "intro": "Tientallen en eenheden, erbij en eraf in sprongen, over het tiental heen, en sommen met geld. Korte zinnen, elke som met uitleg. Ook voor kinderen die nog Nederlands leren. ~10 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 25,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
@@ -6774,7 +6774,7 @@
     ],
     "intro": "Tellen tot 20, erbij en eraf tot 10, over de 10 heen, en sommen met woorden. Korte zinnen, elke som met uitleg. Ook voor kinderen die nog Nederlands leren. ~10 min.",
     "stepCount": 5,
-    "checkCount": 32,
+    "checkCount": 25,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
@@ -7149,7 +7149,7 @@
     ],
     "intro": "Schrijven voor de Doorstroomtoets — tekstdoelen, brief/e-mail, samenvatten, opinie + drogredenen. 5 stappen × ~5 vragen. ~15 min.",
     "stepCount": 5,
-    "checkCount": 25,
+    "checkCount": 44,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
@@ -7909,7 +7909,7 @@
     ],
     "intro": "Tijdsduur voor groep 6-8 — hoe lang duurt iets, tussen 2 klokken, optellen+aftrekken met 60-stap, 24-uurs format, praktijksommen school/reizen/sport. ~15 min.",
     "stepCount": 6,
-    "checkCount": 67,
+    "checkCount": 66,
     "chapterCount": 6,
     "estimatedMinutes": 20
   },
@@ -8329,7 +8329,7 @@
     ],
     "intro": "Verhoudingen voor groep 5-8: wat is een verhouding, recepten omrekenen, verhoudingstabellen, schaal op de kaart. Doorstroomtoets-stijl praktijksommen. ~15 min.",
     "stepCount": 6,
-    "checkCount": 66,
+    "checkCount": 65,
     "chapterCount": 5,
     "estimatedMinutes": 20
   },
@@ -8488,7 +8488,7 @@
     ],
     "intro": "Wat doe je eerst — × of +? De volgorde-regel HMVDOA: Haakjes, Machten, ×÷, +−. Met haakjes om volgorde te forceren, machten als kwadraat, en de bekende valkuilen. toets-relevant voor groep 5-7.",
     "stepCount": 7,
-    "checkCount": 74,
+    "checkCount": 69,
     "chapterCount": 4,
     "estimatedMinutes": 20
   },
@@ -9245,7 +9245,7 @@
     ],
     "intro": "Woordenschat voor groep 5-8: synoniemen (zelfde betekenis), antoniemen (tegenstelling), betekenis in zin via context. Doorstroomtoets-stijl. ~12 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 52,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },

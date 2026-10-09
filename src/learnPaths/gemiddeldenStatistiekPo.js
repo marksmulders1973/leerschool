@@ -1442,22 +1442,6 @@ const steps = [
         ],
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
-      {
-        q: "Wat is een **voordeel** van het **gemiddelde**?",
-        options: [
-          "Het gebruikt alle getallen",
-          "Het werkt ook bij kleuren",
-          "Een uitschieter verandert het niet",
-          "Je hoeft er niet voor te rekenen",
-        ],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Bij welk begrip kun je met kleuren werken?",
-          "Is het gemiddelde gevoelig voor uitschieters of juist niet?",
-          null,
-        ],
-      },
     ],
   },
 

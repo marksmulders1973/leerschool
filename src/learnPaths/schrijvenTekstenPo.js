@@ -102,6 +102,186 @@ const steps = [
           niveaus: { basis: "Ik vind = mening = Overtuigen.", simpeler: "'Ik vind' is geen feit maar mening. Schrijver wil je overtuigen.", nogSimpeler: "Mening = Overtuigen" },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is het **tekstdoel** van een **recept** voor pannenkoeken?",
+        options: ["Instrueren", "Informeren", "Overtuigen", "Amuseren"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een recept vertelt je ook dingen. Maar wat moet jij er daarna mee doen?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Recept = hoe moet het",
+              tekst: "Een recept zegt: 'Doe het meel in een kom. Klop de eieren erdoor.' Het legt uit HOE je iets maakt. Doel = Instrueren.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "instrueren",
+              uitleg: "Uitleggen hoe iets moet.",
+            },
+            {
+              woord: "OBIA",
+              uitleg: "Overtuigen / Beschrijven (informeren) / Instrueren / Amuseren — de 4 tekstdoelen.",
+            },
+          ],
+          theorie: "Hulpvraag: wil de schrijver dat ik iets DOE (Instrueren), iets WEET (Informeren), iets DENK (Overtuigen) of iets LEUK vind (Amuseren)?",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Een recept begint vaak met 'Je hebt nodig:'. Dat is een signaal voor Instrueren.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Recept-signalen",
+              uitleg: "Lijstje 'je hebt nodig' + stappen in volgorde = Instrueren.",
+            },
+          ],
+          niveaus: {
+            basis: "Recept = Instrueren.",
+            simpeler: "Een recept vertelt welke stappen je moet doen. Dat is de I van OBIA.",
+            nogSimpeler: "Stappen = I",
+          },
+        },
+      },
+      {
+        q: "Wat is het **tekstdoel** van een **mop** in een moppenboek?",
+        options: ["Amuseren", "Instrueren", "Informeren", "Overtuigen"],
+        answer: 0,
+        wrongHints: [null, null, "Leer je van een mop vooral nieuwe feiten?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Mop = lachen",
+              tekst: "Een mop is bedoeld om je te laten lachen. Doel = Amuseren.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "amuseren",
+              uitleg: "Zorgen dat je lacht of ergens van geniet.",
+            },
+            {
+              woord: "OBIA",
+              uitleg: "Overtuigen / Beschrijven (informeren) / Instrueren / Amuseren — de 4 tekstdoelen.",
+            },
+          ],
+          theorie: "Hulpvraag: wil de schrijver dat ik iets DOE (Instrueren), iets WEET (Informeren), iets DENK (Overtuigen) of iets LEUK vind (Amuseren)?",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Gedichten, verhalen en moppen horen vaak bij Amuseren.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Amuseren",
+              uitleg: "De schrijver wil dat jij plezier hebt.",
+            },
+          ],
+          niveaus: {
+            basis: "Mop = Amuseren.",
+            simpeler: "Waarom lees je een mop? Om te lachen. Dat is Amuseren.",
+            nogSimpeler: "Lachen = A",
+          },
+        },
+      },
+      {
+        q: "Iemand schrijft een **ingezonden brief** in de krant: *'De speeltuin moet open blijven!'* Wat is het tekstdoel?",
+        options: ["Overtuigen", "Instrueren", "Amuseren", "Informeren"],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          null,
+          "Geeft de schrijver alleen feiten, of wil hij dat jij het met hem eens bent?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Ingezonden brief = mening",
+              tekst: "De schrijver vindt iets en wil dat de lezers het met hem eens zijn. Doel = Overtuigen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "ingezonden brief",
+              uitleg: "Brief van een lezer die in de krant wordt afgedrukt.",
+            },
+            {
+              woord: "OBIA",
+              uitleg: "Overtuigen / Beschrijven (informeren) / Instrueren / Amuseren — de 4 tekstdoelen.",
+            },
+          ],
+          theorie: "Hulpvraag: wil de schrijver dat ik iets DOE (Instrueren), iets WEET (Informeren), iets DENK (Overtuigen) of iets LEUK vind (Amuseren)?",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "'De speeltuin moet open blijven!' is een mening, geen feit.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Overtuigen",
+              uitleg: "Reclame, opiniestuk en ingezonden brief willen dat je iets denkt of doet.",
+            },
+          ],
+          niveaus: {
+            basis: "Ingezonden brief = Overtuigen.",
+            simpeler: "De schrijver wil dat jij ook vindt dat de speeltuin open moet blijven. Dat is Overtuigen.",
+            nogSimpeler: "Mening = O",
+          },
+        },
+      },
+      {
+        q: "Volgens de toets-truc: waar vind je het **tekstdoel** meestal?",
+        options: [
+          "In de eerste en de laatste zin",
+          "In de langste zin",
+          "Midden in de tekst",
+          "In de kleinste letters",
+        ],
+        answer: 0,
+        wrongHints: [null, "Hoe lang een zin is, zegt dat iets over het doel?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Begin en eind",
+              tekst: "Lees de eerste én de laatste zin. Reclame eindigt bijvoorbeeld met 'koop nu' en een recept begint met 'je hebt nodig'.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tekstdoel",
+              uitleg: "Waarom de schrijver de tekst schreef.",
+            },
+          ],
+          theorie: "Toets-truc: eerste + laatste zin verraden meestal het doel.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Laatste zin 'Bestel vandaag nog!' → Overtuigen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Snel werken",
+              uitleg: "Met deze truc hoef je niet alles twee keer te lezen.",
+            },
+          ],
+          niveaus: {
+            basis: "Eerste en laatste zin.",
+            simpeler: "Het doel staat meestal aan het begin of aan het eind. Lees die zinnen goed.",
+            nogSimpeler: "Begin + eind",
+          },
+        },
+      },
     ],
   },
 
@@ -179,6 +359,229 @@ const steps = [
           voorbeelden: [{ type: "controle", tekst: "Informeel: 'Hoi Piet, ik schrijf je namens m'n klas' (voornaam + 'je')." }],
           basiskennis: [{ onderwerp: "'Beste' is dubbel", uitleg: "'Beste meneer Janssen' = formeel (achternaam). 'Beste Piet' = informeel (voornaam). Het verschil zit in WIE." }],
           niveaus: { basis: "Meneer + u = formeel.", simpeler: "Achternaam + u-vorm + 'namens' = formele brief.", nogSimpeler: "Formeel" },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Je mailt je **beste vriendin** Lisa. Welke aanhef past?",
+        options: ["Hoi Lisa,", "Geachte mevrouw,", "Geachte heer,", "Met vriendelijke groet,"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Schrijf je zo aan iemand die je goed kent?",
+          null,
+          "Staat dit aan het begin of aan het eind van een brief?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vriendin = informeel",
+              tekst: "Lisa ken je goed, dus je schrijft informeel. Informele aanhef: Hoi of Hallo + voornaam.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "informeel",
+              uitleg: "Vrij en gewoon, voor familie en vrienden.",
+            },
+            {
+              woord: "aanhef",
+              uitleg: "De eerste regel waarmee je iemand aanspreekt.",
+            },
+          ],
+          theorie: "Formeel = mensen die je niet goed kent. Informeel = familie en vrienden.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "'Hoi opa,' of 'Hallo Sam,' zijn informele aanheffen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Afsluiting",
+              uitleg: "'Met vriendelijke groet' komt aan het eind, niet aan het begin.",
+            },
+          ],
+          niveaus: {
+            basis: "Vriendin = Hoi Lisa.",
+            simpeler: "Lisa is je vriendin. Dan begin je gewoon met 'Hoi Lisa,'.",
+            nogSimpeler: "Hoi",
+          },
+        },
+      },
+      {
+        q: "Welke afsluiting past bij een **formele** brief aan een bedrijf?",
+        options: [
+          "Met vriendelijke groet, Noor Bakker",
+          "Groetjes en tot snel, Noor",
+          "Liefs en een knuffel, Noor",
+          "Doei doei, je Noor",
+        ],
+        answer: 0,
+        wrongHints: [null, "Schrijf je 'groetjes' aan iemand die je niet kent?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Formele afsluiting",
+              tekst: "Een bedrijf ken je niet persoonlijk. Je sluit af met 'Met vriendelijke groet' en je voor- en achternaam.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "formeel",
+              uitleg: "Beleefd, voor mensen die je niet goed kent.",
+            },
+            {
+              woord: "afsluiting",
+              uitleg: "De groet aan het eind van een brief.",
+            },
+          ],
+          theorie: "Formeel: Met vriendelijke groet + voor- en achternaam. Informeel: Groetjes of Doei + voornaam.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Met vriendelijke groet, Sam de Vries.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Achternaam",
+              uitleg: "Bij formele post zet je je hele naam eronder.",
+            },
+          ],
+          niveaus: {
+            basis: "Bedrijf = Met vriendelijke groet.",
+            simpeler: "Een bedrijf ken je niet. Dan schrijf je beleefd: Met vriendelijke groet + je hele naam.",
+            nogSimpeler: "Netjes",
+          },
+        },
+      },
+      {
+        q: "*'Beste Sanne, kom je zaterdag op mijn feestje?'* Wat voor bericht is dit?",
+        options: ["Informeel", "Formeel", "Reclame", "Handleiding"],
+        answer: 0,
+        wrongHints: [null, "Kijk wat er na 'Beste' komt: een voornaam of een achternaam?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Beste + voornaam",
+              tekst: "'Beste' kan formeel of informeel zijn. Hier staat een voornaam (Sanne) en 'je'. Dus informeel.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "informeel",
+              uitleg: "Vrij, voor familie en vrienden.",
+            },
+            {
+              woord: "register",
+              uitleg: "De toon van je tekst: formeel of informeel.",
+            },
+          ],
+          theorie: "'Beste' + achternaam = formeel. 'Beste' + voornaam = informeel.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "'Beste meneer Jansen' = formeel. 'Beste Sanne' = informeel.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Je-vorm",
+              uitleg: "'Kom je' is de je-vorm. Ook dat past bij informeel.",
+            },
+          ],
+          niveaus: {
+            basis: "Voornaam = informeel.",
+            simpeler: "Er staat 'Sanne', een voornaam, en 'je'. Dan is het informeel.",
+            nogSimpeler: "Sanne = informeel",
+          },
+        },
+      },
+      {
+        q: "Je schrijft een **formele** e-mail aan de juf. Welke zin past daarin?",
+        options: [
+          "Kunt u mij het huiswerk sturen?",
+          "Kun jij me het huiswerk even sturen?",
+          "Stuur je me ff het huiswerk? 😊",
+          "Hé, huiswerk sturen, oké?",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Welke vorm gebruik je in een formele e-mail: jij of u?",
+          "Horen afkortingen en smileys in formele post?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "U-vorm",
+              tekst: "In een formele e-mail gebruik je de u-vorm, ook al ben je een kind. Geen smileys of afkortingen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "u-vorm",
+              uitleg: "Beleefd aanspreken met u en uw.",
+            },
+          ],
+          theorie: "Formeel: u, uw, beleefde zinnen. Informeel: je, jij, jouw.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "'Wilt u mij helpen?' is formeel. 'Wil je me helpen?' is informeel.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Geen smileys",
+              uitleg: "Smileys en afkortingen zoals 'ff' horen niet in formele post.",
+            },
+          ],
+          niveaus: {
+            basis: "Formeel = u.",
+            simpeler: "In een formele e-mail schrijf je 'u', zonder smileys of afkortingen.",
+            nogSimpeler: "u",
+          },
+        },
+      },
+      {
+        q: "Wat hoort **niet** in een formele brief?",
+        options: ["Smileys en afkortingen", "De u-vorm", "Een beleefde aanhef", "Je voor- en achternaam"],
+        answer: 0,
+        wrongHints: [null, "Gebruik je in een formele brief 'u' of niet?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Formeel = netjes",
+              tekst: "In formele post schrijf je beleefd en netjes: u-vorm, beleefde aanhef, hele naam. Smileys en afkortingen horen er niet in.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "formeel",
+              uitleg: "Beleefd, voor mensen die je niet goed kent.",
+            },
+          ],
+          theorie: "Formele brief: Geachte heer/mevrouw … u/uw … Met vriendelijke groet + hele naam.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Fout in een formele brief: 'Ik kom ff langs 😊'.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Afkortingen",
+              uitleg: "'ff' (even) of 'mvg' schrijf je in formele post voluit.",
+            },
+          ],
+          niveaus: {
+            basis: "Geen smileys of afkortingen.",
+            simpeler: "Formeel is netjes. Smileys en afkortingen zijn juist niet netjes.",
+            nogSimpeler: "Geen 😊",
+          },
         },
       },
     ],
@@ -260,6 +663,140 @@ const steps = [
           niveaus: { basis: "De conclusie-zin.", simpeler: "Na 'kortom' staat de hoofdgedachte.", nogSimpeler: "Kortom-zin = hoofdgedachte" },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Waar staat de **kern-zin** van een alinea vaak?",
+        options: [
+          "Aan het begin van de alinea",
+          "Midden in een voorbeeld",
+          "Tussen haakjes achter een woord",
+          "Onder een plaatje",
+        ],
+        answer: 0,
+        wrongHints: [null, "Is een voorbeeld de kern, of een detail?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern-zin vooraan",
+              tekst: "Per alinea staat de belangrijkste zin, de kern-zin, vaak als eerste zin.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kern-zin",
+              uitleg: "De belangrijkste zin van een alinea.",
+            },
+            {
+              woord: "alinea",
+              uitleg: "Een stukje tekst over één punt.",
+            },
+          ],
+          theorie: "Stappenplan samenvatten: per alinea de kern-zin zoeken (vaak de eerste zin).",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "'Honden zijn trouwe dieren. Ze blijven bij hun baasje...' → kern-zin = eerste zin.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Voorbeelden",
+              uitleg: "Voorbeelden zijn details, geen kern.",
+            },
+          ],
+          niveaus: {
+            basis: "Kern-zin = vaak eerste zin.",
+            simpeler: "Kijk bij elke alinea eerst naar de eerste zin. Daar staat vaak het belangrijkste.",
+            nogSimpeler: "Begin",
+          },
+        },
+      },
+      {
+        q: "*'Honden zijn fijne huisdieren. Ze zijn trouw en spelen graag. Mijn hond Bobby haalt bijvoorbeeld de krant. Ook passen ze goed op het huis.'* Welke zin laat je **weg** in een samenvatting?",
+        options: [
+          "Mijn hond Bobby haalt bijvoorbeeld de krant.",
+          "Honden zijn fijne huisdieren.",
+          "Ze zijn trouw en spelen graag.",
+          "Ook passen ze goed op het huis.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Dit is waar de hele tekst over gaat. Laat je dat weg?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Voorbeelden weglaten",
+              tekst: "In een samenvatting laat je voorbeelden weg. Het woord 'bijvoorbeeld' verraadt de voorbeeld-zin.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "samenvatting",
+              uitleg: "Korte versie van een tekst met alleen het belangrijkste.",
+            },
+          ],
+          theorie: "Weglaten: voorbeelden, details, herhalingen.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Samenvatting: Honden zijn fijne huisdieren: ze zijn trouw, spelen graag en passen op het huis.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Signaalwoord",
+              uitleg: "'Bijvoorbeeld' of 'zoals' = er komt een voorbeeld.",
+            },
+          ],
+          niveaus: {
+            basis: "Weg: de zin met 'bijvoorbeeld'.",
+            simpeler: "Zoek het woord 'bijvoorbeeld'. Die zin is een voorbeeld, en voorbeelden laat je weg.",
+            nogSimpeler: "Bobby weg",
+          },
+        },
+      },
+      {
+        q: "Welke fout maken veel leerlingen bij samenvatten?",
+        options: [
+          "De eerste zin zomaar overnemen",
+          "De hoofdgedachte opschrijven",
+          "Eerst de hele tekst lezen",
+          "Voorbeelden weglaten",
+        ],
+        answer: 0,
+        wrongHints: [null, "Hoort de hoofdgedachte juist wél in een samenvatting?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerste zin is niet altijd de kern",
+              tekst: "Veel kinderen nemen de eerste zin over. Maar de hoofdgedachte staat niet altijd vooraan; vaak staat hij in de laatste alinea.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "hoofdgedachte",
+              uitleg: "De belangrijkste boodschap van de tekst.",
+            },
+          ],
+          theorie: "Schrijf de hoofdgedachte en kern-zinnen in eigen woorden op.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Een tekst begint met 'Gisteren zag ik een egel.' Dat is niet de hoofdgedachte.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Goed gedaan",
+              uitleg: "Hele tekst lezen, hoofdgedachte opschrijven en voorbeelden weglaten zijn juist goede stappen.",
+            },
+          ],
+          niveaus: {
+            basis: "Fout: eerste zin zomaar overnemen.",
+            simpeler: "De eerste zin is niet altijd het belangrijkste. Zoek de hoofdgedachte in de hele tekst.",
+            nogSimpeler: "Niet kopiëren",
+          },
+        },
+      },
     ],
   },
 
@@ -339,6 +876,224 @@ const steps = [
           niveaus: { basis: "Of...of zonder middenweg = vals dilemma.", simpeler: "Nep-keuze tussen 2 dingen = vals dilemma.", nogSimpeler: "Vals dilemma" },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Mening: *'Ik vind dat we vaker buiten moeten gymmen.'* Welke zin is een **argument** bij deze mening?",
+        options: [
+          "Want frisse lucht is gezond.",
+          "Onze gymzaal heeft blauwe muren.",
+          "Gisteren hadden we gym.",
+          "Wij gymmen op dinsdag.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Geeft deze zin een reden waarom buiten gymmen beter is?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Argument = reden",
+              tekst: "Een argument is de REDEN waarom je iets vindt. Je kunt er 'want' of 'omdat' voor zetten.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "argument",
+              uitleg: "Reden die je mening onderbouwt.",
+            },
+            {
+              woord: "mening",
+              uitleg: "Wat je vindt.",
+            },
+          ],
+          theorie: "Mening = wat je vindt. Argument = waarom. Voorbeeld = concreet geval.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "'Aardrijkskunde is leuk, omdat je over verre landen leert.'",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Test",
+              uitleg: "Past de zin na 'Ik vind dat ..., want ...'? En geeft hij echt een reden?",
+            },
+          ],
+          niveaus: {
+            basis: "Argument = reden.",
+            simpeler: "Welke zin zegt WAAROM buiten gymmen beter is? Want frisse lucht is gezond.",
+            nogSimpeler: "Want ...",
+          },
+        },
+      },
+      {
+        q: "*'Snoep is slecht voor je tanden, want de tandarts zegt het.'* Welk soort argument is dit?",
+        options: ["Autoriteit", "Gevoel", "Voorbeeld", "Vals dilemma"],
+        answer: 0,
+        wrongHints: [null, "Zegt de schrijver hoe hij zich voelt?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Iemand zegt het",
+              tekst: "Het argument is: 'de tandarts zegt het'. Je beroept je op iemand die er veel van weet. Dat heet een autoriteit-argument.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "autoriteit",
+              uitleg: "Iemand die veel van iets weet of de baas is, zoals een dokter of de meester.",
+            },
+          ],
+          theorie: "Argument-soorten: feit, voorbeeld, gevoel, autoriteit. Autoriteit = 'want X zegt het'.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "'...want de meester zegt dat het belangrijk is.' → autoriteit.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Matig",
+              uitleg: "Een autoriteit-argument is matig: iemand zégt het alleen.",
+            },
+          ],
+          niveaus: {
+            basis: "Tandarts zegt het = autoriteit.",
+            simpeler: "Wie wordt er genoemd? De tandarts. 'Want iemand zegt het' = autoriteit.",
+            nogSimpeler: "Zegt het",
+          },
+        },
+      },
+      {
+        q: "*'Ik wil een hond, want ik word er heel blij van.'* Welk soort argument is dit?",
+        options: ["Gevoel", "Autoriteit", "Feit", "Voorbeeld"],
+        answer: 0,
+        wrongHints: [null, "Wordt er een deskundige genoemd?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Blij worden = gevoel",
+              tekst: "'Ik word er heel blij van' gaat over wat de schrijver voelt. Dat is een gevoel-argument.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "gevoel-argument",
+              uitleg: "Een reden die gaat over hoe jij je voelt.",
+            },
+          ],
+          theorie: "Gevoel-argument is het zwakst: alleen jij voelt zo.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "'...want ik voel me trots als ik veel hoofdsteden weet.' → gevoel.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Zwak",
+              uitleg: "Een ander voelt het misschien niet zo.",
+            },
+          ],
+          niveaus: {
+            basis: "Blij = gevoel.",
+            simpeler: "'Ik word blij' gaat over een gevoel. Dus is het een gevoel-argument.",
+            nogSimpeler: "Voelen",
+          },
+        },
+      },
+      {
+        q: "*'Luister niet naar Tim, die snapt er toch niks van.'* Welke drogreden is dit?",
+        options: ["Persoonlijke aanval", "Vals dilemma", "Generaliseren", "Het is een goed argument"],
+        answer: 0,
+        wrongHints: [null, "Moet je hier kiezen tussen twee dingen?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Aanval op de persoon",
+              tekst: "Er wordt niets gezegd over Tims mening zelf. Er wordt alleen iets naars over Tim gezegd. Dat is een persoonlijke aanval.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "drogreden",
+              uitleg: "Een fout argument dat eerlijk lijkt maar het niet is.",
+            },
+            {
+              woord: "persoonlijke aanval",
+              uitleg: "Iemand afkraken in plaats van zijn mening te bespreken.",
+            },
+          ],
+          theorie: "Drogredenen: persoonlijke aanval, generaliseren, vals dilemma.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "'Jij hebt ongelijk omdat je dom bent.' → persoonlijke aanval.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Let op",
+              uitleg: "Een goed argument gaat over het onderwerp, niet over de persoon.",
+            },
+          ],
+          niveaus: {
+            basis: "Tim afkraken = persoonlijke aanval.",
+            simpeler: "Gaat het over wat Tim zegt, of over Tim zelf? Over Tim zelf. Dat is een persoonlijke aanval.",
+            nogSimpeler: "Aanval",
+          },
+        },
+      },
+      {
+        q: "Mening: *'Huiswerk is nuttig.'* Welke zin noemt een **tegenargument** én weerlegt het?",
+        options: [
+          "Sommigen vinden huiswerk saai, maar je leert er veel van.",
+          "Huiswerk is altijd saai en daarom is het slecht voor je.",
+          "Ik maak mijn huiswerk meestal op maandag na het eten.",
+          "Iedereen in mijn klas vindt huiswerk echt heel saai.",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Deze zin noemt alleen een tegenargument. Wordt het ook weerlegd?",
+          null,
+          "Dit is een iedereen-uitspraak. Wordt er iets weerlegd?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Sommigen denken... maar...",
+              tekst: "Een tegenargument weerleggen doe je zo: noem wat anderen denken ('Sommigen vinden...') en zeg waarom dat niet klopt ('maar...').",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tegenargument",
+              uitleg: "Een reden die tegen jouw mening ingaat.",
+            },
+            {
+              woord: "weerleggen",
+              uitleg: "Laten zien dat iets niet klopt of minder belangrijk is.",
+            },
+          ],
+          theorie: "Opbouw opiniestuk: mening, 2-3 argumenten, tegenargument noemen + weerleggen, slot.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "'Sommigen denken dat lezen saai is, maar je leert er nieuwe woorden van.'",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Signaal",
+              uitleg: "'Sommigen denken dat ... maar ...' = tegenargument + weerlegging.",
+            },
+          ],
+          niveaus: {
+            basis: "Sommigen ... maar ...",
+            simpeler: "Je noemt eerst wat anderen vinden, en zegt dan met 'maar' waarom je het er niet mee eens bent.",
+            nogSimpeler: "maar",
+          },
+        },
+      },
     ],
   },
 
@@ -396,6 +1151,50 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'Iedereen' = drogreden", tekst: "'Iedereen wil meer huiswerk' is een **generalisatie** — niet bewijsbaar (er zijn vast leerlingen die GEEN extra huiswerk willen). Drogreden, Toets-val." }],
           niveaus: { basis: "Iedereen = generaliseren.", simpeler: "'Iedereen' is geen bewijs = drogreden.", nogSimpeler: "Generaliseren" },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Je schrijft een brief aan **meneer Smit** van de bibliotheek, die je niet kent. Welke aanhef past?",
+        options: ["Beste meneer Smit,", "Hoi Smit,", "Hé meneer,", "Lieve Smit,"],
+        answer: 0,
+        wrongHints: [null, "Begin je zo een brief aan iemand die je niet kent?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Formele aanhef",
+              tekst: "Meneer Smit ken je niet, dus je schrijft formeel. 'Beste' + meneer + achternaam is formeel.",
+            },
+          ],
+          niveaus: {
+            basis: "Beste meneer Smit.",
+            simpeler: "Iemand die je niet kent spreek je beleefd aan: Beste meneer + achternaam.",
+            nogSimpeler: "Beleefd",
+          },
+        },
+      },
+      {
+        q: "Welke zin is een **mening**?",
+        options: [
+          "Ik vind tekenen het leukste vak.",
+          "Amsterdam is de hoofdstad van Nederland.",
+          "Een week heeft zeven dagen.",
+          "Een jaar heeft twaalf maanden.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Kun je dit nakijken in een boek?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Mening of feit",
+              tekst: "Een mening is wat iemand vindt ('ik vind'). Een feit kun je controleren. Een week heeft altijd zeven dagen: dat is een feit.",
+            },
+          ],
+          niveaus: {
+            basis: "Ik vind = mening.",
+            simpeler: "Zoek de zin met 'ik vind'. Die gaat over wat iemand vindt, niet over iets wat je kunt controleren.",
+            nogSimpeler: "Ik vind",
+          },
         },
       },
     ],
