@@ -16,5 +16,5 @@ for (const v of keuze) {
   vragen.push({ id: v.id, pad: cache[v.pathId].title, level: v.level, stap: { titel: s.title, vanafGroep: s.vanafGroep ?? null, uitleg: s.explanation || "", leesTekst: s.leesTekst || null }, q: v.q, opties: o });
 }
 fs.writeFileSync(uit, JSON.stringify({ vragen }, null, 1));
-fs.writeFileSync(uit.replace(/\.json$/, ".sleutel.json"), JSON.stringify(keuze.map((v) => ({ id: v.id, pathId: v.pathId, stap: v.stap, q: v.q, goed: v.options[v.answer], wrongHints: v.wrongHints, uitlegPad: v.uitlegPad })), null, 1));
+fs.writeFileSync(uit.replace(/\.json$/, ".sleutel.json"), JSON.stringify(keuze.map((v) => ({ id: v.id, pathId: v.pathId, stap: v.stap, q: v.q, goed: v.options[v.answer], hintPerOptie: Object.fromEntries(v.options.map((o, i) => [o, v.wrongHints?.[i] ?? null])), uitlegPad: v.uitlegPad })), null, 1));
 console.log(`pool ${pool.length} → ${keuze.length}`);
