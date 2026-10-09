@@ -1,0 +1,425 @@
+{
+ "pathId": "water-erfgoed-nederland-po",
+ "geschreven": 30,
+ "opgenomen": [
+  {
+   "stap": 0,
+   "q": "Een stuk land ligt op **-2 NAP**. Wat betekent dat?",
+   "options": [
+    "Het ligt 2 meter onder zeeniveau",
+    "Het ligt 2 meter boven zeeniveau",
+    "Het ligt 2 kilometer onder zeeniveau",
+    "Het ligt precies op zeeniveau"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Kijk goed naar het teken dat vóór het getal staat.",
+    null,
+    null
+   ],
+   "id": "water-erfgoed-nederland-po#0"
+  },
+  {
+   "stap": 0,
+   "q": "Waar ligt het **laagste punt** op het land van Nederland?",
+   "options": [
+    "In de Zuidplaspolder",
+    "Op de Vaalserberg",
+    "Op de Veluwe",
+    "Op de Utrechtse Heuvelrug"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Daar ligt juist het hoogste punt van Nederland.",
+    "Daar vind je heuvels en bossen.",
+    null
+   ],
+   "id": "water-erfgoed-nederland-po#1"
+  },
+  {
+   "stap": 0,
+   "q": "Welk water ligt **boven Friesland en Groningen**?",
+   "options": [
+    "Waddenzee",
+    "Oosterschelde",
+    "Westerschelde",
+    "IJsselmeer"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Dit water ligt in Zeeland, helemaal in het zuidwesten.",
+    null,
+    null
+   ],
+   "id": "water-erfgoed-nederland-po#3"
+  },
+  {
+   "stap": 0,
+   "q": "Wat bedoelen mensen met: *'God maakte de wereld, maar de Nederlanders maakten Holland'*?",
+   "options": [
+    "Nederlanders hebben veel land zelf op het water gewonnen",
+    "Nederlanders hebben de hele wereld ontdekt",
+    "Holland is het oudste land van de wereld",
+    "In Holland wonen de meeste mensen van de wereld"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Het gaat over Holland zelf, niet over verre landen.",
+    null,
+    null
+   ],
+   "id": "water-erfgoed-nederland-po#5"
+  },
+  {
+   "stap": 1,
+   "q": "Wat doet een **stormvloedkering**?",
+   "options": [
+    "Hij gaat alleen dicht bij storm",
+    "Hij staat altijd helemaal dicht",
+    "Hij pompt water uit een polder",
+    "Hij maakt stroom met de wind"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Dan zouden schepen er nooit meer door kunnen.",
+    "Dat werk doet een gemaal.",
+    null
+   ],
+   "id": "water-erfgoed-nederland-po#7"
+  },
+  {
+   "stap": 1,
+   "q": "Hoeveel **waterschappen** heeft Nederland?",
+   "options": [
+    "21",
+    "12",
+    "50",
+    "3"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Dat is het aantal provincies.",
+    null,
+    null
+   ],
+   "id": "water-erfgoed-nederland-po#9"
+  },
+  {
+   "stap": 1,
+   "q": "Welke taak doet een waterschap **NIET**?",
+   "options": [
+    "Scholen bouwen",
+    "Dijken onderhouden",
+    "Polderwater wegpompen",
+    "De waterstand bijhouden"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Dit hoort wel bij het werk van een waterschap. Lees goed: de vraag zegt NIET.",
+    null,
+    null
+   ],
+   "id": "water-erfgoed-nederland-po#11"
+  },
+  {
+   "stap": 2,
+   "q": "Wat doe je **eerst** als je een polder maakt?",
+   "options": [
+    "Een dijk om het gebied bouwen",
+    "Sloten graven voor de afvoer",
+    "Huizen en boerderijen bouwen",
+    "Wachten tot de bodem droog is"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Sloten graaf je pas als het meeste water weg is.",
+    null,
+    null
+   ],
+   "id": "water-erfgoed-nederland-po#12"
+  },
+  {
+   "stap": 2,
+   "q": "In welke polder ligt nu **Schiphol**?",
+   "options": [
+    "Haarlemmermeer",
+    "Beemster",
+    "Noordoostpolder",
+    "Wieringermeer"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Die polder ligt ten noorden van Amsterdam.",
+    null,
+    null
+   ],
+   "id": "water-erfgoed-nederland-po#14"
+  },
+  {
+   "stap": 2,
+   "q": "Wat is de **grootste stad** van Flevoland?",
+   "options": [
+    "Almere",
+    "Lelystad",
+    "Emmeloord",
+    "Dronten"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Die stad is de hoofdstad van de provincie, maar niet de grootste.",
+    null,
+    null
+   ],
+   "id": "water-erfgoed-nederland-po#15"
+  },
+  {
+   "stap": 2,
+   "q": "Sinds welk jaar is **Flevoland** een provincie?",
+   "options": [
+    "1986",
+    "1612",
+    "1852",
+    "1953"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    "In dat jaar werd de Haarlemmermeer drooggelegd.",
+    null
+   ],
+   "id": "water-erfgoed-nederland-po#17"
+  },
+  {
+   "stap": 3,
+   "q": "Wat zorgde samen voor de **Watersnoodramp** van 1953?",
+   "options": [
+    "Storm en springtij",
+    "Aardbeving en regen",
+    "Droogte en hitte",
+    "Sneeuw en vorst"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Nederland heeft bijna nooit zware aardbevingen.",
+    null,
+    null
+   ],
+   "id": "water-erfgoed-nederland-po#18"
+  },
+  {
+   "stap": 3,
+   "q": "Hoeveel mensen moesten bij de ramp **hun huis ontvluchten**?",
+   "options": [
+    "70.000",
+    "1.836",
+    "150.000",
+    "500"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Dat getal hoort wel bij de ramp, maar het gaat over iets anders.",
+    null,
+    null
+   ],
+   "id": "water-erfgoed-nederland-po#20"
+  },
+  {
+   "stap": 3,
+   "q": "Waarom kwamen de waarschuwingen in de nacht van de ramp **niet aan**?",
+   "options": [
+    "De radio zond 's nachts niets uit",
+    "Er bestonden nog geen telefoons",
+    "Iedereen was op vakantie",
+    "De dijken waren te hoog"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "In 1953 bestonden telefoons al wel.",
+    null,
+    "Waren de dijken te hoog, of juist niet sterk genoeg?"
+   ],
+   "id": "water-erfgoed-nederland-po#21"
+  },
+  {
+   "stap": 3,
+   "q": "Wat gebeurde er **na** de ramp met de dijken langs zee en grote rivieren?",
+   "options": [
+    "Ze werden hoger en sterker",
+    "Ze werden weggehaald",
+    "Ze werden lager gemaakt",
+    "Er veranderde niets"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    null,
+    "Denk aan wat Nederland na de ramp besloot: 'dit mag nooit meer gebeuren'."
+   ],
+   "id": "water-erfgoed-nederland-po#22"
+  },
+  {
+   "stap": 4,
+   "q": "Waarom werd de Oosterscheldekering **geen dichte dam**?",
+   "options": [
+    "Om vissen en schelpdieren te sparen",
+    "Omdat er te weinig geld was",
+    "Omdat er geen zand meer was",
+    "Omdat de koning dat zo wilde"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    null,
+    "Wie besliste over de Deltawerken: de koning of de regering?"
+   ],
+   "id": "water-erfgoed-nederland-po#27"
+  },
+  {
+   "stap": 4,
+   "q": "Welk deel van Nederland moesten de Deltawerken vooral **beschermen**?",
+   "options": [
+    "Zuidwest-Nederland",
+    "Noordoost-Nederland",
+    "De Waddeneilanden",
+    "Zuid-Limburg"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    null,
+    "Daar ligt geen zee."
+   ],
+   "id": "water-erfgoed-nederland-po#29"
+  }
+ ],
+ "afgekeurd": [
+  {
+   "id": "water-erfgoed-nederland-po#2",
+   "stap": 0,
+   "q": "Hoe heet land dat Nederlanders op het water hebben gewonnen met dijken en pompen?",
+   "redenen": [
+    "nakijker A: Bijna-dubbel (omgekeerd) met bestaande pad-vragen 'Wat is een polder?' en 'Een polder is?'.",
+    "nakijker B: Bijna-dubbel (omgekeerd) met bestaande vragen 'Wat is een **polder**?' en '**polder** is?' in hetzelfde pad. Fase 2: wrongHint bij \"Een duin\" (\"door de natuur gemaakt, niet door mensen\") verklapt het antwoord van de bestaande vraag \"verschil dijk en duin\" én van nieuwe vraag #6."
+   ]
+  },
+  {
+   "id": "water-erfgoed-nederland-po#4",
+   "stap": 0,
+   "q": "In welk jaar werd het **IJsselmeer** afgesloten van de zee?",
+   "redenen": [
+    "nakijker B: Fase 2: wrongHint bij \"1953\" (\"grote overstroming\") verklapt het antwoord van de bestaande vraag \"In welk jaar was de Watersnoodramp?\"."
+   ]
+  },
+  {
+   "id": "water-erfgoed-nederland-po#6",
+   "stap": 1,
+   "q": "Hoe zijn **duinen** ontstaan?",
+   "redenen": [
+    "nakijker A: Bijna-dubbel met bestaande stap-vraag 'Wat is het verschil tussen een dijk en een duin?' (kern daar = duin door natuur, wind + zand).",
+    "nakijker B: Bijna-dubbel met bestaande vraag 'Wat is het verschil tussen een **dijk** en een **duin**?' (antwoord: duin door de natuur, wind + zand)."
+   ]
+  },
+  {
+   "id": "water-erfgoed-nederland-po#8",
+   "stap": 1,
+   "q": "Welke dijk sluit het **IJsselmeer** af van de **Waddenzee**?",
+   "redenen": [
+    "nakijker A: Bijna-dubbel (omgekeerd) met bestaande pad-vraag 'Wat is de Afsluitdijk?'.",
+    "nakijker B: Bijna-dubbel (omgekeerd) met bestaande vraag 'Wat is de **Afsluitdijk**?'."
+   ]
+  },
+  {
+   "id": "water-erfgoed-nederland-po#10",
+   "stap": 1,
+   "q": "Bij welke stad staat de **Maeslantkering**?",
+   "redenen": [
+    "nakijker A: Bijna-dubbel (omgekeerd) met bestaande pad-vragen 'Welke kering is bij Rotterdam?' en 'Wat doet de Maeslantkering in Hoek van Holland?'.",
+    "nakijker B: Bijna-dubbel (omgekeerd) met bestaande vraag 'Welke kering is **bij Rotterdam**?' (en 'Wat doet de Maeslantkering in Hoek van Holland?')."
+   ]
+  },
+  {
+   "id": "water-erfgoed-nederland-po#13",
+   "stap": 2,
+   "q": "Waarmee werd het water **vroeger** uit polders gepompt?",
+   "redenen": [
+    "nakijker A: Bijna-dubbel (omgekeerd) met bestaande pad-vraag 'Wat is een windmolen vroeger gebruikt voor?'.",
+    "nakijker B: Bijna-dubbel (omgekeerd) met bestaande vragen 'Wat is een **windmolen** vroeger gebruikt voor?' en 'Wat doet een **poldermolen**?'."
+   ]
+  },
+  {
+   "id": "water-erfgoed-nederland-po#16",
+   "stap": 2,
+   "q": "Welke polder is **UNESCO-werelderfgoed**?",
+   "redenen": [
+    "nakijker A: Mogelijk bijna-dubbel met bestaande pad-vraag 'Welk werelderfgoed in NL beschermt water-cultuur?' (controleren of dat antwoord Beemster is)."
+   ]
+  },
+  {
+   "id": "water-erfgoed-nederland-po#19",
+   "stap": 3,
+   "q": "Wat is **springtij**?",
+   "redenen": [
+    "nakijker B: Feitelijk onjuist/overdreven: springtij is extra hoog (en extra laag) tij rond volle en nieuwe maan, twee keer per maand, niet 'extreem hoge vloed'. De uitleg zegt het ook zo, maar de vraag zet de onjuiste definitie vast; beter 'Extra hoge vloed'."
+   ]
+  },
+  {
+   "id": "water-erfgoed-nederland-po#23",
+   "stap": 3,
+   "q": "Hoeveel land liep bij de ramp **onder water**?",
+   "redenen": [
+    "nakijker B: Fase 2: wrongHint bij \"1.836 hectare\" (\"aantal mensen dat verdronk\") verklapt het antwoord van de bestaande vraag \"Hoeveel doden waren er ongeveer?\"."
+   ]
+  },
+  {
+   "id": "water-erfgoed-nederland-po#24",
+   "stap": 4,
+   "q": "Wanneer was de **Oosterscheldekering** klaar?",
+   "redenen": [
+    "nakijker B: Fase 2: wrongHint bij \"1932\" (\"jaar van de Afsluitdijk\") verklapt het antwoord van nieuwe vraag #4 (IJsselmeer afgesloten in 1932)."
+   ]
+  },
+  {
+   "id": "water-erfgoed-nederland-po#25",
+   "stap": 4,
+   "q": "Hoeveel **pijlers** heeft de Oosterscheldekering?",
+   "redenen": [
+    "nakijker A: [Fase 2] wrongHint bij 210 (\"Dat getal hoort bij de Maeslantkering\") verklapt het antwoord van #26 in hetzelfde pad.",
+    "nakijker B: Fase 2: wrongHint bij \"210\" (\"hoort bij de Maeslantkering\") verklapt het antwoord van nieuwe vraag #26 (hekken 210 meter)."
+   ]
+  },
+  {
+   "id": "water-erfgoed-nederland-po#26",
+   "stap": 4,
+   "q": "Hoe lang is elk van de twee hekken van de **Maeslantkering**?",
+   "redenen": [
+    "nakijker B: Fase 2: wrongHint bij \"32 kilometer\" (\"Zo lang is de Afsluitdijk\") verklapt het antwoord van de bestaande vraag \"Hoe lang is de Afsluitdijk?\"."
+   ]
+  },
+  {
+   "id": "water-erfgoed-nederland-po#28",
+   "stap": 4,
+   "q": "Hoe komen de hekken van de **Maeslantkering** op hun plek?",
+   "redenen": [
+    "nakijker A: [Fase 2] wrongHint bij \"kraan\" noemt \"210 meter lang\" en verklapt daarmee het antwoord van #26 in hetzelfde pad.",
+    "nakijker B: Fase 2: wrongHint bij \"met een kraan\" (\"Zo'n hek is 210 meter lang\") verklapt het antwoord van nieuwe vraag #26."
+   ]
+  }
+ ]
+}

@@ -125,6 +125,46 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Nederland heeft geen bergen.", "Geen woestijnen.", "Geen rivier."],
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een stuk land ligt op **-2 NAP**. Wat betekent dat?",
+        options: [
+          "Het ligt 2 meter onder zeeniveau",
+          "Het ligt 2 meter boven zeeniveau",
+          "Het ligt 2 kilometer onder zeeniveau",
+          "Het ligt precies op zeeniveau",
+        ],
+        answer: 0,
+        wrongHints: [null, "Kijk goed naar het teken dat vóór het getal staat.", null, null],
+      },
+      {
+        q: "Waar ligt het **laagste punt** op het land van Nederland?",
+        options: ["In de Zuidplaspolder", "Op de Vaalserberg", "Op de Veluwe", "Op de Utrechtse Heuvelrug"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Daar ligt juist het hoogste punt van Nederland.",
+          "Daar vind je heuvels en bossen.",
+          null,
+        ],
+      },
+      {
+        q: "Welk water ligt **boven Friesland en Groningen**?",
+        options: ["Waddenzee", "Oosterschelde", "Westerschelde", "IJsselmeer"],
+        answer: 0,
+        wrongHints: [null, "Dit water ligt in Zeeland, helemaal in het zuidwesten.", null, null],
+      },
+      {
+        q: "Wat bedoelen mensen met: *'God maakte de wereld, maar de Nederlanders maakten Holland'*?",
+        options: [
+          "Nederlanders hebben veel land zelf op het water gewonnen",
+          "Nederlanders hebben de hele wereld ontdekt",
+          "Holland is het oudste land van de wereld",
+          "In Holland wonen de meeste mensen van de wereld",
+        ],
+        answer: 0,
+        wrongHints: [null, "Het gaat over Holland zelf, niet over verre landen.", null, null],
+      },
     ],
   },
 
@@ -172,6 +212,35 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat doet een **stormvloedkering**?",
+        options: [
+          "Hij gaat alleen dicht bij storm",
+          "Hij staat altijd helemaal dicht",
+          "Hij pompt water uit een polder",
+          "Hij maakt stroom met de wind",
+        ],
+        answer: 0,
+        wrongHints: [null, "Dan zouden schepen er nooit meer door kunnen.", "Dat werk doet een gemaal.", null],
+      },
+      {
+        q: "Hoeveel **waterschappen** heeft Nederland?",
+        options: ["21", "12", "50", "3"],
+        answer: 0,
+        wrongHints: [null, "Dat is het aantal provincies.", null, null],
+      },
+      {
+        q: "Welke taak doet een waterschap **NIET**?",
+        options: ["Scholen bouwen", "Dijken onderhouden", "Polderwater wegpompen", "De waterstand bijhouden"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dit hoort wel bij het werk van een waterschap. Lees goed: de vraag zegt NIET.",
+          null,
+          null,
+        ],
+      },
     ],
   },
 
@@ -205,6 +274,36 @@ const steps = [
         options: ["Pompt water uit polder", "Maalt graan", "Maakt elektriciteit", "Pompt drinkwater"],
         answer: 0,
         wrongHints: [null, "Dat is korenmolen.", "Moderne windturbines doen dat, niet poldermolens.", "Niet drinkwater."],
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat doe je **eerst** als je een polder maakt?",
+        options: [
+          "Een dijk om het gebied bouwen",
+          "Sloten graven voor de afvoer",
+          "Huizen en boerderijen bouwen",
+          "Wachten tot de bodem droog is",
+        ],
+        answer: 0,
+        wrongHints: [null, "Sloten graaf je pas als het meeste water weg is.", null, null],
+      },
+      {
+        q: "In welke polder ligt nu **Schiphol**?",
+        options: ["Haarlemmermeer", "Beemster", "Noordoostpolder", "Wieringermeer"],
+        answer: 0,
+        wrongHints: [null, "Die polder ligt ten noorden van Amsterdam.", null, null],
+      },
+      {
+        q: "Wat is de **grootste stad** van Flevoland?",
+        options: ["Almere", "Lelystad", "Emmeloord", "Dronten"],
+        answer: 0,
+        wrongHints: [null, "Die stad is de hoofdstad van de provincie, maar niet de grootste.", null, null],
+      },
+      {
+        q: "Sinds welk jaar is **Flevoland** een provincie?",
+        options: ["1986", "1612", "1852", "1953"],
+        answer: 0,
+        wrongHints: [null, null, "In dat jaar werd de Haarlemmermeer drooggelegd.", null],
       },
     ],
   },
@@ -260,6 +359,51 @@ const steps = [
         options: ["Deltawerken bouwen", "Niets doen", "Mensen verhuizen", "Land opgeven"],
         answer: 0,
         wrongHints: [null, "Wél iets gedaan — heel veel zelfs.", "Niet de hoofdreactie.", "Land werd juist beschermd."],
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat zorgde samen voor de **Watersnoodramp** van 1953?",
+        options: ["Storm en springtij", "Aardbeving en regen", "Droogte en hitte", "Sneeuw en vorst"],
+        answer: 0,
+        wrongHints: [null, "Nederland heeft bijna nooit zware aardbevingen.", null, null],
+      },
+      {
+        q: "Hoeveel mensen moesten bij de ramp **hun huis ontvluchten**?",
+        options: ["70.000", "1.836", "150.000", "500"],
+        answer: 0,
+        wrongHints: [null, "Dat getal hoort wel bij de ramp, maar het gaat over iets anders.", null, null],
+      },
+      {
+        q: "Waarom kwamen de waarschuwingen in de nacht van de ramp **niet aan**?",
+        options: [
+          "De radio zond 's nachts niets uit",
+          "Er bestonden nog geen telefoons",
+          "Iedereen was op vakantie",
+          "De dijken waren te hoog",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "In 1953 bestonden telefoons al wel.",
+          null,
+          "Waren de dijken te hoog, of juist niet sterk genoeg?",
+        ],
+      },
+      {
+        q: "Wat gebeurde er **na** de ramp met de dijken langs zee en grote rivieren?",
+        options: [
+          "Ze werden hoger en sterker",
+          "Ze werden weggehaald",
+          "Ze werden lager gemaakt",
+          "Er veranderde niets",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          null,
+          "Denk aan wat Nederland na de ramp besloot: 'dit mag nooit meer gebeuren'.",
+        ],
       },
     ],
   },
@@ -330,6 +474,24 @@ const steps = [
         options: ["~40 jaar", "~5 jaar", "~100 jaar", "~10 jaar"],
         answer: 0,
         wrongHints: [null, "Veel te kort.", "Te lang.", "Te kort."],
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Waarom werd de Oosterscheldekering **geen dichte dam**?",
+        options: [
+          "Om vissen en schelpdieren te sparen",
+          "Omdat er te weinig geld was",
+          "Omdat er geen zand meer was",
+          "Omdat de koning dat zo wilde",
+        ],
+        answer: 0,
+        wrongHints: [null, null, null, "Wie besliste over de Deltawerken: de koning of de regering?"],
+      },
+      {
+        q: "Welk deel van Nederland moesten de Deltawerken vooral **beschermen**?",
+        options: ["Zuidwest-Nederland", "Noordoost-Nederland", "De Waddeneilanden", "Zuid-Limburg"],
+        answer: 0,
+        wrongHints: [null, null, null, "Daar ligt geen zee."],
       },
     ],
   },

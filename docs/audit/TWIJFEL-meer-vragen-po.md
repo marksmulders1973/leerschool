@@ -360,3 +360,4 @@ Gevonden door de nakijkers van de vervolgsessie in de **stap-uitleg of bestaande
 - **onderwijs-niveaus-vmbo-havo-vwo, stap-uitleg:** 'je kiest een richting in klas 3' — op het vmbo kies je meestal aan het eind van klas 2 en volg je de richting vanaf klas 3.
 - **cito-strategieen-groep8, stap-uitleg/uitlegPad:** 'Sinds 2024 zijn er meerdere aanbieders' — er waren al sinds ±2015 meerdere eindtoetsen; in 2024 veranderden vooral de naam en het moment (februari).
 - **tijdvakken-nederland-po, stap-uitleg:** het Kinderwetje van Van Houten (1874) verbood fabriekswerk voor kinderen onder de 12, niet alle werk; de uitleg zegt het te ruim.
+- **water-erfgoed-nederland-po, stap-uitleg:** springtij heet er 'extreem hoge vloed'; springtij is extra hoog (en extra laag) tij rond volle en nieuwe maan, twee keer per maand.
