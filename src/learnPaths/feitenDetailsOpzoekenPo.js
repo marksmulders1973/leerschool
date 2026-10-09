@@ -285,6 +285,174 @@ Oefen de strategie met de vragen hieronder.`,
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Waarom kies je bij zoekend lezen liever een naam of een bijzonder woord als zoekwoord, en niet een woordje als 'de'?",
+        options: [
+          "Een opvallend woord vind je snel terug, en 'de' staat overal",
+          "Kleine woordjes mag je bij een toets niet lezen",
+          "Namen staan altijd in de eerste zin van een tekst",
+          "Bijzondere woorden zijn altijd zelf het antwoord",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je leest kleine woordjes gewoon mee. Maar helpen ze je om de goede plek te vinden?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat doet een zoekwoord?",
+              tekst: "Met een zoekwoord spoor je de goede plek in de tekst op. Je ogen glijden over de tekst tot ze dat woord zien.",
+            },
+            {
+              titel: "Waarom niet 'de'?",
+              tekst: "Het woordje 'de' staat tientallen keren in een tekst. Daarmee vind je nooit die ene goede zin.",
+            },
+            {
+              titel: "Waarom wel een naam?",
+              tekst: "Een naam, een getal of een bijzonder woord staat maar op een paar plekken. Die vind je snel terug.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "zoekwoord",
+              uitleg: "Het belangrijkste woord uit de vraag, waarmee je de goede plek in de tekst opspoort.",
+            },
+            {
+              woord: "scannen",
+              uitleg: "Met je ogen snel over de tekst glijden, op zoek naar je zoekwoord.",
+            },
+          ],
+          theorie: "**Een goed zoekwoord kiezen**\n\nGoed:\n- een naam (Joost, Uilenfort)\n- een getal of jaartal\n- een bijzonder woord (bijenkast, speurtocht)\n\nNiet handig:\n- de, het, een, is, welke",
+          voorbeelden: [
+            {
+              type: "zoekwoord",
+              tekst: "Vraag: 'Wanneer komt imker Joost langs?' → zoekwoord 'Joost'. Niet 'wanneer' of 'langs'.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Opvallend = snel",
+              uitleg: "Hoe opvallender het woord, hoe sneller je het terugvindt in de tekst.",
+            },
+          ],
+          niveaus: {
+            basis: "Hoe vaak staat het woordje 'de' in een tekst?",
+            simpeler: "Een zoekwoord moet je naar één plek brengen. Lukt dat met een woordje dat overal staat?",
+            nogSimpeler: "Welk antwoord zegt dat je een opvallend woord snel terugvindt?",
+          },
+        },
+      },
+      {
+        q: "Je hebt de zin met je zoekwoord gevonden en precies gelezen. Wat doe je als laatste stap van de zoekstrategie?",
+        options: [
+          "Controleren of die zin echt antwoord geeft op de vraag",
+          "Kijken of de zin mooi geschreven is",
+          "Tellen hoeveel woorden de zin heeft",
+          "Controleren of de zin bovenaan de tekst staat",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Gaat de vraag over hoe mooi de zin is? Wat wil je zeker weten voordat je antwoordt?",
+          null,
+          "Kan het antwoord ook middenin of onderaan een tekst staan?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "De vier stappen",
+              tekst: "1. Vraag lezen en zoekwoord kiezen. 2. Scannen. 3. De zin precies lezen. 4. Controleren.",
+            },
+            {
+              titel: "Waarom controleren?",
+              tekst: "Soms staat je zoekwoord in een zin die over iets anders gaat. Of er staat een getal vlak naast dat bij iets anders hoort.",
+            },
+            {
+              titel: "Wat controleer je?",
+              tekst: "Je kijkt of die zin echt antwoord geeft op de vraag, en je neemt getallen, namen en tijden exact over.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "controleren",
+              uitleg: "Nakijken of iets echt klopt.",
+            },
+          ],
+          theorie: "**Stap 4: controleren**\n\nVraag jezelf af:\n\n- Geeft deze zin antwoord op précies mijn vraag?\n- Hoort het getal of de naam echt bij mijn zoekwoord?\n- Heb ik het exact overgenomen?",
+          voorbeelden: [
+            {
+              type: "controleren",
+              tekst: "'Een spin heeft acht poten. Een insect heeft er zes.' Vraag over de spin → controleer: hoort 'acht' bij de spin? Ja.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Geen bijna-goed",
+              uitleg: "Neem getallen, namen en tijden exact over uit de tekst.",
+            },
+          ],
+          niveaus: {
+            basis: "Wat wil je zeker weten voordat je je antwoord opschrijft?",
+            simpeler: "De vierde stap van de strategie heet controleren. Wat controleer je dan?",
+            nogSimpeler: "Welk antwoord gaat over de vraag die je moet beantwoorden?",
+          },
+        },
+      },
+      {
+        q: "*\"Lars woont in Utrecht. Zijn nicht Fenna woont in Groningen.\"* — In welke stad woont Fenna?",
+        options: ["Groningen", "Utrecht", "Zwolle", "Amsterdam"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Die stad staat in de zin over Lars. Over wie gaat de vraag? Scan op 'Fenna'.",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoekwoord",
+              tekst: "De vraag gaat over Fenna. Dat is een naam, dus een prima zoekwoord.",
+            },
+            {
+              titel: "Scan en lees precies",
+              tekst: "De zin met 'Fenna' is: 'Zijn nicht Fenna woont in Groningen.'",
+            },
+            {
+              titel: "Pas op voor de buurzin",
+              tekst: "In de zin ervoor staat ook een stad, maar die hoort bij Lars. Alleen de stad in de zin met 'Fenna' geeft antwoord.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "nicht",
+              uitleg: "Een dochter van je oom of tante (of van je broer of zus).",
+            },
+          ],
+          theorie: "**Het detail uit de buurzin**\n\nVlak naast het goede antwoord staat vaak een ander detail dat erop lijkt: een andere stad, een ander getal. Controleer altijd: hoort dit detail bij mijn zoekwoord?",
+          voorbeelden: [
+            {
+              type: "buurzin",
+              tekst: "'Opa is 70 jaar. Oma is 68 jaar.' Vraag over oma → 68, niet 70.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Naam + detail = paar",
+              uitleg: "Lees de naam en het detail in dezelfde zin samen als een paar.",
+            },
+          ],
+          niveaus: {
+            basis: "Zoek de zin met de naam 'Fenna'. Welke stad staat daarin?",
+            simpeler: "Er staan twee steden. De ene hoort bij Lars. Welke hoort bij Fenna?",
+            nogSimpeler: "Lees het woord dat direct na 'Fenna woont in' staat.",
+          },
+        },
+      },
     ],
   },
 
@@ -492,6 +660,113 @@ Let op: in deze tekst staan meerdere getallen (twee, dertigduizend, veertien, dr
             basis: "De vraag gaat over geld. Scan op het woord 'euro' en lees het getal ervoor.",
             simpeler: "Zoek de zin over de herfstmarkt. Er staat in die zin een bedrag mét het woord 'euro' erbij — dat zoek je.",
             nogSimpeler: "Zoek het woord 'euro' in de tekst en lees het getal dat er direct vóór staat.",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Hoeveel bijenkasten staan er op het dak van de school?",
+        options: ["Twee", "Veertien", "Drie", "Vier"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat getal gaat over de potten honing. Scan op het woord 'bijenkasten'.",
+          "Dat getal hoort bij de prijs van een pot. Zoek de zin met 'bijenkasten'.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoekwoord",
+              tekst: "De vraag gaat over bijenkasten. Scan de tekst op dat woord.",
+            },
+            {
+              titel: "Precies lezen",
+              tekst: "De eerste zin zegt: 'Op het dak van basisschool De Regenboog staan sinds vorig jaar twee bijenkasten.'",
+            },
+            {
+              titel: "Controleer de buren",
+              tekst: "In de tekst staan ook veertien (potten) en drie (euro). Alleen het getal naast 'bijenkasten' geeft antwoord.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "bijenkast",
+              uitleg: "Een houten kast waarin een imker bijen houdt.",
+            },
+            {
+              woord: "imker",
+              uitleg: "Iemand die bijen houdt en voor ze zorgt.",
+            },
+          ],
+          theorie: "**Getal + onderwerp = paar**\n\n- twee → kasten\n- dertigduizend → bijen\n- veertien → potten\n- drie → euro\n\nDe vraag gaat over kasten? Dan telt alleen het getal dat aan 'kasten' vastzit.",
+          voorbeelden: [
+            {
+              type: "koppelen",
+              tekst: "'De klas heeft 28 leerlingen en 4 computers.' Vraag: hoeveel computers? → 4.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lees het paar",
+              uitleg: "Een getal hoort bij het woord ernaast. Lees ze samen.",
+            },
+          ],
+          niveaus: {
+            basis: "Scan op het woord 'bijenkasten'. Welk getal staat ervoor?",
+            simpeler: "Het woord 'bijenkasten' staat in de allereerste zin. Lees die zin precies.",
+            nogSimpeler: "Lees het woord dat direct vóór 'bijenkasten' staat.",
+          },
+        },
+      },
+      {
+        q: "Hoeveel bijen wonen er in de zomer in één kast?",
+        options: ["Wel dertigduizend", "Veertien", "Wel tweeduizend", "Dertig"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat getal gaat over de potten honing. Scan op 'zomer'.",
+          "Lees het getal in de tekst nog eens heel precies, letter voor letter.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoekwoord",
+              tekst: "De vraag gaat over de zomer en één kast. Scan op het woord 'zomer'.",
+            },
+            {
+              titel: "Precies lezen",
+              tekst: "'In de zomer wonen er in één kast wel dertigduizend bijen.'",
+            },
+            {
+              titel: "Neem het exact over",
+              tekst: "Het is één lang woord: dertig-duizend. Lees het helemaal, anders kies je een bijna-goed antwoord.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "dertigduizend",
+              uitleg: "Het getal 30.000: dertig keer duizend.",
+            },
+          ],
+          theorie: "**Lange getallen in woorden**\n\nIn een tekst staan getallen soms in letters: 'dertigduizend' in plaats van 30.000. Lees zo'n woord helemaal uit. Wie alleen 'dertig' leest of 'twee' en 'duizend' door elkaar haalt, pakt een bijna-goed antwoord.",
+          voorbeelden: [
+            {
+              type: "exact",
+              tekst: "'Het stadion heeft plek voor vijftigduizend mensen.' → 50.000, niet 50 en niet 15.000.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Exact overnemen",
+              uitleg: "Neem getallen precies over. Bijna goed is fout.",
+            },
+          ],
+          niveaus: {
+            basis: "Zoek de zin met het woord 'zomer'. Welk getal staat daarin?",
+            simpeler: "Lees het getal in die zin helemaal, tot het einde van het woord.",
+            nogSimpeler: "Lees het woord vlak vóór 'bijen' in de zin over de zomer.",
           },
         },
       },
@@ -715,6 +990,104 @@ Kortom: scannen mag snel, maar het overnemen van het antwoord doe je traag en pr
             basis: "Scan op het woord 'treden' en lees het getal in díé zin, cijfer voor cijfer.",
             simpeler: "Er staan twee getallen: eentje bij 'meter' en eentje bij 'treden'. Jij zoekt het getal bij 'treden' — lees het heel precies.",
             nogSimpeler: "Zoek het woord 'treden' en lees het getal ervoor cijfer voor cijfer op.",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*\"De film begint om half acht. De pauze is om kwart over acht.\"* — Hoe laat begint de film?",
+        options: ["Om half acht", "Om kwart over acht", "Om half zeven", "Om acht uur"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Die tijd hoort bij de pauze. Scan op het woord 'film'.",
+          "Lees de tijd in de tekst nog eens heel precies. Staat daar 'zeven'?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoekwoord",
+              tekst: "De vraag gaat over de film. Scan op het woord 'film'.",
+            },
+            {
+              titel: "Precies lezen",
+              tekst: "'De film begint om half acht.'",
+            },
+            {
+              titel: "Pas op",
+              tekst: "In de zin ernaast staat een andere tijd: die hoort bij de pauze. En 'half zeven' lijkt erop, maar is een uur eerder.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "half acht",
+              uitleg: "Dertig minuten vóór acht uur: 7.30 uur.",
+            },
+          ],
+          theorie: "**Bijna-goed-tijden**\n\nTijden lijken vaak op elkaar: half acht, half zeven, kwart over acht. Je hersenen zeggen snel 'gevonden!'. Wijs de tijd in de tekst aan en neem hem woord voor woord over.",
+          voorbeelden: [
+            {
+              type: "bijna goed",
+              tekst: "'De bus komt om kwart voor negen.' → niet kwart over negen, niet kwart voor tien.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Woord voor woord",
+              uitleg: "Neem een tijd precies over zoals hij in de tekst staat.",
+            },
+          ],
+          niveaus: {
+            basis: "Zoek de zin met het woord 'film'. Welke tijd staat daarin?",
+            simpeler: "De andere tijd hoort bij de pauze. Welke tijd blijft over voor de film?",
+            nogSimpeler: "Lees de woorden direct na 'De film begint om'.",
+          },
+        },
+      },
+      {
+        q: "*\"Bij de wedstrijd won Tim de eerste prijs. Zijn zus Eva werd tweede, en hun neef Bas werd derde.\"* — Wie werd tweede?",
+        options: ["Eva", "Tim", "Bas", "Lisa"],
+        answer: 0,
+        wrongHints: [null, "Die naam hoort bij de eerste prijs. Scan op het woord 'tweede'.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoekwoord",
+              tekst: "De vraag gaat over 'tweede'. Scan de tekst op dat woord.",
+            },
+            {
+              titel: "Precies lezen",
+              tekst: "'Zijn zus Eva werd tweede.'",
+            },
+            {
+              titel: "Pas op voor de buren",
+              tekst: "Vlak ervoor staat Tim (eerste) en vlak erna Bas (derde). Alleen de naam in hetzelfde stukje als 'tweede' geeft antwoord.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "neef",
+              uitleg: "Een zoon van je oom of tante (of van je broer of zus).",
+            },
+          ],
+          theorie: "**Het verkeerde detail uit de buurt**\n\nIn één zin staan soms meerdere namen. Koppel elke naam aan zijn plek:\n\n- Tim → eerste\n- Eva → tweede\n- Bas → derde",
+          voorbeelden: [
+            {
+              type: "koppelen",
+              tekst: "'Anna rende het snelst, Mo was het langzaamst.' Vraag: wie was het langzaamst? → Mo.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Naam + plek = paar",
+              uitleg: "Lees de naam en het detail dat erbij hoort samen.",
+            },
+          ],
+          niveaus: {
+            basis: "Zoek het woord 'tweede'. Welke naam staat er vlak voor?",
+            simpeler: "Tim werd eerste en Bas werd derde. Wie blijft er over?",
+            nogSimpeler: "Lees de woorden direct vóór 'werd tweede'.",
           },
         },
       },
@@ -960,6 +1333,118 @@ Pak bij elke vraag de vaste strategie erbij: **vraag lezen → zoekwoord kiezen 
             basis: "Zoek onder 'Goed om te weten' de zin over groepen en lees hem helemaal uit — tot en met de manier waarop.",
             simpeler: "Bram komt met meer dan tien personen, dus de groepen-regel geldt. Wat moet een groep volgens die zin vooraf doen, en via welk kanaal?",
             nogSimpeler: "Zoek het woord 'groepen' in de folder en lees precies wat er in die zin achter staat.",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Hoeveel kost een toegangsbewijs voor een volwassene?",
+        options: ["Acht euro", "Vijf euro", "Niets, volwassenen mogen gratis naar binnen", "Tien euro"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is de prijs voor kinderen. Lees de zin onder 'Prijzen' tot het einde.",
+          "Voor wie is het gratis volgens de folder? Lees de laatste zin onder 'Prijzen'.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kopje kiezen",
+              tekst: "De vraag gaat over geld. Spring naar het kopje 'Prijzen'.",
+            },
+            {
+              titel: "Precies lezen",
+              tekst: "'Een toegangsbewijs kost vijf euro voor kinderen en acht euro voor volwassenen.'",
+            },
+            {
+              titel: "Koppel prijs en persoon",
+              tekst: "Vijf euro hoort bij kinderen, acht euro bij volwassenen. Gratis geldt alleen voor kinderen jonger dan vier jaar.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "volwassene",
+              uitleg: "Een grote mens, geen kind meer.",
+            },
+            {
+              woord: "toegangsbewijs",
+              uitleg: "Een kaartje waarmee je ergens naar binnen mag.",
+            },
+          ],
+          theorie: "**Kopje → zin → paar**\n\n1. Kies het goede kopje (geld → Prijzen).\n2. Zoek de zin met je zoekwoord (volwassenen).\n3. Koppel het bedrag aan de goede persoon.\n\nIn één zin staan hier twee bedragen. Alleen het bedrag bij 'volwassenen' geeft antwoord.",
+          voorbeelden: [
+            {
+              type: "koppelen",
+              tekst: "'Een ijsje kost twee euro, een milkshake drie euro.' Vraag: wat kost een milkshake? → drie euro.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Eerst het kopje",
+              uitleg: "In een folder met kopjes zoek je eerst het goede kopje, dan je zoekwoord.",
+            },
+          ],
+          niveaus: {
+            basis: "Kijk onder 'Prijzen'. Welk bedrag hoort bij volwassenen?",
+            simpeler: "In de zin staan twee bedragen. Het ene is voor kinderen. Welk is voor volwassenen?",
+            nogSimpeler: "Lees het bedrag vlak vóór 'voor volwassenen'.",
+          },
+        },
+      },
+      {
+        q: "Waar eindigt de speurtocht?",
+        options: [
+          "Bij de schatkist in de kelder",
+          "Bij de uilenzaal op de eerste verdieping",
+          "Bij de ingang van het museum",
+          "In het Ontdeklab op de zolder",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Daar vind je de opgezette uilen. Scan op het woord 'eindigt'.",
+          "Daar haal je de speurkaart, aan het begin. Waar eindigt de tocht?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kopje kiezen",
+              tekst: "De vraag gaat over de speurtocht. Spring naar het kopje 'Speurtocht'.",
+            },
+            {
+              titel: "Precies lezen",
+              tekst: "'De speurtocht duurt ongeveer drie kwartier en eindigt bij de schatkist in de kelder.'",
+            },
+            {
+              titel: "Pas op",
+              tekst: "Bij de ingang begint het: daar haal je de speurkaart. De vraag gaat over het einde.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kelder",
+              uitleg: "Een ruimte onder de grond, onder een huis of gebouw.",
+            },
+          ],
+          theorie: "**Begin of einde?**\n\nIn het stukje over de speurtocht staan twee plekken:\n\n- de ingang → daar haal je de speurkaart (begin);\n- de schatkist in de kelder → daar eindigt de tocht.\n\nLees de vraag precies: gaat hij over het begin of over het einde?",
+          voorbeelden: [
+            {
+              type: "begin-einde",
+              tekst: "'De wandeling start bij de kerk en eindigt bij de molen.' Vraag: waar eindigt hij? → bij de molen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lees de vraag precies",
+              uitleg: "Een tekst kan meerdere plekken noemen. De vraag bepaalt welke je nodig hebt.",
+            },
+          ],
+          niveaus: {
+            basis: "Kijk onder 'Speurtocht' en zoek het woord 'eindigt'. Welke plek staat erachter?",
+            simpeler: "De ingang is waar je begint. Waar eindig je?",
+            nogSimpeler: "Lees de woorden direct na 'eindigt bij'.",
           },
         },
       },

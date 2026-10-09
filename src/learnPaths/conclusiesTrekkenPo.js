@@ -250,6 +250,126 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Op de stoep liggen overal gele en bruine bladeren. Mensen lopen met een sjaal om, en uit de bomen vallen kastanjes. Welke conclusie past het best?",
+        options: ["Het is herfst", "Het is lente", "Het is midden in de zomer", "Het is Koningsdag"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "In de lente komen er juist nieuwe blaadjes aan de bomen. Past dat bij bladeren op de stoep?",
+          "Zou je midden in de zomer een sjaal omdoen?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Verzamel de aanwijzingen",
+              tekst: "Aanwijzing 1: gele en bruine bladeren op de stoep. Aanwijzing 2: mensen met een sjaal. Aanwijzing 3: vallende kastanjes.",
+            },
+            {
+              titel: "Gebruik je eigen kennis",
+              tekst: "Jij weet dat bladeren geel en bruin worden en vallen als het kouder wordt. Kastanjes vallen ook in die tijd van het jaar.",
+            },
+            {
+              titel: "Wat verklaart alles?",
+              tekst: "Eén seizoen past bij alle drie de aanwijzingen tegelijk. Het woord staat nergens in de tekst, maar je kunt het onderbouwen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "conclusie",
+              uitleg: "Iets dat je zelf bedenkt uit aanwijzingen. Het staat niet letterlijk in de tekst.",
+            },
+            {
+              woord: "aanwijzing",
+              uitleg: "Een woord of zin die iets verklapt, zoals een spoor voor een speurneus.",
+            },
+          ],
+          theorie: "**Aanwijzing + eigen kennis = conclusie**\n\n1. Zoek alle aanwijzingen in de tekst.\n2. Voeg toe wat jij al weet (vallende bladeren en kastanjes horen bij een bepaald seizoen).\n3. Kies de conclusie die bij álle aanwijzingen past.",
+          voorbeelden: [
+            {
+              type: "sterk",
+              tekst: "Gele bladeren + sjaals + kastanjes → herfst verklaart alle drie.",
+            },
+            {
+              type: "zwak",
+              tekst: "'Lente' verklaart geen enkele aanwijzing: in de lente komen er bladeren bij.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Eigen kennis mag",
+              uitleg: "Bij een conclusie gebruik je de aanwijzingen uit de tekst én wat je zelf al weet.",
+            },
+          ],
+          niveaus: {
+            basis: "In welk seizoen vallen bladeren en kastanjes van de bomen?",
+            simpeler: "Er zijn drie aanwijzingen: bladeren op de stoep, sjaals en kastanjes. Welk seizoen past bij alle drie?",
+            nogSimpeler: "Welk seizoen komt na de zomer en voor de winter?",
+          },
+        },
+      },
+      {
+        q: "Welke twee dingen gebruik je als je een conclusie trekt?",
+        options: [
+          "Aanwijzingen uit de tekst en je eigen kennis",
+          "Alleen de titel en de laatste zin",
+          "Alleen wat jij zelf het leukst vindt",
+          "De plaatjes en het aantal bladzijden",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Staan aanwijzingen alleen in de titel en de laatste zin? Waar kunnen ze nog meer staan?",
+          "Gaat een conclusie over wat je leuk vindt, of over wat je kunt onderbouwen?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Ding 1",
+              tekst: "Je gebruikt aanwijzingen uit de tekst: woorden en zinnen die iets verklappen, zoals 'een kletsnatte jas'.",
+            },
+            {
+              titel: "Ding 2",
+              tekst: "Je gebruikt je eigen kennis: jij weet bijvoorbeeld dat regen dingen nat maakt.",
+            },
+            {
+              titel: "Samen",
+              tekst: "Aanwijzing plus eigen kennis geeft een conclusie die je kunt onderbouwen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "eigen kennis",
+              uitleg: "Wat je zelf al weet over de wereld, zoals dat ijs smelt in de zon.",
+            },
+            {
+              woord: "onderbouwen",
+              uitleg: "Laten zien met wélke aanwijzingen je je conclusie kunt bewijzen.",
+            },
+          ],
+          theorie: "**Twee ingrediënten**\n\n1. **Aanwijzingen uit de tekst** — overal in de tekst, niet alleen in de titel.\n2. **Je eigen kennis** — wat je al weet.\n\nWat je leuk vindt of hoopt, telt niet mee. Een conclusie moet je kunnen onderbouwen.",
+          voorbeelden: [
+            {
+              type: "ingrediënten",
+              tekst: "Tekst: 'Op tafel ligt een leeg bord met kruimels.' Eigen kennis: kruimels blijven over na het eten. Conclusie: hier heeft iemand gegeten.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tekst + kennis",
+              uitleg: "Een conclusie maak je met aanwijzingen uit de tekst en wat jij al weet.",
+            },
+          ],
+          niveaus: {
+            basis: "Waar komen aanwijzingen vandaan? En wat weet jij zelf al?",
+            simpeler: "Denk aan de natte jas: wat haalde je uit de tekst, en wat wist je zelf al over regen?",
+            nogSimpeler: "Welk antwoord noemt de tekst én wat jij al weet?",
+          },
+        },
+      },
     ],
   },
 
@@ -475,6 +595,119 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
             basis: "Aarzelen + toch zwaaien + warme wangen — welk gevoel past bij alle drie?",
             simpeler: "Een onbekend kind zwaait naar jou. Je twijfelt even, zwaait dan toch en voelt je wangen gloeien. Ben je dan boos, of iets heel anders?",
             nogSimpeler: "Wat voel je als iets spannend is maar je doet het toch?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat gebeurt er in het verhaal 'De lege kamer'? Het staat er niet letterlijk, maar je kunt het afleiden.",
+        options: [
+          "Noor verhuist met haar vader naar een ander huis",
+          "Noor gaat met haar vader op vakantie",
+          "Noor krijgt een nieuwe kamer in hetzelfde huis",
+          "Noor gaat logeren bij haar vriendin Sara",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Neem je op vakantie al je posters mee en stop je al je spullen in dozen?",
+          "Waarom rijden ze dan met de auto weg uit haar oude straat?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Verzamel de aanwijzingen",
+              tekst: "De muren zijn kaal en de dozen staan in de gang. Papa praat over 'het nieuwe huis'. Ze rijden weg uit haar oude straat.",
+            },
+            {
+              titel: "Plak ze aan elkaar",
+              tekst: "Alle spullen ingepakt, een nieuw huis en wegrijden uit de oude straat: Noor gaat ergens anders wonen.",
+            },
+            {
+              titel: "Streep de rest weg",
+              tekst: "Voor een vakantie pak je niet je hele kamer in. Een kamer in hetzelfde huis past niet bij wegrijden. Over logeren bij Sara staat niets.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "verhuizen",
+              uitleg: "Met al je spullen naar een ander huis gaan om daar te wonen.",
+            },
+          ],
+          theorie: "**Lezen tussen de regels**\n\nHet woord 'verhuizen' staat nergens in het verhaal. Toch weet je het zeker door de aanwijzingen:\n\n- lege kamer en dozen;\n- 'het nieuwe huis';\n- de oude straat verdwijnt achter de bocht.",
+          voorbeelden: [
+            {
+              type: "afleiden",
+              tekst: "'De dozen stonden al in de gang' + 'in het nieuwe huis krijg je...' → er wordt verhuisd.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Meerdere aanwijzingen",
+              uitleg: "Zoek aanwijzingen in het hele verhaal, niet maar in één zin.",
+            },
+          ],
+          niveaus: {
+            basis: "Wat zegt papa over 'het nieuwe huis'? En waarom staan er dozen in de gang?",
+            simpeler: "Alles is ingepakt en ze rijden weg uit haar oude straat. Wat gaat Noor doen?",
+            nogSimpeler: "Hoe heet het als je met al je spullen naar een ander huis gaat om daar te wonen?",
+          },
+        },
+      },
+      {
+        q: "In de auto kijkt Noor naar haar oude straat *'tot die achter de bocht verdween'*. Wat kun je daaruit afleiden?",
+        options: [
+          "Ze vindt het moeilijk om haar oude buurt achter te laten",
+          "Ze wil de weg naar het nieuwe huis onthouden",
+          "Ze wordt misselijk van het autorijden",
+          "Ze telt de huizen in haar straat",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Ligt het nieuwe huis vóór haar of achter haar? Waar kijkt ze naar?",
+          "Staat er iets over misselijk zijn? Zoek een aanwijzing in de tekst.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat doet Noor?",
+              tekst: "Ze blijft kijken naar haar oude straat, zo lang als ze hem nog kan zien.",
+            },
+            {
+              titel: "Gebruik je eigen kennis",
+              tekst: "Als je lang blijft kijken naar iets wat je achterlaat, wil je het nog niet loslaten.",
+            },
+            {
+              titel: "Check met de rest",
+              tekst: "Eerder slikte ze en streek ze over de vensterbank. Ook dat past bij moeite met afscheid nemen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "achterlaten",
+              uitleg: "Weggaan en iets of iemand niet meenemen.",
+            },
+          ],
+          theorie: "**Gedrag vertelt het gevoel**\n\nDe schrijver zegt niet 'Noor vond het moeilijk'. Hij laat haar doen:\n\n- slikken;\n- over de vensterbank strijken;\n- blijven kijken naar de oude straat.\n\nAl die aanwijzingen wijzen dezelfde kant op.",
+          voorbeelden: [
+            {
+              type: "gedrag",
+              tekst: "'Hij bleef op het perron zwaaien tot de trein uit het zicht was.' → hij vindt het afscheid moeilijk.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Kijk naar het hele verhaal",
+              uitleg: "Een conclusie wordt sterker als aanwijzingen uit verschillende stukken van het verhaal hetzelfde zeggen.",
+            },
+          ],
+          niveaus: {
+            basis: "Waarom zou je blijven kijken naar iets wat je achterlaat?",
+            simpeler: "Ze kijkt achterom, naar wat ze verlaat. Wat zegt dat over haar gevoel?",
+            nogSimpeler: "Vindt Noor het makkelijk of moeilijk om weg te gaan?",
           },
         },
       },
@@ -726,6 +959,119 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
             basis: "Tel per antwoord hoeveel van de drie aanwijzingen (klok, trommelen, zuchten) het verklaart.",
             simpeler: "Wanneer kijk jij steeds op de klok én zit je te wiebelen én zucht je? Denk aan de laatste keer dat iets veel te lang duurde.",
             nogSimpeler: "Waar hoop jij op als je steeds op de klok kijkt?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "In een verhaal staat: *'Het restaurant was zaterdagavond helemaal vol. Buiten stond zelfs een rij wachtende mensen.'* Welke conclusie is ONDERBOUWD?",
+        options: [
+          "Veel mensen wilden die avond in dit restaurant eten",
+          "Het restaurant heeft het lekkerste eten van de stad",
+          "Het restaurant is elke avond van de week vol",
+          "Het eten was die avond gratis",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Staat er iets over hoe het eten smaakt? Of verzin je dat erbij?",
+          "De tekst gaat over één avond. Weet je dan ook iets over de andere avonden?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat staat er?",
+              tekst: "Op zaterdagavond was het restaurant vol en stond er buiten een rij.",
+            },
+            {
+              titel: "Doe de wijs-test",
+              tekst: "Vol restaurant + rij buiten → je kunt aanwijzen dat veel mensen daar die avond wilden eten.",
+            },
+            {
+              titel: "Doe de te-ver-test",
+              tekst: "Over de smaak, over andere avonden en over de prijs staat niets. Die conclusies gaan verder dan de tekst.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "aanname",
+              uitleg: "Iets dat je zomaar aanneemt zonder bewijs. Klinkt vaak logisch, maar steunt nergens op.",
+            },
+          ],
+          theorie: "**Te ver gaan herkennen**\n\nLet op woorden die meer beweren dan de tekst:\n\n- *het lekkerste* — staat er iets over smaak?\n- *elke avond* — de tekst noemt één avond.\n- *gratis* — staat er iets over geld?\n\nKies de conclusie die precies bij de aanwijzingen past.",
+          voorbeelden: [
+            {
+              type: "te ver",
+              tekst: "'De bioscoop was uitverkocht' → je mag zeggen: veel mensen wilden die film zien. Niet: het is de beste film ooit.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Eén keer is niet altijd",
+              uitleg: "Wat op één avond gebeurt, zegt niets over elke avond.",
+            },
+          ],
+          niveaus: {
+            basis: "Wat weet je zeker over die zaterdagavond?",
+            simpeler: "Doe de te-ver-test: welke antwoorden zeggen iets over smaak, andere avonden of geld?",
+            nogSimpeler: "Wat betekent een rij wachtende mensen voor de deur?",
+          },
+        },
+      },
+      {
+        q: "Je denkt dat een personage in een verhaal boos is. Hoe controleer je of die conclusie ONDERBOUWD is?",
+        options: [
+          "Je zoekt zinnen in de tekst die op boosheid wijzen",
+          "Je bedenkt of jij zelf boos zou zijn",
+          "Je kiest het antwoord dat het spannendst klinkt",
+          "Je kijkt of het woord 'boos' in de titel staat",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zou jij in dezelfde situatie hetzelfde voelen als het personage? Waar moet het bewijs vandaan komen?",
+          null,
+          "Een titel zegt iets over de hele tekst. Waar zoek je bewijs voor wat één personage voelt?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "De wijs-test",
+              tekst: "Een onderbouwde conclusie steunt op aanwijzingen die je kunt aanwijzen in de tekst.",
+            },
+            {
+              titel: "Zoek gedrag",
+              tekst: "Bij boosheid kun je zoeken naar zinnen als 'hij stampte', 'ze werd rood' of 'hij smeet de deur dicht'.",
+            },
+            {
+              titel: "Wat telt niet?",
+              tekst: "Wat jij zelf zou voelen of wat spannend klinkt, is geen bewijs uit de tekst.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "personage",
+              uitleg: "Iemand die in een verhaal voorkomt.",
+            },
+          ],
+          theorie: "**De wijs-test**\n\n1. Lees je conclusie: 'het personage is boos'.\n2. Zoek de zinnen die dat steunen.\n3. Vind je ze? Onderbouwd. Vind je niets? Dan is het een gok.\n\nToetsmakers zetten er graag een spannend antwoord tussen. Spannend is geen bewijs.",
+          voorbeelden: [
+            {
+              type: "onderbouwd",
+              tekst: "'Hij smeet zijn tas op de grond en stampte de trap op.' → je kunt aanwijzen dat hij boos is.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Bewijs uit de tekst",
+              uitleg: "Een conclusie over een personage controleer je altijd met zinnen uit de tekst.",
+            },
+          ],
+          niveaus: {
+            basis: "Waar moet het bewijs voor een conclusie altijd vandaan komen?",
+            simpeler: "Denk aan de wijs-test: wat moet je kunnen aanwijzen?",
+            nogSimpeler: "Welk antwoord zoekt in de tekst zelf?",
           },
         },
       },
