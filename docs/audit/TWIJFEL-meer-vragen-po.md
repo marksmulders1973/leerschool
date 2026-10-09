@@ -359,3 +359,4 @@ Gevonden door de nakijkers van de vervolgsessie in de **stap-uitleg of bestaande
 - **cito-strategieen-groep8, stap-uitleg:** 'elke vraag geeft evenveel punten' (en overslaan/terugkomen) staat er stellig, maar de digitale Cito-Doorstroomtoets is deels adaptief; dat geldt dus niet voor elke aanbieder/versie.
 - **onderwijs-niveaus-vmbo-havo-vwo, stap-uitleg:** 'je kiest een richting in klas 3' — op het vmbo kies je meestal aan het eind van klas 2 en volg je de richting vanaf klas 3.
 - **cito-strategieen-groep8, stap-uitleg/uitlegPad:** 'Sinds 2024 zijn er meerdere aanbieders' — er waren al sinds ±2015 meerdere eindtoetsen; in 2024 veranderden vooral de naam en het moment (februari).
+- **tijdvakken-nederland-po, stap-uitleg:** het Kinderwetje van Van Houten (1874) verbood fabriekswerk voor kinderen onder de 12, niet alle werk; de uitleg zegt het te ruim.
