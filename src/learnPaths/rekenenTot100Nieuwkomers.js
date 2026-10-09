@@ -155,6 +155,29 @@ winkel[0].uitlegPad = {
   niveaus: { basis: "Samen = plus.", simpeler: "Twee dingen bij elkaar = plus.", nogSimpeler: "Plus." },
 };
 
+// Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+erbij100.push(
+  {"q":"**32 + 40 =** ?","options":["72","36","62","82"],"answer":0,"wrongHints":[null,"Je deed er 4 bij. Maar 40 is 4 tientallen.",null,null]},
+  {"q":"Spring met **10**: 23, 33, 43, … Wat komt erna?","options":["53","44","63","34"],"answer":0,"wrongHints":[null,"Je deed er 1 bij. Hoe groot is elke sprong?",null,null]},
+  {"q":"**61 + 7 =** ?","options":["68","78","58","69"],"answer":0,"wrongHints":[null,"Kijk naar de tientallen. Verandert de 6 als je er maar 7 losse bij doet?",null,null]},
+  {"q":"Welke som is **57**?","options":["34 + 23","34 + 33","34 + 13","34 + 32"],"answer":0,"wrongHints":[null,"Reken eerst de tientallen: 34 + 30. Is dat al meer dan 57?",null,null]},
+  {"q":"**15 + 24 =** ?","options":["39","49","29","38"],"answer":0,"wrongHints":[null,null,"Tel de sprongen van 10 nog eens. Hoeveel tientallen zitten er in 24?",null]},
+);
+eraf100.push(
+  {"q":"**87 − 30 =** ?","options":["57","84","67","47"],"answer":0,"wrongHints":[null,"Je haalde 3 eraf. Maar 30 is 3 tientallen.",null,null]},
+  {"q":"Spring terug met **10**: 82, 72, 62, … Wat komt erna?","options":["52","61","42","63"],"answer":0,"wrongHints":[null,"Je ging 1 terug. Hoe groot is elke sprong?",null,null]},
+  {"q":"**65 − 23 =** ?","options":["42","52","32","88"],"answer":0,"wrongHints":[null,null,null,"Eraf maakt het getal kleiner. Is 88 kleiner dan 65?"]},
+  {"q":"**39 − 5 =** ?","options":["34","44","33","24"],"answer":0,"wrongHints":[null,"Bij eraf wordt het getal kleiner. Is 44 kleiner dan 39?",null,null]},
+  {"q":"Welke som is **41**?","options":["76 − 35","76 − 25","76 − 45","76 − 34"],"answer":0,"wrongHints":[null,"Hoeveel tientallen haal je eraf bij 25? Kom je dan al bij 41?",null,null]},
+);
+overTiental.push(
+  {"q":"**27 + 5 =** ?","options":["32","22","31","42"],"answer":0,"wrongHints":[null,null,"Maak eerst het tiental vol: 27 + 3 = 30. Hoeveel van de 5 is er dan nog over?",null]},
+  {"q":"**53 − 7 =** ?","options":["46","56","47","36"],"answer":0,"wrongHints":[null,"Bij eraf wordt het getal kleiner. Is 56 kleiner dan 53?",null,null]},
+  {"q":"Hoeveel moet er bij **36** om **40** te maken?","options":["4","3","6","14"],"answer":0,"wrongHints":[null,null,"Je pakte het laatste cijfer van 36. Tel vanaf 36 verder tot 40.",null]},
+  {"q":"Hoe reken je **45 + 8** in twee stapjes?","options":["45 + 5 = 50, 50 + 3 = 53","45 + 5 = 50, 50 + 5 = 55","45 + 8 = 50, 50 + 3 = 53","45 + 3 = 48, 48 + 3 = 51"],"answer":0,"wrongHints":[null,"Je knipt de 8 in twee stukjes. Zijn 5 en 5 samen 8?",null,"Je knipt de 8 in twee stukjes. Zijn 3 en 3 samen 8?"]},
+  {"q":"**72 − 6 =** ?","options":["66","76","67","56"],"answer":0,"wrongHints":[null,null,"Ga eerst terug naar 70. Hoeveel van de 6 moet er daarna nog af?",null]},
+);
+
 const steps = [
   { title: "Tientallen en eenheden", explanation: "Een getal tot 100 heeft **twee cijfers**.\n\nHet eerste cijfer zijn de **tientallen** (groepjes van 10). Het tweede cijfer zijn de **eenheden** (losse).\n\n**34** = 3 tientallen en 4 eenheden = 30 + 4.", checks: tientallen },
   { title: "Erbij tot 100", explanation: "Erbij doen we in **sprongen**.\n\nEerst sprongen van **10**: 34 + 20 = 54.\nDan sprongen van **1**: 54 + 3 = 57.", checks: erbij100 },
