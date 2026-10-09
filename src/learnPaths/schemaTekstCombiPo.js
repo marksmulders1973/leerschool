@@ -338,6 +338,58 @@ Heb je een getal nodig? Lijst! Wil je weten wat er mag of geldt? Tekst! Probeer 
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Kijk naar de openingstijden van Bibliotheek De Boekenberg. Op welke twee dagen gaat de bibliotheek al om 10.00 uur open?",
+        options: ["Woensdag en zaterdag", "Maandag en vrijdag", "Woensdag en vrijdag", "Maandag en zaterdag"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Op die twee dagen gaat de bibliotheek pas 's middags open. Kijk naar het getal vóór het streepje.",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek het gegeven",
+              tekst: "Nu zoek je geen dag, maar een openingstijd: 10.00 uur. Die staat steeds vóór het streepje.",
+            },
+            {
+              titel: "Loop de rijen langs",
+              tekst: "Kijk bij elke dag naar het eerste getal: maandag 13.00, woensdag 10.00, vrijdag 13.00, zaterdag 10.00.",
+            },
+            {
+              titel: "Tel de dagen",
+              tekst: "Bij welke twee dagen staat er 10.00 vóór het streepje?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "streepje",
+              uitleg: "Bij tijden betekent het streepje 'tot'. 10.00 – 16.00 uur is dus: van 10 uur tot 4 uur 's middags.",
+            },
+          ],
+          theorie: "**Kruispunt-lezen andersom**\n\nMeestal weet je de dag en zoek je de tijd. Maar het kan ook andersom: je weet de tijd en zoekt de dagen. Kijk dan in de kolom met openingstijden en lees bij elk getal welke dag erbij hoort.",
+          voorbeelden: [
+            {
+              type: "andersom",
+              tekst: "Welke dag sluit om 20.00 uur? Zoek 20.00 achter het streepje → dat is vrijdag.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Voor of na het streepje",
+              uitleg: "Vóór het streepje staat de openingstijd, erna de sluitingstijd. Haal ze niet door elkaar.",
+            },
+          ],
+          niveaus: {
+            basis: "Kijk bij elke dag naar het getal vóór het streepje. Waar staat 10.00?",
+            simpeler: "Maandag begint om 13.00, vrijdag ook. Welke twee dagen beginnen eerder?",
+            nogSimpeler: "Zoek de twee regels die met 10.00 beginnen. Welke dagen zijn dat?",
+          },
+        },
+      },
     ],
   },
 
@@ -548,6 +600,216 @@ Soms heb je alleen de lijst nodig, soms alleen de tekst — en bij de moeilijkst
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Jesse wordt vandaag 12 jaar. Hij gaat op zaterdag met zijn moeder zwemmen in De Blauwe Golf. Wat betalen ze samen?",
+        options: ["€ 13,00", "€ 11,00", "€ 18,00", "€ 9,00"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk goed naar de leeftijden tussen de haakjes: in welke groep hoort iemand van 12?",
+          "Dat is de gezinskaart. Voor wie is die kaart precies bedoeld?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Over wie gaat het?",
+              tekst: "Twee personen: Jesse, die vandaag 12 wordt, en zijn moeder.",
+            },
+            {
+              titel: "Zoek de goede rijen",
+              tekst: "Kind is 4 t/m 11 jaar. Volwassene is vanaf 12 jaar. Jesse is 12, dus hij valt bij de volwassenen. Zijn moeder ook.",
+            },
+            {
+              titel: "Reken",
+              tekst: "Twee keer het volwassenentarief: € 6,50 + € 6,50.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "t/m",
+              uitleg: "Afkorting van 'tot en met'. 4 t/m 11 jaar betekent: 4, 5, 6, 7, 8, 9, 10 en 11 jaar.",
+            },
+          ],
+          theorie: "**Let op de leeftijdsgrens**\n\n- Kind: 4 t/m 11 jaar\n- Volwassene: vanaf 12 jaar\n\nWie 12 is, hoort dus niet meer bij de kinderen. Dat is een echte toetsvalkuil: kijk altijd precies naar de getallen tussen de haakjes.",
+          voorbeelden: [
+            {
+              type: "grens",
+              tekst: "Een meisje van 11 betaalt € 4,50. Haar broer van 12 betaalt al € 6,50.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "'Tot en met' en 'vanaf'",
+              uitleg: "'Tot en met 11' telt 11 nog mee. 'Vanaf 12' begint bij 12.",
+            },
+          ],
+          niveaus: {
+            basis: "In welke rij hoort iemand van 12 jaar? Kijk naar 'vanaf 12 jaar'.",
+            simpeler: "Jesse is 12, dus hij betaalt niet meer de kinderprijs. Wat betalen hij en zijn moeder elk?",
+            nogSimpeler: "Allebei € 6,50. Hoeveel is dat samen?",
+          },
+        },
+      },
+      {
+        q: "Lotte wil op een zaterdag om 18.00 uur nog gaan zwemmen in De Blauwe Golf. Kan dat?",
+        options: [
+          "Nee, het zwembad sluit al om 17.30 uur",
+          "Ja, het zwembad is tot 20.00 uur open",
+          "Ja, maar alleen met een tienbadenkaart",
+          "Nee, op zaterdag is het zwembad dicht",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "De tienbadenkaart gaat over hoe vaak je zwemt. Verandert die kaart iets aan de openingstijden?",
+          "Lees de eerste zin van de tekst. Is het zwembad op sommige dagen dicht?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lijst of tekst?",
+              tekst: "Je zoekt een openingstijd. In de prijslijst staan alleen prijzen, dus kijk in de tekst.",
+            },
+            {
+              titel: "Zoek de zin",
+              tekst: "In de eerste zin staat hoe laat het zwembad elke dag open is.",
+            },
+            {
+              titel: "Vergelijk",
+              tekst: "Het zwembad is open van 9.00 tot 17.30 uur. Lotte wil om 18.00 uur komen. Is het dan nog open?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "sluitingstijd",
+              uitleg: "Het tijdstip waarop iets dichtgaat.",
+            },
+          ],
+          theorie: "**Taakverdeling**\n\n- De prijslijst geeft de prijzen.\n- De tekst geeft de openingstijden en de regels.\n\nZoek je een tijd die niet in de lijst staat? Lees dan de tekst.",
+          voorbeelden: [
+            {
+              type: "tekst-gegeven",
+              tekst: "'Elke dag open van 9.00 tot 17.30 uur.' — deze tijd staat alleen in de tekst, niet in de prijslijst.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Later of eerder?",
+              uitleg: "18.00 uur is een half uur ná 17.30 uur.",
+            },
+          ],
+          niveaus: {
+            basis: "Lees de eerste zin van de tekst. Tot hoe laat is het zwembad open?",
+            simpeler: "Het zwembad sluit om 17.30 uur. Is 18.00 uur vóór of ná die tijd?",
+            nogSimpeler: "Om 18.00 uur is het zwembad al een half uur dicht. Kan Lotte dan nog zwemmen?",
+          },
+        },
+      },
+      {
+        q: "Noor is 7 jaar en heeft nog geen zwemdiploma. Wat moet zij volgens de tekst doen in het zwembad?",
+        options: [
+          "Een oranje bandje dragen en in het ondiepe bad blijven",
+          "Een tienbadenkaart kopen bij de kassa",
+          "Altijd op woensdagmiddag komen zwemmen",
+          "Samen met een volwassene in het diepe bad zwemmen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Woensdagmiddag gaat over de prijs. Staat er een regel over zwemmen zonder diploma?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lijst of tekst?",
+              tekst: "Je zoekt een regel, geen prijs. Regels staan in de tekst.",
+            },
+            {
+              titel: "Zoek de zin",
+              tekst: "Zoek in de tekst naar het woord 'zwemdiploma'.",
+            },
+            {
+              titel: "Lees de hele zin",
+              tekst: "Daar staat wat kinderen zonder zwemdiploma dragen en in welk bad ze blijven.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "zwemdiploma",
+              uitleg: "Een bewijs dat je veilig kunt zwemmen. Dat haal je na zwemles.",
+            },
+          ],
+          theorie: "**Regels staan in de tekst**\n\nWil je weten wat er mag of moet? Dan heb je de tekst nodig, niet de lijst. Een prijslijst vertelt nooit wat je moet dragen of waar je mag zwemmen.",
+          voorbeelden: [
+            {
+              type: "regel",
+              tekst: "'Kinderen zonder zwemdiploma dragen een oranje bandje.' — een regel uit de tekst, geen prijs.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Trefwoord zoeken",
+              uitleg: "Zoek een belangrijk woord uit de vraag (hier: zwemdiploma) op in de tekst. Het antwoord staat meestal vlakbij.",
+            },
+          ],
+          niveaus: {
+            basis: "Zoek het woord 'zwemdiploma' in de tekst. Wat staat er in die zin?",
+            simpeler: "Wat dragen kinderen zonder zwemdiploma? En in welk bad blijven ze?",
+            nogSimpeler: "De zin noemt een kleur bandje en een bad. Welke optie zegt allebei?",
+          },
+        },
+      },
+      {
+        q: "Sam is 8 jaar. Hij gaat in de vakantie tien keer zwemmen in De Blauwe Golf, steeds op zaterdag. Hoeveel geld bespaart hij met een tienbadenkaart vergeleken met tien losse kaartjes?",
+        options: ["€ 5,00", "€ 4,50", "€ 40,00", "€ 45,00"],
+        answer: 0,
+        wrongHints: [null, null, "Dat is de prijs van de kaart zelf. Wat wil de vraag precies weten?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek de prijzen",
+              tekst: "Sam is 8, dus een los kaartje kost € 4,50. Een tienbadenkaart voor een kind kost € 40,00.",
+            },
+            {
+              titel: "Reken de losse kaartjes uit",
+              tekst: "Tien keer € 4,50 is € 45,00.",
+            },
+            {
+              titel: "Bereken het verschil",
+              tekst: "Besparen is het verschil: € 45,00 − € 40,00.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "besparen",
+              uitleg: "Minder geld uitgeven dan je anders had moeten doen. Het bespaarde bedrag is het verschil tussen de twee prijzen.",
+            },
+          ],
+          theorie: "**Vergelijken in drie stappen**\n\n1. Reken uit wat de ene keuze kost.\n2. Reken uit wat de andere keuze kost.\n3. Trek ze van elkaar af: dat is wat je bespaart.\n\nDe tekst geeft al een hint: wie vaak gaat, is met een tienbadenkaart misschien voordeliger uit.",
+          voorbeelden: [
+            {
+              type: "vergelijken",
+              tekst: "Vijf losse kaartjes van € 3,00 kosten € 15,00. Kost een vijfrittenkaart € 12,00? Dan bespaar je € 3,00.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lees wat er gevraagd wordt",
+              uitleg: "Vraagt de toets wat iets kóst, of hoeveel je bespáárt? Dat zijn twee verschillende antwoorden.",
+            },
+          ],
+          niveaus: {
+            basis: "Wat kosten tien losse kinderkaartjes samen? En wat kost de kaart?",
+            simpeler: "Tien keer € 4,50 is € 45,00. De kaart kost € 40,00. Hoeveel scheelt dat?",
+            nogSimpeler: "Hoeveel is € 45,00 min € 40,00?",
+          },
+        },
+      },
     ],
   },
 
@@ -734,6 +996,201 @@ Zet je valkuilen-bril op en probeer de vragen hieronder.`,
             basis: "Denk aan de vraag over de jarige Sam: stond zijn echte prijs in de lijst of ergens anders?",
             simpeler: "De lijst geeft de gewone situatie. Waar staan de bijzondere gevallen, zoals een verjaardag of een regen-regel?",
             nogSimpeler: "Wat miste je bij Sam als je alléén de lijst las?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Lisa en haar vader gaan naar kinderboerderij 't Hoefje. Niemand van hen is jarig. Hoeveel betalen ze samen aan entree?",
+        options: ["€ 6,00", "€ 3,00", "€ 10,00", "€ 4,00"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Staat er bij de entree 'per persoon' of 'per groepje'? En met hoeveel zijn ze?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek de rij",
+              tekst: "Entree (per persoon): € 3,00.",
+            },
+            {
+              titel: "Kijk naar de eenheid",
+              tekst: "Tussen de haakjes staat 'per persoon'. Iedereen die naar binnen gaat, betaalt dus € 3,00.",
+            },
+            {
+              titel: "Check de tekst en reken",
+              tekst: "Niemand is jarig, dus de uitzondering geldt niet. Twee personen: € 3,00 + € 3,00.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "entree",
+              uitleg: "Het geld dat je betaalt om ergens naar binnen te mogen.",
+            },
+          ],
+          theorie: "**Valkuil 3: de eenheid**\n\n'Per persoon' betekent: iedereen betaalt apart. 'Per groepje' betekent: het groepje betaalt één keer samen.\n\nLees dus altijd wat er tussen de haakjes staat voordat je gaat rekenen.",
+          voorbeelden: [
+            {
+              type: "per-persoon",
+              tekst: "Drie vriendjes gaan naar binnen bij een entree van € 3,00 per persoon. Samen betalen ze € 9,00.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Uitzondering checken",
+              uitleg: "Kijk na het rekenen nog even in de tekst: geldt er voor iemand een uitzondering, zoals jarig zijn?",
+            },
+          ],
+          niveaus: {
+            basis: "Wat staat er tussen de haakjes bij de entree? Met hoeveel personen zijn Lisa en haar vader?",
+            simpeler: "Iedereen betaalt € 3,00. Hoeveel is dat voor twee personen?",
+            nogSimpeler: "Twee keer € 3,00 is…?",
+          },
+        },
+      },
+      {
+        q: "Tim maakt bij 't Hoefje drie ponyritjes. Wat kosten die samen?",
+        options: ["€ 6,00", "€ 22,50", "€ 2,00", "€ 7,50"],
+        answer: 0,
+        wrongHints: [null, "Rítje of lés? Lees de hele regel nog eens.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek de goede rij",
+              tekst: "'Ponyritje' en 'ponyles' lijken op elkaar. Tim maakt ritjes: één rondje door de wei kost € 2,00.",
+            },
+            {
+              titel: "Hoeveel keer?",
+              tekst: "Tim maakt drie ritjes. Elk ritje betaal je apart.",
+            },
+            {
+              titel: "Reken",
+              tekst: "Drie keer € 2,00.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "ponyritje",
+              uitleg: "Eén rondje op een pony door de wei. Iets anders dan een ponyles van 30 minuten.",
+            },
+          ],
+          theorie: "**Valkuil 1: de verkeerde rij**\n\nWoorden die op elkaar lijken, kunnen heel andere prijzen hebben:\n\n- Ponyritje (één rondje): € 2,00\n- Ponyles (30 minuten): € 7,50\n\nLees de hele regel, niet alleen het begin van het woord.",
+          voorbeelden: [
+            {
+              type: "verkeerde-rij",
+              tekst: "Wie per ongeluk de ponyles pakt, rekent drie keer € 7,50 en komt veel te hoog uit.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Daarna pas rekenen",
+              uitleg: "Eerst de goede rij, dan pas rekenen. Een goede som met het verkeerde getal geeft toch een fout antwoord.",
+            },
+          ],
+          niveaus: {
+            basis: "Welke regel hoort bij een ritje? En hoeveel ritjes maakt Tim?",
+            simpeler: "Eén ritje kost € 2,00. Tim doet het drie keer. Hoeveel is dat?",
+            nogSimpeler: "Drie keer € 2,00 is…?",
+          },
+        },
+      },
+      {
+        q: "Zeven kinderen willen bij 't Hoefje de speurtocht doen. Wat betalen ze daar samen minstens voor?",
+        options: ["€ 20,00", "€ 10,00", "€ 70,00", "€ 14,00"],
+        answer: 0,
+        wrongHints: [null, "Hoeveel kinderen mogen er maximaal in één groepje?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek de rij",
+              tekst: "Speurtocht (per groepje van maximaal 5 kinderen): € 10,00.",
+            },
+            {
+              titel: "Hoeveel groepjes?",
+              tekst: "In één groepje passen maximaal 5 kinderen. Met zeven kinderen heb je dus minstens twee groepjes nodig: bijvoorbeeld 5 en 2, of 4 en 3.",
+            },
+            {
+              titel: "Reken",
+              tekst: "Elk groepje betaalt één keer € 10,00. Twee groepjes: € 10,00 + € 10,00.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "maximaal",
+              uitleg: "Niet meer dan. 'Maximaal 5 kinderen' betekent: 5 mag, 6 niet.",
+            },
+          ],
+          theorie: "**Valkuil 3: per groepje, met een grens**\n\nDe speurtocht betaal je per groepje, niet per kind. Maar een groepje mag niet te groot zijn: maximaal 5 kinderen.\n\nZijn er meer dan 5 kinderen? Dan maak je extra groepjes, en elk groepje betaalt apart.",
+          voorbeelden: [
+            {
+              type: "groepjes",
+              tekst: "Twaalf kinderen → minstens drie groepjes (5 + 5 + 2) → 3 × € 10,00 = € 30,00.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lees alles tussen de haakjes",
+              uitleg: "Tussen de haakjes staat niet alleen 'per groepje', maar ook hoe groot een groepje mag zijn.",
+            },
+          ],
+          niveaus: {
+            basis: "Hoeveel kinderen passen er in één groepje? Hoeveel groepjes heb je dan nodig voor zeven kinderen?",
+            simpeler: "Met zeven kinderen heb je twee groepjes nodig. Wat betaalt elk groepje?",
+            nogSimpeler: "Twee groepjes van € 10,00. Hoeveel is dat samen?",
+          },
+        },
+      },
+      {
+        q: "Femke is vandaag jarig en gaat naar 't Hoefje. Ze neemt daar ook een ponyles. Wat betaalt zij in totaal?",
+        options: ["€ 7,50", "€ 10,50", "€ 0,00", "€ 9,50"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Moet Femke vandaag wel entree betalen? Lees de folder-tekst.",
+          "Jarigen mogen gratis naar binnen. Staat er ook dat de ponyles gratis is?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Check de tekst",
+              tekst: "De folder zegt: wie jarig is, mag die dag gratis naar binnen. Femke betaalt dus geen entree.",
+            },
+            {
+              titel: "Zoek de rij",
+              tekst: "Ponyles (30 minuten, per kind): € 7,50. Over een gratis ponyles staat niets in de tekst.",
+            },
+            {
+              titel: "Tel op",
+              tekst: "Entree € 0,00 + ponyles € 7,50.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "uitzondering",
+              uitleg: "Een regel die voor een speciale situatie anders is dan normaal, zoals gratis entree als je jarig bent.",
+            },
+          ],
+          theorie: "**Valkuil 2: de uitzondering, maar niet méér dan dat**\n\nDe tekst kan een regel uit de lijst veranderen. Maar lees precies wát er verandert. Hier geldt de uitzondering alleen voor naar binnen gaan, niet voor de ponyles.",
+          voorbeelden: [
+            {
+              type: "precies-lezen",
+              tekst: "'Jarigen mogen gratis naar binnen.' Dat betekent: geen entree. Een ponyritje van € 2,00 betaal je dan nog wel gewoon.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lijst + tekst samen",
+              uitleg: "Bij de moeilijkste vragen gebruik je allebei: de tekst voor de regel, de lijst voor de prijs.",
+            },
+          ],
+          niveaus: {
+            basis: "Wat zegt de folder over jarigen? En wat kost een ponyles volgens de lijst?",
+            simpeler: "Femke hoeft geen entree te betalen. Moet ze de ponyles wel betalen?",
+            nogSimpeler: "Geen entree, wel een ponyles van € 7,50. Wat is dan het totaal?",
           },
         },
       },
@@ -981,6 +1438,175 @@ Neem rustig de tijd om terug te zoeken in de tekst hierboven — dat opzoeken ho
             basis: "Zoek de regel van de kinderspelen in het programma. De plek staat tussen de haakjes.",
             simpeler: "Vind eerst de regel met '10.30 uur' of 'kinderspelen'. Lees dan wat er tussen de haakjes staat — dat is de plek.",
             nogSimpeler: "Zoek het woord 'kinderspelen' in de lijst en lees de woorden tussen de haakjes erachter.",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Waar geef je je op als je wilt meedoen aan de talentenjacht?",
+        options: [
+          "Bij de kraam van meneer Baris, naast de feesttent",
+          "Bij mevrouw Kalden op het podium",
+          "Bij de burgemeester op het plein",
+          "Bij de ingang van het grasveld",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Mevrouw Kalden zit in de feestcommissie. Maar noemt de tekst haar bij het opgeven?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lijst of tekst?",
+              tekst: "Het programma geeft tijden en plekken van de activiteiten. Hoe je je opgeeft, is een regel: die staat in de tekst.",
+            },
+            {
+              titel: "Zoek de zin",
+              tekst: "Lees de alinea onder het programma. Zoek naar het woord 'opgeven' of 'geef je op'.",
+            },
+            {
+              titel: "Lees precies",
+              tekst: "Daar staat bij wiens kraam je je opgeeft, en waar die kraam staat.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "talentenjacht",
+              uitleg: "Een wedstrijd waarbij mensen laten zien wat ze goed kunnen, zoals zingen of goochelen.",
+            },
+          ],
+          theorie: "**Plek van de activiteit ≠ plek van het opgeven**\n\nDe talentenjacht zelf is op het podium (bij regen in de feesttent). Maar opgeven doe je ergens anders. Dat staat niet in het programma, alleen in de tekst.",
+          voorbeelden: [
+            {
+              type: "twee-plekken",
+              tekst: "Op een sportdag doe je mee op het veld, maar je meldt je misschien aan bij de tafel van de meester.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Regels in de tekst",
+              uitleg: "Wil je weten wat je moet doen om mee te mogen doen? Kijk dan in de tekst, niet alleen in de lijst.",
+            },
+          ],
+          niveaus: {
+            basis: "Zoek de zin met 'Geef je dan vóór 12.00 uur op'. Bij wie is dat?",
+            simpeler: "Bij welke kraam geef je je op, en naast welke tent staat die?",
+            nogSimpeler: "De tekst noemt een meneer met een kraam. Welke optie noemt hem?",
+          },
+        },
+      },
+      {
+        q: "Wat kost de toegang tot het buurtfeest in de Vlinderwijk?",
+        options: [
+          "Niets, de toegang is vrij",
+          "€ 1,00 per persoon",
+          "Eén muntje per kind",
+          "€ 2,00 per gezin",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat bedrag hoort bij iets anders op het feest. Wat zegt de eerste alinea over de toegang?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lijst of tekst?",
+              tekst: "In het programma staan geen prijzen. Kijk dus in de tekst.",
+            },
+            {
+              titel: "Zoek de zin",
+              tekst: "In de eerste alinea staat wie er welkom is en hoe het zit met de toegang.",
+            },
+            {
+              titel: "Pas op voor de valkuil",
+              tekst: "Verderop staat wel een bedrag (€ 1,00), maar dat gaat over extra muntjes voor pannenkoeken, niet over de toegang.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "toegang vrij",
+              uitleg: "Je mag gratis naar binnen.",
+            },
+          ],
+          theorie: "**Welk bedrag hoort waarbij?**\n\nIn een tekst kunnen meerdere bedragen staan. Lees daarom altijd waar een bedrag voor is. Hier: € 1,00 is voor een extra pannenkoek-muntje. Over de toegang zegt de tekst iets anders.",
+          voorbeelden: [
+            {
+              type: "bedrag-koppelen",
+              tekst: "'Elk extra muntje kost € 1,00 bij de kraam.' — dit bedrag hoort bij de muntjes, niet bij naar binnen gaan.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lees de hele zin",
+              uitleg: "Een getal zonder de zin eromheen zegt niets. Lees waar het getal over gaat.",
+            },
+          ],
+          niveaus: {
+            basis: "Lees de eerste alinea. Wat staat er over de toegang?",
+            simpeler: "Het woord 'vrij' staat bij de toegang. Wat betekent dat?",
+            nogSimpeler: "Toegang vrij betekent dat je iets niet hoeft te betalen. Wat kost het dus?",
+          },
+        },
+      },
+      {
+        q: "Kees wil de opening door de burgemeester én de ballonnenwedstrijd zien. Waar moet hij daarvoor zijn?",
+        options: [
+          "Allebei op het plein",
+          "Eerst op het plein, daarna in de feesttent",
+          "Eerst op het podium, daarna op het plein",
+          "Allebei op het grasveld",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Waar is de ballonnenwedstrijd volgens het programma? Kijk tussen de haakjes.",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Twee rijen",
+              tekst: "Je hebt twee regels uit het programma nodig: de opening (10.00 uur) en de ballonnenwedstrijd (15.00 uur).",
+            },
+            {
+              titel: "Lees de plekken",
+              tekst: "Tussen de haakjes staat steeds waar iets is. Lees bij beide regels de plek.",
+            },
+            {
+              titel: "Vergelijk",
+              tekst: "Opening: op het plein. Ballonnenwedstrijd: op het plein. Is dat dezelfde plek?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "programma",
+              uitleg: "Een lijst van wat er wanneer en waar gebeurt tijdens een feest of evenement.",
+            },
+          ],
+          theorie: "**Tussen de haakjes staat de plek**\n\nIn dit programma staat bij elke activiteit een tijd en een plek. Heb je twee activiteiten nodig? Zoek dan beide rijen op en lees bij allebei wat er tussen de haakjes staat.",
+          voorbeelden: [
+            {
+              type: "plek",
+              tekst: "'15.00 uur: ballonnenwedstrijd (op het plein)' → de ballonnenwedstrijd is op het plein.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Bij regen",
+              uitleg: "Alleen bij de talentenjacht noemt de tekst een regen-uitzondering. Voor de opening en de ballonnen geldt die niet.",
+            },
+          ],
+          niveaus: {
+            basis: "Zoek de regel van de opening en de regel van de ballonnenwedstrijd. Wat staat er tussen de haakjes?",
+            simpeler: "De opening is op het plein. Waar is de ballonnenwedstrijd om 15.00 uur?",
+            nogSimpeler: "Beide regels hebben dezelfde plek tussen de haakjes. Welke?",
           },
         },
       },

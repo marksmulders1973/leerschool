@@ -303,6 +303,109 @@ Zo check je jezelf: zie je een signaalwoord? Teken (in je hoofd) de pijl. Wat is
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*\"Het regende hard. ... bleven we binnen.\"* — Welk woord op de puntjes laat zien dat het binnenblijven dóór de regen kwam?",
+        options: ["Daarom", "Toch", "Eerst", "Daarna"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dit woord zegt dat iets anders loopt dan je zou verwachten. Is dat hier de bedoeling?",
+          "Dit woord vertelt alleen de volgorde in tijd. Zegt het ook waardóór iets gebeurt?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat moet het woord doen?",
+              tekst: "Het woord moet laten zien dat het binnenblijven het gevolg is van de regen.",
+            },
+            {
+              titel: "Welke soort woorden?",
+              tekst: "Tijd-woorden zoals 'eerst' en 'daarna' geven alleen een volgorde. Gevolg-woorden zoals 'daardoor', 'dus' en 'daarom' geven een oorzaak-gevolg aan.",
+            },
+            {
+              titel: "Probeer het uit",
+              tekst: "Zet elk woord op de puntjes. Bij welk woord hoor je dat het binnenblijven door de regen kwam?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "signaalwoord",
+              uitleg: "Een woord dat laat zien hoe zinnen met elkaar te maken hebben, zoals 'daarom' of 'daarna'.",
+            },
+          ],
+          theorie: "**Niet elk verbindingswoord is een oorzaak-woord**\n\n- daarom, dus, daardoor → gevolg\n- eerst, daarna, toen → alleen volgorde\n- maar → tegenstelling\n\nKies het woord dat de pijl regen → binnenblijven laat zien.",
+          voorbeelden: [
+            {
+              type: "daarom",
+              tekst: "'Ik had honger. Daarom at ik een appel.' → het eten komt door de honger.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Hardop proberen",
+              uitleg: "Lees de zin hardop met elk woord. Je hoort vaak meteen welk woord de goede betekenis geeft.",
+            },
+          ],
+          niveaus: {
+            basis: "Welk woord betekent 'en door die regen'?",
+            simpeler: "'Eerst' en 'daarna' gaan over tijd. Welk woord gaat over een gevolg?",
+            nogSimpeler: "Zoek het woord uit het rijtje 'daardoor, dus, daarom'.",
+          },
+        },
+      },
+      {
+        q: "*\"De bus had vertraging, zodat Mila de trein miste.\"* — Wat staat er achter het woord 'zodat'?",
+        options: [
+          "Het gevolg: Mila miste de trein",
+          "De oorzaak: de bus had vertraging",
+          "Een tegenstelling tussen bus en trein",
+          "Alleen wat er later gebeurde, zonder verband",
+        ],
+        answer: 0,
+        wrongHints: [null, "De vertraging staat vóór 'zodat'. Wat staat er áchter?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vind het signaalwoord",
+              tekst: "Het signaalwoord is 'zodat'. Het hoort bij het rijtje 'dus, daarom, zodat'.",
+            },
+            {
+              titel: "Wat staat erachter?",
+              tekst: "Achter 'zodat' staat: Mila miste de trein.",
+            },
+            {
+              titel: "Teken de pijl",
+              tekst: "Vertraging → trein gemist. Kwam het missen door de vertraging? Ja. Dan staat er achter 'zodat' het gevolg.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "zodat",
+              uitleg: "Signaalwoord — wat erachter staat, is het gevolg.",
+            },
+          ],
+          theorie: "**De pijl bij 'zodat'**\n\noorzaak, **zodat** gevolg\n\n'De bus had vertraging (oorzaak), zodat Mila de trein miste (gevolg).'",
+          voorbeelden: [
+            {
+              type: "zodat",
+              tekst: "'Het sneeuwde flink, zodat de school dichtging.' → achter 'zodat': de school ging dicht (gevolg).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Ook een verband",
+              uitleg: "'Zodat' vertelt niet alleen wat er later gebeurde, maar ook dat het dóór het eerste kwam.",
+            },
+          ],
+          niveaus: {
+            basis: "Bij welk rijtje hoort 'zodat': bij 'omdat, doordat' of bij 'dus, daarom'?",
+            simpeler: "Kwam het missen van de trein door de vertraging? Wat is het missen dan?",
+            nogSimpeler: "Achter 'zodat' staat wat eruit volgde. Hoe heet dat?",
+          },
+        },
+      },
     ],
   },
 
@@ -530,6 +633,170 @@ Let op: één gebeurtenis kan tegelijk een gevolg én een oorzaak zijn! De lekke
             basis: "De pijl bij 'waardoor' loopt van links naar rechts. Wat staat er réchts van dat woord?",
             simpeler: "Wat konden ze opeens, dankzij die belletjes? Iets vinden wat eerst onvindbaar was.",
             nogSimpeler: "De belletjes verklapten een geheime plek. Welke plek?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Halverwege merkte Milan dat trappen steeds zwaarder ging. Waardoor kwam dat?",
+        options: [
+          "Zijn achterband liep langzaam leeg",
+          "Hij reed tegen een harde wind in",
+          "Hij had een zware schooltas bij zich",
+          "Hij was moe van het lopen",
+        ],
+        answer: 0,
+        wrongHints: [null, null, null, "Ging Milan al lopen vóórdat het trappen zwaar werd, of pas erna?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek de gebeurtenis op",
+              tekst: "De zin over het zware trappen staat in de eerste alinea.",
+            },
+            {
+              titel: "Geen signaalwoord? Stel de waardoor-vraag",
+              tekst: "Bij deze zin staat geen 'omdat' of 'doordat'. Kijk daarom in de zinnen ervóór: wat gebeurde er vlak daarvoor?",
+            },
+            {
+              titel: "Controleer",
+              tekst: "Vlak ervoor staat: 'Daardoor liep zijn achterband langzaam leeg.' En erna: 'Hij stapte af en zag de slappe band hangen.' Fietsen met een lege band gaat zwaar.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "waardoor-vraag",
+              uitleg: "De vraag die je zelf stelt als er geen signaalwoord staat: waardoor kwam dit?",
+            },
+          ],
+          theorie: "**Verstopt verband**\n\nNiet elke oorzaak wordt aangekondigd met een signaalwoord. Dan zoek je zelf: wat gebeurde er vlak ervóór, en kan dát de reden zijn?\n\nHier: lege band → trappen gaat zwaar → afstappen.",
+          voorbeelden: [
+            {
+              type: "verstopt",
+              tekst: "'De batterij was leeg. De zaklamp deed het niet.' → geen signaalwoord, maar de lege batterij is wel de oorzaak.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lopen kwam later",
+              uitleg: "In de keten komt het lopen pas ná het zware trappen. Iets wat later gebeurt, kan geen oorzaak zijn.",
+            },
+          ],
+          niveaus: {
+            basis: "Lees de zin vlak vóór het zware trappen. Wat gebeurde er met de band?",
+            simpeler: "Wat gebeurt er met fietsen als je band steeds leger wordt?",
+            nogSimpeler: "Milan zag even later een slappe band. Waardoor ging trappen dus zwaar?",
+          },
+        },
+      },
+      {
+        q: "Juf Karin wist al goed hoe je een band plakt. Waardoor kwam dat?",
+        options: [
+          "Ze had thuis al heel wat banden geplakt",
+          "Milan had het haar in de klas uitgelegd",
+          "Ze had het net in een boek gelezen",
+          "Ze werkte vroeger bij een fietsenmaker",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Milan legde uit wat er gebéúrd was. Is dat hetzelfde als uitleggen hoe je een band plakt?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek de juf op",
+              tekst: "De juf zegt iets in de tweede alinea: 'Dan maken we die band vanmiddag samen.'",
+            },
+            {
+              titel: "Lees de hele zin",
+              tekst: "Achter haar woorden staat nog een stukje: '...zei de juf, want zij had thuis al heel wat banden geplakt.'",
+            },
+            {
+              titel: "Teken de pijl",
+              tekst: "Thuis vaak banden geplakt → ze weet hoe het moet. Het woordje 'want' geeft hier de reden.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "want",
+              uitleg: "Een woord dat een reden geeft, net als 'omdat'.",
+            },
+          ],
+          theorie: "**De reden staat soms achteraan**\n\nIn de zin staat eerst wat de juf zegt, en pas daarna waaróm ze dat kan. Lees een zin dus altijd helemaal uit, ook na de aanhalingstekens.",
+          voorbeelden: [
+            {
+              type: "reden-achteraan",
+              tekst: "'Ik help je wel met rekenen, want ik ben er goed in,' zei Bo. → de reden staat achter 'want'.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Hele zin lezen",
+              uitleg: "Na een uitspraak tussen aanhalingstekens staat soms nog belangrijke informatie. Stop niet te vroeg met lezen.",
+            },
+          ],
+          niveaus: {
+            basis: "Lees de zin waarin de juf iets zegt helemaal uit. Wat staat er achter 'want'?",
+            simpeler: "Wat had de juf thuis al vaak gedaan?",
+            nogSimpeler: "Achter 'want' staat dat zij thuis al heel wat banden… Wat staat daar?",
+          },
+        },
+      },
+      {
+        q: "Welke gebeurtenis uit de tekst is tegelijk een gevolg én een oorzaak?",
+        options: [
+          "Het lopen naar school",
+          "De spijker op de weg",
+          "Dat de juf thuis al banden had geplakt",
+          "Dat Milan de volgende ochtend extra uitkeek",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Waardoor kwam die spijker daar? Staat dat in de tekst?",
+          null,
+          "Dit gebeurt helemaal aan het eind. Leidt het in de tekst nog tot iets anders?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat zoek je?",
+              tekst: "Een schakel in het midden van de keten: iets wat dóór iets anders kwam, en zelf weer iets veroorzaakte.",
+            },
+            {
+              titel: "Kijk naar het lopen",
+              tekst: "Milan moest lopen omdat hij geen pomp had: dat is een gevolg. Zo kwam hij te laat: dan is het lopen ook een oorzaak.",
+            },
+            {
+              titel: "Controleer de andere",
+              tekst: "De spijker komt nergens door in de tekst. Het uitkijken leidt nergens meer toe. Alleen een middenschakel is allebei.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schakel",
+              uitleg: "Eén stukje uit een keten, zoals één ring van een ketting.",
+            },
+          ],
+          theorie: "**Middenschakels zijn gevolg én oorzaak**\n\nIn een keten heeft elke middenschakel twee kanten:\n\ngeen pomp → **lopen** → te laat\n\nVan links bekeken is het lopen een gevolg, van rechts bekeken een oorzaak.",
+          voorbeelden: [
+            {
+              type: "middenschakel",
+              tekst: "Wekker gaat niet af → te laat wakker → bus gemist. 'Te laat wakker' is gevolg én oorzaak.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Begin en eind",
+              uitleg: "Het eerste stukje van een keten is alleen oorzaak, het laatste stukje alleen gevolg.",
+            },
+          ],
+          niveaus: {
+            basis: "Waardoor moest Milan lopen? En wat kwam er daarna door het lopen?",
+            simpeler: "Het lopen kwam door de missende pomp. Leidde het lopen zelf ook tot iets?",
+            nogSimpeler: "Door het lopen kwam Milan te laat. Dan is het lopen gevolg én…?",
           },
         },
       },
@@ -795,6 +1062,175 @@ De strategie blijft: zoek de wegwijzer (of stel zelf de waardoor-vraag), teken d
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*\"De wedstrijd werd afgelast, doordat het veld onder water stond.\"* — Welke zin betekent precies hetzelfde?",
+        options: [
+          "Doordat het veld onder water stond, werd de wedstrijd afgelast.",
+          "Doordat de wedstrijd werd afgelast, stond het veld onder water.",
+          "Het veld stond onder water, maar de wedstrijd ging gewoon door.",
+          "Eerst werd de wedstrijd afgelast, daarna liep het veld onder water.",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk naar de richting van de pijl. Kan een afgelaste wedstrijd een veld onder water zetten?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vind de oorzaak",
+              tekst: "Achter 'doordat' staat de oorzaak: het veld stond onder water. Het afgelasten is het gevolg.",
+            },
+            {
+              titel: "Gebruik de omdraai-truc",
+              tekst: "Zet de oorzaak vooraan, maar houd 'doordat' bij de oorzaak. Dan blijft de betekenis hetzelfde.",
+            },
+            {
+              titel: "Controleer de pijl",
+              tekst: "Pijl: water op het veld → wedstrijd afgelast. Zoek de zin waarin de pijl precies zo loopt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "afgelast",
+              uitleg: "Niet door laten gaan. Een afgelaste wedstrijd wordt niet gespeeld.",
+            },
+          ],
+          theorie: "**De omdraai-truc**\n\n'Sanne bleef thuis, omdat ze koorts had.'\n= 'Omdat ze koorts had, bleef Sanne thuis.'\n\nDe volgorde in de zin verandert, de pijl niet. Het signaalwoord blijft bij de oorzaak staan.",
+          voorbeelden: [
+            {
+              type: "omdraaien",
+              tekst: "'De weg was glad, doordat het gesneeuwd had.' = 'Doordat het gesneeuwd had, was de weg glad.'",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Signaalwoord blijft bij de oorzaak",
+              uitleg: "Verhuist 'doordat' naar het gevolg? Dan draait de pijl om en verandert de betekenis.",
+            },
+          ],
+          niveaus: {
+            basis: "Achter welk stukje staat 'doordat' in de oorspronkelijke zin? Waar staat het in de nieuwe zin?",
+            simpeler: "De oorzaak is het water op het veld. In welke nieuwe zin staat 'doordat' nog steeds vóór het water?",
+            nogSimpeler: "Zoek de zin die begint met 'Doordat het veld onder water stond'.",
+          },
+        },
+      },
+      {
+        q: "Bij welk zinnenpaar gebeurt het tweede alleen ná het eerste, en níét dóór het eerste?",
+        options: [
+          "Lotte poetste haar tanden. Daarna trok ze haar jas aan.",
+          "Het stormde de hele nacht. Er lagen overal takken op straat.",
+          "Tom brak zijn been. Hij moest zes weken op krukken lopen.",
+          "De oven stond veel te heet. De koekjes verbrandden.",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Doe de test: 'Doordat het stormde, lagen er takken op straat.' Klinkt dat logisch?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Doe de doordat-test",
+              tekst: "Zet bij elk paar 'doordat' ertussen: 'Doordat A, gebeurde B.' Klinkt het logisch, dan is het oorzaak-gevolg.",
+            },
+            {
+              titel: "Test het tandenpoetsen",
+              tekst: "'Doordat Lotte haar tanden poetste, trok ze haar jas aan.' Klinkt raar: het een komt niet door het ander.",
+            },
+            {
+              titel: "Let op het tijd-woord",
+              tekst: "Bij Lotte staat 'daarna'. Dat is een tijd-woord: het vertelt alleen de volgorde.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "volgorde",
+              uitleg: "Wat eerst gebeurt en wat daarna. Volgorde zegt nog niet dat het één door het ander komt.",
+            },
+          ],
+          theorie: "**Ná elkaar is niet hetzelfde als dóór elkaar**\n\nBij oorzaak-gevolg zit er een pijl tussen: het tweede komt dóór het eerste.\n\nBij tijdsvolgorde gebeurt het tweede alleen later.\n\nTest: zet 'doordat' ertussen. Raar? Dan is het alleen volgorde.",
+          voorbeelden: [
+            {
+              type: "test",
+              tekst: "'Jesse at een boterham. Daarna ging hij voetballen.' → 'Doordat hij een boterham at, ging hij voetballen' klinkt raar: alleen volgorde.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Daarna is een tijd-woord",
+              uitleg: "'Daarna' lijkt op 'daardoor', maar betekent iets anders: alleen later, niet erdoor.",
+            },
+          ],
+          niveaus: {
+            basis: "Zet bij elk paar 'doordat' ertussen. Bij welk paar klinkt het raar?",
+            simpeler: "Brak Tom zijn been, en moest hij dáárdoor op krukken? Trok Lotte haar jas aan dóór het tandenpoetsen?",
+            nogSimpeler: "Bij welk paar staat het tijd-woord 'daarna' en is er geen echte oorzaak?",
+          },
+        },
+      },
+      {
+        q: "*\"Sem moest in de pauze binnenblijven, omdat hij zijn huiswerk was vergeten.\"* — Wat gebeurde er in het echt het éérst?",
+        options: [
+          "Sem vergat zijn huiswerk",
+          "Sem bleef in de pauze binnen",
+          "Sem maakte zijn huiswerk af",
+          "Sem ging buiten spelen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat staat vooraan in de zin. Maar is vooraan in de zin ook eerst in het echt?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Laat je niet foppen",
+              tekst: "Het binnenblijven staat vooraan in de zin. Maar de volgorde in de zin zegt niets over wat er eerst gebeurde.",
+            },
+            {
+              titel: "Kijk naar het signaalwoord",
+              tekst: "Achter 'omdat' staat de oorzaak: hij was zijn huiswerk vergeten.",
+            },
+            {
+              titel: "Oorzaak eerst",
+              tekst: "De oorzaak gebeurt in het echt altijd eerder dan het gevolg. Dus wat gebeurde er eerst?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "omdat",
+              uitleg: "Signaalwoord — wat erachter staat, is de oorzaak (of de reden).",
+            },
+          ],
+          theorie: "**Echte volgorde vs. zin-volgorde**\n\nIn de zin: eerst het gevolg, dan de oorzaak.\nIn het echt: eerst de oorzaak, dan het gevolg.\n\nOmdraai-truc: 'Omdat Sem zijn huiswerk was vergeten, moest hij binnenblijven.'",
+          voorbeelden: [
+            {
+              type: "achteraan",
+              tekst: "'Mira had natte sokken, doordat ze in een plas stapte.' → in het echt stapte ze eerst in de plas.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Blijf bij de tekst",
+              uitleg: "Over huiswerk afmaken of buiten spelen staat niets in de zin.",
+            },
+          ],
+          niveaus: {
+            basis: "Wat staat er achter 'omdat'? Dat gebeurde in het echt het eerst.",
+            simpeler: "Moest Sem binnenblijven door het vergeten, of vergat hij zijn huiswerk door het binnenblijven?",
+            nogSimpeler: "De oorzaak komt altijd eerst. Wat is hier de oorzaak?",
+          },
+        },
+      },
     ],
   },
 
@@ -1027,6 +1463,58 @@ Let op de valstrikken die je nu kent: de oorzaak kan achteraan in de zin staan, 
             basis: "Lees de zinnen vlak vóór 'binnen drie dagen stond er een steviger hok'. Wie waren daar aan het werk?",
             simpeler: "Een hok repareer je niet in je eentje zo snel. Welke mensen uit de tekst pakten samen het gereedschap?",
             nogSimpeler: "Zoek in de derde alinea wie er kwamen helpen met de reparatie.",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke keten van oorzaak en gevolg klopt volgens de tekst?",
+        options: [
+          "Zieke stam en storm → boom valt om → fietsenhok beschadigd",
+          "Fietsenhok beschadigd → boom valt om → storm",
+          "Boom valt om → storm → zieke stam",
+          "Zitjes gemaakt → boom valt om → fietsenhok beschadigd",
+        ],
+        answer: 0,
+        wrongHints: [null, "Wat gebeurde er in het écht het eerst: de storm of het kapotte hok?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek het begin",
+              tekst: "De keten begint bij wat er het eerst was: een zieke stam en een zware storm.",
+            },
+            {
+              titel: "Volg de pijlen",
+              tekst: "Doordat het hout zacht was, hield de boom het niet in de storm: hij viel om. Hij viel dwars over het fietsenhok: het hok raakte beschadigd.",
+            },
+            {
+              titel: "Controleer de richting",
+              tekst: "Elke pijl moet van eerder naar later wijzen. De zitjes kwamen pas helemaal aan het eind.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "keten",
+              uitleg: "Een rijtje gebeurtenissen waarbij het één steeds het ander veroorzaakt, zoals vallende dominostenen.",
+            },
+          ],
+          theorie: "**Een keten loopt altijd van vroeg naar laat**\n\nDe oorzaak gebeurt altijd vóór het gevolg. In een goede keten wijst dus elke pijl vooruit in de tijd.\n\nTest elke pijl: komt het tweede echt dóór het eerste?",
+          voorbeelden: [
+            {
+              type: "keten",
+              tekst: "Regen → plassen → natte schoenen. Natte schoenen → regen kan niet: de pijl wijst achteruit.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Pijl voor pijl",
+              uitleg: "Controleer elke pijl apart. Eén verkeerde pijl maakt de hele keten fout.",
+            },
+          ],
+          niveaus: {
+            basis: "Waarmee begint het verhaal? En wat gebeurde er direct daarna?",
+            simpeler: "De storm en de zieke stam waren er eerst. Wat gebeurde er toen met de boom, en waar viel hij op?",
+            nogSimpeler: "Zoek de keten die begint bij de zieke stam en de storm.",
           },
         },
       },

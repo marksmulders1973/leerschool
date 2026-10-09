@@ -302,6 +302,160 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*\"Omdat het ijs nog te dun was, ging de schaatswedstrijd op de vijver niet door.\"* — Op welke gouden vraag geeft het stukje *'omdat het ijs nog te dun was'* antwoord?",
+        options: ["Waarom", "Wat", "Waar", "Wie"],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "De vijver is een plek, maar die staat in een ander stukje van de zin. Wat vertelt het stukje met 'omdat' je?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Knip de zin in stukjes",
+              tekst: "De zin heeft twee delen: 'omdat het ijs nog te dun was' en 'ging de schaatswedstrijd op de vijver niet door'. De vraag gaat alleen over het eerste deel.",
+            },
+            {
+              titel: "Wat vertelt dat stukje?",
+              tekst: "Het stukje legt uit waaróm de wedstrijd niet doorging: het ijs was te dun. Het geeft dus een reden.",
+            },
+            {
+              titel: "Koppel aan de gouden vraag",
+              tekst: "Welke van de zes gouden vragen vraagt naar een reden of oorzaak? Het woordje 'omdat' is vaak een aanwijzing.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "reden",
+              uitleg: "Het waarom van iets: wat ervoor zorgt dat iets gebeurt.",
+            },
+          ],
+          theorie: "**Elke gouden vraag zoekt zijn eigen soort antwoord**\n\n- Wie → een persoon of dier\n- Wat → wat er gebeurde\n- Waar → een plek\n- Wanneer → een dag of moment\n- Waarom → een reden of oorzaak\n- Hoe → de manier\n\nWoordjes als 'omdat' en 'doordat' kondigen vaak een reden aan.",
+          voorbeelden: [
+            {
+              type: "reden",
+              tekst: "'De bus reed niet, omdat de weg was afgesloten.' — het stukje na 'omdat' vertelt de reden.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Eén zin, meer vragen",
+              uitleg: "Een zin kan antwoord geven op meer gouden vragen tegelijk. Kijk daarom precies naar het stukje waar de vraag over gaat.",
+            },
+          ],
+          niveaus: {
+            basis: "Wat vertelt 'omdat het ijs nog te dun was': een plek, een persoon of een reden?",
+            simpeler: "Stel de vraag: wáárom ging de wedstrijd niet door? Welk stukje van de zin geeft daar antwoord op?",
+            nogSimpeler: "Achter 'omdat' staat een reden. Welke gouden vraag vraagt naar een reden?",
+          },
+        },
+      },
+      {
+        q: "Je leest een lang nieuwsbericht over een voetbaltoernooi. Je zoekt een klein weetje: hoe oud de jongste toeschouwer was. Waar kijk je het best?",
+        options: [
+          "Verderop in het bericht, bij de details",
+          "In de kop boven het bericht",
+          "Alleen in de allereerste zin",
+          "Nergens, dat staat nooit in een nieuwsbericht",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een kop is maar een paar woorden lang. Is daar plek voor kleine weetjes?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat zoek je?",
+              tekst: "Je zoekt geen hoofdnieuws, maar een klein weetje: de leeftijd van de jongste toeschouwer.",
+            },
+            {
+              titel: "Denk aan de bouw",
+              tekst: "Vooraan staat het belangrijkste nieuws. Daarna volgen de details, van belangrijk naar minder belangrijk.",
+            },
+            {
+              titel: "Waar staat het dus?",
+              tekst: "Een klein weetje hoort bij de details. Die staan niet vooraan, maar verderop in het bericht.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "detail",
+              uitleg: "Een klein stukje extra informatie. Leuk om te weten, maar niet het belangrijkste.",
+            },
+          ],
+          theorie: "**Slim zoeken met de bouw van een nieuwsbericht**\n\n1. Kop → maakt nieuwsgierig\n2. Eerste alinea → het belangrijkste nieuws\n3. Rest → details, steeds minder belangrijk\n\nZoek je het hoofdnieuws? Kijk vooraan. Zoek je een klein weetje? Kijk verderop.",
+          voorbeelden: [
+            {
+              type: "detail",
+              tekst: "'De jongste toeschouwer was pas drie jaar.' — zo'n zin vind je meestal onderaan een bericht.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Opzoeken, niet onthouden",
+              uitleg: "Je hoeft een bericht niet uit je hoofd te kennen. Als je de bouw kent, weet je waar je moet zoeken.",
+            },
+          ],
+          niveaus: {
+            basis: "Is de leeftijd van een toeschouwer hoofdnieuws of een klein weetje? Waar staan die weetjes?",
+            simpeler: "Het belangrijkste staat vooraan. Staan de kleine dingen dan ook vooraan, of juist later?",
+            nogSimpeler: "Kleine weetjes staan niet in de kop en niet bovenaan. Waar dan wel?",
+          },
+        },
+      },
+      {
+        q: "Je wilt in een nieuwsbericht opzoeken op welke dag de nieuwe brug in het dorp werd geopend. Welke gouden vraag stel je dan aan de tekst?",
+        options: ["Wanneer", "Waar", "Hoe", "Wie"],
+        answer: 0,
+        wrongHints: [null, "De brug staat al in het dorp. Zoek je een plek of iets anders?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat wil je weten?",
+              tekst: "Je wilt weten op welke dág iets gebeurde: de opening van de brug.",
+            },
+            {
+              titel: "Welk soort antwoord is dat?",
+              tekst: "Een dag of een moment is een antwoord over tijd.",
+            },
+            {
+              titel: "Kies het vraagwoord",
+              tekst: "Welke gouden vraag hoort bij een dag, datum of tijdstip?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "opening",
+              uitleg: "Het moment waarop iets nieuws voor het eerst gebruikt mag worden, vaak met een feestje.",
+            },
+          ],
+          theorie: "**De vragenbril**\n\nLees eerst wat je wilt weten. Bedenk daarna welke gouden vraag erbij hoort:\n\n- een persoon → wie\n- een plek → waar\n- een dag of moment → wanneer\n- een reden → waarom\n- een manier → hoe\n\nDan weet je precies waar je in de tekst op moet letten.",
+          voorbeelden: [
+            {
+              type: "tijd",
+              tekst: "'Afgelopen vrijdag knipte de burgemeester het lint door.' — 'afgelopen vrijdag' geeft antwoord op de vraag naar het moment.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Eerst de vraag, dan de tekst",
+              uitleg: "Wie eerst bedenkt wat voor antwoord hij zoekt, vindt het veel sneller terug in de tekst.",
+            },
+          ],
+          niveaus: {
+            basis: "Een dag of moment: welk vraagwoord hoort daarbij?",
+            simpeler: "Maak de vraag af: '... werd de brug geopend?' Welk vraagwoord past vooraan als je een dag wilt horen?",
+            nogSimpeler: "Je zoekt een dag. Welk vraagwoord gaat over tijd?",
+          },
+        },
+      },
     ],
   },
 
@@ -524,6 +678,165 @@ Tip: je hoeft niets uit je hoofd te weten. Terugkijken in de tekst mag altijd �
             basis: "Zoek de zin met 'De school bedacht een plan'. Wat deden de leerlingen daarna in maart?",
             simpeler: "Het geld kwam niet van een grote organisatie — de kinderen deden er zélf iets voor, met hun benen. Wat was dat?",
             nogSimpeler: "Lees de tweede alinea: welke actie liepen de leerlingen door het dorp?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wie knipte zaterdag het lint door bij de nieuwe speeltoren?",
+        options: [
+          "Directeur juf Karin",
+          "Milan uit groep 6",
+          "De burgemeester van Weidedorp",
+          "De oudste leerling van de school",
+        ],
+        answer: 0,
+        wrongHints: [null, "Milan deed iets anders als eerste. Wat mocht hij doen?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welke gouden vraag?",
+              tekst: "De vraag begint met 'wie'. Je zoekt dus een persoon.",
+            },
+            {
+              titel: "Waar staat het?",
+              tekst: "De opening is een detail van de dag zelf. Kijk in de alinea die begint met 'Zaterdag'.",
+            },
+            {
+              titel: "Lees de zin precies",
+              tekst: "Daar staat wie het lint doorknipte en wie daarna als eerste mocht klimmen. Let op: dat zijn twee verschillende mensen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "lint doorknippen",
+              uitleg: "Bij een opening wordt een lint gespannen. Als iemand het doorknipt, is iets nieuws officieel open.",
+            },
+          ],
+          theorie: "**Wie-vragen**\n\nBij een wie-vraag zoek je een naam of een persoon. In een nieuwsbericht staan vaak meerdere mensen. Lees daarom de hele zin: wie doet wát?\n\nHier: de een knipt het lint door, de ander klimt als eerste naar boven.",
+          voorbeelden: [
+            {
+              type: "wie-vraag",
+              tekst: "'Zaterdag knipte directeur juf Karin het lint door. Milan uit groep 6 mocht als eerste naar boven klimmen.' — twee personen, twee verschillende dingen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Naam scannen",
+              uitleg: "Zoek in de tekst naar namen. Lees bij elke naam wat die persoon doet.",
+            },
+          ],
+          niveaus: {
+            basis: "Zoek de alinea over zaterdag. Wie knipte daar het lint door?",
+            simpeler: "Er worden twee personen genoemd: een directeur en een leerling. Wie van de twee knipte het lint door?",
+            nogSimpeler: "Lees de zin met het woord 'lint'. Welke naam staat erbij?",
+          },
+        },
+      },
+      {
+        q: "Wie mogen er na schooltijd op de nieuwe speeltoren spelen?",
+        options: [
+          "Kinderen uit de hele buurt",
+          "Alleen de leerlingen van groep 6",
+          "Alleen kinderen die meeliepen met de sponsorloop",
+          "Niemand, na schooltijd is de toren dicht",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Milan zit in groep 6, maar zegt de tekst dat de toren alleen voor zijn groep is?",
+          null,
+          "Lees de laatste alinea: wanneer is de toren open?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat zoek je?",
+              tekst: "Je zoekt wie er na schooltijd mogen spelen.",
+            },
+            {
+              titel: "Waar staat het?",
+              tekst: "Dit is een detail. Details staan verderop in het bericht — kijk in de laatste alinea.",
+            },
+            {
+              titel: "Lees beide zinnen",
+              tekst: "Daar staat dat de toren elke dag open is, ook na schooltijd. En de zin erna zegt wie er mogen komen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "buurt",
+              uitleg: "Het stukje van het dorp of de stad rond je huis of je school.",
+            },
+          ],
+          theorie: "**Details staan achteraan**\n\nIn een nieuwsbericht komt het belangrijkste eerst. Praktische weetjes, zoals openingstijden en wie er mag komen, staan vaak helemaal onderaan.",
+          voorbeelden: [
+            {
+              type: "detail-onderaan",
+              tekst: "'Kinderen uit de hele buurt mogen erop komen spelen.' — een praktisch weetje in de laatste alinea.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lees de hele alinea",
+              uitleg: "Soms staat het antwoord verdeeld over twee zinnen. Lees daarom de zinnen eromheen ook.",
+            },
+          ],
+          niveaus: {
+            basis: "Lees de laatste alinea. Wie mogen er op de toren komen spelen?",
+            simpeler: "Is de toren na schooltijd open? En voor wie staat erbij?",
+            nogSimpeler: "De laatste zin noemt wie er mogen komen spelen. Welke optie zegt hetzelfde?",
+          },
+        },
+      },
+      {
+        q: "Wat zit er allemaal aan de nieuwe speeltoren?",
+        options: [
+          "Twee glijbanen, een klimnet en een uitkijkpunt",
+          "Eén glijbaan, een schommel en een zandbak",
+          "Twee schommels, een klimmuur en een tunnel",
+          "Een klimnet, een wip en een touwbrug",
+        ],
+        answer: 0,
+        wrongHints: [null, "Hoeveel glijbanen noemt het bericht precies?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat zoek je?",
+              tekst: "Hoe de toren eruitziet: wat er allemaal aan zit.",
+            },
+            {
+              titel: "Waar staat het?",
+              tekst: "In de eerste alinea, direct na de opening, wordt de toren beschreven.",
+            },
+            {
+              titel: "Vergelijk precies",
+              tekst: "Lees de zin 'De toren is zes meter hoog en heeft...' en vergelijk elk onderdeel met de opties. Alles moet kloppen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "uitkijkpunt",
+              uitleg: "Een hoog plekje waar je ver om je heen kunt kijken.",
+            },
+          ],
+          theorie: "**Alles moet kloppen**\n\nNoemt een antwoord drie dingen? Dan moeten ze alle drie in de tekst staan. Eén onderdeel dat niet klopt, maakt het hele antwoord fout. Vergelijk dus woord voor woord.",
+          voorbeelden: [
+            {
+              type: "vergelijken",
+              tekst: "Staat er 'twee glijbanen' in de tekst, dan is 'één glijbaan' fout — ook als de rest wel klopt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Precies lezen",
+              uitleg: "Op de toets lijken foute antwoorden vaak een beetje op het goede. Daarom lees je de zin in de tekst nog een keer na.",
+            },
+          ],
+          niveaus: {
+            basis: "Lees de zin die begint met 'De toren is zes meter hoog'. Wat heeft de toren?",
+            simpeler: "Tel mee: hoeveel glijbanen staan er in de tekst? En wat nog meer?",
+            nogSimpeler: "Zoek de optie waarin alle drie de dingen uit die ene zin staan.",
           },
         },
       },
@@ -751,6 +1064,165 @@ De vragen hieronder gaan over precies deze drie valkuilen.`,
             basis: "Er staan twee tijden in dit stukje: de datum bovenaan en een dag in de zin zelf. Welke van de twee hoort bij de brand?",
             simpeler: "Zoek het woord 'afgelopen' — de dag die daarna komt, is de dag van de gebeurtenis.",
             nogSimpeler: "Lees de zin over de brand nog eens: welke dag wordt dáárin genoemd?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "De kop luidt: *\"Hele school ligt plat door griep\"*. In de tekst staat: *\"Op basisschool De Linde zaten dinsdag elf van de tweehonderd leerlingen met griep thuis.\"* Wat kun je hierover zeggen?",
+        options: [
+          "De kop overdrijft: maar elf van de tweehonderd leerlingen zaten thuis",
+          "De school was dinsdag helemaal dicht door de griep",
+          "Alle tweehonderd leerlingen zaten met griep thuis",
+          "De tekst overdrijft en de kop klopt precies",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Staat er in de tekst dat de school dicht was? Lees de zin nog eens precies.",
+          null,
+          "Wie gebruikt de grote woorden: de kop of de tekst? En waar staan de precieze getallen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lees de kop",
+              tekst: "De kop zegt: de hele school ligt plat. Dat klinkt alsof bijna niemand er was.",
+            },
+            {
+              titel: "Lees de tekst",
+              tekst: "De tekst noemt precieze getallen: elf van de tweehonderd leerlingen zaten met griep thuis.",
+            },
+            {
+              titel: "Vergelijk",
+              tekst: "Elf van de tweehonderd is maar een klein deel. De kop maakt het nieuws dus groter dan het is.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "overdrijven",
+              uitleg: "Iets groter of erger maken dan het echt is.",
+            },
+          ],
+          theorie: "**Koppen overdrijven soms**\n\nEen kop moet kort en pakkend zijn. Daarom kiezen journalisten soms grote woorden. De precieze informatie, zoals getallen, staat in de tekst.\n\nTwijfel je? Vertrouw dan de tekst, niet de kop.",
+          voorbeelden: [
+            {
+              type: "overdrijvende kop",
+              tekst: "Kop: 'Dorp onder water'. Tekst: 'In twee kelders stond een laagje water.' De kop maakt het nieuws groter.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Kop en tekst vergelijken",
+              uitleg: "Op de toets krijg je vaak een vraag waarbij je de kop naast de tekst moet leggen. Kijk dan naar de getallen in de tekst.",
+            },
+          ],
+          niveaus: {
+            basis: "Hoeveel leerlingen waren er volgens de tekst ziek, en hoeveel zitten er op school?",
+            simpeler: "Elf van de tweehonderd: is dat 'de hele school'? Wie zegt hier iets groters dan het is?",
+            nogSimpeler: "De tekst geeft de echte getallen. Klopt 'hele school' daarmee?",
+          },
+        },
+      },
+      {
+        q: "In een nieuwsbericht staat: *\"'Onze ijsbaan is vierhonderd meter lang', zegt beheerder Kees.\"* — Is dit een feit of een mening?",
+        options: [
+          "Een feit — je kunt nameten hoe lang de baan is",
+          "Een mening — het staat tussen aanhalingstekens",
+          "Een mening — Kees werkt zelf bij de ijsbaan",
+          "Geen van beide — het is een grapje van Kees",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Aanhalingstekens laten zien dat iemand iets zegt. Maar maakt dat van elke uitspraak een mening? Kun je dit controleren?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat is een feit?",
+              tekst: "Een feit kun je controleren of natellen. Een mening is wat iemand vindt.",
+            },
+            {
+              titel: "Kijk naar de inhoud",
+              tekst: "Kees noemt een lengte: vierhonderd meter. Kun je dat nameten met een meetlint?",
+            },
+            {
+              titel: "Let op de valkuil",
+              tekst: "De zin staat tussen aanhalingstekens, maar dat zegt alleen dát Kees het zegt. Of het een feit of een mening is, hangt af van wát hij zegt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "citaat",
+              uitleg: "De letterlijke woorden van iemand, tussen aanhalingstekens.",
+            },
+          ],
+          theorie: "**Citaat is niet altijd mening**\n\nIn een citaat kan een mening staan: *'Dit is de mooiste ijsbaan van het land.'* Daar is geen meetlat voor.\n\nMaar er kan ook een feit in staan: *'De baan is vierhonderd meter lang.'* Dat kun je nameten.\n\nStel dus altijd de vraag: kan ik dit controleren?",
+          voorbeelden: [
+            {
+              type: "mening-in-citaat",
+              tekst: "'Het ijs is hier heerlijk', zegt Kees. — 'heerlijk' kun je niet nameten, dus dat is een mening.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "De controleer-vraag",
+              uitleg: "Kun je het natellen, nameten of opzoeken? Dan is het een feit. Is het wat iemand vindt? Dan is het een mening.",
+            },
+          ],
+          niveaus: {
+            basis: "Kun je de lengte van een ijsbaan nameten?",
+            simpeler: "Vergeet even de aanhalingstekens. Zegt Kees wat hij ergens van vindt, of noemt hij iets wat je kunt controleren?",
+            nogSimpeler: "Met een meetlint kun je kijken of het klopt. Is het dan een feit of een mening?",
+          },
+        },
+      },
+      {
+        q: "*\"Gisteren speelde de schoolband een prachtig concert in de aula.\"* — Welk woord maakt van deze zin (deels) een mening?",
+        options: ["prachtig", "gisteren", "schoolband", "aula"],
+        answer: 0,
+        wrongHints: [null, "Dat woord vertelt wanneer iets gebeurde. Kun je dat controleren?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Feit of mening per woord",
+              tekst: "Bekijk elk stukje van de zin: kun je het controleren, of is het wat iemand vindt?",
+            },
+            {
+              titel: "Wat kun je controleren?",
+              tekst: "Wanneer het concert was, wie er speelde en waar het was: dat kun je allemaal nagaan.",
+            },
+            {
+              titel: "Wat niet?",
+              tekst: "Of een concert mooi is, vindt iedereen anders. Welk woord zegt iets over hoe mooi het was?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "aula",
+              uitleg: "Een grote zaal in een school, voor bijeenkomsten en optredens.",
+            },
+          ],
+          theorie: "**Meningwoorden herkennen**\n\nWoorden als *mooi*, *prachtig*, *saai*, *leuk*, *heerlijk* en *gezellig* zeggen wat iemand ergens van vindt. Daar bestaat geen meetlat voor.\n\nStaat zo'n woord in een zin, dan zit er een mening in — ook als de rest van de zin feiten bevat.",
+          voorbeelden: [
+            {
+              type: "meningwoord",
+              tekst: "'Er kwamen tweehonderd bezoekers naar de gezellige markt.' — tweehonderd bezoekers is een feit, 'gezellige' is een mening.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Zin met feit én mening",
+              uitleg: "Een zin kan feiten en een mening tegelijk bevatten. Zoek het woord dat iemands smaak laat zien.",
+            },
+          ],
+          niveaus: {
+            basis: "Welk woord zegt iets over hoe mooi het concert was?",
+            simpeler: "Kun je nameten of een concert prachtig is? En kun je controleren wanneer en waar het was?",
+            nogSimpeler: "Zoek het woord dat iemand anders misschien niet zou kiezen, omdat hij het concert saai vond.",
           },
         },
       },
@@ -1007,6 +1479,160 @@ Pak bij elke vraag je vaste aanpak erbij: **bedenk** welke gouden vraag het is, 
             basis: "Vergelijk de kop met de tekst: wie deden er volgens de tekst allemaal mee — en is dat hetzelfde als 'heel Zandhoven'?",
             simpeler: "'Heel Zandhoven' zou betekenen: elke inwoner. Kun je dat in de tekst terugvinden, of staat er iets voorzichtigers?",
             nogSimpeler: "Deed volgens de tekst écht iederéén mee, of vooral de buurt rond de kinderboerderij?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Waar werd Berry teruggevonden?",
+        options: [
+          "In de moestuin van de familie Vos",
+          "In het weiland naast de kinderboerderij",
+          "Op het voetbalveld van het dorp",
+          "In de tuin van buurvrouw De Wit",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "De kinderen waren wel aan het voetballen, maar waar stond Berry toen ze hem vonden?",
+          "Buurvrouw De Wit zegt alleen iets aan het eind. In wiens tuin hoorden de kinderen geritsel?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welke gouden vraag?",
+              tekst: "De vraag begint met 'waar'. Je zoekt een plek.",
+            },
+            {
+              titel: "Waar staat het?",
+              tekst: "Het terugvinden wordt kort genoemd in de eerste alinea en uitgebreid in de derde alinea.",
+            },
+            {
+              titel: "Lees precies",
+              tekst: "In de derde alinea staat in wiens moestuin de kinderen geritsel hoorden en Berry zagen staan.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "moestuin",
+              uitleg: "Een tuin waarin mensen groente en kruiden kweken om op te eten.",
+            },
+          ],
+          theorie: "**Waar-vragen**\n\nBij een waar-vraag zoek je een plek. Let op: in een bericht staan vaak meerdere plekken. Lees daarom goed welke plek bij welke gebeurtenis hoort.\n\nHier: de kinderen voetbalden op straat, maar Berry stond ergens anders.",
+          voorbeelden: [
+            {
+              type: "twee-plekken",
+              tekst: "'Twee kinderen die op straat aan het voetballen waren, hoorden geritsel in de moestuin van de familie Vos.' — de straat hoort bij de kinderen, de moestuin bij Berry.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Plek bij gebeurtenis",
+              uitleg: "Vraag jezelf af: wat gebeurde er op deze plek? Pas dan weet je of het de goede plek is.",
+            },
+          ],
+          niveaus: {
+            basis: "Lees de derde alinea. Waar hoorden de kinderen geritsel?",
+            simpeler: "De kinderen voetbalden op straat. Maar waar stond Berry, kauwend op een krop sla?",
+            nogSimpeler: "Zoek de zin met 'moestuin'. Van wie was die moestuin?",
+          },
+        },
+      },
+      {
+        q: "Welke beloning kregen de twee kinderen die Berry vonden?",
+        options: [
+          "Ze mogen Berry voortaan elke week komen borstelen",
+          "Ze kregen een krop sla uit de moestuin",
+          "Ze mochten Berry een weekend mee naar huis",
+          "Ze kregen een geldbedrag van boer Teun",
+        ],
+        answer: 0,
+        wrongHints: [null, "De krop sla speelt een rol in het verhaal, maar wie at die op?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat zoek je?",
+              tekst: "Een beloning: wat de vinders kregen.",
+            },
+            {
+              titel: "Waar staat het?",
+              tekst: "Dit is een detail aan het einde van het verhaal. Kijk in de laatste alinea.",
+            },
+            {
+              titel: "Lees precies",
+              tekst: "Daar staat wat de twee vinders voortaan mogen doen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "beloning",
+              uitleg: "Iets wat je krijgt als dank voor iets goeds dat je hebt gedaan.",
+            },
+          ],
+          theorie: "**Het slot van een nieuwsbericht**\n\nOnderaan een nieuwsbericht staan vaak de laatste weetjes: hoe het afliep en wat er daarna nog gebeurde. Zoek je zo'n afloop-detail? Kijk dan in de laatste alinea.",
+          voorbeelden: [
+            {
+              type: "afloop",
+              tekst: "'Het kapotte hek is inmiddels gerepareerd.' — ook dat is een afloop-detail uit de laatste alinea.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Opzoeken",
+              uitleg: "Twijfel je tussen opties? Zoek het woord 'beloning' op in de tekst en lees de zin erachter.",
+            },
+          ],
+          niveaus: {
+            basis: "Lees de laatste alinea. Wat mogen de twee vinders voortaan doen?",
+            simpeler: "Zoek het woord 'beloning' in de tekst. Wat staat er direct achter?",
+            nogSimpeler: "Wat mogen de kinderen elke week met Berry doen?",
+          },
+        },
+      },
+      {
+        q: "Hoe lang was Berry spoorloos?",
+        options: ["Twee dagen", "Een week", "Een paar uur", "Drie weken"],
+        answer: 0,
+        wrongHints: [null, "Berry verdween op maandag. Wanneer werd hij teruggevonden?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat zoek je?",
+              tekst: "Hoe lang Berry weg was: een tijdsduur.",
+            },
+            {
+              titel: "Waar staat het?",
+              tekst: "Het hoofdnieuws staat vooraan. De eerste zin van de eerste alinea noemt het al.",
+            },
+            {
+              titel: "Controleer",
+              tekst: "Berry was maandagochtend weg en werd woensdagmiddag gevonden. Past dat bij het antwoord uit de eerste zin?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "spoorloos",
+              uitleg: "Helemaal verdwenen, zonder dat iemand weet waar.",
+            },
+          ],
+          theorie: "**Hoofdnieuws staat vooraan**\n\nDe eerste alinea vertelt in het kort wat er gebeurde. Daar staat hier al hoe lang Berry weg was. Verderop staan de dagen erbij, zodat je het kunt controleren.",
+          voorbeelden: [
+            {
+              type: "controleren",
+              tekst: "Maandagochtend weg, woensdagmiddag terug: dat past bij 'twee dagen lang'.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Twee keer kijken",
+              uitleg: "Kun je een antwoord op twee plekken in de tekst terugvinden? Dan weet je zeker dat het klopt.",
+            },
+          ],
+          niveaus: {
+            basis: "Lees de eerste zin van het bericht. Hoe lang was Berry weg?",
+            simpeler: "Berry verdween op maandag en werd op woensdag gevonden. Hoeveel dagen is dat ongeveer?",
+            nogSimpeler: "De eerste zin begint met 'Twee dagen lang...' Wat betekent dat?",
           },
         },
       },

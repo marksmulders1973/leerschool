@@ -485,6 +485,119 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*\"Geachte heer, mevrouw, uw bibliotheekpas verloopt op 1 maart. U kunt uw pas verlengen aan de balie of via onze website.\"* — Voor wie is dit bedoeld?",
+        options: [
+          "Volwassenen die een bibliotheekpas hebben",
+          "Kinderen die graag voorleesboeken lenen",
+          "Mensen die in de bibliotheek werken",
+          "Schrijvers van kinderboeken",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk naar de aanspreekvorm: staat er 'jij' of 'u'? En naar woorden als 'geachte'.",
+          "Is de lezer degene die de pas krijgt, of degene die hem uitdeelt?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Aanspreekvorm",
+              tekst: "'Geachte heer, mevrouw' en 'u' en 'uw'. Zo spreek je volwassenen aan.",
+            },
+            {
+              titel: "Woordkeus",
+              tekst: "'Geachte' en 'verlengen aan de balie' zijn nette, deftige woorden. Die passen bij volwassenen.",
+            },
+            {
+              titel: "Onderwerp",
+              tekst: "Het gaat over een bibliotheekpas die verloopt. De lezer heeft dus zelf zo'n pas.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "geachte",
+              uitleg: "Een deftig woord waarmee je een brief begint aan iemand die je niet goed kent.",
+            },
+          ],
+          theorie: "**Drie checks voor de doelgroep**\n1. Aanspreekvorm: 'u' → volwassenen\n2. Woordkeus: deftig → volwassenen\n3. Onderwerp: een pas die verloopt → iemand die een pas heeft\n\nAlle drie wijzen dezelfde kant op.",
+          voorbeelden: [
+            {
+              type: "volwassenen",
+              tekst: "'Wilt u uw afspraak verzetten? Belt u dan met de balie.' — u-vorm en deftige woorden.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Brief-aanhef",
+              uitleg: "Een brief die begint met 'Geachte' is bijna altijd voor volwassenen bedoeld.",
+            },
+          ],
+          niveaus: {
+            basis: "'Geachte heer, mevrouw' en 'uw pas': welke lezers spreek je zo aan?",
+            simpeler: "Zou je een kind aanspreken met 'geachte heer, mevrouw'? En wie krijgt dit bericht: iemand die een pas heeft of iemand die hem maakt?",
+            nogSimpeler: "De schrijver zegt 'u' tegen de lezer, en de lezer heeft een pas. Welke optie past?",
+          },
+        },
+      },
+      {
+        q: "*\"Na de verbouwing is de aanmeldprocedure voor de naschoolse opvang gewijzigd. Raadpleeg de website voor de actuele tarieven.\"* — Voor wie is dit bedoeld?",
+        options: [
+          "Ouders of verzorgers",
+          "Kinderen die naar de opvang gaan",
+          "Bouwvakkers van de verbouwing",
+          "Leerlingen van groep 8",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk naar de woorden: 'aanmeldprocedure', 'raadpleeg', 'actuele tarieven'. Past die taal bij kinderen?",
+          "De verbouwing wordt genoemd, maar waar gaat de tekst eigenlijk over?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Aanspreekvorm",
+              tekst: "Er staat geen 'jij' en geen 'u'. Dan kijk je naar de andere aanwijzingen.",
+            },
+            {
+              titel: "Woordkeus",
+              tekst: "'Aanmeldprocedure', 'raadpleeg', 'actuele tarieven' — lange, deftige woorden. Die passen bij volwassenen.",
+            },
+            {
+              titel: "Onderwerp",
+              tekst: "Het gaat over aanmelden voor de opvang en wat het kost. Wie regelt en betaalt dat voor een kind?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tarieven",
+              uitleg: "Prijzen: wat iets kost.",
+            },
+          ],
+          theorie: "**Geen 'jij' of 'u'? Kijk verder.**\n\nAls de aanspreekvorm ontbreekt, helpen woordkeus en onderwerp:\n- deftige woorden → volwassenen\n- aanmelden en betalen voor de opvang → ouders of verzorgers",
+          voorbeelden: [
+            {
+              type: "woordkeus",
+              tekst: "'Graag uw aanmelding vóór 10 september.' — 'aanmelding' en 'uw' passen bij volwassenen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Wie regelt het?",
+              uitleg: "Kinderen gaan naar de opvang, maar volwassenen melden hen aan en betalen. Voor hen is deze tekst.",
+            },
+          ],
+          niveaus: {
+            basis: "Lange, deftige woorden en een tekst over aanmelden en tarieven: voor welke lezers?",
+            simpeler: "Wie meldt een kind aan voor de opvang, en wie betaalt het?",
+            nogSimpeler: "Kinderen gaan naar de opvang, maar wie regelt dat voor hen?",
+          },
+        },
+      },
     ],
   },
 
@@ -686,6 +799,221 @@ const steps = [
             basis: "'Haal deze week een pak bij De Knabbelhoek' — wie in huis voert die opdracht uit?",
             simpeler: "Een kind kan enthousiast worden van de folder, maar een pak ontbijtgranen komt pas in huis als iemand het afrekent. Op wie mikt die laatste alinea dus?",
             nogSimpeler: "Wie duwt bij jullie thuis de winkelwagen en rekent af? Voor die persoon is de opdracht 'haal een pak' bedoeld.",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wie heeft de folder over Ochtendkracht gemaakt, en wat levert het die maker op?",
+        options: [
+          "De supermarkt, die verdient aan elk verkocht pak",
+          "De onderzoekers, die willen dat kinderen ontbijten",
+          "Een school, die wil dat kinderen beter opletten",
+          "Een krant, die nieuws wil brengen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "De onderzoekers worden in de folder genoemd. Maar hebben zíj de folder gemaakt?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kijk naar de afzender",
+              tekst: "Het is een folder van supermarkt De Knabbelhoek. De folder stuurt je ook precies naar die winkel: 'Haal deze week een pak bij supermarkt De Knabbelhoek.'",
+            },
+            {
+              titel: "Wat wil die maker?",
+              tekst: "Een supermarkt verkoopt dingen. Elk pak Ochtendkracht dat jij koopt, levert de supermarkt geld op.",
+            },
+            {
+              titel: "Waarom is dat belangrijk?",
+              tekst: "Als je weet wie de tekst maakte en wat die eraan verdient, zie je het verstopte doel: overtuigen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "afzender",
+              uitleg: "Degene die een tekst heeft gemaakt of verstuurd.",
+            },
+          ],
+          theorie: "**Ontmaskeren stap 1: wie heeft het gemaakt?**\n\nEen winkel of merk verdient aan jouw aankoop. Staat er een winkel achter een tekst vol feiten? Dan is de kans groot dat de feiten in dienst staan van de verkoop.",
+          voorbeelden: [
+            {
+              type: "afzender",
+              tekst: "Een folder van een fietsenwinkel met tips over veilig fietsen eindigt vaak met: 'Kom langs voor een nieuwe fietsbel!'",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Genoemd ≠ gemaakt",
+              uitleg: "Dat onderzoekers in een tekst genoemd worden, betekent niet dat zij de tekst schreven.",
+            },
+          ],
+          niveaus: {
+            basis: "Welke winkel wordt in de folder genoemd? Wat wil een winkel het liefst?",
+            simpeler: "Bij welke supermarkt moet je het pak halen? Wie verdient er geld als jij het koopt?",
+            nogSimpeler: "Een supermarkt verkoopt dingen. Wat levert een verkocht pak de supermarkt op?",
+          },
+        },
+      },
+      {
+        q: "Welke zin uit de folder **informeert** alleen, zonder dat er iets verkocht wordt?",
+        options: [
+          "\"Een goed ontbijt bevat granen, fruit en zuivel.\"",
+          "\"Kies voor Ochtendkracht: de slimme start van elke schooldag!\"",
+          "\"Haal deze week een pak Ochtendkracht bij supermarkt De Knabbelhoek.\"",
+          "\"Kinderen zijn er dol op — en jij straks ook!\"",
+        ],
+        answer: 0,
+        wrongHints: [null, "Er wordt een merknaam genoemd. Wat wil die zin dat je doet?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek de koop-signalen",
+              tekst: "Een merknaam, een winkelnaam of een opdracht om iets te halen: dat zijn signalen dat een zin wil verkopen.",
+            },
+            {
+              titel: "Controleer elke zin",
+              tekst: "Welke zin noemt geen merk, geen winkel en vraagt je niets te doen?",
+            },
+            {
+              titel: "Wat blijft er over?",
+              tekst: "Een algemene uitleg over wat er in een goed ontbijt zit. Die zin zou ook in een schoolboek kunnen staan.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "informeren",
+              uitleg: "De lezer iets leren of uitleggen, met feiten en zonder mening of verkoop.",
+            },
+          ],
+          theorie: "**Een folder heeft twee soorten zinnen**\n\n- Informerende zinnen: algemene feiten en uitleg (alinea 1).\n- Overtuigende zinnen: merknaam, winkel, 'haal', 'kies', 'wees er snel bij' (alinea 2 en 3).\n\nDe informerende zinnen zijn de aanloop; de overtuigende zinnen zijn het eindpunt.",
+          voorbeelden: [
+            {
+              type: "schoolboek-test",
+              tekst: "Zou de zin ook in je schoolboek kunnen staan? Dan informeert hij. Staat er een merk of winkel in? Dan wil hij verkopen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Schoolboek-test",
+              uitleg: "Stel je voor dat de zin in een schoolboek staat. Klinkt hij dan nog gewoon? Dan is het een informerende zin.",
+            },
+          ],
+          niveaus: {
+            basis: "Welke zin noemt geen merk en geen winkel?",
+            simpeler: "Zou de zin ook in een schoolboek over gezond eten kunnen staan? Probeer het bij elke zin.",
+            nogSimpeler: "Zoek de zin waarin alleen staat wat er in een goed ontbijt zit.",
+          },
+        },
+      },
+      {
+        q: "Stel: precies dezelfde eerste alinea over ontbijten staat in je schoolboek, zonder merknaam en zonder winkel. Wat is dan het doel van die tekst?",
+        options: ["Informeren", "Overtuigen", "Amuseren", "Instrueren"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zonder product en zonder winkel: wat zou de schrijver je dan willen verkopen?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat staat er in de alinea?",
+              tekst: "Feiten: je hersenen hebben brandstof nodig, kinderen die ontbijten letten beter op, een goed ontbijt bevat granen, fruit en zuivel.",
+            },
+            {
+              titel: "Wat is er anders?",
+              tekst: "In het schoolboek ontbreken de merknaam, de winkel en de koop-signalen. Er wordt niets verkocht.",
+            },
+            {
+              titel: "Welk doel blijft over?",
+              tekst: "Feiten die je iets leren, zonder product: welk doel past daarbij?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "koop-signaal",
+              uitleg: "Een zin die je richting de kassa duwt, zoals 'op = op' of 'gratis bij aankoop'.",
+            },
+          ],
+          theorie: "**Dezelfde zinnen, ander doel**\n\nHet doel hangt niet alleen af van de zinnen, maar ook van waar ze naartoe sturen.\n- In de folder eindigen de feiten bij een product → overtuigen.\n- In een schoolboek eindigen de feiten nergens bij → informeren.",
+          voorbeelden: [
+            {
+              type: "echt-informeren",
+              tekst: "Een schoolboektekst over ontbijten noemt geen merk en geen winkel. Dan is informeren het hoofddoel.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Waar stuurt het naartoe?",
+              uitleg: "Vraag je bij elke tekst af: waar wil de schrijver mij uiteindelijk hebben?",
+            },
+          ],
+          niveaus: {
+            basis: "Zonder merk en winkel: wil de tekst je dan nog iets verkopen? Wat blijft er over?",
+            simpeler: "Wat leer je van de eerste alinea? Moet je daarna iets kopen?",
+            nogSimpeler: "De tekst geeft alleen feiten over ontbijten. Welk doel hoort bij feiten zonder verkoop?",
+          },
+        },
+      },
+      {
+        q: "Wat bedoelt de folder met *\"Op = op, dus wees er snel bij\"*?",
+        options: [
+          "Als de voorraad weg is, is de actie voorbij",
+          "Als je het pak koopt, is het al leeg",
+          "Je moet het hele pak in één keer opeten",
+          "De folder is bijna helemaal uitgelezen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Gaat het hier over eten, of over iets wat je kunt krijgen zolang het er is?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lees de zin ervoor",
+              tekst: "Er staat: haal deze week een pak en ontvang een gratis ontbijtbeker. Daarna komt: 'Op = op'.",
+            },
+            {
+              titel: "Wat betekent het?",
+              tekst: "Er zijn niet eindeloos veel. Zijn ze weg, dan krijg je niets meer.",
+            },
+            {
+              titel: "Waarom staat het er?",
+              tekst: "De zin wil dat je haast maakt. Dat is een koop-signaal: je moet snel naar de winkel.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "voorraad",
+              uitleg: "Alles wat een winkel van iets heeft liggen om te verkopen of weg te geven.",
+            },
+          ],
+          theorie: "**Haast maken = koop-signaal**\n\nReclame wil vaak dat je niet te lang nadenkt. Zinnen als 'op = op', 'wees er snel bij' en 'alleen deze week' zorgen dat je meteen naar de winkel gaat.",
+          voorbeelden: [
+            {
+              type: "haast",
+              tekst: "'Alleen vandaag: twee halen, één betalen!' — ook hier moet je snel zijn.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Koop-signalen",
+              uitleg: "Woorden die je haast geven, horen bij overtuigen, niet bij informeren.",
+            },
+          ],
+          niveaus: {
+            basis: "Wat krijg je deze week bij een pak? Wat gebeurt er als die dingen weg zijn?",
+            simpeler: "'Op' betekent hier: er is niets meer van over. Waarvan, en wat moet je dus doen?",
+            nogSimpeler: "Als alles weg is, krijg je niets meer. Welke optie zegt dat?",
           },
         },
       },
