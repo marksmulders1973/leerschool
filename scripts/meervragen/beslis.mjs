@@ -23,6 +23,7 @@ kand.forEach((k, i) => {
   if (!Array.isArray(k.wrongHints) || k.wrongHints.length !== 4 || k.wrongHints[0]) red.push("wrongHints-vorm");
   if (s && s.uitlegPadInBestaande * 2 > s.aantalNu && !k.uitlegPad) red.push("uitlegPad ontbreekt");
   if (k.uitlegPad && s) for (const v of s.uitlegPadVelden) if (!(v in k.uitlegPad) && s.uitlegPadInBestaande === s.aantalNu && s.bestaandeVragen.every((c) => c.uitlegPad && v in c.uitlegPad)) red.push("uitlegPad mist veld " + v);
+  if (s && s.bestaandeVragen.length && s.bestaandeVragen.every((c) => c.steun) && !k.steun) red.push("stap heeft vertaalhulp (steun) bij alle bestaande vragen");
   if (bestaand.has(norm(k.q))) red.push("dubbel met bestaande vraag");
   if (opgenomen.some((o) => norm(o.q) === norm(k.q))) red.push("dubbel met nieuwe vraag");
   if (Array.isArray(k.options) && k.options.length === 4) {

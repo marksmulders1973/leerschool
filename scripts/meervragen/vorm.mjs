@@ -13,6 +13,7 @@ kand.forEach((k, i) => {
   if (!Array.isArray(k.wrongHints) || k.wrongHints.length !== 4 || k.wrongHints[0]) red.push("wrongHints: 4 stuks, [0] = null");
   if (s && s.uitlegPadInBestaande * 2 > s.aantalNu && !k.uitlegPad) red.push("uitlegPad ontbreekt");
   if (k.uitlegPad && s) for (const v of s.uitlegPadVelden) if (!(v in k.uitlegPad) && s.bestaandeVragen.every((c) => c.uitlegPad && v in c.uitlegPad)) red.push("uitlegPad mist veld " + v);
+  if (s && s.bestaandeVragen.length && s.bestaandeVragen.every((c) => c.steun) && !k.steun) red.push("stap heeft vertaalhulp (steun) bij alle bestaande vragen");
   if (bestaand.has(norm(k.q)) || gezien.has(norm(k.q))) red.push("dubbele vraag"); gezien.add(norm(k.q));
   if (Array.isArray(k.options) && k.options.length === 4) { const L = k.options.map((o) => norm(o).length); const m = Math.max(...L.slice(1)); if (L[0] > 1.6 * m && L[0] - m > 12) red.push("goede optie veel langer dan de rest"); }
   perStap[k.stap] = (perStap[k.stap] || 0) + 1;
