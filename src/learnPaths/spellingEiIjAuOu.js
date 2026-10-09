@@ -170,6 +170,143 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Hoe noem je de **ij** ook wel?",
+        options: ["de lange ij", "de korte ij", "de ronde ij", "de dubbele ij"],
+        answer: 0,
+        wrongHints: [null, "Welke naam hoort bij de e-i, zoals in klein?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kort en lang",
+              tekst: "De ei heet ook wel de korte ei. De ij heet ook wel de lange ij.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "korte ei",
+              uitleg: "De e-i, zoals in klein en trein.",
+            },
+            {
+              woord: "lange ij",
+              uitleg: "De i-j, zoals in tijd en prijs.",
+            },
+          ],
+          theorie: "Twee namen om ze uit elkaar te houden: korte ei en lange ij.",
+          voorbeelden: [
+            {
+              type: "namen",
+              tekst: "Trein schrijf je met de korte ei. Tijd schrijf je met de lange ij.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Zelfde klank",
+              uitleg: "Je hoort geen verschil. De namen helpen alleen bij het spellen.",
+            },
+          ],
+          niveaus: {
+            basis: "De lange ij.",
+            simpeler: "De ei is de korte ei. De ij is de lange ij.",
+            nogSimpeler: "Lange ij",
+          },
+        },
+      },
+      {
+        q: "Welk woordpaar klinkt **hetzelfde**, maar schrijf je anders?",
+        options: ["rauw en rouw", "rauw en rood", "rouw en ruw", "raam en room"],
+        answer: 0,
+        wrongHints: [null, null, "Zeg ze allebei hardop. Klinkt het middenstuk echt gelijk?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Spreek hardop uit",
+              tekst: "Zeg 'rauw' en 'rouw'. Je hoort geen verschil. Alleen de letters au en ou zijn anders.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "rauw",
+              uitleg: "Met au: niet gekookt, bijvoorbeeld een rauwe wortel.",
+            },
+            {
+              woord: "homofonen",
+              uitleg: "Woorden die hetzelfde klinken, maar anders geschreven worden.",
+            },
+          ],
+          theorie: "au en ou klinken hetzelfde. Daarom zijn rauw en rouw homofonen.",
+          voorbeelden: [
+            {
+              type: "paar",
+              tekst: "Ook 'reist' en 'rijst' klinken hetzelfde, maar je schrijft ze anders.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Klank testen",
+              uitleg: "Zeg twee woorden langzaam hardop. Hoor je geen verschil, maar zie je wel andere letters? Dan zijn het homofonen.",
+            },
+          ],
+          niveaus: {
+            basis: "rauw en rouw.",
+            simpeler: "au en ou klinken hetzelfde. Bij de andere paren hoor je wel verschil.",
+            nogSimpeler: "rauw en rouw",
+          },
+        },
+      },
+      {
+        q: "Waarom schrijven we **ei** en **ij** anders, terwijl ze hetzelfde klinken?",
+        options: [
+          "Vroeger klonken ze verschillend",
+          "Dat is een nieuwe regel van vorig jaar",
+          "Omdat ij alleen aan het eind van een woord staat",
+          "Omdat ei alleen in korte woorden staat",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Deze spelling bestaat al honderden jaren.",
+          "Denk aan 'tijd'. Waar staat daar de ij?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Terug in de tijd",
+              tekst: "Ongeveer 500 jaar geleden klonken ei en ij wél verschillend. De uitspraak is later samengesmolten, maar de spelling bleef apart.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "uitspraak",
+              uitleg: "Hoe je een woord zegt.",
+            },
+            {
+              woord: "spelling",
+              uitleg: "Hoe je een woord schrijft.",
+            },
+          ],
+          theorie: "De klank is veranderd, de schrijfwijze niet. Daarom moet je de woorden leren.",
+          voorbeelden: [
+            {
+              type: "geschiedenis",
+              tekst: "Net zo ging het met au en ou: vroeger anders, nu dezelfde klank.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Woorden leren",
+              uitleg: "Omdat je het niet hoort, onthoud je per woord of het ei of ij is.",
+            },
+          ],
+          niveaus: {
+            basis: "Vroeger klonken ze verschillend.",
+            simpeler: "Lang geleden hoorde je verschil. Nu niet meer, maar we schrijven ze nog steeds anders.",
+            nogSimpeler: "Vroeger anders",
+          },
+        },
+      },
     ],
   },
   {
@@ -859,6 +996,50 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "In welk rijtje eindigen **alle** woorden goed op **-lijk**?",
+        options: [
+          "eerlijk, vrolijk, duidelijk",
+          "eerlijk, vroleik, duidelijk",
+          "eerleik, vrolijk, duidelijk",
+          "eerlijk, vrolijk, duideleik",
+        ],
+        answer: 0,
+        wrongHints: [null, "Kijk goed naar het middelste woord.", null, "Kijk goed naar het laatste woord."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Trucje -lijk",
+              tekst: "Woorden die eindigen op -lijk schrijf je met de lange ij, net als moeilijk en eindelijk.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "-lijk",
+              uitleg: "Een stukje aan het eind van een woord, altijd met ij.",
+            },
+          ],
+          theorie: "-lijk = ij: eerlijk, vrolijk, duidelijk, moeilijk.",
+          voorbeelden: [
+            {
+              type: "lijst",
+              tekst: "gemakkelijk, moeilijk, eindelijk: allemaal -lijk.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Woord voor woord",
+              uitleg: "Kijk bij zo'n rijtje elk woord apart na.",
+            },
+          ],
+          niveaus: {
+            basis: "eerlijk, vrolijk, duidelijk.",
+            simpeler: "In dat rijtje eindigt elk woord op -lijk met de lange ij.",
+            nogSimpeler: "Alle drie -lijk",
+          },
+        },
+      },
     ],
   },
   {
@@ -1366,6 +1547,172 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke zin is helemaal **goed** geschreven?",
+        options: [
+          "In augustus is het niet koud.",
+          "In ougustus is het niet koud.",
+          "In augustus is het niet kaud.",
+          "In ougustus is het niet kaud.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Kijk goed naar de maand.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Elk woord checken",
+              tekst: "Augustus begint met au. Koud schrijf je met ou, net als oud en goud.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "augustus",
+              uitleg: "De achtste maand, met au.",
+            },
+            {
+              woord: "koud",
+              uitleg: "Niet warm, met ou.",
+            },
+          ],
+          theorie: "aug- = au (augustus). -oud = ou (oud, koud, goud).",
+          voorbeelden: [
+            {
+              type: "zin",
+              tekst: "Het is gauw koud in de herfst.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Woord voor woord",
+              uitleg: "Lees de zin woord voor woord en check elk au/ou-woord apart.",
+            },
+          ],
+          niveaus: {
+            basis: "In augustus is het niet koud.",
+            simpeler: "Augustus met au, koud met ou.",
+            nogSimpeler: "au en ou",
+          },
+        },
+      },
+      {
+        q: "Vul in: 'Hij ____ naar Parijs en eet daar ____.'",
+        options: ["reist … rijst", "rijst … reist", "reist … reist", "rijst … rijst"],
+        answer: 0,
+        wrongHints: [null, "Welk woord hoort bij reizen, en welk bij eten?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Context bepaalt",
+              tekst: "Op reis gaan komt van reizen: met ei. Het eten (witte korreltjes) schrijf je met ij.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "reist",
+              uitleg: "Van reizen: naar een andere plek gaan.",
+            },
+            {
+              woord: "rijst",
+              uitleg: "Eten: witte korreltjes.",
+            },
+          ],
+          theorie: "reist en rijst klinken hetzelfde. De zin bepaalt welke je schrijft.",
+          voorbeelden: [
+            {
+              type: "paar",
+              tekst: "Wij reizen met de trein. Bij het eten hoort een bord rijst.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Verwarrers",
+              uitleg: "Twee woorden die hetzelfde klinken? Kijk naar de betekenis in de zin.",
+            },
+          ],
+          niveaus: {
+            basis: "Eerst reist (ei), dan rijst (ij).",
+            simpeler: "Reizen heeft ei. Het eten heeft ij.",
+            nogSimpeler: "ei, dan ij",
+          },
+        },
+      },
+      {
+        q: "Welk woord schrijf je met **dezelfde letters** voor de klank als in **vrouw**?",
+        options: ["mouw", "blauw", "gauw", "rauw"],
+        answer: 0,
+        wrongHints: [null, "Schrijf je 'vrouw' met dezelfde letters als dit woord?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "vrouw = ou",
+              tekst: "Vrouw schrijf je met ou. Mouw ook. Blauw, gauw en rauw hebben au.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "mouw",
+              uitleg: "Het deel van je jas om je arm.",
+            },
+          ],
+          theorie: "-ouw: vrouw, mouw, bouwen. -auw: blauw, gauw, rauw.",
+          voorbeelden: [
+            {
+              type: "lijst",
+              tekst: "vrouw, mouw, trouw: allemaal met ou.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Klinkt gelijk",
+              uitleg: "Alle vier eindigen ze op dezelfde klank. Je moet de woorden kennen.",
+            },
+          ],
+          niveaus: {
+            basis: "mouw.",
+            simpeler: "Vrouw en mouw schrijf je allebei met ou.",
+            nogSimpeler: "Ou",
+          },
+        },
+      },
+      {
+        q: "Welk woord is **fout** geschreven?",
+        options: ["plijn", "tijd", "blauw", "koud"],
+        answer: 0,
+        wrongHints: [null, "Denk aan het trucje met -tijd.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Elk woord checken",
+              tekst: "Tijd (ij), blauw (au) en koud (ou) zijn goed. Plein hoort bij klein en trein: met ei.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "plein",
+              uitleg: "Een open ruimte in een stad. Met ei.",
+            },
+          ],
+          theorie: "klein, plein, trein, brein: ei.",
+          voorbeelden: [
+            {
+              type: "lijst",
+              tekst: "De trein rijdt naar het kleine plein.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Woord voor woord",
+              uitleg: "Bekijk elk woord apart en vraag: ken ik dit woord zo?",
+            },
+          ],
+          niveaus: {
+            basis: "plijn is fout: het is plein.",
+            simpeler: "Plein heeft de korte ei, net als klein.",
+            nogSimpeler: "Plein = ei",
+          },
+        },
+      },
     ],
   },
   {
@@ -1479,6 +1826,45 @@ const steps = [
             basis: "plein en tijd.",
             simpeler: "Plein = ei, tijd = ij. Die zijn allebei goed.",
             nogSimpeler: "Plein + tijd",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "'Onze ____ naar Frankrijk duurt tien uur met de auto.' Welk woord is goed?",
+        options: ["reis", "rijs", "raais", "reys"],
+        answer: 0,
+        wrongHints: [null, "'rijs' komt van rijzen: omhoog gaan. Past dat hier?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "reis = ei",
+              tekst: "Een tocht naar een andere plek is een reis, met de korte ei. Het komt van reizen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "reis",
+              uitleg: "Een tocht naar een andere plek.",
+            },
+          ],
+          theorie: "reis, reizen, reist: de korte ei.",
+          voorbeelden: [
+            {
+              type: "zin",
+              tekst: "We gaan op reis naar Spanje.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Verwant woord",
+              uitleg: "Reizen en reisbureau: allemaal met ei.",
+            },
+          ],
+          niveaus: {
+            basis: "reis = ei.",
+            simpeler: "Op reis gaan komt van reizen: korte ei.",
+            nogSimpeler: "Ei",
           },
         },
       },

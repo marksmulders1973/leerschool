@@ -740,6 +740,49 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Kies de juiste vorm van **lachen**: 'Het meisje ____ hard om de grap.'",
+        options: ["lacht", "lach", "lachen", "lachd"],
+        answer: 0,
+        wrongHints: [null, "Het meisje = het. Komt er bij het iets achter de stam?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stam = lach",
+              tekst: "Lachen − en = lach.",
+            },
+            {
+              titel: "Het meisje = het",
+              tekst: "Bij hij/zij/het: stam + t. Lach + t = **lacht**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "stam",
+              uitleg: "Het werkwoord zonder -en: lach.",
+            },
+          ],
+          theorie: "hij/zij/het = stam + t.",
+          voorbeelden: [
+            {
+              type: "het",
+              tekst: "Het kind lacht. Het paard loopt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lopen-test",
+              uitleg: "Het meisje loopt — met t. Dus: het meisje lacht.",
+            },
+          ],
+          niveaus: {
+            basis: "Lach + t = lacht.",
+            simpeler: "Het meisje is één persoon (het). Dan komt er een t achter de stam.",
+            nogSimpeler: "Lacht",
+          },
+        },
+      },
     ],
   },
   {
@@ -965,6 +1008,134 @@ const steps = [
             basis: "Houd + t = houdt.",
             simpeler: "Mijn broer is hij. Bij hij komt er een t achter de stam houd: houdt.",
             nogSimpeler: "Houdt",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Kies de juiste vorm van **vinden**: 'Mijn vriend ____ een euro op straat.'",
+        options: ["vindt", "vind", "vint", "vinden"],
+        answer: 0,
+        wrongHints: [null, "Mijn vriend = hij. Komt er een t achter de stam?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stam = vind",
+              tekst: "Vinden − en = vind (eindigt op d).",
+            },
+            {
+              titel: "Mijn vriend = hij",
+              tekst: "Hij + stam + t: vind + t = **vindt**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "stam op d",
+              uitleg: "De stam eindigt op een d. Bij hij/zij komt er nog een t bij.",
+            },
+          ],
+          theorie: "Stam op d + t = dt.",
+          voorbeelden: [
+            {
+              type: "dt",
+              tekst: "worden → hij wordt, houden → hij houdt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lopen-test",
+              uitleg: "Mijn vriend loopt — met t. Dus: mijn vriend vindt.",
+            },
+          ],
+          niveaus: {
+            basis: "Vind + t = vindt.",
+            simpeler: "Stam van vinden = vind. Mijn vriend is hij, dus + t: vindt.",
+            nogSimpeler: "Vindt",
+          },
+        },
+      },
+      {
+        q: "Kies de juiste vorm van **worden**: 'Het ____ al donker buiten.'",
+        options: ["wordt", "word", "wort", "wordd"],
+        answer: 0,
+        wrongHints: [null, null, "Waar is de d van de stam gebleven?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stam = word",
+              tekst: "Worden − en = word (eindigt op d).",
+            },
+            {
+              titel: "Het",
+              tekst: "Bij het: stam + t. Word + t = **wordt**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "stam op d",
+              uitleg: "De d hoort bij de stam, de t komt erbij voor hij/zij/het.",
+            },
+          ],
+          theorie: "hij/zij/het + stam op d = dt.",
+          voorbeelden: [
+            {
+              type: "dt",
+              tekst: "De soep wordt koud. Het boek wordt spannend.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lopen-test",
+              uitleg: "Het loopt — met t. Dus: het wordt.",
+            },
+          ],
+          niveaus: {
+            basis: "Word + t = wordt.",
+            simpeler: "Bij het komt er een t achter de stam word.",
+            nogSimpeler: "Wordt",
+          },
+        },
+      },
+      {
+        q: "Welke zin is **niet** goed geschreven?",
+        options: [
+          "De hond word nat in de regen.",
+          "Ik word nat in de regen.",
+          "De hond wordt nat in de regen.",
+          "Wij worden nat in de regen.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Bij ik schrijf je alleen de stam. Klopt dat hier?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wie doet het?",
+              tekst: "De hond = hij. Bij hij komt er een t achter de stam: word + t = wordt. 'De hond word' mist dus de t.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "stam",
+              uitleg: "Worden − en = word.",
+            },
+          ],
+          theorie: "ik = stam (word). hij/zij/het = stam + t (wordt). wij = worden.",
+          voorbeelden: [
+            {
+              type: "vergelijk",
+              tekst: "Ik word moe. Hij wordt moe. Wij worden moe.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lopen-test",
+              uitleg: "De hond loopt — met t. Dus: de hond wordt.",
+            },
+          ],
+          niveaus: {
+            basis: "'De hond word' is fout: het moet 'wordt' zijn.",
+            simpeler: "De hond is één dier (hij). Dan hoort er een t achter word.",
+            nogSimpeler: "De hond wordt",
           },
         },
       },
@@ -1314,6 +1485,49 @@ const steps = [
             basis: "Hij gaat.",
             simpeler: "Stam = ga. Bij hij komt er een t bij: gaat.",
             nogSimpeler: "Gaat",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Kies de juiste vorm van **zetten**: 'Papa ____ elke ochtend thee.'",
+        options: ["zet", "zett", "zetten", "zetd"],
+        answer: 0,
+        wrongHints: [null, "De stam eindigt al op een t. Hoeveel t's schrijf je dan?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stam = zet",
+              tekst: "De stam van zetten is zet. Die eindigt al op t.",
+            },
+            {
+              titel: "Geen extra t",
+              tekst: "Papa = hij. Er komt geen tweede t bij: papa **zet**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "stam op t",
+              uitleg: "Eindigt de stam al op t, dan blijft het zo bij hij/zij.",
+            },
+          ],
+          theorie: "Stam op t → geen extra t. Net als zitten → hij zit.",
+          voorbeelden: [
+            {
+              type: "t",
+              tekst: "Hij zit. Zij wacht. Hij zet.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lopen-test",
+              uitleg: "Papa loopt — één t aan het eind. Dus: papa zet.",
+            },
+          ],
+          niveaus: {
+            basis: "Hij zet (één t).",
+            simpeler: "De stam zet eindigt al op t. Er komt geen t meer bij.",
+            nogSimpeler: "Zet",
           },
         },
       },
@@ -1984,6 +2198,49 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**'Papa heeft soep ____.'** — voltooid deelwoord van **koken**:",
+        options: ["gekookt", "gekookd", "kookte", "gekoken"],
+        answer: 0,
+        wrongHints: [null, "Stam kook eindigt op k. Zit k in 't kofschip?", "Wat komt er na 'heeft'?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Na heeft",
+              tekst: "Na 'heeft' komt een voltooid deelwoord: ge + stam + d of t.",
+            },
+            {
+              titel: "Kofschip",
+              tekst: "Stam kook eindigt op k. De k zit in 't kofschip, dus -t: **gekookt**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "voltooid deelwoord",
+              uitleg: "De vorm na hebben of zijn, zoals gewerkt of geleerd.",
+            },
+          ],
+          theorie: "Stam op kofschip-letter → -t. Andere letter → -d.",
+          voorbeelden: [
+            {
+              type: "t",
+              tekst: "gewerkt, gestopt, gefietst",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "'t kofschip",
+              uitleg: "De letters t, k, f, s, ch en p.",
+            },
+          ],
+          niveaus: {
+            basis: "Ge + kook + t = gekookt.",
+            simpeler: "De k zit in 't kofschip. Dus eindigt het op t.",
+            nogSimpeler: "Gekookt",
+          },
+        },
+      },
     ],
   },
   {
@@ -2153,6 +2410,93 @@ const steps = [
             basis: "Wij worden.",
             simpeler: "Wij zijn meer mensen. Dan het hele werkwoord: worden.",
             nogSimpeler: "Worden",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Kies de juiste: **'____ jij ook van pannenkoeken?'** (houden)",
+        options: ["Houd", "Houdt", "Hout", "Houden"],
+        answer: 0,
+        wrongHints: [null, "Staat 'jij' vóór of achter het werkwoord?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Jij achter",
+              tekst: "Jij staat achter het werkwoord. Dan valt de t weg: **Houd** jij…?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "jij achter",
+              uitleg: "Jij na het werkwoord, in een vraag. Dan geen t.",
+            },
+          ],
+          theorie: "Jij vóór: houdt. Jij achter: houd.",
+          voorbeelden: [
+            {
+              type: "jij",
+              tekst: "Jij houdt van ijs. — Houd jij van ijs?",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Alleen jij",
+              uitleg: "Alleen bij jij achter het werkwoord valt de t weg. Bij hij blijft de t staan: Houdt hij van ijs?",
+            },
+          ],
+          niveaus: {
+            basis: "Houd jij?",
+            simpeler: "Jij staat achter het werkwoord. Dan alleen de stam: houd.",
+            nogSimpeler: "Houd",
+          },
+        },
+      },
+      {
+        q: "Welke zin is **goed**?",
+        options: [
+          "Wordt het morgen mooi weer?",
+          "Word het morgen mooi weer?",
+          "Worden het morgen mooi weer?",
+          "Wort het morgen mooi weer?",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Staat er 'jij' achter het werkwoord, of een ander woord?",
+          null,
+          "Waar is de d van de stam gebleven?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Het, niet jij",
+              tekst: "Achter het werkwoord staat 'het', niet 'jij'. Alleen bij jij valt de t weg. Het houdt de t: **Wordt** het…?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "het",
+              uitleg: "Hoort bij hij/zij/het: stam + t.",
+            },
+          ],
+          theorie: "Alleen jij achter het werkwoord laat de t vallen. Hij/zij/het houdt altijd de t.",
+          voorbeelden: [
+            {
+              type: "vergelijk",
+              tekst: "Word jij moe? — Wordt hij moe?",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lopen-test",
+              uitleg: "Loopt het? — met t. Dus: wordt het?",
+            },
+          ],
+          niveaus: {
+            basis: "Wordt het?",
+            simpeler: "De t valt alleen weg bij jij. Hier staat het.",
+            nogSimpeler: "Wordt",
           },
         },
       },
