@@ -201,66 +201,6 @@ const steps = [
         },
       },
       {
-        q: "Waarom zijn procenten handig?",
-        options: [
-          "Je kunt groepen van verschillende grootte vergelijken",
-          "Je hoeft er dan helemaal nooit meer bij te rekenen",
-          "Je kunt er alleen bedragen in euro's mee uitrekenen",
-          "Grote getallen worden er altijd nog groter van",
-        ],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Ook met procenten moet je vaak nog rekenen.",
-          "Denk aan '80% van de klas slaagde'. Gaat dat over geld?",
-          null,
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Verschillende groepen",
-              tekst: "Klas A heeft 25 leerlingen, klas B heeft 20. Je kunt aantallen dan lastig eerlijk vergelijken.",
-            },
-            {
-              titel: "Procent helpt",
-              tekst: "Met procenten reken je alles om naar **per 100**. Klas A: 5 van 25 = 20%. Klas B: 4 van 20 = 20%. Nu zie je: **naar verhouding gelijk**.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "vergelijken",
-              uitleg: "Kijken wat meer, minder of gelijk is.",
-            },
-            {
-              woord: "naar verhouding",
-              uitleg: "Eerlijk vergeleken, rekening houdend met hoe groot de groep is.",
-            },
-          ],
-          theorie: "Procenten maken groepen van verschillende grootte eerlijk vergelijkbaar, omdat alles 'per 100' wordt.",
-          voorbeelden: [
-            {
-              type: "stap",
-              tekst: "50% korting in de winkel.",
-            },
-            {
-              type: "stap",
-              tekst: "80% van de klas slaagde.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Truc",
-              uitleg: "Procent = per 100. Dan is elke groep even groot gemaakt.",
-            },
-          ],
-          niveaus: {
-            basis: "Met procenten kun je groepen van verschillende grootte vergelijken.",
-            simpeler: "Alles wordt 'per 100'. Dan kun je eerlijk vergelijken.",
-            nogSimpeler: "Procent = eerlijk vergelijken.",
-          },
-        },
-      },
-      {
         q: "In een zak zitten **100 snoepjes**. Je geeft er **30** weg. Hoeveel procent heb je **nog over**?",
         options: ["70%", "30%", "100%", "130%"],
         answer: 0,
@@ -881,57 +821,6 @@ const steps = [
             basis: "70% van 30 = 21.",
             simpeler: "10% = 3, dus 70% = 7 × 3 = 21.",
             nogSimpeler: "21",
-          },
-        },
-      },
-      {
-        q: "**75% van 12** = ?",
-        options: ["9", "3", "6", "12"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Dat is een kwart van 12. 75% is meer dan de helft.",
-          "Dat is de helft. 75% is meer dan de helft.",
-          null,
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Breuken-truc",
-              tekst: "75% = **¾** (drie kwart).",
-            },
-            {
-              titel: "Reken",
-              tekst: "¼ van 12 = 12 ÷ 4 = 3. Drie kwart = 3 × 3 = **9**.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "drie kwart",
-              uitleg: "Drie van de vier gelijke delen.",
-            },
-          ],
-          theorie: "75% = eerst ÷ 4, dan × 3.",
-          voorbeelden: [
-            {
-              type: "stap",
-              tekst: "75% van 40 = 30.",
-            },
-            {
-              type: "stap",
-              tekst: "75% van 20 = 15.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Truc",
-              uitleg: "75% = ¾ = ÷ 4 en dan × 3.",
-            },
-          ],
-          niveaus: {
-            basis: "75% van 12 = 9.",
-            simpeler: "12 ÷ 4 = 3, en 3 × 3 = 9.",
-            nogSimpeler: "9",
           },
         },
       },

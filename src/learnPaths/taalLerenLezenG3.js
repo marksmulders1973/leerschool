@@ -112,30 +112,6 @@ const steps = [
         },
       },
       {
-        q: "Welke klank hoor je **achteraan** bij **kat**?",
-        options: ["t", "k", "a", "p"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Die klank zit juist vooraan.",
-          "Die klank zit in het midden.",
-          "Zeg het woord langzaam. Welke klank hoor je als laatste?",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Luister achteraan",
-              tekst: "Zeg langzaam: ka-**t**. De laatste klank is de **t**.",
-            },
-          ],
-          niveaus: {
-            basis: "kat eindigt op de t.",
-            simpeler: "Zeg: ka... t!",
-            nogSimpeler: "t",
-          },
-        },
-      },
-      {
         q: "Met welke letter begint **hond**?",
         options: ["h", "o", "d", "k"],
         answer: 0,

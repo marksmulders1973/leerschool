@@ -1002,53 +1002,6 @@ const steps = [
           },
         },
       },
-      {
-        q: "Je koopt een broodje van **€ 2,45** en melk van **€ 0,95**. Je betaalt met **€ 5**. Hoeveel **wisselgeld** krijg je?",
-        options: ["€ 1,60", "€ 3,40", "€ 2,60", "€ 1,50"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Dat kosten de spullen samen. Wat krijg je terug?",
-          "Heb je de melk ook meegerekend?",
-          null,
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Stap 1: kosten",
-              tekst: "€2,45 + €0,95 = €3,40.",
-            },
-            {
-              titel: "Stap 2: wisselgeld",
-              tekst: "€5 − €3,40 = €1,60.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "twee-stappen-vraag",
-              uitleg: "Eerst het totaal uitrekenen, dan het wisselgeld.",
-            },
-          ],
-          theorie: "Meerdere spullen: 1) alles optellen, 2) aftrekken van wat je betaalt.",
-          voorbeelden: [
-            {
-              type: "2-stappen",
-              tekst: "245 + 95 = 340 cent = €3,40. €5 − €3,40 = €1,60.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Schat",
-              uitleg: "Kosten ongeveer €3,50. Van €5 krijg je ongeveer €1,50 terug.",
-            },
-          ],
-          niveaus: {
-            basis: "Kosten €3,40. Wisselgeld €1,60.",
-            simpeler: "€2,45 + €0,95 = €3,40. Van €3,40 tel je vooruit tot €5: €1,60.",
-            nogSimpeler: "€1,60",
-          },
-        },
-      },
     ],
   },
 

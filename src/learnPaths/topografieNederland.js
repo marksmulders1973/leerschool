@@ -856,44 +856,6 @@ const steps = [
         },
       },
       {
-        q: "Welke stad is **geen** hoofdstad van een provincie?",
-        options: ["Nijmegen", "Assen", "Zwolle", "Leeuwarden"],
-        answer: 0,
-        wrongHints: [null, null, "Deze stad hoort bij Overijssel. Wat is daar bijzonder aan?", null],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Nijmegen is geen hoofdstad",
-              tekst: "**Nijmegen** ligt in Gelderland, maar de hoofdstad van Gelderland is **Arnhem**. Assen, Zwolle en Leeuwarden zijn wel hoofdsteden.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "hoofdstad",
-              uitleg: "De stad waar het bestuur van de provincie zit.",
-            },
-          ],
-          theorie: "Hoofdsteden noord en midden: Groningen, Leeuwarden, Assen, Zwolle, Lelystad, Arnhem, Utrecht.",
-          voorbeelden: [
-            {
-              type: "verwarring",
-              tekst: "Nijmegen en Arnhem liggen allebei in Gelderland. Alleen Arnhem is de hoofdstad.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Lijst",
-              uitleg: "Ken je de lijst met hoofdsteden, dan zie je meteen welke stad er niet in staat.",
-            },
-          ],
-          niveaus: {
-            basis: "Nijmegen.",
-            simpeler: "Gelderland → Arnhem, niet Nijmegen.",
-            nogSimpeler: "Nijmegen",
-          },
-        },
-      },
-      {
         q: "Naar wie of wat verwijst **'Lely'** in de naam **Lelystad**?",
         options: [
           "Naar de man van het plan voor de Zuiderzeewerken",

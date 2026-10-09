@@ -650,57 +650,6 @@ const steps = [
           },
         },
       },
-      {
-        q: "Welke hoeveelheid drinken is het **minst**?",
-        options: ["8 cl", "1 dl", "0,2 l", "150 ml"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Zet alles eerst om naar milliliter.",
-          null,
-          "Een klein getal betekent niet altijd een kleine hoeveelheid; kijk ook naar de eenheid.",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Maak alles milliliter",
-              tekst: "8 cl = 8 × 10 = 80 ml. 1 dl = 100 ml. 0,2 l = 0,2 × 1000 = 200 ml. 150 ml blijft 150 ml.",
-            },
-            {
-              titel: "Vergelijk",
-              tekst: "Nu staan alle vier in ml. Welk getal is het kleinst?",
-            },
-          ],
-          woorden: [
-            {
-              woord: "milliliter (ml)",
-              uitleg: "De kleinste inhoudsmaat uit het rijtje; 1 l = 1000 ml.",
-            },
-          ],
-          theorie: "Je kunt hoeveelheden alleen **eerlijk vergelijken** als ze in **dezelfde eenheid** staan. Reken alles om naar milliliter en vergelijk dan de getallen.",
-          voorbeelden: [
-            {
-              type: "thuis",
-              tekst: "Is 30 cl of 0,25 l meer? 30 cl = 300 ml en 0,25 l = 250 ml, dus 30 cl is meer.",
-            },
-            {
-              type: "keuken",
-              tekst: "Een recept noemt 2 dl en 150 ml; omgerekend is dat 200 ml en 150 ml.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Eerst gelijk maken",
-              uitleg: "Vergelijken gaat pas goed als alle hoeveelheden in dezelfde eenheid staan.",
-            },
-          ],
-          niveaus: {
-            basis: "8 cl = 80 ml, 1 dl = 100 ml, 0,2 l = 200 ml. Welke is het kleinst?",
-            simpeler: "Vergelijk 80 ml, 100 ml, 200 ml en 150 ml.",
-            nogSimpeler: "Welk getal is het kleinst: 80, 100, 200 of 150?",
-          },
-        },
-      },
     ],
   },
 

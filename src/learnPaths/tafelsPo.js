@@ -966,57 +966,6 @@ const steps = [
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "Je gebruikt de **vingertruc** voor **3 × 9**. Je buigt vinger nummer 3 (van links). Hoeveel vingers staan er links en rechts van die vinger?",
-        options: ["2 links, 7 rechts", "3 links, 6 rechts", "7 links, 2 rechts", "2 links, 8 rechts"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Tel nog eens: hoeveel vingers zitten er vóór vinger nummer 3?",
-          null,
-          "Tel alle vingers bij elkaar, met de gebogen vinger erbij. Kom je op 10?",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Vinger 3 buigen",
-              tekst: "Houd je 10 vingers omhoog en buig **vinger nummer 3**.",
-            },
-            {
-              titel: "Links en rechts tellen",
-              tekst: "Links van die vinger staan **2** vingers. Rechts staan er **7**.",
-            },
-            {
-              titel: "Het antwoord",
-              tekst: "2 en 7 → **27**. En 3 × 9 = 27 ✓.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "vingertruc",
-              uitleg: "Een truc voor de tafel van 9 met je 10 vingers.",
-            },
-          ],
-          theorie: "De vingertruc werkt alleen voor de tafel van 9. Links = eerste cijfer, rechts = tweede cijfer.",
-          voorbeelden: [
-            {
-              type: "stap",
-              tekst: "5 × 9: buig vinger 5 → 4 links, 5 rechts → 45.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "9-truc",
-              uitleg: "De cijfers van een 9-antwoord tellen samen op tot 9: 2 + 7 = 9.",
-            },
-          ],
-          niveaus: {
-            basis: "2 links, 7 rechts → 27.",
-            simpeler: "Vóór vinger 3 staan 2 vingers, erna 7.",
-            nogSimpeler: "2 en 7",
-          },
-        },
-      },
-      {
         q: "**9 × 7** = ?",
         options: ["63", "16", "56", "72"],
         answer: 0,

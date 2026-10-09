@@ -1,0 +1,578 @@
+[
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 3,
+  "q": "Waar leggen kikkers hun **eieren**?",
+  "reden": "Hint hangt aan de verkeerde optie: bij 'in een nest in een boom' staat 'In het zand leggen veel reptielen hun eieren.' Die hint hoort bij de optie 'in het zand'."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 2,
+  "q": "Een havik vangt kleine dieren om op te eten. Wat voor eter is de havik?",
+  "reden": "schrijver dieren-seizoenen-natuur onbetrouwbaar (hints verschoven)"
+ },
+ {
+  "pathId": "samenvatten-hoofdgedachte-po",
+  "stap": 2,
+  "q": "Tekst: 'Een tablet kan handig zijn op school. Je kunt er snel iets op opzoeken. Mijn tablet heeft een blauwe hoes. Gisteren viel hij bijna op de grond.'\n\nWelke zin is een **hoofdzaak**?",
+  "reden": "Vraag zegt 'Welke zin', maar optie A ('Een tablet kan vallen.') staat niet in de tekst; bovendien is de echte hoofdgedachte-zin ('Een tablet kan handig zijn op school.') geen optie, zodat C een ondersteunende zin is — kleine twijfel, opties niet consistent."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 7,
+  "q": "Hoe past een **sneeuwhaas** zich aan de winter aan?",
+  "reden": "Hint hangt aan de verkeerde optie: bij 'Hij houdt winterslaap' staat 'Een haas heeft geen vleugels.' Die hint hoort bij 'Hij vliegt naar het zuiden'; voor winterslaap slaat hij nergens op."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 0,
+  "q": "Waarom is **water** niet levend?",
+  "reden": "uitlegPad.niveaus.nogSimpeler = 'eet niet', maar het goede antwoord is 'Het groeit niet zelf'. Het laagste niveau wijst dus een ander kenmerk aan dan de optie die goed is."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 1,
+  "q": "Een baby drinkt melk bij zijn moeder. Tot welke diergroep hoort de **mens**?",
+  "reden": "schrijver dieren-seizoenen-natuur onbetrouwbaar (hints verschoven)"
+ },
+ {
+  "pathId": "spelling-ei-ij-au-ou",
+  "stap": 4,
+  "q": "Hoe schrijf je: wat je over je pasta of patat doet, zoals ketchup?",
+  "reden": "theorie 'Meer sauzen: sauzen (met z).' is een rommelige zin. Ze introduceert juist de z-spelling die de afleider 'sauz' gebruikt en kan het kind in de war brengen. Zwak punt, geen feitelijke fout."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 6,
+  "q": "Hoeveel **seizoenen** heeft Nederland?",
+  "reden": "schrijver dieren-seizoenen-natuur onbetrouwbaar (hints verschoven)"
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 5,
+  "q": "Een eendenkuiken kan meteen na het uitkomen lopen. Hoe heet zo'n jong?",
+  "reden": "Hint hangt aan de verkeerde optie: bij 'trekvogel' staat 'Een nestblijver kan nog niets. Kan dit kuiken al iets?' Die hint hoort bij 'nestblijver'."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 7,
+  "q": "Welke bomen blijven in de winter meestal **groen**?",
+  "reden": "schrijver dieren-seizoenen-natuur onbetrouwbaar (hints verschoven)"
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 0,
+  "q": "Bij welke groep levende wezens horen **mensen**?",
+  "reden": "schrijver dieren-seizoenen-natuur onbetrouwbaar (hints verschoven)"
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 2,
+  "q": "Hebben vogels **warm** of **koud** bloed?",
+  "reden": "schrijver dieren-seizoenen-natuur onbetrouwbaar (hints verschoven)"
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 9,
+  "q": "In de keten *gras → konijn → vos* verdwijnen alle konijnen. Wat gebeurt er met de vossen?",
+  "reden": "schrijver dieren-seizoenen-natuur onbetrouwbaar (hints verschoven)"
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 5,
+  "q": "Wat is de goede volgorde bij een **kikker**?",
+  "reden": "schrijver dieren-seizoenen-natuur onbetrouwbaar (hints verschoven)"
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 1,
+  "q": "Hoe komen de jongen van de meeste zoogdieren ter wereld?",
+  "reden": "Hint hangt aan de verkeerde optie: bij 'Ze komen uit een ei in het water' staat 'Eieren in een nest horen bij vogels.' Die hint hoort bij 'Ze komen uit een ei in een nest'."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 0,
+  "q": "Hoe kun je **bacteriën** zien?",
+  "reden": "schrijver dieren-seizoenen-natuur onbetrouwbaar (hints verschoven)"
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 1,
+  "q": "Wat hebben zoogdieren op hun lichaam?",
+  "reden": "schrijver dieren-seizoenen-natuur onbetrouwbaar (hints verschoven)"
+ },
+ {
+  "pathId": "taal-woorden-zinnen-g4",
+  "stap": 4,
+  "q": "Waarmee begint een zin **altijd**?",
+  "reden": "(steekproef) 'Altijd' is strikt genomen niet waar: een zin die begint met 's (\"'s Avonds slaap ik.\") of een cijfer begint niet met een hoofdletter. Bovendien leert de stap-uitleg van strategieën dat 'altijd' vaak fout is. Liever: 'Waarmee begint een zin?' of 'meestal'. | (steekproef) uitlegPad zegt 'Een zin begint altijd met een hoofdletter'. Dat is strikt genomen niet waar: een zin die begint met 's ('s Avonds…) of met een cijfer begint niet met een hoofdletter. Hetzelfde probleem als in de vraag (fase 1); liever 'begint met een hoofdletter' zonder 'altijd'."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 1,
+  "q": "Een moederkoe geeft haar kalf melk. Hoe heet dat?",
+  "reden": "schrijver dieren-seizoenen-natuur onbetrouwbaar (hints verschoven)"
+ },
+ {
+  "pathId": "breuken-po",
+  "stap": 1,
+  "q": "Hoe schrijf je **drie-kwart** als breuk?",
+  "reden": "Spellingfout in de vraag: 'drie-kwart' moet 'driekwart' zijn (één woord, zonder streepje). De stap-uitleg leert dezelfde foute schrijfwijze aan ('drie-kwart', 'twee-derde'). | uitlegPad gebruikt dezelfde foute spelling 'Drie-kwart', 'Twee-derde', 'Vijf-achtste' (moet: driekwart, tweederde, vijfachtste). 'simpeler' ('Drie stukken van een kwart') is ook onhandig geformuleerd."
+ },
+ {
+  "pathId": "samenvatten-hoofdgedachte-po",
+  "stap": 1,
+  "q": "Tekst: 'In Nederland fietsen veel kinderen naar school. Dat is gezond en goed voor het milieu.'\n\nWelke zin is een **mening die NIET in de tekst staat**?",
+  "reden": "uitlegPad stap 3 zegt 'Een mening die er niet in staat, is altijd fout', terwijl dat bij deze vraag juist het goede antwoord is. Voor een kind tegenstrijdig."
+ },
+ {
+  "pathId": "kaartlezen-po",
+  "stap": 0,
+  "q": "Wat betekent **wit** op een kaart meestal?",
+  "reden": "Feitelijk twijfelachtig: 'wit = meestal sneeuw' klopt niet als algemene kaartregel. Wit betekent op veel kaarten 'geen informatie', 'buitenland/buiten het kaartgebied' of op plattegronden gewoon 'grond/bebouwing'; alleen de legenda zegt het. 'Meestal' maakt de vraag niet eenduidig, en 'Water' of 'Bos' (groen) zijn dan niet aantoonbaar fout bij elke kaart. Bovendien botst het met de toets-tip in dezelfde stap: 'lees altijd eerst de legenda'. | uitlegPad herhaalt de twijfelachtige claim 'wit = meestal sneeuw' (zie fase 1); het verschuift zelfs naar 'sneeuw of geen informatie', dus het antwoord is niet eenduidig."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 4,
+  "q": "Welke is een **schaaldier**?",
+  "reden": "De hint bij 'zeester' ('Een inktvis heeft een zacht lichaam.') gaat over inktvis en hangt dus aan de verkeerde optie."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 5,
+  "q": "Waarom zingen veel vogels in de **paartijd**?",
+  "reden": "De hint bij 'Om eten te vinden' ('Om warm te blijven heeft een vogel zijn veren.') hoort bij de optie 'Om warm te blijven' en hangt dus aan de verkeerde optie."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 2,
+  "q": "Welke is een **watervogel**?",
+  "reden": "schrijver dieren-seizoenen-natuur onbetrouwbaar (hints verschoven)"
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 4,
+  "q": "Tot welke groep hoort een **octopus**?",
+  "reden": "Hints verwisseld: 'schaaldieren' krijgt 'heeft hij schubben en vinnen?' (dat hoort bij vissen) en 'stekelhuidigen' krijgt 'Heeft een octopus een hard pantser?' (dat hoort bij schaaldieren)."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 3,
+  "q": "Welk dier heeft een **glibberige huid** zonder schubben?",
+  "reden": "De hint bij 'haring' ('Een slang heeft schubben.') gaat over slang en hangt dus aan de verkeerde optie."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 3,
+  "q": "Welke is een **reptiel**?",
+  "reden": "De hint bij 'forel' ('Een salamander heeft een glibberige huid...') gaat over salamander en hangt dus aan de verkeerde optie."
+ },
+ {
+  "pathId": "spelling-ei-ij-au-ou",
+  "stap": 6,
+  "q": "Welke klank schrijf je in **blauw**, **auto** en **augustus**?",
+  "reden": "De theorie in uitlegPad ('kleurnamen ... hebben au') klopt niet als regel: denk aan goud, rood, bruin. Een kind leert hier een foute vuistregel."
+ },
+ {
+  "pathId": "cito-strategieen-groep8",
+  "stap": 3,
+  "q": "Kun je de eliminatie-trucjes gebruiken **in plaats van** leren?",
+  "reden": "Hint verkeerd gekoppeld: 'Klopt de lange optie echt altijd?' hangt aan 'Nee, je mag ze tijdens de toets niet gebruiken'; hoort bij 'Ja, want de langste optie is altijd goed'."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 6,
+  "q": "Welke maanden horen bij de **lente**?",
+  "reden": "Hint verkeerd gekoppeld: 'In juli en augustus zijn de zomervakanties…' hangt aan 'september, oktober, november'; hoort bij 'juni, juli, augustus'. | (steekproef) wrongHint staat bij de verkeerde optie: bij 'september, oktober, november' staat 'In juli en augustus zijn de zomervakanties. Welk seizoen is dat?'. Die hint hoort bij 'juni, juli, augustus' (die nu geen hint heeft). Bij september-november past bv. 'Wanneer vallen de bladeren van de bomen?'."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 4,
+  "q": "Tot welke groep hoort een **zeester**?",
+  "reden": "Hint verkeerd gekoppeld: 'Weekdieren hebben een zacht lichaam, vaak in een schelp.' hangt aan 'vissen'; hoort bij 'weekdieren'."
+ },
+ {
+  "pathId": "samenvatten-hoofdgedachte-po",
+  "stap": 3,
+  "q": "Tekst: 'Een moestuin is leuk en leerzaam. Je ziet hoe een zaadje een plant wordt. Je leert wat een plant nodig heeft, zoals water en zon. Vorige week plukte ik drie tomaten.'\n\nWelke **samenvatting** is het best?",
+  "reden": "uitlegPad verwijst naar opties met letters (A goed, B bijzaak, C mening, D mist hoofdgedachte; N3 = 'A'), maar die letters kloppen niet met de getoonde volgorde (in de vraag staat het goede antwoord op B, de mening op A, de tomaten op C). Letters weghalen/inhoud noemen."
+ },
+ {
+  "pathId": "klokkijken",
+  "stap": 5,
+  "q": "Hoe staan de tijden op een **treinschema** in Nederland?",
+  "reden": "Taalfout/anglicisme: '24-uurs format' (in vraag-stap en optie) is geen correct Nederlands; moet '24-uursnotatie' of '24-uursformaat' (aaneen). Optie '12-uurs format' idem. | '24-uurs format' (ook in goede optie, hint, uitlegPad en niveaus) is geen correct Nederlands: '24-uursnotatie' of '24-uursformaat' (aaneen)."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 8,
+  "q": "Welk deel van een plant houdt de bladeren en bloemen **omhoog**?",
+  "reden": "Hint verkeerd gekoppeld: 'De wortel zit onder de grond en haalt water op.' hangt aan 'zaad'; hoort bij 'wortel'."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 9,
+  "q": "Welk dier is een **alleseter**?",
+  "reden": "Hint verkeerd gekoppeld: 'Een koe eet gras en hooi. Eet een koe ook vlees?' hangt aan 'schaap'; hoort bij 'koe'."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 7,
+  "q": "Wat doet een **eekhoorn** in de herfst?",
+  "reden": "Hint verkeerd gekoppeld: 'Een eekhoorn heeft geen vleugels.' hangt aan 'Hij krijgt een witte vacht'; hoort bij 'Hij vliegt naar een warm land'."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 9,
+  "q": "Wat is een **voedselweb**?",
+  "reden": "Hint verkeerd gekoppeld: 'Het gaat hier niet over spinnen.' hangt aan 'Eén dier dat één ander dier eet'; hoort bij 'Het web dat een spin maakt'."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 0,
+  "q": "Tot welke groep hoort een **paddenstoel**?",
+  "reden": "schrijver dieren-seizoenen-natuur onbetrouwbaar (hints verschoven)"
+ },
+ {
+  "pathId": "topografie-nederland",
+  "stap": 2,
+  "q": "Welke stad is **geen** hoofdstad van een provincie?",
+  "reden": "(steekproef) wrongHint bij Zwolle ('Deze stad hoort bij Overijssel. Wat is daar bijzonder aan?') is vaag en verwarrend: wat 'bijzonder' is, is voor een kind onduidelijk. Liever: 'Zwolle is de hoofdstad van Overijssel. Welke stad is géén hoofdstad?'. Assen en Leeuwarden hebben geen hint (dat mag)."
+ },
+ {
+  "pathId": "breuken-po",
+  "stap": 1,
+  "q": "Wat is **twee-en-een-kwart** als getal?",
+  "reden": "Spelling: hint bij '2¾' zegt 'twee-en-drie-kwart' ('driekwart' is één woord); ook de vraag zelf ('twee-en-een-kwart') en de uitlegPad-voorbeelden ('Eén-en-een-half', 'Drie-en-een-derde') gebruiken een niet-standaard koppelteken-spelling; gangbaar is 'twee en een kwart', 'anderhalf', 'drie en een derde'."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 4,
+  "q": "Van welke groep dieren zijn er de **meeste** soorten?",
+  "reden": "Hint verkeerd gekoppeld: 'Er zijn veel soorten zoogdieren, maar zijn het er het meest?' hangt aan 'vogels'; hoort bij 'zoogdieren'."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 3,
+  "q": "Waarmee haalt een vis **zuurstof** uit het water?",
+  "reden": "schrijver dieren-seizoenen-natuur onbetrouwbaar (hints verschoven)"
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 5,
+  "q": "Wat doet een moedervogel als ze **broedt**?",
+  "reden": "Hint verkeerd gekoppeld: 'Leren vliegen kan pas als het jong al uit het ei is.' hangt aan 'Ze vliegt naar een warm land'; hoort bij 'Ze leert de jongen vliegen'."
+ },
+ {
+  "pathId": "breuken-po",
+  "stap": 1,
+  "q": "Hoeveel minuten is **een kwart uur**?",
+  "reden": "Spelling in hint bij '45': 'drie-kwart uur' moet 'driekwart uur' zijn (één woord, net als 'tweederde')."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 6,
+  "q": "Wat maken boeren in de zomer, zodat hun dieren in de winter te eten hebben?",
+  "reden": "Hint hangt aan de verkeerde optie: bij \"bloemen\" staat \"Nesten maken vogels.\" (hoort bij \"nesten\"); \"bloemen\" krijgt zo een zinloze hint."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 9,
+  "q": "Welke is een **afbreker**?",
+  "reden": "Hint bij \"konijn\" (\"Een vos jaagt op konijnen.\") geeft geen richting naar afbreker en lijkt bij \"vos\" te horen."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 5,
+  "q": "Hoe begint een **vogel** zijn leven?",
+  "reden": "Hint hangt aan de verkeerde optie: bij \"als kikkervisje\" staat \"Een rups wordt later een vlinder.\" (hoort bij \"als rups\")."
+ },
+ {
+  "pathId": "spelling-ei-ij-au-ou",
+  "stap": 0,
+  "q": "Hoe noem je de **ei** in 'klein' ook wel?",
+  "reden": "Het woord 'ei' uit de vraag komt alleen terug in de goede optie ('korte ei'); de goede optie verraadt zich daardoor."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 2,
+  "q": "Waarmee ademt een vogel?",
+  "reden": "schrijver dieren-seizoenen-natuur onbetrouwbaar (hints verschoven)"
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 5,
+  "q": "Welke fase komt bij mensen direct na **baby**?",
+  "reden": "Hint hangt aan de verkeerde optie: bij \"tiener\" staat \"Een kind gaat al naar de basisschool. Is dat direct na baby?\" (hoort bij \"kind\")."
+ },
+ {
+  "pathId": "klokkijken",
+  "stap": 4,
+  "q": "Het is **20 voor 3**. Op welk cijfer staat de grote wijzer?",
+  "reden": "Eliminatie-lek: alle drie de foute opties krijgen een hint die precies zegt welke tijd het wél is (20 over / kwart voor / 10 voor), zodat de 8 per uitsluiting vastligt."
+ },
+ {
+  "pathId": "getallen-tot-20-po",
+  "stap": 4,
+  "q": "**16 - 8** = ?",
+  "reden": "Eliminatie-lek: elke foute optie krijgt een hint die de bijbehorende som noemt (16-9, 16-7, 16+8); daarmee ligt 8 per uitsluiting vast."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 4,
+  "q": "Wat hebben **schaaldieren** om hun lichaam?",
+  "reden": "Hint hangt aan de verkeerde optie: bij \"veren\" staat \"Een vacht hebben zoogdieren.\" (hoort bij \"een vacht\")."
+ },
+ {
+  "pathId": "tafels-po",
+  "stap": 3,
+  "q": "Je gebruikt de **vingertruc** voor **3 × 9**. Je buigt vinger nummer 3 (van links). Hoeveel vingers staan er links en rechts van die vinger?",
+  "reden": "(steekproef) Afleider '2 links, 8 rechts' telt samen met de gebogen vinger op tot 11 vingers — onmogelijk, dus te makkelijk weg te strepen. Liever '3 links, 7 rechts' of '1 links, 8 rechts'."
+ },
+ {
+  "pathId": "breuken-po",
+  "stap": 5,
+  "q": "Voor een taart heb je **3/4 kg** suiker nodig. Hoeveel **gram** is dat?",
+  "reden": "Spelling in uitlegPad: \"Drie kwart\" moet \"Driekwart\" (één woord), net als \"tweederde\"; ook \"3 kwart\" in simpeler is slordig."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 8,
+  "q": "Wat is een verschil tussen planten en dieren?",
+  "reden": "Hints zijn verschoven: bij \"Planten groeien niet\" staat de hint over \"niet levend\" (hoort bij \"Planten leven niet\"), en bij \"Planten planten zich niet voort\" staat de groei-hint (hoort bij \"Planten groeien niet\")."
+ },
+ {
+  "pathId": "procenten-po",
+  "stap": 2,
+  "q": "**75% van 12** = ?",
+  "reden": "Spelling in uitlegPad: \"drie kwart\"/\"Drie kwart\" (stappen, woorden) moet \"driekwart\" (één woord)."
+ },
+ {
+  "pathId": "spelling-ei-ij-au-ou",
+  "stap": 5,
+  "q": "Hoe schrijf je: het deel van je lichaam tussen je nek en je arm?",
+  "reden": "Hint bij \"schauder\" (\"kies nog eens tussen au en ou\") geeft bij twee keuzes het antwoord (ou) vrijwel letterlijk weg."
+ },
+ {
+  "pathId": "spelling-eerste-woorden-g3",
+  "stap": 1,
+  "q": "Hoe schrijf je het woord voor waarmee je hoort: 👂?",
+  "reden": "Vraagzin is ongrammaticaal: 'het woord voor waarmee je hoort' (moet bv. 'het woord voor het ding waarmee je hoort')."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 1,
+  "q": "Wat betekent **warm bloed**?",
+  "reden": "schrijver dieren-seizoenen-natuur onbetrouwbaar (hints verschoven)"
+ },
+ {
+  "pathId": "spelling-ei-ij-au-ou",
+  "stap": 6,
+  "q": "Welke zin is helemaal **goed** geschreven?",
+  "reden": "uitlegPad niveau nogSimpeler = \"Zin 1\", maar de goede zin is niet de eerste optie (in de aangeleverde volgorde de vierde; opties worden geschud) — verkeerd/positie-afhankelijk antwoord."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 3,
+  "q": "Wat hebben vissen, reptielen en amfibieën **allemaal**?",
+  "reden": "Hints zijn verschoven: bij \"kieuwen\" staat de schubben-hint (kikker), bij \"vinnen\" staat de kieuwen-hint (hagedis); \"schubben\" heeft geen hint."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 4,
+  "q": "Welke is een **weekdier**?",
+  "reden": "Hint hangt aan de verkeerde optie: bij \"zee-egel\" staat \"Een garnaal heeft een pantser en veel poten.\" (hoort bij \"garnaal\")."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 7,
+  "q": "Hoe kun je vogels helpen in de **winter**?",
+  "reden": "Hint hangt aan de verkeerde optie: bij \"Ze wegjagen uit de tuin\" staat \"Wat zou een vogel aan zijn nest hebben?\" (hoort bij \"Hun nesten weghalen\")."
+ },
+ {
+  "pathId": "breuken-po",
+  "stap": 4,
+  "q": "**1/5 van € 35** = ?",
+  "reden": "Hint bij \"€ 30\" klopt inhoudelijk niet: \"Dat is wat er overblijft na 1/5 eraf\" — 35 − 7 = 28, niet 30."
+ },
+ {
+  "pathId": "begrijpend-lezen-teksten-po",
+  "stap": 3,
+  "q": "Wat legde Sara de volgende dag op Toms tafel?",
+  "reden": "Goede optie ('Een briefje met 'Bedankt!' erop') is duidelijk langer en de enige met een letterlijk citaat; verraadt zich t.o.v. de korte afleiders."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 6,
+  "q": "Wat doen **trekvogels** in de lente?",
+  "reden": "De hint bij 'Ze houden winterslaap' ('Wegvliegen naar warme landen doen ze in de herfst.') hoort bij de optie 'Ze vliegen naar warme landen' — verkeerde optie."
+ },
+ {
+  "pathId": "getallen-tot-20-po",
+  "stap": 1,
+  "q": "Lisa heeft 3 appels. Ze krijgt er 3 bij. Hoeveel appels heeft ze nu?",
+  "reden": "(steekproef) Afleider '0' is ongeloofwaardig bij 3+3 (niemand kiest 0); vervang door bv. 4 of 8."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 7,
+  "q": "Een dier slaapt veel in de winter, maar wordt af en toe wakker om te eten. Hoe heet dat?",
+  "reden": "De hint bij 'paartijd' ('Bij winterslaap bewegen dieren bijna niet...') gaat over winterslaap en hoort bij de optie 'winterslaap' — verkeerde optie."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 5,
+  "q": "Welk dier maakt een **gedaanteverwisseling** door?",
+  "reden": "schrijver dieren-seizoenen-natuur onbetrouwbaar (hints verschoven)"
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 1,
+  "q": "Hoe ademt een **walvis**?",
+  "reden": "schrijver dieren-seizoenen-natuur onbetrouwbaar (hints verschoven)"
+ },
+ {
+  "pathId": "breuken-po",
+  "stap": 1,
+  "q": "Hoe zeg je **5/8** in woorden?",
+  "reden": "De bedoelde goede optie 'vijf-achtste' is fout gespeld: breuken in woorden schrijf je aan elkaar ('vijfachtste', net als 'tweederde', 'driekwart'). De stap-uitleg gebruikt dezelfde foute koppeltekens. Afleiders 'vijf-kwart'/'acht-vijfde' zijn bovendien geen bestaande woorden. | uitlegPad gebruikt overal de foute spelling met koppelteken: 'vijf-achtste', 'twee-derde', 'drie-kwart' (moet: vijfachtste, tweederde, driekwart). Ook het goede antwoord zelf is zo gespeld."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 2,
+  "q": "Hoeveel **poten** heeft een vogel?",
+  "reden": "schrijver dieren-seizoenen-natuur onbetrouwbaar (hints verschoven)"
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 0,
+  "q": "Wat betekent **voortplanten**?",
+  "reden": "schrijver dieren-seizoenen-natuur onbetrouwbaar (hints verschoven)"
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 7,
+  "q": "Welk dier houdt **winterrust**?",
+  "reden": "De hint bij 'vleermuis' ('De egel houdt winterslaap. Wordt hij tussendoor wakker...?') gaat over de egel en hoort bij de optie 'egel' — verkeerde optie."
+ },
+ {
+  "pathId": "korte-teksten-snappen-g4",
+  "stap": 3,
+  "q": "*Het zaadje ligt in de grond. Dan komt er een klein plantje uit. Daarna groeit er een mooie bloem.*\n\nWat komt er **na** het kleine plantje?",
+  "reden": "De hint bij 'een hoge boom' zegt 'Dat was er juist vóór het plantje.' — dat klopt niet (er staat geen boom in de tekst); die hint hoort bij 'het zaadje'. Inhoudelijk fout + verkeerde optie."
+ },
+ {
+  "pathId": "kaartlezen-po",
+  "stap": 3,
+  "q": "Wat betekent een **anker** op een kaart?",
+  "reden": "De hint bij 'Camping' ('Waar liggen schepen stil?') gaat niet over de camping en stuurt direct naar het goede antwoord (haven); verkeerd gekoppeld/weggever."
+ },
+ {
+  "pathId": "klokkijken",
+  "stap": 1,
+  "q": "Hoe schrijf je **7 uur 's ochtends** in 24-uurs format?",
+  "reden": "'24-uurs format' is een anglicisme en los/met koppelteken geschreven; correct Nederlands is '24-uursnotatie' (of 24-uursklok). Vraag is inhoudelijk goed, maar de taal klopt niet voor een spellingstrenge app. | uitlegPad (woorden) gebruikt '24-uurs format' — anglicisme/foute samenstelling; beter '24-uursnotatie'."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 9,
+  "q": "Waar begint de **energie** in een voedselketen?",
+  "reden": "schrijver dieren-seizoenen-natuur onbetrouwbaar (hints verschoven)"
+ },
+ {
+  "pathId": "samenvatten-hoofdgedachte-po",
+  "stap": 1,
+  "q": "Tekst: 'Een ijsbeer heeft een dikke vacht. Onder zijn huid zit een laag vet. Zo blijft hij warm in de kou.'\n\n**Hoofdgedachte**?",
+  "reden": "Kleine twijfel: de stap leert 'de eerste zin is vaak de topic-sentence', en optie C is letterlijk die eerste zin ('Een ijsbeer heeft een dikke vacht'). Een kind dat de geleerde strategie toepast, kiest C. D is beter, maar het onderscheid detail/hoofdgedachte botst hier met de stap-strategie."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 6,
+  "q": "In welk seizoen valt de maand **juli**?",
+  "reden": "De hint bij 'herfst' ('De lente is maart, april en mei. Hoort juli daarbij?') gaat over de lente en hangt dus aan de verkeerde optie."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 0,
+  "q": "Een kleine poes wordt een grote kat. Welk kenmerk van leven zie je?",
+  "reden": "schrijver dieren-seizoenen-natuur onbetrouwbaar (hints verschoven)"
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 3,
+  "q": "Waarmee ademt een **volwassen** kikker?",
+  "reden": "De hint hangt aan de verkeerde optie. De hint over kieuwen ('Kieuwen heeft het kikkervisje in het water...') staat bij 'met vinnen', maar hoort bij 'met kieuwen'."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 8,
+  "q": "Welk deel van een plant haalt **water** uit de grond?",
+  "reden": "De hint hangt aan de verkeerde optie. 'Het blad zit boven de grond en vangt zonlicht' staat bij 'bloem', maar hoort bij 'blad'."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 6,
+  "q": "In welk seizoen zie je de **meeste insecten**, zoals vlinders en libellen?",
+  "reden": "De hint hangt aan de verkeerde optie. 'In de winter is het koud. Zie je dan veel vlinders?' staat bij 'herfst', maar hoort bij 'winter'."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 3,
+  "q": "Welke is een **insect**?",
+  "reden": "De hint hangt aan de verkeerde optie. 'Tel de poten van een spin' staat bij 'slak', maar hoort bij 'spin'."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 8,
+  "q": "Wat geven planten ons om te **ademen**?",
+  "reden": "De hint hangt aan de verkeerde optie. 'Koolstofdioxide gebruikt de plant juist bij fotosynthese' staat bij 'rook', maar hoort bij 'koolstofdioxide'."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 2,
+  "q": "Een vogel heeft geen bek met tanden. Wat heeft hij wel?",
+  "reden": "Afleider 'scherpe tanden' wordt door de vraag zelf al uitgesloten ('heeft geen bek met tanden') en is dus niet geloofwaardig; 'een slurf' en 'vinnen' zijn ook nauwelijks serieuze opties."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 4,
+  "q": "Hoe herken je een **worm**?",
+  "reden": "De hint hangt aan de verkeerde optie. 'Een pantser met veel poten heeft een krab' staat bij 'Zacht lichaam in een schelp', maar hoort bij 'Pantser met veel poten'."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 6,
+  "q": "Waar op aarde zijn er bijna **geen seizoenen**?",
+  "reden": "De hint hangt aan de verkeerde optie. 'Nederland heeft vier seizoenen' staat bij 'in België', maar hoort bij 'in Nederland'."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 6,
+  "q": "Wat doen veel vogels in de **lente**?",
+  "reden": "De hint hangt aan de verkeerde optie. 'Naar warme landen vliegen doen trekvogels in de herfst' staat bij 'Ze houden winterslaap', maar hoort bij 'Ze vliegen naar warme landen'."
+ },
+ {
+  "pathId": "procenten-po",
+  "stap": 0,
+  "q": "Waarom zijn procenten handig?",
+  "reden": "Goede optie verraadt zich: alle drie de foute opties zijn absolute beweringen ('altijd', 'alleen', 'helemaal nooit') en zijn bovendien veel langer/onnatuurlijk; alleen de goede optie is een gewone, redelijke zin."
+ },
+ {
+  "pathId": "taal-leren-lezen-g3",
+  "stap": 0,
+  "q": "Welke klank hoor je **achteraan** bij **kat**?",
+  "reden": "Stap-uitleg gaat alleen over de klank VOORAAN ('wat hoor je vooraan?'); de vraag naar de klank ACHTERAAN wordt in deze stap niet uitgelegd."
+ },
+ {
+  "pathId": "dieren-seizoenen-natuur",
+  "stap": 8,
+  "q": "Wat doet het **blad** van een plant?",
+  "reden": "De hint hangt aan de verkeerde optie. 'Water uit de grond halen doet een deel onder de grond' staat bij 'Het draagt de plant', maar hoort bij 'Het haalt water uit de grond'."
+ },
+ {
+  "pathId": "cito-strategieen-groep8",
+  "stap": 1,
+  "q": "Hoe weet je welke Doorstroomtoets jij maakt?",
+  "reden": "hint hangt aan verkeerde optie"
+ }
+]

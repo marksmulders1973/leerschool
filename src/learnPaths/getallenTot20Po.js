@@ -272,25 +272,6 @@ const steps = [
           },
         },
       },
-      {
-        q: "Lisa heeft 3 appels. Ze krijgt er 3 bij. Hoeveel appels heeft ze nu?",
-        options: ["6", "5", "7", "0"],
-        answer: 0,
-        wrongHints: [null, null, "Te veel — tel nog eens.", "Ze krijgt er juist appels bij."],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Dubbele",
-              tekst: "Erbij krijgen = optellen. 3 + 3 = **6**. Dat is een dubbele.",
-            },
-          ],
-          niveaus: {
-            basis: "3 + 3 = 6.",
-            simpeler: "3 appels en nog 3 appels = 6 appels.",
-            nogSimpeler: "6",
-          },
-        },
-      },
     ],
   },
 
@@ -649,25 +630,6 @@ const steps = [
             basis: "17.",
             simpeler: "9+8=17.",
             nogSimpeler: "17",
-          },
-        },
-      },
-      {
-        q: "**16 - 8** = ?",
-        options: ["8", "7", "9", "24"],
-        answer: 0,
-        wrongHints: [null, "Te weinig — dat is 16 - 9.", "Te veel — dat is 16 - 7.", "Dat is 16 + 8."],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Eerst naar 10",
-              tekst: "16 - 8 = 16 - 6 - 2 = 10 - 2 = **8**.",
-            },
-          ],
-          niveaus: {
-            basis: "8.",
-            simpeler: "16-8=8.",
-            nogSimpeler: "8",
           },
         },
       },

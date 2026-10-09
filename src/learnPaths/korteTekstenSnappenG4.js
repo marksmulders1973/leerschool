@@ -493,25 +493,6 @@ const steps = [
         },
       },
       {
-        q: "*Het zaadje ligt in de grond. Dan komt er een klein plantje uit. Daarna groeit er een mooie bloem.*\n\nWat komt er **na** het kleine plantje?",
-        options: ["een mooie bloem", "het zaadje", "een hoge boom", "een appel"],
-        answer: 0,
-        wrongHints: [null, null, "Dat was er juist vóór het plantje.", "Staat dat in de tekst?"],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Stapjes volgen",
-              tekst: "1. zaadje → 2. klein plantje → 3. **mooie bloem**. Het woord *daarna* zegt: dit komt na het plantje.",
-            },
-          ],
-          niveaus: {
-            basis: "Na het plantje komt de bloem.",
-            simpeler: "Zaadje → plantje → …?",
-            nogSimpeler: "een bloem",
-          },
-        },
-      },
-      {
         q: "*Eerst pakt Kim een boterham. Dan smeert ze er boter op. Daarna doet ze er kaas op. Ten slotte eet ze hem op.*\n\nWat doet Kim het **laatst**?",
         options: [
           "de boterham opeten",

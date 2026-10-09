@@ -775,30 +775,6 @@ const steps = [
         },
       },
       {
-        q: "Waarmee begint een zin **altijd**?",
-        options: ["met een hoofdletter", "met een punt", "met een vraagteken", "met een komma"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Een punt staat juist aan het eind.",
-          "Een vraagteken staat aan het eind van een vraag.",
-          null,
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Begin groot",
-              tekst: "Een zin begint altijd met een **hoofdletter**: *De hond rent door de tuin.*",
-            },
-          ],
-          niveaus: {
-            basis: "Een zin begint met een hoofdletter.",
-            simpeler: "Begin groot!",
-            nogSimpeler: "met een hoofdletter",
-          },
-        },
-      },
-      {
         q: "Wat is er **fout** aan deze zin? **mijn broer speelt buiten.**",
         options: [
           "Er mist een hoofdletter.",

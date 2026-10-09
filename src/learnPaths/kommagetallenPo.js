@@ -1632,48 +1632,6 @@ const steps = [
           },
         },
       },
-      {
-        q: "Een pakje sap kost **€ 0,85**. Je koopt er **4**. Wat betaal je **samen**?",
-        options: ["€ 3,40", "€ 3,20", "€ 4,85", "€ 34,00"],
-        answer: 0,
-        wrongHints: [null, "Reken 4 × 85 cent nog eens na.", null, "Moet je 4 keer € 0,85 doen, of € 0,85 + 4?"],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Vermenigvuldigen",
-              tekst: "4 × € 0,85. Doe 4 × 85 = 340 cent.",
-            },
-            {
-              titel: "Naar euro",
-              tekst: "340 cent = € 3,40.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "eenheid",
-              uitleg: "Wat er bij het getal hoort, zoals €, kg, m of liter.",
-            },
-          ],
-          theorie: "Geld vermenigvuldigen: reken in centen, zet daarna de komma terug.",
-          voorbeelden: [
-            {
-              type: "stap",
-              tekst: "3 × € 0,65 = 195 cent = € 1,95.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Eenheid",
-              uitleg: "Schrijf altijd de eenheid (€, kg, m, mL) bij je antwoord.",
-            },
-          ],
-          niveaus: {
-            basis: "4 × € 0,85 = € 3,40.",
-            simpeler: "Reken in centen: 4 × 85 = 340 cent. Dat is € 3,40.",
-            nogSimpeler: "€ 3,40",
-          },
-        },
-      },
     ],
   },
 

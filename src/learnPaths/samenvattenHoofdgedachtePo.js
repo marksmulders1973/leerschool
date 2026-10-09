@@ -445,70 +445,6 @@ const steps = [
         },
       },
       {
-        q: "Tekst: 'Een ijsbeer heeft een dikke vacht. Onder zijn huid zit een laag vet. Zo blijft hij warm in de kou.'\n\n**Hoofdgedachte**?",
-        options: [
-          "Een ijsbeer is goed beschermd tegen de kou",
-          "Dieren zijn bijzonder",
-          "Een ijsbeer heeft een dikke vacht",
-          "IJsberen zijn gevaarlijk voor mensen",
-        ],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Gaat de tekst over alle dieren?",
-          "Dat staat erin, maar is het de hele boodschap?",
-          null,
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Wat komt steeds terug?",
-              tekst: "Vacht, vetlaag, warm blijven: alles gaat over hoe de ijsbeer **warm blijft in de kou**.",
-            },
-            {
-              titel: "De rode draad",
-              tekst: "Samen: **een ijsbeer is goed beschermd tegen de kou**.",
-            },
-            {
-              titel: "De drie toets-fouten",
-              tekst: "• **Dieren zijn bijzonder** — te algemeen.\n• **Dikke vacht** — een detail (maar één zin).\n• **Gevaarlijk voor mensen** — staat niet in de tekst.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "te algemeen",
-              uitleg: "Een zin die over veel meer gaat dan de tekst.",
-            },
-            {
-              woord: "detail",
-              uitleg: "Klein stukje uit één zin.",
-            },
-          ],
-          theorie: "Toets-fout 1: detail kiezen. Toets-fout 2: te algemeen kiezen. Toets-fout 3: iets kiezen wat niet in de tekst staat.",
-          voorbeelden: [
-            {
-              type: "stap",
-              tekst: "'Een kameel kan lang zonder water. Hij heeft brede voeten voor het zand.' → hoofdgedachte = 'een kameel past goed bij de woestijn'.",
-            },
-            {
-              type: "stap",
-              tekst: "'Dieren zijn bijzonder' is te algemeen voor een tekst over één dier.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Truc",
-              uitleg: "Niet te groot, niet te klein: precies wat de hele tekst zegt.",
-            },
-          ],
-          niveaus: {
-            basis: "Een ijsbeer is goed beschermd tegen de kou.",
-            simpeler: "Vacht + vet = warm blijven. Dat is de kern.",
-            nogSimpeler: "Beschermd tegen kou",
-          },
-        },
-      },
-      {
         q: "Tekst: 'Fruit is gezond. Er zitten vitamines in die je lichaam nodig heeft.'\n\nWelke hoofdgedachte is **te algemeen**?",
         options: [
           "Eten is belangrijk",
@@ -560,65 +496,6 @@ const steps = [
             basis: "Eten is belangrijk = te algemeen.",
             simpeler: "De tekst gaat over fruit. 'Eten' is veel breder.",
             nogSimpeler: "Eten = te breed",
-          },
-        },
-      },
-      {
-        q: "Tekst: 'In Nederland fietsen veel kinderen naar school. Dat is gezond en goed voor het milieu.'\n\nWelke zin is een **mening die NIET in de tekst staat**?",
-        options: [
-          "Fietsen is leuker dan lopen",
-          "Fietsen is gezond",
-          "Fietsen is goed voor het milieu",
-          "Veel kinderen fietsen naar school",
-        ],
-        answer: 0,
-        wrongHints: [null, null, "Zoek in de tekst: wordt het milieu genoemd?", "Staat dit in de eerste zin?"],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Lees wat de tekst zegt",
-              tekst: "De tekst zegt: veel kinderen fietsen naar school, het is **gezond** en **goed voor het milieu**.",
-            },
-            {
-              titel: "Zoek wat er NIET staat",
-              tekst: "**Lopen** wordt nergens genoemd. 'Fietsen is leuker dan lopen' is een mening die jij of iemand anders kan hebben, maar die staat niet in de tekst.",
-            },
-            {
-              titel: "Toets-fout 3",
-              tekst: "Een hoofdgedachte moet uit de tekst komen. Een mening die er niet in staat, is altijd fout.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "mening",
-              uitleg: "Wat iemand ergens van vindt.",
-            },
-            {
-              woord: "milieu",
-              uitleg: "De natuur en de lucht om ons heen.",
-            },
-          ],
-          theorie: "Toets-fout 3: kiezen voor een mening die NIET in de tekst staat. Antwoord moet komen uit de tekst.",
-          voorbeelden: [
-            {
-              type: "stap",
-              tekst: "Tekst zegt niets over tennis → 'tennis is beter dan voetbal' is fout.",
-            },
-            {
-              type: "stap",
-              tekst: "Tekst over appels → 'peren zijn lekkerder' staat er niet in.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Truc",
-              uitleg: "Zoek elk woord terug in de tekst. Niet te vinden? Dan staat het er niet.",
-            },
-          ],
-          niveaus: {
-            basis: "Fietsen is leuker dan lopen staat niet in de tekst.",
-            simpeler: "Lopen wordt niet genoemd. Dus die mening komt niet uit de tekst.",
-            nogSimpeler: "Lopen staat er niet",
           },
         },
       },
@@ -1125,66 +1002,6 @@ const steps = [
           },
         },
       },
-      {
-        q: "Tekst: 'Een tablet kan handig zijn op school. Je kunt er snel iets op opzoeken. Mijn tablet heeft een blauwe hoes. Gisteren viel hij bijna op de grond.'\n\nWelke zin is een **hoofdzaak**?",
-        options: [
-          "Je kunt er snel iets op opzoeken.",
-          "Mijn tablet heeft een blauwe hoes.",
-          "Gisteren viel hij bijna op de grond.",
-          "Een tablet kan vallen.",
-        ],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Zegt de kleur van de hoes iets over handig zijn op school?",
-          null,
-          "Staat dit zo in de tekst, en zegt het iets over school?",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Wat is de hoofdgedachte?",
-              tekst: "Zin 1: *'Een tablet kan handig zijn op school.'*",
-            },
-            {
-              titel: "Welke zin steunt dat?",
-              tekst: "*'Je kunt er snel iets op opzoeken'* legt uit WAAROM een tablet handig is. → **hoofdzaak**.",
-            },
-            {
-              titel: "Waarom NIET de andere opties?",
-              tekst: "• **Blauwe hoes** — persoonlijk detail.\n• **Gisteren bijna gevallen** — verhaaltje (anekdote).\n• **Een tablet kan vallen** — zegt niets over handig op school.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "hoofdzaak",
-              uitleg: "Zin die direct de hoofdgedachte steunt.",
-            },
-          ],
-          theorie: "Hoofdzaak: ondersteunt direct de hoofdgedachte. Bijzaak: leuk detail, maar niet essentieel.",
-          voorbeelden: [
-            {
-              type: "stap",
-              tekst: "'Een bril helpt je beter zien. Je kunt weer lezen. Mijn bril is rood.' → 'weer lezen' = hoofdzaak, 'rood' = bijzaak.",
-            },
-            {
-              type: "stap",
-              tekst: "'Gisteren …' = vaak een anekdote.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Truc",
-              uitleg: "Vraag: helpt deze zin om de hoofdgedachte te bewijzen? Ja → hoofdzaak.",
-            },
-          ],
-          niveaus: {
-            basis: "Opzoeken = hoofdzaak.",
-            simpeler: "Opzoeken laat zien waarom een tablet handig is op school.",
-            nogSimpeler: "Opzoeken",
-          },
-        },
-      },
     ],
   },
 
@@ -1279,70 +1096,6 @@ const steps = [
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
-      {
-        q: "Tekst: 'Een moestuin is leuk en leerzaam. Je ziet hoe een zaadje een plant wordt. Je leert wat een plant nodig heeft, zoals water en zon. Vorige week plukte ik drie tomaten.'\n\nWelke **samenvatting** is het best?",
-        options: [
-          "Een moestuin is leuk en leerzaam: je ziet planten groeien en leert wat ze nodig hebben.",
-          "Een moestuin is leuk, want de schrijver plukte vorige week drie tomaten.",
-          "Een moestuin is leuk en leerzaam, dus iedereen moet er een nemen.",
-          "Planten hebben water en zon nodig om uit een zaadje te groeien.",
-        ],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Is het plukken van tomaten een hoofdzaak of een verhaaltje?",
-          "Staat 'iedereen moet er een nemen' in de tekst?",
-          null,
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Wat moet erin?",
-              tekst: "Een goede samenvatting heeft de **hoofdgedachte** (leuk en leerzaam) + de **hoofdzaken** (planten zien groeien, leren wat ze nodig hebben).",
-            },
-            {
-              titel: "Wat moet eruit?",
-              tekst: "• De **tomaten** = anekdote → bijzaak.\n• **Eigen mening** ('iedereen moet er een nemen') hoort er niet in.",
-            },
-            {
-              titel: "Check de opties",
-              tekst: "• A: hoofdgedachte + hoofdzaken ✓\n• B: gebruikt een bijzaak.\n• C: voegt een mening toe.\n• D: mist de hoofdgedachte.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "samenvatting",
-              uitleg: "Korte versie met hoofdgedachte en hoofdzaken.",
-            },
-            {
-              woord: "anekdote",
-              uitleg: "Kort persoonlijk verhaaltje.",
-            },
-          ],
-          theorie: "Goede samenvatting bevat: hoofdgedachte, hoofdzaken, eigen woorden, korter dan origineel. NIET: bijzaken, eigen mening, letterlijke kopie.",
-          voorbeelden: [
-            {
-              type: "stap",
-              tekst: "Vrienden-tekst: 'mijn vriend Jan en de fiets' zit niet in de samenvatting (anekdote).",
-            },
-            {
-              type: "stap",
-              tekst: "'Iedereen moet …' is een mening als de tekst dat niet zegt.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Truc",
-              uitleg: "Zoek de optie met hoofdgedachte + hoofdzaken, zonder anekdote of mening.",
-            },
-          ],
-          niveaus: {
-            basis: "A: hoofdgedachte + hoofdzaken, zonder bijzaak.",
-            simpeler: "De tomaten zijn een verhaaltje. De mening staat niet in de tekst. A heeft de kern.",
-            nogSimpeler: "A",
-          },
-        },
-      },
       {
         q: "Wat doe je **als eerste** als je een tekst gaat samenvatten?",
         options: [

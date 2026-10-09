@@ -474,7 +474,7 @@
     ],
     "intro": "Vier echte oefenteksten van ~200 woorden + 4 Doorstroomtoets-stijl vragen elk: zakelijk, instructief, betogend, verhalend. Plus een gemixte eindopdracht. Perfect voor groep 7-8 die zich voorbereidt op",
     "stepCount": 5,
-    "checkCount": 64,
+    "checkCount": 63,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
@@ -589,7 +589,7 @@
     ],
     "intro": "Belasting voor groep 6-8 — waarom we samen betalen voor wegen, scholen en ziekenhuizen, belasting op je loon (bruto → belasting eraf → netto) en btw die in de winkelprijs zit (9% / 21%). Met echte red",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 38,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -804,7 +804,7 @@
     ],
     "intro": "Breuken voor groep 5-8: wat is een breuk, vereenvoudigen, optellen/aftrekken met gelijke en ongelijke noemers, breuk-van-een-getal. Met Doorstroomtoets-stijl praktijksommen. ~15 min.",
     "stepCount": 7,
-    "checkCount": 73,
+    "checkCount": 67,
     "chapterCount": 5,
     "estimatedMinutes": 20
   },
@@ -862,7 +862,7 @@
     ],
     "intro": "Brugklas-overgang voor groep 8 → klas 1 — verschil basisschool/middelbare school (10-15 docenten, cijfers 1-10, profiel-keuze), agenda + Magister, leren-leren (spaced repetition, Feynman, Pomodoro), s",
     "stepCount": 6,
-    "checkCount": 40,
+    "checkCount": 65,
     "chapterCount": 6,
     "estimatedMinutes": 20
   },
@@ -949,7 +949,7 @@
     ],
     "intro": "Cijferend rekenen voor groep 6-8: optellen + onthouden, aftrekken + lenen, vermenigvuldigen, delen (bus-bewerking), praktijk-redactiesommen. ~15 min per deel.",
     "stepCount": 8,
-    "checkCount": 41,
+    "checkCount": 78,
     "chapterCount": 6,
     "estimatedMinutes": 20
   },
@@ -978,7 +978,7 @@
     ],
     "intro": "Hoe je slim met de Doorstroomtoets omgaat: pacing, eliminatie bij meerkeuze, slimme aanpak voor begrijpend lezen + rekenen, omgaan met twijfel + tijdgebrek. Niet alleen 'kennen', ook 'aanpakken'.",
     "stepCount": 7,
-    "checkCount": 70,
+    "checkCount": 68,
     "chapterCount": 4,
     "estimatedMinutes": 25
   },
@@ -1369,7 +1369,7 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 34,
     "chapterCount": 4,
     "estimatedMinutes": 10
   },
@@ -1468,9 +1468,9 @@
     ],
     "intro": "Wereld & Natuur voor de basisschool: wat is leven, de diergroepen (zoogdieren, vogels, vissen, reptielen+amfibieën, insecten), levensstadia + metamorfose, de vier seizoenen, planten met fotosynthese, ",
     "stepCount": 11,
-    "checkCount": 103,
+    "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 30
+    "estimatedMinutes": 20
   },
   {
     "id": "dierenklassen-po",
@@ -3384,9 +3384,9 @@
     ],
     "intro": "Geldwijsheid voor groep 6-8 — 3 functies geld (ruil/reken/spaar), zakgeld + zelf verdienen, sparen + rente + samengestelde rente, 50/30/20-begrotingsregel, lenen + reclame-trucs (BNPL, influencers). ~",
     "stepCount": 6,
-    "checkCount": 40,
+    "checkCount": 67,
     "chapterCount": 6,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "folder-bon-advertentie-po",
@@ -3515,7 +3515,7 @@
     ],
     "intro": "Geld rekenen voor groep 5-8: euro's en centen, optellen + aftrekken, wisselgeld berekenen, vergelijken (wat is voordeligst). Doorstroomtoets-stijl praktijksommen. ~12 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 62,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
@@ -3541,9 +3541,9 @@
     ],
     "intro": "Statistiek voor groep 7-8 — gemiddelde uitrekenen, modus (vaakst voorkomend), mediaan (middelste). Met praktijksommen over cijfers, temperatuur, zakgeld, schoenmaat. ~15 min.",
     "stepCount": 6,
-    "checkCount": 40,
+    "checkCount": 60,
     "chapterCount": 6,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "genetica-erfelijkheid-biologie",
@@ -3653,7 +3653,7 @@
     ],
     "intro": "Eerste rekensommen — getallen 0 tot 20, plus en min, splitsen + dubbele + truc 'eerst tien maken'. Voor groep 3-4. ~15 min.",
     "stepCount": 6,
-    "checkCount": 46,
+    "checkCount": 44,
     "chapterCount": 6,
     "estimatedMinutes": 15
   },
@@ -3852,9 +3852,9 @@
     ],
     "intro": "Grafieken lezen voor groep 6-8 — staafdiagram, lijngrafiek, taartdiagram, tabel ↔ grafiek. Toets-praktijksommen met temperatuur, regen, klas-aantallen, koekjes. ~15 min.",
     "stepCount": 6,
-    "checkCount": 40,
+    "checkCount": 64,
     "chapterCount": 6,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "grieks-vwo",
@@ -4232,7 +4232,7 @@
     ],
     "intro": "Kompasroos, schaal, legenda en symbolen op kaarten begrijpen. Doorstroomtoets-stijl. ~12 min.",
     "stepCount": 5,
-    "checkCount": 56,
+    "checkCount": 54,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
@@ -4261,9 +4261,9 @@
     ],
     "intro": "Kalender voor groep 6-8 — maanden, weken, schrikkeljaar, dagen tellen vooruit/achteruit, leeftijden uitrekenen, speciale data (Koningsdag, Bevrijdingsdag). ~15 min.",
     "stepCount": 6,
-    "checkCount": 40,
+    "checkCount": 66,
     "chapterCount": 6,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "kansrekening",
@@ -4464,7 +4464,7 @@
     ],
     "intro": "Leer de klok lezen — analoog (met wijzers) én digitaal. Hele uren, halve, kwartieren, minuten en het 24-uurs format. Plus tijd uitrekenen (hoe lang duurt iets?). Voor groep 3 t/m 5.",
     "stepCount": 8,
-    "checkCount": 76,
+    "checkCount": 73,
     "chapterCount": 5,
     "estimatedMinutes": 25
   },
@@ -4518,9 +4518,9 @@
     ],
     "intro": "Kommagetallen voor groep 6-8 — wat ze zijn, optellen/aftrekken met komma's uitgelijnd, vermenigvuldigen, delen, en Toets-praktijksommen met geld/meten. ~15 min.",
     "stepCount": 6,
-    "checkCount": 40,
+    "checkCount": 67,
     "chapterCount": 6,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "korte-teksten-snappen-g4",
@@ -4543,7 +4543,7 @@
     ],
     "intro": "Eerste stappen begrijpend lezen: van één zin naar een echt tekstje. Wie, wat, waar — het antwoord opzoeken — en wat gebeurde eerst? Voor groep 4. ~15 min.",
     "stepCount": 5,
-    "checkCount": 37,
+    "checkCount": 36,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
@@ -5135,9 +5135,9 @@
     ],
     "intro": "Maten en eenheden voor Doorstroomtoets groep 7-8 (voorheen Cito-eindtoets): lengte (km/m/cm/mm), gewicht (kg/g/ton), inhoud (L/mL), tijd (uur/min/sec), de komma-verschuif-truc, en redactiesommen in Ci",
     "stepCount": 8,
-    "checkCount": 42,
+    "checkCount": 80,
     "chapterCount": 7,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "maten-omtrek-oppervlakte-po",
@@ -5164,7 +5164,7 @@
     ],
     "intro": "Toets-meetkunde voor Doorstroomtoets — lengte-maten omrekenen (km/m/cm/mm), omtrek + oppervlakte (rechthoek, vierkant, driehoek, cirkel), inhoud (kubus, balk, cilinder), schaal + praktijksommen. 5 sta",
     "stepCount": 5,
-    "checkCount": 25,
+    "checkCount": 41,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
@@ -5251,9 +5251,9 @@
     ],
     "intro": "Volume voor groep 6-8 — wat volume is, kubus + balk berekenen, liters/cm³/m³ omrekenen, Toets-praktijksommen met zwembad, aquarium en doos. ~15 min.",
     "stepCount": 6,
-    "checkCount": 40,
+    "checkCount": 64,
     "chapterCount": 6,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "mens-biologie-vmbo",
@@ -5354,7 +5354,7 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 38,
     "chapterCount": 4,
     "estimatedMinutes": 10
   },
@@ -5622,9 +5622,9 @@
     ],
     "intro": "Negatieve getallen voor groep 5-8: wat is een negatief getal, getalslijn lopen, min-een-minus = plus, praktijk met temperatuur en geld. ~12 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 65,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "netwerken-internet-informatica",
@@ -5725,7 +5725,7 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 38,
     "chapterCount": 4,
     "estimatedMinutes": 10
   },
@@ -5890,9 +5890,9 @@
     ],
     "intro": "18 vragen Toets-rekenen groep 6-8: verschil omtrek vs oppervlakte, rechthoek + vierkant + driehoek + cirkel, eenheid-conversies (1 m² = 10.000 cm²), praktijkvraagstukken (tuin met vijver, pizza, plint",
     "stepCount": 6,
-    "checkCount": 26,
+    "checkCount": 57,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "optica-havo-vwo",
@@ -6473,7 +6473,7 @@
     ],
     "intro": "Procenten voor groep 5-8 — wat % betekent, hoe je ermee rekent, korting in de winkel, hoeveel % is X van Y. Met Doorstroomtoets-stijl praktijksommen. ~15 min.",
     "stepCount": 7,
-    "checkCount": 72,
+    "checkCount": 70,
     "chapterCount": 5,
     "estimatedMinutes": 20
   },
@@ -6696,9 +6696,9 @@
     ],
     "intro": "Redactiesommen voor groep 5-8: hoe lees je een rekensom in een verhaal, signaal-woorden voor +/-/×/÷, één-stap- en twee-stap-sommen, eindopdracht. ~12 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 64,
     "chapterCount": 5,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "rekenen-met-letters",
@@ -6895,7 +6895,7 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 38,
     "chapterCount": 4,
     "estimatedMinutes": 10
   },
@@ -6995,7 +6995,7 @@
     ],
     "intro": "Hoofdgedachte vinden, hoofd/bijzaken scheiden, samenvatting maken. Doorstroomtoets-stijl. ~12 min.",
     "stepCount": 5,
-    "checkCount": 60,
+    "checkCount": 56,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
@@ -7011,7 +7011,7 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 38,
     "chapterCount": 4,
     "estimatedMinutes": 10
   },
@@ -7036,9 +7036,9 @@
     ],
     "intro": "Schatten en afronden voor groep 5-8: wanneer schatten, afronden op 10/100/1000, schatten van sommen, praktijk met kassabon en tijden. ~12 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 64,
     "chapterCount": 5,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "schema-tekst-combi-po",
@@ -7265,7 +7265,7 @@
     ],
     "intro": "Je eerste woorden schrijven: schrijf wat je hoort (k-a-t → kat), lange klanken (maan, boom), oe/ie/eu-woorden en de lastige vriendjes sch- en -ng. Voor groep 3. ~15 min.",
     "stepCount": 5,
-    "checkCount": 44,
+    "checkCount": 43,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
@@ -7294,7 +7294,7 @@
     ],
     "intro": "De vier klassieke homofoon-paren in het Nederlands: ei vs ij (reist vs rijst) en au vs ou (paus vs pous). Met woordlijsten, trucjes (voornaamwoorden = ij, -oud + -ouw = ou) en context-voorbeelden. Voo",
     "stepCount": 9,
-    "checkCount": 70,
+    "checkCount": 65,
     "chapterCount": 4,
     "estimatedMinutes": 25
   },
@@ -7625,7 +7625,7 @@
     ],
     "intro": "Leren lezen, stap voor stap: klanken horen, rijmen, hakken en plakken (k-a-t → kat), je eerste woordjes en een echt zinnetje. Voor groep 3 — samen oefenen mag! ~15 min.",
     "stepCount": 5,
-    "checkCount": 49,
+    "checkCount": 48,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
@@ -7654,7 +7654,7 @@
     ],
     "intro": "Taal voor groep 4: het alfabet, meervoud (boek → boeken), verkleinwoorden (boompje), tegenstellingen (warm ↔ koud) en goede zinnen maken. ~15 min.",
     "stepCount": 5,
-    "checkCount": 45,
+    "checkCount": 44,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
@@ -7682,9 +7682,9 @@
     ],
     "intro": "Tabellen en grafieken voor Doorstroomtoets groep 6-8 (voorheen Cito-eindtoets): tabel lezen, staafdiagram, lijngrafiek (verloop in tijd), cirkeldiagram (taartstukken). Met praktijksommen en eindopdrac",
     "stepCount": 7,
-    "checkCount": 40,
+    "checkCount": 72,
     "chapterCount": 5,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "tachtigjarige-oorlog-geschiedenis",
@@ -7735,7 +7735,7 @@
     ],
     "intro": "Tafels 1 t/m 10 voor groep 4-5 — wat is een tafel, makkelijke (2/5/10), basis (3/4), lastig (6/7/8/9), slimme trucs (splitsen, 9-truc, verdubbelen). ~15 min.",
     "stepCount": 7,
-    "checkCount": 63,
+    "checkCount": 62,
     "chapterCount": 7,
     "estimatedMinutes": 20
   },
@@ -7880,7 +7880,7 @@
     ],
     "intro": "Tijd + snelheid + afstand voor Doorstroomtoets — tijdseenheden + omrekenen, snelheid km/h ↔ m/s, S=V·T-formule, snelheid + tijd berekenen, praktijksommen (reistijden, marathon, inhalen). 5 stappen × 5",
     "stepCount": 5,
-    "checkCount": 25,
+    "checkCount": 42,
     "chapterCount": 5,
     "estimatedMinutes": 20
   },
@@ -8063,7 +8063,7 @@
     ],
     "intro": "Alles over Nederland in één leerpad: 12 provincies + hoofdsteden, 3 grote rivieren, 5 grootste steden, Waddeneilanden, Deltawerken en de buurlanden. toets-relevant voor groep 7-8.",
     "stepCount": 9,
-    "checkCount": 79,
+    "checkCount": 78,
     "chapterCount": 5,
     "estimatedMinutes": 30
   },
@@ -8459,9 +8459,9 @@
     ],
     "intro": "Omtrek en oppervlakte voor groep 5-8: vierkant, rechthoek, driehoek (basis × hoogte ÷ 2), praktijksommen met hek/verf/gras/tegels. ~12 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 65,
     "chapterCount": 3,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "volgorde-bewerkingen",
@@ -9030,7 +9030,7 @@
     ],
     "intro": "Winst rekenen voor groep 6-8 — inkoop, verkoop en winst (verkoop − inkoop), winst per stuk × aantal, terugrekenen naar de verkoopprijs en het verschil tussen opbrengst en winst. Met echte kraam- en pa",
     "stepCount": 3,
-    "checkCount": 26,
+    "checkCount": 31,
     "chapterCount": 3,
     "estimatedMinutes": 10
   },

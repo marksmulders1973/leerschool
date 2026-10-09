@@ -67,65 +67,6 @@ const steps = [
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "**Schat 32 + 59**. Welk antwoord komt het dichtst bij?",
-        options: ["90", "80", "100", "70"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Te weinig — rond 32 en 59 allebei af op tientallen en tel die op.",
-          null,
-          "Te weinig — kijk nog eens naar 59: wordt dat 50 of 60?",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Stap 1: rond af op 10",
-              tekst: "32 → **30** (2 = omlaag). 59 → **60** (9 = omhoog).",
-            },
-            {
-              titel: "Stap 2: tel de ronde getallen op",
-              tekst: "30 + 60 = **90**.",
-            },
-            {
-              titel: "Check",
-              tekst: "Echte uitkomst: 32 + 59 = 91. Dat ligt heel dicht bij 90.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "schatten",
-              uitleg: "Snel een ongeveer-antwoord berekenen door eerst af te ronden.",
-            },
-            {
-              woord: "afronden",
-              uitleg: "Een getal vereenvoudigen naar een 'rond' getal.",
-            },
-          ],
-          theorie: "Schatten = eerst afronden, dan rekenen. Zo weet je snel hoe groot het antwoord ongeveer is.",
-          voorbeelden: [
-            {
-              type: "stap",
-              tekst: "Schat 41 + 28 → 40 + 30 = 70. Echt: 69.",
-            },
-            {
-              type: "stap",
-              tekst: "Schat 63 + 17 → 60 + 20 = 80. Echt: 80.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Truc",
-              uitleg: "0, 1, 2, 3, 4 → omlaag. 5, 6, 7, 8, 9 → omhoog.",
-            },
-          ],
-          niveaus: {
-            basis: "30 + 60 = 90.",
-            simpeler: "32 → 30. 59 → 60. Samen 90.",
-            nogSimpeler: "Afronden, dan plus.",
-          },
-        },
-      },
-      {
         q: "Wat betekent **schatten**?",
         options: [
           "Een antwoord bijna goed geven, niet precies",
@@ -1400,12 +1341,6 @@ const steps = [
           "Te veel — rond elk bedrag af op hele euro's en tel ze alle vier op.",
           null,
         ],
-      },
-      {
-        q: "Je koopt **3 schriften** van **€ 1,95** per stuk. Hoeveel betaal je ongeveer?",
-        options: ["€ 6", "€ 5", "€ 4", "€ 8"],
-        answer: 0,
-        wrongHints: [null, "Te weinig — € 1,95 is bijna € 2.", null, "Te veel — reken met € 2 per schrift."],
       },
       {
         q: "Je koopt een tas van **€ 2,95** en een bal van **€ 3,10**. Je betaalt met een briefje van **€ 10**. Hoeveel krijg je ongeveer terug?",

@@ -2104,65 +2104,6 @@ const steps = [
         },
       },
       {
-        q: "Wat legde Sara de volgende dag op Toms tafel?",
-        options: [
-          "Een briefje met 'Bedankt!' erop",
-          "Een halve boterham",
-          "Een appel",
-          "Een nieuwe lunchtrommel",
-        ],
-        answer: 0,
-        wrongHints: [null, "Wat had Sara's moeder de middag ervoor gemaakt?", null, null],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Welk type vraag?",
-              tekst: "Een letterlijke vraag over wat er gebeurt.",
-            },
-            {
-              titel: "Zoek het kernwoord",
-              tekst: "Zoek 'de volgende dag' in de laatste alinea.",
-            },
-            {
-              titel: "Lees terug",
-              tekst: "'De volgende dag legde Sara het briefje op Toms tafel.' Welk briefje? Dat van haar moeder, met 'Bedankt!' en een hartje.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "briefje",
-              uitleg: "Een klein papiertje met een korte boodschap.",
-            },
-            {
-              woord: "de volgende dag",
-              uitleg: "De dag erna.",
-            },
-          ],
-          theorie: "**Letterlijke vragen: zoek-strategie**\n\n1. Wat is het KERNWOORD in de vraag?\n2. Zoek dat woord (of een woord dat hetzelfde betekent) in de tekst.\n3. Het antwoord staat in DEZELFDE zin of de zin erna.\n\nLet op valstrikken: foute opties gebruiken vaak woorden die óók in de tekst staan, maar bij iets anders horen.\n\nSoms moet je één alinea terug lezen. 'Het briefje' verwijst naar het briefje dat al eerder genoemd is.",
-          voorbeelden: [
-            {
-              type: "vinden",
-              tekst: "Laatste alinea: 'legde Sara het briefje op Toms tafel'.",
-            },
-            {
-              type: "terug lezen",
-              tekst: "De alinea ervoor: moeder schreef 'Bedankt!' op een briefje.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "'Het' wijst terug",
-              uitleg: "'Het briefje' betekent: het briefje waar je al over gelezen hebt.",
-            },
-          ],
-          niveaus: {
-            basis: "Sara legde het 'Bedankt!'-briefje op Toms tafel.",
-            simpeler: "Moeder schreef 'Bedankt!' op een briefje. De volgende dag legde Sara dat briefje op Toms tafel.",
-            nogSimpeler: "Briefje = bedankt",
-          },
-        },
-      },
-      {
         q: "Wie schreef waarschijnlijk het briefje 'Graag gedaan' in Sara's etui?",
         options: ["Tom", "Lisa", "Sara's moeder", "Sara zelf"],
         answer: 0,

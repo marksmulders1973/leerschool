@@ -80,49 +80,6 @@ const steps = [
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "Hoe noem je de **ei** in 'klein' ook wel?",
-        options: ["korte ei", "lange ij", "dubbele e", "korte i"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Dat is de naam van de andere schrijfwijze, zoals in 'tijd'.",
-          null,
-          "Kijk naar de twee letters: e en i.",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Twee namen",
-              tekst: "De ei (e + i) heet de korte ei. De ij heet de lange ij.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "korte ei",
-              uitleg: "De ei, zoals in klein, trein en plein.",
-            },
-          ],
-          theorie: "ei = korte ei, ij = lange ij. Ze klinken hetzelfde, maar je schrijft ze anders.",
-          voorbeelden: [
-            {
-              type: "lijst",
-              tekst: "korte ei: klein, trein. Lange ij: tijd, wij.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Waarom kort en lang?",
-              uitleg: "Ezelsbruggetje: de j van ij steekt ver onder de regel uit, dus die lijkt langer.",
-            },
-          ],
-          niveaus: {
-            basis: "klein = korte ei.",
-            simpeler: "In klein schrijf je e + i. Die heet de korte ei.",
-            nogSimpeler: "Korte ei",
-          },
-        },
-      },
-      {
         q: "Welke klank klinkt **hetzelfde** als **au**?",
         options: ["ou", "oe", "aa", "uu"],
         answer: 0,
@@ -953,49 +910,6 @@ const steps = [
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "Hoe schrijf je: wat je over je pasta of patat doet, zoals ketchup?",
-        options: ["saus", "souz", "sauz", "sause"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Bijna — kies nog eens tussen au en ou.",
-          "Hoor je aan het eind een s of een z?",
-          null,
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "saus = au",
-              tekst: "Saus schrijf je met au.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "saus",
-              uitleg: "Iets nats en lekkers bij het eten, zoals tomatensaus.",
-            },
-          ],
-          theorie: "Saus is een au-woord. Meer sauzen: sauzen (met z).",
-          voorbeelden: [
-            {
-              type: "zin",
-              tekst: "Wil je saus op je patat?",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "s aan het eind",
-              uitleg: "Saus eindigt op een s: s-au-s.",
-            },
-          ],
-          niveaus: {
-            basis: "saus = au.",
-            simpeler: "Saus heeft au, niet ou. Met een s aan het eind.",
-            nogSimpeler: "Au",
-          },
-        },
-      },
-      {
         q: "Hoe schrijf je: even rust tussen de lessen?",
         options: ["pauze", "pouze", "pause", "pouse"],
         answer: 0,
@@ -1327,44 +1241,6 @@ const steps = [
         },
       },
       {
-        q: "Hoe schrijf je: het deel van je lichaam tussen je nek en je arm?",
-        options: ["schouder", "schauder", "schouwder", "sgouder"],
-        answer: 0,
-        wrongHints: [null, "Bijna — kies nog eens tussen au en ou.", null, "Kijk naar het begin van het woord."],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "schouder = ou",
-              tekst: "Schouder schrijf je met ou.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "schouder",
-              uitleg: "Deel van je lichaam tussen je nek en je arm.",
-            },
-          ],
-          theorie: "Schouder is een ou-woord, net als oud, koud en goud.",
-          voorbeelden: [
-            {
-              type: "zin",
-              tekst: "Hij legt zijn hand op mijn schouder.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "sch aan het begin",
-              uitleg: "Schouder begint met sch: sch-ou-der.",
-            },
-          ],
-          niveaus: {
-            basis: "schouder = ou.",
-            simpeler: "Schouder heeft ou. Met sch aan het begin.",
-            nogSimpeler: "Ou",
-          },
-        },
-      },
-      {
         q: "'De kinderen ____ een hut van takken.' Welk woord is goed?",
         options: ["bouwen", "bauwen", "bouwe", "bauwe"],
         answer: 0,
@@ -1487,87 +1363,6 @@ const steps = [
             basis: "tijd, jij, prijs.",
             simpeler: "In dat rijtje heeft elk woord ij. De andere rijtjes hebben een ei-woord.",
             nogSimpeler: "Alle drie ij",
-          },
-        },
-      },
-      {
-        q: "Welke zin is helemaal **goed** geschreven?",
-        options: [
-          "De kleine trein rijdt naar het plein.",
-          "De klijne trein rijdt naar het plein.",
-          "De kleine trijn rijdt naar het plein.",
-          "De kleine trein reidt naar het plein.",
-        ],
-        answer: 0,
-        wrongHints: [null, "Kijk goed naar het tweede woord.", null, "Kijk goed naar het werkwoord."],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Elk woord checken",
-              tekst: "Klein, trein en plein hebben ei. Rijdt heeft ij.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "rijdt",
-              uitleg: "Hij rijdt, zij rijdt: van rijden, met ij.",
-            },
-          ],
-          theorie: "ei: klein, trein, plein. ij: rijden, rijdt.",
-          voorbeelden: [
-            {
-              type: "zin",
-              tekst: "De kleine trein rijdt naar het plein.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Woord voor woord",
-              uitleg: "Lees de zin langzaam en check elk woord met ei of ij.",
-            },
-          ],
-          niveaus: {
-            basis: "De kleine trein rijdt naar het plein.",
-            simpeler: "Klein, trein, plein = ei. Rijdt = ij.",
-            nogSimpeler: "Zin 1",
-          },
-        },
-      },
-      {
-        q: "Welke klank schrijf je in **blauw**, **auto** en **augustus**?",
-        options: ["au", "ou", "ei", "ij"],
-        answer: 0,
-        wrongHints: [null, "Klinkt hetzelfde, maar zo schrijf je deze drie niet.", null, null],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "au-woorden",
-              tekst: "Blauw, auto en augustus schrijf je alle drie met au.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "au",
-              uitleg: "De au, zoals in auto.",
-            },
-          ],
-          theorie: "Tip: kleurnamen en woorden met aug- hebben au: blauw, augustus.",
-          voorbeelden: [
-            {
-              type: "lijst",
-              tekst: "blauw, auto, augustus — allemaal au.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Klinkt als ou",
-              uitleg: "Au en ou klinken hetzelfde. Daarom moet je de woorden leren.",
-            },
-          ],
-          niveaus: {
-            basis: "au.",
-            simpeler: "Blauw, auto en augustus schrijf je met au.",
-            nogSimpeler: "Au",
           },
         },
       },

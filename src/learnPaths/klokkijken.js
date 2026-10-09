@@ -505,49 +505,6 @@ const steps = [
         },
       },
       {
-        q: "Hoe schrijf je **7 uur 's ochtends** in 24-uurs format?",
-        options: ["07:00", "19:00", "17:00", "07:30"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Dat is 7 uur 's avonds.",
-          "Dat is 5 uur 's middags.",
-          "Bij een heel uur staan er twee nullen achter de dubbele punt.",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "'s Ochtends: zo laten",
-              tekst: "Voor 12 uur 's middags blijft het uur gewoon zo: 7 uur 's ochtends = 07:00.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "24-uurs format",
-              uitleg: "De klok telt de uren van 00 tot en met 23.",
-            },
-          ],
-          theorie: "'s Ochtends (voor 12 uur) = gewoon het uur. 's Avonds = uur + 12.",
-          voorbeelden: [
-            {
-              type: "tabel",
-              tekst: "7 uur 's ochtends = 07:00. 7 uur 's avonds = 19:00.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Twee nullen",
-              uitleg: "Bij een heel uur staat :00 achter het uur.",
-            },
-          ],
-          niveaus: {
-            basis: "07:00.",
-            simpeler: "'s Ochtends tel je niets op. 7 uur → 07:00.",
-            nogSimpeler: "07:00",
-          },
-        },
-      },
-      {
         q: "Het is **6 uur**. Naar welk cijfer wijst de **kleine** wijzer?",
         options: ["De 6", "De 12", "De 3", "De 9"],
         answer: 0,
@@ -1320,49 +1277,6 @@ const steps = [
         },
       },
       {
-        q: "Het is **20 voor 3**. Op welk cijfer staat de grote wijzer?",
-        options: ["De 8", "De 4", "De 9", "De 10"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Daar staat hij bij 20 óver.",
-          "Daar staat hij bij kwart voor.",
-          "Daar staat hij bij 10 voor.",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "20 voor = :40",
-              tekst: "20 voor 3 = nog 20 minuten tot 3 uur = 2 uur en 40 minuten. 40 minuten → op de 8.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "20 voor",
-              uitleg: "Nog 20 minuten tot het volgende hele uur.",
-            },
-          ],
-          theorie: "Elk cijfer = 5 minuten. Terug vanaf de 12: 11 = 5 voor, 10 = 10 voor, 9 = kwart voor, 8 = 20 voor.",
-          voorbeelden: [
-            {
-              type: "tel",
-              tekst: "12 → 11 → 10 → 9 → 8: vier stapjes terug van 5 = 20 minuten.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Cijfer × 5",
-              uitleg: "8 × 5 = 40 minuten over het uur.",
-            },
-          ],
-          niveaus: {
-            basis: "De 8.",
-            simpeler: "20 minuten vóór het uur = 4 cijfers terug vanaf de 12. Dat is de 8.",
-            nogSimpeler: "8",
-          },
-        },
-      },
-      {
         q: "De grote wijzer staat op de **1**. De kleine wijzer staat net na de **11**. Hoe laat is het?",
         options: ["5 over 11", "5 voor 11", "1 over 11", "5 voor 12"],
         answer: 0,
@@ -1490,49 +1404,6 @@ const steps = [
             basis: "Het uur.",
             simpeler: "Vóór de dubbele punt staat het uur. Erachter de minuten.",
             nogSimpeler: "Uur",
-          },
-        },
-      },
-      {
-        q: "Hoe staan de tijden op een **treinschema** in Nederland?",
-        options: ["In het 24-uurs format", "In het 12-uurs format", "Met AM en PM", "Alleen in hele uren"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Dat zie je vooral in Engelstalige landen.",
-          null,
-          "Treinen vertrekken ook om 14:07 of 09:23.",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Trein = 24 uur",
-              tekst: "In Nederland staan vertrektijden in het 24-uurs format, zoals 18:42.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "treinschema",
-              uitleg: "Een lijst met de tijden waarop treinen vertrekken en aankomen.",
-            },
-          ],
-          theorie: "24-uurs format: geen AM/PM nodig, want 08:00 en 20:00 zijn al verschillend.",
-          voorbeelden: [
-            {
-              type: "voorbeeld",
-              tekst: "Vertrek 07:15, aankomst 08:02.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Waarom?",
-              uitleg: "Met 24 uur is er geen verwarring tussen ochtend en avond.",
-            },
-          ],
-          niveaus: {
-            basis: "24-uurs format.",
-            simpeler: "Op een treinschema staat bijvoorbeeld 19:30. Dat is het 24-uurs format.",
-            nogSimpeler: "24-uurs",
           },
         },
       },

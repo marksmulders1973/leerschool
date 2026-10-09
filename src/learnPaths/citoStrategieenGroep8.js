@@ -416,22 +416,6 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Gaat een stijlfiguur over getallen, of over hoe iets geschreven is?", null, null],
       },
-      {
-        q: "Hoe weet je welke Doorstroomtoets jij maakt?",
-        options: [
-          "Je school vertelt het",
-          "Je kiest het zelf thuis",
-          "Alle scholen maken dezelfde",
-          "Dat hoor je pas na de toets",
-        ],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Wie kiest welke toets jullie klas maakt?",
-          null,
-          "Is er maar één aanbieder van de Doorstroomtoets?",
-        ],
-      },
     ],
   },
   {
@@ -999,58 +983,6 @@ const steps = [
             basis: "Pearl Harbor hoort bij WO2.",
             simpeler: "Pearl Harbor was in de Tweede Wereldoorlog. De vraag gaat over de Eerste. Dus kan het niet kloppen.",
             nogSimpeler: "WO2, dus weg",
-          },
-        },
-      },
-      {
-        q: "Kun je de eliminatie-trucjes gebruiken **in plaats van** leren?",
-        options: [
-          "Nee, eerst denken en dan eliminatie als hulp",
-          "Ja, dan hoef je niets meer te leren",
-          "Ja, want de langste optie is altijd goed",
-          "Nee, je mag ze tijdens de toets niet gebruiken",
-        ],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Werkt een trucje als je helemaal niets van het onderwerp weet?",
-          null,
-          "Klopt de lange optie echt altijd?",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Hulpmiddel",
-              tekst: "De trucjes helpen je, maar ze vervangen geen kennis.",
-            },
-            {
-              titel: "Volgorde",
-              tekst: "Eerst nadenken met wat je weet. Dan pas de trucjes.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "hulpmiddel",
-              uitleg: "Iets wat je helpt, maar het werk niet voor je doet.",
-            },
-          ],
-          theorie: "Eliminatie werkt het best als je ook iets van het onderwerp weet. Dan kun je foute opties herkennen.",
-          voorbeelden: [
-            {
-              type: "kennis",
-              tekst: "Weet je dat Pearl Harbor bij WO2 hoort? Dan kun je hem wegstrepen bij een vraag over WO1.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Niet altijd",
-              uitleg: "Ook de trucjes ('lange optie is vaak goed') kloppen niet altijd.",
-            },
-          ],
-          niveaus: {
-            basis: "Trucjes helpen, leren blijft nodig.",
-            simpeler: "Wegstrepen werkt alleen als je iets weet. Dus blijf leren en gebruik de trucjes als hulp.",
-            nogSimpeler: "Hulp, geen vervanging",
           },
         },
       },

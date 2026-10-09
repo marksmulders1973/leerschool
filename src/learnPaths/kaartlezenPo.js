@@ -263,44 +263,6 @@ const steps = [
           },
         },
       },
-      {
-        q: "Wat betekent **wit** op een kaart meestal?",
-        options: ["Sneeuw", "Water", "Bos", "Snelweg"],
-        answer: 0,
-        wrongHints: [null, "Water heeft een andere kleur.", null, "Welke kleur hebben hoofdwegen?"],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Wit = sneeuw",
-              tekst: "Wit op een kaart is meestal sneeuw (hoog in de bergen) of een stuk waar geen informatie over is.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "kleurcode",
-              uitleg: "Een vaste kleur met een vaste betekenis op de kaart.",
-            },
-          ],
-          theorie: "Kleuren: blauw = water, groen = laagland, geel/bruin = bergen, wit = sneeuw of geen info, rood = hoofdwegen.",
-          voorbeelden: [
-            {
-              type: "tabel",
-              tekst: "Wit = sneeuw/geen info. Blauw = water. Rood = hoofdweg.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Toets-tip",
-              uitleg: "Twijfel je over een kleur? Kijk in de legenda.",
-            },
-          ],
-          niveaus: {
-            basis: "Sneeuw.",
-            simpeler: "Wit betekent meestal sneeuw, of dat er over dat stuk niets bekend is.",
-            nogSimpeler: "Sneeuw",
-          },
-        },
-      },
     ],
   },
 
@@ -845,44 +807,6 @@ const steps = [
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
-      {
-        q: "Wat betekent een **anker** op een kaart?",
-        options: ["Haven", "Vliegveld", "Kerk", "Camping"],
-        answer: 0,
-        wrongHints: [null, "Daar hoort een vliegtuigje bij.", null, "Waar liggen schepen stil?"],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Anker = haven",
-              tekst: "Een anker gooi je uit bij een schip. Daarom betekent een anker op een kaart: haven.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "haven",
-              uitleg: "Plek waar schepen aanleggen.",
-            },
-          ],
-          theorie: "Symbolen lijken op het ding zelf: anker = haven, vliegtuig = vliegveld, boompje = bos.",
-          voorbeelden: [
-            {
-              type: "tabel",
-              tekst: "Anker = haven. Vliegtuig = vliegveld. Boompje = bos.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Legenda",
-              uitleg: "Weet je het niet zeker? Kijk in de legenda.",
-            },
-          ],
-          niveaus: {
-            basis: "Haven.",
-            simpeler: "Een anker hoort bij een schip. Schepen liggen in een haven.",
-            nogSimpeler: "Haven",
-          },
-        },
-      },
     ],
   },
 

@@ -899,48 +899,6 @@ const steps = [
           },
         },
       },
-      {
-        q: "Welke feestdag valt **elk jaar op een andere datum**?",
-        options: ["Pasen", "Bevrijdingsdag", "Eerste kerstdag", "Nieuwjaarsdag"],
-        answer: 0,
-        wrongHints: [null, "Die is altijd op 5 mei.", null, null],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Vaste data",
-              tekst: "Nieuwjaarsdag (1 januari), Bevrijdingsdag (5 mei) en Eerste kerstdag (25 december) hebben een vaste datum.",
-            },
-            {
-              titel: "Pasen",
-              tekst: "Pasen hangt af van de volle maan. Daarom verandert de datum elk jaar.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "vaste datum",
-              uitleg: "Elk jaar op dezelfde dag van de maand.",
-            },
-          ],
-          theorie: "Pasen = eerste zondag na de eerste volle maan na 21 maart.",
-          voorbeelden: [
-            {
-              type: "stap",
-              tekst: "Pasen valt in maart of april.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Speciale data",
-              uitleg: "De meeste feestdagen staan vast, Pasen niet.",
-            },
-          ],
-          niveaus: {
-            basis: "Pasen.",
-            simpeler: "Kerst, Nieuwjaar en Bevrijdingsdag zijn elk jaar op dezelfde datum. Pasen niet.",
-            nogSimpeler: "Pasen",
-          },
-        },
-      },
     ],
   },
 

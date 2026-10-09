@@ -573,53 +573,6 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel **cm²** is **300 mm²**?",
-        options: ["3 cm²", "30 cm²", "30 000 cm²", "0,3 cm²"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Bij oppervlakte is de stap tussen twee maten niet 10. Hoeveel dan?",
-          null,
-          "Ga je naar een grotere maat? Wordt het getal dan groter of kleiner?",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Hoeveel mm² is 1 cm²?",
-              tekst: "Een vierkantje van 1 cm bij 1 cm is 10 mm bij 10 mm. Dat is 100 mm².",
-            },
-            {
-              titel: "Delen door 100",
-              tekst: "Van mm² naar cm² ga je naar een grotere maat. Deel dus door 100.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "vierkante centimeter",
-              uitleg: "Een vierkantje van 1 cm bij 1 cm. Je schrijft het als cm².",
-            },
-          ],
-          theorie: "Bij **oppervlakte** zit tussen twee maten een factor **100**, niet 10. Dus **1 cm² = 100 mm²**.",
-          voorbeelden: [
-            {
-              type: "thuis",
-              tekst: "Een postzegel van 2 cm bij 2 cm is 4 cm², dat is 400 mm².",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "1 cm² = 100 mm²",
-              uitleg: "mm² naar cm²: delen door 100.",
-            },
-          ],
-          niveaus: {
-            basis: "300 ÷ 100 = 3 cm².",
-            simpeler: "In 1 cm² passen 100 mm². Hoe vaak past 100 in 300?",
-            nogSimpeler: "Honderd mm² is één cm². Hoeveel keer honderd is driehonderd?",
-          },
-        },
-      },
-      {
         q: "Welke rechthoek heeft de **grootste oppervlakte**?",
         options: ["5 cm × 5 cm", "8 cm × 3 cm", "10 cm × 2 cm", "12 cm × 2 cm"],
         answer: 0,
@@ -894,53 +847,6 @@ const steps = [
             basis: "10 × 6 × 5 = 300 cm³.",
             simpeler: "10 × 6 = 60. Daarna 60 × 5 = 300 cm³.",
             nogSimpeler: "Hoeveel is 10 keer 6? En dat nog eens keer 5?",
-          },
-        },
-      },
-      {
-        q: "Hoeveel **ml** is **1,5 L**?",
-        options: ["1500 ml", "150 ml", "15 ml", "15 000 ml"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Hoeveel milliliter gaan er in één liter?",
-          null,
-          "Wordt het getal groter of kleiner als je naar een kleinere maat gaat?",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "1 liter = 1000 ml",
-              tekst: "In één liter gaan duizend milliliter.",
-            },
-            {
-              titel: "Keer 1000",
-              tekst: "Van liter naar milliliter doe je het getal keer 1000.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "milliliter",
-              uitleg: "Een heel kleine inhoudsmaat: 1000 milliliter is 1 liter.",
-            },
-          ],
-          theorie: "**1 L = 1000 ml**. Van liter naar milliliter: **× 1000**. De komma schuift drie plaatsen naar rechts.",
-          voorbeelden: [
-            {
-              type: "thuis",
-              tekst: "Een grote fles water van 1,5 L bevat 1500 ml.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "1 L = 1000 ml",
-              uitleg: "Liter naar milliliter: keer 1000.",
-            },
-          ],
-          niveaus: {
-            basis: "1,5 × 1000 = 1500 ml.",
-            simpeler: "1 L = 1000 ml en een halve liter = 500 ml. Samen 1500 ml.",
-            nogSimpeler: "Eén liter is duizend milliliter. Hoeveel is anderhalve liter?",
           },
         },
       },

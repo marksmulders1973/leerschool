@@ -673,25 +673,6 @@ const steps = [
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "In een geschiedenisboek staat: de **XVII**e eeuw. Welke eeuw is dat?",
-        options: ["17e eeuw", "16e eeuw", "12e eeuw", "22e eeuw"],
-        answer: 0,
-        wrongHints: [null, "Staat de I hier vóór of ná de V?", "Vergeet de V niet.", "Hoeveel X'en staan er?"],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "10 + 5 + 1 + 1",
-              tekst: "X = 10, V = 5, I = 1, I = 1. Alles optellen: 17. Het is dus de 17e eeuw.",
-            },
-          ],
-          niveaus: {
-            basis: "XVII = 10 + 5 + 2 = 17.",
-            simpeler: "Lees stuk voor stuk: X, dan V, dan twee I'tjes. Alles staat kleiner ná groter.",
-            nogSimpeler: "10 + 5 + 1 + 1 = ?",
-          },
-        },
-      },
-      {
         q: "Welk Romeins cijfer staat op een klok op de plek van **11**?",
         options: ["XI", "IX", "XII", "X"],
         answer: 0,

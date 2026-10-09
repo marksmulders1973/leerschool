@@ -332,25 +332,6 @@ const steps = [
           },
         },
       },
-      {
-        q: "Hoe schrijf je het woord voor waarmee je hoort: 👂?",
-        options: ["oor", "or", "oer", "oorr"],
-        answer: 0,
-        wrongHints: [null, "Luister: is de o kort of lang?", null, "Daar staan te veel letters."],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Lange oo",
-              tekst: "Je hoort een **lange oo**: oo-r. Dus twee o's: **oor**.",
-            },
-          ],
-          niveaus: {
-            basis: "Lange oo = 2 letters: oor.",
-            simpeler: "ooooor → oo!",
-            nogSimpeler: "oor",
-          },
-        },
-      },
     ],
   },
 

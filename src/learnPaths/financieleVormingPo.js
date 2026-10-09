@@ -628,61 +628,6 @@ const steps = [
         },
       },
       {
-        q: "Tot hoe laat mag iemand van **16 of 17 jaar** in Nederland werken?",
-        options: ["Tot 23.00 uur", "Tot 18.00 uur", "Tot 20.00 uur", "Tot 2.00 uur 's nachts"],
-        answer: 0,
-        wrongHints: [
-          null,
-          "Mogen 16- en 17-jarigen ook 's avonds werken?",
-          null,
-          "Mag je als tiener midden in de nacht werken?",
-        ],
-        uitlegPad: {
-          stappen: [
-            {
-              titel: "Regels voor werk",
-              tekst: "In Nederland zijn er regels hoe lang en hoe laat jongeren mogen werken.",
-            },
-            {
-              titel: "16 en 17 jaar",
-              tekst: "Vanaf 16 jaar mag je ook in het weekend en 's avonds werken. Maar niet na **23.00 uur**, en hoogstens 9 uur per dag.",
-            },
-            {
-              titel: "Jonger",
-              tekst: "Met 15 jaar mag je nog geen avondwerk doen. Met 13 en 14 jaar alleen licht werk.",
-            },
-          ],
-          woorden: [
-            {
-              woord: "avondwerk",
-              uitleg: "Werken in de avond.",
-            },
-            {
-              woord: "licht werk",
-              uitleg: "Makkelijk werk, zoals de krant bezorgen of oppassen.",
-            },
-          ],
-          theorie: "Werk en leeftijd: 13-14 jaar licht werk, 15 jaar geen avondwerk, 16-17 jaar ook avondwerk maar niet na 23.00 uur.",
-          voorbeelden: [
-            {
-              type: "stap",
-              tekst: "Sanne is 17 en werkt in een snackbar. Om 23.00 uur moet zij stoppen.",
-            },
-          ],
-          basiskennis: [
-            {
-              onderwerp: "Truc",
-              uitleg: "16-17 jaar: avondwerk mag, tot 23.00 uur.",
-            },
-          ],
-          niveaus: {
-            basis: "Tot 23.00 uur.",
-            simpeler: "Met 16 of 17 jaar mag je 's avonds werken, maar na 23.00 uur niet meer.",
-            nogSimpeler: "23.00 uur.",
-          },
-        },
-      },
-      {
         q: "Je gooit een lege plastic fles met statiegeld in de **prullenbak**. Wat gebeurt er met het statiegeld?",
         options: [
           "Je krijgt het niet terug",
