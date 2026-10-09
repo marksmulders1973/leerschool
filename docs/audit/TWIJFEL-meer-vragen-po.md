@@ -343,3 +343,16 @@ Gevonden door de schrijvers van Q12a (8 okt 2026) terwijl ze de bestaande vragen
 
 - stap 0 · «Wat is **brutowinst**?» — Het woord 'brutowinst' komt niet voor in de uitleg van stap 0 (die spreekt alleen van 'winst'); voor groep 6 een onbekende vakterm als kern van de vraag. Voorstel: 'Wat is **winst**?'.
 - stap 0 · «Je hebt **€15** voor een artikel betaald (inkoop). Je wilt minstens **€3 winst**. Wat is de laagste verkoopprijs die dat haalt?» — Terugrekenen naar de verkoopprijs wordt pas in stap 1 uitgelegd, niet in stap 0. Past beter in stap 1.
+
+## Aanvulling vervolgsessie (9 okt 2026)
+
+Gevonden door de nakijkers van de vervolgsessie in de **stap-uitleg of bestaande vragen** (niet aangepast; de opdracht was alleen toevoegen).
+
+- **spelling-ei-ij-au-ou, stap 1 (Woorden met EI):** de tabel bevat fouten: 'hein (naam)', 'reine', 'meisje — meidje', 'vlees' tussen de ei-woorden en 'trein' twee keer.
+- **spelling-ei-ij-au-ou, stap 4 (au):** de au-tabel noemt 'vrouw' (dat is ou), 'blauwen', twee keer 'flauw', en een regel 'kleurnamen hebben au' die niet klopt (goud, rood, bruin).
+- **tafels-po, stap 'Makkelijke tafels — 2, 5 en 10':** '5 × 8 = 5 × 10 ÷ 2' moet '8 × 10 ÷ 2' zijn.
+- **klokkijken:** de stap noemt het Latijnse 'ante meridiem' voor groep 3-5 (regel: geen Latijn als kern in groep 3-6).
+- **breuken-po, stap-uitleg:** 'twee-derde' en 'drie-kwart' met koppelteken; het is 'tweederde' en 'driekwart'.
+- **spreekwoorden-uitdrukkingen-po, stap 0:** 'is het grote niet weert' moet 'weerd' zijn.
+- **schrijven-teksten-po, stap 2:** 'kern-zin' moet 'kernzin' zijn (ook in de stap-uitleg).
+- **Nieuwkomers-rekenpaden (alle bestaande vragen):** `rekenReden()` in `src/learnPaths/nieuwkomersFoutUitleg.js` zet bij elk fout antwoord automatisch een uitleg als 'Nee, 7 is één te weinig' voor de hint. Daarmee ligt na één fout het antwoord vast. Dat is een ontwerpkeuze (25 sep, 'Nee, <waarom niet>'), maar het botst met de regel 'hints geven het antwoord niet weg'. Mark: bewust zo laten?
