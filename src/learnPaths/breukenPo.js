@@ -92,6 +92,270 @@ const steps = [
           niveaus: { basis: "4/6.", simpeler: "Teller (boven) = wat je eet = 4. Noemer (onder) = totaal = 6. = 4/6", nogSimpeler: "4/6" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "In de breuk **2/5** — welk getal is de **noemer**?",
+        options: ["5", "2", "7", "3"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat getal staat bovenaan. Hoe heet het getal bovenaan?",
+          null,
+          "Je hoeft niet te rekenen — de noemer staat gewoon in de breuk.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Onder = noemer",
+              tekst: "In 2/5 staat 5 onderaan. Dat is de noemer.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "noemer",
+              uitleg: "Het getal onderaan: in hoeveel gelijke stukken is het verdeeld?",
+            },
+          ],
+          theorie: "Teller = bovenaan (hoeveel stukken neem je). Noemer = onderaan (in hoeveel stukken is het verdeeld).",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "In 3/4 is 4 de noemer en 3 de teller.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Teller en noemer",
+              uitleg: "Boven = teller, onder = noemer.",
+            },
+          ],
+          niveaus: {
+            basis: "De noemer is 5.",
+            simpeler: "2/5: de 2 staat boven, de 5 staat onder. Onder = noemer = 5.",
+            nogSimpeler: "5",
+          },
+        },
+      },
+      {
+        q: "Wat vertelt de **teller** van een breuk?",
+        options: [
+          "Hoeveel stukken je neemt",
+          "In hoeveel gelijke stukken het verdeeld is",
+          "Hoeveel hele pizza's er zijn",
+          "Hoe zwaar elk stuk is",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat vertelt het getal onderaan — hoe heet dat getal?",
+          null,
+          "Een breuk gaat over aantallen stukken, niet over gewicht.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Boven = teller",
+              tekst: "De teller staat bovenaan en telt de stukken die je neemt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "teller",
+              uitleg: "Het getal bovenaan: hoeveel stukken neem je?",
+            },
+          ],
+          theorie: "Teller (boven) = hoeveel stukken je neemt. Noemer (onder) = in hoeveel gelijke stukken het verdeeld is.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "3/4 van een pizza: 3 stukken genomen (teller), pizza in 4 stukken (noemer).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Teller telt",
+              uitleg: "Teller lijkt op 'tellen': je telt de stukken die je hebt.",
+            },
+          ],
+          niveaus: {
+            basis: "De teller zegt hoeveel stukken je neemt.",
+            simpeler: "Bij 3/4 heb je 3 stukken. Die 3 is de teller.",
+            nogSimpeler: "Hoeveel stukken je neemt",
+          },
+        },
+      },
+      {
+        q: "Welke breuk is **precies 1 geheel**?",
+        options: ["5/5", "4/5", "1/5", "5/10"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dan mis je nog een stukje van het geheel.",
+          "Dat is maar één stukje van de vijf.",
+          "Tel de stukken: hoeveel van de 10 heb je?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Alle stukken = 1",
+              tekst: "5/5 betekent: 5 van de 5 stukken. Dat is alles = 1 geheel.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "geheel",
+              uitleg: "Het hele ding, alle stukken samen.",
+            },
+          ],
+          theorie: "Als teller en noemer gelijk zijn, heb je alle stukken. Dat is 1 geheel.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "4/4 = 1, 3/3 = 1, 10/10 = 1.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Teller = noemer",
+              uitleg: "Gelijke getallen boven en onder = 1.",
+            },
+          ],
+          niveaus: {
+            basis: "5/5 = 1 geheel.",
+            simpeler: "Een taart in 5 stukken. Heb je alle 5 stukken? Dan heb je de hele taart: 5/5.",
+            nogSimpeler: "5/5",
+          },
+        },
+      },
+      {
+        q: "Welke breuk is een **echte breuk** (kleiner dan 1 geheel)?",
+        options: ["2/3", "3/2", "3/3", "5/3"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is de teller hier kleiner of groter dan de noemer?",
+          "Dat is precies 1 geheel, niet kleiner.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Teller < noemer",
+              tekst: "Bij 2/3 is de teller (2) kleiner dan de noemer (3). Dus kleiner dan 1.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "echte breuk",
+              uitleg: "Een breuk waarbij de teller kleiner is dan de noemer.",
+            },
+          ],
+          theorie: "Echte breuk: teller < noemer (kleiner dan 1). Onechte breuk: teller ≥ noemer (1 of meer).",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "3/4 en 1/2 zijn echte breuken. 4/4 en 7/4 niet.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Vergelijk boven en onder",
+              uitleg: "Is het getal boven kleiner dan onder? Dan is het minder dan 1.",
+            },
+          ],
+          niveaus: {
+            basis: "2/3 is een echte breuk.",
+            simpeler: "2 stukken van de 3. Je hebt niet alles, dus minder dan 1.",
+            nogSimpeler: "2/3",
+          },
+        },
+      },
+      {
+        q: "Een taart is in **5 gelijke stukken** gesneden. Je eet **1 stuk**. Welk deel van de taart eet je?",
+        options: ["1/5", "5/1", "1/4", "4/5"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Welk getal hoort onderaan: wat je eet of het totaal aantal stukken?",
+          null,
+          "Dat is het deel dat overblijft, niet wat je eet.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Teller en noemer",
+              tekst: "Je eet 1 stuk (teller). De taart heeft 5 stukken (noemer). Dus 1/5.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "een vijfde",
+              uitleg: "1/5: één van de vijf gelijke stukken.",
+            },
+          ],
+          theorie: "Teller = stukken die je neemt. Noemer = alle stukken samen.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Pizza in 4 stukken, je eet 1: dat is 1/4.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Noemer = totaal",
+              uitleg: "Onderaan staat altijd het totaal aantal gelijke stukken.",
+            },
+          ],
+          niveaus: {
+            basis: "Je eet 1/5 van de taart.",
+            simpeler: "1 stuk van de 5 stukken = 1/5.",
+            nogSimpeler: "1/5",
+          },
+        },
+      },
+      {
+        q: "Hoeveel **hele** dingen is **10/5**?",
+        options: ["2", "5", "10", "15"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoeveel stukken van een vijfde passen er in één geheel?",
+          "Dat is het aantal stukken, niet het aantal hele.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "5 stukken = 1 geheel",
+              tekst: "5/5 = 1. 10/5 = twee keer 5/5 = 2.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "onechte breuk",
+              uitleg: "Een breuk waarbij de teller groter of gelijk is aan de noemer: 1 geheel of meer.",
+            },
+          ],
+          theorie: "Hoeveel hele: deel de teller door de noemer. 10 ÷ 5 = 2.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "6/3 = 6 ÷ 3 = 2 hele dingen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Delen",
+              uitleg: "Teller ÷ noemer = hoeveel hele.",
+            },
+          ],
+          niveaus: {
+            basis: "10/5 = 2 hele.",
+            simpeler: "Elke 5 stukken is 1 geheel. 10 stukken = 2 keer 5 = 2 hele.",
+            nogSimpeler: "2",
+          },
+        },
+      },
     ],
   },
 
@@ -139,6 +403,88 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "1/4 van 24 = 6. 2/4 = 12. 3/4 = 18. 4/4 = 24." }],
           basiskennis: [{ onderwerp: "Tafel van 4", uitleg: "24÷4 = 6 (uit tafel van 6: 4×6=24)." }],
           niveaus: { basis: "18 leerlingen.", simpeler: "1/4 van 24 = 24÷4 = 6. Drie-kwart = 3×6 = 18.", nogSimpeler: "18" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**1/4 kg** = hoeveel gram?",
+        options: ["250 g", "25 g", "400 g", "500 g"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een kilo is 1000 gram. Klopt dit als je die in 4 stukken deelt?",
+          null,
+          "Dat is een halve kilo.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "1000 ÷ 4",
+              tekst: "1 kg = 1000 g. Een kwart = 1000 ÷ 4 = 250 g.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kg",
+              uitleg: "Kilogram: 1 kg = 1000 gram.",
+            },
+          ],
+          theorie: "Eerst omrekenen naar gram (1 kg = 1000 g), dan delen door de noemer.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "1/2 kg = 1000 ÷ 2 = 500 g.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "1 kg = 1000 g",
+              uitleg: "Onthoud: kilo naar gram = ×1000.",
+            },
+          ],
+          niveaus: {
+            basis: "250 gram.",
+            simpeler: "1000 gram in 4 gelijke stukken: 1000 ÷ 4 = 250.",
+            nogSimpeler: "250 g",
+          },
+        },
+      },
+      {
+        q: "Wat betekent **een honderdste**?",
+        options: ["1/100", "100/1", "1/10", "10/100"],
+        answer: 0,
+        wrongHints: [null, "Andersom — welk getal hoort onderaan?", "Dat is een tiende.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Honderd stukken",
+              tekst: "Een honderdste = 1 stuk van de 100 gelijke stukken = 1/100.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "honderdste",
+              uitleg: "1/100: een van de honderd gelijke stukken.",
+            },
+          ],
+          theorie: "Het woord achter het getal (tiende, honderdste) zegt de noemer.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Een tiende = 1/10. Een honderdste = 1/100.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Woord → noemer",
+              uitleg: "-tiende = 10 onder, -honderdste = 100 onder.",
+            },
+          ],
+          niveaus: {
+            basis: "1/100.",
+            simpeler: "Iets in 100 gelijke stukjes. Eén stukje = 1/100.",
+            nogSimpeler: "1/100",
+          },
         },
       },
     ],
@@ -190,6 +536,260 @@ const steps = [
           niveaus: { basis: "3/4.", simpeler: "9 en 12 beide ÷3: 9÷3=3, 12÷3=4 → 3/4.", nogSimpeler: "3/4" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**10/15** zo ver mogelijk vereenvoudigd?",
+        options: ["2/3", "1/3", "3/5", "5/3"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is 10/15 meer of minder dan de helft?",
+          null,
+          "Andersom — dan wordt het meer dan 1.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Deel door 5",
+              tekst: "10 ÷ 5 = 2 en 15 ÷ 5 = 3. Dus 2/3.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vereenvoudigen",
+              uitleg: "Teller en noemer door hetzelfde getal delen.",
+            },
+          ],
+          theorie: "Zoek het grootste getal waar teller én noemer allebei door kunnen.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "6/9 → ÷ 3 → 2/3.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Beide delen",
+              uitleg: "Altijd teller én noemer door hetzelfde getal.",
+            },
+          ],
+          niveaus: {
+            basis: "2/3.",
+            simpeler: "10 en 15 kun je allebei door 5 delen: 2 en 3. Dus 2/3.",
+            nogSimpeler: "2/3",
+          },
+        },
+      },
+      {
+        q: "**14/16** zo ver mogelijk vereenvoudigd?",
+        options: ["7/8", "3/4", "7/9", "2/3"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Deel 14 en 16 allebei door 2. Wat krijg je?",
+          "Heb je de noemer ook door hetzelfde getal gedeeld?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Deel door 2",
+              tekst: "14 ÷ 2 = 7 en 16 ÷ 2 = 8. Dus 7/8.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "gelijke breuk",
+              uitleg: "Ziet er anders uit, maar is even groot.",
+            },
+          ],
+          theorie: "Deel teller én noemer door hetzelfde getal. 7 en 8 kun je niet verder delen.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "6/8 → ÷ 2 → 3/4.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Even getallen",
+              uitleg: "Twee even getallen kun je altijd door 2 delen.",
+            },
+          ],
+          niveaus: {
+            basis: "7/8.",
+            simpeler: "14 en 16 zijn allebei even. Deel door 2: 7/8.",
+            nogSimpeler: "7/8",
+          },
+        },
+      },
+      {
+        q: "Welke breuk is **gelijk aan 1/3**?",
+        options: ["3/9", "3/6", "1/6", "2/3"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Deel teller en noemer eens door 3. Wat krijg je?",
+          "Een zesde is kleiner dan een derde.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Terugrekenen",
+              tekst: "3/9 → ÷ 3 → 1/3. Dus gelijk.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "gelijke breuken",
+              uitleg: "Breuken die er anders uitzien maar even groot zijn.",
+            },
+          ],
+          theorie: "Vereenvoudig elke optie en kijk welke 1/3 wordt.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "1/3 = 2/6 = 3/9 = 4/12.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Zelfde getal",
+              uitleg: "Teller en noemer keer hetzelfde getal geeft een gelijke breuk.",
+            },
+          ],
+          niveaus: {
+            basis: "3/9 = 1/3.",
+            simpeler: "1/3 keer 3 boven en onder: 3/9.",
+            nogSimpeler: "3/9",
+          },
+        },
+      },
+      {
+        q: "Je wilt **20/30** in één stap zo ver mogelijk vereenvoudigen. Door welk getal deel je teller én noemer?",
+        options: ["10", "5", "2", "3"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat mag, maar dan ben je nog niet klaar. Kan het met een groter getal?",
+          "Dat mag, maar dan moet je nog verder. Zoek een groter getal.",
+          "Kun je 20 door dit getal delen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Grootste deler",
+              tekst: "20 en 30 kun je allebei door 10 delen: 2/3.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "grootste gemeenschappelijke deler",
+              uitleg: "Het grootste getal waar teller én noemer allebei door kunnen.",
+            },
+          ],
+          theorie: "Met de grootste gemeenschappelijke deler ben je in één stap klaar.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "12/18 → ÷ 6 → 2/3 in één stap.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Nullen",
+              uitleg: "Eindigen beide op 0? Dan kun je door 10 delen.",
+            },
+          ],
+          niveaus: {
+            basis: "Door 10.",
+            simpeler: "20 ÷ 10 = 2 en 30 ÷ 10 = 3. Dus 2/3 in één stap.",
+            nogSimpeler: "10",
+          },
+        },
+      },
+      {
+        q: "Sanne schrijft: **6/9 = 2/9**. Wat ging er mis?",
+        options: [
+          "Ze deelde alleen de teller",
+          "Ze deelde alleen de noemer",
+          "Ze deelde door 2",
+          "Ze telde teller en noemer op",
+        ],
+        answer: 0,
+        wrongHints: [null, "Kijk naar de 9 onderaan. Is die veranderd?", null, "Waar zie je een optelling?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Beide delen",
+              tekst: "6 ÷ 3 = 2, maar de 9 moet ook ÷ 3 = 3. Goed is 6/9 = 2/3.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vereenvoudigen",
+              uitleg: "Teller én noemer door hetzelfde getal delen.",
+            },
+          ],
+          theorie: "Veel-voorkomende fout: alleen de teller of alleen de noemer delen. Dan klopt de breuk niet meer.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "8/12 → ÷ 4 → 2/3 (boven én onder gedeeld).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Altijd beide",
+              uitleg: "Wat je met de teller doet, doe je ook met de noemer.",
+            },
+          ],
+          niveaus: {
+            basis: "Ze deelde alleen de teller.",
+            simpeler: "De 6 werd 2 (gedeeld door 3), maar de 9 bleef 9. De noemer moest ook gedeeld worden.",
+            nogSimpeler: "Alleen de teller",
+          },
+        },
+      },
+      {
+        q: "**25/100** zo ver mogelijk vereenvoudigd?",
+        options: ["1/4", "1/5", "2/5", "1/2"],
+        answer: 0,
+        wrongHints: [null, "Hoe vaak past 25 in 100?", null, "50/100 is de helft. Is 25/100 ook de helft?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Deel door 25",
+              tekst: "25 ÷ 25 = 1 en 100 ÷ 25 = 4. Dus 1/4.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vereenvoudigen",
+              uitleg: "Teller en noemer door hetzelfde getal delen.",
+            },
+          ],
+          theorie: "Kijk of de teller precies in de noemer past. Dan wordt de teller 1.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "10/100 → ÷ 10 → 1/10.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "25 × 4 = 100",
+              uitleg: "4 keer 25 is 100.",
+            },
+          ],
+          niveaus: {
+            basis: "1/4.",
+            simpeler: "25 past 4 keer in 100. Dus 25/100 = 1/4, een kwart.",
+            nogSimpeler: "1/4",
+          },
+        },
+      },
     ],
   },
 
@@ -239,6 +839,196 @@ const steps = [
           niveaus: { basis: "1/2.", simpeler: "5/6 - 2/6 = 3/6. Vereenvoudig: 3 en 6 beide ÷3 → 1/2.", nogSimpeler: "1/2" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**1/2 + 1/5** = ?",
+        options: ["7/10", "2/7", "2/10", "1/7"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Mag je de noemers zomaar optellen?",
+          "Maak eerst gelijke noemers: hoeveel tienden is 1/2?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Gelijke noemer 10",
+              tekst: "1/2 = 5/10 en 1/5 = 2/10.",
+            },
+            {
+              titel: "Optellen",
+              tekst: "5/10 + 2/10 = 7/10.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "gelijknamig maken",
+              uitleg: "Breuken dezelfde noemer geven.",
+            },
+          ],
+          theorie: "Ongelijke noemers? Eerst gelijknamig maken. Bij 2 en 5 is dat noemer 10 (2 × 5).",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "1/3 + 1/2 = 2/6 + 3/6 = 5/6.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Noemer 10",
+              uitleg: "Zowel 2 als 5 passen in 10.",
+            },
+          ],
+          niveaus: {
+            basis: "7/10.",
+            simpeler: "1/2 = 5/10. 1/5 = 2/10. Samen 7/10.",
+            nogSimpeler: "7/10",
+          },
+        },
+      },
+      {
+        q: "**1/3 + 1/4** = ?",
+        options: ["7/12", "2/7", "2/12", "1/12"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Tel je de noemers op? Maak eerst gelijke noemers.",
+          "Hoeveel twaalfden is 1/3? En 1/4?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Gelijke noemer 12",
+              tekst: "1/3 = 4/12 en 1/4 = 3/12.",
+            },
+            {
+              titel: "Optellen",
+              tekst: "4/12 + 3/12 = 7/12.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "gemeenschappelijke noemer",
+              uitleg: "Een noemer waar beide noemers in passen.",
+            },
+          ],
+          theorie: "Bij 3 en 4 is de gemeenschappelijke noemer 12 (3 × 4).",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "1/2 + 1/4 = 2/4 + 1/4 = 3/4.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "3 × 4 = 12",
+              uitleg: "12 is deelbaar door 3 én door 4.",
+            },
+          ],
+          niveaus: {
+            basis: "7/12.",
+            simpeler: "1/3 = 4/12. 1/4 = 3/12. 4 + 3 = 7, dus 7/12.",
+            nogSimpeler: "7/12",
+          },
+        },
+      },
+      {
+        q: "**3/4 − 1/2** = ?",
+        options: ["1/4", "2/2", "1/2", "2/6"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je trok teller van teller en noemer van noemer af. Mag dat?",
+          "Hoeveel kwarten is 1/2? Haal dat eens van 3/4 af.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Gelijke noemer 4",
+              tekst: "1/2 = 2/4.",
+            },
+            {
+              titel: "Aftrekken",
+              tekst: "3/4 − 2/4 = 1/4.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "gelijknamig maken",
+              uitleg: "Breuken dezelfde noemer geven.",
+            },
+          ],
+          theorie: "Eerst gelijke noemers, dan pas de tellers aftrekken.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "1/2 + 1/4: 1/2 = 2/4, dus 2/4 + 1/4 = 3/4.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "1/2 = 2/4",
+              uitleg: "Een half is twee kwart.",
+            },
+          ],
+          niveaus: {
+            basis: "1/4.",
+            simpeler: "3 kwart min 2 kwart (= een half) = 1 kwart.",
+            nogSimpeler: "1/4",
+          },
+        },
+      },
+      {
+        q: "Tim rekent: **2/6 + 3/6 = 5/12**. Wat deed hij fout?",
+        options: [
+          "Hij telde de noemers ook op",
+          "Hij telde de tellers niet op",
+          "Hij vergat te vereenvoudigen",
+          "Hij trok af in plaats van op te tellen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk naar de teller van zijn antwoord: is 2 + 3 goed?",
+          null,
+          "Is 5 een optelling of een aftrekking van 2 en 3?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Noemer blijft",
+              tekst: "2/6 + 3/6 = 5/6. De noemer blijft 6.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "gelijke noemer",
+              uitleg: "Beide breuken hebben al noemer 6.",
+            },
+          ],
+          theorie: "Veel-voorkomende fout: de noemers ook optellen. Dat mag niet — alleen tellers.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "1/4 + 2/4 = 3/4, niet 3/8.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Stukken blijven even groot",
+              uitleg: "Zesden plus zesden blijven zesden.",
+            },
+          ],
+          niveaus: {
+            basis: "Hij telde de noemers ook op.",
+            simpeler: "6 + 6 = 12 is fout. De noemer blijft 6. Goed is 5/6.",
+            nogSimpeler: "Noemers opgeteld",
+          },
+        },
+      },
     ],
   },
 
@@ -286,6 +1076,258 @@ const steps = [
           voorbeelden: [{ type: "som", tekst: "2 × 1/4 = 2/4. 3 × 2/7 = 6/7. 4 × 3/5 = 12/5 = 2 2/5." }],
           basiskennis: [{ onderwerp: "Niet noemer ook", uitleg: "Foute aanpak: 4 × 3/5 = 12/20 ❌. Noemer blijft 5." }],
           niveaus: { basis: "12/5.", simpeler: "4 × 3 = 12 (teller). Noemer 5 blijft. → 12/5.", nogSimpeler: "12/5" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**2 × 1/5** = ?",
+        options: ["2/5", "2/10", "1/10", "3/5"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Verandert de noemer als je keer een heel getal doet?",
+          null,
+          "Heb je keer 2 gedaan, of er 2 bij opgeteld?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Alleen teller keer",
+              tekst: "2 × 1 = 2. Noemer blijft 5. Dus 2/5.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vermenigvuldigen",
+              uitleg: "Keer doen.",
+            },
+          ],
+          theorie: "Breuk × heel getal: alleen de teller vermenigvuldigen, de noemer blijft.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "3 × 1/4 = 3/4.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Herhaald optellen",
+              uitleg: "2 × 1/5 = 1/5 + 1/5.",
+            },
+          ],
+          niveaus: {
+            basis: "2/5.",
+            simpeler: "Twee keer een vijfde = twee vijfden = 2/5.",
+            nogSimpeler: "2/5",
+          },
+        },
+      },
+      {
+        q: "**1/4 van 32** = ?",
+        options: ["8", "4", "16", "28"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Deel je door de noemer? Kijk welke deling je deed.",
+          "Dat is de helft van 32.",
+          "Dat is wat er overblijft na een kwart.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Delen door 4",
+              tekst: "1/4 van 32 = 32 ÷ 4 = 8.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kwart",
+              uitleg: "Een vierde deel: delen door 4.",
+            },
+          ],
+          theorie: "1/… van iets = delen door de noemer.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "1/5 van € 25 = 25 ÷ 5 = € 5.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tafel van 4",
+              uitleg: "4 × 8 = 32.",
+            },
+          ],
+          niveaus: {
+            basis: "8.",
+            simpeler: "32 in 4 gelijke groepjes = 8 per groepje.",
+            nogSimpeler: "8",
+          },
+        },
+      },
+      {
+        q: "**2/3 van 18** = ?",
+        options: ["12", "6", "9", "16"],
+        answer: 0,
+        wrongHints: [null, "Dat is 1/3. Je hebt er 2 nodig.", "Dat is de helft van 18.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst delen",
+              tekst: "18 ÷ 3 = 6 (één derde).",
+            },
+            {
+              titel: "Dan keer",
+              tekst: "6 × 2 = 12.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "twee-derde",
+              uitleg: "2 van de 3 gelijke delen.",
+            },
+          ],
+          theorie: "Eerst delen door de noemer, dan keer de teller.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "2/3 van 30 = 30 ÷ 3 × 2 = 20.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Kleine getallen",
+              uitleg: "Eerst delen houdt de getallen klein.",
+            },
+          ],
+          niveaus: {
+            basis: "12.",
+            simpeler: "1/3 van 18 = 6. 2/3 = 6 + 6 = 12.",
+            nogSimpeler: "12",
+          },
+        },
+      },
+      {
+        q: "**3/8 van 40** = ?",
+        options: ["15", "5", "24", "12"],
+        answer: 0,
+        wrongHints: [null, "Dat is 1/8. Je hebt er 3 nodig.", null, "Reken eerst 40 ÷ 8 uit. Klopt dit dan?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst delen",
+              tekst: "40 ÷ 8 = 5 (één achtste).",
+            },
+            {
+              titel: "Dan keer",
+              tekst: "5 × 3 = 15.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "drie-achtste",
+              uitleg: "3 van de 8 gelijke delen.",
+            },
+          ],
+          theorie: "Via de eenheidsbreuk: eerst 1/8 uitrekenen, dan keer 3.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "3/8 van 800 g = 800 ÷ 8 × 3 = 300 g.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tafel van 8",
+              uitleg: "8 × 5 = 40.",
+            },
+          ],
+          niveaus: {
+            basis: "15.",
+            simpeler: "1/8 van 40 = 5. 3/8 = 5 + 5 + 5 = 15.",
+            nogSimpeler: "15",
+          },
+        },
+      },
+      {
+        q: "**3 × 2/7** = ?",
+        options: ["6/7", "6/21", "5/7", "2/21"],
+        answer: 0,
+        wrongHints: [null, "Moet de noemer ook keer 3?", "Heb je keer 3 gedaan, of er 3 bij opgeteld?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Alleen teller keer",
+              tekst: "3 × 2 = 6. Noemer blijft 7. Dus 6/7.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vermenigvuldigen",
+              uitleg: "Keer doen.",
+            },
+          ],
+          theorie: "Breuk × heel getal: teller × het getal, noemer blijft.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "4 × 2/3 = 8/3.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Herhaald optellen",
+              uitleg: "3 × 2/7 = 2/7 + 2/7 + 2/7.",
+            },
+          ],
+          niveaus: {
+            basis: "6/7.",
+            simpeler: "3 keer 2 zevende = 6 zevende = 6/7.",
+            nogSimpeler: "6/7",
+          },
+        },
+      },
+      {
+        q: "Voor **2/5 van 45** reken je eerst **45 ÷ 5**. Wat doe je daarna met de uitkomst?",
+        options: ["Keer 2", "Gedeeld door 2", "Plus 2", "Keer 5"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dan krijg je minder dan één vijfde. Je wilt er twee.",
+          null,
+          "Dan krijg je weer het hele getal terug.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Delen, dan keer",
+              tekst: "45 ÷ 5 = 9 (één vijfde). Twee vijfde = 9 × 2 = 18.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "eenheidsbreuk",
+              uitleg: "Een breuk met 1 in de teller, zoals 1/5.",
+            },
+          ],
+          theorie: "Eerst delen door de noemer, dan keer de teller.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "3/4 van 20: 20 ÷ 4 = 5, 5 × 3 = 15.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Teller",
+              uitleg: "De teller zegt hoeveel van die delen je neemt.",
+            },
+          ],
+          niveaus: {
+            basis: "Keer 2.",
+            simpeler: "45 ÷ 5 = 9 is één vijfde. Je wilt twee vijfden, dus 9 × 2.",
+            nogSimpeler: "Keer 2",
+          },
         },
       },
     ],
@@ -349,6 +1391,143 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "1/4 = €15. 2/4 = €30. 3/4 = €45. 4/4 = €60." }],
           basiskennis: [{ onderwerp: "Tafel 4 truc", uitleg: "60÷4 = 15 (uit tafel: 4×15=60)." }],
           niveaus: { basis: "€45.", simpeler: "1/4 van €60 = €15. 3/4 = 3×€15 = €45.", nogSimpeler: "€45" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een film duurt **90 minuten**. Je hebt **1/3** gezien. Hoeveel minuten moet je nog kijken?",
+        options: ["60", "30", "45", "80"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat heb je al gezien. Hoeveel is er nog over?",
+          "Dat is de helft van de film.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Deel uitrekenen",
+              tekst: "1/3 van 90 = 90 ÷ 3 = 30 min gezien.",
+            },
+            {
+              titel: "Rest",
+              tekst: "90 − 30 = 60 min nog te gaan.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "resteren",
+              uitleg: "Overblijven.",
+            },
+          ],
+          theorie: "Wat is er nog over? Totaal min het deel dat al voorbij is.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Film van 120 min, 1/3 gezien: 120 − 40 = 80 min.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Of direct",
+              uitleg: "1/3 gezien = 2/3 over: 90 ÷ 3 × 2 = 60.",
+            },
+          ],
+          niveaus: {
+            basis: "60 minuten.",
+            simpeler: "1/3 van 90 = 30. Nog over: 90 − 30 = 60.",
+            nogSimpeler: "60",
+          },
+        },
+      },
+      {
+        q: "In een klas van **30** leerlingen komt **2/5** lopend naar school. Hoeveel leerlingen komen **niet** lopend?",
+        options: ["18", "12", "6", "24"],
+        answer: 0,
+        wrongHints: [null, "Dat zijn de leerlingen die wél lopen.", "Dat is 1/5 van de klas.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lopers",
+              tekst: "30 ÷ 5 = 6. 2/5 = 6 × 2 = 12 lopers.",
+            },
+            {
+              titel: "Niet lopend",
+              tekst: "30 − 12 = 18.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "niet",
+              uitleg: "Let op: de vraag gaat over de rest.",
+            },
+          ],
+          theorie: "Reken eerst het deel uit, trek het dan af van het totaal.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Klas van 28, 3/4 jongens = 21, meisjes = 28 − 21 = 7.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Of direct",
+              uitleg: "Niet lopend = 3/5: 6 × 3 = 18.",
+            },
+          ],
+          niveaus: {
+            basis: "18 leerlingen.",
+            simpeler: "12 lopen. 30 − 12 = 18 lopen niet.",
+            nogSimpeler: "18",
+          },
+        },
+      },
+      {
+        q: "Een jas kost **€ 80**. In de uitverkoop gaat er **1/4** van de prijs af. Wat betaal je nu?",
+        options: ["€ 60", "€ 20", "€ 40", "€ 76"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is de korting. Wat betaal je zelf?",
+          "Dat is de helft van de prijs.",
+          "Je haalde er € 4 af. Is dat een kwart van € 80?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Korting",
+              tekst: "1/4 van € 80 = 80 ÷ 4 = € 20.",
+            },
+            {
+              titel: "Nieuwe prijs",
+              tekst: "€ 80 − € 20 = € 60.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "korting",
+              uitleg: "Het bedrag dat van de prijs afgaat.",
+            },
+          ],
+          theorie: "Reken eerst de korting uit, trek die dan van de prijs af.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "1 kg meel, 1/4 gebruikt: 1000 − 250 = 750 g over.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Of direct",
+              uitleg: "1/4 eraf = je betaalt 3/4: 20 × 3 = € 60.",
+            },
+          ],
+          niveaus: {
+            basis: "€ 60.",
+            simpeler: "Korting € 20. € 80 − € 20 = € 60.",
+            nogSimpeler: "€ 60",
+          },
         },
       },
     ],

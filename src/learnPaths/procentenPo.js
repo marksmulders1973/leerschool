@@ -148,6 +148,169 @@ const steps = [
         answer: 0,
         wrongHints: [null,"Niet automatisch de helft — tel rustig.","Te veel — als 45 meisjes en 55 jongens, hoeveel meisjes is dat?","Dat is tien keer te weinig — hoeveel per 100 zijn het?"],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Hoe spreek je het teken **%** uit?",
+        options: ["procent", "honderd", "keer", "plus"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Het teken betekent wel 'per 100', maar je zegt een ander woord.",
+          "'Keer' heeft een eigen teken: ×.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Het teken %",
+              tekst: "Het teken **%** spreek je uit als **procent**.",
+            },
+            {
+              titel: "Wat betekent het?",
+              tekst: "Procent betekent **per 100**. 30% zeg je als 'dertig procent' en het betekent 30 per 100.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "procent (%)",
+              uitleg: "Per 100.",
+            },
+          ],
+          theorie: "% = procent = per 100.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "25% = 'vijfentwintig procent'.",
+            },
+            {
+              type: "stap",
+              tekst: "100% = 'honderd procent' = alles.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Onthoud",
+              uitleg: "Het teken % lees je als 'procent'.",
+            },
+          ],
+          niveaus: {
+            basis: "% spreek je uit als 'procent'.",
+            simpeler: "30% zeg je: dertig procent.",
+            nogSimpeler: "% = procent.",
+          },
+        },
+      },
+      {
+        q: "In een zak zitten **100 snoepjes**. Je geeft er **30** weg. Hoeveel procent heb je **nog over**?",
+        options: ["70%", "30%", "100%", "130%"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat deel heb je weggegeven. De vraag gaat over wat er over is.",
+          null,
+          "Kan er meer over zijn dan je had?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lees de vraag",
+              tekst: "Je geeft **30** weg. De vraag is: hoeveel heb je **nog over**?",
+            },
+            {
+              titel: "Reken het uit",
+              tekst: "100 − 30 = **70** snoepjes over. 70 van de 100 = **70%**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "over",
+              uitleg: "Wat er nog is nadat je iets weggaf.",
+            },
+          ],
+          theorie: "Alles samen is 100%. Weggegeven + over = 100%.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Je eet 20 van de 100 koekjes: 80% is over.",
+            },
+            {
+              type: "stap",
+              tekst: "Je geeft 50 van de 100 weg: 50% is over.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Over = 100% − weggegeven.",
+            },
+          ],
+          niveaus: {
+            basis: "100 − 30 = 70 over, dus 70%.",
+            simpeler: "30% weg, dan is 70% over.",
+            nogSimpeler: "70%",
+          },
+        },
+      },
+      {
+        q: "'**80%** van de klas slaagde.' Wat betekent dat?",
+        options: [
+          "Van elke 100 kinderen slaagden er 80",
+          "Van elke 100 kinderen zakten er 80",
+          "Van elke 10 kinderen slaagden er 80",
+          "Van elke 80 kinderen slaagde er 1",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk goed: gaat het over slagen of zakken?",
+          "Kunnen er van 10 kinderen 80 slagen?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "% = per 100",
+              tekst: "**80%** betekent **80 per 100**.",
+            },
+            {
+              titel: "In de zin",
+              tekst: "80% van de klas slaagde = van elke 100 kinderen slaagden er 80. Dat is bijna iedereen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "procent (%)",
+              uitleg: "Per 100.",
+            },
+            {
+              woord: "slagen",
+              uitleg: "Een toets of examen halen.",
+            },
+          ],
+          theorie: "Lees een percentage altijd als 'zoveel van elke 100'.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "25% kans op regen = 25 van elke 100 keer.",
+            },
+            {
+              type: "stap",
+              tekst: "50% korting = de helft van de prijs eraf.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "X% = X van elke 100.",
+            },
+          ],
+          niveaus: {
+            basis: "80% = 80 van elke 100 kinderen slaagden.",
+            simpeler: "80 per 100 slaagden.",
+            nogSimpeler: "80% = 80 van de 100.",
+          },
+        },
+      },
     ],
   },
 
@@ -196,6 +359,211 @@ const steps = [
         options: ["0,6","0,06","6","60"],
         answer: 0,
         wrongHints: [null,"Komma 1 plek te ver — je had 2 plekken moeten verschuiven, niet 3.","Je deelde door 10 — procent betekent per 100.","Geen kommagetal — eerst delen door 100."],
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**45%** als kommagetal?",
+        options: ["0,45", "4,5", "0,045", "45"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je schoof de komma maar 1 plek. Hoeveel plekken moet het bij ÷ 100?",
+          "Dat is 3 plekken. Tel nog eens.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Truc 1",
+              tekst: "Van % naar kommagetal: **deel door 100**. De komma gaat **2 plekken naar links**.",
+            },
+            {
+              titel: "Doe het",
+              tekst: "45 → 4,5 (1 plek) → **0,45** (2 plekken).",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kommagetal",
+              uitleg: "Getal met een komma, zoals 0,45.",
+            },
+          ],
+          theorie: "% → kommagetal: ÷ 100 = komma 2 plekken naar links.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "35% → 0,35.",
+            },
+            {
+              type: "stap",
+              tekst: "60% → 0,6.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Twee plekken naar links.",
+            },
+          ],
+          niveaus: {
+            basis: "45% = 0,45.",
+            simpeler: "45 ÷ 100 = 0,45.",
+            nogSimpeler: "0,45",
+          },
+        },
+      },
+      {
+        q: "**4%** als kommagetal?",
+        options: ["0,04", "0,4", "40", "0,004"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "0,4 is 40%. Hoeveel plekken schoof je de komma?",
+          null,
+          "Dat is 3 plekken naar links. Het moeten er 2 zijn.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Truc 1",
+              tekst: "Deel door 100: komma **2 plekken naar links**.",
+            },
+            {
+              titel: "Let op de nul",
+              tekst: "4 → 0,4 (1 plek) → **0,04** (2 plekken). Er komt een nul voor de 4.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kommagetal",
+              uitleg: "Getal met een komma, zoals 0,04.",
+            },
+          ],
+          theorie: "Bij een percentage onder de 10 krijg je een nul na de komma: 8% = 0,08.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "8% → 0,08.",
+            },
+            {
+              type: "stap",
+              tekst: "5% → 0,05.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Onder de 10%? Dan 0,0…",
+            },
+          ],
+          niveaus: {
+            basis: "4% = 0,04.",
+            simpeler: "4 ÷ 100 = 0,04.",
+            nogSimpeler: "0,04",
+          },
+        },
+      },
+      {
+        q: "**0,3** als percentage?",
+        options: ["30%", "3%", "0,3%", "300%"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je schoof de komma maar 1 plek. Keer 100 is 2 plekken.",
+          "Je hebt de komma nog niet verschoven.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Truc 2",
+              tekst: "Van kommagetal naar %: **maal 100**. De komma gaat **2 plekken naar rechts**.",
+            },
+            {
+              titel: "Doe het",
+              tekst: "0,3 → 3 (1 plek) → **30** (2 plekken). Dus 30%.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "percentage",
+              uitleg: "Hoeveel per 100.",
+            },
+          ],
+          theorie: "Kommagetal → %: × 100 = komma 2 plekken naar rechts.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "0,9 → 90%.",
+            },
+            {
+              type: "stap",
+              tekst: "0,72 → 72%.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Twee plekken naar rechts.",
+            },
+          ],
+          niveaus: {
+            basis: "0,3 = 30%.",
+            simpeler: "0,3 × 100 = 30%.",
+            nogSimpeler: "30%",
+          },
+        },
+      },
+      {
+        q: "**0,07** als percentage?",
+        options: ["7%", "70%", "0,7%", "700%"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat zou 0,7 zijn. Kijk naar de nul na de komma.",
+          null,
+          "Veel te veel: dat is meer dan alles.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Truc 2",
+              tekst: "Maal 100: komma **2 plekken naar rechts**.",
+            },
+            {
+              titel: "Doe het",
+              tekst: "0,07 → 0,7 (1 plek) → **7** (2 plekken). Dus 7%.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "percentage",
+              uitleg: "Hoeveel per 100.",
+            },
+          ],
+          theorie: "0,07 = 7 honderdsten = 7 per 100 = 7%.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "0,05 → 5%.",
+            },
+            {
+              type: "stap",
+              tekst: "0,08 → 8%.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Twee plekken naar rechts.",
+            },
+          ],
+          niveaus: {
+            basis: "0,07 = 7%.",
+            simpeler: "0,07 × 100 = 7.",
+            nogSimpeler: "7%",
+          },
+        },
       },
     ],
   },
@@ -251,6 +619,262 @@ const steps = [
         answer: 0,
         wrongHints: [null,"Te weinig — 75% is meer dan de helft.","Te veel — 75% is driekwart. Hoeveel is een kwart van 40?","Te weinig — 75% is bijna alles, 50% is 20."],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**10% van 70** = ?",
+        options: ["7", "70", "0,7", "10"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dan heb je niets uitgerekend. 10% is maar een klein deel.",
+          "Dat is 1% van 70. Hoe reken je 10%?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "De 10%-truc",
+              tekst: "10% is altijd **÷ 10**.",
+            },
+            {
+              titel: "Reken",
+              tekst: "70 ÷ 10 = **7**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "10%",
+              uitleg: "Een tiende: delen door 10.",
+            },
+          ],
+          theorie: "10% = ÷ 10. Daarna kun je elke 10%-stap optellen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "10% van 80 = 8.",
+            },
+            {
+              type: "stap",
+              tekst: "10% van 250 = 25.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "10% = ÷ 10.",
+            },
+          ],
+          niveaus: {
+            basis: "10% van 70 = 7.",
+            simpeler: "70 ÷ 10 = 7.",
+            nogSimpeler: "7",
+          },
+        },
+      },
+      {
+        q: "**25% van 40** = ?",
+        options: ["10", "25", "20", "4"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het percentage zelf, niet het deel van 40.",
+          "Dat is de helft van 40. Is 25% de helft?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Breuken-truc",
+              tekst: "25% = **¼** (een vierde).",
+            },
+            {
+              titel: "Reken",
+              tekst: "¼ van 40 = 40 ÷ 4 = **10**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "een vierde",
+              uitleg: "Eén van vier gelijke delen.",
+            },
+          ],
+          theorie: "Mooie percentages: 25% = ÷ 4, 50% = ÷ 2, 10% = ÷ 10.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "25% van 60 = 15.",
+            },
+            {
+              type: "stap",
+              tekst: "25% van 80 = 20.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "25% = ÷ 4.",
+            },
+          ],
+          niveaus: {
+            basis: "25% van 40 = 10.",
+            simpeler: "40 ÷ 4 = 10.",
+            nogSimpeler: "10",
+          },
+        },
+      },
+      {
+        q: "**30% van 50** = ?",
+        options: ["15", "30", "5", "20"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het percentage, geen antwoord op 'hoeveel'.",
+          "Dat is 10% van 50. Hoeveel keer 10% heb je nodig?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst 10%",
+              tekst: "10% van 50 = 50 ÷ 10 = **5**.",
+            },
+            {
+              titel: "Dan 30%",
+              tekst: "30% = 3 × 10%. 3 × 5 = **15**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "10%-truc",
+              uitleg: "Eerst 10% uitrekenen, dan keer het aantal tientjes.",
+            },
+          ],
+          theorie: "Geen mooi percentage? Reken eerst 10% uit en vermenigvuldig dan.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "30% van 80 = 3 × 8 = 24.",
+            },
+            {
+              type: "stap",
+              tekst: "70% van 80 = 7 × 8 = 56.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "30% = 3 × 10%.",
+            },
+          ],
+          niveaus: {
+            basis: "30% van 50 = 15.",
+            simpeler: "10% = 5, dus 30% = 3 × 5 = 15.",
+            nogSimpeler: "15",
+          },
+        },
+      },
+      {
+        q: "**70% van 30** = ?",
+        options: ["21", "7", "3", "27"],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Dat is 10% van 30. Hoeveel keer 10% is 70%?",
+          "Dat is 90% van 30. Hoeveel keer 10% heb je nodig?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst 10%",
+              tekst: "10% van 30 = 30 ÷ 10 = **3**.",
+            },
+            {
+              titel: "Dan 70%",
+              tekst: "70% = 7 × 10%. 7 × 3 = **21**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "10%-truc",
+              uitleg: "Eerst 10% uitrekenen, dan keer het aantal tientjes.",
+            },
+          ],
+          theorie: "Elke 10%-stap is even groot. Tel ze op of vermenigvuldig.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "70% van 80 = 7 × 8 = 56.",
+            },
+            {
+              type: "stap",
+              tekst: "70% van 50 = 7 × 5 = 35.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "70% = 7 × 10%.",
+            },
+          ],
+          niveaus: {
+            basis: "70% van 30 = 21.",
+            simpeler: "10% = 3, dus 70% = 7 × 3 = 21.",
+            nogSimpeler: "21",
+          },
+        },
+      },
+      {
+        q: "Op een camping staan **200 tenten**. **20%** is groen. Hoeveel tenten zijn **groen**?",
+        options: ["40", "20", "10", "160"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het percentage, niet het aantal tenten.",
+          "Dat is 5% van 200. Bereken eerst 10%.",
+          "Dat zijn de tenten die níét groen zijn.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst 10%",
+              tekst: "10% van 200 = 200 ÷ 10 = **20**.",
+            },
+            {
+              titel: "Dan 20%",
+              tekst: "20% = 2 × 10%. 2 × 20 = **40** groene tenten.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "10%-truc",
+              uitleg: "Eerst 10% uitrekenen, dan verdubbelen voor 20%.",
+            },
+          ],
+          theorie: "20% = 2 × 10%. Handig en snel.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "20% van 60 = 2 × 6 = 12.",
+            },
+            {
+              type: "stap",
+              tekst: "20% van 80 = 2 × 8 = 16.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "20% = 10% + 10%.",
+            },
+          ],
+          niveaus: {
+            basis: "20% van 200 = 40 tenten.",
+            simpeler: "10% = 20, dus 20% = 40.",
+            nogSimpeler: "40",
+          },
+        },
+      },
     ],
   },
 
@@ -299,6 +923,364 @@ const steps = [
         options: ["€ 27","€ 3","€ 33","€ 20"],
         answer: 0,
         wrongHints: [null,"Te weinig — dat is alleen het korting-bedrag, niet de nieuwe prijs.","Hoger dan oorspronkelijk — bij korting wordt 't goedkoper.","Te weinig — 10% korting is maar een klein beetje lager."],
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een jas kost **€ 100**. Nu **30% korting**. Wat **betaal** je?",
+        options: ["€ 70", "€ 30", "€ 130", "€ 97"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is de korting. Wat moet je nog betalen?",
+          "Korting maakt iets goedkoper, niet duurder.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Manier 2",
+              tekst: "Bij 30% korting betaal je nog **70%** (100% − 30%).",
+            },
+            {
+              titel: "Reken",
+              tekst: "70% van € 100 = **€ 70**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "korting",
+              uitleg: "Het bedrag dat van de prijs af gaat.",
+            },
+          ],
+          theorie: "Korting% eraf → wat je betaalt = (100% − korting%) van de prijs.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "30% korting op € 400 → je betaalt 70% = € 280.",
+            },
+            {
+              type: "stap",
+              tekst: "10% korting op € 30 → je betaalt € 27.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Betaal = 100% − korting%.",
+            },
+          ],
+          niveaus: {
+            basis: "Je betaalt € 70.",
+            simpeler: "€ 100 − € 30 korting = € 70.",
+            nogSimpeler: "€ 70",
+          },
+        },
+      },
+      {
+        q: "Een spel kost **€ 40**. Er is **75% korting**. Wat **betaal** je?",
+        options: ["€ 10", "€ 30", "€ 20", "€ 40"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is de korting. Je moet weten wat je nog betaalt.",
+          "Dat zou 50% korting zijn.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Manier 2",
+              tekst: "Bij 75% korting betaal je nog **25%** (een kwart).",
+            },
+            {
+              titel: "Reken",
+              tekst: "¼ van € 40 = 40 ÷ 4 = **€ 10**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "korting",
+              uitleg: "Het bedrag dat van de prijs af gaat.",
+            },
+          ],
+          theorie: "75% korting → je betaalt 25% (een kwart).",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "75% korting op € 80 → je betaalt € 20.",
+            },
+            {
+              type: "stap",
+              tekst: "75% korting op € 100 → je betaalt € 25.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "75% korting = je betaalt een kwart.",
+            },
+          ],
+          niveaus: {
+            basis: "Je betaalt € 10.",
+            simpeler: "Een kwart van € 40 = € 10.",
+            nogSimpeler: "€ 10",
+          },
+        },
+      },
+      {
+        q: "Bij **10% korting** betaal je nog…",
+        options: ["90% van de prijs", "10% van de prijs", "100% van de prijs", "110% van de prijs"],
+        answer: 0,
+        wrongHints: [null, "Dat deel gaat er juist af.", null, "Wordt iets duurder als er korting is?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Alles = 100%",
+              tekst: "De hele prijs is **100%**.",
+            },
+            {
+              titel: "Korting eraf",
+              tekst: "100% − 10% = **90%**. Dat betaal je nog.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "korting",
+              uitleg: "Het deel van de prijs dat eraf gaat.",
+            },
+          ],
+          theorie: "50% korting → 50%. 25% korting → 75%. 10% korting → 90%. 75% korting → 25%.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "20% korting → je betaalt 80%.",
+            },
+            {
+              type: "stap",
+              tekst: "40% korting → je betaalt 60%.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Betaal% = 100% − korting%.",
+            },
+          ],
+          niveaus: {
+            basis: "Je betaalt 90% van de prijs.",
+            simpeler: "100% − 10% = 90%.",
+            nogSimpeler: "90%",
+          },
+        },
+      },
+      {
+        q: "Een pet kost **€ 16**. Er is **50% korting**. Wat **betaal** je?",
+        options: ["€ 8", "€ 16", "€ 4", "€ 12"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dan heb je geen korting gehad.",
+          "Dat is een kwart van de prijs. Wat is de helft?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "50% korting",
+              tekst: "50% korting = je betaalt **de helft**.",
+            },
+            {
+              titel: "Reken",
+              tekst: "€ 16 ÷ 2 = **€ 8**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "de helft",
+              uitleg: "Delen door 2.",
+            },
+          ],
+          theorie: "50% korting → betaal je de helft.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "50% korting op € 50 → € 25.",
+            },
+            {
+              type: "stap",
+              tekst: "50% korting op € 30 → € 15.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "50% = ÷ 2.",
+            },
+          ],
+          niveaus: {
+            basis: "Je betaalt € 8.",
+            simpeler: "De helft van € 16 = € 8.",
+            nogSimpeler: "€ 8",
+          },
+        },
+      },
+      {
+        q: "Een lamp kost **€ 90**. Er is **20% korting**. Hoeveel **bespaar** je?",
+        options: ["€ 18", "€ 72", "€ 9", "€ 20"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat betaal je. De vraag is hoeveel je bespaart.",
+          "Dat is 10%. Hoeveel keer 10% is 20%?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lees de vraag",
+              tekst: "**Bespaar** = hoeveel korting. Niet wat je betaalt.",
+            },
+            {
+              titel: "Reken",
+              tekst: "10% van € 90 = € 9. 20% = 2 × € 9 = **€ 18**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "besparen",
+              uitleg: "Geld dat je niet hoeft te betalen.",
+            },
+          ],
+          theorie: "Bespaar = de korting. Betaal = prijs − korting.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "€ 90 − € 18 = € 72: dat betaal je.",
+            },
+            {
+              type: "stap",
+              tekst: "20% van € 50 = € 10 korting.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Lees goed: bespaar of betaal?",
+            },
+          ],
+          niveaus: {
+            basis: "Je bespaart € 18.",
+            simpeler: "10% = € 9, dus 20% = € 18.",
+            nogSimpeler: "€ 18",
+          },
+        },
+      },
+      {
+        q: "Een skateboard van **€ 120** heeft **25% korting**. Wat is de **nieuwe prijs**?",
+        options: ["€ 90", "€ 30", "€ 95", "€ 60"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is de korting. De vraag is de nieuwe prijs.",
+          "Je haalde 25 euro eraf. Maar het is 25 procent.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Manier 2",
+              tekst: "Bij 25% korting betaal je nog **75%** (¾).",
+            },
+            {
+              titel: "Reken",
+              tekst: "¼ van € 120 = 120 ÷ 4 = € 30. ¾ = 3 × € 30 = **€ 90**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "nieuwe prijs",
+              uitleg: "Wat je nu betaalt = oude prijs − korting.",
+            },
+          ],
+          theorie: "25% korting → je betaalt 75% (drie kwart).",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "€ 60 met 25% korting → € 45.",
+            },
+            {
+              type: "stap",
+              tekst: "€ 80 met 25% korting → € 60.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "25% korting = je betaalt ¾.",
+            },
+          ],
+          niveaus: {
+            basis: "De nieuwe prijs is € 90.",
+            simpeler: "€ 120 − € 30 = € 90.",
+            nogSimpeler: "€ 90",
+          },
+        },
+      },
+      {
+        q: "Welke trui is het **goedkoopst**?",
+        options: [
+          "€ 40 met 50% korting",
+          "€ 30 met 10% korting",
+          "€ 24 zonder korting",
+          "€ 28 met 25% korting",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "10% van € 30 is € 3. Wat betaal je dan?",
+          null,
+          "Reken eerst een kwart van € 28 uit. Wat blijft er over?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Reken elke prijs uit",
+              tekst: "€ 40 met 50% korting = € 20. € 30 met 10% korting = € 27. € 24 zonder korting = € 24. € 28 met 25% korting = € 21.",
+            },
+            {
+              titel: "Vergelijk",
+              tekst: "De laagste prijs is **€ 20**: de trui van € 40 met 50% korting.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "goedkoopst",
+              uitleg: "Het minste geld.",
+            },
+          ],
+          theorie: "Kijk niet alleen naar de korting of de oude prijs: reken uit wat je echt betaalt.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "€ 30 met 10% korting: 10% = € 3, je betaalt € 27.",
+            },
+            {
+              type: "stap",
+              tekst: "€ 28 met 25% korting: ¼ = € 7, je betaalt € 21.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Vergelijk altijd de nieuwe prijzen.",
+            },
+          ],
+          niveaus: {
+            basis: "€ 40 met 50% korting = € 20. Dat is het goedkoopst.",
+            simpeler: "Reken elke prijs uit. € 20 is het laagst.",
+            nogSimpeler: "€ 20 is het minst.",
+          },
+        },
       },
     ],
   },
@@ -349,6 +1331,363 @@ const steps = [
         answer: 0,
         wrongHints: [null,"Dat is het percentage WEL-mussen. De vraag is juist het tegenovergestelde.","Dat is het aantal mussen, niet het percentage — deel eerst door het totaal × 100.","Te weinig — hoeveel vogels zijn er géén mus?"],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "In een klas van **20 kinderen** hebben **10** een fiets. Welk **percentage**?",
+        options: ["50%", "10%", "20%", "5%"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het aantal kinderen, nog geen percentage.",
+          "Dat is het totaal. Welk deel heeft een fiets?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Gouden regel",
+              tekst: "% = (deel ÷ totaal) × 100.",
+            },
+            {
+              titel: "Reken",
+              tekst: "10 van 20 = 10/20 = **½** = **50%**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "deel",
+              uitleg: "Het stuk waar de vraag over gaat.",
+            },
+            {
+              woord: "totaal",
+              uitleg: "Alles samen.",
+            },
+          ],
+          theorie: "Maak een mooie breuk: 1/2 = 50%, 1/4 = 25%, 1/5 = 20%, 1/10 = 10%.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "5 van 10 = ½ = 50%.",
+            },
+            {
+              type: "stap",
+              tekst: "20 van 40 = ½ = 50%.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Deel ÷ totaal → mooie breuk → %.",
+            },
+          ],
+          niveaus: {
+            basis: "10 van 20 = 50%.",
+            simpeler: "10/20 = de helft = 50%.",
+            nogSimpeler: "50%",
+          },
+        },
+      },
+      {
+        q: "Van de **40 kinderen** spelen er **10** hockey. Welk **percentage**?",
+        options: ["25%", "10%", "40%", "4%"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het aantal hockeyers, nog geen percentage.",
+          "Dat is het totaal, niet het deel.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Gouden regel",
+              tekst: "% = (deel ÷ totaal) × 100.",
+            },
+            {
+              titel: "Reken",
+              tekst: "10 van 40 = 10/40 = **¼** (beide ÷ 10) = **25%**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vereenvoudigen",
+              uitleg: "Boven en onder door hetzelfde getal delen.",
+            },
+          ],
+          theorie: "1/4 = 25%. Probeer eerst te delen tot een mooie breuk.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "5 van 20 = ¼ = 25%.",
+            },
+            {
+              type: "stap",
+              tekst: "50 van 200 = ¼ = 25%.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "10/40 → 1/4 → 25%.",
+            },
+          ],
+          niveaus: {
+            basis: "10 van 40 = 25%.",
+            simpeler: "10/40 = ¼ = 25%.",
+            nogSimpeler: "25%",
+          },
+        },
+      },
+      {
+        q: "Je hebt **8 van de 10** sommen goed. Welk **percentage** heb je **goed**?",
+        options: ["80%", "8%", "20%", "10%"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het aantal goede sommen, nog geen percentage.",
+          "Dat zijn de sommen die fout waren.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Gouden regel",
+              tekst: "% = (deel ÷ totaal) × 100.",
+            },
+            {
+              titel: "Reken",
+              tekst: "8 ÷ 10 = 0,8. × 100 = **80%**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "percentage",
+              uitleg: "Hoeveel per 100.",
+            },
+          ],
+          theorie: "Veel-voorkomende fout: vergeten × 100 te doen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "7 van 10 = 70%.",
+            },
+            {
+              type: "stap",
+              tekst: "3 van 10 = 30%.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Van 10 naar 100: × 10. 8 van 10 = 80 van 100.",
+            },
+          ],
+          niveaus: {
+            basis: "8 van 10 = 80%.",
+            simpeler: "8/10 = 80/100 = 80%.",
+            nogSimpeler: "80%",
+          },
+        },
+      },
+      {
+        q: "Op een school zijn **300 leerlingen**. **30** komen lopend. Welk **percentage**?",
+        options: ["10%", "30%", "3%", "33%"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het aantal lopers, nog geen percentage.",
+          "Deel 30 door 300. Kijk goed naar de nullen.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Gouden regel",
+              tekst: "% = (deel ÷ totaal) × 100.",
+            },
+            {
+              titel: "Reken",
+              tekst: "30 van 300 = 30/300 = **1/10** (beide ÷ 30) = **10%**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "totaal",
+              uitleg: "Alle leerlingen samen.",
+            },
+          ],
+          theorie: "1/10 = 10%.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "40 van 200 = 1/5 = 20%.",
+            },
+            {
+              type: "stap",
+              tekst: "20 van 200 = 1/10 = 10%.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "30/300 → 1/10 → 10%.",
+            },
+          ],
+          niveaus: {
+            basis: "30 van 300 = 10%.",
+            simpeler: "30/300 = 1/10 = 10%.",
+            nogSimpeler: "10%",
+          },
+        },
+      },
+      {
+        q: "Van **50 ballonnen** zijn er **20 rood**. Welk **percentage** is **rood**?",
+        options: ["40%", "20%", "60%", "50%"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het aantal rode ballonnen, nog geen percentage.",
+          "Dat is het deel dat níét rood is.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Gouden regel",
+              tekst: "% = (deel ÷ totaal) × 100.",
+            },
+            {
+              titel: "Reken",
+              tekst: "20 van 50 = 20/50 = **2/5** (beide ÷ 10). 1/5 = 20%, dus 2/5 = **40%**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "deel",
+              uitleg: "Hier: de rode ballonnen.",
+            },
+          ],
+          theorie: "1/5 = 20%, 2/5 = 40%, 3/5 = 60%, 4/5 = 80%.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "10 van 50 = 1/5 = 20%.",
+            },
+            {
+              type: "stap",
+              tekst: "30 van 50 = 3/5 = 60%.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Bij 50: × 2 en je hebt het percentage. 20 × 2 = 40.",
+            },
+          ],
+          niveaus: {
+            basis: "20 van 50 = 40%.",
+            simpeler: "20/50 = 40/100 = 40%.",
+            nogSimpeler: "40%",
+          },
+        },
+      },
+      {
+        q: "Een film duurt **60 minuten**. Je hebt **15 minuten** gezien. Welk **percentage** heb je **gezien**?",
+        options: ["25%", "15%", "75%", "4%"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het aantal minuten, nog geen percentage.",
+          "Dat deel heb je nog níét gezien.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Gouden regel",
+              tekst: "% = (deel ÷ totaal) × 100.",
+            },
+            {
+              titel: "Reken",
+              tekst: "15 van 60 = 15/60 = **¼** (beide ÷ 15) = **25%**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "totaal",
+              uitleg: "De hele film: 60 minuten.",
+            },
+          ],
+          theorie: "¼ = 25%. Een kwartier is een kwart van een uur.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "30 van 60 minuten = ½ = 50%.",
+            },
+            {
+              type: "stap",
+              tekst: "45 van 60 minuten = ¾ = 75%.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "15 van 60 = 1 van 4 = 25%.",
+            },
+          ],
+          niveaus: {
+            basis: "15 van 60 = 25%.",
+            simpeler: "15/60 = ¼ = 25%.",
+            nogSimpeler: "25%",
+          },
+        },
+      },
+      {
+        q: "Lotte rekent: **6 van de 30** = 6 ÷ 30 = **0,2**. Welk **percentage** is dat?",
+        options: ["20%", "2%", "0,2%", "6%"],
+        answer: 0,
+        wrongHints: [null, "0,2 × 100 = ? Tel de plekken van de komma.", "Je moet nog × 100 doen.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Bijna klaar",
+              tekst: "6 ÷ 30 = 0,2. Dat is nog geen percentage.",
+            },
+            {
+              titel: "× 100",
+              tekst: "0,2 × 100 = **20%**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "percentage",
+              uitleg: "Hoeveel per 100.",
+            },
+          ],
+          theorie: "Veel-voorkomende fout: vergeten × 100. Dan krijg je 0,2 in plaats van 20%.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "5 ÷ 25 = 0,2 → 20%.",
+            },
+            {
+              type: "stap",
+              tekst: "3 ÷ 4 = 0,75 → 75%.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Kommagetal → % = komma 2 plekken naar rechts.",
+            },
+          ],
+          niveaus: {
+            basis: "6 van 30 = 0,2 = 20%.",
+            simpeler: "0,2 × 100 = 20%.",
+            nogSimpeler: "20%",
+          },
+        },
+      },
     ],
   },
 
@@ -380,6 +1719,36 @@ const steps = [
         options: ["12","30","10","8"],
         answer: 0,
         wrongHints: [null,"Dat is het percentage zelf — je moet het toepassen op het aantal koekjes.","Te weinig — 30% is flink meer dan een tiende.","Te weinig — bereken eerst 10% en gebruik dat als stapje."],
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een rugzak van **€ 50** heeft **30% korting**. Wat **betaal** je?",
+        options: ["€ 35", "€ 15", "€ 25", "€ 50"],
+        answer: 0,
+        wrongHints: [null, "Dat is wat je bespaart, niet wat je betaalt.", "Dat zou 50% korting zijn.", null],
+      },
+      {
+        q: "Je bespaart **€ 16** op een spel van **€ 80**. Welk **kortingspercentage** is dat?",
+        options: ["20%", "16%", "80%", "25%"],
+        answer: 0,
+        wrongHints: [null, "Dat is het bedrag in euro's, nog geen percentage.", "Dat deel betaal je nog.", null],
+      },
+      {
+        q: "In een bak liggen **60 appels**. **20%** is rot. Hoeveel appels zijn **niet rot**?",
+        options: ["48", "12", "40", "20"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat zijn de rotte appels. Lees de vraag nog eens.",
+          "Je haalde 20 appels eraf. Maar het is 20 procent.",
+          null,
+        ],
+      },
+      {
+        q: "Een fiets van **€ 250** krijgt **20% korting**. Wat **betaal** je?",
+        options: ["€ 200", "€ 50", "€ 230", "€ 225"],
+        answer: 0,
+        wrongHints: [null, "Dat is de korting zelf.", "Je haalde 20 euro eraf. Maar het is 20 procent.", null],
       },
     ],
   },

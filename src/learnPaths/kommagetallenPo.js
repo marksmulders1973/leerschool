@@ -134,6 +134,297 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welk cijfer staat op de **honderdsten**-plek in 36,18?",
+        options: ["8", "1", "6", "3"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat cijfer staat direct ná de komma. Is dat de eerste of de tweede plek?",
+          null,
+          "Kijk naar de cijfers ná de komma, niet ervoor.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek de komma",
+              tekst: "In 36,18 staan ná de komma de cijfers 1 en 8.",
+            },
+            {
+              titel: "Tel de plekken",
+              tekst: "Eerste plek ná de komma = tienden (1). Tweede plek = honderdsten (8).",
+            },
+          ],
+          woorden: [
+            {
+              woord: "honderdsten",
+              uitleg: "De tweede plek ná de komma. 100 honderdsten samen = 1.",
+            },
+          ],
+          theorie: "Ná de komma: eerst de tienden, dan de honderdsten. Hoe verder naar rechts, hoe kleiner.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "36,18 = 30 + 6 + 0,1 + 0,08. De 8 is 8 honderdsten.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Plekken ná de komma",
+              uitleg: "1e plek = tienden, 2e plek = honderdsten.",
+            },
+          ],
+          niveaus: {
+            basis: "De 8 staat op de honderdsten-plek.",
+            simpeler: "Ná de komma staan 1 en 8. De 1 is de eerste plek (tienden). De 8 is de tweede plek (honderdsten).",
+            nogSimpeler: "8",
+          },
+        },
+      },
+      {
+        q: "Hoe spreek je **6,04** uit?",
+        options: ["zes-komma-nul-vier", "zes-komma-vier", "zes-komma-veertig", "zestig-komma-vier"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Vergeet je niet een cijfer ná de komma?",
+          null,
+          "Kijk nog eens naar het cijfer vóór de komma.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vóór de komma",
+              tekst: "Vóór de komma staat 6: 'zes'.",
+            },
+            {
+              titel: "De komma",
+              tekst: "Zeg 'komma'.",
+            },
+            {
+              titel: "Ná de komma",
+              tekst: "Lees de cijfers één voor één: 0 en 4 → 'nul-vier'.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kommagetal",
+              uitleg: "Een getal met een komma erin, zoals 6,04.",
+            },
+          ],
+          theorie: "Lees vóór de komma als gewoon getal, zeg 'komma', en lees ná de komma elk cijfer apart.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "9,07 lees je als 'negen-komma-nul-zeven'.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "De nul telt mee",
+              uitleg: "De 0 ná de komma moet je ook uitspreken. 6,04 is iets anders dan 6,4.",
+            },
+          ],
+          niveaus: {
+            basis: "6,04 = zes-komma-nul-vier.",
+            simpeler: "Eerst 'zes', dan 'komma', dan de cijfers ná de komma één voor één: 'nul-vier'.",
+            nogSimpeler: "zes-komma-nul-vier",
+          },
+        },
+      },
+      {
+        q: "**4,1** is hetzelfde als ... ?",
+        options: ["4 en een tiende", "4 en een honderdste", "4 en een kwart", "4 en een half"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Op welke plek ná de komma staat de 1: de eerste of de tweede?",
+          null,
+          "Een half is 0,5. Is 0,1 even groot?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Splits het getal",
+              tekst: "4,1 = 4 hele + 0,1.",
+            },
+            {
+              titel: "Wat is 0,1?",
+              tekst: "De 1 staat op de eerste plek ná de komma: dat is 1 tiende.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tiende",
+              uitleg: "Eén van de 10 gelijke stukjes van 1. 0,1 = 1/10.",
+            },
+          ],
+          theorie: "De eerste plek ná de komma zijn de tienden.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2,3 = 2 en drie tienden.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tienden",
+              uitleg: "0,1 = een tiende, 0,5 = vijf tienden = een half.",
+            },
+          ],
+          niveaus: {
+            basis: "4,1 = 4 en een tiende.",
+            simpeler: "Vóór de komma: 4 hele. Ná de komma op de eerste plek een 1: dat is 1 tiende. Samen: 4 en een tiende.",
+            nogSimpeler: "4 en een tiende",
+          },
+        },
+      },
+      {
+        q: "Welk getal is het **grootst**?",
+        options: ["3,6", "3,58", "3,55", "3,09"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Meer cijfers betekent niet automatisch groter. Vergelijk eerst de tienden.",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vóór de komma",
+              tekst: "Alle getallen hebben 3 hele. Dat is gelijk.",
+            },
+            {
+              titel: "Vergelijk de tienden",
+              tekst: "3,6 heeft 6 tienden, 3,58 en 3,55 hebben 5 tienden, 3,09 heeft 0 tienden. 6 is het meest.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tienden",
+              uitleg: "De eerste plek ná de komma.",
+            },
+          ],
+          theorie: "Vergelijk kommagetallen plek voor plek, van links naar rechts.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "3,6 = 3,60. Nu zie je: 3,60 is meer dan 3,58.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Nullen aanvullen",
+              uitleg: "Maak alle getallen even lang: 3,60 · 3,58 · 3,55 · 3,09.",
+            },
+          ],
+          niveaus: {
+            basis: "3,6 is het grootst.",
+            simpeler: "Schrijf 3,6 als 3,60. Vergelijk dan: 3,60 is meer dan 3,58, 3,55 en 3,09.",
+            nogSimpeler: "3,6",
+          },
+        },
+      },
+      {
+        q: "Welke som hoort bij **52,36**?",
+        options: ["50 + 2 + 0,3 + 0,06", "50 + 2 + 3 + 6", "50 + 2 + 0,3 + 0,6", "5 + 2 + 0,3 + 0,06"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "De cijfers ná de komma zijn stukjes, geen hele getallen.",
+          null,
+          "Wat is de waarde van de 5 vóór de komma: eenheden of tientallen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vóór de komma",
+              tekst: "5 = tientallen (50), 2 = eenheden (2).",
+            },
+            {
+              titel: "Ná de komma",
+              tekst: "3 = tienden (0,3), 6 = honderdsten (0,06).",
+            },
+            {
+              titel: "Samen",
+              tekst: "50 + 2 + 0,3 + 0,06 = 52,36.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "plaatswaarde",
+              uitleg: "Hoeveel een cijfer waard is door de plek waar het staat.",
+            },
+          ],
+          theorie: "Elk cijfer is iets anders waard door zijn plek: tientallen, eenheden, tienden, honderdsten.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "41,27 = 40 + 1 + 0,2 + 0,07.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Plekken ná de komma",
+              uitleg: "1e plek = tienden (0,…), 2e plek = honderdsten (0,0…).",
+            },
+          ],
+          niveaus: {
+            basis: "52,36 = 50 + 2 + 0,3 + 0,06.",
+            simpeler: "De 5 is 50, de 2 is 2, de 3 ná de komma is 0,3 en de 6 is 0,06. Tel op: 52,36.",
+            nogSimpeler: "50 + 2 + 0,3 + 0,06",
+          },
+        },
+      },
+      {
+        q: "Welk getal heeft een **3** op de **tienden**-plek?",
+        options: ["8,31", "3,18", "8,13", "81,03"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Staat de 3 bij dit getal vóór of ná de komma?",
+          null,
+          "De tienden-plek is de eerste plek ná de komma. Welk cijfer staat daar hier?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Waar zijn de tienden?",
+              tekst: "De tienden-plek is de eerste plek ná de komma.",
+            },
+            {
+              titel: "Kijk per getal",
+              tekst: "8,31 → 3 · 3,18 → 1 · 8,13 → 1 · 81,03 → 0.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tienden-plek",
+              uitleg: "De eerste plek direct ná de komma.",
+            },
+          ],
+          theorie: "Vóór de komma: eenheden, tientallen. Ná de komma: tienden, honderdsten.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "In 5,72 staat een 7 op de tienden-plek.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Direct ná de komma",
+              uitleg: "Kijk alleen naar het cijfer dat direct ná de komma staat.",
+            },
+          ],
+          niveaus: {
+            basis: "8,31 heeft een 3 op de tienden-plek.",
+            simpeler: "Kijk bij elk getal naar het cijfer direct ná de komma. Alleen bij 8,31 is dat een 3.",
+            nogSimpeler: "8,31",
+          },
+        },
+      },
     ],
   },
 
@@ -181,6 +472,293 @@ const steps = [
         options: ["7,25", "7,75", "8,25", "12,75"],
         answer: 0,
         wrongHints: [null, "Net niet — schrijf 10 als 10,00 zodat je decimalen onder elkaar hebt en trek dan af.", "Te veel — controleer de aftrekking nog eens.", "Niet 12,75 — dat is optellen, niet aftrekken."],
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**6,3 + 2,45** = ?",
+        options: ["8,75", "8,48", "3,08", "9,75"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Staan de komma's recht onder elkaar? Schrijf 6,3 eerst als 6,30.",
+          null,
+          "Tel de hele getallen vóór de komma nog eens na.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Nullen aanvullen",
+              tekst: "6,3 heeft 1 cijfer ná de komma, 2,45 heeft er 2. Schrijf 6,3 als 6,30.",
+            },
+            {
+              titel: "Komma's onder elkaar",
+              tekst: "6,30 + 2,45: 30 + 45 = 75 en 6 + 2 = 8. Antwoord: 8,75.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "uitlijnen",
+              uitleg: "Komma's recht onder elkaar zetten, zoals in een kolom.",
+            },
+          ],
+          theorie: "Bij optellen staan de komma's recht onder elkaar. Vul aan met nullen als dat makkelijker is.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "5,4 + 1,25 → 5,40 + 1,25 = 6,65.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Vul aan met nullen",
+              uitleg: "6,3 = 6,30. Een nul aan het eind verandert niets.",
+            },
+          ],
+          niveaus: {
+            basis: "6,3 + 2,45 = 8,75.",
+            simpeler: "Schrijf 6,30 + 2,45 onder elkaar. 30 + 45 = 75, 6 + 2 = 8. Dus 8,75.",
+            nogSimpeler: "8,75",
+          },
+        },
+      },
+      {
+        q: "**9,4 − 3,6** = ?",
+        options: ["5,8", "6,2", "13", "4,8"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je kunt 6 niet zomaar van 4 afhalen. Wat doe je dan bij gewoon aftrekken?",
+          "Moet je erbij doen of eraf halen?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Komma's onder elkaar",
+              tekst: "9,4 − 3,6. De komma's staan recht.",
+            },
+            {
+              titel: "Tienden",
+              tekst: "4 − 6 lukt niet. Leen 1 hele: 14 − 6 = 8 tienden.",
+            },
+            {
+              titel: "Hele",
+              tekst: "Er is nog 8 over: 8 − 3 = 5. Antwoord: 5,8.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "lenen",
+              uitleg: "Bij aftrekken één van de plek links ernaast pakken als het cijfer te klein is.",
+            },
+          ],
+          theorie: "Aftrekken met kommagetallen gaat net als gewoon aftrekken, met de komma's onder elkaar.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "7,2 − 2,5 = 4,7.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check",
+              uitleg: "Controleer: 5,8 + 3,6 = 9,4.",
+            },
+          ],
+          niveaus: {
+            basis: "9,4 − 3,6 = 5,8.",
+            simpeler: "Reken 94 − 36 = 58 en zet de komma terug: 5,8.",
+            nogSimpeler: "5,8",
+          },
+        },
+      },
+      {
+        q: "**3 + 0,6** = ?",
+        options: ["3,6", "0,9", "3,06", "9"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is 3 een heel getal of drie tienden? Schrijf 3 als 3,0.",
+          null,
+          "Waar is de komma gebleven?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Heel getal met komma",
+              tekst: "3 = 3,0.",
+            },
+            {
+              titel: "Onder elkaar",
+              tekst: "3,0 + 0,6 = 3,6.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "heel getal",
+              uitleg: "Een getal zonder komma, zoals 3. Het is hetzelfde als 3,0.",
+            },
+          ],
+          theorie: "Een heel getal krijgt ,0 erachter. Dan kun je de komma's recht onder elkaar zetten.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "4 + 0,2 → 4,0 + 0,2 = 4,2.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Veelgemaakte fout",
+              uitleg: "3 + 0,6 is géén 0,9: de 3 zijn hele, geen tienden.",
+            },
+          ],
+          niveaus: {
+            basis: "3 + 0,6 = 3,6.",
+            simpeler: "Schrijf 3 als 3,0. Zet onder 0,6. Tel op: 3,6.",
+            nogSimpeler: "3,6",
+          },
+        },
+      },
+      {
+        q: "Een pen kost **€ 1,35** en een schrift **€ 2,40**. Wat kost het **samen**?",
+        options: ["€ 3,75", "€ 3,65", "€ 1,05", "€ 4,75"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Reken de centen nog eens na: 35 + 40.",
+          "Samen betekent optellen. Heb je dat gedaan?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Onder elkaar",
+              tekst: "€ 1,35 + € 2,40, met de komma's recht onder elkaar.",
+            },
+            {
+              titel: "Optellen",
+              tekst: "35 + 40 = 75 cent en 1 + 2 = 3 euro. Samen € 3,75.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "samen",
+              uitleg: "Alles bij elkaar opgeteld.",
+            },
+          ],
+          theorie: "Bij geld staan er altijd 2 cijfers ná de komma: de centen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "€ 2,15 + € 1,20 = € 3,35.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Euro en cent",
+              uitleg: "Ná de komma staan de centen. 100 cent = 1 euro.",
+            },
+          ],
+          niveaus: {
+            basis: "€ 1,35 + € 2,40 = € 3,75.",
+            simpeler: "Tel de centen: 35 + 40 = 75. Tel de euro's: 1 + 2 = 3. Samen € 3,75.",
+            nogSimpeler: "€ 3,75",
+          },
+        },
+      },
+      {
+        q: "Welk getal is **even groot** als **7,3**?",
+        options: ["7,30", "7,03", "7,003", "0,73"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een nul direct ná de komma verschuift de 3. Verandert het getal dan?",
+          null,
+          "Kijk naar het hele deel vóór de komma.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Nul aan het eind",
+              tekst: "Een nul áchteraan ná de komma verandert niets: 7,3 = 7,30.",
+            },
+            {
+              titel: "Nul ertussen",
+              tekst: "7,03 is iets anders: daar staat de 3 op de honderdsten-plek.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "aanvullen",
+              uitleg: "Een nul achteraan het getal zetten om evenveel cijfers ná de komma te krijgen.",
+            },
+          ],
+          theorie: "Nullen áán het eind ná de komma veranderen de waarde niet. Nullen ertussen wel.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2,5 = 2,50 = 2,500.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Waar staat de nul?",
+              uitleg: "Achteraan: zelfde getal. Direct ná de komma: ander getal.",
+            },
+          ],
+          niveaus: {
+            basis: "7,3 = 7,30.",
+            simpeler: "Een nul achteraan verandert niets. Dus 7,3 en 7,30 zijn even groot.",
+            nogSimpeler: "7,30",
+          },
+        },
+      },
+      {
+        q: "**8,5 − 2,25** = ?",
+        options: ["6,25", "5,8", "10,75", "6,35"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Schrijf 8,5 als 8,50 en zet de komma's recht onder elkaar.",
+          "Moet je erbij doen of eraf halen?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Nullen aanvullen",
+              tekst: "8,5 heeft 1 cijfer ná de komma, 2,25 heeft er 2. Schrijf 8,5 als 8,50.",
+            },
+            {
+              titel: "Aftrekken",
+              tekst: "8,50 − 2,25: 50 − 25 = 25 en 8 − 2 = 6. Antwoord: 6,25.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "uitlijnen",
+              uitleg: "Komma's recht onder elkaar zetten.",
+            },
+          ],
+          theorie: "Vul aan met nullen zodat beide getallen evenveel cijfers ná de komma hebben.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "6,5 − 1,25 → 6,50 − 1,25 = 5,25.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check",
+              uitleg: "Controleer: 6,25 + 2,25 = 8,50.",
+            },
+          ],
+          niveaus: {
+            basis: "8,5 − 2,25 = 6,25.",
+            simpeler: "Schrijf 8,50 − 2,25. 50 − 25 = 25, 8 − 2 = 6. Dus 6,25.",
+            nogSimpeler: "6,25",
+          },
+        },
       },
     ],
   },
@@ -231,6 +809,303 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Te weinig — kijk naar beide getallen, niet maar naar één.", "Allebei wél een komma — niet 0.", "Te veel — tel per getal hoeveel cijfers er ná de komma staan."],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**0,7 × 0,3** = ?",
+        options: ["0,21", "2,1", "0,021", "1"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoeveel cijfers ná de komma hebben de twee getallen samen?",
+          null,
+          "Heb je vermenigvuldigd of opgeteld?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vermenigvuldig zonder komma",
+              tekst: "Doe 7 × 3 = 21.",
+            },
+            {
+              titel: "Tel cijfers ná komma",
+              tekst: "0,7 heeft 1 cijfer ná de komma, 0,3 ook 1. Totaal: 2.",
+            },
+            {
+              titel: "Zet komma terug",
+              tekst: "21 met 2 plaatsen vanaf rechts = 0,21.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "decimaalplaats",
+              uitleg: "Cijfer ná de komma.",
+            },
+          ],
+          theorie: "Vermenigvuldig zonder komma's, tel de cijfers ná de komma van beide getallen samen, zet de komma in het antwoord.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "0,7 × 0,3: 7 × 3 = 21. 2 decimalen → 0,21.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tellen decimalen",
+              uitleg: "Tel de cijfers ná de komma van beide getallen samen.",
+            },
+          ],
+          niveaus: {
+            basis: "7 × 3 = 21 → 0,21.",
+            simpeler: "Stap 1: zonder komma 7 × 3 = 21. Stap 2: samen 2 cijfers ná de komma. Stap 3: komma 2 plaatsen van rechts → 0,21.",
+            nogSimpeler: "0,21",
+          },
+        },
+      },
+      {
+        q: "**1,6 × 4** = ?",
+        options: ["6,4", "64", "0,64", "5,6"],
+        answer: 0,
+        wrongHints: [null, "Waar is de komma gebleven?", null, "Is dit een plus-som of een keer-som?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vermenigvuldig zonder komma",
+              tekst: "Doe 16 × 4 = 64.",
+            },
+            {
+              titel: "Tel cijfers ná komma",
+              tekst: "1,6 heeft 1 cijfer ná de komma, 4 heeft er 0. Totaal: 1.",
+            },
+            {
+              titel: "Zet komma terug",
+              tekst: "64 met 1 plaats vanaf rechts = 6,4.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "decimaalplaats",
+              uitleg: "Cijfer ná de komma.",
+            },
+          ],
+          theorie: "Vermenigvuldig zonder komma's, tel de cijfers ná de komma van beide getallen samen, zet de komma in het antwoord.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1,6 × 4: 16 × 4 = 64. 1 decimaal → 6,4.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tellen decimalen",
+              uitleg: "Tel de cijfers ná de komma van beide getallen samen.",
+            },
+          ],
+          niveaus: {
+            basis: "16 × 4 = 64 → 6,4.",
+            simpeler: "Stap 1: zonder komma 16 × 4 = 64. Stap 2: 1 cijfer ná de komma (in 1,6). Stap 3: komma 1 plaats van rechts → 6,4.",
+            nogSimpeler: "6,4",
+          },
+        },
+      },
+      {
+        q: "**2,5 × 0,4** = ?",
+        options: ["1", "10", "0,1", "2,9"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Tel de cijfers ná de komma in beide getallen samen.",
+          null,
+          "Je moet vermenigvuldigen, niet optellen.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vermenigvuldig zonder komma",
+              tekst: "Doe 25 × 4 = 100.",
+            },
+            {
+              titel: "Tel cijfers ná komma",
+              tekst: "2,5 heeft 1 cijfer ná de komma, 0,4 ook 1. Totaal: 2.",
+            },
+            {
+              titel: "Zet komma terug",
+              tekst: "100 met 2 plaatsen vanaf rechts = 1,00 = 1.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "decimaalplaats",
+              uitleg: "Cijfer ná de komma.",
+            },
+          ],
+          theorie: "Vermenigvuldig zonder komma's, tel de cijfers ná de komma van beide getallen samen, zet de komma in het antwoord.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2,5 × 0,4: 25 × 4 = 100. 2 decimalen → 1,00 = 1.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tellen decimalen",
+              uitleg: "Tel de cijfers ná de komma van beide getallen samen.",
+            },
+          ],
+          niveaus: {
+            basis: "25 × 4 = 100 → 1,00 = 1.",
+            simpeler: "Stap 1: zonder komma 25 × 4 = 100. Stap 2: samen 2 cijfers ná de komma. Stap 3: komma 2 plaatsen van rechts → 1,00. Dat is 1.",
+            nogSimpeler: "1",
+          },
+        },
+      },
+      {
+        q: "Bij **1,25 × 0,3** reken je eerst 125 × 3 = 375. Wat is het **antwoord**?",
+        options: ["0,375", "3,75", "37,5", "0,0375"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Tel de cijfers ná de komma in 1,25 én in 0,3.",
+          null,
+          "Tel nog eens: hoeveel cijfers staan er samen ná de komma?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vermenigvuldig zonder komma",
+              tekst: "Doe 125 × 3 = 375.",
+            },
+            {
+              titel: "Tel cijfers ná komma",
+              tekst: "1,25 heeft 2 cijfers ná de komma, 0,3 heeft er 1. Totaal: 3.",
+            },
+            {
+              titel: "Zet komma terug",
+              tekst: "375 met 3 plaatsen vanaf rechts = 0,375.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "decimaalplaats",
+              uitleg: "Cijfer ná de komma.",
+            },
+          ],
+          theorie: "Vermenigvuldig zonder komma's, tel de cijfers ná de komma van beide getallen samen, zet de komma in het antwoord.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1,25 × 0,3: 125 × 3 = 375. 3 decimalen → 0,375.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tellen decimalen",
+              uitleg: "Tel de cijfers ná de komma van beide getallen samen.",
+            },
+          ],
+          niveaus: {
+            basis: "375 met 3 decimalen = 0,375.",
+            simpeler: "Stap 1: 125 × 3 = 375. Stap 2: 1,25 heeft 2 cijfers ná de komma en 0,3 heeft er 1, samen 3. Stap 3: komma 3 plaatsen van rechts → 0,375.",
+            nogSimpeler: "0,375",
+          },
+        },
+      },
+      {
+        q: "**3,9 × 5** = ?",
+        options: ["19,5", "1,95", "195", "8,9"],
+        answer: 0,
+        wrongHints: [null, "Schat eerst: 3,9 is bijna 4. Hoeveel is 4 × 5?", "Komma vergeten?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vermenigvuldig zonder komma",
+              tekst: "Doe 39 × 5 = 195.",
+            },
+            {
+              titel: "Tel cijfers ná komma",
+              tekst: "3,9 heeft 1 cijfer ná de komma, 5 heeft er 0. Totaal: 1.",
+            },
+            {
+              titel: "Zet komma terug",
+              tekst: "195 met 1 plaats vanaf rechts = 19,5.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "decimaalplaats",
+              uitleg: "Cijfer ná de komma.",
+            },
+          ],
+          theorie: "Vermenigvuldig zonder komma's, tel de cijfers ná de komma van beide getallen samen, zet de komma in het antwoord.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "3,9 × 5: 39 × 5 = 195. 1 decimaal → 19,5.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tellen decimalen",
+              uitleg: "Tel de cijfers ná de komma van beide getallen samen.",
+            },
+          ],
+          niveaus: {
+            basis: "39 × 5 = 195 → 19,5.",
+            simpeler: "Stap 1: zonder komma 39 × 5 = 195. Stap 2: 1 cijfer ná de komma. Stap 3: komma 1 plaats van rechts → 19,5. Schat: 4 × 5 = 20, dat klopt.",
+            nogSimpeler: "19,5",
+          },
+        },
+      },
+      {
+        q: "**1,3 × 1,1** = ?",
+        options: ["1,43", "14,3", "0,143", "2,4"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoeveel cijfers ná de komma hebben de twee getallen samen?",
+          null,
+          "Is dit een plus-som of een keer-som?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vermenigvuldig zonder komma",
+              tekst: "Doe 13 × 11 = 143.",
+            },
+            {
+              titel: "Tel cijfers ná komma",
+              tekst: "1,3 heeft 1 cijfer ná de komma, 1,1 ook 1. Totaal: 2.",
+            },
+            {
+              titel: "Zet komma terug",
+              tekst: "143 met 2 plaatsen vanaf rechts = 1,43.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "decimaalplaats",
+              uitleg: "Cijfer ná de komma.",
+            },
+          ],
+          theorie: "Vermenigvuldig zonder komma's, tel de cijfers ná de komma van beide getallen samen, zet de komma in het antwoord.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1,3 × 1,1: 13 × 11 = 143. 2 decimalen → 1,43.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tellen decimalen",
+              uitleg: "Tel de cijfers ná de komma van beide getallen samen.",
+            },
+          ],
+          niveaus: {
+            basis: "13 × 11 = 143 → 1,43.",
+            simpeler: "Stap 1: zonder komma 13 × 11 = 143. Stap 2: samen 2 cijfers ná de komma. Stap 3: komma 2 plaatsen van rechts → 1,43.",
+            nogSimpeler: "1,43",
+          },
+        },
+      },
     ],
   },
 
@@ -278,6 +1153,242 @@ const steps = [
         options: ["12 stukjes", "8 stukjes", "120 stukjes", "1,2 stukjes"],
         answer: 0,
         wrongHints: [null, "Te weinig — heb je goed gedeeld? (96 ÷ 8)", "Te veel — komma 1 plaats te ver.", "Aantal moet een heel getal zijn — je kunt geen 1,2 stukjes hebben."],
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**9,3 ÷ 3** = ?",
+        options: ["3,1", "31", "0,31", "27,9"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Waar komt de komma in het antwoord? Op dezelfde plek als in 9,3.",
+          null,
+          "Moet je delen of keer doen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Deel het hele deel",
+              tekst: "9 ÷ 3 = 3.",
+            },
+            {
+              titel: "Komma en tienden",
+              tekst: "Zet de komma. 3 tienden ÷ 3 = 1 tiende.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "komma verschuiven",
+              uitleg: "Komma rechts opschuiven (= × 10) in beide getallen tegelijk.",
+            },
+          ],
+          theorie: "Delen door een heel getal: komma blijft op dezelfde plek. Delen door een kommagetal: schuif de komma's tot de deler heel is.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "9,3 ÷ 3 = 3,1.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Schatten",
+              uitleg: "9 ÷ 3 = 3. Het antwoord ligt dus vlak bij 3.",
+            },
+          ],
+          niveaus: {
+            basis: "9 ÷ 3 = 3, 3 ÷ 3 = 1 → 3,1.",
+            simpeler: "Deel eerst 9 ÷ 3 = 3. Zet de komma. Dan 3 ÷ 3 = 1. Antwoord: 3,1.",
+            nogSimpeler: "3,1",
+          },
+        },
+      },
+      {
+        q: "**4,5 ÷ 0,5** = ?",
+        options: ["9", "0,9", "90", "2,25"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Heb je de komma's in beide getallen verschoven? (45 ÷ 5)",
+          null,
+          "Delen door 0,5 is niet hetzelfde als delen door 2. Hoe vaak past 0,5 in 4,5?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Verschuif komma",
+              tekst: "0,5 heeft 1 cijfer ná de komma. Schuif in beide 1 plaats: 4,5 → 45, 0,5 → 5.",
+            },
+            {
+              titel: "Deel als gewone getallen",
+              tekst: "45 ÷ 5 = 9.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "komma verschuiven",
+              uitleg: "Komma rechts opschuiven (= × 10) in beide getallen tegelijk.",
+            },
+          ],
+          theorie: "Delen door een heel getal: komma blijft op dezelfde plek. Delen door een kommagetal: schuif de komma's tot de deler heel is.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "4,5 ÷ 0,5 → 45 ÷ 5 = 9.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Groter antwoord",
+              uitleg: "Delen door een getal kleiner dan 1 geeft een groter antwoord.",
+            },
+          ],
+          niveaus: {
+            basis: "45 ÷ 5 = 9.",
+            simpeler: "Stap 1: schuif de komma 1 plaats in beide (4,5 → 45, 0,5 → 5). Stap 2: 45 ÷ 5 = 9.",
+            nogSimpeler: "9",
+          },
+        },
+      },
+      {
+        q: "**7,2 ÷ 0,9** = ?",
+        options: ["8", "0,8", "80", "6,48"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Heb je de komma's wel verschoven? (72 ÷ 9)",
+          null,
+          "Dat is 7,2 × 0,9. Je moet juist delen.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Verschuif komma",
+              tekst: "0,9 heeft 1 cijfer ná de komma. Schuif in beide 1 plaats: 7,2 → 72, 0,9 → 9.",
+            },
+            {
+              titel: "Deel als gewone getallen",
+              tekst: "72 ÷ 9 = 8.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "komma verschuiven",
+              uitleg: "Komma rechts opschuiven (= × 10) in beide getallen tegelijk.",
+            },
+          ],
+          theorie: "Delen door een heel getal: komma blijft op dezelfde plek. Delen door een kommagetal: schuif de komma's tot de deler heel is.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "7,2 ÷ 0,9 → 72 ÷ 9 = 8.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Beide getallen",
+              uitleg: "Schuif in BEIDE getallen evenveel plaatsen — anders verandert je som.",
+            },
+          ],
+          niveaus: {
+            basis: "72 ÷ 9 = 8.",
+            simpeler: "Stap 1: schuif de komma 1 plaats in beide (7,2 → 72, 0,9 → 9). Stap 2: 72 ÷ 9 = 8.",
+            nogSimpeler: "8",
+          },
+        },
+      },
+      {
+        q: "Bij **1,8 ÷ 0,6** verschuif je de komma's. Welke som reken je dan uit?",
+        options: ["18 ÷ 6", "1,8 ÷ 6", "18 ÷ 0,6", "180 ÷ 6"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Schuif je de komma in béide getallen?",
+          null,
+          "Hoeveel plaatsen moet je schuiven om van 0,6 een heel getal te maken?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kijk naar de deler",
+              tekst: "0,6 heeft 1 cijfer ná de komma. Schuif 1 plaats: 0,6 → 6.",
+            },
+            {
+              titel: "Schuif ook het deeltal",
+              tekst: "1,8 → 18. De som wordt 18 ÷ 6 = 3.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "komma verschuiven",
+              uitleg: "Komma rechts opschuiven (= × 10) in beide getallen tegelijk.",
+            },
+          ],
+          theorie: "Delen door een heel getal: komma blijft op dezelfde plek. Delen door een kommagetal: schuif de komma's tot de deler heel is.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2,1 ÷ 0,7 → 21 ÷ 7 = 3.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Beide getallen",
+              uitleg: "Schuif in BEIDE getallen evenveel plaatsen — anders verandert je som.",
+            },
+          ],
+          niveaus: {
+            basis: "1,8 ÷ 0,6 wordt 18 ÷ 6.",
+            simpeler: "0,6 wordt een heel getal als je de komma 1 plaats schuift: 6. Doe dat ook bij 1,8: 18. Je rekent 18 ÷ 6.",
+            nogSimpeler: "18 ÷ 6",
+          },
+        },
+      },
+      {
+        q: "Een fles van **1,2 liter** limonade wordt eerlijk verdeeld over **4 glazen**. Hoeveel liter per glas?",
+        options: ["0,3 liter", "3 liter", "4,8 liter", "0,03 liter"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kan er in één glas meer zitten dan in de hele fles?",
+          null,
+          "Waar komt de komma? 12 ÷ 4 = 3, dus 1,2 ÷ 4 = …",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Delen door een heel getal",
+              tekst: "1,2 ÷ 4. Doe 12 ÷ 4 = 3.",
+            },
+            {
+              titel: "Komma terug",
+              tekst: "1,2 heeft 1 cijfer ná de komma, dus het antwoord ook: 0,3.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "komma verschuiven",
+              uitleg: "Komma rechts opschuiven (= × 10) in beide getallen tegelijk.",
+            },
+          ],
+          theorie: "Delen door een heel getal: komma blijft op dezelfde plek. Delen door een kommagetal: schuif de komma's tot de deler heel is.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2,4 ÷ 4 = 0,6.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Schatten",
+              uitleg: "4 glazen samen = 1,2 liter. Elk glas krijgt dus minder dan 1 liter.",
+            },
+          ],
+          niveaus: {
+            basis: "1,2 ÷ 4 = 0,3 liter.",
+            simpeler: "12 ÷ 4 = 3. Zet de komma op dezelfde plek als in 1,2: 0,3 liter per glas.",
+            nogSimpeler: "0,3 liter",
+          },
+        },
       },
     ],
   },
@@ -331,6 +1442,195 @@ const steps = [
         options: ["0,7 kg per kind", "7 kg per kind", "11,2 kg per kind", "0,07 kg per kind"],
         answer: 0,
         wrongHints: [null, "Te veel — verdeel je 2,8 kg over 4 kinderen, dan krijgt iedereen minder dan 2,8 kg.", "Te veel — heb je gedeeld of juist vermenigvuldigd?", "Komma 1 plaats verkeerd."],
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Je koopt een ijsje van **€ 2,35** en betaalt met **€ 5**. Hoeveel krijg je **terug**?",
+        options: ["€ 2,65", "€ 3,65", "€ 2,75", "€ 7,35"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Schrijf € 5 als € 5,00 en trek dan af.",
+          null,
+          "Terugkrijgen betekent aftrekken, niet optellen.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Aftrekken",
+              tekst: "€ 5,00 − € 2,35.",
+            },
+            {
+              titel: "Uitrekenen",
+              tekst: "500 − 235 = 265 cent = € 2,65.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "eenheid",
+              uitleg: "Wat er bij het getal hoort, zoals €, kg, m of liter.",
+            },
+          ],
+          theorie: "Wisselgeld = wat je betaalt min wat het kost.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "€ 5,00 − € 2,35 = € 2,65.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Eenheid",
+              uitleg: "Schrijf altijd de eenheid (€, kg, m, mL) bij je antwoord.",
+            },
+          ],
+          niveaus: {
+            basis: "€ 5,00 − € 2,35 = € 2,65.",
+            simpeler: "Schrijf € 5 als € 5,00. Trek af: 500 − 235 = 265 cent. Dat is € 2,65.",
+            nogSimpeler: "€ 2,65",
+          },
+        },
+      },
+      {
+        q: "**0,25 liter** melk = **... mL**?",
+        options: ["250 mL", "25 mL", "2500 mL", "2,5 mL"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoeveel mL zit er in 1 liter?",
+          null,
+          "Is 0,25 liter meer of minder dan 1 liter? En hoeveel mL is 1 liter?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Hoeveel mL in 1 liter?",
+              tekst: "1 liter = 1000 mL.",
+            },
+            {
+              titel: "Keer 1000",
+              tekst: "0,25 × 1000 = 250 mL.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "eenheid",
+              uitleg: "Wat er bij het getal hoort, zoals €, kg, m of liter.",
+            },
+          ],
+          theorie: "Van liter naar mL: keer 1000.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "0,25 liter = 0,25 × 1000 mL = 250 mL.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Eenheid",
+              uitleg: "Schrijf altijd de eenheid (€, kg, m, mL) bij je antwoord.",
+            },
+          ],
+          niveaus: {
+            basis: "0,25 × 1000 = 250 mL.",
+            simpeler: "1 liter = 1000 mL. Een kwart liter is een kwart van 1000: 250 mL.",
+            nogSimpeler: "250 mL",
+          },
+        },
+      },
+      {
+        q: "**1 kg** appels kost **€ 2,40**. Wat kost **0,5 kg**?",
+        options: ["€ 1,20", "€ 4,80", "€ 0,24", "€ 2,90"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is een halve kilo duurder of goedkoper dan een hele kilo?",
+          null,
+          "Moet je de prijs en het gewicht optellen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat is 0,5 kg?",
+              tekst: "0,5 kg = een halve kilo.",
+            },
+            {
+              titel: "Helft van de prijs",
+              tekst: "€ 2,40 ÷ 2 = € 1,20.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "eenheid",
+              uitleg: "Wat er bij het getal hoort, zoals €, kg, m of liter.",
+            },
+          ],
+          theorie: "0,5 kg is de helft van 1 kg, dus het kost ook de helft.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "0,5 kg kaas van € 6,00 per kg kost € 3,00.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Eenheid",
+              uitleg: "Schrijf altijd de eenheid (€, kg, m, mL) bij je antwoord.",
+            },
+          ],
+          niveaus: {
+            basis: "€ 2,40 ÷ 2 = € 1,20.",
+            simpeler: "0,5 kg is een halve kilo. Een halve kilo kost de helft van € 2,40. Dat is € 1,20.",
+            nogSimpeler: "€ 1,20",
+          },
+        },
+      },
+      {
+        q: "Mira springt **1,35 m** ver. Tom springt **1,2 m**. Hoeveel meter **verder** springt Mira?",
+        options: ["0,15 m", "1,23 m", "0,33 m", "2,55 m"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Staan de komma's recht onder elkaar? Schrijf 1,2 als 1,20.",
+          null,
+          "Hoeveel verder vraagt om het verschil, niet om de twee sprongen samen.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Komma's onder elkaar",
+              tekst: "Schrijf 1,2 als 1,20.",
+            },
+            {
+              titel: "Aftrekken",
+              tekst: "1,35 − 1,20 = 0,15 m.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "eenheid",
+              uitleg: "Wat er bij het getal hoort, zoals €, kg, m of liter.",
+            },
+          ],
+          theorie: "Verschil = groot getal min klein getal, met de komma's recht onder elkaar.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2,45 m − 2,3 m → 2,45 − 2,30 = 0,15 m.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Eenheid",
+              uitleg: "Schrijf altijd de eenheid (€, kg, m, mL) bij je antwoord.",
+            },
+          ],
+          niveaus: {
+            basis: "1,35 − 1,20 = 0,15 m.",
+            simpeler: "Schrijf 1,2 als 1,20. Trek af: 1,35 − 1,20 = 0,15 m. Dat is 15 cm.",
+            nogSimpeler: "0,15 m",
+          },
+        },
       },
     ],
   },

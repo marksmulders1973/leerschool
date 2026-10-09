@@ -67,6 +67,121 @@ const steps = [
           niveaus: { basis: "loopt = ww.", simpeler: "Loopt = werkwoord (geen 'de loopt'). Andere drie = zelfst nw.", nogSimpeler: "Loopt" },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*'Gisteren lachte Lisa heel hard.'* — welk woord is een zelfstandig naamwoord?",
+        options: ["Lisa", "lachte", "hard", "Gisteren"],
+        answer: 0,
+        wrongHints: [null, "Wat deed iemand gisteren? Dat woord zegt wat er gebeurde.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wie?",
+              tekst: "Wie lachte? Lisa. Lisa is de naam van een persoon: een eigennaam, en dat is ook een zelfstandig naamwoord.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "eigennaam",
+              uitleg: "Naam van een bepaalde persoon of plaats. Met hoofdletter.",
+            },
+          ],
+          theorie: "Eigennamen (Tom, Lisa, Amsterdam) zijn ook zelfstandige naamwoorden. Je schrijft ze met een hoofdletter.",
+          voorbeelden: [
+            {
+              type: "ontleed",
+              tekst: "Gisteren lachte Lisa (eigennaam) heel hard.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Hoofdletter",
+              uitleg: "Lisa heeft een hoofdletter midden in de zin: dat is een naam.",
+            },
+          ],
+          niveaus: {
+            basis: "Lisa = eigennaam.",
+            simpeler: "Lisa is een persoon. Namen van personen zijn zelfstandige naamwoorden.",
+            nogSimpeler: "Lisa",
+          },
+        },
+      },
+      {
+        q: "*'Wij rennen snel naar het park.'* — welk woord is een zelfstandig naamwoord?",
+        options: ["park", "rennen", "snel", "Wij"],
+        answer: 0,
+        wrongHints: [null, "Wat doen ze? Is dat een plaats of een ding?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Plaats",
+              tekst: "Park is een plaats. Het park ✓ → zelfstandig naamwoord.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "plaats",
+              uitleg: "Een plek waar je kunt zijn: school, park, Amsterdam.",
+            },
+          ],
+          theorie: "Zelfstandige naamwoorden zijn woorden voor personen, dieren, dingen, plaatsen en gevoelens.",
+          voorbeelden: [
+            {
+              type: "ontleed",
+              tekst: "Wij rennen (werkwoord) snel naar het park (zelfst. naamwoord).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Waar naartoe?",
+              uitleg: "Waar rennen ze naartoe? Naar het park. Dat is een plaats.",
+            },
+          ],
+          niveaus: {
+            basis: "park = zelfst. naamwoord.",
+            simpeler: "Het park is een plaats. 'Het park' kan, dus zelfstandig naamwoord.",
+            nogSimpeler: "Park",
+          },
+        },
+      },
+      {
+        q: "*'De juf leest een boek voor.'* — hoeveel zelfstandige naamwoorden staan in deze zin?",
+        options: ["2", "1", "3", "4"],
+        answer: 0,
+        wrongHints: [null, "Zoek ook de persoon in de zin.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel met de de/het-test",
+              tekst: "De juf ✓ (persoon). Een boek / het boek ✓ (ding). Leest en voor zijn geen zelfstandige naamwoorden.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "persoon",
+              uitleg: "Juf is een woord voor een persoon.",
+            },
+          ],
+          theorie: "Zelfstandig naamwoord: past 'de' of 'het' ervoor? Juf → de juf ✓. Boek → het boek ✓.",
+          voorbeelden: [
+            {
+              type: "tel",
+              tekst: "De (lidwoord) juf (zelfst.) leest een (lidwoord) boek (zelfst.) voor.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lidwoord",
+              uitleg: "De en een zijn lidwoorden: kleine woordjes vóór een zelfstandig naamwoord.",
+            },
+          ],
+          niveaus: {
+            basis: "juf + boek = 2.",
+            simpeler: "Juf is een persoon, boek is een ding. Dat zijn er twee.",
+            nogSimpeler: "Twee",
+          },
+        },
+      },
     ],
   },
 
@@ -128,6 +243,240 @@ const steps = [
           voorbeelden: [{ type: "vorm", tekst: "Ik heb gegeten. Ik ben geweest. Ik zal komen. Hulp + hoofd." }],
           basiskennis: [{ onderwerp: "Hebben vs zijn", uitleg: "Meeste ww met 'heb' (gelezen, gegeten). Beweging/staat met 'ben' (geweest, gegaan)." }],
           niveaus: { basis: "heb.", simpeler: "Twee werkwoorden: heb (hulp) + gelezen (hoofd). 'Heb' helpt om voltooide tijd te maken.", nogSimpeler: "Heb" },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*'Mijn broer is ziek.'* — welk woord is het werkwoord?",
+        options: ["is", "broer", "ziek", "Mijn"],
+        answer: 0,
+        wrongHints: [null, "Zegt dit woord wat iemand doet of is?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zijn = werkwoord",
+              tekst: "'Is' komt van 'zijn'. Een werkwoord zegt wat iemand doet of is.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "zijn",
+              uitleg: "Werkwoord voor hoe iets of iemand is: ik ben, hij is, wij zijn.",
+            },
+          ],
+          theorie: "Niet alleen doe-woorden zijn werkwoorden. Ook zijn, hebben, blijven en worden.",
+          voorbeelden: [
+            {
+              type: "vorm",
+              tekst: "ik ben ziek / hij is ziek / wij zijn ziek.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Ik-test",
+              uitleg: "Zet 'ik' ervoor: 'ik ben'. Dat kan, dus werkwoord.",
+            },
+          ],
+          niveaus: {
+            basis: "is = werkwoord.",
+            simpeler: "Is komt van zijn: ik ben, hij is. Dat is een werkwoord.",
+            nogSimpeler: "Is",
+          },
+        },
+      },
+      {
+        q: "*'Gisteren kocht ik een ijsje.'* — van welk **hele werkwoord** komt 'kocht'?",
+        options: ["kopen", "kochten", "koopt", "koken"],
+        answer: 0,
+        wrongHints: [null, null, null, "Dat is een ander werkwoord. Wat doe je in een winkel?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Terug naar het hele werkwoord",
+              tekst: "Kocht is verleden tijd. Nu: ik koop. Het hele werkwoord is kopen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "hele werkwoord",
+              uitleg: "De vorm zonder veranderingen. Eindigt meestal op -en.",
+            },
+          ],
+          theorie: "Vraag jezelf: wat is de vorm die je in een woordenboek zoekt? Kocht → kopen.",
+          voorbeelden: [
+            {
+              type: "tabel",
+              tekst: "liep → lopen, at → eten, kocht → kopen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tijd verandert",
+              uitleg: "ik koop (nu), ik kocht (vroeger), ik zal kopen (later).",
+            },
+          ],
+          niveaus: {
+            basis: "kocht → kopen.",
+            simpeler: "Gisteren kocht ik, vandaag koop ik. Het hele werkwoord is kopen.",
+            nogSimpeler: "Kopen",
+          },
+        },
+      },
+      {
+        q: "*'Wij ___ elke dag naar school.'* — welke vorm van 'lopen' past?",
+        options: ["lopen", "loopt", "loop", "lopend"],
+        answer: 0,
+        wrongHints: [null, "Welke vorm hoort bij 'hij'? En welke bij 'wij'?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vorm hangt af van wie",
+              tekst: "Ik loop, hij loopt, wij lopen. Bij 'wij' hoort 'lopen'.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vervoegen",
+              uitleg: "De vorm van het werkwoord aanpassen aan wie het doet.",
+            },
+          ],
+          theorie: "De vorm van een werkwoord verandert: ik loop / hij loopt / wij lopen.",
+          voorbeelden: [
+            {
+              type: "vorm",
+              tekst: "ik loop, jij loopt, hij loopt, wij lopen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Ik-jij-hij",
+              uitleg: "Werkwoorden kun je vervoegen: de vorm past zich aan.",
+            },
+          ],
+          niveaus: {
+            basis: "Wij → lopen.",
+            simpeler: "Bij 'wij' hoort de vorm 'lopen': wij lopen naar school.",
+            nogSimpeler: "Wij lopen",
+          },
+        },
+      },
+      {
+        q: "Welk woord is een werkwoord? Tip: zet er **'ik'** voor.",
+        options: ["zwemmen", "zwembad", "nat", "snel"],
+        answer: 0,
+        wrongHints: [null, "Kun je zeggen 'ik zwembad'?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Ik-test",
+              tekst: "Ik zwem ✓. Zwemmen is iets wat je doet, dus een werkwoord.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "werkwoord",
+              uitleg: "Woord dat zegt wat iemand doet of is.",
+            },
+          ],
+          theorie: "Werkwoorden kun je vervoegen: ik zwem, hij zwemt, wij zwemmen.",
+          voorbeelden: [
+            {
+              type: "test",
+              tekst: "ik zwem ✓, ik zwembad ✗, ik nat ✗, ik snel ✗.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Hele werkwoord",
+              uitleg: "Zwemmen eindigt op -en: dat is het hele werkwoord.",
+            },
+          ],
+          niveaus: {
+            basis: "zwemmen = werkwoord.",
+            simpeler: "'Ik zwem' kan. Zwemmen is iets wat je doet. Dus een werkwoord.",
+            nogSimpeler: "Zwemmen",
+          },
+        },
+      },
+      {
+        q: "Welke zin staat in de **verleden tijd**?",
+        options: [
+          "Ik liep naar huis.",
+          "Ik loop naar huis.",
+          "Ik zal naar huis lopen.",
+          "Ik ga naar huis lopen.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Gebeurt dit nu?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tijd",
+              tekst: "Liep = verleden tijd van lopen. Het is al gebeurd.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "verleden tijd",
+              uitleg: "Iets wat al gebeurd is.",
+            },
+          ],
+          theorie: "Tegenwoordig: ik loop. Verleden: ik liep. Toekomst: ik zal lopen / ik ga lopen.",
+          voorbeelden: [
+            {
+              type: "tijd",
+              tekst: "loop (nu) → liep (vroeger) → zal lopen (later).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Signaalwoord",
+              uitleg: "Denk er 'gisteren' bij: gisteren liep ik naar huis.",
+            },
+          ],
+          niveaus: {
+            basis: "liep = verleden tijd.",
+            simpeler: "'Ik liep' is al gebeurd. 'Ik loop' is nu. 'Ik zal lopen' en 'ik ga lopen' zijn later.",
+            nogSimpeler: "Liep",
+          },
+        },
+      },
+      {
+        q: "*'Wij hebben hard gewerkt.'* — welk woord is het **hoofdwerkwoord**?",
+        options: ["gewerkt", "hebben", "hard", "Wij"],
+        answer: 0,
+        wrongHints: [null, "Dit werkwoord helpt alleen. Wat hebben ze eigenlijk gedaan?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Hulp + hoofd",
+              tekst: "Hebben = hulpwerkwoord. Gewerkt = hoofdwerkwoord: dat zegt wat ze deden.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "hoofdwerkwoord",
+              uitleg: "Het werkwoord dat zegt wat er eigenlijk gebeurt.",
+            },
+          ],
+          theorie: "Twee werkwoorden samen = hulpwerkwoord + hoofdwerkwoord. 'Ik heb gelopen': heb = hulp, gelopen = hoofd.",
+          voorbeelden: [
+            {
+              type: "vorm",
+              tekst: "Wij (voornaamwoord) hebben (hulp) hard gewerkt (hoofd).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Wat deden ze?",
+              uitleg: "Ze werkten. Dus gewerkt is het hoofdwerkwoord.",
+            },
+          ],
+          niveaus: {
+            basis: "gewerkt = hoofdwerkwoord.",
+            simpeler: "Hebben helpt alleen. Wat deden ze? Werken. Dus gewerkt is het hoofdwerkwoord.",
+            nogSimpeler: "Gewerkt",
+          },
         },
       },
     ],
@@ -193,6 +542,121 @@ const steps = [
           niveaus: { basis: "op = niet bijvoeglijk.", simpeler: "'Lekkere' beschrijft taart (bijvoeglijk). 'Op' geeft toestand aan (bijwoord).", nogSimpeler: "Op" },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*'Van alle torens in de stad is deze het ___.'* — welke vorm van 'hoog' past?",
+        options: ["hoogst", "hoger", "hoogt", "hoogs"],
+        answer: 0,
+        wrongHints: [null, "Vergelijk je hier twee torens, of alle torens?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vergelijken",
+              tekst: "hoog — hoger — het hoogst. Bij 'het ... van alle' hoort de vorm op -st.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vergelijken",
+              uitleg: "Laten zien dat iets meer of het meest heeft.",
+            },
+          ],
+          theorie: "Vergelijken gaat zo: mooi — mooier — het mooist. Groot — groter — grootst. Hoog — hoger — hoogst.",
+          voorbeelden: [
+            {
+              type: "tabel",
+              tekst: "hoog → hoger → het hoogst.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Van alle",
+              uitleg: "Bij 'van alle' gaat het om de allerhoogste: -st.",
+            },
+          ],
+          niveaus: {
+            basis: "het hoogst.",
+            simpeler: "Van álle torens is deze de hoogste: het hoogst.",
+            nogSimpeler: "Hoogst",
+          },
+        },
+      },
+      {
+        q: "*'Ik ben goed in rekenen, maar mijn zus is nog ___.'* — welk woord past?",
+        options: ["beter", "goeder", "best", "beste"],
+        answer: 0,
+        wrongHints: [null, "Gaat 'goed' hier volgens de gewone regel?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Onregelmatig",
+              tekst: "Goed is onregelmatig: goed — beter — best. Je vergelijkt twee mensen, dus 'beter'.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "onregelmatig",
+              uitleg: "Gaat niet volgens de gewone regel (-er, -st).",
+            },
+          ],
+          theorie: "De meeste woorden: mooi — mooier — mooist. Maar: goed — beter — best.",
+          voorbeelden: [
+            {
+              type: "tabel",
+              tekst: "goed → beter → best.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Twee vergelijken",
+              uitleg: "'Nog ...' vergelijkt twee mensen: ik en mijn zus.",
+            },
+          ],
+          niveaus: {
+            basis: "goed → beter.",
+            simpeler: "Goed wordt niet 'goeder' maar beter. Mijn zus is nog beter.",
+            nogSimpeler: "Beter",
+          },
+        },
+      },
+      {
+        q: "Welk woord past op de lege plek: *'de ___ fiets'*?",
+        options: ["rode", "rijden", "zadel", "snelheid"],
+        answer: 0,
+        wrongHints: [null, "Beschrijft dit woord hoe de fiets eruitziet?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Test: de ___ fiets",
+              tekst: "Een bijvoeglijk naamwoord past tussen 'de' en een zelfstandig naamwoord: de rode fiets ✓.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "bijvoeglijk naamwoord",
+              uitleg: "Beschrijft een eigenschap: rood, groot, snel.",
+            },
+          ],
+          theorie: "Test: past het woord tussen 'de' en een zelfst. naamwoord? Dan is het bijvoeglijk.",
+          voorbeelden: [
+            {
+              type: "test",
+              tekst: "de rode fiets ✓, de rijden fiets ✗, de zadel fiets ✗.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Kleur",
+              uitleg: "Kleuren zijn eigenschappen: rood, blauw, geel.",
+            },
+          ],
+          niveaus: {
+            basis: "de rode fiets.",
+            simpeler: "Rood is een kleur, een eigenschap van de fiets. 'De rode fiets' klinkt goed.",
+            nogSimpeler: "Rode",
+          },
+        },
+      },
     ],
   },
 
@@ -254,6 +718,88 @@ const steps = [
           voorbeelden: [{ type: "lijst", tekst: "Deze appel (de-woord, dichtbij). Dit huis (het-woord, dichtbij). Die boom. Dat raam." }],
           basiskennis: [{ onderwerp: "Niet lidwoord", uitleg: "Lidwoord = de/het/een. Aanwijzend = deze/die/dit/dat." }],
           niveaus: { basis: "aanwijzend.", simpeler: "Deze/die/dit/dat = aanwijzende voornaamwoorden (wijzen iets aan). Niet 'de/het/een'.", nogSimpeler: "Aanwijzend" },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*'Tom heeft honger. ___ eet een appel.'* — welk voornaamwoord past op de lege plek?",
+        options: ["Hij", "Zij", "Wij", "Het"],
+        answer: 0,
+        wrongHints: [null, "Gaat het over een jongen of over een meisje?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Naam vervangen",
+              tekst: "Een voornaamwoord vervangt een naam. Tom is een jongen → hij.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "voornaamwoord",
+              uitleg: "Woord dat een naam of zelfst. naamwoord vervangt.",
+            },
+          ],
+          theorie: "Persoonlijke voornaamwoorden: ik, jij, hij, zij, wij. Tom → hij. Lisa → zij.",
+          voorbeelden: [
+            {
+              type: "vervangen",
+              tekst: "Tom → hij. Lisa → zij. Tom en ik → wij.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Eén persoon",
+              uitleg: "Tom is één jongen, dus geen 'wij'.",
+            },
+          ],
+          niveaus: {
+            basis: "Tom → hij.",
+            simpeler: "Tom is een jongen. In plaats van 'Tom' zeg je 'hij'.",
+            nogSimpeler: "Hij",
+          },
+        },
+      },
+      {
+        q: "*'**Welke** kleur vind jij mooi?'* — welk soort woord is 'welke'?",
+        options: [
+          "vragend voornaamwoord",
+          "aanwijzend voornaamwoord",
+          "persoonlijk voornaamwoord",
+          "lidwoord",
+        ],
+        answer: 0,
+        wrongHints: [null, "Wijs je hier iets aan, of stel je een vraag?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vraag",
+              tekst: "Met 'welke' stel je een vraag. Wie, wat en welke zijn vragende voornaamwoorden.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vragend voornaamwoord",
+              uitleg: "Woord waarmee je een vraag stelt: wie, wat, welke.",
+            },
+          ],
+          theorie: "Vragend: wie, wat, welke. Aanwijzend: deze, die, dit, dat.",
+          voorbeelden: [
+            {
+              type: "lijst",
+              tekst: "Wie is dat? Wat zeg je? Welke wil je?",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Vraagteken",
+              uitleg: "De zin eindigt met een vraagteken.",
+            },
+          ],
+          niveaus: {
+            basis: "welke = vragend vnw.",
+            simpeler: "Welke kleur? Je vraagt iets. Dus vragend voornaamwoord.",
+            nogSimpeler: "Vragend",
+          },
         },
       },
     ],

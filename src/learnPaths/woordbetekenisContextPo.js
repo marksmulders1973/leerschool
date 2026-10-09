@@ -282,6 +282,7 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
     ],
   },
 
@@ -544,6 +545,182 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat betekent *'aardedonker'* in deze tekst?",
+        options: ["Helemaal donker", "Een beetje schemerig", "Donker van de modder", "Bruin, net als aarde"],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Er zit wel 'aarde' in het woord, maar gaat de zin erna over modder of over licht?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kijk ná het woord",
+              tekst: "Direct na 'aardedonker' staat: 'Zonlicht komt er nooit.'",
+            },
+            {
+              titel: "Wat betekent dat?",
+              tekst: "Als er nooit zonlicht komt, is er helemaal geen licht. Niet een beetje donker, maar volledig.",
+            },
+            {
+              titel: "Pas op voor de valstrik",
+              tekst: "Het stukje 'aarde' gaat hier niet over modder of kleur. Het maakt 'donker' extra sterk, zoals bij 'pikdonker'.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "aardedonker",
+              uitleg: "Helemaal donker, zonder een sprankje licht.",
+            },
+            {
+              woord: "pikdonker",
+              uitleg: "Ook helemaal donker. Dit woord staat verderop in de tekst.",
+            },
+          ],
+          theorie: "**Pas op met uit elkaar halen**\n\nTruc 4 werkt vaak, maar niet altijd. Soms maakt het eerste stukje een woord alleen maar **sterker**:\n- aardedonker, pikdonker = heel erg donker\n- ijskoud = heel erg koud\n\nControleer daarom altijd met de zin eromheen.",
+          voorbeelden: [
+            {
+              type: "sterker",
+              tekst: "'Het water was ijskoud.' → niet koud als ijs zelf, maar heel erg koud.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Altijd controleren",
+              uitleg: "Klopt jouw betekenis met de zin ervoor en erna? Pas dan weet je het zeker.",
+            },
+          ],
+          niveaus: {
+            basis: "Lees de zin direct na 'aardedonker'. Hoeveel licht is er in de diepzee?",
+            simpeler: "Er komt nooit zonlicht. Is het daar dan een beetje donker, of helemaal?",
+            nogSimpeler: "Kun je daar zonder lamp iets zien?",
+          },
+        },
+      },
+      {
+        q: "*\"Toch voelen sommige dieren zich er juist thuis. Hun lichaam is perfect aangepast aan deze omstandigheden.\"* — Wat betekent 'aangepast' hier?",
+        options: [
+          "Zo gebouwd dat ze er goed kunnen leven",
+          "Ingepakt in een speciale duikboot",
+          "Ziek geworden door de kou",
+          "Verhuisd naar ondiep water",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "De duikboot is voor mensen. Lees de zin ervoor: hoe voelen de dieren zich daar?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kijk ná het woord en ervoor",
+              tekst: "Ervoor staat: 'sommige dieren voelen zich er juist thuis'. Het lichaam van die dieren is 'aangepast'.",
+            },
+            {
+              titel: "Wat betekent dat samen?",
+              tekst: "Je voelt je ergens thuis als je er goed kunt leven. Hun lichaam past dus bij de kou, het donker en de druk.",
+            },
+            {
+              titel: "Controleer",
+              tekst: "Vul in: 'Hun lichaam is perfect gebouwd om goed te leven in deze omstandigheden.' Dat past bij 'zich er thuis voelen'.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "aangepast",
+              uitleg: "Zo veranderd of gebouwd dat iets goed past bij een plek of situatie.",
+            },
+            {
+              woord: "omstandigheden",
+              uitleg: "Hoe het ergens is: warm of koud, licht of donker.",
+            },
+          ],
+          theorie: "**Tegenstelling met 'toch' en 'juist'**\n\nDe zin ervoor zegt: een mens overleeft er geen minuut. Dan komt 'Toch ... juist': de dieren voelen zich er thuis. Dat is het omgekeerde.\n\nHet woord 'aangepast' legt uit hoe dat kan: hun lichaam past bij die moeilijke plek.",
+          voorbeelden: [
+            {
+              type: "aangepast",
+              tekst: "'Een ijsbeer heeft een dikke vacht. Zijn lichaam is aangepast aan de kou.' → door die vacht kan hij goed in de kou leven.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Toch = let op",
+              uitleg: "Na 'toch' komt iets wat je niet verwacht. Dat helpt je om het woord te begrijpen.",
+            },
+          ],
+          niveaus: {
+            basis: "De dieren voelen zich er juist thuis. Wat zegt dat over hoe hun lichaam bij de diepzee past?",
+            simpeler: "Een mens houdt het daar geen minuut vol. Waarom lukt het die dieren wel?",
+            nogSimpeler: "Kunnen die dieren goed leven in de diepzee?",
+          },
+        },
+      },
+      {
+        q: "*\"De diepzee is daarmee een van de laatste onontdekte plekken op aarde.\"* — Wat betekent 'onontdekte' hier?",
+        options: [
+          "Waar we nog weinig van weten",
+          "Waar het altijd ijskoud is",
+          "Waar geen dieren leven",
+          "Die heel klein zijn",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "IJskoud is het daar wel, maar lees de zin ervoor: hoeveel diepzeedieren kennen we al?",
+          "Lees het begin van de tekst nog eens: is de diepzee leeg?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Haal het woord uit elkaar",
+              tekst: "on + ontdekt. 'On-' betekent 'niet'. Onontdekt is dus: niet ontdekt.",
+            },
+            {
+              titel: "Kijk naar de zin ervoor",
+              tekst: "Daar staat dat we misschien maar één op de tien diepzeedieren kennen. Er is dus nog heel veel dat we niet weten.",
+            },
+            {
+              titel: "Controleer",
+              tekst: "Vul in: 'een van de laatste plekken op aarde waar we nog weinig van weten'. Dat past bij de zin ervoor.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "ontdekken",
+              uitleg: "Iets vinden of te weten komen wat nog niemand wist.",
+            },
+            {
+              woord: "on-",
+              uitleg: "Een stukje voor een woord dat 'niet' betekent.",
+            },
+          ],
+          theorie: "**Truc 4 én de zin ervoor**\n\nHet woordje 'daarmee' wijst terug naar de zin ervoor. Daar staat het bewijs: we kennen maar een klein deel van de diepzeedieren.\n\nCombineer dus: uit elkaar halen (on + ontdekt) én terugkijken in de tekst.",
+          voorbeelden: [
+            {
+              type: "onontdekt",
+              tekst: "'Het oerwoud heeft nog veel onontdekte plantensoorten.' → plantensoorten die nog niemand kent.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Daarmee = kijk terug",
+              uitleg: "Staat er 'daarmee' of 'daardoor'? Dan staat de uitleg in de zin ervoor.",
+            },
+          ],
+          niveaus: {
+            basis: "Haal het woord uit elkaar: on + ontdekt. Wat zegt de zin ervoor over hoeveel we al kennen?",
+            simpeler: "We kennen misschien maar één op de tien diepzeedieren. Weten we veel of weinig van de diepzee?",
+            nogSimpeler: "Weten we al alles van de diepzee?",
+          },
+        },
+      },
     ],
   },
 
@@ -776,6 +953,182 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
             basis: "Tim zegt 'dat lukt me nooit'. De coach zegt 'meer vertrouwen in jezelf'. Wat is het tegenovergestelde van 'dat lukt me nooit'?",
             simpeler: "Als iemand zegt 'ik geloof dat ik het kan' — heeft die dan vertrouwen in zichzelf?",
             nogSimpeler: "Denk aan iets wat jij kunt. Geloofde je dat van tevoren ook, of twijfelde je eerst?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Lees: *\"Het had die nacht hard gevroren. Door de vorst zaten er ijsbloemen op het raam.\"* — Wat betekent 'vorst' in deze zin?",
+        options: [
+          "Kou onder het vriespunt",
+          "Een koning of keizer",
+          "De bovenste rand van een dak",
+          "Een harde storm met veel wind",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een vorst kan ook een koning zijn, maar maakt een koning ijsbloemen op je raam? Kijk naar 'gevroren'.",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welke betekenissen ken je?",
+              tekst: "'Vorst' kan zijn: (1) kou waarbij het vriest, (2) een koning of keizer, (3) de bovenste rand van een dak.",
+            },
+            {
+              titel: "Vul ze in de zin in",
+              tekst: "'Door de koning zaten er ijsbloemen op het raam'? Raar. 'Door de kou zaten er ijsbloemen op het raam'? Dat klopt.",
+            },
+            {
+              titel: "Kijk naar de buurwoorden",
+              tekst: "'Hard gevroren' en 'ijsbloemen' horen bij kou. De zin kiest dus de kou-betekenis.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vriespunt",
+              uitleg: "De temperatuur waarbij water bevriest: nul graden.",
+            },
+            {
+              woord: "ijsbloemen",
+              uitleg: "Mooie ijspatronen die bij strenge kou op een raam komen.",
+            },
+          ],
+          theorie: "**De invul-truc voor woorden met meerdere betekenissen:**\n\n1. Noem voor jezelf de betekenissen die je kent.\n2. Vul ze één voor één in de zin in.\n3. De betekenis waarbij de zin logisch blijft, is de juiste.\n\nDe buurwoorden (gevroren, ijsbloemen) wijzen je de weg.",
+          voorbeelden: [
+            {
+              type: "vorst",
+              tekst: "'De vorst sprak zijn volk toe vanaf het balkon.' → hier is een vorst een koning, want hij spreekt zijn volk toe.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Buurwoorden beslissen",
+              uitleg: "De woorden om het woord heen vertellen welke betekenis bedoeld is.",
+            },
+          ],
+          niveaus: {
+            basis: "Vul de betekenissen in. Welke past bij 'hard gevroren' en 'ijsbloemen'?",
+            simpeler: "Wanneer krijg je ijsbloemen op het raam: als er een koning langskomt, of als het heel koud is?",
+            nogSimpeler: "Is het in deze zin warm of koud?",
+          },
+        },
+      },
+      {
+        q: "Lees: *\"Op de muziekles leerde Ilse elke noot op de notenbalk lezen.\"* — Wat betekent 'noot' in deze zin?",
+        options: [
+          "Een teken voor een muziektoon",
+          "Een harde vrucht met een dop",
+          "Een bladzijde uit een liedboek",
+          "Een instrument met snaren",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een walnoot is ook een noot, maar kun je een walnoot 'lezen'? Kijk naar 'muziekles' en 'notenbalk'.",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welke betekenissen ken je?",
+              tekst: "'Noot' kan zijn: (1) een teken dat een toon in de muziek aangeeft, (2) een harde vrucht, zoals een walnoot of hazelnoot.",
+            },
+            {
+              titel: "Vul ze in de zin in",
+              tekst: "'Ilse leerde elke walnoot op de notenbalk lezen'? Raar. 'Ilse leerde elk muziekteken op de notenbalk lezen'? Dat klopt.",
+            },
+            {
+              titel: "Kijk naar de buurwoorden",
+              tekst: "'Muziekles', 'notenbalk' en 'lezen' horen bij muziek. De zin kiest dus de muziek-betekenis.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "notenbalk",
+              uitleg: "Vijf lijnen waarop muzieknoten worden geschreven.",
+            },
+            {
+              woord: "meerdere betekenissen",
+              uitleg: "Eén woord dat verschillende dingen kan betekenen.",
+            },
+          ],
+          theorie: "**De andere betekenis is de valstrik**\n\nToetsenmakers zetten de andere betekenis bijna altijd tussen de antwoorden. Hier is dat de noot die je kunt eten.\n\nWie eerst de zin checkt, trapt er niet in: je kunt geen walnoot lezen.",
+          voorbeelden: [
+            {
+              type: "noot",
+              tekst: "'Eekhoorns verstoppen in de herfst noten in de grond.' → hier is een noot iets om te eten.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lees de zin eerst",
+              uitleg: "Kies niet wat het woord kán betekenen, maar wat het hier betekent.",
+            },
+          ],
+          niveaus: {
+            basis: "Vul de betekenissen in. Welke past bij 'muziekles' en 'notenbalk'?",
+            simpeler: "Wat lees je op een notenbalk: muziek of vruchten?",
+            nogSimpeler: "Gaat deze zin over eten of over muziek?",
+          },
+        },
+      },
+      {
+        q: "Lees: *\"Het slot van het verhaal was zo spannend dat ik het boek niet kon wegleggen.\"* — Wat betekent 'slot' in deze zin?",
+        options: ["Het einde", "Een sluiting op een deur", "Een kasteel", "Het begin"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een deur heeft een slot, maar heeft een verhaal een deur? Kijk naar 'van het verhaal'.",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welke betekenissen ken je?",
+              tekst: "'Slot' kan zijn: (1) een sluiting op een deur of fiets, (2) een kasteel, (3) het einde van iets.",
+            },
+            {
+              titel: "Vul ze in de zin in",
+              tekst: "'De sluiting van het verhaal'? Raar. 'Het kasteel van het verhaal'? Ook raar. 'Het einde van het verhaal was zo spannend'? Dat klopt.",
+            },
+            {
+              titel: "Kijk naar de buurwoorden",
+              tekst: "'Verhaal', 'spannend' en 'boek' horen bij lezen. Bij een verhaal past het einde.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "slot",
+              uitleg: "Kan een sluiting zijn, een kasteel, of het einde van iets.",
+            },
+            {
+              woord: "buurwoorden",
+              uitleg: "De woorden vlak om het woord heen. Zij verklappen welke betekenis bedoeld is.",
+            },
+          ],
+          theorie: "**Eén woord, drie betekenissen**\n\nSoms heeft een woord zelfs drie of meer betekenissen. De aanpak blijft hetzelfde: vul ze allemaal in en kies de betekenis die past.\n\n- 'Ik deed mijn fiets op **slot**.' → sluiting\n- 'De ridder woonde in een **slot**.' → kasteel\n- 'Aan het **slot** van de film...' → einde",
+          voorbeelden: [
+            {
+              type: "slot",
+              tekst: "'Tot slot wil ik iedereen bedanken.' → tot slot = als laatste, aan het einde.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Alle betekenissen proberen",
+              uitleg: "Vul elke betekenis die je kent in. Maar één laat de zin logisch klinken.",
+            },
+          ],
+          niveaus: {
+            basis: "Vul de drie betekenissen in. Welke past bij 'het ... van het verhaal'?",
+            simpeler: "Een verhaal heeft een begin en een ... Welk deel kan zo spannend zijn dat je doorleest?",
+            nogSimpeler: "Heeft een verhaal een deur met een slot?",
           },
         },
       },
@@ -1037,6 +1390,122 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
             basis: "Na de dubbele punt staat dat boeren er grote oogsten halen. Wat zegt dat over hoe goed de grond is voor planten?",
             simpeler: "Als een boom elke herfst heel veel appels geeft, zeggen we dat hij 'vruchtbaar' is. Wat betekent dat dan voor die vulkaangrond?",
             nogSimpeler: "Als de boeren heel veel van hun land kunnen oogsten, is die grond dan goed of slecht voor planten?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat betekent *'allesbehalve gewoon'* in deze tekst?",
+        options: [
+          "Helemaal niet gewoon",
+          "Bijna helemaal gewoon",
+          "Net zo gewoon als een berg",
+          "Gewoon, behalve de top",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Lees de zin nog eens: hoe ziet een vulkaan er vanbuiten uit, en hoe is hij vanbinnen?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek het signaalwoord",
+              tekst: "'Een vulkaan ziet eruit als een gewone berg, maar vanbinnen is hij allesbehalve gewoon.' Het woord 'maar' zegt: nu komt het omgekeerde.",
+            },
+            {
+              titel: "Wat is het omgekeerde?",
+              tekst: "Vanbuiten lijkt hij gewoon. Vanbinnen is hij dus het omgekeerde: niet gewoon.",
+            },
+            {
+              titel: "Controleer met de tekst",
+              tekst: "Daarna lees je over steen die smelt en een magmakamer. Dat is inderdaad helemaal niet gewoon.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "allesbehalve",
+              uitleg: "Alles, behalve dat. 'Allesbehalve gewoon' betekent: helemaal niet gewoon.",
+            },
+            {
+              woord: "tegenstelling",
+              uitleg: "Twee dingen die elkaars omgekeerde zijn.",
+            },
+          ],
+          theorie: "**Truc 3 in het echt**\n\nDe zin heeft twee helften met 'maar' ertussen:\n- vanbuiten: als een **gewone** berg\n- vanbinnen: **allesbehalve gewoon**\n\nNa 'maar' komt het omgekeerde. En de rest van de alinea laat zien waarom: smeltende steen en een magmakamer.",
+          voorbeelden: [
+            {
+              type: "allesbehalve",
+              tekst: "'De toets was allesbehalve makkelijk: bijna niemand had alles goed.' → de toets was helemaal niet makkelijk.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Maar = omgekeerd",
+              uitleg: "Na 'maar' komt vaak het tegenovergestelde van wat ervoor stond.",
+            },
+          ],
+          niveaus: {
+            basis: "Er staat 'maar' in de zin. Vanbuiten lijkt een vulkaan gewoon. Hoe is hij dan vanbinnen?",
+            simpeler: "Na 'maar' komt het omgekeerde. Wat is het omgekeerde van gewoon?",
+            nogSimpeler: "Is het gewoon dat steen smelt onder de grond?",
+          },
+        },
+      },
+      {
+        q: "Wat betekent *'onverstandig'* in de zin: *\"Dat lijkt onverstandig, maar er is een goede reden.\"*?",
+        options: ["Niet slim", "Heel gezellig", "Erg duur", "Heel gewoon"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Gaat het over gezelligheid? Lees de zin ervoor: waar wonen die miljoenen mensen?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Haal het woord uit elkaar",
+              tekst: "on + verstandig. 'On-' betekent 'niet'. Verstandig is slim of wijs. Onverstandig is dus: niet slim.",
+            },
+            {
+              titel: "Kijk naar de zin ervoor",
+              tekst: "Miljoenen mensen wonen vlak bij een vulkaan, terwijl een uitbarsting verwoestend kan zijn. Dat lijkt niet slim.",
+            },
+            {
+              titel: "Kijk naar de zin erna",
+              tekst: "'Maar er is een goede reden': de vruchtbare grond. Het lijkt dus niet slim, maar er is een goede reden voor.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "verstandig",
+              uitleg: "Slim en goed nadenkend.",
+            },
+            {
+              woord: "on-",
+              uitleg: "Een stukje voor een woord dat 'niet' betekent.",
+            },
+          ],
+          theorie: "**Twee trucs tegelijk**\n\nBij 'onverstandig' werken twee trucs samen:\n1. **Uit elkaar halen**: on + verstandig = niet verstandig.\n2. **Tegenstelling**: 'Dat lijkt onverstandig, **maar** er is een goede reden.' Na 'maar' komt de reden waarom het tóch slim is.",
+          voorbeelden: [
+            {
+              type: "onverstandig",
+              tekst: "'Zonder jas de sneeuw in gaan is onverstandig.' → niet slim, want je krijgt het koud.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "On- = niet",
+              uitleg: "Begint een woord met 'on-'? Haal dat eraf en zet er 'niet' voor.",
+            },
+          ],
+          niveaus: {
+            basis: "Haal het woord uit elkaar: on + verstandig. Wat betekent verstandig?",
+            simpeler: "Wonen naast een vulkaan die kan uitbarsten: lijkt dat slim of niet slim?",
+            nogSimpeler: "Is het slim om vlak naast iets gevaarlijks te wonen?",
           },
         },
       },

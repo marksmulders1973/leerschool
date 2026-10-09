@@ -62,6 +62,127 @@ const steps = [
           niveaus: { basis: "boom en bal beginnen met de b.", simpeler: "b... boom. b... bal!", nogSimpeler: "bal" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Met welke letter begint **sok**?",
+        options: ["s", "k", "o", "z"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Die klank zit achteraan.",
+          "Die klank zit in het midden.",
+          "Die lijkt erop — maar zeg het woord eens hardop.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Luister vooraan",
+              tekst: "Zeg langzaam: **sss**-ok. De eerste klank is de **s**.",
+            },
+          ],
+          niveaus: {
+            basis: "sok begint met de s.",
+            simpeler: "Zeg: sss... sok!",
+            nogSimpeler: "s",
+          },
+        },
+      },
+      {
+        q: "Met welke letter begint **pen**?",
+        options: ["p", "n", "e", "b"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Die klank zit achteraan.",
+          "Die klank zit in het midden.",
+          "Die lijkt erop — maar zeg het woord eens hardop.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Luister vooraan",
+              tekst: "Zeg langzaam: **p**-en. De eerste klank is de **p**.",
+            },
+          ],
+          niveaus: {
+            basis: "pen begint met de p.",
+            simpeler: "Zeg: p... pen!",
+            nogSimpeler: "p",
+          },
+        },
+      },
+      {
+        q: "Met welke letter begint **hond**?",
+        options: ["h", "o", "d", "k"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Die klank zit in het midden.",
+          "Die letter staat achteraan.",
+          "Zeg het woord langzaam. Welke klank hoor je als eerste?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Luister vooraan",
+              tekst: "Zeg langzaam: **h**-ond. De eerste klank is de **h**.",
+            },
+          ],
+          niveaus: {
+            basis: "hond begint met de h.",
+            simpeler: "Zeg: h... hond!",
+            nogSimpeler: "h",
+          },
+        },
+      },
+      {
+        q: "Welk woord begint met dezelfde letter als **muis**?",
+        options: ["mes", "bus", "pot", "zon"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zeg allebei hardop: m-uis en b-us. Klinkt het begin hetzelfde?",
+          "Zeg allebei hardop — hoor je hetzelfde begin?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vergelijk het begin",
+              tekst: "**m**-uis en **m**-es beginnen allebei met de **m**.",
+            },
+          ],
+          niveaus: {
+            basis: "muis en mes beginnen met de m.",
+            simpeler: "m... muis. m... mes!",
+            nogSimpeler: "mes",
+          },
+        },
+      },
+      {
+        q: "Welk woord begint **niet** met de **r**?",
+        options: ["lamp", "raam", "rok", "rat"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zeg het hardop: r-aam. Hoor je de r vooraan? Dan zoeken we verder.",
+          "Dat begint wél met de r — we zoeken het woord dat NIET met de r begint.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Luister vooraan",
+              tekst: "**r**-aam, **r**-ok, **r**-at beginnen met de **r**. **l**-amp begint met de **l**.",
+            },
+          ],
+          niveaus: {
+            basis: "lamp begint met de l, niet met de r.",
+            simpeler: "l... lamp!",
+            nogSimpeler: "lamp",
+          },
+        },
+      },
     ],
   },
 
@@ -109,6 +230,146 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Zoek de beer-klank", tekst: "b-**eer** en n-**eer** rijmen. *Ik zie een beer, hij valt steeds neer.*" }],
           niveaus: { basis: "beer rijmt op neer.", simpeler: "beer... neer!", nogSimpeler: "neer" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welk woord rijmt op **bus**?",
+        options: ["mus", "bak", "bal", "roos"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zelfde begin — maar klinkt het einde ook hetzelfde?",
+          "Zeg het hardop — klinkt het einde hetzelfde?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Luister naar het einde",
+              tekst: "b-**us** en m-**us** eindigen allebei op **-us**. Dat rijmt!",
+            },
+          ],
+          niveaus: {
+            basis: "bus en mus rijmen.",
+            simpeler: "bus... mus... zelfde einde!",
+            nogSimpeler: "mus",
+          },
+        },
+      },
+      {
+        q: "Welk woord rijmt op **boom**?",
+        options: ["droom", "bos", "maan", "bal"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zelfde begin — maar klinkt het einde ook hetzelfde?",
+          "Zeg het hardop — klinkt het einde hetzelfde?",
+          "Zeg het hardop — klinkt het einde hetzelfde?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Luister naar het einde",
+              tekst: "b-**oom** en dr-**oom** eindigen allebei op **-oom**. Dat rijmt!",
+            },
+          ],
+          niveaus: {
+            basis: "boom en droom rijmen.",
+            simpeler: "boom... droom... zelfde einde!",
+            nogSimpeler: "droom",
+          },
+        },
+      },
+      {
+        q: "Welk woord rijmt **niet** op **pan**?",
+        options: ["pen", "man", "kan", "van"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zeg het hardop: pan... man. Dat klinkt hetzelfde, dus dat rijmt wél.",
+          "Dat rijmt wél — we zoeken het woord dat NIET rijmt.",
+          "Dat rijmt wél — we zoeken het woord dat NIET rijmt.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Luister naar het einde",
+              tekst: "p-**an**, m-**an**, k-**an** en v-**an** rijmen. p-**en** eindigt anders.",
+            },
+          ],
+          niveaus: {
+            basis: "pen rijmt niet op pan.",
+            simpeler: "pan... pen... ander einde!",
+            nogSimpeler: "pen",
+          },
+        },
+      },
+      {
+        q: "Maak het rijmpje af: *Er zit een muis in mijn …*",
+        options: ["huis", "kast", "bed", "tas"],
+        answer: 0,
+        wrongHints: [null, "Klinkt dat als 'muis'?", "Klinkt dat als 'muis'?", "Klinkt dat als 'muis'?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek de muis-klank",
+              tekst: "m-**uis** en h-**uis** rijmen. *Er zit een muis in mijn huis.*",
+            },
+          ],
+          niveaus: {
+            basis: "muis rijmt op huis.",
+            simpeler: "muis... huis!",
+            nogSimpeler: "huis",
+          },
+        },
+      },
+      {
+        q: "Welk woord rijmt op **pet**?",
+        options: ["net", "pot", "pen", "sok"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Bijna hetzelfde woord — maar rijmt het?",
+          "Zelfde begin — maar klinkt het einde ook hetzelfde?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Luister naar het einde",
+              tekst: "p-**et** en n-**et** eindigen allebei op **-et**. Dat rijmt!",
+            },
+          ],
+          niveaus: {
+            basis: "pet en net rijmen.",
+            simpeler: "pet... net... zelfde einde!",
+            nogSimpeler: "net",
+          },
+        },
+      },
+      {
+        q: "Welke twee woorden **rijmen**?",
+        options: ["roos — doos", "roos — rok", "bal — bus", "vis — vos"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zelfde begin — maar klinkt het einde ook hetzelfde?",
+          "Zeg ze allebei hardop — klinkt het einde hetzelfde?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Luister naar het einde",
+              tekst: "r-**oos** en d-**oos** eindigen allebei op **-oos**. Dat rijmt!",
+            },
+          ],
+          niveaus: {
+            basis: "roos en doos rijmen.",
+            simpeler: "roos... doos... zelfde einde!",
+            nogSimpeler: "roos — doos",
+          },
         },
       },
     ],
@@ -160,6 +421,151 @@ const steps = [
           niveaus: { basis: "vis heeft 3 klanken: v-i-s.", simpeler: "v (1)... i (2)... s (3)!", nogSimpeler: "3" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Plak de klanken aan elkaar: **p - e - n**. Welk woord is het?",
+        options: ["pen", "pan", "pet", "nep"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Luister goed naar de middelste klank: e of a?",
+          "Luister goed naar de laatste klank: n of t?",
+          "Dat zijn dezelfde klanken, maar in de verkeerde volgorde.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Plakken",
+              tekst: "p... e... n... → **pen**! Zeg de klanken steeds sneller achter elkaar.",
+            },
+          ],
+          niveaus: {
+            basis: "p-e-n is pen.",
+            simpeler: "Zeg sneller: p-e-n... pen!",
+            nogSimpeler: "pen",
+          },
+        },
+      },
+      {
+        q: "Plak de klanken aan elkaar: **r - aa - m**. Welk woord is het?",
+        options: ["raam", "ram", "maar", "room"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Luister: is het een korte a of een lange aa?",
+          "Dat zijn dezelfde klanken in de verkeerde volgorde.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Plakken",
+              tekst: "r... aa... m... → **raam**! Zeg de klanken steeds sneller achter elkaar.",
+            },
+          ],
+          niveaus: {
+            basis: "r-aa-m is raam.",
+            simpeler: "Zeg sneller: r-aa-m... raam!",
+            nogSimpeler: "raam",
+          },
+        },
+      },
+      {
+        q: "Hak het woord **kip** in stukjes. Wat hoor je?",
+        options: ["k - i - p", "k - a - p", "k - i - t", "t - i - p"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Luister naar de middelste klank: i of a?",
+          "Luister naar de laatste klank: p of t?",
+          "Luister naar de eerste klank: k of t?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Hakken",
+              tekst: "kip → **k... i... p**. Zeg elke klank los.",
+            },
+          ],
+          niveaus: {
+            basis: "kip is k-i-p.",
+            simpeler: "k... i... p!",
+            nogSimpeler: "k - i - p",
+          },
+        },
+      },
+      {
+        q: "Hoeveel klanken hoor je in **lamp**?",
+        options: ["4", "3", "5", "2"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hak maar: l... a... m... p. Tel nog eens.",
+          "Hak maar: l... a... m... p. Tel nog eens.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Hakken en tellen",
+              tekst: "l... a... m... p... = **4** klanken. Tel op je vingers mee!",
+            },
+          ],
+          niveaus: {
+            basis: "lamp heeft 4 klanken: l-a-m-p.",
+            simpeler: "l (1)... a (2)... m (3)... p (4)!",
+            nogSimpeler: "4",
+          },
+        },
+      },
+      {
+        q: "Welke klank hoor je in het **midden** van **pot**?",
+        options: ["o", "p", "t", "a"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Die klank zit vooraan.",
+          "Die klank zit achteraan.",
+          "Zeg het woord langzaam: p... o... t. Wat hoor je in het midden?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Hakken",
+              tekst: "pot → p... **o**... t. In het midden hoor je de **o**.",
+            },
+          ],
+          niveaus: {
+            basis: "In het midden van pot hoor je de o.",
+            simpeler: "p... o... t!",
+            nogSimpeler: "o",
+          },
+        },
+      },
+      {
+        q: "Plak de klanken aan elkaar: **m - ui - s**. Welk woord is het?",
+        options: ["muis", "mus", "huis", "muur"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Luister goed naar de middelste klank: ui of u?",
+          "Luister naar de eerste klank: m of h?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Plakken",
+              tekst: "m... ui... s... → **muis**! Zeg de klanken steeds sneller achter elkaar.",
+            },
+          ],
+          niveaus: {
+            basis: "m-ui-s is muis.",
+            simpeler: "Zeg sneller: m-ui-s... muis!",
+            nogSimpeler: "muis",
+          },
+        },
+      },
     ],
   },
 
@@ -209,6 +615,121 @@ const steps = [
           niveaus: { basis: "De maan schijnt in de nacht.", simpeler: "Lees: m... aa... n.", nogSimpeler: "maan" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welk woord is een **dier**?",
+        options: ["geit", "deur", "tas", "bank"],
+        answer: 0,
+        wrongHints: [null, "Daar loop je doorheen.", null, "Daar zit je op."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lezen en denken",
+              tekst: "g-ei-t → **geit**. Een geit is een dier.",
+            },
+          ],
+          niveaus: {
+            basis: "Een geit is een dier.",
+            simpeler: "Lees: g... ei... t.",
+            nogSimpeler: "geit",
+          },
+        },
+      },
+      {
+        q: "Waar **slaap** je in?",
+        options: ["bed", "bad", "bel", "bes"],
+        answer: 0,
+        wrongHints: [null, "Lees goed: e of a? Daar ga je in om je te wassen.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lezen en denken",
+              tekst: "b-e-d → **bed**. In je bed slaap je.",
+            },
+          ],
+          niveaus: {
+            basis: "Je slaapt in je bed.",
+            simpeler: "Lees: b... e... d.",
+            nogSimpeler: "bed",
+          },
+        },
+      },
+      {
+        q: "Wat doe je aan je **voet**?",
+        options: ["sok", "soep", "sap", "sla"],
+        answer: 0,
+        wrongHints: [null, "Dat eet je uit een bord.", "Dat drink je.", "Dat eet je."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lezen en denken",
+              tekst: "s-o-k → **sok**. Die doe je aan je voet.",
+            },
+          ],
+          niveaus: {
+            basis: "Een sok doe je aan je voet.",
+            simpeler: "Lees: s... o... k.",
+            nogSimpeler: "sok",
+          },
+        },
+      },
+      {
+        q: "Wat kun je **lezen**?",
+        options: ["boek", "boer", "boom", "boot"],
+        answer: 0,
+        wrongHints: [null, "Dat is een man of vrouw met koeien.", null, "Daar vaar je mee."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lezen en denken",
+              tekst: "b-oe-k → **boek**. Een boek kun je lezen.",
+            },
+          ],
+          niveaus: {
+            basis: "Een boek kun je lezen.",
+            simpeler: "Lees: b... oe... k.",
+            nogSimpeler: "boek",
+          },
+        },
+      },
+      {
+        q: "Welk woord is een **getal**?",
+        options: ["tien", "tent", "teen", "tak"],
+        answer: 0,
+        wrongHints: [null, "Daar slaap je in op de camping.", "Die zit aan je voet.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lezen en denken",
+              tekst: "t-ie-n → **tien**. Tien is een getal.",
+            },
+          ],
+          niveaus: {
+            basis: "Tien is een getal.",
+            simpeler: "Lees: t... ie... n.",
+            nogSimpeler: "tien",
+          },
+        },
+      },
+      {
+        q: "Wat **vliegt** in de lucht?",
+        options: ["mug", "mol", "muis", "mes"],
+        answer: 0,
+        wrongHints: [null, "Die graaft onder de grond.", "Die rent over de grond.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lezen en denken",
+              tekst: "m-u-g → **mug**. Een mug vliegt in de lucht.",
+            },
+          ],
+          niveaus: {
+            basis: "Een mug vliegt.",
+            simpeler: "Lees: m... u... g.",
+            nogSimpeler: "mug",
+          },
+        },
+      },
     ],
   },
 
@@ -256,6 +777,127 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Zoek in de zin", tekst: "mam - en - ik - gaan - naar - de - **bus**. We gaan naar de bus!" }],
           niveaus: { basis: "We gaan naar de bus.", simpeler: "Het staat achteraan de zin.", nogSimpeler: "naar de bus" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Lees: *ik heb een rode pet.* — **Wat** heb ik?",
+        options: ["een pet", "een tas", "een bal", "een sok"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Lees het laatste woord nog eens.",
+          "Lees het laatste woord nog eens.",
+          "Lees het laatste woord nog eens.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek in de zin",
+              tekst: "ik - heb - een - rode - **pet**. Ik heb een pet!",
+            },
+          ],
+          niveaus: {
+            basis: "Ik heb een rode pet.",
+            simpeler: "Het staat achteraan de zin.",
+            nogSimpeler: "een pet",
+          },
+        },
+      },
+      {
+        q: "Lees: *ik zie drie eenden.* — **Hoeveel** eenden zie ik?",
+        options: ["drie", "twee", "vier", "één"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Lees het woord voor 'eenden' nog eens.",
+          "Lees het woord voor 'eenden' nog eens.",
+          "Lees het woord voor 'eenden' nog eens.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Woord voor woord",
+              tekst: "ik - zie - **drie** - eenden. Ik zie drie eenden!",
+            },
+          ],
+          niveaus: {
+            basis: "Ik zie drie eenden.",
+            simpeler: "Kijk naar het woord vóór eenden.",
+            nogSimpeler: "drie",
+          },
+        },
+      },
+      {
+        q: "Lees: *papa bakt een taart.* — **Wie** bakt een taart?",
+        options: ["papa", "mama", "oma", "ik"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Lees nog eens: staat dat woord in de zin?",
+          "Lees nog eens: staat dat woord in de zin?",
+          "Lees nog eens: staat dat woord in de zin?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Woord voor woord",
+              tekst: "**papa** - bakt - een - taart. Wie bakt? **Papa**!",
+            },
+          ],
+          niveaus: {
+            basis: "Papa bakt een taart.",
+            simpeler: "Lees het eerste woord.",
+            nogSimpeler: "papa",
+          },
+        },
+      },
+      {
+        q: "Lees: *de zon is heet.* — **Wat** is heet?",
+        options: ["de zon", "de maan", "de soep", "de thee"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Lees nog eens: staat dat woord in de zin?",
+          "Lees nog eens: staat dat woord in de zin?",
+          "Lees nog eens: staat dat woord in de zin?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Woord voor woord",
+              tekst: "de - **zon** - is - heet. Wat is heet? **De zon**!",
+            },
+          ],
+          niveaus: {
+            basis: "De zon is heet.",
+            simpeler: "Lees de eerste twee woorden.",
+            nogSimpeler: "de zon",
+          },
+        },
+      },
+      {
+        q: "Lees: *ik ga in bad.* — **Waar** ga ik in?",
+        options: ["in bad", "in bed", "in de tent", "in de auto"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Lees goed: e of a?",
+          "Lees het laatste woord nog eens.",
+          "Lees het laatste woord nog eens.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek in de zin",
+              tekst: "ik - ga - in - **bad**. Ik ga in bad!",
+            },
+          ],
+          niveaus: {
+            basis: "Ik ga in bad.",
+            simpeler: "Het staat achteraan de zin.",
+            nogSimpeler: "in bad",
+          },
         },
       },
     ],

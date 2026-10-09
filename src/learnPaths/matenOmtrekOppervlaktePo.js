@@ -105,6 +105,237 @@ const steps = [
           niveaus: { basis: "2 km.", simpeler: "4 × 50 000 cm = 2 km.", nogSimpeler: "Vermenigvuldig 4 met de schaalfactor — hoeveel kilometer is dat?" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Hoeveel cm is **2,4 m**?",
+        options: ["240 cm", "24 cm", "2400 cm", "0,24 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Wordt een getal groter of kleiner als je naar een kleinere maat gaat?",
+          null,
+          "Hoeveel centimeter gaan er in één meter?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Van groot naar klein",
+              tekst: "Een centimeter is kleiner dan een meter. Dan krijg je een groter getal.",
+            },
+            {
+              titel: "Keer 100",
+              tekst: "In 1 meter gaan 100 centimeter. Doe het getal dus keer 100.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "centimeter",
+              uitleg: "Een kleine lengtemaat: 100 centimeter is samen 1 meter.",
+            },
+          ],
+          theorie: "Ga je van **meter** naar **centimeter**, dan doe je **× 100**, want 1 m = 100 cm. De komma schuift dan twee plaatsen naar rechts.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Een deur is ongeveer 2,1 m hoog. Dat is 210 cm.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "1 m = 100 cm",
+              uitleg: "Meter naar centimeter: keer 100.",
+            },
+          ],
+          niveaus: {
+            basis: "2,4 × 100 = 240 cm.",
+            simpeler: "2 m = 200 cm, en 0,4 m = 40 cm. Samen 240 cm.",
+            nogSimpeler: "Eén meter is honderd centimeter. Hoeveel is twee meter en nog een stukje?",
+          },
+        },
+      },
+      {
+        q: "Hoeveel km is **2600 m**?",
+        options: ["2,6 km", "26 km", "0,26 km", "260 km"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoeveel meter gaan er in één kilometer?",
+          null,
+          "Ga je naar een grotere maat? Wordt het getal dan groter of kleiner?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Van klein naar groot",
+              tekst: "Een kilometer is groter dan een meter. Dan krijg je een kleiner getal.",
+            },
+            {
+              titel: "Delen door 1000",
+              tekst: "In 1 km gaan 1000 m. Deel het getal dus door 1000.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kilometer",
+              uitleg: "Een grote lengtemaat voor afstanden: 1 kilometer is 1000 meter.",
+            },
+          ],
+          theorie: "Ga je van **meter** naar **kilometer**, dan doe je **÷ 1000**, want 1 km = 1000 m. De komma schuift drie plaatsen naar links.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Een rondje om de wijk van 3200 m is 3,2 km.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "1 km = 1000 m",
+              uitleg: "Meter naar kilometer: delen door 1000.",
+            },
+          ],
+          niveaus: {
+            basis: "2600 ÷ 1000 = 2,6 km.",
+            simpeler: "2000 m is 2 km. De 600 m die over is, is 0,6 km. Samen 2,6 km.",
+            nogSimpeler: "Duizend meter is één kilometer. Hoeveel keer duizend zit er in 2600?",
+          },
+        },
+      },
+      {
+        q: "Welke lengte is het **langst**?",
+        options: ["1,2 m", "1100 mm", "95 cm", "105 cm"],
+        answer: 0,
+        wrongHints: [null, "Zet eerst alle lengtes om naar dezelfde maat, bijvoorbeeld centimeter.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zelfde maat",
+              tekst: "Je kunt lengtes alleen goed vergelijken als ze in dezelfde maat staan.",
+            },
+            {
+              titel: "Alles in cm",
+              tekst: "Reken alles om naar centimeter en kijk welk getal het grootst is.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "millimeter",
+              uitleg: "Een heel kleine lengtemaat: 10 millimeter is 1 centimeter.",
+            },
+          ],
+          theorie: "Vergelijk lengtes altijd in **dezelfde eenheid**. Een groot getal in mm kan best korter zijn dan een klein getal in m.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Een liniaal van 300 mm is even lang als een liniaal van 30 cm.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Omrekenen",
+              uitleg: "1 m = 100 cm en 10 mm = 1 cm.",
+            },
+          ],
+          niveaus: {
+            basis: "1,2 m = 120 cm, 1100 mm = 110 cm. Dus 1,2 m is het langst.",
+            simpeler: "Reken alles om: 120 cm, 110 cm, 95 cm en 105 cm. Welke is het grootst?",
+            nogSimpeler: "Hoeveel centimeter is 1,2 meter? Is dat meer dan de andere lengtes?",
+          },
+        },
+      },
+      {
+        q: "Sanne fietst **800 m** naar de bakker en **800 m** terug. Hoeveel **km** fietst ze samen?",
+        options: ["1,6 km", "16 km", "0,16 km", "1,06 km"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoeveel meter is het samen? Reken dat daarna pas om naar km.",
+          "Hoeveel meter is 1 km?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst optellen",
+              tekst: "Tel de twee stukken bij elkaar op in meter.",
+            },
+            {
+              titel: "Dan omrekenen",
+              tekst: "Reken de meters om naar kilometer: delen door 1000.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kilometer",
+              uitleg: "Een lengtemaat voor afstanden: 1 km is 1000 m.",
+            },
+          ],
+          theorie: "Bij een vraag met **heen en terug** tel je de afstand twee keer. Daarna reken je om: **1000 m = 1 km**.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Je loopt 500 m naar een vriend en 500 m terug. Dat is samen 1000 m = 1 km.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "1 km = 1000 m",
+              uitleg: "Meter naar kilometer: delen door 1000.",
+            },
+          ],
+          niveaus: {
+            basis: "800 + 800 = 1600 m = 1,6 km.",
+            simpeler: "1000 m is 1 km. Er blijft 600 m over, dat is 0,6 km. Samen 1,6 km.",
+            nogSimpeler: "Twee keer 800 meter. Is dat meer of minder dan een kilometer?",
+          },
+        },
+      },
+      {
+        q: "Welke omrekening is **NIET** goed?",
+        options: ["4 cm = 400 mm", "6 m = 600 cm", "3 km = 3000 m", "50 mm = 5 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoeveel centimeter gaan er in één meter?",
+          null,
+          "Hoeveel millimeter gaan er in één centimeter?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Ken de stappen",
+              tekst: "1 km = 1000 m, 1 m = 100 cm en 1 cm = 10 mm.",
+            },
+            {
+              titel: "Controleer elke regel",
+              tekst: "Reken bij elke omrekening na of het getal klopt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "millimeter",
+              uitleg: "Een heel kleine lengtemaat: 10 millimeter is 1 centimeter.",
+            },
+          ],
+          theorie: "Tussen **cm** en **mm** zit maar **× 10**. Tussen **m** en **cm** zit **× 100**, en tussen **km** en **m** zit **× 1000**.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Een gum van 4 cm is 40 mm lang.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "1 cm = 10 mm",
+              uitleg: "Centimeter naar millimeter: keer 10.",
+            },
+          ],
+          niveaus: {
+            basis: "4 cm = 40 mm, niet 400 mm.",
+            simpeler: "1 cm is 10 mm. Dan is 4 cm dus 4 × 10 mm.",
+            nogSimpeler: "Hoeveel millimeter zit er in één centimeter? En in vier?",
+          },
+        },
+      },
     ],
   },
 
@@ -197,6 +428,190 @@ const steps = [
           voorbeelden: [{ type: "buiten", tekst: "Een boer met 5 hectare land rekent dat om naar vierkante meter om te weten hoeveel gewas erop past." }],
           basiskennis: [{ onderwerp: "Vierkant van 100 bij 100", uitleg: "Eén hectare is de oppervlakte van een vierkant van 100 meter bij 100 meter." }],
           niveaus: { basis: "2 × 10 000 = 20 000.", simpeler: "1 ha = 10 000 m².", nogSimpeler: "Hoeveel m² gaan er in 1 hectare? Vermenigvuldig dat met 2." },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een vierkant heeft zijden van **9 cm**. Wat is de **omtrek**?",
+        options: ["36 cm", "81 cm", "18 cm", "27 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Vraagt de opdracht naar de rand of naar het vlak binnenin?",
+          null,
+          "Hoeveel zijden heeft een vierkant?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat is omtrek?",
+              tekst: "Omtrek is de lengte van de hele rand: alle zijden samen.",
+            },
+            {
+              titel: "Vier gelijke zijden",
+              tekst: "Een vierkant heeft 4 zijden die even lang zijn. Doe dus 4 × de zijde.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "omtrek",
+              uitleg: "De lengte van de rand als je helemaal om een figuur heen loopt.",
+            },
+          ],
+          theorie: "Bij een **vierkant** met zijde z is de omtrek **4 × z**. De oppervlakte is z × z, maar daar vraagt deze opdracht niet naar.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Een vierkante tafel met zijden van 1 m heeft een rand van 4 m.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Omtrek vierkant",
+              uitleg: "4 × de zijde.",
+            },
+          ],
+          niveaus: {
+            basis: "4 × 9 = 36 cm.",
+            simpeler: "9 + 9 + 9 + 9 = 36 cm.",
+            nogSimpeler: "Tel vier keer de 9 bij elkaar op. Wat krijg je?",
+          },
+        },
+      },
+      {
+        q: "Een moestuin is **7 m lang** en **5 m breed**. Je zet er een hekje omheen. Hoeveel meter hek heb je nodig?",
+        options: ["24 m", "35 m", "12 m", "17 m"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Heb je nu de rand berekend of het vlak binnenin?",
+          "Ga je echt helemaal rond de tuin?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Rondom = omtrek",
+              tekst: "Een hek om de tuin gaat langs de hele rand. Je zoekt dus de omtrek.",
+            },
+            {
+              titel: "Vier zijden",
+              tekst: "Een rechthoek heeft twee lange en twee korte zijden. Tel ze alle vier op.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "omtrek",
+              uitleg: "De lengte van de rand als je helemaal om een figuur heen loopt.",
+            },
+          ],
+          theorie: "Bij een **rechthoek** is de omtrek **2 × (lengte + breedte)**. Je telt elke zijde één keer mee.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Een plint langs de muren van een kamer meet je ook met de omtrek.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Omtrek rechthoek",
+              uitleg: "2 × (L + B).",
+            },
+          ],
+          niveaus: {
+            basis: "2 × (7 + 5) = 24 m.",
+            simpeler: "7 + 5 + 7 + 5 = 24 m.",
+            nogSimpeler: "Loop in gedachten om de tuin: 7, dan 5, dan weer 7, dan weer 5. Hoeveel samen?",
+          },
+        },
+      },
+      {
+        q: "Een rechthoek heeft een oppervlakte van **24 cm²**. De lengte is **8 cm**. Hoe **breed** is de rechthoek?",
+        options: ["3 cm", "16 cm", "5 cm", "6 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Oppervlakte is lengte KEER breedte. Welke som past daarbij?",
+          null,
+          "Controleer: 8 keer jouw antwoord moet 24 zijn.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Oppervlakte = L × B",
+              tekst: "Je weet de uitkomst (24) en één getal (8). Het andere getal zoek je.",
+            },
+            {
+              titel: "Terugrekenen met delen",
+              tekst: "8 × ? = 24. Dat vind je met 24 ÷ 8.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "oppervlakte",
+              uitleg: "Hoeveel ruimte een plat figuur binnenin bedekt, in vierkante maten zoals cm².",
+            },
+          ],
+          theorie: "Bij een rechthoek geldt **oppervlakte = lengte × breedte**. Weet je de oppervlakte en de lengte, dan vind je de breedte met **oppervlakte ÷ lengte**.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Een kleed van 12 m² dat 4 m lang is, is 3 m breed.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Keer en delen",
+              uitleg: "Delen is de omgekeerde som van keer.",
+            },
+          ],
+          niveaus: {
+            basis: "24 ÷ 8 = 3 cm.",
+            simpeler: "8 × 3 = 24, dus de breedte is 3 cm.",
+            nogSimpeler: "Welk getal keer 8 geeft 24?",
+          },
+        },
+      },
+      {
+        q: "Welke rechthoek heeft de **grootste oppervlakte**?",
+        options: ["5 cm × 5 cm", "8 cm × 3 cm", "10 cm × 2 cm", "12 cm × 2 cm"],
+        answer: 0,
+        wrongHints: [null, "Reken bij elke rechthoek lengte keer breedte uit.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Oppervlakte uitrekenen",
+              tekst: "Doe bij elke rechthoek lengte × breedte.",
+            },
+            {
+              titel: "Vergelijken",
+              tekst: "Kijk daarna welke uitkomst het grootst is.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "oppervlakte",
+              uitleg: "Hoeveel ruimte een plat figuur binnenin bedekt, in vierkante maten zoals cm².",
+            },
+          ],
+          theorie: "De oppervlakte van een rechthoek is **lengte × breedte**. Een lange, smalle rechthoek kan een kleinere oppervlakte hebben dan een vierkant. Een vierkant is ook een rechthoek.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Twee kleden kunnen allebei een lange rand hebben, maar toch een ander stuk vloer bedekken.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Oppervlakte rechthoek",
+              uitleg: "L × B, in cm².",
+            },
+          ],
+          niveaus: {
+            basis: "25 cm², 24 cm², 20 cm² en 24 cm². 5 × 5 is het grootst.",
+            simpeler: "Reken uit: 5 × 5, 8 × 3, 10 × 2 en 12 × 2. Welke is het meest?",
+            nogSimpeler: "Hoeveel is 5 keer 5? Is dat meer dan 8 keer 3?",
+          },
         },
       },
     ],
@@ -387,6 +802,138 @@ const steps = [
           niveaus: { basis: "2500/1000=2,5.", simpeler: "L delen door 1000 voor m³.", nogSimpeler: "Hoeveel liter gaan er in 1 m³? Deel 2500 daardoor." },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een doos is **10 cm lang**, **6 cm breed** en **5 cm hoog**. Wat is de **inhoud**?",
+        options: ["300 cm³", "21 cm³", "60 cm³", "3000 cm³"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Moet je de maten optellen of vermenigvuldigen?",
+          "Heb je alle drie de maten gebruikt?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Inhoud van een balk",
+              tekst: "Een doos is een balk. Je vermenigvuldigt lengte, breedte en hoogte.",
+            },
+            {
+              titel: "Stap voor stap",
+              tekst: "Doe eerst lengte × breedte, en dat keer de hoogte.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "inhoud",
+              uitleg: "Hoeveel ruimte er in een ruimtefiguur zit, in kubieke maten zoals cm³.",
+            },
+          ],
+          theorie: "Inhoud van een **balk** = **lengte × breedte × hoogte**. De uitkomst schrijf je in **cm³**.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Een schoenendoos meet je ook zo: lengte keer breedte keer hoogte.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Inhoud balk",
+              uitleg: "L × B × H, in cm³.",
+            },
+          ],
+          niveaus: {
+            basis: "10 × 6 × 5 = 300 cm³.",
+            simpeler: "10 × 6 = 60. Daarna 60 × 5 = 300 cm³.",
+            nogSimpeler: "Hoeveel is 10 keer 6? En dat nog eens keer 5?",
+          },
+        },
+      },
+      {
+        q: "Hoeveel **liter** is **4000 cm³**?",
+        options: ["4 L", "40 L", "0,4 L", "400 L"],
+        answer: 0,
+        wrongHints: [null, "Hoeveel cm³ gaan er in één liter?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "1 liter = 1000 cm³",
+              tekst: "Een liter is precies evenveel als 1000 kubieke centimeter.",
+            },
+            {
+              titel: "Delen door 1000",
+              tekst: "Van cm³ naar liter deel je door 1000.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "liter",
+              uitleg: "Een inhoudsmaat die je kent van pakken melk of flessen water.",
+            },
+          ],
+          theorie: "Er geldt: **1 L = 1 dm³ = 1000 cm³**. Van cm³ naar liter: **÷ 1000**.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Een pak melk van 1 L past precies in een bakje van 10 cm bij 10 cm bij 10 cm.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "1 L = 1000 cm³",
+              uitleg: "cm³ naar liter: delen door 1000.",
+            },
+          ],
+          niveaus: {
+            basis: "4000 ÷ 1000 = 4 L.",
+            simpeler: "1000 cm³ is 1 L. Hoe vaak past 1000 in 4000?",
+            nogSimpeler: "Duizend cm³ is één liter. Hoeveel keer duizend is vierduizend?",
+          },
+        },
+      },
+      {
+        q: "Welke hoeveelheid is het **meest**?",
+        options: ["1200 cm³", "1 L", "900 ml", "0,8 L"],
+        answer: 0,
+        wrongHints: [null, "Zet eerst alles om naar dezelfde maat, bijvoorbeeld milliliter.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zelfde maat",
+              tekst: "Je kunt hoeveelheden alleen goed vergelijken in dezelfde maat.",
+            },
+            {
+              titel: "Alles in ml",
+              tekst: "1 cm³ = 1 ml en 1 L = 1000 ml. Reken alles om naar ml.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kubieke centimeter",
+              uitleg: "Een blokje van 1 cm bij 1 cm bij 1 cm, geschreven als cm³. Dat is evenveel als 1 ml.",
+            },
+          ],
+          theorie: "Handig om te onthouden: **1 cm³ = 1 ml** en **1 L = 1000 ml**. Dan kun je liters, milliliters en cm³ makkelijk vergelijken.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Een flesje van 330 ml is evenveel als 330 cm³.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "1 cm³ = 1 ml",
+              uitleg: "En 1000 ml = 1 L.",
+            },
+          ],
+          niveaus: {
+            basis: "1200 ml, 1000 ml, 900 ml en 800 ml. 1200 cm³ is het meest.",
+            simpeler: "Reken om naar ml: 1200 cm³ = 1200 ml, 1 L = 1000 ml, 0,8 L = 800 ml.",
+            nogSimpeler: "Hoeveel ml is 1200 cm³? Is dat meer dan een liter?",
+          },
+        },
+      },
     ],
   },
 
@@ -480,6 +1027,185 @@ const steps = [
           voorbeelden: [{ type: "school", tekst: "Op een plattegrond van school met schaal 1:500 is het schoolplein 6 bij 4 cm — om de echte oppervlakte te krijgen, reken je eerst beide lengtes om en vermenigvuldig je ze daarna." }],
           basiskennis: [{ onderwerp: "Twee keer schaal-effect", uitleg: "Bij oppervlakte tel je de schaal-vergroting in beide richtingen mee — dat maakt het verschil met een gewone lengte-vraag veel groter dan je zou denken." }],
           niveaus: { basis: "Reken beide lengtes om naar de werkelijkheid, vermenigvuldig ze dan.", simpeler: "Eerst lengte × schaal, dan de twee uitkomsten vermenigvuldigen.", nogSimpeler: "Reken beide kaart-lengtes eerst om naar de werkelijkheid — welke twee getallen vermenigvuldig je daarna?" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een grasveld is **12 m lang** en **8 m breed**. Een zak graszaad is genoeg voor **20 m²**. Hoeveel zakken heb je **minstens** nodig?",
+        options: ["5 zakken", "4 zakken", "6 zakken", "2 zakken"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is dat genoeg voor het hele veld? Reken na hoeveel m² je dan kunt inzaaien.",
+          null,
+          "Heb je de oppervlakte van het veld uitgerekend, of de rand?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Oppervlakte van het veld",
+              tekst: "Reken eerst uit hoeveel m² het veld is: lengte × breedte.",
+            },
+            {
+              titel: "Delen en naar boven afronden",
+              tekst: "Deel door 20. Kom je niet precies uit, dan heb je een zak extra nodig.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "minstens",
+              uitleg: "Het kleinste aantal dat nog net genoeg is.",
+            },
+          ],
+          theorie: "Eerst de **oppervlakte**, dan **delen** door wat één zak kan. Blijft er een stukje over, dan rond je **naar boven** af: een halve zak kun je niet kopen.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Heb je 2,5 pak koekjes nodig voor de klas, dan koop je 3 pakken.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Naar boven afronden",
+              uitleg: "Bij spullen kopen rond je altijd naar boven af.",
+            },
+          ],
+          niveaus: {
+            basis: "12 × 8 = 96 m². 96 ÷ 20 = 4,8 → 5 zakken.",
+            simpeler: "4 zakken is 80 m². Dat is te weinig voor 96 m². Dus 5 zakken.",
+            nogSimpeler: "Hoeveel m² is het veld? Hoeveel zakken van 20 m² heb je nodig om daar te komen?",
+          },
+        },
+      },
+      {
+        q: "Een terras is **2 m** bij **3 m**. Je legt tegels van **50 cm** bij **50 cm**. Hoeveel tegels heb je nodig?",
+        options: ["24 tegels", "12 tegels", "6 tegels", "48 tegels"],
+        answer: 0,
+        wrongHints: [null, "Hoeveel tegels van 50 cm passen er naast elkaar in 1 meter?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tegels per rij",
+              tekst: "50 cm is een halve meter. In 2 m passen 4 tegels, in 3 m passen 6 tegels.",
+            },
+            {
+              titel: "Rijen keer tegels",
+              tekst: "Je krijgt 4 rijen van 6 tegels. Vermenigvuldig die getallen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tegel",
+              uitleg: "Een plat stuk steen waarmee je een vloer of terras bedekt.",
+            },
+          ],
+          theorie: "Reken bij tegels eerst uit hoeveel er **in de lengte** en **in de breedte** passen. Vermenigvuldig die twee aantallen. Zorg dat je alles in **dezelfde maat** zet.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Op een vloer van 1 m bij 1 m passen 4 tegels van 50 cm bij 50 cm.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Zelfde maat",
+              uitleg: "50 cm = 0,5 m.",
+            },
+          ],
+          niveaus: {
+            basis: "4 × 6 = 24 tegels.",
+            simpeler: "In 2 m passen 4 tegels en in 3 m passen 6 tegels. 4 × 6 = 24.",
+            nogSimpeler: "Hoeveel tegels leg je in één rij van 3 meter? En hoeveel rijen passen er in 2 meter?",
+          },
+        },
+      },
+      {
+        q: "Een vierkante zandbak heeft een oppervlakte van **16 m²**. Hoe lang is **één zijde**?",
+        options: ["4 m", "8 m", "2 m", "16 m"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Controleer: zijde keer zijde moet 16 zijn.",
+          null,
+          "Is dat de oppervlakte of de lengte van een zijde?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Oppervlakte vierkant",
+              tekst: "Bij een vierkant is de oppervlakte zijde × zijde.",
+            },
+            {
+              titel: "Terugzoeken",
+              tekst: "Zoek het getal dat keer zichzelf 16 is.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vierkant",
+              uitleg: "Een figuur met vier even lange zijden en vier rechte hoeken.",
+            },
+          ],
+          theorie: "Bij een **vierkant** is de oppervlakte **z × z**. Weet je de oppervlakte, dan zoek je het getal dat keer zichzelf die uitkomst geeft.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Een vierkante tegel van 9 dm² heeft zijden van 3 dm.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Oppervlakte vierkant",
+              uitleg: "z × z.",
+            },
+          ],
+          niveaus: {
+            basis: "4 × 4 = 16, dus de zijde is 4 m.",
+            simpeler: "Probeer: 2 × 2 = 4, 3 × 3 = 9, 4 × 4 = 16.",
+            nogSimpeler: "Welk getal keer zichzelf is zestien?",
+          },
+        },
+      },
+      {
+        q: "Een bak is **50 cm lang**, **20 cm breed** en **30 cm hoog**. Je vult hem tot de **helft** met water. Hoeveel **liter** water zit erin?",
+        options: ["15 L", "30 L", "150 L", "1,5 L"],
+        answer: 0,
+        wrongHints: [null, "Heb je de helft al genomen?", "Hoeveel cm³ gaan er in één liter?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Inhoud van de bak",
+              tekst: "Reken de inhoud uit: lengte × breedte × hoogte, in cm³.",
+            },
+            {
+              titel: "Naar liter en de helft",
+              tekst: "Deel door 1000 voor liters. Neem daarna de helft.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "inhoud",
+              uitleg: "Hoeveel ruimte er in een ruimtefiguur zit, in kubieke maten zoals cm³.",
+            },
+          ],
+          theorie: "Inhoud van een balk = **L × B × H**. Daarna: **1000 cm³ = 1 L**. Is de bak maar half vol, dan neem je **de helft** van de inhoud.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Een emmer van 10 L die half vol is, bevat 5 L water.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "1 L = 1000 cm³",
+              uitleg: "cm³ naar liter: delen door 1000.",
+            },
+          ],
+          niveaus: {
+            basis: "50 × 20 × 30 = 30 000 cm³ = 30 L. De helft is 15 L.",
+            simpeler: "De hele bak is 30 L. Half vol is 30 ÷ 2 = 15 L.",
+            nogSimpeler: "Hoeveel liter past er in de hele bak? En hoeveel is de helft daarvan?",
+          },
         },
       },
     ],

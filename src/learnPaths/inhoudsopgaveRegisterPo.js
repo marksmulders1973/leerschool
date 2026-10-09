@@ -113,6 +113,69 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Inhoudsopgave:\n1. Het bos ... 5\n2. De zee ... 19\n3. De bergen ... 34\n4. De woestijn ... 52\n\nOp welke pagina **eindigt** hoofdstuk 2?",
+        options: ["pagina 33", "pagina 34", "pagina 19", "pagina 20"],
+        answer: 0,
+        wrongHints: [null, null, "Op die pagina begint het hoofdstuk juist.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eén pagina vóór het volgende hoofdstuk",
+              tekst: "Hoofdstuk 3 begint op pagina 34. Hoofdstuk 2 houdt dus op de pagina daarvoor op: pagina 33.",
+            },
+          ],
+          niveaus: {
+            basis: "Hoofdstuk 2 loopt van pagina 19 tot en met 33.",
+            simpeler: "Waar begint hoofdstuk 3? Hoofdstuk 2 stopt één pagina eerder.",
+            nogSimpeler: "34 − 1 = ?",
+          },
+        },
+      },
+      {
+        q: "Inhoudsopgave:\n1. Het bos ... 5\n2. De zee ... 19\n3. De bergen ... 34\n4. De woestijn ... 52\n\nJe leest op pagina 40. In welk hoofdstuk ben je?",
+        options: ["De bergen", "De woestijn", "De zee", "Het bos"],
+        answer: 0,
+        wrongHints: [null, "Begint dat hoofdstuk al vóór pagina 40?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tussen twee beginpagina's",
+              tekst: "De bergen begint op pagina 34 en de woestijn pas op pagina 52. Pagina 40 ligt daartussen, dus je zit in 'De bergen'.",
+            },
+          ],
+          niveaus: {
+            basis: "Pagina 40 ligt tussen 34 en 52 → De bergen.",
+            simpeler: "Welk hoofdstuk begint vóór pagina 40, terwijl het volgende pas ná 40 begint?",
+            nogSimpeler: "Ligt 40 tussen 34 en 52?",
+          },
+        },
+      },
+      {
+        q: "Inhoudsopgave:\n1. Het bos ... 5\n2. De zee ... 19\n3. De bergen ... 34\n4. De woestijn ... 52\n\nJe zit op pagina 20 en wilt over de woestijn lezen. Wat doe je?",
+        options: [
+          "vooruit bladeren naar pagina 52",
+          "terug bladeren naar pagina 4",
+          "terug bladeren naar pagina 5",
+          "vooruit bladeren naar pagina 34",
+        ],
+        answer: 0,
+        wrongHints: [null, "De 4 is het nummer van het hoofdstuk.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Het getal achter het hoofdstuk",
+              tekst: "Achter 'De woestijn' staat 52: daar begint het hoofdstuk. 52 is meer dan 20, dus je bladert vooruit.",
+            },
+          ],
+          niveaus: {
+            basis: "De woestijn begint op pagina 52 → vooruit bladeren.",
+            simpeler: "Welk getal is de pagina: 4 of 52?",
+            nogSimpeler: "Is 52 verder in het boek dan 20?",
+          },
+        },
+      },
     ],
   },
 
@@ -223,6 +286,83 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Register:\nbever ... 14\neekhoorn ... 9, 27\negel ... 31\nree ... 18, 27, 40\nvos ... 22\n\nOp welke pagina worden de eekhoorn én de ree **allebei** genoemd?",
+        options: ["pagina 27", "pagina 9", "pagina 18", "pagina 40"],
+        answer: 0,
+        wrongHints: [null, "Wordt de ree op die pagina ook genoemd?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek hetzelfde getal",
+              tekst: "Eekhoorn: 9 en 27. Ree: 18, 27 en 40. Het getal dat bij allebei staat, is 27.",
+            },
+          ],
+          niveaus: {
+            basis: "Pagina 27 staat bij de eekhoorn én bij de ree.",
+            simpeler: "Welk paginanummer zie je achter allebei de dieren?",
+            nogSimpeler: "Staat 27 bij de eekhoorn? En bij de ree?",
+          },
+        },
+      },
+      {
+        q: "In welk rijtje staan de woorden goed op alfabet, zoals in een register?",
+        options: ["egel – eland – ezel", "eland – egel – ezel", "ezel – egel – eland", "egel – ezel – eland"],
+        answer: 0,
+        wrongHints: [null, "Alle woorden beginnen met een e. Kijk dus naar de tweede letter.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kijk naar de tweede letter",
+              tekst: "Alle drie beginnen met een e. Dan kijk je naar de tweede letter: g (egel), l (eland), z (ezel). In het alfabet komt g vóór l, en l vóór z.",
+            },
+          ],
+          niveaus: {
+            basis: "egel (g) – eland (l) – ezel (z).",
+            simpeler: "Welke komt eerst in het alfabet: g, l of z?",
+            nogSimpeler: "g … l … z: welke volgorde klopt?",
+          },
+        },
+      },
+      {
+        q: "Register:\nbever ... 14\neekhoorn ... 9, 27\negel ... 31\nree ... 18, 27, 40\nvos ... 22\n\nHet woord 'havik' moet er nog bij. Waar komt het te staan?",
+        options: ["tussen egel en ree", "tussen bever en eekhoorn", "tussen ree en vos", "onderaan, na vos"],
+        answer: 0,
+        wrongHints: [null, null, null, "Komt de h in het alfabet na de v?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Op alfabet invoegen",
+              tekst: "'havik' begint met een h. In het alfabet komt de h na de e (egel) en vóór de r (ree). Dus: tussen egel en ree.",
+            },
+          ],
+          niveaus: {
+            basis: "h komt na e en vóór r → tussen egel en ree.",
+            simpeler: "Zeg het alfabet op: komt de h na de e? En vóór de r?",
+            nogSimpeler: "e … h … r: waar hoort de h?",
+          },
+        },
+      },
+      {
+        q: "Register:\nbever ... 14\neekhoorn ... 9, 27\negel ... 31\nree ... 18, 27, 40\nvos ... 22\n\nJe slaat pagina 22 open. Welk dier uit het register lees je daar?",
+        options: ["de vos", "de bever", "de egel", "de ree"],
+        answer: 0,
+        wrongHints: [null, null, null, "Kijk welke getallen er achter de ree staan."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek het getal 22",
+              tekst: "Achter 'vos' staat 22. Op pagina 22 lees je dus over de vos.",
+            },
+          ],
+          niveaus: {
+            basis: "Pagina 22 hoort bij de vos.",
+            simpeler: "Bij welk woord staat het getal 22?",
+            nogSimpeler: "Staat 22 achter 'vos'?",
+          },
+        },
+      },
     ],
   },
 
@@ -321,6 +461,60 @@ const steps = [
             basis: "Een los woord → register.",
             simpeler: "Waar staan losse onderwerpen op alfabet?",
             nogSimpeler: "Zoek je 'magneet' in het register of de inhoudsopgave?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Inhoudsopgave:\n1. Ridders ... 6\n2. Kastelen ... 30\n\nRegister:\nharnas ... 12, 15\nophaalbrug ... 33\n\nJe wilt snel de pagina vinden waar het woord 'ophaalbrug' staat. Waar kijk je en welke pagina sla je open?",
+        options: [
+          "in het register, pagina 33",
+          "in de inhoudsopgave, pagina 30",
+          "in het register, pagina 30",
+          "in de inhoudsopgave, pagina 2",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is 'ophaalbrug' een heel hoofdstuk of één los woord?",
+          null,
+          "De 2 is het nummer van een hoofdstuk.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Los woord → register",
+              tekst: "'Ophaalbrug' is één los woord. Dat zoek je in het register. Daar staat 33 achter, dus je slaat pagina 33 open.",
+            },
+          ],
+          niveaus: {
+            basis: "Los woord → register → pagina 33.",
+            simpeler: "Zoek je een heel hoofdstuk of één woord?",
+            nogSimpeler: "Welk getal staat achter 'ophaalbrug'?",
+          },
+        },
+      },
+      {
+        q: "Een boek over de aarde heeft geen register, alleen deze inhoudsopgave:\n1. Woestijnen ... 4\n2. Regenwouden ... 20\n3. Poolgebieden ... 38\n\nJe zoekt informatie over ijsberen. Waar kun je het best beginnen?",
+        options: [
+          "bij hoofdstuk 3, op pagina 38",
+          "bij hoofdstuk 2, op pagina 20",
+          "bij hoofdstuk 1, op pagina 4",
+          "bij hoofdstuk 3, op pagina 3",
+        ],
+        answer: 0,
+        wrongHints: [null, null, null, "De 3 is het nummer van het hoofdstuk."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kies het passende hoofdstuk",
+              tekst: "IJsberen leven in de poolgebieden. Zonder register kies je in de inhoudsopgave het hoofdstuk dat erbij past: hoofdstuk 3, dat op pagina 38 begint.",
+            },
+          ],
+          niveaus: {
+            basis: "IJsberen → poolgebieden → hoofdstuk 3, pagina 38.",
+            simpeler: "In welk soort gebied leven ijsberen? Welk hoofdstuk past daarbij?",
+            nogSimpeler: "Op welke pagina begint 'Poolgebieden'?",
           },
         },
       },
@@ -446,6 +640,65 @@ const steps = [
             basis: "Vooraan + op hoofdstuk-volgorde = de inhoudsopgave.",
             simpeler: "Welke lijst staat vooraan op boekvolgorde?",
             nogSimpeler: "Is de inhoudsopgave vooraan op boekvolgorde?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Inhoudsopgave:\n1. Haaien ... 10\n2. Walvissen ... 26\n3. Dolfijnen ... 41\n\nVoor je werkstuk wil je het hele hoofdstuk over walvissen kopiëren. Welke pagina's kopieer je?",
+        options: [
+          "pagina 26 tot en met 40",
+          "pagina 26 tot en met 41",
+          "pagina 2 tot en met 26",
+          "pagina 10 tot en met 26",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "De 2 is het nummer van het hoofdstuk.",
+          "Welk hoofdstuk begint er op pagina 10?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Van begin tot het volgende hoofdstuk",
+              tekst: "Walvissen begint op pagina 26. Dolfijnen begint op pagina 41, dus het walvissen-hoofdstuk stopt op pagina 40. Je kopieert pagina 26 tot en met 40.",
+            },
+          ],
+          niveaus: {
+            basis: "Pagina 26 t/m 40 (op 41 begint Dolfijnen).",
+            simpeler: "Waar begint het walvissen-hoofdstuk, en waar begint het volgende hoofdstuk?",
+            nogSimpeler: "41 − 1 = ?",
+          },
+        },
+      },
+      {
+        q: "Inhoudsopgave:\n1. Het zonnestelsel ... 3\n2. Sterren ... 21\n\nRegister:\nkomeet ... 11\nsupernova ... 30\n\nOp welke pagina staat 'supernova', en in welk hoofdstuk valt die pagina?",
+        options: [
+          "pagina 30, in hoofdstuk 2",
+          "pagina 30, in hoofdstuk 1",
+          "pagina 21, in hoofdstuk 2",
+          "pagina 11, in hoofdstuk 1",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Pagina 21 is het begin van een hoofdstuk. Welke pagina noemt het register?",
+          "Bij welk woord hoort pagina 11?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Register + inhoudsopgave",
+              tekst: "In het register staat: supernova ... 30. Hoofdstuk 2 begint op pagina 21, dus pagina 30 valt in hoofdstuk 2.",
+            },
+          ],
+          niveaus: {
+            basis: "Supernova → pagina 30 → hoofdstuk 2 (begint op 21).",
+            simpeler: "Kijk eerst in het register voor de pagina. Kijk dan in de inhoudsopgave in welk hoofdstuk die pagina valt.",
+            nogSimpeler: "Is 30 meer dan 21?",
           },
         },
       },

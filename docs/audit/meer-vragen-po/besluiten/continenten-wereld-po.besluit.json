@@ -1,0 +1,186 @@
+{
+ "pathId": "continenten-wereld-po",
+ "geschreven": 11,
+ "opgenomen": [
+  {
+   "stap": 1,
+   "q": "Welke oceaan ligt **onder Azië**, tussen Afrika en Australië?",
+   "options": [
+    "Indische Oceaan",
+    "Stille Oceaan",
+    "Atlantische Oceaan",
+    "Noordelijke IJszee"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    null,
+    "Die oceaan ligt bij de Noordpool."
+   ],
+   "id": "continenten-wereld-po#0"
+  },
+  {
+   "stap": 1,
+   "q": "Bij welke oceaan hoort de **Noordzee**?",
+   "options": [
+    "Atlantische Oceaan",
+    "Stille Oceaan",
+    "Indische Oceaan",
+    "Zuidelijke IJszee"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Die oceaan ligt aan de andere kant van de wereld.",
+    null,
+    null
+   ],
+   "id": "continenten-wereld-po#1"
+  },
+  {
+   "stap": 1,
+   "q": "Welk groot eiland ligt in de **Indische Oceaan**?",
+   "options": [
+    "Madagaskar",
+    "IJsland",
+    "Groenland",
+    "Cuba"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    "Dat eiland ligt ver in het noorden, bij de Noordelijke IJszee.",
+    null
+   ],
+   "id": "continenten-wereld-po#3"
+  },
+  {
+   "stap": 1,
+   "q": "Waarom heet de Stille Oceaan **'stil'**?",
+   "options": [
+    "Hij leek rustig toen ontdekkers er kwamen",
+    "Er leven geen dieren in",
+    "Er varen nooit schepen",
+    "Het water is altijd bevroren"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "In de oceaan leven juist heel veel dieren.",
+    null,
+    null
+   ],
+   "id": "continenten-wereld-po#4"
+  },
+  {
+   "stap": 3,
+   "q": "Het is **12:00** in Nederland (wintertijd). Hoe laat is het dan in **Londen**?",
+   "options": [
+    "11:00",
+    "13:00",
+    "12:00",
+    "10:00"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Ligt Engeland ten oosten of ten westen van Nederland?",
+    null,
+    null
+   ],
+   "id": "continenten-wereld-po#5"
+  },
+  {
+   "stap": 3,
+   "q": "Je belt om **09:00** Nederlandse tijd met je oom in **Beijing** (7 uur later). Hoe laat is het bij hem?",
+   "options": [
+    "16:00",
+    "02:00",
+    "15:00",
+    "17:00"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Bij je oom loopt de klok vóór, niet achter.",
+    null,
+    null
+   ],
+   "id": "continenten-wereld-po#6"
+  },
+  {
+   "stap": 3,
+   "q": "Waarom is het ergens **dag** terwijl het ergens anders **nacht** is?",
+   "options": [
+    "De aarde draait om haar eigen as",
+    "De zon gaat 's nachts uit",
+    "De maan staat dan voor de zon",
+    "De aarde staat de hele tijd stil"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "De zon blijft altijd schijnen.",
+    null,
+    null
+   ],
+   "id": "continenten-wereld-po#7"
+  },
+  {
+   "stap": 3,
+   "q": "Je oma in **New York** (6 uur eerder) belt jou om **08:00** haar tijd. Hoe laat is het dan bij jou in Nederland?",
+   "options": [
+    "14:00",
+    "02:00",
+    "08:00",
+    "12:00"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Bij jou is het later dan bij oma, niet eerder.",
+    null,
+    null
+   ],
+   "id": "continenten-wereld-po#8"
+  },
+  {
+   "stap": 3,
+   "q": "Waarom gebruiken we **tijdzones**?",
+   "options": [
+    "Zodat 12:00 overal ongeveer midden op de dag is",
+    "Zodat iedereen tegelijk naar bed gaat",
+    "Zodat de aarde sneller gaat draaien",
+    "Zodat het overal precies even laat is"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    null,
+    "Dan zou het op sommige plekken om 12:00 's middags donker zijn."
+   ],
+   "id": "continenten-wereld-po#9"
+  }
+ ],
+ "afgekeurd": [
+  {
+   "id": "continenten-wereld-po#2",
+   "stap": 1,
+   "q": "Welk deel van de aarde beslaat de **Stille Oceaan** ongeveer?",
+   "redenen": [
+    "nakijker B: Fase 2: wrongHint bij \"Een tiende\" (\"Hij is de grootste oceaan\") verklapt het antwoord van de bestaande vraag \"Welke oceaan is grootst?\" in hetzelfde pad."
+   ]
+  },
+  {
+   "id": "continenten-wereld-po#10",
+   "stap": 3,
+   "q": "Waar loopt de **datumlijn**?",
+   "redenen": [
+    "nakijker B: Fase 2: wrongHint bij \"In de Atlantische Oceaan\" (\"ligt tussen Europa en Amerika\") verklapt het antwoord van bestaande vragen \"Welke oceaan ligt tussen Nederland en Amerika?\" / \"Tussen welke continenten ligt de Atlantische Oceaan?\"."
+   ]
+  }
+ ]
+}

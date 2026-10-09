@@ -64,6 +64,7 @@ const steps = [
           niveaus: { basis: "Ademen.", simpeler: "ALLE levende wezens ademen (zuurstof). Praten/lopen/zingen niet voor planten/vissen.", nogSimpeler: "Ademen" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
     ],
   },
 
@@ -113,6 +114,7 @@ const steps = [
           niveaus: { basis: "Melk geven.", simpeler: "Zoogdieren = enige groep die melk geeft aan baby. Daarom ZOOG-dier.", nogSimpeler: "Melk" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
     ],
   },
   {
@@ -155,6 +157,7 @@ const steps = [
           niveaus: { basis: "pinguïn.", simpeler: "Pinguïn is vogel maar kan niet vliegen — gebruikt vleugels om te zwemmen.", nogSimpeler: "Pinguïn" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
     ],
   },
   {
@@ -219,6 +222,7 @@ const steps = [
           niveaus: { basis: "Geen insect (8 poten).", simpeler: "Spin heeft 8 poten = NIET insect (=6 poten). Spin = aparte groep (spinachtigen).", nogSimpeler: "8 poten" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
     ],
   },
   {
@@ -262,6 +266,7 @@ const steps = [
           niveaus: { basis: "Schaaldier.", simpeler: "Krab heeft pantser + veel poten = schaaldier. (Slak=schelp=weekdier.)", nogSimpeler: "Schaaldier" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
     ],
   },
 
@@ -312,6 +317,7 @@ const steps = [
           niveaus: { basis: "Van vorm veranderen.", simpeler: "Gedaanteverwisseling = dier verandert tijdens leven van vorm (rups→vlinder, kikkervisje→kikker).", nogSimpeler: "Vorm" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
     ],
   },
 
@@ -368,6 +374,7 @@ const steps = [
           niveaus: { basis: "Onze kant naar zon.", simpeler: "Zomer = onze kant van aarde naar zon gedraaid → meer zonkracht → warmer.", nogSimpeler: "Naar zon" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
     ],
   },
   {
@@ -421,6 +428,7 @@ const steps = [
           niveaus: { basis: "Energie sparen.", simpeler: "Winter = weinig licht. Bladeren werken niet → kosten energie. Boom werpt ze af om te overleven.", nogSimpeler: "Sparen" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
     ],
   },
   {
@@ -487,6 +495,7 @@ const steps = [
           niveaus: { basis: "spar.", simpeler: "Spar heeft naalden + blijft 's winters groen = naaldboom. (Eik/beuk/esdoorn = loofboom).", nogSimpeler: "Spar" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
     ],
   },
   {
@@ -555,6 +564,7 @@ const steps = [
           niveaus: { basis: "Eet dode resten.", simpeler: "Afbreker (regenworm/schimmel) eet dood materiaal en maakt er grond van. Natuur recyclet.", nogSimpeler: "Recyclen" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
     ],
   },
 

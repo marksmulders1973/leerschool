@@ -1,0 +1,620 @@
+{
+ "pathId": "spelling-ei-ij-au-ou",
+ "geschreven": 25,
+ "opgenomen": [
+  {
+   "stap": 0,
+   "q": "Hoe noem je de **ij** ook wel?",
+   "options": [
+    "de lange ij",
+    "de korte ij",
+    "de ronde ij",
+    "de dubbele ij"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Welke naam hoort bij de e-i, zoals in klein?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Kort en lang",
+      "tekst": "De ei heet ook wel de korte ei. De ij heet ook wel de lange ij."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "korte ei",
+      "uitleg": "De e-i, zoals in klein en trein."
+     },
+     {
+      "woord": "lange ij",
+      "uitleg": "De i-j, zoals in tijd en prijs."
+     }
+    ],
+    "theorie": "Twee namen om ze uit elkaar te houden: korte ei en lange ij.",
+    "voorbeelden": [
+     {
+      "type": "namen",
+      "tekst": "Trein schrijf je met de korte ei. Tijd schrijf je met de lange ij."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Zelfde klank",
+      "uitleg": "Je hoort geen verschil. De namen helpen alleen bij het spellen."
+     }
+    ],
+    "niveaus": {
+     "basis": "De lange ij.",
+     "simpeler": "De ei is de korte ei. De ij is de lange ij.",
+     "nogSimpeler": "Lange ij"
+    }
+   },
+   "id": "spelling-ei-ij-au-ou#0"
+  },
+  {
+   "stap": 0,
+   "q": "Welk woordpaar klinkt **hetzelfde**, maar schrijf je anders?",
+   "options": [
+    "rauw en rouw",
+    "rauw en rood",
+    "rouw en ruw",
+    "raam en room"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    "Zeg ze allebei hardop. Klinkt het middenstuk echt gelijk?",
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Spreek hardop uit",
+      "tekst": "Zeg 'rauw' en 'rouw'. Je hoort geen verschil. Alleen de letters au en ou zijn anders."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "rauw",
+      "uitleg": "Met au: niet gekookt, bijvoorbeeld een rauwe wortel."
+     },
+     {
+      "woord": "homofonen",
+      "uitleg": "Woorden die hetzelfde klinken, maar anders geschreven worden."
+     }
+    ],
+    "theorie": "au en ou klinken hetzelfde. Daarom zijn rauw en rouw homofonen.",
+    "voorbeelden": [
+     {
+      "type": "paar",
+      "tekst": "Ook 'reist' en 'rijst' klinken hetzelfde, maar je schrijft ze anders."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Klank testen",
+      "uitleg": "Zeg twee woorden langzaam hardop. Hoor je geen verschil, maar zie je wel andere letters? Dan zijn het homofonen."
+     }
+    ],
+    "niveaus": {
+     "basis": "rauw en rouw.",
+     "simpeler": "au en ou klinken hetzelfde. Bij de andere paren hoor je wel verschil.",
+     "nogSimpeler": "rauw en rouw"
+    }
+   },
+   "id": "spelling-ei-ij-au-ou#1"
+  },
+  {
+   "stap": 0,
+   "q": "Waarom schrijven we **ei** en **ij** anders, terwijl ze hetzelfde klinken?",
+   "options": [
+    "Vroeger klonken ze verschillend",
+    "Dat is een nieuwe regel van vorig jaar",
+    "Omdat ij alleen aan het eind van een woord staat",
+    "Omdat ei alleen in korte woorden staat"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Deze spelling bestaat al honderden jaren.",
+    "Denk aan 'tijd'. Waar staat daar de ij?",
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Terug in de tijd",
+      "tekst": "Ongeveer 500 jaar geleden klonken ei en ij wél verschillend. De uitspraak is later samengesmolten, maar de spelling bleef apart."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "uitspraak",
+      "uitleg": "Hoe je een woord zegt."
+     },
+     {
+      "woord": "spelling",
+      "uitleg": "Hoe je een woord schrijft."
+     }
+    ],
+    "theorie": "De klank is veranderd, de schrijfwijze niet. Daarom moet je de woorden leren.",
+    "voorbeelden": [
+     {
+      "type": "geschiedenis",
+      "tekst": "Net zo ging het met au en ou: vroeger anders, nu dezelfde klank."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Woorden leren",
+      "uitleg": "Omdat je het niet hoort, onthoud je per woord of het ei of ij is."
+     }
+    ],
+    "niveaus": {
+     "basis": "Vroeger klonken ze verschillend.",
+     "simpeler": "Lang geleden hoorde je verschil. Nu niet meer, maar we schrijven ze nog steeds anders.",
+     "nogSimpeler": "Vroeger anders"
+    }
+   },
+   "id": "spelling-ei-ij-au-ou#2"
+  },
+  {
+   "stap": 3,
+   "q": "In welk rijtje eindigen **alle** woorden goed op **-lijk**?",
+   "options": [
+    "eerlijk, vrolijk, duidelijk",
+    "eerlijk, vroleik, duidelijk",
+    "eerleik, vrolijk, duidelijk",
+    "eerlijk, vrolijk, duideleik"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Kijk goed naar het middelste woord.",
+    null,
+    "Kijk goed naar het laatste woord."
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Trucje -lijk",
+      "tekst": "Woorden die eindigen op -lijk schrijf je met de lange ij, net als moeilijk en eindelijk."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "-lijk",
+      "uitleg": "Een stukje aan het eind van een woord, altijd met ij."
+     }
+    ],
+    "theorie": "-lijk = ij: eerlijk, vrolijk, duidelijk, moeilijk.",
+    "voorbeelden": [
+     {
+      "type": "lijst",
+      "tekst": "gemakkelijk, moeilijk, eindelijk: allemaal -lijk."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Woord voor woord",
+      "uitleg": "Kijk bij zo'n rijtje elk woord apart na."
+     }
+    ],
+    "niveaus": {
+     "basis": "eerlijk, vrolijk, duidelijk.",
+     "simpeler": "In dat rijtje eindigt elk woord op -lijk met de lange ij.",
+     "nogSimpeler": "Alle drie -lijk"
+    }
+   },
+   "id": "spelling-ei-ij-au-ou#9"
+  },
+  {
+   "stap": 6,
+   "q": "Welke zin is helemaal **goed** geschreven?",
+   "options": [
+    "In augustus is het niet koud.",
+    "In ougustus is het niet koud.",
+    "In augustus is het niet kaud.",
+    "In ougustus is het niet kaud."
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Kijk goed naar de maand.",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Elk woord checken",
+      "tekst": "Augustus begint met au. Koud schrijf je met ou, net als oud en goud."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "augustus",
+      "uitleg": "De achtste maand, met au."
+     },
+     {
+      "woord": "koud",
+      "uitleg": "Niet warm, met ou."
+     }
+    ],
+    "theorie": "aug- = au (augustus). -oud = ou (oud, koud, goud).",
+    "voorbeelden": [
+     {
+      "type": "zin",
+      "tekst": "Het is gauw koud in de herfst."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Woord voor woord",
+      "uitleg": "Lees de zin woord voor woord en check elk au/ou-woord apart."
+     }
+    ],
+    "niveaus": {
+     "basis": "In augustus is het niet koud.",
+     "simpeler": "Augustus met au, koud met ou.",
+     "nogSimpeler": "au en ou"
+    }
+   },
+   "id": "spelling-ei-ij-au-ou#17"
+  },
+  {
+   "stap": 6,
+   "q": "Vul in: 'Hij ____ naar Parijs en eet daar ____.'",
+   "options": [
+    "reist … rijst",
+    "rijst … reist",
+    "reist … reist",
+    "rijst … rijst"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Welk woord hoort bij reizen, en welk bij eten?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Context bepaalt",
+      "tekst": "Op reis gaan komt van reizen: met ei. Het eten (witte korreltjes) schrijf je met ij."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "reist",
+      "uitleg": "Van reizen: naar een andere plek gaan."
+     },
+     {
+      "woord": "rijst",
+      "uitleg": "Eten: witte korreltjes."
+     }
+    ],
+    "theorie": "reist en rijst klinken hetzelfde. De zin bepaalt welke je schrijft.",
+    "voorbeelden": [
+     {
+      "type": "paar",
+      "tekst": "Wij reizen met de trein. Bij het eten hoort een bord rijst."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Verwarrers",
+      "uitleg": "Twee woorden die hetzelfde klinken? Kijk naar de betekenis in de zin."
+     }
+    ],
+    "niveaus": {
+     "basis": "Eerst reist (ei), dan rijst (ij).",
+     "simpeler": "Reizen heeft ei. Het eten heeft ij.",
+     "nogSimpeler": "ei, dan ij"
+    }
+   },
+   "id": "spelling-ei-ij-au-ou#18"
+  },
+  {
+   "stap": 6,
+   "q": "Welk woord schrijf je met **dezelfde letters** voor de klank als in **vrouw**?",
+   "options": [
+    "mouw",
+    "blauw",
+    "gauw",
+    "rauw"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Schrijf je 'vrouw' met dezelfde letters als dit woord?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "vrouw = ou",
+      "tekst": "Vrouw schrijf je met ou. Mouw ook. Blauw, gauw en rauw hebben au."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "mouw",
+      "uitleg": "Het deel van je jas om je arm."
+     }
+    ],
+    "theorie": "-ouw: vrouw, mouw, bouwen. -auw: blauw, gauw, rauw.",
+    "voorbeelden": [
+     {
+      "type": "lijst",
+      "tekst": "vrouw, mouw, trouw: allemaal met ou."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Klinkt gelijk",
+      "uitleg": "Alle vier eindigen ze op dezelfde klank. Je moet de woorden kennen."
+     }
+    ],
+    "niveaus": {
+     "basis": "mouw.",
+     "simpeler": "Vrouw en mouw schrijf je allebei met ou.",
+     "nogSimpeler": "Ou"
+    }
+   },
+   "id": "spelling-ei-ij-au-ou#19"
+  },
+  {
+   "stap": 6,
+   "q": "Welk woord is **fout** geschreven?",
+   "options": [
+    "plijn",
+    "tijd",
+    "blauw",
+    "koud"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Denk aan het trucje met -tijd.",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Elk woord checken",
+      "tekst": "Tijd (ij), blauw (au) en koud (ou) zijn goed. Plein hoort bij klein en trein: met ei."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "plein",
+      "uitleg": "Een open ruimte in een stad. Met ei."
+     }
+    ],
+    "theorie": "klein, plein, trein, brein: ei.",
+    "voorbeelden": [
+     {
+      "type": "lijst",
+      "tekst": "De trein rijdt naar het kleine plein."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Woord voor woord",
+      "uitleg": "Bekijk elk woord apart en vraag: ken ik dit woord zo?"
+     }
+    ],
+    "niveaus": {
+     "basis": "plijn is fout: het is plein.",
+     "simpeler": "Plein heeft de korte ei, net als klein.",
+     "nogSimpeler": "Plein = ei"
+    }
+   },
+   "id": "spelling-ei-ij-au-ou#20"
+  },
+  {
+   "stap": 7,
+   "q": "'Onze ____ naar Frankrijk duurt tien uur met de auto.' Welk woord is goed?",
+   "options": [
+    "reis",
+    "rijs",
+    "raais",
+    "reys"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "'rijs' komt van rijzen: omhoog gaan. Past dat hier?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "reis = ei",
+      "tekst": "Een tocht naar een andere plek is een reis, met de korte ei. Het komt van reizen."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "reis",
+      "uitleg": "Een tocht naar een andere plek."
+     }
+    ],
+    "theorie": "reis, reizen, reist: de korte ei.",
+    "voorbeelden": [
+     {
+      "type": "zin",
+      "tekst": "We gaan op reis naar Spanje."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Verwant woord",
+      "uitleg": "Reizen en reisbureau: allemaal met ei."
+     }
+    ],
+    "niveaus": {
+     "basis": "reis = ei.",
+     "simpeler": "Op reis gaan komt van reizen: korte ei.",
+     "nogSimpeler": "Ei"
+    }
+   },
+   "id": "spelling-ei-ij-au-ou#24"
+  }
+ ],
+ "afgekeurd": [
+  {
+   "id": "spelling-ei-ij-au-ou#3",
+   "stap": 0,
+   "q": "Wat doe je als je twijfelt of een woord met **au** of **ou** is?",
+   "redenen": [
+    "nakijker B: Bijna-dubbel met bestaande 'Hoe weet je of je een woord met ei of ij schrijft?' (zelfde strekking: uit je hoofd leren/opzoeken)."
+   ]
+  },
+  {
+   "id": "spelling-ei-ij-au-ou#4",
+   "stap": 1,
+   "q": "'Oma ____ een warme sjaal voor mij.' Welk woord is goed?",
+   "redenen": [
+    "nakijker A: Fase 2: wrongHint bij 'brijt' ('Bijna — kies nog eens tussen korte ei en lange ij.') wijst het antwoord vrijwel direct aan (de enige andere optie met ei) en zegt hoe dichtbij je zit. Kleine overclaim basiskennis: 'De y gebruik je in het Nederlands niet' (namen als Lely/Huygens).",
+    "nakijker B: Fase 2: hint 'Bijna — kies nog eens tussen ...' bij de afleider zegt hoe dichtbij je zit en wijst het antwoord vrijwel direct aan (de overige opties zijn duidelijke niet-woorden)."
+   ]
+  },
+  {
+   "id": "spelling-ei-ij-au-ou#5",
+   "stap": 1,
+   "q": "'In de zomer gaan we op het meer ____ met onze boot.' Welk woord is goed?",
+   "redenen": [
+    "nakijker A: Fase 2: wrongHint bij 'zijlen' ('Bijna — kies nog eens tussen korte ei en lange ij.') wijst het antwoord vrijwel direct aan. Spelfout in uitlegPad: 'die door de wind vooruit gaat' moet 'vooruitgaat' zijn.",
+    "nakijker B: Fase 2: hint 'Bijna — kies nog eens tussen ...' bij de afleider zegt hoe dichtbij je zit en wijst het antwoord vrijwel direct aan (de overige opties zijn duidelijke niet-woorden). uitlegPad-kop 'Ai bestaat niet' klopt niet (ai komt wel voor, bv. tussenwerpsel 'ai!', aai in 'saai'); bedoeld is: deze klank schrijf je niet als ai. Spelling 'l'en' in hint nakijken (ook 'l's' gangbaar)."
+   ]
+  },
+  {
+   "id": "spelling-ei-ij-au-ou#6",
+   "stap": 1,
+   "q": "'Je hersenen noem je ook wel je ____.' Welk woord is goed?",
+   "redenen": [
+    "nakijker A: Fase 2: wrongHint bij 'brijn' ('Bijna — kies nog eens tussen korte ei en lange ij.') wijst het antwoord vrijwel direct aan.",
+    "nakijker B: Fase 2: hint 'Bijna — kies nog eens tussen ...' bij de afleider zegt hoe dichtbij je zit en wijst het antwoord vrijwel direct aan (de overige opties zijn duidelijke niet-woorden)."
+   ]
+  },
+  {
+   "id": "spelling-ei-ij-au-ou#7",
+   "stap": 2,
+   "q": "'Het vliegtuig gaat steeds hoger: het ____.' Welk woord is goed?",
+   "redenen": [
+    "nakijker A: Fase 2: wrongHint bij 'steigt' ('Bijna — kies nog eens ...') wijst het antwoord vrijwel direct aan.",
+    "nakijker B: Fase 2: hint 'Bijna — kies nog eens tussen ...' bij de afleider zegt hoe dichtbij je zit en wijst het antwoord vrijwel direct aan (de overige opties zijn duidelijke niet-woorden)."
+   ]
+  },
+  {
+   "id": "spelling-ei-ij-au-ou#8",
+   "stap": 2,
+   "q": "'Bij de toets moet iedereen ____: niemand mag praten.' Welk woord is goed?",
+   "redenen": [
+    "nakijker A: Fase 2: wrongHint bij 'zweigen' ('Bijna — kies nog eens ...') wijst het antwoord vrijwel direct aan. Hint bij 'zwijchen' ('Hoor je aan het eind een g of een ch?') is misleidend: g en ch klinken in de meeste uitspraak hetzelfde, en de g staat niet aan het eind.",
+    "nakijker B: Fase 2: hint 'Bijna — kies nog eens tussen ...' bij de afleider zegt hoe dichtbij je zit en wijst het antwoord vrijwel direct aan (de overige opties zijn duidelijke niet-woorden). Hint bij 'zwijchen' ('Hoor je aan het eind een g of een ch?') klopt niet: de g staat niet aan het eind van het woord, en g/ch klinken voor veel kinderen hetzelfde. uitlegPad-kop 'Ai bestaat niet' feitelijk onjuist."
+   ]
+  },
+  {
+   "id": "spelling-ei-ij-au-ou#10",
+   "stap": 3,
+   "q": "Waarom schrijf je **zij** met **ij**?",
+   "redenen": [
+    "nakijker A: Fase 2: theorie/stap 'Voornaamwoorden = altijd ij' klopt zo niet (bv. 'beide' is ook een voornaamwoord, met ei); beperk tot persoonlijke voornaamwoorden (mij, jij, hij, zij, wij).",
+    "nakijker B: Fase 2: uitlegPad 'voornaamwoorden = altijd ij' is te absoluut (bv. 'beide' is ook een voornaamwoord en staat in stap 1 als ei-woord)."
+   ]
+  },
+  {
+   "id": "spelling-ei-ij-au-ou#11",
+   "stap": 4,
+   "q": "'Wortels kun je gekookt eten, maar ook ____.' Welk woord is goed?",
+   "redenen": [
+    "nakijker A: Fase 2: hint bij 'rau' ('Hoor je aan het eind nog iets na de au?') is misleidend: de w in rauw hoor je nauwelijks."
+   ]
+  },
+  {
+   "id": "spelling-ei-ij-au-ou#12",
+   "stap": 4,
+   "q": "'Wil je ____ bij je patat?' Welk woord is goed?",
+   "redenen": [
+    "nakijker A: Fase 2: wrongHint bij 'sous' ('Bijna — kies nog eens tussen au en ou.') wijst het antwoord vrijwel direct aan.",
+    "nakijker B: Fase 2: hint 'Bijna — kies nog eens tussen ...' bij de afleider zegt hoe dichtbij je zit en wijst het antwoord vrijwel direct aan (de overige opties zijn duidelijke niet-woorden)."
+   ]
+  },
+  {
+   "id": "spelling-ei-ij-au-ou#13",
+   "stap": 4,
+   "q": "'Deze gang is heel ____: er past maar één persoon door.' Welk woord is goed?",
+   "redenen": [
+    "nakijker A: Fase 2: wrongHint bij 'nouw' ('Bijna — kies nog eens ...') wijst het antwoord vrijwel direct aan; hint bij 'nau' ('Hoor je aan het eind nog iets na de au?') is misleidend (w nauwelijks hoorbaar).",
+    "nakijker B: Fase 2: hint 'Bijna — kies nog eens tussen ...' bij de afleider zegt hoe dichtbij je zit en wijst het antwoord vrijwel direct aan (de overige opties zijn duidelijke niet-woorden)."
+   ]
+  },
+  {
+   "id": "spelling-ei-ij-au-ou#14",
+   "stap": 5,
+   "q": "'Mijn tante gaat in juni ____ met haar vriend.' Welk woord is goed?",
+   "redenen": [
+    "nakijker A: Fase 2: wrongHint bij 'trauwen' ('Bijna — kies nog eens tussen au en ou.') wijst het antwoord vrijwel direct aan.",
+    "nakijker B: Afleider 'trouwe' is een bestaand woord (bijv. 'een trouwe hond'); niet passend in de zin, maar minder zuiver als afleider. Fase 2: hint 'Bijna — kies nog eens tussen ...' bij de afleider zegt hoe dichtbij je zit en wijst het antwoord vrijwel direct aan (de overige opties zijn duidelijke niet-woorden). Hint bij 'trouwe' ('wij trouw...?') sluit niet aan bij de zin (er staat geen 'wij'; het gaat om het hele werkwoord na 'gaat')."
+   ]
+  },
+  {
+   "id": "spelling-ei-ij-au-ou#15",
+   "stap": 5,
+   "q": "'Kun je mijn tas even ____? Dan pak ik mijn jas.' Welk woord is goed?",
+   "redenen": [
+    "nakijker A: Fase 2: wrongHint bij 'vasthauden' ('Bijna — kies nog eens tussen au en ou.') wijst het antwoord vrijwel direct aan.",
+    "nakijker B: Fase 2: hint 'Bijna — kies nog eens tussen ...' bij de afleider zegt hoe dichtbij je zit en wijst het antwoord vrijwel direct aan (de overige opties zijn duidelijke niet-woorden)."
+   ]
+  },
+  {
+   "id": "spelling-ei-ij-au-ou#16",
+   "stap": 5,
+   "q": "'Hij draagt zijn rugzak op één ____.' Welk woord is goed?",
+   "redenen": [
+    "nakijker A: Fase 2: wrongHint bij 'schauder' ('Bijna — kies nog eens tussen au en ou.') wijst het antwoord vrijwel direct aan.",
+    "nakijker B: Fase 2: hint 'Bijna — kies nog eens tussen ...' bij de afleider zegt hoe dichtbij je zit en wijst het antwoord vrijwel direct aan (de overige opties zijn duidelijke niet-woorden)."
+   ]
+  },
+  {
+   "id": "spelling-ei-ij-au-ou#21",
+   "stap": 7,
+   "q": "In welke zin staat **geen enkele** spelfout?",
+   "redenen": [
+    "nakijker A: Bijna-dubbel met nieuwe vraag #20 (beide toetsen plein/plijn) en met bestaande trein/plein-vragen.",
+    "nakijker B: Overlapt met nieuwe #20 (zelfde fout 'plijn' als kern)."
+   ]
+  },
+  {
+   "id": "spelling-ei-ij-au-ou#22",
+   "stap": 7,
+   "q": "'In de herfst wordt het buiten steeds ____.' Welk woord is goed?",
+   "redenen": [
+    "nakijker A: Bijna-dubbel: koud wordt al drie keer getoetst ('Het is heel ____ buiten', 'Het is ____ in de winter', 'Het is k___d.'); 'kouder' voegt weinig toe. | Fase 2: wrongHint bij 'kauder' ('Bijna — kies nog eens tussen au en ou.') wijst het antwoord vrijwel direct aan.",
+    "nakijker B: Bijna-dubbel: koud wordt al 3-4 keer gevraagd in het pad ('Het is heel ____ buiten', 'Het is ____ in de winter', 'Het is k___d'). Fase 2: hint 'Bijna — kies nog eens tussen ...' bij de afleider zegt hoe dichtbij je zit en wijst het antwoord vrijwel direct aan (de overige opties zijn duidelijke niet-woorden)."
+   ]
+  },
+  {
+   "id": "spelling-ei-ij-au-ou#23",
+   "stap": 7,
+   "q": "'Mijn broer heeft een ____ trui.' (de kleur van de lucht) Welk woord is goed?",
+   "redenen": [
+    "nakijker A: Bijna-dubbel met bestaande 'Wat een bl___we lucht!' (zelfde woord blauwe, zelfs zelfde 'kleur van de lucht'). | Fase 2: wrongHint bij 'blouwe' ('Bijna — kies nog eens tussen au en ou.') wijst het antwoord vrijwel direct aan; niveau 'simpeler' ('Blauw met au, en daarna -we') is verwarrend geformuleerd.",
+    "nakijker B: Bijna-dubbel met bestaande 'Schrijf juist: Wat een bl___we lucht!' (zelfde woord blauwe, zelfde aanwijzing lucht). Fase 2: hint 'Bijna — kies nog eens tussen ...' bij de afleider zegt hoe dichtbij je zit en wijst het antwoord vrijwel direct aan (de overige opties zijn duidelijke niet-woorden)."
+   ]
+  }
+ ]
+}

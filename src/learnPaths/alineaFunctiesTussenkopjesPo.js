@@ -293,6 +293,127 @@ Op de Doorstroomtoets krijg je vragen als: *"Waar gaat de tweede alinea over?"* 
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*\"Wist je dat een kameel dagenlang zonder drinken kan? Een kameel is helemaal gemaakt voor het leven in de woestijn. Zijn brede voeten zakken niet weg in het zand. Lange wimpers houden het zand uit zijn ogen.\"* — Wat doet de eerste zin van deze alinea?",
+        options: [
+          "Hij maakt je nieuwsgierig met een weetje",
+          "Hij is de kernzin waar alle andere zinnen bij passen",
+          "Hij vat de hele tekst samen",
+          "Hij is het tussenkopje van de alinea",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Passen de voeten en de wimpers bij 'dagenlang zonder drinken'? Zoek de zin waar ze wél allemaal onder passen.",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lees de eerste zin",
+              tekst: "'Wist je dat een kameel dagenlang zonder drinken kan?' is een vraag met een verrassend weetje. Zo'n begin maakt je nieuwsgierig.",
+            },
+            {
+              titel: "Doe de paraplu-test",
+              tekst: "Passen de brede voeten en de lange wimpers onder het weetje over drinken? Nee. Ze passen wel onder de tweede zin: de kameel is gemaakt voor het leven in de woestijn.",
+            },
+            {
+              titel: "Conclusie",
+              tekst: "De eerste zin is een pakkend detail. De kernzin staat hier pas op de tweede plek.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "pakkend detail",
+              uitleg: "Een grappig of verrassend weetje aan het begin van een alinea, om je nieuwsgierig te maken.",
+            },
+            {
+              woord: "kernzin",
+              uitleg: "De zin die het belangrijkste van de alinea zegt. Alle andere zinnen passen erbij.",
+            },
+          ],
+          theorie: "**De valkuil van het pakkende begin**\n\nDe kernzin staat heel vaak vooraan, maar niet altijd. Soms begint een schrijver met een vraag of een weetje. Dat is een lokkertje, geen kernzin.\n\nDe test: de kernzin is de zin waar álle andere zinnen bij passen. Een weetje past alleen bij zichzelf.",
+          voorbeelden: [
+            {
+              type: "valkuil",
+              tekst: "'Wist je dat een uil zijn kop bijna helemaal rond kan draaien? Uilen zijn echte nachtjagers...' → de eerste zin is een weetje, de tweede zin is de kernzin.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Paraplu-test",
+              uitleg: "Zet elke zin even boven de andere zinnen. Passen ze er allemaal onder? Dan heb je de kernzin.",
+            },
+          ],
+          niveaus: {
+            basis: "Passen de voeten en de wimpers onder de eerste zin? Wat is die eerste zin dan wel?",
+            simpeler: "De eerste zin is een vraag met een verrassend feitje. Waarom zou een schrijver zo beginnen?",
+            nogSimpeler: "Wat doet een vraag als 'Wist je dat...?' met jou als lezer?",
+          },
+        },
+      },
+      {
+        q: "*\"Bij de bakker begint het werk al om vier uur 's nachts. Eerst kneedt de bakker het deeg. Daarna moet het deeg een tijdje rijzen. Rond zes uur gaan de broden de oven in.\"* — Waar gaat deze alinea over?",
+        options: [
+          "Het vroege werk van de bakker",
+          "Hoe lang deeg moet rijzen",
+          "Waarom brood gezond is",
+          "Hoe je een taart versiert",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Het rijzen staat maar in één zin. Waar gaan het kneden en de oven dan over?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek de kernzin",
+              tekst: "De eerste zin zegt: het werk van de bakker begint al om vier uur 's nachts. Dat is het belangrijkste.",
+            },
+            {
+              titel: "Check de andere zinnen",
+              tekst: "Kneden, laten rijzen, de oven in: dat zijn allemaal stukjes van dat vroege werk. Ze passen onder de eerste zin.",
+            },
+            {
+              titel: "Kies het antwoord",
+              tekst: "Het goede antwoord dekt alle zinnen. Een antwoord dat maar over één zin gaat, is te klein.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kneden",
+              uitleg: "Deeg met je handen of een machine stevig door elkaar duwen en vouwen.",
+            },
+            {
+              woord: "rijzen",
+              uitleg: "Groter en luchtiger worden. Brooddeeg rijst als je het even laat staan.",
+            },
+          ],
+          theorie: "**Waar gaat de alinea over?**\n\nDeze toetsvraag los je op met de kernzin:\n\n1. Zoek de zin waar alle andere zinnen bij passen.\n2. Kies het antwoord dat bij die zin hoort.\n3. Pas op voor antwoorden die maar over één zinnetje gaan.",
+          voorbeelden: [
+            {
+              type: "herkennen",
+              tekst: "'Een hamster is 's nachts actief. Hij rent in zijn rad en verzamelt eten.' → deze alinea gaat over wat een hamster 's nachts doet, niet alleen over het rad.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Alle zinnen tellen mee",
+              uitleg: "Het onderwerp van een alinea is wat álle zinnen samen vertellen, niet één los detail.",
+            },
+          ],
+          niveaus: {
+            basis: "Lees de eerste zin nog eens. Passen de andere zinnen daaronder?",
+            simpeler: "Kneden, rijzen en de oven: waar horen die drie samen bij?",
+            nogSimpeler: "Welk antwoord gaat over alle zinnen tegelijk, en niet maar over één?",
+          },
+        },
+      },
     ],
   },
 
@@ -529,6 +650,164 @@ Beantwoord nu de vragen over de egel-tekst hierboven.`,
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een alinea luidt: *\"Een egel rolt zich op als hij schrikt. Doordat zijn stekels dan alle kanten op steken, kan een vos hem niet goed pakken.\"* Wat doet de schrijver in deze alinea?",
+        options: [
+          "Hij legt uit hoe een egel zich beschermt",
+          "Hij geeft een voorbeeld uit de tuin van één persoon",
+          "Hij geeft zijn mening over vossen",
+          "Hij leidt de tekst in",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Wordt er een persoon of een echte tuin met een naam genoemd?",
+          "Staat er 'ik vind' of 'kortom' in deze alinea?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek het signaalwoord",
+              tekst: "In de tweede zin staat 'doordat'. Dat woord wijst op uitleg: hoe of waarom iets zo is.",
+            },
+            {
+              titel: "Kijk wat de alinea doet",
+              tekst: "De schrijver vertelt hoe het werkt: de egel rolt zich op, de stekels steken alle kanten op, en daardoor kan een vos hem niet pakken.",
+            },
+            {
+              titel: "Check de andere taken",
+              tekst: "Er staat geen naam of echt geval in (geen voorbeeld), geen 'ik vind' (geen mening) en er wordt niets aangekondigd (geen inleiding).",
+            },
+          ],
+          woorden: [
+            {
+              woord: "functie",
+              uitleg: "De taak van een alinea in de tekst, bijvoorbeeld uitleggen of een voorbeeld geven.",
+            },
+            {
+              woord: "signaalwoord",
+              uitleg: "Een woord dat je helpt de functie te vinden, zoals 'doordat' of 'kortom'.",
+            },
+          ],
+          theorie: "**Uitleggen herkennen**\n\nBij een uitleg-alinea vertelt de schrijver hoe of waarom iets zo is. Signaalwoorden:\n\n- doordat\n- daardoor\n- omdat\n\nZie je zo'n woord en gaat de alinea over hoe iets werkt? Dan is de functie meestal: uitleggen.",
+          voorbeelden: [
+            {
+              type: "uitleggen",
+              tekst: "'Doordat een uil zachte veren heeft, hoort een muis hem niet aankomen.' → uitleg: hoe de uil stil kan jagen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Vraag jezelf af",
+              uitleg: "Wat doet de schrijver hier? Vertelt hij hoe of waarom iets zo is, dan legt hij uit.",
+            },
+          ],
+          niveaus: {
+            basis: "In de tweede zin staat 'doordat'. Bij welke taak hoort dat signaalwoord?",
+            simpeler: "De schrijver vertelt hoe het komt dat een vos de egel niet kan pakken. Hoe noem je dat?",
+            nogSimpeler: "Wat doe je als je vertelt hoe iets werkt?",
+          },
+        },
+      },
+      {
+        q: "Welk signaalwoord wijst op de functie **'mening geven'**?",
+        options: ["ik vind", "bijvoorbeeld", "doordat", "kijk maar"],
+        answer: 0,
+        wrongHints: [null, "Dat woord kondigt een echt geval aan. Hoort dat bij een mening?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat is een mening?",
+              tekst: "Een mening is wat de schrijver zelf ergens van vindt. Daar hoort een woord bij dat over vinden of denken gaat.",
+            },
+            {
+              titel: "Ken de signaalwoorden",
+              tekst: "'Bijvoorbeeld' en 'kijk maar' wijzen op een voorbeeld. 'Doordat' wijst op uitleg.",
+            },
+            {
+              titel: "Wat blijft over?",
+              tekst: "Alleen één van de vier woorden zegt iets over wat de schrijver zelf vindt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "mening",
+              uitleg: "Wat iemand zelf ergens van vindt. Een ander kan er anders over denken.",
+            },
+          ],
+          theorie: "**Signaalwoorden op een rij**\n\n- voorbeeld: *bijvoorbeeld*, *kijk maar*\n- uitleggen: *doordat*, *daardoor*\n- mening of slot: *kortom*, *ik vind*\n\nKen je deze woorden, dan vind je de functie van een alinea veel sneller.",
+          voorbeelden: [
+            {
+              type: "mening",
+              tekst: "'Ik vind dat elke tuin een egelhuisje verdient.' → de schrijver vertelt wat hij vindt: een mening.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Mening = wat je vindt",
+              uitleg: "Bij een mening laat de schrijver zien wat híj ervan denkt, niet hoe iets werkt.",
+            },
+          ],
+          niveaus: {
+            basis: "Welk woord gaat over wat de schrijver zelf denkt?",
+            simpeler: "Twee woorden horen bij een voorbeeld en één bij uitleg. Welk woord houd je over?",
+            nogSimpeler: "Zeg de woorden hardop. Bij welk woord vertel je wat jij zelf ergens van denkt?",
+          },
+        },
+      },
+      {
+        q: "Een alinea uit een tekst over afval luidt: *\"Kijk maar naar basisschool De Linde. Daar staan in elk lokaal drie prullenbakken: voor papier, voor plastic en voor de rest. Sinds de kinderen hun afval scheiden, gaat er veel minder in de grijze container.\"* Wat doet de schrijver in deze alinea?",
+        options: [
+          "Hij geeft een voorbeeld",
+          "Hij geeft zijn mening",
+          "Hij rondt de tekst af",
+          "Hij leidt de tekst in",
+        ],
+        answer: 0,
+        wrongHints: [null, "Staat er ergens 'ik vind' of 'kortom'?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek het signaal",
+              tekst: "De alinea begint met 'Kijk maar naar...'. Die woorden kondigen een echt geval aan.",
+            },
+            {
+              titel: "Eén echt geval",
+              tekst: "De schrijver laat één school met een naam zien: De Linde. Daar gebeurt het echt.",
+            },
+            {
+              titel: "Check de andere taken",
+              tekst: "Er staat geen 'ik vind' in, de alinea vat niets samen en hij kondigt de tekst ook niet aan.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "voorbeeld",
+              uitleg: "Eén echt geval dat laat zien hoe iets in het echt gaat, vaak met een naam erbij.",
+            },
+          ],
+          theorie: "**Een voorbeeld herkennen**\n\nBij een voorbeeld-alinea laat de schrijver één echt geval zien. Signalen:\n\n- 'Kijk maar naar...'\n- 'Zo ging het bij...'\n- 'Bijvoorbeeld...'\n- een naam van een persoon, school of plaats",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "'Zo ging het bij de familie Jansen: sinds ze een vijver hebben, komen er kikkers in hun tuin.' → één echt geval.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Naam + echt geval",
+              uitleg: "Zie je een naam en een echt geval? Dan geeft de schrijver bijna zeker een voorbeeld.",
+            },
+          ],
+          niveaus: {
+            basis: "De alinea begint met 'Kijk maar naar...'. Bij welke taak hoort dat?",
+            simpeler: "De schrijver laat één echte school met een naam zien. Wat doet hij daarmee?",
+            nogSimpeler: "Hoe noem je het als je één echt geval laat zien?",
+          },
+        },
+      },
     ],
   },
 
@@ -758,6 +1037,118 @@ Oefen nu met de vragen hieronder. Let goed op de te-smalle en te-brede instinker
             basis: "Het kopje heeft twee delen: het gaat over eten én over de winter. Welke alinea gaat over allebei?",
             simpeler: "Streep weg wat maar half past: welke alinea gaat wel over de winter maar niet over eten? Welke over een dier maar niet over eten? Wat blijft over?",
             nogSimpeler: "Zoek de alinea waarin een dier eten bewaart voor de koude maanden.",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een tussenkopje gaat maar over één zinnetje uit de alinea. Hoe noem je zo'n kopje?",
+        options: ["Te smal", "Te breed", "Precies goed", "Te lang"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een te breed kopje past boven de héle tekst of boven heel veel teksten. Is dat hier het probleem?",
+          null,
+          "Gaat het hier om het aantal woorden in het kopje, of om hoeveel zinnen het dekt?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat dekt het kopje?",
+              tekst: "Dit kopje past maar bij één zin. De andere zinnen van de alinea vallen erbuiten.",
+            },
+            {
+              titel: "Ken de twee valkuilen",
+              tekst: "Te smal: het kopje dekt maar een klein stukje. Te breed: het kopje past boven heel veel teksten.",
+            },
+            {
+              titel: "Kies de goede valkuil",
+              tekst: "Een kopje dat maar één zinnetje dekt, is dus te klein voor de alinea.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "te smal",
+              uitleg: "Een kopje dat maar over één klein stukje van de alinea gaat.",
+            },
+            {
+              woord: "te breed",
+              uitleg: "Een kopje dat zo algemeen is dat het boven heel veel teksten past.",
+            },
+          ],
+          theorie: "**Twee valkuilen bij tussenkopjes**\n\n1. **Te smal** — het kopje gaat maar over één zinnetje. Voorbeeld: 'Kleine oren' boven een alinea over vacht, vet én oren van de ijsbeer.\n2. **Te breed** — het kopje past boven duizend teksten. Voorbeeld: 'Alles over dieren'.",
+          voorbeelden: [
+            {
+              type: "te smal",
+              tekst: "Alinea over hoe een regenboog ontstaat. Kopje 'Zeven kleuren' gaat maar over één zin.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Past bij alle zinnen",
+              uitleg: "Een goed kopje past bij álle zinnen van de alinea en alleen bij deze alinea.",
+            },
+          ],
+          niveaus: {
+            basis: "Het kopje dekt maar één zin. Is het dan te groot of te klein voor de alinea?",
+            simpeler: "Denk aan het kopje 'Kleine oren' boven de alinea over de ijsbeer. Welke valkuil was dat?",
+            nogSimpeler: "Is één zinnetje een groot of een klein stukje van de alinea?",
+          },
+        },
+      },
+      {
+        q: "Boven een alinea staat het tussenkopje **'Op weg naar school'**. Welke alinea past daar het best onder?",
+        options: [
+          "Sam fietst elke ochtend naar school. Onderweg rijdt hij langs de bakker en over de brug.",
+          "In de klas begint de dag in de kring. De juf vertelt wat er die dag gaat gebeuren.",
+          "Na school speelt Sam met zijn vrienden in het park, tot het tijd is om te eten.",
+          "Sam kreeg voor zijn verjaardag een nieuwe fiets. Die is rood met witte strepen.",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Gaat deze alinea over de weg naar school, of over wat er ín de klas gebeurt?",
+          null,
+          "Er komt een fiets in voor, maar fietst Sam hier ergens naartoe?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lees het kopje goed",
+              tekst: "Het kopje zegt: 'Op weg naar school'. De alinea moet dus gaan over de tocht naar school toe.",
+            },
+            {
+              titel: "Check elke alinea",
+              tekst: "Gaat de alinea over onderweg zijn naar school? Of over wat er in de klas gebeurt, na school, of over een cadeau?",
+            },
+            {
+              titel: "Kies de alinea die helemaal past",
+              tekst: "Alleen de alinea over de fietstocht langs de bakker en over de brug gaat helemaal over de weg naar school.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "onderweg",
+              uitleg: "Terwijl je van de ene plek naar de andere gaat.",
+            },
+          ],
+          theorie: "**Kopje → alinea**\n\nDe toets draait de vraag soms om: je krijgt het kopje en zoekt de alinea. Werkwijze:\n\n1. Wat belooft het kopje?\n2. Lees elke alinea: gaat het héle stukje daarover?\n3. Pas op voor een alinea met één woord dat lijkt te passen (zoals 'fiets'), terwijl het stukje over iets anders gaat.",
+          voorbeelden: [
+            {
+              type: "omgekeerd",
+              tekst: "Kopje 'Eten voor de winter' → kies de alinea over de eekhoorn die nootjes verstopt, niet die over zijn staart.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Het hele stukje telt",
+              uitleg: "Een alinea past onder een kopje als het hele stukje over dat onderwerp gaat.",
+            },
+          ],
+          niveaus: {
+            basis: "Waar gaat het kopje over: de klas, na school, of de tocht ernaartoe?",
+            simpeler: "Zoek de alinea waarin Sam echt onderweg is naar school.",
+            nogSimpeler: "Welke alinea vertelt wat Sam onderweg tegenkomt?",
           },
         },
       },

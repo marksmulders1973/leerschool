@@ -1,0 +1,56 @@
+[
+ {
+  "pathId": "conclusies-trekken-po",
+  "stap": 0,
+  "q": "Welke twee dingen gebruik je als je een conclusie trekt?",
+  "reden": "Twee absurde afleiders ('Alleen wat jij zelf het leukst vindt', 'De plaatjes en het aantal bladzijden'); goede optie is een letterlijk citaat uit de uitleg. Te makkelijk."
+ },
+ {
+  "pathId": "brief-email-lezen-po",
+  "stap": 1,
+  "q": "Waar wordt de sportdag gehouden?",
+  "reden": "Drie afleiders komen op hetzelfde neer ('bij de school'): Lindelaan = schooladres, gymzaal van de school, schoolplein van De Vlinderboom. Alleen de goede optie is een andere plek."
+ },
+ {
+  "pathId": "alinea-functies-tussenkopjes-po",
+  "stap": 0,
+  "q": "Een tekst over honden heeft drie alinea's: één over voeding, één over uitlaten en één over spelen. Nu wil de schrijver iets vertellen over een bezoek aan de dierenarts. Wat doet hij het best?",
+  "reden": "Absurde afleiders: 'Hij haalt alle witregels uit de tekst' en 'Hij zet het in de titel' zijn niet geloofwaardig; alleen 'midden in de alinea over voeding' is een echte afleider."
+ },
+ {
+  "pathId": "brief-email-lezen-po",
+  "stap": 2,
+  "q": "Je schrijft een e-mail aan je beste vriend Daan. Welke aanhef past het best?",
+  "reden": "Goede optie verraadt zich: enige met 'Daan' uit de vraag, en de drie afleiders zijn allemaal deftige aanheffen (komen op hetzelfde neer). 'Zeer geachte mevrouw' is bovendien onnatuurlijk."
+ },
+ {
+  "pathId": "alinea-functies-tussenkopjes-po",
+  "stap": 2,
+  "q": "*\"Een mol leeft bijna zijn hele leven onder de grond. Met zijn grote voorpoten graaft hij lange gangen. In die gangen zoekt hij naar regenwormen. Zelfs zijn nest maakt hij onder de grond.\"* — Welk tussenkopje past het best boven deze alinea?",
+  "reden": "Absurde afleider 'Vliegen in de nacht' (een mol vliegt niet); goede optie herhaalt letterlijk 'onder de grond' uit de tekst."
+ },
+ {
+  "pathId": "conclusies-trekken-po",
+  "stap": 2,
+  "q": "Je denkt dat een personage in een verhaal boos is. Hoe controleer je of die conclusie ONDERBOUWD is?",
+  "reden": "Absurde afleider 'Je kiest het antwoord dat het spannendst klinkt'; goede optie is de enige die naar de tekst verwijst en de langste."
+ },
+ {
+  "pathId": "alinea-functies-tussenkopjes-po",
+  "stap": 1,
+  "q": "De laatste alinea van een tekst over egels luidt: *\"Je weet nu hoe de egel de tuin helpt. Wil je zelf iets doen? Laat dan in de herfst een stapel bladeren liggen.\"* Welke functie heeft deze alinea?",
+  "reden": "De vraag noemt het zelf 'De laatste alinea' en de goede optie citeert letterlijk de uitleg ('afgerond ... tip') — antwoord ligt voor de hand; 'Uitleggen hoe bladeren ontstaan' is een absurde afleider; opties ongelijk van vorm (twee met 'De/Het X:', twee zonder)."
+ },
+ {
+  "pathId": "feiten-details-opzoeken-po",
+  "stap": 0,
+  "q": "Je hebt de zin met je zoekwoord gevonden en precies gelezen. Wat doe je als laatste stap van de zoekstrategie?",
+  "reden": "Goede optie is veruit de langste, herhaalt 'vraag' en citeert stap 4 letterlijk; 'Tellen hoeveel woorden de zin heeft' en 'Kijken of de zin mooi geschreven is' zijn absurd."
+ },
+ {
+  "pathId": "feiten-details-opzoeken-po",
+  "stap": 0,
+  "q": "Waarom kies je bij zoekend lezen liever een naam of een bijzonder woord als zoekwoord, en niet een woordje als 'de'?",
+  "reden": "Goede optie verraadt zich: langste, enige zonder absoluut woord ('altijd', 'mag niet'), herhaalt 'de' uit de vraag; 'Kleine woordjes mag je bij een toets niet lezen' is absurd."
+ }
+]

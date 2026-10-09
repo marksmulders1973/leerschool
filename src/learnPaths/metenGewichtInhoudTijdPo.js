@@ -200,6 +200,155 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Hoeveel **pond** is **3 kg**?",
+        options: ["6 pond", "3 pond", "1,5 pond", "30 pond"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is een pond even zwaar als een kilo?",
+          null,
+          "Een pond is een halve kilo, geen tiende kilo.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Weet hoe zwaar een pond is",
+              tekst: "1 pond = 500 g, dat is een halve kilo. In 1 kg passen dus 2 pond.",
+            },
+            {
+              titel: "Reken per kilo",
+              tekst: "Elke kilo is 2 pond. Hoeveel pond is het dan bij 3 kilo?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "pond",
+              uitleg: "Een gewicht-eenheid van 500 gram: een halve kilo.",
+            },
+          ],
+          theorie: "Een **pond** is een halve kilo (500 g). Daarom zitten er in elke kilo **2 pond**. Van kilo naar pond reken je dus × 2.",
+          voorbeelden: [
+            {
+              type: "boodschappen",
+              tekst: "Op de markt vraag je om 1 kg tomaten; dat is hetzelfde als 2 pond.",
+            },
+            {
+              type: "thuis",
+              tekst: "Een zak suiker van 1 kg is net zo zwaar als twee pakken van 1 pond.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Kilo en pond",
+              uitleg: "1 kg = 1000 g = 2 pond. Een pond is dus de helft van een kilo.",
+            },
+          ],
+          niveaus: {
+            basis: "1 kg = 2 pond. Dus 3 kg = 3 × 2 pond.",
+            simpeler: "Elke kilo telt als 2 pond: 2 + 2 + 2.",
+            nogSimpeler: "3 × 2 = ?",
+          },
+        },
+      },
+      {
+        q: "**1500 g** is hoeveel **ons**?",
+        options: ["15 ons", "150 ons", "1,5 ons", "5 ons"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoeveel gram zit er in 1 ons?",
+          null,
+          "Kijk naar het hele getal 1500, niet alleen naar het laatste stukje.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Weet hoe zwaar een ons is",
+              tekst: "1 ons = 100 g.",
+            },
+            {
+              titel: "Deel door 100",
+              tekst: "Om te weten hoeveel keer 100 g in 1500 g past, deel je 1500 door 100.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "ons",
+              uitleg: "Een gewicht-eenheid van 100 gram. In Nederland zeg je dat vaak bij kaas of vleeswaren.",
+            },
+          ],
+          theorie: "Een **ons** is 100 g. Van gram naar ons ga je naar een **grotere** eenheid, dus krijg je een **kleiner** getal: je deelt door 100.",
+          voorbeelden: [
+            {
+              type: "boodschappen",
+              tekst: "Bij de kaasafdeling vraag je 2 ons kaas: dat is 200 g.",
+            },
+            {
+              type: "thuis",
+              tekst: "Een pak boter van 250 g is twee en een half ons.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Grotere eenheid, kleiner getal",
+              uitleg: "Ga je van gram naar ons of kilo, dan wordt het getal kleiner. Je deelt.",
+            },
+          ],
+          niveaus: {
+            basis: "1 ons = 100 g. Dus 1500 g ÷ 100 = het aantal ons.",
+            simpeler: "Tel in stappen van 100 g: 100, 200, 300 … tot 1500. Hoeveel stappen?",
+            nogSimpeler: "1500 ÷ 100 = ?",
+          },
+        },
+      },
+      {
+        q: "Welk pakje is het **zwaarst**?",
+        options: ["1,2 kg", "900 g", "2 pond", "11 ons"],
+        answer: 0,
+        wrongHints: [null, "Zet eerst alles om naar gram, dan kun je ze vergelijken.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Maak alles gram",
+              tekst: "1,2 kg = 1200 g. 2 pond = 2 × 500 = 1000 g. 11 ons = 11 × 100 = 1100 g. 900 g blijft 900 g.",
+            },
+            {
+              titel: "Vergelijk",
+              tekst: "Nu staan alle vier in gram. Welk getal is het grootst?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "zwaarst",
+              uitleg: "Het pakje met het meeste gewicht.",
+            },
+          ],
+          theorie: "Je kunt gewichten pas **vergelijken** als ze in **dezelfde eenheid** staan. Reken daarom alles eerst om naar gram en vergelijk dan de getallen.",
+          voorbeelden: [
+            {
+              type: "boodschappen",
+              tekst: "Is een zak van 2 pond of een zak van 800 g groter? 2 pond = 1000 g, dus de zak van 2 pond.",
+            },
+            {
+              type: "school",
+              tekst: "Bij een proefje weeg je drie blokjes in verschillende eenheden en zet je ze eerst allemaal in gram.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Eerst gelijk maken",
+              uitleg: "Vergelijken, optellen en aftrekken gaat alleen goed als alles in dezelfde eenheid staat.",
+            },
+          ],
+          niveaus: {
+            basis: "1,2 kg = 1200 g, 2 pond = 1000 g, 11 ons = 1100 g. Welke is het meest?",
+            simpeler: "Vergelijk 1200 g, 900 g, 1000 g en 1100 g.",
+            nogSimpeler: "Welk getal is het grootst: 1200, 900, 1000 of 1100?",
+          },
+        },
+      },
     ],
   },
 
@@ -390,6 +539,117 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**4 dl** is hoeveel **cl**?",
+        options: ["40 cl", "400 cl", "4 cl", "0,4 cl"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoeveel stappen zit er tussen dl en cl in het rijtje l → dl → cl → ml?",
+          null,
+          "Is cl een kleinere of een grotere eenheid dan dl?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek het rijtje",
+              tekst: "l → dl → cl → ml. Van dl naar cl is één stap naar rechts.",
+            },
+            {
+              titel: "Eén stap = × 10",
+              tekst: "Bij elke stap naar een kleinere eenheid doe je × 10. Wat is 4 × 10?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "centiliter (cl)",
+              uitleg: "Een kleine inhoudsmaat; 1 cl = 10 ml. Staat vaak op een blikje.",
+            },
+            {
+              woord: "deciliter (dl)",
+              uitleg: "Een inhoudsmaat; 1 dl = 10 cl = 100 ml.",
+            },
+          ],
+          theorie: "Bij inhoud gaat elke stap in het rijtje **liter → deciliter → centiliter → milliliter** met **10**. Naar een kleinere eenheid → × 10, dus een groter getal.",
+          voorbeelden: [
+            {
+              type: "keuken",
+              tekst: "In een maatbeker staat 2 dl water. Dat is 20 cl.",
+            },
+            {
+              type: "school",
+              tekst: "Bij een proefje meet je 1 dl vloeistof af; dat is evenveel als 10 cl.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Van groot naar klein",
+              uitleg: "Ga je naar een kleinere eenheid, dan wordt het getal groter.",
+            },
+          ],
+          niveaus: {
+            basis: "1 dl = 10 cl. Dus 4 dl = 4 × 10 cl.",
+            simpeler: "Elke deciliter is 10 centiliter: 10 + 10 + 10 + 10.",
+            nogSimpeler: "4 × 10 = ?",
+          },
+        },
+      },
+      {
+        q: "Een fles sap bevat **2,5 liter**. Hoeveel **cl** is dat?",
+        options: ["250 cl", "25 cl", "2500 cl", "25 000 cl"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoeveel cl zit er in 1 liter?",
+          "Dat getal hoort bij milliliter, niet bij centiliter.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Weet hoeveel cl in een liter past",
+              tekst: "1 l = 100 cl.",
+            },
+            {
+              titel: "Reken het om",
+              tekst: "2,5 liter is 2 hele liters en een halve liter. Hoeveel cl is dat samen?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "liter (l)",
+              uitleg: "De bekende inhoudsmaat; een pak melk is 1 liter.",
+            },
+            {
+              woord: "centiliter (cl)",
+              uitleg: "Een honderdste deel van een liter; 1 l = 100 cl.",
+            },
+          ],
+          theorie: "Van **liter** naar **centiliter** zijn het twee stappen in het rijtje (l → dl → cl), dus × 10 × 10 = **× 100**. Een kommagetal × 100: de komma schuift twee plaatsen naar rechts.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Een fles water van 1,5 l bevat 150 cl.",
+            },
+            {
+              type: "winkel",
+              tekst: "Een halve liter frisdrank is 0,5 l = 50 cl.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Liter en centiliter",
+              uitleg: "1 l = 100 cl, een halve liter = 50 cl.",
+            },
+          ],
+          niveaus: {
+            basis: "1 l = 100 cl. Dus 2,5 l = 2,5 × 100 cl.",
+            simpeler: "2 liter = 200 cl, en een halve liter = 50 cl. Tel op.",
+            nogSimpeler: "200 + 50 = ?",
+          },
+        },
+      },
     ],
   },
 
@@ -577,6 +837,155 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**150 minuten** is hoeveel uur en minuten?",
+        options: ["2 uur en 30 min", "1 uur en 50 min", "2 uur en 50 min", "1 uur en 30 min"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een uur heeft 60 minuten, geen 100.",
+          null,
+          "Hoeveel minuten zitten er in 2 hele uren?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Haal hele uren eruit",
+              tekst: "1 uur = 60 min, 2 uur = 120 min. 3 uur = 180 min is te veel.",
+            },
+            {
+              titel: "Kijk wat er overblijft",
+              tekst: "150 − 120 = de minuten die over zijn na 2 hele uren.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "hele uren",
+              uitleg: "Groepjes van precies 60 minuten.",
+            },
+          ],
+          theorie: "Tijd rekent met **60**: elk groepje van 60 minuten is 1 uur. Haal er zoveel hele uren uit als kan; wat overblijft zijn de losse minuten.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Een spelletjesmiddag van 100 minuten is 1 uur en 40 minuten.",
+            },
+            {
+              type: "school",
+              tekst: "Een schoolreisje met 130 minuten in de bus is 2 uur en 10 minuten.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "De 60-valkuil",
+              uitleg: "150 minuten is niet '1 uur en 50', want een uur heeft 60 minuten en geen 100.",
+            },
+          ],
+          niveaus: {
+            basis: "2 uur = 120 min. 150 − 120 = de rest in minuten.",
+            simpeler: "60 + 60 = 120. Hoeveel moet er nog bij om 150 te krijgen?",
+            nogSimpeler: "150 − 120 = ?",
+          },
+        },
+      },
+      {
+        q: "Je begint 's ochtends om **9:40** met een klusje en bent **1 uur en 35 minuten** bezig. Hoe laat ben je klaar?",
+        options: ["11:15", "10:75", "10:15", "11:05"],
+        answer: 0,
+        wrongHints: [null, "Bestaat een tijd met meer dan 59 minuten?", "Vergeet het hele uur niet.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel eerst het hele uur",
+              tekst: "9:40 + 1 uur = 10:40.",
+            },
+            {
+              titel: "Tel de minuten erbij",
+              tekst: "40 + 35 = 75 minuten. Dat is meer dan 60, dus 1 uur en 15 minuten. Hoe laat wordt het dan na 10:00?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "over het hele uur heen",
+              uitleg: "Kom je boven de 60 minuten, dan begint er een nieuw uur.",
+            },
+          ],
+          theorie: "Bij **klokrekenen** tel je eerst de hele uren op en daarna de minuten. Kom je bij de minuten boven de **60**, dan wordt 60 minuten **1 uur erbij** en houd je de rest als minuten over.",
+          voorbeelden: [
+            {
+              type: "school",
+              tekst: "Een les begint om 10:50 en duurt 25 minuten: 50 + 25 = 75 min = 1 uur en 15 min, dus 11:15.",
+            },
+            {
+              type: "thuis",
+              tekst: "Je gaat om 13:45 zwemmen voor 30 minuten: 45 + 30 = 75 min, dus klaar om 14:15.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Een klok heeft 60 minuten",
+              uitleg: "Na :59 komt het volgende hele uur, er bestaat geen :75.",
+            },
+          ],
+          niveaus: {
+            basis: "9:40 + 1 uur = 10:40. Dan nog 35 min: 40 + 35 = 75 min = 1 uur en 15 min.",
+            simpeler: "10:40 + 20 min = 11:00. Dan nog 15 min erbij.",
+            nogSimpeler: "11:00 + 15 minuten = ?",
+          },
+        },
+      },
+      {
+        q: "Wat duurt het **langst**?",
+        options: ["2 uur", "110 minuten", "1,5 uur", "6000 seconden"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Reken alles eerst om naar minuten.",
+          null,
+          "Hoeveel seconden zitten er in 1 minuut?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Maak alles minuten",
+              tekst: "2 uur = 120 min. 1,5 uur = 90 min. 6000 seconden = 6000 ÷ 60 = 100 min. 110 minuten blijft 110.",
+            },
+            {
+              titel: "Vergelijk",
+              tekst: "Welk getal minuten is het grootst?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "seconde",
+              uitleg: "Een heel korte tijd; 60 seconden is 1 minuut.",
+            },
+          ],
+          theorie: "Tijden vergelijk je pas als ze in **dezelfde eenheid** staan. Reken alles om naar minuten: uren × 60, seconden ÷ 60.",
+          voorbeelden: [
+            {
+              type: "sport",
+              tekst: "Een training van 1 uur en 20 minuten duurt 80 minuten, dus langer dan 75 minuten.",
+            },
+            {
+              type: "thuis",
+              tekst: "Een film van 100 minuten is korter dan 2 uur, want 2 uur = 120 minuten.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Uren, minuten en seconden",
+              uitleg: "1 uur = 60 min, 1 min = 60 s.",
+            },
+          ],
+          niveaus: {
+            basis: "2 uur = 120 min, 1,5 uur = 90 min, 6000 s = 100 min. Welke is het meest?",
+            simpeler: "Vergelijk 120, 110, 90 en 100 minuten.",
+            nogSimpeler: "Welk getal is het grootst: 120, 110, 90 of 100?",
+          },
+        },
+      },
     ],
   },
 
@@ -713,6 +1122,210 @@ const steps = [
             basis: "Van 8:30 tot 9:00 is 30 min. Van 9:00 tot 14:15 is 5 uur 15 min. Samen 5 uur 45 min.",
             simpeler: "Stap naar heel uur: 8:30 → 9:00 (30 min). Dan 9:00 → 14:15 (5 uur 15 min). 30 + 315 = 345 min = 5 uur 45 min.",
             nogSimpeler: "30 minuten tot 9:00, en dan nog 5 uur en 15 minuten verder. Tel die twee stukken bij elkaar op.",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Voor **6 pannenkoeken** heb je **3 dl** melk nodig. Hoeveel **liter** melk heb je nodig voor **18 pannenkoeken**?",
+        options: ["0,9 l", "9 l", "0,6 l", "0,09 l"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Klopt het als je voor wat pannenkoeken een hele emmer melk nodig hebt?",
+          null,
+          "Hoeveel dl zit er in 1 liter?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Hoeveel keer zoveel?",
+              tekst: "18 pannenkoeken is 3 keer zoveel als 6 pannenkoeken. Dus ook 3 keer zoveel melk: 3 × 3 dl.",
+            },
+            {
+              titel: "Omrekenen naar liter",
+              tekst: "Het antwoord moet in liter. 1 l = 10 dl, dus deel het aantal dl door 10.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "verhoudingstabel",
+              uitleg: "Een tabel waarin je beide rijen met hetzelfde getal keer doet of deelt.",
+            },
+          ],
+          theorie: "Bij een **recept** voor meer personen of stuks maak je alles met **hetzelfde getal** groter. Let daarna op de **eenheid** van het antwoord: hier wordt gevraagd in liter.",
+          voorbeelden: [
+            {
+              type: "keuken",
+              tekst: "Voor 4 koekjes 1 ei, dan voor 12 koekjes 3 eieren.",
+            },
+            {
+              type: "school",
+              tekst: "Voor 1 klas 2 l ranja, voor 3 klassen 6 l ranja.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Deciliter en liter",
+              uitleg: "1 l = 10 dl, dus 5 dl = 0,5 l.",
+            },
+          ],
+          niveaus: {
+            basis: "18 ÷ 6 = 3, dus 3 × 3 dl = 9 dl. Dan 9 dl ÷ 10 = in liter.",
+            simpeler: "Je hebt 9 dl nodig. 10 dl is 1 liter; 9 dl is net iets minder.",
+            nogSimpeler: "9 dl = 0,? l",
+          },
+        },
+      },
+      {
+        q: "In een kan zit **2 liter** water. Je schenkt **6 bekers van 25 cl** vol. Hoeveel water zit er nog in de kan?",
+        options: ["50 cl", "150 cl", "175 cl", "194 cl"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is wat je hebt ingeschonken, niet wat er over is.",
+          null,
+          "Kun je liters en centiliters zomaar van elkaar aftrekken?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Maak dezelfde eenheid",
+              tekst: "2 liter = 200 cl.",
+            },
+            {
+              titel: "Hoeveel schenk je in?",
+              tekst: "6 bekers × 25 cl = 150 cl.",
+            },
+            {
+              titel: "Wat blijft over?",
+              tekst: "Haal het ingeschonken water van de 200 cl af.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "over",
+              uitleg: "Wat er nog in de kan zit nadat je hebt ingeschonken: aftrekken.",
+            },
+          ],
+          theorie: "In een verhaaltje met **inhoud** maak je eerst alles **dezelfde eenheid**. Daarna reken je stap voor stap: eerst wat eruit gaat, dan wat er overblijft.",
+          voorbeelden: [
+            {
+              type: "verjaardag",
+              tekst: "Een fles van 1 liter (100 cl) en je schenkt 3 glazen van 20 cl: er blijft 40 cl over.",
+            },
+            {
+              type: "sport",
+              tekst: "Een bidon van 75 cl, je drinkt 25 cl: er zit nog 50 cl in.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Liter en centiliter",
+              uitleg: "1 l = 100 cl, dus 2 l = 200 cl.",
+            },
+          ],
+          niveaus: {
+            basis: "2 l = 200 cl. 6 × 25 cl = 150 cl. 200 − 150 = ?",
+            simpeler: "Je schenkt 150 cl in uit een kan van 200 cl.",
+            nogSimpeler: "200 − 150 = ?",
+          },
+        },
+      },
+      {
+        q: "Je fietst **3 rondjes** om het park. Elk rondje duurt **25 minuten**. Hoe lang fiets je in totaal?",
+        options: ["1 uur en 15 min", "1 uur en 25 min", "1 uur en 5 min", "50 min"],
+        answer: 0,
+        wrongHints: [null, "Hoeveel minuten zitten er in een uur?", null, "Je fietst 3 rondjes, niet 2."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Reken de minuten uit",
+              tekst: "3 × 25 minuten = 75 minuten.",
+            },
+            {
+              titel: "Maak er uren van",
+              tekst: "75 minuten is meer dan 60. Haal er 1 uur (60 min) uit en kijk wat overblijft.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "in totaal",
+              uitleg: "Alles bij elkaar opgeteld.",
+            },
+          ],
+          theorie: "Tel bij **tijd** eerst alle minuten bij elkaar. Kom je boven de **60**, dan wordt elke 60 minuten **1 uur** en houd je de rest als minuten over.",
+          voorbeelden: [
+            {
+              type: "school",
+              tekst: "Twee lessen van 45 minuten = 90 minuten = 1 uur en 30 min.",
+            },
+            {
+              type: "thuis",
+              tekst: "4 afleveringen van 20 minuten = 80 minuten = 1 uur en 20 min.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "De 60-regel",
+              uitleg: "1 uur = 60 minuten. Wat boven de 60 komt, zijn losse minuten na het uur.",
+            },
+          ],
+          niveaus: {
+            basis: "3 × 25 = 75 min. 75 − 60 = de minuten na 1 uur.",
+            simpeler: "25 + 25 + 25 = 75 minuten. Eén uur is 60 minuten.",
+            nogSimpeler: "75 − 60 = ?",
+          },
+        },
+      },
+      {
+        q: "Een zak met **8 appels** weegt **1,2 kg**. Alle appels zijn even zwaar. Hoeveel gram weegt één appel?",
+        options: ["150 g", "15 g", "120 g", "960 g"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Klopt het dat een appel zo licht is als een paar suikerklontjes?",
+          "Deel je door het aantal appels in de zak?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Maak eerst gram",
+              tekst: "1,2 kg = 1200 g.",
+            },
+            {
+              titel: "Verdeel eerlijk",
+              tekst: "Er zitten 8 appels in de zak. Deel 1200 g door 8.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "even zwaar",
+              uitleg: "Elke appel weegt precies hetzelfde, dus je mag eerlijk verdelen.",
+            },
+          ],
+          theorie: "Wil je weten hoeveel **één** ding weegt, dan **deel** je het totale gewicht door het aantal. Zet het gewicht eerst om naar de eenheid die gevraagd wordt (hier gram).",
+          voorbeelden: [
+            {
+              type: "winkel",
+              tekst: "Een doos met 6 eieren weegt 360 g: één ei weegt 360 ÷ 6 = 60 g.",
+            },
+            {
+              type: "school",
+              tekst: "10 knikkers wegen samen 50 g: één knikker weegt 5 g.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Kilo en gram",
+              uitleg: "1 kg = 1000 g, dus 1,2 kg = 1200 g.",
+            },
+          ],
+          niveaus: {
+            basis: "1,2 kg = 1200 g. 1200 ÷ 8 = het gewicht van één appel.",
+            simpeler: "Halveer drie keer: 1200 → 600 → 300 → 150.",
+            nogSimpeler: "1200 ÷ 8 = ?",
           },
         },
       },

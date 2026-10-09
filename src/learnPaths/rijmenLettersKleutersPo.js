@@ -101,6 +101,157 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat rijmt op **sok** 🧦?",
+        options: ["klok 🕰️", "jas 🧥", "hand ✋", "schoen 👟"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zeg ze hardop: sok... jas... Klinkt het einde hetzelfde?",
+          null,
+          "Luister naar het laatste stukje — hoor je *ok*?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Luister naar het einde",
+              tekst: "Zeg het hardop: s-**ok** 🧦 en kl-**ok** 🕰️. Hoor je het? Allebei *ok*! Dat is rijmen. 🎵",
+            },
+          ],
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Nog meer *ok*-woorden: sok, klok, rok. Allemaal rijm-vriendjes!",
+            },
+          ],
+          niveaus: {
+            basis: "Sok en klok rijmen — allebei eindigen ze op *ok*. 🧦🕰️",
+            simpeler: "Zeg hardop: sok... klok... Het einde klinkt hetzelfde!",
+            nogSimpeler: "klok 🕰️",
+          },
+        },
+      },
+      {
+        q: "Wat rijmt op **pan** 🍳?",
+        options: ["man 👨", "lepel 🥄", "vork 🍴", "bord 🍽️"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Die hoort ook in de keuken — maar luister: klinkt het einde als *an*?",
+          "Zeg ze hardop: pan... vork... Hoor je hetzelfde einde?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Luister naar het einde",
+              tekst: "Zeg het hardop: p-**an** 🍳 en m-**an** 👨. Allebei *an*! Dat is rijmen. 🎵",
+            },
+          ],
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Nog meer *an*-woorden: pan, man, kan. Allemaal rijm-vriendjes!",
+            },
+          ],
+          niveaus: {
+            basis: "Pan en man rijmen — allebei eindigen ze op *an*. 🍳👨",
+            simpeler: "Zeg hardop: pan... man... Het einde klinkt hetzelfde!",
+            nogSimpeler: "man 👨",
+          },
+        },
+      },
+      {
+        q: "Wat rijmt op **koek** 🍪?",
+        options: ["boek 📖", "melk 🥛", "kaas 🧀", "taart 🎂"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Lekker bij een koek — maar zeg ze hardop: klinkt het einde hetzelfde?",
+          null,
+          "Zeg de woorden langzaam — welk woord eindigt net als *koek*?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Luister naar het einde",
+              tekst: "Zeg het hardop: k-**oek** 🍪 en b-**oek** 📖. Allebei *oek*! Dat is rijmen. 🎵",
+            },
+          ],
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Nog meer *oek*-woorden: koek, boek, doek. Allemaal rijm-vriendjes!",
+            },
+          ],
+          niveaus: {
+            basis: "Koek en boek rijmen — allebei eindigen ze op *oek*. 🍪📖",
+            simpeler: "Zeg hardop: koek... boek... Het einde klinkt hetzelfde!",
+            nogSimpeler: "boek 📖",
+          },
+        },
+      },
+      {
+        q: "Wat rijmt op **roos** 🌹?",
+        options: ["doos 📦", "bloem 🌸", "blad 🍃", "gras 🌱"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een roos is óók een bloem — maar luister: klinkt het einde als *oos*?",
+          "Zeg ze hardop: roos... blad... Hoor je hetzelfde einde?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Luister naar het einde",
+              tekst: "Zeg het hardop: r-**oos** 🌹 en d-**oos** 📦. Allebei *oos*! Dat is rijmen. 🎵",
+            },
+          ],
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Rijmen gaat om het **einde** van het woord. Roos en doos eindigen allebei op *oos*.",
+            },
+          ],
+          niveaus: {
+            basis: "Roos en doos rijmen — allebei eindigen ze op *oos*. 🌹📦",
+            simpeler: "Zeg hardop: roos... doos... Het einde klinkt hetzelfde!",
+            nogSimpeler: "doos 📦",
+          },
+        },
+      },
+      {
+        q: "**Mond** 👄 rijmt op een dier. Welk dier?",
+        options: ["hond 🐶", "kat 🐱", "koe 🐮", "vis 🐟"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zeg ze hardop: mond... kat... Klinken de eindes hetzelfde?",
+          "Luister naar het einde: mond... koe... Hoor je hetzelfde stukje?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Luister naar het einde",
+              tekst: "Zeg het hardop: m-**ond** 👄 en h-**ond** 🐶. Allebei *ond*! Dat is rijmen. 🎵",
+            },
+          ],
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Nog meer *ond*-woorden: mond, hond, rond. Allemaal rijm-vriendjes!",
+            },
+          ],
+          niveaus: {
+            basis: "Mond en hond rijmen — allebei eindigen ze op *ond*. 👄🐶",
+            simpeler: "Zeg hardop: mond... hond... Het einde klinkt hetzelfde!",
+            nogSimpeler: "hond 🐶",
+          },
+        },
+      },
     ],
   },
 
@@ -184,6 +335,127 @@ const steps = [
             basis: "Maan begint met de klank *m* — mmm-aan. 🌙",
             simpeler: "Zeg langzaam: mmm-aan. Hoor je de *m*?",
             nogSimpeler: "maan 🌙",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Met welke klank begint **lamp** 💡?",
+        options: ["l", "m", "s", "k"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zeg het heel langzaam — hoor je een *m* aan het begin?",
+          null,
+          "Zeg *lamp* nog eens hardop — welke klank komt het allereerst?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zeg het langzaam",
+              tekst: "Zeg heel langzaam: **lll**-amp 💡. De allereerste klank die je hoort is de **l**! 👂",
+            },
+          ],
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Nog meer woorden met *l* vooraan: lamp, lepel, leeuw.",
+            },
+          ],
+          niveaus: {
+            basis: "Lamp begint met de klank *l*. 💡",
+            simpeler: "Zeg langzaam: lll-amp. Hoor je de *l* vooraan?",
+            nogSimpeler: "l",
+          },
+        },
+      },
+      {
+        q: "Klap mee 👏: **kip** 🐔 — hoeveel stukjes?",
+        options: ["1", "2", "3", "4"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zeg het langzaam en klap: kip... Komt er nog een stukje achteraan?",
+          "Dat zijn wel heel veel klappen — zeg het nog eens rustig: kip.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Klap bij elk stukje",
+              tekst: "Zeg het langzaam en klap mee: **kip** 👏. Dat is maar één klap! Kip is een kort woord: **1 stukje**.",
+            },
+          ],
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Ba-naan 🍌 heeft 2 klappen. Kip 🐔 heeft er maar 1.",
+            },
+          ],
+          niveaus: {
+            basis: "Kip = één klap = 1 stukje. 🐔",
+            simpeler: "Zeg kip en klap één keer. Klaar!",
+            nogSimpeler: "1",
+          },
+        },
+      },
+      {
+        q: "Klap mee 👏: **ko-nijn** 🐰 — hoeveel stukjes?",
+        options: ["2", "1", "3", "4"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Klap bij elk stukje: ko 👏 ... en dan komt er nog wat! Klap nog eens mee.",
+          "Zeg het langzaam en klap: ko... nijn... Tel je klappen!",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Klap bij elk stukje",
+              tekst: "Zeg het langzaam en klap mee: **ko** 👏 - **nijn** 👏. Twee klappen = **2 stukjes**!",
+            },
+          ],
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Ba-naan 🍌 heeft ook 2 stukjes, net als ko-nijn 🐰.",
+            },
+          ],
+          niveaus: {
+            basis: "Ko-nijn = klap, klap = 2 stukjes. 🐰",
+            simpeler: "Zeg ko... nijn... en klap mee. Twee klappen!",
+            nogSimpeler: "2",
+          },
+        },
+      },
+      {
+        q: "Met welke klank begint **oma** 👵?",
+        options: ["o", "a", "m", "b"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zeg het heel langzaam en luister naar de allereerste klank. Hoor je een *a*?",
+          "Mmm hoor je wel in *oma* — maar komt die als allereerste?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zeg het langzaam",
+              tekst: "Zeg heel langzaam: **ooo**-ma 👵. De allereerste klank die je hoort is de **o**! 👂",
+            },
+          ],
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Hoor je de *m* ook? Die komt pas daarna: o-**m**-a.",
+            },
+          ],
+          niveaus: {
+            basis: "Oma begint met de klank *o*. 👵",
+            simpeler: "Zeg langzaam: ooo-ma. Hoor je de *o* vooraan?",
+            nogSimpeler: "o",
           },
         },
       },
@@ -272,6 +544,97 @@ const steps = [
             basis: "In *kat* zit de a: k-a-t. 🐱",
             simpeler: "De a is een rondje met een stokje. Kijk: k-a-t!",
             nogSimpeler: "kat 🐱",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke kleine letter hoort bij de grote **A**?",
+        options: ["a", "o", "e", "u"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk goed: heeft deze letter ook een stokje aan de kant, zoals de *a*?",
+          null,
+          "Leg ze naast elkaar in je hoofd — klinkt deze letter als *aaa*?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Groot en klein",
+              tekst: "De grote **A** en de kleine **a** zijn **dezelfde letter**! Ze klinken allebei als *aaa*. 🔠",
+            },
+          ],
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Zo hoort de grote **B** bij de kleine **b**, en de grote **M** bij de kleine **m**.",
+            },
+          ],
+          niveaus: {
+            basis: "A en a zijn dezelfde letter: de *a*.",
+            simpeler: "Grote A, kleine a — allebei de *a*!",
+            nogSimpeler: "a",
+          },
+        },
+      },
+      {
+        q: "In welk woord zie je de letter **o**? 👀",
+        options: ["boot ⛵", "kip 🐔", "bus 🚌", "vis 🐟"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk letter voor letter: k-i-p. Zie je ergens een dicht rondje zoals de *o*?",
+          "Kijk goed naar b-u-s — staat daar een *o* tussen?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek het rondje",
+              tekst: "Kijk letter voor letter: b-**o**-**o**-t ⛵. Daar staat de **o** zelfs twee keer! 👀",
+            },
+          ],
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "In *kip* zie je k-i-p. Daar zit geen *o* in.",
+            },
+          ],
+          niveaus: {
+            basis: "In *boot* zie je de o — zelfs twee keer! ⛵",
+            simpeler: "b-o-o-t: zie je de rondjes?",
+            nogSimpeler: "boot ⛵",
+          },
+        },
+      },
+      {
+        q: "Welke grote letter hoort bij de kleine **m**?",
+        options: ["M", "N", "W", "H"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Tel de bergjes — heeft deze letter er net zo veel als de *m*?",
+          "Kijk goed: staat deze letter niet op zijn kop?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Groot en klein",
+              tekst: "De kleine **m** en de grote **M** zijn **dezelfde letter**! Ze klinken allebei als *mmm*. 🔠",
+            },
+          ],
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Zo hoort de kleine **a** bij de grote **A**, en de kleine **b** bij de grote **B**.",
+            },
+          ],
+          niveaus: {
+            basis: "m en M zijn dezelfde letter: de *m*.",
+            simpeler: "Kleine m, grote M — allebei *mmm*!",
+            nogSimpeler: "M",
           },
         },
       },
@@ -364,6 +727,97 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een poes 🐈 is een dier. Wat is óók een dier?",
+        options: ["paard 🐴", "banaan 🍌", "jas 🧥", "bal ⚽"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kan een banaan lopen of geluid maken? Denk nog eens na!",
+          "Trek je dit aan, of kan het zelf rondlopen?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kan het lopen en eten?",
+              tekst: "Een poes 🐈 en een paard 🐴 leven allebei: ze lopen, eten en maken geluid. Dat zijn **dieren**! 🐾",
+            },
+          ],
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Nog meer dieren: hond 🐶, koe 🐮, eend 🦆.",
+            },
+          ],
+          niveaus: {
+            basis: "Een paard is een dier, net als een poes. 🐴🐈",
+            simpeler: "Een paard loopt en eet — dat is een dier!",
+            nogSimpeler: "paard 🐴",
+          },
+        },
+      },
+      {
+        q: "Welke is **geen** fruit?",
+        options: ["bal ⚽", "peer 🍐", "aardbei 🍓", "druif 🍇"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kun je een peer eten? Dan is het misschien wel fruit!",
+          null,
+          "Een druif kun je eten — zoek iets wat je níét kunt eten.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat kun je eten?",
+              tekst: "Een peer 🍐, een aardbei 🍓 en een druif 🍇 kun je allemaal **eten** — dat is **fruit**. Een bal ⚽ eet je niet: daar speel je mee!",
+            },
+          ],
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Fruit: appel 🍎, banaan 🍌, peer 🍐. Speelgoed: bal ⚽, pop, blokken.",
+            },
+          ],
+          niveaus: {
+            basis: "Een bal is geen fruit — daar speel je mee. ⚽",
+            simpeler: "Kun je een bal eten? Nee! Dus geen fruit.",
+            nogSimpeler: "bal ⚽",
+          },
+        },
+      },
+      {
+        q: "**Lepel** 🥄 en ... horen bij elkaar. Welk woord?",
+        options: ["vork 🍴", "bal ⚽", "boom 🌳", "kat 🐱"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Met een bal kun je spelen — maar eet je er ook mee?",
+          "Een boom staat buiten — hoort die bij het eten?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat doe je ermee?",
+              tekst: "Met een **lepel** 🥄 en een **vork** 🍴 kun je allebei **eten**. Daarom horen ze bij elkaar!",
+            },
+          ],
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Nog meer dingen om mee te eten: mes, bord 🍽️, beker.",
+            },
+          ],
+          niveaus: {
+            basis: "Lepel en vork horen bij elkaar — daar eet je mee. 🥄🍴",
+            simpeler: "Lepel en vork: allebei om mee te eten!",
+            nogSimpeler: "vork 🍴",
+          },
+        },
+      },
     ],
   },
 
@@ -445,6 +899,97 @@ const steps = [
             basis: "Bal en boot beginnen allebei met de klank *b*. ⚽⛵",
             simpeler: "Zeg langzaam: b-al... b-oot... Hetzelfde begin!",
             nogSimpeler: "boot ⛵",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "🎵 Wat rijmt op **jas** 🧥?",
+        options: ["tas 👜", "schoen 👟", "jurk 👗", "pet 🧢"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Ook iets om aan te trekken — maar luister: klinkt het einde als *as*?",
+          "Zeg ze hardop: jas... jurk... Beginnen ze hetzelfde of eindigen ze hetzelfde?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Luister naar het einde",
+              tekst: "J-**as** 🧥 en t-**as** 👜 — allebei *as*! Rijmen zit altijd aan het **einde** van het woord, niet aan het begin. 🎵",
+            },
+          ],
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Jas en jurk beginnen hetzelfde, maar ze rijmen niet: het einde is anders.",
+            },
+          ],
+          niveaus: {
+            basis: "Jas en tas rijmen — allebei *as*. 🧥👜",
+            simpeler: "Zeg hardop: jas... tas... Hetzelfde einde!",
+            nogSimpeler: "tas 👜",
+          },
+        },
+      },
+      {
+        q: "👂 Met welke klank begint **neus** 👃?",
+        options: ["n", "m", "s", "k"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Mmm zeg je bij lekker eten — hoor je dat vooraan in *neus*?",
+          "De *s* hoor je wel in *neus* — maar komt die als allereerste?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zeg het langzaam",
+              tekst: "Zeg heel langzaam: **nnn**-eus 👃. De allereerste klank die je hoort is de **n**! 👂",
+            },
+          ],
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Hoor je de *s*? Die komt pas helemaal aan het einde: neu-**s**.",
+            },
+          ],
+          niveaus: {
+            basis: "Neus begint met de klank *n*. 👃",
+            simpeler: "Zeg langzaam: nnn-eus. Hoor je de *n* vooraan?",
+            nogSimpeler: "n",
+          },
+        },
+      },
+      {
+        q: "👏 Klap mee: **ze-bra** 🦓 — hoeveel stukjes?",
+        options: ["2", "1", "3", "4"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Eén klap maar? Zeg het langzaam: ze... bra... en klap bij elk stukje.",
+          "Dat is één klap te veel — zeg het rustig: ze... bra...",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Klap bij elk stukje",
+              tekst: "Zeg het langzaam en klap mee: **ze** 👏 - **bra** 👏. Twee klappen = **2 stukjes**!",
+            },
+          ],
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Ba-naan 🍌 heeft ook 2 stukjes, net als ze-bra 🦓.",
+            },
+          ],
+          niveaus: {
+            basis: "Ze-bra = klap, klap = 2 stukjes. 🦓",
+            simpeler: "Zeg ze... bra... en klap mee. Twee klappen!",
+            nogSimpeler: "2",
           },
         },
       },

@@ -121,6 +121,236 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Herfst = sep/okt/nov.", "Lente = maart/april/mei.", "Winter = dec/jan/feb."],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Hoeveel dagen heeft **november**?",
+        options: ["30 dagen", "31 dagen", "28 dagen", "29 dagen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Tel op je knokkels: valt november op een knokkel of in een inham?",
+          null,
+          "Alleen februari heeft 28 of 29 dagen.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Knokkels tellen",
+              tekst: "Begin bij januari op een knokkel. Tel door tot november: november valt in een inham.",
+            },
+            {
+              titel: "Inham = korter",
+              tekst: "Een inham is een kortere maand. November heeft dus 30 dagen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "inham",
+              uitleg: "Het kuiltje tussen twee knokkels van je vuist.",
+            },
+          ],
+          theorie: "Maanden met 30 dagen: april, juni, september, november.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "September en november hebben allebei 30 dagen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Knokkels-truc",
+              uitleg: "Knokkel = 31 dagen, inham = korter (30, of bij februari 28/29).",
+            },
+          ],
+          niveaus: {
+            basis: "30 dagen.",
+            simpeler: "November is een korte maand. Hij heeft 30 dagen, net als april, juni en september.",
+            nogSimpeler: "30 dagen",
+          },
+        },
+      },
+      {
+        q: "Welke twee maanden **na elkaar** hebben **allebei 31 dagen**?",
+        options: ["Juli en augustus", "Juni en juli", "April en mei", "Oktober en november"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk goed naar de eerste maand van dit paar.",
+          null,
+          "Hoeveel dagen heeft de tweede maand van dit paar?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lijstje 31 dagen",
+              tekst: "31 dagen: januari, maart, mei, juli, augustus, oktober, december.",
+            },
+            {
+              titel: "Zoek buren",
+              tekst: "Juli en augustus staan allebei in het lijstje en komen direct na elkaar.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "na elkaar",
+              uitleg: "De ene maand komt direct na de andere.",
+            },
+          ],
+          theorie: "Bij de knokkels-truc springen juli en augustus allebei op een knokkel.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Juli (31) en augustus (31) → allebei 31.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Knokkels-truc",
+              uitleg: "Na juli begin je weer bij de eerste knokkel: augustus is dus ook een knokkel.",
+            },
+          ],
+          niveaus: {
+            basis: "Juli en augustus.",
+            simpeler: "Juni, april en november hebben 30 dagen. Juli en augustus hebben allebei 31.",
+            nogSimpeler: "Juli en augustus",
+          },
+        },
+      },
+      {
+        q: "Hoeveel dagen hebben **januari en februari samen** in een **gewoon jaar**?",
+        options: ["59 dagen", "60 dagen", "61 dagen", "62 dagen"],
+        answer: 0,
+        wrongHints: [null, "Dat klopt alleen in een schrikkeljaar.", null, "Heeft februari ook 31 dagen?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Januari",
+              tekst: "Januari heeft 31 dagen.",
+            },
+            {
+              titel: "Februari",
+              tekst: "In een gewoon jaar heeft februari 28 dagen.",
+            },
+            {
+              titel: "Optellen",
+              tekst: "31 + 28 = 59 dagen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "gewoon jaar",
+              uitleg: "Een jaar zonder 29 februari, met 365 dagen.",
+            },
+          ],
+          theorie: "Tel de dagen van elke maand op.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "31 + 28 = 59.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Februari",
+              uitleg: "Februari heeft 28 dagen, in een schrikkeljaar 29.",
+            },
+          ],
+          niveaus: {
+            basis: "59 dagen.",
+            simpeler: "Januari = 31 dagen. Februari = 28 dagen. 31 + 28 = 59.",
+            nogSimpeler: "59 dagen",
+          },
+        },
+      },
+      {
+        q: "Hoeveel dagen van de week zijn **geen** weekenddag?",
+        options: ["5", "2", "7", "6"],
+        answer: 0,
+        wrongHints: [null, "Dat is het aantal weekenddagen zelf.", "Dat is de hele week.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Weekend",
+              tekst: "Het weekend = zaterdag en zondag. Dat zijn 2 dagen.",
+            },
+            {
+              titel: "Rest van de week",
+              tekst: "7 − 2 = 5 dagen: maandag tot en met vrijdag.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "weekend",
+              uitleg: "Zaterdag en zondag.",
+            },
+          ],
+          theorie: "Een week heeft 7 dagen, waarvan 2 weekenddagen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Ma, di, wo, do, vr = 5 dagen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Week",
+              uitleg: "1 week = 7 dagen.",
+            },
+          ],
+          niveaus: {
+            basis: "5.",
+            simpeler: "Een week heeft 7 dagen. Zaterdag en zondag zijn weekend. 7 − 2 = 5.",
+            nogSimpeler: "5",
+          },
+        },
+      },
+      {
+        q: "Hoeveel maanden van het jaar hebben **31 dagen**?",
+        options: ["7", "6", "5", "8"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Tel nog eens alle knokkels.",
+          null,
+          "Doet februari mee? En de maanden met 30 dagen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Knokkels tellen",
+              tekst: "Januari, maart, mei, juli, augustus, oktober, december.",
+            },
+            {
+              titel: "Tellen",
+              tekst: "Dat zijn 7 maanden.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "knokkel",
+              uitleg: "Het bultje van je vingers als je een vuist maakt.",
+            },
+          ],
+          theorie: "31 dagen: jan, mrt, mei, jul, aug, okt, dec.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Tel ze één voor één: 1, 2, 3, 4, 5, 6, 7.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Rest",
+              uitleg: "4 maanden hebben 30 dagen en februari heeft er 28 of 29. 7 + 4 + 1 = 12 maanden.",
+            },
+          ],
+          niveaus: {
+            basis: "7.",
+            simpeler: "De lange maanden zijn januari, maart, mei, juli, augustus, oktober en december. Dat zijn er 7.",
+            nogSimpeler: "7",
+          },
+        },
+      },
     ],
   },
 
@@ -167,6 +397,278 @@ const steps = [
         options: ["3 maart", "31 februari", "1 maart", "5 maart"],
         answer: 0,
         wrongHints: [null, "31 februari bestaat niet.", "Te weinig — dat is +1.", "Te veel."],
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Vandaag is **vrijdag 9 oktober**. Wat is het **over 1 week**?",
+        options: ["Vrijdag 16 oktober", "Donderdag 16 oktober", "Vrijdag 17 oktober", "Zaterdag 16 oktober"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Verandert de dag-naam als je precies een week verder gaat?",
+          null,
+          "Welke dag-naam hoort bij +7 dagen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "1 week = 7 dagen",
+              tekst: "9 + 7 = 16 oktober.",
+            },
+            {
+              titel: "Dag-naam",
+              tekst: "+7 dagen = zelfde dag-naam. Dus vrijdag.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "+7 dagen",
+              uitleg: "Een hele week verder: zelfde dag-naam.",
+            },
+          ],
+          theorie: "Bij hele weken blijft de dag-naam hetzelfde, alleen de datum schuift op.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Vrijdag 9 oktober + 7 = vrijdag 16 oktober.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Datum optellen",
+              uitleg: "Tel 7 bij de datum op.",
+            },
+          ],
+          niveaus: {
+            basis: "Vrijdag 16 oktober.",
+            simpeler: "Een week later is het weer vrijdag. 9 + 7 = 16. Dus vrijdag 16 oktober.",
+            nogSimpeler: "Vrijdag 16 oktober",
+          },
+        },
+      },
+      {
+        q: "Vandaag is het **zaterdag**. Welke dag was het **9 dagen geleden**?",
+        options: ["Donderdag", "Maandag", "Vrijdag", "Zaterdag"],
+        answer: 0,
+        wrongHints: [null, "Telde je vooruit in plaats van terug?", null, "9 dagen is geen hele week."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "9 = 7 + 2",
+              tekst: "9 dagen = 1 week + 2 dagen.",
+            },
+            {
+              titel: "Eerst 1 week terug",
+              tekst: "Zaterdag − 7 dagen = zaterdag.",
+            },
+            {
+              titel: "Dan 2 dagen terug",
+              tekst: "Zaterdag → vrijdag → donderdag.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "geleden",
+              uitleg: "Terug in de tijd tellen.",
+            },
+          ],
+          theorie: "Splits in hele weken + losse dagen, en tel terug.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Za − 7 = za. Za − 1 = vr. Vr − 1 = do.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Geleden = terug",
+              uitleg: "Bij 'geleden' tel je achteruit.",
+            },
+          ],
+          niveaus: {
+            basis: "Donderdag.",
+            simpeler: "9 dagen = 1 week + 2 dagen. Een week terug is weer zaterdag. Nog 2 dagen terug: donderdag.",
+            nogSimpeler: "Donderdag",
+          },
+        },
+      },
+      {
+        q: "Vandaag is het **6 april**. Welke datum was het **10 dagen geleden**?",
+        options: ["27 maart", "26 maart", "28 maart", "16 april"],
+        answer: 0,
+        wrongHints: [null, "Hoeveel dagen heeft maart?", null, "Dat is 10 dagen later, niet geleden."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Terug naar eind maart",
+              tekst: "6 april − 6 dagen = 31 maart.",
+            },
+            {
+              titel: "Nog 4 dagen terug",
+              tekst: "10 − 6 = 4. 31 maart − 4 = 27 maart.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "geleden",
+              uitleg: "Terug in de tijd tellen.",
+            },
+          ],
+          theorie: "Let op hoeveel dagen de vorige maand heeft.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Maart heeft 31 dagen: 31, 30, 29, 28, 27.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Maart",
+              uitleg: "Maart heeft 31 dagen.",
+            },
+          ],
+          niveaus: {
+            basis: "27 maart.",
+            simpeler: "Eerst 6 dagen terug: dan ben je op 31 maart. Nog 4 dagen terug: 27 maart.",
+            nogSimpeler: "27 maart",
+          },
+        },
+      },
+      {
+        q: "Vandaag is het **25 november**. Welke datum is het **10 dagen later**?",
+        options: ["5 december", "4 december", "6 december", "15 december"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Telde je november als een maand van 31 dagen?",
+          null,
+          "Vergeet niet dat je over het eind van november heen gaat.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Naar eind november",
+              tekst: "November heeft 30 dagen. 25 + 5 = 30 november.",
+            },
+            {
+              titel: "Verder in december",
+              tekst: "10 − 5 = 5. Dus 5 december.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "later",
+              uitleg: "Vooruit in de tijd tellen.",
+            },
+          ],
+          theorie: "Kijk hoeveel dagen de maand heeft voor je doortelt.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "25 + 10 = 35. 35 − 30 = 5 → 5 december.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "November",
+              uitleg: "November heeft 30 dagen.",
+            },
+          ],
+          niveaus: {
+            basis: "5 december.",
+            simpeler: "Tot 30 november zijn 5 dagen. Er blijven 5 dagen over. Dus 5 december.",
+            nogSimpeler: "5 december",
+          },
+        },
+      },
+      {
+        q: "Vandaag is **woensdag 1 juli**. Welke dag is **16 juli**?",
+        options: ["Donderdag", "Woensdag", "Vrijdag", "Dinsdag"],
+        answer: 0,
+        wrongHints: [null, "Is 16 − 1 een veelvoud van 7?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Verschil",
+              tekst: "Van 1 naar 16 juli = 15 dagen.",
+            },
+            {
+              titel: "15 = 14 + 1",
+              tekst: "2 weken (zelfde dag: woensdag) + 1 dag = donderdag.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "veelvoud van 7",
+              uitleg: "7, 14, 21, 28 … dan blijft de dag-naam gelijk.",
+            },
+          ],
+          theorie: "Splits in hele weken + losse dagen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Wo 1 juli → wo 8 → wo 15 → do 16 juli.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Hele weken",
+              uitleg: "+14 dagen = zelfde dag-naam.",
+            },
+          ],
+          niveaus: {
+            basis: "Donderdag.",
+            simpeler: "1, 8 en 15 juli zijn woensdagen. 16 juli is een dag later: donderdag.",
+            nogSimpeler: "Donderdag",
+          },
+        },
+      },
+      {
+        q: "Vandaag is het **2 maart 2028**. Dat is een **schrikkeljaar**. Welke datum was het **3 dagen geleden**?",
+        options: ["28 februari", "27 februari", "29 februari", "26 februari"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat klopt in een gewoon jaar. Maar 2028 is een schrikkeljaar.",
+          "Dat is maar 2 dagen terug.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Terug tellen",
+              tekst: "2 maart → 1 maart (1 dag) → 29 februari (2 dagen) → 28 februari (3 dagen).",
+            },
+            {
+              titel: "Schrikkeljaar",
+              tekst: "In 2028 bestaat 29 februari. Die dag tel je dus mee.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schrikkeljaar",
+              uitleg: "Een jaar met 29 februari en 366 dagen.",
+            },
+          ],
+          theorie: "In een schrikkeljaar heeft februari 29 dagen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1 mrt, 29 feb, 28 feb.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Februari",
+              uitleg: "Februari heeft 28 dagen, in een schrikkeljaar 29.",
+            },
+          ],
+          niveaus: {
+            basis: "28 februari.",
+            simpeler: "Tel terug: 1 maart, 29 februari, 28 februari. In 2028 is er een 29 februari.",
+            nogSimpeler: "28 februari",
+          },
+        },
       },
     ],
   },
@@ -224,6 +726,179 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Dat is schrikkeljaar.", "Februari heeft nooit 30.", "Februari heeft nooit 31."],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is het **eerstvolgende schrikkeljaar** na 2028?",
+        options: ["2032", "2030", "2029", "2034"],
+        answer: 0,
+        wrongHints: [null, "Is dit jaartal deelbaar door 4?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Elke 4 jaar",
+              tekst: "Een schrikkeljaar komt elke 4 jaar.",
+            },
+            {
+              titel: "Optellen",
+              tekst: "2028 + 4 = 2032.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schrikkeljaar",
+              uitleg: "Een jaar met 366 dagen.",
+            },
+          ],
+          theorie: "Deelbaar door 4 → schrikkeljaar.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2032 ÷ 4 = 508 → schrikkeljaar.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Deel door 4",
+              uitleg: "Kun je het jaartal precies door 4 delen? Dan is het een schrikkeljaar.",
+            },
+          ],
+          niveaus: {
+            basis: "2032.",
+            simpeler: "Elke 4 jaar is er een schrikkeljaar. 2028 + 4 = 2032.",
+            nogSimpeler: "2032",
+          },
+        },
+      },
+      {
+        q: "Op welke datum is **Tweede kerstdag**?",
+        options: ["26 december", "25 december", "24 december", "31 december"],
+        answer: 0,
+        wrongHints: [null, "Dat is Eerste kerstdag.", null, "Dat is Oudejaarsdag."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerste kerstdag",
+              tekst: "Eerste kerstdag is 25 december.",
+            },
+            {
+              titel: "Tweede kerstdag",
+              tekst: "De dag daarna: 26 december.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "Tweede kerstdag",
+              uitleg: "De dag na Eerste kerstdag.",
+            },
+          ],
+          theorie: "Kerst duurt in Nederland 2 dagen: 25 en 26 december.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "25 + 1 = 26 december.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Speciale data",
+              uitleg: "25 december = Eerste kerstdag, 26 december = Tweede kerstdag.",
+            },
+          ],
+          niveaus: {
+            basis: "26 december.",
+            simpeler: "Eerste kerstdag is 25 december. Tweede kerstdag is de dag erna: 26 december.",
+            nogSimpeler: "26 december",
+          },
+        },
+      },
+      {
+        q: "Welke dag vieren we op **1 januari**?",
+        options: ["Nieuwjaarsdag", "Oudejaarsdag", "Koningsdag", "Bevrijdingsdag"],
+        answer: 0,
+        wrongHints: [null, "Die dag is de laatste dag van het jaar.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerste dag",
+              tekst: "1 januari is de eerste dag van het nieuwe jaar.",
+            },
+            {
+              titel: "Naam",
+              tekst: "Die dag heet Nieuwjaarsdag.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "Nieuwjaarsdag",
+              uitleg: "De eerste dag van het jaar: 1 januari.",
+            },
+          ],
+          theorie: "Oudejaarsdag (31 december) is de dag ervoor.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "31 december → 1 januari: oud jaar → nieuw jaar.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Speciale data",
+              uitleg: "1 januari = Nieuwjaarsdag.",
+            },
+          ],
+          niveaus: {
+            basis: "Nieuwjaarsdag.",
+            simpeler: "Op 1 januari begint het nieuwe jaar. Daarom heet die dag Nieuwjaarsdag.",
+            nogSimpeler: "Nieuwjaarsdag",
+          },
+        },
+      },
+      {
+        q: "Hoe vaak is er een **29 februari** in de jaren **2025 tot en met 2032**?",
+        options: ["2 keer", "1 keer", "3 keer", "8 keer"],
+        answer: 0,
+        wrongHints: [null, "Doet 2032 ook mee?", null, "29 februari is er niet elk jaar."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welke jaren",
+              tekst: "2025, 2026, 2027, 2028, 2029, 2030, 2031, 2032.",
+            },
+            {
+              titel: "Deelbaar door 4",
+              tekst: "2028 en 2032 zijn deelbaar door 4.",
+            },
+            {
+              titel: "Tellen",
+              tekst: "Dat zijn 2 schrikkeljaren, dus 2 keer 29 februari.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tot en met",
+              uitleg: "Het laatste jaar (2032) telt ook mee.",
+            },
+          ],
+          theorie: "29 februari bestaat alleen in een schrikkeljaar.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2028 ÷ 4 = 507, 2032 ÷ 4 = 508.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Schrikkeljaar",
+              uitleg: "Deelbaar door 4 → schrikkeljaar.",
+            },
+          ],
+          niveaus: {
+            basis: "2 keer.",
+            simpeler: "Alleen in schrikkeljaren is er 29 februari. Dat zijn 2028 en 2032. Dus 2 keer.",
+            nogSimpeler: "2 keer",
+          },
+        },
+      },
     ],
   },
 
@@ -273,6 +948,276 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Te weinig.", "Te veel.", "Te weinig."],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Sanne is geboren op **14 juni 2015**. Hoe oud is ze op **1 maart 2026**?",
+        options: ["10 jaar", "11 jaar", "9 jaar", "12 jaar"],
+        answer: 0,
+        wrongHints: [null, "Is Sanne op 1 maart al jarig geweest?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Verschil jaartallen",
+              tekst: "2026 − 2015 = 11.",
+            },
+            {
+              titel: "Check verjaardag",
+              tekst: "Verjaardag is 14 juni. 1 maart is vóór 14 juni → nog niet jarig.",
+            },
+            {
+              titel: "1 eraf",
+              tekst: "11 − 1 = 10 jaar.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "jarig",
+              uitleg: "Op je verjaardag word je 1 jaar ouder.",
+            },
+          ],
+          theorie: "Leeftijd = jaartal-verschil, min 1 als nog niet jarig.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Geboren 14 juni 2015, op 1 maart 2026 → 10 jaar.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Verjaardag-check",
+              uitleg: "Altijd checken: is ze dit jaar al jarig geweest?",
+            },
+          ],
+          niveaus: {
+            basis: "10 jaar.",
+            simpeler: "2026 − 2015 = 11. Maar in maart is haar verjaardag (juni) nog niet geweest. Dus 10 jaar.",
+            nogSimpeler: "10 jaar",
+          },
+        },
+      },
+      {
+        q: "Daan is geboren op **2 januari 2013**. Hoe oud is hij op **30 september 2026**?",
+        options: ["13 jaar", "12 jaar", "14 jaar", "11 jaar"],
+        answer: 0,
+        wrongHints: [null, "Is 2 januari al voorbij op 30 september?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Verschil jaartallen",
+              tekst: "2026 − 2013 = 13.",
+            },
+            {
+              titel: "Check verjaardag",
+              tekst: "Verjaardag is 2 januari. 30 september is daarna → al jarig geweest.",
+            },
+            {
+              titel: "Klaar",
+              tekst: "Leeftijd = 13 jaar.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "jarig",
+              uitleg: "Op je verjaardag word je 1 jaar ouder.",
+            },
+          ],
+          theorie: "Al jarig geweest → leeftijd is gewoon het verschil.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2026 − 2013 = 13.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Verjaardag-check",
+              uitleg: "Al jarig? Dan niets eraf.",
+            },
+          ],
+          niveaus: {
+            basis: "13 jaar.",
+            simpeler: "2026 − 2013 = 13. Zijn verjaardag in januari is al geweest. Dus 13 jaar.",
+            nogSimpeler: "13 jaar",
+          },
+        },
+      },
+      {
+        q: "Opa is geboren in **1955**. In welk jaar wordt hij **80**?",
+        options: ["2035", "2034", "2045", "2025"],
+        answer: 0,
+        wrongHints: [null, "Reken nog eens: 1955 + 80.", null, "Dan is hij pas 70."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Optellen",
+              tekst: "Geboortejaar + leeftijd = jaar.",
+            },
+            {
+              titel: "Rekenen",
+              tekst: "1955 + 80 = 2035.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "geboortejaar",
+              uitleg: "Het jaar waarin je bent geboren.",
+            },
+          ],
+          theorie: "In welk jaar word je X? → geboortejaar + X.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1955 + 80 = 2035.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Optellen",
+              uitleg: "1955 + 45 = 2000. Nog 35 erbij = 2035.",
+            },
+          ],
+          niveaus: {
+            basis: "2035.",
+            simpeler: "Tel 80 op bij 1955. 1955 + 80 = 2035.",
+            nogSimpeler: "2035",
+          },
+        },
+      },
+      {
+        q: "Fleur is geboren op **10 mei 2011**, haar zus Noor op **10 mei 2016**. Hoeveel jaar is Fleur **ouder** dan Noor?",
+        options: ["5 jaar", "4 jaar", "6 jaar", "7 jaar"],
+        answer: 0,
+        wrongHints: [null, "Reken het verschil tussen de jaartallen nog eens uit.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Groot − klein",
+              tekst: "2016 − 2011 = 5.",
+            },
+            {
+              titel: "Zelfde verjaardag",
+              tekst: "Ze zijn allebei op 10 mei jarig. Het verschil is dus precies 5 jaar.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "ouder",
+              uitleg: "Eerder geboren.",
+            },
+          ],
+          theorie: "Hoeveel ouder? → groot jaartal − klein jaartal.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2016 − 2011 = 5.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Verschil",
+              uitleg: "Wie eerder geboren is, is ouder.",
+            },
+          ],
+          niveaus: {
+            basis: "5 jaar.",
+            simpeler: "Fleur is in 2011 geboren, Noor in 2016. 2016 − 2011 = 5. Fleur is 5 jaar ouder.",
+            nogSimpeler: "5 jaar",
+          },
+        },
+      },
+      {
+        q: "Op **1 juni 2026** is Bram **9 jaar**. Hij is dit jaar **al jarig geweest**. In welk jaar is hij geboren?",
+        options: ["2017", "2016", "2018", "2035"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat klopt als hij nog níet jarig was geweest.",
+          null,
+          "Moet je optellen of aftrekken?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Terugrekenen",
+              tekst: "Huidig jaar − leeftijd = geboortejaar.",
+            },
+            {
+              titel: "Rekenen",
+              tekst: "2026 − 9 = 2017.",
+            },
+            {
+              titel: "Check",
+              tekst: "Al jarig geweest, dus niets extra eraf.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "geboortejaar",
+              uitleg: "Het jaar waarin je bent geboren.",
+            },
+          ],
+          theorie: "Al jarig dit jaar → geboortejaar = huidig jaar − leeftijd.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2026 − 9 = 2017.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Verjaardag-check",
+              uitleg: "Al jarig? Dan klopt het verschil precies.",
+            },
+          ],
+          niveaus: {
+            basis: "2017.",
+            simpeler: "Bram is dit jaar 9 geworden. 2026 − 9 = 2017.",
+            nogSimpeler: "2017",
+          },
+        },
+      },
+      {
+        q: "Je bent jarig op **20 december**. Op **20 december 2026** word je **11**. Hoe oud ben je op **19 december 2026**?",
+        options: ["10 jaar", "11 jaar", "12 jaar", "9 jaar"],
+        answer: 0,
+        wrongHints: [null, "Op 19 december is je verjaardag nog niet geweest.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Verjaardag",
+              tekst: "Op 20 december word je 11.",
+            },
+            {
+              titel: "Dag ervoor",
+              tekst: "Op 19 december ben je nog niet jarig geweest. Dus ben je nog 10.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "jarig",
+              uitleg: "Op je verjaardag word je 1 jaar ouder.",
+            },
+          ],
+          theorie: "Vóór je verjaardag ben je 1 jaar jonger dan erna.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "19 december: 10 jaar. 20 december: 11 jaar.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Verjaardag-check",
+              uitleg: "Nog niet jarig → 1 jaar minder.",
+            },
+          ],
+          niveaus: {
+            basis: "10 jaar.",
+            simpeler: "Pas op 20 december word je 11. Een dag eerder ben je nog 10.",
+            nogSimpeler: "10 jaar",
+          },
+        },
+      },
     ],
   },
 
@@ -317,6 +1262,230 @@ const steps = [
             basis: "1986.",
             simpeler: "Wie 40 wordt in 2026 is geboren in 2026 - 40 = 1986.",
             nogSimpeler: "1986",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een cursus loopt van **28 september t/m 4 oktober**. Hoeveel dagen duurt de cursus?",
+        options: ["7 dagen", "6 dagen", "8 dagen", "5 dagen"],
+        answer: 0,
+        wrongHints: [null, "Tel je beide datums mee?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "September",
+              tekst: "28, 29 en 30 september = 3 dagen.",
+            },
+            {
+              titel: "Oktober",
+              tekst: "1, 2, 3 en 4 oktober = 4 dagen.",
+            },
+            {
+              titel: "Samen",
+              tekst: "3 + 4 = 7 dagen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "t/m",
+              uitleg: "Tot en met: de laatste dag telt ook mee.",
+            },
+          ],
+          theorie: "Bij t/m tel je beide datums mee.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "September heeft 30 dagen: 30 − 28 + 1 = 3. Plus 4 = 7.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "September",
+              uitleg: "September heeft 30 dagen.",
+            },
+          ],
+          niveaus: {
+            basis: "7 dagen.",
+            simpeler: "In september: 28, 29, 30 (3 dagen). In oktober: 1 t/m 4 (4 dagen). Samen 7.",
+            nogSimpeler: "7 dagen",
+          },
+        },
+      },
+      {
+        q: "Een schoolreis duurt **3 dagen**. Je vertrekt op **woensdag 8 april**. Op welke dag kom je terug (de laatste dag van de reis)?",
+        options: ["Vrijdag 10 april", "Donderdag 9 april", "Zaterdag 11 april", "Vrijdag 11 april"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Telt woensdag 8 april zelf ook als dag 1?",
+          null,
+          "Klopt deze dag-naam bij deze datum?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Dag 1",
+              tekst: "Woensdag 8 april is dag 1.",
+            },
+            {
+              titel: "Doortellen",
+              tekst: "Donderdag 9 april = dag 2. Vrijdag 10 april = dag 3.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vertrekdag",
+              uitleg: "De eerste dag van de reis telt mee.",
+            },
+          ],
+          theorie: "De vertrekdag is dag 1.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Wo 8 (1), do 9 (2), vr 10 (3).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Dagen tellen",
+              uitleg: "Tel de dagen één voor één, beginnend bij dag 1.",
+            },
+          ],
+          niveaus: {
+            basis: "Vrijdag 10 april.",
+            simpeler: "Woensdag is dag 1, donderdag dag 2, vrijdag dag 3. Dus vrijdag 10 april.",
+            nogSimpeler: "Vrijdag 10 april",
+          },
+        },
+      },
+      {
+        q: "Ilse is geboren in **2015**. Haar broer is **4 jaar jonger**. In welk jaar is haar broer geboren?",
+        options: ["2019", "2011", "2015", "2018"],
+        answer: 0,
+        wrongHints: [null, "Wie jonger is, is later of eerder geboren?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Jonger = later",
+              tekst: "Jonger zijn betekent later geboren zijn.",
+            },
+            {
+              titel: "Optellen",
+              tekst: "2015 + 4 = 2019.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "jonger",
+              uitleg: "Later geboren.",
+            },
+          ],
+          theorie: "Jonger → geboortejaar + verschil. Ouder → geboortejaar − verschil.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2015 + 4 = 2019.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Jonger of ouder",
+              uitleg: "Een jonger kind is na de oudere geboren.",
+            },
+          ],
+          niveaus: {
+            basis: "2019.",
+            simpeler: "De broer is jonger, dus later geboren. 2015 + 4 = 2019.",
+            nogSimpeler: "2019",
+          },
+        },
+      },
+      {
+        q: "Een vakantie duurt **2 weken en 3 dagen**. Hoeveel dagen is dat?",
+        options: ["17 dagen", "23 dagen", "15 dagen", "14 dagen"],
+        answer: 0,
+        wrongHints: [null, "Hoeveel dagen heeft 1 week?", null, "Vergeet je de 3 extra dagen niet?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Weken",
+              tekst: "2 weken = 2 × 7 = 14 dagen.",
+            },
+            {
+              titel: "Extra dagen",
+              tekst: "14 + 3 = 17 dagen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "week",
+              uitleg: "7 dagen.",
+            },
+          ],
+          theorie: "Weken × 7, daarna de losse dagen erbij.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2 × 7 + 3 = 17.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Week",
+              uitleg: "1 week = 7 dagen.",
+            },
+          ],
+          niveaus: {
+            basis: "17 dagen.",
+            simpeler: "2 weken is 14 dagen. Plus 3 dagen = 17 dagen.",
+            nogSimpeler: "17 dagen",
+          },
+        },
+      },
+      {
+        q: "Het is **28 november**. Pakjesavond is op **5 december**. Hoeveel nachtjes moet je nog slapen tot pakjesavond?",
+        options: ["7", "8", "6", "5"],
+        answer: 0,
+        wrongHints: [null, "Telde je november als een maand van 31 dagen?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tot eind november",
+              tekst: "November heeft 30 dagen. Van 28 naar 30 november = 2 nachtjes.",
+            },
+            {
+              titel: "In december",
+              tekst: "Van 30 november naar 5 december = 5 nachtjes.",
+            },
+            {
+              titel: "Samen",
+              tekst: "2 + 5 = 7 nachtjes.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "nachtje",
+              uitleg: "Elke nacht slapen brengt je 1 dag verder.",
+            },
+          ],
+          theorie: "Tel van de ene datum naar de andere (niet beide meetellen).",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "28 → 30 november (2) + 30 november → 5 december (5) = 7.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "November",
+              uitleg: "November heeft 30 dagen.",
+            },
+          ],
+          niveaus: {
+            basis: "7.",
+            simpeler: "Van 28 november naar 5 december is 7 dagen. Dus nog 7 nachtjes slapen.",
+            nogSimpeler: "7",
           },
         },
       },

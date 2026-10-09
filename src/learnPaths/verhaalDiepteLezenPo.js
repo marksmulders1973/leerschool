@@ -323,6 +323,62 @@ Oefen maar met de zinnen hieronder. Bij elke zin geldt: het gevoel staat er niet
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*\"Bij het afscheid op het vliegveld kneep Yara haar opa nog één keer stevig vast. Daarna liep ze met haar hoofd naar beneden naar de auto.\"* — Hoe voelt Yara zich?",
+        options: ["Verdrietig", "Opgewonden", "Boos", "Verveeld"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Iemand die opgewonden is, huppelt eerder naar de auto. Wat zegt een hoofd naar beneden over Yara van binnen?",
+          "Knijp je iemand stevig vast als je boos op hem bent? Kijk wat Yara bij het afscheid doet.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek het gedrag",
+              tekst: "Yara knijpt haar opa stevig vast en loopt daarna met haar hoofd naar beneden weg. Dat zijn twee dingen die ze dóét.",
+            },
+            {
+              titel: "Vergelijk met jezelf",
+              tekst: "Wanneer houd jij iemand nog één keer stevig vast? Als je hem gaat missen. En met je hoofd naar beneden lopen doe je niet als je vrolijk bent.",
+            },
+            {
+              titel: "Kies het gevoels-woord",
+              tekst: "Afscheid nemen, iemand gaan missen, het hoofd laten hangen: kies het gevoel dat bij alle drie past.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "afscheid",
+              uitleg: "Het moment waarop je iemand gedag zegt omdat jullie uit elkaar gaan.",
+            },
+            {
+              woord: "tussen de regels lezen",
+              uitleg: "Iets begrijpen dat er niet letterlijk staat, door goed te kijken naar wat er wél staat.",
+            },
+          ],
+          theorie: "**Houding verraadt gevoel**\n\nKijk niet alleen naar wat iemand doet met spullen, maar ook naar de **houding** van het lichaam:\n\n- hoofd omhoog, rechte rug → vaak trots of blij\n- hoofd naar beneden, schouders laag → vaak verdrietig of teleurgesteld\n- heen en weer lopen → vaak ongeduldig of zenuwachtig\n\nLet ook op het **moment** in het verhaal. Bij een afscheid passen andere gevoelens dan bij een verjaardag.",
+          voorbeelden: [
+            {
+              type: "houding",
+              tekst: "'Na de wedstrijd liep Bas met hangende schouders naar de kleedkamer.' → er staat geen gevoels-woord, maar Bas is teleurgesteld.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Moment + gedrag",
+              uitleg: "Kijk naar wat er gebeurt (een afscheid) én wat het personage doet (vastknijpen, hoofd laten hangen). Samen wijzen ze naar het gevoel.",
+            },
+          ],
+          niveaus: {
+            basis: "Er staat geen gevoels-woord. Kijk naar wat Yara doet: ze knijpt opa nog één keer stevig vast en loopt met haar hoofd naar beneden weg. Bij welk gevoel past dat?",
+            simpeler: "Stel je voor dat je iemand van wie je houdt een hele tijd niet meer ziet. Hoe voel je je als je wegloopt?",
+            nogSimpeler: "Hoe kijk jij als je afscheid moet nemen van iemand die je lief vindt?",
+          },
+        },
+      },
     ],
   },
 
@@ -542,6 +598,122 @@ Beantwoord nu de vragen over het verhaal hierboven.`,
             basis: "De 'ik' heeft een naam die in het verhaal geroepen wordt. Hoort die naam bij iemand ín het verhaal, of bij degene die het bedacht heeft?",
             simpeler: "Een schrijver kan ook een ik-verhaal schrijven over een ridder of een muis. Is de schrijver dan zelf die ridder?",
             nogSimpeler: "Naar wie roept Milan 'Kom op!' aan het begin van het verhaal?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*\"Het bord bij de trap zei: drie meter. Het voelt als dertig.\"* — Wat laat Noa hiermee zien?",
+        options: [
+          "De plank lijkt haar veel hoger dan hij is",
+          "Het bord bij de trap klopt niet",
+          "De plank is dertig meter hoog",
+          "Milan heeft het bord verkeerd gelezen",
+        ],
+        answer: 0,
+        wrongHints: [null, "Zegt Noa dat het bord fout is, of zegt ze hoe het vóélt?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lees de twee zinnen apart",
+              tekst: "Eerst staat er wat het bord zegt: drie meter. Dat is een feit. Daarna staat er wat Noa voelt: dertig.",
+            },
+            {
+              titel: "Feit tegenover gevoel",
+              tekst: "Het bord liegt niet. Maar voor Noa, die bang boven op de plank staat, voelt het tien keer zo hoog.",
+            },
+            {
+              titel: "Wat zegt dat over Noa?",
+              tekst: "Je kijkt door Noa's ogen. Haar spanning maakt de afstand naar het water in haar hoofd veel groter.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "feit",
+              uitleg: "Iets dat echt zo is en dat je kunt nameten, zoals de hoogte op een bord.",
+            },
+            {
+              woord: "perspectief",
+              uitleg: "Door wiens ogen je het verhaal beleeft.",
+            },
+          ],
+          theorie: "**Door de ogen van de ik-persoon**\n\nIn een ik-verhaal zie je de wereld zoals de 'ik' hem beleeft. Dat is niet altijd hoe het echt is.\n\nNoa is gespannen, en daardoor:\n\n- lijkt het water 'kilometers ver weg'\n- voelt drie meter 'als dertig'\n\nDe schrijver laat zo zien hoe Noa zich voelt, zonder het woord 'bang' te gebruiken.",
+          voorbeelden: [
+            {
+              type: "gevoel-groter-dan-feit",
+              tekst: "'Het was maar vijf minuten, maar het leek wel een uur.' → het waren echt vijf minuten; het wachten voelde alleen heel lang.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Feit of gevoel?",
+              uitleg: "Vraag je bij zo'n zin af: is dit hoe het écht is, of hoe het voelt voor de ik-persoon?",
+            },
+          ],
+          niveaus: {
+            basis: "Het bord zegt drie meter. Noa zegt dat het voelt als dertig. Wat is het feit, en wat is Noa's gevoel?",
+            simpeler: "Heb je weleens ergens hoog gestaan waar je een beetje bang was? Leek het toen hoger of lager dan het echt was?",
+            nogSimpeler: "Is de plank echt dertig meter, of voelt Noa dat alleen zo?",
+          },
+        },
+      },
+      {
+        q: "Welke zin uit het verhaal vertelt wat Noa dénkt, en niet wat ze doet?",
+        options: [
+          "\"Ik moet wél.\"",
+          "\"Ik doe een stapje naar voren.\"",
+          "\"Ik haal diep adem.\"",
+          "\"Mijn tenen krullen om de rand.\"",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een stapje zetten kun je zien. Zoek een zin die je alleen kunt weten als je in Noa's hoofd zit.",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Doen of denken?",
+              tekst: "Bij elke zin kun je je afvragen: zou iemand aan de kant dit kunnen zien? Dan is het iets wat Noa doet.",
+            },
+            {
+              titel: "Probeer het",
+              tekst: "Een stapje naar voren, diep ademhalen, krullende tenen: dat kun je allemaal van buitenaf zien.",
+            },
+            {
+              titel: "Wat blijft over?",
+              tekst: "Eén zin kun je niet zien. Die speelt zich af in Noa's hoofd. Dat is een gedachte.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "gedachte",
+              uitleg: "Iets wat je denkt of tegen jezelf zegt. Een ander kan het niet zien.",
+            },
+            {
+              woord: "ik-verhaal",
+              uitleg: "Een verhaal waarin één personage zelf vertelt, met 'ik' en 'mijn'.",
+            },
+          ],
+          theorie: "**Wat alleen een ik-verhaal je geeft**\n\nIn een ik-verhaal vertelt de 'ik' twee soorten dingen:\n\n- wat hij of zij **doet** (dat zou een ander ook kunnen zien)\n- wat hij of zij **denkt en voelt** (dat weet alleen de 'ik' zelf)\n\nDie tweede soort is het bewijs dat je in iemands hoofd zit.\n\nHandige test: zou een camera het kunnen filmen? Ja → doen. Nee → denken of voelen.",
+          voorbeelden: [
+            {
+              type: "camera-test",
+              tekst: "'Ik pakte mijn fiets.' → een camera ziet het: doen. 'Ik hoopte dat het niet ging regenen.' → een camera ziet het niet: denken.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "De camera-test",
+              uitleg: "Kan een camera het filmen? Dan is het gedrag. Kan dat niet? Dan is het een gedachte of gevoel.",
+            },
+          ],
+          niveaus: {
+            basis: "Doe de camera-test: welke zin kan een camera aan de kant van het bad niet filmen?",
+            simpeler: "Een stapje zetten of diep ademhalen kun je zien. Welke zin gebeurt alleen in Noa's hoofd?",
+            nogSimpeler: "Welke zin zegt Noa tegen zichzelf?",
           },
         },
       },
@@ -782,6 +954,178 @@ Beantwoord daarna de vragen. Denk steeds: wat betekent het écht, en wat voel ik
             basis: "Vraag je bij beeldspraak af: wat hebben de twee dingen gemeen? Wat is er fijn aan honing — en wat kan er net zo fijn zijn aan een stem?",
             simpeler: "Honing is zoet en warm en vloeit langzaam. Welke manier van praten past daarbij? De rest van de zin helpt: iedereen werd er rustig van.",
             nogSimpeler: "Denk aan iemand die zó fijn voorleest dat de hele klas stil wordt — zo'n stem bedoelt de schrijver.",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*\"De tuin trekt een deken van schaduw over zich heen.\"* — Wat betekent deze laatste regel van het gedicht écht?",
+        options: [
+          "Het wordt langzaam donker in de tuin",
+          "Iemand legt een deken in het gras",
+          "De tuin wordt koud en nat",
+          "Er worden hoge bomen in de tuin geplant",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Staat er in het gedicht een persoon met een deken? Neem je de regel niet te letterlijk?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Herken het beeld",
+              tekst: "Een tuin kan niet zelf een deken pakken. Dit kan letterlijk niet, dus het is beeldspraak.",
+            },
+            {
+              titel: "Wat hebben ze gemeen?",
+              tekst: "Een deken trek je over je heen als je gaat slapen. Hij bedekt alles. Schaduw doet 's avonds hetzelfde met de tuin: die bedekt alles.",
+            },
+            {
+              titel: "Past het in het gedicht?",
+              tekst: "Het gedicht begint met de zon die zakt. Aan het eind is de tuin helemaal bedekt met schaduw: de avond is gevallen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "beeldspraak",
+              uitleg: "Iets zeggen met een beeld dat letterlijk niet kan, omdat het ergens op lijkt.",
+            },
+            {
+              woord: "schaduw",
+              uitleg: "Een donkere plek waar geen licht komt.",
+            },
+          ],
+          theorie: "**Een ding dat doet alsof het leeft**\n\nIn dit gedicht doen dingen alsof het mensen zijn: de schommel slaapt, het gras houdt zijn adem in, een deur gaapt en de tuin trekt een deken over zich heen.\n\nZo maakt de dichter de avond levendig. Vraag je bij elk beeld af: wat zou dat in het echt betekenen?",
+          voorbeelden: [
+            {
+              type: "deken",
+              tekst: "'De sneeuw lag als een witte deken over het dorp.' → de sneeuw bedekt alles, net als een deken.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Nooit letterlijk",
+              uitleg: "Kan het letterlijk niet? Zoek dan wat de twee dingen gemeen hebben. Dat is de echte betekenis.",
+            },
+          ],
+          niveaus: {
+            basis: "Een tuin kan geen deken pakken. Wat doet een deken, en wat doet de schaduw 's avonds met de tuin?",
+            simpeler: "Het gedicht heet 'Avond in de tuin' en begint met een zon die zakt. Wat gebeurt er dan met het licht in de tuin?",
+            nogSimpeler: "Wordt het in de tuin lichter of donkerder als de zon weg is?",
+          },
+        },
+      },
+      {
+        q: "*\"Na de lange training waren mijn benen van lood.\"* — Wat bedoelt de schrijver?",
+        options: [
+          "Mijn benen voelden zwaar en moe",
+          "Mijn benen waren grijs geworden",
+          "Ik droeg metalen beschermers om mijn benen",
+          "Ik kon nog heel hard rennen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Neem je 'van lood' niet te letterlijk? Wat heeft lood dat bij moeë benen past?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Herken het beeld",
+              tekst: "Benen kunnen niet echt van lood zijn. Dit is beeldspraak.",
+            },
+            {
+              titel: "Wat is lood?",
+              tekst: "Lood is een metaal dat heel zwaar is. Het is lastig op te tillen.",
+            },
+            {
+              titel: "Wat hebben ze gemeen?",
+              tekst: "Na een lange training voelen je benen alsof je ze haast niet meer kunt optillen. Zwaar, net als lood.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "lood",
+              uitleg: "Een heel zwaar, grijs metaal.",
+            },
+            {
+              woord: "beeldspraak",
+              uitleg: "Iets zeggen met een beeld dat letterlijk niet kan, omdat het ergens op lijkt.",
+            },
+          ],
+          theorie: "**Beeldspraak zonder 'als'**\n\nSoms staat er geen 'als' bij: 'mijn benen waren van lood'. Je herkent de beeldspraak dan doordat het letterlijk onmogelijk is.\n\nZoek wat het beeld en het echte ding gemeen hebben. Hier is dat: **zwaar**.",
+          voorbeelden: [
+            {
+              type: "zonder-als",
+              tekst: "'Zijn hart was van steen.' → hij voelde geen medelijden; hij was hard, net als steen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Onmogelijk = beeld",
+              uitleg: "Staat er iets dat in het echt niet kan? Dan is het waarschijnlijk beeldspraak.",
+            },
+          ],
+          niveaus: {
+            basis: "Benen kunnen niet echt van lood zijn. Wat weet je van lood, en hoe voelen benen na een lange training?",
+            simpeler: "Lood is heel zwaar. Hoe voelen jouw benen als je heel lang hebt gerend?",
+            nogSimpeler: "Voelen je benen na een lange training licht of zwaar?",
+          },
+        },
+      },
+      {
+        q: "*\"Het meisje zat zo stil als een muis.\"* — Wat hebben het meisje en de muis hier met elkaar gemeen?",
+        options: [
+          "Ze maken allebei bijna geen geluid",
+          "Ze zijn allebei klein en grijs",
+          "Ze eten allebei graag kaas",
+          "Ze zijn allebei bang voor katten",
+        ],
+        answer: 0,
+        wrongHints: [null, "Gaat de zin over hoe ze eruitzien, of over wat ze doen?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek het als-woordje",
+              tekst: "'Zo stil als een muis': links van 'als' staat het echte ding (het meisje), rechts het beeld (de muis).",
+            },
+            {
+              titel: "Welk woord staat ervoor?",
+              tekst: "Vóór 'als' staat 'stil'. Dat woord vertelt waarin ze op elkaar lijken.",
+            },
+            {
+              titel: "Controleer",
+              tekst: "Een muis scharrelt rond zonder geluid te maken. Het meisje zit net zo stil. Daarin lijken ze op elkaar.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vergelijking",
+              uitleg: "Beeldspraak waarbij twee dingen naast elkaar worden gezet, vaak met 'als': zo sterk als een beer.",
+            },
+          ],
+          theorie: "**Het woord vóór 'als' geeft het antwoord**\n\nBij een vergelijking als 'zo ... als ...' staat het gemeenschappelijke er vaak gewoon bij:\n\n- zo **stil** als een muis\n- zo **sterk** als een beer\n- zo **snel** als de wind\n\nAndere dingen die je van een muis weet (klein, grijs, kaas) doen hier niet mee. Alleen het woord dat erbij staat telt.",
+          voorbeelden: [
+            {
+              type: "zo-als",
+              tekst: "'Hij was zo trots als een pauw.' → hij en de pauw lijken op elkaar in trots zijn, niet in veren of kleuren.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lees het woord ervoor",
+              uitleg: "Bij 'zo ... als ...' staat het gemeenschappelijke vóór 'als'.",
+            },
+          ],
+          niveaus: {
+            basis: "Kijk naar het woord vóór 'als'. Daarin lijken het meisje en de muis op elkaar.",
+            simpeler: "'Zo stil als een muis.' Welk woord staat er vóór 'als'?",
+            nogSimpeler: "Hoeveel geluid maakt een muis?",
           },
         },
       },
@@ -1028,6 +1372,127 @@ Pak bij elke vraag de vaste aanpak: lees de vraag goed, zoek de juiste zin op in
             basis: "Vergelijk het moment vóór het optillen van het deksel (iedereen buigt nieuwsgierig naar voren) met het moment erná. Wat verandert er?",
             simpeler: "Eerst is iedereen reuze benieuwd naar het cadeau. Dan zien ze wat er onder in de doos ligt. Wat doet dat met de stemming in de klas?",
             nogSimpeler: "Waarom wordt een hele klas opeens muisstil, denk je?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*\"'Voorzichtig!' riep ze, terwijl ze op en neer sprong.\"* — Hoe voelt Fleur zich bij het hek?",
+        options: [
+          "Opgewonden over het cadeau",
+          "Boos op Ties",
+          "Verdrietig om de kapotte vaas",
+          "Verveeld van het wachten",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Weet Fleur bij het hek al dat de vaas kapot is? Lees terug wanneer de scherven gevonden worden.",
+          "Wie zich verveelt, staat stil of hangt rond. Wat doet Fleur?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek de zin op",
+              tekst: "Fleur staat bij het hek te zwaaien. Ze roept 'Voorzichtig!' en springt op en neer.",
+            },
+            {
+              titel: "Kijk naar het gedrag",
+              tekst: "Zwaaien en op en neer springen doe je als je ergens heel blij en ongeduldig op wacht. Ze roept 'Voorzichtig!' omdat het cadeau zo belangrijk is.",
+            },
+            {
+              titel: "Let op het moment",
+              tekst: "De scherven worden pas later, in de klas, gevonden. Bij het hek weet nog niemand dat de vaas kapot is.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "opgewonden",
+              uitleg: "Heel blij en vol spanning omdat er iets leuks gaat gebeuren.",
+            },
+            {
+              woord: "scherven",
+              uitleg: "De stukken van iets dat gebroken is, zoals een vaas of een glas.",
+            },
+          ],
+          theorie: "**Volgorde in het verhaal**\n\nBij een gevoels-vraag moet je altijd kijken **op welk moment** in het verhaal je bent. Een personage weet nog niet wat er later gebeurt.\n\n- Bij het hek: het cadeau is er, iedereen verheugt zich.\n- In de klas: de doos gaat open, en dan pas wordt het doodstil.\n\nKies dus het gevoel dat past bij wat het personage op dát moment weet.",
+          voorbeelden: [
+            {
+              type: "moment",
+              tekst: "'Lina pakte haar cadeau uit en sprong een gat in de lucht. Later bleek de batterij leeg.' → bij het uitpakken is Lina blij, ook al gaat het later mis.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Eerst de plek, dan het gevoel",
+              uitleg: "Zoek de zin op in het verhaal en vraag je af: wat weet het personage op dit moment?",
+            },
+          ],
+          niveaus: {
+            basis: "Zoek de zin bij het hek op. Fleur springt op en neer en roept 'Voorzichtig!'. Wat weet ze op dat moment, en hoe voelt ze zich?",
+            simpeler: "Wanneer spring jij op en neer? Als je je ergens heel erg op verheugt, of als je je verveelt?",
+            nogSimpeler: "Weet Fleur bij het hek al dat er iets mis is met de vaas?",
+          },
+        },
+      },
+      {
+        q: "*\"Toen Ties opkeek, lachte de juf naar hem.\"* — Hoe is de stemming aan het einde van het verhaal?",
+        options: [
+          "Opgelucht en warm",
+          "Nog steeds geschrokken en stil",
+          "Boos en gespannen",
+          "Spannend, want er gaat nog iets mis",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is het aan het einde nog doodstil, of is er iets veranderd? Kijk wat de juf doet.",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek de omslag",
+              tekst: "Eerst werd het doodstil en schaamde Ties zich. Dan komt de juf erbij en zegt iets liefs over de scherven.",
+            },
+            {
+              titel: "Kijk naar de laatste zin",
+              tekst: "Ties kijkt op, en de juf lacht naar hem. Wie lacht naar iemand die zich schaamt, laat merken: het is goed.",
+            },
+            {
+              titel: "Benoem de sfeer",
+              tekst: "Van geschrokken naar opgelucht: het nare moment is voorbij en het voelt weer fijn in de klas.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "sfeer",
+              uitleg: "Het gevoel dat een stuk tekst je geeft: rustig, spannend, vrolijk of treurig.",
+            },
+            {
+              woord: "opgelucht",
+              uitleg: "Je voelt je weer rustig omdat iets naars voorbij is of toch goed afloopt.",
+            },
+          ],
+          theorie: "**Sfeer kan omslaan**\n\nIn dit verhaal verandert de sfeer een paar keer:\n\n1. Bij het hek: vrolijk en vol spanning.\n2. Als de doos opengaat: doodstil en geschrokken.\n3. Aan het einde: warm en opgelucht.\n\nOp de toets vragen ze vaak naar zo'n omslag. Kijk dan naar wat personages doen en zeggen op dát moment.",
+          voorbeelden: [
+            {
+              type: "omslag",
+              tekst: "'Het hele huis was donker en stil. Toen ging het licht aan en riep iedereen: Verrassing!' → de sfeer slaat om van spannend naar vrolijk.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Laatste zinnen",
+              uitleg: "Wil je de sfeer aan het einde weten? Lees de laatste zinnen nog eens goed.",
+            },
+          ],
+          niveaus: {
+            basis: "Lees de laatste zin. De juf lacht naar Ties. Wat zegt dat over hoe het nu voelt in de klas?",
+            simpeler: "Eerst schaamde Ties zich heel erg. Wat verandert er als de juf iets liefs zegt en naar hem lacht?",
+            nogSimpeler: "Lacht de juf aan het einde, of is ze boos?",
           },
         },
       },

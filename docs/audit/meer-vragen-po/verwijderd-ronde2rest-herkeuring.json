@@ -1,0 +1,182 @@
+[
+ {
+  "pathId": "rekenen-tot-100-nieuwkomers",
+  "stap": 3,
+  "q": "**27 + 5 =** ?",
+  "reden": "nieuwkomers: eigen hint + automatische Nee-uitleg dubbelen/verklappen; alle nieuwe nieuwkomersvragen eruit | De hints verklappen precies hoeveel je ernaast zit: bij 31 staat 'één te weinig', bij 42 staat 'tien te veel'. [Let op: deze tekst wordt automatisch toegevoegd door rekenReden() in src/learnPaths/nieuwkomersFoutUitleg.js, voor álle nieuwkomers-rekenvragen, dus ook voor de bestaande. Het is geen fout van alleen deze vraag.]"
+ },
+ {
+  "pathId": "tijdsduur-rekenen-po",
+  "stap": 3,
+  "q": "De laatste bus vertrekt om **21:15**. Hoe zeg je die tijd in gewone woorden?",
+  "reden": "In niveaus.nogSimpeler staat 'kwart over 9' zonder 's avonds'. Juist het verschil tussen 's ochtends en 's avonds is waar de afleiders op toetsen. Maak er 'kwart over negen 's avonds' van."
+ },
+ {
+  "pathId": "rekenen-tot-20-nieuwkomers",
+  "stap": 3,
+  "q": "**7 + 5 =** ?",
+  "reden": "nieuwkomers: eigen hint + automatische Nee-uitleg dubbelen/verklappen; alle nieuwe nieuwkomersvragen eruit | De hints bij 11 ('één te weinig') en 13 ('één te veel') zeggen precies hoeveel je ernaast zit. [Let op: deze tekst wordt automatisch toegevoegd door rekenReden() in src/learnPaths/nieuwkomersFoutUitleg.js, voor álle nieuwkomers-rekenvragen, dus ook voor de bestaande. Het is geen fout van alleen deze vraag.]"
+ },
+ {
+  "pathId": "volgorde-bewerkingen",
+  "stap": 0,
+  "q": "Tim zegt: 'Ik reken altijd van links naar rechts, net als bij lezen.' Klopt dat bij **3 + 5 × 2**?",
+  "reden": "Twee afleiders komen op hetzelfde neer: 'Ja, je doet eerst 3 + 5' en 'Ja, links staat altijd eerst' zeggen allebei 'ja, van links naar rechts'. Wie weet dat het antwoord 'nee' is, houdt maar twee opties over. | Uit fase 1: de twee 'Ja'-afleiders komen op hetzelfde neer. Ze krijgen ook precies dezelfde hint ('Welke bewerking is sterker: + of ×?'), wat laat zien dat ze niet verschillen."
+ },
+ {
+  "pathId": "rekenen-tot-100-nieuwkomers",
+  "stap": 3,
+  "q": "**72 − 6 =** ?",
+  "reden": "nieuwkomers: eigen hint + automatische Nee-uitleg dubbelen/verklappen; alle nieuwe nieuwkomersvragen eruit | De hints verklappen precies hoeveel je ernaast zit: bij 56 staat 'tien te weinig', bij 67 'één te veel' en bij 76 'tien te veel'. [Let op: deze tekst wordt automatisch toegevoegd door rekenReden() in src/learnPaths/nieuwkomersFoutUitleg.js, voor álle nieuwkomers-rekenvragen, dus ook voor de bestaande. Het is geen fout van alleen deze vraag.]"
+ },
+ {
+  "pathId": "rekenen-tot-100-nieuwkomers",
+  "stap": 1,
+  "q": "Spring met **10**: 23, 33, 43, … Wat komt erna?",
+  "reden": "nieuwkomers: eigen hint + automatische Nee-uitleg dubbelen/verklappen; alle nieuwe nieuwkomersvragen eruit | De hint bij 63 zegt 'tien te veel', dus precies hoeveel je ernaast zit. [Let op: deze tekst wordt automatisch toegevoegd door rekenReden() in src/learnPaths/nieuwkomersFoutUitleg.js, voor álle nieuwkomers-rekenvragen, dus ook voor de bestaande. Het is geen fout van alleen deze vraag.]"
+ },
+ {
+  "pathId": "rekenen-tot-100-nieuwkomers",
+  "stap": 2,
+  "q": "**87 − 30 =** ?",
+  "reden": "nieuwkomers: eigen hint + automatische Nee-uitleg dubbelen/verklappen; alle nieuwe nieuwkomersvragen eruit | De hints bij 47 ('tien te weinig') en 67 ('tien te veel') zeggen precies hoeveel je ernaast zit. [Let op: deze tekst wordt automatisch toegevoegd door rekenReden() in src/learnPaths/nieuwkomersFoutUitleg.js, voor álle nieuwkomers-rekenvragen, dus ook voor de bestaande. Het is geen fout van alleen deze vraag.]"
+ },
+ {
+  "pathId": "rekenen-tot-100-nieuwkomers",
+  "stap": 2,
+  "q": "**65 − 23 =** ?",
+  "reden": "nieuwkomers: eigen hint + automatische Nee-uitleg dubbelen/verklappen; alle nieuwe nieuwkomersvragen eruit | De hints bij 32 ('tien te weinig') en 52 ('tien te veel') zeggen precies hoeveel je ernaast zit. [Let op: deze tekst wordt automatisch toegevoegd door rekenReden() in src/learnPaths/nieuwkomersFoutUitleg.js, voor álle nieuwkomers-rekenvragen, dus ook voor de bestaande. Het is geen fout van alleen deze vraag.]"
+ },
+ {
+  "pathId": "volgorde-bewerkingen",
+  "stap": 5,
+  "q": "**60 − 4 × (2 + 3²)** = ?",
+  "reden": "Het blok basiskennis zegt: 'Controle: 44 is minder dan 60, dus het antwoord is klein. 16 kan kloppen.' Die redenering klopt niet: dat 44 kleiner is dan 60 zegt niet dat het antwoord klein is. Het is geen echte controle."
+ },
+ {
+  "pathId": "rekenen-tot-100-nieuwkomers",
+  "stap": 2,
+  "q": "Welke som is **41**?",
+  "reden": "nieuwkomers: eigen hint + automatische Nee-uitleg dubbelen/verklappen; alle nieuwe nieuwkomersvragen eruit | Formulering 'Welke som is 41?' is wat krom; duidelijker voor nieuwkomers: 'Bij welke som komt 41 uit?' (inhoud klopt). | Er is geen uitlegPad. Alleen de afleider 76 − 25 heeft een hint; 76 − 34 (één naast 41, de meest waarschijnlijke fout) heeft er geen."
+ },
+ {
+  "pathId": "rekenen-tot-100-nieuwkomers",
+  "stap": 3,
+  "q": "Hoeveel moet er bij **36** om **40** te maken?",
+  "reden": "nieuwkomers: eigen hint + automatische Nee-uitleg dubbelen/verklappen; alle nieuwe nieuwkomersvragen eruit | De hints bij 3 ('één te weinig') en 14 ('tien te veel') zeggen precies hoeveel je ernaast zit. [Let op: deze tekst wordt automatisch toegevoegd door rekenReden() in src/learnPaths/nieuwkomersFoutUitleg.js, voor álle nieuwkomers-rekenvragen, dus ook voor de bestaande. Het is geen fout van alleen deze vraag.]"
+ },
+ {
+  "pathId": "rekenen-tot-20-nieuwkomers",
+  "stap": 1,
+  "q": "Welke som is **10**?",
+  "reden": "nieuwkomers: eigen hint + automatische Nee-uitleg dubbelen/verklappen; alle nieuwe nieuwkomersvragen eruit"
+ },
+ {
+  "pathId": "rekenen-tot-20-nieuwkomers",
+  "stap": 2,
+  "q": "**10 − 4 =** ?",
+  "reden": "nieuwkomers: eigen hint + automatische Nee-uitleg dubbelen/verklappen; alle nieuwe nieuwkomersvragen eruit | In de hint bij 4 staat dezelfde zin twee keer: 'Nee, 4 staat al in de vraag. Je moet nog rekenen. 4 staat al in de som. Je moet nog rekenen.' De automatische 'Nee, …'-tekst en de opgeslagen hint zeggen hetzelfde. Dit is een echte fout van deze vraag: haal de opgeslagen hint weg of herschrijf hem. Daarnaast zegt de hint bij 7 'één te veel', dus precies hoeveel je ernaast zit. [Let op: deze tekst wordt automatisch toegevoegd door rekenReden() in src/learnPaths/nieuwkomersFoutUitleg.js, voor álle nieuwkomers-rekenvragen, dus ook voor de bestaande. Het is geen fout van alleen deze vraag.]"
+ },
+ {
+  "pathId": "rekenen-tot-100-nieuwkomers",
+  "stap": 1,
+  "q": "Welke som is **57**?",
+  "reden": "nieuwkomers: eigen hint + automatische Nee-uitleg dubbelen/verklappen; alle nieuwe nieuwkomersvragen eruit"
+ },
+ {
+  "pathId": "verhoudingen-po",
+  "stap": 3,
+  "q": "Een cake voor **6 personen** gebruikt **3 eieren**. Hoeveel eieren voor **12 personen**?",
+  "reden": "Grammatica in de hints bij 4 en 9: 'Hoe vaak past 6 personen in 12 personen?' Dat moet 'Hoe vaak passen 6 personen in 12 personen?' zijn, of 'Hoe vaak past 6 in 12?'."
+ },
+ {
+  "pathId": "rekenen-tot-100-nieuwkomers",
+  "stap": 3,
+  "q": "Hoe reken je **45 + 8** in twee stapjes?",
+  "reden": "nieuwkomers: eigen hint + automatische Nee-uitleg dubbelen/verklappen; alle nieuwe nieuwkomersvragen eruit"
+ },
+ {
+  "pathId": "rekenen-tot-100-nieuwkomers",
+  "stap": 1,
+  "q": "**32 + 40 =** ?",
+  "reden": "nieuwkomers: eigen hint + automatische Nee-uitleg dubbelen/verklappen; alle nieuwe nieuwkomersvragen eruit | De hints bij 62 ('tien te weinig') en 82 ('tien te veel') zeggen precies hoeveel je ernaast zit. [Let op: deze tekst wordt automatisch toegevoegd door rekenReden() in src/learnPaths/nieuwkomersFoutUitleg.js, voor álle nieuwkomers-rekenvragen, dus ook voor de bestaande. Het is geen fout van alleen deze vraag.]"
+ },
+ {
+  "pathId": "rekenen-tot-100-nieuwkomers",
+  "stap": 1,
+  "q": "**61 + 7 =** ?",
+  "reden": "nieuwkomers: eigen hint + automatische Nee-uitleg dubbelen/verklappen; alle nieuwe nieuwkomersvragen eruit | Hints zeggen precies hoeveel je ernaast zit ('58 is tien te weinig', '69 is één te veel', '78 is tien te veel'); hint bij 78 bevat bovendien een dubbele zin: 'Kijk goed naar de tientallen. Kijk naar de tientallen.' | De hints zeggen precies hoeveel je ernaast zit ('58 is tien te weinig', '69 is één te veel', '78 is tien te veel'). Daarmee geef je het antwoord weg: 58+10 of 69−1 = 68. De hint bij 78 herhaalt zichzelf ('Kijk goed naar de tientallen. Kijk naar de tientallen.') en is drie hints aan elkaar geplakt. Er is geen uitlegPad."
+ },
+ {
+  "pathId": "volgorde-bewerkingen",
+  "stap": 5,
+  "q": "**(4 + 2)² ÷ (5 − 2)** = ?",
+  "reden": "Hint bij 3 is grammaticaal onjuist/onduidelijk: 'Dat is alleen de tweede haakjes.' (bedoeld: 'Dat is alleen de uitkomst van het tweede paar haakjes')."
+ },
+ {
+  "pathId": "rekenen-tot-20-nieuwkomers",
+  "stap": 1,
+  "q": "Je steekt **5 vingers** op. Dan steek je er nog **2** op. Hoeveel vingers steek je nu op?",
+  "reden": "nieuwkomers: eigen hint + automatische Nee-uitleg dubbelen/verklappen; alle nieuwe nieuwkomersvragen eruit | Hints zeggen precies hoeveel je ernaast zit ('6 is één te weinig', '8 is één te veel'); hint bij 6 herhaalt zichzelf: 'Tel nog eens precies. Tel al je vingers nog eens.'"
+ },
+ {
+  "pathId": "gemiddelden-statistiek-po",
+  "stap": 4,
+  "q": "Wat is een **voordeel** van het **gemiddelde**?",
+  "reden": "Er is geen uitlegPad. Bij de afleider 'Je hoeft er niet voor te rekenen' staat geen hint."
+ },
+ {
+  "pathId": "rekenen-tot-20-nieuwkomers",
+  "stap": 2,
+  "q": "Welke som is **3**?",
+  "reden": "nieuwkomers: eigen hint + automatische Nee-uitleg dubbelen/verklappen; alle nieuwe nieuwkomersvragen eruit"
+ },
+ {
+  "pathId": "rekenen-tot-100-nieuwkomers",
+  "stap": 2,
+  "q": "**39 − 5 =** ?",
+  "reden": "nieuwkomers: eigen hint + automatische Nee-uitleg dubbelen/verklappen; alle nieuwe nieuwkomersvragen eruit | Hints zeggen precies hoeveel je ernaast zit ('24 is tien te weinig', '33 is één te weinig') — dan is het goede antwoord direct af te leiden."
+ },
+ {
+  "pathId": "rekenen-tot-100-nieuwkomers",
+  "stap": 2,
+  "q": "Spring terug met **10**: 82, 72, 62, … Wat komt erna?",
+  "reden": "nieuwkomers: eigen hint + automatische Nee-uitleg dubbelen/verklappen; alle nieuwe nieuwkomersvragen eruit | Hint bij 42 zegt precies 'tien te weinig' (verklapt 52); hint bij 63 ('Nee, 63 is te veel.') geeft geen bruikbare denkrichting."
+ },
+ {
+  "pathId": "volgorde-bewerkingen",
+  "stap": 1,
+  "q": "Lisa koopt **3 schriften van 2 euro** en **één pen van 4 euro**. Welke som past hierbij?",
+  "reden": "Grammaticafout in hint bij '3 + 2 × 4': 'Hoeveel schriften kost ze' moet 'Hoeveel schriften koopt ze'."
+ },
+ {
+  "pathId": "rekenen-tot-100-nieuwkomers",
+  "stap": 1,
+  "q": "**15 + 24 =** ?",
+  "reden": "nieuwkomers: eigen hint + automatische Nee-uitleg dubbelen/verklappen; alle nieuwe nieuwkomersvragen eruit | Hints zeggen precies hoeveel je ernaast zit ('29 is tien te weinig', '38 is één te weinig', '49 is tien te veel'); hint bij 29 is een opgestapelde reeks van drie losse aanwijzingen."
+ },
+ {
+  "pathId": "volgorde-bewerkingen",
+  "stap": 2,
+  "q": "Welke som past bij: **'tel eerst 5 en 3 op, en doe dat dan keer 4'**?",
+  "reden": "Twee afleiders zijn inhoudelijk dezelfde som ('5 + 3 × 4' en '5 + (3 × 4)' geven allebei 17 en betekenen hetzelfde). Niet fout, maar zwak: in feite maar twee echt verschillende afleiders. Vervang er een, bv. door '5 × (3 + 4)'."
+ },
+ {
+  "pathId": "rekenen-tot-100-nieuwkomers",
+  "stap": 3,
+  "q": "**53 − 7 =** ?",
+  "reden": "nieuwkomers: eigen hint + automatische Nee-uitleg dubbelen/verklappen; alle nieuwe nieuwkomersvragen eruit | Hints zeggen precies hoeveel je ernaast zit ('36 is tien te weinig', '47 is één te veel', '56 is tien te veel'); hint bij 56 is een opgestapelde dubbele aanwijzing."
+ },
+ {
+  "pathId": "rekenen-tot-20-nieuwkomers",
+  "stap": 2,
+  "q": "**9 − 1 =** ?",
+  "reden": "nieuwkomers: eigen hint + automatische Nee-uitleg dubbelen/verklappen; alle nieuwe nieuwkomersvragen eruit | Hint bij 7 zegt precies 'één te weinig' (verklapt 8) en herhaalt zichzelf: 'Tel nog eens precies. Tel nog eens terug.' | De hint bij 7 zegt precies hoeveel je ernaast zit ('7 is één te weinig'), dus 7+1 = 8 verklapt het antwoord. Hij herhaalt zich ook ('Tel nog eens precies. Tel nog eens terug.'). De uitlegPad-stappen gebruiken het voorbeeld 7 − 2 en niet de vraag zelf; dat mag, maar het past minder goed."
+ },
+ {
+  "pathId": "rekenen-tot-20-nieuwkomers",
+  "stap": 3,
+  "q": "**9 + 4 =** ?",
+  "reden": "nieuwkomers: eigen hint + automatische Nee-uitleg dubbelen/verklappen; alle nieuwe nieuwkomersvragen eruit | Hints zeggen precies hoeveel je ernaast zit ('12 is één te weinig', '14 is één te veel') — samen verklappen ze 13."
+ }
+]

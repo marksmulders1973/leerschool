@@ -110,6 +110,318 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Tekst: 'Regen is belangrijk voor de natuur. Planten hebben water nodig om te groeien. Ook dieren drinken water uit plassen en sloten.'\n\nWat is het **onderwerp** van deze tekst?",
+        options: ["Regen", "Regen is belangrijk voor de natuur", "Sloten", "Planten"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dit is een hele zin die iets zégt over het onderwerp. Hoe heet dat?",
+          "Staat dit woord in één zin of in de hele tekst?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Onderwerp = waarover?",
+              tekst: "Het **onderwerp** is waar de tekst over gaat, in 1 woord of een paar woorden. Hier gaat de hele tekst over **regen**.",
+            },
+            {
+              titel: "Waarom niet de hele zin?",
+              tekst: "'Regen is belangrijk voor de natuur' zegt WAT de tekst over regen vindt. Dat is de **hoofdgedachte**, niet het onderwerp.",
+            },
+            {
+              titel: "Waarom niet sloten of planten?",
+              tekst: "**Sloten** en **planten** komen maar in één zin voor. Ze zijn een detail. De hele tekst gaat over regen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "onderwerp",
+              uitleg: "Waarover de tekst gaat (1 of een paar woorden).",
+            },
+            {
+              woord: "hoofdgedachte",
+              uitleg: "Wat de tekst over het onderwerp zegt (een hele zin).",
+            },
+          ],
+          theorie: "Onderwerp + wat erover gezegd wordt = hoofdgedachte. 'Regen' (onderwerp) + 'is belangrijk voor de natuur' = 'Regen is belangrijk voor de natuur' (hoofdgedachte).",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Tekst over katten: onderwerp = 'katten'. Hoofdgedachte = 'katten zijn slimme dieren'.",
+            },
+            {
+              type: "stap",
+              tekst: "Tekst over de zomer: onderwerp = 'de zomer'. Hoofdgedachte = 'in de zomer kun je veel buiten doen'.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Onderwerp = kort. Hoofdgedachte = hele zin.",
+            },
+          ],
+          niveaus: {
+            basis: "Onderwerp = regen.",
+            simpeler: "Waarover gaat het? Over regen. Dat is het onderwerp.",
+            nogSimpeler: "Regen",
+          },
+        },
+      },
+      {
+        q: "Tekst: 'Een konijn heeft elke dag vers hooi en water nodig. Zijn hok moet je vaak schoonmaken. En hij wil graag buiten zijn hok rondhuppelen.'\n\n**Hoofdgedachte**?",
+        options: [
+          "Een konijn heeft veel zorg nodig",
+          "Een konijn eet hooi",
+          "Konijnen zijn bang voor honden",
+          "Alle dieren zijn leuk",
+        ],
+        answer: 0,
+        wrongHints: [null, "Gaat de hele tekst over eten, of over meer?", "Staat dit ergens in de tekst?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lees alle 3 zinnen",
+              tekst: "Zin 1: hooi en water. Zin 2: hok schoonmaken. Zin 3: rondhuppelen buiten het hok. Wat hebben ze gemeen?",
+            },
+            {
+              titel: "De rode draad",
+              tekst: "Alle zinnen gaan over wat je voor een konijn moet DOEN. Samen: **een konijn heeft veel zorg nodig**.",
+            },
+            {
+              titel: "Waarom NIET de andere opties?",
+              tekst: "• **Een konijn eet hooi** — klopt, maar dat is maar één zin: een detail.\n• **Bang voor honden** — staat niet in de tekst.\n• **Alle dieren zijn leuk** — te breed, de tekst gaat alleen over konijnen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "rode draad",
+              uitleg: "Wat alle zinnen met elkaar verbindt.",
+            },
+            {
+              woord: "detail",
+              uitleg: "Klein stukje informatie uit één zin.",
+            },
+          ],
+          theorie: "Toets-truc: een hoofdgedachte past bij ALLE zinnen. Een detail past maar bij één zin. Een te brede zin gaat over veel meer dan de tekst.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'Een vis heeft schoon water nodig. Je geeft hem elke dag een beetje voer.' → hoofdgedachte = 'een vis heeft zorg nodig'.",
+            },
+            {
+              type: "stap",
+              tekst: "'Een konijn eet hooi' = detail uit zin 1.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Hoofdgedachte moet uit de tekst komen en bij alle zinnen passen.",
+            },
+          ],
+          niveaus: {
+            basis: "Een konijn heeft veel zorg nodig.",
+            simpeler: "Hooi, water, hok, rondhuppelen: allemaal zorg voor het konijn.",
+            nogSimpeler: "Veel zorg",
+          },
+        },
+      },
+      {
+        q: "Tekst: 'Bomen zijn nuttig. Ze geven schaduw als het warm is. Vogels bouwen er hun nest in. En van hout maken we tafels en stoelen.'\n\n**Hoofdgedachte**?",
+        options: [
+          "Bomen zijn op veel manieren nuttig",
+          "Vogels bouwen nesten in bomen",
+          "Hout is heel zwaar",
+          "De natuur is groot",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat klopt, maar is het één voorbeeld of de kern?",
+          null,
+          "Gaat de tekst over de hele natuur?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zin 1 geeft de kern",
+              tekst: "*'Bomen zijn nuttig.'* De andere zinnen geven voorbeelden: schaduw, nesten, hout.",
+            },
+            {
+              titel: "Samen = hoofdgedachte",
+              tekst: "Drie voorbeelden van nut → **bomen zijn op veel manieren nuttig**.",
+            },
+            {
+              titel: "Waarom NIET de andere opties?",
+              tekst: "• **Vogels bouwen nesten** — één voorbeeld, een detail.\n• **Hout is zwaar** — staat niet in de tekst.\n• **De natuur is groot** — te breed, de tekst gaat over bomen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "nuttig",
+              uitleg: "Ergens goed voor, handig.",
+            },
+            {
+              woord: "voorbeeld",
+              uitleg: "Iets wat laat zien wat de schrijver bedoelt.",
+            },
+          ],
+          theorie: "Toets-truc: tel de voorbeelden. Waar wijzen ze samen naar? Dat is de hoofdgedachte.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'Water is handig. Je drinkt het. Je wast je ermee.' → hoofdgedachte = 'water is handig'.",
+            },
+            {
+              type: "stap",
+              tekst: "'Vogels bouwen nesten' = één voorbeeld = detail.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Te breed (de natuur) en te klein (vogelnest) zijn allebei fout.",
+            },
+          ],
+          niveaus: {
+            basis: "Bomen zijn op veel manieren nuttig.",
+            simpeler: "Schaduw, nesten, hout: allemaal nut van bomen.",
+            nogSimpeler: "Bomen nuttig",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Tekst: 'Pinguïns kunnen niet vliegen. Ze zijn wel heel goede zwemmers. Onder water vangen ze vis.'\n\nWelke **titel** past het best bij deze tekst?",
+        options: [
+          "Pinguïns in het water",
+          "Vliegen met vogels",
+          "Vissen met een hengel",
+          "Een dag op het strand",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kunnen de dieren in deze tekst vliegen?",
+          "Wie vangt er vis in de tekst, en hoe?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat is het onderwerp?",
+              tekst: "Alle zinnen gaan over **pinguïns**.",
+            },
+            {
+              titel: "Wat zegt de tekst erover?",
+              tekst: "Ze vliegen niet, maar zwemmen heel goed en vangen onder water vis. Het gaat dus vooral over pinguïns in het water.",
+            },
+            {
+              titel: "Waarom NIET de andere titels?",
+              tekst: "• **Vliegen met vogels** — pinguïns vliegen juist niet.\n• **Vissen met een hengel** — in de tekst vangen pinguïns vis, niemand vist met een hengel.\n• **Een dag op het strand** — daar gaat de tekst niet over.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "titel",
+              uitleg: "De naam boven een tekst; vaak een hint voor de hoofdgedachte.",
+            },
+            {
+              woord: "onderwerp",
+              uitleg: "Waar de tekst over gaat, in een paar woorden.",
+            },
+          ],
+          theorie: "De hoofdgedachte staat vaak in de titel of kop. Een goede titel past bij álle zinnen van de tekst.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'Bijen maken honing. Ze vliegen van bloem naar bloem.' → passende titel: 'Drukke bijen'.",
+            },
+            {
+              type: "stap",
+              tekst: "Een titel over iets wat niet in de tekst staat, past niet.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Check de titel bij elke zin: past hij overal bij?",
+            },
+          ],
+          niveaus: {
+            basis: "Pinguïns in het water.",
+            simpeler: "De tekst vertelt dat pinguïns goed zwemmen en onder water vis vangen.",
+            nogSimpeler: "Pinguïns zwemmen",
+          },
+        },
+      },
+      {
+        q: "Lars zegt: 'De hoofdgedachte van de tekst over honden is: **honden**.'\n\nWat gaat er mis?",
+        options: [
+          "Hij noemt alleen het onderwerp",
+          "Hij noemt een klein detail",
+          "Hij geeft zijn eigen mening",
+          "Zijn antwoord is veel te lang",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is 'honden' een klein stukje uit de tekst, of waar de hele tekst over gaat?",
+          null,
+          "Hoeveel woorden gebruikt Lars?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat zegt Lars?",
+              tekst: "Maar één woord: *'honden'*. Dat zegt alleen waar de tekst over gaat.",
+            },
+            {
+              titel: "Onderwerp of hoofdgedachte?",
+              tekst: "**Onderwerp** = waarover (vaak 1 woord). **Hoofdgedachte** = wat de tekst over dat onderwerp zegt (een hele zin).",
+            },
+            {
+              titel: "Waarom NIET de andere antwoorden?",
+              tekst: "• **Detail** — 'honden' is juist waar de hele tekst over gaat.\n• **Mening** — Lars zegt niet wat hij ervan vindt.\n• **Te lang** — één woord is juist heel kort.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "onderwerp",
+              uitleg: "Waar de tekst over gaat, in een paar woorden.",
+            },
+            {
+              woord: "hoofdgedachte",
+              uitleg: "Wat de tekst over het onderwerp zegt, in een hele zin.",
+            },
+          ],
+          theorie: "Onderwerp = voetbal. Hoofdgedachte = 'Voetbal is een populaire sport over de hele wereld.'",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Onderwerp: 'katten'. Hoofdgedachte: 'Katten zijn handige jagers.'",
+            },
+            {
+              type: "stap",
+              tekst: "Eén woord is bijna altijd het onderwerp, nog geen hoofdgedachte.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Vraag jezelf: wat zegt de tekst OVER het onderwerp?",
+            },
+          ],
+          niveaus: {
+            basis: "Hij noemt alleen het onderwerp.",
+            simpeler: "'Honden' zegt waarover het gaat, maar niet wat de tekst over honden vertelt.",
+            nogSimpeler: "Alleen het onderwerp",
+          },
+        },
+      },
     ],
   },
 
@@ -198,6 +510,285 @@ const steps = [
             basis: "Een detail uit de tekst is GEEN hoofdgedachte.",
             simpeler: "Detail = klein stukje uit 1 zin. Hoofdgedachte = rode draad door HELE tekst.",
             nogSimpeler: "Detail = A (geen hoofdgedachte).",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "De titel van een tekst is: **'Waarom slapen zo belangrijk is'**. Wat zal de hoofdgedachte waarschijnlijk zijn?",
+        options: ["Slapen is belangrijk", "Dromen zijn spannend", "Slapen is saai", "Een bed is duur"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zegt de titel iets over dromen?",
+          null,
+          "Waar gaat de titel over: slapen of bedden?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lees de titel",
+              tekst: "De titel geeft vaak een hint. Hier: *'Waarom slapen zo belangrijk is'*.",
+            },
+            {
+              titel: "Wat zegt de titel?",
+              tekst: "De tekst gaat over **slapen** (onderwerp) en zegt dat het **belangrijk** is. Hoofdgedachte = 'slapen is belangrijk'.",
+            },
+            {
+              titel: "Waarom NIET de andere opties?",
+              tekst: "• **Dromen** — niet genoemd in de titel.\n• **Saai** — juist het tegenovergestelde van belangrijk.\n• **Bed is duur** — gaat over iets anders.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "titel",
+              uitleg: "De naam boven de tekst — vaak een hint.",
+            },
+            {
+              woord: "hint",
+              uitleg: "Een tip die je op weg helpt.",
+            },
+          ],
+          theorie: "Strategie 1: lees eerst de titel. Titel 'Voordelen van fietsen' → hoofdgedachte 'fietsen heeft voordelen'.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Titel 'Waarom we recyclen' → hoofdgedachte gaat over het nut van recyclen.",
+            },
+            {
+              type: "stap",
+              tekst: "Titel 'Gevaren van de zon' → hoofdgedachte = 'de zon kan gevaarlijk zijn'.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Titel = eerste hint. Daarna checken met de tekst.",
+            },
+          ],
+          niveaus: {
+            basis: "Slapen is belangrijk.",
+            simpeler: "De titel zegt het al: slapen is belangrijk.",
+            nogSimpeler: "Titel lezen",
+          },
+        },
+      },
+      {
+        q: "Tekst: 'Fruit is gezond. Er zitten vitamines in die je lichaam nodig heeft.'\n\nWelke hoofdgedachte is **te algemeen**?",
+        options: [
+          "Eten is belangrijk",
+          "Fruit is gezond",
+          "Fruit is goed voor je lichaam",
+          "Fruit geeft je vitamines",
+        ],
+        answer: 0,
+        wrongHints: [null, "Gaat deze zin over fruit, of over iets groters?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat is te algemeen?",
+              tekst: "Een **te algemene** zin gaat over veel meer dan de tekst. De tekst gaat over **fruit**, niet over al het eten.",
+            },
+            {
+              titel: "Check elke optie",
+              tekst: "• **Eten is belangrijk** — gaat over al het eten → te algemeen.\n• **Fruit is gezond** — precies de tekst.\n• **Goed voor je lichaam** — past bij de tekst.\n• **Geeft vitamines** — staat in de tekst.",
+            },
+            {
+              titel: "Toets-tip",
+              tekst: "Bij 'te algemeen': zoek de optie waar het onderwerp van de tekst (fruit) verdwenen is.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "te algemeen",
+              uitleg: "Te breed: gaat over veel meer dan de tekst.",
+            },
+          ],
+          theorie: "Toets-fout 2: een te algemene stelling kiezen. Te algemeen: 'sporten is leuk'. Beter: 'voetbal is wereldwijd populair'.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Tekst over honden → 'dieren zijn leuk' = te algemeen.",
+            },
+            {
+              type: "stap",
+              tekst: "Tekst over de trein → 'reizen is fijn' = te algemeen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Staat het onderwerp van de tekst nog in de zin? Nee → te algemeen.",
+            },
+          ],
+          niveaus: {
+            basis: "Eten is belangrijk = te algemeen.",
+            simpeler: "De tekst gaat over fruit. 'Eten' is veel breder.",
+            nogSimpeler: "Eten = te breed",
+          },
+        },
+      },
+      {
+        q: "Waarom lees je ook de **laatste alinea** als je de hoofdgedachte zoekt?",
+        options: [
+          "Daar staat vaak een samenvatting",
+          "Daar staan de moeilijkste woorden",
+          "Daar staat de naam van de schrijver",
+          "Daar staan de meeste plaatjes",
+        ],
+        answer: 0,
+        wrongHints: [null, "Wat doet een schrijver vaak aan het eind van een tekst?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eind = samenvatting",
+              tekst: "Veel schrijvers eindigen met een **conclusie**: ze vatten nog één keer samen wat ze willen zeggen.",
+            },
+            {
+              titel: "Dus twee goede plekken",
+              tekst: "Begin (titel + eerste zin) en eind (laatste alinea). Daar staat de hoofdgedachte vaak.",
+            },
+            {
+              titel: "Waarom NIET de andere opties?",
+              tekst: "Moeilijke woorden, de naam van de schrijver en plaatjes zeggen niets over de hoofdgedachte.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "alinea",
+              uitleg: "Een stukje tekst van een paar zinnen bij elkaar.",
+            },
+            {
+              woord: "conclusie",
+              uitleg: "Het slot: wat de schrijver samenvat.",
+            },
+          ],
+          theorie: "Strategie 3: lees de laatste alinea of conclusie. Die geeft vaak een samenvatting.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Laatste zin: 'Kortom, water drinken is gezond.' → hoofdgedachte = water drinken is gezond.",
+            },
+            {
+              type: "stap",
+              tekst: "Laatste alinea begint met 'Dus' → daar staat vaak de kern.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Begin + eind lezen = snel de hoofdgedachte vinden.",
+            },
+          ],
+          niveaus: {
+            basis: "Laatste alinea = vaak samenvatting.",
+            simpeler: "Aan het eind zegt de schrijver nog één keer wat hij bedoelt.",
+            nogSimpeler: "Eind = samenvatting",
+          },
+        },
+      },
+      {
+        q: "Tekst: 'Op het schoolplein speelt Sam met zijn vriend Ali. Vrienden helpen elkaar als het moeilijk is. Met een vriend kun je lachen en praten. Vriendschap maakt je blij.'\n\nWelk **sleutelwoord** komt steeds terug?",
+        options: ["Vriend", "Schoolplein", "Lachen", "Moeilijk"],
+        answer: 0,
+        wrongHints: [null, "Hoe vaak staat dit woord in de tekst?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel de woorden",
+              tekst: "**Vriend** (en vrienden, vriendschap) staat in ELKE zin. Schoolplein, lachen en moeilijk staan er maar één keer.",
+            },
+            {
+              titel: "Sleutelwoord = hint",
+              tekst: "Een woord dat steeds terugkomt, vertelt waar de tekst over gaat. Hier: **vriendschap**.",
+            },
+            {
+              titel: "Van sleutelwoord naar hoofdgedachte",
+              tekst: "Sleutelwoord 'vriend' + wat erover gezegd wordt → hoofdgedachte: 'vrienden zijn fijn en belangrijk'.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "sleutelwoord",
+              uitleg: "Belangrijk woord dat vaak terugkomt in de tekst.",
+            },
+          ],
+          theorie: "Strategie 5: sleutelwoorden tellen. Welke woorden komen vaak voor? Tekst over 'vrienden' → hoofdgedachte gaat over vriendschap.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Tekst met 5× 'zee' → de tekst gaat over de zee.",
+            },
+            {
+              type: "stap",
+              tekst: "Tekst met 4× 'school' → de tekst gaat over school.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Kijk welk woord in bijna elke zin staat.",
+            },
+          ],
+          niveaus: {
+            basis: "Vriend komt in elke zin terug.",
+            simpeler: "Vriend, vrienden, vriendschap: steeds hetzelfde woord.",
+            nogSimpeler: "Vriend",
+          },
+        },
+      },
+      {
+        q: "Tekst: 'Elke ochtend smeert Lisa haar boterhammen. Daarna poetst ze haar tanden. Om half acht pakt ze haar tas. Dan fietst ze naar school.'\n\n**Hoofdgedachte**?",
+        options: [
+          "Lisa maakt zich klaar voor school",
+          "Lisa poetst elke ochtend haar tanden",
+          "Lisa eet graag brood",
+          "Kinderen gaan elke dag naar school",
+        ],
+        answer: 0,
+        wrongHints: [null, "Gaat dit over de hele tekst of over één zin?", "Staat 'graag' in de tekst?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat is de rode draad?",
+              tekst: "Boterhammen, tanden poetsen, tas pakken, naar school fietsen. Wat verbindt dit? Lisa **maakt zich klaar voor school**.",
+            },
+            {
+              titel: "Check: past het bij alle zinnen?",
+              tekst: "Ja: alle vier de dingen doet ze 's ochtends voordat ze naar school gaat.",
+            },
+            {
+              titel: "Waarom NIET de andere opties?",
+              tekst: "• **Tanden poetsen** — één zin: een detail.\n• **Graag brood** — staat niet in de tekst.\n• **Kinderen gaan naar school** — te algemeen, het gaat om Lisa.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "rode draad",
+              uitleg: "Wat alle zinnen met elkaar verbindt.",
+            },
+          ],
+          theorie: "Strategie 4: vraag 'wat komt steeds terug?' Hier: dingen die Lisa 's ochtends doet voor school.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'Tim pakt zijn zwemtas. Hij doet zijn zwembroek aan. Hij springt in het water.' → hoofdgedachte = 'Tim gaat zwemmen'.",
+            },
+            {
+              type: "stap",
+              tekst: "'Lisa poetst haar tanden' = maar één stap.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Zoek het woord of idee dat alle zinnen samen maken.",
+            },
+          ],
+          niveaus: {
+            basis: "Lisa maakt zich klaar voor school.",
+            simpeler: "Alle zinnen = wat Lisa 's ochtends doet voor school.",
+            nogSimpeler: "Klaar voor school",
           },
         },
       },
@@ -293,6 +884,313 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Tekst: 'Een bij is een nuttig insect. Bijen brengen stuifmeel van bloem naar bloem. Zo kunnen er vruchten groeien. Mijn zus is een beetje bang voor bijen.'\n\nWelke zin is een **bijzaak**?",
+        options: [
+          "Mijn zus is een beetje bang voor bijen.",
+          "Een bij is een nuttig insect.",
+          "Bijen brengen stuifmeel van bloem naar bloem.",
+          "Zo kunnen er vruchten groeien.",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dit is de eerste zin. Wat zegt die over de hele tekst?",
+          null,
+          "Legt deze zin uit waarom bijen nuttig zijn?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat is de hoofdgedachte?",
+              tekst: "Zin 1: *'Een bij is een nuttig insect.'* De zinnen 2 en 3 leggen uit WAAROM: ze brengen stuifmeel rond, zo groeien er vruchten.",
+            },
+            {
+              titel: "Schrap-test",
+              tekst: "Lees de tekst zonder *'Mijn zus is een beetje bang voor bijen.'* De boodschap (bijen zijn nuttig) blijft hetzelfde → **bijzaak**.",
+            },
+            {
+              titel: "Signaal",
+              tekst: "'Mijn zus' = een persoonlijk verhaaltje (anekdote). Dat is bijna altijd een bijzaak.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "bijzaak",
+              uitleg: "Extra detail dat je kunt weglaten.",
+            },
+            {
+              woord: "stuifmeel",
+              uitleg: "Geel poeder in een bloem.",
+            },
+          ],
+          theorie: "Hoofdzaak = ondersteunt direct de hoofdgedachte. Bijzaak = leuk detail, maar niet essentieel.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'Katten zijn schoon. Ze wassen zich vaak. Onze kat heet Mimi.' → 'Mimi' = bijzaak.",
+            },
+            {
+              type: "stap",
+              tekst: "'Bijen brengen stuifmeel rond' = hoofdzaak: het legt uit waarom bijen nuttig zijn.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "'Mijn …' + iets over één persoon = meestal bijzaak.",
+            },
+          ],
+          niveaus: {
+            basis: "De zin over de zus is een bijzaak.",
+            simpeler: "Schrap die zin: bijen zijn nog steeds nuttig. Dus bijzaak.",
+            nogSimpeler: "Zus = bijzaak",
+          },
+        },
+      },
+      {
+        q: "Welke soort zin is meestal een **bijzaak**?",
+        options: [
+          "Een kort verhaaltje over iemand die je kent",
+          "De zin met de hoofdgedachte",
+          "Een zin die de hoofdgedachte uitlegt",
+          "De conclusie aan het eind van de tekst",
+        ],
+        answer: 0,
+        wrongHints: [null, "Kun je de kern van de tekst weglaten?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Soorten bijzaken",
+              tekst: "Bijzaken zijn vaak: **anekdotes** (verhaaltjes), cijfers en kleine details, en zijwegen.",
+            },
+            {
+              titel: "Anekdote = verhaaltje",
+              tekst: "'Mijn oom fietst elke dag' is een verhaaltje over één persoon. Leuk, maar je kunt het weglaten.",
+            },
+            {
+              titel: "Waarom NIET de andere opties?",
+              tekst: "De hoofdgedachte, een zin die die uitlegt, en de conclusie dragen de boodschap. Die zijn **hoofdzaak**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "anekdote",
+              uitleg: "Een kort persoonlijk verhaaltje.",
+            },
+            {
+              woord: "hoofdzaak",
+              uitleg: "Belangrijke informatie die de hoofdgedachte steunt.",
+            },
+          ],
+          theorie: "Soorten bijzaken: 1. voorbeelden (soms), 2. anekdotes, 3. cijfers en details, 4. zijwegen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'Mijn buurman heeft een bouvier' in een tekst over honden = anekdote = bijzaak.",
+            },
+            {
+              type: "stap",
+              tekst: "'Gisteren las ik een boek' in een tekst over lezen = bijzaak.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Verhaaltje over één persoon? Bijna altijd bijzaak.",
+            },
+          ],
+          niveaus: {
+            basis: "Een verhaaltje over iemand = bijzaak.",
+            simpeler: "Anekdotes kun je weglaten. De kern blijft dan hetzelfde.",
+            nogSimpeler: "Verhaaltje = bij",
+          },
+        },
+      },
+      {
+        q: "Tekst: 'Handen wassen is belangrijk. Zo spoel je vieze bacteriën weg. Daardoor word je minder snel ziek. Onze zeep thuis ruikt naar citroen.'\n\nWelke zin kun je **weglaten** zonder dat de boodschap verandert?",
+        options: [
+          "Onze zeep thuis ruikt naar citroen.",
+          "Handen wassen is belangrijk.",
+          "Zo spoel je vieze bacteriën weg.",
+          "Daardoor word je minder snel ziek.",
+        ],
+        answer: 0,
+        wrongHints: [null, null, "Vertelt deze zin waarom handen wassen belangrijk is?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat is de boodschap?",
+              tekst: "*'Handen wassen is belangrijk'* — want je spoelt bacteriën weg en wordt minder snel ziek.",
+            },
+            {
+              titel: "Schrap-test",
+              tekst: "Zonder *'Onze zeep thuis ruikt naar citroen'*: de boodschap blijft precies hetzelfde. → **bijzaak**.",
+            },
+            {
+              titel: "Waarom de rest hoofdzaak is",
+              tekst: "Zonder 'bacteriën wegspoelen' of 'minder snel ziek' weet je niet meer WAAROM handen wassen belangrijk is.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "weglaten",
+              uitleg: "Schrappen, eruit halen.",
+            },
+            {
+              woord: "bacteriën",
+              uitleg: "Heel kleine beestjes die je ziek kunnen maken.",
+            },
+          ],
+          theorie: "Truc — kun je het schrappen? Lees de tekst zonder een zin. Verandert de hoofdboodschap? Nee → bijzaak. Ja → hoofdzaak.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'Groente is gezond. Er zitten vitamines in. Ik heb een groen bord.' → groen bord = weglaten.",
+            },
+            {
+              type: "stap",
+              tekst: "'Daardoor word je minder snel ziek' = reden = hoofdzaak.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Geur van de zeep zegt niets over waarom wassen belangrijk is.",
+            },
+          ],
+          niveaus: {
+            basis: "De citroen-zin kun je weglaten.",
+            simpeler: "Zonder de citroen-zin blijft de boodschap: handen wassen is belangrijk.",
+            nogSimpeler: "Citroen weg",
+          },
+        },
+      },
+      {
+        q: "Tekst: 'Een zebra leeft in een groep. In een groep is hij veiliger voor leeuwen. Samen letten ze goed op gevaar. Elke zebra heeft een eigen strepenpatroon.'\n\nWelke informatie is **NIET essentieel**?",
+        options: [
+          "Elke zebra heeft een eigen strepenpatroon",
+          "Een zebra leeft in een groep",
+          "In een groep is hij veiliger voor leeuwen",
+          "Samen letten ze goed op gevaar",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dit is de eerste zin. Waar gaat de hele tekst over?",
+          null,
+          "Gaat deze zin over leven in een groep?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat is de hoofdgedachte?",
+              tekst: "De tekst gaat over **zebra's die in een groep leven** en waarom dat veilig is.",
+            },
+            {
+              titel: "Welke zin hoort er niet echt bij?",
+              tekst: "*'Elke zebra heeft een eigen strepenpatroon'* klopt wel, maar gaat over strepen, niet over de groep. Dat is een **zijweg** → bijzaak.",
+            },
+            {
+              titel: "Schrap-test",
+              tekst: "Zonder de strepen-zin blijft de boodschap: in een groep zijn zebra's veiliger. → niet essentieel.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "essentieel",
+              uitleg: "Echt nodig, onmisbaar.",
+            },
+            {
+              woord: "zijweg",
+              uitleg: "Info die het onderwerp maar een beetje raakt.",
+            },
+          ],
+          theorie: "Soorten bijzaken: zijwegen = info die het onderwerp ietsje raakt. Klopt wel, maar gaat naast het hoofdpunt.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Tekst over honden als huisdier: 'Honden eten brokjes' = wel waar, maar gaat naast het hoofdpunt.",
+            },
+            {
+              type: "stap",
+              tekst: "'Samen letten ze op gevaar' = hoort bij de groep = hoofdzaak.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Klopt een zin wel, maar hoort hij niet bij de hoofdgedachte? Dan is het een bijzaak.",
+            },
+          ],
+          niveaus: {
+            basis: "De strepen-zin is niet essentieel.",
+            simpeler: "De tekst gaat over de groep. Strepen = zijweg.",
+            nogSimpeler: "Strepen = bij",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "In een tekst over **waarom sporten gezond is** staat: 'De sporthal in ons dorp is 40 jaar oud.'\n\nWat is deze zin?",
+        options: ["Een bijzaak", "Een hoofdzaak", "De hoofdgedachte", "De conclusie"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Leer je van deze zin iets over waarom sporten gezond is?",
+          null,
+          "Vat deze zin de hele tekst samen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Waar gaat de tekst over?",
+              tekst: "Over **waarom sporten gezond is**.",
+            },
+            {
+              titel: "Wat zegt de zin?",
+              tekst: "*'De sporthal in ons dorp is 40 jaar oud.'* Dat is een cijfer over een gebouw. Het zegt niets over gezond zijn.",
+            },
+            {
+              titel: "Schrap-test",
+              tekst: "Zonder deze zin blijft de boodschap hetzelfde: sporten is gezond. → **bijzaak**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "bijzaak",
+              uitleg: "Extra detail dat je kunt weglaten.",
+            },
+            {
+              woord: "schrap-test",
+              uitleg: "Lees de tekst zonder een zin. Verandert de boodschap niet? Dan was het een bijzaak.",
+            },
+          ],
+          theorie: "Soorten bijzaken: voorbeelden, anekdotes, cijfers en details, zijwegen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Tekst over fietsen en gezondheid: 'Mijn fiets is blauw' = detail = bijzaak.",
+            },
+            {
+              type: "stap",
+              tekst: "'Sporten maakt je hart sterker' = hoofdzaak.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Helpt de zin om de hoofdgedachte te snappen? Nee → bijzaak.",
+            },
+          ],
+          niveaus: {
+            basis: "Een bijzaak.",
+            simpeler: "Hoe oud de sporthal is, zegt niets over waarom sporten gezond is. Je kunt het weglaten.",
+            nogSimpeler: "Sporthal = bijzaak",
+          },
+        },
+      },
     ],
   },
 
@@ -383,6 +1281,382 @@ const steps = [
             basis: "Opa-zin = anekdote = niet in samenvatting.",
             simpeler: "'Mijn opa' is een persoonlijk voorbeeld → bijzaak → niet meenemen in samenvatting.",
             nogSimpeler: "Opa-zin weg",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat doe je **als eerste** als je een tekst gaat samenvatten?",
+        options: [
+          "De hele tekst lezen",
+          "Bijzaken schrappen",
+          "Je samenvatting controleren",
+          "Je samenvatting opschrijven",
+        ],
+        answer: 0,
+        wrongHints: [null, "Kun je schrappen voordat je weet wat er staat?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "De 5 stappen",
+              tekst: "1. **Lees** de hele tekst.\n2. **Onderstreep** de hoofdpunten.\n3. **Schrap** bijzaken.\n4. **Schrijf** in 3-5 zinnen wat de tekst zegt.\n5. **Controleer** of het klopt.",
+            },
+            {
+              titel: "Waarom eerst lezen?",
+              tekst: "Je kunt pas weten wat belangrijk is als je de **hele** tekst kent.",
+            },
+            {
+              titel: "De andere opties",
+              tekst: "Schrappen, opschrijven en controleren komen pas daarna.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "onderstrepen",
+              uitleg: "Een streep onder belangrijke woorden zetten.",
+            },
+            {
+              woord: "controleren",
+              uitleg: "Nakijken of iets klopt.",
+            },
+          ],
+          theorie: "Stappen om samen te vatten: lees → onderstreep → schrap → schrijf → controleer.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Eerst de hele tekst over bijen lezen, dan pas kiezen wat belangrijk is.",
+            },
+            {
+              type: "stap",
+              tekst: "Controleren is de laatste stap.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Eerst alles lezen, dan pas kiezen.",
+            },
+          ],
+          niveaus: {
+            basis: "Eerst de hele tekst lezen.",
+            simpeler: "Zonder lezen weet je niet wat belangrijk is.",
+            nogSimpeler: "Lezen",
+          },
+        },
+      },
+      {
+        q: "Je hebt de tekst gelezen en de hoofdpunten onderstreept. Wat doe je **daarna**?",
+        options: [
+          "Bijzaken schrappen",
+          "Alle zinnen overschrijven",
+          "Je eigen mening toevoegen",
+          "Een nieuwe titel bedenken",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoort letterlijk overschrijven bij samenvatten?",
+          "Hoort jouw mening in een samenvatting?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Waar ben je?",
+              tekst: "Stap 1 (lezen) en stap 2 (onderstrepen) zijn klaar.",
+            },
+            {
+              titel: "Stap 3",
+              tekst: "Nu **schrap** je de bijzaken: verhaaltjes, kleine details en zijwegen. Dan blijft de kern over.",
+            },
+            {
+              titel: "Waarom NIET de andere opties?",
+              tekst: "• **Overschrijven** — een samenvatting is in eigen woorden.\n• **Eigen mening** — hoort er niet in.\n• **Nieuwe titel** — geen stap van samenvatten.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schrappen",
+              uitleg: "Weglaten, doorstrepen.",
+            },
+            {
+              woord: "bijzaak",
+              uitleg: "Detail dat weg kan.",
+            },
+          ],
+          theorie: "Stappen: 1 lees, 2 onderstreep, 3 schrap bijzaken, 4 schrijf in 3-5 zinnen, 5 controleer.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Tekst over fietsen: 'Mijn oom Henk fietst 20 km' schrap je.",
+            },
+            {
+              type: "stap",
+              tekst: "Daarna schrijf je de kern in eigen woorden.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Na onderstrepen: weg met de bijzaken.",
+            },
+          ],
+          niveaus: {
+            basis: "Bijzaken schrappen.",
+            simpeler: "Na lezen en onderstrepen haal je de details weg.",
+            nogSimpeler: "Schrappen",
+          },
+        },
+      },
+      {
+        q: "Tekst: 'Een museum laat oude en bijzondere dingen zien. Zo leer je veel over vroeger.'\n\nWelke zin hoort **NIET** in een samenvatting van deze tekst?",
+        options: [
+          "Ik vind musea saai.",
+          "Een museum laat bijzondere dingen zien.",
+          "In een museum leer je over vroeger.",
+          "Een museum toont oude dingen.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Zegt de tekst dit, of vindt iemand dit?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Samenvatting = wat de tekst zegt",
+              tekst: "De tekst zegt: een museum laat oude en bijzondere dingen zien, en je leert over vroeger.",
+            },
+            {
+              titel: "Spot de mening",
+              tekst: "*'Ik vind musea saai'* is een **eigen mening**. Die staat niet in de tekst → hoort niet in de samenvatting.",
+            },
+            {
+              titel: "De andere opties",
+              tekst: "Die drie zinnen zeggen in eigen woorden wat er in de tekst staat. Die mogen erin.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "mening",
+              uitleg: "Wat iemand ergens van vindt.",
+            },
+            {
+              woord: "samenvatting",
+              uitleg: "Korte versie van wat de tekst zegt.",
+            },
+          ],
+          theorie: "Goede samenvatting bevat NIET: eigen mening (alleen wat tekst zegt).",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'Ik vind dit stom' = mening = eruit.",
+            },
+            {
+              type: "stap",
+              tekst: "'Volgens de tekst leer je in een museum over vroeger' = mag erin.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "'Ik vind …' = mening = niet in de samenvatting.",
+            },
+          ],
+          niveaus: {
+            basis: "'Ik vind musea saai' hoort er niet in.",
+            simpeler: "Dat is een mening. De tekst zegt dat niet.",
+            nogSimpeler: "Mening eruit",
+          },
+        },
+      },
+      {
+        q: "Anna schrijft voor haar samenvatting alle zinnen van de tekst **precies** over. Wat gaat er mis?",
+        options: [
+          "Ze gebruikt geen eigen woorden",
+          "Ze laat de hoofdgedachte weg",
+          "Ze voegt haar eigen mening toe",
+          "Haar samenvatting is te kort",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Als ze alles overschrijft, schrijft ze haar mening dan op?",
+          "Wordt iets korter als je alles overschrijft?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat doet Anna?",
+              tekst: "Ze schrijft ALLE zinnen precies over. Dat is een **letterlijke kopie**.",
+            },
+            {
+              titel: "Wat is het probleem?",
+              tekst: "Een samenvatting is **in eigen woorden** en **korter**. Anna gebruikt geen eigen woorden, en haar tekst is net zo lang als het origineel.",
+            },
+            {
+              titel: "Waarom NIET de andere opties?",
+              tekst: "• Hoofdgedachte weg? Nee, alles staat er nog.\n• Eigen mening? Nee, ze kopieert alleen.\n• Te kort? Nee, juist te lang.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "letterlijk",
+              uitleg: "Precies hetzelfde, woord voor woord.",
+            },
+            {
+              woord: "eigen woorden",
+              uitleg: "Zelf opnieuw zeggen wat er staat.",
+            },
+          ],
+          theorie: "Goede samenvatting: in eigen woorden (niet kopiëren) en korter dan origineel (meestal ~25-30%).",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Origineel: 'Plastic is een groot probleem in de oceaan.' → eigen woorden: 'Plastic vervuilt de zee.'",
+            },
+            {
+              type: "stap",
+              tekst: "Alles overschrijven = geen samenvatting.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Overschrijven ≠ samenvatten.",
+            },
+          ],
+          niveaus: {
+            basis: "Ze gebruikt geen eigen woorden.",
+            simpeler: "Alles precies overschrijven is kopiëren, geen samenvatten.",
+            nogSimpeler: "Geen eigen woorden",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Je samenvatting is af. Wat is de **laatste stap**?",
+        options: [
+          "Controleren of hij klopt met de tekst",
+          "Er je eigen mening aan toevoegen",
+          "Er extra voorbeelden in zetten",
+          "Alle zinnen uit de tekst overschrijven",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoort jouw mening in een samenvatting?",
+          null,
+          "Is overschrijven hetzelfde als samenvatten?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "De vijf stappen",
+              tekst: "1. Lees de hele tekst. 2. Onderstreep de hoofdpunten. 3. Schrap bijzaken. 4. Schrijf in 3-5 zinnen wat de tekst zegt. 5. Controleer.",
+            },
+            {
+              titel: "De laatste stap",
+              tekst: "**Controleren**: klopt jouw samenvatting met het origineel? Staat de hoofdgedachte erin?",
+            },
+            {
+              titel: "Waarom NIET de andere antwoorden?",
+              tekst: "• **Eigen mening** — hoort niet in een samenvatting.\n• **Extra voorbeelden** — voorbeelden laat je meestal juist weg.\n• **Alles overschrijven** — dan is het geen samenvatting meer.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "controleren",
+              uitleg: "Nakijken of iets klopt.",
+            },
+            {
+              woord: "origineel",
+              uitleg: "De echte, volledige tekst.",
+            },
+          ],
+          theorie: "Stappen om samen te vatten: lezen → onderstrepen → schrappen → schrijven → controleren.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Controle: staat 'zwemles is belangrijk' in je samenvatting? Ja. Staat het broertje erin? Nee. Goed zo.",
+            },
+            {
+              type: "stap",
+              tekst: "Vergeten te controleren = kans dat je de kern mist.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Lees je samenvatting naast de tekst. Mis je iets belangrijks?",
+            },
+          ],
+          niveaus: {
+            basis: "Controleren of hij klopt.",
+            simpeler: "Na het schrijven kijk je nog één keer: klopt het met de tekst?",
+            nogSimpeler: "Controleren",
+          },
+        },
+      },
+      {
+        q: "Hoe kun je testen of je samenvatting **goed** is?",
+        options: [
+          "Snapt iemand die de tekst niet kent hem?",
+          "Is hij langer dan de tekst zelf?",
+          "Staan alle zinnen van de tekst erin?",
+          "Staat jouw eigen mening erin?",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Moet een samenvatting korter of langer zijn dan de tekst?",
+          null,
+          "Hoort wat jij vindt in een samenvatting?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "De toets-tip",
+              tekst: "Een goede samenvatting kan iemand begrijpen die de tekst zelf niet heeft gelezen.",
+            },
+            {
+              titel: "Hoe test je dat?",
+              tekst: "Leg je samenvatting voor aan iemand anders. Snapt die waar de tekst over gaat? Dan is hij goed.",
+            },
+            {
+              titel: "Waarom NIET de andere antwoorden?",
+              tekst: "• **Langer dan de tekst** — een samenvatting is juist korter.\n• **Alle zinnen erin** — dan heb je niets weggelaten.\n• **Eigen mening** — die hoort er niet in.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "samenvatting",
+              uitleg: "Een korte versie van een tekst met de hoofdzaken.",
+            },
+            {
+              woord: "testen",
+              uitleg: "Uitproberen of iets werkt.",
+            },
+          ],
+          theorie: "Goede samenvatting: hoofdgedachte + hoofdzaken, eigen woorden, korter dan het origineel. Test: snapt iemand anders het?",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Je vertelt je samenvatting aan een klasgenoot die de tekst niet las. Zij zegt: 'O, het gaat over waarom zwemles belangrijk is.' → goed.",
+            },
+            {
+              type: "stap",
+              tekst: "Snapt je klasgenoot het niet? Dan mist er waarschijnlijk een hoofdzaak.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Een samenvatting is goed als hij ook zonder de tekst te snappen is.",
+            },
+          ],
+          niveaus: {
+            basis: "Snapt iemand anders het zonder de tekst?",
+            simpeler: "Laat iemand die de tekst niet kent je samenvatting lezen. Snapt die het? Dan heb je het goed gedaan.",
+            nogSimpeler: "Snapt een ander het?",
           },
         },
       },

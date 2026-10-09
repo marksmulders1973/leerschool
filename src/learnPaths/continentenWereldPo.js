@@ -201,6 +201,36 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Geen polen — middenliggend.", "Geen polen.", "Geen polen."],
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke oceaan ligt **onder Azië**, tussen Afrika en Australië?",
+        options: ["Indische Oceaan", "Stille Oceaan", "Atlantische Oceaan", "Noordelijke IJszee"],
+        answer: 0,
+        wrongHints: [null, null, null, "Die oceaan ligt bij de Noordpool."],
+      },
+      {
+        q: "Bij welke oceaan hoort de **Noordzee**?",
+        options: ["Atlantische Oceaan", "Stille Oceaan", "Indische Oceaan", "Zuidelijke IJszee"],
+        answer: 0,
+        wrongHints: [null, "Die oceaan ligt aan de andere kant van de wereld.", null, null],
+      },
+      {
+        q: "Welk groot eiland ligt in de **Indische Oceaan**?",
+        options: ["Madagaskar", "IJsland", "Groenland", "Cuba"],
+        answer: 0,
+        wrongHints: [null, null, "Dat eiland ligt ver in het noorden, bij de Noordelijke IJszee.", null],
+      },
+      {
+        q: "Waarom heet de Stille Oceaan **'stil'**?",
+        options: [
+          "Hij leek rustig toen ontdekkers er kwamen",
+          "Er leven geen dieren in",
+          "Er varen nooit schepen",
+          "Het water is altijd bevroren",
+        ],
+        answer: 0,
+        wrongHints: [null, "In de oceaan leven juist heel veel dieren.", null, null],
+      },
     ],
   },
 
@@ -304,6 +334,47 @@ const steps = [
         options: ["Later (vooruit)", "Eerder (achteruit)", "Hetzelfde", "Onbekend"],
         answer: 0,
         wrongHints: [null, "Andersom.", "Niet hetzelfde — buurland al 1 uur anders.", "Wel bekend."],
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Het is **12:00** in Nederland (wintertijd). Hoe laat is het dan in **Londen**?",
+        options: ["11:00", "13:00", "12:00", "10:00"],
+        answer: 0,
+        wrongHints: [null, "Ligt Engeland ten oosten of ten westen van Nederland?", null, null],
+      },
+      {
+        q: "Je belt om **09:00** Nederlandse tijd met je oom in **Beijing** (7 uur later). Hoe laat is het bij hem?",
+        options: ["16:00", "02:00", "15:00", "17:00"],
+        answer: 0,
+        wrongHints: [null, "Bij je oom loopt de klok vóór, niet achter.", null, null],
+      },
+      {
+        q: "Waarom is het ergens **dag** terwijl het ergens anders **nacht** is?",
+        options: [
+          "De aarde draait om haar eigen as",
+          "De zon gaat 's nachts uit",
+          "De maan staat dan voor de zon",
+          "De aarde staat de hele tijd stil",
+        ],
+        answer: 0,
+        wrongHints: [null, "De zon blijft altijd schijnen.", null, null],
+      },
+      {
+        q: "Je oma in **New York** (6 uur eerder) belt jou om **08:00** haar tijd. Hoe laat is het dan bij jou in Nederland?",
+        options: ["14:00", "02:00", "08:00", "12:00"],
+        answer: 0,
+        wrongHints: [null, "Bij jou is het later dan bij oma, niet eerder.", null, null],
+      },
+      {
+        q: "Waarom gebruiken we **tijdzones**?",
+        options: [
+          "Zodat 12:00 overal ongeveer midden op de dag is",
+          "Zodat iedereen tegelijk naar bed gaat",
+          "Zodat de aarde sneller gaat draaien",
+          "Zodat het overal precies even laat is",
+        ],
+        answer: 0,
+        wrongHints: [null, null, null, "Dan zou het op sommige plekken om 12:00 's middags donker zijn."],
       },
     ],
   },

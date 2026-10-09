@@ -92,6 +92,93 @@ const steps = [
           niveaus: { basis: "Expert = persoonlijke uitleg.", simpeler: "Mens kan luisteren en jouw vraag aanpakken.", nogSimpeler: "Expert" },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Je wilt op een kaart zien **door welke landen de rivier de Rijn stroomt**. Welke bron pak je?",
+        options: ["Atlas", "Woordenboek", "Krant", "Wetenschappelijk artikel"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een woordenboek legt woorden uit. Staan daar kaarten in?",
+          null,
+          "Zoek je bewezen onderzoek, of wil je iets op een kaart zien?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kaart nodig = atlas",
+              tekst: "Je wilt iets **op een kaart zien**: waar een rivier loopt en door welke landen. Kaarten vind je in een **atlas**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "atlas",
+              uitleg: "Boek (of website) vol kaarten van landen, rivieren en steden.",
+            },
+          ],
+          theorie: "Toets-regel: gaat de vraag over een plek, een land, een rivier of een kaart? Dan kies je de atlas.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Welke zeeën liggen rond Italië? → atlas.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Kijk wat de vraag zoekt",
+              uitleg: "Woord-betekenis → woordenboek. Plek of kaart → atlas. Nieuws → krant.",
+            },
+          ],
+          niveaus: {
+            basis: "Kaart nodig = atlas.",
+            simpeler: "Wil je iets op een kaart zien? Pak de atlas.",
+            nogSimpeler: "Atlas",
+          },
+        },
+      },
+      {
+        q: "Je snapt de uitleg over **breuken** niet goed en wilt het nog eens **op jouw niveau** lezen. Welke bron past het best?",
+        options: ["Je rekenboek van school", "Atlas", "Krant", "Wetenschappelijk artikel"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Staat er rekenuitleg in een boek met kaarten?",
+          "Is breuken nieuws van vandaag?",
+          "Zo'n artikel is vaak moeilijk om te lezen. Is dat op jouw niveau?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Uitleg op jouw niveau = schoolboek",
+              tekst: "Een **schoolboek** legt een vak uit op het niveau van jouw groep. Voor rekenuitleg pak je dus je **rekenboek**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schoolboek",
+              uitleg: "Boek voor één vak, geschreven voor jouw groep of klas.",
+            },
+          ],
+          theorie: "Toets-regel: wil je vak-uitleg die past bij jouw groep? Dan kies je het schoolboek.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Je wilt de uitleg over de tafels nog eens lezen → je rekenboek.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Wetenschappelijk artikel",
+              uitleg: "Daarin staat bewezen onderzoek, maar het is moeilijk te lezen. Fijn voor wie heel diep wil gaan, niet voor gewone uitleg.",
+            },
+          ],
+          niveaus: {
+            basis: "Vak-uitleg op jouw niveau = schoolboek.",
+            simpeler: "Rekenen niet snappen? Kijk in je rekenboek.",
+            nogSimpeler: "Rekenboek",
+          },
+        },
+      },
     ],
   },
 
@@ -163,6 +250,212 @@ const steps = [
           niveaus: { basis: "Oliebol — zelfde start.", simpeler: "'Oli'-woorden bij elkaar.", nogSimpeler: "Oliebol" },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welk woord komt als **laatste** in het woordenboek?",
+        options: ["tas", "tak", "tafel", "taart"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Alle vier beginnen met 'ta'. Vergelijk de derde letter.",
+          null,
+          "Kijk naar de derde letter: een a komt vroeg in het alfabet.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Derde letter vergelijken",
+              tekst: "Alle vier beginnen met **ta**. Kijk dan naar de 3e letter: taart (**a**), tafel (**f**), tak (**k**), tas (**s**). A < F < K < S, dus 'tas' komt als laatste.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "alfabetisch",
+              uitleg: "Volgorde A-B-C-D...Z.",
+            },
+          ],
+          theorie: "Eerste letters gelijk? → tweede letter. Ook gelijk? → derde letter. Enzovoort.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "'pen' komt na 'pet'? Nee: n < t, dus 'pen' eerst.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Alfabet onthouden",
+              uitleg: "Bij twijfel: zeg het alfabet op tot je bij de letter bent.",
+            },
+          ],
+          niveaus: {
+            basis: "tas (taa < taf < tak < tas).",
+            simpeler: "Alle ta-, dan 3e letter: a, f, k, s. S is de laatste → tas.",
+            nogSimpeler: "Tas.",
+          },
+        },
+      },
+      {
+        q: "Je zoekt het woord **'raket'**. Op welke bladzijde staat het? Kijk naar de trefwoorden bovenaan.",
+        options: ["radio — rand", "raam — rabarber", "rang — recht", "regen — rest"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Begin met 'raa' en 'rab'. Komt 'rak' daarvóór of daarna?",
+          "Vergelijk de derde letter: k en n. Welke komt eerst?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Past het tussen de trefwoorden?",
+              tekst: "'raket' begint met **ra**. Vergelijk de 3e letter: ra**d**io (d) < ra**k**et (k) < ra**n**d (n). Dus 'raket' valt tussen 'radio' en 'rand'.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "trefwoorden",
+              uitleg: "Eerste en laatste woord van een bladzijde, bovenaan gedrukt.",
+            },
+          ],
+          theorie: "Een woord staat op de bladzijde als het ná het eerste trefwoord en vóór het laatste trefwoord komt.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "'fiets' op 'fiets — film'? Ja, het is het eerste woord zelf.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Stap voor stap",
+              uitleg: "Vergelijk letter voor letter. Zijn de eerste twee gelijk (ra), kijk dan naar de derde.",
+            },
+          ],
+          niveaus: {
+            basis: "radio — rand (d < k < n).",
+            simpeler: "Rak... zit tussen rad... en ran...",
+            nogSimpeler: "Radio — rand.",
+          },
+        },
+      },
+      {
+        q: "In een verhaal lees je het woord **'bomen'**. Welk woord zoek je op in het woordenboek?",
+        options: ["boom", "bom", "boon", "bodem"],
+        answer: 0,
+        wrongHints: [null, "Zeg het eens hardop: één ..., twee bomen. Klopt dat?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek het enkelvoud",
+              tekst: "In het woordenboek staat het **enkelvoud** (één). Eén **boom**, twee bomen. Dus je zoekt 'boom'.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "enkelvoud",
+              uitleg: "De vorm voor één: boom. Meervoud = meer dan één: bomen.",
+            },
+          ],
+          theorie: "Meervoud? Zoek het enkelvoud. Werkwoord-vorm? Zoek het hele werkwoord.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "'stoelen' → zoek 'stoel'.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Zeg 'één ...' voor het woord. Wat je dan zegt, zoek je op.",
+            },
+          ],
+          niveaus: {
+            basis: "Enkelvoud van bomen = boom.",
+            simpeler: "Eén boom, twee bomen → zoek 'boom'.",
+            nogSimpeler: "Boom.",
+          },
+        },
+      },
+      {
+        q: "Welke drie woorden staan in **alfabetische volgorde**?",
+        options: ["berg, boek, brug", "boek, berg, brug", "brug, berg, boek", "berg, brug, boek"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Alle drie beginnen met b. Vergelijk de tweede letter: o en e.",
+          null,
+          "Vergelijk de tweede letter van 'brug' en 'boek': r en o.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tweede letter beslist",
+              tekst: "Alle drie beginnen met **b**. Kijk naar de 2e letter: b**e**rg (e), b**o**ek (o), b**r**ug (r). E < O < R, dus: berg, boek, brug.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "volgorde",
+              uitleg: "Welke eerst komt, welke daarna.",
+            },
+          ],
+          theorie: "Zelfde eerste letter? Dan beslist de tweede letter.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "'dak, dier, doos' → a < i < o.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Alfabet",
+              uitleg: "... d-e-f ... n-o-p-q-r ... De e komt dus vóór de o, en de o vóór de r.",
+            },
+          ],
+          niveaus: {
+            basis: "berg, boek, brug (e < o < r).",
+            simpeler: "Kijk naar de 2e letter: e, o, r.",
+            nogSimpeler: "Berg, boek, brug.",
+          },
+        },
+      },
+      {
+        q: "Je wilt het woord **'ijsbeer'** opzoeken in het woordenboek. Bij welke letter zoek je?",
+        options: ["Bij de i", "Bij de y", "Bij de j", "Bij de e"],
+        answer: 0,
+        wrongHints: [null, "Zo deed men het soms in oude lijsten. Hoe gaat het in het woordenboek?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "IJ = i + j",
+              tekst: "In het woordenboek zoek je de **ij** bij de **i**, alsof het een i met een j erachter is. Dus 'ijsbeer' vind je bij de i.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "ij",
+              uitleg: "Klank die je schrijft met een i en een j, zoals in 'ijs'.",
+            },
+          ],
+          theorie: "IJ in het woordenboek = i + j. Zoek dus bij de i.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "'ijzer' → bij de i.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Let op",
+              uitleg: "Alleen in sommige oude lijsten, zoals telefoonboeken, stond de ij bij de y.",
+            },
+          ],
+          niveaus: {
+            basis: "IJ zoek je bij de i.",
+            simpeler: "ijsbeer = i + j + sbeer → bij de i.",
+            nogSimpeler: "Bij de i.",
+          },
+        },
+      },
     ],
   },
 
@@ -228,6 +521,182 @@ const steps = [
           woorden: [{ woord: "glossarium", uitleg: "Lijst van moeilijke woorden + uitleg in een boek (vakwoordenboek)." }],
           theorie: "toetsvraag-soms: 'Wat is het verschil tussen glossarium en index?' → glossarium geeft BETEKENIS van vakwoord, index geeft PAGINA.",
           niveaus: { basis: "Glossarium = vakwoorden + uitleg.", simpeler: "Moeilijke woorden achterin = glossarium.", nogSimpeler: "Vakwoorden" },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Je ziet in een boek de regel *'vulkaan ... 12, 34-36'*. In welk deel van het boek staat deze regel?",
+        options: ["Index", "Inhoudsopgave", "Voorwoord", "Glossarium"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Daar staan hoofdstukken. Is 'vulkaan' met een rij bladzijden een hoofdstuk?",
+          null,
+          "Staat daar een uitleg van het woord, of staan er bladzijden?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Trefwoord + bladzijden = index",
+              tekst: "Eén **trefwoord** met **meerdere bladzijden** erachter: dat is de **index** (achterin). Daar zie je op welke bladzijden 'vulkaan' voorkomt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "index",
+              uitleg: "Alfabetische lijst van trefwoorden met bladzijden, achterin het boek.",
+            },
+          ],
+          theorie: "Hoofdstuk + bladzijde = inhoudsopgave. Trefwoord + bladzijden = index.",
+          niveaus: {
+            basis: "Index.",
+            simpeler: "Woord met bladzijden erachter = index.",
+            nogSimpeler: "Index",
+          },
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "'Hoofdstuk 2 — Het weer ... blz 20' → inhoudsopgave.",
+            },
+          ],
+        },
+      },
+      {
+        q: "Je wilt snel zien of een boek over dieren een **hoofdstuk over vogels** heeft. Waar kijk je eerst?",
+        options: ["Inhoudsopgave", "Glossarium", "Voorwoord", "Achterkant van het boek"],
+        answer: 0,
+        wrongHints: [null, "Daar staan moeilijke woorden met uitleg. Staan daar hoofdstukken?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Hoofdstukken = inhoudsopgave",
+              tekst: "Wil je weten **welke hoofdstukken** er in een boek staan? Kijk vooraan in de **inhoudsopgave**. Daar staan alle hoofdstukken met hun bladzijde.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "hoofdstuk",
+              uitleg: "Een groot deel van een boek over één onderwerp.",
+            },
+          ],
+          theorie: "In welk hoofdstuk staat iets? → inhoudsopgave (vooraan).",
+          niveaus: {
+            basis: "Inhoudsopgave.",
+            simpeler: "Hoofdstukken zoeken = inhoudsopgave.",
+            nogSimpeler: "Inhoudsopgave",
+          },
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Heeft je aardrijkskundeboek een hoofdstuk over Europa? → inhoudsopgave.",
+            },
+          ],
+        },
+      },
+      {
+        q: "Waar staat de **index** meestal in een boek?",
+        options: ["Achterin", "Vooraan", "In het midden", "Op de voorkant"],
+        answer: 0,
+        wrongHints: [null, "Wat staat er vooraan in een boek?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Index = achterin",
+              tekst: "De **index** staat **achterin** het boek. Vooraan staat de **inhoudsopgave**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "index",
+              uitleg: "Trefwoordenregister: lijst van woorden met bladzijden.",
+            },
+          ],
+          theorie: "Vooraan = inhoudsopgave. Achterin = index.",
+          niveaus: {
+            basis: "Achterin.",
+            simpeler: "Index = achteraan in het boek.",
+            nogSimpeler: "Achterin",
+          },
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Je zoekt 'olifant' in een dierenboek → blader naar de laatste bladzijden.",
+            },
+          ],
+        },
+      },
+      {
+        q: "In welke volgorde staan de woorden in een **index**?",
+        options: ["Op alfabet", "Op lengte van het woord", "Op hoofdstuk", "Op hoe belangrijk ze zijn"],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Op hoofdstuk zoeken doe je in een ander deel. Welke volgorde maakt zoeken naar één woord snel?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Index = alfabetisch",
+              tekst: "In een **index** staan de trefwoorden **alfabetisch**: van A naar Z. Zo vind je een woord snel, net als in een woordenboek.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "alfabetisch",
+              uitleg: "Volgorde van A naar Z.",
+            },
+          ],
+          theorie: "Inhoudsopgave = op volgorde van het boek. Index = op alfabet.",
+          niveaus: {
+            basis: "Op alfabet.",
+            simpeler: "Index werkt als een woordenboek: A tot Z.",
+            nogSimpeler: "Alfabet",
+          },
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "In een index staat 'appel' vóór 'banaan'.",
+            },
+          ],
+        },
+      },
+      {
+        q: "Je zoekt in de bibliotheek een **informatief boek over planeten**. Hoe staan zulke boeken geordend?",
+        options: [
+          "Op onderwerp",
+          "Op achternaam van de schrijver",
+          "Op kleur van de kaft",
+          "Op dikte van het boek",
+        ],
+        answer: 0,
+        wrongHints: [null, "Zo staan verhalenboeken. Is een boek over planeten een verhaal?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Non-fictie = op onderwerp",
+              tekst: "Een boek over planeten is **non-fictie**: het gaat over echte dingen. Non-fictie staat in de bibliotheek op **onderwerp** (met een nummer). **Fictie** (verhalen) staat op schrijver.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "non-fictie",
+              uitleg: "Boeken over echte dingen, niet verzonnen.",
+            },
+          ],
+          theorie: "Fictie (verzonnen) → op schrijver, alfabetisch. Non-fictie (echt) → op onderwerp.",
+          niveaus: {
+            basis: "Op onderwerp.",
+            simpeler: "Echte-dingen-boek = non-fictie = op onderwerp.",
+            nogSimpeler: "Onderwerp",
+          },
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Een boek over paarden staat bij het onderwerp dieren.",
+            },
+          ],
         },
       },
     ],
@@ -299,6 +768,170 @@ const steps = [
           niveaus: { basis: "Veel bronnen = betrouwbaarder.", simpeler: "Bronnen-lijst toont onderzoek = check.", nogSimpeler: "Bronnen" },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een website over tandpasta is gemaakt **door een tandpastafabriek**. Waar moet je extra op letten?",
+        options: [
+          "Dat de maker iets wil verkopen",
+          "Dat de tekst te kort is",
+          "Dat er plaatjes in staan",
+          "Dat de letters te klein zijn",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is een korte tekst meteen onbetrouwbaar?",
+          null,
+          "Denk aan de vraag: WAAROM is het geschreven?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "WAAROM is het geschreven?",
+              tekst: "Een fabriek wil zijn **product verkopen**. Dan vertelt de site vooral de goede kanten. Daarom: **oppassen** en ook een andere bron lezen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "reclame",
+              uitleg: "Tekst of beeld die je iets wil laten kopen.",
+            },
+          ],
+          theorie: "Check-vraag 4: wil de schrijver iets verkopen of je overtuigen? Dan extra opletten.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Een snoepmerk zegt dat snoep gezond is → check bij een andere bron.",
+            },
+          ],
+          niveaus: {
+            basis: "De maker wil verkopen.",
+            simpeler: "Fabriek = wil verkopen = opletten.",
+            nogSimpeler: "Verkopen",
+          },
+        },
+      },
+      {
+        q: "Welke bron over de bouw van de Afsluitdijk is een **secundaire** bron?",
+        options: [
+          "Een schoolboek dat erover vertelt",
+          "Een foto die een bouwvakker toen maakte",
+          "Het dagboek van een bouwvakker",
+          "Een brief van een arbeider uit die tijd",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Wie maakte deze foto, en was die persoon er zelf bij?",
+          null,
+          "Schreef iemand die er zelf bij was deze brief?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Secundair = later beschreven",
+              tekst: "Een **secundaire** bron is gemaakt door iemand die er **niet zelf bij was** en het later beschrijft, zoals een **schoolboek**. Foto, dagboek en brief van mensen die er toen bij waren zijn **primair**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "secundair",
+              uitleg: "Uit de tweede hand: iemand anders vertelt erover.",
+            },
+          ],
+          theorie: "Primair = direct van toen (ooggetuige, dagboek, foto). Secundair = later beschreven (schoolboek, samenvatting).",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Een brief van een soldaat = primair. Een spreekbeurt over die soldaat = secundair.",
+            },
+          ],
+          niveaus: {
+            basis: "Schoolboek = secundair.",
+            simpeler: "Schoolboek: iemand vertelt het later na.",
+            nogSimpeler: "Schoolboek",
+          },
+        },
+      },
+      {
+        q: "Je wilt weten wat **de nieuwste telefoons van dit jaar** kunnen. Welke tekst kies je?",
+        options: [
+          "Een artikel van deze maand",
+          "Een artikel van tien jaar geleden",
+          "Een oud boek over telefoons",
+          "Een tekst zonder datum",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Stonden de telefoons van dit jaar toen al in de krant?",
+          null,
+          "Weet je bij deze tekst of hij nieuw of oud is?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "WANNEER is het geschreven?",
+              tekst: "Over iets **nieuws** wil je **recente** info. Een artikel van **deze maand** gaat over de telefoons van nu. Een oude tekst kent de nieuwste telefoons nog niet.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "recent",
+              uitleg: "Van kort geleden.",
+            },
+          ],
+          theorie: "Check-vraag 2: wanneer is het geschreven? Bij nieuwe dingen weegt recente info zwaarder.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Wie speelt dit seizoen in het Nederlands elftal? → zoek een recent artikel.",
+            },
+          ],
+          niveaus: {
+            basis: "Artikel van deze maand.",
+            simpeler: "Nieuwe dingen? Pak een nieuwe tekst.",
+            nogSimpeler: "Deze maand",
+          },
+        },
+      },
+      {
+        q: "Wat betekent het als een AI-chatbot **'hallucineert'**?",
+        options: [
+          "Hij verzint dingen die niet kloppen",
+          "Hij geeft heel langzaam antwoord",
+          "Hij praat in een andere taal",
+          "Hij kan geen plaatjes maken",
+        ],
+        answer: 0,
+        wrongHints: [null, null, "Gaat het hier om de taal, of om of het antwoord klopt?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "AI kan verzinnen",
+              tekst: "Een AI-chatbot schrijft soms **feiten op die niet kloppen**, alsof ze waar zijn. Dat heet **hallucineren**. Daarom check je AI-info altijd met een tweede bron.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "hallucineren",
+              uitleg: "Bij AI: dingen verzinnen die niet waar zijn.",
+            },
+          ],
+          theorie: "AI is niet automatisch waar. Check AI-info altijd via een tweede betrouwbare bron.",
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Een chatbot noemt een boek dat niet bestaat → hallucinatie.",
+            },
+          ],
+          niveaus: {
+            basis: "Hij verzint dingen.",
+            simpeler: "Hallucineren = verzinnen wat niet klopt.",
+            nogSimpeler: "Verzinnen",
+          },
+        },
+      },
     ],
   },
 
@@ -356,6 +989,31 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Spelling = woordenboek", tekst: "Woordenboek geeft **spelling + betekenis** per woord. Voor spelling-check: woordenboek (Van Dale) of het online Groene Boekje." }],
           niveaus: { basis: "Woordenboek.", simpeler: "Voor spelling → woordenboek.", nogSimpeler: "Woordenboek" },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welk woord staat in het woordenboek **tussen 'vis' en 'vlag'**?",
+        options: ["vitamine", "vier", "vlek", "vork"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Vergelijk 'vie' met 'vis': komt e vóór of na s?",
+          null,
+          "Vergelijk de tweede letter met die van 'vlag'.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Letter voor letter",
+              tekst: "'vi**t**amine' komt na 'vi**s**' (s < t). En 'v**i**tamine' komt vóór 'v**l**ag' (i < l). Dus 'vitamine' staat ertussen. 'vier' komt vóór 'vis' (e < s); 'vlek' en 'vork' komen na 'vlag'.",
+            },
+          ],
+          niveaus: {
+            basis: "vitamine (vis < vit < vla).",
+            simpeler: "Na vis, vóór vlag → vitamine.",
+            nogSimpeler: "Vitamine",
+          },
         },
       },
     ],

@@ -110,6 +110,225 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke zin is **letterlijk** bedoeld?",
+        options: [
+          "Ik drink een glas melk",
+          "Ik heb vlinders in mijn buik",
+          "Het regent pijpenstelen",
+          "Ze is een engel",
+        ],
+        answer: 0,
+        wrongHints: [null, "Zitten er echt vlinders in je buik? Denk na.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Letterlijk of figuurlijk?",
+              tekst: "Bij **letterlijk** betekenen de woorden precies wat er staat. Bij **figuurlijk** bedoel je iets anders — een soort plaatje in taal.",
+            },
+            {
+              titel: "Test elke zin",
+              tekst: "Vraag bij elke zin: kan dit écht zo gebeuren? Een glas melk drinken kan echt. Vlinders in je buik, pijpen uit de lucht of een mens die een engel is: dat kan niet echt.",
+            },
+            {
+              titel: "Conclusie",
+              tekst: "'Ik drink een glas melk' is de enige zin die precies betekent wat er staat. Die is dus letterlijk.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "letterlijk",
+              uitleg: "De woorden betekenen precies wat er staat.",
+            },
+            {
+              woord: "figuurlijk",
+              uitleg: "De woorden betekenen iets anders dan er staat.",
+            },
+          ],
+          theorie: "Klinkt een zin raar als je hem precies zo neemt? Dan is hij figuurlijk bedoeld.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'Ik eet een appel' = letterlijk.",
+            },
+            {
+              type: "stap",
+              tekst: "'Ik heb vlinders in mijn buik' = figuurlijk: je bent zenuwachtig of verliefd.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Vraag jezelf: kan dit echt zo gebeuren? Ja = letterlijk. Nee = figuurlijk.",
+            },
+          ],
+          niveaus: {
+            basis: "'Ik drink een glas melk' is letterlijk: het gebeurt echt.",
+            simpeler: "Alleen bij de melk gebeurt echt wat er staat.",
+            nogSimpeler: "Melk drinken = echt.",
+          },
+        },
+      },
+      {
+        q: "*'Ik heb vlinders in mijn buik.'* Wat bedoelt iemand die dit zegt?",
+        options: [
+          "Ik ben zenuwachtig of verliefd",
+          "Ik heb een vlinder ingeslikt",
+          "Ik heb buikpijn van het eten",
+          "Ik heb heel erge honger",
+        ],
+        answer: 0,
+        wrongHints: [null, "Kan dat echt? Denk figuurlijk.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kan dit letterlijk?",
+              tekst: "Er zitten geen echte vlinders in je buik. Dus is de zin **figuurlijk** bedoeld.",
+            },
+            {
+              titel: "Het plaatje",
+              tekst: "Vlinders fladderen heen en weer. Zo kriebelt het in je buik als je spannend vindt wat er komt.",
+            },
+            {
+              titel: "De betekenis",
+              tekst: "'Vlinders in je buik hebben' betekent: je bent **zenuwachtig of verliefd**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "figuurlijk",
+              uitleg: "Iets anders bedoelen dan er staat.",
+            },
+            {
+              woord: "zenuwachtig",
+              uitleg: "Een kriebelig, gespannen gevoel.",
+            },
+          ],
+          theorie: "Bij figuurlijke zinnen zoek je de bedoelde betekenis, niet de letterlijke.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'Ik heb vlinders in mijn buik voor de musical' = ik ben zenuwachtig voor de musical.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Kan het niet echt zo gebeuren? Zoek dan het gevoel dat ermee bedoeld wordt.",
+            },
+          ],
+          niveaus: {
+            basis: "Zenuwachtig of verliefd zijn.",
+            simpeler: "Kriebels in je buik door spanning of verliefdheid.",
+            nogSimpeler: "Zenuwachtig of verliefd.",
+          },
+        },
+      },
+      {
+        q: "*'Zo wit als sneeuw'* — wat voor soort beeldspraak is dit?",
+        options: ["Vergelijking", "Metafoor", "Spreekwoord", "Letterlijk"],
+        answer: 0,
+        wrongHints: [null, "Kijk of er 'als' in staat.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek naar 'als'",
+              tekst: "In 'zo wit als sneeuw' staan de woorden **zo** en **als**.",
+            },
+            {
+              titel: "Vergelijking",
+              tekst: "Een **vergelijking** maak je met 'zo + bijvoeglijk naamwoord + als + zelfstandig naamwoord': zo wit als sneeuw, zo zwart als roet.",
+            },
+            {
+              titel: "Geen metafoor",
+              tekst: "Bij een metafoor staat er geen 'als', bijvoorbeeld 'ze is een engel'.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vergelijking",
+              uitleg: "Beeldspraak met 'zo ... als'.",
+            },
+            {
+              woord: "metafoor",
+              uitleg: "Beeldspraak zonder 'als'.",
+            },
+          ],
+          theorie: "Staat er 'zo ... als'? Dan is het een vergelijking.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'Zo zwart als roet' = vergelijking.",
+            },
+            {
+              type: "stap",
+              tekst: "'Hij is een leeuw' = metafoor (geen 'als').",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Met 'als' = vergelijking. Zonder 'als' = metafoor.",
+            },
+          ],
+          niveaus: {
+            basis: "Vergelijking: er staat 'zo ... als'.",
+            simpeler: "'Zo wit als' heeft 'als', dus vergelijking.",
+            nogSimpeler: "Vergelijking.",
+          },
+        },
+      },
+      {
+        q: "*'Het loopt in de papieren.'* Wat betekent dit?",
+        options: ["Het wordt duur", "Er is veel papier nodig", "Het gaat heel snel", "Het wordt makkelijk"],
+        answer: 0,
+        wrongHints: [null, "Dat is letterlijk gedacht.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Een uitdrukking",
+              tekst: "'Het loopt in de papieren' is een **uitdrukking**: een vaste groep woorden met een betekenis die je niet uit de losse woorden haalt.",
+            },
+            {
+              titel: "Letterlijk klopt niet",
+              tekst: "Het gaat niet om echt papier.",
+            },
+            {
+              titel: "De betekenis",
+              tekst: "'Het loopt in de papieren' betekent: **het wordt duur**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "uitdrukking",
+              uitleg: "Vaste groep woorden met een figuurlijke betekenis.",
+            },
+            {
+              woord: "figuurlijk",
+              uitleg: "Iets anders bedoelen dan er staat.",
+            },
+          ],
+          theorie: "Bij een uitdrukking is de letterlijke betekenis bijna altijd fout.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'Een nieuwe fiets, een helm en een slot: dat loopt in de papieren' = dat wordt duur.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Leer uitdrukkingen als een geheel: woorden + betekenis.",
+            },
+          ],
+          niveaus: {
+            basis: "Het wordt duur.",
+            simpeler: "Het gaat veel geld kosten.",
+            nogSimpeler: "Duur.",
+          },
+        },
+      },
     ],
   },
   {
@@ -186,6 +405,35 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Andersom — wie lijkt hier aardig?", "Niet — het gaat om iemand die anders is dan hij lijkt.", "Dat is te letterlijk gedacht."],
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*'Iets uit je duim zuigen'* — wat betekent dit?",
+        options: ["Iets verzinnen", "Op je duim sabbelen", "Iets goed onthouden", "Iets eerlijk vertellen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is letterlijk — denk figuurlijk.",
+          null,
+          "Is wat je uit je duim zuigt echt gebeurd?",
+        ],
+      },
+      {
+        q: "*'De kat uit de boom kijken'* — wat betekent dit?",
+        options: ["Afwachten", "Meteen ingrijpen", "Naar dieren kijken", "Iemand redden"],
+        answer: 0,
+        wrongHints: [null, null, "Dat is te letterlijk.", null],
+      },
+      {
+        q: "*'Met de mond vol tanden staan'* — wat betekent dit?",
+        options: [
+          "Niet weten wat je moet zeggen",
+          "Heel veel praten",
+          "Een nieuwe tand krijgen",
+          "Met volle mond eten",
+        ],
+        answer: 0,
+        wrongHints: [null, null, "Dat is letterlijk gedacht.", null],
+      },
     ],
   },
   {
@@ -238,6 +486,40 @@ const steps = [
         options: ["Bekende mensen krijgen veel kritiek", "Grote bomen waaien snel om", "Bekende mensen krijgen veel hulp", "Wie groot is, is sterk"],
         answer: 0,
         wrongHints: [null, "Dat is letterlijk — denk figuurlijk.", "Niet — wat 'vangen' hoge bomen: iets fijns of iets lastigs?", "Niet — het gaat om opvallen en wat je dan over je heen krijgt."],
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*'Haastige spoed is zelden goed'* — wat is de les?",
+        options: [
+          "Als je te snel werkt, maak je fouten",
+          "Wie snel werkt, is eerder klaar",
+          "Je moet altijd op tijd komen",
+          "Langzaam werken is saai",
+        ],
+        answer: 0,
+        wrongHints: [null, "Andersom — is haast hier iets goeds?", null, null],
+      },
+      {
+        q: "*'In nood leert men zijn vrienden kennen'* — wat is de les?",
+        options: [
+          "Echte vrienden helpen je als het moeilijk is",
+          "Op een feest maak je nieuwe vrienden",
+          "Vrienden moet je niet om hulp vragen",
+          "Hoe meer vrienden, hoe beter",
+        ],
+        answer: 0,
+        wrongHints: [null, null, null, "Het gaat niet om het aantal — wat betekent 'in nood'?"],
+      },
+      {
+        q: "*'Een gewaarschuwd man telt voor twee'* — wat is de les?",
+        options: [
+          "Wie gewaarschuwd is, kan zich voorbereiden",
+          "Twee mannen zijn sterker dan één",
+          "Je moet anderen nooit waarschuwen",
+          "Wie waarschuwt, moet dubbel betalen",
+        ],
+        answer: 0,
+        wrongHints: [null, "Te letterlijk — het gaat niet om echt tellen.", null, null],
       },
     ],
   },
@@ -300,6 +582,29 @@ const steps = [
         options: ["Kijk naar de kernwoorden en de context", "Zomaar een antwoord gokken", "De vraag leeg laten", "Het eerste antwoord kiezen"],
         answer: 0,
         wrongHints: [null, "Gok liever slim: gebruik eerst wat je wél weet.", "Niet — leeg is altijd fout.", "Niet — lees eerst alle opties."],
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*'Iets met een korreltje zout nemen'* — wat betekent dit?",
+        options: [
+          "Niet alles zomaar geloven",
+          "Zout over je eten strooien",
+          "Iets heel zuinig gebruiken",
+          "Iets snel opeten",
+        ],
+        answer: 0,
+        wrongHints: [null, "Dat is letterlijk — streep het weg.", null, null],
+      },
+      {
+        q: "*'Komt tijd, komt raad'* — wat betekent dit?",
+        options: [
+          "Wacht maar af, er komt vanzelf een oplossing",
+          "Je moet altijd op tijd komen",
+          "Vraag meteen iemand om advies",
+          "Tijd is het belangrijkste wat er is",
+        ],
+        answer: 0,
+        wrongHints: [null, "Te letterlijk — het gaat niet over op tijd komen.", null, null],
       },
     ],
   },

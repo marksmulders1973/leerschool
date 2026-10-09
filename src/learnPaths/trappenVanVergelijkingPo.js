@@ -120,6 +120,69 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is de **stellende** trap van 'langst'?",
+        options: ["lang", "langer", "langste", "langs"],
+        answer: 0,
+        wrongHints: [null, "Daar zit nog -er achter.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Terug naar de gewone vorm",
+              tekst: "De drie trappen zijn: lang (stellend), langer (vergrotend), langst (overtreffend). De stellende trap is de gewone vorm, zonder -er of -st.",
+            },
+          ],
+          niveaus: {
+            basis: "De stellende trap van 'langst' is 'lang'.",
+            simpeler: "Haal de -st eraf: welke gewone vorm blijft er over?",
+            nogSimpeler: "lang, langer, langst. Welke is de gewone vorm?",
+          },
+        },
+      },
+      {
+        q: "Welk woord is **onregelmatig** als je de trappen maakt?",
+        options: ["goed", "klein", "zacht", "warm"],
+        answer: 0,
+        wrongHints: [null, "Probeer maar: klein, kleiner, kleinst. Gaat dat gewoon met -er en -st?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Onregelmatig: goed → beter → best",
+              tekst: "Bij 'goed' plak je geen -er of -st achter het woord. Je zegt niet 'goeder', maar 'beter', en niet 'goedst', maar 'best'. Bij klein, zacht en warm gaat het wél gewoon met -er en -st.",
+            },
+          ],
+          niveaus: {
+            basis: "goed → beter → best is onregelmatig.",
+            simpeler: "Bij welk woord zeg je niet 'woord + er', maar iets heel anders?",
+            nogSimpeler: "Zeg je 'goeder' of 'beter'?",
+          },
+        },
+      },
+      {
+        q: "In welke trap staat 'zwaarst'?",
+        options: [
+          "de overtreffende trap",
+          "de vergrotende trap",
+          "de stellende trap",
+          "de onregelmatige trap",
+        ],
+        answer: 0,
+        wrongHints: [null, null, "De gewone vorm zou 'zwaar' zijn.", "Zo heet geen van de drie trappen."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "-st = overtreffend",
+              tekst: "zwaar (stellend) → zwaarder (vergrotend, -er) → zwaarst (overtreffend, -st). 'Zwaarst' betekent: het zwaarst van allemaal.",
+            },
+          ],
+          niveaus: {
+            basis: "Een woord met -st staat in de overtreffende trap.",
+            simpeler: "Eindigt 'zwaarst' op -er of op -st?",
+            nogSimpeler: "zwaar, zwaarder, zwaarst. Welke trap is de laatste?",
+          },
+        },
+      },
     ],
   },
 
@@ -240,6 +303,69 @@ const steps = [
             basis: "veel → meer (vergrotend) → meest (overtreffend).",
             simpeler: "Zeg je 'veeler appels' of 'meer appels'?",
             nogSimpeler: "Welke vorm gebruik je als je twee hoeveelheden vergelijkt?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Vul in: *Ik heb ___ stickers dan mijn zus.* (veel)",
+        options: ["meer", "meest", "veel", "veelste"],
+        answer: 0,
+        wrongHints: [null, "Dat is de overtreffende trap; hier vergelijk je maar twee mensen.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Onregelmatig: veel → meer",
+              tekst: "Je vergelijkt jezelf met je zus, met 'dan' erbij. Dan hoort de vergrotende trap. Bij 'veel' is dat onregelmatig: meer.",
+            },
+          ],
+          niveaus: {
+            basis: "Bij 'dan' hoort de vergrotende trap: veel → meer.",
+            simpeler: "Je vergelijkt twee mensen met 'dan'. Welke vorm van 'veel' past?",
+            nogSimpeler: "veel → … dan mijn zus?",
+          },
+        },
+      },
+      {
+        q: "Vul in: *Na veel oefenen kan Ayla ___ zwemmen dan vorig jaar.* (goed)",
+        options: ["beter", "best", "goeder", "goed"],
+        answer: 0,
+        wrongHints: [null, "Dat is de overtreffende trap.", "Bestaat dit woord?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Onregelmatig: goed → beter",
+              tekst: "Ayla vergelijkt nu met vorig jaar, met 'dan' erbij → vergrotende trap. 'Goed' is onregelmatig: de vergrotende trap is 'beter'.",
+            },
+          ],
+          niveaus: {
+            basis: "goed → beter (vergrotend, met 'dan').",
+            simpeler: "Welke vorm van 'goed' hoort bij 'dan'?",
+            nogSimpeler: "goed, …, best?",
+          },
+        },
+      },
+      {
+        q: "Wanneer gebruik je de **vergrotende** trap?",
+        options: [
+          "als je twee dingen met elkaar vergelijkt",
+          "als iets het meest is van allemaal",
+          "als je niets vergelijkt",
+          "alleen bij onregelmatige woorden",
+        ],
+        answer: 0,
+        wrongHints: [null, "Dan gebruik je de overtreffende trap.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Twee dingen vergelijken",
+              tekst: "De vergrotende trap (met -er) gebruik je als je twee dingen vergelijkt, meestal met 'dan': Tom is langer dan Sara.",
+            },
+          ],
+          niveaus: {
+            basis: "Vergrotende trap = twee dingen vergelijken.",
+            simpeler: "Hoeveel dingen vergelijk je in 'Tom is langer dan Sara'?",
+            nogSimpeler: "Twee of allemaal?",
           },
         },
       },
@@ -366,6 +492,50 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Vul in: *Daan maakte maar één fout. Hij maakte de ___ fouten van de hele klas.* (weinig)",
+        options: ["minste", "minder", "mindste", "weinig"],
+        answer: 0,
+        wrongHints: [null, "Dat is de vergrotende trap; hier gaat het om de hele klas.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Onregelmatig: weinig → minder → minst",
+              tekst: "Niemand in de klas maakte minder fouten dan Daan → overtreffende trap. 'Weinig' is onregelmatig: minst. Vóór het zelfstandig naamwoord 'fouten' komt er een -e bij: de minste fouten.",
+            },
+          ],
+          niveaus: {
+            basis: "De minste fouten = overtreffende trap van 'weinig', met -e.",
+            simpeler: "Gaat het om twee kinderen of om de hele klas?",
+            nogSimpeler: "weinig, minder, …?",
+          },
+        },
+      },
+      {
+        q: "Wat betekent de zin *Sem is het grootst van de klas*?",
+        options: [
+          "Sem is groter dan alle andere kinderen in de klas.",
+          "Sem is groter dan één ander kind in de klas.",
+          "Sem is net zo groot als de andere kinderen.",
+          "Sem is kleiner dan de meeste kinderen in de klas.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Gaat het om één ander kind, of om de hele klas?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Het meest van allemaal",
+              tekst: "'Het grootst van de klas' is de overtreffende trap. Die gebruik je als iets het meest is van allemaal. Sem is dus groter dan alle anderen.",
+            },
+          ],
+          niveaus: {
+            basis: "Overtreffende trap = het meest van allemaal.",
+            simpeler: "Vergelijk je Sem met één kind of met iedereen?",
+            nogSimpeler: "Is Sem de allergrootste?",
+          },
+        },
+      },
     ],
   },
 
@@ -478,6 +648,26 @@ const steps = [
             basis: "goed → beter → best. Uit je hoofd leren.",
             simpeler: "Na 'beter' komt …?",
             nogSimpeler: "goed, beter, …?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Vul in: *Van de drie broers is Joep de ___.* (jong)",
+        options: ["jongste", "jonger", "jongst", "jong"],
+        answer: 0,
+        wrongHints: [null, "Er zijn drie broers. Vergelijk je er maar twee, of allemaal?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "De …ste van allemaal",
+              tekst: "Joep is het jongst van alle drie de broers → overtreffende trap. Met 'de' ervoor wordt het: de jongste.",
+            },
+          ],
+          niveaus: {
+            basis: "de jongste = overtreffende trap, met -e.",
+            simpeler: "Is Joep jonger dan één broer, of de jongste van allemaal?",
+            nogSimpeler: "jong, jonger, …?",
           },
         },
       },

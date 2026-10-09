@@ -90,7 +90,12 @@ async function main() {
       // pad-data nodig hebben om '~15 min' te tonen. Zelfde formule als
       // shared/pathDuration.js → rawMinutes() + bucket-rounding.
       const explChars = steps.reduce((sum, s) => sum + ((s?.explanation || "").length), 0);
-      const rawMin = explChars / 1500 + checks * 0.4;
+      // 👀 Per stapbezoek hoogstens 5 vragen (src/shared/geziendeVragen.js, 8 okt 2026); examens: alle.
+      const getoond = steps.reduce((sum, s) => {
+        const n = Array.isArray(s?.checks) ? s.checks.length : 0;
+        return sum + (String(p.id).startsWith("examen-") ? n : Math.min(n, 5));
+      }, 0);
+      const rawMin = explChars / 1500 + getoond * 0.4;
       const BUCKETS = [5, 10, 15, 20, 25, 30, 45, 60, 90];
       let estimatedMinutes = Math.ceil(rawMin / 15) * 15;
       for (const b of BUCKETS) { if (rawMin <= b) { estimatedMinutes = b; break; } }

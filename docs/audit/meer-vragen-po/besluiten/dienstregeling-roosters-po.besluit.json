@@ -1,0 +1,480 @@
+{
+ "pathId": "dienstregeling-roosters-po",
+ "geschreven": 15,
+ "opgenomen": [
+  {
+   "stap": 0,
+   "q": "Busdienstregeling lijn 12 — Dorp: 7:50, 8:20, 8:50 · Markt: 8:05, 8:35, 9:05 · Station: 8:18, 8:48, 9:18. De eerste bus vertrekt om 7:50 uit Dorp. Hoe lang duurt de rit naar het Station?",
+   "options": [
+    "28 minuten",
+    "18 minuten",
+    "32 minuten",
+    "38 minuten"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Tel eerst van 7:50 tot 8:00 en daarna verder tot 8:18.",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Aankomst − vertrek",
+      "tekst": "Van 7:50 tot 8:00 is 10 minuten. Van 8:00 tot 8:18 is 18 minuten. Samen 10 + 18 = 28 minuten."
+     }
+    ],
+    "niveaus": {
+     "basis": "7:50 → 8:00 (10 min) + 8:00 → 8:18 (18 min) = 28 minuten.",
+     "simpeler": "Tel van 7:50 tot het hele uur, en dan verder tot 8:18.",
+     "nogSimpeler": "10 minuten + 18 minuten = ?"
+    }
+   },
+   "id": "dienstregeling-roosters-po#0"
+  },
+  {
+   "stap": 0,
+   "q": "Busdienstregeling lijn 12 — Dorp: 7:50, 8:20, 8:50 · Markt: 8:05, 8:35, 9:05 · Station: 8:18, 8:48, 9:18. Je bent om 8:40 bij de halte Markt. Hoe laat ben je op zijn vroegst bij het Station?",
+   "options": [
+    "9:18",
+    "8:48",
+    "9:05",
+    "8:35"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Rijdt de bus van 8:35 nog als jij om 8:40 bij de Markt bent?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Eerst de bus zoeken, dan de aankomst",
+      "tekst": "Bij de Markt is de bus van 8:35 al weg. De volgende vertrekt om 9:05. Die bus komt om 9:18 aan bij het Station."
+     }
+    ],
+    "niveaus": {
+     "basis": "Na 8:40 vertrekt de eerste bus om 9:05 bij de Markt; die is om 9:18 bij het Station.",
+     "simpeler": "Welke vertrektijd bij de Markt komt het eerst ná 8:40? Volg die bus naar het Station.",
+     "nogSimpeler": "Welke bus vertrekt bij de Markt na 8:40?"
+    }
+   },
+   "id": "dienstregeling-roosters-po#1"
+  },
+  {
+   "stap": 0,
+   "q": "Busdienstregeling lijn 12 — Dorp: 7:50, 8:20, 8:50 · Markt: 8:05, 8:35, 9:05 · Station: 8:18, 8:48, 9:18. Je moet uiterlijk 9:00 bij het Station zijn. Welke bus uit Dorp is de laatste die je kunt nemen?",
+   "options": [
+    "de bus van 8:20",
+    "de bus van 7:50",
+    "de bus van 8:50",
+    "geen enkele bus"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Die komt op tijd aan, maar is het ook de laatste bus die op tijd is?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Laatste bus die op tijd aankomt",
+      "tekst": "De bus van 8:20 komt om 8:48 aan: op tijd. De bus van 8:50 komt om 9:18 aan: te laat. Dus de laatste bus die je kunt nemen, is die van 8:20."
+     }
+    ],
+    "niveaus": {
+     "basis": "Bus van 8:20 is om 8:48 bij het Station (op tijd); die van 8:50 pas om 9:18.",
+     "simpeler": "Kijk bij elke bus hoe laat hij bij het Station is. Welke is nog vóór 9:00?",
+     "nogSimpeler": "Is 8:48 vóór 9:00? En 9:18?"
+    }
+   },
+   "id": "dienstregeling-roosters-po#2"
+  },
+  {
+   "stap": 0,
+   "q": "Busdienstregeling lijn 12 — Dorp: 7:50, 8:20, 8:50 · Markt: 8:05, 8:35, 9:05 · Station: 8:18, 8:48, 9:18. Hoe lang rijdt de bus van de halte Markt naar het Station?",
+   "options": [
+    "13 minuten",
+    "15 minuten",
+    "23 minuten",
+    "18 minuten"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    null,
+    "Dat is het getal achter de dubbele punt van de aankomsttijd, niet de reistijd."
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Aankomst − vertrek",
+      "tekst": "Neem de eerste bus: hij vertrekt om 8:05 bij de Markt en is om 8:18 bij het Station. 8:18 − 8:05 = 13 minuten. Bij de andere bussen is het ook 13 minuten."
+     }
+    ],
+    "niveaus": {
+     "basis": "8:05 → 8:18 = 13 minuten.",
+     "simpeler": "Kies één bus en trek de vertrektijd bij de Markt af van de aankomsttijd bij het Station.",
+     "nogSimpeler": "Van 8:05 tot 8:18 is hoeveel minuten?"
+    }
+   },
+   "id": "dienstregeling-roosters-po#3"
+  },
+  {
+   "stap": 1,
+   "q": "Rooster — donderdag: 1e uur rekenen, 2e uur muziek, 3e uur taal · vrijdag: 1e uur taal, 2e uur gym, 3e uur tekenen. Welk vak heb je vrijdag het 3e uur?",
+   "options": [
+    "tekenen",
+    "taal",
+    "gym",
+    "muziek"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    "Dat is vrijdag het 2e uur.",
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Kolom vrijdag, rij 3e uur",
+      "tekst": "Zoek vrijdag op en ga naar het 3e uur: daar staat tekenen."
+     }
+    ],
+    "niveaus": {
+     "basis": "Vrijdag 3e uur = tekenen.",
+     "simpeler": "Welk vak staat als laatste bij vrijdag?",
+     "nogSimpeler": "Wat is het laatste vak op vrijdag?"
+    }
+   },
+   "id": "dienstregeling-roosters-po#4"
+  },
+  {
+   "stap": 1,
+   "q": "Rooster — donderdag: 1e uur rekenen, 2e uur muziek, 3e uur taal · vrijdag: 1e uur taal, 2e uur gym, 3e uur tekenen. Wanneer heb je muziek?",
+   "options": [
+    "donderdag het 2e uur",
+    "vrijdag het 2e uur",
+    "donderdag het 1e uur",
+    "vrijdag het 3e uur"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Op vrijdag heb je het 2e uur een ander vak.",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Zoek het vak in het rooster",
+      "tekst": "Loop het rooster langs: muziek staat alleen bij donderdag, op het 2e uur."
+     }
+    ],
+    "niveaus": {
+     "basis": "Muziek staat op donderdag het 2e uur.",
+     "simpeler": "Bij welke dag staat muziek, en op welk uur?",
+     "nogSimpeler": "Op welke dag staat muziek?"
+    }
+   },
+   "id": "dienstregeling-roosters-po#5"
+  },
+  {
+   "stap": 1,
+   "q": "Rooster — donderdag: 1e uur rekenen, 2e uur muziek, 3e uur taal · vrijdag: 1e uur taal, 2e uur gym, 3e uur tekenen. Welk vak heb je zowel op donderdag als op vrijdag?",
+   "options": [
+    "taal",
+    "rekenen",
+    "gym",
+    "muziek"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Kijk of dit vak ook bij vrijdag staat.",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Vergelijk de twee dagen",
+      "tekst": "Donderdag: rekenen, muziek, taal. Vrijdag: taal, gym, tekenen. Alleen taal staat bij allebei de dagen."
+     }
+    ],
+    "niveaus": {
+     "basis": "Taal staat op donderdag (3e uur) én op vrijdag (1e uur).",
+     "simpeler": "Welk vak zie je bij donderdag én bij vrijdag?",
+     "nogSimpeler": "Staat taal op allebei de dagen?"
+    }
+   },
+   "id": "dienstregeling-roosters-po#6"
+  },
+  {
+   "stap": 1,
+   "q": "Rooster — donderdag: 1e uur rekenen, 2e uur muziek, 3e uur taal · vrijdag: 1e uur taal, 2e uur gym, 3e uur tekenen. Welk vak heb je op vrijdag direct na taal?",
+   "options": [
+    "gym",
+    "tekenen",
+    "muziek",
+    "rekenen"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Dat is het 3e uur; welk uur komt direct na het 1e uur?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Het uur erna",
+      "tekst": "Op vrijdag heb je taal het 1e uur. Het uur direct daarna is het 2e uur: gym."
+     }
+    ],
+    "niveaus": {
+     "basis": "Vrijdag: taal (1e uur), daarna gym (2e uur).",
+     "simpeler": "Welk vak staat op vrijdag op het 2e uur?",
+     "nogSimpeler": "Wat heb je vrijdag het 2e uur?"
+    }
+   },
+   "id": "dienstregeling-roosters-po#7"
+  },
+  {
+   "stap": 2,
+   "q": "Zwembad — maandag: gesloten · dinsdag: 9:30–18:00 · woensdag: 13:00–18:00 · zaterdag: 8:30–12:00. Hoe lang is het zwembad op dinsdag open?",
+   "options": [
+    "8 uur en 30 minuten",
+    "8 uur",
+    "9 uur en 30 minuten",
+    "7 uur en 30 minuten"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    "Tel vanaf de openingstijd van dinsdag: 9:30.",
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Sluiting − opening",
+      "tekst": "Van 9:30 tot 17:30 is 8 uur. Van 17:30 tot 18:00 is nog 30 minuten. Samen 8 uur en 30 minuten."
+     }
+    ],
+    "niveaus": {
+     "basis": "9:30 → 17:30 (8 uur) + 30 minuten = 8 uur en 30 minuten.",
+     "simpeler": "Tel eerst hele uren vanaf 9:30, en dan de minuten tot 18:00.",
+     "nogSimpeler": "Van 9:30 tot 17:30 is hoeveel uur?"
+    }
+   },
+   "id": "dienstregeling-roosters-po#8"
+  },
+  {
+   "stap": 2,
+   "q": "Zwembad — maandag: gesloten · dinsdag: 9:30–18:00 · woensdag: 13:00–18:00 · zaterdag: 8:30–12:00. Op welke dag kun je om 12:30 zwemmen?",
+   "options": [
+    "dinsdag",
+    "woensdag",
+    "zaterdag",
+    "maandag"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Hoe laat gaat het zwembad op deze dag open?",
+    null,
+    "Kijk wat er bij deze dag staat."
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Valt 12:30 tussen open en dicht?",
+      "tekst": "Dinsdag is open van 9:30 tot 18:00, dus 12:30 past. Woensdag gaat pas om 13:00 open, zaterdag sluit om 12:00 en maandag is gesloten."
+     }
+    ],
+    "niveaus": {
+     "basis": "Alleen op dinsdag valt 12:30 tussen openings- en sluitingstijd.",
+     "simpeler": "Kijk per dag: is het zwembad om 12:30 al open en nog niet dicht?",
+     "nogSimpeler": "Is het zwembad op dinsdag om 12:30 open?"
+    }
+   },
+   "id": "dienstregeling-roosters-po#9"
+  },
+  {
+   "stap": 2,
+   "q": "Zwembad — maandag: gesloten · dinsdag: 9:30–18:00 · woensdag: 13:00–18:00 · zaterdag: 8:30–12:00. Je komt zaterdag om 11:15 bij het zwembad. Hoeveel tijd heb je nog tot sluitingstijd?",
+   "options": [
+    "45 minuten",
+    "15 minuten",
+    "55 minuten",
+    "35 minuten"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Hoe laat sluit het zwembad op zaterdag?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Sluiting − nu",
+      "tekst": "Op zaterdag sluit het zwembad om 12:00. Van 11:15 tot 12:00 is 45 minuten."
+     }
+    ],
+    "niveaus": {
+     "basis": "12:00 − 11:15 = 45 minuten.",
+     "simpeler": "Tel van 11:15 verder tot 12:00.",
+     "nogSimpeler": "Van 11:15 tot 12:00 is hoeveel minuten?"
+    }
+   },
+   "id": "dienstregeling-roosters-po#10"
+  },
+  {
+   "stap": 2,
+   "q": "Zwembad — maandag: gesloten · dinsdag: 9:30–18:00 · woensdag: 13:00–18:00 · zaterdag: 8:30–12:00. Op welke dag gaat het zwembad al vóór 9:00 open?",
+   "options": [
+    "zaterdag",
+    "dinsdag",
+    "woensdag",
+    "maandag"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Hoe laat gaat het zwembad op dinsdag open?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Vergelijk de openingstijden",
+      "tekst": "Dinsdag opent om 9:30, woensdag om 13:00 en maandag is gesloten. Alleen zaterdag gaat om 8:30 open, en dat is vóór 9:00."
+     }
+    ],
+    "niveaus": {
+     "basis": "Zaterdag opent om 8:30, en dat is vóór 9:00.",
+     "simpeler": "Welke openingstijd is vroeger dan 9:00?",
+     "nogSimpeler": "Is 8:30 vóór of na 9:00?"
+    }
+   },
+   "id": "dienstregeling-roosters-po#11"
+  },
+  {
+   "stap": 3,
+   "q": "De bus vertrekt om 10:52 en de rit duurt 24 minuten. De film in de bioscoop begint om 11:20. Hoeveel minuten ben je te vroeg?",
+   "options": [
+    "4 minuten",
+    "28 minuten",
+    "24 minuten",
+    "14 minuten"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Vergeet de rit van 24 minuten niet: hoe laat kom je aan?",
+    "Dat is hoe lang de rit duurt.",
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Eerst de aankomst",
+      "tekst": "10:52 + 24 minuten: van 10:52 tot 11:00 is 8 minuten, nog 16 minuten erbij → 11:16."
+     },
+     {
+      "titel": "Dan vergelijken",
+      "tekst": "De film begint om 11:20. Van 11:16 tot 11:20 is 4 minuten. Je bent 4 minuten te vroeg."
+     }
+    ],
+    "niveaus": {
+     "basis": "Aankomst 11:16, film om 11:20 → 4 minuten te vroeg.",
+     "simpeler": "Reken eerst uit hoe laat je aankomt (10:52 + 24 minuten).",
+     "nogSimpeler": "Van 11:16 tot 11:20 is hoeveel minuten?"
+    }
+   },
+   "id": "dienstregeling-roosters-po#12"
+  },
+  {
+   "stap": 3,
+   "q": "School begint om 8:45. Een lesuur duurt 50 minuten en er zijn geen pauzes. Hoe laat is het 2e uur afgelopen?",
+   "options": [
+    "10:25",
+    "9:35",
+    "10:45",
+    "10:05"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Dat is het einde van het 1e uur.",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Twee lesuren optellen",
+      "tekst": "Het 1e uur: 8:45 + 50 minuten = 9:35. Het 2e uur: 9:35 + 50 minuten = 10:25."
+     }
+    ],
+    "niveaus": {
+     "basis": "8:45 + 50 = 9:35, en 9:35 + 50 = 10:25.",
+     "simpeler": "Tel twee keer 50 minuten bij 8:45 op.",
+     "nogSimpeler": "9:35 + 50 minuten = ?"
+    }
+   },
+   "id": "dienstregeling-roosters-po#13"
+  },
+  {
+   "stap": 3,
+   "q": "Je trein komt om 13:47 aan. Daarna stap je over op een bus die vertrekt om 13:50, 14:05 en 14:20. Je loopt 5 minuten naar de bushalte. Welke bus haal je het eerst?",
+   "options": [
+    "de bus van 14:05",
+    "de bus van 13:50",
+    "de bus van 14:20",
+    "geen enkele bus"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Hoe laat ben je bij de bushalte als je 5 minuten loopt?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Eerst uitrekenen wanneer je bij de halte bent",
+      "tekst": "13:47 + 5 minuten = 13:52."
+     },
+     {
+      "titel": "Dan de eerstvolgende bus",
+      "tekst": "De bus van 13:50 is dan al weg. De eerste bus ná 13:52 is die van 14:05."
+     }
+    ],
+    "niveaus": {
+     "basis": "Je bent om 13:52 bij de halte, dus de eerste bus die je haalt, is die van 14:05.",
+     "simpeler": "Tel 5 minuten bij 13:47 op. Welke bus vertrekt daarna het eerst?",
+     "nogSimpeler": "13:47 + 5 minuten = ?"
+    }
+   },
+   "id": "dienstregeling-roosters-po#14"
+  }
+ ],
+ "afgekeurd": []
+}

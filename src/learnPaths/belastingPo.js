@@ -143,6 +143,194 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wie **beslist** waar het belastinggeld naartoe gaat?",
+        options: [
+          "De regering en de Tweede Kamer",
+          "De Belastingdienst en de banken",
+          "De winkels en de supermarkten",
+          "De werkgevers en de banken",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Die dienst zorgt dat het geld binnenkomt. Beslist hij ook waar het heen gaat?",
+          null,
+          "Een werkgever haalt belasting van het loon. Beslist hij waar het geld heen gaat?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Binnenhalen en beslissen",
+              tekst: "Het **binnenhalen** van belasting en het **beslissen** waar het geld heen gaat, zijn twee verschillende taken.",
+            },
+            {
+              titel: "Wie haalt het binnen?",
+              tekst: "De **Belastingdienst** zorgt dat de belasting binnenkomt.",
+            },
+            {
+              titel: "Wie beslist?",
+              tekst: "De **regering** en de **Tweede Kamer** beslissen waar het geld naartoe gaat: naar wegen, scholen, ziekenhuizen en meer.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "regering",
+              uitleg: "De ministers die het land besturen.",
+            },
+            {
+              woord: "Tweede Kamer",
+              uitleg: "Gekozen mensen die samen beslissen over de wetten en het geld van het land.",
+            },
+          ],
+          theorie: "Toets-kern: de Belastingdienst int de belasting (haalt het binnen). De regering en de Tweede Kamer beslissen waar het geld aan wordt uitgegeven.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "De Belastingdienst haalt het geld binnen, zoals een kassa.",
+            },
+            {
+              type: "stap",
+              tekst: "De regering en de Tweede Kamer kiezen: hoeveel geld gaat naar scholen, hoeveel naar wegen?",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Belastingdienst = binnenhalen. Regering + Tweede Kamer = beslissen waar het heen gaat.",
+            },
+          ],
+          niveaus: {
+            basis: "De regering en de Tweede Kamer beslissen waar het belastinggeld naartoe gaat.",
+            simpeler: "De Belastingdienst haalt het geld op. De regering en de Tweede Kamer kiezen wat ermee gebeurt.",
+            nogSimpeler: "Regering en Tweede Kamer kiezen.",
+          },
+        },
+      },
+      {
+        q: "Stel: **niemand** betaalt nog belasting. Wat gebeurt er dan?",
+        options: [
+          "Er is geen geld meer voor scholen en wegen",
+          "Alles in de winkel wordt dan gratis",
+          "Iedereen krijgt meer zakgeld van de overheid",
+          "Er komen veel meer ziekenhuizen bij",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Wie betaalt de winkel dan voor zijn spullen?",
+          null,
+          "Waarvan worden ziekenhuizen eigenlijk betaald?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Belasting = de pot van iedereen",
+              tekst: "Iedereen betaalt een beetje belasting. Zo komt er een grote pot geld bij de overheid.",
+            },
+            {
+              titel: "Uit die pot betalen we samen",
+              tekst: "Uit die pot komen scholen, wegen, ziekenhuizen, de brandweer en de politie.",
+            },
+            {
+              titel: "Geen belasting = lege pot",
+              tekst: "Betaalt niemand meer, dan blijft de pot leeg. Dan is er geen geld meer voor die dingen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "belasting",
+              uitleg: "Geld dat je aan de overheid betaalt.",
+            },
+            {
+              woord: "overheid",
+              uitleg: "Het bestuur van het land (regering, gemeente).",
+            },
+          ],
+          theorie: "Toets-kern: zonder belasting heeft de overheid geen geld voor dingen die we samen gebruiken, zoals scholen, wegen en ziekenhuizen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Geen belasting → geen geld voor de juf en het schoolgebouw.",
+            },
+            {
+              type: "stap",
+              tekst: "Geen belasting → geen geld om kapotte wegen te maken.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Belasting is het geld waarmee we samen betalen. Valt het weg, dan valt ook dat 'samen betalen' weg.",
+            },
+          ],
+          niveaus: {
+            basis: "Zonder belasting is er geen geld voor scholen, wegen en ziekenhuizen.",
+            simpeler: "Belasting vult de pot van de overheid. Lege pot = geen geld voor scholen en wegen.",
+            nogSimpeler: "Geen belasting, geen school en geen weg.",
+          },
+        },
+      },
+      {
+        q: "Welke **twee soorten** belasting kom jij nu al tegen?",
+        options: ["Belasting op loon en btw", "Btw en zakgeld", "Korting en rente", "Loon en spaargeld"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zakgeld krijg je. Is dat belasting?",
+          null,
+          "Loon verdien je en spaargeld bewaar je. Gaat dat naar de overheid?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Soort 1: op je loon",
+              tekst: "Wie werkt, krijgt **loon**. Daar gaat eerst een stukje **belasting** af.",
+            },
+            {
+              titel: "Soort 2: btw",
+              tekst: "Koop je iets, dan zit er **btw** in de prijs. Dat is ook belasting.",
+            },
+            {
+              titel: "Allebei naar de overheid",
+              tekst: "Beide soorten gaan naar de overheid. Daarvan betalen we samen wegen en scholen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "loon",
+              uitleg: "Geld dat je verdient met werken.",
+            },
+            {
+              woord: "btw",
+              uitleg: "Belasting die in de prijs zit van wat je koopt.",
+            },
+          ],
+          theorie: "Toets-kern: twee soorten belasting zijn belasting op loon (als je werkt) en btw (als je iets koopt). Korting, rente, zakgeld en spaargeld zijn geen belasting.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Mama of papa werkt → er gaat belasting van het loon af.",
+            },
+            {
+              type: "stap",
+              tekst: "Jij koopt een schrift → in de prijs zit btw.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Belasting gaat altijd van jou náár de overheid. Geld dat je krijgt (zakgeld, rente) is dus geen belasting.",
+            },
+          ],
+          niveaus: {
+            basis: "Twee soorten belasting: belasting op loon en btw in de prijs.",
+            simpeler: "Werk je, dan betaal je belasting op je loon. Koop je iets, dan betaal je btw.",
+            nogSimpeler: "Loon-belasting en btw.",
+          },
+        },
+      },
     ],
   },
 
@@ -273,6 +461,184 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Brutoloon **€400**, belasting **€90**. Hoeveel is het **nettoloon**?",
+        options: ["€310", "€490", "€290", "€400"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Komt de belasting erbij, of gaat hij eraf?",
+          "Reken nog eens rustig: €400 − €90.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Drie woorden op een rij",
+              tekst: "**Bruto** = je hele loon. **Belasting** = wat eraf gaat. **Netto** = wat je overhoudt.",
+            },
+            {
+              titel: "Netto is wat overblijft",
+              tekst: "Je begint bij bruto, trekt de belasting eraf, en wat dan overblijft is je netto.",
+            },
+            {
+              titel: "De som",
+              tekst: "Netto = bruto − belasting.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "brutoloon",
+              uitleg: "Je hele loon, vóór de belasting.",
+            },
+            {
+              woord: "nettoloon",
+              uitleg: "Wat je overhoudt, ná de belasting.",
+            },
+          ],
+          theorie: "Toets-truc: belasting gaat er altijd áf. Netto is dus altijd kleiner dan bruto.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "€400 − €90: eerst €400 − €100 = €300, dan €10 terug erbij = €310.",
+            },
+            {
+              type: "stap",
+              tekst: "Bruto €400, belasting €90 → netto €310.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Bruto = alles. Netto = wat overblijft. Het verschil is de belasting.",
+            },
+          ],
+          niveaus: {
+            basis: "Netto = bruto − belasting = €400 − €90 = €310.",
+            simpeler: "Je hele loon is €400. Er gaat €90 af. Je houdt €310 over.",
+            nogSimpeler: "€400 − €90 = €310.",
+          },
+        },
+      },
+      {
+        q: "Hoeveel is **20%** belasting van een brutoloon van **€500**?",
+        options: ["€100", "€20", "€400", "€480"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat zou 20% van €100 zijn. Is het loon hier groter?",
+          "Dat is wat je overhoudt, niet de belasting.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst 10%",
+              tekst: "10% is een tiende deel. 10% van €500 = €500 : 10 = €50.",
+            },
+            {
+              titel: "Dan 20%",
+              tekst: "20% is twee keer zoveel als 10%. Dus 2 × €50 = €100.",
+            },
+            {
+              titel: "Klaar",
+              tekst: "De belasting is €100. (Netto zou dan €500 − €100 = €400 zijn.)",
+            },
+          ],
+          woorden: [
+            {
+              woord: "procent (%)",
+              uitleg: "Een deel van de honderd.",
+            },
+            {
+              woord: "brutoloon",
+              uitleg: "Je hele loon, vóór de belasting.",
+            },
+          ],
+          theorie: "Toets-truc: reken eerst 10% uit (deel door 10), en maak daarna het percentage dat je nodig hebt.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "10% van €500 = €50, dus 20% = €100.",
+            },
+            {
+              type: "stap",
+              tekst: "10% van €800 = €80, dus 20% = €160.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "10% = delen door 10. 20% = dat getal keer 2.",
+            },
+          ],
+          niveaus: {
+            basis: "20% van €500 = 2 × 10% = 2 × €50 = €100.",
+            simpeler: "Een tiende van €500 is €50. Twee keer zoveel is €100.",
+            nogSimpeler: "€50 + €50 = €100.",
+          },
+        },
+      },
+      {
+        q: "Brutoloon **€600**. Er gaat **10%** belasting af. Hoeveel is het **nettoloon**?",
+        options: ["€540", "€594", "€60", "€660"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoeveel is 10% van €600 precies? Reken het eerst los uit.",
+          "Dat is de belasting. Wat hou je over?",
+          "Gaat de belasting erbij of eraf?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: de belasting",
+              tekst: "10% van €600 = €600 : 10 = €60.",
+            },
+            {
+              titel: "Stap 2: eraf halen",
+              tekst: "Netto = bruto − belasting = €600 − €60.",
+            },
+            {
+              titel: "Stap 3: uitkomst",
+              tekst: "€600 − €60 = €540. Dat krijg je echt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "brutoloon",
+              uitleg: "Je hele loon, vóór de belasting.",
+            },
+            {
+              woord: "nettoloon",
+              uitleg: "Wat je overhoudt, ná de belasting.",
+            },
+          ],
+          theorie: "Toets-truc: bij een percentage reken je in twee stappen. Eerst de belasting uitrekenen, dan pas aftrekken van het bruto.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Bruto €100, 20% belasting → €20 eraf → netto €80.",
+            },
+            {
+              type: "stap",
+              tekst: "Bruto €600, 10% belasting → €60 eraf → netto €540.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Eerst het stukje belasting uitrekenen, dan aftrekken. Niet het percentage zelf aftrekken!",
+            },
+          ],
+          niveaus: {
+            basis: "10% van €600 = €60. Netto = €600 − €60 = €540.",
+            simpeler: "Eerst kijk je hoeveel belasting eraf gaat: €60. Dan haal je dat van €600 af.",
+            nogSimpeler: "€600 − €60 = €540.",
+          },
+        },
+      },
     ],
   },
 
@@ -382,6 +748,243 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Op welk van deze dingen zit **21%** btw?",
+        options: ["Een telefoon", "Een brood", "Een pak melk", "Een leesboek"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Brood is eten. Welk tarief hoort bij eten?",
+          null,
+          "Voor boeken geldt hetzelfde tarief als voor eten.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Btw zit in de prijs",
+              tekst: "Btw is belasting die je betaalt als je iets koopt. Het zit al **in de prijs**.",
+            },
+            {
+              titel: "Twee tarieven",
+              tekst: "**9%** op eten, drinken en boeken. **21%** op bijna al het andere, zoals speelgoed, kleding en een telefoon.",
+            },
+            {
+              titel: "Kijk wat het is",
+              tekst: "Is het eten, drinken of een boek? Dan 9%. Anders meestal 21%.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "btw",
+              uitleg: "Belasting over de toegevoegde waarde — belasting in de verkoopprijs.",
+            },
+            {
+              woord: "tarief",
+              uitleg: "Hoeveel procent belasting er geldt.",
+            },
+          ],
+          theorie: "Toets-kern: 9% op eten, drinken en boeken; 21% op bijna al het andere. Een telefoon is geen eten, drinken of boek → 21%.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Brood, melk en een leesboek: 9%.",
+            },
+            {
+              type: "stap",
+              tekst: "Een telefoon, een trui en een bal: 21%.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Eten, drinken, boeken = laag (9%). Bijna de rest = hoog (21%).",
+            },
+          ],
+          niveaus: {
+            basis: "Een telefoon heeft 21% btw. Brood, melk en boeken hebben 9%.",
+            simpeler: "Brood en melk zijn eten en drinken: 9%. Een boek ook: 9%. Een telefoon niet: 21%.",
+            nogSimpeler: "Telefoon = 21%.",
+          },
+        },
+      },
+      {
+        q: "Je koopt een **leesboek**. Welk btw-tarief zit in de prijs?",
+        options: ["9%", "21%", "0%", "50%"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat hoge tarief is voor de meeste andere spullen. Hoort een boek daarbij?",
+          null,
+          "Dan zou de helft van de prijs belasting zijn. Klopt dat?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Btw zit in de prijs",
+              tekst: "Btw is belasting die je betaalt als je iets koopt. Het zit al **in de prijs**.",
+            },
+            {
+              titel: "Twee tarieven",
+              tekst: "**9%** op eten, drinken en boeken. **21%** op bijna al het andere, zoals speelgoed, kleding en een telefoon.",
+            },
+            {
+              titel: "Kijk wat het is",
+              tekst: "Is het eten, drinken of een boek? Dan 9%. Anders meestal 21%.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "btw",
+              uitleg: "Belasting over de toegevoegde waarde — belasting in de verkoopprijs.",
+            },
+            {
+              woord: "tarief",
+              uitleg: "Hoeveel procent belasting er geldt.",
+            },
+          ],
+          theorie: "Toets-kern: voor boeken geldt het lage tarief van 9%, net als voor eten en drinken.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Een leesboek, een appel en een pak sap: 9%.",
+            },
+            {
+              type: "stap",
+              tekst: "Een spelletje, een jas en een step: 21%.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Eten, drinken, boeken = laag (9%). Bijna de rest = hoog (21%).",
+            },
+          ],
+          niveaus: {
+            basis: "Op een leesboek zit 9% btw (laag tarief).",
+            simpeler: "Boeken horen bij het lage tarief, net als eten en drinken: 9%.",
+            nogSimpeler: "Boek = 9%.",
+          },
+        },
+      },
+      {
+        q: "Een pak sap kost **€3,27** inclusief btw. Daarvan is **€0,27** btw. Hoeveel kost het sap **zelf**?",
+        options: ["€3,00", "€3,54", "€0,27", "€3,27"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "De btw zit er al in — tel je hem er dan nog eens bij?",
+          "Dat is alleen de btw, niet het sap.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Prijs = product + btw",
+              tekst: "De prijs op het kaartje (€3,27) = de prijs van het sap zelf + de btw.",
+            },
+            {
+              titel: "Btw eraf halen",
+              tekst: "Wil je weten wat het sap zelf kost? Haal de btw eraf: €3,27 − €0,27.",
+            },
+            {
+              titel: "Uitkomst",
+              tekst: "€3,27 − €0,27 = €3,00. Dat is de prijs van het sap zelf.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "inclusief",
+              uitleg: "Er al in zit (de btw zit ín de prijs).",
+            },
+            {
+              woord: "btw",
+              uitleg: "Belasting in de verkoopprijs.",
+            },
+          ],
+          theorie: "Toets-kern: prijs inclusief btw − btw = prijs van het product zelf. Je trekt af, je telt niet op.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Boek €10,90 inclusief btw, €0,90 btw → boek zelf €10.",
+            },
+            {
+              type: "stap",
+              tekst: "Sap €3,27 inclusief btw, €0,27 btw → sap zelf €3,00.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Zit de btw er al in? Dan haal je hem eraf om de prijs van het product zelf te vinden.",
+            },
+          ],
+          niveaus: {
+            basis: "Sap zelf = €3,27 − €0,27 = €3,00.",
+            simpeler: "Het kaartje is sap + btw samen. Haal de btw (€0,27) eraf, dan hou je €3,00 over.",
+            nogSimpeler: "€3,27 − €0,27 = €3,00.",
+          },
+        },
+      },
+      {
+        q: "Wie geeft de btw die jij bij de kassa betaalt **door** aan de Belastingdienst?",
+        options: ["De winkel", "Jij stuurt het zelf op", "De bank", "Je school"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Moet jij na het boodschappen doen nog iets opsturen?",
+          null,
+          "Waar heb je de btw eigenlijk betaald?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Je betaalt bij de kassa",
+              tekst: "Je betaalt de prijs van het kaartje. Daar zit de btw al in.",
+            },
+            {
+              titel: "De winkel houdt het even vast",
+              tekst: "Het geld komt eerst bij de winkel terecht, ook het stukje btw.",
+            },
+            {
+              titel: "De winkel geeft het door",
+              tekst: "De winkel geeft dat stukje btw door aan de **Belastingdienst**. Jij hoeft niets zelf te regelen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "btw",
+              uitleg: "Belasting die in de prijs zit van wat je koopt.",
+            },
+            {
+              woord: "Belastingdienst",
+              uitleg: "De dienst van de overheid die zorgt dat de belasting binnenkomt.",
+            },
+          ],
+          theorie: "Toets-kern: jij betaalt btw mee in de prijs; de winkel geeft dat stukje door aan de Belastingdienst.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Jij koopt een schrift → de winkel krijgt je geld → de winkel geeft de btw door.",
+            },
+            {
+              type: "stap",
+              tekst: "Net als bij loon: je werkgever regelt de belasting, jij hoeft niets op te sturen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Wie het geld van jou krijgt (de winkel), geeft de btw door.",
+            },
+          ],
+          niveaus: {
+            basis: "De winkel geeft de btw door aan de Belastingdienst.",
+            simpeler: "Jij betaalt de winkel. De winkel stuurt het stukje btw naar de Belastingdienst.",
+            nogSimpeler: "De winkel geeft het door.",
+          },
+        },
+      },
     ],
   },
 
@@ -438,6 +1041,24 @@ const steps = [
         options: ["Precies de prijs van het kaartje", "Altijd nog extra erbovenop", "Minder dan het kaartje", "Niets"],
         answer: 0,
         wrongHints: [null, "De btw zit er al in, dus er komt niets bij.", "Het kaartje is de prijs die je betaalt, niet minder.", "Je betaalt natuurlijk wel iets."],
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Brutoloon **€300**, belasting **€45**. Hoeveel is het **nettoloon**?",
+        options: ["€255", "€345", "€45", "€265"],
+        answer: 0,
+        wrongHints: [null, "Gaat de belasting erbij of eraf?", "Dat is alleen de belasting.", null],
+      },
+      {
+        q: "Hoeveel is **20%** van **€400**?",
+        options: ["€80", "€8", "€320", "€40"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is 2% — kijk nog eens naar het getal.",
+          null,
+          "Dat is 10%. Hoeveel keer zoveel is 20%?",
+        ],
       },
     ],
   },

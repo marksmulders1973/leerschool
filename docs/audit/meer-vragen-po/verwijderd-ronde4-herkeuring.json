@@ -1,0 +1,98 @@
+[
+ {
+  "pathId": "begrijpend-lezen-strategie",
+  "stap": 5,
+  "q": "Vraag: *'Wat betekent het woord **desondanks** in regel 3?'*\n\nHoe pak je deze vraag aan?",
+  "reden": "Afleiders 'Tel de letters van het woord' en 'Sla die zin juist over' zijn niet geloofwaardig; de goede optie valt meteen op als enige zinnige aanpak."
+ },
+ {
+  "pathId": "begrijpend-lezen-strategie",
+  "stap": 4,
+  "q": "Je kunt het antwoord op een vraag **niet vinden** in de tekst. Wat is een goede volgende stap?",
+  "reden": "Alle drie de afleiders zijn ongeloofwaardig (stoppen met de hele toets, tekst overschrijven, kiezen zonder te lezen); de goede optie is zonder kennis van de stof aan te wijzen."
+ },
+ {
+  "pathId": "schema-tekst-combi-po",
+  "stap": 3,
+  "q": "Waar geef je je op als je wilt meedoen aan de talentenjacht?",
+  "reden": "Goede optie verraadt zich: als enige veel langer en met precieze dubbele plaatsaanduiding ('meneer Baris, naast de feesttent') letterlijk uit de tekst; de afleiders zijn kort en vaag."
+ },
+ {
+  "pathId": "begrijpend-lezen-strategie",
+  "stap": 4,
+  "q": "Hoe lang duurt het ongeveer om een hele tekst te **skimmen**?",
+  "reden": "Twee afleiders zijn absurd ('een halve dag', 'een uur') voor het skimmen van één tekst; feitelijk blijft alleen 30 sec vs 10 min over."
+ },
+ {
+  "pathId": "onderwijs-niveaus-vmbo-havo-vwo",
+  "stap": 2,
+  "q": "Wat zijn **Latijn en Grieks**?",
+  "reden": "Goede optie verraadt zich: als enige begint die niet met 'Twee ...', is een letterlijk citaat uit de uitleg en herhaalt 'Grieks(en)' uit de vraag; afleiders (sport) zijn weinig geloofwaardig."
+ },
+ {
+  "pathId": "schema-tekst-combi-po",
+  "stap": 0,
+  "q": "Kijk naar de openingstijden van Bibliotheek De Boekenberg. Op welke twee dagen gaat de bibliotheek al om 10.00 uur open?",
+  "reden": "Hint bij 'Maandag en vrijdag' zegt dat de bibliotheek op maandag én vrijdag pas 's middags opengaat. Daarmee vallen alle opties met maandag of vrijdag af en blijft alleen 'Woensdag en zaterdag' over: de hint geeft het antwoord weg."
+ },
+ {
+  "pathId": "onderwijs-niveaus-vmbo-havo-vwo",
+  "stap": 2,
+  "q": "Waar staat de **C** in het profiel C&M voor?",
+  "reden": "Hint bij 'Cijfers' ('talen en kunst, of rekenen?') stuurt rechtstreeks naar 'Cultuur'. Van de overige opties (Chemie, Computer) past er geen bij talen en kunst, dus de hint wijst het antwoord vrijwel aan."
+ },
+ {
+  "pathId": "nieuwsbericht-lezen-po",
+  "stap": 3,
+  "q": "Welke beloning kregen de twee kinderen die Berry vonden?",
+  "reden": "Goede optie verraadt zich: als enige in de tegenwoordige tijd ('Ze mogen ... voortaan') terwijl de vraag ('kregen') en alle afleiders in de verleden tijd staan, en het is een letterlijk citaat uit de tekst. | Goede optie verraadt zich: is de enige in de tegenwoordige tijd (\"Ze mogen ... voortaan\"), de andere drie staan in de verleden tijd (\"kregen\", \"mochten\"), en is letterlijk uit de tekst overgenomen en de langste. Zet alle opties in dezelfde tijd (bv. \"Ze mogen Berry voortaan elke week borstelen\" / \"Ze mogen Berry een weekend mee naar huis nemen\" ...)."
+ },
+ {
+  "pathId": "betrouwbaarheid-bronnen-po",
+  "stap": 3,
+  "q": "Een website over honden wordt gemaakt door een merk dat hondenvoer verkoopt. Welke vraag maakt je hier voorzichtig?",
+  "reden": "Goede optie herhaalt 'verkopen' uit de vraag ('merk dat hondenvoer verkoopt') en is letterlijk vraag 2 uit de stap-uitleg; de drie afleiders (kleuren, foto's, tekstlengte) zijn niet geloofwaardig, dus geen echte keuze."
+ },
+ {
+  "pathId": "betrouwbaarheid-bronnen-po",
+  "stap": 0,
+  "q": "Waarom moet je oppassen met informatie van iemand die er geld aan wil verdienen?",
+  "reden": "Cirkelredenering: 'iemand die er geld aan wil verdienen' -> 'die wil je iets verkopen' herhaalt de vraag bijna; afleiders (woont te ver weg, geen computer, schrijft te moeilijk) zijn ongeloofwaardig, het antwoord ligt voor het oprapen."
+ },
+ {
+  "pathId": "onderwijs-niveaus-vmbo-havo-vwo",
+  "stap": 2,
+  "q": "Waarin zit vooral het verschil tussen **havo en vwo**?",
+  "reden": "Goede optie verraadt zich: als enige een los zinsdeel dat grammaticaal past bij 'Waarin...?' en letterlijk citaat uit de uitleg ('tempo en diepte'); de drie afleiders zijn volzinnen die de vraag niet eens beantwoorden. Bovendien komen A ('op de havo geen theorie') en D ('op het vwo geen boeken') op hetzelfde neer (een niveau zonder theorie/boeken)."
+ },
+ {
+  "pathId": "nieuwsbericht-lezen-po",
+  "stap": 2,
+  "q": "De kop luidt: *\"Hele school ligt plat door griep\"*. In de tekst staat: *\"Op basisschool De Linde zaten dinsdag elf van de tweehonderd leerlingen met griep thuis.\"* Wat kun je hierover zeggen?",
+  "reden": "Goede optie verraadt zich: duidelijk de langste en de enige met een uitleg erbij ('De kop overdrijft: maar elf...'), met de term uit de stap. Afleiders A ('alle tweehonderd thuis') en D ('school helemaal dicht') komen op hetzelfde neer: de kop letterlijk nemen. B spreekt zichzelf tegen en is daardoor geen geloofwaardige afleider."
+ },
+ {
+  "pathId": "begrijpend-lezen-strategie",
+  "stap": 5,
+  "q": "Vraag: *'Wat zou de schrijver vinden van ...?'*\n\nWaarop baseer je je antwoord?",
+  "reden": "Goede optie is de langste, de enige die naar 'de tekst' verwijst en een vrijwel letterlijk citaat uit de stap ('toon en standpunt'). B ('wat jij zelf vindt') en D ('wat je vriend denkt') komen op hetzelfde neer: een mening van buiten de tekst."
+ },
+ {
+  "pathId": "tekstverbanden-oorzaak-gevolg-po",
+  "stap": 2,
+  "q": "*\"De wedstrijd werd afgelast, doordat het veld onder water stond.\"* — Welke zin betekent precies hetzelfde?",
+  "reden": "Licht: afleiders 0 en 2 draaien allebei de volgorde/oorzaak om (veld onder water als gevolg van afgelasting) en komen inhoudelijk vrijwel op hetzelfde neer; overweeg er een te vervangen door een andere fout (bv. \"omdat de wedstrijd werd afgelast\" met andere wending of een tegenstelling met \"toch\")."
+ },
+ {
+  "pathId": "woordbetekenis-context-po",
+  "stap": 0,
+  "q": "Lees: *\"Na een uur wachten werd Sam ongeduldig en liep hij steeds heen en weer.\"* — Wat betekent 'ongeduldig'?",
+  "reden": "Goede optie verraadt zich: duidelijk de langste en herhaalt het woord \"wachten\" uit de zin (\"Na een uur wachten\"); de afleiders zijn korte gevoelswoorden. Maak de afleiders even lang/specifiek (bv. \"Heel moe worden van het lange staan\") of herformuleer de goede optie zonder \"wachten\"."
+ },
+ {
+  "pathId": "tekstdoel-schrijversdoel-po",
+  "stap": 2,
+  "q": "Welke zin uit de folder **informeert** alleen, zonder dat er iets verkocht wordt?",
+  "reden": "Licht: optie \"Haal deze week een pak Ochtendkracht bij supermarkt De Knabbelhoek.\" staat tussen aanhalingstekens als citaat, maar in de folder loopt die zin door (\"... en ontvang een gratis ontbijtbeker.\"). Citaat inkorten met \"...\" of de hele zin overnemen."
+ }
+]

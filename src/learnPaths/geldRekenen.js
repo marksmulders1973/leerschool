@@ -93,6 +93,262 @@ const steps = [
           niveaus: { basis: "€1 + 50c + 20c + 5c = €1,75.", simpeler: "Tel grootste munt eerst: €1. Dan 50c = €1,50. Plus 20c = €1,70. Plus 5c = €1,75. ✓", nogSimpeler: "€1 + 50 + 20 + 5" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**€ 6,08** — hoeveel **cent**?",
+        options: ["608", "680", "68", "6080"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk goed achter de komma: staat daar 80 cent of 8 cent?",
+          null,
+          "Te veel — 1 euro is 100 cent, niet 1000 cent.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Euro→cent",
+              tekst: "1 euro = 100 cent. 6 euro = 600 cent. Daarbij nog 8 cent: 600 + 8 = 608 cent.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "cent",
+              uitleg: "1/100 euro. 100 cent = 1 euro.",
+            },
+          ],
+          theorie: "Achter de komma staan altijd 2 cijfers. ',08' betekent 8 cent, ',80' betekent 80 cent.",
+          voorbeelden: [
+            {
+              type: "omrekenen",
+              tekst: "€6,08 = 608 cent. €6,80 = 680 cent.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "De nul telt",
+              uitleg: "De 0 in ',08' laat zien dat het maar 8 cent is.",
+            },
+          ],
+          niveaus: {
+            basis: "€6,08 = 608 cent.",
+            simpeler: "6 euro = 600 cent. Plus 8 cent = 608 cent.",
+            nogSimpeler: "608",
+          },
+        },
+      },
+      {
+        q: "Lisa heeft **920 cent** in haar spaarpot. Hoeveel **euro** is dat?",
+        options: ["€ 9,20", "€ 92,00", "€ 0,92", "€ 9,02"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — hoeveel cent gaat er in 1 euro?",
+          null,
+          "Let op: 20 cent schrijf je als ,20 — niet als ,02.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Cent→euro",
+              tekst: "100 cent = €1. 900 cent = €9. De 20 cent die over is komt achter de komma: €9,20.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "omrekenen",
+              uitleg: "Cent → euro = ÷100.",
+            },
+          ],
+          theorie: "Cent ÷ 100 = euro. De komma schuift 2 plekken naar links: 920 → 9,20.",
+          voorbeelden: [
+            {
+              type: "cent→euro",
+              tekst: "100c = €1. 920c = €9,20.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Komma schuiven",
+              uitleg: "÷100 = komma 2 plekken naar links.",
+            },
+          ],
+          niveaus: {
+            basis: "920 cent = €9,20.",
+            simpeler: "900 cent = €9. Plus 20 cent = €9,20.",
+            nogSimpeler: "€9,20",
+          },
+        },
+      },
+      {
+        q: "Welk bedrag is **acht euro en negen cent**?",
+        options: ["€ 8,09", "€ 8,90", "€ 8,9", "€ 89,00"],
+        answer: 0,
+        wrongHints: [null, "Dat is 90 cent. Hoeveel cent moest het zijn?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Geld-notatie",
+              tekst: "Euro's voor de komma: 8. Centen achter de komma, altijd 2 cijfers: 9 cent = 09. Samen €8,09.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "komma",
+              uitleg: "Scheidt de euro's van de centen.",
+            },
+          ],
+          theorie: "Minder dan 10 cent? Zet er een 0 voor: 9 cent = ,09.",
+          voorbeelden: [
+            {
+              type: "notatie",
+              tekst: "€8,09 = 8 euro 9 cent. €8,90 = 8 euro 90 cent.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "0 invullen",
+              uitleg: "Bij minder dan 10 cent: 0 ervoor. €0,09 = 9 cent.",
+            },
+          ],
+          niveaus: {
+            basis: "€8,09.",
+            simpeler: "8 euro voor de komma. 9 cent wordt ,09. Dus €8,09.",
+            nogSimpeler: "€8,09",
+          },
+        },
+      },
+      {
+        q: "Welk geld is een **biljet** (papiergeld)?",
+        options: ["€ 5", "€ 2", "€ 1", "50 cent"],
+        answer: 0,
+        wrongHints: [null, "Dat is het grootste muntstuk. Welk bedrag is van papier?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Munt of biljet",
+              tekst: "Munten: 1, 2, 5, 10, 20, 50 cent en 1 en 2 euro. Biljetten beginnen bij €5.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "munt",
+              uitleg: "Metalen geldstuk.",
+            },
+            {
+              woord: "biljet",
+              uitleg: "Papieren geldstuk: €5, €10, €20, €50, €100, €200, €500.",
+            },
+          ],
+          theorie: "Het grootste muntstuk is €2. Alles vanaf €5 is een biljet.",
+          voorbeelden: [
+            {
+              type: "indelen",
+              tekst: "€2 = munt. €5 = biljet. €10 = biljet.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Kleinste biljet",
+              uitleg: "Het kleinste biljet is €5.",
+            },
+          ],
+          niveaus: {
+            basis: "€5 is een biljet.",
+            simpeler: "€1 en €2 zijn munten. €5 is het kleinste biljet.",
+            nogSimpeler: "€5",
+          },
+        },
+      },
+      {
+        q: "Je hebt **3 munten van € 2**. Hoeveel **cent** is dat?",
+        options: ["600", "6", "60", "200"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het aantal euro's. Hoeveel cent zit er in 1 euro?",
+          null,
+          "Dat is maar één munt. Je hebt er drie.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst euro's",
+              tekst: "3 munten van €2 = €6.",
+            },
+            {
+              titel: "Dan cent",
+              tekst: "1 euro = 100 cent. €6 = 6 × 100 = 600 cent.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "cent",
+              uitleg: "1/100 euro. 100 cent = 1 euro.",
+            },
+          ],
+          theorie: "Euro → cent = × 100. €6 → 600 cent.",
+          voorbeelden: [
+            {
+              type: "omrekenen",
+              tekst: "€2 = 200 cent. €6 = 600 cent.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Twee stappen",
+              uitleg: "Tel eerst het geld op, reken dan om naar cent.",
+            },
+          ],
+          niveaus: {
+            basis: "€6 = 600 cent.",
+            simpeler: "3 × €2 = €6. En €6 = 600 cent.",
+            nogSimpeler: "600",
+          },
+        },
+      },
+      {
+        q: "Welk bedrag is het **grootst**?",
+        options: ["€ 5,10", "€ 5,01", "€ 5,09", "€ 4,99"],
+        answer: 0,
+        wrongHints: [null, "Dat is 5 euro en 1 cent. Vergelijk de centen eens goed.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Euro's vergelijken",
+              tekst: "€4,99 heeft maar 4 euro, dus die is het kleinst. De andere drie hebben 5 euro.",
+            },
+            {
+              titel: "Centen vergelijken",
+              tekst: "€5,10 = 10 cent extra. €5,09 = 9 cent. €5,01 = 1 cent. Dus €5,10 is het grootst.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vergelijken",
+              uitleg: "Kijken welk bedrag meer of minder is.",
+            },
+          ],
+          theorie: "Eerst de euro's vergelijken. Zijn die gelijk? Dan de centen (2 cijfers achter de komma).",
+          voorbeelden: [
+            {
+              type: "vergelijken",
+              tekst: "€5,10 = 510 cent. €5,09 = 509 cent. 510 is meer.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Reken in cent",
+              uitleg: "Twijfel? Maak er cent van: dan zie je het grootste getal meteen.",
+            },
+          ],
+          niveaus: {
+            basis: "€5,10 is het grootst.",
+            simpeler: "Alle bedragen in cent: 510, 501, 509, 499. Het grootste is 510 = €5,10.",
+            nogSimpeler: "€5,10",
+          },
+        },
+      },
     ],
   },
 
@@ -171,6 +427,267 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Toets-instinker", uitleg: "Winkelprijzen eindigen vaak op ,99 zodat ze goedkoper lijken. Het echte verschil met het hele bedrag is maar 1 cent." },],
           niveaus: { basis: "€2,99+€4,99=€7,98.", simpeler: "€2,99 ≈ €3. €4,99 ≈ €5. Samen €8. Min 2 cent (twee 'bijna') = €7,98.", nogSimpeler: "€7,98" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**€ 1,65 + € 2,50** = ?",
+        options: ["€ 4,15", "€ 3,15", "€ 4,05", "€ 4,25"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — de centen samen zijn meer dan 100. Wat doe je dan?",
+          null,
+          "Tel de centen nog eens precies: 65 + 50.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Cent + cent",
+              tekst: "Cent: 65 + 50 = 115 cent = €1,15. Euro: 1 + 2 + 1 (onthouden) = 4. Totaal €4,15.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "onthouden",
+              uitleg: "Zijn de centen samen 100 of meer, dan gaat er 1 euro bij de euro's.",
+            },
+          ],
+          theorie: "Centen apart, euro's apart. 100 cent = 1 euro extra.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "€1,65 + €2,50: cent 65+50=115 (€1,15). Euro 1+2+1=4. = €4,15.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Schat",
+              uitleg: "Schat: €1,50 + €2,50 = €4. Antwoord net boven €4.",
+            },
+          ],
+          niveaus: {
+            basis: "€1,65 + €2,50 = €4,15.",
+            simpeler: "Centen: 65 + 50 = 115 (= €1,15). Euro's: 1 + 2 = 3. Plus €1,15 = €4,15.",
+            nogSimpeler: "€4,15",
+          },
+        },
+      },
+      {
+        q: "**€ 6,00 − € 2,70** = ?",
+        options: ["€ 3,30", "€ 4,30", "€ 3,70", "€ 3,40"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — je moet 2 euro én 70 cent aftrekken.",
+          "Tel eens vooruit vanaf € 2,70: hoeveel tot € 3, en dan tot € 6?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vooruit-tellen",
+              tekst: "Van €2,70 naar €3 = +€0,30. Van €3 naar €6 = +€3. Samen €3,30.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vooruit-tellen",
+              uitleg: "Tel vanaf het kleine bedrag naar het grote.",
+            },
+          ],
+          theorie: "Bij 'rond bedrag − iets' is vooruit-tellen vaak makkelijker.",
+          voorbeelden: [
+            {
+              type: "vooruit",
+              tekst: "6 − 2,70: 2,70 → 3 (+0,30), 3 → 6 (+3). Samen 3,30.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check",
+              uitleg: "€3,30 + €2,70 = €6,00 ✓.",
+            },
+          ],
+          niveaus: {
+            basis: "€6,00 − €2,70 = €3,30.",
+            simpeler: "Van €2,70 tel je €0,30 tot €3. Dan nog €3 tot €6. Samen €3,30.",
+            nogSimpeler: "€3,30",
+          },
+        },
+      },
+      {
+        q: "Je koopt een schrift van **€ 1,85** en een gum van **€ 0,65**. Wat betaal je **samen**?",
+        options: ["€ 2,50", "€ 1,50", "€ 2,40", "€ 2,60"],
+        answer: 0,
+        wrongHints: [null, "Te weinig — 85 + 65 cent is meer dan 1 euro. Is die euro erbij?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel op",
+              tekst: "Cent: 85 + 65 = 150 cent = €1,50. Euro: 1 + 0 = 1. Samen €1 + €1,50 = €2,50.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "samen",
+              uitleg: "Alles bij elkaar optellen.",
+            },
+          ],
+          theorie: "Centen optellen: boven de 100? Dan 1 euro erbij.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "185 cent + 65 cent = 250 cent = €2,50.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "In cent rekenen",
+              uitleg: "Kan ook: alles in cent, dan optellen, dan terug naar euro.",
+            },
+          ],
+          niveaus: {
+            basis: "€1,85 + €0,65 = €2,50.",
+            simpeler: "185 cent + 65 cent = 250 cent. Dat is €2,50.",
+            nogSimpeler: "€2,50",
+          },
+        },
+      },
+      {
+        q: "Sanne heeft **€ 8,25**. Ze geeft **€ 3,60** uit. Hoeveel heeft ze **nog**?",
+        options: ["€ 4,65", "€ 5,65", "€ 4,75", "€ 11,85"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — 25 cent min 60 cent gaat niet zomaar. Moet je een euro inwisselen?",
+          null,
+          "Ze geeft geld uit, dus heeft ze er straks minder.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Aftrekken",
+              tekst: "In cent: 825 − 360 = 465 cent = €4,65.",
+            },
+            {
+              titel: "Check",
+              tekst: "€4,65 + €3,60 = €8,25 ✓.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "nog over",
+              uitleg: "Wat je had − wat je uitgeeft.",
+            },
+          ],
+          theorie: "Uitgeven = aftrekken. Zijn de centen te weinig? Wissel 1 euro om in 100 cent.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "€8,25 − €3,60: €8,25 − €3 = €5,25. €5,25 − €0,60 = €4,65.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Terugrekenen",
+              uitleg: "Tel het antwoord en de uitgave op: komt er €8,25 uit? Dan klopt het.",
+            },
+          ],
+          niveaus: {
+            basis: "€8,25 − €3,60 = €4,65.",
+            simpeler: "Eerst €3 eraf: €5,25. Dan nog 60 cent eraf: €4,65.",
+            nogSimpeler: "€4,65",
+          },
+        },
+      },
+      {
+        q: "Welke som heeft als uitkomst **€ 5,00**?",
+        options: ["€ 2,60 + € 2,40", "€ 2,60 + € 2,60", "€ 2,40 + € 2,40", "€ 2,50 + € 2,60"],
+        answer: 0,
+        wrongHints: [null, "Tel de centen: 60 + 60 = ? Is dat precies 1 euro?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Centen samen",
+              tekst: "Je zoekt centen die samen precies 100 maken: 60 + 40 = 100.",
+            },
+            {
+              titel: "Euro's samen",
+              tekst: "2 + 2 = 4, plus de 100 cent = €1. Samen €5,00.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "uitkomst",
+              uitleg: "Wat er uit de som komt.",
+            },
+          ],
+          theorie: "Twee bedragen maken samen een rond bedrag als de centen samen precies 100 zijn.",
+          voorbeelden: [
+            {
+              type: "rond maken",
+              tekst: "€2,60 + €2,40 = €5,00. €1,70 + €1,30 = €3,00.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Maatjes van 100",
+              uitleg: "60 en 40, 70 en 30, 25 en 75 maken samen 100 cent.",
+            },
+          ],
+          niveaus: {
+            basis: "€2,60 + €2,40 = €5,00.",
+            simpeler: "60 + 40 cent = 100 cent = €1. 2 + 2 + 1 = €5.",
+            nogSimpeler: "€2,60 + €2,40",
+          },
+        },
+      },
+      {
+        q: "**€ 4,20 − € 0,85** = ?",
+        options: ["€ 3,35", "€ 4,35", "€ 3,45", "€ 3,25"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — je haalt bijna een hele euro weg, dus kom je onder de € 4.",
+          null,
+          "Controleer: tel je antwoord op bij € 0,85. Kom je dan op € 4,20?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "In cent",
+              tekst: "420 cent − 85 cent = 335 cent = €3,35.",
+            },
+            {
+              titel: "Check",
+              tekst: "€3,35 + €0,85 = €4,20 ✓.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "aftrekken",
+              uitleg: "Een bedrag eraf halen.",
+            },
+          ],
+          theorie: "Truc: 85 cent eraf = 1 euro eraf en 15 cent er weer bij. €4,20 − €1 = €3,20. + €0,15 = €3,35.",
+          voorbeelden: [
+            {
+              type: "truc",
+              tekst: "€4,20 − €0,85 = €4,20 − €1 + €0,15 = €3,35.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Bijna een euro",
+              uitleg: "85 cent is bijna 1 euro: haal 1 euro weg en tel het teveel terug.",
+            },
+          ],
+          niveaus: {
+            basis: "€4,20 − €0,85 = €3,35.",
+            simpeler: "Haal 1 euro weg: €3,20. Je haalde 15 cent te veel weg, dus erbij: €3,35.",
+            nogSimpeler: "€3,35",
+          },
         },
       },
     ],
@@ -254,6 +771,237 @@ const steps = [
           niveaus: { basis: "Kosten €4,55. Wisselgeld €5,45.", simpeler: "Eerst optellen: €2,80 + €1,75 = €4,55. Dan: €10 − €4,55 = €5,45.", nogSimpeler: "€5,45" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een boek kost **€ 6,35**. Je betaalt met een biljet van **€ 10**. Hoeveel **wisselgeld** krijg je?",
+        options: ["€ 3,65", "€ 4,65", "€ 3,75", "€ 16,35"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — tel vooruit: van € 6,35 naar € 7, en dan naar € 10.",
+          null,
+          "Je krijgt geld terug, dus het moet minder zijn dan € 10.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vooruit-tellen",
+              tekst: "€6,35 → €7 = +€0,65. €7 → €10 = +€3. Samen €3,65.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "wisselgeld",
+              uitleg: "Wat je TERUGKRIJGT als je meer betaalt dan de prijs.",
+            },
+          ],
+          theorie: "Wisselgeld = betaald − prijs. €10 − €6,35 = €3,65.",
+          voorbeelden: [
+            {
+              type: "wisselgeld",
+              tekst: "Prijs €6,35, biljet €10: tel vooruit 0,65 + 3 = 3,65.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check",
+              uitleg: "€3,65 + €6,35 = €10 ✓.",
+            },
+          ],
+          niveaus: {
+            basis: "€10 − €6,35 = €3,65.",
+            simpeler: "Van €6,35 tot €7 is 65 cent. Van €7 tot €10 is €3. Samen €3,65.",
+            nogSimpeler: "€3,65",
+          },
+        },
+      },
+      {
+        q: "Een flesje water kost **€ 1,40**. Je betaalt met een munt van **€ 2**. Hoeveel krijg je **terug**?",
+        options: ["€ 0,60", "€ 1,60", "€ 0,70", "€ 3,40"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — de 2 euro en de 1 euro trek je ook van elkaar af.",
+          null,
+          "Je krijgt geld terug: dat is minder dan je betaalt.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vooruit-tellen",
+              tekst: "€1,40 → €2 = +€0,60.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "terugkrijgen",
+              uitleg: "Het wisselgeld: betaald − prijs.",
+            },
+          ],
+          theorie: "Wisselgeld = betaald − prijs. €2,00 − €1,40 = €0,60.",
+          voorbeelden: [
+            {
+              type: "wisselgeld",
+              tekst: "Prijs €1,40, munt €2: 60 cent terug.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check",
+              uitleg: "€0,60 + €1,40 = €2,00 ✓.",
+            },
+          ],
+          niveaus: {
+            basis: "€2 − €1,40 = €0,60.",
+            simpeler: "Van €1,40 tot €2 tel je 60 cent. Dat krijg je terug.",
+            nogSimpeler: "€0,60",
+          },
+        },
+      },
+      {
+        q: "Je koopt **2 kaartjes van € 4,50**. Je betaalt met **€ 20**. Hoeveel **wisselgeld** krijg je?",
+        options: ["€ 11,00", "€ 15,50", "€ 9,00", "€ 12,00"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zo reken je maar één kaartje. Hoeveel kaartjes koop je?",
+          "Dat kosten de kaartjes samen. Wat krijg je terug van € 20?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: kosten",
+              tekst: "2 × €4,50 = €9,00.",
+            },
+            {
+              titel: "Stap 2: wisselgeld",
+              tekst: "€20 − €9 = €11,00.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "totaalkosten",
+              uitleg: "Aantal × prijs per stuk.",
+            },
+          ],
+          theorie: "Meerdere stuks + wisselgeld = 2 stappen: eerst kosten, dan aftrekken van wat je betaalt.",
+          voorbeelden: [
+            {
+              type: "2-stappen",
+              tekst: "2 × €4,50 = €9. €20 − €9 = €11.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niets vergeten",
+              uitleg: "Lees goed hoeveel stuks je koopt.",
+            },
+          ],
+          niveaus: {
+            basis: "Kosten €9. Wisselgeld €11.",
+            simpeler: "2 kaartjes = €4,50 + €4,50 = €9. €20 − €9 = €11.",
+            nogSimpeler: "€11,00",
+          },
+        },
+      },
+      {
+        q: "Je betaalt met **€ 5** en krijgt **€ 1,15** terug. Hoeveel **kostte** het?",
+        options: ["€ 3,85", "€ 6,15", "€ 4,85", "€ 3,95"],
+        answer: 0,
+        wrongHints: [null, "Je krijgt geld terug, dus het kostte minder dan € 5.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Omdraaien",
+              tekst: "Prijs = betaald − wisselgeld. €5 − €1,15 = €3,85.",
+            },
+            {
+              titel: "Check",
+              tekst: "€3,85 + €1,15 = €5,00 ✓.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "prijs",
+              uitleg: "Wat iets kost.",
+            },
+            {
+              woord: "wisselgeld",
+              uitleg: "Wat je terugkrijgt.",
+            },
+          ],
+          theorie: "Prijs + wisselgeld = wat je betaalt. Dus prijs = betaald − wisselgeld.",
+          voorbeelden: [
+            {
+              type: "omgekeerd",
+              tekst: "Betaald €5, terug €1,15: prijs €3,85.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Terugrekenen",
+              uitleg: "Tel prijs en wisselgeld op: dan moet je op het betaalde bedrag uitkomen.",
+            },
+          ],
+          niveaus: {
+            basis: "€5 − €1,15 = €3,85.",
+            simpeler: "Van €1,15 tel je vooruit tot €2: 85 cent. Van €2 tot €5: €3. Samen €3,85.",
+            nogSimpeler: "€3,85",
+          },
+        },
+      },
+      {
+        q: "Een pakje kost **€ 3,70**. Je betaalt met **€ 5**. De verkoper telt vooruit: eerst tot € 4, dan tot € 5. Hoeveel krijg je **terug**?",
+        options: ["€ 1,30", "€ 2,30", "€ 1,70", "€ 0,30"],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Hoeveel cent is het van € 3,70 naar € 4?",
+          "Dat is alleen het stukje tot € 4. Er komt nog een stukje bij.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tot € 4",
+              tekst: "€3,70 → €4 = +€0,30.",
+            },
+            {
+              titel: "Tot € 5",
+              tekst: "€4 → €5 = +€1.",
+            },
+            {
+              titel: "Samen",
+              tekst: "€0,30 + €1 = €1,30.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vooruit-tellen",
+              uitleg: "Vanaf de prijs naar het betaalde bedrag tellen.",
+            },
+          ],
+          theorie: "Vooruit-tellen: van prijs → rond bedrag → betaald bedrag. Tel de stukjes op.",
+          voorbeelden: [
+            {
+              type: "vooruit",
+              tekst: "3,70 → 4 (+0,30). 4 → 5 (+1). Totaal 1,30.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Zo doet de kassa het",
+              uitleg: "De verkoper legt eerst kleine munten neer tot een rond bedrag, dan de rest.",
+            },
+          ],
+          niveaus: {
+            basis: "€5 − €3,70 = €1,30.",
+            simpeler: "30 cent tot €4. Dan €1 tot €5. Samen €1,30.",
+            nogSimpeler: "€1,30",
+          },
+        },
+      },
     ],
   },
 
@@ -331,6 +1079,233 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Familiepak", uitleg: "Vaak (niet altijd!) is groter pak voordeliger per eenheid. De toets test of je kunt NA-rekenen." }],
           niveaus: { basis: "A €1,20/L. B €1,30/L. A wint.", simpeler: "A: 2 liter voor €2,40 → 1 liter = €1,20. B: 1 liter = €1,30. A is goedkoper per liter.", nogSimpeler: "A goedkoper" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Zak A: **5 appels voor € 2,00**. Zak B: **8 appels voor € 2,80**. Welke is **goedkoper per appel**?",
+        options: ["Zak B", "Zak A", "Even duur", "Niet te zeggen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Reken per appel: deel bij elke zak de prijs door het aantal appels.",
+          null,
+          "Wel te zeggen — je weet de prijs én het aantal.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Per appel",
+              tekst: "A: €2,00 ÷ 5 = €0,40. B: €2,80 ÷ 8 = €0,35. B is goedkoper.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "per stuk",
+              uitleg: "Prijs gedeeld door aantal.",
+            },
+          ],
+          theorie: "Vergelijk de prijs per appel. Laagste prijs per stuk = voordeligst.",
+          voorbeelden: [
+            {
+              type: "per-stuk",
+              tekst: "A €0,40 per appel. B €0,35 per appel. B wint.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet de totaalprijs",
+              uitleg: "B kost meer, maar je krijgt ook meer appels.",
+            },
+          ],
+          niveaus: {
+            basis: "A €0,40. B €0,35. B wint.",
+            simpeler: "A: 200 cent ÷ 5 = 40 cent. B: 280 cent ÷ 8 = 35 cent. B is goedkoper per appel.",
+            nogSimpeler: "Zak B",
+          },
+        },
+      },
+      {
+        q: "Pak A: **2 pennen voor € 3,00**. Pak B: **4 pennen voor € 6,00**. Welke is **goedkoper per pen**?",
+        options: ["Even duur", "Pak B", "Pak A", "Niet te zeggen"],
+        answer: 0,
+        wrongHints: [null, "Reken per pen: deel de prijs door het aantal pennen.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Per pen",
+              tekst: "A: €3,00 ÷ 2 = €1,50. B: €6,00 ÷ 4 = €1,50.",
+            },
+            {
+              titel: "Vergelijken",
+              tekst: "Allebei €1,50 per pen. Ze zijn even duur.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "per stuk",
+              uitleg: "Prijs gedeeld door aantal.",
+            },
+          ],
+          theorie: "Soms is een groter pak niet voordeliger. Dubbel zoveel pennen voor dubbel zoveel geld = even duur.",
+          voorbeelden: [
+            {
+              type: "per-stuk",
+              tekst: "A €1,50 per pen. B €1,50 per pen. Gelijk.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Reken altijd na",
+              uitleg: "Denk niet meteen dat het grote pak goedkoper is.",
+            },
+          ],
+          niveaus: {
+            basis: "Allebei €1,50 per pen.",
+            simpeler: "A: €3 voor 2 pennen = €1,50 per pen. B: €6 voor 4 pennen = €1,50 per pen. Even duur.",
+            nogSimpeler: "Even duur",
+          },
+        },
+      },
+      {
+        q: "Kaas A: **200 g voor € 2,40**. Kaas B: **400 g voor € 4,40**. Wat kost **100 g** van kaas B?",
+        options: ["€ 1,10", "€ 1,20", "€ 2,20", "€ 0,44"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is de prijs per 100 g van kaas A. Je zoekt kaas B.",
+          "Dat is de prijs van 200 g. Hoe vaak past 100 g in 400 g?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Per 100 g",
+              tekst: "400 g = 4 × 100 g. €4,40 ÷ 4 = €1,10 per 100 g.",
+            },
+            {
+              titel: "Vergelijken",
+              tekst: "Kaas A: €2,40 ÷ 2 = €1,20 per 100 g. Kaas B is dus goedkoper.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "per 100 g",
+              uitleg: "Wat 100 gram kost. Handig om pakken te vergelijken.",
+            },
+          ],
+          theorie: "Deel het gewicht en de prijs door hetzelfde getal tot je bij 100 g bent.",
+          voorbeelden: [
+            {
+              type: "per-100g",
+              tekst: "400 g €4,40 → 100 g €1,10.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Gram",
+              uitleg: "1 kg = 1000 g. 400 g is 4 keer 100 g.",
+            },
+          ],
+          niveaus: {
+            basis: "€4,40 ÷ 4 = €1,10.",
+            simpeler: "400 g is 4 stukjes van 100 g. €4,40 verdelen in 4 stukjes = €1,10 per stukje.",
+            nogSimpeler: "€1,10",
+          },
+        },
+      },
+      {
+        q: "Een los zwemkaartje kost **€ 4**. Een kaart voor **10 keer** zwemmen kost **€ 35**. Wat kost **1 keer** zwemmen met de kaart voor 10 keer?",
+        options: ["€ 3,50", "€ 4,00", "€ 3,00", "€ 0,35"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is de prijs van een los kaartje. Reken met de kaart voor 10 keer.",
+          null,
+          "Let op de komma: € 35 delen door 10.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Per keer",
+              tekst: "€35 ÷ 10 = €3,50 per keer.",
+            },
+            {
+              titel: "Vergelijken",
+              tekst: "Los €4,00. Met de kaart €3,50. Met de kaart ben je 50 cent per keer goedkoper uit.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "per keer",
+              uitleg: "Prijs gedeeld door het aantal keren.",
+            },
+          ],
+          theorie: "Delen door 10: de komma schuift 1 plek naar links. €35 → €3,50.",
+          voorbeelden: [
+            {
+              type: "per-keer",
+              tekst: "€35 voor 10 keer = €3,50 per keer.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check",
+              uitleg: "10 × €3,50 = €35 ✓.",
+            },
+          ],
+          niveaus: {
+            basis: "€35 ÷ 10 = €3,50.",
+            simpeler: "€35 verdelen over 10 keer. 10 × €3 = €30, en de €5 die over is wordt 50 cent per keer. Samen €3,50.",
+            nogSimpeler: "€3,50",
+          },
+        },
+      },
+      {
+        q: "Welke aanbieding voor pakjes drinken is **per pakje het goedkoopst**?",
+        options: [
+          "3 pakjes voor € 1,50",
+          "2 pakjes voor € 1,20",
+          "4 pakjes voor € 2,80",
+          "5 pakjes voor € 2,75",
+        ],
+        answer: 0,
+        wrongHints: [null, "Reken per pakje: deel de prijs door het aantal.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Per pakje",
+              tekst: "3 voor €1,50 = €0,50. 2 voor €1,20 = €0,60. 4 voor €2,80 = €0,70. 5 voor €2,75 = €0,55.",
+            },
+            {
+              titel: "Vergelijken",
+              tekst: "€0,50 is het laagst: 3 pakjes voor €1,50.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "aanbieding",
+              uitleg: "Een speciale prijs als je meer stuks koopt.",
+            },
+          ],
+          theorie: "Vergelijk altijd per stuk. Het laagste bedrag per stuk is het voordeligst.",
+          voorbeelden: [
+            {
+              type: "per-stuk",
+              tekst: "150 ÷ 3 = 50 cent. 275 ÷ 5 = 55 cent.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "In cent rekenen",
+              uitleg: "Delen gaat vaak makkelijker in cent.",
+            },
+          ],
+          niveaus: {
+            basis: "3 voor €1,50 = €0,50 per pakje.",
+            simpeler: "Per pakje: 50, 60, 70 en 55 cent. De goedkoopste is 50 cent: 3 pakjes voor €1,50.",
+            nogSimpeler: "3 pakjes voor €1,50",
+          },
         },
       },
     ],
