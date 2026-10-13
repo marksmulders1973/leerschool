@@ -146,9 +146,9 @@ const steps = [
     checks: [
       {
         q: "Wat moet je **altijd eerst lezen** bij een grafiek?",
-        options: ["Titel + assen + eenheid", "Alleen het hoogste getal", "De kleuren", "Het laagste punt"],
+        options: ["De titel, de assen en de eenheid", "Het hoogste en het laagste punt", "De kleuren en de vorm van de lijn", "Het eerste en het laatste getal"],
         answer: 0,
-        wrongHints: [null, "Te beperkt — je moet weten waar de grafiek over gaat.", "Kleuren zijn handig, maar context is belangrijker.", "Een punt geeft geen overzicht."],
+        wrongHints: [null, "Weet je dan al waar de grafiek over gaat?", "Kleuren helpen, maar weet je dan waar de getallen over gaan?", "Welke eenheid hoort bij die getallen? Dat weet je zo nog niet."],
         uitlegPad: {
           stappen: [
             { titel: "Drie dingen vóór je gaat rekenen", tekst: "Bij elke Toets-grafiek check je eerst **3 dingen** voordat je een getal aankijkt:\n1. **Titel** — waar gaat de grafiek over?\n2. **Assen** — wat staat op x-as (onder) en y-as (zijkant)?\n3. **Eenheid** — meet de grafiek euro's, kinderen, °C, kilo's?" },
@@ -177,7 +177,7 @@ const steps = [
         q: "Welke grafiek toont **hoe iets verandert door de tijd**?",
         options: ["Lijngrafiek", "Cirkeldiagram", "Staafdiagram", "Tabel"],
         answer: 0,
-        wrongHints: [null, "Cirkel toont verdeling op één moment, geen verandering.", "Staaf vergelijkt groepen op één moment, niet een verloop door de tijd.", "Tabel is getallen, geen plaatje van verandering."],
+        wrongHints: [null, "Laat een cirkel zien hoe iets van moment tot moment verandert?", "Staaf vergelijkt groepen op één moment, niet een verloop door de tijd.", "Tabel is getallen, geen plaatje van verandering."],
         uitlegPad: {
           stappen: [
             { titel: "Elk grafiektype heeft een doel", tekst: "Vier types grafiek, elk voor een andere vraag:\n• **Lijngrafiek** = verandering over **tijd** (temperatuur door de dag)\n• **Staafdiagram** = **vergelijken** van groepen (regen per maand)\n• **Cirkeldiagram** = **verdeling** van een geheel (sport-keuze in klas)\n• **Tabel** = exacte **getallen** netjes geordend" },
@@ -207,7 +207,7 @@ const steps = [
         q: "Welke grafiek laat goed zien **welk deel van het totaal** iets is?",
         options: ["Cirkeldiagram", "Lijngrafiek", "Staafdiagram", "Tijdlijn"],
         answer: 0,
-        wrongHints: [null, "Lijn toont verandering, geen verdeling.", "Staaf vergelijkt hoogtes, maar laat niet in één oogopslag zien hoe groot een stuk van het geheel is.", "Tijdlijn is voor jaartallen, geen verdeling."],
+        wrongHints: [null, "Zie je bij een lijn in één keer hoe groot een stuk van het geheel is?", "Staaf vergelijkt hoogtes, maar laat niet in één oogopslag zien hoe groot een stuk van het geheel is.", "Tijdlijn is voor jaartallen, geen verdeling."],
         uitlegPad: {
           stappen: [
             { titel: "Cirkeldiagram = de hele taart", tekst: "Een **cirkeldiagram** (ook **taartdiagram** of **pie chart**) is een cirkel verdeeld in stukken. De hele cirkel = **100%** = het geheel. Elk stuk is een **percentage** daarvan." },
@@ -237,17 +237,17 @@ const steps = [
       {
         q: "Wat is een **grafiek**?",
         options: [
-          "Een plaatje van getallen",
-          "Een lijst met moeilijke woorden",
-          "Een tekening van een landschap",
-          "Een verhaal over een getal",
+          "Een tekening die getallen laat zien",
+          "Een lijst met getallen in rijen",
+          "Een tekening van een gebied van bovenaf",
+          "Een rij woorden met hun uitleg",
         ],
         answer: 0,
         wrongHints: [
           null,
+          "Dat is een tabel. Zie je bij een grafiek rijen, of een plaatje?",
+          "Dat is een plattegrond of kaart. Gaat een grafiek over plekken?",
           "Gaat een grafiek over woorden of over hoeveel iets is?",
-          null,
-          "Lees je een grafiek zoals een verhaal, of kijk je ernaar?",
         ],
         uitlegPad: {
           stappen: [
@@ -453,9 +453,9 @@ const steps = [
       },
       {
         q: "Welke grafiek bestaat uit **balkjes** naast elkaar?",
-        options: ["Staafdiagram", "Lijngrafiek", "Cirkeldiagram", "Taartdiagram"],
+        options: ["Staafdiagram", "Lijngrafiek", "Cirkeldiagram", "Tabel"],
         answer: 0,
-        wrongHints: [null, "Die grafiek heeft punten met een lijn ertussen.", null, null],
+        wrongHints: [null, "Die grafiek heeft punten met een lijn ertussen.", null, "Een tabel heeft rijen en kolommen met getallen, geen balkjes."],
         uitlegPad: {
           stappen: [
             {
@@ -517,7 +517,7 @@ const steps = [
     ),
     checks: [
       {
-        q: "Staafdiagram regen-mm: jan 60, feb 50, mrt 40, apr 70. Hoeveel mm in **maart**?",
+        q: "Een staafdiagram laat de regen in mm zien: jan 60, feb 50, mrt 40, apr 70. Hoeveel mm viel er in **maart**?",
         options: ["40 mm", "60 mm", "50 mm", "70 mm"],
         answer: 0,
         wrongHints: [null, "Dat is januari — kijk goed naar de maart-balk.", "Dat is februari.", "Dat is april."],
@@ -546,7 +546,7 @@ const steps = [
         },
       },
       {
-        q: "Klas: ma 22, di 18, wo 26, do 30, vr 24 kinderen. **Hoeveel kinderen meer** op **donderdag** dan op **dinsdag**?",
+        q: "Een staafdiagram laat zien hoeveel kinderen er per dag naar de leesclub kwamen: ma 22, di 18, wo 26, do 30, vr 24. Hoeveel kinderen **meer** waren er op **donderdag** dan op **dinsdag**?",
         options: ["12 kinderen", "6 kinderen", "8 kinderen", "48 kinderen"],
         answer: 0,
         wrongHints: [null, "Te weinig — dat is donderdag min vrijdag. Welke twee dagen noemt de vraag?", "Te weinig — dat is donderdag min maandag. Welke twee dagen noemt de vraag?", "Te veel — heb je opgeteld? De vraag is 'hoeveel meer' = aftrekken."],
@@ -566,10 +566,10 @@ const steps = [
         },
       },
       {
-        q: "Zelfde klas. **Totaal aantal kinderen** in de hele week?",
+        q: "Zelfde staafdiagram. Hoeveel kinderen kwamen er in de hele week **samen**?",
         options: ["120 kinderen", "100 kinderen", "30 kinderen", "150 kinderen"],
         answer: 0,
-        wrongHints: [null, "Te weinig — heb je alle 5 dagen meegeteld? 22+18+26+30+24.", "Te weinig — dat is alleen donderdag.", "Te veel — controleer optelling."],
+        wrongHints: [null, "Te weinig — heb je alle 5 dagen meegeteld? 22+18+26+30+24.", "Te weinig — dat is alleen donderdag.", "Tel de vijf getallen nog eens rustig op."],
         uitlegPad: {
           stappen: [
             { titel: "'Totaal' = optellen", tekst: "Bij de Doorstroomtoets: woord **'totaal'** of **'samen'** of **'in totaal'** → ALLE balken bij elkaar **optellen**." },
@@ -594,7 +594,7 @@ const steps = [
         },
       },
       {
-        q: "Zelfde klas. **Op welke dag** waren er **de meeste kinderen**?",
+        q: "Zelfde staafdiagram. **Op welke dag** kwamen er **de meeste kinderen**?",
         options: ["Donderdag", "Maandag", "Woensdag", "Vrijdag"],
         answer: 0,
         wrongHints: [null, "Dat is 22 — zoek het hoogste getal.", "Dat is 26 — hoger bestaat nog.", "Dat is 24 — hoger bestaat nog."],
@@ -881,10 +881,10 @@ const steps = [
     ),
     checks: [
       {
-        q: "Temperatuur: 8u → 12°C, 14u → 22°C, 20u → 16°C. **Wanneer warmst**?",
-        options: ["14u", "8u", "20u", "11u"],
+        q: "Een lijngrafiek van de temperatuur: om 8u 12 °C, om 14u 22 °C, om 20u 16 °C. Hoe laat was het het **warmst**?",
+        options: ["14u", "8u", "20u", "22u"],
         answer: 0,
-        wrongHints: [null, "Dat is het koudst, niet het warmst.", "Niet het warmst — kijk naar het hoogste punt.", "Niet gegeven in de vraag."],
+        wrongHints: [null, "Dat is het koudst, niet het warmst.", "Niet het warmst — kijk naar het hoogste punt.", "22 is een temperatuur, geen tijdstip. Kijk naar de tijden."],
         uitlegPad: {
           stappen: [
             { titel: "'Warmst' = hoogste temperatuur", tekst: "Het woord **'warmst'** vraagt om het **HOOGSTE getal** in graden Celsius. Bij een lijngrafiek = het **HOOGSTE PUNT** op de y-as." },
@@ -929,10 +929,10 @@ const steps = [
         },
       },
       {
-        q: "Een lijn die de hele dag **vlak** blijft betekent ... ?",
-        options: ["Er verandert niets", "Het wordt warmer", "Het wordt kouder", "De grafiek is fout"],
+        q: "Wat betekent een temperatuurlijn die de hele dag **vlak** blijft?",
+        options: ["Er verandert niets", "Het wordt warmer", "Het wordt kouder", "Het was de hele dag heel warm"],
         answer: 0,
-        wrongHints: [null, "Warmer = lijn omhoog. Vlak ≠ omhoog.", "Kouder = lijn omlaag. Vlak ≠ omlaag.", "Vlak is een normale uitkomst — 'geen verandering'."],
+        wrongHints: [null, "Warmer = lijn omhoog. Vlak ≠ omhoog.", "Kouder = lijn omlaag. Vlak ≠ omlaag.", "Een vlakke lijn kan hoog of laag liggen. Zegt 'vlak' iets over warm, of over veranderen?"],
         uitlegPad: {
           stappen: [
             { titel: "Lijn-interpretatie in 3 vormen", tekst: "Bij een lijngrafiek is de **richting** van de lijn alles:\n• **Omhoog ↗** = waarde stijgt (warmer / meer / hoger)\n• **Omlaag ↘** = waarde daalt (kouder / minder / lager)\n• **Vlak →** = waarde verandert NIET (constant / blijft hetzelfde)" },
@@ -959,9 +959,9 @@ const steps = [
       },
       {
         q: "Wat lees je af aan **de y-as** (zijkant)?",
-        options: ["De waarde / hoeveelheid", "De tijd / de dag", "De legenda", "De titel"],
+        options: ["De waarde / hoeveelheid", "De tijd / de dag", "De legenda / de kleuren", "De titel / het onderwerp"],
         answer: 0,
-        wrongHints: [null, "Tijd staat op de x-as (onderaan), niet de zijkant.", "Legenda is apart.", "Titel staat bovenaan."],
+        wrongHints: [null, "Tijd staat op de x-as (onderaan), niet de zijkant.", "De legenda staat meestal in een apart hokje.", "De titel staat bovenaan de grafiek."],
         uitlegPad: {
           stappen: [
             { titel: "X-as horizontaal, Y-as verticaal", tekst: "Elke grafiek heeft 2 assen:\n• **X-as** = horizontaal (onderaan) → vaak **tijd** of **categorieën** (dagen, maanden, namen)\n• **Y-as** = verticaal (zijkant) → altijd de **waarde** of **hoeveelheid**" },
@@ -1039,10 +1039,10 @@ const steps = [
           "Het water daalde",
           "Het water steeg",
           "Het water bleef gelijk",
-          "De ton werd helemaal leeg",
+          "Het water daalde tot 10 cm",
         ],
         answer: 0,
-        wrongHints: [null, "Is 25 meer of minder dan 35?", "Dat gebeurde tussen dinsdag en woensdag.", null],
+        wrongHints: [null, "Is 25 meer of minder dan 35?", "Dat gebeurde tussen dinsdag en woensdag.", "Lees af: hoeveel cm water stond er op donderdag?"],
         uitlegPad: {
           stappen: [
             {
@@ -1264,7 +1264,7 @@ const steps = [
     ),
     checks: [
       {
-        q: "Taart: voetbal 50%, hockey 25%, zwemmen 15%, anders 10%. **Welke sport is grootst**?",
+        q: "Een taartdiagram over lievelingssport: voetbal 50%, hockey 25%, zwemmen 15%, anders 10%. Welke sport kozen de **meeste** kinderen?",
         options: ["Voetbal", "Hockey", "Zwemmen", "Anders"],
         answer: 0,
         wrongHints: [null, "Hockey is 25% — er is een grotere sport.", "Zwemmen is maar 15% — niet de grootste.", "Anders is maar 10% — niet de grootste."],
@@ -1292,7 +1292,7 @@ const steps = [
         },
       },
       {
-        q: "Zelfde taart, klas van **20** kinderen. Hoeveel kiezen **voetbal**?",
+        q: "Zelfde taartdiagram, klas van **20** kinderen. Hoeveel kinderen kiezen **voetbal**?",
         options: ["10 kinderen", "50 kinderen", "5 kinderen", "20 kinderen"],
         answer: 0,
         wrongHints: [null, "Te veel — 50 kinderen kan niet in een klas van 20. 50% is de helft.", "Te weinig — dat is een kwart (25%), niet de helft.", "Te veel — dat is alle kinderen."],
@@ -1312,7 +1312,7 @@ const steps = [
         },
       },
       {
-        q: "Zelfde taart, klas van **20**. Hoeveel kiezen **hockey** (25%)?",
+        q: "Zelfde taartdiagram, klas van **20**. Hoeveel kinderen kiezen **hockey** (25%)?",
         options: ["5 kinderen", "10 kinderen", "25 kinderen", "4 kinderen"],
         answer: 0,
         wrongHints: [null, "Te veel — dat zou 50% van 20 zijn, niet 25%.", "Onmogelijk — meer kinderen dan de klas groot is.", "Te weinig — 25% van 20 is iets meer dan dat."],
@@ -1341,10 +1341,10 @@ const steps = [
         },
       },
       {
-        q: "**Tellen alle stukken** van een taartdiagram bij elkaar samen op tot ... ?",
-        options: ["100%", "50%", "1000%", "Het hangt af van de grafiek"],
+        q: "Hoeveel procent zijn **alle stukken** van een taartdiagram samen?",
+        options: ["100%", "50%", "360%", "Het hangt af van de grafiek"],
         answer: 0,
-        wrongHints: [null, "Te weinig — alle stukken samen vormen de hele taart.", "Onmogelijk — meer dan een hele taart.", "Niet juist — een hele taart is altijd hetzelfde getal, ongeacht de grafiek."],
+        wrongHints: [null, "Te weinig — alle stukken samen vormen de hele taart.", "Een cirkel heeft 360 graden. Maar hoeveel procent is de hele taart?", "Niet juist — een hele taart is altijd hetzelfde getal, ongeacht de grafiek."],
         uitlegPad: {
           stappen: [
             { titel: "Een taart is een geheel = 100%", tekst: "Bij een cirkeldiagram is de **hele cirkel** = het **totale aantal** = **100%**. Alle stukken samen vormen die hele cirkel — dus alle % samen = 100%." },
@@ -1586,7 +1586,7 @@ const steps = [
       "Een **tabel** is gewoon **getallen in rijen en kolommen**. Een grafiek is hetzelfde — maar dan als plaatje.\n\nVoorbeeld:\n\n| Dag | Aantal ijsjes verkocht |\n|---|---|\n| ma | 12 |\n| di | 8 |\n| wo | 18 |\n| do | 22 |\n| vr | 30 |\n\nIn een **staafdiagram** zou maandag een balk van 12 worden, vrijdag een balk van 30, etc.\n\n**toetsvraag-type 1**: *'Welke dag is het laagst in de tabel?'*\n• Zoek het kleinste getal: 8 (dinsdag).\n\n**toetsvraag-type 2**: *'Hoeveel ijsjes in de hele week?'*\n• Tel alle dagen op: 12 + 8 + 18 + 22 + 30 = **90 ijsjes**.\n\n**toetsvraag-type 3**: *'Hoeveel meer op vrijdag dan op maandag?'*\n• Verschil: 30 − 12 = **18 ijsjes meer**.\n\n**Toets-tip — tabel vs grafiek**:\n• **Exact getal** = tabel makkelijker.\n• **Patroon zien** (stijgt het? daalt het?) = grafiek makkelijker.\n• Bij twijfel: maak even snel een staafje per dag op kladpapier.",
     checks: [
       {
-        q: "Tabel: ma 12, di 8, wo 18, do 22, vr 30 ijsjes. **Op welke dag minst** verkocht?",
+        q: "Een tabel met verkochte ijsjes: ma 12, di 8, wo 18, do 22, vr 30. Op welke dag zijn de **minste** ijsjes verkocht?",
         options: ["Dinsdag", "Maandag", "Woensdag", "Vrijdag"],
         answer: 0,
         wrongHints: [null, "Maandag 12 — er is een dag met een nog lager getal.", "Woensdag 18 — hoger dan een andere dag in de week.", "Vrijdag 30 — dat is juist het MEEST."],
@@ -1614,10 +1614,10 @@ const steps = [
         },
       },
       {
-        q: "Zelfde tabel. **Totaal ijsjes** hele week?",
+        q: "Zelfde tabel. Hoeveel ijsjes zijn er in de hele week **samen** verkocht?",
         options: ["90 ijsjes", "70 ijsjes", "60 ijsjes", "100 ijsjes"],
         answer: 0,
-        wrongHints: [null, "Te weinig — controleer optelling 12+8+18+22+30.", "Te weinig — niet alle 5 dagen meegeteld.", "Te veel — controleer."],
+        wrongHints: [null, "Te weinig — controleer optelling 12+8+18+22+30.", "Te weinig — niet alle 5 dagen meegeteld.", "Tel de vijf getallen nog eens één voor één op."],
         uitlegPad: {
           stappen: [
             { titel: "'Totaal' = alle 5 dagen optellen", tekst: "Het signaalwoord **'totaal'** vraagt om **alle waardes bij elkaar**. Bij week-tabel: tel alle 5 dagen op." },
@@ -1642,7 +1642,7 @@ const steps = [
         },
       },
       {
-        q: "Tabel: ma 12, di 8, wo 18, do 22, vr 30. **Hoeveel meer** op vr dan ma?",
+        q: "Zelfde tabel. Hoeveel ijsjes zijn er op vrijdag **meer** verkocht dan op maandag?",
         options: ["18 ijsjes", "42 ijsjes", "12 ijsjes", "30 ijsjes"],
         answer: 0,
         wrongHints: [null, "Te veel — dat is opgeteld. 'Meer' = aftrekken.", "Te weinig — dat is maandag zelf.", "Te veel — dat is vrijdag zelf."],
@@ -1915,10 +1915,10 @@ const steps = [
       "Mix-toets in Doorstroomtoets-stijl. Verschillende grafiek-types door elkaar. **Lees altijd eerst**: titel, eenheid, x-as, y-as. Dan pas de vraag beantwoorden.\n\nVeel succes!",
     checks: [
       {
-        q: "Staafdiagram regen-mm: jan 60, feb 80, mrt 40, apr 50. **Totaal regen-mm** in deze 4 maanden?",
+        q: "Een staafdiagram laat de regen in mm zien: jan 60, feb 80, mrt 40, apr 50. Hoeveel mm regen viel er in deze 4 maanden **samen**?",
         options: ["230 mm", "180 mm", "210 mm", "190 mm"],
         answer: 0,
-        wrongHints: [null, "Te weinig — controleer 60+80+40+50.", "Te weinig — heb je elke maand meegeteld?", "Te weinig — controleer optelling."],
+        wrongHints: [null, "Te weinig — controleer 60+80+40+50.", "Te weinig — heb je elke maand meegeteld?", "Tel nog eens: 60 + 80 is al 140."],
         uitlegPad: {
           stappen: [
             { titel: "'Totaal' = alle balken bij elkaar optellen", tekst: "Het woord **'totaal'** is een **signaalwoord voor +** (optellen). Bij staafdiagram: **alle balken bij elkaar** = totaal." },
@@ -1944,7 +1944,7 @@ const steps = [
         },
       },
       {
-        q: "Lijngrafiek baby-gewicht: bij geboorte 3 kg, na 3 maanden 6 kg. **Hoeveel kg aangekomen**?",
+        q: "Lijngrafiek baby-gewicht: bij geboorte 3 kg, na 3 maanden 6 kg. Hoeveel kg is de baby **aangekomen**?",
         options: ["3 kg", "6 kg", "9 kg", "2 kg"],
         answer: 0,
         wrongHints: [null, "Te veel — dat is alleen het eind-gewicht.", "Te veel — dat is opgeteld.", "Te weinig — lees het begin- en eindgewicht nog eens af."],
@@ -1972,10 +1972,10 @@ const steps = [
         },
       },
       {
-        q: "Taart: rood 25%, blauw 50%, geel 25%. Klas van **40** kinderen — hoeveel **blauw**?",
+        q: "Een taartdiagram over lievelingskleur: rood 25%, blauw 50%, geel 25%. De klas heeft **40** kinderen. Hoeveel kinderen kozen **blauw**?",
         options: ["20 kinderen", "50 kinderen", "10 kinderen", "40 kinderen"],
         answer: 0,
-        wrongHints: [null, "Te veel — kan niet meer dan klas-totaal.", "Te weinig — 50% is de helft. Helft van 40 = ?", "Te veel — dat is alle kinderen."],
+        wrongHints: [null, "Te veel — kan niet meer dan klas-totaal.", "Welk percentage hoort bij 10 van de 40 kinderen?", "Te veel — dat is alle kinderen."],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent 50%?", tekst: "**50%** = **de helft** van het totaal. Een **percentage** zegt: zoveel **van de 100** delen.\n• 50% = 50 van de 100 = **helft**\n• 25% = 25 van de 100 = **kwart**\n• 100% = alles" },
@@ -2002,7 +2002,7 @@ const steps = [
         },
       },
       {
-        q: "Staafdiagram huisdieren: hond 12, kat 18, vogel 4, vis 6. **Welk dier komt het minst voor**?",
+        q: "Een staafdiagram over huisdieren in de klas: hond 12, kat 18, vogel 4, vis 6. Welk dier komt het **minst** voor?",
         options: ["Vogel", "Hond", "Kat", "Vis"],
         answer: 0,
         wrongHints: [null, "Hond is 12 — niet de minste.", "Kat is 18 — dat is juist de MEESTE.", "Vis is 6 — er is nog een dier dat minder voorkomt."],
@@ -2031,10 +2031,10 @@ const steps = [
         },
       },
       {
-        q: "Lijngrafiek temperatuur. Bij de Doorstroomtoets staat een **stijgende** lijn. Wat betekent dat?",
-        options: ["Het wordt warmer", "Het wordt kouder", "Niets verandert", "De thermometer is stuk"],
+        q: "Bij de Doorstroomtoets zie je een lijngrafiek van de temperatuur met een **stijgende** lijn. Wat betekent dat?",
+        options: ["Het wordt warmer", "Het wordt kouder", "Niets verandert", "Het is het warmste moment"],
         answer: 0,
-        wrongHints: [null, "Kouder = lijn omlaag.", "Niets = vlakke lijn.", "Niet zonder reden te zeggen — neem aan dat de grafiek klopt."],
+        wrongHints: [null, "Kouder = lijn omlaag.", "Niets = vlakke lijn.", "Een stijgende lijn zegt hoe het verandert. Het hoogste punt is iets anders."],
         uitlegPad: {
           stappen: [
             { titel: "'Stijgend' = omhoog = MEER", tekst: "Het woord **stijgend** komt van **'stijgen'** = omhoog gaan. Een stijgende lijn op een grafiek = **lijn gaat omhoog** = waarde wordt **groter**." },
@@ -2060,10 +2060,10 @@ const steps = [
         },
       },
       {
-        q: "Tabel verkoop koekjes ma-vr: 5, 7, 9, 11, 13. **Patroon**?",
-        options: ["Elke dag 2 meer", "Elke dag 3 meer", "Het neemt af", "Wisselt willekeurig"],
+        q: "Een tabel met verkochte koekjes van maandag tot vrijdag: 5, 7, 9, 11, 13. Welk **patroon** zie je?",
+        options: ["Elke dag 2 meer", "Elke dag 3 meer", "Elke dag 2 minder", "Elke dag 5 meer"],
         answer: 0,
-        wrongHints: [null, "Te veel — trek twee opeenvolgende dagen van elkaar af en kijk of dat steeds hetzelfde getal is.", "Het stijgt juist, niet daalt.", "Er zit een vast verschil — kijk goed."],
+        wrongHints: [null, "Te veel — trek twee opeenvolgende dagen van elkaar af en kijk of dat steeds hetzelfde getal is.", "Wordt het getal elke dag groter of kleiner?", "Is 5 het verschil tussen twee dagen, of het eerste getal?"],
         uitlegPad: {
           stappen: [
             { titel: "Verschil per stap", tekst: "Ma → di: 7 − 5 = 2. Di → wo: 9 − 7 = 2. Telkens +2." },
@@ -2080,21 +2080,21 @@ const steps = [
         },
       },
       { q: "Een taartdiagram laat zien: 50% rood, 25% blauw, 25% geel. Welke kleur heeft de grootste taartpunt?", options: ["Rood","Blauw","Geel","Allemaal even groot"], answer: 0, wrongHints: [null, "Dat is maar een kwart.", "Dat is ook maar een kwart.", "25% en 50% zijn verschillend."] },
-      { q: "Een **staafdiagram** is best voor?", options: ["Vergelijken van categorieën","Verloop in tijd","Verdeling van een geheel","Patroon"], answer: 0, wrongHints: [null, "Dat is lijngrafiek.", "Dat is taart.", "Dat is grafiek-trend."] },
-      { q: "Een **lijngrafiek** is best voor?", options: ["Verloop in tijd","Categorieën","Verdeling","Aantal per type"], answer: 0, wrongHints: [null, "Dat is staaf.", "Dat is taart.", "Dat is staaf."] },
-      { q: "Een **taartdiagram** is best voor?", options: ["Verdeling van een geheel","Verloop in tijd","Categorieën los","Patroon"], answer: 0, wrongHints: [null, "Dat is lijn.", "Dat is staaf.", "Niet."] },
-      { q: "Op de **x-as** staan meestal?", options: ["Tijd of categorie","Aantal","Frequentie","Totaal"], answer: 0, wrongHints: [null, "Dat is y-as.", "Y-as.", "Y-as."] },
-      { q: "Op de **y-as** staat meestal?", options: ["Aantal / hoeveelheid","De tijd / de jaren","Categorie / soort","Titel van de grafiek"], answer: 0, wrongHints: [null, "Op x-as.", "Op x-as.", "De titel staat bovenaan de grafiek."] },
-      { q: "Een **legenda** in grafiek toont?", options: ["Wat de kleuren/lijnen betekenen","De titel van de hele grafiek","Het totaal van alle getallen","Welke stappen de schaal maakt"], answer: 0, wrongHints: [null, "De titel staat bovenaan. Waar is een legenda voor?", "Een legenda telt niets op.", "De schaal staat langs de as, niet in de legenda."] },
-      { q: "Bij een **lijngrafiek**: stijgende lijn = ?", options: ["Toename","Afname","Geen verandering","Patroon herhalend"], answer: 0, wrongHints: [null, "Andersom.", "Vlakke lijn.", "Niet."] },
-      { q: "Welke grafiek bij **'4 leerlingen kiezen voetbal, 6 hockey, 2 zwemmen'**?", options: ["Staafdiagram","Lijngrafiek","Tijdslijn","Geen"], answer: 0, wrongHints: [null, "Niet tijd.", "Niet relevant.", "Wel."] },
-      { q: "Welke grafiek bij **'temperatuur per uur'**?", options: ["Lijngrafiek","Taart","Staaf","Schema"], answer: 0, wrongHints: [null, "Niet verdeling.", "Soms maar niet beste.", "Niet grafiek."] },
-      { q: "Bij **'totaal 100%' verdeling** kies je?", options: ["Taartdiagram","Lijn","Tijdslijn","Boom"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet grafiek voor data."] },
-      { q: "In een **tabel** met cijferresultaten: hoeveel cellen heeft 'naam + 3 vakken' voor 1 leerling?", options: ["4","3","1","2"], answer: 0, wrongHints: [null, "Vergeet naam.", "Te weinig.", "Te weinig."] },
-      { q: "Een **x-as-titel** beschrijft wat?", options: ["Wat er op de x-as gemeten wordt","Het totaal van alle getallen","Wat de kleuren betekenen","Hoe groot de stappen zijn"], answer: 0, wrongHints: [null, "Een titel telt niets op.", "Dat doet de legenda.", "Dat zie je aan de schaal."] },
-      { q: "Bij **schaal-aanpassing** kun je een grafiek?", options: ["Misleidend maken","Onmogelijk maken","Alleen mooier maken","Niet veranderen"], answer: 0, wrongHints: [null, "Niet — wel mogelijk.", "Niet alleen mooi.", "Niet — wel verandering."] },
-      { q: "**Trend** in lijngrafiek = ?", options: ["Algemene richting","1 punt","Titel","Schaal"], answer: 0, wrongHints: [null, "Niet de richting.", "Niet inhoud.", "Niet richting."] },
-      { q: "Welk grafiek-type voor **'sterren-positie'** verspreid op vlak?", options: ["Verspreidingsdiagram","Lijndiagram door de tijd","Taartdiagram in procenten","Tabel met getallen"], answer: 0, wrongHints: [null, "Een lijndiagram volgt iets door de tijd. Staan sterren op een lijn?", "Een taartdiagram toont delen van een geheel.", "Een tabel is geen grafiek."] },
+      { q: "Waarvoor is een **staafdiagram** het best?", options: ["Aantallen van groepen vergelijken","Een verandering door de tijd volgen","Delen van één geheel laten zien","Precieze getallen in rijen opzoeken"], answer: 0, wrongHints: [null, "Heeft een staafdiagram een lijn die door de tijd loopt?", "Zie je bij losse balken in één keer welk deel van het geheel iets is?", "Zoek je bij balken precieze getallen op, of vergelijk je hoe hoog ze zijn?"] },
+      { q: "Waarvoor is een **lijngrafiek** het best?", options: ["Een verandering door de tijd volgen","Aantallen van groepen vergelijken","Delen van één geheel laten zien","Precieze getallen in rijen opzoeken"], answer: 0, wrongHints: [null, "Vergelijk je met een lijn losse groepen, of volg je één ding van punt naar punt?", "Laat een lijn zien welk deel van een geheel iets is?", "Lees je bij een lijn vooral precieze getallen af, of zie je stijgen en dalen?"] },
+      { q: "Waarvoor is een **taartdiagram** het best?", options: ["Delen van één geheel laten zien","Een verandering door de tijd volgen","Aantallen van groepen vergelijken","Precieze getallen in rijen opzoeken"], answer: 0, wrongHints: [null, "Kan een cirkel laten zien hoe iets verandert door de tijd?", "Zie je bij taartpunten losse aantallen, of hoe groot elk stuk is?", "Staan er in een taartdiagram rijen met getallen?"] },
+      { q: "Wat staat er meestal op de **x-as** (onderaan)?", options: ["De tijd of de groepen","Het aantal of de hoeveelheid","De titel en de eenheid","De kleuren van de legenda"], answer: 0, wrongHints: [null, "Denk aan een staafdiagram: wat staat er onder elke balk?", "De titel staat bovenaan de grafiek.", "De legenda staat in een apart hokje."] },
+      { q: "Wat staat er meestal op de **y-as** (zijkant)?", options: ["Het aantal of de hoeveelheid","De tijd of de jaren","De groepen of de soorten","De titel en de eenheid"], answer: 0, wrongHints: [null, "Denk aan een lijngrafiek: waar lees je af hoe hoog een punt is?", "Denk aan een staafdiagram: wat lees je af naast de bovenkant van een balk?", "De titel staat bovenaan de grafiek."] },
+      { q: "Wat laat de **legenda** van een grafiek zien?", options: ["Wat de kleuren/lijnen betekenen","De titel van de hele grafiek","Het totaal van alle getallen","Welke stappen de schaal maakt"], answer: 0, wrongHints: [null, "De titel staat bovenaan. Waar is een legenda voor?", "Een legenda telt niets op.", "De schaal staat langs de as, niet in de legenda."] },
+      { q: "Wat betekent een **stijgende** lijn in een lijngrafiek?", options: ["Het wordt meer","Het wordt minder","Het blijft gelijk","Het gaat op en neer"], answer: 0, wrongHints: [null, "Gaat een stijgende lijn omhoog of omlaag?", "Dat hoort bij een vlakke lijn. Is deze lijn vlak?", "Dan zie je pieken en dalen. Gaat deze lijn steeds dezelfde kant op?"] },
+      { q: "Welke grafiek past het best bij **'4 leerlingen kiezen voetbal, 6 hockey, 2 zwemmen'**?", options: ["Staafdiagram","Lijngrafiek","Tijdlijn","Plattegrond"], answer: 0, wrongHints: [null, "Een lijn volgt iets door de tijd. Gaat het hier over tijd?", "Een tijdlijn zet gebeurtenissen op volgorde van jaartal. Zie je hier jaartallen?", "Een plattegrond laat zien waar dingen liggen. Gaat het hier om plekken?"] },
+      { q: "Welke grafiek past het best bij **'temperatuur per uur'**?", options: ["Lijngrafiek","Taartdiagram","Staafdiagram","Tijdlijn"], answer: 0, wrongHints: [null, "Zijn de temperaturen delen van één geheel?", "Dat kan, maar wat laat beter zien hoe het van uur tot uur verandert?", "Een tijdlijn zet gebeurtenissen op volgorde. Zie je daarop ook hoe warm het was?"] },
+      { q: "Je wilt laten zien hoe **100%** verdeeld is over een paar groepen. Welke grafiek kies je?", options: ["Taartdiagram","Lijngrafiek","Tijdlijn","Plattegrond"], answer: 0, wrongHints: [null, "Laat een lijn delen van een geheel zien?", "Gaat het hier om jaartallen op volgorde?", "Een plattegrond laat zien waar dingen liggen. Gaat het hier om plekken?"] },
+      { q: "Een tabel met cijfers heeft per leerling een vakje voor de naam en een vakje voor elk van 3 schoolvakken. Hoeveel vakjes heeft de rij van 1 leerling?", options: ["4","3","1","2"], answer: 0, wrongHints: [null, "Heb je het vakje voor de naam ook geteld?", "Elk schoolvak krijgt een eigen vakje. Tel ze nog eens.", "Tel de naam en elk schoolvak apart."] },
+      { q: "Wat vertelt de **titel bij de x-as**?", options: ["Waar de getallen onderaan over gaan","Het totaal van alle getallen","Wat de kleuren en lijnen betekenen","Hoe groot de stappen op de as zijn"], answer: 0, wrongHints: [null, "Een titel telt niets op.", "Daarvoor is een apart hokje naast de grafiek.", "Dat zie je aan de schaal."] },
+      { q: "Wat kun je doen door de **schaal** van een grafiek aan te passen?", options: ["Verschillen groter laten lijken","De getallen zelf groter maken","Van een staaf een lijn maken","De volgorde van de balken wisselen"], answer: 0, wrongHints: [null, "De getallen blijven gelijk. Wat verandert er wel aan hoe het eruitziet?", "Dan kies je een ander soort grafiek. De schaal gaat over de stappen langs de as.", "Dat verandert de volgorde, niet de stappen langs de as."] },
+      { q: "Wat is de **trend** in een lijngrafiek?", options: ["De richting van de hele lijn","Het hoogste punt van de lijn","Het laatste punt van de lijn","De stappen langs de as"], answer: 0, wrongHints: [null, "Zegt het hoogste punt waar de lijn naartoe gaat?", "Het laatste punt is maar één moment. Zegt dat genoeg?", "Dat is de schaal."] },
+      { q: "Je tekent waar sterren aan de hemel staan, elke ster op zijn eigen plek. Welk soort grafiek is dat?", options: ["Spreidingsdiagram met punten","Lijndiagram door de tijd","Taartdiagram in procenten","Tabel met rijen en kolommen"], answer: 0, wrongHints: [null, "Een lijndiagram volgt iets door de tijd. Staan sterren op een lijn?", "Een taartdiagram toont delen van een geheel.", "Een tabel is geen grafiek."] },
     ],
   },
 ];

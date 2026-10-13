@@ -68,7 +68,7 @@ const steps = [
         q: "Schaal 1 : 50.000 — 1 cm op de kaart is hoeveel meter in het echt?",
         options: ["500 m", "50 m", "5.000 m", "5 m"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 50.000 cm is meer dan 50 m.", "Te veel — reken cm naar m terug.", "Veel te weinig."],
+        wrongHints: [null, "Te weinig — 50.000 cm is meer dan 50 m.", "Te veel — reken cm naar m terug.", "Hoeveel cm is 5 m? Is dat 50.000 cm?"],
         uitlegPad: {
           stappen: [
             { titel: "Eerst naar centimeter", tekst: "Bij schaal 1 : 50.000 hoort bij elke centimeter op de kaart vijftigduizend centimeter in het echt." },
@@ -298,7 +298,7 @@ const steps = [
         q: "Schaal 1 : 100.000. Op de kaart 4 cm. Hoeveel km in het echt?",
         options: ["4 km", "40 km", "40 m", "0,4 km"],
         answer: 0,
-        wrongHints: [null, "Te veel — reken cm goed naar km.", "Te weinig.", "Te weinig — het is meerdere kilometers."],
+        wrongHints: [null, "Te veel — reken cm goed naar km.", "40 m is maar 4.000 cm. Hoeveel cm is 4 × 100.000?", "Te weinig — het is meerdere kilometers."],
         uitlegPad: {
           stappen: [
             { titel: "Vermenigvuldig met het schaalgetal", tekst: "Neem de kaart-afstand keer honderdduizend om de echte afstand in centimeter te vinden." },
@@ -319,7 +319,7 @@ const steps = [
         q: "Schaal 1 : 50.000. Op de kaart 2 cm. Hoeveel km in het echt?",
         options: ["1 km", "2 km", "0,5 km", "10 km"],
         answer: 0,
-        wrongHints: [null, "Te veel — bij 1 : 50.000 is 1 cm géén hele km.", "Net niet — 0,5 km hoort bij 1 cm op de kaart. Hoeveel cm staat er?", "Veel te veel."],
+        wrongHints: [null, "Te veel — bij 1 : 50.000 is 1 cm géén hele km.", "Hoort 0,5 km bij 1 cm of bij 2 cm op de kaart?", "Hoeveel km hoort bij 1 cm op deze kaart? Is dat 5 km?"],
         uitlegPad: {
           stappen: [
             { titel: "Vermenigvuldig eerst in centimeter", tekst: "Neem de kaart-afstand keer vijftigduizend om de echte afstand in centimeter te krijgen." },
@@ -688,7 +688,7 @@ const steps = [
         q: "Schaal 1 : 50.000. Twee dorpen liggen 10 km uit elkaar. Hoe ver is dat op de kaart?",
         options: ["20 cm", "10 cm", "2 cm", "100 cm"],
         answer: 0,
-        wrongHints: [null, "Te weinig — bij 1 : 50.000 hoort 1 km niet bij 1 cm.", "Te klein — hoeveel cm zijn 10 km?", "Veel te veel."],
+        wrongHints: [null, "Te weinig — bij 1 : 50.000 hoort 1 km niet bij 1 cm.", "Te klein — hoeveel cm zijn 10 km?", "Hoeveel km hoort bij 1 cm op deze kaart? Hoeveel cm heb je dan nodig voor 10 km?"],
         uitlegPad: {
           stappen: [
             { titel: "Eerst naar centimeter", tekst: "Zet de tien kilometer om naar centimeter, zodat je met het schaalgetal kunt rekenen." },
@@ -995,7 +995,7 @@ const steps = [
         q: "Op een kaart (schaal 1 : 100.000) is een rivier 3,5 cm lang. Hoe lang is de rivier echt?",
         options: ["3,5 km", "35 km", "0,35 km", "350 km"],
         answer: 0,
-        wrongHints: [null, "Te veel — hoeveel km hoort bij 1 cm op deze kaart?", "Te weinig — reken de schaalfactor goed.", "Veel te veel."],
+        wrongHints: [null, "Te veel — hoeveel km hoort bij 1 cm op deze kaart?", "Te weinig — reken de schaalfactor goed.", "Hoeveel km hoort bij 1 cm op deze kaart? Kom je met 3,5 cm dan op honderden km?"],
         uitlegPad: {
           stappen: [
             { titel: "De vuistregel bij deze schaal", tekst: "Bij schaal 1 : 100.000 komt elke centimeter op de kaart overeen met één kilometer in het echt." },
@@ -1013,7 +1013,7 @@ const steps = [
         },
       },
       {
-        q: "Een tuin is in het echt 15 m breed. Op de bouwtekening (schaal 1 : 500) is hij op de kaart … breed.",
+        q: "Een tuin is in het echt 15 m breed. Hoe breed is hij op de bouwtekening (schaal 1 : 500)?",
         options: ["3 cm", "30 cm", "0,3 cm", "15 cm"],
         answer: 0,
         wrongHints: [null, "Te veel — hoeveel cm is 15 m precies?", "Te klein — je deelde door een te groot getal.", "Dat is de echte breedte in meter, niet de kaart-breedte."],
@@ -1034,15 +1034,15 @@ const steps = [
         },
       },
       {
-        q: "Welke stap doe je ALTIJD als eerste bij een schaalvraag?",
+        q: "Welke stap doe je **als eerste** bij een schaalvraag?",
         options: [
-          "Bepalen of je van kaart naar echt rekent of andersom",
-          "Het antwoord meteen omzetten naar km",
-          "Altijd delen door het schaalgetal",
-          "Altijd vermenigvuldigen met het schaalgetal",
+          "Bepalen welke kant je op rekent",
+          "Het antwoord omzetten naar km",
+          "Delen door het schaalgetal",
+          "Vermenigvuldigen met het schaalgetal",
         ],
         answer: 0,
-        wrongHints: [null, "Omzetten naar km is pas de laatste stap — wat moet je éérst weten?", "Delen is alleen voor echt → kaart.", "Vermenigvuldigen is alleen voor kaart → echt."],
+        wrongHints: [null, "Omzetten naar km is pas de laatste stap. Wat moet je éérst weten?", "Deel je ook als je van de kaart naar het echt rekent?", "Vermenigvuldig je ook als je van het echt naar de kaart rekent?"],
         uitlegPad: {
           stappen: [
             { titel: "Denk aan de twee richtingen", tekst: "Bij elke schaalvraag kun je maar twee kanten op: van de kaart naar de werkelijkheid, of van de werkelijkheid naar de kaart." },
@@ -1063,7 +1063,7 @@ const steps = [
         q: "Schaal 1 : 10. Een maquette van een huis is 30 cm breed. Hoe breed is het echte huis?",
         options: ["3 m", "30 m", "0,3 m", "300 m"],
         answer: 0,
-        wrongHints: [null, "Te veel — hoeveel cm gaan er in 1 m?", "Te klein — vergeet niet te vermenigvuldigen met 10.", "Veel te groot."],
+        wrongHints: [null, "Te veel — hoeveel cm gaan er in 1 m?", "Te klein — vergeet niet te vermenigvuldigen met 10.", "Hoeveel cm is 300 m? Is dat 30 × 10?"],
         uitlegPad: {
           stappen: [
             { titel: "Bepaal de richting", tekst: "De maquette is de kaart-kant, dus je gaat van de kaart naar het echt en vermenigvuldig je." },
