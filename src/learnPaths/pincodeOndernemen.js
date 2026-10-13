@@ -456,9 +456,9 @@ const steps = [
       },
       {
         q: "**Brutowinstmarge** voor een friet van €5 met inkoop €1,50?",
-        options: ["70%", "30%", "350%", "100%"],
+        options: ["70%", "30%", "233%", "100%"],
         answer: 0,
-        wrongHints: [null, "Dat is de inkoopprijs als percentage van de verkoopprijs.", "Een marge kan niet boven 100% van de verkoopprijs liggen — deel door de verkoopprijs.", "Verkoopprijs zelf is niet de marge."],
+        wrongHints: [null, "Dat is de inkoopprijs als percentage van de verkoopprijs.", "Je deelde de brutowinst door de inkoopprijs — dat is de opslag. Door welk bedrag deel je bij een marge?", "Verkoopprijs zelf is niet de marge."],
         uitlegPad: {
           stappen: [{ titel: "Marge-formule", tekst: "Brutowinstmarge = (verkoopprijs − inkoopprijs) / verkoopprijs × 100%. Hier: (5 − 1,50) / 5 = 3,50/5 = 0,70 = 70%." }],
           woorden: [{ woord: "brutowinstmarge", uitleg: "Percentage van de verkoopprijs dat overblijft na inkoop (vóór vaste kosten + belasting)." }],
@@ -470,9 +470,9 @@ const steps = [
       },
       {
         q: "Wat is **omzet**?",
-        options: ["Aantal × prijs", "Winst min belasting", "Wat de ondernemer overhoudt", "De vaste kosten"],
+        options: ["Aantal × prijs", "Prijs − inkoopprijs", "Wat de ondernemer overhoudt", "Aantal × inkoopprijs"],
         answer: 0,
-        wrongHints: [null, "Winst is iets anders.", "Dat is netto winst, niet omzet.", "Vaste kosten zijn input, geen omzet."],
+        wrongHints: [null, "Dat is wat je per stuk verdient (brutowinst). Omzet is wat er in totaal binnenkomt.", "Wat je overhoudt is de winst. Omzet is wat er binnenkomt vóórdat je kosten aftrekt.", "Dat is wat je zelf aan inkoop betaalt. Wat betalen de klanten jou?"],
         uitlegPad: {
           stappen: [{ titel: "Verkoop totaal", tekst: "Omzet = aantal verkochte stuks × prijs per stuk. Het TOTAAL aan geld dat binnenkomt door verkoop." }],
           woorden: [{ woord: "omzet", uitleg: "Totaal verkoopbedrag in een periode. Voor kosten worden afgetrokken." }, { woord: "winst", uitleg: "Omzet minus kosten. Wat je overhoudt." }],
@@ -507,7 +507,7 @@ const steps = [
         q: "**Wet van de vraag**: bij hogere prijs willen kopers...",
         options: ["Minder kopen", "Meer kopen", "Hetzelfde kopen", "Sneller kopen"],
         answer: 0,
-        wrongHints: [null, "Denk aan jezelf: als je favoriete snack duurder wordt, koop je er dan meer van?", "Wel verandering.", "Niet relevant."],
+        wrongHints: [null, "Denk aan jezelf: als je favoriete snack duurder wordt, koop je er dan meer van?", "Merk je het als iets duurder wordt? Wat doe je dan met de hoeveelheid die je koopt?", "Het gaat om hóéveel mensen kopen, niet om hoe snel."],
         uitlegPad: {
           stappen: [{ titel: "Duurder = minder", tekst: "Wet van de vraag: hoe HOGER de prijs, hoe MINDER kopers willen kopen. Logisch — meer geld nodig voor zelfde aantal." }],
           woorden: [{ woord: "vraag", uitleg: "Hoeveelheid die kopers willen kopen tegen een bepaalde prijs." }, { woord: "vraagcurve", uitleg: "Lijn die laat zien hoe vraag verandert bij verschillende prijzen. Loopt van linksboven naar rechtsbeneden." }],
@@ -519,9 +519,9 @@ const steps = [
       },
       {
         q: "**Wet van het aanbod**: bij hogere prijs willen verkopers...",
-        options: ["Meer leveren", "Minder leveren", "Hetzelfde", "Stoppen met leveren"],
+        options: ["Meer leveren", "Minder leveren", "Hetzelfde leveren", "Stoppen met leveren"],
         answer: 0,
-        wrongHints: [null, "Als je voor elk product meer krijgt, wil je er dan minder van verkopen?", "Wel verandering.", "Waarom zou een verkoper stoppen als hij meer kan verdienen?"],
+        wrongHints: [null, "Als je voor elk product meer krijgt, wil je er dan minder van verkopen?", "Als je meer kunt verdienen, blijf je dan gewoon evenveel maken?", "Waarom zou een verkoper stoppen als hij meer kan verdienen?"],
         uitlegPad: {
           stappen: [{ titel: "Hogere prijs = grotere winst", tekst: "Wet van het aanbod: hoe HOGER de prijs, hoe MEER verkopers willen leveren. Hogere prijs → meer winst per stuk → loont om meer te produceren." }],
           woorden: [{ woord: "aanbod", uitleg: "Hoeveelheid die verkopers willen LEVEREN tegen een bepaalde prijs." }, { woord: "aanbodcurve", uitleg: "Loopt van linksbeneden naar rechtsboven. Hogere prijs = meer aanbod." }],
