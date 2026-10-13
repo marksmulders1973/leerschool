@@ -33,7 +33,7 @@ const steps = [
         q: "Wat is ∫ **x² dx**?",
         options: ["x³/3 + C","2x + C","x²/2 + C","x³ + C"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is afgeleide.", "Verkeerde noemer.", "Niet — differentieer je antwoord: krijg je x² terug?"],
+        wrongHints: [null, "2x is de afgeleide van x². Je zoekt juist een functie waarvan x² de afgeleide is.", "Je deelde door de oude exponent. Wordt de exponent bij primitiveren 2 of 3, en waardoor deel je dan?", "Niet — differentieer je antwoord: krijg je x² terug?"],
         uitlegPad: {
           stappen: [{ titel: "Macht-regel", tekst: "∫ x^n dx = **x^(n+1) / (n+1) + C**. Hier n=2 → x³/3 + C. Check: d/dx(x³/3) = 3x²/3 = x². ✓" }],
           theorie: "Voor ∫ x^n: macht +1, gedeeld door nieuwe macht. Spiegelt differentiatie-regel.",
@@ -42,9 +42,9 @@ const steps = [
       },
       {
         q: "Wat is ∫ **6x dx**?",
-        options: ["3x² + C","6x² + C","6 + C","x² + 6 + C"],
+        options: ["3x² + C","6x² + C","6 + C","12x² + C"],
         answer: 0,
-        wrongHints: [null, "Niet — differentieer je antwoord: krijg je 6x terug?", "Niet — dat is afgeleide-achtig.", "Niet correct."],
+        wrongHints: [null, "Niet — differentieer je antwoord: krijg je 6x terug?", "6 is de afgeleide van 6x, niet de primitieve. Gaat de exponent bij primitiveren omhoog of omlaag?", "Je vermenigvuldigde met de nieuwe exponent 2 in plaats van erdoor te delen. Differentieer 12x²: krijg je 6x terug?"],
         uitlegPad: {
           stappen: [{ titel: "Constante voor integraal", tekst: "∫ 6x dx = 6 · ∫ x dx = 6 · x²/2 + C = **3x² + C**. Check: d/dx(3x²) = 6x. ✓" }],
           niveaus: { basis: "3x² + C.", simpeler: "6·x²/2 = 3x² + C", nogSimpeler: "3x²+C" },
@@ -54,7 +54,7 @@ const steps = [
         q: "Wat is ∫ **sin(x) dx**?",
         options: ["−cos(x) + C","cos(x) + C","−sin(x) + C","tan(x) + C"],
         answer: 0,
-        wrongHints: [null, "Niet — differentieer je antwoord: krijg je sin(x) terug?", "Niet — dat is de afgeleide van cos(x).", "Niet — andere functie."],
+        wrongHints: [null, "Niet — differentieer je antwoord: krijg je sin(x) terug?", "Niet — dat is de afgeleide van cos(x).", "Differentieer tan(x): krijg je sin(x) terug? Welke functie heeft ±sin(x) als afgeleide?"],
         uitlegPad: {
           stappen: [{ titel: "Goniometrische tabel", tekst: "**∫ sin(x) dx = −cos(x) + C**. Reden: d/dx(−cos x) = −(−sin x) = sin x. ✓\n\nVergelijk: ∫ cos(x) dx = sin(x) + C (zonder min)." }],
           theorie: "Toets-favoriet-val: min-teken vergeten. Onthoud: sin → −cos, cos → +sin.",
@@ -65,7 +65,7 @@ const steps = [
         q: "Wat is ∫ **1/x dx**?",
         options: ["ln|x| + C","1/x² + C","−1/x + C","x + C"],
         answer: 0,
-        wrongHints: [null, "Niet — differentieer je antwoord: krijg je 1/x terug?", "Niet correct.", "Niet — niet via macht-regel hier."],
+        wrongHints: [null, "Niet — differentieer je antwoord: krijg je 1/x terug?", "Differentieer −1/x: je krijgt 1/x², niet 1/x. Welke functie heeft 1/x als afgeleide?", "Differentieer x: dan krijg je 1, niet 1/x. De machtsregel werkt niet bij x⁻¹; welke functie heeft wel 1/x als afgeleide?"],
         uitlegPad: {
           stappen: [{ titel: "Uitzondering n=−1", tekst: "Bij ∫ x^n dx geldt **n ≠ −1**. Voor n=−1 (oftewel 1/x): **∫ 1/x dx = ln|x| + C**. Absolute waarde omdat ln voor negatieve waarden niet bestaat." }],
           theorie: "Onthoud uit hoofd: e^x → e^x, 1/x → ln|x|, sin → −cos, cos → sin.",
@@ -74,9 +74,9 @@ const steps = [
       },
       {
         q: "Wat is ∫ **e^x dx**?",
-        options: ["e^x + C","e^(x+1)/(x+1) + C","x·e^x + C","ln(e^x) + C"],
+        options: ["e^x + C","e^(x+1)/(x+1) + C","x·e^x + C","ln(x) + C"],
         answer: 0,
-        wrongHints: [null, "Niet — macht-regel werkt niet voor e^x.", "Verkeerde regel.", "Niet zinvol."],
+        wrongHints: [null, "Dit is de machtsregel, maar die werkt alleen als x het grondtal is. Hier staat x in de exponent: wat is de afgeleide van e^x?", "Differentieer x·e^x met de productregel: krijg je precies e^x terug, of komt er iets bij?", "ln(x) is de primitieve van 1/x. Differentieer ln(x): krijg je e^x terug?"],
         uitlegPad: {
           stappen: [{ titel: "e blijft e", tekst: "**∫ e^x dx = e^x + C**. Speciaal: e^x is z'n eigen afgeleide EN primitieve. Uit je hoofd kennen." }],
           niveaus: { basis: "e^x + C.", simpeler: "e^x → e^x", nogSimpeler: "e^x+C" },
@@ -95,7 +95,7 @@ const steps = [
         q: "Bereken **∫[0 tot 3] 2x dx**.",
         options: ["9","6","3","18"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer F(b)−F(a).", "Niet — dat is alleen de bovengrens.", "Niet — te groot."],
+        wrongHints: [null, "6 is 2 · 3: je vulde de grens in 2x zelf in. Welke primitieve F(x) hoort bij 2x?", "3 is alleen de bovengrens. Zoek eerst de primitieve van 2x en vul daar de grenzen in.", "18 = 2 · 3²: je vergat bij het primitiveren door de nieuwe exponent te delen. Differentieer je F(x) eens."],
         uitlegPad: {
           stappen: [{ titel: "F(b)−F(a)", tekst: "∫ 2x dx = x². ∫[0,3] 2x dx = [x²] van 0 tot 3 = 3² − 0² = **9**." }],
           theorie: "Eerst primitieve, dan invullen b en a, dan aftrekken.",
@@ -117,7 +117,7 @@ const steps = [
         q: "Oppervlakte tussen **f(x)=x²** (onder) en **g(x)=2x** (boven) op interval waar ze elkaar omsluiten:\n\nSnijpunten?",
         options: ["x = 0 en x = 2","x = 1 en x = 2","x = 0 en x = 4","x = −2 en x = 0"],
         answer: 0,
-        wrongHints: [null, "Niet — stel de twee functies gelijk aan elkaar en los op.", "Niet — er is een andere oplossing; check de vergelijking nogmaals.", "Vul x = −2 in: is (−2)² gelijk aan 2 · (−2)?"],
+        wrongHints: [null, "Vul x = 1 in: is 1² gelijk aan 2 · 1?", "Vul x = 4 in: is 4² gelijk aan 2 · 4?", "Vul x = −2 in: is (−2)² gelijk aan 2 · (−2)?"],
         uitlegPad: {
           stappen: [{ titel: "Snijpunten = vergelijk", tekst: "x² = 2x → x² − 2x = 0 → **x(x−2) = 0** → x=0 of x=2. Dit zijn de grenzen van het ingesloten gebied." }],
           niveaus: { basis: "x=0 en x=2.", simpeler: "x²=2x → x=0,2", nogSimpeler: "0,2" },
@@ -127,7 +127,7 @@ const steps = [
         q: "Oppervlakte tussen **f(x)=2x** en **g(x)=x²** op [0,2] (boven minus onder)?",
         options: ["4/3","2","8/3","4"],
         answer: 0,
-        wrongHints: [null, "Niet — meer rekenen.", "Niet — alleen één term.", "Niet — alleen boven."],
+        wrongHints: [null, "Hoe kom je op 2? Bereken ∫ 2x dx en ∫ x² dx op [0, 2] apart en trek ze van elkaar af.", "8/3 is alleen de oppervlakte onder x². Wat moet je nog met de oppervlakte onder 2x doen?", "4 is alleen de oppervlakte onder 2x. Welk stuk moet je daar nog van aftrekken?"],
         uitlegPad: {
           stappen: [{ titel: "Opp = ∫(boven−onder)", tekst: "Op [0,2]: 2x ≥ x² (lineair boven parabool). Oppervlakte = ∫[0,2] (2x − x²) dx = [x² − x³/3] van 0 tot 2 = (4 − 8/3) − 0 = **12/3 − 8/3 = 4/3**." }],
           theorie: "Patroon: snijpunten → 'boven minus onder' → integraal nemen.",
@@ -157,7 +157,7 @@ const steps = [
         q: "Bij ∫ **2x · cos(x²) dx** — welke techniek?",
         options: ["Substitutie u=x²","Partiële integratie","Direct macht-regel","Niet integreerbaar"],
         answer: 0,
-        wrongHints: [null, "Kijk eerst: is 2x precies de afgeleide van het binnenste deel x²? Dan is er een snellere techniek.", "Niet — kettingvorm aanwezig.", "Wel — via substitutie."],
+        wrongHints: [null, "Kijk eerst: is 2x precies de afgeleide van het binnenste deel x²? Dan is er een snellere techniek.", "Er staat een functie in een functie: cos(x²). Werkt de machtsregel daar direct?", "Zie je de afgeleide van x² ergens als factor in de integraal staan? Dat maakt hem juist goed te primitiveren."],
         uitlegPad: {
           stappen: [{ titel: "Substitutie-cue: f(g(x))·g'(x)", tekst: "**Substitutie**. u=x², du=2x dx. ∫ 2x·cos(x²) dx → ∫ cos(u) du = sin(u) + C = **sin(x²) + C**. De 2x naast cos(x²) is de afgeleide van het binnen-deel x². Klassieke substitutie-vorm." }],
           niveaus: { basis: "Substitutie u=x².", simpeler: "2x·cos(x²) = substitutie", nogSimpeler: "Subst" },
@@ -167,7 +167,7 @@ const steps = [
         q: "Wat is ∫ **e^(2x) dx**?",
         options: ["e^(2x)/2 + C","e^(2x) + C","2·e^(2x) + C","e^x + C"],
         answer: 0,
-        wrongHints: [null, "Niet — differentieer je antwoord: de kettingregel geeft een extra factor.", "Niet — dat is afgeleide.", "Niet — andere functie."],
+        wrongHints: [null, "Niet — differentieer je antwoord: de kettingregel geeft een extra factor.", "2·e^(2x) is de afgeleide van e^(2x). Moet je bij primitiveren met 2 vermenigvuldigen of door 2 delen?", "Differentieer e^x: krijg je e^(2x)? De exponent 2x moet blijven staan."],
         uitlegPad: {
           stappen: [{ titel: "Lineaire substitutie", tekst: "∫ e^(ax+b) dx = **e^(ax+b)/a + C**. Hier a=2: ∫ e^(2x) dx = **e^(2x)/2 + C**. Check: d/dx(e^(2x)/2) = 2·e^(2x)/2 = e^(2x). ✓" }],
           niveaus: { basis: "e^(2x)/2 + C.", simpeler: "e^(ax) → e^(ax)/a", nogSimpeler: "/2" },
@@ -177,7 +177,7 @@ const steps = [
         q: "Bij ∫ **x · e^x dx** — welke techniek?",
         options: ["Partiële integratie","Substitutie","Direct","Niet integreerbaar"],
         answer: 0,
-        wrongHints: [null, "Niet — geen f(g)·g'-vorm.", "Niet — twee verschillende functies.", "Wel — via partieel."],
+        wrongHints: [null, "Bij substitutie zoek je een functie in een functie, met de afgeleide van het binnenste als factor. Zie je die hier?", "Hier staat een product van x en e^x. Kun je dat met één standaardprimitieve oplossen, of heb je een regel voor producten nodig?", "Differentieer x·e^x − e^x eens. Bestaat er dan toch een primitieve?"],
         uitlegPad: {
           stappen: [{ titel: "Product = partieel", tekst: "**Partiële integratie**. ∫ u dv = uv − ∫ v du. Kies u = x (Algebraïsch, wordt simpel) en dv = e^x dx (heeft primitieve). Dan du = dx, v = e^x.\n\n∫ x·e^x dx = x·e^x − ∫ e^x dx = x·e^x − e^x + C = **(x−1)e^x + C**." }],
           theorie: "LIATE-cue: kies meest-links-beschikbare als u. Hier alleen A (x) en E (e^x) → A wordt u.",
@@ -188,7 +188,7 @@ const steps = [
         q: "Wat is ∫ **(2x+1)³ dx**?",
         options: ["(2x+1)⁴/8 + C","(2x+1)⁴/4 + C","3(2x+1)² + C","(2x+1)⁴ + C"],
         answer: 0,
-        wrongHints: [null, "Niet — denk aan de kettingregel: de afgeleide van 2x+1 speelt mee.", "Niet — andere regel.", "Niet — differentieer je antwoord en vergelijk met (2x+1)³."],
+        wrongHints: [null, "Niet — denk aan de kettingregel: de afgeleide van 2x+1 speelt mee.", "Hier ging de exponent omlaag, zoals bij differentiëren. Moet de exponent bij primitiveren omhoog of omlaag?", "Niet — differentieer je antwoord en vergelijk met (2x+1)³."],
         uitlegPad: {
           stappen: [{ titel: "Lineaire substitutie", tekst: "∫ (ax+b)^n dx = **(ax+b)^(n+1) / [a·(n+1)] + C**. Hier a=2, n=3: (2x+1)⁴ / (2·4) = **(2x+1)⁴/8 + C**. Check: d/dx((2x+1)⁴/8) = 4(2x+1)³·2/8 = (2x+1)³. ✓" }],
           niveaus: { basis: "(2x+1)⁴/8 + C.", simpeler: "Macht+1, gedeeld door [a·nieuwe macht]", nogSimpeler: "/8" },
@@ -196,9 +196,9 @@ const steps = [
       },
       {
         q: "Wat is ∫ **ln(x) dx**?",
-        options: ["x·ln(x) − x + C","1/x + C","x/ln(x) + C","ln(x)·ln(x) + C"],
+        options: ["x·ln(x) − x + C","1/x + C","x·ln(x) + C","ln(x)·ln(x) + C"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is afgeleide ln.", "Niet zinvol.", "Niet — kettingvorm verkeerd."],
+        wrongHints: [null, "1/x is de afgeleide van ln(x). Je zoekt juist de functie waarvan ln(x) de afgeleide is.", "Differentieer x·ln(x) met de productregel: krijg je precies ln(x), of komt er iets bij?", "ln(x)·ln(x) = (ln x)². Differentieer dat met de kettingregel: krijg je ln(x) terug?"],
         uitlegPad: {
           stappen: [{ titel: "Partieel met truc", tekst: "Truc: schrijf ln(x) = ln(x) · 1. Partieel: u=ln(x), du=1/x dx; dv=1·dx, v=x. ∫ ln(x) dx = x·ln(x) − ∫ x · (1/x) dx = x·ln(x) − ∫ 1 dx = **x·ln(x) − x + C**." }],
           theorie: "Toets-klassieker. Onthoud: ∫ ln(x) dx = x(ln x − 1) + C.",
@@ -216,9 +216,9 @@ const steps = [
     checks: [
       {
         q: "v(t) = 2t m/s. **Afstand tussen t=0 en t=5**?",
-        options: ["25 m","10 m","50 m","100 m"],
+        options: ["25 m","10 m","50 m","12,5 m"],
         answer: 0,
-        wrongHints: [null, "Niet — gebruik integraal.", "Niet — te groot.", "Niet — extreem groot."],
+        wrongHints: [null, "10 m/s is de snelheid op t = 5, geen afstand. Hoe vind je de afstand uit de snelheid?", "50 = 2 · 5²: je vergat bij het primitiveren door de nieuwe exponent te delen.", "Je nam een driehoek onder de grafiek met hoogte 5. Hoe groot is v(5) eigenlijk?"],
         uitlegPad: {
           stappen: [{ titel: "s = ∫v dt", tekst: "Afstand = ∫[0,5] 2t dt = [t²] van 0 tot 5 = 25 − 0 = **25 m**." }],
           theorie: "Algemene regel: ∫ snelheid dt = afstand. Toets-klassieker.",
@@ -227,9 +227,9 @@ const steps = [
       },
       {
         q: "Volume bij rotatie y = x rond x-as op [0,3]?",
-        options: ["9π","3π","27π","π/3"],
+        options: ["9π","9π/2","27π","9"],
         answer: 0,
-        wrongHints: [null, "Mist π·x².", "Niet — te groot.", "Niet correct."],
+        wrongHints: [null, "9π/2 = π · ∫ x dx: je vergat de straal y = x te kwadrateren. Wat is de oppervlakte van één schijfje?", "27π = π · 3³: je vergat bij het primitiveren van x² door 3 te delen.", "Je vergat π: elk schijfje is een cirkel met oppervlakte π · r²."],
         uitlegPad: {
           stappen: [{ titel: "Schijf-methode", tekst: "V = π · ∫[a,b] [f(x)]² dx = π · ∫[0,3] x² dx = π · [x³/3] van 0 tot 3 = π · 9 = **9π**. (≈ 28,3 eenheden³)" }],
           theorie: "Om de x-as is dit precies een kegel met straal 3, hoogte 3. V = (1/3)πr²h = (1/3)·π·9·3 = 9π. ✓",
@@ -238,9 +238,9 @@ const steps = [
       },
       {
         q: "Gemiddelde waarde **f(x) = x² op [0,3]**?",
-        options: ["3","9","1","27"],
+        options: ["3","9","4,5","27"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is max.", "Niet — interval-eindpunt.", "Niet correct."],
+        wrongHints: [null, "9 is f(3), de hoogste waarde op het interval. Het gemiddelde ligt lager: hoe bereken je het met een integraal?", "4,5 is het gemiddelde van f(0) en f(3). Dat klopt alleen bij een rechte lijn, en x² is gekromd.", "Bereken eerst ∫ x² dx op [0, 3]. Deel je daarna door de lengte van het interval of vermenigvuldig je ermee?"],
         uitlegPad: {
           stappen: [{ titel: "f_gem-formule", tekst: "f_gem = (1/(b−a)) · ∫[a,b] f(x) dx = (1/3) · ∫[0,3] x² dx = (1/3) · [x³/3] 0→3 = (1/3) · 9 = **3**." }],
           theorie: "Toets-toepassing: 'gem temperatuur tussen 12u en 18u' = (1/6)·∫T(t) dt.",
@@ -249,9 +249,9 @@ const steps = [
       },
       {
         q: "**Versnelling a(t) = 6t**, v₀ = 2. Wat is v(t)?",
-        options: ["3t² + 2","6t² + 2","6 + 2","t³ + 2"],
+        options: ["3t² + 2","6t² + 2","6t + 2","t³ + 2"],
         answer: 0,
-        wrongHints: [null, "Niet — differentieer je antwoord: krijg je 6t terug?", "Niet integraal.", "Niet correct."],
+        wrongHints: [null, "Niet — differentieer je antwoord: krijg je 6t terug?", "Je telde v₀ bij a(t) op zonder te primitiveren. Wat is de primitieve van 6t?", "t³ is de primitieve van 3t². Differentieer t³ + 2: krijg je 6t?"],
         uitlegPad: {
           stappen: [{ titel: "v = ∫a dt + v₀", tekst: "v(t) = ∫ 6t dt + v₀ = 3t² + C. Begin-conditie: v(0)=2 → C=2. **v(t) = 3t² + 2**." }],
           niveaus: { basis: "3t²+2.", simpeler: "∫6t = 3t² + v₀", nogSimpeler: "3t²+2" },
@@ -261,7 +261,7 @@ const steps = [
         q: "Bedrijfswinst-tempo **p(t) = 100 − 5t** €/dag. **Totale winst over 10 dagen**?",
         options: ["€750","€500","€1000","€250"],
         answer: 0,
-        wrongHints: [null, "Te laag.", "Te hoog.", "Te laag."],
+        wrongHints: [null, "Je primitiveerde 5t tot 5t². Differentieer 5t²: krijg je 5t terug?", "€1000 is 100 · 10: je vergat dat het tempo elke dag 5 euro lager wordt.", "€250 is ½ · 5 · 10², het deel dat door de daling verloren gaat. Is dat de winst zelf?"],
         uitlegPad: {
           stappen: [{ titel: "Cumulatief = integraal", tekst: "Totaal = ∫[0,10] (100 − 5t) dt = [100t − 5t²/2] 0→10 = 1000 − 250 = **€750**." }],
           theorie: "Toepassing: tempo van toename × tijd = totaal opbrengst.",
@@ -281,7 +281,7 @@ const steps = [
         q: "Wat is ∫ **3x² + 4x − 5 dx**?",
         options: ["x³ + 2x² − 5x + C","6x + 4 + C","x³ + 4x² − 5x + C","3x³ + 4x² − 5 + C"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is afgeleide.", "Niet — controleer de primitieve van de term 4x.", "Niet — controleer elke term door te differentiëren."],
+        wrongHints: [null, "6x + 4 is de afgeleide. Gaan de exponenten bij primitiveren omhoog of omlaag?", "Niet — controleer de primitieve van de term 4x.", "Niet — controleer elke term door te differentiëren."],
         uitlegPad: {
           stappen: [{ titel: "Term voor term", tekst: "∫ 3x² = x³, ∫ 4x = 2x², ∫ −5 = −5x. Totaal: **x³ + 2x² − 5x + C**." }],
           niveaus: { basis: "x³+2x²−5x+C.", simpeler: "Per term primitief", nogSimpeler: "x³+2x²−5x+C" },
@@ -291,7 +291,7 @@ const steps = [
         q: "Bereken **∫[1 tot 2] 1/x dx**.",
         options: ["ln(2)","1","ln(2)−ln(1)+1","Niet bepaald"],
         answer: 0,
-        wrongHints: [null, "Niet — dan vergeet je ln-primitief.", "Niet — bij een bepaalde integraal komt er geen +C of +1 bij.", "Wel bepaald."],
+        wrongHints: [null, "1 is de lengte van het interval [1, 2]. Wat is de primitieve van 1/x?", "Niet — bij een bepaalde integraal komt er geen +C of +1 bij.", "Is 1/x op [1, 2] overal netjes gedefinieerd? Dan kun je de integraal gewoon uitrekenen."],
         uitlegPad: {
           stappen: [{ titel: "ln-primitief", tekst: "∫ 1/x dx = ln|x|. ∫[1,2] 1/x dx = ln(2) − ln(1) = ln(2) − 0 = **ln(2)** ≈ 0,693." }],
           theorie: "ln(1) = 0 altijd onthouden.",
@@ -315,7 +315,7 @@ const steps = [
         q: "Snelheid v(t) = t² − 4 m/s. **Verplaatsing tussen t=0 en t=3**?",
         options: ["−3 m","9 m","12 m","Onmogelijk"],
         answer: 0,
-        wrongHints: [null, "Niet — negatief deel telt mee.", "Niet — onjuist.", "Wel mogelijk."],
+        wrongHints: [null, "9 is alleen ∫ t² dt. Wat gebeurt er met de −4 als je die ook primitiveert?", "12 is alleen het stuk van de −4 (4 · 3). Hoe combineer je dat met ∫ t² dt?", "Een verplaatsing mag negatief zijn: dan ben je netto achteruitgegaan. Reken ∫ (t² − 4) dt van 0 tot 3 uit."],
         uitlegPad: {
           stappen: [{ titel: "Negatieve snelheid", tekst: "v(t) = t²−4. Voor t<2: v<0 (achteruit). t>2: v>0.\n\nVerplaatsing = ∫[0,3] (t²−4) dt = [t³/3 − 4t] 0→3 = 9 − 12 = **−3**.\n\nDus netto 3 m **achteruit** verplaatst. (Afgelegde afstand = som van |stukken| = anders.)" }],
           theorie: "Verschil tussen 'verplaatsing' (integraal, kan negatief) en 'afstand' (positieve som). De toets let goed op.",
@@ -326,7 +326,7 @@ const steps = [
         q: "Welke techniek voor **∫ x·sin(x) dx**?",
         options: ["Partiële integratie","Substitutie u=sin(x)","Direct","Niet integreerbaar"],
         answer: 0,
-        wrongHints: [null, "Niet — geen kettingvorm met afgeleide.", "Niet zonder techniek.", "Wel — via partieel."],
+        wrongHints: [null, "Bij substitutie u = sin(x) moet cos(x) als factor staan. Staat die er?", "Er staat een product van x en sin(x). Is er een standaardprimitieve voor zo'n product?", "Differentieer sin(x) − x·cos(x) eens. Bestaat de primitieve dan toch?"],
         uitlegPad: {
           stappen: [{ titel: "LIATE: A vóór T", tekst: "**Partiële integratie**. Kies u = x (A), dv = sin(x) dx (T). Dan du=dx, v=−cos(x).\n\n∫ x·sin(x) dx = x·(−cos x) − ∫ (−cos x) dx = −x·cos x + sin x + C = **sin(x) − x·cos(x) + C**." }],
           theorie: "Toets-klassieker. LIATE: A=x voor T=sin → x wordt u.",
