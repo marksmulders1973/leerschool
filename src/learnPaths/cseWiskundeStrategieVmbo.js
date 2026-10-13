@@ -297,7 +297,7 @@ const steps = [
       },
       {
         q: "Tijd-strategie tijdens examen?",
-        options: ["Makkelijke eerst + lastige markeren", "Precies de volgorde van het examen", "Lastige eerst, nu je nog fris bent", "Per vraag precies 3 minuten nemen"],
+        options: ["Makkelijke eerst + lastige markeren", "De volgorde van het examen aanhouden", "Lastige eerst, nu je nog fris bent", "Per vraag een vaste 3 minuten nemen"],
         answer: 0,
         wrongHints: [null, "Wat gebeurt er met je tijd als je vroeg in het examen op een vastloper stuit?", "Wat gebeurt er met je tijd en je zelfvertrouwen als je meteen vastloopt op een lastige vraag?", "Sommige vragen zijn in 30 seconden klaar, andere duren langer. Is een vaste tijd per vraag dan handig?"],
       },

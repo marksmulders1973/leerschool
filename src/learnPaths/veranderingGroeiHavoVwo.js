@@ -32,9 +32,9 @@ const steps = [
     checks: [
       {
         q: "Bij **lineaire groei** is welke eigenschap constant?",
-        options: ["Absolute toename per stap","Procentuele toename","Beide","Geen"],
+        options: ["Absolute toename per stap","Procentuele toename per stap","Verdubbelingstijd van de groei","Absolute én procentuele toename"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is exponentieel.", "Niet — een van twee.", "Wel constant."],
+        wrongHints: [null, "Een vast percentage per stap hoort bij exponentiële groei. Wat is er bij lineaire groei elke stap gelijk?", "Een vaste verdubbelingstijd zie je bij exponentiële groei. Wat blijft bij lineaire groei gelijk?", "Als er elke stap evenveel bijkomt, blijft het percentage dan ook gelijk? Reken 100 → 110 → 120."],
         uitlegPad: {
           stappen: [{ titel: "Vast bedrag erbij", tekst: "**Lineair**: elke stap **zelfde bedrag** erbij (of eraf). Bv +€50/maand sparen. Procentueel (5%/jaar) is exponentieel, niet lineair." }],
           theorie: "Toets-favoriet om te onderscheiden: 'is dit lineair of exponentieel?' → kijk naar verschillen vs procenten in tabel.",
@@ -78,9 +78,9 @@ const steps = [
       },
       {
         q: "Lineair model voor lange-termijn-projecties is **risicovol** omdat:",
-        options: ["Patronen veranderen vaak buiten data-bereik","Te complex","Geen rekenkracht","Verboden"],
+        options: ["Patronen veranderen vaak buiten de data","Lineaire modellen groeien te snel","Afrondfouten worden steeds groter","De beginwaarde is vaak onbekend"],
         answer: 0,
-        wrongHints: [null, "Niet — juist eenvoudig.", "Niet relevant.", "Niet — wordt gebruikt."],
+        wrongHints: [null, "Een rechte lijn groeit juist gelijkmatig, niet steeds sneller. Waar zit het risico dan?", "Afronden kan kleine fouten geven, maar is dat de hoofdreden? Wat weet je over de periode ná je metingen?", "De beginwaarde lees je gewoon uit je data af. Wat weet je níet zeker over later?"],
         uitlegPad: {
           stappen: [{ titel: "Extrapolatie-risico", tekst: "Lineair past kort meetbaar bereik vaak goed, maar **extrapolatie** buiten dat bereik = risicovol omdat patroon kan kantelen (capaciteit, saturatie, technologische verandering). Bevolkingsgroei kan bijvoorbeeld afvlakken." }],
           theorie: "Klassieker: Malthusiaans lineair voedsel + exp.bevolking → catastrofe. In praktijk bleek voedselgroei ook exp. door techniek.",
@@ -108,9 +108,9 @@ const steps = [
       },
       {
         q: "Tabel: x:1,2,3,4 | y: 4, 8, 16, 32. Welk model?",
-        options: ["Exponentieel met b=2","Lineair met b=4","Logistisch","Kwadratisch"],
+        options: ["Exponentieel met b=2","Lineair met b=4","Logistisch met grens 64","Kwadratisch met a=2"],
         answer: 0,
-        wrongHints: [null, "Niet — verschillen niet constant.", "Niet — quotiënten constant.", "Niet correct."],
+        wrongHints: [null, "Niet — verschillen niet constant.", "Logistische groei vlakt af naar een grens. Zie je dat afvlakken in de tabel?", "Reken y = 2x² eens uit voor x = 1 en x = 3. Klopt dat met de tabel?"],
         uitlegPad: {
           stappen: [{ titel: "Quotiënten = constant", tekst: "8/4=2, 16/8=2, 32/16=2 → **factor 2 per stap = exponentieel b=2**. Formule: y = 2 · 2^x (a=2, b=2). Check: y(1)=4 ✓.\n\nKlassiek 'verdubbel-elke-stap'-patroon (bacteriegroei, schaakbord-graan-legende)." }],
           niveaus: { basis: "Exp b=2.", simpeler: "Quotiënten 2 = exp", nogSimpeler: "Exp" },
@@ -140,7 +140,7 @@ const steps = [
       },
       {
         q: "Welk wereld-fenomeen heeft **exponentiële groei** in 20e-21e eeuw?",
-        options: ["Rekenkracht van computerchips","Aantal uren in een dag","Lengte van een marathon","Wereldtemperatuur"],
+        options: ["Rekenkracht van computerchips","Aantal uren in een dag","Lengte van een marathon","Gemiddelde wereldtemperatuur"],
         answer: 0,
         wrongHints: [null, "Dat blijft altijd 24 — groeit dat wel?", "Die afstand ligt vast — groeit die wel?", "Die stijgt wel, maar ongeveer lineair, niet met een vaste factor."],
         uitlegPad: {
@@ -247,9 +247,9 @@ const steps = [
       },
       {
         q: "Bal omhoog gooien — hoogte als functie van tijd is:",
-        options: ["Kwadratisch (parabool)","Lineair","Exponentieel","Logaritmisch"],
+        options: ["Kwadratisch (parabool)","Lineair (rechte lijn)","Exponentieel (groeikromme)","Logaritmisch (vlakt af)"],
         answer: 0,
-        wrongHints: [null, "Niet — versnelling.", "Niet — de bal stijgt eerst en daalt dan.", "Niet relevant."],
+        wrongHints: [null, "Gaat de bal elke seconde precies evenveel omhoog? En komt hij ooit terug?", "Niet — de bal stijgt eerst en daalt dan.", "Een logaritmische grafiek blijft altijd stijgen. Wat doet de bal na het hoogste punt?"],
         uitlegPad: {
           stappen: [{ titel: "h = v₀·t − ½g·t²", tekst: "**Kwadratisch model**: hoogte stijgt eerst (lineaire bijdrage v₀·t) maar wordt door zwaartekracht (−½g·t²) afgeremd → maximum → daling. **Parabool** met top." }],
           niveaus: { basis: "Kwadratisch.", simpeler: "Bal-baan = parabool", nogSimpeler: "Parabool" },
@@ -290,7 +290,7 @@ const steps = [
         q: "Bevolking 100.000 groeit **2,5%/jaar**. Aantal na 10 jaar?",
         options: ["~128.000","~125.000","~250.000","~10.000.000"],
         answer: 0,
-        wrongHints: [null, "Lineair zou 125.000 — exp ietsje meer.", "Te groot.", "Belachelijk."],
+        wrongHints: [null, "Dat is 10 × 2,5% = 25% erbij. Groeit de bevolking niet elk jaar over een steeds groter aantal?", "Dat is een verdubbeling. Hoeveel jaar duurt verdubbelen bij 2,5% per jaar ongeveer?", "Dat is 100 keer zoveel. Kan 2,5% per jaar in 10 jaar zoveel opleveren?"],
         uitlegPad: {
           stappen: [{ titel: "y = 100.000·1,025^10", tekst: "1,025^10 ≈ 1,28. → **~128.000**.\n\nVerschil met lineair (+2500/jaar = 125.000): exp ~3000 meer door rente-op-rente." }],
           niveaus: { basis: "~128.000.", simpeler: "100.000·1,025^10≈128k", nogSimpeler: "128k" },
@@ -324,7 +324,7 @@ const steps = [
         q: "Welk model past bij **leerproces** (oefenen)?",
         options: ["Logistisch","Lineair","Periodiek","Kwadratisch"],
         answer: 0,
-        wrongHints: [null, "Niet — geen gelijke stappen.", "Niet — geen cyclus.", "Niet relevant."],
+        wrongHints: [null, "Ga je elke oefenweek precies evenveel vooruit, ook als je het al bijna kunt?", "Periodiek betekent dat iets steeds terugkomt, zoals seizoenen. Gaat leren op en neer?", "Een parabool gaat steeds sneller omhoog. Word je bij oefenen steeds sneller beter, zonder grens?"],
         uitlegPad: {
           stappen: [{ titel: "Learning curve = S-vorm", tekst: "**Leren**: begin traag (basis snappen), dan snel (kennis groeit op kennis), uiteindelijk plateau (expertgrens, afnemende meeropbrengst). Klassieke S-curve = **logistisch**. Wordt gebruikt in psychologie + training-theorie." }],
           theorie: "Daarom: 15-min/dag werkt op lange termijn (volharden door beginplateau) > sprong-leren.",
@@ -333,9 +333,9 @@ const steps = [
       },
       {
         q: "Vuistregel **70**: T_v ≈ 70/p werkt voor:",
-        options: ["Alleen kleine percentages","Alleen percentages > 50%","Alleen lineair","Niet bestaand"],
+        options: ["Alleen kleine percentages","Alleen percentages > 50%","Alleen bij lineaire groei","Alle percentages even goed"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — voor exp.", "Wel bestaand."],
+        wrongHints: [null, "Reken na: bij 70% zou verdubbelen 1 jaar duren. Is 1,7 gelijk aan 2?", "Bij lineaire groei is er geen vaste groeifactor. Bij welk soort groei hoort een verdubbelingstijd?", "Probeer 100%: de regel geeft 0,7 jaar. Hoe lang duurt verdubbelen echt bij 100% per jaar?"],
         uitlegPad: {
           stappen: [{ titel: "Vuistregel uit ln(2)", tekst: "T_v = ln(2)/ln(1+r) ≈ 0,693/r voor kleine r (Taylorbenadering). Met r in % en uitkomst in jaar: T_v ≈ 70/p. **Werkt voor p < 10%**. Bij grotere groei (20%, 50%) wordt de benadering minder nauwkeurig — gebruik exacte formule." }],
           niveaus: { basis: "Kleine %.", simpeler: "70-regel = kleine %", nogSimpeler: "Kleine %" },

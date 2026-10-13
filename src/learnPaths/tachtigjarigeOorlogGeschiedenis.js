@@ -167,7 +167,7 @@ const steps = [
         q: "Wie was de Spaanse koning toen de Tachtigjarige Oorlog uitbrak?",
         options: ["Filips II", "Karel V", "Lodewijk XIV", "Filips III"],
         answer: 0,
-        wrongHints: [null, "Karel V had in 1555 al afstand gedaan van de troon; de oorlog begon in 1568.", "Lodewijk XIV was Frans, en pas later (~1640+).", "Filips III werd pas in 1598 koning — de oorlog begon in 1568."],
+        wrongHints: [null, "Karel V had in 1555 al afstand gedaan van de troon; de oorlog begon in 1568.", "Lodewijk XIV was Frans, en pas later (~1640+).", "Deze koning kwam pas in 1598 op de troon — de oorlog begon in 1568."],
         uitlegPad: {
           stappen: [{ titel: "Filips II — strenge katholiek", tekst: "Filips II (1527-1598) werd in 1555 koning van Spanje EN de 17 Provinciën, na troonsafstand vader Karel V. Streng katholiek. Wilde alle macht centraal vanuit Madrid. Sprak geen Nederlands. Beleid van vervolging protestanten + hoge belastingen veroorzaakte opstand 1568." }],
           woorden: [{ woord: "Filips II", uitleg: "Koning Spanje 1555-1598. Habsburgse dynastie." }, { woord: "Karel V", uitleg: "Vader Filips II. Geboren Gent 1500. Trad af 1555." }],

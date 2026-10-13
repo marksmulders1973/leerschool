@@ -43,9 +43,9 @@ const steps = [
       },
       {
         q: "Welke schaal gebruik je in **natuurkundige formules** (zoals pV=nRT)?",
-        options: ["Kelvin (K)", "Celsius (°C)", "Fahrenheit (°F)", "Maakt niet uit"],
+        options: ["Kelvin (K)", "Celsius (°C)", "Fahrenheit (°F)", "Celsius of kelvin, allebei goed"],
         answer: 0,
-        wrongHints: [null, "Niet — zou negatieve T geven, onzin in formule.", "Onjuist in EU + wetenschap.", "Maakt wel uit."],
+        wrongHints: [null, "Niet — zou negatieve T geven, onzin in formule.", "Ook Fahrenheit kan negatieve temperaturen geven. Wat zou er dan met p gebeuren in pV = nRT?", "Bij 0 °C zou pV dan 0 worden. Kan dat bij een gas dat er gewoon is?"],
         uitlegPad: {
           stappen: [{ titel: "Absolute schaal vereist", tekst: "Bij ideale gas pV=nRT moet T evenredig met deeltjes-energie zijn — vanaf 0. Met Celsius krijg je negatieve T → negatieve p of V → onzin. Kelvin is de ENIGE schaal die werkt." }],
           niveaus: { basis: "Kelvin.", simpeler: "Altijd Kelvin in formules.", nogSimpeler: "K" },
@@ -67,11 +67,11 @@ const steps = [
         options: [
           "Water en kamer krijgen dezelfde T",
           "Water blijft koud, kamer warm",
-          "Water wordt steeds kouder",
-          "Niets verandert"
+          "Water wordt warmer dan de kamer",
+          "Kamer koelt af tot de begin-T van het water"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — energie wisselt continu.", "Niet — water wordt warmer, niet kouder.", "Onjuist — energie stroomt wel."],
+        wrongHints: [null, "Niet — energie wisselt continu.", "Stroomt warmte vanzelf door van koud naar warm, ook als het water al even warm is als de kamer?", "De kamer is veel groter dan het glas. Wie verandert er dan het meest van temperatuur?"],
         uitlegPad: {
           stappen: [{ titel: "Thermisch evenwicht", tekst: "Warmte stroomt van de warmere kamer naar het koudere water. Na lange tijd: gelijk. Snelheid van uitwisseling hangt af van isolatie, oppervlak, materiaal." }],
           niveaus: { basis: "Beide dezelfde T.", simpeler: "Water wordt warmer tot kamer-T.", nogSimpeler: "Evenwicht" },
@@ -100,12 +100,12 @@ const steps = [
         q: "Tijdens smelten van ijs bij 0 °C:",
         options: [
           "Temperatuur blijft 0 °C terwijl energie binnenkomt",
-          "Temperatuur stijgt gelijkmatig",
-          "Temperatuur daalt",
-          "Geen energie nodig"
+          "Temperatuur stijgt gelijkmatig terwijl energie binnenkomt",
+          "Temperatuur daalt terwijl energie binnenkomt",
+          "Temperatuur blijft 0 °C, het ijs geeft energie af"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — energie gaat in bindingen breken.", "Niet — stijging komt pas na smelten.", "Wel veel energie nodig (smeltwarmte)."],
+        wrongHints: [null, "Waar blijft de energie tijdens het smelten? Gaat die in sneller bewegen van de deeltjes, of in iets anders?", "Kan iets kouder worden terwijl je er energie in stopt?", "IJs dat energie afgeeft, gaat bevriezen, niet smelten. Wat is er nodig om ijs te laten smelten?"],
         uitlegPad: {
           stappen: [{ titel: "Energie gaat in faseverandering", tekst: "Alle binnenkomende warmte breekt waterstof-bruggen in ijs → moleculen 'vrij' in vloeistof. T blijft constant tot al het ijs gesmolten is. Daarna pas opwarmen." }],
           theorie: "Daarom blijft een ijs-water-mengsel exact 0 °C totdat alle ijs op is — handig voor koel-experimenten + reactievaten.",
@@ -116,12 +116,12 @@ const steps = [
         q: "Waarom voelt **metaal kouder** dan hout, ondanks dezelfde T (kamer)?",
         options: [
           "Metaal geleidt warmte veel beter dan hout",
-          "Metaal is kouder dan hout zelf",
-          "Hout reflecteert warmte",
-          "Optische illusie"
+          "Metaal heeft een lagere temperatuur dan hout",
+          "Hout kaatst de warmte van je hand terug",
+          "Je huid vergist zich door de glans van metaal"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — meet maar, beide kamer-T.", "Niet — geen reflectie hier.", "Niet — fysisch verschil."],
+        wrongHints: [null, "Niet — meet maar, beide kamer-T.", "Werkt hout als een spiegel voor warmte? Wat gebeurt er met de warmte van je hand als je iets aanraakt?", "Voelt een geverfd, mat stuk metaal ook koud? Het gaat dus niet om hoe het eruitziet."],
         uitlegPad: {
           stappen: [{ titel: "Warmte stroomt snel uit hand", tekst: "Metaal geleidt warmte goed → onttrekt snel warmte aan je hand → koud-gevoel. Hout is een isolator → warmte blijft → voelt minder koud." }],
           niveaus: { basis: "Goede warmtegeleiding.", simpeler: "Metaal slokt warmte uit hand.", nogSimpeler: "Geleiding" },
@@ -175,13 +175,13 @@ const steps = [
       {
         q: "Een **spuitbus in vuur**: waarom ontploft hij?",
         options: [
-          "De druk van het gas stijgt",
-          "Verf reageert met vlam",
-          "Vacuüm trekt wand naar binnen",
-          "Magnetisme van vuur"
+          "De druk van het gas in de bus stijgt",
+          "Het drijfgas vat vlam in de bus",
+          "Het gas krimpt en de wand scheurt",
+          "Het metaal smelt en scheurt open"
         ],
         answer: 0,
-        wrongHints: [null, "Niet primair de reden.", "Niet — geen vacuüm.", "Onzin."],
+        wrongHints: [null, "Ook een bus met onbrandbaar gas kan in het vuur ontploffen. Wat doet warmte met ingesloten gas?", "Zet een gas uit of krimpt het als je het verwarmt?", "Een spuitbus ontploft al lang voordat het metaal smelt. Wat gebeurt er eerder?"],
         uitlegPad: {
           stappen: [{ titel: "Gay-Lussac: p ~ T", tekst: "Bij vaste V: p/T = constant → T verdubbelen → p verdubbelen. Een spuitbus staat al onder druk; bij verhitting stijgt die verder tot de bus barst." }],
           niveaus: { basis: "T↑ → p↑ → barst.", simpeler: "Warm gas wil meer ruimte; bus barst.", nogSimpeler: "p↑" },
@@ -191,7 +191,7 @@ const steps = [
         q: "Bij STP (0 °C, 1 atm) bevat **1 mol** gas welk volume?",
         options: ["22,4 L", "1,0 L", "100 L", "Afhankelijk van gas"],
         answer: 0,
-        wrongHints: [null, "Te klein.", "Te groot.", "Niet — voor ideale gas hetzelfde."],
+        wrongHints: [null, "Reken na met V = nRT/p = 1 × 8,31 × 273 ÷ 1,013·10⁵. Hoeveel m³ is dat, en hoeveel liter?", "Reken na met V = nRT/p en zet m³ om naar liter (1 m³ = 1000 L). Kom je op 100 L?", "Niet — voor ideale gas hetzelfde."],
         uitlegPad: {
           stappen: [{ titel: "Molair volume STP", tekst: "1 mol ideaal gas bij 0 °C + 1 atm vult 22,4 L (= 22,4·10⁻³ m³). Onafhankelijk van wélk gas (zuurstof, stikstof, etc.) — alle gassen hebben dezelfde V_mol bij STP." }],
           theorie: "Bij 25 °C (kamer-T) iets meer: 24,5 L.",
@@ -202,12 +202,12 @@ const steps = [
         q: "Een ballon vol heliumgas op zee-niveau (1 atm). Wat gebeurt als ballon **opstijgt** naar grote hoogte (lagere p)?",
         options: [
           "Volume neemt toe — kan barsten",
-          "Volume neemt af",
-          "T daalt zonder V-verandering",
-          "Massa verdwijnt"
+          "Volume neemt af — ballon krimpt",
+          "Volume blijft gelijk — de wand houdt het tegen",
+          "Druk binnen stijgt — ballon krimpt"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — bij lagere buiten-p zet ballon uit.", "Niet — V verandert wel.", "Niet — massa blijft."],
+        wrongHints: [null, "Wat doet een gas als de druk eromheen kleiner wordt: uitzetten of krimpen?", "Een ballonwand is rekbaar. Wat doet het gas als de druk buiten daalt?", "Als de druk buiten daalt, waarom zou de druk binnen dan stijgen?"],
         uitlegPad: {
           stappen: [{ titel: "Boyle: lagere p → grotere V", tekst: "Buitendruk daalt op hoogte → ballon-wand drukt minder hard tegen helium → gas zet uit. Weerballonnen zetten vele malen uit → wand barst bij grens. Bemande ballonnen hebben een 'klep' om gas af te laten." }],
           theorie: "Ook 'lege' chips-zak bovenop berg lijkt opgeblazen — uitzettende lucht in zak bij lagere buitendruk.",
@@ -218,7 +218,7 @@ const steps = [
         q: "Een gas T=300 K, p=1·10⁵ Pa, V=10 L. Hoeveel mol?",
         options: ["~0,40 mol", "~4,0 mol", "~40 mol", "~0,04 mol"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer eenheden.", "Te veel.", "Te weinig."],
+        wrongHints: [null, "Niet — controleer eenheden.", "Reken V om naar m³: 10 L = 0,010 m³. Welke waarde gebruikte jij?", "Te weinig: 10 L is 0,010 m³, niet 0,0010 m³. Reken nog eens na."],
         uitlegPad: {
           stappen: [
             { titel: "n = pV/(RT)", tekst: "V = 10 L = 0,010 m³. n = pV/(RT) = (10⁵ · 0,010) / (8,314 · 300) = 1000 / 2494 ≈ **0,40 mol**." },
@@ -249,7 +249,7 @@ const steps = [
         q: "Welk transport-type voor zon naar aarde?",
         options: ["Straling", "Geleiding", "Convectie", "Alle drie even sterk"],
         answer: 0,
-        wrongHints: [null, "Niet — vacuüm tussen.", "Niet — geen lucht-stroming door ruimte.", "Onjuist — alleen straling kan door vacuüm."],
+        wrongHints: [null, "Niet — vacuüm tussen.", "Niet — geen lucht-stroming door ruimte.", "Welke manieren van warmtetransport hebben deeltjes nodig? Zijn die er in de lege ruimte tussen zon en aarde?"],
         uitlegPad: {
           stappen: [{ titel: "Vacuüm = alleen EM-straling", tekst: "Tussen zon en aarde is vacuüm. Geleiding + convectie hebben materie nodig. Alleen straling (zichtbaar + IR + UV) plant zich voort door vacuüm." }],
           theorie: "Zonnewind brengt ook materie, maar de warmte is bijna geheel via stralings-energie.",
@@ -334,12 +334,12 @@ const steps = [
         q: "Heteluchtballon stijgt op. Onderliggende fysica?",
         options: [
           "Hete lucht is lichter dan koude lucht",
-          "Vlam duwt ballon omhoog",
-          "Wind blaast ballon omhoog",
-          "Anti-zwaartekracht"
+          "De vlam duwt de ballon met kracht omhoog",
+          "Opwaartse wind blaast de ballon omhoog",
+          "Hete lucht is zwaarder en duwt koude weg"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — vlam levert warmte, niet directe duw.", "Niet — wind beweegt zijwaarts.", "Bestaat niet."],
+        wrongHints: [null, "Niet — vlam levert warmte, niet directe duw.", "Niet — wind beweegt vooral zijwaarts, en een ballon stijgt ook bij windstil weer.", "Als hete lucht zwaarder was, zou de ballon dan stijgen of zakken?"],
         uitlegPad: {
           stappen: [
             { titel: "Warm = ijler", tekst: "Bij vaste p (atmosfeer): T↑ → V/m↑ (Charles) → ρ↓. Ballon vol hete lucht is lichter dan zelfde V koude buitenlucht → opwaartse kracht (Archimedes: F = ρ_buiten · V · g). Brander warm houden = blijven zweven." },
@@ -351,12 +351,12 @@ const steps = [
         q: "Een **thermoskan** houdt thee warm door:",
         options: [
           "Vacuüm en spiegelende wanden",
-          "Alleen isolatie tegen geleiding",
-          "Alleen tegen convectie",
-          "Magnetisch verbod warmte"
+          "Dikke wanden van piepschuim",
+          "Een dicht deksel tegen convectie",
+          "Een zwarte binnenkant die warmte vasthoudt"
         ],
         answer: 0,
-        wrongHints: [null, "Onvolledig — er zit meer in.", "Onvolledig.", "Onzin."],
+        wrongHints: [null, "Een thermoskan heeft juist dunne wanden van glas of staal. Wat zit er tussen die twee wanden?", "Een deksel stopt stromende lucht bovenaan. Hoe gaat warmte dan nog door de zijwand weg?", "Zwart neemt straling goed op, maar straalt ook goed uit. Houdt dat de thee warm?"],
         uitlegPad: {
           stappen: [
             { titel: "Drie barrières", tekst: "1. Dubbele wand met vacuüm → geen geleiding/convectie (geen medium).\n2. Verzilverde binnenkant → reflecteert stralingsenergie terug naar inhoud.\n3. Kurk-deksel (slechte geleider) tegen verlies door opening.\n\nResultaat: 6-12 uur thee warm." },

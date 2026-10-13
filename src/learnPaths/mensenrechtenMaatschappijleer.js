@@ -97,9 +97,9 @@ const steps = [
       },
       {
         q: "**Universeel** betekent ... ?",
-        options: ["Geldt voor alle mensen", "Alleen voor Europeanen", "Alleen voor mannen", "Onbekend"],
+        options: ["Geldt voor alle mensen", "Geldt voor burgers van één land", "Geldt voor alle volwassenen", "Geldt in landen die tekenden"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Wel bekend."],
+        wrongHints: [null, "'Universeel' komt van 'universum'. Past dat bij één land?", "Hebben kinderen dan geen mensenrechten?", "Dat gaat over verdragen. Hangt een mensenrecht af van de handtekening van je land?"],
       },
       {
         q: "Wat is het verschil tussen **recht** en **plicht**?",
@@ -109,9 +109,9 @@ const steps = [
       },
       {
         q: "Welke historische gebeurtenis was **direct aanleiding** voor moderne mensenrechten?",
-        options: ["WO2 (1939-1945) + Holocaust", "Romeinse Rijk", "Industriële Revolutie", "WO1"],
+        options: ["WO2 (1939-1945) + Holocaust", "Franse Revolutie (1789) + Terreur", "Industriële Revolutie + kinderarbeid", "WO1 (1914-1918) + gifgas"],
         answer: 0,
-        wrongHints: [null, "Veel eerder.", "Geen direct verband.", "Te vroeg."],
+        wrongHints: [null, "Die gaf een vroege verklaring van rechten, maar ruim 150 jaar vóór de UVRM. Was dat de directe aanleiding?", "Dat leidde tot arbeidswetten, maar niet tot een wereldwijde verklaring.", "Na WO1 kwam de Volkenbond, maar nog geen Universele Verklaring. Wanneer kwam die?"],
       },
     ],
   },
@@ -153,15 +153,15 @@ const steps = [
       },
       {
         q: "Welke organisatie nam UVRM aan?",
-        options: ["Verenigde Naties (VN)", "EU", "NAVO", "VS"],
+        options: ["Verenigde Naties (VN)", "Europese Unie (EU)", "NAVO (militair bondgenootschap)", "Raad van Europa (RvE)"],
         answer: 0,
-        wrongHints: [null, "Begon later.", "Militair pact.", "Wel meegedaan, niet alleen."],
+        wrongHints: [null, "Begon later.", "Een militair bondgenootschap — maakt dat verklaringen over rechten?", "De Raad van Europa maakte het EVRM (1950). Wie maakte de wereldwijde verklaring?"],
       },
       {
         q: "Wat zegt **Artikel 1** UVRM?",
-        options: ["Iedereen gelijk + vrij geboren", "Niemand mag stelen", "Iedereen moet werken", "Kinderen niet werken"],
+        options: ["Iedereen gelijk + vrij geboren", "Iedereen heeft recht op onderwijs", "Niemand mag gemarteld worden", "Iedereen mag zijn mening uiten"],
         answer: 0,
-        wrongHints: [null, "Geen artikel 1.", "Geen artikel 1.", "Artikel ergens anders."],
+        wrongHints: [null, "Dat staat in artikel 26. Waar begint de verklaring mee?", "Dat staat in artikel 5. Waar begint de verklaring mee?", "Dat staat in artikel 19. Waar begint de verklaring mee?"],
         uitlegPad: {
           stappen: [
             { titel: "De beroemdste regel ter wereld", tekst: "Artikel 1 van UVRM is misschien wel de beroemdste regel uit het hele document. Het zegt: 'Alle mensen worden vrij en gelijk in waardigheid en rechten geboren.'" },
@@ -202,15 +202,15 @@ const steps = [
     checks: [
       {
         q: "**Vrijheid van meningsuiting** — welke generatie?",
-        options: ["1e (burgerlijk + politiek)", "2e (sociaal)", "3e (collectief)", "Geen"],
+        options: ["1e (burgerlijk + politiek)", "2e (sociaal-economisch)", "3e (collectief)", "4e (digitale rechten)"],
         answer: 0,
-        wrongHints: [null, "Niet sociaal.", "Niet collectief.", "Wel een mensenrecht."],
+        wrongHints: [null, "Moet de overheid hier iets regelen, of juist van je afblijven?", "Collectieve rechten gaan over groepen en volken, zoals vrede en milieu.", "De lesstof kent drie generaties. In welke valt dit recht?"],
       },
       {
         q: "**Recht op onderwijs** — welke generatie?",
-        options: ["2e (sociaal-economisch)", "1e (burgerlijk + politiek)", "3e (collectief)", "Geen"],
+        options: ["2e (sociaal-economisch)", "1e (burgerlijk + politiek)", "3e (collectief)", "4e (digitale rechten)"],
         answer: 0,
-        wrongHints: [null, "Klassiek = vrijheid, niet voorzieningen.", "Collectief is anders.", "Wel een recht."],
+        wrongHints: [null, "Klassiek = vrijheid, niet voorzieningen.", "Collectieve rechten gaan over groepen en volken, zoals vrede en milieu.", "De lesstof kent drie generaties. In welke valt dit recht?"],
       },
       {
         q: "**Recht op schoon milieu** — welke generatie?",
@@ -241,21 +241,21 @@ const steps = [
       },
       {
         q: "Wat is de **Toeslagenaffaire**?",
-        options: ["Duizenden ouders onterecht beschuldigd van fraude", "Een belastingverlaging", "Een nieuw toeslagsysteem", "Niet relevant"],
+        options: ["Duizenden ouders onterecht beschuldigd van fraude", "Een belastingverlaging voor gezinnen met kinderen", "Een nieuw systeem voor het uitbetalen van toeslagen", "Fraude door duizenden ouders met kinderopvangtoeslag"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Wel toeslagen-context maar fout.", "Wel relevant."],
+        wrongHints: [null, "Ging het om minder belasting, of om geld dat ouders moesten terugbetalen?", "Wel toeslagen-context, maar wat ging er mis?", "Hadden die ouders echt gefraudeerd?"],
       },
       {
         q: "Hoeveel kinderen werkten wereldwijd ongeveer in 2020 (ILO)?",
-        options: ["~160 miljoen", "~10.000", "~1 miljard", "~1.000"],
+        options: ["~160 miljoen", "~16 miljoen", "~600 miljoen", "~1,6 miljoen"],
         answer: 0,
-        wrongHints: [null, "Veel te weinig.", "Te veel.", "Veel te weinig."],
+        wrongHints: [null, "Tel de nullen: dit is een factor tien te weinig.", "Dat zou ongeveer een kwart van alle kinderen ter wereld zijn. Zoveel?", "Veel te weinig — denk aan hoeveel kinderen er wereldwijd leven."],
       },
       {
         q: "**Amnesty International** is een ... ?",
-        options: ["NGO voor mensenrechten", "Politieke partij", "Bedrijf", "VN-orgaan"],
+        options: ["Onafhankelijke organisatie voor mensenrechten", "Europese politieke partij voor mensenrechten", "Internationale rechtbank voor mensenrechten", "Afdeling van de VN voor mensenrechten"],
         answer: 0,
-        wrongHints: [null, "Geen partij.", "Non-profit.", "Niet onderdeel VN."],
+        wrongHints: [null, "Doet Amnesty mee aan verkiezingen?", "Kan Amnesty iemand veroordelen? Wat doet het dan wel?", "Niet onderdeel VN — wie betaalt en bestuurt Amnesty?"],
       },
     ],
   },
@@ -274,21 +274,21 @@ const steps = [
       },
       {
         q: "Welke 5 landen hebben **veto-recht** in VN-Veiligheidsraad?",
-        options: ["VS, China, Rusland, Frankrijk, UK", "G7-landen", "EU-leden", "VN-Algemene Vergadering"],
+        options: ["VS, China, Rusland, Frankrijk, UK", "VS, China, Rusland, Duitsland, Japan", "VS, UK, Frankrijk, Duitsland, Italië", "VS, China, India, Rusland, Brazilië"],
         answer: 0,
-        wrongHints: [null, "Niet specifiek.", "Niet specifiek.", "Geen veto."],
+        wrongHints: [null, "Duitsland en Japan verloren WO2 — kregen zij in 1945 een vaste zetel?", "Dit zijn westerse landen uit de G7. Welke grote mogendheden van 1945 ontbreken?", "India en Brazilië zijn groot, maar hebben zij een vaste zetel?"],
       },
       {
         q: "Wat doet **Amnesty International**?",
-        options: ["Vecht voor mensenrechten wereldwijd", "Maakt wetten", "Heeft militair leger", "Verkoopt verzekeringen"],
+        options: ["Vecht voor mensenrechten wereldwijd", "Berecht mensen die rechten schenden", "Stuurt vredestroepen naar oorlogsgebieden", "Geeft medische hulp bij rampen"],
         answer: 0,
-        wrongHints: [null, "NGO, geen overheid.", "Vredelievend.", "Geen bedrijf."],
+        wrongHints: [null, "Amnesty is geen rechtbank. Hoe oefent het dan druk uit?", "Dat doet de VN met blauwhelmen.", "Dat doen het Rode Kruis en Artsen zonder Grenzen."],
       },
       {
         q: "Waar kun je in NL **klagen over de overheid**?",
-        options: ["Nationale Ombudsman", "Politieke partij", "School", "Bibliotheek"],
+        options: ["Nationale Ombudsman", "Politieke partij", "Consumentenbond", "Geschillencommissie"],
         answer: 0,
-        wrongHints: [null, "Een partij kan je mening meenemen, maar behandelt geen klachten over de overheid.", "Niet voor overheid-klachten.", "Geen klachten-instituut."],
+        wrongHints: [null, "Een partij kan je mening meenemen, maar behandelt geen klachten over de overheid.", "Die helpt bij klachten over bedrijven en producten. En over de overheid?", "Die beslist over ruzies tussen klanten en bedrijven. Wie gaat over klachten over de overheid?"],
       },
     ],
   },
@@ -301,9 +301,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **mensenrecht**?",
-        options: ["Recht dat iedereen heeft als mens", "Recht van rijke mensen", "Een wet uit 2000", "Iets dat niemand heeft"],
+        options: ["Recht dat iedereen heeft als mens", "Recht dat je krijgt als staatsburger", "Recht dat je verdient door goed gedrag", "Recht dat de regering je per wet geeft"],
         answer: 0,
-        wrongHints: [null, "Iedereen, ongeacht inkomen.", "Veel ouder.", "Wel iets — iedereen heeft het."],
+        wrongHints: [null, "Heeft een vluchteling zonder paspoort dan geen mensenrechten?", "Kun je mensenrechten kwijtraken door iets fout te doen?", "Kan de regering ze dan ook weer afpakken?"],
       },
       {
         q: "Wat is **UVRM**?",
@@ -313,9 +313,9 @@ const steps = [
       },
       {
         q: "**Vrijheid van meningsuiting** — welke generatie?",
-        options: ["1e (burgerlijk + politiek)", "2e (sociaal-economisch)", "3e (collectief)", "Geen"],
+        options: ["1e (burgerlijk + politiek)", "2e (sociaal-economisch)", "3e (collectief)", "4e (digitale rechten)"],
         answer: 0,
-        wrongHints: [null, "Sociaal-economisch.", "Collectief.", "Wel mensenrecht."],
+        wrongHints: [null, "Moet de overheid hier iets regelen, of juist van je afblijven?", "Collectieve rechten gaan over groepen en volken, zoals vrede en milieu.", "De lesstof kent drie generaties. In welke valt dit recht?"],
       },
       {
         q: "Wat is **ICC**?",
@@ -331,9 +331,9 @@ const steps = [
       },
       {
         q: "Welke NGO begon met **'schrijfacties' voor politieke gevangenen**?",
-        options: ["Amnesty International", "Greenpeace", "Rode Kruis", "WWF"],
+        options: ["Amnesty International", "Greenpeace", "Het Rode Kruis", "Artsen zonder Grenzen"],
         answer: 0,
-        wrongHints: [null, "Milieu.", "Medisch + ramp.", "Natuur."],
+        wrongHints: [null, "Greenpeace voert vooral actie voor het milieu.", "Het Rode Kruis helpt bij rampen en oorlog, zonder partij te kiezen.", "Artsen zonder Grenzen geeft medische hulp in crisisgebieden."],
       },
     ],
   },

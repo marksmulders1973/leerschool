@@ -745,12 +745,7 @@ const steps = [
     checks: [
       {
         q: "*Welke uitdrukking(en) is/zijn gelijk aan log(x²·y) − log(z)?*",
-        options: [
-          "2·log(x) + log(y) − log(z)",
-          "log(x²·y/z)",
-          "log(x²) + log(y/z)",
-          "Alle drie de andere uitdrukkingen — ze zijn wiskundig gelijk",
-        ],
+        options: ["2·log(x) + log(y) − log(z)", "log(x²·y/z)", "log(x²) + log(y/z)", "Alle drie de andere"],
         answer: 3,
         wrongHints: [
           "Klopt wel, maar kijk ook naar de andere opties — zijn die soms óók gelijk aan de uitdrukking?",
@@ -792,14 +787,14 @@ const steps = [
         },
       },
       { q: "log(1000) = ? (basis 10)", options: ["3","2","1000","10"], answer: 0, wrongHints: [null, "Niet — hoeveel nullen heeft 1000, en wat is de exponent van 10 daarvoor?", "Dat is argument.", "Dat is basis."] },
-      { q: "Wat is **log(a · b)** volgens eigenschap?", options: ["log(a) + log(b)","log(a) · log(b)","log(a) − log(b)","log(a/b)"], answer: 0, wrongHints: [null, "Niet.", "Andere eigenschap.", "Andere eigenschap."] },
-      { q: "**log(10)** = ? (basis 10)", options: ["1","10","0","100"], answer: 0, wrongHints: [null,"Argument.","Dat is log(1).","Niet."] },
+      { q: "Wat is **log(a · b)** volgens eigenschap?", options: ["log(a) + log(b)","log(a) · log(b)","log(a) − log(b)","log(a/b)"], answer: 0, wrongHints: [null, "Wordt vermenigvuldigen binnen de log ook vermenigvuldigen buiten de log? Probeer a = b = 10.", "Aftrekken hoort bij delen binnen de log. Staat er een deling?", "log(a/b) hoort bij een deling. Staat er a gedeeld door b?"] },
+      { q: "**log(10)** = ? (basis 10)", options: ["1","10","0","100"], answer: 0, wrongHints: [null,"10 is het getal ín de log. Tot welke macht moet je 10 verheffen om 10 te krijgen?","0 is log(1), want 10⁰ = 1. Welke macht van 10 geeft 10?","10² = 100. Is de uitkomst van een log het getal zelf, of de exponent?"] },
       { q: "**log(1)** = ? (welke basis dan ook)", options: ["0","1","∞","Niet bepaald"], answer: 0, wrongHints: [null,"Niet — log(basis).","Niet — log groeit logaritmisch.","Wel bepaald."] },
       { q: "log(a/b) = ?", options: ["log(a) − log(b)","log(a) + log(b)","log(a) · log(b)","log(a − b)"], answer: 0, wrongHints: [null,"Product.","Andere eigenschap.","Geen relatie."] },
-      { q: "log(a^n) = ?", options: ["n · log(a)","log(a)^n","log(n · a)","n + log(a)"], answer: 0, wrongHints: [null,"Niet — staat n in deze eigenschap als exponent óf als factor vóór de log?","Anders.","Niet."] },
-      { q: "ln(e) = ?", options: ["1","0","e","∞"], answer: 0, wrongHints: [null,"ln(1).","Niet.","Niet."] },
+      { q: "log(a^n) = ?", options: ["n · log(a)","log(a)^n","log(n · a)","n + log(a)"], answer: 0, wrongHints: [null,"Niet — staat n in deze eigenschap als exponent óf als factor vóór de log?","Probeer a = 10 en n = 2: log(100) = 2. Wat geeft log(n · a) = log(20)?","Probeer a = 10 en n = 2: log(100) = 2. Wat geeft n + log(a)?"] },
+      { q: "ln(e) = ?", options: ["1","0","e","∞"], answer: 0, wrongHints: [null,"0 is ln(1), want e⁰ = 1. Welke macht van e geeft e?","e is het getal ín de ln. Met welke exponent wordt e precies e?","ln(e) is een gewoon getal. Welke macht van e geeft precies e?"] },
       { q: "Wat is **e** ongeveer?", options: ["2,718","2","3","1,41"], answer: 0, wrongHints: [null,"Niet exact.","Niet exact.","Dat is √2."] },
-      { q: "Welke basis hoort bij **ln**?", options: ["e","10","2","½"], answer: 0, wrongHints: [null,"Dat is log (gewone).","Binaire logaritme.","Niet."] },
+      { q: "Welke basis hoort bij **ln**?", options: ["e","10","2","½"], answer: 0, wrongHints: [null,"Basis 10 hoort bij de gewone log. Waar staat de n in ln voor?","Basis 2 heet de binaire logaritme. Welk bijzonder getal hoort bij de natuurlijke logaritme?","Een basis kleiner dan 1 gebruik je zelden. Waar staat de n in ln voor?"] },
       { q: "**Open vraag**: bereken log(100) met basis 10. Typ getal.", kind: "open", acceptedAnswers: ["2"], numericTolerance: 0, explanation: "10² = 100 → log(100) = 2." },
       { q: "**Open vraag**: los op: 2^x = 8. Typ x.", kind: "open", acceptedAnswers: ["3"], numericTolerance: 0, explanation: "2³ = 8 → x = 3." },
     ],
