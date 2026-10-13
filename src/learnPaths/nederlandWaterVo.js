@@ -328,7 +328,7 @@ const steps = [
       },
       {
         q: "Wat is bestuurlijk **niet juist** voor waterschappen?",
-        options: ["De provincie kiest hun bestuur","Ze heffen eigen belasting","Ze beheren de dijken","Ze zuiveren rioolwater"],
+        options: ["De provincie kiest hun bestuur","Ze heffen eigen belasting","Ze onderhouden de dijken","Ze zuiveren het rioolwater"],
         answer: 0,
         wrongHints: [null, "Waterschappen sturen elk jaar een aanslag waterschapsbelasting. Is deze uitspraak dus juist?", "Dijken onderhouden is de oudste taak van een waterschap. Is deze uitspraak dan juist of niet juist?", "Waterschappen zuiveren het rioolwater van huishoudens. Is deze uitspraak dus juist?"],
         uitlegPad: {

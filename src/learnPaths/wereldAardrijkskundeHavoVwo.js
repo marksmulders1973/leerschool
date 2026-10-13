@@ -290,9 +290,9 @@ const steps = [
       },
       {
         q: "**Nigeria** is rijk aan grondstoffen maar:",
-        options: ["Veel armoede en corruptie","Te weinig olie om te exporteren","Een tekort aan arbeidskrachten","Leider in de industrie van Afrika"],
+        options: ["Veel armoede en corruptie","Een olievoorraad die bijna op is","Een tekort aan arbeidskrachten","Te weinig grote zeehavens"],
         answer: 0,
-        wrongHints: [null, "Nigeria is juist een van de grootste olieproducenten van Afrika. Wat gaat er mis met al dat geld?", "Nigeria heeft een snelgroeiende, jonge bevolking van ruim 200 miljoen. Is een tekort aan werkkrachten het probleem?", "Nigeria verdient vooral aan één grondstof. Is er dan veel fabrieksindustrie?"],
+        wrongHints: [null, "Nigeria pompt al zestig jaar olie op en heeft nog steeds grote voorraden. Waar blijft al dat oliegeld?", "Nigeria heeft een snelgroeiende, jonge bevolking van ruim 200 miljoen. Is een tekort aan werkkrachten het probleem?", "Lagos is een van de grootste havensteden van Afrika. Wat is dan het echte probleem van Nigeria?"],
         uitlegPad: {
           stappen: [{ titel: "Olie-paradox", tekst: "**Nigeria** = grootste olie-producent Afrika + grootste Afrikaanse bevolking (~220 mln). **Resource curse**: olie-rijkdom heeft niet welvaart breed verspreid. Corruptie, geweld in Niger-Delta, jihadisme noord (Boko Haram), economische ongelijkheid. Klassiek voorbeeld 'paradox of plenty'." }],
           niveaus: { basis: "Resource curse.", simpeler: "Nigeria = olie-paradox", nogSimpeler: "Olie-paradox." },
@@ -312,7 +312,7 @@ const steps = [
         q: "**SDG's** (Sustainable Development Goals) van VN gaan over:",
         options: ["Doelen voor duurzame ontwikkeling","Regels voor de wereldhandel","Afspraken over vrede tussen landen","Belastingafspraken tussen landen"],
         answer: 0,
-        wrongHints: [null, "Dat is de taak van de WTO — waar staat de D van SDG voor?", "Vrede is één van de doelen, maar gaan ze alleen daarover?", "Belastingafspraken maakten de G20-landen in 2021. Waar staat de S van SDG voor?"],
+        wrongHints: [null, "Dat is de taak van de WTO. Welke soorten doelen staan er tussen de 17 SDG's, zoals nummer 1 en nummer 13?", "Vrede is één van de doelen, maar gaan ze alleen daarover?", "Belastingafspraken maakten de G20-landen in 2021. Welke soorten doelen staan er tussen de 17 SDG's, zoals nummer 1 en nummer 13?"],
         uitlegPad: {
           stappen: [{ titel: "VN 2015", tekst: "**SDG's** (Sustainable Development Goals) = VN-doelen 2015-2030. **17 doelen** met 169 targets:\n1. Geen armoede\n2. Geen honger\n3. Goede gezondheid\n4. Onderwijs\n5. Gendergelijkheid\n...\n13. Klimaat\n...\n17. Partnerschap.\n\nVoortgang: gedeeltelijk + COVID/oorlog vertraagden. Veel onhaalbaar tegen 2030." }],
           niveaus: { basis: "17 doelen 2030.", simpeler: "SDG = VN-doelen 2030", nogSimpeler: "17 VN-doelen." },
