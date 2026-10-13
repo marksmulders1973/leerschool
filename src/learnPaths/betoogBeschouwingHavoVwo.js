@@ -307,7 +307,7 @@ const steps = [
         q: "Wat is een **anafoor**?",
         options: ["Herhaling aan begin van zinnen","Vraag waarop geen antwoord komt","Tegenstelling tussen twee zinnen","Beeldspraak zonder het woord 'als'"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is retorische vraag.", "Niet — dat is antithese/contrast.", "Niet — dat is metafoor."],
+        wrongHints: [null, "Een vraag waarop geen antwoord komt, heet een retorische vraag. Bij een anafoor wordt iets herhaald — wat en waar?", "Een tegenstelling tussen twee zinnen heet een antithese. Wat gebeurt er bij een anafoor?", "Beeldspraak zonder 'als' is een metafoor. Wat gebeurt er bij een anafoor?"],
         uitlegPad: {
           stappen: [{ titel: "Anafoor = begin-herhaling", tekst: "**Anafoor** = herhalen van **woord(en) aan begin** van opeenvolgende zinnen. 'Ik heb een droom dat... Ik heb een droom dat...' (Martin Luther King). Versterkt boodschap door ritme + nadruk." }],
           niveaus: { basis: "Begin-herhaling.", simpeler: "Anafoor = herhaling begin", nogSimpeler: "Begin" },
@@ -315,9 +315,9 @@ const steps = [
       },
       {
         q: "In een **betoog** hoort het tegenargument:",
-        options: ["Genoemd + weerlegd","Volledig genegeerd","Vooraan in tekst","Pas in slot"],
+        options: ["Genoemd + weerlegd","Genoemd + bevestigd","Vooraan in tekst","Pas in slot"],
         answer: 0,
-        wrongHints: [null, "Niet — geeft zwak signaal.", "Niet — komt meestal in midden.", "Niet — slot is conclusie."],
+        wrongHints: [null, "Als je het tegenargument gelijk geeft, verzwak je je eigen standpunt. Wat doe je er dan wel mee?", "Vooraan in de tekst staan de aanleiding en de stelling. Waar komt het tegenargument meestal?", "In het slot trek je je conclusie. Kan de lezer daar nog op een nieuw argument reageren?"],
         uitlegPad: {
           stappen: [{ titel: "Tegenargument behandelen", tekst: "Goed betoog **erkent** tegenargumenten en weerlegt ze. Plaats: in midden, ergens tussen hoofd-argumenten. Toont kennis van veld + versterkt eigen positie." }],
           niveaus: { basis: "Genoemd + weerlegd.", simpeler: "Tegenargument = noemen + weerleggen", nogSimpeler: "Weerleggen" },
@@ -327,7 +327,7 @@ const steps = [
         q: "*'Hij is een leeuw op het strijdveld.'* (over voetballer) — welk stijlmiddel?",
         options: ["Metafoor","Vergelijking","Hyperbool","Ironie"],
         answer: 0,
-        wrongHints: [null, "Niet — bij vergelijking zou 'als een' staan.", "Niet — geen overdrijving.", "Niet — geen tegenovergestelde."],
+        wrongHints: [null, "Een vergelijking gebruikt 'als' of 'zoals', bijvoorbeeld 'hij vecht als een leeuw'. Staat dat hier?", "Een hyperbool overdrijft iets, zoals 'ik heb het duizend keer gezegd'. Gebeurt dat hier?", "Bij ironie bedoel je het tegenovergestelde. Bedoelt de schrijver dat de voetballer slap speelt?"],
         uitlegPad: {
           stappen: [{ titel: "Metafoor: 'is' = direct", tekst: "Hij IS een leeuw → metafoor (direct gelijkstellen). Hij is ALS een leeuw → vergelijking (met 'als'). Verschil: woord 'als' bepaalt." }],
           niveaus: { basis: "Metafoor.", simpeler: "IS leeuw = metafoor", nogSimpeler: "Metafoor" },
