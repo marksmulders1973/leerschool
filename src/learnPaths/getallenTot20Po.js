@@ -37,7 +37,7 @@ const steps = [
         q: "Welk getal komt **na 7**?",
         options: ["8","6","9","10"],
         answer: 0,
-        wrongHints: [null, "Dat komt VOOR 7.", "Dat komt na 8, niet direct na 7.", "Dat komt 3 verder dan 7."],
+        wrongHints: [null, "Dat komt VOOR 7.", "Je slaat er eentje over — welk getal komt metéén na 7?", "Dat komt 3 verder dan 7."],
         uitlegPad: {
           stappen: [{ titel: "Tellen op", tekst: "Telrij: 5, 6, **7, 8**, 9, 10. Na 7 komt 8." }],
           voorbeelden: [{ type: "voorbeeld", tekst: "Tel mee: 1-2-3-4-5-6-**7**-**8**-9-10." }],
@@ -49,7 +49,7 @@ const steps = [
         q: "Hoeveel stippen zijn dit: **● ● ● ● ●**?",
         options: ["5","4","6","10"],
         answer: 0,
-        wrongHints: [null, "Bijna — tel nog eens, en wijs elke stip maar één keer aan.", "Te veel — er staan er minder.", "Veel te veel."],
+        wrongHints: [null, "Bijna — tel nog eens, en wijs elke stip maar één keer aan.", "Te veel — er staan er minder.", "Wijs elke stip één keer aan — zijn het er echt zoveel?"],
         uitlegPad: {
           stappen: [{ titel: "Tellen", tekst: "Tel elke stip met je vinger: 1, 2, 3, 4, 5. Vijf stippen → cijfer 5." }],
           niveaus: { basis: "5 stippen.", simpeler: "Tel mee: 1-2-3-4-5.", nogSimpeler: "5" },
@@ -57,9 +57,9 @@ const steps = [
       },
       {
         q: "Welk getal is **kleiner**: 8 of 12?",
-        options: ["8","12","Even groot","Kan niet vergelijken"],
+        options: ["8","12","Ze zijn even groot","Dat kun je niet zeggen"],
         answer: 0,
-        wrongHints: [null, "Dat is groter — 12 komt later in telrij.", "Niet — 8 en 12 zijn verschillend.", "Wel — telrij geeft volgorde."],
+        wrongHints: [null, "Dat is groter — 12 komt later in de telrij.", "Staan 8 en 12 op dezelfde plek in de telrij?", "Dat kan wel: kijk welk getal eerder komt in de telrij."],
         uitlegPad: {
           stappen: [{ titel: "In telrij", tekst: "8 komt EERDER dan 12 in telrij (1-2-3-4-5-6-7-**8**-9-10-11-**12**). Eerder = kleiner." }],
           woorden: [{ woord: "kleiner", uitleg: "Minder dan iets anders." }],
@@ -68,16 +68,16 @@ const steps = [
       },
       {
         q: "Welk getal komt **tussen 14 en 16**?",
-        options: ["15","13","17","20"],
+        options: ["15","13","17","16"],
         answer: 0,
-        wrongHints: [null, "Dat komt VOOR 14.", "Dat komt NA 16.", "Veel te ver."],
+        wrongHints: [null, "Dat komt VOOR 14.", "Dat komt NA 16.", "Dat is het tweede getal zelf. Welk getal ligt ertussen?"],
         uitlegPad: {
           stappen: [{ titel: "Telrij hoge getallen", tekst: "...13, 14, **15**, 16, 17... Tussen 14 en 16 zit 15." }],
           niveaus: { basis: "15 tussen 14 en 16.", simpeler: "14 → 15 → 16.", nogSimpeler: "15" },
         },
       },
       {
-        q: "Wat is **20** = 10 + ?",
+        q: "Vul in: 10 + ? = **20**",
         options: ["10","8","5","12"],
         answer: 0,
         wrongHints: [null, "Tel het na: is 10 + 8 echt gelijk aan 20?", "Tel het na: is 10 + 5 echt gelijk aan 20?", "Te veel — 10 + 12 gaat al voorbij 20."],
@@ -190,10 +190,10 @@ const steps = [
         },
       },
       {
-        q: "Welk **dubbele**-getal is **4 + 4**?",
+        q: "4 + 4 is een dubbele som. Hoeveel is **4 + 4**?",
         options: ["8","6","7","9"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dubbele van 3.", "Onmogelijk — dubbele is altijd even.", "Onmogelijk."],
+        wrongHints: [null, "Dat is het dubbele van 3, niet van 4.", "Tel vanaf 4 nog vier verder: kom je dan op 7 uit?", "Dat is 4 + 5 — maar je telt twee keer 4 op."],
         uitlegPad: {
           stappen: [{ titel: "Dubbele = 2x zelfde", tekst: "4 + 4 = **8**. Even getal want je telt 2 keer hetzelfde. Onthoud lijstje: 1+1=2, 2+2=4, 3+3=6, 4+4=**8**, 5+5=10." }],
           niveaus: { basis: "4 + 4 = 8.", simpeler: "Dubbele 4 = 8.", nogSimpeler: "8" },
@@ -214,7 +214,7 @@ const steps = [
         q: "**7 + 0** = ?",
         options: ["7","8","0","1"],
         answer: 0,
-        wrongHints: [null, "Te veel — er kwam niets bij.", "Te weinig — 7 staat al voor 'plus 0'.", "Te weinig."],
+        wrongHints: [null, "Te veel — er kwam niets bij.", "Bij plus 0 gaat er niets af — hoeveel had je al?", "Plus 0 betekent: er komt niets bij. Hoeveel had je al?"],
         uitlegPad: {
           stappen: [{ titel: "Plus 0 = niets erbij", tekst: "**+0 = blijft hetzelfde**. 7 + 0 = 7. 100 + 0 = 100. Altijd zo." }],
           theorie: "Wiskundig: 0 is 'neutraal' bij optellen. Bij vermenigvuldigen anders (X × 0 = 0).",
@@ -222,10 +222,10 @@ const steps = [
         },
       },
       {
-        q: "**3 + 7** is hetzelfde als ___ + 3?",
+        q: "**3 + 7** is hetzelfde als ___ + 3. Welk getal hoort op de lijn?",
         options: ["7","10","3","4"],
         answer: 0,
-        wrongHints: [null, "Dat is uitkomst, niet vraag.", "Niet — dat is hetzelfde.", "Niet — dat is uitkomst van iets anders."],
+        wrongHints: [null, "10 is de uitkomst. Welk getal moet er vóór de + 3 staan?", "Dan staat er 3 + 3 — is dat hetzelfde als 3 + 7?", "Reken na: is 4 + 3 hetzelfde als 3 + 7?"],
         uitlegPad: {
           stappen: [{ titel: "Wisselen mag", tekst: "Bij optellen: **volgorde maakt niet uit**. 3 + 7 = 7 + 3 = 10. Wisselen heet 'commutatief'. Maakt sommen vaak makkelijker." }],
           woorden: [{ woord: "wisselen", uitleg: "Getallen verwisselen — bij plus altijd OK." }],
@@ -317,7 +317,7 @@ const steps = [
         q: "**9 - 9** = ?",
         options: ["0","1","9","18"],
         answer: 0,
-        wrongHints: [null, "Te veel — alles eraf = niets over.", "Te veel.", "Niet — dat is plus."],
+        wrongHints: [null, "Je haalt er 9 af van 9 — blijft er dan nog eentje over?", "Dan is er niets afgegaan — maar je haalt er 9 af.", "Dat is 9 + 9 — hier staat min."],
         uitlegPad: {
           stappen: [{ titel: "Iets - zichzelf = 0", tekst: "Als je alles eraf haalt blijft er niets over. 9 - 9 = **0**. Werkt voor elk getal: 5 - 5 = 0, 100 - 100 = 0." }],
           niveaus: { basis: "9 - 9 = 0.", simpeler: "Alles weg = 0.", nogSimpeler: "0" },
@@ -327,7 +327,7 @@ const steps = [
         q: "Vul in: **7 - ?** = 3",
         options: ["4","10","3","2"],
         answer: 0,
-        wrongHints: [null, "Te veel — kan 7 - 10 nog een positief getal zijn?", "Niet — controleer: is dit getal echt de ontbrekende stap voor 7 - ? = 3?", "Te weinig — controleer: wat krijg je als je 7 - 2 uitrekent?"],
+        wrongHints: [null, "Te veel — kan 7 - 10 nog een positief getal zijn?", "Reken na: hoeveel is 7 - 3? Is dat 3?", "Te weinig — controleer: wat krijg je als je 7 - 2 uitrekent?"],
         uitlegPad: {
           stappen: [{ titel: "Familie-som omkeren", tekst: "7 - ? = 3 → wat moet er weg om 3 over te houden? 7 - **4** = 3. Familie: 3 + 4 = 7, dus 7 - 4 = 3 en 7 - 3 = 4." }],
           niveaus: { basis: "4.", simpeler: "7 - 4 = 3", nogSimpeler: "4" },
@@ -449,7 +449,7 @@ const steps = [
         q: "**14 + 5** = ?",
         options: ["19","20","18","13"],
         answer: 0,
-        wrongHints: [null, "Te veel — je hebt er te veel bij opgeteld.", "Te weinig — je hebt 4 opgeteld, maar de som vraagt om 5.", "Niet — dat is 14-1."],
+        wrongHints: [null, "Te veel — je hebt er te veel bij opgeteld.", "Te weinig — je hebt 4 opgeteld, maar de som vraagt om 5.", "Dat is 14 - 1 — hier staat plus."],
         uitlegPad: {
           stappen: [{ titel: "Splits 14", tekst: "14 = 10 + 4. Dus 14 + 5 = 10 + 4 + 5 = 10 + 9 = **19**." }],
           theorie: "Of: 4 + 5 = 9, en dan 10 + 9 = 19. Hetzelfde resultaat.",
@@ -460,7 +460,7 @@ const steps = [
         q: "Tom heeft 9 stickers. Hij krijgt er 4 bij. Hoeveel heeft hij nu?",
         options: ["13","12","14","5"],
         answer: 0,
-        wrongHints: [null, "Te weinig — je hebt 3 erbij geteld, maar de som vraagt om 4.", "Te veel — je hebt 5 erbij geteld, maar de som vraagt om 4.", "Niet — dat is 9-4."],
+        wrongHints: [null, "Te weinig — je hebt 3 erbij geteld, maar de som vraagt om 4.", "Te veel — je hebt 5 erbij geteld, maar de som vraagt om 4.", "Dat is 9 - 4 — maar Tom krijgt er stickers bij."],
         uitlegPad: {
           stappen: [{ titel: "Redactiesom = plus", tekst: "Krijgt 4 erbij → plus-som. 9 + 4 = 9 + 1 + 3 = 10 + 3 = **13**." }],
           theorie: "Toets-trucs voor redactiesom: zoek signaalwoorden. 'Krijgt erbij' = plus. 'Geeft weg' / 'verliest' = min.",
@@ -469,9 +469,9 @@ const steps = [
       },
       {
         q: "**Welk getal komt eerst** in de telrij: 13 of 17?",
-        options: ["13","17","Tegelijk","Beide niet"],
+        options: ["13","17","Ze komen tegelijk","Dat kun je niet zeggen"],
         answer: 0,
-        wrongHints: [null, "Niet — 17 komt later.", "Niet — verschillend.", "Wel — beide bestaan."],
+        wrongHints: [null, "Tel vanaf 10: kom je 17 eerst tegen, of een ander getal?", "Kunnen twee verschillende getallen op dezelfde plek in de telrij staan?", "Dat kan wel: tel vanaf 10 — welk getal kom je eerst tegen?"],
         uitlegPad: {
           stappen: [{ titel: "Tellen 11-20", tekst: "Telrij: 11, 12, **13**, 14, 15, 16, **17**, 18, 19, 20. **13 komt eerst**." }],
           niveaus: { basis: "13.", simpeler: "13 < 17.", nogSimpeler: "13" },
@@ -587,7 +587,7 @@ const steps = [
         q: "Hoeveel is **5 + 5 + 5**?",
         options: ["15","10","20","12"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dat is 5+5.", "Te veel — 5+5+5+5.", "Niet."],
+        wrongHints: [null, "Te weinig — dat is 5+5.", "Te veel — 5+5+5+5.", "Tel in sprongen van 5: 5, 10, ... kom je dan op 12 uit?"],
         uitlegPad: {
           stappen: [{ titel: "Driemaal vijf", tekst: "5 + 5 = 10. 10 + 5 = **15**. Drie keer 5 = 15. Dit ga je later '3 × 5' noemen — vermenigvuldigen!" }],
           niveaus: { basis: "15.", simpeler: "5+5+5 = 15.", nogSimpeler: "15" },
@@ -607,7 +607,7 @@ const steps = [
         q: "Welk getal is **dubbel zo veel** als 6?",
         options: ["12","8","10","16"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dubbele van 4.", "Niet — dubbele van 5.", "Te veel — dubbele van 8."],
+        wrongHints: [null, "Dat is het dubbele van 4.", "Dat is het dubbele van 5.", "Dat is het dubbele van 8."],
         uitlegPad: {
           stappen: [{ titel: "Dubbele 6", tekst: "Dubbele = 2x. 6 + 6 = **12**. Of: 2 × 6 = 12 (vermenigvuldigen later)." }],
           niveaus: { basis: "12.", simpeler: "Dubbele 6 = 12.", nogSimpeler: "12" },

@@ -26,9 +26,9 @@ const steps = [
     checks: [
       {
         q: "Een tuin is 8 m lang en 5 m breed. Hoeveel meter **hek** heb je nodig om alle 4 de zijden af te zetten?",
-        options: ["13 m", "26 m", "40 m", "40 m²"],
+        options: ["13 m", "26 m", "40 m", "21 m"],
         answer: 1,
-        wrongHints: ["Dat is 8 + 5 — slechts 2 zijden. Een tuin heeft 4 zijden.", null, "40 = oppervlakte (8 × 5), niet omtrek. Hek = omtrek!", "Eenheid klopt niet (m²) — hek wordt in meters gemeten, niet vierkante meters."],
+        wrongHints: ["Je telde 8 + 5: dat zijn maar 2 zijden. Hoeveel zijden heeft de tuin?", null, "Je deed 8 × 5. Zet je een hek over het vlak of langs de rand?", "Je telde 8 + 8 + 5. Heb je alle 4 de zijden meegeteld?"],
         explanation: "**Omtrek = 2× lengte + 2× breedte** = 2×8 + 2×5 = 16 + 10 = **26 m**. Een tuin heeft 4 zijden — niet 2.",
         uitlegPad: compact(
           "Omtrek rechthoek = 2×(L+B). 8m+5m=13m, ×2=26m. Hek = randje = omtrek.",
@@ -49,10 +49,10 @@ const steps = [
         ),
       },
       {
-        q: "Een vloer is 6 m × 4 m. Hoeveel **tegels van 1 m² heb je nodig** om de hele vloer te bedekken?",
-        options: ["10 tegels", "20 tegels", "24 tegels", "10 m²"],
+        q: "Een vloer is 6 m lang en 4 m breed. Hoeveel **tegels van 1 m²** heb je nodig om de hele vloer te bedekken?",
+        options: ["10 tegels", "20 tegels", "24 tegels", "12 tegels"],
         answer: 2,
-        wrongHints: ["Je telde de zijden op — maar tegels bedekken het vlak. Welke bewerking hoort daarbij?", "Dat is de omtrek (rondje langs de rand). Voor oppervlakte gebruik je een andere bewerking.", null, "Antwoord moet aantal tegels zijn (een getal), niet m²."],
+        wrongHints: ["Je telde de zijden op — maar tegels bedekken het vlak. Welke bewerking hoort daarbij?", "Dat is de omtrek (rondje langs de rand). Voor oppervlakte gebruik je een andere bewerking.", null, "Je nam de helft. Hoeveel rijen van 6 tegels passen er op de vloer?"],
         explanation: "**Oppervlakte = lengte × breedte** = 6 × 4 = **24 m²**. Bij tegels van 1 m² = 24 tegels.",
         uitlegPad: compact(
           "Oppervlakte rechthoek = L × B. Tegels 1m²: aantal = totale oppervlakte.",
@@ -62,9 +62,9 @@ const steps = [
       },
       {
         q: "Je wilt een **tuin omheinen**. De tuin is **10 m lang** en **4 m breed**. Hoeveel meter hek heb je nodig?",
-        options: ["28 m", "14 m", "40 m", "40 m²"],
+        options: ["28 m", "14 m", "40 m", "24 m"],
         answer: 0,
-        wrongHints: [null, "Je telt maar 2 zijden op — een tuin heeft 4 zijden.", "Dat is de oppervlakte (lengte × breedte), niet de rand. Een hek gaat rondom.", "Hek meet je in meters, niet m²."],
+        wrongHints: [null, "Je telt maar 2 zijden op — een tuin heeft 4 zijden.", "Dat is de oppervlakte (lengte × breedte), niet de rand. Een hek gaat rondom.", "Je telde 10 + 10 + 4. Mis je nog een zijde?"],
         uitlegPad: compact(
           "Hek = omtrek = 2×(L+B) = 2×(10+4) = 2×14 = 28 m.",
           { basis: "Omtrek 2(10+4) = 28 m.", simpeler: "10+4+10+4 = 28 m hek.", nogSimpeler: "28 m" },
@@ -75,7 +75,7 @@ const steps = [
         q: "Je legt **gras** in een rechthoekig veldje van **5 m × 3 m**. Hoeveel m² gras heb je nodig?",
         options: ["15 m²", "8 m²", "16 m²", "15 m"],
         answer: 0,
-        wrongHints: [null, "Je telde de twee maten op — gras bedekt het vlak, dus welke bewerking hoort daarbij?", "Dat is de omtrek (de rand) — maar voor gras heb je het vlak binnenin nodig.", "Eenheid moet m² zijn."],
+        wrongHints: [null, "Je telde de twee maten op — gras bedekt het vlak, dus welke bewerking hoort daarbij?", "Dat is de omtrek (de rand) — maar voor gras heb je het vlak binnenin nodig.", "Welke eenheid hoort bij een vlak, zoals een grasveld?"],
         uitlegPad: compact(
           "Gras = oppervlakte = L×B = 5×3 = 15 m².",
           { basis: "5 × 3 = 15 m².", simpeler: "Gras = vlak = 5×3.", nogSimpeler: "15" },
@@ -239,9 +239,9 @@ const steps = [
     checks: [
       {
         q: "Bereken de **omtrek** van een rechthoek met lengte **12 cm** en breedte **5 cm**.",
-        options: ["17 cm", "34 cm", "60 cm", "60 cm²"],
+        options: ["17 cm", "34 cm", "60 cm", "29 cm"],
         answer: 1,
-        wrongHints: ["Je telt maar 2 zijden op — hoeveel zijden heeft een rechthoek?", null, "Dat is een vermenigvuldiging van de twee maten — is dat omtrek of oppervlakte?", "60 cm² = oppervlakte-eenheid. Omtrek = lengte (cm)."],
+        wrongHints: ["Je telt maar 2 zijden op — hoeveel zijden heeft een rechthoek?", null, "Dat is een vermenigvuldiging van de twee maten — is dat omtrek of oppervlakte?", "Je telde 12 + 12 + 5. Heb je alle 4 de zijden meegeteld?"],
         explanation: "**Omtrek = 2×L + 2×B** = 2×12 + 2×5 = 24 + 10 = **34 cm**. Of: 12+5+12+5 = 34.",
         uitlegPad: compact(
           "Rechthoek omtrek = 2L + 2B = 2(L+B). 2(12+5) = 2×17 = 34 cm.",
@@ -287,9 +287,9 @@ const steps = [
       },
       {
         q: "Een vierkant heeft een omtrek van **52 cm**. Hoe lang is **één zijde**?",
-        options: ["13 cm", "26 cm", "48 cm", "4 cm"],
+        options: ["13 cm", "26 cm", "48 cm", "14 cm"],
         answer: 0,
-        wrongHints: [null, "Dat is de helft van de omtrek — maar hoeveel zijden heeft een vierkant?", "Dat is 52 − 4 — dat is geen wiskundige formule voor omtrek.", "Je deelde door het verkeerde getal — hoeveel zijden heeft een vierkant?"],
+        wrongHints: [null, "Dat is de helft van de omtrek — maar hoeveel zijden heeft een vierkant?", "Je haalde 4 eraf. Moet je aftrekken of delen?", "Reken 4 × 14 uit. Kom je dan op 52?"],
         explanation: "Vierkant: omtrek = 4 × zijde → zijde = 52 ÷ 4 = **13 cm**.",
         uitlegPad: compact(
           "Zijde = omtrek ÷ 4 = 52 ÷ 4 = 13 cm.",
@@ -474,7 +474,7 @@ const steps = [
         q: "Bereken de **oppervlakte** van een rechthoek met lengte **9 m** en breedte **6 m**.",
         options: ["15 m²", "30 m²", "54 m²", "54 m"],
         answer: 2,
-        wrongHints: ["Dat is een optelling van de twee maten — welke bewerking geeft oppervlakte?", "Dat is de omtrek (rondje langs de rand). Oppervlakte vraagt een andere bewerking.", null, "Eenheid moet m² zijn (oppervlakte), niet m."],
+        wrongHints: ["Dat is een optelling van de twee maten — welke bewerking geeft oppervlakte?", "Dat is de omtrek (rondje langs de rand). Oppervlakte vraagt een andere bewerking.", null, "Welke eenheid hoort bij een oppervlakte?"],
         explanation: "**Oppervlakte = L × B** = 9 × 6 = **54 m²**.",
         uitlegPad: compact(
           "Oppervlakte rechthoek = L×B. 9×6 = 54 m².",
@@ -486,7 +486,7 @@ const steps = [
         q: "Wat is de **oppervlakte van een vierkant** met zijde **12 cm**?",
         options: ["24 cm²", "48 cm²", "144 cm²", "144 cm"],
         answer: 2,
-        wrongHints: ["Dat is de zijde keer 2 — welke formule geeft oppervlakte van een vierkant?", "Dat is de omtrek van het vierkant. Oppervlakte vraagt een andere bewerking.", null, "Eenheid is cm² voor oppervlakte (niet cm)."],
+        wrongHints: ["Dat is de zijde keer 2 — welke formule geeft oppervlakte van een vierkant?", "Dat is de omtrek van het vierkant. Oppervlakte vraagt een andere bewerking.", null, "Welke eenheid hoort bij een oppervlakte?"],
         explanation: "**Vierkant oppervlakte** = zijde × zijde = 12 × 12 = **144 cm²**. (Of: 12² = 144.)",
         uitlegPad: compact(
           "Vierkant oppervlakte = zijde². 12² = 12×12 = 144 cm².",
@@ -498,7 +498,7 @@ const steps = [
         q: "Hoeveel cm² is **1 m²**?",
         options: ["100 cm²", "1.000 cm²", "10.000 cm²", "1.000.000 cm²"],
         answer: 2,
-        wrongHints: ["Oppervlakte is 2D — je moet in TWEE richtingen omrekenen, niet één. Hoeveel cm past er in 1 m?", "Tussen-getal — niet correct.", null, "Te veel — oppervlakte heeft twee dimensies, maar je hebt er te véél bijgeteld."],
+        wrongHints: ["Oppervlakte is 2D — je moet in TWEE richtingen omrekenen, niet één. Hoeveel cm past er in 1 m?", "Je deed keer 1000. Hoeveel cm² is een vierkant van 100 cm bij 100 cm?", null, "Te veel — oppervlakte heeft twee dimensies, maar je hebt er te véél bijgeteld."],
         explanation: "**1 m² = 100 cm × 100 cm = 10.000 cm²**. Truc: lengte-conversie ×100, maar oppervlakte (vierkant) ×100×100 = 10.000. Belangrijke Toets-trap!",
         uitlegPad: compact(
           "1m = 100cm. 1m² = 100×100 = 10.000 cm² (NIET 100). Steeds 1 dimensie meer: m³ = 100³ = 1.000.000 cm³.",
@@ -707,7 +707,7 @@ const steps = [
         q: "Bereken de **oppervlakte** van een driehoek met basis **10 cm** en hoogte **6 cm**.",
         options: ["16 cm²", "30 cm²", "60 cm²", "30 cm"],
         answer: 1,
-        wrongHints: ["Dat is een optelling — de formule voor driehoek-oppervlakte vraagt meer dan dat.", null, "Je bent de deling door 2 vergeten — waarom moet je bij een driehoek door 2 delen?", "Eenheid moet cm² zijn."],
+        wrongHints: ["Dat is een optelling — de formule voor driehoek-oppervlakte vraagt meer dan dat.", null, "Je bent de deling door 2 vergeten — waarom moet je bij een driehoek door 2 delen?", "Welke eenheid hoort bij een oppervlakte?"],
         explanation: "**Oppervlakte driehoek = ½ × basis × hoogte** = ½ × 10 × 6 = **30 cm²**. Of: (10×6)÷2 = 60÷2 = 30.",
         uitlegPad: compact(
           "Driehoek = halve rechthoek. A = (b×h)/2 = (10×6)/2 = 30 cm².",
@@ -719,7 +719,7 @@ const steps = [
         q: "Een rechthoekige driehoek heeft een rechte hoek bij hoek A. De zijden bij A zijn **5 cm** en **12 cm**. Wat is de oppervlakte?",
         options: ["17 cm²", "30 cm²", "60 cm²", "60 cm"],
         answer: 1,
-        wrongHints: ["Dat is een optelling — de formule voor driehoek-oppervlakte vraagt meer dan dat.", null, "Je bent de deling door 2 vergeten — driehoek is de helft van een rechthoek!", "Eenheid moet cm² zijn."],
+        wrongHints: ["Dat is een optelling — de formule voor driehoek-oppervlakte vraagt meer dan dat.", null, "Je bent de deling door 2 vergeten — driehoek is de helft van een rechthoek!", "Welke eenheid hoort bij een oppervlakte?"],
         explanation: "**Bij rechthoekige driehoek**: de 2 rechte zijden ZIJN basis + hoogte (ze staan al haaks). A = ½ × 5 × 12 = ½ × 60 = **30 cm²**.",
         uitlegPad: compact(
           "Rechthoekige driehoek: de 2 zijden bij de rechte hoek = basis + hoogte. (5×12)/2 = 30.",
@@ -743,7 +743,7 @@ const steps = [
         q: "Een driehoek heeft basis **6 cm** en hoogte **4 cm**. Wat is de **oppervlakte**?",
         options: ["12 cm²", "24 cm²", "10 cm²", "12 cm"],
         answer: 0,
-        wrongHints: [null, "Je vergeet te delen door 2 — een driehoek is de helft van een rechthoek.", "Dat is een optelling, niet de oppervlakte-formule.", "Eenheid is cm²."],
+        wrongHints: [null, "Je vergeet te delen door 2 — een driehoek is de helft van een rechthoek.", "Dat is een optelling, niet de oppervlakte-formule.", "Welke eenheid hoort bij een oppervlakte?"],
         explanation: "A = ½ × 6 × 4 = **12 cm²**.",
         uitlegPad: compact(
           "A = (b×h)/2 = (6×4)/2 = 12 cm².",
@@ -755,7 +755,7 @@ const steps = [
         q: "Een driehoek heeft basis **14 m** en hoogte **5 m**. Wat is de **oppervlakte**?",
         options: ["35 m²", "70 m²", "19 m²", "35 m"],
         answer: 0,
-        wrongHints: [null, "Je vergeet door 2 te delen — driehoek is halve rechthoek.", "Dat is een optelling van basis en hoogte, geen formule voor oppervlakte.", "Eenheid is m²."],
+        wrongHints: [null, "Je vergeet door 2 te delen — driehoek is halve rechthoek.", "Dat is een optelling van basis en hoogte, geen formule voor oppervlakte.", "Welke eenheid hoort bij een oppervlakte?"],
         explanation: "A = ½ × 14 × 5 = 7 × 5 = **35 m²**.",
         uitlegPad: compact(
           "A = (14×5)/2 = 70/2 = 35 m².",
@@ -938,9 +938,9 @@ const steps = [
     checks: [
       {
         q: "Een cirkel heeft een **straal van 4 cm**. Wat is de **omtrek**? (Gebruik π ≈ 3,14)",
-        options: ["12,56 cm", "25,12 cm", "50,24 cm", "12,56 cm²"],
+        options: ["12,56 cm", "25,12 cm", "50,24 cm", "8 cm"],
         answer: 1,
-        wrongHints: ["Dat is π × straal — hoort in de omtrek-formule de straal of de diameter?", null, "50,24 = π × 4 × 4 = π × r² — dat is de oppervlakte, niet de omtrek.", "Eenheid omtrek = cm, niet cm²."],
+        wrongHints: ["Dat is π × straal — hoort in de omtrek-formule de straal of de diameter?", null, "Je deed 3,14 × 4 × 4. Is dat de omtrek of de oppervlakte?", "8 cm is de diameter. Wat doe je nog met π?"],
         explanation: "**Omtrek = 2 × π × r** = 2 × 3,14 × 4 = 6,28 × 4 = **25,12 cm**. (Of: d = 2×4 = 8 cm, π×d = 3,14×8 = 25,12.)",
         uitlegPad: compact(
           "Omtrek cirkel = 2πr = πd. r=4: 2×3,14×4 = 25,12 cm.",
@@ -964,7 +964,7 @@ const steps = [
         q: "Hoeveel is π (pi) **afgerond op 2 decimalen**?",
         options: ["3,12", "3,14", "3,16", "3,18"],
         answer: 1,
-        wrongHints: ["Net te laag — ken je de eerste cijfers van π?", null, "Net te hoog.", "Te hoog."],
+        wrongHints: ["Net te laag — ken je de eerste cijfers van π?", null, "π begint met 3,14159… Wat krijg je als je dat afrondt op 2 cijfers na de komma?", "Hoe begint π: 3,1…? Welk cijfer komt daarna?"],
         explanation: "**π ≈ 3,14** (op 2 decimalen). Volledig: 3,14159265... Op school reken je meestal met 3,14. Op rekenmachine = π-knop.",
         uitlegPad: compact(
           "π = 3,14159... Op 2 decimalen: 3,14. Pi-dag = 14 maart (3-14 datum-notatie).",
@@ -1184,9 +1184,9 @@ const steps = [
     checks: [
       {
         q: "Je legt **plinten** (houten randjes) langs de muren van een kamer van **5 m × 4 m**. Hoeveel meter plint heb je nodig?",
-        options: ["9 m", "18 m", "20 m", "20 m²"],
+        options: ["9 m", "18 m", "20 m", "13 m"],
         answer: 1,
-        wrongHints: ["Je telt maar 2 zijden op — hoeveel muren heeft een rechthoekige kamer?", null, "Dat is een vermenigvuldiging van de twee maten — maar plinten gaan langs de randen. Welke formule hoort daarbij?", "Eenheid moet m zijn (plinten = lengte)."],
+        wrongHints: ["Je telt maar 2 zijden op — hoeveel muren heeft een rechthoekige kamer?", null, "Je deed 5 × 4. Gaan plinten over de vloer of langs de randen?", "Je telde 5 + 4 + 4. Hoeveel muren heeft de kamer?"],
         explanation: "**Plinten gaan langs alle 4 muren** = omtrek = 2×(5+4) = 2×9 = **18 m**. (Of: 5+4+5+4 = 18.)",
         uitlegPad: compact(
           "Plinten = langs muren = omtrek. 2×(5+4) = 18 m.",
@@ -1198,7 +1198,7 @@ const steps = [
         q: "Een tuin van **20 m × 15 m** heeft in een hoek een **vijver van 4 m × 3 m**. Hoeveel m² **gras** is er?",
         options: ["288 m²", "300 m²", "312 m²", "330 m²"],
         answer: 0,
-        wrongHints: [null, "Dat is de totale tuin — maar er staat ook iets in de tuin wat geen gras is. Wat moet je nog doen?", "Je hebt de vijver erbij geteld — maar de vijver is geen gras. Moet die erbij of eraf?", "Foute optelling — hoeveel is de vijver-oppervlakte, en welke kant op reken je die mee?"],
+        wrongHints: [null, "Dat is de totale tuin — maar er staat ook iets in de tuin wat geen gras is. Wat moet je nog doen?", "Je hebt de vijver erbij geteld — maar de vijver is geen gras. Moet die erbij of eraf?", "Je telde er 30 bij op. Hoe groot is de vijver, en moet die erbij of eraf?"],
         explanation: "**Tuin = 20×15 = 300 m²**. **Vijver = 4×3 = 12 m²**. Gras = tuin − vijver = 300 − 12 = **288 m²**.",
         uitlegPad: compact(
           "Gras = totale tuin − vijver. (20×15) − (4×3) = 300 − 12 = 288 m².",
@@ -1210,7 +1210,7 @@ const steps = [
         q: "Een ronde **pizza** heeft een **diameter van 30 cm**. Hoeveel cm² is de pizza? (π ≈ 3,14)",
         options: ["94,2 cm²", "188,4 cm²", "706,5 cm²", "2.826 cm²"],
         answer: 2,
-        wrongHints: ["Dat is de omtrek van de pizza, niet de oppervlakte. Welke formule geeft oppervlakte?", "Foute formule — voor de oppervlakte van een cirkel gebruik je π × r². Welke maat is r?", null, "Je hebt de diameter gekwadrateerd — maar de formule vraagt de straal. Wat is het verschil tussen straal en diameter?"],
+        wrongHints: ["Dat is de omtrek van de pizza, niet de oppervlakte. Welke formule geeft oppervlakte?", "Je deed 3,14 × 60. Welke maat is de straal, en hoe reken je een oppervlakte uit?", null, "Je hebt de diameter gekwadrateerd — maar de formule vraagt de straal. Wat is het verschil tussen straal en diameter?"],
         explanation: "**Diameter = 30, straal = 15**. Oppervlakte = π × r² = 3,14 × 15² = 3,14 × 225 = **706,5 cm²**. Toets-trap: pas op voor diameter ipv straal!",
         uitlegPad: compact(
           "Pizza diameter=30, straal=15. Oppervlakte = πr² = 3,14×225 = 706,5 cm². Niet 30² gebruiken!",
