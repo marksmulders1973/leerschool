@@ -36,9 +36,9 @@ const steps = [
     checks: [
       {
         q: "Wat is klimaat?",
-        options: ["Het gemiddelde weer over minstens 30 jaar","Het weer van vandaag","De temperatuur op één plek nu","De voorspelling voor morgen"],
+        options: ["Het gemiddelde weer over 30 jaar","Het weer van vandaag in jouw stad","De temperatuur op één plek nu","De voorspelling voor morgen"],
         answer: 0,
-        wrongHints: [null, "Dat is weer.", "Eén meting, dat is weer.", "Voorspelling = weer, niet klimaat."],
+        wrongHints: [null, "Eén dag zegt iets over het weer. Hoe lang moet je kijken voor klimaat?", "Eén meting, dat is weer.", "Voorspelling = weer, niet klimaat."],
         uitlegPad: {
           stappen: [{ titel: "Weer = nu, klimaat = lang", tekst: "Weer = nu/vandaag/deze week. Klimaat = gemiddelde van weer over MINSTENS 30 jaar. Bv. NL klimaat = gematigd zeeklimaat (vast patroon decennia). NL weer vandaag = misschien zonnig + 22°C." }],
           woorden: [{ woord: "klimaat", uitleg: "Gemiddeld weer over lange tijd (≥30 jaar)." }, { woord: "meteoroloog", uitleg: "Wetenschapper weer-voorspelling." }, { woord: "klimatoloog", uitleg: "Wetenschapper langetermijn-klimaat." }],
@@ -50,7 +50,7 @@ const steps = [
       },
       {
         q: "Welke uitspraak gaat over **klimaat**?",
-        options: ["Italië heeft warme zomers en milde winters","Het regent nu in Rome","Morgen wordt het 18 °C","Vandaag is het zonnig"],
+        options: ["Italië heeft warme zomers en milde winters","In Rome regent het op dit moment flink","Morgen wordt het in Milaan 18 °C en droog","Vandaag is het zonnig aan de Italiaanse kust"],
         answer: 0,
         wrongHints: [null, "Eén moment = weer.", "Voorspelling = weer.", "Eén dag = weer."],
         uitlegPad: {
@@ -99,7 +99,7 @@ const steps = [
       },
       {
         q: "Waarom is het bij de polen zo koud?",
-        options: ["Zonlicht valt schuin in en verspreidt over groter oppervlak","De polen staan dichter bij de zon","Er is geen atmosfeer","Daar regent het altijd"],
+        options: ["Het zonlicht valt er heel schuin in","De polen staan dichter bij de zon","Er is boven de polen geen atmosfeer","Het regent en sneeuwt daar altijd"],
         answer: 0,
         wrongHints: [null, "Polen staan juist niet dichterbij — afstand maakt nauwelijks verschil.", "Er is wél atmosfeer.", "Polen zijn juist droog."],
         uitlegPad: {
@@ -208,7 +208,7 @@ const steps = [
     checks: [
       {
         q: "Welk klimaat heeft Nederland?",
-        options: ["Gematigd zeeklimaat", "Tropisch", "Mediterraan", "Landklimaat"],
+        options: ["Gematigd zeeklimaat", "Tropisch klimaat", "Mediterraan klimaat", "Gematigd landklimaat"],
         answer: 0,
         wrongHints: [null, "Tropisch = bij evenaar.", "Mediterraan heeft droge zomers — NL niet.", "Landklimaat heeft veel extremere winters."],
         uitlegPad: {
@@ -222,9 +222,9 @@ const steps = [
       },
       {
         q: "Waarom is het in Nederland 's winters zo zacht?",
-        options: ["De zee/oceaan zorgt met westenwind voor warmte","Nederland ligt dicht bij de evenaar","Door alle steden","Er is hier veel sneeuw"],
+        options: ["Westenwind brengt warmte van de oceaan","Nederland ligt dicht bij de evenaar","De warmte van steden en fabrieken","De Alpen houden koude lucht tegen"],
         answer: 0,
-        wrongHints: [null, "Nederland ligt op ~52° NB — vrij noordelijk.", "Stedelijk effect bestaat, maar zee is veel groter.", "Sneeuw maakt het juist niet zacht."],
+        wrongHints: [null, "Nederland ligt op ~52° NB — vrij noordelijk.", "Steden zijn iets warmer, maar ook op het platteland zijn de winters zacht. Wat werkt er op héél Nederland?", "De Alpen liggen ver in het zuiden. Kunnen die koude lucht uit het oosten en noorden tegenhouden?"],
         uitlegPad: {
           stappen: [{ titel: "Golfstroom + westenwind", tekst: "Atlantische Oceaan + Golfstroom voert warm zeewater + lucht aan vanaf Mexicaanse Golf naar Europa. Westenwind blaast die warme lucht naar binnenland. Resultaat: NL veel zachter dan zelfde breedte zonder zee (bv. Canada centraal-binnenland)." }],
           woorden: [{ woord: "Golfstroom", uitleg: "Warme zeestroming Caribische Zee → Atlantische Oceaan → Noordwest-Europa. Brengt warmte." }, { woord: "westenwind", uitleg: "Wind die uit het westen blaast. In NL dominant door rotatie aarde + drukverschillen." }],
@@ -249,7 +249,7 @@ const steps = [
     checks: [
       {
         q: "Wat klopt over **landklimaat**?",
-        options: ["Grote temperatuurverschillen tussen zomer en winter","Constant warm","Het hele jaar koud","Veel regen, vooral 's winters"],
+        options: ["Hete zomers en strenge winters","Het hele jaar constant warm","Het is het hele jaar koud","Veel regen, vooral 's winters"],
         answer: 0,
         wrongHints: [null, "Constant warm = tropisch.", "Hele jaar koud = pool.", "Veel regen + zachte winter = zeeklimaat."],
         uitlegPad: {
@@ -290,9 +290,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **permafrost**?",
-        options: ["Bodem die altijd bevroren is","Een soort sneeuwvlok","Een berg op de pool","Een ijsbeer"],
+        options: ["Bodem die altijd bevroren is","Sneeuw die in de winter valt","Een ijsberg die in zee drijft","Rijp op het gras in de ochtend"],
         answer: 0,
-        wrongHints: [null, "Sneeuw valt uit de lucht — 'perma' betekent blijvend. Wat kan er altijd bevroren blijven?", "Niets met bergen.", "Een ijsbeer is een dier — 'frost' betekent vorst. Wat kan blijvend bevroren zijn?"],
+        wrongHints: [null, "Wintersneeuw smelt in de lente weer — 'perma' betekent blijvend. Wat kan er altijd bevroren blijven?", "Een ijsberg drijft weg en smelt langzaam. Permafrost blijft altijd op dezelfde plek. Wat is het dan?", "Rijp smelt zodra de zon schijnt — 'perma' betekent blijvend. Wat blijft er altijd bevroren?"],
         uitlegPad: {
           stappen: [{ titel: "Permanent bevroren grond", tekst: "Permafrost = bodem die minstens 2 jaar achter elkaar onder 0°C blijft. Dus altijd bevroren, ook 's zomers. Vooral in poolgebieden (Siberië, noord-Canada, Alaska, Antarctica). Bovenlaag kan in zomer ontdooien, maar dieper blijft ijs." }],
           woorden: [{ woord: "permafrost", uitleg: "'Permanent' + 'frost' (vorst). Permanent bevroren bodem." }, { woord: "toendra", uitleg: "Vlak gebied met permafrost. Korte zomer, geen bomen, mossen + grassen." }],
@@ -346,9 +346,9 @@ const steps = [
       },
       {
         q: "Hoe kan er sneeuw liggen op de Kilimanjaro, terwijl die vlak bij de evenaar staat?",
-        options: ["Hoogte zorgt dat het toch koud wordt","Hij ligt in Antarctica","Het is een vulkaan","Klimaatverandering smelt dat"],
+        options: ["Hoogte zorgt dat het toch koud wordt","Er waait koude wind van Antarctica","Het is een uitgedoofde vulkaan","Klimaatverandering smelt dat"],
         answer: 0,
-        wrongHints: [null, "Hij staat in Tanzania, niet Antarctica.", "Vulkaan ja, maar dat geeft geen sneeuw.", "Het smelt inderdaad — maar dat verklaart niet waarom er ooit sneeuw lág."],
+        wrongHints: [null, "Antarctica ligt duizenden kilometers zuidelijker. Blijft die wind onderweg zo koud?", "Het is een vulkaan, maar dat zorgt niet voor sneeuw. Wat is er nog meer bijzonder aan deze berg?", "Het smelt inderdaad — maar dat verklaart niet waarom er ooit sneeuw lág."],
         uitlegPad: {
           stappen: [{ titel: "5895m → diep onder vriespunt", tekst: "Kilimanjaro (Tanzania) is 5895m hoog. Op zee-niveau bij evenaar: ~25°C. Op 5895m: 25 - 35 = ongeveer -10°C. Daarom: besneeuwde top ondanks ligging op evenaar! Hoogte > breedte voor klimaat." }],
           woorden: [{ woord: "Kilimanjaro", uitleg: "Hoogste berg Afrika. Tanzania. 5895m. Vulkaan (slapend)." }, { woord: "hoogteklimaat", uitleg: "Klimaat door hoogte ipv breedte. Verticale klimaatzones op bergen." }],
@@ -377,9 +377,9 @@ const steps = [
     checks: [
       {
         q: "Wat is de hoofdoorzaak van klimaatverandering?",
-        options: ["Uitstoot van broeikasgassen door mensen","Vulkanen","De aarde draait sneller","De zon is heter geworden"],
+        options: ["Uitstoot van broeikasgassen door mensen","Uitstoot van gassen door vulkanen","De aarde draait sneller om de zon","De zon straalt steeds feller"],
         answer: 0,
-        wrongHints: [null, "Vulkanen stoten ook iets uit, maar veel minder dan menselijke uitstoot.", "Aarde draait niet sneller.", "Zon-uitstraling is vrijwel constant gebleven."],
+        wrongHints: [null, "Vulkanen stoten al miljoenen jaren gassen uit. Wat is er sinds 1850 veranderd?", "Aarde draait niet sneller.", "Zon-uitstraling is vrijwel constant gebleven."],
         uitlegPad: {
           stappen: [{ titel: "Mensen + broeikasgassen", tekst: "Klimaatverandering = aarde warmer (sinds 1850 +1,2°C). Hoofdoorzaak: MENSEN stoten broeikasgassen uit (CO2, methaan, lachgas). Bronnen: fossiele brandstoffen (kolen+olie+gas), ontbossing, veeteelt (koeien-methaan), industrie. Gevolg: meer warmte vastgehouden in atmosfeer." }],
           woorden: [{ woord: "broeikaseffect", uitleg: "Gassen in atmosfeer houden warmte vast (als deken). Natuurlijk maar nu versterkt." }, { woord: "CO2", uitleg: "Kooldioxide. Belangrijkste broeikasgas. Vrij bij verbranden fossiele brandstoffen." }, { woord: "methaan", uitleg: "CH4. Sterker broeikasgas dan CO2 (per kilo ~25× sterker, gerekend over 100 jaar). Van veeteelt + lekkende gas-pijpen." }],
@@ -435,9 +435,9 @@ const steps = [
       },
       {
         q: "Welk klimaat: \"Vier seizoenen, zachte winters, regen door het hele jaar\"?",
-        options: ["Gematigd zeeklimaat", "Tropisch", "Woestijn", "IJsklimaat"],
+        options: ["Gematigd zeeklimaat", "Tropisch klimaat", "Woestijnklimaat", "Gematigd landklimaat"],
         answer: 0,
-        wrongHints: [null, "Tropisch heeft geen seizoenen.", "Woestijn = bijna geen regen.", "IJsklimaat = onder 0°C."],
+        wrongHints: [null, "Tropisch heeft geen seizoenen.", "Woestijn = bijna geen regen.", "Een landklimaat heeft strenge winters. Past 'zachte winters' daarbij?"],
         uitlegPad: {
           stappen: [{ titel: "Klassieke NL-beschrijving", tekst: "Vier seizoenen + zachte winters + regen hele jaar = Cfb = gematigd zeeklimaat. NL voorbeeld. Ook UK, Ierland, België, NW Frankrijk, Denemarken." }],
           woorden: [{ woord: "Cfb", uitleg: "Köppen. C=gematigd, f=geen droog seizoen, b=warme (niet hete) zomer." }],
@@ -477,9 +477,9 @@ const steps = [
       },
       {
         q: "Wat is een **moesson**?",
-        options: ["Seizoenswind die een natte en een droge tijd brengt","Zware storm boven de oceaan","Warme, droge wind die van de bergen af waait","Koude wind uit het noorden in de winter"],
+        options: ["Seizoenswind die een natte en een droge tijd brengt","Zware storm die boven de oceaan ontstaat","Warme, droge wind die van de bergen af waait","Koude wind uit het noorden in de winter"],
         answer: 0,
-        wrongHints: [null, "Niet — wel kan moesson stormen geven, maar fenomeen ≠ storm.", "Niet — andere wind-soort (föhn bv.).", "Denk aan India: wat gebeurt er daar in de natte tijd van het jaar?"],
+        wrongHints: [null, "Een storm duurt een paar dagen. Hoe lang duurt een moesson?", "Zo'n warme, droge bergwind heet föhn. Waar staat de moesson om bekend?", "Denk aan India: wat gebeurt er daar in de natte tijd van het jaar?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een moesson?", tekst: "**Moesson** is een **seizoens-wind** die elke 6 maanden van richting verandert. Veroorzaakt twee duidelijke seizoenen:\n• **Droge moesson** — wind uit binnenland, geen regen\n• **Natte moesson** — wind uit zee, veel regen + overstromingen" },
@@ -501,7 +501,7 @@ const steps = [
       },
       {
         q: "Wat zijn **klimaatzones** Köppen?",
-        options: ["Indeling van klimaten in hoofdgroepen","Indeling van wolken in soorten","Schaal voor windkracht","Schaal voor temperatuur"],
+        options: ["Indeling van klimaten in hoofdgroepen","Indeling van wolken in soorten","Schaal voor de kracht van de wind","Schaal voor temperatuur in graden"],
         answer: 0,
         wrongHints: [null, "Niet — wolken zijn cirrus/cumulus/etc.", "Niet — wind heeft Beaufort-schaal.", "Niet — temperatuur is Celsius/Fahrenheit."],
         uitlegPad: {
@@ -547,16 +547,16 @@ const steps = [
           niveaus: { basis: "Gassen houden warmte vast.", simpeler: "Broeikaseffect = CO₂ + andere gassen in lucht houden zonnewarmte vast. Beetje is goed (leven mogelijk). Te veel = klimaatverandering.", nogSimpeler: "Warmte vasthouden" },
         },
       },
-      { q: "Welk klimaat heeft NL?", options: ["Gematigd zeeklimaat","Tropisch","Woestijn","Toendra"], answer: 0, wrongHints: [null, "Te warm.", "Te droog.", "Te koud."] },
+      { q: "Welk klimaat heeft NL?", options: ["Gematigd zeeklimaat","Tropisch regenklimaat","Woestijnklimaat","Toendraklimaat"], answer: 0, wrongHints: [null, "Te warm.", "Te droog.", "Te koud."] },
       { q: "**Tropisch klimaat** is rond?", options: ["De evenaar","De polen","Gematigde zone","Woestijn"], answer: 0, wrongHints: [null, "Te koud.", "Niet tropisch.", "Wel warm maar droog."] },
-      { q: "**Woestijnklimaat** is vooral?", options: ["Droog","Nat","Koud","Tropisch"], answer: 0, wrongHints: [null, "Niet.", "Soms wel koud.", "Niet."] },
+      { q: "**Woestijnklimaat** is vooral?", options: ["Droog","Nat","Koud","Tropisch"], answer: 0, wrongHints: [null, "Welke planten groeien er in een woestijn? Wat zegt dat over water?", "'s Nachts kan het in de woestijn koud worden. Maar wat geldt er dag én nacht, het hele jaar?", "Tropisch betekent warm en vaak heel nat. Past dat bij een woestijn?"] },
       { q: "Waarmee meet je **temperatuur**?", options: ["Thermometer","Barometer","Anemometer","Hygrometer"], answer: 0, wrongHints: [null, "Luchtdruk.", "Wind.", "Vochtigheid."] },
-      { q: "Welk klimaat heeft de **Sahara**?", options: ["Woestijn","Tropisch","Toendra","Bergklimaat"], answer: 0, wrongHints: [null, "Niet droog.", "Te koud.", "Niet."] },
-      { q: "Wat is **klimaat** versus **weer**?", options: ["Klimaat = lange termijn (30+ jaar); weer = nu","Hetzelfde, alleen een ander woord","Klimaat = dag; weer = maand","Klimaat = temperatuur; weer = regen"], answer: 0, wrongHints: [null, "Wel verschil.", "Andersom.", "Beide gaan over temperatuur én regen — waar zit het verschil dan?"] },
+      { q: "Welk klimaat heeft de **Sahara**?", options: ["Woestijn","Tropisch","Toendra","Bergklimaat"], answer: 0, wrongHints: [null, "Een tropisch klimaat heeft veel regen en regenwoud. Zie je dat in de Sahara?", "Te koud.", "De Sahara is vooral een groot, laag en vlak gebied. Past een bergklimaat daarbij?"] },
+      { q: "Wat is **klimaat** versus **weer**?", options: ["Klimaat = lange termijn; weer = nu","Hetzelfde, alleen een ander woord","Klimaat = een dag; weer = een maand","Klimaat = temperatuur; weer = regen"], answer: 0, wrongHints: [null, "Zeg je 'het klimaat is vandaag nat'? Wat zegt dat over de twee woorden?", "Welke van de twee hoort bij een kort moment, en welke bij een lange periode?", "Beide gaan over temperatuur én regen — waar zit het verschil dan?"] },
       { q: "Welk **gas** is hoofd-broeikasgas?", options: ["CO₂","O₂","N₂","H₂"], answer: 0, wrongHints: [null, "Zuurstof.", "Stikstof.", "Waterstof."] },
       { q: "Waarvan is het **smelten van poolijs** een gevolg?", options: ["Klimaatopwarming","Een koudere zon","Industrie alleen","Meer sneeuwval"], answer: 0, wrongHints: [null, "Een koudere zon zou het ijs juist laten groeien.", "Onderdeel daarvan, niet alleen.", "Meer sneeuw maakt het ijs juist dikker."] },
-      { q: "In welke klimaatzone vind je **toendra**?", options: ["Subpolair / koud","Tropisch","Woestijn","Gematigd"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Niet."] },
-      { q: "Wat is een **moesson**?", options: ["Seizoenswind met regen (vooral Azië)","Storm","Droge wind uit de woestijn","Koude wind uit het noorden"], answer: 0, wrongHints: [null, "Niet specifiek.", "Denk aan India in de zomer: is het daar dan droog?", "Denk aan Azië: wat gebeurt er in de natte tijd?"] },
+      { q: "In welke klimaatzone vind je **toendra**?", options: ["Subpolair","Tropisch","Woestijn","Gematigd"], answer: 0, wrongHints: [null, "Toendra heeft geen bomen en een bevroren bodem. Past dat bij het regenwoud?", "Een woestijn is vooral droog. Wat is op de toendra het grootste probleem voor planten?", "In Nederland groeien gewoon bomen. Op de toendra niet — waarom niet?"] },
+      { q: "Wat is een **moesson**?", options: ["Seizoenswind met veel regen","Korte, zware storm op zee","Droge wind uit de woestijn","Koude wind uit het noorden"], answer: 0, wrongHints: [null, "Een storm duurt een paar dagen. Hoe lang duurt een moesson?", "Denk aan India in de zomer: is het daar dan droog?", "Denk aan Azië: wat gebeurt er in de natte tijd?"] },
       { q: "Op welk continent ligt het **Amazone-regenwoud**?", options: ["Zuid-Amerika","Afrika","Azië","Australië"], answer: 0, wrongHints: [null, "Heeft Congo-regenwoud.", "Heeft Borneo-regenwoud.", "Australië is vooral woestijn en savanne."] },
       { q: "Wat is een **gevolg** van klimaatopwarming?", options: ["Zeespiegel-stijging","Lagere temperatuur","Meer ijs","Minder droogte"], answer: 0, wrongHints: [null, "Opwarming betekent dat het gemiddeld juist warmer wordt — daalt de temperatuur dan?", "Als het warmer wordt smelt het ijs op de polen — komt er dan meer of minder ijs?", "Door hogere temperaturen verdampt er meer water en worden sommige gebieden juist droger — klopt 'minder' dan?"] },
       { q: "Welk type **regen** komt door bergen?", options: ["Stuwingsregen","Convectieregen","Frontale regen","Motregen"], answer: 0, wrongHints: [null, "Door warmte.", "Door front.", "Motregen zegt iets over de druppels, niet over hoe regen ontstaat."] },

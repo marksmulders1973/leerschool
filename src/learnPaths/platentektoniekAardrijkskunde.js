@@ -305,14 +305,14 @@ const steps = [
         options: [
           "Onderzeese bergketen waar nieuwe korst ontstaat",
           "Diepe geul waar platen onder elkaar duiken",
-          "Een grote berg op land",
-          "Een soort gletsjer",
+          "Een hoge bergketen midden op een continent",
+          "Een gletsjer die over de zeebodem schuift",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Diepe geul = juist het tegenovergestelde (subductie-zone, convergent).",
-          "Op land bestaat dit ook (rift) maar de term 'midoceanische' geeft 'onderzees' aan.",
+          "Kijk naar het woord 'midoceanisch'. Ligt zo'n rug midden op een continent?",
           "Niets met ijs te maken — dit is gesteente.",
         ],
       },
@@ -337,15 +337,15 @@ const steps = [
       {
         q: "Hoe is de **Himalaya** ontstaan?",
         options: [
-          "Indische Plaat botst tegen Euraziatische Plaat",
-          "Een grote vulkaanuitbarsting",
-          "Erosie van een hoogvlakte",
-          "Door een meteoriet",
+          "Indische en Euraziatische Plaat botsen",
+          "Door een grote vulkaanuitbarsting",
+          "Door erosie van een hoogvlakte",
+          "Door de inslag van een meteoriet",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Geen vulkanen in de Himalaya — twee continentale platen, geen subductie.",
+          "Zijn er in de Himalaya vulkanen? Hoe kan een berg zonder vulkaan zo hoog worden?",
           "Erosie maakt bergen kleiner, niet groter.",
           "Meteoriet zou een krater geven, geen bergketen.",
         ],
@@ -354,9 +354,9 @@ const steps = [
         q: "Wat is **subductie**?",
         options: [
           "De zwaardere plaat duikt onder de lichtere",
-          "Twee platen breken volledig",
-          "Een plaat splitst in tweeën",
-          "Vulkanen die uitbarsten",
+          "Twee platen breken volledig in stukken",
+          "Een plaat splitst in tweeën en drijft uiteen",
+          "Vulkanen die uitbarsten boven een plaat",
         ],
         answer: 0,
         wrongHints: [
@@ -425,14 +425,14 @@ const steps = [
         options: [
           "Het punt aan het oppervlak boven de bron",
           "Het diepste punt onder de grond",
-          "Een soort vulkaan",
-          "De totale schade-zone",
+          "Een vulkaan die door de beving ontstaat",
+          "Het hele gebied waar schade ontstaat",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Het punt diep onder de grond heet hypocentrum (of focus) — waar ligt het epicentrum dan?",
-          "Een vulkaan is iets anders.",
+          "Een aardbeving maakt niet zomaar een vulkaan. Het epicentrum is een plek — welke?",
           "De schade-zone is het gevolg, niet de definitie.",
         ],
       },
@@ -450,10 +450,10 @@ const steps = [
       {
         q: "Waarom zijn er in Groningen kunstmatige aardbevingen?",
         options: [
-          "Door gaswinning is de bodem verzakt en ontstaat spanning",
-          "Door een actieve vulkaan",
-          "Door zware regenval",
-          "Door het verkeer",
+          "Gaswinning geeft spanning in de bodem",
+          "Door een actieve vulkaan onder de grond",
+          "Door zware regenval die de grond weekt",
+          "Door trillingen van zwaar verkeer",
         ],
         answer: 0,
         wrongHints: [
@@ -477,14 +477,14 @@ const steps = [
         options: [
           "Magma = onder de grond, lava = boven de grond",
           "Hetzelfde — gewoon twee namen",
-          "Magma is heter dan lava",
+          "Magma = heet gesteente, lava = afgekoeld",
           "Lava is een soort steen, magma is gas",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Niet helemaal — er is een echt verschil.",
-          "Het verschil zit niet in de temperatuur, maar in de plek.",
+          "Lava die uit een vulkaan stroomt, is nog ruim 1000 °C. Is lava dan al afgekoeld?",
           "Beide zijn vloeibaar gesteente.",
         ],
       },
@@ -536,17 +536,17 @@ const steps = [
       {
         q: "Wat veroorzaakte het 'jaar zonder zomer' (1816)?",
         options: [
-          "De uitbarsting van de Tambora",
-          "Een grote oorlog",
-          "Een ijstijd",
-          "Een meteoriet-inslag",
+          "Uitbarsting van de vulkaan Tambora",
+          "Een grote oorlog in Europa",
+          "Het begin van een nieuwe ijstijd",
+          "Inslag van een grote meteoriet",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Een oorlog verandert het weer niet wereldwijd.",
           "Een ijstijd duurt duizenden jaren, niet één jaar.",
-          "Er is geen inslagkrater uit die tijd — welke ramp in 1815 blies veel as de lucht in?",
+          "Er is geen inslagkrater uit die tijd gevonden. Welke andere ramp kan de zon wereldwijd verduisteren?",
         ],
       },
     ],
@@ -597,10 +597,10 @@ const steps = [
       {
         q: "Bij welke plaatbeweging hoort de **Himalaya**?",
         options: [
-          "Convergent (continentale platen tegen elkaar)",
+          "Convergent (platen botsen)",
           "Divergent (uit elkaar)",
           "Transform (langs elkaar)",
-          "Geen — gewoon erosie",
+          "Geen plaatgrens (erosie)",
         ],
         answer: 0,
         wrongHints: [
@@ -614,14 +614,14 @@ const steps = [
         q: "Bij welke plaatgrens hoort **IJsland** met z'n vulkanen?",
         options: [
           "Divergent — Mid-Atlantische Rug",
-          "Convergent — subductie",
+          "Convergent — subductiezone",
           "Transform — schuif",
           "Helemaal geen plaatgrens",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Subductie is convergent — IJsland ligt op een rug, niet trog.",
+          "Bij subductie duikt een plaat weg in een diepe trog. Zie je zo'n trog bij IJsland?",
           "Bij een schuifgrens ontstaan vooral aardbevingen, geen vulkanen op een rug.",
           "Wel degelijk een plaatgrens — daarom de vulkanen.",
         ],

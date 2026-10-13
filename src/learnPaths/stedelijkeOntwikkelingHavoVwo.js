@@ -24,7 +24,7 @@ const steps = [
         q: "**Verstedelijking** wereldwijd in 2024 is ongeveer:",
         options: ["57%", "30%", "75%", "10%"],
         answer: 0,
-        wrongHints: [null, "Te weinig — was 1950.", "Te veel.", "Veel te weinig."],
+        wrongHints: [null, "Zo was het rond 1950. Is de wereld sindsdien meer of minder stedelijk geworden?", "In Nederland en Europa is het zo hoog, maar hoe zit het in Afrika en Zuid-Azië?", "Zo laag was het ruim 200 jaar geleden. Denk aan alle grote steden die er nu zijn."],
         uitlegPad: {
           stappen: [{ titel: "Tipping point ~2007", tekst: "In 2007 voor het eerst meer mensen in steden dan op platteland (50/50). Sindsdien stijgend. Schatting 2050: 68%. Azië + Afrika drijven groei." }],
           niveaus: { basis: "~57%.", simpeler: "Iets meer dan helft.", nogSimpeler: "57%" },
@@ -68,12 +68,12 @@ const steps = [
         q: "Welke regio heeft de **explosiefste verstedelijking** vandaag?",
         options: [
           "Afrika ten zuiden van de Sahara",
-          "Nederland",
-          "Japan",
-          "Duitsland"
+          "Noordwest-Europa, zoals Nederland",
+          "Oost-Azië, zoals Japan en Korea",
+          "Midden-Europa, zoals Duitsland"
         ],
         answer: 0,
-        wrongHints: [null, "Al verstedelijkt.", "Krimpt.", "Stabiel."],
+        wrongHints: [null, "Nederland is al grotendeels verstedelijkt. Hoeveel ruimte is er nog voor groei?", "De bevolking van Japan krimpt. Waar groeit de bevolking het snelst?", "In Duitsland woont al zo'n driekwart in steden. Waar woont nog een groot deel op het platteland?"],
         uitlegPad: {
           stappen: [
             { titel: "Demografische + economische druk", tekst: "Afrika: jonge bevolking + landbouw mechaniseert → mensen trekken naar steden. Lagos van 200k (1950) → ~21 mln vandaag → 35 mln in 2050 verwacht. Dhaka, Karachi, Kinshasa idem. Infrastructuur kan tempo niet bijhouden → krottenwijken." },
@@ -85,12 +85,12 @@ const steps = [
         q: "**Counter-urbanisatie** is:",
         options: [
           "Mensen verlaten stad richting platteland",
-          "Naar stad trekken",
-          "Naar megacity",
-          "Skyscrapers bouwen"
+          "Mensen trekken van platteland naar stad",
+          "Mensen trekken naar een megacity",
+          "Steden bouwen steeds meer hoogbouw"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Onjuist."],
+        wrongHints: [null, "Dat is gewone urbanisatie. Wat betekent 'counter' (tegen)?", "Een megacity is juist de grootste stad. Gaat counter-urbanisatie die kant op?", "Hoogbouw gaat over bouwen, niet over verhuizen. Welke kant trekken de mensen op?"],
         uitlegPad: {
           stappen: [
             { titel: "Trend versterkt door COVID + thuiswerk", tekst: "Sommige hoogopgeleiden + welvarende families verlaten dure stad voor platteland/kleine stad. Vereist hoge huizenprijs in stad + thuiswerk-mogelijkheid. Beperkt fenomeen — netto verstedelijkt de wereld nog steeds." },
@@ -125,13 +125,13 @@ const steps = [
       {
         q: "**Burgess-model** beschrijft stad als:",
         options: [
-          "Concentrische ringen rond centrum",
-          "Sectoren langs transport",
-          "Meerdere centra",
-          "Geen structuur"
+          "Concentrische ringen rond het centrum",
+          "Sectoren langs uitvalswegen en spoor",
+          "Meerdere losse kernen in de stad",
+          "Een rasterpatroon van rechte straten"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is Hoyt.", "Niet — dat is multinucleair.", "Wel structuur."],
+        wrongHints: [null, "Sectoren als taartpunten horen bij het model van Hoyt. Hoe zag Burgess de stad?", "Meerdere kernen is het multinucleaire model. Hoe zag Burgess de stad?", "Een rasterplan zegt iets over straten, niet over zones. Hoe deelde Burgess de stad in?"],
         uitlegPad: {
           stappen: [
             { titel: "Chicago 1925", tekst: "5 ringen: CBD → overgang → arbeiders → middenklasse → pendelaars. Aanname: stad groeit RADIAAL. Eenvoudig maar deels achterhaald. Werkt nog deels voor oude Europese steden. Niet voor moderne edge-cities + meerdere-centrum-steden." },
@@ -142,13 +142,13 @@ const steps = [
       {
         q: "**Edge City** is:",
         options: [
-          "Nieuw subcentrum aan rand stad bij snelwegknooppunt",
-          "Krottenwijk",
-          "Stadscentrum",
-          "Toeristische trekpleister"
+          "Nieuw centrum aan de stadsrand bij de snelweg",
+          "Krottenwijk aan de rand van de stad",
+          "Het oude historische stadscentrum",
+          "Toeristische trekpleister buiten de stad"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is slum/favela.", "Tegenovergesteld.", "Niet."],
+        wrongHints: [null, "Een krottenwijk heet ook wel favela of slum. Is dat hetzelfde als een edge city?", "Edge betekent rand. Ligt het oude centrum aan de rand?", "Gaat het bij een edge city om toerisme of om iets anders?"],
         uitlegPad: {
           stappen: [
             { titel: "Garreau 1991", tekst: "Vooral in VS sinds 1980: nieuwe kantoor- + winkelclusters AAN RAND, vaak rond snelweg-knooppunt + luchthaven. Bv. Reston (Washington), Schaumburg (Chicago), Walnut Creek (San Francisco). Mensen werken + winkelen DAAR, hoeven niet meer naar binnenstad." },
@@ -160,7 +160,7 @@ const steps = [
         q: "**Donut-effect** in westerse steden:",
         options: [
           "Stadscentrum loopt leeg terwijl de rand groeit",
-          "Hoogbouw in centrum",
+          "Het centrum groeit vooral de hoogte in",
           "Centrum en rand groeien even hard",
           "Rand loopt leeg terwijl het centrum groeit"
         ],
@@ -177,12 +177,12 @@ const steps = [
         q: "**Dharavi** (Mumbai) is een:",
         options: [
           "Een van de grootste krottenwijken van Azië",
-          "Luxe wijk",
-          "Toeristische plek alleen",
+          "Luxe villawijk aan de kust van Mumbai",
+          "Toeristisch oud centrum van Mumbai",
           "Bedrijventerrein zonder bewoners"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Te beperkt.", "Er wordt veel gewerkt, maar er wonen ook heel veel mensen — wat voor wijk is het dan?"],
+        wrongHints: [null, "Dharavi is extreem dicht bebouwd met kleine, zelfgebouwde huisjes. Past 'villawijk' daarbij?", "Er komen wel toeristen, maar vooral wonen en werken er honderdduizenden mensen. Wat voor wijk is het?", "Er wordt veel gewerkt, maar er wonen ook heel veel mensen — wat voor wijk is het dan?"],
         uitlegPad: {
           stappen: [
             { titel: "Slum-economie", tekst: "1-2 mln mensen op 2 km². Verbazend economisch actief: ~$1 mld jaaromzet uit pottenbakkerijen, recycling, kledingindustrie. Geen formele woningen, slecht sanitair. Bekend uit film 'Slumdog Millionaire'. Indiase overheid plant herontwikkeling." },
@@ -201,9 +201,9 @@ const steps = [
     checks: [
       {
         q: "**Megacity** is een stad met:",
-        options: [">10 miljoen inwoners", ">1 miljoen", ">100 miljoen", ">1 miljard"],
+        options: [">10 miljoen inwoners", ">1 miljoen inwoners", ">100 miljoen inwoners", ">1 miljard inwoners"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dat is 'grote stad'.", "Onmogelijk.", "Onmogelijk."],
+        wrongHints: [null, "Te weinig — dat is 'grote stad'.", "Dat is meer dan heel Duitsland. Bestaat er zo'n stad?", "Zoveel mensen wonen er in heel Europa niet eens. Kan één stad dat hebben?"],
         uitlegPad: {
           stappen: [{ titel: "VN-definitie", tekst: ">10 mln in stedelijk gebied (incl. voorsteden, niet alleen stadsgrens). 1950: alleen NYC + Tokyo. 2024: ~35 stuks. Vrijwel alle nieuwe in globale-zuid (Lagos, Dhaka, Karachi)." }],
           niveaus: { basis: ">10 mln.", simpeler: "10 miljoen+.", nogSimpeler: "10M" },
@@ -213,12 +213,12 @@ const steps = [
         q: "Wat is een **'global city'** (Sassen)?",
         options: [
           "Stad die de wereldeconomie aanstuurt",
-          "Toeristische topbestemming",
-          "Stad >5 mln",
-          "Hoofdstad van groot land"
+          "Toeristische topbestemming van de wereld",
+          "Stad met meer dan 5 miljoen inwoners",
+          "Hoofdstad van een groot, machtig land"
         ],
         answer: 0,
-        wrongHints: [null, "Niet specifiek.", "Niet alleen grootte.", "Niet alle."],
+        wrongHints: [null, "Veel toeristen maakt een stad nog niet invloedrijk. Waar gaat het Sassen om?", "Grootte alleen zegt weinig: Lagos is groot maar geen global city. Wat dan wel?", "New York is geen hoofdstad, maar wel een global city. Waar gaat het dan om?"],
         uitlegPad: {
           stappen: [
             { titel: "Drie-stad-as", tekst: "Sassen identificeerde NY-LON-TOK als top-3: financiële markten wereldwijd lopen door deze drie. Vandaag uitgebreid (Hongkong, Singapore, Shanghai, Frankfurt). Hub-functie voor multinationals, banken, internationale verbindingen." },
@@ -256,13 +256,13 @@ const steps = [
       {
         q: "**Smart City** gebruikt:",
         options: [
-          "Data + sensoren + IoT voor efficiëntie",
-          "Alleen ouderwetse planning",
-          "Geen technologie",
-          "Verbod op auto's"
+          "Data en sensoren voor slimmer beheer",
+          "Alleen ouderwetse planning op papier",
+          "Zo min mogelijk technologie in de stad",
+          "Een verbod op auto's in het centrum"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Niet vereist."],
+        wrongHints: [null, "Wat zegt het woord 'smart' over de hulpmiddelen die een stad gebruikt?", "Een slimme stad zonder technologie: klopt dat?", "Een autoverbod kan, maar is dat wat een stad 'smart' maakt?"],
         uitlegPad: {
           stappen: [
             { titel: "Data-gedreven beheer", tekst: "Singapore-voorbeeld: sensoren in straten (verkeer, lucht, vuilnis), apps voor parkeren, gemeentelijke data open beschikbaar. Songdo (KR) gepland als smart city-totaal. Barcelona, Amsterdam (Smart-City-tag) experimenteren met sensor-netwerken." },
@@ -284,11 +284,11 @@ const steps = [
         options: [
           "Stad warmer dan platteland",
           "Stad kouder dan platteland",
-          "Geen verschil",
+          "Stad vochtiger dan platteland",
           "Alleen 's nachts warmer"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel verschil.", "Beide dag + nacht."],
+        wrongHints: [null, "Steen en asfalt slaan zonnewarmte op. Wordt de stad daar kouder van?", "'Heat' betekent hitte. Gaat het dan om vocht?", "Het effect is 's nachts het sterkst, maar is het overdag dan weg?"],
         uitlegPad: {
           stappen: [
             { titel: "Beton + asfalt + auto's", tekst: "Beton absorbeert + houdt warmte vast. Minder bomen + parken voor verkoeling. Auto's + airconditioning produceren warmte. Resultaat: stadscentrum 2-5°C warmer dan omliggend platteland. Versterkt door klimaatverandering → hittegolven extra gevaarlijk in stad (ouderen-sterfte)." },
@@ -298,9 +298,9 @@ const steps = [
       },
       {
         q: "Wereldwijd **veroorzaken steden** welk % van CO₂-uitstoot?",
-        options: ["~70%", "~30%", "~10%", "Nul"],
+        options: ["~70%", "~30%", "~10%", "~90%"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te weinig.", "Wel."],
+        wrongHints: [null, "Steden hebben veel verkeer, fabrieken en verwarmde gebouwen. Zou dat maar een derde zijn?", "Ruim de helft van de mensen woont in steden en gebruikt daar energie. Kan het dan zo weinig zijn?", "Ook landbouw, scheepvaart en ontbossing buiten de stad stoten veel uit. Blijft er dan zo weinig over?"],
         uitlegPad: {
           stappen: [{ titel: "Energie + verkeer + industrie", tekst: "Steden verbruiken veel energie voor verlichting, koeling, transport, productie. ~70% van CO₂ komt hieruit. Steden aanpakken = cruciale klimaatactie. Daarom werken ~96 grote steden samen in de 'C40-coalitie'." }],
           niveaus: { basis: "70%.", simpeler: "Steden grootste vervuiler.", nogSimpeler: "70%" },
@@ -309,13 +309,13 @@ const steps = [
       {
         q: "**15-minuten-stad** (Parijs):",
         options: [
-          "Alle dagelijkse voorzieningen binnen 15 min lopen/fietsen",
-          "Auto-verbod",
+          "Dagelijkse voorzieningen op 15 min lopen of fietsen",
+          "Een verbod op alle auto's in de hele stad",
           "Elke wijk een bus die om de 15 minuten rijdt",
           "Maximaal 15 minuten met de auto naar je werk"
         ],
         answer: 0,
-        wrongHints: [null, "Niet hoofdidee.", "Het gaat niet om hoe vaak de bus rijdt, maar om wat er dichtbij is.", "Het idee is juist mínder autoritten — hoe kom je dan bij je voorzieningen?"],
+        wrongHints: [null, "Minder autoverkeer is een gevolg, maar is een verbod het hoofdidee?", "Het gaat niet om hoe vaak de bus rijdt, maar om wat er dichtbij is.", "Het idee is juist mínder autoritten — hoe kom je dan bij je voorzieningen?"],
         uitlegPad: {
           stappen: [
             { titel: "Burgemeester Hidalgo 2020", tekst: "Concept: school, dokter, winkel, park, werk binnen 15 min van huis. Minder verkeer en klimaat-impact, meer sociale binding. Parijs leidende stad. Vergelijkbaar: 'Superblocks' Barcelona (verkeers-luwe wijken)." },
@@ -326,13 +326,13 @@ const steps = [
       {
         q: "**Kaapstad 'Day Zero'** (2018):",
         options: [
-          "Stad bijna zonder drinkwater door extreme droogte",
-          "Stroomstoring",
-          "Pandemie",
-          "Aardbeving"
+          "Stad bijna zonder drinkwater door droogte",
+          "Stad urenlang zonder stroom door een storing",
+          "Eerste dag van een lockdown door een pandemie",
+          "Stad zwaar getroffen door een aardbeving"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — het ging niet om stroom.", "Niet 2018.", "Niet."],
+        wrongHints: [null, "Kaapstad had wel stroomproblemen, maar Day Zero ging over iets anders. Wat dreigde op te raken?", "Lockdowns kwamen pas in 2020. Wat speelde er in Kaapstad in 2018?", "Kaapstad ligt niet in een aardbevingsgebied. Wat dreigde er op te raken?"],
         uitlegPad: {
           stappen: [
             { titel: "Wake-up call", tekst: "Aanhoudende droogte → stuwmeren raakten bijna leeg. Stad maakte plan om watertoevoer aan inwoners stop te zetten ('Day Zero'), inwoners moesten met emmer naar verzamelpunten. Net op tijd regende het → crisis afgewend. Een van de eerste grote steden die zoiets bijna meemaakte. Klimaatverandering maakt dit meer waarschijnlijk." },
@@ -343,13 +343,13 @@ const steps = [
       {
         q: "Een **BRT** (Bus Rapid Transit) systeem zoals Curitiba (Brazilië):",
         options: [
-          "Bussen op afgescheiden baan met metro-achtige stations",
-          "Privé taxi-systeem",
-          "Vliegtuig-shuttle",
-          "Trein-systeem"
+          "Bussen op eigen baan met metro-achtige stations",
+          "Privé-taxi's die je via een app bestelt",
+          "Kleine vliegtuigjes tussen stadsdelen",
+          "Treinen op een eigen spoor met stations"
         ],
         answer: 0,
-        wrongHints: [null, "Onzin.", "Onzin.", "Niet — bus."],
+        wrongHints: [null, "Waar staat de B in BRT voor?", "Is een vliegtuig openbaar vervoer binnen een stad?", "Lees de afkorting nog eens: welk voertuig zit erin?"],
         uitlegPad: {
           stappen: [
             { titel: "Goedkoper alternatief voor metro", tekst: "Curitiba 1974 pionier. Eigen bus-baan in midden weg, vooruitbetaling bij station (snelle inscheping), grote gelede bussen (ruim 200 mensen). Veel goedkoper dan metro maar bijna zelfde capaciteit. Wereldwijd gekopieerd: Bogotá, Mexico City, Istanbul, Johannesburg." },
@@ -381,7 +381,7 @@ const steps = [
       {
         q: "Het concept **'donut-economy'** in Amsterdam:",
         options: [
-          "Balans tussen menselijke behoeften (basis) + planetaire grenzen (plafond)",
+          "Balans tussen basisbehoeften en grenzen van de aarde",
           "Zo veel mogelijk economische groei, zonder grenzen",
           "Bedrijven verhuizen van het centrum naar de rand",
           "Alle winkels concentreren in de binnenstad"
@@ -398,13 +398,13 @@ const steps = [
       {
         q: "Een **modal shift** in stadsverkeer betekent:",
         options: [
-          "Verschuiving van auto naar fiets + OV + lopen",
-          "Andere ringweg",
-          "Snelheid omhoog",
-          "Auto-aanschaf"
+          "Verschuiving van auto naar fiets, OV en lopen",
+          "Aanleg van een nieuwe ringweg om de stad",
+          "Hogere maximumsnelheid voor auto's",
+          "Meer mensen die zelf een auto kopen"
         ],
         answer: 0,
-        wrongHints: [null, "Niet.", "Tegenovergestelde bedoeling.", "Tegenovergesteld."],
+        wrongHints: [null, "Een ringweg verandert de route, niet het vervoermiddel. Waar slaat 'modal' op?", "Sneller rijden verandert niet hoe je reist. Waar slaat 'modal' op?", "Ziet een stad met een modal shift meer of minder auto's?"],
         uitlegPad: {
           stappen: [
             { titel: "Cruciaal voor klimaat + lucht", tekst: "'Modus' = vervoersmiddel. 'Shift' = verschuiving. Voorbeeld: NL jaren '70 veel auto's → vanaf 1980 sterk fiets-beleid → 27% van verplaatsingen op fiets (wereldrecord). Modal shift verbetert lucht + minder CO₂ + minder ruimte voor auto's." },
@@ -415,13 +415,13 @@ const steps = [
       {
         q: "**'Circulaire economie'** in stad betekent:",
         options: [
-          "Afval = grondstof voor iets anders (recycling op industrieel niveau)",
+          "Afval wordt grondstof voor nieuwe producten",
           "Een ringweg rond de stad aanleggen",
-          "Niet recyclen",
+          "Afval zo veel mogelijk verbranden",
           "Producten sneller vervangen door nieuwe"
         ],
         answer: 0,
-        wrongHints: [null, "'Circulair' slaat hier niet op een rondweg — wat gaat er rond?", "Tegenovergesteld.", "Tegenovergesteld."],
+        wrongHints: [null, "'Circulair' slaat hier niet op een rondweg — wat gaat er rond?", "Bij verbranden is de grondstof weg. Blijft er dan iets 'rondgaan'?", "Snel vervangen levert juist meer afval op. Is dat 'rond'?"],
         uitlegPad: {
           stappen: [
             { titel: "Geen lineair (maken-gebruiken-weggooien)", tekst: "In plaats van afval naar stortplaats: hergebruik, repareer, recycle. NL voorop: PET-flessen met statiegeld grotendeels gerecycled, oude kleren naar second-hand. Doel NL 2050: volledig circulaire economie." },
@@ -431,9 +431,9 @@ const steps = [
       },
       {
         q: "Welke stad heeft bijna 100% **geothermische** + waterkracht-energie?",
-        options: ["Reykjavik (IJsland)", "Lagos", "Tokyo", "Sydney"],
+        options: ["Reykjavik (IJsland)", "Lagos (Nigeria)", "Tokyo (Japan)", "Sydney (Australië)"],
         answer: 0,
-        wrongHints: [null, "Niet — Afrika.", "Niet primair.", "Niet primair."],
+        wrongHints: [null, "Lagos draait vooral op olie en gas. Waar vind je veel aardwarmte?", "Japan heeft wel vulkanen, maar Tokyo gebruikt vooral gas en kolen. Welke stad haalt bijna alles uit de natuur?", "Sydney gebruikt nog veel steenkool. Waar ligt een stad op een plaatgrens met warme bronnen?"],
         uitlegPad: {
           stappen: [
             { titel: "Natuurlijke bron", tekst: "IJsland zit op tektonische breuk → veel vulkanische activiteit + hot springs. Reykjavik (en heel IJsland) gebruikt geothermische warmte voor verwarming + waterkracht voor elektriciteit. Bijna 100% hernieuwbaar. Klein voorbeeld dat moeilijk elders te kopiëren is." },

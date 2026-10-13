@@ -31,9 +31,9 @@ const steps = [
     checks: [
       {
         q: "Wanneer was de **Watersnoodramp**?",
-        options: ["1 februari 1953","31 december 1953","1 januari 2000","12 mei 1940"],
+        options: ["1 februari 1953","31 december 1953","1 februari 1963","12 mei 1940"],
         answer: 0,
-        wrongHints: [null, "Niet — januari, niet december.", "Niet relevant.", "Duitse invasie WO2 — niet watersnood."],
+        wrongHints: [null, "De ramp gebeurde in een stormnacht aan het begin van een nieuwe maand. Klopt deze datum dan?", "In 1963 waren de Deltawerken al jaren in aanbouw. Kwam de ramp vóór of na het begin daarvan?", "In mei 1940 viel Duitsland Nederland binnen. Ging het bij de Watersnoodramp om oorlog of om een storm?"],
         uitlegPad: {
           stappen: [{ titel: "Nacht van 31 jan op 1 feb 1953", tekst: "Springvloed + storm samen 's nachts → dijken bezweken in Zeeland. **1.836 doden** in NL. Datum vaak afgekort als **'de Ramp'** of **'1 februari 1953'**." }],
           woorden: [{ woord: "springvloed", uitleg: "Extra hoge vloed rond volle en nieuwe maan." }],
@@ -43,9 +43,9 @@ const steps = [
       },
       {
         q: "Welke provincies werden **het hardst getroffen** in 1953?",
-        options: ["Zeeland + Zuid-Holland + Brabant","Groningen + Friesland","Limburg + Overijssel","Utrecht + Gelderland"],
+        options: ["Zeeland + Zuid-Holland + Brabant","Groningen + Friesland + Drenthe","Limburg + Overijssel + Gelderland","Utrecht + Noord-Holland + Flevoland"],
         answer: 0,
-        wrongHints: [null, "Niet — Noord-NL bleef gespaard.", "Niet — binnenland.", "Niet — meer binnenland, geen Noordzee-kust."],
+        wrongHints: [null, "Niet — Noord-NL bleef gespaard.", "Limburg, Overijssel en Gelderland liggen niet aan zee. Kon een stormvloed daar toeslaan?", "Flevoland bestond in 1953 nog niet. Sloeg de storm het hardst toe in het noorden of in het zuiden?"],
         uitlegPad: {
           stappen: [{ titel: "Zuidwestelijke delta", tekst: "Zeeland (Schouwen-Duiveland, Tholen), Zuid-Holland (Goeree-Overflakkee, Voorne-Putten) en West-Brabant lagen direct in de baan van de stormvloed in de **Zuidwestelijke delta**. Daar mondden Schelde, Maas + Rijn uit in zee." }],
           woorden: [{ woord: "delta", uitleg: "Gebied waar rivieren in zee uitmonden — vlak land + veel water." }],
@@ -55,7 +55,7 @@ const steps = [
       },
       {
         q: "Wat is een **waterschap**?",
-        options: ["Bestuurslaag verantwoordelijk voor water-beheer","Schap in supermarkt","Waterleidingbedrijf","Het Rijksinstituut voor Volksgezondheid"],
+        options: ["Bestuurslaag die zorgt voor waterbeheer","Schap met flessen water in de winkel","Bedrijf dat drinkwater naar huizen levert","Het Rijksinstituut voor Volksgezondheid"],
         answer: 0,
         wrongHints: [null, "Klinkt zo, maar hier gaat het om bestuur.", "Niet — waterbedrijf is iets anders (drinkwater).", "Niet — RIVM is gezondheid."],
         uitlegPad: {
@@ -70,7 +70,7 @@ const steps = [
         q: "Hoeveel **doden** vielen bij de Watersnoodramp 1953 in NL?",
         options: ["~1.836 doden","~100 doden","~10.000 doden","~50.000 doden"],
         answer: 0,
-        wrongHints: [null, "Veel te weinig.", "Te veel.", "Veel te veel — wel werden 100.000 mensen geëvacueerd."],
+        wrongHints: [null, "In één nacht liepen hele dorpen onder water. Zou het bij zo'n honderd slachtoffers zijn gebleven?", "Veel mensen overleefden op zolders, daken en dijken. Hoe groot was het aantal doden dan ongeveer?", "Ongeveer 100.000 mensen moesten weg uit hun huis. Is de helft daarvan omgekomen?"],
         uitlegPad: {
           stappen: [{ titel: "1.836 NL + ~350 buitenland", tekst: "**1.836 NL-doden** + 28.000 dode dieren + 47.000 gebouwen beschadigd. In België ook 28 doden + Groot-Brittannië 326. Erger had nog gekund — Rotterdam ontsnapte ternauwernood." }],
           theorie: "Ezelsbruggetje: het dodental 1836 lijkt op een jaartal (achttien-zesendertig).",
@@ -79,9 +79,9 @@ const steps = [
       },
       {
         q: "Wat is een **dijk**?",
-        options: ["Een wal van grond/zand/klei tegen water","Een diep gat","Een waterloop","Een stuw"],
+        options: ["Een wal van zand en klei tegen water","Een diepe greppel om water op te vangen","Een waterloop tussen twee weilanden","Een stuw die de waterstand regelt"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is het tegengestelde.", "Niet — dat is een sloot/kanaal.", "Stuw is regelend, dijk is barrière."],
+        wrongHints: [null, "Een greppel ligt lager dan het land. Ligt een dijk lager of hoger?", "Dat is een sloot of kanaal. Houdt die water tegen of voert hij het af?", "Een stuw kan open en dicht. Kan een dijk dat ook?"],
         uitlegPad: {
           stappen: [{ titel: "Dijk = aarden wal", tekst: "**Dijk** = opgeworpen aarden wal langs water (zee/rivier) om overstroming te voorkomen. NL heeft duizenden kilometers dijken (zee + rivier + boezem). Laagste plek NL: Zuidplaspolder bij Nieuwerkerk aan den IJssel (-6,76m NAP)." }],
           woorden: [{ woord: "NAP", uitleg: "Normaal Amsterdams Peil — meetpunt zeeniveau voor hoogte in NL." }],
@@ -113,7 +113,7 @@ const steps = [
         q: "Hoe heet het meer dat door de Afsluitdijk ontstond?",
         options: ["IJsselmeer","Markermeer","Zuiderzee","Waddenzee"],
         answer: 0,
-        wrongHints: [null, "Onderdeel van IJsselmeer (via Houtribdijk gescheiden 1976).", "Oude naam — werd IJsselmeer na 1932.", "Aparte zee — Waddenzee blijft."],
+        wrongHints: [null, "Het Markermeer is pas in 1976 met de Houtribdijk afgescheiden. Hoe heette het hele meer in 1932?", "Zo heette het water vóór de Afsluitdijk, toen het nog zout was. Kreeg het daarna een nieuwe naam?", "De Waddenzee ligt aan de buitenkant van de Afsluitdijk. Ontstond die door de dijk?"],
         uitlegPad: {
           stappen: [{ titel: "Zuiderzee → IJsselmeer", tekst: "Vóór 1932: open **Zuiderzee** (zout). Na Afsluitdijk: **IJsselmeer** (zoet), genoemd naar IJsselrivier die erin uitmondt. **Markermeer** is sinds 1976 apart deel (via Houtribdijk Enkhuizen-Lelystad gescheiden)." }],
           woorden: [{ woord: "Zuiderzee", uitleg: "Oude naam (vóór 1932) voor wat nu IJsselmeer + Markermeer is." }],
@@ -144,9 +144,9 @@ const steps = [
       },
       {
         q: "Wat is **Markerwaard**?",
-        options: ["Geplande maar geschrapte polder","5e Deltawerk","Vissersdorp","Stad in Friesland"],
+        options: ["Geplande maar geschrapte polder","Dam van de Deltawerken in Zeeland","Oud vissersdorp aan het Markermeer","Nieuwe stad in de provincie Flevoland"],
         answer: 0,
-        wrongHints: [null, "Niet — Deltawerken in Zeeland.", "Vissersdorpen aan Markermeer (Volendam, Marken).", "Niet relevant."],
+        wrongHints: [null, "De Deltawerken liggen in Zeeland. Ligt het Markermeer daar?", "De vissersdorpen daar heten Volendam en Marken. Waar wijst 'waard' in een naam op?", "Flevoland heeft Almere en Lelystad. Kun je de Markerwaard op de kaart vinden?"],
         uitlegPad: {
           stappen: [{ titel: "Markerwaard nooit gebouwd", tekst: "**Markerwaard** = oorspronkelijk 5e polder-plan (Lely). Begin '80 geschrapt — milieubeweging + financieel + minder noodzaak. **Markermeer** bleef open water. **Marker Wadden** sinds 2016: kunstmatige eilandjes voor vogel-/natuurherstel." }],
           theorie: "Toets-feit: het schrappen van de Markerwaard is een symbool van het groeiende milieubewustzijn in de jaren '80.",
@@ -164,9 +164,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **kenmerkend** voor de Oosterscheldekering (1986)?",
-        options: ["62 schuiven die open/dicht kunnen","Volledig dichte dam","Drijvende brug","Tunnel onder water"],
+        options: ["62 schuiven die open en dicht kunnen","Een volledig dichte dam van zand","Een drijvende brug voor het verkeer","Een tunnel diep onder de zeebodem"],
         answer: 0,
-        wrongHints: [null, "Niet — bewust géén dichte dam vanwege natuur.", "Niet — vaste constructie.", "Niet — stormvloedkering, geen tunnel."],
+        wrongHints: [null, "Niet — bewust géén dichte dam vanwege natuur.", "Niet — vaste constructie.", "Een tunnel helpt het verkeer. Hoe houdt een kering het water tegen?"],
         uitlegPad: {
           stappen: [{ titel: "Open-tenzij-storm-design", tekst: "Oosterscheldekering = grootste stormvloedkering ter wereld. **62 stalen schuiven** van elk 42 m breed. Normaal open → eb/vloed gaat door → Oosterschelde-natuur (oesters, kreeften, zeehonden) blijft. Dicht bij storm. Compromis tussen veiligheid en natuur." }],
           woorden: [{ woord: "stormvloedkering", uitleg: "Beweegbare barrière tegen extreme vloed — normaal open, dicht bij storm." }],
@@ -187,9 +187,9 @@ const steps = [
       },
       {
         q: "Wat is **ir. Johan van Veen** beroemd om?",
-        options: ["Hoofdontwerper Deltawerken","Premier 1953","Afsluitdijk","Watersnood-redder"],
+        options: ["Hoofdontwerper van de Deltawerken","Minister-president in 1953","Ontwerper van de Afsluitdijk","Redder tijdens de Watersnood"],
         answer: 0,
-        wrongHints: [null, "Drees was premier 1953.", "Lely deed Afsluitdijk.", "Niet specifiek deze persoon."],
+        wrongHints: [null, "Drees was premier 1953.", "Lely deed Afsluitdijk.", "Veel mensen redden anderen in 1953. Waarom zou juist een ingenieur (ir.) beroemd zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Vader van de Deltawerken", tekst: "**Ir. Johan van Veen** (1893-1959) waarschuwde al **vóór 1953** voor dijk-zwakte in Zeeland — werd niet serieus genomen. Na de ramp werd hij eerste secretaris **Deltacommissie**. Tekende ontwerp Deltaplan. Stierf vóór voltooiing — kreeg postuum 'vader van Deltawerken' titel." }],
           theorie: "Tragiek: als er eerder naar Van Veens waarschuwingen was geluisterd, was de ramp misschien kleiner geweest.",
@@ -241,9 +241,9 @@ const steps = [
       },
       {
         q: "Wat is **'Ruimte voor de Rivier'**?",
-        options: ["Rivieren krijgen meer ruimte ipv hogere dijken","Rivieren afsluiten","Brug-bouw","Tunnels onder rivieren"],
+        options: ["Rivieren meer ruimte geven, niet hogere dijken","Rivieren afsluiten met dammen en sluizen","Meer bruggen bouwen over de rivieren","Tunnels graven onder de grote rivieren"],
         answer: 0,
-        wrongHints: [null, "Niet — juist OPEN laten met meer ruimte.", "Niet — verkeer-oplossing.", "Niet relevant."],
+        wrongHints: [null, "Afsluiten met dammen past bij de Deltawerken aan zee. Wat zegt de naam van dit plan?", "Bruggen helpen het verkeer. Gaat dit plan over verkeer of over hoogwater?", "Een tunnel helpt niet als de rivier overstroomt. Waar gaat dit plan over?"],
         uitlegPad: {
           stappen: [{ titel: "Nieuwe rivierstrategie", tekst: "Na hoogwater Rijn/Maas 1993+1995 (in 1995 werden 250.000 mensen geëvacueerd) koos NL voor **anders denken**. Niet alleen hogere dijken, maar **uiterwaarden verbreden** + **nevengeulen graven**. Voorbeeld: Nijmegen kreeg een 'nieuwe Waal-arm' met park (klaar 2015)." }],
           woorden: [{ woord: "uiterwaard", uitleg: "Vlak land langs een rivier dat bij hoogwater onderloopt." }, { woord: "nevengeul", uitleg: "Extra rivierloop naast de hoofdgeul, zodat water meer weg kan." }],
@@ -265,9 +265,9 @@ const steps = [
       },
       {
         q: "Wat is de **Watertoets**?",
-        options: ["Verplichte check op water-impact bij bouwplannen","Examen voor zwemmen","Drinkwater-keuring","Belasting"],
+        options: ["Verplichte check op water bij bouwplannen","Zwemexamen voor kinderen op de basisschool","Keuring of het drinkwater schoon genoeg is","Belasting die je betaalt aan het waterschap"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet — andere context.", "Niet — wel waterschapsbelasting, maar geen 'toets'."],
+        wrongHints: [null, "Bij een zwemdiploma test je een kind. Wat wordt er bij de Watertoets getest?", "Die keuring doet het waterbedrijf zelf. Wie moet de Watertoets doen?", "Dat heet waterschapsbelasting. Is een toets hetzelfde als een betaling?"],
         uitlegPad: {
           stappen: [{ titel: "Watertoets sinds 2003", tekst: "Bij elk **nieuw bouwplan** (woonwijk, weg, fabriek) moet de gemeente een **watertoets** doen: kan dit gebied water aan bij extreme regen + zeespiegelstijging? Anders → niet bouwen of aanpassen. Voorkomt bouwen in kwetsbare gebieden." }],
           woorden: [{ woord: "watertoets", uitleg: "Verplichte beoordeling van waterhuishouding bij ruimtelijke plannen." }],
@@ -309,7 +309,7 @@ const steps = [
         q: "Welke **rivier** geeft het IJsselmeer zijn naam?",
         options: ["IJssel","Rijn","Maas","Waal"],
         answer: 0,
-        wrongHints: [null, "Niet — heet wel Rijnland, niet IJsselmeer-naamgever.", "Niet — Maas mondt in Hollands Diep.", "Niet — Waal in Merwede."],
+        wrongHints: [null, "De Rijn stroomt wel naar dit meer, maar via een zijtak. Welke zijtak?", "De Maas stroomt door het zuiden naar het Hollands Diep. Komt hij ooit bij dit meer?", "De Waal stroomt naar het westen, naar de Merwede. Komt die bij dit meer?"],
         uitlegPad: {
           stappen: [{ titel: "IJssel mondt erin uit", tekst: "**IJssel** is Rijntak die noordwaarts naar IJsselmeer stroomt. Voor 1932 mondde IJssel in Zuiderzee — vandaar de naam. Let op: de **Hollandse IJssel** (bij Gouda) is een ander riviertje." }],
           niveaus: { basis: "IJssel.", simpeler: "IJsselmeer = naar IJssel", nogSimpeler: "IJssel" },

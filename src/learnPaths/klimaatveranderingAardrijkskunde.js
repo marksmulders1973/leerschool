@@ -34,9 +34,9 @@ const steps = [
     checks: [
       {
         q: "Verschil **weer** en **klimaat**?",
-        options: ["Weer = nu, klimaat = gemiddelde over jaren", "Geen verschil", "Weer is in NL, klimaat wereldwijd", "Weer is wetenschap"],
+        options: ["Weer = nu, klimaat = gemiddelde over jaren", "Weer = temperatuur, klimaat = neerslag", "Weer = in Nederland, klimaat = wereldwijd", "Weer = voorspelling, klimaat = meting"],
         answer: 0,
-        wrongHints: [null, "Wel verschil.", "Niet primair.", "Beide wetenschap."],
+        wrongHints: [null, "Weer en klimaat gaan allebei over temperatuur én neerslag. Waarin verschillen ze dan?", "Ook Nederland heeft een eigen klimaat. Klopt het dan dat klimaat alleen wereldwijd is?", "Weerstations meten het weer elke dag, en ook klimaat wordt voorspeld. Klopt deze tegenstelling dan?"],
         uitlegPad: {
           stappen: [
             { titel: "Weer = nu, vandaag", tekst: "Het **weer** is wat er **vandaag** of **deze week** gebeurt: regent het? Is het warm? Waait het hard? Weer kan elke dag anders zijn." },
@@ -65,7 +65,7 @@ const steps = [
         q: "Hoeveel **warmer** is aarde sinds 1880?",
         options: ["~1,1 °C", "10 °C", "0,1 °C", "~3 °C"],
         answer: 0,
-        wrongHints: [null, "Veel te veel.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "Tien graden is het verschil tussen een gewone lentedag en een zomerse dag. Zou het overal sindsdien zoveel warmer zijn?", "Zou je van 0,1 graad zulke grote gevolgen zien, zoals smeltende gletsjers?", "Ongeveer 3 °C is wat klimaatmodellen rond 2100 verwachten als de uitstoot doorgaat. Zitten we nu al zo ver?"],
       },
       {
         q: "Wat is **IPCC**?",
@@ -110,9 +110,9 @@ const steps = [
     checks: [
       {
         q: "Wat is het **broeikaseffect**?",
-        options: ["Gassen houden zonne-warmte vast in atmosfeer", "Gat in de ozonlaag door vervuiling", "Wolken die zonlicht tegenhouden", "Warmte uit vulkanen in de aarde"],
+        options: ["Gassen houden warmte vast in de atmosfeer", "Gat in de ozonlaag door vervuiling", "Wolken die zonlicht tegenhouden", "Warmte uit vulkanen in de aarde"],
         answer: 0,
-        wrongHints: [null, "Dat is een ander probleem — wat houdt de warmte vast?", "Dan zou het juist koeler worden.", "Het gaat om gassen in de lucht, niet om warmte uit de aarde."],
+        wrongHints: [null, "Dat is een ander probleem — wat houdt de warmte vast?", "Dan zou het juist koeler worden.", "Warmte uit de aarde zelf is maar heel weinig. Waar komt bijna alle warmte op aarde vandaan?"],
         uitlegPad: {
           stappen: [
             { titel: "Vergelijk met broeikas in tuin", tekst: "Een **broeikas** (glashuis voor planten) houdt **warmte vast** vanwege de ramen. Zonlicht komt erin, maar de warmte kan minder makkelijk eruit. Daarom is het binnen veel warmer dan buiten." },
@@ -146,7 +146,7 @@ const steps = [
         q: "Hoeveel **CO₂ per jaar** stoot gemiddelde Nederlander uit?",
         options: ["~10 ton", "~100 kg", "~100 ton", "~1 kg"],
         answer: 0,
-        wrongHints: [null, "Veel meer.", "Te veel.", "Onmogelijk."],
+        wrongHints: [null, "Eén autorit van 500 km stoot al zo'n 60 kg CO₂ uit. Hoeveel kom je dan in een heel jaar?", "Nederland stoot in totaal zo'n 150 miljoen ton per jaar uit. Klopt 100 ton per persoon dan bij 18 miljoen inwoners?", "1 kg CO₂ stoot je al uit met een paar kilometer autorijden. Kan dat het jaartotaal zijn?"],
       },
       {
         q: "Welk gas houdt **per kilo** veel méér warmte vast dan CO₂?",
@@ -171,7 +171,7 @@ const steps = [
         q: "Hoeveel is **zeespiegel** sinds 1900 gestegen?",
         options: ["~20 cm", "1 m", "2 cm", "5 m"],
         answer: 0,
-        wrongHints: [null, "Te veel.", "Te weinig.", "Veel te veel."],
+        wrongHints: [null, "Een meter hoger water zou kades en stranden flink hebben veranderd. Zie je dat op foto's van rond 1900?", "Nu stijgt de zee zo'n 3 à 4 mm per jaar, eerder iets minder. Hoeveel is dat bij elkaar in ruim 100 jaar?", "5 meter hoger water zou grote delen van Nederland onder water hebben gezet. Is dat gebeurd?"],
       },
       {
         q: "Wat doet **smelten permafrost**?",
@@ -200,21 +200,21 @@ const steps = [
       },
       {
         q: "**NL klimaatakkoord** doel 2030?",
-        options: ["49% minder CO₂", "Geen vermindering", "Compleet emissieloos", "10%"],
+        options: ["49% minder CO₂", "10% minder CO₂", "95% minder CO₂", "25% minder CO₂"],
         answer: 0,
-        wrongHints: [null, "Wel doel.", "Onmogelijk in 2030.", "Te weinig."],
+        wrongHints: [null, "Het akkoord moet helpen om in 2050 bijna klimaatneutraal te zijn. Kom je daar met maar 10% in 2030?", "95% minder is het doel voor 2050. Wat is de tussenstap voor 2030?", "Tussen nu en 2050 zit 2030 ongeveer op de helft. Is een kwart minder dan genoeg?"],
       },
       {
         q: "Wanneer **stopt NL gas** uit Groningen?",
-        options: ["2024", "2050", "Nooit", "1980"],
+        options: ["2024", "2050", "2030", "1980"],
         answer: 0,
-        wrongHints: [null, "Te laat.", "Wel stop.", "Toen werd er juist volop gas gewonnen."],
+        wrongHints: [null, "Door de aardbevingen wilde de overheid zo snel mogelijk stoppen. Past 2050 daarbij?", "Na alle aardbevingen wilde het kabinet zo snel mogelijk stoppen. Past 2030 daar goed bij?", "Toen werd er juist volop gas gewonnen."],
       },
       {
         q: "Wat is **klimaatadaptatie**?",
-        options: ["Aanpassen aan verandering", "Veroorzaken", "Negeren", "Voorspellen"],
+        options: ["Aanpassen aan de gevolgen van opwarming", "Uitstoot verminderen om opwarming te remmen", "Klimaatverandering negeren en afwachten", "Opwarming voorspellen met klimaatmodellen"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet.", "Voorspellen apart."],
+        wrongHints: [null, "Dat heet mitigatie: de oorzaak aanpakken. Gaat adaptatie over de oorzaak of over de gevolgen?", "Is niets doen een maatregel?", "Voorspellen hoort bij klimaatonderzoek. Adaptatie is een soort maatregel — welke?"],
       },
     ],
   },
@@ -225,9 +225,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **mitigatie**?",
-        options: ["Minder uitstoot", "Aanpassen", "Negeren", "Veroorzaken"],
+        options: ["Uitstoot van broeikasgassen verminderen", "Aanpassen aan de gevolgen van opwarming", "Opwarming voorspellen met klimaatmodellen", "Schade door extreem weer vergoeden"],
         answer: 0,
-        wrongHints: [null, "Adaptatie.", "Niet.", "Tegenovergesteld."],
+        wrongHints: [null, "Dat is adaptatie. Pakt mitigatie de gevolgen of de oorzaak aan?", "Voorspellen verandert niets aan de opwarming zelf. Wat doet een mitigatie-maatregel?", "Dat helpt mensen achteraf. Pakt het de oorzaak van het probleem aan?"],
       },
       {
         q: "Wanneer **Parijs-akkoord**?",
@@ -253,12 +253,12 @@ const steps = [
     title: "Eind-toets — klimaat mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
-      { q: "**Klimaat** vs **weer**?", options: ["Klimaat = gemiddelde jaren, weer = nu", "Geen verschil", "Klimaat = temperatuur, weer = regen", "Andersom"], answer: 0, wrongHints: [null, "Wel.", "Beide gaan over temperatuur én regen.", "Niet."] },
-      { q: "Wat is **CO₂**?", options: ["Belangrijkste broeikasgas door de mens", "Zuurstof", "Stikstof", "Water"], answer: 0, wrongHints: [null, "Geen broeikas.", "Geen broeikas.", "Water is H₂O — welke letters staan er in CO₂?"] },
-      { q: "**1,5 °C** doel komt uit?", options: ["Parijs-akkoord 2015", "Kyoto", "EU-wet", "NASA"], answer: 0, wrongHints: [null, "Eerder.", "Volgt op Parijs.", "Niet."] },
+      { q: "**Klimaat** vs **weer**?", options: ["Klimaat = gemiddelde over jaren, weer = nu", "Klimaat = wereldwijd, weer = in Nederland", "Klimaat = temperatuur, weer = regen", "Klimaat = nu, weer = gemiddelde over jaren"], answer: 0, wrongHints: [null, "Ook Nederland heeft een eigen klimaat. Gaat het verschil over plaats?", "Beide gaan over temperatuur én regen.", "Kijk welke van de twee bij een kort moment hoort en welke bij een lange periode."] },
+      { q: "Wat is **CO₂**?", options: ["Belangrijkste broeikasgas door de mens", "Het gas dat wij inademen om te leven", "Het gas dat het gat in de ozonlaag maakt", "Waterdamp die uit de schoorsteen komt"], answer: 0, wrongHints: [null, "Wij ademen zuurstof (O₂) in. Welke letters staan er in CO₂?", "Het ozongat komt door andere stoffen (cfk's uit oude spuitbussen). Waarom staat CO₂ dan in het nieuws?", "Water is H₂O — welke letters staan er in CO₂?"] },
+      { q: "**1,5 °C** doel komt uit?", options: ["Parijs-akkoord 2015", "Kyoto-protocol 1997", "Europese Klimaatwet 2021", "Eerste VN-klimaatrapport 1990"], answer: 0, wrongHints: [null, "Kyoto ging over uitstootdoelen voor rijke landen. Stond daar al een temperatuurgrens in?", "Die EU-wet bouwt voort op een eerder wereldwijd akkoord. Welk?", "Een rapport geeft kennis, maar legt geen afspraken tussen landen vast. Waar gebeurde dat wel?"] },
       { q: "Wat is **kantelpunt** in klimaat?", options: ["Onomkeerbare verandering", "Omslag van zon naar regen", "Hoogste temperatuur ooit gemeten", "Wisseling van de seizoenen"], answer: 0, wrongHints: [null, "Dat is weer, en dat draait vanzelf weer terug.", "Een record is geen drempel waarna alles anders blijft.", "Seizoenen keren elk jaar terug — een kantelpunt niet."] },
-      { q: "Welke is **hernieuwbare energie**?", options: ["Zonnepaneel + windmolen", "Kolen", "Olie", "Gas"], answer: 0, wrongHints: [null, "Uit oude mijnen — raakt op.", "Pomp je op uit putten — eindig.", "Uit ondergrond — voorraad eindig."] },
-      { q: "Wat doet **smelten van landijs** (Groenland + Antarctica)?", options: ["Zeespiegel stijgt", "Niets", "Verkoelt aarde", "Zeespiegel daalt"], answer: 0, wrongHints: [null, "Wel.", "Niet.", "Waar blijft al dat smeltwater?"] },
+      { q: "Welke is **hernieuwbare energie**?", options: ["Zonnepaneel + windmolen", "Steenkool + bruinkool", "Olie uit de Noordzee", "Aardgas uit Groningen"], answer: 0, wrongHints: [null, "Uit oude mijnen — raakt op.", "Pomp je op uit putten — eindig.", "Uit ondergrond — voorraad eindig."] },
+      { q: "Wat doet **smelten van landijs** (Groenland + Antarctica)?", options: ["Zeespiegel stijgt", "Zeespiegel blijft gelijk", "Aarde koelt af", "Zeespiegel daalt"], answer: 0, wrongHints: [null, "Bij drijvend zee-ijs klopt dit. Maar ligt dit ijs in het water of op land?", "Er verdwijnt wit ijs dat zonlicht weerkaatst. Wordt het dan koeler?", "Waar blijft al dat smeltwater?"] },
     ],
   },
 ];

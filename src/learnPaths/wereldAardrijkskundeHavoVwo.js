@@ -33,7 +33,7 @@ const steps = [
         q: "**WTO** = ?",
         options: ["World Trade Organization","Western Travel Office","World Tourism Organization","World Transport Organization"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Bestaat wel maar niet bedoeld.", "Niet relevant."],
+        wrongHints: [null, "Bestaat er een wereldorganisatie die alleen over reizen in het westen gaat?", "Die bestaat wel, maar heet afgekort UNWTO. Waarover sluiten landen bij de WTO afspraken?", "Bestaat er zo'n wereldtransportorganisatie? Waar ken je de WTO van uit de les?"],
         uitlegPad: {
           stappen: [{ titel: "1995 Genève", tekst: "**WTO** = World Trade Organization, opgericht 1995 (opvolger GATT). Genève. Doel: wereldhandel reguleren via regels + geschillen-oplossing. 166 leden. **China-toetreding 2001** = mega-stap voor globalisering. Sinds 2018 onder druk door VS-China-tarieven." }],
           niveaus: { basis: "World Trade Org.", simpeler: "WTO = handel", nogSimpeler: "Handelsorganisatie." },
@@ -51,9 +51,9 @@ const steps = [
       },
       {
         q: "Wat is **glokalisering**?",
-        options: ["Globaal product met lokale aanpassing","Alleen globaal","Alleen lokaal","Lokaal product dat onveranderd wereldwijd wordt verkocht"],
+        options: ["Globaal product met lokale aanpassing","Wereldwijd één product, overal precies gelijk","Alleen lokaal produceren en verkopen","Lokaal product dat onveranderd wereldwijd wordt verkocht"],
         answer: 0,
-        wrongHints: [null, "Niet — combinatie.", "Niet — combinatie.", "Waar zit dan de lokale aanpassing?"],
+        wrongHints: [null, "Dat is gewone globalisering. Wat voegt het stukje 'lokaal' in glokalisering toe?", "Dan blijft alles in één regio. Waar zit het wereldwijde deel?", "Waar zit dan de lokale aanpassing?"],
         uitlegPad: {
           stappen: [{ titel: "Global + local", tekst: "**Glokalisering** = globalisatie met lokale aanpassing. **Voorbeelden**:\n• McDonald's: Big Mac wereldwijd, maar McKroket NL, Maharaja Mac India (geen rund vanwege hindoeïsme), Teriyaki Burger Japan.\n• Netflix: globaal platform, lokale producties (NL-series, K-drama).\n• Wereld-merken passen verpakking, smaak, marketing aan." }],
           niveaus: { basis: "Globaal + lokaal.", simpeler: "Glokal = G+L", nogSimpeler: "Wereldmerk, lokaal aangepast." },
@@ -90,9 +90,9 @@ const steps = [
     checks: [
       {
         q: "Welke index combineert **BBP + onderwijs + levensverwachting**?",
-        options: ["HDI","Gini-coëfficiënt","BBP per cap","Big Mac Index"],
+        options: ["HDI","Gini-coëfficiënt","BBP per inwoner","Big Mac Index"],
         answer: 0,
-        wrongHints: [null, "Niet — interne ongelijkheid.", "Alleen economie.", "Niet relevant."],
+        wrongHints: [null, "De Gini-coëfficiënt meet hoe ongelijk het inkomen in een land verdeeld is. Zit onderwijs daarin?", "BBP per inwoner zegt alleen iets over geld. Waar blijven onderwijs en gezondheid?", "De Big Mac Index vergelijkt prijzen tussen landen. Zegt dat iets over levensverwachting?"],
         uitlegPad: {
           stappen: [{ titel: "VN-indicator", tekst: "**HDI** (Human Development Index, VN) combineert 3 dimensies in 1 score 0-1:\n• Inkomen (BBP per cap).\n• Onderwijs (jaren onderwijs + verwacht).\n• Gezondheid (levensverwachting).\n\nTop 2024: Zwitserland, Noorwegen, IJsland. NL top-10. Onderaan: Tsjaad, Niger." }],
           niveaus: { basis: "HDI.", simpeler: "HDI = 3-in-1", nogSimpeler: "HDI." },
@@ -100,9 +100,9 @@ const steps = [
       },
       {
         q: "**BRICS**-landen zijn:",
-        options: ["Brazilië, Rusland, India, China, Zuid-Afrika","Vijf Aziatische landen","Vijf rijke landen","Brazilië, Republiek Congo, Israël, China, Spanje"],
+        options: ["Brazilië, Rusland, India, China, Zuid-Afrika","Vijf snelgroeiende landen uit Azië","Vijf rijke westerse industrielanden","Brazilië, Republiek Congo, Israël, China, Spanje"],
         answer: 0,
-        wrongHints: [null, "Niet — divers.", "Niet — opkomend.", "Niet relevant."],
+        wrongHints: [null, "Kijk naar de letters: staat de B voor een Aziatisch land?", "BRICS-landen groeien snel, maar zijn ze al zo rijk als de VS of Duitsland?", "De letters kloppen, maar zijn Israël en Spanje grote opkomende economieën?"],
         uitlegPad: {
           stappen: [{ titel: "5 opkomende reuzen", tekst: "**BRICS** = Brazilië, Rusland, India, China, Zuid-Afrika. Opkomende grote economieën. Recent uitbreiding (2024): Iran, Egypte, Verenigde Arabische Emiraten, Ethiopië, Saudi-Arabië (genodigd), Indonesië (2025) → BRICS+. Doel: tegenwicht G7 + dollar." }],
           niveaus: { basis: "B/R/I/C/ZA.", simpeler: "BRICS = 5 reuzen", nogSimpeler: "Opkomende reuzen." },
@@ -110,9 +110,9 @@ const steps = [
       },
       {
         q: "**Gini = 0** betekent:",
-        options: ["Perfecte gelijkheid","Maximale ongelijkheid","Geen meting","Slechte economie"],
+        options: ["Perfecte gelijkheid","Maximale ongelijkheid","Er is niets gemeten","Een krimpende economie"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel meting.", "Niet relevant."],
+        wrongHints: [null, "Bij Gini = 1 heeft één persoon al het inkomen. Wat betekent dan het andere uiterste?", "0 is ook een uitkomst van een meting. Wat zegt die uitkomst?", "De Gini-coëfficiënt gaat over verdeling, niet over groei. Hoe is het inkomen bij 0 verdeeld?"],
         uitlegPad: {
           stappen: [{ titel: "0-1 schaal", tekst: "**Gini-coëfficiënt**: 0 = volledig gelijke verdeling (iedereen evenveel), 1 = volledige ongelijkheid (1 persoon heeft alles). NL ~0,28 (gelijk). VS ~0,40. ZA ~0,63 (zeer ongelijk). Sociaal-democratische landen lager." }],
           niveaus: { basis: "Gelijk.", simpeler: "Gini 0 = gelijk", nogSimpeler: "Iedereen evenveel." },
@@ -120,9 +120,9 @@ const steps = [
       },
       {
         q: "Welke verklaring komt van **Acemoglu + Robinson**?",
-        options: ["Instellingen bepalen welvaart","Klimaat beslist","Genen","Toeval"],
+        options: ["Instellingen bepalen welvaart","Klimaat bepaalt welvaart","Grondstoffen bepalen welvaart","Toeval bepaalt welvaart"],
         answer: 0,
-        wrongHints: [null, "Niet — Diamond.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Die klimaat-verklaring hoort bij Jared Diamond. Wat zeggen Acemoglu en Robinson?", "Er zijn landen vol olie die toch arm blijven. Wat maakt dan het verschil?", "Acemoglu en Robinson zien juist vaste patronen, bijvoorbeeld tussen Noord- en Zuid-Korea. Wat verschilt daar?"],
         uitlegPad: {
           stappen: [{ titel: "Why Nations Fail 2012", tekst: "**Daron Acemoglu + James Robinson**: *Why Nations Fail* (2012). **Instellingen** (rule of law, eigendomsrechten, democratie, gelijke kansen) verklaren waarom landen welvarend worden of falen. **Inclusief vs extractief**: inclusieve instellingen verspreiden voordelen, extractieve concentreren ze. **Nobelprijs Economie 2024**." }],
           theorie: "Voorbeeld: Noord-Korea (extractief, arm) vs Zuid-Korea (inclusief, welvarend) — dezelfde bevolking + cultuur, verschillende instellingen.",
@@ -133,7 +133,7 @@ const steps = [
         q: "Wereld-armoede (<$2,15/dag) is sinds 1990:",
         options: ["Sterk afgenomen","Verdubbeld","Stabiel","Verviervoudigd"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet stabiel — denk aan wat de groei van China en India sinds 1990 deed.", "Niet relevant."],
+        wrongHints: [null, "In 1990 leefden bijna 2 miljard mensen in extreme armoede. Zouden dat er nu 4 miljard zijn?", "Niet stabiel — denk aan wat de groei van China en India sinds 1990 deed.", "Dan zouden er nu bijna 8 miljard extreem arme mensen zijn — de hele wereld. Kan dat?"],
         uitlegPad: {
           stappen: [{ titel: "China-effect vooral", tekst: "**Wereld-extreme armoede** (Wereldbank-definitie < $2,15/dag): 1990 ~1,9 mld → 2020 ~700 mln. **Sterke daling**. Vooral door China (sinds 1980 800+ mln uit armoede) + India + andere groeilanden. Maar absolute aantal nog hoog + Sub-Sahara stagneert. **SDG-doel 'nul armoede 2030'** lijkt onhaalbaar." }],
           niveaus: { basis: "Afgenomen.", simpeler: "Armoede ↓", nogSimpeler: "↓" },
@@ -150,9 +150,9 @@ const steps = [
     checks: [
       {
         q: "**Demografische uitdaging Sub-Sahara**:",
-        options: ["Snelle bevolkingsgroei","Vergrijzing","Bevolkingsdaling","Stabiel"],
+        options: ["Snelle bevolkingsgroei","Vergrijzing","Bevolkingsdaling","Stabiele bevolkingsomvang"],
         answer: 0,
-        wrongHints: [null, "Niet — westers probleem.", "Tegenovergesteld.", "Niet — wel verandering."],
+        wrongHints: [null, "Vergrijzing speelt vooral in Europa en Japan. Hoe oud is de gemiddelde inwoner van Sub-Sahara-Afrika?", "Bevolkingsdaling zie je in landen als Japan en Italië. Lijken Sub-Sahara-landen daarop?", "Kijk naar het aantal kinderen per vrouw in bijvoorbeeld Niger. Blijft de bevolking dan gelijk?"],
         uitlegPad: {
           stappen: [{ titel: "1,2 → 2+ → 3+ mld", tekst: "**Sub-Sahara**: snelste groeiende bevolking wereld. ~2,5%/jaar (wereld 1%). Geboortecijfer hoog (Niger 6+), kindersterfte dalend. Projectie: 2024 1,2 mld → 2050 ruim 2 mld → 2100 ruim 3 mld. Helft wereld-bevolking-groei vanuit Afrika." }],
           niveaus: { basis: "Snel groei.", simpeler: "SSA = bevolking-explosie", nogSimpeler: "Snelle groei." },
@@ -160,9 +160,9 @@ const steps = [
       },
       {
         q: "**Resource curse** (grondstoffen-paradox):",
-        options: ["Landen rijk aan grondstoffen vaak relatief arm","Grondstoffen altijd goed","Geen verband","Allemaal export-rijk"],
+        options: ["Grondstofrijke landen blijven vaak arm","Grondstoffen maken landen altijd rijk","Geen verband tussen grondstoffen en welvaart","Grondstoffen raken overal snel op"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel verband.", "Niet allemaal."],
+        wrongHints: [null, "Kijk naar Nigeria of Venezuela: veel olie. Zijn die landen rijk geworden?", "Waarom zou het dan een 'vloek' heten?", "Gaat de 'vloek' over opraken, of over wat grondstoffen met een land doen?"],
         uitlegPad: {
           stappen: [{ titel: "Paradox", tekst: "**Resource curse / paradox of plenty**: landen met veel natuurlijke grondstoffen blijken vaak slechter te presteren dan landen zonder. Reden: corruptie (elite pakt grondstofgeld), gebrek aan diversificatie, conflicten over hulpbronnen, 'Dutch disease' (sterke munt door olie-export beschadigt andere industrie). Voorbeeld: Nigeria (olie) vs Botswana (diamant, beter management)." }],
           niveaus: { basis: "Grondstoffen-paradox.", simpeler: "Resource curse = paradox", nogSimpeler: "Rijk aan grondstoffen, toch arm." },
@@ -170,9 +170,9 @@ const steps = [
       },
       {
         q: "Wat is **Sahel-regio**?",
-        options: ["Overgangszone tussen Sahara en savanne","Sahara zelf","Zuid-Afrika","Hoorn van Afrika"],
+        options: ["Overgangszone tussen Sahara en savanne","Het hart van de Sahara-woestijn","Het zuidelijkste deel van Afrika","De Hoorn van Afrika in het oosten"],
         answer: 0,
-        wrongHints: [null, "Niet — apart.", "Niet relevant.", "Hoorn = oost (Somalië, Ethiopië)."],
+        wrongHints: [null, "Sahel betekent 'rand' of 'kust'. Is het dan de woestijn zelf?", "Zoek de Sahel op de kaart. Hoe ver ligt die van Kaapstad?", "De Hoorn is de punt in het oosten (Somalië). De Sahel is een veel bredere band — waar loopt die?"],
         uitlegPad: {
           stappen: [{ titel: "Overgangszone", tekst: "**Sahel** = Arabisch voor 'kust', overgangszone tussen Sahara-woestijn + tropische savanne. Loopt door Senegal, Mauritanië, Mali, Burkina Faso, Niger, Tsjaad, Soedan, Eritrea. **Klimaatcrisis-zone**: droogte + desertificatie. **Politieke crisis**: jihadisme + militaire coups (Mali 2020-21, Burkina 2022, Niger 2023)." }],
           niveaus: { basis: "Tussen Sahara + savanne.", simpeler: "Sahel = overgang", nogSimpeler: "Rand van de Sahara." },
@@ -182,7 +182,7 @@ const steps = [
         q: "**Belt + Road Initiative (BRI)** is van:",
         options: ["China","VS","EU","Rusland"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "EU heeft 'Global Gateway' als reactie.", "Niet primair."],
+        wrongHints: [null, "De VS zien dit project juist als concurrent. Langs welke oude handelsroute loopt het?", "EU heeft 'Global Gateway' als reactie.", "Rusland doet wel mee, maar is het ook het land dat de leningen geeft en de havens bouwt?"],
         uitlegPad: {
           stappen: [{ titel: "Chinese mega-investering", tekst: "**Belt + Road Initiative (BRI)** = Chinese infrastructuur-programma sinds 2013 (Xi Jinping). $1+ biljoen geïnvesteerd in havens, spoorlijnen, wegen wereldwijd, vooral Azië + Afrika. **China grootste handelspartner Afrika** sinds 2009. Controverse: schulden-val + arbeids-omstandigheden. **EU's reactie**: Global Gateway €300 mld (2021)." }],
           niveaus: { basis: "China.", simpeler: "BRI = China", nogSimpeler: "China." },
@@ -232,7 +232,7 @@ const steps = [
         q: "Welk land **overhaalde China qua bevolking** in 2023?",
         options: ["India","Indonesië","Pakistan","Nigeria"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet primair.", "Sterk groeiend, maar nog veel kleiner."],
+        wrongHints: [null, "Indonesië heeft zo'n 280 miljoen inwoners. Hoeveel heeft China?", "Pakistan heeft rond 240 miljoen inwoners. Is dat genoeg om 1,4 miljard in te halen?", "Sterk groeiend, maar nog veel kleiner."],
         uitlegPad: {
           stappen: [{ titel: "1,44 mld 2023", tekst: "**India** werd grootste bevolking 2023 (1,44 mld) door snelle groei + China bevolkingsdaling (1-kind-beleid 1979-2015 nawerking + vergrijzing). India veel **jonger** (mediaan 28 vs China 39). Implicatie: India waarschijnlijk economische opkomst voor jaren." }],
           niveaus: { basis: "India.", simpeler: "2023 = India boven China", nogSimpeler: "India." },
@@ -240,9 +240,9 @@ const steps = [
       },
       {
         q: "Welke is China's **demografische uitdaging**?",
-        options: ["Vergrijzing + bevolkingsdaling","Te veel jongeren","Migratie-tekort","Geen probleem"],
+        options: ["Vergrijzing en bevolkingsdaling","Te veel jongeren zonder werk","Een tekort aan arbeidsmigranten","Een stabiele, jonge bevolking"],
         answer: 0,
-        wrongHints: [null, "Denk aan de nawerking van het 1-kind-beleid: krijgt China veel of weinig jongeren?", "Wel issue maar niet primair.", "Wel groot probleem."],
+        wrongHints: [null, "Denk aan de nawerking van het 1-kind-beleid: krijgt China veel of weinig jongeren?", "China haalt weinig arbeidsmigranten, maar is dat de kern? Denk aan het 1-kind-beleid.", "Het 1-kind-beleid duurde van 1980 tot 2015. Wat doet dat met de leeftijdsopbouw?"],
         uitlegPad: {
           stappen: [{ titel: "1-kind-beleid-nawerking", tekst: "China **1-kind-beleid 1979-2015** voorkwam volgens de overheid ~400 mln geboorten. Nu **gevolgen**: vergrijzing (ouder dan VS), beroepsbevolking krimpt, **bevolking daalt sinds 2022**. Verlate 2-kind- en 3-kind-beleid hielpen weinig. 'China wordt oud voordat het rijk wordt' — uitdaging." }],
           theorie: "Toetsvraag-patroon: vergelijk China demografisch met India of NL.",
@@ -270,9 +270,9 @@ const steps = [
     checks: [
       {
         q: "Wereldhandel groeit sinds 1950:",
-        options: ["Sneller dan wereld-BBP","Trager","Gelijk","Krimpt"],
+        options: ["Sneller dan het wereld-BBP","Trager dan het wereld-BBP","Even snel als het wereld-BBP","Alleen tussen rijke landen"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet gelijk — vergelijk de groei van containervervoer met de groei van de economie.", "Niet — wel groeit."],
+        wrongHints: [null, "Exporteert een land nu een kleiner of een groter deel van wat het maakt dan in 1950?", "Niet gelijk — vergelijk de groei van containervervoer met de groei van de economie.", "Ook China, India en Brazilië handelen steeds meer. Klopt 'alleen rijke landen' dan?"],
         uitlegPad: {
           stappen: [{ titel: "Globalisering-effect", tekst: "**Wereldhandel groeit sneller dan BBP** sinds 1950, vooral 1990-2008 (Chinese opkomst + WTO). Tijdelijk afgevlakt door 2008-crisis + Trump-tarieven 2018+. Recent (post-COVID + Russisch-Oekraïens) iets meer re-shoring → mogelijk einde 'hyperglobalisatie'." }],
           niveaus: { basis: "Sneller dan BBP.", simpeler: "Handel > BBP-groei", nogSimpeler: "Sneller." },
@@ -290,9 +290,9 @@ const steps = [
       },
       {
         q: "**Nigeria** is rijk aan grondstoffen maar:",
-        options: ["Veel armoede + corruptie","Heel welvarend","Stabiele democratie","Industrieleider"],
+        options: ["Veel armoede en corruptie","Iedereen is er welvarend","Stabiele democratie","Leider in de industrie van Afrika"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet stabiel.", "Niet primair industrie."],
+        wrongHints: [null, "Het woord 'maar' in de vraag wijst op een tegenstelling. Past 'welvarend' daarbij?", "Niet stabiel.", "Nigeria verdient vooral aan één grondstof. Is er dan veel fabrieksindustrie?"],
         uitlegPad: {
           stappen: [{ titel: "Olie-paradox", tekst: "**Nigeria** = grootste olie-producent Afrika + grootste Afrikaanse bevolking (~220 mln). **Resource curse**: olie-rijkdom heeft niet welvaart breed verspreid. Corruptie, geweld in Niger-Delta, jihadisme noord (Boko Haram), economische ongelijkheid. Klassiek voorbeeld 'paradox of plenty'." }],
           niveaus: { basis: "Resource curse.", simpeler: "Nigeria = olie-paradox", nogSimpeler: "Olie-paradox." },
@@ -310,9 +310,9 @@ const steps = [
       },
       {
         q: "**SDG's** (Sustainable Development Goals) van VN gaan over:",
-        options: ["Doelen voor duurzame ontwikkeling in 2030","Regels voor de wereldhandel","Vredesakkoorden","Belastingafspraken tussen landen"],
+        options: ["Doelen voor duurzame ontwikkeling","Regels voor de wereldhandel","Afspraken over vrede tussen landen","Belastingafspraken tussen landen"],
         answer: 0,
-        wrongHints: [null, "Dat is de taak van de WTO — waar staat de D van SDG voor?", "Niet primair.", "Niet relevant."],
+        wrongHints: [null, "Dat is de taak van de WTO — waar staat de D van SDG voor?", "Vrede is één van de doelen, maar gaan ze alleen daarover?", "Belastingafspraken maakten de G20-landen in 2021. Waar staat de S van SDG voor?"],
         uitlegPad: {
           stappen: [{ titel: "VN 2015", tekst: "**SDG's** (Sustainable Development Goals) = VN-doelen 2015-2030. **17 doelen** met 169 targets:\n1. Geen armoede\n2. Geen honger\n3. Goede gezondheid\n4. Onderwijs\n5. Gendergelijkheid\n...\n13. Klimaat\n...\n17. Partnerschap.\n\nVoortgang: gedeeltelijk + COVID/oorlog vertraagden. Veel onhaalbaar tegen 2030." }],
           niveaus: { basis: "17 doelen 2030.", simpeler: "SDG = VN-doelen 2030", nogSimpeler: "17 VN-doelen." },

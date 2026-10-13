@@ -32,9 +32,9 @@ const steps = [
     checks: [
       {
         q: "Welke plaatgrens veroorzaakt **stratovulkanen + tsunami's**?",
-        options: ["Convergent met subductie","Divergent","Transform","Stationair"],
+        options: ["Convergent met subductie", "Divergent met riftvorming", "Transform met zijschuiving", "Convergent zonder subductie"],
         answer: 0,
-        wrongHints: [null, "Niet — geeft rustige basalt-vulkaan.", "Niet — geen vulkanen.", "Bestaat niet zo."],
+        wrongHints: [null, "Bij uit elkaar schuivende platen ontstaan rustige basaltvulkanen. Zijn die explosief?", "Langs elkaar schuivende platen geven bevingen, maar waar zou daar magma vandaan komen?", "Als twee continenten botsen, duikt er geen plaat de diepte in. Ontstaat er dan genoeg magma voor vulkanen?"],
         uitlegPad: {
           stappen: [{ titel: "Subductie = explosief", tekst: "**Convergente plaatgrens met subductie** (zware oceaan-korst duikt onder continentaal): smeltend gesteente → strato-vulkanen + zware bevingen → tsunami's bij onderzeese bevingen. Voorbeeld: Indonesië, Japan, Chili." }],
           niveaus: { basis: "Convergent.", simpeler: "Subductie = stratovulkaan", nogSimpeler: "Subductie" },
@@ -93,9 +93,9 @@ const steps = [
     checks: [
       {
         q: "Wat veroorzaakt **zeespiegelstijging** primair?",
-        options: ["Smeltend landijs + thermische uitzetting","Smeltend zee-ijs","Meer regen","Verdamping minder"],
+        options: ["Smeltend landijs en warmer zeewater", "Smeltend zee-ijs en meer neerslag", "Meer regen en rivieren die meer afvoeren", "Minder verdamping en smeltend pakijs"],
         answer: 0,
-        wrongHints: [null, "Niet — zee-ijs heeft geen effect (Archimedes).", "Marginaal effect.", "Niet relevant."],
+        wrongHints: [null, "Drijvend ijs verplaatst al evenveel water als het weegt (Archimedes). Wat verandert er als het smelt?", "Regen komt uit verdampt zeewater. Komt er dan netto water bij in de oceaan?", "Pakijs drijft al op zee, en verdamping verandert weinig aan de totale hoeveelheid water. Waar komt extra water dan vandaan?"],
         uitlegPad: {
           stappen: [{ titel: "Twee mechanismen", tekst: "**Zeespiegelstijging**: (1) **smeltend landijs** (Groenland, Antarctica, gletsjers) voegt nieuw water toe. (2) **Thermische uitzetting**: warm water heeft groter volume. Zee-ijs heeft geen effect (zit al in water — Archimedes-principe)." }],
           theorie: "Toets-favoriet: 'Waarom heeft smelten van Arctisch zee-ijs nauwelijks invloed op zeespiegel?' Antwoord: drijft al, geen volume-toename.",
@@ -126,9 +126,9 @@ const steps = [
       },
       {
         q: "Wat is een **stedelijk hitte-eiland (UHI)**?",
-        options: ["Steden zijn warmer dan platteland","Hitte-bestendige plant","Kunstmatig eiland tegen hitte","Hitte-wering-systeem"],
+        options: ["Steden zijn warmer dan platteland", "Steden zijn koeler door de schaduw", "Kunstmatig eiland dat een stad koelt", "Systeem dat hitte uit de stad weert"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet — niet systeem maar effect."],
+        wrongHints: [null, "Steen en asfalt nemen de hele dag zonnewarmte op. Worden steden daar koeler van?", "Het 'eiland' is geen echt stuk land. Waarom heet het dan toch zo?", "Het gaat niet om een techniek maar om een verschijnsel. Wat merk je op een zomeravond in de stad?"],
         uitlegPad: {
           stappen: [{ titel: "Beton + asfalt = warmer", tekst: "**Urban Heat Island (UHI)** = steden zijn 5-10°C warmer dan omliggend platteland door beton/asfalt-warmte-absorptie + minder verkoeling door planten/water + airco-uitlaat. Bij hittegolf extra dodelijk in steden. Tegengaan: bomen, parken, groene daken, witte oppervlakken." }],
           niveaus: { basis: "Steden warmer.", simpeler: "UHI = steden warmer", nogSimpeler: "Warmer" },
@@ -136,7 +136,7 @@ const steps = [
       },
       {
         q: "Wat is **El Niño**?",
-        options: ["Opwarming van de Grote Oceaan die het weer wereldwijd verandert","Een Spaanse vulkaan die om de paar jaar uitbarst","De naam van een zware orkaan boven Mexico","Een computermodel dat het klimaat voorspelt"],
+        options: ["Opwarming van de Grote Oceaan die het weer verandert", "Een Spaanse vulkaan die om de paar jaar uitbarst", "De naam van een zware orkaan boven Mexico", "Een computermodel dat het klimaat voorspelt"],
         answer: 0,
         wrongHints: [null, "'El Niño' is wel Spaans, maar geen berg — denk aan de oceaan.", "Orkanen krijgen persoonsnamen, maar dit verschijnsel keert elke paar jaar terug — wat gebeurt er dan met het zeewater?", "Geen rekenmodel — het is een écht natuurverschijnsel in de Grote Oceaan."],
         uitlegPad: {
@@ -156,9 +156,9 @@ const steps = [
     checks: [
       {
         q: "Wat doet **GIS**?",
-        options: ["Geo-data verwerken + visualiseren","Stroom opwekken","Satellieten lanceren","Klimaat berekenen"],
+        options: ["Geo-data verwerken en op kaarten tonen", "Je plaats bepalen via satellietsignalen", "Satellieten in een baan om de aarde brengen", "Het weer van morgen voorspellen"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet — beheer software.", "Wel mogelijk via GIS, maar definitie breder."],
+        wrongHints: [null, "Dat doet gps. Wat doe je daarna met al die gegevens over plaatsen?", "GIS is software, geen raket. Wat doe je ermee op een computer?", "Weersverwachtingen maak je met weermodellen. Waar staat de G in GIS voor?"],
         uitlegPad: {
           stappen: [{ titel: "GIS = Geographic Info System", tekst: "**GIS** = software om geo-locatie-data (kaarten, satellietbeelden, statistieken) samen te brengen, analyseren + visualiseren. Voorbeelden: ArcGIS (commercieel), QGIS (open source), Google Earth (voor consumenten)." }],
           niveaus: { basis: "Geo-data verwerken.", simpeler: "GIS = kaart-software", nogSimpeler: "Software" },
@@ -166,9 +166,9 @@ const steps = [
       },
       {
         q: "**Polaire baan**-satelliet bedekt hele aarde in:",
-        options: ["Paar dagen","1 uur","1 jaar","Nooit"],
+        options: ["Een paar dagen", "Ongeveer 1 uur", "Ongeveer 1 jaar", "Een paar maanden"],
         answer: 0,
-        wrongHints: [null, "Te kort — cirkelt wel maar bedekt niet alles.", "Te lang.", "Wel."],
+        wrongHints: [null, "Eén rondje duurt ongeveer anderhalf uur, maar dan zie je alleen een smalle strook. Hoeveel rondjes heb je nodig?", "De aarde draait elke dag onder de baan door. Duurt het dan echt een jaar?", "Er komen elke dag ruim tien rondjes bij, steeds boven een andere strook. Is dat maanden werk?"],
         uitlegPad: {
           stappen: [{ titel: "14× per dag", tekst: "Polaire-baan-satelliet (~700 km) cirkelt 14× per dag van pool-naar-pool. Aarde draait onder hem door, dus elke baan bedekt nieuwe strook. **Hele aarde** wordt in **paar dagen** bedekt. Sentinel-2 heeft een herhalingstijd van 5 dagen." }],
           niveaus: { basis: "Paar dagen.", simpeler: "Polair = paar dagen", nogSimpeler: "Paar dagen" },
@@ -176,9 +176,9 @@ const steps = [
       },
       {
         q: "Welk soort straling werkt **door wolken heen**?",
-        options: ["Radar (microgolf / SAR)","Zichtbaar licht","Infrarood","Ultraviolet"],
+        options: ["Radar (microgolf / SAR)", "Zichtbaar licht (camera)", "Infrarood (warmtebeeld)", "Ultraviolet (UV-licht)"],
         answer: 0,
-        wrongHints: [null, "Niet — wordt geblokkeerd.", "Niet helemaal.", "Niet."],
+        wrongHints: [null, "Vanuit een vliegtuig zie je op een bewolkte dag de grond niet. Wat betekent dat voor een gewone camera?", "Waterdamp in wolken houdt veel infrarood tegen. Kijkt een warmtebeeld dan door dikke wolken?", "UV wordt hoog in de atmosfeer al grotendeels tegengehouden. Is dat handig om de grond te bekijken?"],
         uitlegPad: {
           stappen: [{ titel: "SAR = wolken-onafhankelijk", tekst: "**SAR** (Synthetic Aperture Radar): zendt zelf microgolven uit en meet reflectie. **Dringt door wolken heen + werkt 24/7**. Ideaal voor permanente monitoring + vervormings-detectie (mm-precisie!) na bevingen of vulkaan-opheffing." }],
           theorie: "Sentinel-1 (ESA, gratis) levert SAR-data. Cruciaal voor: vroegtijdige vulkaan-detectie, overstroming-mapping bij bewolking, scheep-monitoring.",
@@ -187,9 +187,9 @@ const steps = [
       },
       {
         q: "**NDVI** meet:",
-        options: ["Vegetatie-gezondheid","Aardbeving","Zeetemperatuur","Bevolkingsdichtheid"],
+        options: ["Vegetatie-gezondheid", "Kracht van aardbevingen", "Temperatuur van zeewater", "Bevolkingsdichtheid"],
         answer: 0,
-        wrongHints: [null, "Niet — andere meting.", "Niet primair.", "Niet relevant."],
+        wrongHints: [null, "Bevingen meet je met seismometers in de grond. Wat kan een satelliet met rood en nabij-infrarood licht zien?", "Zeetemperatuur meet je met warmtestraling. NDVI vergelijkt rood en nabij-infrarood licht: wat weerkaatst dat sterk?", "Mensen tel je niet met kleuren licht. Welk oppervlak weerkaatst veel nabij-infrarood?"],
         uitlegPad: {
           stappen: [{ titel: "Vegetation Index", tekst: "**NDVI** (Normalized Difference Vegetation Index) = (NIR − Rood) / (NIR + Rood). Gezonde planten reflecteren veel infrarood + absorberen rood → hoge NDVI (0,4-0,9). Bruin/dood → laag. Gebruikt voor: oogst-monitoring, droogte-detectie, ontbossings-tracking." }],
           niveaus: { basis: "Vegetatie.", simpeler: "NDVI = plant-gezond", nogSimpeler: "Planten" },
@@ -197,9 +197,9 @@ const steps = [
       },
       {
         q: "Wat is **OpenStreetMap**?",
-        options: ["Door vrijwilligers gemaakt open-kaartwerk","Google-bezit","Alleen satellieten","Alleen tegen betaling"],
+        options: ["Gratis kaart, gemaakt door vrijwilligers", "Kaartdienst die eigendom is van Google", "Verzameling satellietfoto's van de aarde", "Betaalde kaartdienst voor navigatie"],
         answer: 0,
-        wrongHints: [null, "Niet — onafhankelijk.", "Niet — gewone kaarten.", "Niet — gratis."],
+        wrongHints: [null, "Google Maps is van Google. Wat zegt het woord 'open' over wie OpenStreetMap maakt?", "Het is een kaart met straten en gebouwen, geen fotoalbum. Wie tekent die straten?", "Wat betekent 'open' bij open data: moet je dan betalen?"],
         uitlegPad: {
           stappen: [{ titel: "OSM = Wikipedia van kaarten", tekst: "**OpenStreetMap** (OSM) = wereld-wijde kaart gebouwd door vrijwilligers. Iedereen kan toevoegen/corrigeren. Gratis te gebruiken (open licentie). NL is volledig + zeer gedetailleerd. Gebruik: GPS-apps (Maps.me, OsmAnd), ramp-respons, planning." }],
           theorie: "Bij rampen: Humanitarian OSM Team mobiliseert vrijwilligers wereldwijd om gebied snel te karteren na aardbeving/tsunami, voor hulpverleners.",
@@ -217,9 +217,9 @@ const steps = [
     checks: [
       {
         q: "Wat bepaalt risico volgens **risico-formule**?",
-        options: ["Kans × gevolg × kwetsbaarheid","Alleen kans","Alleen gevolg","Geluk"],
+        options: ["Kans × gevolg × kwetsbaarheid", "Alleen de kans op een ramp", "Alleen de grootte van de schade", "Het aantal rampen van vorig jaar"],
         answer: 0,
-        wrongHints: [null, "Niet voldoende — gevolg ook nodig.", "Niet alleen — ook kans.", "Niet — wel berekenbaar."],
+        wrongHints: [null, "Een kleine kans op een enorme overstroming: is dat dan geen risico?", "Een ramp die bijna nooit gebeurt: weegt die even zwaar als een ramp die elk jaar komt?", "Wat vorig jaar gebeurde zegt iets, maar hoe reken je het risico voor de toekomst uit?"],
         uitlegPad: {
           stappen: [{ titel: "Drievoudige formule", tekst: "**Risico = kans × gevolg × kwetsbaarheid**. Hoge kans + lage kwetsbaarheid (Japan: vaak bevingen, maar bevingsbestendige bouw) = beperkt risico. Hoge kans + hoge kwetsbaarheid (Bangladesh moesson + dichte bevolking) = zeer hoog risico." }],
           theorie: "Toets-favoriet: vergelijk landen met gelijke fysieke dreiging maar verschillende kwetsbaarheid → verschil in uitkomst.",
@@ -238,7 +238,7 @@ const steps = [
       },
       {
         q: "Welke is een **nature-based solution**?",
-        options: ["Mangrove-bossen planten tegen kust-erosie","Hoge betonnen dijk","Diepe pomp-systemen","Stormvloedkering"],
+        options: ["Mangrovebossen planten langs de kust", "Hoge betonnen dijk langs de kust bouwen", "Diepe pompsystemen die het land droog houden", "Stormvloedkering in de monding van een rivier"],
         answer: 0,
         wrongHints: [null, "Beton is harde techniek — wat zou de natúúr zelf kunnen doen tegen golven?", "Pompen zijn machines — 'nature-based' betekent: de natuur doet het werk. Welke optie past?", "Indrukwekkende techniek, maar door mensen gebouwd — welke oplossing groeit vanzelf?"],
         uitlegPad: {
@@ -260,9 +260,9 @@ const steps = [
       },
       {
         q: "Wat is **klimaatmigratie**?",
-        options: ["Mensen verhuizen door klimaat-impact","Trekvogels seizoens-trek","Toeristen naar warme landen","Plant-verspreiding"],
+        options: ["Mensen verhuizen door klimaatgevolgen", "Vogels die elk seizoen wegtrekken", "Toeristen die naar warme landen reizen", "Mensen die voor werk naar de stad trekken"],
         answer: 0,
-        wrongHints: [null, "Niet bedoeld in geo-context.", "Niet — andere reden.", "Niet menselijk."],
+        wrongHints: [null, "In de aardrijkskunde gaat migratie over mensen. Om wie gaat het hier?", "Toeristen komen weer terug. Verhuizen zij echt?", "Werk is een bekende pull-factor. Wat is bij klimaatmigratie de reden om te vertrekken?"],
         uitlegPad: {
           stappen: [{ titel: "Vluchten voor klimaat", tekst: "**Klimaatmigratie** = mensen verlaten woonplaats door klimaat-impact: zeespiegelstijging (Pacific-eilanden), droogte (Sahel), bosbranden, extreme hitte. Schatting 2050: 100-300 miljoen klimaatmigranten. **Niet** formeel beschermd als 'vluchteling' onder het Vluchtelingenverdrag — juridisch grijs gebied." }],
           theorie: "Voorbeelden: Tuvalu-bewoners naar Nieuw-Zeeland en Australië (Australië biedt sinds het verdrag van 2023 als eerste een klimaatvisum). Sahel-bewoners naar Sahel-steden of Europa.",
@@ -280,9 +280,9 @@ const steps = [
     checks: [
       {
         q: "Bij **welke plaatgrens** ontstaan hoge bergen + zware aardbevingen, maar geen vulkanen?",
-        options: ["Continentale botsing (Himalaya)","Subductie","Divergent","Transform"],
+        options: ["Continentale botsing (Himalaya)", "Subductie onder continent (Andes)", "Divergente grens (IJsland)", "Transformbreuk (San Andreas)"],
         answer: 0,
-        wrongHints: [null, "Niet — wel vulkanen.", "Niet — wel vulkanen.", "Wel zware bevingen zonder vulkanen — maar duwen platen die langs elkaar schuiven bergen omhoog?"],
+        wrongHints: [null, "In de Andes liggen veel vulkanen. Past dat bij 'geen vulkanen'?", "Op IJsland spuwen vulkanen lava. Past dat bij de vraag?", "Wel zware bevingen zonder vulkanen — maar duwen platen die langs elkaar schuiven bergen omhoog?"],
         uitlegPad: {
           stappen: [{ titel: "Continent vs continent", tekst: "Bij **continentale botsing** (India tegen Azië → Himalaya): beide platen licht → opheffen tot bergen + zware bevingen. Geen subductie diep genoeg voor smelten → geen vulkanen. Tsunami's vooral subductie-grenzen (onderzeese verstoring)." }],
           niveaus: { basis: "Continentale botsing.", simpeler: "Cont. botsing = berg+beving", nogSimpeler: "A." },
@@ -290,7 +290,7 @@ const steps = [
       },
       {
         q: "Wat is een **Day Zero**-scenario?",
-        options: ["Dag dat een stad zonder kraanwater komt","Eerste dag opwarming","Begin oorlog","Aardbeving"],
+        options: ["Dag dat een stad zonder kraanwater komt", "Eerste dag dat de opwarming meetbaar is", "Dag waarop een oorlog officieel begint", "Dag van een zware aardbeving in een stad"],
         answer: 0,
         wrongHints: [null, "'Day Zero' telt af naar de dag dat iets óp is — wat raakt er op in een droge stad?", "Geen militaire term — denk aan de kranen in Kaapstad in 2018.", "Geen plotselinge ramp — het is een dag waar je maandenlang naartoe telt. Wat raakt op?"],
         uitlegPad: {
@@ -301,9 +301,9 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen **adaptatie** en **mitigatie** bij klimaat?",
-        options: ["Adaptatie = hogere dijken; mitigatie = CO₂-reductie","Beide hetzelfde","Adaptatie = stoppen olie","Mitigatie = evacuatie"],
+        options: ["Adaptatie = hogere dijken; mitigatie = CO₂-reductie", "Adaptatie = CO₂-reductie; mitigatie = hogere dijken", "Adaptatie = minder olie; mitigatie = zonnepanelen", "Adaptatie = evacuatie; mitigatie = hogere dijken"],
         answer: 0,
-        wrongHints: [null, "Niet — verschillende doelen.", "Niet — dat is mitigatie.", "Niet — dat is respons."],
+        wrongHints: [null, "Draai het eens om: welke aanpak past zich aan aan de gevolgen, zoals hoger water?", "Minder olie en meer zonnepanelen pakken allebei de uitstoot aan. Zijn dat dan twee verschillende begrippen?", "Evacueren en dijken ophogen gaan allebei over omgaan met gevolgen. Waar blijft dan de aanpak van de oorzaak?"],
         uitlegPad: {
           stappen: [{ titel: "Verschillende benaderingen", tekst: "**Mitigatie** = klimaatverandering **voorkomen/verminderen** (CO₂-uitstoot omlaag). **Adaptatie** = je aanpassen aan onvermijdelijke veranderingen (dijken, koeltere steden, droogte-bestendig gewas). Beide nodig — geen of-of." }],
           niveaus: { basis: "Verschillende.", simpeler: "Adapt = aanpassen, Mit = voorkomen", nogSimpeler: "A." },
@@ -311,9 +311,9 @@ const steps = [
       },
       {
         q: "**Sentinel-satellieten** (ESA) hebben welke eigenschap?",
-        options: ["Gratis open-data wereldwijd","Alleen voor militair","Commercieel duur","Werken alleen in EU"],
+        options: ["Gratis open data voor de hele wereld", "Alleen voor militair gebruik", "Beelden alleen tegen betaling", "Ze fotograferen alleen Europa"],
         answer: 0,
-        wrongHints: [null, "Niet — civiel.", "Niet — gratis.", "Niet — wereldwijd."],
+        wrongHints: [null, "ESA is een ruimtevaartorganisatie voor wetenschap, geen leger. Wie mag de beelden gebruiken?", "Het Copernicus-programma wil dat zoveel mogelijk mensen de beelden gebruiken. Past een prijs daarbij?", "Een satelliet in een polaire baan vliegt over de hele aarde. Fotografeert hij dan alleen Europa?"],
         uitlegPad: {
           stappen: [{ titel: "Open access", tekst: "**Sentinel** (ESA Copernicus-programma) levert gratis satelliet-data wereldwijd voor iedereen. Sentinel-1 (SAR), Sentinel-2 (optisch), Sentinel-3 (oceaan), Sentinel-5P (atmosfeer). Gebruik door wetenschappers, ngo's, journalisten, burgers." }],
           theorie: "Tegenstelling: Maxar (VS) levert sub-meter beelden maar betaald + selectief. Sentinel democratiseert aardobservatie.",
@@ -322,9 +322,9 @@ const steps = [
       },
       {
         q: "**Sendai Framework** is:",
-        options: ["VN-akkoord rampreductie 2015-2030","Stad in Japan","Klimaatverdrag CO₂","Satelliet"],
+        options: ["VN-akkoord rampreductie 2015-2030", "Stadsplan van Sendai na de tsunami", "VN-klimaatverdrag over CO₂-uitstoot", "Japanse satelliet voor aardbevingen"],
         answer: 0,
-        wrongHints: [null, "Wel stad maar niet bedoeld hier.", "Niet — andere doel.", "Niet relevant."],
+        wrongHints: [null, "Sendai is een Japanse stad, maar 'framework' betekent kader. Voor wie geldt dat kader?", "Afspraken over CO₂ staan in het Parijs-akkoord. Waar gaat Sendai over?", "Een framework is geen apparaat. Wat voor soort document is het?"],
         uitlegPad: {
           stappen: [{ titel: "VN-akkoord 2015", tekst: "**Sendai Framework for Disaster Risk Reduction 2015-2030** = VN-akkoord (in Sendai Japan getekend) voor wereld-wijde risicoreductie. Doel: minder doden, minder schade, vooral arme landen helpen. Opvolger van Hyogo Framework (2005-2015)." }],
           niveaus: { basis: "VN-akkoord.", simpeler: "Sendai = VN-rampen-akkoord", nogSimpeler: "VN" },

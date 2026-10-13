@@ -33,13 +33,13 @@ const steps = [
       {
         q: "Wat doet de **ozonlaag** (in stratosfeer)?",
         options: [
-          "Beschermt tegen schadelijke UV-straling",
-          "Houdt regenwolken tegen",
-          "Maakt zuurstof aan",
-          "Zorgt voor wind"
+          "Houdt schadelijke UV-straling tegen",
+          "Houdt regenwolken hoog in de lucht",
+          "Maakt zuurstof aan voor het leven",
+          "Zorgt voor de wind op aarde"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — wolken zitten lager, in de troposfeer.", "Niet — al bestaande O₂.", "Niet — wind ontstaat door drukverschillen."],
+        wrongHints: [null, "Wolken zitten lager, in de troposfeer. Wat houdt de ozonlaag dan tegen?", "Zuurstof komt vooral van planten. Wat doet ozon (O₃) dan met zonlicht?", "Wind ontstaat door drukverschillen dicht bij de grond. Wat gebeurt er hoog in de stratosfeer?"],
         uitlegPad: {
           stappen: [
             { titel: "O₃ absorbeert UV", tekst: "Ozon (O₃) absorbeert UV-fotonen → splitsen + samenstellen continu → UV blijft in atmosfeer + minder dringt door naar aarde. Cruciaal voor DNA-bescherming alle leven." },
@@ -57,7 +57,7 @@ const steps = [
           "Het magnetisch veld dat warmte vasthoudt"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — verschil tussen inkomend + uitgaand.", "Geen broeikas-mechanisme.", "Niet relevant."],
+        wrongHints: [null, "Inkomend zonlicht warmt de grond op, maar het broeikaseffect gaat over wat daarna gebeurt. Wat doet de aarde met die warmte?", "Vulkanen stoten wel gassen uit, maar het broeikaseffect werkt altijd. Wat houdt de warmte als een deken vast?", "Het magnetisch veld buigt geladen deeltjes af, geen warmte. Wat om de aarde heen houdt warmte vast?"],
         uitlegPad: {
           stappen: [
             { titel: "Glas-effect in kas", tekst: "Naam komt van tuinkas: licht komt in, warmte uit moeilijk. Atmosfeer doet zelfde: zon (kort-golf) door, aarde-warmte (lang-golf IR) deels vastgehouden door CO₂/CH₄/H₂O. Natuurlijk effect = +33°C; versterkt = klimaatverandering." },
@@ -79,12 +79,12 @@ const steps = [
         q: "**Montréal Protocol 1987** regelt:",
         options: [
           "CFK-verbod tegen ozonlaag-aantasting",
-          "CO₂-reductie",
-          "Plastic-verbod",
-          "Walvis-jacht"
+          "CO₂-reductie tegen de opwarming",
+          "Plastic-verbod tegen zeevervuiling",
+          "Walvisjacht-verbod tegen uitsterven"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is Parijs/Kyoto.", "Niet — pas later beleidsdiscussies.", "Niet — andere verdragen."],
+        wrongHints: [null, "CO₂-afspraken staan in Kyoto (1997) en Parijs (2015). Waar ging het in 1987 om?", "Wereldwijde plasticafspraken kwamen pas veel later. Welk milieuprobleem speelde in de jaren 80 hoog in de lucht?", "De walvisjacht valt onder een ander verdrag. Welk probleem in de atmosfeer was in de jaren 80 groot nieuws?"],
         uitlegPad: {
           stappen: [
             { titel: "Internationaal succesverhaal", tekst: "Wetenschappers ontdekten 1985 ozongat → 1987 wereld-akkoord CFK's uitfaseren → ozonlaag herstelt langzaam → volledig herstel verwacht ~2070. Bewijs dat internationale samenwerking milieu-problemen kan oplossen." },
@@ -117,11 +117,11 @@ const steps = [
         options: [
           "Droog en vaak zonnig weer",
           "Slecht weer met regen",
-          "Stormachtig weer",
-          "Sneeuw"
+          "Stormachtig weer met veel wind",
+          "Dagenlang zware sneeuwval"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — anticycloon kalm.", "Mogelijk maar niet typisch."],
+        wrongHints: [null, "Bij hoge druk daalt de lucht. Kunnen er dan regenwolken ontstaan?", "Rond een hogedrukgebied zijn de drukverschillen meestal klein. Waait het dan hard?", "Voor sneeuw heb je dikke wolken nodig. Ontstaan die als de lucht daalt?"],
         uitlegPad: {
           stappen: [
             { titel: "Dalende lucht = drogend", tekst: "In anticycloon zakt lucht → warmt op + verliest relatieve vochtigheid → minder wolken. Daarom: zonnig + droog. Vooral in zomer 'hittegolf' onder H-gebied; in winter 'mistig + ijskoud'." },
@@ -166,13 +166,13 @@ const steps = [
       {
         q: "**Föhn-wind** is:",
         options: [
-          "Warme, droge valwind aan de lijzijde van een berg",
+          "Warme, droge valwind aan de lijzijde",
           "Koude wind die van zee naar land waait",
-          "Sneeuwstorm hoog in de bergen",
+          "Sneeuwstorm hoog op de top van een berg",
           "Tropische cycloon boven warme zee"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — föhn warm.", "Niet — föhn warm.", "Niet — kleine schaal."],
+        wrongHints: [null, "Een zeewind is koel en vochtig. Wat gebeurt er met lucht die langs een berg naar beneden valt?", "Föhn hoort bij dalende lucht. Wordt dalende lucht warmer of kouder?", "Een cycloon is een enorm stormsysteem. Föhn is een wind in één bergdal: klopt die schaal?"],
         uitlegPad: {
           stappen: [
             { titel: "Adiabatische opwarming", tekst: "Vochtige lucht stijgt aan windkant berg → koelt → condenseert → regen → lucht nu DROOG. Aan andere kant zakt droge lucht → adiabatische opwarming (1°C per 100m). Bovenop berg 0°C → in dal 25°C. Vooral Alpen + Schotse Hooglanden." },
@@ -194,12 +194,12 @@ const steps = [
         q: "Een **koudefront** brengt vaak:",
         options: [
           "Korte, hevige buien en soms onweer",
-          "Langdurige motregen",
-          "Mist",
-          "Helder zonnig weer"
+          "Langdurige motregen uit grijze lucht",
+          "Dichte mist die urenlang blijft hangen",
+          "Helder zonnig weer zonder wolken"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is warmtefront.", "Niet — geen mist.", "Pas NA passage."],
+        wrongHints: [null, "Motregen hoort bij het front waar warme lucht langzaam omhoog glijdt. Is dat dit front?", "Mist ontstaat bij rustig, koel weer. Is een koudefront rustig?", "Opklaringen komen pas als het front voorbij is. Wat gebeurt er als het front zelf overtrekt?"],
         uitlegPad: {
           stappen: [{ titel: "Steile lift = hevig", tekst: "Koude lucht dringt onder warme door → warme lucht snel omhoog → snel condensatie → cumulonimbus (verticale onweerswolken). Resultaat: korte hevige buien, soms hagel + onweer. Na passage: temperatuur daalt + heldere lucht." }],
           niveaus: { basis: "Buien + onweer.", simpeler: "Korte hevige bui.", nogSimpeler: "Onweer" },
@@ -223,13 +223,13 @@ const steps = [
       {
         q: "Een **occlusiefront** ontstaat wanneer:",
         options: [
-          "Koudefront warmtefront inhaalt + warme lucht omhoog duwt",
-          "Twee koudefronten samenkomen",
-          "Stationair front beweegt",
-          "Depressie verdwijnt"
+          "Het koudefront het warmtefront inhaalt",
+          "Twee koudefronten samensmelten",
+          "Een stationair front gaat bewegen",
+          "Een depressie helemaal oplost"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — koud + warm combinatie.", "Niet — beweging vereist.", "Wel resultaat, niet oorzaak."],
+        wrongHints: [null, "Bij occlusie gaat het om twee verschillende soorten fronten. Welke?", "Een stationair front dat gaat bewegen wordt gewoon een warm- of koudefront. Wat gebeurt er bij occlusie?", "Een depressie verdwijnt vaak ná de occlusie. Is dat oorzaak of gevolg?"],
         uitlegPad: {
           stappen: [
             { titel: "Eind-stadium depressie", tekst: "Koudefront beweegt sneller dan warmtefront → haalt het in → warme lucht-pakket tussen wordt OMHOOG gedrukt + verdwijnt aan oppervlakte. Resultaat: één front met gemengde eigenschappen. Daarna sterft depressie uit." },
@@ -295,13 +295,13 @@ const steps = [
       {
         q: "**Atacama-woestijn** (Chili) is droog door:",
         options: [
-          "Koude Humboldt-stroom voor de kust + regenschaduw van de Andes",
+          "Koude zeestroom en regenschaduw van de Andes",
           "Ligging op hoge breedte, dicht bij de pool",
-          "Er waait daar vrijwel nooit wind",
+          "Er waait daar bijna nooit een zeewind",
           "Veel vulkanen die de grond uitdrogen"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — relatief tropisch.", "Wel wind, maar droog.", "Geen relatie."],
+        wrongHints: [null, "De Atacama ligt rond de Steenbokskeerkring. Is dat dicht bij de pool?", "Ook in woestijnen waait wind. Hoeveel vocht zit er in de lucht die daar van zee komt?", "Vulkanen drogen het land niet uit. Wat houdt de regen daar tegen?"],
         uitlegPad: {
           stappen: [
             { titel: "Twee mechanismen", tekst: "1. Humboldt-stroom (koud water langs Chili-kust) → koude lucht erboven → weinig verdamping → weinig regen.\n2. Andes-gebergte aan oost-kant: vochtige Atlantische lucht regent uit aan oostkant → droge lucht aan west = Atacama.\n\nResultaat: droogste woestijn ter aarde (sommige plekken <1 mm regen/jaar)." },
@@ -329,13 +329,13 @@ const steps = [
       {
         q: "Tropisch **regenwoud** (Af-klimaat) vereist:",
         options: [
-          "Het hele jaar warm en veel regen",
-          "Koud + droog",
-          "Wisselende seizoenen",
-          "Hoogte boven 3000 m"
+          "Het hele jaar warm en nat",
+          "Het hele jaar koel en droog",
+          "Een natte en een droge tijd",
+          "Ligging hoger dan 3000 meter"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — constant.", "Niet — hoe hoger, hoe kouder."],
+        wrongHints: [null, "Regenwoud zegt het al: veel regen. Past koel en droog daarbij?", "Een droge tijd hoort bij de savanne. Hoe is het in het regenwoud?", "Hoe hoger, hoe kouder. Wil een tropisch regenwoud kou?"],
         uitlegPad: {
           stappen: [{ titel: "Af = altijd nat + warm", tekst: "Amazone, Congo, Borneo, Sumatra: bijna evenaar + constante warmte (~25°C) + 2000+ mm regen/jaar. Hoogste biodiversiteit + grootste netto-fotosynthese ter aarde." }],
           niveaus: { basis: "Warm + nat.", simpeler: "Altijd warm + regen.", nogSimpeler: "Warm/nat" },
@@ -344,13 +344,13 @@ const steps = [
       {
         q: "**Thermohaliene circulatie** wordt gedreven door:",
         options: [
-          "Verschillen in temperatuur en zoutgehalte van water",
-          "Wind alleen",
-          "Coriolis-effect",
-          "Magnetisme"
+          "Verschillen in temperatuur en zoutgehalte",
+          "Alleen de wind aan het zeeoppervlak",
+          "Het corioliseffect van de draaiende aarde",
+          "Het magnetisch veld van de aarde"
         ],
         answer: 0,
-        wrongHints: [null, "Wind speelt rol bij oppervlakte, maar diepte = dichtheid.", "Wel deels, niet hoofdmotor.", "Geen relatie."],
+        wrongHints: [null, "Wind beweegt vooral de bovenste laag. Wat laat water in de diepte zakken?", "Coriolis buigt stromingen af, maar zet ze niet in gang. Wat maakt zeewater zwaarder?", "Zeewater reageert niet op een magneet. Waardoor zakt water ergens naar de bodem?"],
         uitlegPad: {
           stappen: [
             { titel: "Thermo (T) + halien (zout)", tekst: "Warm + zoet water = licht → drijft. Koud + zout = dicht → zinkt. In NW Atlantische zinkt water naar diepe → terug naar tropen via diep-stroom → cyclus van 1000 jaar. Klimaat-bepalend voor halve wereld." },
@@ -382,12 +382,12 @@ const steps = [
         q: "Wat is **mitigatie** vs **adaptatie**?",
         options: [
           "Mitigatie = oorzaak aanpakken; adaptatie = met gevolgen omgaan",
-          "Beide hetzelfde",
-          "Mitigatie = klein, adaptatie = groot",
+          "Beide = uitstoot verminderen; het zijn synoniemen",
+          "Mitigatie = lokaal aanpakken; adaptatie = wereldwijd",
           "Mitigatie = dijken bouwen; adaptatie = CO₂ verminderen"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — verschillende strategieën.", "Niet — schaal onafhankelijk.", "Draai het eens om: welke aanpak pakt de oorzaak (de uitstoot) aan?"],
+        wrongHints: [null, "Als het synoniemen waren, waarom zouden klimaatplannen dan twee woorden gebruiken?", "Een dijk is lokaal, maar CO₂ verminderen kan ook in je eigen stad. Gaat het verschil echt over schaal?", "Draai het eens om: welke aanpak pakt de oorzaak (de uitstoot) aan?"],
         uitlegPad: {
           stappen: [
             { titel: "Twee aanpakken", tekst: "**Mitigatie**: CO₂-uitstoot verminderen → klimaat-verandering beperken (zon/wind, EV, etc.).\n**Adaptatie**: zelfs met mitigatie blijft opwarming → samenleving aanpassen (hogere dijken, droogte-resistente gewassen, koeler bouwen).\nBeide nodig — niet of/of." },
@@ -397,9 +397,9 @@ const steps = [
       },
       {
         q: "Parijs-akkoord (2015) richt zich op opwarming **onder**:",
-        options: ["1,5-2 °C totaal", "5 °C", "10 °C", "Geen doel"],
+        options: ["1,5 à 2 °C", "3 à 4 °C", "5 à 6 °C", "0,5 à 1 °C"],
         answer: 0,
-        wrongHints: [null, "Veel te hoog.", "Catastrofaal.", "Wel doel."],
+        wrongHints: [null, "Bij 3 à 4 °C opwarming verwachten wetenschappers zware schade. Is dat wat landen afspraken?", "Zo veel opwarming zou rampzalig zijn. Mikte het akkoord zo hoog?", "De aarde is al ruim 1 °C opgewarmd. Kan het doel dan nog lager liggen?"],
         uitlegPad: {
           stappen: [
             { titel: "Klimaatwetenschappelijk doel", tekst: "<1,5°C = 'veilig', <2°C = 'beheersbaar'. Boven 2°C: tipping points cascade-risico. Huidige plannen: ~2,5°C tegen 2100 zonder versterkte actie. 1,5°C waarschijnlijk al onbereikbaar zonder revolutionaire CCS." },
@@ -410,13 +410,13 @@ const steps = [
       {
         q: "**Tipping point** in klimaat betekent:",
         options: [
-          "Onomkeerbare drempel waarna verandering zichzelf versterkt",
+          "Drempel waarna verandering zichzelf versterkt",
           "Een belasting die je per ton CO₂ betaalt",
           "Een politiek besluit om uitstoot te stoppen",
           "Een tijdelijke schommeling die vanzelf herstelt"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — fysisch concept.", "Niet — natuurlijk verschijnsel.", "Tegenovergesteld."],
+        wrongHints: [null, "Een CO₂-belasting is een maatregel van de overheid. Gaat een tipping point over geld?", "Een tipping point gebeurt in de natuur, niet in de politiek. Wat gebeurt er dan?", "Wat is het verschil tussen een schommeling en iets dat niet meer terug kan?"],
         uitlegPad: {
           stappen: [
             { titel: "Feedback-loops", tekst: "Permafrost-voorbeeld: opwarming → permafrost ontdooit → CH₄ vrij → meer opwarming → meer ontdooiing → cyclus. Eenmaal voorbij drempel niet meer te stoppen. IPCC identificeert ~10 grote tipping points (Golfstroom, Amazone, Antarctische ijskap, etc.)." },
