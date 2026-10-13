@@ -211,7 +211,7 @@ const steps = [
         ],
         answer: 3,
         wrongHints: [
-          "Paragraph 2 is factual, no emotion.",
+          "Look for words about feelings in paragraph 2. Can you find any?",
           "No 'attention' discussed.",
           "Significance comes later (paragraph 3-4).",
           null,

@@ -25,11 +25,11 @@ const steps = [
         options: [
           "Je door vragen te stellen dichter bij de waarheid komt",
           "Je kennis vooral vastlegt door boeken te schrijven",
-          "Rijkdom het hoogste doel van het leven is",
-          "Wetenschap belangrijker is dan filosofie"
+          "De mens de maat is van alle dingen",
+          "Je met een goede toespraak elk debat kunt winnen"
         ],
         answer: 0,
-        wrongHints: [null, "Socrates schreef zelf niets op — wat we van hem weten, komt van zijn leerling Plato.", "Socrates leefde juist sober en vond een goed leven belangrijker dan geld.", "In zijn tijd waren filosofie en wetenschap nog één geheel."],
+        wrongHints: [null, "Socrates schreef zelf niets op — wat we van hem weten, komt van zijn leerling Plato.", "Dat zei de sofist Protagoras: ieder zijn eigen waarheid. Vond Socrates dat ook?", "Dat leerden de sofisten, tegen betaling. Wilde Socrates een debat winnen, of iets anders?"],
         uitlegPad: {
           stappen: [{ titel: "'Maieutiek' = vroedvrouw-methode", tekst: "Socrates vergeleek zichzelf met vroedvrouw: niet zelf bevallen maar anderen helpen hun ideeën 'baren'. Door vragen te stellen ontdekt mens zelf wat hij denkt. 'Ik weet dat ik niets weet' = vertrekpunt voor eerlijk onderzoek." }],
           niveaus: { basis: "Vragen stellen.", simpeler: "Socratisch = vraag-methode.", nogSimpeler: "Vragen" },
@@ -37,9 +37,9 @@ const steps = [
       },
       {
         q: "**Plato's grot-allegorie** symboliseert:",
-        options: ["Wat we zien is maar een schaduw van de ideeën", "Je moet je terugtrekken uit de samenleving", "Onze zintuigen tonen de ware werkelijkheid", "Kennis krijg je alleen van leraren"],
+        options: ["Wat we zien is maar een schaduw van de ideeën", "Je moet je terugtrekken uit de samenleving", "Onze zintuigen tonen de ware werkelijkheid", "Kennis groeit vanzelf naarmate je ouder wordt"],
         answer: 0,
-        wrongHints: [null, "De grot is een beeld, geen advies om je terug te trekken.", "Tegenovergesteld.", "De bevrijde gevangene ontdekt het zelf."],
+        wrongHints: [null, "De grot is een beeld, geen advies om je terug te trekken.", "Zien de vastgebonden gevangenen de echte dingen, of iets anders?", "De gevangenen worden in de grot ook ouder. Zien ze daardoor meer?"],
         uitlegPad: {
           stappen: [
             { titel: "'Politeia' boek 7", tekst: "Vastgebonden mensen in grot zien alleen schaduwen op muur (= zintuiglijke wereld). Filosoof bevrijdt zichzelf, ziet zon (= waarheid/Goed). Teruggekeerd worden ze niet geloofd. Plato's punt: filosofische waarheid is verborgen + ongemakkelijk." },
@@ -51,7 +51,7 @@ const steps = [
         q: "**Aristoteles** stond voor:",
         options: ["Leren door waarnemen", "Een pure ideeën-wereld", "Alles is te vangen in getallen", "Kennis is aangeboren"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is Plato.", "Dat dacht Pythagoras. Waar haalde Aristoteles zijn kennis vandaan?", "Dat dacht zijn leraar Plato. Deelde Aristoteles dat idee?"],
+        wrongHints: [null, "Die ideeënwereld hoorde bij zijn leraar Plato. Waar zocht Aristoteles de kennis?", "Dat dacht Pythagoras. Waar haalde Aristoteles zijn kennis vandaan?", "Dat dacht zijn leraar Plato. Deelde Aristoteles dat idee?"],
         uitlegPad: {
           stappen: [
             { titel: "Wetenschappelijk denken", tekst: "Aristoteles brak met Plato's pure-ideeën. Hij observeerde dieren, plantte planten, verzamelde data. Vader van biologie + logica. Voorbeeld: classificeerde ~500 dier-soorten. Klassiek empirisme begin. Domineerde tot 1500." },
@@ -61,9 +61,9 @@ const steps = [
       },
       {
         q: "**Stoïcisme** leert:",
-        options: ["Aanvaard wat je niet kunt veranderen", "Twijfel aan alles wat je zeker denkt te weten", "Geluk is zoveel mogelijk plezier beleven", "Kom in actie tegen alles wat je dwarszit"],
+        options: ["Aanvaard wat je niet kunt veranderen", "Twijfel aan alles wat je zeker denkt te weten", "Geluk is zoveel mogelijk plezier beleven", "Laat je leiden door wat je voelt"],
         answer: 0,
-        wrongHints: [null, "Dat is de houding van de sceptici. Waar draaide het de stoïcijnen om?", "Niet — dat lijkt meer op hedonisme.", "Is boosheid over tegenslag volgens de stoïcijnen zinvol?"],
+        wrongHints: [null, "Dat is de houding van de sceptici. Waar draaide het de stoïcijnen om?", "Dat lijkt meer op hedonisme. Zochten de stoïcijnen geluk in genieten?", "Wilden de stoïcijnen zich laten meeslepen door boosheid en angst?"],
         uitlegPad: {
           stappen: [
             { titel: "Stoa-school Athene", tekst: "Marcus Aurelius (Romeinse keizer): 'Meditaties' — dagboek met stoïsche reflecties. Epictetus: 'Wat in onze macht ligt: oordeel, neiging. Buiten onze macht: lichaam, bezit, reputatie.' Vandaag heropleving als 'modern stoicism' + self-help (Tim Ferriss e.a.)." },
@@ -104,9 +104,9 @@ const steps = [
       },
       {
         q: "**Tabula rasa** (Locke) betekent:",
-        options: ["Mens wordt geboren als 'lege lei'", "Alle mensen zijn van nature goed", "Aangeboren kennis bestaat", "Kennis komt alleen uit de rede"],
+        options: ["Mens wordt geboren als 'lege lei'", "Alle mensen zijn van nature goed", "Aangeboren kennis bestaat", "Kennis komt uit de rede, niet uit ervaring"],
         answer: 0,
-        wrongHints: [null, "Dat is een ander idee (denk aan Rousseau).", "Tegenovergesteld.", "Dat is rationalisme."],
+        wrongHints: [null, "Dat is een ander idee (denk aan Rousseau).", "Locke was empirist. Kan een 'lege' lei al kennis bevatten?", "Dat is het rationalisme van Descartes. Was Locke rationalist of empirist?"],
         uitlegPad: {
           stappen: [
             { titel: "Empirisme-fundament", tekst: "Locke: bij geboorte kent baby NIETS. Alle kennis komt uit zintuiglijke ervaring. Tegen-Plato's aangeboren ideeën. Implicatie: onderwijs cruciaal, mensen vormbaar. Inspireerde Amerikaanse + Franse Revolutie (gelijke kansen vanaf geboorte)." },
@@ -116,9 +116,9 @@ const steps = [
       },
       {
         q: "**Spinoza** vereenzelvigde:",
-        options: ["God met de Natuur", "Wetenschap met religie", "Kunst met filosofie", "De staat met de kerk"],
+        options: ["God met de Natuur", "Kennis met deugd", "Geluk met plezier", "De staat met de kerk"],
         answer: 0,
-        wrongHints: [null, "Niet — apart.", "Niet specifiek.", "Niet — Spinoza verdedigde juist vrij denken tegenover de kerk."],
+        wrongHints: [null, "Dat idee hoort bij Socrates: wie het goede kent, doet het goede. Spinoza's beroemde gelijkstelling ging over God.", "Dat lijkt op Epicurus. Spinoza's beroemde gelijkstelling ging over God: met wat?", "Niet — Spinoza verdedigde juist vrij denken tegenover de kerk."],
         uitlegPad: {
           stappen: [
             { titel: "Deus sive Natura", tekst: "Spinoza: God = Natuur. Geen apart wezen buiten universum, maar het universum ZELF is goddelijk. Werd om deze visie vervloekt door joodse gemeenschap Amsterdam (cherem 1656). Vandaag invloedrijke filosoof, Einstein noemde hem zijn voorbeeld." },
@@ -140,9 +140,9 @@ const steps = [
       },
       {
         q: "**Thomas Aquinas** combineerde:",
-        options: ["Aristoteles met Christendom", "Plato met Boeddhisme", "Wetenschap met magie", "Plato met Christendom"],
+        options: ["Aristoteles met Christendom", "Aristoteles met de islam", "Plato met het jodendom", "Plato met Christendom"],
         answer: 0,
-        wrongHints: [null, "Onjuist.", "Niet zijn werk.", "Dat deed eerder Augustinus."],
+        wrongHints: [null, "Dat deed de islamitische denker Averroës. Welk geloof had Aquinas?", "Dat deed Philo van Alexandrië, ruim duizend jaar eerder. Welke Griek las Aquinas het meest?", "Dat deed eerder Augustinus."],
         uitlegPad: {
           stappen: [
             { titel: "Synthese 13e eeuw", tekst: "Toen Aristoteles' werken terugkwamen via Arabische vertalingen → conflict met kerk. Aquinas (Dominicaanse monnik) integreerde Aristoteles' logica + observatie in katholieke theologie. 'Summa Theologica' = grote werk. Vijf bewijzen voor Gods bestaan. Officieel katholiek filosoof." },
@@ -173,9 +173,9 @@ const steps = [
       },
       {
         q: "**Marx** zag geschiedenis als:",
-        options: ["Klassenstrijd", "Goddelijke wil", "Toeval", "Ontvouwing van de Geest"],
+        options: ["Strijd tussen klassen", "Wil van grote leiders", "Groei door uitvindingen", "Ontvouwing van de Geest"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — patroon.", "Niet — dat is Hegel; Marx draaide dat om."],
+        wrongHints: [null, "Dat is de 'grote mannen'-visie. Keek Marx naar losse personen of naar groepen?", "Nieuwe machines veranderen het werk. Maar wat gebeurt er dan volgens Marx tussen arm en rijk?", "Niet — dat is Hegel; Marx draaide dat om."],
         uitlegPad: {
           stappen: [
             { titel: "Historisch materialisme", tekst: "Marx: door tijd heen klassenstrijd: meester vs slaaf → adel vs boer → kapitalist vs arbeider. Klassenstrijd drijft historische verandering. Voorspelling: arbeiders revolutioneren → klasseloze maatschappij. Praktijk-implementatie (Stalin, Mao) liep slecht af." },
@@ -187,7 +187,7 @@ const steps = [
         q: "**'God is dood'** is uitspraak van:",
         options: ["Nietzsche", "Kant", "Marx", "Spinoza"],
         answer: 0,
-        wrongHints: [null, "Niet — Kant schreef over plicht en rede.", "Niet — economie.", "Niet — God = Natuur."],
+        wrongHints: [null, "Niet — Kant schreef over plicht en rede.", "Marx noemde religie 'opium van het volk', maar deze zin komt van een andere denker.", "Niet — God = Natuur."],
         uitlegPad: {
           stappen: [
             { titel: "Diagnose, niet juich-kreet", tekst: "Nietzsche bedoelde: christelijke God + traditionele waarden verliezen autoriteit door wetenschap + secularisatie. Niemand gelooft echt meer. Probleem: hoe nu morele basis? Antwoord: Übermensch creëert eigen waarden. Veel-misbegrepen als atheïsme-overwinning; meer als crisis-vaststelling." },
@@ -254,9 +254,9 @@ const steps = [
       },
       {
         q: "**Foucault** stelde dat:",
-        options: ["Macht zit overal, ook in kennis", "Macht zit alleen bij koningen", "Macht verdwijnt in een democratie", "Macht werkt alleen via geweld"],
+        options: ["Macht zit overal, ook in kennis", "Macht ligt vooral bij de staat en de wet", "Macht verdwijnt in een democratie", "Macht berust vooral op geweld en dwang"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — ook daar ziet hij macht.", "Niet exclusief."],
+        wrongHints: [null, "Foucault keek verder dan de regering. Zag hij ook macht op school of in een ziekenhuis?", "Niet — ook daar ziet hij macht.", "Werkt de macht van een school of een ziekenhuis via geweld?"],
         uitlegPad: {
           stappen: [
             { titel: "Power/knowledge", tekst: "Foucault: scholen, ziekenhuizen, gevangenissen, psychiatrie disciplineren mensen subtieler dan direct geweld. Wetenschap (seksualiteit, criminaliteit) zelf creëert categorieën die mensen beheersen. Panopticon (Bentham-design): cel-ontwerp waar bewaker iedereen kan zien zonder zelf gezien te worden → mensen disciplineren zichzelf." },
@@ -278,9 +278,9 @@ const steps = [
       },
       {
         q: "**Peter Singer** is bekend om:",
-        options: ["Opkomen voor dierenrechten", "Existentialisme", "Tegen vegetarisme", "Plichtethiek zoals Kant"],
+        options: ["Opkomen voor dierenrechten", "De sluier van onwetendheid", "Kritiek op macht en discipline", "Plichtethiek zoals Kant"],
         answer: 0,
-        wrongHints: [null, "Niet zijn stroming.", "Tegenovergesteld.", "Niet — hij is utilitarist."],
+        wrongHints: [null, "Dat is het gedachte-experiment van Rawls. Waar schreef Singer zijn bekendste boek over?", "Dat is Foucault. Singer is utilitarist: bij welke kwestie is hij wereldberoemd?", "Niet — hij is utilitarist."],
         uitlegPad: {
           stappen: [
             { titel: "'Animal Liberation' 1975", tekst: "Singer: morele cirkel uitbreiden naar dieren (ze voelen pijn). 'Speciesisme' (zoals racisme of seksisme) is onhoudbaar. Argumenteert tegen vee-industrie. Effectief altruïsme: geef aan organisaties die meeste levens redden per euro. Controversieel: ook standpunt over zwaar-gehandicapte baby's." },
@@ -349,12 +349,12 @@ const steps = [
         q: "Welk rijtje wordt vaak genoemd als **hoofdwaarden** van de westerse ethiek?",
         options: [
           "Vrijheid, gelijkheid, solidariteit, verantwoordelijkheid",
-          "Rust, orde, welvaart, veiligheid",
-          "Geloof, koningshuis, vaderland, gehoorzaamheid",
-          "Eer, gehoorzaamheid, standsbesef, traditionele orde"
+          "Rust, orde, welvaart, veiligheid en stabiliteit",
+          "Succes, prestatie, concurrentie, economische groei",
+          "Geluk, gezondheid, plezier, persoonlijke zelfontplooiing"
         ],
         answer: 0,
-        wrongHints: [null, "Belangrijk voor een samenleving, maar is dit het rijtje dat teruggaat op de Franse Revolutie?", "Dat is een oude, conservatieve leus — van vóór of na de Verlichting?", "Dat past eerder bij de oude standensamenleving."],
+        wrongHints: [null, "Rust en orde zijn doelen van een staat. Gaat ethiek daarover, of over hoe je mensen behandelt?", "Dat zijn waarden uit economie en sport. Zeggen ze iets over hoe je met anderen omgaat?", "Dat zijn persoonlijke levensdoelen. Gaat het rijtje uit de les over jezelf of over de samenleving?"],
         uitlegPad: {
           stappen: [
             { titel: "Frankrijk-trio uitgebreid", tekst: "Franse Revolutie: 'Liberté, égalité, fraternité' (vrijheid, gelijkheid, broederschap = solidariteit). Plus moderne toevoeging 'verantwoordelijkheid'. Politiek liberaal: focus op vrijheid. Sociaal-democratisch: gelijkheid. Conservatief: verantwoordelijkheid. Communautair: solidariteit. Geen recept maar balans." },

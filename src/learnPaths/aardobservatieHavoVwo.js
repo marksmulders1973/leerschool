@@ -52,9 +52,9 @@ const steps = [
       },
       {
         q: "Waar ligt de **Ring van Vuur**?",
-        options: ["Rond Pacifische Oceaan","Rond Atlantische Oceaan","Midden-Afrika","Antarctica"],
+        options: ["Rond Pacifische Oceaan", "Rond Atlantische Oceaan", "Langs de Middellandse Zee", "Rond Indische Oceaan"],
         answer: 0,
-        wrongHints: [null, "Niet — ander gebied.", "Niet — daar ligt wel een kleinere breukzone.", "Niet — relatief stabiel."],
+        wrongHints: [null, "Midden in de Atlantische Oceaan schuiven platen rustig uit elkaar, maar de kusten eromheen zijn kalm. Waar duiken platen onder elkaar?", "Rond de Middellandse Zee liggen wel vulkanen (Etna, Vesuvius). Maar is dat een ring van vulkanen rond een oceaan?", "Indonesië ligt wel op de Ring van Vuur. Maar liggen Japan, Alaska en Chili ook aan de Indische Oceaan?"],
         uitlegPad: {
           stappen: [{ titel: "Pacific Ring of Fire", tekst: "**Ring van Vuur** = ring van plaatgrenzen rond Pacifische Oceaan. 75% van wereld-vulkanen + 90% van wereld-aardbevingen. Japan, Indonesië, Filipijnen, Alaska, west-VS, Mexico, Centraal+Zuid-Amerika." }],
           niveaus: { basis: "Pacifisch.", simpeler: "Ring of Fire = Pacific", nogSimpeler: "Pacific" },
@@ -62,9 +62,9 @@ const steps = [
       },
       {
         q: "Welk type vulkaan heeft **vloeibare lava + lage hellingen** (geleidelijk)?",
-        options: ["Schildvulkaan","Stratovulkaan","Caldeira","Lahar"],
+        options: ["Schildvulkaan", "Stratovulkaan", "Caldeira", "Slakkenkegel"],
         answer: 0,
-        wrongHints: [null, "Niet — steil + explosief.", "Niet — ingestort.", "Niet — modderstroom."],
+        wrongHints: [null, "Een stratovulkaan heeft taaie, stroperige lava die zich ophoopt. Worden de hellingen dan laag of steil?", "Een caldeira is de grote kom die overblijft als een vulkaan instort. Zegt dat iets over vloeibare lava?", "Een slakkenkegel is opgebouwd uit losse brokken die rond de krater neervallen. Geeft dat een vlakke of een steile kegel?"],
         uitlegPad: {
           stappen: [{ titel: "Schild = breed + plat", tekst: "**Schildvulkaan**: basaltische lava, vloeibaar, stroomt ver → vormt grote brede koepel met lage hellingen. **Mauna Loa** (Hawaï) — grootste vulkaan op aarde, 9 km hoog vanaf oceaanbodem. Relatief rustig." }],
           theorie: "Tegenstelling: stratovulkaan = viskeuze lava → steile flanken + explosief. Pyroclastische stromen.",
@@ -73,9 +73,9 @@ const steps = [
       },
       {
         q: "Wat veroorzaakte de **2004 Sumatra-tsunami**?",
-        options: ["Onderzeese aardbeving","Vulkaan-uitbarsting","Storm","Aardverschuiving op land"],
+        options: ["Een onderzeese aardbeving", "Uitbarsting van een vulkaan", "Stormvloed door een cycloon", "Aardverschuiving langs de kust"],
         answer: 0,
-        wrongHints: [null, "Niet — geen vulkaan-tsunami.", "Niet — storm geen tsunami.", "Niet — verkeerde locatie."],
+        wrongHints: [null, "Bij Sumatra was in december 2004 geen grote vulkaan actief. Wat kan er nog meer gebeuren langs een subductiezone?", "Een stormvloed duwt water door harde wind de kust op, maar het weer was die dag rustig. Wat bracht zóveel water in beweging?", "Een aardverschuiving geeft een golf in de buurt. Kan die de hele Indische Oceaan oversteken tot in Afrika?"],
         uitlegPad: {
           stappen: [{ titel: "Megathrust-aardbeving", tekst: "**26 dec 2004**: M9,1 aardbeving voor kust Sumatra → zeebodem enkele meters omhoog → tsunami → 230.000 doden in 14 landen. Subductie-grens Indische plaat onder Eurazische. Een van de dodelijkste natuurrampen van de 21e eeuw." }],
           theorie: "Vergelijkbare gebeurtenissen: Chili 1960 (M9,5, sterkste ooit gemeten), Japan 2011 (M9,0 + Fukushima), Alaska 1964.",
@@ -106,7 +106,7 @@ const steps = [
         q: "Hoeveel % NL ligt onder NAP?",
         options: ["~26%","~10%","~50%","~70%"],
         answer: 0,
-        wrongHints: [null, "Te laag.", "Te hoog.", "Veel te hoog."],
+        wrongHints: [null, "Denk aan heel West-Nederland: Holland, Flevoland en alle polders. Is dat maar een tiende van het land?", "Ongeveer de helft van Nederland kan overstromen. Maar ligt al dat land ook echt ónder NAP?", "Het oosten en zuiden (Veluwe, Limburg) liggen ruim boven NAP. Kan het dan 70% zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Een kwart onder zeeniveau", tekst: "Ongeveer **26%** NL ligt onder NAP. Vooral west-NL (Holland, Flevoland, Zeeland). Zonder dijken zou groot deel onder water staan. Daarom NL-investeringen in waterveiligheid extreem hoog vergeleken andere landen." }],
           theorie: "NAP = Normaal Amsterdams Peil. Referentie sinds 17e eeuw, gebaseerd op het gemiddelde hoogwater (zomervloed) van het IJ.",
@@ -117,7 +117,7 @@ const steps = [
         q: "Wanneer + waar was de **Watersnoodramp** die Deltawerken triggerde?",
         options: ["1953 Zeeland","1995 Limburg","1916 Zuiderzee","2021 Limburg"],
         answer: 0,
-        wrongHints: [null, "Niet — andere ramp.", "Niet — andere ramp.", "Niet — recent maar geen Deltawerken-trigger."],
+        wrongHints: [null, "In 1995 traden de rivieren buiten hun oevers. Werden daarna dammen in de zeearmen gebouwd?", "De ramp van 1916 leidde tot de Afsluitdijk. Waar in Nederland liggen de Deltawerken?", "In 2021 overstroomde de Geul in Limburg, maar toen waren de Deltawerken al lang af. Wanneer zijn ze begonnen?"],
         uitlegPad: {
           stappen: [{ titel: "1 feb 1953", tekst: "**Watersnoodramp 1 feb 1953**: storm + springtij → dijken Zeeland + Z-Holland breken → 1836 doden + 200.000 dieren + 47.000 huizen weg. Politieke schok → **Deltaplan** + Deltawerken-uitvoering 1958-1997." }],
           theorie: "Andere overstromings-rampen: 1916 Zuiderzee (aanleiding Afsluitdijk), 1995 Maas/Rijn/Waal (~250.000 geëvacueerd), 2021 Limburg-watersnood (relatief lichte schade).",
@@ -126,9 +126,9 @@ const steps = [
       },
       {
         q: "Wat is een **stedelijk hitte-eiland (UHI)**?",
-        options: ["Steden zijn warmer dan platteland", "Steden zijn koeler door de schaduw", "Kunstmatig eiland dat een stad koelt", "Systeem dat hitte uit de stad weert"],
+        options: ["Steden zijn warmer dan platteland", "Warme plek rond een fabriek in de stad", "Hittegolf die een hele stad treft", "Stad op een eiland in een warme zee"],
         answer: 0,
-        wrongHints: [null, "Steen en asfalt nemen de hele dag zonnewarmte op. Worden steden daar koeler van?", "Het 'eiland' is geen echt stuk land. Waarom heet het dan toch zo?", "Het gaat niet om een techniek maar om een verschijnsel. Wat merk je op een zomeravond in de stad?"],
+        wrongHints: [null, "Het gaat niet om één warmtebron: de hele bebouwde stad is warmer. Waardoor zou dat komen?", "Een hittegolf geldt voor de stad én het platteland eromheen. Wat is het verschil tússen die twee?", "Het 'eiland' is geen echt stuk land. Wat steekt er warm uit boven het koelere platteland?"],
         uitlegPad: {
           stappen: [{ titel: "Beton + asfalt = warmer", tekst: "**Urban Heat Island (UHI)** = steden zijn 5-10°C warmer dan omliggend platteland door beton/asfalt-warmte-absorptie + minder verkoeling door planten/water + airco-uitlaat. Bij hittegolf extra dodelijk in steden. Tegengaan: bomen, parken, groene daken, witte oppervlakken." }],
           niveaus: { basis: "Steden warmer.", simpeler: "UHI = steden warmer", nogSimpeler: "Warmer" },
@@ -136,9 +136,9 @@ const steps = [
       },
       {
         q: "Wat is **El Niño**?",
-        options: ["Opwarming van de Grote Oceaan die het weer verandert", "Een Spaanse vulkaan die om de paar jaar uitbarst", "De naam van een zware orkaan boven Mexico", "Een computermodel dat het klimaat voorspelt"],
+        options: ["Opwarming van de Grote Oceaan die het weer verandert", "Afkoeling van de Grote Oceaan die het weer verandert", "Warme zeestroom die het klimaat van West-Europa verzacht", "Regenseizoen dat elk jaar boven Zuid-Azië valt"],
         answer: 0,
-        wrongHints: [null, "'El Niño' is wel Spaans, maar geen berg — denk aan de oceaan.", "Orkanen krijgen persoonsnamen, maar dit verschijnsel keert elke paar jaar terug — wat gebeurt er dan met het zeewater?", "Geen rekenmodel — het is een écht natuurverschijnsel in de Grote Oceaan."],
+        wrongHints: [null, "Dat verschijnsel heet La Niña. Wat gebeurt er bij El Niño met het zeewater voor de kust van Peru?", "Dat is de Golfstroom, in de Atlantische Oceaan. In welke oceaan speelt El Niño?", "Dat is de moesson, en die komt elk jaar. El Niño komt maar eens in de paar jaar. Wat verandert er dan?"],
         uitlegPad: {
           stappen: [{ titel: "ENSO-cyclus", tekst: "**El Niño** = periodieke (2-7 jaar) opwarming oostelijke Stille Oceaan → minder regen Indonesië/Australië (droogte/brand) + meer regen Z-Amerika kust + minder visstand Peru. **La Niña** = tegenovergesteld. Beïnvloedt wereld-weer voor 1-2 jaar." }],
           theorie: "Toets-actueel: 2023-24 was sterk El Niño-jaar → extreme bosbranden Canada/Amazone, hittegolven.",
@@ -217,9 +217,9 @@ const steps = [
     checks: [
       {
         q: "Wat bepaalt risico volgens **risico-formule**?",
-        options: ["Kans × gevolg × kwetsbaarheid", "Alleen de kans op een ramp", "Alleen de grootte van de schade", "Het aantal rampen van vorig jaar"],
+        options: ["Kans × gevolg × kwetsbaarheid", "Kans × gevolg ÷ kwetsbaarheid", "Kans × magnitude × afstand", "Gevolg × kwetsbaarheid × bevolking"],
         answer: 0,
-        wrongHints: [null, "Een kleine kans op een enorme overstroming: is dat dan geen risico?", "Een ramp die bijna nooit gebeurt: weegt die even zwaar als een ramp die elk jaar komt?", "Wat vorig jaar gebeurde zegt iets, maar hoe reken je het risico voor de toekomst uit?"],
+        wrongHints: [null, "Als mensen kwetsbaarder zijn, wordt het risico dan kleiner? Wat doet delen met de uitkomst?", "Magnitude en afstand bepalen hoe hard het gevaar toeslaat. Waar zit hoe goed mensen voorbereid zijn?", "Hoe vaak een ramp voorkomt telt ook mee. Welk deel van de formule mis je?"],
         uitlegPad: {
           stappen: [{ titel: "Drievoudige formule", tekst: "**Risico = kans × gevolg × kwetsbaarheid**. Hoge kans + lage kwetsbaarheid (Japan: vaak bevingen, maar bevingsbestendige bouw) = beperkt risico. Hoge kans + hoge kwetsbaarheid (Bangladesh moesson + dichte bevolking) = zeer hoog risico." }],
           theorie: "Toets-favoriet: vergelijk landen met gelijke fysieke dreiging maar verschillende kwetsbaarheid → verschil in uitkomst.",
@@ -249,9 +249,9 @@ const steps = [
       },
       {
         q: "Iran en Japan worden allebei door M7-bevingen getroffen. Waarom verschilt **dodental** enorm?",
-        options: ["Kwetsbaarheid + bouwvoorschriften","Andere magnitude","Andere bevolking-dichtheid alleen","Geluk"],
+        options: ["Kwetsbaarheid en bouwvoorschriften", "Japan ligt verder van een plaatgrens", "Iran is dichter bevolkt dan Japan", "Iran krijgt vaker zware bevingen"],
         answer: 0,
-        wrongHints: [null, "Niet — gelijke magnitude.", "Speelt mee maar niet primair.", "Niet — structureel verschil."],
+        wrongHints: [null, "Japan ligt juist pal op meerdere plaatgrenzen. Kan afstand het verschil dan verklaren?", "Japan heeft zo'n 330 inwoners per km², Iran ruim 50. Wie woont er dichter op elkaar?", "Japan krijgt juist meer zware bevingen per jaar. Waarom vallen daar toch minder doden?"],
         uitlegPad: {
           stappen: [{ titel: "Bouwvoorschriften beslissen", tekst: "**Japan**: strikte aardbevings-bestendige bouw + early-warning + oefeningen → weinig doden bij M7. **Iran**: oudere lemen huizen + corruptie bij vergunningen + weinig voorbereiding → tienduizenden doden bij M7. Zelfde fysieke kracht, **enorm verschil in kwetsbaarheid**." }],
           theorie: "Toets-patroon: 'leg verschil in uitkomst uit ondanks gelijke magnitude'. Bouwvoorschriften + economie + cultuur.",
@@ -290,9 +290,9 @@ const steps = [
       },
       {
         q: "Wat is een **Day Zero**-scenario?",
-        options: ["Dag dat een stad zonder kraanwater komt", "Eerste dag dat de opwarming meetbaar is", "Dag waarop een oorlog officieel begint", "Dag van een zware aardbeving in een stad"],
+        options: ["Dag dat een stad zonder kraanwater komt", "Dag waarop de voedselvoorraad op is", "Dag waarop de stroom in een stad uitvalt", "Dag waarop een stad door zeewater overstroomt"],
         answer: 0,
-        wrongHints: [null, "'Day Zero' telt af naar de dag dat iets óp is — wat raakt er op in een droge stad?", "Geen militaire term — denk aan de kranen in Kaapstad in 2018.", "Geen plotselinge ramp — het is een dag waar je maandenlang naartoe telt. Wat raakt op?"],
+        wrongHints: [null, "Kaapstad telde in 2018 af naar een dag dat iets op zou raken, maar dat was geen eten. Wat dreigde er dan op te raken?", "Een stroomstoring komt plotseling. Day Zero zag Kaapstad maanden aankomen. Wat raakte daar op?", "Een overstroming is te veel water. Day Zero gaat over het omgekeerde. Wat dreigde er in Kaapstad?"],
         uitlegPad: {
           stappen: [{ titel: "Water op", tekst: "**Kaapstad 2018**: na 3 jaar droogte dreigden de stuwmeren van de stad leeg te raken op een 'Day Zero' → 4 mln mensen zonder kraanwater. Met rantsoenering (50 L per dag per persoon) net vermeden. Toekomst: meer steden risico (Mexico City, Lima)." }],
           theorie: "Toets-actueel: klimaatverandering verschuift neerslag-patronen → meer steden risico op water-tekort.",
@@ -311,9 +311,9 @@ const steps = [
       },
       {
         q: "**Sentinel-satellieten** (ESA) hebben welke eigenschap?",
-        options: ["Gratis open data voor de hele wereld", "Alleen voor militair gebruik", "Beelden alleen tegen betaling", "Ze fotograferen alleen Europa"],
+        options: ["Gratis open data voor de hele wereld", "Geostationaire baan boven Europa", "Scherpe beelden voor betalende klanten", "Geheime beelden voor defensie"],
         answer: 0,
-        wrongHints: [null, "ESA is een ruimtevaartorganisatie voor wetenschap, geen leger. Wie mag de beelden gebruiken?", "Het Copernicus-programma wil dat zoveel mogelijk mensen de beelden gebruiken. Past een prijs daarbij?", "Een satelliet in een polaire baan vliegt over de hele aarde. Fotografeert hij dan alleen Europa?"],
+        wrongHints: [null, "Sentinels vliegen in een polaire baan, steeds over de polen heen. Hangen ze dan stil boven Europa?", "Het Copernicus-programma wil dat zoveel mogelijk mensen de beelden gebruiken. Past een prijs daarbij?", "ESA is een organisatie voor wetenschap, geen leger. Wie mag de beelden gebruiken?"],
         uitlegPad: {
           stappen: [{ titel: "Open access", tekst: "**Sentinel** (ESA Copernicus-programma) levert gratis satelliet-data wereldwijd voor iedereen. Sentinel-1 (SAR), Sentinel-2 (optisch), Sentinel-3 (oceaan), Sentinel-5P (atmosfeer). Gebruik door wetenschappers, ngo's, journalisten, burgers." }],
           theorie: "Tegenstelling: Maxar (VS) levert sub-meter beelden maar betaald + selectief. Sentinel democratiseert aardobservatie.",

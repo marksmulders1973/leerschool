@@ -36,7 +36,7 @@ const bronGemeente = {
 
 const bronJongerenInkomen = {
   titel: "Bronnen van inkomen voor jongeren",
-  body: "Gemiddeld beginnen jongeren op 21-jarige leeftijd met een (volledige) baan.\n\nVoor die tijd hebben jongeren meestal verschillende bronnen van inkomen, zoals:\n• zakgeld van ouders (overdrachtsinkomen)\n• inkomen uit een bijbaan (loon)\n• rente op spaargeld\n• evt. studiefinanciering",
+  body: "Gemiddeld beginnen jongeren op 21-jarige leeftijd met een (volledige) baan.\n\nVoor die tijd hebben jongeren meestal verschillende bronnen van inkomen, zoals:\n• zakgeld van ouders\n• inkomen uit een bijbaan (loon)\n• rente op spaargeld\n• evt. studiefinanciering",
 };
 
 const bronDog4fun = {
@@ -544,8 +544,8 @@ const steps = [
         wrongHints: [
           null,
           "Tegendeel — als besparing lager was dan rente, zou sparen juist beter zijn.",
-          "Germaine zegt iets over het terugverdienen via energie-besparing, niet vergelijking lening vs warmtepomp-prijs.",
-          "Net als bij de andere lening-optie: dit is niet de kern van Germaines redenering.",
+          "Lees nog eens wat Germaine spaarders aanraadt. Vergelijkt ze de warmtepomp met lenen, of met iets anders wat spaarders met hun geld kunnen doen?",
+          "Germaine praat tegen spaarders: wat zouden zij met hun geld doen als ze géén warmtepomp kopen? Gaat haar vergelijking dan over lenen?",
         ],
         explanation: "Germaines redenering: spaarrente is laag → een investering die jaarlijks méér bespaart dan die rente, levert per saldo meer op. De juiste optie vat dat precies samen: besparing energie > rente op spaargeld.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 37",

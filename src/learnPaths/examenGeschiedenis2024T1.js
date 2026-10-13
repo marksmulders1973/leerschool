@@ -162,8 +162,8 @@ const steps = [
         answer: 3,
         wrongHints: [
           "Capitulatie = je overgeven na een verloren oorlog. NL gaf niet militair-strikt op.",
-          "Democratisering = invoeren democratie. Hier ging het om SOEVEREINITEIT, niet om bestuursvorm.",
-          "Politionele actie = militair ingrijpen (1947+1948). Dit is wat NL DEED vóór de overdracht, niet de overdracht zelf.",
+          "Democratisering = democratie invoeren. Gaat de vraag over hoe Indonesië bestuurd werd, of over wíé het bestuur kreeg?",
+          "Politionele actie = militair ingrijpen (1947 en 1948). Is een militaire actie hetzelfde als officieel het bestuur overgeven?",
           null,
         ],
         explanation: "**Soevereiniteitsoverdracht** = officiële handeling op 27 december 1949: NL gaf het bestuur over Nederlands-Indië over aan de Republiek Indonesië. Indonesië werd vanaf dat moment internationaal erkend als zelfstandige staat. Einde van de koloniale periode.",

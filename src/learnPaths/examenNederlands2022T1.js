@@ -13,13 +13,13 @@ const tekst1 = {
 const tekst2 = {
   titel: "T2 — We worden slimmer, maar niet per se wijzer",
   body:
-    "**(1-4)** IQ-scores stijgen al een eeuw, elk decennium ~3 punten — het *Flynn-effect*. Nederlandse 18-jarigen uit de jaren 80 scoorden 20 punten hoger dan die uit de jaren 50. De stijging gaat wereldwijd door.\n\n**(5-6)** Over de oorzaak wordt gespeculeerd: kleinere gezinnen (meer aandacht), betere voeding/zorg/scholing, en andere manieren van spelen (computerspelletjes → ruimtelijk inzicht, vooruitdenken, snel reageren).\n\n**(7)** Toch zijn we niet over de hele breedte slimmer: we redeneren beter, maar ons vocabulaire is zwakker.\n\n**(8, slot)** Recente onderzoeken tonen dat de toename in IQ *afzwakt* — d.w.z. het gemiddelde IQ stijgt minder hard dan voorheen. De oorzaak is onbekend: 'We weten nog te weinig over hoe intelligentie zich ontwikkelt.' *(Hoofdgedachte: de stijgende IQ-scores roepen vooral vragen op — er is veel onzeker.)*",
+    "**(1-4)** IQ-scores stijgen al een eeuw, elk decennium ~3 punten — het *Flynn-effect*. Nederlandse 18-jarigen uit de jaren 80 scoorden 20 punten hoger dan die uit de jaren 50. De stijging gaat wereldwijd door.\n\n**(5-6)** Over de oorzaak wordt gespeculeerd: kleinere gezinnen (meer aandacht), betere voeding/zorg/scholing, en andere manieren van spelen (computerspelletjes → ruimtelijk inzicht, vooruitdenken, snel reageren).\n\n**(7)** Toch zijn we niet over de hele breedte slimmer: we redeneren beter, maar ons vocabulaire is zwakker.\n\n**(8, slot)** Recente onderzoeken tonen dat de toename in IQ afzwakt. De oorzaak is onbekend: 'We weten nog te weinig over hoe intelligentie zich ontwikkelt.'",
 };
 
 const tekst3 = {
   titel: "T3 — Advertentie: 'Als je taal leuk vindt, doe er dan wat mee!'",
   body:
-    "Een advertentie (met een afbeelding van woordmagneten op een koelkast) roept lezers op om **taalvrijwilliger** te worden: help nieuwkomers in Nederland de Nederlandse taal te leren.\n\nHet werk heeft twee voordelen — één voor de vrijwilliger zelf en één voor de nieuwe landgenoten. De advertentie eindigt met een concrete oproep: **kijk op de website en geef je op als taalcoach**.\n\n*(Tekstsoort: advertentie. De afbeelding ondersteunt de inhoud en trekt de aandacht.)*",
+    "Een advertentie (met een afbeelding van woordmagneten op een koelkast) roept lezers op om taalvrijwilliger te worden: help nieuwkomers in Nederland de Nederlandse taal te leren.\n\nHet werk heeft twee voordelen — één voor de vrijwilliger zelf en één voor de nieuwe landgenoten. De advertentie eindigt met een concrete oproep: kijk op de website en geef je op als taalcoach.",
 };
 
 const tekst4 = {
@@ -61,10 +61,10 @@ const steps = [
       options: ["middel - doel", "oorzaak - gevolg", "opsomming", "uitspraak - toelichting"],
       answer: 1,
       wrongHints: [
-        "Middel-doel = 'om te...'. Hier gebeurt iets en dáárdoor volgt iets — dat is een ander verband.",
+        "Middel-doel = 'om te...'. Staat er in deze zin een 'om te', of een doel dat iemand wil bereiken?",
         null,
-        "Opsomming = los naast elkaar (en... en...). Hier volgt het tweede uit het eerste.",
-        "Toelichting = uitleg geven. Hier is het tweede deel een gevólg, geen uitleg.",
+        "Opsomming = dingen los naast elkaar (en... en...). Staan de twee delen hier los van elkaar, of hangen ze samen?",
+        "Toelichting = het eerste deel verder uitleggen. Legt 'frustreren het opdoen van kennis' uit wát afleiden is, of vertelt het wat er dan gebeurt?",
       ],
       explanation: "Het signaalwoord 'daarmee' wijst op een gevolg: afleiden (oorzaak) → kennis opdoen wordt gefrustreerd (gevolg). Dus oorzaak-gevolg.",
       examenBron: BRON_LABEL(2),

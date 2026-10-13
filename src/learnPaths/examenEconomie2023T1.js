@@ -86,7 +86,7 @@ const steps = [
         wrongHints: [
           "Niet de NL-overheid — die heft niets als de import naar BE gaat. Welke overheid heft dan, en wie haalt de boter over de grens?",
           "Niet de NL-overheid — betaalt een overheid zelf de heffing die ze oplegt? Denk aan wie de boter het land in haalt.",
-          "Het eerste deel klopt. Maar in welk land staat de winkel waar de geïmporteerde boter uiteindelijk verkocht wordt?",
+          "Bekijk beide delen apart. In welk land staat de winkel waar de geïmporteerde boter uiteindelijk verkocht wordt?",
           null,
         ],
         explanation: "Importheffing geheven door BE → wordt betaald door BE-importeur (die haalt boter uit NL). Die importeur rekent de heffing door in zijn verkoopprijs aan de uiteindelijke BE-consument. Dus: Belgische importeur betaalt eerst, BE-consument betaalt indirect via hogere boterprijs. De Nederlandse overheid heeft hier niets mee te maken.",
@@ -144,7 +144,7 @@ const steps = [
         wrongHints: [
           "Wie betaalt de influencer — een consument of een bedrijf?",
           null,
-          "Als bedrijven ervoor BETALEN, is er dan geen winstoogmerk?",
+          "Wie betaalt een influencer eigenlijk om een product te laten zien — en waarom doet die dat?",
           "Waarom zou een bedrijf een influencer betalen als er niets te winnen viel?",
         ],
         explanation: "Sociale beïnvloeding = via een persoonlijke band (vriend, familie, idool). Commerciële beïnvloeding = met een verkoop-doel, betaald door een producent (bedrijf), met winstoogmerk. Influencers vallen onder ALLEBEI: volgers ervaren een sociale band, MAAR het bedrijf betaalt de influencer om te verkopen → producent + winstoogmerk = ook commerciële beïnvloeding.",

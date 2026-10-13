@@ -84,7 +84,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Tegendeel — als lonen sneller stijgen dan productiviteit, krimpt de winst.",
+          "Wat gebeurt er met de winst van de werkgever als de lonen harder stijgen dan wat een werknemer extra oplevert?",
           "Arbeidsjaren is geen logische maatstaf voor loonsverhoging.",
           "Idem — arbeidsjaren is hier niet relevant.",
         ],

@@ -150,7 +150,7 @@ const steps = [
         "het CPB, die de groei van het gemiddeld besteedbaar inkomen berekent",
       ],
       answer: 0,
-      wrongHints: [null, "CBS klopt voor instantie. Maar 'gemiddeld besteedbaar inkomen' meet wat huishoudens overhouden — niet groei van hele economie.", "CPB = Centraal Planbureau, maakt VOORSPELLINGEN (Prinsjesdag-cijfers). Maar wie MEET de werkelijke groei?", "Twee fouten: CPB voorspelt (meet niet) + besteedbaar inkomen meet niet de hele economie."],
+      wrongHints: [null, "Bekijk beide delen. Zegt het gemiddeld besteedbaar inkomen iets over wat het hele land samen verdient?", "Bekijk beide delen. Welke instantie meet wat er echt gebeurd is, en welke maakt vooral voorspellingen?", "Bekijk beide delen: wie meet, wie voorspelt? En welk inkomen laat de groei van de hele economie zien?"],
       explanation: "**CBS** = Centraal Bureau voor de Statistiek = meet wat werkelijk gebeurd is (achteraf). **CPB** = Centraal Planbureau = voorspelt (vooruit). Economische groei = groei van **nationaal inkomen** (= BBP) — niet besteedbaar inkomen (= wat huishouden overhoudt na belasting). Dus CBS + nationaal inkomen.",
       examenBron: BRON_LABEL(38),
       bronLink: BRON_LINK,

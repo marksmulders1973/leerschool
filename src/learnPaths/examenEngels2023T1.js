@@ -5,7 +5,7 @@
 const tekst1 = {
   titel: "Tekst 1 — Traveller information (rugby fans)",
   body:
-    "RUGBY fans from the West country set to travel to Twickenham for Saturday's clash between Bath and Bristol can get the train to Paddington, despite engineering works. Services between London Paddington and the South West will make additional stops at Westbury for rugby supporters travelling by train before and after the game. **Planned signalling work will be postponed and start the following day.**",
+    "RUGBY fans from the West country set to travel to Twickenham for Saturday's clash between Bath and Bristol can get the train to Paddington, despite engineering works. Services between London Paddington and the South West will make additional stops at Westbury for rugby supporters travelling by train before and after the game. Planned signalling work will be postponed and start the following day.",
 };
 
 const tekst2 = {

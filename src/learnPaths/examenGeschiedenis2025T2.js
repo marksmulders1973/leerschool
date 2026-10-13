@@ -88,8 +88,8 @@ const steps = [
         wrongHints: [
           "Een openbare zitting is wél een kenmerk van een rechtsstaat — niet een reden dat het er géén is.",
           null,
-          "Een openbare zitting alléén is niet genoeg — in dictaturen waren showprocessen ook 'openbaar'.",
-          "Onjuist: in dictaturen zoals USSR-Stalin of nazi-Duitsland was er géén eerlijk proces — uitkomst stond vooraf vast.",
+          "Is een openbare zitting genoeg om van een rechtsstaat te spreken? Wat moet er nog meer kloppen aan een rechtszaak?",
+          "Kijk naar het soort land waarin deze rechtszaken gevoerd werden. Kon de verdachte zich daar echt verdedigen?",
         ],
         explanation: "Een **rechtsstaat** wordt gedefinieerd door **eerlijk proces** (verdediging, onschuld-tot-bewezen-anders, onafhankelijke rechter), niet alleen door 'openbare zitting'. In show-processen (USSR-Stalin, nazi-Volksgerichtshof) was de uitkomst van tevoren bepaald — bekentenissen werden afgedwongen, advocaten waren benoemd door de staat, rechters waren politiek loyaal. Dat is geen rechtsstaat.",
         examenBron: BRON_LABEL(30),
