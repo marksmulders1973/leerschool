@@ -68,7 +68,7 @@ const steps = [
       },
       {
         q: "Wat is **fenotype**?",
-        options: ["Uiterlijk kenmerk (zichtbaar)","Allel-combinatie (genotype)","DNA-volgorde","Chromosoom-aantal"],
+        options: ["Uiterlijk kenmerk (zichtbaar)","Allel-combinatie (genotype)","Volgorde van de basen in het DNA","Aantal chromosomen per cel"],
         answer: 0,
         wrongHints: [null, "Dat is genotype.", "Onderdeel van genotype.", "Niet — dat zegt niets over wat je ziet of meet."],
         uitlegPad: {
@@ -99,7 +99,7 @@ const steps = [
     checks: [
       {
         q: "Welke verhouding krijg je in **F2** bij kruising Bb × Bb (volledige dominantie)?",
-        options: ["3 dominant : 1 recessief","1 : 1","2 : 1","Allemaal hetzelfde"],
+        options: ["3 dominant : 1 recessief","1 dominant : 1 recessief","2 dominant : 1 recessief","Alle nakomelingen dominant"],
         answer: 0,
         wrongHints: [null, "Niet — dat is testcross.", "Niet — onvolledige dominantie heeft 1:2:1.", "Niet — er is splitsing."],
         uitlegPad: {
@@ -121,9 +121,9 @@ const steps = [
       },
       {
         q: "Bij **onvolledige dominantie** rood (RR) × wit (rr) → F1:",
-        options: ["Roze","Helft rood, helft wit","Alleen rood","Alleen wit"],
+        options: ["Allemaal roze","Helft rood, helft wit","Alleen rood","Alleen wit"],
         answer: 0,
-        wrongHints: [null, "Niet — in F1 krijgen alle nakomelingen Rr.", "Niet — dat zou volledige dominantie zijn.", "Niet."],
+        wrongHints: [null, "Niet — in F1 krijgen alle nakomelingen Rr.", "Niet — dat zou volledige dominantie zijn.", "Elke F1-plant krijgt van de rode ouder een R. Kan de bloem dan helemaal wit zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Tussenvorm bij onvolledig", tekst: "Bij **onvolledige dominantie** is heterozygoot een **tussenvorm**. RR × rr → 100% Rr **roze**. F2 (Rr × Rr): 25% rood, 50% roze, 25% wit (= 1:2:1)." }],
           woorden: [{ woord: "onvolledige dominantie", uitleg: "Heterozygoot vertoont tussenvorm-fenotype." }],
@@ -145,9 +145,9 @@ const steps = [
       },
       {
         q: "Wie was **Gregor Mendel**?",
-        options: ["Monnik die erwt-erfelijkheid ontdekte","Ontdekker DNA-structuur","Eerste evolutie-bioloog","Engelse koning"],
+        options: ["Monnik die erwt-erfelijkheid ontdekte","Ontdekker van de DNA-structuur","Bedenker van de evolutietheorie","Arts die het eerste vaccin maakte"],
         answer: 0,
-        wrongHints: [null, "Niet — dat zijn Watson + Crick.", "Niet — dat is Darwin.", "Niet relevant."],
+        wrongHints: [null, "Niet — dat zijn Watson + Crick.", "Niet — dat is Darwin.", "Dat was Edward Jenner. Waar kom je de naam Mendel tegen in dit hoofdstuk?"],
         uitlegPad: {
           stappen: [{ titel: "Mendel = vader genetica", tekst: "**Gregor Mendel** (1822-1884) was augustijner monnik in Brno (nu Tsjechië). Werkte ~10 jaar met erwten-experimenten. Publiceerde 1866 — werd lange tijd genegeerd. **Herontdekt 1900** door 3 wetenschappers gelijktijdig — start moderne genetica." }],
           theorie: "Geen DNA bekend toen — Mendel sprak over 'erfelijke factoren' (later: genen). DNA pas in 1953 ontrafeld door Watson + Crick + Franklin.",
@@ -176,9 +176,9 @@ const steps = [
       },
       {
         q: "Waarom hebben **mannen vaker geslachtsgebonden ziekten** dan vrouwen?",
-        options: ["Mannen hebben maar 1 X, geen tweede kopie","Mannen-DNA is anders","Y veroorzaakt ziekten","Hormonen"],
+        options: ["Mannen hebben maar 1 X, geen tweede kopie","Het DNA van mannen muteert vaker","Het Y-chromosoom veroorzaakt de ziekte","Mannelijke hormonen maken het gen actief"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet — Y heeft niet de ziekte-genen.", "Geen direct verband."],
+        wrongHints: [null, "Mutaties ontstaan bij mannen en vrouwen even vaak. Vergelijk hun geslachtschromosomen eens.", "Niet — Y heeft niet de ziekte-genen.", "Hormonen veranderen niets aan welke allelen je erft. Waar ligt het ziekte-allel?"],
         uitlegPad: {
           stappen: [{ titel: "XY mist tweede X-kopie", tekst: "Vrouwen XX: als 1 X-allel ziek is, kan andere X compenseren → meestal draagster, geen ziekte. Mannen XY: 1 ziek X-allel → ziekte direct, geen tweede kopie als reserve." }],
           theorie: "Daarom zijn hemofilie/Duchenne/kleurenblindheid bijna alleen bij mannen. Vrouwen kunnen **draagster** zijn — geven door aan zonen.",
@@ -198,9 +198,9 @@ const steps = [
       },
       {
         q: "Wat is een **testcross**?",
-        options: ["Onbekende × homozygoot recessief","BB × BB","Bb × Bb","Geen kruising"],
+        options: ["Onbekende × homozygoot recessief","Onbekende × homozygoot dominant","Heterozygoot × heterozygoot (F1 × F1)","Een DNA-test zonder kruising"],
         answer: 0,
-        wrongHints: [null, "Niet — twee homozygotenkruising.", "Niet — heterozygoten F1.", "Wel — kruising bestaat."],
+        wrongHints: [null, "Met een dominante partner zien alle nakomelingen er hetzelfde uit. Leer je dan iets over de onbekende?", "Dat is een gewone F1-kruising. Wat wil je bij een testcross te weten komen?", "Mendel had nog geen DNA-tests. Hoe ontdekte hij toch een genotype?"],
         uitlegPad: {
           stappen: [{ titel: "Testcross = bepaal genotype", tekst: "**Testcross** = onbekend genotype kruisen met homozygoot recessief (bb). \n• BB × bb → alle Bb → 100% dominant fenotype.\n• Bb × bb → 50% Bb (dominant) + 50% bb (recessief).\nUitkomst zegt of onbekende BB of Bb was." }],
           theorie: "Toets-patroon: 'Hoe bepaal je of dominante plant homo- of heterozygoot is?' Antwoord: testcross.",
@@ -209,7 +209,7 @@ const steps = [
       },
       {
         q: "**Hemofilie** is een __ aandoening.",
-        options: ["Geslachtsgebonden recessieve","Autosomaal dominante","Autosomaal recessieve","Mitochondriale"],
+        options: ["Geslachtsgebonden recessieve","Autosomaal dominante","Autosomaal recessieve","Mitochondriaal erfelijke"],
         answer: 0,
         wrongHints: [null, "Niet — bij een dominante aandoening zouden draagsters zelf ziek zijn.", "Niet — kijk waarom hemofilie bijna alleen bij jongens voorkomt.", "Niet — hemofilie is nucleair, niet mitochondriaal."],
         uitlegPad: {
@@ -231,7 +231,7 @@ const steps = [
         q: "In een stamboom: **2 gezonde ouders** krijgen een **aangedaan kind**. Wat zegt dit?",
         options: ["Recessief","Dominant","Geslachtsgebonden","Geen erfelijke aandoening"],
         answer: 0,
-        wrongHints: [null, "Niet — dominant zou minstens 1 ouder aangedaan zijn.", "Niet noodzakelijk — kan autosomaal recessief zijn.", "Wel — patroon past bij erfelijkheid."],
+        wrongHints: [null, "Niet — dominant zou minstens 1 ouder aangedaan zijn.", "Kan dat? Weet je uit deze ene familie al of het gen op het X-chromosoom ligt?", "Wel — patroon past bij erfelijkheid."],
         uitlegPad: {
           stappen: [{ titel: "Gezonde ouders + ziek kind = recessief", tekst: "Bij **recessieve aandoening**: beide ouders zijn **dragers** (Aa). Kruising Aa × Aa → 25% kans op aa (ziek). Bij dominante: minstens 1 ouder zou ziek moeten zijn." }],
           theorie: "Toets-truc voor stambomen: zoek 'gezonde ouders + ziek kind'-combinatie → vrijwel zeker recessief.",
@@ -263,7 +263,7 @@ const steps = [
       },
       {
         q: "Wat is een **frameshift-mutatie**?",
-        options: ["Invoeging/deletie verschuift leeskader","1 base verandert","Hele chromosoom verloren","Geen effect"],
+        options: ["Invoeging of deletie verschuift het leeskader","Eén base wordt vervangen door een andere","Een heel chromosoom gaat verloren","Mutatie zonder enig effect op het eiwit"],
         answer: 0,
         wrongHints: [null, "Dat is puntmutatie.", "Dat is chromosoom-mutatie.", "Niet — meestal groot effect."],
         uitlegPad: {
@@ -274,7 +274,7 @@ const steps = [
       },
       {
         q: "Cystic fibrosis (taaislijmziekte) is:",
-        options: ["Autosomaal recessief","Geslachtsgebonden","Dominant","Trisomie"],
+        options: ["Autosomaal recessief","Geslachtsgebonden","Autosomaal dominant","Trisomie (extra chromosoom)"],
         answer: 0,
         wrongHints: [null, "Niet — beide geslachten gelijk vatbaar.", "Niet — dragers gezond.", "Niet — gen-mutatie, geen chromosoom-aantal."],
         uitlegPad: {
@@ -315,9 +315,9 @@ const steps = [
       },
       {
         q: "Een **draagster-moeder** voor hemofilie krijgt met gezonde man:",
-        options: ["50% zonen ziek, 50% dochters draagster","100% zieke zonen","Geen kans op ziekte","50% van alle kinderen ziek"],
+        options: ["50% zonen ziek, 50% dochters draagster","Alle zonen ziek, alle dochters gezond","Geen kans op ziekte, want vader is gezond","50% van alle kinderen ziek, ook dochters"],
         answer: 0,
-        wrongHints: [null, "Niet — slechts 50%.", "Niet — wel kans.", "Niet — dochters worden niet ziek, hooguit draagster."],
+        wrongHints: [null, "Een zoon krijgt één X van zijn moeder. Zijn haar twee X-chromosomen gelijk?", "Van wie krijgt een zoon zijn X-chromosoom?", "Niet — dochters worden niet ziek, hooguit draagster."],
         uitlegPad: {
           stappen: [{ titel: "X-gebonden recessief patroon", tekst: "XcX × XY → dochters: 50% XX (normaal) + 50% XcX (draagster). Zonen: 50% XY (normaal) + 50% XcY (ziek). **50% zonen ziek, 50% dochters draagster**." }],
           niveaus: { basis: "50% zonen ziek + 50% dochters draagster.", simpeler: "Hemofilie-draagster + gezond", nogSimpeler: "50% zonen ziek" },
@@ -325,9 +325,9 @@ const steps = [
       },
       {
         q: "Welk celdelingstype geeft **haploïde** dochtercellen?",
-        options: ["Meiose","Mitose","Beide","Geen"],
+        options: ["Meiose","Mitose","Beide","Bevruchting"],
         answer: 0,
-        wrongHints: [null, "Niet — mitose maakt diploïde kopieën.", "Niet — verschillen wel.", "Niet — er is wel een deling die het aantal chromosomen halveert."],
+        wrongHints: [null, "Niet — mitose maakt diploïde kopieën.", "Maakt mitose cellen met evenveel chromosomen of met de helft?", "Bij bevruchting smelten twee cellen samen. Wordt het aantal chromosomen dan kleiner of groter?"],
         uitlegPad: {
           stappen: [{ titel: "Meiose = halveren", tekst: "**Meiose**: diploïde cel (2n=46) → 4 haploïde geslachtscellen (n=23). Voor sperma/eicel-productie. **Mitose**: diploïd → diploïd kopieën voor groei + reparatie." }],
           theorie: "Toets-tip: meiose alleen in geslachtsklieren (testis + ovarium). Mitose overal in lichaam.",
@@ -336,7 +336,7 @@ const steps = [
       },
       {
         q: "Wat ontdekten **Watson + Crick** in 1953?",
-        options: ["Dubbele helix DNA-structuur","Mendels wetten","Evolutie-theorie","Eerste vaccin"],
+        options: ["Dubbele helix DNA-structuur","De wetten van de erfelijkheid","De theorie van evolutie","Het eerste vaccin tegen pokken"],
         answer: 0,
         wrongHints: [null, "Niet — Mendel in 1866.", "Niet — Darwin in 1859.", "Niet — Jenner 1796."],
         uitlegPad: {

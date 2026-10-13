@@ -45,11 +45,11 @@ const steps = [
         options: [
           "Zuurstofarm bloed",
           "Zuurstofrijk bloed",
-          "Geen bloed",
-          "Voedingsstoffen alleen"
+          "Gemengd bloed",
+          "Bloed uit de darmen"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel bloed.", "Niet relevant."],
+        wrongHints: [null, "Gaat de longslagader naar de longen toe of komt hij er vandaan?", "In een gezond hart mengt het bloed van links en rechts niet. Uit welke kamer vertrekt de longslagader?", "Bloed uit de darmen gaat via de poortader naar de lever. Waar komt de longslagader vandaan?"],
         uitlegPad: {
           stappen: [
             { titel: "Uitzondering op regel", tekst: "Gewone regel: 'slagader = zuurstofrijk, ader = arm'. Maar bij longvaten OMGEKEERD: longslagader gaat van hart NAAR longen om zuurstof OP TE NEMEN → arm bloed. Longader komt terug met zuurstofrijk bloed. Veel-gemaakte CSE-fout!" },
@@ -66,7 +66,7 @@ const steps = [
           "Longen"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — de kamers trekken pas ná de boezems samen.", "Hersenen kunnen het tempo bijsturen, maar de impuls ontstaat in het hart zelf.", "Niet."],
+        wrongHints: [null, "Niet — de kamers trekken pas ná de boezems samen.", "Hersenen kunnen het tempo bijsturen, maar de impuls ontstaat in het hart zelf.", "De longen leveren zuurstof, maar maken geen elektrische prikkel voor het hart. Waar ontstaat die?"],
         uitlegPad: {
           stappen: [
             { titel: "Eigen ritme", tekst: "Sinusknoop genereert elektrische impuls 60-100/min spontaan. Impuls → boezems samentrekken → AV-knoop vertraging 0,1 s → kamers samentrekken. Bij defect: pacemaker-implantaat met batterij in borstkas geeft elektrische pulsen." },
@@ -78,7 +78,7 @@ const steps = [
         q: "**Hartminuutvolume** in rust van volwassene ~?",
         options: ["5 L/min", "1 L/min", "20 L/min", "50 L/min"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Sport-niveau.", "Onmogelijk."],
+        wrongHints: [null, "Dat is te weinig om alle organen in rust van zuurstof te voorzien.", "Zoveel pompt een sporter bij zware inspanning. Wat past bij rust?", "Dat is meer dan zelfs topsporters halen. Wat past bij rust?"],
         uitlegPad: {
           stappen: [{ titel: "HMV = slagvolume × frequentie", tekst: "70 mL × 70 slagen/min = 4900 mL ≈ **5 L/min**. Bij maximale inspanning: 100+ × 180+ = ~20 L/min. Hele bloedvolume (~5 L) gaat dus ~elke minuut rond." }],
           niveaus: { basis: "5 L/min.", simpeler: "70×70 ml = 5 L.", nogSimpeler: "5" },
@@ -96,10 +96,10 @@ const steps = [
       {
         q: "Een **haarvat** (capillair) heeft als hoofdfunctie:",
         options: [
-          "Uitwisseling stoffen tussen bloed + cellen",
-          "Bloed snel transporteren",
-          "Druk genereren",
-          "Filter"
+          "Uitwisseling van stoffen met cellen",
+          "Bloed snel naar de organen vervoeren",
+          "Druk opbouwen om bloed te pompen",
+          "Afvalstoffen uit het bloed filteren"
         ],
         answer: 0,
         wrongHints: [null, "Niet — dat doen slagaders.", "Niet — hart doet dat.", "Niet — nieren."],
@@ -117,7 +117,7 @@ const steps = [
           "Haarvaten"
         ],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet — slagaders niet.", "Niet — geen kleppen."],
+        wrongHints: [null, "Bloed uit je hoofd stroomt vanzelf omlaag naar het hart. Waar moet het juist tegen de zwaartekracht in?", "Slagaders zijn geen aderen, en de druk van het hart duwt het bloed daar al vooruit.", "Haarvaten zijn geen aderen en zijn veel te dun voor kleppen. Waar in je lichaam zitten de aderen met kleppen?"],
         uitlegPad: {
           stappen: [
             { titel: "Zwaartekracht-uitdaging", tekst: "Bloed in benen-aders moet OMHOOG terug naar hart. Tegen zwaartekracht in. Kleppen open + dicht zorgen dat bloed niet terugzakt. Werk hard wanneer je staat. Bij falen → spataders. Tip: regelmatig lopen helpt 'spier-pomp' om bloed omhoog te duwen." },
@@ -139,9 +139,9 @@ const steps = [
         q: "**Atherosclerose** = ?",
         options: [
           "Vetafzetting in de slagaderwand",
-          "Aderwand-zwakte",
-          "Hartritmestoornis",
-          "Bloedstolling"
+          "Verzwakking van de aderwand",
+          "Een stoornis in het hartritme",
+          "Bloedstolsel in een bloedvat"
         ],
         answer: 0,
         wrongHints: [null, "Een verzwakte, uitpuilende vaatwand heet een aneurysma — maar 'sclerose' betekent juist verhárding. Klopt 'zwakte' dan?", "Een ritmestoornis zit in het elektrische systeem van het hart — maar 'athero-sclerose' wijst op de wánd van een bloedvat. Wat gebeurt daar?", "Een stolsel is bloed dat samenklontert — maar hier gaat het om wat zich in de vaatwand zelf ophoopt en die verhardt. Wat zou dat zijn?"],
@@ -156,12 +156,12 @@ const steps = [
         q: "**Spataders** ontstaan door:",
         options: [
           "Aderkleppen die niet goed sluiten",
-          "Slagaders te smal",
-          "Hartinfarct",
-          "Allergie"
+          "Slagaders die te smal zijn geworden",
+          "Een eerder doorgemaakt hartinfarct",
+          "Een allergische reactie in de huid"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — slagader-probleem.", "Niet — apart probleem.", "Niet."],
+        wrongHints: [null, "Niet — slagader-probleem.", "Niet — apart probleem.", "Een allergie geeft jeuk of bultjes, geen uitgezette aderen. Wat houdt het bloed in een ader normaal op zijn plek?"],
         uitlegPad: {
           stappen: [
             { titel: "Mechanisch probleem", tekst: "Beenaderen werken tegen zwaartekracht. Kleppen helpen normaal. Bij slijtage (lang staan, leeftijd, zwangerschap, erfelijkheid) sluiten ze niet meer → bloed zakt terug → ader gerekt → blauwe slang zichtbaar onder huid. Behandeling: steunkousen, lasertherapie, sclerose-injectie." },
@@ -182,7 +182,7 @@ const steps = [
         q: "**Hemoglobine** bindt:",
         options: ["O₂", "CO₂ uitsluitend", "Glucose", "Vet"],
         answer: 0,
-        wrongHints: [null, "Wel deels, maar O₂ primair.", "Niet — glucose zit opgelost in plasma.", "Niet."],
+        wrongHints: [null, "Hemoglobine vervoert inderdaad een deel van het CO₂. Maar klopt het woord 'uitsluitend'?", "Niet — glucose zit opgelost in plasma.", "Vet lost niet op in bloed en wordt apart vervoerd. Waarvoor zijn rode bloedcellen er vooral?"],
         uitlegPad: {
           stappen: [{ titel: "IJzer-houdend eiwit", tekst: "Hb in rode bloedcel bevat 4 ijzer-atomen → bindt 4 O₂-moleculen. In longen (hoge O₂): bindt. In weefsel (lage O₂): laat los. Rood door ijzer. Bij CO-vergiftiging: CO bindt sterker dan O₂ → mensen stikken." }],
           niveaus: { basis: "O₂.", simpeler: "Zuurstof.", nogSimpeler: "O₂" },
@@ -224,12 +224,12 @@ const steps = [
         q: "**Hemofilie** is:",
         options: [
           "Erfelijke stollingsziekte",
-          "Bloedkanker",
-          "Te dik bloed",
-          "Bloedgroep-mismatch"
+          "Een vorm van bloedkanker",
+          "Bloed dat te snel stolt",
+          "Een bloedgroep die niet past"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — apart (leukemie).", "Tegenovergesteld.", "Niet — bloedtransfusie-fout."],
+        wrongHints: [null, "Niet — apart (leukemie).", "Wat gebeurt er bij iemand met hemofilie als hij een wondje heeft?", "Niet — bloedtransfusie-fout."],
         uitlegPad: {
           stappen: [
             { titel: "X-chromosoom-gen", tekst: "Stollingsfactor-VIII of -IX defect. Mannen (XY) hebben slechts één X — bij defect: hemofilie. Vrouwen (XX) hebben een reserve-X → drager maar meestal geen ziekte. Bekendste familie: Queen Victoria + nakomelingen (Britse + Russische tsarenfamilie + Spaanse koningshuis). Behandeling: stollingsfactor-injecties." },
@@ -241,12 +241,12 @@ const steps = [
         q: "**Anemie** = ?",
         options: [
           "Te weinig rode bloedcellen of hemoglobine",
-          "Te veel rode bloedcellen",
-          "Bloed-infectie",
-          "Hartritmestoornis"
+          "Te veel rode bloedcellen in het bloed",
+          "Een infectie met bacteriën in het bloed",
+          "Een stoornis in het ritme van het hart"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld (polycytemie).", "Apart (sepsis).", "Apart."],
+        wrongHints: [null, "Tegenovergesteld (polycytemie).", "Apart (sepsis).", "Dat is een ritmestoornis van het hart. Anemie gaat over het bloed zelf."],
         uitlegPad: {
           stappen: [
             { titel: "Te weinig O₂-transport", tekst: "Bloed kan minder O₂ vervoeren → moeheid, bleek, kortademig. Hoofdoorzaken: ijzer-tekort (vooral menstruerende vrouwen), B12-tekort (vegetariërs let op), bloedingen (maagzweer), sikkel-cel (genetisch). Behandeling: ijzer-supplement, B12-injectie, bloedtransfusie." },
@@ -275,9 +275,9 @@ const steps = [
       },
       {
         q: "**Diafragma** beweegt tijdens **inademen**:",
-        options: ["Naar beneden", "Naar boven", "Niet", "Zijwaarts"],
+        options: ["Naar beneden", "Naar boven", "Blijft stil liggen", "Zijwaarts"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is uitademen.", "Wel — actief.", "Niet."],
+        wrongHints: [null, "Niet — dat is uitademen.", "Zonder beweging van het middenrif verandert het longvolume niet. Kun je dan inademen?", "Het middenrif is een koepel onder je longen. In welke richting maakt het de borstholte groter?"],
         uitlegPad: {
           stappen: [{ titel: "Borstkas vergroten", tekst: "Diafragma is koepel-spier onderkant borstkas. Bij inademen: samentrekken → koepel vlakt af → naar beneden → borstkas-volume groter → druk daalt → lucht stroomt IN. Bij uitademen ontspannen → koepel terug omhoog." }],
           niveaus: { basis: "Omlaag.", simpeler: "Naar beneden = ruimte.", nogSimpeler: "Beneden" },
@@ -287,12 +287,12 @@ const steps = [
         q: "Wij ademen voornamelijk op:",
         options: [
           "CO₂-niveau in het bloed",
-          "O₂-tekort",
-          "Spier-vermoeidheid",
-          "Hersengolven"
+          "Het O₂-tekort in het bloed",
+          "Vermoeidheid van de ademspieren",
+          "Het ritme van de hersengolven"
         ],
         answer: 0,
-        wrongHints: [null, "Verrassend genoeg niet.", "Niet primair.", "Onzin."],
+        wrongHints: [null, "Het zuurstofgehalte daalt pas laat. Welke stof in je bloed verandert sneller als je je adem inhoudt?", "Ook als je uitgerust bent, adem je door. Wat bepaalt dan het tempo?", "De hersenstam regelt de ademhaling wel, maar op welk signaal uit het bloed reageert hij?"],
         uitlegPad: {
           stappen: [
             { titel: "Klassiek biologie-feit", tekst: "Adem-centrum in medulla meet CO₂ via pH-verandering (CO₂ + H₂O → H₂CO₃ → H+). Hoog CO₂ → 'ademen!'-signaal. Daarom kun je adem-inhouden moeilijk doorzetten: niet O₂-tekort triggert, maar CO₂-stijging. Hyperventileren (te diep, te snel) wast CO₂ weg → minder ademimpuls → duizelig." },
@@ -304,7 +304,7 @@ const steps = [
         q: "**COPD** wordt vooral veroorzaakt door:",
         options: ["Roken", "Allergie", "Genen", "Virus"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Speelt rol bij sommige.", "Niet hoofdoorzaak."],
+        wrongHints: [null, "Allergie past beter bij astma. Wat beschadigt de longen langzaam, jaar na jaar?", "Er bestaat een zeldzame erfelijke vorm, maar die verklaart maar een klein deel. Wat is de oorzaak bij de meeste patiënten?", "Een virus geeft een ontsteking die weer overgaat. COPD is blijvend: wat beschadigt de longen jarenlang?"],
         uitlegPad: {
           stappen: [
             { titel: "Niet-omkeerbare longschade", tekst: "Chronic Obstructive Pulmonary Disease. ~90% door roken. Trilharen vernietigd → slijm + bacteriën → chronische ontsteking → alveolus-wanden weg → minder oppervlak → benauwd, vooral bij inspanning. NIET genezen, alleen vertragen door stoppen + medicatie." },
@@ -315,13 +315,13 @@ const steps = [
       {
         q: "Wat is **vitale capaciteit**?",
         options: [
-          "Maximum dat je in + uit kunt ademen",
-          "Constant ademvolume",
-          "O₂-niveau bloed",
-          "Hartslag"
+          "Maximum dat je in en uit kunt ademen",
+          "Het ademvolume bij rustig ademen",
+          "Het zuurstofgehalte van het bloed",
+          "Het aantal ademhalingen per minuut"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — ademvolume in rust.", "Niet — saturatie.", "Niet."],
+        wrongHints: [null, "Niet — ademvolume in rust.", "Dat heet de saturatie. Gaat vitale capaciteit over het bloed of over de longen?", "Dat is de ademfrequentie. Gaat vitale capaciteit over hoe vaak of over hoeveel?"],
         uitlegPad: {
           stappen: [{ titel: "~4-5 L", tekst: "Maximum diep inademen + helemaal uitademen. Wordt gemeten met spirometer in ziekenhuis. Topsporters hoger (5-6 L). Bij COPD/longziekte daalt. Restvolume ~1,5 L blijft altijd (voorkomt alveolus-collaps)." }],
           niveaus: { basis: "Max ademen.", simpeler: "Diepste in/uit-ademing.", nogSimpeler: "Max" },
@@ -342,10 +342,10 @@ const steps = [
           "Face / Arm / Speech / Time",
           "Fast / Aspirin / Sport / Talk",
           "Food / Air / Stand / Talk",
-          "Geen acroniem"
+          "Fever / Ache / Sweat / Tired"
         ],
         answer: 0,
-        wrongHints: [null, "Onzin.", "Onzin.", "Wel."],
+        wrongHints: [null, "Aspirine en sport kun je niet zien aan iemand. FAST helpt je een beroerte te herkennen.", "Eten en lucht zeggen niets over een beroerte. Waar kijk je naar bij iemand die getroffen is?", "Koorts en zweten passen bij griep. Wat zie je bij iemand met een beroerte?"],
         uitlegPad: {
           stappen: [
             { titel: "Herken beroerte", tekst: "**F**ace: hangt mondhoek af bij glimlachen? **A**rm: kan beide armen omhoog houden? **S**peech: spraak onduidelijk? **T**ime: bel 112 ONMIDDELLIJK. Tijd is hersenweefsel - hoe sneller behandeling, hoe meer behoud. Behandeling werkt alleen binnen ~4,5 uur na begin." },
@@ -357,12 +357,12 @@ const steps = [
         q: "Het **mediterrane dieet** is goed omdat:",
         options: [
           "Veel plantaardig en gezonde vetten",
-          "Veel vlees",
-          "Veel suiker",
-          "Geen relatie"
+          "Veel rood vlees en volle zuivel",
+          "Veel suiker voor snelle energie",
+          "Weinig vet en vrijwel geen olie"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Wel relatie."],
+        wrongHints: [null, "Rood vlees en volle zuivel bevatten veel verzadigd vet. Is dat goed voor je bloedvaten?", "Veel suiker verhoogt juist het risico op hart- en vaatziekten.", "In Italië en Griekenland kookt men veel met olijfolie. Wat zegt dat over dit dieet?"],
         uitlegPad: {
           stappen: [
             { titel: "Bewezen door PREDIMED-studie 2013", tekst: "Spaanse studie 7000 mensen, 5 jaar. Het mediterrane dieet verlaagde hart-vaatziekte ~30% vergeleken met laagvet-dieet. Olijfolie + noten gunstige vetten. Vis omega-3. Veel plantaardig. Minder rood vlees + zout. Eenvoudig + lekker." },
@@ -374,12 +374,12 @@ const steps = [
         q: "**Roken stoppen**: risico hart-vaatziekte daalt:",
         options: [
           "Flink, al binnen een jaar",
-          "Direct naar nul",
-          "Pas na 30 jaar",
-          "Nooit"
+          "Meteen helemaal naar nul",
+          "Pas na een jaar of dertig",
+          "Niet, de schade blijft altijd"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — geleidelijk.", "Sneller.", "Helemaal niet — wel verbetering."],
+        wrongHints: [null, "Niet — geleidelijk.", "Dertig jaar wachten? Hoe snel herstellen bloedvaten als de rook wegvalt?", "Bloedvaten en longen herstellen deels. Blijft het risico dan echt gelijk?"],
         uitlegPad: {
           stappen: [
             { titel: "Het loont altijd te stoppen", tekst: "Bekend feit van campagnes. 1 jaar stop: ~50% minder hart-aanval-risico. 5 jaar: beroerte-risico bijna gelijk nooit-roker. 10 jaar: longkanker-risico halveert. 15 jaar: bijna alle risico's gelijk. Daarom: stoppen loont, wat je leeftijd ook is." },
@@ -392,12 +392,12 @@ const steps = [
         q: "Een **AED** is:",
         options: [
           "Automatische Externe Defibrillator",
-          "Adem-Eerste-Devies",
-          "Allergie-Eet-Dieet",
-          "Anti-Drugs"
+          "Ademhalings-Eerstehulp-Dienst",
+          "Allergie-Eerstehulp-Dosis",
+          "Acute Epilepsie-Detector"
         ],
         answer: 0,
-        wrongHints: [null, "Een AED gebruik je als iemands hárt stilstaat — draait de afkorting dan echt om ademhaling?", "Denk aan waarvoor zo'n kastje aan de muur hangt: een levensbedreigende noodsituatie — heeft dat met een dieet te maken?", "Een AED is er voor spoedgevallen met het hart — past 'anti-drugs' bij dat doel?"],
+        wrongHints: [null, "Een AED gebruik je als iemands hárt stilstaat — draait de afkorting dan echt om ademhaling?", "Denk aan waarvoor zo'n kastje aan de muur hangt: een stilstaand hart. Heeft dat met allergie te maken?", "Een AED is er voor spoedgevallen met het hart — past epilepsie bij dat doel?"],
         uitlegPad: {
           stappen: [
             { titel: "Levens-redder", tekst: "Bij hartstilstand: hart fibrilleert (chaotische beweging, geen pomp). AED detecteert + geeft elektrische schok om ritme te herstellen. ~80 000 AEDs in NL openbaar beschikbaar (HartslagNu.nl-app toont nabij). Gebruik vereist geen medisch diploma. Combineer met reanimatie." },
@@ -409,12 +409,12 @@ const steps = [
         q: "WHO-advies voor sport voor hart:",
         options: [
           "150 min/week matig of 75 min intensief",
-          "10 min/dag",
-          "30 min/maand",
-          "Geen advies"
+          "60 min/week matig of 30 min intensief",
+          "30 min/maand matig of 15 min intensief",
+          "300 min/dag matig of 150 min intensief"
         ],
         answer: 0,
-        wrongHints: [null, "Veel te weinig.", "Te weinig.", "Wel advies."],
+        wrongHints: [null, "Dat is minder dan de helft van het advies. Hoeveel minuten per week is het echt?", "Eens per maand sporten is veel te weinig voor je hart.", "Vijf uur per dag? Dat haalt bijna niemand. Het advies gaat over minuten per week."],
         uitlegPad: {
           stappen: [
             { titel: "Beweegrichtlijn", tekst: "150 min/week = 30 min × 5 dagen 'matig' (snelwandelen, fietsen, dansen). Of 75 min intensief (joggen, zwemmen, tennis). Plus 2× per week kracht-training. Lager risico hart-vaatziekte, diabetes type 2, sommige kankers, dementie." },

@@ -59,10 +59,10 @@ ${[0, 1, 2].map(r => [0, 1, 2].map(c => `<ellipse cx="${175 + c * 22}" cy="${85 
       {
         q: "Wat is een cel?",
         options: [
-          "De kleinste levende bouwsteen van een organisme",
-          "Een soort virus",
-          "Een orgaan van het lichaam",
-          "Een molecuul met DNA",
+          "De kleinste levende bouwsteen",
+          "Een heel klein soort virus",
+          "Een klein orgaan van het lichaam",
+          "Een los molecuul met DNA",
         ],
         answer: 0,
         wrongHints: [
@@ -142,13 +142,13 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
         options: [
           "Cellen specialiseren zich in verschillende functies",
           "Elke cel doet alles zelf, net als bij eencelligen",
-          "Het bestaat uit precies twee cellen",
-          "Het kan niet groeien",
+          "Het bestaat uit precies twee samenwerkende cellen",
+          "Het blijft altijd even groot en kan niet groeien",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Bij meercelligen is dat juist niet zo — daar verdelen cellen het werk.",
+          "Doet een spiercel in jouw lichaam hetzelfde werk als een zenuwcel?",
           "'Meercellig' = veel cellen, niet precies twee.",
           "Meercelligen groeien juist door celdeling.",
         ],
@@ -265,9 +265,9 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
         q: "Wat doet het celmembraan?",
         options: [
           "Bepaalt welke stoffen de cel in en uit gaan",
-          "Maakt energie",
-          "Bevat het DNA",
-          "Verteert voedsel",
+          "Maakt energie uit glucose voor de cel",
+          "Bevat het DNA met alle erfelijke informatie",
+          "Verteert het voedsel dat de cel binnenkrijgt",
         ],
         answer: 0,
         wrongHints: [
@@ -288,10 +288,10 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
       {
         q: "Wat is cytoplasma?",
         options: [
-          "De vloeistof binnenin de cel waarin organellen zweven",
-          "Het vlies om de cel",
-          "Het DNA",
-          "Een soort cel",
+          "De vloeistof binnenin de cel",
+          "Het dunne vlies om de cel",
+          "Het erfelijk materiaal (DNA)",
+          "Een apart soort losse cel",
         ],
         answer: 0,
         wrongHints: [
@@ -337,8 +337,8 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
         q: "Wat doen mitochondriën?",
         options: [
           "Energie maken (verbranding van glucose)",
-          "DNA bewaren",
-          "Voedsel verteren",
+          "DNA bewaren (erfelijke informatie)",
+          "Voedsel verteren (afbraak met enzymen)",
           "Fotosynthese (zonlicht omzetten)",
         ],
         answer: 0,
@@ -587,7 +587,7 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
           "Energie maken (verbranding)",
           "Stevigheid (cellulose)",
           "Fotosynthese (zonlicht)",
-          "DNA bewaren",
+          "DNA bewaren (erfelijkheid)",
         ],
         answer: 0,
         wrongHints: [
@@ -808,10 +808,10 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
       {
         q: "Welke bewering klopt over **mitochondriën**?",
         options: [
-          "Ze zitten in zowel plant- als dierlijke cellen en maken energie",
-          "Ze zitten alleen in plantcellen",
-          "Ze maken zuurstof",
-          "Ze zijn hetzelfde als de celkern",
+          "Ze zitten in plant- én dierlijke cellen",
+          "Ze zitten alleen in plantaardige cellen",
+          "Ze maken zuurstof uit zonlicht en water",
+          "Ze zijn een ander woord voor de celkern",
         ],
         answer: 0,
         wrongHints: [
@@ -829,14 +829,14 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
           niveaus: { basis: "Plant + dier + energie.", simpeler: "Beide hebben mito.", nogSimpeler: "Energie-maker." },
         },
       },
-      { q: "Wat is het verschil tussen een **prokaryoot** en een **eukaryoot**?", options: ["Prokaryoot heeft GEEN kern, eukaryoot WEL","Prokaryoot is een plant, eukaryoot een dier","Eukaryoot is kleiner","Geen verschil"], answer: 0, wrongHints: [null,"Niet over plant vs dier.","Andersom — eukaryoot is groter.","Er is wel degelijk een verschil — kijk naar waar het DNA zit."] },
+      { q: "Wat is het verschil tussen een **prokaryoot** en een **eukaryoot**?", options: ["Prokaryoot heeft GEEN kern, eukaryoot WEL","Prokaryoot is een plant, eukaryoot een dier","Eukaryoot is kleiner dan een prokaryoot","Prokaryoot heeft GEEN celmembraan, eukaryoot WEL"], answer: 0, wrongHints: [null,"Niet over plant vs dier.","Andersom — eukaryoot is groter.","Elke cel heeft een membraan als grens. Kijk eens naar waar het DNA zit."] },
       { q: "Welk organel zit **alleen in plantcellen**?", options: ["Chloroplast","Mitochondrium","Celkern","Ribosoom"], answer: 0, wrongHints: [null,"Mitochondriën leveren energie in bijna álle cellen — zitten die alleen in planten of ook in dieren?","De celkern met het DNA vind je in zowel plant- als dierlijke cellen — is dat dan typisch voor alleen planten?","Ribosomen maken eiwitten in elke cel, plant én dier — past 'alleen in plantcellen' daarbij?"] },
-      { q: "**Celwand** (stevig + niet flexibel) vind je in?", options: ["Planten","Dieren","Niet — bestaat niet","Alleen bacteriën"], answer: 0, wrongHints: [null,"Dier heeft alleen celmembraan.","Wel — onderdeel plantcel.","Onvolledig."] },
+      { q: "**Celwand** (stevig + niet flexibel) vind je in?", options: ["Planten","Dieren","Virussen","Alleen bacteriën"], answer: 0, wrongHints: [null,"Dier heeft alleen celmembraan.","Een virus is niet eens een cel. Kan het dan een celwand hebben?","Bacteriën hebben inderdaad een celwand. Maar klopt het woord 'alleen'?"] },
       { q: "Welke is de **kleinste eenheid van leven**?", options: ["Cel","Atoom","Molecuul","Weefsel"], answer: 0, wrongHints: [null,"Geen leven.","Geen leven.","Te groot — bestaat uit cellen."] },
       { q: "**Fotosynthese** vindt plaats in?", options: ["Chloroplast","Mitochondrium","Celkern","Ribosoom"], answer: 0, wrongHints: [null,"Daar verbranding.","Daar DNA.","Daar eiwit-synthese."] },
       { q: "In een plant- of dierlijke cel zit het **DNA** vooral in?", options: ["Celkern","Cytoplasma","Celmembraan","Buiten cel"], answer: 0, wrongHints: [null,"Cytoplasma is de vloeistof waarin de organellen zweven — is dat de bewaarplek van het DNA?","Het membraan is de buitenkant — wordt het erfelijk materiaal daar bewaard?","Erfelijk materiaal buiten de cel — kan de cel er dan bij?"] },
-      { q: "Bacteriën zijn?", options: ["Prokaryoten","Eukaryoten","Geen levende wezens","Planten"], answer: 0, wrongHints: [null,"Andersom.","Wel levend.","Geen plant."] },
-      { q: "Een **virus** is...?", options: ["Geen cel, wel erfelijk materiaal","Een kleine soort bacterie","Een heel kleine plantcel","Een piepklein dier"], answer: 0, wrongHints: [null,"Een bacterie is een echte, levende cel die zichzelf kan delen — kan een virus dat zelfstandig, zonder gastheer?","Een plantcel heeft een celwand en kan fotosynthese doen — heeft een virus zulke celonderdelen?","Een dier is opgebouwd uit miljarden cellen — is een virus zo'n groot organisme?"] },
+      { q: "Bacteriën zijn?", options: ["Prokaryoten","Eukaryoten","Geen levende wezens","Planten"], answer: 0, wrongHints: [null,"Heeft een bacterie een echte celkern met een kernmembraan eromheen?","Een bacterie groeit, neemt voedsel op en deelt zich. Wat zegt dat?","Heeft een bacterie bladgroenkorrels en een kern zoals een plantcel?"] },
+      { q: "Een **virus** is...?", options: ["Geen cel, wel erfelijk materiaal","Een heel kleine soort bacterie","Een heel kleine soort plantcel","Een piepklein dier, zoals een mijt"], answer: 0, wrongHints: [null,"Een bacterie is een echte, levende cel die zichzelf kan delen — kan een virus dat zelfstandig, zonder gastheer?","Een plantcel heeft een celwand en kan fotosynthese doen — heeft een virus zulke celonderdelen?","Een dier is opgebouwd uit miljarden cellen — is een virus zo'n groot organisme?"] },
       { q: "**Open vraag**: hoeveel chromosomen heeft een normale menselijke lichaamscel? (typ getal)", kind: "open", acceptedAnswers: ["46"], numericTolerance: 0, explanation: "Mensen hebben 46 chromosomen (23 paren) in elke lichaamscel." },
       { q: "**Open vraag**: hoe heet het proces waarbij planten suiker maken uit CO₂ + water + licht?", kind: "open", acceptedAnswers: ["fotosynthese"], explanation: "Fotosynthese: CO₂ + H₂O + lichtenergie → glucose + O₂." },
     ],

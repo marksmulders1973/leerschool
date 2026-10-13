@@ -118,9 +118,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **fotosynthese**?",
-        options: ["Planten maken voedsel met zonlicht", "Planten eten dieren", "Planten ademen 's nachts uit", "Planten groeien zonder licht"],
+        options: ["Planten maken voedsel met zonlicht", "Planten eten kleine insecten op", "Planten ademen 's nachts uit", "Planten groeien zonder licht"],
         answer: 0,
-        wrongHints: [null, "Planten zijn geen vleeseters meestal.", "Dat is ademhaling, geen fotosynthese. Wat maakt een plant met zonlicht?", "Wel licht nodig voor fotosynthese."],
+        wrongHints: [null, "Een paar planten vangen insecten, maar 'foto' betekent licht. Wat doet een plant met licht?", "Dat is ademhaling, geen fotosynthese. Wat maakt een plant met zonlicht?", "Wel licht nodig voor fotosynthese."],
       },
       {
         q: "Welke **3 dingen** heeft een plant nodig voor fotosynthese?",
@@ -163,13 +163,13 @@ const steps = [
       },
       {
         q: "Wat is **NPK**?",
-        options: ["Voedingsstoffen in mest", "Plant-soort", "Bladsoort", "Bloem-naam"],
+        options: ["Voedingsstoffen in mest", "Een soort kamerplant", "Een kleurstof in bladeren", "Een familie van bloemen"],
         answer: 0,
-        wrongHints: [null, "Niet plant-soort.", "Niet blad.", "Niet bloem."],
+        wrongHints: [null, "N, P en K zijn scheikundige symbolen. Is dat een naam voor een plant?", "De kleurstof in bladeren heet bladgroen. Waar staan de letters N, P en K voor?", "Bloemen hebben gewone namen, geen scheikundige symbolen. Waar staat N voor?"],
       },
       {
         q: "Wat heeft een plant **NIET nodig**?",
-        options: ["Kant-en-klare suiker van buitenaf", "Zonlicht", "Water", "CO₂"],
+        options: ["Suiker van buitenaf", "Zonlicht op de bladeren", "Water uit de bodem", "CO₂ uit de lucht"],
         answer: 0,
         wrongHints: [null, "Een plant vangt met zijn bladeren zonlicht om zijn eigen eten te maken. Zou hij zonder licht dan wel kunnen groeien?", "Denk aan wat je een plant elke week geeft zodat hij niet verwelkt. Kan hij dat missen?", "Planten nemen dit gas uit de lucht op om suiker van te maken. De vraag is wat een plant NIET nodig heeft — hoort dit daarbij?"],
         uitlegPad: {
@@ -198,9 +198,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **huidmondje**?",
-        options: ["Klein gaatje in blad voor gas-uitwisseling", "Mond van een plant-dier", "Bladnerf", "Wortel-haar"],
+        options: ["Klein gaatje in blad voor gas-uitwisseling", "Mondje waarmee een plant insecten eet", "Nerf die water door het blad vervoert", "Haartje aan de wortel dat water opneemt"],
         answer: 0,
-        wrongHints: [null, "Geen plant-dier.", "Bladnerf is iets anders.", "Wortel-haar zit onder de grond."],
+        wrongHints: [null, "Een huidmondje kan niets eten. Wat zou er dan door zo'n opening kunnen?", "Dat doet een bladnerf. Lijkt een nerf op een mondje?", "Wortel-haar zit onder de grond."],
       },
       {
         q: "Welke kleur **weerkaatst** chlorofyl?",
@@ -210,9 +210,9 @@ const steps = [
       },
       {
         q: "Waarom **vallen bladeren** in herfst?",
-        options: ["Boom spaart energie/water voor winter", "Bladeren zijn 'op'", "Wind blaast ze los", "Dieren eten ze"],
+        options: ["De boom spaart water voor de winter", "Bladeren zijn na een jaar versleten", "Herfststormen blazen ze van de takken", "Rupsen en andere dieren eten ze op"],
         answer: 0,
-        wrongHints: [null, "Niet exact 'op'.", "Wind helpt maar is niet de hoofdreden.", "Niet de hoofdreden."],
+        wrongHints: [null, "Een dennenboom houdt zijn naalden jaren. Slijten bladeren echt na één jaar?", "Wind helpt maar is niet de hoofdreden.", "Niet de hoofdreden."],
       },
       {
         q: "Welke boom is in de winter **nog groen**?",
@@ -231,21 +231,21 @@ const steps = [
     checks: [
       {
         q: "Wat geven planten **overdag** AF?",
-        options: ["Zuurstof", "CO₂", "Suiker", "Niets"],
+        options: ["Zuurstof", "CO₂", "Suiker", "Stikstof"],
         answer: 0,
-        wrongHints: [null, "Nemen ze juist OP.", "Die suiker houden ze zelf als voedsel.", "Geven wel iets af."],
+        wrongHints: [null, "Nemen ze juist OP.", "Die suiker houden ze zelf als voedsel.", "Stikstof halen planten als voeding uit de bodem. Welk gas ontstaat er bij fotosynthese?"],
       },
       {
         q: "Wat produceert het **meeste zuurstof** voor de hele aarde?",
-        options: ["Algen + fytoplankton in oceanen", "De Amazone alleen", "Tropisch bos op land", "Mensen"],
+        options: ["Algen en plankton in de oceanen", "Het Amazonewoud in Zuid-Amerika", "Alle tropische bossen op het land", "Graslanden en akkers op het land"],
         answer: 0,
-        wrongHints: [null, "Bekende bijnaam 'longen van de aarde', maar oceanen leveren meer.", "Bossen leveren veel — maar minder dan de oceanen.", "Mensen ademen zuurstof IN, produceren het niet."],
+        wrongHints: [null, "Bekende bijnaam 'longen van de aarde', maar oceanen leveren meer.", "Bossen leveren veel — maar minder dan de oceanen.", "Akkers en graslanden maken best zuurstof. Maar zijn ze de grootste bron op aarde?"],
       },
       {
         q: "Wat gebeurt als planten **allemaal verdwijnen**?",
-        options: ["De zuurstof zou opraken", "Niets", "Meer dieren", "Aarde wordt groener"],
+        options: ["De zuurstof zou opraken", "Het klimaat zou kouder worden", "Er zouden meer dieren komen", "De aarde zou groener worden"],
         answer: 0,
-        wrongHints: [null, "Wel iets — heel veel.", "Dieren afhankelijk van planten voor voedsel.", "Andersom."],
+        wrongHints: [null, "Planten halen CO₂ uit de lucht. Wat doet extra CO₂ met de temperatuur?", "Dieren afhankelijk van planten voor voedsel.", "Waar komt het groen op aarde eigenlijk vandaan?"],
       },
       {
         q: "Geven planten **'s nachts** ook zuurstof af?",
@@ -282,9 +282,9 @@ const steps = [
       },
       {
         q: "Waarom eten **mensen energie-efficiënter** als vegetariër?",
-        options: ["Lager in voedselketen = minder energieverlies", "Plantaardig is duurder", "Vlees bevat geen energie", "Onbekend"],
+        options: ["Minder energieverlies in de voedselketen", "Plantaardig eten is altijd duurder", "Vlees bevat helemaal geen energie", "Planten bevatten meer vitamines"],
         answer: 0,
-        wrongHints: [null, "Niet altijd waar.", "Vlees heeft veel energie maar productie kost meer.", "Wel bekend."],
+        wrongHints: [null, "De prijs zegt iets over je portemonnee. Gaat de vraag over geld of over energie?", "Vlees heeft veel energie maar productie kost meer.", "Vitamines leveren geen energie. Waar gaat de vraag eigenlijk over?"],
       },
     ],
   },
@@ -321,9 +321,9 @@ const steps = [
       },
       {
         q: "**Wanneer geven planten zuurstof af**?",
-        options: ["Overdag", "'s Nachts", "Alleen 's zomers", "Nooit"],
+        options: ["Overdag", "'s Nachts", "Alleen 's zomers", "Alleen bij regen"],
         answer: 0,
-        wrongHints: [null, "Geen zonlicht 's nachts.", "Ook 's winters wel als zon schijnt.", "Wel — anders geen O₂ op aarde."],
+        wrongHints: [null, "Geen zonlicht 's nachts.", "Ook 's winters wel als zon schijnt.", "Regen geeft water. Wat heeft een plant nog meer nodig om zuurstof te maken?"],
       },
       {
         q: "Hoe verliest een **den** *(naaldboom)* zijn naalden?",
