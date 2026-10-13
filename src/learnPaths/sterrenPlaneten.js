@@ -261,7 +261,7 @@ const steps = [
     checks: [
       {
         q: "Wat veroorzaakt **eb en vloed** op Aarde?",
-        options: ["Zwaartekracht van de Maan","Wind","Onderzeese aardbevingen","Regen"],
+        options: ["Zwaartekracht van de Maan", "Harde wind boven de zee", "Onderzeese aardbevingen", "Regen die in de zee valt"],
         answer: 0,
         wrongHints: [null,"Wind veroorzaakt golven, niet eb en vloed.","Aardbevingen geven tsunami's, geen eb en vloed.","Regen laat de zee niet twee keer per dag stijgen en dalen."],
         uitlegPad: {
@@ -324,9 +324,9 @@ const steps = [
       },
       {
         q: "Wat is **Olympus Mons**?",
-        options: ["Hoogste vulkaan in het zonnestelsel","Planeet van Olympus","Een stad op Mars","Een ster"],
+        options: ["Hoogste vulkaan in het zonnestelsel", "Verste planeet van het zonnestelsel", "Grootste stad op de planeet Mars", "Felste ster aan de nachthemel"],
         answer: 0,
-        wrongHints: [null,"Geen planeet — een berg op Mars.","Geen stad.","Geen ster."],
+        wrongHints: [null, "Geen planeet. 'Mons' is Latijn — weet je waarvoor?", "Op Mars wonen geen mensen.", "Geen ster — kijk naar het woord 'Mons'."],
         uitlegPad: {
           stappen: [{ titel: "Olympus Mons = hoogste vulkaan", tekst: "Op Mars staat Olympus Mons: ~25 km hoog, 3× Mount Everest. Hoogste bekende vulkaan in het zonnestelsel." }],
           woorden: [{ woord: "Mons", uitleg: "Latijn voor 'berg'" }],
@@ -471,9 +471,9 @@ const steps = [
       },
       {
         q: "Wat is een **komeet**?",
-        options: ["Vuile sneeuwbal van ijs + stof","Stuk roest","Heel kleine planeet","Ster die uitdooft"],
+        options: ["Vuile sneeuwbal van ijs + stof", "Brok ijzer en steen uit de ruimte", "Heel kleine planeet met een ring", "Ster die bijna is uitgedoofd"],
         answer: 0,
-        wrongHints: [null,"Niet roest — ijs + stof.","Geen planeet, te klein + andere samenstelling.","Een ster doet veel anders dan een komeet."],
+        wrongHints: [null, "Dat lijkt meer op een meteoriet. Waar is een komeet van gemaakt?", "Geen planeet, te klein + andere samenstelling.", "Een ster doet veel anders dan een komeet."],
         uitlegPad: {
           stappen: [{ titel: "Komeet = vuile sneeuwbal", tekst: "Kometen zijn klompjes ijs + stof + gas uit verre randgebieden (Kuiper, Oort-wolk). Naderen ze de zon → ijs smelt → spectaculaire staart van gas/stof." }],
           woorden: [{ woord: "Oort-wolk", uitleg: "bol van bevroren objecten tot 1 lichtjaar weg" }],
@@ -548,9 +548,9 @@ const steps = [
       },
       {
         q: "Wat veroorzaakt **eb en vloed** op Aarde?",
-        options: ["Zwaartekracht van de maan","Regen","Wind","Vulkanisme"],
+        options: ["Zwaartekracht van de maan", "Regen die in de zee valt", "Harde wind boven de zee", "Vulkanen onder de zee"],
         answer: 0,
-        wrongHints: [null,"Regen laat de zee niet twee keer per dag stijgen en dalen.","Wind veroorzaakt golven, geen eb/vloed.","Geen verband."],
+        wrongHints: [null, "Regen laat de zee niet twee keer per dag stijgen en dalen.", "Wind veroorzaakt golven, geen eb/vloed.", "Vulkanen laten de zee niet elke dag stijgen en dalen."],
         uitlegPad: {
           stappen: [{ titel: "Maan-zwaartekracht", tekst: "De zwaartekracht van de maan trekt aan zeewater → vloed. Twee per dag (één aan maan-kant, één aan tegenoverkant)." }],
           woorden: [{ woord: "zwaartekracht", uitleg: "aantrekkende kracht tussen massa's" }],
@@ -583,7 +583,7 @@ const steps = [
       { q: "Hoeveel dagen duurt een **jaar** op aarde?", options: ["365","100","30","1000"], answer: 0, wrongHints: [null, "Niet.", "Maand.", "Te veel."] },
       { q: "Hoe lang duurt 1 **dag** op aarde?", options: ["24 uur","12 uur","365 dagen","1 jaar"], answer: 0, wrongHints: [null, "Halve dag.", "Jaar.", "Niet."] },
       { q: "Wat veroorzaakt **dag en nacht**?", options: ["Aarde draait om as","Zon beweegt","Wolken","Maan schuift voor de zon"], answer: 0, wrongHints: [null, "Het lijkt alsof de zon beweegt — maar wie draait er echt?", "Niet.", "Dat gebeurt maar heel soms: een zonsverduistering."] },
-      { q: "Wat veroorzaakt **seizoenen**?", options: ["Schuine stand aarde + draai om zon","Maan","Zon dichterbij","Wolken"], answer: 0, wrongHints: [null, "De maan zorgt voor eb en vloed, niet voor de seizoenen.", "De afstand tot de zon verandert bijna niet. In onze winter staan we zelfs het dichtst bij de zon!", "Wolken veranderen het weer, niet de seizoenen."] },
+      { q: "Wat veroorzaakt **seizoenen**?", options: ["Schuine stand aarde + draai om zon", "Maan die om de aarde draait", "Afstand tot de zon: dichtbij + ver", "Wolken die de zon tegenhouden"], answer: 0, wrongHints: [null, "De maan zorgt voor eb en vloed, niet voor de seizoenen.", "De afstand tot de zon verandert bijna niet. In onze winter staan we zelfs het dichtst bij de zon!", "Wolken veranderen het weer, niet de seizoenen."] },
       { q: "Wat is een **zonsverduistering**?", options: ["Maan tussen zon en aarde","Aarde tussen zon en maan","Wolk","Zon gaat even uit"], answer: 0, wrongHints: [null, "Maansverduistering.", "Niet astronomie.", "De zon blijft gewoon branden."] },
     ],
   },

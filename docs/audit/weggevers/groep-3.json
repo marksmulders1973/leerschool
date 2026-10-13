@@ -1,0 +1,1682 @@
+[
+ {
+  "pad": "bekende-wetenschappers-po",
+  "file": "./bekendeWetenschappersPo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat ontdekte Marie Curie?",
+  "opties": [
+   "Radium + radioactiviteit",
+   "Zwaartekracht",
+   "Evolutie",
+   "Computer"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "bekende-wetenschappers-po",
+  "file": "./bekendeWetenschappersPo.js",
+  "stap": 4,
+  "vraag": 16,
+  "soort": "L",
+  "q": "Wie bedacht de telefoon?",
+  "opties": [
+   "Alexander Graham Bell",
+   "Edison",
+   "Tesla",
+   "Newton"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "bekende-wetenschappers-po",
+  "file": "./bekendeWetenschappersPo.js",
+  "stap": 4,
+  "vraag": 21,
+  "soort": "L",
+  "q": "Welke NL-er ontdekte micro-organismen met microscoop?",
+  "opties": [
+   "Anton van Leeuwenhoek",
+   "Huygens",
+   "Erasmus",
+   "Boyan Slat"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "beroepen-werk-po",
+  "file": "./beroepenWerkPo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een beroep?",
+  "opties": [
+   "Wat je geleerd hebt te doen voor werk",
+   "Geld",
+   "School",
+   "Hobby"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "beroepen-werk-po",
+  "file": "./beroepenWerkPo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is een ZZP'er?",
+  "opties": [
+   "Zelfstandige zonder personeel",
+   "Werknemer",
+   "Stagiair",
+   "Eigenaar groot bedrijf"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "beroepen-werk-po",
+  "file": "./beroepenWerkPo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Welke beroepen groeien?",
+  "opties": [
+   "IT + zorg + duurzaamheid",
+   "Kassier",
+   "Postbezorger",
+   "Fabrieksarbeider"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "beroepen-werk-po",
+  "file": "./beroepenWerkPo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is een CAO?",
+  "opties": [
+   "Afspraken tussen werkgevers en werknemers",
+   "Een soort belasting",
+   "Een vakantie-uitkering",
+   "Een diploma"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "beroepen-werk-po",
+  "file": "./beroepenWerkPo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is ZZP'er?",
+  "opties": [
+   "Zelfstandige zonder personeel",
+   "Werknemer",
+   "Stagiair",
+   "Vrijwilliger"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "beroepen-werk-po",
+  "file": "./beroepenWerkPo.js",
+  "stap": 4,
+  "vraag": 7,
+  "soort": "L",
+  "q": "Wat is een CAO?",
+  "opties": [
+   "Afspraken tussen werkgevers en vakbonden",
+   "Een mbo-diploma",
+   "Een soort uitkering",
+   "Belasting-soort"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "beroepen-werk-po",
+  "file": "./beroepenWerkPo.js",
+  "stap": 4,
+  "vraag": 9,
+  "soort": "L",
+  "q": "Wat is een CV (curriculum vitae)?",
+  "opties": [
+   "Overzicht van opleiding/werk-ervaring",
+   "Een diploma",
+   "Een arbeidscontract",
+   "Een loonstrook"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "beroepen-werk-po",
+  "file": "./beroepenWerkPo.js",
+  "stap": 4,
+  "vraag": 10,
+  "soort": "L",
+  "q": "Wat is MBO?",
+  "opties": [
+   "Middelbaar Beroepsonderwijs",
+   "Hoger Onderwijs",
+   "Universiteit",
+   "Basisschool"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "beroepen-werk-po",
+  "file": "./beroepenWerkPo.js",
+  "stap": 4,
+  "vraag": 11,
+  "soort": "L",
+  "q": "Wat is HBO?",
+  "opties": [
+   "Hoger Beroepsonderwijs",
+   "Universiteit",
+   "MBO",
+   "VMBO"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "beroepen-werk-po",
+  "file": "./beroepenWerkPo.js",
+  "stap": 4,
+  "vraag": 15,
+  "soort": "L",
+  "q": "Wat is vakantiegeld?",
+  "opties": [
+   "Extra loon, minstens 8% per jaar",
+   "Een uitkering bij ziekte",
+   "Buitenland-geld",
+   "Bonus voor goed werk"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "beroepen-werk-po",
+  "file": "./beroepenWerkPo.js",
+  "stap": 4,
+  "vraag": 16,
+  "soort": "L",
+  "q": "Wat is een vrijwilliger?",
+  "opties": [
+   "Iemand die onbetaald werkt",
+   "Politicus",
+   "Niet werkend",
+   "Manager"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "beroepen-werk-po",
+  "file": "./beroepenWerkPo.js",
+  "stap": 4,
+  "vraag": 19,
+  "soort": "L",
+  "q": "Wat is een werkgever?",
+  "opties": [
+   "Persoon/bedrijf dat iemand laat werken",
+   "Werknemer",
+   "Klant",
+   "Vakbond"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "beroepen-werk-po",
+  "file": "./beroepenWerkPo.js",
+  "stap": 4,
+  "vraag": 20,
+  "soort": "L",
+  "q": "Wat is een werknemer?",
+  "opties": [
+   "Persoon die werkt voor werkgever",
+   "Werkgever",
+   "Klant",
+   "Vakbond"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "beroepen-werk-po",
+  "file": "./beroepenWerkPo.js",
+  "stap": 4,
+  "vraag": 23,
+  "soort": "L",
+  "q": "Wat is een stage?",
+  "opties": [
+   "Werkervaring opdoen tijdens opleiding",
+   "Vakantie",
+   "Loonstop",
+   "Reclame"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "conclusies-trekken-po",
+  "file": "./conclusiesTrekkenPo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Noor geeft geen antwoord als papa vrolijk roept dat ze een grotere kamer krijgt. Wat kun je hieruit afleiden?",
+  "opties": [
+   "De grootte van de nieuwe kamer troost Noor nu niet",
+   "Noor heeft papa niet gehoord",
+   "Noor is boos op papa",
+   "Noor vindt de nieuwe kamer te klein"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "conclusies-trekken-po",
+  "file": "./conclusiesTrekkenPo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "In een verhaal staat: 'Ze had hem al drie keer gebeld, maar hij nam niet op.' Wat kun je onderbouwd concluderen?",
+  "opties": [
+   "Ze probeert hem te bereiken en hij reageert niet",
+   "Ze is boos op hem",
+   "Hij heeft zijn telefoon verloren",
+   "Er is een storing bij het telefoonbedrijf"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*'De jongen rende buiten adem naar huis.'* Wat betekent buiten adem?",
+  "opties": [
+   "Zo hard gerend dat je nauwelijks kunt ademen",
+   "Buiten lopen om adem te halen",
+   "Stil staan",
+   "Zonder adem te halen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 0,
+  "vraag": 7,
+  "soort": "L",
+  "q": "*'De situatie was uiterst precair.'* Wat betekent precair?",
+  "opties": [
+   "Onzeker / gevaarlijk",
+   "Saai",
+   "Vrolijk",
+   "Druk"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 0,
+  "vraag": 20,
+  "soort": "L",
+  "q": "*'Hij had een briljant idee voor het werkstuk.'* Wat betekent briljant?",
+  "opties": [
+   "Heel slim / schitterend",
+   "Heel saai",
+   "Vaag",
+   "Verkeerd"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 0,
+  "vraag": 24,
+  "soort": "L",
+  "q": "*'Het was een hachelijke situatie.'* Wat betekent hachelijk?",
+  "opties": [
+   "Gevaarlijk / riskant",
+   "Grappig",
+   "Saai",
+   "Eenvoudig"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 0,
+  "vraag": 29,
+  "soort": "L",
+  "q": "*'Het was een geniaal plan.'* Wat betekent geniaal?",
+  "opties": [
+   "Heel slim / briljant",
+   "Heel saai",
+   "Verkeerd",
+   "Klein"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 0,
+  "vraag": 30,
+  "soort": "L",
+  "q": "Wat is een antoniem?",
+  "opties": [
+   "Een woord met tegenovergestelde betekenis",
+   "Een synoniem",
+   "Een lang woord",
+   "Een afkorting"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 0,
+  "vraag": 31,
+  "soort": "L",
+  "q": "*'De jongen is gehaast.'* Wat betekent gehaast?",
+  "opties": [
+   "Heeft veel haast / snel",
+   "Verlegen",
+   "Slim",
+   "Saai"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 0,
+  "vraag": 34,
+  "soort": "L",
+  "q": "Wat betekent *'iemand een hart onder de riem steken'*?",
+  "opties": [
+   "Iemand bemoedigen / moed inspreken",
+   "Iemand pijn doen",
+   "Iemand wegsturen",
+   "Iemand uitlachen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 0,
+  "vraag": 37,
+  "soort": "L",
+  "q": "*'De burgemeester nam een omstreden besluit.'* Wat betekent omstreden?",
+  "opties": [
+   "Waar veel mensen het oneens over zijn",
+   "Heel verstandig",
+   "Geheim gehouden",
+   "Snel genomen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 0,
+  "vraag": 39,
+  "soort": "L",
+  "q": "Wat betekent de uitdrukking *'de knoop doorhakken'*?",
+  "opties": [
+   "Eindelijk een beslissing nemen",
+   "Iets kapotmaken",
+   "Touw gebruiken",
+   "Een ruzie beginnen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 0,
+  "vraag": 43,
+  "soort": "L",
+  "q": "Wat betekent het spreekwoord *'Wie het laatst lacht, lacht het best'*?",
+  "opties": [
+   "Wie aan het eind wint, heeft echt gewonnen",
+   "Lachen is gezond",
+   "De laatste grap is het grappigst",
+   "Je moet altijd vrolijk zijn"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 1,
+  "vraag": 7,
+  "soort": "L",
+  "q": "*'De auteur wil je vooral overtuigen'* — wat is dan de bedoeling van de tekst?",
+  "opties": [
+   "Overhalen om iets te doen of denken",
+   "Informeren met feiten",
+   "Amuseren met grappen",
+   "Beschrijven hoe iets is"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 1,
+  "vraag": 8,
+  "soort": "L",
+  "q": "*Tekst: 'Eerst moet je de fles openmaken. Vervolgens schenk je het water in.'* Wat geeft 'vervolgens' aan?",
+  "opties": [
+   "Volgorde / opeenvolging",
+   "Tegenstelling",
+   "Reden",
+   "Doel"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 1,
+  "vraag": 10,
+  "soort": "L",
+  "q": "*Hoofdgedachte* van tekst — meestal te vinden in:",
+  "opties": [
+   "Eerste of laatste alinea",
+   "Middelste alinea",
+   "Plaatje",
+   "Voetnoot"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 1,
+  "vraag": 11,
+  "soort": "L",
+  "q": "Wat is alinea?",
+  "opties": [
+   "Groep zinnen over één onderwerp",
+   "Eén zin",
+   "Hele tekst",
+   "Plaatje"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 1,
+  "vraag": 19,
+  "soort": "L",
+  "q": "Wat doe je voordat je een leesvraag beantwoordt? Toets-strategie?",
+  "opties": [
+   "Lees vraag → zoek terug in tekst",
+   "Lees vraag → gok",
+   "Lees alleen tekst",
+   "Niets"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 1,
+  "vraag": 23,
+  "soort": "L",
+  "q": "Een alinea is...",
+  "opties": [
+   "Een blok tekst over één onderwerp",
+   "Een hoofdletter",
+   "Een leesteken",
+   "Een titel"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 1,
+  "vraag": 24,
+  "soort": "L",
+  "q": "*Wat is het verschil tussen* 'feit' *en* 'mening'?",
+  "opties": [
+   "Feit kun je controleren, mening is wat iemand vindt",
+   "Feit is positief, mening is negatief",
+   "Geen verschil",
+   "Feit staat in inleiding, mening in slot"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 1,
+  "vraag": 34,
+  "soort": "L",
+  "q": "Een tekst voor kinderen versus tekst voor wetenschappers verschilt vooral in...",
+  "opties": [
+   "Moeilijkheidsgraad van woorden",
+   "Aantal pagina's",
+   "Kleur van het papier",
+   "Land van uitgifte"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 1,
+  "vraag": 36,
+  "soort": "L",
+  "q": "Wat is een citaat in een tekst?",
+  "opties": [
+   "Letterlijke aanhaling van iemand",
+   "De inleiding",
+   "Een afbeelding",
+   "De voetnoot"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 1,
+  "vraag": 39,
+  "soort": "L",
+  "q": "*'Steeds meer scholen verbieden mobieltjes in de klas. Leerlingen blijken zich beter te concentreren zonder telefoon. Ook praten kinderen in de pauze meer met e",
+  "opties": [
+   "Een mobielverbod op school heeft voordelen",
+   "Mobieltjes zijn duur",
+   "Kinderen praten te weinig",
+   "Pauzes moeten langer duren"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wanneer schrijf je een hoofdletter?",
+  "opties": [
+   "Aan begin van zin of bij namen",
+   "Altijd in werkwoorden",
+   "Bij alle korte woorden",
+   "Bij vragen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 2,
+  "vraag": 24,
+  "soort": "L",
+  "q": "Welk woord is goed: 'gebeurde' of 'gebeurden'?",
+  "opties": [
+   "Hangt af van enkel/meervoud",
+   "Altijd 'gebeurde'",
+   "Altijd 'gebeurden'",
+   "Beide fout"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 2,
+  "vraag": 38,
+  "soort": "H",
+  "q": "Hoe schrijf je het voltooid deelwoord van *'verhuizen'*?",
+  "opties": [
+   "verhuisd",
+   "verhuist",
+   "verhuizd",
+   "verhuisdt"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 3,
+  "vraag": 42,
+  "soort": "L",
+  "q": "Wat is het onderwerp in: *'De kinderen van groep 8 oefenen elke dag.'*?",
+  "opties": [
+   "De kinderen van groep 8",
+   "oefenen",
+   "elke dag",
+   "groep 8"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 3,
+  "vraag": 44,
+  "soort": "L",
+  "q": "*'Lisa zei ... ik kom morgen langs.'* Welke leestekens horen op de puntjes?",
+  "opties": [
+   "Dubbele punt en aanhalingstekens (: “…”)",
+   "Alleen een komma (,)",
+   "Een puntkomma (;)",
+   "Geen leestekens ( )"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-taal-g8",
+  "file": "./doorstroomtoetsTaalG8.js",
+  "stap": 4,
+  "vraag": 5,
+  "soort": "H",
+  "q": "*'Zoiets ... wel vaker op school.'* Welk woord hoort op de puntjes?",
+  "opties": [
+   "gebeurt",
+   "gebeurd",
+   "gebeurdt",
+   "gebeuren"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "energiebronnen-po",
+  "file": "./energiebronnenPo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is energie?",
+  "opties": [
+   "Wat nodig is om iets te laten werken",
+   "Voedsel",
+   "Een soort stof",
+   "Een soort licht"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "energiebronnen-po",
+  "file": "./energiebronnenPo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Waarom heten ze fossiele brandstoffen?",
+  "opties": [
+   "Komen uit dode planten/dieren van lang geleden",
+   "Werken op fossielen",
+   "Zijn modern",
+   "Niet bekend"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "energiebronnen-po",
+  "file": "./energiebronnenPo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Hoe werkt kernenergie?",
+  "opties": [
+   "Splijten van uranium-atomen",
+   "Verbranden van olie",
+   "Wind invangen",
+   "Zon vangen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "energiebronnen-po",
+  "file": "./energiebronnenPo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat bedoelen we met energiearmoede?",
+  "opties": [
+   "Gezinnen die energie niet kunnen betalen",
+   "Geen elektriciteit",
+   "Veel besparen",
+   "Gratis energie voor iedereen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "energiebronnen-po",
+  "file": "./energiebronnenPo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Grootste energie-post in huishouden?",
+  "opties": [
+   "Verwarming en warm water",
+   "Verlichting",
+   "Wifi",
+   "Tv"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "energiebronnen-po",
+  "file": "./energiebronnenPo.js",
+  "stap": 5,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Energie maken = ?",
+  "opties": [
+   "Bestaat niet — alleen omzetten",
+   "Uit niets",
+   "Door wetenschap",
+   "Door pc"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "energiebronnen-po",
+  "file": "./energiebronnenPo.js",
+  "stap": 5,
+  "vraag": 8,
+  "soort": "L",
+  "q": "Wat zit er in zonnepanelen?",
+  "opties": [
+   "Cellen die licht → stroom omzetten",
+   "Olie",
+   "Kolen",
+   "Water"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "energiebronnen-po",
+  "file": "./energiebronnenPo.js",
+  "stap": 5,
+  "vraag": 10,
+  "soort": "L",
+  "q": "Wat is een kerncentrale?",
+  "opties": [
+   "Maakt stroom met kernsplijting",
+   "Wind",
+   "Zon",
+   "Gebruikt steenkool"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "energiebronnen-po",
+  "file": "./energiebronnenPo.js",
+  "stap": 5,
+  "vraag": 13,
+  "soort": "L",
+  "q": "Wat is isolatie thuis?",
+  "opties": [
+   "Materiaal dat warmte vasthoudt",
+   "Verwarming",
+   "Een soort zonnepaneel",
+   "Reclame"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "energiebronnen-po",
+  "file": "./energiebronnenPo.js",
+  "stap": 5,
+  "vraag": 15,
+  "soort": "L",
+  "q": "Wat is een kWh?",
+  "opties": [
+   "Eenheid voor elektrisch verbruik",
+   "Eenheid gewicht",
+   "Eenheid tijd",
+   "Eenheid temperatuur"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "energiebronnen-po",
+  "file": "./energiebronnenPo.js",
+  "stap": 5,
+  "vraag": 18,
+  "soort": "L",
+  "q": "Welke energiebron heeft de laagste CO₂-uitstoot?",
+  "opties": [
+   "Duurzame energie",
+   "Kolen",
+   "Olie",
+   "Gas"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "godsdiensten-culturen-po",
+  "file": "./godsdienstenCulturenPo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een godsdienst?",
+  "opties": [
+   "Geloof + rituelen + regels",
+   "Sport",
+   "Soort eten",
+   "Soort wetenschap"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "godsdiensten-culturen-po",
+  "file": "./godsdienstenCulturenPo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is atheïst?",
+  "opties": [
+   "Gelooft niet in God",
+   "Christen",
+   "Jood",
+   "Moslim"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "godsdiensten-culturen-po",
+  "file": "./godsdienstenCulturenPo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is Pasen?",
+  "opties": [
+   "Opstanding Jezus uit dood",
+   "Geboorte Jezus",
+   "Sterven van Jezus",
+   "Doop"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "godsdiensten-culturen-po",
+  "file": "./godsdienstenCulturenPo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wie is Boeddha?",
+  "opties": [
+   "Siddhartha Gautama, een Indiase prins die een nieuwe leer begon",
+   "Een hindoegod met een olifantenkop",
+   "Een profeet die de Koran doorgaf",
+   "Een Chinese keizer die de Grote Muur liet bouwen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "godsdiensten-culturen-po",
+  "file": "./godsdienstenCulturenPo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is karma?",
+  "opties": [
+   "Wat je doet komt terug",
+   "Toeval",
+   "Lijden",
+   "Geld"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "godsdiensten-culturen-po",
+  "file": "./godsdienstenCulturenPo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is nirvana in boeddhisme?",
+  "opties": [
+   "Bevrijding uit lijden + reïncarnatie",
+   "Hemel",
+   "Hel",
+   "Een meditatie-houding"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "godsdiensten-culturen-po",
+  "file": "./godsdienstenCulturenPo.js",
+  "stap": 4,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wat is atheïst?",
+  "opties": [
+   "Gelooft niet in God",
+   "Christen",
+   "Hindoe",
+   "Moslim"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "godsdiensten-culturen-po",
+  "file": "./godsdienstenCulturenPo.js",
+  "stap": 4,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Welke godsdienst gelooft in reïncarnatie (wedergeboorte)?",
+  "opties": [
+   "Hindoeïsme + Boeddhisme",
+   "Christendom",
+   "Jodendom",
+   "Islam"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "interpunctie-po",
+  "file": "./interpunctiePo.js",
+  "stap": 5,
+  "vraag": 9,
+  "soort": "L",
+  "q": "Wanneer hoofdletter in midden van zin?",
+  "opties": [
+   "Bij namen (van personen/plaatsen)",
+   "Altijd",
+   "Nooit",
+   "Alleen na komma"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "interpunctie-po",
+  "file": "./interpunctiePo.js",
+  "stap": 5,
+  "vraag": 11,
+  "soort": "L",
+  "q": "Een dubbele punt (:) zet je vóór?",
+  "opties": [
+   "Een opsomming of citaat",
+   "Vraag",
+   "Einde",
+   "Komma's"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "interpunctie-po",
+  "file": "./interpunctiePo.js",
+  "stap": 5,
+  "vraag": 15,
+  "soort": "L",
+  "q": "Een lange streep (—) kun je gebruiken voor?",
+  "opties": [
+   "Onderbreking of toelichting",
+   "Aftrekken",
+   "Niet leesteken",
+   "Vraag"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "interpunctie-po",
+  "file": "./interpunctiePo.js",
+  "stap": 5,
+  "vraag": 18,
+  "soort": "L",
+  "q": "Wat staat tussen haakjes ()?",
+  "opties": [
+   "Extra info / verduidelijking",
+   "Vraag",
+   "Naam",
+   "Niet relevant"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kaartlezen-po",
+  "file": "./kaartlezenPo.js",
+  "stap": 2,
+  "vraag": 5,
+  "soort": "H",
+  "q": "Schaal 1:25.000. 4 cm op de kaart = ___ in het echt.",
+  "opties": [
+   "1 km",
+   "4 km",
+   "100 m",
+   "10 km"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kaartlezen-po",
+  "file": "./kaartlezenPo.js",
+  "stap": 4,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Wat is een legenda op een kaart?",
+  "opties": [
+   "Uitleg van symbolen + kleuren",
+   "Naam van kaart-maker",
+   "Schaal",
+   "Datum"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kaartlezen-po",
+  "file": "./kaartlezenPo.js",
+  "stap": 4,
+  "vraag": 12,
+  "soort": "L",
+  "q": "Een legenda is?",
+  "opties": [
+   "Uitleg van symbolen op de kaart",
+   "De titel",
+   "Lijst landen",
+   "Aantal pagina's"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kaartlezen-po",
+  "file": "./kaartlezenPo.js",
+  "stap": 4,
+  "vraag": 20,
+  "soort": "L",
+  "q": "Een plattegrond is?",
+  "opties": [
+   "Kaart van een klein gebied",
+   "Wereldkaart",
+   "Atlas",
+   "Geen kaart"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kaartlezen-po",
+  "file": "./kaartlezenPo.js",
+  "stap": 4,
+  "vraag": 23,
+  "soort": "L",
+  "q": "Wat doe je bij een schaalbalk op kaart?",
+  "opties": [
+   "Meten met liniaal om afstand te weten",
+   "Niets",
+   "Tekenen",
+   "Inkleuren"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kaartlezen-po",
+  "file": "./kaartlezenPo.js",
+  "stap": 4,
+  "vraag": 24,
+  "soort": "L",
+  "q": "Welke schaal heeft een atlas-kaart van NL meestal?",
+  "opties": [
+   "1:500.000 of meer",
+   "1:10",
+   "1:100",
+   "1:50"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "klassieke-muziek-po",
+  "file": "./klassiekeMuziekPo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is klassieke muziek?",
+  "opties": [
+   "Muziek van componisten als Bach en Mozart",
+   "Popmuziek uit de hitlijsten",
+   "Jazz met veel improvisatie",
+   "Hiphop met rap"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "lichaam-gezondheid-po",
+  "file": "./lichaamGezondheidPo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is een gewricht?",
+  "opties": [
+   "Plek waar 2 botten elkaar ontmoeten",
+   "Een spier",
+   "Een bot zelf",
+   "Een orgaan"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "lichaam-gezondheid-po",
+  "file": "./lichaamGezondheidPo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat doet je hart?",
+  "opties": [
+   "Bloed pompen door je lichaam",
+   "Eten verteren",
+   "Zuurstof maken",
+   "Hersenen koelen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "lichaam-gezondheid-po",
+  "file": "./lichaamGezondheidPo.js",
+  "stap": 5,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Wat doet je hart?",
+  "opties": [
+   "Pompt bloed door je lichaam",
+   "Maakt voedsel klein",
+   "Filtert lucht",
+   "Denkt"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "lichaam-gezondheid-po",
+  "file": "./lichaamGezondheidPo.js",
+  "stap": 5,
+  "vraag": 7,
+  "soort": "L",
+  "q": "Wat doen je longen?",
+  "opties": [
+   "Lucht inademen + zuurstof opnemen",
+   "Bloed pompen",
+   "Voedsel verteren",
+   "Denken"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "lichaam-gezondheid-po",
+  "file": "./lichaamGezondheidPo.js",
+  "stap": 5,
+  "vraag": 16,
+  "soort": "L",
+  "q": "Wat doe je bij een wond met bloeding?",
+  "opties": [
+   "Schoonspoelen + verband",
+   "Negeren",
+   "Schreeuwen",
+   "Likken"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "maten-eenheden",
+  "file": "./matenEenheden.js",
+  "stap": 2,
+  "vraag": 5,
+  "soort": "H",
+  "q": "Welk gewicht is het zwaarst?",
+  "opties": [
+   "2 kg",
+   "1800 g",
+   "1950 g",
+   "1500 g"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "maten-eenheden",
+  "file": "./matenEenheden.js",
+  "stap": 4,
+  "vraag": 9,
+  "soort": "H",
+  "q": "Welke tijd duurt het langst?",
+  "opties": [
+   "2 uur",
+   "100 minuten",
+   "1,5 uur",
+   "110 minuten"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "onderwijs-niveaus-vmbo-havo-vwo",
+  "file": "./onderwijsNiveausVmboHavoVwo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "H",
+  "q": "Bij welk niveau hoort veel praktijk + leren met je handen?",
+  "opties": [
+   "vmbo",
+   "vwo",
+   "universiteit",
+   "havo"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "onderwijs-niveaus-vmbo-havo-vwo",
+  "file": "./onderwijsNiveausVmboHavoVwo.js",
+  "stap": 0,
+  "vraag": 6,
+  "soort": "H",
+  "q": "Welk niveau duurt het kortst?",
+  "opties": [
+   "vmbo",
+   "havo",
+   "vwo",
+   "Ze duren alle drie even lang"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "onderwijs-niveaus-vmbo-havo-vwo",
+  "file": "./onderwijsNiveausVmboHavoVwo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is het verschil tussen atheneum en gymnasium?",
+  "opties": [
+   "Gymnasium heeft er Latijn en Grieks bij",
+   "Gymnasium is gym/sport",
+   "Atheneum duurt 3 jaar",
+   "Er is geen verschil"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "onderwijs-niveaus-vmbo-havo-vwo",
+  "file": "./onderwijsNiveausVmboHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is een profiel op havo/vwo?",
+  "opties": [
+   "Een vast pakket vakken dat bij je past",
+   "Een foto op je pasje",
+   "Een soort gym",
+   "Een schoolreisje"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "onderwijs-niveaus-vmbo-havo-vwo",
+  "file": "./onderwijsNiveausVmboHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Op de universiteit leer je vooral...",
+  "opties": [
+   "Dingen heel diep onderzoeken en uitzoeken",
+   "Alleen met je handen werken",
+   "Niets nieuws",
+   "Hetzelfde als groep 8"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "onderwijs-niveaus-vmbo-havo-vwo",
+  "file": "./onderwijsNiveausVmboHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat betekent stapelen van opleidingen?",
+  "opties": [
+   "Diploma's na elkaar halen om hoger te komen",
+   "Boeken op elkaar leggen",
+   "Stoppen met school",
+   "Twee niveaus tegelijk doen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "onderwijs-niveaus-vmbo-havo-vwo",
+  "file": "./onderwijsNiveausVmboHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Naar een lager niveau gaan dat beter past, is...",
+  "opties": [
+   "Slim kiezen wat bij je past, geen mislukking",
+   "Altijd een mislukking",
+   "Verboden",
+   "Alleen voor luie kinderen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "ruimtevaart-po",
+  "file": "./ruimtevaartPo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is Artemis?",
+  "opties": [
+   "Een NASA-plan om terug naar de maan te gaan",
+   "Een ver sterrenstelsel",
+   "Een Russische maanraket",
+   "Een Chinees ruimtestation"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "ruimtevaart-po",
+  "file": "./ruimtevaartPo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "ISS = ?",
+  "opties": [
+   "Internationaal ruimtestation in baan",
+   "Raket",
+   "Maan",
+   "Mars-rover"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "ruimtevaart-po",
+  "file": "./ruimtevaartPo.js",
+  "stap": 3,
+  "vraag": 9,
+  "soort": "L",
+  "q": "Wat is een lichtjaar?",
+  "opties": [
+   "De afstand die licht in 1 jaar aflegt",
+   "Een jaar van licht weg",
+   "Tijd dat een ster brandt",
+   "Geen afstand"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "schemas-stappenplannen-po",
+  "file": "./schemasStappenplannenPo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Pijlen in een schema laten zien:",
+  "opties": [
+   "Verband of volgorde",
+   "De kleur",
+   "Hoeveel",
+   "Niets"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "schemas-stappenplannen-po",
+  "file": "./schemasStappenplannenPo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Stappen: 1) Tandenborstel pakken. 2) ... 3) Tanden poetsen. 4) Mond spoelen. Welke stap mist op plek 2?",
+  "opties": [
+   "Tandpasta op de borstel doen",
+   "Mond spoelen",
+   "Tandenborstel pakken",
+   "Naar bed gaan"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "schemas-stappenplannen-po",
+  "file": "./schemasStappenplannenPo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Voedselketen: zaad → muis → uil. Wat als muizen verdwijnen?",
+  "opties": [
+   "Uilen krijgen minder voedsel",
+   "Zaden eten meer",
+   "Niets",
+   "Konijnen komen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "schemas-stappenplannen-po",
+  "file": "./schemasStappenplannenPo.js",
+  "stap": 4,
+  "vraag": 12,
+  "soort": "L",
+  "q": "Wat is een stroomdiagram?",
+  "opties": [
+   "Schema met stappen en beslissingen",
+   "Tabel",
+   "Tijdslijn",
+   "Tekening"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "schemas-stappenplannen-po",
+  "file": "./schemasStappenplannenPo.js",
+  "stap": 4,
+  "vraag": 15,
+  "soort": "L",
+  "q": "In een tabel staan?",
+  "opties": [
+   "Rijen + kolommen met data",
+   "Verhalen",
+   "Pijlen",
+   "Recepten"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "schemas-stappenplannen-po",
+  "file": "./schemasStappenplannenPo.js",
+  "stap": 4,
+  "vraag": 19,
+  "soort": "L",
+  "q": "Wat zoek je in een legenda bij een schema?",
+  "opties": [
+   "Wat de symbolen betekenen",
+   "De auteur",
+   "De datum",
+   "De prijs"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "schemas-stappenplannen-po",
+  "file": "./schemasStappenplannenPo.js",
+  "stap": 4,
+  "vraag": 20,
+  "soort": "L",
+  "q": "Bij een flowchart: wat doe je bij een ruit?",
+  "opties": [
+   "Antwoord op ja/nee-vraag kiezen",
+   "Stap uitvoeren",
+   "Stoppen",
+   "Nieuw begin"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "schemas-stappenplannen-po",
+  "file": "./schemasStappenplannenPo.js",
+  "stap": 4,
+  "vraag": 21,
+  "soort": "L",
+  "q": "Wat is een Venn-diagram?",
+  "opties": [
+   "Cirkels die overlappen om gemeenschappelijk te tonen",
+   "Een tijdslijn met jaartallen",
+   "Een boom met vertakkingen",
+   "Een tabel met rijen en kolommen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "schemas-stappenplannen-po",
+  "file": "./schemasStappenplannenPo.js",
+  "stap": 4,
+  "vraag": 22,
+  "soort": "L",
+  "q": "Wat is de zin 'kijk in tabel 2' in een tekst?",
+  "opties": [
+   "Een verwijzing/referentie",
+   "Een mening",
+   "Een conclusie",
+   "Onzin"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "schemas-stappenplannen-po",
+  "file": "./schemasStappenplannenPo.js",
+  "stap": 4,
+  "vraag": 24,
+  "soort": "L",
+  "q": "Wat doet een pijl in een stappenplan?",
+  "opties": [
+   "Wijst naar volgende stap",
+   "Verbiedt",
+   "Toont fouten",
+   "Markeert begin"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "spelling-ei-ij-au-ou",
+  "file": "./spellingEiIjAuOu.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat zijn homofonen?",
+  "opties": [
+   "Woorden die hetzelfde klinken, anders geschreven",
+   "Woorden die hetzelfde betekenen",
+   "Woorden die op elkaar rijmen",
+   "Woorden met dezelfde letters"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "sterren-planeten",
+  "file": "./sterrenPlaneten.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat veroorzaakt eb en vloed op Aarde?",
+  "opties": [
+   "Zwaartekracht van de Maan",
+   "Wind",
+   "Onderzeese aardbevingen",
+   "Regen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "sterren-planeten",
+  "file": "./sterrenPlaneten.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is Olympus Mons?",
+  "opties": [
+   "Hoogste vulkaan in het zonnestelsel",
+   "Planeet van Olympus",
+   "Een stad op Mars",
+   "Een ster"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "sterren-planeten",
+  "file": "./sterrenPlaneten.js",
+  "stap": 7,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is een komeet?",
+  "opties": [
+   "Vuile sneeuwbal van ijs + stof",
+   "Stuk roest",
+   "Heel kleine planeet",
+   "Ster die uitdooft"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "sterren-planeten",
+  "file": "./sterrenPlaneten.js",
+  "stap": 8,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat veroorzaakt eb en vloed op Aarde?",
+  "opties": [
+   "Zwaartekracht van de maan",
+   "Regen",
+   "Wind",
+   "Vulkanisme"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "sterren-planeten",
+  "file": "./sterrenPlaneten.js",
+  "stap": 8,
+  "vraag": 14,
+  "soort": "L",
+  "q": "Wat veroorzaakt seizoenen?",
+  "opties": [
+   "Schuine stand aarde + draai om zon",
+   "Maan",
+   "Zon dichterbij",
+   "Wolken"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "werelddelen-landen-po",
+  "file": "./werelddelenLandenPo.js",
+  "stap": 3,
+  "vraag": 8,
+  "soort": "L",
+  "q": "Wat is een continent?",
+  "opties": [
+   "Een heel groot stuk land",
+   "Een land",
+   "Een berg",
+   "Een zee"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "werkwoordsspelling-dt",
+  "file": "./werkwoordsspellingDT.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "H",
+  "q": "Wat is de stam van werken?",
+  "opties": [
+   "werk",
+   "werken",
+   "wer",
+   "wert"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "werkwoordsspelling-dt",
+  "file": "./werkwoordsspellingDT.js",
+  "stap": 3,
+  "vraag": 5,
+  "soort": "H",
+  "q": "Kies de juiste vorm van praten: 'Oma ____ heel zacht.'",
+  "opties": [
+   "praat",
+   "praatt",
+   "praten",
+   "prat"
+  ],
+  "answer": 0
+ }
+]

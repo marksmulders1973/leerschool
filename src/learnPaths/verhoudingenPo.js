@@ -1544,7 +1544,7 @@ const steps = [
       { q: "Schaal 1:5 op een tekening. 2 cm op de tekening = hoeveel in het echt?", options: ["10 cm","5 cm","½ cm","20 cm"], answer: 0, wrongHints: [null, "Niet vermenigvuldigd.", "Andersom.", "Niet."] },
       { q: "8 m² muur kost 12 euro verf. 24 m²?", options: ["€36","€18","€48","€12"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Geen vermenigvuldiging."] },
       { q: "Op kaart 1:50.000 is 4 cm = welke afstand?", options: ["2 km","20 m","200 m","20 km"], answer: 0, wrongHints: [null, "Te weinig.", "Niet.", "Te veel."] },
-      { q: "Wat is een **verhouding**?", options: ["Een vergelijking tussen getallen, zoals 2 : 3","De uitkomst van een plussom","De uitkomst van een minsom","De uitkomst van een keersom"], answer: 0, wrongHints: [null, "Optellen.", "Aftrekken.", "Vermenigvuldigen."] },
+      { q: "Wat is een **verhouding**?", options: ['Een vergelijking, zoals 2 : 3', 'De uitkomst van een plussom', 'De uitkomst van een minsom', 'De uitkomst van een keersom'], answer: 0, wrongHints: [null, "Optellen.", "Aftrekken.", "Vermenigvuldigen."] },
       { q: "5 leerlingen in 3 banken — gemiddeld?", options: ["~1,7","3","5","~2,5"], answer: 0, wrongHints: [null, "Aantal banken.", "Aantal leerlingen.", "Dat zou bij 2 banken horen."] },
       { q: "Recept 2 eieren voor 4 personen. Voor 6 personen?", options: ["3 eieren","2 eieren","4 eieren","6 eieren"], answer: 0, wrongHints: [null, "Niet meer.", "Te veel.", "Niet zo."] },
       { q: "Plant groeit 5 cm in 2 weken. Per week?", options: ["2,5 cm","5 cm","7 cm","10 cm"], answer: 0, wrongHints: [null, "Dat is 2 weken.", "Niet — niet plus.", "Te veel."] },

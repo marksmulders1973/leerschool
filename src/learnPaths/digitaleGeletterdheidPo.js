@@ -81,7 +81,7 @@ const steps = [
       },
       {
         q: "Wat is **ChatGPT**?",
-        options: ["AI die tekst maakt + vragen beantwoordt", "Spel", "Browser", "Wifi"],
+        options: ["AI die tekst maakt en vragen beantwoordt", "Een spelletje voor op je telefoon", "Een browser om websites te openen", "Een soort wifi voor je telefoon"],
         answer: 0,
         wrongHints: [null, "Geen entertainment — een werktuig.", "Geen surfprogramma — een gesprek.", "Geen netwerk-signaal — een dienst."],
         uitlegPad: {
@@ -118,15 +118,15 @@ const steps = [
     checks: [
       {
         q: "Hoe **exacte zin** zoeken in Google?",
-        options: ["Met aanhalingstekens (\"zin\")", "Hoofdletters", "Veel spaties", "Niet mogelijk"],
+        options: ["Met aanhalingstekens (\"zin\")", "Met alleen hoofdletters", "Met veel spaties ertussen", "Dat kan niet in Google"],
         answer: 0,
-        wrongHints: [null, "Maakt niets uit.", "Niet.", "Wel mogelijk."],
+        wrongHints: [null, "Hoofdletters maken voor Google niets uit.", "Extra spaties slaat Google gewoon over.", "Het kan wel, met een handig teken."],
       },
       {
         q: "Welke bron is meestal **betrouwbaar**?",
-        options: ["Rijksoverheid + wetenschapsuniversiteit", "TikTok-influencer", "AI zonder check", "Onbekende blog"],
+        options: ["Website van de Rijksoverheid", "Filmpje van een TikTok-influencer", "Antwoord van AI zonder check", "Blog van een onbekend iemand"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet primair.", "Niet."],
+        wrongHints: [null, "Een influencer deelt vaak een mening.", "AI kan dingen verzinnen. Wat moet je dan nog doen?", "Wie heeft het geschreven? Dat weet je niet."],
         uitlegPad: {
           stappen: [
             { titel: "Niet alle bronnen even goed", tekst: "Op internet kan IEDEREEN iets publiceren. Daarom moet je leren WIE iets heeft geschreven en of die persoon kennis van zaken heeft." },
@@ -152,9 +152,9 @@ const steps = [
       },
       {
         q: "Wat is **kruis-controleren**?",
-        options: ["2-3 onafhankelijke bronnen vergelijken", "Eén keer kijken", "Niet vragen", "Gokken"],
+        options: ["2-3 onafhankelijke bronnen vergelijken", "Eén keer kijken op één site", "Niets vragen en meteen geloven", "Gokken welke bron het beste is"],
         answer: 0,
-        wrongHints: [null, "1 bron is te weinig.", "Juist wel — kritisch vragen.", "Zekerheid uit gokken? Nee."],
+        wrongHints: [null, "1 bron is te weinig.", "Kritisch zijn hoort er juist bij.", "Zekerheid uit gokken? Nee."],
       },
       {
         q: "Wat is **AI-hallucinatie**?",
@@ -200,9 +200,9 @@ const steps = [
       },
       {
         q: "Wat is **phishing**?",
-        options: ["Nep-email om gegevens te stelen", "Spel", "Vis vangen", "Soort virus"],
+        options: ["Nep-email om gegevens te stelen", "Een online spel over vissen", "Vis vangen met een hengel", "Een soort computervirus"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Letterlijk niet.", "Geen programma dat je computer besmet — het probeert jóú te misleiden."],
+        wrongHints: [null, "Het klinkt als 'fishing', maar het is geen spel.", "Het klinkt als vissen. Maar wat proberen oplichters te 'vangen'?", "Geen programma dat je computer besmet — het probeert jóú te misleiden."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is phishing?", tekst: "**Phishing** = 'hengelen' (visserij in Engels) naar persoonlijke gegevens. Een **nep-email**, **nep-sms** of **nep-website** doet alsof het van je bank, postNL of school is — maar is van een **oplichter**." },
@@ -228,15 +228,15 @@ const steps = [
       },
       {
         q: "Wat is **2FA / twee-staps-verificatie**?",
-        options: ["Een tweede check bij het inloggen", "2 wachtwoorden", "Een virusscanner", "Adres-check"],
+        options: ["Een tweede check bij het inloggen", "Twee verschillende wachtwoorden", "Een virusscanner op je computer", "Een controle van je huisadres"],
         answer: 0,
         wrongHints: [null, "Twee dingen die je allebei moet onthouden? Denk eerder aan een code op je telefoon.", "Een virusscanner zoekt schadelijke programma's.", "Je adres heeft er niets mee te maken."],
       },
       {
         q: "**Screen-tijd advies** kind 6-12 jaar?",
-        options: ["~2 uur entertainment per dag", "Geen", "8+ uur", "Onbeperkt"],
+        options: ["~2 uur entertainment per dag", "Helemaal geen schermtijd", "Zeker 8 uur of meer per dag", "Onbeperkt, zoveel als je wilt"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te veel.", "Niet."],
+        wrongHints: [null, "Een beetje scherm mag best.", "Dat is langer dan een hele schooldag.", "Zonder grens wordt het snel te veel."],
       },
     ],
   },
@@ -248,11 +248,11 @@ const steps = [
       { q: "Wie bedacht **WWW**?", options: ["Tim Berners-Lee", "Gates", "Jobs", "Zuckerberg"], answer: 0, wrongHints: [null, "Maakte Windows, niet het WWW.", "Maakte Apple-computers, niet het WWW.", "Maakte Facebook, niet het WWW."] },
       { q: "Welk **wachtwoord** is goed?", options: ["Mijn-kat-eet-vis-2024!", "12345", "naam", "Wachtwoord"], answer: 0, wrongHints: [null, "1 van de meest-gehackte ooit.", "Veel te makkelijk te raden.", "Letterlijk het woord 'wachtwoord' — top-5 hack-lijst."] },
       { q: "Wat is **AI-hallucinatie**?", options: ["AI verzint feiten", "AI slaapt", "AI wordt gehackt", "AI raakt overbelast"], answer: 0, wrongHints: [null, "AI slaapt niet.", "Hacken is inbreken — de AI verzint dan zelf niets.", "Overbelast = traag, niet iets verzinnen."] },
-      { q: "Wat is **AVG**?", options: ["EU-privacy-wet sinds 2018", "Belasting", "Bank", "School"], answer: 0, wrongHints: [null, "Geen heffing — een wet.", "Geen geldinstelling.", "Geen onderwijs — een regel."] },
-      { q: "Wat doe je bij **cyberpesten**?", options: ["Screenshot + blokkeren + volwassene", "Negeren", "Terug-pesten", "Niet vertellen"], answer: 0, wrongHints: [null, "Niet altijd genoeg.", "Maakt erger.", "Wel praten."] },
+      { q: "Wat is **AVG**?", options: ["EU-privacy-wet sinds 2018", "Een Nederlandse belasting", "Een bank voor spaargeld", "Een school voor computerles"], answer: 0, wrongHints: [null, "Belasting gaat over geld. Waar gaat de AVG over?", "Een bank bewaart geld. Waar gaat de AVG over?", "Op school leer je. Waar gaat de AVG over?"] },
+      { q: "Wat doe je bij **cyberpesten**?", options: ["Screenshot + blokkeren + volwassene", "Negeren en hopen dat het stopt", "Terugpesten met een gemeen bericht", "Het niemand vertellen en wachten"], answer: 0, wrongHints: [null, "Hopen helpt vaak niet. Wat kun je zelf doen?", "Dan wordt het vaak alleen maar erger.", "Wie kan je helpen als je het vertelt?"] },
       {
         q: "Wat is een **phishing-mail**?",
-        options: ["Nep-mail die gegevens probeert te stelen", "Reclamemail van winkel", "Mail van leraar", "Spam met grappen"],
+        options: ["Nep-mail die gegevens probeert te stelen", "Reclamemail van een winkel met korting", "Mail van je leraar over huiswerk", "Spammail met grappen en filmpjes"],
         answer: 0,
         wrongHints: [null, "Reclamemail = vervelend maar geen oplichting.", "Echte mail = geen phishing.", "Spam is irritant maar niet altijd oplichting."],
         uitlegPad: {
@@ -277,7 +277,7 @@ const steps = [
       },
       {
         q: "Wat is een **cookie** op internet?",
-        options: ["Bestandje van een website om je te herkennen", "Snoepje", "Virus", "Wachtwoord"],
+        options: ["Bestandje van een website om je te herkennen", "Een snoepje dat je online kunt kopen", "Een virus dat je computer stuk maakt", "Een geheim wachtwoord voor een website"],
         answer: 0,
         wrongHints: [null, "Niet — wel toevallig zelfde naam als koekje.", "Een cookie is geen schadelijk programma.", "Niet — wachtwoord = jouw geheim, cookie = van website."],
         uitlegPad: {
@@ -302,7 +302,7 @@ const steps = [
       },
       {
         q: "Wat is een **algoritme**?",
-        options: ["Stappenplan dat computer volgt om iets te beslissen", "Computer-virus", "Wachtwoord", "Internet-kabel"],
+        options: ["Stappenplan dat een computer volgt", "Een virus dat je computer besmet", "Het wachtwoord van een computer", "Een kabel die internet binnenbrengt"],
         answer: 0,
         wrongHints: [null, "Niet — virus is schadelijk programma.", "Wachtwoord is jouw geheim.", "Kabel is hardware."],
         uitlegPad: {
@@ -325,24 +325,24 @@ const steps = [
           niveaus: { basis: "Stappenplan computer.", simpeler: "Algoritme = stappenplan dat computer volgt om iets te beslissen of berekenen. Bv. welke TikTok-video je ziet of welke route Google Maps kiest.", nogSimpeler: "Stappenplan" },
         },
       },
-      { q: "Wat is een **sterk wachtwoord**?", options: ["Lang + cijfers + tekens + niet je naam","Je verjaardag","Naam huisdier","123456"], answer: 0, wrongHints: [null, "Te makkelijk te vinden online.", "Gemakkelijk te raden.", "Top 1 gehackt wachtwoord."] },
-      { q: "Wat is **phishing**?", options: ["Nep-mail om je wachtwoord te stelen","Een vissport","Een online-spel","Een browser"], answer: 0, wrongHints: [null, "Niet relevant.", "Niet.", "Niet."] },
+      { q: "Wat is een **sterk wachtwoord**?", options: ["Lang + cijfers + tekens + niet je naam","Je naam met je verjaardag erachter","De naam van je huisdier","Een makkelijk getal zoals 123456"], answer: 0, wrongHints: [null, "Te makkelijk te vinden online.", "Gemakkelijk te raden.", "Top 1 gehackt wachtwoord."] },
+      { q: "Wat is **phishing**?", options: ["Nep-mail om je wachtwoord te stelen","Een sport waarbij je vis vangt","Een online spel over de zee","Een browser om mee te surfen"], answer: 0, wrongHints: [null, "Het klinkt als vissen. Maar wat proberen oplichters te 'vangen'?", "Is phishing iets leuks, of juist iets gevaarlijks?", "Is phishing iets leuks, of juist iets gevaarlijks?"] },
       { q: "Wat heeft een site met **HTTPS**?", options: ["Veiligere verbinding","Snellere verbinding","Geen kosten","Geen reclame"], answer: 0, wrongHints: [null, "Snelheid los van HTTP/HTTPS.", "Niets met kosten.", "Niets met reclame."] },
-      { q: "Wat doet een **AI-hallucinatie**?", options: ["De AI verzint iets dat niet klopt","De AI hoort geluiden","De AI ziet kleuren","De AI maakt foto's"], answer: 0, wrongHints: [null, "AI heeft geen oren — alleen tekst.", "AI heeft geen ogen voor kleur — alleen pixels.", "AI kan plaatjes maken, maar zo heet 'hallucinatie' niet."] },
-      { q: "Wat is **2FA** (twee-factor-authenticatie)?", options: ["Extra check naast je wachtwoord","Twee wachtwoorden","Een virusscanner","Reclame"], answer: 0, wrongHints: [null, "Twee dingen onthouden? Denk eerder aan een code op je telefoon.", "Een virusscanner zoekt schadelijke programma's.", "Niet."] },
-      { q: "Wat is **cyberpesten**?", options: ["Pesten via internet/sociale media","Ruzie op het schoolplein","Game","Reclame"], answer: 0, wrongHints: [null, "'Cyber' betekent: via computers en internet.", "Niet.", "Niet."] },
-      { q: "Wat is **AVG** (privacy-wet)?", options: ["EU-regels voor persoonsgegevens","Game","Reclame","Een virusscanner"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Een virusscanner is software, geen regel."] },
-      { q: "Wat is een **browser**?", options: ["Programma om websites te openen","Een toetsenbord","Camera","Een zoekwoord"], answer: 0, wrongHints: [null, "Hardware.", "Hardware.", "Een zoekwoord typ je ín een programma."] },
+      { q: "Wat doet een **AI-hallucinatie**?", options: ["De AI verzint iets dat niet klopt","De AI hoort geluiden die er niet zijn","De AI ziet kleuren die er niet zijn","De AI maakt foto's van mensen"], answer: 0, wrongHints: [null, "AI heeft geen oren — alleen tekst.", "AI heeft geen ogen voor kleur — alleen pixels.", "AI kan plaatjes maken, maar zo heet 'hallucinatie' niet."] },
+      { q: "Wat is **2FA** (twee-factor-authenticatie)?", options: ["Extra check naast je wachtwoord","Twee wachtwoorden tegelijk","Een virusscanner op je laptop","Reclame bij het inloggen"], answer: 0, wrongHints: [null, "Twee dingen onthouden? Denk eerder aan een code op je telefoon.", "Een virusscanner zoekt schadelijke programma's.", "Reclame beschermt je account niet."] },
+      { q: "Wat is **cyberpesten**?", options: ["Pesten via internet/sociale media","Ruzie op het schoolplein","Een online game met vrienden","Vervelende reclame op internet"], answer: 0, wrongHints: [null, "'Cyber' betekent: via computers en internet.", "Is cyberpesten iets leuks?", "Reclame wil je iets verkopen. Wat doet een pester?"] },
+      { q: "Wat is **AVG** (privacy-wet)?", options: ["EU-regels voor persoonsgegevens","Een Europese online game","Reclame van Europese winkels","Een virusscanner van de EU"], answer: 0, wrongHints: [null, "Privacy gaat over iets van jóu. Wat is dat?", "Privacy gaat over iets van jóu. Wat is dat?", "Privacy gaat over iets van jóu. Wat is dat?"] },
+      { q: "Wat is een **browser**?", options: ["Programma om websites te openen","Een toetsenbord om te typen","Een camera boven je scherm","Een zoekwoord dat je intypt"], answer: 0, wrongHints: [null, "Een toetsenbord kun je vastpakken. Een browser niet.", "Een camera kun je vastpakken. Een browser niet.", "Een zoekwoord typ je ín een programma."] },
       { q: "Wat is een **URL**?", options: ["Webadres","Pagina","Toetsenbord","Wachtwoord"], answer: 0, wrongHints: [null, "Inhoud.", "Hardware.", "Een wachtwoord is geheim; een URL deel je juist."] },
       { q: "Wat is **CPU**?", options: ["De chip die alle berekeningen doet","Het scherm waarop je beelden ziet","Het toetsenbord waarmee je typt","Een programma dat je installeert"], answer: 0, wrongHints: [null, "Het scherm is output: het laat zien wat de computer doet.", "Het toetsenbord is input: daarmee geef je opdrachten.", "Een programma is software, geen onderdeel in de computerkast."] },
-      { q: "Wat is een **download**?", options: ["Bestand binnenhalen van internet","Bestand verzenden","Bestand verwijderen","Reclame"], answer: 0, wrongHints: [null, "Upload.", "Verwijderen is iets anders dan binnenhalen.", "Niet."] },
-      { q: "Wat is een **cookie** op websites?", options: ["Klein bestandje dat info onthoudt","Eten","Een virus","Reclame"], answer: 0, wrongHints: [null, "Letterlijk wel, maar bedoeld is digitaal.", "Een cookie is geen schadelijk programma.", "Niet primair."] },
-      { q: "Wat is een **virus** (software)?", options: ["Schadelijk programma","Ziekte","Een back-up","Game"], answer: 0, wrongHints: [null, "Letterlijk wel, hier digitaal.", "Een back-up is een reservekopie.", "Niet."] },
-      { q: "Wat doet een **firewall**?", options: ["Beschermt computer tegen aanvallen","Vuurmuur letterlijk","Maakt de computer sneller","Bouwt website"], answer: 0, wrongHints: [null, "Niet bedoeld.", "Gaat een firewall over snelheid of over veiligheid?", "Niet."] },
-      { q: "Wat is **deepfake**?", options: ["Nep-video gemaakt door AI","Echte video","Boek","Computervirus"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Een virus is een schadelijk programma."] },
-      { q: "Wat is **bron-controle** bij zoeken?", options: ["Checken of bron betrouwbaar is","Klakkeloos overnemen","Zo snel mogelijk zoeken","Reclame"], answer: 0, wrongHints: [null, "Tegengestelde.", "Snel is niet hetzelfde als betrouwbaar.", "Niet."] },
+      { q: "Wat is een **download**?", options: ["Bestand binnenhalen van internet","Bestand verzenden naar internet","Bestand verwijderen van je computer","Reclame die op je scherm verschijnt"], answer: 0, wrongHints: [null, "Verzenden heet uploaden. Wat is het omgekeerde?", "Verwijderen is iets anders dan binnenhalen.", "Denk aan 'down': naar beneden, naar jou toe."] },
+      { q: "Wat is een **cookie** op websites?", options: ["Klein bestandje dat info onthoudt","Een koekje dat je online bestelt","Een virus dat bestanden wist","Reclame die op je scherm springt"], answer: 0, wrongHints: [null, "Letterlijk wel, maar bedoeld is digitaal.", "Een cookie is geen schadelijk programma.", "Cookies helpen soms bij reclame, maar wat ís een cookie zelf?"] },
+      { q: "Wat is een **virus** (software)?", options: ["Schadelijk programma","Een ziekte van mensen","Een back-up van je foto's","Een spel op de computer"], answer: 0, wrongHints: [null, "Letterlijk wel, hier digitaal.", "Een back-up is een reservekopie.", "Een spel is leuk. Is een virus leuk?"] },
+      { q: "Wat doet een **firewall**?", options: ["Beschermt computer tegen aanvallen","Koelt de computer als hij te warm wordt","Maakt de computer een stuk sneller","Helpt je om een website te bouwen"], answer: 0, wrongHints: [null, "Koelen doet een ventilator. Wat houdt een muur tegen?", "Een firewall maakt niets sneller. Wat houdt een muur tegen?", "Een website bouw je zelf. Wat houdt een muur tegen?"] },
+      { q: "Wat is **deepfake**?", options: ["Nep-video gemaakt door AI","Echte video van het nieuws","Een duikfilm over de diepzee","Een virus in je computer"], answer: 0, wrongHints: [null, "Wat betekent het Engelse woord 'fake'?", "'Deep' betekent diep, maar het gaat niet over de zee.", "Een virus is een schadelijk programma."] },
+      { q: "Wat is **bron-controle** bij zoeken?", options: ["Checken of bron betrouwbaar is","Klakkeloos alles overnemen","Zo snel mogelijk iets vinden","Reclame wegklikken bij zoeken"], answer: 0, wrongHints: [null, "Alles overnemen zonder nadenken: is dat controleren?", "Snel is niet hetzelfde als betrouwbaar.", "Reclame wegklikken is handig, maar is dat controleren?"] },
       { q: "Welke leeftijd voor **TikTok** officieel?", options: ["13+","8+","18+","Geen grens"], answer: 0, wrongHints: [null, "Te laag.", "Niet wettelijk.", "Wel grens."] },
-      { q: "Wat is een **back-up**?", options: ["Kopie van bestanden voor noodgeval","Origineel","Een virus","Reclame"], answer: 0, wrongHints: [null, "Tegengestelde.", "Een virus is een schadelijk programma.", "Niet."] },
+      { q: "Wat is een **back-up**?", options: ["Kopie van bestanden voor noodgeval","Het origineel van een bestand","Een virus dat bestanden kopieert","Reclame voor een nieuwe computer"], answer: 0, wrongHints: [null, "Het origineel heb je al. Wat maak je erbij?", "Een virus is een schadelijk programma.", "Reclame bewaart niets voor je."] },
       { q: "Welk **teken** in de adresbalk hoort bij een veilige **HTTPS**-verbinding?", options: ["Een gesloten slotje","Een rood 'Niet veilig'-label","Een knipperend scherm","Een geel uitroepteken"], answer: 0, wrongHints: [null, "Dat is juist een waarschuwing.", "Een browser laat geen knipperend scherm zien bij veilige sites.", "Dat is een waarschuwing, geen veilig-teken."] },
     ],
   },

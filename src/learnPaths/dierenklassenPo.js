@@ -467,11 +467,11 @@ const steps = [
       { q: "Welke diergroep heeft **schubben**?", options: ["Vissen + reptielen","Vogels","Zoogdieren","Insecten"], answer: 0, wrongHints: [null, "Veren.", "Haar.", "Een hard pantser."] },
       { q: "Hoeveel **lichaamsdelen** heeft een insect?", options: ["3","2","4","6"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Aantal poten."] },
       { q: "Een **spin** is een?", options: ["Geen insect","Insect","Reptiel","Zoogdier"], answer: 0, wrongHints: [null, "Tel de poten: insecten hebben er 6.", "Niet.", "Niet."] },
-      { q: "Welk dier is een **planteneter**?", options: ["Konijn","Vos","Uil","Haai"], answer: 0, wrongHints: [null, "Een vos eet vooral andere dieren, zoals konijnen en muizen.", "Een uil vangt muizen: dat is een vleeseter.", "Een haai eet vissen: dat is een vleeseter."] },
+      { q: "Welk dier is een **planteneter**?", options: ["Konijn","Vos","Uil","Haai"], answer: 0, wrongHints: [null, "Een vos eet vooral andere dieren, zoals muizen en vogels.", "Een uil vangt muizen: dat is een vleeseter.", "Een haai eet vissen: dat is een vleeseter."] },
       { q: "Welk dier is een **alleseter**?", options: ["Varken","Koe","Konijn","Leeuw"], answer: 0, wrongHints: [null, "Een koe eet alleen gras en andere planten.", "Een konijn eet alleen planten.", "Een leeuw eet alleen vlees."] },
       { q: "Hoe planten zoogdieren zich voort?", options: ["Levende jongen baren","Eieren leggen","Zich in tweeën delen","Zaadjes maken"], answer: 0, wrongHints: [null, "Vogel/reptiel/vis (bij zoogdieren alleen het vogelbekdier en de mierenegel).", "Zo doen bacteriën het.", "Zo doen planten het."] },
       { q: "Welke diergroep **ademt door longen ÉN huid**?", options: ["Amfibieën","Vogels","Vissen","Insecten"], answer: 0, wrongHints: [null, "Alleen longen.", "Kieuwen.", "Via buisjes in hun lijf."] },
-      { q: "Wat is een **roofdier** (predator)?", options: ["Dier dat op andere dieren jaagt","Planten-eter","Aaseter","Allesvreter"], answer: 0, wrongHints: [null, "Tegengestelde.", "Een aaseter jaagt niet — hij eet dieren die al dood zijn.", "Een allesvreter eet ook planten — dat is breder."] },
+      { q: "Wat is een **roofdier** (predator)?", options: ["Dier dat op andere dieren jaagt", "Dier dat alleen planten eet", "Dier dat dode dieren opeet", "Dier dat planten én vlees eet"], answer: 0, wrongHints: [null, "Een planteneter vangt geen andere dieren.", "Een aaseter jaagt niet — hij eet dieren die al dood zijn.", "Een allesvreter eet ook planten — dat is breder."] },
     ],
   },
 ];

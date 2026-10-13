@@ -341,12 +341,7 @@ const steps = [
       },
       {
         q: "Waarom rond je bij de bussen naar boven af?",
-        options: [
-          "de overgebleven kinderen moeten ook mee",
-          "bussen zijn duur",
-          "het is altijd naar boven",
-          "8 is een even getal",
-        ],
+        options: ["de overgebleven kinderen moeten ook mee","bussen zijn erg duur om te huren","je rondt deelsommen altijd naar boven af","8 is een even getal, dus dat moet"],
         answer: 0,
         wrongHints: [null, "De prijs heeft er niets mee te maken.", "Niet altijd — soms rond je juist naar beneden af.", "Of het even is, maakt niet uit."],
         uitlegPad: {
@@ -672,12 +667,7 @@ const steps = [
       },
       {
         q: "Waarom rond je bij volle dozen naar beneden af?",
-        options: [
-          "een doos die niet vol is, telt niet als 'vol'",
-          "eieren zijn breekbaar",
-          "het is altijd naar beneden",
-          "6 is een even getal",
-        ],
+        options: ["een halfvolle doos telt niet als vol","eieren kunnen snel breken in een doos","je rondt deelsommen altijd naar beneden af","6 is een even getal, dus dat moet"],
         answer: 0,
         wrongHints: [null, "Breekbaarheid heeft er niets mee te maken.", "Niet altijd — soms juist naar boven.", "Of het even is, maakt niet uit."],
         uitlegPad: {

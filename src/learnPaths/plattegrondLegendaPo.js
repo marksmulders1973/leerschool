@@ -54,12 +54,7 @@ const steps = [
       },
       {
         q: "Waarvoor gebruik je een plattegrond?",
-        options: [
-          "om de weg te vinden en te zien waar iets is",
-          "om te weten hoe laat het is",
-          "om het weer te voorspellen",
-          "om een verhaal te lezen",
-        ],
+        options: ["om te zien waar iets ligt","om te weten hoe laat het is","om het weer te voorspellen","om een verhaal te lezen"],
         answer: 0,
         wrongHints: [null, "Daar gebruik je een klok voor.", "Daar gebruik je een weerbericht voor.", "Een plattegrond is geen verhaal."],
         uitlegPad: {
@@ -212,12 +207,7 @@ const steps = [
       },
       {
         q: "Waarom is een legenda handig?",
-        options: [
-          "zonder uitleg weet je niet wat de tekens betekenen",
-          "het maakt de kaart kleurrijker",
-          "het vertelt hoe laat het is",
-          "het is verplicht maar nutteloos",
-        ],
+        options: ["het legt uit wat de tekens betekenen","het maakt de kaart mooier en kleurrijker","het vertelt je hoe laat het nu is","het is verplicht, maar niet nuttig"],
         answer: 0,
         wrongHints: [null, "Het gaat om begrijpen, niet om kleur.", "Een legenda zegt niets over de tijd.", "Een legenda is juist heel nuttig."],
         uitlegPad: {
@@ -537,14 +527,9 @@ const steps = [
     checks: [
       {
         q: "Je zoekt de kapper in een groot winkelcentrum. Wat gebruik je het best?",
-        options: [
-          "de plattegrond met de legenda",
-          "het weerbericht",
-          "een klok",
-          "een woordenboek",
-        ],
+        options: ["de plattegrond met legenda","het weerbericht van vandaag","de grote klok bij de ingang","een folder met aanbiedingen"],
         answer: 0,
-        wrongHints: [null, "Het weer helpt je niet de kapper te vinden.", "Een klok zegt niet waar de kapper is.", "Een woordenboek geeft betekenissen, geen plekken."],
+        wrongHints: [null,"Het weer helpt je niet de kapper te vinden.","Een klok zegt niet waar de kapper is.","Een folder vertelt wat iets kost, niet waar het is."],
         uitlegPad: {
           stappen: [{ titel: "Plattegrond + legenda", tekst: "Met de plattegrond en de legenda vind je waar de kapper zit." }],
           niveaus: {
@@ -589,12 +574,7 @@ const steps = [
       },
       {
         q: "Op de legenda: 🚻 = toilet. Je moet snel naar het toilet. Wat doe je?",
-        options: [
-          "het 🚻-symbool op de plattegrond opzoeken",
-          "de plattegrond omdraaien",
-          "de legenda weggooien",
-          "naar de uitgang lopen",
-        ],
+        options: ["het 🚻-teken op de kaart zoeken","de plattegrond op zijn kop draaien","de legenda gewoon weggooien","meteen naar de uitgang lopen"],
         answer: 0,
         wrongHints: [null, "Omdraaien helpt je het toilet niet vinden.", "Juist de legenda heb je nodig.", "De uitgang is niet het toilet."],
         uitlegPad: {
@@ -608,12 +588,7 @@ const steps = [
       },
       {
         q: "Je zoekt de speeltuin in een park. In de legenda staat een glijbaan-symbool. Wat doe je?",
-        options: [
-          "het glijbaan-symbool op de kaart opzoeken",
-          "naar de uitgang lopen",
-          "de legenda overslaan",
-          "bij de ingang blijven wachten",
-        ],
+        options: ["de glijbaan op de kaart zoeken","meteen naar de uitgang lopen","de legenda helemaal overslaan","bij de ingang blijven wachten"],
         answer: 0,
         wrongHints: [null, "De uitgang is niet de speeltuin.", "Juist de legenda wijst je het symbool.", "Wachten brengt je niet bij de speeltuin."],
         uitlegPad: {

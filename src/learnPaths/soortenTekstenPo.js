@@ -226,7 +226,7 @@ const steps = [
       },
       {
         q: "Wat herken je vaak in een instructieve tekst?",
-        options: ["genummerde stappen die je uitvoert", "een spannend einde", "een mening van de schrijver", "het laatste nieuws"],
+        options: ["genummerde stappen die je uitvoert","een spannend einde aan het verhaal","de mening van de schrijver over iets","het laatste nieuws uit de buurt"],
         answer: 0,
         wrongHints: [null, "Een spannend einde hoort bij een verhaal.", "Een mening hoort bij een betogende tekst.", "Nieuws hoort bij een informatieve tekst."],
         uitlegPad: {
@@ -273,7 +273,7 @@ const steps = [
       },
       {
         q: "Hoe herken je een instructieve tekst aan het taalgebruik?",
-        options: ["werkwoorden als 'pak', 'vouw', 'druk op' — opdrachten", "zinnen zoals 'er was eens...'", "woorden als 'want' en 'daarom moet je'", "vragen zoals 'wist je dat...'"],
+        options: ["opdrachten zoals 'pak', 'vouw' en 'druk op'","zinnen zoals 'er was eens...' en 'toen'","woorden als 'want' en 'daarom moet je'","vragen zoals 'wist je dat...?' en feiten"],
         answer: 0,
         wrongHints: [null, "Dat hoor je in verhalen.", "Die horen bij een betogende tekst.", "Dat hoort eerder bij een informatieve tekst."],
         uitlegPad: {

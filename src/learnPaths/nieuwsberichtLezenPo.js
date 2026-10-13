@@ -514,20 +514,10 @@ Tip: je hoeft niets uit je hoofd te weten. Terugkijken in de tekst mag altijd �
       },
       {
         q: "Waar staat de nieuwe speeltoren?",
-        options: [
-          "Op het schoolplein van basisschool De Klimboom in Weidedorp",
-          "In de speeltuin midden in het dorp",
-          "Bij het gemeentehuis van Weidedorp",
-          "Op het plein voor de sporthal",
-        ],
+        options: ["Op het schoolplein van basisschool De Klimboom in Weidedorp", "In de nieuwe speeltuin midden in het dorp Weidedorp", "Op het grasveld naast het gemeentehuis van Weidedorp", "Op het plein voor de nieuwe sporthal in Weidedorp"],
         answer: 0,
         evidence: "De leerlingen van basisschool De Klimboom in Weidedorp hebben er een droomplek bij. Afgelopen zaterdag werd op het schoolplein een gloednieuwe speeltoren geopend.",
-        wrongHints: [
-          null,
-          "Een speeltuin wordt nergens genoemd. Bij welk gebouw hoort een schoolplein?",
-          null,
-          "Een sporthal komt in het hele bericht niet voor. Lees de eerste twee zinnen nog eens rustig.",
-        ],
+        wrongHints: [null, "Een speeltuin wordt nergens genoemd. Bij welk gebouw hoort een schoolplein?", "Het gemeentehuis staat nergens in het bericht. Wie kregen er een droomplek bij?", "Een sporthal komt in het hele bericht niet voor. Lees de eerste twee zinnen nog eens rustig."],
         uitlegPad: {
           stappen: [
             { titel: "Dit is een waar-vraag", tekst: "Je zoekt een plek. Plekken herken je aan woorden als 'op', 'in', 'bij' plus een plaats of gebouw." },
@@ -1006,19 +996,9 @@ De vragen hieronder gaan over precies deze drie valkuilen.`,
       },
       {
         q: "Welke zin uit een nieuwsbericht is een **mening**?",
-        options: [
-          "\"De nieuwe speeltuin is het mooiste project van dit jaar\", zegt buurtbewoner Kim.",
-          "Vorig jaar bezochten 1.200 kinderen het park.",
-          "Het park is open van 8 tot 21 uur.",
-          "Er zijn drie nieuwe bankjes geplaatst bij de ingang.",
-        ],
+        options: ["\"De nieuwe speeltuin is het mooiste project van dit jaar\", zegt buurtbewoner Kim.", "Vorig jaar bezochten 1.200 kinderen het park, meldt de gemeente op haar website.", "Het park is elke dag open van 8 tot 21 uur, ook in de weekenden en vakanties.", "Er zijn drie nieuwe bankjes geplaatst bij de ingang, aan de kant van de vijver."],
         answer: 0,
-        wrongHints: [
-          null,
-          "Dat getal kun je natellen. Is het dan een mening of een feit?",
-          "Openingstijden kun je nakijken — feit of mening?",
-          null,
-        ],
+        wrongHints: [null, "Dat getal kun je natellen. Is het dan een mening of een feit?", "Openingstijden kun je nakijken — feit of mening?", "Kun je dit controleren door te gaan kijken? Feit of mening?"],
         uitlegPad: {
           stappen: [
             { titel: "Doe de controleer-test", tekst: "Kun je nameten of de speeltuin 'het mooiste project van dit jaar' is? Nee — 'mooiste' is een vind-woord. Niet controleerbaar." },
@@ -1332,19 +1312,9 @@ Pak bij elke vraag je vaste aanpak erbij: **bedenk** welke gouden vraag het is, 
       },
       {
         q: "Wie vond Berry terug?",
-        options: [
-          "Twee kinderen die aan het voetballen waren",
-          "Boer Teun zelf",
-          "De dierenarts",
-          "De familie Vos",
-        ],
+        options: ["Twee kinderen die aan het voetballen waren", "Boer Teun zelf, toen hij in het dorp zocht", "De dierenarts van de kinderboerderij", "De familie Vos, in hun eigen moestuin"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Boer Teun zocht heel veel, maar vond hem niet. Wie hoorde het geritsel in de moestuin?",
-          "De dierenarts onderzocht Berry achteraf, maar vond hem niet. Wie was er eerder?",
-          null,
-        ],
+        wrongHints: [null, "Boer Teun zocht heel veel, maar vond hem niet. Wie hoorde het geritsel in de moestuin?", "De dierenarts onderzocht Berry achteraf, maar vond hem niet. Wie was er eerder?", "Berry stond wel in hun moestuin, maar wie hoorde het geritsel?"],
         uitlegPad: {
           stappen: [
             { titel: "Dit is een wie-vraag", tekst: "Je zoekt wie Berry terugvond. Scan op 'teruggevonden' of 'vonden'." },

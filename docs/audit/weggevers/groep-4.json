@@ -1,0 +1,1682 @@
+[
+ {
+  "pad": "begrijpend-lezen-strategie",
+  "file": "./begrijpendLezenStrategie.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is begrijpend lezen?",
+  "opties": [
+   "Hardop lezen",
+   "Echt snappen wat de tekst zegt en bedoelt",
+   "Snel lezen",
+   "Spelling oefenen"
+  ],
+  "answer": 1
+ },
+ {
+  "pad": "begrijpend-lezen-strategie",
+  "file": "./begrijpendLezenStrategie.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Op de Doorstroomtoets — hoe wordt begrijpend lezen getest?",
+  "opties": [
+   "Korte zinnen",
+   "3-5 lange teksten + vragen erover",
+   "Alleen 1 woord per vraag",
+   "Liedjes zingen"
+  ],
+  "answer": 1
+ },
+ {
+  "pad": "begrijpend-lezen-strategie",
+  "file": "./begrijpendLezenStrategie.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is een typische informatieve tekst?",
+  "opties": [
+   "Een sprookje",
+   "Een krantenartikel met feiten",
+   "Een opiniestuk",
+   "Een liedjestekst"
+  ],
+  "answer": 1
+ },
+ {
+  "pad": "begrijpend-lezen-strategie",
+  "file": "./begrijpendLezenStrategie.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is de hoofdgedachte?",
+  "opties": [
+   "De grote kernboodschap van de tekst",
+   "De eerste zin",
+   "Een random detail",
+   "De titel"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "begrijpend-lezen-strategie",
+  "file": "./begrijpendLezenStrategie.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is scannen?",
+  "opties": [
+   "Gericht zoeken naar een specifiek antwoord",
+   "Langzaam herlezen",
+   "De tekst kopiëren",
+   "Iemand anders laten lezen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "begrijpend-lezen-strategie",
+  "file": "./begrijpendLezenStrategie.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Een vraag met 'NIET' vereist...",
+  "opties": [
+   "Het antwoord dat ECHT NIET in de tekst staat",
+   "Het antwoord dat WEL in de tekst staat",
+   "Een random gok",
+   "Geen antwoord"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "begrijpend-lezen-strategie",
+  "file": "./begrijpendLezenStrategie.js",
+  "stap": 6,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat helpt bij een NIET-vraag?",
+  "opties": [
+   "Onderstreep of markeer 'NIET'",
+   "Skip 'm",
+   "Antwoord zonder lezen",
+   "Vraag toelichting"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "begrijpend-lezen-strategie",
+  "file": "./begrijpendLezenStrategie.js",
+  "stap": 6,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wat doe je bij een vraag met 'volgens de tekst'?",
+  "opties": [
+   "Antwoord ALLEEN baseren op wat in tekst staat",
+   "Eigen mening geven",
+   "Algemene kennis gebruiken",
+   "Tekst negeren"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "begrijpend-lezen-strategie",
+  "file": "./begrijpendLezenStrategie.js",
+  "stap": 6,
+  "vraag": 7,
+  "soort": "L",
+  "q": "Hoe verbeter je je leesvaardigheid op lange termijn?",
+  "opties": [
+   "Veel boeken lezen + woordenschat bouwen",
+   "Alleen toets-oefenen",
+   "Streaming kijken",
+   "Niets doen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "begrijpend-lezen-strategie",
+  "file": "./begrijpendLezenStrategie.js",
+  "stap": 6,
+  "vraag": 10,
+  "soort": "L",
+  "q": "Wat doe je bij scannen?",
+  "opties": [
+   "Snel zoeken naar 1 specifiek woord/feit",
+   "Letter voor letter lezen",
+   "Hele tekst hardop voorlezen",
+   "Tekenen erbij"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "begrijpend-lezen-strategie",
+  "file": "./begrijpendLezenStrategie.js",
+  "stap": 6,
+  "vraag": 11,
+  "soort": "L",
+  "q": "Wat doe je bij skimmen?",
+  "opties": [
+   "Tekst snel doorbladeren voor hoofdlijn",
+   "Heel langzaam lezen",
+   "Tekst overschrijven",
+   "Plaatjes bekijken"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "begrijpend-lezen-strategie",
+  "file": "./begrijpendLezenStrategie.js",
+  "stap": 6,
+  "vraag": 15,
+  "soort": "L",
+  "q": "Een inferentie-vraag vraagt om?",
+  "opties": [
+   "Conclusie trekken uit gegevens",
+   "Letterlijk citeren",
+   "Tellen",
+   "Geen antwoord"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "begrijpend-lezen-strategie",
+  "file": "./begrijpendLezenStrategie.js",
+  "stap": 6,
+  "vraag": 20,
+  "soort": "L",
+  "q": "Wat is een kernzin?",
+  "opties": [
+   "Zin met hoofdpunt van alinea",
+   "Eerste zin altijd",
+   "Laatste zin altijd",
+   "Langste zin"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "begrijpend-lezen-strategie",
+  "file": "./begrijpendLezenStrategie.js",
+  "stap": 6,
+  "vraag": 22,
+  "soort": "L",
+  "q": "Wat is een alinea?",
+  "opties": [
+   "Stukje tekst met 1 onderwerp/idee",
+   "Hele bladzijde",
+   "1 zin",
+   "Titel"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "begrijpend-lezen-teksten-po",
+  "file": "./begrijpendLezenTekstenPo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat heb je nodig om de armband te maken?",
+  "opties": [
+   "Twintig paperclips, een stukje touw en een schaar",
+   "Twintig paperclips en een naald",
+   "Tien paperclips en garen",
+   "Een armband en wat touw"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "begrijpend-lezen-teksten-po",
+  "file": "./begrijpendLezenTekstenPo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat had Tom in de eerste pauze bij zich om te eten?",
+  "opties": [
+   "Een dubbele boterham met kaas",
+   "Een appel",
+   "Een boterham met hagelslag",
+   "Een krentenbol"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "begrijpend-lezen-teksten-po",
+  "file": "./begrijpendLezenTekstenPo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Welke is een ARGUMENT in een betogende tekst (uit de telefoon-tekst)?",
+  "opties": [
+   "Notificaties zorgen voor minutenlange afleiding",
+   "Telefoons hebben gladde randen",
+   "Iedereen heeft een eigen mening",
+   "Er bestaan ook tablets"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "begrijpend-lezen-teksten-po",
+  "file": "./begrijpendLezenTekstenPo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "In het verhaal van Sara: het briefje en hartje van haar moeder laten vooral zien dat:",
+  "opties": [
+   "Sara's moeder dankbaarheid wil tonen voor Toms gebaar",
+   "Sara een nieuw liefje heeft",
+   "Sara haar moeder boos heeft gemaakt",
+   "De moeder Tom wil leren kennen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "begrijpend-lezen-teksten-po",
+  "file": "./begrijpendLezenTekstenPo.js",
+  "stap": 4,
+  "vraag": 8,
+  "soort": "L",
+  "q": "Een tekst over fietsen begint: 'Vroeger waren fietsen veel zwaarder dan nu.' Wat verwacht je in het VERVOLG?",
+  "opties": [
+   "Hoe fietsen in de loop der tijd lichter werden",
+   "Een recept voor pannenkoeken",
+   "De geschiedenis van de auto",
+   "Dat is nog niet te zeggen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "begrijpend-lezen-teksten-po",
+  "file": "./begrijpendLezenTekstenPo.js",
+  "stap": 4,
+  "vraag": 13,
+  "soort": "L",
+  "q": "Welke vraag is een inferentievraag?",
+  "opties": [
+   "Waarom zou de schrijver dit voorbeeld kiezen?",
+   "Hoeveel alinea's heeft de tekst?",
+   "Welk woord betekent X?",
+   "Hoe heet de schrijver?"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "begrijpend-lezen-teksten-po",
+  "file": "./begrijpendLezenTekstenPo.js",
+  "stap": 4,
+  "vraag": 15,
+  "soort": "L",
+  "q": "Een tekstdoel wijst aan?",
+  "opties": [
+   "Waarom de tekst geschreven is",
+   "Hoe oud de tekst is",
+   "Het aantal woorden",
+   "De schrijver"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "begrijpend-lezen-teksten-po",
+  "file": "./begrijpendLezenTekstenPo.js",
+  "stap": 4,
+  "vraag": 19,
+  "soort": "L",
+  "q": "Wat is een citaat in een tekst?",
+  "opties": [
+   "Letterlijk overgenomen woorden van iemand",
+   "Je eigen mening over de tekst",
+   "Een extra lange zin",
+   "De titel van de tekst"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "begrijpend-lezen-teksten-po",
+  "file": "./begrijpendLezenTekstenPo.js",
+  "stap": 4,
+  "vraag": 21,
+  "soort": "L",
+  "q": "Welke alinea-functie heeft een voorbeeld-alinea?",
+  "opties": [
+   "Hoofdgedachte concreet maken",
+   "Mening geven",
+   "Nieuwe regel beginnen",
+   "Tellen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "deelsommen-met-rest-po",
+  "file": "./deelsommenMetRestPo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Waarom rond je bij de bussen naar boven af?",
+  "opties": [
+   "de overgebleven kinderen moeten ook mee",
+   "bussen zijn duur",
+   "het is altijd naar boven",
+   "8 is een even getal"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "deelsommen-met-rest-po",
+  "file": "./deelsommenMetRestPo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Waarom rond je bij volle dozen naar beneden af?",
+  "opties": [
+   "een doos die niet vol is, telt niet als 'vol'",
+   "eieren zijn breekbaar",
+   "het is altijd naar beneden",
+   "6 is een even getal"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "feit-mening-po",
+  "file": "./feitMeningPo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "H",
+  "q": "Feit of mening? *Een jaar heeft twaalf maanden.*",
+  "opties": [
+   "feit",
+   "mening",
+   "geen van beide",
+   "allebei"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "feit-mening-po",
+  "file": "./feitMeningPo.js",
+  "stap": 0,
+  "vraag": 5,
+  "soort": "H",
+  "q": "Feit of mening? *De fiets is uitgevonden in de negentiende eeuw.*",
+  "opties": [
+   "feit",
+   "mening",
+   "geen van beide",
+   "allebei"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "feit-mening-po",
+  "file": "./feitMeningPo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "H",
+  "q": "Feit of mening? *Honden zijn liever dan katten.*",
+  "opties": [
+   "mening",
+   "feit",
+   "geen van beide",
+   "allebei"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "feit-mening-po",
+  "file": "./feitMeningPo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Welke zin bevat een mening-signaalwoord?",
+  "opties": [
+   "Volgens mij wordt het morgen mooi weer.",
+   "Het is nu 18 graden.",
+   "De zon komt om 6 uur op.",
+   "Het regent op dit moment."
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "feit-mening-po",
+  "file": "./feitMeningPo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "H",
+  "q": "Feit of mening? *De Eiffeltoren staat in Parijs.*",
+  "opties": [
+   "feit",
+   "mening",
+   "geen van beide",
+   "allebei"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "feit-mening-po",
+  "file": "./feitMeningPo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "H",
+  "q": "Feit of mening? *De Eiffeltoren is het mooiste bouwwerk ter wereld.*",
+  "opties": [
+   "mening",
+   "feit",
+   "geen van beide",
+   "allebei"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "feit-mening-po",
+  "file": "./feitMeningPo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "In een tekst staat: *Ons dorp heeft 4.000 inwoners. Het is het gezelligste dorp van de streek.* Welk deel is een mening?",
+  "opties": [
+   "Het is het gezelligste dorp van de streek.",
+   "Ons dorp heeft 4.000 inwoners.",
+   "Allebei zijn meningen.",
+   "Allebei zijn feiten."
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "feit-mening-po",
+  "file": "./feitMeningPo.js",
+  "stap": 3,
+  "vraag": 5,
+  "soort": "H",
+  "q": "Feit of mening? *De Tweede Wereldoorlog eindigde in 1945.*",
+  "opties": [
+   "feit",
+   "mening",
+   "geen van beide",
+   "allebei"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "feit-mening-po",
+  "file": "./feitMeningPo.js",
+  "stap": 3,
+  "vraag": 6,
+  "soort": "H",
+  "q": "Feit of mening? *Dit boek is veel te moeilijk voor groep 7.*",
+  "opties": [
+   "mening",
+   "feit",
+   "geen van beide",
+   "allebei"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "geld-rekenen",
+  "file": "./geldRekenen.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Welke munten samen maken € 1,75?",
+  "opties": [
+   "1 × €1 + 1 × 50c + 1 × 20c + 1 × 5c",
+   "1 × €2 + 1 × 25c",
+   "3 × 50c + 1 × 20c",
+   "1 × €1 + 7 × 10c"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "geld-rekenen",
+  "file": "./geldRekenen.js",
+  "stap": 4,
+  "vraag": 20,
+  "soort": "L",
+  "q": "Wat is wisselgeld?",
+  "opties": [
+   "Geld dat je terugkrijgt bij betalen",
+   "Geld dat je leent",
+   "Vakantiegeld",
+   "Spaargeld"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "geld-rekenen",
+  "file": "./geldRekenen.js",
+  "stap": 4,
+  "vraag": 22,
+  "soort": "L",
+  "q": "Welke munten heb je nodig voor €2,75?",
+  "opties": [
+   "1×€2 + 1×€0,50 + 1×€0,20 + 1×€0,05",
+   "3×€1",
+   "2×€2",
+   "1×€2,75"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "koude-oorlog-modern-po",
+  "file": "./koudeOorlogModernPo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is de NAVO?",
+  "opties": [
+   "Westers militair bondgenootschap",
+   "Sovjet-bondgenootschap",
+   "Verenigde Naties",
+   "Europese Unie"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "koude-oorlog-modern-po",
+  "file": "./koudeOorlogModernPo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is 'IJzeren Gordijn'?",
+  "opties": [
+   "Scheiding West-Oost Europa",
+   "Echt gordijn",
+   "Wapen",
+   "Schip"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "koude-oorlog-modern-po",
+  "file": "./koudeOorlogModernPo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wanneer begon de grote oorlog tussen Rusland en Oekraïne?",
+  "opties": [
+   "24 februari 2022",
+   "2014",
+   "1991",
+   "1989"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "koude-oorlog-modern-po",
+  "file": "./koudeOorlogModernPo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is NAVO?",
+  "opties": [
+   "Westers militair bondgenootschap",
+   "Sovjet-bondgenootschap",
+   "Verenigde Naties",
+   "Europese Unie"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "koude-oorlog-modern-po",
+  "file": "./koudeOorlogModernPo.js",
+  "stap": 3,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wanneer was 9/11?",
+  "opties": [
+   "11 september 2001",
+   "1989",
+   "1945",
+   "2022"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "koude-oorlog-modern-po",
+  "file": "./koudeOorlogModernPo.js",
+  "stap": 3,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Wat was het IJzeren Gordijn?",
+  "opties": [
+   "Symbolische scheiding Oost en West Europa",
+   "Een echt gordijn in een museum",
+   "Een rivier",
+   "Een berg"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is kritisch denken?",
+  "opties": [
+   "Goed nadenken voor je iets gelooft",
+   "Negatief zijn",
+   "Alles afwijzen",
+   "Alles geloven"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat doe je bij info van internet?",
+  "opties": [
+   "Checken bron + andere bron + waarom",
+   "Direct geloven",
+   "Direct delen",
+   "Niet lezen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is wetenschappelijk denken?",
+  "opties": [
+   "Hypothese → experiment → conclusie",
+   "Toeval",
+   "Raden",
+   "Religie"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is bevestigingsbias?",
+  "opties": [
+   "Zoeken naar info die je idee bevestigt",
+   "Twijfelen",
+   "Info van twee kanten lezen",
+   "Logica"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is sunk cost fallacy?",
+  "opties": [
+   "Doorgaan omdat je al investeerde",
+   "Nieuw beginnen",
+   "Slim kiezen",
+   "Kopen omdat iedereen het koopt"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Waarom is stereotypering fout?",
+  "opties": [
+   "Oordeel over groep ipv individu",
+   "Geen tijd voor",
+   "Mag wel",
+   "Omdat groepen niet bestaan"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is persoonsaanval (ad hominem)?",
+  "opties": [
+   "Aanval op persoon ipv argument",
+   "Goed argument",
+   "Vraag",
+   "Beroep op de meerderheid"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is stroman?",
+  "opties": [
+   "Vervalst het argument van de tegenstander",
+   "Echte man",
+   "Een goed argument",
+   "Aanval op de persoon"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is kritisch denken?",
+  "opties": [
+   "Goed nadenken voor je gelooft",
+   "Negatief",
+   "Alles afwijzen",
+   "Alles geloven"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is bevestigingsbias?",
+  "opties": [
+   "Zoeken naar info die idee bevestigt",
+   "Twijfel",
+   "Logica",
+   "Info van twee kanten lezen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat zijn drogredenen?",
+  "opties": [
+   "Slechte argumenten die goed lijken",
+   "Goede argumenten",
+   "Bewezen feiten",
+   "Wiskunde"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Waarom is stereotypering fout?",
+  "opties": [
+   "Oordeel over groep ipv individu",
+   "Slim",
+   "Mag wel",
+   "Omdat het altijd klopt"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 3,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wat is cherry picking?",
+  "opties": [
+   "Kies gunstige feiten, negeer de rest",
+   "Fruit plukken",
+   "Een goed argument",
+   "Twee kanten eerlijk bekijken"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 3,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Wat is fake news?",
+  "opties": [
+   "Nepnieuws dat als waar wordt verspreid",
+   "Grappig nieuws",
+   "Reclame",
+   "Nieuws uit ander land"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 3,
+  "vraag": 7,
+  "soort": "L",
+  "q": "Wat doe je als iemand zegt: 'Mijn opa rookt en is 90 — dus roken is gezond'?",
+  "opties": [
+   "Anekdote ≠ bewijs — onderzoek toont roken is ongezond",
+   "Geloof het — opa is bewijs",
+   "Ga zelf roken proberen",
+   "Stop met opa praten"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 3,
+  "vraag": 8,
+  "soort": "L",
+  "q": "Wat is een logische fout in: 'Alle vogels kunnen vliegen. Pinguïns zijn vogels. Dus pinguïns kunnen vliegen'?",
+  "opties": [
+   "Eerste regel is FOUT — niet alle vogels kunnen vliegen",
+   "Conclusie klopt — pinguïns vliegen",
+   "Pinguïns zijn geen vogels",
+   "Vogels bestaan niet"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 3,
+  "vraag": 9,
+  "soort": "L",
+  "q": "Wat is bevestigingsbias?",
+  "opties": [
+   "Alleen info zoeken die jouw mening bevestigt",
+   "Alle info opnemen",
+   "Je mening direct veranderen",
+   "Twijfelen over alles"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 3,
+  "vraag": 12,
+  "soort": "L",
+  "q": "Wat is nepnieuws?",
+  "opties": [
+   "Bewust verzonnen 'nieuws' om mensen te misleiden",
+   "Oud nieuws",
+   "Slecht-geschreven nieuws",
+   "Buitenlands nieuws"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 3,
+  "vraag": 13,
+  "soort": "L",
+  "q": "Wat is groepsdruk?",
+  "opties": [
+   "Druk vanuit groep om mee te doen",
+   "Persoonlijke keuze",
+   "Eenzaamheid",
+   "Ruzie in een groep"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 3,
+  "vraag": 14,
+  "soort": "L",
+  "q": "Wat is logisch redeneren?",
+  "opties": [
+   "Stap voor stap denken zonder fouten",
+   "Aannemen zonder check",
+   "Random",
+   "Snel gokken"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 3,
+  "vraag": 15,
+  "soort": "L",
+  "q": "*'Iedereen vindt dit, dus het klopt.'* — denkfout?",
+  "opties": [
+   "Argument van populariteit",
+   "Logica",
+   "Geen denkfout",
+   "Bevestigingsbias"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 3,
+  "vraag": 17,
+  "soort": "L",
+  "q": "*'Hij maakte een fout, dus alles wat hij zegt klopt niet.'* — denkfout?",
+  "opties": [
+   "Ad hominem / generalisatie",
+   "Wel logica",
+   "Stroman",
+   "Bevestigingsbias"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 3,
+  "vraag": 19,
+  "soort": "L",
+  "q": "Wat is objectief versus subjectief?",
+  "opties": [
+   "Objectief = feiten; subjectief = mening",
+   "Hetzelfde",
+   "Andersom",
+   "Allebei betekenen mening"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 3,
+  "vraag": 21,
+  "soort": "L",
+  "q": "Wat is een drogreden?",
+  "opties": [
+   "Argument dat lijkt te kloppen maar logisch fout is",
+   "Bewezen feit",
+   "Vraag",
+   "Reclame"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 3,
+  "vraag": 23,
+  "soort": "L",
+  "q": "Cirkelredenering: 'A omdat A, en A omdat A.' Drogreden?",
+  "opties": [
+   "Ja — het 'bewijst' zichzelf",
+   "Geen drogreden",
+   "Logisch",
+   "Ja — het is een stroman"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "kritisch-denken-po",
+  "file": "./kritischDenkenPo.js",
+  "stap": 3,
+  "vraag": 25,
+  "soort": "L",
+  "q": "Wat zou je doen bij twijfelachtig nieuws?",
+  "opties": [
+   "Verifiëren met andere bron",
+   "Direct delen",
+   "Negeren",
+   "Geloven"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "lettergrepen-klemtoon-po",
+  "file": "./lettergrepenKlemtoonPo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een lettergreep?",
+  "opties": [
+   "een stukje van een woord dat je in één keer uitspreekt",
+   "de eerste letter van een woord",
+   "een woord met een hoofdletter",
+   "het hele woord"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "lettergrepen-klemtoon-po",
+  "file": "./lettergrepenKlemtoonPo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Mag je het woord 'aap' afbreken aan het eind van een regel?",
+  "opties": [
+   "nee, het heeft maar één lettergreep",
+   "ja, als a-ap",
+   "ja, als aa-p",
+   "ja, overal"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "lettergrepen-klemtoon-po",
+  "file": "./lettergrepenKlemtoonPo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Mag je het woord 'zon' afbreken aan het eind van een regel?",
+  "opties": [
+   "nee, het heeft maar één lettergreep",
+   "ja, als zo-n",
+   "ja, als z-on",
+   "ja, overal"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "lettergrepen-klemtoon-po",
+  "file": "./lettergrepenKlemtoonPo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is de klemtoon in een woord?",
+  "opties": [
+   "de lettergreep die je het sterkst uitspreekt",
+   "de eerste letter",
+   "de laatste lettergreep, altijd",
+   "een leesteken"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "omzetten-breuk-procent-komma-po",
+  "file": "./omzettenBreukProcentKommaPo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "H",
+  "q": "Is 0,3 groter of kleiner dan ¼?",
+  "opties": [
+   "groter",
+   "kleiner",
+   "even groot",
+   "dat kun je niet vergelijken"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "plattegrond-legenda-po",
+  "file": "./plattegrondLegendaPo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Waarvoor gebruik je een plattegrond?",
+  "opties": [
+   "om de weg te vinden en te zien waar iets is",
+   "om te weten hoe laat het is",
+   "om het weer te voorspellen",
+   "om een verhaal te lezen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "plattegrond-legenda-po",
+  "file": "./plattegrondLegendaPo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Waarom is een legenda handig?",
+  "opties": [
+   "zonder uitleg weet je niet wat de tekens betekenen",
+   "het maakt de kaart kleurrijker",
+   "het vertelt hoe laat het is",
+   "het is verplicht maar nutteloos"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "plattegrond-legenda-po",
+  "file": "./plattegrondLegendaPo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Je zoekt de kapper in een groot winkelcentrum. Wat gebruik je het best?",
+  "opties": [
+   "de plattegrond met de legenda",
+   "het weerbericht",
+   "een klok",
+   "een woordenboek"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "plattegrond-legenda-po",
+  "file": "./plattegrondLegendaPo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Op de legenda: 🚻 = toilet. Je moet snel naar het toilet. Wat doe je?",
+  "opties": [
+   "het 🚻-symbool op de plattegrond opzoeken",
+   "de plattegrond omdraaien",
+   "de legenda weggooien",
+   "naar de uitgang lopen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "plattegrond-legenda-po",
+  "file": "./plattegrondLegendaPo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Je zoekt de speeltuin in een park. In de legenda staat een glijbaan-symbool. Wat doe je?",
+  "opties": [
+   "het glijbaan-symbool op de kaart opzoeken",
+   "naar de uitgang lopen",
+   "de legenda overslaan",
+   "bij de ingang blijven wachten"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "politiek-democratie-po",
+  "file": "./politiekDemocratiePo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is coalitie?",
+  "opties": [
+   "Samenwerking meerdere partijen",
+   "1 partij",
+   "Tegenstanders",
+   "Verkiezing"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "politiek-democratie-po",
+  "file": "./politiekDemocratiePo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wie maakt wetten?",
+  "opties": [
+   "Tweede + Eerste Kamer + regering",
+   "Alleen koning",
+   "Politie",
+   "Rechter"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "politiek-democratie-po",
+  "file": "./politiekDemocratiePo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is Prinsjesdag?",
+  "opties": [
+   "Koning leest plannen kabinet voor",
+   "Koningsfeestje",
+   "Voetbalwedstrijd",
+   "Verkiezing"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "politiek-democratie-po",
+  "file": "./politiekDemocratiePo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is een motie van wantrouwen?",
+  "opties": [
+   "Kamer eist aftreden minister",
+   "Lof",
+   "Verkiezing",
+   "Wet"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "politiek-democratie-po",
+  "file": "./politiekDemocratiePo.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is Prinsjesdag?",
+  "opties": [
+   "Troonrede 3e dinsdag sept",
+   "Koningsdag",
+   "Verkiezing",
+   "Feest"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "politiek-democratie-po",
+  "file": "./politiekDemocratiePo.js",
+  "stap": 5,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Artikel 1 Grondwet = ?",
+  "opties": [
+   "Verbod op discriminatie",
+   "Recht op auto",
+   "Vrijheid",
+   "Onderwijs"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "politiek-democratie-po",
+  "file": "./politiekDemocratiePo.js",
+  "stap": 5,
+  "vraag": 9,
+  "soort": "L",
+  "q": "Wat doet de Eerste Kamer?",
+  "opties": [
+   "Wetten goedkeuren / verwerpen",
+   "Wetten voorstellen",
+   "Voert uit",
+   "Beoordeelt"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "politiek-democratie-po",
+  "file": "./politiekDemocratiePo.js",
+  "stap": 5,
+  "vraag": 11,
+  "soort": "L",
+  "q": "Wat is een coalitie?",
+  "opties": [
+   "Samenwerking partijen voor meerderheid",
+   "Eén partij",
+   "Oppositie",
+   "Een verkiezingsuitslag"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "politiek-democratie-po",
+  "file": "./politiekDemocratiePo.js",
+  "stap": 5,
+  "vraag": 12,
+  "soort": "L",
+  "q": "Wat is oppositie?",
+  "opties": [
+   "Partijen NIET in regering",
+   "Regering",
+   "Koningshuis",
+   "Rechters"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "politiek-democratie-po",
+  "file": "./politiekDemocratiePo.js",
+  "stap": 5,
+  "vraag": 13,
+  "soort": "L",
+  "q": "Wat is een grondrecht?",
+  "opties": [
+   "Recht in grondwet beschermd",
+   "Een belasting",
+   "Een verkeersregel",
+   "Een schoolregel"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "politiek-democratie-po",
+  "file": "./politiekDemocratiePo.js",
+  "stap": 5,
+  "vraag": 14,
+  "soort": "L",
+  "q": "Wat doet de Koning politiek (NL)?",
+  "opties": [
+   "Ceremonieel + ondertekent wetten",
+   "Beslist alles",
+   "Maakt wetten",
+   "Stemt in de Tweede Kamer"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "politiek-democratie-po",
+  "file": "./politiekDemocratiePo.js",
+  "stap": 5,
+  "vraag": 18,
+  "soort": "L",
+  "q": "Wat is een minister?",
+  "opties": [
+   "Hoofd van een ministerie",
+   "Burgemeester",
+   "Koning",
+   "Rechter"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "samenstellingen-tussenletters-po",
+  "file": "./samenstellingenTussenlettersPo.js",
+  "stap": 0,
+  "vraag": 5,
+  "soort": "H",
+  "q": "Welk woord is GEEN samenstelling?",
+  "opties": [
+   "bloemen",
+   "bloemenveld",
+   "bloemenvaas",
+   "bloemenkweker"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "samenstellingen-tussenletters-po",
+  "file": "./samenstellingenTussenlettersPo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "H",
+  "q": "Hoe schrijf je het woord voor een koek die je in een pan bakt?",
+  "opties": [
+   "pannenkoek",
+   "pankoek",
+   "pannekoek",
+   "pannenkoeken"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "samenstellingen-tussenletters-po",
+  "file": "./samenstellingenTussenlettersPo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wanneer schrijf je vaak een tussen-n (-en-)?",
+  "opties": [
+   "als het eerste woord een meervoud op -en heeft",
+   "altijd, bij elke samenstelling",
+   "nooit",
+   "alleen bij dieren"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "soorten-teksten-po",
+  "file": "./soortenTekstenPo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat herken je vaak in een instructieve tekst?",
+  "opties": [
+   "genummerde stappen die je uitvoert",
+   "een spannend einde",
+   "een mening van de schrijver",
+   "het laatste nieuws"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "soorten-teksten-po",
+  "file": "./soortenTekstenPo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Hoe herken je een instructieve tekst aan het taalgebruik?",
+  "opties": [
+   "werkwoorden als 'pak', 'vouw', 'druk op' — opdrachten",
+   "zinnen zoals 'er was eens...'",
+   "woorden als 'want' en 'daarom moet je'",
+   "vragen zoals 'wist je dat...'"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "spelling-overige-po",
+  "file": "./spellingOverigePo.js",
+  "stap": 4,
+  "vraag": 24,
+  "soort": "H",
+  "q": "De goedheiligman zelf (de persoon): 'sinterklaas' of 'Sinterklaas'?",
+  "opties": [
+   "Sinterklaas",
+   "sinterklaas",
+   "sint-erklaas",
+   "Sint Erklaas"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "tekstverbanden-oorzaak-gevolg-po",
+  "file": "./tekstverbandenOorzaakGevolgPo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*\"Omdat het de hele nacht regende, stond het schoolplein vol plassen.\"* — Wat is de oorzaak?",
+  "opties": [
+   "De regen die de hele nacht viel",
+   "De plassen op het schoolplein",
+   "Het schoolplein",
+   "De nacht"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "tekstverbanden-oorzaak-gevolg-po",
+  "file": "./tekstverbandenOorzaakGevolgPo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat was het gevolg van het lopen naar school?",
+  "opties": [
+   "Milan kwam tien minuten te laat de klas binnen",
+   "De achterband liep leeg",
+   "Milan reed over een spijker",
+   "De juf had thuis banden geplakt"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "tekstverbanden-oorzaak-gevolg-po",
+  "file": "./tekstverbandenOorzaakGevolgPo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "*\"De appels waren overrijp, doordat ze al drie weken in de schaal lagen.\"* — Wat is de oorzaak?",
+  "opties": [
+   "Ze lagen al drie weken in de schaal",
+   "De appels waren overrijp",
+   "De schaal",
+   "Het huis was te warm"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "tekstverbanden-oorzaak-gevolg-po",
+  "file": "./tekstverbandenOorzaakGevolgPo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "*\"Eva vergat haar jas. Ze had het daarna de hele dag koud.\"* — Wat is hier de oorzaak van het kou hebben?",
+  "opties": [
+   "Ze vergat haar jas mee te nemen",
+   "Ze had het koud",
+   "De dag was heel lang",
+   "Ze was buiten"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "tekstverbanden-oorzaak-gevolg-po",
+  "file": "./tekstverbandenOorzaakGevolgPo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat was de oorzaak dat groep zeven zitjes voor op het plein kon maken?",
+  "opties": [
+   "De conciërge zaagde de stam van de omgevallen kastanjeboom in schijven",
+   "Buurman Ties had hout over van het fietsenhok",
+   "De gemeente stuurde nieuw hout na de storm",
+   "De kinderen spaarden geld voor nieuwe zitjes"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "toestand-stoffen-po",
+  "file": "./toestandStoffenPo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is stroperig?",
+  "opties": [
+   "Dik, langzaam vloeiend",
+   "Heel waterig",
+   "Vast",
+   "Gas"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "toestand-stoffen-po",
+  "file": "./toestandStoffenPo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Waarom stijgt een heliumballon?",
+  "opties": [
+   "Helium is lichter dan lucht",
+   "Helium is zwaarder",
+   "Helium koud",
+   "Magie"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "toestand-stoffen-po",
+  "file": "./toestandStoffenPo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat heb je nodig om vuur te maken?",
+  "opties": [
+   "Brandstof + zuurstof + warmte",
+   "Alleen brandstof",
+   "Alleen zuurstof",
+   "Alleen warmte"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "toestand-stoffen-po",
+  "file": "./toestandStoffenPo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Hoe ontstaat regen uit een wolk?",
+  "opties": [
+   "Waterdruppels groeien en vallen",
+   "Wolk smelt",
+   "Wolk verdampt",
+   "Wolk barst"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "toestand-stoffen-po",
+  "file": "./toestandStoffenPo.js",
+  "stap": 4,
+  "vraag": 17,
+  "soort": "L",
+  "q": "Smelt- en kookpunt zijn?",
+  "opties": [
+   "Vaste eigenschappen van een stof",
+   "Toevallig",
+   "Voor elke stof hetzelfde",
+   "Elke dag anders"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "toestand-stoffen-po",
+  "file": "./toestandStoffenPo.js",
+  "stap": 4,
+  "vraag": 19,
+  "soort": "L",
+  "q": "Wat is een mengsel?",
+  "opties": [
+   "Meerdere stoffen samen",
+   "Zuivere stof",
+   "Element",
+   "Een gas"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "toestand-stoffen-po",
+  "file": "./toestandStoffenPo.js",
+  "stap": 4,
+  "vraag": 21,
+  "soort": "L",
+  "q": "Wat is water verplaatsen (Archimedes)?",
+  "opties": [
+   "Water opzij duwen als iets erin zakt",
+   "Verdwijnen",
+   "Mengen",
+   "Smelten"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "woordbetekenis-context-po",
+  "file": "./woordbetekenisContextPo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Lees: *\"Mama zette de hete pan op het blad van de keukentafel.\"* — Wat betekent 'blad' in deze zin?",
+  "opties": [
+   "Het platte bovenvlak van de tafel",
+   "Een blad van een boom",
+   "Een pagina uit een boek",
+   "Een mes of bijl"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "woordenschat-engels-po",
+  "file": "./woordenschatEngelsPo.js",
+  "stap": 5,
+  "vraag": 3,
+  "soort": "H",
+  "q": "Wat is apple?",
+  "opties": [
+   "appel",
+   "banaan",
+   "aardappel",
+   "ei"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "woordenschat-engels-po",
+  "file": "./woordenschatEngelsPo.js",
+  "stap": 6,
+  "vraag": 2,
+  "soort": "H",
+  "q": "Wat is het meervoud van tooth (tand)?",
+  "opties": [
+   "teeth",
+   "tooths",
+   "toothes",
+   "tothes"
+  ],
+  "answer": 0
+ }
+]

@@ -75,7 +75,7 @@ const steps = [
     checks: [
       {
         q: "Wat is **begrijpend lezen**?",
-        options: ["Hardop lezen","Echt snappen wat de tekst zegt en bedoelt","Snel lezen","Spelling oefenen"],
+        options: ["Hardop en vloeiend voorlezen","Snappen wat de tekst bedoelt","Zo snel mogelijk de tekst lezen","Woorden zonder fouten spellen"],
         answer: 1,
         wrongHints: ["Snap je een tekst beter als je 'm hardop leest, of als je nadenkt over de inhoud?",null,"Gaat lezen om hoe snel je bent, of om wat je ervan begrijpt?","Heeft spelling te maken met begrijpen of met goed schrijven?"],
         uitlegPad: {
@@ -99,9 +99,9 @@ const steps = [
       },
       {
         q: "Op de Doorstroomtoets — hoe wordt begrijpend lezen getest?",
-        options: ["Korte zinnen","3-5 lange teksten + vragen erover","Alleen 1 woord per vraag","Liedjes zingen"],
+        options: ["Losse zinnen zonder verhaal erbij","3-5 lange teksten + vragen erover","Eén los woord per vraag uitleggen","Een tekst hardop voorlezen aan de juf"],
         answer: 1,
-        wrongHints: ["Test een toets begrijpend lezen met losse zinnen, of met echte teksten?",null,"Kun je begrijpend lezen testen met maar één woord per vraag?","Hoort zingen bij begrijpend lezen — of bij iets anders?"],
+        wrongHints: ["Test een toets begrijpend lezen met losse zinnen, of met echte teksten?",null,"Kun je begrijpend lezen testen met maar één woord per vraag?","Kan een toets op papier of op de computer horen hoe jij voorleest?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat zit op de Doorstroomtoets?", tekst: "Bij begrijpend lezen krijg je echte LEESTEKSTEN (200-300 woorden) met vragen erover. Niet losse zinnen." },
@@ -485,7 +485,7 @@ const steps = [
       },
       {
         q: "Wat is een typische **informatieve** tekst?",
-        options: ["Een sprookje","Een krantenartikel met feiten","Een opiniestuk","Een liedjestekst"],
+        options: ["Een sprookje over een prinses","Een krantenartikel met feiten","Een opiniestuk met een mening","Een liedjestekst over de liefde"],
         answer: 1,
         wrongHints: ["Wat doet een sprookje vooral: feiten geven of een verhaal vertellen?",null,"Geeft een opiniestuk vooral feiten, of probeert het je iets te laten denken?","Wat doet een liedjestekst vaak — informeren, overtuigen of een verhaal vertellen?"],
         uitlegPad: {
@@ -1062,7 +1062,7 @@ const steps = [
     checks: [
       {
         q: "Wat is de **hoofdgedachte**?",
-        options: ["De grote kernboodschap van de tekst","De eerste zin","Een random detail","De titel"],
+        options: ["De kernboodschap van de tekst","De eerste zin van de tekst","Een klein detail uit de tekst","De titel boven aan de tekst"],
         answer: 0,
         wrongHints: [null,"Past de boodschap van een hele tekst altijd in alleen die eerste zin?","Is een klein feit hetzelfde als de boodschap van de hele tekst?","Geeft de titel altijd de hele boodschap, of is het meer een hint?"],
         uitlegPad: {
@@ -1282,9 +1282,9 @@ const steps = [
       },
       {
         q: "Wat is **scannen**?",
-        options: ["Gericht zoeken naar een specifiek antwoord","Langzaam herlezen","De tekst kopiëren","Iemand anders laten lezen"],
+        options: ["Gericht zoeken naar één antwoord","Langzaam alles opnieuw lezen","De tekst helemaal overschrijven","Een ander de tekst laten lezen"],
         answer: 0,
-        wrongHints: [null,"Pak je bij scannen alles weer op, of zoek je iets specifieks?","Hoort kopiëren bij scannen, of bij iets heel anders?","Mag iemand anders jouw werk doen tijdens een toets — en is dat scannen?"],
+        wrongHints: [null,"Pak je bij scannen alles weer op, of zoek je iets specifieks?","Hoort overschrijven bij scannen, of bij iets heel anders?","Mag iemand anders jouw werk doen tijdens een toets — en is dat scannen?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is scannen?", tekst: "Gericht ZOEKEN naar 1 specifiek antwoord. Net als bij een supermarkt-scanner: zoek de barcode, niet alles." },
@@ -1444,9 +1444,9 @@ const steps = [
     checks: [
       {
         q: "Een vraag met **'NIET'** vereist...",
-        options: ["Het antwoord dat ECHT NIET in de tekst staat","Het antwoord dat WEL in de tekst staat","Een random gok","Geen antwoord"],
+        options: ["Het antwoord dat NIET in de tekst staat","Het antwoord dat WEL in de tekst staat","Het antwoord dat vaak in de tekst staat","Het antwoord dat in de eerste zin staat"],
         answer: 0,
-        wrongHints: [null,"Vraagt 'NIET' juist het tegenovergestelde, of het normale antwoord?","Is gokken slim, of kun je beter goed lezen wat er gevraagd wordt?","Wat win je met geen antwoord — punten, of niks?"],
+        wrongHints: [null,"Vraagt 'NIET' juist het tegenovergestelde, of het normale antwoord?","Gaat het om hoe vaak iets in de tekst staat, of om wat het woordje 'NIET' vraagt?","Maakt het uit wáár iets staat? Kijk nog eens naar het woordje 'NIET'."],
         uitlegPad: {
           stappen: [
             { titel: "NIET-vraag herkennen", tekst: "Het woordje 'NIET' verandert ALLES. Onderstreep het in je hoofd of op papier." },
@@ -1842,9 +1842,9 @@ const steps = [
       },
       {
         q: "Wat helpt bij een NIET-vraag?",
-        options: ["Onderstreep of markeer 'NIET'","Skip 'm","Antwoord zonder lezen","Vraag toelichting"],
+        options: ["Onderstreep of markeer 'NIET'","Sla de vraag gewoon over","Lees alleen de antwoorden snel","Vraag de juf wat het betekent"],
         answer: 0,
-        wrongHints: [null,"Verlies je punten als je 'm overslaat? Wat kan je zelf doen om de NIET niet te missen?","Werkt antwoorden zonder de tekst echt?","Mag dat tijdens een toets, en helpt het je verder?"],
+        wrongHints: [null,"Verlies je punten als je 'm overslaat? Wat kan je zelf doen om de NIET niet te missen?","Mis je dan niet juist het kleine woordje in de vraag?","Mag dat tijdens een toets, en helpt het je verder?"],
         uitlegPad: {
           stappen: [
             { titel: "Het probleem met 'NIET'", tekst: "'NIET' is klein, makkelijk te missen. Mis je 'm = kies je het tegenovergestelde antwoord = fout." },
@@ -1865,7 +1865,7 @@ const steps = [
       },
       {
         q: "Wat doe je bij een vraag met **'volgens de tekst'**?",
-        options: ["Antwoord ALLEEN baseren op wat in tekst staat","Eigen mening geven","Algemene kennis gebruiken","Tekst negeren"],
+        options: ["Alleen gebruiken wat in de tekst staat","Je eigen mening over het onderwerp geven","Vooral gebruiken wat je zelf al weet","De tekst overslaan en meteen kiezen"],
         answer: 0,
         wrongHints: [null, "Vraagt 'volgens de tekst' naar wat jij vindt, of naar wat de schrijver zegt?", "Telt wat je toevallig al wist, als de vraag naar de tekst verwijst?", "Kun je 'volgens de tekst' beantwoorden zonder de tekst te gebruiken?"],
         uitlegPad: {
@@ -1912,9 +1912,9 @@ const steps = [
       },
       {
         q: "Hoe verbeter je je **leesvaardigheid** op lange termijn?",
-        options: ["Veel boeken lezen + woordenschat bouwen","Alleen toets-oefenen","Streaming kijken","Niets doen"],
+        options: ["Veel lezen en nieuwe woorden leren","Alleen maar oefentoetsen maken","Veel series en filmpjes kijken","Wachten tot het vanzelf beter gaat"],
         answer: 0,
-        wrongHints: [null, "Toets oefenen helpt, maar zonder lezen blijft basis te smal.", "Niet — beelden ipv tekst trainen leesvaardigheid niet.", "Tegenovergesteld — leesvaardigheid groeit met inspanning."],
+        wrongHints: [null,"Leer je van alleen toetsen oefenen genoeg nieuwe woorden?","Train je met kijken naar beelden ook je lezen?","Wordt een vaardigheid beter als je er niets voor doet?"],
         uitlegPad: {
           stappen: [
             { titel: "Waarom lezen helpt", tekst: "**Leesvaardigheid** is een vaardigheid die je opbouwt door **veel lezen**:\n• **Meer woordenschat** — onbekende woorden vaker zien → kennen\n• **Beter verband zien** — hoe schrijvers zinnen bouwen\n• **Sneller lezen** — automatische herkenning patronen\n• **Beter begrip context** — wereld + onderwerpen-kennis\n\nOnderzoek laat zien: kinderen die **elke dag** lezen, scoren **duidelijk hoger** op begrijpend lezen dan niet-lezers." },
@@ -1936,19 +1936,19 @@ const steps = [
       },
       { q: "Welk signaalwoord wijst op een **tegenstelling**?", options: ["maar","want","ook","bovendien"], answer: 0, wrongHints: [null, "Reden-woord.", "Opsomming.", "Opsomming."] },
       { q: "Welk signaalwoord wijst op **oorzaak-gevolg**?", options: ["daarom","ook","maar","echter"], answer: 0, wrongHints: [null, "Opsomming.", "Tegenstelling.", "Tegenstelling."] },
-      { q: "Wat doe je bij **scannen**?", options: ["Snel zoeken naar 1 specifiek woord/feit","Letter voor letter lezen","Hele tekst hardop voorlezen","Tekenen erbij"], answer: 0, wrongHints: [null, "Te traag — dat is gewoon lezen.", "Niet relevant.", "Niet."] },
-      { q: "Wat doe je bij **skimmen**?", options: ["Tekst snel doorbladeren voor hoofdlijn","Heel langzaam lezen","Tekst overschrijven","Plaatjes bekijken"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Niet relevant.", "Niet alleen plaatjes."] },
+      { q: "Wat doe je bij **scannen**?", options: ["Snel zoeken naar één woord of feit","Elke zin letter voor letter lezen","De hele tekst hardop voorlezen","Bij elke alinea een tekening maken"], answer: 0, wrongHints: [null,"Is dat snel, of juist heel langzaam?","Vind je zo snel één ding terug, of lees je dan alles?","Helpt tekenen je om snel iets terug te vinden?"] },
+      { q: "Wat doe je bij **skimmen**?", options: ["Snel doorlezen voor de hoofdlijn","Heel langzaam elk woord lezen","De hele tekst overschrijven","Alleen naar de plaatjes kijken"], answer: 0, wrongHints: [null,"Is skimmen snel of langzaam?","Krijg je zo snel een idee waar de tekst over gaat?","Lees je bij skimmen ook iets van de tekst zelf?"] },
       { q: "Een **informatieve tekst** geeft vooral?", options: ["Feiten + uitleg","Mening","Spanning","Humor"], answer: 0, wrongHints: [null, "Dat is betoog.", "Dat is verhaal.", "Niet hoofddoel."] },
       { q: "Een **betogende tekst** wil de lezer?", options: ["Overtuigen","Informeren","Vermaken","Boos maken"], answer: 0, wrongHints: [null, "Informatieve tekst.", "Verhalende/amuserende.", "Niet de bedoeling."] },
       { q: "Waar vind je het antwoord op een **letterlijke vraag**?", options: ["Direct in de tekst","Door erover na te denken","Door te raden","Buiten de tekst"], answer: 0, wrongHints: [null, "Dat is inferentie.", "Niet — wel zoeken.", "Tekst is bron."] },
-      { q: "Een **inferentie-vraag** vraagt om?", options: ["Conclusie trekken uit gegevens","Letterlijk citeren","Tellen","Geen antwoord"], answer: 0, wrongHints: [null, "Dat is letterlijke vraag.", "Niet relevant.", "Wel antwoord — bedenken."] },
+      { q: "Een **inferentie-vraag** vraagt om?", options: ["Conclusie trekken uit gegevens","Een zin letterlijk overnemen","Woorden in de tekst tellen","Een moeilijk woord opzoeken"], answer: 0, wrongHints: [null,"Staat het antwoord bij een inferentie-vraag letterlijk in de tekst?","Moet je dan iets tellen, of zelf iets bedenken?","Gaat het om één woord, of om iets wat je zelf afleidt?"] },
       { q: "Bij welk **woord** weet je 'het komt eraan': de schrijver gaat **iets opsommen**?", options: ["ten eerste","echter","daarom","kortom"], answer: 0, wrongHints: [null, "Tegenstelling.", "Reden.", "Conclusie."] },
       { q: "*'Kortom: lezen is belangrijk.'* — welk soort zin?", options: ["Conclusie","Vraag","Opsomming","Tegenstelling"], answer: 0, wrongHints: [null, "Geen vraagteken.", "Geen lijst.", "Geen 'maar'."] },
       { q: "Welke **alinea** bevat meestal de hoofdgedachte van de hele tekst?", options: ["Inleiding of slot","De middelste alinea","Een random alinea","Geen"], answer: 0, wrongHints: [null, "Niet altijd.", "Niet random — er is patroon.", "Wel — vaak duidelijk."] },
       { q: "Welke **tekstsoort** is een dagboek?", options: ["Verhalend","Informatief","Betogend","Schoolboek"], answer: 0, wrongHints: [null, "Geen feiten-uitleg.", "Geen overtuiging.", "Niet schoolboek."] },
-      { q: "Wat is een **kernzin**?", options: ["Zin met hoofdpunt van alinea","Eerste zin altijd","Laatste zin altijd","Langste zin"], answer: 0, wrongHints: [null, "Vaak wel, niet altijd.", "Soms wel, niet altijd.", "Niet relevant."] },
+      { q: "Wat is een **kernzin**?", options: ["De zin met het hoofdpunt van de alinea","Altijd de eerste zin van de alinea","Altijd de laatste zin van de alinea","De langste zin van de alinea"], answer: 0, wrongHints: [null,"Vaak wel, niet altijd.","Soms wel, niet altijd.","Zegt de lengte van een zin iets over hoe belangrijk hij is?"] },
       { q: "Welk woord betekent ongeveer hetzelfde als **bovendien**?", options: ["daarnaast","echter","want","kortom"], answer: 0, wrongHints: [null, "Tegenstelling.", "Reden.", "Conclusie."] },
-      { q: "Wat is een **alinea**?", options: ["Stukje tekst met 1 onderwerp/idee","Hele bladzijde","1 zin","Titel"], answer: 0, wrongHints: [null, "Te groot.", "Te klein — meerdere zinnen.", "Niet hetzelfde."] },
+      { q: "Wat is een **alinea**?", options: ["Stukje tekst over één onderwerp","Een hele bladzijde tekst","Eén losse zin in een tekst","De titel boven een tekst"], answer: 0, wrongHints: [null, "Te groot.", "Te klein — meerdere zinnen.", "Niet hetzelfde."] },
     ],
   },
 ];

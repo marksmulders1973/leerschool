@@ -437,12 +437,7 @@ Beantwoord nu de vier vragen over de brief hierboven. Zoek het antwoord altijd �
     checks: [
       {
         q: "Wie is de afzender van deze brief?",
-        options: [
-          "Meester Jasper de Vries van basisschool De Vlinderboom",
-          "De ouders en verzorgers",
-          "Sportpark De Weide",
-          "De kinderen van groep 8",
-        ],
+        options: ['Meester Jasper de Vries', 'De ouders en verzorgers', 'Sportpark De Weide', 'De kinderen van groep 8'],
         answer: 0,
         evidence: "Meester Jasper de Vries",
         wrongHints: [
@@ -518,12 +513,7 @@ Beantwoord nu de vier vragen over de brief hierboven. Zoek het antwoord altijd �
       },
       {
         q: "Wat moet de ontvanger van deze brief DOEN?",
-        options: [
-          "Het strookje invullen en uiterlijk woensdag 13 mei inleveren",
-          "Op 22 mei een brief terugschrijven",
-          "Geld overmaken voor de sportdag",
-          "Zelf spelletjes bedenken voor de sportdag",
-        ],
+        options: ['Het strookje uiterlijk 13 mei inleveren', 'Op 22 mei een brief terugschrijven', 'Geld overmaken voor de sportdag', 'Zelf spelletjes bedenken voor de sportdag'],
         answer: 0,
         evidence: "Wilt u het strookje invullen en uiterlijk woensdag 13 mei inleveren bij de juf of meester van uw kind?",
         wrongHints: [
@@ -1162,12 +1152,7 @@ Pak je vaste stappenplan erbij: kijk eerst naar de **randen** (Van, Aan, Datum, 
       },
       {
         q: "Wie is de afzender van deze e-mail?",
-        options: [
-          "Karin van Dijk van Zwemclub De Waterlelie",
-          "Zwembad Het Golfje",
-          "De ouders van de zwemmers",
-          "Meester Jasper de Vries",
-        ],
+        options: ['Karin van Dijk van de zwemclub', 'Zwembad Het Golfje zelf', 'De ouders van de zwemmers', 'Meester Jasper de Vries van school'],
         answer: 0,
         evidence: "Karin van Dijk",
         wrongHints: [
@@ -1201,20 +1186,10 @@ Pak je vaste stappenplan erbij: kijk eerst naar de **randen** (Van, Aan, Datum, 
       },
       {
         q: "Wat is het doel van deze e-mail?",
-        options: [
-          "Uitnodigen voor de Zwemvierdaagse en vragen je op tijd aan te melden",
-          "Klagen over het drukke zwembad",
-          "Bedanken voor de medailles van vorig jaar",
-          "Informeren over nieuwe zwemlessen",
-        ],
+        options: ['Uitnodigen en vragen je aan te melden', 'Klagen over het drukke zwembad', 'Bedanken voor de medailles van vorig jaar', 'Informeren en vragen geld over te maken'],
         answer: 0,
         evidence: "Wil je meedoen? Meld je dan aan vóór vrijdag 12 juni.",
-        wrongHints: [
-          null,
-          "Lees je ergens dat de schrijver boos of ontevreden is? Wat voor toon heeft de e-mail?",
-          null,
-          "Gaat deze e-mail over lessen — of over een evenement van vier avonden?",
-        ],
+        wrongHints: [null, 'Lees je ergens dat de schrijver boos of ontevreden is? Wat voor toon heeft de e-mail?', null, 'Lees de alinea over de kosten nog eens. Moet je nu al iets overmaken?'],
         uitlegPad: {
           stappen: [
             { titel: "Wat kondigt de e-mail aan?", tekst: "Een evenement: de Zwemvierdaagse, vier avonden zwemmen met een medaille als beloning. De club hoopt op veel deelnemers — dit is een uitnodiging." },

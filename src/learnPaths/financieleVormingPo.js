@@ -57,9 +57,9 @@ const steps = [
     checks: [
       {
         q: "Wat zijn de **3 functies** van geld?",
-        options: ["Ruilmiddel + rekeneenheid + spaarmiddel", "Munt + biljet + digitaal", "Sparen + lenen + uitgeven", "Bank + crypto + cash"],
+        options: ["Ruilmiddel + rekeneenheid + spaarmiddel", "Munten + biljetten + digitaal geld", "Sparen + lenen + boodschappen doen", "Bankrekening + pinpas + contant geld"],
         answer: 0,
-        wrongHints: [null, "Dat zijn soorten geld.", "Dat zijn acties.", "Geen functies."],
+        wrongHints: [null, "Dat zijn soorten geld. Waarvoor gebrúík je geld?", "Dat zijn dingen die jij doet. Welke taken heeft geld zelf?", "Dat zijn plekken en manieren om te betalen, geen functies."],
         uitlegPad: {
           stappen: [
             { titel: "Waarom hebben we geld?", tekst: "Geld vervult 3 functies tegelijk. Daardoor is het zo handig in het dagelijks leven." },
@@ -120,9 +120,9 @@ const steps = [
       },
       {
         q: "Welk geld is **digitaal**?",
-        options: ["Pinpas-saldo + Apple Pay", "Munten", "Biljetten", "Goud"],
+        options: ["Pinpas-saldo + Apple Pay", "Munten in je portemonnee", "Biljetten + muntgeld", "Goudstukken + zilver"],
         answer: 0,
-        wrongHints: [null, "Fysiek.", "Fysiek.", "Niet geld."],
+        wrongHints: [null, "Munten kun je vastpakken. Is dat digitaal?", "Kun je dit vastpakken?", "Goud kun je vastpakken. Bestaat het alleen op een scherm?"],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -478,9 +478,9 @@ const steps = [
       },
       {
         q: "Wat is **statiegeld**?",
-        options: ["Geld terug bij flessen inleveren", "Belasting op cola", "Spaargeld bank", "Bonus"],
+        options: ["Geld terug bij flessen inleveren", "Extra belasting op elke fles cola", "Spaargeld dat op de bank staat", "Korting als je veel flessen koopt"],
         answer: 0,
-        wrongHints: [null, "Niet statiegeld.", "Niet hetzelfde.", "Geen statiegeld."],
+        wrongHints: [null, "Gaat statiegeld naar de overheid? Wat gebeurt er met lege flessen?", "Heeft statiegeld met een bank te maken? Denk aan de supermarkt.", "Krijg je statiegeld bij het kopen? Denk aan lege flessen."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is statiegeld?", tekst: "Statiegeld is een **extra bedrag** dat je betaalt bij aankoop van een fles of blikje. Je krijgt dit geld TERUG als je de lege verpakking inlevert." },
@@ -506,15 +506,15 @@ const steps = [
       },
       {
         q: "**€0,25** statiegeld is voor:",
-        options: ["Grote plastic fles (meer dan 1 liter)", "Kleine plastic fles", "Blikje", "Niets"],
+        options: ["Grote plastic fles (meer dan 1 liter)", "Kleine plastic fles (tot 1 liter)", "Blikje frisdrank (0,33 liter)", "Glazen bierflesje (0,3 liter)"],
         answer: 0,
-        wrongHints: [null, "0,15 voor plastic 0,5L.", "0,15 voor blikje.", "Wel iets."],
+        wrongHints: [null, "Voor kleine flesjes krijg je minder terug.", "Voor een blikje krijg je €0,15.", "Glazen bierflesjes hebben een eigen, lager bedrag."],
       },
       {
         q: "Hoe leer je **geld beheren**?",
-        options: ["Boekje bijhouden + doelen stellen", "Alles uitgeven", "Bij ouders vragen", "Niet leren"],
+        options: ["Boekje bijhouden + doelen stellen", "Alles meteen uitgeven + niet tellen", "Steeds je ouders laten betalen", "Je geld in een la leggen + vergeten"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Leer juist zelf.", "Wel leerbaar."],
+        wrongHints: [null, "Leer je dan hoe je met geld omgaat?", "Dan leer je het niet zelf.", "Weet je dan nog hoeveel je hebt?"],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -803,9 +803,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **rente**?",
-        options: ["Extra geld dat je krijgt over je spaargeld", "Belasting", "Boete", "Korting"],
+        options: ["Extra geld dat je krijgt over je spaargeld", "Geld dat je aan de overheid moet betalen", "Geld dat je betaalt als je te laat bent", "Geld dat je minder betaalt in de uitverkoop"],
         answer: 0,
-        wrongHints: [null, "Belasting is iets anders.", "Niet boete.", "Niet korting."],
+        wrongHints: [null, "Dat is belasting.", "Dat is een boete.", "Dat is korting."],
         uitlegPad: {
           stappen: [
             { titel: "Rente = beloning voor sparen", tekst: "**Rente** is een **percentage extra geld** dat je krijgt van de **bank** als jij geld bij hen bewaart. Een soort 'bedankje' voor je vertrouwen." },
@@ -867,9 +867,9 @@ const steps = [
       },
       {
         q: "Beste moment om **te sparen**?",
-        options: ["Vooraf opzij zetten, niet wachten", "Aan het einde van maand", "Alleen als er over is", "Nooit"],
+        options: ["Vooraf opzij zetten, niet wachten", "Aan het einde van de maand sparen", "Alleen sparen als er geld over is", "Pas sparen als je volwassen bent"],
         answer: 0,
-        wrongHints: [null, "Vaak niets over.", "Vaak niets over.", "Wel goed om te doen."],
+        wrongHints: [null, "Is er dan nog wat over?", "Vaak is er niets over.", "Hoe eerder je begint, hoe meer je leert."],
         uitlegPad: {
           stappen: [
             { titel: "Sparen-strategie: 'Pay yourself first'", tekst: "De **beste manier om te sparen** is: zet geld **DIRECT** opzij zodra je het krijgt. **Vóórdat** je iets uitgeeft. Dat heet 'pay yourself first' (eerst jezelf betalen)." },
@@ -1239,9 +1239,9 @@ const steps = [
       },
       {
         q: "Wat is **'wachten'** als geldwijsheid-tip?",
-        options: ["1 week wachten — wil je het dan nog?", "Nooit kopen", "Snel kopen", "Geen tip"],
+        options: ["1 week wachten — wil je het dan nog?", "Nooit meer iets kopen — dan spaar je", "Snel kopen — straks is het uitverkocht", "Wachten tot een vriend het ook heeft"],
         answer: 0,
-        wrongHints: [null, "Geen geldwijsheid.", "Tegenovergesteld.", "Wel tip."],
+        wrongHints: [null, "Wachten is iets anders dan nooit kopen.", "Dat is juist het tegenovergestelde van wachten.", "Waar wacht je eigenlijk op als je slim met geld bent?"],
       },
       {
         q: "Wat hoort in **'NODIG'**-categorie?",
@@ -1260,12 +1260,7 @@ const steps = [
         q: "In welke groep van de 50/30/20-regel hoort een **busabonnement** om naar school te reizen?",
         options: ["NODIG", "LEUK", "SPAREN", "LENEN"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Kun je zonder, of heb je het nodig om op school te komen?",
-          null,
-          "Hoort dit bij de drie groepen?",
-        ],
+        wrongHints: [null, "Kun je zonder, of moet je er elke dag mee naar school?", null, "Hoort dit bij de drie groepen?"],
       },
       {
         q: "Welke uitgave hoort bij **LEUK**?",
@@ -1311,9 +1306,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **BNPL**?",
-        options: ["Buy Now Pay Later — uitgesteld betalen", "Korting bij online winkels", "Belasting", "Spaarproduct"],
+        options: ["Buy Now Pay Later — uitgesteld betalen", "Korting als je online iets bestelt", "Belasting op spullen uit het buitenland", "Spaarrekening speciaal voor kinderen"],
         answer: 0,
-        wrongHints: [null, "Krijg je korting, of betaal je pas later?", "Geen belasting.", "Tegenovergesteld."],
+        wrongHints: [null, "Krijg je korting, of betaal je pas later?", "Geen belasting. Wanneer betaal je bij BNPL?", "Bij BNPL spaar je niet."],
       },
       {
         q: "Hoe **schulden vermijden**?",
@@ -1347,14 +1342,9 @@ const steps = [
       },
       {
         q: "Wat betekent **rood staan** bij de bank?",
-        options: [
-          "Je hebt minder dan nul euro op je rekening",
-          "Je hebt extra veel gespaard",
-          "Je pinpas is kapot",
-          "Je hebt rente gekregen",
-        ],
+        options: ["Je hebt minder dan nul euro op je rekening", "Je hebt extra veel gespaard op je rekening", "Je pinpas is kapot en werkt niet meer", "Je hebt rente gekregen over je spaargeld"],
         answer: 0,
-        wrongHints: [null, "Is rood staan iets goeds of iets wat je wilt vermijden?", null, null],
+        wrongHints: [null, "Is rood staan iets goeds of iets wat je wilt vermijden?", "Heeft rood staan met je pasje te maken?", "Rente krijgen is fijn. Is rood staan fijn?"],
       },
       {
         q: "Waarom zijn influencers die een product aanprijzen **niet altijd eerlijk**?",
@@ -1412,9 +1402,9 @@ const steps = [
       },
       {
         q: "Wat is **rente**?",
-        options: ["Beloning voor sparen", "Belasting", "Korting", "Boete"],
+        options: ["Beloning voor sparen", "Betaling aan de overheid", "Korting bij de kassa", "Straf voor te laat betalen"],
         answer: 0,
-        wrongHints: [null, "Niet hetzelfde.", "Niet hetzelfde.", "Niet rente."],
+        wrongHints: [null, "Dat is belasting.", "Dat is korting.", "Dat is een boete."],
       },
       {
         q: "**50/30/20** — wat is **30%** voor?",
@@ -1424,29 +1414,29 @@ const steps = [
       },
       {
         q: "Wat is **statiegeld**?",
-        options: ["Geld terug bij flessen", "Spaarrekening", "Lening", "Belasting"],
+        options: ["Geld terug bij flessen", "Rente op je spaargeld", "Geld lenen bij de winkel", "Belasting op frisdrank"],
         answer: 0,
-        wrongHints: [null, "Iets anders.", "Tegenovergesteld.", "Niet hetzelfde."],
+        wrongHints: [null, "Heeft statiegeld met de bank te maken?", "Moet je statiegeld terugbetalen?", "Gaat statiegeld naar de overheid?"],
       },
       {
         q: "Hoe vermijd je **impulsaankopen**?",
-        options: ["1 week wachten — wil je het dan nog?", "Snel kopen voor korting", "Lenen om te betalen", "Vrienden vragen"],
+        options: ["1 week wachten — wil je het dan nog?", "Snel kopen — dan heb je nog korting", "Lenen — dan kun je het meteen betalen", "Kopen zodra je het in een filmpje ziet"],
         answer: 0,
-        wrongHints: [null, "Reclame-truc.", "Schulden.", "Niet primair."],
+        wrongHints: [null, "Dat is een reclame-truc die je juist laat kopen.", "Lenen maakt schulden.", "Een impulsaankoop is juist kopen zonder nadenken."],
       },
       { q: "**50/30/20** — wat is **50%** voor?", options: ["Nodig","Leuk","Sparen","Belasting"], answer: 0, wrongHints: [null, "Dat is 30%.", "Dat is 20%.", "Niet in regel."] },
       { q: "**50/30/20** — wat is **20%** voor?", options: ["Sparen","Leuk","Nodig","Belasting"], answer: 0, wrongHints: [null, "Dat is 30%.", "Dat is 50%.", "Niet in regel."] },
       { q: "€10 zakgeld × 4 weken = totaal in 1 maand?", options: ["€40","€14","€10","€100"], answer: 0, wrongHints: [null, "Som.", "Per week.", "Te veel."] },
       { q: "Spaar €5/week. Hoeveel na 10 weken?", options: ["€50","€5","€15","€100"], answer: 0, wrongHints: [null, "Per week.", "Niet.", "Te veel."] },
       { q: "Wat wil **reclame** vooral dat je doet?", options: ["Iets kopen","Niets","Spelen","Spreken"], answer: 0, wrongHints: [null, "Wel — doel.", "Soms ook, niet hoofd.", "Niet primair."] },
-      { q: "Wat doe je als je iets duurs wilt kopen?", options: ["Sparen tot je het zelf kan betalen","Direct lenen","Vrienden vragen","Vergeten"], answer: 0, wrongHints: [null, "Riskant.", "Niet primair.", "Niet relevant."] },
+      { q: "Wat doe je als je iets duurs wilt kopen?", options: ["Sparen tot je het zelf kan betalen", "Meteen lenen en later terugbetalen", "Je vrienden vragen het te betalen", "Direct kopen zonder na te denken"], answer: 0, wrongHints: [null, "Lenen is riskant: je krijgt schulden.", "Is dat eerlijk tegenover je vrienden?", "Kun je het dan wel betalen?"] },
       { q: "**BNPL** (Buy Now Pay Later) is?", options: ["Vorm van lenen","Spaarrekening","Reclame-truc","Statiegeld"], answer: 0, wrongHints: [null, "Niet sparen.", "Reclame hoort erbij, maar wat gebeurt er met je geld als je pas later betaalt?", "Niet."] },
       { q: "Welke 3 **functies** heeft geld?", options: ["Ruil + reken + spaar","Ruil + reken","Ruil + reclame","Spaar + lenen + reclame"], answer: 0, wrongHints: [null, "Mist sparen.", "Niet — reclame is geen functie.", "Niet 3 functies."] },
-      { q: "**Schulden** ontstaan als je?", options: ["Niet terugbetaalt wat je leende","Veel spaart","Niet uitgeeft","Statiegeld inlevert"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Niet.", "Niet."] },
-      { q: "Influencer reclame heet?", options: ["Sponsored content / partnership","Eerlijke mening","Niet reclame","Belasting"], answer: 0, wrongHints: [null, "Niet altijd.", "Wel.", "Niet."] },
+      { q: "**Schulden** ontstaan als je?", options: ["Niet terugbetaalt wat je leende", "Elke week een beetje spaart", "Minder uitgeeft dan je krijgt", "Flessen inlevert bij de winkel"], answer: 0, wrongHints: [null, "Sparen is juist het tegenovergestelde.", "Dan houd je juist geld over.", "Daar krijg je juist geld voor terug."] },
+      { q: "Influencer reclame heet?", options: ["Sponsored content / partnership", "Eerlijke mening / eigen review", "Gewoon filmpje / geen reclame", "Overheidsbericht / voorlichting"], answer: 0, wrongHints: [null, "Krijgt de influencer er iets voor? Dan is het niet zomaar een mening.", "Als een bedrijf betaalt, is het dan nog 'gewoon'?", "Wie betaalt de influencer: de overheid of een bedrijf?"] },
       { q: "Als geld op spaarrekening blijft, krijg je vaak?", options: ["Rente","Niets","Korting","Bonus"], answer: 0, wrongHints: [null,"Niet niets — je krijgt wél iets.","Korting is bij kopen, niet bij sparen.","Een bonus is eenmalig; dit krijg je elk jaar opnieuw over je spaargeld."] },
-      { q: "**Begroting** is?", options: ["Plan voor inkomsten + uitgaven","Boodschappenlijst","Reclame","Bankrekening"], answer: 0, wrongHints: [null, "Soms onderdeel.", "Niet.", "Niet."] },
-      { q: "Welke geldzaak is voor **kinderen** verstandig?", options: ["Klein deel zakgeld sparen","Alles op één hoop","Niets sparen","Lenen"], answer: 0, wrongHints: [null, "Niet — overzicht weg.", "Niet.", "Risico."] },
+      { q: "**Begroting** is?", options: ["Plan voor inkomsten + uitgaven", "Lijst met alle boodschappen", "Reclame voor een nieuwe winkel", "Rekening bij een bank + pinpas"], answer: 0, wrongHints: [null, "Boodschappen zijn maar een deel. Wat hoort er nog meer bij?", "Heeft een begroting met reclame te maken?", "Daar bewaar je geld. Een begroting maak je zelf — wat staat erin?"] },
+      { q: "Welke geldzaak is voor **kinderen** verstandig?", options: ["Klein deel zakgeld sparen", "Al je zakgeld meteen uitgeven", "Geld lenen van klasgenoten", "Geld verstoppen en niet tellen"], answer: 0, wrongHints: [null, "Dan houd je niets over.", "Lenen geeft schulden — ook bij vrienden.", "Dan weet je niet meer hoeveel je hebt."] },
       { q: "Welk product heeft **statiegeld** in NL?", options: ["Plastic flessen","Boeken","Stickers","Bananen"], answer: 0, wrongHints: [null, "Geen statiegeld.", "Geen.", "Geen."] },
     ],
   },

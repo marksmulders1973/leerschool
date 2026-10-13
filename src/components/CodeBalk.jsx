@@ -19,6 +19,21 @@ import { PARTNER_NAMEN } from "./PartnerWelkom.jsx";
 import { track } from "../utils.js";
 import { FamilieKnop, FamilieLijst } from "./FamilieUitleg.jsx";
 import { telAntwoordVoorVriend } from "../features/referral/referral.js";
+import { straksIcs } from "../features/referral/straksMetJeKind.js";
+
+// .ics-afspraak (vandaag 19:00, of morgen als het al na 18:30 is) met de link + code erin.
+function zetInAgenda(code) {
+  try {
+    const url = URL.createObjectURL(new Blob([straksIcs(code)], { type: "text/calendar;charset=utf-8" }));
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "leerkwartier-kwartier.ics";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 10000);
+  } catch { /* geen download mogelijk: niets breken */ }
+}
 
 // 🙋 Twee wegen op het ere-scherm (Mark 28 sep 2026, "ja, bouw het zo"). Meting 7 dagen: 42 apparaten
 // zagen dit scherm, 1 deed daarna een vraag. Het scherm praatte tegen de ouder ("u"), maar de enige
@@ -86,8 +101,14 @@ function EerBewaar({ code, en, donker }) {
       <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
         <a href={"https://wa.me/?text=" + encodeURIComponent(tekst)} target="_blank" rel="noopener" onClick={() => meet("whatsapp")} style={knop}>📲 WhatsApp</a>
         <a href={"mailto:?subject=" + encodeURIComponent(en ? "Leerkwartier — for later" : "Leerkwartier — voor straks") + "&body=" + encodeURIComponent(tekst)} onClick={() => meet("mail")} style={knop}>✉️ {en ? "E-mail" : "Mail"}</a>
+        {/* 13 okt 2026: WhatsApp/mail aan jezelf herinnert je nergens aan; een agenda-afspraak wel (op het moment dat het kind thuis is) */}
+        <button type="button" onClick={() => { zetInAgenda(code); meet("agenda"); }} style={knop}>{en ? "Remind me at 7 pm" : "Herinner me om 19:00"}</button>
       </div>
-      {klaar && <div style={{ marginTop: 8, font: "600 13px system-ui", color: donker ? "#b8e07a" : "#3f7015" }}>{en ? "Saved — see you later!" : "Bewaard — tot straks!"}</div>}
+      {klaar && <div style={{ marginTop: 8, font: "600 13px system-ui", color: donker ? "#b8e07a" : "#3f7015" }}>
+        {klaar === "agenda"
+          ? (en ? "Open the downloaded file and choose \"Add\"." : "Open het gedownloade bestand en kies \"Toevoegen\". Lukt dat niet? Gebruik dan WhatsApp.")
+          : (en ? "Saved — see you later!" : "Bewaard — tot straks!")}
+      </div>}
     </div>
   );
 }

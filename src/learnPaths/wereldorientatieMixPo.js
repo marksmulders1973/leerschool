@@ -130,9 +130,9 @@ const steps = [
       },
       {
         q: "Wat veroorzaakt **klimaatverandering** vooral?",
-        options: ["CO₂ van fossiele brandstoffen","Bosbranden alleen","Vulkanen","Zonneflitsen"],
+        options: ["CO₂ van fossiele brandstoffen", "Rook van bosbranden alleen", "As van vulkaanuitbarstingen", "Hitte van zonnevlammen"],
         answer: 0,
-        wrongHints: [null, "Klein deel.", "Niet primair.", "Niet primair menselijk."],
+        wrongHints: [null, "Bosbranden zijn maar een klein deel.", "Vulkanen spelen maar een kleine rol.", "De zon verandert maar heel weinig. Wat doen mensen zelf?"],
         uitlegPad: {
           stappen: [{ titel: "Broeikaseffect", tekst: "**CO₂** (koolstofdioxide) uit verbranding **fossiele brandstoffen** (olie + gas + kolen): hoofdoorzaak klimaatverandering. CO₂ houdt warmte in atmosfeer vast (**broeikaseffect**). Sinds 1880 is aarde ~1,2°C warmer. **Parijs-akkoord 2015**: doel onder 1,5-2°C blijven. Ook bijdragend: methaan (vee-houderij + gas), ontbossing." }],
           niveaus: { basis: "CO₂ fossiel.", simpeler: "Klimaat = CO2", nogSimpeler: "CO₂." },
@@ -159,9 +159,9 @@ const steps = [
       },
       {
         q: "Wat doen planten bij **fotosynthese**?",
-        options: ["CO₂ + water + zonlicht → suiker + zuurstof","Eten andere planten","Slapen overdag","Bloemen openen"],
+        options: ["CO₂ + water + zonlicht → suiker + zuurstof", "Zuurstof + suiker → CO₂ + water + energie", "Andere planten eten → groei + bloemen", "Zonlicht + aarde → bloemen + zaadjes"],
         answer: 0,
-        wrongHints: [null, "Niet — planten zijn producenten.", "Niet relevant.", "Bloemen openen heeft met bloeien te maken, niet met voedsel maken."],
+        wrongHints: [null, "Dat is ademhaling — precies het omgekeerde. Wat heeft een plant nodig om voedsel te maken?", "Niet — planten zijn producenten.", "Bloemen en zaad horen bij bloeien, niet bij voedsel maken."],
         uitlegPad: {
           stappen: [{ titel: "Producent", tekst: "**Fotosynthese**: planten gebruiken **CO₂ + water + zonlicht** om **suiker (glucose) + zuurstof** te maken. Vindt plaats in **bladgroenkorrels** (chloroplasten: groene korreltjes ín de cellen van het blad) met **bladgroen** (chlorofyl). Zonder fotosynthese bijna geen leven op aarde — bijna al ons voedsel begint hier. Bijproduct = zuurstof voor dieren." }],
           niveaus: { basis: "Maakt suiker + zuurstof.", simpeler: "Fotosynthese = voedsel maken", nogSimpeler: "Suiker + zuurstof." },
@@ -267,9 +267,9 @@ const steps = [
     checks: [
       {
         q: "Wat doe je bij een **lange leesvraag** op de toets?",
-        options: ["Lees zorgvuldig + check tussen-stappen","Snelste antwoord direct","Sla over","Zoek hulp"],
+        options: ["Lees zorgvuldig + check tussen-stappen", "Kies direct het snelste antwoord", "Sla hem over + kom nooit meer terug", "Lees alleen de laatste zin + gok"],
         answer: 0,
-        wrongHints: [null, "Vaak fout.", "Niet — punten kwijt.", "Op de toets kun je geen hulp vragen."],
+        wrongHints: [null, "Vaak fout.", "Niet — punten kwijt.", "Dan mis je belangrijke informatie."],
         uitlegPad: {
           stappen: [{ titel: "Toets-strategie", tekst: "Bij **lange leesvraag** (Doorstroomtoets-stijl): **lees zorgvuldig + check stap voor stap**. Niet meteen 1e antwoord kiezen — kijk welke optie alle voorwaarden uit tekst nakomt. Vaak zit val in details. Tip: streep belangrijke woorden in vraag onder." }],
           niveaus: { basis: "Stap voor stap.", simpeler: "Stap voor stap", nogSimpeler: "Goed lezen." },
@@ -279,7 +279,7 @@ const steps = [
         q: "In welk **werelddeel** ligt NL?",
         options: ["Europa","Azië","Afrika","Antarctica"],
         answer: 0,
-        wrongHints: [null, "Ligt veel verder naar het oosten.", "Ligt ten zuiden van Europa.", "Niet bewoond."],
+        wrongHints: [null, "Ligt veel verder naar het oosten.", "Ligt ten zuiden van ons, aan de andere kant van de Middellandse Zee.", "Niet bewoond."],
         uitlegPad: {
           stappen: [{ titel: "EU-lid", tekst: "**Nederland ligt in Europa** (West-Europa specifiek). Onderdeel van **EU** sinds oprichting EEG 1957. NL = klein land (41.500 km²) maar grote economische rol door handel + havens. Buurlanden: België + Duitsland + Noordzee." }],
           niveaus: { basis: "Europa.", simpeler: "NL = Europa", nogSimpeler: "Europa." },
@@ -287,9 +287,9 @@ const steps = [
       },
       {
         q: "Welke **WO2-jaartallen** kloppen?",
-        options: ["1940-1944 voor NL","1914-1918","1939-1945 wereldwijd, 1940-1945 NL","Alle drie kloppen"],
+        options: ["1940-1944 wereldwijd, 1940-1944 NL", "1914-1918 wereldwijd, 1914-1918 NL", "1939-1945 wereldwijd, 1940-1945 NL", "1939-1945 wereldwijd, 1939-1940 NL"],
         answer: 2,
-        wrongHints: ["Bijna — in welk jaar werd Nederland bevrijd?", "Dat zijn de jaren van WO1.", null, "Kijk nog eens naar 1914-1918: welke oorlog was dat?"],
+        wrongHints: ["Bijna — in welk jaar werd Nederland bevrijd?", "Dat zijn de jaren van WO1.", null, "Nederland werd in mei 1940 aangevallen. Hoe lang duurde de bezetting?"],
         uitlegPad: {
           stappen: [{ titel: "WO1 vs WO2", tekst: "**WO1**: 1914-1918 (NL **neutraal**, niet bezet). **WO2**: 1939-1945 wereldwijd, **NL 1940-1945** bezet (Duitse inval 10 mei 1940 → bevrijding 5 mei 1945)." }],
           niveaus: { basis: "WO2 duurde wereldwijd van 1939 tot 1945; in Nederland van 1940 tot 1945.", simpeler: "Wereld 1939-1945, Nederland 1940-1945.", nogSimpeler: "1939/1940 tot 1945." },

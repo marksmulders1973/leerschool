@@ -61,9 +61,9 @@ const steps = [
       },
       {
         q: "Wat is **doping**?",
-        options: ["Verboden stoffen voor betere prestatie", "Sport", "Medaille", "Een soort sportschoen"],
+        options: ["Verboden stoffen voor betere prestatie", "Een nieuwe sport op de Olympische Spelen", "Een gouden medaille voor de winnaar", "Een soort snelle schoen voor sprinters"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet.", "Niet."],
+        wrongHints: [null, "Doping is geen sport.", "Een medaille win je. Doping is iets anders.", "Doping draag je niet aan je voeten."],
       },
       {
         q: "**Meeste medailles ooit** door?",
@@ -92,9 +92,9 @@ const steps = [
       },
       {
         q: "**Femke Bol** is sterk in?",
-        options: ["400m horden / 4x400m", "Zwemmen", "Schaatsen", "Tennis"],
+        options: ["400m horden / 4x400m", "Zwemmen / schoolslag", "Schaatsen / 1500 meter", "Tennis / dubbelspel"],
         answer: 0,
-        wrongHints: [null, "Femke Bol traint niet in het zwembad — zij presteert juist op de atletiekbaan.", "Denk je aan het ijs? Femke Bol is een atlete van de loopbaan, niet van het schaatsen.", "Femke Bol slaat geen ballen; ze rent hard rondjes met hindernissen — bij welke sport past dat?"],
+        wrongHints: [null, "Femke Bol traint niet in het zwembad.", "Femke Bol staat niet op het ijs.", "Femke Bol slaat geen ballen."],
       },
       {
         q: "**Oranje** komt van?",
@@ -114,7 +114,7 @@ const steps = [
       { q: "**Meeste medailles** NL ooit?", options: ["Ireen Wüst", "Sven Kramer", "Phelps", "Femke Bol"], answer: 0, wrongHints: [null, "Iets minder.", "Geen NL.", "Nog actief."] },
       { q: "**Goud** medaille voor?", options: ["1e plaats", "2e", "3e", "4e"], answer: 0, wrongHints: [null, "Zilver.", "Brons.", "Dan krijg je een diploma."] },
       { q: "Wat is **WADA**?", options: ["Anti-Doping-Agency", "Sportbond", "NL-team", "Stadion"], answer: 0, wrongHints: [null, "Niet primair.", "Niet.", "Niet."] },
-      { q: "Welke kleuren hebben de **olympische ringen**?", options: ["Blauw, geel, zwart, groen, rood", "Alleen blauw", "Wit en zwart", "Regenboog"], answer: 0, wrongHints: [null, "Te weinig.", "Te weinig.", "Niet primair olympisch."] },
+      { q: "Welke kleuren hebben de **olympische ringen**?", options: ["Blauw, geel, zwart, groen, rood", "Vijf keer dezelfde kleur blauw", "Goud, zilver, brons, wit, zwart", "Alle kleuren van de regenboog"], answer: 0, wrongHints: [null, "Elke ring heeft een eigen kleur.", "Dat zijn de kleuren van de medailles.", "De regenboog heeft zeven kleuren. Hoeveel ringen zijn er?"] },
       { q: "Wanneer waren **Olympische Spelen Amsterdam**?", options: ["1928", "1900", "2000", "2020"], answer: 0, wrongHints: [null, "Parijs.", "Sydney.", "Tokio (uitgesteld)."] },
       { q: "Welke **NL-sporter** wint vaak op de **schaats**?", options: ["Ireen Wüst, Sven Kramer", "Lionel Messi", "Usain Bolt", "Michael Phelps"], answer: 0, wrongHints: [null, "Voetbal.", "Atletiek.", "Zwemmen."] },
       { q: "**Paralympische Spelen** zijn voor ___?", options: ["Sporters met een handicap", "Alleen kinderen", "Alleen oud-olympiërs", "Alleen NL"], answer: 0, wrongHints: [null, "Volwassenen ook.", "Niet.", "Internationaal."] },

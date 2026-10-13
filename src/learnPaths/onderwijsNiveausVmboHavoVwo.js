@@ -84,7 +84,7 @@ const steps = [
         q: "Bij welk niveau hoort **veel praktijk + leren met je handen**?",
         options: ["vmbo", "vwo", "universiteit", "havo"],
         answer: 0,
-        wrongHints: [null, "Juist veel theorie.", "Dat komt later.", "Meer theorie dan vmbo."],
+        wrongHints: [null, "Juist veel theorie.", "Dat komt later.", "Havo heeft veel theorie. Welk niveau heeft de meeste praktijk?"],
       },
       {
         q: "Welk niveau is **'beter'**?",
@@ -115,7 +115,7 @@ const steps = [
         q: "Welk niveau duurt het **kortst**?",
         options: ["vmbo", "havo", "vwo", "Ze duren alle drie even lang"],
         answer: 0,
-        wrongHints: [null, "Hoeveel jaar duurt havo, en hoeveel jaar duurt vmbo?", null, null],
+        wrongHints: [null, "Havo duurt 5 jaar. Weet je hoe lang de andere niveaus duren?", null, null],
       },
       {
         q: "Waarin verschillen vmbo, havo en vwo **vooral**?",
@@ -210,7 +210,7 @@ const steps = [
     checks: [
       {
         q: "Wat is het verschil tussen **atheneum en gymnasium**?",
-        options: ["Gymnasium heeft er Latijn en Grieks bij", "Gymnasium is gym/sport", "Atheneum duurt 3 jaar", "Er is geen verschil"],
+        options: ["Gymnasium heeft er Latijn en Grieks bij", "Gymnasium heeft er extra gym en sport bij", "Atheneum duurt maar 3 jaar, gymnasium 6", "Geen verschil: ze zijn precies hetzelfde"],
         answer: 0,
         wrongHints: [null, "Niet de sportles.", "Vwo duurt 6 jaar.", "Er is wél een verschil."],
       },
@@ -222,9 +222,9 @@ const steps = [
       },
       {
         q: "Wat is een **profiel** op havo/vwo?",
-        options: ["Een vast pakket vakken dat bij je past", "Een foto op je pasje", "Een soort gym", "Een schoolreisje"],
+        options: ["Een vast pakket vakken dat bij je past", "Een foto van jezelf op je schoolpasje", "Een gymles die je zelf mag kiezen", "Een schoolreisje in het laatste jaar"],
         answer: 0,
-        wrongHints: [null, "Niet die soort profiel.", "Niet onderwijs.", "Niet onderwijs."],
+        wrongHints: [null, "Niet die soort profiel.", "Een profiel gaat over meer dan één les.", "Niet onderwijs."],
       },
       {
         q: "Hoeveel jaar duurt **vwo**?",
@@ -266,7 +266,7 @@ const steps = [
       },
       {
         q: "Op de **universiteit** leer je vooral...",
-        options: ["Dingen heel diep onderzoeken en uitzoeken", "Alleen met je handen werken", "Niets nieuws", "Hetzelfde als groep 8"],
+        options: ["Dingen heel diep onderzoeken en uitzoeken", "Alleen met je handen een vak leren", "Niets nieuws, alleen herhalen", "Hetzelfde als je in groep 8 leerde"],
         answer: 0,
         wrongHints: [null, "Dat past meer bij mbo.", "Juist veel nieuws.", "Veel moeilijker dan groep 8."],
       },
@@ -343,7 +343,7 @@ const steps = [
       },
       {
         q: "Wat betekent **stapelen** van opleidingen?",
-        options: ["Diploma's na elkaar halen om hoger te komen", "Boeken op elkaar leggen", "Stoppen met school", "Twee niveaus tegelijk doen"],
+        options: ["Diploma's na elkaar halen om hoger te komen", "Boeken netjes op elkaar leggen in de kast", "Stoppen met school en gaan werken", "Twee niveaus tegelijk doen in één jaar"],
         answer: 0,
         wrongHints: [null, "Niet letterlijk boeken.", "Het tegenovergestelde.", "Niet tegelijk — na elkaar."],
       },
@@ -355,7 +355,7 @@ const steps = [
       },
       {
         q: "Naar een lager niveau gaan dat beter past, is...",
-        options: ["Slim kiezen wat bij je past, geen mislukking", "Altijd een mislukking", "Verboden", "Alleen voor luie kinderen"],
+        options: ["Slim kiezen wat bij je past", "Altijd een mislukking", "Verboden op elke school", "Alleen voor luie kinderen"],
         answer: 0,
         wrongHints: [null, "Is een schoen die knelt houden slimmer dan een maat wisselen die wél past?", "Wisselen mag gewoon — scholen helpen er zelfs bij. Wat zegt dat over deze keuze?", "Iemand die kiest voor een plek waar hij beter leert — klinkt dat lui of juist slim?"],
       },

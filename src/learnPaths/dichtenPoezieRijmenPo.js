@@ -49,9 +49,9 @@ const steps = [
       },
       {
         q: "Wat is een **couplet**?",
-        options: ["Groep regels bij elkaar", "Hele gedicht", "1 regel", "Pauze"],
+        options: ['Groepje regels bij elkaar', 'Het hele gedicht samen', 'Eén regel van het gedicht', 'De witregel tussen stukken'],
         answer: 0,
-        wrongHints: [null, "Te groot.", "Te klein.", "Wit."],
+        wrongHints: [null, 'Dat is te groot. Een couplet is een deel van het gedicht.', 'Dat is te klein. Hoeveel regels horen bij een couplet?', 'Een witregel is leeg. Wat staat er tussen twee witregels?'],
       },
       {
         q: "**Annie M.G. Schmidt** schreef vooral?",
@@ -61,9 +61,9 @@ const steps = [
       },
       {
         q: "Wat is **proza**?",
-        options: ["Gewone doorlopende tekst", "Gedicht", "Lied", "Toneelstuk"],
+        options: ['Gewone doorlopende tekst', 'Tekst in korte rijmende regels', 'Tekst die je zingt op muziek', 'Tekst met rollen om te spelen'],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Een lied staat in regels, net als een gedicht.", "Een toneelstuk is tekst om te spelen, met rollen — dat is een andere vorm."],
+        wrongHints: [null, 'Dat is een gedicht. Hoe staat een verhaal in je leesboek op papier?', 'Een lied staat in regels, net als een gedicht.', 'Een toneelstuk is tekst om te spelen, met rollen — dat is een andere vorm.'],
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -344,9 +344,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **eindrijm**?",
-        options: ["Woorden eindigen hetzelfde", "Beginnen hetzelfde", "Klemtoon", "Lengte gelijk"],
+        options: ['Woorden eindigen hetzelfde', 'Woorden beginnen hetzelfde', 'Woorden hebben dezelfde klemtoon', 'Regels zijn even lang'],
         answer: 0,
-        wrongHints: [null, "Alliteratie.", "Ritme.", "Gelijke lengte zegt niets over de klank."],
+        wrongHints: [null, 'Dat heet alliteratie. Waar in het woord zit eindrijm?', 'Klemtoon hoort bij ritme. Waar gaat rijm over?', 'Gelijke lengte zegt niets over de klank.'],
         uitlegPad: {
           stappen: [
             { titel: "Wat is eindrijm?", tekst: "Bij eindrijm eindigen 2 (of meer) woorden met dezelfde klank. Het is de bekendste vorm van rijm." },
@@ -373,9 +373,9 @@ const steps = [
       },
       {
         q: "Wat is **alliteratie**?",
-        options: ["Woorden beginnen met zelfde letter", "Woorden rijmen aan eind", "Zelfde betekenis", "Ritme"],
+        options: ['Woorden beginnen met zelfde letter', 'Woorden eindigen op dezelfde klank', 'Woorden hebben dezelfde betekenis', 'Woorden hebben hetzelfde ritme'],
         answer: 0,
-        wrongHints: [null, "Eindrijm.", "Synoniem.", "Niet."],
+        wrongHints: [null, 'Dat is eindrijm. Kijk naar een ander deel van het woord.', 'Dat zijn synoniemen. Alliteratie gaat over klank.', 'Ritme gaat over klemtoon. Luister eens naar \'Peter Pan piekert\'.'],
         uitlegPad: {
           stappen: [
             { titel: "Wat is alliteratie?", tekst: "Alliteratie is wanneer meerdere woorden achter elkaar BEGINNEN met dezelfde letter (of klank)." },
@@ -720,7 +720,7 @@ const steps = [
     checks: [
       {
         q: "Wat is **personificatie**?",
-        options: ["Dood ding doet als mens", "Synoniem", "Rijm", "Tegenovergesteld"],
+        options: ['Een ding doet als een mens', 'Woorden die op elkaar rijmen', 'Ander woord, zelfde betekenis', 'Woord met omgekeerde betekenis'],
         answer: 0,
         wrongHints: [null, "Een synoniem is een ander woord met dezelfde betekenis — kijk: 'persoon' zit in het woord.", "Rijm gaat over klank — denk bij personificatie aan 'de wind fluit'. Wat gebeurt daar?", "Dat zou een tegenstelling zijn — 'persoon' zit in het woord. Wat doet het ding?"],
         uitlegPad: {
@@ -1156,13 +1156,13 @@ const steps = [
     title: "Eind-toets — poëzie mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
-      { q: "Wat is **rijm**?", options: ["Woorden eindigen hetzelfde", "Klemtoon", "Lengte", "Letter"], answer: 0, wrongHints: [null, "Ritme.", "Lengte zegt niets over de klank.", "Niet specifiek."] },
+      { q: "Wat is **rijm**?", options: ['Woorden eindigen hetzelfde', 'Woorden hebben dezelfde klemtoon', 'Woorden zijn even lang', 'Woorden beginnen hetzelfde'], answer: 0, wrongHints: [null, 'Klemtoon hoort bij ritme. Waar luister je bij rijm naar?', 'Lengte zegt niets over de klank.', 'Dat heet alliteratie. Waar in het woord zit rijm?'] },
       { q: "**AABB** = ?", options: ["Paarrijm", "Gekruist", "Omarmend", "Niet rijm"], answer: 0, wrongHints: [null, "ABAB.", "ABBA.", "Wel rijm."] },
       { q: "*'De wind fluistert'* = ?", options: ["Personificatie", "Hyperbool", "Niet", "Rijm"], answer: 0, wrongHints: [null, "Geen overdrijving.", "Wel.", "Niet."] },
-      { q: "Wat is **alliteratie**?", options: ["Beginrijm zelfde letter", "Eindrijm", "Niet rijm", "Ritme"], answer: 0, wrongHints: [null, "Eindrijm.", "Wel.", "Niet."] },
+      { q: "Wat is **alliteratie**?", options: ['Beginrijm zelfde letter', 'Eindrijm zelfde klank', 'Herhaling van een regel', 'Ritme met zelfde klemtoon'], answer: 0, wrongHints: [null, 'Bij eindrijm lijkt het eind op elkaar. Waar zit alliteratie?', 'Een regel die terugkomt heet een refrein. Alliteratie gaat over klank.', 'Ritme gaat over klemtoon. Alliteratie gaat over klank.'] },
       { q: "**Haiku** is uit welk land?", options: ["Japan", "Nederland", "Verenigde Staten", "Frankrijk"], answer: 0, wrongHints: [null, "Niet origineel.", "Niet.", "Niet."] },
       { q: "Beroemde **NL-kindergedicht-dichter**?", options: ["Annie M.G. Schmidt", "Joost van den Vondel", "Shakespeare", "Marsman"], answer: 0, wrongHints: [null, "Gouden Eeuw, niet kindergedicht.", "Engels.", "Niet kindergedicht."] },
-      { q: "Een **strofe** is?", options: ["Een groepje versregels","Een woord","Een rijm","Een dichter"], answer: 0, wrongHints: [null, "Niet.", "Rijm = klank, geen groep.", "Persoon."] },
+      { q: "Een **strofe** is?", options: ['Een groepje versregels', 'Eén woord uit een vers', 'Twee woorden die rijmen', 'De maker van een gedicht'], answer: 0, wrongHints: [null, 'Een strofe is groter dan één woord.', 'Rijm = klank, geen groep.', 'Dat is een dichter. Een strofe is een stuk van het gedicht.'] },
       { q: "*'Zo wit als sneeuw'* = ?", options: ["Vergelijking","Hyperbool","Personificatie","Rijm"], answer: 0, wrongHints: [null, "Niet overdrijven.", "Geen menselijke eigenschap.", "Geen rijm."] },
       { q: "Hoeveel lettergrepen heeft een **haiku** per regel?", options: ["5-7-5","4-4-4","8-8-8","2-3-2"], answer: 0, wrongHints: [null, "Niet — vast Japans patroon.", "Te veel.", "Te weinig."] },
       { q: "Welk woord rijmt op **hond**?", options: ["mond","kat","huis","boom"], answer: 0, wrongHints: [null, "Andere klank.", "Niet.", "Niet."] },
@@ -1172,13 +1172,13 @@ const steps = [
       { q: "*'Duizend keer gezegd.'* — welke stijlfiguur?", options: ["Hyperbool","Personificatie","Vergelijking","Rijm"], answer: 0, wrongHints: [null, "Niet menselijke eigenschap.", "Geen 'als'.", "Niet."] },
       { q: "Wat is een **metafoor**?", options: ["Beeldspraak zonder 'als'","Vergelijking met 'als'","Overdrijving","Rijm"], answer: 0, wrongHints: [null, "Dat is vergelijking.", "Hyperbool.", "Niet."] },
       { q: "*'Pim heeft een paard in de tuin.'* — welke alliteratie-letters?", options: ["P","T","H","E"], answer: 0, wrongHints: [null, "Geen reeks.", "Niet beginrijm.", "Niet."] },
-      { q: "Wat is een **vers**?", options: ["Een regel in een gedicht","Een boek","Een verhaal","Een tekening"], answer: 0, wrongHints: [null, "Een boek is veel groter.", "Een verhaal loopt door in zinnen.", "Niet."] },
+      { q: "Wat is een **vers**?", options: ['Een regel in een gedicht', 'Een boek vol gedichten', 'Een verhaal in hoofdstukken', 'Een tekening bij een gedicht'], answer: 0, wrongHints: [null, 'Een boek vol gedichten heet een bundel. Een vers is veel kleiner.', 'Een verhaal loopt door in zinnen.', 'Een tekening is geen tekst. Een vers bestaat uit woorden.'] },
       { q: "Welk soort gedicht heeft **14 regels**?", options: ["Sonnet","Haiku","Limerick","Vrij vers"], answer: 0, wrongHints: [null, "17 lettergrepen.", "Meestal 5 regels.", "Geen vorm."] },
       { q: "**Limerick** heeft hoeveel regels?", options: ["5","3","14","8"], answer: 0, wrongHints: [null, "Haiku.", "Sonnet.", "Niet."] },
       { q: "Wat rijmt op **regen**?", options: ["zegen","zon","wolk","huis"], answer: 0, wrongHints: [null, "Andere klank.", "Niet.", "Niet."] },
-      { q: "**Refrein** in een gedicht/lied is?", options: ["Herhalend stukje tussen coupletten","Eerste regel","Laatste woord","Niet relevant"], answer: 0, wrongHints: [null, "Niet specifiek.", "Niet.", "Wel."] },
+      { q: "**Refrein** in een gedicht/lied is?", options: ['Herhalend stukje tussen coupletten', 'Allereerste regel van het lied', 'Laatste woord van elke regel', 'Nieuw stukje met een ander verhaal'], answer: 0, wrongHints: [null, 'De eerste regel zing je maar één keer. Is dat het refrein?', 'Het laatste woord van een regel heeft met rijm te maken.', 'Een nieuw stukje is een couplet. Wat zing je steeds opnieuw mee?'] },
       { q: "*'Ik zag, ik zag, wat jij niet zag.'* — welk effect door herhaling?", options: ["Versterkt + ritme","Vermoeit","Onzin","Niet relevant"], answer: 0, wrongHints: [null, "Herhaling in een gedicht is meestal juist expres gedaan. Waarom?", "Wel zin.", "Wel."] },
-      { q: "Wat is een **couplet**?", options: ["Groepje van 2+ versregels samen","Eén woord","Lied","Niet relevant"], answer: 0, wrongHints: [null, "Te klein.", "Te groot.", "Wel."] },
+      { q: "Wat is een **couplet**?", options: ['Groepje van 2+ versregels samen', 'Eén los woord uit een versregel', 'Het hele lied van begin tot eind', 'Het stukje dat steeds terugkomt'], answer: 0, wrongHints: [null, 'Is één woord genoeg voor een stuk van een lied?', 'Het hele lied is te groot. Een couplet is een deel ervan.', 'Dat stukje heet het refrein. Wat staat er tussen de refreinen?'] },
       { q: "Welk **rijmpaar** is acceptabel?", options: ["maan/baan","kat/tafel","huis/koud","stoel/groen"], answer: 0, wrongHints: [null, "Zeg ze hardop: klinken de eindklanken van 'kat' en 'tafel' hetzelfde?", "-uis en -oud — hoor je dezelfde eindklank?", "-oel en -oen lijken op elkaar maar eindigen nét anders — luister naar de laatste klank."] },
     ],
   },

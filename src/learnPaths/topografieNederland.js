@@ -1109,7 +1109,7 @@ const steps = [
       },
       {
         q: "Wat is het doel van de **Deltawerken**?",
-        options: ["Beschermen tegen overstromingen","Drinkwater zuiveren","Stroom opwekken","Schepen sneller maken"],
+        options: ["Beschermen tegen overstromingen", "Drinkwater schoonmaken voor iedereen", "Stroom opwekken met water en wind", "Schepen sneller laten varen"],
         answer: 0,
         wrongHints: [null,"Drinkwater wordt elders gezuiverd.","Sommige werken kunnen wel stroom opwekken maar dat is niet het hoofddoel.","Niet de bedoeling van Deltawerken."],
         uitlegPad: {
@@ -1162,14 +1162,9 @@ const steps = [
       },
       {
         q: "Wat is een **polder**?",
-        options: [
-          "Laag land dat vroeger water was en is drooggemalen",
-          "Een hoge zandheuvel aan de zee",
-          "Een rivier die naar de zee stroomt",
-          "Een dam die de zee tegenhoudt",
-        ],
+        options: ["Laag land dat vroeger water was en is drooggemalen", "Een hoge heuvel van zand aan de kust van de zee", "Een brede rivier die door het land naar zee stroomt", "Een lange dam van stenen die de zee tegenhoudt"],
         answer: 0,
-        wrongHints: [null, "Een polder ligt juist laag. Klopt 'hoog' dan?", null, null],
+        wrongHints: [null, "Een polder ligt juist laag. Klopt 'hoog' dan?", "Een rivier is stromend water. Kun je in een polder wonen?", "Een dam houdt water tegen. Maar wat ligt erachter?"],
         uitlegPad: {
           stappen: [
             {

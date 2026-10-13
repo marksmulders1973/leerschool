@@ -157,7 +157,7 @@ const steps = [
     checks: [
       { q: "Wat is **eye**?", options: ["oog", "oor", "neus", "mond"], answer: 0, wrongHints: [null, "ear = oor.", "nose = neus.", "mouth = mond."] },
       { q: "Wat betekent **hand**?", options: ["hand", "vinger", "arm", "voet"], answer: 0, wrongHints: [null, "finger = vinger.", "arm = arm.", "foot = voet."] },
-      { q: "Wat is het meervoud van **tooth** (tand)?", options: ["teeth", "tooths", "toothes", "tothes"], answer: 0, wrongHints: [null, "Niet — onregelmatig: tooth → teeth.", "Niet bestaand.", "Niet."] },
+      { q: "Wat is het meervoud van **tooth** (tand)?", options: ["teeth", "tooths", "toothes", "tothes"], answer: 0, wrongHints: [null,"tooth is onregelmatig: je plakt er geen -s achter. Denk aan foot → feet.","Niet bestaand.","Niet."] },
       { q: "Wat is **leg** in NL?", options: ["been", "arm", "voet", "hoofd"], answer: 0, wrongHints: [null, "arm = arm.", "foot = voet.", "head = hoofd."] },
       { q: "Wat is **heart**?", options: ["hart", "hoofd", "hand", "haar"], answer: 0, wrongHints: [null, "head = hoofd.", "hand = hand.", "hair = haar."] },
     ],

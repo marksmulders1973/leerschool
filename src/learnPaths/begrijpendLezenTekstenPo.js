@@ -638,20 +638,10 @@ const steps = [
       {
         // letterlijke vraag
         q: "Wat heb je nodig om de armband te maken?",
-        options: [
-          "Twintig paperclips, een stukje touw en een schaar",
-          "Twintig paperclips en een naald",
-          "Tien paperclips en garen",
-          "Een armband en wat touw",
-        ],
+        options: ["Twintig paperclips, een stukje touw en een schaar","Twintig paperclips, een naald en een schaar","Tien paperclips, een stukje garen en een schaar","Twintig paperclips, een stukje touw en lijm"],
         answer: 0,
         evidence: "Je hebt nodig: ongeveer twintig metalen paperclips, een stukje touw, en een schaar.",
-        wrongHints: [
-          null,
-          "Geen naald in de tekst — lees terug welke drie dingen genoemd worden.",
-          "Niet tien — en geen garen.",
-          "Je *maakt* zelf de armband. Lees nogmaals de eerste alinea.",
-        ],
+        wrongHints: [null,"Geen naald in de tekst — lees terug welke drie dingen genoemd worden.","Niet tien — en geen garen.","Staat er lijm in de tekst? Lees de eerste alinea nog eens."],
         uitlegPad: {
           stappen: [
             { titel: "Welk type vraag?", tekst: "Letterlijke vraag — antwoord staat ERGENS in de tekst, woord voor woord. Je hoeft alleen te zoeken." },
@@ -1914,14 +1904,9 @@ const steps = [
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "Wat had Tom in de eerste pauze bij zich om te eten?",
-        options: [
-          "Een dubbele boterham met kaas",
-          "Een appel",
-          "Een boterham met hagelslag",
-          "Een krentenbol",
-        ],
+        options: ["Een dubbele boterham met kaas","Een rode appel uit de tas","Een boterham met hagelslag","Een krentenbol met boter"],
         answer: 0,
-        wrongHints: [null, "Wie knabbelde er op een appel? Lees alinea 2 nog eens.", null, null],
+        wrongHints: [null,"Wie knabbelde er op een appel? Lees alinea 2 nog eens.","Lees alinea 2 nog eens: wat zat er precies op Toms boterham?","Staat er een krentenbol in de tekst? Zoek de zin met 'Tom'."],
         uitlegPad: {
           stappen: [
             {
@@ -2310,12 +2295,7 @@ const steps = [
       {
         // van tekst 3 — betoog
         q: "Welke is een ARGUMENT in een betogende tekst (uit de telefoon-tekst)?",
-        options: [
-          "Notificaties zorgen voor minutenlange afleiding",
-          "Telefoons hebben gladde randen",
-          "Iedereen heeft een eigen mening",
-          "Er bestaan ook tablets",
-        ],
+        options: ["Notificaties zorgen voor minutenlange afleiding","Telefoons hebben vaak gladde, ronde randen","Iedereen heeft over telefoons een eigen mening","Er bestaan naast telefoons ook tablets"],
         answer: 0,
         wrongHints: [
           null,
@@ -2347,12 +2327,7 @@ const steps = [
       {
         // van tekst 4 — verhaal
         q: "In het verhaal van Sara: het briefje en hartje van haar moeder laten vooral zien dat:",
-        options: [
-          "Sara's moeder dankbaarheid wil tonen voor Toms gebaar",
-          "Sara een nieuw liefje heeft",
-          "Sara haar moeder boos heeft gemaakt",
-          "De moeder Tom wil leren kennen",
-        ],
+        options: ["Sara's moeder Tom wil bedanken","Sara een nieuw liefje heeft","Sara haar moeder boos heeft gemaakt","De moeder Tom wil leren kennen"],
         answer: 0,
         wrongHints: [
           null,
@@ -2505,9 +2480,9 @@ const steps = [
       },
       {
         q: "Een tekst over **fietsen** begint: 'Vroeger waren fietsen veel zwaarder dan nu.' Wat verwacht je in het VERVOLG?",
-        options: ["Hoe fietsen in de loop der tijd lichter werden","Een recept voor pannenkoeken","De geschiedenis van de auto","Dat is nog niet te zeggen"],
+        options: ["Hoe fietsen steeds lichter werden","Hoe je een fietsband moet plakken","Hoe auto's steeds sneller werden","Dat kun je uit één zin niet weten"],
         answer: 0,
-        wrongHints: [null, "Niet — past niet bij thema fietsen.", "Niet — over auto's, niet fietsen.", "Wel — eerste zin GEEFT richting."],
+        wrongHints: [null,"Gaat de eerste zin over repareren, of over hoe fietsen vroeger waren?","Over welk vervoermiddel gaat de eerste zin?","Geeft de eerste zin echt geen enkele richting?"],
         uitlegPad: {
           stappen: [
             { titel: "Eerste zin = thema-aanwijzer", tekst: "De **eerste zin** of **eerste alinea** geeft vaak het **thema** van de tekst. Schrijvers gebruiken dit om:\n• Lezer voor te bereiden\n• Verwachting te scheppen\n• Hoofdgedachte aan te kondigen\n\nVoorbeeld: 'Vroeger waren fietsen veel zwaarder dan nu.' → thema = **vergelijking vroeger vs nu bij fietsen**. Vervolg gaat dat uitwerken." },
@@ -2531,15 +2506,15 @@ const steps = [
       { q: "*'Veel kinderen kijken te veel TV.'* — welke tekstsoort past hierbij?", options: ["Betogend","Verhalend","Instructief","Recept"], answer: 0, wrongHints: [null, "Geen verhaal.", "Geen stappen.", "Geen recept."] },
       { q: "*'Eerst de pan opzetten, dan de boter erin.'* — welke tekstsoort?", options: ["Instructief","Betogend","Verhalend","Informatief"], answer: 0, wrongHints: [null, "Geen mening.", "Geen verhaal.", "Geeft deze zin feiten, of vertelt hij wat je moet doen?"] },
       { q: "Welke **alinea** geeft meestal de conclusie?", options: ["De laatste","De eerste","De middelste","Geen"], answer: 0, wrongHints: [null, "Inleiding.", "Kern, geen conclusie.", "De meeste teksten hebben wél een conclusie. Waar rondt de schrijver af?"] },
-      { q: "Welke vraag is een **inferentievraag**?", options: ["Waarom zou de schrijver dit voorbeeld kiezen?","Hoeveel alinea's heeft de tekst?","Welk woord betekent X?","Hoe heet de schrijver?"], answer: 0, wrongHints: [null, "Telling.", "Gaat dit over één woord, of over waarom de schrijver iets doet?", "Letterlijk."] },
+      { q: "Welke vraag is een **inferentievraag**?", options: ["Waarom koos de schrijver dit voorbeeld?","Hoeveel alinea's heeft deze tekst?","Welk woord staat in de eerste zin?","Hoe heet de schrijver van deze tekst?"], answer: 0, wrongHints: [null,"Moet je hiervoor iets bedenken, of alleen tellen?","Kun je dit gewoon aanwijzen in de tekst?","Staat dit gewoon bij de tekst, of moet je het zelf afleiden?"] },
       { q: "*'Dieren zijn slim, want ze leren snel.'* Welk woord signaleert de reden?", options: ["want","ze","leren","snel"], answer: 0, wrongHints: [null, "Niet — verwijswoord.", "Werkwoord.", "Bijwoord — zegt hoe ze leren."] },
-      { q: "Een **tekstdoel** wijst aan?", options: ["Waarom de tekst geschreven is","Hoe oud de tekst is","Het aantal woorden","De schrijver"], answer: 0, wrongHints: [null, "Niet relevant.", "Niet doel.", "Niet hetzelfde."] },
+      { q: "Een **tekstdoel** wijst aan?", options: ["Waarom de tekst geschreven is","Wanneer de tekst geschreven is","Hoeveel woorden de tekst heeft","Wie de tekst geschreven heeft"], answer: 0, wrongHints: [null,"Gaat een doel over wanneer, of over iets anders?","Zegt het aantal woorden iets over wat de schrijver wil bereiken?","Is de naam van de schrijver hetzelfde als zijn doel?"] },
       { q: "Bij **woordbetekenis-vragen** kijk je naar?", options: ["De zinnen rondom het woord","Hoeveel letters het woord heeft","Hoe het klinkt","Of het woord vetgedrukt is"], answer: 0, wrongHints: [null, "Zegt het aantal letters iets over wat een woord betekent?", "Niet relevant.", "Niet relevant."] },
       { q: "Welk **soort vraag** is dit: 'Wat staat in regel 3?'", options: ["Letterlijk","Inferentie","Mening","Voorspelling"], answer: 0, wrongHints: [null, "Inferentie vraagt nadenken.", "Geen mening.", "Niet voorspellen."] },
       { q: "*'Hoewel het regende, gingen ze door.'* Welk soort signaalwoord?", options: ["Tegenstelling","Reden","Opsomming","Conclusie"], answer: 0, wrongHints: [null, "Niet — geen want.", "Geen lijst.", "Geen samenvatting."] },
-      { q: "Wat is een **citaat** in een tekst?", options: ["Letterlijk overgenomen woorden van iemand","Je eigen mening over de tekst","Een extra lange zin","De titel van de tekst"], answer: 0, wrongHints: [null, "Niet — citaat = van iemand anders.", "Niet relevant.", "Niet."] },
+      { q: "Wat is een **citaat** in een tekst?", options: ["Letterlijke woorden van iemand","Je eigen mening over de tekst","Een extra lange zin in de tekst","De titel boven aan de tekst"], answer: 0, wrongHints: [null,"Niet — citaat = van iemand anders.","Gaat een citaat over de lengte van een zin, of over wie iets zei?","Heeft een titel iets te maken met wat iemand gezegd heeft?"] },
       { q: "*'Volgens experts is de aarde steeds warmer.'* Welk woord toont een **bron**?", options: ["volgens","is","de","steeds"], answer: 0, wrongHints: [null, "Werkwoord.", "Lidwoord.", "Bijwoord."] },
-      { q: "Welke alinea-functie heeft een **voorbeeld-alinea**?", options: ["Hoofdgedachte concreet maken","Mening geven","Nieuwe regel beginnen","Tellen"], answer: 0, wrongHints: [null, "Mening = aparte rol.", "Niet inhoudelijk.", "Niet relevant."] },
+      { q: "Welke alinea-functie heeft een **voorbeeld-alinea**?", options: ["De hoofdgedachte concreet maken","Een mening geven over iets","Een nieuwe regel beginnen","De tekst kort samenvatten"], answer: 0, wrongHints: [null,"Geeft een voorbeeld een mening, of laat het iets zien?","Gaat het om de inhoud, of om hoe de tekst eruitziet?","Doet een samenvatting hetzelfde als een voorbeeld?"] },
       { q: "Welke tekst is meest **objectief**?", options: ["Encyclopedie","Reclame","Mening-column","Persoonlijke brief"], answer: 0, wrongHints: [null, "Veel mening.", "Mening = subjectief.", "Persoonlijk = subjectief."] },
       { q: "*'Verbazingwekkend!'* — wat zegt het woord over de **toon**?", options: ["Verrassing/emotie","Neutraal","Verveling","Boosheid"], answer: 0, wrongHints: [null, "Niet — duidelijk emotie.", "Tegenovergesteld.", "Niet specifiek."] },
     ],

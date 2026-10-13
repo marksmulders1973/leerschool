@@ -92,8 +92,8 @@ const steps = [
     explanation: "**Vragen** maken in present simple met **do/does**:\n\n• **Do** + I / you / we / they + werkwoord?\n  *'Do you play football?'*\n• **Does** + he / she / it + werkwoord (zonder -s)?\n  *'Does she play piano?'*\n\n**Ontkenning** met **don't / doesn't**:\n• I / you / we / they: **don't** + werkwoord\n  *'I don't like fish.'*\n• He / she / it: **doesn't** + werkwoord (zonder -s)\n  *'She doesn't eat meat.'*\n\n**Antwoord op ja/nee-vraag**:\n• Do you like cats? → Yes, I do. / No, I don't.\n• Does he play? → Yes, he does. / No, he doesn't.\n\n**Vraagwoorden**:\n• What = wat · Where = waar · When = wanneer\n• Who = wie · Why = waarom · How = hoe",
     checks: [
       { q: "Vraag: *'__ you like apples?'*", options: ["Do", "Does", "Are", "Is"], answer: 0, wrongHints: [null, "Niet — does = he/she/it.", "Niet — geen 'to be'.", "Niet."] },
-      { q: "Vraag: *'__ she play tennis?'*", options: ["Does", "Do", "Is", "Are"], answer: 0, wrongHints: [null, "Niet — bij she gebruik je does.", "Niet 'to be'.", "Niet."] },
-      { q: "Ontkenning: *'I __ like fish.'*", options: ["don't", "doesn't", "am not", "isn't"], answer: 0, wrongHints: [null, "Niet — bij ik gebruik je don't.", "Voor 'to be'.", "Voor 'to be'."] },
+      { q: "Vraag: *'__ she play tennis?'*", options: ["Does", "Do", "Is", "Are"], answer: 0, wrongHints: [null, 'Bij he, she en it verandert het hulpwerkwoord. Welke vorm hoort daarbij?', 'Niet \'to be\'.', 'Niet.'] },
+      { q: "Ontkenning: *'I __ like fish.'*", options: ["don't", "doesn't", "am not", "isn't"], answer: 0, wrongHints: [null, 'Deze vorm hoort bij he, she en it. Wie is hier het onderwerp?', 'Voor \'to be\'.', 'Voor \'to be\'.'] },
       { q: "Wat betekent **Where**?", options: ["waar", "wat", "wanneer", "waarom"], answer: 0, wrongHints: [null, "what = wat.", "when = wanneer.", "why = waarom."] },
       { q: "Antwoord op 'Do you like cats?'", options: ["Yes, I do.", "Yes, I am.", "Yes, I have.", "Yes, please."], answer: 0, wrongHints: [null, "Niet — bij 'to be'-vraag.", "Niet — bij 'have'-vraag.", "Te beleefd, geen ja/nee."] },
     ],
@@ -111,7 +111,7 @@ const steps = [
       { q: "Welk woord wijst aan op afstand: **die boom daar**?", options: ["that tree", "this tree", "those tree", "these tree"], answer: 0, wrongHints: [null, "Niet — dichtbij.", "Meervoud — fout.", "Meervoud — fout."] },
       { q: "Vertaal: *'Ik heb een hond.'*", options: ["I have a dog.", "I have an dog.", "I has a dog.", "I am a dog."], answer: 0, wrongHints: [null, "Niet — medeklinker → a.", "Niet — I have, niet I has.", "Niet — 'am' is 'ben'."] },
       { q: "Ontkenning: 'He __ eat meat.'", options: ["doesn't", "don't", "isn't", "aren't"], answer: 0, wrongHints: [null, "Niet — don't = I/you/we/they.", "Voor 'to be'.", "Voor 'to be'."] },
-      { q: "Wanneer gebruik je **a** en wanneer **an**?", options: ["a + medeklinker / an + klinker", "an + alles", "a + alles", "a + meervoud"], answer: 0, wrongHints: [null, "Niet — a voor medeklinker.", "Niet — an voor klinker.", "Geen lidwoord vóór meervoud."] },
+      { q: "Wanneer gebruik je **a** en wanneer **an**?", options: ['a + medeklinker / an + klinker', 'an + medeklinker / a + klinker', 'a + enkelvoud / an + meervoud', 'a + kort woord / an + lang woord'], answer: 0, wrongHints: [null, 'Zeg \'an car\' en \'a apple\' eens hardop. Klinkt dat soepel?', 'Vóór meervoud zet je geen a of an. Waar hangt de keuze dan wel van af?', 'Denk aan \'a dog\' en \'an elephant\'. Gaat het echt om de lengte van het woord?'] },
     ],
   },
 ];

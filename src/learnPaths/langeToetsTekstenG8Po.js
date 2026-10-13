@@ -846,7 +846,7 @@ Acht vragen. Hou vol — dit is precies de training die je nodig hebt!`,
       },
       {
         q: "*\"...was het pikdonker. Geen lantaarnpaal te zien.\"* — Wat betekent 'pikdonker'?",
-        options: ["Zo donker dat je bijna niets kunt zien", "Een beetje schemerig", "Donker, maar met veel lampen aan", "Koud en mistig"],
+        options: ['Zo donker dat je bijna niets kunt zien', 'Een beetje schemerig, nog wat licht', 'Donker, maar met veel lampen aan', 'Koud en mistig, zoals in de herfst'],
         answer: 0,
         evidence: "Achter het huis van opa, buiten het dorp Weverlo, was het pikdonker.",
         wrongHints: [
@@ -920,12 +920,7 @@ Acht vragen. Hou vol — dit is precies de training die je nodig hebt!`,
       },
       {
         q: "Waarom begon Sanne te twijfelen toen ze buiten lag?",
-        options: [
-          "Ze zag eerst niets en was bang dat de krant het mis had",
-          "Ze vond de chocolademelk niet lekker",
-          "Ze wilde liever binnen televisie kijken",
-          "Opa was in slaap gevallen",
-        ],
+        options: ['Ze zag niets en dacht dat de krant het mis had', 'Ze vond de warme chocolademelk niet lekker', 'Ze wilde liever binnen televisie kijken', 'Opa was naast haar in slaap gevallen'],
         answer: 0,
         evidence: "Straks was alles voor niets en had de krant het mis.",
         wrongHints: [
@@ -959,12 +954,7 @@ Acht vragen. Hou vol — dit is precies de training die je nodig hebt!`,
       },
       {
         q: "Waarom zei Sanne haar wensen niet hardop?",
-        options: [
-          "Volgens opa komt een wens die je hardop zegt niet uit",
-          "Ze was haar stem kwijt van de kou",
-          "Ze wilde opa niet wakker maken",
-          "Wensen mag alleen overdag",
-        ],
+        options: ['Een hardop gezegde wens komt niet uit', 'Ze was haar stem kwijt van de kou', 'Ze wilde opa niet wakker maken', 'Wensen mag je alleen overdag doen'],
         answer: 0,
         evidence: "al mocht je die van opa nooit hardop zeggen, anders kwam hij niet uit.",
         wrongHints: [
@@ -1219,12 +1209,7 @@ Nog een paar vragen over je aanpak — dan zit dit deel erop. Op de echte toets 
       },
       {
         q: "Je hebt bij een vraag teruggebladerd en twee opties lijken allebei te kloppen. Wat doe je?",
-        options: [
-          "Lees de bewuste zin in de tekst nog één keer heel precies",
-          "Kies de langste optie",
-          "Kies de kortste optie",
-          "Sla de vraag permanent over",
-        ],
+        options: ['Lees die zin in de tekst opnieuw', 'Kies dan gewoon de langste optie', 'Kies dan gewoon de kortste optie', 'Sla de vraag voor altijd over'],
         answer: 0,
         wrongHints: [
           null,
@@ -1275,12 +1260,7 @@ Nog een paar vragen over je aanpak — dan zit dit deel erop. Op de echte toets 
       },
       {
         q: "Sanne kijkt in het verhaal 'de nacht van de vallende sterren' naar de hemel. Wat voor vraag is 'Hoe laat klopte opa op de deur'?",
-        options: [
-          "Een opzoekvraag — het tijdstip staat letterlijk in de tekst",
-          "Een conclusievraag — je moet het tijdstip zelf berekenen",
-          "Een hoofdgedachte-vraag",
-          "Een verwijswoord-vraag",
-        ],
+        options: ['Een opzoekvraag — het tijdstip staat letterlijk in de tekst', 'Een conclusievraag — je moet het tijdstip zelf berekenen', 'Een hoofdgedachte-vraag — het gaat om het hele verhaal', 'Een verwijswoord-vraag — je zoekt waar \'hij\' naar verwijst'],
         answer: 0,
         wrongHints: [
           null,
@@ -1342,12 +1322,7 @@ Nog een paar vragen over je aanpak — dan zit dit deel erop. Op de echte toets 
       },
       {
         q: "Je hebt nog 5 minuten en 3 vragen over. Je weet het antwoord op vraag 15 en 17, maar vraag 16 is heel moeilijk. Wat doe je het SLIMST?",
-        options: [
-          "Vraag 15 en 17 eerst beantwoorden, dan met de resterende tijd vraag 16 proberen",
-          "Eerst alles op vraag 16 inzetten, ook al duurt het lang",
-          "Alle drie overslaan — het is toch te laat",
-          "Drie keer dezelfde optie invullen en dan stoppen",
-        ],
+        options: ['Eerst 15 en 17 maken, daarna vraag 16 proberen', 'Eerst alles op vraag 16 inzetten, hoe lang ook', 'Alle drie overslaan, het is toch te laat', 'Drie keer dezelfde optie invullen en stoppen'],
         answer: 0,
         wrongHints: [
           null,

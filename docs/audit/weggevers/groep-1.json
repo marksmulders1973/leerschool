@@ -1,0 +1,1682 @@
+[
+ {
+  "pad": "basis-grammatica-engels-po",
+  "file": "./basisGrammaticaEngelsPo.js",
+  "stap": 5,
+  "vraag": 1,
+  "soort": "H",
+  "q": "Vraag: *'__ she play tennis?'*",
+  "opties": [
+   "Does",
+   "Do",
+   "Is",
+   "Are"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "basis-grammatica-engels-po",
+  "file": "./basisGrammaticaEngelsPo.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "H",
+  "q": "Ontkenning: *'I __ like fish.'*",
+  "opties": [
+   "don't",
+   "doesn't",
+   "am not",
+   "isn't"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "basis-grammatica-engels-po",
+  "file": "./basisGrammaticaEngelsPo.js",
+  "stap": 5,
+  "vraag": 3,
+  "soort": "H",
+  "q": "Wat betekent Where?",
+  "opties": [
+   "waar",
+   "wat",
+   "wanneer",
+   "waarom"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "basis-grammatica-engels-po",
+  "file": "./basisGrammaticaEngelsPo.js",
+  "stap": 6,
+  "vraag": 9,
+  "soort": "L",
+  "q": "Wanneer gebruik je a en wanneer an?",
+  "opties": [
+   "a + medeklinker / an + klinker",
+   "an + alles",
+   "a + alles",
+   "a + meervoud"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "brief-email-lezen-po",
+  "file": "./briefEmailLezenPo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wie is de afzender van deze brief?",
+  "opties": [
+   "Meester Jasper de Vries van basisschool De Vlinderboom",
+   "De ouders en verzorgers",
+   "Sportpark De Weide",
+   "De kinderen van groep 8"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "brief-email-lezen-po",
+  "file": "./briefEmailLezenPo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat moet de ontvanger van deze brief DOEN?",
+  "opties": [
+   "Het strookje invullen en uiterlijk woensdag 13 mei inleveren",
+   "Op 22 mei een brief terugschrijven",
+   "Geld overmaken voor de sportdag",
+   "Zelf spelletjes bedenken voor de sportdag"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "brief-email-lezen-po",
+  "file": "./briefEmailLezenPo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wie is de afzender van deze e-mail?",
+  "opties": [
+   "Karin van Dijk van Zwemclub De Waterlelie",
+   "Zwembad Het Golfje",
+   "De ouders van de zwemmers",
+   "Meester Jasper de Vries"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "brief-email-lezen-po",
+  "file": "./briefEmailLezenPo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is het doel van deze e-mail?",
+  "opties": [
+   "Uitnodigen voor de Zwemvierdaagse en vragen je op tijd aan te melden",
+   "Klagen over het drukke zwembad",
+   "Bedanken voor de medailles van vorig jaar",
+   "Informeren over nieuwe zwemlessen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "dichten-poezie-rijmen-po",
+  "file": "./dichtenPoezieRijmenPo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is een couplet?",
+  "opties": [
+   "Groep regels bij elkaar",
+   "Hele gedicht",
+   "1 regel",
+   "Pauze"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "dichten-poezie-rijmen-po",
+  "file": "./dichtenPoezieRijmenPo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is proza?",
+  "opties": [
+   "Gewone doorlopende tekst",
+   "Gedicht",
+   "Lied",
+   "Toneelstuk"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "dichten-poezie-rijmen-po",
+  "file": "./dichtenPoezieRijmenPo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is eindrijm?",
+  "opties": [
+   "Woorden eindigen hetzelfde",
+   "Beginnen hetzelfde",
+   "Klemtoon",
+   "Lengte gelijk"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "dichten-poezie-rijmen-po",
+  "file": "./dichtenPoezieRijmenPo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is alliteratie?",
+  "opties": [
+   "Woorden beginnen met zelfde letter",
+   "Woorden rijmen aan eind",
+   "Zelfde betekenis",
+   "Ritme"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "dichten-poezie-rijmen-po",
+  "file": "./dichtenPoezieRijmenPo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is personificatie?",
+  "opties": [
+   "Dood ding doet als mens",
+   "Synoniem",
+   "Rijm",
+   "Tegenovergesteld"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "dichten-poezie-rijmen-po",
+  "file": "./dichtenPoezieRijmenPo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is rijm?",
+  "opties": [
+   "Woorden eindigen hetzelfde",
+   "Klemtoon",
+   "Lengte",
+   "Letter"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "dichten-poezie-rijmen-po",
+  "file": "./dichtenPoezieRijmenPo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is alliteratie?",
+  "opties": [
+   "Beginrijm zelfde letter",
+   "Eindrijm",
+   "Niet rijm",
+   "Ritme"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "dichten-poezie-rijmen-po",
+  "file": "./dichtenPoezieRijmenPo.js",
+  "stap": 4,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Een strofe is?",
+  "opties": [
+   "Een groepje versregels",
+   "Een woord",
+   "Een rijm",
+   "Een dichter"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "dichten-poezie-rijmen-po",
+  "file": "./dichtenPoezieRijmenPo.js",
+  "stap": 4,
+  "vraag": 16,
+  "soort": "L",
+  "q": "Wat is een vers?",
+  "opties": [
+   "Een regel in een gedicht",
+   "Een boek",
+   "Een verhaal",
+   "Een tekening"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "dichten-poezie-rijmen-po",
+  "file": "./dichtenPoezieRijmenPo.js",
+  "stap": 4,
+  "vraag": 20,
+  "soort": "L",
+  "q": "Refrein in een gedicht/lied is?",
+  "opties": [
+   "Herhalend stukje tussen coupletten",
+   "Eerste regel",
+   "Laatste woord",
+   "Niet relevant"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "dichten-poezie-rijmen-po",
+  "file": "./dichtenPoezieRijmenPo.js",
+  "stap": 4,
+  "vraag": 22,
+  "soort": "L",
+  "q": "Wat is een couplet?",
+  "opties": [
+   "Groepje van 2+ versregels samen",
+   "Eén woord",
+   "Lied",
+   "Niet relevant"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-rekenen-g8",
+  "file": "./doorstroomtoetsRekenenG8.js",
+  "stap": 0,
+  "vraag": 29,
+  "soort": "L",
+  "q": "3/8 vereenvoudig je tot ___?",
+  "opties": [
+   "Niet te vereenvoudigen",
+   "1/2",
+   "3/4",
+   "1/8"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat staat in de legenda van een kaart?",
+  "opties": [
+   "Uitleg van de symbolen + kleuren",
+   "De schaal",
+   "Hoeveelheid plaatsen",
+   "De maker"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 0,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Tussen N en O op kompas: welke windrichting?",
+  "opties": [
+   "NO (noord-oost)",
+   "ZO",
+   "NW",
+   "ZW"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 0,
+  "vraag": 14,
+  "soort": "L",
+  "q": "Op kompas: tussen N en W ligt?",
+  "opties": [
+   "NW (noord-west)",
+   "ZW",
+   "NO",
+   "ZO"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 0,
+  "vraag": 20,
+  "soort": "L",
+  "q": "Een legenda op een kaart laat zien...",
+  "opties": [
+   "Wat de symbolen op de kaart betekenen",
+   "Hoe groot de kaart is",
+   "Wie de kaart maakte",
+   "De geschiedenis van het land"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 0,
+  "vraag": 22,
+  "soort": "L",
+  "q": "Een plattegrond is een kaart van...",
+  "opties": [
+   "Een klein gebied (huis, school, stad) van bovenaf",
+   "De hele wereld",
+   "Alleen vroeger",
+   "Alleen oceanen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 0,
+  "vraag": 28,
+  "soort": "L",
+  "q": "Een kaart van Nederland met provincies in kleur: wat doet de kleurcode?",
+  "opties": [
+   "Onderscheid maken tussen provincies",
+   "Toont hoe hoog het land is",
+   "Tonen waar je woont",
+   "Toont de hoofdstad"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 0,
+  "vraag": 29,
+  "soort": "L",
+  "q": "Een klimaatkaart toont vooral?",
+  "opties": [
+   "Temperatuur en neerslag per gebied",
+   "Wegen",
+   "Inwoners",
+   "Geld"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 0,
+  "vraag": 37,
+  "soort": "L",
+  "q": "Het vakkensysteem op een kaart (A1, A2, B1...) heet een grid. Waarvoor gebruik je het?",
+  "opties": [
+   "Om snel een plek op te zoeken via de index",
+   "Om afstanden te meten",
+   "Om de kaart op te vouwen",
+   "Om hoogtes af te lezen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 1,
+  "vraag": 29,
+  "soort": "L",
+  "q": "Een histogram is een ___?",
+  "opties": [
+   "Staafdiagram zonder ruimte tussen staven",
+   "Lijngrafiek",
+   "Cirkeldiagram",
+   "Tabel"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 2,
+  "vraag": 7,
+  "soort": "L",
+  "q": "Waarvoor is een register / index achter in boek?",
+  "opties": [
+   "Onderwerpen op alfabet met paginanummers",
+   "Inhoudsopgave",
+   "Auteursnamen",
+   "Plaatjes"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 2,
+  "vraag": 9,
+  "soort": "L",
+  "q": "Hoofdwoorden op pagina-bovenkant van woordenboek — wat zijn ze?",
+  "opties": [
+   "Eerste + laatste woord op die pagina",
+   "Alle woorden",
+   "Alleen de titel",
+   "Een lijst"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 2,
+  "vraag": 12,
+  "soort": "L",
+  "q": "Wat is een woordenboek voor?",
+  "opties": [
+   "Betekenis + spelling van woorden",
+   "Geschiedenis",
+   "Kaart",
+   "Recept"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 2,
+  "vraag": 22,
+  "soort": "L",
+  "q": "Wikipedia is een ___?",
+  "opties": [
+   "Online encyclopedie",
+   "Boek",
+   "Woordenboek",
+   "Atlas"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 2,
+  "vraag": 24,
+  "soort": "L",
+  "q": "Bij digitaal zoeken in een PDF gebruik je vaak Ctrl+F. Dat doet ___?",
+  "opties": [
+   "Zoekfunctie voor woorden",
+   "Bestand opslaan",
+   "Print",
+   "Kleine letters"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 2,
+  "vraag": 25,
+  "soort": "L",
+  "q": "Welk boek raadpleeg je voor 'wat is de hoofdstad van Frankrijk?'?",
+  "opties": [
+   "Atlas of encyclopedie",
+   "Roman",
+   "Kookboek",
+   "Stripboek"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 2,
+  "vraag": 32,
+  "soort": "L",
+  "q": "Wat vind je in een atlas?",
+  "opties": [
+   "Kaarten van landen en gebieden",
+   "De betekenis van woorden",
+   "Telefoonnummers",
+   "Recepten"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 2,
+  "vraag": 33,
+  "soort": "L",
+  "q": "In het register van de atlas staat: 'Parijs 45 C3'. Wat betekent de '45'?",
+  "opties": [
+   "Het bladzijdenummer van de kaart",
+   "Het kaartvak",
+   "De afstand in km",
+   "Het aantal inwoners (×100.000)"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat staat in een vergelijkings-tabel?",
+  "opties": [
+   "Overeenkomsten + verschillen tussen 2 dingen",
+   "Alleen overeenkomsten",
+   "Alleen verschillen",
+   "Plaatjes"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 3,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Stappenplan: 1. Ingrediënten 2. Recept 3. Mengen 4. Bakken. Welke stap is fout?",
+  "opties": [
+   "Stap 1 en 2 zijn omgedraaid",
+   "Stap 4 fout",
+   "Niets fout",
+   "Stap 3 fout"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 3,
+  "vraag": 8,
+  "soort": "L",
+  "q": "Wat is het doel van een stappenplan?",
+  "opties": [
+   "Doel halen door volgorde te volgen",
+   "Mooie tekening maken",
+   "Zo veel mogelijk stappen bedenken",
+   "Geen doel"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 3,
+  "vraag": 12,
+  "soort": "L",
+  "q": "Bij conflict-oplossen is welke vorm handig?",
+  "opties": [
+   "Stappenplan (volgorde acties)",
+   "Cirkeldiagram",
+   "Atlas",
+   "Niets"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 3,
+  "vraag": 16,
+  "soort": "L",
+  "q": "In een ja/nee-schema staat een vraag in een ruit. Wat doet die ruit?",
+  "opties": [
+   "Een beslissing — pijl naar ja of nee",
+   "Geeft de uitkomst aan",
+   "Start van het schema",
+   "Eind van het schema"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 3,
+  "vraag": 19,
+  "soort": "L",
+  "q": "Een vergelijkingstabel *(fiets vs auto)* laat zien...",
+  "opties": [
+   "Wat gelijk en wat verschillend is",
+   "De prijs van benzine",
+   "Wie de eigenaar is",
+   "Niets relevants"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 3,
+  "vraag": 23,
+  "soort": "L",
+  "q": "Mindmap: centraal woord met takken. Wat doe je ermee?",
+  "opties": [
+   "Ideeën rond een thema verzamelen",
+   "Eten klaarmaken",
+   "Foto's tonen",
+   "Geld tellen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 3,
+  "vraag": 25,
+  "soort": "L",
+  "q": "Een balkdiagram is hetzelfde als een ___?",
+  "opties": [
+   "Staafdiagram (horizontaal)",
+   "Cirkeldiagram",
+   "Lijngrafiek",
+   "Tabel"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 3,
+  "vraag": 37,
+  "soort": "L",
+  "q": "Wat is het voordeel van een stappenplan boven 'gewoon beginnen'?",
+  "opties": [
+   "Je vergeet geen stappen en werkt in de goede volgorde",
+   "Het is altijd sneller",
+   "Je hoeft niet meer na te denken",
+   "Het staat netter"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 3,
+  "vraag": 38,
+  "soort": "L",
+  "q": "In een schema staat een pijl van 'regen' naar 'paraplu mee'. Wat betekent die pijl?",
+  "opties": [
+   "Als het regent, dan neem je een paraplu mee",
+   "Regen en paraplu zijn hetzelfde",
+   "Een paraplu veroorzaakt regen",
+   "De woorden rijmen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 4,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Op een kompas: tussen W en Z ligt welke richting?",
+  "opties": [
+   "ZW (zuid-west)",
+   "NW",
+   "NO",
+   "ZO"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 5,
+  "vraag": 13,
+  "soort": "H",
+  "q": "Twee kinderen beschrijven de route naar het park. Anna: 'neem de eerste straat rechts en loop rechtdoor'. Bo: 'sla bij de bakker rechtsaf en loop rechtdoor'. De",
+  "opties": [
+   "Allebei",
+   "Alleen Anna",
+   "Alleen Bo",
+   "Geen van beiden"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 7,
+  "vraag": 7,
+  "soort": "L",
+  "q": "Bovenaan de zoekresultaten staat een blokje met het label 'Gesponsord'. Wat betekent dat?",
+  "opties": [
+   "Iemand heeft betaald om daar bovenaan te staan",
+   "Dit is het beste zoekresultaat",
+   "Deze site is door school goedgekeurd",
+   "Deze site is gratis"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 7,
+  "vraag": 9,
+  "soort": "L",
+  "q": "Je leest op een site: 'IJsberen zijn paars. Bron: dat zei mijn buurman.' Waarom is dit geen sterke bron?",
+  "opties": [
+   "Een buurman is geen deskundige die je kunt controleren",
+   "Buren liegen altijd",
+   "IJsberen bestaan niet",
+   "Paars is geen kleur"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 7,
+  "vraag": 11,
+  "soort": "L",
+  "q": "Wat is het verschil tussen een feit en een mening?",
+  "opties": [
+   "Een feit kun je controleren, een mening is wat iemand vindt",
+   "Een feit is altijd langer opgeschreven",
+   "Een mening staat altijd bovenaan de pagina",
+   "Er is geen verschil"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 7,
+  "vraag": 16,
+  "soort": "L",
+  "q": "Wat is het verschil tussen de inhoudsopgave en het register van een boek?",
+  "opties": [
+   "Inhoudsopgave = hoofdstukken op volgorde; register = trefwoorden op alfabet",
+   "Ze zijn precies hetzelfde",
+   "Het register staat voorin, de inhoudsopgave achterin",
+   "De inhoudsopgave is alleen voor leerkrachten"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 7,
+  "vraag": 18,
+  "soort": "L",
+  "q": "Voor je spreekbeurt wil je weten wat er in de Tweede Wereldoorlog in jouw eigen dorp gebeurde. Welke bron past het best?",
+  "opties": [
+   "De website van het plaatselijke museum of archief",
+   "Een wereldwijde game-site",
+   "Een Amerikaanse oorlogsfilm",
+   "Een songtekst"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 7,
+  "vraag": 19,
+  "soort": "L",
+  "q": "In een filmpje beweert iemand dat je van wortels eten 's nachts kunt zien. Hoe check je of dat klopt?",
+  "opties": [
+   "Opzoeken bij een betrouwbare bron, zoals een encyclopedie of oogarts-site",
+   "Geloven, want het filmpje heeft veel views",
+   "Zelf honderd wortels eten en kijken wat er gebeurt",
+   "Het filmpje nog een keer bekijken"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 7,
+  "vraag": 21,
+  "soort": "L",
+  "q": "Waarom zet je onderaan je werkstuk een bronnenlijst?",
+  "opties": [
+   "Zodat iedereen kan zien waar jouw informatie vandaan komt",
+   "Omdat het werkstuk dan langer lijkt",
+   "Omdat plaatjes dan mooier worden",
+   "Dat is nergens voor nodig"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 8,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Waarvoor gebruik je een schema of woordweb bij het leren?",
+  "opties": [
+   "Om de belangrijkste punten overzichtelijk te ordenen",
+   "Om de tekst langer te maken",
+   "Om moeilijke woorden te verstoppen",
+   "Om sneller te kunnen gummen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 8,
+  "vraag": 8,
+  "soort": "L",
+  "q": "Wat hoort wél in een goede samenvatting van een tekst?",
+  "opties": [
+   "De hoofdzaken, in je eigen woorden",
+   "Elke zin van de tekst",
+   "Alleen de grapjes",
+   "De naam van de drukker"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 9,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Bovenaan een woordenboek-bladzijde staan de gidswoorden 'melk' en 'mier'. Staat het woord 'mes' op deze bladzijde?",
+  "opties": [
+   "Ja, want 'mes' komt alfabetisch tussen 'melk' en 'mier'",
+   "Nee, 'mes' komt vóór 'melk'",
+   "Nee, 'mes' komt ná 'mier'",
+   "Dat kun je niet weten"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 9,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Onderaan een brief staat 'z.o.z.'. In de afkortingenlijst staat: z.o.z. = zie ommezijde. Wat moet je doen?",
+  "opties": [
+   "Het blaadje omdraaien en de achterkant lezen",
+   "De brief weggooien",
+   "Zaterdag opnieuw zoeken",
+   "Zelf iets onder de brief schrijven"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "doorstroomtoets-studievaardigheden-g8",
+  "file": "./doorstroomtoetsStudievaardighedenG8.js",
+  "stap": 9,
+  "vraag": 18,
+  "soort": "L",
+  "q": "In welk naslagwerk zoek je de betekenis van het woord 'fotosynthese'?",
+  "opties": [
+   "Een woordenboek of encyclopedie",
+   "Een stripboek",
+   "Een dienstregeling",
+   "Een liedjestekst"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "folder-bon-advertentie-po",
+  "file": "./folderBonAdvertentiePo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Bij een aanbieding staat 'op = op'. Wat betekent dat?",
+  "opties": [
+   "alleen zolang de voorraad strekt",
+   "geldig voor altijd",
+   "alleen op zondag",
+   "twee keer zo duur"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "inhoudsopgave-register-po",
+  "file": "./inhoudsopgaveRegisterPo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat staat er in een register?",
+  "opties": [
+   "onderwerpen op alfabet met paginanummers",
+   "de hoofdstukken op boekvolgorde",
+   "de titel van het boek",
+   "het hele verhaal"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "inhoudsopgave-register-po",
+  "file": "./inhoudsopgaveRegisterPo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "In het register staat: 'vulkaan ... 45, 78'. Wat betekenen die getallen?",
+  "opties": [
+   "de pagina's waar 'vulkaan' wordt genoemd",
+   "het aantal vulkanen",
+   "de hoofdstuknummers",
+   "het jaartal"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "lange-toets-teksten-g8-po",
+  "file": "./langeToetsTekstenG8Po.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "*\"...was het pikdonker. Geen lantaarnpaal te zien.\"* — Wat betekent 'pikdonker'?",
+  "opties": [
+   "Zo donker dat je bijna niets kunt zien",
+   "Een beetje schemerig",
+   "Donker, maar met veel lampen aan",
+   "Koud en mistig"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "lange-toets-teksten-g8-po",
+  "file": "./langeToetsTekstenG8Po.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Waarom begon Sanne te twijfelen toen ze buiten lag?",
+  "opties": [
+   "Ze zag eerst niets en was bang dat de krant het mis had",
+   "Ze vond de chocolademelk niet lekker",
+   "Ze wilde liever binnen televisie kijken",
+   "Opa was in slaap gevallen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "lange-toets-teksten-g8-po",
+  "file": "./langeToetsTekstenG8Po.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Waarom zei Sanne haar wensen niet hardop?",
+  "opties": [
+   "Volgens opa komt een wens die je hardop zegt niet uit",
+   "Ze was haar stem kwijt van de kou",
+   "Ze wilde opa niet wakker maken",
+   "Wensen mag alleen overdag"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "lange-toets-teksten-g8-po",
+  "file": "./langeToetsTekstenG8Po.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Je hebt bij een vraag teruggebladerd en twee opties lijken allebei te kloppen. Wat doe je?",
+  "opties": [
+   "Lees de bewuste zin in de tekst nog één keer heel precies",
+   "Kies de langste optie",
+   "Kies de kortste optie",
+   "Sla de vraag permanent over"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "lange-toets-teksten-g8-po",
+  "file": "./langeToetsTekstenG8Po.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Sanne kijkt in het verhaal 'de nacht van de vallende sterren' naar de hemel. Wat voor vraag is 'Hoe laat klopte opa op de deur'?",
+  "opties": [
+   "Een opzoekvraag — het tijdstip staat letterlijk in de tekst",
+   "Een conclusievraag — je moet het tijdstip zelf berekenen",
+   "Een hoofdgedachte-vraag",
+   "Een verwijswoord-vraag"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "lange-toets-teksten-g8-po",
+  "file": "./langeToetsTekstenG8Po.js",
+  "stap": 3,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Je hebt nog 5 minuten en 3 vragen over. Je weet het antwoord op vraag 15 en 17, maar vraag 16 is heel moeilijk. Wat doe je het SLIMST?",
+  "opties": [
+   "Vraag 15 en 17 eerst beantwoorden, dan met de resterende tijd vraag 16 proberen",
+   "Eerst alles op vraag 16 inzetten, ook al duurt het lang",
+   "Alle drie overslaan — het is toch te laat",
+   "Drie keer dezelfde optie invullen en dan stoppen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "pubertijd-groei-po",
+  "file": "./pubertijdGroeiPo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is testosteron?",
+  "opties": [
+   "Hormoon vooral bij jongens",
+   "Voedsel",
+   "Ziekte",
+   "Bot"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "pubertijd-groei-po",
+  "file": "./pubertijdGroeiPo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is menstruatie?",
+  "opties": [
+   "Maandelijkse bloeding uit baarmoeder",
+   "Pijn",
+   "Hormoon",
+   "Geen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "pubertijd-groei-po",
+  "file": "./pubertijdGroeiPo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat veroorzaakt puistjes?",
+  "opties": [
+   "Hormonen activeren olieklieren",
+   "Vies eten",
+   "Geen wassen",
+   "Niet bestaand"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "pubertijd-groei-po",
+  "file": "./pubertijdGroeiPo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Waarom heb je in de puberteit stemmingswisselingen?",
+  "opties": [
+   "Je brein is nog volop in ontwikkeling",
+   "Door wat je eet",
+   "Er is geen oorzaak",
+   "Door het weer"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "pubertijd-groei-po",
+  "file": "./pubertijdGroeiPo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is LHBTQ+?",
+  "opties": [
+   "Afkorting voor o.a. lesbisch, homo, bi en transgender",
+   "Ziekte",
+   "Sport",
+   "Tehuis"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "pubertijd-groei-po",
+  "file": "./pubertijdGroeiPo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is een hormoon?",
+  "opties": [
+   "Stof die signaal geeft in lichaam",
+   "Spier",
+   "Voedsel",
+   "Bot"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "pubertijd-groei-po",
+  "file": "./pubertijdGroeiPo.js",
+  "stap": 3,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Wat is een groeispurt?",
+  "opties": [
+   "Periode waarin je snel langer wordt",
+   "Pijn in benen",
+   "Trainen om te groeien",
+   "Eten voor groei"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "pubertijd-groei-po",
+  "file": "./pubertijdGroeiPo.js",
+  "stap": 3,
+  "vraag": 7,
+  "soort": "L",
+  "q": "Wat helpt botten sterk maken tijdens groei?",
+  "opties": [
+   "Calcium, vitamine D en bewegen",
+   "Veel zoetigheid",
+   "Lang stilzitten",
+   "Niet eten"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "pubertijd-groei-po",
+  "file": "./pubertijdGroeiPo.js",
+  "stap": 3,
+  "vraag": 8,
+  "soort": "L",
+  "q": "Het brein in puberteit — wat is uniek?",
+  "opties": [
+   "Het beslissings-deel wordt als laatste klaar",
+   "Brein krimpt",
+   "Brein groeit niet meer",
+   "Brein verandert niet"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "pubertijd-groei-po",
+  "file": "./pubertijdGroeiPo.js",
+  "stap": 3,
+  "vraag": 12,
+  "soort": "L",
+  "q": "Wat is belangrijk om gezond door de puberteit te komen?",
+  "opties": [
+   "Gezond eten, sport, voldoende slaap",
+   "Alleen games spelen",
+   "Niet leren",
+   "Stress hebben"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "rijmen-letters-kleuters-po",
+  "file": "./rijmenLettersKleutersPo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "H",
+  "q": "Een olifant 🐘 is groot. Een muis 🐭 is juist...",
+  "opties": [
+   "klein",
+   "groot",
+   "rood",
+   "nat"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "schrijven-teksten-po",
+  "file": "./schrijvenTekstenPo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Je schrijft de gemeente voor een vraag. Welke aanhef past?",
+  "opties": [
+   "Geachte heer/mevrouw",
+   "Hoi",
+   "Beste vrienden",
+   "Hé daar"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "schrijven-teksten-po",
+  "file": "./schrijvenTekstenPo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Welke zin past in een formele brief aan de schooldirecteur?",
+  "opties": [
+   "Hierbij wil ik u graag verzoeken om een afspraak.",
+   "Hey, kan ik even langskomen?",
+   "Ik kom morgen even sjaggelen.",
+   "Doei, tot snel!"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "schrijven-teksten-po",
+  "file": "./schrijvenTekstenPo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "H",
+  "q": "*'Beste meneer Janssen, ik schrijf u namens onze klas.'* — wat voor brief is dit?",
+  "opties": [
+   "Formeel",
+   "Informeel",
+   "Reclame",
+   "Gedicht"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "schrijven-teksten-po",
+  "file": "./schrijvenTekstenPo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Tekst over gezond eten eindigt: *'Kortom, groente en fruit zijn de basis van een gezonde voeding.'* Wat is de hoofdgedachte?",
+  "opties": [
+   "Groente en fruit zijn de basis van gezonde voeding",
+   "Iedereen moet ananas eten",
+   "Eten kost veel geld",
+   "Sport is belangrijk"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "schrijven-teksten-po",
+  "file": "./schrijvenTekstenPo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Hoe begin je een formele e-mail aan iemand wiens achternaam je niet weet?",
+  "opties": [
+   "Geachte heer/mevrouw",
+   "Hoi",
+   "Lieve",
+   "Hey"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "tekstdoel-schrijversdoel-po",
+  "file": "./tekstdoelSchrijversdoelPo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "*\"Morgen begint droog, maar in de middag trekken er buien over het land. De temperatuur ligt rond de achttien graden. Neem voor de zekerheid een jas mee.\"* — Vo",
+  "opties": [
+   "Iedereen — een breed publiek",
+   "Alleen kinderen",
+   "Alleen boeren",
+   "Alleen piloten"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "tekstdoel-schrijversdoel-po",
+  "file": "./tekstdoelSchrijversdoelPo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "*\"Heb jij weleens zin in iets lekkers maar wil je geen suiker? Probeer dan eens een stuk fruit. Een appel of een peer geeft je ook energie!\"* — Voor wie is dit ",
+  "opties": [
+   "Kinderen of jongeren",
+   "Ouders",
+   "Tandartsen",
+   "Boeren"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "tekstdoel-schrijversdoel-po",
+  "file": "./tekstdoelSchrijversdoelPo.js",
+  "stap": 1,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Aan WELKE aanwijzing zie je het snelst dat een tekst voor volwassenen is bedoeld?",
+  "opties": [
+   "De schrijver gebruikt 'u' en deftige woorden",
+   "De tekst heeft veel alinea's",
+   "De tekst staat in een boek",
+   "De tekst heeft een titel"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "verhoudingen-po",
+  "file": "./verhoudingenPo.js",
+  "stap": 5,
+  "vraag": 19,
+  "soort": "L",
+  "q": "Wat is een verhouding?",
+  "opties": [
+   "Een vergelijking tussen getallen, zoals 2 : 3",
+   "De uitkomst van een plussom",
+   "De uitkomst van een minsom",
+   "De uitkomst van een keersom"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "verwijswoorden-begrijpend-lezen-po",
+  "file": "./verwijswoordenBegrijpendLezenPo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "*\"Mees vergat zijn gymtas. Dat gebeurt hem wel vaker.\"* — Naar wat verwijst 'dat'?",
+  "opties": [
+   "Dat Mees zijn gymtas vergat",
+   "De gymtas",
+   "Mees",
+   "De gymles"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "verwijswoorden-begrijpend-lezen-po",
+  "file": "./verwijswoordenBegrijpendLezenPo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "H",
+  "q": "*\"De merel zong in de tuin. Ik hoorde hem al vroeg in de ochtend.\"* — Naar wie of wat verwijst 'hem'?",
+  "opties": [
+   "De merel",
+   "De tuin",
+   "Ik",
+   "De ochtend"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "verwijswoorden-begrijpend-lezen-po",
+  "file": "./verwijswoordenBegrijpendLezenPo.js",
+  "stap": 2,
+  "vraag": 7,
+  "soort": "L",
+  "q": "*\"Noor liet haar beker vallen. Hierdoor lag de hele tafel vol melk.\"* — Naar wat verwijst 'hierdoor'?",
+  "opties": [
+   "Dat Noor haar beker liet vallen",
+   "De tafel",
+   "De melk",
+   "Noor"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "verwijswoorden-begrijpend-lezen-po",
+  "file": "./verwijswoordenBegrijpendLezenPo.js",
+  "stap": 3,
+  "vraag": 5,
+  "soort": "L",
+  "q": "*\"In de bus terug werd er nog lang over nagepraat.\"* — Naar wat verwijst 'er' (in 'over nagepraat')?",
+  "opties": [
+   "De hele dag op de kinderboerderij",
+   "De bus zelf",
+   "De chauffeur van de bus",
+   "De reis heen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "volgorde-bewerkingen",
+  "file": "./volgordeBewerkingen.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat doe je bij haakjes binnen haakjes?",
+  "opties": [
+   "Eerst binnenste, dan buitenste",
+   "Eerst buitenste",
+   "Maakt niet uit",
+   "Negeren"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "volgorde-bewerkingen",
+  "file": "./volgordeBewerkingen.js",
+  "stap": 6,
+  "vraag": 21,
+  "soort": "L",
+  "q": "Welke is gelijkwaardig: × en ÷ of + en −?",
+  "opties": [
+   "Beide paren onderling gelijk",
+   "Niet relevant",
+   "× sterker dan ÷",
+   "+ sterker dan −"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "waterkringloop-po",
+  "file": "./waterkringloopPo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is ijzel?",
+  "opties": [
+   "Regen die bevriest bij contact",
+   "Sneeuw",
+   "Hagel",
+   "Mist"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "waterkringloop-po",
+  "file": "./waterkringloopPo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is een polder?",
+  "opties": [
+   "Drooggemaakt land",
+   "Berg",
+   "Meer",
+   "Stad"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "waterkringloop-po",
+  "file": "./waterkringloopPo.js",
+  "stap": 3,
+  "vraag": 18,
+  "soort": "L",
+  "q": "Wat is hagel?",
+  "opties": [
+   "IJsballetjes uit onweerswolken",
+   "Sneeuw",
+   "Regen",
+   "Bevroren dauw"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "waterkringloop-po",
+  "file": "./waterkringloopPo.js",
+  "stap": 3,
+  "vraag": 20,
+  "soort": "L",
+  "q": "Wat is mist?",
+  "opties": [
+   "Kleine waterdruppels in de lucht",
+   "Sneeuw",
+   "Regen",
+   "Rook"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "waterkringloop-po",
+  "file": "./waterkringloopPo.js",
+  "stap": 3,
+  "vraag": 23,
+  "soort": "L",
+  "q": "Wat is grondwater?",
+  "opties": [
+   "Water dat in de bodem zit",
+   "Regenwater",
+   "Wolken",
+   "Drinkwater"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "waterkringloop-po",
+  "file": "./waterkringloopPo.js",
+  "stap": 3,
+  "vraag": 24,
+  "soort": "L",
+  "q": "Wat is afstroming?",
+  "opties": [
+   "Water dat over land naar rivier stroomt",
+   "Verdamping",
+   "Wolken",
+   "Water dat bevriest"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "waterkringloop-po",
+  "file": "./waterkringloopPo.js",
+  "stap": 3,
+  "vraag": 27,
+  "soort": "L",
+  "q": "Wat is vervuild water?",
+  "opties": [
+   "Bevat schadelijke stoffen",
+   "Schoon",
+   "Drinkbaar",
+   "Zout water"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "weersvoorspelling-po",
+  "file": "./weersvoorspellingPo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is KNMI?",
+  "opties": [
+   "NL-weerinstituut (De Bilt)",
+   "Belasting",
+   "Sport",
+   "School"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "weersvoorspelling-po",
+  "file": "./weersvoorspellingPo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat zijn isobaren?",
+  "opties": [
+   "Lijnen van gelijke luchtdruk",
+   "Temperatuur",
+   "Wind",
+   "Wolken"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "weersvoorspelling-po",
+  "file": "./weersvoorspellingPo.js",
+  "stap": 3,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Wat is klimaatverandering?",
+  "opties": [
+   "Aarde wordt langzaam warmer door meer CO₂",
+   "Wisseling van weer per dag",
+   "Wisseling van seizoenen",
+   "Een weer-app"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "weersvoorspelling-po",
+  "file": "./weersvoorspellingPo.js",
+  "stap": 3,
+  "vraag": 8,
+  "soort": "L",
+  "q": "Wat is een storm in Nederland (volgens KNMI)?",
+  "opties": [
+   "Wind ≥ Beaufort 9 (75 km/u)",
+   "Veel regen",
+   "Sneeuw",
+   "Onweer"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "weersvoorspelling-po",
+  "file": "./weersvoorspellingPo.js",
+  "stap": 3,
+  "vraag": 11,
+  "soort": "L",
+  "q": "Waarom zie je de bliksem eerder dan je de donder hoort?",
+  "opties": [
+   "Licht reist sneller dan geluid",
+   "Bliksem komt eerst",
+   "Donder is verzonnen",
+   "Geen verschil"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "weersvoorspelling-po",
+  "file": "./weersvoorspellingPo.js",
+  "stap": 3,
+  "vraag": 13,
+  "soort": "L",
+  "q": "Wat is luchtdruk?",
+  "opties": [
+   "Kracht waarmee lucht drukt",
+   "Wind",
+   "Temperatuur",
+   "Vochtigheid"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "weersvoorspelling-po",
+  "file": "./weersvoorspellingPo.js",
+  "stap": 3,
+  "vraag": 21,
+  "soort": "L",
+  "q": "Wat doet een front in weer?",
+  "opties": [
+   "Grens tussen luchtmassa's",
+   "Niets",
+   "Wolk",
+   "Zon"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "weersvoorspelling-po",
+  "file": "./weersvoorspellingPo.js",
+  "stap": 3,
+  "vraag": 23,
+  "soort": "L",
+  "q": "Wat is smog?",
+  "opties": [
+   "Mengsel mist + luchtvervuiling",
+   "Sneeuw",
+   "Mooi weer",
+   "Niet bestaand"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "weersvoorspelling-po",
+  "file": "./weersvoorspellingPo.js",
+  "stap": 3,
+  "vraag": 25,
+  "soort": "L",
+  "q": "Wat doet een buienradar?",
+  "opties": [
+   "Toont waar regen valt + bewegingsrichting",
+   "Voorspelt temperatuur",
+   "Toont wind",
+   "Niet relevant"
+  ],
+  "answer": 0
+ }
+]

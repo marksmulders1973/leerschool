@@ -994,7 +994,7 @@ const steps = [
         q: "Is 0,3 groter of kleiner dan ¼?",
         options: ["groter", "kleiner", "even groot", "dat kun je niet vergelijken"],
         answer: 0,
-        wrongHints: [null, "Reken ¼ om naar een kommagetal — dan zie je welke groter is.", "0,3 en 0,25 zijn niet gelijk.", "Breuken en kommagetallen kun je wel vergelijken: zet ze om naar dezelfde soort."],
+        wrongHints: [null,"Reken ¼ om naar een kommagetal — dan zie je welke groter is.","Reken ¼ om naar een kommagetal. Krijg je dan precies 0,3?","Breuken en kommagetallen kun je wel vergelijken: zet ze om naar dezelfde soort."],
         uitlegPad: {
           stappen: [
             { titel: "Zet ¼ om naar kommagetal", tekst: "Schrijf ¼ als kommagetal, zodat je het makkelijk kunt vergelijken met 0,3." },

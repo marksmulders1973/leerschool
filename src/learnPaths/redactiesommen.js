@@ -425,7 +425,7 @@ const steps = [
         q: "*'Een doos heeft 24 stickers. Verdeeld over 6 kinderen.'* Welke **bewerking**?",
         options: ["Delen","Optellen","Aftrekken","Vermenigvuldigen"],
         answer: 0,
-        wrongHints: [null,"Niet samenvoegen — er komt niets bij.","Niet aftrekken — niemand neemt iets weg.","Niet vermenigvuldigen — verdelen is anders."],
+        wrongHints: [null, "Niet samenvoegen — er komt niets bij.", "Niet aftrekken — niemand neemt iets weg.", "Niet vermenigvuldigen — krijgt elk kind meer dan 24 stickers?"],
       },
       {
         q: "*'Een fles 1,5 L kost € 2,40. Hoeveel **per liter**?'* — bewerking?",

@@ -1635,7 +1635,7 @@ const steps = [
         q: "**90 minuten** = ... ?",
         options: ["1 uur 30 min", "1 uur 90 min", "9 uur", "0 uur 90 min"],
         answer: 0,
-        wrongHints: [null, "Niet netjes — meer dan 60 min wordt een uur erbij.", "Veel te veel — 90 min is geen 9 uur.", "Niet netjes — schrijf 90 min als 1 uur 30 min."],
+        wrongHints: [null, "Niet netjes — meer dan 60 min wordt een uur erbij.", "Veel te veel — 90 min is geen 9 uur.", "Niet netjes — zitten er in 90 minuten meer dan 60? Maak daar een uur van. Hoeveel minuten blijven er over?"],
       },
       {
         q: "Film start **20:15**, duurt **2u 35min**. **Eindtijd**?",

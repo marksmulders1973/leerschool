@@ -30,7 +30,7 @@ const steps = [
         q: "Waar zijn de **hunebedden** te vinden?",
         options: ["Drenthe", "Limburg", "Friesland", "Zeeland"],
         answer: 0,
-        wrongHints: [null, "Niet in het zuiden — zoek in het noorden van ons land.", "Naast Drenthe, maar daar zijn ze niet.", "Geen hunebedden daar."],
+        wrongHints: [null, "Niet in het zuiden — zoek in het noorden van ons land.", "Friesland ligt wel in het noorden, maar daar zijn ze niet. Kijk meer naar het oosten.", "Geen hunebedden daar."],
         uitlegPad: {
           stappen: [{ titel: "Drenthe = noordoost", tekst: "Hunebedden liggen in Drenthe (noordoost-NL). Stenen graven uit ~3000 v.Chr." }],
           woorden: [{ woord: "hunebed", uitleg: "Stenen graf uit Trechterbeker-cultuur (~3000 v.Chr.)." }],
@@ -71,7 +71,7 @@ const steps = [
       },
       {
         q: "Wie kwamen na de Romeinen in Nederland wonen?",
-        options: ["Friezen, Saksen en Franken", "Vikingen alleen", "Spanjaarden", "Britten"],
+        options: ["Friezen, Saksen en Franken", "Vikingen, Denen en Noren", "Spanjaarden en Portugezen", "Britten, Schotten en Ieren"],
         answer: 0,
         wrongHints: [null, "Vikingen kwamen later (~800 n.Chr.) en bleven niet.", "Veel later in de geschiedenis.", "Niet in dit tijdvak."],
         uitlegPad: {
@@ -384,7 +384,7 @@ const steps = [
       },
       {
         q: "Wat was de **Hanze**?",
-        options: ["Een handelsverbond van steden", "Een leger", "Een godsdienst", "Een soort kasteel"],
+        options: ["Een handelsverbond van steden", "Een leger van ridders en soldaten", "Een godsdienst uit het noorden", "Een groot kasteel aan de kust"],
         answer: 0,
         wrongHints: [null, "Geen militaire organisatie.", "Geen geloof — waarvoor werkten de steden samen?", "Geen gebouw."],
         uitlegPad: {
@@ -1296,9 +1296,9 @@ const steps = [
       },
       {
         q: "**Industriële Revolutie** kwam in NL ongeveer wanneer?",
-        options: ["Eind 1800 / begin 1900","Middeleeuwen","Romeinse tijd","1990"],
+        options: ["Eind 1800 / begin 1900", "Eind 1400 / begin 1500", "Eind 1600 / begin 1700", "Eind 1900 / begin 2000"],
         answer: 0,
-        wrongHints: [null, "Te vroeg.", "Veel te vroeg.", "Te recent — dat is digitale revolutie."],
+        wrongHints: [null, "Veel te vroeg — dat is het einde van de middeleeuwen.", "Te vroeg — dat is rond de Gouden Eeuw.", "Te recent — dat is de tijd van computers en internet."],
         uitlegPad: {
           stappen: [
             { titel: "Wat was Industriële Revolutie?", tekst: "**Industriële Revolutie** = grote verandering van **handwerk → machine-productie**. Begon **Engeland ~1750-1850**, daarna naar rest van Europa.\n\n**Belangrijke uitvindingen**:\n• Stoommachine (Watt ~1769)\n• Spinmachine (textiel)\n• Stoomtrein (1800+)\n• Telegraaf (1830+)" },
@@ -1327,7 +1327,7 @@ const steps = [
       { q: "**Bevrijdingsdag NL** = welke datum?", options: ["5 mei","4 mei","27 april","11 nov"], answer: 0, wrongHints: [null, "Dodenherdenking.", "Koningsdag.", "WO1 wapenstilstand."] },
       { q: "**Romeinen** in NL — wat lag op de Rijn?", options: ["De Limes","De Hanze","Hunebedden","De Afsluitdijk"], answer: 0, wrongHints: [null, "De Hanze was een handelsverbond uit de middeleeuwen.", "Die liggen in Drenthe en zijn veel ouder.", "Die is pas in de 20e eeuw gebouwd."] },
       { q: "Wanneer was de **Franse tijd** in NL?", options: ["1795-1813","1815-1830","1900-1918","1940-1945"], answer: 0, wrongHints: [null, "Daarna.", "Veel later.", "WO2."] },
-      { q: "Wat is de **Vrede van Münster** (1648)?", options: ["Einde Tachtigjarige Oorlog","Begin WO1","Oprichting VOC","Begin Gouden Eeuw"], answer: 0, wrongHints: [null, "WO1 begon pas in 1914.", "De VOC werd in 1602 opgericht.", "De Gouden Eeuw begon al rond 1600."] },
+      { q: "Wat is de **Vrede van Münster** (1648)?", options: ["Einde Tachtigjarige Oorlog", "Begin Eerste Wereldoorlog", "Oprichting van de VOC", "Begin van de Gouden Eeuw"], answer: 0, wrongHints: [null, "WO1 begon pas in 1914.", "De VOC werd in 1602 opgericht.", "De Gouden Eeuw begon al rond 1600."] },
       { q: "**Eerste WO** in NL — was NL?", options: ["Neutraal","Bezet","Aanvaller","Bondgenoot"], answer: 0, wrongHints: [null, "WO2.", "Niet.", "Niet."] },
       { q: "Sinds welk jaar is NL lid van de **EEG** (Europese Economische Gemeenschap, nu EU)?", options: ["1957","1900","1973","2010"], answer: 0, wrongHints: [null, "Te vroeg.", "In 1973 kwamen o.a. Engeland en Denemarken erbij — NL was er al eerder bij.", "Veel later."] },
       { q: "Wie waren de **eerste bewoners** van NL?", options: ["Jagers-verzamelaars","Romeinen","Vikingen","Spanjaarden"], answer: 0, wrongHints: [null, "Veel later.", "Wel geweest.", "Niet eerste."] },

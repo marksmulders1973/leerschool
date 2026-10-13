@@ -101,20 +101,10 @@ Oefen de strategie met de vragen hieronder.`,
       },
       {
         q: "Wat betekent 'scannen' bij het lezen van een tekst?",
-        options: [
-          "Met je ogen snel over de tekst glijden, op zoek naar je zoekwoord",
-          "Elke zin hardop en langzaam voorlezen",
-          "Een foto van de tekst maken",
-          "De tekst samenvatten in je eigen woorden",
-        ],
+        options: ["Met je ogen snel over de tekst glijden, op zoek naar je zoekwoord", "Elke zin hardop en langzaam voorlezen, zodat je niets mist", "Een foto van de tekst maken, zodat je hem later kunt lezen", "De tekst samenvatten in je eigen woorden, alinea voor alinea"],
         answer: 0,
         evidence: "Scannen = met je ogen snel over de tekst glijden, op zoek naar dat ene woord.",
-        wrongHints: [
-          null,
-          "Langzaam en precies lezen doe je pas als je de goede plek gevonden hebt. Hoe vínd je die plek snel?",
-          null,
-          "Samenvatten is een andere leesklus. Bij zoekend lezen zoek je maar één ding — wat doen je ogen dan?",
-        ],
+        wrongHints: [null, "Langzaam en precies lezen doe je pas als je de goede plek gevonden hebt. Hoe vínd je die plek snel?", "Zo scan je met een apparaat. Maar wat doe jíj tijdens het lezen?", "Samenvatten is een andere leesklus. Bij zoekend lezen zoek je maar één ding — wat doen je ogen dan?"],
         uitlegPad: {
           stappen: [
             { titel: "Snel, niet precies", tekst: "Scannen is expres slordig lezen: je ogen vliegen over de regels en letten alleen op je zoekwoord. De betekenis van de andere zinnen sla je over." },

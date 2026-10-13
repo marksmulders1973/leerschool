@@ -74,7 +74,7 @@ const steps = [
       },
       {
         q: "Wat is **testosteron**?",
-        options: ["Hormoon vooral bij jongens", "Voedsel", "Ziekte", "Bot"],
+        options: ['Hormoon vooral bij jongens', 'Voedingsstof uit je eten', 'Ziekte die jongens krijgen', 'Stevig bot in je lichaam'],
         answer: 0,
         wrongHints: [null, "Je eet het niet — je lichaam maakt het zélf. Wat voor stof is dat?", "Het hoort juist bij gezond opgroeien — wat stuurt de puberteit aan?", "Botten groeien erdóór, maar het is zelf geen lichaamsdeel."],
       },
@@ -93,9 +93,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **menstruatie**?",
-        options: ["Maandelijkse bloeding uit baarmoeder", "Pijn", "Hormoon", "Geen"],
+        options: ['Maandelijkse bloeding uit de baarmoeder', 'Buikpijn die je elke maand krijgt', 'Hormoon dat de puberteit start', 'Ziekte die alleen meisjes krijgen'],
         answer: 0,
-        wrongHints: [null, "Het kan pijn doen, maar wat is het zelf?", "Hormonen sturen het, maar het is zelf geen hormoon.", "Wel."],
+        wrongHints: [null, 'Het kan pijn doen, maar wat is het zelf?', 'Hormonen sturen het, maar het is zelf geen hormoon.', 'Het is juist een gezond, normaal deel van opgroeien.'],
       },
       {
         q: "Hoe vaak komt de **menstruatie** ongeveer?",
@@ -105,9 +105,9 @@ const steps = [
       },
       {
         q: "Wat **veroorzaakt puistjes**?",
-        options: ["Hormonen activeren olieklieren", "Vies eten", "Geen wassen", "Niet bestaand"],
+        options: ['Hormonen activeren olieklieren', 'Te veel snoep en chips eten', 'Je gezicht te weinig wassen', 'Te veel in de zon zitten'],
         answer: 0,
-        wrongHints: [null, "Geen verband bewezen.", "Wassen helpt wel iets, maar is het de oorzaak?", "Wel."],
+        wrongHints: [null, 'Eten is niet de oorzaak. Wat verandert er in de puberteit in je lichaam?', 'Wassen helpt wel iets, maar is het de oorzaak?', 'De zon is niet de oorzaak. Wat verandert er in de puberteit in je huid?'],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een puistje?", tekst: "Een puistje (acne) ontstaat in je huid. Je huid heeft **olieklieren** die normaal een laagje olie maken. Soms raakt zo'n klier **verstopt** met olie + dode huidcellen + bacteriën = puistje." },
@@ -152,9 +152,9 @@ const steps = [
       },
       {
         q: "Waarom heb je in de puberteit **stemmingswisselingen**?",
-        options: ["Je brein is nog volop in ontwikkeling", "Door wat je eet", "Er is geen oorzaak", "Door het weer"],
+        options: ['Je brein is nog volop in ontwikkeling', 'Door wat je elke dag eet en drinkt', 'Er is eigenlijk helemaal geen oorzaak', 'Door het weer en de seizoenen'],
         answer: 0,
-        wrongHints: [null, "Eten is niet de hoofdoorzaak.", "Er is wél een oorzaak — kijk naar je brein.", "Het weer is niet de oorzaak."],
+        wrongHints: [null, 'Eten is niet de hoofdoorzaak.', 'Er is wél een oorzaak. Wat verandert er van binnen?', 'Het weer is niet de oorzaak.'],
       },
       {
         q: "Welk **nummer Kindertelefoon**?",
@@ -164,9 +164,9 @@ const steps = [
       },
       {
         q: "Wat is **LHBTQ+**?",
-        options: ["Afkorting voor o.a. lesbisch, homo, bi en transgender", "Ziekte", "Sport", "Tehuis"],
+        options: ['Afkorting over liefde en wie je bent', 'Naam van een besmettelijke ziekte', 'Afkorting van een nieuwe sportclub', 'Naam van een tehuis voor jongeren'],
         answer: 0,
-        wrongHints: [null, "Zeker geen ziekte — het zegt iets over liefde en over wie je bent.", "Geen sport — het is een afkorting van woorden over liefde en identiteit.", "Geen plek of gebouw — het beschrijft groepen mensen. Welke?"],
+        wrongHints: [null, 'Zeker geen ziekte. De L staat voor lesbisch. Waar gaat het dan over?', 'Geen sportclub. De H staat voor homo. Waar gaat het dan over?', 'Geen gebouw. De B staat voor biseksueel. Waar gaat het dan over?'],
       },
     ],
   },
@@ -175,14 +175,14 @@ const steps = [
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
       { q: "**Puberteit** begint bij meisjes gem.?", options: ["~11 jaar", "5", "18", "Niet bij meisjes"], answer: 0, wrongHints: [null, "Te vroeg.", "Te laat.", "Wel."] },
-      { q: "Wat is een **hormoon**?", options: ["Stof die signaal geeft in lichaam", "Spier", "Voedsel", "Bot"], answer: 0, wrongHints: [null, "Een spier kun je aanspannen — een hormoon reist door je bloed. Wat doet het daar?", "Het komt niet van je bord — je lichaam maakt het zelf. Waarvoor?", "Geen hard lichaamsdeel — het is een stof die door je bloed reist. Met welk doel?"] },
+      { q: "Wat is een **hormoon**?", options: ['Stof die signaal geeft in lichaam', 'Spier die je kunt aanspannen', 'Voedingsstof uit je avondeten', 'Bot dat langer groeit in je been'], answer: 0, wrongHints: [null, "Een spier kun je aanspannen — een hormoon reist door je bloed. Wat doet het daar?", "Het komt niet van je bord — je lichaam maakt het zelf. Waarvoor?", "Geen hard lichaamsdeel — het is een stof die door je bloed reist. Met welk doel?"] },
       { q: "Hoeveel **slaap** in puberteit?", options: ["9-10 uur", "4 uur", "12+ uur", "Geen"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Wel."] },
       { q: "Hoe vaak **menstruatie**?", options: ["~Elke 28 dagen", "Elke dag", "1 keer per jaar", "Niet"], answer: 0, wrongHints: [null, "Niet.", "Te zelden.", "Wel."] },
       { q: "Welk nummer **Kindertelefoon**?", options: ["0800-0432", "112", "0900", "06"], answer: 0, wrongHints: [null, "Spoed.", "Niet.", "Niet."] },
       { q: "Tot welke leeftijd **brein ontwikkelt**?", options: ["~25 jr", "12 jr", "8 jr", "60 jr"], answer: 0, wrongHints: [null, "Te jong.", "Te jong.", "Te oud."] },
       {
         q: "Wat is een **groeispurt**?",
-        options: ["Periode waarin je snel langer wordt", "Pijn in benen", "Trainen om te groeien", "Eten voor groei"],
+        options: ['Periode waarin je snel langer wordt', 'Pijn in je benen als je groeit', 'Extra trainen om langer te worden', 'Extra veel eten om te groeien'],
         answer: 0,
         wrongHints: [null, "Groeipijnen bestaan WEL maar dat is iets anders.", "Niet — groei is genetisch + hormonaal.", "Eten helpt maar IS niet de groeispurt zelf."],
         uitlegPad: {
@@ -207,9 +207,9 @@ const steps = [
       },
       {
         q: "Wat helpt **botten sterk** maken tijdens groei?",
-        options: ["Calcium, vitamine D en bewegen", "Veel zoetigheid", "Lang stilzitten", "Niet eten"],
+        options: ['Calcium, vitamine D en bewegen', 'Snoep, frisdrank en chips', 'Lang stilzitten en gamen', 'Ontbijt en lunch overslaan'],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — zoetigheid bouwt geen sterke botten op.", "Niet — bewegen is juist nodig voor sterke botten.", "Tegenovergesteld — voeding is essentieel."],
+        wrongHints: [null, 'Zoetigheid bouwt geen sterke botten op.', 'Botten worden sterker als je ze gebruikt. Doe je dat zo?', 'Je botten hebben bouwstoffen uit eten nodig. Krijgen ze die zo?'],
         uitlegPad: {
           stappen: [
             { titel: "Botten in puberteit", tekst: "In puberteit groeien je botten enorm — in lengte ÉN sterkte. Dit is het **belangrijkste moment in je leven** om sterke botten op te bouwen. Wat je nu in je botten 'opslaat' bepaalt risico op botbreuken/osteoporose op latere leeftijd." },
@@ -232,7 +232,7 @@ const steps = [
       },
       {
         q: "Het **brein in puberteit** — wat is uniek?",
-        options: ["Het beslissings-deel wordt als laatste klaar", "Brein krimpt", "Brein groeit niet meer", "Brein verandert niet"],
+        options: ['Het keuze-deel is als laatste klaar', 'Het hele brein wordt kleiner', 'Het brein groeit niet meer verder', 'Het brein blijft precies hetzelfde'],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld — brein verandert juist sterk.", "Tegenovergesteld — veel groei in puberteit.", "Tegenovergesteld."],
         uitlegPad: {
@@ -258,7 +258,7 @@ const steps = [
       { q: "Hoeveel uur **slaap** heeft een **tiener** ongeveer nodig per nacht?", options: ["8-10 uur", "4-5 uur", "12-14 uur", "Zo min mogelijk"], answer: 0, wrongHints: [null, "Te weinig — slaap is belangrijk in puberteit.", "Te veel.", "Onjuist."] },
       { q: "Welk **hormoon** speelt vooral een rol bij **jongens in de puberteit**?", options: ["Testosteron", "Oestrogeen", "Insuline", "Adrenaline"], answer: 0, wrongHints: [null, "Speelt vooral bij meisjes een grote rol.", "Bloedsuiker.", "Stress."] },
       { q: "Wat is **acne** (jeugdpuistjes)?", options: ["Ontstoken talgklieren in de huid", "Een ziekte van de longen", "Schade aan tanden", "Een verkleuring van de ogen"], answer: 0, wrongHints: [null, "Puistjes zitten niet in je longen — waar zie je ze?", "Tanden hebben er niets mee te maken.", "Ogen hebben er niets mee te maken."] },
-      { q: "Wat is **belangrijk** om gezond door de puberteit te komen?", options: ["Gezond eten, sport, voldoende slaap", "Alleen games spelen", "Niet leren", "Stress hebben"], answer: 0, wrongHints: [null, "Niet primair gezond.", "Onjuist.", "Tegenovergesteld."] },
+      { q: "Wat is **belangrijk** om gezond door de puberteit te komen?", options: ['Gezond eten, sport, voldoende slaap', 'Gamen, snoepen en laat opblijven', 'Niet leren en veel binnen zitten', 'Veel stress en weinig slaap'], answer: 0, wrongHints: [null, 'Is dat goed voor je lijf en je slaap?', 'Binnen zitten is niet goed voor je lijf. Wat heeft je lichaam nodig?', 'Stress en weinig slaap maken je juist moe en prikkelbaar.'] },
     ],
   },
 ];

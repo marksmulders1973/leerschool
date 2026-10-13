@@ -387,7 +387,7 @@ const steps = [
         q: "**Poesje** is het verkleinwoord van…?",
         options: ["poes", "poesen", "poezen", "poest"],
         answer: 0,
-        wrongHints: [null, "Dat is geen goed woord — denk aan één poes.", "Dat zijn er meer — we zoeken er één.", "Dat is geen woord."],
+        wrongHints: [null, "Zo schrijf je dat woord niet. Haal -je van poesje af: wat blijft er over?", "Dat zijn er meer — we zoeken er één.", "Dat is geen woord."],
         uitlegPad: {
           stappen: [{ titel: "Terugdenken", tekst: "poes**je** = poes + je. Het gewone woord is **poes**." }],
           niveaus: { basis: "poesje komt van poes.", simpeler: "Haal -je weg: poes.", nogSimpeler: "poes" },

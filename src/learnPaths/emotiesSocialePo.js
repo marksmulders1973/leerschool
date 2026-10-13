@@ -24,9 +24,9 @@ const steps = [
       },
       {
         q: "Wat te doen bij **boosheid**?",
-        options: ["Stop, tel tot 10, diep ademen", "Direct schreeuwen", "Slaan", "Niets"],
+        options: ["Stop, tel tot 10, diep ademen", "Direct heel hard schreeuwen", "Slaan of iets kapot gooien", "Het wegstoppen en niets doen"],
         answer: 0,
-        wrongHints: [null, "Maakt erger.", "Niet OK.", "Wel iets."],
+        wrongHints: [null, "Word je daar rustiger van, of juist bozer?", "Daarmee doe je iemand of iets pijn.", "Wegstoppen helpt niet. Wat kun je wél doen?"],
       },
       {
         q: "Wat is een **ik-boodschap**?",
@@ -49,9 +49,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **goede vriend**?",
-        options: ["Eerlijk, steunend, respect, plezier", "Doet wat jij zegt", "Praat slecht over anderen", "Maakt grappen ten koste"],
+        options: ["Eerlijk, steunend, respect, plezier", "Doet altijd precies wat jij zegt", "Praat vaak slecht over anderen", "Maakt grappen ten koste van jou"],
         answer: 0,
-        wrongHints: [null, "Geen goede vriend.", "Slecht teken.", "Slecht teken."],
+        wrongHints: [null, "Is dat eerlijk en gelijk?", "Zou hij dan ook slecht over jou praten?", "Voel jij je daar fijn bij?"],
       },
       {
         q: "Wat is **eerste stap bij ruzie**?",
@@ -61,15 +61,15 @@ const steps = [
       },
       {
         q: "Wat is **liefdesverdriet**?",
-        options: ["Pijn van afgewezen liefde", "Spel", "Ziekte", "Heimwee"],
+        options: ["Pijn van afgewezen liefde", "Een spel over verliefd zijn", "Een ziekte van je hart", "Verlangen naar je eigen huis"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet specifiek.", "Heimwee is verlangen naar huis."],
+        wrongHints: [null, "Is liefdesverdriet iets leuks?", "Je bent niet echt ziek. Waar komt het verdriet vandaan?", "Dat heet heimwee. Waar gaat liefdesverdriet over?"],
       },
       {
         q: "**Vriendschap + leven**?",
-        options: ["Goede vrienden = langer leven", "Geen verband", "Slecht", "Niet bekend"],
+        options: ["Goede vrienden = langer leven", "Geen verband tussen die twee", "Vrienden = korter leven", "Dat is nog nooit onderzocht"],
         answer: 0,
-        wrongHints: [null, "Wel verband.", "Tegenovergesteld.", "Wel."],
+        wrongHints: [null, "Onderzoekers vonden wel een verband.", "Maken vrienden je leven slechter?", "Er is wel onderzoek naar gedaan."],
       },
     ],
   },
@@ -80,15 +80,15 @@ const steps = [
     checks: [
       {
         q: "Wat is **pesten**?",
-        options: ["Herhaald + gericht iemand pijn doen", "Eenmalige ruzie", "Plagen", "Sport"],
+        options: ["Herhaald + gericht iemand pijn doen", "Eén keer ruzie met iemand maken", "Elkaar af en toe voor de grap plagen", "Samen een sportwedstrijd spelen"],
         answer: 0,
-        wrongHints: [null, "Niet pesten.", "Niet pesten.", "Niet."],
+        wrongHints: [null, "Gebeurt pesten één keer, of steeds weer?", "Bij plagen lachen allebei. Is dat bij pesten ook zo?", "Bij een wedstrijd doe je samen mee. Is dat pesten?"],
       },
       {
         q: "Wat doe je bij **cyberpesten**?",
-        options: ["Screenshot + blokkeer + volwassene", "Negeer", "Terug-pesten", "Niet vertellen"],
+        options: ["Screenshot + blokkeer + volwassene", "Negeer het en hoop dat het stopt", "Pest terug met een gemeen bericht", "Vertel het niemand en wacht af"],
         answer: 0,
-        wrongHints: [null, "Werkt vaak niet.", "Maakt erger.", "Wel praten."],
+        wrongHints: [null, "Hopen helpt vaak niet. Wat kun je zelf doen?", "Dan wordt het vaak alleen maar erger.", "Wie kan je helpen als je het vertelt?"],
       },
       {
         q: "Welk nummer **Kindertelefoon**?",
@@ -110,16 +110,16 @@ const steps = [
     checks: [
       { q: "Hoeveel **basis-emoties** (Ekman)?", options: ["6", "1", "100", "0"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Wel."] },
       { q: "Wat is **ik-boodschap**?", options: ["Eigen gevoel uiten", "Verwijt aan ander", "Geen mening", "Schreeuwen"], answer: 0, wrongHints: [null, "Jij-boodschap.", "Wel mening.", "Niet."] },
-      { q: "Wat is **pesten** vs plagen?", options: ["Pesten = herhaald + gericht", "Geen verschil", "Plagen erger", "Niet bekend"], answer: 0, wrongHints: [null, "Wel verschil.", "Tegenovergesteld.", "Wel."] },
+      { q: "Wat is **pesten** vs plagen?", options: ["Pesten = herhaald + gericht", "Geen verschil, het is hetzelfde", "Plagen is altijd veel erger", "Dat weet niemand precies"], answer: 0, wrongHints: [null, "Er is wel een verschil. Hoe vaak gebeurt het?", "Welke van de twee doet meer pijn?", "Er is wel een duidelijk verschil."] },
       { q: "Welk nummer **Kindertelefoon**?", options: ["0800-0432", "112", "0900", "0800-2000"], answer: 0, wrongHints: [null, "Spoed.", "Niet.", "Veilig Thuis."] },
       { q: "Wat doe je bij **boosheid**?", options: ["Tel 10 + diep ademen", "Direct schreeuwen", "Slaan", "Niets"], answer: 0, wrongHints: [null, "Maakt erger.", "Niet OK.", "Wel reageren."] },
-      { q: "Wat doe je als **getuige van pesten**?", options: ["Spreek uit + help + vertel volwassene", "Negeer", "Lach mee", "Pest mee"], answer: 0, wrongHints: [null, "Wegkijken werkt niet.", "Slecht.", "Slecht."] },
-      { q: "Wat is **empathie**?", options: ["Inleven in gevoel van iemand anders", "Een soort medicijn", "Boos worden", "Niet praten"], answer: 0, wrongHints: [null, "Geen medicijn.", "Tegenovergesteld.", "Niet."] },
-      { q: "Wat is **assertief** zijn?", options: ["Voor jezelf opkomen zonder anderen aan te vallen", "Agressief schreeuwen", "Niets zeggen", "Iedereen volgen"], answer: 0, wrongHints: [null, "Verschilt van agressief.", "Tegenovergesteld.", "Tegenovergesteld."] },
-      { q: "Welke **lichaamsuiting** wijst vaak op **boosheid**?", options: ["Gespannen gezicht, vuisten", "Lachen", "Slapen", "Zingen"], answer: 0, wrongHints: [null, "Blij.", "Niet emotie-uiting.", "Plezier."] },
-      { q: "Wat helpt bij **stress**?", options: ["Diep ademen + praten met iemand", "Eten + slapen heel veel", "Niet erover praten", "Schreeuwen"], answer: 0, wrongHints: [null, "Niet primair.", "Verzwijgen maakt erger.", "Maakt boos."] },
-      { q: "Wat is een **conflict**?", options: ["Meningsverschil tussen mensen", "Een fijne activiteit", "Een ziekte", "Een land"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Geen ziekte.", "Niet."] },
-      { q: "Hoe los je een **ruzie** met een vriend op?", options: ["Praten + luisteren + sorry zeggen waar nodig", "Wegrennen", "Slaan", "Niet meer praten"], answer: 0, wrongHints: [null, "Lost niets op.", "Niet OK.", "Maakt erger."] },
+      { q: "Wat doe je als **getuige van pesten**?", options: ["Spreek uit + help + vertel volwassene", "Kijk weg en loop gewoon door", "Lach mee met de rest van de klas", "Doe mee, dan ben jij veilig"], answer: 0, wrongHints: [null, "Wegkijken werkt niet.", "Hoe voelt het gepeste kind als iedereen lacht?", "Dan maak je het voor het andere kind erger."] },
+      { q: "Wat is **empathie**?", options: ["Inleven in gevoel van iemand anders", "Een soort medicijn tegen pijn", "Boos worden op iemand anders", "Niets zeggen over je eigen gevoel"], answer: 0, wrongHints: [null, "Geen medicijn.", "Is boos worden aardig voor de ander?", "Gaat empathie over zwijgen, of over iets anders?"] },
+      { q: "Wat is **assertief** zijn?", options: ["Rustig voor jezelf opkomen", "Boos schreeuwen naar anderen", "Niets zeggen en alles slikken", "Altijd doen wat anderen willen"], answer: 0, wrongHints: [null, "Schreeuwen is agressief. Is dat hetzelfde?", "Kom je dan op voor jezelf?", "Kom je dan op voor jezelf?"] },
+      { q: "Welke **lichaamsuiting** wijst vaak op **boosheid**?", options: ["Gespannen gezicht, vuisten", "Lachen en ontspannen kijken", "Rustig slapen op de bank", "Vrolijk zingen en dansen"], answer: 0, wrongHints: [null, "Dat zie je als iemand blij is.", "Wie slaapt, laat dan geen boosheid zien.", "Dat doe je als je plezier hebt."] },
+      { q: "Wat helpt bij **stress**?", options: ["Diep ademen + praten met iemand", "Heel veel eten en lang slapen", "Niet erover praten met anderen", "Hard schreeuwen naar anderen"], answer: 0, wrongHints: [null, "Veel eten en slapen lost stress niet op.", "Verzwijgen maakt erger.", "Word je daar rustiger van?"] },
+      { q: "Wat is een **conflict**?", options: ["Meningsverschil tussen mensen", "Een fijne activiteit met vrienden", "Een besmettelijke ziekte", "Een land ver weg in Afrika"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Geen ziekte.", "Een conflict vind je niet op de kaart."] },
+      { q: "Hoe los je een **ruzie** met een vriend op?", options: ["Praten, luisteren en sorry zeggen", "Wegrennen en hem voortaan ontwijken", "Slaan of schoppen tot hij stopt", "Hem negeren en niet meer praten"], answer: 0, wrongHints: [null, "Lost niets op.", "Niet OK.", "Maakt erger."] },
     ],
   },
 ];

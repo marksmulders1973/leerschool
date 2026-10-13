@@ -101,7 +101,7 @@ const steps = [
         q: "Welk woord is GEEN samenstelling?",
         options: ["bloemen", "bloemenveld", "bloemenvaas", "bloemenkweker"],
         answer: 0,
-        wrongHints: [null, "bloemen + veld = bloemenveld — dat is wél een samenstelling.", "bloemen + vaas = bloemenvaas — ook een samenstelling.", "bloemen + kweker = bloemenkweker — ook een samenstelling."],
+        wrongHints: [null,"Kun je 'bloemenveld' in twee losse woorden knippen? Dan is het wél een samenstelling.","Kun je 'bloemenvaas' in twee losse woorden knippen? Dan is het ook een samenstelling.","Kun je 'bloemenkweker' in twee losse woorden knippen? Dan is het ook een samenstelling."],
         uitlegPad: {
           stappen: [{ titel: "Eén woord is geen samenstelling", tekst: "'Bloemen' is het meervoud van bloem — één woord, geen twee samengevoegde woorden." }],
           niveaus: {
@@ -201,7 +201,7 @@ const steps = [
         q: "Hoe schrijf je het woord voor een koek die je in een pan bakt?",
         options: ["pannenkoek", "pankoek", "pannekoek", "pannenkoeken"],
         answer: 0,
-        wrongHints: [null, "Er hoort een tussen-n: pan → pannen.", "Volgens de huidige spelling is het 'pannenkoek'.", "Dat is het meervoud (meerdere koeken)."],
+        wrongHints: [null,"Wat is het meervoud van 'pan'? Dat hoor je terug in het woord.","Kijk naar het meervoud van 'pan'. Schrijf je die hele uitgang ook in het woord?","Dat is het meervoud (meerdere koeken)."],
         uitlegPad: {
           stappen: [{ titel: "pan → pannen → pannenkoek", tekst: "Het meervoud van 'pan' is 'pannen' (op -en). Daarom: pannenkoek, met tussen-n." }],
           niveaus: {
@@ -227,14 +227,9 @@ const steps = [
       },
       {
         q: "Wanneer schrijf je vaak een tussen-n (-en-)?",
-        options: [
-          "als het eerste woord een meervoud op -en heeft",
-          "altijd, bij elke samenstelling",
-          "nooit",
-          "alleen bij dieren",
-        ],
+        options: ["als het eerste woord meervoud op -en heeft","altijd, bij elke samenstelling die er is","als het eerste woord eindigt op een -n","alleen als het eerste woord een dier is"],
         answer: 0,
-        wrongHints: [null, "Niet bij élke samenstelling (voetbal heeft er geen).", "Soms juist wél.", "Het heeft niets met dieren te maken."],
+        wrongHints: [null,"Niet bij élke samenstelling (voetbal heeft er geen).","Denk aan 'boekenkast': 'boek' eindigt niet op een n en toch krijgt het -en-.","Het heeft niets met dieren te maken."],
         uitlegPad: {
           stappen: [{ titel: "Meervoud op -en", tekst: "Kun je van het eerste woord een meervoud op -en maken (pan → pannen)? Dan schrijf je vaak -en- in de samenstelling." }],
           niveaus: {

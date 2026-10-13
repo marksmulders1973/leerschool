@@ -319,7 +319,7 @@ const steps = [
         q: "Schaal 1 : 50.000. Op de kaart 2 cm. Hoeveel km in het echt?",
         options: ["1 km", "2 km", "0,5 km", "10 km"],
         answer: 0,
-        wrongHints: [null, "Te veel — bij 1 : 50.000 is 1 cm géén hele km.", "Net niet — 100.000 cm is 1 km.", "Veel te veel."],
+        wrongHints: [null, "Te veel — bij 1 : 50.000 is 1 cm géén hele km.", "Net niet — 0,5 km hoort bij 1 cm op de kaart. Hoeveel cm staat er?", "Veel te veel."],
         uitlegPad: {
           stappen: [
             { titel: "Vermenigvuldig eerst in centimeter", tekst: "Neem de kaart-afstand keer vijftigduizend om de echte afstand in centimeter te krijgen." },

@@ -44,7 +44,7 @@ const steps = [
       },
       {
         q: "Wat bestond er **nog niet** toen jouw opa en oma kind waren?",
-        options: ["mobiele telefoons met apps", "fietsen", "boeken", "treinen"],
+        options: ["mobiele telefoons met apps", "fietsen met een bagagedrager", "boeken met mooie plaatjes", "treinen met een conducteur"],
         answer: 0,
         wrongHints: [null, "Fietsen bestaan al meer dan honderd jaar.", "Boeken bestaan al honderden jaren.", "Treinen rijden al heel lang door Nederland."],
         uitlegPad: {
@@ -431,7 +431,7 @@ const steps = [
       },
       {
         q: "Wat deden veel kinderen vroeger **na school**?",
-        options: ["thuis of op het land meehelpen", "gamen", "tv kijken", "naar zwemles met de bus"],
+        options: ["thuis of op het land meehelpen", "games spelen op de computer", "naar tv-programma's kijken", "met de bus naar zwemles gaan"],
         answer: 0,
         wrongHints: [null, "Bestonden er toen al games?", "Bestond er toen al tv?", "Denk aan wat een gezin toen nodig had."],
         uitlegPad: {
@@ -461,7 +461,7 @@ const steps = [
       },
       {
         q: "Wat is een **griffel**?",
-        options: ["een schrijfstiftje van steen", "een zwart plankje", "een soort olielamp", "een waterpomp"],
+        options: ["een schrijfstiftje van steen", "een zwart plankje van steen", "een lampje dat op olie brandt", "een pomp voor water uit de put"],
         answer: 0,
         wrongHints: [null, "Dat is de lei — daar schrijf je óp.", null, null],
         uitlegPad: {
@@ -527,9 +527,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **harnas**?",
-        options: ["een metalen pak dat de ridder beschermt", "het paard van de ridder", "het zwaard van de ridder", "de vlag op het kasteel"],
+        options: ["het metalen pak van de ridder", "het paard van de ridder", "het zwaard van de ridder", "de vlag op het kasteel"],
         answer: 0,
-        wrongHints: [null, "Het paard heeft een eigen naam — dit trok de ridder áán.", "Dat is een wapen, geen kleding.", "Die wappert op de toren."],
+        wrongHints: [null, "Een paard is een dier. Een harnas is iets anders.", "Met een zwaard vecht je. Lees de vraag nog eens.", "Die wappert op de toren."],
         uitlegPad: {
           stappen: [{ titel: "IJzeren pak", tekst: "Een **harnas** is een pak van metalen platen. Het beschermde de ridder tegen zwaarden en pijlen — als een superstevige jas." }],
           niveaus: { basis: "Een harnas is een beschermend metalen pak.", simpeler: "Een ijzeren pak voor de ridder.", nogSimpeler: "metalen pak" },
@@ -537,7 +537,7 @@ const steps = [
       },
       {
         q: "Waarom hadden kastelen **dikke muren**?",
-        options: ["om de mensen binnen te beschermen tegen vijanden", "omdat dat mooier stond", "om er schilderijen aan te hangen", "omdat dunne stenen niet bestonden"],
+        options: ["om vijanden buiten te houden", "omdat dat veel mooier stond", "om er schilderijen aan te hangen", "omdat dunne stenen niet bestonden"],
         answer: 0,
         wrongHints: [null, "Mooi was meegenomen — maar er was een belangrijkere reden.", "Daarvoor was een dunne muur ook goed genoeg.", "Dunne muren konden ze best bouwen — maar wilden ze dat?"],
         uitlegPad: {

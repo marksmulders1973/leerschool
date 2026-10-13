@@ -505,7 +505,7 @@ const steps = [
       },
       {
         q: "Wat is een **continent**?",
-        options: ["Een heel groot stuk land", "Een land", "Een berg", "Een zee"],
+        options: ["Een heel groot stuk land", "Een land met een eigen vlag", "Een hoge berg met sneeuw", "Een grote zee tussen landen"],
         answer: 0,
         wrongHints: [null, "Een continent BEVAT landen, IS niet een land.", "Niet — wel staan er bergen OP continenten.", "Niet — tegenovergesteld: continent = land, oceaan = water."],
         uitlegPad: {

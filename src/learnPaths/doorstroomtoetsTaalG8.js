@@ -70,9 +70,9 @@ const steps = [
     checks: [
       {
         q: "*'De jongen rende **buiten adem** naar huis.'* Wat betekent **buiten adem**?",
-        options: ["Zo hard gerend dat je nauwelijks kunt ademen", "Buiten lopen om adem te halen", "Stil staan", "Zonder adem te halen"],
+        options: ["Zo hard gerend dat je nauwelijks kunt ademen", "Naar buiten gaan om frisse lucht te halen", "Rustig stilstaan om even uit te rusten", "Expres je adem inhouden tijdens het rennen"],
         answer: 0,
-        wrongHints: [null, "Letterlijk lijkt het zo, maar het is een uitdrukking — hij rent juist hard.", "Hij rent. Stil staan past niet.", "Niet ademen is sterven. Hier rent hij hard."],
+        wrongHints: [null, "Letterlijk lijkt het zo, maar het is een uitdrukking — hij rent juist hard.", "Hij rent. Stilstaan past niet.", "Je adem lang inhouden lukt niet als je rent. Wat gebeurt er met je adem na hard rennen?"],
       },
       {
         q: "Welk woord is een **synoniem** van **'enorm'**?",
@@ -184,7 +184,7 @@ const steps = [
       },
       {
         q: "*'De situatie was uiterst **precair**.'* Wat betekent precair?",
-        options: ["Onzeker / gevaarlijk", "Saai", "Vrolijk", "Druk"],
+        options: ["Onzeker / gevaarlijk", "Saai / niet spannend", "Vrolijk / gezellig", "Druk / lawaaiig"],
         answer: 0,
         wrongHints: [null, "Saai betekent dat er weinig gebeurt — klinkt een 'uiterst precaire' situatie zo?", "Klinkt 'precair' als iets fijns?", "Druk gaat over veel mensen of veel te doen — waar gaat precair over?"],
         uitlegPad: {
@@ -480,7 +480,7 @@ const steps = [
       },
       {
         q: "*'Hij had een **briljant** idee voor het werkstuk.'* Wat betekent **briljant**?",
-        options: ["Heel slim / schitterend", "Heel saai", "Vaag", "Verkeerd"],
+        options: ["Heel slim / schitterend", "Heel saai / gewoon", "Vaag / onduidelijk", "Verkeerd / onjuist"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld — briljant is iets positiefs.", "Briljant is juist heel duidelijk goed.", "Briljant betekent niet 'fout'."],
         uitlegPad: {
@@ -532,7 +532,7 @@ const steps = [
       },
       {
         q: "*'Het was een **hachelijke** situatie.'* Wat betekent **hachelijk**?",
-        options: ["Gevaarlijk / riskant", "Grappig", "Saai", "Eenvoudig"],
+        options: ["Gevaarlijk / riskant", "Grappig / komisch", "Saai / langdradig", "Eenvoudig / makkelijk"],
         answer: 0,
         wrongHints: [null, "Hachelijk klinkt niet leuk — het is juist serieus.", "Hachelijk is geen rustig woord.", "Tegenovergesteld — hachelijk is juist lastig."],
         uitlegPad: {
@@ -611,21 +611,21 @@ const steps = [
       },
       {
         q: "*'Het was een **geniaal** plan.'* Wat betekent **geniaal**?",
-        options: ["Heel slim / briljant", "Heel saai", "Verkeerd", "Klein"],
+        options: ["Heel slim / briljant", "Heel saai / gewoon", "Verkeerd / dom", "Klein / onbelangrijk"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Geen verband."],
       },
       {
         q: "Wat is een **antoniem**?",
-        options: ["Een woord met tegenovergestelde betekenis", "Een synoniem", "Een lang woord", "Een afkorting"],
+        options: ["Een woord met tegenovergestelde betekenis", "Een woord met dezelfde betekenis", "Een woord met heel veel letters", "Een korte vorm van een lang woord"],
         answer: 0,
-        wrongHints: [null, "Tegenovergestelde — synoniem = dezelfde betekenis.", "Lengte zegt niets.", "Niet."],
+        wrongHints: [null, "Dat is een synoniem. Wat betekent 'anti' ook alweer?", "Lengte zegt niets.", "Dat is een afkorting."],
       },
       {
         q: "*'De jongen is **gehaast**.'* Wat betekent **gehaast**?",
-        options: ["Heeft veel haast / snel", "Verlegen", "Slim", "Saai"],
+        options: ["Heeft veel haast / snel", "Is erg verlegen / stil", "Is heel slim / handig", "Verveelt zich / sloom"],
         answer: 0,
-        wrongHints: [null, "Niet — gehaast = snel willen zijn.", "Geen verband.", "Geen verband."],
+        wrongHints: [null, "Verlegen gaat over hoe je je voelt bij anderen. Welk woord zit er in 'gehaast'?", "Geen verband. Welk woord zit er in 'gehaast'?", "Geen verband. Welk woord zit er in 'gehaast'?"],
       },
       {
         q: "*'Een **kostbare** vaas'* — wat betekent **kostbaar**?",
@@ -655,7 +655,7 @@ const steps = [
       },
       {
         q: "Wat betekent *'iemand een **hart onder de riem** steken'*?",
-        options: ["Iemand bemoedigen / moed inspreken", "Iemand pijn doen", "Iemand wegsturen", "Iemand uitlachen"],
+        options: ["Iemand bemoedigen / moed inspreken", "Iemand pijn doen / verdriet geven", "Iemand wegsturen / buitensluiten", "Iemand uitlachen / belachelijk maken"],
         answer: 0,
         wrongHints: [null, "Een 'hart' wijst eerder op iets positiefs dan op pijn — vriendelijk gebaar.", null, null],
       },
@@ -673,7 +673,7 @@ const steps = [
       },
       {
         q: "*'De burgemeester nam een **omstreden** besluit.'* Wat betekent **omstreden**?",
-        options: ["Waar veel mensen het oneens over zijn", "Heel verstandig", "Geheim gehouden", "Snel genomen"],
+        options: ["Waar veel mensen het oneens over zijn", "Dat heel slim en verstandig is bedacht", "Dat stiekem en geheim is gehouden", "Dat heel snel en zonder overleg is genomen"],
         answer: 0,
         wrongHints: [null, "Kijk naar 'strijd' in het woord — gaat dit over slim zijn, of over ruzie erover?", "Een geheim besluit ken je niet — over een omstreden besluit praat juist iedereen.", "Het woord zegt niets over tempo. Welk woord zit erin verstopt?"],
         explanation: "**Omstreden** = waar 'strijd' over is: veel mensen zijn het er niet mee eens. Denk aan: om-STRIJD-en.",
@@ -687,7 +687,7 @@ const steps = [
       },
       {
         q: "Wat betekent de uitdrukking *'**de knoop doorhakken**'*?",
-        options: ["Eindelijk een beslissing nemen", "Iets kapotmaken", "Touw gebruiken", "Een ruzie beginnen"],
+        options: ["Eindelijk een beslissing nemen", "Iets met een bijl kapotmaken", "Een touw losmaken of doorsnijden", "Een ruzie met iemand beginnen"],
         answer: 0,
         wrongHints: [null, "Het is een uitdrukking — er gaat niets écht kapot. Waar twijfel je over vóór je 'doorhakt'?", "Denk niet letterlijk aan touw. Wat 'zit vast' als je lang twijfelt?", "Een knoop doorhakken lucht juist op — het beëindigt het getwijfel."],
         explanation: "**De knoop doorhakken** = na lang twijfelen eindelijk kiezen. De 'knoop' is het lastige besluit.",
@@ -729,7 +729,7 @@ const steps = [
       },
       {
         q: "Wat betekent het spreekwoord *'**Wie het laatst lacht, lacht het best**'*?",
-        options: ["Wie aan het eind wint, heeft echt gewonnen", "Lachen is gezond", "De laatste grap is het grappigst", "Je moet altijd vrolijk zijn"],
+        options: ["Wie aan het eind wint, heeft echt gewonnen", "Lachen is goed voor je gezondheid", "De laatste grap is het grappigst", "Je moet altijd blijven lachen en vrolijk zijn"],
         answer: 0,
         wrongHints: [null, "Het spreekwoord gaat niet over gezondheid — wannéér lach je 'het laatst'?", "Het gaat niet om grappen, maar om wie er aan het einde gelijk krijgt.", "Het zegt niet dat je móét lachen — het waarschuwt tegen te vroeg juichen."],
         explanation: "Betekenis: juich niet te vroeg — wie aan het **einde** als winnaar overblijft, heeft pas echt gewonnen.",
@@ -942,14 +942,14 @@ const steps = [
       {
         q: "*'De auteur wil je **vooral overtuigen**'* — wat is dan de **bedoeling** van de tekst?",
         ref: "S",
-        options: ["Overhalen om iets te doen of denken", "Informeren met feiten", "Amuseren met grappen", "Beschrijven hoe iets is"],
+        options: ["Overhalen om iets te doen of denken", "Informeren met feiten en cijfers", "Amuseren met grappige verhalen", "Beschrijven hoe iets eruitziet"],
         answer: 0,
         wrongHints: [null, "Informeren is een ánder doel dan overtuigen.", "Amuseren is anders.", "Beschrijven = neutraal vermelden."],
       },
       {
         q: "*Tekst: 'Eerst moet je de fles openmaken. **Vervolgens** schenk je het water in.'* Wat geeft **'vervolgens'** aan?",
         ref: "1F",
-        options: ["Volgorde / opeenvolging", "Tegenstelling", "Reden", "Doel"],
+        options: ["Volgorde", "Tegenstelling", "Reden", "Doel"],
         answer: 0,
         wrongHints: [null, "Geen tegenstelling.", "Geen reden.", "Geen doel."],
       },
@@ -962,16 +962,16 @@ const steps = [
       {
         q: "*Hoofdgedachte* van tekst — meestal te vinden in:",
         ref: "1F",
-        options: ["Eerste of laatste alinea", "Middelste alinea", "Plaatje", "Voetnoot"],
+        options: ["Eerste of laatste alinea", "Tweede of derde alinea", "Onder het plaatje of de foto", "In de voetnoot onderaan"],
         answer: 0,
-        wrongHints: [null, "Soms maar niet primair.", "Niet tekst-onderdeel.", "Te detail."],
+        wrongHints: [null, "Soms, maar meestal niet. Waar zet een schrijver het belangrijkste?", "Een plaatje hoort niet bij de tekst zelf.", "Een voetnoot is een klein detail."],
       },
       {
         q: "Wat is **alinea**?",
         ref: "1F",
-        options: ["Groep zinnen over één onderwerp", "Eén zin", "Hele tekst", "Plaatje"],
+        options: ["Groep zinnen over één onderwerp", "Eén lange zin met veel komma's", "De hele tekst van begin tot eind", "Plaatje met een onderschrift"],
         answer: 0,
-        wrongHints: [null, "Alinea heeft meer.", "Tekst heeft meerdere.", "Niet."],
+        wrongHints: [null, "Een alinea heeft meer dan één zin.", "Een tekst heeft meestal meerdere alinea's.", "Een plaatje is geen tekst."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een alinea?", tekst: "Een alinea is een groep zinnen die SAMEN over één onderwerp gaan. Daarna volgt vaak een witregel of een inspring." },
@@ -1128,9 +1128,9 @@ const steps = [
       },
       {
         q: "Wat doe je voordat je een **leesvraag** beantwoordt? Toets-strategie?",
-        options: ["Lees vraag → zoek terug in tekst", "Lees vraag → gok", "Lees alleen tekst", "Niets"],
+        options: ["Lees vraag → zoek terug in tekst", "Lees vraag → gok een antwoord", "Lees tekst → kijk niet naar vraag", "Kies meteen het langste antwoord"],
         answer: 0,
-        wrongHints: [null, "Niet — slim zoeken.", "Inefficiënt.", "Wel — strategie."],
+        wrongHints: [null, "Gokken is geen strategie. Waar staat het antwoord?", "Hoe weet je dan waar je op moet letten?", "Het langste antwoord is niet vaker goed. Wat helpt wél?"],
       },
       {
         q: "*'De plant ging dood **doordat** Tom hem te weinig water gaf.'* Wat is hier de **reden**?",
@@ -1186,14 +1186,14 @@ const steps = [
       {
         q: "Een **alinea** is...",
         ref: "1F",
-        options: ["Een blok tekst over één onderwerp", "Een hoofdletter", "Een leesteken", "Een titel"],
+        options: ["Een blok tekst over één onderwerp", "Een hoofdletter vooraan in de zin", "Een punt aan het eind van de zin", "Een titel boven de hele tekst"],
         answer: 0,
-        wrongHints: [null, "Hoofdletter is iets anders.", "Leesteken is een punt/komma — geen alinea.", "Titel staat boven de tekst, alinea is in de tekst."],
+        wrongHints: [null, "Hoofdletter is iets anders.", "Een punt is een leesteken — geen alinea.", "Titel staat boven de tekst, alinea is in de tekst."],
       },
       {
         q: "*Wat is het verschil tussen* **'feit'** *en* **'mening'**?",
         ref: "S",
-        options: ["Feit kun je controleren, mening is wat iemand vindt", "Feit is positief, mening is negatief", "Geen verschil", "Feit staat in inleiding, mening in slot"],
+        options: ["Feit kun je controleren, mening is wat iemand vindt", "Feit is positief, mening is negatief", "Geen verschil, ze betekenen hetzelfde", "Feit staat in inleiding, mening in slot"],
         answer: 0,
         wrongHints: [null, "Geen verband met positief/negatief.", "Wel een verschil — belangrijk bij de Doorstroomtoets!", "Daar is geen vaste plek voor."],
         uitlegPad: {
@@ -1327,7 +1327,7 @@ const steps = [
       {
         q: "Een **tekst voor kinderen** versus **tekst voor wetenschappers** verschilt vooral in...",
         ref: "S",
-        options: ["Moeilijkheidsgraad van woorden", "Aantal pagina's", "Kleur van het papier", "Land van uitgifte"],
+        options: ["Moeilijkheidsgraad van woorden", "Aantal pagina's van het boek", "Kleur van het papier en de kaft", "Land waar de tekst gedrukt is"],
         answer: 0,
         wrongHints: [null, "Lengte zegt niets over doelgroep.", "Niet relevant.", "Niet relevant."],
       },
@@ -1341,9 +1341,9 @@ const steps = [
       {
         q: "Wat is een **citaat** in een tekst?",
         ref: "1F",
-        options: ["Letterlijke aanhaling van iemand", "De inleiding", "Een afbeelding", "De voetnoot"],
+        options: ["Letterlijke aanhaling van iemand", "Eerste alinea van de tekst", "Een afbeelding met onderschrift", "Bronvermelding onderaan de pagina"],
         answer: 0,
-        wrongHints: [null, "Niet — citaat = woorden van iemand.", "Niet.", "Bron-verwijzing, niet citaat."],
+        wrongHints: [null, "Dat is de inleiding.", "Een afbeelding is geen tekst.", "Dat is een voetnoot — een bron, geen citaat."],
         uitlegPad: {
           stappen: [
             { titel: "Citaat = letterlijk", tekst: "Een citaat is wat iemand letterlijk heeft gezegd of geschreven. Staat tussen aanhalingstekens." },
@@ -1378,7 +1378,7 @@ const steps = [
       {
         q: "*'Steeds meer scholen verbieden mobieltjes in de klas. Leerlingen blijken zich beter te concentreren zonder telefoon. Ook praten kinderen in de pauze meer met elkaar.'*\n\nWat is de **hoofdgedachte** van deze tekst?",
         ref: "S",
-        options: ["Een mobielverbod op school heeft voordelen", "Mobieltjes zijn duur", "Kinderen praten te weinig", "Pauzes moeten langer duren"],
+        options: ["Een mobielverbod op school heeft voordelen", "Mobieltjes kosten scholen veel geld", "Kinderen praten te weinig met elkaar", "Pauzes op school moeten langer duren"],
         answer: 0,
         wrongHints: [null, "Over geld gaat de tekst helemaal niet.", "Dat is hooguit één detail — wat is de boodschap van de héle tekst?", "Over de lengte van pauzes staat er niets."],
         explanation: "Hoofdgedachte = waar de héle tekst over gaat. Beide voorbeelden (concentratie, praten) ondersteunen één boodschap: het verbod heeft voordelen.",
@@ -1567,9 +1567,9 @@ const steps = [
       },
       {
         q: "Wanneer schrijf je een **hoofdletter**?",
-        options: ["Aan begin van zin of bij namen", "Altijd in werkwoorden", "Bij alle korte woorden", "Bij vragen"],
+        options: ["Aan begin van zin of bij namen", "Bij elk werkwoord in de zin", "Bij korte woorden als 'de' of 'en'", "Bij elk woord in een vraagzin"],
         answer: 0,
-        wrongHints: [null, "Niet in werkwoorden zonder reden.", "Korte woorden krijgen normaal geen hoofdletter.", "Vragen krijgen alleen hoofdletter aan begin."],
+        wrongHints: [null, "Niet in werkwoorden zonder reden.", "Korte woorden krijgen normaal geen hoofdletter.", "Vragen krijgen alleen een hoofdletter aan het begin."],
       },
       {
         q: "Welk woord schrijf je **met 'ei'**?",
@@ -1823,7 +1823,7 @@ const steps = [
       },
       {
         q: "Welk woord is **goed**: 'gebeurde' of 'gebeurden'?",
-        options: ["Hangt af van enkel/meervoud", "Altijd 'gebeurde'", "Altijd 'gebeurden'", "Beide fout"],
+        options: ["Hangt van de zin af", "Altijd 'gebeurde'", "Altijd 'gebeurden'", "Geen van beide"],
         answer: 0,
         wrongHints: [null, "Niet — bij meervoud: gebeurden.", "Niet — bij enkelvoud: gebeurde.", "Beide bestaan."],
       },
@@ -1978,7 +1978,7 @@ const steps = [
         ref: "S",
         options: ["verhuisd", "verhuist", "verhuizd", "verhuisdt"],
         answer: 0,
-        wrongHints: [null, "Pas op: dit is de hij-vorm tegenwoordige tijd. Gebruik de verlengingstruc: 'verhuisde' — hoor je een d of t?", "De z verandert in een s in de stam.", "Een d én een t samen kan alleen bij 'stam-op-d + t' (zoals 'hij wordt')."],
+        wrongHints: [null, "Pas op: dit is de hij-vorm tegenwoordige tijd. Maak de verleden tijd ('ik ...') en luister: hoor je een d of een t?", "De z verandert in een s in de stam.", "Een d én een t samen kan alleen bij 'stam-op-d + t' (zoals 'hij wordt')."],
         explanation: "Verlengingstruc: 'het verhuis**de** gezin' — je hoort een **d**, dus voltooid deelwoord = verhuis**d**. ('Hij verhuist' = tegenwoordige tijd!)",
       },
       {
@@ -2558,7 +2558,7 @@ const steps = [
       {
         q: "*'Lisa zei **...** ik kom morgen langs.'* Welke leestekens horen op de puntjes?",
         ref: "S",
-        options: ["Dubbele punt en aanhalingstekens (: “…”)", "Alleen een komma (,)", "Een puntkomma (;)", "Geen leestekens ( )"],
+        options: ["Dubbele punt en aanhalingstekens (: “…”)", "Alleen een komma, geen aanhalingstekens (,)", "Puntkomma en aanhalingstekens (; “…”)", "Geen leestekens, alleen een punt aan het eind"],
         answer: 0,
         wrongHints: [null, "Bij iemand die létterlijk iets zegt, is een komma alleen niet genoeg.", "Een puntkomma verbindt twee zinnen — hier kondig je gesproken woorden aan.", "Zonder leestekens zie je niet waar het citaat begint."],
         explanation: "Voor een **citaat** (letterlijke woorden) gebruik je een dubbele punt + aanhalingstekens: Lisa zei: “Ik kom morgen langs.”",
@@ -2717,7 +2717,7 @@ const steps = [
         ref: "1F",
         options: ["gebeurt", "gebeurd", "gebeurdt", "gebeuren"],
         answer: 0,
-        wrongHints: [null, "'Wel vaker' = het gebeurt nú, steeds opnieuw. Is dit een voltooid deelwoord (met 'is/heeft') of een persoonsvorm?", "Stam + t is genoeg — de stam van dit werkwoord eindigt niet op een d.", "'Zoiets' is enkelvoud — kies geen meervoudsvorm."],
+        wrongHints: [null, "'Wel vaker' gaat over nu, steeds opnieuw. Is dit een voltooid deelwoord (met 'is/heeft') of een persoonsvorm?", "Stam + t is genoeg — de stam van dit werkwoord eindigt niet op een d.", "'Zoiets' is enkelvoud — kies geen meervoudsvorm."],
         explanation: "'Zoiets' = het → persoonsvorm stam + t: **gebeurt**. Alleen mét 'is/heeft' ervoor schrijf je de d-vorm.",
       },
       {

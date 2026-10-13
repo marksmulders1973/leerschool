@@ -59,20 +59,10 @@ Zo check je jezelf: zie je een signaalwoord? Teken (in je hoofd) de pijl. Wat is
     checks: [
       {
         q: "*\"Omdat het de hele nacht regende, stond het schoolplein vol plassen.\"* — Wat is de oorzaak?",
-        options: [
-          "De regen die de hele nacht viel",
-          "De plassen op het schoolplein",
-          "Het schoolplein",
-          "De nacht",
-        ],
+        options: ["De regen die de hele nacht viel","De plassen op het schoolplein","De kinderen op het schoolplein","Het donker van de nacht"],
         answer: 0,
         evidence: "Omdat het de hele nacht regende, stond het schoolplein vol plassen.",
-        wrongHints: [
-          null,
-          "Waren de plassen er eerst, of kwamen ze ergens dóór? Stel de vraag: waardoor staan ze er?",
-          null,
-          "De nacht vertelt alleen wannéér het gebeurde. Kijk wat er direct achter het woord 'omdat' staat.",
-        ],
+        wrongHints: [null,"Waren de plassen er eerst, of kwamen ze ergens dóór? Stel de vraag: waardoor staan ze er?","Staan er kinderen in de zin? Kijk wat er direct achter het woord 'omdat' staat.","De nacht vertelt alleen wannéér het gebeurde. Kijk wat er direct achter het woord 'omdat' staat."],
         uitlegPad: {
           stappen: [
             { titel: "Vind het signaalwoord", tekst: "De zin begint met 'omdat'. Dat is een wegwijzer: wat hierachter staat, is de oorzaak — datgene waardoor iets anders komt." },
@@ -503,20 +493,10 @@ Let op: één gebeurtenis kan tegelijk een gevolg én een oorzaak zijn! De lekke
       },
       {
         q: "Wat was het gevolg van het lopen naar school?",
-        options: [
-          "Milan kwam tien minuten te laat de klas binnen",
-          "De achterband liep leeg",
-          "Milan reed over een spijker",
-          "De juf had thuis banden geplakt",
-        ],
+        options: ["Milan kwam tien minuten te laat de klas binnen","De achterband van zijn fiets liep leeg","Milan reed onderweg over een scherpe spijker","De juf had thuis zelf banden geplakt"],
         answer: 0,
         evidence: "Zo kwam hij tien minuten te laat de klas binnen.",
-        wrongHints: [
-          null,
-          "Dat was al gebeurd vóórdat Milan ging lopen. Een gevolg komt erná — wat gebeurde er ná het lopen?",
-          null,
-          "Dat gaat over vroeger, over de juf thuis. Wat gebeurde er met Mílan door al dat lopen?",
-        ],
+        wrongHints: [null,"Dat was al gebeurd vóórdat Milan ging lopen. Een gevolg komt erná — wat gebeurde er ná het lopen?","Gebeurde dat vóór of ná het lopen? Een gevolg komt erná.","Dat gaat over vroeger, over de juf thuis. Wat gebeurde er met Mílan door al dat lopen?"],
         uitlegPad: {
           stappen: [
             { titel: "Gevolg = wat erná komt", tekst: "Nu zoek je de andere kant van de pijl: niet waardoor het lopen kwam, maar wat het lopen véroorzaakte." },
@@ -941,19 +921,9 @@ De strategie blijft: zoek de wegwijzer (of stel zelf de waardoor-vraag), teken d
       },
       {
         q: "*\"De appels waren overrijp, doordat ze al drie weken in de schaal lagen.\"* — Wat is de oorzaak?",
-        options: [
-          "Ze lagen al drie weken in de schaal",
-          "De appels waren overrijp",
-          "De schaal",
-          "Het huis was te warm",
-        ],
+        options: ["Ze lagen al drie weken in de schaal","De appels waren helemaal overrijp","De schaal waarin de appels lagen","Het was veel te warm in huis"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Dat is het gevolg — ze wérden overrijp ergens dóór. Zoek het signaalwoord.",
-          "De schaal is alleen een plek, geen oorzaak. Stel de waardoor-vraag.",
-          null,
-        ],
+        wrongHints: [null,"Dat is het gevolg — ze wérden overrijp ergens dóór. Zoek het signaalwoord.","De schaal is alleen een plek, geen oorzaak. Stel de waardoor-vraag.","Staat dat in de zin? Zoek het woord 'doordat'."],
         uitlegPad: {
           stappen: [
             { titel: "Vind het signaalwoord", tekst: "Er staat 'doordat' — achter dit woord staat de oorzaak, ook al staat het gevolg (overrijp) al eerder in de zin." },
@@ -969,19 +939,9 @@ De strategie blijft: zoek de wegwijzer (of stel zelf de waardoor-vraag), teken d
       },
       {
         q: "*\"Eva vergat haar jas. Ze had het daarna de hele dag koud.\"* — Wat is hier de oorzaak van het kou hebben?",
-        options: [
-          "Ze vergat haar jas mee te nemen",
-          "Ze had het koud",
-          "De dag was heel lang",
-          "Ze was buiten",
-        ],
+        options: ["Ze vergat haar jas mee te nemen","Ze had het de hele dag koud","De dag duurde heel erg lang","Ze was de hele dag buiten"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Dat is het gevolg. Oorzaak = waardoor ze kou had. Stel de waardoor-vraag.",
-          null,
-          "Buiten zijn is een plek, geen oorzaak. Waardóór had Eva het zo koud?",
-        ],
+        wrongHints: [null,"Dat is het gevolg. Oorzaak = waardoor ze kou had. Stel de waardoor-vraag.","Staat dat in de tekst? Waardóór had Eva het zo koud?","Buiten zijn is een plek, geen oorzaak. Waardóór had Eva het zo koud?"],
         uitlegPad: {
           stappen: [
             { titel: "Geen signaalwoord — zelf testen", tekst: "Er staat 'daarna' — dat is een tijd-woord. Gebruik de invoeg-test: 'Eva vergat haar jas. Daardoor had ze de hele dag kou.' Klinkt dat logisch?" },
@@ -1314,20 +1274,10 @@ Let op de valstrikken die je nu kent: de oorzaak kan achteraan in de zin staan, 
       },
       {
         q: "Wat was de oorzaak dat groep zeven zitjes voor op het plein kon maken?",
-        options: [
-          "De conciërge zaagde de stam van de omgevallen kastanjeboom in schijven",
-          "Buurman Ties had hout over van het fietsenhok",
-          "De gemeente stuurde nieuw hout na de storm",
-          "De kinderen spaarden geld voor nieuwe zitjes",
-        ],
+        options: ["De conciërge zaagde de dikke stam in schijven","Buurman Ties had hout over van het fietsenhok","De gemeente stuurde nieuw hout na de storm","De kinderen spaarden voor nieuwe zitjes"],
         answer: 0,
         evidence: "Van de omgevallen kastanje bleef ook iets moois over. De conciërge zaagde de dikke stam in schijven. Daarvan maakte groep zeven zitjes voor op het plein.",
-        wrongHints: [
-          null,
-          "Lees de laatste alinea zorgvuldig — over wie gaat die alinea en wat zaagde hij?",
-          null,
-          "Staat er iets over sparen in de tekst? Zoek de zin over de stam van de boom.",
-        ],
+        wrongHints: [null,"Lees de laatste alinea zorgvuldig — over wie gaat die alinea en wat zaagde hij?","Staat er iets over de gemeente in de tekst? Lees de laatste alinea nog eens.","Staat er iets over sparen in de tekst? Zoek de zin over de stam van de boom."],
         uitlegPad: {
           stappen: [
             { titel: "Zoek de juiste alinea", tekst: "De zitjes worden in de laatste alinea besproken. Zoek daar de oorzaak-keten." },

@@ -208,14 +208,9 @@ const steps = [
       },
       {
         q: "Wat staat er in een register?",
-        options: [
-          "onderwerpen op alfabet met paginanummers",
-          "de hoofdstukken op boekvolgorde",
-          "de titel van het boek",
-          "het hele verhaal",
-        ],
+        options: ['onderwerpen op alfabet met paginanummers', 'de hoofdstukken op boekvolgorde', 'de titel en de schrijver van het boek', 'een korte samenvatting van het verhaal'],
         answer: 0,
-        wrongHints: [null, "Hoofdstukken op boekvolgorde staan in de inhoudsopgave.", "De titel staat op de kaft.", "Het register is geen verhaal."],
+        wrongHints: [null, 'Hoofdstukken op boekvolgorde staan in de inhoudsopgave.', 'Titel en schrijver staan op de kaft.', 'Een samenvatting staat vaak op de achterkant.'],
         uitlegPad: {
           stappen: [{ titel: "Onderwerpen op alfabet", tekst: "Het register noemt onderwerpen op alfabet met de pagina's waar ze staan." }],
           niveaus: {
@@ -227,14 +222,9 @@ const steps = [
       },
       {
         q: "In het register staat: 'vulkaan ... 45, 78'. Wat betekenen die getallen?",
-        options: [
-          "de pagina's waar 'vulkaan' wordt genoemd",
-          "het aantal vulkanen",
-          "de hoofdstuknummers",
-          "het jaartal",
-        ],
+        options: ['de pagina\'s waar \'vulkaan\' wordt genoemd', 'het aantal vulkanen dat besproken wordt', 'de hoofdstukken waarin \'vulkaan\' staat', 'de jaartallen van vulkaanuitbarstingen'],
         answer: 0,
-        wrongHints: [null, "Het zijn geen aantallen vulkanen.", "Het zijn pagina's, geen hoofdstukken.", "Het is geen jaartal."],
+        wrongHints: [null, 'Het zijn geen aantallen. Waar zoek je in een register naar?', 'Het zijn geen hoofdstuknummers. Wat zoek je op met een register?', 'Het zijn geen jaartallen. Wat zoek je op met een register?'],
         uitlegPad: {
           stappen: [{ titel: "Paginanummers", tekst: "Achter 'vulkaan' staan de pagina's (45 en 78) waar het onderwerp behandeld wordt." }],
           niveaus: {

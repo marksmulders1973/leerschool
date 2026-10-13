@@ -19,9 +19,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **godsdienst**?",
-        options: ["Geloof + rituelen + regels", "Sport", "Soort eten", "Soort wetenschap"],
+        options: ["Geloof + rituelen + regels", "Sport + spel + wedstrijden", "Eten + recepten + koken", "Proeven + metingen + feiten"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Wetenschap werkt met proeven en metingen."],
+        wrongHints: [null, "Dat gaat over sport, niet over geloven.", "Dat gaat over eten, niet over geloven.", "Wetenschap werkt met proeven en metingen."],
       },
       {
         q: "**Grootste** wereldgodsdienst?",
@@ -31,7 +31,7 @@ const steps = [
       },
       {
         q: "Wat is **atheïst**?",
-        options: ["Gelooft niet in God", "Christen", "Jood", "Moslim"],
+        options: ["Gelooft niet in een god", "Gelooft in God en Jezus", "Gelooft in God en de Thora", "Gelooft in Allah en de Koran"],
         answer: 0,
         wrongHints: [null, "Christenen geloven wél in God.", "Joden geloven wél in God.", "Moslims geloven wél in God."],
       },
@@ -56,9 +56,9 @@ const steps = [
       },
       {
         q: "Wat is **Pasen**?",
-        options: ["Opstanding Jezus uit dood", "Geboorte Jezus", "Sterven van Jezus", "Doop"],
+        options: ["Opstanding Jezus uit de dood", "Geboorte Jezus in de stal", "Sterven Jezus aan het kruis", "Doop Jezus in de Jordaan"],
         answer: 0,
-        wrongHints: [null, "Kerst.", "Goede Vrijdag.", "Niet primair feest."],
+        wrongHints: [null, "Dat vieren we met Kerst.", "Dat herdenken we op Goede Vrijdag.", "Dat is niet waar Pasen over gaat."],
       },
       {
         q: "Hoofd van **katholieke kerk**?",
@@ -112,15 +112,15 @@ const steps = [
     checks: [
       {
         q: "Wie is **Boeddha**?",
-        options: ["Siddhartha Gautama, een Indiase prins die een nieuwe leer begon", "Een hindoegod met een olifantenkop", "Een profeet die de Koran doorgaf", "Een Chinese keizer die de Grote Muur liet bouwen"],
+        options: ["Een Indiase prins die een nieuwe leer begon", "Een hindoegod met een olifantenkop", "Een profeet die de Koran doorgaf", "Een Chinese keizer die de Grote Muur liet bouwen"],
         answer: 0,
         wrongHints: [null, "Dat is Ganesha, een god uit het hindoeïsme.", "Dat is Mohammed, de profeet van de islam.", "Boeddha was geen keizer en kwam niet uit China."],
       },
       {
         q: "Wat is **karma**?",
-        options: ["Wat je doet komt terug", "Toeval", "Lijden", "Geld"],
+        options: ["Wat je doet komt terug", "Alles gebeurt door toeval", "Je moet altijd lijden", "Hoe rijk je later wordt"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Hangt ermee samen, maar karma betekent iets anders.", "Niet."],
+        wrongHints: [null, "Bij toeval heb je zelf geen invloed. Hoe zit dat bij karma?", "Hangt ermee samen, maar karma betekent iets anders.", "Karma gaat niet over geld."],
       },
       {
         q: "**Diwali** is welk feest?",
@@ -130,9 +130,9 @@ const steps = [
       },
       {
         q: "Wat is **nirvana** in boeddhisme?",
-        options: ["Bevrijding uit lijden + reïncarnatie", "Hemel", "Hel", "Een meditatie-houding"],
+        options: ["Bevrijding uit lijden + reïncarnatie", "Een hemel waar goede mensen heen gaan", "Een hel waar slechte mensen heen gaan", "Een houding waarin je mediteert"],
         answer: 0,
-        wrongHints: [null, "Geen hemel-concept.", "Geen hel.", "Meditatie is een weg — nirvana is het doel."],
+        wrongHints: [null, "Het boeddhisme kent geen hemel zoals in het christendom.", "Het boeddhisme kent geen hel zoals in het christendom.", "Meditatie is een weg — nirvana is het doel."],
       },
     ],
   },
@@ -145,8 +145,8 @@ const steps = [
       { q: "Profeet **islam**?", options: ["Mohammed", "Jezus", "Boeddha", "Mozes"], answer: 0, wrongHints: [null, "Christen.", "Boeddhist.", "Jood."] },
       { q: "**Heilige rivier** hindoes?", options: ["Ganges", "Nijl", "Donau", "Jordaan"], answer: 0, wrongHints: [null, "Egyptisch.", "Europees.", "Christen."] },
       { q: "**Vasten** in islam = ?", options: ["Ramadan", "Pesach", "Pasen", "Sabbat"], answer: 0, wrongHints: [null, "Joods.", "Christen.", "Joods."] },
-      { q: "Wat is **atheïst**?", options: ["Gelooft niet in God", "Christen", "Hindoe", "Moslim"], answer: 0, wrongHints: [null, "Christenen geloven wél in God.", "Hindoes geloven wél in goden.", "Moslims geloven wél in God."] },
-      { q: "Welke godsdienst gelooft in **reïncarnatie** (wedergeboorte)?", options: ["Hindoeïsme + Boeddhisme", "Christendom", "Jodendom", "Islam"], answer: 0, wrongHints: [null, "Hemel/hel ipv wedergeboorte.", "Geen reïncarnatie-leer.", "Geen reïncarnatie-leer."] },
+      { q: "Wat is **atheïst**?", options: ["Gelooft niet in een god", "Gelooft in God en Jezus", "Gelooft in meerdere goden", "Gelooft in Allah en de Koran"], answer: 0, wrongHints: [null, "Christenen geloven wél in God.", "Hindoes geloven wél in goden.", "Moslims geloven wél in God."] },
+      { q: "Welke godsdienst gelooft in **reïncarnatie** (wedergeboorte)?", options: ["Hindoeïsme + Boeddhisme", "Christendom + Jodendom", "Jodendom + Islam", "Islam + Christendom"], answer: 0, wrongHints: [null, "Geen van deze twee heeft een leer over wedergeboorte.", "Geen van deze twee heeft een leer over wedergeboorte.", "Geen van deze twee heeft een leer over wedergeboorte."] },
       { q: "**Kerk** is gebouw voor christenen. Wat is voor **moslims**?", options: ["Moskee", "Synagoge", "Tempel", "Kapel"], answer: 0, wrongHints: [null, "Joods.", "Hindoe/Boeddhist.", "Klein christen-gebouw."] },
       { q: "**Anne Frank** was een ___ kind in WO2?", options: ["Joods", "Christen", "Moslim", "Atheïst"], answer: 0, wrongHints: [null, "Waarom moest Anne zich met haar familie verstoppen?", "Niet aanleiding tot dagboek.", "Niet relevant."] },
     ],

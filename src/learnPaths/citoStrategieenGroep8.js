@@ -85,7 +85,7 @@ const steps = [
     checks: [
       {
         q: "Wat is de Doorstroomtoets?",
-        options: ["Een toets aan het einde van groep 8 die advies geeft voor de middelbare school","Een toets die bepaalt of je groep 8 moet overdoen","Een examen dat in alle landen tegelijk wordt gemaakt","Een toets die je thuis als huiswerk maakt"],
+        options: ["Een toets in groep 8 die advies geeft voor de middelbare school", "Een toets die bepaalt of je groep 8 nog een keer moet doen", "Een examen dat in alle landen van Europa tegelijk wordt gemaakt", "Een toets die je thuis als huiswerk maakt, zonder je juf"],
         answer: 0,
         wrongHints: [null,"Wat denk je: zakt iemand voor de Doorstroomtoets, of mag iedereen door?","Wordt deze toets ook in andere landen afgenomen?","Wie maakt deze toets — alleen jij thuis, of iedereen op school?"],
         uitlegPad: {
@@ -109,9 +109,9 @@ const steps = [
       },
       {
         q: "Wat is **leidend** voor je vervolg-niveau?",
-        options: ["Het schooladvies van je leerkracht","De Doorstroomtoets","Je rapportcijfers","Je eigen voorkeur"],
+        options: ["Het schooladvies van je leerkracht", "De uitslag van de Doorstroomtoets", "De cijfers op je laatste rapport", "De voorkeur van jou en je ouders"],
         answer: 0,
-        wrongHints: [null,"Wie kent jou al jaren en kijkt naar veel meer dan één toets?","Tellen losse cijfers zwaarder dan het oordeel van iemand die je al jaren ziet?","Mag jij zelf bepalen naar welk niveau je gaat, of denkt iemand met je mee?"],
+        wrongHints: [null, "Wie kent jou al jaren en kijkt naar veel meer dan één toets?", "Tellen losse cijfers zwaarder dan het oordeel van iemand die je al jaren ziet?", "Mogen jij en je ouders zelf bepalen naar welk niveau je gaat, of denkt iemand met je mee?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is leidend?", tekst: "Het SCHOOLADVIES van je leerkracht is de basis. Die kent je al 8 jaar." },
@@ -511,7 +511,7 @@ const steps = [
         q: "Je moet uitrekenen hoeveel km per uur een fietser rijdt. Bij welk onderdeel hoort die vraag?",
         options: ["Rekenen", "Taalverzorging", "Lezen", "Studievaardigheden"],
         answer: 0,
-        wrongHints: [null, "Moet je bij deze vraag schrijven, of iets uitrekenen?", null, null],
+        wrongHints: [null, "Kijk naar wat je moet doen: zoek je iets op in een tekst, of werk je met getallen?", null, null],
       },
       {
         q: "Wat hoort **niet** bij taalverzorging?",
@@ -931,9 +931,9 @@ const steps = [
       },
       {
         q: "Welke woorden in een optie maken hem **verdacht fout**?",
-        options: ["'altijd' of 'nooit'","'meestal'","'vaak'","'soms'"],
+        options: ["'altijd' of 'nooit'", "'meestal' of 'vaak'", "'soms' of 'af en toe'", "'misschien' of 'mogelijk'"],
         answer: 0,
-        wrongHints: [null,"Zijn er uitzonderingen op iets dat 'meestal' gebeurt? En klinkt dat dan verdacht?","Geeft 'vaak' ruimte voor uitzonderingen, of sluit het ze uit?","Klinkt 'soms' streng of voorzichtig — en wat is verdachter in een toets?"],
+        wrongHints: [null, "Zijn er uitzonderingen op iets dat 'meestal' of 'vaak' gebeurt? En klinkt dat dan verdacht?", "Klinkt 'soms' streng of voorzichtig — en wat is verdachter in een toets?", "Laat 'misschien' ruimte voor uitzonderingen, of sluit het ze uit?"],
         uitlegPad: {
           stappen: [
             { titel: "Te absolute woorden = verdacht", tekst: "'Altijd' en 'nooit' zijn EXTREEM. Bijna alles heeft uitzonderingen — dus die opties zijn vaak fout." },
@@ -1008,14 +1008,9 @@ const steps = [
       },
       {
         q: "Twee opties lijken **bijna hetzelfde**. Wat doe je?",
-        options: [
-          "Heel goed kijken wat het kleine verschil is",
-          "Ze allebei doorstrepen",
-          "Een andere optie kiezen",
-          "De bovenste van de twee kiezen",
-        ],
+        options: ["Goed zoeken wat het kleine verschil is", "Ze allebei meteen doorstrepen als fout", "Snel een heel andere optie kiezen", "Gewoon de bovenste van de twee kiezen"],
         answer: 0,
-        wrongHints: [null, "Kan het goede antwoord juist één van die twee zijn?", null, null],
+        wrongHints: [null, "Kan het goede antwoord juist één van die twee zijn?", "Kan het goede antwoord juist één van die twee zijn?", "Is de bovenste altijd goed? Hoe weet je het zeker?"],
         uitlegPad: {
           stappen: [
             {
@@ -1232,7 +1227,7 @@ const steps = [
         q: "Het antwoord op een begrijpend-lezen-vraag staat altijd...",
         options: ["In de tekst","In je eigen kennis","In je eigen mening","Achter in het toetsboekje"],
         answer: 0,
-        wrongHints: [null,"Test begrijpend lezen wat jij al weet, of wat er in de tekst staat?","Telt bij begrijpend lezen wat jij vindt, of wat de schrijver schrijft?","Staan de antwoorden ergens achterin, of moet je ze zelf vinden?"],
+        wrongHints: [null, "Test begrijpend lezen wat jij al weet, of hoe goed jij leest?", "Telt bij begrijpend lezen wat jij vindt, of wat de schrijver schrijft?", "Staan de antwoorden ergens achterin, of moet je ze zelf vinden?"],
         uitlegPad: {
           stappen: [
             { titel: "Antwoord komt uit TEKST", tekst: "Niet uit je eigen kennis, mening, ervaring — alleen uit wat in de tekst staat." },
@@ -1573,7 +1568,7 @@ const steps = [
     checks: [
       {
         q: "Wat doe je vóórdat je echt gaat rekenen?",
-        options: ["Schat een redelijk antwoord","Direct opschrijven","Gokken","Vraag overslaan"],
+        options: ["Schat een redelijk antwoord", "Meteen een antwoord opschrijven", "Een antwoord gokken en doorgaan", "De vraag gewoon overslaan"],
         answer: 0,
         wrongHints: [null,"Wat zou je tussenstap kunnen zijn om je antwoord te checken voordat je 'm opschrijft?","Hoe weet je of je antwoord ongeveer klopt zónder eerst te denken?","Wat doe je als je gokt zonder schatting — kun je je fout dan ontdekken?"],
         uitlegPad: {
@@ -1996,9 +1991,9 @@ const steps = [
       },
       {
         q: "Doorstroomtoets: wat krijg je als resultaat?",
-        options: ["Een advies voor je niveau op de middelbare school","Een eindcijfer, zoals een 7,5","Een lijst met hoe snel je was","Helemaal geen uitslag"],
+        options: ["Een advies voor je niveau op de middelbare school", "Een eindcijfer, zoals een 7,5 op je rapport", "Een lijst met hoe snel je elke vraag maakte", "Een diploma waarmee je groep 8 hebt gehaald"],
         answer: 0,
-        wrongHints: [null,"Krijg je bij de Doorstroomtoets hetzelfde soort cijfer als op je rapport?","Telt hoe snel je was, of vooral wat je antwoordde?","Krijg je echt niets terug, of wel een soort uitkomst?"],
+        wrongHints: [null, "Krijg je bij de Doorstroomtoets hetzelfde soort cijfer als op je rapport?", "Telt hoe snel je was, of vooral wat je antwoordde?", "Kun je voor de Doorstroomtoets slagen of zakken?"],
         uitlegPad: {
           stappen: [
             { titel: "Resultaat = ADVIES", tekst: "De toets geeft een ADVIES voor vervolg-niveau (vmbo / havo / vwo). Geen cijfer." },
@@ -2020,7 +2015,7 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen schooladvies en toetsadvies (sinds 2024)?",
-        options: ["Schooladvies komt eerst; bij hoger toetsadvies moet school heroverwegen","Toetsadvies is leidend; het schooladvies telt niet mee","Ze tellen allebei precies even zwaar mee","Geen verschil: het is hetzelfde advies"],
+        options: ["Schooladvies telt; bij hoger toetsadvies kijkt school opnieuw", "Toetsadvies is leidend; het schooladvies telt niet mee", "Ze tellen allebei precies even zwaar mee bij je advies", "Geen verschil: het is twee keer precies hetzelfde advies"],
         answer: 0,
         wrongHints: [null,"Wat is jaren leerkracht-observatie waard versus één toetsdag?","Welk advies krijg je het eerst in groep 8?","Wat zou er gebeuren als één toets meer telt dan jouw hele schoolervaring?"],
         uitlegPad: {
@@ -2112,9 +2107,9 @@ const steps = [
       },
       {
         q: "Een **multiple-choice vraag** met 4 opties — je weet 2 antwoorden zeker NIET. Wat doe je?",
-        options: ["Gok tussen de 2 overgebleven opties","Geef op + laat leeg","Vraag de buurman","Allebei aanvinken"],
+        options: ["Gok tussen de 2 overgebleven opties", "Geef het op en laat de vraag leeg", "Vraag zachtjes aan je buurman", "Vink de 2 overgebleven opties aan"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — leeg = zeker 0 punt. Gokken = kans.", "Niet — dat is spieken, mag niet.", "Niet — kan vaak maar 1 optie aanvinken op antwoordblad."],
+        wrongHints: [null, "Hoeveel punten krijg je zeker als je niets invult?", "Niet — dat is spieken, mag niet.", "Hoeveel opties mag je per vraag aanvinken?"],
         uitlegPad: {
           stappen: [
             { titel: "Eliminatie-strategie", tekst: "Bij meerkeuze 4 opties + je weet 2 zeker fout:\n• Optie 1: gokken tussen overgebleven 2 → **50% kans op punt**\n• Optie 2: leeg laten → **0% kans op punt**\n\nWiskundig: gokken is altijd beter dan leeg laten bij MC-toetsen zonder strafpunten. Bij Doorstroomtoets = geen strafpunten." },
@@ -2161,18 +2156,18 @@ const steps = [
       { q: "Wat doe je bij een **moeilijke vraag** in de Doorstroomtoets?", options: ["Skip + later terug","Lang puzzelen","Random gokken zonder eliminatie","Stoppen"], answer: 0, wrongHints: [null, "Verbruikt tijd voor makkelijke.", "Eerst eliminatie proberen.", "Niet — door."] },
       { q: "Bij een **meerkeuze-vraag** met 4 opties: hoeveel kans bij gokken zonder eliminatie?", options: ["25%","50%","100%","0%"], answer: 0, wrongHints: [null, "Bij 2 opties.", "Niet — alleen bij weten.", "Wel kans."] },
       { q: "Bij eliminatie van 2 foute opties, hoeveel kans wordt het?", options: ["50%","25%","100%","0%"], answer: 0, wrongHints: [null, "Niet — beter dan dat.", "Niet — geen zekerheid.", "Wel kans."] },
-      { q: "Wat **niet** doen tijdens Doorstroomtoets?", options: ["Antwoorden vergelijken met buurman","Diep ademhalen","Skippen van moeilijke vraag","Pacing controleren"], answer: 0, wrongHints: [null, "Tegen stress = juist prima.", "Slimme strategie — eerst makkelijke, terug bij de moeilijke.", "Tempo bewaken hoort erbij."] },
+      { q: "Wat **niet** doen tijdens Doorstroomtoets?", options: ["Antwoorden vergelijken met je buurman", "Even diep ademhalen als je gespannen bent", "Een moeilijke vraag overslaan voor later", "Op de klok kijken hoeveel tijd je nog hebt"], answer: 0, wrongHints: [null, "Tegen stress = juist prima.", "Slimme strategie — eerst makkelijke, terug bij de moeilijke.", "Tempo bewaken hoort erbij."] },
       { q: "Wat is **pacing**?", options: ["Tempo bewaken zodat je op tijd klaar bent","Zo snel mogelijk door alle vragen bladeren","Rustig blijven zitten tot de tijd om is","Halverwege de toets een pauze nemen"], answer: 0, wrongHints: [null, "Gaat pacing over zo snel mogelijk, of over je tempo goed verdelen?", "Heeft pacing te maken met wachten, of met je tempo?", "Gaat het om pauzeren, of om je tempo in de gaten houden?"] },
       { q: "Bij **begrijpend lezen-vraag**: wat doe je eerst?", options: ["Vraag lezen, dan tekst doorzoeken","De hele tekst hardop voorlezen","Zomaar een antwoord kiezen","De vraag meteen overslaan"], answer: 0, wrongHints: [null, "Te traag.", "Niet — denk na.", "Eerst proberen."] },
-      { q: "Bij **rekensom met %**: wat doe je eerst?", options: ["Lezen wat gevraagd wordt","Direct rekenen","Antwoord raden","Stoppen"], answer: 0, wrongHints: [null, "Niet zonder vraag goed te begrijpen.", "Eerst proberen.", "Doorgaan."] },
+      { q: "Bij **rekensom met %**: wat doe je eerst?", options: ["Lezen wat gevraagd wordt", "Meteen beginnen met rekenen", "Een antwoord raden en doorgaan", "De som overslaan en stoppen"], answer: 0, wrongHints: [null, "Weet je al wat je moet uitrekenen?", "Eerst proberen.", "Opgeven is zonde. Wat kun je eerst doen?"] },
       { q: "Wat is belangrijk in de **nacht** voor de toets?", options: ["Goed slapen","Tot laat leren","Tot laat gamen","Niet eten"], answer: 0, wrongHints: [null, "Niet — overmatig leren werkt slecht.", "Vermoeidheid.", "Energie nodig."] },
       { q: "Wat eet je voor de toets?", options: ["Een goed ontbijt","Helemaal niets","Een zak snoep","Een blikje energydrank"], answer: 0, wrongHints: [null, "Niet — laag energie.", "Crash later.", "Te veel cafeïne."] },
-      { q: "Bij **twijfel tussen 2 opties**: wat doe je?", options: ["Kies het beste antwoord, markeer en ga door","Lang twijfelen","Beide aanstrepen","Niet kiezen"], answer: 0, wrongHints: [null, "Tijd weg.", "Werkt niet.", "Verlies."] },
-      { q: "Wat is een **strikvraag**?", options: ["Vraag die zo geschreven is dat je makkelijk fout antwoordt","Een vraag die je altijd mag overslaan","Een vraag die extra punten oplevert","Een vraag zonder goed antwoord"], answer: 0, wrongHints: [null, "Gaat 'strik' over overslaan, of over erin trappen?", "Levert een strikvraag meer op, of is hij vooral lastig?", "Heeft een strikvraag wél een goed antwoord?"] },
+      { q: "Bij **twijfel tussen 2 opties**: wat doe je?", options: ["Kies het beste antwoord, markeer en ga door", "Heel lang blijven twijfelen tot je het weet", "Beide opties aankruisen voor de zekerheid", "Niets kiezen en de vraag leeg laten"], answer: 0, wrongHints: [null, "Hoeveel tijd kost lang twijfelen?", "Mag je twee antwoorden geven?", "Wat levert een lege vraag op?"] },
+      { q: "Wat is een **strikvraag**?", options: ["Vraag die zo geschreven is dat je makkelijk fout antwoordt", "Een vraag die je altijd mag overslaan als je wilt", "Een vraag die extra punten oplevert als je hem goed hebt", "Een vraag waar helemaal geen goed antwoord bij hoort"], answer: 0, wrongHints: [null, "Gaat 'strik' over overslaan, of over erin trappen?", "Levert een strikvraag meer op, of is hij vooral lastig?", "Heeft een strikvraag wél een goed antwoord?"] },
       { q: "Bij **negatieve vraag** ('niet'/'behalve') wat doe je extra?", options: ["Onderstreep 'niet' / 'behalve'","De vraag altijd overslaan","Zomaar een antwoord kiezen","Stoppen met de toets"], answer: 0, wrongHints: [null, "Niet zomaar.", "Risico.", "Niet — doorgaan."] },
-      { q: "Hoe **controleer** je je antwoorden achteraf?", options: ["Doe de berekening anders / lees vraag opnieuw","Niet — eerste poging is altijd goed","Vraag aan buurman","Random aanpassen"], answer: 0, wrongHints: [null, "Niet altijd.", "Niet — spieken.", "Slechtste manier."] },
+      { q: "Hoe **controleer** je je antwoorden achteraf?", options: ["Doe de berekening anders / lees vraag opnieuw", "Niet — eerste poging is altijd goed", "Vraag je buurman wat hij heeft ingevuld", "Verander zomaar een paar antwoorden"], answer: 0, wrongHints: [null, "Is je eerste poging echt altijd goed?", "Niet — spieken.", "Wordt je antwoord zo beter, of is het gokken?"] },
       { q: "Wat is een **mind-blank** tijdens toets?", options: ["Even helemaal niets meer weten","Een kapot of leeg toetsblad","Een stroomstoring in het lokaal","Het einde van de toetstijd"], answer: 0, wrongHints: [null, "Mind-blank zit in je hoofd, niet op je papier.", "Stroomstoring stopt het lokaal, niet je hoofd.", "Een mind-blank is een moment in de toets, geen einde."] },
-      { q: "Waar gaat de Doorstroomtoets in **groep 8** over?", options: ["Lezen + taalverzorging + rekenen","Alleen rekenen","Alleen geschiedenis","Engels"], answer: 0, wrongHints: [null, "Niet alleen rekenen.", "Niet hoofdvak.", "Geen Engels-onderdeel."] },
+      { q: "Waar gaat de Doorstroomtoets in **groep 8** over?", options: ["Lezen + taalverzorging + rekenen", "Rekenen + geschiedenis + Engels", "Aardrijkskunde + biologie + lezen", "Alleen rekenen + topografie"], answer: 0, wrongHints: [null, "Denk aan de vakken die je elke dag op school oefent. Zitten die er allemaal in?", "Denk aan de vakken die je elke dag op school oefent. Zitten die er allemaal in?", "Denk aan de vakken die je elke dag op school oefent. Zitten die er allemaal in?"] },
     ],
   },
 ];

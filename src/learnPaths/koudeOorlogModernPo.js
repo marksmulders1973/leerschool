@@ -47,9 +47,9 @@ const steps = [
       },
       {
         q: "Wat is de **NAVO**?",
-        options: ["Westers militair bondgenootschap", "Sovjet-bondgenootschap", "Verenigde Naties", "Europese Unie"],
+        options: ["Westers militair bondgenootschap","Oosters militair bondgenootschap","Wereldwijde organisatie voor vrede","Europese samenwerking voor handel"],
         answer: 0,
-        wrongHints: [null, "Dat was het Warschaupact — die hoorde bij USSR.", "VN = Verenigde Naties, een ander soort organisatie (vrede + overleg, geen militair bondgenootschap).", "De EU is vooral economische en politieke samenwerking, geen militair bondgenootschap."],
+        wrongHints: [null,"Dat was het Warschaupact — die hoorde bij USSR.","Dat lijkt op de VN. Doen bij de NAVO alle landen van de wereld mee?","Dat lijkt op de EU. Ging de NAVO over handel, of over iets anders?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent NAVO?", tekst: "**NAVO** = Noord-Atlantische Verdragsorganisatie (Engels: NATO). Een militair bondgenootschap van westerse landen rond de Atlantische Oceaan." },
@@ -76,7 +76,7 @@ const steps = [
       },
       {
         q: "Wat is **'IJzeren Gordijn'**?",
-        options: ["Scheiding West-Oost Europa", "Echt gordijn", "Wapen", "Schip"],
+        options: ["Scheiding tussen West- en Oost-Europa","Een echt gordijn gemaakt van ijzer","Een groot wapen uit de Koude Oorlog","Een beroemd Russisch oorlogsschip"],
         answer: 0,
         wrongHints: [null, "Geen letterlijk gordijn van ijzer — dit is beeldspraak voor een politieke grens.", "Geen wapen, maar een term over verdeling van Europa.", "Geen voertuig — het gaat over een grens in Europa na WO2."],
         uitlegPad: {
@@ -279,9 +279,9 @@ const steps = [
       },
       {
         q: "Wanneer begon de **grote oorlog tussen Rusland en Oekraïne**?",
-        options: ["24 februari 2022", "2014", "1991", "1989"],
+        options: ["24 februari 2022","18 maart 2014","24 augustus 1991","9 november 1989"],
         answer: 0,
-        wrongHints: [null, "Toen annexeerde Rusland de Krim.", "Niet.", "Niet."],
+        wrongHints: [null,"Toen annexeerde Rusland de Krim.","Toen werd Oekraïne een onafhankelijk land.","Toen viel de Berlijnse Muur."],
       },
     ],
   },
@@ -292,10 +292,10 @@ const steps = [
       { q: "**Koude Oorlog** = ?", options: ["Spanning tussen VS en USSR", "Echte oorlog tussen VS en USSR", "Oorlog in de winter", "Ruzie tussen VS en Engeland"], answer: 0, wrongHints: [null, "Geen direct.", "De naam slaat niet op het weer.", "Engeland was juist een bondgenoot van de VS."] },
       { q: "Wanneer **viel de Berlijnse Muur**?", options: ["1989", "1961", "1945", "2001"], answer: 0, wrongHints: [null, "Gebouwd.", "WO2-einde.", "9/11."] },
       { q: "Wie voorkwamen een **kernoorlog tijdens de Cuba-crisis (1962)**?", options: ["Kennedy en Chroesjtsjov", "Stalin en Truman", "Gorbatsjov en Reagan", "Hitler en Churchill"], answer: 0, wrongHints: [null, "Stalin was in 1953 al overleden.", "Die waren pas in de jaren '80 aan de macht.", "WO2."] },
-      { q: "Wat is **NAVO**?", options: ["Westers militair bondgenootschap", "Sovjet-bondgenootschap", "Verenigde Naties", "Europese Unie"], answer: 0, wrongHints: [null, "Warschau.", "Andere.", "De EU is vooral economische en politieke samenwerking."] },
+      { q: "Wat is **NAVO**?", options: ["Westers militair bondgenootschap","Oosters militair bondgenootschap","Wereldwijde organisatie voor vrede","Europese samenwerking voor handel"], answer: 0, wrongHints: [null,"Dat was het Warschaupact, rond de Sovjet-Unie.","Dat lijkt op de VN. Doen bij de NAVO alle landen van de wereld mee?","Dat lijkt op de EU. Ging de NAVO over handel, of over iets anders?"] },
       { q: "Wie won de **Vietnam-oorlog**?", options: ["Noord-Vietnam", "VS", "Frankrijk", "Niemand"], answer: 0, wrongHints: [null, "Verloor.", "Eerder weg.", "Iemand won wel — wie beheerste sinds 1975 heel Vietnam?"] },
-      { q: "Wanneer was **9/11**?", options: ["11 september 2001", "1989", "1945", "2022"], answer: 0, wrongHints: [null, "Muur viel.", "WO2.", "Oekraïne."] },
-      { q: "Wat was het **IJzeren Gordijn**?", options: ["Symbolische scheiding Oost en West Europa", "Een echt gordijn in een museum", "Een rivier", "Een berg"], answer: 0, wrongHints: [null, "Geen echt gordijn — waar staat het woord voor?", "Niet.", "Niet."] },
+      { q: "Wanneer was **9/11**?", options: ["11 september 2001","9 november 1989","5 mei 1945","24 februari 2022"], answer: 0, wrongHints: [null,"Toen viel de Berlijnse Muur. 9/11 gaat over een aanslag in Amerika.","Toen werd Nederland bevrijd.","Toen begon de grote oorlog in Oekraïne."] },
+      { q: "Wat was het **IJzeren Gordijn**?", options: ["Symbolische grens tussen Oost en West","Een echt gordijn in een museum","Een lange rivier tussen twee landen","Een hoge bergketen midden in Europa"], answer: 0, wrongHints: [null,"Geen echt gordijn — waar staat het woord voor?","Is een rivier van ijzer? Waar zou het woord 'gordijn' voor staan?","Bergen horen bij de natuur. Gaat het IJzeren Gordijn over natuur of over politiek?"] },
       { q: "Welke leider leidde de **Sovjet-Unie** in WO2?", options: ["Stalin", "Hitler", "Roosevelt", "Churchill"], answer: 0, wrongHints: [null, "Duitsland.", "VS.", "VK."] },
       { q: "Welk land was **bondgenoot van de VS** in de NAVO?", options: ["West-Duitsland", "Oost-Duitsland", "Sovjet-Unie", "China"], answer: 0, wrongHints: [null, "Warschau-pact.", "Tegenstander VS.", "Communistisch."] },
       { q: "Wat is een **dictatuur**?", options: ["Eén leider met alle macht", "Een eerlijke democratie", "Een soort religie", "Een soort sport"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Niet politiek.", "Niet politiek."] },

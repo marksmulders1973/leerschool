@@ -72,9 +72,9 @@ const steps = [
       },
       {
         q: "Welke munten samen maken **€ 1,75**?",
-        options: ["1 × €1 + 1 × 50c + 1 × 20c + 1 × 5c","1 × €2 + 1 × 25c","3 × 50c + 1 × 20c","1 × €1 + 7 × 10c"],
+        options: ["1 × €1 + 1 × 50c + 1 × 20c + 1 × 5c","1 × €1 + 1 × 50c + 1 × 25c","1 × €1 + 2 × 20c + 2 × 10c + 1 × 5c","1 × €1 + 1 × 50c + 2 × 20c + 1 × 5c"],
         answer: 0,
-        wrongHints: [null, "Er bestaat geen munt van 25 cent, en €2 is al meer dan €1,75.", "Tel na: 3 × 50c = €1,50, plus 20c = €1,70 — net te weinig.", "Tel: 7 × 10c = 70c, dus samen €1,70 — net te weinig."],
+        wrongHints: [null,"Tel je goed? Bestaat er eigenlijk een munt van 25 cent?","Tel de munten één voor één op. Kom je precies op €1,75?","Hoeveel is 2 × 20c? Kom je dan boven of onder €1,75?"],
         uitlegPad: {
           stappen: [
             { titel: "NL-munten kennen", tekst: "In Nederland bestaan deze munten: 1c, 2c, 5c, 10c, 20c, 50c, €1, €2. Géén 25-cent." },
@@ -1457,9 +1457,9 @@ const steps = [
       { q: "**€25 ÷ 5** = ?", options: ["€5","€20","€30","€125"], answer: 0, wrongHints: [null, "Niet — −, niet ÷.", "Niet.", "Niet."] },
       { q: "Je hebt €100. Koopt boek €18 + spel €25. Over?", options: ["€57","€43","€73","€67"], answer: 0, wrongHints: [null, "Dat is uitgaven.", "Niet.", "Niet."] },
       { q: "Verjaardagsfeest €120 voor 8 gasten. Per gast?", options: ["€15","€120","€8","€12"], answer: 0, wrongHints: [null, "Totaal.", "Aantal.", "Niet."] },
-      { q: "Wat is **wisselgeld**?", options: ["Geld dat je terugkrijgt bij betalen","Geld dat je leent","Vakantiegeld","Spaargeld"], answer: 0, wrongHints: [null, "Lenen moet je terugbetalen — dat is iets anders.", "Niet relevant.", "Niet."] },
+      { q: "Wat is **wisselgeld**?", options: ["Geld dat je terugkrijgt bij betalen","Geld dat je van iemand leent","Geld dat je krijgt voor vakantie","Geld dat je opspaart in een pot"], answer: 0, wrongHints: [null,"Lenen moet je terugbetalen — dat is iets anders.","Denk aan de kassa. Wat gebeurt er als je met te veel geld betaalt?","Spaargeld zet je opzij. Krijg je wisselgeld op die manier?"] },
       { q: "Btw (belasting over wat je koopt) 21% op €100 = totaal?", options: ["€121","€21","€100","€79"], answer: 0, wrongHints: [null, "Dat is alleen de btw.", "Zonder btw.", "Met korting?"] },
-      { q: "Welke munten heb je nodig voor **€2,75**?", options: ["1×€2 + 1×€0,50 + 1×€0,20 + 1×€0,05","3×€1","2×€2","1×€2,75"], answer: 0, wrongHints: [null, "Te veel.", "Te veel.", "Bestaat niet."] },
+      { q: "Welke munten heb je nodig voor **€2,75**?", options: ["1×€2 + 1×€0,50 + 1×€0,20 + 1×€0,05","1×€2 + 1×€0,50 + 1×€0,20 + 1×€0,02","1×€2 + 2×€0,20 + 2×€0,10 + 1×€0,05","1×€2 + 1×€0,50 + 2×€0,20 + 1×€0,05"], answer: 0, wrongHints: [null,"Tel na: kom je precies op €2,75, of mis je nog een paar cent?","Tel de munten één voor één op. Hoeveel cent heb je na de €2?","Hoeveel is 2 × €0,20? Kom je dan boven of onder €2,75?"] },
       { q: "Je verdient **€2,50/uur** als oppas. 4 uur = ?", options: ["€10","€8","€12","€2,50"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Per uur."] },
     ],
   },

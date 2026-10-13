@@ -1,0 +1,1682 @@
+[
+ {
+  "pad": "bekende-boeken-literatuur-po",
+  "file": "./bekendeBoekenLiteratuurPo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Pluk van de Petteflet — wat is dat?",
+  "opties": [
+   "Jongetje in flat met kraanwagentje",
+   "Kat die mens wordt",
+   "Spin",
+   "Indiaan"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "bekende-boeken-literatuur-po",
+  "file": "./bekendeBoekenLiteratuurPo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Hoogste internationale kinderboek-prijs die Schmidt won?",
+  "opties": [
+   "Hans Christian Andersen Prijs",
+   "Nobelprijs",
+   "Oscar",
+   "Gouden Pen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "bekende-boeken-literatuur-po",
+  "file": "./bekendeBoekenLiteratuurPo.js",
+  "stap": 3,
+  "vraag": 18,
+  "soort": "L",
+  "q": "Multatuli schreef beroemd boek over?",
+  "opties": [
+   "Koloniale uitbuiting",
+   "Liefde",
+   "Sport",
+   "Eten"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "bekende-boeken-literatuur-po",
+  "file": "./bekendeBoekenLiteratuurPo.js",
+  "stap": 3,
+  "vraag": 22,
+  "soort": "L",
+  "q": "Wie is Carry Slee?",
+  "opties": [
+   "NL-jeugdboek-schrijfster",
+   "Tekenaar",
+   "Acteur",
+   "Componist"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "bekende-boeken-literatuur-po",
+  "file": "./bekendeBoekenLiteratuurPo.js",
+  "stap": 3,
+  "vraag": 23,
+  "soort": "L",
+  "q": "Wat is een strip?",
+  "opties": [
+   "Verhaal met tekeningen + tekstballonnen",
+   "Dik boek zonder plaatjes",
+   "Gedicht op rijm",
+   "Boek met alleen foto's"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "bekende-boeken-literatuur-po",
+  "file": "./bekendeBoekenLiteratuurPo.js",
+  "stap": 3,
+  "vraag": 25,
+  "soort": "L",
+  "q": "Wat is een leesclub?",
+  "opties": [
+   "Groep mensen die samen lezen + bespreken",
+   "Een uitgeverij",
+   "Een boekwinkel",
+   "Een school voor schrijvers"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "bekende-boeken-literatuur-po",
+  "file": "./bekendeBoekenLiteratuurPo.js",
+  "stap": 3,
+  "vraag": 26,
+  "soort": "L",
+  "q": "Wat doet een bibliothecaris?",
+  "opties": [
+   "Bibliotheek beheren + lezers helpen",
+   "Boeken schrijven",
+   "Boeken drukken",
+   "Boeken verkopen in een winkel"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "belasting-po",
+  "file": "./belastingPo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is belasting?",
+  "opties": [
+   "Geld dat je aan de overheid betaalt voor dingen die we samen gebruiken",
+   "Geld dat de bank je cadeau geeft",
+   "Korting die je in de winkel krijgt",
+   "Geld dat je in je spaarpot stopt"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "belasting-po",
+  "file": "./belastingPo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat betekent nettoloon?",
+  "opties": [
+   "Wat je overhoudt nadat de belasting eraf is",
+   "Je hele loon vóór de belasting",
+   "De belasting zelf",
+   "Een bonus bovenop je loon"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "belasting-po",
+  "file": "./belastingPo.js",
+  "stap": 1,
+  "vraag": 7,
+  "soort": "H",
+  "q": "Hoeveel is 20% belasting van een brutoloon van €500?",
+  "opties": [
+   "€100",
+   "€20",
+   "€400",
+   "€480"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "belasting-po",
+  "file": "./belastingPo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Belasting gebruiken we om samen te betalen voor?",
+  "opties": [
+   "Wegen, scholen en ziekenhuizen",
+   "Jouw eigen snoep",
+   "Een cadeau voor één kind",
+   "Niets"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "belasting-po",
+  "file": "./belastingPo.js",
+  "stap": 3,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Wat is bruto?",
+  "opties": [
+   "Je hele loon, vóór de belasting eraf gaat",
+   "Wat je overhoudt",
+   "De belasting zelf",
+   "Een bonus"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "belasting-po",
+  "file": "./belastingPo.js",
+  "stap": 3,
+  "vraag": 7,
+  "soort": "L",
+  "q": "Btw zit in de prijs — dus bij de kassa betaal je?",
+  "opties": [
+   "Precies de prijs van het kaartje",
+   "Altijd nog extra erbovenop",
+   "Minder dan het kaartje",
+   "Niets"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "brugklas-orientatie",
+  "file": "./brugklasOrientatie.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is een profiel in havo/vwo?",
+  "opties": [
+   "Vakkenpakket-keuze in klas 3",
+   "Foto op pasje",
+   "Brugklaskamp",
+   "Schoolwebsite"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "brugklas-orientatie",
+  "file": "./brugklasOrientatie.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Welke app voor schoolinfo in NL?",
+  "opties": [
+   "Magister of SOMtoday",
+   "TikTok",
+   "WhatsApp",
+   "Spotify"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "brugklas-orientatie",
+  "file": "./brugklasOrientatie.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is spaced repetition?",
+  "opties": [
+   "Leerstof spreiden over meerdere dagen",
+   "1x leren is genoeg",
+   "Steeds opnieuw lezen",
+   "Stampen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "brugklas-orientatie",
+  "file": "./brugklasOrientatie.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is Feynman-techniek?",
+  "opties": [
+   "Uitleggen aan iemand anders",
+   "Hard leren",
+   "Veel slapen",
+   "Gokken"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "brugklas-orientatie",
+  "file": "./brugklasOrientatie.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Welke is niet effectief?",
+  "opties": [
+   "Multitasking met telefoon + muziek + huiswerk",
+   "Mindmap maken",
+   "Vragen aan jezelf",
+   "Spaced repetition"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "brugklas-orientatie",
+  "file": "./brugklasOrientatie.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wie is je mentor?",
+  "opties": [
+   "Jouw vaste begeleidende docent",
+   "De schoolleider",
+   "De conciërge",
+   "Een klasgenoot"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "brugklas-orientatie",
+  "file": "./brugklasOrientatie.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Bij conflict met docent, eerst:",
+  "opties": [
+   "Rustig praten met docent zelf",
+   "Direct ouders",
+   "Direct schooldirecteur",
+   "Negeren"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "brugklas-orientatie",
+  "file": "./brugklasOrientatie.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is Eisenhower-matrix?",
+  "opties": [
+   "Verdelen op urgent + belangrijk",
+   "Een Amerikaanse generaal",
+   "Wiskunde-formule",
+   "Spel"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "brugklas-orientatie",
+  "file": "./brugklasOrientatie.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "'Eet de kikker eerst' betekent?",
+  "opties": [
+   "Moeilijke taak meteen 's ochtends",
+   "Letterlijk kikker",
+   "Eet ontbijt",
+   "Wachten"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "brugklas-orientatie",
+  "file": "./brugklasOrientatie.js",
+  "stap": 5,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wat is de Pomodoro-techniek?",
+  "opties": [
+   "25 min werk + 5 min pauze",
+   "Italiaanse tomaat",
+   "Snel doorwerken",
+   "Pizza"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "brugklas-orientatie",
+  "file": "./brugklasOrientatie.js",
+  "stap": 5,
+  "vraag": 7,
+  "soort": "L",
+  "q": "Wat is Magister?",
+  "opties": [
+   "Online schoolsysteem voor cijfers + rooster",
+   "Een vak",
+   "Een leraar",
+   "Een schoolboek"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "brugklas-orientatie",
+  "file": "./brugklasOrientatie.js",
+  "stap": 5,
+  "vraag": 10,
+  "soort": "L",
+  "q": "Wat is huiswerk plannen met een agenda?",
+  "opties": [
+   "Opschrijven wanneer je wat doet",
+   "Opzoeken in boek",
+   "Vragen aan docent",
+   "Niet doen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "brugklas-orientatie",
+  "file": "./brugklasOrientatie.js",
+  "stap": 5,
+  "vraag": 11,
+  "soort": "L",
+  "q": "Bij spaced repetition doe je?",
+  "opties": [
+   "Korte herhalingen verspreid over meerdere dagen",
+   "Alles op 1 avond stampen",
+   "Niet leren",
+   "Alleen in les"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "brugklas-orientatie",
+  "file": "./brugklasOrientatie.js",
+  "stap": 5,
+  "vraag": 12,
+  "soort": "L",
+  "q": "Wat is interleaving?",
+  "opties": [
+   "Verschillende onderwerpen door elkaar leren",
+   "Alleen 1 vak per dag",
+   "Slapen",
+   "Niet leren"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "brugklas-orientatie",
+  "file": "./brugklasOrientatie.js",
+  "stap": 5,
+  "vraag": 13,
+  "soort": "L",
+  "q": "Wat doe je bij de Feynman-techniek?",
+  "opties": [
+   "Uitleggen alsof je het aan een kind vertelt",
+   "Lees in boek",
+   "Stampen",
+   "Vraag aan docent"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "brugklas-orientatie",
+  "file": "./brugklasOrientatie.js",
+  "stap": 5,
+  "vraag": 14,
+  "soort": "L",
+  "q": "Wat is een profielkeuze?",
+  "opties": [
+   "Pakket vakken voor bovenbouw kiezen",
+   "Kledingstijl",
+   "Foto kiezen",
+   "Naam veranderen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "brugklas-orientatie",
+  "file": "./brugklasOrientatie.js",
+  "stap": 5,
+  "vraag": 15,
+  "soort": "L",
+  "q": "Het N&T-profiel (Natuur en Techniek) heeft veel?",
+  "opties": [
+   "Natuurkunde + wiskunde",
+   "Talen",
+   "Geschiedenis",
+   "Tekenen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "brugklas-orientatie",
+  "file": "./brugklasOrientatie.js",
+  "stap": 5,
+  "vraag": 17,
+  "soort": "L",
+  "q": "Wat is een mentor?",
+  "opties": [
+   "Vaste leraar die je begeleidt",
+   "Beste vriend",
+   "Een vak",
+   "Boekenkast"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "brugklas-orientatie",
+  "file": "./brugklasOrientatie.js",
+  "stap": 5,
+  "vraag": 18,
+  "soort": "L",
+  "q": "Wat is een rapportvergadering?",
+  "opties": [
+   "Docenten bespreken cijfers van leerling",
+   "Klas-feest",
+   "Toets",
+   "Vakantie"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "cito-strategieen-groep8",
+  "file": "./citoStrategieenGroep8.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is de Doorstroomtoets?",
+  "opties": [
+   "Een toets aan het einde van groep 8 die advies geeft voor de middelbare school",
+   "Een toets die bepaalt of je groep 8 moet overdoen",
+   "Een examen dat in alle landen tegelijk wordt gemaakt",
+   "Een toets die je thuis als huiswerk maakt"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "cito-strategieen-groep8",
+  "file": "./citoStrategieenGroep8.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is leidend voor je vervolg-niveau?",
+  "opties": [
+   "Het schooladvies van je leerkracht",
+   "De Doorstroomtoets",
+   "Je rapportcijfers",
+   "Je eigen voorkeur"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "cito-strategieen-groep8",
+  "file": "./citoStrategieenGroep8.js",
+  "stap": 1,
+  "vraag": 6,
+  "soort": "H",
+  "q": "Je moet uitrekenen hoeveel km per uur een fietser rijdt. Bij welk onderdeel hoort die vraag?",
+  "opties": [
+   "Rekenen",
+   "Taalverzorging",
+   "Lezen",
+   "Studievaardigheden"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "cito-strategieen-groep8",
+  "file": "./citoStrategieenGroep8.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Welke woorden in een optie maken hem verdacht fout?",
+  "opties": [
+   "'altijd' of 'nooit'",
+   "'meestal'",
+   "'vaak'",
+   "'soms'"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "cito-strategieen-groep8",
+  "file": "./citoStrategieenGroep8.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Twee opties lijken bijna hetzelfde. Wat doe je?",
+  "opties": [
+   "Heel goed kijken wat het kleine verschil is",
+   "Ze allebei doorstrepen",
+   "Een andere optie kiezen",
+   "De bovenste van de twee kiezen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "cito-strategieen-groep8",
+  "file": "./citoStrategieenGroep8.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "H",
+  "q": "Het antwoord op een begrijpend-lezen-vraag staat altijd...",
+  "opties": [
+   "In de tekst",
+   "In je eigen kennis",
+   "In je eigen mening",
+   "Achter in het toetsboekje"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "cito-strategieen-groep8",
+  "file": "./citoStrategieenGroep8.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat doe je vóórdat je echt gaat rekenen?",
+  "opties": [
+   "Schat een redelijk antwoord",
+   "Direct opschrijven",
+   "Gokken",
+   "Vraag overslaan"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "cito-strategieen-groep8",
+  "file": "./citoStrategieenGroep8.js",
+  "stap": 6,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Doorstroomtoets: wat krijg je als resultaat?",
+  "opties": [
+   "Een advies voor je niveau op de middelbare school",
+   "Een eindcijfer, zoals een 7,5",
+   "Een lijst met hoe snel je was",
+   "Helemaal geen uitslag"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "cito-strategieen-groep8",
+  "file": "./citoStrategieenGroep8.js",
+  "stap": 6,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is het verschil tussen schooladvies en toetsadvies (sinds 2024)?",
+  "opties": [
+   "Schooladvies komt eerst; bij hoger toetsadvies moet school heroverwegen",
+   "Toetsadvies is leidend; het schooladvies telt niet mee",
+   "Ze tellen allebei precies even zwaar mee",
+   "Geen verschil: het is hetzelfde advies"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "cito-strategieen-groep8",
+  "file": "./citoStrategieenGroep8.js",
+  "stap": 6,
+  "vraag": 7,
+  "soort": "L",
+  "q": "Een multiple-choice vraag met 4 opties — je weet 2 antwoorden zeker NIET. Wat doe je?",
+  "opties": [
+   "Gok tussen de 2 overgebleven opties",
+   "Geef op + laat leeg",
+   "Vraag de buurman",
+   "Allebei aanvinken"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "cito-strategieen-groep8",
+  "file": "./citoStrategieenGroep8.js",
+  "stap": 6,
+  "vraag": 12,
+  "soort": "L",
+  "q": "Wat niet doen tijdens Doorstroomtoets?",
+  "opties": [
+   "Antwoorden vergelijken met buurman",
+   "Diep ademhalen",
+   "Skippen van moeilijke vraag",
+   "Pacing controleren"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "cito-strategieen-groep8",
+  "file": "./citoStrategieenGroep8.js",
+  "stap": 6,
+  "vraag": 15,
+  "soort": "L",
+  "q": "Bij rekensom met %: wat doe je eerst?",
+  "opties": [
+   "Lezen wat gevraagd wordt",
+   "Direct rekenen",
+   "Antwoord raden",
+   "Stoppen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "cito-strategieen-groep8",
+  "file": "./citoStrategieenGroep8.js",
+  "stap": 6,
+  "vraag": 18,
+  "soort": "L",
+  "q": "Bij twijfel tussen 2 opties: wat doe je?",
+  "opties": [
+   "Kies het beste antwoord, markeer en ga door",
+   "Lang twijfelen",
+   "Beide aanstrepen",
+   "Niet kiezen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "cito-strategieen-groep8",
+  "file": "./citoStrategieenGroep8.js",
+  "stap": 6,
+  "vraag": 19,
+  "soort": "L",
+  "q": "Wat is een strikvraag?",
+  "opties": [
+   "Vraag die zo geschreven is dat je makkelijk fout antwoordt",
+   "Een vraag die je altijd mag overslaan",
+   "Een vraag die extra punten oplevert",
+   "Een vraag zonder goed antwoord"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "cito-strategieen-groep8",
+  "file": "./citoStrategieenGroep8.js",
+  "stap": 6,
+  "vraag": 21,
+  "soort": "L",
+  "q": "Hoe controleer je je antwoorden achteraf?",
+  "opties": [
+   "Doe de berekening anders / lees vraag opnieuw",
+   "Niet — eerste poging is altijd goed",
+   "Vraag aan buurman",
+   "Random aanpassen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "cito-strategieen-groep8",
+  "file": "./citoStrategieenGroep8.js",
+  "stap": 6,
+  "vraag": 23,
+  "soort": "L",
+  "q": "Waar gaat de Doorstroomtoets in groep 8 over?",
+  "opties": [
+   "Lezen + taalverzorging + rekenen",
+   "Alleen rekenen",
+   "Alleen geschiedenis",
+   "Engels"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "dierenklassen-po",
+  "file": "./dierenklassenPo.js",
+  "stap": 5,
+  "vraag": 15,
+  "soort": "H",
+  "q": "Welk dier is een planteneter?",
+  "opties": [
+   "Konijn",
+   "Vos",
+   "Uil",
+   "Haai"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "dierenklassen-po",
+  "file": "./dierenklassenPo.js",
+  "stap": 5,
+  "vraag": 19,
+  "soort": "L",
+  "q": "Wat is een roofdier (predator)?",
+  "opties": [
+   "Dier dat op andere dieren jaagt",
+   "Planten-eter",
+   "Aaseter",
+   "Allesvreter"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "evolutie-mens-po",
+  "file": "./evolutieMensPo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat zijn fossielen?",
+  "opties": [
+   "Versteende resten oude wezens",
+   "Levende dieren",
+   "Mineralen alleen",
+   "Computers"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "evolutie-mens-po",
+  "file": "./evolutieMensPo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is restorgaan voorbeeld?",
+  "opties": [
+   "Blindedarm + wijsheidskiezen",
+   "Hart",
+   "Hersenen",
+   "Niets"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "evolutie-mens-po",
+  "file": "./evolutieMensPo.js",
+  "stap": 3,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Wat zijn fossielen?",
+  "opties": [
+   "Versteende resten van leven uit het verleden",
+   "Stenen die zelf groeien",
+   "Bot-modellen die wetenschappers maken",
+   "Foto's van dieren"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "evolutie-mens-po",
+  "file": "./evolutieMensPo.js",
+  "stap": 3,
+  "vraag": 7,
+  "soort": "L",
+  "q": "Natuurlijke selectie — wat is dat?",
+  "opties": [
+   "Best aangepaste dieren krijgen meer jongen",
+   "Wetenschappers kiezen welke dieren leven",
+   "Mensen fokken dieren",
+   "Toeval"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "evolutie-mens-po",
+  "file": "./evolutieMensPo.js",
+  "stap": 3,
+  "vraag": 13,
+  "soort": "L",
+  "q": "Wat is een fossiel?",
+  "opties": [
+   "Versteende rest van plant/dier",
+   "Steen",
+   "Levend organisme",
+   "Een plastic namaakbot"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "evolutie-mens-po",
+  "file": "./evolutieMensPo.js",
+  "stap": 3,
+  "vraag": 15,
+  "soort": "L",
+  "q": "Wat zijn Neanderthalers?",
+  "opties": [
+   "Uitgestorven Homo-soort",
+   "Apen",
+   "Reptielen",
+   "Vissen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "evolutie-mens-po",
+  "file": "./evolutieMensPo.js",
+  "stap": 3,
+  "vraag": 19,
+  "soort": "L",
+  "q": "DNA is?",
+  "opties": [
+   "Erfelijk materiaal in cellen",
+   "Een dier",
+   "Een plant",
+   "Een soort vitamine"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "evolutie-mens-po",
+  "file": "./evolutieMensPo.js",
+  "stap": 3,
+  "vraag": 20,
+  "soort": "L",
+  "q": "Wat is een soort?",
+  "opties": [
+   "Groep dieren die samen jongen kunnen krijgen",
+   "1 dier",
+   "Familie",
+   "Alle dieren op aarde"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "evolutie-mens-po",
+  "file": "./evolutieMensPo.js",
+  "stap": 3,
+  "vraag": 25,
+  "soort": "L",
+  "q": "Pepermot in Engeland (industrieel) — welk effect?",
+  "opties": [
+   "Donkere motten overleefden beter",
+   "Witte motten overleefden beter",
+   "Geen verandering",
+   "Uitgestorven"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "nederlandse-kunstenaars-po",
+  "file": "./nederlandseKunstenaarsPo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Mondriaan is bekend om?",
+  "opties": [
+   "Rechthoeken + primaire kleuren",
+   "Zonnebloemen",
+   "Nachtwacht",
+   "Foto's"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "nederlandse-kunstenaars-po",
+  "file": "./nederlandseKunstenaarsPo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is een Museumkaart?",
+  "opties": [
+   "Jaarkaart voor 500+ musea",
+   "App",
+   "Toegangsbewijs 1x",
+   "Krant"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "nederlandse-kunstenaars-po",
+  "file": "./nederlandseKunstenaarsPo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Mondriaan stijl?",
+  "opties": [
+   "Rechthoeken + primaire kleuren",
+   "Realistisch",
+   "Donker",
+   "Sprookjes"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "opdrachtwoorden-nieuwkomers",
+  "file": "./opdrachtwoordenNieuwkomers.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Op je blad staat: trek een lijn van de hond naar het hok. Wat doe je?",
+  "opties": [
+   "Ik trek een lijn van de hond naar het hok.",
+   "Ik teken een nieuwe hond.",
+   "Ik kleur het hok.",
+   "Ik zet een kruisje op de hond."
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "opdrachtwoorden-nieuwkomers",
+  "file": "./opdrachtwoordenNieuwkomers.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Op je blad staat: vul in. Er staat een lege plek. Wat doe je?",
+  "opties": [
+   "Ik schrijf het goede woord op de lege plek.",
+   "Ik laat de plek leeg.",
+   "Ik teken een bloem op de plek.",
+   "Ik gum de zin uit."
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "opdrachtwoorden-nieuwkomers",
+  "file": "./opdrachtwoordenNieuwkomers.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Op je blad staat: maak de zin af. De zin is: Ik eet een … Wat doe je?",
+  "opties": [
+   "Ik schrijf een woord aan het eind, bijvoorbeeld appel.",
+   "Ik begin een nieuwe zin.",
+   "Ik gum de zin uit.",
+   "Ik lees de zin en ga verder."
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "opdrachtwoorden-nieuwkomers",
+  "file": "./opdrachtwoordenNieuwkomers.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Op je blad staat: lees de zin. Wat doe je?",
+  "opties": [
+   "Ik kijk naar de woorden en lees ze.",
+   "Ik schrijf de zin over.",
+   "Ik teken de zin.",
+   "Ik sla de zin over."
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "opdrachtwoorden-nieuwkomers",
+  "file": "./opdrachtwoordenNieuwkomers.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Op je blad staat: reken uit. 4 + 3 = … Wat doe je?",
+  "opties": [
+   "Ik reken het antwoord uit en schrijf 7.",
+   "Ik schrijf de som over.",
+   "Ik zet een rondje om de 4.",
+   "Ik laat het leeg."
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "opdrachtwoorden-nieuwkomers",
+  "file": "./opdrachtwoordenNieuwkomers.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "De juf zegt: leg uit hoe je het weet. Wat doe je?",
+  "opties": [
+   "Ik vertel waarom mijn antwoord klopt.",
+   "Ik zeg alleen het antwoord.",
+   "Ik zeg: ik weet het niet.",
+   "Ik ben stil."
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "oudheid-egyptenaren-grieken-romeinen-po",
+  "file": "./oudheidEgyptiansGriekenPo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is een farao?",
+  "opties": [
+   "Koning + god van Egypte",
+   "Soldaat",
+   "Boer",
+   "Priester"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "oudheid-egyptenaren-grieken-romeinen-po",
+  "file": "./oudheidEgyptiansGriekenPo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "H",
+  "q": "Wie was leraar van Alexander de Grote?",
+  "opties": [
+   "Aristoteles",
+   "Socrates",
+   "Plato",
+   "Pythagoras"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "oudheid-egyptenaren-grieken-romeinen-po",
+  "file": "./oudheidEgyptiansGriekenPo.js",
+  "stap": 3,
+  "vraag": 7,
+  "soort": "L",
+  "q": "Wat zijn de Olympische Spelen oorsprong?",
+  "opties": [
+   "Griekse stad Olympia, sinds 776 v.Chr.",
+   "Frankrijk 1900",
+   "China 200 v.Chr.",
+   "Rusland 1850"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "oudheid-egyptenaren-grieken-romeinen-po",
+  "file": "./oudheidEgyptiansGriekenPo.js",
+  "stap": 3,
+  "vraag": 17,
+  "soort": "L",
+  "q": "Wie was Julius Caesar?",
+  "opties": [
+   "Romeinse veldheer en dictator",
+   "Egyptische farao",
+   "Griekse filosoof",
+   "Macedonische koning"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "procenten-po",
+  "file": "./procentenPo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "H",
+  "q": "100% — wat betekent dat?",
+  "opties": [
+   "Alles",
+   "De helft",
+   "Honderd dingen",
+   "Niets"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "recyclen-afval-po",
+  "file": "./recyclenAfvalPo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is statiegeld?",
+  "opties": [
+   "Geld terug bij inleveren van een fles",
+   "Belasting op flessen",
+   "Boete voor zwerfafval",
+   "Korting bij de kassa"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "recyclen-afval-po",
+  "file": "./recyclenAfvalPo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Tips om plastic te verminderen?",
+  "opties": [
+   "Stoffen tas en eigen waterfles",
+   "Meer plastic",
+   "Niets doen",
+   "Verbranden"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "recyclen-afval-po",
+  "file": "./recyclenAfvalPo.js",
+  "stap": 3,
+  "vraag": 12,
+  "soort": "L",
+  "q": "Statiegeld krijg je terug bij?",
+  "opties": [
+   "Inleveren van fles in winkel",
+   "Aankoop",
+   "Vakantie",
+   "Geboorte"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "recyclen-afval-po",
+  "file": "./recyclenAfvalPo.js",
+  "stap": 3,
+  "vraag": 13,
+  "soort": "L",
+  "q": "Waar gooi je oud papier in?",
+  "opties": [
+   "Papierbak / oud papier",
+   "Restafval",
+   "GFT",
+   "Glasbak"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "recyclen-afval-po",
+  "file": "./recyclenAfvalPo.js",
+  "stap": 3,
+  "vraag": 14,
+  "soort": "L",
+  "q": "Waar breng je een kapotte koffer naartoe?",
+  "opties": [
+   "Grofvuil / milieustraat",
+   "Restafval",
+   "Plastic",
+   "Papier"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "recyclen-afval-po",
+  "file": "./recyclenAfvalPo.js",
+  "stap": 3,
+  "vraag": 15,
+  "soort": "L",
+  "q": "Welke is NIET recyclebaar in standaard bak?",
+  "opties": [
+   "Vies plastic met etensresten",
+   "Schone plastic fles",
+   "Glazen pot",
+   "Karton"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "recyclen-afval-po",
+  "file": "./recyclenAfvalPo.js",
+  "stap": 3,
+  "vraag": 16,
+  "soort": "L",
+  "q": "Wat is circulaire economie?",
+  "opties": [
+   "Spullen steeds opnieuw gebruiken",
+   "Lineair",
+   "Alles na gebruik verbranden",
+   "Reclame"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "recyclen-afval-po",
+  "file": "./recyclenAfvalPo.js",
+  "stap": 3,
+  "vraag": 17,
+  "soort": "L",
+  "q": "Wat doet een microplastic in de zee?",
+  "opties": [
+   "Vissen eten het, ecosysteem schade",
+   "Niets",
+   "Verdampt",
+   "Voedt vissen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "recyclen-afval-po",
+  "file": "./recyclenAfvalPo.js",
+  "stap": 3,
+  "vraag": 18,
+  "soort": "L",
+  "q": "Boyan Slat is bekend om?",
+  "opties": [
+   "Plastic uit zee halen",
+   "F1",
+   "Schaatsen",
+   "Politiek"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "recyclen-afval-po",
+  "file": "./recyclenAfvalPo.js",
+  "stap": 3,
+  "vraag": 19,
+  "soort": "L",
+  "q": "Wat is composteren?",
+  "opties": [
+   "GFT-afval omzetten tot grond",
+   "Plastic recyclen",
+   "Verbranden",
+   "Glas smelten"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "recyclen-afval-po",
+  "file": "./recyclenAfvalPo.js",
+  "stap": 3,
+  "vraag": 21,
+  "soort": "L",
+  "q": "Lawaai van een snelweg is welk type vervuiling?",
+  "opties": [
+   "Geluidsvervuiling",
+   "Lucht",
+   "Water",
+   "Bodem"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "recyclen-afval-po",
+  "file": "./recyclenAfvalPo.js",
+  "stap": 3,
+  "vraag": 22,
+  "soort": "L",
+  "q": "Wat gebeurt met restafval uiteindelijk in NL?",
+  "opties": [
+   "Verbranden in afvalcentrale",
+   "Storten",
+   "Recyclen",
+   "Lozen in zee"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "recyclen-afval-po",
+  "file": "./recyclenAfvalPo.js",
+  "stap": 3,
+  "vraag": 24,
+  "soort": "L",
+  "q": "Wat is duurzaam kopen?",
+  "opties": [
+   "Spullen die lang meegaan",
+   "Veel kopen",
+   "Goedkoop",
+   "Mooie kleur"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "recyclen-afval-po",
+  "file": "./recyclenAfvalPo.js",
+  "stap": 3,
+  "vraag": 26,
+  "soort": "L",
+  "q": "Wat is upcycling?",
+  "opties": [
+   "Van iets ouds iets nieuws/beters maken",
+   "Afval verbranden",
+   "Storten",
+   "Weggooien bij het restafval"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "samenvatten-hoofdgedachte-po",
+  "file": "./samenvattenHoofdgedachtePo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Verschil onderwerp en hoofdgedachte?",
+  "opties": [
+   "Onderwerp = waarover, hoofdgedachte = wat ervan gezegd",
+   "Onderwerp komt na hoofdgedachte",
+   "Geen verschil",
+   "Onderwerp altijd 1 woord"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "samenvatten-hoofdgedachte-po",
+  "file": "./samenvattenHoofdgedachtePo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Truc om te checken hoofd vs bij?",
+  "opties": [
+   "Schrap de zin — verandert de boodschap?",
+   "Tel de woorden",
+   "Kijk naar kleur",
+   "Kijk naar plaatje"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "samenvatten-hoofdgedachte-po",
+  "file": "./samenvattenHoofdgedachtePo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Tekst: 'Apen zijn slim. Ze gebruiken stokken om termieten uit holen te halen. In Afrika is dit gezien bij chimpansees.' Hoofdgedachte?",
+  "opties": [
+   "Apen zijn slim — ze gebruiken gereedschap",
+   "Termieten leven in holen",
+   "Chimpansees komen uit Afrika",
+   "Stokken zijn handig"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "samenvatten-hoofdgedachte-po",
+  "file": "./samenvattenHoofdgedachtePo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Welke zin is een bijzaak in een tekst over 'gezond eten'?",
+  "opties": [
+   "Mijn moeder kookt elke maandag pasta",
+   "Groenten geven vitaminen",
+   "Fruit is gezond",
+   "Suiker is ongezond"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "samenvatten-hoofdgedachte-po",
+  "file": "./samenvattenHoofdgedachtePo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is NIET een goede samenvattingsstrategie?",
+  "opties": [
+   "Letterlijk kopiëren van zinnen",
+   "Eigen woorden",
+   "Hoofdpunten kiezen",
+   "Kort houden"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "samenvatten-hoofdgedachte-po",
+  "file": "./samenvattenHoofdgedachtePo.js",
+  "stap": 4,
+  "vraag": 8,
+  "soort": "L",
+  "q": "Wanneer is een samenvatting TE LANG?",
+  "opties": [
+   "Wanneer hij bijna even lang is als origineel",
+   "Wanneer hij 25-30% van origineel is",
+   "Wanneer hij 1 zin is",
+   "Nooit te lang"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "samenvatten-hoofdgedachte-po",
+  "file": "./samenvattenHoofdgedachtePo.js",
+  "stap": 4,
+  "vraag": 13,
+  "soort": "L",
+  "q": "Wat is een kernzin?",
+  "opties": [
+   "De zin die de hoofdgedachte van een alinea bevat",
+   "De langste zin",
+   "De laatste zin",
+   "Een citaat"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "samenvatten-hoofdgedachte-po",
+  "file": "./samenvattenHoofdgedachtePo.js",
+  "stap": 4,
+  "vraag": 18,
+  "soort": "L",
+  "q": "Wat is een tussentitel?",
+  "opties": [
+   "Kop boven een alinea/onderdeel",
+   "De grote titel",
+   "Naam van schrijver",
+   "Vraag aan lezer"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "samenvatten-hoofdgedachte-po",
+  "file": "./samenvattenHoofdgedachtePo.js",
+  "stap": 4,
+  "vraag": 19,
+  "soort": "L",
+  "q": "Tussentitels helpen je om?",
+  "opties": [
+   "Snel structuur + thema's te zien",
+   "Sneller te schrijven",
+   "Mooier te lezen",
+   "Tellen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "samenvatten-hoofdgedachte-po",
+  "file": "./samenvattenHoofdgedachtePo.js",
+  "stap": 4,
+  "vraag": 22,
+  "soort": "L",
+  "q": "Welke vraag aan jezelf helpt bij hoofdgedachte vinden?",
+  "opties": [
+   "Als ik in 1 zin uitleg waarover de tekst gaat — wat zeg ik?",
+   "Hoeveel woorden zijn er?",
+   "Wie heeft de tekst gemaakt?",
+   "Welke kleur is de letter?"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "samenvatten-hoofdgedachte-po",
+  "file": "./samenvattenHoofdgedachtePo.js",
+  "stap": 4,
+  "vraag": 23,
+  "soort": "L",
+  "q": "Wat is een bijzaak in een nieuwsbericht?",
+  "opties": [
+   "Detail dat verhaal kleur geeft, maar niet essentieel",
+   "Het belangrijkste feit van het bericht",
+   "De kop boven het bericht",
+   "Wat er gebeurd is en waar"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "schema-tekst-combi-po",
+  "file": "./schemaTekstCombiPo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Het broertje van Sara is 2 jaar en gaat mee. Wat kost zijn kaartje?",
+  "opties": [
+   "Niets, voor hem is de toegang gratis",
+   "€ 4,50",
+   "€ 2,25",
+   "€ 6,50"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "schema-tekst-combi-po",
+  "file": "./schemaTekstCombiPo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Een kind van 3 jaar gaat op woensdagmiddag zwemmen. Hoeveel betaalt het kind?",
+  "opties": [
+   "Niets, voor peuters is het altijd gratis",
+   "€ 2,25",
+   "€ 4,50",
+   "€ 1,00"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "schema-tekst-combi-po",
+  "file": "./schemaTekstCombiPo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Je hebt de prijs al in de lijst gevonden. Waarom moet je tóch ook de tekst nog lezen?",
+  "opties": [
+   "Omdat in de tekst regels en uitzonderingen kunnen staan die de prijs veranderen",
+   "Omdat de lijst altijd fouten bevat",
+   "Omdat de tekst dezelfde getallen nog een keer noemt",
+   "Dat hoeft niet: de lijst is altijd genoeg"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "taal-woorden-zinnen-g4",
+  "file": "./taalWoordenZinnenG4.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "H",
+  "q": "Poesje is het verkleinwoord van…?",
+  "opties": [
+   "poes",
+   "poesen",
+   "poezen",
+   "poest"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "tijdvakken-nederland-po",
+  "file": "./tijdvakkenNederlandPo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "H",
+  "q": "Waar zijn de hunebedden te vinden?",
+  "opties": [
+   "Drenthe",
+   "Limburg",
+   "Friesland",
+   "Zeeland"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "tijdvakken-nederland-po",
+  "file": "./tijdvakkenNederlandPo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wie kwamen na de Romeinen in Nederland wonen?",
+  "opties": [
+   "Friezen, Saksen en Franken",
+   "Vikingen alleen",
+   "Spanjaarden",
+   "Britten"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "tijdvakken-nederland-po",
+  "file": "./tijdvakkenNederlandPo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat was de Hanze?",
+  "opties": [
+   "Een handelsverbond van steden",
+   "Een leger",
+   "Een godsdienst",
+   "Een soort kasteel"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "tijdvakken-nederland-po",
+  "file": "./tijdvakkenNederlandPo.js",
+  "stap": 4,
+  "vraag": 8,
+  "soort": "L",
+  "q": "Industriële Revolutie kwam in NL ongeveer wanneer?",
+  "opties": [
+   "Eind 1800 / begin 1900",
+   "Middeleeuwen",
+   "Romeinse tijd",
+   "1990"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "tijdvakken-nederland-po",
+  "file": "./tijdvakkenNederlandPo.js",
+  "stap": 4,
+  "vraag": 18,
+  "soort": "L",
+  "q": "Wat is de Vrede van Münster (1648)?",
+  "opties": [
+   "Einde Tachtigjarige Oorlog",
+   "Begin WO1",
+   "Oprichting VOC",
+   "Begin Gouden Eeuw"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "topografie-nederland",
+  "file": "./topografieNederland.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is het doel van de Deltawerken?",
+  "opties": [
+   "Beschermen tegen overstromingen",
+   "Drinkwater zuiveren",
+   "Stroom opwekken",
+   "Schepen sneller maken"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "topografie-nederland",
+  "file": "./topografieNederland.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is een polder?",
+  "opties": [
+   "Laag land dat vroeger water was en is drooggemalen",
+   "Een hoge zandheuvel aan de zee",
+   "Een rivier die naar de zee stroomt",
+   "Een dam die de zee tegenhoudt"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "woorden-3-nieuwkomers",
+  "file": "./woorden3Nieuwkomers.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "H",
+  "q": "Een som is niet moeilijk. De som is…",
+  "opties": [
+   "Makkelijk.",
+   "Moeilijk.",
+   "Groot.",
+   "Eng."
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "woordenschat-po",
+  "file": "./woordenschatPo.js",
+  "stap": 4,
+  "vraag": 7,
+  "soort": "L",
+  "q": "Wat betekent 'een open boek' in 'Floor is een open boek voor mij'?",
+  "opties": [
+   "Ik begrijp haar makkelijk, ze verbergt niets",
+   "Ze houdt alles voor zichzelf",
+   "Ze heeft een boek open",
+   "Ze schrijft een boek"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "woordenschat-po",
+  "file": "./woordenschatPo.js",
+  "stap": 4,
+  "vraag": 20,
+  "soort": "L",
+  "q": "Wat betekent discreet?",
+  "opties": [
+   "Onopvallend en voorzichtig",
+   "Luid en opvallend",
+   "Snel boos",
+   "Onzeker"
+  ],
+  "answer": 0
+ }
+]

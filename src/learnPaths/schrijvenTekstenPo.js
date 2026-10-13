@@ -293,7 +293,7 @@ const steps = [
     checks: [
       {
         q: "Je schrijft de **gemeente** voor een vraag. Welke aanhef past?",
-        options: ["Geachte heer/mevrouw","Hoi","Beste vrienden","Hé daar"],
+        options: ['Geachte heer/mevrouw', 'Hoi lieve mensen', 'Beste vrienden', 'Hé daar, gemeente'],
         answer: 0,
         wrongHints: [null, "Niet — gemeente is een formele instantie.", "Niet — je kent ze niet persoonlijk.", "Niet — niet beleefd genoeg voor instantie."],
         uitlegPad: {
@@ -335,9 +335,9 @@ const steps = [
       },
       {
         q: "Welke zin past in een **formele** brief aan de schooldirecteur?",
-        options: ["Hierbij wil ik u graag verzoeken om een afspraak.","Hey, kan ik even langskomen?","Ik kom morgen even sjaggelen.","Doei, tot snel!"],
+        options: ['Graag wil ik een afspraak met u maken.', 'Hey, kan ik morgen even bij je langskomen?', 'Yo, ik kom morgen effe langs, oké?', 'Doei, tot snel en de groetjes!'],
         answer: 0,
-        wrongHints: [null, "Veel te informeel — 'hey' is geen formele aanhef.", "'Sjaggelen' is informeel + niet duidelijk.", "Dat is een afsluiting, geen verzoek."],
+        wrongHints: [null, 'Veel te informeel — \'hey\' is geen formele aanhef.', '\'Yo\' en \'effe\' zijn spreektaal, niet formeel.', 'Dat is een afsluiting, geen verzoek.'],
         uitlegPad: {
           stappen: [{ titel: "Formeel verzoek", tekst: "'Hierbij wil ik u graag verzoeken' is **beleefd**, gebruikt **u-vorm** en heeft een **duidelijk doel** (afspraak). Past bij formele brief aan directeur." }],
           woorden: [{ woord: "verzoeken", uitleg: "Beleefd vragen om iets." }, { woord: "register", uitleg: "Toon van een tekst — formeel of informeel." }],
@@ -351,7 +351,7 @@ const steps = [
         q: "*'Beste meneer Janssen, ik schrijf u namens onze klas.'* — wat voor brief is dit?",
         options: ["Formeel","Informeel","Reclame","Gedicht"],
         answer: 0,
-        wrongHints: [null, "Niet — 'meneer Janssen' + 'u' = formeel signaal.", "Niet — geen verkoop-tekst.", "Niet — geen kunstig taalgebruik."],
+        wrongHints: [null, 'Let op hoe de schrijver meneer Janssen aanspreekt: met \'je\' of met \'u\'?', 'Niet — geen verkoop-tekst.', 'Niet — geen kunstig taalgebruik.'],
         uitlegPad: {
           stappen: [{ titel: "Signalen herkennen", tekst: "**'Meneer Janssen'** (achternaam) + **'u'** (beleefd) + **'namens onze klas'** (groep, niet persoon) = drie formele signalen. Dus formele brief." }],
           woorden: [{ woord: "namens", uitleg: "In de naam van iemand anders / een groep." }],
@@ -651,7 +651,7 @@ const steps = [
       },
       {
         q: "Tekst over gezond eten eindigt: *'Kortom, groente en fruit zijn de basis van een gezonde voeding.'* Wat is de hoofdgedachte?",
-        options: ["Groente en fruit zijn de basis van gezonde voeding","Iedereen moet ananas eten","Eten kost veel geld","Sport is belangrijk"],
+        options: ['Groente en fruit zijn de basis van gezonde voeding', 'Iedereen moet elke dag een hele ananas eten', 'Gezond eten kost veel meer geld dan snoep', 'Sporten is belangrijker dan wat je eet'],
         answer: 0,
         wrongHints: [null, "Niet — dat is een specifiek voorbeeld, niet de hoofdgedachte.", "Niet — de tekst gaat niet over geld.", "Niet — niet het onderwerp van deze tekst."],
         uitlegPad: {
@@ -1068,7 +1068,7 @@ const steps = [
       },
       {
         q: "Hoe begin je een formele e-mail aan iemand wiens **achternaam je niet weet**?",
-        options: ["Geachte heer/mevrouw","Hoi","Lieve","Hey"],
+        options: ['Geachte heer/mevrouw', 'Hoi meneer of mevrouw', 'Lieve meneer/mevrouw', 'Hey, beste mensen'],
         answer: 0,
         wrongHints: [null, "Niet — informeel.", "Niet — 'Lieve' gebruik je voor familie en vrienden.", "Niet — veel te informeel."],
         uitlegPad: {

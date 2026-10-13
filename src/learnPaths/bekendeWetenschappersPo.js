@@ -208,9 +208,9 @@ const steps = [
       },
       {
         q: "Wat ontdekte **Marie Curie**?",
-        options: ["Radium + radioactiviteit", "Zwaartekracht", "Evolutie", "Computer"],
+        options: ["Radium en radioactiviteit", "Zwaartekracht en planeetbanen", "Evolutie en natuurlijke selectie", "Elektriciteit en de gloeilamp"],
         answer: 0,
-        wrongHints: [null, "Newton.", "Darwin.", "Niet."],
+        wrongHints: [null, "Dat was Newton.", "Dat was Darwin.", "Daar werkte Edison aan."],
         uitlegPad: {
           stappen: [
             { titel: "Wie was Marie Curie?", tekst: "**Marie Curie** (1867-1934) was een Pools-Franse wetenschapper. Ze was **de eerste vrouw** die ooit een **Nobelprijs** kreeg. En de eerste persoon met **2 verschillende Nobelprijzen**." },
@@ -363,12 +363,12 @@ const steps = [
       { q: "Wie ontwikkelde **wisselstroom (AC)**?", options: ["Nikola Tesla","Edison","Curie","Bell"], answer: 0, wrongHints: [null, "DC.", "Niet.", "Telefoon."] },
       { q: "Wie ontdekten de **DNA-structuur** (samen)?", options: ["Watson + Crick","Einstein","Newton","Galileo"], answer: 0, wrongHints: [null, "Niet biologie.", "Niet.", "Niet."] },
       { q: "Wie was bekend van **chimpansee-onderzoek**?", options: ["Jane Goodall","Curie","Newton","Einstein"], answer: 0, wrongHints: [null, "Niet biologie.", "Niet.", "Niet."] },
-      { q: "Wie bedacht de **telefoon**?", options: ["Alexander Graham Bell","Edison","Tesla","Newton"], answer: 0, wrongHints: [null, "Andere uitvindingen.", "Wisselstroom.", "Niet."] },
+      { q: "Wie bedacht de **telefoon**?", options: ["Alexander Graham Bell", "Thomas Alva Edison", "Guglielmo Marconi", "Alessandro Volta"], answer: 0, wrongHints: [null, "Edison bedacht andere dingen, zoals de gloeilamp.", "Marconi werkte aan de radio, zonder draden.", "Volta maakte de eerste batterij."] },
       { q: "Wie kraakte de **enigma-code** in WO2?", options: ["Alan Turing","Einstein","Curie","Newton"], answer: 0, wrongHints: [null, "Einstein deed natuurkunde, niet codekraken.", "Curie was scheikundige, geen codekraker.", "Newton leefde ruim 200 jaar vóór WO2."] },
       { q: "Wie was de **eerste mens op de maan**?", options: ["Neil Armstrong","Yuri Gagarin","Buzz Aldrin","Curie"], answer: 0, wrongHints: [null, "Eerste in ruimte.", "Met Armstrong, niet eerste.", "Niet."] },
       { q: "Wie schreef *Origin of Species*?", options: ["Charles Darwin","Newton","Einstein","Curie"], answer: 0, wrongHints: [null, "Newton = natuurkunde + zwaartekracht.", "Einstein = relativiteit, natuurkunde.", "Curie = radioactiviteit."] },
       { q: "Wie ontwikkelde de **fiets** (eerste vorm)?", options: ["Karl Drais","Edison","Tesla","Newton"], answer: 0, wrongHints: [null, "Edison = gloeilamp + fonograaf.", "Tesla = wisselstroom + elektriciteit.", "Newton = zwaartekracht, geen voertuig."] },
-      { q: "Welke NL-er ontdekte **micro-organismen** met microscoop?", options: ["Anton van Leeuwenhoek","Huygens","Erasmus","Boyan Slat"], answer: 0, wrongHints: [null, "Astronoom.", "Filosoof.", "Plastic uit zee."] },
+      { q: "Welke NL-er ontdekte **micro-organismen** met microscoop?", options: ["Anton van Leeuwenhoek", "Christiaan Huygens", "Desiderius Erasmus", "Hendrik Antoon Lorentz"], answer: 0, wrongHints: [null, "Huygens keek vooral naar de sterren en planeten.", "Erasmus was een filosoof, geen onderzoeker met een microscoop.", "Lorentz was een natuurkundige, rond het jaar 1900."] },
       { q: "Wie ontwierp de **slingerklok**?", options: ["Christiaan Huygens","Newton","Leeuwenhoek","Erasmus"], answer: 0, wrongHints: [null, "Niet uurwerk.", "Microscoop.", "Filosofie."] },
       { q: "Wat was het vakgebied van Marie **Curie**?", options: ["Radioactiviteit","Astronomie","Biologie","Wiskunde"], answer: 0, wrongHints: [null, "Astronomie = sterren, ander vakgebied.", "Biologie = leven (Darwin).", "Wiskunde = getallen, geen lab-werk."] },
     ],

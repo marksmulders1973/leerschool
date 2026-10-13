@@ -72,7 +72,7 @@ const steps = [
         q: "Wat is het heilige boek van het christendom?",
         options: ["Koran", "Bijbel", "Tora", "Veda"],
         answer: 1,
-        wrongHints: [null, null, "Tora is wel ÉÉN deel van de christelijke Bijbel (Oude Testament) — maar niet het hele boek.", null],
+        wrongHints: [null, null, "De Tora hoort bij het jodendom. Christenen lezen die verhalen ook, maar hun heilige boek is groter. Hoe heet dat?", null],
         explanation: "**Bijbel** = het heilige boek van het christendom. Bestaat uit Oude Testament (gedeeld met jodendom, ~39 boeken) + Nieuwe Testament (specifiek christelijk, ~27 boeken over Jezus + zijn leerlingen).",
         uitlegPad: compact(
           "Boeken-tabel: BIJBEL = christendom. KORAN = islam. TORA/TENACH = jodendom. VEDA = hindoeïsme. TRIPITAKA = boeddhisme.",
@@ -168,7 +168,7 @@ const steps = [
       },
       {
         q: "Wie was Siddhartha Gautama (later bekend als Boeddha)?",
-        options: ["Indiase prins die verlichting zocht en stichter van het boeddhisme werd", "Egyptische farao die een grote piramide liet bouwen", "Romeinse keizer die het christendom toestond", "Chinese filosoof die het taoïsme begon"],
+        options: ["Indiase prins die het boeddhisme stichtte", "Egyptische farao die een piramide liet bouwen", "Romeinse keizer die het christendom toestond", "Chinese filosoof die het taoïsme begon"],
         answer: 0,
         wrongHints: [null, "Boeddha was Indiaas, niet Egyptisch.", "Boeddha was geen Romein (~5 eeuwen vóór Romeinse keizerrijk).", "Lao Tzu was Chinese filosoof (taoïsme) — niet boeddhisme."],
         explanation: "**Siddhartha Gautama** (~563-483 v.Chr.) = Indiaas/Nepalese prins. Verliet zijn paleis om antwoord te zoeken op het lijden. Mediteerde onder bodhi-boom en bereikte 'verlichting' (=Boeddha). Onderwees het 8-voudige pad.",

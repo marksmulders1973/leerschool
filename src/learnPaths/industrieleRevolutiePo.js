@@ -49,9 +49,9 @@ const steps = [
       },
       {
         q: "**Vóór** de Industriële Revolutie — hoe werkten mensen meestal?",
-        options: ["Boer of ambachtsman thuis", "In fabriek", "Computer", "Op kantoor"],
+        options: ["Boer of ambachtsman thuis", "In een grote fabriek", "Achter een computer", "Op een kantoor in de stad"],
         answer: 0,
-        wrongHints: [null, "Bestond nog niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Fabrieken kwamen pas mét de Industriële Revolutie.", "Computers bestonden nog lang niet.", "Kantoorbanen kwamen pas veel later."],
       },
       {
         q: "Welk **tijdvak** is dit?",
@@ -83,9 +83,9 @@ const steps = [
       },
       {
         q: "Wat hielp de **start**?",
-        options: ["Steenkool + ijzer in Engeland + kapitaal", "Goed weer", "Alleen geluk", "Religie"],
+        options: ["Steenkool, ijzer en geld in Engeland", "Goed weer en veel zon in Engeland", "Alleen geluk van een paar uitvinders", "Een nieuwe religie in Engeland"],
         answer: 0,
-        wrongHints: [null, "Het weer was niet de oorzaak.", "Niet enkel.", "Niet hoofdfactor."],
+        wrongHints: [null, "Het weer was niet de oorzaak.", "Geluk alleen bouwt geen fabrieken.", "Geloof was niet de hoofdreden."],
       },
     ],
   },
@@ -124,9 +124,9 @@ const steps = [
       },
       {
         q: "Wat is een **belangrijk** kenmerk van stoommachine?",
-        options: ["Krachtbron onafhankelijk van rivier/wind", "Werkt op zon", "Werkt op gas", "Werkt op spierkracht"],
+        options: ["Werkt zonder rivier of wind", "Werkt alleen op zonlicht", "Werkt alleen op aardgas", "Werkt op spierkracht van paarden"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet specifiek.", "Wat wordt er in de ketel verhit?"],
+        wrongHints: [null, "Wat wordt er in de ketel verhit?", "Wat wordt er in de ketel verhit?", "Wat wordt er in de ketel verhit?"],
       },
       {
         q: "Eerste **NL spoorlijn**?",
@@ -177,9 +177,9 @@ const steps = [
       },
       {
         q: "Wat is de **bourgeoisie**?",
-        options: ["Rijke burgers / fabriekseigenaren", "Boeren", "Adel", "Arbeiders"],
+        options: ["Rijke burgers en fabrieksbazen", "Boeren op het platteland", "De adel met grote kastelen", "Arbeiders in de fabrieken"],
         answer: 0,
-        wrongHints: [null, "Eerdere groep.", "Eerdere groep.", "Proletariaat."],
+        wrongHints: [null, "Eerdere groep.", "Eerdere groep.", "Arbeiders heten het proletariaat."],
         uitlegPad: {
           stappen: [
             { titel: "Nieuwe rijke klasse", tekst: "**Bourgeoisie** is een Frans woord voor de **rijke burgerij** — fabriekseigenaren, kooplieden, dokters, bankiers, advocaten. Niet adellijk geboren, maar **zelf rijk geworden** door handel of fabrieken." },
@@ -278,9 +278,9 @@ const steps = [
     checks: [
       {
         q: "Waarom **later** NL?",
-        options: ["Geen steenkool/ijzer + handel-focus", "Te veel oorlog", "Te koud", "Te weinig mensen"],
+        options: ["Weinig steenkool, veel handel", "Te veel oorlog in die tijd", "Het was te koud in Nederland", "Er woonden te weinig mensen"],
         answer: 0,
-        wrongHints: [null, "NL was in die tijd vrij rustig.", "Geen reden.", "Er woonden genoeg mensen."],
+        wrongHints: [null, "NL was in die tijd vrij rustig.", "Het klimaat was niet de reden.", "Er woonden genoeg mensen."],
       },
       {
         q: "Welke industrie in **Twente**?",
@@ -306,26 +306,26 @@ const steps = [
     title: "Eind-toets — industriële revolutie mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
-      { q: "**Industriële Revolutie** ging vooral over?", options: ["Machines + fabrieken", "Computers", "Schepen", "Oorlog"], answer: 0, wrongHints: [null, "Veel later.", "Niet primair.", "Niet."] },
+      { q: "**Industriële Revolutie** ging vooral over?", options: ["Machines + fabrieken", "Computers en internet", "Schepen en zeereizen", "Oorlog en soldaten"], answer: 0, wrongHints: [null, "Veel later.", "Schepen waren er al veel eerder.", "Het ging niet om vechten."] },
       { q: "Stoommachine **verbeterd** door?", options: ["James Watt", "Edison", "Marx", "Ford"], answer: 0, wrongHints: [null, "Gloeilamp.", "Filosoof.", "Auto."] },
       { q: "**Kinderarbeid** verboden in NL onder?", options: ["12 jaar", "Geen wet", "16 jaar", "8 jaar"], answer: 0, wrongHints: [null, "Wel.", "Iets later.", "Hoger."] },
       { q: "**Tijdvak** waarin dit valt?", options: ["Burgers en stoommachines", "Grieken en Romeinen", "Ontdekkers en hervormers", "Regenten en vorsten"], answer: 0, wrongHints: [null, "Te vroeg.", "Te vroeg.", "Iets eerder."] },
       { q: "Wat is **bourgeoisie**?", options: ["Rijke burgers", "Boeren", "Adel", "Arbeiders"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Proletariaat."] },
       { q: "**Philips** start in?", options: ["1891", "1700", "2000", "1950"], answer: 0, wrongHints: [null, "Te vroeg.", "Te laat.", "Te laat."] },
       { q: "**Industriële Revolutie** begon in welk land?", options: ["Engeland","NL","Frankrijk","Duitsland"], answer: 0, wrongHints: [null, "Veel later.", "Later.", "Later."] },
-      { q: "Wat is **urbanisatie**?", options: ["Mensen verhuizen platteland → stad","Andersom","Nieuwe wegen aanleggen","Boeren op het platteland helpen"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Het gaat om waar mensen wonen.", "Het Latijnse 'urbs' betekent stad."] },
+      { q: "Wat is **urbanisatie**?", options: ["Mensen verhuizen platteland → stad","Mensen verhuizen stad → platteland","Nieuwe wegen aanleggen in het land","Boeren op het platteland helpen"], answer: 0, wrongHints: [null, "Let op de richting: waar gingen de mensen naartoe?", "Het gaat om waar mensen wonen.", "Het Latijnse 'urbs' betekent stad."] },
       { q: "Wat doet een **spoorweg**?", options: ["Treinen + goederen verplaatsen","Wegen onderhouden","Schepen laten varen","Stroom leveren aan huizen"], answer: 0, wrongHints: [null, "Niet primair.", "Dat gaat over water.", "Denk aan rails."] },
       { q: "Eerste NL-spoorlijn was?", options: ["Amsterdam-Haarlem","Den Haag-Rotterdam","Utrecht-Arnhem","Groningen-Zwolle"], answer: 0, wrongHints: [null, "Andere route.", "Die kwam later.", "Die kwam later."] },
       { q: "Wat zijn **vakbonden**?", options: ["Organisaties voor werknemers-rechten","Organisaties van fabriekseigenaren","Clubs voor sport","Winkels voor gereedschap"], answer: 0, wrongHints: [null, "Andere kant.", "Het gaat om werk.", "Geen winkel."] },
       { q: "**Twentse textiel** was vroeg NL-industrie in?", options: ["Enschede / Almelo","Amsterdam","Rotterdam","Maastricht"], answer: 0, wrongHints: [null, "Niet primair.", "Niet.", "Limburg: vooral mijnbouw."] },
       { q: "Welke energiebron werd dominant in Industriële Revolutie?", options: ["Steenkool","Wind","Zon","Aardgas"], answer: 0, wrongHints: [null, "Eerder.", "Later.", "Later (20e eeuw)."] },
-      { q: "Wat is **kolonisatie** in deze tijd?", options: ["Andere landen onder controle nemen voor grondstoffen","Vrede","Handel drijven met gelijke partners","Nieuwe steden bouwen in eigen land"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Was het wel gelijk?", "Het gaat om andere landen."] },
+      { q: "Wat is **kolonisatie** in deze tijd?", options: ["Andere landen veroveren voor grondstoffen","Vrede sluiten met andere landen","Handel drijven met gelijke partners","Nieuwe steden bouwen in eigen land"], answer: 0, wrongHints: [null, "Ging het er vreedzaam aan toe?", "Was het wel gelijk?", "Het gaat om andere landen."] },
       { q: "**Karl Marx** schreef over?", options: ["Arbeiders en kapitalisme","Sterrenkunde","Evolutie van dieren","Ontdekkingsreizen"], answer: 0, wrongHints: [null, "Dat deed bijvoorbeeld Galileï.", "Dat was het onderwerp van Charles Darwin.", "Die waren al eeuwen eerder. Marx keek naar de fabrieken van zijn eigen tijd."] },
       { q: "Welke transportuitvinding kwam in de Industriële Revolutie?", options: ["Stoomtrein + stoomschip","Ruimteraket","Straalvliegtuig","Internet"], answer: 0, wrongHints: [null, "Veel later (20e eeuw).", "Veel later.", "Veel later."] },
-      { q: "Wat zijn **slechte gevolgen** Industriële Revolutie?", options: ["Vervuiling + lange werkdagen","Minder steden","Te veel vrije tijd","Duurdere kleding"], answer: 0, wrongHints: [null, "Steden groeiden juist.", "Tegenovergesteld.", "Kleding werd juist goedkoper."] },
-      { q: "Wat zijn **goede gevolgen**?", options: ["Betere voeding, kleding goedkoper, vooruitgang","Schonere lucht in de steden","Te veel oorlog","Meteen kortere werkdagen"], answer: 0, wrongHints: [null, "Fabrieken gaven juist veel rook.", "Niet hoofdgevolg.", "Werkdagen waren eerst juist heel lang."] },
+      { q: "Wat zijn **slechte gevolgen** Industriële Revolutie?", options: ["Vervuiling + lange werkdagen","Minder en kleinere steden","Veel te veel vrije tijd","Duurdere kleding en eten"], answer: 0, wrongHints: [null, "Steden groeiden juist.", "Hadden arbeiders toen veel vrije tijd?", "Kleding werd juist goedkoper."] },
+      { q: "Wat zijn **goede gevolgen**?", options: ["Goedkopere kleding en betere voeding","Schonere lucht in de grote steden","Meer oorlogen tussen landen","Meteen kortere werkdagen voor iedereen"], answer: 0, wrongHints: [null, "Fabrieken gaven juist veel rook.", "Is oorlog een goed gevolg?", "Werkdagen waren eerst juist heel lang."] },
       { q: "Wanneer kwam **NL-industrialisering**?", options: ["~1850-1900","1500","2000","~1650-1700"], answer: 0, wrongHints: [null, "Te vroeg.", "Te laat.", "Te vroeg — dat is de Gouden Eeuw."] },
-      { q: "Wat is **massa-productie**?", options: ["Veel producten snel maken met machines","1 product","Producten alleen met de hand maken","Producten repareren"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Wat doen machines?", "Het gaat om maken."] },
+      { q: "Wat is **massa-productie**?", options: ["Veel producten snel maken met machines","Eén product heel precies maken","Producten alleen met de hand maken","Kapotte producten weer repareren"], answer: 0, wrongHints: [null, "Wat betekent het woord 'massa'?", "Wat doen machines?", "Het gaat om maken."] },
     ],
   },
 ];

@@ -742,7 +742,7 @@ const steps = [
         q: "Welk gewicht is het **zwaarst**?",
         options: ["2 kg", "1800 g", "1950 g", "1500 g"],
         answer: 0,
-        wrongHints: [null, "Reken 2 kg om naar gram en vergelijk.", null, null],
+        wrongHints: [null, "Zet eerst alles in dezelfde eenheid (gram) en vergelijk dan.", null, null],
         uitlegPad: {
           stappen: [
             {
@@ -1443,7 +1443,7 @@ const steps = [
         q: "Welke tijd duurt het **langst**?",
         options: ["2 uur", "100 minuten", "1,5 uur", "110 minuten"],
         answer: 0,
-        wrongHints: [null, "Reken 2 uur om naar minuten en vergelijk.", null, null],
+        wrongHints: [null, "Zet eerst alles om naar minuten en vergelijk dan.", null, null],
         uitlegPad: {
           stappen: [
             {

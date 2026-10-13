@@ -24,9 +24,9 @@ const steps = [
       },
       {
         q: "Wat is een **farao**?",
-        options: ["Koning + god van Egypte", "Soldaat", "Boer", "Priester"],
+        options: ["Koning + god van Egypte", "Soldaat + legerleider", "Rijke boer langs de Nijl", "Schrijver van hiërogliefen"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet.", "Apart."],
+        wrongHints: [null, "Een farao had wel een leger, maar wat was hij zelf?", "Boeren werkten voor de farao. Wie was hij dan?", "Schrijvers werkten voor de farao. Wie was hij dan?"],
       },
       {
         q: "Wie was **Toetanchamon**?",
@@ -57,7 +57,7 @@ const steps = [
         q: "Wie was **leraar** van Alexander de Grote?",
         options: ["Aristoteles", "Socrates", "Plato", "Pythagoras"],
         answer: 0,
-        wrongHints: [null, "Socrates leefde eerder — hij was de leraar van Plato. Wie kwam twee 'generaties' later?", "Plato was de leraar van Aristoteles — wie was dan de leraar van Alexander?", "Pythagoras was een wiskundige die veel eerder leefde."],
+        wrongHints: [null, "Socrates leefde eerder — hij was de leraar van Plato. Wie kwam twee 'generaties' later?", "Plato was zelf ook leraar. Wie was zijn beroemdste leerling?", "Pythagoras was een wiskundige die veel eerder leefde."],
       },
       {
         q: "Wie veroverde **Perzië + Egypte + deel India**?",
@@ -142,7 +142,7 @@ const steps = [
       },
       {
         q: "Wat zijn de **Olympische Spelen** oorsprong?",
-        options: ["Griekse stad Olympia, sinds 776 v.Chr.", "Frankrijk 1900", "China 200 v.Chr.", "Rusland 1850"],
+        options: ["Griekenland, rond 776 v.Chr.", "Frankrijk, rond 1900 n.Chr.", "China, rond 200 v.Chr.", "Rusland, rond 1850 n.Chr."],
         answer: 0,
         wrongHints: [null, "Niet — moderne OS sinds 1896 in Athene, maar oude OS veel ouder.", "Niet — Chinese sport-cultuur anders.", "Niet — geen Russische oorsprong."],
         uitlegPad: {
@@ -200,7 +200,7 @@ const steps = [
       { q: "Wat is een **piramide**?", options: ["Grafmonument voor een farao","Tempel voor goden","Woonhuis van de farao","Opslagplaats voor graan"], answer: 0, wrongHints: [null, "Niet primair.", "De farao woonde er niet tijdens zijn leven — wanneer kwam hij er wel?", "Graan werd elders bewaard — wie lag er binnenin?"] },
       { q: "**Hiërogliefen** zijn?", options: ["Egyptisch schrift","Modern alfabet","Romeinse cijfers","Grieks schrift"], answer: 0, wrongHints: [null, "Tegengestelde.", "Romeinse cijfers zijn letters als I, V en X — van welk volk zijn hiërogliefen?", "Grieks schrift gebruikt letters, geen plaatjes — en kwam uit Griekenland."] },
       { q: "Wie ontcijferde de **Rosetta-steen**?", options: ["Champollion","Caesar","Cleopatra","Erasmus"], answer: 0, wrongHints: [null, "Romeinen.", "Wel Egyptisch maar niet ontcijferaar.", "Niet."] },
-      { q: "Wie was **Julius Caesar**?", options: ["Romeinse veldheer en dictator","Egyptische farao","Griekse filosoof","Macedonische koning"], answer: 0, wrongHints: [null, "Hij had wel iets met Cleopatra, maar was zelf geen Egyptenaar.", "Hij was geen denker maar een legeraanvoerder — uit welke stad?", "Dat was Alexander de Grote — Caesar kwam uit een andere stad."] },
+      { q: "Wie was **Julius Caesar**?", options: ["Romeinse veldheer en dictator", "Egyptische farao aan de Nijl", "Griekse filosoof en wiskundige", "Macedonische koning en veroveraar"], answer: 0, wrongHints: [null, "Hij had wel iets met Cleopatra, maar was zelf geen Egyptenaar.", "Hij was geen denker maar een legeraanvoerder — uit welke stad?", "Dat was Alexander de Grote — Caesar kwam uit een andere stad."] },
       { q: "**Augustus** was eerste?", options: ["Romeinse keizer","Egyptische farao","Griekse filosoof","Romeinse koning"], answer: 0, wrongHints: [null, "Egypte.", "Augustus was geen denker uit Griekenland.", "De eerste koning van Rome was volgens de legende Romulus — Augustus kwam veel later."] },
       { q: "**Socrates** was een?", options: ["Griekse filosoof","Romeinse keizer","Egyptische farao","Romeinse veldheer"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Socrates voerde geen leger aan — hij stelde vooral vragen."] },
       { q: "Wie was leerling van Plato?", options: ["Aristoteles","Caesar","Cleopatra","Pythagoras"], answer: 0, wrongHints: [null, "Romein.", "Egyptisch.", "Pythagoras leefde al vóór Plato — kan hij dan zijn leerling zijn?"] },

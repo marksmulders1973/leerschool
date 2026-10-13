@@ -21,9 +21,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **energie**?",
-        options: ["Wat nodig is om iets te laten werken", "Voedsel", "Een soort stof", "Een soort licht"],
+        options: ["Wat nodig is om iets te laten werken", "Het eten dat je elke dag opeet", "Een stof die je kunt vastpakken", "Het licht dat uit een lamp komt"],
         answer: 0,
-        wrongHints: [null, "Voedsel bevat energie, maar is het zelf niet.", "Niet primair.", "Licht is maar één vorm van energie."],
+        wrongHints: [null, "Voedsel bevat energie, maar is het zelf niet.", "Energie kun je niet vastpakken.", "Licht is maar één vorm van energie."],
       },
       {
         q: "Welke is **fossiel**?",
@@ -55,9 +55,9 @@ const steps = [
       },
       {
         q: "Waarom heten ze **fossiele** brandstoffen?",
-        options: ["Komen uit dode planten/dieren van lang geleden", "Werken op fossielen", "Zijn modern", "Niet bekend"],
+        options: ["Komen uit dode planten/dieren van lang geleden", "Ze worden gemaakt van stenen en zand", "Ze zijn pas kort geleden uitgevonden", "Niemand weet waar ze vandaan komen"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Tegenovergesteld.", "Wel."],
+        wrongHints: [null, "Stenen en zand branden niet. Waar komen ze dan wél vandaan?", "Tegenovergesteld — ze zijn juist heel oud.", "Wetenschappers weten het wél."],
       },
       {
         q: "Kun je **energie maken**?",
@@ -226,9 +226,9 @@ const steps = [
     checks: [
       {
         q: "Hoe werkt **kernenergie**?",
-        options: ["Splijten van uranium-atomen", "Verbranden van olie", "Wind invangen", "Zon vangen"],
+        options: ["Splijten van uranium-atomen", "Verbranden van olie en kolen", "Invangen van wind met wieken", "Opvangen van zonlicht met panelen"],
         answer: 0,
-        wrongHints: [null, "Fossiel.", "Wind.", "Zon."],
+        wrongHints: [null, "Dat is fossiele energie.", "Dat is windenergie.", "Dat is zonne-energie."],
         uitlegPad: {
           stappen: [
             { titel: "Kernsplijting = atomen breken", tekst: "**Kernenergie** komt uit het **splijten van uranium-atomen**. Wetenschappers schieten een mini-deeltje (neutron) op een uranium-atoom → het atoom **breekt in tweeën** + er komt **enorm veel warmte** vrij." },
@@ -292,13 +292,13 @@ const steps = [
       },
       {
         q: "Wat bedoelen we met **energiearmoede**?",
-        options: ["Gezinnen die energie niet kunnen betalen", "Geen elektriciteit", "Veel besparen", "Gratis energie voor iedereen"],
+        options: ["Gezinnen die energie niet kunnen betalen", "Huizen zonder aansluiting op het stroomnet", "Gezinnen die heel veel energie besparen", "Gratis energie voor alle gezinnen"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Tegenovergesteld.", "Dat is juist het omgekeerde van armoede."],
+        wrongHints: [null, "In Nederland heeft bijna elk huis stroom. Waar gaat 'armoede' over?", "Besparen is een keuze — armoede niet.", "Dat is juist het omgekeerde van armoede."],
       },
       {
         q: "**Grootste energie-post** in huishouden?",
-        options: ["Verwarming en warm water", "Verlichting", "Wifi", "Tv"],
+        options: ["Verwarming en warm water", "Lampen en verlichting", "Wifi en de computer", "Tv en spelcomputer"],
         answer: 0,
         wrongHints: [null, "Klein.", "Heel klein.", "Klein."],
       },
@@ -313,20 +313,20 @@ const steps = [
       { q: "Wat is **uranium** voor?", options: ["Kernenergie", "Olie", "Gas", "Niets"], answer: 0, wrongHints: [null, "Fossiel.", "Fossiel.", "Wel."] },
       { q: "Wat is **CCS**?", options: ["CO₂ afvangen + opslaan", "Een soort bus", "Een stoommachine", "Een zonnepaneel"], answer: 0, wrongHints: [null, "Geen vervoermiddel — denk aan het klimaat.", "Geen machine — denk aan het klimaat.", "Een zonnepaneel maakt stroom; CCS doet iets anders."] },
       { q: "**Borssele** is wat?", options: ["NL kerncentrale", "Provincie", "Bedrijf", "Politicus"], answer: 0, wrongHints: [null, "Borssele ligt IN een provincie (Zeeland).", "Geen merknaam — een specifieke locatie.", "Geen persoon — een gebouw."] },
-      { q: "**Energie maken** = ?", options: ["Bestaat niet — alleen omzetten", "Uit niets", "Door wetenschap", "Door pc"], answer: 0, wrongHints: [null, "Tegen de natuurwet.", "Wetenschap ontdekt + zet om — maakt geen nieuwe energie.", "Een pc VERBRUIKT energie."] },
+      { q: "**Energie maken** = ?", options: ["Bestaat niet — alleen omzetten", "Kan gewoon — uit het niets", "Kan — wetenschappers doen dat", "Kan — een computer doet dat"], answer: 0, wrongHints: [null, "Tegen de natuurwet.", "Wetenschap ontdekt + zet om — maakt geen nieuwe energie.", "Een pc VERBRUIKT energie."] },
       { q: "Welke is **hernieuwbaar**?", options: ["Zon","Aardolie","Aardgas","Steenkool"], answer: 0, wrongHints: [null, "Pomp je op uit de grond — raakt op.", "Eindig — Groningen-veld sloot.", "Uit oude mijnen — wordt niet aangevuld."] },
       { q: "Welke energie levert een **windturbine**?", options: ["Elektriciteit","Olie","Aardgas","Kolen"], answer: 0, wrongHints: [null, "Olie pomp je op — geen wind.", "Gas komt uit de grond, niet uit de lucht.", "Kolen graaf je — een windmolen graaft niet."] },
-      { q: "Wat zit er in **zonnepanelen**?", options: ["Cellen die licht → stroom omzetten","Olie","Kolen","Water"], answer: 0, wrongHints: [null, "Een zonnepaneel verbrandt niets.", "Geen brandstof binnenin.", "Geen vloeistof — vaste cellen op het glas."] },
+      { q: "Wat zit er in **zonnepanelen**?", options: ["Cellen die licht → stroom omzetten", "Olie die door de zon verbrandt", "Kolen die warm worden in de zon", "Batterijen die stroom bewaren"], answer: 0, wrongHints: [null, "Een zonnepaneel verbrandt niets.", "Geen brandstof binnenin.", "Batterijen bewaren stroom — maar wat maakt die stroom?"] },
       { q: "Welk type elektriciteit uit een **stopcontact** in NL?", options: ["230 V wisselstroom", "12 V gelijkstroom", "230 V gelijkstroom", "12 V wisselstroom"], answer: 0, wrongHints: [null, "Dat is ongeveer een auto-accu.", "Gelijkstroom komt uit een batterij.", "Veel te weinig spanning voor een stopcontact."] },
-      { q: "Wat is een **kerncentrale**?", options: ["Maakt stroom met kernsplijting", "Wind", "Zon", "Gebruikt steenkool"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Steenkool verbrand je in een kolencentrale."] },
+      { q: "Wat is een **kerncentrale**?", options: ["Maakt stroom met kernsplijting", "Maakt stroom met windmolens", "Maakt stroom met zonnepanelen", "Maakt stroom met steenkool"], answer: 0, wrongHints: [null, "Dat is een windpark.", "Dat is een zonnepark.", "Steenkool verbrand je in een kolencentrale."] },
       { q: "Wat doet een **batterij**?", options: ["Slaat energie op", "Maakt elektriciteit uit niets", "Verwarmt", "Maakt licht"], answer: 0, wrongHints: [null, "Niet — opslag.", "Niet primair.", "Een lamp maakt licht; de batterij levert de energie."] },
       { q: "Welke energie uit **gas-fornuis**?", options: ["Warmte", "Elektrisch", "Mechanisch", "Magnetisch"], answer: 0, wrongHints: [null, "Er gaat geen stroom door de gasvlam.", "Er beweegt niets dat iets aandrijft.", "Er zit geen magneet in een gasfornuis."] },
-      { q: "Wat is **isolatie** thuis?", options: ["Materiaal dat warmte vasthoudt", "Verwarming", "Een soort zonnepaneel", "Reclame"], answer: 0, wrongHints: [null, "Andere functie.", "Isolatie maakt geen energie.", "Niet."] },
+      { q: "Wat is **isolatie** thuis?", options: ["Materiaal dat warmte vasthoudt", "Apparaat dat je huis verwarmt", "Paneel dat stroom maakt uit zon", "Meter die je verbruik bijhoudt"], answer: 0, wrongHints: [null, "Dat is de verwarming — isolatie maakt zelf geen warmte.", "Isolatie maakt geen energie.", "Dat is een energiemeter."] },
       { q: "Welke energie heeft **stromend water** (rivier)?", options: ["Bewegingsenergie", "Warmte", "Licht", "Elektrische energie"], answer: 0, wrongHints: [null, "Niet primair.", "Niet.", "Pas in een waterkrachtcentrale wordt het stroom."] },
-      { q: "Wat is een **kWh**?", options: ["Eenheid voor elektrisch verbruik", "Eenheid gewicht", "Eenheid tijd", "Eenheid temperatuur"], answer: 0, wrongHints: [null, "Gewicht meet je in kilogram.", "Tijd alleen meet je in uren of seconden.", "Temperatuur meet je in graden."] },
+      { q: "Wat is een **kWh**?", options: ["Eenheid voor elektrisch verbruik", "Eenheid voor gewicht van spullen", "Eenheid voor hoe lang iets duurt", "Eenheid voor hoe warm het is"], answer: 0, wrongHints: [null, "Gewicht meet je in kilogram.", "Tijd alleen meet je in uren of seconden.", "Temperatuur meet je in graden."] },
       { q: "Welke energiebron is **gratis** maar afhankelijk van weer?", options: ["Zon + wind","Olie","Kolen","Gas"], answer: 0, wrongHints: [null, "Moet je oppompen + raffineren.", "Moet je delven + transporteren.", "Via pijpleiding of importeren."] },
       { q: "Welk percentage NL-stroom uit duurzaam (2024+)?", options: ["~50%+","5%","100%","20%"], answer: 0, wrongHints: [null, "Te weinig.", "Niet helemaal.", "Te weinig."] },
-      { q: "Welke energiebron heeft de **laagste CO₂-uitstoot**?", options: ["Duurzame energie","Kolen","Olie","Gas"], answer: 0, wrongHints: [null, "Hoogste.", "Hoog.", "Lager dan kolen, niet duurzaam."] },
+      { q: "Welke energiebron heeft de **laagste CO₂-uitstoot**?", options: ["Windenergie", "Steenkool", "Aardolie", "Aardgas"], answer: 0, wrongHints: [null, "Hoogste.", "Hoog.", "Lager dan kolen, niet duurzaam."] },
       { q: "Welke energievorm **zit in voedsel**?", options: ["Chemische energie", "Elektrisch", "Magnetisch", "Geluidsenergie"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Voedsel geeft geen geluid af."] },
     ],
   },

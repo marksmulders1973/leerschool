@@ -673,7 +673,7 @@ const steps = [
         q: "Een olifant 🐘 is groot. Een muis 🐭 is juist...",
         options: ["klein", "groot", "rood", "nat"],
         answer: 0,
-        wrongHints: [null, "Kijk naar de plaatjes: past een muis in jouw hand? En een olifant?", "Gaat de vraag over kleur? Kijk nog eens goed wat er gevraagd wordt.", "Gaat de vraag over water? Denk aan hoe groot of klein een muis is."],
+        wrongHints: [null, 'Kijk naar de plaatjes: past een muis in jouw hand? En een olifant?', 'Gaat de vraag over kleur? Kijk nog eens goed wat er gevraagd wordt.', 'Gaat de vraag over water? Kijk naar de olifant en de muis: wat is het verschil?'],
         uitlegPad: {
           stappen: [{ titel: "Tegendeel", tekst: "Groot en **klein** zijn elkaars **tegendeel** — net als warm ☀️ en koud ❄️. Een olifant 🐘 is heel groot, een muis 🐭 past in je hand: die is **klein**!" }],
           niveaus: {

@@ -729,7 +729,7 @@ const steps = [
       },
       {
         q: "Wanneer **kun je geen gemiddelde** uitrekenen maar wel een **modus**?",
-        options: ["Bij kleuren / woorden / categorieën", "Bij hele getallen", "Bij decimale getallen", "Bij negatieve getallen"],
+        options: ["Bij kleuren / woorden / categorieën", "Bij hele getallen zoals 3 en 7", "Bij decimale getallen zoals 2,5", "Bij negatieve getallen zoals -4"],
         answer: 0,
         wrongHints: [null, "Bij hele getallen werkt gemiddelde gewoon.", "Bij decimale getallen werkt gemiddelde ook.", "Bij negatieve getallen werkt gemiddelde ook."],
       },

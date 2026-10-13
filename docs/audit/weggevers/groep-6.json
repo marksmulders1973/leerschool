@@ -1,0 +1,1682 @@
+[
+ {
+  "pad": "algoritmen-programmeren-po",
+  "file": "./algoritmenProgrammerenPo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een algoritme?",
+  "opties": [
+   "Stappenplan om iets op te lossen",
+   "Computer",
+   "Brood",
+   "Een soort rekenmachine"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "algoritmen-programmeren-po",
+  "file": "./algoritmenProgrammerenPo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wie was Edsger Dijkstra?",
+  "opties": [
+   "Nederlandse informaticus",
+   "Voetballer",
+   "Formule 1-coureur",
+   "Dichter"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "algoritmen-programmeren-po",
+  "file": "./algoritmenProgrammerenPo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is PageRank?",
+  "opties": [
+   "Google's pagina-rangschik-algoritme",
+   "Boekenlijst",
+   "Spel",
+   "Telefoon"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "algoritmen-programmeren-po",
+  "file": "./algoritmenProgrammerenPo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een variabele in code?",
+  "opties": [
+   "Opslagplaats met een naam en een waarde",
+   "Een herhaling van stappen",
+   "Een foutmelding",
+   "Een soort spelletje"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "algoritmen-programmeren-po",
+  "file": "./algoritmenProgrammerenPo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "H",
+  "q": "Wat is een algoritme?",
+  "opties": [
+   "Stappenplan",
+   "Spel",
+   "Computer",
+   "Een soort rekenmachine"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "algoritmen-programmeren-po",
+  "file": "./algoritmenProgrammerenPo.js",
+  "stap": 3,
+  "vraag": 9,
+  "soort": "L",
+  "q": "Wat is een algoritme?",
+  "opties": [
+   "Stappenplan om iets op te lossen",
+   "Een spel",
+   "Een soort rekenmachine",
+   "Een verhaal"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "algoritmen-programmeren-po",
+  "file": "./algoritmenProgrammerenPo.js",
+  "stap": 3,
+  "vraag": 13,
+  "soort": "L",
+  "q": "Wat is een if-else in code?",
+  "opties": [
+   "Beslissing: ALS X DAN Y, ANDERS Z",
+   "Een lus",
+   "Een variabele",
+   "Een foutmelding"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "algoritmen-programmeren-po",
+  "file": "./algoritmenProgrammerenPo.js",
+  "stap": 3,
+  "vraag": 16,
+  "soort": "L",
+  "q": "Wat is open source?",
+  "opties": [
+   "Code die iedereen mag zien + gebruiken",
+   "Code achter slot",
+   "Een computervirus",
+   "Reclame"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "algoritmen-programmeren-po",
+  "file": "./algoritmenProgrammerenPo.js",
+  "stap": 3,
+  "vraag": 17,
+  "soort": "L",
+  "q": "Wat is een functie in programmeren?",
+  "opties": [
+   "Stukje code dat een taak doet",
+   "Een herhaling van stappen",
+   "Een variabele",
+   "Een fout"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "algoritmen-programmeren-po",
+  "file": "./algoritmenProgrammerenPo.js",
+  "stap": 3,
+  "vraag": 19,
+  "soort": "L",
+  "q": "HTML is voor?",
+  "opties": [
+   "De structuur van websites",
+   "Apps bouwen",
+   "Spellen",
+   "Rekenen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "algoritmen-programmeren-po",
+  "file": "./algoritmenProgrammerenPo.js",
+  "stap": 3,
+  "vraag": 20,
+  "soort": "L",
+  "q": "Wat doet Google's PageRank-algoritme?",
+  "opties": [
+   "Webpagina's rangschikken op relevantie",
+   "Wachtwoorden kraken",
+   "Vertalen",
+   "E-mails versturen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "algoritmen-programmeren-po",
+  "file": "./algoritmenProgrammerenPo.js",
+  "stap": 3,
+  "vraag": 22,
+  "soort": "L",
+  "q": "Wat is een list/lijst in code?",
+  "opties": [
+   "Geordende verzameling items",
+   "Eén item",
+   "Een foutmelding",
+   "Functie"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "algoritmen-programmeren-po",
+  "file": "./algoritmenProgrammerenPo.js",
+  "stap": 3,
+  "vraag": 24,
+  "soort": "L",
+  "q": "Wat is AI (kunstmatige intelligentie)?",
+  "opties": [
+   "Software die patronen leert",
+   "Robot uit film",
+   "Een gewone rekenmachine",
+   "Reclame"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "algoritmen-programmeren-po",
+  "file": "./algoritmenProgrammerenPo.js",
+  "stap": 3,
+  "vraag": 27,
+  "soort": "L",
+  "q": "Wat is een stappenplan in code (samenvatting)?",
+  "opties": [
+   "Geordende stappen om probleem op te lossen",
+   "Reclame",
+   "Een foutmelding",
+   "Game"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "dienstregeling-roosters-po",
+  "file": "./dienstregelingRoostersPo.js",
+  "stap": 3,
+  "vraag": 7,
+  "soort": "H",
+  "q": "De bus vertrekt om 10:52 en de rit duurt 24 minuten. De film in de bioscoop begint om 11:20. Hoeveel minuten ben je te vroeg?",
+  "opties": [
+   "4 minuten",
+   "28 minuten",
+   "24 minuten",
+   "14 minuten"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "eetcultuur-nederland-po",
+  "file": "./eetcultuurNederlandPo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is Hollandse Nieuwe?",
+  "opties": [
+   "De eerste haring van het seizoen",
+   "Een soort kaas",
+   "Een nieuw soort brood",
+   "Een nieuwe aardappel"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "eetcultuur-nederland-po",
+  "file": "./eetcultuurNederlandPo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Bij geboorte baby eet je?",
+  "opties": [
+   "Beschuit met muisjes",
+   "Stamppot",
+   "Friet",
+   "Pizza"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "eetcultuur-nederland-po",
+  "file": "./eetcultuurNederlandPo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is vla?",
+  "opties": [
+   "Een zoet toetje, een soort pap",
+   "Vis",
+   "Soort brood",
+   "Kaas"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "eetcultuur-nederland-po",
+  "file": "./eetcultuurNederlandPo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is hagelslag?",
+  "opties": [
+   "Chocoladekorrels op brood",
+   "Een soort drop",
+   "Vis",
+   "Kaas"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "eetcultuur-nederland-po",
+  "file": "./eetcultuurNederlandPo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is rijsttafel?",
+  "opties": [
+   "Maaltijd met veel kleine Indonesische gerechten",
+   "Een Surinaams rijstgerecht",
+   "Een Japanse sushi-schotel",
+   "Een Chinese rijstsoep"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "eetcultuur-nederland-po",
+  "file": "./eetcultuurNederlandPo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is hagelslag?",
+  "opties": [
+   "Chocoladekorrels op brood",
+   "Vis",
+   "Vlees",
+   "Kaas"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "eetcultuur-nederland-po",
+  "file": "./eetcultuurNederlandPo.js",
+  "stap": 3,
+  "vraag": 8,
+  "soort": "L",
+  "q": "Welke drank drinken NL-kinderen vaak bij ontbijt?",
+  "opties": [
+   "Melk of jus d'orange",
+   "Bier",
+   "Koffie zwart",
+   "Wijn"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "eetcultuur-nederland-po",
+  "file": "./eetcultuurNederlandPo.js",
+  "stap": 3,
+  "vraag": 9,
+  "soort": "L",
+  "q": "Wat is Surinaamse roti?",
+  "opties": [
+   "Plat brood met kerrie-vulling",
+   "Een soort kaas",
+   "Een fruit",
+   "Soep"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "eetcultuur-nederland-po",
+  "file": "./eetcultuurNederlandPo.js",
+  "stap": 3,
+  "vraag": 11,
+  "soort": "L",
+  "q": "Wat zijn bitterballen?",
+  "opties": [
+   "Gefrituurde ragoutballetjes",
+   "Snoep",
+   "Vis",
+   "Fruit"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "feiten-details-opzoeken-po",
+  "file": "./feitenDetailsOpzoekenPo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat betekent 'scannen' bij het lezen van een tekst?",
+  "opties": [
+   "Met je ogen snel over de tekst glijden, op zoek naar je zoekwoord",
+   "Elke zin hardop en langzaam voorlezen",
+   "Een foto van de tekst maken",
+   "De tekst samenvatten in je eigen woorden"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "financiele-vorming-po",
+  "file": "./financieleVormingPo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat zijn de 3 functies van geld?",
+  "opties": [
+   "Ruilmiddel + rekeneenheid + spaarmiddel",
+   "Munt + biljet + digitaal",
+   "Sparen + lenen + uitgeven",
+   "Bank + crypto + cash"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "financiele-vorming-po",
+  "file": "./financieleVormingPo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Welk geld is digitaal?",
+  "opties": [
+   "Pinpas-saldo + Apple Pay",
+   "Munten",
+   "Biljetten",
+   "Goud"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "financiele-vorming-po",
+  "file": "./financieleVormingPo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is statiegeld?",
+  "opties": [
+   "Geld terug bij flessen inleveren",
+   "Belasting op cola",
+   "Spaargeld bank",
+   "Bonus"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "financiele-vorming-po",
+  "file": "./financieleVormingPo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "€0,25 statiegeld is voor:",
+  "opties": [
+   "Grote plastic fles (meer dan 1 liter)",
+   "Kleine plastic fles",
+   "Blikje",
+   "Niets"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "financiele-vorming-po",
+  "file": "./financieleVormingPo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Hoe leer je geld beheren?",
+  "opties": [
+   "Boekje bijhouden + doelen stellen",
+   "Alles uitgeven",
+   "Bij ouders vragen",
+   "Niet leren"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "financiele-vorming-po",
+  "file": "./financieleVormingPo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is rente?",
+  "opties": [
+   "Extra geld dat je krijgt over je spaargeld",
+   "Belasting",
+   "Boete",
+   "Korting"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "financiele-vorming-po",
+  "file": "./financieleVormingPo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Beste moment om te sparen?",
+  "opties": [
+   "Vooraf opzij zetten, niet wachten",
+   "Aan het einde van maand",
+   "Alleen als er over is",
+   "Nooit"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "financiele-vorming-po",
+  "file": "./financieleVormingPo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is 'wachten' als geldwijsheid-tip?",
+  "opties": [
+   "1 week wachten — wil je het dan nog?",
+   "Nooit kopen",
+   "Snel kopen",
+   "Geen tip"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "financiele-vorming-po",
+  "file": "./financieleVormingPo.js",
+  "stap": 3,
+  "vraag": 5,
+  "soort": "H",
+  "q": "In welke groep van de 50/30/20-regel hoort een busabonnement om naar school te reizen?",
+  "opties": [
+   "NODIG",
+   "LEUK",
+   "SPAREN",
+   "LENEN"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "financiele-vorming-po",
+  "file": "./financieleVormingPo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is BNPL?",
+  "opties": [
+   "Buy Now Pay Later — uitgesteld betalen",
+   "Korting bij online winkels",
+   "Belasting",
+   "Spaarproduct"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "financiele-vorming-po",
+  "file": "./financieleVormingPo.js",
+  "stap": 4,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wat betekent rood staan bij de bank?",
+  "opties": [
+   "Je hebt minder dan nul euro op je rekening",
+   "Je hebt extra veel gespaard",
+   "Je pinpas is kapot",
+   "Je hebt rente gekregen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "financiele-vorming-po",
+  "file": "./financieleVormingPo.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is rente?",
+  "opties": [
+   "Beloning voor sparen",
+   "Belasting",
+   "Korting",
+   "Boete"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "financiele-vorming-po",
+  "file": "./financieleVormingPo.js",
+  "stap": 5,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is statiegeld?",
+  "opties": [
+   "Geld terug bij flessen",
+   "Spaarrekening",
+   "Lening",
+   "Belasting"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "financiele-vorming-po",
+  "file": "./financieleVormingPo.js",
+  "stap": 5,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Hoe vermijd je impulsaankopen?",
+  "opties": [
+   "1 week wachten — wil je het dan nog?",
+   "Snel kopen voor korting",
+   "Lenen om te betalen",
+   "Vrienden vragen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "financiele-vorming-po",
+  "file": "./financieleVormingPo.js",
+  "stap": 5,
+  "vraag": 11,
+  "soort": "L",
+  "q": "Wat doe je als je iets duurs wilt kopen?",
+  "opties": [
+   "Sparen tot je het zelf kan betalen",
+   "Direct lenen",
+   "Vrienden vragen",
+   "Vergeten"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "financiele-vorming-po",
+  "file": "./financieleVormingPo.js",
+  "stap": 5,
+  "vraag": 14,
+  "soort": "L",
+  "q": "Schulden ontstaan als je?",
+  "opties": [
+   "Niet terugbetaalt wat je leende",
+   "Veel spaart",
+   "Niet uitgeeft",
+   "Statiegeld inlevert"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "financiele-vorming-po",
+  "file": "./financieleVormingPo.js",
+  "stap": 5,
+  "vraag": 15,
+  "soort": "L",
+  "q": "Influencer reclame heet?",
+  "opties": [
+   "Sponsored content / partnership",
+   "Eerlijke mening",
+   "Niet reclame",
+   "Belasting"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "financiele-vorming-po",
+  "file": "./financieleVormingPo.js",
+  "stap": 5,
+  "vraag": 17,
+  "soort": "L",
+  "q": "Begroting is?",
+  "opties": [
+   "Plan voor inkomsten + uitgaven",
+   "Boodschappenlijst",
+   "Reclame",
+   "Bankrekening"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "financiele-vorming-po",
+  "file": "./financieleVormingPo.js",
+  "stap": 5,
+  "vraag": 18,
+  "soort": "L",
+  "q": "Welke geldzaak is voor kinderen verstandig?",
+  "opties": [
+   "Klein deel zakgeld sparen",
+   "Alles op één hoop",
+   "Niets sparen",
+   "Lenen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "gezonde-voeding-po",
+  "file": "./gezondeVoedingPo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Waarvoor zijn eiwitten vooral?",
+  "opties": [
+   "Groei + spieren + reparatie",
+   "Energie",
+   "Vitamines",
+   "Water"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "gezonde-voeding-po",
+  "file": "./gezondeVoedingPo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Waar zit vitamine C vooral?",
+  "opties": [
+   "Sinaasappel + paprika",
+   "Vlees",
+   "Boter",
+   "Suiker"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "gezonde-voeding-po",
+  "file": "./gezondeVoedingPo.js",
+  "stap": 3,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Wat is een gezond ontbijt voor een kind in groep 7-8?",
+  "opties": [
+   "Volkorenbrood, kaas en fruit",
+   "Frietjes + frisdrank",
+   "Niks — overslaan",
+   "Alleen koek"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "gezonde-voeding-po",
+  "file": "./gezondeVoedingPo.js",
+  "stap": 3,
+  "vraag": 7,
+  "soort": "L",
+  "q": "'Light'-producten zijn altijd gezond — waar of niet?",
+  "opties": [
+   "Niet waar — vaak meer zoetstof of toevoegingen",
+   "Altijd waar — minder calorieën = gezonder",
+   "Waar voor diabetici",
+   "Verboden in NL"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "gezonde-voeding-po",
+  "file": "./gezondeVoedingPo.js",
+  "stap": 3,
+  "vraag": 8,
+  "soort": "L",
+  "q": "Waardoor wordt de kans op diabetes type 2 kleiner?",
+  "opties": [
+   "Gezond eten + bewegen + niet roken",
+   "Veel suiker eten als kind",
+   "Geen vlees eten",
+   "Niets — erfelijk"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "gezonde-voeding-po",
+  "file": "./gezondeVoedingPo.js",
+  "stap": 3,
+  "vraag": 13,
+  "soort": "L",
+  "q": "Hoeveel maaltijden per dag is gezond?",
+  "opties": [
+   "3 hoofdmaaltijden + 2-3 tussendoor",
+   "1 grote maaltijd",
+   "10 kleine maaltijden",
+   "Geen norm"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "gezonde-voeding-po",
+  "file": "./gezondeVoedingPo.js",
+  "stap": 3,
+  "vraag": 15,
+  "soort": "L",
+  "q": "Welk type vet is gezond?",
+  "opties": [
+   "Onverzadigd (vis, noten, olijfolie)",
+   "Verzadigd (chips)",
+   "Geen vet eten",
+   "Friet"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "gezonde-voeding-po",
+  "file": "./gezondeVoedingPo.js",
+  "stap": 3,
+  "vraag": 16,
+  "soort": "L",
+  "q": "Wat is eiwit vooral voor?",
+  "opties": [
+   "Spieren/cellen bouwen",
+   "Energie",
+   "Stollen",
+   "Zien"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "gezonde-voeding-po",
+  "file": "./gezondeVoedingPo.js",
+  "stap": 3,
+  "vraag": 18,
+  "soort": "L",
+  "q": "Welke voeding heeft vitamine C?",
+  "opties": [
+   "Sinaasappel/paprika",
+   "Brood",
+   "Patat",
+   "Vlees"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "gezonde-voeding-po",
+  "file": "./gezondeVoedingPo.js",
+  "stap": 3,
+  "vraag": 21,
+  "soort": "L",
+  "q": "Veganistisch eten?",
+  "opties": [
+   "Geen dierlijke producten",
+   "Geen vis",
+   "Geen vlees",
+   "Geen suiker"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "gezonde-voeding-po",
+  "file": "./gezondeVoedingPo.js",
+  "stap": 3,
+  "vraag": 22,
+  "soort": "L",
+  "q": "Wat is gezond ontbijt?",
+  "opties": [
+   "Volkoren + fruit + zuivel",
+   "Snoep",
+   "Niets",
+   "Alleen drinken"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "gezonde-voeding-po",
+  "file": "./gezondeVoedingPo.js",
+  "stap": 3,
+  "vraag": 23,
+  "soort": "L",
+  "q": "Wat doet water drinken?",
+  "opties": [
+   "Hydrateert + dorst stillen",
+   "Niets",
+   "Maakt zwaar",
+   "Schaadt"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "gezonde-voeding-po",
+  "file": "./gezondeVoedingPo.js",
+  "stap": 3,
+  "vraag": 24,
+  "soort": "L",
+  "q": "Wat is vezel?",
+  "opties": [
+   "Onverteerbaar plantendeel",
+   "Suiker",
+   "Vet",
+   "Eiwit"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "gezonde-voeding-po",
+  "file": "./gezondeVoedingPo.js",
+  "stap": 3,
+  "vraag": 27,
+  "soort": "L",
+  "q": "Bewerkt voedsel is meestal?",
+  "opties": [
+   "Meer toegevoegd zout/suiker",
+   "Gezonder",
+   "Altijd vers",
+   "Vitaminerijker"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "in-de-klas-nieuwkomers",
+  "file": "./inDeKlasNieuwkomers.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "De juf praat te snel. Wat vraag je?",
+  "opties": [
+   "Kunt u het nog een keer zeggen?",
+   "Mag ik naar buiten?",
+   "Waar is de bal?",
+   "Ik ga naar huis."
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "in-de-klas-nieuwkomers",
+  "file": "./inDeKlasNieuwkomers.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Het is 10 uur. De bel gaat. Wat betekent dat?",
+  "opties": [
+   "De pauze begint of is klaar.",
+   "Je moet naar huis.",
+   "Er is brand.",
+   "Je krijgt eten."
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "nieuwsbericht-lezen-po",
+  "file": "./nieuwsberichtLezenPo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Waar staat de nieuwe speeltoren?",
+  "opties": [
+   "Op het schoolplein van basisschool De Klimboom in Weidedorp",
+   "In de speeltuin midden in het dorp",
+   "Bij het gemeentehuis van Weidedorp",
+   "Op het plein voor de sporthal"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "nieuwsbericht-lezen-po",
+  "file": "./nieuwsberichtLezenPo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Welke zin uit een nieuwsbericht is een mening?",
+  "opties": [
+   "\"De nieuwe speeltuin is het mooiste project van dit jaar\", zegt buurtbewoner Kim.",
+   "Vorig jaar bezochten 1.200 kinderen het park.",
+   "Het park is open van 8 tot 21 uur.",
+   "Er zijn drie nieuwe bankjes geplaatst bij de ingang."
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "nieuwsbericht-lezen-po",
+  "file": "./nieuwsberichtLezenPo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wie vond Berry terug?",
+  "opties": [
+   "Twee kinderen die aan het voetballen waren",
+   "Boer Teun zelf",
+   "De dierenarts",
+   "De familie Vos"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "ontdekkingsreizen-po",
+  "file": "./ontdekkingsreizenPo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is scheurbuik?",
+  "opties": [
+   "Vitamine C-tekort ziekte",
+   "Maagpijn",
+   "Hoofdpijn",
+   "Zonnebrand"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "ontdekkingsreizen-po",
+  "file": "./ontdekkingsreizenPo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat verdeelde Verdrag van Tordesillas?",
+  "opties": [
+   "Wereld tussen Portugal + Spanje",
+   "Europa",
+   "Azië",
+   "Afrika"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "ontdekkingsreizen-po",
+  "file": "./ontdekkingsreizenPo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wie zeilde als eerste rond de aarde?",
+  "opties": [
+   "Magellan-expeditie",
+   "Columbus",
+   "Cabot",
+   "Dias"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "ontdekkingsreizen-po",
+  "file": "./ontdekkingsreizenPo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wie zeilde als eerste rond de aarde?",
+  "opties": [
+   "Magellan-expeditie",
+   "Columbus",
+   "Cook",
+   "Hudson"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "ontdekkingsreizen-po",
+  "file": "./ontdekkingsreizenPo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat ontdekte Abel Tasman?",
+  "opties": [
+   "Nieuw-Zeeland + Tasmanië",
+   "Amerika",
+   "India",
+   "Nova Zembla"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "ontdekkingsreizen-po",
+  "file": "./ontdekkingsreizenPo.js",
+  "stap": 3,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Wat was het doel van ontdekkingsreizen (15e-17e eeuw)?",
+  "opties": [
+   "Nieuwe handelsroutes + grondstoffen vinden",
+   "Toerisme",
+   "Sport",
+   "Wetenschap-onderzoek alleen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "ontdekkingsreizen-po",
+  "file": "./ontdekkingsreizenPo.js",
+  "stap": 3,
+  "vraag": 7,
+  "soort": "L",
+  "q": "Wat was de rol van de VOC (Verenigde Oostindische Compagnie)?",
+  "opties": [
+   "Handelsbedrijf met eigen leger en bestuur",
+   "Sportclub voor zeelieden",
+   "Universiteit voor kapiteins",
+   "Kerk voor zendelingen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "ontdekkingsreizen-po",
+  "file": "./ontdekkingsreizenPo.js",
+  "stap": 3,
+  "vraag": 20,
+  "soort": "L",
+  "q": "Willem Barentsz zocht naar?",
+  "opties": [
+   "Noordelijke route naar Azië",
+   "Amerika",
+   "Australië",
+   "Afrika"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "ontdekkingsreizen-po",
+  "file": "./ontdekkingsreizenPo.js",
+  "stap": 3,
+  "vraag": 21,
+  "soort": "L",
+  "q": "Verdrag van Tordesillas (1494) verdeelde wat?",
+  "opties": [
+   "Wereld tussen Spanje en Portugal",
+   "NL en België",
+   "Engeland en Frankrijk",
+   "Duitsland en Italië"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "ontdekkingsreizen-po",
+  "file": "./ontdekkingsreizenPo.js",
+  "stap": 3,
+  "vraag": 22,
+  "soort": "L",
+  "q": "Wat is slavernij in koloniale tijd?",
+  "opties": [
+   "Mensen gevangen + gedwongen werken zonder vrijheid",
+   "Werk met loon",
+   "Vrijwillig meehelpen op een plantage",
+   "Betaald werken op een schip"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "ontdekkingsreizen-po",
+  "file": "./ontdekkingsreizenPo.js",
+  "stap": 3,
+  "vraag": 24,
+  "soort": "L",
+  "q": "Welke producten bracht de VOC mee terug?",
+  "opties": [
+   "Specerijen + thee + porselein",
+   "Aardappels + tomaten",
+   "Plastic",
+   "Auto-onderdelen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "redactiesommen-pad",
+  "file": "./redactiesommen.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "H",
+  "q": "*'Een doos heeft 24 stickers. Verdeeld over 6 kinderen.'* Welke bewerking?",
+  "opties": [
+   "Delen",
+   "Optellen",
+   "Aftrekken",
+   "Vermenigvuldigen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "tabellen-grafieken",
+  "file": "./tabellenGrafieken.js",
+  "stap": 6,
+  "vraag": 14,
+  "soort": "L",
+  "q": "Kolom-totaal in tabel = ?",
+  "opties": [
+   "Som van alle cellen in die kolom",
+   "Som van 1 rij",
+   "Gemiddelde",
+   "Modus"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "tabellen-grafieken",
+  "file": "./tabellenGrafieken.js",
+  "stap": 6,
+  "vraag": 18,
+  "soort": "L",
+  "q": "Een frequentietabel toont?",
+  "opties": [
+   "Hoe vaak elke waarde voorkomt",
+   "Tijd-verloop",
+   "Verhouding",
+   "Som"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "tabellen-grafieken",
+  "file": "./tabellenGrafieken.js",
+  "stap": 6,
+  "vraag": 20,
+  "soort": "L",
+  "q": "Welke vraag bij tabel is moeilijkst?",
+  "opties": [
+   "Cellen optellen en vergelijken",
+   "Een naam opzoeken",
+   "Een datum aflezen",
+   "De titel lezen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "tijdsduur-rekenen-po",
+  "file": "./tijdsduurRekenenPo.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "H",
+  "q": "90 minuten = ... ?",
+  "opties": [
+   "1 uur 30 min",
+   "1 uur 90 min",
+   "9 uur",
+   "0 uur 90 min"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "trappen-van-vergelijking-po",
+  "file": "./trappenVanVergelijkingPo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "H",
+  "q": "Welke is de overtreffende trap van 'goed'?",
+  "opties": [
+   "best",
+   "beter",
+   "goedst",
+   "goeder"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "trappen-van-vergelijking-po",
+  "file": "./trappenVanVergelijkingPo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "H",
+  "q": "De vergrotende trap van 'dik' is...",
+  "opties": [
+   "dikker",
+   "diker",
+   "dikst",
+   "dikke"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "trappen-van-vergelijking-po",
+  "file": "./trappenVanVergelijkingPo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "H",
+  "q": "De vergrotende trap van 'nat' is...",
+  "opties": [
+   "natter",
+   "nater",
+   "natst",
+   "natte"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "trappen-van-vergelijking-po",
+  "file": "./trappenVanVergelijkingPo.js",
+  "stap": 3,
+  "vraag": 6,
+  "soort": "H",
+  "q": "Maak de rij af: goed – beter – ___",
+  "opties": [
+   "best",
+   "goedst",
+   "beters",
+   "bester"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "verwijswoorden-po",
+  "file": "./verwijswoordenPo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Een verwijswoord is een woord dat...",
+  "opties": [
+   "terugwijst naar iets dat eerder genoemd is",
+   "altijd vooraan de zin staat",
+   "een nieuw onderwerp begint",
+   "alleen in vragen voorkomt"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "verwijswoorden-po",
+  "file": "./verwijswoordenPo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Waarom gebruiken we verwijswoorden?",
+  "opties": [
+   "om niet steeds hetzelfde woord te herhalen",
+   "om de zin langer te maken",
+   "om een vraag te stellen",
+   "om iets tegen te spreken"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "vulkanen-po",
+  "file": "./vulkanenPo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Waarom wordt een vulkaan bij elke uitbarsting een stukje groter?",
+  "opties": [
+   "De lava en as koelen af en vormen een nieuw laagje op de berg",
+   "De berg zwelt op door de hitte",
+   "Er komt steeds meer water in",
+   "Dat is niet zo, vulkanen worden kleiner"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "vulkanen-po",
+  "file": "./vulkanenPo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat zorgt ervoor dat een vulkaan echt uitbarst (de 'boem')?",
+  "opties": [
+   "Gassen in het magma die eruit willen als de druk minder wordt",
+   "Regenwater dat de berg vult",
+   "De wind die over de krater waait",
+   "Dieren die in de krater graven"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "vulkanen-po",
+  "file": "./vulkanenPo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Waarom bleven in 2010 bijna alle vliegtuigen in Europa aan de grond?",
+  "opties": [
+   "Een aswolk van een IJslandse vulkaan was gevaarlijk voor de motoren",
+   "Er stroomde lava over de startbanen",
+   "Het was te heet om te vliegen",
+   "De piloten konden de vulkaan niet zien"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "vulkanen-po",
+  "file": "./vulkanenPo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Waarom wonen veel mensen vlak bij een vulkaan, ondanks het gevaar?",
+  "opties": [
+   "De grond is er heel vruchtbaar en er is warmte uit de aarde",
+   "Ze weten niet dat het een vulkaan is",
+   "Het is er altijd warm weer",
+   "Huizen zijn er gratis"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "vulkanen-po",
+  "file": "./vulkanenPo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat doet een vulkanoloog?",
+  "opties": [
+   "De vulkaan meten en op tijd waarschuwen",
+   "Lava opruimen",
+   "Toeristen rondleiden",
+   "De krater dichtmaken"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "vulkanen-po",
+  "file": "./vulkanenPo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat betekent het als een vulkaan slapend is?",
+  "opties": [
+   "Hij is lang niet uitgebarsten, maar kan dat nog wel",
+   "Hij kan nooit meer uitbarsten",
+   "Hij barst elke nacht uit",
+   "Hij is nog nooit uitgebarsten"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "water-erfgoed-nederland-po",
+  "file": "./waterErfgoedNederlandPo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is een waterschap?",
+  "opties": [
+   "Overheid speciaal voor water",
+   "Een rivier",
+   "Een soort dijk",
+   "Een waterpark"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "water-erfgoed-nederland-po",
+  "file": "./waterErfgoedNederlandPo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een polder?",
+  "opties": [
+   "Drooggemalen land achter een dijk",
+   "Een meer",
+   "Een groot bos",
+   "Een berg"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "water-erfgoed-nederland-po",
+  "file": "./waterErfgoedNederlandPo.js",
+  "stap": 5,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is een windmolen vroeger gebruikt voor?",
+  "opties": [
+   "Water uit polder pompen + graan malen",
+   "Elektriciteit maken",
+   "Schip aandrijven",
+   "Niet gebruikt"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "water-erfgoed-nederland-po",
+  "file": "./waterErfgoedNederlandPo.js",
+  "stap": 5,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Welke is een gemaal?",
+  "opties": [
+   "Pomp die water uit polder weghaalt",
+   "Een korenmolen",
+   "Een stormvloedkering",
+   "Een brug"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "water-erfgoed-nederland-po",
+  "file": "./waterErfgoedNederlandPo.js",
+  "stap": 5,
+  "vraag": 10,
+  "soort": "L",
+  "q": "Wat is een terp?",
+  "opties": [
+   "Een opgehoogde woonheuvel",
+   "Een molen",
+   "Een dijk",
+   "Een sloot"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "water-erfgoed-nederland-po",
+  "file": "./waterErfgoedNederlandPo.js",
+  "stap": 5,
+  "vraag": 12,
+  "soort": "L",
+  "q": "Wie was Jan Leeghwater?",
+  "opties": [
+   "Een molen- en polderbouwer",
+   "Een koning",
+   "Een dijkbreker",
+   "Een sportman"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "water-erfgoed-nederland-po",
+  "file": "./waterErfgoedNederlandPo.js",
+  "stap": 5,
+  "vraag": 17,
+  "soort": "L",
+  "q": "Wat doet de Maeslantkering in Hoek van Holland?",
+  "opties": [
+   "Sluit bij stormvloed automatisch",
+   "Spoorbrug",
+   "Gemaal",
+   "Wekt stroom op met het getij"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "water-erfgoed-nederland-po",
+  "file": "./waterErfgoedNederlandPo.js",
+  "stap": 5,
+  "vraag": 19,
+  "soort": "L",
+  "q": "Wat zou er gebeuren ZONDER dijken in NL?",
+  "opties": [
+   "Groot deel ondergelopen",
+   "Niets",
+   "Droogte",
+   "Meer bergen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "wereldorientatie-mix-po",
+  "file": "./wereldorientatieMixPo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat veroorzaakt klimaatverandering vooral?",
+  "opties": [
+   "CO₂ van fossiele brandstoffen",
+   "Bosbranden alleen",
+   "Vulkanen",
+   "Zonneflitsen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "wereldorientatie-mix-po",
+  "file": "./wereldorientatieMixPo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat doen planten bij fotosynthese?",
+  "opties": [
+   "CO₂ + water + zonlicht → suiker + zuurstof",
+   "Eten andere planten",
+   "Slapen overdag",
+   "Bloemen openen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "wereldorientatie-mix-po",
+  "file": "./wereldorientatieMixPo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat doe je bij een lange leesvraag op de toets?",
+  "opties": [
+   "Lees zorgvuldig + check tussen-stappen",
+   "Snelste antwoord direct",
+   "Sla over",
+   "Zoek hulp"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "wereldorientatie-mix-po",
+  "file": "./wereldorientatieMixPo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "H",
+  "q": "In welk werelddeel ligt NL?",
+  "opties": [
+   "Europa",
+   "Azië",
+   "Afrika",
+   "Antarctica"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "wereldorientatie-mix-po",
+  "file": "./wereldorientatieMixPo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Welke WO2-jaartallen kloppen?",
+  "opties": [
+   "1940-1944 voor NL",
+   "1914-1918",
+   "1939-1945 wereldwijd, 1940-1945 NL",
+   "Alle drie kloppen"
+  ],
+  "answer": 2
+ },
+ {
+  "pad": "woorden-nieuwkomers",
+  "file": "./woordenNieuwkomers.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "H",
+  "q": "Waar woon je met je familie?",
+  "opties": [
+   "de school",
+   "de tuin",
+   "de auto",
+   "het huis"
+  ],
+  "answer": 3
+ },
+ {
+  "pad": "woordsoorten-po",
+  "file": "./woordsoortenPo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "H",
+  "q": "Welk woord is een zelfstandig naamwoord?",
+  "opties": [
+   "fiets",
+   "fietst",
+   "snel",
+   "mooi"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "woordsoorten-po",
+  "file": "./woordsoortenPo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "H",
+  "q": "*'De dappere ridder vocht fel.'* — welk is een zelfst. naamwoord?",
+  "opties": [
+   "ridder",
+   "dappere",
+   "fel",
+   "De"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "woordsoorten-po",
+  "file": "./woordsoortenPo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "H",
+  "q": "*'De rode auto rijdt snel.'* — welk woord is een werkwoord?",
+  "opties": [
+   "rijdt",
+   "auto",
+   "rode",
+   "snel"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "woordsoorten-po",
+  "file": "./woordsoortenPo.js",
+  "stap": 4,
+  "vraag": 8,
+  "soort": "L",
+  "q": "*'Hij is mijn vriend.'* — Welke woordsoort is 'hij'?",
+  "opties": [
+   "Persoonlijk voornaamwoord",
+   "Zelfst. naamwoord",
+   "Bijvoeglijk",
+   "Werkwoord"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "woordsoorten-po",
+  "file": "./woordsoortenPo.js",
+  "stap": 4,
+  "vraag": 9,
+  "soort": "L",
+  "q": "*'Mijn boek ligt hier.'* — Welke woordsoort is 'mijn'?",
+  "opties": [
+   "Bezittelijk voornaamwoord",
+   "Lidwoord",
+   "Bijvoeglijk",
+   "Werkwoord"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "woordsoorten-po",
+  "file": "./woordsoortenPo.js",
+  "stap": 4,
+  "vraag": 20,
+  "soort": "L",
+  "q": "*'Deze pen is leuk.'* Wat is 'deze'?",
+  "opties": [
+   "Aanwijzend voornaamwoord",
+   "Bezittelijk vnw",
+   "Lidwoord",
+   "Bijwoord"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "woordsoorten-po",
+  "file": "./woordsoortenPo.js",
+  "stap": 4,
+  "vraag": 23,
+  "soort": "L",
+  "q": "*'In de grote stad.'* Wat is 'grote'?",
+  "opties": [
+   "Bijvoeglijk naamwoord",
+   "Werkwoord",
+   "Lidwoord",
+   "Bijwoord"
+  ],
+  "answer": 0
+ }
+]

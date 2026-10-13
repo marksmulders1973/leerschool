@@ -62,12 +62,7 @@ const steps = [
     checks: [
       {
         q: "Wat is **belasting**?",
-        options: [
-          "Geld dat je aan de overheid betaalt voor dingen die we samen gebruiken",
-          "Geld dat de bank je cadeau geeft",
-          "Korting die je in de winkel krijgt",
-          "Geld dat je in je spaarpot stopt",
-        ],
+        options: ["Geld aan de overheid voor dingen die we samen gebruiken", "Geld dat de bank je elk jaar cadeau geeft", "Korting die je bij de kassa in de winkel krijgt", "Geld dat je zelf in je spaarpot bewaart"],
         answer: 0,
         wrongHints: [null, "Denk: krijg je het, of geef je het?", "Korting maakt iets goedkoper — gaat dit naar de overheid?", "Sparen is je eigen geld bewaren. Naar wie gaat belasting?"],
         uitlegPad: {
@@ -343,7 +338,7 @@ const steps = [
     checks: [
       {
         q: "Wat betekent **nettoloon**?",
-        options: ["Wat je overhoudt nadat de belasting eraf is", "Je hele loon vóór de belasting", "De belasting zelf", "Een bonus bovenop je loon"],
+        options: ["Wat je overhoudt nadat de belasting eraf is", "Je hele loon, nog vóór de belasting eraf gaat", "Het geld dat je aan belasting moet betalen", "Een extra bonus die bovenop je loon komt"],
         answer: 0,
         wrongHints: [null, "Dat is juist het bruto — vóór er iets af gaat.", "Netto is wat je houdt, niet wat je betaalt.", "Netto komt er niet bij, er gaat juist iets áf."],
         uitlegPad: {
@@ -996,9 +991,9 @@ const steps = [
     checks: [
       {
         q: "Belasting gebruiken we om **samen** te betalen voor?",
-        options: ["Wegen, scholen en ziekenhuizen", "Jouw eigen snoep", "Een cadeau voor één kind", "Niets"],
+        options: ["Wegen, scholen en ziekenhuizen", "Jouw eigen snoep en speelgoed", "Een cadeau voor één kind", "Je eigen fiets en kleren"],
         answer: 0,
-        wrongHints: [null, "Dat koop je zelf — niet 'samen'.", "Een cadeau is voor één persoon.", "Er wordt juist veel mee betaald."],
+        wrongHints: [null, "Dat koop je zelf — niet 'samen'.", "Een cadeau is voor één persoon.", "Koop je dat samen met iedereen, of koop je dat zelf?"],
       },
       {
         q: "Brutoloon **€50**, belasting **€10**. **Netto**?",
@@ -1032,15 +1027,15 @@ const steps = [
       },
       {
         q: "Wat is **bruto**?",
-        options: ["Je hele loon, vóór de belasting eraf gaat", "Wat je overhoudt", "De belasting zelf", "Een bonus"],
+        options: ["Je hele loon, vóór de belasting eraf gaat", "Wat je overhoudt als de belasting eraf is", "Het deel van je loon dat naar belasting gaat", "Een bonus die je bovenop je loon krijgt"],
         answer: 0,
         wrongHints: [null, "Dat is netto — wat overblijft.", "Bruto is het geheel, niet alleen het afgehaalde stuk.", "Er gaat juist iets af, het komt er niet bij."],
       },
       {
         q: "Btw zit **in de prijs** — dus bij de kassa betaal je?",
-        options: ["Precies de prijs van het kaartje", "Altijd nog extra erbovenop", "Minder dan het kaartje", "Niets"],
+        options: ["Precies de prijs van het kaartje", "Altijd nog extra btw erbovenop", "Iets minder dan op het kaartje staat", "Alleen de btw, niet de prijs"],
         answer: 0,
-        wrongHints: [null, "De btw zit er al in, dus er komt niets bij.", "Het kaartje is de prijs die je betaalt, niet minder.", "Je betaalt natuurlijk wel iets."],
+        wrongHints: [null, "De btw zit er al in, dus er komt niets bij.", "Het kaartje is de prijs die je betaalt, niet minder.", "De btw is maar een klein deel van de prijs. Betaal je alleen dat stukje?"],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {

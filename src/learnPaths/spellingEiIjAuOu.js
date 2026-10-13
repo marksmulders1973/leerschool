@@ -52,9 +52,9 @@ const steps = [
     checks: [
       {
         q: "Wat zijn **homofonen**?",
-        options: ["Woorden die hetzelfde klinken, anders geschreven","Woorden die hetzelfde betekenen","Woorden die op elkaar rijmen","Woorden met dezelfde letters"],
+        options: ["Woorden die hetzelfde klinken, anders geschreven", "Woorden die hetzelfde betekenen, anders klinken", "Woorden die alleen aan het eind hetzelfde klinken", "Woorden met dezelfde letters, in andere volgorde"],
         answer: 0,
-        wrongHints: [null,"Niet — dat zijn synoniemen; het gaat hier om klank en spelling.","Niet — rijmwoorden klinken alleen aan het eind hetzelfde.","Niet — kijk naar klank en spelling."],
+        wrongHints: [null, "Niet — dat zijn synoniemen; het gaat hier om klank en spelling.", "Niet — dat zijn rijmwoorden.", "Niet — kijk naar klank en spelling."],
         uitlegPad: {
           stappen: [{ titel: "homo + foon", tekst: "Homo = gelijk. Foon = klank/geluid. Homofoon = woorden met gelijke KLANK maar andere SPELLING." }],
           woorden: [{ woord: "homofoon", uitleg: "Twee woorden die identiek klinken maar verschillend geschreven worden." }],

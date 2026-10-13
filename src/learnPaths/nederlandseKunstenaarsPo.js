@@ -81,9 +81,9 @@ const steps = [
     checks: [
       {
         q: "**Mondriaan** is bekend om?",
-        options: ["Rechthoeken + primaire kleuren", "Zonnebloemen", "Nachtwacht", "Foto's"],
+        options: ["Rechthoeken + primaire kleuren", "Zonnebloemen + dikke verfstreken", "Schutters + licht en donker", "Foto's + zwart-wit portretten"],
         answer: 0,
-        wrongHints: [null, "Van Gogh.", "Rembrandt.", "Niet."],
+        wrongHints: [null, "Dat is Van Gogh. Hoe zien de werken van Mondriaan eruit?", "Dat is Rembrandt. Hoe zien de werken van Mondriaan eruit?", "Mondriaan was schilder, geen fotograaf."],
       },
       {
         q: "Welke **primaire kleuren** gebruikte Mondriaan?",
@@ -124,9 +124,9 @@ const steps = [
       },
       {
         q: "Wat is een **Museumkaart**?",
-        options: ["Jaarkaart voor 500+ musea", "App", "Toegangsbewijs 1x", "Krant"],
+        options: ["Jaarkaart voor 500+ musea", "App met museumroutes", "Kaartje voor één museumbezoek", "Tijdschrift over musea"],
         answer: 0,
-        wrongHints: [null, "Niet kaart.", "Niet jaar.", "Niet."],
+        wrongHints: [null, "Het heet een kaart. Is het een app?", "Kun je hem maar één keer gebruiken?", "Lees je een museumkaart, of laat je hem zien bij de kassa?"],
       },
       {
         q: "Wie ontwierp het **Sprookjesbos** van de Efteling?",
@@ -143,7 +143,7 @@ const steps = [
       { q: "Wie schilderde **De Nachtwacht**?", options: ["Rembrandt", "Vermeer", "Van Gogh", "Mondriaan"], answer: 0, wrongHints: [null, "Klein-werk.", "Veel later.", "Veel later."] },
       { q: "Wie schilderde **Zonnebloemen**?", options: ["Van Gogh", "Rembrandt", "Vermeer", "Mondriaan"], answer: 0, wrongHints: [null, "Realistisch.", "Klein.", "Abstract."] },
       { q: "**Meisje met de Parel** is van?", options: ["Vermeer", "Rembrandt", "Hals", "Steen"], answer: 0, wrongHints: [null, "Andere.", "Andere.", "Chaos-scènes."] },
-      { q: "**Mondriaan** stijl?", options: ["Rechthoeken + primaire kleuren", "Realistisch", "Donker", "Sprookjes"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Niet.", "Niet."] },
+      { q: "**Mondriaan** stijl?", options: ["Rechthoeken + primaire kleuren", "Echte portretten + landschappen", "Donkere kleuren + veel schaduw", "Sprookjes + fantasiedieren"], answer: 0, wrongHints: [null, "Mondriaan maakte abstracte kunst. Past dit daarbij?", "Mondriaan maakte abstracte kunst. Past dit daarbij?", "Mondriaan maakte abstracte kunst. Past dit daarbij?"] },
       { q: "Wie bedacht **Nijntje**?", options: ["Dick Bruna", "Pieck", "Mondriaan", "Hals"], answer: 0, wrongHints: [null, "Efteling.", "Niet.", "Niet."] },
       { q: "**Grootste museum** NL?", options: ["Rijksmuseum Amsterdam", "Mauritshuis", "Bonnefanten", "Eftelingmuseum"], answer: 0, wrongHints: [null, "Klein.", "Niet grootst.", "Pretpark."] },
       { q: "Wie schreef de boeken **'Pluk van de Petteflet'** en **'Jip en Janneke'**?", options: ["Annie M.G. Schmidt", "Dick Bruna", "Anton Pieck", "Rembrandt"], answer: 0, wrongHints: [null, "Hij maakte Nijntje, niet deze boeken.", "Pretpark.", "Schilder."] },

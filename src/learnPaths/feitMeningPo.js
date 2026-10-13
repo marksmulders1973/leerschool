@@ -78,7 +78,7 @@ const steps = [
         q: "Feit of mening? *Een jaar heeft twaalf maanden.*",
         options: ["feit", "mening", "geen van beide", "allebei"],
         answer: 0,
-        wrongHints: [null, "Het is voor iedereen waar en te controleren.", "Het is duidelijk waar of niet waar.", "Een zin is óf feit óf mening."],
+        wrongHints: [null,"Kun je dit nakijken, of denkt iedereen er anders over?","Het is duidelijk waar of niet waar.","Een zin is óf feit óf mening."],
         uitlegPad: {
           stappen: [{ titel: "Te tellen = feit", tekst: "Je kunt de maanden tellen: het zijn er twaalf, voor iedereen. Dat is een feit." }],
           niveaus: {
@@ -111,7 +111,7 @@ const steps = [
         q: "Feit of mening? *De fiets is uitgevonden in de negentiende eeuw.*",
         options: ["feit", "mening", "geen van beide", "allebei"],
         answer: 0,
-        wrongHints: [null, "Dit kun je opzoeken in een geschiedenisboek.", "Het is te controleren — dan is het niet ‘geen van beide’.", "Een zin is óf feit óf mening."],
+        wrongHints: [null,"Kun je dit ergens opzoeken, of hangt het af van wie je het vraagt?","Kun je nagaan of deze zin klopt? Wat betekent dat?","Een zin is óf feit óf mening."],
         uitlegPad: {
           stappen: [{ titel: "Opzoekbaar in de geschiedenis", tekst: "Wanneer de fiets is uitgevonden staat in boeken. Dat is te controleren, dus een feit." }],
           niveaus: {
@@ -269,7 +269,7 @@ const steps = [
         q: "Feit of mening? *Honden zijn liever dan katten.*",
         options: ["mening", "feit", "geen van beide", "allebei"],
         answer: 0,
-        wrongHints: [null, "Dat verschilt per persoon — niet te controleren.", "Het is geen 'waar of niet waar'.", "Een zin is óf feit óf mening."],
+        wrongHints: [null,"Kun je dit meten of opzoeken, of denkt niet iedereen hetzelfde?","Het is geen 'waar of niet waar'.","Een zin is óf feit óf mening."],
         uitlegPad: {
           stappen: [{ titel: "Niet iedereen is het eens", tekst: "Of honden liever zijn dan katten, vindt niet iedereen. Het is een mening." }],
           niveaus: {
@@ -420,12 +420,7 @@ const steps = [
       },
       {
         q: "Welke zin bevat een mening-signaalwoord?",
-        options: [
-          "Volgens mij wordt het morgen mooi weer.",
-          "Het is nu 18 graden.",
-          "De zon komt om 6 uur op.",
-          "Het regent op dit moment.",
-        ],
+        options: ["Volgens mij wordt het morgen mooi weer.","Het is nu precies 18 graden buiten.","De zon komt morgen om 6 uur op.","Het regent op dit moment in Utrecht."],
         answer: 0,
         wrongHints: [null, "De temperatuur is een feit.", "De zonsopkomst is op te zoeken — feit.", "Dat kun je zien — feit."],
         uitlegPad: {
@@ -611,7 +606,7 @@ const steps = [
         q: "Feit of mening? *De Eiffeltoren staat in Parijs.*",
         options: ["feit", "mening", "geen van beide", "allebei"],
         answer: 0,
-        wrongHints: [null, "Je kunt opzoeken waar de toren staat.", "Het is duidelijk te controleren.", "Een zin is óf feit óf mening."],
+        wrongHints: [null,"Kun je dit nakijken, bijvoorbeeld op een kaart?","Het is duidelijk te controleren.","Een zin is óf feit óf mening."],
         uitlegPad: {
           stappen: [{ titel: "Op te zoeken", tekst: "Waar de Eiffeltoren staat kun je opzoeken op een kaart — voor iedereen hetzelfde. Dat is een feit." }],
           niveaus: {
@@ -625,7 +620,7 @@ const steps = [
         q: "Feit of mening? *De Eiffeltoren is het mooiste bouwwerk ter wereld.*",
         options: ["mening", "feit", "geen van beide", "allebei"],
         answer: 0,
-        wrongHints: [null, "'Mooiste' kun je niet nameten; niet iedereen vindt dat.", "Het is geen te controleren gegeven.", "Een zin is óf feit óf mening."],
+        wrongHints: [null,"Kun je 'mooiste' meten? Vindt iedereen hetzelfde?","Het is geen te controleren gegeven.","Een zin is óf feit óf mening."],
         uitlegPad: {
           stappen: [{ titel: "'Mooiste' = oordeel", tekst: "Of het het mooiste bouwwerk is, vindt niet iedereen. 'Mooiste' verraadt de mening." }],
           niveaus: {
@@ -637,12 +632,7 @@ const steps = [
       },
       {
         q: "In een tekst staat: *Ons dorp heeft 4.000 inwoners. Het is het gezelligste dorp van de streek.* Welk deel is een mening?",
-        options: [
-          "Het is het gezelligste dorp van de streek.",
-          "Ons dorp heeft 4.000 inwoners.",
-          "Allebei zijn meningen.",
-          "Allebei zijn feiten.",
-        ],
+        options: ["Het is het gezelligste dorp van de streek.","Ons dorp heeft 4.000 inwoners.","Allebei de zinnen zijn een mening.","Allebei de zinnen zijn een feit."],
         answer: 0,
         wrongHints: [null, "Het aantal inwoners kun je tellen — dat is juist een feit.", "Het inwoneraantal is een feit.", "'Gezelligste' is geen feit."],
         uitlegPad: {
@@ -696,7 +686,7 @@ const steps = [
         q: "Feit of mening? *De Tweede Wereldoorlog eindigde in 1945.*",
         options: ["feit", "mening", "geen van beide", "allebei"],
         answer: 0,
-        wrongHints: [null, "Dit is te controleren in een geschiedenisboek.", "Het is duidelijk waar of niet waar.", "Een zin is óf feit óf mening."],
+        wrongHints: [null,"Kun je dit nakijken, of hangt het af van wie je het vraagt?","Het is duidelijk waar of niet waar.","Een zin is óf feit óf mening."],
         uitlegPad: {
           stappen: [{ titel: "Datum is te controleren", tekst: "Wanneer de oorlog eindigde staat in boeken. Dat is voor iedereen hetzelfde — een feit." }],
           niveaus: {
@@ -710,7 +700,7 @@ const steps = [
         q: "Feit of mening? *Dit boek is veel te moeilijk voor groep 7.*",
         options: ["mening", "feit", "geen van beide", "allebei"],
         answer: 0,
-        wrongHints: [null, "Of een boek 'te moeilijk' is, kan een leerkracht anders beoordelen dan een leerling.", "Het is wel een oordeel — dus het is feit of mening.", "Een zin is óf feit óf mening."],
+        wrongHints: [null,"Zou een leerkracht en een leerling hier hetzelfde over denken?","Het is wel een oordeel — dus het is feit of mening.","Een zin is óf feit óf mening."],
         uitlegPad: {
           stappen: [{ titel: "'Te moeilijk' = oordeel", tekst: "Of een boek te moeilijk is, vindt niet iedereen hetzelfde. 'Te moeilijk' is een beoordeling — dat is een mening." }],
           niveaus: {

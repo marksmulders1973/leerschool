@@ -56,9 +56,9 @@ const steps = [
       },
       {
         q: "Verschil **onderwerp** en **hoofdgedachte**?",
-        options: ["Onderwerp = waarover, hoofdgedachte = wat ervan gezegd","Onderwerp komt na hoofdgedachte","Geen verschil","Onderwerp altijd 1 woord"],
+        options: ["Onderwerp = waarover, hoofdgedachte = wat ervan gezegd", "Onderwerp staat altijd na de hoofdgedachte in de tekst", "Geen verschil, ze betekenen allebei hetzelfde", "Onderwerp = altijd 1 woord, hoofdgedachte = de titel"],
         answer: 0,
-        wrongHints: [null,"Onderwerp komt vaak eerst.","Wel verschil.","Niet altijd."],
+        wrongHints: [null, "Onderwerp komt vaak eerst.", "Zou de juf twee woorden gebruiken voor precies hetzelfde?", "Is de titel altijd de belangrijkste boodschap?"],
         uitlegPad: {
           stappen: [
             { titel: "Twee verschillende dingen", tekst: "**Onderwerp** = waarover gaat de tekst? (1-3 woorden). **Hoofdgedachte** = WAT zegt de tekst erover? (een hele zin)." },
@@ -858,9 +858,9 @@ const steps = [
       },
       {
         q: "**Truc** om te checken hoofd vs bij?",
-        options: ["Schrap de zin — verandert de boodschap?","Tel de woorden","Kijk naar kleur","Kijk naar plaatje"],
+        options: ["Schrap de zin — verandert de boodschap?", "Tel de woorden — is de zin het langst?", "Kijk naar de kleur — is hij vetgedrukt?", "Kijk naar het plaatje — past de zin erbij?"],
         answer: 0,
-        wrongHints: [null, "Aantal woorden zegt niets over belangrijkheid.", "Tekst heeft geen kleuren.", "Plaatjes ondersteunen, maar zijn niet de truc."],
+        wrongHints: [null, "Aantal woorden zegt niets over belangrijkheid.", "Vetgedrukt zegt iets over de opmaak, niet over de boodschap.", "Plaatjes ondersteunen, maar zijn niet de truc."],
         uitlegPad: {
           stappen: [
             { titel: "De schrap-test", tekst: "Voor elke zin: lees de tekst MET zin → lees de tekst ZONDER die zin → vergelijk.\n• **Hoofdboodschap verandert?** → die zin is een **hoofdzaak** (kan niet weg)\n• **Hoofdboodschap blijft hetzelfde?** → die zin is een **bijzaak** (kan weg)" },
@@ -1669,7 +1669,7 @@ const steps = [
     checks: [
       {
         q: "Tekst: 'Apen zijn slim. Ze gebruiken stokken om termieten uit holen te halen. In Afrika is dit gezien bij chimpansees.'\n\n**Hoofdgedachte**?",
-        options: ["Apen zijn slim — ze gebruiken gereedschap","Termieten leven in holen","Chimpansees komen uit Afrika","Stokken zijn handig"],
+        options: ["Apen zijn slim — ze gebruiken gereedschap", "Termieten leven in holen in de grond", "Chimpansees zijn in Afrika gezien", "Stokken zijn handig om in holen te prikken"],
         answer: 0,
         wrongHints: [null, "Termieten zijn detail in voorbeeld, niet hoofd.", "Detail over chimpansees specifiek, niet hoofd.", "Stokken zijn middel in het voorbeeld, niet de hoofdgedachte zelf."],
         uitlegPad: {
@@ -1697,7 +1697,7 @@ const steps = [
       },
       {
         q: "Welke zin is een **bijzaak** in een tekst over 'gezond eten'?",
-        options: ["Mijn moeder kookt elke maandag pasta","Groenten geven vitaminen","Fruit is gezond","Suiker is ongezond"],
+        options: ["Mijn moeder kookt elke maandag pasta", "Groenten geven je lichaam veel vitaminen", "Fruit is gezond, eet het elke dag", "Te veel suiker is slecht voor je tanden"],
         answer: 0,
         uitlegPad: {
           stappen: [
@@ -1725,7 +1725,7 @@ const steps = [
       },
       {
         q: "Wat is **NIET** een goede samenvattingsstrategie?",
-        options: ["Letterlijk kopiëren van zinnen","Eigen woorden","Hoofdpunten kiezen","Kort houden"],
+        options: ["Letterlijk kopiëren van zinnen", "Schrijven in je eigen woorden", "Alleen de hoofdpunten kiezen", "Het kort en duidelijk houden"],
         answer: 0,
         wrongHints: [null, "Wel goed — eigen woorden = begrip.", "Wel goed — hoofdpunten = essentie.", "Wel goed — samenvatting moet korter zijn dan het origineel."],
         uitlegPad: {
@@ -1887,7 +1887,7 @@ const steps = [
       },
       {
         q: "Wanneer is een samenvatting **TE LANG**?",
-        options: ["Wanneer hij bijna even lang is als origineel","Wanneer hij 25-30% van origineel is","Wanneer hij 1 zin is","Nooit te lang"],
+        options: ["Wanneer hij bijna even lang is als origineel", "Wanneer hij 25-30% van origineel is", "Wanneer hij maar uit 1 korte zin bestaat", "Nooit, een samenvatting is nooit te lang"],
         answer: 0,
         wrongHints: [null, "Dat is goede lengte — niet te lang.", "Dat is te KORT — mist context.", "Wel — verliest samenvattings-functie als te lang."],
         uitlegPad: {
@@ -1913,17 +1913,17 @@ const steps = [
       { q: "Welke zin past meestal als hoofdgedachte van een alinea?", options: ["De eerste zin","De laatste zin","Een willekeurige zin","Een citaat"], answer: 0, wrongHints: [null, "Soms wel, maar meestal openingszin.", "Niet — kernzin staat doorgaans voorin.", "Citaten zijn voorbeelden, geen hoofdgedachte."] },
       { q: "Welke lengte is goed voor een samenvatting van 200 woorden?", options: ["~50 woorden","~150 woorden","~10 woorden","~200 woorden"], answer: 0, wrongHints: [null, "Te lang — dat is bijna de tekst zelf.", "Te kort — niet alle hoofdpunten passen.", "Niet samengevat."] },
       { q: "Welke vraag stel je om de **hoofdgedachte** te vinden?", options: ["Waar gaat de tekst PRECIES over?","Welke kleur is het mooist?","Hoeveel woorden zijn er?","Wie schreef het?"], answer: 0, wrongHints: [null, "Mening, niet inhoud.", "Telling, geen inhoud.", "Auteur, niet hoofdgedachte."] },
-      { q: "Wat is een **kernzin**?", options: ["De zin die de hoofdgedachte van een alinea bevat","De langste zin","De laatste zin","Een citaat"], answer: 0, wrongHints: [null, "Lengte zegt niets.", "Soms wel maar niet altijd.", "Voorbeeld, geen kernzin."] },
+      { q: "Wat is een **kernzin**?", options: ["De zin met de hoofdgedachte van een alinea", "De zin met de meeste woorden van een alinea", "De zin die altijd als laatste in een alinea staat", "Een zin die iemand letterlijk heeft gezegd"], answer: 0, wrongHints: [null, "Lengte zegt niets.", "Soms wel maar niet altijd.", "Voorbeeld, geen kernzin."] },
       { q: "Welk verschil zit tussen **hoofdzaak** en **bijzaak**?", options: ["Hoofdzaak = nodig om kern te snappen; bijzaak = extra detail","Hoofdzaak staat altijd achteraan in de tekst","Bijzaak is altijd de langste zin","Er is geen verschil, ze betekenen hetzelfde"], answer: 0, wrongHints: [null, "Niet — vaak juist eerst.", "Niet relevant.", "Wel verschil."] },
       { q: "Welke woorden zijn typisch voor een **samenvattende slot-zin**?", options: ["Kortom / dus / al met al","Echter / maar","Bovendien / ook","Ten eerste / ten tweede"], answer: 0, wrongHints: [null, "Tegenstelling.", "Opsomming.", "Begin opsomming."] },
       { q: "Een goede samenvatting is geschreven in?", options: ["Eigen woorden","Letterlijk overgenomen zinnen","Engels","Steekwoorden zonder zinnen"], answer: 0, wrongHints: [null, "Dat is plagiaat-stijl.", "Niet relevant.", "Te kort — meestal hele zinnen."] },
       { q: "Welke informatie laat je **WEG** in een samenvatting?", options: ["Voorbeelden + details","Hoofdpunten","Conclusie","Onderwerp"], answer: 0, wrongHints: [null, "Hoofdpunten zijn juist de kern — die hou je.", "De conclusie is belangrijk en blijft in een samenvatting.", "Het onderwerp moet er juist in. Wat is minder belangrijk: de kern of losse voorbeelden?"] },
-      { q: "Wat is een **tussentitel**?", options: ["Kop boven een alinea/onderdeel","De grote titel","Naam van schrijver","Vraag aan lezer"], answer: 0, wrongHints: [null, "Dat is hoofdtitel.", "Niet inhoud.", "Niet kop."] },
-      { q: "Tussentitels helpen je om?", options: ["Snel structuur + thema's te zien","Sneller te schrijven","Mooier te lezen","Tellen"], answer: 0, wrongHints: [null, "Niet de bedoeling.", "Niet hoofddoel.", "Niet inhoud."] },
+      { q: "Wat is een **tussentitel**?", options: ["Kop boven een alinea/onderdeel", "Grote titel boven de hele tekst", "Naam van de schrijver van de tekst", "Vraag aan de lezer aan het einde"], answer: 0, wrongHints: [null, "Dat is de hoofdtitel. Het woord 'tussen' zegt waar deze staat.", "Is een naam een titel?", "Staat een tussentitel aan het einde?"] },
+      { q: "Tussentitels helpen je om?", options: ["Snel structuur + thema's te zien", "Zelf sneller een tekst te schrijven", "De tekst mooier te laten klinken", "Woorden in de tekst te tellen"], answer: 0, wrongHints: [null, "Waarvoor kijk je naar tussentitels als je een tekst doorbladert?", "Waarvoor kijk je naar tussentitels als je een tekst doorbladert?", "Waarvoor kijk je naar tussentitels als je een tekst doorbladert?"] },
       { q: "Bij een samenvatting van **5 alinea's** — hoeveel kernzinnen zoek je minimaal?", options: ["5 kernzinnen","1 kernzin","10 kernzinnen","Geen enkele kernzin"], answer: 0, wrongHints: [null, "Elke alinea heeft een eigen hoofdpunt — hoeveel alinea's zijn er?", "Heeft elke alinea twee kernzinnen nodig?", "Kun je samenvatten zonder de hoofdpunten?"] },
       { q: "Een **goede samenvatting** lees je als?", options: ["Compactere versie die je het origineel laat overslaan","Een gewone tekst die even lang is als het origineel","Een rijtje vragen over de tekst","Een lijst losse woorden zonder zinnen"], answer: 0, wrongHints: [null, "Niet — korter.", "Stelt een samenvatting vragen, of geeft hij de inhoud weer?", "Te kort meestal."] },
-      { q: "Welke **vraag aan jezelf** helpt bij hoofdgedachte vinden?", options: ["Als ik in 1 zin uitleg waarover de tekst gaat — wat zeg ik?","Hoeveel woorden zijn er?","Wie heeft de tekst gemaakt?","Welke kleur is de letter?"], answer: 0, wrongHints: [null, "Telling.", "Niet inhoud.", "Niet relevant."] },
-      { q: "Wat is een **bijzaak** in een nieuwsbericht?", options: ["Detail dat verhaal kleur geeft, maar niet essentieel","Het belangrijkste feit van het bericht","De kop boven het bericht","Wat er gebeurd is en waar"], answer: 0, wrongHints: [null, "Dat is hoofdzaak.", "De kop vat het nieuws samen — is dat een bijzaak?", "Wat, waar en wanneer zijn de kern van nieuws — kun je die weglaten?"] },
+      { q: "Welke **vraag aan jezelf** helpt bij hoofdgedachte vinden?", options: ["Als ik in 1 zin uitleg waarover de tekst gaat — wat zeg ik?", "Hoeveel woorden en zinnen staan er in de hele tekst?", "Wie heeft de tekst geschreven en in welk jaar was dat?", "Welke kleur en welke letter heeft de titel van de tekst?"], answer: 0, wrongHints: [null, "Zegt het aantal woorden iets over de boodschap?", "Zegt de naam van de schrijver iets over de boodschap?", "Zegt de kleur iets over de boodschap?"] },
+      { q: "Wat is een **bijzaak** in een nieuwsbericht?", options: ["Detail dat verhaal kleur geeft, maar niet essentieel", "Het allerbelangrijkste feit dat in het bericht staat", "De kop die boven het bericht in grote letters staat", "Wat er gebeurd is, waar en wanneer het gebeurde"], answer: 0, wrongHints: [null, "Zou je het belangrijkste feit kunnen weglaten?", "De kop vat het nieuws samen — is dat een bijzaak?", "Wat, waar en wanneer zijn de kern van nieuws — kun je die weglaten?"] },
       { q: "Bij de Doorstroomtoets vragen ze vaak: 'Wat is de hoofdgedachte?'. Welk type vraag is dat?", options: ["Inferentie","Spelling","Tellen","Mening"], answer: 0, wrongHints: [null, "Gaat het om hoe woorden geschreven worden, of om wat de tekst betekent?", "Niet.", "Geen eigen mening."] },
       { q: "*'De tekst gaat erover dat lezen belangrijk is en wat het oplevert.'* — kan dit de hoofdgedachte zijn?", options: ["Ja","Nee, dat is alleen het onderwerp","Nee, dat is een titel","Nee, dat is een detail"], answer: 0, wrongHints: [null, "Noemt de zin alleen waarover het gaat, of ook wát de tekst erover zegt?", "Is een titel meestal zo'n lange zin?", "Gaat de zin over één klein stukje, of over de hele tekst?"] },
       { q: "Wat doe je als de **eerste zin** géén kernzin is?", options: ["Verder zoeken in de alinea","Stoppen","Zomaar een zin kiezen","Niet samenvatten"], answer: 0, wrongHints: [null, "Niet — blijf zoeken.", "Niet — gericht zoeken.", "Wel — kan altijd."] },

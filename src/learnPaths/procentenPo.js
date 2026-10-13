@@ -116,7 +116,7 @@ const steps = [
         q: "**100%** — wat betekent dat?",
         options: ["Alles","De helft","Honderd dingen","Niets"],
         answer: 0,
-        wrongHints: [null, "De helft is niet hetzelfde als alles — welk percentage hoort bij de helft?", "Niet 'honderd dingen' — het hangt af van waarvan je 100% hebt. 100% van 5 is bijvoorbeeld 5.", "Niets is het tegenovergestelde van alles — welk percentage hoort daarbij?"],
+        wrongHints: [null, "Welk percentage hoort bij de helft? Is dat 100%?", "Het hangt af van waarvan je 100% neemt. Hoeveel is 100% van 5 snoepjes?", "Welk percentage hoort bij niets? Is dat 100%?"],
         uitlegPad: {
           stappen: [
             { titel: "100% = het hele ding", tekst: "**100%** betekent **ALLES** — het hele geheel waar je het over hebt. Het is niet altijd 100 dingen!" },

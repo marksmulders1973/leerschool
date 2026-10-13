@@ -672,12 +672,7 @@ De strategie blijft hetzelfde: vind het verwijswoord, zoek (terug óf vooruit), 
       },
       {
         q: "*\"Mees vergat zijn gymtas. Dat gebeurt hem wel vaker.\"* — Naar wat verwijst 'dat'?",
-        options: [
-          "Dat Mees zijn gymtas vergat",
-          "De gymtas",
-          "Mees",
-          "De gymles",
-        ],
+        options: ['Dat Mees zijn gymtas vergat', 'De gymtas die Mees vergat', 'Mees, de jongen uit de zin', 'De gymles van die dag'],
         answer: 0,
         wrongHints: [
           null,
@@ -713,12 +708,7 @@ De strategie blijft hetzelfde: vind het verwijswoord, zoek (terug óf vooruit), 
         q: "*\"De merel zong in de tuin. Ik hoorde hem al vroeg in de ochtend.\"* — Naar wie of wat verwijst 'hem'?",
         options: ["De merel", "De tuin", "Ik", "De ochtend"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Een tuin kun je niet horen — je hoort een geluid. Welk geluid veroorzaakte de merel?",
-          "'Ik' is degene die hoort, niet de merel die gehoord wordt. Wie maakte het geluid?",
-          null,
-        ],
+        wrongHints: [null, 'Een tuin kun je niet horen — je hoort een geluid. Wie of wat maakte er geluid in de eerste zin?', '\'Ik\' is degene die hoort, niet de merel die gehoord wordt. Wie maakte het geluid?', null],
         uitlegPad: {
           stappen: [
             { titel: "Zoek terug", tekst: "De zin ervoor noemt de merel. 'Hem' wijst naar dat mannetjesvogeltje." },
@@ -847,12 +837,7 @@ De strategie blijft hetzelfde: vind het verwijswoord, zoek (terug óf vooruit), 
       },
       {
         q: "*\"Noor liet haar beker vallen. Hierdoor lag de hele tafel vol melk.\"* — Naar wat verwijst 'hierdoor'?",
-        options: [
-          "Dat Noor haar beker liet vallen",
-          "De tafel",
-          "De melk",
-          "Noor",
-        ],
+        options: ['Dat Noor haar beker liet vallen', 'De tafel die vol melk lag', 'De melk die in de beker zat', 'Noor, het meisje uit de zin'],
         answer: 0,
         wrongHints: [
           null,
@@ -1176,20 +1161,10 @@ Pak bij elke vraag je vaste strategie erbij: **vind** het verwijswoord in de tek
       },
       {
         q: "*\"In de bus terug werd er nog lang over nagepraat.\"* — Naar wat verwijst 'er' (in 'over nagepraat')?",
-        options: [
-          "De hele dag op de kinderboerderij",
-          "De bus zelf",
-          "De chauffeur van de bus",
-          "De reis heen",
-        ],
+        options: ['De hele dag op de kinderboerderij', 'De bus waarin ze terugreden', 'De chauffeur van de bus', 'De lange reis heen met de bus'],
         answer: 0,
         evidence: "Aan het einde van de middag mochten de kinderen de konijnen voeren. Dit vonden ze het allerleukst van de hele dag. In de bus terug werd er nog lang over nagepraat.",
-        wrongHints: [
-          null,
-          "Wordt er over de bus nagepraat? Of over wat er die dag beleefd werd?",
-          null,
-          "'Er over napraten' — over de dag die ze hadden, niet over de heenreis. Wat beleefden ze die dag?",
-        ],
+        wrongHints: [null, 'Wordt er over de bus nagepraat? Wat was er die dag zo bijzonder?', null, 'De heenreis was maar een klein stukje. Waar ging het hele verhaal over?'],
         uitlegPad: {
           stappen: [
             { titel: "'Er over napraten' = over een onderwerp praten", tekst: "'Er' verwijst hier naar de inhoud van het gesprek — het onderwerp. In de context: wat hebben ze die dag gedaan?" },

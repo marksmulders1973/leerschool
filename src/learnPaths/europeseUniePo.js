@@ -93,7 +93,7 @@ const steps = [
       },
       {
         q: "Mag de Nederlandse overheid invoerheffing leggen op auto's uit Duitsland?",
-        options: ["Ja — vrij om te kiezen", "Ja — alleen op luxe-auto's", "Nee — vrij verkeer van goederen verbiedt dit", "Nee — alleen voor brandstof-auto's"],
+        options: ["Ja — elk land is vrij om dat te kiezen", "Ja — maar alleen op dure luxe-auto's", "Nee — vrij verkeer van goederen verbiedt dit", "Nee — behalve op auto's die op benzine rijden"],
         answer: 2,
         wrongHints: ["Tegenovergesteld — invoerheffingen binnen EU zijn juist VERBODEN.", "Geen onderscheid luxe/standaard binnen EU.", null, "Geen onderscheid brandstof/elektrisch binnen EU."],
         explanation: "**Vrij verkeer van goederen** = geen invoerheffingen tussen EU-lidstaten. NL mag geen extra belasting op Duitse auto's heffen. WEL toegestaan: BPM (Belasting van Personenauto's) op ALLE auto's (Nederlandse + Duitse) — dat is geen invoerheffing, maar gebruiks-belasting.",

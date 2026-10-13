@@ -170,9 +170,9 @@ const steps = [
       },
       {
         q: "Wat is een **gewricht**?",
-        options: ["Plek waar 2 botten elkaar ontmoeten", "Een spier", "Een bot zelf", "Een orgaan"],
+        options: ["Plek waar 2 botten elkaar ontmoeten", "Spier die aan een bot trekt", "Een stevig bot in je arm of been", "Orgaan dat je bloed schoonmaakt"],
         answer: 0,
-        wrongHints: [null, "Spier ≠ gewricht. Spier trekt aan bot, gewricht is de verbinding.", "Een gewricht is geen bot — het is de verbinding tussen twee botten.", "Geen orgaan — gewrichten zijn structurele onderdelen van je skelet."],
+        wrongHints: [null, "Een spier trekt aan een bot. Maar waar kán dat bot dan buigen?", "Een bot zelf buigt niet. Waar kun je je arm wél buigen?", "Geen orgaan — gewrichten zijn structurele onderdelen van je skelet."],
         uitlegPad: {
           stappen: [
             { titel: "Gewricht = ontmoetingsplek", tekst: "Een **gewricht** is de plek waar **2 botten elkaar ontmoeten en kunnen bewegen** ten opzichte van elkaar. Voorbeelden: knie (dijbeen + scheenbeen), elleboog (opperarmbot + spaakbeen)." },
@@ -214,7 +214,7 @@ const steps = [
       },
       {
         q: "Wat doet je **hart**?",
-        options: ["Bloed pompen door je lichaam", "Eten verteren", "Zuurstof maken", "Hersenen koelen"],
+        options: ["Bloed pompen door je lichaam", "Eten verteren in je buik", "Zuurstof maken voor je bloed", "Je hersenen koel houden"],
         answer: 0,
         wrongHints: [null, "Maag doet dat.", "Longen halen zuurstof binnen, niet maken.", "Niet de taak van het hart."],
         uitlegPad: {
@@ -434,8 +434,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Hart is een spier zo groot als een vuist — niet het grootste.", "Lever is een orgaan binnen — niet het grootst.", "Maag is een rekbare zak — niet het grootst."],
       },
-      { q: "Wat doet je **hart**?", options: ["Pompt bloed door je lichaam","Maakt voedsel klein","Filtert lucht","Denkt"], answer: 0, wrongHints: [null, "Dat is maag.", "Longen.", "Hersenen."] },
-      { q: "Wat doen je **longen**?", options: ["Lucht inademen + zuurstof opnemen","Bloed pompen","Voedsel verteren","Denken"], answer: 0, wrongHints: [null, "Hart.", "Maag.", "Hersenen."] },
+      { q: "Wat doet je **hart**?", options: ["Pompt bloed door je lichaam", "Maakt voedsel klein in je buik", "Filtert de lucht die je inademt", "Denkt na en stuurt je lichaam"], answer: 0, wrongHints: [null, "Dat doet je maag.", "Dat doen je longen.", "Dat doen je hersenen."] },
+      { q: "Wat doen je **longen**?", options: ["Lucht inademen + zuurstof opnemen", "Bloed pompen door je hele lichaam", "Voedsel verteren + klein maken", "Denken + je lichaam besturen"], answer: 0, wrongHints: [null, "Dat doet je hart.", "Dat doet je maag.", "Dat doen je hersenen."] },
       { q: "Welk **lichaamsdeel** is voor zien?", options: ["Ogen","Oren","Neus","Mond"], answer: 0, wrongHints: [null, "Horen.", "Ruiken.", "Proeven."] },
       { q: "Hoeveel **botten** heeft een volwassen mens ongeveer?", options: ["206","100","500","1.000"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Veel te veel."] },
       { q: "Welke voeding is goed voor **botten**?", options: ["Melk en kaas", "Snoep", "Cola", "Chips"], answer: 0, wrongHints: [null, "Niet voor botten.", "Niet.", "Niet."] },
@@ -444,7 +444,7 @@ const steps = [
       { q: "Hoeveel **zintuigen** noemen we meestal?", options: ["5", "2", "3", "10"], answer: 0, wrongHints: [null, "Te weinig.", "Te weinig.", "Te veel."] },
       { q: "Welke spier in je lichaam **werkt continu**?", options: ["Hartspier","Beenspier","Armspier","Geen enkele spier"], answer: 0, wrongHints: [null, "Beenspier rust 's nachts als je slaapt.", "Armspier rust 's nachts als je slaapt.", "Eén spier rust nooit — denk: wat moet 24/7 doorgaan?"] },
       { q: "Waarvoor dient **zweten** (transpireren)?", options: ["Lichaam koelen", "Warm worden", "Vet verbranden", "Spieren bouwen"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Zweten verbrandt geen vet.", "Zweten bouwt geen spieren."] },
-      { q: "Wat doe je bij een **wond** met bloeding?", options: ["Schoonspoelen + verband","Negeren","Schreeuwen","Likken"], answer: 0, wrongHints: [null, "Niet.", "Niet primair.", "Niet."] },
+      { q: "Wat doe je bij een **wond** met bloeding?", options: ["Schoonspoelen + verband", "Negeren + doorspelen", "Likken + laten opdrogen", "Erop blazen + laten zitten"], answer: 0, wrongHints: [null, "Een wond kan gaan ontsteken als je niets doet.", "In je mond zitten veel bacteriën.", "Blazen maakt een wond niet schoon."] },
       { q: "Welke **vitamine** krijg je van de zon?", options: ["D","C","A","B"], answer: 0, wrongHints: [null, "Fruit.", "Wortels.", "Volkoren."] },
       { q: "Wat doen **witte bloedcellen**?", options: ["Afweer tegen ziekte", "Zuurstof transporteren", "Stollen", "Voedsel verteren"], answer: 0, wrongHints: [null, "Dat zijn rode.", "Plaatjes.", "Dat doen maag en darmen."] },
       { q: "Hoeveel **liter water** moet een 10-jarige drinken per dag?", options: ["~1,5 liter","5 liter","0,5 liter","10 liter"], answer: 0, wrongHints: [null, "Te veel.", "Te weinig.", "Veel te veel."] },

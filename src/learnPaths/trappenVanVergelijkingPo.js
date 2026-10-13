@@ -552,7 +552,7 @@ const steps = [
         q: "De vergrotende trap van 'dik' is...",
         options: ["dikker", "diker", "dikst", "dikke"],
         answer: 0,
-        wrongHints: [null, "Bij de korte klank verdubbel je de k: dik → dikker.", "Dat is de overtreffende trap.", "Dat is 'dik' met een -e."],
+        wrongHints: [null, "Bij een korte klank verdubbel je de medeklinker. Welke letter moet dubbel?", "Dat is de overtreffende trap.", "Dat is 'dik' met een -e."],
         uitlegPad: {
           stappen: [{ titel: "Korte klank → dubbele letter", tekst: "'Dik' heeft een korte i-klank, dus de k verdubbelt: dik → dikker." }],
           niveaus: {
@@ -608,7 +608,7 @@ const steps = [
         q: "De vergrotende trap van 'nat' is...",
         options: ["natter", "nater", "natst", "natte"],
         answer: 0,
-        wrongHints: [null, "Bij de korte klank verdubbel je de t: nat → natter.", "Dat is de overtreffende trap.", "Dat is 'nat' met een -e."],
+        wrongHints: [null, "Bij een korte klank verdubbel je de medeklinker. Hoeveel t's krijg je dan?", "Dat is de overtreffende trap.", "Dat is 'nat' met een -e."],
         uitlegPad: {
           stappen: [{ titel: "Korte klank → dubbele letter", tekst: "'Nat' heeft een korte a-klank, dus de t verdubbelt: nat → natter." }],
           niveaus: {

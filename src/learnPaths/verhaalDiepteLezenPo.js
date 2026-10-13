@@ -891,10 +891,10 @@ Beantwoord daarna de vragen. Denk steeds: wat betekent het écht, en wat voel ik
       {
         q: "*\"Ergens gaapt een deur, dan wordt het stil.\"* — Wat is de betekenis van 'een deur gaapt'?",
         options: [
-          "Een deur gaat langzaam piepend open of dicht",
-          "Een deur is erg groot en breed",
-          "Iemand gooit een deur dicht",
-          "Een deur is kapot",
+          "Een deur gaat langzaam piepend open",
+          "Een deur is heel erg groot en breed",
+          "Iemand gooit een deur hard dicht",
+          "Een deur hangt scheef en is kapot",
         ],
         answer: 0,
         wrongHints: [
@@ -1190,10 +1190,10 @@ Pak bij elke vraag de vaste aanpak: lees de vraag goed, zoek de juiste zin op in
       {
         q: "*\"Zijn vingers trilden toen hij het deksel optilde.\"* — Wat voelt Ties op dit moment?",
         options: [
-          "Hij is gespannen: als de vaas maar heel is gebleven",
+          "Hij is gespannen of de vaas nog heel is",
           "Hij heeft het koud in de klas",
-          "Hij is boos op Fleur",
-          "Hij vindt het deksel te zwaar",
+          "Hij is boos op Fleur om wat ze riep",
+          "Hij vindt het deksel veel te zwaar",
         ],
         answer: 0,
         evidence: "In de klas zette Ties de doos op tafel. Zijn vingers trilden toen hij het deksel optilde.",
@@ -1230,7 +1230,7 @@ Pak bij elke vraag de vaste aanpak: lees de vraag goed, zoek de juiste zin op in
       {
         q: "*\"Zijn wangen gloeiden als kacheltjes.\"* — Wat betekent dit?",
         options: [
-          "Ties krijgt een rood, warm hoofd omdat hij zich schaamt",
+          "Ties schaamt zich en krijgt rode wangen",
           "Er staan kacheltjes naast Ties aan",
           "Ties heeft koorts en moet naar huis",
           "Ties heeft het warm van het rennen",

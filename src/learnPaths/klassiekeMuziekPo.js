@@ -18,7 +18,7 @@ const steps = [
     checks: [
       {
         q: "Wat is **klassieke muziek**?",
-        options: ["Muziek van componisten als Bach en Mozart", "Popmuziek uit de hitlijsten", "Jazz met veel improvisatie", "Hiphop met rap"],
+        options: ["Muziek van componisten als Bach en Mozart", "Popmuziek uit de hitlijsten van nu", "Jazz met veel improvisatie en swing", "Hiphop met rap en beats uit de computer"],
         answer: 0,
         wrongHints: [null, "Pop is moderne lichte muziek.", "Jazz is een jongere stijl.", "Hiphop ontstond pas rond 1975."],
       },

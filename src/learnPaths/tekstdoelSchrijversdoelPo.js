@@ -367,7 +367,7 @@ const steps = [
       },
       {
         q: "*\"Morgen begint droog, maar in de middag trekken er buien over het land. De temperatuur ligt rond de achttien graden. Neem voor de zekerheid een jas mee.\"* — Voor wie is dit bedoeld?",
-        options: ["Iedereen — een breed publiek", "Alleen kinderen", "Alleen boeren", "Alleen piloten"],
+        options: ['Voor iedereen', 'Alleen kinderen', 'Alleen boeren', 'Alleen piloten'],
         answer: 0,
         wrongHints: [
           null,
@@ -425,7 +425,7 @@ const steps = [
       },
       {
         q: "*\"Heb jij weleens zin in iets lekkers maar wil je geen suiker? Probeer dan eens een stuk fruit. Een appel of een peer geeft je ook energie!\"* — Voor wie is dit bedoeld?",
-        options: ["Kinderen of jongeren", "Ouders", "Tandartsen", "Boeren"],
+        options: ['Kinderen of jongeren', 'Ouders of opvoeders', 'Tandartsen of artsen', 'Boeren of tuinders'],
         answer: 0,
         wrongHints: [
           null,
@@ -448,12 +448,7 @@ const steps = [
       },
       {
         q: "Aan WELKE aanwijzing zie je het snelst dat een tekst voor volwassenen is bedoeld?",
-        options: [
-          "De schrijver gebruikt 'u' en deftige woorden",
-          "De tekst heeft veel alinea's",
-          "De tekst staat in een boek",
-          "De tekst heeft een titel",
-        ],
+        options: ['Er staat \'u\' en deftige woorden', 'De tekst heeft veel alinea\'s', 'De tekst staat in een boek', 'De tekst heeft een lange titel'],
         answer: 0,
         wrongHints: [
           null,

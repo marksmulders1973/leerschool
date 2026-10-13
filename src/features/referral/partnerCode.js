@@ -189,7 +189,7 @@ export function vangPartnerCode() {
     if (nieuw) ls.set(KEY_CODE, code);
     // Elk bezoek via de link telt als scan — ook herhaalbezoek (props.uid
     // maakt unieke mensen telbaar in het dagrapport).
-    track("partner_bezoek", { code: ls.get(KEY_CODE) || code, nieuw, via });
+    track("partner_bezoek", { code: ls.get(KEY_CODE) || code, nieuw, via, straks: params.get("utm_source") === "straks" });
     // F3 (Fable-review 2 sep 2026): een verzonnen code (?partner=TEST123)
     // bleef anders voor altijd staan mét gratis-belofte. Achteraf checken;
     // onbekend → weer weghalen (alleen als er nog geen plek geclaimd is).

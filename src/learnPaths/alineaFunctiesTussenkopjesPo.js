@@ -97,9 +97,9 @@ Op de Doorstroomtoets krijg je vragen als: *"Waar gaat de tweede alinea over?"* 
       {
         q: "Waaraan herken je dat er een nieuwe alinea begint?",
         options: [
-          "Aan een witregel of doordat de tekst op een nieuwe regel begint",
+          "Aan een witregel of een nieuwe regel",
           "Aan een punt aan het einde van een zin",
-          "Aan een uitroepteken",
+          "Aan een uitroepteken achter een zin",
           "Aan een dikgedrukt woord midden in een zin",
         ],
         answer: 0,
@@ -977,8 +977,8 @@ Oefen nu met de vragen hieronder. Let goed op de te-smalle en te-brede instinker
         q: "*\"Vlinders beginnen als ei. Daarna worden ze een rups, dan een pop en uiteindelijk een vlinder. Elke stap duurt anders lang. Het hele proces heet metamorfose.\"* — Welk tussenkopje past het best?",
         options: [
           "De levenscyclus van de vlinder",
-          "Het ei",
-          "Leven in de natuur",
+          "Het ei van de vlinder",
+          "Allerlei dieren in de natuur",
           "Hoe snel vlinders vliegen",
         ],
         answer: 0,
@@ -992,7 +992,7 @@ Oefen nu met de vragen hieronder. Let goed op de te-smalle en te-brede instinker
           stappen: [
             { titel: "Vind de kernzin", tekst: "De slotzin vat alles samen: 'het hele proces heet metamorfose'. Samen met de eerste zin ('beginnen als ei') dekt dat het hele onderwerp: alle stadia van ei tot vlinder." },
             { titel: "Doe de pas-test", tekst: "'De levenscyclus van de vlinder' dekt ei, rups, pop én vlinder. Alle vier de zinnen passen eronder." },
-            { titel: "Streep de instinkers weg", tekst: "Ei = te smal. Leven in de natuur = te breed. Hoe snel ze vliegen = verkeerd onderwerp." },
+            { titel: "Streep de instinkers weg", tekst: "Ei = te smal. Allerlei dieren in de natuur = te breed. Hoe snel ze vliegen = verkeerd onderwerp." },
           ],
           niveaus: {
             basis: "De alinea gaat door alle stadia van het leven van een vlinder. Welk kopje noemt dat geheel?",
@@ -1004,7 +1004,7 @@ Oefen nu met de vragen hieronder. Let goed op de te-smalle en te-brede instinker
       {
         q: "Boven een alinea staat het tussenkopje **'Eten voor de winter'**. Welke alinea past daar het best onder?",
         options: [
-          "De eekhoorn verstopt in de herfst overal nootjes. Zo heeft hij in de koude maanden altijd iets te eten. Soms vergeet hij een verstopplek — daar groeit dan een nieuw boompje.",
+          "De eekhoorn verstopt in de herfst overal nootjes. Zo heeft hij in de koude maanden altijd iets te eten.",
           "De eekhoorn heeft een prachtige rode pluimstaart. Daarmee houdt hij zijn evenwicht als hij van tak naar tak springt.",
           "In het bos groeien veel soorten bomen: eiken, beuken en dennen. Elke boom heeft zijn eigen blad.",
           "Sommige vogels vliegen in de herfst naar het warme zuiden. In de lente komen ze weer terug.",

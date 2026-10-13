@@ -23,12 +23,7 @@ const steps = [
     checks: [
       {
         q: "Wat is een lettergreep?",
-        options: [
-          "een stukje van een woord dat je in één keer uitspreekt",
-          "de eerste letter van een woord",
-          "een woord met een hoofdletter",
-          "het hele woord",
-        ],
+        options: ["een deel van een woord in één klap","de eerste letter van een woord","een woord met een hoofdletter","het hele woord van begin tot eind"],
         answer: 0,
         wrongHints: [null, "Dat is maar één letter, geen lettergreep.", "Een hoofdletter heeft er niets mee te maken.", "Een woord kan meerdere lettergrepen hebben."],
         uitlegPad: {
@@ -399,12 +394,7 @@ const steps = [
       },
       {
         q: "Mag je het woord 'aap' afbreken aan het eind van een regel?",
-        options: [
-          "nee, het heeft maar één lettergreep",
-          "ja, als a-ap",
-          "ja, als aa-p",
-          "ja, overal",
-        ],
+        options: ["nee, het is maar één lettergreep","ja, als a-ap, tussen de twee a's","ja, als aa-p, voor de laatste letter","ja, je mag overal afbreken"],
         answer: 0,
         wrongHints: [null, "Eén lettergreep splits je niet.", "Ook niet — er is geen tweede lettergreep.", "Afbreken kan alleen tussen lettergrepen."],
         uitlegPad: {
@@ -432,12 +422,7 @@ const steps = [
       },
       {
         q: "Mag je het woord 'zon' afbreken aan het eind van een regel?",
-        options: [
-          "nee, het heeft maar één lettergreep",
-          "ja, als zo-n",
-          "ja, als z-on",
-          "ja, overal",
-        ],
+        options: ["nee, het is maar één lettergreep","ja, als zo-n, na de klinker","ja, als z-on, na de eerste letter","ja, je mag overal afbreken"],
         answer: 0,
         wrongHints: [null, "Eén lettergreep splits je niet — er is geen tweede stukje.", "Ook hier is geen tweede lettergreep om op af te breken.", "Afbreken kan alleen tussen lettergrepen."],
         uitlegPad: {
@@ -546,12 +531,7 @@ const steps = [
     checks: [
       {
         q: "Wat is de klemtoon in een woord?",
-        options: [
-          "de lettergreep die je het sterkst uitspreekt",
-          "de eerste letter",
-          "de laatste lettergreep, altijd",
-          "een leesteken",
-        ],
+        options: ["de lettergreep die je het hardst zegt","de eerste letter van het woord","altijd de laatste lettergreep","een leesteken achter het woord"],
         answer: 0,
         wrongHints: [null, "Het gaat om een hele lettergreep, niet één letter.", "Niet altijd de laatste — het verschilt per woord.", "De klemtoon hoor je, het is geen teken."],
         uitlegPad: {

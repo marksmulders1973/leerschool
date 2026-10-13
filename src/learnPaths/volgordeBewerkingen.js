@@ -633,9 +633,9 @@ const steps = [
       },
       {
         q: "Wat doe je bij **haakjes binnen haakjes**?",
-        options: ["Eerst binnenste, dan buitenste","Eerst buitenste","Maakt niet uit","Negeren"],
+        options: ['Eerst binnenste, dan buitenste', 'Eerst buitenste, dan binnenste', 'Maakt niet uit, allebei goed', 'Binnenste haakjes weglaten'],
         answer: 0,
-        wrongHints: [null,"Andersom — van binnen naar buiten.","Wel uit — verschillende antwoorden mogelijk.","Niet negeren."],
+        wrongHints: [null, 'Probeer 2 × (3 + (4 − 1)). Kun je de buitenste haakjes al uitrekenen?', 'Het maakt wel uit — je kunt verschillende antwoorden krijgen.', 'Haakjes zijn er niet voor niets. Wat doen ze met de volgorde?'],
         uitlegPad: {
           stappen: [{ titel: "Binnen → buiten", tekst: "Bij geneste haakjes: eerst de binnenste, dan buitenste." }],
           woorden: [{ woord: "geneste haakjes", uitleg: "Haakjes binnen haakjes: ((...)...)." }],
@@ -1720,7 +1720,7 @@ const steps = [
       { q: "Bereken: 5 + (8 − 3) × 2 = ?", options: ["15","16","26","13"], answer: 0, wrongHints: [null, null, "Te veel.", null] },
       { q: "Bereken: 20 ÷ 4 × 2 = ?", options: ["10","2,5","160","5"], answer: 0, wrongHints: [null, "Niet — × en ÷ van links naar rechts.", "Te veel.", "Vergeet × 2 niet."] },
       { q: "Bereken: 3² × 2 = ?", options: ["18","12","9","6"], answer: 0, wrongHints: [null, "Niet — bereken eerst de macht, dan vermenigvuldig je pas.", "Vergeet × 2 niet.", null] },
-      { q: "Welke is **gelijkwaardig**: × en ÷ of + en −?", options: ["Beide paren onderling gelijk","Niet relevant","× sterker dan ÷","+ sterker dan −"], answer: 0, wrongHints: [null, "Wel.", null, null] },
+      { q: "Welke is **gelijkwaardig**: × en ÷ of + en −?", options: ['Beide paren onderling gelijk', 'Geen van beide paren gelijk', 'Alleen × en ÷ zijn gelijk', 'Alleen + en − zijn gelijk'], answer: 0, wrongHints: [null, 'Denk aan de rekenvolgorde: welke bewerkingen doe je van links naar rechts?', 'En hoe zit het met + en −?', 'En hoe zit het met × en ÷?'] },
       { q: "Bereken: (4 + 2) × (3 − 1) = ?", options: ["12","7","10","20"], answer: 0, wrongHints: [null, null, null, null] },
     ],
   },

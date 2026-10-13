@@ -170,9 +170,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **KNMI**?",
-        options: ["NL-weerinstituut (De Bilt)", "Belasting", "Sport", "School"],
+        options: ['NL-weerinstituut (De Bilt)', 'Belastingdienst (Apeldoorn)', 'Nederlandse sportbond (Zeist)', 'Technische hogeschool (Delft)'],
         answer: 0,
-        wrongHints: [null, "De Belastingdienst gaat over geld, niet over het weer.", "Geen sport — dit instituut meet en voorspelt het weer.", "Geen school — denk aan wie het weerbericht maakt."],
+        wrongHints: [null, 'De Belastingdienst gaat over geld, niet over het weer.', 'Geen sport. Zoek uit waar de letters K-N-M-I voor staan.', 'Geen school — denk aan wie het weerbericht maakt.'],
         uitlegPad: {
           stappen: [
             { titel: "Wat is KNMI?", tekst: "**KNMI** = **Koninklijk Nederlands Meteorologisch Instituut**. Sinds **1854** verantwoordelijk voor weervoorspelling + onderzoek naar klimaat in Nederland." },
@@ -198,9 +198,9 @@ const steps = [
       },
       {
         q: "Wat zijn **isobaren**?",
-        options: ["Lijnen van gelijke luchtdruk", "Temperatuur", "Wind", "Wolken"],
+        options: ['Lijnen van gelijke luchtdruk', 'Lijnen van gelijke temperatuur', 'Lijnen die de windkracht tonen', 'Lijnen rond grote wolkenvelden'],
         answer: 0,
-        wrongHints: [null, "Iso-thermen.", "Niet primair.", "Niet specifiek."],
+        wrongHints: [null, 'Die lijnen heten isothermen. Denk aan het woordstuk \'baar\'.', 'Wind hangt ermee samen, maar wat geven de lijnen zelf aan?', 'Wolken teken je met symbolen, niet met lijnen.'],
         uitlegPad: {
           stappen: [
             { titel: "Iso = gelijk, baar = druk", tekst: "**Isobaren** zijn lijnen op een weerkaart die plekken met **gelijke luchtdruk** verbinden. Net zoals **hoogtelijnen** op landkaart punten met gelijke hoogte verbinden." },
@@ -251,7 +251,7 @@ const steps = [
       { q: "Hoe ver vooruit kun je **redelijk voorspellen**?", options: ["Ongeveer een week", "1 maand exact", "1 jaar", "Niet mogelijk"], answer: 0, wrongHints: [null, "Onmogelijk.", "Onmogelijk.", "Wel."] },
       {
         q: "Wat is **klimaatverandering**?",
-        options: ["Aarde wordt langzaam warmer door meer CO₂", "Wisseling van weer per dag", "Wisseling van seizoenen", "Een weer-app"],
+        options: ['Aarde warmt op door meer CO₂', 'Wisseling van weer per dag', 'Wisseling van de seizoenen', 'Een nieuwe app voor het weer'],
         answer: 0,
         wrongHints: [null, "Dat is gewoon WEER, niet klimaat (= langere termijn).", "Seizoenen = normale cyclus, geen verandering.", "Niet — klimaat is wetenschappelijk fenomeen."],
         uitlegPad: {
@@ -302,9 +302,9 @@ const steps = [
       },
       {
         q: "Wat is een **storm** in Nederland (volgens KNMI)?",
-        options: ["Wind ≥ Beaufort 9 (75 km/u)", "Veel regen", "Sneeuw", "Onweer"],
+        options: ['Wind ≥ Beaufort 9 (75 km/u)', 'Neerslag ≥ 10 mm (veel regen)', 'Sneeuw ≥ 10 cm (dik pak)', 'Onweer ≥ 10 bliksems per uur'],
         answer: 0,
-        wrongHints: [null, "Veel regen = bui, geen storm-definitie.", "Sneeuw + storm = sneeuwstorm, maar storm zelf = wind.", "Onweer = bliksem/donder, andere fenomeen."],
+        wrongHints: [null, 'Veel regen is een bui, geen storm.', 'Een storm gaat over iets anders dan sneeuw.', 'Onweer is bliksem en donder. Storm gaat over iets anders.'],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een storm?", tekst: "Volgens **KNMI** is er storm bij **windkracht 9 op Beaufort-schaal** = **75-88 km/u**.\n• **Zware storm** = Beaufort 10 (89-102 km/u)\n• **Zeer zware storm** = Beaufort 11 (103-117 km/u)\n• **Orkaan** = Beaufort 12 (>117 km/u)\n\nIn NL komt orkaankracht (gemiddelde wind) bijna nooit voor." },
@@ -328,9 +328,9 @@ const steps = [
       },
       { q: "Welk instituut doet **weersvoorspellingen** in Nederland?", options: ["KNMI","RIVM","CBS","NS"], answer: 0, wrongHints: [null, "Volksgezondheid.", "Statistiek.", "Spoorwegen."] },
       { q: "Welke schaal meet **windkracht**?", options: ["Beaufort","Richter","Celsius","Kelvin"], answer: 0, wrongHints: [null, "Aardbevingen.", "Temperatuur.", "Temperatuur."] },
-      { q: "Waarom zie je de **bliksem** eerder dan je de **donder** hoort?", options: ["Licht reist sneller dan geluid","Bliksem komt eerst","Donder is verzonnen","Geen verschil"], answer: 0, wrongHints: [null, "Wel — maar wat is de REDEN?", "Donder bestaat wel.", "Wel verschil."] },
+      { q: "Waarom zie je de **bliksem** eerder dan je de **donder** hoort?", options: ['Licht reist sneller dan geluid', 'Bliksem ontstaat eerder dan donder', 'Geluid reist sneller dan licht', 'Je ogen werken sneller dan oren'], answer: 0, wrongHints: [null, 'Bliksem en donder ontstaan tegelijk. Waarom bereikt het één je dan eerder?', 'Denk aan onweer ver weg: wat merk je het eerst?', 'Je ogen en oren werken allebei razendsnel. Het verschil zit buiten je hoofd.'] },
       { q: "Welk weersymbool betekent **regenbui**?", options: ["Wolk met druppels","Zon","Sneeuwvlok","Streep"], answer: 0, wrongHints: [null, "Mooi weer.", "Sneeuw.", "Niet."] },
-      { q: "Wat is **luchtdruk**?", options: ["Kracht waarmee lucht drukt","Wind","Temperatuur","Vochtigheid"], answer: 0, wrongHints: [null, "Beweging lucht.", "Warmte.", "Vocht."] },
+      { q: "Wat is **luchtdruk**?", options: ['Kracht waarmee lucht drukt', 'Snelheid waarmee lucht waait', 'Warmte die in de lucht zit', 'Vocht dat in de lucht zit'], answer: 0, wrongHints: [null, 'Dat is wind.', 'Dat is temperatuur.', 'Dat is luchtvochtigheid.'] },
       { q: "Hoge luchtdruk = welk weer?", options: ["Mooi/droog","Storm","Onweer","Regen"], answer: 0, wrongHints: [null, "Storm hoort bij lágedruk, niet hoge.", "Onweer komt bij lagedruk en opstijgende lucht.", "Regen hoort bij lagedruk — wat doet hoge druk dan?"] },
       { q: "Welke windrichting waait meestal in NL?", options: ["Zuidwest","Noord","Oost","Zuid"], answer: 0, wrongHints: [null, "Soms.", "Soms (oosterwind koud).", "Niet primair."] },
       { q: "Welke **witte stapelwolk** zie je vaak bij mooi zomerweer?", options: ["Cumulus","Cirrus","Stratus","Cumulonimbus"], answer: 0, wrongHints: [null, "IJskristal.", "Vlakke laag.", "Onweerswolk."] },
@@ -338,11 +338,11 @@ const steps = [
       { q: "Welk **instrument** meet luchtdruk?", options: ["Barometer","Thermometer","Anemometer","Hygrometer"], answer: 0, wrongHints: [null, "Temperatuur.", "Wind.", "Vocht."] },
       { q: "Wat doet een **anemometer**?", options: ["Wind meten","Temperatuur","Luchtdruk","Vochtigheid"], answer: 0, wrongHints: [null, "Thermometer.", "Barometer.", "Hygrometer."] },
       { q: "Een **hittegolf** in NL = ?", options: ["≥5 dagen ≥25°C met 3 ≥30°C","≥3 dagen ≥25°C met 1 ≥30°C","≥1 dag ≥30°C met 1 ≥35°C","≥7 dagen zon met 3 ≥20°C"], answer: 0, wrongHints: [null, "Te kort — een hittegolf duurt langer.", "Eén hete dag is nog geen hittegolf.", "Het gaat om de temperatuur, niet alleen om zon."] },
-      { q: "Wat doet een **front** in weer?", options: ["Grens tussen luchtmassa's","Niets","Wolk","Zon"], answer: 0, wrongHints: [null, "Wel.", "Onderdeel.", "Niet."] },
+      { q: "Wat doet een **front** in weer?", options: ['Grens tussen luchtmassa\'s', 'Wind die over zee waait', 'Grote wolk boven het land', 'Zon die door de wolken komt'], answer: 0, wrongHints: [null, 'Wind is lucht die beweegt. Een front is iets anders.', 'Bij een front zie je vaak wolken, maar wat is het front zelf?', 'Na een front kan de zon schijnen, maar wat is het front zelf?'] },
       { q: "**Code rood** bij KNMI betekent?", options: ["Extreem gevaarlijk weer","Mooi weer","Een dag wachten","Niet relevant"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Wel."] },
-      { q: "Wat is **smog**?", options: ["Mengsel mist + luchtvervuiling","Sneeuw","Mooi weer","Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Tegengestelde.", "Wel."] },
+      { q: "Wat is **smog**?", options: ['Mengsel van mist en vervuiling', 'Mengsel van sneeuw en hagel', 'Heel helder en zonnig weer', 'Mengsel van zand en harde wind'], answer: 0, wrongHints: [null, 'Sneeuw en hagel zijn neerslag. Smog hangt in de lucht.', 'Tegengestelde.', 'Een zandstorm heet geen smog. Denk aan grote steden met veel verkeer.'] },
       { q: "Welk weer geeft een **lage druk** vaak?", options: ["Bewolkt/regen","Mooi weer","Sneeuw","Niet bestaand"], answer: 0, wrongHints: [null, "Hoge druk.", "Niet primair.", "Wel."] },
-      { q: "Wat doet een **buienradar**?", options: ["Toont waar regen valt + bewegingsrichting","Voorspelt temperatuur","Toont wind","Niet relevant"], answer: 0, wrongHints: [null, "Niet primair.", "Niet primair.", "Wel."] },
+      { q: "Wat doet een **buienradar**?", options: ['Toont waar regen valt en heen trekt', 'Voorspelt de temperatuur van morgen', 'Toont hoe hard de wind waait', 'Toont waar de zon het eerst schijnt'], answer: 0, wrongHints: [null, 'Daarvoor heb je een thermometer of weerbericht.', 'Wind zie je op een windkaart.', 'Zon is geen bui. Kijk naar de naam.'] },
       { q: "Welke **afkortingen** gebruik je voor windrichtingen?", options: ["N, O, Z, W","A, B, C, D","L, R, V, A","Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Links/rechts hangt af van hoe je staat — een windrichting niet.", "Wel."] },
       { q: "Welke maanden zijn meestal **warmst** in NL?", options: ["Juni-augustus","December-februari","Maart-mei","September-november"], answer: 0, wrongHints: [null, "Winter.", "Lente.", "Herfst."] },
     ],

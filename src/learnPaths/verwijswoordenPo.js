@@ -36,14 +36,9 @@ const steps = [
       },
       {
         q: "Een verwijswoord is een woord dat...",
-        options: [
-          "terugwijst naar iets dat eerder genoemd is",
-          "altijd vooraan de zin staat",
-          "een nieuw onderwerp begint",
-          "alleen in vragen voorkomt",
-        ],
+        options: ["terugwijst naar iets dat eerder genoemd is", "altijd helemaal vooraan in de zin moet staan", "een nieuw onderwerp begint in de tekst", "alleen in vragen en uitroepen voorkomt"],
         answer: 0,
-        wrongHints: [null, "Het kan overal in de zin staan.", "Juist niet — het wijst terug naar iets bekends.", "Verwijswoorden staan in alle soorten zinnen."],
+        wrongHints: [null, "Het kan overal in de zin staan.", "Weet je bij 'hij' wie er bedoeld wordt zonder de zin ervoor?", "Verwijswoorden staan in alle soorten zinnen."],
         uitlegPad: {
           stappen: [{ titel: "Terugwijzen", tekst: "Een verwijswoord wijst terug naar iets of iemand dat al genoemd is, zodat je het woord niet hoeft te herhalen." }],
           niveaus: {
@@ -69,14 +64,9 @@ const steps = [
       },
       {
         q: "Waarom gebruiken we verwijswoorden?",
-        options: [
-          "om niet steeds hetzelfde woord te herhalen",
-          "om de zin langer te maken",
-          "om een vraag te stellen",
-          "om iets tegen te spreken",
-        ],
+        options: ["om niet steeds hetzelfde woord te herhalen", "om de zin langer en moeilijker te maken", "om van een gewone zin een vraag te maken", "om te zeggen dat iets niet waar is"],
         answer: 0,
-        wrongHints: [null, "Ze maken de tekst juist korter en prettiger.", "Daar dienen ze niet voor.", "Daar dienen ze niet voor."],
+        wrongHints: [null, "Wordt een tekst langer als je 'hij' schrijft in plaats van 'Pieter'?", "Daar dienen ze niet voor.", "Daar dienen ze niet voor."],
         uitlegPad: {
           stappen: [{ titel: "Herhaling voorkomen", tekst: "Met een verwijswoord (hij, die) hoef je 'de hond' niet steeds te herhalen. Dat leest prettiger." }],
           niveaus: {

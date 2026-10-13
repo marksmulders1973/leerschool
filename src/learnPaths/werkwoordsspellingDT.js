@@ -1317,12 +1317,7 @@ const steps = [
         q: "Kies de juiste vorm van **praten**: 'Oma ____ heel zacht.'",
         options: ["praat", "praatt", "praten", "prat"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Stam praat eindigt al op t. Komt er nog een t bij?",
-          null,
-          "Zeg pra-ten hardop: is de a kort of lang?",
-        ],
+        wrongHints: [null, "Kijk naar de laatste letter van de stam. Komt er dan nog een t bij?", null, "Zeg pra-ten hardop: is de a kort of lang?"],
         uitlegPad: {
           stappen: [
             {

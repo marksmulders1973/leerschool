@@ -36,7 +36,7 @@ const steps = [
         q: "Je wilt weten **wat 'innovatie' betekent**. Welke bron?",
         options: ["Woordenboek","Atlas","Krant","Encyclopedie"],
         answer: 0,
-        wrongHints: [null, "Een atlas heeft kaarten, geen woord-betekenis.", "Krant geeft nieuws, geen betekenis.", "Encyclopedie geeft brede info — voor betekenis is woordenboek directer."],
+        wrongHints: [null, "Een atlas heeft kaarten, geen woord-betekenis.", "Krant geeft nieuws, geen betekenis.", "Een encyclopedie vertelt veel over een onderwerp. Welk boek zet woorden en hun betekenis op een rij?"],
         uitlegPad: {
           stappen: [{ titel: "Betekenis = woordenboek", tekst: "Een woordenboek (Van Dale, online of papier) geeft per woord een korte betekenis. 'Innovatie = vernieuwing'. Encyclopedie geeft veel meer info dan je nodig hebt." }],
           woorden: [{ woord: "woordenboek", uitleg: "Lijst van woorden met betekenis + spelling, alfabetisch." }],
@@ -84,7 +84,7 @@ const steps = [
       },
       {
         q: "Welke informatie krijg je het BESTE van **een expert/leerkracht**?",
-        options: ["Uitleg op jouw niveau + jouw vraag beantwoord","Een lijst van alle feiten","Een kaart","De spelling van een woord"],
+        options: ["Uitleg die past bij jouw vraag","Een lijst van alle feiten","Een kaart van de hele wereld","De spelling van een woord"],
         answer: 0,
         wrongHints: [null, "Daarvoor pak je een naslag-bron, geen mens.", "Daarvoor is een atlas.", "Daarvoor is een woordenboek."],
         uitlegPad: {
@@ -481,7 +481,7 @@ const steps = [
         q: "Je zoekt in een geschiedenisboek **alles over 'Karel V'**. Welk deel kun je het beste raadplegen?",
         options: ["Index","Inhoudsopgave","Glossarium","Voorwoord"],
         answer: 0,
-        wrongHints: [null, "Inhoudsopgave noemt hoofdstuk, maar index alle plekken.", "Glossarium is betekenis, geen plek-vinder.", "Voorwoord is niet zoek-tool."],
+        wrongHints: [null, "De inhoudsopgave noemt alleen de hoofdstukken. Welk deel noemt álle bladzijden waar een naam staat?", "Glossarium is betekenis, geen plek-vinder.", "Voorwoord is niet zoek-tool."],
         uitlegPad: {
           stappen: [{ titel: "Specifiek = index", tekst: "Wil je **ALLE plekken** waar 'Karel V' voorkomt? → index (achteraan). 'Karel V ... 47, 89-91, 156' = drie verspreide plekken in het boek." }],
           theorie: "Index = trefwoorden + paginanummers, alfabetisch. Beste zoek-tool voor specifieke namen/begrippen.",
@@ -513,7 +513,7 @@ const steps = [
       },
       {
         q: "Wat staat er in een **glossarium** van een schoolboek?",
-        options: ["Moeilijke woorden + uitleg","Hoofdstukken","Schrijvers","Kaarten"],
+        options: ["Moeilijke woorden + uitleg","De hoofdstukken op volgorde","De namen van de schrijvers","Kaarten van alle landen"],
         answer: 0,
         wrongHints: [null, "Hoofdstukken zijn in inhoudsopgave.", "Schrijvers in bibliografie.", "Kaarten zijn in atlas of bijlage."],
         uitlegPad: {
@@ -746,9 +746,9 @@ const steps = [
       },
       {
         q: "Wat moet je doen als ChatGPT je iets vertelt?",
-        options: ["Altijd checken via een 2e betrouwbare bron","Direct geloven en gebruiken","Doorsturen naar vrienden","Op TikTok zetten"],
+        options: ["Checken bij een tweede bron","Direct geloven en gebruiken","Doorsturen naar vrienden","Meteen op TikTok zetten"],
         answer: 0,
-        wrongHints: [null, "Niet — AI kan hallucineren (verzinnen).", "Niet — info nog niet gecheckt!", "Niet — geen bron-verificatie."],
+        wrongHints: [null, "Niet — AI kan hallucineren (verzinnen).", "Weet je al zeker dat het klopt?", "Weet je al zeker dat het klopt?"],
         uitlegPad: {
           stappen: [{ titel: "AI hallucineert", tekst: "AI zoals ChatGPT **verzint soms feiten** zonder dat 't merkt — dat heet 'hallucineren'. ALTIJD checken via Wikipedia/krant/expert voor je 't gebruikt in een werkstuk." }],
           woorden: [{ woord: "hallucineren", uitleg: "Wanneer AI iets verzint dat NIET waar is." }],
@@ -943,12 +943,12 @@ const steps = [
     checks: [
       {
         q: "Voor een **werkstuk over duurzaamheid** — welke combinatie van bronnen is het BESTE?",
-        options: ["Wetenschappelijk artikel + krant + interview met expert","Alleen TikTok-video's","Alleen een woordenboek","Eén Wikipedia-artikel"],
+        options: ["Wetenschapsartikel + krant + expert","TikTok + Instagram + YouTube-filmpjes","Woordenboek + atlas + stripboek","Wikipedia + een blog + een reclame"],
         answer: 0,
-        wrongHints: [null, "TikTok = vaak meningen, geen onderzoek.", "Woordenboek geeft alleen betekenis, geen werkstuk-stof.", "Eén bron = niet vergelijkbaar."],
+        wrongHints: [null, "Filmpjes geven vaak meningen, geen onderzoek.", "Staat daar veel in over duurzaamheid?", "Is een blog of reclame betrouwbaar?"],
         uitlegPad: {
           stappen: [{ titel: "Combineren = sterker werkstuk", tekst: "Werkstuk-best practice: combineer **3 soorten bronnen** — wetenschap (feiten), actueel (krant/nieuws) en persoonlijk (interview). Niet 1 bron klakkeloos overnemen." }],
-          niveaus: { basis: "3 bronnen combineren.", simpeler: "Wetenschap + actueel + mens = sterk.", nogSimpeler: "Combineren" },
+          niveaus: { basis: "Combineer betrouwbare soorten bronnen.", simpeler: "Wetenschap + actueel + mens = sterk.", nogSimpeler: "Betrouwbaar combineren" },
         },
       },
       {
@@ -985,7 +985,7 @@ const steps = [
         q: "Voor de spelling van het woord **'metaforisch'** — welke bron?",
         options: ["Woordenboek","Encyclopedie","Atlas","Krant"],
         answer: 0,
-        wrongHints: [null, "Encyclopedie geeft betekenis maar woordenboek heeft spelling-check sneller.", "Atlas heeft geen woorden.", "Krant heeft geen spelling-uitleg."],
+        wrongHints: [null, "Een encyclopedie vertelt veel over een onderwerp. In welk boek zoek je op hoe je een woord schrijft?", "Atlas heeft geen woorden.", "Krant heeft geen spelling-uitleg."],
         uitlegPad: {
           stappen: [{ titel: "Spelling = woordenboek", tekst: "Woordenboek geeft **spelling + betekenis** per woord. Voor spelling-check: woordenboek (Van Dale) of het online Groene Boekje." }],
           niveaus: { basis: "Woordenboek.", simpeler: "Voor spelling → woordenboek.", nogSimpeler: "Woordenboek" },

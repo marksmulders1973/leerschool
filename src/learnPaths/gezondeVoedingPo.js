@@ -18,9 +18,9 @@ const steps = [
     checks: [
       {
         q: "Waarvoor zijn **eiwitten** vooral?",
-        options: ["Groei + spieren + reparatie", "Energie", "Vitamines", "Water"],
+        options: ["Groei + spieren + reparatie", "Energie + warmte + snelle kracht", "Vitamines + mineralen + vezels", "Vocht + afkoelen + dorst lessen"],
         answer: 0,
-        wrongHints: [null, "Koolhydraten/vetten.", "Niet eiwit.", "Water is geen taak van eiwit."],
+        wrongHints: [null, "Energie halen we vooral uit koolhydraten en vetten.", "Dat zijn andere voedingsstoffen.", "Daarvoor drink je water."],
         uitlegPad: {
           stappen: [
             { titel: "3 hoofd-voedingsstoffen", tekst: "Eten heeft 3 grote stof-groepen: koolhydraten (energie), eiwitten (bouwen), vetten (reserve + cel-bouw)." },
@@ -243,7 +243,7 @@ const steps = [
     title: "Eind-toets — voeding mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
-      { q: "Waar zit **vitamine C** vooral?", options: ["Sinaasappel + paprika", "Vlees", "Boter", "Suiker"], answer: 0, wrongHints: [null, "Vlees geeft vooral eiwit en ijzer — vitamine C komt uit iets vers en plantaardigs.", "Boter is vooral vet — denk aan fruit en verse groente.", "Suiker geeft alleen energie, geen vitamines — wat eet je vers?"] },
+      { q: "Waar zit **vitamine C** vooral?", options: ["Sinaasappel + paprika", "Biefstuk + kipfilet", "Boter + olijfolie", "Suiker + witbrood"], answer: 0, wrongHints: [null, "Vlees geeft vooral eiwit en ijzer.", "Boter en olie zijn vooral vet.", "Suiker en witbrood geven vooral energie, weinig vitamines."] },
       { q: "Hoeveel **water** per dag?", options: ["1,5-2 liter", "Geen", "5 L", "100 ml"], answer: 0, wrongHints: [null, "Wel.", "Te veel.", "Te weinig."] },
       { q: "Wat in **Schijf van Vijf** moet het meest?", options: ["Groente + fruit", "Vet", "Snoep", "Frisdrank"], answer: 0, wrongHints: [null, "Klein.", "Buiten schijf.", "Buiten schijf."] },
       { q: "**Veganistisch** = ?", options: ["Geen dierlijke producten", "Geen vlees alleen", "Alleen vlees", "Alleen geen melk"], answer: 0, wrongHints: [null, "Vegetariër.", "Tegenovergesteld.", "Een veganist laat meer weg dan alleen melk."] },
@@ -251,9 +251,9 @@ const steps = [
       { q: "**Eiwitten** vooral voor?", options: ["Groei + spieren", "Snelle energie", "Water", "Vitamine"], answer: 0, wrongHints: [null, "Koolhydraat.", "Niet.", "Niet."] },
       {
         q: "Wat is een **gezond ontbijt** voor een kind in groep 7-8?",
-        options: ["Volkorenbrood, kaas en fruit", "Frietjes + frisdrank", "Niks — overslaan", "Alleen koek"],
+        options: ["Volkorenbrood, kaas en fruit", "Frietjes, mayonaise en frisdrank", "Niks — ontbijt overslaan", "Koek, snoep en een pakje sap"],
         answer: 0,
-        wrongHints: [null, "Geen ontbijt-voedsel — energie te kort + suiker-piek.", "Onderzoek toont: ontbijt-overslaan = minder concentratie school.", "Te eenzijdig — alleen suiker, geen eiwit of vezels."],
+        wrongHints: [null, "Geen ontbijt-voedsel — energie te kort + suiker-piek.", "Onderzoek toont: ontbijt overslaan = minder concentratie op school.", "Te eenzijdig — vooral suiker, geen eiwit of vezels."],
         uitlegPad: {
           stappen: [
             { titel: "Goed ontbijt = balans", tekst: "**Koolhydraten** (energie) + **eiwit** (verzadiging) + **vitaminen** (fruit) + **vocht** (melk/water) = goed ontbijt. Geeft langzame energie tot pauze." },
@@ -275,9 +275,9 @@ const steps = [
       },
       {
         q: "**'Light'-producten** zijn altijd gezond — waar of niet?",
-        options: ["Niet waar — vaak meer zoetstof of toevoegingen", "Altijd waar — minder calorieën = gezonder", "Waar voor diabetici", "Verboden in NL"],
+        options: ["Niet waar — vaak meer zoetstof of toevoegingen", "Altijd waar — minder calorieën = gezonder", "Waar — light is goed voor iedereen met diabetes", "Niet waar — light-producten zijn verboden in NL"],
         answer: 0,
-        wrongHints: [null, "Marketing-claim — 'light' is GEEN gezondheidsgarantie.", "Niet automatisch geldig — context-afhankelijk.", "Niet — gewoon in supermarkt."],
+        wrongHints: [null, "Marketing-claim — 'light' is GEEN gezondheidsgarantie.", "Niet automatisch — dat hangt af van wat erin zit.", "Light-producten liggen gewoon in de supermarkt."],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent 'light'?", tekst: "**Light**-product moet wettelijk **minstens 30% minder** van iets (suiker, vet, calorieën, zout) bevatten dan het normale product. **Maar**: vaak vervangen door zoetstof, zout, of meer vet als suiker wordt geschrapt." },
@@ -300,7 +300,7 @@ const steps = [
       },
       {
         q: "Waardoor wordt de kans op **diabetes type 2** kleiner?",
-        options: ["Gezond eten + bewegen + niet roken", "Veel suiker eten als kind", "Geen vlees eten", "Niets — erfelijk"],
+        options: ["Gezond eten + bewegen + niet roken", "Veel suiker en snoep eten als kind", "Alleen stoppen met vlees eten", "Niets, want het is altijd erfelijk"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld — veel suiker verhoogt risico.", "Niet — alleen geen vlees eten voorkomt het niet.", "Erfelijkheid speelt mee, maar je leefstijl maakt veel uit."],
         uitlegPad: {
@@ -327,21 +327,21 @@ const steps = [
       { q: "Welke voedingsstof geeft je **energie** voor het dagelijks bewegen?", options: ["Koolhydraten","Vitamine C","Calcium","IJzer"], answer: 0, wrongHints: [null, "Niet primair energie.", "Bouwstof voor botten.", "Bloed-bouwstof."] },
       { q: "Voor wie geldt **0,0 alcohol** wettelijk?", options: ["Iedereen onder 18 jaar", "Iedereen onder 21", "Alleen kinderen onder 12", "Bestuurders"], answer: 0, wrongHints: [null, "Niet in NL.", "Ook oudere tieners horen erbij.", "Voor bestuurders geldt een lage grens, geen 0,0 — voor welke groep geldt 0,0 wél?"] },
       { q: "Hoeveel **suiker** per dag is max-norm (WHO)?", options: ["~25 gram", "100 gram", "250 gram", "Geen norm"], answer: 0, wrongHints: [null, "Te veel — krijg je snel binnen.", "Veel te veel.", "Wel — WHO norm."] },
-      { q: "Hoeveel **maaltijden** per dag is gezond?", options: ["3 hoofdmaaltijden + 2-3 tussendoor", "1 grote maaltijd", "10 kleine maaltijden", "Geen norm"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Wel."] },
+      { q: "Hoeveel **maaltijden** per dag is gezond?", options: ["3 hoofdmaaltijden + 2-3 tussendoor", "1 grote maaltijd + niets tussendoor", "10 kleine maaltijden + veel snacks", "Zoveel als je wilt, er is geen norm"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Er is wel een advies."] },
       { q: "Welke **kleur** zou een gezond bord moeten zijn?", options: ["Veel kleuren", "Bruin alleen", "Wit alleen", "Alles geel"], answer: 0, wrongHints: [null, "Alleen bruin = weinig afwisseling.", "Alleen wit = weinig afwisseling.", "Alleen geel = weinig afwisseling."] },
-      { q: "Welk type **vet** is gezond?", options: ["Onverzadigd (vis, noten, olijfolie)","Verzadigd (chips)","Geen vet eten","Friet"], answer: 0, wrongHints: [null, "Niet primair gezond.", "Niet — wel iets nodig.", "Niet."] },
-      { q: "Wat is **eiwit** vooral voor?", options: ["Spieren/cellen bouwen","Energie","Stollen","Zien"], answer: 0, wrongHints: [null, "Koolhydraten.", "Bloedplaatjes.", "Vitamine A."] },
+      { q: "Welk type **vet** is gezond?", options: ["Onverzadigd (vis, noten, olijfolie)", "Verzadigd (chips, koek, roomboter)", "Geen enkel vet (alles vetvrij eten)", "Frituurvet (friet, kroket, snacks)"], answer: 0, wrongHints: [null, "Verzadigd vet kun je beter weinig eten.", "Je lichaam heeft wel wat vet nodig.", "Frituurvet is niet de gezonde soort."] },
+      { q: "Wat is **eiwit** vooral voor?", options: ["Spieren/cellen bouwen", "Snel energie geven", "Bloed laten stollen", "Beter kunnen zien"], answer: 0, wrongHints: [null, "Snelle energie komt vooral uit koolhydraten.", "Daar zorgen bloedplaatjes voor.", "Daar helpt vitamine A bij."] },
       { q: "Welke voeding heeft veel **calcium**?", options: ["Melk + zuivel","Chips","Cola","Snoep"], answer: 0, wrongHints: [null, "Chips is vooral zout en vet — calcium is voor je bótten. Wat drink je daarvoor?", "Cola bevat suiker en zuur, geen bouwstof voor botten.", "Snoep is suiker — welk voedsel maakt je botten sterk?"] },
-      { q: "Welke voeding heeft **vitamine C**?", options: ["Sinaasappel/paprika","Brood","Patat","Vlees"], answer: 0, wrongHints: [null, "Niet primair.", "Niet.", "Niet primair."] },
+      { q: "Welke voeding heeft **vitamine C**?", options: ["Sinaasappel/paprika", "Brood/beschuit", "Patat/frikandel", "Vlees/kipfilet"], answer: 0, wrongHints: [null, "Brood geeft vooral koolhydraten.", "Patat en snacks geven vooral vet.", "Vlees geeft vooral eiwit."] },
       { q: "Hoeveel **fruit** per dag (Schijf van Vijf)?", options: ["2 stuks","1 stuk","5 stuks","10 stuks"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Veel te veel."] },
       { q: "**Vegetarisch** eten betekent?", options: ["Geen vlees + vis","Geen suiker","Niets","Alleen plantaardig"], answer: 0, wrongHints: [null, "Niet specifiek.", "Wel iets.", "Veganistisch."] },
-      { q: "**Veganistisch** eten?", options: ["Geen dierlijke producten", "Geen vis", "Geen vlees", "Geen suiker"], answer: 0, wrongHints: [null, "Niet alleen vis.", "Vegetarisch.", "Dat heeft niets met dieren te maken."] },
-      { q: "Wat is **gezond ontbijt**?", options: ["Volkoren + fruit + zuivel","Snoep","Niets","Alleen drinken"], answer: 0, wrongHints: [null, "Niet.", "Verkeerd start.", "Onvoldoende."] },
-      { q: "Wat doet **water drinken**?", options: ["Hydrateert + dorst stillen","Niets","Maakt zwaar","Schaadt"], answer: 0, wrongHints: [null, "Wel iets.", "Niet.", "Niet."] },
-      { q: "Wat is **vezel**?", options: ["Onverteerbaar plantendeel", "Suiker", "Vet", "Eiwit"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Eiwit is een bouwstof."] },
+      { q: "**Veganistisch** eten?", options: ["Geen dierlijke producten", "Geen vis en geen schaaldieren", "Geen vlees, wel melk en eieren", "Geen suiker en geen snoep"], answer: 0, wrongHints: [null, "Niet alleen vis.", "Dat is vegetarisch.", "Dat heeft niets met dieren te maken."] },
+      { q: "Wat is **gezond ontbijt**?", options: ["Volkoren + fruit + zuivel", "Snoep + koek + limonade", "Niets eten + snel naar school", "Alleen een glas sap drinken"], answer: 0, wrongHints: [null, "Vooral suiker — daar hou je het niet lang mee vol.", "Zonder ontbijt kun je je slechter concentreren.", "Te weinig om de ochtend mee door te komen."] },
+      { q: "Wat doet **water drinken**?", options: ["Hydrateert + dorst stillen", "Niets — je plast het meteen uit", "Maakt je dik + geeft energie", "Schaadt je tanden + maag"], answer: 0, wrongHints: [null, "Je lichaam gebruikt water wel.", "Water heeft geen calorieën.", "Water is juist goed voor je tanden."] },
+      { q: "Wat is **vezel**?", options: ["Onverteerbaar plantendeel", "Zoete stof uit snoep", "Vettige stof uit boter", "Bouwstof uit vlees en eieren"], answer: 0, wrongHints: [null, "Dat is suiker.", "Dat is vet.", "Dat is eiwit."] },
       { q: "Welke voeding heeft veel **vezels**?", options: ["Volkoren + groenten","Wit brood","Snoep","Frisdrank"], answer: 0, wrongHints: [null, "Vezelarm.", "Geen vezels.", "Geen."] },
       { q: "Hoeveel **lichaamsbeweging** per dag?", options: ["~1 uur","5 min","Geen","8 uur"], answer: 0, wrongHints: [null, "Te weinig.", "Niet gezond.", "Te veel."] },
-      { q: "**Bewerkt voedsel** is meestal?", options: ["Meer toegevoegd zout/suiker", "Gezonder", "Altijd vers", "Vitaminerijker"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Bewerkt is juist niet vers.", "Bij bewerken gaan juist vaak vitamines verloren."] },
+      { q: "**Bewerkt voedsel** is meestal?", options: ["Meer toegevoegd zout/suiker", "Gezonder dan vers eten", "Altijd vers en net geplukt", "Rijker aan vitamines en vezels"], answer: 0, wrongHints: [null, "Is een kant-en-klaarmaaltijd gezonder dan zelf koken met verse groente?", "Bewerkt is juist niet vers.", "Bij bewerken gaan juist vaak vitamines verloren."] },
     ],
   },
 ];

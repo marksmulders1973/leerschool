@@ -407,10 +407,10 @@ const steps = [
       {
         q: "Bij welke klus moet je de **omtrek** weten?",
         options: [
-          "Een rand van lint om een prikbord plakken",
-          "Tapijt leggen in een kamer",
-          "Een muur verven",
-          "Een veld met gras inzaaien",
+          "Een lint rond een prikbord plakken",
+          "Nieuw tapijt leggen in een kamer",
+          "Een hele muur van de klas verven",
+          "Een voetbalveld met gras inzaaien",
         ],
         answer: 0,
         wrongHints: [null, "Ga je dan langs de rand, of over het hele vlak?", null, null],

@@ -52,15 +52,15 @@ const steps = [
       },
       {
         q: "Wat is **scheurbuik**?",
-        options: ["Vitamine C-tekort ziekte", "Maagpijn", "Hoofdpijn", "Zonnebrand"],
+        options: ["Vitamine C-tekort ziekte", "Maagziekte door bedorven eten", "Hoofdpijn door de felle zon", "Huidziekte door zout water"],
         answer: 0,
-        wrongHints: [null, "Niet specifiek.", "Niet.", "Niet."],
+        wrongHints: [null, "Scheurbuik komt niet door bedorven eten. Wat aten zeelui maandenlang níét?", "Heeft scheurbuik met de zon te maken?", "Zout water geeft geen scheurbuik."],
       },
       {
         q: "Wat verdeelde **Verdrag van Tordesillas**?",
-        options: ["Wereld tussen Portugal + Spanje", "Europa", "Azië", "Afrika"],
+        options: ["Wereld tussen Portugal + Spanje", "Europa tussen Frankrijk + Engeland", "Azië tussen Nederland + Engeland", "Afrika tussen Spanje + Italië"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet alleen.", "Niet alleen Afrika."],
+        wrongHints: [null, "Welke twee landen voeren in 1494 al ver over zee op ontdekkingsreis?", "Nederland en Engeland kwamen pas later op zee. Welke landen waren eerder?", "Het ging om veel meer dan Afrika alleen."],
       },
     ],
   },
@@ -105,7 +105,7 @@ const steps = [
       },
       {
         q: "Wie zeilde als **eerste rond de aarde**?",
-        options: ["Magellan-expeditie", "Columbus", "Cabot", "Dias"],
+        options: ["Magellan-expeditie", "Columbus-expeditie", "Cabot-expeditie", "Dias-expeditie"],
         answer: 0,
         wrongHints: [null, "Niet rond.", "Niet rond.", "Niet."],
       },
@@ -175,16 +175,16 @@ const steps = [
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
       { q: "In welk jaar kwam **Columbus** in Amerika?", options: ["1492", "1500", "1300", "1700"], answer: 0, wrongHints: [null, "Iets later.", "Te vroeg.", "Te laat."] },
-      { q: "Wie zeilde als **eerste rond de aarde**?", options: ["Magellan-expeditie", "Columbus", "Cook", "Hudson"], answer: 0, wrongHints: [null, "Niet.", "Veel later.", "Niet."] },
+      { q: "Wie zeilde als **eerste rond de aarde**?", options: ["Magellan-expeditie", "Columbus-expeditie", "Cook-expeditie", "Hudson-expeditie"], answer: 0, wrongHints: [null, "Niet.", "Veel later.", "Niet."] },
       { q: "**VOC** stond voor?", options: ["Verenigde Oostindische Compagnie", "Vereniging Oude Cargo", "Veiligheidsdienst", "Verbond van Oude Christenen"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
-      { q: "Wat ontdekte **Abel Tasman**?", options: ["Nieuw-Zeeland + Tasmanië", "Amerika", "India", "Nova Zembla"], answer: 0, wrongHints: [null, "Columbus.", "Vasco da Gama.", "Barentsz."] },
+      { q: "Wat ontdekte **Abel Tasman**?", options: ["Nieuw-Zeeland + Tasmanië", "Amerika + de Cariben", "Zuid-Afrika + India", "Nova Zembla + Spitsbergen"], answer: 0, wrongHints: [null, "Dat was Columbus.", "Dat was de route van Vasco da Gama.", "Dat was Barentsz."] },
       { q: "**Verdrag van Tordesillas** deed wat?", options: ["Spanje en Portugal verdeelden de nieuw ontdekte landen (1494)", "Het maakte een einde aan de Tachtigjarige Oorlog (1648)", "Het verbood de slavenhandel in alle koloniën (1814)", "Het gaf Nederland een eigen handelscompagnie (1602)"], answer: 0, wrongHints: [null, "Dat was de Vrede van Münster.", "Tordesillas is veel ouder — het ging over pas ontdekte landen.", "In 1602 werd de VOC opgericht; dat was geen verdrag tussen landen."] },
       { q: "**Slavernij in NL** afgeschaft?", options: ["1863", "1492", "2024", "Nooit"], answer: 0, wrongHints: [null, "Te vroeg.", "Veel te laat — de afschaffing was al in de 19e eeuw.", "Wel afgeschaft."] },
       {
         q: "Wat was het doel van **ontdekkingsreizen** (15e-17e eeuw)?",
-        options: ["Nieuwe handelsroutes + grondstoffen vinden", "Toerisme", "Sport", "Wetenschap-onderzoek alleen"],
+        options: ["Nieuwe handelsroutes + grondstoffen vinden", "Nieuwe vakantieplekken + stranden vinden", "Zeilwedstrijden winnen + records breken", "Alleen sterren + dieren onderzoeken"],
         answer: 0,
-        wrongHints: [null, "Toerisme bestond nog niet — risico te hoog.", "Niet — geen sportwedstrijden.", "Wetenschap deels (kaarten maken), maar geld was hoofdmotief."],
+        wrongHints: [null, "Toerisme bestond nog niet — het risico was veel te hoog.", "Waren het wedstrijden? Denk aan wat de schepen mee terug namen.", "Onderzoek gebeurde wel een beetje, maar was dat de hoofdreden voor zulke dure reizen?"],
         uitlegPad: {
           stappen: [
             { titel: "Waarom gingen Europeanen weg?", tekst: "In de **15e-17e eeuw** wilden Europeanen vooral:\n• **Specerijen** uit Azië (peper, kaneel, kruidnagel) — heel duur in Europa, gebruikt voor smaak + bewaren vlees\n• **Goud + zilver** (Amerika bleek vol)\n• **Nieuwe handelsroutes** — Turkse Rijk versperde de oude landroute naar Azië\n• **Christelijk geloof** verspreiden\n• **Macht + roem** voor land/koning" },
@@ -208,9 +208,9 @@ const steps = [
       },
       {
         q: "Wat was de **rol van de VOC** (Verenigde Oostindische Compagnie)?",
-        options: ["Handelsbedrijf met eigen leger en bestuur", "Sportclub voor zeelieden", "Universiteit voor kapiteins", "Kerk voor zendelingen"],
+        options: ["Handelsbedrijf met eigen leger en bestuur", "Sportclub met eigen schepen en zeilers", "Universiteit met eigen kapiteins en leraren", "Kerk met eigen schepen en zendelingen"],
         answer: 0,
-        wrongHints: [null, "Geen sport.", "Geen onderwijs.", "Geen kerk."],
+        wrongHints: [null, "Geen sport. De C in VOC staat voor Compagnie — wat is dat?", "Geen onderwijs.", "Geen kerk."],
         uitlegPad: {
           stappen: [
             { titel: "Wat was de VOC?", tekst: "De **VOC** (Verenigde Oostindische Compagnie) was een **Nederlands handelsbedrijf**, opgericht **1602**.\n\n**Doel**: handel in Azië (vooral huidig Indonesië) — specerijen kopen + verkopen in Europa. Maar VOC kreeg ook **politieke macht**:\n• Mocht **forten** bouwen\n• Mocht **oorlogen voeren**\n• Mocht **verdragen sluiten** met lokale heersers\n• Mocht **eigen geld slaan** (munten)\n\n→ VOC = 's werelds **eerste multinational** + **eerste aandelenmaatschappij**." },
@@ -269,11 +269,11 @@ const steps = [
       { q: "Wat is de **WIC**?", options: ["West-Indische Compagnie","Wereld-Import-Centrale","Westerse Indianen-Club","Waterschap In Curaçao"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
       { q: "Welk eiland in het Caribisch gebied hoort bij het Koninkrijk der Nederlanden?", options: ["Curaçao / Aruba","Hawaii","Sicilië","Cuba"], answer: 0, wrongHints: [null, "Niet.", "Italiaans.", "Een onafhankelijk land."] },
       { q: "Welke nationaliteit had **Henry Hudson**?", options: ["Engels","Frans","Spaans","Portugees"], answer: 0, wrongHints: [null, "Geen Franse achternaam.", "Niet — Spaanse ontdekkers waren bv. Columbus.", "Niet — Portugezen waren bv. Vasco da Gama."] },
-      { q: "**Willem Barentsz** zocht naar?", options: ["Noordelijke route naar Azië","Amerika","Australië","Afrika"], answer: 0, wrongHints: [null, "Andere richting.", "Niet.", "Niet."] },
-      { q: "**Verdrag van Tordesillas** (1494) verdeelde wat?", options: ["Wereld tussen Spanje en Portugal","NL en België","Engeland en Frankrijk","Duitsland en Italië"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
-      { q: "Wat is **slavernij** in koloniale tijd?", options: ["Mensen gevangen + gedwongen werken zonder vrijheid","Werk met loon","Vrijwillig meehelpen op een plantage","Betaald werken op een schip"], answer: 0, wrongHints: [null, "Niet.", "Was het vrijwillig?", "Niet."] },
+      { q: "**Willem Barentsz** zocht naar?", options: ["Noordelijke route naar Azië", "Westelijke route naar Amerika", "Zuidelijke route naar Australië", "Oostelijke route rond Afrika"], answer: 0, wrongHints: [null, "Andere richting.", "Waar ligt Nova Zembla, waar hij overwinterde?", "De route om Afrika heen bestond al. Barentsz zocht een nieuwe."] },
+      { q: "**Verdrag van Tordesillas** (1494) verdeelde wat?", options: ["Wereld tussen Spanje en Portugal", "Europa tussen Nederland en België", "Wereld tussen Engeland en Frankrijk", "Afrika tussen Duitsland en Italië"], answer: 0, wrongHints: [null, "België bestond in 1494 nog niet eens.", "Engeland en Frankrijk kwamen later. Wie voeren in 1494 al ver over zee?", "Duitsland en Italië waren toen nog geen landen met grote vloten."] },
+      { q: "Wat is **slavernij** in koloniale tijd?", options: ["Mensen gevangen + gedwongen werken zonder vrijheid", "Mensen die werken voor loon en vrij mogen gaan", "Mensen die vrijwillig meehelpen op een plantage", "Mensen die betaald werken als matroos op een schip"], answer: 0, wrongHints: [null, "Kregen slaafgemaakten loon en vrijheid?", "Was het vrijwillig?", "Werden ze betaald?"] },
       { q: "**Keti Koti** is wat?", options: ["Herdenking afschaffing slavernij","Surinaams nieuwjaarsfeest","Een Surinaams gerecht","Een voetbaltoernooi"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
-      { q: "Welke producten bracht de **VOC** mee terug?", options: ["Specerijen + thee + porselein","Aardappels + tomaten","Plastic","Auto-onderdelen"], answer: 0, wrongHints: [null, "Die kwamen uit Amerika.", "Niet bekend toen.", "Bestonden toen nog niet."] },
+      { q: "Welke producten bracht de **VOC** mee terug?", options: ["Specerijen + thee + porselein", "Aardappels + tomaten + maïs", "Bont + hout uit Noord-Amerika", "Kaas + haring + wol uit Holland"], answer: 0, wrongHints: [null, "Die kwamen uit Amerika.", "Noord-Amerika was niet het werkgebied van de VOC. Waar voer de VOC heen?", "Dat kwam juist uit Nederland zelf. Wat haalde de VOC uit het Oosten?"] },
       { q: "Wat is de **gouden eeuw** voor NL?", options: ["17e eeuw","20e eeuw","Middeleeuwen","19e eeuw"], answer: 0, wrongHints: [null, "Te recent.", "Te vroeg.", "Te laat."] },
       { q: "Welke **dodelijke** ziekte verspreidden Europeanen in Amerika?", options: ["Pokken","Verkoudheid","Hooikoorts","Suikerziekte"], answer: 0, wrongHints: [null, "Niet dodelijk.", "Niet besmettelijk.", "Niet besmettelijk."] },
       { q: "Wat is een **compagnie** (zoals VOC)?", options: ["Handelsorganisatie","Politieke partij","Soort schip","Leger van de koning"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },

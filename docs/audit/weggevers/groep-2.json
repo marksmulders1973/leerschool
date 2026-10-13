@@ -1,0 +1,1682 @@
+[
+ {
+  "pad": "alinea-functies-tussenkopjes-po",
+  "file": "./alineaFunctiesTussenkopjesPo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Waaraan herken je dat er een nieuwe alinea begint?",
+  "opties": [
+   "Aan een witregel of doordat de tekst op een nieuwe regel begint",
+   "Aan een punt aan het einde van een zin",
+   "Aan een uitroepteken",
+   "Aan een dikgedrukt woord midden in een zin"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "alinea-functies-tussenkopjes-po",
+  "file": "./alineaFunctiesTussenkopjesPo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "*\"Vlinders beginnen als ei. Daarna worden ze een rups, dan een pop en uiteindelijk een vlinder. Elke stap duurt anders lang. Het hele proces heet metamorfose.\"*",
+  "opties": [
+   "De levenscyclus van de vlinder",
+   "Het ei",
+   "Leven in de natuur",
+   "Hoe snel vlinders vliegen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "alinea-functies-tussenkopjes-po",
+  "file": "./alineaFunctiesTussenkopjesPo.js",
+  "stap": 2,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Boven een alinea staat het tussenkopje 'Eten voor de winter'. Welke alinea past daar het best onder?",
+  "opties": [
+   "De eekhoorn verstopt in de herfst overal nootjes. Zo heeft hij in de koude maanden altijd iets te eten. Soms vergeet hij een verstopplek — daar groeit dan een nieuw boompje.",
+   "De eekhoorn heeft een prachtige rode pluimstaart. Daarmee houdt hij zijn evenwicht als hij van tak naar tak springt.",
+   "In het bos groeien veel soorten bomen: eiken, beuken en dennen. Elke boom heeft zijn eigen blad.",
+   "Sommige vogels vliegen in de herfst naar het warme zuiden. In de lente komen ze weer terug."
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "betrouwbaarheid-bronnen-po",
+  "file": "./betrouwbaarheidBronnenPo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Betrouwbare informatie geeft vooral...",
+  "opties": [
+   "feiten die je kunt controleren",
+   "overdreven woorden",
+   "alleen meningen",
+   "grappige plaatjes"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "betrouwbaarheid-bronnen-po",
+  "file": "./betrouwbaarheidBronnenPo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Welke zin komt het meest uit een betrouwbare informatieve bron?",
+  "opties": [
+   "De maan draait in ongeveer 27 dagen om de aarde.",
+   "Onze maankijker is de allerbeste!",
+   "De maan is het mooiste wat er is.",
+   "Koop nu met korting!"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "betrouwbaarheid-bronnen-po",
+  "file": "./betrouwbaarheidBronnenPo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Hoe controleer je het best of informatie klopt?",
+  "opties": [
+   "kijken of meerdere betrouwbare bronnen het zeggen",
+   "kijken of het mooi is opgemaakt",
+   "kijken of er veel kleuren in staan",
+   "het gewoon geloven"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "betrouwbaarheid-bronnen-po",
+  "file": "./betrouwbaarheidBronnenPo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Iemand deelt schokkend nieuws op social media, zonder bron. Wat doe je het best?",
+  "opties": [
+   "eerst checken bij een betrouwbare bron",
+   "het meteen doorsturen",
+   "het direct geloven",
+   "er een mening over geven"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "betrouwbaarheid-bronnen-po",
+  "file": "./betrouwbaarheidBronnenPo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Twee betrouwbare bronnen zeggen verschillende dingen. Wat is verstandig?",
+  "opties": [
+   "nog een bron erbij zoeken en voorzichtig zijn",
+   "de eerste maar geloven",
+   "allebei negeren",
+   "zelf iets verzinnen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "betrouwbaarheid-bronnen-po",
+  "file": "./betrouwbaarheidBronnenPo.js",
+  "stap": 2,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Eén bericht zegt dat een bekende diersoort plots is uitgestorven. Wat doe je het best?",
+  "opties": [
+   "checken bij een betrouwbare nieuws- of natuurbron",
+   "het meteen geloven",
+   "het direct doorsturen naar iedereen",
+   "er meteen ruzie over maken"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "betrouwbaarheid-bronnen-po",
+  "file": "./betrouwbaarheidBronnenPo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Waarom is een officiële website (bijvoorbeeld van de overheid) vaak betrouwbaar?",
+  "opties": [
+   "ze controleren hun informatie zorgvuldig",
+   "het ziet er mooi uit",
+   "het staat op internet",
+   "ze gebruiken veel uitroeptekens"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "betrouwbaarheid-bronnen-po",
+  "file": "./betrouwbaarheidBronnenPo.js",
+  "stap": 3,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wat is JUIST GEEN teken van een betrouwbare bron?",
+  "opties": [
+   "veel uitroeptekens en 'koop nu!'",
+   "een genoemde auteur",
+   "een bronvermelding",
+   "een recente datum"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "betrouwbaarheid-bronnen-po",
+  "file": "./betrouwbaarheidBronnenPo.js",
+  "stap": 3,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Onderaan een artikel staat een lijst met bronnen. Waarom is dat handig?",
+  "opties": [
+   "je kunt nakijken waar de informatie vandaan komt",
+   "het maakt het artikel langer",
+   "het staat gewoon mooi",
+   "het is verplicht voor plaatjes"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "dieren-seizoenen-natuur",
+  "file": "./dierenSeizoenenNatuur.js",
+  "stap": 5,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat betekent gedaanteverwisseling?",
+  "opties": [
+   "Een dier dat tijdens zijn leven van vorm verandert",
+   "Een dier dat oud wordt",
+   "Een dier dat van kleur verandert",
+   "Een dier dat verhuist"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "dieren-seizoenen-natuur",
+  "file": "./dierenSeizoenenNatuur.js",
+  "stap": 6,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Waarom is het in de zomer warmer?",
+  "opties": [
+   "Onze kant van de aarde staat naar de zon",
+   "De zon is dichterbij",
+   "Er zijn meer wolken",
+   "We staan stil"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "dieren-seizoenen-natuur",
+  "file": "./dierenSeizoenenNatuur.js",
+  "stap": 9,
+  "vraag": 0,
+  "soort": "H",
+  "q": "Welk dier is een planteneter?",
+  "opties": [
+   "konijn",
+   "vos",
+   "uil",
+   "haai"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "dieren-seizoenen-natuur",
+  "file": "./dierenSeizoenenNatuur.js",
+  "stap": 10,
+  "vraag": 7,
+  "soort": "L",
+  "q": "Wat doet een trekvogel in de winter?",
+  "opties": [
+   "Vliegt naar warmer land",
+   "Slaapt",
+   "Verandert kleur",
+   "Niets"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "dieren-seizoenen-natuur",
+  "file": "./dierenSeizoenenNatuur.js",
+  "stap": 10,
+  "vraag": 8,
+  "soort": "L",
+  "q": "Wat is winterslaap?",
+  "opties": [
+   "Langdurige rust met lage activiteit",
+   "Korte slaap",
+   "Wakker blijven",
+   "Vlucht"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "dieren-seizoenen-natuur",
+  "file": "./dierenSeizoenenNatuur.js",
+  "stap": 10,
+  "vraag": 10,
+  "soort": "H",
+  "q": "Welk seizoen is in Nederland meestal het droogst?",
+  "opties": [
+   "Lente",
+   "Winter",
+   "Zomer",
+   "Herfst"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "dieren-seizoenen-natuur",
+  "file": "./dierenSeizoenenNatuur.js",
+  "stap": 10,
+  "vraag": 11,
+  "soort": "L",
+  "q": "Wat doet een kikkervisje in de lente?",
+  "opties": [
+   "Groeit uit tot kikker",
+   "Slaapt",
+   "Verstopt zich",
+   "Vliegt"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "dieren-seizoenen-natuur",
+  "file": "./dierenSeizoenenNatuur.js",
+  "stap": 10,
+  "vraag": 14,
+  "soort": "H",
+  "q": "Welk seizoen heeft kortste dagen in NL?",
+  "opties": [
+   "Winter",
+   "Zomer",
+   "Lente",
+   "Herfst"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is ChatGPT?",
+  "opties": [
+   "AI die tekst maakt + vragen beantwoordt",
+   "Spel",
+   "Browser",
+   "Wifi"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Hoe exacte zin zoeken in Google?",
+  "opties": [
+   "Met aanhalingstekens (\"zin\")",
+   "Hoofdletters",
+   "Veel spaties",
+   "Niet mogelijk"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Welke bron is meestal betrouwbaar?",
+  "opties": [
+   "Rijksoverheid + wetenschapsuniversiteit",
+   "TikTok-influencer",
+   "AI zonder check",
+   "Onbekende blog"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is kruis-controleren?",
+  "opties": [
+   "2-3 onafhankelijke bronnen vergelijken",
+   "Eén keer kijken",
+   "Niet vragen",
+   "Gokken"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Welk wachtwoord is sterk?",
+  "opties": [
+   "Mijn-kat-eet-graag-vis-2024!",
+   "123456",
+   "password",
+   "Je naam"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is phishing?",
+  "opties": [
+   "Nep-email om gegevens te stelen",
+   "Spel",
+   "Vis vangen",
+   "Soort virus"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is 2FA / twee-staps-verificatie?",
+  "opties": [
+   "Een tweede check bij het inloggen",
+   "2 wachtwoorden",
+   "Een virusscanner",
+   "Adres-check"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Screen-tijd advies kind 6-12 jaar?",
+  "opties": [
+   "~2 uur entertainment per dag",
+   "Geen",
+   "8+ uur",
+   "Onbeperkt"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Welk wachtwoord is goed?",
+  "opties": [
+   "Mijn-kat-eet-vis-2024!",
+   "12345",
+   "naam",
+   "Wachtwoord"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is AVG?",
+  "opties": [
+   "EU-privacy-wet sinds 2018",
+   "Belasting",
+   "Bank",
+   "School"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 3,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wat doe je bij cyberpesten?",
+  "opties": [
+   "Screenshot + blokkeren + volwassene",
+   "Negeren",
+   "Terug-pesten",
+   "Niet vertellen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 3,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Wat is een phishing-mail?",
+  "opties": [
+   "Nep-mail die gegevens probeert te stelen",
+   "Reclamemail van winkel",
+   "Mail van leraar",
+   "Spam met grappen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 3,
+  "vraag": 7,
+  "soort": "L",
+  "q": "Wat is een cookie op internet?",
+  "opties": [
+   "Bestandje van een website om je te herkennen",
+   "Snoepje",
+   "Virus",
+   "Wachtwoord"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 3,
+  "vraag": 8,
+  "soort": "L",
+  "q": "Wat is een algoritme?",
+  "opties": [
+   "Stappenplan dat computer volgt om iets te beslissen",
+   "Computer-virus",
+   "Wachtwoord",
+   "Internet-kabel"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 3,
+  "vraag": 9,
+  "soort": "L",
+  "q": "Wat is een sterk wachtwoord?",
+  "opties": [
+   "Lang + cijfers + tekens + niet je naam",
+   "Je verjaardag",
+   "Naam huisdier",
+   "123456"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 3,
+  "vraag": 10,
+  "soort": "L",
+  "q": "Wat is phishing?",
+  "opties": [
+   "Nep-mail om je wachtwoord te stelen",
+   "Een vissport",
+   "Een online-spel",
+   "Een browser"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 3,
+  "vraag": 12,
+  "soort": "L",
+  "q": "Wat doet een AI-hallucinatie?",
+  "opties": [
+   "De AI verzint iets dat niet klopt",
+   "De AI hoort geluiden",
+   "De AI ziet kleuren",
+   "De AI maakt foto's"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 3,
+  "vraag": 13,
+  "soort": "L",
+  "q": "Wat is 2FA (twee-factor-authenticatie)?",
+  "opties": [
+   "Extra check naast je wachtwoord",
+   "Twee wachtwoorden",
+   "Een virusscanner",
+   "Reclame"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 3,
+  "vraag": 14,
+  "soort": "L",
+  "q": "Wat is cyberpesten?",
+  "opties": [
+   "Pesten via internet/sociale media",
+   "Ruzie op het schoolplein",
+   "Game",
+   "Reclame"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 3,
+  "vraag": 15,
+  "soort": "L",
+  "q": "Wat is AVG (privacy-wet)?",
+  "opties": [
+   "EU-regels voor persoonsgegevens",
+   "Game",
+   "Reclame",
+   "Een virusscanner"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 3,
+  "vraag": 16,
+  "soort": "L",
+  "q": "Wat is een browser?",
+  "opties": [
+   "Programma om websites te openen",
+   "Een toetsenbord",
+   "Camera",
+   "Een zoekwoord"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 3,
+  "vraag": 19,
+  "soort": "L",
+  "q": "Wat is een download?",
+  "opties": [
+   "Bestand binnenhalen van internet",
+   "Bestand verzenden",
+   "Bestand verwijderen",
+   "Reclame"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 3,
+  "vraag": 20,
+  "soort": "L",
+  "q": "Wat is een cookie op websites?",
+  "opties": [
+   "Klein bestandje dat info onthoudt",
+   "Eten",
+   "Een virus",
+   "Reclame"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 3,
+  "vraag": 21,
+  "soort": "L",
+  "q": "Wat is een virus (software)?",
+  "opties": [
+   "Schadelijk programma",
+   "Ziekte",
+   "Een back-up",
+   "Game"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 3,
+  "vraag": 22,
+  "soort": "L",
+  "q": "Wat doet een firewall?",
+  "opties": [
+   "Beschermt computer tegen aanvallen",
+   "Vuurmuur letterlijk",
+   "Maakt de computer sneller",
+   "Bouwt website"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 3,
+  "vraag": 23,
+  "soort": "L",
+  "q": "Wat is deepfake?",
+  "opties": [
+   "Nep-video gemaakt door AI",
+   "Echte video",
+   "Boek",
+   "Computervirus"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 3,
+  "vraag": 24,
+  "soort": "L",
+  "q": "Wat is bron-controle bij zoeken?",
+  "opties": [
+   "Checken of bron betrouwbaar is",
+   "Klakkeloos overnemen",
+   "Zo snel mogelijk zoeken",
+   "Reclame"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "digitale-geletterdheid-po",
+  "file": "./digitaleGeletterdheidPo.js",
+  "stap": 3,
+  "vraag": 26,
+  "soort": "L",
+  "q": "Wat is een back-up?",
+  "opties": [
+   "Kopie van bestanden voor noodgeval",
+   "Origineel",
+   "Een virus",
+   "Reclame"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "emoties-sociaal-po",
+  "file": "./emotiesSocialePo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat te doen bij boosheid?",
+  "opties": [
+   "Stop, tel tot 10, diep ademen",
+   "Direct schreeuwen",
+   "Slaan",
+   "Niets"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "emoties-sociaal-po",
+  "file": "./emotiesSocialePo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een goede vriend?",
+  "opties": [
+   "Eerlijk, steunend, respect, plezier",
+   "Doet wat jij zegt",
+   "Praat slecht over anderen",
+   "Maakt grappen ten koste"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "emoties-sociaal-po",
+  "file": "./emotiesSocialePo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is liefdesverdriet?",
+  "opties": [
+   "Pijn van afgewezen liefde",
+   "Spel",
+   "Ziekte",
+   "Heimwee"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "emoties-sociaal-po",
+  "file": "./emotiesSocialePo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Vriendschap + leven?",
+  "opties": [
+   "Goede vrienden = langer leven",
+   "Geen verband",
+   "Slecht",
+   "Niet bekend"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "emoties-sociaal-po",
+  "file": "./emotiesSocialePo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is pesten?",
+  "opties": [
+   "Herhaald + gericht iemand pijn doen",
+   "Eenmalige ruzie",
+   "Plagen",
+   "Sport"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "emoties-sociaal-po",
+  "file": "./emotiesSocialePo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat doe je bij cyberpesten?",
+  "opties": [
+   "Screenshot + blokkeer + volwassene",
+   "Negeer",
+   "Terug-pesten",
+   "Niet vertellen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "emoties-sociaal-po",
+  "file": "./emotiesSocialePo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is pesten vs plagen?",
+  "opties": [
+   "Pesten = herhaald + gericht",
+   "Geen verschil",
+   "Plagen erger",
+   "Niet bekend"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "emoties-sociaal-po",
+  "file": "./emotiesSocialePo.js",
+  "stap": 3,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wat doe je als getuige van pesten?",
+  "opties": [
+   "Spreek uit + help + vertel volwassene",
+   "Negeer",
+   "Lach mee",
+   "Pest mee"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "emoties-sociaal-po",
+  "file": "./emotiesSocialePo.js",
+  "stap": 3,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Wat is empathie?",
+  "opties": [
+   "Inleven in gevoel van iemand anders",
+   "Een soort medicijn",
+   "Boos worden",
+   "Niet praten"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "emoties-sociaal-po",
+  "file": "./emotiesSocialePo.js",
+  "stap": 3,
+  "vraag": 7,
+  "soort": "L",
+  "q": "Wat is assertief zijn?",
+  "opties": [
+   "Voor jezelf opkomen zonder anderen aan te vallen",
+   "Agressief schreeuwen",
+   "Niets zeggen",
+   "Iedereen volgen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "emoties-sociaal-po",
+  "file": "./emotiesSocialePo.js",
+  "stap": 3,
+  "vraag": 8,
+  "soort": "L",
+  "q": "Welke lichaamsuiting wijst vaak op boosheid?",
+  "opties": [
+   "Gespannen gezicht, vuisten",
+   "Lachen",
+   "Slapen",
+   "Zingen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "emoties-sociaal-po",
+  "file": "./emotiesSocialePo.js",
+  "stap": 3,
+  "vraag": 9,
+  "soort": "L",
+  "q": "Wat helpt bij stress?",
+  "opties": [
+   "Diep ademen + praten met iemand",
+   "Eten + slapen heel veel",
+   "Niet erover praten",
+   "Schreeuwen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "emoties-sociaal-po",
+  "file": "./emotiesSocialePo.js",
+  "stap": 3,
+  "vraag": 10,
+  "soort": "L",
+  "q": "Wat is een conflict?",
+  "opties": [
+   "Meningsverschil tussen mensen",
+   "Een fijne activiteit",
+   "Een ziekte",
+   "Een land"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "emoties-sociaal-po",
+  "file": "./emotiesSocialePo.js",
+  "stap": 3,
+  "vraag": 11,
+  "soort": "L",
+  "q": "Hoe los je een ruzie met een vriend op?",
+  "opties": [
+   "Praten + luisteren + sorry zeggen waar nodig",
+   "Wegrennen",
+   "Slaan",
+   "Niet meer praten"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "europese-unie-po",
+  "file": "./europeseUniePo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Mag de Nederlandse overheid invoerheffing leggen op auto's uit Duitsland?",
+  "opties": [
+   "Ja — vrij om te kiezen",
+   "Ja — alleen op luxe-auto's",
+   "Nee — vrij verkeer van goederen verbiedt dit",
+   "Nee — alleen voor brandstof-auto's"
+  ],
+  "answer": 2
+ },
+ {
+  "pad": "gemiddelden-statistiek-po",
+  "file": "./gemiddeldenStatistiekPo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wanneer kun je geen gemiddelde uitrekenen maar wel een modus?",
+  "opties": [
+   "Bij kleuren / woorden / categorieën",
+   "Bij hele getallen",
+   "Bij decimale getallen",
+   "Bij negatieve getallen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "geschiedenis-vroeger-en-nu-g5",
+  "file": "./geschiedenisVroegerEnNuG5.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat bestond er nog niet toen jouw opa en oma kind waren?",
+  "opties": [
+   "mobiele telefoons met apps",
+   "fietsen",
+   "boeken",
+   "treinen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "geschiedenis-vroeger-en-nu-g5",
+  "file": "./geschiedenisVroegerEnNuG5.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat deden veel kinderen vroeger na school?",
+  "opties": [
+   "thuis of op het land meehelpen",
+   "gamen",
+   "tv kijken",
+   "naar zwemles met de bus"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "geschiedenis-vroeger-en-nu-g5",
+  "file": "./geschiedenisVroegerEnNuG5.js",
+  "stap": 2,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wat is een griffel?",
+  "opties": [
+   "een schrijfstiftje van steen",
+   "een zwart plankje",
+   "een soort olielamp",
+   "een waterpomp"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "geschiedenis-vroeger-en-nu-g5",
+  "file": "./geschiedenisVroegerEnNuG5.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een harnas?",
+  "opties": [
+   "een metalen pak dat de ridder beschermt",
+   "het paard van de ridder",
+   "het zwaard van de ridder",
+   "de vlag op het kasteel"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "geschiedenis-vroeger-en-nu-g5",
+  "file": "./geschiedenisVroegerEnNuG5.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Waarom hadden kastelen dikke muren?",
+  "opties": [
+   "om de mensen binnen te beschermen tegen vijanden",
+   "omdat dat mooier stond",
+   "om er schilderijen aan te hangen",
+   "omdat dunne stenen niet bestonden"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "geschiedenis-vroeger-en-nu-g5",
+  "file": "./geschiedenisVroegerEnNuG5.js",
+  "stap": 4,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Op een tijdbalk staan: de ridders, school met lei en griffel, en nu. Wat staat in het midden?",
+  "opties": [
+   "school met lei en griffel",
+   "de ridders",
+   "nu",
+   "dat kan overal staan"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "grafieken-lezen-po",
+  "file": "./grafiekenLezenPo.js",
+  "stap": 5,
+  "vraag": 11,
+  "soort": "L",
+  "q": "Op de y-as staat meestal?",
+  "opties": [
+   "Aantal / hoeveelheid",
+   "Tijd",
+   "Categorie",
+   "Titel"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "grafieken-lezen-po",
+  "file": "./grafiekenLezenPo.js",
+  "stap": 5,
+  "vraag": 12,
+  "soort": "L",
+  "q": "Een legenda in grafiek toont?",
+  "opties": [
+   "Wat de kleuren/lijnen betekenen",
+   "De titel",
+   "Totaal",
+   "Schaal"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "grafieken-lezen-po",
+  "file": "./grafiekenLezenPo.js",
+  "stap": 5,
+  "vraag": 18,
+  "soort": "L",
+  "q": "Een x-as-titel beschrijft wat?",
+  "opties": [
+   "Welke variabele op x-as",
+   "Het totaal",
+   "De legenda",
+   "De schaal"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "grafieken-lezen-po",
+  "file": "./grafiekenLezenPo.js",
+  "stap": 5,
+  "vraag": 19,
+  "soort": "L",
+  "q": "Bij schaal-aanpassing kun je een grafiek?",
+  "opties": [
+   "Misleiden door verandering schaal",
+   "Onmogelijk maken",
+   "Mooier maken alleen",
+   "Niet veranderen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "grafieken-lezen-po",
+  "file": "./grafiekenLezenPo.js",
+  "stap": 5,
+  "vraag": 21,
+  "soort": "L",
+  "q": "Welk grafiek-type voor 'sterren-positie' verspreid op vlak?",
+  "opties": [
+   "Verspreidingsdiagram",
+   "Lijn",
+   "Taart",
+   "Tabel"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "in-de-klas-2-nieuwkomers",
+  "file": "./inDeKlas2Nieuwkomers.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Je hebt geen potlood. Wat vraag je aan het kind naast je?",
+  "opties": [
+   "Mag ik je potlood lenen?",
+   "Ga weg!",
+   "Tot morgen!",
+   "Ik ben moe."
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "in-de-klas-2-nieuwkomers",
+  "file": "./inDeKlas2Nieuwkomers.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Je snapt het nog niet. De juf is bezig. Wat doe je?",
+  "opties": [
+   "Ik vraag het aan een kind naast mij.",
+   "Ik loop naar buiten.",
+   "Ik ga slapen.",
+   "Ik gooi mijn werk weg."
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "in-de-klas-2-nieuwkomers",
+  "file": "./inDeKlas2Nieuwkomers.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "De juf heeft nu geen tijd. Wat doe je met je vraag?",
+  "opties": [
+   "Ik wacht tot de juf tijd heeft.",
+   "Ik ga schreeuwen.",
+   "Ik ga naar huis.",
+   "Ik doe niets meer."
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "in-de-klas-2-nieuwkomers",
+  "file": "./inDeKlas2Nieuwkomers.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Je kunt niet verder met een som. Wat doe je terwijl je wacht?",
+  "opties": [
+   "Ik ga verder met de volgende som.",
+   "Ik doe niets.",
+   "Ik ga naar buiten.",
+   "Ik pak een spel."
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "industriele-revolutie-po",
+  "file": "./industrieleRevolutiePo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Vóór de Industriële Revolutie — hoe werkten mensen meestal?",
+  "opties": [
+   "Boer of ambachtsman thuis",
+   "In fabriek",
+   "Computer",
+   "Op kantoor"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "industriele-revolutie-po",
+  "file": "./industrieleRevolutiePo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat hielp de start?",
+  "opties": [
+   "Steenkool + ijzer in Engeland + kapitaal",
+   "Goed weer",
+   "Alleen geluk",
+   "Religie"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "industriele-revolutie-po",
+  "file": "./industrieleRevolutiePo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is een belangrijk kenmerk van stoommachine?",
+  "opties": [
+   "Krachtbron onafhankelijk van rivier/wind",
+   "Werkt op zon",
+   "Werkt op gas",
+   "Werkt op spierkracht"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "industriele-revolutie-po",
+  "file": "./industrieleRevolutiePo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is de bourgeoisie?",
+  "opties": [
+   "Rijke burgers / fabriekseigenaren",
+   "Boeren",
+   "Adel",
+   "Arbeiders"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "industriele-revolutie-po",
+  "file": "./industrieleRevolutiePo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Waarom later NL?",
+  "opties": [
+   "Geen steenkool/ijzer + handel-focus",
+   "Te veel oorlog",
+   "Te koud",
+   "Te weinig mensen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "industriele-revolutie-po",
+  "file": "./industrieleRevolutiePo.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Industriële Revolutie ging vooral over?",
+  "opties": [
+   "Machines + fabrieken",
+   "Computers",
+   "Schepen",
+   "Oorlog"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "industriele-revolutie-po",
+  "file": "./industrieleRevolutiePo.js",
+  "stap": 5,
+  "vraag": 7,
+  "soort": "L",
+  "q": "Wat is urbanisatie?",
+  "opties": [
+   "Mensen verhuizen platteland → stad",
+   "Andersom",
+   "Nieuwe wegen aanleggen",
+   "Boeren op het platteland helpen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "industriele-revolutie-po",
+  "file": "./industrieleRevolutiePo.js",
+  "stap": 5,
+  "vraag": 13,
+  "soort": "L",
+  "q": "Wat is kolonisatie in deze tijd?",
+  "opties": [
+   "Andere landen onder controle nemen voor grondstoffen",
+   "Vrede",
+   "Handel drijven met gelijke partners",
+   "Nieuwe steden bouwen in eigen land"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "industriele-revolutie-po",
+  "file": "./industrieleRevolutiePo.js",
+  "stap": 5,
+  "vraag": 16,
+  "soort": "L",
+  "q": "Wat zijn slechte gevolgen Industriële Revolutie?",
+  "opties": [
+   "Vervuiling + lange werkdagen",
+   "Minder steden",
+   "Te veel vrije tijd",
+   "Duurdere kleding"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "industriele-revolutie-po",
+  "file": "./industrieleRevolutiePo.js",
+  "stap": 5,
+  "vraag": 17,
+  "soort": "L",
+  "q": "Wat zijn goede gevolgen?",
+  "opties": [
+   "Betere voeding, kleding goedkoper, vooruitgang",
+   "Schonere lucht in de steden",
+   "Te veel oorlog",
+   "Meteen kortere werkdagen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "industriele-revolutie-po",
+  "file": "./industrieleRevolutiePo.js",
+  "stap": 5,
+  "vraag": 19,
+  "soort": "L",
+  "q": "Wat is massa-productie?",
+  "opties": [
+   "Veel producten snel maken met machines",
+   "1 product",
+   "Producten alleen met de hand maken",
+   "Producten repareren"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "informatiebronnen-po",
+  "file": "./informatiebronnenPo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "H",
+  "q": "Je wilt weten wat 'innovatie' betekent. Welke bron?",
+  "opties": [
+   "Woordenboek",
+   "Atlas",
+   "Krant",
+   "Encyclopedie"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "informatiebronnen-po",
+  "file": "./informatiebronnenPo.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Welke informatie krijg je het BESTE van een expert/leerkracht?",
+  "opties": [
+   "Uitleg op jouw niveau + jouw vraag beantwoord",
+   "Een lijst van alle feiten",
+   "Een kaart",
+   "De spelling van een woord"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "informatiebronnen-po",
+  "file": "./informatiebronnenPo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "H",
+  "q": "Je zoekt in een geschiedenisboek alles over 'Karel V'. Welk deel kun je het beste raadplegen?",
+  "opties": [
+   "Index",
+   "Inhoudsopgave",
+   "Glossarium",
+   "Voorwoord"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "informatiebronnen-po",
+  "file": "./informatiebronnenPo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat staat er in een glossarium van een schoolboek?",
+  "opties": [
+   "Moeilijke woorden + uitleg",
+   "Hoofdstukken",
+   "Schrijvers",
+   "Kaarten"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "informatiebronnen-po",
+  "file": "./informatiebronnenPo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat moet je doen als ChatGPT je iets vertelt?",
+  "opties": [
+   "Altijd checken via een 2e betrouwbare bron",
+   "Direct geloven en gebruiken",
+   "Doorsturen naar vrienden",
+   "Op TikTok zetten"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "informatiebronnen-po",
+  "file": "./informatiebronnenPo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Voor een werkstuk over duurzaamheid — welke combinatie van bronnen is het BESTE?",
+  "opties": [
+   "Wetenschappelijk artikel + krant + interview met expert",
+   "Alleen TikTok-video's",
+   "Alleen een woordenboek",
+   "Eén Wikipedia-artikel"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "informatiebronnen-po",
+  "file": "./informatiebronnenPo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "H",
+  "q": "Voor de spelling van het woord 'metaforisch' — welke bron?",
+  "opties": [
+   "Woordenboek",
+   "Encyclopedie",
+   "Atlas",
+   "Krant"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "olympische-spelen-po",
+  "file": "./olympischeSpelenPo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is doping?",
+  "opties": [
+   "Verboden stoffen voor betere prestatie",
+   "Sport",
+   "Medaille",
+   "Een soort sportschoen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "olympische-spelen-po",
+  "file": "./olympischeSpelenPo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Femke Bol is sterk in?",
+  "opties": [
+   "400m horden / 4x400m",
+   "Zwemmen",
+   "Schaatsen",
+   "Tennis"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "olympische-spelen-po",
+  "file": "./olympischeSpelenPo.js",
+  "stap": 3,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Welke kleuren hebben de olympische ringen?",
+  "opties": [
+   "Blauw, geel, zwart, groen, rood",
+   "Alleen blauw",
+   "Wit en zwart",
+   "Regenboog"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "schaal-kaart-rekenen-po",
+  "file": "./schaalKaartRekenenPo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "H",
+  "q": "Schaal 1 : 50.000. Op de kaart 2 cm. Hoeveel km in het echt?",
+  "opties": [
+   "1 km",
+   "2 km",
+   "0,5 km",
+   "10 km"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "spreekwoorden-uitdrukkingen-po",
+  "file": "./spreekwoordenUitdrukkingenPo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Bij onbekend spreekwoord — wat doen?",
+  "opties": [
+   "Kijk naar de kernwoorden en de context",
+   "Zomaar een antwoord gokken",
+   "De vraag leeg laten",
+   "Het eerste antwoord kiezen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "spreekwoorden-uitdrukkingen-po",
+  "file": "./spreekwoordenUitdrukkingenPo.js",
+  "stap": 5,
+  "vraag": 1,
+  "soort": "L",
+  "q": "*'Beter een vogel in de hand dan tien in de lucht'* — les?",
+  "opties": [
+   "Wat je zeker hebt, is meer waard dan iets onzekers",
+   "Je moet zo veel mogelijk verzamelen",
+   "Vogels moet je vrij laten",
+   "Wie veel wil, krijgt ook veel"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "spreekwoorden-uitdrukkingen-po",
+  "file": "./spreekwoordenUitdrukkingenPo.js",
+  "stap": 5,
+  "vraag": 10,
+  "soort": "L",
+  "q": "*'Iemand iets onder de neus wrijven.'* — betekenis?",
+  "opties": [
+   "Iemand verwijtend op een fout wijzen",
+   "Iemand schoonmaken",
+   "Iemand kietelen",
+   "Iemand een compliment geven"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "spreekwoorden-uitdrukkingen-po",
+  "file": "./spreekwoordenUitdrukkingenPo.js",
+  "stap": 5,
+  "vraag": 12,
+  "soort": "L",
+  "q": "*'De druppel die de emmer doet overlopen.'* — betekenis?",
+  "opties": [
+   "Laatste reden waardoor je boos wordt",
+   "Water dat over de rand stroomt",
+   "Een groot ongeluk",
+   "Goed nieuws"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "spreekwoorden-uitdrukkingen-po",
+  "file": "./spreekwoordenUitdrukkingenPo.js",
+  "stap": 5,
+  "vraag": 15,
+  "soort": "L",
+  "q": "*'Met de neus in de boter vallen.'* — betekenis?",
+  "opties": [
+   "Net op tijd komen voor iets goeds",
+   "Te laat komen",
+   "Verlies lijden",
+   "Vies worden"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "verhaal-diepte-lezen-po",
+  "file": "./verhaalDiepteLezenPo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "*\"Ergens gaapt een deur, dan wordt het stil.\"* — Wat is de betekenis van 'een deur gaapt'?",
+  "opties": [
+   "Een deur gaat langzaam piepend open of dicht",
+   "Een deur is erg groot en breed",
+   "Iemand gooit een deur dicht",
+   "Een deur is kapot"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "verhaal-diepte-lezen-po",
+  "file": "./verhaalDiepteLezenPo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "*\"Zijn vingers trilden toen hij het deksel optilde.\"* — Wat voelt Ties op dit moment?",
+  "opties": [
+   "Hij is gespannen: als de vaas maar heel is gebleven",
+   "Hij heeft het koud in de klas",
+   "Hij is boos op Fleur",
+   "Hij vindt het deksel te zwaar"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "verhaal-diepte-lezen-po",
+  "file": "./verhaalDiepteLezenPo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "*\"Zijn wangen gloeiden als kacheltjes.\"* — Wat betekent dit?",
+  "opties": [
+   "Ties krijgt een rood, warm hoofd omdat hij zich schaamt",
+   "Er staan kacheltjes naast Ties aan",
+   "Ties heeft koorts en moet naar huis",
+   "Ties heeft het warm van het rennen"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "vlakke-figuren-po",
+  "file": "./vlakkeFigurenPo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Bij welke klus moet je de omtrek weten?",
+  "opties": [
+   "Een rand van lint om een prikbord plakken",
+   "Tapijt leggen in een kamer",
+   "Een muur verven",
+   "Een veld met gras inzaaien"
+  ],
+  "answer": 0
+ },
+ {
+  "pad": "wereldreligies-po",
+  "file": "./wereldreligiesPo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "H",
+  "q": "Wat is het heilige boek van het christendom?",
+  "opties": [
+   "Koran",
+   "Bijbel",
+   "Tora",
+   "Veda"
+  ],
+  "answer": 1
+ },
+ {
+  "pad": "wereldreligies-po",
+  "file": "./wereldreligiesPo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wie was Siddhartha Gautama (later bekend als Boeddha)?",
+  "opties": [
+   "Indiase prins die verlichting zocht en stichter van het boeddhisme werd",
+   "Egyptische farao die een grote piramide liet bouwen",
+   "Romeinse keizer die het christendom toestond",
+   "Chinese filosoof die het taoïsme begon"
+  ],
+  "answer": 0
+ }
+]

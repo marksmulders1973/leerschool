@@ -217,9 +217,9 @@ const steps = [
         q: "Betrouwbare informatie geeft vooral...",
         options: [
           "feiten die je kunt controleren",
-          "overdreven woorden",
-          "alleen meningen",
-          "grappige plaatjes",
+          "woorden die alles overdrijven",
+          "meningen van één persoon",
+          "grappige plaatjes en filmpjes",
         ],
         answer: 0,
         wrongHints: [null, "Overdreven woorden horen bij reclame.", "Meningen zijn niet voor iedereen waar.", "Plaatjes zeggen niets over betrouwbaarheid."],
@@ -255,9 +255,9 @@ const steps = [
         q: "Welke zin komt het meest uit een betrouwbare informatieve bron?",
         options: [
           "De maan draait in ongeveer 27 dagen om de aarde.",
-          "Onze maankijker is de allerbeste!",
-          "De maan is het mooiste wat er is.",
-          "Koop nu met korting!",
+          "Onze maankijker is de allerbeste van de wereld!",
+          "De maan is het mooiste wat je 's nachts ziet.",
+          "Koop nu onze maankijker met korting!",
         ],
         answer: 0,
         wrongHints: [null, "'Allerbeste' is reclame.", "'Mooiste' is een mening.", "Dat is reclame."],
@@ -374,12 +374,12 @@ const steps = [
         q: "Hoe controleer je het best of informatie klopt?",
         options: [
           "kijken of meerdere betrouwbare bronnen het zeggen",
-          "kijken of het mooi is opgemaakt",
-          "kijken of er veel kleuren in staan",
-          "het gewoon geloven",
+          "kijken of het mooi en netjes is opgemaakt",
+          "kijken of er veel kleuren en plaatjes in staan",
+          "het geloven als veel mensen het delen",
         ],
         answer: 0,
-        wrongHints: [null, "Mooie opmaak zegt niets over of het klopt.", "Kleuren maken iets niet waar.", "Zomaar geloven is juist niet slim."],
+        wrongHints: [null, "Mooie opmaak zegt niets over of het klopt.", "Kleuren maken iets niet waar.", "Vaak gedeeld betekent nog niet dat het klopt."],
         uitlegPad: {
           stappen: [{ titel: "Meerdere bronnen", tekst: "Als verschillende betrouwbare bronnen hetzelfde zeggen, klopt het waarschijnlijk." }],
           niveaus: {
@@ -412,12 +412,12 @@ const steps = [
         q: "Iemand deelt schokkend nieuws op social media, zonder bron. Wat doe je het best?",
         options: [
           "eerst checken bij een betrouwbare bron",
-          "het meteen doorsturen",
-          "het direct geloven",
-          "er een mening over geven",
+          "het meteen doorsturen naar je vrienden",
+          "het geloven omdat veel mensen het liken",
+          "er meteen een boze reactie onder zetten",
         ],
         answer: 0,
-        wrongHints: [null, "Doorsturen vóór je het checkt kan nepnieuws verspreiden.", "Zonder bron is direct geloven niet slim.", "Eerst checken of het waar is, gaat vóór een mening geven."],
+        wrongHints: [null, "Wat gebeurt er als het nepnieuws is en jij het doorstuurt?", "Veel likes betekent nog niet dat het klopt.", "Weet je al zeker dat het nieuws klopt?"],
         uitlegPad: {
           stappen: [{ titel: "Eerst checken", tekst: "Schokkend nieuws zonder bron eerst controleren bij een betrouwbare bron, anders verspreid je misschien nepnieuws." }],
           niveaus: {
@@ -430,13 +430,13 @@ const steps = [
       {
         q: "Twee betrouwbare bronnen zeggen verschillende dingen. Wat is verstandig?",
         options: [
-          "nog een bron erbij zoeken en voorzichtig zijn",
-          "de eerste maar geloven",
-          "allebei negeren",
-          "zelf iets verzinnen",
+          "nog een bron zoeken en voorzichtig zijn",
+          "de bron kiezen die je het leukst vindt",
+          "allebei negeren en niets opschrijven",
+          "zelf iets verzinnen wat ertussenin ligt",
         ],
         answer: 0,
-        wrongHints: [null, "Zomaar de eerste kiezen is niet zorgvuldig.", "Negeren helpt je niet verder.", "Verzinnen is nooit betrouwbaar."],
+        wrongHints: [null, "Wat je leuk vindt, hoeft nog niet te kloppen.", "Negeren helpt je niet verder.", "Verzinnen is nooit betrouwbaar."],
         uitlegPad: {
           stappen: [{ titel: "Derde bron", tekst: "Als bronnen elkaar tegenspreken, zoek je een extra bron en blijf je voorzichtig met de conclusie." }],
           niveaus: {
@@ -468,13 +468,13 @@ const steps = [
       {
         q: "Eén bericht zegt dat een bekende diersoort plots is uitgestorven. Wat doe je het best?",
         options: [
-          "checken bij een betrouwbare nieuws- of natuurbron",
-          "het meteen geloven",
+          "checken bij een betrouwbare natuurbron",
+          "het geloven omdat het zo zeker klinkt",
           "het direct doorsturen naar iedereen",
-          "er meteen ruzie over maken",
+          "er meteen een boze reactie op geven",
         ],
         answer: 0,
-        wrongHints: [null, "Eén bericht zonder check kan nepnieuws zijn.", "Doorsturen vóór de check verspreidt mogelijk onzin.", "Eerst nagaan of het klopt gaat vóór een reactie."],
+        wrongHints: [null, "Eén bericht zonder check kan nepnieuws zijn.", "Wat als het bericht niet klopt en jij het doorstuurt?", "Weet je al zeker dat het bericht klopt?"],
         uitlegPad: {
           stappen: [{ titel: "Eerst checken", tekst: "Groot nieuws uit één bron eerst controleren bij een betrouwbare bron voor je het gelooft of deelt." }],
           niveaus: {
@@ -612,12 +612,12 @@ const steps = [
         q: "Waarom is een officiële website (bijvoorbeeld van de overheid) vaak betrouwbaar?",
         options: [
           "ze controleren hun informatie zorgvuldig",
-          "het ziet er mooi uit",
-          "het staat op internet",
-          "ze gebruiken veel uitroeptekens",
+          "de website ziet er mooi en netjes uit",
+          "iedereen kan het op internet vinden",
+          "ze gebruiken veel uitroeptekens en kleur",
         ],
         answer: 0,
-        wrongHints: [null, "Mooi ogen maakt iets niet betrouwbaar.", "Op internet staat ook veel onzin.", "Veel uitroeptekens horen juist bij reclame."],
+        wrongHints: [null, "Mooi ogen maakt iets niet betrouwbaar.", "Op internet kun je ook veel onzin vinden.", "Veel uitroeptekens horen juist bij reclame."],
         uitlegPad: {
           stappen: [{ titel: "Gecontroleerde info", tekst: "Officiële bronnen controleren hun informatie en zijn verantwoordelijk voor wat ze publiceren — daarom betrouwbaar." }],
           niveaus: {
@@ -669,12 +669,12 @@ const steps = [
         q: "Wat is JUIST GEEN teken van een betrouwbare bron?",
         options: [
           "veel uitroeptekens en 'koop nu!'",
-          "een genoemde auteur",
-          "een bronvermelding",
-          "een recente datum",
+          "de naam van de schrijver erbij",
+          "een lijst met bronnen onderaan",
+          "een datum van kort geleden",
         ],
         answer: 0,
-        wrongHints: [null, "Een auteur maakt een bron juist betrouwbaarder.", "Een bronvermelding is juist een goed teken.", "Een recente datum is juist gunstig."],
+        wrongHints: [null, "Een schrijver met naam maakt een bron juist betrouwbaarder.", "Een bronvermelding is juist een goed teken.", "Een recente datum is juist gunstig."],
         uitlegPad: {
           stappen: [{ titel: "Reclame-taal = waarschuwing", tekst: "Uitroeptekens en 'koop nu!' horen bij reclame. Auteur, bronvermelding en een recente datum zijn juist góede tekens." }],
           niveaus: {
@@ -687,10 +687,10 @@ const steps = [
       {
         q: "Onderaan een artikel staat een lijst met bronnen. Waarom is dat handig?",
         options: [
-          "je kunt nakijken waar de informatie vandaan komt",
-          "het maakt het artikel langer",
-          "het staat gewoon mooi",
-          "het is verplicht voor plaatjes",
+          "je kunt nakijken waar het vandaan komt",
+          "het artikel ziet er dan langer uit",
+          "het staat netjes en mooi onderaan",
+          "het is verplicht als er plaatjes in staan",
         ],
         answer: 0,
         wrongHints: [null, "Het gaat niet om lengte, maar om controleerbaarheid.", "Niet voor de sier, maar om te kunnen controleren.", "Bronnen gaan over de inhoud, niet over plaatjes."],

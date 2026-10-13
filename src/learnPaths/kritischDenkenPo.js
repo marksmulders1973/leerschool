@@ -18,9 +18,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **kritisch denken**?",
-        options: ["Goed nadenken voor je iets gelooft", "Negatief zijn", "Alles afwijzen", "Alles geloven"],
+        options: ["Goed nadenken voor je iets gelooft","Altijd negatief zijn over alles","Alles meteen afwijzen wat je hoort","Alles geloven wat je leest"],
         answer: 0,
-        wrongHints: [null, "Niet hetzelfde.", "Niet.", "Tegenovergesteld."],
+        wrongHints: [null,"Is kritisch denken hetzelfde als zeuren of klagen?","Denk je goed na als je alles meteen afwijst?","Denk je goed na als je alles meteen gelooft?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is kritisch denken?", tekst: "Kritisch denken = **goed NADENKEN voordat je iets gelooft**. Niet alles meteen aannemen, maar vragen stellen: 'klopt dit?', 'wie zegt dit?', 'wat is bewijs?'." },
@@ -46,9 +46,9 @@ const steps = [
       },
       {
         q: "Wat doe je bij **info van internet**?",
-        options: ["Checken bron + andere bron + waarom", "Direct geloven", "Direct delen", "Niet lezen"],
+        options: ["Bron checken en een andere bron zoeken","Het meteen geloven als het echt lijkt","Het direct delen met je vrienden","Het overslaan en niet verder lezen"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Wel lezen + checken."],
+        wrongHints: [null,"Kan iedereen iets op internet zetten? Wat betekent dat?","Wat gebeurt er als het niet klopt en jij het al gedeeld hebt?","Leer je iets als je het helemaal overslaat?"],
         uitlegPad: {
           stappen: [
             { titel: "Internet = niet alles waar", tekst: "**Op internet kan IEDEREEN iets plaatsen** — een wetenschapper, een influencer, een 12-jarige, een oplichter. Daarom is **CHECKEN voor delen** essentieel." },
@@ -74,9 +74,9 @@ const steps = [
       },
       {
         q: "Wat is **wetenschappelijk denken**?",
-        options: ["Hypothese → experiment → conclusie", "Toeval", "Raden", "Religie"],
+        options: ["Hypothese bedenken en die testen","Iets geloven omdat het al lang zo is","Raden en hopen dat het klopt","Doen wat de meeste mensen denken"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Raden is gokken, niet testen.", "Apart."],
+        wrongHints: [null,"Test je dan of het echt klopt?","Raden is gokken, niet testen.","Is iets waar omdat veel mensen het denken?"],
       },
     ],
   },
@@ -87,9 +87,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **bevestigingsbias**?",
-        options: ["Zoeken naar info die je idee bevestigt", "Twijfelen", "Info van twee kanten lezen", "Logica"],
+        options: ["Zoeken naar info die je idee bevestigt","Steeds twijfelen aan je eigen idee","Info van twee kanten eerlijk lezen","Logisch nadenken over elk argument"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Dat is juist de oplossing ervoor.", "Niet primair."],
+        wrongHints: [null,"Tegenovergesteld.","Dat is juist de oplossing ervoor.","Is logisch nadenken een denkfout?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is bevestigingsbias?", tekst: "**Bevestigingsbias** (Engels: confirmation bias) is een denkfout: we ZOEKEN naar info die ons IDEE BEVESTIGT, en negeren info die het tegenspreekt." },
@@ -115,9 +115,9 @@ const steps = [
       },
       {
         q: "Wat is **sunk cost fallacy**?",
-        options: ["Doorgaan omdat je al investeerde", "Nieuw beginnen", "Slim kiezen", "Kopen omdat iedereen het koopt"],
+        options: ["Doorgaan omdat je al investeerde","Stoppen omdat het niet meer lukt","Slim kiezen wat nu het beste is","Kopen omdat iedereen het koopt"],
         answer: 0,
-        wrongHints: [null, "Wel goed.", "Niet primair.", "Dat is groepsdruk."],
+        wrongHints: [null,"Is stoppen als iets niet lukt een denkfout?","Is slim kiezen een denkfout?","Dat is groepsdruk."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is 'sunk cost'?", tekst: "**Sunk cost** = 'verzonken kosten' = geld of tijd dat al **uitgegeven** is en NIET meer terug te krijgen. **Sunk cost fallacy** = de denkfout om door te gaan met iets ALLEEN omdat je er al in geïnvesteerd hebt." },
@@ -143,9 +143,9 @@ const steps = [
       },
       {
         q: "Waarom is **stereotypering** fout?",
-        options: ["Oordeel over groep ipv individu", "Geen tijd voor", "Mag wel", "Omdat groepen niet bestaan"],
+        options: ["Groep beoordelen in plaats van persoon","Omdat het je te veel tijd kost","Het is niet fout, het mag gewoon","Omdat groepen niet echt bestaan"],
         answer: 0,
-        wrongHints: [null, "Geen excuus.", "Niet.", "Groepen bestaan wel — het gaat om hoe je oordeelt."],
+        wrongHints: [null,"Gaat het om tijd, of om eerlijk zijn tegen mensen?","Is het eerlijk om iemand te beoordelen op een groep?","Groepen bestaan wel — het gaat om hoe je oordeelt."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is stereotypering?", tekst: "**Stereotypering** = een oordeel maken over een HELE GROEP mensen, op basis van een vooroordeel. Bv: 'alle oude mensen zijn langzaam', 'alle voetballers zijn dom'." },
@@ -184,9 +184,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **persoonsaanval (ad hominem)**?",
-        options: ["Aanval op persoon ipv argument", "Goed argument", "Vraag", "Beroep op de meerderheid"],
+        options: ["Aanval op persoon in plaats van argument","Een sterk en eerlijk argument","Een vraag stellen over het argument","Beroep op wat de meerderheid vindt"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet primair.", "Dat is 'iedereen doet het'."],
+        wrongHints: [null,"Klinkt het woord 'aanval' als iets eerlijks?","Is een vraag stellen een aanval?","Dat is 'iedereen doet het'."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is ad hominem?", tekst: "**Ad hominem** is Latijns voor 'op de man'. Het is een **drogreden** waarbij je niet het ARGUMENT aanvalt maar de PERSOON die het zegt. Onhoudbaar in een goede discussie." },
@@ -213,9 +213,9 @@ const steps = [
       },
       {
         q: "Wat is **stroman**?",
-        options: ["Vervalst het argument van de tegenstander", "Echte man", "Een goed argument", "Aanval op de persoon"],
+        options: ["Het argument van de ander verdraaien","Een man die van stro gemaakt is","Een goed en eerlijk argument geven","De persoon aanvallen, niet het argument"],
         answer: 0,
-        wrongHints: [null, "Letterlijk niet.", "Tegenovergesteld.", "Dat heet ad hominem."],
+        wrongHints: [null,"Is het woord hier letterlijk bedoeld, of als beeld?","Tegenovergesteld.","Dat heet ad hominem."],
       },
       {
         q: "Waarom is **'iedereen doet het'** een drogreden?",
@@ -235,15 +235,15 @@ const steps = [
     title: "Eind-toets — kritisch mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
-      { q: "Wat is **kritisch denken**?", options: ["Goed nadenken voor je gelooft", "Negatief", "Alles afwijzen", "Alles geloven"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Tegenovergesteld."] },
-      { q: "Wat is **bevestigingsbias**?", options: ["Zoeken naar info die idee bevestigt", "Twijfel", "Logica", "Info van twee kanten lezen"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Niet primair.", "Dat is juist de oplossing ervoor."] },
-      { q: "Wat zijn **drogredenen**?", options: ["Slechte argumenten die goed lijken", "Goede argumenten", "Bewezen feiten", "Wiskunde"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Een feit is geen argument dat slecht kan zijn.", "Niet."] },
-      { q: "Waarom is **stereotypering** fout?", options: ["Oordeel over groep ipv individu", "Slim", "Mag wel", "Omdat het altijd klopt"], answer: 0, wrongHints: [null, "Niet.", "Geen excuus.", "Klopt een oordeel over een hele groep voor iedereen?"] },
+      { q: "Wat is **kritisch denken**?", options: ["Goed nadenken voor je iets gelooft","Altijd negatief zijn over alles","Alles meteen afwijzen wat je hoort","Alles geloven wat je leest"], answer: 0, wrongHints: [null,"Is kritisch denken hetzelfde als zeuren of klagen?","Denk je goed na als je alles meteen afwijst?","Denk je goed na als je alles meteen gelooft?"] },
+      { q: "Wat is **bevestigingsbias**?", options: ["Zoeken naar info die je idee bevestigt","Steeds twijfelen aan je eigen idee","Logisch nadenken over elk argument","Info van twee kanten eerlijk lezen"], answer: 0, wrongHints: [null,"Tegenovergesteld.","Is logisch nadenken een denkfout?","Dat is juist de oplossing ervoor."] },
+      { q: "Wat zijn **drogredenen**?", options: ["Slechte argumenten die goed lijken","Sterke argumenten die goed kloppen","Feiten die door onderzoek bewezen zijn","Rekenregels uit de wiskundeles"], answer: 0, wrongHints: [null,"Tegenovergesteld.","Een feit is geen argument dat slecht kan zijn.","Heeft een drogreden met rekenen te maken?"] },
+      { q: "Waarom is **stereotypering** fout?", options: ["Groep beoordelen in plaats van persoon","Het is niet fout, het is slim","Het is niet fout, het mag gewoon","Omdat het over iedereen klopt"], answer: 0, wrongHints: [null,"Is het slim om iemand te beoordelen op een groep?","Is het eerlijk om iemand te beoordelen op een groep?","Klopt een oordeel over een hele groep voor iedereen?"] },
       { q: "Wie won een **Nobelprijs voor onderzoek naar denkfouten**?", options: ["Daniel Kahneman", "Einstein", "Darwin", "Aristoteles"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Vroeger maar geen Nobel."] },
-      { q: "Wat is **cherry picking**?", options: ["Kies gunstige feiten, negeer de rest", "Fruit plukken", "Een goed argument", "Twee kanten eerlijk bekijken"], answer: 0, wrongHints: [null, "Letterlijk niet.", "Is alleen de gunstige feiten noemen eerlijk?", "Dat is juist het tegenovergestelde."] },
+      { q: "Wat is **cherry picking**?", options: ["Kies gunstige feiten, negeer de rest","Kersen plukken in de boomgaard","Een goed en eerlijk argument geven","Twee kanten eerlijk bekijken"], answer: 0, wrongHints: [null,"Is het woord hier letterlijk bedoeld, of als beeld?","Is alleen de gunstige feiten noemen eerlijk?","Dat is juist het tegenovergestelde."] },
       {
         q: "Wat is **fake news**?",
-        options: ["Nepnieuws dat als waar wordt verspreid", "Grappig nieuws", "Reclame", "Nieuws uit ander land"],
+        options: ["Nepnieuws dat als waar wordt verspreid","Grappig nieuws dat duidelijk een grap is","Reclame voor een nieuw product","Nieuws dat uit een ander land komt"],
         answer: 0,
         wrongHints: [null, "Niet — humor-nieuws (bv. De Speld) is duidelijk fictief.", "Reclame is wel commercieel maar niet 'fake news' (heeft eigen regels).", "Buitenlands nieuws is gewoon nieuws — niet fake."],
         uitlegPad: {
@@ -269,9 +269,9 @@ const steps = [
       },
       {
         q: "Wat doe je als iemand zegt: **'Mijn opa rookt en is 90 — dus roken is gezond'**?",
-        options: ["Anekdote ≠ bewijs — onderzoek toont roken is ongezond", "Geloof het — opa is bewijs", "Ga zelf roken proberen", "Stop met opa praten"],
+        options: ["Eén voorbeeld is nog geen bewijs","Geloven, want opa is het bewijs","Klopt, oude mensen weten het best","Niet meer met opa erover praten"],
         answer: 0,
-        wrongHints: [null, "Anekdote-fout — 1 voorbeeld bewijst niets over miljoenen mensen.", "Niet — gebruik kritisch denken, niet impuls.", "Niet nodig — leg uit wat anekdote-bewijs is."],
+        wrongHints: [null,"Zegt één opa iets over miljoenen andere rokers?","Weet iemand iets zeker alleen omdat hij oud is?","Help je zo uitzoeken wat waar is?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een anekdote?", tekst: "Een **anekdote** is een **persoonlijk verhaal** of **1 voorbeeld**. Op zich niet erg, maar als **bewijs** is het zwak.\n\nVoorbeeld: 'Mijn opa rookt 60 jaar en is 90.' Klinkt overtuigend, maar:\n• Hij is een **uitzondering**\n• We weten niet hoe gezond hij echt is\n• Er zijn duizenden rokers die WEL kanker krijgen\n• 1 persoon zegt niets over miljarden mensen" },
@@ -295,9 +295,9 @@ const steps = [
       },
       {
         q: "Wat is een **logische fout** in: 'Alle vogels kunnen vliegen. Pinguïns zijn vogels. Dus pinguïns kunnen vliegen'?",
-        options: ["Eerste regel is FOUT — niet alle vogels kunnen vliegen", "Conclusie klopt — pinguïns vliegen", "Pinguïns zijn geen vogels", "Vogels bestaan niet"],
+        options: ["De eerste zin klopt niet","De conclusie is gewoon waar","De tweede zin klopt niet","Geen enkele zin klopt"],
         answer: 0,
-        wrongHints: [null, "Niet — pinguïns kunnen ECHT niet vliegen. Logica klopt, premisse niet.", "Pinguïns zijn WEL vogels (warmbloedig, eieren, veren).", "Vogels bestaan zeker wel."],
+        wrongHints: [null,"Kunnen pinguïns echt vliegen?","Zijn pinguïns vogels? Denk aan veren en eieren.","Klopt de zin 'Pinguïns zijn vogels' dan ook niet?"],
         uitlegPad: {
           stappen: [
             { titel: "Hoe werkt logica?", tekst: "Een redenering werkt met **premissen** (uitspraken) + **conclusie**:\n\n• Premisse 1: 'Alle vogels kunnen vliegen'\n• Premisse 2: 'Pinguïns zijn vogels'\n• Conclusie: 'Pinguïns kunnen vliegen'\n\n**Logisch klopt het redeneren!** Maar... een premisse is FOUT. Conclusie wordt dan ook fout, ondanks goede logica." },
@@ -319,23 +319,23 @@ const steps = [
           niveaus: { basis: "Premisse 1 klopt niet.", simpeler: "De eerste zin ('alle vogels vliegen') is FOUT — pinguïns/struisvogels vliegen niet. Daarom klopt de conclusie ook niet, ondanks goede logica.", nogSimpeler: "Premisse fout" },
         },
       },
-      { q: "Wat is **bevestigingsbias**?", options: ["Alleen info zoeken die jouw mening bevestigt","Alle info opnemen","Je mening direct veranderen","Twijfelen over alles"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Niet — vasthouden, niet veranderen.", "Niet relevant."] },
+      { q: "Wat is **bevestigingsbias**?", options: ["Alleen zoeken wat jouw mening bevestigt","Alle info eerlijk en open bekijken","Je mening meteen veranderen bij twijfel","Overal aan twijfelen, ook aan feiten"], answer: 0, wrongHints: [null,"Tegenovergesteld.","Verander je bij deze denkfout makkelijk van mening?","Twijfel je bij deze denkfout veel, of juist weinig?"] },
       { q: "Welke vraag is een **kritische** vraag bij een bewering?", options: ["Klopt de bron?","Hoe lang is de zin?","Wie schreef het mooist?","Wat is de kleur?"], answer: 0, wrongHints: [null, "Niet inhoudelijk.", "Stijl, geen inhoud.", "Niet relevant."] },
       { q: "*'Hij heeft ongelijk want hij is dom.'* — Welke drogreden?", options: ["Ad hominem","Stroman","Vals dilemma","Cirkelredenering"], answer: 0, wrongHints: [null, "Niet — geen verdraaiing.", "Niet — geen 2 opties.", "Niet — geen herhaling."] },
-      { q: "Wat is **nepnieuws**?", options: ["Bewust verzonnen 'nieuws' om mensen te misleiden","Oud nieuws","Slecht-geschreven nieuws","Buitenlands nieuws"], answer: 0, wrongHints: [null, "Niet — kan wel waar zijn.", "Stijl, niet feit.", "Niet relevant."] },
-      { q: "Wat is **groepsdruk**?", options: ["Druk vanuit groep om mee te doen","Persoonlijke keuze","Eenzaamheid","Ruzie in een groep"], answer: 0, wrongHints: [null, "Tegengestelde.", "Tegengestelde.", "Ruzie is iets anders dan druk om mee te doen."] },
-      { q: "Wat is **logisch redeneren**?", options: ["Stap voor stap denken zonder fouten","Aannemen zonder check","Random","Snel gokken"], answer: 0, wrongHints: [null, "Tegengestelde.", "Tegengestelde.", "Gokken is geen stap voor stap denken."] },
-      { q: "*'Iedereen vindt dit, dus het klopt.'* — denkfout?", options: ["Argument van populariteit","Logica","Geen denkfout","Bevestigingsbias"], answer: 0, wrongHints: [null, "Niet logisch.", "Wel.", "Andere denkfout."] },
+      { q: "Wat is **nepnieuws**?", options: ["Verzonnen nieuws om mensen te misleiden","Nieuws dat al een paar jaar oud is","Nieuws met veel spelfouten erin","Nieuws dat uit het buitenland komt"], answer: 0, wrongHints: [null,"Niet — kan wel waar zijn.","Is nieuws met fouten meteen niet waar?","Is nieuws uit een ander land daarom nep?"] },
+      { q: "Wat is **groepsdruk**?", options: ["Druk vanuit groep om mee te doen","Zelf kiezen wat jij wilt doen","Je eenzaam voelen zonder vrienden","Ruzie hebben met je vriendengroep"], answer: 0, wrongHints: [null,"Waar komt bij groepsdruk de druk vandaan?","Tegengestelde.","Ruzie is iets anders dan druk om mee te doen."] },
+      { q: "Wat is **logisch redeneren**?", options: ["Stap voor stap denken zonder fouten","Alles aannemen zonder te checken","Zomaar iets kiezen wat je wilt","Snel gokken en hopen dat het klopt"], answer: 0, wrongHints: [null, "Tegengestelde.", "Tegengestelde.", "Gokken is geen stap voor stap denken."] },
+      { q: "*'Iedereen vindt dit, dus het klopt.'* — denkfout?", options: ["Argument van populariteit","Een logische redenering","Dit is geen denkfout","Bevestigingsbias"], answer: 0, wrongHints: [null,"Wordt iets waar omdat veel mensen het vinden?","Maakt het aantal mensen iets waar?","Andere denkfout."] },
       { q: "*'Vroeger was alles beter.'* — denkfout?", options: ["Nostalgie-bias","Logica","Wetenschap","Ad hominem"], answer: 0, wrongHints: [null, "Niet logisch.", "Niet bewezen.", "Wordt er iemand persoonlijk aangevallen?"] },
-      { q: "*'Hij maakte een fout, dus alles wat hij zegt klopt niet.'* — denkfout?", options: ["Ad hominem / generalisatie","Wel logica","Stroman","Bevestigingsbias"], answer: 0, wrongHints: [null, "Niet.", "Wordt iemands argument verdraaid?", "Andere denkfout."] },
+      { q: "*'Hij maakte een fout, dus alles wat hij zegt klopt niet.'* — denkfout?", options: ["Persoonsaanval","Logische redenering","Stroman-drogreden","Bevestigingsbias"], answer: 0, wrongHints: [null,"Bewijst één fout dat alles wat iemand zegt niet klopt?","Wordt iemands argument verdraaid?","Andere denkfout."] },
       { q: "Wat is **correlatie ≠ causatie**?", options: ["Samen voorkomen betekent niet dat het een het ander veroorzaakt","Samen voorkomen bewijst dat het een het ander veroorzaakt","Twee dingen komen nooit samen voor","Oorzaak en gevolg bestaan niet"], answer: 0, wrongHints: [null, "Dat is precies de denkfout waarvoor gewaarschuwd wordt.", "Dingen komen vaak wél samen voor.", "Oorzaken bestaan zeker."] },
-      { q: "Wat is **objectief** versus **subjectief**?", options: ["Objectief = feiten; subjectief = mening","Hetzelfde","Andersom","Allebei betekenen mening"], answer: 0, wrongHints: [null, "Wel verschil.", "Niet andersom.", "Is een feit hetzelfde als een mening?"] },
+      { q: "Wat is **objectief** versus **subjectief**?", options: ["Objectief = feiten; subjectief = mening","Objectief en subjectief zijn hetzelfde","Objectief = mening; subjectief = feiten","Allebei betekenen precies een mening"], answer: 0, wrongHints: [null, "Wel verschil.", "Niet andersom.", "Is een feit hetzelfde als een mening?"] },
       { q: "Wat doe je bij een **claim** zonder bewijs?", options: ["Bronnen vragen","Geloven","Volg de meerderheid","Negeren"], answer: 0, wrongHints: [null, "Niet.", "Niet logisch.", "Niet primair."] },
-      { q: "Wat is een **drogreden**?", options: ["Argument dat lijkt te kloppen maar logisch fout is","Bewezen feit","Vraag","Reclame"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Reclame kán drogredenen gebruiken, maar is er zelf geen."] },
+      { q: "Wat is een **drogreden**?", options: ["Argument dat klopt lijkt, maar fout is","Een feit dat door onderzoek bewezen is","Een vraag die je aan iemand stelt","Reclame die je iets wil laten kopen"], answer: 0, wrongHints: [null,"Tegengestelde.","Is een vraag een argument?","Reclame kán drogredenen gebruiken, maar is er zelf geen."] },
       { q: "**Vals dilemma**: 'Je bent voor of tegen ons.' Drogreden?", options: ["Ja — er zijn meer opties","Geen drogreden","Logisch","Ja — het is een persoonsaanval"], answer: 0, wrongHints: [null, "Zijn er echt maar twee keuzes?", "Zijn er echt maar twee keuzes?", "Wordt er iemand persoonlijk aangevallen?"] },
-      { q: "**Cirkelredenering**: 'A omdat A, en A omdat A.' Drogreden?", options: ["Ja — het 'bewijst' zichzelf","Geen drogreden","Logisch","Ja — het is een stroman"], answer: 0, wrongHints: [null, "Bewijst 'A omdat A' echt iets?", "Bewijst 'A omdat A' echt iets?", "Wordt iemands argument verdraaid?"] },
+      { q: "**Cirkelredenering**: 'A omdat A, en A omdat A.' Drogreden?", options: ["Ja — het 'bewijst' zichzelf","Nee — het is geen drogreden","Nee — het is juist logisch","Ja — het is een stroman"], answer: 0, wrongHints: [null, "Bewijst 'A omdat A' echt iets?", "Bewijst 'A omdat A' echt iets?", "Wordt iemands argument verdraaid?"] },
       { q: "Wat is een **goed argument**?", options: ["Standpunt + bewijs/redenering","Alleen mening","Aanval op persoon","Eén voorbeeld van één persoon"], answer: 0, wrongHints: [null, "Te dun.", "Drogreden.", "Eén voorbeeld is nog geen bewijs."] },
-      { q: "**Wat zou je doen** bij twijfelachtig nieuws?", options: ["Verifiëren met andere bron","Direct delen","Negeren","Geloven"], answer: 0, wrongHints: [null, "Verspreidt nep.", "Niet.", "Niet."] },
+      { q: "**Wat zou je doen** bij twijfelachtig nieuws?", options: ["Verifiëren met een andere bron","Direct delen met je vrienden","Er helemaal niets mee doen","Geloven, want het is nieuws"], answer: 0, wrongHints: [null,"Verspreidt nep.","Weet je dan of het klopt?","Is alles wat als nieuws wordt gebracht ook waar?"] },
       { q: "Wat is een **autoriteits-drogreden**?", options: ["Beroep op gezag zonder bewijs","Wetenschap citeren","Logica","Iemand persoonlijk aanvallen"], answer: 0, wrongHints: [null, "Wel goed.", "Niet.", "Dat is ad hominem."] },
       { q: "Hoe leer je **kritisch denken**?", options: ["Vragen stellen + bronnen checken","Stoppen met denken","Alles geloven wat je leest","Alleen naar je beste vriend luisteren"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Ook een vriend kan het mis hebben."] },
     ],

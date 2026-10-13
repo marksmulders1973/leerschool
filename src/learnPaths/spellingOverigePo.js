@@ -1220,7 +1220,7 @@ const steps = [
       { q: "Wat is het meervoud van 'idee'?", options: ["ideeën","ideeen","idee's","ideën"], answer: 0, wrongHints: [null, "Niet — zonder trema lees je het verkeerd.", "Geen apostrof.", "Je mist een e."] },
       { q: "Welke is goed: 'in tussen' of 'intussen'?", options: ["intussen","in tussen","in-tussen","intussent"], answer: 0, wrongHints: [null, "Niet — geen 2 woorden.", "Geen streepje.", "Niet."] },
       { q: "Welke is goed: 's morgens' of 'smorgens' of 's-morgens'?", options: ["'s morgens","s morgens","smorgens","'smorgens"], answer: 0, wrongHints: [null, "Apostrof mist.", "Aan elkaar fout.", "Spatie ontbreekt."] },
-      { q: "De goedheiligman zelf (de persoon): 'sinterklaas' of 'Sinterklaas'?", options: ["Sinterklaas","sinterklaas","sint-erklaas","Sint Erklaas"], answer: 0, wrongHints: [null, "Niet — de persoon krijgt een hoofdletter (het feest: sinterklaas).", "Niet — geen streepje.", "Niet."] },
+      { q: "De goedheiligman zelf (de persoon): 'sinterklaas' of 'Sinterklaas'?", options: ["Sinterklaas","sinterklaas","sint-erklaas","Sint Erklaas"], answer: 0, wrongHints: [null,"Gaat het hier om het feest of om de persoon? Hoe begin je de naam van een persoon?","Niet — geen streepje.","Niet."] },
     ],
   },
 ];

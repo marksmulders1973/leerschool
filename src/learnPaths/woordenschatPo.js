@@ -838,9 +838,9 @@ const steps = [
       },
       {
         q: "Wat betekent **'een open boek'** in 'Floor is een open boek voor mij'?",
-        options: ["Ik begrijp haar makkelijk, ze verbergt niets","Ze houdt alles voor zichzelf","Ze heeft een boek open","Ze schrijft een boek"],
+        options: ["Ik begrijp haar makkelijk, ze verbergt niets", "Ik snap haar niet, ze houdt alles voor zichzelf", "Ze heeft een boek open liggen om te lezen", "Ze schrijft een boek over haar eigen leven"],
         answer: 0,
-        wrongHints: [null, "Andersom — dan zou ze een gesloten boek zijn.", "Niet letterlijk.", "Niet — geen schrijven."],
+        wrongHints: [null, "Andersom — dan zou ze een gesloten boek zijn.", "Niet letterlijk.", "Gaat het hier echt over een boek?"],
         uitlegPad: {
           stappen: [
             { titel: "Figuurlijke uitdrukking", tekst: "**'Een open boek'** betekent figuurlijk: **iemand of iets dat doorzichtig + makkelijk te begrijpen is**. Geen verborgen agenda. Eerlijk + voorspelbaar.\n\nIemand die 'een gesloten boek' is = ondoorgrondelijk, mysterieus." },
@@ -897,7 +897,7 @@ const steps = [
       { q: "*Context*: 'De vissers haalden de buit binnen.' Wat betekent 'buit'?", options: ["Vangst","Boot","Net","Water"], answer: 0, wrongHints: [null, "Een boot is vervoer, geen buit.", "Een net is gereedschap, geen buit.", "Water is omgeving, geen buit."] },
       { q: "Synoniem van **mooi**?", options: ["prachtig","lelijk","slim","groot"], answer: 0, wrongHints: [null, "Antoniem.", "Andere betekenis.", "Niet."] },
       { q: "*Context*: 'Hij is een fanatiek voetballer.' Fanatiek =?", options: ["Heel toegewijd","Lui","Onverschillig","Bang"], answer: 0, wrongHints: [null, "Tegengestelde.", "Tegengestelde.", "Niet."] },
-      { q: "Wat betekent **discreet**?", options: ["Onopvallend en voorzichtig","Luid en opvallend","Snel boos","Onzeker"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Niet."] },
+      { q: "Wat betekent **discreet**?", options: ["Onopvallend en voorzichtig", "Luid en heel opvallend", "Snel boos en driftig", "Onzeker en twijfelend"], answer: 0, wrongHints: [null, "Tegengestelde.", "Denk aan: 'Hij gaf haar het cadeautje discreet.' Past dit woord daarbij?", "Denk aan: 'Hij gaf haar het cadeautje discreet.' Past dit woord daarbij?"] },
       { q: "Antoniem van **vroeg**?", options: ["laat","snel","wakker","nu"], answer: 0, wrongHints: [null, "Andere as.", "Niet over tijd-startmoment.", "Niet."] },
       { q: "**Verbazing** lijkt op?", options: ["verrassing","boosheid","verveling","angst"], answer: 0, wrongHints: [null, "Andere emotie.", "Niet.", "Niet."] },
       { q: "*Context*: 'Het was een schitterend feest.' Schitterend = ?", options: ["geweldig","saai","kort","duur"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Niet."] },

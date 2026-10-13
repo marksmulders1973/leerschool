@@ -429,7 +429,7 @@ Soms heb je alleen de lijst nodig, soms alleen de tekst — en bij de moeilijkst
       },
       {
         q: "Het broertje van Sara is 2 jaar en gaat mee. Wat kost zijn kaartje?",
-        options: ["Niets, voor hem is de toegang gratis", "€ 4,50", "€ 2,25", "€ 6,50"],
+        options: ["Gratis", "€ 4,50", "€ 2,25", "€ 6,50"],
         answer: 0,
         evidence: "Peuter (t/m 3 jaar): gratis",
         wrongHints: [
@@ -487,7 +487,7 @@ Soms heb je alleen de lijst nodig, soms alleen de tekst — en bij de moeilijkst
       },
       {
         q: "Een kind van 3 jaar gaat op woensdagmiddag zwemmen. Hoeveel betaalt het kind?",
-        options: ["Niets, voor peuters is het altijd gratis", "€ 2,25", "€ 4,50", "€ 1,00"],
+        options: ["Gratis", "€ 2,25", "€ 4,50", "€ 1,00"],
         answer: 0,
         evidence: "Peuter (t/m 3 jaar): gratis — Op woensdagmiddag is het Spetterdag. Dan betalen kinderen maar de helft van de gewone prijs.",
         wrongHints: [
@@ -911,20 +911,10 @@ Zet je valkuilen-bril op en probeer de vragen hieronder.`,
       },
       {
         q: "Je hebt de prijs al in de lijst gevonden. Waarom moet je tóch ook de tekst nog lezen?",
-        options: [
-          "Omdat in de tekst regels en uitzonderingen kunnen staan die de prijs veranderen",
-          "Omdat de lijst altijd fouten bevat",
-          "Omdat de tekst dezelfde getallen nog een keer noemt",
-          "Dat hoeft niet: de lijst is altijd genoeg",
-        ],
+        options: ["Omdat de tekst uitzonderingen kan noemen die de prijs veranderen", "Omdat de lijst bijna altijd fouten bevat die je moet verbeteren", "Omdat de tekst dezelfde getallen nog een keer noemt, als controle", "Dat hoeft niet: de lijst is altijd genoeg om de prijs te weten"],
         answer: 0,
         evidence: "Wie jarig is, mag die dag gratis naar binnen.",
-        wrongHints: [
-          null,
-          "De lijst klopt heus wel — maar vertelt de lijst je álles? Denk aan Sam, die vandaag jarig was.",
-          null,
-          "Denk terug aan de entree-vraag over Sam: had je die goed gehad met alléén de lijst?",
-        ],
+        wrongHints: [null, "De lijst klopt heus wel — maar vertelt de lijst je álles? Denk aan Sam, die vandaag jarig was.", "Als de tekst precies hetzelfde zei, waarom zou je hem dan lezen? Denk aan Sam.", "Denk terug aan de entree-vraag over Sam: had je die goed gehad met alléén de lijst?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat de lijst kan", tekst: "De lijst geeft je de gewone prijzen en gegevens, snel en overzichtelijk. Voor de meeste vragen is dat het startpunt." },

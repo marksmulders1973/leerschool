@@ -190,9 +190,9 @@ const steps = [
     checks: [
       {
         q: "Wat zijn **fossielen**?",
-        options: ["Versteende resten oude wezens", "Levende dieren", "Mineralen alleen", "Computers"],
+        options: ["Versteende resten van oude wezens", "Dieren die nu nog in het wild leven", "Stenen die vanzelf zijn ontstaan", "Botten van een dier dat net dood is"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet primair.", "Niet."],
+        wrongHints: [null, "Zijn fossielen nu nog in leven?", "Een fossiel lijkt op steen, maar waar komt de vorm vandaan?", "Hoe lang duurt het voordat iets versteent?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat zijn fossielen?", tekst: "**Fossielen** zijn versteende resten van planten of dieren die heel lang geleden leefden. Botten, schelpen, bladafdrukken — alles wat over de tijd is **versteend** in gesteente." },
@@ -225,9 +225,9 @@ const steps = [
       },
       {
         q: "Wat is **restorgaan** voorbeeld?",
-        options: ["Blindedarm + wijsheidskiezen", "Hart", "Hersenen", "Niets"],
+        options: ["Blindedarm + wijsheidskiezen", "Hart + longen + nieren", "Hersenen + ruggenmerg", "Maag + lever + alvleesklier"],
         answer: 0,
-        wrongHints: [null, "Wel functie.", "Wel.", "Bestaan wel."],
+        wrongHints: [null, "Heb je deze organen elke dag nodig? Een restorgaan doet bijna niets meer.", "Heb je deze organen elke dag nodig? Een restorgaan doet bijna niets meer.", "Heb je deze organen elke dag nodig? Een restorgaan doet bijna niets meer."],
       },
       {
         q: "Hoeveel **DNA-overeenkomst** mens-muis?",
@@ -249,9 +249,9 @@ const steps = [
       { q: "Hoeveel **mens-chimpansee DNA** overeenkomst?", options: ["~98,8%", "10%", "0%", "50%"], answer: 0, wrongHints: [null, "Te weinig.", "Wel.", "Te weinig."] },
       {
         q: "Wat zijn **fossielen**?",
-        options: ["Versteende resten van leven uit het verleden", "Stenen die zelf groeien", "Bot-modellen die wetenschappers maken", "Foto's van dieren"],
+        options: ["Versteende resten van leven van vroeger", "Stenen die vanzelf langzaam groeien", "Bot-modellen die wetenschappers maken", "Oude foto's en tekeningen van dieren"],
         answer: 0,
-        wrongHints: [null, "Niet — stenen groeien niet.", "Niet — fossielen zijn ECHTE resten.", "Niet."],
+        wrongHints: [null, "Niet — stenen groeien niet.", "Niet — fossielen zijn ECHTE resten.", "Bestonden er foto's toen de dinosaurussen leefden?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een fossiel?", tekst: "Een **fossiel** is een **versteende rest** van een organisme dat lang geleden leefde. Botten, tanden, schelpen, soms zelfs poot-afdrukken of bladeren — kunnen miljoenen jaren behouden blijven in gesteente." },
@@ -274,7 +274,7 @@ const steps = [
       },
       {
         q: "**Natuurlijke selectie** — wat is dat?",
-        options: ["Best aangepaste dieren krijgen meer jongen", "Wetenschappers kiezen welke dieren leven", "Mensen fokken dieren", "Toeval"],
+        options: ["Best aangepaste dieren krijgen meer jongen", "Wetenschappers kiezen welke dieren leven", "Mensen kiezen welke dieren jongen krijgen", "Puur toeval bepaalt welke dieren overleven"],
         answer: 0,
         wrongHints: [null, "Niet — gebeurt zonder menselijke keuze.", "Dat is FOKKEN (artificiële selectie), niet natuurlijk.", "Niet helemaal toeval — selectie heeft richting."],
         uitlegPad: {
@@ -326,19 +326,19 @@ const steps = [
       { q: "Wat is **natuurlijke selectie**?", options: ["Best aangepast overleeft vaker", "Puur toeval bepaalt wie overleeft", "Wie het hardst werkt, overleeft", "Wie geluk heeft, krijgt jongen"], answer: 0, wrongHints: [null, "Er zit een patroon in, geen puur toeval.", "Dieren overleven niet door hard te werken.", "Geluk speelt soms mee, maar bepaalt de richting niet."] },
       { q: "Op welke eilanden onderzocht Darwin **vinken**?", options: ["Galapagos","Hawaï","IJsland","Cuba"], answer: 0, wrongHints: [null, "Hawaï ligt midden in de Grote Oceaan bij Amerika — maar Darwin voer met de Beagle langs de kust van Zuid-Amerika. Klopt dat?", "IJsland ligt koud in het hoge noorden — passen kleine zangvogeltjes bij zo'n ijzige plek?", "Cuba ligt in de Caraïbische Zee — maar Darwins eilanden liggen vlak bij de evenaar aan de westkant van Zuid-Amerika. Welke groep is dat?"] },
       { q: "Wie was **Lucy**?", options: ["Een heel oud skelet", "Een schilder", "Een wetenschapper", "Een schip"], answer: 0, wrongHints: [null, "Niet.", "Lucy is zelf onderzocht; ze deed geen onderzoek.", "Niet."] },
-      { q: "Wat is een **fossiel**?", options: ["Versteende rest van plant/dier", "Steen", "Levend organisme", "Een plastic namaakbot"], answer: 0, wrongHints: [null, "Te algemeen.", "Niet — overblijfsel.", "Fossielen zijn echte resten."] },
+      { q: "Wat is een **fossiel**?", options: ["Versteende rest van plant/dier", "Een gewone steen uit de grond", "Een plant of dier dat nog leeft", "Een plastic namaakbot van speelgoed"], answer: 0, wrongHints: [null, "Een fossiel lijkt op steen. Maar wat zit erin?", "Leeft een fossiel nog?", "Fossielen zijn echte resten."] },
       { q: "Wie is onze **dichtste verwant** in het dierenrijk?", options: ["Chimpansees","Honden","Katten","Krokodillen"], answer: 0, wrongHints: [null, "Verder weg.", "Verder weg.", "Veel verder."] },
-      { q: "Wat zijn **Neanderthalers**?", options: ["Uitgestorven Homo-soort","Apen","Reptielen","Vissen"], answer: 0, wrongHints: [null, "Niet — Homo.", "Niet.", "Niet."] },
+      { q: "Wat zijn **Neanderthalers**?", options: ["Uitgestorven Homo-soort", "Mensapen die nu nog leven", "Uitgestorven soort reptiel", "Een soort vis van vroeger"], answer: 0, wrongHints: [null, "Leven Neanderthalers nu nog?", "Reptielen hebben schubben. Neanderthalers maakten werktuigen.", "Vissen leven in water. Neanderthalers maakten vuur."] },
       { q: "Wat is **uitsterven**?", options: ["Laatste van een soort sterft", "Slapen", "Verhuizen naar een ander land", "Vermeerderen"], answer: 0, wrongHints: [null, "Niet.", "Dan is de soort nog niet weg.", "Tegengestelde."] },
       { q: "Wat veroorzaakte uitsterven **dinosaurussen** vermoedelijk?", options: ["Meteoriet-inslag","Mens","Klimaatverandering puur","Niets"], answer: 0, wrongHints: [null, "Te recent.", "Onderdeel.", "Wel oorzaak."] },
       { q: "Hoeveel jaar oud is de **aarde** ongeveer?", options: ["4,5 miljard jaar","100 mln","10.000","100.000"], answer: 0, wrongHints: [null, "Veel te jong.", "Te jong.", "Te jong."] },
-      { q: "**DNA** is?", options: ["Erfelijk materiaal in cellen", "Een dier", "Een plant", "Een soort vitamine"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "DNA is geen voedingsstof."] },
-      { q: "Wat is een **soort**?", options: ["Groep dieren die samen jongen kunnen krijgen", "1 dier", "Familie", "Alle dieren op aarde"], answer: 0, wrongHints: [null, "Niet.", "Bredere groep.", "Veel te breed."] },
+      { q: "**DNA** is?", options: ["Erfelijk materiaal in cellen", "Een klein diertje in je bloed", "Een ziekte die je kunt krijgen", "Een soort vitamine uit je eten"], answer: 0, wrongHints: [null, "Wat krijg je van je ouders mee?", "Wat krijg je van je ouders mee?", "DNA is geen voedingsstof."] },
+      { q: "Wat is een **soort**?", options: ["Dieren die samen jongen kunnen krijgen", "Eén los dier met een eigen naam", "Een gezin: ouders met hun jongen", "Alle dieren die op aarde leven"], answer: 0, wrongHints: [null, "Een soort is een groep. Is één dier een groep?", "Een soort is veel groter dan één gezin.", "Kan een vis jongen krijgen met een kat?"] },
       { q: "Welk werelddeel was **wieg van mensheid**?", options: ["Afrika","Europa","Azië","Amerika"], answer: 0, wrongHints: [null, "Latere migratie.", "Latere migratie.", "Veel latere."] },
       { q: "Wat zijn **restorganen** als bewijs voor evolutie?", options: ["Organen die hun functie verloren", "Pijnlijke organen", "Organen die nooit bestonden", "Belangrijke organen"], answer: 0, wrongHints: [null, "Niet specifiek.", "Restorganen bestaan echt.", "Restorganen doen juist weinig meer."] },
       { q: "Welke **eigenschap** geeft voordeel bij voortplanting?", options: ["Aangepaste eigenschappen", "Willekeurige eigenschappen", "Eigenschappen die je aanleert", "Helemaal geen eigenschap"], answer: 0, wrongHints: [null, "Niet — selectie selecteert.", "Aangeleerde dingen erf je niet.", "Eigenschappen maken wel verschil."] },
       { q: "**Mutaties** zijn?", options: ["Veranderingen in DNA", "Trucs", "Nieuwe soorten voedsel", "Politiek"], answer: 0, wrongHints: [null, "Niet biologie.", "Mutaties gaan niet over eten.", "Niet."] },
-      { q: "**Pepermot** in Engeland (industrieel) — welk effect?", options: ["Donkere motten overleefden beter", "Witte motten overleefden beter", "Geen verandering", "Uitgestorven"], answer: 0, wrongHints: [null, "Tegengestelde voor industrieel.", "Wel.", "Wel populatie veranderd."] },
+      { q: "**Pepermot** in Engeland (industrieel) — welk effect?", options: ["Donkere motten overleefden beter", "Witte motten overleefden beter", "Er veranderde niets aan de motten", "Alle motten stierven helemaal uit"], answer: 0, wrongHints: [null, "De bomen werden zwart van het roet. Welke mot viel dan op?", "De kleur van de bomen veranderde. Had dat geen gevolg?", "Er bleven wel motten over. Welke?"] },
       { q: "Welke groep is **directe voorouder** van mens?", options: ["Vroege mensachtigen", "Apen tegenwoordig", "Reptielen", "Vogels"], answer: 0, wrongHints: [null, "Niet — gemeenschappelijke voorouder.", "Veel verder.", "Veel verder."] },
       { q: "Hoeveel mensen leven nu **op aarde**?", options: ["~8 miljard","1 miljard","100 miljoen","30 miljard"], answer: 0, wrongHints: [null, "Te weinig.", "Te weinig.", "Te veel."] },
     ],

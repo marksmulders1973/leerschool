@@ -19,15 +19,15 @@ const steps = [
     checks: [
       {
         q: "Wat is een **beroep**?",
-        options: ["Wat je geleerd hebt te doen voor werk", "Geld", "School", "Hobby"],
+        options: ["Wat je geleerd hebt te doen voor werk", "Het geld dat je verdient met werken", "De school waar je een vak leert", "Wat je in je vrije tijd voor de lol doet"],
         answer: 0,
-        wrongHints: [null, "Geld verdien je mét je beroep — maar wat is het beroep zelf?", "Niet primair.", "Geen werk."],
+        wrongHints: [null, "Geld verdien je mét je beroep — maar wat is het beroep zelf?", "Op school leer je een vak — maar is de school zelf je werk?", "Dat is een hobby. Verdien je daar je geld mee?"],
       },
       {
         q: "Wat is een **ZZP'er**?",
-        options: ["Zelfstandige zonder personeel", "Werknemer", "Stagiair", "Eigenaar groot bedrijf"],
+        options: ["Zelfstandige zonder personeel", "Werknemer met een vast contract", "Leerling die stage loopt", "Eigenaar van een groot bedrijf"],
         answer: 0,
-        wrongHints: [null, "Loondienst.", "Niet primair.", "Niet primair."],
+        wrongHints: [null, "Een werknemer werkt voor een baas. Heeft een ZZP'er een baas?", "Een stagiair is nog aan het leren. Waar staat de Z van ZZP voor?", "Een groot bedrijf heeft veel mensen in dienst. Wat zegt de P in ZZP?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent ZZP?", tekst: "**ZZP** is een afkorting voor **Zelfstandige Zonder Personeel**. Het is iemand die voor zichzelf werkt — niet in dienst bij een baas." },
@@ -137,9 +137,9 @@ const steps = [
       },
       {
         q: "Welke beroepen **groeien**?",
-        options: ["IT + zorg + duurzaamheid", "Kassier", "Postbezorger", "Fabrieksarbeider"],
+        options: ["IT + zorg + duurzaamheid", "Kassa + post + fabriekswerk", "Bank + reisbureau + drukkerij", "Krant + kiosk + fotowinkel"],
         answer: 0,
-        wrongHints: [null, "Krimpen.", "Krimpen.", "Krimpen."],
+        wrongHints: [null, "Hier is steeds minder werk: machines en internet nemen het over.", "Hier is steeds minder werk: veel gaat nu online.", "Hier is steeds minder werk: mensen lezen en kopen meer online."],
       },
     ],
   },
@@ -193,7 +193,7 @@ const steps = [
       },
       {
         q: "Wat is een **CAO**?",
-        options: ["Afspraken tussen werkgevers en werknemers", "Een soort belasting", "Een vakantie-uitkering", "Een diploma"],
+        options: ["Afspraken tussen werkgevers en werknemers", "Belasting die werkgevers aan de staat geven", "Extra geld dat werknemers in de zomer krijgen", "Diploma dat werknemers halen voor hun vak"],
         answer: 0,
         wrongHints: [null, "Belasting gaat naar de overheid.", "Vakantiegeld is iets anders.", "Een diploma haal je op school."],
       },
@@ -211,7 +211,7 @@ const steps = [
     checks: [
       { q: "Welke sector is **landbouw**?", options: ["Primair", "Secundair", "Tertiair", "Quartair"], answer: 0, wrongHints: [null, "Industrie.", "Dienst.", "Zorg/onderwijs."] },
       { q: "Welke is **HBO-beroep**?", options: ["Verpleegkundige", "Loodgieter", "Arts", "Kassier"], answer: 0, wrongHints: [null, "MBO.", "WO.", "Geen opleiding nodig."] },
-      { q: "Wat is **ZZP'er**?", options: ["Zelfstandige zonder personeel", "Werknemer", "Stagiair", "Vrijwilliger"], answer: 0, wrongHints: [null, "Loondienst.", "Niet primair.", "Onbetaald."] },
+      { q: "Wat is **ZZP'er**?", options: ["Zelfstandige zonder personeel", "Werknemer met een vast contract", "Leerling die stage loopt", "Iemand die onbetaald helpt"], answer: 0, wrongHints: [null, "Een werknemer werkt voor een baas. Heeft een ZZP'er een baas?", "Een stagiair is nog aan het leren. Waar staat de Z van ZZP voor?", "Dat is een vrijwilliger. Waar staan de letters ZZP voor?"] },
       { q: "Wat is **AOW**?", options: ["Staatspensioen", "Salaris", "Belasting", "Bonus"], answer: 0, wrongHints: [null, "Salaris krijg je zolang je wérkt — AOW krijg je juist daarna. Van wie?", "Belasting betáál je — AOW ontváng je. Wanneer in je leven?", "Geen extraatje van de baas — een vaste uitkering. Voor welke leeftijdsgroep?"] },
       { q: "**Top-1 best betaalde** beroep NL?", options: ["Specialist-arts", "Verkoper", "Schoonmaker", "Stagiair"], answer: 0, wrongHints: [null, "Veel minder.", "Veel minder.", "Niet betaald."] },
       { q: "Wat is **bruto**?", options: ["Salaris voor belasting", "Salaris na belasting", "Cadeau", "Extra geld voor overuren"], answer: 0, wrongHints: [null, "Netto.", "Niet.", "Dat heet overwerktoeslag."] },
@@ -243,9 +243,9 @@ const steps = [
       },
       {
         q: "Wat is een **CAO**?",
-        options: ["Afspraken tussen werkgevers en vakbonden", "Een mbo-diploma", "Een soort uitkering", "Belasting-soort"],
+        options: ["Afspraken tussen werkgevers en vakbonden", "Diploma dat werknemers halen voor hun vak", "Uitkering voor werknemers die ziek zijn", "Belasting die werkgevers aan de staat geven"],
         answer: 0,
-        wrongHints: [null, "Een diploma haal je op school.", "Een uitkering krijg je als je niet (meer) werkt.", "Niet — geen belasting."],
+        wrongHints: [null, "Een diploma haal je op school.", "Een uitkering krijg je als je niet (meer) werkt.", "Belasting gaat naar de overheid. Wie maken samen een CAO?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een CAO?", tekst: "**CAO** = **Collectieve Arbeids­overeenkomst** — een **schriftelijke afspraak** tussen werkgevers (vaak via een werkgevers-organisatie) en werknemers (via een **vakbond**, bv. FNV of CNV).\n\nGeldt voor **alle werknemers** in een sector (zorg, bouw, onderwijs, supermarkten). Je hoeft niet apart te onderhandelen — CAO regelt het al." },
@@ -292,21 +292,21 @@ const steps = [
           niveaus: { basis: "13 jaar.", simpeler: "Vanaf 13 mag licht werk (klusjes), vanaf 15 krant/folder, vanaf 16 bijbaan met regels (max uur, geen nacht).", nogSimpeler: "13+ licht werk" },
         },
       },
-      { q: "Wat is een **CV** (curriculum vitae)?", options: ["Overzicht van opleiding/werk-ervaring","Een diploma","Een arbeidscontract","Een loonstrook"], answer: 0, wrongHints: [null, "Een diploma krijg je voor één opleiding — is dat een overzicht?", "Een contract teken je pas als je aangenomen bent.", "Een loonstrook laat zien wat je verdient."] },
-      { q: "Wat is **MBO**?", options: ["Middelbaar Beroepsonderwijs","Hoger Onderwijs","Universiteit","Basisschool"], answer: 0, wrongHints: [null, "Dat is HBO/WO.", "Hoger.", "Niet."] },
-      { q: "Wat is **HBO**?", options: ["Hoger Beroepsonderwijs","Universiteit","MBO","VMBO"], answer: 0, wrongHints: [null, "Dat is WO.", "Lager.", "Lager."] },
+      { q: "Wat is een **CV** (curriculum vitae)?", options: ["Overzicht van opleiding/werk-ervaring", "Diploma van je laatste opleiding", "Contract met je loon en werktijden", "Strookje met wat je die maand verdient"], answer: 0, wrongHints: [null, "Een diploma krijg je voor één opleiding — is dat een overzicht?", "Een contract teken je pas als je aangenomen bent.", "Een loonstrook laat zien wat je verdient."] },
+      { q: "Wat is **MBO**?", options: ["Middelbaar Beroepsonderwijs", "Hoger Beroepsonderwijs", "Wetenschappelijk Onderwijs", "Voorbereidend Beroepsonderwijs"], answer: 0, wrongHints: [null, "Dat is HBO — de H staat voor hoger.", "Dat is WO, de universiteit.", "Dat hoort bij het vmbo. Waar staat de M van MBO voor?"] },
+      { q: "Wat is **HBO**?", options: ["Hoger Beroepsonderwijs", "Middelbaar Beroepsonderwijs", "Wetenschappelijk Onderwijs", "Voorbereidend Beroepsonderwijs"], answer: 0, wrongHints: [null, "Dat is MBO — de M staat voor middelbaar.", "Dat is WO, de universiteit.", "Dat hoort bij het vmbo. Waar staat de H van HBO voor?"] },
       { q: "Welk **beroep** werkt in een ziekenhuis?", options: ["Verpleegkundige","Bakker","Politieagent","Boer"], answer: 0, wrongHints: [null, "Bakkerij.", "Politiebureau.", "Boerderij."] },
       { q: "Welk **beroep** werkt met dieren?", options: ["Dierenarts","Bakker","Architect","Boekhouder"], answer: 0, wrongHints: [null, "Brood.", "Gebouwen.", "Cijfers."] },
       { q: "Wat doet een **architect**?", options: ["Gebouwen ontwerpen","Bouwen alleen","Schoonmaken","Lesgeven"], answer: 0, wrongHints: [null, "Aannemer.", "Schoonmaker.", "Leraar."] },
-      { q: "Wat is **vakantiegeld**?", options: ["Extra loon, minstens 8% per jaar","Een uitkering bij ziekte","Buitenland-geld","Bonus voor goed werk"], answer: 0, wrongHints: [null, "Dat is ziektegeld.", "Dat is vreemd geld (valuta).", "Een bonus is niet verplicht — vakantiegeld wel."] },
-      { q: "Wat is een **vrijwilliger**?", options: ["Iemand die onbetaald werkt","Politicus","Niet werkend","Manager"], answer: 0, wrongHints: [null, "Niet primair.", "Wel werkend.", "Niet specifiek."] },
+      { q: "Wat is **vakantiegeld**?", options: ["Extra loon, minstens 8% per jaar", "Een uitkering als je ziek bent", "Geld dat je wisselt voor op reis", "Bonus van de baas voor goed werk"], answer: 0, wrongHints: [null, "Dat is ziektegeld.", "Dat is vreemd geld (valuta).", "Een bonus is niet verplicht — vakantiegeld wel."] },
+      { q: "Wat is een **vrijwilliger**?", options: ["Iemand die onbetaald werkt", "Iemand die geen werk heeft", "Iemand die een team leidt", "Iemand die in de politiek zit"], answer: 0, wrongHints: [null, "Een vrijwilliger doet wél werk. Wat krijgt hij er niet voor?", "Dat is een manager.", "Dat is een politicus."] },
       { q: "Welk **beroep** blust branden?", options: ["Brandweer","Politie","Ambulance","Postbode"], answer: 0, wrongHints: [null, "Andere taak.", "Andere taak.", "Andere taak."] },
       { q: "Welk **beroep** plant en oogst?", options: ["Boer","Bakker","Slager","Visser"], answer: 0, wrongHints: [null, "Verwerkt graan.", "Verwerkt vlees.", "Vis."] },
-      { q: "Wat is een **werkgever**?", options: ["Persoon/bedrijf dat iemand laat werken","Werknemer","Klant","Vakbond"], answer: 0, wrongHints: [null, "Andere kant.", "Niet.", "Een vakbond komt op vóór werknemers."] },
-      { q: "Wat is een **werknemer**?", options: ["Persoon die werkt voor werkgever","Werkgever","Klant","Vakbond"], answer: 0, wrongHints: [null, "Andere kant.", "Niet.", "Een vakbond is een vereniging, geen persoon."] },
+      { q: "Wat is een **werkgever**?", options: ["Persoon/bedrijf dat iemand laat werken", "Persoon die voor een baas werkt", "Persoon/bedrijf dat iets bij je koopt", "Club die opkomt voor werknemers"], answer: 0, wrongHints: [null, "Dat is de werknemer — de andere kant.", "Dat is een klant.", "Een vakbond komt op vóór werknemers."] },
+      { q: "Wat is een **werknemer**?", options: ["Persoon die werkt voor werkgever", "Bedrijf dat mensen laat werken", "Persoon die iets in de winkel koopt", "Club die opkomt voor werknemers"], answer: 0, wrongHints: [null, "Dat is de werkgever — de andere kant.", "Dat is een klant.", "Een vakbond is een vereniging, geen persoon."] },
       { q: "Wat is **loon**?", options: ["Betaling voor werk","Bonus","Vakantie","Belasting"], answer: 0, wrongHints: [null, "Extra.", "Niet betaling.", "Belasting betaal je juist."] },
       { q: "Welk beroep helpt mensen leren?", options: ["Leraar/docent","Politicus","Bakker","Boer"], answer: 0, wrongHints: [null, "Een politicus bestuurt het land — wie staat er elke dag voor de klas?", "Een bakker maakt brood — wie legt je iets uit tot je het snapt?", "Een boer verbouwt voedsel — wie helpt je met rekenen en taal?"] },
-      { q: "Wat is een **stage**?", options: ["Werkervaring opdoen tijdens opleiding","Vakantie","Loonstop","Reclame"], answer: 0, wrongHints: [null, "Niet werk.", "Niet.", "Niet."] },
+      { q: "Wat is een **stage**?", options: ["Werkervaring opdoen tijdens opleiding", "Vrije weken tussen twee schooljaren", "Een toets aan het eind van je opleiding", "Reclame maken voor je opleiding"], answer: 0, wrongHints: [null, "Dat is vakantie — dan werk je niet.", "Dat is een examen.", "Dat heet reclame."] },
     ],
   },
 ];

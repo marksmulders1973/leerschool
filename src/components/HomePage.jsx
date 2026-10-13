@@ -1097,7 +1097,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               marginBottom: 10, lineHeight: 1.25,
             }}>
               <div><strong style={{ display: "block", color: "#ffd54f", fontSize: 20 }}>500+</strong>bezoekers per maand</div>
-              <div><strong style={{ display: "block", color: "#ffd54f", fontSize: 20 }}>7.000+</strong>oefenvragen</div>
+              <div><strong style={{ display: "block", color: "#ffd54f", fontSize: 20 }}>18.000+</strong>oefenvragen</div>
               <div><strong style={{ display: "block", color: "#ffd54f", fontSize: 20 }}>48</strong>echte examens</div>
             </div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.65)", lineHeight: 1.5 }}>

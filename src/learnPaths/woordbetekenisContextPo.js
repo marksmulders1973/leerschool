@@ -901,12 +901,7 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
       },
       {
         q: "Lees: *\"Mama zette de hete pan op het blad van de keukentafel.\"* — Wat betekent 'blad' in deze zin?",
-        options: [
-          "Het platte bovenvlak van de tafel",
-          "Een blad van een boom",
-          "Een pagina uit een boek",
-          "Een mes of bijl",
-        ],
+        options: ["Het platte bovenvlak van de tafel","Een groen blad van een boom","Een losse pagina uit een boek","Het scherpe deel van een mes"],
         answer: 0,
         evidence: "op het blad van de keukentafel",
         wrongHints: [

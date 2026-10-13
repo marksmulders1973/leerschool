@@ -471,12 +471,7 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
       },
       {
         q: "Noor geeft geen antwoord als papa vrolijk roept dat ze een grotere kamer krijgt. Wat kun je hieruit afleiden?",
-        options: [
-          "De grootte van de nieuwe kamer troost Noor nu niet",
-          "Noor heeft papa niet gehoord",
-          "Noor is boos op papa",
-          "Noor vindt de nieuwe kamer te klein",
-        ],
+        options: ["De grotere kamer troost Noor nu niet", "Noor heeft papa niet gehoord", "Noor is stiekem boos op papa", "Noor vindt de nieuwe kamer te klein"],
         answer: 0,
         evidence: "Noor gaf geen antwoord.",
         wrongHints: [
@@ -834,12 +829,7 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
       },
       {
         q: "In een verhaal staat: 'Ze had hem al drie keer gebeld, maar hij nam niet op.' Wat kun je onderbouwd concluderen?",
-        options: [
-          "Ze probeert hem te bereiken en hij reageert niet",
-          "Ze is boos op hem",
-          "Hij heeft zijn telefoon verloren",
-          "Er is een storing bij het telefoonbedrijf",
-        ],
+        options: ["Ze wil hem spreken, maar hij reageert niet", "Ze is boos op hem omdat hij niet opneemt", "Hij heeft zijn telefoon verloren", "Er is een storing bij het telefoonbedrijf"],
         answer: 0,
         evidence: "Ze had hem al drie keer gebeld, maar hij nam niet op.",
         wrongHints: [

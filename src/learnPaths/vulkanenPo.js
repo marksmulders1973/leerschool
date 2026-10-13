@@ -58,7 +58,7 @@ const steps = [
       },
       {
         q: "Waarom wordt een vulkaan bij elke uitbarsting een stukje **groter**?",
-        options: ["De lava en as koelen af en vormen een nieuw laagje op de berg", "De berg zwelt op door de hitte", "Er komt steeds meer water in", "Dat is niet zo, vulkanen worden kleiner"],
+        options: ["De lava en as koelen af en vormen een nieuw laagje op de berg", "De berg zwelt op door de hitte en blijft daarna zo dik", "Er komt bij elke uitbarsting meer regenwater in de krater", "Dat is niet zo, vulkanen worden juist kleiner bij elke uitbarsting"],
         answer: 0,
         wrongHints: [null, "Steen zwelt niet op als een ballon. Wat gebeurt er met lava als die afkoelt?", "Water hoort er niet bij. Denk aan wat er uit de krater komt.", "Lees de laatste alinea nog eens: elke keer komt er iets bij."],
       },
@@ -105,9 +105,9 @@ const steps = [
       },
       {
         q: "Wat zorgt ervoor dat een vulkaan echt **uitbarst** (de 'boem')?",
-        options: ["Gassen in het magma die eruit willen als de druk minder wordt", "Regenwater dat de berg vult", "De wind die over de krater waait", "Dieren die in de krater graven"],
+        options: ["Gassen in het magma die eruit willen als de druk minder wordt", "Regenwater dat de krater vult tot hij overstroomt", "De wind die hard over de krater waait en de lava opzuigt", "Dieren die diep in de krater graven en de berg openmaken"],
         answer: 0,
-        wrongHints: [null, "Water komt niet van binnenuit. Denk aan het flesje cola.", "Wind zit buiten, de kracht komt van binnen.", null],
+        wrongHints: [null, "Water komt niet van binnenuit. Denk aan het flesje cola.", "Wind zit buiten, de kracht komt van binnen.", "Dieren komen niet in de buurt van magma. Denk aan het flesje cola."],
         uitlegPad: {
           stappen: [
             { titel: "Prik in het magma", tekst: "In magma zitten gassen, zoals de prik in cola. Diep onder de grond zijn ze samengeperst." },
@@ -152,7 +152,7 @@ const steps = [
       },
       {
         q: "Waarom bleven in 2010 bijna alle vliegtuigen in Europa aan de grond?",
-        options: ["Een aswolk van een IJslandse vulkaan was gevaarlijk voor de motoren", "Er stroomde lava over de startbanen", "Het was te heet om te vliegen", "De piloten konden de vulkaan niet zien"],
+        options: ["Een aswolk van een IJslandse vulkaan was gevaarlijk voor de motoren", "Er stroomde lava uit IJsland over de startbanen in Europa", "Het was door de vulkaan te heet in de lucht om te vliegen", "De piloten konden door de rook de vulkaan zelf niet zien"],
         answer: 0,
         wrongHints: [null, "Lava komt niet zo ver: IJsland ligt duizenden kilometers weg. Wat kan wél zo ver drijven?", "De hitte blijft bij de berg. Denk aan wat er in de lucht hing.", "Zien was niet het probleem; iets in de lucht was het probleem."],
         uitlegPad: {
@@ -193,9 +193,9 @@ const steps = [
     checks: [
       {
         q: "Waarom wonen veel mensen **vlak bij** een vulkaan, ondanks het gevaar?",
-        options: ["De grond is er heel vruchtbaar en er is warmte uit de aarde", "Ze weten niet dat het een vulkaan is", "Het is er altijd warm weer", "Huizen zijn er gratis"],
+        options: ["De grond is er heel vruchtbaar en er is warmte uit de aarde", "Ze weten meestal niet dat die berg een echte vulkaan is", "Het is er het hele jaar door mooi weer en nooit koud", "De huizen en de grond zijn er gratis voor iedereen"],
         answer: 0,
-        wrongHints: [null, "Mensen weten het meestal heel goed. Wat levert de vulkaan hun op?", "Het weer heeft er weinig mee te maken. Denk aan de grond en aan energie.", null],
+        wrongHints: [null, "Mensen weten het meestal heel goed. Wat levert de vulkaan hun op?", "Het weer heeft er weinig mee te maken. Denk aan de grond en aan energie.", "Gratis is het niet. Waarom kiezen boeren juist deze plek?"],
         uitlegPad: {
           stappen: [
             { titel: "As is mest", tekst: "Vulkaan-as zit vol mineralen. Planten groeien er extra goed op: sinaasappels bij de Etna, rijst op Java." },
@@ -224,7 +224,7 @@ const steps = [
       },
       {
         q: "Wat doet een **vulkanoloog**?",
-        options: ["De vulkaan meten en op tijd waarschuwen", "Lava opruimen", "Toeristen rondleiden", "De krater dichtmaken"],
+        options: ["De vulkaan meten en op tijd waarschuwen", "De afgekoelde lava opruimen van de wegen", "Toeristen rondleiden en foto's laten maken", "De krater dichtmaken met beton en stenen"],
         answer: 0,
         wrongHints: [null, "Lava ruim je niet op — het wordt steen.", "Dat doet een gids. Een vulkanoloog is een wetenschapper.", "Een krater dichtmaken kan niet; de druk zoekt altijd een weg."],
       },
@@ -245,7 +245,7 @@ const steps = [
       { q: "De ketting van vulkanen rondom de Grote Oceaan heet…", options: ["De Ring van Vuur", "De Vuurlinie", "De Lavaketen", "De Aardplaat"], answer: 0, wrongHints: [null, null, "Klinkt logisch, maar zo heet hij niet.", "Een aardplaat is een stuk aardkorst, geen ketting van vulkanen."] },
       { q: "Wat maakt een uitbarsting **explosief**?", options: ["Veel gas in dik magma", "Veel bomen op de helling", "Een hoge berg", "Weinig lava"], answer: 0, wrongHints: [null, "Bomen op de helling zeggen niets over wat er ín de berg gebeurt.", "De hoogte van de berg zegt niets over de knal.", null] },
       { q: "Welk **voordeel** hebben vulkanen voor boeren?", options: ["De as maakt de grond vruchtbaar", "De lava geeft schaduw", "Er valt meer regen", "De grond wordt harder"], answer: 0, wrongHints: [null, "Schaduw is geen voordeel voor gewassen. Denk aan mest.", "Regen komt van wolken, niet van de vulkaan.", "Harde grond is juist slecht voor planten."] },
-      { q: "Wat betekent het als een vulkaan **slapend** is?", options: ["Hij is lang niet uitgebarsten, maar kan dat nog wel", "Hij kan nooit meer uitbarsten", "Hij barst elke nacht uit", "Hij is nog nooit uitgebarsten"], answer: 0, wrongHints: [null, "Dat heet een 'dode' of uitgedoofde vulkaan.", null, "Slapend betekent dat hij het vroeger wél deed."] },
+      { q: "Wat betekent het als een vulkaan **slapend** is?", options: ["Hij is lang niet uitgebarsten, maar kan dat nog wel", "Hij kan nooit meer uitbarsten, want hij is uitgedoofd", "Hij barst elke nacht een klein beetje uit", "Hij is nog nooit uitgebarsten, en dat blijft zo"], answer: 0, wrongHints: [null, "Dat heet een 'dode' of uitgedoofde vulkaan.", "Het woord 'slapend' gaat niet over de nacht. Waar gaat het dan over?", "Slapend betekent dat hij het vroeger wél deed."] },
     ],
   },
 ];

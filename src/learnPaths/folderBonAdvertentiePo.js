@@ -225,7 +225,7 @@ const steps = [
       },
       {
         q: "Bij een aanbieding staat 'op = op'. Wat betekent dat?",
-        options: ["alleen zolang de voorraad strekt", "geldig voor altijd", "alleen op zondag", "twee keer zo duur"],
+        options: ['alleen zolang de voorraad strekt', 'geldig voor altijd, elke dag weer', 'alleen op zondag in deze winkel', 'twee keer zo duur als normaal'],
         answer: 0,
         wrongHints: [null, "Juist niet — het kan snel uitverkocht zijn.", "Het gaat niet over een dag.", "Het zegt niets over de prijs."],
         uitlegPad: {
