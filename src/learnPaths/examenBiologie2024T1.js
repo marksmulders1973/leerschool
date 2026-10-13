@@ -614,7 +614,7 @@ const steps = [
         answer: 2,
         wrongHints: [
           "Waar liggen de nierkanaaltjes en de kluwens van haarvaatjes? Kijk nog eens naar een doorsnede van de nier.",
-          "Wat is de taak van het nierbekken: filteren, of de urine opvangen? Kijk nog eens naar een doorsnede van de nier.",
+          "Het filteren gebeurt in de nefronen, de kleine filtertjes van de nier. In welke delen liggen die?",
           null,
         ],
         explanation: "Het filteren van bloed gebeurt in de NEFRONEN. Die zitten gedeeltelijk in de NIERSCHORS (waar het bloed binnenkomt + voorfilter) en gedeeltelijk in het NIERMERG (waar water + zouten terug-opgenomen worden). Het NIERBEKKEN is alleen een verzamelpot voor urine voordat die door de urineleider naar de blaas gaat — geen filtering.",

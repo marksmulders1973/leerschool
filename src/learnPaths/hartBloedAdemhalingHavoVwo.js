@@ -24,7 +24,7 @@ const steps = [
         q: "Welke kamer pompt **zuurstofrijk** bloed naar het lichaam?",
         options: ["Linkerkamer", "Rechterkamer", "Linkerboezem", "Rechterboezem"],
         answer: 0,
-        wrongHints: [null, "Niet — die pompt naar longen.", "Niet — boezem ontvangt.", "Idem."],
+        wrongHints: [null, "De rechterkamer stuurt bloed naar de longen. Is dat bloed al zuurstofrijk?", "Een boezem ontvangt bloed en duwt het naar de kamer eronder. Pompt een boezem het bloed dan het hele lichaam door?", "De rechterboezem ontvangt zuurstofarm bloed uit het lichaam. Klopt dan het soort bloed én de richting?"],
         uitlegPad: {
           stappen: [{ titel: "Sterkste pomp", tekst: "Linkerkamer is sterkst (moet bloed door HELE lichaam pompen → dikkere spier dan rechterkamer). Aorta is dikste slagader. Bij hoge bloeddruk werkt linkerkamer extra hard → kan vergroten + falen op lange termijn." }],
           niveaus: { basis: "Linkerkamer.", simpeler: "Sterkste pomp = links.", nogSimpeler: "Links" },
@@ -34,7 +34,7 @@ const steps = [
         q: "**Kransslagaders** voeden:",
         options: ["Hartspier zelf", "Longen", "Hersenen", "Lever"],
         answer: 0,
-        wrongHints: [null, "Niet — longslagader.", "Niet — halsslagaders.", "Niet — leverslagader."],
+        wrongHints: [null, "De longen krijgen bloed via de longslagader. Om welk orgaan liggen de kransslagaders als een krans?", "De hersenen krijgen bloed via de halsslagaders. Waar liggen de kransslagaders?", "De lever krijgt bloed via de leverslagader en de poortader. Waar liggen de kransslagaders?"],
         uitlegPad: {
           stappen: [{ titel: "Coronair = krans", tekst: "Hart pompt bloed maar moet zelf ook gevoed worden. Kransslagaders (coronair) lopen rondom hart als 'krans'. Verstopping → deel hartspier sterft = **hartinfarct**. Atherosclerose (vetafzetting in wand) hoofdoorzaak. Behandeling via stent of bypass." }],
           niveaus: { basis: "Hartspier.", simpeler: "Krans rond hart.", nogSimpeler: "Hart" },
@@ -62,11 +62,11 @@ const steps = [
         options: [
           "Rechterboezem",
           "Linkerkamer",
-          "Hersens",
-          "Longen"
+          "Hersenstam",
+          "Linkerboezem"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — de kamers trekken pas ná de boezems samen.", "Hersenen kunnen het tempo bijsturen, maar de impuls ontstaat in het hart zelf.", "De longen leveren zuurstof, maar maken geen elektrische prikkel voor het hart. Waar ontstaat die?"],
+        wrongHints: [null, "Niet — de kamers trekken pas ná de boezems samen.", "Hersenen kunnen het tempo bijsturen, maar de impuls ontstaat in het hart zelf.", "De sinusknoop ligt bij de plek waar de holle aders in het hart uitkomen. In welke boezem is dat?"],
         uitlegPad: {
           stappen: [
             { titel: "Eigen ritme", tekst: "Sinusknoop genereert elektrische impuls 60-100/min spontaan. Impuls → boezems samentrekken → AV-knoop vertraging 0,1 s → kamers samentrekken. Bij defect: pacemaker-implantaat met batterij in borstkas geeft elektrische pulsen." },
@@ -102,7 +102,7 @@ const steps = [
           "Afvalstoffen uit het bloed filteren"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat doen slagaders.", "Niet — hart doet dat.", "Niet — nieren."],
+        wrongHints: [null, "In haarvaten stroomt het bloed juist heel langzaam. Wat heb je daaraan?", "De wand van een haarvat is maar één cellaag dik. Kan zo'n wand druk opbouwen?", "Filteren doen de nieren. Wat kan er door de dunne wand van een haarvat heen?"],
         uitlegPad: {
           stappen: [{ titel: "Wand 1 cel dik", tekst: "Daarom kunnen O₂, glucose, ionen, gassen vrij diffunderen. Alle haarvaten samen ~7000 m² oppervlak in lichaam — geen weefselcel verder dan paar μm van haarvat. Daarom zo efficiënt." }],
           niveaus: { basis: "Uitwisseling.", simpeler: "Stoffen uitwisselen.", nogSimpeler: "Uitwiss" },
@@ -113,11 +113,11 @@ const steps = [
         options: [
           "Benen",
           "Hoofd",
-          "Slagaders",
-          "Haarvaten"
+          "Longen",
+          "Nieren"
         ],
         answer: 0,
-        wrongHints: [null, "Bloed uit je hoofd stroomt vanzelf omlaag naar het hart. Waar moet het juist tegen de zwaartekracht in?", "Slagaders zijn geen aderen, en de druk van het hart duwt het bloed daar al vooruit.", "Haarvaten zijn geen aderen en zijn veel te dun voor kleppen. Waar in je lichaam zitten de aderen met kleppen?"],
+        wrongHints: [null, "Bloed uit je hoofd stroomt vanzelf omlaag naar het hart. Waar moet het juist tegen de zwaartekracht in?", "Bloed uit de longen stroomt naar het hart op ongeveer dezelfde hoogte. Waar moet aderbloed een lange weg omhoog?", "De nieren liggen niet ver onder het hart. Waar moet het bloed de langste weg omhoog afleggen?"],
         uitlegPad: {
           stappen: [
             { titel: "Zwaartekracht-uitdaging", tekst: "Bloed in benen-aders moet OMHOOG terug naar hart. Tegen zwaartekracht in. Kleppen open + dicht zorgen dat bloed niet terugzakt. Werk hard wanneer je staat. Bij falen → spataders. Tip: regelmatig lopen helpt 'spier-pomp' om bloed omhoog te duwen." },
@@ -129,7 +129,7 @@ const steps = [
         q: "**Normale bloeddruk** bij volwassene:",
         options: ["120/80 mmHg", "200/150 mmHg", "60/40 mmHg", "100/100 mmHg"],
         answer: 0,
-        wrongHints: [null, "Veel te hoog — hypertensie.", "Te laag.", "Onmogelijk."],
+        wrongHints: [null, "Zo'n hoge druk heet hypertensie en is gevaarlijk. Wat meet de dokter bij een gezonde volwassene?", "Bij zo'n lage druk word je duizelig of val je flauw. Wat is normaal?", "Het eerste getal is de druk als het hart samenknijpt, het tweede als het ontspant. Kunnen die even hoog zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Systolisch/diastolisch", tekst: "120 = piek (linkerkamer pompt). 80 = rust tussen slagen. Hypertensie >140/90, behandeling met medicatie + leefstijl-aanpassing. Te laag (<90/60) = duizeligheid bij opstaan." }],
           niveaus: { basis: "120/80.", simpeler: "120 boven / 80 onder.", nogSimpeler: "120/80" },
@@ -161,7 +161,7 @@ const steps = [
           "Een allergische reactie in de huid"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — slagader-probleem.", "Niet — apart probleem.", "Een allergie geeft jeuk of bultjes, geen uitgezette aderen. Wat houdt het bloed in een ader normaal op zijn plek?"],
+        wrongHints: [null, "Spataders zijn uitgezette áderen, geen slagaders. Wat gaat er in een ader mis als het bloed terugzakt?", "Een hartinfarct ontstaat in de kransslagaders. Spataders zitten meestal in de benen: wat gaat daar mis?", "Een allergie geeft jeuk of bultjes, geen uitgezette aderen. Wat houdt het bloed in een ader normaal op zijn plek?"],
         uitlegPad: {
           stappen: [
             { titel: "Mechanisch probleem", tekst: "Beenaderen werken tegen zwaartekracht. Kleppen helpen normaal. Bij slijtage (lang staan, leeftijd, zwangerschap, erfelijkheid) sluiten ze niet meer → bloed zakt terug → ader gerekt → blauwe slang zichtbaar onder huid. Behandeling: steunkousen, lasertherapie, sclerose-injectie." },
@@ -182,7 +182,7 @@ const steps = [
         q: "**Hemoglobine** bindt:",
         options: ["O₂", "CO₂ uitsluitend", "Glucose", "Vet"],
         answer: 0,
-        wrongHints: [null, "Hemoglobine vervoert inderdaad een deel van het CO₂. Maar klopt het woord 'uitsluitend'?", "Niet — glucose zit opgelost in plasma.", "Vet lost niet op in bloed en wordt apart vervoerd. Waarvoor zijn rode bloedcellen er vooral?"],
+        wrongHints: [null, "Hemoglobine vervoert inderdaad een deel van het CO₂. Maar klopt het woord 'uitsluitend'?", "Glucose zit opgelost in het bloedplasma. Waarvoor heb je dan rode bloedcellen nodig?", "Vet lost niet op in bloed en wordt apart vervoerd. Waarvoor zijn rode bloedcellen er vooral?"],
         uitlegPad: {
           stappen: [{ titel: "IJzer-houdend eiwit", tekst: "Hb in rode bloedcel bevat 4 ijzer-atomen → bindt 4 O₂-moleculen. In longen (hoge O₂): bindt. In weefsel (lage O₂): laat los. Rood door ijzer. Bij CO-vergiftiging: CO bindt sterker dan O₂ → mensen stikken." }],
           niveaus: { basis: "O₂.", simpeler: "Zuurstof.", nogSimpeler: "O₂" },
@@ -191,13 +191,13 @@ const steps = [
       {
         q: "**Bloedplaatjes** zijn cruciaal voor:",
         options: [
-          "Bloedstolling bij wond",
-          "Zuurstof-transport",
+          "Bloedstolling bij een wond",
+          "Zuurstoftransport",
           "Afweer tegen virussen",
-          "Voedingsstoffen-vervoer"
+          "Vervoer van voedingsstoffen"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — RBC.", "Niet — witte bloedcellen.", "Niet — plasma."],
+        wrongHints: [null, "Zuurstof wordt vervoerd door de rode bloedcellen. Wat gebeurt er als je je snijdt?", "Afweer is het werk van witte bloedcellen. Wat gebeurt er als een wondje ophoudt met bloeden?", "Voedingsstoffen zitten opgelost in het plasma. Wat moet er gebeuren als een bloedvat kapotgaat?"],
         uitlegPad: {
           stappen: [{ titel: "Klont vormen", tekst: "Bij wond: plaatjes worden geactiveerd, klonteren samen tot prop, geven signaal voor coagulatie-cascade → fibrine-net → stolsel houdt bloeding tegen. Te weinig plaatjes (trombocytopenie): bloed makkelijk uit, blauwe plekken. Te veel: trombose-risico." }],
           niveaus: { basis: "Stolling.", simpeler: "Bloedstolsel maken.", nogSimpeler: "Stolling" },
@@ -208,11 +208,11 @@ const steps = [
         options: [
           "Universele donor",
           "Universele ontvanger",
-          "Alleen geschikt voor mensen met bloedgroep O",
+          "Bloed met A- én B-antigenen",
           "De zeldzaamste bloedgroep"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is AB+.", "Denk aan welke antigenen O-negatief bloed mist.", "Nee — AB-negatief is veel zeldzamer. Waarom is O-negatief zo gewild?"],
+        wrongHints: [null, "Een universele ontvanger kan bloed van iedereen krijgen. Kan iemand met O-negatief dat?", "Bloedgroep O heeft juist geen A- en geen B-antigenen. Wat betekent dat voor wie het bloed krijgt?", "Nee — AB-negatief is veel zeldzamer. Waarom is O-negatief zo gewild?"],
         uitlegPad: {
           stappen: [
             { titel: "Geen antigenen → geen reactie", tekst: "O = geen A/B-antigenen. Negatief = geen Rh-antigen. Lichaam ontvanger ziet niets vreemds → geen afweer. Daarom gebruikt men het in noodgevallen als de bloedgroep onbekend is. NL: ~6% bevolking. Bloedbanken doen continu campagne voor O-negatief donoren." },
@@ -229,7 +229,7 @@ const steps = [
           "Een bloedgroep die niet past"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — apart (leukemie).", "Wat gebeurt er bij iemand met hemofilie als hij een wondje heeft?", "Niet — bloedtransfusie-fout."],
+        wrongHints: [null, "Bloedkanker heet leukemie. Wat gebeurt er bij iemand met hemofilie als hij een wondje heeft?", "Wat gebeurt er bij iemand met hemofilie als hij een wondje heeft?", "Een bloedgroep die niet past is een probleem bij een transfusie. Krijg je hemofilie door een transfusie, of erf je het?"],
         uitlegPad: {
           stappen: [
             { titel: "X-chromosoom-gen", tekst: "Stollingsfactor-VIII of -IX defect. Mannen (XY) hebben slechts één X — bij defect: hemofilie. Vrouwen (XX) hebben een reserve-X → drager maar meestal geen ziekte. Bekendste familie: Queen Victoria + nakomelingen (Britse + Russische tsarenfamilie + Spaanse koningshuis). Behandeling: stollingsfactor-injecties." },
@@ -246,7 +246,7 @@ const steps = [
           "Een stoornis in het ritme van het hart"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld (polycytemie).", "Apart (sepsis).", "Dat is een ritmestoornis van het hart. Anemie gaat over het bloed zelf."],
+        wrongHints: [null, "Te veel rode bloedcellen heet polycytemie. Mensen met anemie zijn bleek en snel moe. Past 'te veel' daarbij?", "Een bloedinfectie heet sepsis. Waarom zou iemand met anemie bleek en moe zijn?", "Dat is een ritmestoornis van het hart. Anemie gaat over het bloed zelf."],
         uitlegPad: {
           stappen: [
             { titel: "Te weinig O₂-transport", tekst: "Bloed kan minder O₂ vervoeren → moeheid, bleek, kortademig. Hoofdoorzaken: ijzer-tekort (vooral menstruerende vrouwen), B12-tekort (vegetariërs let op), bloedingen (maagzweer), sikkel-cel (genetisch). Behandeling: ijzer-supplement, B12-injectie, bloedtransfusie." },
@@ -267,7 +267,7 @@ const steps = [
         q: "Gasuitwisseling vindt plaats in:",
         options: ["Longblaasjes", "Luchtpijp", "Neus", "Bronchiolen"],
         answer: 0,
-        wrongHints: [null, "Niet — geen uitwisseling daar.", "Niet — geen.", "Niet — alleen geleiding."],
+        wrongHints: [null, "De luchtpijp heeft een dikke wand met kraakbeen. Kan zuurstof daar het bloed in?", "In de neus wordt lucht verwarmd en gefilterd. Gaat daar zuurstof het bloed in?", "Bronchiolen zijn buisjes die lucht aanvoeren. Waar komen ze op uit, en waar liggen de haarvaten?"],
         uitlegPad: {
           stappen: [{ titel: "~300 mln longblaasjes", tekst: "Alveoli zijn eindstation: wand 1 cel dik, omgeven door haarvaten. O₂ diffundeert in, CO₂ uit. Totaal oppervlak ~70 m² per persoon (ongeveer een badmintonveld). Daarom enorme efficiëntie." }],
           niveaus: { basis: "Alveoli.", simpeler: "Longblaasjes.", nogSimpeler: "Alveoli" },
@@ -277,7 +277,7 @@ const steps = [
         q: "**Diafragma** beweegt tijdens **inademen**:",
         options: ["Naar beneden", "Naar boven", "Blijft stil liggen", "Zijwaarts"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is uitademen.", "Zonder beweging van het middenrif verandert het longvolume niet. Kun je dan inademen?", "Het middenrif is een koepel onder je longen. In welke richting maakt het de borstholte groter?"],
+        wrongHints: [null, "Als het middenrif omhoog gaat, wordt je borstholte dan groter of kleiner?", "Zonder beweging van het middenrif verandert het longvolume niet. Kun je dan inademen?", "Het middenrif is een koepel onder je longen. In welke richting maakt het de borstholte groter?"],
         uitlegPad: {
           stappen: [{ titel: "Borstkas vergroten", tekst: "Diafragma is koepel-spier onderkant borstkas. Bij inademen: samentrekken → koepel vlakt af → naar beneden → borstkas-volume groter → druk daalt → lucht stroomt IN. Bij uitademen ontspannen → koepel terug omhoog." }],
           niveaus: { basis: "Omlaag.", simpeler: "Naar beneden = ruimte.", nogSimpeler: "Beneden" },
@@ -321,7 +321,7 @@ const steps = [
           "Het aantal ademhalingen per minuut"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — ademvolume in rust.", "Dat heet de saturatie. Gaat vitale capaciteit over het bloed of over de longen?", "Dat is de ademfrequentie. Gaat vitale capaciteit over hoe vaak of over hoeveel?"],
+        wrongHints: [null, "Bij rustig ademen gebruik je maar een klein deel van je longen. Gaat vitale capaciteit over rustig of over zo diep mogelijk ademen?", "Dat heet de saturatie. Gaat vitale capaciteit over het bloed of over de longen?", "Dat is de ademfrequentie. Gaat vitale capaciteit over hoe vaak of over hoeveel?"],
         uitlegPad: {
           stappen: [{ titel: "~4-5 L", tekst: "Maximum diep inademen + helemaal uitademen. Wordt gemeten met spirometer in ziekenhuis. Topsporters hoger (5-6 L). Bij COPD/longziekte daalt. Restvolume ~1,5 L blijft altijd (voorkomt alveolus-collaps)." }],
           niveaus: { basis: "Max ademen.", simpeler: "Diepste in/uit-ademing.", nogSimpeler: "Max" },
@@ -358,11 +358,11 @@ const steps = [
         options: [
           "Veel plantaardig en gezonde vetten",
           "Veel rood vlees en volle zuivel",
-          "Veel suiker voor snelle energie",
+          "Veel wit brood en pasta als energie",
           "Weinig vet en vrijwel geen olie"
         ],
         answer: 0,
-        wrongHints: [null, "Rood vlees en volle zuivel bevatten veel verzadigd vet. Is dat goed voor je bloedvaten?", "Veel suiker verhoogt juist het risico op hart- en vaatziekten.", "In Italië en Griekenland kookt men veel met olijfolie. Wat zegt dat over dit dieet?"],
+        wrongHints: [null, "Rood vlees en volle zuivel bevatten veel verzadigd vet. Is dat goed voor je bloedvaten?", "Wit brood en pasta geven snelle suikers. Wat staat er in de mediterrane keuken vooral op tafel?", "In Italië en Griekenland kookt men veel met olijfolie. Wat zegt dat over dit dieet?"],
         uitlegPad: {
           stappen: [
             { titel: "Bewezen door PREDIMED-studie 2013", tekst: "Spaanse studie 7000 mensen, 5 jaar. Het mediterrane dieet verlaagde hart-vaatziekte ~30% vergeleken met laagvet-dieet. Olijfolie + noten gunstige vetten. Vis omega-3. Veel plantaardig. Minder rood vlees + zout. Eenvoudig + lekker." },
@@ -376,10 +376,10 @@ const steps = [
           "Flink, al binnen een jaar",
           "Meteen helemaal naar nul",
           "Pas na een jaar of dertig",
-          "Niet, de schade blijft altijd"
+          "Nauwelijks, de schade is blijvend"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — geleidelijk.", "Dertig jaar wachten? Hoe snel herstellen bloedvaten als de rook wegvalt?", "Bloedvaten en longen herstellen deels. Blijft het risico dan echt gelijk?"],
+        wrongHints: [null, "Bloedvaten herstellen niet in één dag. Kan het risico dan meteen helemaal verdwijnen?", "Dertig jaar wachten? Hoe snel herstellen bloedvaten als de rook wegvalt?", "Bloedvaten en longen herstellen deels. Blijft het risico dan echt gelijk?"],
         uitlegPad: {
           stappen: [
             { titel: "Het loont altijd te stoppen", tekst: "Bekend feit van campagnes. 1 jaar stop: ~50% minder hart-aanval-risico. 5 jaar: beroerte-risico bijna gelijk nooit-roker. 10 jaar: longkanker-risico halveert. 15 jaar: bijna alle risico's gelijk. Daarom: stoppen loont, wat je leeftijd ook is." },
@@ -410,11 +410,11 @@ const steps = [
         options: [
           "150 min/week matig of 75 min intensief",
           "60 min/week matig of 30 min intensief",
-          "30 min/maand matig of 15 min intensief",
-          "300 min/dag matig of 150 min intensief"
+          "150 min/dag matig of 75 min intensief",
+          "75 min/week matig of 150 min intensief"
         ],
         answer: 0,
-        wrongHints: [null, "Dat is minder dan de helft van het advies. Hoeveel minuten per week is het echt?", "Eens per maand sporten is veel te weinig voor je hart.", "Vijf uur per dag? Dat haalt bijna niemand. Het advies gaat over minuten per week."],
+        wrongHints: [null, "Dat is minder dan de helft van het advies. Hoeveel minuten per week is het echt?", "Tweeënhalf uur per dag is heel veel. Gaat het advies over een dag of over een week?", "Intensief sporten telt zwaarder dan matig. Heb je daar dan meer of minder minuten van nodig?"],
         uitlegPad: {
           stappen: [
             { titel: "Beweegrichtlijn", tekst: "150 min/week = 30 min × 5 dagen 'matig' (snelwandelen, fietsen, dansen). Of 75 min intensief (joggen, zwemmen, tennis). Plus 2× per week kracht-training. Lager risico hart-vaatziekte, diabetes type 2, sommige kankers, dementie." },
