@@ -406,7 +406,7 @@ const steps = [
         q: "Hoeveel belangrijke **soorten bloedcellen** zijn er?",
         options: ["3", "2", "4", "5"],
         answer: 0,
-        wrongHints: [null, "Bloed is meer dan alleen rode en witte bloedcellen.", "Zoveel hoofdsoorten zijn het niet. Noem op wat je weet.", "Zoveel hoofdsoorten zijn het niet. Noem op wat je weet."],
+        wrongHints: [null, "Bloed is meer dan alleen rode en witte bloedcellen.", "Zoveel hoofdsoorten zijn het niet. Noem op wat je weet.", "Dat zijn er te veel. Welke soorten bloedcellen ken je uit de les?"],
         uitlegPad: {
           stappen: [
             { titel: "3 hoofdsoorten", tekst: "Rood: zuurstof vervoeren. Wit: bacteriën doden (afweer). Plaatjes: stolling bij wondjes (korst maken)." },
@@ -437,7 +437,7 @@ const steps = [
       { q: "Wat doet je **hart**?", options: ["Pompt bloed door je lichaam", "Maakt voedsel klein in je buik", "Filtert de lucht die je inademt", "Denkt na en stuurt je lichaam"], answer: 0, wrongHints: [null, "Dat doet je maag.", "Dat doen je longen.", "Dat doen je hersenen."] },
       { q: "Wat doen je **longen**?", options: ["Lucht inademen + zuurstof opnemen", "Bloed pompen door je hele lichaam", "Voedsel verteren + klein maken", "Denken + je lichaam besturen"], answer: 0, wrongHints: [null, "Dat doet je hart.", "Dat doet je maag.", "Dat doen je hersenen."] },
       { q: "Met welk **lichaamsdeel** zie je?", options: ["Ogen","Oren","Neus","Mond"], answer: 0, wrongHints: [null, "Met je oren hoor je.", "Met je neus ruik je.", "Met je mond proef je."] },
-      { q: "Hoeveel **botten** heeft een volwassen mens ongeveer?", options: ["206","100","500","300"], answer: 0, wrongHints: [null, "Alleen je handen en voeten hebben samen al ruim 100 botjes.", "Zoveel botten heeft een mens niet.", "Ongeveer 300 botjes heeft een baby. Bij het groeien groeien er botjes aan elkaar vast."] },
+      { q: "Hoeveel **botten** heeft een volwassen mens ongeveer?", options: ["206","100","500","300"], answer: 0, wrongHints: [null, "Alleen je handen en voeten hebben samen al ruim 100 botjes.", "Zoveel botten heeft een mens niet.", "Ongeveer 300 botjes heeft een baby. Als je ouder wordt, groeien er botjes aan elkaar vast."] },
       { q: "Welke voeding is goed voor **botten**?", options: ["Melk en kaas", "Appels en bananen", "Witbrood en rijst", "Thee en limonade"], answer: 0, wrongHints: [null, "Fruit geeft vitamines, maar weinig calcium.", "Brood en rijst geven vooral energie.", "Thee en limonade geven vocht, maar geen calcium."] },
       { q: "Hoeveel **uur slaap** heeft een 10-jarige nodig?", options: ["9-11 uur","4-5 uur","12-14 uur","7-8 uur"], answer: 0, wrongHints: [null, "Zo weinig slaap is voor niemand genoeg.", "Zoveel slaapt een baby of peuter.", "Dat is het advies voor volwassenen. Een kind heeft meer nodig."] },
       { q: "Hoe heet **diabetes** in gewone woorden?", options: ["Suikerziekte","Hartziekte","Bloedarmoede","Botontkalking"], answer: 0, wrongHints: [null, "Hartziekte heeft eigen naam (bv. infarct).", "Bloedarmoede heet ook anemie: te weinig rode bloedcellen.", "Botontkalking heet ook osteoporose: zwakke botten."] },
