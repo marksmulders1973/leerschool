@@ -73,7 +73,7 @@ const steps = [
         q: "Welke is een **abiotische factor**?",
         options: ["Zonlicht", "Een dier", "Een plant", "Een bacterie"],
         answer: 0,
-        wrongHints: [null, "Beweegt + eet + ademt — leeft dus.", "Groeit + maakt voedsel — leeft.", "Eencellig — maar wel een levend organisme."],
+        wrongHints: [null, "Een dier beweegt, eet en ademt. Hoort het bij de levende of de niet-levende factoren?", "Een plant groeit en maakt zelf voedsel. Is dat iets levends of niet?", "Een bacterie bestaat maar uit één cel. Is ze daarom niet levend?"],
       },
       {
         q: "Wat is een **populatie**?",
@@ -85,7 +85,7 @@ const steps = [
         q: "Welke is een **biotische** factor?",
         options: ["Een schimmel", "Regen", "Temperatuur", "Bodem"],
         answer: 0,
-        wrongHints: [null, "Water valt — geen organisme.", "Een meetbare grootheid, niet een wezen.", "Materie van de aarde — geen leven."],
+        wrongHints: [null, "Regen is water dat uit de lucht valt. Leeft regen?", "Temperatuur kun je meten met een thermometer. Is dat een levend wezen?", "Zand en klei zijn niet-levende stoffen. Welke optie groeit en leeft wel?"],
       },
       {
         q: "Een **populatie** is?",
@@ -95,9 +95,9 @@ const steps = [
       },
       {
         q: "Een **levensgemeenschap** is?",
-        options: ["Alle populaties van verschillende soorten in 1 gebied", "Alle individuen van 1 soort in 1 gebied", "Alle levende en niet-levende delen van 1 gebied", "Alle dieren die in een dierentuin wonen"],
+        options: ["Alle populaties van verschillende soorten in 1 gebied", "Alle individuen van 1 soort in 1 gebied", "Alle levende en niet-levende delen van 1 gebied", "Alle soorten die samen op de hele aarde leven"],
         answer: 0,
-        wrongHints: [null, "Dat is één populatie — een levensgemeenschap is meer.", "Telt de niet-levende omgeving mee bij een levensgemeenschap?", "Leven die soorten daar natuurlijk samen?"],
+        wrongHints: [null, "Dat is één populatie — een levensgemeenschap is meer.", "Telt de niet-levende omgeving mee bij een levensgemeenschap?", "Een levensgemeenschap hoort bij één gebied. Past de hele aarde daarbij?"],
       },
     ],
   },
@@ -112,7 +112,7 @@ const steps = [
         q: "Welke is een **producent**?",
         options: ["Plant", "Konijn", "Schimmel", "Vos"],
         answer: 0,
-        wrongHints: [null, "Consument (herbivoor).", "Afbreker.", "Consument (carnivoor)."],
+        wrongHints: [null, "Een konijn eet planten. Maakt het zelf voedsel, of eet het voedsel op?", "Een schimmel groeit op dode resten. Heeft hij bladgroen om voedsel te maken?", "Een vos eet konijnen. Waar komt zijn voedsel vandaan?"],
       },
       {
         q: "Wat doet een **afbreker**?",
@@ -124,7 +124,7 @@ const steps = [
         q: "Een **leeuw** eet zebra's. Wat is een leeuw?",
         options: ["Carnivoor", "Herbivoor", "Producent", "Afbreker"],
         answer: 0,
-        wrongHints: [null, "Eet vlees, geen planten.", "Geen plant.", "Geen afbreker."],
+        wrongHints: [null, "Een herbivoor eet planten. Wat eet een leeuw?", "Een producent maakt zelf voedsel met zonlicht. Kan een leeuw dat?", "Een afbreker ruimt dode resten op. Jaagt een leeuw op levende dieren of niet?"],
       },
       {
         q: "Wat is een **autotroof**?",
@@ -175,9 +175,9 @@ const steps = [
       },
       {
         q: "Wat gebeurt als **wolven verdwijnen** uit Yellowstone-park?",
-        options: ["Herten worden te talrijk, het ecosysteem raakt verstoord", "Er verandert weinig, het ecosysteem blijft gelijk", "Het aantal herten daalt, het bos groeit harder", "Planten en bomen groeien overal veel beter"],
+        options: ["Herten worden te talrijk, het ecosysteem raakt verstoord", "Er verandert weinig, het ecosysteem blijft gelijk", "Het aantal herten daalt, het bos groeit harder", "Ook de andere roofdieren verdwijnen uit het park"],
         answer: 0,
-        wrongHints: [null, "Wolven eten herten. Wat gebeurt er met de herten als hun jager weg is?", "Daalt het aantal prooidieren als hun jager verdwijnt?", "Wie eten de jonge boompjes op als er veel herten rondlopen?"],
+        wrongHints: [null, "Wolven eten herten. Wat gebeurt er met de herten als hun jager weg is?", "Daalt het aantal prooidieren als hun jager verdwijnt?", "Eten andere roofdieren wolven? Of krijgen ze juist meer ruimte als de wolf weg is?"],
       },
       {
         q: "In een voedselketen **plant → konijn → vos** — wat is een **producent**?",
@@ -187,9 +187,9 @@ const steps = [
       },
       {
         q: "Een **consument** is een organisme dat?",
-        options: ["Andere organismen eet", "Zelf voedsel maakt met zonlicht", "Alleen water en mineralen opneemt", "Geen voedsel nodig heeft"],
+        options: ["Andere organismen als voedsel eet", "Zelf voedsel maakt met zonlicht", "Mineralen opneemt via wortels", "Zuurstof maakt bij fotosynthese"],
         answer: 0,
-        wrongHints: [null, "Zelf voedsel maken met zonlicht — is dat een producent of een consument?", "Haalt een organisme daar al zijn energie uit?", "Kan een organisme leven zonder energie?"],
+        wrongHints: [null, "Zelf voedsel maken met zonlicht — is dat een producent of een consument?", "Dat doet een plant. Haalt die zijn energie uit mineralen, of uit zonlicht?", "Bij fotosynthese komt zuurstof vrij. Welke groep organismen doet aan fotosynthese?"],
       },
       {
         q: "**Reducenten** (afbrekers) doen wat?",
@@ -256,15 +256,15 @@ const steps = [
     checks: [
       {
         q: "Wat is **biodiversiteit**?",
-        options: ["Rijkdom aan soorten", "Aantal mensen", "Hoeveelheid water", "Aantal dieren in 1 soort"],
+        options: ["Rijkdom aan verschillende soorten", "Totaal aantal organismen in een gebied", "Aantal individuen binnen één soort", "Hoeveelheid planten in een ecosysteem"],
         answer: 0,
-        wrongHints: [null, "Niet biologie.", "Niet biologie.", "Dat is populatie."],
+        wrongHints: [null, "Duizend muizen van één soort zijn veel organismen. Is dat ook veel variatie?", "Dat zegt iets over de grootte van een populatie. Gaat diversiteit over één soort?", "Een groot maisveld heeft heel veel planten. Is dat ook rijk aan soorten?"],
       },
       {
         q: "Wat is de **grootste oorzaak** van soorten-uitsterven?",
-        options: ["Habitat-vernieling", "Jacht alleen", "Vervuiling alleen", "Klimaatverandering alleen"],
+        options: ["Vernietiging van leefgebied", "Jacht en stroperij", "Vervuiling van lucht en water", "Klimaatverandering"],
         answer: 0,
-        wrongHints: [null, "Doet schade, maar veel soorten worden niet bejaagd.", "Geeft druk, maar zonder leefgebied lukt het sowieso niet.", "Snelgroeiend probleem, maar nog geen #1 in cijfers (2024)."],
+        wrongHints: [null, "Jacht treft vooral grote dieren. Worden insecten en planten ook bejaagd?", "Vervuiling schaadt veel soorten, maar is het volgens de cijfers de oorzaak nummer één?", "Klimaatverandering groeit snel als probleem, maar is in de cijfers van 2024 nog niet de nummer één."],
       },
       {
         q: "Wat is een **invasieve soort**?",
@@ -274,9 +274,9 @@ const steps = [
       },
       {
         q: "Wat is **endemisch**?",
-        options: ["Komt alleen in 1 gebied voor", "Komt over de hele wereld voor", "Is een besmettelijke ziekte", "Is helemaal uitgestorven"],
+        options: ["Komt alleen in 1 gebied voor", "Komt over de hele wereld voor", "Komt van oorsprong uit een ander land", "Is in het wild uitgestorven"],
         answer: 0,
-        wrongHints: [null, "Een soort die overal leeft is niet bijzonder voor één plek. Wat betekent endemisch dan?", "Endemisch ≠ ziekte (al betekent pandemie wél 'over de hele wereld').", "Endemisch betekent juist nog wél bestaan."],
+        wrongHints: [null, "Een soort die overal leeft is niet bijzonder voor één plek. Wat betekent endemisch dan?", "Een soort uit een ander land heet een exoot. Is dat hetzelfde als endemisch?", "Endemische soorten bestaan nog. Zegt het woord iets over tijd of over plaats?"],
       },
     ],
   },
@@ -289,15 +289,15 @@ const steps = [
     checks: [
       {
         q: "Wat is een **producent**?",
-        options: ["Plant of alg", "Vleeseter", "Aaseter", "Plant-eter"],
+        options: ["Plant of alg", "Vleeseter", "Schimmel of bacterie", "Planteneter"],
         answer: 0,
-        wrongHints: [null, "Verteert vlees — maakt geen nieuw voedsel.", "Verteert dood materiaal — geen productie.", "Verteert plant — geen eigen productie."],
+        wrongHints: [null, "Een vleeseter eet andere dieren. Maakt hij zelf voedsel?", "Die breken dode resten af. Maken ze ook zelf voedsel met zonlicht?", "Een planteneter eet planten op. Wie maakt dan eigenlijk het voedsel?"],
       },
       {
         q: "Welk dier zit **bovenaan** een energiepiramide?",
         options: ["Toproofdier", "Plant", "Konijn", "Insect"],
         answer: 0,
-        wrongHints: [null, "Onderaan.", "Middelhoog.", "Laag."],
+        wrongHints: [null, "Planten maken voedsel met zonlicht. Horen ze bij de basis of bij de top van de piramide?", "Een konijn eet planten en wordt zelf gegeten door een vos. Is het dan de top?", "Insecten worden gegeten door vogels en kikkers. Kunnen ze dan bovenaan staan?"],
       },
       {
         q: "Energie gaat **per niveau** ongeveer hoeveel door?",
@@ -309,19 +309,19 @@ const steps = [
         q: "Wat stroomt **door een ecosysteem** als eenrichting?",
         options: ["Energie", "Materie", "Lucht", "Water"],
         answer: 0,
-        wrongHints: [null, "Materie kringloopt.", "Lucht stroomt rond.", "Water gaat in een kringloop."],
+        wrongHints: [null, "Afbrekers maken van dode resten weer voedingsstoffen voor planten. Gaat materie dan maar één kant op?", "Lucht beweegt alle kanten op en blijft op aarde. Is dat een eenrichtingsstroom door de voedselketen?", "Water verdampt, valt als regen en komt terug. Is dat eenrichting?"],
       },
       {
         q: "Welke is een **invasieve soort** in NL?",
-        options: ["Amerikaanse rivierkreeft", "Europese rode eekhoorn", "Noordse woelmuis", "Europees edelhert"],
+        options: ["Amerikaanse rivierkreeft", "Alpenwatersalamander", "Noordse woelmuis", "Europese bever"],
         answer: 0,
-        wrongHints: [null, "Komt al eeuwen in NL voor.", "Klinkt uitheems, maar leeft al sinds de ijstijd in Nederland.", "Behoort al eeuwen tot de eigen natuur."],
+        wrongHints: [null, "Klinkt als een bergdier, maar leeft van nature in Oost-Nederland. Is het dan een indringer?", "Klinkt uitheems, maar leeft al sinds de ijstijd in Nederland. Is het dan een indringer?", "De bever leefde hier vroeger al en is teruggezet. Is dat een soort van elders?"],
       },
       {
         q: "Wat is de rol van **schimmels** in ecosysteem?",
-        options: ["Afbreker", "Producent", "Toproofdier", "Carnivoor"],
+        options: ["Afbreker", "Producent", "Bestuiver", "Carnivoor"],
         answer: 0,
-        wrongHints: [null, "Geen plant.", "Geen vleeseter.", "Geen vleeseter."],
+        wrongHints: [null, "Een schimmel heeft geen bladgroen. Kan hij dan zelf voedsel maken?", "Bestuivers zoals bijen brengen stuifmeel van bloem naar bloem. Doet een schimmel dat?", "Een carnivoor jaagt op levende dieren. Waar groeien schimmels meestal op?"],
       },
       {
         q: "**Open vraag**: hoe heet een ecosysteem in droog warm gebied met cactussen?",
