@@ -82,6 +82,7 @@ export const PARTNER_NAMEN = {
   HUMANITAS2027: "Humanitas",
   ICHTHUS2027: "VPCBO Ichthus (basisscholen in Huizen)", // 10 sep 2026: vroeg zelf het oefenpakket aan (bestuur van 5 scholen)
   LEUDAL2027: "Stichting Leergeld Leudal", // 10 sep 2026: vroeg zelf het oefenpakket aan
+  HOOGELAND2027: "Stichting Leergeld Het Hoogeland", // 13 okt 2026: plakteksten FB/website gevraagd en verstuurd
   IMC2027: "IMC Weekendschool",
   JEF2027: "het Jeugdeducatiefonds",
   JINC2027: "JINC",

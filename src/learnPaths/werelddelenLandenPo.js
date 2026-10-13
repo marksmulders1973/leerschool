@@ -63,6 +63,36 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Veel te weinig.", "Onmogelijk.", "Te weinig."],
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke oceaan ligt **rond Antarctica**?",
+        options: ["Zuidelijke Oceaan", "Noordelijke IJszee", "Indische Oceaan", "Atlantische Oceaan"],
+        answer: 0,
+        wrongHints: [null, "Die ligt juist rond de Noordpool.", null, null],
+      },
+      {
+        q: "Welk deel van het aardoppervlak is **water**?",
+        options: ["70%", "30%", "50%", "90%"],
+        answer: 0,
+        wrongHints: [null, "Dat is het deel dat land is.", null, null],
+      },
+      {
+        q: "Wat is het verschil tussen een **continent** en een **land**?",
+        options: [
+          "Een land heeft grenzen en een regering",
+          "Een continent is kleiner dan een land",
+          "Een land ligt altijd op een eiland",
+          "Er is helemaal geen verschil",
+        ],
+        answer: 0,
+        wrongHints: [null, "Hoeveel landen liggen er in Europa?", null, null],
+      },
+      {
+        q: "Welk land is qua **oppervlakte** het grootste ter wereld?",
+        options: ["Rusland", "China", "Canada", "Brazilië"],
+        answer: 0,
+        wrongHints: [null, "Dit land heeft heel veel inwoners, maar is kleiner van oppervlakte.", null, null],
+      },
     ],
   },
   {
@@ -161,6 +191,142 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke rivier is de **langste van Europa**?",
+        options: ["Volga", "Donau", "Rijn", "Seine"],
+        answer: 0,
+        wrongHints: [null, "Die rivier stroomt door 10 landen, maar is korter.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "De Volga",
+              tekst: "De **Volga** is met **3.530 km** de langste rivier van Europa. Hij stroomt door **Rusland**.",
+            },
+            {
+              titel: "De Donau is korter",
+              tekst: "De **Donau** stroomt door **10 landen**, maar is met **2.860 km** korter dan de Volga.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "rivier",
+              uitleg: "Stromend water dat uiteindelijk in een zee of meer uitkomt.",
+            },
+          ],
+          theorie: "Toets-tip: door de meeste landen stromen is niet hetzelfde als de langste zijn. Volga = langste van Europa, Donau = door 10 landen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "De Rijn stroomt ook door Nederland. De Seine stroomt door Frankrijk.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Volga = Rusland = groot land, lange rivier.",
+            },
+          ],
+          niveaus: {
+            basis: "Volga (3.530 km).",
+            simpeler: "De Volga in Rusland is de langste rivier van Europa.",
+            nogSimpeler: "Volga.",
+          },
+        },
+      },
+      {
+        q: "Waar ligt het **laagste punt op land** van de hele wereld?",
+        options: ["Bij de Dode Zee", "In de Zuidplaspolder", "In de Gobi-woestijn", "Op de Mont Blanc"],
+        answer: 0,
+        wrongHints: [null, "Dat is het laagste punt van Nederland, niet van de wereld.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "De Dode Zee",
+              tekst: "De **Dode Zee** ligt in het Midden-Oosten, bij **Israël**. Het land daar ligt ongeveer **430 meter onder zeeniveau**: het laagste punt op land ter wereld.",
+            },
+            {
+              titel: "Hoog en laag",
+              tekst: "De **Mont Blanc** is juist een hoge berg (4.810 m). De **Gobi** is een woestijn in China en Mongolië.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "zeeniveau",
+              uitleg: "De hoogte van het zeewater; daar meet je hoogtes vanaf.",
+            },
+          ],
+          theorie: "Toets-tip: hoogste punt op aarde = Mount Everest (8.849 m). Laagste punt op land = Dode Zee (-430 m).",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "-430 m betekent: 430 meter lager dan het zeewater.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Min-teken = onder zeeniveau. Hoe groter het getal na de min, hoe lager.",
+            },
+          ],
+          niveaus: {
+            basis: "Dode Zee (-430 m).",
+            simpeler: "Bij de Dode Zee in Israël is het land het laagst van de hele wereld.",
+            nogSimpeler: "Dode Zee.",
+          },
+        },
+      },
+      {
+        q: "Sinds welk jaar betalen we in Nederland met de **euro**?",
+        options: ["2002", "1957", "2020", "1975"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "In dat jaar begon de samenwerking die later de EU werd.",
+          "In dat jaar ging het Verenigd Koninkrijk uit de EU.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Euro sinds 2002",
+              tekst: "De **euro (€)** is het geld van de EU. Sinds **2002** betaal je ermee, ook in Nederland.",
+            },
+            {
+              titel: "Andere jaartallen",
+              tekst: "**1957** = begin van de samenwerking (toen heette het EEG). **2020** = het Verenigd Koninkrijk ging uit de EU (Brexit).",
+            },
+          ],
+          woorden: [
+            {
+              woord: "euro",
+              uitleg: "Het geld dat je in Nederland en veel andere EU-landen gebruikt.",
+            },
+            {
+              woord: "EU",
+              uitleg: "Europese Unie: 27 landen die samenwerken.",
+            },
+          ],
+          theorie: "Toets-tip EU-jaartallen: 1957 = start (EEG). 2002 = euro. 2020 = Brexit.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Vóór de euro had Nederland de gulden.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Euro = 2002. Brexit = 2020. Let op: dezelfde cijfers, maar in een andere volgorde!",
+            },
+          ],
+          niveaus: {
+            basis: "2002.",
+            simpeler: "Sinds 2002 betalen we met euro's.",
+            nogSimpeler: "2002.",
+          },
+        },
+      },
     ],
   },
   {
@@ -237,6 +403,43 @@ const steps = [
             nogSimpeler: "Kangoeroe",
           },
         },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**Ottawa** is de hoofdstad van welk land?",
+        options: ["Canada", "Mexico", "Verenigde Staten", "Cuba"],
+        answer: 0,
+        wrongHints: [null, null, "De hoofdstad van dit land is Washington D.C.", null],
+      },
+      {
+        q: "Welke taal spreken de meeste mensen in **Brazilië**?",
+        options: ["Portugees", "Spaans", "Engels", "Frans"],
+        answer: 0,
+        wrongHints: [null, "Die taal spreken ze vooral in de andere landen van Zuid-Amerika.", null, null],
+      },
+      {
+        q: "Welk land in Zuid-Amerika was tot **1975** een Nederlandse kolonie?",
+        options: ["Suriname", "Guyana", "Venezuela", "Colombia"],
+        answer: 0,
+        wrongHints: [null, null, null, null],
+      },
+      {
+        q: "Wat is de grootste **hete woestijn** ter wereld?",
+        options: ["Sahara", "Gobi", "Atacama", "Kalahari"],
+        answer: 0,
+        wrongHints: [null, null, "Die woestijn is de droogste, niet de grootste.", null],
+      },
+      {
+        q: "Hoeveel **strepen** staan er op de vlag van de VS?",
+        options: ["13", "50", "27", "7"],
+        answer: 0,
+        wrongHints: [null, "Dat is het aantal sterren.", null, null],
+      },
+      {
+        q: "Hoeveel **hoofdsteden** heeft Zuid-Afrika?",
+        options: ["3", "1", "2", "5"],
+        answer: 0,
+        wrongHints: [null, "De meeste landen hebben er één, maar Zuid-Afrika is anders.", null, null],
       },
     ],
   },

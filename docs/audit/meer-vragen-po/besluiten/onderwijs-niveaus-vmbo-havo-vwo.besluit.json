@@ -1,0 +1,375 @@
+{
+ "pathId": "onderwijs-niveaus-vmbo-havo-vwo",
+ "geschreven": 22,
+ "opgenomen": [
+  {
+   "stap": 0,
+   "q": "Welk niveau duurt het **kortst**?",
+   "options": [
+    "vmbo",
+    "havo",
+    "vwo",
+    "Ze duren alle drie even lang"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Hoeveel jaar duurt havo, en hoeveel jaar duurt vmbo?",
+    null,
+    null
+   ],
+   "id": "onderwijs-niveaus-vmbo-havo-vwo#0"
+  },
+  {
+   "stap": 0,
+   "q": "Waarin verschillen vmbo, havo en vwo **vooral**?",
+   "options": [
+    "In hoe snel en hoe theoretisch de stof gaat",
+    "In hoe slim of dom de leerlingen zijn",
+    "In hoe groot het schoolgebouw is",
+    "In hoe laat de lessen beginnen"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Noemt de uitleg een niveau 'slim' of 'dom'?",
+    null,
+    null
+   ],
+   "id": "onderwijs-niveaus-vmbo-havo-vwo#1"
+  },
+  {
+   "stap": 0,
+   "q": "Na welk niveau kun je **meteen** naar de universiteit?",
+   "options": [
+    "vwo",
+    "vmbo",
+    "havo",
+    "Na alle drie"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    "Waar ga je na de havo meestal naartoe?",
+    null
+   ],
+   "id": "onderwijs-niveaus-vmbo-havo-vwo#2"
+  },
+  {
+   "stap": 1,
+   "q": "Hoeveel leerlingen in Nederland zitten ongeveer op het **vmbo**?",
+   "options": [
+    "Ongeveer de helft",
+    "Bijna niemand",
+    "Ongeveer een tiende",
+    "Bijna alle leerlingen"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Het vmbo is het grootste niveau. Past dat hierbij?",
+    null,
+    null
+   ],
+   "id": "onderwijs-niveaus-vmbo-havo-vwo#3"
+  },
+  {
+   "stap": 1,
+   "q": "Welke van deze is een **richting** die je op het vmbo kunt kiezen?",
+   "options": [
+    "Techniek",
+    "Gymnasium",
+    "Atheneum",
+    "Universiteit"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    null,
+    "Hoort de universiteit bij de middelbare school?"
+   ],
+   "id": "onderwijs-niveaus-vmbo-havo-vwo#5"
+  },
+  {
+   "stap": 1,
+   "q": "Wat leer je op het **mbo**, na je vmbo-diploma?",
+   "options": [
+    "Een vak, zoals kok of monteur",
+    "Latijn en Grieks",
+    "Weer de stof van groep 8",
+    "Alleen maar sporten"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "id": "onderwijs-niveaus-vmbo-havo-vwo#6"
+  },
+  {
+   "stap": 2,
+   "q": "Waarin zit vooral het verschil tussen **havo en vwo**?",
+   "options": [
+    "In tempo en diepte",
+    "Op de havo krijg je geen theorie",
+    "Op het vwo krijg je geen boeken",
+    "Havo duurt langer dan vwo"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Leer je op de havo ook uit boeken?",
+    null,
+    "Hoeveel jaar duurt havo, en hoeveel jaar vwo?"
+   ],
+   "id": "onderwijs-niveaus-vmbo-havo-vwo#7"
+  },
+  {
+   "stap": 2,
+   "q": "Waar staat de **C** in het profiel C&M voor?",
+   "options": [
+    "Cultuur",
+    "Computer",
+    "Chemie",
+    "Cijfers"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    null,
+    "Welke vakken horen bij C&M: talen en kunst, of rekenen?"
+   ],
+   "id": "onderwijs-niveaus-vmbo-havo-vwo#8"
+  },
+  {
+   "stap": 2,
+   "q": "Wat zijn **Latijn en Grieks**?",
+   "options": [
+    "Talen van de oude Romeinen en Grieken",
+    "Twee profielen op de havo",
+    "Twee leerwegen op het vmbo",
+    "Twee soorten sport op school"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Welke vier profielen zijn er op havo en vwo?",
+    null,
+    null
+   ],
+   "id": "onderwijs-niveaus-vmbo-havo-vwo#10"
+  },
+  {
+   "stap": 3,
+   "q": "Waar staat **hbo** voor?",
+   "options": [
+    "Hoger beroepsonderwijs",
+    "Hoger basisonderwijs",
+    "Heel belangrijke opleiding",
+    "Havo-bovenbouwopleiding"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Ga je na de havo nog naar de basisschool?",
+    null,
+    null
+   ],
+   "id": "onderwijs-niveaus-vmbo-havo-vwo#11"
+  },
+  {
+   "stap": 3,
+   "q": "Hoeveel **niveaus** heeft het mbo?",
+   "options": [
+    "Vier",
+    "Twee",
+    "Drie",
+    "Zes"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    null,
+    "Zes jaar duurt het vwo. Is dat ook het aantal mbo-niveaus?"
+   ],
+   "id": "onderwijs-niveaus-vmbo-havo-vwo#12"
+  },
+  {
+   "stap": 3,
+   "q": "Wat is een **stage**?",
+   "options": [
+    "Werken om te leren",
+    "Een podium voor toneel",
+    "Een toets aan het eind van het jaar",
+    "Een schoolreis in de vakantie"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Het woord lijkt op het Engelse woord voor podium. Maar wat betekent het op het mbo?",
+    null,
+    null
+   ],
+   "id": "onderwijs-niveaus-vmbo-havo-vwo#13"
+  },
+  {
+   "stap": 3,
+   "q": "Welk beroep hoort bij de route **vwo → universiteit**?",
+   "options": [
+    "Rechter",
+    "Kapper",
+    "Kok",
+    "Monteur"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Na welke opleiding word je meestal kapper?",
+    null,
+    null
+   ],
+   "id": "onderwijs-niveaus-vmbo-havo-vwo#14"
+  },
+  {
+   "stap": 3,
+   "q": "Waar staat **wo** voor?",
+   "options": [
+    "Wetenschappelijk onderwijs",
+    "Werkend onderwijs",
+    "Wereldwijd onderwijs",
+    "Wiskunde-onderwijs"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    null,
+    "Leer je op de universiteit alleen wiskunde?"
+   ],
+   "id": "onderwijs-niveaus-vmbo-havo-vwo#15"
+  },
+  {
+   "stap": 4,
+   "q": "Wat is een **brugklas**?",
+   "options": [
+    "Een klas waarin je niveau nog kan veranderen",
+    "De laatste klas van de basisschool",
+    "Een klas waar je alleen gymles hebt",
+    "Een klas die je na je diploma volgt"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Zit de brugklas op de basisschool, of op de middelbare school?",
+    null,
+    null
+   ],
+   "id": "onderwijs-niveaus-vmbo-havo-vwo#16"
+  },
+  {
+   "stap": 4,
+   "q": "Moet je in groep 8 al weten wat je **later wilt worden**?",
+   "options": [
+    "Nee, dat ontdek je onderweg",
+    "Ja, anders mag je niet naar de brugklas",
+    "Nee, dat beslist je juf of meester voor je",
+    "Ja, dat staat in je schooladvies"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    "Wie leert jou steeds beter kennen: jijzelf, of je juf of meester?",
+    null
+   ],
+   "id": "onderwijs-niveaus-vmbo-havo-vwo#17"
+  },
+  {
+   "stap": 4,
+   "q": "Sem zit op de havo en het gaat **heel makkelijk**. Wat kan dan soms?",
+   "options": [
+    "Overstappen naar het vwo",
+    "Teruggaan naar groep 8",
+    "Meteen naar de universiteit",
+    "Een jaar vrij nemen van school"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    "Kun je zonder diploma van de middelbare school naar de universiteit?",
+    null
+   ],
+   "id": "onderwijs-niveaus-vmbo-havo-vwo#18"
+  },
+  {
+   "stap": 4,
+   "q": "Welke route is **stapelen via het beroepsonderwijs**?",
+   "options": [
+    "mbo → hbo → universiteit",
+    "universiteit → hbo → mbo",
+    "vwo → havo → vmbo",
+    "hbo → mbo → basisschool"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Ga je bij stapelen een stapje hoger, of lager?",
+    null,
+    null
+   ],
+   "id": "onderwijs-niveaus-vmbo-havo-vwo#19"
+  },
+  {
+   "stap": 4,
+   "q": "Je keuze na de Doorstroomtoets is volgens de uitleg...",
+   "options": [
+    "een start, geen eindpunt",
+    "voor de rest van je leven vast",
+    "het einde van je schooltijd",
+    "een gok die niet meetelt"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Kun je later nog stapelen of switchen?",
+    null,
+    null
+   ],
+   "id": "onderwijs-niveaus-vmbo-havo-vwo#20"
+  }
+ ],
+ "afgekeurd": [
+  {
+   "id": "onderwijs-niveaus-vmbo-havo-vwo#4",
+   "stap": 1,
+   "q": "Wanneer kies je op het vmbo een **richting**, zoals zorg & welzijn?",
+   "redenen": [
+    "nakijker A: Feitelijk onnauwkeurig (ook in de stap-uitleg): op het vmbo kies je je profiel/richting meestal aan het eind van klas 2 en volg je het vanaf klas 3. 'Kiezen in klas 3' klopt dus niet precies; beter 'Vanaf welke klas volg je...' of uitleg aanpassen.",
+    "nakijker B: Feit onnauwkeurig: op het vmbo kies je je profiel/richting meestal aan het eind van klas 2 en volg je het vanaf klas 3; 'in klas 3 kiezen' (ook zo in de stap-uitleg) klopt niet helemaal. Uitleg en vraag aanpassen naar 'eind klas 2 / vanaf klas 3'."
+   ]
+  },
+  {
+   "id": "onderwijs-niveaus-vmbo-havo-vwo#9",
+   "stap": 2,
+   "q": "Welk profiel past bij iemand die dol is op **wiskunde en natuurkunde**?",
+   "redenen": [
+    "nakijker A: Vraag mist 'het best': N&G bevat ook wiskunde (en vaak natuurkunde), dus 'past bij' laat N&G ook verdedigbaar. Formuleer als 'past het best'."
+   ]
+  },
+  {
+   "id": "onderwijs-niveaus-vmbo-havo-vwo#21",
+   "stap": 4,
+   "q": "Waarom kan naar een lager niveau gaan een **slimme** keuze zijn?",
+   "redenen": [
+    "nakijker A: Bijna-dubbel met bestaande vraag 'Naar een lager niveau gaan dat beter past, is...' (zelfde kernboodschap afstromen = slim/geen mislukking)."
+   ]
+  }
+ ]
+}

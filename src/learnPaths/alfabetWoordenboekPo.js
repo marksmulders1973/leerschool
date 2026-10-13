@@ -104,6 +104,88 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke rij letters staat in de goede alfabetische volgorde?",
+        options: ["D E F G", "D F E G", "E D F G", "D E G F"],
+        answer: 0,
+        wrongHints: [null, "Komt de F in het alfabet echt vóór de E?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zeg het alfabet op",
+              tekst: "Het stukje alfabet gaat zo: … C D E F G H … Na de D komt de E, dan de F en dan de G.",
+            },
+          ],
+          niveaus: {
+            basis: "De goede volgorde is D E F G.",
+            simpeler: "Zeg het alfabet op vanaf de D: welke vier letters hoor je?",
+            nogSimpeler: "Wat komt na D: E of F?",
+          },
+        },
+      },
+      {
+        q: "Hoeveel letters heeft het alfabet?",
+        options: ["26", "24", "25", "28"],
+        answer: 0,
+        wrongHints: [null, "Tel de letters van A tot en met Z nog eens rustig.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tellen van A tot Z",
+              tekst: "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z. Als je ze allemaal telt, kom je op 26 letters.",
+            },
+          ],
+          niveaus: {
+            basis: "Het alfabet heeft 26 letters, van A tot en met Z.",
+            simpeler: "Tel de letters van A tot Z met je vingers mee.",
+            nogSimpeler: "Hoeveel letters tel je van A tot Z?",
+          },
+        },
+      },
+      {
+        q: "Je zet de namen Yara, Daan, Pim en Femke op alfabetische volgorde. Wie staat op de derde plek?",
+        options: ["Pim", "Femke", "Yara", "Daan"],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "De Y staat bijna achteraan in het alfabet.",
+          "De D is de vroegste beginletter van de vier.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kijk naar de beginletters",
+              tekst: "De beginletters zijn Y, D, P en F. Op volgorde: D (Daan), F (Femke), P (Pim), Y (Yara). Op de derde plek staat Pim.",
+            },
+          ],
+          niveaus: {
+            basis: "Op volgorde: Daan, Femke, Pim, Yara. De derde is Pim.",
+            simpeler: "Zet eerst de beginletters D, F, P en Y op volgorde.",
+            nogSimpeler: "Welke naam staat na Daan en Femke?",
+          },
+        },
+      },
+      {
+        q: "Welke letter staat in het alfabet precies tussen de J en de L?",
+        options: ["K", "I", "M", "N"],
+        answer: 0,
+        wrongHints: [null, "De I komt nog vóór de J.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "… J K L …",
+              tekst: "Zeg het stukje alfabet op: I, J, K, L, M. Tussen de J en de L staat de K.",
+            },
+          ],
+          niveaus: {
+            basis: "Tussen J en L staat K.",
+            simpeler: "Zeg op: … J, ?, L … welke letter hoor je in het midden?",
+            nogSimpeler: "Welke letter komt na de J?",
+          },
+        },
+      },
     ],
   },
 
@@ -202,6 +284,103 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke twee woorden zoek je bij dezelfde letter in het woordenboek?",
+        options: ["kaas en kers", "kaas en cola", "cent en sok", "vis en fles"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Luister niet naar de klank, maar kijk hoe de woorden geschreven worden.",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "De geschreven eerste letter",
+              tekst: "Je zoekt op de letter waarmee een woord geschreven wordt. 'Kaas' en 'kers' beginnen allebei met een k. 'Cola' begint met een c, ook al klinkt het als een k.",
+            },
+          ],
+          niveaus: {
+            basis: "'kaas' en 'kers' beginnen allebei met k, dus die staan bij dezelfde letter.",
+            simpeler: "Schrijf van elk woord de eerste letter op. Welke twee zijn gelijk?",
+            nogSimpeler: "Met welke letter begint 'kaas'? En 'kers'?",
+          },
+        },
+      },
+      {
+        q: "Welk woord vind je in het middelste deel van het woordenboek?",
+        options: ["molen", "dak", "taart", "zeep"],
+        answer: 0,
+        wrongHints: [null, "De D staat vooraan in het alfabet.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vooraan, midden, achteraan",
+              tekst: "Vooraan staan A, B, C, D, E. In het midden staan K, L, M, N. Achteraan staan S tot en met Z. 'Molen' begint met een m, dus die staat in het midden.",
+            },
+          ],
+          niveaus: {
+            basis: "'molen' begint met m, en de M staat in het midden van het woordenboek.",
+            simpeler: "Welke beginletter hoort bij het midden: d, m, t of z?",
+            nogSimpeler: "Staat de M vooraan, in het midden of achteraan?",
+          },
+        },
+      },
+      {
+        q: "Je slaat het woordenboek open bij woorden met een M. Je zoekt het woord 'vork'. Welke kant blader je op?",
+        options: [
+          "naar achteren",
+          "naar voren",
+          "nergens heen, je bent al goed",
+          "het maakt niet uit welke kant",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Komt de V in het alfabet vóór of ná de M?",
+          null,
+          "Als je de goede kant kiest, ben je veel sneller klaar.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "V komt ná M",
+              tekst: "De V staat verder in het alfabet dan de M. Woorden met een v staan dus verder achter in het woordenboek. Je bladert naar achteren.",
+            },
+          ],
+          niveaus: {
+            basis: "De V komt ná de M, dus je bladert naar achteren.",
+            simpeler: "Staat de V verder in het alfabet dan de M, of eerder?",
+            nogSimpeler: "Wat komt later: M of V?",
+          },
+        },
+      },
+      {
+        q: "Bij welke letter zoek je het woord 'circus' in het woordenboek?",
+        options: ["C", "S", "K", "I"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Het klinkt misschien zo, maar kijk naar de geschreven eerste letter.",
+          null,
+          "De i is de tweede letter van het woord.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerste letter",
+              tekst: "'Circus' schrijf je met een c vooraan. Daarom zoek je het bij de C, ook al hoor je een s-klank.",
+            },
+          ],
+          niveaus: {
+            basis: "'circus' begint met c, dus je zoekt bij de C.",
+            simpeler: "Schrijf 'circus' op. Wat is de eerste letter?",
+            nogSimpeler: "Wat is de eerste letter van 'circus'?",
+          },
+        },
+      },
     ],
   },
 
@@ -294,6 +473,88 @@ const steps = [
             basis: "Derde letter a komt vóór o → 'station' eerst.",
             simpeler: "De 'st' is gelijk. Welke derde letter komt eerst: a of o?",
             nogSimpeler: "a of o — welke komt eerst?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke rij woorden staat goed op alfabetische volgorde?",
+        options: [
+          "bel – bloem – brug – bus",
+          "bloem – bel – brug – bus",
+          "bel – brug – bloem – bus",
+          "bel – bloem – bus – brug",
+        ],
+        answer: 0,
+        wrongHints: [null, "Vergelijk de tweede letters van 'bloem' en 'bel'.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Alle vier beginnen met b",
+              tekst: "Kijk naar de tweede letters: e (bel), l (bloem), r (brug), u (bus). In het alfabet komt eerst de e, dan de l, dan de r en dan de u.",
+            },
+          ],
+          niveaus: {
+            basis: "Tweede letters e, l, r, u → bel, bloem, brug, bus.",
+            simpeler: "De b is steeds gelijk. Zet de tweede letters e, l, r en u op volgorde.",
+            nogSimpeler: "Wat komt eerst: e of l?",
+          },
+        },
+      },
+      {
+        q: "Welk woord komt het laatst: regen, raam, rups of roos?",
+        options: ["rups", "roos", "regen", "raam"],
+        answer: 0,
+        wrongHints: [null, null, "Alle vier beginnen met r. Kijk dus naar de tweede letter.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "r gelijk, dan de tweede letter",
+              tekst: "De tweede letters zijn e (regen), a (raam), u (rups) en o (roos). Op volgorde: a, e, o, u. De u komt het laatst, dus 'rups' staat achteraan.",
+            },
+          ],
+          niveaus: {
+            basis: "Tweede letters a, e, o, u → 'rups' komt het laatst.",
+            simpeler: "De r is gelijk. Welke tweede letter komt het laatst: a, e, o of u?",
+            nogSimpeler: "Wat komt later: o of u?",
+          },
+        },
+      },
+      {
+        q: "Zet op alfabet: trein, trap, trui. Welk woord komt het eerst?",
+        options: ["trap", "trein", "trui", "ze zijn gelijk"],
+        answer: 0,
+        wrongHints: [null, null, null, "De woorden verschillen bij de derde letter."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "tr gelijk, dan de derde letter",
+              tekst: "Alle drie beginnen met 'tr'. De derde letters zijn e (trein), a (trap) en u (trui). De a komt het eerst, dus 'trap'.",
+            },
+          ],
+          niveaus: {
+            basis: "Derde letters a, e, u → 'trap' komt eerst.",
+            simpeler: "De 'tr' is gelijk. Welke derde letter komt eerst: e, a of u?",
+            nogSimpeler: "Wat komt eerst: a, e of u?",
+          },
+        },
+      },
+      {
+        q: "Zet op alfabet: kraal, kraan, kraag, kraam. Welk woord komt het eerst?",
+        options: ["kraag", "kraal", "kraam", "kraan"],
+        answer: 0,
+        wrongHints: [null, "Alle vier beginnen met 'kraa'. Kijk dus naar de vijfde letter.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Steeds een letter dieper",
+              tekst: "De eerste vier letters zijn bij alle woorden 'kraa'. De vijfde letters zijn l (kraal), n (kraan), g (kraag) en m (kraam). Op volgorde: g, l, m, n. Dus 'kraag' komt eerst.",
+            },
+          ],
+          niveaus: {
+            basis: "Vijfde letters g, l, m, n → 'kraag' komt eerst.",
+            simpeler: "'kraa' is steeds gelijk. Welke laatste letter komt eerst: l, n, g of m?",
+            nogSimpeler: "Wat komt eerst: g of l?",
           },
         },
       },
@@ -415,6 +676,74 @@ const steps = [
             basis: "Werkwoorden staan onder het hele werkwoord → 'lopen'.",
             simpeler: "Onder welke vorm staat een werkwoord: de verleden tijd of het hele werkwoord?",
             nogSimpeler: "Zoek je 'liep' onder 'liep' of onder 'lopen'?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Bovenaan een woordenboekpagina staan de kopwoorden 'molen' en 'mug'. Welk woord staat NIET op deze pagina?",
+        options: ["melk", "mond", "motor", "mos"],
+        answer: 0,
+        wrongHints: [null, "'mond' (mon…) komt ná 'molen' (mol…) en vóór 'mug'.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tussen de kopwoorden",
+              tekst: "Op deze pagina staan de woorden van 'molen' tot 'mug'. 'Melk' begint met 'me', en de e komt vóór de o. Dus 'melk' staat eerder in het woordenboek, op een andere pagina.",
+            },
+          ],
+          niveaus: {
+            basis: "'melk' (me…) komt vóór 'molen' (mo…), dus het staat niet op deze pagina.",
+            simpeler: "Vergelijk de tweede letter van elk woord met die van 'molen'.",
+            nogSimpeler: "Komt 'me' vóór of ná 'mo'?",
+          },
+        },
+      },
+      {
+        q: "Waarvoor zijn de kopwoorden bovenaan een bladzijde van het woordenboek handig?",
+        options: [
+          "om snel te zien of jouw woord op die bladzijde staat",
+          "om te lezen wat het woord betekent",
+          "om te zien wie het boek heeft geschreven",
+          "om te tellen hoeveel woorden er op staan",
+        ],
+        answer: 0,
+        wrongHints: [null, "De betekenis staat achter het trefwoord zelf.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerste en laatste woord",
+              tekst: "Kopwoorden zijn het eerste en het laatste woord van de bladzijde. Valt jouw woord op alfabet daartussen? Dan staat het op die bladzijde.",
+            },
+          ],
+          niveaus: {
+            basis: "Met de kopwoorden zie je snel of jouw woord op die bladzijde staat.",
+            simpeler: "Kopwoorden zijn het eerste en laatste woord van de bladzijde. Wat kun je daarmee snel zien?",
+            nogSimpeler: "Helpen kopwoorden je om snel de goede bladzijde te vinden?",
+          },
+        },
+      },
+      {
+        q: "Hoe herken je in een woordenboek het trefwoord?",
+        options: [
+          "het staat vet vooraan",
+          "het staat onderaan de bladzijde",
+          "het staat tussen haakjes",
+          "het staat achter de uitleg",
+        ],
+        answer: 0,
+        wrongHints: [null, null, null, "De uitleg komt juist ná het trefwoord."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vet en vooraan",
+              tekst: "Het trefwoord is het woord dat je opzoekt. Het staat vet gedrukt vooraan, en daarachter volgt de uitleg.",
+            },
+          ],
+          niveaus: {
+            basis: "Het trefwoord staat vet vooraan; daarachter staat de betekenis.",
+            simpeler: "Waar begint een stukje in het woordenboek: met het trefwoord of met de uitleg?",
+            nogSimpeler: "Staat het trefwoord vooraan of achteraan?",
           },
         },
       },

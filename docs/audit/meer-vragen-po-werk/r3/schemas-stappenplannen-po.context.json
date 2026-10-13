@@ -1,0 +1,1045 @@
+{
+ "pathId": "schemas-stappenplannen-po",
+ "titel": "Schema's en stappenplannen — Doorstroomtoets groep 5-8",
+ "level": "groep5-8",
+ "subject": "taal",
+ "intro": "Schema's, stappenplannen, beslisbomen en tijdslijnen lezen. Doorstroomtoets-stijl. ~12 min.",
+ "stappen": [
+  {
+   "stap": 0,
+   "titel": "Wat is een schema?",
+   "vanafGroep": null,
+   "interactief": false,
+   "heeftSvg": false,
+   "uitleg": "Een **schema** is een **overzicht** van informatie in vakjes en met pijlen. Het maakt duidelijk **hoe iets werkt** of **wat met wat samenhangt**.\n\n**Soorten schema's**:\n1. **Stappenplan**: stap 1 → stap 2 → stap 3.\n   - Bijv. 'hoe maak je pannenkoeken'.\n2. **Beslisboom**: ja/nee-vragen die je naar een antwoord leiden.\n   - Bijv. 'welk dier ben je?'\n3. **Boomschema**: een hoofdcategorie met subcategorieën.\n   - Bijv. dieren → zoogdieren / vissen / vogels.\n4. **Tijdslijn**: gebeurtenissen op volgorde van tijd.\n   - Bijv. geschiedenis-overzicht.\n5. **Mindmap**: woorden rondom een centraal idee.\n\n**Onderdelen** in elk schema:\n• **Vakjes/cirkels** met informatie.\n• **Pijlen** of lijnen die verbinden.\n• Soms een **legenda** *(wat de symbolen betekenen)*.\n• Een **titel** van het schema.\n\n**toetsvraag-typen**:\n• 'Wat is de eerste stap?' → kijk naar bovenste/eerste vakje.\n• 'Wat komt na X?' → volg de pijl.\n• 'Welk antwoord krijg je als je deze keuzes maakt?' → loop de beslisboom door.\n\n**Tip**: Lees eerst de **titel** en **legenda** voordat je vragen beantwoordt. Scan daarna het schema globaal — wat is de structuur?",
+   "leesTekst": null,
+   "aantalNu": 3,
+   "nodig": 7,
+   "uitlegPadInBestaande": 2,
+   "uitlegPadVelden": [
+    "stappen",
+    "woorden",
+    "theorie",
+    "voorbeelden",
+    "basiskennis",
+    "niveaus"
+   ],
+   "bestaandeVragen": [
+    {
+     "q": "Wat zegt een **stappenplan**?",
+     "options": [
+      "Welke volgorde te doen",
+      "Welke kleur",
+      "Wie iets doet",
+      "Wanneer iets ophoudt"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Niet over kleur.",
+      "Dat staat er soms bij, maar waar draait een stappenplan om?",
+      "Niet primair."
+     ],
+     "uitlegPad": {
+      "stappen": [
+       {
+        "titel": "Wat is een stappenplan?",
+        "tekst": "Een **stappenplan** is een lijst van stappen in een BEPAALDE VOLGORDE om iets te doen. Het zegt: doe eerst dit, dan dat, daarna dat."
+       },
+       {
+        "titel": "Volgorde = belangrijk",
+        "tekst": "De volgorde is geen optie — die is VAST. Je kunt niet 'bakken' voordat je 'beslag' hebt. Stappenplan dwingt logische volgorde af."
+       },
+       {
+        "titel": "Voorbeelden",
+        "tekst": "Een **recept** is een stappenplan. Een **routebeschrijving** ook. Bij de Doorstroomtoets krijg je vaak stappenplannen waar je moet zien welke stap waar staat."
+       }
+      ],
+      "woorden": [
+       {
+        "woord": "stappenplan",
+        "uitleg": "Lijst stappen in vaste volgorde."
+       },
+       {
+        "woord": "volgorde",
+        "uitleg": "Welke stap eerst, welke daarna."
+       }
+      ],
+      "theorie": "Toets-tip: bij stappenplan-vragen lees je ALLE stappen voordat je antwoord geeft. Vaak gaat de vraag over volgorde, ontbrekende stap, of wissel-mogelijkheid.",
+      "voorbeelden": [
+       {
+        "type": "stap",
+        "tekst": "Recept pannenkoek: 1) kom pakken, 2) ingrediënten, 3) mixen, 4) bakken. Volgorde vast."
+       },
+       {
+        "type": "stap",
+        "tekst": "Naar school: 1) opstaan, 2) ontbijten, 3) jas aan, 4) deur uit. Volgorde logisch."
+       }
+      ],
+      "basiskennis": [
+       {
+        "onderwerp": "Truc",
+        "uitleg": "Stappenplan = wat eerst, wat daarna. Niet kleur, niet wie."
+       }
+      ],
+      "niveaus": {
+       "basis": "Stappenplan zegt in welke VOLGORDE je iets doet.",
+       "simpeler": "Lijstje 'eerst X, dan Y, daarna Z'.",
+       "nogSimpeler": "Volgorde-lijst."
+      }
+     }
+    },
+    {
+     "q": "**Pijlen** in een schema laten zien:",
+     "options": [
+      "Verband of volgorde",
+      "De kleur",
+      "Hoeveel",
+      "Niets"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Niet kleur.",
+      "Niet hoeveel.",
+      "Een pijl wijst ergens naartoe. Wat laat dat zien?"
+     ],
+     "uitlegPad": {
+      "stappen": [
+       {
+        "titel": "Wat doen pijlen in schema's?",
+        "tekst": "**Pijlen** verbinden twee dingen en geven aan: hier hoort iets bij iets anders. Dat heet een VERBAND of een VOLGORDE."
+       },
+       {
+        "titel": "Voorbeelden",
+        "tekst": "Tijdlijn: '1900 → 1950 → 2000' = pijlen geven volgorde aan. Boomdiagram: 'Dieren → Zoogdieren' = pijl geeft 'is een soort van'-verband aan."
+       },
+       {
+        "titel": "Lezen: pijl volgen",
+        "tekst": "Begin bij vertrek-punt van pijl. Volg pijlrichting. Eindpunt is wat erop volgt. Sommige pijlen lopen TERUG of in CIRKEL — let goed op."
+       }
+      ],
+      "woorden": [
+       {
+        "woord": "pijl",
+        "uitleg": "Symbool dat verband of volgorde aangeeft."
+       },
+       {
+        "woord": "diagram",
+        "uitleg": "Schema met dozen + pijlen om iets uit te leggen."
+       }
+      ],
+      "theorie": "Toets-tip pijlen: pijl wijst van het EERSTE naar het LATERE. Of van 'oorzaak' naar 'gevolg'. Lees in de richting van de pijl.",
+      "voorbeelden": [
+       {
+        "type": "stap",
+        "tekst": "Stroomdiagram: 'Computer aan → log in → app open → werken'. Pijlen = volgorde stappen."
+       },
+       {
+        "type": "stap",
+        "tekst": "Indeling: 'Voertuigen → Auto's / Fietsen / Boten'. Pijlen = soort-van-relatie."
+       }
+      ],
+      "basiskennis": [
+       {
+        "onderwerp": "Truc",
+        "uitleg": "Pijl = van A naar B = hetzij volgorde, hetzij soort-van-relatie."
+       }
+      ],
+      "niveaus": {
+       "basis": "Pijlen tonen verband of volgorde tussen elementen.",
+       "simpeler": "Pijl van A naar B = A leidt naar B (of A is soort van B).",
+       "nogSimpeler": "Pijl = relatie."
+      }
+     }
+    },
+    {
+     "q": "Wat doe je **eerst** als je een schema krijgt?",
+     "options": [
+      "Titel en legenda lezen",
+      "Antwoorden gokken",
+      "Schema overslaan",
+      "Pijlen tellen"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Geen goed plan.",
+      "Dan mis je info.",
+      "Tellen geeft geen begrip."
+     ]
+    }
+   ]
+  },
+  {
+   "stap": 1,
+   "titel": "Stappenplan volgen",
+   "vanafGroep": null,
+   "interactief": false,
+   "heeftSvg": false,
+   "uitleg": "**Stappenplan** = lijst stappen in **volgorde**.\n\n**Voorbeeld — pannenkoeken**:\n1. Pak een kom.\n2. Doe meel, melk, ei in de kom.\n3. Mix totdat het glad is.\n4. Verhit boter in de pan.\n5. Schenk beslag in de pan.\n6. Bak 2 minuten per kant.\n\n**Stap-volgorde is belangrijk**:\n• Je kunt niet 'bakken' (stap 6) zonder eerst de **kom** te pakken.\n• Stappen dwingen een **logische volgorde** af.\n\n**toetsvraag-typen**:\n• 'Wat doe je vóór stap X?' → stap (X-1).\n• 'Wat doe je na stap Y?' → stap (Y+1).\n• 'Welke stap mist?' → kijk welke logische stap ontbreekt.\n• 'Mag je stap A en B verwisselen?' → check of de tweede de eerste nodig heeft.\n\n**Voorbeeld — verwisselbaar?**\n• Stap 2 ('meel') en stap 3 ('mix') — kun je niet wisselen, je moet eerst meel hebben voordat je kunt mixen.\n• Stap 1 en stap 4 ('kom' en 'pan') — wel wisselbaar (onafhankelijk).\n\n**Tip — Toets-stappen**:\nLees ALLE stappen voordat je een vraag beantwoordt. Vaak gaat de vraag over volgorde of het MISSEN van een stap.\n\n**Belangrijke woorden in stappen**:\n• 'eerst', 'vervolgens', 'dan', 'daarna', 'ten slotte'.\n• Deze woorden geven volgorde aan.",
+   "leesTekst": null,
+   "aantalNu": 3,
+   "nodig": 7,
+   "uitlegPadInBestaande": 0,
+   "uitlegPadVelden": [],
+   "bestaandeVragen": [
+    {
+     "q": "Stap-recept: 1) Kom pakken. 2) Meel + melk doen. 3) Mixen. 4) Bakken.\n\nWat doe je **direct vóór mixen**?",
+     "options": [
+      "Meel + melk doen",
+      "Bakken",
+      "Kom pakken",
+      "Niets"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Komt na mixen.",
+      "Dat is stap 1 — maar welke stap staat DIRECT vóór mixen?",
+      "Wel iets — kijk welke stap vlak vóór mixen staat."
+     ]
+    },
+    {
+     "q": "Stappen: 1) Spullen pakken. 2) Boterhammen smeren. 3) Inpakken. 4) Naar school.\n\n**Welke stap mist** als je beleg op je boterham wil?",
+     "options": [
+      "Beleg erop leggen na smeren",
+      "Boterham eten",
+      "Pak openmaken",
+      "Geen, alle stappen kloppen"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Geen onderdeel van klaarmaken.",
+      "Niet relevant voor klaarmaken.",
+      "Lees de vraag nog eens: wat wil je op je boterham?"
+     ]
+    },
+    {
+     "q": "Stappen: 1) Computer aan. 2) Wachtwoord typen. 3) Programma openen. 4) Bestand maken.\n\n**Mag je stap 1 en stap 2 wisselen?**",
+     "options": [
+      "Nee, computer moet eerst aan",
+      "Ja, wachtwoord kan eerst",
+      "Ja, de volgorde maakt niet uit",
+      "Soms, als je snel typt"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Probeer maar — wachtwoord typen op uitstaand toetsenbord werkt niet.",
+      "Waar typ je het wachtwoord in als de computer nog uit staat?",
+      "Snel typen helpt niet als het scherm nog uit is."
+     ]
+    }
+   ]
+  },
+  {
+   "stap": 2,
+   "titel": "Beslisboom — keuzes maken",
+   "vanafGroep": null,
+   "interactief": false,
+   "heeftSvg": false,
+   "uitleg": "**Beslisboom** = schema met **ja/nee-vragen** die je naar een antwoord leiden.\n\n**Voorbeeld — Welk dier ben je?**\n```\nLeef je in water?\n  Ja → Heb je veren?\n           Ja → eend\n           Nee → vis\n  Nee → Heb je vleugels?\n           Ja → vogel\n           Nee → zoogdier\n```\n\n**Hoe lezen**:\n1. Begin **bovenaan**.\n2. Beantwoord de eerste vraag.\n3. Volg de **ja-pijl** of de **nee-pijl**.\n4. Beantwoord de volgende vraag.\n5. Eindig bij een **eindvak** (geen vragen meer).\n\n**toetsvraag-typen**:\n• 'Welk antwoord krijg je als je deze keuzes maakt?' → loop pad door.\n• 'Welke vraag MIST?' → kijk welke logische vraag ontbreekt.\n• 'Wat als je bij ALLE vragen 'nee' antwoordt?' → volg alleen 'nee'-pijlen.\n\n**Voorbeeld — pad volgen**:\n• Leef je in water? **Ja**.\n• Heb je veren? **Nee**.\n• Antwoord = **vis**.\n\n**Tip — beslisboom**:\nMet een potlood het pad markeren helpt om niet te verdwalen. Of teken een lijntje van vraag naar antwoord.\n\n**Verschil met stappenplan**:\n• Stappenplan = **alle** stappen doen, in volgorde.\n• Beslisboom = je doet alleen de stappen die **bij jouw keuze** horen.",
+   "leesTekst": null,
+   "aantalNu": 3,
+   "nodig": 7,
+   "uitlegPadInBestaande": 1,
+   "uitlegPadVelden": [
+    "stappen",
+    "woorden",
+    "theorie",
+    "voorbeelden",
+    "basiskennis",
+    "niveaus"
+   ],
+   "bestaandeVragen": [
+    {
+     "q": "Beslisboom: 'Heb je honger? Ja → eet. Nee → drink water'.\n\nJe hebt **dorst**, niet honger. Wat doe je?",
+     "options": [
+      "Drink water",
+      "Eet",
+      "Iets anders",
+      "Niets"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Dat hoort bij 'honger'.",
+      "Beslisboom geeft maar 2 opties.",
+      "Beslisboom zegt iets te doen."
+     ],
+     "uitlegPad": {
+      "stappen": [
+       {
+        "titel": "Lees de vraag goed",
+        "tekst": "De beslisboom vraagt: 'Heb je HONGER?' (niet dorst). Beantwoord ALLEEN die vraag, niet wat jij EIGENLIJK voelt."
+       },
+       {
+        "titel": "Volg het pad",
+        "tekst": "Dorst, geen honger? → antwoord op de vraag 'heb je honger?' is **NEE**. Volg dus de 'Nee'-pijl → **drink water**."
+       },
+       {
+        "titel": "Beslisboom werkt logisch",
+        "tekst": "Een beslisboom geeft ALLEEN antwoorden op haar eigen vragen. Andere informatie (zoals 'ik heb dorst') gebruik je om je antwoord te geven, maar daarna volg je het pad."
+       }
+      ],
+      "woorden": [
+       {
+        "woord": "beslisboom",
+        "uitleg": "Schema met ja/nee-vragen die naar antwoord leiden."
+       },
+       {
+        "woord": "pad volgen",
+        "uitleg": "Bij elke vraag het juiste antwoord (ja/nee) kiezen en doorlopen."
+       }
+      ],
+      "theorie": "Toets-tip beslisboom: lees ALTIJD de exacte vraag, niet wat erop LIJKT. Vraag is 'honger?', dus antwoord ja of nee daarop. Daarna volg pijl.",
+      "voorbeelden": [
+       {
+        "type": "stap",
+        "tekst": "Vraag: 'regent het?' Het is bewolkt maar geen regen. → antwoord NEE. Volg nee-pijl."
+       },
+       {
+        "type": "stap",
+        "tekst": "Bij twijfel: kies de letterlijke betekenis van de vraag. 'Honger' is geen 'dorst'."
+       }
+      ],
+      "basiskennis": [
+       {
+        "onderwerp": "Truc",
+        "uitleg": "Beslisboom = stap voor stap. Bij elke vraag: alleen die vraag beantwoorden, dan volg pijl."
+       }
+      ],
+      "niveaus": {
+       "basis": "Volg het pad: dorst = geen honger → 'Nee' → drink water.",
+       "simpeler": "Beantwoord 'heb je honger?' met nee → volg nee-pad.",
+       "nogSimpeler": "Nee = water."
+      }
+     }
+    },
+    {
+     "q": "Beslisboom: 'Regen? Ja → jas aan. Nee → buiten zonder jas.'\n\nHet **regent niet** maar is wel koud. Volgens de beslisboom:",
+     "options": [
+      "Buiten zonder jas",
+      "Jas aan",
+      "Beslisboom werkt niet",
+      "Niets"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Hoort bij 'regen ja'.",
+      "Beslisboom werkt voor regen, niet voor temperatuur.",
+      "Wel — geeft pad."
+     ]
+    },
+    {
+     "q": "Wat is een **kenmerk** van een beslisboom?",
+     "options": [
+      "Heeft ja/nee-vragen",
+      "Heeft alleen plaatjes",
+      "Heeft geen pijlen",
+      "Heeft geen begin"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Wel met tekst.",
+      "Wel met pijlen.",
+      "Wel een begin."
+     ]
+    }
+   ]
+  },
+  {
+   "stap": 3,
+   "titel": "Schema's interpreteren — informatie eruit halen",
+   "vanafGroep": null,
+   "interactief": false,
+   "heeftSvg": false,
+   "uitleg": "Bij de Doorstroomtoets krijg je vaak een **schema/diagram met tekst en pijlen** en moet je een **vraag beantwoorden**.\n\n**Aanpak**:\n1. **Lees titel** — waar gaat het over?\n2. **Lees legenda** — wat betekenen de symbolen/kleuren?\n3. **Scan het schema** globaal.\n4. **Lees pas dan de vraag**.\n5. **Vind het juiste vakje** of pad.\n6. **Antwoord**.\n\n**Voorbeeld — voedselketen**:\n```\nGras → Konijn → Vos\n```\n• Gras wordt door konijn gegeten.\n• Konijn wordt door vos gegeten.\n• Pijl = 'wordt gegeten door'.\n\n**Vragen**:\n• 'Wat eet vos?' → konijn.\n• 'Wat eet konijn?' → gras.\n• 'Wat gebeurt als alle vossen weg zijn?' → konijnen worden niet meer gegeten → meer konijnen → minder gras.\n\n**Soorten schema's bij de Doorstroomtoets**:\n• **Stamboom** *(familie)*: opa-oma → vader → kind.\n• **Voedselketen** *(natuur)*: planten → planteneter → vleeseter.\n• **Productie-keten** *(spullen)*: katoen → garen → kleren.\n• **Tijdslijn**: jaartal-overzicht.\n\n**Toets-tip**:\nVeel schema-vragen vereisen logisch nadenken: 'wat als X wegvalt?'. Volg de pijlen na om het effect te bepalen.",
+   "leesTekst": null,
+   "aantalNu": 4,
+   "nodig": 6,
+   "uitlegPadInBestaande": 0,
+   "uitlegPadVelden": [],
+   "bestaandeVragen": [
+    {
+     "q": "Voedselketen: gras → konijn → vos.\n\n**Wat eet vos**?",
+     "options": [
+      "konijn",
+      "gras",
+      "vlinder",
+      "vos"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Kijk welk dier direct vóór de vos in de keten staat.",
+      "Niet in dit schema.",
+      "Vos eet zichzelf niet."
+     ]
+    },
+    {
+     "q": "Voedselketen: zaad → muis → uil.\n\n**Wat als muizen verdwijnen**?",
+     "options": [
+      "Uilen krijgen minder voedsel",
+      "Zaden eten meer",
+      "Niets",
+      "Konijnen komen"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Zaden eten niets.",
+      "Wel iets — kijk wie er van de muizen afhankelijk is.",
+      "Konijnen staan niet in deze keten."
+     ]
+    },
+    {
+     "q": "Productie-keten: katoen → garen → kleren.\n\n**Wat gebeurt eerst**?",
+     "options": [
+      "Katoen verbouwen",
+      "Kleren maken",
+      "Garen spinnen",
+      "Verkopen"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Komt later.",
+      "Komt na katoen.",
+      "Komt nog later."
+     ]
+    },
+    {
+     "q": "Stamboom: Opa Jan → Vader Piet → Kind Tom.\n\n**Wie is opa van Tom**?",
+     "options": [
+      "Jan",
+      "Piet",
+      "Tom",
+      "Geen"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Vader van Tom.",
+      "Tom is het kind.",
+      "Wel — volg de pijlen terug vanaf Tom."
+     ]
+    }
+   ]
+  },
+  {
+   "stap": 4,
+   "titel": "Eindopdracht — schema's mix",
+   "vanafGroep": null,
+   "interactief": false,
+   "heeftSvg": false,
+   "uitleg": "Mix-toets: stappenplan, beslisboom, schema-interpretatie.",
+   "leesTekst": null,
+   "aantalNu": 27,
+   "nodig": 0,
+   "uitlegPadInBestaande": 3,
+   "uitlegPadVelden": [
+    "stappen",
+    "woorden",
+    "theorie",
+    "voorbeelden",
+    "basiskennis",
+    "niveaus"
+   ],
+   "bestaandeVragen": [
+    {
+     "q": "Recept-stappen: 1) Boter smelten. 2) Eieren breken in kom. 3) Klutsen. 4) Bakken in pan.\n\n**Wat doe je direct na klutsen**?",
+     "options": [
+      "Bakken in pan",
+      "Boter smelten",
+      "Eieren breken",
+      "Niets"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Stap 1.",
+      "Stap 2.",
+      "Wel — kijk welke stap na klutsen staat."
+     ]
+    },
+    {
+     "q": "Beslisboom: 'Is het warm? Ja → korte broek. Nee → lange broek.'\n\nHet is **koud**. Wat draag je?",
+     "options": [
+      "Lange broek",
+      "Korte broek",
+      "Allebei",
+      "Niets"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Bij 'warm'.",
+      "Eén keuze.",
+      "Wel iets aan."
+     ]
+    },
+    {
+     "q": "Voedselketen: bladluizen → lieveheersbeestjes → vogels.\n\n**Wie eet de bladluizen**?",
+     "options": [
+      "Lieveheersbeestjes",
+      "Vogels",
+      "Niets",
+      "Bladluizen onderling"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Vogels staan een stap verder in de keten, niet direct ná bladluizen.",
+      "Niet rechtstreeks — kijk welke pijl ER NA bladluizen volgt.",
+      "Niet in dit schema."
+     ]
+    },
+    {
+     "q": "Stappen: 1) Computer aan. 2) Browser openen. 3) Site bezoeken. 4) Iets bestellen.\n\n**Welke stap mist** voor het betalen?",
+     "options": [
+      "Betaalmethode kiezen",
+      "Computer uit",
+      "Browser sluiten",
+      "Geen"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Hoort niet hier.",
+      "Idem.",
+      "Wel — betalen ontbreekt."
+     ]
+    },
+    {
+     "q": "Tijdslijn: 1900 — auto. 1950 — TV. 1990 — internet. 2007 — smartphone.\n\n**Wat kwam eerst**?",
+     "options": [
+      "Auto",
+      "TV",
+      "Internet",
+      "Smartphone"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Kwam later.",
+      "Veel later.",
+      "Veel later."
+     ]
+    },
+    {
+     "q": "Een **stappenplan** is gegeven: 1) Lees de hele opgave. 2) Onderstreep belangrijke woorden. 3) Maak schets. 4) Reken uit. 5) Controleer antwoord.\n\nWelke stap is gericht op **niet rekenen maar BEGRIJPEN**?",
+     "options": [
+      "Stap 1 (lees de hele opgave)",
+      "Stap 4 (reken uit)",
+      "Stap 5 (controleer)",
+      "Geen — alle gaan over rekenen"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Dat is uitrekenen, niet begrijpen.",
+      "Controle is na rekenen, niet begrijpen vooraf.",
+      "Wel — kijk naar wat je doet vóórdat je gaat rekenen."
+     ],
+     "uitlegPad": {
+      "stappen": [
+       {
+        "titel": "Stappenplan = volgorde",
+        "tekst": "Een stappenplan helpt je iets **systematisch + zonder fout** te doen. Vooral handig bij:\n• Redactiesommen (lange verhaal-vragen)\n• Examen-opgaven\n• Practicum biologie/scheikunde\n• Een recept\n\nEerste stap is bijna ALTIJD: **lees rustig, begrijp wat er gevraagd wordt** — niet meteen aan rekenen!"
+       },
+       {
+        "titel": "Toets-tip: 5-stappen-rekenen",
+        "tekst": "**Bekend stappenplan rekenen** (uit veel rekenboeken):\n1. **Lees + begrijp** vraag\n2. **Onderstreep** getallen + sleutelwoorden\n3. **Schets** (als handig)\n4. **Reken** uit\n5. **Controleer** antwoord (klopt eenheid? Past schatting?)\n\nVeelgemaakte fout: stap 4 meteen doen zonder 1+2. Dan reken je iets anders dan gevraagd."
+       },
+       {
+        "titel": "Studievaardigheid voor de Doorstroomtoets",
+        "tekst": "**Studievaardigheid** (slim leren + werken) helpt bij de Doorstroomtoets. Stappenplannen vallen daaronder:\n• **Lezen** (begrijpend lezen-vragen)\n• **Rekenen** (5-stappen)\n• **Wereldoriëntatie** (informatie zoeken)\n\nEen vaste aanpak helpt je om minder slordige fouten te maken."
+       }
+      ],
+      "woorden": [
+       {
+        "woord": "stappenplan",
+        "uitleg": "Lijst van stappen in vaste volgorde voor een taak."
+       },
+       {
+        "woord": "studievaardigheid",
+        "uitleg": "Vaardigheid om effectief te leren + werken."
+       },
+       {
+        "woord": "structureren",
+        "uitleg": "Iets ordenen in vaste delen of stappen."
+       }
+      ],
+      "theorie": "Handige stappenplan-types:\n• **Rekenen** — 5-stappen (lees → markeer → schets → reken → check)\n• **Schrijven** — opzet → uitwerken → herlezen → fout-check\n• **Lezen** — globaal lezen → vraag begrijpen → terug naar tekst → antwoord kiezen\n• **Probleem oplossen** — wat weet ik? Wat zoek ik? Welke stappen?",
+      "voorbeelden": [
+       {
+        "type": "feit",
+        "tekst": "Schaak-grootmeesters gebruiken óók stappenplannen (positie analyseren → opties bedenken → beste zet → uitvoeren). Gestructureerd denken werkt overal."
+       }
+      ],
+      "basiskennis": [
+       {
+        "onderwerp": "Niet 'tijd verspillen'",
+        "uitleg": "Stap 1 (lezen) lijkt vertraging maar BESPAART tijd: betere antwoorden, minder fouten, minder herrekenen."
+       }
+      ],
+      "niveaus": {
+       "basis": "Stap 1 = lezen.",
+       "simpeler": "Stappenplan stap 1 is altijd: lees + begrijp. Pas dan rekenen. Toets-tip: niet meteen tellen, eerst de vraag SNAPPEN.",
+       "nogSimpeler": "Stap 1"
+      }
+     }
+    },
+    {
+     "q": "**Beslisboom voor schooladvies VMBO/HAVO/VWO**:\n• Toetsscore 525-535 → VMBO-GL/TL\n• 536-545 → HAVO\n• 546+ → VWO\n\n**Welk advies bij score 540**?",
+     "options": [
+      "HAVO",
+      "VMBO-GL/TL",
+      "VWO",
+      "Geen"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Te laag — 540 zit hoger dan VMBO-grens.",
+      "Te hoog — VWO begint pas bij 546.",
+      "Wel een advies."
+     ],
+     "uitlegPad": {
+      "stappen": [
+       {
+        "titel": "Wat is een beslisboom?",
+        "tekst": "Een **beslisboom** is een schema waarmee je via **JA/NEE-vragen** of **getallen-vergelijkingen** tot een conclusie komt.\n\nVoorbeeld:\n```\nIs score ≥ 546? → JA → VWO\n                  → NEE → Is score ≥ 536? → JA → HAVO\n                                            → NEE → VMBO\n```\n\nVeel gebruikt bij: schooladvies, medische diagnose, kledings-keuze (warm/koud), recept-keuze."
+       },
+       {
+        "titel": "Stap voor stap: score 540",
+        "tekst": "Voor score **540** gaan we door de boom:\n1. Is 540 ≥ 546? **NEE** (540 < 546, geen VWO)\n2. Is 540 ≥ 536? **JA** (540 > 536) → **HAVO** ✓\n\nDe regels:\n• 525-535: **VMBO-GL/TL**\n• 536-545: **HAVO**\n• 546+: **VWO**\n\n540 zit in 536-545 → HAVO."
+       },
+       {
+        "titel": "Toets-feit: schooladvies in NL",
+        "tekst": "**Belangrijk**: dit voorbeeld is VERZONNEN. Echt schooladvies hangt af van **veel factoren**:\n• Oordeel van de leerkracht en school\n• Doorstroomtoets-score\n• Motivatie + werkhouding\n• Sociale + emotionele ontwikkeling\n\nHet **schooladvies van de school** is leidend. Scoort een kind op de Doorstroomtoets hoger, dan moet de school het advies naar boven bijstellen (tenzij dat niet in het belang van het kind is)."
+       }
+      ],
+      "woorden": [
+       {
+        "woord": "beslisboom",
+        "uitleg": "Schema dat via vragen of getal-vergelijkingen tot een keuze leidt."
+       },
+       {
+        "woord": "Doorstroomtoets",
+        "uitleg": "Officiële naam sinds 2024 voor de vroegere 'eindtoets' in groep 8."
+       },
+       {
+        "woord": "schooladvies",
+        "uitleg": "Aanbeveling van basisschool voor middelbare school (VMBO/HAVO/VWO)."
+       }
+      ],
+      "theorie": "Beslisboom-stappen (algemeen):\n1. **Start bij wortel** (eerste vraag)\n2. **Beantwoord** met JA/NEE of getal-vergelijking\n3. **Volg de tak** die past\n4. **Herhaal** tot je aan een bladknoop (eind-conclusie) komt\n\nGebruikt in: medische diagnose, computer-algoritmen, recept-keuze, route-planning.",
+      "voorbeelden": [
+       {
+        "type": "voorbeeld",
+        "tekst": "Beslisboom 'wat trek ik aan?': Regent het? → JA → jas + paraplu. → NEE → Koud? → JA → trui. → NEE → T-shirt."
+       },
+       {
+        "type": "voorbeeld",
+        "tekst": "Beslisboom 'vis-naam': Heeft schubben? → Heeft tentakels? etc. → Zo kunnen biologen soorten onderscheiden."
+       }
+      ],
+      "basiskennis": [
+       {
+        "onderwerp": "Onthoud grenzen",
+        "uitleg": "Bij beslisboom-vragen op de Doorstroomtoets: kijk goed of grens INCLUSIEF is. '≥ 536' betekent 536 telt mee. '> 536' niet."
+       }
+      ],
+      "niveaus": {
+       "basis": "HAVO.",
+       "simpeler": "540 valt in 536-545 → HAVO-advies. Beslisboom: te laag voor VWO (≥546), te hoog voor VMBO (525-535).",
+       "nogSimpeler": "HAVO"
+      }
+     }
+    },
+    {
+     "q": "Een **diagram**: pijl van 'zon' naar 'plant', pijl van 'plant' naar 'koe', pijl van 'koe' naar 'mens'.\n\n**Wat stelt dit voor**?",
+     "options": [
+      "Voedselketen",
+      "Familie-stamboom",
+      "Tijdslijn",
+      "Recept"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Niet — geen familieleden.",
+      "Niet — geen jaren genoemd.",
+      "Niet — geen voedselbereiding."
+     ],
+     "uitlegPad": {
+      "stappen": [
+       {
+        "titel": "Wat is een voedselketen?",
+        "tekst": "Een **voedselketen** toont wie wie eet in de natuur. De **pijl** wijst naar **wie er EET** (zo stroomt de energie):\n• Zon → plant (plant gebruikt zonne-energie via fotosynthese)\n• Plant → koe (koe eet plant)\n• Koe → mens (mens eet koe = vlees)\n\nDe energie **stroomt door** de keten — elke stap verliest energie als warmte. Daarom: weinig roofdieren bovenaan, veel planten onderaan."
+       },
+       {
+        "titel": "Onderdelen voedselketen",
+        "tekst": "**Producenten** (begin van de keten): planten — maken energie van zon via **fotosynthese**.\n**Consumenten**:\n• **Eerste-orde** (primair) — eten planten: koeien, konijnen, sprinkhanen\n• **Tweede-orde** (secundair) — eten primaire consumenten: vossen, kippen, mensen\n• **Derde-orde** (tertiair) — top-roofdieren: tijger, haai, adelaar\n\n**Afbrekers**: bacteriën + schimmels die dode planten/dieren opruimen → terug naar grond → nieuwe planten."
+       },
+       {
+        "titel": "Toets-feit: voedselweb vs keten",
+        "tekst": "**Voedselketen** = simpel, 1 lijn (zon → A → B → C).\n**Voedselweb** = realistischer, meerdere ketens door elkaar.\n\nBv. een vos eet niet alleen konijnen, maar ook muizen, vogels, bessen. Konijnen worden gegeten door vossen, vogels, mensen. Tekening: ALLE pijlen samen = web.\n\nToetsen vragen vaak: 'Wat gebeurt als roofdier verdwijnt?' Antwoord: prooi-populatie stijgt → plant-populatie daalt → systeem uit balans."
+       }
+      ],
+      "woorden": [
+       {
+        "woord": "voedselketen",
+        "uitleg": "Lijn die toont wie wie eet in natuur. Energie stroomt door."
+       },
+       {
+        "woord": "fotosynthese",
+        "uitleg": "Proces waarbij planten zonlicht + CO₂ + water omzetten in suiker (energie) + zuurstof."
+       },
+       {
+        "woord": "consument",
+        "uitleg": "Dier dat planten of andere dieren eet (maakt zelf geen voedsel)."
+       },
+       {
+        "woord": "afbreker",
+        "uitleg": "Bacterie/schimmel die dood materiaal opruimt."
+       }
+      ],
+      "theorie": "Toets-tip: voedselketen lezen\n• **A → B betekent 'A wordt gegeten door B'**: de energie stroomt in de richting van de pijl\n• Bij elke nieuwe schakel: ~90% energie verloren als warmte (ecologische piramide)",
+      "voorbeelden": [
+       {
+        "type": "voorbeeld",
+        "tekst": "Eenvoudige voedselketen tuin: blad → rups → vogel → kat."
+       },
+       {
+        "type": "voorbeeld",
+        "tekst": "Zee-voedselketen: plankton → kleine vis → tonijn → mens."
+       }
+      ],
+      "basiskennis": [
+       {
+        "onderwerp": "Niet schaal-keten",
+        "uitleg": "Voedselketen = wie eet wie. Niet 'wie is groter' (anders zou olifant bovenaan staan)."
+       }
+      ],
+      "niveaus": {
+       "basis": "Voedselketen.",
+       "simpeler": "Dit diagram toont een voedselketen: zonne-energie → plant → koe → mens. Pijl = wat geeft energie aan wat.",
+       "nogSimpeler": "Voedselketen"
+      }
+     }
+    },
+    {
+     "q": "Wat is een **beslisboom**?",
+     "options": [
+      "Schema met ja/nee-vragen die leidt naar antwoord",
+      "Een boom waar je onder zit om na te denken",
+      "Een stappenplan zonder vragen",
+      "Een tijdslijn met jaartallen"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Niet.",
+      "Niet — heeft vragen.",
+      "Niet — geen tijd."
+     ]
+    },
+    {
+     "q": "Wat hoort op een **tijdslijn**?",
+     "options": [
+      "Gebeurtenissen in chronologische volgorde",
+      "Willekeurige feiten door elkaar",
+      "Recepten met ingrediënten",
+      "Tekeningen zonder tekst"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Niet — volgorde maakt uit.",
+      "Niet relevant.",
+      "Niet specifiek."
+     ]
+    },
+    {
+     "q": "Een stappenplan **'pannenkoek bakken'** begint met?",
+     "options": [
+      "Beslag mengen",
+      "Op tafel zetten",
+      "Pan wassen",
+      "Eieren scheiden"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Laatste stap.",
+      "Dat hoort niet bij het bakken zelf.",
+      "Bij sommige recepten, maar niet altijd eerste."
+     ]
+    },
+    {
+     "q": "Bij **'A → B'** in voedselketen?",
+     "options": [
+      "A wordt door B gegeten",
+      "B leeft naast A",
+      "A en B zijn vrienden",
+      "Geen betekenis"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Niet — pijl betekent eten/energie.",
+      "Niet.",
+      "Wel — waar staat de pijl voor in een voedselketen?"
+     ]
+    },
+    {
+     "q": "Wat is een **stroomdiagram**?",
+     "options": [
+      "Schema met stappen en beslissingen",
+      "Tabel",
+      "Tijdslijn",
+      "Tekening"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Geen schema.",
+      "Geen beslissingen.",
+      "Niet schematisch."
+     ]
+    },
+    {
+     "q": "Welk symbool gebruik je voor een **ja/nee-vraag** in beslisboom?",
+     "options": [
+      "Ruit",
+      "Rechthoek",
+      "Cirkel",
+      "Driehoek"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Dat is actie/stap.",
+      "Dat is begin/eind.",
+      "Niet standaard."
+     ]
+    },
+    {
+     "q": "Welk symbool voor **begin/eind** in stroomdiagram?",
+     "options": [
+      "Cirkel of ovaal",
+      "Ruit",
+      "Rechthoek",
+      "Pijl"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Beslissing.",
+      "Actie.",
+      "Verbinding."
+     ]
+    },
+    {
+     "q": "In een **tabel** staan?",
+     "options": [
+      "Rijen + kolommen met data",
+      "Verhalen",
+      "Pijlen",
+      "Recepten"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Geen verhaal.",
+      "Niet alleen pijlen.",
+      "Soms maar niet altijd."
+     ]
+    },
+    {
+     "q": "Wat is de **eerste kolom** in een tabel vaak?",
+     "options": [
+      "Categorieën/labels",
+      "Willekeurige getallen",
+      "De totalen",
+      "Reclame"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Niet willekeurig.",
+      "Vaak rechts.",
+      "Niet."
+     ]
+    },
+    {
+     "q": "Welk schema toont **hiërarchie** (boven-onder)?",
+     "options": [
+      "Boomdiagram",
+      "Tijdslijn",
+      "Tabel",
+      "Beslisboom"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Tijd-volgorde.",
+      "Data-overzicht.",
+      "Wel boom, maar voor keuzes."
+     ]
+    },
+    {
+     "q": "Welke volgorde hoort in **stappenplan 'klaarmaken brood'**?",
+     "options": [
+      "Brood pakken → besmeren → eten",
+      "Eten → brood pakken → besmeren",
+      "Besmeren → brood pakken → eten",
+      "Eten → besmeren → brood pakken"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Niet — eerst pakken.",
+      "Niet — eerst brood.",
+      "Niet — laatste = eten."
+     ]
+    },
+    {
+     "q": "Wat zoek je in een **legenda** bij een schema?",
+     "options": [
+      "Wat de symbolen betekenen",
+      "De auteur",
+      "De datum",
+      "De prijs"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Auteur staat los van de legenda.",
+      "Datum is bij-info, niet legenda-werk.",
+      "Prijs hoort niet in een legenda."
+     ]
+    },
+    {
+     "q": "Bij een **flowchart**: wat doe je bij een ruit?",
+     "options": [
+      "Antwoord op ja/nee-vraag kiezen",
+      "Stap uitvoeren",
+      "Stoppen",
+      "Nieuw begin"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Dat is rechthoek.",
+      "Dat is ovaal-eind.",
+      "Dat is ovaal-begin."
+     ]
+    },
+    {
+     "q": "Wat is een **Venn-diagram**?",
+     "options": [
+      "Cirkels die overlappen om gemeenschappelijk te tonen",
+      "Een tijdslijn met jaartallen",
+      "Een boom met vertakkingen",
+      "Een tabel met rijen en kolommen"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Tijdslijn = volgorde van data, geen cirkels.",
+      "Boom = vertakkingen, geen overlap.",
+      "Tabel = rijen + kolommen, geen cirkels."
+     ]
+    },
+    {
+     "q": "Wat is de zin 'kijk in tabel 2' in een tekst?",
+     "options": [
+      "Een verwijzing/referentie",
+      "Een mening",
+      "Een conclusie",
+      "Onzin"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Niet — feitelijk.",
+      "Niet conclusie.",
+      "Wel zinvol."
+     ]
+    },
+    {
+     "q": "Een **organogram** toont?",
+     "options": [
+      "Wie boven/onder wie staat in organisatie",
+      "Hoe laat het is in andere landen",
+      "Welke stappen een recept heeft",
+      "Hoe een verhaal afloopt"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Tijd toon je in een tijdslijn.",
+      "Recept = stappenplan, geen organisatie.",
+      "Verhaal = tekst, geen schema."
+     ]
+    },
+    {
+     "q": "Wat doet een **pijl** in een stappenplan?",
+     "options": [
+      "Wijst naar volgende stap",
+      "Verbiedt",
+      "Toont fouten",
+      "Markeert begin"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Niet.",
+      "Niet relevant.",
+      "Niet specifiek."
+     ]
+    },
+    {
+     "q": "Bij **chronologisch** schema staan dingen op?",
+     "options": [
+      "Volgorde van tijd",
+      "Alfabet",
+      "Grootte",
+      "Willekeurig"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Alfabetisch sorteer je een namenlijst, niet chronologisch.",
+      "Op grootte is op afmeting, niet op tijd.",
+      "Chronologisch heeft juist WEL een volgorde."
+     ]
+    },
+    {
+     "q": "Wat helpt het meest om **stappenplan** te onthouden?",
+     "options": [
+      "Stappen genummerd zien",
+      "Willekeurige kleuren",
+      "Lange zin per stap",
+      "Tekening zonder tekst"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Niet.",
+      "Te lang om snel te zien.",
+      "Tekst helpt ook."
+     ]
+    }
+   ]
+  }
+ ]
+}

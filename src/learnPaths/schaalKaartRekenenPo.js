@@ -148,6 +148,96 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Schaal 1 : 500 — 1 cm op de kaart is hoeveel meter in het echt?",
+        options: ["5 m", "50 m", "500 m", "0,5 m"],
+        answer: 0,
+        wrongHints: [null, "Te veel — hoeveel cm gaan er in 1 m?", null, "Te weinig — 500 cm is meer dan 1 m."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lees het schaalgetal",
+              tekst: "Bij 1 : 500 is 1 cm op de kaart 500 cm in het echt.",
+            },
+            {
+              titel: "Zet om naar meter",
+              tekst: "Deel de centimeters door 100, want 100 cm is 1 m.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schaalgetal",
+              uitleg: "Het getal na de dubbele punt. Het zegt hoeveel cm in het echt bij 1 cm op de kaart hoort.",
+            },
+          ],
+          theorie: "Bij een schaal hoort bij **1 cm op de kaart** altijd het **schaalgetal in cm** in het echt. Wil je het antwoord in meter, deel dan door 100.",
+          voorbeelden: [
+            {
+              type: "school",
+              tekst: "Op een plattegrond van het schoolplein met schaal 1 : 500 staat 1 cm voor een stuk plein van een paar stappen lang.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "cm naar m",
+              uitleg: "100 cm = 1 m. Deel door 100 om van cm naar m te gaan.",
+            },
+          ],
+          niveaus: {
+            basis: "1 cm = 500 cm = 5 m.",
+            simpeler: "500 cm is hoeveel meter? Deel door 100.",
+            nogSimpeler: "500 ÷ 100 = ?",
+          },
+        },
+      },
+      {
+        q: "Schaal 1 : 200.000 — 1 cm op de kaart is hoeveel km in het echt?",
+        options: ["2 km", "20 km", "200 km", "0,2 km"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — hoeveel cm gaan er in 1 km?",
+          null,
+          "Te weinig — 200.000 cm is meer dan 1 km.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lees het schaalgetal",
+              tekst: "Bij 1 : 200.000 is 1 cm op de kaart 200.000 cm in het echt.",
+            },
+            {
+              titel: "Zet om naar km",
+              tekst: "100.000 cm is 1 km, dus kijk hoe vaak 100.000 in 200.000 past.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kilometer",
+              uitleg: "Een afstand van 1.000 meter. Dat is 100.000 cm.",
+            },
+          ],
+          theorie: "Bij schaal 1 : 100.000 is 1 cm op de kaart precies **1 km**. Is het schaalgetal **twee keer zo groot**, dan hoort bij 1 cm ook **twee keer zoveel** km.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Op een autokaart van Nederland is alles heel sterk verkleind, zodat een hele provincie op één blad past.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "cm naar km",
+              uitleg: "100.000 cm = 1 km.",
+            },
+          ],
+          niveaus: {
+            basis: "200.000 cm = 2 × 100.000 cm = 2 km.",
+            simpeler: "Hoe vaak past 100.000 in 200.000?",
+            nogSimpeler: "200.000 ÷ 100.000 = ?",
+          },
+        },
+      },
     ],
   },
 
@@ -288,6 +378,195 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Schaal 1 : 500. Op de kaart is een sloot 7 cm lang. Hoe lang is de sloot in het echt in meter?",
+        options: ["35 m", "3,5 m", "350 m", "3.500 m"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — controleer de omrekening van cm naar m.",
+          null,
+          "Dat zijn centimeters, niet meters.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Keer het schaalgetal",
+              tekst: "Vermenigvuldig de 7 cm op de kaart met 500.",
+            },
+            {
+              titel: "Zet om naar meter",
+              tekst: "Deel het aantal cm door 100.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vermenigvuldigen",
+              uitleg: "Keer doen: 7 × 500 betekent 7 keer 500 bij elkaar.",
+            },
+          ],
+          theorie: "Van kaart naar echt doe je **× schaalgetal**. Je krijgt dan centimeters. Deel daarna door **100** om meters te krijgen.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Op de plattegrond van je wijk meet je een sloot op. Met de schaal reken je uit hoe lang hij echt is.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "cm naar m",
+              uitleg: "100 cm = 1 m.",
+            },
+          ],
+          niveaus: {
+            basis: "7 × 500 = 3.500 cm = 35 m.",
+            simpeler: "Reken eerst 7 × 500, deel dan door 100.",
+            nogSimpeler: "3.500 ÷ 100 = ?",
+          },
+        },
+      },
+      {
+        q: "Schaal 1 : 40.000. Op de kaart is een weg 5 cm. Hoeveel km is de weg in het echt?",
+        options: ["2 km", "20 km", "5 km", "0,2 km"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — hoeveel cm gaan er in 1 km?",
+          "Dat zou kloppen bij schaal 1 : 100.000 — kijk nog eens naar het schaalgetal.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Keer het schaalgetal",
+              tekst: "5 × 40.000 = 200.000 cm.",
+            },
+            {
+              titel: "Zet om naar km",
+              tekst: "Deel door 100.000, want 100.000 cm is 1 km.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schaalgetal",
+              uitleg: "Het getal na de dubbele punt; bij kaart naar echt vermenigvuldig je daarmee.",
+            },
+          ],
+          theorie: "Van kaart naar echt: **× schaalgetal**, dan omzetten. Je krijgt eerst centimeters; deel die door **100.000** om kilometers te krijgen.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Op een autokaart meet je met een liniaal hoe ver het is naar de stad waar je oma of opa woont.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "cm naar km",
+              uitleg: "100.000 cm = 1 km.",
+            },
+          ],
+          niveaus: {
+            basis: "5 × 40.000 = 200.000 cm = 2 km.",
+            simpeler: "Reken 5 × 40.000 en deel dan door 100.000.",
+            nogSimpeler: "200.000 ÷ 100.000 = ?",
+          },
+        },
+      },
+      {
+        q: "Schaal 1 : 2.000. Op de plattegrond is een straat 9 cm. Hoe lang is de straat in het echt?",
+        options: ["180 m", "18 m", "1.800 m", "90 m"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — controleer de omrekening van cm naar m.",
+          "Te veel — hoeveel cm gaan er in 1 m?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Keer het schaalgetal",
+              tekst: "9 × 2.000 = 18.000 cm.",
+            },
+            {
+              titel: "Zet om naar meter",
+              tekst: "Deel door 100: 18.000 ÷ 100.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "plattegrond",
+              uitleg: "Een kaart van een klein gebied, zoals een wijk of een gebouw, van bovenaf getekend.",
+            },
+          ],
+          theorie: "Van kaart naar echt: **× schaalgetal** geeft centimeters. Deel daarna door **100** voor meters. Bij 1 : 2.000 is 1 cm op de plattegrond 20 m in het echt.",
+          voorbeelden: [
+            {
+              type: "school",
+              tekst: "Op een plattegrond van de buurt rond school zoek je uit hoe lang de straat is waar je elke dag langs loopt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "cm naar m",
+              uitleg: "100 cm = 1 m.",
+            },
+          ],
+          niveaus: {
+            basis: "1 cm = 20 m, dus 9 cm = 180 m.",
+            simpeler: "Hoeveel meter is 1 cm? Doe dat 9 keer.",
+            nogSimpeler: "9 × 20 m = ?",
+          },
+        },
+      },
+      {
+        q: "Schaal 1 : 250.000. Op de kaart liggen twee steden 4 cm uit elkaar. Hoeveel km is dat in het echt?",
+        options: ["10 km", "1 km", "100 km", "4 km"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — reken de cm goed om naar km.",
+          null,
+          "Dat zou kloppen bij schaal 1 : 100.000.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Keer het schaalgetal",
+              tekst: "4 × 250.000 = 1.000.000 cm.",
+            },
+            {
+              titel: "Zet om naar km",
+              tekst: "Deel door 100.000, want 100.000 cm is 1 km.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "afstand",
+              uitleg: "Hoe ver twee plekken van elkaar af liggen.",
+            },
+          ],
+          theorie: "Van kaart naar echt: **× schaalgetal**. Bij heel grote getallen helpt het om daarna te delen door **100.000**: zo zie je meteen hoeveel km het is.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Met een kaart van Nederland bekijk je hoe ver twee steden uit elkaar liggen voor een dagje uit.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "cm naar km",
+              uitleg: "100.000 cm = 1 km.",
+            },
+          ],
+          niveaus: {
+            basis: "4 × 250.000 = 1.000.000 cm = 10 km.",
+            simpeler: "Reken 4 × 250.000 en deel door 100.000.",
+            nogSimpeler: "1.000.000 ÷ 100.000 = ?",
+          },
+        },
+      },
     ],
   },
 
@@ -423,6 +702,195 @@ const steps = [
             basis: "10 km = 1.000.000 cm; 1.000.000 ÷ 50.000 = 20 cm.",
             simpeler: "Bij 1 : 50.000 is 1 cm op de kaart 0,5 km. Dus 10 km is 10 ÷ 0,5 = 20 cm.",
             nogSimpeler: "1 cm = 0,5 km, hoeveel cm is dan 10 km?",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Schaal 1 : 500. Een heg is in het echt 40 m lang. Hoe lang is hij op de kaart?",
+        options: ["8 cm", "80 cm", "0,8 cm", "800 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — hoeveel cm is 40 m precies?",
+          null,
+          "Vergeet niet door het schaalgetal te delen.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst naar centimeter",
+              tekst: "40 m = 4.000 cm.",
+            },
+            {
+              titel: "Dan delen door het schaalgetal",
+              tekst: "4.000 ÷ 500 geeft de lengte op de kaart.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "delen",
+              uitleg: "Kijken hoe vaak een getal in een ander getal past.",
+            },
+          ],
+          theorie: "Van echt naar kaart: zet de echte afstand eerst om naar **cm**, en deel dan door het **schaalgetal**.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Je tekent je eigen tuin op schaal en wilt weten hoe lang de heg op papier wordt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "m naar cm",
+              uitleg: "1 m = 100 cm.",
+            },
+          ],
+          niveaus: {
+            basis: "4.000 ÷ 500 = 8 cm.",
+            simpeler: "Maak van 40 m eerst cm, deel dan door 500.",
+            nogSimpeler: "4.000 ÷ 500 = ?",
+          },
+        },
+      },
+      {
+        q: "Schaal 1 : 200.000. Twee steden liggen in het echt 30 km uit elkaar. Hoe ver is dat op de kaart?",
+        options: ["15 cm", "30 cm", "150 cm", "1,5 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat zou kloppen bij schaal 1 : 100.000 — kijk nog eens naar het schaalgetal.",
+          null,
+          "Te klein — hoeveel cm zijn 30 km?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst naar centimeter",
+              tekst: "30 km = 3.000.000 cm.",
+            },
+            {
+              titel: "Dan delen door het schaalgetal",
+              tekst: "3.000.000 ÷ 200.000 geeft de afstand op de kaart.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kilometer",
+              uitleg: "1 km = 1.000 m = 100.000 cm.",
+            },
+          ],
+          theorie: "Van echt naar kaart: **omzetten naar cm** en dan **÷ schaalgetal**. Handig: bij 1 : 200.000 is 1 cm op de kaart 2 km. Dus kijk hoe vaak 2 km in de echte afstand past.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Je maakt een kaartje voor een fietstocht en tekent waar de twee steden komen te liggen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "km naar cm",
+              uitleg: "1 km = 100.000 cm.",
+            },
+          ],
+          niveaus: {
+            basis: "1 cm = 2 km, dus 30 km = 15 cm.",
+            simpeler: "Hoe vaak past 2 km in 30 km?",
+            nogSimpeler: "30 ÷ 2 = ?",
+          },
+        },
+      },
+      {
+        q: "Schaal 1 : 2.000. Een fietspad is in het echt 120 m lang. Hoe lang wordt het op de kaart?",
+        options: ["6 cm", "60 cm", "0,6 cm", "600 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — hoeveel cm is 120 m precies?",
+          "Te klein — reken 120 m goed om naar cm.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst naar centimeter",
+              tekst: "120 m = 12.000 cm.",
+            },
+            {
+              titel: "Dan delen door het schaalgetal",
+              tekst: "12.000 ÷ 2.000 geeft de lengte op de kaart.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "omzetten",
+              uitleg: "Een lengte in een andere eenheid schrijven, bijvoorbeeld meter in centimeter.",
+            },
+          ],
+          theorie: "Van echt naar kaart: zet meters eerst om naar **cm** (× 100) en deel dan door het **schaalgetal**.",
+          voorbeelden: [
+            {
+              type: "sport",
+              tekst: "Voor een fietswedstrijd teken je de route op een plattegrond met schaal 1 : 2.000.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "m naar cm",
+              uitleg: "1 m = 100 cm.",
+            },
+          ],
+          niveaus: {
+            basis: "12.000 ÷ 2.000 = 6 cm.",
+            simpeler: "Maak van 120 m eerst cm, deel dan door 2.000.",
+            nogSimpeler: "12.000 ÷ 2.000 = ?",
+          },
+        },
+      },
+      {
+        q: "Schaal 1 : 25.000. Een wandelroute is in het echt 3 km lang. Hoe lang is de route op de kaart?",
+        options: ["12 cm", "120 cm", "1,2 cm", "3 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — vergeet niet door het schaalgetal te delen.",
+          null,
+          "Dat zou kloppen bij schaal 1 : 100.000.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst naar centimeter",
+              tekst: "3 km = 300.000 cm.",
+            },
+            {
+              titel: "Dan delen door het schaalgetal",
+              tekst: "300.000 ÷ 25.000 geeft de lengte op de kaart.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "wandelroute",
+              uitleg: "Een uitgezette weg die je te voet loopt.",
+            },
+          ],
+          theorie: "Van echt naar kaart: **omzetten naar cm** en dan **÷ schaalgetal**. Bij 1 : 25.000 hoort 1 km bij 4 cm op de kaart.",
+          voorbeelden: [
+            {
+              type: "sport",
+              tekst: "Op een wandelkaart zie je hoe lang een route op papier is voordat je gaat lopen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "km naar cm",
+              uitleg: "1 km = 100.000 cm.",
+            },
+          ],
+          niveaus: {
+            basis: "300.000 ÷ 25.000 = 12 cm.",
+            simpeler: "Maak van 3 km eerst cm, deel dan door 25.000.",
+            nogSimpeler: "300.000 ÷ 25.000 = ?",
           },
         },
       },
@@ -609,6 +1077,101 @@ const steps = [
             basis: "30 × 10 = 300 cm = 3 m.",
             simpeler: "Vermenigvuldig de maquette-maat met 10 en reken cm naar m.",
             nogSimpeler: "300 ÷ 100 = ?",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Sanne fietst naar school. Op een kaart met schaal 1 : 20.000 is haar route 15 cm. Hoeveel km fietst ze?",
+        options: ["3 km", "30 km", "0,3 km", "15 km"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — hoeveel cm gaan er in 1 km?",
+          null,
+          "Dat zou kloppen bij schaal 1 : 100.000.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welke kant op?",
+              tekst: "Van kaart naar echt, dus keer het schaalgetal: 15 × 20.000 = 300.000 cm.",
+            },
+            {
+              titel: "Zet om naar km",
+              tekst: "Deel door 100.000, want 100.000 cm is 1 km.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "route",
+              uitleg: "De weg die je aflegt van de ene plek naar de andere.",
+            },
+          ],
+          theorie: "Werk in drie stappen: **welke kant op** (kaart → echt = ×), **reken** in cm, en **zet om** naar km (÷ 100.000).",
+          voorbeelden: [
+            {
+              type: "school",
+              tekst: "Je meet op de kaart je eigen weg naar school en rekent uit hoe ver je elke dag fietst.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "cm naar km",
+              uitleg: "100.000 cm = 1 km.",
+            },
+          ],
+          niveaus: {
+            basis: "15 × 20.000 = 300.000 cm = 3 km.",
+            simpeler: "Reken 15 × 20.000 en deel dan door 100.000.",
+            nogSimpeler: "300.000 ÷ 100.000 = ?",
+          },
+        },
+      },
+      {
+        q: "Daan tekent het park op een plattegrond met schaal 1 : 5.000. Het park is in het echt 350 m lang. Hoe lang wordt het park op zijn tekening?",
+        options: ["7 cm", "70 cm", "0,7 cm", "700 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — hoeveel cm is 350 m precies?",
+          null,
+          "Vergeet niet door het schaalgetal te delen.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welke kant op?",
+              tekst: "Van echt naar kaart, dus delen door het schaalgetal. Maak eerst van 350 m centimeters: 35.000 cm.",
+            },
+            {
+              titel: "Reken uit",
+              tekst: "35.000 ÷ 5.000 geeft de lengte op de tekening.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tekening op schaal",
+              uitleg: "Een tekening waarop alles evenveel keer kleiner is gemaakt dan in het echt.",
+            },
+          ],
+          theorie: "Werk in drie stappen: **welke kant op** (echt → kaart = ÷), zet de echte lengte **eerst om naar cm**, en **reken** dan uit.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Je tekent de speeltuin bij jou in de buurt op schaal, zodat alles op één blad past.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "m naar cm",
+              uitleg: "1 m = 100 cm.",
+            },
+          ],
+          niveaus: {
+            basis: "350 m = 35.000 cm; 35.000 ÷ 5.000 = 7 cm.",
+            simpeler: "Maak van 350 m eerst cm, deel dan door 5.000.",
+            nogSimpeler: "35.000 ÷ 5.000 = ?",
           },
         },
       },

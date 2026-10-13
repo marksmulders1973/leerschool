@@ -66,6 +66,326 @@ const steps = [
         answer: 0,
         wrongHints: [null,"Niet samen optellen — er is een vermenigvuldigings-relatie.","Niet aftrekken.","Niet delen."],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is een **redactiesom**?",
+        options: [
+          "Een rekensom in een verhaal",
+          "Een som met alleen getallen en tekens",
+          "Een som die je hardop opzegt",
+          "Een rijtje met de tafels",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zo'n som heet een kale som. Wat is er anders bij een redactiesom?",
+          null,
+          "Bij een redactiesom lees je eerst iets. Wat lees je dan?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Som in een verhaal",
+              tekst: "Een **redactiesom** is een rekensom die in een **verhaal** staat. Je leest eerst wat er gebeurt.",
+            },
+            {
+              titel: "Zelf de som maken",
+              tekst: "Daarna bedenk je zelf welke som je moet maken. Pas dan ga je rekenen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "redactiesom",
+              uitleg: "Een rekensom in een verhaal.",
+            },
+            {
+              woord: "kale som",
+              uitleg: "Een som met alleen getallen en tekens, zoals 24 − 8.",
+            },
+          ],
+          theorie: "Bij een redactiesom is lezen de helft van het werk. Eerst snappen wat er gevraagd wordt, dan pas rekenen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'Joep heeft 10 snoepjes en eet er 3 op. Hoeveel heeft hij nog?' = redactiesom.",
+            },
+            {
+              type: "stap",
+              tekst: "'10 − 3' = kale som.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Onthoud",
+              uitleg: "Verhaal + vraag + getallen = redactiesom.",
+            },
+          ],
+          niveaus: {
+            basis: "Een redactiesom is een rekensom in een verhaal.",
+            simpeler: "Eerst lees je het verhaal, dan maak je zelf de som.",
+            nogSimpeler: "Som in een verhaal.",
+          },
+        },
+      },
+      {
+        q: "Waarom is een redactiesom vaak **moeilijker** dan een kale som?",
+        options: [
+          "Je moet zelf bedenken welke som je maakt",
+          "De getallen zijn altijd heel groot",
+          "Je mag geen kladpapier gebruiken",
+          "Er staat nooit een vraag in",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk eens naar de getallen in een redactiesom. Zijn die altijd groot?",
+          null,
+          "Wat staat er altijd aan het eind van een redactiesom?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Bij een kale som",
+              tekst: "Bij een kale som staat het teken er al: 24 − 8. Je hoeft alleen te rekenen.",
+            },
+            {
+              titel: "Bij een redactiesom",
+              tekst: "In een verhaal staat geen teken. Jij moet zelf kiezen: +, −, × of ÷. En soms staan er getallen in die je niet nodig hebt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "bewerking",
+              uitleg: "Wat je met de getallen doet: optellen, aftrekken, keer of delen.",
+            },
+            {
+              woord: "kale som",
+              uitleg: "Een som met alleen getallen en tekens.",
+            },
+          ],
+          theorie: "Een redactiesom is lastiger omdat je de vraag moet begrijpen en zelf de bewerking moet kiezen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'Er liggen 9 appels. Er komen er 4 bij.' Jij kiest zelf: optellen.",
+            },
+            {
+              type: "stap",
+              tekst: "De kale som 9 + 4 vertelt het al met het teken +.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Zoek het signaalwoord. Dat helpt je kiezen.",
+            },
+          ],
+          niveaus: {
+            basis: "Je moet zelf kiezen welke som je maakt.",
+            simpeler: "Er staat geen + of − bij. Dat bedenk jij.",
+            nogSimpeler: "Zelf kiezen.",
+          },
+        },
+      },
+      {
+        q: "*'Femke heeft 15 schelpen. Ze vindt er 6 bij. Hoeveel schelpen heeft ze **in totaal**?'* — welke bewerking?",
+        options: ["Optellen", "Aftrekken", "Vermenigvuldigen", "Delen"],
+        answer: 0,
+        wrongHints: [null, "Gaan er schelpen weg, of komen er schelpen bij?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Signaalwoord",
+              tekst: "'**In totaal**' betekent: alles bij elkaar. Dat is een signaalwoord voor optellen.",
+            },
+            {
+              titel: "De som",
+              tekst: "15 schelpen + 6 schelpen = 21 schelpen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "in totaal",
+              uitleg: "Alles bij elkaar.",
+            },
+            {
+              woord: "optellen",
+              uitleg: "Getallen samen nemen met +.",
+            },
+          ],
+          theorie: "Woorden als 'samen', 'totaal' en 'in totaal' wijzen op optellen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'Er staan 7 fietsen en er komen er 5 bij. Hoeveel in totaal?' = 7 + 5 = 12.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "In totaal = +.",
+            },
+          ],
+          niveaus: {
+            basis: "'In totaal' wijst op optellen.",
+            simpeler: "Er komen schelpen bij: 15 + 6.",
+            nogSimpeler: "Plus.",
+          },
+        },
+      },
+      {
+        q: "*'Daan heeft 30 kaarten. Noor heeft er 22. Hoeveel kaarten heeft Daan **meer dan** Noor?'* — welke bewerking?",
+        options: ["Aftrekken", "Optellen", "Delen", "Vermenigvuldigen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je hoeft niet te weten hoeveel kaarten ze samen hebben. Wat vraagt 'meer dan'?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Signaalwoord",
+              tekst: "'**Meer dan**' vraagt naar het verschil tussen twee getallen. Dat is aftrekken.",
+            },
+            {
+              titel: "De som",
+              tekst: "30 − 22 = 8. Daan heeft 8 kaarten meer dan Noor.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "meer dan",
+              uitleg: "Hoeveel het ene getal groter is dan het andere.",
+            },
+            {
+              woord: "aftrekken",
+              uitleg: "Het kleinste getal van het grootste afhalen.",
+            },
+          ],
+          theorie: "'Verschil', 'over', 'meer dan' en 'minder dan' wijzen op aftrekken.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'Jip is 12 jaar, zijn zus is 7. Hoeveel jaar is Jip ouder?' = 12 − 7 = 5.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Let op",
+              uitleg: "Het woord 'meer' zegt niet altijd optellen. 'Hoeveel meer dan' = aftrekken.",
+            },
+          ],
+          niveaus: {
+            basis: "'Meer dan' wijst hier op aftrekken.",
+            simpeler: "30 − 22 = 8 kaarten meer.",
+            nogSimpeler: "Min.",
+          },
+        },
+      },
+      {
+        q: "*'Er zijn 3 kinderen. **Iedereen krijgt** 6 ballonnen. Hoeveel ballonnen zijn er nodig?'* — welke som past?",
+        options: ["3 × 6", "3 + 6", "6 − 3", "6 ÷ 3"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dan krijgt maar één kind ballonnen. Hoeveel kinderen krijgen er 6?",
+          null,
+          "Moeten de ballonnen verdeeld worden, of krijgt ieder kind er 6?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Signaalwoord",
+              tekst: "'**Iedereen krijgt**' betekent: hetzelfde aantal steeds opnieuw. Dat is keer.",
+            },
+            {
+              titel: "De som",
+              tekst: "3 kinderen × 6 ballonnen = 18 ballonnen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "iedereen krijgt",
+              uitleg: "Elk kind krijgt hetzelfde aantal.",
+            },
+            {
+              woord: "vermenigvuldigen",
+              uitleg: "Keer-som maken.",
+            },
+          ],
+          theorie: "'Per', 'elk' en 'iedereen krijgt' wijzen vaak op vermenigvuldigen. Lees wel de hele zin.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'4 kinderen krijgen ieder 2 koekjes' = 4 × 2 = 8 koekjes.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Iedereen krijgt evenveel = keer.",
+            },
+          ],
+          niveaus: {
+            basis: "Iedereen krijgt 6 → keer.",
+            simpeler: "3 × 6 = 18 ballonnen.",
+            nogSimpeler: "Keer.",
+          },
+        },
+      },
+      {
+        q: "*'28 kinderen gaan op speurtocht **in groepen van** 4. Hoeveel groepen zijn er?'* — welke som past?",
+        options: ["28 ÷ 4", "28 − 4", "28 × 4", "28 + 4"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dan haal je maar één groep weg. Hoeveel groepen kun je maken?",
+          "Worden het meer kinderen, of verdeel je ze?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Signaalwoord",
+              tekst: "'**In groepen van**' betekent: verdelen in gelijke groepjes. Dat is delen.",
+            },
+            {
+              titel: "De som",
+              tekst: "28 ÷ 4 = 7 groepen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "in groepen van",
+              uitleg: "Steeds hetzelfde aantal bij elkaar zetten.",
+            },
+            {
+              woord: "delen",
+              uitleg: "Iets verdelen in gelijke stukken.",
+            },
+          ],
+          theorie: "'Gelijk verdeeld', 'hoeveel ieder' en 'in groepen van' wijzen op delen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'20 stoelen in rijen van 5. Hoeveel rijen?' = 20 ÷ 5 = 4.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check",
+              uitleg: "7 groepen van 4 = 28 kinderen. Klopt.",
+            },
+          ],
+          niveaus: {
+            basis: "In groepen van → delen.",
+            simpeler: "28 ÷ 4 = 7 groepen.",
+            nogSimpeler: "Delen.",
+          },
+        },
+      },
     ],
   },
 
@@ -135,6 +455,271 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Volgens het stappenplan: wat doe je **als eerste** bij een redactiesom?",
+        options: [
+          "Rustig lezen en onderstrepen",
+          "Meteen de som uitrekenen",
+          "Het antwoord opschrijven",
+          "Een bewerking kiezen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Weet je al welke som je moet maken voordat je gelezen hebt?",
+          null,
+          "Dat is een goede stap, maar hoe weet je welke bewerking past?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: lezen",
+              tekst: "Lees de som rustig, als het moet 2 keer. Onderstreep de getallen en de vraag.",
+            },
+            {
+              titel: "Daarna pas kiezen",
+              tekst: "Pas als je snapt wat er gevraagd wordt, kies je de bewerking (stap 2) en ga je rekenen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "onderstrepen",
+              uitleg: "Een streep zetten onder wat belangrijk is.",
+            },
+            {
+              woord: "stappenplan",
+              uitleg: "Vaste volgorde: lezen, kiezen, opschrijven, rekenen, antwoord.",
+            },
+          ],
+          theorie: "Stappenplan: 1 lezen, 2 bewerking kiezen, 3 som opschrijven, 4 rekenen, 5 antwoord met eenheid.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Lees: 'Bas heeft 20 euro en koopt iets van 7 euro.' Onderstreep 20 euro, 7 euro en de vraag.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Onthoud",
+              uitleg: "Eerst lezen, dan pas rekenen.",
+            },
+          ],
+          niveaus: {
+            basis: "Stap 1 = rustig lezen en onderstrepen.",
+            simpeler: "Lees de getallen en de vraag, en zet er een streep onder.",
+            nogSimpeler: "Eerst lezen.",
+          },
+        },
+      },
+      {
+        q: "Volgens het stappenplan: wat doe je direct **na** het kiezen van de bewerking?",
+        options: [
+          "De som opschrijven",
+          "De vraag voor het eerst lezen",
+          "Het antwoord met eenheid geven",
+          "De getallen onderstrepen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat doe je juist bij stap 1, helemaal aan het begin.",
+          "Dat is de laatste stap. Wat komt ervoor?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "De volgorde",
+              tekst: "1 lezen en onderstrepen, 2 bewerking kiezen, **3 som opschrijven**, 4 rekenen, 5 antwoord met eenheid.",
+            },
+            {
+              titel: "Waarom opschrijven?",
+              tekst: "Als je de som opschrijft (bv. 24 − 18), zie je goed wat je gaat rekenen. Dan maak je minder fouten.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "bewerking",
+              uitleg: "+, −, × of ÷.",
+            },
+            {
+              woord: "eenheid",
+              uitleg: "Waar het getal over gaat: koeken, euro, km.",
+            },
+          ],
+          theorie: "Na het kiezen van de bewerking schrijf je de som op. Daarna reken je.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'Over' gevonden → aftrekken gekozen → opschrijven: 24 − 18.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Kiezen → opschrijven → rekenen.",
+            },
+          ],
+          niveaus: {
+            basis: "Stap 3 = de som opschrijven.",
+            simpeler: "Eerst kiezen, dan opschrijven, dan rekenen.",
+            nogSimpeler: "Opschrijven.",
+          },
+        },
+      },
+      {
+        q: "*'In een zak zitten 9 mandarijnen. Papa koopt 3 zakken. Hoeveel mandarijnen heeft hij?'* Welk antwoord is **helemaal af**?",
+        options: ["27 mandarijnen", "27", "12 mandarijnen", "27 zakken"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Het getal klopt. Wat hoort er volgens stap 5 nog bij?",
+          "Reken nog eens: 3 zakken met elk 9.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Reken eerst",
+              tekst: "3 zakken × 9 mandarijnen = 27.",
+            },
+            {
+              titel: "Stap 5: eenheid",
+              tekst: "Een antwoord is pas af met de **eenheid** erbij. Hier gaat het om mandarijnen, dus: **27 mandarijnen**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "eenheid",
+              uitleg: "Waar het getal over gaat: mandarijnen, euro, meter.",
+            },
+            {
+              woord: "helemaal af",
+              uitleg: "Getal klopt én de eenheid staat erbij.",
+            },
+          ],
+          theorie: "Stap 5 van het stappenplan: geef antwoord met eenheid. Kijk naar de vraag: 'hoeveel mandarijnen?' → antwoord in mandarijnen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'Hoeveel euro wisselgeld?' → antwoord: € 3, niet alleen 3.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Lees de vraag nog eens: waar vraagt die naar? Dat is je eenheid.",
+            },
+          ],
+          niveaus: {
+            basis: "27 mandarijnen: getal én eenheid.",
+            simpeler: "3 × 9 = 27, en de vraag gaat over mandarijnen.",
+            nogSimpeler: "27 mandarijnen.",
+          },
+        },
+      },
+      {
+        q: "*'Een boer heeft 45 koeien en 3 honden. Hij verkoopt 12 koeien. Hoeveel koeien houdt hij over?'* Welke **som** past?",
+        options: ["45 − 12", "45 − 3", "45 + 12", "45 − 12 − 3"],
+        answer: 0,
+        wrongHints: [null, "Verkoopt de boer honden?", null, "Gaat de vraag ook over de honden?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat is de vraag?",
+              tekst: "De vraag gaat over **koeien**. Je hebt nodig: 45 koeien en 12 verkochte koeien.",
+            },
+            {
+              titel: "Strikgetal",
+              tekst: "De 3 honden hebben niets met de koeien te maken. Dat is een strikgetal: dat gebruik je niet.",
+            },
+            {
+              titel: "De som",
+              tekst: "45 − 12 = 33 koeien over.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "strikgetal",
+              uitleg: "Een getal in het verhaal dat je niet nodig hebt.",
+            },
+            {
+              woord: "over",
+              uitleg: "Wat er nog is → aftrekken.",
+            },
+          ],
+          theorie: "Vraag jezelf af: welke getallen gaan over de vraag? Alleen die gebruik je.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'Mia is 10 jaar en heeft 15 euro. Ze geeft 4 euro uit.' Som: 15 − 4. De 10 is een strikgetal.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Onderstreep alleen de getallen die bij de vraag horen.",
+            },
+          ],
+          niveaus: {
+            basis: "45 − 12: de honden doen niet mee.",
+            simpeler: "Vraag = koeien. 45 koeien, 12 weg: 45 − 12.",
+            nogSimpeler: "45 − 12",
+          },
+        },
+      },
+      {
+        q: "*'Een pen kost 9 euro. Een schrift kost 3 euro **minder dan** de pen. Hoeveel kost het schrift?'* Welke som past?",
+        options: ["9 − 3", "9 + 3", "9 × 3", "9 ÷ 3"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is het schrift duurder of goedkoper dan de pen?",
+          null,
+          "Lees nog eens wat er over het schrift staat. Welk signaalwoord zie je?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Signaalwoord",
+              tekst: "'**Minder dan**' betekent: er gaat iets af. Dat is aftrekken.",
+            },
+            {
+              titel: "De som",
+              tekst: "9 euro − 3 euro = 6 euro. Het schrift kost 6 euro.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "minder dan",
+              uitleg: "Kleiner of goedkoper dan iets anders.",
+            },
+            {
+              woord: "aftrekken",
+              uitleg: "Iets eraf halen met −.",
+            },
+          ],
+          theorie: "'Verschil', 'over', 'meer dan' en 'minder dan' wijzen op aftrekken.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "'Een bal kost 7 euro. Een frisbee kost 2 euro minder.' = 7 − 2 = 5 euro.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check",
+              uitleg: "Het schrift moet goedkoper zijn dan de pen: 6 < 9. Klopt.",
+            },
+          ],
+          niveaus: {
+            basis: "Minder dan → aftrekken.",
+            simpeler: "9 − 3 = 6 euro.",
+            nogSimpeler: "Min.",
+          },
+        },
+      },
     ],
   },
 
@@ -160,6 +745,74 @@ const steps = [
         answer: 0,
         wrongHints: [null,"Te weinig — controleer 96 ÷ 6.","Dat is totaal, niet per kind.","Veel te veel — controleer."],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*'Op tafel liggen 46 boeken. De juf legt er 27 bij. Hoeveel boeken liggen er nu?'*",
+        options: ["73", "19", "63", "74"],
+        answer: 0,
+        wrongHints: [null, "Er komen boeken bij, niet af.", "Let op bij de enen: 6 + 7 is meer dan 10.", null],
+      },
+      {
+        q: "*'Een bus heeft 52 zitplaatsen. Op 38 plaatsen zit al iemand. Hoeveel plaatsen zijn er nog **vrij**?'*",
+        options: ["14", "90", "26", "16"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je telde op — maar je zoekt wat er nog over is.",
+          "Kijk goed bij de enen: 2 − 8 kan niet zomaar.",
+          null,
+        ],
+      },
+      {
+        q: "*'Een week heeft 7 dagen. Hoeveel dagen zitten er in 6 weken?'*",
+        options: ["42", "13", "36", "48"],
+        answer: 0,
+        wrongHints: [null, "Je telde 7 en 6 op. Hoe vaak komt 7 dagen voor?", null, null],
+      },
+      {
+        q: "*'De juf heeft 40 potloden. Ze doet er steeds 5 in een bakje. Hoeveel bakjes heeft ze nodig?'*",
+        options: ["8", "35", "45", "7"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je haalde 5 er één keer af. Hoe vaak past 5 in 40?",
+          null,
+          "Reken na: hoeveel potloden zitten er in 7 bakjes van 5?",
+        ],
+      },
+      {
+        q: "*'Een kaartje voor het zwembad kost € 4. Je koopt 9 kaartjes. Hoeveel betaal je?'*",
+        options: ["€ 36", "€ 13", "€ 32", "€ 40"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je telde 4 en 9 op. Hoeveel kaartjes van € 4 koop je?",
+          null,
+          "Reken nog eens: 9 × 4.",
+        ],
+      },
+      {
+        q: "*'Sara is 9 jaar. Ze heeft 64 kralen. Ze rijgt er 25 aan een ketting. Hoeveel kralen heeft ze nog **los**?'*",
+        options: ["39", "89", "55", "41"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Er gaan kralen aan de ketting. Komen er dan losse bij?",
+          "Heb je de leeftijd gebruikt? Welke getallen gaan over kralen?",
+          null,
+        ],
+      },
+      {
+        q: "*'In de zaal staan 36 stoelen in 4 even lange rijen. Hoeveel stoelen staan er in elke rij?'*",
+        options: ["9", "32", "40", "8"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je haalde 4 eraf. Je moet de stoelen verdelen over de rijen.",
+          null,
+          "Reken na: hoeveel stoelen zijn 4 rijen van 8?",
+        ],
+      },
     ],
   },
 
@@ -184,6 +837,68 @@ const steps = [
         options: ["€ 1,50","€ 3","€ 0","€ 4,50"],
         answer: 0,
         wrongHints: [null,"Te veel — dat is wat ieder krijgt. Het ijsje moet er nog af.","Niet 0 — er blijft wat over per kind.","Je telde op — het ijsje kost geld, dus trek je af."],
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*'Je koopt 4 schriften van € 2 per stuk. Je betaalt met een briefje van € 20. Hoeveel krijg je terug?'*",
+        options: ["€ 12", "€ 8", "€ 18", "€ 16"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat kosten de schriften samen. Wat krijg je terug van € 20?",
+          "Je koopt meer dan één schrift.",
+          null,
+        ],
+      },
+      {
+        q: "*'Kim heeft 3 zakjes met elk 8 knikkers. Ze geeft er 5 weg. Hoeveel knikkers heeft ze nog?'*",
+        options: ["19", "24", "29", "6"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat had ze vóór ze er 5 weggaf.",
+          "Ze geeft knikkers weg. Komen er dan knikkers bij?",
+          null,
+        ],
+      },
+      {
+        q: "*'Op een boerderij lopen 6 kippen en 4 koeien. Hoeveel poten hebben ze samen?'*",
+        options: ["28", "10", "40", "20"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het aantal dieren, niet het aantal poten.",
+          null,
+          "Heeft elk dier evenveel poten?",
+        ],
+      },
+      {
+        q: "*'Bram begint aan een boek van 85 bladzijden. Hij leest elke dag 10 bladzijden. Hoeveel bladzijden moet hij na 6 dagen nog lezen?'*",
+        options: ["25", "60", "75", "79"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat heeft hij al gelezen. Hoeveel moet hij nog?",
+          null,
+          "Hij leest elke dag 10 bladzijden, niet 1.",
+        ],
+      },
+      {
+        q: "*'Ella heeft nu € 12. Elke week spaart ze er € 5 bij. Hoeveel heeft ze na 4 weken?'*",
+        options: ["€ 32", "€ 20", "€ 17", "€ 21"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat spaart ze in 4 weken erbij. Had ze al iets?",
+          "Dat is na 1 week. Hoeveel weken spaart ze?",
+          null,
+        ],
+      },
+      {
+        q: "*'Lars heeft € 15. Hij krijgt € 10 van opa. Daarna koopt hij een spel van € 18. Hoeveel heeft hij nog?'*",
+        options: ["€ 7", "€ 25", "€ 3", "€ 43"],
+        answer: 0,
+        wrongHints: [null, "Dat had hij vóór hij het spel kocht.", "Heb je het geld van opa meegeteld?", null],
       },
     ],
   },

@@ -62,6 +62,152 @@ const steps = [
           niveaus: { basis: "Een oude foto komt uit het verleden.", simpeler: "Wat is er al lang geleden gemaakt?", nogSimpeler: "de oude foto" },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welk van deze dingen is **ook geschiedenis**?",
+        options: [
+          "wat er gisteren op school gebeurde",
+          "wat je morgen gaat doen",
+          "wat je volgende week gaat eten",
+          "een verzonnen sprookje",
+        ],
+        answer: 0,
+        wrongHints: [null, "Is morgen al gebeurd?", null, "Is dat echt gebeurd?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Gisteren telt ook",
+              tekst: "Geschiedenis is alles wat **vroeger** echt is gebeurd. Gisteren is ook vroeger — een beetje vroeger.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vroeger",
+              uitleg: "Een tijd die al voorbij is.",
+            },
+          ],
+          niveaus: {
+            basis: "Gisteren is ook al vroeger.",
+            simpeler: "Gebeurd = geschiedenis.",
+            nogSimpeler: "gisteren",
+          },
+        },
+      },
+      {
+        q: "Wat vertelt jou iets over hoe mensen **vroeger** woonden?",
+        options: [
+          "een oud kasteel",
+          "een huis dat nog gebouwd moet worden",
+          "een tekening van een huis op de maan",
+          "een bouwplan voor volgend jaar",
+        ],
+        answer: 0,
+        wrongHints: [null, "Staat dat huis er al?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Oude gebouwen",
+              tekst: "Oude **gebouwen** zijn sporen uit het verleden. Ze laten zien hoe mensen vroeger woonden.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "spoor",
+              uitleg: "Iets wat overblijft uit het verleden, zoals een foto of een gebouw.",
+            },
+          ],
+          niveaus: {
+            basis: "Een oud gebouw is een spoor van vroeger.",
+            simpeler: "Oud gebouw = spoor.",
+            nogSimpeler: "oud",
+          },
+        },
+      },
+      {
+        q: "Wie geschiedenis bestudeert, is een soort…",
+        options: [
+          "speurneus in de tijd",
+          "waarzegger die de toekomst ziet",
+          "kok in de keuken",
+          "piloot in een vliegtuig",
+        ],
+        answer: 0,
+        wrongHints: [null, "Geschiedenis gaat over vroeger, niet over later.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Speurneus",
+              tekst: "Wie geschiedenis bestudeert, zoekt sporen van vroeger. Net als een **speurneus**, maar dan in de tijd!",
+            },
+          ],
+          woorden: [
+            {
+              woord: "speurneus",
+              uitleg: "Iemand die goed zoekt en dingen uitzoekt.",
+            },
+          ],
+          niveaus: {
+            basis: "Je speurt naar sporen van vroeger.",
+            simpeler: "Sporen zoeken = speurneus.",
+            nogSimpeler: "speurneus",
+          },
+        },
+      },
+      {
+        q: "Je oma vertelt hoe het was toen zij klein was. Wat is dat?",
+        options: [
+          "een spoor uit het verleden",
+          "een droom over later",
+          "een verzonnen sprookje",
+          "een weerbericht",
+        ],
+        answer: 0,
+        wrongHints: [null, null, "Oma heeft het echt meegemaakt.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Verhalen",
+              tekst: "**Verhalen** van mensen die het zelf meemaakten, zijn sporen uit het verleden.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "verleden",
+              uitleg: "De tijd die al voorbij is.",
+            },
+          ],
+          niveaus: {
+            basis: "Oma's verhaal vertelt over vroeger.",
+            simpeler: "Verhaal van vroeger = spoor.",
+            nogSimpeler: "verhaal",
+          },
+        },
+      },
+      {
+        q: "Welke tijd is **het langst geleden**?",
+        options: ["de tijd van de ridders", "gisteren", "toen opa en oma kind waren", "vorige week"],
+        answer: 0,
+        wrongHints: [null, "Dat is maar een beetje vroeger.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Heel lang geleden",
+              tekst: "Gisteren is een beetje vroeger. Toen opa en oma kind waren, is best lang geleden. De tijd van de ridders is **heel** lang geleden.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vroeger",
+              uitleg: "Een tijd die al voorbij is.",
+            },
+          ],
+          niveaus: {
+            basis: "De ridders leefden heel lang geleden.",
+            simpeler: "Ridders = heel lang geleden.",
+            nogSimpeler: "ridders",
+          },
+        },
+      },
     ],
   },
 
@@ -113,6 +259,137 @@ const steps = [
           niveaus: { basis: "Ridders waren er lang vóór de auto.", simpeler: "Ridders reden paard, geen auto!", nogSimpeler: "de ridders" },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat staat er **helemaal rechts** op een tijdbalk?",
+        options: ["nu", "wat het langst geleden is", "de tijd van de ridders", "honderd jaar geleden"],
+        answer: 0,
+        wrongHints: [null, "Dat staat juist aan de andere kant.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Rechts = nu",
+              tekst: "Op een tijdbalk staat links wat het langst geleden is. Helemaal **rechts** staat **nu**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tijdbalk",
+              uitleg: "Een lange lijn waarop je de tijd tekent.",
+            },
+          ],
+          niveaus: {
+            basis: "Helemaal rechts staat nu.",
+            simpeler: "Rechts = nu.",
+            nogSimpeler: "nu",
+          },
+        },
+      },
+      {
+        q: "Hoeveel jaar zijn **twee eeuwen**?",
+        options: ["200 jaar", "20 jaar", "2000 jaar", "102 jaar"],
+        answer: 0,
+        wrongHints: [null, "Is dat langer of korter dan één eeuw?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Twee eeuwen",
+              tekst: "Eén eeuw = 100 jaar. Twee eeuwen = 100 + 100 = **200 jaar**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "eeuw",
+              uitleg: "Een tijd van honderd jaar.",
+            },
+          ],
+          niveaus: {
+            basis: "Twee eeuwen is 200 jaar.",
+            simpeler: "100 + 100 = 200.",
+            nogSimpeler: "200",
+          },
+        },
+      },
+      {
+        q: "Op een tijdbalk staan opa als kind en de ridders. Wie staat **meer naar links**?",
+        options: ["de ridders", "opa als kind", "ze staan op dezelfde plek", "dat kun je niet weten"],
+        answer: 0,
+        wrongHints: [null, null, "Ze leefden niet in dezelfde tijd.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Links = oud",
+              tekst: "Links staat wat het langst geleden is. De ridders leefden veel eerder dan opa als kind. Dus de ridders staan **links**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tijdbalk",
+              uitleg: "Een lijn met de tijd erop: links oud, rechts nu.",
+            },
+          ],
+          niveaus: {
+            basis: "De ridders staan meer naar links.",
+            simpeler: "Langer geleden = meer naar links.",
+            nogSimpeler: "de ridders",
+          },
+        },
+      },
+      {
+        q: "Waarom is een tijdbalk **handig**?",
+        options: [
+          "je ziet wat eerst kwam en wat later",
+          "je ziet hoe laat het nu is",
+          "je ziet wat voor weer het wordt",
+          "je ziet hoe lang je bent",
+        ],
+        answer: 0,
+        wrongHints: [null, "Daarvoor kijk je op een klok.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "In één oogopslag",
+              tekst: "Op een tijdbalk zie je in één oogopslag wat **eerst** kwam en wat **later**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tijdbalk",
+              uitleg: "Een lange lijn waarop je de tijd tekent.",
+            },
+          ],
+          niveaus: {
+            basis: "Je ziet de volgorde van de tijd.",
+            simpeler: "Eerst en later op een rij.",
+            nogSimpeler: "volgorde",
+          },
+        },
+      },
+      {
+        q: "Mila zet op een tijdbalk: haar geboorte, haar eerste schooldag en vandaag. Wat staat **helemaal links**?",
+        options: ["haar geboorte", "haar eerste schooldag", "vandaag", "haar volgende verjaardag"],
+        answer: 0,
+        wrongHints: [null, null, "Vandaag is nu — waar staat nu?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Mila's tijdbalk",
+              tekst: "Links staat wat het langst geleden is. Mila werd eerst geboren, daarna ging ze naar school, en dan komt vandaag. Dus haar **geboorte** staat links.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tijdbalk",
+              uitleg: "Links oud, rechts nu.",
+            },
+          ],
+          niveaus: {
+            basis: "Haar geboorte staat links.",
+            simpeler: "Het eerst gebeurd = links.",
+            nogSimpeler: "geboorte",
+          },
+        },
+      },
     ],
   },
 
@@ -160,6 +437,83 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Meehelpen", tekst: "Veel gezinnen hadden de hulp van kinderen nodig: **op het land**, in de winkel of in huis. Spelen kwam daarna pas." }],
           niveaus: { basis: "Kinderen hielpen veel mee.", simpeler: "Na school: eerst helpen, dan spelen.", nogSimpeler: "meehelpen" },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Hoe werden **kleren** honderd jaar geleden vaak gewassen?",
+        options: ["met de hand", "met een wasmachine", "met een vaatwasser", "met een robot"],
+        answer: 0,
+        wrongHints: [null, null, "Een vaatwasser is voor borden, niet voor kleren.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wassen met de hand",
+              tekst: "Zo'n honderd jaar geleden werden kleren vaak **met de hand** gewassen. Veel huizen hadden geen elektriciteit.",
+            },
+          ],
+          niveaus: {
+            basis: "Kleren werden met de hand gewassen.",
+            simpeler: "Wassen met je handen.",
+            nogSimpeler: "met de hand",
+          },
+        },
+      },
+      {
+        q: "Wat is een **griffel**?",
+        options: ["een schrijfstiftje van steen", "een zwart plankje", "een soort olielamp", "een waterpomp"],
+        answer: 0,
+        wrongHints: [null, "Dat is de lei — daar schrijf je óp.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lei en griffel",
+              tekst: "Kinderen schreven op een **lei** (een zwart plankje) met een **griffel** (een schrijfstiftje van steen).",
+            },
+          ],
+          niveaus: {
+            basis: "Een griffel is een stiftje van steen.",
+            simpeler: "Griffel = stiftje om te schrijven.",
+            nogSimpeler: "stiftje",
+          },
+        },
+      },
+      {
+        q: "Hoe waren de **klassen** op school honderd jaar geleden vaak?",
+        options: ["groot", "klein", "er waren geen klassen", "alleen online"],
+        answer: 0,
+        wrongHints: [null, null, null, "Bestond internet toen al?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Grote klassen",
+              tekst: "Honderd jaar geleden waren de klassen **groot**, en de meester of juf was vaak streng.",
+            },
+          ],
+          niveaus: {
+            basis: "De klassen waren groot.",
+            simpeler: "Veel kinderen in één klas.",
+            nogSimpeler: "groot",
+          },
+        },
+      },
+      {
+        q: "Welk ding vond je honderd jaar geleden in **veel** huizen?",
+        options: ["een kaars", "een koelkast", "een televisie", "een computer"],
+        answer: 0,
+        wrongHints: [null, "Een koelkast werkt op stroom.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Licht zonder stroom",
+              tekst: "Veel huizen hadden geen elektriciteit. 's Avonds brandde een olielamp of een **kaars**.",
+            },
+          ],
+          niveaus: {
+            basis: "Een kaars gaf licht.",
+            simpeler: "Geen stroom, dus een kaars.",
+            nogSimpeler: "kaars",
+          },
         },
       },
     ],
@@ -211,6 +565,112 @@ const steps = [
           niveaus: { basis: "Een ridder reed op een paard.", simpeler: "Klip klop — een paard!", nogSimpeler: "paard" },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welk ding hoort bij een **ridder**?",
+        options: ["een lans", "een fiets", "een helikopter", "een skateboard"],
+        answer: 0,
+        wrongHints: [null, "Bestond de fiets al in de middeleeuwen?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wapens van een ridder",
+              tekst: "Een ridder vocht met een **zwaard**, een **schild** en een **lans**.",
+            },
+          ],
+          niveaus: {
+            basis: "Een ridder had een lans.",
+            simpeler: "Zwaard, schild en lans.",
+            nogSimpeler: "lans",
+          },
+        },
+      },
+      {
+        q: "Waarvan werden kastelen **gebouwd**?",
+        options: ["van steen", "van stro", "van karton", "van plastic"],
+        answer: 0,
+        wrongHints: [null, "Zou dat een vijand tegenhouden?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stenen kastelen",
+              tekst: "Kastelen waren gebouwd van **steen**, met dikke, hoge muren.",
+            },
+          ],
+          niveaus: {
+            basis: "Kastelen waren van steen.",
+            simpeler: "Steen is sterk.",
+            nogSimpeler: "steen",
+          },
+        },
+      },
+      {
+        q: "Wat had een kasteel met een gracht er vaak bij?",
+        options: ["een ophaalbrug", "een parkeergarage", "een treinstation", "een glijbaan"],
+        answer: 0,
+        wrongHints: [null, null, "Treinen bestonden in de middeleeuwen nog niet.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Gracht en ophaalbrug",
+              tekst: "Kastelen hadden vaak een **gracht** (water rondom) en een **ophaalbrug**.",
+            },
+          ],
+          niveaus: {
+            basis: "Een ophaalbrug over de gracht.",
+            simpeler: "Brug over het water.",
+            nogSimpeler: "ophaalbrug",
+          },
+        },
+      },
+      {
+        q: "Wat was een **ridder**?",
+        options: [
+          "een soldaat te paard",
+          "een boer op het land",
+          "een koopman op een schip",
+          "een kok in het kasteel",
+        ],
+        answer: 0,
+        wrongHints: [null, "Een boer werkte op het land, niet in de strijd.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Ridder",
+              tekst: "Ridders waren **soldaten te paard**. Ze droegen een harnas.",
+            },
+          ],
+          niveaus: {
+            basis: "Een ridder was een soldaat te paard.",
+            simpeler: "Soldaat op een paard.",
+            nogSimpeler: "soldaat",
+          },
+        },
+      },
+      {
+        q: "In welke tijd leefden de **ridders**?",
+        options: [
+          "in de middeleeuwen",
+          "toen opa en oma klein waren",
+          "nu, in deze tijd",
+          "honderd jaar geleden",
+        ],
+        answer: 0,
+        wrongHints: [null, "Opa en oma zijn niet zó oud.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Middeleeuwen",
+              tekst: "Heel lang geleden — in de **middeleeuwen** — leefden de ridders.",
+            },
+          ],
+          niveaus: {
+            basis: "Ridders leefden in de middeleeuwen.",
+            simpeler: "Ridders = middeleeuwen.",
+            nogSimpeler: "middeleeuwen",
+          },
+        },
+      },
     ],
   },
 
@@ -259,6 +719,107 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Op de tijdbalk", tekst: "Kastelen: middeleeuwen, honderden jaren geleden. Auto: ruim 100 jaar. Computer: ~80 jaar. Mobieltje: nog nieuwer. **Kastelen** staan het meest links op de tijdbalk." }],
           niveaus: { basis: "Kastelen zijn het oudst van dit rijtje.", simpeler: "Wat is het állerlangst geleden?", nogSimpeler: "kastelen" },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Hoeveel jaar is **een halve eeuw**?",
+        options: ["50 jaar", "5 jaar", "500 jaar", "25 jaar"],
+        answer: 0,
+        wrongHints: [null, null, "Dat is meer dan een hele eeuw!", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Halve eeuw",
+              tekst: "Een eeuw = 100 jaar. De helft van 100 is **50**. Een halve eeuw = 50 jaar.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "eeuw",
+              uitleg: "Een tijd van honderd jaar.",
+            },
+          ],
+          niveaus: {
+            basis: "Een halve eeuw is 50 jaar.",
+            simpeler: "Helft van 100 = 50.",
+            nogSimpeler: "50",
+          },
+        },
+      },
+      {
+        q: "Op een tijdbalk staan: de ridders, school met lei en griffel, en nu. Wat staat **in het midden**?",
+        options: ["school met lei en griffel", "de ridders", "nu", "dat kan overal staan"],
+        answer: 0,
+        wrongHints: [null, null, "Nu staat altijd helemaal rechts.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Volgorde",
+              tekst: "Links: de ridders (heel lang geleden). Midden: school met lei en griffel (zo'n honderd jaar geleden). Rechts: **nu**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tijdbalk",
+              uitleg: "Links oud, rechts nu.",
+            },
+          ],
+          niveaus: {
+            basis: "Lei en griffel staan in het midden.",
+            simpeler: "Ridders → lei en griffel → nu.",
+            nogSimpeler: "lei en griffel",
+          },
+        },
+      },
+      {
+        q: "Wat hoort **niet** bij school van honderd jaar geleden?",
+        options: ["een tablet", "een lei", "een griffel", "een strenge meester"],
+        answer: 0,
+        wrongHints: [null, "Daar schreven kinderen toen juist op.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "School vroeger",
+              tekst: "Vroeger schreven kinderen op een lei met een griffel. Een **tablet** bestond nog lang niet.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "lei",
+              uitleg: "Een zwart plankje om op te schrijven.",
+            },
+          ],
+          niveaus: {
+            basis: "Een tablet hoort er niet bij.",
+            simpeler: "Lei en griffel, geen tablet.",
+            nogSimpeler: "tablet",
+          },
+        },
+      },
+      {
+        q: "Wat hoort **niet** bij de middeleeuwen?",
+        options: ["een mobiele telefoon", "een harnas", "een kasteel", "een gracht"],
+        answer: 0,
+        wrongHints: [null, "Dat droeg een ridder.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Middeleeuwen",
+              tekst: "Middeleeuwen: ridders, harnassen en kastelen met grachten. Een **mobiele telefoon** is heel nieuw.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "middeleeuwen",
+              uitleg: "De tijd van de ridders en kastelen, heel lang geleden.",
+            },
+          ],
+          niveaus: {
+            basis: "Een mobiele telefoon hoort er niet bij.",
+            simpeler: "Ridders hadden geen telefoon.",
+            nogSimpeler: "telefoon",
+          },
         },
       },
     ],

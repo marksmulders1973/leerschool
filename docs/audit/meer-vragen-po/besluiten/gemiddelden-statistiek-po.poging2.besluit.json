@@ -1,0 +1,237 @@
+{
+ "pathId": "gemiddelden-statistiek-po",
+ "geschreven": 10,
+ "opgenomen": [
+  {
+   "stap": 2,
+   "q": "Een schoenenwinkel verkoopt op zaterdag deze maten: **36, 38, 37, 38, 39, 36, 38, 40**. Welke maat is de **modus**?",
+   "options": [
+    "38",
+    "36",
+    "40",
+    "37"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Tel hoe vaak 36 voorkomt. Is er een maat die nog vaker voorkomt?",
+    "40 is de grootste maat. Is de modus altijd het grootste getal?",
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Tel hoe vaak",
+      "tekst": "36: 2×. 37: 1×. 38: 3×. 39: 1×. 40: 1×."
+     },
+     {
+      "titel": "Modus = vaakst",
+      "tekst": "Maat 38 komt het vaakst voor. De modus is dus 38."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "modus",
+      "uitleg": "Het getal dat het vaakst voorkomt in een rijtje."
+     }
+    ],
+    "theorie": "Modus ≠ hoogste of laagste. Modus = vaakste.",
+    "voorbeelden": [
+     {
+      "type": "streepjes",
+      "tekst": "Zet een streepje per verkochte maat. De maat met de meeste streepjes is de modus."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Handig bij schoenmaten",
+      "uitleg": "Een winkel wil weten welke maat het meest verkocht wordt. Daarvoor gebruik je de modus."
+     }
+    ],
+    "niveaus": {
+     "basis": "38 (komt 3× voor).",
+     "simpeler": "Tel: 38 komt 3× voor, 36 maar 2×, de rest 1×. Modus = 38.",
+     "nogSimpeler": "38"
+    }
+   },
+   "id": "gemiddelden-statistiek-po#4"
+  },
+  {
+   "stap": 2,
+   "q": "Vijf kinderen gooien elk één keer met een dobbelsteen: **4, 6, 1, 5, 3**. Wat is de **modus**?",
+   "options": [
+    "Geen modus",
+    "6",
+    "4",
+    "1 en 3"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "6 is het hoogste getal. Komt 6 vaker voor dan de andere getallen?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Tel hoe vaak",
+      "tekst": "4: 1×. 6: 1×. 1: 1×. 5: 1×. 3: 1×. Elk getal komt maar één keer voor."
+     },
+     {
+      "titel": "Speciaal geval",
+      "tekst": "Komt elk getal maar 1× voor, dan is er geen modus."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "modus",
+      "uitleg": "Het getal dat het vaakst voorkomt in een rijtje."
+     }
+    ],
+    "theorie": "Er is alleen een modus als een getal vaker voorkomt dan andere getallen.",
+    "voorbeelden": [
+     {
+      "type": "streepjes",
+      "tekst": "Bij 2, 4, 4, 6 komt 4 twee keer voor. Dan is de modus 4."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Speciale gevallen",
+      "uitleg": "Twee getallen even vaak = twee modussen. Alles maar 1× = geen modus."
+     }
+    ],
+    "niveaus": {
+     "basis": "Geen modus (alles komt 1× voor).",
+     "simpeler": "Elk getal staat er maar één keer. Geen enkel getal komt het vaakst voor. Dus: geen modus.",
+     "nogSimpeler": "Geen"
+    }
+   },
+   "id": "gemiddelden-statistiek-po#5"
+  },
+  {
+   "stap": 3,
+   "q": "Zeven kinderen rennen 60 meter. Hun tijden in seconden zijn: **11, 9, 14, 10, 12, 9, 13**. Wat is de **mediaan**?",
+   "options": [
+    "11 seconden",
+    "10 seconden",
+    "9 seconden",
+    "14 seconden"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Dat getal staat in het midden van de rij zoals hij er nu staat. Heb je de tijden eerst op volgorde gezet?",
+    "Dat getal komt het vaakst voor. Hoe heet dat begrip?",
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Op volgorde",
+      "tekst": "9, 9, 10, 11, 12, 13, 14."
+     },
+     {
+      "titel": "Middelste",
+      "tekst": "7 getallen = oneven. Het middelste is het 4e getal: 11."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "mediaan",
+      "uitleg": "Het middelste getal als je alles op volgorde zet."
+     }
+    ],
+    "theorie": "Bij een oneven aantal is er precies één middelste getal.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "9, 9, 10, **11**, 12, 13, 14 → 3 getallen links, 3 getallen rechts."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Sorteren",
+      "uitleg": "Altijd eerst op volgorde zetten!"
+     }
+    ],
+    "niveaus": {
+     "basis": "11 seconden.",
+     "simpeler": "Op volgorde: 9, 9, 10, 11, 12, 13, 14. Het middelste getal is 11.",
+     "nogSimpeler": "11"
+    }
+   },
+   "id": "gemiddelden-statistiek-po#6"
+  },
+  {
+   "stap": 4,
+   "q": "Wat is een **voordeel** van het **gemiddelde**?",
+   "options": [
+    "Het gebruikt alle getallen",
+    "Het werkt ook bij kleuren",
+    "Een uitschieter verandert het niet",
+    "Je hoeft er niet voor te rekenen"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Bij welk begrip kun je met kleuren werken?",
+    "Is het gemiddelde gevoelig voor uitschieters of juist niet?",
+    null
+   ],
+   "id": "gemiddelden-statistiek-po#8"
+  }
+ ],
+ "afgekeurd": [
+  {
+   "id": "gemiddelden-statistiek-po#0",
+   "stap": 0,
+   "q": "Deze week was de koudste dag **12 graden** en de warmste dag **18 graden**. Welk getal kan de **gemiddelde** temperatuur van deze week zijn?",
+   "redenen": [
+    "coördinator: uitlegPad: \"niet het kleinste, niet het grootste\" klopt niet altijd"
+   ]
+  },
+  {
+   "id": "gemiddelden-statistiek-po#1",
+   "stap": 0,
+   "q": "Sem zegt: *'Onze klas haalde gemiddeld een 7, dus er is zeker iemand die precies een 7 haalde.'* Klopt dat?",
+   "redenen": [
+    "coördinator: uitlegPad: \"niet het kleinste, niet het grootste\" klopt niet altijd"
+   ]
+  },
+  {
+   "id": "gemiddelden-statistiek-po#2",
+   "stap": 0,
+   "q": "Drie kinderen sparen stickers. Ze hebben er **4**, **6** en **8**. Hoeveel stickers hebben ze **gemiddeld**?",
+   "redenen": [
+    "coördinator: uitlegPad: \"niet het kleinste, niet het grootste\" klopt niet altijd"
+   ]
+  },
+  {
+   "id": "gemiddelden-statistiek-po#3",
+   "stap": 0,
+   "q": "Een voetbalteam speelde **10 wedstrijden**. Welke uitspraak gaat over een **gemiddelde**?",
+   "redenen": [
+    "nakijker A: Bijna-dubbel met bestaande stap-0-vraag \"Welk zinnetje gaat over een gemiddelde?\" (zelfde opbouw: \"ongeveer X per ...\" vs één losse gebeurtenis / het hoogste / iets anders).",
+    "coördinator: uitlegPad: \"niet het kleinste, niet het grootste\" klopt niet altijd"
+   ]
+  },
+  {
+   "id": "gemiddelden-statistiek-po#7",
+   "stap": 4,
+   "q": "De juf wil weten welk **dier** de kinderen in de klas het **liefst** hebben. Welk begrip gebruikt ze?",
+   "redenen": [
+    "nakijker A: Bijna-dubbel: zelfde type als bestaande stap-4-vragen \"Welke schoenmaat verkoopt het meest? Welk begrip?\" en \"Wat heeft een kleur-stemming wel maar geen gemiddelde?\" (categorie -> modus)."
+   ]
+  },
+  {
+   "id": "gemiddelden-statistiek-po#9",
+   "stap": 4,
+   "q": "Wat is een **voordeel** van de **modus**?",
+   "redenen": [
+    "nakijker A: Bijna-dubbel: het goede antwoord is letterlijk het antwoord van bestaande stap-2-vraag \"Wanneer kun je geen gemiddelde uitrekenen maar wel een modus?\" (bij kleuren/woorden/categorieën) en het spiegelbeeld van een afleider in \"nadeel van de modus\". Kleinigheid: afleider \"Je deelt de som door het aantal\" past grammaticaal niet bij \"Hij ...\"."
+   ]
+  }
+ ]
+}

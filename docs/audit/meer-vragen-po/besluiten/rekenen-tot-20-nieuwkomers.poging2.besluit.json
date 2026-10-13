@@ -1,0 +1,526 @@
+{
+ "pathId": "rekenen-tot-20-nieuwkomers",
+ "geschreven": 15,
+ "opgenomen": [
+  {
+   "stap": 1,
+   "q": "Je steekt **5 vingers** op. Dan steek je er nog **2** op. Hoeveel vingers steek je nu op?",
+   "options": [
+    "7",
+    "6",
+    "3",
+    "8"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Tel al je vingers nog eens.",
+    "Komen er vingers bij, of gaan er vingers weg?",
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Erbij = verder tellen",
+      "tekst": "**Plus** (+) betekent **erbij**. 3 + 2: begin bij 3. Tel 2 verder: 4, 5. Het antwoord is 5."
+     },
+     {
+      "titel": "Met je vingers",
+      "tekst": "Steek 3 vingers op. Steek er nog 2 op. Tel alle vingers."
+     },
+     {
+      "titel": "Het grootste eerst",
+      "tekst": "Begin bij het **grootste** getal. Dan tel je korter."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "plus",
+      "uitleg": "Het teken +. Erbij."
+     },
+     {
+      "woord": "erbij",
+      "uitleg": "Meer maken."
+     }
+    ],
+    "theorie": "Plus = erbij = verder tellen.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "4 vingers en nog 1 vinger: 4 + 1 = 5."
+     },
+     {
+      "type": "stap",
+      "tekst": "3 vingers en nog 3 vingers: 3 + 3 = 6."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Begin bij het grootste getal. Tel het kleinste getal erbij."
+     }
+    ],
+    "niveaus": {
+     "basis": "Er komen vingers bij. Dat is plus.",
+     "simpeler": "Begin bij 5. Tel 2 verder.",
+     "nogSimpeler": "5 + 2"
+    }
+   },
+   "id": "rekenen-tot-20-nieuwkomers#1"
+  },
+  {
+   "stap": 1,
+   "q": "Welke som is **10**?",
+   "options": [
+    "6 + 4",
+    "5 + 3",
+    "7 + 2",
+    "4 + 4"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Reken elke som uit. Welke is precies 10?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Erbij = verder tellen",
+      "tekst": "**Plus** (+) betekent **erbij**. 3 + 2: begin bij 3. Tel 2 verder: 4, 5. Het antwoord is 5."
+     },
+     {
+      "titel": "Met je vingers",
+      "tekst": "Steek 3 vingers op. Steek er nog 2 op. Tel alle vingers."
+     },
+     {
+      "titel": "Het grootste eerst",
+      "tekst": "Begin bij het **grootste** getal. Dan tel je korter."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "plus",
+      "uitleg": "Het teken +. Erbij."
+     },
+     {
+      "woord": "erbij",
+      "uitleg": "Meer maken."
+     }
+    ],
+    "theorie": "Plus = erbij = verder tellen.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "5 + 5 = 10."
+     },
+     {
+      "type": "stap",
+      "tekst": "8 + 2 = 10."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Begin bij het grootste getal. Tel het kleinste getal erbij."
+     }
+    ],
+    "niveaus": {
+     "basis": "Reken elke som uit.",
+     "simpeler": "Begin bij het grootste getal en tel verder.",
+     "nogSimpeler": "Welke som komt precies op 10?"
+    }
+   },
+   "id": "rekenen-tot-20-nieuwkomers#2"
+  },
+  {
+   "stap": 2,
+   "q": "**10 − 4 =** ?",
+   "options": [
+    "6",
+    "14",
+    "7",
+    "4"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Bij min wordt het getal kleiner.",
+    null,
+    "4 staat al in de som. Je moet nog rekenen."
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Eraf = terug tellen",
+      "tekst": "**Min** (−) betekent **eraf**. 7 − 2: begin bij 7. Tel 2 terug: 6, 5. Het antwoord is 5."
+     },
+     {
+      "titel": "Met je vingers",
+      "tekst": "Steek 7 vingers op. Doe 2 vingers weer omlaag. Tel de vingers die je nog opsteekt."
+     },
+     {
+      "titel": "Het wordt minder",
+      "tekst": "Bij eraf wordt het getal **kleiner**. Is je antwoord groter? Dan klopt het niet."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "min",
+      "uitleg": "Het teken −. Eraf."
+     },
+     {
+      "woord": "eraf",
+      "uitleg": "Minder maken."
+     }
+    ],
+    "theorie": "Min = eraf = terug tellen.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "10 − 2: begin bij 10. Tel 2 terug: 9, 8."
+     },
+     {
+      "type": "stap",
+      "tekst": "7 − 3: begin bij 7. Tel 3 terug: 6, 5, 4."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Tel terug op je vingers."
+     }
+    ],
+    "niveaus": {
+     "basis": "Tel 4 terug.",
+     "simpeler": "Begin bij 10. Tel 4 terug.",
+     "nogSimpeler": "10, en dan 4 terug tellen."
+    }
+   },
+   "id": "rekenen-tot-20-nieuwkomers#6"
+  },
+  {
+   "stap": 2,
+   "q": "**9 − 1 =** ?",
+   "options": [
+    "8",
+    "10",
+    "7",
+    "9"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Bij min wordt het getal kleiner.",
+    "Tel nog eens terug.",
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Eraf = terug tellen",
+      "tekst": "**Min** (−) betekent **eraf**. 7 − 2: begin bij 7. Tel 2 terug: 6, 5. Het antwoord is 5."
+     },
+     {
+      "titel": "Met je vingers",
+      "tekst": "Steek 7 vingers op. Doe 2 vingers weer omlaag. Tel de vingers die je nog opsteekt."
+     },
+     {
+      "titel": "Het wordt minder",
+      "tekst": "Bij eraf wordt het getal **kleiner**. Is je antwoord groter? Dan klopt het niet."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "min",
+      "uitleg": "Het teken −. Eraf."
+     },
+     {
+      "woord": "eraf",
+      "uitleg": "Minder maken."
+     }
+    ],
+    "theorie": "Min = eraf = terug tellen.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "6 − 1: begin bij 6. Tel 1 terug: 5."
+     },
+     {
+      "type": "stap",
+      "tekst": "4 − 1: begin bij 4. Tel 1 terug: 3."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Tel terug op je vingers."
+     }
+    ],
+    "niveaus": {
+     "basis": "Tel 1 terug.",
+     "simpeler": "Begin bij 9. Tel 1 terug.",
+     "nogSimpeler": "Vóór 9 komt …"
+    }
+   },
+   "id": "rekenen-tot-20-nieuwkomers#8"
+  },
+  {
+   "stap": 2,
+   "q": "Welke som is **3**?",
+   "options": [
+    "7 − 4",
+    "7 − 3",
+    "6 − 2",
+    "9 − 5"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Reken elke som uit. Welke is precies 3?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Eraf = terug tellen",
+      "tekst": "**Min** (−) betekent **eraf**. 7 − 2: begin bij 7. Tel 2 terug: 6, 5. Het antwoord is 5."
+     },
+     {
+      "titel": "Met je vingers",
+      "tekst": "Steek 7 vingers op. Doe 2 vingers weer omlaag. Tel de vingers die je nog opsteekt."
+     },
+     {
+      "titel": "Het wordt minder",
+      "tekst": "Bij eraf wordt het getal **kleiner**. Is je antwoord groter? Dan klopt het niet."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "min",
+      "uitleg": "Het teken −. Eraf."
+     },
+     {
+      "woord": "eraf",
+      "uitleg": "Minder maken."
+     }
+    ],
+    "theorie": "Min = eraf = terug tellen.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "5 − 2 = 3."
+     },
+     {
+      "type": "stap",
+      "tekst": "10 − 7 = 3."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Tel terug op je vingers."
+     }
+    ],
+    "niveaus": {
+     "basis": "Reken elke som uit.",
+     "simpeler": "Begin bij het eerste getal en tel terug.",
+     "nogSimpeler": "Welke som komt precies op 3?"
+    }
+   },
+   "id": "rekenen-tot-20-nieuwkomers#9"
+  },
+  {
+   "stap": 3,
+   "q": "**9 + 4 =** ?",
+   "options": [
+    "13",
+    "12",
+    "14",
+    "5"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Maak eerst 10 vol. Hoeveel blijft er dan van de 4 over?",
+    "Maak eerst 10 vol. Hoeveel blijft er dan van de 4 over?",
+    "Is het plus of min?"
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Eerst naar 10",
+      "tekst": "8 + 5. Maak eerst **10**: 8 + 2 = 10. Van de 5 heb je 2 gebruikt. Er blijft 3 over. 10 + 3 = **13**."
+     },
+     {
+      "titel": "In twee stukjes",
+      "tekst": "Knip het tweede getal in **twee stukjes**. Eén stukje maakt 10 vol. Het andere stukje komt erbij."
+     },
+     {
+      "titel": "Bij eraf",
+      "tekst": "14 − 6. Ga eerst terug naar **10**: 14 − 4 = 10. Van de 6 heb je 4 gebruikt. Er blijft 2 over. 10 − 2 = **8**."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "tien vol",
+      "uitleg": "Eerst tot 10. Dan verder."
+     }
+    ],
+    "theorie": "Over de 10: eerst naar 10, dan de rest.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "9 + 3: 9 + 1 = 10, dan 10 + 2 = 12."
+     },
+     {
+      "type": "stap",
+      "tekst": "8 + 4: 8 + 2 = 10, dan 10 + 2 = 12."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "10 is een tussenstop. Ga eerst naar 10."
+     }
+    ],
+    "niveaus": {
+     "basis": "Maak eerst 10 vol, dan de rest erbij.",
+     "simpeler": "9 + 1 = 10. Hoeveel is er van de 4 nog over?",
+     "nogSimpeler": "Eerst naar 10."
+    }
+   },
+   "id": "rekenen-tot-20-nieuwkomers#10"
+  },
+  {
+   "stap": 3,
+   "q": "**7 + 5 =** ?",
+   "options": [
+    "12",
+    "11",
+    "13",
+    "2"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Maak eerst 10 vol. Hoeveel blijft er dan van de 5 over?",
+    null,
+    "Is het plus of min?"
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Eerst naar 10",
+      "tekst": "8 + 5. Maak eerst **10**: 8 + 2 = 10. Van de 5 heb je 2 gebruikt. Er blijft 3 over. 10 + 3 = **13**."
+     },
+     {
+      "titel": "In twee stukjes",
+      "tekst": "Knip het tweede getal in **twee stukjes**. Eén stukje maakt 10 vol. Het andere stukje komt erbij."
+     },
+     {
+      "titel": "Bij eraf",
+      "tekst": "14 − 6. Ga eerst terug naar **10**: 14 − 4 = 10. Van de 6 heb je 4 gebruikt. Er blijft 2 over. 10 − 2 = **8**."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "tien vol",
+      "uitleg": "Eerst tot 10. Dan verder."
+     }
+    ],
+    "theorie": "Over de 10: eerst naar 10, dan de rest.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "7 + 4: 7 + 3 = 10, dan 10 + 1 = 11."
+     },
+     {
+      "type": "stap",
+      "tekst": "6 + 5: 6 + 4 = 10, dan 10 + 1 = 11."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "10 is een tussenstop. Ga eerst naar 10."
+     }
+    ],
+    "niveaus": {
+     "basis": "Maak eerst 10 vol, dan de rest erbij.",
+     "simpeler": "7 + 3 = 10. Hoeveel is er van de 5 nog over?",
+     "nogSimpeler": "Eerst naar 10."
+    }
+   },
+   "id": "rekenen-tot-20-nieuwkomers#11"
+  }
+ ],
+ "afgekeurd": [
+  {
+   "id": "rekenen-tot-20-nieuwkomers#0",
+   "stap": 1,
+   "q": "**2 + 6 =** ?",
+   "redenen": [
+    "coördinator: uitlegPad-voorbeeld komt uit op het goede antwoord"
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#3",
+   "stap": 1,
+   "q": "**1 + 8 =** ?",
+   "redenen": [
+    "coördinator: uitlegPad-voorbeeld komt uit op het goede antwoord"
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#4",
+   "stap": 1,
+   "q": "**3 + 4 =** ?",
+   "redenen": [
+    "coördinator: uitlegPad-voorbeeld komt uit op het goede antwoord"
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#5",
+   "stap": 2,
+   "q": "**8 − 3 =** ?",
+   "redenen": [
+    "coördinator: uitlegPad-voorbeeld komt uit op het goede antwoord"
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#7",
+   "stap": 2,
+   "q": "Je steekt **6 vingers** op. Dan doe je **2 vingers** weer omlaag. Hoeveel vingers steek je nog op?",
+   "redenen": [
+    "coördinator: uitlegPad-voorbeeld komt uit op het goede antwoord"
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#12",
+   "stap": 3,
+   "q": "**15 − 7 =** ?",
+   "redenen": [
+    "coördinator: uitlegPad-voorbeeld komt uit op het goede antwoord"
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#13",
+   "stap": 3,
+   "q": "**9 + 5**. Eerst 10 vol: 9 + 1 = 10. Hoeveel moet er **daarna nog bij**?",
+   "redenen": [
+    "nakijker B: (Fase 2, licht) wrongHint bij optie 5 (\"Je had 5. Je hebt er al 1 gebruikt.\") geeft het antwoord vrijwel weg (5 − 1 = 4); vager maken, bv. \"Heb je al een stukje van de 5 gebruikt?\"."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#14",
+   "stap": 3,
+   "q": "**12 − 5 =** ?",
+   "redenen": [
+    "nakijker A: Fase 2: beide voorbeelden in de uitlegPad (11 − 4 en 13 − 6) komen precies op 7 uit, het goede antwoord. Dat zet het kind op het spoor van het antwoord. Kies voorbeelden met een andere uitkomst."
+   ]
+  }
+ ]
+}

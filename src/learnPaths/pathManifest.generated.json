@@ -69,9 +69,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 25,
+    "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "algebra-vergelijkingen-havo-vwo",
@@ -129,7 +129,7 @@
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "algoritmen-pseudocode-informatica",
@@ -185,7 +185,7 @@
     ],
     "intro": "\"Welk tussenkopje past het best boven alinea 3?\" — dé klassieke vraagvorm op de Doorstroomtoets begrijpend lezen. Leer wat een alinea is, hoe je de kernzin vindt (vaak vooraan!), welke taak een alinea",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 33,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -216,7 +216,7 @@
     "stepCount": 15,
     "checkCount": 34,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "atmosfeer-klimaat-havo-vwo",
@@ -274,7 +274,7 @@
     "stepCount": 10,
     "checkCount": 35,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "balans-beco",
@@ -303,7 +303,7 @@
     "stepCount": 10,
     "checkCount": 35,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "basis-grammatica-engels-po",
@@ -361,7 +361,7 @@
     "stepCount": 6,
     "checkCount": 42,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "bedrijfseconomie-havo-vwo",
@@ -446,7 +446,7 @@
     ],
     "intro": "Hoe je slim leest in plaats van alles woord-voor-woord. Tekstsoorten herkennen (informatief/betogend/verhalend), 6 groepen signaalwoorden, hoofdgedachte vinden, skim+scan-techniek, en 5 vraagsoorten m",
     "stepCount": 7,
-    "checkCount": 40,
+    "checkCount": 62,
     "chapterCount": 4,
     "estimatedMinutes": 25
   },
@@ -474,9 +474,9 @@
     ],
     "intro": "Vier echte oefenteksten van ~200 woorden + 4 Doorstroomtoets-stijl vragen elk: zakelijk, instructief, betogend, verhalend. Plus een gemixte eindopdracht. Perfect voor groep 7-8 die zich voorbereidt op",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 63,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "bekende-boeken-literatuur-po",
@@ -505,7 +505,7 @@
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "bekende-nederlanders-po",
@@ -534,7 +534,7 @@
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "bekende-wetenschappers-po",
@@ -563,7 +563,7 @@
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "belasting-po",
@@ -589,7 +589,7 @@
     ],
     "intro": "Belasting voor groep 6-8 — waarom we samen betalen voor wegen, scholen en ziekenhuizen, belasting op je loon (bruto → belasting eraf → netto) en btw die in de winkelprijs zit (9% / 21%). Met echte red",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 38,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -620,7 +620,7 @@
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "betoog-beschouwing-havo-vwo",
@@ -663,9 +663,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 25,
+    "checkCount": 33,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "bevolking-migratie-aardrijkskunde",
@@ -694,7 +694,7 @@
     "stepCount": 6,
     "checkCount": 33,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "bewegingen-snelheid-natuurkunde",
@@ -777,7 +777,7 @@
     "stepCount": 15,
     "checkCount": 33,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "breuken-po",
@@ -804,7 +804,7 @@
     ],
     "intro": "Breuken voor groep 5-8: wat is een breuk, vereenvoudigen, optellen/aftrekken met gelijke en ongelijke noemers, breuk-van-een-getal. Met Doorstroomtoets-stijl praktijksommen. ~15 min.",
     "stepCount": 7,
-    "checkCount": 40,
+    "checkCount": 67,
     "chapterCount": 5,
     "estimatedMinutes": 20
   },
@@ -833,7 +833,7 @@
     ],
     "intro": "Een brief van school of een e-mail van de sportclub — op de Doorstroomtoets krijg je er vaak vragen over. Leer de vaste onderdelen kennen (afzender, aanhef, ondertekening...), bepaal het doel van de s",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 34,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -862,9 +862,9 @@
     ],
     "intro": "Brugklas-overgang voor groep 8 → klas 1 — verschil basisschool/middelbare school (10-15 docenten, cijfers 1-10, profiel-keuze), agenda + Magister, leren-leren (spaced repetition, Feynman, Pomodoro), s",
     "stepCount": 6,
-    "checkCount": 40,
+    "checkCount": 65,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "cel-biologie",
@@ -922,7 +922,7 @@
     "stepCount": 9,
     "checkCount": 35,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "cijferend-rekenen",
@@ -949,9 +949,9 @@
     ],
     "intro": "Cijferend rekenen voor groep 6-8: optellen + onthouden, aftrekken + lenen, vermenigvuldigen, delen (bus-bewerking), praktijk-redactiesommen. ~15 min per deel.",
     "stepCount": 8,
-    "checkCount": 41,
+    "checkCount": 78,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "cito-strategieen-groep8",
@@ -978,7 +978,7 @@
     ],
     "intro": "Hoe je slim met de Doorstroomtoets omgaat: pacing, eliminatie bij meerkeuze, slimme aanpak voor begrijpend lezen + rekenen, omgaan met twijfel + tijdgebrek. Niet alleen 'kennen', ook 'aanpakken'.",
     "stepCount": 7,
-    "checkCount": 40,
+    "checkCount": 78,
     "chapterCount": 4,
     "estimatedMinutes": 25
   },
@@ -1008,7 +1008,7 @@
     "stepCount": 6,
     "checkCount": 35,
     "chapterCount": 6,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "conclusies-trekken-po",
@@ -1035,7 +1035,7 @@
     ],
     "intro": "De moeilijkste vragen op de Doorstroomtoets zijn afleid-vragen: het antwoord staat nérgens letterlijk. In dit deel leer je aanwijzingen verzamelen, ze combineren met wat je al weet, en het verschil zi",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 30,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -1092,9 +1092,9 @@
     ],
     "intro": "De wereld voor groep 6-8 — 7 continenten, 5 oceanen, beroemde landen + steden, tijdzones, wereldwonderen. ~15 min.",
     "stepCount": 6,
-    "checkCount": 40,
+    "checkCount": 49,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "coordinatenstelsel",
@@ -1122,7 +1122,7 @@
     "stepCount": 14,
     "checkCount": 34,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "crypto-blockchain-geld-beco",
@@ -1165,7 +1165,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "cse-leesvaardigheid-nederlands",
@@ -1218,7 +1218,7 @@
     "stepCount": 6,
     "checkCount": 37,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "cse-schrijfvaardigheid-nederlands",
@@ -1369,9 +1369,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 34,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "delen-po",
@@ -1394,9 +1394,9 @@
     ],
     "intro": "Delen voor groep 5-6 — wat is delen, makkelijke (÷2/5/10), tafel-terug (÷3-9), delen met rest, praktijksommen. Bouwt voort op tafelsPo. ~15 min.",
     "stepCount": 7,
-    "checkCount": 41,
+    "checkCount": 67,
     "chapterCount": 7,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "dichten-poezie-rijmen-po",
@@ -1423,9 +1423,9 @@
     ],
     "intro": "Dichten + poëzie voor Doorstroomtoets groep 5-8 — wat is gedicht (proza vs gedicht, bekende dichters) + rijm + ritme (eind/begin/binnenrijm, AABB/ABAB/ABBA) + beeldspraak (personificatie/hyperbool/met",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 56,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "dienstregeling-roosters-po",
@@ -1439,9 +1439,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 25,
+    "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "dieren-seizoenen-natuur",
@@ -1470,7 +1470,7 @@
     "stepCount": 11,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "dierenklassen-po",
@@ -1499,7 +1499,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "differentialen-havo-vwo",
@@ -1556,7 +1556,7 @@
     "stepCount": 14,
     "checkCount": 34,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "digitale-geletterdheid-po",
@@ -1585,7 +1585,7 @@
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "doorstroomtoets-rekenen-g8",
@@ -1614,7 +1614,7 @@
     "stepCount": 6,
     "checkCount": 264,
     "chapterCount": 4,
-    "estimatedMinutes": 120
+    "estimatedMinutes": 20
   },
   {
     "id": "doorstroomtoets-studievaardigheden-g8",
@@ -1643,7 +1643,7 @@
     "stepCount": 10,
     "checkCount": 330,
     "chapterCount": 10,
-    "estimatedMinutes": 150
+    "estimatedMinutes": 30
   },
   {
     "id": "doorstroomtoets-taal-g8",
@@ -1671,7 +1671,7 @@
     "stepCount": 5,
     "checkCount": 237,
     "chapterCount": 4,
-    "estimatedMinutes": 105
+    "estimatedMinutes": 15
   },
   {
     "id": "duits-cse-havo-vwo",
@@ -1729,7 +1729,7 @@
     "stepCount": 6,
     "checkCount": 33,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "ecosystemen-havo-vwo",
@@ -1787,7 +1787,7 @@
     "stepCount": 4,
     "checkCount": 25,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "elektriciteit-natuurkunde",
@@ -1874,7 +1874,7 @@
     "stepCount": 4,
     "checkCount": 24,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "energie-hulpbronnen-havo-vwo",
@@ -1932,7 +1932,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "engels-cse-havo-vwo",
@@ -2101,7 +2101,7 @@
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "examen-biologie-2022-t1",
@@ -3256,7 +3256,7 @@
     "stepCount": 14,
     "checkCount": 34,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "feit-mening-po",
@@ -3270,9 +3270,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 38,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "feiten-details-opzoeken-po",
@@ -3299,7 +3299,7 @@
     ],
     "intro": "\"Zoek het antwoord op in de tekst\" — dé vaardigheid voor de Doorstroomtoets begrijpend lezen. Leer de vaste zoekstrategie: eerst de vraag lezen en het zoekwoord onderstrepen, dan de tekst scannen, de ",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 33,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -3384,7 +3384,7 @@
     ],
     "intro": "Geldwijsheid voor groep 6-8 — 3 functies geld (ruil/reken/spaar), zakgeld + zelf verdienen, sparen + rente + samengestelde rente, 50/30/20-begrotingsregel, lenen + reclame-trucs (BNPL, influencers). ~",
     "stepCount": 6,
-    "checkCount": 40,
+    "checkCount": 67,
     "chapterCount": 6,
     "estimatedMinutes": 25
   },
@@ -3400,9 +3400,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 25,
+    "checkCount": 33,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "fotosynthese-biologie",
@@ -3515,9 +3515,9 @@
     ],
     "intro": "Geld rekenen voor groep 5-8: euro's en centen, optellen + aftrekken, wisselgeld berekenen, vergelijken (wat is voordeligst). Doorstroomtoets-stijl praktijksommen. ~12 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 62,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "gemiddelden-statistiek-po",
@@ -3541,7 +3541,7 @@
     ],
     "intro": "Statistiek voor groep 7-8 — gemiddelde uitrekenen, modus (vaakst voorkomend), mediaan (middelste). Met praktijksommen over cijfers, temperatuur, zakgeld, schoenmaat. ~15 min.",
     "stepCount": 6,
-    "checkCount": 40,
+    "checkCount": 63,
     "chapterCount": 6,
     "estimatedMinutes": 20
   },
@@ -3572,7 +3572,7 @@
     "stepCount": 9,
     "checkCount": 35,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "genetica-havo-vwo",
@@ -3625,9 +3625,9 @@
     ],
     "intro": "Je eerste geschiedenisles: wat is vroeger, hoe werkt een tijdbalk (en wat is een eeuw?), hoe leefden kinderen honderd jaar geleden — en natuurlijk: ridders en kastelen. Voor groep 5. ~15 min.",
     "stepCount": 5,
-    "checkCount": 20,
+    "checkCount": 43,
     "chapterCount": 5,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "getallen-tot-20-po",
@@ -3653,7 +3653,7 @@
     ],
     "intro": "Eerste rekensommen — getallen 0 tot 20, plus en min, splitsen + dubbele + truc 'eerst tien maken'. Voor groep 3-4. ~15 min.",
     "stepCount": 6,
-    "checkCount": 26,
+    "checkCount": 44,
     "chapterCount": 6,
     "estimatedMinutes": 15
   },
@@ -3684,7 +3684,7 @@
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "globalisering-havo-vwo",
@@ -3767,7 +3767,7 @@
     "stepCount": 11,
     "checkCount": 34,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "goniometrie-havo-vwo",
@@ -3852,7 +3852,7 @@
     ],
     "intro": "Grafieken lezen voor groep 6-8 — staafdiagram, lijngrafiek, taartdiagram, tabel ↔ grafiek. Toets-praktijksommen met temperatuur, regen, klas-aantallen, koekjes. ~15 min.",
     "stepCount": 6,
-    "checkCount": 40,
+    "checkCount": 64,
     "chapterCount": 6,
     "estimatedMinutes": 20
   },
@@ -4076,7 +4076,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "informatica-havo-vwo",
@@ -4132,7 +4132,7 @@
     ],
     "intro": "Bronnen voor de Doorstroomtoets — woordenboek, atlas, encyclopedie, inhoudsopgave + index, betrouwbaarheid + fake news. 5 stappen × ~5 vragen. ~15 min.",
     "stepCount": 5,
-    "checkCount": 25,
+    "checkCount": 42,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
@@ -4148,9 +4148,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 25,
+    "checkCount": 36,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "integralen-havo-vwo",
@@ -4203,9 +4203,9 @@
     ],
     "intro": "Interpunctie voor groep 5-7 — hoofdletters, punt, vraagteken, uitroepteken, komma's, aanhalingstekens. Met Doorstroomtoets-stijl oefenvragen en duidelijke regels. ~15 min.",
     "stepCount": 6,
-    "checkCount": 40,
+    "checkCount": 58,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "kaartlezen-po",
@@ -4232,9 +4232,9 @@
     ],
     "intro": "Kompasroos, schaal, legenda en symbolen op kaarten begrijpen. Doorstroomtoets-stijl. ~12 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 54,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "kalender-rekenen-po",
@@ -4261,9 +4261,9 @@
     ],
     "intro": "Kalender voor groep 6-8 — maanden, weken, schrikkeljaar, dagen tellen vooruit/achteruit, leeftijden uitrekenen, speciale data (Koningsdag, Bevrijdingsdag). ~15 min.",
     "stepCount": 6,
-    "checkCount": 40,
+    "checkCount": 66,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "kansrekening",
@@ -4350,7 +4350,7 @@
     "stepCount": 4,
     "checkCount": 25,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "kleur-licht-compositie-kunst",
@@ -4437,7 +4437,7 @@
     "stepCount": 10,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "klokkijken",
@@ -4464,7 +4464,7 @@
     ],
     "intro": "Leer de klok lezen — analoog (met wijzers) én digitaal. Hele uren, halve, kwartieren, minuten en het 24-uurs format. Plus tijd uitrekenen (hoe lang duurt iets?). Voor groep 3 t/m 5.",
     "stepCount": 8,
-    "checkCount": 45,
+    "checkCount": 73,
     "chapterCount": 5,
     "estimatedMinutes": 25
   },
@@ -4518,7 +4518,7 @@
     ],
     "intro": "Kommagetallen voor groep 6-8 — wat ze zijn, optellen/aftrekken met komma's uitgelijnd, vermenigvuldigen, delen, en Toets-praktijksommen met geld/meten. ~15 min.",
     "stepCount": 6,
-    "checkCount": 40,
+    "checkCount": 67,
     "chapterCount": 6,
     "estimatedMinutes": 20
   },
@@ -4543,9 +4543,9 @@
     ],
     "intro": "Eerste stappen begrijpend lezen: van één zin naar een echt tekstje. Wie, wat, waar — het antwoord opzoeken — en wat gebeurde eerst? Voor groep 4. ~15 min.",
     "stepCount": 5,
-    "checkCount": 20,
+    "checkCount": 45,
     "chapterCount": 5,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "koude-oorlog-modern-po",
@@ -4574,7 +4574,7 @@
     "stepCount": 4,
     "checkCount": 24,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "krachten-natuurkunde",
@@ -4603,7 +4603,7 @@
     "stepCount": 10,
     "checkCount": 34,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "kritisch-denken-po",
@@ -4632,7 +4632,7 @@
     "stepCount": 4,
     "checkCount": 39,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "kunst-havo-vwo",
@@ -4710,7 +4710,7 @@
     "stepCount": 13,
     "checkCount": 32,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "lange-toets-teksten-g8-po",
@@ -4737,9 +4737,9 @@
     ],
     "intro": "Op de echte Doorstroomtoets zijn de leesteksten lang: 300 tot 400 woorden met 4 tot 6 vragen per tekst. Hier train je het uithoudingsvermogen én de slimme aanpak: eerst globaal lezen, per vraag terugz",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 35,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "latijn-vwo",
@@ -4782,9 +4782,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 39,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "lettergrepen-klemtoon-po",
@@ -4798,9 +4798,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 37,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "letters-klanken-nieuwkomers",
@@ -4852,7 +4852,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "licht-geluid-natuurkunde",
@@ -4905,7 +4905,7 @@
     "stepCount": 17,
     "checkCount": 34,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "literatuurgeschiedenis",
@@ -4934,7 +4934,7 @@
     "stepCount": 14,
     "checkCount": 33,
     "chapterCount": 5,
-    "estimatedMinutes": 30
+    "estimatedMinutes": 25
   },
   {
     "id": "logaritmen",
@@ -4963,7 +4963,7 @@
     "stepCount": 14,
     "checkCount": 34,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "logaritmen-exponentieel-havo-vwo",
@@ -5079,7 +5079,7 @@
     "stepCount": 13,
     "checkCount": 35,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "marktvormen-havo-vwo",
@@ -5135,7 +5135,7 @@
     ],
     "intro": "Maten en eenheden voor Doorstroomtoets groep 7-8 (voorheen Cito-eindtoets): lengte (km/m/cm/mm), gewicht (kg/g/ton), inhoud (L/mL), tijd (uur/min/sec), de komma-verschuif-truc, en redactiesommen in Ci",
     "stepCount": 8,
-    "checkCount": 42,
+    "checkCount": 80,
     "chapterCount": 7,
     "estimatedMinutes": 25
   },
@@ -5164,7 +5164,7 @@
     ],
     "intro": "Toets-meetkunde voor Doorstroomtoets — lengte-maten omrekenen (km/m/cm/mm), omtrek + oppervlakte (rechthoek, vierkant, driehoek, cirkel), inhoud (kubus, balk, cilinder), schaal + praktijksommen. 5 sta",
     "stepCount": 5,
-    "checkCount": 25,
+    "checkCount": 41,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
@@ -5251,7 +5251,7 @@
     ],
     "intro": "Volume voor groep 6-8 — wat volume is, kubus + balk berekenen, liters/cm³/m³ omrekenen, Toets-praktijksommen met zwembad, aquarium en doos. ~15 min.",
     "stepCount": 6,
-    "checkCount": 40,
+    "checkCount": 64,
     "chapterCount": 6,
     "estimatedMinutes": 20
   },
@@ -5354,9 +5354,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 38,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "middeleeuwen-geschiedenis",
@@ -5459,7 +5459,7 @@
     "stepCount": 9,
     "checkCount": 34,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "nederland-water-vo",
@@ -5546,7 +5546,7 @@
     "stepCount": 5,
     "checkCount": 25,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "nederlandse-staat-maatschappijleer",
@@ -5575,7 +5575,7 @@
     "stepCount": 11,
     "checkCount": 34,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "negatieve-getallen",
@@ -5598,7 +5598,7 @@
     "stepCount": 10,
     "checkCount": 34,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 10
   },
   {
     "id": "negatieve-getallen-po",
@@ -5622,9 +5622,9 @@
     ],
     "intro": "Negatieve getallen voor groep 5-8: wat is een negatief getal, getalslijn lopen, min-een-minus = plus, praktijk met temperatuur en geld. ~12 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 65,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "netwerken-internet-informatica",
@@ -5680,7 +5680,7 @@
     ],
     "intro": "Kop, eerste alinea, details — een nieuwsbericht zit altijd hetzelfde in elkaar. Leer de zes gouden vragen (wie, wat, waar, wanneer, waarom en hoe) als vragenbril, prik door overdrijvende koppen heen e",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 36,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -5725,9 +5725,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 38,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "onderwijs-niveaus-vmbo-havo-vwo",
@@ -5754,9 +5754,9 @@
     ],
     "intro": "Wat zijn vmbo, havo en vwo precies — en wat kun je er later mee? Uitleg voor groep 6-8 die nadenkt over de keuze na de Doorstroomtoets: de drie niveaus, de vier vmbo-leerwegen, profielen op havo/vwo, ",
     "stepCount": 5,
-    "checkCount": 26,
+    "checkCount": 42,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "onregelmatige-werkwoorden-engels",
@@ -5814,7 +5814,7 @@
     "stepCount": 9,
     "checkCount": 34,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "ontdekkingsreizen-po",
@@ -5843,7 +5843,7 @@
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "opdrachtwoorden-nieuwkomers",
@@ -5890,9 +5890,9 @@
     ],
     "intro": "18 vragen Toets-rekenen groep 6-8: verschil omtrek vs oppervlakte, rechthoek + vierkant + driehoek + cirkel, eenheid-conversies (1 m² = 10.000 cm²), praktijkvraagstukken (tuin met vijver, pizza, plint",
     "stepCount": 6,
-    "checkCount": 26,
+    "checkCount": 57,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "optica-havo-vwo",
@@ -5979,7 +5979,7 @@
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "parabolen",
@@ -6032,7 +6032,7 @@
     "stepCount": 10,
     "checkCount": 34,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "past-tenses-engels",
@@ -6061,7 +6061,7 @@
     "stepCount": 10,
     "checkCount": 34,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "periodiek",
@@ -6090,7 +6090,7 @@
     "stepCount": 14,
     "checkCount": 35,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "pincode-belasting",
@@ -6119,7 +6119,7 @@
     "stepCount": 7,
     "checkCount": 42,
     "chapterCount": 5,
-    "estimatedMinutes": 30
+    "estimatedMinutes": 25
   },
   {
     "id": "pincode-buitenland-eu",
@@ -6148,7 +6148,7 @@
     "stepCount": 7,
     "checkCount": 42,
     "chapterCount": 4,
-    "estimatedMinutes": 30
+    "estimatedMinutes": 25
   },
   {
     "id": "pincode-geld-sparen-lenen",
@@ -6235,7 +6235,7 @@
     "stepCount": 9,
     "checkCount": 54,
     "chapterCount": 4,
-    "estimatedMinutes": 45
+    "estimatedMinutes": 30
   },
   {
     "id": "pincode-ontwikkelingslanden",
@@ -6264,7 +6264,7 @@
     "stepCount": 7,
     "checkCount": 42,
     "chapterCount": 4,
-    "estimatedMinutes": 30
+    "estimatedMinutes": 25
   },
   {
     "id": "pincode-overheid",
@@ -6365,9 +6365,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 25,
+    "checkCount": 35,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "politiek-democratie-po",
@@ -6396,7 +6396,7 @@
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "present-tenses-engels",
@@ -6449,7 +6449,7 @@
     "stepCount": 13,
     "checkCount": 25,
     "chapterCount": 6,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "procenten-po",
@@ -6473,7 +6473,7 @@
     ],
     "intro": "Procenten voor groep 5-8 — wat % betekent, hoe je ermee rekent, korting in de winkel, hoeveel % is X van Y. Met Doorstroomtoets-stijl praktijksommen. ~15 min.",
     "stepCount": 7,
-    "checkCount": 40,
+    "checkCount": 70,
     "chapterCount": 5,
     "estimatedMinutes": 20
   },
@@ -6533,7 +6533,7 @@
     "stepCount": 4,
     "checkCount": 25,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "pythagoras",
@@ -6672,7 +6672,7 @@
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "redactiesommen-pad",
@@ -6696,9 +6696,9 @@
     ],
     "intro": "Redactiesommen voor groep 5-8: hoe lees je een rekensom in een verhaal, signaal-woorden voor +/-/×/÷, één-stap- en twee-stap-sommen, eindopdracht. ~12 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 64,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "rekenen-met-letters",
@@ -6722,7 +6722,7 @@
     "stepCount": 15,
     "checkCount": 25,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "rekenen-tot-100-nieuwkomers",
@@ -6850,7 +6850,7 @@
     ],
     "intro": "Spelen met woorden voor kleuters: rijmen, klanken horen, letters herkennen en woorden kennen. Lekker samen doen — een ouder of verzorger leest voor (of druk op de voorlees-knop) en jij mag antwoorden!",
     "stepCount": 5,
-    "checkCount": 25,
+    "checkCount": 43,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
@@ -6895,9 +6895,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 38,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "ruimtemeetkunde",
@@ -6954,7 +6954,7 @@
     "stepCount": 4,
     "checkCount": 24,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "samenstellingen-tussenletters-po",
@@ -6968,9 +6968,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 34,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "samenvatten-hoofdgedachte-po",
@@ -6995,9 +6995,9 @@
     ],
     "intro": "Hoofdgedachte vinden, hoofd/bijzaken scheiden, samenvatting maken. Doorstroomtoets-stijl. ~12 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 61,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "schaal-kaart-rekenen-po",
@@ -7011,9 +7011,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 38,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "schatten-afronden",
@@ -7036,9 +7036,9 @@
     ],
     "intro": "Schatten en afronden voor groep 5-8: wanneer schatten, afronden op 10/100/1000, schatten van sommen, praktijk met kassabon en tijden. ~12 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 64,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "schema-tekst-combi-po",
@@ -7065,7 +7065,7 @@
     ],
     "intro": "Op de Doorstroomtoets staat vaak een tekst mét een prijslijst, rooster of dienstregeling — en het antwoord vind je alleen door béíde te gebruiken. Leer kruispunt-lezen (zoek de rij, zoek het gegeven),",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 36,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -7091,9 +7091,9 @@
     ],
     "intro": "Schema's, stappenplannen, beslisbomen en tijdslijnen lezen. Doorstroomtoets-stijl. ~12 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 63,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "schrijfvaardigheid",
@@ -7149,7 +7149,7 @@
     ],
     "intro": "Schrijven voor de Doorstroomtoets — tekstdoelen, brief/e-mail, samenvatten, opinie + drogredenen. 5 stappen × ~5 vragen. ~15 min.",
     "stepCount": 5,
-    "checkCount": 25,
+    "checkCount": 43,
     "chapterCount": 5,
     "estimatedMinutes": 15
   },
@@ -7165,9 +7165,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 25,
+    "checkCount": 36,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "sociale-zekerheid-nl",
@@ -7210,9 +7210,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 28,
+    "checkCount": 39,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "spelling",
@@ -7265,9 +7265,9 @@
     ],
     "intro": "Je eerste woorden schrijven: schrijf wat je hoort (k-a-t → kat), lange klanken (maan, boom), oe/ie/eu-woorden en de lastige vriendjes sch- en -ng. Voor groep 3. ~15 min.",
     "stepCount": 5,
-    "checkCount": 20,
+    "checkCount": 43,
     "chapterCount": 5,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "spelling-ei-ij-au-ou",
@@ -7294,7 +7294,7 @@
     ],
     "intro": "De vier klassieke homofoon-paren in het Nederlands: ei vs ij (reist vs rijst) en au vs ou (paus vs pous). Met woordlijsten, trucjes (voornaamwoorden = ij, -oud + -ouw = ou) en context-voorbeelden. Voo",
     "stepCount": 9,
-    "checkCount": 40,
+    "checkCount": 74,
     "chapterCount": 4,
     "estimatedMinutes": 25
   },
@@ -7323,9 +7323,9 @@
     ],
     "intro": "-isch / -lijk, leestekens, samenstellingen, hoofdletters. Doorstroomtoets-stijl woordtoets. ~12 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 57,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "spreekwoorden-uitdrukkingen-po",
@@ -7351,9 +7351,9 @@
     ],
     "intro": "Spreekwoorden + uitdrukkingen voor Doorstroomtoets groep 6-8 — letterlijk vs figuurlijk + top-30 uitdrukkingen (lichaam/dier/eten) + top-20 spreekwoorden + matching-strategie (toetsvraag) + valkuilen.",
     "stepCount": 6,
-    "checkCount": 40,
+    "checkCount": 52,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "staatsinrichting-1848",
@@ -7406,7 +7406,7 @@
     "stepCount": 12,
     "checkCount": 25,
     "chapterCount": 6,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "statistiek-havo-vwo",
@@ -7600,9 +7600,9 @@
     ],
     "intro": "Synoniemen + tegenstellingen voor groep 5-7 — bijna-gelijke woorden, tegenovergestelde betekenis, welk woord past het beste in een zin. ~15 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 60,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "taal-leren-lezen-g3",
@@ -7625,9 +7625,9 @@
     ],
     "intro": "Leren lezen, stap voor stap: klanken horen, rijmen, hakken en plakken (k-a-t → kat), je eerste woordjes en een echt zinnetje. Voor groep 3 — samen oefenen mag! ~15 min.",
     "stepCount": 5,
-    "checkCount": 20,
+    "checkCount": 48,
     "chapterCount": 5,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "taal-woorden-zinnen-g4",
@@ -7654,9 +7654,9 @@
     ],
     "intro": "Taal voor groep 4: het alfabet, meervoud (boek → boeken), verkleinwoorden (boompje), tegenstellingen (warm ↔ koud) en goede zinnen maken. ~15 min.",
     "stepCount": 5,
-    "checkCount": 21,
+    "checkCount": 44,
     "chapterCount": 5,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "tabellen-grafieken",
@@ -7682,9 +7682,9 @@
     ],
     "intro": "Tabellen en grafieken voor Doorstroomtoets groep 6-8 (voorheen Cito-eindtoets): tabel lezen, staafdiagram, lijngrafiek (verloop in tijd), cirkeldiagram (taartstukken). Met praktijksommen en eindopdrac",
     "stepCount": 7,
-    "checkCount": 40,
+    "checkCount": 72,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "tachtigjarige-oorlog-geschiedenis",
@@ -7735,7 +7735,7 @@
     ],
     "intro": "Tafels 1 t/m 10 voor groep 4-5 — wat is een tafel, makkelijke (2/5/10), basis (3/4), lastig (6/7/8/9), slimme trucs (splitsen, 9-truc, verdubbelen). ~15 min.",
     "stepCount": 7,
-    "checkCount": 41,
+    "checkCount": 62,
     "chapterCount": 7,
     "estimatedMinutes": 20
   },
@@ -7766,7 +7766,7 @@
     "stepCount": 13,
     "checkCount": 25,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "tekstdoel-schrijversdoel-po",
@@ -7793,7 +7793,7 @@
     ],
     "intro": "Op de Doorstroomtoets krijg je vragen als 'Waarom heeft de schrijver deze tekst geschreven?' en 'Voor wie is deze tekst bedoeld?'. In dit deel leer je de vier schrijversdoelen herkennen, de doelgroep ",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 31,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -7822,7 +7822,7 @@
     ],
     "intro": "\"Waardoor kwam het dat...?\" — een vaste vraagvorm op de Doorstroomtoets begrijpend lezen. Leer met je leesbril op wat oorzaak en gevolg zijn, herken signaalwoorden als omdat, daardoor en dus, en prik ",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 34,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -7851,7 +7851,7 @@
     ],
     "intro": "Samen tellen, vormen zoeken en spelen — voor kleuters in groep 1 en 2. Druk op 🔊 om alles voor te laten lezen; samen doen met een ouder of verzorger mag natuurlijk ook. ~15 min.",
     "stepCount": 5,
-    "checkCount": 21,
+    "checkCount": 36,
     "chapterCount": 5,
     "estimatedMinutes": 10
   },
@@ -7880,7 +7880,7 @@
     ],
     "intro": "Tijd + snelheid + afstand voor Doorstroomtoets — tijdseenheden + omrekenen, snelheid km/h ↔ m/s, S=V·T-formule, snelheid + tijd berekenen, praktijksommen (reistijden, marathon, inhalen). 5 stappen × 5",
     "stepCount": 5,
-    "checkCount": 25,
+    "checkCount": 42,
     "chapterCount": 5,
     "estimatedMinutes": 20
   },
@@ -7909,7 +7909,7 @@
     ],
     "intro": "Tijdsduur voor groep 6-8 — hoe lang duurt iets, tussen 2 klokken, optellen+aftrekken met 60-stap, 24-uurs format, praktijksommen school/reizen/sport. ~15 min.",
     "stepCount": 6,
-    "checkCount": 40,
+    "checkCount": 66,
     "chapterCount": 6,
     "estimatedMinutes": 20
   },
@@ -7967,9 +7967,9 @@
     ],
     "intro": "Hoofdlijnen van de Nederlandse geschiedenis: prehistorie + Romeinen, Middeleeuwen, Gouden Eeuw + Republiek, industrie + WO + nu. ~15 min. Voor groep 6-8 die de Doorstroomtoets-stof wil dekken.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 62,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "toestand-stoffen-po",
@@ -7998,7 +7998,7 @@
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "topografie-europa-landen-po",
@@ -8063,9 +8063,9 @@
     ],
     "intro": "Alles over Nederland in één leerpad: 12 provincies + hoofdsteden, 3 grote rivieren, 5 grootste steden, Waddeneilanden, Deltawerken en de buurlanden. toets-relevant voor groep 7-8.",
     "stepCount": 9,
-    "checkCount": 40,
+    "checkCount": 78,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 30
   },
   {
     "id": "topografie-nederland-provincies-po",
@@ -8111,9 +8111,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 28,
+    "checkCount": 37,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "trillingen-golven-havo-vwo",
@@ -8281,7 +8281,7 @@
     ],
     "intro": "\"Hoe voelt Ties zich?\" — terwijl dat nergens staat. Op de Doorstroomtoets krijg je vragen over verhalen en gedichten waarbij het antwoord tussen de regels zit. Leer gevoelens afleiden uit gedrag, ontd",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 34,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -8305,7 +8305,7 @@
     "stepCount": 10,
     "checkCount": 25,
     "chapterCount": 5,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "verhoudingen-po",
@@ -8329,7 +8329,7 @@
     ],
     "intro": "Verhoudingen voor groep 5-8: wat is een verhouding, recepten omrekenen, verhoudingstabellen, schaal op de kaart. Doorstroomtoets-stijl praktijksommen. ~15 min.",
     "stepCount": 6,
-    "checkCount": 40,
+    "checkCount": 65,
     "chapterCount": 5,
     "estimatedMinutes": 20
   },
@@ -8387,7 +8387,7 @@
     ],
     "intro": "\"Naar wie of wat verwijst het woord 'die'?\" — dé klassieke vraagvorm op de Doorstroomtoets begrijpend lezen. Leer de vaste strategie: verwijswoord vinden, terugzoeken in de tekst en controleren of je ",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 34,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -8403,9 +8403,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 25,
+    "checkCount": 37,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "vlakke-figuren",
@@ -8459,9 +8459,9 @@
     ],
     "intro": "Omtrek en oppervlakte voor groep 5-8: vierkant, rechthoek, driehoek (basis × hoogte ÷ 2), praktijksommen met hek/verf/gras/tegels. ~12 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 65,
     "chapterCount": 3,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "volgorde-bewerkingen",
@@ -8488,9 +8488,9 @@
     ],
     "intro": "Wat doe je eerst — × of +? De volgorde-regel HMVDOA: Haakjes, Machten, ×÷, +−. Met haakjes om volgorde te forceren, machten als kwadraat, en de bekende valkuilen. toets-relevant voor groep 5-7.",
     "stepCount": 7,
-    "checkCount": 40,
+    "checkCount": 69,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "voortplanting-hormonen-biologie",
@@ -8633,9 +8633,9 @@
     ],
     "intro": "Nederland en water voor groep 6-8 — onder zeeniveau, dijken+duinen, polders, Watersnoodramp 1953, Deltawerken. Toets-onderdeel wereldoriëntatie. ~15 min.",
     "stepCount": 6,
-    "checkCount": 40,
+    "checkCount": 57,
     "chapterCount": 6,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "waterkringloop-po",
@@ -8664,7 +8664,7 @@
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "weersvoorspelling-po",
@@ -8693,7 +8693,7 @@
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "wereld-globalisering-havo-vwo",
@@ -8749,9 +8749,9 @@
     ],
     "intro": "Werelddelen + landen voor Doorstroomtoets groep 6-8 — 7 continenten + 5 oceanen + grote landen + hoofdsteden (Frankrijk-Parijs, Brazilië-Brasília etc.) + bekende plekken (Everest, Sahara, Nijl, Amazon",
     "stepCount": 4,
-    "checkCount": 40,
+    "checkCount": 53,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 15
   },
   {
     "id": "wereldoorlog1-geschiedenis",
@@ -8889,7 +8889,7 @@
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 4,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 10
   },
   {
     "id": "werkwoordsspelling-dt",
@@ -8916,7 +8916,7 @@
     ],
     "intro": "De d/t-regels: tegenwoordige tijd (stam + t bij hij/zij), verleden tijd ('t kofschip — t, k, f, s, ch, p → -te), voltooid deelwoord (ge-stam-t/d). Plus de klassieke valkuil word vs wordt. Voor groep 5",
     "stepCount": 8,
-    "checkCount": 40,
+    "checkCount": 89,
     "chapterCount": 5,
     "estimatedMinutes": 25
   },
@@ -9030,9 +9030,9 @@
     ],
     "intro": "Winst rekenen voor groep 6-8 — inkoop, verkoop en winst (verkoop − inkoop), winst per stuk × aantal, terugrekenen naar de verkoopprijs en het verschil tussen opbrengst en winst. Met echte kraam- en pa",
     "stepCount": 3,
-    "checkCount": 26,
+    "checkCount": 31,
     "chapterCount": 3,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "wiskunde-d-vwo",
@@ -9088,7 +9088,7 @@
     ],
     "intro": "Op de Doorstroomtoets komt hij vrijwel altijd: de vraag \"Wat betekent 'X' in deze tekst?\". In dit deel leer je vier trucs om de betekenis uit de tekst zelf te halen — ook bij woorden die je nog nooit ",
     "stepCount": 4,
-    "checkCount": 26,
+    "checkCount": 34,
     "chapterCount": 4,
     "estimatedMinutes": 15
   },
@@ -9222,7 +9222,7 @@
     "stepCount": 8,
     "checkCount": 45,
     "chapterCount": 4,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 20
   },
   {
     "id": "woordenschat-po",
@@ -9245,9 +9245,9 @@
     ],
     "intro": "Woordenschat voor groep 5-8: synoniemen (zelfde betekenis), antoniemen (tegenstelling), betekenis in zin via context. Doorstroomtoets-stijl. ~12 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 52,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "woordsoorten-nederlands",
@@ -9300,9 +9300,9 @@
     ],
     "intro": "Zelfstandig naamwoord, werkwoord, bijvoeglijk naamwoord, lidwoord, voornaamwoord. Doorstroomtoets-stijl. ~12 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 54,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "zenuwstelsel-hormonen-havo-vwo",
@@ -9374,9 +9374,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 28,
+    "checkCount": 36,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 10
   },
   {
     "id": "zuren-basen-havo-vwo",

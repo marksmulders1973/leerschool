@@ -119,6 +119,242 @@ const steps = [
           niveaus: { basis: "24·3600=86400.", simpeler: "Uren × 3600.", nogSimpeler: "86 400" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Hoeveel **minuten** is **3 uur en 20 minuten**?",
+        options: ["200 min", "320 min", "180 min", "230 min"],
+        answer: 0,
+        wrongHints: [null, "Is 1 uur echt 100 minuten?", null, "Hoeveel minuten zitten er in 3 hele uren?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst de hele uren",
+              tekst: "Reken de 3 hele uren om naar minuten: 3 × 60.",
+            },
+            {
+              titel: "Dan de losse minuten",
+              tekst: "Tel de 20 losse minuten erbij op.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "omrekenen",
+              uitleg: "Een tijd in een andere eenheid schrijven, zoals uren in minuten.",
+            },
+          ],
+          theorie: "Een uur heeft 60 minuten, niet 100. Daarom reken je uren om naar minuten door × 60 te doen. Losse minuten tel je daarna gewoon op.",
+          voorbeelden: [
+            {
+              type: "school",
+              tekst: "Een schooldag van 5 uur en 10 minuten is 5 × 60 + 10 = 310 minuten.",
+            },
+            {
+              type: "thuis",
+              tekst: "Een film van 1 uur en 40 minuten duurt 60 + 40 = 100 minuten.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "1 uur = 60 minuten",
+              uitleg: "Nodig om hele uren om te rekenen naar minuten.",
+            },
+          ],
+          niveaus: {
+            basis: "3×60+20=200.",
+            simpeler: "180 + 20.",
+            nogSimpeler: "200 min",
+          },
+        },
+      },
+      {
+        q: "**240 seconden** zijn hoeveel **minuten**?",
+        options: ["4 min", "24 min", "2 min", "40 min"],
+        answer: 0,
+        wrongHints: [null, "Deel je door 10 of door 60?", null, "Hoeveel seconden heeft 1 minuut?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Hoeveel seconden per minuut?",
+              tekst: "1 minuut = 60 seconden.",
+            },
+            {
+              titel: "Delen",
+              tekst: "Deel 240 door 60.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "seconde",
+              uitleg: "Een heel korte tijd; 60 seconden samen is 1 minuut.",
+            },
+          ],
+          theorie: "Van seconden naar minuten ga je door te delen door 60, omdat er 60 seconden in een minuut zitten.",
+          voorbeelden: [
+            {
+              type: "sport",
+              tekst: "Een plank-oefening van 120 seconden duurt 120 ÷ 60 = 2 minuten.",
+            },
+            {
+              type: "thuis",
+              tekst: "De magnetron staat op 300 seconden: dat is 5 minuten.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "1 minuut = 60 seconden",
+              uitleg: "Nodig om seconden om te rekenen naar minuten.",
+            },
+          ],
+          niveaus: {
+            basis: "240/60=4.",
+            simpeler: "Delen door 60.",
+            nogSimpeler: "4 min",
+          },
+        },
+      },
+      {
+        q: "Een film begint om **19:40** en is afgelopen om **21:15**. Hoe lang duurt de film?",
+        options: ["1 uur 35 min", "1 uur 25 min", "2 uur 25 min", "1 uur 55 min"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Tel eerst tot het hele uur 20:00 — hoeveel minuten is dat?",
+          null,
+          "Reken stap voor stap via 20:00 en 21:00.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Naar het hele uur",
+              tekst: "Van 19:40 naar 20:00 is 20 minuten.",
+            },
+            {
+              titel: "De rest",
+              tekst: "Van 20:00 naar 21:00 is 1 uur, en van 21:00 naar 21:15 is 15 minuten. Tel alles op.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tijdsspanne",
+              uitleg: "De tijd tussen een begintijd en een eindtijd.",
+            },
+          ],
+          theorie: "Een tijdsspanne reken je in stapjes uit: eerst naar het volgende hele uur, dan de hele uren, dan de laatste minuten. Tel daarna alle stukjes op.",
+          voorbeelden: [
+            {
+              type: "school",
+              tekst: "Gym van 10:50 tot 11:35: 10 min + 35 min = 45 minuten.",
+            },
+            {
+              type: "thuis",
+              tekst: "Koken van 17:30 tot 18:10: 30 min + 10 min = 40 minuten.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "1 uur = 60 minuten",
+              uitleg: "Nodig om de stukjes tijd goed op te tellen.",
+            },
+          ],
+          niveaus: {
+            basis: "20+60+15 min.",
+            simpeler: "Via 20:00 en 21:00.",
+            nogSimpeler: "1 uur 35",
+          },
+        },
+      },
+      {
+        q: "Hoeveel **uur** zitten er in **3 dagen**?",
+        options: ["72 uur", "60 uur", "48 uur", "84 uur"],
+        answer: 0,
+        wrongHints: [null, "Hoeveel uur heeft één dag?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Uren in één dag",
+              tekst: "Eén dag heeft 24 uur.",
+            },
+            {
+              titel: "Keer 3",
+              tekst: "Doe 3 × 24.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "dag",
+              uitleg: "Eén keer rond de klok van middernacht tot middernacht: 24 uur.",
+            },
+          ],
+          theorie: "Een dag duurt 24 uur. Wil je weten hoeveel uur er in een aantal dagen zitten, dan doe je het aantal dagen × 24.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Een weekend van 2 dagen heeft 2 × 24 = 48 uur.",
+            },
+            {
+              type: "school",
+              tekst: "Een schoolkamp van 4 dagen duurt 4 × 24 = 96 uur.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "1 dag = 24 uur",
+              uitleg: "Nodig om dagen om te rekenen naar uren.",
+            },
+          ],
+          niveaus: {
+            basis: "3×24=72.",
+            simpeler: "24 + 24 + 24.",
+            nogSimpeler: "72 uur",
+          },
+        },
+      },
+      {
+        q: "Welke van deze maanden heeft **30 dagen**?",
+        options: ["november", "oktober", "augustus", "januari"],
+        answer: 0,
+        wrongHints: [null, "Denk aan het rijmpje over de maanden met 30 dagen.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Het rijmpje",
+              tekst: "30 dagen hebben september, april, juni en november.",
+            },
+            {
+              titel: "Vergelijk",
+              tekst: "Kijk welke van de vier maanden in dat rijtje staat.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "maand",
+              uitleg: "Een deel van het jaar; een jaar heeft 12 maanden.",
+            },
+          ],
+          theorie: "De meeste maanden hebben 31 dagen. Alleen september, april, juni en november hebben 30 dagen. Februari heeft 28 dagen, of 29 in een schrikkeljaar.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Je verjaardag is op 30 juni: dat is de laatste dag van juni.",
+            },
+            {
+              type: "school",
+              tekst: "Oktober heeft 31 dagen, dus 31 oktober is de laatste dag van die maand.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Maanden met 30 dagen",
+              uitleg: "September, april, juni en november.",
+            },
+          ],
+          niveaus: {
+            basis: "November: 30 dagen.",
+            simpeler: "Rijmpje: sept, april, juni, nov.",
+            nogSimpeler: "november",
+          },
+        },
+      },
     ],
   },
 
@@ -238,6 +474,155 @@ const steps = [
           niveaus: { basis: "300 000 km/s.", simpeler: "Bijna 300 000 km per seconde.", nogSimpeler: "300k" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat betekent een snelheid van **60 km/h**?",
+        options: [
+          "In 1 uur leg je 60 km af",
+          "In 60 uur leg je 1 km af",
+          "In 1 minuut leg je 60 km af",
+          "In 1 uur leg je 60 m af",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Wat staat er vóór de streep en wat erachter?",
+          null,
+          "Kijk goed naar de afstand: km of m?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lees de eenheid",
+              tekst: "km/h betekent: kilometer per uur.",
+            },
+            {
+              titel: "Vul in",
+              tekst: "60 km/h is dus 60 kilometer in elk uur.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "km/h",
+              uitleg: "Kilometer per uur: hoeveel kilometer je in één uur aflegt.",
+            },
+          ],
+          theorie: "Snelheid is afstand per tijd. Bij km/h staat de afstand (km) vóór de streep en de tijd (uur, h) erachter.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Een auto in de wijk rijdt 30 km/h: in 1 uur zou hij 30 km verder zijn.",
+            },
+            {
+              type: "sport",
+              tekst: "Een fietser met 20 km/h is na 1 uur 20 km verder.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Snelheid = afstand per tijd",
+              uitleg: "Nodig om een snelheid te kunnen lezen.",
+            },
+          ],
+          niveaus: {
+            basis: "60 km per uur.",
+            simpeler: "Per = in elk.",
+            nogSimpeler: "60 km in 1 uur",
+          },
+        },
+      },
+      {
+        q: "Welke snelheid past het best bij iemand die **wandelt**?",
+        options: ["5 km/h", "50 km/h", "120 km/h", "300 km/h"],
+        answer: 0,
+        wrongHints: [null, "Dat is zo snel als een auto in de stad.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stel het je voor",
+              tekst: "Hoe ver kom je in een uur als je rustig loopt?",
+            },
+            {
+              titel: "Vergelijk",
+              tekst: "Een auto in de stad rijdt 50 km/h — wandelen gaat veel langzamer.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "km/h",
+              uitleg: "Kilometer per uur.",
+            },
+          ],
+          theorie: "Het helpt om een paar snelheden te kennen: lopen ongeveer 5 km/h, fietsen 15 tot 20 km/h, een auto in de stad 50 km/h en op de snelweg 100 tot 130 km/h.",
+          voorbeelden: [
+            {
+              type: "school",
+              tekst: "Met 5 km/h loop je in een uur 5 km: ongeveer de afstand van een flinke wandeling.",
+            },
+            {
+              type: "sport",
+              tekst: "Een fietser haalt makkelijk 15 km/h.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Bekende snelheden",
+              uitleg: "Lopen ~5, fietsen ~15-20, auto in de stad 50 km/h.",
+            },
+          ],
+          niveaus: {
+            basis: "Lopen ≈ 5 km/h.",
+            simpeler: "Veel langzamer dan fietsen.",
+            nogSimpeler: "5 km/h",
+          },
+        },
+      },
+      {
+        q: "Welke van deze is **GEEN** snelheid?",
+        options: ["80 km", "80 km/h", "15 m/s", "5 km/h"],
+        answer: 0,
+        wrongHints: [null, "Zie je bij elk antwoord een afstand ÉN een tijd?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat is snelheid?",
+              tekst: "Snelheid is afstand per tijd.",
+            },
+            {
+              titel: "Kijk naar de eenheid",
+              tekst: "Een snelheid heeft altijd een tijd erbij, zoals 'per uur' of 'per seconde'.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "eenheid",
+              uitleg: "Wat achter het getal staat, zoals km, km/h of m/s.",
+            },
+          ],
+          theorie: "Een snelheid zegt hoeveel afstand je in een bepaalde tijd aflegt. Daarom heeft een snelheid twee delen: een afstand (km of m) én een tijd (h of s). Alleen km of m is een afstand.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "'Het is 3 km naar opa' is een afstand, 'we rijden 50 km/h' is een snelheid.",
+            },
+            {
+              type: "sport",
+              tekst: "'15 m/s' is een snelheid, '100 m' is de lengte van de baan.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Afstand of snelheid",
+              uitleg: "Afstand: km of m. Snelheid: km/h of m/s.",
+            },
+          ],
+          niveaus: {
+            basis: "80 km = afstand.",
+            simpeler: "Geen tijd erbij.",
+            nogSimpeler: "80 km",
+          },
+        },
+      },
     ],
   },
 
@@ -347,6 +732,196 @@ const steps = [
           niveaus: { basis: "160+120=280.", simpeler: "Twee delen optellen.", nogSimpeler: "280" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een bus rijdt **2 uur** met **70 km/h**. Hoeveel km legt hij af?",
+        options: ["140 km", "35 km", "72 km", "210 km"],
+        answer: 0,
+        wrongHints: [null, "Moet je delen of keer doen?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Formule",
+              tekst: "Afstand = snelheid × tijd.",
+            },
+            {
+              titel: "Vul in",
+              tekst: "70 × 2.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "afstand",
+              uitleg: "Hoe ver je bent gereden of gelopen.",
+            },
+          ],
+          theorie: "Als je weet hoe snel iets gaat en hoe lang, vind je de afstand met snelheid × tijd. Let op: snelheid in km/h hoort bij tijd in uren.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Een auto rijdt 3 uur met 60 km/h: 180 km.",
+            },
+            {
+              type: "sport",
+              tekst: "Een fietser rijdt 2 uur met 15 km/h: 30 km.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "S = V × T",
+              uitleg: "Afstand = snelheid × tijd.",
+            },
+          ],
+          niveaus: {
+            basis: "70×2=140.",
+            simpeler: "Elk uur 70 km erbij.",
+            nogSimpeler: "140 km",
+          },
+        },
+      },
+      {
+        q: "Een step rijdt **4 m/s**. Hoeveel **meter** legt hij af in **25 seconden**?",
+        options: ["100 m", "29 m", "21 m", "1000 m"],
+        answer: 0,
+        wrongHints: [null, "Je hebt opgeteld — klopt dat bij snelheid × tijd?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eenheden passen",
+              tekst: "m/s en seconden horen bij elkaar: de uitkomst is in meter.",
+            },
+            {
+              titel: "Vermenigvuldig",
+              tekst: "4 × 25.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "m/s",
+              uitleg: "Meter per seconde.",
+            },
+          ],
+          theorie: "Afstand = snelheid × tijd. Bij m/s gebruik je de tijd in seconden, dan krijg je de afstand in meter.",
+          voorbeelden: [
+            {
+              type: "sport",
+              tekst: "Een renner van 6 m/s loopt in 10 seconden 60 meter.",
+            },
+            {
+              type: "thuis",
+              tekst: "Een speelgoedautootje van 2 m/s rijdt in 5 seconden 10 meter.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "S = V × T",
+              uitleg: "Afstand = snelheid × tijd.",
+            },
+          ],
+          niveaus: {
+            basis: "4×25=100.",
+            simpeler: "Elke seconde 4 m.",
+            nogSimpeler: "100 m",
+          },
+        },
+      },
+      {
+        q: "Je wandelt **2 uur en 30 minuten** met **4 km/h**. Hoeveel km loop je?",
+        options: ["10 km", "8 km", "12 km", "6 km"],
+        answer: 0,
+        wrongHints: [null, "Heb je het halve uur meegeteld?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tijd als kommagetal",
+              tekst: "2 uur en 30 minuten = 2,5 uur.",
+            },
+            {
+              titel: "Reken",
+              tekst: "4 × 2,5.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "half uur",
+              uitleg: "30 minuten = 0,5 uur.",
+            },
+          ],
+          theorie: "Afstand = snelheid × tijd. Schrijf de tijd eerst in uren: 30 minuten is een half uur.",
+          voorbeelden: [
+            {
+              type: "sport",
+              tekst: "Een loper met 10 km/h rent in 1,5 uur 15 km.",
+            },
+            {
+              type: "thuis",
+              tekst: "Een fietstocht van 3,5 uur met 12 km/h is 42 km.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "S = V × T",
+              uitleg: "Afstand = snelheid × tijd.",
+            },
+          ],
+          niveaus: {
+            basis: "4×2,5=10.",
+            simpeler: "8 km + 2 km.",
+            nogSimpeler: "10 km",
+          },
+        },
+      },
+      {
+        q: "In een grafiek van **afstand tegen tijd** loopt de lijn een stukje **vlak** (horizontaal). Wat betekent dat?",
+        options: [
+          "Het voertuig staat stil",
+          "Het voertuig rijdt heel hard",
+          "Het voertuig rijdt achteruit",
+          "Het voertuig gaat steeds sneller",
+        ],
+        answer: 0,
+        wrongHints: [null, "Verandert de afstand op dat stukje?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat lees je af?",
+              tekst: "In zo'n grafiek zie je hoe ver het voertuig is op elk moment.",
+            },
+            {
+              titel: "Vlakke lijn",
+              tekst: "Blijft de afstand hetzelfde terwijl de tijd doorloopt, dan komt het voertuig niet verder.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "horizontaal",
+              uitleg: "Plat, recht van links naar rechts.",
+            },
+          ],
+          theorie: "In een afstand-tijdgrafiek zegt de helling hoe snel iets gaat. Hoe steiler, hoe sneller. Een vlakke lijn betekent dat de afstand niet groeit: stilstand.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Een auto staat 10 minuten voor een rood stoplicht: in de grafiek een vlak stukje.",
+            },
+            {
+              type: "school",
+              tekst: "Een fietser wacht bij het spoor: de lijn loopt even vlak.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Helling = snelheid",
+              uitleg: "Steil = snel, vlak = stilstand.",
+            },
+          ],
+          niveaus: {
+            basis: "Vlak = stilstand.",
+            simpeler: "Afstand blijft gelijk.",
+            nogSimpeler: "stil",
+          },
+        },
+      },
     ],
   },
 
@@ -454,6 +1029,150 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "T = S/V", uitleg: "Tijd is afstand gedeeld door snelheid — hier gebruik je de opgetelde snelheid van beide voertuigen." }],
           niveaus: { basis: "1 uur.", simpeler: "Naar elkaar = + snelheden.", nogSimpeler: "1h" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een fietser rijdt **45 km** in **3 uur**. Wat is zijn snelheid?",
+        options: ["15 km/h", "135 km/h", "48 km/h", "12 km/h"],
+        answer: 0,
+        wrongHints: [null, "Moet je keer doen of delen?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Formule",
+              tekst: "Snelheid = afstand ÷ tijd.",
+            },
+            {
+              titel: "Vul in",
+              tekst: "45 ÷ 3.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "snelheid",
+              uitleg: "Hoeveel afstand je per uur aflegt.",
+            },
+          ],
+          theorie: "Ken je de afstand en de tijd, dan vind je de snelheid met V = S ÷ T.",
+          voorbeelden: [
+            {
+              type: "sport",
+              tekst: "Een loper doet 20 km in 2 uur: 10 km/h.",
+            },
+            {
+              type: "thuis",
+              tekst: "Een auto rijdt 150 km in 2 uur: 75 km/h.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "V = S / T",
+              uitleg: "Snelheid = afstand gedeeld door tijd.",
+            },
+          ],
+          niveaus: {
+            basis: "45/3=15.",
+            simpeler: "Afstand ÷ tijd.",
+            nogSimpeler: "15 km/h",
+          },
+        },
+      },
+      {
+        q: "Een boot vaart **60 km** met **20 km/h**. Hoe lang duurt de tocht?",
+        options: ["3 uur", "4 uur", "2 uur", "40 uur"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoe vaak past 20 in 60?",
+          null,
+          "Je trok af — welke rekensom hoort bij tijd zoeken?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Formule",
+              tekst: "Tijd = afstand ÷ snelheid.",
+            },
+            {
+              titel: "Vul in",
+              tekst: "60 ÷ 20.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "T = S/V",
+              uitleg: "Tijd = afstand gedeeld door snelheid.",
+            },
+          ],
+          theorie: "Zoek je de tijd, dan deel je de afstand door de snelheid. Elk uur komt de boot 20 km verder.",
+          voorbeelden: [
+            {
+              type: "sport",
+              tekst: "Een fietser rijdt 30 km met 15 km/h: 2 uur.",
+            },
+            {
+              type: "thuis",
+              tekst: "Een auto rijdt 200 km met 100 km/h: 2 uur.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "T = S / V",
+              uitleg: "Tijd = afstand gedeeld door snelheid.",
+            },
+          ],
+          niveaus: {
+            basis: "60/20=3.",
+            simpeler: "20 + 20 + 20.",
+            nogSimpeler: "3 uur",
+          },
+        },
+      },
+      {
+        q: "Een auto rijdt **50 km** in **30 minuten**. Wat is de snelheid?",
+        options: ["100 km/h", "25 km/h", "50 km/h", "80 km/h"],
+        answer: 0,
+        wrongHints: [null, "Hoe ver komt de auto in een héél uur?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tijd in uren",
+              tekst: "30 minuten = een half uur.",
+            },
+            {
+              titel: "Naar een heel uur",
+              tekst: "In een half uur 50 km, dus in een heel uur 2 × 50.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "km/h",
+              uitleg: "Kilometer per uur.",
+            },
+          ],
+          theorie: "km/h vertelt hoeveel km je in een héél uur aflegt. Gaat het over een half uur, dan verdubbel je de afstand om de snelheid per uur te vinden.",
+          voorbeelden: [
+            {
+              type: "sport",
+              tekst: "Een fietser rijdt 9 km in een half uur: 18 km/h.",
+            },
+            {
+              type: "thuis",
+              tekst: "Een trein rijdt 70 km in 30 minuten: 140 km/h.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "V = S / T",
+              uitleg: "Snelheid = afstand ÷ tijd (in uren).",
+            },
+          ],
+          niveaus: {
+            basis: "50/0,5=100.",
+            simpeler: "Half uur → keer 2.",
+            nogSimpeler: "100 km/h",
+          },
         },
       },
     ],
@@ -583,6 +1302,99 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "T = S/V per voertuig", uitleg: "Elk voertuig heeft zijn eigen snelheid en dus zijn eigen reistijd over dezelfde afstand." }],
           niveaus: { basis: "2 uur.", simpeler: "Auto 30 min, fiets 2,5 h. Verschil 2h.", nogSimpeler: "2h" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een trein rijdt **150 km** in **2 uur**. Welke som geeft de snelheid?",
+        options: ["150 ÷ 2", "150 × 2", "2 ÷ 150", "150 − 2"],
+        answer: 0,
+        wrongHints: [null, "Komt de trein dan elk uur 300 km verder?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat is gegeven?",
+              tekst: "Afstand 150 km en tijd 2 uur.",
+            },
+            {
+              titel: "Welke formule?",
+              tekst: "Snelheid zoek je met V = S ÷ T.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "formule",
+              uitleg: "Een vaste rekenregel, zoals snelheid = afstand ÷ tijd.",
+            },
+          ],
+          theorie: "Er zijn drie vormen: S = V × T, V = S ÷ T en T = S ÷ V. Kijk eerst wat gegeven is en wat gevraagd wordt; dan kies je de vorm.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "100 km in 2 uur → 100 ÷ 2 = 50 km/h.",
+            },
+            {
+              type: "sport",
+              tekst: "30 km in 3 uur → 30 ÷ 3 = 10 km/h.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "V = S / T",
+              uitleg: "Snelheid = afstand ÷ tijd.",
+            },
+          ],
+          niveaus: {
+            basis: "Afstand ÷ tijd.",
+            simpeler: "V = S/T.",
+            nogSimpeler: "150 ÷ 2",
+          },
+        },
+      },
+      {
+        q: "Hoeveel **minuten** doe je erover om **3 km** te lopen met **6 km/h**?",
+        options: ["30 min", "18 min", "2 min", "20 min"],
+        answer: 0,
+        wrongHints: [null, "Je deed keer — welke som hoort bij tijd zoeken?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tijd in uren",
+              tekst: "3 ÷ 6 = 0,5 uur.",
+            },
+            {
+              titel: "Naar minuten",
+              tekst: "0,5 uur = 30 minuten.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "T = S/V",
+              uitleg: "Tijd = afstand gedeeld door snelheid.",
+            },
+          ],
+          theorie: "Zoek je de tijd, dan deel je de afstand door de snelheid. Je krijgt de tijd in uren; reken die daarna om naar minuten.",
+          voorbeelden: [
+            {
+              type: "school",
+              tekst: "2 km naar school met 4 km/h: 0,5 uur = 30 minuten.",
+            },
+            {
+              type: "sport",
+              tekst: "5 km fietsen met 20 km/h: 0,25 uur = 15 minuten.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "1 uur = 60 minuten",
+              uitleg: "Nodig om uren om te zetten naar minuten.",
+            },
+          ],
+          niveaus: {
+            basis: "3/6=0,5 h.",
+            simpeler: "Half uur.",
+            nogSimpeler: "30 min",
+          },
         },
       },
     ],

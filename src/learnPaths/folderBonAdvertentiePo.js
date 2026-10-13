@@ -111,6 +111,74 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Op een kassabon is één bedrag onleesbaar:\n• Pennen 3 × €1,25 = €…\n\nWelk bedrag hoort op de plek van de puntjes?",
+        options: ["€3,75", "€4,25", "€3,25", "€1,25"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Reken 3 × €1,25 eens uit als €1,25 + €1,25 + €1,25.",
+          null,
+          "Dat is de prijs van één pen.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Aantal × prijs per stuk",
+              tekst: "3 pennen van €1,25: €1,25 + €1,25 + €1,25 = €3,75.",
+            },
+          ],
+          niveaus: {
+            basis: "3 × €1,25 = €3,75.",
+            simpeler: "Drie keer €1 is €3, drie keer 25 cent is 75 cent.",
+            nogSimpeler: "€3 + €0,75 = ?",
+          },
+        },
+      },
+      {
+        q: "Onderaan een kassabon staat:\n• Totaal: €13,65\n• Betaald (contant): €20,00\n• Terug: €…\n\nHoeveel krijg je terug?",
+        options: ["€6,35", "€7,35", "€6,45", "€7,65"],
+        answer: 0,
+        wrongHints: [null, "Reken van €13,65 omhoog naar €20,00.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Betaald − totaal",
+              tekst: "€20,00 − €13,65 = €6,35. Controle: €13,65 + €6,35 = €20,00.",
+            },
+          ],
+          niveaus: {
+            basis: "Wisselgeld = €20,00 − €13,65 = €6,35.",
+            simpeler: "Van €13,65 naar €14,00 is €0,35. Van €14,00 naar €20,00 is €6,00.",
+            nogSimpeler: "€0,35 + €6,00 = ?",
+          },
+        },
+      },
+      {
+        q: "Onderaan een kassabon staat:\n• Totaal: €7,26\n• Waarvan btw: €1,26\n\nHoeveel heb je in totaal betaald?",
+        options: ["€7,26", "€8,52", "€6,00", "€1,26"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Lees in de uitleg nog eens na waar de btw zit.",
+          null,
+          "Dat is maar een deel van het bedrag.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Btw zit al in de prijs",
+              tekst: "De btw is belasting die al in de prijs zit. 'Waarvan btw' betekent: van de €7,26 is €1,26 belasting. Je betaalt dus €7,26.",
+            },
+          ],
+          niveaus: {
+            basis: "Je betaalt het totaal: €7,26. De btw zit daar al in.",
+            simpeler: "Komt de btw er nog bij, of zit hij al in het totaal? Hij zit er al in.",
+            nogSimpeler: "Welk bedrag staat bij 'Totaal'?",
+          },
+        },
+      },
     ],
   },
 
@@ -208,6 +276,26 @@ const steps = [
             basis: "Besparing = €25 − €20 = €5.",
             simpeler: "Hoeveel zit er tussen €25 en €20?",
             nogSimpeler: "€25 − €20 = ?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Folder:\n• Kaas: 2e halve prijs\n• Brood: 25% korting\n• Melk: op = op\n• Eieren: 2 halen, 1 betalen\n\nBij welk product krijg je er één **gratis** bij?",
+        options: ["eieren", "kaas", "brood", "melk"],
+        answer: 0,
+        wrongHints: [null, "Voor het tweede stuk betaal je hier nog wel iets.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "2 halen, 1 betalen",
+              tekst: "Bij '2 halen, 1 betalen' neem je er 2 mee en betaal je er 1. Eentje krijg je dus gratis. Dat staat bij de eieren.",
+            },
+          ],
+          niveaus: {
+            basis: "'2 halen, 1 betalen' = één gratis → eieren.",
+            simpeler: "Bij welke aanbieding betaal je voor het tweede stuk helemaal niets?",
+            nogSimpeler: "Welke tekst zegt '1 betalen'?",
           },
         },
       },
@@ -319,6 +407,55 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Advertentie:\nGRATIS pet bij elke fles!*\n*Alleen bij aankoop van 2 flessen, zolang de voorraad strekt.\n\nJe koopt 1 fles. Krijg je een pet?",
+        options: [
+          "nee, daarvoor moet je 2 flessen kopen",
+          "ja, want bij elke fles hoort een pet",
+          "ja, als je bij de kassa om een pet vraagt",
+          "nee, want petten zijn nooit gratis",
+        ],
+        answer: 0,
+        wrongHints: [null, "Waar verwijst het sterretje naar?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kleine lettertjes = voorwaarden",
+              tekst: "Het sterretje verwijst naar de kleine lettertjes. Daar staat de voorwaarde: alleen bij 2 flessen. Met 1 fles krijg je dus geen pet.",
+            },
+          ],
+          niveaus: {
+            basis: "De kleine lettertjes zeggen: alleen bij 2 flessen.",
+            simpeler: "Wat staat er onder het sterretje?",
+            nogSimpeler: "Koop je 1 fles of 2 flessen?",
+          },
+        },
+      },
+      {
+        q: "Welke informatie zet een verkoper bijna nooit in zijn advertentie?",
+        options: [
+          "de nadelen van het product",
+          "de prijs van het product",
+          "een foto van het product",
+          "de naam van het product",
+        ],
+        answer: 0,
+        wrongHints: [null, "Kijk eens in een folder: wat staat daar vaak groot bij een product?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Reclame toont de goede kant",
+              tekst: "Een advertentie wil dat je iets koopt. Daarom laat hij vooral de goede kanten zien en vertelt hij de nadelen meestal niet.",
+            },
+          ],
+          niveaus: {
+            basis: "Nadelen staan bijna nooit in reclame.",
+            simpeler: "Wil een verkoper dat je de minder mooie kant ziet?",
+            nogSimpeler: "Laat reclame de goede of de slechte kanten zien?",
+          },
+        },
+      },
     ],
   },
 
@@ -427,6 +564,45 @@ const steps = [
             basis: "€18 (vol) + €9 (half) = €27.",
             simpeler: "Eén shirt vol (€18), één voor de helft (€9). Tel op.",
             nogSimpeler: "18 + 9 = ?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Folder:\nYoghurt €1,10 per pak — 3 halen, 2 betalen\n\nJe neemt 3 pakken. Wat betaal je?",
+        options: ["€2,20", "€3,30", "€1,10", "€4,40"],
+        answer: 0,
+        wrongHints: [null, "Dan betaal je voor alle drie de pakken.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eentje gratis",
+              tekst: "Bij '3 halen, 2 betalen' betaal je voor 2 pakken: 2 × €1,10 = €2,20. Het derde pak is gratis.",
+            },
+          ],
+          niveaus: {
+            basis: "Je betaalt 2 × €1,10 = €2,20.",
+            simpeler: "Voor hoeveel van de 3 pakken betaal je?",
+            nogSimpeler: "€1,10 + €1,10 = ?",
+          },
+        },
+      },
+      {
+        q: "Folder:\nRugzak — van €35 voor €28\n\nJe koopt er 2: één voor jou en één voor je broer. Hoeveel bespaar je samen?",
+        options: ["€14", "€7", "€56", "€70"],
+        answer: 0,
+        wrongHints: [null, "Voor hoeveel rugzakken krijg je de korting?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Besparing × aantal",
+              tekst: "Op één rugzak bespaar je €35 − €28 = €7. Je koopt er 2, dus je bespaart 2 × €7 = €14.",
+            },
+          ],
+          niveaus: {
+            basis: "€7 per rugzak × 2 = €14.",
+            simpeler: "Wat bespaar je op één rugzak? Doe dat dan keer 2.",
+            nogSimpeler: "€7 + €7 = ?",
           },
         },
       },

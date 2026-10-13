@@ -133,6 +133,139 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Je wilt weten hoeveel water er in een **zwembad** past. Welke eenheid past daar het best bij?",
+        options: ["kubieke meter (m³)", "kubieke centimeter (cm³)", "milliliter (mL)", "meter (m)"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is een heel kleine eenheid. Hoe groot is een zwembad?",
+          null,
+          "Hiermee meet je een lengte. Gaat het hier om hoe lang iets is?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Groot of klein?",
+              tekst: "Een zwembad is heel groot. Voor grote dingen, zoals kamers en zwembaden, gebruik je de kubieke meter (m³).",
+            },
+          ],
+          woorden: [
+            {
+              woord: "m³",
+              uitleg: "Kubieke meter — een kubus van 1 m lang, 1 m breed en 1 m hoog.",
+            },
+          ],
+          theorie: "Kleine dingen meet je in cm³ of mL. Grote dingen, zoals een kamer of zwembad, in m³.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Een dobbelsteen → cm³. Een melkpak → liter. Een zwembad → m³.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Meter is geen volume",
+              uitleg: "Meter (m) is een lengte. Volume heeft een ³ erbij: m³.",
+            },
+          ],
+          niveaus: {
+            basis: "Een zwembad meet je in m³.",
+            simpeler: "Een zwembad is heel groot. Grote dingen meet je in kubieke meters: m³.",
+            nogSimpeler: "m³",
+          },
+        },
+      },
+      {
+        q: "Een flesje water bevat **een halve liter**. Hoeveel **mL** is dat?",
+        options: ["500 mL", "50 mL", "5000 mL", "250 mL"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — hoeveel mL zit er in een hele liter?",
+          "Te veel — dat is meer dan een hele liter.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Hele liter",
+              tekst: "1 liter = 1000 mL.",
+            },
+            {
+              titel: "Halve liter",
+              tekst: "De helft van 1000 is 500. Dus een halve liter = 500 mL.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "mL",
+              uitleg: "Milliliter — een heel klein beetje vloeistof. 1000 mL is 1 liter.",
+            },
+          ],
+          theorie: "1 liter = 1000 mL. Een halve liter is de helft daarvan.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1000 ÷ 2 = 500. Dus een halve liter = 500 mL.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Helft nemen",
+              uitleg: "De helft van iets = delen door 2.",
+            },
+          ],
+          niveaus: {
+            basis: "Een halve liter = 500 mL.",
+            simpeler: "1 liter is 1000 mL. De helft van 1000 is 500. Dus 500 mL.",
+            nogSimpeler: "500 mL",
+          },
+        },
+      },
+      {
+        q: "Welke van deze is het **grootst**?",
+        options: ["1 m³", "1 liter", "1 dm³", "1000 cm³"],
+        answer: 0,
+        wrongHints: [null, null, "Hoeveel liter is 1 dm³?", "Reken om: hoeveel liter is 1000 cm³?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zet alles in liters",
+              tekst: "1 liter = 1 liter. 1 dm³ = 1 liter. 1000 cm³ = 1 liter. Die drie zijn dus even groot.",
+            },
+            {
+              titel: "En 1 m³?",
+              tekst: "1 m³ = 1000 liter. Dat is veel meer.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "dm³",
+              uitleg: "Kubieke decimeter — precies even groot als 1 liter.",
+            },
+          ],
+          theorie: "1 liter = 1 dm³ = 1000 cm³. En 1 m³ = 1000 liter.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1 liter, 1 dm³ en 1000 cm³ zijn even groot. 1 m³ is 1000 keer zo groot.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Vergelijken",
+              uitleg: "Zet eerst alles in dezelfde eenheid. Dan kun je pas zien wat het grootst is.",
+            },
+          ],
+          niveaus: {
+            basis: "1 m³ is het grootst: 1000 liter.",
+            simpeler: "Drie van de vier zijn precies 1 liter. Alleen 1 m³ is meer: 1000 liter.",
+            nogSimpeler: "1 m³",
+          },
+        },
+      },
     ],
   },
 
@@ -180,6 +313,242 @@ const steps = [
         options: ["1000 cm³", "100 cm³", "30 cm³", "10.000 cm³"],
         answer: 0,
         wrongHints: [null, "Te weinig — dat is 10 × 10. Nog één keer × 10.", "Te weinig — dat is 10 + 10 + 10.", "Te veel — controleer 10 × 10 × 10."],
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een **kubus** heeft een zijde van **7 cm**. Wat is het volume?",
+        options: ["343 cm³", "49 cm³", "21 cm³", "147 cm³"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — heb je maar 2 keer met 7 vermenigvuldigd?",
+          "Te weinig — is dat 7 + 7 + 7? Volume is keer.",
+          "Heb je ergens × 3 gedaan in plaats van × 7?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Formule kubus",
+              tekst: "V = zijde × zijde × zijde = 7 × 7 × 7.",
+            },
+            {
+              titel: "Uitrekenen",
+              tekst: "7 × 7 = 49. Dan 49 × 7 = 343. Dus 343 cm³.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "zijde",
+              uitleg: "De lengte van één ribbe van de kubus.",
+            },
+            {
+              woord: "cm³",
+              uitleg: "Kubieke centimeter — eenheid van volume.",
+            },
+          ],
+          theorie: "Bij een kubus zijn alle ribben even lang. Volume = zijde × zijde × zijde.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "7 × 7 = 49 → 49 × 7 = 343 cm³.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "3 keer",
+              uitleg: "Je vermenigvuldigt het getal 3 keer met zichzelf, niet 2 keer.",
+            },
+          ],
+          niveaus: {
+            basis: "7 × 7 × 7 = 343 cm³.",
+            simpeler: "Eerst 7 × 7 = 49. Dan 49 × 7 = 343. Dus 343 cm³.",
+            nogSimpeler: "343 cm³",
+          },
+        },
+      },
+      {
+        q: "Een **kubus** heeft een zijde van **8 cm**. Wat is het volume?",
+        options: ["512 cm³", "64 cm³", "24 cm³", "192 cm³"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — dat is 8 × 8. Hoe vaak moet je met 8 vermenigvuldigen?",
+          null,
+          "Heb je ergens × 3 gedaan in plaats van × 8?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Formule kubus",
+              tekst: "V = zijde × zijde × zijde = 8 × 8 × 8.",
+            },
+            {
+              titel: "Uitrekenen",
+              tekst: "8 × 8 = 64. Dan 64 × 8 = 512. Dus 512 cm³.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "zijde",
+              uitleg: "De lengte van één ribbe van de kubus.",
+            },
+            {
+              woord: "cm³",
+              uitleg: "Kubieke centimeter — eenheid van volume.",
+            },
+          ],
+          theorie: "Bij een kubus zijn alle ribben even lang. Volume = zijde × zijde × zijde.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "8 × 8 = 64 → 64 × 8 = 512 cm³.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "3 keer",
+              uitleg: "Je vermenigvuldigt het getal 3 keer met zichzelf, niet 2 keer.",
+            },
+          ],
+          niveaus: {
+            basis: "8 × 8 × 8 = 512 cm³.",
+            simpeler: "Eerst 8 × 8 = 64. Dan 64 × 8 = 512. Dus 512 cm³.",
+            nogSimpeler: "512 cm³",
+          },
+        },
+      },
+      {
+        q: "Een opbergdoos heeft de vorm van een **kubus** met een zijde van **20 cm**. Wat is het volume?",
+        options: ["8000 cm³", "400 cm³", "60 cm³", "80.000 cm³"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — dat is 20 × 20. Nog één keer × 20.",
+          null,
+          "Te veel — tel de nullen nog eens na.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Formule kubus",
+              tekst: "V = 20 × 20 × 20.",
+            },
+            {
+              titel: "Uitrekenen",
+              tekst: "20 × 20 = 400. Dan 400 × 20 = 8000. Dus 8000 cm³.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kubus",
+              uitleg: "Een blok waarbij alle ribben even lang zijn.",
+            },
+          ],
+          theorie: "Volume van een kubus = zijde × zijde × zijde.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Slim: 2 × 2 × 2 = 8, en er komen drie nullen achter: 8000.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Nullen tellen",
+              uitleg: "Bij 20 × 20 × 20 doe je eerst 2 × 2 × 2 = 8. Elk getal heeft één nul, dus er komen 3 nullen bij.",
+            },
+          ],
+          niveaus: {
+            basis: "20 × 20 × 20 = 8000 cm³.",
+            simpeler: "20 × 20 = 400. 400 × 20 = 8000. Dus 8000 cm³.",
+            nogSimpeler: "8000 cm³",
+          },
+        },
+      },
+      {
+        q: "Met welke som reken je het volume uit van een kubus met een zijde van **9 cm**?",
+        options: ["9 × 9 × 9", "9 × 9", "9 + 9 + 9", "9 × 3"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een kubus heeft lengte, breedte én hoogte. Hoeveel getallen moet je dan keer doen?",
+          null,
+          "Een kubus heeft drie even lange richtingen. Moet je dan keer 3 doen, of iets anders?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Formule kubus",
+              tekst: "V = zijde × zijde × zijde. Met zijde 9 wordt dat 9 × 9 × 9.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "zijde³",
+              uitleg: "Spreek uit: zijde tot de derde macht. Dat betekent zijde × zijde × zijde.",
+            },
+          ],
+          theorie: "Een kubus heeft 3 richtingen (lengte, breedte, hoogte), allemaal even lang. Dus 3 keer hetzelfde getal keer elkaar.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Zijde 9 → 9 × 9 × 9 (= 729 cm³).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet × 3",
+              uitleg: "9 × 3 is iets heel anders dan 9 × 9 × 9.",
+            },
+          ],
+          niveaus: {
+            basis: "9 × 9 × 9.",
+            simpeler: "Een kubus: 3 keer de zijde keer elkaar. Dus 9 × 9 × 9.",
+            nogSimpeler: "9 × 9 × 9",
+          },
+        },
+      },
+      {
+        q: "De zijden van een kubus zijn gemeten in **cm**. In welke eenheid schrijf je dan het **volume**?",
+        options: ["cm³", "cm²", "cm", "m"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Die eenheid hoort bij een plat vlak. Heeft een kubus ook hoogte?",
+          "Dat is een lengte — maar één richting.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Drie richtingen",
+              tekst: "Je vermenigvuldigt cm × cm × cm. Dat geeft cm³.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "cm³",
+              uitleg: "Kubieke centimeter — een klein blokje van 1 cm bij 1 cm bij 1 cm.",
+            },
+          ],
+          theorie: "Lengte = cm, een plat vlak = cm², volume (ruimte) = cm³.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "3 cm × 3 cm × 3 cm = 27 cm³ (niet 27 cm of 27 cm²).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Het getaltje ³",
+              uitleg: "Het kleine ³ laat zien dat je 3 richtingen keer elkaar hebt gedaan.",
+            },
+          ],
+          niveaus: {
+            basis: "Volume schrijf je in cm³.",
+            simpeler: "cm × cm × cm = cm³. Volume heeft altijd een ³.",
+            nogSimpeler: "cm³",
+          },
+        },
       },
     ],
   },
@@ -229,6 +598,195 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Te weinig — dat is 20 + 8 + 30. Volume is keer.", "Te weinig — komma 1 plek verkeerd. Hoeveel is 20 × 8, en daarna × 30?", "Te weinig — heb je alleen 20 × 30 / 10 gedaan?"],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een kistje: **lengte 6 cm, breedte 4 cm, hoogte 3 cm**. Wat is het volume?",
+        options: ["72 cm³", "13 cm³", "24 cm³", "18 cm³"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — heb je de getallen opgeteld? Volume is keer.",
+          "Te weinig — is de hoogte meegeteld?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Formule balk",
+              tekst: "V = l × b × h = 6 × 4 × 3.",
+            },
+            {
+              titel: "Uitrekenen",
+              tekst: "6 × 4 = 24. Dan 24 × 3 = 72. Dus 72 cm³.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "l × b × h",
+              uitleg: "Lengte keer breedte keer hoogte — de 3 afmetingen van een balk.",
+            },
+          ],
+          theorie: "Volume van een balk = altijd 3 getallen keer elkaar.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Stap 1: 6 × 4 = 24. Stap 2: 24 × 3 = 72.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet optellen",
+              uitleg: "Volume = keer. Optellen geeft een veel te klein antwoord.",
+            },
+          ],
+          niveaus: {
+            basis: "6 × 4 × 3 = 72 cm³.",
+            simpeler: "Eerst 6 × 4 = 24. Dan 24 × 3 = 72. Dus 72 cm³.",
+            nogSimpeler: "72 cm³",
+          },
+        },
+      },
+      {
+        q: "Een baksteen: **lengte 21 cm, breedte 10 cm, hoogte 5 cm**. Wat is het volume?",
+        options: ["1050 cm³", "36 cm³", "210 cm³", "105 cm³"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — dat is optellen. Volume is keer.",
+          "Te weinig — doet de hoogte ook mee?",
+          "Te weinig — tel de nullen nog eens na.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Formule balk",
+              tekst: "V = l × b × h = 21 × 10 × 5.",
+            },
+            {
+              titel: "Uitrekenen",
+              tekst: "21 × 10 = 210. Dan 210 × 5 = 1050. Dus 1050 cm³.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "l × b × h",
+              uitleg: "Lengte keer breedte keer hoogte — de 3 afmetingen van een balk.",
+            },
+          ],
+          theorie: "Volume van een balk = altijd 3 getallen keer elkaar.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Stap 1: 21 × 10 = 210. Stap 2: 210 × 5 = 1050.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet optellen",
+              uitleg: "Volume = keer. Optellen geeft een veel te klein antwoord.",
+            },
+          ],
+          niveaus: {
+            basis: "21 × 10 × 5 = 1050 cm³.",
+            simpeler: "Eerst 21 × 10 = 210. Dan 210 × 5 = 1050. Dus 1050 cm³.",
+            nogSimpeler: "1050 cm³",
+          },
+        },
+      },
+      {
+        q: "Een pennendoos: **lengte 12 cm, breedte 5 cm, hoogte 2 cm**. Wat is het volume?",
+        options: ["120 cm³", "19 cm³", "60 cm³", "24 cm³"],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Te weinig — heb je alle drie de getallen keer gedaan?",
+          "Te weinig — is de breedte meegeteld?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Formule balk",
+              tekst: "V = l × b × h = 12 × 5 × 2.",
+            },
+            {
+              titel: "Uitrekenen",
+              tekst: "12 × 5 = 60. Dan 60 × 2 = 120. Dus 120 cm³.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "l × b × h",
+              uitleg: "Lengte keer breedte keer hoogte — de 3 afmetingen van een balk.",
+            },
+          ],
+          theorie: "Volume van een balk = altijd 3 getallen keer elkaar.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Stap 1: 12 × 5 = 60. Stap 2: 60 × 2 = 120.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet optellen",
+              uitleg: "Volume = keer. Optellen geeft een veel te klein antwoord.",
+            },
+          ],
+          niveaus: {
+            basis: "12 × 5 × 2 = 120 cm³.",
+            simpeler: "Eerst 12 × 5 = 60. Dan 60 × 2 = 120. Dus 120 cm³.",
+            nogSimpeler: "120 cm³",
+          },
+        },
+      },
+      {
+        q: "Reken slim: een balk van **25 cm × 7 cm × 4 cm**. Wat is het volume?",
+        options: ["700 cm³", "36 cm³", "175 cm³", "100 cm³"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — dat is optellen. Volume is keer.",
+          "Te weinig — heb je alle drie de getallen gebruikt?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Slim beginnen",
+              tekst: "Begin met de makkelijkste: 25 × 4 = 100.",
+            },
+            {
+              titel: "Daarna",
+              tekst: "100 × 7 = 700. Dus 700 cm³.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "volgorde",
+              uitleg: "Bij keer doen mag je de getallen in elke volgorde zetten.",
+            },
+          ],
+          theorie: "l × b × h mag in elke volgorde. Zoek twee getallen die samen een mooi rond getal geven.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "25 × 4 = 100 → 100 × 7 = 700 cm³.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "25 × 4 = 100",
+              uitleg: "Vier keer 25 is 100. Dat is handig om te onthouden.",
+            },
+          ],
+          niveaus: {
+            basis: "25 × 4 × 7 = 700 cm³.",
+            simpeler: "Eerst 25 × 4 = 100. Dan 100 × 7 = 700. Dus 700 cm³.",
+            nogSimpeler: "700 cm³",
+          },
+        },
+      },
     ],
   },
 
@@ -275,6 +833,289 @@ const steps = [
         options: ["4000 liter", "400 liter", "40 liter", "4 liter"],
         answer: 0,
         wrongHints: [null, "Te weinig — hoeveel liter past in 1 m³? Vermenigvuldig dat met 4.", "Te weinig — komma 1 plek verkeerd.", "Te weinig — m³ is een grote eenheid; reken nog eens."],
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**6 liter** = ... mL?",
+        options: ["6000 mL", "600 mL", "60 mL", "60.000 mL"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — hoeveel mL zit er in 1 liter?",
+          null,
+          "Te veel — tel de nullen nog eens na.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Groot naar klein",
+              tekst: "Liter is groter dan mL. Dus keer 1000.",
+            },
+            {
+              titel: "Uitrekenen",
+              tekst: "6 × 1000 = 6000 mL.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "1000",
+              uitleg: "Bij volume-eenheden is elke stap 1000.",
+            },
+          ],
+          theorie: "1 liter = 1 dm³ = 1000 cm³ = 1000 mL. 1 m³ = 1000 liter. Groot naar klein = × 1000, klein naar groot = ÷ 1000.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1 liter = 1000 mL → 6 liter = 6000 mL.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Groot of klein?",
+              uitleg: "Kijk eerst: ga je naar een kleinere eenheid (× 1000) of naar een grotere (÷ 1000)?",
+            },
+          ],
+          niveaus: {
+            basis: "6 liter = 6000 mL.",
+            simpeler: "In 1 liter zit 1000 mL. Dus in 6 liter zit 6 × 1000 = 6000 mL.",
+            nogSimpeler: "6000 mL",
+          },
+        },
+      },
+      {
+        q: "**4500 mL** = ... liter?",
+        options: ["4,5 liter", "45 liter", "450 liter", "0,45 liter"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — door welk getal moet je delen om van mL naar liter te gaan?",
+          null,
+          "Te weinig — is 4500 mL meer of minder dan 4 liter?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Klein naar groot",
+              tekst: "mL is kleiner dan liter. Dus delen door 1000.",
+            },
+            {
+              titel: "Uitrekenen",
+              tekst: "4500 ÷ 1000 = 4,5 liter.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "1000",
+              uitleg: "Bij volume-eenheden is elke stap 1000.",
+            },
+          ],
+          theorie: "1 liter = 1 dm³ = 1000 cm³ = 1000 mL. 1 m³ = 1000 liter. Groot naar klein = × 1000, klein naar groot = ÷ 1000.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "4000 mL = 4 liter, en 500 mL = een halve liter. Samen 4,5 liter.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Groot of klein?",
+              uitleg: "Kijk eerst: ga je naar een kleinere eenheid (× 1000) of naar een grotere (÷ 1000)?",
+            },
+          ],
+          niveaus: {
+            basis: "4500 mL = 4,5 liter.",
+            simpeler: "4500 ÷ 1000 = 4,5. Dus 4,5 liter.",
+            nogSimpeler: "4,5 liter",
+          },
+        },
+      },
+      {
+        q: "**7000 cm³** = ... dm³?",
+        options: ["7 dm³", "70 dm³", "700 dm³", "0,7 dm³"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — hoeveel cm³ zit er in 1 dm³? Deel daardoor.",
+          "Te veel — heb je wel genoeg gedeeld?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Klein naar groot",
+              tekst: "cm³ is kleiner dan dm³. Dus delen door 1000.",
+            },
+            {
+              titel: "Uitrekenen",
+              tekst: "7000 ÷ 1000 = 7 dm³.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "1000",
+              uitleg: "Bij volume-eenheden is elke stap 1000.",
+            },
+          ],
+          theorie: "1 liter = 1 dm³ = 1000 cm³ = 1000 mL. 1 m³ = 1000 liter. Groot naar klein = × 1000, klein naar groot = ÷ 1000.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1 dm³ = 1000 cm³ → 7000 cm³ = 7 dm³.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Groot of klein?",
+              uitleg: "Kijk eerst: ga je naar een kleinere eenheid (× 1000) of naar een grotere (÷ 1000)?",
+            },
+          ],
+          niveaus: {
+            basis: "7000 cm³ = 7 dm³.",
+            simpeler: "In 1 dm³ zit 1000 cm³. 7000 ÷ 1000 = 7. Dus 7 dm³.",
+            nogSimpeler: "7 dm³",
+          },
+        },
+      },
+      {
+        q: "**1,5 m³** = ... liter?",
+        options: ["1500 liter", "150 liter", "15 liter", "15.000 liter"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — hoeveel liter past er in 1 m³?",
+          null,
+          "Te veel — reken eerst uit hoeveel liter 1 m³ is.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Groot naar klein",
+              tekst: "m³ is groter dan liter. Dus keer 1000.",
+            },
+            {
+              titel: "Uitrekenen",
+              tekst: "1,5 × 1000 = 1500 liter.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "1000",
+              uitleg: "Bij volume-eenheden is elke stap 1000.",
+            },
+          ],
+          theorie: "1 liter = 1 dm³ = 1000 cm³ = 1000 mL. 1 m³ = 1000 liter. Groot naar klein = × 1000, klein naar groot = ÷ 1000.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1 m³ = 1000 liter, en een halve m³ = 500 liter. Samen 1500 liter.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Groot of klein?",
+              uitleg: "Kijk eerst: ga je naar een kleinere eenheid (× 1000) of naar een grotere (÷ 1000)?",
+            },
+          ],
+          niveaus: {
+            basis: "1,5 m³ = 1500 liter.",
+            simpeler: "1 m³ is 1000 liter. 1,5 × 1000 = 1500. Dus 1500 liter.",
+            nogSimpeler: "1500 liter",
+          },
+        },
+      },
+      {
+        q: "**250 cm³** = ... mL?",
+        options: ["250 mL", "25 mL", "2500 mL", "0,25 mL"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — is 1 cm³ meer of minder dan 1 mL?",
+          "Te veel — hoeveel mL is 1 cm³ precies?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Precies gelijk",
+              tekst: "1 cm³ = 1 mL. Je hoeft dus niets te rekenen.",
+            },
+            {
+              titel: "Antwoord",
+              tekst: "250 cm³ = 250 mL.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "1000",
+              uitleg: "Bij volume-eenheden is elke stap 1000.",
+            },
+          ],
+          theorie: "1 liter = 1 dm³ = 1000 cm³ = 1000 mL. 1 m³ = 1000 liter. Groot naar klein = × 1000, klein naar groot = ÷ 1000.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1 cm³ = 1 mL → 250 cm³ = 250 mL.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Groot of klein?",
+              uitleg: "Kijk eerst: ga je naar een kleinere eenheid (× 1000) of naar een grotere (÷ 1000)?",
+            },
+          ],
+          niveaus: {
+            basis: "250 cm³ = 250 mL.",
+            simpeler: "cm³ en mL zijn precies even groot. Dus 250 cm³ = 250 mL.",
+            nogSimpeler: "250 mL",
+          },
+        },
+      },
+      {
+        q: "**9000 liter** = ... m³?",
+        options: ["9 m³", "90 m³", "900 m³", "0,9 m³"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — hoeveel liter past in 1 m³? Deel daardoor.",
+          null,
+          "Te weinig — is 9000 liter meer of minder dan 1000 liter?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Klein naar groot",
+              tekst: "Liter is kleiner dan m³. Dus delen door 1000.",
+            },
+            {
+              titel: "Uitrekenen",
+              tekst: "9000 ÷ 1000 = 9 m³.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "1000",
+              uitleg: "Bij volume-eenheden is elke stap 1000.",
+            },
+          ],
+          theorie: "1 liter = 1 dm³ = 1000 cm³ = 1000 mL. 1 m³ = 1000 liter. Groot naar klein = × 1000, klein naar groot = ÷ 1000.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1 m³ = 1000 liter → 9000 liter = 9 m³.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Groot of klein?",
+              uitleg: "Kijk eerst: ga je naar een kleinere eenheid (× 1000) of naar een grotere (÷ 1000)?",
+            },
+          ],
+          niveaus: {
+            basis: "9000 liter = 9 m³.",
+            simpeler: "In 1 m³ past 1000 liter. 9000 ÷ 1000 = 9. Dus 9 m³.",
+            nogSimpeler: "9 m³",
+          },
+        },
       },
     ],
   },
@@ -335,6 +1176,294 @@ const steps = [
             basis: "50 × 30 × 40 = 60.000 cm³ = 60 liter.",
             simpeler: "Eerst volume: 50 × 30 × 40 = 60.000 cm³. Daarna omrekenen: 60.000 ÷ 1000 = 60 liter.",
             nogSimpeler: "60 liter",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een **zwembad** is **10 m** lang, **5 m** breed en **2 m** diep. Hoeveel **m³** water past erin?",
+        options: ["100 m³", "17 m³", "50 m³", "20 m³"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — heb je de getallen opgeteld? Volume is keer.",
+          "Te weinig — doet de diepte ook mee?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kubus of balk?",
+              tekst: "Een zwembad is een balk: lengte, breedte en diepte (hoogte).",
+            },
+            {
+              titel: "Uitrekenen",
+              tekst: "10 × 5 = 50. Dan 50 × 2 = 100. Dus 100 m³.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "diep",
+              uitleg: "Hoe ver het water naar beneden gaat — dat is de hoogte van de balk.",
+            },
+          ],
+          theorie: "Een zwembad is een balk: l × b × h. De eenheid is m³, omdat de maten in meters zijn.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "10 × 5 × 2 = 100 m³.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Eenheid mee",
+              uitleg: "Maten in m → antwoord in m³.",
+            },
+          ],
+          niveaus: {
+            basis: "10 × 5 × 2 = 100 m³.",
+            simpeler: "10 × 5 = 50. 50 × 2 = 100. Dus 100 m³ water.",
+            nogSimpeler: "100 m³",
+          },
+        },
+      },
+      {
+        q: "Een **aquarium** is **80 cm × 30 cm × 40 cm**. Hoeveel **liter** water past erin?",
+        options: ["96 liter", "960 liter", "9,6 liter", "9600 liter"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — door welk getal deel je om van cm³ naar liter te gaan?",
+          null,
+          "Te veel — heb je wel omgerekend naar liter?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst cm³",
+              tekst: "80 × 30 × 40 = 96.000 cm³.",
+            },
+            {
+              titel: "Naar liter",
+              tekst: "96.000 ÷ 1000 = 96 liter.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "L",
+              uitleg: "Liter — gebruikt voor vloeistoffen. 1 liter = 1000 cm³.",
+            },
+          ],
+          theorie: "Vraagt de vraag om liters? Reken eerst cm³ uit en deel dan door 1000.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "80 × 30 = 2400 → 2400 × 40 = 96.000 cm³ → 96 liter.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "÷ 1000",
+              uitleg: "Van cm³ naar liter deel je altijd door 1000.",
+            },
+          ],
+          niveaus: {
+            basis: "80 × 30 × 40 = 96.000 cm³ = 96 liter.",
+            simpeler: "Eerst volume: 96.000 cm³. Dan ÷ 1000 = 96 liter.",
+            nogSimpeler: "96 liter",
+          },
+        },
+      },
+      {
+        q: "Een doos is **25 cm × 12 cm × 10 cm**. Een speelgoedset heeft minstens **4000 cm³** ruimte nodig. Past de set in de doos?",
+        options: [
+          "Nee, de doos is 1000 cm³ te klein",
+          "Ja, er blijft 1000 cm³ over",
+          "Ja, de doos is precies groot genoeg",
+          "Nee, de doos is 2000 cm³ te klein",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Reken eerst het volume van de doos uit. Is dat meer of minder dan 4000?",
+          null,
+          "Reken het volume van de doos nog eens na.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Volume doos",
+              tekst: "25 × 12 × 10 = 3000 cm³.",
+            },
+            {
+              titel: "Vergelijk",
+              tekst: "3000 is minder dan 4000. Het verschil is 4000 − 3000 = 1000 cm³. De doos is dus te klein.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "minstens",
+              uitleg: "Het moet dit getal zijn of meer.",
+            },
+          ],
+          theorie: "Eerst het volume uitrekenen, dan pas vergelijken met wat er nodig is.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "3000 cm³ < 4000 cm³ → past niet, 1000 cm³ te weinig.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Vergelijken",
+              uitleg: "Groter dan nodig = past. Kleiner dan nodig = past niet.",
+            },
+          ],
+          niveaus: {
+            basis: "3000 cm³ is 1000 cm³ te weinig.",
+            simpeler: "Doos: 25 × 12 × 10 = 3000 cm³. Nodig: 4000 cm³. 3000 is te weinig — 1000 cm³ tekort.",
+            nogSimpeler: "Nee, 1000 cm³ te klein",
+          },
+        },
+      },
+      {
+        q: "Een **bloembak** is een kubus met een zijde van **30 cm**. Hoeveel **liter** aarde past erin?",
+        options: ["27 liter", "270 liter", "2,7 liter", "2700 liter"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — hoeveel cm³ is 1 liter? Deel daardoor.",
+          "Te weinig — reken 30 × 30 × 30 nog eens na.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kubus",
+              tekst: "V = 30 × 30 × 30 = 27.000 cm³.",
+            },
+            {
+              titel: "Naar liter",
+              tekst: "27.000 ÷ 1000 = 27 liter.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kubus",
+              uitleg: "Een blok waarbij alle ribben even lang zijn.",
+            },
+          ],
+          theorie: "Kubus: zijde × zijde × zijde. Vraagt de vraag om liters? Dan ÷ 1000.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "30 × 30 = 900 → 900 × 30 = 27.000 cm³ → 27 liter.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Slim rekenen",
+              uitleg: "3 × 3 × 3 = 27, met drie nullen erachter: 27.000.",
+            },
+          ],
+          niveaus: {
+            basis: "30 × 30 × 30 = 27.000 cm³ = 27 liter.",
+            simpeler: "Volume: 27.000 cm³. Gedeeld door 1000 = 27 liter.",
+            nogSimpeler: "27 liter",
+          },
+        },
+      },
+      {
+        q: "Een **zandbak** is **2 m** lang, **2 m** breed en wordt **0,5 m** hoog gevuld met zand. Hoeveel **m³** zand is dat?",
+        options: ["2 m³", "4,5 m³", "4 m³", "1 m³"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — heb je opgeteld? Volume is keer.",
+          "Is de hoogte van 0,5 m meegeteld?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Balk",
+              tekst: "V = 2 × 2 × 0,5.",
+            },
+            {
+              titel: "Uitrekenen",
+              tekst: "2 × 2 = 4. Dan 4 × 0,5 = 2. Dus 2 m³.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "0,5",
+              uitleg: "Een half. Keer 0,5 is hetzelfde als de helft nemen.",
+            },
+          ],
+          theorie: "Ook met een kommagetal is volume gewoon l × b × h.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2 × 2 = 4 → de helft van 4 = 2 m³.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "× 0,5",
+              uitleg: "Keer 0,5 = de helft.",
+            },
+          ],
+          niveaus: {
+            basis: "2 × 2 × 0,5 = 2 m³.",
+            simpeler: "2 × 2 = 4. 4 × 0,5 is de helft van 4 = 2. Dus 2 m³.",
+            nogSimpeler: "2 m³",
+          },
+        },
+      },
+      {
+        q: "Een **koelbox** is vanbinnen **40 cm × 30 cm × 25 cm**. Hoeveel **liter** past erin?",
+        options: ["30 liter", "300 liter", "3 liter", "95 liter"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — door welk getal deel je om van cm³ naar liter te gaan?",
+          null,
+          "Heb je de maten opgeteld? Volume is keer.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst cm³",
+              tekst: "40 × 30 × 25 = 30.000 cm³.",
+            },
+            {
+              titel: "Naar liter",
+              tekst: "30.000 ÷ 1000 = 30 liter.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vanbinnen",
+              uitleg: "De ruimte binnenin, zonder de dikke wanden.",
+            },
+          ],
+          theorie: "Eerst l × b × h in cm³, dan ÷ 1000 voor liters.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Slim: 40 × 25 = 1000 → 1000 × 30 = 30.000 cm³ → 30 liter.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Slim beginnen",
+              uitleg: "40 × 25 = 1000. Dat rekent lekker makkelijk verder.",
+            },
+          ],
+          niveaus: {
+            basis: "40 × 30 × 25 = 30.000 cm³ = 30 liter.",
+            simpeler: "Eerst 40 × 25 = 1000. Dan × 30 = 30.000 cm³. Gedeeld door 1000 = 30 liter.",
+            nogSimpeler: "30 liter",
           },
         },
       },

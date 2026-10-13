@@ -107,6 +107,197 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*'Morgen gaat het ___ regenen.'* — welk woord is goed gespeld?",
+        options: ["waarschijnlijk", "waarschijnlik", "waarschijnelijk", "warschijnlijk"],
+        answer: 0,
+        wrongHints: [null, "Je hoort 'uk' op het eind. Hoe schrijf je die uitgang?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Uk-klank → -lijk",
+              tekst: "Je hoort 'waarschijnluk'. Die 'uk'-klank op het eind schrijf je als -lijk.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "-lijk",
+              uitleg: "Uitgang die klinkt als 'uk', maar die je schrijft als l-ij-k.",
+            },
+          ],
+          theorie: "Hoor je 'uk' op het eind? Schrijf -lijk. Waarschijnlijk begint met 'waar', net als in 'waarheid'.",
+          voorbeelden: [
+            {
+              type: "lijk",
+              tekst: "vrolijk, mogelijk, gevaarlijk, waarschijnlijk.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lang woord",
+              uitleg: "Knip het in stukjes: waar-schijn-lijk.",
+            },
+          ],
+          niveaus: {
+            basis: "Uk-klank → -lijk → waarschijnlijk.",
+            simpeler: "Zeg langzaam: waar-schijn-luk. Het eind schrijf je -lijk. Dus: waarschijnlijk.",
+            nogSimpeler: "Uk = lijk",
+          },
+        },
+      },
+      {
+        q: "Eén woord hieronder is **fout** gespeld. Welk?",
+        options: ["gemakkelik", "vrolijk", "gevaarlijk", "logisch"],
+        answer: 0,
+        wrongHints: [null, null, null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek de fout",
+              tekst: "'Gemakkelik' eindigt op -lik. Bij een 'uk'-klank schrijf je -lijk: gemakkelijk.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "fout",
+              uitleg: "Niet goed gespeld.",
+            },
+          ],
+          theorie: "Hoor je 'uk' op het eind? Dan altijd -lijk, nooit -lik.",
+          voorbeelden: [
+            {
+              type: "fout",
+              tekst: "gemakkelik ✗ → gemakkelijk ✓.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "FOUT-vraag",
+              uitleg: "Lees de vraag goed: je zoekt het woord dat NIET klopt.",
+            },
+          ],
+          niveaus: {
+            basis: "Gemakkelik = fout (moet gemakkelijk).",
+            simpeler: "Vrolijk, gevaarlijk en logisch zijn goed. 'Gemakkelik' mist de ij: het moet gemakkelijk zijn.",
+            nogSimpeler: "Gemakkelik fout",
+          },
+        },
+      },
+      {
+        q: "*'We keken naar een heel ___ film.'* — welk woord past en is goed gespeld?",
+        options: ["komische", "komiese", "komisje", "komiesche"],
+        answer: 0,
+        wrongHints: [null, "Komisch + e: welke letters blijven dan staan?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "-e erachter",
+              tekst: "Komisch + e = komische. De letters s-c-h blijven gewoon staan.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "komisch",
+              uitleg: "Grappig.",
+            },
+          ],
+          theorie: "Bij -isch-woorden zet je de -e er gewoon achter: komisch → komische, logisch → logische.",
+          voorbeelden: [
+            {
+              type: "isch",
+              tekst: "tropisch → tropische, komisch → komische.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Zeg 'komische'. Je hoort 'iese', dus -isch.",
+            },
+          ],
+          niveaus: {
+            basis: "Komisch + e = komische.",
+            simpeler: "Je hoort 'komiese'. Bij die klank hoort -isch. Met -e: komische.",
+            nogSimpeler: "Komische",
+          },
+        },
+      },
+      {
+        q: "*'Buiten is het vanochtend ___.'* — welk woord is goed gespeld?",
+        options: ["fris", "frisch", "frissch", "friesch"],
+        answer: 0,
+        wrongHints: [null, "Zet er -e achter. Hoor je dan 'iese' of 'isse'?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Geen -isch",
+              tekst: "Fris + e = frisse. Je hoort geen 'iese', dus het is géén -isch-woord.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "fris",
+              uitleg: "Een beetje koud.",
+            },
+          ],
+          theorie: "Alleen als je 'iese' hoort met een -e erachter, schrijf je -isch. 'Fris' en 'kennis' zijn géén -isch-woorden.",
+          voorbeelden: [
+            {
+              type: "geen isch",
+              tekst: "fris → frisse (geen -isch). logisch → logische (wel -isch).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Let op",
+              uitleg: "Niet elk woord dat op een s eindigt, krijgt -isch.",
+            },
+          ],
+          niveaus: {
+            basis: "Fris = geen -isch.",
+            simpeler: "Zeg 'frisse': geen 'iese'. Dus gewoon fris.",
+            nogSimpeler: "Fris",
+          },
+        },
+      },
+      {
+        q: "*'Wat een ___ hond!'* — welk woord is goed gespeld?",
+        options: ["vrolijke", "vrolike", "vroluke", "vrolijcke"],
+        answer: 0,
+        wrongHints: [null, "Je hoort 'uk-e'. Welke uitgang hoort bij de 'uk'-klank?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "-e erachter",
+              tekst: "Vrolijk + e = vrolijke. Je hoort '-luk-e', dus -lijk.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vrolijk",
+              uitleg: "Blij.",
+            },
+          ],
+          theorie: "Hoor je '-luk-e' als je er -e achter zet? Dan schrijf je -lijk. Vrolijk → vrolijke.",
+          voorbeelden: [
+            {
+              type: "lijk",
+              tekst: "vrolijk → vrolijke, gevaarlijk → gevaarlijke.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "De ij blijft staan, ook met de -e erachter.",
+            },
+          ],
+          niveaus: {
+            basis: "Vrolijk + e = vrolijke.",
+            simpeler: "Je hoort 'vroluke'. Die 'uk' schrijf je -lijk. Met -e: vrolijke.",
+            nogSimpeler: "Vrolijke",
+          },
+        },
+      },
     ],
   },
 
@@ -171,6 +362,159 @@ const steps = [
             basis: "Opsomming zonder komma's = fout.",
             simpeler: "Lees A hardop: 'Ik kocht appels peren en bananen' — voelt vreemd, geen pauze tussen appels en peren. Komma nodig. Dus die zin is fout.",
             nogSimpeler: "Geen komma's = fout",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*'Mijn opa woont in Utrecht___'* — welk leesteken komt aan het eind?",
+        options: [".", "?", "!", ","],
+        answer: 0,
+        wrongHints: [null, "Stelt deze zin een vraag?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat voor zin?",
+              tekst: "'Mijn opa woont in Utrecht' vertelt gewoon iets. Dat is een mededeling → punt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "punt",
+              uitleg: "Leesteken aan het eind van een gewone mededeling.",
+            },
+          ],
+          theorie: "Mededeling → punt. Vraag → vraagteken. Sterk gevoel of bevel → uitroepteken.",
+          voorbeelden: [
+            {
+              type: "mededeling",
+              tekst: "'De zon schijnt.', 'Ik heb een kat.' — allemaal een punt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Hardop lezen",
+              uitleg: "Gaat je stem niet omhoog en roep je niets uit? Dan een punt.",
+            },
+          ],
+          niveaus: {
+            basis: "Mededeling = punt.",
+            simpeler: "Deze zin vertelt iets, zonder vraag en zonder uitroep. Dus een punt.",
+            nogSimpeler: "Punt",
+          },
+        },
+      },
+      {
+        q: "*'Kijk uit, een auto___'* — welk leesteken past het best?",
+        options: ["!", "?", ".", ","],
+        answer: 0,
+        wrongHints: [null, "Is dit een vraag?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Waarschuwing",
+              tekst: "'Kijk uit' is een bevel en een waarschuwing. Daar hoort een uitroepteken bij.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "uitroepteken",
+              uitleg: "! bij een sterk gevoel of een bevel.",
+            },
+          ],
+          theorie: "Uitroepteken bij: sterk gevoel (Wauw!) of bevel (Stop! Pas op!).",
+          voorbeelden: [
+            {
+              type: "!",
+              tekst: "Pas op! / Stop! / Kijk uit! — allemaal !.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Hardop",
+              uitleg: "Je roept dit hard. Hoor je een uitroep? Dan !.",
+            },
+          ],
+          niveaus: {
+            basis: "Bevel/waarschuwing = !.",
+            simpeler: "Je roept 'Kijk uit!' om iemand te waarschuwen. Dat is een uitroep: !.",
+            nogSimpeler: "Uitroep = !",
+          },
+        },
+      },
+      {
+        q: "Welke afkorting van 'alstublieft' is **goed** geschreven?",
+        options: ["a.u.b.", "a,u,b,", "a-u-b", "a u b"],
+        answer: 0,
+        wrongHints: [null, "Welk leesteken zet je na een afkorting?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Punt na afkorting",
+              tekst: "Na een afkorting zet je een punt. Bij a.u.b. staat na elke letter een punt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "afkorting",
+              uitleg: "Een woord dat korter is opgeschreven.",
+            },
+          ],
+          theorie: "De punt gebruik je aan het eind van een zin én na een afkorting: mevr., bv., a.u.b.",
+          voorbeelden: [
+            {
+              type: "afkorting",
+              tekst: "mevr. (mevrouw), bv. (bijvoorbeeld), a.u.b. (alstublieft).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Geen komma",
+              uitleg: "Een komma is voor een pauze in een zin, niet voor een afkorting.",
+            },
+          ],
+          niveaus: {
+            basis: "Afkorting → punten: a.u.b.",
+            simpeler: "Bij een afkorting horen punten. Dus a.u.b. met drie punten.",
+            nogSimpeler: "a.u.b.",
+          },
+        },
+      },
+      {
+        q: "*'Op mijn brood wil ik kaas___ ham en jam.'* — welk leesteken hoort op de lege plek?",
+        options: [",", ".", "?", "!"],
+        answer: 0,
+        wrongHints: [null, "Komt de zin hier al aan zijn eind?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Opsomming",
+              tekst: "Kaas, ham en jam is een opsomming. Tussen de dingen zet je een komma.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "opsomming",
+              uitleg: "Een rijtje dingen achter elkaar.",
+            },
+          ],
+          theorie: "Bij een opsomming zet je een komma tussen de dingen. Vóór 'en' hoeft geen komma.",
+          voorbeelden: [
+            {
+              type: "opsomming",
+              tekst: "'appels, peren en bananen' / 'rood, geel en blauw'.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Pauze",
+              uitleg: "Je pauzeert kort na 'kaas'. Daar hoort een komma.",
+            },
+          ],
+          niveaus: {
+            basis: "Opsomming → komma.",
+            simpeler: "Kaas, ham en jam is een rijtje. Na 'kaas' komt een komma.",
+            nogSimpeler: "Komma",
           },
         },
       },
@@ -261,6 +605,202 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Hoe schrijf je het hok waar de kippen in slapen?",
+        options: ["kippenhok", "kippehok", "kippen hok", "kippen-hok"],
+        answer: 0,
+        wrongHints: [null, "Wat is het meervoud van kip?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tussen-en",
+              tekst: "Kip → meervoud kippen. Het meervoud eindigt op -en, dus: kippenhok.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tussenletters -en-",
+              uitleg: "Letters tussen de twee delen, als het eerste deel een meervoud op -en heeft.",
+            },
+          ],
+          theorie: "Samenstellingen schrijf je aan elkaar. Heeft het eerste deel een meervoud op -en? Dan -en- ertussen.",
+          voorbeelden: [
+            {
+              type: "tussen-en",
+              tekst: "boek → boekenkast, pan → pannenkoek, kip → kippenhok.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Aan elkaar",
+              uitleg: "Geen spatie en geen streepje.",
+            },
+          ],
+          niveaus: {
+            basis: "Kip → kippen → kippenhok.",
+            simpeler: "Meervoud van kip = kippen. Daarom kippenhok, aan elkaar.",
+            nogSimpeler: "Kippenhok",
+          },
+        },
+      },
+      {
+        q: "Plak **eend** en **vijver** aan elkaar. Welk woord krijg je?",
+        options: ["eendenvijver", "eendvijver", "eendevijver", "eenden vijver"],
+        answer: 0,
+        wrongHints: [null, "Wat is het meervoud van eend?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Meervoud checken",
+              tekst: "Eend → meervoud eenden. Op -en, dus -en- ertussen: eendenvijver.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "samenstelling",
+              uitleg: "Twee woorden samen tot één woord.",
+            },
+          ],
+          theorie: "Heeft het eerste deel een meervoud op -en? Dan schrijf je -en- ertussen. En altijd aan elkaar.",
+          voorbeelden: [
+            {
+              type: "tussen-en",
+              tekst: "eend → eenden → eendenvijver. boek → boeken → boekenkast.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Aan elkaar",
+              uitleg: "Een samenstelling schrijf je zonder spatie.",
+            },
+          ],
+          niveaus: {
+            basis: "Eend → eenden → eendenvijver.",
+            simpeler: "Meervoud van eend = eenden. Dus eendenvijver, aan elkaar.",
+            nogSimpeler: "Eendenvijver",
+          },
+        },
+      },
+      {
+        q: "In welke zin is de samenstelling **goed** geschreven?",
+        options: [
+          "Ik zet mijn fiets in het fietsenrek.",
+          "Ik zet mijn fiets in het fietsen rek.",
+          "Ik zet mijn fiets in het fietserek.",
+          "Ik zet mijn fiets in het fiets rek.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Een samenstelling is één woord. Mag daar een spatie in?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Aan elkaar + tussen-en",
+              tekst: "Fiets → fietsen (meervoud op -en). Dus fietsenrek, aan elkaar.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "samenstelling",
+              uitleg: "Twee woorden samen tot één woord.",
+            },
+          ],
+          theorie: "Hoofdregel: aan elkaar. Meervoud op -en? Dan -en- ertussen.",
+          voorbeelden: [
+            {
+              type: "goed",
+              tekst: "fietsenrek, boekenkast, pannenkoek.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Geen spatie",
+              uitleg: "Een spatie maakt er twee losse woorden van.",
+            },
+          ],
+          niveaus: {
+            basis: "Fietsenrek, aan elkaar.",
+            simpeler: "Fiets → fietsen. Daarom fietsenrek, als één woord zonder spatie.",
+            nogSimpeler: "Fietsenrek",
+          },
+        },
+      },
+      {
+        q: "Welk woord is een **samenstelling**?",
+        options: ["schooltas", "lopen", "vrolijk", "tafel"],
+        answer: 0,
+        wrongHints: [null, "Kun je dit woord in twee losse woorden knippen?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Twee woorden in één",
+              tekst: "Schooltas = school + tas. Twee woorden aan elkaar geplakt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "samenstelling",
+              uitleg: "Twee of meer woorden samen tot één woord.",
+            },
+          ],
+          theorie: "Een samenstelling kun je knippen in losse woorden die elk zelf een woord zijn: tand + arts, school + tas.",
+          voorbeelden: [
+            {
+              type: "samenstelling",
+              tekst: "tandarts, voetbalschoen, zonnebril, schooltas.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Knip-test",
+              uitleg: "Probeer het woord in twee echte woorden te knippen.",
+            },
+          ],
+          niveaus: {
+            basis: "Schooltas = school + tas.",
+            simpeler: "School is een woord. Tas is een woord. Samen: schooltas. Dat is een samenstelling.",
+            nogSimpeler: "School + tas",
+          },
+        },
+      },
+      {
+        q: "Welke samenstelling is **fout** geschreven?",
+        options: ["hondehok", "boekenkast", "zonnebril", "voetbalschoen"],
+        answer: 0,
+        wrongHints: [null, null, null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek de fout",
+              tekst: "Hond → meervoud honden. Op -en, dus -en- ertussen: hondenhok. 'Hondehok' is fout.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tussen-en",
+              uitleg: "Extra -en- als het eerste deel een meervoud op -en heeft.",
+            },
+          ],
+          theorie: "Check bij elke samenstelling: wat is het meervoud van het eerste deel? Op -en → -en- ertussen.",
+          voorbeelden: [
+            {
+              type: "fout",
+              tekst: "hondehok ✗ → hondenhok ✓.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "FOUT-vraag",
+              uitleg: "Je zoekt het woord dat NIET klopt.",
+            },
+          ],
+          niveaus: {
+            basis: "Hondehok = fout (moet hondenhok).",
+            simpeler: "Meervoud van hond = honden. Dus hondenhok. Bij 'hondehok' mist de n.",
+            nogSimpeler: "Hondenhok",
+          },
+        },
+      },
     ],
   },
 
@@ -345,6 +885,121 @@ const steps = [
             basis: "Die zin heeft 3 fouten (Mijn, Sara, punt).",
             simpeler: "Loop die zin langs: 'mijn' (FOUT, begin zin moet hoofdletter), 'sara' (FOUT, eigennaam moet hoofdletter), geen punt aan eind (FOUT). 3 fouten = duidelijk fout.",
             nogSimpeler: "Geen hoofdletters/punt",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*'onze kat pip slaapt op de bank.'* — welke twee woorden moeten een hoofdletter krijgen?",
+        options: ["onze en pip", "kat en pip", "onze en kat", "pip en bank"],
+        answer: 0,
+        wrongHints: [null, "Is 'kat' een naam, of een gewoon woord?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Check elk woord",
+              tekst: "onze (begin zin → hoofdletter), pip (naam van een dier → hoofdletter). Kat en bank zijn gewone woorden → klein.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "eigennaam",
+              uitleg: "Naam van een bepaalde persoon, dier of plaats. Met hoofdletter.",
+            },
+          ],
+          theorie: "Hoofdletter aan het begin van een zin en bij eigennamen, ook bij namen van dieren.",
+          voorbeelden: [
+            {
+              type: "goed",
+              tekst: "'Onze kat Pip slaapt op de bank.'",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Kat is geen naam",
+              uitleg: "'kat' is een gewoon woord, dus een kleine letter.",
+            },
+          ],
+          niveaus: {
+            basis: "Onze + Pip met hoofdletter.",
+            simpeler: "Begin van de zin: Onze. Naam van de kat: Pip. De rest klein.",
+            nogSimpeler: "Begin + naam",
+          },
+        },
+      },
+      {
+        q: "*'Lisa is een nederlander en spreekt nederlands.'* — hoeveel woorden missen nog een hoofdletter?",
+        options: ["2", "1", "3", "0"],
+        answer: 0,
+        wrongHints: [null, "Kijk ook naar de taal die Lisa spreekt.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Volk en taal",
+              tekst: "Nederlander (nationaliteit) en Nederlands (taal) krijgen een hoofdletter. Lisa heeft er al één.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "nationaliteit",
+              uitleg: "Bij welk land iemand hoort: een Nederlander, een Belg.",
+            },
+          ],
+          theorie: "Hoofdletter bij namen, landen, talen en nationaliteiten.",
+          voorbeelden: [
+            {
+              type: "goed",
+              tekst: "'Lisa is een Nederlander en spreekt Nederlands.'",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tellen",
+              uitleg: "Lisa staat al goed. Tel alleen de woorden die nog fout staan.",
+            },
+          ],
+          niveaus: {
+            basis: "Nederlander + Nederlands = 2.",
+            simpeler: "Nederlander is een nationaliteit, Nederlands is een taal. Die twee missen een hoofdletter.",
+            nogSimpeler: "Twee",
+          },
+        },
+      },
+      {
+        q: "Je schrijft de titel van een boek op: *'het geheim van de oude molen'*. Welke woorden krijgen een hoofdletter?",
+        options: ["alleen 'het'", "alle woorden", "'het' en 'molen'", "geen enkel woord"],
+        answer: 0,
+        wrongHints: [null, "Krijgt elk woord van een titel een hoofdletter?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Titel",
+              tekst: "Bij een titel krijgt alleen het eerste woord een hoofdletter (en eigennamen).",
+            },
+          ],
+          woorden: [
+            {
+              woord: "titel",
+              uitleg: "Naam van een boek of film.",
+            },
+          ],
+          theorie: "Titel: eerste woord met hoofdletter, de rest klein (behalve eigennamen). Bijvoorbeeld: 'De brief voor de koning'.",
+          voorbeelden: [
+            {
+              type: "titel",
+              tekst: "'De brief voor de koning' — alleen De met hoofdletter.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet elk woord",
+              uitleg: "In het Nederlands krijgt niet elk woord van een titel een hoofdletter.",
+            },
+          ],
+          niveaus: {
+            basis: "Alleen eerste woord: Het.",
+            simpeler: "Alleen het eerste woord 'Het' krijgt een hoofdletter. Er staan geen namen in, dus de rest is klein.",
+            nogSimpeler: "Alleen Het",
           },
         },
       },

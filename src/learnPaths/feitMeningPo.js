@@ -121,6 +121,84 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke zin over spinnen is een feit?",
+        options: [
+          "Een spin heeft acht poten.",
+          "Spinnen zijn de engste dieren die er zijn.",
+          "Een spin in huis is vreselijk.",
+          "Iedereen zou spinnen met rust moeten laten.",
+        ],
+        answer: 0,
+        wrongHints: [null, "'De engste' vindt niet iedereen.", null, "'Zou moeten' zegt wat iemand vindt."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Te tellen = feit",
+              tekst: "De poten van een spin kun je tellen: het zijn er acht, voor iedereen. De andere zinnen zeggen wat iemand vindt.",
+            },
+          ],
+          niveaus: {
+            basis: "Poten kun je tellen → feit. 'Engste', 'vreselijk' en 'zou moeten' zijn meningen.",
+            simpeler: "Welke zin kun je nakijken door te tellen?",
+            nogSimpeler: "Welke zin is voor iedereen hetzelfde, of je spinnen nu leuk vindt of niet?",
+          },
+        },
+      },
+      {
+        q: "Waarom is *'Een uur heeft zestig minuten'* een feit?",
+        options: [
+          "omdat iedereen het kan nakijken",
+          "omdat veel mensen het fijn vinden",
+          "omdat iemand het hard roept",
+          "omdat het een mooie zin is",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Gaat een feit over wat mensen fijn vinden?",
+          null,
+          "Of een zin mooi is, maakt niet uit.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Na te kijken = feit",
+              tekst: "Op een klok of in een boek kun je nakijken dat een uur zestig minuten heeft. Iedereen komt op hetzelfde antwoord.",
+            },
+          ],
+          niveaus: {
+            basis: "Een feit kun je nakijken en is voor iedereen hetzelfde.",
+            simpeler: "Kun je op een klok of in een boek zien of het klopt?",
+            nogSimpeler: "Komt iedereen op hetzelfde antwoord als hij het nakijkt?",
+          },
+        },
+      },
+      {
+        q: "Welke manier hoort **niet** bij het controleren van een feit?",
+        options: [
+          "vragen wat je vriend ervan vindt",
+          "het opzoeken in een boek",
+          "het meten met een liniaal",
+          "het natellen",
+        ],
+        answer: 0,
+        wrongHints: [null, null, "Met meten kun je juist iets nakijken.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Controleren = opzoeken, meten, tellen",
+              tekst: "Een feit controleer je door het op te zoeken, te meten of te tellen. Wat je vriend ervan vindt, is zijn mening — daarmee controleer je niets.",
+            },
+          ],
+          niveaus: {
+            basis: "Opzoeken, meten en tellen horen bij een feit. Vragen wat iemand vindt niet.",
+            simpeler: "Welke manier gaat over wat iemand vindt?",
+            nogSimpeler: "Welke manier geeft een mening in plaats van een antwoord dat voor iedereen klopt?",
+          },
+        },
+      },
     ],
   },
 
@@ -239,6 +317,79 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Sanne zegt: *'Spruitjes zijn vies.'* Haar opa zegt: *'Spruitjes zijn heerlijk.'* Wat is waar?",
+        options: [
+          "Ze geven allebei hun eigen mening.",
+          "Sanne geeft een feit, opa een mening.",
+          "Opa geeft een feit, Sanne een mening.",
+          "Ze geven allebei een feit.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Kun je meten of spruitjes vies zijn?", null, "Kun je opzoeken of iets heerlijk is?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Allebei een mening",
+              tekst: "'Vies' en 'heerlijk' zeggen wat iemand vindt. Sanne en opa denken er anders over, en het is allebei hun eigen mening.",
+            },
+          ],
+          niveaus: {
+            basis: "Vies en heerlijk zijn oordelen → allebei een mening.",
+            simpeler: "Gaat het hier over wat iemand vindt of over iets wat je kunt meten?",
+            nogSimpeler: "Kunnen Sanne en opa het oneens zijn en toch allebei hun mening geven?",
+          },
+        },
+      },
+      {
+        q: "Welke zin over de dierentuin is een mening?",
+        options: [
+          "Een dagje dierentuin is het fijnste uitje.",
+          "In een dierentuin wonen dieren.",
+          "Een giraf heeft een lange nek.",
+          "Een olifant heeft een slurf.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Dat kun je zien als je er bent.", null, "Dat kun je zien en nakijken."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "'Het fijnste' = mening",
+              tekst: "Of de dierentuin het fijnste uitje is, vindt niet iedereen. De andere zinnen kun je zien en nakijken.",
+            },
+          ],
+          niveaus: {
+            basis: "'Het fijnste' is wat iemand vindt → mening.",
+            simpeler: "Welke zin zegt wat iemand van een uitje vindt?",
+            nogSimpeler: "Vindt iedereen de dierentuin het fijnst?",
+          },
+        },
+      },
+      {
+        q: "Waaraan herken je een mening?",
+        options: [
+          "Een ander kan er heel anders over denken.",
+          "Je kunt het opzoeken in een boek.",
+          "Iedereen komt op hetzelfde antwoord.",
+          "Je kunt het tellen of meten.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Wat je kunt opzoeken, is een feit.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Mensen kunnen het oneens zijn",
+              tekst: "Bij een mening kunnen twee mensen er heel anders over denken. Opzoeken, tellen en meten horen bij een feit.",
+            },
+          ],
+          niveaus: {
+            basis: "Bij een mening kan een ander er anders over denken.",
+            simpeler: "Hoort opzoeken, tellen en meten bij een feit of bij een mening?",
+            nogSimpeler: "Kunnen twee mensen bij een mening iets anders vinden?",
+          },
+        },
+      },
     ],
   },
 
@@ -344,6 +495,103 @@ const steps = [
             basis: "'Waarschijnlijk' zegt dat iemand iets denkt, niet dat het zeker is → mening.",
             simpeler: "Welk woord zegt dat iemand het niet zeker weet?",
             nogSimpeler: "Welk woord betekent 'ik denk van wel, maar weet het niet zeker'?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welk woord in de zin *'Die tekenfilm was echt geweldig'* verraadt een mening?",
+        options: ["geweldig", "tekenfilm", "die", "was"],
+        answer: 0,
+        wrongHints: [null, "'Tekenfilm' zegt alleen wat voor film het is.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "'Geweldig' = oordeel",
+              tekst: "'Geweldig' zegt wat iemand van de tekenfilm vond. Een ander vond hem misschien saai. Het is een signaalwoord voor een mening.",
+            },
+          ],
+          niveaus: {
+            basis: "'Geweldig' is een oordeel → signaalwoord.",
+            simpeler: "Welk woord zegt hoe goed iemand de film vond?",
+            nogSimpeler: "Welk woord zou een ander kunnen vervangen door 'saai'?",
+          },
+        },
+      },
+      {
+        q: "Welke zin over de bibliotheek is een mening?",
+        options: [
+          "Bibliotheekboeken zijn saai.",
+          "In de bibliotheek kun je boeken lenen.",
+          "In de bibliotheek staan boeken.",
+          "Een bibliotheekboek breng je na een tijdje terug.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Dat kun je gewoon nakijken.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "'Saai' = signaalwoord",
+              tekst: "'Saai' is een oordeel: niet iedereen vindt bibliotheekboeken saai. De andere zinnen kun je nakijken.",
+            },
+          ],
+          niveaus: {
+            basis: "'Saai' verraadt een mening.",
+            simpeler: "Welke zin heeft een woord dat zegt wat iemand vindt?",
+            nogSimpeler: "Vindt iedereen bibliotheekboeken saai?",
+          },
+        },
+      },
+      {
+        q: "Een rugzak weegt 3 kilo. Welke zin over die rugzak is een mening?",
+        options: [
+          "De rugzak is veel te zwaar.",
+          "De rugzak weegt 3000 gram.",
+          "De rugzak weegt meer dan 2 kilo.",
+          "De rugzak weegt minder dan 4 kilo.",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Reken 3 kilo om naar gram. Klopt het?",
+          null,
+          "Kun je dit nakijken met een weegschaal?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "'Te zwaar' = oordeel",
+              tekst: "3000 gram, meer dan 2 kilo en minder dan 4 kilo kun je allemaal nakijken met een weegschaal. 'Te zwaar' is wat iemand vindt: het woordje 'te' verraadt de mening.",
+            },
+          ],
+          niveaus: {
+            basis: "'Te' + iets (te zwaar) is een signaalwoord → mening.",
+            simpeler: "Welke zin kun je NIET nakijken met een weegschaal?",
+            nogSimpeler: "Welke zin heeft het woordje 'te' erin?",
+          },
+        },
+      },
+      {
+        q: "Welke zin heeft **geen** mening-signaalwoord?",
+        options: [
+          "De bus vertrekt om tien over acht.",
+          "Ik vind de bus altijd te vol.",
+          "Volgens mij is de bus vandaag laat.",
+          "De bus is een vreselijk vervoermiddel.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Kijk naar 'ik vind' en 'te'.", null, "Zegt 'vreselijk' wat iemand vindt?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Geen signaalwoord = feit",
+              tekst: "Een vertrektijd kun je nakijken op een bord of in een app. De andere zinnen hebben signaalwoorden: 'ik vind', 'te', 'volgens mij', 'vreselijk'.",
+            },
+          ],
+          niveaus: {
+            basis: "Een feit gebruikt geen signaalwoorden: de vertrektijd kun je nakijken.",
+            simpeler: "In welke zin staat geen 'ik vind', 'volgens mij', 'te' of 'vreselijk'?",
+            nogSimpeler: "Welke zin kun je controleren op het bord bij de bushalte?",
           },
         },
       },
@@ -488,6 +736,55 @@ const steps = [
             basis: "Te tellen en voor iedereen waar → feit.",
             simpeler: "Welke zin kun je nameten of controleren?",
             nogSimpeler: "Welke zin is voor iedereen waar?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "In een tekst staat: *Onze school heeft acht groepen. De les begint om half negen. Het schoolplein is het leukste van de stad. Op het plein staan twee bankjes.* Welke zin is een mening?",
+        options: [
+          "Het schoolplein is het leukste van de stad.",
+          "Onze school heeft acht groepen.",
+          "De les begint om half negen.",
+          "Op het plein staan twee bankjes.",
+        ],
+        answer: 0,
+        wrongHints: [null, "De groepen kun je tellen.", null, "De bankjes kun je tellen."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek het oordeel",
+              tekst: "Groepen en bankjes kun je tellen, de begintijd kun je nakijken. 'Het leukste' is wat iemand vindt — dat is de mening.",
+            },
+          ],
+          niveaus: {
+            basis: "'Het leukste' is een oordeel → mening. De rest kun je tellen of nakijken.",
+            simpeler: "Welke zin kun je niet tellen of nakijken?",
+            nogSimpeler: "Welke zin heeft 'het leukste' erin?",
+          },
+        },
+      },
+      {
+        q: "In een tekst staat: *De Waddenzee ligt in het noorden van Nederland. Het is het mooiste natuurgebied dat er bestaat.* Wat doet de schrijver in de tweede zin?",
+        options: [
+          "Hij geeft zijn mening.",
+          "Hij noemt een meting.",
+          "Hij noemt een feit.",
+          "Hij telt iets na.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Wordt er in die zin iets gemeten?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "'Het mooiste' = mening",
+              tekst: "Waar de Waddenzee ligt, kun je op een kaart opzoeken (feit). 'Het mooiste natuurgebied' is wat de schrijver vindt — een mening.",
+            },
+          ],
+          niveaus: {
+            basis: "Zin 1 = feit, zin 2 = mening ('het mooiste').",
+            simpeler: "Welk woord in de tweede zin zegt wat de schrijver vindt?",
+            nogSimpeler: "Vindt iedereen de Waddenzee het mooiste natuurgebied?",
           },
         },
       },

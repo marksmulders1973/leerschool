@@ -200,6 +200,175 @@ Test je plan met de twee vragen hieronder — daarna begint de echte training.`,
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Je hebt 12 minuten voor een tekst met 6 vragen. Hoeveel tijd heb je dan ongeveer per vraag?",
+        options: [
+          "Ongeveer twee minuten",
+          "Ongeveer zes minuten",
+          "Ongeveer vier minuten",
+          "Ongeveer een halve minuut",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zes is het aantal vragen, niet het aantal minuten. Hoe verdeel je 12 minuten over 6 vragen?",
+          null,
+          "Een halve minuut per vraag — kom je dan aan 12 minuten?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat weet je?",
+              tekst: "Je hebt 12 minuten en er zijn 6 vragen.",
+            },
+            {
+              titel: "Eerlijk verdelen",
+              tekst: "Verdeel de minuten over de vragen: 12 gedeeld door 6 is 2.",
+            },
+            {
+              titel: "Klopt het met het plan?",
+              tekst: "Het plan zegt: reken op ongeveer twee minuten per vraag. Dat past precies.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tijd verdelen",
+              uitleg: "Je beschikbare tijd eerlijk over alle vragen spreiden, zodat je niet aan het einde tijd tekortkomt.",
+            },
+          ],
+          theorie: "**Tijd verdelen**\n\nReken op ongeveer **twee minuten per vraag**.\n\nZo check je onderweg of je goed zit:\n1. Hoeveel vragen heb je al gedaan?\n2. Hoeveel tijd is er al om?\n3. Helft van de vragen af bij de helft van de tijd? Dan zit je precies goed.",
+          voorbeelden: [
+            {
+              type: "rekenen",
+              tekst: "8 vragen? Reken op ongeveer 8 × 2 = 16 minuten.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Delen",
+              uitleg: "Iets eerlijk verdelen doe je met delen: 12 minuten verdeeld over 6 vragen is 12 : 6.",
+            },
+          ],
+          niveaus: {
+            basis: "Hoeveel minuten heb je, en over hoeveel vragen moet je die verdelen?",
+            simpeler: "Reken 12 gedeeld door 6. Wat komt eruit?",
+            nogSimpeler: "12 : 6 = 2. Hoeveel minuten per vraag is dat?",
+          },
+        },
+      },
+      {
+        q: "Je bent bij vraag 3 van de 6 en de helft van je tijd is om. Wat betekent dat?",
+        options: [
+          "Je zit precies goed met je tijd",
+          "Je bent veel te laat en moet gaan gokken",
+          "Je bent te snel en moet langzamer lezen",
+          "Je moet de tekst nog een keer helemaal lezen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoeveel vragen is de helft van 6? En hoeveel tijd is er om?",
+          null,
+          "Waarom zou je opnieuw beginnen als je precies op schema ligt?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Halve vragen",
+              tekst: "3 van de 6 vragen is de helft van de vragen.",
+            },
+            {
+              titel: "Halve tijd",
+              tekst: "De helft van je tijd is om.",
+            },
+            {
+              titel: "Vergelijk",
+              tekst: "Helft van de vragen bij de helft van de tijd: dat past precies bij elkaar. Je zit goed.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "op schema",
+              uitleg: "Precies zo ver als je volgens je planning hoort te zijn.",
+            },
+          ],
+          theorie: "**Af en toe kijken hoe ver je bent**\n\nVergelijk twee dingen:\n1. Welk deel van de vragen heb je gedaan?\n2. Welk deel van de tijd is om?\n\nZijn die ongeveer gelijk? Dan zit je goed. Is de tijd veel verder dan de vragen? Dan moet je wat sneller en lastige vragen overslaan.",
+          voorbeelden: [
+            {
+              type: "check",
+              tekst: "Vraag 2 van de 6 en al de helft van de tijd om? Dan loop je achter: lastige vragen overslaan en doorgaan.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "De helft",
+              uitleg: "De helft van 6 is 3. Dus bij vraag 3 ben je halverwege.",
+            },
+          ],
+          niveaus: {
+            basis: "Vergelijk hoeveel vragen je hebt gedaan met hoeveel tijd er om is.",
+            simpeler: "Is 3 van de 6 de helft? En is de helft van de tijd om? Passen die bij elkaar?",
+            nogSimpeler: "Helft van de vragen en helft van de tijd — dat is precies goed.",
+          },
+        },
+      },
+      {
+        q: "Je slaat een lastige vraag over. Waarom lukt die vraag aan het einde vaak ineens wél?",
+        options: [
+          "De andere vragen hebben je al door de tekst geholpen",
+          "Aan het einde krijg je extra hints van de toets",
+          "Aan het einde wordt de vraag makkelijker gemaakt",
+          "Je kent de tekst dan helemaal uit je hoofd",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Verandert de toets zelf iets aan de vraag? Of ben jij veranderd?",
+          null,
+          "Heb je de tekst uit je hoofd geleerd, of ben je er wel vaak in teruggezocht?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Overslaan",
+              tekst: "Je laat de lastige vraag even liggen en maakt eerst de andere vragen.",
+            },
+            {
+              titel: "Terugzoeken",
+              tekst: "Bij elke andere vraag zoek je weer in de tekst. Zo lees je stukken opnieuw en snap je de tekst steeds beter.",
+            },
+            {
+              titel: "Terugkomen",
+              tekst: "Als je dan terugkomt bij de lastige vraag, weet je meer — en lukt hij vaak wel.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "overslaan",
+              uitleg: "Een vraag even laten liggen en er later op terugkomen.",
+            },
+          ],
+          theorie: "**Blijf niet hangen**\n\nKom je een lastige vraag tegen? Sla hem over en kom er aan het einde op terug.\n\nTwee voordelen:\n1. Je verspilt geen tijd die je nodig hebt voor vragen die je wél kunt.\n2. Door de andere vragen ken je de tekst beter als je terugkomt.",
+          voorbeelden: [
+            {
+              type: "toets",
+              tekst: "Vraag 2 snap je niet. Je maakt eerst 3 tot en met 6. Bij vraag 5 lees je een alinea die ook bij vraag 2 hoort — en ineens snap je hem.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Terugkomen",
+              uitleg: "Zet een klein streepje of rondje bij een overgeslagen vraag, zodat je hem aan het einde terugvindt.",
+            },
+          ],
+          niveaus: {
+            basis: "Wat doe je allemaal in de tussentijd, voordat je terugkomt bij de lastige vraag?",
+            simpeler: "Bij de andere vragen zoek je steeds terug in de tekst. Wat doet dat met hoe goed je de tekst kent?",
+            nogSimpeler: "De andere vragen helpen je de tekst beter te snappen.",
+          },
+        },
+      },
     ],
   },
 
@@ -503,6 +672,123 @@ Neem de tijd om terug te bladeren — opzoeken hoort erbij. Succes!`,
             basis: "Begint de zin met een oproep of met een feit? Wat wil de schrijver dat jij gaat doen?",
             simpeler: "Als iemand zegt 'help mee!' — informeert hij je dan, of probeert hij je te overtuigen iets te gaan doen?",
             nogSimpeler: "Wil de schrijver dat je iets gaat doen, of wil hij je iets uitleggen?",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat krijgen de zeehonden in de opvang het eerst te eten?",
+        options: [
+          "Vispap door een slangetje",
+          "Hele vissen in het buitenbad",
+          "Melk uit een fles",
+          "Brood met vis",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hele vissen komen ook in de tekst voor — maar wanneer? Let op het woordje 'eerst'.",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoekwoord",
+              tekst: "Het gaat over eten. In je plattegrond staat: de alinea over de verzorging in de opvang.",
+            },
+            {
+              titel: "Zoek de zin",
+              tekst: "'De verzorgers geven de dieren eerst vispap door een slangetje.'",
+            },
+            {
+              titel: "Let op 'eerst'",
+              tekst: "Hele vissen komen pas 'na een paar weken'. Het eerst is dus vispap.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vispap",
+              uitleg: "Fijngemalen vis, zo dun dat het door een slangetje kan.",
+            },
+          ],
+          theorie: "**Een feitje opzoeken**\n\n1. Kies een zoekwoord uit de vraag (hier: eten).\n2. Ga naar de alinea waar dat over gaat.\n3. Lees de zin precies — let op tijdwoorden als 'eerst', 'daarna' en 'pas'.",
+          voorbeelden: [
+            {
+              type: "tijdwoorden",
+              tekst: "'Eerst vispap ... Na een paar weken hele vissen.' Twee soorten eten, maar maar één komt eerst.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Volgorde",
+              uitleg: "Woorden als eerst, daarna en na een paar weken vertellen je de volgorde van wat er gebeurt.",
+            },
+          ],
+          niveaus: {
+            basis: "Zoek de alinea over de verzorging. Wat geven de verzorgers eerst?",
+            simpeler: "Er staan twee soorten eten in de tekst. Welke komt eerst, en welke pas na een paar weken?",
+            nogSimpeler: "Het eerste eten gaat door een slangetje.",
+          },
+        },
+      },
+      {
+        q: "Wat klopt volgens de alinea over het vrijlaten?",
+        options: [
+          "Honderden mensen komen kijken hoe de zeehonden teruggaan",
+          "Alle zeehonden kijken nog één keer om",
+          "De zeehonden worden met een boot ver de zee op gebracht",
+          "Het vrijlaten gebeurt stil, zonder publiek",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Lees de laatste zin van die alinea precies: staat daar 'alle' of iets anders?",
+          "Hoe komen de zeehonden in de tekst bij de golven? Met een boot, of op een andere manier?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek de alinea",
+              tekst: "In je plattegrond: de alinea die begint met 'Het vrijlaten is elke keer weer een feest.'",
+            },
+            {
+              titel: "Lees precies",
+              tekst: "'Honderden mensen komen kijken.' Dat klopt met de goede optie.",
+            },
+            {
+              titel: "Kleine woordjes",
+              tekst: "Er staat 'sommige kijken nog één keer om', niet 'alle'. En de dieren schuifelen zelf over het zand naar de golven.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schuifelen",
+              uitleg: "Langzaam en met kleine stukjes vooruit bewegen.",
+            },
+            {
+              woord: "reiskist",
+              uitleg: "Een kist waarin een dier veilig vervoerd wordt.",
+            },
+          ],
+          theorie: "**Precies lezen bij een klopt-vraag**\n\nBij 'wat klopt?' check je elke optie in de tekst.\n\nLet extra op kleine woorden:\n- **alle** of **sommige**?\n- **altijd** of **soms**?\n\nEén woordje verschil maakt een optie fout.",
+          voorbeelden: [
+            {
+              type: "alle of sommige",
+              tekst: "Tekst: 'Sommige kijken nog één keer om.' Optie: 'Alle zeehonden kijken om.' Dat klopt dus niet.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Sommige",
+              uitleg: "Sommige betekent: een deel, niet allemaal.",
+            },
+          ],
+          niveaus: {
+            basis: "Ga naar de alinea over het vrijlaten en check elke optie.",
+            simpeler: "Wie komen er kijken bij het vrijlaten? En staat er 'alle' of 'sommige' bij het omkijken?",
+            nogSimpeler: "In de tekst komen honderden mensen kijken.",
           },
         },
       },
@@ -817,6 +1103,63 @@ Acht vragen. Hou vol — dit is precies de training die je nodig hebt!`,
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Waarom kon Sanne aan het begin van het verhaal niet slapen?",
+        options: [
+          "Ze verheugde zich op het sterrenkijken met opa",
+          "Ze had het te koud in haar bed",
+          "Opa maakte te veel lawaai in huis",
+          "Ze had te veel chocolademelk gedronken",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "De kou komt pas later, als ze buiten liggen. Wat zou er vanavond gebeuren?",
+          null,
+          "Wanneer drinkt Sanne de chocolademelk? Aan het begin of pas aan het einde?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lees het begin",
+              tekst: "'Sanne kon niet slapen. Vanavond zou het gebeuren.'",
+            },
+            {
+              titel: "Wat zou er gebeuren?",
+              tekst: "Opa had beloofd dat ze samen naar de vallende sterren gingen kijken.",
+            },
+            {
+              titel: "Het gevoel",
+              tekst: "Iets leuks staat te gebeuren en je kunt niet slapen: dan verheug je je erop.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "zich verheugen",
+              uitleg: "Blij zijn omdat er straks iets leuks gaat gebeuren.",
+            },
+          ],
+          theorie: "**Waarom doet iemand iets?**\n\nBij verhalen vragen ze vaak naar het waarom.\n\n1. Zoek de plek in het verhaal.\n2. Lees de zinnen eromheen.\n3. Vaak staat de reden in de zin erna, ook al staat er niet letterlijk 'omdat'.",
+          voorbeelden: [
+            {
+              type: "verband",
+              tekst: "'Ik kon niet slapen. Morgen ging ik naar de dierentuin.' De tweede zin vertelt waarom.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Gevoelens afleiden",
+              uitleg: "Een schrijver zegt niet altijd hoe iemand zich voelt. Je leidt het af uit wat er gebeurt.",
+            },
+          ],
+          niveaus: {
+            basis: "Lees de eerste alinea. Wat zou er die avond gebeuren?",
+            simpeler: "Opa had iets beloofd. Hoe voel je je als er straks iets leuks gaat gebeuren?",
+            nogSimpeler: "Sanne kijkt uit naar iets leuks met opa.",
+          },
+        },
+      },
     ],
   },
 
@@ -1022,6 +1365,175 @@ Nog een paar vragen over je aanpak — dan zit dit deel erop. Op de echte toets 
             basis: "Welke vragen leveren je zeker punten op? Doe die eerst — dan mis je ze sowieso niet.",
             simpeler: "Stel: je kunt 2 euro zeker pakken, of 1 euro proberen te verdienen met een moeilijk spelletje. Wat kies je als je weinig tijd hebt?",
             nogSimpeler: "Als je twee gemakkelijke sommen kunt oplossen én één heel moeilijke, waarmee begin je dan?",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Je komt in de tekst een woord tegen dat je niet kent. Hoe kom je het beste achter de betekenis?",
+        options: [
+          "De zinnen eromheen goed lezen",
+          "De hele tekst overslaan",
+          "Het woord negeren en de vraag gokken",
+          "Kijken hoeveel letters het woord heeft",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Gokken kan altijd nog. Is er eerst een manier om het in de tekst zelf te ontdekken?",
+          "Zegt de lengte van een woord iets over wat het betekent?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Niet schrikken",
+              tekst: "Op een toets kom je vaak een woord tegen dat je niet kent. Dat is normaal.",
+            },
+            {
+              titel: "Kijk eromheen",
+              tekst: "Lees de zin ervoor, de zin zelf en de zin erna. Daar staan vaak aanwijzingen.",
+            },
+            {
+              titel: "Probeer het uit",
+              tekst: "Bedenk wat het woord zou kunnen betekenen en lees de zin opnieuw. Klopt het?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "context",
+              uitleg: "De zinnen rondom een woord, die helpen om de betekenis te snappen.",
+            },
+          ],
+          theorie: "**Onbekende woorden**\n\nDe tekst zelf helpt je bijna altijd:\n1. Lees de zinnen rond het woord.\n2. Zoek aanwijzingen: wat gebeurt er, wie doet wat?\n3. Vul een betekenis in en check of de zin dan logisch is.",
+          voorbeelden: [
+            {
+              type: "pikdonker",
+              tekst: "'Het was pikdonker. Geen lantaarnpaal te zien.' De zin erna vertelt: er is geen licht. Pikdonker is dus heel erg donker.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Aanwijzingen",
+              uitleg: "Een schrijver legt een moeilijk woord vaak een beetje uit in de zinnen eromheen.",
+            },
+          ],
+          niveaus: {
+            basis: "Waar in de tekst kun je aanwijzingen vinden over een onbekend woord?",
+            simpeler: "Kijk naar de zinnen vlak voor en na het woord. Wat vertellen die?",
+            nogSimpeler: "De zinnen eromheen helpen je.",
+          },
+        },
+      },
+      {
+        q: "Je moet een getal uit een lange tekst opzoeken. Hoe vind je het het snelst?",
+        options: [
+          "Scannen op een zoekwoord uit de vraag",
+          "De hele tekst nog twee keer lezen",
+          "Raden welk getal het meest logisch klinkt",
+          "Alleen de titel van de tekst lezen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat werkt misschien, maar is het ook het snelst? Je weet toch al ongeveer waar het staat?",
+          null,
+          "Staan getallen meestal in de titel, of in de tekst zelf?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kies een zoekwoord",
+              tekst: "Pak een belangrijk woord uit de vraag, bijvoorbeeld 'kilo' of 'uur'.",
+            },
+            {
+              titel: "Scannen",
+              tekst: "Laat je ogen snel over de tekst glijden tot je dat woord ziet. Je plattegrond helpt: welke alinea ging erover?",
+            },
+            {
+              titel: "Precies lezen",
+              tekst: "Lees de zin met het zoekwoord helemaal. Daar staat je getal.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "scannen",
+              uitleg: "Snel over een tekst kijken op zoek naar één woord, zonder alles te lezen.",
+            },
+          ],
+          theorie: "**Feitjes opzoeken**\n\n1. Kies een zoekwoord uit de vraag.\n2. Denk aan je plattegrond: in welke alinea stond het?\n3. Scan die alinea tot je het woord vindt.\n4. Lees de hele zin, want soms staan er meer getallen dicht bij elkaar.",
+          voorbeelden: [
+            {
+              type: "zoekwoord",
+              tekst: "Vraag: hoe zwaar moet een zeehond zijn? Zoekwoord: kilo. Je vindt: 'minstens veertig kilo'.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Opletten",
+              uitleg: "Staan er meer getallen in de tekst? Check dan of jouw getal echt bij de vraag hoort.",
+            },
+          ],
+          niveaus: {
+            basis: "Wat doe je met een belangrijk woord uit de vraag?",
+            simpeler: "Je hoeft niet alles opnieuw te lezen. Hoe vind je snel één woord in een tekst?",
+            nogSimpeler: "Je scant de tekst op een zoekwoord.",
+          },
+        },
+      },
+      {
+        q: "Wat is een slimme truc bij een vraag naar de hoofdgedachte van een tekst?",
+        options: [
+          "Kijken waar bijna elke alinea over gaat",
+          "Alleen de allerlaatste zin van de tekst lezen",
+          "Het leukste detail uit de tekst kiezen",
+          "De optie kiezen met het moeilijkste woord",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kan één zin vertellen waar de héle tekst over gaat?",
+          "Een leuk detail komt vaak maar één keer voor. Gaat de hele tekst daarover?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat is de hoofdgedachte?",
+              tekst: "Het belangrijkste wat de schrijver wil vertellen, over de hele tekst.",
+            },
+            {
+              titel: "De alinea-test",
+              tekst: "Kijk per alinea waar die over gaat. Wat komt in bijna elke alinea terug?",
+            },
+            {
+              titel: "Check de opties",
+              tekst: "Een optie die maar over één alinea gaat, is te klein. Kies de optie die bij bijna alle alinea's past.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "hoofdgedachte",
+              uitleg: "Het belangrijkste wat een tekst wil zeggen, in één zin.",
+            },
+          ],
+          theorie: "**De alinea-test**\n\n1. Bekijk je plattegrond: waar gaat elke alinea over?\n2. Wat komt er steeds terug?\n3. Kies de optie die past bij bijna alle alinea's, niet bij één klein stukje.",
+          voorbeelden: [
+            {
+              type: "zeehonden",
+              tekst: "Bijna elke alinea gaat over de opvang die zeehonden helpt. De dijk komt maar één keer voor, dus die is niet de hoofdgedachte.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Detail of hoofdzaak",
+              uitleg: "Een detail staat op één plek. De hoofdzaak komt door de hele tekst heen terug.",
+            },
+          ],
+          niveaus: {
+            basis: "Moet de hoofdgedachte bij één alinea passen, of bij de hele tekst?",
+            simpeler: "Kijk naar alle alinea's samen. Wat komt in bijna elke alinea terug?",
+            nogSimpeler: "Kies wat bijna elke alinea gemeen heeft.",
           },
         },
       },

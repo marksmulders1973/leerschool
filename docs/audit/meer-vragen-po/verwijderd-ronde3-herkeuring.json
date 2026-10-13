@@ -1,0 +1,182 @@
+[
+ {
+  "pathId": "woordsoorten-po",
+  "stap": 0,
+  "q": "Welk woord is een **eigennaam**?",
+  "reden": "Goede optie 'Spanje' is de enige met een hoofdletter; de vraag is daardoor zonder begrip van 'eigennaam' te raden (verraadt zich)."
+ },
+ {
+  "pathId": "spreekwoorden-uitdrukkingen-po",
+  "stap": 1,
+  "q": "*'Voet bij stuk houden'* — wat betekent dit?",
+  "reden": "Hint bij 'Toch toegeven' is alleen 'Andersom.' — dat wijst het goede antwoord 'Niet toegeven' letterlijk aan."
+ },
+ {
+  "pathId": "spreekwoorden-uitdrukkingen-po",
+  "stap": 1,
+  "q": "*'Iets onder de pet houden'* — wat betekent dit?",
+  "reden": "Hint bij 'Iets aan iedereen vertellen' is 'Andersom.' — het omgekeerde is precies 'Iets geheim houden', dus de hint geeft het antwoord weg."
+ },
+ {
+  "pathId": "spreekwoorden-uitdrukkingen-po",
+  "stap": 2,
+  "q": "*'Eigen haard is goud waard'* — wat betekent dit?",
+  "reden": "Hint bij 'Op vakantie is het het leukst' is 'Andersom.' — het omgekeerde ('thuis is het het fijnst') is het goede antwoord; hint verklapt het. | uitlegPad ontbreekt (undefined). Daarnaast is de hint bij 'Op vakantie is het het leukst' alleen 'Andersom.': dat wijst het goede antwoord (thuis) vrijwel direct aan."
+ },
+ {
+  "pathId": "samenstellingen-tussenletters-po",
+  "stap": 1,
+  "q": "Je twijfelt: 'kattenbak' of 'kattebak'? Wat helpt je het best?",
+  "reden": "Beide hints wijzen het antwoord vrijwel aan: 'Hoe zeg je het als er twee zijn: één kat, twee ...?' en 'kijk je naar wat je hoort, of naar het meervoud?' leiden direct naar de meervoud-optie (kattenbak)."
+ },
+ {
+  "pathId": "dichten-poezie-rijmen-po",
+  "stap": 3,
+  "q": "Je maakt een naamgedicht (acrostichon) voor **TIM**. Met welke letter begint de **tweede** regel?",
+  "reden": "Hint bij 'T' ('Welke letter komt daarna in de naam?') wijst het antwoord I vrijwel direct aan."
+ },
+ {
+  "pathId": "informatiebronnen-po",
+  "stap": 4,
+  "q": "Welk tweetal hoort **goed bij elkaar**?",
+  "reden": "Hint bij de inhoudsopgave-optie gebruikt het woord 'glossarium', dat niet in de stap-uitleg staat en voor groep 6-8 onbekend jargon is."
+ },
+ {
+  "pathId": "informatiebronnen-po",
+  "stap": 0,
+  "q": "In jouw dorp is **deze week een nieuwe sporthal geopend**. Waar lees je daar het meest over?",
+  "reden": "De goede optie verraadt zich: het is de enige met een extra precisering ('uit je eigen regio') en sluit woordelijk aan bij 'in jouw dorp'; de andere opties zijn kale bronnamen."
+ },
+ {
+  "pathId": "spreekwoorden-uitdrukkingen-po",
+  "stap": 2,
+  "q": "*'Jong geleerd, oud gedaan'* — wat is de les?",
+  "reden": "De goede optie is een onaf zinnetje ('kun je je hele leven' zonder werkwoord als 'doen/blijven'); taalkundig slordig voor een taalvraag."
+ },
+ {
+  "pathId": "dichten-poezie-rijmen-po",
+  "stap": 2,
+  "q": "*'Ik sterf van de honger!'* Wat bedoelt de spreker?",
+  "reden": "De goede optie herhaalt als enige het woord 'honger' uit de vraag en verraadt zich daardoor; de afleiders (moe/ziek/net gegeten) zijn bovendien weinig geloofwaardig."
+ },
+ {
+  "pathId": "lettergrepen-klemtoon-po",
+  "stap": 0,
+  "q": "Hoeveel lettergrepen heeft 'paraplu'?",
+  "reden": "Hints sturen naar het antwoord: bij '2' staat 'het zijn er meer' en bij '4' 'zo veel klappen hoor je niet'. Wie beide ziet, weet dat het 3 is; de hints zeggen hoe dichtbij je zit."
+ },
+ {
+  "pathId": "schemas-stappenplannen-po",
+  "stap": 3,
+  "q": "Stamboom (de pijl betekent 'heeft als kind'):\nOma Els → Sara\nSara → Daan en Mila\n\nWat zijn **Daan en Mila** van elkaar?",
+  "reden": "Hint bij 'Neef en nicht' ('Hebben Daan en Mila dezelfde moeder?') wijst het antwoord vrijwel aan: zelfde moeder = broer en zus."
+ },
+ {
+  "pathId": "dichten-poezie-rijmen-po",
+  "stap": 1,
+  "q": "Je zoekt het rijmschema. Het eerste eindwoord krijgt de letter **A**. Het tweede eindwoord rijmt daar **niet** op. Welke letter krijgt het tweede eindwoord?",
+  "reden": "De opties zijn zelf letters (B, C, D, A), terwijl de app de opties ook met A/B/C/D labelt en schudt: je krijgt dan bv. 'C. B' — verwarrend voor een kind."
+ },
+ {
+  "pathId": "feit-mening-po",
+  "stap": 1,
+  "q": "Wat kun je **niet** doen met een mening?",
+  "reden": "'mening' is een vrouwelijk -ing-woord; 'hem nameten / hem uitleggen / hem vertellen' hoort 'haar' te zijn (of herschrijf zonder verwijswoord). Bovendien herhaalt de goede optie letterlijk de formulering uit de stap-uitleg ('nameten of opzoeken'). | Hint en uitlegPad nemen dezelfde verwijzing 'hem' naar 'mening' (een vrouwelijk -ing-woord) over; beter 'haar' of zonder verwijswoord."
+ },
+ {
+  "pathId": "interpunctie-po",
+  "stap": 1,
+  "q": "Welk woord schrijf je **altijd** met een hoofdletter?",
+  "reden": "De goede optie verraadt zich: 'Afrika' is als enige optie met een hoofdletter geschreven, dus het antwoord staat al zichtbaar in de opties."
+ },
+ {
+  "pathId": "woordsoorten-po",
+  "stap": 2,
+  "q": "*'Het water is koud.'* — welk woord is het bijvoeglijk naamwoord?",
+  "reden": "De hint bij 'water' ('Welk woord vertelt hoe het water is?') wijst het goede antwoord 'koud' vrijwel direct aan: er is maar één woord dat zegt hoe het water is."
+ },
+ {
+  "pathId": "signaalwoorden-verbanden-po",
+  "stap": 0,
+  "q": "Welk woord past? *Ik heb twee redenen om te sporten. Ten eerste is het gezond. ___ is het gezellig.*",
+  "reden": "De hint bij 'Hoewel' ('Er staat ten eerste. Wat komt daar meestal na?') geeft het antwoord 'Ten tweede' zo goed als weg."
+ },
+ {
+  "pathId": "lettergrepen-klemtoon-po",
+  "stap": 0,
+  "q": "Hoeveel lettergrepen heeft 'dinosaurus'?",
+  "reden": "De hints zeggen hoe dichtbij je zit: bij '3' staat 'het zijn er meer', bij '5' staat 'zo veel klappen hoor je niet'. Na één fout blijft dan alleen 4 over (eliminatie-lek)."
+ },
+ {
+  "pathId": "dichten-poezie-rijmen-po",
+  "stap": 2,
+  "q": "Een gedicht gaat over **donkere wolken**, **regen** en een **lege straat**. Welke sfeer past daar het best?",
+  "reden": "Twee afleiders komen vrijwel op hetzelfde neer (Feestelijk en Vrolijk; ook Grappig ligt in dezelfde hoek): drie 'blije' opties tegenover één sombere maakt de goede optie direct herkenbaar."
+ },
+ {
+  "pathId": "schrijven-teksten-po",
+  "stap": 2,
+  "q": "Waar staat de **kern-zin** van een alinea vaak?",
+  "reden": "Spelfout: 'kern-zin' moet volgens het Groene Boekje 'kernzin' zijn (samenstelling zonder streepje). | uitlegPad basis schrijft 'Kern-zin'; volgens het Groene Boekje is dat 'kernzin' (zonder streepje)."
+ },
+ {
+  "pathId": "lettergrepen-klemtoon-po",
+  "stap": 2,
+  "q": "Welke afbreking van 'telefoon' is goed?",
+  "reden": "uitlegPad nogSimpeler ('Bij welke staat 'foon' heel op de volgende regel?') onderscheidt niet: bij 't-elefoon' en 'tel-efoon' staat 'foon' ook heel op de volgende regel. Daarnaast is de zin onaf ('Bij welke [afbreking]')."
+ },
+ {
+  "pathId": "synoniemen-tegenstellingen-po",
+  "stap": 2,
+  "q": "Wat is het **tegenovergestelde** van **'voorzichtig'**?",
+  "reden": "Goede optie herhaalt het vraagwoord letterlijk (on+voorzichtig); bedoeld als on-truc, maar verraadt zich wel zonder begrip. Licht. | uitlegPad ontbreekt (undefined)."
+ },
+ {
+  "pathId": "spreekwoorden-uitdrukkingen-po",
+  "stap": 0,
+  "q": "Welke zin is een **metafoor**?",
+  "reden": "Geen bezwaar op de vraag zelf; wel: in de stap-uitleg staat het spreekwoord als \"is het grote niet weert\" — juist volgens Groene Boekje/Van Dale is \"weerd\" (met d)."
+ },
+ {
+  "pathId": "informatiebronnen-po",
+  "stap": 3,
+  "q": "Welke schrijver is het **meest betrouwbaar** voor een tekst over gezond eten?",
+  "reden": "Vraag zegt \"Welke schrijver\" maar opties C (filmpje) en D (snoepfabriek) zijn geen schrijvers; beter \"Welke bron\". Daarnaast is A de enige optie met de exacte formulering uit de uitleg (naam en functie)."
+ },
+ {
+  "pathId": "interpunctie-po",
+  "stap": 2,
+  "q": "*'Help, ik val'* — welk leesteken hoort aan het eind?",
+  "reden": "Hint bij '.' zegt 'Denk aan schrik.' De stap-uitleg koppelt schrik direct aan '!', dus de hint verklapt het antwoord. Vager maken, bijvoorbeeld: 'Hoe klinkt iemand die dit roept?'"
+ },
+ {
+  "pathId": "samenstellingen-tussenletters-po",
+  "stap": 0,
+  "q": "In welke rij staan alleen samenstellingen?",
+  "reden": "uitlegPad basis zegt 'Alleen in de eerste rij ...', maar de goede rij staat in de vraag als laatste optie (en de volgorde kan geschud worden). Noem de rij bij de woorden in plaats van 'eerste rij'."
+ },
+ {
+  "pathId": "synoniemen-tegenstellingen-po",
+  "stap": 0,
+  "q": "Betekenen synoniemen altijd **precies** hetzelfde?",
+  "reden": "Het uitlegPad-voorbeeld klopt niet: 'lekker weer noem je niet snel goed weer'. 'Goed weer' is juist heel gewoon Nederlands. Kies een duidelijker voorbeeld, bijvoorbeeld 'een dik boek' tegenover 'een vet boek'."
+ },
+ {
+  "pathId": "woordsoorten-po",
+  "stap": 0,
+  "q": "Welk woord is een zelfstandig naamwoord in het **meervoud**?",
+  "reden": "De basiskennis-test 'Lezen en leest zijn werkwoorden: je kunt er ik voor zetten' klopt niet ('ik lezen' en 'ik leest' zijn allebei fout). Beter: 'je kunt het in een andere tijd zetten' of 'ik lees, hij leest, wij lezen'."
+ },
+ {
+  "pathId": "signaalwoorden-verbanden-po",
+  "stap": 1,
+  "q": "Welk woord past? *___ de storm bleef de veerboot in de haven.*",
+  "reden": "Hint bij 'Hoewel' ('... of juist dóór de storm?') wijst bijna direct naar 'vanwege', want het uitlegPad zegt zelf 'Welk woord betekent door?'. Licht bezwaar."
+ },
+ {
+  "pathId": "zinsontleding-onderwerp-persoonsvorm-po",
+  "stap": 0,
+  "q": "Wat is de persoonsvorm? *Mijn oma bakt elke zondag een taart.*",
+  "reden": "Hint bij 'oma' ('Welk woord zegt wat ze dóét?') wijst het werkwoord 'bakt' vrijwel direct aan, want het is het enige doe-woord in de opties. Licht bezwaar."
+ }
+]

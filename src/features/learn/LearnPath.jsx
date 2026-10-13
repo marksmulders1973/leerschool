@@ -13,7 +13,7 @@ import AITutor from "./AITutor.jsx";
 import {
   recordWrong as adaptRecordWrong,
   recordRight as adaptRecordRight,
-  buildCheckOrder as adaptBuildOrder,
+  getWrongChecks as adaptWrongChecks,
   pathWrongMap as adaptPathWrongMap,
   markPathSeen,
   getSeenPaths,
@@ -26,6 +26,7 @@ import { telAntwoordVoorVriend } from "../referral/referral.js";
 import { getDayStreak } from "../../shared/dailyGoal.js";
 import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
 import { shuffleOptions } from "../../shared/shuffleOptions.js";
+import { kiesStapVragen, bewaardeStapVragen, vergeetStapVragen, vragenPerBezoek, markeerGezien, vraagSleutel } from "../../shared/geziendeVragen.js";
 import VraagUitlegPad, { bumpVraagFouten } from "./VraagUitlegPad.jsx";
 import WoordHulpSheet, { vindLesVoorWoord } from "./WoordHulp.jsx";
 import { getExamRefsForPath } from "../../learnPaths/examenLookup.js";
@@ -433,6 +434,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   const [mode, setMode] = useState(startMode);
   const [stepIdx, setStepIdx] = useState(startStep);
   const [checkIdx, setCheckIdx] = useState(0);
+  // 👀 Elk nieuw bezoek aan een stap (ook dezelfde stap opnieuw) kiest opnieuw welke vragen
+  // er komen (zie checkOrder hieronder). Ophogen in goToStep.
+  const [stapBezoek, setStapBezoek] = useState(0);
   // 🎯 Vraag eerst (Mark 29 sep 2026, "ga"): het uitleg-scherm had gemiddeld 220 woorden tekst en de
   // knop "Naar de vragen" stond ~1.500 px diep. Nu opent een deel meteen met vraag 1; de uitleg is een
   // knop ("Eerst de uitleg lezen" boven de vraag, "Lees de uitleg van dit deel" na een fout). Goed →
@@ -561,13 +565,13 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     try {
       const r = loadResume(player);
       if (r && r.pathId === pathId && r.stepIdx === stepIdx && typeof r.checkIdx === "number") {
-        const checks = mcChecks(path.steps?.[stepIdx]);
-        if (r.checkIdx > 0 && r.checkIdx < checks.length) {
+        if (r.checkIdx > 0 && r.checkIdx < checkOrder.length) {
           setCheckIdx(r.checkIdx);
           resumeCheckIdxRef.current = r.checkIdx;
         }
       }
     } catch { /* */ }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [path, player, pathId, stepIdx]);
   // SH2 — "even stoppen"-knop: plek is al bewaard; dit is vooral de
   // geruststelling in kindtaal + een nette afsluiting naar home.
@@ -648,9 +652,14 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
 
   // Adaptief: foute checks van vorige bezoek eerst herhalen.
   // checkOrder is een mapping van weergavevolgorde → originele checkIdx.
+  // 👀 Per bezoek hoogstens 5 vragen, nieuwe eerst (Mark 8 okt 2026): stappen krijgen 10+ vragen,
+  // maar een bezoek moet in het kwartier passen. Volgorde: vorige keer fout → nooit gezien op dit
+  // apparaat → langst geleden gezien. De keuze blijft bewaard tot de stap af is, zodat checkIdx
+  // (= plek in déze keuze) bij hervatten naar dezelfde vraag wijst. Examens: alle vragen.
   const checkOrder = useMemo(
-    () => adaptBuildOrder(pathId, stepIdx, checks.length),
-    [pathId, stepIdx, checks.length]
+    () => kiesStapVragen({ pathId, stepIdx, checks, fouteIdx: adaptWrongChecks(pathId, stepIdx), max: isExamenPad ? Infinity : undefined }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [pathId, stepIdx, step, checks.length, stapBezoek]
   );
   const realCheckIdx = checkOrder[checkIdx] ?? checkIdx;
   const rawCheck = checks[realCheckIdx];
@@ -768,6 +777,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     setToonBijsturen(false);
     setUitlegSimpeler(false);
     setStepIdx(idx);
+    setStapBezoek((b) => b + 1);
     setCheckIdx(vanafVraag);
     setSelected(null);
     setAttempts(1);
@@ -811,6 +821,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     if (attempts === 1) {
       sessionScoreRef.current.tries += 1;
       if (i === currentCheck.answer) sessionScoreRef.current.correct += 1;
+      // 👀 Gezien = beantwoord (eerste poging). Niet bij tonen: een vraag die in beeld kwam maar
+      // waar het kind wegklikte, telt nog als nieuw. Sleutel op de originele vraagtekst.
+      try { markeerGezien(vraagSleutel(pathId, rawCheck?.q)); } catch { /* */ }
       // 🔁 Nieuwkomerpaden: vraag in het herhaal-doosje (komt na 1, 2, 4, 8 dagen terug op /nieuwkomers).
       if (path?.steunTeksten) noteerAntwoord(pathId, stepIdx, currentCheck.q, i === currentCheck.answer, currentCheck.options?.[currentCheck.answer]);
       // 25 sep 2026: leerpad-antwoorden werden niet als event gemeten (alleen learn_progress), dus "sommen"
@@ -865,7 +878,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         return;
       }
       schedule(() => {
-        if (checkIdx + 1 < checks.length) {
+        if (checkIdx + 1 < checkOrder.length) {
           setCheckIdx(checkIdx + 1);
           setSelected(null);
           setAttempts(1);
@@ -900,7 +913,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
 
   // Doorgaan-handler na correctEvidence-pauze.
   const advanceAfterEvidence = () => {
-    if (checkIdx + 1 < checks.length) {
+    if (checkIdx + 1 < checkOrder.length) {
       setCheckIdx(checkIdx + 1);
       setSelected(null);
       setAttempts(1);
@@ -940,6 +953,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     newDone.add(stepIdx);
     setCompletedSteps(newDone);
     setMode("stepDone");
+    // 👀 Stap af → bewaarde vraagkeuze vergeten; het volgende bezoek kiest weer nieuwe vragen.
+    try { vergeetStapVragen(pathId, stepIdx); } catch { /* */ }
     // B0.4 (7-bots-review): supabase-js v2 throwt niet — de oude try/catch
     // ving dus nooit iets en een RLS-/offline-fout verdween geruisloos
     // terwijl de UI "voltooid!" toonde. Nu: error-veld checken + 1 retry.
@@ -1008,7 +1023,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
           try {
             const r = loadResume(player);
             if (r && r.pathId === pathId && typeof r.stepIdx === "number" && r.stepIdx < path.steps.length && !completedSteps.has(r.stepIdx)) {
-              const n = mcChecks(path.steps[r.stepIdx]).length;
+              const n = (bewaardeStapVragen(pathId, r.stepIdx) || []).length || vragenPerBezoek(mcChecks(path.steps[r.stepIdx]).length, isExamenPad ? Infinity : undefined);
               const v = typeof r.checkIdx === "number" && r.checkIdx > 0 && r.checkIdx < n ? r.checkIdx : 0;
               if (r.stepIdx > 0 || v > 0) return { stepIdx: r.stepIdx, checkIdx: v };
             }
@@ -1158,7 +1173,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             {/* Nieuwkomers: minder cijfers rond de vraag (kliktest 26 sep 2026). */}
             {!path.steunTeksten && (
             <span style={{ marginLeft: 8, color: C.warm, fontWeight: 700 }}>
-              ≈ {Math.max(1, Math.round(0.7 + (path.steps[stepIdx]?.checks?.length || 1) * 0.5))} min
+              ≈ {Math.max(1, Math.round(0.7 + (checkOrder.length || 1) * 0.5))} min
             </span>
             )}
           </span>
@@ -1424,7 +1439,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         )}
 
         {mode === "reading" && (() => {
-          const knopTekst = resumeCheckIdxRef.current !== null ? "Terug naar de vraag ▶" : checks.length > 1 ? "Naar de vragen ▶" : checks.length === 1 ? "Naar de vraag ▶" : "Volgend deel ▶";
+          const knopTekst = resumeCheckIdxRef.current !== null ? "Terug naar de vraag ▶" : checkOrder.length > 1 ? "Naar de vragen ▶" : checkOrder.length === 1 ? "Naar de vraag ▶" : "Volgend deel ▶";
           return (
             <SteunTekst nl={knopTekst} knop><button onClick={startCheck} style={btnPrimary()}>
               <MetLuister aan={luisterStand} tekst={knopTekst.replace(" ▶", "")}>{knopTekst}</MetLuister>
@@ -1519,7 +1534,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
           // lk-q-in (korte cross-fade) — geen harde swap meer (2026-06-13).
           <div key={`q-${stepIdx}-${checkIdx}`} style={{ ...cardStyle(), animation: "lk-q-in 0.25s ease-out" }}>
             <div style={{ fontSize: 13, color: C.muted, marginBottom: 6 }}>
-              Vraag {checkIdx + 1} van {checks.length} {attempts > 1 ? `· poging ${attempts}` : ""}
+              Vraag {checkIdx + 1} van {checkOrder.length} {attempts > 1 ? `· poging ${attempts}` : ""}
             </div>
             <ExamenBronBanner examenBron={currentCheck.examenBron} />
             {/* VoorkennisKeten POC (Mark 2026-05-14): toont leerlijn naar examenvraag.
@@ -2116,7 +2131,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         {mode === "correctEvidence" && currentCheck && (
           <CorrectEvidenceCard
             evidence={currentCheck.evidence}
-            isLast={checkIdx + 1 >= checks.length}
+            isLast={checkIdx + 1 >= checkOrder.length}
             onAdvance={advanceAfterEvidence}
           />
         )}
@@ -2264,6 +2279,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
 }
 
 function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPickStep, onBack, onHome, loaded, wrongPerStep, hervat = null, luisterStand = false }) {
+  const isExamenPadOv = String(path?.id || "").startsWith("examen-");
   // 🌍 Nieuwkomerpad (5 okt 2026, meting: kind met steuntaal Arabisch opende "In de klas" en was
   // binnen 11 s terug op /nieuwkomers zonder één vraag): het overzicht toonde alleen Nederlands,
   // geen voorlees-schakelaar en 17 tik-pilletjes. Nu: eigen taal meteen onder intro, startknop en
@@ -2434,8 +2450,10 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                     {stripInternalCodes(ch.title)}
                   </div></SteunTekst>
                   {(() => {
-                    const aantalVragen = stepsInCh.reduce((n, i) => n + (path.steps[i]?.checks?.length || 0), 0);
-                    const minuten = stepsInCh.reduce((n, i) => n + Math.max(1, Math.round(0.7 + (path.steps[i]?.checks?.length || 1) * 0.5)), 0);
+                    // 👀 Per bezoek hoogstens 5 vragen per deel (geziendeVragen.js) → tel wat het kind te zien krijgt.
+                    const perDeel = (i) => vragenPerBezoek(mcChecks(path.steps[i]).length, isExamenPadOv ? Infinity : undefined);
+                    const aantalVragen = stepsInCh.reduce((n, i) => n + perDeel(i), 0);
+                    const minuten = stepsInCh.reduce((n, i) => n + Math.max(1, Math.round(0.7 + (perDeel(i) || 1) * 0.5)), 0);
                     const stand = allDone ? "✓ klaar" : doneCount > 0 ? "bezig" : "nog niet gedaan";
                     return (
                       <SteunTekst nl={UI_GETAL.vragenMinuten(aantalVragen, minuten, allDone ? "klaar" : doneCount > 0 ? "bezig" : "niet")} inline><div style={{ fontSize: 12.5, color: allDone ? C.good : C.muted, marginTop: 2 }}>

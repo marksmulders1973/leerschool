@@ -62,6 +62,127 @@ const steps = [
           niveaus: { basis: "Sam geeft de vissen eten.", simpeler: "Sam geeft de vissen…", nogSimpeler: "eten geven" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*Papa leest een boek in de tuin.*\n\n**Wat** doet papa?",
+        options: ["een boek lezen", "in de tuin werken", "de krant lezen", "een dutje doen"],
+        answer: 0,
+        wrongHints: [null, "Hij is wel in de tuin — maar wat doet hij daar?", "Lees goed: wát leest hij?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat-vraag",
+              tekst: "Papa **leest een boek**. Dat staat precies zo in de zin. *In de tuin* zegt alleen waar hij is.",
+            },
+          ],
+          niveaus: {
+            basis: "Papa leest een boek.",
+            simpeler: "Papa leest een…",
+            nogSimpeler: "een boek lezen",
+          },
+        },
+      },
+      {
+        q: "*De juf schrijft een woord op het bord.*\n\n**Wie** schrijft er op het bord?",
+        options: ["de juf", "de meester", "een kind", "het bord"],
+        answer: 0,
+        wrongHints: [null, null, "Staat die in de zin?", "Daar schrijft iemand óp — maar wie schrijft?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wie-vraag",
+              tekst: "Vraag: wie schrijft er? **De juf.** Het bord is de plek waar ze op schrijft.",
+            },
+          ],
+          niveaus: {
+            basis: "De juf schrijft op het bord.",
+            simpeler: "Wie schrijft er? De…",
+            nogSimpeler: "de juf",
+          },
+        },
+      },
+      {
+        q: "*Ali bouwt een toren van blokken.*\n\n**Wat** doet Ali?",
+        options: ["een toren bouwen", "de blokken opruimen", "een tekening maken", "buiten spelen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Er staan wel blokken in de zin — maar wat doet hij ermee?",
+          null,
+          "Staat dat er echt?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat-vraag",
+              tekst: "Ali **bouwt een toren**. Dat staat precies zo in de zin. De blokken zijn waar hij mee bouwt.",
+            },
+          ],
+          niveaus: {
+            basis: "Ali bouwt een toren.",
+            simpeler: "Ali bouwt een…",
+            nogSimpeler: "een toren bouwen",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*Bram geeft zijn zus een cadeau.*\n\n**Wie** geeft het cadeau?",
+        options: ["Bram", "zijn zus", "Daan", "het cadeau"],
+        answer: 0,
+        wrongHints: [null, "Krijgt zij iets, of geeft zij iets?", "Staat Daan in de zin?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wie-vraag",
+              tekst: "Vraag: wie geeft er iets? **Bram.** Zijn zus krijgt het cadeau.",
+            },
+          ],
+          niveaus: {
+            basis: "Bram geeft het cadeau.",
+            simpeler: "Wie geeft? Wie krijgt? Zijn zus krijgt het.",
+            nogSimpeler: "Bram",
+          },
+        },
+      },
+      {
+        q: "*Na school speelt Eva op het plein.*\n\n**Wanneer** speelt Eva?",
+        options: ["na school", "op het plein", "voor het eten", "in de pauze"],
+        answer: 0,
+        wrongHints: [null, "Dat zegt waar ze speelt. Maar wanneer?", null, "Staat dat er echt?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wanneer-vraag",
+              tekst: "De zin begint met: *Na school*. Dat is het antwoord op de wanneer-vraag. *Op het plein* zegt waar ze speelt.",
+            },
+          ],
+          niveaus: {
+            basis: "Na school.",
+            simpeler: "De zin begint ermee: Na…",
+            nogSimpeler: "na school",
+          },
+        },
+      },
+      {
+        q: "*De kat drinkt melk uit een schaaltje.*\n\n**Wat** drinkt de kat?",
+        options: ["melk", "water", "een schaaltje", "thee"],
+        answer: 0,
+        wrongHints: [null, "Staat dat er echt?", "Kun je dat drinken?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat-vraag",
+              tekst: "De kat drinkt **melk**. Het schaaltje is waar de melk in zit.",
+            },
+          ],
+          niveaus: {
+            basis: "De kat drinkt melk.",
+            simpeler: "De kat drinkt… uit een schaaltje.",
+            nogSimpeler: "melk",
+          },
+        },
+      },
     ],
   },
 
@@ -111,6 +232,114 @@ const steps = [
           stappen: [{ titel: "Twee zinnen samen", tekst: "Zin 2: hij kijkt **onder zijn bed**. Zin 3: **daar** ligt de schoen. 'Daar' wijst terug naar: onder het bed." }],
           woorden: [{ woord: "daar", uitleg: "Een woord dat terugwijst naar een plek die al genoemd is." }],
           niveaus: { basis: "De schoen ligt onder het bed.", simpeler: "'Daar' = de plek uit zin 2.", nogSimpeler: "onder zijn bed" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*Sara heeft een konijn. Het konijn heet Snuf. Snuf eet graag wortels.*\n\n**Hoe heet** het konijn?",
+        options: ["Snuf", "Sara", "Max", "Wortel"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zij heeft het konijn — maar hoe heet het konijn zelf?",
+          "Lees zin 2 nog eens.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek de naam",
+              tekst: "Zin 2: *Het konijn heet **Snuf**.* Daar staat het antwoord.",
+            },
+          ],
+          niveaus: {
+            basis: "Het konijn heet Snuf.",
+            simpeler: "Zin 2: Het konijn heet…",
+            nogSimpeler: "Snuf",
+          },
+          theorie: "Pas op: in de tekst staan twee namen. Sara is van wie het konijn is. Lees de hele zin, dan weet je welke naam bij het konijn hoort.",
+        },
+      },
+      {
+        q: "*Sara heeft een konijn. Het konijn heet Snuf. Snuf eet graag wortels.*\n\n**Wat** eet Snuf graag?",
+        options: ["wortels", "appels", "sla", "gras"],
+        answer: 0,
+        wrongHints: [null, "Lees de laatste zin nog eens.", null, "Staat dat er echt?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek in de tekst",
+              tekst: "Laatste zin: *Snuf eet graag **wortels**.* Daar staat het antwoord.",
+            },
+          ],
+          niveaus: {
+            basis: "Snuf eet graag wortels.",
+            simpeler: "Zin 3: Snuf eet graag…",
+            nogSimpeler: "wortels",
+          },
+        },
+      },
+      {
+        q: "*Het is mooi weer. Ravi gaat met papa naar het strand. Daar bouwen ze een groot zandkasteel.*\n\n**Wat** bouwen Ravi en papa?",
+        options: ["een zandkasteel", "een hut", "een toren van blokken", "een sneeuwpop"],
+        answer: 0,
+        wrongHints: [null, "Lees de laatste zin nog eens.", null, "Is het daar wel koud genoeg voor?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Twee zinnen samen",
+              tekst: "Zin 2: ze gaan naar het strand. Zin 3: **daar** bouwen ze een groot **zandkasteel**.",
+            },
+          ],
+          niveaus: {
+            basis: "Ze bouwen een zandkasteel.",
+            simpeler: "Zin 3: Daar bouwen ze een groot…",
+            nogSimpeler: "een zandkasteel",
+          },
+        },
+      },
+      {
+        q: "*Juf Anne heeft een verrassing. Ze leest een spannend boek voor. De kinderen luisteren heel stil.*\n\n**Wie** leest het boek voor?",
+        options: ["juf Anne", "de kinderen", "de meester", "een kind uit de klas"],
+        answer: 0,
+        wrongHints: [null, "Die luisteren juist — wie leest er dan?", null, "Staat dat er echt?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wie is 'ze'?",
+              tekst: "Zin 1 gaat over **juf Anne**. Zin 2 zegt: *Ze leest een spannend boek voor.* 'Ze' wijst terug naar juf Anne.",
+            },
+          ],
+          niveaus: {
+            basis: "Juf Anne leest voor.",
+            simpeler: "'Ze' in zin 2 = de juf uit zin 1.",
+            nogSimpeler: "juf Anne",
+          },
+          woorden: [
+            {
+              woord: "ze",
+              uitleg: "Een woordje dat terugwijst naar iemand die al genoemd is.",
+            },
+          ],
+        },
+      },
+      {
+        q: "*Juf Anne heeft een verrassing. Ze leest een spannend boek voor. De kinderen luisteren heel stil.*\n\n**Wat** doen de kinderen?",
+        options: ["heel stil luisteren", "hard lachen", "zelf een boek lezen", "buiten spelen"],
+        answer: 0,
+        wrongHints: [null, "Lees de laatste zin nog eens.", "Wie leest het boek eigenlijk?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek in de tekst",
+              tekst: "Laatste zin: *De kinderen **luisteren heel stil**.* Daar staat het antwoord.",
+            },
+          ],
+          niveaus: {
+            basis: "De kinderen luisteren heel stil.",
+            simpeler: "Zin 3: De kinderen luisteren…",
+            nogSimpeler: "stil luisteren",
+          },
         },
       },
     ],
@@ -163,6 +392,124 @@ const steps = [
           niveaus: { basis: "Gratis = niets betalen.", simpeler: "Wat betekent 'gratis'?", nogSimpeler: "niets" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*Een slak draagt zijn huisje op zijn rug. Als het gevaarlijk is, kruipt hij erin. Slakken houden van nat weer. Daarom zie je ze vaak na een regenbui.*\n\nWat doet een slak als het **gevaarlijk** is?",
+        options: [
+          "in zijn huisje kruipen",
+          "heel hard wegrennen",
+          "onder een steen kruipen",
+          "zijn huisje achterlaten",
+        ],
+        answer: 0,
+        wrongHints: [null, "Zoek het woord 'gevaarlijk' in de tekst.", null, "Staat dat in de tekst?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek het woord",
+              tekst: "De vraag gaat over *gevaarlijk*. Zin 2 zegt: *Als het gevaarlijk is, **kruipt hij erin**.* 'Erin' = in zijn huisje.",
+            },
+          ],
+          niveaus: {
+            basis: "Hij kruipt in zijn huisje.",
+            simpeler: "Zoek de zin met 'gevaarlijk'.",
+            nogSimpeler: "in zijn huisje",
+          },
+          woorden: [
+            {
+              woord: "gevaarlijk",
+              uitleg: "Als er iets kan gebeuren waardoor je pijn krijgt of schade.",
+            },
+          ],
+        },
+      },
+      {
+        q: "*Op woensdag gaat Yara naar zwemles. De les begint om drie uur. Ze moet haar badpak en een handdoek meenemen.*\n\nWat moet Yara **meenemen**?",
+        options: [
+          "een badpak en een handdoek",
+          "een badpak en een zwembril",
+          "een handdoek en een bal",
+          "een zwembril en een bal",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Lees de laatste zin nog eens — wat staat er naast het badpak?",
+          null,
+          "Staat dat in de tekst?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek het woord",
+              tekst: "De vraag gaat over *meenemen*. De laatste zin zegt: *haar **badpak** en een **handdoek** meenemen*. Let op: allebei moeten kloppen!",
+            },
+          ],
+          niveaus: {
+            basis: "Een badpak en een handdoek.",
+            simpeler: "Zoek de zin met 'meenemen'.",
+            nogSimpeler: "badpak en handdoek",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*Een uil slaapt overdag. 's Nachts gaat hij op jacht. Hij eet graag muizen. Een uil kan heel goed zien in het donker.*\n\n**Wanneer** gaat de uil op jacht?",
+        options: ["'s nachts", "overdag", "'s middags", "'s ochtends vroeg"],
+        answer: 0,
+        wrongHints: [null, "Wat doet de uil overdag?", null, "Staat dat in de tekst?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek het woord",
+              tekst: "De vraag gaat over *op jacht*. In de tekst staat: *'s Nachts gaat hij op jacht.* Overdag slaapt hij juist.",
+            },
+          ],
+          niveaus: {
+            basis: "'s Nachts.",
+            simpeler: "Zoek de zin met 'jacht'.",
+            nogSimpeler: "'s nachts",
+          },
+        },
+      },
+      {
+        q: "*Mo heeft een moestuin. Hij plant tomaten en bonen. Elke avond geeft hij de plantjes water. In de zomer plukt hij de tomaten.*\n\n**Wanneer** geeft Mo de plantjes water?",
+        options: ["elke avond", "in de zomer", "elke ochtend", "als het regent"],
+        answer: 0,
+        wrongHints: [null, "Wat doet Mo in de zomer?", null, "Staat dat in de tekst?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek het woord",
+              tekst: "De vraag gaat over *water*. In de tekst staat: *Elke avond geeft hij de plantjes water.*",
+            },
+          ],
+          niveaus: {
+            basis: "Elke avond.",
+            simpeler: "Zoek de zin met 'water'.",
+            nogSimpeler: "elke avond",
+          },
+        },
+      },
+      {
+        q: "*In het museum mag je niet rennen. Je mag ook niets aanraken. Foto's maken mag wel. Het museum is open tot vijf uur.*\n\nWat **mag** je wel in het museum?",
+        options: ["foto's maken", "rennen", "dingen aanraken", "eten en drinken"],
+        answer: 0,
+        wrongHints: [null, "Lees de eerste zin nog eens. Mag dat?", null, "Staat dat in de tekst?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek het woord",
+              tekst: "De vraag gaat over wat *wel* mag. In de tekst staat: *Foto's maken mag wel.* Rennen en aanraken mogen niet.",
+            },
+          ],
+          niveaus: {
+            basis: "Foto's maken.",
+            simpeler: "Zoek de zin met 'mag wel'.",
+            nogSimpeler: "foto's maken",
+          },
+        },
+      },
     ],
   },
 
@@ -210,6 +557,147 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Volgorde-woorden", tekst: "**eerst** = begin, **daarna/dan** = midden, **ten slotte** = einde." }],
           niveaus: { basis: "'Ten slotte' hoort bij het einde.", simpeler: "Eerst… daarna… ten slotte!", nogSimpeler: "ten slotte" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*Eerst giet Bas water in de gieter. Daarna geeft hij de plant water. Ten slotte zet hij de gieter weg.*\n\nWat doet Bas **ten slotte**?",
+        options: [
+          "de gieter wegzetten",
+          "de plant water geven",
+          "water in de gieter gieten",
+          "de plant in de zon zetten",
+        ],
+        answer: 0,
+        wrongHints: [null, "Dat komt in het midden.", "Dat deed hij als eerste.", "Staat dat in de tekst?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek 'ten slotte'",
+              tekst: "*Ten slotte zet hij de gieter weg.* **Ten slotte** = op het laatst.",
+            },
+          ],
+          niveaus: {
+            basis: "Op het laatst zet Bas de gieter weg.",
+            simpeler: "Welke zin begint met 'Ten slotte'?",
+            nogSimpeler: "gieter wegzetten",
+          },
+        },
+      },
+      {
+        q: "*Fleur poetst eerst haar tanden. Dan trekt ze haar pyjama aan. Daarna kruipt ze in bed.*\n\nWat doet Fleur het **eerst**?",
+        options: ["haar tanden poetsen", "haar pyjama aantrekken", "in bed kruipen", "een boek lezen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Het woordje 'dan' staat in die zin — is dat het begin?",
+          null,
+          "Staat dat in de tekst?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek 'eerst'",
+              tekst: "Het woordje **eerst** staat hier midden in de zin: *Fleur poetst **eerst** haar tanden.* Dus dat doet ze als eerste.",
+            },
+          ],
+          niveaus: {
+            basis: "Eerst poetst Fleur haar tanden.",
+            simpeler: "In welke zin staat 'eerst'?",
+            nogSimpeler: "tanden poetsen",
+          },
+        },
+      },
+      {
+        q: "*Eerst pakt Kim een boterham. Dan smeert ze er boter op. Daarna doet ze er kaas op. Ten slotte eet ze hem op.*\n\nWat doet Kim het **laatst**?",
+        options: [
+          "de boterham opeten",
+          "kaas op de boterham doen",
+          "boter op de boterham smeren",
+          "een boterham pakken",
+        ],
+        answer: 0,
+        wrongHints: [null, "Dat komt net daarvóór.", null, "Daar begint het juist mee."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Op een rijtje",
+              tekst: "1. boterham pakken → 2. boter → 3. kaas → 4. **opeten**. Het woordje *ten slotte* zegt: dit is het laatst.",
+            },
+          ],
+          niveaus: {
+            basis: "Het laatst eet Kim de boterham op.",
+            simpeler: "Welke zin begint met 'Ten slotte'?",
+            nogSimpeler: "opeten",
+          },
+        },
+      },
+      {
+        q: "*Het begon te sneeuwen. Toen maakten Ali en Noa een sneeuwpop. Daarna gaven ze hem een wortel als neus.*\n\nWat gebeurde er **na** het maken van de sneeuwpop?",
+        options: [
+          "de sneeuwpop kreeg een wortel als neus",
+          "het begon te sneeuwen",
+          "Ali en Noa gingen sleeën",
+          "Ali en Noa gingen naar binnen",
+        ],
+        answer: 0,
+        wrongHints: [null, "Daar begon het juist mee.", "Staat dat in de tekst?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Op een rijtje",
+              tekst: "1. sneeuw → 2. sneeuwpop maken → 3. **wortel als neus**. Het woordje *daarna* zegt: dit kwam na de sneeuwpop.",
+            },
+          ],
+          niveaus: {
+            basis: "Daarna kreeg de sneeuwpop een neus.",
+            simpeler: "Sneeuw → sneeuwpop → …?",
+            nogSimpeler: "een wortel als neus",
+          },
+        },
+      },
+      {
+        q: "*Eerst doet Tom zijn sokken aan. Daarna doet hij zijn schoenen aan. Ten slotte strikt hij zijn veters.*\n\nWat doet Tom **vóór** hij zijn schoenen aandoet?",
+        options: ["zijn sokken aandoen", "zijn veters strikken", "zijn jas aandoen", "zijn tas pakken"],
+        answer: 0,
+        wrongHints: [null, "Dat doet hij juist ná de schoenen.", null, "Staat dat in de tekst?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stapjes volgen",
+              tekst: "1. **sokken** → 2. schoenen → 3. veters. Vóór de schoenen komen de sokken. Het woordje *eerst* verklapt het.",
+            },
+          ],
+          niveaus: {
+            basis: "Vóór de schoenen: sokken aan.",
+            simpeler: "… → schoenen → veters. Wat staat vooraan?",
+            nogSimpeler: "sokken",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*Eerst wast Lisa haar handen. Daarna snijdt ze een appel. Ten slotte eet ze de stukjes op.*\n\nWat doet Lisa **na** het handen wassen?",
+        options: ["een appel snijden", "de stukjes opeten", "haar handen afdrogen", "de appel wassen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat doet ze ten slotte. Komt dat meteen na het wassen?",
+          null,
+          "Staat dat in de tekst?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stapjes volgen",
+              tekst: "1. handen wassen → 2. **appel snijden** → 3. stukjes opeten. Het woordje *daarna* zegt: dit komt na het wassen.",
+            },
+          ],
+          niveaus: {
+            basis: "Na het wassen snijdt Lisa een appel.",
+            simpeler: "Handen wassen → … → opeten.",
+            nogSimpeler: "appel snijden",
+          },
         },
       },
     ],
@@ -261,6 +749,77 @@ const steps = [
           stappen: [{ titel: "'Ten slotte' = het einde", tekst: "*Ten slotte rijdt de bus weer terug naar school.* 'Ten slotte' verklapt: dit is het einde." }],
           theorie: "Kies nooit een antwoord omdat het leuk klinkt — kies wat er écht in de tekst staat.",
           niveaus: { basis: "Het einde: terug naar school.", simpeler: "Welke zin begint met 'Ten slotte'?", nogSimpeler: "terug naar school" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*Vandaag is de schoolreis. Eerst rijdt de bus naar de dierentuin. Daar ziet groep 4 de apen en de olifanten. Lena vindt de apen het leukst, want ze doen gek. Daarna eet iedereen een broodje in het gras. Ten slotte rijdt de bus weer terug naar school.*\n\n**Waarmee** gaat groep 4 naar de dierentuin?",
+        options: ["met de bus", "met de trein", "met de fiets", "lopend"],
+        answer: 0,
+        wrongHints: [null, "Lees zin 2 nog eens.", null, "Staat dat in de tekst?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek de dierentuin",
+              tekst: "Zin 2: *Eerst rijdt de **bus** naar de dierentuin.* Ze gaan dus met de bus.",
+            },
+          ],
+          niveaus: {
+            basis: "Met de bus.",
+            simpeler: "Zin 2: Eerst rijdt de… naar de dierentuin.",
+            nogSimpeler: "de bus",
+          },
+          woorden: [
+            {
+              woord: "waarmee",
+              uitleg: "Een vraagwoord: met welk ding? Bijvoorbeeld met de fiets of met de auto.",
+            },
+          ],
+          theorie: "Het antwoord staat in de tekst. Zoek de zin waarin de dierentuin voor het eerst genoemd wordt.",
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*Vandaag is de schoolreis. Eerst rijdt de bus naar de dierentuin. Daar ziet groep 4 de apen en de olifanten. Lena vindt de apen het leukst, want ze doen gek. Daarna eet iedereen een broodje in het gras. Ten slotte rijdt de bus weer terug naar school.*\n\n**Wie** vindt de apen het leukst?",
+        options: ["Lena", "Tim", "groep 4", "de juf"],
+        answer: 0,
+        wrongHints: [null, "Staat Tim in de tekst?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek 'het leukst'",
+              tekst: "In de tekst staat: ***Lena** vindt de apen het leukst.* Groep 4 ziet de apen, maar Lena vindt ze het leukst.",
+            },
+          ],
+          niveaus: {
+            basis: "Lena vindt de apen het leukst.",
+            simpeler: "Zoek de zin met 'het leukst'.",
+            nogSimpeler: "Lena",
+          },
+        },
+      },
+      {
+        q: "*Vandaag is de schoolreis. Eerst rijdt de bus naar de dierentuin. Daar ziet groep 4 de apen en de olifanten. Lena vindt de apen het leukst, want ze doen gek. Daarna eet iedereen een broodje in het gras. Ten slotte rijdt de bus weer terug naar school.*\n\nWat gebeurt er het **eerst**?",
+        options: [
+          "de bus rijdt naar de dierentuin",
+          "iedereen eet een broodje",
+          "de bus rijdt terug naar school",
+          "Lena kijkt naar de apen",
+        ],
+        answer: 0,
+        wrongHints: [null, "Welk woordje staat in de zin met het broodje?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek 'eerst'",
+              tekst: "In de tekst staat: ***Eerst** rijdt de bus naar de dierentuin.* Het woordje *eerst* verklapt het.",
+            },
+          ],
+          niveaus: {
+            basis: "Eerst rijdt de bus naar de dierentuin.",
+            simpeler: "Welke zin begint met 'Eerst'?",
+            nogSimpeler: "naar de dierentuin",
+          },
         },
       },
     ],

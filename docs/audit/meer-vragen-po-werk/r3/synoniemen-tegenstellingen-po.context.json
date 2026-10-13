@@ -1,0 +1,1164 @@
+{
+ "pathId": "synoniemen-tegenstellingen-po",
+ "titel": "Synoniemen + tegenstellingen (groep 5-7)",
+ "level": "groep5-7",
+ "subject": "taal",
+ "intro": "Synoniemen + tegenstellingen voor groep 5-7 — bijna-gelijke woorden, tegenovergestelde betekenis, welk woord past het beste in een zin. ~15 min.",
+ "stappen": [
+  {
+   "stap": 0,
+   "titel": "Wat is een synoniem?",
+   "vanafGroep": null,
+   "interactief": false,
+   "heeftSvg": true,
+   "uitleg": "Een **synoniem** is een woord dat **bijna hetzelfde betekent** als een ander woord.\n\n**Voorbeelden**:\n• **blij** = vrolijk = gelukkig.\n• **enorm** = heel groot = reusachtig.\n• **mooi** = prachtig = schitterend.\n• **rennen** = hard lopen = sprinten.\n• **gauw** = snel = vlug.\n\n**Waarom zijn synoniemen handig?**\n• Je tekst wordt **leuker om te lezen**. Anders herhaal je elk woord.\n• Je kunt **precieser zijn** *(een 'mooie' bloem is iets anders dan een 'prachtige' bloem)*.\n• Bij de Doorstroomtoets moet je vaak een synoniem **herkennen** in meerkeuze-vragen.\n\n**Toets-truc — het juiste woord kiezen**:\nLees de zin met de optie erin. Past het natuurlijk? Soms zijn meerdere woorden synoniem maar past één beter in de context.\n\nBijvoorbeeld:\n*'De jongen rende ___ naar huis.'*\n• Synoniemen van 'snel': vlug, gauw, hard.\n• Maar 'hard' past hier — 'hard rennen' is gangbaar.\n\n**Pas op — niet altijd 100% hetzelfde**:\n• 'Goed' en 'lekker' zijn synoniem in *'lekker eten'* = 'goed eten'. \n• Maar *'lekker weer'* zou je niet snel 'goed weer' noemen — verschillende nuance.\n\nSynoniemen lijken op elkaar maar zijn niet identiek.",
+   "leesTekst": null,
+   "aantalNu": 3,
+   "nodig": 7,
+   "uitlegPadInBestaande": 3,
+   "uitlegPadVelden": [
+    "stappen",
+    "woorden",
+    "theorie",
+    "voorbeelden",
+    "basiskennis",
+    "niveaus"
+   ],
+   "bestaandeVragen": [
+    {
+     "q": "Wat is een **synoniem**?",
+     "options": [
+      "Een woord met bijna dezelfde betekenis",
+      "Een woord met tegengestelde betekenis",
+      "Een woord met dezelfde uitspraak",
+      "Een woord uit een vreemde taal"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Dat is een tegenstelling (antoniem) — precies omgekeerd.",
+      "Dat is een homoniem — bv. 'bank' (zit) en 'bank' (geld).",
+      "Dat is een leenwoord — bv. 'computer' (Engels) of 'paraplu' (Frans)."
+     ],
+     "uitlegPad": {
+      "stappen": [
+       {
+        "titel": "Synoniem = (bijna) hetzelfde",
+        "tekst": "Een **synoniem** is een ander woord dat (bijna) dezelfde betekenis heeft. Bv. blij = vrolijk = gelukkig. Drie woorden, één gevoel."
+       },
+       {
+        "titel": "Waarom 'bijna' hetzelfde?",
+        "tekst": "Synoniemen zijn niet altijd 100% identiek. *'Lekker'* en *'goed'* zijn synoniem bij **eten** ('lekker eten' = 'goed eten'), maar niet bij **weer** ('lekker weer' klinkt natuurlijker dan 'goed weer'). Nuance-verschil."
+       },
+       {
+        "titel": "Waarom belangrijk?",
+        "tekst": "Schrijven met synoniemen voorkomt saaie herhaling. Op de Doorstroomtoets krijg je vaak: 'welk woord betekent (bijna) hetzelfde als X?'. Dat is een synoniem-vraag."
+       }
+      ],
+      "woorden": [
+       {
+        "woord": "synoniem",
+        "uitleg": "Ander woord met (bijna) dezelfde betekenis."
+       },
+       {
+        "woord": "antoniem",
+        "uitleg": "Tegenovergesteld woord (de tegenstelling)."
+       },
+       {
+        "woord": "homoniem",
+        "uitleg": "Woord met meerdere betekenissen — bv. 'bank'."
+       }
+      ],
+      "theorie": "Toets-truc: zoek bij synoniem-vragen het woord dat in dezelfde zin hetzelfde gevoel/idee oproept als het oorspronkelijke woord.",
+      "voorbeelden": [
+       {
+        "type": "stap",
+        "tekst": "**blij = vrolijk** — beide positieve gevoelens, kunnen elkaar vervangen."
+       },
+       {
+        "type": "stap",
+        "tekst": "**blij ≠ boos** — tegenovergesteld gevoel, dus geen synoniem maar een antoniem."
+       }
+      ],
+      "basiskennis": [
+       {
+        "onderwerp": "Eenvoudige check",
+        "uitleg": "Kun je het ene woord vervangen door het andere zonder dat de zin van betekenis verandert? Ja = synoniem. Nee = geen synoniem."
+       }
+      ],
+      "niveaus": {
+       "basis": "Synoniem = woord met bijna dezelfde betekenis.",
+       "simpeler": "Twee woorden die hetzelfde betekenen, bv. blij en vrolijk. Dat zijn synoniemen.",
+       "nogSimpeler": "Synoniem = twee woorden die hetzelfde zeggen."
+      }
+     }
+    },
+    {
+     "q": "Welk woord is een **synoniem** van **'blij'**?",
+     "options": [
+      "Vrolijk",
+      "Boos",
+      "Verdrietig",
+      "Bang"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Tegenovergesteld gevoel — dat is een tegenstelling, geen synoniem.",
+      "Tegenovergesteld gevoel — verdrietig is het tegenovergestelde van blij.",
+      "Ander negatief gevoel, maar niet hetzelfde als blij."
+     ],
+     "uitlegPad": {
+      "stappen": [
+       {
+        "titel": "Wat betekent 'blij'?",
+        "tekst": "**Blij** = een fijn gevoel, gelukkig, vrolijk. Iemand die net een cadeau kreeg, is blij."
+       },
+       {
+        "titel": "Welk woord lijkt erop?",
+        "tekst": "**Vrolijk** = óók een fijn gevoel, met een glimlach, lachen. Klassiek synoniem van blij."
+       },
+       {
+        "titel": "Andere opties?",
+        "tekst": "Boos = boos gezicht, niet blij. Verdrietig = huilen, het tegenovergestelde van blij. Bang = angstig, ander gevoel. Allemaal geen synoniemen."
+       }
+      ],
+      "woorden": [
+       {
+        "woord": "blij",
+        "uitleg": "Een fijn, positief gevoel."
+       },
+       {
+        "woord": "vrolijk",
+        "uitleg": "Hetzelfde — fijn gevoel, vaak met lachen erbij."
+       }
+      ],
+      "theorie": "Bij gevoels-synoniemen: zoek het woord met dezelfde 'kleur' van gevoel (positief/negatief).",
+      "voorbeelden": [
+       {
+        "type": "stap",
+        "tekst": "Andere blij-synoniemen: gelukkig, opgewekt, in een goed humeur."
+       },
+       {
+        "type": "stap",
+        "tekst": "Blij-antoniemen (tegenstellingen): verdrietig, boos, somber, neerslachtig."
+       }
+      ],
+      "basiskennis": [
+       {
+        "onderwerp": "Truc",
+        "uitleg": "Sorteer eerst alle opties: welke zijn positief? Welke negatief? Bij blij zoek je een positief woord — alleen 'vrolijk' is positief in deze lijst."
+       }
+      ],
+      "niveaus": {
+       "basis": "Vrolijk = synoniem van blij.",
+       "simpeler": "Blij + vrolijk = beide positief gevoel. Dus synoniem.",
+       "nogSimpeler": "Vrolijk"
+      }
+     }
+    },
+    {
+     "q": "Welk woord betekent hetzelfde als **'enorm'**?",
+     "options": [
+      "Reusachtig",
+      "Klein",
+      "Beetje",
+      "Snel"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Tegenstelling.",
+      "Tegenstelling.",
+      "Geen synoniem."
+     ],
+     "uitlegPad": {
+      "stappen": [
+       {
+        "titel": "Wat betekent 'enorm'?",
+        "tekst": "**Enorm** = heel erg groot. *'Een enorme taart'* = een heel grote taart. Het is een sterker woord dan gewoon 'groot'."
+       },
+       {
+        "titel": "Welk woord lijkt erop?",
+        "tekst": "**Reusachtig** komt van het woord *reus* (een heel grote figuur uit sprookjes). Een reusachtige taart = even groot als wat een reus zou eten. Dus reusachtig = enorm = heel groot."
+       },
+       {
+        "titel": "Andere synoniemen van 'enorm'",
+        "tekst": "Gigantisch, kolossaal, immens, geweldig groot. Allemaal woorden voor 'heel erg groot'. **Klein, beetje** = tegenstellingen, geen synoniemen. **Snel** = over snelheid, niets met grootte."
+       }
+      ],
+      "woorden": [
+       {
+        "woord": "enorm",
+        "uitleg": "Heel erg groot."
+       },
+       {
+        "woord": "reusachtig",
+        "uitleg": "Zo groot als een reus = enorm."
+       }
+      ],
+      "theorie": "Toets-truc: zoek bij synoniemen-vragen het woord dat **dezelfde categorie + dezelfde richting** heeft. Enorm = grootte + groot. Dus zoek ander grootte-woord dat ook 'groot' betekent → reusachtig.",
+      "voorbeelden": [
+       {
+        "type": "stap",
+        "tekst": "*'Hij heeft een enorme hond.'* = *'Hij heeft een reusachtige hond.'* Beide zinnen betekenen hetzelfde."
+       },
+       {
+        "type": "stap",
+        "tekst": "*'Een kleine hond'* = tegenstelling. *'Een snelle hond'* = ander kenmerk (snelheid, niet grootte)."
+       }
+      ],
+      "basiskennis": [
+       {
+        "onderwerp": "Truc",
+        "uitleg": "Synoniem = zelfde betekenis. Vraag jezelf: 'Kan ik het ene woord vervangen door het andere zonder dat de zin van betekenis verandert?' Bij enorm ↔ reusachtig: ja. Bij enorm ↔ klein: nee, betekenis draait om."
+       }
+      ],
+      "niveaus": {
+       "basis": "Reusachtig = synoniem van enorm (allebei 'heel groot').",
+       "simpeler": "Enorm = heel groot. Reusachtig = even groot als een reus = heel groot. Hetzelfde.",
+       "nogSimpeler": "Reusachtig"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "stap": 1,
+   "titel": "Veel-gebruikte synoniemen-paren",
+   "vanafGroep": null,
+   "interactief": false,
+   "heeftSvg": false,
+   "uitleg": "Hier zijn **synoniem-paren** die je vaak op de Doorstroomtoets ziet *(uit je hoofd!)*:\n\n**Gevoelens**:\n• blij = vrolijk / gelukkig\n• boos = kwaad / nijdig\n• bang = angstig\n• verdrietig = bedroefd\n• verbaasd = stomverbaasd / verrast\n\n**Grootte**:\n• groot = enorm / reusachtig\n• klein = minuscuul / piepklein\n• veel = talloos / massa's\n• weinig = schaars / beperkt\n\n**Snelheid**:\n• snel = vlug / gauw / rap\n• langzaam = traag / sloom\n\n**Eigenschappen**:\n• mooi = prachtig / schitterend / oogverblindend\n• lelijk = onaantrekkelijk\n• slim = intelligent / pienter / knap (bij denken)\n• dom = stom / onnozel\n• gemeen = vals / hatelijk\n• aardig = vriendelijk / lief\n\n**Werkwoorden**:\n• zien = aanschouwen / opmerken\n• zeggen = vertellen / spreken\n• lopen = wandelen / gaan\n• rennen = sprinten / hollen\n• eten = nuttigen / opeten / verorberen\n• maken = creëren / vervaardigen\n\n**Plekken**:\n• huis = woning / verblijf\n• school = leerinstelling / onderwijsplek\n• tuin = hof\n\n**Tijd**:\n• vandaag = heden\n• gisteren = de dag ervoor\n• morgen = de dag erna\n\n**Toets-truc** — kies de optie die het **dichtst** bij de oorspronkelijke betekenis ligt. Bij twijfel: probeer in een zin in te vullen.",
+   "leesTekst": null,
+   "aantalNu": 4,
+   "nodig": 6,
+   "uitlegPadInBestaande": 4,
+   "uitlegPadVelden": [
+    "stappen",
+    "woorden",
+    "theorie",
+    "voorbeelden",
+    "basiskennis",
+    "niveaus"
+   ],
+   "bestaandeVragen": [
+    {
+     "q": "Synoniem van **'snel'**?",
+     "options": [
+      "Vlug",
+      "Traag",
+      "Bang",
+      "Klein"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Traag = het tegenovergestelde van snel.",
+      "Bang = ander gevoel, niets met snelheid.",
+      "Klein = grootte, niets met snelheid."
+     ],
+     "uitlegPad": {
+      "stappen": [
+       {
+        "titel": "Snel betekent...",
+        "tekst": "**Snel** = hoge snelheid, in korte tijd. Een snelle auto, snel rennen, snel praten."
+       },
+       {
+        "titel": "Welk woord lijkt op snel?",
+        "tekst": "**Vlug** is een Nederlands woord dat exact hetzelfde betekent als snel. *'Vlug naar binnen!'* = *'Snel naar binnen!'*"
+       },
+       {
+        "titel": "Andere synoniemen",
+        "tekst": "Gauw, rap, kwiek, in een flits. Allemaal woorden voor hoge snelheid."
+       }
+      ],
+      "woorden": [
+       {
+        "woord": "snel",
+        "uitleg": "Hoge snelheid."
+       },
+       {
+        "woord": "vlug",
+        "uitleg": "Synoniem voor snel, vooral in beweging."
+       },
+       {
+        "woord": "traag",
+        "uitleg": "Antoniem (tegenstelling): lage snelheid."
+       }
+      ],
+      "theorie": "Toets-truc: bij snelheids-woorden vraag jezelf — gaat het snel of langzaam? Synoniem = zelfde 'kant' (snel of langzaam).",
+      "voorbeelden": [
+       {
+        "type": "stap",
+        "tekst": "Snel-synoniemen sorteren op stijl: vlug (alledaags), gauw (informeel), rap (informeel), kwiek (literair). Allemaal snelheid + positief."
+       }
+      ],
+      "basiskennis": [
+       {
+        "onderwerp": "Truc",
+        "uitleg": "Snel ↔ traag is een klassiek antoniem-paar. Twee andere klassieke paren: groot↔klein, mooi↔lelijk."
+       }
+      ],
+      "niveaus": {
+       "basis": "Vlug = synoniem van snel.",
+       "simpeler": "Snel + vlug = beide hoge snelheid. Hetzelfde.",
+       "nogSimpeler": "Vlug"
+      }
+     }
+    },
+    {
+     "q": "Synoniem van **'aardig'**?",
+     "options": [
+      "Vriendelijk",
+      "Boos",
+      "Klein",
+      "Snel"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Boos = tegenovergesteld gevoel.",
+      "Klein = grootte, niets met karakter.",
+      "Snel = snelheid, niets met karakter."
+     ],
+     "uitlegPad": {
+      "stappen": [
+       {
+        "titel": "Aardig betekent...",
+        "tekst": "**Aardig** = lief, vriendelijk, helpend. Een aardige juf, een aardige buurman. Positief karakter-woord."
+       },
+       {
+        "titel": "Welk woord lijkt erop?",
+        "tekst": "**Vriendelijk** = bijna identiek. Een vriendelijke groet, een vriendelijke buur. Allebei positief karakter."
+       },
+       {
+        "titel": "Andere synoniemen aardig",
+        "tekst": "Lief, sympathiek, beleefd, behulpzaam, hartelijk. Allemaal positieve karakter-woorden."
+       }
+      ],
+      "woorden": [
+       {
+        "woord": "aardig",
+        "uitleg": "Lief en vriendelijk in karakter."
+       },
+       {
+        "woord": "vriendelijk",
+        "uitleg": "Lief en aardig — synoniem."
+       }
+      ],
+      "theorie": "Karakter-synoniemen sorteren: positief (aardig, lief, vriendelijk, hartelijk) vs negatief (boos, gemeen, vals).",
+      "voorbeelden": [
+       {
+        "type": "stap",
+        "tekst": "*'De aardige man hielp mij.'* = *'De vriendelijke man hielp mij.'* Beide zinnen hetzelfde."
+       }
+      ],
+      "basiskennis": [
+       {
+        "onderwerp": "Truc",
+        "uitleg": "Bij karakter-vragen: pos vs neg sorteren. Aardig = positief. Vriendelijk ook positief = synoniem."
+       }
+      ],
+      "niveaus": {
+       "basis": "Vriendelijk = synoniem van aardig.",
+       "simpeler": "Beide positief karakter.",
+       "nogSimpeler": "Vriendelijk"
+      }
+     }
+    },
+    {
+     "q": "Welk paar zijn synoniemen?",
+     "options": [
+      "prachtig + mooi",
+      "groot + klein",
+      "blij + verdrietig",
+      "snel + langzaam"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Groot + klein zijn tegenstellingen — niet hetzelfde maar omgekeerd.",
+      "Blij + verdrietig zijn tegenstellingen.",
+      "Snel + langzaam zijn tegenstellingen."
+     ],
+     "uitlegPad": {
+      "stappen": [
+       {
+        "titel": "Lees elke optie",
+        "tekst": "Per paar: betekenen ze hetzelfde (= synoniem) of omgekeerd (= tegenstelling)? Synoniem zoek je hier."
+       },
+       {
+        "titel": "Prachtig + mooi",
+        "tekst": "**Prachtig** = heel mooi. **Mooi** = aantrekkelijk, goed om te zien. Beide positief over uiterlijk. Synoniem!"
+       },
+       {
+        "titel": "De andere paren",
+        "tekst": "Groot ↔ klein = grootte omgedraaid. Blij ↔ verdrietig = gevoel omgedraaid. Snel ↔ langzaam = snelheid omgedraaid. Alle 3 tegenstellingen, geen synoniemen."
+       }
+      ],
+      "woorden": [
+       {
+        "woord": "prachtig",
+        "uitleg": "Heel erg mooi."
+       },
+       {
+        "woord": "mooi",
+        "uitleg": "Aantrekkelijk om te zien."
+       }
+      ],
+      "theorie": "Toets-truc paren-vraag: lees beide woorden van elk paar. Vraag: zeggen ze hetzelfde? Ja → synoniem. Tegengesteld → antoniem.",
+      "voorbeelden": [
+       {
+        "type": "stap",
+        "tekst": "Synoniem-paren: blij+vrolijk, snel+vlug, klein+minuscuul. Antoniem-paren: dag+nacht, jong+oud."
+       }
+      ],
+      "basiskennis": [
+       {
+        "onderwerp": "Truc",
+        "uitleg": "Bij paren: 'kunnen ze elkaar vervangen in een zin?' Ja → synoniem. Nee, betekenis wordt omgekeerd → antoniem."
+       }
+      ],
+      "niveaus": {
+       "basis": "prachtig + mooi = beide aantrekkelijk = synoniem.",
+       "simpeler": "Andere paren zijn tegenstellingen. Alleen prachtig+mooi = hetzelfde.",
+       "nogSimpeler": "prachtig + mooi"
+      }
+     }
+    },
+    {
+     "q": "Welk woord is GEEN synoniem van 'rennen'?",
+     "options": [
+      "Wandelen",
+      "Sprinten",
+      "Hollen",
+      "Snel lopen"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Sprinten = heel snel rennen — wel synoniem.",
+      "Hollen = ander woord voor rennen — wel synoniem.",
+      "Snel lopen ≈ rennen — wel synoniem."
+     ],
+     "uitlegPad": {
+      "stappen": [
+       {
+        "titel": "Let op de vraag — GEEN!",
+        "tekst": "Bij de Doorstroomtoets staat soms het woord **GEEN** (vaak met hoofdletters) in de vraag. Dat draait de vraag om: je zoekt niet het woord dat hetzelfde betekent, maar het woord dat **anders** betekent."
+       },
+       {
+        "titel": "Wat is 'rennen'?",
+        "tekst": "**Rennen** = heel hard lopen, snel voortbewegen. Een atleet die de 100 meter doet, rent. Synoniemen: sprinten, hollen, snel lopen — allemaal snel-bewegen."
+       },
+       {
+        "titel": "Welk woord past NIET?",
+        "tekst": "**Wandelen** = rustig lopen, voor je plezier of om ergens te komen. Niet snel. Dus wandelen is GEEN synoniem van rennen — dat is het antwoord op de GEEN-vraag."
+       }
+      ],
+      "woorden": [
+       {
+        "woord": "rennen",
+        "uitleg": "Heel hard lopen, snel."
+       },
+       {
+        "woord": "wandelen",
+        "uitleg": "Rustig lopen, niet snel."
+       }
+      ],
+      "theorie": "Toets-truc bij GEEN-vragen: lees de vraag 2x. Onderstreep het woord 'GEEN'. Zoek dan het ene woord dat NIET in het rijtje past. Vaak zijn 3 opties synoniemen + 1 is iets anders (de tegenstelling, of een ander concept).",
+      "voorbeelden": [
+       {
+        "type": "stap",
+        "tekst": "*'Welk woord is GEEN synoniem van blij?'* Opties: vrolijk, gelukkig, **boos**, opgewekt. Antwoord = boos (tegenstelling)."
+       },
+       {
+        "type": "stap",
+        "tekst": "*'Welk woord is GEEN synoniem van groot?'* Opties: enorm, reusachtig, **klein**, gigantisch. Antwoord = klein."
+       }
+      ],
+      "basiskennis": [
+       {
+        "onderwerp": "Truc",
+        "uitleg": "Vind het 'vreemde eend in de bijt' = de optie die niet bij de andere drie past. Vaak is dat de tegenstelling van het hoofdwoord."
+       }
+      ],
+      "niveaus": {
+       "basis": "Wandelen = rustig lopen, niet snel. Rennen = snel. Dus wandelen is GEEN synoniem van rennen.",
+       "simpeler": "Sprinten, hollen, snel lopen = allemaal snel = synoniemen van rennen. Wandelen = rustig = past niet.",
+       "nogSimpeler": "Wandelen (rustig, geen rennen)."
+      }
+     }
+    }
+   ]
+  },
+  {
+   "stap": 2,
+   "titel": "Tegenstellingen (antoniem)",
+   "vanafGroep": null,
+   "interactief": false,
+   "heeftSvg": false,
+   "uitleg": "Een **tegenstelling** *(of antoniem)* is een woord met de **omgekeerde** betekenis.\n\n**Voorbeelden**:\n• groot ↔ klein\n• blij ↔ verdrietig\n• snel ↔ langzaam\n• mooi ↔ lelijk\n• rijk ↔ arm\n• warm ↔ koud\n• licht ↔ donker / zwaar\n• boven ↔ onder\n• binnen ↔ buiten\n• voor ↔ achter / na\n• vroeg ↔ laat\n• jong ↔ oud\n• ja ↔ nee\n• altijd ↔ nooit\n• alles ↔ niets\n• veel ↔ weinig\n• beginnen ↔ stoppen / eindigen\n• komen ↔ gaan\n• openen ↔ sluiten\n\n**'On-' truc**:\nVeel tegenstellingen worden gemaakt door **on-** voor het woord te zetten:\n• vriendelijk ↔ **on**vriendelijk\n• zichtbaar ↔ **on**zichtbaar\n• mogelijk ↔ **on**mogelijk\n• gelukkig ↔ **on**gelukkig\n• voorzichtig ↔ **on**voorzichtig\n\n**Maar pas op** — niet altijd:\n• **on**weer = niet 'geen weer', maar donder en bliksem.\n• **on**kruid = ongewenste planten, niet 'geen kruid'.\n\n**'Niet-' is ook tegenstelling**:\n• rokers ↔ **niet**-rokers\n• zwemmers ↔ **niet**-zwemmers\n\n**Toets-truc — herken het woord 'tegenovergestelde'**:\nAls de vraag *'tegenovergestelde'* zegt, zoek **niet** een synoniem maar een **tegenstelling**.",
+   "leesTekst": null,
+   "aantalNu": 4,
+   "nodig": 6,
+   "uitlegPadInBestaande": 1,
+   "uitlegPadVelden": [
+    "stappen",
+    "woorden",
+    "theorie",
+    "voorbeelden",
+    "basiskennis",
+    "niveaus"
+   ],
+   "bestaandeVragen": [
+    {
+     "q": "Wat is het **tegenovergestelde** van **'groot'**?",
+     "options": [
+      "Klein",
+      "Enorm",
+      "Reusachtig",
+      "Hoog"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Dat is een synoniem van groot.",
+      "Dat is een synoniem.",
+      "Hoog is iets anders (richting), niet grootte."
+     ]
+    },
+    {
+     "q": "Wat is het **tegenovergestelde** van **'snel'**?",
+     "options": [
+      "Langzaam",
+      "Vlug",
+      "Rap",
+      "Gauw"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Synoniem van snel.",
+      "Synoniem.",
+      "Synoniem."
+     ]
+    },
+    {
+     "q": "Wat is het tegenovergestelde van **'mogelijk'**?",
+     "options": [
+      "Onmogelijk",
+      "Mogelijkheid",
+      "Mogen",
+      "Soms mogelijk"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Dat is hetzelfde woord, nu zelfstandig.",
+      "Werkwoord van iets anders.",
+      "Niet helemaal het tegenovergestelde."
+     ],
+     "uitlegPad": {
+      "stappen": [
+       {
+        "titel": "On-truc",
+        "tekst": "Voor veel woorden geldt: voeg 'on-' toe → tegenstelling. Mogelijk → onmogelijk."
+       }
+      ],
+      "woorden": [
+       {
+        "woord": "on-",
+        "uitleg": "Voorvoegsel dat betekent 'niet'."
+       }
+      ],
+      "theorie": "Met 'on-' voor een woord krijg je vaak de tegenstelling.",
+      "voorbeelden": [
+       {
+        "type": "stap",
+        "tekst": "Vriendelijk → onvriendelijk. Zichtbaar → onzichtbaar. Mogelijk → onmogelijk."
+       }
+      ],
+      "basiskennis": [
+       {
+        "onderwerp": "Niet altijd",
+        "uitleg": "On-weer en on-kruid zijn specifieke woorden, niet zomaar 'geen weer/kruid'."
+       }
+      ],
+      "niveaus": {
+       "basis": "Onmogelijk.",
+       "simpeler": "Mogelijk → met 'on-' voor → onmogelijk = het tegenovergestelde.",
+       "nogSimpeler": "Onmogelijk"
+      }
+     }
+    },
+    {
+     "q": "Welk paar zijn **tegenstellingen**?",
+     "options": [
+      "jong + oud",
+      "klein + minuscuul",
+      "blij + vrolijk",
+      "snel + vlug"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Klein/minuscuul = bijna hetzelfde — synoniemen.",
+      "Blij/vrolijk = bijna hetzelfde — synoniemen.",
+      "Snel/vlug = bijna hetzelfde — synoniemen."
+     ]
+    }
+   ]
+  },
+  {
+   "stap": 3,
+   "titel": "Welk woord past in een zin?",
+   "vanafGroep": null,
+   "interactief": false,
+   "heeftSvg": false,
+   "uitleg": "De toets stelt vaak: *'Welk woord past het beste in deze zin?'*\n\nDe **truc**: lees de hele zin met elke optie. Welke past natuurlijk?\n\n**Voorbeeld 1**:\n*'De auto reed ___ door de bocht.'*\nOpties: snel / blauw / koud / luid.\n• Snel — past *(snelheid bij bocht)*.\n• Blauw — kleur, past niet bij 'reed door bocht'.\n• Koud — temperatuur, past niet bij bocht.\n• Luid — geluid, kan maar 'snel' past beter bij 'reed door'.\n→ **Snel** is het beste antwoord.\n\n**Voorbeeld 2**:\n*'Anna voelde zich ___ na het slechte cijfer.'*\nOpties: vrolijk / verdrietig / hongerig / klein.\n• Vrolijk past niet bij 'slecht cijfer'.\n• Verdrietig past wel.\n• Hongerig heeft niets met cijfer te maken.\n• Klein verwijst naar grootte.\n→ **Verdrietig** is het beste antwoord.\n\n**Toets-stappenplan**:\n1. Lees de hele zin *(niet alleen het stuk eromheen)*.\n2. Bedenk welk **gevoel/onderwerp** centraal staat.\n3. Lees elke optie in de zin.\n4. Welke past natuurlijk + houdt logisch verband?\n5. Streep onzinnige opties door — kies de overgebleven beste.\n\n**Pas op — meerdere kunnen 'kloppen'**:\nSoms kunnen 2 woorden technisch passen, maar 1 is **natuurlijker**. Kies degene die het meest gangbaar is in normaal Nederlands.",
+   "leesTekst": null,
+   "aantalNu": 4,
+   "nodig": 6,
+   "uitlegPadInBestaande": 1,
+   "uitlegPadVelden": [
+    "stappen",
+    "woorden",
+    "theorie",
+    "voorbeelden",
+    "basiskennis",
+    "niveaus"
+   ],
+   "bestaandeVragen": [
+    {
+     "q": "Welk woord past hier? *'De jongen rende ___ naar huis.'*",
+     "options": [
+      "snel",
+      "blauw",
+      "koud",
+      "klein"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Kleur, past niet.",
+      "Temperatuur, past niet.",
+      "Grootte, past niet."
+     ]
+    },
+    {
+     "q": "Welk woord past? *'De ___ soep brandde mijn tong.'*",
+     "options": [
+      "hete",
+      "koude",
+      "boze",
+      "snelle"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Koude soep brandt niet — hoe moet soep zijn om je tong te branden?",
+      "Soep heeft geen gevoelens.",
+      "Snelheid past niet bij soep."
+     ]
+    },
+    {
+     "q": "Welk woord past? *'Lisa was ___ omdat haar huisdier weg was.'*",
+     "options": [
+      "verdrietig",
+      "vrolijk",
+      "gehaast",
+      "rijk"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Tegenstelling — vrolijk past niet bij 'huisdier weg'.",
+      "Past niet bij gevoel over verlies.",
+      "Past niet bij verlies."
+     ]
+    },
+    {
+     "q": "Welk woord past het **best**? *'De ___ man stak langzaam en voorzichtig de straat over.'*",
+     "options": [
+      "oude",
+      "snelle",
+      "haastige",
+      "blauwe"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Lees de hele zin: hij steekt lángzaam over — past 'snel' daarbij?",
+      "Haastig en langzaam gaan niet samen.",
+      "Mensen krijgen niet zomaar een kleur in het Nederlands."
+     ],
+     "uitlegPad": {
+      "stappen": [
+       {
+        "titel": "Welke woorden zijn 'normaal' bij 'man'?",
+        "tekst": "Bij een persoon zoals 'man' zijn sommige bijvoeglijke naamwoorden veel gangbaarder dan andere. Denk aan: **oude/jonge man**, **lange/kleine man**, **dikke/dunne man**. **Snelle man** of **blauwe man** zijn raar."
+       },
+       {
+        "titel": "Lees de hele zin",
+        "tekst": "*'De ___ man stak langzaam en voorzichtig de straat over.'* — wat doet die man? Hij steekt LANGZAAM en VOORZICHTIG over. Daarom past 'oude' het beste — denk aan een oudere meneer die rustig oversteekt."
+       },
+       {
+        "titel": "Waarom niet de andere opties?",
+        "tekst": "• **Snelle** en **haastige** — botsen met 'langzaam en voorzichtig' in dezelfde zin. \n• **Blauwe** — kleur bij persoon? Zelden ('blauwe Smurf' misschien). Onnatuurlijk."
+       }
+      ],
+      "woorden": [
+       {
+        "woord": "gangbaar",
+        "uitleg": "Wat normaal of vaak wordt gezegd in het Nederlands."
+       },
+       {
+        "woord": "bijvoeglijk naamwoord",
+        "uitleg": "Woord dat iets vertelt over een ander woord (mooi huis, oude man)."
+       }
+      ],
+      "theorie": "Toets-truc 'past het beste': bedenk welke combi je het vaakst in een boek of krant zou lezen. *'Oude man'* = duizenden boeken. *'Blauwe man'* = bijna nooit. Kies de natuurlijkste, niet de meest letterlijk-kloppende.",
+      "voorbeelden": [
+       {
+        "type": "stap",
+        "tekst": "*'De ___ kat sliep op de bank.'* Opties: dikke / boze / snelle / luide. **Dikke** past het beste — dat is een gangbaar beeld bij slapende kat."
+       },
+       {
+        "type": "stap",
+        "tekst": "*'Het was een ___ feest.'* Opties: gezellig / koud / klein / vies. **Gezellig** past het beste — typisch woord bij een feest."
+       }
+      ],
+      "basiskennis": [
+       {
+        "onderwerp": "Truc",
+        "uitleg": "Lees in je hoofd elke optie in de zin. Klinkt het natuurlijk — alsof je het zo in een verhaal zou kunnen vertellen? Kies die optie."
+       }
+      ],
+      "niveaus": {
+       "basis": "Oude man = gangbaar beeld bij oversteken.",
+       "simpeler": "Welke past in een echt verhaal? 'Oude man steekt straat over' = ja, vaak. De andere: zelden of nooit.",
+       "nogSimpeler": "Oude"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "stap": 4,
+   "titel": "Eindopdracht — synoniem + tegenstelling mix",
+   "vanafGroep": null,
+   "interactief": false,
+   "heeftSvg": false,
+   "uitleg": "Mix-toets in Doorstroomtoets-stijl. Door elkaar: synoniemen, tegenstellingen, woord-in-zin.\n\nVeel succes!",
+   "leesTekst": null,
+   "aantalNu": 25,
+   "nodig": 0,
+   "uitlegPadInBestaande": 0,
+   "uitlegPadVelden": [],
+   "bestaandeVragen": [
+    {
+     "q": "Synoniem van **'verdrietig'**?",
+     "options": [
+      "Bedroefd",
+      "Vrolijk",
+      "Snel",
+      "Klein"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Tegenstelling.",
+      "Geen synoniem.",
+      "Geen synoniem."
+     ]
+    },
+    {
+     "q": "Tegenstelling van **'binnen'**?",
+     "options": [
+      "Buiten",
+      "Naast",
+      "Over",
+      "Tussen"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Niet het tegenovergestelde — naast is een plek-aanduiding.",
+      "Iets anders.",
+      "Iets anders."
+     ]
+    },
+    {
+     "q": "Welk woord past? *'Het was ___ vandaag, dus geen jas nodig.'*",
+     "options": [
+      "warm",
+      "koud",
+      "verdrietig",
+      "klein"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Tegenstelling — dan zou je wél een jas nodig hebben.",
+      "Geen weer-woord.",
+      "Geen weer-woord."
+     ]
+    },
+    {
+     "q": "Synoniem van **'lopen'**?",
+     "options": [
+      "Wandelen",
+      "Rennen",
+      "Slapen",
+      "Eten"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Niet — rennen is veel sneller dan lopen.",
+      "Heel andere activiteit.",
+      "Heel andere activiteit."
+     ]
+    },
+    {
+     "q": "Tegenstelling van **'beginnen'**?",
+     "options": [
+      "Stoppen",
+      "Doorgaan",
+      "Starten",
+      "Aanvang"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Doorgaan is voortzetten, geen tegenstelling.",
+      "Starten = synoniem van beginnen.",
+      "Aanvang = synoniem van beginnen (zelfstandig naamwoord)."
+     ]
+    },
+    {
+     "q": "Welk woord past het beste? *'Anna voelde zich ___ na haar uitstekende cijfer.'*",
+     "options": [
+      "trots",
+      "boos",
+      "klein",
+      "bang"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Past niet bij goed cijfer.",
+      "Past niet bij gevoel.",
+      "Past niet bij goed nieuws."
+     ]
+    },
+    {
+     "q": "Synoniem van **groot**?",
+     "options": [
+      "enorm",
+      "klein",
+      "leeg",
+      "laag"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Tegenstelling.",
+      "Niet over grootte.",
+      "Anders."
+     ]
+    },
+    {
+     "q": "Tegenstelling van **snel**?",
+     "options": [
+      "langzaam",
+      "vlug",
+      "direct",
+      "kort"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Synoniem.",
+      "Direct = meteen, niet het tegenovergestelde.",
+      "Niet snelheid."
+     ]
+    },
+    {
+     "q": "Synoniem van **mooi**?",
+     "options": [
+      "prachtig",
+      "lelijk",
+      "klein",
+      "oud"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Tegenstelling.",
+      "Niets met mooi.",
+      "Niets met mooi."
+     ]
+    },
+    {
+     "q": "Tegenstelling van **vol**?",
+     "options": [
+      "leeg",
+      "gevuld",
+      "volop",
+      "ruim"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Synoniem.",
+      "Volop = heel veel, niet het tegenovergestelde.",
+      "Andere betekenis."
+     ]
+    },
+    {
+     "q": "Synoniem van **hard**?",
+     "options": [
+      "luid",
+      "zacht",
+      "stil",
+      "klein"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Tegenstelling.",
+      "Tegenstelling.",
+      "Niet."
+     ]
+    },
+    {
+     "q": "Tegenstelling van **rijk**?",
+     "options": [
+      "arm",
+      "duur",
+      "groot",
+      "mooi"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Niet.",
+      "Niet relevant.",
+      "Niet."
+     ]
+    },
+    {
+     "q": "Synoniem van **belangrijk**?",
+     "options": [
+      "essentieel",
+      "onbelangrijk",
+      "klein",
+      "saai"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Tegenstelling.",
+      "Niet.",
+      "Niet."
+     ]
+    },
+    {
+     "q": "Tegenstelling van **dag**?",
+     "options": [
+      "nacht",
+      "ochtend",
+      "middag",
+      "week"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Onderdeel van dag.",
+      "Onderdeel van dag.",
+      "Niet tegengesteld."
+     ]
+    },
+    {
+     "q": "Synoniem van **vrolijk**?",
+     "options": [
+      "blij",
+      "boos",
+      "stil",
+      "slim"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Tegenstelling.",
+      "Niet emotie.",
+      "Niet."
+     ]
+    },
+    {
+     "q": "Tegenstelling van **jong**?",
+     "options": [
+      "oud",
+      "klein",
+      "groot",
+      "langzaam"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Niet over leeftijd.",
+      "Niet.",
+      "Niet."
+     ]
+    },
+    {
+     "q": "Synoniem van **eenvoudig**?",
+     "options": [
+      "makkelijk",
+      "moeilijk",
+      "lang",
+      "snel"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Tegenstelling.",
+      "Niet.",
+      "Niet."
+     ]
+    },
+    {
+     "q": "Tegenstelling van **schoon**?",
+     "options": [
+      "vies",
+      "mooi",
+      "groot",
+      "stil"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Niet over reinheid.",
+      "Niet.",
+      "Niet."
+     ]
+    },
+    {
+     "q": "Synoniem van **bang**?",
+     "options": [
+      "angstig",
+      "blij",
+      "stoer",
+      "sterk"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Tegenstelling.",
+      "Tegenstelling.",
+      "Niet."
+     ]
+    },
+    {
+     "q": "Tegenstelling van **boven**?",
+     "options": [
+      "onder",
+      "naast",
+      "achter",
+      "voor"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Horizontaal.",
+      "Diepte.",
+      "Niet."
+     ]
+    },
+    {
+     "q": "Synoniem van **veel**?",
+     "options": [
+      "talloos",
+      "weinig",
+      "klein",
+      "traag"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Tegenstelling.",
+      "Niet.",
+      "Niet."
+     ]
+    },
+    {
+     "q": "Tegenstelling van **warm**?",
+     "options": [
+      "koud",
+      "heet",
+      "zacht",
+      "stil"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Synoniem.",
+      "Andere zin.",
+      "Niet."
+     ]
+    },
+    {
+     "q": "Synoniem van **slim**?",
+     "options": [
+      "intelligent",
+      "dom",
+      "klein",
+      "langzaam"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Tegenstelling.",
+      "Niet.",
+      "Niet."
+     ]
+    },
+    {
+     "q": "Tegenstelling van **leeg**?",
+     "options": [
+      "vol",
+      "stil",
+      "groot",
+      "klein"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Geen relatie.",
+      "Niet.",
+      "Niet."
+     ]
+    },
+    {
+     "q": "Synoniem van **stil**?",
+     "options": [
+      "rustig",
+      "luid",
+      "druk",
+      "fel"
+     ],
+     "answer": 0,
+     "wrongHints": [
+      null,
+      "Tegenstelling.",
+      "Niet.",
+      "Niet."
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -10,6 +10,7 @@ import Button from "../../shared/ui/Button.jsx";
 import Card from "../../shared/ui/Card.jsx";
 import { track } from "../../utils.js";
 import { buildTopicQuiz } from "../practice/buildTopicQuiz.js";
+import { markeerGezien } from "../../shared/geziendeVragen.js";
 import { recordAnswerForPath } from "../mastery/mastery.js";
 import { telAntwoordVoorVriend } from "../referral/referral.js";
 import { VraagKaart } from "../onboarding/StartKwartier.jsx";
@@ -52,6 +53,8 @@ function VragenBlok({ blok, userName, authUser, onKlaar }) {
         try { track("question_answered", { bron: "vandaag", pad: v.pathId, is_correct: goed }); } catch { /* */ }
         try { recordAnswerForPath({ playerName: userName || "Speler", pathId: v.pathId, isCorrect: goed, userId: authUser?.id || null }); } catch { /* */ }
         try { telAntwoordVoorVriend(); } catch { /* */ }
+        // 👀 Beantwoord = gezien → volgende keer eerst andere vragen uit dit pad (geziendeVragen.js).
+        if (v.geziensleutel) { try { markeerGezien(v.geziensleutel); } catch { /* */ } }
       }}
       onVerder={() => { if (i + 1 < vragen.length) setI(i + 1); else onKlaar(score.current); }}
     />

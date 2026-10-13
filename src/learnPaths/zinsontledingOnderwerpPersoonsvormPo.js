@@ -122,6 +122,50 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Er staan twee werkwoorden in: *De kinderen zijn naar huis gegaan.* Wat is de persoonsvorm?",
+        options: ["zijn", "gegaan", "kinderen", "huis"],
+        answer: 0,
+        wrongHints: [null, "Verandert dit woord als je de zin in de verleden tijd zet?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk werkwoord verandert met de tijd?",
+              tekst: "Zet in de verleden tijd: 'De kinderen waren naar huis gegaan.' Alleen 'zijn' wordt 'waren'. 'Gegaan' blijft hetzelfde.",
+            },
+          ],
+          niveaus: {
+            basis: "Van de twee werkwoorden is de persoonsvorm degene die verandert: zijn wordt waren.",
+            simpeler: "'Gegaan' blijft altijd 'gegaan'. Welk ander werkwoord verandert wél?",
+            nogSimpeler: "Welk woord wordt 'waren' in de verleden tijd?",
+          },
+        },
+      },
+      {
+        q: "Welk woord verandert als je deze zin in de verleden tijd zet? *Lisa leest een spannend boek.*",
+        options: ["leest", "Lisa", "spannend", "boek"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is een naam. Verandert een naam met de tijd?",
+          "Dat zegt hoe het boek is, niet wat Lisa doet.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zet de zin in de verleden tijd",
+              tekst: "'Lisa las een spannend boek.' Het woord 'leest' wordt 'las'. Dat woord is de persoonsvorm.",
+            },
+          ],
+          niveaus: {
+            basis: "De persoonsvorm verandert met de tijd: leest wordt las.",
+            simpeler: "Wat doet Lisa met het boek? Dat woord verandert.",
+            nogSimpeler: "Wat doet Lisa? Dat woord wordt anders in de verleden tijd.",
+          },
+        },
+      },
     ],
   },
 
@@ -236,6 +280,69 @@ const steps = [
             basis: "Zoek persoonsvorm → vraag: wie of wat … ? → dat is het onderwerp.",
             simpeler: "Welke vraag gebruik je om het onderwerp te vinden?",
             nogSimpeler: "Wie of wat doet de handeling?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is het onderwerp? *Op zaterdag gaat mijn vader vissen.*",
+        options: ["mijn vader", "zaterdag", "gaat", "vissen"],
+        answer: 0,
+        wrongHints: [null, "Dat zegt wannéér, niet wie het doet.", "Dat is de persoonsvorm.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wie gaat er vissen?",
+              tekst: "Persoonsvorm = 'gaat'. Vraag: wie of wat gaat? Antwoord: 'mijn vader'. Dat is het onderwerp, ook al staat het niet vooraan.",
+            },
+          ],
+          niveaus: {
+            basis: "Zoek de persoonsvorm (gaat) en vraag: wie of wat gaat?",
+            simpeler: "Wie gaat er op zaterdag vissen?",
+            nogSimpeler: "Wie gaat er vissen? Mijn …",
+          },
+        },
+      },
+      {
+        q: "Wat is het onderwerp? *Na school fietsen Noor en Daan naar het zwembad.*",
+        options: ["Noor en Daan", "het zwembad", "school", "fietsen"],
+        answer: 0,
+        wrongHints: [null, "Dat is de plek waar ze naartoe gaan.", null, "Dat is de persoonsvorm."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wie fietsen er?",
+              tekst: "Persoonsvorm = 'fietsen'. Vraag: wie fietsen? Antwoord: 'Noor en Daan'. Samen zijn zij het onderwerp.",
+            },
+          ],
+          niveaus: {
+            basis: "Vraag bij de persoonsvorm 'fietsen': wie fietsen er naar het zwembad?",
+            simpeler: "Wie zitten er op de fiets?",
+            nogSimpeler: "Wie fietsen er? Twee kinderen: …",
+          },
+        },
+      },
+      {
+        q: "Welke vraag stel je om het onderwerp te vinden in *De bus vertrekt om acht uur.*?",
+        options: [
+          "Wie of wat vertrekt?",
+          "Wanneer vertrekt de bus?",
+          "Waar vertrekt de bus?",
+          "Wat doet de bus?",
+        ],
+        answer: 0,
+        wrongHints: [null, "Dat vraagt naar de tijd.", null, "Dan vind je wat er gebeurt, niet wie het doet."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst de persoonsvorm",
+              tekst: "De persoonsvorm is 'vertrekt'. Daarna stel je de vraag: wie of wat + persoonsvorm? Het antwoord is 'de bus'.",
+            },
+          ],
+          niveaus: {
+            basis: "Het onderwerp vind je met de vraag: wie of wat + persoonsvorm?",
+            simpeler: "Zet 'wie of wat' voor de persoonsvorm.",
+            nogSimpeler: "Wie of wat doet het?",
           },
         },
       },
@@ -370,6 +477,55 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke zin klopt in aantal?",
+        options: [
+          "Opa en oma wonen in een flat.",
+          "Opa en oma woont in een flat.",
+          "Opa wonen in een flat.",
+          "Opa en oma wonend in een flat.",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Twee personen met 'en' ertussen: hoeveel zijn dat samen?",
+          "Is opa één persoon of meer? Past 'wonen' daarbij?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "'A en B' is samen meervoud",
+              tekst: "Opa én oma zijn samen twee personen, dus meervoud. Daarom 'wonen' en niet 'woont'.",
+            },
+          ],
+          niveaus: {
+            basis: "Twee personen met 'en' ertussen tellen als meervoud → wonen.",
+            simpeler: "Hoeveel mensen wonen er in de flat? Tel ze.",
+            nogSimpeler: "Opa + oma = meer dan één → wonen.",
+          },
+        },
+      },
+      {
+        q: "Welk onderwerp past in de zin? *___ rennen over het veld.*",
+        options: ["De paarden", "Het paard", "Mijn hond", "Die jongen"],
+        answer: 0,
+        wrongHints: [null, "Hoeveel paarden zijn dat? Past 'rennen' daarbij?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Meervoud werkwoord → meervoud onderwerp",
+              tekst: "'Rennen' is de meervoudsvorm. Dan moet het onderwerp ook meervoud zijn: meer dan één. Alleen 'de paarden' is meervoud.",
+            },
+          ],
+          niveaus: {
+            basis: "Bij 'rennen' hoort een onderwerp in het meervoud.",
+            simpeler: "Welk onderwerp gaat over meer dan één?",
+            nogSimpeler: "Meer dan één dier: de …",
+          },
+        },
+      },
     ],
   },
 
@@ -488,6 +644,30 @@ const steps = [
             basis: "Meerdere honden → 'blaffen' (niet 'blaft').",
             simpeler: "Is het onderwerp meervoud? Dan moet het werkwoord ook meervoud zijn.",
             nogSimpeler: "Meer dan één hond: de honden … (meervoud van blaffen).",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is het onderwerp? *Volgende week gaan wij op schoolreis.*",
+        options: ["wij", "Volgende week", "gaan", "schoolreis"],
+        answer: 0,
+        wrongHints: [null, "Dat zegt wannéér.", "Dat is de persoonsvorm.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Persoonsvorm",
+              tekst: "Maak er een vraag van: 'Gaan wij volgende week op schoolreis?' De persoonsvorm is 'gaan'.",
+            },
+            {
+              titel: "Onderwerp",
+              tekst: "Vraag: wie gaan er op schoolreis? Antwoord: 'wij'. Dat is het onderwerp.",
+            },
+          ],
+          niveaus: {
+            basis: "Eerst de persoonsvorm (gaan), dan de vraag: wie gaan er?",
+            simpeler: "Wie gaan er op schoolreis?",
+            nogSimpeler: "Wie gaan er? …",
           },
         },
       },

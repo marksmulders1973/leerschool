@@ -87,6 +87,425 @@ const steps = [
         answer: 0,
         wrongHints: [null,"Geen goed plan.","Dan mis je info.","Tellen geeft geen begrip."],
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Sem schrijft het woord 'vakantie' in het midden van een blad. Eromheen schrijft hij 'strand', 'zon' en 'ijsje'.\n\nWat voor **schema** maakt Sem?",
+        options: ["Een mindmap", "Een tijdslijn", "Een stappenplan", "Een beslisboom"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Staan er jaartallen of een volgorde van tijd in?",
+          null,
+          "Zie je ergens een ja/nee-vraag?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kijk naar de vorm",
+              tekst: "Sem zet één woord in het **midden**. De andere woorden staan er **rondom**.",
+            },
+            {
+              titel: "Welk schema is dat?",
+              tekst: "Woorden rondom één idee in het midden: dat is een **mindmap**.",
+            },
+            {
+              titel: "Waarom niet de andere?",
+              tekst: "Een tijdslijn heeft een volgorde van tijd. Een stappenplan heeft stappen na elkaar. Een beslisboom heeft ja/nee-vragen. Dat heeft Sem allemaal niet.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "mindmap",
+              uitleg: "Schema met woorden rondom één idee in het midden.",
+            },
+            {
+              woord: "centraal",
+              uitleg: "In het midden, het belangrijkste.",
+            },
+          ],
+          theorie: "Toets-tip: kijk naar de VORM van het schema. Midden + woorden eromheen = mindmap. Stappen op een rij = stappenplan. Ja/nee-vragen = beslisboom.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Midden: 'school'. Eromheen: 'juf', 'pauze', 'tas'. Dat is een mindmap.",
+            },
+            {
+              type: "stap",
+              tekst: "Midden: 'sport'. Eromheen: 'voetbal', 'zwemmen', 'judo'. Ook een mindmap.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Eén woord in het midden, de rest eromheen = mindmap.",
+            },
+          ],
+          niveaus: {
+            basis: "Woorden rondom één idee in het midden = mindmap.",
+            simpeler: "Midden één woord, eromheen meer woorden.",
+            nogSimpeler: "Midden + eromheen = mindmap.",
+          },
+        },
+      },
+      {
+        q: "Een schema: **Vervoer** → over land / over water / door de lucht.\n\nWat voor schema is dit?",
+        options: ["Een boomschema", "Een tijdslijn", "Een stappenplan", "Een beslisboom"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Gaat dit schema over wat er eerst en later gebeurde?",
+          "Moet je hier iets doen in een vaste volgorde?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kijk naar de opbouw",
+              tekst: "Bovenaan staat één groot woord: **vervoer**. Daaronder splitst het in kleinere groepen.",
+            },
+            {
+              titel: "Welk schema is dat?",
+              tekst: "Een hoofdgroep met kleinere groepen eronder heet een **boomschema**. Het lijkt op een boom met takken.",
+            },
+            {
+              titel: "Waarom geen beslisboom?",
+              tekst: "Een beslisboom heeft ja/nee-vragen. In dit schema staat geen enkele vraag.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "boomschema",
+              uitleg: "Schema met een hoofdgroep en kleinere groepen eronder.",
+            },
+            {
+              woord: "hoofdgroep",
+              uitleg: "De grote groep bovenaan.",
+            },
+          ],
+          theorie: "Toets-tip: één groot woord dat zich splitst in kleinere groepen = boomschema. Staan er vragen bij? Dan is het een beslisboom.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Fruit → appels / peren / bananen. Een boomschema.",
+            },
+            {
+              type: "stap",
+              tekst: "Kleding → jassen / broeken / truien. Ook een boomschema.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Grote groep, splitst in kleine groepen = boomschema.",
+            },
+          ],
+          niveaus: {
+            basis: "Hoofdgroep met kleinere groepen eronder = boomschema.",
+            simpeler: "Eén groot woord, daaronder takken.",
+            nogSimpeler: "Takken = boomschema.",
+          },
+        },
+      },
+      {
+        q: "Welk onderdeel van een schema vertelt je **waar het schema over gaat**?",
+        options: ["De titel", "De legenda", "De pijlen", "De vakjes"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Wat vertelt een legenda je: het onderwerp of de betekenis van de tekentjes?",
+          "Pijlen verbinden dingen. Vertellen ze ook het onderwerp?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Onderdelen van een schema",
+              tekst: "Een schema heeft vakjes, pijlen, soms een legenda en een titel.",
+            },
+            {
+              titel: "Wat doet elk onderdeel?",
+              tekst: "Vakjes = informatie. Pijlen = verband of volgorde. Legenda = wat de tekentjes betekenen. **Titel** = waar het schema over gaat.",
+            },
+            {
+              titel: "Daarom eerst de titel",
+              tekst: "Lees altijd eerst de titel. Dan weet je meteen het onderwerp.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "titel",
+              uitleg: "De naam van het schema; zegt waar het over gaat.",
+            },
+            {
+              woord: "legenda",
+              uitleg: "Uitleg van wat de tekentjes of kleuren betekenen.",
+            },
+          ],
+          theorie: "Toets-tip: titel = onderwerp. Legenda = betekenis van de tekentjes. Lees ze allebei vóór je de vraag beantwoordt.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Titel 'Zo maak je een vlieger': het schema gaat over een vlieger maken.",
+            },
+            {
+              type: "stap",
+              tekst: "Titel 'Onze dag in de dierentuin': het schema gaat over een dagje dierentuin.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Waar gaat het over? Kijk naar de titel.",
+            },
+          ],
+          niveaus: {
+            basis: "De titel zegt waar het schema over gaat.",
+            simpeler: "Titel = onderwerp.",
+            nogSimpeler: "Titel = waarover.",
+          },
+        },
+      },
+      {
+        q: "Waarvoor gebruik je een **schema**?",
+        options: [
+          "Om snel te zien hoe iets werkt",
+          "Om een lang verhaal te vertellen",
+          "Om je eigen mening te geven",
+          "Om een tekening in te kleuren",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is een schema lang, of juist kort en overzichtelijk?",
+          null,
+          "Gaat een schema over mooi maken, of over informatie?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat is een schema?",
+              tekst: "Een schema is een **overzicht** van informatie in vakjes en met pijlen.",
+            },
+            {
+              titel: "Waarom handig?",
+              tekst: "Je ziet in één keer **hoe iets werkt** of wat met wat te maken heeft. Dat gaat sneller dan een lange tekst lezen.",
+            },
+            {
+              titel: "Wat een schema niet is",
+              tekst: "Een schema is geen verhaal, geen mening en geen kleurplaat. Het geeft informatie kort en duidelijk.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schema",
+              uitleg: "Overzicht van informatie in vakjes en met pijlen.",
+            },
+            {
+              woord: "overzicht",
+              uitleg: "Alles kort bij elkaar, zodat je het snel ziet.",
+            },
+          ],
+          theorie: "Toets-tip: een schema maakt informatie overzichtelijk. Het laat zien hoe iets werkt of wat bij elkaar hoort.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Stappenplan voor een vlieger: je ziet meteen welke stap eerst komt.",
+            },
+            {
+              type: "stap",
+              tekst: "Boomschema van fruit: je ziet meteen welke soorten er zijn.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Schema = kort overzicht, zodat je snel snapt hoe iets werkt.",
+            },
+          ],
+          niveaus: {
+            basis: "Met een schema zie je snel hoe iets werkt.",
+            simpeler: "Schema = snel overzicht.",
+            nogSimpeler: "Snel zien.",
+          },
+        },
+      },
+      {
+        q: "Welke van deze is **GEEN** soort schema?",
+        options: ["Een brief", "Een mindmap", "Een tijdslijn", "Een beslisboom"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Denk aan woorden rondom één idee. Is dat een schema?",
+          null,
+          "Ja/nee-vragen met pijlen. Is dat een schema?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Soorten schema's",
+              tekst: "Stappenplan, beslisboom, boomschema, tijdslijn en mindmap zijn allemaal schema's.",
+            },
+            {
+              titel: "Wat hebben ze gemeen?",
+              tekst: "Ze zetten informatie in vakjes, met pijlen of lijnen ertussen.",
+            },
+            {
+              titel: "En een brief?",
+              tekst: "Een **brief** is een tekst met zinnen achter elkaar. Er staan geen vakjes en pijlen in. Dus een brief is geen schema.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schema",
+              uitleg: "Overzicht met vakjes en pijlen of lijnen.",
+            },
+            {
+              woord: "tekst",
+              uitleg: "Zinnen achter elkaar, zoals in een brief of verhaal.",
+            },
+          ],
+          theorie: "Toets-tip: vraag jezelf af: zie ik vakjes en pijlen of lijnen? Dan is het een schema. Alleen zinnen achter elkaar? Dan is het een gewone tekst.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Een tijdslijn: gebeurtenissen op volgorde, met een lijn. Wel een schema.",
+            },
+            {
+              type: "stap",
+              tekst: "Een verhaal: zinnen achter elkaar. Geen schema.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Vakjes en pijlen = schema. Alleen zinnen = tekst.",
+            },
+          ],
+          niveaus: {
+            basis: "Een brief is een tekst, geen schema.",
+            simpeler: "Brief = zinnen, geen vakjes.",
+            nogSimpeler: "Brief = geen schema.",
+          },
+        },
+      },
+      {
+        q: "Een **stappenplan** en een **tijdslijn** hebben iets hetzelfde.\n\nWat is dat?",
+        options: [
+          "Ze hebben allebei een volgorde",
+          "Ze hebben allebei ja/nee-vragen",
+          "Ze hebben allebei jaartallen",
+          "Ze hebben allebei één woord in het midden",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Bij welk schema horen ja/nee-vragen?",
+          "Staan er in een stappenplan jaartallen?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stappenplan",
+              tekst: "Een stappenplan zegt: eerst stap 1, dan stap 2, dan stap 3. Er is een **volgorde**.",
+            },
+            {
+              titel: "Tijdslijn",
+              tekst: "Een tijdslijn zet gebeurtenissen op een rij: eerst wat vroeg was, dan wat later kwam. Ook een **volgorde**.",
+            },
+            {
+              titel: "Wat is anders?",
+              tekst: "Ja/nee-vragen horen bij een beslisboom. Eén woord in het midden hoort bij een mindmap. Jaartallen staan wel op een tijdslijn, maar niet in een stappenplan.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "volgorde",
+              uitleg: "Wat eerst komt en wat daarna.",
+            },
+            {
+              woord: "tijdslijn",
+              uitleg: "Gebeurtenissen op volgorde van tijd.",
+            },
+          ],
+          theorie: "Toets-tip: vergelijk schema's op hun vorm. Volgorde = stappenplan of tijdslijn. Ja/nee = beslisboom. Midden + eromheen = mindmap.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Stappenplan tanden poetsen: eerst borstel pakken, dan poetsen. Volgorde.",
+            },
+            {
+              type: "stap",
+              tekst: "Tijdslijn van jouw leven: eerst geboren, later naar school. Volgorde.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Allebei: eerst dit, dan dat.",
+            },
+          ],
+          niveaus: {
+            basis: "Stappenplan en tijdslijn hebben allebei een volgorde.",
+            simpeler: "Allebei: eerst, dan, daarna.",
+            nogSimpeler: "Volgorde.",
+          },
+        },
+      },
+      {
+        q: "Lotte wil op een blad laten zien hoe je een tent opzet: eerst dit, dan dat, dan dat.\n\nWelk schema past daar het best bij?",
+        options: ["Een stappenplan", "Een mindmap", "Een boomschema", "Een beslisboom"],
+        answer: 0,
+        wrongHints: [null, "Zet een mindmap dingen in een volgorde?", null, "Moet Lotte ja/nee-vragen stellen?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat wil Lotte?",
+              tekst: "Ze wil laten zien wat je **eerst** doet, wat **daarna** en wat **daarna**.",
+            },
+            {
+              titel: "Welk schema hoort bij volgorde?",
+              tekst: "Stappen in een vaste volgorde: dat is een **stappenplan**.",
+            },
+            {
+              titel: "Waarom niet de andere?",
+              tekst: "Een mindmap zet woorden rond een idee. Een boomschema verdeelt in groepen. Een beslisboom stelt ja/nee-vragen. Geen van die drie draait om 'eerst dit, dan dat'.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "stappenplan",
+              uitleg: "Lijst stappen in vaste volgorde.",
+            },
+            {
+              woord: "volgorde",
+              uitleg: "Wat eerst komt en wat daarna.",
+            },
+          ],
+          theorie: "Toets-tip: hoor je 'eerst, dan, daarna'? Denk aan een stappenplan.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Hoe was je je handen: eerst nat maken, dan zeep, dan afspoelen. Stappenplan.",
+            },
+            {
+              type: "stap",
+              tekst: "Hoe maak je thee: eerst water koken, dan zakje in de kop, dan water erop. Stappenplan.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Eerst dit, dan dat = stappenplan.",
+            },
+          ],
+          niveaus: {
+            basis: "Iets doen in een vaste volgorde = stappenplan.",
+            simpeler: "Eerst, dan, daarna = stappenplan.",
+            nogSimpeler: "Volgorde = stappenplan.",
+          },
+        },
+      },
     ],
   },
 
@@ -111,6 +530,83 @@ const steps = [
         options: ["Nee, computer moet eerst aan","Ja, wachtwoord kan eerst","Ja, de volgorde maakt niet uit","Soms, als je snel typt"],
         answer: 0,
         wrongHints: [null,"Probeer maar — wachtwoord typen op uitstaand toetsenbord werkt niet.","Waar typ je het wachtwoord in als de computer nog uit staat?","Snel typen helpt niet als het scherm nog uit is."],
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Stappen: 1) Pot pakken. 2) Aarde in de pot doen. 3) Zaadje erin stoppen. 4) Water geven.\n\nWat doe je **direct na stap 2**?",
+        options: ["Zaadje erin stoppen", "Water geven", "Pot pakken", "Aarde in de pot doen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is een stap verder. Welke stap komt vlak na stap 2?",
+          null,
+          "Dat ís stap 2. Wat komt erna?",
+        ],
+      },
+      {
+        q: "Stappen: 1) Tandenborstel pakken. 2) ... 3) Tanden poetsen. 4) Mond spoelen.\n\nWelke stap **mist** op plek 2?",
+        options: ["Tandpasta op de borstel doen", "Mond spoelen", "Tandenborstel pakken", "Naar bed gaan"],
+        answer: 0,
+        wrongHints: [null, "Die stap staat er al, op plek 4.", null, "Hoort dat bij het poetsen zelf?"],
+      },
+      {
+        q: "Stappen: 1) Borden op tafel zetten. 2) Glazen op tafel zetten. 3) Eten opscheppen.\n\n**Mag je stap 1 en stap 2 wisselen?**",
+        options: [
+          "Ja, ze hebben elkaar niet nodig",
+          "Nee, borden moeten altijd eerst",
+          "Nee, de glazen gaan op de borden",
+          "Ja, maar dan sla je stap 3 over",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Heb je de borden nodig om een glas neer te zetten?",
+          null,
+          "Waarom zou je stap 3 overslaan als je 1 en 2 wisselt?",
+        ],
+      },
+      {
+        q: "Lees: 'Eerst was je je handen. Daarna snijd je de appel. Ten slotte eet je hem op.'\n\nWat doe je als **laatste**?",
+        options: ["De appel opeten", "Je handen wassen", "De appel snijden", "De appel wassen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Welk woord staat vóór deze stap: 'eerst' of 'ten slotte'?",
+          null,
+          "Staat deze stap wel in de tekst?",
+        ],
+      },
+      {
+        q: "Stappen: 1) Brief schrijven. 2) Brief in de envelop doen. 3) Postzegel plakken. 4) Brief op de bus doen.\n\nWat doe je **direct vóór** het plakken van de postzegel?",
+        options: [
+          "De brief in de envelop doen",
+          "De brief op de bus doen",
+          "De brief schrijven",
+          "De envelop openmaken",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Komt die stap vóór of na de postzegel?",
+          "Dat doe je ook eerder, maar is het de stap vlak ervoor?",
+          null,
+        ],
+      },
+      {
+        q: "Welk stappenplan staat in de **goede volgorde**?",
+        options: [
+          "Sok aan → schoen aan → veter strikken",
+          "Schoen aan → sok aan → veter strikken",
+          "Veter strikken → sok aan → schoen aan",
+          "Schoen aan → veter strikken → sok aan",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kun je een sok over een schoen aantrekken?",
+          null,
+          "Wat trek je het eerst aan je voet?",
+        ],
       },
     ],
   },
@@ -159,6 +655,366 @@ const steps = [
         answer: 0,
         wrongHints: [null,"Wel met tekst.","Wel met pijlen.","Wel een begin."],
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Beslisboom 'Welke sport?':\nWil je in een team spelen?\n  Ja → Met een bal? Ja → voetbal. Nee → touwtrekken.\n  Nee → In het water? Ja → zwemmen. Nee → hardlopen.\n\nJe wilt **niet** in een team en **wel** in het water. Wat kies je?",
+        options: ["zwemmen", "touwtrekken", "hardlopen", "voetbal"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Bij welk antwoord op de eerste vraag hoort deze sport?",
+          "Hoe beantwoord je de vraag 'In het water?'",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Begin bovenaan",
+              tekst: "Lees de eerste vraag van de beslisboom en beantwoord alleen díe vraag.",
+            },
+            {
+              titel: "Volg de pijlen",
+              tekst: "Team? **Nee** → volg de nee-pijl naar 'In het water?'. Water? **Ja** → volg de ja-pijl.",
+            },
+            {
+              titel: "Eindvak",
+              tekst: "Je komt uit bij **zwemmen**. Daar staat geen vraag meer, dus je bent klaar.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "beslisboom",
+              uitleg: "Schema met ja/nee-vragen die je naar een antwoord leiden.",
+            },
+            {
+              woord: "eindvak",
+              uitleg: "Vak zonder vraag: daar ben je klaar.",
+            },
+          ],
+          theorie: "Toets-tip beslisboom: begin bovenaan, beantwoord één vraag tegelijk en volg de ja- of nee-pijl. Zet met je vinger of potlood een spoor.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Vraag 1 'ja' → volg de ja-pijl naar vraag 2. Vraag 2 'nee' → volg de nee-pijl naar het eindvak.",
+            },
+            {
+              type: "stap",
+              tekst: "Bij elke vraag maar één pijl volgen. De andere tak sla je over.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Eén vraag tegelijk, één pijl tegelijk, tot je bij een eindvak bent.",
+            },
+          ],
+          niveaus: {
+            basis: "Niet in een team → nee-pijl. Wel water → ja-pijl → zwemmen.",
+            simpeler: "Nee bij team, ja bij water: zwemmen.",
+            nogSimpeler: "Nee, ja = zwemmen.",
+          },
+        },
+      },
+      {
+        q: "Beslisboom 'Welk boek?':\nHoud je van spanning?\n  Ja → Mag het eng zijn? Ja → spookverhaal. Nee → detective.\n  Nee → Houd je van dieren? Ja → dierenboek. Nee → strip.\n\nJe antwoordt bij **alle** vragen 'nee'. Wat lees je?",
+        options: ["strip", "detective", "dierenboek", "spookverhaal"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Om hier te komen moet je bij de eerste vraag 'ja' zeggen. Klopt dat?",
+          null,
+          "Kom je hier met alleen nee-antwoorden?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Begin bovenaan",
+              tekst: "Lees de eerste vraag van de beslisboom en beantwoord alleen díe vraag.",
+            },
+            {
+              titel: "Volg de pijlen",
+              tekst: "Spanning? **Nee** → volg de nee-pijl naar 'Houd je van dieren?'. Dieren? **Nee** → volg weer de nee-pijl.",
+            },
+            {
+              titel: "Eindvak",
+              tekst: "Je komt uit bij **strip**. Alleen nee-pijlen volgen brengt je daar.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "beslisboom",
+              uitleg: "Schema met ja/nee-vragen die je naar een antwoord leiden.",
+            },
+            {
+              woord: "eindvak",
+              uitleg: "Vak zonder vraag: daar ben je klaar.",
+            },
+          ],
+          theorie: "Toets-tip beslisboom: begin bovenaan, beantwoord één vraag tegelijk en volg de ja- of nee-pijl. Zet met je vinger of potlood een spoor.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Vraag 1 'ja' → volg de ja-pijl naar vraag 2. Vraag 2 'nee' → volg de nee-pijl naar het eindvak.",
+            },
+            {
+              type: "stap",
+              tekst: "Bij elke vraag maar één pijl volgen. De andere tak sla je over.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Eén vraag tegelijk, één pijl tegelijk, tot je bij een eindvak bent.",
+            },
+          ],
+          niveaus: {
+            basis: "Twee keer nee → strip.",
+            simpeler: "Steeds de nee-pijl volgen: strip.",
+            nogSimpeler: "Nee, nee = strip.",
+          },
+        },
+      },
+      {
+        q: "Beslisboom 'Welk boek?':\nHoud je van spanning?\n  Ja → Mag het eng zijn? Ja → spookverhaal. Nee → detective.\n  Nee → Houd je van dieren? Ja → dierenboek. Nee → strip.\n\nJe houdt **van spanning**, maar het mag **niet eng** zijn. Wat lees je?",
+        options: ["detective", "spookverhaal", "dierenboek", "strip"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Wat antwoord je op 'Mag het eng zijn?'",
+          null,
+          "Om hier te komen zeg je 'nee' bij spanning. Klopt dat?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Begin bovenaan",
+              tekst: "Lees de eerste vraag van de beslisboom en beantwoord alleen díe vraag.",
+            },
+            {
+              titel: "Volg de pijlen",
+              tekst: "Spanning? **Ja** → volg de ja-pijl naar 'Mag het eng zijn?'. Eng? **Nee** → volg de nee-pijl.",
+            },
+            {
+              titel: "Eindvak",
+              tekst: "Je komt uit bij **detective**. Daar staat geen vraag meer.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "beslisboom",
+              uitleg: "Schema met ja/nee-vragen die je naar een antwoord leiden.",
+            },
+            {
+              woord: "eindvak",
+              uitleg: "Vak zonder vraag: daar ben je klaar.",
+            },
+          ],
+          theorie: "Toets-tip beslisboom: begin bovenaan, beantwoord één vraag tegelijk en volg de ja- of nee-pijl. Zet met je vinger of potlood een spoor.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Vraag 1 'ja' → volg de ja-pijl naar vraag 2. Vraag 2 'nee' → volg de nee-pijl naar het eindvak.",
+            },
+            {
+              type: "stap",
+              tekst: "Bij elke vraag maar één pijl volgen. De andere tak sla je over.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Eén vraag tegelijk, één pijl tegelijk, tot je bij een eindvak bent.",
+            },
+          ],
+          niveaus: {
+            basis: "Ja bij spanning, nee bij eng → detective.",
+            simpeler: "Ja, dan nee = detective.",
+            nogSimpeler: "Ja, nee = detective.",
+          },
+        },
+      },
+      {
+        q: "Beslisboom 'Wat doe je in de pauze?':\nSchijnt de zon?\n  Ja → Heb je een bal? Ja → voetballen. Nee → tikkertje.\n  Nee → Mag je binnen blijven? Ja → lezen. Nee → onder het afdak spelen.\n\nDe zon **schijnt** en je hebt **geen** bal. Wat doe je?",
+        options: ["tikkertje", "voetballen", "lezen", "onder het afdak spelen"],
+        answer: 0,
+        wrongHints: [null, "Wat antwoord je op 'Heb je een bal?'", null, "Kom je hier als de zon schijnt?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Begin bovenaan",
+              tekst: "Lees de eerste vraag van de beslisboom en beantwoord alleen díe vraag.",
+            },
+            {
+              titel: "Volg de pijlen",
+              tekst: "Zon? **Ja** → volg de ja-pijl naar 'Heb je een bal?'. Bal? **Nee** → volg de nee-pijl.",
+            },
+            {
+              titel: "Eindvak",
+              tekst: "Je komt uit bij **tikkertje**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "beslisboom",
+              uitleg: "Schema met ja/nee-vragen die je naar een antwoord leiden.",
+            },
+            {
+              woord: "eindvak",
+              uitleg: "Vak zonder vraag: daar ben je klaar.",
+            },
+          ],
+          theorie: "Toets-tip beslisboom: begin bovenaan, beantwoord één vraag tegelijk en volg de ja- of nee-pijl. Zet met je vinger of potlood een spoor.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Vraag 1 'ja' → volg de ja-pijl naar vraag 2. Vraag 2 'nee' → volg de nee-pijl naar het eindvak.",
+            },
+            {
+              type: "stap",
+              tekst: "Bij elke vraag maar één pijl volgen. De andere tak sla je over.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Eén vraag tegelijk, één pijl tegelijk, tot je bij een eindvak bent.",
+            },
+          ],
+          niveaus: {
+            basis: "Ja bij zon, nee bij bal → tikkertje.",
+            simpeler: "Zon ja, bal nee = tikkertje.",
+            nogSimpeler: "Ja, nee = tikkertje.",
+          },
+        },
+      },
+      {
+        q: "Wat is het **verschil** tussen een beslisboom en een stappenplan?",
+        options: [
+          "Bij een beslisboom volg je alleen jouw eigen pad",
+          "Bij een beslisboom doe je altijd alle stappen",
+          "Een stappenplan heeft altijd ja/nee-vragen",
+          "Een stappenplan heeft nooit een volgorde",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Volg je in een beslisboom zowel de ja-pijl als de nee-pijl?",
+          null,
+          "Waar draait een stappenplan juist om?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stappenplan",
+              tekst: "Bij een stappenplan doe je **alle** stappen, in de goede volgorde.",
+            },
+            {
+              titel: "Beslisboom",
+              tekst: "Bij een beslisboom kies je bij elke vraag ja of nee. Je volgt alleen het pad dat **bij jouw keuzes** hoort.",
+            },
+            {
+              titel: "Het verschil",
+              tekst: "Stappenplan = alles doen. Beslisboom = een deel doen, de rest sla je over.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "beslisboom",
+              uitleg: "Schema met ja/nee-vragen die je naar een antwoord leiden.",
+            },
+            {
+              woord: "stappenplan",
+              uitleg: "Lijst stappen die je allemaal doet, in volgorde.",
+            },
+          ],
+          theorie: "Toets-tip: zie je ja/nee-vragen? Dan doe je niet alles, maar alleen jouw pad.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Stappenplan pannenkoeken: alle zes stappen doen.",
+            },
+            {
+              type: "stap",
+              tekst: "Beslisboom 'welke sport?': na twee vragen ben je klaar, de rest sla je over.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Stappenplan = alle stappen. Beslisboom = alleen jouw pad.",
+            },
+          ],
+          niveaus: {
+            basis: "Bij een beslisboom volg je alleen het pad van jouw keuzes.",
+            simpeler: "Beslisboom: alleen jouw pad. Stappenplan: alles.",
+            nogSimpeler: "Eigen pad = beslisboom.",
+          },
+        },
+      },
+      {
+        q: "Wanneer ben je **klaar** met een beslisboom?",
+        options: [
+          "Als je bij een vak zonder vraag komt",
+          "Als je de eerste vraag hebt gelezen",
+          "Als je alle vakjes hebt gelezen",
+          "Als je bij een nee-pijl komt",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Na de eerste vraag volg je nog een pijl. Ben je dan al klaar?",
+          null,
+          "Na een nee-pijl kan er nog een vraag komen. Ben je dan klaar?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Je loopt een pad",
+              tekst: "Je begint bovenaan en volgt bij elke vraag de ja- of nee-pijl.",
+            },
+            {
+              titel: "Het einde",
+              tekst: "Je bent klaar als je bij een **eindvak** komt: een vak waar geen vraag meer in staat.",
+            },
+            {
+              titel: "Niet alles lezen",
+              tekst: "Je hoeft niet alle vakjes te lezen. De takken die niet bij jouw keuze horen, sla je over.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "eindvak",
+              uitleg: "Vak zonder vraag: daar ben je klaar.",
+            },
+            {
+              woord: "pad",
+              uitleg: "De weg die je door de beslisboom volgt.",
+            },
+          ],
+          theorie: "Toets-tip: blijf pijlen volgen tot er geen vraag meer staat. Dat vak is je antwoord.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Spanning? Ja → Eng? Nee → detective. In 'detective' staat geen vraag: klaar.",
+            },
+            {
+              type: "stap",
+              tekst: "Zon? Nee → Binnen blijven? Ja → lezen. Klaar.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Geen vraag meer = klaar.",
+            },
+          ],
+          niveaus: {
+            basis: "Klaar bij een vak zonder vraag: het eindvak.",
+            simpeler: "Geen vraag meer? Dan ben je klaar.",
+            nogSimpeler: "Eindvak = klaar.",
+          },
+        },
+      },
     ],
   },
 
@@ -189,6 +1045,61 @@ const steps = [
         options: ["Jan","Piet","Tom","Geen"],
         answer: 0,
         wrongHints: [null,"Vader van Tom.","Tom is het kind.","Wel — volg de pijlen terug vanaf Tom."],
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Voedselketen: blad → rups → koolmees.\n(De pijl betekent 'wordt gegeten door'.)\n\nEr komen veel **meer** koolmezen. Wat gebeurt er dan met de rupsen?",
+        options: [
+          "Er worden meer rupsen opgegeten",
+          "Er komen meer rupsen bij",
+          "De rupsen eten de koolmezen op",
+          "Er verandert niets aan de rupsen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Wie eet de rupsen? En wat gebeurt er als die er meer zijn?",
+          null,
+          "Volg de pijl. Wie eet wie?",
+        ],
+      },
+      {
+        q: "Stamboom (de pijl betekent 'heeft als kind'):\nKees → Bram en Ilse\nBram → Lars\n\nWat is **Ilse** van Lars?",
+        options: ["Zijn tante", "Zijn zus", "Zijn moeder", "Zijn oma"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Heeft Ilse dezelfde vader als Lars?",
+          "Van wie is Lars het kind: van Bram of van Ilse?",
+          null,
+        ],
+      },
+      {
+        q: "Productieketen: graan → meel → brood.\n\nEen jaar lang is er **geen graan**. Wat volgt uit deze keten?",
+        options: [
+          "Er is ook geen meel en geen brood",
+          "Er is wel meel, maar geen brood",
+          "Er is juist meer brood",
+          "Er verandert niets",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Waar wordt meel van gemaakt in deze keten?",
+          null,
+          "Volg de pijlen. Wat heeft brood nodig?",
+        ],
+      },
+      {
+        q: "Tijdslijn van Noor:\n2016 geboren → 2020 naar school → 2022 zwemdiploma → 2024 verhuisd.\n\nWat gebeurde er **tussen** de start op school en de verhuizing?",
+        options: ["Ze haalde haar zwemdiploma", "Ze werd geboren", "Ze verhuisde", "Ze ging naar school"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Was dat vóór of na de start op school?",
+          null,
+          "Dit is een van de twee grenzen. Wat zit ertussen?",
+        ],
       },
     ],
   },

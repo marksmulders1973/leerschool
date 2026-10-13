@@ -1,0 +1,695 @@
+{
+ "pathId": "woordenschat-po",
+ "geschreven": 21,
+ "opgenomen": [
+  {
+   "stap": 0,
+   "q": "Welk woordpaar bestaat uit **synoniemen**?",
+   "options": [
+    "snel - vlug",
+    "groot - klein",
+    "warm - koud",
+    "vol - leeg"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Betekenen groot en klein hetzelfde, of juist het omgekeerde?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Synoniemen = zelfde betekenis",
+      "tekst": "Synoniemen zijn woorden die (bijna) hetzelfde betekenen. Snel en vlug betekenen allebei: niet langzaam. De andere paren zijn tegenstellingen."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "synoniem",
+      "uitleg": "Woord met dezelfde of bijna dezelfde betekenis."
+     },
+     {
+      "woord": "antoniem",
+      "uitleg": "Woord met de tegenovergestelde betekenis."
+     }
+    ],
+    "theorie": "Test: kun je het ene woord vervangen door het andere zonder dat de zin verandert? Dan zijn het synoniemen.",
+    "voorbeelden": [
+     {
+      "type": "voorbeeld",
+      "tekst": "Hij fietst snel naar school = hij fietst vlug naar school."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Tegenstellingen",
+      "uitleg": "Groot - klein, warm - koud en vol - leeg zijn antoniemen."
+     }
+    ],
+    "niveaus": {
+     "basis": "Snel = vlug: synoniemen.",
+     "simpeler": "Zoek het paar waarbij beide woorden hetzelfde betekenen. Snel en vlug betekenen allebei: niet langzaam.",
+     "nogSimpeler": "snel = vlug"
+    }
+   },
+   "id": "woordenschat-po#0"
+  },
+  {
+   "stap": 0,
+   "q": "Je leest een woord dat je niet kent. Welke tip helpt je om de betekenis te raden?",
+   "options": [
+    "Kijk naar de zin rondom het woord",
+    "Tel de letters van het woord",
+    "Spel het woord hardop",
+    "Sla de hele bladzijde over"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Zegt het aantal letters iets over wat een woord betekent?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Context gebruiken",
+      "tekst": "De woorden rondom een onbekend woord heten de context. Die geven vaak een hint over wat het woord betekent."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "context",
+      "uitleg": "De zin of tekst rondom een woord."
+     }
+    ],
+    "theorie": "Context-truc: lees de zin ervoor en erna. Wat zou daar logisch passen?",
+    "voorbeelden": [
+     {
+      "type": "voorbeeld",
+      "tekst": "'De auto reed enorm snel, bijna 200 km per uur.' De rest van de zin laat zien dat enorm 'heel erg' betekent."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Strategie",
+      "uitleg": "Veel lezen + context gebruiken = je woordenschat groeit."
+     }
+    ],
+    "niveaus": {
+     "basis": "Kijk naar de zin rondom het woord.",
+     "simpeler": "Ken je een woord niet? Lees de woorden eromheen. Die geven een hint.",
+     "nogSimpeler": "Lees eromheen"
+    }
+   },
+   "id": "woordenschat-po#1"
+  },
+  {
+   "stap": 0,
+   "q": "Wat helpt je om je woordenschat groter te maken?",
+   "options": [
+    "Veel lezen",
+    "Moeilijke woorden altijd overslaan",
+    "Alleen korte woorden gebruiken",
+    "Nooit vragen wat een woord betekent"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Leer je een nieuw woord als je er steeds overheen springt?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Lezen = nieuwe woorden",
+      "tekst": "Elke keer dat je leest, kom je nieuwe woorden tegen. Zo groeit je woordenschat vanzelf."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "woordenschat",
+      "uitleg": "Alle woorden die je kent en begrijpt."
+     }
+    ],
+    "theorie": "Hoe meer je leest, hoe meer woorden je kent, hoe beter je teksten begrijpt.",
+    "voorbeelden": [
+     {
+      "type": "voorbeeld",
+      "tekst": "Een boek, een strip of de krant: in alles staan nieuwe woorden."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Tip",
+      "uitleg": "Kom je een nieuw woord tegen? Gebruik de context of vraag wat het betekent."
+     }
+    ],
+    "niveaus": {
+     "basis": "Veel lezen.",
+     "simpeler": "Woorden leer je door ze tegen te komen. Dat gebeurt het meest als je veel leest.",
+     "nogSimpeler": "Lezen"
+    }
+   },
+   "id": "woordenschat-po#2"
+  },
+  {
+   "stap": 1,
+   "q": "*'Ze was heel **blij** met haar nieuwe fiets.'* Welk woord kan in plaats van 'blij'?",
+   "options": [
+    "gelukkig",
+    "verdrietig",
+    "moe",
+    "stil"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Zet dit woord in de zin. Betekent die nog hetzelfde?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Vervang-test",
+      "tekst": "Zet elk antwoord op de plek van 'blij'. 'Ze was heel gelukkig met haar nieuwe fiets' betekent hetzelfde."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "gelukkig",
+      "uitleg": "Blij, tevreden."
+     }
+    ],
+    "theorie": "Toets-tip: vervang het woord door elk antwoord. Blijft de zin logisch en hetzelfde? Dan is het een synoniem.",
+    "voorbeelden": [
+     {
+      "type": "voorbeeld",
+      "tekst": "Blij = vrolijk = opgewekt = gelukkig."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Andersom",
+      "uitleg": "Verdrietig is juist het tegenovergestelde van blij."
+     }
+    ],
+    "niveaus": {
+     "basis": "Blij = gelukkig.",
+     "simpeler": "Probeer elk woord in de zin. Alleen 'gelukkig' zegt hetzelfde als 'blij'.",
+     "nogSimpeler": "blij = gelukkig"
+    }
+   },
+   "id": "woordenschat-po#5"
+  },
+  {
+   "stap": 2,
+   "q": "*'Gisteren was het buiten warm, maar vandaag is het ___.'* Welk woord is de tegenstelling van 'warm'?",
+   "options": [
+    "koud",
+    "heet",
+    "zonnig",
+    "lekker"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Is heet het omgekeerde van warm, of juist nog warmer?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Warm ↔ koud",
+      "tekst": "'Maar' kondigt een tegenstelling aan. Het tegenovergestelde van warm is koud."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "tegenstelling",
+      "uitleg": "Woord met de omgekeerde betekenis: een antoniem."
+     }
+    ],
+    "theorie": "Signaalwoord 'maar' = er komt iets tegenovergestelds.",
+    "voorbeelden": [
+     {
+      "type": "voorbeeld",
+      "tekst": "Warm ↔ koud, vol ↔ leeg, hoog ↔ laag."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Heet",
+      "uitleg": "Heet is niet het omgekeerde, maar juist heel warm."
+     }
+    ],
+    "niveaus": {
+     "basis": "Warm ↔ koud.",
+     "simpeler": "Wat is het omgekeerde van warm? Koud.",
+     "nogSimpeler": "koud"
+    }
+   },
+   "id": "woordenschat-po#9"
+  },
+  {
+   "stap": 2,
+   "q": "Wat is de **tegenstelling** van **'kopen'**?",
+   "options": [
+    "verkopen",
+    "betalen",
+    "winkelen",
+    "pakken"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Betalen doe je juist óók als je iets koopt.",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Kopen ↔ verkopen",
+      "tekst": "Jij koopt een boek, de winkelier verkoopt het boek. Dat is precies het omgekeerde."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "verkopen",
+      "uitleg": "Iets aan een ander geven en er geld voor krijgen."
+     }
+    ],
+    "theorie": "Werkwoorden hebben ook tegenstellingen: komen ↔ gaan, kopen ↔ verkopen, stijgen ↔ dalen.",
+    "voorbeelden": [
+     {
+      "type": "voorbeeld",
+      "tekst": "Ik koop een ijsje; de ijsman verkoopt een ijsje."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Werkwoorden",
+      "uitleg": "Ook doe-woorden kunnen antoniemen zijn."
+     }
+    ],
+    "niveaus": {
+     "basis": "Kopen ↔ verkopen.",
+     "simpeler": "De klant koopt, de winkelier verkoopt. Dat is het omgekeerde.",
+     "nogSimpeler": "verkopen"
+    }
+   },
+   "id": "woordenschat-po#10"
+  },
+  {
+   "stap": 2,
+   "q": "Wat is de **tegenstelling** van **'boven'**?",
+   "options": [
+    "onder",
+    "achter",
+    "binnen",
+    "voor"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "'Achter' hoort bij een ander plaatswoord-paar.",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Boven ↔ onder",
+      "tekst": "Boven en onder zijn elkaars tegenstelling. Achter, binnen en voor horen bij andere paren."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "boven",
+      "uitleg": "Hoger dan iets anders."
+     }
+    ],
+    "theorie": "Plaats-paren: boven ↔ onder, voor ↔ achter, binnen ↔ buiten.",
+    "voorbeelden": [
+     {
+      "type": "voorbeeld",
+      "tekst": "De lamp hangt boven de tafel; de kat ligt onder de tafel."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Juiste paar",
+      "uitleg": "Elk plaatswoord heeft zijn eigen tegenstelling."
+     }
+    ],
+    "niveaus": {
+     "basis": "Boven ↔ onder.",
+     "simpeler": "Wat is het omgekeerde van boven? Onder.",
+     "nogSimpeler": "onder"
+    }
+   },
+   "id": "woordenschat-po#11"
+  },
+  {
+   "stap": 2,
+   "q": "*'Het regent, dus we spelen **binnen**.'* Wat is de tegenstelling van 'binnen'?",
+   "options": [
+    "buiten",
+    "thuis",
+    "samen",
+    "vandaag"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Kun je thuis ook binnen zijn?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Binnen ↔ buiten",
+      "tekst": "Binnen = in een huis of gebouw. Het omgekeerde is buiten."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "binnen",
+      "uitleg": "In een gebouw of ruimte."
+     }
+    ],
+    "theorie": "Plaats-paar: binnen ↔ buiten.",
+    "voorbeelden": [
+     {
+      "type": "voorbeeld",
+      "tekst": "Bij mooi weer spelen we buiten, bij regen binnen."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Thuis",
+      "uitleg": "Thuis kun je binnen én buiten (in de tuin) zijn: geen tegenstelling."
+     }
+    ],
+    "niveaus": {
+     "basis": "Binnen ↔ buiten.",
+     "simpeler": "Wat is het omgekeerde van binnen? Buiten.",
+     "nogSimpeler": "buiten"
+    }
+   },
+   "id": "woordenschat-po#13"
+  },
+  {
+   "stap": 3,
+   "q": "*'Het was een **hevige** storm, ofwel een heel harde storm.'* Wat betekent 'hevig'?",
+   "options": [
+    "heel sterk",
+    "heel zacht",
+    "heel kort",
+    "heel koud"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Wat staat er na 'ofwel'? Past 'zacht' daarbij?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Ofwel = synoniem-hint",
+      "tekst": "Na 'ofwel' geeft de zin zelf de betekenis: een heel harde storm. Hevig = heel sterk."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "hevig",
+      "uitleg": "Heel sterk, heel erg."
+     },
+     {
+      "woord": "ofwel",
+      "uitleg": "Met andere woorden."
+     }
+    ],
+    "theorie": "Context-clue: 'ofwel' geeft vaak een synoniem.",
+    "voorbeelden": [
+     {
+      "type": "voorbeeld",
+      "tekst": "Een hevige regenbui = een heel harde regenbui."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Kijk naar de zin",
+      "uitleg": "Het antwoord staat soms al in de zin zelf."
+     }
+    ],
+    "niveaus": {
+     "basis": "Hevig = heel sterk.",
+     "simpeler": "Na 'ofwel' staat: een heel harde storm. Dus hevig = heel sterk.",
+     "nogSimpeler": "Sterk"
+    }
+   },
+   "id": "woordenschat-po#15"
+  },
+  {
+   "stap": 3,
+   "q": "*'Mijn kamer was niet rommelig, hij was juist heel **opgeruimd**.'* Wat betekent 'opgeruimd' hier?",
+   "options": [
+    "netjes",
+    "vies",
+    "donker",
+    "leeg"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    null,
+    "Een opgeruimde kamer kan nog vol spullen staan. Waar gaat het om?"
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Tegenstelling-hint",
+      "tekst": "'Niet rommelig, juist opgeruimd' = opgeruimd is het omgekeerde van rommelig. Dat is netjes."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "opgeruimd",
+      "uitleg": "Netjes, alles staat op zijn plek."
+     }
+    ],
+    "theorie": "Context-clue: 'niet ..., juist ...' laat een tegenstelling zien.",
+    "voorbeelden": [
+     {
+      "type": "voorbeeld",
+      "tekst": "Niet boos, juist kalm → kalm = rustig."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Tegenstelling",
+      "uitleg": "Ken je het ene woord (rommelig)? Dan weet je ook het andere."
+     }
+    ],
+    "niveaus": {
+     "basis": "Opgeruimd = netjes.",
+     "simpeler": "De kamer was NIET rommelig. Het omgekeerde van rommelig is netjes.",
+     "nogSimpeler": "Netjes"
+    }
+   },
+   "id": "woordenschat-po#16"
+  },
+  {
+   "stap": 3,
+   "q": "*'De bakker **verdubbelde** het recept: in plaats van één taart maakte hij er twee.'* Wat betekent 'verdubbelen'?",
+   "options": [
+    "twee keer zo veel maken",
+    "de helft maken",
+    "opnieuw proberen",
+    "weggooien"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Hoeveel taarten maakte hij eerst, en hoeveel daarna?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Uitleg in de zin",
+      "tekst": "Na de dubbele punt legt de zin het uit: eerst één taart, nu twee. Verdubbelen = twee keer zo veel."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "verdubbelen",
+      "uitleg": "Twee keer zo veel of zo groot maken."
+     }
+    ],
+    "theorie": "Context-clue: na een dubbele punt (:) staat vaak uitleg.",
+    "voorbeelden": [
+     {
+      "type": "voorbeeld",
+      "tekst": "Je spaargeld verdubbelt van 5 naar 10 euro."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Dubbel",
+      "uitleg": "In 'verdubbelen' zit 'dubbel' = twee keer."
+     }
+    ],
+    "niveaus": {
+     "basis": "Verdubbelen = twee keer zo veel.",
+     "simpeler": "Eerst 1 taart, daarna 2 taarten. Dat is twee keer zo veel.",
+     "nogSimpeler": "Dubbel"
+    }
+   },
+   "id": "woordenschat-po#19"
+  },
+  {
+   "stap": 3,
+   "q": "*'Het was zo donker dat ik **nauwelijks** iets kon zien.'* Wat betekent 'nauwelijks'?",
+   "options": [
+    "bijna niet",
+    "heel goed",
+    "meteen",
+    "altijd"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Kun je in het donker heel goed zien?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Context: donker",
+      "tekst": "Als het heel donker is, zie je bijna niets. Nauwelijks = bijna niet."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "nauwelijks",
+      "uitleg": "Bijna niet."
+     }
+    ],
+    "theorie": "Context-clue: 'zo donker dat...' vertelt wat het gevolg is.",
+    "voorbeelden": [
+     {
+      "type": "voorbeeld",
+      "tekst": "Ik had nauwelijks geslapen = ik had bijna niet geslapen."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Gevolg",
+      "uitleg": "'Zo ... dat ...' laat zien wat er daardoor gebeurt."
+     }
+    ],
+    "niveaus": {
+     "basis": "Nauwelijks = bijna niet.",
+     "simpeler": "Het was heel donker. Dan zie je bijna niets. Nauwelijks = bijna niet.",
+     "nogSimpeler": "Bijna niet"
+    }
+   },
+   "id": "woordenschat-po#20"
+  }
+ ],
+ "afgekeurd": [
+  {
+   "id": "woordenschat-po#3",
+   "stap": 0,
+   "q": "*'Ik wilde naar buiten, **maar** het regende.'* Wat voor woord is 'maar'?",
+   "redenen": [
+    "nakijker A: Fase 2: hint bij 'Een antoniem' is grammaticaal krom: 'heeft het zelf een tegengestelde betekenis van een ander woord?' -> beter 'is het zelf het tegenovergestelde van een ander woord?'.",
+    "nakijker B: Fase 2: basiskennis legt synoniem/antoniem onjuist uit ('woorden die iets zeggen over de betekenis van een ánder woord'); hint bij 'antoniem' is krom geformuleerd ('heeft het zelf een tegengestelde betekenis van een ander woord?')."
+   ]
+  },
+  {
+   "id": "woordenschat-po#4",
+   "stap": 1,
+   "q": "Welk woord is een **synoniem** voor **'bang'**?",
+   "redenen": [
+    "nakijker A: Fase 2: uitlegPad-stap 'je bent ergens voor geschrokken' is fout (schrikken ván, niet voor) en inhoudelijk onjuist: bang = angst hebben/iets niet durven, niet 'geschrokken'.",
+    "nakijker B: Fase 2: uitlegPad zegt 'bang = je bent ergens voor geschrokken' — geschrokken is niet hetzelfde als bang; beter 'je bent ergens bang voor / je voelt angst'."
+   ]
+  },
+  {
+   "id": "woordenschat-po#6",
+   "stap": 1,
+   "q": "Wat betekent **'reusachtig'**?",
+   "redenen": [
+    "nakijker A: Bijna-dubbel: het pad heeft al 'synoniem voor enorm' en 'synoniem voor gigantisch' (zelfde betekenis 'heel groot' als antwoord).",
+    "nakijker B: Bijna-dubbel: het pad heeft al 'synoniem voor enorm' en 'synoniem voor gigantisch' (beide = heel groot); 'reusachtig' toetst hetzelfde. | Fase 2: hint 'Denk aan een reus. Is die klein?' wijst het antwoord vrijwel direct aan."
+   ]
+  },
+  {
+   "id": "woordenschat-po#7",
+   "stap": 1,
+   "q": "*'Het meisje rende **rap** naar huis.'* Wat betekent 'rap' hier?",
+   "redenen": [
+    "nakijker A: Bijna-dubbel: het pad heeft al drie vragen 'synoniem voor snel'; dit is dezelfde koppeling (rap = snel) andersom. | Fase 2: uitlegPad-voorbeeld 'Ze rende rap naar huis = ze rende snel naar huis' is letterlijk de vraagzin met het goede antwoord ingevuld.",
+    "nakijker B: Bijna-dubbel: 'snel' als synoniem-vraag staat al drie keer in het pad; dit is dezelfde koppeling omgedraaid."
+   ]
+  },
+  {
+   "id": "woordenschat-po#8",
+   "stap": 1,
+   "q": "Welk woord betekent: **iets laat je lachen**?",
+   "redenen": [
+    "nakijker A: Formulering 'iets laat je lachen' is geen goede definitiezin; beter: 'Welk woord betekent: het laat je lachen?' of 'iets wat je aan het lachen maakt'.",
+    "nakijker B: Taal: 'iets laat je lachen' is geen goede definitie-zin; beter 'iets dat je laat lachen' / 'iets waar je om moet lachen'."
+   ]
+  },
+  {
+   "id": "woordenschat-po#12",
+   "stap": 2,
+   "q": "*'De prijs van brood gaat **stijgen**.'* Wat is de tegenstelling van 'stijgen'?",
+   "redenen": [
+    "nakijker A: Fase 2: uitlegPad-voorbeeld 'Het vliegtuig stijgt na het opstijgen' is een krom/dubbelop zinnetje; beter 'Het vliegtuig stijgt na de start en daalt voor de landing.'"
+   ]
+  },
+  {
+   "id": "woordenschat-po#14",
+   "stap": 2,
+   "q": "*'s Avonds wordt het **donker**.'* Wat is hier de tegenstelling van 'donker'?",
+   "redenen": [
+    "nakijker A: Opmaak/leesteken: het openingsaanhalingsteken ontbreekt ('*'s Avonds ... .'*' moet '*''s Avonds ... .'*' zijn); nu sluit de zin met een quote die nooit geopend is.",
+    "nakijker B: Leesteken: het citaat mist het openingsaanhalingsteken (*'s Avonds ...'* begint met de apostrof van 's) — schrijf bv. *'’s Avonds wordt het donker.'*"
+   ]
+  },
+  {
+   "id": "woordenschat-po#17",
+   "stap": 3,
+   "q": "*'**Pluimvee**, zoals kippen, eenden en ganzen, scharrelt over het erf.'* Wat is pluimvee?",
+   "redenen": [
+    "nakijker A: Fase 2 (klein): nogSimpeler 'Kippen' is geen betekenis van pluimvee (alleen één voorbeeld); beter 'Boerderijvogels'."
+   ]
+  },
+  {
+   "id": "woordenschat-po#18",
+   "stap": 3,
+   "q": "*'Sem had een tien voor zijn spreekbeurt en was **in de wolken**.'* Wat betekent 'in de wolken' hier?",
+   "redenen": [
+    "nakijker A: Fase 2: de wrongHint op 'heel bang' ('Is Sem echt in de lucht?...') hoort niet specifiek bij die optie — gaat over letterlijke betekenis, niet over 'bang'; beter: 'Word je bang van een tien?'.",
+    "nakijker B: Fase 2: wrongHint staat bij 'heel bang' maar gaat niet over die optie (algemene hint 'is Sem echt in de lucht?'); hoort niet bij de optie op die plek."
+   ]
+  }
+ ]
+}

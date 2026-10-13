@@ -169,6 +169,143 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Hoeveel is 38 ÷ 9?",
+        options: ["4 rest 2", "4 rest 4", "5 rest 2", "3 rest 8"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Reken terug: 4 × 9 en dan de rest erbij. Kom je dan op 38?",
+          "Dat getal keer de deler gaat over 38 heen.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel op in stappen van 9",
+              tekst: "9, 18, 27, 36, 45... Welk getal uit deze rij komt het dichtst bij 38, zonder eroverheen te gaan?",
+            },
+            {
+              titel: "Wat blijft er over?",
+              tekst: "Trek dat getal af van 38. Wat overblijft, schrijf je achter 'rest'. Is het kleiner dan 9? Dan klopt het.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "deeltal",
+              uitleg: "Het getal dat je verdeelt — hier is dat 38.",
+            },
+          ],
+          theorie: "Zoek eerst hoe vaak de deler **helemaal** in het deeltal past. Daarna trek je af om de rest te vinden. Controleer altijd: antwoord × deler + rest moet weer het deeltal geven.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Je verdeelt 22 snoepjes over 9 zakjes: je kijkt hoeveel er in elk zakje kunnen en hoeveel er over zijn.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Terugrekenen",
+              uitleg: "Je kunt controleren: hele antwoord × deler + rest = deeltal.",
+            },
+          ],
+          niveaus: {
+            basis: "9 past 4 keer in 38 (36), met 2 over → 4 rest 2.",
+            simpeler: "Tel met 9: 9, 18, 27, 36 — dat is 4 keer. Hoeveel mist er nog tot 38?",
+            nogSimpeler: "4 × 9 = 36. 38 − 36 = ?",
+          },
+        },
+      },
+      {
+        q: "Welke deelsom komt precies uit (rest 0)?",
+        options: ["42 ÷ 7", "43 ÷ 6", "26 ÷ 4", "33 ÷ 5"],
+        answer: 0,
+        wrongHints: [null, "Zit 43 in de tafel van 6?", null, "Zit 33 in de tafel van 5?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kijk naar de tafel van de deler",
+              tekst: "Een deelsom komt precies uit als het deeltal in de tafel van de deler zit.",
+            },
+            {
+              titel: "Controleer elke som",
+              tekst: "Zeg bij elke som de tafel van de deler op. Kom je precies op het deeltal uit, of ga je eroverheen?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "precies uitkomen",
+              uitleg: "Een deelsom zonder rest: er blijft niets over.",
+            },
+          ],
+          theorie: "Een deling gaat **op** als de rest 0 is. Dat gebeurt alleen als het deeltal een uitkomst is uit de tafel van de deler.",
+          voorbeelden: [
+            {
+              type: "school",
+              tekst: "De meester verdeelt 36 schriften over 4 tafels: dat komt precies uit, er blijft geen schrift over.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tafels tot en met 10",
+              uitleg: "Wie de tafels kent, ziet snel of een deelsom precies uitkomt.",
+            },
+          ],
+          niveaus: {
+            basis: "6 × 7 = 42, dus 42 ÷ 7 = 6 rest 0.",
+            simpeler: "Welk deeltal zit precies in de tafel van zijn deler?",
+            nogSimpeler: "Zit 42 in de tafel van 7?",
+          },
+        },
+      },
+      {
+        q: "Wat is de rest bij 62 ÷ 8?",
+        options: ["6", "7", "2", "8"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is hoe vaak 8 erin past, niet wat overblijft.",
+          null,
+          "De rest moet kleiner zijn dan de deler.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Hoe vaak past 8 erin?",
+              tekst: "8, 16, 24, 32, 40, 48, 56, 64... Welk getal komt het dichtst bij 62, zonder eroverheen te gaan?",
+            },
+            {
+              titel: "Reken de rest uit",
+              tekst: "Trek dat getal af van 62. Wat overblijft is de rest.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "rest",
+              uitleg: "Wat overblijft als de deelsom niet precies uitkomt.",
+            },
+          ],
+          theorie: "De vraag gaat hier alleen over de **rest**: het stukje dat overblijft. Het hele antwoord (hoe vaak de deler past) heb je wel nodig om de rest te vinden, maar het is niet het antwoord.",
+          voorbeelden: [
+            {
+              type: "sport",
+              tekst: "Een trainer zet 30 pionnen neer in rijen van 8: hij kijkt hoeveel pionnen er niet meer in een volle rij passen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Aftrekken",
+              uitleg: "De rest vind je door het grootste passende getal uit de tafel af te trekken van het deeltal.",
+            },
+          ],
+          niveaus: {
+            basis: "8 past 7 keer in 62 (56), en 62 − 56 = 6.",
+            simpeler: "7 × 8 = 56. Hoeveel mist er nog tot 62?",
+            nogSimpeler: "62 − 56 = ?",
+          },
+        },
+      },
     ],
   },
 
@@ -309,6 +446,195 @@ const steps = [
             basis: "7 volle dozen (42), 3 over → nog 1 doos = 8.",
             simpeler: "Passen 45 boeken in 7 dozen (42)? Nee, dus eentje extra.",
             nogSimpeler: "42 boeken in 7 dozen, en die laatste 3?",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Op kamp slapen 4 kinderen in een tent. Er gaan 31 kinderen mee. Hoeveel tenten zijn er minstens nodig?",
+        options: ["8 tenten", "7 tenten", "9 tenten", "7 rest 3"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dan hebben 3 kinderen geen slaapplek.",
+          null,
+          "Een aantal tenten is een heel getal.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Hoeveel tenten zijn helemaal vol?",
+              tekst: "Reken 31 ÷ 4 uit met rest. Zo weet je hoeveel tenten vol zijn en hoeveel kinderen nog een plek zoeken.",
+            },
+            {
+              titel: "Waar slapen de overgebleven kinderen?",
+              tekst: "Ook zij hebben een tent nodig. Wat betekent dat voor het aantal tenten?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "minstens",
+              uitleg: "Het kleinste aantal dat al genoeg is.",
+            },
+          ],
+          theorie: "Bij 'hoeveel heb je nodig' telt de rest mee: de kinderen die overblijven krijgen een extra tent, ook al is die tent niet vol. Je rondt **naar boven** af.",
+          voorbeelden: [
+            {
+              type: "school",
+              tekst: "Een groep van 26 kinderen gaat roeien in bootjes van 4: ook de laatste kinderen hebben een bootje nodig.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Delen met rest",
+              uitleg: "Eerst de rest uitrekenen, dan bepalen of er een extra nodig is.",
+            },
+          ],
+          niveaus: {
+            basis: "7 volle tenten (28 kinderen), 3 over → nog 1 tent = 8.",
+            simpeler: "Passen 31 kinderen in 7 tenten van 4? Nee, er blijven er 3 over.",
+            nogSimpeler: "28 kinderen in 7 tenten, en die laatste 3?",
+          },
+        },
+      },
+      {
+        q: "Je spaart elke week €6 voor een skateboard van €50. Na hoeveel weken heb je voor het eerst genoeg?",
+        options: ["9 weken", "8 weken", "10 weken", "8 rest 2"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoeveel euro heb je na 8 weken? Is dat al €50?",
+          "Had je een week eerder ook al genoeg?",
+          "Een aantal weken is een heel getal.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Hoeveel spaar je in hele weken?",
+              tekst: "50 ÷ 6 vertelt je na hoeveel weken je bijna genoeg hebt, en hoeveel euro je dan nog mist.",
+            },
+            {
+              titel: "Is dat al genoeg?",
+              tekst: "Kijk of het gespaarde bedrag al €50 is. Mist er nog geld, dan heb je nog een week nodig.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "voor het eerst",
+              uitleg: "Het eerste moment waarop het lukt — niet later.",
+            },
+          ],
+          theorie: "Bij spaarvragen moet je **genoeg** hebben. Mist er na de volle weken nog een beetje geld, dan tel je er één week bij. Je rondt **naar boven** af.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Je broer spaart €3 per week voor een bal van €20: ook hij moet kijken na hoeveel weken hij genoeg heeft.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Vermenigvuldigen",
+              uitleg: "Reken per aantal weken uit hoeveel geld je hebt: weken × bedrag per week.",
+            },
+          ],
+          niveaus: {
+            basis: "8 weken = €48 (te weinig), 9 weken = €54 (genoeg).",
+            simpeler: "Heb je na 8 weken (€48) genoeg voor €50? Nee, dus eentje erbij.",
+            nogSimpeler: "Is €48 genoeg voor €50?",
+          },
+        },
+      },
+      {
+        q: "Aan een tafel kunnen 6 mensen zitten. Er komen 40 gasten. Hoeveel tafels zijn er minstens nodig zodat iedereen kan zitten?",
+        options: ["7 tafels", "6 tafels", "8 tafels", "6 rest 4"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dan moeten 4 gasten blijven staan.",
+          "Is dat het kleinste aantal dat genoeg is?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Hoeveel tafels zijn helemaal vol?",
+              tekst: "Reken 40 ÷ 6 uit met rest. Zo weet je hoeveel tafels vol zitten en hoeveel gasten er nog staan.",
+            },
+            {
+              titel: "Waar gaan de overgebleven gasten zitten?",
+              tekst: "Iedereen moet kunnen zitten. Wat betekent dat voor het aantal tafels?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "gast",
+              uitleg: "Iemand die op bezoek komt, bijvoorbeeld op een feest.",
+            },
+          ],
+          theorie: "Moet **iedereen** een plek hebben, dan telt de rest mee. De laatste tafel is dan niet vol, maar je hebt hem wel nodig. Je rondt **naar boven** af.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Voor een verjaardag met 15 gasten zet je banken neer waar 4 mensen op passen: ook de laatste gasten moeten kunnen zitten.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Delen met rest",
+              uitleg: "Eerst uitrekenen hoeveel tafels vol zijn en hoeveel gasten overblijven.",
+            },
+          ],
+          niveaus: {
+            basis: "6 volle tafels (36 gasten), 4 over → nog 1 tafel = 7.",
+            simpeler: "Passen 40 gasten aan 6 tafels van 6? Nee, er blijven er 4 over.",
+            nogSimpeler: "36 gasten aan 6 tafels, en die laatste 4?",
+          },
+        },
+      },
+      {
+        q: "De bakker verkoopt krentenbollen alleen in zakken van 5. De juf wil er één voor elk van haar 23 leerlingen. Hoeveel zakken moet ze minstens kopen?",
+        options: ["5 zakken", "4 zakken", "6 zakken", "4 rest 3"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dan krijgen niet alle leerlingen een krentenbol.",
+          null,
+          "Je koopt een heel aantal zakken.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Hoeveel zakken heb je bijna nodig?",
+              tekst: "Reken 23 ÷ 5 uit met rest. Zo weet je hoeveel volle zakken er nodig zijn en hoeveel leerlingen dan nog niets hebben.",
+            },
+            {
+              titel: "Hoe krijgen de laatste leerlingen er een?",
+              tekst: "Losse krentenbollen kun je hier niet kopen. Wat betekent dat voor het aantal zakken?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "krentenbol",
+              uitleg: "Een zacht, rond broodje met krenten erin.",
+            },
+          ],
+          theorie: "Kun je iets alleen per zak of per doos kopen, en moet iedereen genoeg hebben? Dan koop je een extra zak voor de rest, ook al hou je dan iets over. Je rondt **naar boven** af.",
+          voorbeelden: [
+            {
+              type: "winkel",
+              tekst: "Iemand heeft 14 schroeven nodig en ze zitten in zakjes van 6: hij moet genoeg zakjes kopen, ook al blijven er schroeven over.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Naar boven afronden",
+              uitleg: "Bij 'hoeveel nodig' tel je er een bij als er een rest is.",
+            },
+          ],
+          niveaus: {
+            basis: "4 zakken = 20 krentenbollen (te weinig), 5 zakken = 25 (genoeg).",
+            simpeler: "Heeft de juf met 4 zakken (20 stuks) genoeg voor 23 leerlingen? Nee.",
+            nogSimpeler: "Is 20 genoeg voor 23?",
           },
         },
       },
@@ -615,6 +941,49 @@ const steps = [
             basis: "7 × 3 = 21, plus 1 = 22. Dus 7 volledige teams.",
             simpeler: "Hoe vaak past 3 helemaal in 22?",
             nogSimpeler: "7 × 3 = 21. Is er een 8e vol team?",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Bij de musical komen 60 ouders of verzorgers kijken. In een rij passen 9 stoelen. Hoeveel rijen zijn er minstens nodig zodat iedereen zit?",
+        options: ["7", "6", "8", "6 rest 6"],
+        answer: 0,
+        wrongHints: [null, "Dan moeten er 6 mensen blijven staan.", null, "Een aantal rijen is een heel getal."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek het signaalwoord",
+              tekst: "In de vraag staat 'nodig' en 'iedereen'. Moet de rest dan meetellen of niet?",
+            },
+            {
+              titel: "Reken en rond af",
+              tekst: "Reken 60 ÷ 9 uit met rest. Blijven er mensen over, dan hebben zij ook een rij nodig.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "musical",
+              uitleg: "Een toneelstuk met zingen, bijvoorbeeld de eindmusical van groep 8.",
+            },
+          ],
+          theorie: "Moet **iedereen** zitten, dan telt de rest mee en rond je **naar boven** af. Een laatste rij die niet vol is, heb je toch nodig.",
+          voorbeelden: [
+            {
+              type: "school",
+              tekst: "Bij een informatieavond zet de conciërge stoelen in rijen van 8 voor 50 mensen: ook de laatste mensen moeten kunnen zitten.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Boven of beneden",
+              uitleg: "'Nodig/genoeg' → naar boven. 'Volle/hele' → naar beneden.",
+            },
+          ],
+          niveaus: {
+            basis: "6 volle rijen (54 mensen), 6 over → nog 1 rij = 7.",
+            simpeler: "Zitten alle 60 mensen in 6 rijen van 9? Nee, er blijven er 6 staan.",
+            nogSimpeler: "54 mensen in 6 rijen, en die laatste 6?",
           },
         },
       },

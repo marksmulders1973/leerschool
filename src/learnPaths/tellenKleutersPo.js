@@ -73,6 +73,103 @@ const steps = [
           niveaus: { basis: "Na 9 komt 10.", simpeler: "8, 9... 10!", nogSimpeler: "10" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Hoeveel sterren? ⭐⭐⭐⭐",
+        options: ["4", "3", "5", "6"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Bijna! Je bent er eentje vergeten — tel nog eens met je vinger.",
+          "Dat is er eentje te veel — wijs elke ster maar één keer aan.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Sterren tellen",
+              tekst: "Wijs elke ster aan: 1, 2, 3, **4**. Vier sterren! ⭐",
+            },
+          ],
+          niveaus: {
+            basis: "Vier sterren: 1, 2, 3, 4.",
+            simpeler: "Tel mee: 1-2-3-4!",
+            nogSimpeler: "4",
+          },
+        },
+      },
+      {
+        q: "Hoeveel visjes? 🐟🐟🐟🐟🐟🐟",
+        options: ["6", "5", "7", "4"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Bijna! Je bent er eentje vergeten — tel nog eens rustig.",
+          "Dat is er eentje te veel — wijs elk visje maar één keer aan.",
+          "Er zijn er meer — tel ze allemaal, één voor één.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Visjes tellen",
+              tekst: "Wijs elk visje aan: 1, 2, 3, 4, 5, **6**. Zes visjes! 🐟",
+            },
+          ],
+          niveaus: {
+            basis: "Zes visjes: 1, 2, 3, 4, 5, 6.",
+            simpeler: "Tel mee: 1-2-3-4-5-6!",
+            nogSimpeler: "6",
+          },
+        },
+      },
+      {
+        q: "Hoeveel bloemen? 🌷🌷🌷🌷🌷🌷🌷🌷",
+        options: ["8", "7", "9", "6"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Bijna! Je bent er eentje vergeten — tel nog eens met je vinger erbij.",
+          "Dat is er eentje te veel — wijs elke bloem maar één keer aan.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Bloemen tellen",
+              tekst: "Wijs elke bloem aan: 1, 2, 3, 4, 5, 6, 7, **8**. Acht bloemen! 🌷",
+            },
+          ],
+          niveaus: {
+            basis: "Acht bloemen.",
+            simpeler: "Tel mee: 1-2-3-4-5-6-7-8!",
+            nogSimpeler: "8",
+          },
+        },
+      },
+      {
+        q: "Tel maar: 4, 5, 6... Welk getal komt erna?",
+        options: ["7", "5", "8", "3"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat getal had je al gehad — we tellen vooruit!",
+          "Je slaat er eentje over — wat komt er metéén na 6?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Het tel-liedje",
+              tekst: "Zing maar mee: 4, 5, 6, **7**, 8! Na de 6 komt de 7.",
+            },
+          ],
+          niveaus: {
+            basis: "Na 6 komt 7.",
+            simpeler: "5, 6... 7!",
+            nogSimpeler: "7",
+          },
+        },
+      },
     ],
   },
 
@@ -130,6 +227,79 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Verder dan tien", tekst: "Het liedje gaat gewoon door: 9, 10, **11**, 12, 13... helemaal tot 20! Na 10 komt 11." }],
           niveaus: { basis: "Na 10 komt 11.", simpeler: "9, 10... 11!", nogSimpeler: "11" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welk groepje heeft er het méést?",
+        options: ["🍓🍓🍓🍓🍓", "🍓🍓🍓", "🍓", "🍓🍓"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Tel alle groepjes eens — is er een groepje met nog meer?",
+          null,
+          "Tel nog eens: welk groepje heeft het grootste getal?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel elk groepje",
+              tekst: "Tel maar: 🍓 is één, 🍓🍓 is twee, 🍓🍓🍓 is drie en 🍓🍓🍓🍓🍓 is **vijf**. Vijf is het meest!",
+            },
+          ],
+          niveaus: {
+            basis: "5 aardbeien is het meest.",
+            simpeler: "Vijf is meer dan drie, twee of één.",
+            nogSimpeler: "🍓🍓🍓🍓🍓",
+          },
+        },
+      },
+      {
+        q: "Welk groepje heeft er het mínst?",
+        options: ["🐞", "🐞🐞🐞", "🐞🐞🐞🐞", "🐞🐞"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Tel alle groepjes eens — is er een groepje met nog minder?",
+          null,
+          "Bijna! Is er een groepje met nóg minder?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel elk groepje",
+              tekst: "Tel maar: 🐞🐞🐞🐞 is vier, 🐞🐞🐞 is drie, 🐞🐞 is twee en 🐞 is maar **één**. Eén is het minst!",
+            },
+          ],
+          niveaus: {
+            basis: "1 lieveheersbeestje is het minst.",
+            simpeler: "Eén is minder dan twee, drie of vier.",
+            nogSimpeler: "🐞",
+          },
+        },
+      },
+      {
+        q: "Welk groepje heeft evenveel als 🍌🍌🍌?",
+        options: ["🍒🍒🍒", "🍒🍒", "🍒🍒🍒🍒", "🍒"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Tel de bananen en tel de kersen — kom je op hetzelfde getal uit?",
+          null,
+          "Tel nog eens — is dat echt hetzelfde getal als bij de bananen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel allebei",
+              tekst: "Bananen: 1, 2, **3**. Zoek een groepje kersen met ook **3**: 🍒🍒🍒. Drie en drie is **evenveel**! 🤝",
+            },
+          ],
+          niveaus: {
+            basis: "3 bananen en 3 kersen — evenveel.",
+            simpeler: "Drie en drie is evenveel.",
+            nogSimpeler: "🍒🍒🍒",
+          },
         },
       },
     ],
@@ -191,6 +361,79 @@ const steps = [
           niveaus: { basis: "Puntdak = driehoek.", simpeler: "Punt erop, net als 🔺.", nogSimpeler: "driehoek" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke vorm is dit? ⬜",
+        options: ["vierkant", "cirkel", "driehoek", "ster"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is deze vorm helemaal rond, of heeft hij rechte kanten?",
+          "Tel de hoeken maar met je vinger: hoeveel zijn het er?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vier rechte kanten",
+              tekst: "⬜ heeft 4 rechte kanten en 4 hoeken — net als een blokje. Dat heet een **vierkant**!",
+            },
+          ],
+          niveaus: {
+            basis: "4 rechte kanten en 4 hoeken = vierkant.",
+            simpeler: "Net als een blokje: vierkant!",
+            nogSimpeler: "vierkant",
+          },
+        },
+      },
+      {
+        q: "Hoeveel punten heeft een driehoek? 🔺",
+        options: ["3", "2", "4", "5"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Bijna! Wijs elke punt aan met je vinger en tel nog eens.",
+          "Dat zijn er te veel — wijs elke punt maar één keer aan.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Punten tellen",
+              tekst: "Wijs de punten van 🔺 aan: 1, 2, **3**. Een driehoek heeft 3 punten. Het woord helpt je: **drie**-hoek!",
+            },
+          ],
+          niveaus: {
+            basis: "Een driehoek heeft 3 punten.",
+            simpeler: "Drie-hoek... drie punten!",
+            nogSimpeler: "3",
+          },
+        },
+      },
+      {
+        q: "Welke vorm heeft géén hoeken?",
+        options: ["cirkel", "vierkant", "driehoek", "ster"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Tel maar: heeft deze vorm hoeken? Zoek een vorm die helemaal rond is.",
+          null,
+          "Deze vorm heeft punten — zoek een vorm die helemaal rond is.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Helemaal rond",
+              tekst: "Een **cirkel** ⚪ is helemaal rond — er zit nergens een hoek of punt aan. Een vierkant, een driehoek en een ster hebben wel hoeken of punten.",
+            },
+          ],
+          niveaus: {
+            basis: "Een cirkel is rond, zonder hoeken.",
+            simpeler: "Rond = geen hoeken = cirkel.",
+            nogSimpeler: "cirkel",
+          },
+        },
+      },
     ],
   },
 
@@ -248,6 +491,117 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Boven en onder", tekst: "De lucht is **boven** ⬆️ — daar vliegt de vogel 🐦. Het water is **onder** ⬇️ — daar zwemt de vis 🐟." }],
           niveaus: { basis: "De vogel in de lucht is boven.", simpeler: "De lucht is boven — daar vliegt de vogel.", nogSimpeler: "🐦" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is het kléinst?",
+        options: ["🐜", "🐘", "🦒", "🐴"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat dier is juist heel groot — zoek het allerkleinste diertje.",
+          null,
+          "Past dat dier op je hand? Zoek het allerkleinste.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Groot en klein",
+              tekst: "Een olifant 🐘, een giraf 🦒 en een paard 🐴 zijn groot. Een mier 🐜 is heel **klein** — hij past makkelijk op je vinger!",
+            },
+          ],
+          niveaus: {
+            basis: "De mier is het kleinst.",
+            simpeler: "Een mier is heel klein.",
+            nogSimpeler: "🐜",
+          },
+        },
+      },
+      {
+        q: "Wat is het gróótst?",
+        options: ["🏠 een huis", "🍎 een appel", "🐞 een lieveheersbeestje", "⚽ een bal"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Past dat in je hand? Zoek iets dat nog veel groter is.",
+          null,
+          "Kun je die oppakken? Zoek iets waar je zelf in past.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Groot en klein",
+              tekst: "Een appel, een lieveheersbeestje en een bal kun je oppakken. Een **huis** 🏠 is zó groot dat je erin kunt wonen!",
+            },
+          ],
+          niveaus: {
+            basis: "Een huis is het grootst.",
+            simpeler: "In een huis pas jij zelf!",
+            nogSimpeler: "🏠",
+          },
+        },
+      },
+      {
+        q: "Wat is het lángst?",
+        options: ["🚂 een trein", "✏️ een potlood", "🥄 een lepel", "🔑 een sleutel"],
+        answer: 0,
+        wrongHints: [null, "Dat past in je hand — zoek iets dat héél lang is.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lang en kort",
+              tekst: "Een potlood, een lepel en een sleutel zijn kort — ze passen in je hand. Een **trein** 🚂 is heel lang, met allemaal wagons achter elkaar!",
+            },
+          ],
+          niveaus: {
+            basis: "Een trein is het langst.",
+            simpeler: "Een trein is heel lang.",
+            nogSimpeler: "🚂",
+          },
+        },
+      },
+      {
+        q: "Je voeten gaan ín je ...?",
+        options: ["👟 schoenen", "🎩 hoed", "🧤 wanten", "🧣 sjaal"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Die zet je op je hoofd — wat trek je aan je voeten?",
+          "Die zijn voor je handen — waar stap je met je voeten in?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "In",
+              tekst: "Je stapt met je voeten **in** je schoenen 👟. Een hoed zet je op je hoofd, wanten gaan om je handen, een sjaal om je nek.",
+            },
+          ],
+          niveaus: {
+            basis: "Je voeten gaan in je schoenen.",
+            simpeler: "Stap maar in je schoenen!",
+            nogSimpeler: "👟",
+          },
+        },
+      },
+      {
+        q: "Je staat buiten. Wat is er ónder je voeten?",
+        options: ["de grond", "de zon", "de wolken", "de maan"],
+        answer: 0,
+        wrongHints: [null, "Kijk eens omhoog: die zie je juist bóven je, in de lucht.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Boven en onder",
+              tekst: "De zon, de wolken en de maan zijn **boven** ⬆️, hoog in de lucht. De **grond** is **onder** ⬇️ — daar sta je op!",
+            },
+          ],
+          niveaus: {
+            basis: "De grond is onder je voeten.",
+            simpeler: "Je staat óp de grond — die is onder je.",
+            nogSimpeler: "de grond",
+          },
         },
       },
     ],

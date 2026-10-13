@@ -153,6 +153,195 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is 2/5 als kommagetal?",
+        options: ["0,4", "0,25", "2,5", "0,2"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je hebt de cijfers 2 en 5 gewoon achter de komma gezet. Reken: 2 ÷ 5.",
+          "Dat is meer dan 1 — is 2/5 meer dan een heel?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Teller ÷ noemer",
+              tekst: "2/5 betekent 2 gedeeld door 5. Reken de deling 2 ÷ 5 uit.",
+            },
+            {
+              titel: "Bouw het op uit vijfden",
+              tekst: "Je weet dat 1/5 gelijk is aan 0,2. 2/5 is twee keer zoveel.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vijfde",
+              uitleg: "Een vijfde is 1 van de 5 gelijke delen, geschreven als 1/5.",
+            },
+          ],
+          theorie: "Om een breuk om te zetten naar een **kommagetal** deel je de teller door de noemer. Ken je 1/5 al, dan kun je 2/5 opbouwen door 0,2 twee keer te nemen.",
+          voorbeelden: [
+            {
+              type: "thuis",
+              tekst: "Een taart is in 5 gelijke stukken gesneden en jij krijgt er 2. Welk kommagetal hoort bij jouw deel? Dat reken je met dezelfde truc uit.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Optellen met kommagetallen",
+              uitleg: "0,2 + 0,2 geeft het kommagetal voor twee vijfde.",
+            },
+          ],
+          niveaus: {
+            basis: "2/5 = 2 ÷ 5 = 0,4.",
+            simpeler: "Een vijfde is 0,2. Hoeveel is twee vijfde?",
+            nogSimpeler: "0,2 + 0,2 = ?",
+          },
+        },
+      },
+      {
+        q: "Wat is 0,3 als breuk?",
+        options: ["3/10", "1/3", "3/100", "30/10"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoeveel cijfers staan er achter de komma? Dat vertelt je de noemer.",
+          null,
+          "Dat is meer dan 1 — 0,3 is minder dan een heel.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lees het kommagetal",
+              tekst: "0,3 spreek je uit als 'drie tienden'. Eén cijfer achter de komma betekent tienden.",
+            },
+            {
+              titel: "Schrijf het als breuk",
+              tekst: "Drie tienden schrijf je als een breuk met 3 boven en 10 onder de streep.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tiende",
+              uitleg: "Een tiende is 1 van de 10 gelijke delen, geschreven als 1/10 of 0,1.",
+            },
+          ],
+          theorie: "Bij een **kommagetal** met één cijfer achter de komma tel je in tienden. Het cijfer achter de komma wordt de teller, 10 wordt de noemer.",
+          voorbeelden: [
+            {
+              type: "geld",
+              tekst: "0,3 van een euro is 30 cent: dat zijn 3 van de 10 dubbeltjes.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Plaatswaarde",
+              uitleg: "Het eerste cijfer achter de komma telt de tienden, het tweede de honderdsten.",
+            },
+          ],
+          niveaus: {
+            basis: "0,3 = drie tienden = 3/10.",
+            simpeler: "0,3 zeg je als 'drie tienden'. Hoe schrijf je dat als breuk?",
+            nogSimpeler: "Drie van de tien = ?/10",
+          },
+        },
+      },
+      {
+        q: "Wat is 7/10 als kommagetal?",
+        options: ["0,7", "0,07", "7,0", "0,17"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is 7/100 — tienden staan op de eerste plek achter de komma.",
+          "Dat is een heel getal.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kijk naar de noemer",
+              tekst: "De noemer is 10, dus het gaat om tienden.",
+            },
+            {
+              titel: "Zet de teller achter de komma",
+              tekst: "Tienden komen op de eerste plek achter de komma. Zet de 7 daar neer.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "noemer",
+              uitleg: "Het getal onder de breukstreep: in hoeveel gelijke delen het geheel is verdeeld.",
+            },
+          ],
+          theorie: "Een breuk met noemer 10 zet je snel om naar een **kommagetal**: de teller komt op de eerste plek achter de komma. Je kunt ook rekenen: teller ÷ noemer.",
+          voorbeelden: [
+            {
+              type: "sport",
+              tekst: "Je hebt 7 van de 10 rondjes van de baan gelopen. Welk kommagetal hoort bij dat deel?",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Plaatswaarde",
+              uitleg: "Eerste plek achter de komma = tienden, tweede plek = honderdsten.",
+            },
+          ],
+          niveaus: {
+            basis: "7/10 = 7 ÷ 10 = 0,7.",
+            simpeler: "Zeven tienden: zet de 7 op de eerste plek achter de komma.",
+            nogSimpeler: "0,? = zeven tienden",
+          },
+        },
+      },
+      {
+        q: "Wat is 0,8 als breuk (zo eenvoudig mogelijk)?",
+        options: ["4/5", "1/8", "8/100", "3/4"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoeveel cijfers staan er achter de komma? Dat zegt welke noemer je nodig hebt.",
+          "Dat is 0,08 — let op hoeveel cijfers er achter de komma staan.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Schrijf als tienden",
+              tekst: "0,8 is acht tienden, dus 8/10.",
+            },
+            {
+              titel: "Maak de breuk eenvoudiger",
+              tekst: "Deel de teller en de noemer allebei door 2. Dan heb je dezelfde breuk met kleinere getallen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vereenvoudigen",
+              uitleg: "Teller en noemer door hetzelfde getal delen, zodat de breuk kleinere getallen krijgt maar even groot blijft.",
+            },
+          ],
+          theorie: "Een **kommagetal** met één cijfer achter de komma schrijf je eerst als tienden. Daarna kun je de breuk vereenvoudigen door teller en noemer door hetzelfde getal te delen.",
+          voorbeelden: [
+            {
+              type: "eten",
+              tekst: "Van een pizza in 10 stukken is 8 stukken op. Dat is net zoveel als 4 van de 5 stukken als je de pizza in 5 grote stukken had gesneden.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Delen door 2",
+              uitleg: "8 ÷ 2 = 4 en 10 ÷ 2 = 5.",
+            },
+          ],
+          niveaus: {
+            basis: "0,8 = 8/10 = 4/5.",
+            simpeler: "0,8 is 8/10. Deel boven en onder door 2.",
+            nogSimpeler: "8 ÷ 2 = ? en 10 ÷ 2 = ?",
+          },
+        },
+      },
     ],
   },
 
@@ -290,6 +479,143 @@ const steps = [
             basis: "40 ÷ 100 = 0,4.",
             simpeler: "Komma 2 naar links: 40 → 0,40 = 0,4.",
             nogSimpeler: "Is 40% meer of minder dan 1?",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is 0,35 in procent?",
+        options: ["35%", "3,5%", "0,35%", "350%"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je schoof de komma maar 1 plaats. Hoeveel plaatsen moet het zijn?",
+          null,
+          "Dat is meer dan het geheel.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Keer 100",
+              tekst: "Van kommagetal naar procent doe je keer 100.",
+            },
+            {
+              titel: "Schuif de komma",
+              tekst: "Keer 100 betekent: de komma 2 plaatsen naar rechts. Wat staat er dan?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "procent",
+              uitleg: "'Per honderd': 35% betekent 35 van de 100.",
+            },
+          ],
+          theorie: "Een **kommagetal** zet je om naar **procent** door keer 100 te doen. Dat is hetzelfde als de komma 2 plaatsen naar rechts schuiven.",
+          voorbeelden: [
+            {
+              type: "school",
+              tekst: "Als 0,35 van de klas met de fiets komt, is dat 35 van elke 100 kinderen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Keer 100",
+              uitleg: "Bij keer 100 schuift elk cijfer 2 plaatsen op: 0,35 wordt 35.",
+            },
+          ],
+          niveaus: {
+            basis: "0,35 × 100 = 35, dus 35%.",
+            simpeler: "Schuif de komma in 0,35 twee plaatsen naar rechts.",
+            nogSimpeler: "0,35 × 100 = ?",
+          },
+        },
+      },
+      {
+        q: "Wat is 9% als kommagetal?",
+        options: ["0,09", "0,9", "9,0", "0,009"],
+        answer: 0,
+        wrongHints: [null, "Dat is 90% — let op de nul.", "Dat is het hele getal 9.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Deel door 100",
+              tekst: "Van procent naar kommagetal doe je gedeeld door 100.",
+            },
+            {
+              titel: "Schuif de komma",
+              tekst: "De komma gaat 2 plaatsen naar links. Bij 9 moet je er een nul voor zetten.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "procent",
+              uitleg: "'Per honderd': 9% betekent 9 van de 100.",
+            },
+          ],
+          theorie: "Een **procent** zet je om naar een **kommagetal** door te delen door 100: de komma 2 plaatsen naar links. Heb je te weinig cijfers, zet er dan nullen voor.",
+          voorbeelden: [
+            {
+              type: "geld",
+              tekst: "9 cent is 9 van de 100 cent van een euro, dus € 0,09.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Nullen aanvullen",
+              uitleg: "9 is hetzelfde als 9,0 of 09,0. Zo kun je de komma 2 plaatsen naar links schuiven.",
+            },
+          ],
+          niveaus: {
+            basis: "9 ÷ 100 = 0,09.",
+            simpeler: "Schuif de komma in 9 twee plaatsen naar links (zet een nul ervoor).",
+            nogSimpeler: "9 cent = € 0,0?",
+          },
+        },
+      },
+      {
+        q: "Wat is 0,12 in procent?",
+        options: ["12%", "1,2%", "120%", "0,12%"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Schuif de komma twee plaatsen, niet één.",
+          "Dat is meer dan het geheel — 0,12 is veel minder dan 1.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Keer 100",
+              tekst: "Van kommagetal naar procent: keer 100.",
+            },
+            {
+              titel: "Schuif de komma",
+              tekst: "Schuif de komma in 0,12 twee plaatsen naar rechts.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "procent",
+              uitleg: "'Per honderd': 12% betekent 12 van de 100.",
+            },
+          ],
+          theorie: "Een **kommagetal** wordt een **procent** als je het keer 100 doet. De komma schuift dan 2 plaatsen naar rechts.",
+          voorbeelden: [
+            {
+              type: "geld",
+              tekst: "€ 0,12 is 12 cent: 12 van de 100 cent van een euro.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Keer 100",
+              uitleg: "0,12 × 100 = 12.",
+            },
+          ],
+          niveaus: {
+            basis: "0,12 × 100 = 12, dus 12%.",
+            simpeler: "0,12 euro is 12 cent. Hoeveel van de 100 is dat?",
+            nogSimpeler: "0,12 × 100 = ?",
           },
         },
       },
@@ -432,6 +758,138 @@ const steps = [
             basis: "75% = ¾ (drie kwart).",
             simpeler: "¼ = 25%. Hoeveel kwarten zijn 75%?",
             nogSimpeler: "25 + 25 + 25 = 75 → hoeveel kwarten?",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is 9/10 in procent?",
+        options: ["90%", "9%", "19%", "0,9%"],
+        answer: 0,
+        wrongHints: [null, "Dat is 9 van de 100, niet 9 van de 10.", null, "Veel te klein."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Ga via het kommagetal",
+              tekst: "9/10 is negen tienden, als kommagetal 0,9.",
+            },
+            {
+              titel: "Maak er procent van",
+              tekst: "Doe het kommagetal keer 100.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "procent",
+              uitleg: "'Per honderd': hoeveel van de 100.",
+            },
+          ],
+          theorie: "Een **breuk** zet je om naar **procent** via het kommagetal: eerst teller ÷ noemer, dan keer 100. Je kunt ook denken: 1/10 = 10%, dus 9/10 is negen keer zoveel.",
+          voorbeelden: [
+            {
+              type: "school",
+              tekst: "Je hebt 9 van de 10 woorden goed bij je dictee. Hoeveel procent goed is dat?",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tienden en procent",
+              uitleg: "1/10 = 10%, 2/10 = 20%, enzovoort.",
+            },
+          ],
+          niveaus: {
+            basis: "9/10 = 0,9 = 90%.",
+            simpeler: "1/10 is 10%. Hoeveel is 9/10?",
+            nogSimpeler: "9 × 10% = ?",
+          },
+        },
+      },
+      {
+        q: "Wat is 1/100 in procent?",
+        options: ["1%", "10%", "100%", "0,01%"],
+        answer: 0,
+        wrongHints: [null, "Dat is 1/10.", "Dat is het geheel.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Procent = per honderd",
+              tekst: "Procent betekent 'van de honderd'.",
+            },
+            {
+              titel: "Lees de breuk",
+              tekst: "1/100 is 1 van de 100.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "procent",
+              uitleg: "'Per honderd': 1% is 1 van de 100.",
+            },
+          ],
+          theorie: "Een **procent** is een breuk met 100 als noemer. Staat er al 100 onder de streep, dan is de teller meteen het aantal procent.",
+          voorbeelden: [
+            {
+              type: "geld",
+              tekst: "1 cent is 1/100 van een euro: 1 van de 100 cent.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Breuk met noemer 100",
+              uitleg: "25/100 = 25%, 7/100 = 7%: de teller is het procent.",
+            },
+          ],
+          niveaus: {
+            basis: "1/100 = 1%.",
+            simpeler: "1 van de 100. Hoeveel procent is dat?",
+            nogSimpeler: "? van de 100 = ?%",
+          },
+        },
+      },
+      {
+        q: "Wat is 60% als breuk (zo eenvoudig mogelijk)?",
+        options: ["3/5", "1/6", "6/100", "2/3"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "De 6 hoort niet in de noemer. Schrijf 60% eerst als ?/100.",
+          "Dat is 6%, niet 60%.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Schrijf als honderdsten",
+              tekst: "60% = 60/100.",
+            },
+            {
+              titel: "Maak de breuk eenvoudiger",
+              tekst: "Deel teller en noemer door 20 (of eerst door 10 en dan door 2).",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vereenvoudigen",
+              uitleg: "Teller en noemer door hetzelfde getal delen, zodat de breuk kleinere getallen krijgt maar even groot blijft.",
+            },
+          ],
+          theorie: "Een **procent** is een breuk van honderd. Daarna kun je de breuk vereenvoudigen. Je kunt ook denken: 1/5 = 20%, dus 60% is 3 keer 1/5.",
+          voorbeelden: [
+            {
+              type: "sport",
+              tekst: "Je team won 60% van de wedstrijden. Dat is 3 van elke 5 wedstrijden.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Vijfden en procent",
+              uitleg: "1/5 = 20%, 2/5 = 40%, 3/5 = 60%.",
+            },
+          ],
+          niveaus: {
+            basis: "60% = 60/100 = 6/10 = 3/5.",
+            simpeler: "1/5 is 20%. Hoeveel vijfden is 60%?",
+            nogSimpeler: "60 ÷ 20 = ?, dus ?/5",
           },
         },
       },
@@ -613,6 +1071,101 @@ const steps = [
             basis: "15% < 20% (0,2) < 25% (¼).",
             simpeler: "Zet alles om naar procent: 15%, 20%, 25%. Welke is het kleinst?",
             nogSimpeler: "Welk getal is het kleinst: 15, 20 of 25?",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke is het kleinst: 0,15 — 1/10 — 12%?",
+        options: ["1/10", "0,15", "12%", "ze zijn gelijk"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zet alles om naar procent en vergelijk.",
+          null,
+          "Reken ze alle drie om naar procent — zijn ze echt gelijk?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zet alles om naar procent",
+              tekst: "0,15 = 15%. 1/10 = 10%. 12% blijft 12%.",
+            },
+            {
+              titel: "Vergelijk",
+              tekst: "Welk procent is het laagst?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vergelijken",
+              uitleg: "Bepalen welk getal het grootst of het kleinst is.",
+            },
+          ],
+          theorie: "Getallen in verschillende vormen vergelijk je pas goed als je ze **dezelfde soort** maakt, bijvoorbeeld allemaal procent.",
+          voorbeelden: [
+            {
+              type: "winkel",
+              tekst: "Is 1/10 korting meer of minder dan 12% korting? Zet 1/10 om naar procent om het te zien.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tienden en procent",
+              uitleg: "1/10 = 0,1 = 10%.",
+            },
+          ],
+          niveaus: {
+            basis: "15%, 10% en 12%: 10% (= 1/10) is het kleinst.",
+            simpeler: "Schrijf ze alle drie als procent: 15%, ?%, 12%.",
+            nogSimpeler: "Wat is het kleinst: 15, 10 of 12?",
+          },
+        },
+      },
+      {
+        q: "Noor en Daan maakten dezelfde toets. Noor had 70% goed, Daan had 0,65 van de vragen goed. Wie had meer vragen goed?",
+        options: ["Noor", "Daan", "ze hadden evenveel goed", "dat kun je niet weten"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Reken 0,65 om naar procent en vergelijk met 70%.",
+          null,
+          "Het is dezelfde toets, dus je kunt het wel vergelijken: maak ze dezelfde soort.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zet 0,65 om naar procent",
+              tekst: "0,65 × 100 = 65, dus Daan had 65% goed.",
+            },
+            {
+              titel: "Vergelijk",
+              tekst: "Vergelijk 70% van Noor met 65% van Daan.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vergelijken",
+              uitleg: "Bepalen wie of wat het meest is.",
+            },
+          ],
+          theorie: "Om een procent en een kommagetal te vergelijken, maak je ze **dezelfde soort**. Omdat het dezelfde toets is, betekent een hoger procent ook meer vragen goed.",
+          voorbeelden: [
+            {
+              type: "school",
+              tekst: "Bij een dictee van 20 woorden is 70% goed 14 woorden en 65% goed 13 woorden.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Kommagetal naar procent",
+              uitleg: "Keer 100: de komma 2 plaatsen naar rechts.",
+            },
+          ],
+          niveaus: {
+            basis: "0,65 = 65%. 70% is meer dan 65%, dus Noor.",
+            simpeler: "Schrijf 0,65 als procent en vergelijk met 70%.",
+            nogSimpeler: "Wat is meer: 70 of 65?",
           },
         },
       },

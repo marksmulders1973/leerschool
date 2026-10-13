@@ -1,0 +1,523 @@
+{
+ "pathId": "verwijswoorden-begrijpend-lezen-po",
+ "geschreven": 13,
+ "opgenomen": [
+  {
+   "stap": 0,
+   "q": "*\"Sanne kreeg een brief van haar oom. Hij woont al tien jaar in Canada.\"* — Naar wie verwijst 'hij'?",
+   "options": [
+    "De oom van Sanne",
+    "Sanne",
+    "De brief",
+    "De postbode"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Zou je over Sanne 'hij' zeggen? Controleer of het verwijswoord past bij de persoon.",
+    null,
+    "Wordt er een postbode genoemd? Zoek terug in de zin ervoor."
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Vind het verwijswoord",
+      "tekst": "Het woord dat je moet oplossen is 'hij'."
+     },
+     {
+      "titel": "Zoek terug",
+      "tekst": "De zin ervoor: 'Sanne kreeg een brief van haar oom.' Daar staan Sanne, een brief en de oom."
+     },
+     {
+      "titel": "Controleer",
+      "tekst": "Vul in: 'De brief woont in Canada' — kan niet. 'Sanne woont in Canada' — maar over Sanne zeg je 'zij'. 'De oom woont in Canada' — logisch!"
+     }
+    ],
+    "niveaus": {
+     "basis": "Zoek terug in de zin ervoor. Wie of wat kan er in Canada wonen, en past bij 'hij'?",
+     "simpeler": "Vul de drie dingen uit de eerste zin één voor één in: '... woont in Canada.' Welke klinkt goed?",
+     "nogSimpeler": "Kan een brief ergens wonen?"
+    },
+    "woorden": [
+     {
+      "woord": "verwijswoord",
+      "uitleg": "Een kort woord (hij, ze, die, dat, daar...) dat wijst naar iemand of iets dat al eerder in de tekst genoemd is."
+     }
+    ],
+    "theorie": "**Drie kandidaten, één antwoord**\n\nIn de zin vóór 'hij' staan soms meerdere personen of dingen. Gebruik dan de controle:\n\n- Past 'hij' bij deze persoon of dit ding?\n- Klinkt de zin logisch als je het invult?\n\nAlleen het antwoord dat allebei de checks haalt, is goed.",
+    "voorbeelden": [
+     {
+      "type": "invullen",
+      "tekst": "'Tim kreeg een cadeau van zijn tante. Zij woont in Spanje.' → 'zij' past bij de tante, niet bij Tim of het cadeau."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Invullen beslist",
+      "uitleg": "Vul elke kandidaat in op de plek van het verwijswoord. De zin die logisch klinkt, wint."
+     }
+    ]
+   },
+   "id": "verwijswoorden-begrijpend-lezen-po#0"
+  },
+  {
+   "stap": 0,
+   "q": "Je zoekt naar wie of wat een verwijswoord wijst. Waar staat het antwoord meestal?",
+   "options": [
+    "Vlak vóór het verwijswoord",
+    "Helemaal aan het einde van de tekst",
+    "Alleen in de titel van de tekst",
+    "Nergens, je moet het raden"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Een verwijswoord wijst meestal naar iets dat al genoemd is. Is dat aan het einde van de tekst?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Wat doet een verwijswoord?",
+      "tekst": "Het wijst naar iemand of iets dat al eerder in de tekst genoemd is."
+     },
+     {
+      "titel": "Eerder = ervoor",
+      "tekst": "Als iets al eerder genoemd is, staat het vóór het verwijswoord. Meestal vlak ervoor, vaak in de zin ervoor."
+     },
+     {
+      "titel": "Controleer",
+      "tekst": "'Lisa heeft een nieuwe fiets. Hij is knalrood.' De fiets staat vlak vóór 'hij'."
+     }
+    ],
+    "niveaus": {
+     "basis": "Een verwijswoord wijst naar iets dat al genoemd is. Waar in de tekst staat iets dat al genoemd is?",
+     "simpeler": "Denk aan 'Lisa heeft een fiets. Hij is rood.' Waar staat 'de fiets': voor of na 'hij'?",
+     "nogSimpeler": "Zoek je eerder in de tekst of later?"
+    },
+    "woorden": [
+     {
+      "woord": "verwijzen",
+      "uitleg": "Wijzen naar: het woord zegt 'kijk terug, daar staat over wie of wat ik het heb'."
+     }
+    ],
+    "theorie": "**Zoek terug, vlakbij**\n\nDe vaste strategie:\n\n1. Vind het verwijswoord.\n2. Zoek terug, meestal in de zin ervoor.\n3. Controleer door in te vullen.\n\nHeel soms wijst een verwijswoord vooruit, maar meestal vind je het antwoord vlak ervóór.",
+    "voorbeelden": [
+     {
+      "type": "vlakbij",
+      "tekst": "'Opa en oma komen op bezoek. Ze nemen taart mee.' → 'opa en oma' staan direct in de zin vóór 'ze'."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Terug, niet ver weg",
+      "uitleg": "Begin met zoeken in de zin vlak vóór het verwijswoord."
+     }
+    ]
+   },
+   "id": "verwijswoorden-begrijpend-lezen-po#2"
+  },
+  {
+   "stap": 1,
+   "q": "*\"Bij de dierenarts kreeg Snuffel een prikje. Dat vond ze niet leuk.\"* — Naar wat verwijst 'dat'?",
+   "options": [
+    "Het prikje",
+    "De witte jas",
+    "Het doosje pilletjes",
+    "De mand van Snuffel"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "De witte jas wordt pas ná 'dat' genoemd. Zoek terug in de zin ervoor.",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Zoek terug",
+      "tekst": "De zin ervoor: 'Bij de dierenarts kreeg Snuffel een prikje.' Daar staan de dierenarts, Snuffel en het prikje."
+     },
+     {
+      "titel": "Kies het ding",
+      "tekst": "'Dat vond ze niet leuk' — de dierenarts is een persoon en Snuffel is 'ze' zelf. Wat blijft er over?"
+     },
+     {
+      "titel": "Controleer",
+      "tekst": "Vul in: 'Het prikje vond ze niet leuk.' Logisch: een prik doet een beetje pijn."
+     }
+    ],
+    "niveaus": {
+     "basis": "Zoek terug in de zin ervoor. Welk ding kreeg Snuffel bij de dierenarts?",
+     "simpeler": "Vul in: '... vond ze niet leuk.' Wat kreeg Snuffel net?",
+     "nogSimpeler": "Wat kreeg Snuffel bij de dierenarts?"
+    },
+    "woorden": [
+     {
+      "woord": "prikje",
+      "uitleg": "Een kleine prik met een naald, bijvoorbeeld voor een medicijn."
+     }
+    ],
+    "theorie": "**Zoek eerst in de zin ervoor**\n\nVaak worden er later in de tekst nog meer dingen genoemd, zoals de witte jas en het doosje pilletjes. Laat je daar niet door afleiden.\n\nEen verwijswoord wijst bijna altijd **terug**: begin dus met de zin vlak ervóór.",
+    "voorbeelden": [
+     {
+      "type": "terug",
+      "tekst": "'Sem kreeg een ijsje. Dat smaakte lekker. Daarna gingen ze naar huis.' → 'dat' is het ijsje uit de zin ervoor."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Terug, niet vooruit",
+      "uitleg": "Wat ná het verwijswoord komt, is meestal niet het antwoord."
+     }
+    ]
+   },
+   "id": "verwijswoorden-begrijpend-lezen-po#5"
+  },
+  {
+   "stap": 1,
+   "q": "*\"Fenna was opgelucht: haar kat was weer beter.\"* — Naar wie verwijst 'haar'?",
+   "options": [
+    "Fenna",
+    "Snuffel",
+    "De dierenarts",
+    "Fenna's vader"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Snuffel ís de kat. Kan de kat dan ook de baas van de kat zijn?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Zoek terug",
+      "tekst": "Vlak vóór 'haar' staat in dezelfde zin: 'Fenna was opgelucht'."
+     },
+     {
+      "titel": "Van wie is de kat?",
+      "tekst": "Aan het begin van de tekst staat: 'Fenna heeft een kat.' De kat is dus van Fenna."
+     },
+     {
+      "titel": "Controleer",
+      "tekst": "Vul in: 'Fenna's kat was weer beter.' Logisch: daarom is Fenna opgelucht."
+     }
+    ],
+    "niveaus": {
+     "basis": "'Haar kat': van wie is de kat? Kijk wie er vlak vóór 'haar' genoemd wordt.",
+     "simpeler": "Vul in: '... kat was weer beter.' Van wie is Snuffel?",
+     "nogSimpeler": "Wie heeft er een kat?"
+    },
+    "woorden": [
+     {
+      "woord": "opgelucht",
+      "uitleg": "Je voelt je weer rustig omdat iets naars voorbij is."
+     }
+    ],
+    "theorie": "**'Haar' zegt van wie iets is**\n\n'Haar' is een verwijswoord dat laat zien **van wie** iets is: haar kat, haar fiets, haar boek.\n\nVraag je dus af: van wie is die kat? Het antwoord staat vaak in dezelfde zin of in de zin ervoor.",
+    "voorbeelden": [
+     {
+      "type": "van-wie",
+      "tekst": "'Lotte zocht overal. Haar sleutel was weg.' → de sleutel van Lotte."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Van wie is het?",
+      "uitleg": "Bij 'haar', 'zijn' en 'hun' vraag je: van wie is het ding dat erachter staat?"
+     }
+    ]
+   },
+   "id": "verwijswoorden-begrijpend-lezen-po#7"
+  },
+  {
+   "stap": 2,
+   "q": "*\"Toen ze de taart uit de oven haalde, rook Amira meteen dat hij aangebrand was.\"* — Naar wie verwijst 'ze'?",
+   "options": [
+    "Amira",
+    "De taart",
+    "De oven",
+    "De moeder van Amira"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Kan een taart iets uit de oven halen? Zoek een persoon in de zin.",
+    null,
+    "Wordt er in deze zin een moeder genoemd? Lees de zin helemaal uit."
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Zoek terug",
+      "tekst": "Vóór 'ze' staat alleen 'Toen'. Er is niets om naar terug te wijzen."
+     },
+     {
+      "titel": "Lees verder",
+      "tekst": "Lees de rest van de zin: '... rook Amira meteen dat hij aangebrand was.' Daar staat een persoon: Amira."
+     },
+     {
+      "titel": "Controleer",
+      "tekst": "Vul in: 'Toen Amira de taart uit de oven haalde...' Logisch! 'Ze' wijst hier vooruit."
+     }
+    ],
+    "niveaus": {
+     "basis": "Vóór 'ze' staat niemand. Lees de hele zin: welke persoon wordt er verderop genoemd?",
+     "simpeler": "Wie haalt er iets uit de oven: een persoon of een ding? Welke persoon staat er in de zin?",
+     "nogSimpeler": "Welke naam staat er in de zin?"
+    },
+    "woorden": [
+     {
+      "woord": "vooruit wijzen",
+      "uitleg": "Het verwijswoord komt eerst, en de naam pas later in de zin."
+     }
+    ],
+    "theorie": "**Soms wijst een verwijswoord vooruit**\n\nMeestal zoek je terug. Maar staat het verwijswoord aan het begin van de zin, na 'toen', 'voordat' of 'als'? Dan kan de naam ook pas later komen.\n\nVind je terugzoekend niets? Lees dan de rest van de zin.",
+    "voorbeelden": [
+     {
+      "type": "vooruit",
+      "tekst": "'Als hij moe is, gaat Ruben vroeg naar bed.' → 'hij' wijst vooruit naar Ruben."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Niets ervoor? Kijk erna",
+      "uitleg": "Staat er vóór het verwijswoord niemand die past? Zoek dan verderop in de zin."
+     }
+    ]
+   },
+   "id": "verwijswoorden-begrijpend-lezen-po#8"
+  },
+  {
+   "stap": 2,
+   "q": "*\"Het had de hele nacht gesneeuwd. Daardoor bleef de school dicht.\"* — Naar wat verwijst 'daardoor'?",
+   "options": [
+    "Dat het de hele nacht had gesneeuwd",
+    "Dat de school dicht bleef",
+    "De hele nacht",
+    "De kinderen die thuis bleven"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Dat is wat er gebeurde ná 'daardoor': het gevolg. 'Daardoor' wijst juist naar de oorzaak. Wat gebeurde er eerst?",
+    null,
+    "Worden er kinderen genoemd in deze twee zinnen?"
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "'Daardoor' = oorzaak",
+      "tekst": "'Daardoor' wijst naar de reden waarom iets gebeurt. Die reden is eerder genoemd."
+     },
+     {
+      "titel": "Zoek terug",
+      "tekst": "De zin ervoor: 'Het had de hele nacht gesneeuwd.' Dat is wat er eerst gebeurde."
+     },
+     {
+      "titel": "Controleer",
+      "tekst": "Vul in: 'Doordat het de hele nacht had gesneeuwd, bleef de school dicht.' Logisch!"
+     }
+    ],
+    "niveaus": {
+     "basis": "'Daardoor' wijst naar een oorzaak. Wat gebeurde er eerst, waardoor de school dicht bleef?",
+     "simpeler": "Vul in: 'Doordat ..., bleef de school dicht.' Wat past er op de puntjes?",
+     "nogSimpeler": "Waarom bleef de school dicht?"
+    },
+    "woorden": [
+     {
+      "woord": "oorzaak",
+      "uitleg": "De reden waardoor iets gebeurt."
+     },
+     {
+      "woord": "gevolg",
+      "uitleg": "Wat er gebeurt door de oorzaak."
+     }
+    ],
+    "theorie": "**'Daardoor' en 'hierdoor' wijzen naar een oorzaak**\n\nDeze woorden wijzen niet naar een persoon of ding, maar naar een héle gebeurtenis die eerder genoemd is.\n\n- Oorzaak: het sneeuwde de hele nacht.\n- Gevolg: de school bleef dicht.\n\n'Daardoor' staat bij het gevolg en wijst terug naar de oorzaak.",
+    "voorbeelden": [
+     {
+      "type": "oorzaak-gevolg",
+      "tekst": "'De bus had pech. Daardoor kwamen we te laat.' → 'daardoor' wijst naar de pech van de bus."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Vul de hele zin in",
+      "uitleg": "Bij 'daardoor' vul je de hele vorige zin in. Klinkt het logisch? Dan heb je de oorzaak."
+     }
+    ]
+   },
+   "id": "verwijswoorden-begrijpend-lezen-po#9"
+  },
+  {
+   "stap": 3,
+   "q": "*\"Eén geitje knabbelde zelfs aan haar jas.\"* — Naar wie verwijst 'haar'?",
+   "options": [
+    "Jara",
+    "Boerin Els",
+    "Meester Ruben",
+    "Het geitje"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Boerin Els stond bij de ingang. Over wie gaat deze alinea?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Zoek de alinea",
+      "tekst": "Deze zin staat in de alinea die begint met: 'Jara liep meteen naar de geiten.'"
+     },
+     {
+      "titel": "Zoek terug",
+      "tekst": "In de zin ervoor komen de geiten op 'haar' af, en dat is Jara. Het geitje knabbelt nu aan de jas van dezelfde persoon."
+     },
+     {
+      "titel": "Controleer",
+      "tekst": "Vul in: 'Eén geitje knabbelde zelfs aan Jara's jas.' Logisch! In de zin erna moet Jara er hard om lachen."
+     }
+    ],
+    "niveaus": {
+     "basis": "Over wie gaat deze alinea? Kijk naar de eerste zin ervan.",
+     "simpeler": "De geiten kwamen op Jara af. Aan wiens jas knabbelt het geitje dan?",
+     "nogSimpeler": "Wie liep er naar de geiten?"
+    },
+    "woorden": [
+     {
+      "woord": "knabbelen",
+      "uitleg": "Met kleine hapjes ergens aan bijten."
+     }
+    ],
+    "theorie": "**Kijk over welke persoon de alinea gaat**\n\nIn een langere tekst gaat elke alinea vaak over één persoon. Jara's alinea gaat over Jara en de geiten. Sems alinea gaat over Sem en de ezel.\n\nHelpt de zin ervoor niet genoeg? Kijk dan naar het begin van de alinea.",
+    "voorbeelden": [
+     {
+      "type": "alinea",
+      "tekst": "'Noor ging naar de bakker. Ze kocht brood. De bakker gaf haar een koekje.' → 'haar' is Noor: over haar gaat dit stukje."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Alinea = onderwerp",
+      "uitleg": "Een nieuwe alinea begint vaak met een nieuwe persoon. Die persoon is het eerste dat je controleert."
+     }
+    ]
+   },
+   "id": "verwijswoorden-begrijpend-lezen-po#10"
+  },
+  {
+   "stap": 3,
+   "q": "*\"Boerin Els troostte hem: 'Balthasar moet eerst even aan je wennen.'\"* — Naar wie verwijst 'je'?",
+   "options": [
+    "Sem",
+    "Jara",
+    "Meester Ruben",
+    "Balthasar"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Jara staat in de alinea ervoor, bij de geiten. Tegen wie praat boerin Els hier?",
+    null,
+    "Balthasar is de ezel zelf. Kan de ezel aan zichzelf wennen?"
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Wie praat tegen wie?",
+      "tekst": "'Je' is degene tegen wie iemand praat. Boerin Els praat hier."
+     },
+     {
+      "titel": "Zoek terug",
+      "tekst": "'Boerin Els troostte hem.' En 'hem' is Sem, die de ezel wilde aaien. Tegen hem praat ze."
+     },
+     {
+      "titel": "Controleer",
+      "tekst": "Vul in: 'Balthasar moet eerst even aan Sem wennen.' Logisch: de ezel kent Sem nog niet."
+     }
+    ],
+    "niveaus": {
+     "basis": "Boerin Els praat. Tegen wie praat ze? Kijk naar wie ze troost.",
+     "simpeler": "Wie wilde de ezel aaien, maar had pech? Tegen die persoon praat boerin Els.",
+     "nogSimpeler": "Wie troost boerin Els?"
+    },
+    "woorden": [
+     {
+      "woord": "troosten",
+      "uitleg": "Iemand die verdrietig is weer een beetje blij of rustig maken."
+     },
+     {
+      "woord": "wennen",
+      "uitleg": "Iets of iemand langzaam leren kennen, tot het gewoon voelt."
+     }
+    ],
+    "theorie": "**'Je' in een gesproken zin**\n\nIn een gesproken zin (tussen aanhalingstekens) is 'je' degene tegen wie de spreker praat.\n\nVraag je dus af:\n\n1. Wie praat er?\n2. Tegen wie praat die persoon?\n\nDat tweede is het antwoord.",
+    "voorbeelden": [
+     {
+      "type": "aanspreken",
+      "tekst": "'Opa gaf Lisa een knipoog: \"Jij bent mijn kampioen.\"' → 'jij' is Lisa, want opa praat tegen haar."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Spreker en luisteraar",
+      "uitleg": "Bij 'je' en 'jij' in een gesproken zin zoek je naar wie er luistert."
+     }
+    ]
+   },
+   "id": "verwijswoorden-begrijpend-lezen-po#12"
+  }
+ ],
+ "afgekeurd": [
+  {
+   "id": "verwijswoorden-begrijpend-lezen-po#1",
+   "stap": 0,
+   "q": "*\"De juf deelt de schriften uit. Ze liggen op een grote stapel.\"* — Naar wie of wat verwijst 'ze'?",
+   "redenen": [
+    "nakijker A: Fase 2: niveaus.basis 'Welke kandidaat uit de zin ervoor is met meer dan één?' is grammaticaal krom (bv. 'Welke kandidaat is meervoud?').",
+    "nakijker B: Fase 2: niveaus.basis 'Welke kandidaat uit de zin ervoor is met meer dan één?' is krom Nederlands (bv. 'Welke kandidaat is meervoud?')."
+   ]
+  },
+  {
+   "id": "verwijswoorden-begrijpend-lezen-po#3",
+   "stap": 0,
+   "q": "*\"Op de markt kocht papa appels en peren. Die waren heel goedkoop.\"* — Naar wie of wat verwijst 'die'?",
+   "redenen": [
+    "nakijker A: Fase 2: wrongHint 'Is papa met meer dan één?' is krom Nederlands (bv. 'Is er meer dan één papa?').",
+    "nakijker B: Fase 2: wrongHint bij 'Papa' ('Is papa met meer dan één?') is krom Nederlands; bovendien zegt 'die wáren is meervoud' bijna direct dat alleen de enige meervoudsoptie overblijft."
+   ]
+  },
+  {
+   "id": "verwijswoorden-begrijpend-lezen-po#4",
+   "stap": 1,
+   "q": "*\"Daar wacht ze geduldig tot Fenna wakker wordt. Soms duurt dat lang, want Fenna slaapt graag uit.\"* — Naar wat verwijst 'dat'?",
+   "redenen": [
+    "nakijker B: Licht: in de tekst wacht Snuffel 'tot Fenna wakker wordt'; 'het wachten op Fenna' is een parafrase. Ook is dit het 'dat wijst naar hele zin'-geval dat pas in stap 2 wordt uitgelegd."
+   ]
+  },
+  {
+   "id": "verwijswoorden-begrijpend-lezen-po#6",
+   "stap": 1,
+   "q": "*\"Na twee dagen was Snuffel weer de oude. Ze sprong 's ochtends vrolijk op het bed.\"* — Naar wie verwijst 'ze'?",
+   "redenen": [
+    "nakijker A: Fase 2: wrongHint bij 'Fenna' ('Wie springt er volgens het begin van de tekst elke ochtend op het bed van Fenna?') wijst het antwoord (Snuffel) vrijwel direct aan."
+   ]
+  },
+  {
+   "id": "verwijswoorden-begrijpend-lezen-po#11",
+   "stap": 3,
+   "q": "*\"Eén geitje knabbelde zelfs aan haar jas. Jara moest er hard om lachen.\"* — Waar moest Jara om lachen?",
+   "redenen": [
+    "nakijker A: Goede optie verraadt zich: als enige een 'dat'-zin en vrijwel letterlijk de geciteerde zin; de afleiders komen niet eens uit de geciteerde passage. Vraag is ook niet als verwijswoord-vraag gesteld ('Naar wat verwijst er?'). Fase 2: spelling in theorie: 'in 'er om lachen'' moet 'erom lachen' zijn (aaneen).",
+    "nakijker B: Goede optie herhaalt vrijwel letterlijk de geciteerde zin en is de enige 'dat ...'-zin; makkelijk te herkennen. Fase 2: spelfout in theorie: \"in 'er om lachen'\" moet 'erom lachen' zijn (aaneen als er en om naast elkaar staan)."
+   ]
+  }
+ ]
+}

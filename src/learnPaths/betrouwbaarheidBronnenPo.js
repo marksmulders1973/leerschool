@@ -133,6 +133,55 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Je wilt weten hoe oud een schildpad kan worden. Welke bron is het betrouwbaarst?",
+        options: [
+          "de website van een dierentuin",
+          "een winkel die schildpadden verkoopt",
+          "een bericht zonder naam op een forum",
+          "een grappig filmpje over dieren",
+        ],
+        answer: 0,
+        wrongHints: [null, "Wil deze bron je misschien vooral iets verkopen?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wie heeft er verstand van?",
+              tekst: "Een dierentuin heeft deskundige dierenverzorgers en wil je geen schildpad verkopen. Daarom is die website het betrouwbaarst.",
+            },
+          ],
+          niveaus: {
+            basis: "Een dierentuin heeft er verstand van en verkoopt je niets.",
+            simpeler: "Welke bron heeft deskundigen en wil je niets verkopen?",
+            nogSimpeler: "Wie weet veel van dieren: een dierentuin of een grappig filmpje?",
+          },
+        },
+      },
+      {
+        q: "Op een website staat: 'Volgens dokter Jansen van het ziekenhuis in Utrecht is het gezond om elke dag te bewegen.' Wat maakt dit betrouwbaarder?",
+        options: [
+          "de naam van een deskundige",
+          "de kleur van de letters",
+          "het aantal plaatjes",
+          "de lengte van de tekst",
+        ],
+        answer: 0,
+        wrongHints: [null, "Hoe de letters eruitzien, zegt niets over of het klopt.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wie zegt het?",
+              tekst: "Er staat bij wie het zegt: een dokter. Een dokter heeft verstand van gezondheid. Zo'n naam en deskundige maken de informatie betrouwbaarder.",
+            },
+          ],
+          niveaus: {
+            basis: "Er staat een deskundige bij met naam: dat maakt het betrouwbaarder.",
+            simpeler: "Wie zegt het in deze zin, en heeft die er verstand van?",
+            nogSimpeler: "Weet een dokter veel over gezondheid?",
+          },
+        },
+      },
     ],
   },
 
@@ -256,6 +305,55 @@ const steps = [
             basis: "Een kortingsoproep om te kopen = reclame.",
             simpeler: "Wil deze tekst je informeren of iets verkopen?",
             nogSimpeler: "Is 'koop snel met korting' reclame?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke zin is een feit?",
+        options: [
+          "Amsterdam is de hoofdstad van Nederland.",
+          "Amsterdam is de leukste stad van het land.",
+          "Kom naar Amsterdam, de allermooiste stad!",
+          "Ik vind Amsterdam veel te druk.",
+        ],
+        answer: 0,
+        wrongHints: [null, "'Leukste' is wat iemand vindt.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Feit = te controleren",
+              tekst: "Dat Amsterdam de hoofdstad van Nederland is, kun je opzoeken in een atlas of encyclopedie. De andere zinnen zijn een mening of reclame.",
+            },
+          ],
+          niveaus: {
+            basis: "'Amsterdam is de hoofdstad van Nederland' kun je controleren: een feit.",
+            simpeler: "Welke zin kun je nakijken in een atlas?",
+            nogSimpeler: "Is 'de hoofdstad' iets wat je kunt opzoeken?",
+          },
+        },
+      },
+      {
+        q: "Wat is een mening?",
+        options: [
+          "wat iemand vindt",
+          "iets wat je kunt controleren",
+          "een tekst die je iets wil verkopen",
+          "een lijst met bronnen",
+        ],
+        answer: 0,
+        wrongHints: [null, "Iets wat je kunt nakijken, is een feit.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Mening = vinden",
+              tekst: "Een mening is wat iemand vindt, bijvoorbeeld 'mooi' of 'het beste'. Een ander kan er anders over denken. Een feit kun je controleren; reclame wil je iets verkopen.",
+            },
+          ],
+          niveaus: {
+            basis: "Een mening is wat iemand vindt.",
+            simpeler: "Is 'ik vind dit mooi' iets wat je kunt bewijzen?",
+            nogSimpeler: "Is een mening wat iemand vindt?",
           },
         },
       },
@@ -383,6 +481,79 @@ const steps = [
             basis: "Eén bron met groot nieuws: eerst checken bij een betrouwbare bron.",
             simpeler: "Geloof je groot nieuws uit één bron meteen, of check je het?",
             nogSimpeler: "Eerst checken of meteen doorsturen?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "In een boek uit 1990 staat hoeveel mensen er in Nederland wonen. Je wilt dat getal gebruiken voor je spreekbeurt. Wat doe je het best?",
+        options: [
+          "het aantal opzoeken in een nieuwere bron",
+          "het getal precies zo overnemen",
+          "zelf een getal schatten",
+          "je spreekbeurt over iets anders doen",
+        ],
+        answer: 0,
+        wrongHints: [null, "Kijk naar het jaartal van het boek. Is het getal nog actueel?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Let op de datum",
+              tekst: "Het aantal inwoners verandert in de loop van de jaren. Een getal uit 1990 is verouderd. Zoek daarom een nieuwere, betrouwbare bron.",
+            },
+          ],
+          niveaus: {
+            basis: "Een getal uit 1990 is verouderd: zoek een nieuwere bron.",
+            simpeler: "Blijft het aantal inwoners al die jaren hetzelfde?",
+            nogSimpeler: "Is informatie uit 1990 nog nieuw?",
+          },
+        },
+      },
+      {
+        q: "Welke informatie raakt het snelst verouderd?",
+        options: [
+          "de prijs van een nieuwe telefoon",
+          "hoeveel dagen een week heeft",
+          "hoeveel poten een spin heeft",
+          "hoeveel maanden een jaar heeft",
+        ],
+        answer: 0,
+        wrongHints: [null, null, "Verandert het aantal poten van een spin in de loop van de jaren?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat verandert er?",
+              tekst: "Prijzen en techniek veranderen steeds. Een week blijft 7 dagen, een jaar 12 maanden en een spin houdt 8 poten. De prijs van een telefoon raakt dus snel verouderd.",
+            },
+          ],
+          niveaus: {
+            basis: "Prijzen veranderen steeds, dus die raken snel verouderd.",
+            simpeler: "Welke van deze dingen kan volgend jaar anders zijn?",
+            nogSimpeler: "Blijft een prijs altijd hetzelfde?",
+          },
+        },
+      },
+      {
+        q: "Je vindt op drie betrouwbare websites hetzelfde bouwjaar van een kasteel. Wat is de slimste conclusie?",
+        options: [
+          "je kunt dat bouwjaar gebruiken",
+          "je moet het bouwjaar weglaten",
+          "het bouwjaar is een mening",
+          "de websites maken reclame",
+        ],
+        answer: 0,
+        wrongHints: [null, "Waarom zou je het weglaten als drie bronnen hetzelfde zeggen?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Meerdere bronnen vergelijken",
+              tekst: "Zeggen verschillende betrouwbare bronnen hetzelfde, dan klopt het waarschijnlijk. Je kunt het bouwjaar dus gebruiken.",
+            },
+          ],
+          niveaus: {
+            basis: "Drie betrouwbare bronnen zeggen hetzelfde, dus je kunt het gebruiken.",
+            simpeler: "Wat betekent het als meerdere goede bronnen hetzelfde zeggen?",
+            nogSimpeler: "Zeggen drie bronnen hetzelfde, klopt het dan waarschijnlijk?",
           },
         },
       },
@@ -529,6 +700,31 @@ const steps = [
             basis: "Een bronnenlijst laat je nacontroleren waar de info vandaan komt.",
             simpeler: "Helpt een bronnenlijst om de informatie te checken?",
             nogSimpeler: "Kun je met bronnen nakijken of iets klopt?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Je spreekbeurt gaat over de planeet Mars. Welke bron kies je?",
+        options: [
+          "een encyclopedie over het heelal",
+          "een verzonnen film over Mars",
+          "een advertentie voor een telescoop",
+          "een reactie onder een filmpje",
+        ],
+        answer: 0,
+        wrongHints: [null, "Is een verzonnen film bedoeld om feiten te geven?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Naslagwerk",
+              tekst: "Een encyclopedie controleert haar informatie en geeft feiten. Een film kan verzonnen zijn, een advertentie wil verkopen en een reactie kan van iedereen komen.",
+            },
+          ],
+          niveaus: {
+            basis: "Een encyclopedie geeft gecontroleerde feiten over Mars.",
+            simpeler: "Welke bron controleert haar informatie?",
+            nogSimpeler: "Waar vind je feiten: in een encyclopedie of in een advertentie?",
           },
         },
       },

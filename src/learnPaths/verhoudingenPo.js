@@ -102,6 +102,222 @@ const steps = [
           niveaus: { basis: "4 : 1.", simpeler: "Fietsen:brommers = 20:5. Beide ÷5 → 4:1. (4 fietsen op elke 1 brommer).", nogSimpeler: "4:1" },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "In een vaas staan **4 rode** en **8 gele** tulpen. Wat is de verhouding rood : geel, zo eenvoudig mogelijk?",
+        options: ["1 : 2", "2 : 1", "4 : 8", "1 : 3"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk goed naar de volgorde in de vraag: welke kleur komt eerst?",
+          "Dit klopt wel, maar het kan nog eenvoudiger. Door welk getal kun je 4 én 8 delen?",
+          "Vergelijk je rood met álle tulpen? De vraag gaat over rood naast geel.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Beide ÷4",
+              tekst: "Rood : geel = 4 : 8. 4÷4=1. 8÷4=2. → 1 : 2.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vereenvoudigen",
+              uitleg: "Beide getallen door hetzelfde getal delen.",
+            },
+          ],
+          theorie: "4 en 8 kun je allebei door 4 delen. 4 : 8 wordt 1 : 2.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "4 : 8 → ÷4 → 1 : 2. Op elke rode tulp komen 2 gele.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Volgorde",
+              uitleg: "Rood staat eerst in de vraag, dus rood staat links: 1 : 2, niet 2 : 1.",
+            },
+          ],
+          niveaus: {
+            basis: "1 : 2.",
+            simpeler: "4 rood en 8 geel. Beide ÷4: 1 rood op 2 geel → 1 : 2.",
+            nogSimpeler: "1 : 2",
+          },
+        },
+      },
+      {
+        q: "Een verhouding is **2 : 3**. Hoeveel **delen** zijn dat samen?",
+        options: ["5", "6", "3", "1"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Doe je hier keer? Je zet de delen naast elkaar.",
+          "Tel je alleen de delen van één kant?",
+          "Kijk niet naar het verschil, maar naar alle delen samen.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Delen optellen",
+              tekst: "2 delen naast 3 delen. 2 + 3 = 5 delen samen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "delen",
+              uitleg: "De stukjes waaruit een verhouding bestaat.",
+            },
+          ],
+          theorie: "Bij een verhouding A : B zijn er samen A + B delen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1 : 4 → 1 + 4 = 5 delen. 3 : 7 → 3 + 7 = 10 delen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Breuk",
+              uitleg: "Daarom is het eerste stuk 2 van de 5 delen = 2/5.",
+            },
+          ],
+          niveaus: {
+            basis: "5.",
+            simpeler: "2 delen en 3 delen. Samen 2 + 3 = 5.",
+            nogSimpeler: "5",
+          },
+        },
+      },
+      {
+        q: "Welke verhouding kun je **niet** nog eenvoudiger maken?",
+        options: ["3 : 5", "4 : 6", "5 : 10", "9 : 3"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zoek een getal waardoor je beide kanten kunt delen. Lukt dat hier?",
+          "Zoek een getal waardoor je beide kanten kunt delen. Lukt dat hier?",
+          "Zoek een getal waardoor je beide kanten kunt delen. Lukt dat hier?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Probeer te delen",
+              tekst: "4 : 6 → ÷2 → 2 : 3. 5 : 10 → ÷5 → 1 : 2. 9 : 3 → ÷3 → 3 : 1. Bij 3 : 5 is er geen getal (behalve 1) waardoor je 3 én 5 kunt delen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "eenvoudigste vorm",
+              uitleg: "Een verhouding die je niet meer kleiner kunt maken.",
+            },
+          ],
+          theorie: "Een verhouding is zo eenvoudig mogelijk als je beide getallen niet meer door hetzelfde getal kunt delen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "8 : 12 → ÷4 → 2 : 3. Verder kan niet.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tip",
+              uitleg: "Probeer ÷2, ÷3, ÷5. Past het bij beide getallen? Dan kan het nog eenvoudiger.",
+            },
+          ],
+          niveaus: {
+            basis: "3 : 5.",
+            simpeler: "3 en 5 kun je niet allebei door 2, 3 of 5 delen. De andere wel.",
+            nogSimpeler: "3 : 5",
+          },
+        },
+      },
+      {
+        q: "In een klas is de verhouding jongens : meisjes **2 : 3**. Welk deel van de klas is **jongen**?",
+        options: ["2/5", "2/3", "3/5", "1/2"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een breuk gaat over een deel van het geheel. Hoeveel delen is de hele klas?",
+          "Dit gaat over de meisjes. Welke kant van de verhouding zijn de jongens?",
+          "Zijn er evenveel jongens als meisjes?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Geheel = 5 delen",
+              tekst: "2 delen jongens + 3 delen meisjes = 5 delen. Jongens = 2 van de 5 = 2/5.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "breuk en verhouding",
+              uitleg: "2 : 3 = 2 delen naast 3 delen. 2/5 = 2 delen van het totaal 5.",
+            },
+          ],
+          theorie: "Van verhouding naar breuk: tel alle delen op. Dat getal komt onder de streep.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1 : 4 → siroop is 1/5 van het glas.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet 2/3",
+              uitleg: "2/3 vergelijkt jongens met meisjes. Een breuk vergelijkt met de hele klas.",
+            },
+          ],
+          niveaus: {
+            basis: "2/5.",
+            simpeler: "2 + 3 = 5 delen. Jongens zijn 2 delen van 5 → 2/5.",
+            nogSimpeler: "2/5",
+          },
+        },
+      },
+      {
+        q: "Op een parkeerplaats staan **30 auto's** en **10 busjes**. Wat is de verhouding busjes : auto's, zo eenvoudig mogelijk?",
+        options: ["1 : 3", "3 : 1", "10 : 30", "1 : 4"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Lees de vraag nog eens: wat staat er eerst, busjes of auto's?",
+          "Dit klopt wel, maar het kan nog eenvoudiger. Door welk getal kun je 10 én 30 delen?",
+          "Vergelijk je busjes met álle voertuigen? De vraag gaat over busjes naast auto's.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerst de volgorde, dan delen",
+              tekst: "Busjes : auto's = 10 : 30. Beide ÷10 → 1 : 3.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "volgorde",
+              uitleg: "Wat het eerst genoemd wordt, staat links.",
+            },
+          ],
+          theorie: "Kijk welke volgorde de vraag wil. Zet de getallen zo neer en vereenvoudig dan.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "10 : 30 → ÷10 → 1 : 3. Op elk busje 3 auto's.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Let op",
+              uitleg: "In de zin staan de auto's eerst, maar de vraag wil busjes : auto's.",
+            },
+          ],
+          niveaus: {
+            basis: "1 : 3.",
+            simpeler: "Busjes 10, auto's 30. 10 : 30, beide ÷10 → 1 : 3.",
+            nogSimpeler: "1 : 3",
+          },
+        },
+      },
     ],
   },
 
@@ -149,6 +365,265 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "3:1 in 20kg: 4 delen. 20÷4=5 per deel. Zand=3×5=15. Cement=1×5=5." }],
           basiskennis: [{ onderwerp: "Check 15+5=20 ✓", uitleg: "Som controleren." }],
           niveaus: { basis: "5 kg.", simpeler: "3+1=4 delen. 20÷4=5 per deel. Cement = 1 deel = 5 kg.", nogSimpeler: "5" },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Limonade is **1 : 4** (siroop : water). Je maakt een glas van **250 mL**. Hoeveel **water** doe je erin?",
+        options: ["200 mL", "50 mL", "62,5 mL", "250 mL"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is één deel. Hoeveel delen is het water?",
+          "Hoeveel delen zijn er samen? Deel 250 door dat getal.",
+          "Er moet ook nog siroop in het glas.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel delen + verdeel",
+              tekst: "1 + 4 = 5 delen. 250 ÷ 5 = 50 mL per deel. Water = 4 × 50 = 200 mL.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "delen tellen",
+              uitleg: "Bij A : B zijn er samen A + B delen.",
+            },
+          ],
+          theorie: "Totaal ÷ aantal delen = 1 deel. Dan keer het aantal delen dat je zoekt.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Siroop = 1 × 50 = 50 mL. Water = 200 mL. 50 + 200 = 250 ✓.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check",
+              uitleg: "Siroop + water moet weer 250 mL zijn.",
+            },
+          ],
+          niveaus: {
+            basis: "200 mL.",
+            simpeler: "5 delen. 250 ÷ 5 = 50. Water is 4 delen: 4 × 50 = 200 mL.",
+            nogSimpeler: "200",
+          },
+        },
+      },
+      {
+        q: "In een zak zitten **36 snoepjes**. Rood : groen = **5 : 4**. Hoeveel snoepjes zijn **groen**?",
+        options: ["16", "20", "9", "4"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat zijn de rode. Welke kant van de verhouding is groen?",
+          "Dat is het aantal delen. Hoeveel snoepjes is één deel?",
+          "Dat is één deel. Hoeveel delen zijn groen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel delen + verdeel",
+              tekst: "5 + 4 = 9 delen. 36 ÷ 9 = 4 per deel. Groen = 4 × 4 = 16.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "één deel",
+              uitleg: "Totaal gedeeld door alle delen samen.",
+            },
+          ],
+          theorie: "Stappen: 1) delen optellen, 2) totaal delen, 3) keer de delen die je zoekt.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Rood = 5 × 4 = 20. Groen = 16. 20 + 16 = 36 ✓.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check",
+              uitleg: "Rood + groen = 36.",
+            },
+          ],
+          niveaus: {
+            basis: "16.",
+            simpeler: "9 delen. 36 ÷ 9 = 4. Groen = 4 delen = 16.",
+            nogSimpeler: "16",
+          },
+        },
+      },
+      {
+        q: "Ali en Sem verdelen **€ 24** in de verhouding **3 : 1** (Ali : Sem). Hoeveel krijgt **Ali**?",
+        options: ["€ 18", "€ 6", "€ 8", "€ 12"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat krijgt Sem. Hoeveel delen krijgt Ali?",
+          "Hoeveel delen zijn er samen? Deel € 24 door dat getal.",
+          "Krijgen ze evenveel? Kijk naar de verhouding.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel delen + verdeel",
+              tekst: "3 + 1 = 4 delen. € 24 ÷ 4 = € 6 per deel. Ali = 3 × € 6 = € 18.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "verdelen",
+              uitleg: "Een bedrag in stukken geven volgens de verhouding.",
+            },
+          ],
+          theorie: "Totaal ÷ alle delen = 1 deel. Ali heeft 3 delen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Sem = 1 × € 6 = € 6. € 18 + € 6 = € 24 ✓.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check",
+              uitleg: "Samen moet het weer € 24 zijn.",
+            },
+          ],
+          niveaus: {
+            basis: "€ 18.",
+            simpeler: "4 delen. € 24 ÷ 4 = € 6. Ali krijgt 3 delen: € 18.",
+            nogSimpeler: "€ 18",
+          },
+        },
+      },
+      {
+        q: "Op schoolreis is het **1 : 6** (begeleiders : kinderen). Er gaan **35 mensen** mee. Hoeveel zijn **begeleiders**?",
+        options: ["5", "6", "7", "30"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat getal staat in de verhouding. Hoeveel mensen is één deel?",
+          "Dat is het aantal delen. Hoeveel mensen is één deel?",
+          "Dat zijn de kinderen. Welke kant zijn de begeleiders?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel delen + verdeel",
+              tekst: "1 + 6 = 7 delen. 35 ÷ 7 = 5 per deel. Begeleiders = 1 × 5 = 5.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "delen",
+              uitleg: "De stukjes van de verhouding: hier 1 + 6 = 7.",
+            },
+          ],
+          theorie: "Totaal ÷ delen = 1 deel. Begeleiders zijn 1 deel.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Kinderen = 6 × 5 = 30. 5 + 30 = 35 ✓.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check",
+              uitleg: "Begeleiders + kinderen = 35.",
+            },
+          ],
+          niveaus: {
+            basis: "5.",
+            simpeler: "7 delen. 35 ÷ 7 = 5. Begeleiders = 1 deel = 5.",
+            nogSimpeler: "5",
+          },
+        },
+      },
+      {
+        q: "Verf wordt gemengd in de verhouding **4 : 1** (wit : blauw). Welk deel van de verf is **blauw**?",
+        options: ["1/5", "1/4", "4/5", "1/3"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk naar alle delen samen. Hoeveel zijn dat?",
+          "Dat is het deel wit. Welk deel is blauw?",
+          "Kijk naar alle delen samen. Hoeveel zijn dat?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Alle delen samen",
+              tekst: "4 + 1 = 5 delen. Blauw is 1 deel van 5 = 1/5.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "deel van het geheel",
+              uitleg: "Het aantal delen boven de streep, alle delen onder de streep.",
+            },
+          ],
+          theorie: "Bij A : B is het tweede stuk B/(A+B) van het geheel.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1 : 4 → siroop = 1/5. 2 : 3 → eerste = 2/5.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet 1/4",
+              uitleg: "1/4 vergelijkt blauw alleen met wit. Je moet vergelijken met alle verf.",
+            },
+          ],
+          niveaus: {
+            basis: "1/5.",
+            simpeler: "4 + 1 = 5 delen. Blauw is 1 van de 5 → 1/5.",
+            nogSimpeler: "1/5",
+          },
+        },
+      },
+      {
+        q: "Een mengsel van zand en grind is **2 : 3** (zand : grind). Het weegt **50 kg**. Hoeveel kg is **grind**?",
+        options: ["30 kg", "20 kg", "25 kg", "15 kg"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het zand. Hoeveel delen is het grind?",
+          "Zijn zand en grind evenveel? Kijk naar de verhouding.",
+          "Hoeveel delen zijn er samen? Deel 50 door dat getal.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel delen + verdeel",
+              tekst: "2 + 3 = 5 delen. 50 ÷ 5 = 10 kg per deel. Grind = 3 × 10 = 30 kg.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "mengsel",
+              uitleg: "Twee stoffen door elkaar in een vaste verhouding.",
+            },
+          ],
+          theorie: "Totaal ÷ delen = 1 deel. Grind heeft 3 delen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Zand = 2 × 10 = 20 kg. 20 + 30 = 50 ✓.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check",
+              uitleg: "Zand + grind = 50 kg.",
+            },
+          ],
+          niveaus: {
+            basis: "30 kg.",
+            simpeler: "5 delen. 50 ÷ 5 = 10. Grind = 3 delen = 30 kg.",
+            nogSimpeler: "30",
+          },
         },
       },
     ],
@@ -201,6 +676,265 @@ const steps = [
           niveaus: { basis: "150 g.", simpeler: "1 deel meel = 200÷4 = 50g. Suiker = 3 delen × 50 = 150g.", nogSimpeler: "150" },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**4 schriften** kosten **€ 6**. Wat kosten **10 schriften**?",
+        options: ["€ 15", "€ 12", "€ 24", "€ 10"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is de prijs van 8 schriften. Reken eerst uit wat 1 schrift kost.",
+          "Reken eerst uit wat 1 schrift kost en neem dat 10 keer.",
+          "Reken eerst uit wat 1 schrift kost en neem dat 10 keer.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Via 1 schrift",
+              tekst: "1 schrift: € 6 ÷ 4 = € 1,50. 10 schriften: 10 × € 1,50 = € 15.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "stuksprijs",
+              uitleg: "Prijs van 1 stuk = totaal ÷ aantal.",
+            },
+          ],
+          theorie: "Verhoudingstabel: deel naar 1, keer naar het nieuwe aantal.",
+          voorbeelden: [
+            {
+              type: "tabel",
+              tekst: "4 → € 6. 1 → € 1,50. 10 → € 15.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Andere route",
+              uitleg: "4 → 2 schriften = € 3. 10 schriften = 5 × € 3 = € 15.",
+            },
+          ],
+          niveaus: {
+            basis: "€ 15.",
+            simpeler: "Per schrift € 1,50. 10 × € 1,50 = € 15.",
+            nogSimpeler: "€ 15",
+          },
+        },
+      },
+      {
+        q: "**8 pakken** melk kosten **€ 10**. Wat kosten **4 pakken**?",
+        options: ["€ 5", "€ 6", "€ 2,50", "€ 20"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoe kom je van 8 naar 4? Doe hetzelfde met het geld.",
+          "Dat is wat 2 pakken kosten. Hoe kom je van 8 naar 4?",
+          "Worden het meer of minder pakken? Dan wordt het geld ook…",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Beide ÷2",
+              tekst: "8 → 4 is ÷ 2. Dus € 10 ÷ 2 = € 5.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "verhoudingstabel",
+              uitleg: "Wat je met de ene kant doet, doe je ook met de andere kant.",
+            },
+          ],
+          theorie: "Halveer je het aantal, dan halveer je ook de prijs.",
+          voorbeelden: [
+            {
+              type: "tabel",
+              tekst: "8 → € 10. 4 → € 5. 2 → € 2,50.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check",
+              uitleg: "€ 5 + € 5 = € 10 voor 8 pakken ✓.",
+            },
+          ],
+          niveaus: {
+            basis: "€ 5.",
+            simpeler: "4 is de helft van 8. De helft van € 10 is € 5.",
+            nogSimpeler: "€ 5",
+          },
+        },
+      },
+      {
+        q: "Limonade is **1 : 4** (siroop : water). Je gebruikt **150 mL siroop**. Hoeveel **water** hoort erbij?",
+        options: ["600 mL", "200 mL", "450 mL", "750 mL"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Water is 4 keer zoveel als siroop. Is dit 4 keer 150?",
+          "Water is 4 keer zoveel als siroop. Is dit 4 keer 150?",
+          "Dat is siroop en water samen. De vraag is alleen het water.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Beide ×150",
+              tekst: "Siroop 1 → 150 is × 150. Water 4 × 150 = 600 mL.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "factor",
+              uitleg: "Het getal waarmee je beide kanten keer doet.",
+            },
+          ],
+          theorie: "Verhoudingstabel: zelfde × aan beide kanten.",
+          voorbeelden: [
+            {
+              type: "tabel",
+              tekst: "1 : 4 → 100 : 400 → 150 : 600.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check",
+              uitleg: "600 ÷ 150 = 4. Verhouding 1 : 4 ✓.",
+            },
+          ],
+          niveaus: {
+            basis: "600 mL.",
+            simpeler: "Water is 4 × zoveel. 4 × 150 = 600 mL.",
+            nogSimpeler: "600",
+          },
+        },
+      },
+      {
+        q: "Een printer maakt **12 bladzijden** in **3 minuten**. Hoeveel bladzijden in **5 minuten**?",
+        options: ["20", "15", "17", "60"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Reken eerst uit hoeveel bladzijden in 1 minuut.",
+          "Je mag niet zomaar optellen. Reken eerst uit hoeveel bladzijden in 1 minuut.",
+          "Dat is 12 keer 5. Reken eerst uit hoeveel bladzijden in 1 minuut.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Via 1 minuut",
+              tekst: "1 minuut: 12 ÷ 3 = 4 bladzijden. 5 minuten: 5 × 4 = 20.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tussenstap via 1",
+              uitleg: "Eerst uitrekenen hoeveel bij 1 hoort.",
+            },
+          ],
+          theorie: "Verhoudingstabel: deel naar 1, keer naar het nieuwe getal.",
+          voorbeelden: [
+            {
+              type: "tabel",
+              tekst: "3 min → 12. 1 min → 4. 5 min → 20.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check",
+              uitleg: "20 ÷ 5 = 4 per minuut, net als 12 ÷ 3 = 4 ✓.",
+            },
+          ],
+          niveaus: {
+            basis: "20.",
+            simpeler: "In 1 minuut 4 bladzijden. In 5 minuten 5 × 4 = 20.",
+            nogSimpeler: "20",
+          },
+        },
+      },
+      {
+        q: "In een verhoudingstabel staan **2** en **7** naast elkaar. Welk paar past **ook** in die tabel?",
+        options: ["6 en 21", "4 en 9", "7 en 2", "3 en 8"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Doe je aan beide kanten hetzelfde keer of gedeeld door? Of heb je er iets bij gedaan?",
+          "Kijk naar de volgorde: welk getal hoort links?",
+          "Doe je aan beide kanten hetzelfde keer of gedeeld door? Of heb je er iets bij gedaan?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Beide ×3",
+              tekst: "2 × 3 = 6. 7 × 3 = 21. Dus 6 en 21 past.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "verhoudingstabel",
+              uitleg: "Een tabel waarin elke rij dezelfde verhouding heeft.",
+            },
+          ],
+          theorie: "Regel: wat je met de ene kant doet (× of ÷), doe je ook met de andere kant.",
+          voorbeelden: [
+            {
+              type: "tabel",
+              tekst: "2 → 7. 4 → 14. 6 → 21. 10 → 35.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet erbij",
+              uitleg: "4 en 9 is 2+2 en 7+2. Optellen houdt de verhouding niet vast.",
+            },
+          ],
+          niveaus: {
+            basis: "6 en 21.",
+            simpeler: "2 × 3 = 6 en 7 × 3 = 21. Beide × 3.",
+            nogSimpeler: "6 en 21",
+          },
+        },
+      },
+      {
+        q: "**5 kaartjes** voor de dierentuin kosten **€ 35**. Wat kosten **2 kaartjes**?",
+        options: ["€ 14", "€ 7", "€ 70", "€ 32"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is de prijs van 1 kaartje. Hoeveel kaartjes wil je?",
+          "Worden het meer of minder kaartjes? Dan wordt het geld ook…",
+          "Je mag niet zomaar aftrekken. Reken eerst uit wat 1 kaartje kost.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Via 1 kaartje",
+              tekst: "1 kaartje: € 35 ÷ 5 = € 7. 2 kaartjes: 2 × € 7 = € 14.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "stuksprijs",
+              uitleg: "Prijs van 1 stuk = totaal ÷ aantal.",
+            },
+          ],
+          theorie: "Verhoudingstabel: deel naar 1, keer naar het nieuwe aantal.",
+          voorbeelden: [
+            {
+              type: "tabel",
+              tekst: "5 → € 35. 1 → € 7. 2 → € 14.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check",
+              uitleg: "€ 14 ÷ 2 = € 7 per kaartje ✓.",
+            },
+          ],
+          niveaus: {
+            basis: "€ 14.",
+            simpeler: "1 kaartje € 7. 2 kaartjes € 14.",
+            nogSimpeler: "€ 14",
+          },
+        },
+      },
     ],
   },
 
@@ -250,6 +984,179 @@ const steps = [
           niveaus: { basis: "5 cm.", simpeler: "Op kaart wordt werkelijke afstand veel kleiner. 5 km in werkelijkheid → 5 cm op kaart.", nogSimpeler: "5" },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Soep voor **4 personen** gebruikt **800 mL** water. Hoeveel water voor **2 personen**?",
+        options: ["400 mL", "200 mL", "600 mL", "1600 mL"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is voor 1 persoon. Hoeveel personen eten er mee?",
+          "Je mag niet zomaar aftrekken. Hoe kom je van 4 naar 2 personen?",
+          "Worden het meer of minder personen? Dan wordt het water ook…",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Factor ÷2",
+              tekst: "4 → 2 personen is ÷ 2. 800 ÷ 2 = 400 mL.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "halveren",
+              uitleg: "Door 2 delen.",
+            },
+          ],
+          theorie: "Minder mensen: alle ingrediënten door dezelfde factor delen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "4 personen → 800 mL. 2 personen → 400 mL. 1 persoon → 200 mL.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check",
+              uitleg: "400 × 2 = 800 ✓.",
+            },
+          ],
+          niveaus: {
+            basis: "400 mL.",
+            simpeler: "2 is de helft van 4. De helft van 800 is 400 mL.",
+            nogSimpeler: "400",
+          },
+        },
+      },
+      {
+        q: "Een recept voor **8 personen** gebruikt **400 g** rijst. Hoeveel rijst voor **6 personen**?",
+        options: ["300 g", "350 g", "200 g", "450 g"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Reken eerst uit hoeveel rijst 1 persoon krijgt.",
+          "Dat is voor 4 personen. Reken eerst uit hoeveel rijst 1 persoon krijgt.",
+          "Worden het meer of minder personen? Reken eerst uit hoeveel 1 persoon krijgt.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Via 1 persoon",
+              tekst: "1 persoon: 400 ÷ 8 = 50 g. 6 personen: 6 × 50 = 300 g.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "per-persoon-truc",
+              uitleg: "Totaal ÷ aantal personen = per persoon.",
+            },
+          ],
+          theorie: "Recept omrekenen: ÷ oud aantal, × nieuw aantal.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "8 → 400 g. 1 → 50 g. 6 → 300 g.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Ook goed",
+              uitleg: "Factor 6/8 = 0,75. 400 × 0,75 = 300 g.",
+            },
+          ],
+          niveaus: {
+            basis: "300 g.",
+            simpeler: "Per persoon 50 g. 6 × 50 = 300 g.",
+            nogSimpeler: "300",
+          },
+        },
+      },
+      {
+        q: "Wraps voor **4 personen** gebruiken **200 g kaas**. Je maakt ze voor **3 personen**. Hoeveel **kaas**?",
+        options: ["150 g", "100 g", "250 g", "50 g"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is voor 2 personen. Reken eerst uit hoeveel kaas 1 persoon krijgt.",
+          "Worden het meer of minder personen? Reken eerst uit hoeveel 1 persoon krijgt.",
+          "Dat is voor 1 persoon. Hoeveel personen eten er mee?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Via 1 persoon",
+              tekst: "1 persoon: 200 ÷ 4 = 50 g. 3 personen: 3 × 50 = 150 g.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "per-persoon-truc",
+              uitleg: "Totaal ÷ aantal personen = per persoon.",
+            },
+          ],
+          theorie: "Recept omrekenen: ÷ oud aantal, × nieuw aantal.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "4 → 200 g. 1 → 50 g. 3 → 150 g.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check",
+              uitleg: "150 ÷ 3 = 50 g per persoon ✓.",
+            },
+          ],
+          niveaus: {
+            basis: "150 g.",
+            simpeler: "Per persoon 50 g. 3 × 50 = 150 g.",
+            nogSimpeler: "150",
+          },
+        },
+      },
+      {
+        q: "Een recept voor **6 personen** gebruikt **300 g** gehakt. Hoeveel is dat **per persoon**?",
+        options: ["50 g", "60 g", "30 g", "100 g"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Door hoeveel personen moet je delen?",
+          "Door hoeveel personen moet je delen?",
+          "Door hoeveel personen moet je delen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Delen door personen",
+              tekst: "300 ÷ 6 = 50 g per persoon.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "per persoon",
+              uitleg: "Hoeveel 1 persoon krijgt.",
+            },
+          ],
+          theorie: "Per persoon = totaal ÷ aantal personen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Voor 4 personen: 4 × 50 = 200 g.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check",
+              uitleg: "6 × 50 = 300 ✓.",
+            },
+          ],
+          niveaus: {
+            basis: "50 g.",
+            simpeler: "300 g verdelen over 6 personen: 300 ÷ 6 = 50 g.",
+            nogSimpeler: "50",
+          },
+        },
+      },
     ],
   },
 
@@ -297,6 +1204,184 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "8 cm × 50 = 400 cm = 4 m." }],
           basiskennis: [{ onderwerp: "cm → m", uitleg: "100 cm = 1 m. Dus 400 cm = 4 m." }],
           niveaus: { basis: "4 m.", simpeler: "8 cm × 50 (schaal) = 400 cm = 4 m werkelijk.", nogSimpeler: "4 m" },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Op een kaart met schaal **1 : 1.000.000** liggen twee steden **4 cm** uit elkaar. Hoe ver is dat **in het echt**?",
+        options: ["40 km", "4 km", "400 km", "400 m"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te kort. Bij deze schaal is 1 cm op de kaart meer dan 1 km.",
+          "Te ver. Hoeveel km is 1 cm op deze kaart?",
+          "Veel te kort. Reken 4 × 1.000.000 cm om naar km.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "1 cm = 10 km",
+              tekst: "Bij 1 : 1.000.000 is 1 cm = 1.000.000 cm = 10 km. 4 cm = 40 km.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "1 : 1.000.000",
+              uitleg: "Provinciekaart: 1 cm = 10 km.",
+            },
+          ],
+          theorie: "Kaart → echt: × het schaalgetal. 100.000 cm = 1 km.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "4 × 1.000.000 = 4.000.000 cm = 40.000 m = 40 km.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Eenheden",
+              uitleg: "cm ÷ 100 = m. m ÷ 1.000 = km.",
+            },
+          ],
+          niveaus: {
+            basis: "40 km.",
+            simpeler: "1 cm = 10 km. 4 cm = 4 × 10 = 40 km.",
+            nogSimpeler: "40 km",
+          },
+        },
+      },
+      {
+        q: "Schaal **1 : 10.000**. Op de kaart is een park **3 cm** breed. Hoe breed is het park **in het echt**?",
+        options: ["300 m", "30 m", "3 km", "3 m"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te smal. Hoeveel meter is 1 cm op deze kaart?",
+          "Te breed. Hoeveel meter is 1 cm op deze kaart?",
+          "Veel te smal. Reken 3 × 10.000 cm om naar meter.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "1 cm = 100 m",
+              tekst: "Bij 1 : 10.000 is 1 cm = 10.000 cm = 100 m. 3 cm = 300 m.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "1 : 10.000",
+              uitleg: "1 cm op de kaart = 100 m echt.",
+            },
+          ],
+          theorie: "Kaart → echt: × het schaalgetal, daarna omrekenen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "3 × 10.000 = 30.000 cm = 300 m.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "cm → m",
+              uitleg: "100 cm = 1 m. 30.000 cm = 300 m.",
+            },
+          ],
+          niveaus: {
+            basis: "300 m.",
+            simpeler: "1 cm = 100 m. 3 cm = 300 m.",
+            nogSimpeler: "300 m",
+          },
+        },
+      },
+      {
+        q: "Wat betekent schaal **1 : 100**?",
+        options: [
+          "1 cm op de tekening is 1 m echt",
+          "1 cm op de tekening is 100 m echt",
+          "1 m op de tekening is 1 cm echt",
+          "1 cm op de tekening is 10 m echt",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "100 wat? Een schaalgetal werkt in centimeters.",
+          "Kijk welke kant de tekening is en welke kant het echte ding.",
+          "Een schaalgetal werkt in centimeters. Hoeveel meter is 100 cm?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lees de schaal",
+              tekst: "1 : 100 → 1 cm op de tekening = 100 cm echt = 1 m.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schaal",
+              uitleg: "Verhouding tekening : echt.",
+            },
+          ],
+          theorie: "Het eerste getal is de tekening, het tweede getal het echte ding, allebei in cm.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1 : 1.000 → 1 cm = 10 m.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Plattegrond",
+              uitleg: "1 : 100 wordt vaak gebruikt voor een plattegrond van een kamer.",
+            },
+          ],
+          niveaus: {
+            basis: "1 cm = 1 m.",
+            simpeler: "1 cm op papier = 100 cm echt. 100 cm = 1 m.",
+            nogSimpeler: "1 cm = 1 m",
+          },
+        },
+      },
+      {
+        q: "Een kamer is **4 m** lang. Je tekent hem op schaal **1 : 50**. Hoe lang wordt hij op papier?",
+        options: ["8 cm", "4 cm", "20 cm", "80 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat zou bij schaal 1 : 100 horen. Reken 4 m eerst om naar cm.",
+          "Reken 4 m eerst om naar cm en deel dan door 50.",
+          "Te lang. Reken 4 m eerst om naar cm en deel dan door 50.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Echt → tekening",
+              tekst: "4 m = 400 cm. 400 ÷ 50 = 8 cm.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "1 : 50",
+              uitleg: "1 cm op papier = 50 cm echt.",
+            },
+          ],
+          theorie: "Echt → tekening: eerst naar cm, dan ÷ het schaalgetal.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2 m = 200 cm. 200 ÷ 50 = 4 cm.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check",
+              uitleg: "8 cm × 50 = 400 cm = 4 m ✓.",
+            },
+          ],
+          niveaus: {
+            basis: "8 cm.",
+            simpeler: "400 cm ÷ 50 = 8 cm.",
+            nogSimpeler: "8 cm",
+          },
         },
       },
     ],

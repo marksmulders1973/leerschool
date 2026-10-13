@@ -114,6 +114,74 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*Mijn buurman staat in de tuin. Hij harkt de bladeren bij elkaar.* Naar wie verwijst 'Hij'?",
+        options: ["mijn buurman", "de tuin", "de bladeren", "niemand"],
+        answer: 0,
+        wrongHints: [null, "Kan een tuin harken? Wie doet dat wel?", null, "Kijk nog eens in de zin ervóór."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wie harkt er?",
+              tekst: "'Hij' is iemand die aan het harken is. In de zin ervoor staat 'mijn buurman'. 'Hij' verwijst dus naar de buurman.",
+            },
+          ],
+          niveaus: {
+            basis: "'Hij' verwijst naar de persoon in de zin ervoor: de buurman.",
+            simpeler: "Wie staat er in de tuin en kan harken?",
+            nogSimpeler: "Wie kan er harken: een persoon of een tuin?",
+          },
+        },
+      },
+      {
+        q: "*Noor heeft een nieuwe pen. Die schrijft heel mooi.* Welk woord is het verwijswoord?",
+        options: ["Die", "pen", "Noor", "schrijft"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het ding waar het verwijswoord naar wijst, niet het verwijswoord zelf.",
+          null,
+          "Dat zegt wat er gebeurt; het wijst nergens naar terug.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Welk woordje wijst terug?",
+              tekst: "In de tweede zin staat 'Die' in plaats van 'de pen'. 'Die' is dus het verwijswoord; het wijst terug naar de pen.",
+            },
+          ],
+          niveaus: {
+            basis: "'Die' is het verwijswoord; het verwijst naar de pen.",
+            simpeler: "Welk woordje staat in de tweede zin in plaats van 'de pen'?",
+            nogSimpeler: "Welk kort woordje vervangt 'de pen'?",
+          },
+        },
+      },
+      {
+        q: "In welk stukje staat een verwijswoord?",
+        options: [
+          "Lotte zoekt de hamster. Ze vindt hem onder de bank.",
+          "Lotte zoekt de hamster. Lotte vindt de hamster onder de bank.",
+          "De hamster is wit. De kooi staat in de kamer.",
+          "Bram koopt voer. Bram geeft de hamster eten.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Hier worden 'Lotte' en 'de hamster' gewoon nog een keer genoemd.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Herhalen of terugwijzen?",
+              tekst: "Een verwijswoord is een kort woord dat terugwijst, zodat je een woord niet hoeft te herhalen. In 'Ze vindt hem onder de bank' wijst 'Ze' terug naar Lotte en 'hem' naar de hamster.",
+            },
+          ],
+          niveaus: {
+            basis: "'Ze' en 'hem' zijn verwijswoorden: ze wijzen terug naar Lotte en de hamster.",
+            simpeler: "In welk stukje staan korte woordjes zoals 'ze' of 'hem' in plaats van een naam?",
+            nogSimpeler: "Waar staat 'ze' of 'hem'?",
+          },
+        },
+      },
     ],
   },
 
@@ -212,6 +280,83 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*Het konijn zit in het hok. Het eet een blaadje sla.* Waar verwijst 'Het' in de tweede zin naar?",
+        options: ["het konijn", "het hok", "de sla", "niemand"],
+        answer: 0,
+        wrongHints: [null, "Kan een hok iets eten?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat eet er?",
+              tekst: "Een konijn eet sla. 'Het' verwijst naar het konijn, een 'het'-woord.",
+            },
+          ],
+          niveaus: {
+            basis: "'Het' verwijst naar het konijn.",
+            simpeler: "Wat zit er in het hok en eet een blaadje sla?",
+            nogSimpeler: "Wie eet er: het konijn of het hok?",
+          },
+        },
+      },
+      {
+        q: "Welk woord past op de lege plek? *Het boek ligt op tafel. ___ is erg dik.*",
+        options: ["Het", "Hij", "Zij", "Hem"],
+        answer: 0,
+        wrongHints: [null, "'Hij' past bij een man of een 'de'-woord. Wat voor woord is 'boek'?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "'het'-woord → het",
+              tekst: "Je zegt 'het boek'. Bij een 'het'-woord past het verwijswoord 'het': Het boek ligt op tafel. Het is erg dik.",
+            },
+          ],
+          niveaus: {
+            basis: "Bij 'het boek' hoort het verwijswoord 'het'.",
+            simpeler: "Zeg je 'de boek' of 'het boek'?",
+            nogSimpeler: "Het boek … ___ is dik. Welk woordje past bij 'het boek'?",
+          },
+        },
+      },
+      {
+        q: "*De juf geeft Bas een sticker. Ze plakt hem op zijn schrift.* Naar wie verwijst 'Ze'?",
+        options: ["de juf", "Bas", "de sticker", "het schrift"],
+        answer: 0,
+        wrongHints: [null, "Bas is een jongen. Past 'ze' bij hem?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wie plakt er?",
+              tekst: "'Ze' is hier één vrouw. In de zin ervoor staat 'de juf'. De juf plakt de sticker op het schrift.",
+            },
+          ],
+          niveaus: {
+            basis: "'Ze' verwijst naar de juf.",
+            simpeler: "Wie geeft er een sticker en plakt die op het schrift?",
+            nogSimpeler: "Wie is een vrouw: de juf of Bas?",
+          },
+        },
+      },
+      {
+        q: "*De bal rolt de straat op. ___ stuitert tegen een auto.* Welk woord past op de lege plek?",
+        options: ["Hij", "Het", "Haar", "Hem"],
+        answer: 0,
+        wrongHints: [null, "Zeg je 'het bal' of 'de bal'?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "'de'-woord → hij",
+              tekst: "'De bal' is een 'de'-woord. Bij een 'de'-woord zoals 'de stoel' of 'de bal' past 'hij' vooraan in de zin.",
+            },
+          ],
+          niveaus: {
+            basis: "Bij 'de bal' hoort 'hij'.",
+            simpeler: "Is 'bal' een 'de'-woord of een 'het'-woord?",
+            nogSimpeler: "De stoel → hij. De bal → …?",
+          },
+        },
+      },
     ],
   },
 
@@ -307,6 +452,69 @@ const steps = [
             basis: "'de fiets' → 'die'. 'het'-woorden krijgen 'dat'.",
             simpeler: "Welk woord is een 'de'-woord? Daar hoort 'die' bij.",
             nogSimpeler: "Zeg je 'de fiets' of 'het fiets'? Dan hoort 'die' erbij.",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*Ik heb een nieuw spel gekregen. ___ is heel leuk.* Welk woord past op de lege plek?",
+        options: ["Dat", "Die", "Hem", "Zij"],
+        answer: 0,
+        wrongHints: [null, "Zeg je 'de spel' of 'het spel'?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "'het'-woord → dat",
+              tekst: "'Het spel' is een 'het'-woord. Bij een 'het'-woord past 'dat' (of 'dit').",
+            },
+          ],
+          niveaus: {
+            basis: "Bij 'het spel' past 'dat'.",
+            simpeler: "Is 'spel' een 'de'-woord of een 'het'-woord?",
+            nogSimpeler: "Het touw → dat. Het spel → …?",
+          },
+        },
+      },
+      {
+        q: "Welk stukje is goed?",
+        options: [
+          "Ik zag een mooie vogel. Die zat in de boom.",
+          "Ik zag een mooie vogel. Dat zat in de boom.",
+          "Ik zag een mooi paard. Die stond in de wei.",
+          "Ik zag een mooie vogel. Het zat in de boom.",
+        ],
+        answer: 0,
+        wrongHints: [null, null, "Zeg je 'de paard' of 'het paard'?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Klopt het verwijswoord?",
+              tekst: "'De vogel' is een 'de'-woord, dus daar past 'die'. 'Het paard' is een 'het'-woord; daar past 'dat'.",
+            },
+          ],
+          niveaus: {
+            basis: "'De vogel' → 'die'. Dat stukje klopt.",
+            simpeler: "Bij welk woord hoort 'die': bij een 'de'-woord of bij een 'het'-woord?",
+            nogSimpeler: "De vogel → die of dat?",
+          },
+        },
+      },
+      {
+        q: "*Oma koopt op de markt een meloen. Die is heel zoet.* Waar verwijst 'Die' naar?",
+        options: ["de meloen", "de markt", "oma", "zoet"],
+        answer: 0,
+        wrongHints: [null, "Kan een markt zoet zijn?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat is er zoet?",
+              tekst: "De meloen is zoet. 'Die' verwijst naar de meloen, een 'de'-woord.",
+            },
+          ],
+          niveaus: {
+            basis: "'Die' verwijst naar de meloen.",
+            simpeler: "Wat koopt oma dat zoet kan zijn?",
+            nogSimpeler: "Wat is zoet: de meloen of de markt?",
           },
         },
       },
@@ -418,6 +626,45 @@ const steps = [
             basis: "'Daar' verwijst naar de plaats: het strand.",
             simpeler: "Op welke plek bouwden jullie het zandkasteel?",
             nogSimpeler: "Waar gaat 'daar' over: het strand (plek) of het zandkasteel?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*De boer roept zijn koeien. Ze komen meteen naar de stal.* Naar wie verwijst 'Ze'?",
+        options: ["de koeien", "de boer", "de stal", "niemand"],
+        answer: 0,
+        wrongHints: [null, "De boer is één man. Zou je dan 'ze' zeggen?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wie komen er?",
+              tekst: "De boer roept, en de koeien komen naar de stal. 'Ze' (meer dan één) verwijst naar de koeien.",
+            },
+          ],
+          niveaus: {
+            basis: "'Ze' verwijst naar de koeien.",
+            simpeler: "Wie worden er geroepen en komen naar de stal?",
+            nogSimpeler: "Wie komen er: de koeien of de stal?",
+          },
+        },
+      },
+      {
+        q: "*Fenna krijgt een brief van haar tante. Die leest ze drie keer.* Waar verwijst 'Die' naar?",
+        options: ["de brief", "haar tante", "Fenna", "drie keer"],
+        answer: 0,
+        wrongHints: [null, "Kun je een tante lezen?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat leest Fenna?",
+              tekst: "Fenna ('ze') leest iets drie keer. Je leest een brief. 'Die' verwijst dus naar de brief.",
+            },
+          ],
+          niveaus: {
+            basis: "'Die' verwijst naar de brief.",
+            simpeler: "Wat kun je drie keer lezen?",
+            nogSimpeler: "Lees je een brief of een tante?",
           },
         },
       },

@@ -25,6 +25,7 @@ vakdekking: `docs/VAKKEN-DEKKING-OKT-2026.md`. Regel: nooit "het is goed" zonder
 | Q10 | Kliktest als kind (g4, g8, klas 1), ouder, nieuwkomer — telefoon, plaatjes geblokkeerd, **expres fout antwoorden** | Claude | ⏳ |
 | Q11 | Eindmeting 200 willekeurige items → foutpercentage (doel ≤ 2%) | Claude | ⏳ |
 | Q12 | Gaten aanvullen: spelling + Engels groep 6-8, wiskunde klas 4, Nederlands klas 2 (pas ná audit-methode) | Claude | ⏳ |
+| Q12a | Q12a Meer vragen basisschool: max 5 vragen per stapbezoek (nieuwe eerst, foute van vorige keer voorop) gebouwd + 1.110 nieuwe vragen in 46 PO-paden (ronde 1 PADEN_PER_GROEP 563 + ronde 2 rekenen 547; 1.327 geschreven, 217 afgekeurd = 16,4%, elk door 2 blinde nakijkers), steekproef ronde 1 0/30 fout; stappen onder 10: 660 → 580 van 757. Nog open: steekproef ronde 2, rondes 3-6, eindmeting 300 — verslag docs/audit/VERSLAG-meer-vragen-po.md, wacht op Mark | Claude → Mark | 🟡 |
 | Q6b | Q6 Schermen & teksten: 77 routes + 76 webpagina's + 43 drukwerk + 27 mailbestanden bekeken, 19.271 zinnen/fragmenten gelezen, 518 fouten gevonden (ernst 3: 98 · 2: 185 · 1: 235), 501 hersteld, ~301 in twijfel; build ✅, audit:vragen 0 meldingen, vitest 337/337 — verslag docs/audit/VERSLAG-schermen-teksten.md, wacht op Mark | Claude → Mark | 🟡 |
 
 ## Mark beslist

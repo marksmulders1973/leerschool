@@ -1,0 +1,350 @@
+{
+ "pathId": "rekenen-tot-100-nieuwkomers",
+ "geschreven": 24,
+ "opgenomen": [
+  {
+   "stap": 1,
+   "q": "**32 + 40 =** ?",
+   "options": [
+    "72",
+    "36",
+    "62",
+    "82"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Je deed er 4 bij. Maar 40 is 4 tientallen.",
+    null,
+    null
+   ],
+   "id": "rekenen-tot-100-nieuwkomers#5"
+  },
+  {
+   "stap": 1,
+   "q": "Spring met **10**: 23, 33, 43, … Wat komt erna?",
+   "options": [
+    "53",
+    "44",
+    "63",
+    "34"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Je deed er 1 bij. Hoe groot is elke sprong?",
+    null,
+    null
+   ],
+   "id": "rekenen-tot-100-nieuwkomers#6"
+  },
+  {
+   "stap": 1,
+   "q": "**61 + 7 =** ?",
+   "options": [
+    "68",
+    "78",
+    "58",
+    "69"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Kijk naar de tientallen. Verandert de 6 als je er maar 7 losse bij doet?",
+    null,
+    null
+   ],
+   "id": "rekenen-tot-100-nieuwkomers#7"
+  },
+  {
+   "stap": 1,
+   "q": "Welke som is **57**?",
+   "options": [
+    "34 + 23",
+    "34 + 33",
+    "34 + 13",
+    "34 + 32"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Reken eerst de tientallen: 34 + 30. Is dat al meer dan 57?",
+    null,
+    null
+   ],
+   "id": "rekenen-tot-100-nieuwkomers#8"
+  },
+  {
+   "stap": 1,
+   "q": "**15 + 24 =** ?",
+   "options": [
+    "39",
+    "49",
+    "29",
+    "38"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    "Tel de sprongen van 10 nog eens. Hoeveel tientallen zitten er in 24?",
+    null
+   ],
+   "id": "rekenen-tot-100-nieuwkomers#9"
+  },
+  {
+   "stap": 2,
+   "q": "**87 − 30 =** ?",
+   "options": [
+    "57",
+    "84",
+    "67",
+    "47"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Je haalde 3 eraf. Maar 30 is 3 tientallen.",
+    null,
+    null
+   ],
+   "id": "rekenen-tot-100-nieuwkomers#10"
+  },
+  {
+   "stap": 2,
+   "q": "Spring terug met **10**: 82, 72, 62, … Wat komt erna?",
+   "options": [
+    "52",
+    "61",
+    "42",
+    "63"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Je ging 1 terug. Hoe groot is elke sprong?",
+    null,
+    null
+   ],
+   "id": "rekenen-tot-100-nieuwkomers#11"
+  },
+  {
+   "stap": 2,
+   "q": "**65 − 23 =** ?",
+   "options": [
+    "42",
+    "52",
+    "32",
+    "88"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    null,
+    "Eraf maakt het getal kleiner. Is 88 kleiner dan 65?"
+   ],
+   "id": "rekenen-tot-100-nieuwkomers#12"
+  },
+  {
+   "stap": 2,
+   "q": "**39 − 5 =** ?",
+   "options": [
+    "34",
+    "44",
+    "33",
+    "24"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Bij eraf wordt het getal kleiner. Is 44 kleiner dan 39?",
+    null,
+    null
+   ],
+   "id": "rekenen-tot-100-nieuwkomers#13"
+  },
+  {
+   "stap": 2,
+   "q": "Welke som is **41**?",
+   "options": [
+    "76 − 35",
+    "76 − 25",
+    "76 − 45",
+    "76 − 34"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Hoeveel tientallen haal je eraf bij 25? Kom je dan al bij 41?",
+    null,
+    null
+   ],
+   "id": "rekenen-tot-100-nieuwkomers#14"
+  },
+  {
+   "stap": 3,
+   "q": "**27 + 5 =** ?",
+   "options": [
+    "32",
+    "22",
+    "31",
+    "42"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    "Maak eerst het tiental vol: 27 + 3 = 30. Hoeveel van de 5 is er dan nog over?",
+    null
+   ],
+   "id": "rekenen-tot-100-nieuwkomers#15"
+  },
+  {
+   "stap": 3,
+   "q": "**53 − 7 =** ?",
+   "options": [
+    "46",
+    "56",
+    "47",
+    "36"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Bij eraf wordt het getal kleiner. Is 56 kleiner dan 53?",
+    null,
+    null
+   ],
+   "id": "rekenen-tot-100-nieuwkomers#16"
+  },
+  {
+   "stap": 3,
+   "q": "Hoeveel moet er bij **36** om **40** te maken?",
+   "options": [
+    "4",
+    "3",
+    "6",
+    "14"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    "Je pakte het laatste cijfer van 36. Tel vanaf 36 verder tot 40.",
+    null
+   ],
+   "id": "rekenen-tot-100-nieuwkomers#17"
+  },
+  {
+   "stap": 3,
+   "q": "Hoe reken je **45 + 8** in twee stapjes?",
+   "options": [
+    "45 + 5 = 50, 50 + 3 = 53",
+    "45 + 5 = 50, 50 + 5 = 55",
+    "45 + 8 = 50, 50 + 3 = 53",
+    "45 + 3 = 48, 48 + 3 = 51"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Je knipt de 8 in twee stukjes. Zijn 5 en 5 samen 8?",
+    null,
+    "Je knipt de 8 in twee stukjes. Zijn 3 en 3 samen 8?"
+   ],
+   "id": "rekenen-tot-100-nieuwkomers#18"
+  },
+  {
+   "stap": 3,
+   "q": "**72 − 6 =** ?",
+   "options": [
+    "66",
+    "76",
+    "67",
+    "56"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    null,
+    "Ga eerst terug naar 70. Hoeveel van de 6 moet er daarna nog af?",
+    null
+   ],
+   "id": "rekenen-tot-100-nieuwkomers#19"
+  }
+ ],
+ "afgekeurd": [
+  {
+   "id": "rekenen-tot-100-nieuwkomers#0",
+   "stap": 0,
+   "q": "Hoeveel **tientallen** zitten er in **52**?",
+   "redenen": [
+    "coördinator: stap heeft steun-vertalingen bij alle bestaande vragen; die kunnen we niet betrouwbaar maken"
+   ]
+  },
+  {
+   "id": "rekenen-tot-100-nieuwkomers#1",
+   "stap": 0,
+   "q": "Hoeveel **eenheden** heeft het getal **47**?",
+   "redenen": [
+    "coördinator: stap heeft steun-vertalingen bij alle bestaande vragen; die kunnen we niet betrouwbaar maken"
+   ]
+  },
+  {
+   "id": "rekenen-tot-100-nieuwkomers#2",
+   "stap": 0,
+   "q": "**60 + 8** is welk getal?",
+   "redenen": [
+    "coördinator: stap heeft steun-vertalingen bij alle bestaande vragen; die kunnen we niet betrouwbaar maken"
+   ]
+  },
+  {
+   "id": "rekenen-tot-100-nieuwkomers#3",
+   "stap": 0,
+   "q": "Welk getal is **9 tientallen** en **0 eenheden**?",
+   "redenen": [
+    "coördinator: stap heeft steun-vertalingen bij alle bestaande vragen; die kunnen we niet betrouwbaar maken"
+   ]
+  },
+  {
+   "id": "rekenen-tot-100-nieuwkomers#4",
+   "stap": 0,
+   "q": "Welk getal heeft **6 tientallen**?",
+   "redenen": [
+    "coördinator: stap heeft steun-vertalingen bij alle bestaande vragen; die kunnen we niet betrouwbaar maken"
+   ]
+  },
+  {
+   "id": "rekenen-tot-100-nieuwkomers#20",
+   "stap": 4,
+   "q": "Een broek kost **24 euro**. Een shirt kost **9 euro**. Hoeveel euro kosten ze samen?",
+   "redenen": [
+    "coördinator: stap heeft steun-vertalingen bij alle bestaande vragen; die kunnen we niet betrouwbaar maken"
+   ]
+  },
+  {
+   "id": "rekenen-tot-100-nieuwkomers#21",
+   "stap": 4,
+   "q": "In de winkel liggen **60 appels**. Er gaan **25 appels** weg. Hoeveel appels liggen er nog?",
+   "redenen": [
+    "coördinator: stap heeft steun-vertalingen bij alle bestaande vragen; die kunnen we niet betrouwbaar maken"
+   ]
+  },
+  {
+   "id": "rekenen-tot-100-nieuwkomers#22",
+   "stap": 4,
+   "q": "Mila heeft **45 euro**. Oma geeft haar **20 euro** erbij. Hoeveel euro heeft Mila nu?",
+   "redenen": [
+    "coördinator: stap heeft steun-vertalingen bij alle bestaande vragen; die kunnen we niet betrouwbaar maken"
+   ]
+  },
+  {
+   "id": "rekenen-tot-100-nieuwkomers#23",
+   "stap": 4,
+   "q": "Je hebt **52 euro**. Je koopt een spel van **27 euro**. Hoeveel euro heb je over?",
+   "redenen": [
+    "coördinator: stap heeft steun-vertalingen bij alle bestaande vragen; die kunnen we niet betrouwbaar maken"
+   ]
+  }
+ ]
+}

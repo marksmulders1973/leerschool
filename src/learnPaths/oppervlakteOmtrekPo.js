@@ -82,6 +82,154 @@ const steps = [
           [{ woord: "oppervlakte", uitleg: "Het vlak binnen de rand (in m²)." }],
         ),
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Bij welke klus moet je de **oppervlakte** weten?",
+        options: [
+          "een tafel helemaal bedekken met een kleed",
+          "een hek rond een weiland zetten",
+          "een randje plakband langs een poster plakken",
+          "een rij paaltjes rond een speelveld zetten",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Gaat het hier om de rand of om het vlak binnenin?",
+          null,
+          "Komen de paaltjes óp het veld of langs de rand?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Vlak bedekken = oppervlakte. Langs de rand = omtrek.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "oppervlakte",
+              uitleg: "Het hele vlak binnen de rand.",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "Het kleed ligt over het hele tafelblad → oppervlakte.",
+            simpeler: "Bedekken = vlak = oppervlakte.",
+            nogSimpeler: "het kleed",
+          },
+        },
+      },
+      {
+        q: "Sem zegt: \"Mijn slaapkamer is **12 m²**.\" Wat vertelt hij dan?",
+        options: [
+          "hoeveel vloer er in zijn kamer is",
+          "hoe lang de rand van zijn vloer is",
+          "hoe hoog zijn kamer is",
+          "hoe breed zijn deur is",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk naar het teken ² achter de m. Hoort dat bij een lengte of bij een vlak?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "m² = vierkante meter = oppervlakte = hoeveel vlak.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "m²",
+              uitleg: "Vierkante meter — eenheid voor oppervlakte.",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "12 m² gaat over het vlak: de vloer.",
+            simpeler: "Het ² betekent: vlak, niet lengte.",
+            nogSimpeler: "de vloer",
+          },
+        },
+      },
+      {
+        q: "Een rechthoek is **4 cm** lang en **2 cm** breed. Hoeveel **vierkantjes van 1 cm bij 1 cm** passen er precies in?",
+        options: ["8", "6", "12", "16"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je telde lengte en breedte op. Hoeveel rijen van 4 vierkantjes passen erin?",
+          "Dat is de lengte van de rand. Zoek je de rand of het vlak?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Vierkantjes erin tellen = oppervlakte: 4 × 2 = 8.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "oppervlakte",
+              uitleg: "Hoeveel kleine vierkantjes in een figuur passen.",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "2 rijen van 4 = 8 vierkantjes.",
+            simpeler: "Eén rij heeft 4 vierkantjes. Er zijn 2 rijen.",
+            nogSimpeler: "8",
+          },
+        },
+      },
+      {
+        q: "Rechthoek A is **6 m × 2 m**. Rechthoek B is **4 m × 3 m**. Wat klopt?",
+        options: [
+          "Ze hebben dezelfde oppervlakte, maar A heeft een grotere omtrek.",
+          "Ze hebben dezelfde omtrek, maar B heeft een grotere oppervlakte.",
+          "Ze hebben dezelfde omtrek en dezelfde oppervlakte.",
+          "A heeft een grotere oppervlakte en een grotere omtrek.",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Reken voor allebei de omtrek uit: tel alle 4 de zijden op.",
+          null,
+          "Reken voor allebei de oppervlakte uit: lengte keer breedte.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "A: opp 12 m², omtrek 16 m. B: opp 12 m², omtrek 14 m.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "omtrek vs oppervlakte",
+              uitleg: "Twee figuren kunnen even groot zijn (oppervlakte) maar toch een andere rand hebben (omtrek).",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "Opp: 12 en 12. Omtrek: 16 en 14.",
+            simpeler: "Reken eerst 6×2 en 4×3. Tel daarna de randen op.",
+            nogSimpeler: "A heeft meer rand",
+          },
+        },
+      },
     ],
   },
   {
@@ -148,6 +296,172 @@ const steps = [
           { basis: "52÷4 = 13 cm.", simpeler: "4 gelijke zijden. 52÷4 = 13.", nogSimpeler: "13" },
           [{ woord: "vierkant omtrek", uitleg: "4 × zijde. Terugrekenen: zijde = omtrek ÷ 4." }],
         ),
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Bereken de **omtrek** van een rechthoek van **9 m** lang en **4 m** breed.",
+        options: ["26 m", "13 m", "36 m", "22 m"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je telde lengte en breedte maar één keer. Hoeveel zijden heeft een rechthoek?",
+          "Je vermenigvuldigde. Is dat de rand of het vlak?",
+          "Tel nog eens: heb je alle 4 de zijden meegeteld?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "O = 2 × (L + B) = 2 × (9 + 4) = 26 m.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "omtrek rechthoek",
+              uitleg: "2 × lengte + 2 × breedte.",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "9 + 4 = 13. 2 × 13 = 26 m.",
+            simpeler: "Tel alle zijden op: 9 + 4 + 9 + 4.",
+            nogSimpeler: "26",
+          },
+        },
+      },
+      {
+        q: "Een vierkant heeft zijden van **8 cm**. Wat is de **omtrek**?",
+        options: ["32 cm", "16 cm", "64 cm", "24 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoeveel zijden heeft een vierkant? Heb je die allemaal meegeteld?",
+          "Je deed zijde × zijde. Is dat de rand of het vlak?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Omtrek vierkant = 4 × zijde = 4 × 8 = 32 cm.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vierkant omtrek",
+              uitleg: "4 × zijde.",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "4 × 8 = 32 cm.",
+            simpeler: "8 + 8 + 8 + 8 = 32.",
+            nogSimpeler: "32",
+          },
+        },
+      },
+      {
+        q: "Welke rechthoek heeft een **omtrek van 24 cm**?",
+        options: ["8 cm × 4 cm", "6 cm × 4 cm", "12 cm × 2 cm", "3 cm × 8 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "6 × 4 = 24, maar is dat de omtrek? Tel de zijden eens op.",
+          null,
+          "Reken 2 × (3 + 8) uit.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Reken per rechthoek 2 × (L + B) uit. Alleen 8 × 4 geeft 24.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "omtrek rechthoek",
+              uitleg: "2 × (lengte + breedte).",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "8 + 4 = 12, 2 × 12 = 24.",
+            simpeler: "Tel lengte en breedte op en doe dat keer 2.",
+            nogSimpeler: "8 × 4",
+          },
+        },
+      },
+      {
+        q: "Een **vierkant** schilderij heeft zijden van **45 cm**. Hoeveel cm lijst gaat er **rondom**?",
+        options: ["180 cm", "90 cm", "135 cm", "2.025 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je telde 2 zijden. Hoeveel zijden heeft het schilderij?",
+          null,
+          "Je deed 45 × 45. Is dat de rand of het vlak?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Omtrek vierkant = 4 × 45 = 180 cm.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vierkant omtrek",
+              uitleg: "4 × zijde.",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "4 × 45 = 180 cm.",
+            simpeler: "4 × 40 = 160 en 4 × 5 = 20. Samen 180.",
+            nogSimpeler: "180",
+          },
+        },
+      },
+      {
+        q: "Een rechthoek is **15 cm** lang. De breedte is **3 cm korter** dan de lengte. Wat is de **omtrek**?",
+        options: ["54 cm", "36 cm", "27 cm", "60 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is de breedte 3 cm, of 3 cm minder dan 15?",
+          "Je telde lengte en breedte maar één keer.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Eerst de breedte: 15 − 3 = 12. Dan O = 2 × (15 + 12) = 54 cm.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "omtrek rechthoek",
+              uitleg: "2 × (lengte + breedte).",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "B = 12. 15 + 12 = 27. 2 × 27 = 54 cm.",
+            simpeler: "Breedte is 12. Tel op: 15 + 12 + 15 + 12.",
+            nogSimpeler: "54",
+          },
+        },
       },
     ],
   },
@@ -216,6 +530,172 @@ const steps = [
           [{ woord: "terugrekenen lengte", uitleg: "L = oppervlakte ÷ breedte." }],
         ),
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Bereken de **oppervlakte** van een rechthoek van **8 cm** lang en **7 cm** breed.",
+        options: ["56 cm²", "15 cm²", "30 cm²", "56 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je telde op. Hoe bereken je hoeveel vierkantjes erin passen?",
+          "Dat is de omtrek. Zoek je de rand of het vlak?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Oppervlakte rechthoek = lengte × breedte = 8 × 7 = 56 cm².",
+            },
+          ],
+          woorden: [
+            {
+              woord: "oppervlakte rechthoek",
+              uitleg: "L × B.",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "8 × 7 = 56 cm².",
+            simpeler: "8 rijen van 7 vierkantjes.",
+            nogSimpeler: "56",
+          },
+        },
+      },
+      {
+        q: "Wat is de **oppervlakte** van een vierkant met zijden van **9 m**?",
+        options: ["81 m²", "18 m²", "36 m²", "81 m"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je deed 9 + 9. Hoe reken je de oppervlakte van een vierkant uit?",
+          "Dat is de omtrek (4 × 9). Zoek je de rand of het vlak?",
+          "Kijk naar de eenheid: welke eenheid hoort bij oppervlakte?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Oppervlakte vierkant = z × z = 9 × 9 = 81 m².",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vierkant oppervlakte",
+              uitleg: "zijde × zijde = z².",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "9 × 9 = 81 m².",
+            simpeler: "Zijde keer zijde: 9 × 9.",
+            nogSimpeler: "81",
+          },
+        },
+      },
+      {
+        q: "Hoeveel m² is **1 hectare (ha)**?",
+        options: ["10.000 m²", "100 m²", "1.000 m²", "1.000.000 m²"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "1 ha is een vierkant van 100 m bij 100 m. Wat is 100 × 100?",
+          null,
+          "Dat is 1 km². Is een hectare zo groot?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "1 ha = 100 m × 100 m = 10.000 m².",
+            },
+          ],
+          woorden: [
+            {
+              woord: "hectare (ha)",
+              uitleg: "Oppervlakte van een vierkant van 100 m bij 100 m = 10.000 m².",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "100 × 100 = 10.000 m².",
+            simpeler: "Een vierkant van 100 m bij 100 m.",
+            nogSimpeler: "10.000",
+          },
+        },
+      },
+      {
+        q: "Hoeveel **hectare** is **1 km²**?",
+        options: ["100 ha", "10 ha", "1.000 ha", "10.000 ha"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "1 km² = 1.000.000 m² en 1 ha = 10.000 m². Hoe vaak past 10.000 in 1.000.000?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "1 km² = 1.000.000 m², 1 ha = 10.000 m² → 100 ha.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "km² ↔ ha",
+              uitleg: "1 km² = 100 ha.",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "1.000.000 ÷ 10.000 = 100.",
+            simpeler: "1 km is 10 × 100 m. Dus 10 × 10 = 100 vierkanten van 100 m bij 100 m.",
+            nogSimpeler: "100",
+          },
+        },
+      },
+      {
+        q: "Een kamer is **5 m** lang en **3,5 m** breed. Hoeveel m² **vloer** heeft de kamer?",
+        options: ["17,5 m²", "8,5 m²", "17 m²", "15 m²"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je telde op. Hoe reken je het vlak van een rechthoek uit?",
+          "Dat is de omtrek. Zoek je de rand of het vlak?",
+          "Vergeet de 0,5 m niet.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Oppervlakte = 5 × 3,5 = 17,5 m².",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kommagetal vermenigvuldigen",
+              uitleg: "5 × 3,5: doe 5 × 3 = 15 en 5 × 0,5 = 2,5 → 17,5.",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "5 × 3 = 15, 5 × 0,5 = 2,5. Samen 17,5 m².",
+            simpeler: "5 × 3,5 is 5 × 3 plus de helft van 5.",
+            nogSimpeler: "17,5",
+          },
+        },
+      },
     ],
   },
   {
@@ -283,6 +763,172 @@ const steps = [
           [{ woord: "oppervlakte driehoek", uitleg: "½ × basis × hoogte." }],
         ),
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een driehoek heeft een basis van **9 cm** en een hoogte van **4 cm**. Wat is de **oppervlakte**?",
+        options: ["18 cm²", "36 cm²", "13 cm²", "18 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een driehoek is de helft van een rechthoek. Ben je de ÷ 2 vergeten?",
+          null,
+          "Welke eenheid hoort bij oppervlakte?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "A = (basis × hoogte) ÷ 2 = (9 × 4) ÷ 2 = 18 cm².",
+            },
+          ],
+          woorden: [
+            {
+              woord: "oppervlakte driehoek",
+              uitleg: "½ × basis × hoogte.",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "9 × 4 = 36. 36 ÷ 2 = 18 cm².",
+            simpeler: "Eerst keer, dan de helft.",
+            nogSimpeler: "18",
+          },
+        },
+      },
+      {
+        q: "Een driehoek heeft een basis van **10 cm** en een hoogte van **4 cm**. Eén **schuine zijde** is **5 cm**. Wat is de **oppervlakte**?",
+        options: ["20 cm²", "25 cm²", "40 cm²", "50 cm²"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je gebruikte de schuine zijde. Staat die haaks op de basis?",
+          "Ben je de ÷ 2 vergeten?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Hoogte staat haaks op de basis. Schuine zijde niet gebruiken: ½ × 10 × 4 = 20 cm².",
+            },
+          ],
+          woorden: [
+            {
+              woord: "hoogte",
+              uitleg: "De lijn die haaks (loodrecht) op de basis staat.",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "10 × 4 = 40. 40 ÷ 2 = 20 cm².",
+            simpeler: "Gebruik 10 en 4. De 5 heb je niet nodig.",
+            nogSimpeler: "20",
+          },
+        },
+      },
+      {
+        q: "Je knipt een rechthoek van **12 cm × 6 cm** van hoek tot hoek doormidden. Je krijgt 2 gelijke driehoeken. Wat is de oppervlakte van **één** driehoek?",
+        options: ["36 cm²", "72 cm²", "18 cm²", "9 cm²"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is de hele rechthoek. Hoeveel driehoeken krijg je?",
+          "Je deelde door 4. In hoeveel stukken knip je de rechthoek?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Driehoek = helft van de rechthoek: (12 × 6) ÷ 2 = 36 cm².",
+            },
+          ],
+          woorden: [
+            {
+              woord: "diagonaal",
+              uitleg: "Lijn van de ene hoek naar de overkant.",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "12 × 6 = 72. De helft = 36 cm².",
+            simpeler: "Twee gelijke stukken: elk de helft van 72.",
+            nogSimpeler: "36",
+          },
+        },
+      },
+      {
+        q: "Een tuintje heeft de vorm van een driehoek met een **rechte hoek**. De twee zijden bij de rechte hoek zijn **8 m** en **3 m**. Hoeveel m² is het tuintje?",
+        options: ["12 m²", "24 m²", "11 m²", "12 m"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Ben je de ÷ 2 vergeten?",
+          "Je telde op. Hoe reken je de oppervlakte van een driehoek uit?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Rechthoekige driehoek: zijden bij de rechte hoek = basis en hoogte. (8 × 3) ÷ 2 = 12 m².",
+            },
+          ],
+          woorden: [
+            {
+              woord: "rechthoekige driehoek",
+              uitleg: "Driehoek met 1 hoek van 90°.",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "8 × 3 = 24. 24 ÷ 2 = 12 m².",
+            simpeler: "Keer, en dan de helft.",
+            nogSimpeler: "12",
+          },
+        },
+      },
+      {
+        q: "Welke driehoek heeft de **grootste oppervlakte**?",
+        options: [
+          "basis 6 cm, hoogte 8 cm",
+          "basis 10 cm, hoogte 4 cm",
+          "basis 7 cm, hoogte 6 cm",
+          "basis 9 cm, hoogte 5 cm",
+        ],
+        answer: 0,
+        wrongHints: [null, "Reken voor elke driehoek basis × hoogte ÷ 2 uit en vergelijk.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Bereken per driehoek (b × h) ÷ 2: 24, 20, 21, 22,5.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "oppervlakte driehoek",
+              uitleg: "½ × basis × hoogte.",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "48, 40, 42 en 45 — gedeeld door 2. De grootste is 48 ÷ 2 = 24.",
+            simpeler: "Vergelijk eerst basis × hoogte: 48, 40, 42, 45.",
+            nogSimpeler: "6 en 8",
+          },
+        },
+      },
     ],
   },
   {
@@ -326,6 +972,209 @@ const steps = [
           [{ woord: "pi (π)", uitleg: "Wiskunde-constante ~3,14159. Verhouding omtrek/diameter cirkel." }],
         ),
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een cirkel heeft een **straal van 3 cm**. Wat is de **omtrek**? (Gebruik π ≈ 3,14)",
+        options: ["18,84 cm", "9,42 cm", "28,26 cm", "37,68 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is π × straal. Moet je de straal of de diameter gebruiken?",
+          "Je deed π × r × r. Is dat de omtrek of de oppervlakte?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Omtrek = 2 × π × r = 2 × 3,14 × 3 = 18,84 cm.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "straal",
+              uitleg: "Van middelpunt naar rand. (Helft van de diameter.)",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "d = 6. 3,14 × 6 = 18,84 cm.",
+            simpeler: "Straal 3 → diameter 6. Doe 6 × 3,14.",
+            nogSimpeler: "18,84",
+          },
+        },
+      },
+      {
+        q: "Een cirkel heeft een **diameter van 20 cm**. Wat is de **omtrek**? (Gebruik π ≈ 3,14)",
+        options: ["62,8 cm", "31,4 cm", "125,6 cm", "314 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je nam de helft van de diameter. Welke maat hoort in O = π × d?",
+          "Je verdubbelde de diameter nog eens. Is dat nodig?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Omtrek = π × diameter = 3,14 × 20 = 62,8 cm.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "diameter",
+              uitleg: "Van rand tot rand door het middelpunt. (Dubbele straal.)",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "3,14 × 20 = 62,8 cm.",
+            simpeler: "3,14 × 10 = 31,4. Dat keer 2 = 62,8.",
+            nogSimpeler: "62,8",
+          },
+        },
+      },
+      {
+        q: "Een cirkel heeft een **straal van 10 cm**. Wat is de **oppervlakte**? (Gebruik π ≈ 3,14)",
+        options: ["314 cm²", "62,8 cm²", "31,4 cm²", "1.256 cm²"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is 2 × π × r. Is dat de rand of het vlak?",
+          null,
+          "Je gebruikte 20 × 20. Is 20 de straal?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Oppervlakte = π × r² = 3,14 × 100 = 314 cm².",
+            },
+          ],
+          woorden: [
+            {
+              woord: "oppervlakte cirkel",
+              uitleg: "π × straal².",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "10 × 10 = 100. 3,14 × 100 = 314 cm².",
+            simpeler: "Straal × straal = 100. Keer 3,14.",
+            nogSimpeler: "314",
+          },
+        },
+      },
+      {
+        q: "Een cirkel heeft een **diameter van 14 cm**. Hoe lang is de **straal**?",
+        options: ["7 cm", "28 cm", "14 cm", "3,5 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is de straal groter of kleiner dan de diameter?",
+          null,
+          "Je deelde twee keer door 2. Hoe vaak past de straal in de diameter?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "d = 2 × r, dus r = d ÷ 2 = 14 ÷ 2 = 7 cm.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "straal",
+              uitleg: "Helft van de diameter.",
+            },
+            {
+              woord: "diameter",
+              uitleg: "Dubbele straal.",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "14 ÷ 2 = 7 cm.",
+            simpeler: "De straal gaat van het midden naar de rand: half zo lang.",
+            nogSimpeler: "7",
+          },
+        },
+      },
+      {
+        q: "Een fietswiel heeft een **diameter van 50 cm**. Het wiel draait **1 keer helemaal rond**. Hoeveel cm rolt de fiets dan vooruit? (Gebruik π ≈ 3,14)",
+        options: ["157 cm", "78,5 cm", "314 cm", "1.962,5 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je gebruikte de straal in π × d. Welke maat hoort erbij?",
+          "Je verdubbelde de diameter. Is dat nodig?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Eén keer rond = omtrek = π × d = 3,14 × 50 = 157 cm.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "omtrek cirkel",
+              uitleg: "π × diameter.",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "3,14 × 50 = 157 cm.",
+            simpeler: "3,14 × 100 = 314. De helft is 157.",
+            nogSimpeler: "157",
+          },
+        },
+      },
+      {
+        q: "Een cirkel heeft een **diameter van 12 cm**. Wat is de **oppervlakte**? (Gebruik π ≈ 3,14)",
+        options: ["113,04 cm²", "452,16 cm²", "37,68 cm²", "18,84 cm²"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je gebruikte 12 × 12. Hoort in π × r² de straal of de diameter?",
+          "Dat is π × d, de omtrek. Zoek je de rand of het vlak?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Eerst de straal: 6 cm. Dan π × 6 × 6 = 3,14 × 36 = 113,04 cm².",
+            },
+          ],
+          woorden: [
+            {
+              woord: "straal vs diameter",
+              uitleg: "In π × r² gebruik je de STRAAL (halve diameter).",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "r = 6. 6 × 6 = 36. 3,14 × 36 = 113,04 cm².",
+            simpeler: "Halveer eerst: 12 → 6. Dan 6 × 6 = 36. Dan × 3,14.",
+            nogSimpeler: "113,04",
+          },
+        },
+      },
     ],
   },
   {
@@ -368,6 +1217,200 @@ const steps = [
           { basis: "π × 15² = 706,5 cm².", simpeler: "Straal = halve diameter = 15. π×15² = 706,5.", nogSimpeler: "706,5" },
           [{ woord: "straal vs diameter", uitleg: "Straal = halve diameter. In formule cirkel-oppervlakte gebruik je STRAAL (niet diameter)." }],
         ),
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Je gaat een muur **schilderen**. De muur is **4 m** breed en **2,5 m** hoog. Hoeveel m² moet je schilderen?",
+        options: ["10 m²", "6,5 m²", "13 m²", "10 m"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je telde op. Verf komt op het vlak — hoe reken je dat uit?",
+          "Dat is de rand van de muur. Schilder je de rand of het vlak?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Muur schilderen = oppervlakte = breedte × hoogte = 4 × 2,5 = 10 m².",
+            },
+          ],
+          woorden: [
+            {
+              woord: "oppervlakte",
+              uitleg: "Het hele vlak (in m²).",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "4 × 2,5 = 10 m².",
+            simpeler: "4 × 2 = 8 en 4 × 0,5 = 2. Samen 10.",
+            nogSimpeler: "10",
+          },
+        },
+      },
+      {
+        q: "Een terras is **3 m** lang en **2 m** breed. Je legt tegels van **50 cm × 50 cm**. Hoeveel tegels heb je nodig?",
+        options: ["24 tegels", "6 tegels", "10 tegels", "12 tegels"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Een tegel is kleiner dan 1 m². Hoeveel tegels passen er in 1 m?",
+          null,
+          "Hoeveel tegels passen er langs 3 m? En langs 2 m?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Tel tegels per kant: 300 ÷ 50 = 6 en 200 ÷ 50 = 4. 6 × 4 = 24.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tegel van 50 cm",
+              uitleg: "Op 1 m passen 2 van die tegels naast elkaar.",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "6 tegels in de lengte, 4 in de breedte: 6 × 4 = 24.",
+            simpeler: "In 1 m passen 2 tegels. Dus 3 m → 6, 2 m → 4.",
+            nogSimpeler: "24",
+          },
+        },
+      },
+      {
+        q: "Een weiland is **25 m** lang en **12 m** breed. Er komt een hek omheen, maar met een **poort van 3 m** waar geen hek hoeft. Hoeveel meter hek heb je nodig?",
+        options: ["71 m", "74 m", "300 m", "77 m"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is de hele omtrek. Moet er ook hek komen waar de poort zit?",
+          "Je vermenigvuldigde. Gaat een hek over het vlak of langs de rand?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Omtrek 74 m, min de poort van 3 m = 71 m.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "omtrek",
+              uitleg: "De lengte van de hele rand rondom.",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "25 + 12 = 37, × 2 = 74. 74 − 3 = 71 m.",
+            simpeler: "Eerst de hele rand: 74 m. Dan het stuk van de poort eraf.",
+            nogSimpeler: "71",
+          },
+        },
+      },
+      {
+        q: "Een grasveld is **12 m** lang en **8 m** breed. Met **1 zak mest** doe je **32 m²**. Hoeveel zakken heb je nodig voor het hele veld?",
+        options: ["3 zakken", "2 zakken", "4 zakken", "6 zakken"],
+        answer: 0,
+        wrongHints: [null, "Reken eerst uit hoeveel m² het hele veld is.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Mest op het gras = oppervlakte: 12 × 8 = 96 m². 96 ÷ 32 = 3.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "oppervlakte",
+              uitleg: "Het hele vlak (in m²).",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "12 × 8 = 96. 96 ÷ 32 = 3.",
+            simpeler: "1 zak = 32, 2 zakken = 64, 3 zakken = 96.",
+            nogSimpeler: "3",
+          },
+        },
+      },
+      {
+        q: "Een **vierkant** veldje heeft een **omtrek van 20 m**. Hoeveel m² is het veldje?",
+        options: ["25 m²", "20 m²", "100 m²", "400 m²"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "20 m is de rand. Hoe lang is één zijde dan?",
+          null,
+          "Je deed 20 × 20. Is 20 de lengte van één zijde?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Eerst de zijde terugrekenen: 20 ÷ 4 = 5 m. Dan 5 × 5 = 25 m².",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vierkant",
+              uitleg: "Rechthoek met 4 gelijke zijden.",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "20 ÷ 4 = 5. 5 × 5 = 25 m².",
+            simpeler: "Eerst één zijde: 5 m. Dan zijde × zijde.",
+            nogSimpeler: "25",
+          },
+        },
+      },
+      {
+        q: "Een ronde vijver heeft een **straal van 20 m**. Je loopt **1 rondje** langs de rand. Hoeveel meter loop je? (Gebruik π ≈ 3,14)",
+        options: ["125,6 m", "62,8 m", "1.256 m", "251,2 m"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is π × straal. In de omtrek-formule hoort de diameter (of 2 × straal).",
+          "Je deed π × r². Loop je over het vlak of langs de rand?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kern",
+              tekst: "Rondje = omtrek = 2 × π × r = 2 × 3,14 × 20 = 125,6 m.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "omtrek cirkel",
+              uitleg: "2 × π × straal = π × diameter.",
+            },
+          ],
+          theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+          voorbeelden: [],
+          basiskennis: [],
+          niveaus: {
+            basis: "d = 40. 3,14 × 40 = 125,6 m.",
+            simpeler: "Straal 20 → diameter 40. Doe 40 × 3,14.",
+            nogSimpeler: "125,6",
+          },
+        },
       },
     ],
   },

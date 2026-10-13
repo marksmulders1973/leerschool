@@ -1,0 +1,2325 @@
+[
+ {
+  "stap": 0,
+  "q": "**7 + 2 × 5** = ?",
+  "options": [
+   "17",
+   "45",
+   "19",
+   "14"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Rekende je van links naar rechts? Kijk welke bewerking sterker is.",
+   null,
+   "Heb je de 5 wel meegenomen?"
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "× eerst",
+     "tekst": "2 × 5 = 10."
+    },
+    {
+     "titel": "Dan +",
+     "tekst": "7 + 10 = 17."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "× eerst",
+     "uitleg": "Vermenigvuldigen gaat vóór optellen en aftrekken."
+    }
+   ],
+   "theorie": "Maal gaat altijd vóór plus. Dat is een vaste afspraak.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "7 + 2 × 5 = 7 + 10 = 17. (Niet 9 × 5 = 45.)"
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Niet links→rechts",
+     "uitleg": "Bij rekenen lees je niet gewoon van links naar rechts."
+    }
+   ],
+   "niveaus": {
+    "basis": "17.",
+    "simpeler": "Eerst 2 × 5 = 10. Dan 7 + 10 = 17.",
+    "nogSimpeler": "17"
+   }
+  }
+ },
+ {
+  "stap": 0,
+  "q": "**4 + 6 ÷ 2** = ?",
+  "options": [
+   "7",
+   "5",
+   "10",
+   "12"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat zou (4 + 6) ÷ 2 zijn — maar er staan geen haakjes.",
+   "Vergeet de deling niet.",
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "÷ eerst",
+     "tekst": "6 ÷ 2 = 3."
+    },
+    {
+     "titel": "Dan +",
+     "tekst": "4 + 3 = 7."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "÷ eerst",
+     "uitleg": "Delen gaat vóór optellen en aftrekken."
+    }
+   ],
+   "theorie": "Delen is sterker dan optellen, dus delen doe je eerst.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "4 + 6 ÷ 2 = 4 + 3 = 7."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Even sterk",
+     "uitleg": "× en ÷ zijn even sterk; + en − ook."
+    }
+   ],
+   "niveaus": {
+    "basis": "7.",
+    "simpeler": "Eerst 6 ÷ 2 = 3. Dan 4 + 3 = 7.",
+    "nogSimpeler": "7"
+   }
+  }
+ },
+ {
+  "stap": 0,
+  "q": "Sanne rekent **9 + 1 × 3** van links naar rechts uit. Ze krijgt 30. Wat is het goede antwoord?",
+  "options": [
+   "12",
+   "30",
+   "13",
+   "27"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is Sannes antwoord — maar rekende zij in de goede volgorde?",
+   null,
+   "Welke bewerking doe je als eerste: × of +?"
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "× eerst",
+     "tekst": "1 × 3 = 3."
+    },
+    {
+     "titel": "Dan +",
+     "tekst": "9 + 3 = 12."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "× eerst",
+     "uitleg": "Vermenigvuldigen gaat vóór optellen en aftrekken."
+    }
+   ],
+   "theorie": "Van links naar rechts rekenen gaat mis als er × en + door elkaar staan.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "Sanne deed (9 + 1) × 3 = 30. Goed is 9 + 3 = 12."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Veelgemaakte fout",
+     "uitleg": "Veel kinderen rekenen zoals ze lezen: van links naar rechts."
+    }
+   ],
+   "niveaus": {
+    "basis": "12.",
+    "simpeler": "Eerst 1 × 3 = 3. Dan 9 + 3 = 12.",
+    "nogSimpeler": "12"
+   }
+  }
+ },
+ {
+  "stap": 0,
+  "q": "Waarom spreken we een vaste **volgorde** af voor rekensommen?",
+  "options": [
+   "Anders krijgt iedereen een ander antwoord",
+   "Dan reken je altijd sneller",
+   "Dan worden de getallen kleiner",
+   "Dan hoef je minder op te schrijven"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Gaat het om snelheid, of om iets anders?",
+   null,
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Afspraak",
+     "tekst": "Iedereen rekent in dezelfde volgorde."
+    },
+    {
+     "titel": "Gevolg",
+     "tekst": "Zo komt iedereen op hetzelfde antwoord."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "afspraak",
+     "uitleg": "Een regel die iedereen gebruikt, overal ter wereld."
+    }
+   ],
+   "theorie": "Zonder vaste afspraak zou dezelfde som verschillende uitkomsten kunnen hebben.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "Zonder afspraak is 2 + 3 × 4 voor de één 20 en voor de ander 14. Met de afspraak is het altijd 14."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Wereldwijd",
+     "uitleg": "De rekenvolgorde geldt overal ter wereld."
+    }
+   ],
+   "niveaus": {
+    "basis": "Anders krijgt iedereen een ander antwoord.",
+    "simpeler": "Met een vaste volgorde krijgt iedereen bij dezelfde som hetzelfde antwoord.",
+    "nogSimpeler": "Zelfde antwoord voor iedereen."
+   }
+  }
+ },
+ {
+  "stap": 0,
+  "q": "Welk stukje reken je als **eerste** uit in **15 − 9 ÷ 3**?",
+  "options": [
+   "9 ÷ 3",
+   "15 − 9",
+   "15 ÷ 3",
+   "15 − 3"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat staat wel vooraan — maar is − de sterkste bewerking hier?",
+   null,
+   "Dat is al de tweede stap. Wat moet je daarvóór uitrekenen?"
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "÷ eerst",
+     "tekst": "Eerst 9 ÷ 3 = 3."
+    },
+    {
+     "titel": "Dan −",
+     "tekst": "15 − 3 = 12."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "÷ eerst",
+     "uitleg": "Delen gaat vóór optellen en aftrekken."
+    }
+   ],
+   "theorie": "Delen is sterker dan aftrekken.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "15 − 9 ÷ 3 = 15 − 3 = 12."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Niet vooraan beginnen",
+     "uitleg": "Je begint bij de sterkste bewerking, niet bij het begin van de som."
+    }
+   ],
+   "niveaus": {
+    "basis": "9 ÷ 3.",
+    "simpeler": "De ÷ is sterker dan de −. Dus eerst 9 ÷ 3.",
+    "nogSimpeler": "9 ÷ 3"
+   }
+  }
+ },
+ {
+  "stap": 0,
+  "q": "**20 − 3 × 4** = ?",
+  "options": [
+   "8",
+   "68",
+   "11",
+   "12"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Rekende je eerst 20 − 3? Kijk welke bewerking sterker is.",
+   null,
+   "Je bent er bijna — er moet nog iets van de 20 af."
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "× eerst",
+     "tekst": "3 × 4 = 12."
+    },
+    {
+     "titel": "Dan −",
+     "tekst": "20 − 12 = 8."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "× eerst",
+     "uitleg": "Vermenigvuldigen gaat vóór optellen en aftrekken."
+    }
+   ],
+   "theorie": "Maal gaat vóór min.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "20 − 3 × 4 = 20 − 12 = 8. (Niet 17 × 4 = 68.)"
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Niet links→rechts",
+     "uitleg": "Ook bij min gaat de × eerst."
+    }
+   ],
+   "niveaus": {
+    "basis": "8.",
+    "simpeler": "Eerst 3 × 4 = 12. Dan 20 − 12 = 8.",
+    "nogSimpeler": "8"
+   }
+  }
+ },
+ {
+  "stap": 0,
+  "q": "Welke som heeft als uitkomst **10**?",
+  "options": [
+   "4 + 3 × 2",
+   "2 + 4 × 3",
+   "6 + 4 ÷ 2",
+   "3 + 2 × 4"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Reken deze som na met × eerst — komt er 10 uit?",
+   null,
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Elke som apart",
+     "tekst": "Doe bij elke som eerst de × of ÷."
+    },
+    {
+     "titel": "Vergelijk",
+     "tekst": "4 + 3 × 2 = 4 + 6 = 10."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "× eerst",
+     "uitleg": "Vermenigvuldigen gaat vóór optellen en aftrekken."
+    }
+   ],
+   "theorie": "In elke som gaat × of ÷ vóór +.",
+   "voorbeelden": [
+    {
+     "type": "tabel",
+     "tekst": "2 + 4 × 3 = 14 · 6 + 4 ÷ 2 = 8 · 3 + 2 × 4 = 11 · 4 + 3 × 2 = 10."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Rustig narekenen",
+     "uitleg": "Reken elke som stap voor stap uit."
+    }
+   ],
+   "niveaus": {
+    "basis": "4 + 3 × 2.",
+    "simpeler": "4 + 3 × 2: eerst 3 × 2 = 6, dan 4 + 6 = 10.",
+    "nogSimpeler": "4 + 3 × 2"
+   }
+  }
+ },
+ {
+  "stap": 0,
+  "q": "**6 + 2 × 2** = ?",
+  "options": [
+   "10",
+   "16",
+   "8",
+   "12"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Rekende je van links naar rechts? Welke bewerking gaat eerst?",
+   null,
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "× eerst",
+     "tekst": "2 × 2 = 4."
+    },
+    {
+     "titel": "Dan +",
+     "tekst": "6 + 4 = 10."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "× eerst",
+     "uitleg": "Vermenigvuldigen gaat vóór optellen en aftrekken."
+    }
+   ],
+   "theorie": "Maal gaat vóór plus.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "6 + 2 × 2 = 6 + 4 = 10. (Niet 8 × 2 = 16.)"
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Maal eerst",
+     "uitleg": "'Maal eerst' is een handig ezelsbruggetje."
+    }
+   ],
+   "niveaus": {
+    "basis": "10.",
+    "simpeler": "Eerst 2 × 2 = 4. Dan 6 + 4 = 10.",
+    "nogSimpeler": "10"
+   }
+  }
+ },
+ {
+  "stap": 1,
+  "q": "**3 × 3 + 2 × 5** = ?",
+  "options": [
+   "19",
+   "55",
+   "75",
+   "16"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat zou (3 × 3 + 2) × 5 zijn — maar er staan geen haakjes.",
+   null,
+   "Heb je de twee keer-sommen wel uitgerekend?"
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Beide × eerst",
+     "tekst": "3 × 3 = 9 en 2 × 5 = 10."
+    },
+    {
+     "titel": "Dan +",
+     "tekst": "9 + 10 = 19."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "× eerst",
+     "uitleg": "Vermenigvuldigen gaat vóór optellen en aftrekken."
+    }
+   ],
+   "theorie": "Staan er twee ×-stukjes in de som? Reken ze allebei eerst uit.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "3 × 3 + 2 × 5 = 9 + 10 = 19."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Stukjes",
+     "uitleg": "Zie de som als twee stukjes: 3 × 3 en 2 × 5."
+    }
+   ],
+   "niveaus": {
+    "basis": "19.",
+    "simpeler": "Eerst 3 × 3 = 9 en 2 × 5 = 10. Dan 9 + 10 = 19.",
+    "nogSimpeler": "19"
+   }
+  }
+ },
+ {
+  "stap": 1,
+  "q": "**30 ÷ 5 × 3** = ?",
+  "options": [
+   "18",
+   "2",
+   "6",
+   "90"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Deelde je 30 door 5 × 3? × en ÷ zijn even sterk — welke kant begin je dan?",
+   "Vergeet de × 3 niet.",
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Links eerst",
+     "tekst": "30 ÷ 5 = 6."
+    },
+    {
+     "titel": "Dan ×",
+     "tekst": "6 × 3 = 18."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "even sterk",
+     "uitleg": "× en ÷ zijn even sterk. Dan reken je van links naar rechts."
+    }
+   ],
+   "theorie": "Bij alleen × en ÷ werk je van links naar rechts.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "30 ÷ 5 × 3 = 6 × 3 = 18."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Links naar rechts",
+     "uitleg": "Gelijk sterke bewerkingen doe je in de volgorde waarin ze staan."
+    }
+   ],
+   "niveaus": {
+    "basis": "18.",
+    "simpeler": "Eerst 30 ÷ 5 = 6. Dan 6 × 3 = 18.",
+    "nogSimpeler": "18"
+   }
+  }
+ },
+ {
+  "stap": 1,
+  "q": "**15 − 4 + 3** = ?",
+  "options": [
+   "14",
+   "8",
+   "22",
+   "12"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat zou 15 − (4 + 3) zijn — maar er staan geen haakjes.",
+   null,
+   "Vergeet de + 3 niet."
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Links eerst",
+     "tekst": "15 − 4 = 11."
+    },
+    {
+     "titel": "Dan +",
+     "tekst": "11 + 3 = 14."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "even sterk",
+     "uitleg": "+ en − zijn even sterk. Dan reken je van links naar rechts."
+    }
+   ],
+   "theorie": "Bij alleen + en − werk je van links naar rechts.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "15 − 4 + 3 = 11 + 3 = 14."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Links naar rechts",
+     "uitleg": "+ gaat niet vóór −; ze zijn even sterk."
+    }
+   ],
+   "niveaus": {
+    "basis": "14.",
+    "simpeler": "Eerst 15 − 4 = 11. Dan 11 + 3 = 14.",
+    "nogSimpeler": "14"
+   }
+  }
+ },
+ {
+  "stap": 1,
+  "q": "**7 + 9 ÷ 3 − 2** = ?",
+  "options": [
+   "8",
+   "16",
+   "12",
+   "10"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Deelde je 9 door (3 − 2)? Er staan geen haakjes.",
+   null,
+   "Bijna — heb je alle getallen meegenomen?"
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "÷ eerst",
+     "tekst": "9 ÷ 3 = 3."
+    },
+    {
+     "titel": "Dan links naar rechts",
+     "tekst": "7 + 3 = 10, en 10 − 2 = 8."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "÷ eerst",
+     "uitleg": "Delen gaat vóór optellen en aftrekken."
+    }
+   ],
+   "theorie": "Eerst ÷, daarna + en − van links naar rechts.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "7 + 9 ÷ 3 − 2 = 7 + 3 − 2 = 10 − 2 = 8."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Stap voor stap",
+     "uitleg": "Schrijf na elke stap de nieuwe som op."
+    }
+   ],
+   "niveaus": {
+    "basis": "8.",
+    "simpeler": "9 ÷ 3 = 3. Dan 7 + 3 = 10. Dan 10 − 2 = 8.",
+    "nogSimpeler": "8"
+   }
+  }
+ },
+ {
+  "stap": 1,
+  "q": "Hoe reken je **24 ÷ 4 × 2** uit?",
+  "options": [
+   "Van links naar rechts",
+   "Eerst de ×, dan de ÷",
+   "Van rechts naar links",
+   "Het maakt niet uit"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Is × sterker dan ÷, of zijn ze even sterk?",
+   null,
+   "Reken het eens op twee manieren uit — krijg je hetzelfde?"
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Even sterk",
+     "tekst": "× en ÷ zijn even sterk."
+    },
+    {
+     "titel": "Links naar rechts",
+     "tekst": "24 ÷ 4 = 6, dan 6 × 2 = 12."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "even sterk",
+     "uitleg": "× en ÷ zijn even sterk. Dan reken je van links naar rechts."
+    }
+   ],
+   "theorie": "Bij bewerkingen die even sterk zijn, werk je van links naar rechts.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "Goed: 24 ÷ 4 × 2 = 6 × 2 = 12. Fout: 24 ÷ 8 = 3."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Het maakt wel uit",
+     "uitleg": "Andere volgorde geeft hier een ander antwoord."
+    }
+   ],
+   "niveaus": {
+    "basis": "Van links naar rechts.",
+    "simpeler": "× en ÷ zijn even sterk, dus je begint links: 24 ÷ 4 = 6, dan × 2 = 12.",
+    "nogSimpeler": "Links naar rechts"
+   }
+  }
+ },
+ {
+  "stap": 1,
+  "q": "**40 − 5 × 6** = ?",
+  "options": [
+   "10",
+   "210",
+   "30",
+   "70"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Rekende je eerst 40 − 5? Welke bewerking is sterker?",
+   "Je bent er bijna — wat gebeurt er nog met de 40?",
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "× eerst",
+     "tekst": "5 × 6 = 30."
+    },
+    {
+     "titel": "Dan −",
+     "tekst": "40 − 30 = 10."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "× eerst",
+     "uitleg": "Vermenigvuldigen gaat vóór optellen en aftrekken."
+    }
+   ],
+   "theorie": "Maal gaat vóór min.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "40 − 5 × 6 = 40 − 30 = 10. (Niet 35 × 6 = 210.)"
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "× is sterker",
+     "uitleg": "Ook als de × achteraan staat, doe je hem eerst."
+    }
+   ],
+   "niveaus": {
+    "basis": "10.",
+    "simpeler": "Eerst 5 × 6 = 30. Dan 40 − 30 = 10.",
+    "nogSimpeler": "10"
+   }
+  }
+ },
+ {
+  "stap": 1,
+  "q": "**2 × 9 − 12 ÷ 4** = ?",
+  "options": [
+   "15",
+   "12",
+   "21",
+   "6"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De 2 × hoort alleen bij de 9 — niet bij de rest van de som.",
+   "Kijk nog eens naar het teken in het midden: + of −?",
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Sterke stukjes eerst",
+     "tekst": "2 × 9 = 18 en 12 ÷ 4 = 3."
+    },
+    {
+     "titel": "Dan −",
+     "tekst": "18 − 3 = 15."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "sterke stukjes",
+     "uitleg": "De ×- en ÷-stukjes reken je eerst los uit."
+    }
+   ],
+   "theorie": "Eerst × en ÷, daarna pas + en −.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "2 × 9 − 12 ÷ 4 = 18 − 3 = 15."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Stukjes",
+     "uitleg": "Zie de som als twee stukjes: 2 × 9 en 12 ÷ 4."
+    }
+   ],
+   "niveaus": {
+    "basis": "15.",
+    "simpeler": "2 × 9 = 18 en 12 ÷ 4 = 3. Dan 18 − 3 = 15.",
+    "nogSimpeler": "15"
+   }
+  }
+ },
+ {
+  "stap": 2,
+  "q": "**(7 − 3) × 6** = ?",
+  "options": [
+   "24",
+   "18",
+   "10",
+   "42"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Heb je de haakjes als eerste uitgerekend?",
+   null,
+   "Is de − 3 wel meegenomen?"
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Haakjes eerst",
+     "tekst": "7 − 3 = 4."
+    },
+    {
+     "titel": "Dan ×",
+     "tekst": "4 × 6 = 24."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "haakjes",
+     "uitleg": "Wat tussen haakjes ( ) staat, reken je als eerste uit."
+    }
+   ],
+   "theorie": "Haakjes gaan vóór alles.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "(7 − 3) × 6 = 4 × 6 = 24."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Haakjes zijn de baas",
+     "uitleg": "Ook al is × sterker dan −, de haakjes gaan voor."
+    }
+   ],
+   "niveaus": {
+    "basis": "24.",
+    "simpeler": "Eerst 7 − 3 = 4. Dan 4 × 6 = 24.",
+    "nogSimpeler": "24"
+   }
+  }
+ },
+ {
+  "stap": 2,
+  "q": "**36 ÷ (2 + 4)** = ?",
+  "options": [
+   "6",
+   "22",
+   "9",
+   "12"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat zou 36 ÷ 2 + 4 zijn — maar de haakjes staan er wel!",
+   null,
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Haakjes eerst",
+     "tekst": "2 + 4 = 6."
+    },
+    {
+     "titel": "Dan ÷",
+     "tekst": "36 ÷ 6 = 6."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "haakjes",
+     "uitleg": "Wat tussen haakjes ( ) staat, reken je als eerste uit."
+    }
+   ],
+   "theorie": "Haakjes gaan vóór delen.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "36 ÷ (2 + 4) = 36 ÷ 6 = 6."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Pas op bij delen",
+     "uitleg": "Zonder haakjes was het 18 + 4 = 22 — heel anders!"
+    }
+   ],
+   "niveaus": {
+    "basis": "6.",
+    "simpeler": "Eerst 2 + 4 = 6. Dan 36 ÷ 6 = 6.",
+    "nogSimpeler": "6"
+   }
+  }
+ },
+ {
+  "stap": 2,
+  "q": "**(9 + 3) ÷ 4** = ?",
+  "options": [
+   "3",
+   "12",
+   "4",
+   "6"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je bent er bijna — wat moet er nog met de uitkomst van de haakjes gebeuren?",
+   null,
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Haakjes eerst",
+     "tekst": "9 + 3 = 12."
+    },
+    {
+     "titel": "Dan ÷",
+     "tekst": "12 ÷ 4 = 3."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "haakjes",
+     "uitleg": "Wat tussen haakjes ( ) staat, reken je als eerste uit."
+    }
+   ],
+   "theorie": "Eerst de haakjes, dan de deling.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "(9 + 3) ÷ 4 = 12 ÷ 4 = 3."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Haakjes zijn de baas",
+     "uitleg": "Zonder haakjes zou je eerst 3 ÷ 4 doen."
+    }
+   ],
+   "niveaus": {
+    "basis": "3.",
+    "simpeler": "Eerst 9 + 3 = 12. Dan 12 ÷ 4 = 3.",
+    "nogSimpeler": "3"
+   }
+  }
+ },
+ {
+  "stap": 2,
+  "q": "Bij welke som maakt het **niet uit** of de haakjes er staan?",
+  "options": [
+   "(3 × 4) + 2",
+   "(3 + 4) × 2",
+   "6 ÷ (1 + 2)",
+   "(8 − 2) × 3"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Reken de som eens uit mét en zónder haakjes. Krijg je hetzelfde?",
+   null,
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Mét haakjes",
+     "tekst": "(3 × 4) + 2 = 12 + 2 = 14."
+    },
+    {
+     "titel": "Zónder haakjes",
+     "tekst": "3 × 4 + 2 = 12 + 2 = 14. Hetzelfde, want × gaat toch al eerst."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "overbodige haakjes",
+     "uitleg": "Haakjes om iets wat je toch al eerst zou doen. Ze maken de som alleen duidelijker."
+    }
+   ],
+   "theorie": "Haakjes veranderen alleen iets als ze een zwakkere bewerking vóór laten gaan.",
+   "voorbeelden": [
+    {
+     "type": "tabel",
+     "tekst": "(3 + 4) × 2 = 14, maar 3 + 4 × 2 = 11 · 6 ÷ (1 + 2) = 2, maar 6 ÷ 1 + 2 = 8 · (8 − 2) × 3 = 18, maar 8 − 2 × 3 = 2."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Voor duidelijkheid",
+     "uitleg": "Soms zet je haakjes neer terwijl het niet nodig is."
+    }
+   ],
+   "niveaus": {
+    "basis": "(3 × 4) + 2.",
+    "simpeler": "De × ging toch al eerst. De haakjes veranderen hier dus niets.",
+    "nogSimpeler": "(3 × 4) + 2"
+   }
+  }
+ },
+ {
+  "stap": 2,
+  "q": "**2 × (10 − 4)** = ?",
+  "options": [
+   "12",
+   "16",
+   "8",
+   "6"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat zou 2 × 10 − 4 zijn — maar er staan haakjes!",
+   null,
+   "Vergeet de 2 × niet."
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Haakjes eerst",
+     "tekst": "10 − 4 = 6."
+    },
+    {
+     "titel": "Dan ×",
+     "tekst": "2 × 6 = 12."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "haakjes",
+     "uitleg": "Wat tussen haakjes ( ) staat, reken je als eerste uit."
+    }
+   ],
+   "theorie": "Haakjes gaan vóór vermenigvuldigen.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "2 × (10 − 4) = 2 × 6 = 12."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Haakjes zijn de baas",
+     "uitleg": "Zonder haakjes: 20 − 4 = 16. Met haakjes: 12."
+    }
+   ],
+   "niveaus": {
+    "basis": "12.",
+    "simpeler": "Eerst 10 − 4 = 6. Dan 2 × 6 = 12.",
+    "nogSimpeler": "12"
+   }
+  }
+ },
+ {
+  "stap": 2,
+  "q": "**2 × ((5 + 1) − 2)** = ?",
+  "options": [
+   "8",
+   "12",
+   "10",
+   "14"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Heb je alles binnen de buitenste haakjes gedaan, ook de − 2?",
+   null,
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Binnenste haakjes",
+     "tekst": "5 + 1 = 6."
+    },
+    {
+     "titel": "Buitenste haakjes",
+     "tekst": "6 − 2 = 4."
+    },
+    {
+     "titel": "Dan ×",
+     "tekst": "2 × 4 = 8."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "geneste haakjes",
+     "uitleg": "Haakjes binnen haakjes. Je werkt van binnen naar buiten."
+    }
+   ],
+   "theorie": "Bij haakjes in haakjes begin je bij de binnenste.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "2 × ((5 + 1) − 2) = 2 × (6 − 2) = 2 × 4 = 8."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Binnen naar buiten",
+     "uitleg": "Eerst de binnenste haakjes, dan de buitenste, dan de rest."
+    }
+   ],
+   "niveaus": {
+    "basis": "8.",
+    "simpeler": "Binnenste: 5 + 1 = 6. Buitenste: 6 − 2 = 4. Dan 2 × 4 = 8.",
+    "nogSimpeler": "8"
+   }
+  }
+ },
+ {
+  "stap": 2,
+  "q": "Je wilt **eerst 5 + 3** uitrekenen en de uitkomst daarna **keer 2** doen. Welke som schrijf je op?",
+  "options": [
+   "(5 + 3) × 2",
+   "5 + 3 × 2",
+   "5 + (3 × 2)",
+   "5 × 2 + 3"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wat reken je bij deze som als eerste uit: de + of de ×?",
+   null,
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Wat moet eerst?",
+     "tekst": "5 + 3 moet eerst."
+    },
+    {
+     "titel": "Haakjes erom",
+     "tekst": "Zet haakjes om 5 + 3: (5 + 3) × 2 = 8 × 2 = 16."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "haakjes",
+     "uitleg": "Wat tussen haakjes ( ) staat, reken je als eerste uit."
+    }
+   ],
+   "theorie": "Met haakjes kun je laten zien wat er eerst moet.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "(5 + 3) × 2 = 16, maar 5 + 3 × 2 = 11."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Haakjes forceren",
+     "uitleg": "Zonder haakjes zou de × eerst gaan."
+    }
+   ],
+   "niveaus": {
+    "basis": "(5 + 3) × 2.",
+    "simpeler": "Haakjes om 5 + 3, dan gaat dat eerst. Daarna × 2.",
+    "nogSimpeler": "(5 + 3) × 2"
+   }
+  }
+ },
+ {
+  "stap": 3,
+  "q": "**4²** = ?",
+  "options": [
+   "16",
+   "8",
+   "6",
+   "12"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet 4 × 2 — wat betekent het kleine getal?",
+   "Niet 4 + 2 — een macht is geen optelling.",
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Wat staat er?",
+     "tekst": "4² = 4 × 4."
+    },
+    {
+     "titel": "Uitrekenen",
+     "tekst": "4 × 4 = 16."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "macht",
+     "uitleg": "Een getal een aantal keer met zichzelf vermenigvuldigen. Het kleine getal zegt hoe vaak."
+    }
+   ],
+   "theorie": "De kleine 2 zegt: twee keer de 4, met elkaar vermenigvuldigd.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "4² = 4 × 4 = 16."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Kwadraat",
+     "uitleg": "4² zeg je als 'vier kwadraat'."
+    }
+   ],
+   "niveaus": {
+    "basis": "16.",
+    "simpeler": "4² betekent 4 × 4. Dat is 16.",
+    "nogSimpeler": "16"
+   }
+  }
+ },
+ {
+  "stap": 3,
+  "q": "**3³** = ?",
+  "options": [
+   "27",
+   "9",
+   "6",
+   "81"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is 3². Hoe vaak staat de 3 er bij 3³?",
+   "Niet 3 × 3 — wat betekent het kleine getal?",
+   "Tel na: hoe vaak moet de 3 in de keer-som staan?"
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Wat staat er?",
+     "tekst": "3³ = 3 × 3 × 3."
+    },
+    {
+     "titel": "Uitrekenen",
+     "tekst": "3 × 3 = 9, en 9 × 3 = 27."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "macht",
+     "uitleg": "Een getal een aantal keer met zichzelf vermenigvuldigen. Het kleine getal zegt hoe vaak."
+    }
+   ],
+   "theorie": "De kleine 3 zegt: drie keer de 3, met elkaar vermenigvuldigd.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "3³ = 3 × 3 × 3 = 9 × 3 = 27."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Derde macht",
+     "uitleg": "3³ zeg je als 'drie tot de derde macht'."
+    }
+   ],
+   "niveaus": {
+    "basis": "27.",
+    "simpeler": "3³ = 3 × 3 × 3. 3 × 3 = 9, 9 × 3 = 27.",
+    "nogSimpeler": "27"
+   }
+  }
+ },
+ {
+  "stap": 3,
+  "q": "**2 × 4²** = ?",
+  "options": [
+   "32",
+   "64",
+   "16",
+   "10"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Hoort de ² bij de 4 alleen, of bij 2 × 4?",
+   "Vergeet de 2 × niet.",
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Macht eerst",
+     "tekst": "4² = 16."
+    },
+    {
+     "titel": "Dan ×",
+     "tekst": "2 × 16 = 32."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "macht",
+     "uitleg": "Een getal een aantal keer met zichzelf vermenigvuldigen. Het kleine getal zegt hoe vaak."
+    }
+   ],
+   "theorie": "Machten gaan vóór × en ÷.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "2 × 4² = 2 × 16 = 32. (Niet 8² = 64.)"
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Waar staat de macht?",
+     "uitleg": "De ² hoort alleen bij het getal er direct voor."
+    }
+   ],
+   "niveaus": {
+    "basis": "32.",
+    "simpeler": "Eerst 4² = 16. Dan 2 × 16 = 32.",
+    "nogSimpeler": "32"
+   }
+  }
+ },
+ {
+  "stap": 3,
+  "q": "**7² − 9** = ?",
+  "options": [
+   "40",
+   "5",
+   "49",
+   "30"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet 7 × 2 — wat betekent 7²?",
+   "Je bent er bijna — vergeet de − 9 niet.",
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Macht eerst",
+     "tekst": "7² = 7 × 7 = 49."
+    },
+    {
+     "titel": "Dan −",
+     "tekst": "49 − 9 = 40."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "macht",
+     "uitleg": "Een getal een aantal keer met zichzelf vermenigvuldigen. Het kleine getal zegt hoe vaak."
+    }
+   ],
+   "theorie": "Machten gaan vóór + en −.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "7² − 9 = 49 − 9 = 40."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Geen gewone ×",
+     "uitleg": "7² is 7 × 7, niet 7 × 2."
+    }
+   ],
+   "niveaus": {
+    "basis": "40.",
+    "simpeler": "Eerst 7² = 49. Dan 49 − 9 = 40.",
+    "nogSimpeler": "40"
+   }
+  }
+ },
+ {
+  "stap": 3,
+  "q": "Wat betekent **5³**?",
+  "options": [
+   "5 × 5 × 5",
+   "5 × 3",
+   "3 × 3 × 3 × 3 × 3",
+   "5 + 5 + 5"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een macht is geen gewone keer-som met het kleine getal.",
+   "Welk getal wordt vermenigvuldigd: het grote of het kleine?",
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Groot getal",
+     "tekst": "De 5 is het getal dat je vermenigvuldigt."
+    },
+    {
+     "titel": "Klein getal",
+     "tekst": "De 3 zegt hoe vaak: drie keer de 5."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "macht",
+     "uitleg": "Een getal een aantal keer met zichzelf vermenigvuldigen. Het kleine getal zegt hoe vaak."
+    }
+   ],
+   "theorie": "Het grote getal vermenigvuldig je met zichzelf. Het kleine getal zegt hoe vaak.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "5³ = 5 × 5 × 5 = 125."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Hoe vaak",
+     "uitleg": "Het kleine getal zegt hoe vaak het grote getal in de keer-som staat."
+    }
+   ],
+   "niveaus": {
+    "basis": "5 × 5 × 5.",
+    "simpeler": "De kleine 3 zegt: drie keer de 5 met elkaar vermenigvuldigen.",
+    "nogSimpeler": "5 × 5 × 5"
+   }
+  }
+ },
+ {
+  "stap": 3,
+  "q": "**(4 − 1)²** = ?",
+  "options": [
+   "9",
+   "3",
+   "6",
+   "15"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je bent er bijna — de ² staat óp de haakjes.",
+   "Niet × 2 — wat betekent de kleine 2?",
+   "Hoort de ² bij de hele haakjes, of alleen bij de 4?"
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Haakjes eerst",
+     "tekst": "4 − 1 = 3."
+    },
+    {
+     "titel": "Dan macht",
+     "tekst": "3² = 3 × 3 = 9."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "macht",
+     "uitleg": "Een getal een aantal keer met zichzelf vermenigvuldigen. Het kleine getal zegt hoe vaak."
+    }
+   ],
+   "theorie": "Eerst haakjes, dan de macht.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "(4 − 1)² = 3² = 9."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Haakjes vóór machten",
+     "uitleg": "De macht gaat over alles tussen de haakjes."
+    }
+   ],
+   "niveaus": {
+    "basis": "9.",
+    "simpeler": "Eerst 4 − 1 = 3. Dan 3² = 9.",
+    "nogSimpeler": "9"
+   }
+  }
+ },
+ {
+  "stap": 3,
+  "q": "**20 − 3²** = ?",
+  "options": [
+   "11",
+   "289",
+   "14",
+   "17"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Rekende je eerst 20 − 3? Welke gaat eerst: de macht of de −?",
+   "Wat betekent 3² precies?",
+   "Vergeet de macht niet."
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Macht eerst",
+     "tekst": "3² = 9."
+    },
+    {
+     "titel": "Dan −",
+     "tekst": "20 − 9 = 11."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "macht",
+     "uitleg": "Een getal een aantal keer met zichzelf vermenigvuldigen. Het kleine getal zegt hoe vaak."
+    }
+   ],
+   "theorie": "Machten gaan vóór + en −.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "20 − 3² = 20 − 9 = 11."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Waar staat de macht?",
+     "uitleg": "De ² hoort alleen bij de 3."
+    }
+   ],
+   "niveaus": {
+    "basis": "11.",
+    "simpeler": "Eerst 3² = 9. Dan 20 − 9 = 11.",
+    "nogSimpeler": "11"
+   }
+  }
+ },
+ {
+  "stap": 4,
+  "q": "**10 − 2 × 3 + 4** = ?",
+  "options": [
+   "8",
+   "28",
+   "0",
+   "12"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Rekende je van links naar rechts? De × gaat eerst.",
+   "Na de × ga je van links naar rechts verder — trek je eerst af of tel je eerst op?",
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "× eerst",
+     "tekst": "2 × 3 = 6."
+    },
+    {
+     "titel": "Dan links naar rechts",
+     "tekst": "10 − 6 = 4, en 4 + 4 = 8."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "HMVDOA",
+     "uitleg": "Haakjes, Machten, Vermenigvuldigen en Delen, Optellen en Aftrekken."
+    }
+   ],
+   "theorie": "Eerst ×, daarna + en − van links naar rechts.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "10 − 2 × 3 + 4 = 10 − 6 + 4 = 4 + 4 = 8."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "+ en − even sterk",
+     "uitleg": "Na de × werk je gewoon van links naar rechts."
+    }
+   ],
+   "niveaus": {
+    "basis": "8.",
+    "simpeler": "2 × 3 = 6. Dan 10 − 6 = 4. Dan 4 + 4 = 8.",
+    "nogSimpeler": "8"
+   }
+  }
+ },
+ {
+  "stap": 4,
+  "q": "**(4 + 2)² ÷ 4** = ?",
+  "options": [
+   "9",
+   "36",
+   "5",
+   "18"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je bent er bijna — er staat nog een ÷ 4.",
+   "Hoort de ² bij de haakjes, of alleen bij de 2?",
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Haakjes",
+     "tekst": "4 + 2 = 6."
+    },
+    {
+     "titel": "Macht",
+     "tekst": "6² = 36."
+    },
+    {
+     "titel": "Delen",
+     "tekst": "36 ÷ 4 = 9."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "HMVDOA",
+     "uitleg": "Haakjes, Machten, Vermenigvuldigen en Delen, Optellen en Aftrekken."
+    }
+   ],
+   "theorie": "Haakjes, dan machten, dan × en ÷.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "(4 + 2)² ÷ 4 = 6² ÷ 4 = 36 ÷ 4 = 9."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Stap voor stap",
+     "uitleg": "Schrijf na elke stap de nieuwe som op."
+    }
+   ],
+   "niveaus": {
+    "basis": "9.",
+    "simpeler": "4 + 2 = 6. 6² = 36. 36 ÷ 4 = 9.",
+    "nogSimpeler": "9"
+   }
+  }
+ },
+ {
+  "stap": 4,
+  "q": "Welk stukje reken je als **eerste** uit in **6 + (8 − 2) × 3**?",
+  "options": [
+   "8 − 2",
+   "6 + 8",
+   "2 × 3",
+   "6 × 3"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat staat vooraan — maar wat is de baas boven alles?",
+   "× is sterk, maar is er iets wat nog eerder gaat?",
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Haakjes eerst",
+     "tekst": "8 − 2 = 6."
+    },
+    {
+     "titel": "Dan × en +",
+     "tekst": "6 × 3 = 18, en 6 + 18 = 24."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "HMVDOA",
+     "uitleg": "Haakjes, Machten, Vermenigvuldigen en Delen, Optellen en Aftrekken."
+    }
+   ],
+   "theorie": "Haakjes gaan vóór alles, ook vóór ×.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "6 + (8 − 2) × 3 = 6 + 6 × 3 = 6 + 18 = 24."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Haakjes zijn de baas",
+     "uitleg": "Wat tussen haakjes staat, gaat altijd eerst."
+    }
+   ],
+   "niveaus": {
+    "basis": "8 − 2.",
+    "simpeler": "De haakjes gaan eerst. Dus eerst 8 − 2.",
+    "nogSimpeler": "8 − 2"
+   }
+  }
+ },
+ {
+  "stap": 4,
+  "q": "Wat is de **derde** stap in de volgorde van bewerkingen?",
+  "options": [
+   "× en ÷",
+   "Machten",
+   "+ en −",
+   "Haakjes"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tel nog eens af met HMVDOA: wat komt er na de H en de M?",
+   null,
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Volgorde",
+     "tekst": "1 haakjes, 2 machten, 3 × en ÷, 4 + en −."
+    },
+    {
+     "titel": "Derde",
+     "tekst": "De derde stap is × en ÷."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "HMVDOA",
+     "uitleg": "Haakjes, Machten, Vermenigvuldigen en Delen, Optellen en Aftrekken."
+    }
+   ],
+   "theorie": "De volgorde is altijd: haakjes, machten, × en ÷, + en −.",
+   "voorbeelden": [
+    {
+     "type": "tabel",
+     "tekst": "H (1) – M (2) – V en D (3) – O en A (4)."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Ezelsbruggetje",
+     "uitleg": "HMVDOA helpt je de volgorde te onthouden."
+    }
+   ],
+   "niveaus": {
+    "basis": "× en ÷.",
+    "simpeler": "Na haakjes en machten komen × en ÷.",
+    "nogSimpeler": "× en ÷"
+   }
+  }
+ },
+ {
+  "stap": 4,
+  "q": "**5 × 2² − 6 ÷ 3** = ?",
+  "options": [
+   "18",
+   "98",
+   "14",
+   "22"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Hoort de ² bij de 2 alleen, of bij 5 × 2?",
+   "Heb je de 6 ÷ 3 los uitgerekend?",
+   "Kijk nog eens naar het teken in het midden: + of −?"
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Macht",
+     "tekst": "2² = 4."
+    },
+    {
+     "titel": "× en ÷",
+     "tekst": "5 × 4 = 20 en 6 ÷ 3 = 2."
+    },
+    {
+     "titel": "−",
+     "tekst": "20 − 2 = 18."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "HMVDOA",
+     "uitleg": "Haakjes, Machten, Vermenigvuldigen en Delen, Optellen en Aftrekken."
+    }
+   ],
+   "theorie": "Machten, dan × en ÷, dan + en −.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "5 × 2² − 6 ÷ 3 = 5 × 4 − 2 = 20 − 2 = 18."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Stap voor stap",
+     "uitleg": "Schrijf elke stap apart op."
+    }
+   ],
+   "niveaus": {
+    "basis": "18.",
+    "simpeler": "2² = 4. 5 × 4 = 20. 6 ÷ 3 = 2. 20 − 2 = 18.",
+    "nogSimpeler": "18"
+   }
+  }
+ },
+ {
+  "stap": 4,
+  "q": "**9 + 3² ÷ 9** = ?",
+  "options": [
+   "10",
+   "2",
+   "18",
+   "12"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat zou (9 + 3²) ÷ 9 zijn — maar er staan geen haakjes.",
+   "Vergeet de ÷ 9 niet.",
+   "Wat betekent 3² precies?"
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Macht",
+     "tekst": "3² = 9."
+    },
+    {
+     "titel": "÷",
+     "tekst": "9 ÷ 9 = 1."
+    },
+    {
+     "titel": "+",
+     "tekst": "9 + 1 = 10."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "HMVDOA",
+     "uitleg": "Haakjes, Machten, Vermenigvuldigen en Delen, Optellen en Aftrekken."
+    }
+   ],
+   "theorie": "Machten, dan ÷, dan +.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "9 + 3² ÷ 9 = 9 + 9 ÷ 9 = 9 + 1 = 10."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "+ komt als laatste",
+     "uitleg": "Optellen is de zwakste bewerking."
+    }
+   ],
+   "niveaus": {
+    "basis": "10.",
+    "simpeler": "3² = 9. 9 ÷ 9 = 1. 9 + 1 = 10.",
+    "nogSimpeler": "10"
+   }
+  }
+ },
+ {
+  "stap": 4,
+  "q": "**(7 − 4)² + 2 × 5** = ?",
+  "options": [
+   "19",
+   "55",
+   "16",
+   "13"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat zou ((7 − 4)² + 2) × 5 zijn — maar er staan geen haakjes.",
+   "Wat betekent 3² — is dat 3 × 2?",
+   "Heb je de macht wel gedaan?"
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Haakjes",
+     "tekst": "7 − 4 = 3."
+    },
+    {
+     "titel": "Macht",
+     "tekst": "3² = 9."
+    },
+    {
+     "titel": "× dan +",
+     "tekst": "2 × 5 = 10, en 9 + 10 = 19."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "HMVDOA",
+     "uitleg": "Haakjes, Machten, Vermenigvuldigen en Delen, Optellen en Aftrekken."
+    }
+   ],
+   "theorie": "Haakjes, machten, × en ÷, + en −.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "(7 − 4)² + 2 × 5 = 3² + 10 = 9 + 10 = 19."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Stap voor stap",
+     "uitleg": "Schrijf na elke stap de nieuwe som op."
+    }
+   ],
+   "niveaus": {
+    "basis": "19.",
+    "simpeler": "7 − 4 = 3. 3² = 9. 2 × 5 = 10. 9 + 10 = 19.",
+    "nogSimpeler": "19"
+   }
+  }
+ },
+ {
+  "stap": 5,
+  "q": "**36 ÷ (3 + 6) × 2** = ?",
+  "options": [
+   "8",
+   "2",
+   "24",
+   "16"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Deelde je 36 door alles tegelijk? Na de haakjes ga je van links naar rechts.",
+   null,
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Haakjes",
+     "tekst": "3 + 6 = 9."
+    },
+    {
+     "titel": "Links naar rechts",
+     "tekst": "36 ÷ 9 = 4, en 4 × 2 = 8."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "stap voor stap",
+     "uitleg": "Elke stap apart opschrijven, zodat je niets vergeet."
+    }
+   ],
+   "theorie": "Na de haakjes doe je ÷ en × van links naar rechts.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "36 ÷ (3 + 6) × 2 = 36 ÷ 9 × 2 = 4 × 2 = 8."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Even sterk",
+     "uitleg": "÷ en × zijn even sterk: links begin je."
+    }
+   ],
+   "niveaus": {
+    "basis": "8.",
+    "simpeler": "3 + 6 = 9. 36 ÷ 9 = 4. 4 × 2 = 8.",
+    "nogSimpeler": "8"
+   }
+  }
+ },
+ {
+  "stap": 5,
+  "q": "**50 − 4 × (2 + 3)** = ?",
+  "options": [
+   "30",
+   "230",
+   "45",
+   "70"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Rekende je eerst 50 − 4? De × is sterker dan de −.",
+   "Heb je de haakjes als eerste gedaan?",
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Haakjes",
+     "tekst": "2 + 3 = 5."
+    },
+    {
+     "titel": "×",
+     "tekst": "4 × 5 = 20."
+    },
+    {
+     "titel": "−",
+     "tekst": "50 − 20 = 30."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "stap voor stap",
+     "uitleg": "Elke stap apart opschrijven, zodat je niets vergeet."
+    }
+   ],
+   "theorie": "Haakjes, dan ×, dan −.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "50 − 4 × (2 + 3) = 50 − 4 × 5 = 50 − 20 = 30."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Controleren",
+     "uitleg": "30 is minder dan 50 — dat past, want je haalt er iets af."
+    }
+   ],
+   "niveaus": {
+    "basis": "30.",
+    "simpeler": "2 + 3 = 5. 4 × 5 = 20. 50 − 20 = 30.",
+    "nogSimpeler": "30"
+   }
+  }
+ },
+ {
+  "stap": 5,
+  "q": "**3 × (2 + (6 ÷ 2))** = ?",
+  "options": [
+   "15",
+   "12",
+   "24",
+   "9"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Heb je de binnenste haakjes als eerste gedaan?",
+   null,
+   "De 3 × hoort bij alles tussen de buitenste haakjes."
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Binnenste haakjes",
+     "tekst": "6 ÷ 2 = 3."
+    },
+    {
+     "titel": "Buitenste haakjes",
+     "tekst": "2 + 3 = 5."
+    },
+    {
+     "titel": "×",
+     "tekst": "3 × 5 = 15."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "stap voor stap",
+     "uitleg": "Elke stap apart opschrijven, zodat je niets vergeet."
+    }
+   ],
+   "theorie": "Werk van binnen naar buiten.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "3 × (2 + (6 ÷ 2)) = 3 × (2 + 3) = 3 × 5 = 15."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Binnen naar buiten",
+     "uitleg": "Eerst de binnenste haakjes, dan de buitenste."
+    }
+   ],
+   "niveaus": {
+    "basis": "15.",
+    "simpeler": "6 ÷ 2 = 3. 2 + 3 = 5. 3 × 5 = 15.",
+    "nogSimpeler": "15"
+   }
+  }
+ },
+ {
+  "stap": 5,
+  "q": "**(6 − 2)² − (5 − 3)²** = ?",
+  "options": [
+   "12",
+   "4",
+   "20",
+   "14"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Heb je beide haakjes eerst gekwadrateerd, en daarna pas afgetrokken?",
+   "Kijk naar het teken tussen de twee stukken: + of −?",
+   "Heb je bij het tweede stuk de macht ook gedaan?"
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Beide haakjes",
+     "tekst": "6 − 2 = 4 en 5 − 3 = 2."
+    },
+    {
+     "titel": "Beide machten",
+     "tekst": "4² = 16 en 2² = 4."
+    },
+    {
+     "titel": "−",
+     "tekst": "16 − 4 = 12."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "stap voor stap",
+     "uitleg": "Elke stap apart opschrijven, zodat je niets vergeet."
+    }
+   ],
+   "theorie": "Haakjes, dan machten, dan pas aftrekken.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "(6 − 2)² − (5 − 3)² = 4² − 2² = 16 − 4 = 12."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Twee stukken",
+     "uitleg": "Reken eerst elk stuk apart uit."
+    }
+   ],
+   "niveaus": {
+    "basis": "12.",
+    "simpeler": "4² = 16. 2² = 4. 16 − 4 = 12.",
+    "nogSimpeler": "12"
+   }
+  }
+ },
+ {
+  "stap": 5,
+  "q": "**40 − 3 × (2² + 1) ÷ 5** = ?",
+  "options": [
+   "37",
+   "5",
+   "25",
+   "39"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Trok je eerst 40 − 15 af? De ÷ 5 hoort bij 3 × 5.",
+   "Vergeet de ÷ 5 niet.",
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Macht in de haakjes",
+     "tekst": "2² = 4."
+    },
+    {
+     "titel": "Haakjes",
+     "tekst": "4 + 1 = 5."
+    },
+    {
+     "titel": "× en ÷",
+     "tekst": "3 × 5 = 15, en 15 ÷ 5 = 3."
+    },
+    {
+     "titel": "−",
+     "tekst": "40 − 3 = 37."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "stap voor stap",
+     "uitleg": "Elke stap apart opschrijven, zodat je niets vergeet."
+    }
+   ],
+   "theorie": "Haakjes (met de macht erin), dan × en ÷ van links naar rechts, dan −.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "40 − 3 × (2² + 1) ÷ 5 = 40 − 3 × 5 ÷ 5 = 40 − 15 ÷ 5 = 40 − 3 = 37."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Controleren",
+     "uitleg": "37 is iets minder dan 40 — dat past."
+    }
+   ],
+   "niveaus": {
+    "basis": "37.",
+    "simpeler": "2² = 4. 4 + 1 = 5. 3 × 5 = 15. 15 ÷ 5 = 3. 40 − 3 = 37.",
+    "nogSimpeler": "37"
+   }
+  }
+ },
+ {
+  "stap": 5,
+  "q": "**(8 + 4) ÷ 2²** = ?",
+  "options": [
+   "3",
+   "9",
+   "6",
+   "36"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Heb je de haakjes als eerste gedaan?",
+   "Niet ÷ 2 — wat betekent 2²?",
+   "Hoort de ² bij de haakjes, of bij de 2?"
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Haakjes",
+     "tekst": "8 + 4 = 12."
+    },
+    {
+     "titel": "Macht",
+     "tekst": "2² = 4."
+    },
+    {
+     "titel": "÷",
+     "tekst": "12 ÷ 4 = 3."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "stap voor stap",
+     "uitleg": "Elke stap apart opschrijven, zodat je niets vergeet."
+    }
+   ],
+   "theorie": "Haakjes, dan machten, dan ÷.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "(8 + 4) ÷ 2² = 12 ÷ 4 = 3."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Waar staat de macht?",
+     "uitleg": "De ² hoort alleen bij de 2."
+    }
+   ],
+   "niveaus": {
+    "basis": "3.",
+    "simpeler": "8 + 4 = 12. 2² = 4. 12 ÷ 4 = 3.",
+    "nogSimpeler": "3"
+   }
+  }
+ },
+ {
+  "stap": 5,
+  "q": "Iemand rekent **60 − 4 × 5** uit en krijgt **280**. Wat ging er mis?",
+  "options": [
+   "Eerst de −, daarna pas de ×",
+   "4 × 5 verkeerd uitgerekend",
+   "De haakjes vergeten",
+   "Niets, 280 is goed"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Reken 4 × 5 even na — klopt dat stukje?",
+   "Staan er haakjes in deze som?",
+   null
+  ],
+  "uitlegPad": {
+   "stappen": [
+    {
+     "titel": "Wat deed hij?",
+     "tekst": "(60 − 4) × 5 = 56 × 5 = 280."
+    },
+    {
+     "titel": "Wat moet het zijn?",
+     "tekst": "× eerst: 4 × 5 = 20, dan 60 − 20 = 40."
+    }
+   ],
+   "woorden": [
+    {
+     "woord": "stap voor stap",
+     "uitleg": "Elke stap apart opschrijven, zodat je niets vergeet."
+    }
+   ],
+   "theorie": "Controleer of je antwoord kan kloppen: 280 is veel meer dan 60, terwijl je er iets áfhaalt.",
+   "voorbeelden": [
+    {
+     "type": "stap",
+     "tekst": "Goed: 60 − 4 × 5 = 60 − 20 = 40."
+    }
+   ],
+   "basiskennis": [
+    {
+     "onderwerp": "Controleren",
+     "uitleg": "Haal je iets af, dan moet het antwoord kleiner zijn dan het begingetal."
+    }
+   ],
+   "niveaus": {
+    "basis": "Eerst de −, daarna pas de ×.",
+    "simpeler": "Hij deed eerst 60 − 4. Maar de × gaat eerst: 60 − 20 = 40.",
+    "nogSimpeler": "× eerst vergeten"
+   }
+  }
+ }
+]

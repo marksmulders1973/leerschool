@@ -136,6 +136,275 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welk woord is een synoniem van **'gauw'**?",
+        options: ["Vlug", "Laat", "Traag", "Stil"],
+        answer: 0,
+        wrongHints: [null, null, "Traag is juist het omgekeerde.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat betekent 'gauw'?",
+              tekst: "**Gauw** betekent: snel, in korte tijd.",
+            },
+            {
+              titel: "Zet het in een zin",
+              tekst: "*'Kom gauw binnen!'* Vervang het woord door 'vlug': *'Kom vlug binnen!'* De zin betekent nog steeds hetzelfde.",
+            },
+            {
+              titel: "Synoniem gevonden",
+              tekst: "'Vlug' is dus een **synoniem** van 'gauw'. Snel betekent ook hetzelfde.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "synoniem",
+              uitleg: "Woord dat bijna hetzelfde betekent als een ander woord.",
+            },
+            {
+              woord: "gauw",
+              uitleg: "Snel, in korte tijd.",
+            },
+          ],
+          theorie: "Synoniem zoeken: zet elke optie in een zin. Blijft de betekenis hetzelfde? Dan heb je het synoniem.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "*'Kom gauw binnen!'* = *'Kom vlug binnen!'*",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Let op: een tegenstelling is precies omgekeerd. Die zoek je bij een synoniem-vraag dus niet.",
+            },
+          ],
+          niveaus: {
+            basis: "'Vlug' is een synoniem van 'gauw'.",
+            simpeler: "'Gauw' en 'vlug' betekenen bijna hetzelfde.",
+            nogSimpeler: "Vlug",
+          },
+        },
+      },
+      {
+        q: "Welk woord betekent bijna hetzelfde als **'schitterend'**?",
+        options: ["Prachtig", "Lelijk", "Saai", "Klein"],
+        answer: 0,
+        wrongHints: [null, "Dat is juist het omgekeerde.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat betekent 'schitterend'?",
+              tekst: "**Schitterend** betekent: heel erg mooi.",
+            },
+            {
+              titel: "Zet het in een zin",
+              tekst: "*'Wat een schitterend schilderij!'* Vervang het woord door 'prachtig': *'Wat een prachtig schilderij!'* De zin betekent nog steeds hetzelfde.",
+            },
+            {
+              titel: "Synoniem gevonden",
+              tekst: "'Prachtig' is dus een **synoniem** van 'schitterend'. Mooi, prachtig en schitterend horen bij elkaar.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "synoniem",
+              uitleg: "Woord dat bijna hetzelfde betekent als een ander woord.",
+            },
+            {
+              woord: "schitterend",
+              uitleg: "Heel erg mooi.",
+            },
+          ],
+          theorie: "Synoniem zoeken: zet elke optie in een zin. Blijft de betekenis hetzelfde? Dan heb je het synoniem.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "*'Wat een schitterend schilderij!'* = *'Wat een prachtig schilderij!'*",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Let op: een tegenstelling is precies omgekeerd. Die zoek je bij een synoniem-vraag dus niet.",
+            },
+          ],
+          niveaus: {
+            basis: "'Prachtig' is een synoniem van 'schitterend'.",
+            simpeler: "'Schitterend' en 'prachtig' betekenen bijna hetzelfde.",
+            nogSimpeler: "Prachtig",
+          },
+        },
+      },
+      {
+        q: "Welk woord is een synoniem van **'sprinten'**?",
+        options: ["Rennen", "Wandelen", "Zitten", "Springen"],
+        answer: 0,
+        wrongHints: [null, null, null, "Dat lijkt op elkaar qua klank, maar betekent het hetzelfde?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat betekent 'sprinten'?",
+              tekst: "**Sprinten** betekent: heel hard lopen.",
+            },
+            {
+              titel: "Zet het in een zin",
+              tekst: "*'Hij sprintte naar de finish.'* Vervang het woord door 'rennen': *'Hij rende naar de finish.'* De zin betekent nog steeds hetzelfde.",
+            },
+            {
+              titel: "Synoniem gevonden",
+              tekst: "'Rennen' is dus een **synoniem** van 'sprinten'. Hard lopen betekent ook hetzelfde.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "synoniem",
+              uitleg: "Woord dat bijna hetzelfde betekent als een ander woord.",
+            },
+            {
+              woord: "sprinten",
+              uitleg: "Heel hard lopen.",
+            },
+          ],
+          theorie: "Synoniem zoeken: zet elke optie in een zin. Blijft de betekenis hetzelfde? Dan heb je het synoniem.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "*'Hij sprintte naar de finish.'* = *'Hij rende naar de finish.'*",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Let op: een tegenstelling is precies omgekeerd. Die zoek je bij een synoniem-vraag dus niet.",
+            },
+          ],
+          niveaus: {
+            basis: "'Rennen' is een synoniem van 'sprinten'.",
+            simpeler: "'Sprinten' en 'rennen' betekenen bijna hetzelfde.",
+            nogSimpeler: "Rennen",
+          },
+        },
+      },
+      {
+        q: "Waarom gebruik je synoniemen in een tekst?",
+        options: [
+          "Zodat je niet steeds hetzelfde woord herhaalt",
+          "Zodat je tekst korter wordt",
+          "Zodat je minder spelfouten maakt",
+          "Zodat niemand je tekst begrijpt",
+        ],
+        answer: 0,
+        wrongHints: [null, null, "Het gaat om de betekenis, niet om de spelling.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Steeds hetzelfde woord",
+              tekst: "Stel: 'Het was een mooie dag. We zagen een mooie bloem en een mooi huis.' Drie keer 'mooi' is saai om te lezen.",
+            },
+            {
+              titel: "Wissel af",
+              tekst: "Met synoniemen wordt het: 'Het was een mooie dag. We zagen een prachtige bloem en een schitterend huis.'",
+            },
+            {
+              titel: "Waarom handig",
+              tekst: "Zo wordt je tekst **leuker om te lezen**, en je kunt preciezer zeggen wat je bedoelt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "synoniem",
+              uitleg: "Woord dat bijna hetzelfde betekent als een ander woord.",
+            },
+            {
+              woord: "herhalen",
+              uitleg: "Iets nog een keer doen of zeggen.",
+            },
+          ],
+          theorie: "Synoniemen maken je tekst afwisselender: je hoeft niet elk woord te herhalen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "blij → vrolijk → gelukkig",
+            },
+            {
+              type: "stap",
+              tekst: "mooi → prachtig → schitterend",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Gebruik je een woord voor de derde keer? Zoek dan een synoniem.",
+            },
+          ],
+          niveaus: {
+            basis: "Zodat je niet steeds hetzelfde woord herhaalt.",
+            simpeler: "Afwisseling maakt je tekst leuker.",
+            nogSimpeler: "Niet herhalen.",
+          },
+        },
+      },
+      {
+        q: "Welk rijtje bestaat helemaal uit synoniemen?",
+        options: [
+          "blij – vrolijk – gelukkig",
+          "blij – boos – bang",
+          "groot – klein – enorm",
+          "snel – traag – vlug",
+        ],
+        answer: 0,
+        wrongHints: [null, "Betekenen alle drie de gevoelens hetzelfde?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat moet je zoeken?",
+              tekst: "Een rijtje synoniemen: **alle** woorden betekenen bijna hetzelfde.",
+            },
+            {
+              titel: "Controleer elk rijtje",
+              tekst: "groot – klein: omgekeerd. snel – traag: omgekeerd. blij – boos – bang: drie verschillende gevoelens.",
+            },
+            {
+              titel: "Het goede rijtje",
+              tekst: "blij – vrolijk – gelukkig: alle drie betekenen een fijn, vrolijk gevoel.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "synoniem",
+              uitleg: "Woord dat bijna hetzelfde betekent als een ander woord.",
+            },
+            {
+              woord: "tegenstelling",
+              uitleg: "Woord met de omgekeerde betekenis.",
+            },
+          ],
+          theorie: "Eén woord dat niet past, maakt het hele rijtje fout.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "mooi – prachtig – schitterend = rijtje synoniemen.",
+            },
+            {
+              type: "stap",
+              tekst: "groot – enorm – reusachtig = rijtje synoniemen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Check elk woord in het rijtje. Past er één niet? Dan valt het rijtje af.",
+            },
+          ],
+          niveaus: {
+            basis: "blij – vrolijk – gelukkig",
+            simpeler: "Alle drie: een fijn gevoel.",
+            nogSimpeler: "blij – vrolijk – gelukkig",
+          },
+        },
+      },
     ],
   },
 
@@ -246,6 +515,207 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Synoniem van **'traag'**?",
+        options: ["Langzaam", "Snel", "Luid", "Groot"],
+        answer: 0,
+        wrongHints: [null, "Dat is juist het omgekeerde.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat betekent 'traag'?",
+              tekst: "**Traag** betekent: niet snel, met lage snelheid.",
+            },
+            {
+              titel: "Zet het in een zin",
+              tekst: "*'De slak kroop traag over de stoep.'* Vervang het woord door 'langzaam': *'De slak kroop langzaam over de stoep.'* De zin betekent nog steeds hetzelfde.",
+            },
+            {
+              titel: "Synoniem gevonden",
+              tekst: "'Langzaam' is dus een **synoniem** van 'traag'. Sloom hoort er ook bij.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "synoniem",
+              uitleg: "Woord dat bijna hetzelfde betekent als een ander woord.",
+            },
+            {
+              woord: "traag",
+              uitleg: "Niet snel, met lage snelheid.",
+            },
+          ],
+          theorie: "Synoniem zoeken: zet elke optie in een zin. Blijft de betekenis hetzelfde? Dan heb je het synoniem.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "*'De slak kroop traag over de stoep.'* = *'De slak kroop langzaam over de stoep.'*",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Let op: een tegenstelling is precies omgekeerd. Die zoek je bij een synoniem-vraag dus niet.",
+            },
+          ],
+          niveaus: {
+            basis: "'Langzaam' is een synoniem van 'traag'.",
+            simpeler: "'Traag' en 'langzaam' betekenen bijna hetzelfde.",
+            nogSimpeler: "Langzaam",
+          },
+        },
+      },
+      {
+        q: "Welk woord betekent hetzelfde als **'woning'**?",
+        options: ["Huis", "Tuin", "Straat", "Winkel"],
+        answer: 0,
+        wrongHints: [null, null, null, "In een winkel koop je iets. Woon je er ook?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat betekent 'woning'?",
+              tekst: "**Woning** betekent: de plek waar je woont.",
+            },
+            {
+              titel: "Zet het in een zin",
+              tekst: "*'Ze kochten een nieuwe woning.'* Vervang het woord door 'huis': *'Ze kochten een nieuw huis.'* De zin betekent nog steeds hetzelfde.",
+            },
+            {
+              titel: "Synoniem gevonden",
+              tekst: "'Huis' is dus een **synoniem** van 'woning'. Woning is wat deftiger, huis is het gewone woord.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "synoniem",
+              uitleg: "Woord dat bijna hetzelfde betekent als een ander woord.",
+            },
+            {
+              woord: "woning",
+              uitleg: "De plek waar je woont.",
+            },
+          ],
+          theorie: "Synoniem zoeken: zet elke optie in een zin. Blijft de betekenis hetzelfde? Dan heb je het synoniem.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "*'Ze kochten een nieuwe woning.'* = *'Ze kochten een nieuw huis.'*",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Let op: een tegenstelling is precies omgekeerd. Die zoek je bij een synoniem-vraag dus niet.",
+            },
+          ],
+          niveaus: {
+            basis: "'Huis' is een synoniem van 'woning'.",
+            simpeler: "'Woning' en 'huis' betekenen bijna hetzelfde.",
+            nogSimpeler: "Huis",
+          },
+        },
+      },
+      {
+        q: "Welk woord hoort als synoniem bij **'verbaasd'**?",
+        options: ["Verrast", "Verveeld", "Verdrietig", "Vergeten"],
+        answer: 0,
+        wrongHints: [null, null, null, "Ze beginnen allemaal met 'ver-', maar kijk naar de betekenis."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat betekent 'verbaasd'?",
+              tekst: "**Verbaasd** betekent: je had iets niet verwacht.",
+            },
+            {
+              titel: "Zet het in een zin",
+              tekst: "*'Tim keek verbaasd op toen hij het cadeau zag.'* Vervang het woord door 'verrast': *'Tim keek verrast op toen hij het cadeau zag.'* De zin betekent nog steeds hetzelfde.",
+            },
+            {
+              titel: "Synoniem gevonden",
+              tekst: "'Verrast' is dus een **synoniem** van 'verbaasd'. Stomverbaasd is nog sterker.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "synoniem",
+              uitleg: "Woord dat bijna hetzelfde betekent als een ander woord.",
+            },
+            {
+              woord: "verbaasd",
+              uitleg: "Je had iets niet verwacht.",
+            },
+          ],
+          theorie: "Synoniem zoeken: zet elke optie in een zin. Blijft de betekenis hetzelfde? Dan heb je het synoniem.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "*'Tim keek verbaasd op toen hij het cadeau zag.'* = *'Tim keek verrast op toen hij het cadeau zag.'*",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Let op: een tegenstelling is precies omgekeerd. Die zoek je bij een synoniem-vraag dus niet.",
+            },
+          ],
+          niveaus: {
+            basis: "'Verrast' is een synoniem van 'verbaasd'.",
+            simpeler: "'Verbaasd' en 'verrast' betekenen bijna hetzelfde.",
+            nogSimpeler: "Verrast",
+          },
+        },
+      },
+      {
+        q: "Synoniem van **'gemeen'**?",
+        options: ["Vals", "Lief", "Vrolijk", "Stil"],
+        answer: 0,
+        wrongHints: [null, "Dat is juist het omgekeerde.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat betekent 'gemeen'?",
+              tekst: "**Gemeen** betekent: expres naar of onaardig doen.",
+            },
+            {
+              titel: "Zet het in een zin",
+              tekst: "*'Pas op, dat is een gemene hond!'* Vervang het woord door 'vals': *'Pas op, dat is een valse hond!'* De zin betekent nog steeds hetzelfde.",
+            },
+            {
+              titel: "Synoniem gevonden",
+              tekst: "'Vals' is dus een **synoniem** van 'gemeen'. Hatelijk betekent ook hetzelfde.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "synoniem",
+              uitleg: "Woord dat bijna hetzelfde betekent als een ander woord.",
+            },
+            {
+              woord: "gemeen",
+              uitleg: "Expres naar of onaardig doen.",
+            },
+          ],
+          theorie: "Synoniem zoeken: zet elke optie in een zin. Blijft de betekenis hetzelfde? Dan heb je het synoniem.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "*'Pas op, dat is een gemene hond!'* = *'Pas op, dat is een valse hond!'*",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Let op: een tegenstelling is precies omgekeerd. Die zoek je bij een synoniem-vraag dus niet.",
+            },
+          ],
+          niveaus: {
+            basis: "'Vals' is een synoniem van 'gemeen'.",
+            simpeler: "'Gemeen' en 'vals' betekenen bijna hetzelfde.",
+            nogSimpeler: "Vals",
+          },
+        },
+      },
     ],
   },
 
@@ -292,6 +762,37 @@ const steps = [
         options: ["jong + oud", "klein + minuscuul", "blij + vrolijk", "snel + vlug"],
         answer: 0,
         wrongHints: [null, "Klein/minuscuul = bijna hetzelfde — synoniemen.", "Blij/vrolijk = bijna hetzelfde — synoniemen.", "Snel/vlug = bijna hetzelfde — synoniemen."],
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is het **tegenovergestelde** van **'vroeg'**?",
+        options: ["Laat", "Snel", "Vandaag", "Ochtend"],
+        answer: 0,
+        wrongHints: [null, null, null, "De ochtend is vroeg op de dag — is dat het omgekeerde?"],
+      },
+      {
+        q: "Wat is het **tegenovergestelde** van **'altijd'**?",
+        options: ["Nooit", "Vaak", "Soms", "Meestal"],
+        answer: 0,
+        wrongHints: [null, null, "Soms ligt ertussenin — wat is precies omgekeerd?", null],
+      },
+      {
+        q: "Wat is het **tegenovergestelde** van **'openen'**?",
+        options: ["Sluiten", "Openmaken", "Kijken", "Beginnen"],
+        answer: 0,
+        wrongHints: [null, "Dat betekent hetzelfde als openen.", null, null],
+      },
+      {
+        q: "Wat betekent het woord **'onweer'**?",
+        options: ["Donder en bliksem", "Helemaal geen weer", "Zonnig weer", "Een beetje wind"],
+        answer: 0,
+        wrongHints: [null, "Pas op: 'on-' betekent hier niet 'geen'.", null, null],
+      },
+      {
+        q: "Welk paar is **geen** tegenstelling?",
+        options: ["rennen + hollen", "komen + gaan", "licht + donker", "alles + niets"],
+        answer: 0,
+        wrongHints: [null, null, null, null],
       },
     ],
   },
@@ -347,6 +848,43 @@ const steps = [
             nogSimpeler: "Oude",
           },
         },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welk woord past? *'Het was zo ___ in de bibliotheek dat je niemand hoorde praten.'*",
+        options: ["stil", "druk", "luid", "vol"],
+        answer: 0,
+        wrongHints: [null, "Hoor je in een drukke ruimte niemand praten?", null, null],
+      },
+      {
+        q: "Welk woord past? *'Na de lange wandeling waren mijn benen heel ___.'*",
+        options: ["moe", "blij", "slim", "boos"],
+        answer: 0,
+        wrongHints: [null, null, "Wat heeft slim zijn met wandelen te maken?", null],
+      },
+      {
+        q: "Welk woord past? *'De zon ging onder en het werd ___.'*",
+        options: ["donker", "licht", "vroeg", "luid"],
+        answer: 0,
+        wrongHints: [null, "Wat gebeurt er als de zon weg is?", null, null],
+      },
+      {
+        q: "Welk woord past? *'Tim moest hard lachen om de ___ film.'*",
+        options: ["grappige", "saaie", "verdrietige", "boze"],
+        answer: 0,
+        wrongHints: [null, null, "Lach je hard om iets verdrietigs?", null],
+      },
+      {
+        q: "Welk woord past? *'Een muis is een ___ dier.'*",
+        options: ["klein", "reusachtig", "enorm", "zwaar"],
+        answer: 0,
+        wrongHints: [null, "Denk aan hoe groot een muis is.", null, null],
+      },
+      {
+        q: "Welk woord past? *'Mijn zusje schrok en was ___ voor het harde onweer.'*",
+        options: ["bang", "blij", "trots", "vrolijk"],
+        answer: 0,
+        wrongHints: [null, null, "Lees de hele zin: ze schrok. Past trots daarbij?", null],
       },
     ],
   },

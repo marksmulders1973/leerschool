@@ -83,6 +83,250 @@ const steps = [
           niveaus: { basis: "Friezen, Saksen, Franken.", simpeler: "Na Romeinen (~400) kwamen 3 Germaanse stammen wonen: Friezen (N), Saksen (O), Franken (Z).", nogSimpeler: "3 stammen" },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat zijn **hunebedden**?",
+        options: ["stenen graven", "Romeinse forten", "middeleeuwse kastelen", "houten boerderijen"],
+        answer: 0,
+        wrongHints: [null, "Hunebedden zijn veel ouder dan de Romeinen.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Hunebed = graf",
+              tekst: "Hunebedden zijn stenen graven van ongeveer 3000 v.Chr. Je kunt ze nog zien in Drenthe.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "hunebed",
+              uitleg: "Een graf van grote stenen uit de prehistorie.",
+            },
+          ],
+          theorie: "Hunebedden komen uit de prehistorie: lang vóór de Romeinen en de ridders.",
+          voorbeelden: [
+            {
+              type: "feit",
+              tekst: "De Trechterbeker-cultuur bouwde de hunebedden.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Waar?",
+              uitleg: "De hunebedden liggen in Drenthe.",
+            },
+          ],
+          niveaus: {
+            basis: "Hunebedden zijn stenen graven.",
+            simpeler: "Een hunebed is een graf van grote stenen.",
+            nogSimpeler: "stenen graven",
+          },
+        },
+      },
+      {
+        q: "Wat is de **prehistorie**?",
+        options: [
+          "de tijd zonder schrift",
+          "de tijd van de ridders",
+          "de tijd van de VOC",
+          "de tijd van de stoommachine",
+        ],
+        answer: 0,
+        wrongHints: [null, "Ridders leefden in de middeleeuwen — de prehistorie is nog veel ouder.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Nog geen schrift",
+              tekst: "De prehistorie is de tijd vóór er geschreven werd, ongeveer tot het jaar 0.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "prehistorie",
+              uitleg: "De tijd waarin mensen nog niet schreven.",
+            },
+          ],
+          theorie: "Pas toen er geschreven werd, begon de tijd na de prehistorie. De Romeinen brachten het schrift naar ons land.",
+          voorbeelden: [
+            {
+              type: "feit",
+              tekst: "Mensen woonden in de prehistorie eerst in grotten, daarna in eenvoudige huizen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Schrift",
+              uitleg: "De Romeinen brachten het schrift mee.",
+            },
+          ],
+          niveaus: {
+            basis: "Prehistorie = de tijd zonder schrift.",
+            simpeler: "Prehistorie: mensen schreven nog niet.",
+            nogSimpeler: "geen schrift",
+          },
+        },
+      },
+      {
+        q: "Wie leidde de **Bataafse opstand** in 69 n.Chr.?",
+        options: ["Julius Civilis", "Karel de Grote", "Floris V", "Willem van Oranje"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hij leefde pas rond 800.",
+          null,
+          "Hij leidde ook een opstand, maar veel later, tegen Spanje.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Julius Civilis",
+              tekst: "In 69 n.Chr. kwamen de Bataven in opstand tegen de Romeinen. Julius Civilis was hun leider.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "Bataven",
+              uitleg: "Een volk dat in het rivierengebied leefde, in de Romeinse tijd.",
+            },
+          ],
+          theorie: "De Bataafse opstand hoort bij de Romeinse tijd (±50 v.Chr. — 400 n.Chr.).",
+          voorbeelden: [
+            {
+              type: "feit",
+              tekst: "69 n.Chr. is 69 jaar na het jaar 0.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "n.Chr.",
+              uitleg: "Na Christus: de jaren na het jaar 0.",
+            },
+          ],
+          niveaus: {
+            basis: "Julius Civilis leidde de Bataafse opstand.",
+            simpeler: "De Bataven kwamen in opstand onder Julius Civilis.",
+            nogSimpeler: "Julius Civilis",
+          },
+        },
+      },
+      {
+        q: "Wat brachten de **Romeinen** naar ons land?",
+        options: ["wegen en baden", "de stoommachine", "de euro", "de VOC-schepen"],
+        answer: 0,
+        wrongHints: [null, "Die kwam pas veel later, in de tijd van de fabrieken.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Romeinse spullen",
+              tekst: "De Romeinen brachten wegen, baden, wijn en het schrift mee.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "Romeinen",
+              uitleg: "Een volk uit Rome dat delen van wat nu Nederland is veroverde.",
+            },
+          ],
+          theorie: "Romeinse tijd: ±50 v.Chr. — 400 n.Chr.",
+          voorbeelden: [
+            {
+              type: "feit",
+              tekst: "Nijmegen was de belangrijkste Romeinse stad in Nederland.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Grens",
+              uitleg: "De Rijn was de Romeinse grens (Limes).",
+            },
+          ],
+          niveaus: {
+            basis: "De Romeinen brachten wegen en baden.",
+            simpeler: "Romeinen: wegen, baden, wijn en schrift.",
+            nogSimpeler: "wegen en baden",
+          },
+        },
+      },
+      {
+        q: "Welk jaartal is **het langst geleden**?",
+        options: ["3000 v.Chr.", "50 v.Chr.", "69 n.Chr.", "400 n.Chr."],
+        answer: 0,
+        wrongHints: [null, "Hoe werkt tellen vóór het jaar 0?", null, "Dit jaartal ligt ná het jaar 0."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tellen vanaf 0",
+              tekst: "Vóór het jaar 0 (v.Chr.): hoe hoger het getal, hoe verder terug in de tijd. Na het jaar 0 (n.Chr.) tel je gewoon op.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "v.Chr.",
+              uitleg: "Voor Christus: de jaren vóór het jaar 0.",
+            },
+          ],
+          theorie: "Volgorde van oud naar nieuw: 3000 v.Chr. → 50 v.Chr. → 69 n.Chr. → 400 n.Chr.",
+          voorbeelden: [
+            {
+              type: "feit",
+              tekst: "De hunebedden (~3000 v.Chr.) zijn veel ouder dan de Bataafse opstand (69 n.Chr.).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Anker",
+              uitleg: "Het jaar 0 is een goed ankerpunt op de tijdlijn.",
+            },
+          ],
+          niveaus: {
+            basis: "3000 v.Chr. is het langst geleden.",
+            simpeler: "Vóór 0: groter getal = langer geleden.",
+            nogSimpeler: "3000 v.Chr.",
+          },
+        },
+      },
+      {
+        q: "In welk gebied leefden de **Bataven**?",
+        options: [
+          "in het rivierengebied",
+          "op de Waddeneilanden",
+          "in de Alpen",
+          "op de heide bij de hunebedden",
+        ],
+        answer: 0,
+        wrongHints: [null, null, "Dat is ver buiten Nederland.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Bataven",
+              tekst: "De Bataven leefden in de Romeinse tijd in het rivierengebied.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "rivierengebied",
+              uitleg: "Het gebied waar de grote rivieren door Nederland stromen.",
+            },
+          ],
+          theorie: "Het rivierengebied ligt rond de Rijn, de grens van het Romeinse Rijk.",
+          voorbeelden: [
+            {
+              type: "feit",
+              tekst: "In 69 n.Chr. kwamen de Bataven in opstand onder Julius Civilis.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Romeinse grens",
+              uitleg: "De Rijn vormde de grens (Limes).",
+            },
+          ],
+          niveaus: {
+            basis: "De Bataven woonden in het rivierengebied.",
+            simpeler: "Bataven: bij de grote rivieren.",
+            nogSimpeler: "rivierengebied",
+          },
+        },
+      },
     ],
   },
 
@@ -150,6 +394,245 @@ const steps = [
           voorbeelden: [{ type: "feit", tekst: "Hanzesteden bloei 1300-1500. Handel Oostzee + Noordzee." }],
           basiskennis: [{ onderwerp: "Stadsmacht", uitleg: "Steden werden machtig door handel — eerste vorm van burgerlijke macht." }],
           niveaus: { basis: "Handelsverbond.", simpeler: "Hanze = verbond van middeleeuwse handelssteden (samen sterker = veiliger handel).", nogSimpeler: "Handel" },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat moest een ridder doen in ruil voor zijn **leen**?",
+        options: ["trouw zijn en meevechten", "een kerk bouwen", "met de VOC varen", "de stad besturen"],
+        answer: 0,
+        wrongHints: [null, null, "Die handelsreizen kwamen pas eeuwen later.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Leen",
+              tekst: "De koning gaf grond (een leen). In ruil moest de ridder trouw zijn en militaire dienst leveren.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "leen",
+              uitleg: "Grond die je van een heer krijgt om te gebruiken.",
+            },
+          ],
+          theorie: "Feodaal stelsel (leenstelsel): koning → hertogen, graven, ridders → boeren werkten op het land voor hun heer.",
+          voorbeelden: [
+            {
+              type: "feit",
+              tekst: "Een ridder kreeg land en vocht dan mee als zijn heer dat vroeg.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Leenstelsel",
+              uitleg: "Ander woord voor het feodaal stelsel.",
+            },
+          ],
+          niveaus: {
+            basis: "Trouw zijn en meevechten.",
+            simpeler: "Grond krijgen = trouw zijn en meevechten.",
+            nogSimpeler: "meevechten",
+          },
+        },
+      },
+      {
+        q: "Waar kregen mensen in de middeleeuwen **meer vrijheid**?",
+        options: [
+          "in de stad",
+          "op het land van een heer",
+          "in het kasteel van de graaf",
+          "in het leger van de koning",
+        ],
+        answer: 0,
+        wrongHints: [null, "Op het land werkten boeren voor hun heer.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stadslucht maakt vrij",
+              tekst: "Vanaf ongeveer 1100 groeiden handelssteden. In de stad kregen mensen meer vrijheid: 'stadslucht maakt vrij'.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "stadslucht maakt vrij",
+              uitleg: "Een oud gezegde: wie in de stad woonde, kreeg meer vrijheid.",
+            },
+          ],
+          theorie: "Op het platteland werkten boeren voor hun heer. In de stad konden mensen meer zelf beslissen.",
+          voorbeelden: [
+            {
+              type: "feit",
+              tekst: "Dordrecht, Brugge en Gent waren handelssteden in de middeleeuwen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Hanze",
+              uitleg: "Een handelsverbond van steden in Noord-Europa.",
+            },
+          ],
+          niveaus: {
+            basis: "In de stad.",
+            simpeler: "Stad = meer vrijheid.",
+            nogSimpeler: "de stad",
+          },
+        },
+      },
+      {
+        q: "Wat was het **Sticht**?",
+        options: ["het bisdom Utrecht", "het graafschap Holland", "een handelsverbond", "een Romeins fort"],
+        answer: 0,
+        wrongHints: [null, null, "Zo'n verbond van steden heette anders.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Sticht = Utrecht",
+              tekst: "Na 1000 ontstonden Holland (een graafschap) en het Sticht (het bisdom Utrecht).",
+            },
+          ],
+          woorden: [
+            {
+              woord: "bisdom",
+              uitleg: "Een gebied dat bestuurd werd door een bisschop van de kerk.",
+            },
+          ],
+          theorie: "Holland had een graaf, zoals Floris V. Het Sticht hoorde bij de bisschop van Utrecht.",
+          voorbeelden: [
+            {
+              type: "feit",
+              tekst: "Floris V (1254-1296) was een graaf van Holland.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Graafschap",
+              uitleg: "Een gebied dat bestuurd werd door een graaf.",
+            },
+          ],
+          niveaus: {
+            basis: "Het Sticht was het bisdom Utrecht.",
+            simpeler: "Sticht = bisdom Utrecht.",
+            nogSimpeler: "Utrecht",
+          },
+        },
+      },
+      {
+        q: "Vanaf welk jaar groeiden er **handelssteden** zoals Dordrecht?",
+        options: ["ongeveer 1100", "ongeveer 50 v.Chr.", "ongeveer 1648", "ongeveer 1815"],
+        answer: 0,
+        wrongHints: [null, "Toen kwamen de Romeinen hier net.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Steden ontstaan",
+              tekst: "Vanaf ongeveer 1100 groeiden handelssteden zoals Dordrecht, Brugge en Gent.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "handelsstad",
+              uitleg: "Een stad waar veel gehandeld werd: kopen en verkopen.",
+            },
+          ],
+          theorie: "Drie ankers in de middeleeuwen: 800 (Karel de Grote), 1100 (steden ontstaan), 1300 (Floris V).",
+          voorbeelden: [
+            {
+              type: "feit",
+              tekst: "Steden in Noord-Europa werkten samen in de Hanze.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Middeleeuwen",
+              uitleg: "Ongeveer 500 tot 1500.",
+            },
+          ],
+          niveaus: {
+            basis: "Ongeveer 1100.",
+            simpeler: "Steden groeien vanaf 1100.",
+            nogSimpeler: "1100",
+          },
+        },
+      },
+      {
+        q: "Wat deed **Karel de Grote**?",
+        options: [
+          "Hij stichtte een groot rijk",
+          "Hij richtte de VOC op",
+          "Hij bouwde de hunebedden",
+          "Hij schreef een dagboek",
+        ],
+        answer: 0,
+        wrongHints: [null, "De VOC kwam pas rond 1600.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Karel de Grote",
+              tekst: "Karel de Grote (742-814) was een Frankische koning. Hij stichtte een groot rijk in West-Europa en werd in 800 keizer.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "keizer",
+              uitleg: "Een heerser die nog boven koningen staat.",
+            },
+          ],
+          theorie: "Karel bracht het christendom; dat was verplicht voor zijn onderdanen.",
+          voorbeelden: [
+            {
+              type: "feit",
+              tekst: "In 800 werd Karel de Grote keizer.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Anker",
+              uitleg: "800 = Karel de Grote, een van de ankers van de middeleeuwen.",
+            },
+          ],
+          niveaus: {
+            basis: "Hij stichtte een groot rijk.",
+            simpeler: "Karel de Grote: groot rijk in West-Europa.",
+            nogSimpeler: "groot rijk",
+          },
+        },
+      },
+      {
+        q: "Hoe lang duurden de **middeleeuwen** ongeveer?",
+        options: ["duizend jaar", "honderd jaar", "tachtig jaar", "tien jaar"],
+        answer: 0,
+        wrongHints: [null, null, "Tachtig jaar duurde een oorlog uit een latere tijd.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "500 tot 1500",
+              tekst: "De middeleeuwen duurden van ongeveer 500 tot 1500. 1500 − 500 = 1000 jaar.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "middeleeuwen",
+              uitleg: "De tijd van ridders, kastelen, kloosters en boeren.",
+            },
+          ],
+          theorie: "Omdat de middeleeuwen zo lang duurden, helpen ankers: 800, 1100 en 1300.",
+          voorbeelden: [
+            {
+              type: "feit",
+              tekst: "Karel de Grote werd in 800 keizer — dat valt in de middeleeuwen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Rekenen",
+              uitleg: "1500 − 500 = 1000.",
+            },
+          ],
+          niveaus: {
+            basis: "Ongeveer duizend jaar.",
+            simpeler: "Van 500 tot 1500 = 1000 jaar.",
+            nogSimpeler: "duizend jaar",
+          },
         },
       },
     ],
@@ -221,6 +704,240 @@ const steps = [
           niveaus: { basis: "Handel Azië.", simpeler: "VOC = handelscompagnie (bedrijf) voor handel met Azië. Specerijen, thee, zijde.", nogSimpeler: "Handel" },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Waarmee is **Antoni van Leeuwenhoek** bekend geworden?",
+        options: ["de microscoop", "de slingerklok", "de stoommachine", "de telegraaf"],
+        answer: 0,
+        wrongHints: [null, "Die hoort bij een andere geleerde uit de Gouden Eeuw.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Van Leeuwenhoek",
+              tekst: "Antoni van Leeuwenhoek was een wetenschapper uit de Gouden Eeuw. Hij is bekend van de microscoop.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "microscoop",
+              uitleg: "Een apparaat waarmee je heel kleine dingen groot kunt zien.",
+            },
+          ],
+          theorie: "Gouden Eeuw = 17e eeuw. Wetenschap: Christiaan Huygens (slingerklok) en Antoni van Leeuwenhoek (microscoop).",
+          voorbeelden: [
+            {
+              type: "feit",
+              tekst: "Christiaan Huygens is bekend van de slingerklok.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Gouden Eeuw",
+              uitleg: "De 17e eeuw, toen de Republiek rijk werd door handel.",
+            },
+          ],
+          niveaus: {
+            basis: "De microscoop.",
+            simpeler: "Van Leeuwenhoek = microscoop.",
+            nogSimpeler: "microscoop",
+          },
+        },
+      },
+      {
+        q: "Wie was een beroemde **schilder** uit de Gouden Eeuw?",
+        options: ["Vermeer", "Floris V", "Filips II", "Karel de Grote"],
+        answer: 0,
+        wrongHints: [null, "Hij was een graaf van Holland, in de middeleeuwen.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Schilders",
+              tekst: "Beroemde schilders uit de Gouden Eeuw: Rembrandt, Vermeer en Frans Hals.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "Gouden Eeuw",
+              uitleg: "De 17e eeuw: veel handel, kunst en wetenschap.",
+            },
+          ],
+          theorie: "In de Gouden Eeuw was Amsterdam de grootste handelsstad ter wereld.",
+          voorbeelden: [
+            {
+              type: "feit",
+              tekst: "Rembrandt is ook een beroemde schilder uit die tijd.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Wetenschap",
+              uitleg: "Huygens (slingerklok) en Van Leeuwenhoek (microscoop).",
+            },
+          ],
+          niveaus: {
+            basis: "Vermeer was een schilder.",
+            simpeler: "Vermeer schilderde in de Gouden Eeuw.",
+            nogSimpeler: "Vermeer",
+          },
+        },
+      },
+      {
+        q: "In welke stad werd **Willem van Oranje** vermoord?",
+        options: ["Delft", "Amsterdam", "Nijmegen", "Dordrecht"],
+        answer: 0,
+        wrongHints: [null, null, "Die stad was vooral belangrijk in de Romeinse tijd.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "1584: Delft",
+              tekst: "Willem van Oranje leidde de opstand tegen Spanje. In 1584 werd hij vermoord in Delft.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "vader des vaderlands",
+              uitleg: "Bijnaam van Willem van Oranje.",
+            },
+          ],
+          theorie: "Tachtigjarige Oorlog: 1568 begin → 1581 Plakkaat van Verlatinghe → 1584 moord op Willem → 1648 Vrede van Münster.",
+          voorbeelden: [
+            {
+              type: "feit",
+              tekst: "Na de moord ging de oorlog nog tot 1648 door.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tachtigjarige Oorlog",
+              uitleg: "De opstand tegen de Spaanse koning Filips II (1568-1648).",
+            },
+          ],
+          niveaus: {
+            basis: "In Delft.",
+            simpeler: "Willem van Oranje: vermoord in Delft (1584).",
+            nogSimpeler: "Delft",
+          },
+        },
+      },
+      {
+        q: "Wat had de **Republiek** níet?",
+        options: ["een koning", "provincies", "een stadhouder", "handelsschepen"],
+        answer: 0,
+        wrongHints: [null, "Er waren er zeven.", null, "Denk aan de VOC."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Geen koning",
+              tekst: "De Republiek (1588-1795) had geen koning. Zeven provincies werden bestuurd door de Staten-Generaal en een stadhouder.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "stadhouder",
+              uitleg: "Een bestuurder in de Republiek; de belangrijkste kwamen uit het huis Oranje-Nassau.",
+            },
+          ],
+          theorie: "Republiek = een land zonder koning.",
+          voorbeelden: [
+            {
+              type: "feit",
+              tekst: "De VOC (1602) en de WIC (1621) voeren met handelsschepen naar Azië en Amerika.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Staten-Generaal",
+              uitleg: "Het bestuur van de zeven provincies samen.",
+            },
+          ],
+          niveaus: {
+            basis: "Een koning.",
+            simpeler: "De Republiek had geen koning.",
+            nogSimpeler: "koning",
+          },
+        },
+      },
+      {
+        q: "Wat was **één** van de redenen voor de opstand tegen Filips II?",
+        options: ["te hoge belasting", "te weinig kastelen", "de komst van de trein", "ruzie over de euro"],
+        answer: 0,
+        wrongHints: [null, null, "Treinen reden pas in de tijd van de stoommachine.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Waarom opstand?",
+              tekst: "De Nederlanden kwamen in opstand tegen de Spaanse koning Filips II. Redenen: godsdienst, belasting en verlies van rechten.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "opstand",
+              uitleg: "Als mensen samen in verzet komen tegen wie de baas is.",
+            },
+          ],
+          theorie: "Tachtigjarige Oorlog: 1568-1648, met Willem van Oranje als leider.",
+          voorbeelden: [
+            {
+              type: "feit",
+              tekst: "In 1581 verklaarden de Nederlanden dat Filips niet meer hun koning was (Plakkaat van Verlatinghe).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Godsdienst",
+              uitleg: "Ook geloof (protestant tegen katholiek) was een reden.",
+            },
+          ],
+          niveaus: {
+            basis: "Te hoge belasting.",
+            simpeler: "Redenen: geloof, belasting en rechten.",
+            nogSimpeler: "belasting",
+          },
+        },
+      },
+      {
+        q: "Wat was een **donkere kant** van de Gouden Eeuw?",
+        options: [
+          "de slavenhandel door de WIC",
+          "de schilderijen van Rembrandt",
+          "de slingerklok van Huygens",
+          "de microscoop",
+        ],
+        answer: 0,
+        wrongHints: [null, "Kunst maakte de Gouden Eeuw juist beroemd.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Donkere kant",
+              tekst: "In de Gouden Eeuw werd veel geld verdiend. Maar de WIC deed ook aan slavenhandel: de donkere kant van de Gouden Eeuw.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "WIC",
+              uitleg: "West-Indische Compagnie (1621): handelscompagnie met Amerika.",
+            },
+          ],
+          theorie: "Gouden Eeuw = rijkdom, kunst en wetenschap, maar ook slavenhandel.",
+          voorbeelden: [
+            {
+              type: "feit",
+              tekst: "De VOC (1602) handelde met Azië, de WIC met Amerika.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Slavenhandel",
+              uitleg: "Mensen werden gevangen en verkocht als slaaf.",
+            },
+          ],
+          niveaus: {
+            basis: "De slavenhandel.",
+            simpeler: "De WIC handelde in mensen: slavenhandel.",
+            nogSimpeler: "slavenhandel",
+          },
+        },
+      },
     ],
   },
 
@@ -284,6 +1001,169 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "1999: bedrijven rekenen al in euro. 2002: jij hebt euro-briefjes in je portemonnee." }],
           basiskennis: [{ onderwerp: "Gulden weg", uitleg: "Gulden bleef nog 1 maand naast euro geldig (jan 2002), daarna alleen euro." }],
           niveaus: { basis: "2002.", simpeler: "Euro briefjes/munten = 1 januari 2002. (1999 was alleen digitaal).", nogSimpeler: "2002" },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat betekent **verstedelijking**?",
+        options: [
+          "steeds meer mensen gaan in de stad wonen",
+          "steeds meer mensen gaan op het platteland wonen",
+          "steden worden kleiner gemaakt",
+          "steden krijgen een stadsmuur",
+        ],
+        answer: 0,
+        wrongHints: [null, null, null, "Een stadsmuur hoort meer bij de middeleeuwen."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Naar de stad",
+              tekst: "In de Industriële Revolutie verhuisden mensen van het platteland naar de stad. Dat heet verstedelijking.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "platteland",
+              uitleg: "Het gebied buiten de steden, met boerderijen en akkers.",
+            },
+          ],
+          theorie: "Industriële Revolutie (±1800-1900): stoommachines, fabrieken, treinen en telegraaf.",
+          voorbeelden: [
+            {
+              type: "feit",
+              tekst: "De fabrieken stonden in de stad, dus daar kwamen mensen werken.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Industriële Revolutie",
+              uitleg: "De tijd waarin fabrieken en machines kwamen.",
+            },
+          ],
+          niveaus: {
+            basis: "Mensen gaan in de stad wonen.",
+            simpeler: "Verstedelijking = van het platteland naar de stad.",
+            nogSimpeler: "naar de stad",
+          },
+        },
+      },
+      {
+        q: "Welke uitvinding hoort bij de **Industriële Revolutie**?",
+        options: ["de stoommachine", "het hunebed", "de microscoop", "de slingerklok"],
+        answer: 0,
+        wrongHints: [null, null, "Die hoort bij een geleerde uit de Gouden Eeuw.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stoom!",
+              tekst: "De Industriële Revolutie (±1800-1900) bracht stoommachines, fabrieken, treinen en de telegraaf.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "stoommachine",
+              uitleg: "Een machine die werkt op de kracht van stoom.",
+            },
+          ],
+          theorie: "Door de stoommachines konden fabrieken veel meer maken.",
+          voorbeelden: [
+            {
+              type: "feit",
+              tekst: "Ook treinen en de telegraaf horen bij deze tijd.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Verstedelijking",
+              uitleg: "Mensen verhuisden van het platteland naar de stad.",
+            },
+          ],
+          niveaus: {
+            basis: "De stoommachine.",
+            simpeler: "Industriële Revolutie = stoommachines en fabrieken.",
+            nogSimpeler: "stoommachine",
+          },
+        },
+      },
+      {
+        q: "Wat gebeurde er in **1795**?",
+        options: [
+          "de Fransen veroverden de Republiek",
+          "de VOC werd opgericht",
+          "Willem van Oranje werd vermoord",
+          "de euro werd ingevoerd",
+        ],
+        answer: 0,
+        wrongHints: [null, "Dat was al in 1602.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "1795: Fransen",
+              tekst: "In 1795 veroverden de Fransen de Republiek. Daarna heette het land de Bataafse Republiek.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "Bataafse Republiek",
+              uitleg: "De naam van ons land van 1795 tot 1806.",
+            },
+          ],
+          theorie: "Tijdlijn: 1795 Bataafse Republiek → 1806 Lodewijk Napoleon koning → 1813 Napoleon weg → 1815 Willem I koning.",
+          voorbeelden: [
+            {
+              type: "feit",
+              tekst: "Napoleon maakte zijn broer Lodewijk Napoleon in 1806 koning.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Willem I",
+              uitleg: "In 1815 de eerste koning van Nederland.",
+            },
+          ],
+          niveaus: {
+            basis: "De Fransen veroverden de Republiek.",
+            simpeler: "1795 = de Fransen kwamen.",
+            nogSimpeler: "de Fransen",
+          },
+        },
+      },
+      {
+        q: "Welk land gaf na 1945 **Marshall-hulp**?",
+        options: ["de Verenigde Staten", "Duitsland", "Spanje", "Frankrijk"],
+        answer: 0,
+        wrongHints: [null, "Dat land had Nederland juist bezet.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wederopbouw",
+              tekst: "Na 1945 werd Nederland weer opgebouwd. De Verenigde Staten (VS) gaven daarbij Marshall-hulp.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "wederopbouw",
+              uitleg: "Het weer opbouwen van wat in de oorlog kapot was gegaan.",
+            },
+          ],
+          theorie: "Na 1945: wederopbouw met Marshall-hulp, 1957 EEG, 1999 euro.",
+          voorbeelden: [
+            {
+              type: "feit",
+              tekst: "In 1957 kwam de Europese Economische Gemeenschap (later de EU).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "VS",
+              uitleg: "Verenigde Staten, ook wel Amerika genoemd.",
+            },
+          ],
+          niveaus: {
+            basis: "De Verenigde Staten.",
+            simpeler: "Marshall-hulp kwam uit de VS.",
+            nogSimpeler: "de VS",
+          },
         },
       },
     ],

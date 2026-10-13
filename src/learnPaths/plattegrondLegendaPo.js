@@ -123,6 +123,45 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Plattegrond van de bibliotheek:\nLinks is de ingang met de stip 'je bent hier'. Vlak naast de ingang is de balie. In het midden staan de boekenkasten. Helemaal rechts zijn de toiletten.\n\nWaar sta je als je naar deze plattegrond kijkt?",
+        options: ["bij de ingang", "bij de balie", "bij de boekenkasten", "bij de toiletten"],
+        answer: 0,
+        wrongHints: [null, "Waar staat de stip precies?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "De stip = jouw plek",
+              tekst: "De stip 'je bent hier' staat bij de ingang. Daar sta jij dus.",
+            },
+          ],
+          niveaus: {
+            basis: "Je staat bij de ingang, want daar is de stip.",
+            simpeler: "Waar staat 'je bent hier'?",
+            nogSimpeler: "Staat de stip bij de ingang?",
+          },
+        },
+      },
+      {
+        q: "Plattegrond van de bibliotheek:\nLinks is de ingang met de stip 'je bent hier'. Vlak naast de ingang is de balie. In het midden staan de boekenkasten. Helemaal rechts zijn de toiletten.\n\nWat ligt het verst van jouw startplek?",
+        options: ["de toiletten", "de boekenkasten", "de balie", "de ingang"],
+        answer: 0,
+        wrongHints: [null, null, "Die ligt vlak naast de ingang.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vanaf de stip kijken",
+              tekst: "Je start links, bij de ingang. De balie is vlak naast je, de boekenkasten in het midden en de toiletten helemaal rechts. Die liggen dus het verst weg.",
+            },
+          ],
+          niveaus: {
+            basis: "Helemaal rechts = het verst van links → de toiletten.",
+            simpeler: "Je start links. Wat ligt helemaal aan de andere kant?",
+            nogSimpeler: "Wat staat er helemaal rechts?",
+          },
+        },
+      },
     ],
   },
 
@@ -237,6 +276,74 @@ const steps = [
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Legenda:\n★ = speeltuin\n▲ = ijskraam\n● = EHBO-post (eerste hulp)\n■ = kluisjesruimte\n\nJe bent gevallen en hebt een pleister nodig. Welk teken zoek je op de plattegrond?",
+        options: ["●", "★", "▲", "■"],
+        answer: 0,
+        wrongHints: [null, null, null, "Daar berg je je spullen op."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerste hulp = EHBO",
+              tekst: "Bij een EHBO-post (eerste hulp) helpen ze je als je gewond bent. In de legenda hoort ● bij de EHBO-post.",
+            },
+          ],
+          niveaus: {
+            basis: "Pleister nodig → EHBO-post → ●.",
+            simpeler: "Waar helpen ze je als je gevallen bent?",
+            nogSimpeler: "EHBO-post = welk teken?",
+          },
+        },
+      },
+      {
+        q: "Legenda van een fietskaart:\nblauwe lijn = wandelroute\nrode lijn = fietsroute\nstippellijn = onverhard pad\n\nJe wilt een fietstocht maken. Welke lijn volg je?",
+        options: ["de rode lijn", "de blauwe lijn", "de stippellijn", "de dikste lijn"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Waar is de blauwe lijn volgens de legenda voor bedoeld?",
+          null,
+          "Staat er in de legenda iets over dikke lijnen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Lijnen in de legenda",
+              tekst: "Ook lijnen en kleuren worden in de legenda uitgelegd. Achter 'fietsroute' staat: rode lijn.",
+            },
+          ],
+          niveaus: {
+            basis: "Fietsroute = rode lijn.",
+            simpeler: "Welke lijn hoort bij fietsen?",
+            nogSimpeler: "Rode lijn = … ?",
+          },
+        },
+      },
+      {
+        q: "Op plattegrond A betekent ★ een speeltuin. Op plattegrond B, van een ander park, staat ook een ★. Hoe kom je te weten wat ★ op plattegrond B betekent?",
+        options: [
+          "in de legenda van B kijken",
+          "aannemen dat het weer een speeltuin is",
+          "in de legenda van A kijken",
+          "het teken gewoon overslaan",
+        ],
+        answer: 0,
+        wrongHints: [null, null, "Gelden de tekens van de ene kaart ook voor een andere kaart?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Elke kaart zijn eigen legenda",
+              tekst: "Elke plattegrond heeft een eigen legenda. Hetzelfde teken kan op een andere kaart iets anders betekenen. Kijk dus altijd in de legenda van de kaart die je gebruikt.",
+            },
+          ],
+          niveaus: {
+            basis: "Kijk in de legenda van plattegrond B zelf.",
+            simpeler: "Hoort de legenda bij één kaart of bij alle kaarten?",
+            nogSimpeler: "Gebruik je kaart B? Kijk dan in de legenda van …?",
+          },
+        },
+      },
     ],
   },
 
@@ -330,6 +437,88 @@ const steps = [
             basis: "De laatste stap van de route is rechtsaf.",
             simpeler: "Wat staat er als tweede/laatste in de route?",
             nogSimpeler: "Wat doe je als láátste?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Plattegrond van een park (het noorden is boven):\nDe ingang ligt onderaan, het restaurant bovenaan, de speeltuin rechts en het meer links.\n\nJe loopt van de ingang naar het restaurant. In welke windrichting loop je?",
+        options: ["naar het noorden", "naar het zuiden", "naar het oosten", "naar het westen"],
+        answer: 0,
+        wrongHints: [null, "Ligt het restaurant boven of onder de ingang?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Boven = noord",
+              tekst: "De ingang ligt onderaan, het restaurant bovenaan. Je loopt dus naar boven. Met het noorden boven is dat het noorden.",
+            },
+          ],
+          niveaus: {
+            basis: "Van onder naar boven = naar het noorden.",
+            simpeler: "Loop je op de kaart naar boven of naar beneden?",
+            nogSimpeler: "Boven is het … ?",
+          },
+        },
+      },
+      {
+        q: "Route vanaf de stip 'je bent hier':\nLoop rechtdoor tot de fontein. Ga daar linksaf. Ga bij de bakker rechtsaf. Dan ben je er.\n\nWaar ga je linksaf?",
+        options: ["bij de fontein", "bij de bakker", "bij de stip", "na de bakker"],
+        answer: 0,
+        wrongHints: [null, "Wat doe je volgens de route bij de bakker?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Route stap voor stap",
+              tekst: "Lees de route op volgorde: 1. rechtdoor tot de fontein, 2. bij de fontein linksaf, 3. bij de bakker rechtsaf.",
+            },
+          ],
+          niveaus: {
+            basis: "Linksaf ga je bij de fontein.",
+            simpeler: "Wat staat er in de zin met 'linksaf'?",
+            nogSimpeler: "Bij de fontein: links of rechts?",
+          },
+        },
+      },
+      {
+        q: "Route vanaf de stip 'je bent hier':\nLoop rechtdoor tot de fontein. Ga daar linksaf. Ga bij de bakker rechtsaf. Dan ben je er.\n\nHoe vaak sla je in totaal af?",
+        options: ["2 keer", "3 keer", "1 keer", "4 keer"],
+        answer: 0,
+        wrongHints: [null, "Is rechtdoor lopen ook afslaan?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel de bochten",
+              tekst: "Afslaan is linksaf of rechtsaf gaan. In de route staan één keer linksaf (fontein) en één keer rechtsaf (bakker). Rechtdoor is geen afslag. Samen 2 keer.",
+            },
+          ],
+          niveaus: {
+            basis: "Linksaf + rechtsaf = 2 keer afslaan.",
+            simpeler: "Hoe vaak staat er 'linksaf' of 'rechtsaf' in de route?",
+            nogSimpeler: "1 + 1 = ?",
+          },
+        },
+      },
+      {
+        q: "Het noorden is boven op de kaart. Je loopt eerst naar rechts en daarna naar beneden. In welke richtingen loop je, op volgorde?",
+        options: [
+          "eerst oost, dan zuid",
+          "eerst west, dan zuid",
+          "eerst oost, dan noord",
+          "eerst west, dan noord",
+        ],
+        answer: 0,
+        wrongHints: [null, "Welke windrichting ligt links op een kaart met het noorden boven?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Rechts = oost, onder = zuid",
+              tekst: "Met het noorden boven geldt: rechts is oost en onder is zuid. Dus eerst naar het oosten, daarna naar het zuiden.",
+            },
+          ],
+          niveaus: {
+            basis: "Rechts = oost, beneden = zuid.",
+            simpeler: "Nooit Op Zondag Wassen: boven N, rechts O, onder Z, links W.",
+            nogSimpeler: "Rechts is … en onder is … ?",
           },
         },
       },
@@ -466,6 +655,26 @@ const steps = [
             basis: "Eerst je plek, dan je doel (via legenda), dan de route.",
             simpeler: "Begin je bij je eigen plek, je doel en de route — of bij de titel?",
             nogSimpeler: "Zoek je eerst waar je staat?",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Plattegrond van een dierentuin (het noorden is boven):\nDe stip 'je bent hier' staat bij de ingang, onderaan. Links van de ingang liggen de leeuwen. Recht boven de ingang ligt het restaurant (🍴). Rechts van de ingang zijn de toiletten (🚻).\n\nJe wilt naar de leeuwen. Welke kant loop je op vanaf de stip?",
+        options: ["naar links", "naar rechts", "naar boven", "terug naar buiten"],
+        answer: 0,
+        wrongHints: [null, "Wat ligt er rechts van de ingang?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Startplek, doel, route",
+              tekst: "1. Je staat bij de ingang (stip). 2. Je doel: de leeuwen. 3. Die liggen links van de ingang, dus je loopt naar links.",
+            },
+          ],
+          niveaus: {
+            basis: "De leeuwen liggen links van de stip → naar links.",
+            simpeler: "Waar staat de stip, en aan welke kant liggen de leeuwen?",
+            nogSimpeler: "Liggen de leeuwen links of rechts?",
           },
         },
       },

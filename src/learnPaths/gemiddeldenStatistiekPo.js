@@ -130,6 +130,106 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet altijd — een gemiddelde kan ook 6,5 zijn.", "Modus en gemiddelde zijn vaak verschillend.", "Het ligt tussen laagste en hoogste, niet automatisch het hoogste."],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welk zinnetje gaat over een **gemiddelde**?",
+        options: [
+          "In juli was het hier per dag ongeveer 22 graden",
+          "Op maandag was het 25 graden",
+          "De warmste dag van juli was 31 graden",
+          "In juli kwam 20 graden het vaakst voor",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dit gaat over één dag. Gaat een gemiddelde over één dag of over een hele groep dagen?",
+          null,
+          "Het getal dat het vaakst voorkomt heeft een andere naam.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eén getal of een groep?",
+              tekst: "Een gemiddelde gaat over een hele groep getallen, hier alle dagen van juli.",
+            },
+            {
+              titel: "Ongeveer",
+              tekst: "'Per dag ongeveer 22 graden' zegt hoe warm het in die maand meestal was. Dat is een gemiddelde.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "gemiddelde",
+              uitleg: "Alle getallen opgeteld en dan gedeeld door hoeveel getallen het zijn.",
+            },
+          ],
+          theorie: "Een gemiddelde zegt iets over een hele groep, zoals alle dagen van een maand.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Het weerbericht noemt vaak de gemiddelde temperatuur van een maand.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Warmste ≠ gemiddeld",
+              uitleg: "De warmste dag is het hoogste getal. Het vaakst is de modus. Het gemiddelde is iets anders.",
+            },
+          ],
+          niveaus: {
+            basis: "'Per dag ongeveer 22 graden' gaat over alle dagen samen.",
+            simpeler: "Een gemiddelde gaat over veel dagen samen, niet over één dag. Dat past bij 'per dag ongeveer 22 graden'.",
+            nogSimpeler: "Ongeveer 22 graden per dag",
+          },
+        },
+      },
+      {
+        q: "Over wie zegt het **gemiddelde** rapportcijfer van een klas iets?",
+        options: [
+          "Over de hele klas samen",
+          "Over het kind met het hoogste cijfer",
+          "Over het kind met het laagste cijfer",
+          "Over het kind dat als eerste klaar was",
+        ],
+        answer: 0,
+        wrongHints: [null, "Telt alleen dat ene kind mee als je een gemiddelde uitrekent?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Iedereen telt mee",
+              tekst: "Bij een gemiddelde tel je de cijfers van álle kinderen op en deel je door het aantal kinderen.",
+            },
+            {
+              titel: "De groep",
+              tekst: "Daarom zegt het gemiddelde iets over de hele klas samen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "gemiddelde",
+              uitleg: "Alle getallen opgeteld en dan gedeeld door hoeveel getallen het zijn.",
+            },
+          ],
+          theorie: "Een gemiddelde zegt hoe een groep er ongeveer uitziet.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Cijfers 6, 8 en 7 → (6 + 8 + 7) ÷ 3 = 7. Alle drie de kinderen tellen mee.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Groep, niet één kind",
+              uitleg: "Het gemiddelde hoort bij de groep. Het hoogste of laagste cijfer hoort bij één kind.",
+            },
+          ],
+          niveaus: {
+            basis: "Over de hele klas samen.",
+            simpeler: "Alle cijfers tellen mee. Dus het gemiddelde zegt iets over de hele klas.",
+            nogSimpeler: "De hele klas",
+          },
+        },
+      },
     ],
   },
 
@@ -224,6 +324,337 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Noor gooit **3 keer** een bal weg: **12, 15 en 18 meter**. Hoe ver gooit ze **gemiddeld**?",
+        options: ["15 meter", "45 meter", "12 meter", "18 meter"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is de som. Wat moet je daarna nog doen?",
+          "Dat is haar kortste worp, niet het gemiddelde.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Som",
+              tekst: "12 + 15 + 18 = **45 meter**.",
+            },
+            {
+              titel: "Aantal",
+              tekst: "**3** worpen.",
+            },
+            {
+              titel: "Delen",
+              tekst: "45 ÷ 3 = **15 meter**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "som",
+              uitleg: "Alles bij elkaar opgeteld.",
+            },
+            {
+              woord: "aantal",
+              uitleg: "Hoeveel getallen je hebt.",
+            },
+          ],
+          theorie: "Gemiddelde = som ÷ aantal.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Check: 15 ligt tussen 12 en 18. Dat klopt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet alleen optellen",
+              uitleg: "Na het optellen moet je nog delen door het aantal.",
+            },
+          ],
+          niveaus: {
+            basis: "(12 + 15 + 18) ÷ 3 = 45 ÷ 3 = 15 meter.",
+            simpeler: "Tel op: 12 + 15 + 18 = 45. Er zijn 3 worpen. 45 ÷ 3 = 15. Gemiddeld 15 meter.",
+            nogSimpeler: "15 meter",
+          },
+        },
+      },
+      {
+        q: "Drie boeken kosten **€6, €9 en €15**. Wat is de **gemiddelde** prijs?",
+        options: ["€10", "€30", "€9", "€15"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is wat de drie boeken samen kosten. Hoeveel boeken zijn het?",
+          "Dat is het middelste getal van de rij, niet som ÷ aantal.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Som",
+              tekst: "€6 + €9 + €15 = **€30**.",
+            },
+            {
+              titel: "Aantal",
+              tekst: "**3** boeken.",
+            },
+            {
+              titel: "Delen",
+              tekst: "€30 ÷ 3 = **€10**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "som",
+              uitleg: "Alles bij elkaar opgeteld.",
+            },
+            {
+              woord: "aantal",
+              uitleg: "Hoeveel getallen je hebt.",
+            },
+          ],
+          theorie: "Gemiddelde = som ÷ aantal. Het gemiddelde hoeft geen prijs te zijn die echt voorkomt.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Check: €10 ligt tussen €6 en €15. Dat klopt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Middelste ≠ gemiddelde",
+              uitleg: "Het middelste getal (€9) is niet hetzelfde als het gemiddelde (€10).",
+            },
+          ],
+          niveaus: {
+            basis: "(€6 + €9 + €15) ÷ 3 = €30 ÷ 3 = €10.",
+            simpeler: "Alle prijzen samen: €30. Drie boeken. €30 ÷ 3 = €10 per boek gemiddeld.",
+            nogSimpeler: "€10",
+          },
+        },
+      },
+      {
+        q: "Een voetbalteam scoort in **4 wedstrijden**: 2, 5, 3 en 6 doelpunten. Hoeveel doelpunten is dat **gemiddeld** per wedstrijd?",
+        options: ["4", "16", "5", "6"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat zijn alle doelpunten samen. Over hoeveel wedstrijden moet je dat verdelen?",
+          null,
+          "Dat is de beste wedstrijd, niet het gemiddelde.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Som",
+              tekst: "2 + 5 + 3 + 6 = **16** doelpunten.",
+            },
+            {
+              titel: "Aantal",
+              tekst: "**4** wedstrijden.",
+            },
+            {
+              titel: "Delen",
+              tekst: "16 ÷ 4 = **4** doelpunten per wedstrijd.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "som",
+              uitleg: "Alles bij elkaar opgeteld.",
+            },
+            {
+              woord: "aantal",
+              uitleg: "Hoeveel getallen je hebt.",
+            },
+          ],
+          theorie: "Gemiddelde = som ÷ aantal.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Check: 4 ligt tussen 2 en 6. Dat klopt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Per wedstrijd",
+              uitleg: "'Gemiddeld per wedstrijd' betekent: alles samen gedeeld door het aantal wedstrijden.",
+            },
+          ],
+          niveaus: {
+            basis: "(2 + 5 + 3 + 6) ÷ 4 = 16 ÷ 4 = 4.",
+            simpeler: "Alle doelpunten samen: 16. Er waren 4 wedstrijden. 16 ÷ 4 = 4.",
+            nogSimpeler: "4",
+          },
+        },
+      },
+      {
+        q: "Vijf kinderen lezen elk een stukje voor. Ze lezen **6, 9, 13, 8 en 14** bladzijden. Hoeveel bladzijden is dat **gemiddeld**?",
+        options: ["10", "50", "9", "12,5"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is de som. Je bent er nog niet.",
+          "Dat is het middelste getal als je ze op volgorde zet. Het gemiddelde reken je anders uit.",
+          "Hoeveel kinderen zijn het? Deel je door het goede aantal?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Som",
+              tekst: "6 + 9 + 13 + 8 + 14 = **50**.",
+            },
+            {
+              titel: "Aantal",
+              tekst: "**5** kinderen.",
+            },
+            {
+              titel: "Delen",
+              tekst: "50 ÷ 5 = **10**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "som",
+              uitleg: "Alles bij elkaar opgeteld.",
+            },
+            {
+              woord: "aantal",
+              uitleg: "Hoeveel getallen je hebt.",
+            },
+          ],
+          theorie: "Gemiddelde = som ÷ aantal. Tel goed hoeveel getallen er zijn.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Check: 10 ligt tussen 6 en 14. Dat klopt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Goed tellen",
+              uitleg: "Er staan 5 getallen. Deel dus door 5, niet door 4.",
+            },
+          ],
+          niveaus: {
+            basis: "(6 + 9 + 13 + 8 + 14) ÷ 5 = 50 ÷ 5 = 10.",
+            simpeler: "Tel op: 50. Er zijn 5 kinderen. 50 ÷ 5 = 10.",
+            nogSimpeler: "10",
+          },
+        },
+      },
+      {
+        q: "Drie vriendinnen sparen per week **€3, €4 en €8**. Hoeveel sparen ze **gemiddeld**?",
+        options: ["€5", "€15", "€4", "€7,50"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het totaal van de drie. Wat doe je daarna?",
+          null,
+          "Door hoeveel heb je gedeeld? Tel de vriendinnen nog eens.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Som",
+              tekst: "€3 + €4 + €8 = **€15**.",
+            },
+            {
+              titel: "Aantal",
+              tekst: "**3** vriendinnen.",
+            },
+            {
+              titel: "Delen",
+              tekst: "€15 ÷ 3 = **€5**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "som",
+              uitleg: "Alles bij elkaar opgeteld.",
+            },
+            {
+              woord: "aantal",
+              uitleg: "Hoeveel getallen je hebt.",
+            },
+          ],
+          theorie: "Gemiddelde = som ÷ aantal.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Check: €5 ligt tussen €3 en €8. Dat klopt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Door het aantal",
+              uitleg: "Deel door het aantal personen: 3 vriendinnen, dus ÷ 3.",
+            },
+          ],
+          niveaus: {
+            basis: "(€3 + €4 + €8) ÷ 3 = €15 ÷ 3 = €5.",
+            simpeler: "Samen sparen ze €15. Het zijn 3 vriendinnen. €15 ÷ 3 = €5 per persoon.",
+            nogSimpeler: "€5",
+          },
+        },
+      },
+      {
+        q: "Tim haalt **5 cijfers**: 5, 7, 8, 8 en 9. Wat is zijn **gemiddelde** cijfer?",
+        options: ["7,4", "8", "37", "9,25"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat cijfer komt het vaakst voor. Het gemiddelde reken je uit met som ÷ aantal.",
+          "Dat is de som. Je moet nog delen.",
+          "Door hoeveel heb je gedeeld? Tel de cijfers nog eens.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Som",
+              tekst: "5 + 7 + 8 + 8 + 9 = **37**.",
+            },
+            {
+              titel: "Aantal",
+              tekst: "**5** cijfers.",
+            },
+            {
+              titel: "Delen",
+              tekst: "37 ÷ 5 = **7,4**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "som",
+              uitleg: "Alles bij elkaar opgeteld.",
+            },
+            {
+              woord: "aantal",
+              uitleg: "Hoeveel getallen je hebt.",
+            },
+          ],
+          theorie: "Gemiddelde = som ÷ aantal. Het antwoord hoeft geen heel getal te zijn.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "35 ÷ 5 = 7, en er blijft 2 over. 2 ÷ 5 = 0,4. Samen 7,4.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Kommagetal",
+              uitleg: "Een gemiddelde is een berekening, dus het kan een kommagetal zijn, zoals 7,4.",
+            },
+          ],
+          niveaus: {
+            basis: "(5 + 7 + 8 + 8 + 9) ÷ 5 = 37 ÷ 5 = 7,4.",
+            simpeler: "Tel op: 37. Er zijn 5 cijfers. 37 ÷ 5 = 7,4. Gemiddeld een 7,4.",
+            nogSimpeler: "7,4",
+          },
+        },
+      },
     ],
   },
 
@@ -302,6 +733,280 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Bij hele getallen werkt gemiddelde gewoon.", "Bij decimale getallen werkt gemiddelde ook.", "Bij negatieve getallen werkt gemiddelde ook."],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Acht kinderen vertellen hoeveel huisdieren ze hebben: **1, 0, 2, 1, 3, 1, 0, 2**. Wat is de **modus**?",
+        options: ["1", "0", "2", "3"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Tel hoe vaak 0 voorkomt. Komt een ander getal vaker voor?",
+          null,
+          "3 is het grootste getal. Is de modus het grootste getal?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel hoe vaak",
+              tekst: "0: 2×. **1: 3×**. 2: 2×. 3: 1×.",
+            },
+            {
+              titel: "Modus = vaakst",
+              tekst: "De 1 komt het vaakst voor. Modus = **1**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "modus",
+              uitleg: "Het getal (of de keuze) dat het vaakst voorkomt.",
+            },
+          ],
+          theorie: "Modus = vaakst, niet het grootste getal.",
+          voorbeelden: [
+            {
+              type: "streepjes",
+              tekst: "Zet bij elk getal een streepje: 0 ||, 1 |||, 2 ||, 3 |. De 1 heeft de meeste streepjes.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Vaakst ≠ hoogst",
+              uitleg: "De modus is het getal dat het vaakst voorkomt, niet het grootste.",
+            },
+          ],
+          niveaus: {
+            basis: "1 (komt 3× voor).",
+            simpeler: "Tel: de 1 komt 3× voor, de 0 en de 2 maar 2×, de 3 maar 1×. Modus = 1.",
+            nogSimpeler: "1",
+          },
+        },
+      },
+      {
+        q: "Wat is de **modus** van: **2, 4, 4, 6, 8, 8, 9**?",
+        options: ["4 en 8", "6 en 9", "8", "Geen modus"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoe vaak komen 6 en 9 voor? Kijk welke getallen dubbel staan.",
+          "Tel goed: komt er nog een getal net zo vaak voor als 8?",
+          "Er staan wel getallen dubbel. Dan is er ook een modus.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel hoe vaak",
+              tekst: "2: 1×. **4: 2×**. 6: 1×. **8: 2×**. 9: 1×.",
+            },
+            {
+              titel: "Twee winnaars",
+              tekst: "4 en 8 komen allebei 2× voor. Dan zijn er **2 modussen**: 4 en 8.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "modus",
+              uitleg: "Het getal (of de keuze) dat het vaakst voorkomt.",
+            },
+          ],
+          theorie: "Komen twee getallen even vaak voor (en het vaakst)? Dan zijn ze allebei de modus.",
+          voorbeelden: [
+            {
+              type: "streepjes",
+              tekst: "4 || en 8 || hebben de meeste streepjes, en evenveel.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Speciale gevallen",
+              uitleg: "Soms zijn er 2 modussen. Is elk getal maar 1×? Dan is er geen modus.",
+            },
+          ],
+          niveaus: {
+            basis: "4 en 8 (allebei 2×).",
+            simpeler: "4 komt 2× voor en 8 ook 2×. De rest maar 1×. Dus twee modussen: 4 en 8.",
+            nogSimpeler: "4 en 8",
+          },
+        },
+      },
+      {
+        q: "Kinderen kiezen hun lievelingsfruit: **appel, banaan, appel, peer, banaan, appel, kiwi**. Wat is de **modus**?",
+        options: ["Appel", "Banaan", "Peer", "Kiwi"],
+        answer: 0,
+        wrongHints: [null, "Tel hoe vaak banaan voorkomt. Is er fruit dat vaker gekozen is?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel hoe vaak",
+              tekst: "Appel 3×. Banaan 2×. Peer 1×. Kiwi 1×.",
+            },
+            {
+              titel: "Modus = vaakst",
+              tekst: "Appel is het vaakst gekozen. Modus = **appel**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "modus",
+              uitleg: "Het getal (of de keuze) dat het vaakst voorkomt.",
+            },
+          ],
+          theorie: "Bij woorden en keuzes kun je geen gemiddelde uitrekenen, maar wel een modus.",
+          voorbeelden: [
+            {
+              type: "streepjes",
+              tekst: "Appel |||, banaan ||, peer |, kiwi |.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Categorieën",
+              uitleg: "Fruit, kleuren en dieren zijn categorieën. Daarbij gebruik je de modus.",
+            },
+          ],
+          niveaus: {
+            basis: "Appel (3× gekozen).",
+            simpeler: "Tel per fruit: appel 3, banaan 2, peer 1, kiwi 1. Appel wint. Modus = appel.",
+            nogSimpeler: "Appel",
+          },
+        },
+      },
+      {
+        q: "Je gooit **10 keer** met een dobbelsteen: **6, 2, 3, 2, 6, 2, 5, 1, 2, 4**. Wat is de **modus**?",
+        options: ["2", "6", "4", "1"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "6 is het hoogste getal en komt 2× voor. Tel ook hoe vaak de andere getallen voorkomen.",
+          null,
+          "Tel hoe vaak 1 voorkomt.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel hoe vaak",
+              tekst: "1: 1×. **2: 4×**. 3: 1×. 4: 1×. 5: 1×. 6: 2×.",
+            },
+            {
+              titel: "Modus = vaakst",
+              tekst: "De 2 komt het vaakst voor. Modus = **2**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "modus",
+              uitleg: "Het getal (of de keuze) dat het vaakst voorkomt.",
+            },
+          ],
+          theorie: "Modus ≠ hoogste getal. De 6 is het hoogst, maar de 2 komt het vaakst voor.",
+          voorbeelden: [
+            {
+              type: "streepjes",
+              tekst: "1 |, 2 ||||, 3 |, 4 |, 5 |, 6 ||.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Vaakst ≠ hoogst",
+              uitleg: "Kijk niet naar hoe groot een getal is, maar naar hoe vaak het voorkomt.",
+            },
+          ],
+          niveaus: {
+            basis: "2 (komt 4× voor).",
+            simpeler: "Tel: de 2 komt 4× voor, de 6 maar 2×, de rest 1×. Modus = 2.",
+            nogSimpeler: "2",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een schoenenwinkel verkoopt op zaterdag deze maten: **36, 38, 37, 38, 39, 36, 38, 40**. Welke maat is de **modus**?",
+        options: ["38", "36", "40", "37"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Tel hoe vaak 36 voorkomt. Is er een maat die nog vaker voorkomt?",
+          "40 is de grootste maat. Is de modus altijd het grootste getal?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel hoe vaak",
+              tekst: "36: 2×. 37: 1×. 38: 3×. 39: 1×. 40: 1×.",
+            },
+            {
+              titel: "Modus = vaakst",
+              tekst: "Maat 38 komt het vaakst voor. De modus is dus 38.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "modus",
+              uitleg: "Het getal dat het vaakst voorkomt in een rijtje.",
+            },
+          ],
+          theorie: "Modus ≠ hoogste of laagste. Modus = vaakste.",
+          voorbeelden: [
+            {
+              type: "streepjes",
+              tekst: "Zet een streepje per verkochte maat. De maat met de meeste streepjes is de modus.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Handig bij schoenmaten",
+              uitleg: "Een winkel wil weten welke maat het meest verkocht wordt. Daarvoor gebruik je de modus.",
+            },
+          ],
+          niveaus: {
+            basis: "38 (komt 3× voor).",
+            simpeler: "Tel: 38 komt 3× voor, 36 maar 2×, de rest 1×. Modus = 38.",
+            nogSimpeler: "38",
+          },
+        },
+      },
+      {
+        q: "Vijf kinderen gooien elk één keer met een dobbelsteen: **4, 6, 1, 5, 3**. Wat is de **modus**?",
+        options: ["Geen modus", "6", "4", "1 en 3"],
+        answer: 0,
+        wrongHints: [null, "6 is het hoogste getal. Komt 6 vaker voor dan de andere getallen?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tel hoe vaak",
+              tekst: "4: 1×. 6: 1×. 1: 1×. 5: 1×. 3: 1×. Elk getal komt maar één keer voor.",
+            },
+            {
+              titel: "Speciaal geval",
+              tekst: "Komt elk getal maar 1× voor, dan is er geen modus.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "modus",
+              uitleg: "Het getal dat het vaakst voorkomt in een rijtje.",
+            },
+          ],
+          theorie: "Er is alleen een modus als een getal vaker voorkomt dan andere getallen.",
+          voorbeelden: [
+            {
+              type: "streepjes",
+              tekst: "Bij 2, 4, 4, 6 komt 4 twee keer voor. Dan is de modus 4.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Speciale gevallen",
+              uitleg: "Twee getallen even vaak = twee modussen. Alles maar 1× = geen modus.",
+            },
+          ],
+          niveaus: {
+            basis: "Geen modus (alles komt 1× voor).",
+            simpeler: "Elk getal staat er maar één keer. Geen enkel getal komt het vaakst voor. Dus: geen modus.",
+            nogSimpeler: "Geen",
+          },
+        },
+      },
     ],
   },
 
@@ -366,6 +1071,299 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Gemiddelde is verlaagd door 1 uitschieter (2). Mediaan filtert dat eruit.", "Juist die 2 is de uitschieter — die zegt weinig over de rest van de klas.", "Wél — een uitschieter beïnvloedt gemiddelde maar niet mediaan."],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is de **mediaan** van: **15, 9, 24, 11, 18**?",
+        options: ["15", "24", "15,4", "11"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat getal staat in het midden van de rij zoals hij nu is. Heb je de getallen eerst op volgorde gezet?",
+          "Dat is het gemiddelde (som ÷ aantal). De mediaan vind je anders.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Op volgorde",
+              tekst: "9, 11, **15**, 18, 24.",
+            },
+            {
+              titel: "Middelste",
+              tekst: "5 getallen = oneven. Het middelste (plek 3) is **15**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "mediaan",
+              uitleg: "Het middelste getal als je alles op volgorde zet.",
+            },
+          ],
+          theorie: "Altijd eerst op volgorde zetten, dan pas het middelste getal pakken.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Zonder sorteren zou je 24 pakken. Dat is fout: 24 is juist het grootste getal.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Mediaan ≠ gemiddelde",
+              uitleg: "Het gemiddelde is 77 ÷ 5 = 15,4. De mediaan is 15. Dat zijn twee verschillende dingen.",
+            },
+          ],
+          niveaus: {
+            basis: "Op volgorde: 9, 11, 15, 18, 24. Mediaan = 15.",
+            simpeler: "Zet de getallen van klein naar groot: 9, 11, 15, 18, 24. Het middelste getal is 15.",
+            nogSimpeler: "15",
+          },
+        },
+      },
+      {
+        q: "Zes plantjes zijn **12, 7, 15, 9, 20 en 10 cm** hoog. Wat is de **mediaan**?",
+        options: ["11 cm", "10 cm", "12 cm", "22 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is één van de twee middelste. Wat doe je bij een even aantal met die twee?",
+          "Heb je bij een even aantal het gemiddelde van de 2 middelste genomen?",
+          "Je hebt de twee middelste opgeteld. Wat moet er daarna nog gebeuren?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Op volgorde",
+              tekst: "7, 9, **10**, **12**, 15, 20.",
+            },
+            {
+              titel: "Even aantal",
+              tekst: "6 getallen = even. De 2 middelste zijn 10 en 12. (10 + 12) ÷ 2 = **11**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "mediaan",
+              uitleg: "Het middelste getal als je alles op volgorde zet.",
+            },
+          ],
+          theorie: "Bij een even aantal: neem het gemiddelde van de 2 middelste getallen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "10 + 12 = 22. 22 ÷ 2 = 11. Mediaan = 11 cm.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Sorteren",
+              uitleg: "Altijd eerst op volgorde zetten! Anders pak je de verkeerde middelste getallen.",
+            },
+          ],
+          niveaus: {
+            basis: "Op volgorde: 7, 9, 10, 12, 15, 20. (10 + 12) ÷ 2 = 11 cm.",
+            simpeler: "Zet ze op volgorde. De twee middelste zijn 10 en 12. Precies daartussen ligt 11. Mediaan = 11 cm.",
+            nogSimpeler: "11 cm",
+          },
+        },
+      },
+      {
+        q: "Wat is de **mediaan** van: **9, 2, 6, 3**?",
+        options: ["4,5", "5", "4", "3"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het gemiddelde van alle vier de getallen. De mediaan kijkt alleen naar het midden.",
+          "Heb je de getallen eerst op volgorde gezet voordat je de middelste pakte?",
+          "Dat is één van de twee middelste. Wat doe je bij een even aantal?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Op volgorde",
+              tekst: "2, **3**, **6**, 9.",
+            },
+            {
+              titel: "Even aantal",
+              tekst: "4 getallen = even. De 2 middelste zijn 3 en 6. (3 + 6) ÷ 2 = **4,5**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "mediaan",
+              uitleg: "Het middelste getal als je alles op volgorde zet.",
+            },
+          ],
+          theorie: "Bij een even aantal: gemiddelde van de 2 middelste. Dat kan een kommagetal zijn.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "3 + 6 = 9. 9 ÷ 2 = 4,5. Mediaan = 4,5.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Sorteren",
+              uitleg: "Eerst op volgorde zetten. Zonder sorteren zou je 2 en 6 pakken, en dat is fout.",
+            },
+          ],
+          niveaus: {
+            basis: "Op volgorde: 2, 3, 6, 9. (3 + 6) ÷ 2 = 4,5.",
+            simpeler: "Zet op volgorde: 2, 3, 6, 9. De middelste twee zijn 3 en 6. Het getal precies daartussen is 4,5.",
+            nogSimpeler: "4,5",
+          },
+        },
+      },
+      {
+        q: "Wat doe je **als eerste** als je de **mediaan** zoekt?",
+        options: [
+          "De getallen op volgorde zetten",
+          "Alle getallen bij elkaar optellen",
+          "Tellen welk getal het vaakst voorkomt",
+          "Delen door het aantal getallen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Optellen doe je bij het gemiddelde. Wat is de eerste stap bij de mediaan?",
+          "Dat doe je bij de modus, niet bij de mediaan.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1",
+              tekst: "Zet de getallen op **volgorde**, van klein naar groot.",
+            },
+            {
+              titel: "Stap 2",
+              tekst: "Pak het **middelste** getal.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "mediaan",
+              uitleg: "Het middelste getal als je alles op volgorde zet.",
+            },
+          ],
+          theorie: "Mediaan = middelste getal na sorteren. Zonder sorteren klopt het niet.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "3, 8, 5 → op volgorde 3, 5, 8 → mediaan = 5.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Drie begrippen",
+              uitleg: "Gemiddelde: optellen en delen. Modus: tellen wat het vaakst is. Mediaan: sorteren en het midden pakken.",
+            },
+          ],
+          niveaus: {
+            basis: "Eerst op volgorde zetten.",
+            simpeler: "Bij de mediaan zet je de getallen eerst van klein naar groot. Daarna pak je het middelste.",
+            nogSimpeler: "Op volgorde zetten",
+          },
+        },
+      },
+      {
+        q: "Bij welk aantal getallen neem je voor de mediaan het **gemiddelde van de 2 middelste**?",
+        options: ["Bij 6 getallen", "Bij 5 getallen", "Bij 7 getallen", "Bij 3 getallen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is 5 een even of een oneven aantal?",
+          null,
+          "Bij een oneven aantal is er precies één middelste getal. Is 3 even of oneven?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Even of oneven?",
+              tekst: "Bij een **oneven** aantal (3, 5, 7) is er één middelste getal.",
+            },
+            {
+              titel: "Even aantal",
+              tekst: "Bij een **even** aantal (2, 4, 6) zijn er 2 middelste. Daar neem je het gemiddelde van.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "mediaan",
+              uitleg: "Het middelste getal als je alles op volgorde zet.",
+            },
+            {
+              woord: "even",
+              uitleg: "Een getal dat je eerlijk in 2 groepjes kunt verdelen: 2, 4, 6, 8, ...",
+            },
+          ],
+          theorie: "Even aantal → gemiddelde van de 2 middelste. Oneven aantal → het middelste getal.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "6 getallen: plek 3 en plek 4 zijn de middelste. Bij 5 getallen is plek 3 het middelste.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Toets-truc",
+              uitleg: "Kijk eerst of het aantal even of oneven is.",
+            },
+          ],
+          niveaus: {
+            basis: "Bij 6 getallen (even aantal).",
+            simpeler: "6 is even. Dan zijn er 2 getallen in het midden, en neem je daar het gemiddelde van.",
+            nogSimpeler: "Bij 6",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Zeven kinderen rennen 60 meter. Hun tijden in seconden zijn: **11, 9, 14, 10, 12, 9, 13**. Wat is de **mediaan**?",
+        options: ["11 seconden", "10 seconden", "9 seconden", "14 seconden"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat getal staat in het midden van de rij zoals hij er nu staat. Heb je de tijden eerst op volgorde gezet?",
+          "Dat getal komt het vaakst voor. Hoe heet dat begrip?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Op volgorde",
+              tekst: "9, 9, 10, 11, 12, 13, 14.",
+            },
+            {
+              titel: "Middelste",
+              tekst: "7 getallen = oneven. Het middelste is het 4e getal: 11.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "mediaan",
+              uitleg: "Het middelste getal als je alles op volgorde zet.",
+            },
+          ],
+          theorie: "Bij een oneven aantal is er precies één middelste getal.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "9, 9, 10, **11**, 12, 13, 14 → 3 getallen links, 3 getallen rechts.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Sorteren",
+              uitleg: "Altijd eerst op volgorde zetten!",
+            },
+          ],
+          niveaus: {
+            basis: "11 seconden.",
+            simpeler: "Op volgorde: 9, 9, 10, 11, 12, 13, 14. Het middelste getal is 11.",
+            nogSimpeler: "11",
+          },
+        },
+      },
     ],
   },
 
@@ -399,6 +1397,51 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Probeer 'gemiddelde kleur' uit te rekenen — werkt dat?", "Mediaan werkt niet — kleuren hebben geen volgorde.", "Eén van deze drie werkt wél bij kleuren."],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is een **nadeel** van de **mediaan**?",
+        options: [
+          "Je moet de getallen eerst op volgorde zetten",
+          "Hij werkt alleen bij kleuren en woorden",
+          "Eén uitschieter verandert hem heel veel",
+          "Hij gebruikt nooit het middelste getal",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Bij welk begrip gebruik je kleuren en woorden?",
+          "Is de mediaan juist gevoelig of juist niet zo gevoelig voor uitschieters?",
+          null,
+        ],
+      },
+      {
+        q: "Wat is een **nadeel** van de **modus**?",
+        options: [
+          "Hij zegt niets over hoe verspreid de groep is",
+          "Hij werkt niet bij kleuren en woorden",
+          "Je moet altijd delen door het aantal",
+          "Je moet de getallen eerst optellen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Juist bij kleuren en woorden is de modus handig. Wat is dan het nadeel?",
+          "Delen doe je bij een ander begrip.",
+          null,
+        ],
+      },
+      {
+        q: "In een vraag staat: '*Wat is de **middelste** lengte van de klas?*' Welk begrip heb je nodig?",
+        options: ["Mediaan", "Gemiddelde", "Modus", "Som"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Bij het gemiddelde tel je op en deel je. Vraagt de vraag daarom?",
+          "Dat begrip hoort bij 'meest' of 'vaakst'.",
+          null,
+        ],
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
     ],
   },
 

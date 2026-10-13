@@ -65,6 +65,371 @@ const steps = [
         answer: 0,
         wrongHints: [null,"Te weinig — schat elk bedrag af op hele euro's en tel op.","Te veel — controleer schatting.","Veel te veel."],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat betekent **schatten**?",
+        options: [
+          "Een antwoord bijna goed geven, niet precies",
+          "Een antwoord tot op de cent precies uitrekenen",
+          "Een antwoord opschrijven zonder na te denken",
+          "Een getal altijd naar beneden maken",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Bij schatten hoeft het juist níét precies.",
+          "Bij schatten denk je wel na: je rekent met makkelijke getallen.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat is schatten?",
+              tekst: "**Schatten** = een getal **bijna goed** opgeven. Niet helemaal precies, maar wel in de buurt.",
+            },
+            {
+              titel: "Hoe doe je dat?",
+              tekst: "Je rondt de getallen af naar makkelijke getallen en rekent daarmee. Soms naar boven, soms naar beneden.",
+            },
+            {
+              titel: "Waarom?",
+              tekst: "Zo kun je snel checken of een antwoord klopt qua grootte.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schatten",
+              uitleg: "Snel een ongeveer-antwoord berekenen door eerst af te ronden.",
+            },
+            {
+              woord: "precies",
+              uitleg: "Helemaal exact, zonder afronden.",
+            },
+          ],
+          theorie: "Schatten is geen raden. Je rekent wél, maar met ronde getallen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "31 + 48 → 30 + 50 = 80. Echt: 79.",
+            },
+            {
+              type: "stap",
+              tekst: "€ 3,90 + € 2,10 → € 4 + € 2 = € 6.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Onthoud",
+              uitleg: "Schatten = ongeveer. Uitrekenen = precies.",
+            },
+          ],
+          niveaus: {
+            basis: "Schatten = bijna goed, niet precies.",
+            simpeler: "Je rekent met ronde getallen en krijgt een ongeveer-antwoord.",
+            nogSimpeler: "Schatten = ongeveer.",
+          },
+        },
+      },
+      {
+        q: "Sam rekent **213 + 386** uit. Hij schat eerst: 200 + 400 = 600. Welk antwoord van Sam **kan kloppen**?",
+        options: ["599", "5990", "59", "899"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Vergelijk met de schatting 600: is dit ongeveer even groot?",
+          null,
+          "Dat is 300 meer dan de schatting — dat is te ver weg.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: kijk naar de schatting",
+              tekst: "Sams schatting is **600**. Het echte antwoord moet daar dicht bij liggen.",
+            },
+            {
+              titel: "Stap 2: vergelijk elk antwoord",
+              tekst: "599 ligt vlak bij 600. 5990 is bijna tien keer zo groot. 59 is veel te klein. 899 is 300 te veel.",
+            },
+            {
+              titel: "Check",
+              tekst: "Echt: 213 + 386 = **599**. De schatting klopte.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schatten",
+              uitleg: "Snel een ongeveer-antwoord berekenen door eerst af te ronden.",
+            },
+            {
+              woord: "check",
+              uitleg: "Controleren of je antwoord ongeveer klopt.",
+            },
+          ],
+          theorie: "Toets-truc: schat na elke som. Ligt je antwoord ver van je schatting? Dan heb je ergens een fout gemaakt.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Schatting 400, antwoord 4100 → fout.",
+            },
+            {
+              type: "stap",
+              tekst: "Schatting 700, antwoord 706 → klopt qua grootte.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Antwoord en schatting moeten dicht bij elkaar liggen.",
+            },
+          ],
+          niveaus: {
+            basis: "599 ligt dicht bij 600.",
+            simpeler: "Schatting 600. Alleen 599 ligt daar dichtbij.",
+            nogSimpeler: "599 ≈ 600.",
+          },
+        },
+      },
+      {
+        q: "**Schat 4 × 49**. Welk antwoord komt het dichtst bij?",
+        options: ["200", "160", "250", "100"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — 49 is bijna 50, niet bijna 40.",
+          "Te veel — reken met 50 en neem dat 4 keer.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: rond 49 af op 10",
+              tekst: "49 → **50** (9 = omhoog).",
+            },
+            {
+              titel: "Stap 2: reken met het ronde getal",
+              tekst: "4 × 50 = **200**.",
+            },
+            {
+              titel: "Check",
+              tekst: "Echt: 4 × 49 = 196. Dat ligt dicht bij 200.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schatten",
+              uitleg: "Snel een ongeveer-antwoord berekenen door eerst af te ronden.",
+            },
+            {
+              woord: "afronden",
+              uitleg: "Een getal vereenvoudigen naar een 'rond' getal.",
+            },
+          ],
+          theorie: "Bij keersommen: rond het lastige getal af op een rond getal en reken daarmee.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "3 × 51 → 3 × 50 = 150. Echt: 153.",
+            },
+            {
+              type: "stap",
+              tekst: "6 × 19 → 6 × 20 = 120. Echt: 114.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "0, 1, 2, 3, 4 → omlaag. 5, 6, 7, 8, 9 → omhoog.",
+            },
+          ],
+          niveaus: {
+            basis: "4 × 50 = 200.",
+            simpeler: "49 is bijna 50. 4 × 50 = 200.",
+            nogSimpeler: "Ongeveer 200.",
+          },
+        },
+      },
+      {
+        q: "Je koopt een boek van **€ 9,95** en een pen van **€ 2,10**. Hoeveel betaal je **ongeveer**?",
+        options: ["€ 12", "€ 11", "€ 13", "€ 21"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — € 9,95 is bijna € 10.",
+          null,
+          "Te veel — rond elk bedrag af op hele euro's en tel op.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: rond af op hele euro's",
+              tekst: "€ 9,95 → **€ 10**. € 2,10 → **€ 2**.",
+            },
+            {
+              titel: "Stap 2: tel op",
+              tekst: "€ 10 + € 2 = **€ 12**.",
+            },
+            {
+              titel: "Check",
+              tekst: "Echt: € 9,95 + € 2,10 = € 12,05. Dat is bijna € 12.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schatten",
+              uitleg: "Snel een ongeveer-antwoord berekenen door eerst af te ronden.",
+            },
+            {
+              woord: "hele euro's",
+              uitleg: "Bedragen zonder centen, zoals € 10 of € 2.",
+            },
+          ],
+          theorie: "In de winkel: rond prijzen af op hele euro's. Dan kun je in je hoofd snel optellen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "€ 4,90 + € 1,20 → € 5 + € 1 = € 6.",
+            },
+            {
+              type: "stap",
+              tekst: "€ 7,05 + € 2,95 → € 7 + € 3 = € 10.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Kijk naar de centen: 50 cent of meer → omhoog, minder → omlaag.",
+            },
+          ],
+          niveaus: {
+            basis: "€ 10 + € 2 = € 12.",
+            simpeler: "€ 9,95 ≈ € 10. € 2,10 ≈ € 2. Samen € 12.",
+            nogSimpeler: "Ongeveer € 12.",
+          },
+        },
+      },
+      {
+        q: "Lisa rekent **61 + 29** en krijgt **900**. Wat laat een schatting zien?",
+        options: [
+          "Fout, het is ongeveer 90",
+          "Goed, 900 klopt precies",
+          "Fout, het is ongeveer 9",
+          "Fout, het is ongeveer 30",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Schat eerst zelf: rond 61 en 29 af op tientallen en tel op.",
+          null,
+          "Je moet beide getallen gebruiken, niet alleen 29.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: schat zelf",
+              tekst: "61 → **60**. 29 → **30**. 60 + 30 = **90**.",
+            },
+            {
+              titel: "Stap 2: vergelijk",
+              tekst: "Lisa heeft 900. Dat is tien keer zo groot als de schatting 90. Dat klopt dus niet.",
+            },
+            {
+              titel: "Check",
+              tekst: "Echt: 61 + 29 = 90. Lisa heeft per ongeluk een 0 te veel geschreven.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schatten",
+              uitleg: "Snel een ongeveer-antwoord berekenen door eerst af te ronden.",
+            },
+            {
+              woord: "check",
+              uitleg: "Controleren of je antwoord ongeveer klopt.",
+            },
+          ],
+          theorie: "Een schatting helpt je om fouten te vinden. Is je antwoord veel groter of kleiner dan je schatting? Reken dan opnieuw.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Schatting 50, antwoord 500 → fout.",
+            },
+            {
+              type: "stap",
+              tekst: "Schatting 80, antwoord 79 → klopt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "0, 1, 2, 3, 4 → omlaag. 5, 6, 7, 8, 9 → omhoog.",
+            },
+          ],
+          niveaus: {
+            basis: "Schatting 90, niet 900.",
+            simpeler: "60 + 30 = 90. 900 is veel te veel.",
+            nogSimpeler: "Ongeveer 90.",
+          },
+        },
+      },
+      {
+        q: "**Schat 18 + 23 + 31**. Welk antwoord komt het dichtst bij?",
+        options: ["70", "60", "80", "90"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — 18 is bijna 20, niet bijna 10.",
+          null,
+          "Te veel — rond elk getal af op tientallen en tel ze alle drie op.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: rond elk getal af op 10",
+              tekst: "18 → **20**. 23 → **20**. 31 → **30**.",
+            },
+            {
+              titel: "Stap 2: tel op",
+              tekst: "20 + 20 + 30 = **70**.",
+            },
+            {
+              titel: "Check",
+              tekst: "Echt: 18 + 23 + 31 = 72. Dat ligt dicht bij 70.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schatten",
+              uitleg: "Snel een ongeveer-antwoord berekenen door eerst af te ronden.",
+            },
+            {
+              woord: "afronden",
+              uitleg: "Een getal vereenvoudigen naar een 'rond' getal.",
+            },
+          ],
+          theorie: "Bij drie of meer getallen: rond ze allemaal af en tel de ronde getallen op.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "12 + 39 + 21 → 10 + 40 + 20 = 70. Echt: 72.",
+            },
+            {
+              type: "stap",
+              tekst: "27 + 14 + 48 → 30 + 10 + 50 = 90. Echt: 89.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "0, 1, 2, 3, 4 → omlaag. 5, 6, 7, 8, 9 → omhoog.",
+            },
+          ],
+          niveaus: {
+            basis: "20 + 20 + 30 = 70.",
+            simpeler: "18 → 20, 23 → 20, 31 → 30. Samen 70.",
+            nogSimpeler: "Ongeveer 70.",
+          },
+        },
+      },
     ],
   },
 
@@ -111,6 +476,410 @@ const steps = [
         options: ["5000","4000","4500","5500"],
         answer: 0,
         wrongHints: [null,"5 in honderden → naar boven (regel).","Niet afgerond.","Te veel — bij afronden op 1000 eindigt het getal op 000."],
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**Rond af op 10: 83**",
+        options: ["80", "90", "85", "100"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk naar de eenheden: is 3 klein of groot?",
+          "Geen tussen-getal — kies een getal dat op 0 eindigt.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: welk cijfer telt?",
+              tekst: "Bij afronden op **10** kijk je naar de **eenheden**: de 3 in 83.",
+            },
+            {
+              titel: "Stap 2: regel toepassen",
+              tekst: "3 is 0, 1, 2, 3 of 4 → naar **beneden**. 83 → **80**.",
+            },
+            {
+              titel: "Klopt het?",
+              tekst: "83 ligt tussen 80 en 90, en dichter bij 80.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "afronden op 10",
+              uitleg: "Maak een heel tiental (70, 80, 90, ...).",
+            },
+            {
+              woord: "5-regel",
+              uitleg: "5, 6, 7, 8, 9 → omhoog. 0, 1, 2, 3, 4 → omlaag.",
+            },
+          ],
+          theorie: "Op 10 afronden: kijk naar de eenheden.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "23 → 20.",
+            },
+            {
+              type: "stap",
+              tekst: "27 → 30.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Op 10? Kijk naar het laatste cijfer.",
+            },
+          ],
+          niveaus: {
+            basis: "3 = omlaag. 83 → 80.",
+            simpeler: "Laatste cijfer 3 is minder dan 5 → omlaag.",
+            nogSimpeler: "83 → 80.",
+          },
+        },
+      },
+      {
+        q: "**Rond af op 10: 65**",
+        options: ["70", "60", "65", "75"],
+        answer: 0,
+        wrongHints: [null, "Wat zegt de regel bij een 5?", "Niet afgerond.", "Dat eindigt niet op 0."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: welk cijfer telt?",
+              tekst: "Bij afronden op **10** kijk je naar de **eenheden**: de 5 in 65.",
+            },
+            {
+              titel: "Stap 2: regel toepassen",
+              tekst: "Bij een **5** ga je naar **boven**. 65 → **70**.",
+            },
+            {
+              titel: "Let op",
+              tekst: "65 ligt precies in het midden van 60 en 70. Daarom is er een vaste regel: 5 = omhoog.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "afronden op 10",
+              uitleg: "Maak een heel tiental (60, 70, 80, ...).",
+            },
+            {
+              woord: "5-regel",
+              uitleg: "5, 6, 7, 8, 9 → omhoog. 0, 1, 2, 3, 4 → omlaag.",
+            },
+          ],
+          theorie: "Bij precies in het midden (een 5) rond je altijd naar boven af.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "25 → 30.",
+            },
+            {
+              type: "stap",
+              tekst: "45 → 50.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Een 5 gaat altijd omhoog.",
+            },
+          ],
+          niveaus: {
+            basis: "5 = omhoog. 65 → 70.",
+            simpeler: "Laatste cijfer is 5 → naar boven.",
+            nogSimpeler: "65 → 70.",
+          },
+        },
+      },
+      {
+        q: "**Rond af op 100: 641**",
+        options: ["600", "700", "640", "650"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk naar de tientallen: is 4 klein of groot?",
+          "Dat is afgerond op 10, niet op 100.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: welk cijfer telt?",
+              tekst: "Bij afronden op **100** kijk je naar de **tientallen**: de 4 in 641.",
+            },
+            {
+              titel: "Stap 2: regel toepassen",
+              tekst: "4 → naar **beneden**. 641 → **600**.",
+            },
+            {
+              titel: "Klopt het?",
+              tekst: "641 ligt tussen 600 en 700, en dichter bij 600.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "afronden op 100",
+              uitleg: "Maak een heel honderdtal (500, 600, 700, ...).",
+            },
+            {
+              woord: "5-regel",
+              uitleg: "5, 6, 7, 8, 9 → omhoog. 0, 1, 2, 3, 4 → omlaag.",
+            },
+          ],
+          theorie: "Op 100 afronden: kijk naar de tientallen, niet naar de eenheden.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "247 → 200.",
+            },
+            {
+              type: "stap",
+              tekst: "270 → 300.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Op 100? Kijk naar het middelste cijfer van een getal met drie cijfers.",
+            },
+          ],
+          niveaus: {
+            basis: "4 in de tientallen = omlaag. 641 → 600.",
+            simpeler: "Tientallen-cijfer 4 is minder dan 5 → omlaag.",
+            nogSimpeler: "641 → 600.",
+          },
+        },
+      },
+      {
+        q: "**Rond af op 1000: 6280**",
+        options: ["6000", "7000", "6300", "6200"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk naar de honderdtallen: is 2 klein of groot?",
+          "Dat is afgerond op 100, niet op 1000.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: welk cijfer telt?",
+              tekst: "Bij afronden op **1000** kijk je naar de **honderdtallen**: de 2 in 6280.",
+            },
+            {
+              titel: "Stap 2: regel toepassen",
+              tekst: "2 → naar **beneden**. 6280 → **6000**.",
+            },
+            {
+              titel: "Klopt het?",
+              tekst: "Bij afronden op 1000 eindigt het getal op 000. 6280 ligt dichter bij 6000 dan bij 7000.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "afronden op 1000",
+              uitleg: "Maak een heel duizendtal (5000, 6000, 7000, ...).",
+            },
+            {
+              woord: "5-regel",
+              uitleg: "5, 6, 7, 8, 9 → omhoog. 0, 1, 2, 3, 4 → omlaag.",
+            },
+          ],
+          theorie: "Op 1000 afronden: kijk naar de honderdtallen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "2300 → 2000.",
+            },
+            {
+              type: "stap",
+              tekst: "2700 → 3000.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Op 1000? Kijk naar het tweede cijfer van een getal met vier cijfers.",
+            },
+          ],
+          niveaus: {
+            basis: "2 in de honderdtallen = omlaag. 6280 → 6000.",
+            simpeler: "Honderdtallen-cijfer 2 is minder dan 5 → omlaag.",
+            nogSimpeler: "6280 → 6000.",
+          },
+        },
+      },
+      {
+        q: "**Rond af op 1000: 3499**",
+        options: ["3000", "4000", "3500", "3400"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk alleen naar de honderdtallen — de negens erachter tellen niet mee.",
+          null,
+          "Dat eindigt niet op 000.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: welk cijfer telt?",
+              tekst: "Bij afronden op **1000** kijk je naar de **honderdtallen**: de 4 in 3499.",
+            },
+            {
+              titel: "Stap 2: regel toepassen",
+              tekst: "4 → naar **beneden**. 3499 → **3000**.",
+            },
+            {
+              titel: "Valkuil",
+              tekst: "De 9's achter de 4 lijken groot, maar die tellen niet. Alleen het cijfer direct na de afrondplek beslist.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "afronden op 1000",
+              uitleg: "Maak een heel duizendtal (3000, 4000, ...).",
+            },
+            {
+              woord: "5-regel",
+              uitleg: "5, 6, 7, 8, 9 → omhoog. 0, 1, 2, 3, 4 → omlaag.",
+            },
+          ],
+          theorie: "Kijk altijd naar precies één cijfer: het cijfer direct rechts van de plek waarop je afrondt.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "1500 → 2000.",
+            },
+            {
+              type: "stap",
+              tekst: "2300 → 2000.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Eén cijfer beslist. De rest maakt niet uit.",
+            },
+          ],
+          niveaus: {
+            basis: "4 in de honderdtallen = omlaag. 3499 → 3000.",
+            simpeler: "Alleen de 4 telt. 4 is minder dan 5 → omlaag.",
+            nogSimpeler: "3499 → 3000.",
+          },
+        },
+      },
+      {
+        q: "Welk getal wordt **40** als je het afrondt op 10?",
+        options: ["36", "46", "34", "45"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Rond dit getal zelf af op 10: krijg je dan 40?",
+          null,
+          "Wat zegt de regel bij een 5?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: rond elk getal af op 10",
+              tekst: "36 → 6 = omhoog → **40**. 46 → 6 = omhoog → 50. 34 → 4 = omlaag → 30. 45 → 5 = omhoog → 50.",
+            },
+            {
+              titel: "Stap 2: welke wordt 40?",
+              tekst: "Alleen **36** wordt 40.",
+            },
+            {
+              titel: "Check",
+              tekst: "Getallen die 40 worden: 35, 36, 37, 38, 39, 40, 41, 42, 43 en 44.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "afronden op 10",
+              uitleg: "Maak een heel tiental (30, 40, 50, ...).",
+            },
+            {
+              woord: "5-regel",
+              uitleg: "5, 6, 7, 8, 9 → omhoog. 0, 1, 2, 3, 4 → omlaag.",
+            },
+          ],
+          theorie: "Bij zo'n vraag rond je elk getal apart af en kijk je welke uitkomst klopt.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "27 → 30.",
+            },
+            {
+              type: "stap",
+              tekst: "144 → 140.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Van 35 tot en met 44 wordt alles 40.",
+            },
+          ],
+          niveaus: {
+            basis: "36 → 40.",
+            simpeler: "36 eindigt op 6 → omhoog → 40.",
+            nogSimpeler: "36 wordt 40.",
+          },
+        },
+      },
+      {
+        q: "Welk getal wordt **NIET 500** als je het afrondt op 100?",
+        options: ["560", "549", "451", "512"],
+        answer: 0,
+        wrongHints: [null, "Kijk bij dit getal naar het cijfer in de tientallen.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: kijk steeds naar de tientallen",
+              tekst: "560 → 6 = omhoog → **600**. 549 → 4 = omlaag → 500. 451 → 5 = omhoog → 500. 512 → 1 = omlaag → 500.",
+            },
+            {
+              titel: "Stap 2: welke wordt geen 500?",
+              tekst: "Alleen **560** wordt 600.",
+            },
+            {
+              titel: "Valkuil",
+              tekst: "Bij 549 lijkt de 9 groot, maar op 100 kijk je naar de tientallen (de 4), niet naar de eenheden.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "afronden op 100",
+              uitleg: "Maak een heel honderdtal (400, 500, 600, ...).",
+            },
+            {
+              woord: "5-regel",
+              uitleg: "5, 6, 7, 8, 9 → omhoog. 0, 1, 2, 3, 4 → omlaag.",
+            },
+          ],
+          theorie: "Op 100 afronden: alleen het cijfer in de tientallen beslist.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "247 → 200.",
+            },
+            {
+              type: "stap",
+              tekst: "850 → 900.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Van 450 tot en met 549 wordt alles 500.",
+            },
+          ],
+          niveaus: {
+            basis: "560 → 600, niet 500.",
+            simpeler: "Tientallen-cijfer 6 → omhoog → 600.",
+            nogSimpeler: "560 wordt 600.",
+          },
+        },
       },
     ],
   },
@@ -159,6 +928,356 @@ const steps = [
         answer: 0,
         wrongHints: [null,"Te veel — rond beide getallen af op honderdtallen en trek af.","Te weinig — heb je 700 - 400 gedaan?","Niet afgerond op 100 — kies een rond honderdtal."],
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "**Schat 312 + 489** (afgerond op 100):",
+        options: ["800", "700", "900", "600"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — 489 ligt dichter bij 500 dan bij 400.",
+          "Te veel — 312 ligt dichter bij 300.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: rond elk getal af op 100",
+              tekst: "312 → 1 in de tientallen = omlaag → **300**. 489 → 8 in de tientallen = omhoog → **500**.",
+            },
+            {
+              titel: "Stap 2: tel op",
+              tekst: "300 + 500 = **800**.",
+            },
+            {
+              titel: "Check",
+              tekst: "Echt: 312 + 489 = 801. Schatting 800 zit er vlak bij.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "afronden op 100",
+              uitleg: "Hele honderdtallen maken (100/200/300/...).",
+            },
+            {
+              woord: "schatten + optellen",
+              uitleg: "Eerst afronden, dan + doen.",
+            },
+          ],
+          theorie: "Eerst afronden, dan rekenen. Zo kun je een grote som snel in je hoofd doen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Schat 287 + 419 → 300 + 400 = 700. Echt: 706.",
+            },
+            {
+              type: "stap",
+              tekst: "Schat 198 + 412 → 200 + 400 = 600. Echt: 610.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Afronden, dan rekenen.",
+            },
+          ],
+          niveaus: {
+            basis: "300 + 500 = 800.",
+            simpeler: "312 → 300. 489 → 500. Samen 800.",
+            nogSimpeler: "Ongeveer 800.",
+          },
+        },
+      },
+      {
+        q: "**Schat 91 − 48** (afgerond op 10):",
+        options: ["40", "50", "30", "60"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — 48 ligt dichter bij 50 dan bij 40.",
+          "Te weinig — 91 wordt 90, niet 80.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: rond elk getal af op 10",
+              tekst: "91 → 1 = omlaag → **90**. 48 → 8 = omhoog → **50**.",
+            },
+            {
+              titel: "Stap 2: trek af",
+              tekst: "90 − 50 = **40**.",
+            },
+            {
+              titel: "Check",
+              tekst: "Echt: 91 − 48 = 43. Schatting 40 zit er dicht bij.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "afronden op 10",
+              uitleg: "Hele tientallen maken (10/20/30/...).",
+            },
+            {
+              woord: "schatten + aftrekken",
+              uitleg: "Eerst afronden, dan − doen.",
+            },
+          ],
+          theorie: "Bij een minsom rond je ook eerst beide getallen af, en dan trek je af.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Schat 612 − 387 → 600 − 400 = 200. Echt: 225.",
+            },
+            {
+              type: "stap",
+              tekst: "Schat 72 − 29 → 70 − 30 = 40. Echt: 43.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Afronden, dan min.",
+            },
+          ],
+          niveaus: {
+            basis: "90 − 50 = 40.",
+            simpeler: "91 → 90. 48 → 50. 90 − 50 = 40.",
+            nogSimpeler: "Ongeveer 40.",
+          },
+        },
+      },
+      {
+        q: "**Schat 803 − 397** (afgerond op 100):",
+        options: ["400", "500", "300", "1200"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te veel — 397 ligt dichter bij 400 dan bij 300.",
+          null,
+          "Let op: er staat min, niet plus.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: rond elk getal af op 100",
+              tekst: "803 → 0 in de tientallen = omlaag → **800**. 397 → 9 in de tientallen = omhoog → **400**.",
+            },
+            {
+              titel: "Stap 2: trek af",
+              tekst: "800 − 400 = **400**.",
+            },
+            {
+              titel: "Check",
+              tekst: "Echt: 803 − 397 = 406. Schatting 400 zit er vlak bij.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "afronden op 100",
+              uitleg: "Hele honderdtallen maken (100/200/300/...).",
+            },
+            {
+              woord: "schatten + aftrekken",
+              uitleg: "Eerst afronden, dan − doen.",
+            },
+          ],
+          theorie: "Kijk goed naar het teken: + of −. Een schatting met het verkeerde teken is ver weg.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Schat 612 − 387 → 600 − 400 = 200. Echt: 225.",
+            },
+            {
+              type: "stap",
+              tekst: "Schat 732 − 289 → 700 − 300 = 400. Echt: 443.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Afronden, dan min.",
+            },
+          ],
+          niveaus: {
+            basis: "800 − 400 = 400.",
+            simpeler: "803 → 800. 397 → 400. 800 − 400 = 400.",
+            nogSimpeler: "Ongeveer 400.",
+          },
+        },
+      },
+      {
+        q: "**Schat € 3,90 + € 5,20 + € 1,95** (afgerond op hele euro's):",
+        options: ["€ 11", "€ 10", "€ 12", "€ 9"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — € 1,95 is bijna € 2, niet € 1.",
+          null,
+          "Te weinig — rond elk bedrag af en tel ze alle drie op.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: rond elk bedrag af op hele euro's",
+              tekst: "€ 3,90 → **€ 4**. € 5,20 → **€ 5**. € 1,95 → **€ 2**.",
+            },
+            {
+              titel: "Stap 2: tel op",
+              tekst: "€ 4 + € 5 + € 2 = **€ 11**.",
+            },
+            {
+              titel: "Check",
+              tekst: "Echt: € 3,90 + € 5,20 + € 1,95 = € 11,05. Schatting € 11 zit er vlak bij.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "afronden op hele euro's",
+              uitleg: "Bedragen zonder centen maken (€ 4, € 5, ...).",
+            },
+            {
+              woord: "schatten + optellen",
+              uitleg: "Eerst afronden, dan + doen.",
+            },
+          ],
+          theorie: "Bij geld: 50 cent of meer → een euro omhoog. Minder dan 50 cent → omlaag.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "€ 12,80 + € 8,40 + € 6,75 → € 13 + € 8 + € 7 = € 28.",
+            },
+            {
+              type: "stap",
+              tekst: "€ 2,60 + € 4,30 → € 3 + € 4 = € 7.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Kijk naar de centen achter de komma.",
+            },
+          ],
+          niveaus: {
+            basis: "€ 4 + € 5 + € 2 = € 11.",
+            simpeler: "€ 3,90 → € 4. € 5,20 → € 5. € 1,95 → € 2. Samen € 11.",
+            nogSimpeler: "Ongeveer € 11.",
+          },
+        },
+      },
+      {
+        q: "**Schat 29 + 38 + 52** (afgerond op 10):",
+        options: ["120", "110", "130", "100"],
+        answer: 0,
+        wrongHints: [null, "Te weinig — 38 wordt 40, niet 30.", "Te veel — 52 wordt 50, niet 60.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: rond elk getal af op 10",
+              tekst: "29 → **30**. 38 → **40**. 52 → **50**.",
+            },
+            {
+              titel: "Stap 2: tel op",
+              tekst: "30 + 40 + 50 = **120**.",
+            },
+            {
+              titel: "Check",
+              tekst: "Echt: 29 + 38 + 52 = 119. Schatting 120 zit er vlak bij.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "afronden op 10",
+              uitleg: "Hele tientallen maken (10/20/30/...).",
+            },
+            {
+              woord: "schatten + optellen",
+              uitleg: "Eerst afronden, dan + doen.",
+            },
+          ],
+          theorie: "Rond elk getal apart af en tel dan de ronde getallen op.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Schat 287 + 419 → 300 + 400 = 700. Echt: 706.",
+            },
+            {
+              type: "stap",
+              tekst: "Schat 21 + 47 + 33 → 20 + 50 + 30 = 100. Echt: 101.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Afronden, dan rekenen.",
+            },
+          ],
+          niveaus: {
+            basis: "30 + 40 + 50 = 120.",
+            simpeler: "29 → 30, 38 → 40, 52 → 50. Samen 120.",
+            nogSimpeler: "Ongeveer 120.",
+          },
+        },
+      },
+      {
+        q: "**Schat 2.870 + 1.940** (afgerond op 1000):",
+        options: ["5.000", "4.000", "6.000", "3.000"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — 2.870 ligt dichter bij 3.000 dan bij 2.000.",
+          null,
+          "Te weinig — rond beide getallen af en tel ze allebei op.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1: rond elk getal af op 1000",
+              tekst: "2.870 → 8 in de honderdtallen = omhoog → **3.000**. 1.940 → 9 in de honderdtallen = omhoog → **2.000**.",
+            },
+            {
+              titel: "Stap 2: tel op",
+              tekst: "3.000 + 2.000 = **5.000**.",
+            },
+            {
+              titel: "Check",
+              tekst: "Echt: 2.870 + 1.940 = 4.810. Schatting 5.000 klopt qua grootte. Op 1000 afronden is grover dan op 10.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "afronden op 1000",
+              uitleg: "Hele duizendtallen maken (1.000/2.000/3.000/...).",
+            },
+            {
+              woord: "schatten + optellen",
+              uitleg: "Eerst afronden, dan + doen.",
+            },
+          ],
+          theorie: "Hoe grover je afrondt (op 1000), hoe verder je schatting van het echte antwoord kan liggen. Voor een snelle check is dat goed genoeg.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Schat 287 + 419 → 300 + 400 = 700. Echt: 706.",
+            },
+            {
+              type: "stap",
+              tekst: "Schat 1.200 + 3.700 → 1.000 + 4.000 = 5.000. Echt: 4.900.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Truc",
+              uitleg: "Op 1000? Kijk naar de honderdtallen.",
+            },
+          ],
+          niveaus: {
+            basis: "3.000 + 2.000 = 5.000.",
+            simpeler: "2.870 → 3.000. 1.940 → 2.000. Samen 5.000.",
+            nogSimpeler: "Ongeveer 5.000.",
+          },
+        },
+      },
     ],
   },
 
@@ -183,6 +1302,62 @@ const steps = [
         options: ["€ 74","€ 70","€ 80","€ 75"],
         answer: 0,
         wrongHints: [null,"Te weinig — rond elk bedrag af op hele euro's en tel op.","Te veel — controleer schatting.","Te veel — klopt jouw schatting van beide bedragen?"],
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Je hebt **€ 10**. Je koopt sap van **€ 2,10**, brood van **€ 2,90** en kaas van **€ 3,80**. Schat: is € 10 genoeg?",
+        options: [
+          "Ja, het is ongeveer € 9",
+          "Nee, het is ongeveer € 11",
+          "Nee, het is ongeveer € 13",
+          "Ja, het is ongeveer € 5",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Schat nog eens: rond elk bedrag af op hele euro's en tel op.",
+          null,
+          "Te weinig — je moet alle drie de bedragen optellen.",
+        ],
+      },
+      {
+        q: "De bus vertrekt 's ochtends om **9:12** en komt aan om **10:58**. Hoe lang duurt de rit ongeveer?",
+        options: ["Ongeveer 2 uur", "Ongeveer 1 uur", "Ongeveer 3 uur", "Ongeveer een half uur"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — rond de tijden af: 9:12 is ongeveer 9:10, 10:58 is bijna 11:00.",
+          null,
+          "Veel te weinig — de bus rijdt van negen uur tot bijna elf uur.",
+        ],
+      },
+      {
+        q: "Een kassabon: **€ 1,10 + € 5,90 + € 2,95 + € 8,05**. Schat:",
+        options: ["€ 18", "€ 16", "€ 20", "€ 15"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Te weinig — € 5,90 en € 2,95 zijn bijna € 6 en € 3.",
+          "Te veel — rond elk bedrag af op hele euro's en tel ze alle vier op.",
+          null,
+        ],
+      },
+      {
+        q: "Je koopt een tas van **€ 2,95** en een bal van **€ 3,10**. Je betaalt met een briefje van **€ 10**. Hoeveel krijg je ongeveer terug?",
+        options: ["€ 4", "€ 6", "€ 3", "€ 5"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is ongeveer wat je betaalt, niet wat je terugkrijgt.",
+          null,
+          "Schat eerst wat je betaalt, en haal dat van € 10 af.",
+        ],
+      },
+      {
+        q: "Noor speelt 's middags buiten van **13:05** tot **15:55**. Hoe lang is dat ongeveer?",
+        options: ["Ongeveer 3 uur", "Ongeveer 2 uur", "Ongeveer 4 uur", "Ongeveer 1 uur"],
+        answer: 0,
+        wrongHints: [null, "Te weinig — 15:55 is bijna 16:00.", null, "Veel te weinig."],
       },
     ],
   },

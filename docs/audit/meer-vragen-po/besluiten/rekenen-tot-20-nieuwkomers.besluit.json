@@ -1,0 +1,227 @@
+{
+ "pathId": "rekenen-tot-20-nieuwkomers",
+ "geschreven": 25,
+ "opgenomen": [],
+ "afgekeurd": [
+  {
+   "id": "rekenen-tot-20-nieuwkomers#0",
+   "stap": 0,
+   "q": "Welk getal mist? **12, 13, … , 15**",
+   "redenen": [
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een)."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#1",
+   "stap": 0,
+   "q": "Welk getal mist? **7, 8, 9, …**",
+   "redenen": [
+    "nakijker A: FASE 2: wrongHints van de vorm \"X is één te weinig/te veel\" (en bij #15/#17 \"tien te weinig/te veel\") verraden het goede antwoord direct (X±1 of X±10); vervang door richtinggevende hint zonder getal-verschil.",
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: wrongHints verraden het antwoord: \"is één/tien te weinig/te veel\" zegt precies hoeveel je ernaast zit, dus na één foute keuze is het goede getal direct af te leiden."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#2",
+   "stap": 0,
+   "q": "Welk getal mist? **16, 17, … , 19, 20**",
+   "redenen": [
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een)."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#3",
+   "stap": 0,
+   "q": "Wat komt **vóór 10**?",
+   "redenen": [
+    "nakijker A: FASE 2: wrongHints van de vorm \"X is één te weinig/te veel\" (en bij #15/#17 \"tien te weinig/te veel\") verraden het goede antwoord direct (X±1 of X±10); vervang door richtinggevende hint zonder getal-verschil.",
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: wrongHints verraden het antwoord: \"is één/tien te weinig/te veel\" zegt precies hoeveel je ernaast zit, dus na één foute keuze is het goede getal direct af te leiden."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#4",
+   "stap": 0,
+   "q": "Je hebt **17**. Er komt **één bij**. Welk getal heb je nu?",
+   "redenen": [
+    "nakijker A: Bijna dubbel met bestaande 'Tel verder. Wat komt na 15?' (= wat komt na 17); bovendien is 'Je hebt 17' zonder voorwerp vaag voor nieuwkomers. | FASE 2: wrongHints van de vorm \"X is één te weinig/te veel\" (en bij #15/#17 \"tien te weinig/te veel\") verraden het goede antwoord direct (X±1 of X±10); vervang door richtinggevende hint zonder getal-verschil.",
+    "nakijker B: Klein: 'Je hebt 17' zonder zelfstandig naamwoord is abstract voor nieuwkomers (17 wat?); liever '17 knikkers'. | FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: wrongHints verraden het antwoord: \"is één/tien te weinig/te veel\" zegt precies hoeveel je ernaast zit, dus na één foute keuze is het goede getal direct af te leiden."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#5",
+   "stap": 1,
+   "q": "**2 + 6 =** ?",
+   "redenen": [
+    "nakijker A: FASE 2: wrongHints van de vorm \"X is één te weinig/te veel\" (en bij #15/#17 \"tien te weinig/te veel\") verraden het goede antwoord direct (X±1 of X±10); vervang door richtinggevende hint zonder getal-verschil.",
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: wrongHints verraden het antwoord: \"is één/tien te weinig/te veel\" zegt precies hoeveel je ernaast zit, dus na één foute keuze is het goede getal direct af te leiden."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#6",
+   "stap": 1,
+   "q": "Doe **5 vingers** omhoog. Doe er **2** bij. Hoeveel vingers zijn er nu omhoog?",
+   "redenen": [
+    "nakijker A: FASE 2: wrongHints van de vorm \"X is één te weinig/te veel\" (en bij #15/#17 \"tien te weinig/te veel\") verraden het goede antwoord direct (X±1 of X±10); vervang door richtinggevende hint zonder getal-verschil.",
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: wrongHints verraden het antwoord: \"is één/tien te weinig/te veel\" zegt precies hoeveel je ernaast zit, dus na één foute keuze is het goede getal direct af te leiden."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#7",
+   "stap": 1,
+   "q": "**1 + 8 =** ?",
+   "redenen": [
+    "nakijker A: FASE 2: wrongHints van de vorm \"X is één te weinig/te veel\" (en bij #15/#17 \"tien te weinig/te veel\") verraden het goede antwoord direct (X±1 of X±10); vervang door richtinggevende hint zonder getal-verschil.",
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: wrongHints verraden het antwoord: \"is één/tien te weinig/te veel\" zegt precies hoeveel je ernaast zit, dus na één foute keuze is het goede getal direct af te leiden."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#8",
+   "stap": 1,
+   "q": "Welke som is **10**?",
+   "redenen": [
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een)."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#9",
+   "stap": 1,
+   "q": "**4 + 2 =** ?",
+   "redenen": [
+    "nakijker A: FASE 2: wrongHints van de vorm \"X is één te weinig/te veel\" (en bij #15/#17 \"tien te weinig/te veel\") verraden het goede antwoord direct (X±1 of X±10); vervang door richtinggevende hint zonder getal-verschil.",
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: wrongHints verraden het antwoord: \"is één/tien te weinig/te veel\" zegt precies hoeveel je ernaast zit, dus na één foute keuze is het goede getal direct af te leiden."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#10",
+   "stap": 2,
+   "q": "**8 − 3 =** ?",
+   "redenen": [
+    "nakijker A: FASE 2: wrongHints van de vorm \"X is één te weinig/te veel\" (en bij #15/#17 \"tien te weinig/te veel\") verraden het goede antwoord direct (X±1 of X±10); vervang door richtinggevende hint zonder getal-verschil.",
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: wrongHints verraden het antwoord: \"is één/tien te weinig/te veel\" zegt precies hoeveel je ernaast zit, dus na één foute keuze is het goede getal direct af te leiden."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#11",
+   "stap": 2,
+   "q": "**10 − 4 =** ?",
+   "redenen": [
+    "nakijker A: FASE 2: wrongHints van de vorm \"X is één te weinig/te veel\" (en bij #15/#17 \"tien te weinig/te veel\") verraden het goede antwoord direct (X±1 of X±10); vervang door richtinggevende hint zonder getal-verschil.",
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: wrongHints verraden het antwoord: \"is één/tien te weinig/te veel\" zegt precies hoeveel je ernaast zit, dus na één foute keuze is het goede getal direct af te leiden."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#12",
+   "stap": 2,
+   "q": "Doe **6 vingers** omhoog. Doe er **2** naar beneden. Hoeveel vingers zijn nog omhoog?",
+   "redenen": [
+    "nakijker A: Taal: 'Doe er 2 naar beneden' is onnatuurlijk Nederlands voor nieuwkomers; beter 'Doe er 2 omlaag' / 'Vouw er 2 in'. | FASE 2: wrongHints van de vorm \"X is één te weinig/te veel\" (en bij #15/#17 \"tien te weinig/te veel\") verraden het goede antwoord direct (X±1 of X±10); vervang door richtinggevende hint zonder getal-verschil.",
+    "nakijker B: Taal: 'Doe er 2 naar beneden' is onnatuurlijk Nederlands; liever 'Doe er 2 omlaag'. | FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: wrongHints verraden het antwoord: \"is één/tien te weinig/te veel\" zegt precies hoeveel je ernaast zit, dus na één foute keuze is het goede getal direct af te leiden."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#13",
+   "stap": 2,
+   "q": "Welke som is **3**?",
+   "redenen": [
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een)."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#14",
+   "stap": 2,
+   "q": "**9 − 1 =** ?",
+   "redenen": [
+    "nakijker A: FASE 2: wrongHints van de vorm \"X is één te weinig/te veel\" (en bij #15/#17 \"tien te weinig/te veel\") verraden het goede antwoord direct (X±1 of X±10); vervang door richtinggevende hint zonder getal-verschil.",
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: wrongHints verraden het antwoord: \"is één/tien te weinig/te veel\" zegt precies hoeveel je ernaast zit, dus na één foute keuze is het goede getal direct af te leiden."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#15",
+   "stap": 3,
+   "q": "**9 + 4 =** ?",
+   "redenen": [
+    "nakijker A: FASE 2: wrongHints van de vorm \"X is één te weinig/te veel\" (en bij #15/#17 \"tien te weinig/te veel\") verraden het goede antwoord direct (X±1 of X±10); vervang door richtinggevende hint zonder getal-verschil.",
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: wrongHints verraden het antwoord: \"is één/tien te weinig/te veel\" zegt precies hoeveel je ernaast zit, dus na één foute keuze is het goede getal direct af te leiden."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#16",
+   "stap": 3,
+   "q": "**7 + 5 =** ?",
+   "redenen": [
+    "nakijker A: FASE 2: wrongHints van de vorm \"X is één te weinig/te veel\" (en bij #15/#17 \"tien te weinig/te veel\") verraden het goede antwoord direct (X±1 of X±10); vervang door richtinggevende hint zonder getal-verschil.",
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: wrongHints verraden het antwoord: \"is één/tien te weinig/te veel\" zegt precies hoeveel je ernaast zit, dus na één foute keuze is het goede getal direct af te leiden."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#17",
+   "stap": 3,
+   "q": "**15 − 7 =** ?",
+   "redenen": [
+    "nakijker A: FASE 2: wrongHints van de vorm \"X is één te weinig/te veel\" (en bij #15/#17 \"tien te weinig/te veel\") verraden het goede antwoord direct (X±1 of X±10); vervang door richtinggevende hint zonder getal-verschil.",
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: wrongHints verraden het antwoord: \"is één/tien te weinig/te veel\" zegt precies hoeveel je ernaast zit, dus na één foute keuze is het goede getal direct af te leiden."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#18",
+   "stap": 3,
+   "q": "**9 + 5**. Eerst 10 vol: 9 + 1 = 10. Hoeveel moet er **daarna nog bij**?",
+   "redenen": [
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een)."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#19",
+   "stap": 3,
+   "q": "**12 − 5 =** ?",
+   "redenen": [
+    "nakijker A: FASE 2: wrongHints van de vorm \"X is één te weinig/te veel\" (en bij #15/#17 \"tien te weinig/te veel\") verraden het goede antwoord direct (X±1 of X±10); vervang door richtinggevende hint zonder getal-verschil.",
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: wrongHints verraden het antwoord: \"is één/tien te weinig/te veel\" zegt precies hoeveel je ernaast zit, dus na één foute keuze is het goede getal direct af te leiden."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#20",
+   "stap": 4,
+   "q": "Op de tafel liggen **8 appels**. Je eet er **3** op. Hoeveel appels liggen er nog?",
+   "redenen": [
+    "nakijker A: FASE 2: wrongHints van de vorm \"X is één te weinig/te veel\" (en bij #15/#17 \"tien te weinig/te veel\") verraden het goede antwoord direct (X±1 of X±10); vervang door richtinggevende hint zonder getal-verschil.",
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: wrongHints verraden het antwoord: \"is één/tien te weinig/te veel\" zegt precies hoeveel je ernaast zit, dus na één foute keuze is het goede getal direct af te leiden."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#21",
+   "stap": 4,
+   "q": "In de bus zitten **9 kinderen**. Er stappen **4 kinderen** in. Hoeveel kinderen zitten er nu in de bus?",
+   "redenen": [
+    "nakijker A: FASE 2: wrongHints van de vorm \"X is één te weinig/te veel\" (en bij #15/#17 \"tien te weinig/te veel\") verraden het goede antwoord direct (X±1 of X±10); vervang door richtinggevende hint zonder getal-verschil.",
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: wrongHints verraden het antwoord: \"is één/tien te weinig/te veel\" zegt precies hoeveel je ernaast zit, dus na één foute keuze is het goede getal direct af te leiden."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#22",
+   "stap": 4,
+   "q": "Tim heeft **5 ballonnen**. Hij krijgt er **6** bij. Hoeveel ballonnen heeft Tim nu?",
+   "redenen": [
+    "nakijker A: FASE 2: wrongHints van de vorm \"X is één te weinig/te veel\" (en bij #15/#17 \"tien te weinig/te veel\") verraden het goede antwoord direct (X±1 of X±10); vervang door richtinggevende hint zonder getal-verschil.",
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: wrongHints verraden het antwoord: \"is één/tien te weinig/te veel\" zegt precies hoeveel je ernaast zit, dus na één foute keuze is het goede getal direct af te leiden."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#23",
+   "stap": 4,
+   "q": "Er zitten **14 vogels** in een boom. **6 vogels** vliegen weg. Hoeveel vogels zitten er nog?",
+   "redenen": [
+    "nakijker A: FASE 2: wrongHints van de vorm \"X is één te weinig/te veel\" (en bij #15/#17 \"tien te weinig/te veel\") verraden het goede antwoord direct (X±1 of X±10); vervang door richtinggevende hint zonder getal-verschil.",
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: wrongHints verraden het antwoord: \"is één/tien te weinig/te veel\" zegt precies hoeveel je ernaast zit, dus na één foute keuze is het goede getal direct af te leiden."
+   ]
+  },
+  {
+   "id": "rekenen-tot-20-nieuwkomers#24",
+   "stap": 4,
+   "q": "Op het bord staan **3 rode** sterren en **4 blauwe** sterren. Hoeveel sterren zijn het samen?",
+   "redenen": [
+    "nakijker A: FASE 2: wrongHints van de vorm \"X is één te weinig/te veel\" (en bij #15/#17 \"tien te weinig/te veel\") verraden het goede antwoord direct (X±1 of X±10); vervang door richtinggevende hint zonder getal-verschil.",
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: wrongHints verraden het antwoord: \"is één/tien te weinig/te veel\" zegt precies hoeveel je ernaast zit, dus na één foute keuze is het goede getal direct af te leiden."
+   ]
+  }
+ ]
+}

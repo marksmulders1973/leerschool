@@ -41,6 +41,7 @@ import { actievePartnerCode, partnerFamilieTot } from "../referral/partnerCode.j
 import { PARTNER_NAMEN } from "../../components/PartnerWelkom.jsx";
 import { bouwStartVragen, markeerStartKwartierGedaan, parseGroep, onderwerpVan } from "./startKwartier.js";
 import { klasId, thuisLink } from "../../shared/klasQr.js";
+import { markeerGezien } from "../../shared/geziendeVragen.js";
 
 // Three.js pas laden als het park-kaartje in beeld komt (zelfde patroon als BuddyPicker).
 const MaatjeMini3D = lazy(() => import("../zoo/MaatjeMini3D.jsx"));
@@ -579,6 +580,9 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
     track(klas ? "klas_vraag" : "startkwartier_vraag", { nummer: stap?.nummer, pad: vraag.pathId, goed: isGoed });
     // meetfix 10 sep 2026: start-kwartier-vragen tellen mee als beantwoorde vragen (dagrapport/Noord-ster)
     track("question_answered", { bron: klas ? "klas" : "startkwartier", pad: vraag.pathId, is_correct: isGoed });
+    // 👀 Beantwoord = gezien (nieuwe vragen eerst, geziendeVragen.js). Niet klassikaal: het digibord
+    // is niet het apparaat van één kind.
+    if (!klas && vraag.geziensleutel) { try { markeerGezien(vraag.geziensleutel); } catch { /* */ } }
     // De opwarmvraag hoort bij geen leerpad → niet als padvoortgang opslaan.
     if (!vraag.opwarm) {
       try {

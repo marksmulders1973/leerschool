@@ -1,0 +1,62 @@
+[
+ {
+  "pathId": "financiele-vorming-po",
+  "stap": 1,
+  "q": "Tot hoe laat mag iemand van **16 of 17 jaar** in Nederland werken?",
+  "reden": "uitlegPad stap '16 en 17 jaar' zegt 'Vanaf 16 jaar mag je ook in het weekend ... werken'. Dat suggereert dat jongere kinderen niet in het weekend mogen werken, maar 13-15-jarigen mogen op zaterdag (licht) werk doen. Feitelijk onjuist; schrap 'in het weekend' (bv. 'Vanaf 16 jaar mag je ook 's avonds werken')."
+ },
+ {
+  "pathId": "geld-rekenen",
+  "stap": 2,
+  "q": "Je koopt een broodje van **€ 2,45** en melk van **€ 0,95**. Je betaalt met **€ 5**. Hoeveel **wisselgeld** krijg je?",
+  "reden": "Hint bij '€ 2,60' ('Heb je de melk ook meegerekend?') past niet bij die optie: zonder melk krijg je €5 − €2,45 = €2,55, niet €2,60. €2,60 ontstaat eerder door €5 − €2,40 (verkeerd opgeteld/afgerond). Kies een hint die bij €2,60 past, bv. 'Tel de prijzen nog eens precies op: €2,45 + €0,95. Hoeveel is dat samen?'"
+ },
+ {
+  "pathId": "kommagetallen-po",
+  "stap": 4,
+  "q": "Een pakje sap kost **€ 0,85**. Je koopt er **4**. Wat betaal je **samen**?",
+  "reden": "Hint bij optie '€ 34,00' (\"Moet je 4 keer € 0,85 doen, of € 0,85 + 4?\") gaat over de optel-fout, die hoort bij optie '€ 4,85' (0,85 + 4). € 34,00 ontstaat door een komma-fout (4 × 8,5 = 34 of 340 als hele euro's lezen); hint moet over de plek van de komma gaan, bv. 'Kan 4 pakjes sap van nog geen euro samen € 34 kosten? Waar hoort de komma?'."
+ },
+ {
+  "pathId": "kalender-rekenen-po",
+  "stap": 2,
+  "q": "Welke feestdag valt **elk jaar op een andere datum**?",
+  "reden": "Theorie is feitelijk onnauwkeurig: Pasen is de eerste zondag na de eerste volle maan óp of na 21 maart (niet 'na 21 maart'). Kleine correctie: 'op of na 21 maart'."
+ },
+ {
+  "pathId": "maten-omtrek-oppervlakte-po",
+  "stap": 1,
+  "q": "Hoeveel **cm²** is **300 mm²**?",
+  "reden": "Hint bij '0,3 cm²' ('Ga je naar een grotere maat? Wordt het getal dan groter of kleiner?') past niet bij die fout: 0,3 is al kleiner, de richting klopt dus. De echte fout is ÷ 1000 in plaats van ÷ 100. Het kind krijgt zo een bevestigend antwoord ('kleiner') op een verkeerde keuze. Beter: 'Hoeveel mm² gaan er in 1 cm²? Deel je door 100 of door 1000?'."
+ },
+ {
+  "pathId": "maten-omtrek-oppervlakte-po",
+  "stap": 3,
+  "q": "Hoeveel **ml** is **1,5 L**?",
+  "reden": "Hint bij '15 000 ml' ('Wordt het getal groter of kleiner als je naar een kleinere maat gaat?') past niet bij die fout: 15 000 is al groter, de richting klopt dus. De fout is × 10 000 in plaats van × 1000. Beter: 'Hoeveel milliliter gaan er in één liter? Schuif de komma zoveel plaatsen.'."
+ },
+ {
+  "pathId": "meten-gewicht-inhoud-tijd-po",
+  "stap": 1,
+  "q": "Welke hoeveelheid drinken is het **minst**?",
+  "reden": "Hint bij '150 ml' ('Een klein getal betekent niet altijd een kleine hoeveelheid; kijk ook naar de eenheid') hoort bij een andere optie. 150 is juist een groot getal; deze hint past bij '0,2 l', waar het kleine getal 0,2 wel misleidt. Voor 150 ml zou passen: 'Reken 8 cl ook om naar ml en vergelijk.'."
+ },
+ {
+  "pathId": "romeinse-cijfers-po",
+  "stap": 3,
+  "q": "In een geschiedenisboek staat: de **XVII**e eeuw. Welke eeuw is dat?",
+  "reden": "Hint bij '16e eeuw' ('Staat de I hier vóór of ná de V?') past niet: in XVII staat geen I vóór de V en 16 ontstaat niet door aftrekken maar door een I te weinig te tellen (XVI). Betere hint: 'Tel de I'tjes achter de V nog eens.'"
+ },
+ {
+  "pathId": "schatten-afronden",
+  "stap": 0,
+  "q": "**Schat 32 + 59**. Welk antwoord komt het dichtst bij?",
+  "reden": "Hints lijken verwisseld: de hint bij '70' ('59: wordt dat 50 of 60?') beschrijft de fout die tot 80 leidt (30 + 50 = 80), niet tot 70. Zet die hint bij '80' en geef '70' een algemene hint (bv. 'Rond 32 en 59 allebei af op tientallen en tel op')."
+ },
+ {
+  "pathId": "schatten-afronden",
+  "stap": 3,
+  "q": "Je koopt **3 schriften** van **€ 1,95** per stuk. Hoeveel betaal je ongeveer?",
+  "reden": "Hint bij '€ 8' ('reken met € 2 per schrift') sluit niet aan bij de fout: € 8 = 4 × € 2, dus het kind telde een schrift te veel. Betere hint: 'Hoeveel schriften koop je?'"
+ }
+]

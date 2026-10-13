@@ -162,6 +162,265 @@ const steps = [
           niveaus: { basis: "12.", simpeler: "NL heeft 12 provincies (Flevoland sinds 1986 erbij).", nogSimpeler: "12" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Met welk geld betalen we nu in Nederland?",
+        options: ["De euro", "De gulden", "De dollar", "Het pond"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat geld gebruikten we vroeger. Welk geld gebruik je nu in de winkel?",
+          null,
+          "Dit geld hoort bij Engeland.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Euro = ons geld",
+              tekst: "In Nederland betaal je met de **euro** (€). Veel andere landen in Europa gebruiken ook de euro.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "euro",
+              uitleg: "Het geld dat we nu in Nederland gebruiken. Teken: €.",
+            },
+          ],
+          theorie: "Elk land heeft een munt (soort geld). In Nederland is dat de euro.",
+          voorbeelden: [
+            {
+              type: "vergelijk",
+              tekst: "In Nederland en België betaal je allebei met de euro.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Munt",
+              uitleg: "Een munt is het soort geld dat een land gebruikt.",
+            },
+          ],
+          niveaus: {
+            basis: "De euro.",
+            simpeler: "Ons geld heet de euro (€).",
+            nogSimpeler: "Euro",
+          },
+        },
+      },
+      {
+        q: "Welk buurland ligt aan de **oostkant** van Nederland?",
+        options: ["Duitsland", "België", "Frankrijk", "Engeland"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dit buurland ligt wel tegen Nederland aan, maar aan een andere kant.",
+          null,
+          "Tussen Nederland en dit land ligt de zee.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Duitsland = oost",
+              tekst: "Nederland heeft twee buurlanden: **Duitsland** ligt aan de **oostkant**, **België** aan de **zuidkant**. Aan de west- en noordkant ligt de Noordzee.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "oost",
+              uitleg: "De kant waar de zon opkomt. Op de kaart: rechts.",
+            },
+          ],
+          theorie: "Op een kaart is noord boven, zuid onder, west links en oost rechts.",
+          voorbeelden: [
+            {
+              type: "kaart",
+              tekst: "Kijk op de kaart: rechts van Nederland ligt Duitsland, onder Nederland ligt België.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Buurland",
+              uitleg: "Een land dat aan jouw land grenst.",
+            },
+          ],
+          niveaus: {
+            basis: "Duitsland.",
+            simpeler: "Oost (rechts op de kaart) = Duitsland.",
+            nogSimpeler: "Duitsland",
+          },
+        },
+      },
+      {
+        q: "Welke zee ligt aan de **westkant** van Nederland?",
+        options: ["De Noordzee", "De Oostzee", "De Middellandse Zee", "De Zwarte Zee"],
+        answer: 0,
+        wrongHints: [null, "Let op de naam: ligt deze zee aan de westkant?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Noordzee = westkant",
+              tekst: "Aan de **west**- en **noordkant** van Nederland ligt de **Noordzee**. Daar liggen ook onze stranden.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "Noordzee",
+              uitleg: "De grote zee aan de west- en noordkant van Nederland.",
+            },
+          ],
+          theorie: "Nederland ligt aan de Noordzee. De andere zeeën liggen veel verder weg.",
+          voorbeelden: [
+            {
+              type: "kaart",
+              tekst: "Ga je in Nederland naar het strand, dan kijk je uit over de Noordzee.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "West",
+              uitleg: "Op een kaart is west links.",
+            },
+          ],
+          niveaus: {
+            basis: "De Noordzee.",
+            simpeler: "Strand in Nederland = Noordzee.",
+            nogSimpeler: "Noordzee",
+          },
+        },
+      },
+      {
+        q: "Wie is nu de **koning** van Nederland?",
+        options: ["Willem-Alexander", "Willem van Oranje", "Filip", "Karel de Grote"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Deze man leefde lang geleden. Wie is het nu?",
+          "Dit is de koning van een buurland.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Koning Willem-Alexander",
+              tekst: "De koning van Nederland is **Willem-Alexander**. Hij is koning sinds **2013**. De koning werkt in **Den Haag**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "koning",
+              uitleg: "Het hoofd van een koninkrijk, zoals Nederland.",
+            },
+          ],
+          theorie: "Nederland is een koninkrijk: er is een koning. De regering bestuurt het land.",
+          voorbeelden: [
+            {
+              type: "verwarring",
+              tekst: "Filip is de koning van België, niet van Nederland.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Koninkrijk",
+              uitleg: "Een land met een koning of koningin.",
+            },
+          ],
+          niveaus: {
+            basis: "Willem-Alexander.",
+            simpeler: "Onze koning = Willem-Alexander.",
+            nogSimpeler: "Willem-Alexander",
+          },
+        },
+      },
+      {
+        q: "Wat zorgt ervoor dat de **lage** delen van Nederland droog blijven?",
+        options: ["Dijken en gemalen", "Bergen en rotsen", "Bossen en heide", "Bruggen en tunnels"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Heeft Nederland veel van deze? Denk aan hoe plat het land is.",
+          null,
+          "Hier ga je over of onder het water door. Houden ze het water weg?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Dijken en gemalen",
+              tekst: "Een groot deel van Nederland ligt **onder zeeniveau**. **Dijken** houden het water tegen. **Gemalen** pompen het water weg.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "gemaal",
+              uitleg: "Een gebouw met pompen dat water uit een laag stuk land wegpompt.",
+            },
+          ],
+          theorie: "Zonder dijken en gemalen zou een groot deel van Nederland onder water staan.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Dijk = muur van aarde tegen het water. Gemaal = pomp die water wegpompt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Zeeniveau",
+              uitleg: "De hoogte van het water in de zee. Land onder zeeniveau ligt lager dan de zee.",
+            },
+          ],
+          niveaus: {
+            basis: "Dijken en gemalen.",
+            simpeler: "Dijk houdt water tegen, gemaal pompt water weg.",
+            nogSimpeler: "Dijken + gemalen",
+          },
+        },
+      },
+      {
+        q: "Welke zin past bij **Nederland**?",
+        options: [
+          "Het land is heel plat.",
+          "Het land heeft hoge bergen.",
+          "Het land ligt in Zuid-Europa.",
+          "Het land heeft bijna geen water.",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Denk aan de hoogste 'berg' van Nederland. Is die echt hoog?",
+          null,
+          "Denk aan de rivieren, meren en kanalen.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Nederland is plat",
+              tekst: "Nederland is **heel plat**. Het ligt in **West-Europa** aan de Noordzee en heeft **veel water**: rivieren, kanalen, meren en polders.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "plat",
+              uitleg: "Zonder bergen of hoge heuvels.",
+            },
+          ],
+          theorie: "Bijna heel Nederland ligt onder of net boven zeeniveau. Alleen in Limburg zijn echte heuvels.",
+          voorbeelden: [
+            {
+              type: "vergelijk",
+              tekst: "In Zwitserland zijn hoge bergen. In Nederland niet.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "West-Europa",
+              uitleg: "Het westelijke deel van Europa, waar Nederland en België liggen.",
+            },
+          ],
+          niveaus: {
+            basis: "Het land is heel plat.",
+            simpeler: "Nederland = plat en veel water.",
+            nogSimpeler: "Plat",
+          },
+        },
+      },
     ],
   },
   {
@@ -209,6 +468,255 @@ const steps = [
           voorbeelden: [{ type: "fries", tekst: "Nederlands 'goedemorgen' → Fries 'goeie moarn'. Lijkt op Engels 'good morning'. Echt aparte taal." }],
           basiskennis: [{ onderwerp: "Niet andere", uitleg: "Limburgs = wel erkend als 'streektaal' maar geen officiële taal. Zeeuws = dialect. Verschil: minder gebruik in officiële context." }],
           niveaus: { basis: "Friesland (Fries).", simpeler: "Friesland heeft Fries als 2e officiële taal van NL.", nogSimpeler: "Friesland" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "In welke provincie vind je veel **hunebedden**?",
+        options: ["Drenthe", "Zeeland", "Flevoland", "Noord-Holland"],
+        answer: 0,
+        wrongHints: [null, null, "Deze provincie is heel jong. Hunebedden zijn heel oud.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Hunebedden in Drenthe",
+              tekst: "**Drenthe** is bekend om de **hunebedden** en de bossen. Drenthe ligt in het noorden.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "hunebed",
+              uitleg: "Een oud graf van grote zware stenen, heel lang geleden gemaakt.",
+            },
+          ],
+          theorie: "Koppel elke provincie aan iets bekends: Drenthe = hunebedden, Friesland = Elfstedentocht, Zeeland = Deltawerken.",
+          voorbeelden: [
+            {
+              type: "verwarring",
+              tekst: "Flevoland is pas kort geleden uit de zee gewonnen. Daar kunnen dus geen oude hunebedden liggen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Noorden",
+              uitleg: "Groningen, Friesland en Drenthe zijn de provincies in het noorden.",
+            },
+          ],
+          niveaus: {
+            basis: "Drenthe.",
+            simpeler: "Hunebedden = Drenthe.",
+            nogSimpeler: "Drenthe",
+          },
+        },
+      },
+      {
+        q: "Welke provincie is bekend om **carnaval** en de stad **Eindhoven**?",
+        options: ["Noord-Brabant", "Friesland", "Drenthe", "Flevoland"],
+        answer: 0,
+        wrongHints: [null, "Deze provincie ligt in het noorden. Waar ligt Eindhoven?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Noord-Brabant",
+              tekst: "**Noord-Brabant** ligt in het **zuiden**. Eindhoven ligt in Noord-Brabant en er wordt veel carnaval gevierd.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "carnaval",
+              uitleg: "Een feest met verkleden en optochten, vooral in het zuiden van Nederland.",
+            },
+          ],
+          theorie: "Zuid = Noord-Brabant en Limburg. Daar is carnaval een groot feest.",
+          voorbeelden: [
+            {
+              type: "kaart",
+              tekst: "Eindhoven ligt in het zuiden, in Noord-Brabant.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Zuiden",
+              uitleg: "Noord-Brabant en Limburg zijn de provincies in het zuiden.",
+            },
+          ],
+          niveaus: {
+            basis: "Noord-Brabant.",
+            simpeler: "Eindhoven + carnaval = Noord-Brabant.",
+            nogSimpeler: "Noord-Brabant",
+          },
+        },
+      },
+      {
+        q: "In welke provincie liggen **Rotterdam** en **Den Haag**?",
+        options: ["Zuid-Holland", "Noord-Holland", "Utrecht", "Zeeland"],
+        answer: 0,
+        wrongHints: [null, "Daar ligt Amsterdam. Liggen Rotterdam en Den Haag daar ook?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zuid-Holland",
+              tekst: "**Rotterdam** en **Den Haag** liggen allebei in **Zuid-Holland**. Amsterdam ligt in Noord-Holland.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "Zuid-Holland",
+              uitleg: "Provincie aan zee in het westen, met Rotterdam en Den Haag.",
+            },
+          ],
+          theorie: "Noord-Holland = Amsterdam. Zuid-Holland = Rotterdam en Den Haag.",
+          voorbeelden: [
+            {
+              type: "verwarring",
+              tekst: "Niet verwarren: Amsterdam ligt in Noord-Holland, Rotterdam in Zuid-Holland.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Westen",
+              uitleg: "Noord-Holland, Zuid-Holland en Zeeland liggen aan zee in het westen.",
+            },
+          ],
+          niveaus: {
+            basis: "Zuid-Holland.",
+            simpeler: "Rotterdam + Den Haag = Zuid-Holland.",
+            nogSimpeler: "Zuid-Holland",
+          },
+        },
+      },
+      {
+        q: "Welke drie provincies liggen in het **noorden** van Nederland?",
+        options: [
+          "Groningen, Friesland en Drenthe",
+          "Zeeland, Limburg en Utrecht",
+          "Noord-Holland, Zuid-Holland en Zeeland",
+          "Noord-Brabant, Limburg en Gelderland",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          null,
+          "Deze drie liggen aan zee, maar in het westen.",
+          "Hier zitten twee provincies uit het zuiden bij.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Het noorden",
+              tekst: "In het **noorden** liggen **Groningen**, **Friesland** en **Drenthe**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "noorden",
+              uitleg: "Op de kaart: boven.",
+            },
+          ],
+          theorie: "Noord: Groningen, Friesland, Drenthe. West: Noord-Holland, Zuid-Holland, Zeeland. Zuid: Noord-Brabant, Limburg.",
+          voorbeelden: [
+            {
+              type: "kaart",
+              tekst: "Kijk bovenaan de kaart van Nederland: daar liggen Groningen, Friesland en Drenthe.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Windrichtingen",
+              uitleg: "Noord is boven, zuid is onder op de kaart.",
+            },
+          ],
+          niveaus: {
+            basis: "Groningen, Friesland en Drenthe.",
+            simpeler: "Noorden = Groningen, Friesland, Drenthe.",
+            nogSimpeler: "Groningen, Friesland, Drenthe",
+          },
+        },
+      },
+      {
+        q: "Welke provincie ligt het meest in het **zuiden**?",
+        options: ["Limburg", "Groningen", "Friesland", "Flevoland"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Deze provincie ligt juist helemaal bovenaan.",
+          null,
+          "Deze provincie ligt in het midden.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Limburg = zuid",
+              tekst: "**Limburg** ligt helemaal in het **zuiden** van Nederland. Daar zijn ook de enige echte heuvels.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "zuiden",
+              uitleg: "Op de kaart: onder.",
+            },
+          ],
+          theorie: "Zuid-provincies: Noord-Brabant en Limburg. Limburg loopt het verst naar beneden door.",
+          voorbeelden: [
+            {
+              type: "kaart",
+              tekst: "Onderaan de kaart van Nederland zie je Limburg, tussen België en Duitsland.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Zuiden",
+              uitleg: "Noord-Brabant en Limburg zijn de provincies in het zuiden.",
+            },
+          ],
+          niveaus: {
+            basis: "Limburg.",
+            simpeler: "Helemaal onderaan = Limburg.",
+            nogSimpeler: "Limburg",
+          },
+        },
+      },
+      {
+        q: "In welke provincie hoort de **Elfstedentocht** thuis?",
+        options: ["Friesland", "Limburg", "Zeeland", "Utrecht"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "In deze provincie zijn juist heuvels. De Elfstedentocht gaat over het ijs.",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Elfstedentocht = Friesland",
+              tekst: "**Friesland** is bekend om meren, **schaatsen** en de **Elfstedentocht**. Die tocht gaat langs elf Friese steden.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "Elfstedentocht",
+              uitleg: "Een lange schaatstocht langs elf steden in Friesland. Alleen als het heel hard vriest.",
+            },
+          ],
+          theorie: "Friesland = Fries (eigen taal), meren, schaatsen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Elf steden + schaatsen = Friesland.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Friesland",
+              uitleg: "Provincie in het noorden met een eigen taal: het Fries.",
+            },
+          ],
+          niveaus: {
+            basis: "Friesland.",
+            simpeler: "Elfstedentocht = Friesland.",
+            nogSimpeler: "Friesland",
+          },
         },
       },
     ],
@@ -260,6 +768,136 @@ const steps = [
           niveaus: { basis: "Arnhem.", simpeler: "Gelderland → Arnhem (niet Nijmegen!).", nogSimpeler: "Arnhem" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is de hoofdstad van **Drenthe**?",
+        options: ["Assen", "Emmen", "Zwolle", "Leeuwarden"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Deze stad ligt wel in Drenthe, maar is niet de hoofdstad.",
+          "Deze stad is de hoofdstad van Overijssel.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Assen = Drenthe",
+              tekst: "De hoofdstad van **Drenthe** is **Assen**. Daar zit het bestuur van de provincie.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "Assen",
+              uitleg: "Hoofdstad van Drenthe.",
+            },
+          ],
+          theorie: "Noord-rij: Groningen → Groningen, Friesland → Leeuwarden, Drenthe → Assen.",
+          voorbeelden: [
+            {
+              type: "verwarring",
+              tekst: "Niet verwarren: Zwolle is de hoofdstad van Overijssel, niet van Drenthe.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Hoofdstad",
+              uitleg: "De stad waar het bestuur van de provincie zit.",
+            },
+          ],
+          niveaus: {
+            basis: "Assen.",
+            simpeler: "Drenthe → Assen.",
+            nogSimpeler: "Assen",
+          },
+        },
+      },
+      {
+        q: "Bij welke **twee** provincies heeft de hoofdstad **dezelfde naam** als de provincie?",
+        options: [
+          "Groningen en Utrecht",
+          "Groningen en Friesland",
+          "Utrecht en Gelderland",
+          "Drenthe en Flevoland",
+        ],
+        answer: 0,
+        wrongHints: [null, "Wat is de hoofdstad van Friesland? Heet die ook Friesland?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zelfde naam",
+              tekst: "Bij **Groningen** en **Utrecht** heten provincie en hoofdstad hetzelfde. De stad Groningen ligt in de provincie Groningen, de stad Utrecht in de provincie Utrecht.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "provinciehoofdstad",
+              uitleg: "De stad waar het bestuur van een provincie zit.",
+            },
+          ],
+          theorie: "Alleen Groningen en Utrecht hebben een hoofdstad met dezelfde naam. Bij de andere 10 is de naam anders.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Friesland → Leeuwarden, Gelderland → Arnhem, Drenthe → Assen, Flevoland → Lelystad.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Makkelijk onthouden",
+              uitleg: "Twee 'gratis' hoofdsteden: Groningen en Utrecht.",
+            },
+          ],
+          niveaus: {
+            basis: "Groningen en Utrecht.",
+            simpeler: "Zelfde naam: Groningen, Utrecht.",
+            nogSimpeler: "Groningen + Utrecht",
+          },
+        },
+      },
+      {
+        q: "Naar wie of wat verwijst **'Lely'** in de naam **Lelystad**?",
+        options: [
+          "Naar de man van het plan voor de Zuiderzeewerken",
+          "Naar een bloem die daar heel veel groeit",
+          "Naar een rivier die door Flevoland stroomt",
+          "Naar een koning die daar vroeger woonde",
+        ],
+        answer: 0,
+        wrongHints: [null, "De naam lijkt op een bloem. Maar gaat het echt over een bloem?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Cornelis Lely",
+              tekst: "Lelystad is genoemd naar **Cornelis Lely**. Hij maakte het plan voor de **Zuiderzeewerken**. Daardoor kon **Flevoland** ontstaan.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "Zuiderzeewerken",
+              uitleg: "Het grote werk waarbij de Zuiderzee werd afgesloten en er nieuw land werd gemaakt.",
+            },
+          ],
+          theorie: "Lelystad is de hoofdstad van Flevoland, de provincie op nieuw land uit de zee.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Lely maakte het plan → nieuw land Flevoland → hoofdstad Lelystad.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Flevoland",
+              uitleg: "De jongste provincie, op land dat vroeger zee was.",
+            },
+          ],
+          niveaus: {
+            basis: "Naar Cornelis Lely.",
+            simpeler: "Lely = de man van het plan voor nieuw land.",
+            nogSimpeler: "Cornelis Lely",
+          },
+        },
+      },
     ],
   },
   {
@@ -307,6 +945,131 @@ const steps = [
           voorbeelden: [{ type: "ligging", tekst: "Maastricht ligt ruim 200 km van Amsterdam, maar heel dicht bij Luik (België) en Aken (Duitsland). Echt grensstad." }],
           basiskennis: [{ onderwerp: "Niet andere Limburgse", uitleg: "Heerlen = mijngeschiedenis. Roermond = outlet-shopping. Sittard = midden Limburg. Geen hoofdstad." }],
           niveaus: { basis: "Maastricht.", simpeler: "Limburg → Maastricht (zuidelijke grensstad, Verdrag van Maastricht).", nogSimpeler: "Maastricht" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is de hoofdstad van **Zuid-Holland**?",
+        options: ["Den Haag", "Rotterdam", "Leiden", "Delft"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dit is wel de grootste stad van Zuid-Holland. Maar is het de hoofdstad?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Den Haag = Zuid-Holland",
+              tekst: "De hoofdstad van **Zuid-Holland** is **Den Haag**. Rotterdam is groter, maar niet de hoofdstad.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "Den Haag",
+              uitleg: "Hoofdstad van Zuid-Holland. Hier zitten ook de regering en de koning.",
+            },
+          ],
+          theorie: "Valkuil: de grootste stad is niet altijd de hoofdstad. Noord-Holland → Haarlem, Zuid-Holland → Den Haag.",
+          voorbeelden: [
+            {
+              type: "verwarring",
+              tekst: "Rotterdam is groot, maar het bestuur van Zuid-Holland zit in Den Haag.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Hoofdstad",
+              uitleg: "De stad waar het bestuur van de provincie zit.",
+            },
+          ],
+          niveaus: {
+            basis: "Den Haag.",
+            simpeler: "Zuid-Holland → Den Haag (niet Rotterdam).",
+            nogSimpeler: "Den Haag",
+          },
+        },
+      },
+      {
+        q: "Wat is de hoofdstad van **Noord-Brabant**?",
+        options: ["'s-Hertogenbosch", "Eindhoven", "Tilburg", "Breda"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dit is een bekende grote stad in Noord-Brabant. Maar zit daar het bestuur?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "'s-Hertogenbosch",
+              tekst: "De hoofdstad van **Noord-Brabant** is **'s-Hertogenbosch**. In het dagelijks leven zeggen mensen **Den Bosch**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "'s-Hertogenbosch",
+              uitleg: "Hoofdstad van Noord-Brabant, ook wel Den Bosch genoemd.",
+            },
+          ],
+          theorie: "Ook hier is de grootste stad niet de hoofdstad: Eindhoven is groter, maar 's-Hertogenbosch is de hoofdstad.",
+          voorbeelden: [
+            {
+              type: "verwarring",
+              tekst: "Eindhoven, Tilburg en Breda liggen ook in Noord-Brabant, maar zijn geen hoofdstad.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Twee namen",
+              uitleg: "'s-Hertogenbosch en Den Bosch zijn dezelfde stad.",
+            },
+          ],
+          niveaus: {
+            basis: "'s-Hertogenbosch.",
+            simpeler: "Noord-Brabant → Den Bosch.",
+            nogSimpeler: "'s-Hertogenbosch",
+          },
+        },
+      },
+      {
+        q: "Hoe noemen de meeste mensen **'s-Hertogenbosch** in het dagelijks leven?",
+        options: ["Den Bosch", "Den Haag", "Den Helder", "Hertogstad"],
+        answer: 0,
+        wrongHints: [null, "Deze naam begint ook met 'Den', maar is een andere stad.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Den Bosch",
+              tekst: "**'s-Hertogenbosch** is de officiële naam. Bijna iedereen zegt **Den Bosch**. Beide namen zijn goed.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "Den Bosch",
+              uitleg: "De korte naam van 's-Hertogenbosch, de hoofdstad van Noord-Brabant.",
+            },
+          ],
+          theorie: "'s-Hertogenbosch betekent 'het bos van de hertog'. Kort: Den Bosch.",
+          voorbeelden: [
+            {
+              type: "verwarring",
+              tekst: "Den Haag is de hoofdstad van Zuid-Holland. Den Bosch is de hoofdstad van Noord-Brabant.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Officiële naam",
+              uitleg: "De naam die op papier staat. De gewone naam is vaak korter.",
+            },
+          ],
+          niveaus: {
+            basis: "Den Bosch.",
+            simpeler: "'s-Hertogenbosch = Den Bosch.",
+            nogSimpeler: "Den Bosch",
+          },
         },
       },
     ],
@@ -358,6 +1121,88 @@ const steps = [
           niveaus: { basis: "Bescherming overstroming.", simpeler: "Deltawerken = beschermen Zeeland tegen overstromingen, na 1953-ramp.", nogSimpeler: "Bescherming" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Uit welk land komt de rivier de **Rijn**?",
+        options: ["Zwitserland", "Frankrijk", "België", "Spanje"],
+        answer: 0,
+        wrongHints: [null, "Uit dit land komen de Maas en de Schelde. Ook de Rijn?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Rijn uit Zwitserland",
+              tekst: "De **Rijn** komt uit **Zwitserland**, stroomt door **Duitsland** en komt dan Nederland binnen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "rivier",
+              uitleg: "Een groot stromend water dat naar zee gaat.",
+            },
+          ],
+          theorie: "Rijn → Zwitserland. Maas en Schelde → Frankrijk.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Zwitserland → Duitsland → Nederland → zee.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Drie rivieren",
+              uitleg: "De drie grote rivieren zijn de Rijn, de Maas en de Schelde.",
+            },
+          ],
+          niveaus: {
+            basis: "Zwitserland.",
+            simpeler: "Rijn begint in Zwitserland.",
+            nogSimpeler: "Zwitserland",
+          },
+        },
+      },
+      {
+        q: "Wat is een **polder**?",
+        options: [
+          "Laag land dat vroeger water was en is drooggemalen",
+          "Een hoge zandheuvel aan de zee",
+          "Een rivier die naar de zee stroomt",
+          "Een dam die de zee tegenhoudt",
+        ],
+        answer: 0,
+        wrongHints: [null, "Een polder ligt juist laag. Klopt 'hoog' dan?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Polder",
+              tekst: "Een **polder** is een **laag** stuk land dat vroeger zee of meer was. Het water is weggepompt: vroeger met **molens**, nu met **gemalen**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "polder",
+              uitleg: "Laag land dat is drooggemalen.",
+            },
+          ],
+          theorie: "Polder: eerst water → dijk eromheen → water wegpompen → droog land.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Vroeger pompten molens het water weg. Nu doen gemalen dat.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Gemaal",
+              uitleg: "Een gebouw met pompen dat water wegpompt.",
+            },
+          ],
+          niveaus: {
+            basis: "Laag, drooggemalen land.",
+            simpeler: "Polder = laag land dat eerst water was.",
+            nogSimpeler: "Drooggemalen land",
+          },
+        },
+      },
     ],
   },
   {
@@ -405,6 +1250,222 @@ const steps = [
           voorbeelden: [{ type: "binnen NL", tekst: "Veluwe (Gelderland) hoogste ~110 m. Drenthe heuvels max ~30 m. Vaalserberg eenzaam de top met 322 m." }],
           basiskennis: [{ onderwerp: "Niet andere", uitleg: "Mont Blanc = Frankrijk. Zuiderzeeweg = straatnaam (geen berg). Tafelberg = Zuid-Afrika of Suriname." }],
           niveaus: { basis: "Vaalserberg 322 m.", simpeler: "Hoogste NL = Vaalserberg (322 m, Limburg).", nogSimpeler: "Vaalserberg" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welk Waddeneiland is het **grootste**?",
+        options: ["Texel", "Vlieland", "Ameland", "Schiermonnikoog"],
+        answer: 0,
+        wrongHints: [null, null, null, "Dit eiland ligt helemaal in het oosten. Is het ook het grootste?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Texel = grootste",
+              tekst: "**Texel** is het **grootste** Waddeneiland. Het hoort bij **Noord-Holland**. De andere vier horen bij Friesland.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "Waddeneiland",
+              uitleg: "Een eiland in het noorden, tussen de Waddenzee en de Noordzee.",
+            },
+          ],
+          theorie: "Texel: westelijkste én grootste. Schiermonnikoog: oostelijkste.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Texel is het eerste eiland van west naar oost, en het grootste.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Waddeneilanden",
+              uitleg: "Texel, Vlieland, Terschelling, Ameland, Schiermonnikoog.",
+            },
+          ],
+          niveaus: {
+            basis: "Texel.",
+            simpeler: "Grootste eiland = Texel.",
+            nogSimpeler: "Texel",
+          },
+        },
+      },
+      {
+        q: "In welke volgorde liggen de Waddeneilanden van **west naar oost**?",
+        options: [
+          "Texel, Vlieland, Terschelling, Ameland, Schiermonnikoog",
+          "Vlieland, Texel, Terschelling, Ameland, Schiermonnikoog",
+          "Texel, Terschelling, Vlieland, Ameland, Schiermonnikoog",
+          "Schiermonnikoog, Ameland, Terschelling, Vlieland, Texel",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Welk eiland ligt het meest naar het westen? Staat dat vooraan?",
+          null,
+          "Dit is de goede rij, maar dan precies omgekeerd. Welke kant begin je?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Toen Vroeg Truus Aan Schelden?",
+              tekst: "Van **west naar oost**: **T**exel, **V**lieland, **T**erschelling, **A**meland, **S**chiermonnikoog.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "volgorde",
+              uitleg: "In welke rij de dingen na elkaar komen.",
+            },
+          ],
+          theorie: "Ezelsbruggetje: 'Toen Vroeg Truus Aan Schelden?' → T-V-T-A-S.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "T = Texel, V = Vlieland, T = Terschelling, A = Ameland, S = Schiermonnikoog.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "West en oost",
+              uitleg: "West is links op de kaart, oost is rechts.",
+            },
+          ],
+          niveaus: {
+            basis: "Texel, Vlieland, Terschelling, Ameland, Schiermonnikoog.",
+            simpeler: "T-V-T-A-S, van links naar rechts.",
+            nogSimpeler: "T-V-T-A-S",
+          },
+        },
+      },
+      {
+        q: "Hoe heet het gebied in **Gelderland** met bossen, heide en hoge zandgrond?",
+        options: ["De Veluwe", "De Betuwe", "De Biesbosch", "De Keukenhof"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dit gebied ligt bij de rivieren en is juist laag. Klopt 'hoog' dan?",
+          null,
+          "Dit is een bekend park met bloemen. Is het een groot bos?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "De Veluwe",
+              tekst: "De **Veluwe** in **Gelderland** is een **hoge zandgrond** met veel **bossen** en **heide**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "heide",
+              uitleg: "Open land met lage paarse struikjes, vaak op zandgrond.",
+            },
+          ],
+          theorie: "Hoge zandgronden: Veluwe, Drenthe, Noord-Brabant. Lage delen: polders in het westen.",
+          voorbeelden: [
+            {
+              type: "verwarring",
+              tekst: "De Betuwe ligt ook in Gelderland, maar tussen de rivieren en laag.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Zandgrond",
+              uitleg: "Grond van zand. Daar groeien vaak bossen en heide.",
+            },
+          ],
+          niveaus: {
+            basis: "De Veluwe.",
+            simpeler: "Bos en heide in Gelderland = Veluwe.",
+            nogSimpeler: "Veluwe",
+          },
+        },
+      },
+      {
+        q: "Wat kun je in de **Waddenzee** doen als het water bij **eb** weg is?",
+        options: ["Wadlopen", "Skiën", "Bergbeklimmen", "Duiken"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Daarvoor heb je sneeuw en bergen nodig.",
+          null,
+          "Daarvoor heb je juist diep water nodig.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wadlopen",
+              tekst: "Bij **eb** zakt het water en komen grote stukken van de Waddenzee **droog** te liggen. Dan kun je met een gids over de bodem lopen: **wadlopen**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "eb",
+              uitleg: "Als het water in de zee lager wordt.",
+            },
+          ],
+          theorie: "Eb = water laag. Vloed = water hoog. Bij eb kun je wadlopen.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Water weg → droge zeebodem → wadlopen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Vloed",
+              uitleg: "Als het water in de zee weer hoger wordt.",
+            },
+          ],
+          niveaus: {
+            basis: "Wadlopen.",
+            simpeler: "Eb = wadlopen.",
+            nogSimpeler: "Wadlopen",
+          },
+        },
+      },
+      {
+        q: "Waar in Nederland liggen vooral de **lage** polders en weilanden?",
+        options: [
+          "In het westen en noorden",
+          "In het zuiden van Limburg",
+          "Op de Veluwe",
+          "Op de Vaalserberg",
+        ],
+        answer: 0,
+        wrongHints: [null, "Daar liggen juist de heuvels.", "Dit is een hoge zandgrond.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Laag = west en noord",
+              tekst: "De **lage** delen met **polders** en **weilanden** liggen vooral in het **westen** en **noorden**. Ze worden beschermd door **dijken** en **duinen**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "weiland",
+              uitleg: "Een grasveld waar koeien of schapen grazen.",
+            },
+          ],
+          theorie: "Hoog: Veluwe, Drenthe, Noord-Brabant, heuvels van Limburg. Laag: west en noord.",
+          voorbeelden: [
+            {
+              type: "verwarring",
+              tekst: "Limburg heeft heuvels, de Veluwe is hoge zandgrond. Daar liggen geen lage polders.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Polder",
+              uitleg: "Laag land dat vroeger water was.",
+            },
+          ],
+          niveaus: {
+            basis: "In het westen en noorden.",
+            simpeler: "Laag land = west en noord.",
+            nogSimpeler: "West en noord",
+          },
         },
       },
     ],
@@ -456,6 +1517,283 @@ const steps = [
           niveaus: { basis: "Duitsland + België.", simpeler: "NL grenst aan Duitsland (oost) en België (zuid).", nogSimpeler: "DE+BE" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is de **grootste** stad van Nederland?",
+        options: ["Amsterdam", "Rotterdam", "Den Haag", "Utrecht"],
+        answer: 0,
+        wrongHints: [null, "Deze stad staat op plek 2.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Amsterdam = grootste",
+              tekst: "**Amsterdam** is de grootste stad van Nederland én de hoofdstad. Daarna komen Rotterdam, Den Haag, Utrecht en Eindhoven.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "Amsterdam",
+              uitleg: "Hoofdstad en grootste stad van Nederland, in Noord-Holland.",
+            },
+          ],
+          theorie: "Top 5: 1 Amsterdam, 2 Rotterdam, 3 Den Haag, 4 Utrecht, 5 Eindhoven.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Grachten, Anne Frank Huis, Rijksmuseum: allemaal in Amsterdam.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Grootste",
+              uitleg: "De stad waar de meeste mensen wonen.",
+            },
+          ],
+          niveaus: {
+            basis: "Amsterdam.",
+            simpeler: "Nummer 1 = Amsterdam.",
+            nogSimpeler: "Amsterdam",
+          },
+        },
+      },
+      {
+        q: "Welke stad heeft de grootste **haven van Europa**?",
+        options: ["Rotterdam", "Amsterdam", "Utrecht", "Eindhoven"],
+        answer: 0,
+        wrongHints: [null, null, "Ligt deze stad aan zee? Kan daar een grote zeehaven zijn?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Haven van Rotterdam",
+              tekst: "**Rotterdam** heeft de **grootste haven van Europa**. Grote zeeschepen komen er aan.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "haven",
+              uitleg: "Een plek waar schepen aankomen, laden en lossen.",
+            },
+          ],
+          theorie: "Rotterdam = haven. Den Haag = regering. Amsterdam = hoofdstad.",
+          voorbeelden: [
+            {
+              type: "verwarring",
+              tekst: "Amsterdam heeft ook een haven, maar de grootste haven van Europa is die van Rotterdam.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Rotterdam",
+              uitleg: "Tweede stad van Nederland, in Zuid-Holland.",
+            },
+          ],
+          niveaus: {
+            basis: "Rotterdam.",
+            simpeler: "Grootste haven = Rotterdam.",
+            nogSimpeler: "Rotterdam",
+          },
+        },
+      },
+      {
+        q: "Wat is de hoofdstad van **België**?",
+        options: ["Brussel", "Antwerpen", "Gent", "Brugge"],
+        answer: 0,
+        wrongHints: [null, "Dit is een grote havenstad in België. Is het de hoofdstad?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Brussel",
+              tekst: "De hoofdstad van **België** is **Brussel**. Daar zit ook de Europese Unie.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "Brussel",
+              uitleg: "Hoofdstad van België.",
+            },
+          ],
+          theorie: "Buurlanden en hun hoofdsteden: België → Brussel, Duitsland → Berlijn.",
+          voorbeelden: [
+            {
+              type: "verwarring",
+              tekst: "Antwerpen, Gent en Brugge zijn bekende Belgische steden, maar niet de hoofdstad.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "België",
+              uitleg: "Buurland in het zuiden van Nederland.",
+            },
+          ],
+          niveaus: {
+            basis: "Brussel.",
+            simpeler: "België → Brussel.",
+            nogSimpeler: "Brussel",
+          },
+        },
+      },
+      {
+        q: "Wat is de hoofdstad van **Duitsland**?",
+        options: ["Berlijn", "München", "Hamburg", "Keulen"],
+        answer: 0,
+        wrongHints: [null, null, "Dit is een grote havenstad in Duitsland. Is het de hoofdstad?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Berlijn",
+              tekst: "De hoofdstad van **Duitsland** is **Berlijn**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "Berlijn",
+              uitleg: "Hoofdstad van Duitsland.",
+            },
+          ],
+          theorie: "Duitsland ligt aan de oostkant van Nederland. De hoofdstad is Berlijn.",
+          voorbeelden: [
+            {
+              type: "verwarring",
+              tekst: "München, Hamburg en Keulen zijn grote Duitse steden, maar niet de hoofdstad.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Duitsland",
+              uitleg: "Buurland in het oosten van Nederland.",
+            },
+          ],
+          niveaus: {
+            basis: "Berlijn.",
+            simpeler: "Duitsland → Berlijn.",
+            nogSimpeler: "Berlijn",
+          },
+        },
+      },
+      {
+        q: "Welke **drie talen** spreken mensen in België?",
+        options: [
+          "Nederlands, Frans en Duits",
+          "Nederlands, Frans en Engels",
+          "Frans, Duits en Italiaans",
+          "Nederlands, Engels en Duits",
+        ],
+        answer: 0,
+        wrongHints: [null, "Twee talen kloppen. Welke derde taal spreekt een kleine groep?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Drie talen",
+              tekst: "In **België** spreken mensen **Nederlands** (in Vlaanderen), **Frans** (in Wallonië) en **Duits** (een kleine groep).",
+            },
+          ],
+          woorden: [
+            {
+              woord: "Vlaanderen",
+              uitleg: "Het noordelijke deel van België, waar ze Nederlands spreken.",
+            },
+          ],
+          theorie: "Vlaanderen = Nederlands. Wallonië = Frans. Kleine groep = Duits.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Een Vlaming uit Gent spreekt Nederlands, net als jij.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Wallonië",
+              uitleg: "Het zuidelijke deel van België, waar ze Frans spreken.",
+            },
+          ],
+          niveaus: {
+            basis: "Nederlands, Frans en Duits.",
+            simpeler: "België: Nederlands, Frans, Duits.",
+            nogSimpeler: "NL, Frans, Duits",
+          },
+        },
+      },
+      {
+        q: "Welke stad ligt in het **midden** van het land, is een groot **treinknooppunt** en heeft de **Domkerk**?",
+        options: ["Utrecht", "Groningen", "Maastricht", "Middelburg"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Deze stad ligt helemaal in het noorden.",
+          "Deze stad ligt helemaal in het zuiden.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Utrecht",
+              tekst: "**Utrecht** ligt **centraal** in Nederland. Veel treinen komen er samen en de stad heeft de **Domkerk**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "treinknooppunt",
+              uitleg: "Een plek waar veel treinlijnen samenkomen.",
+            },
+          ],
+          theorie: "Utrecht = midden, treinen, Dom. Het is de vierde stad van Nederland.",
+          voorbeelden: [
+            {
+              type: "kaart",
+              tekst: "Kijk in het midden van de kaart van Nederland: daar ligt Utrecht.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Centraal",
+              uitleg: "In het midden.",
+            },
+          ],
+          niveaus: {
+            basis: "Utrecht.",
+            simpeler: "Midden + Dom = Utrecht.",
+            nogSimpeler: "Utrecht",
+          },
+        },
+      },
+      {
+        q: "Welke stad hoort **niet** bij de vier grote steden van de **Randstad**?",
+        options: ["Eindhoven", "Amsterdam", "Rotterdam", "Utrecht"],
+        answer: 0,
+        wrongHints: [null, null, "Deze stad heeft de grote haven. Ligt die in de Randstad?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Randstad",
+              tekst: "De **Randstad** is het gebied tussen **Amsterdam**, **Rotterdam**, **Den Haag** en **Utrecht**. **Eindhoven** ligt in Noord-Brabant, in het zuiden.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "Randstad",
+              uitleg: "Het drukke gebied tussen Amsterdam, Rotterdam, Den Haag en Utrecht.",
+            },
+          ],
+          theorie: "Randstad = de vier grote steden in het westen en midden. Eindhoven ligt daar ver vandaan.",
+          voorbeelden: [
+            {
+              type: "kaart",
+              tekst: "Eindhoven ligt in het zuiden, in Noord-Brabant.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Dichtbevolkt",
+              uitleg: "Een gebied waar heel veel mensen dicht bij elkaar wonen.",
+            },
+          ],
+          niveaus: {
+            basis: "Eindhoven.",
+            simpeler: "Randstad: Amsterdam, Rotterdam, Den Haag, Utrecht.",
+            nogSimpeler: "Eindhoven",
+          },
+        },
+      },
     ],
   },
   {
@@ -503,6 +1841,250 @@ const steps = [
           voorbeelden: [{ type: "bezoek", tekst: "1 miljoen bezoekers/jaar voor 2.600 inwoners. Overbelasting heeft regels gebracht: geen drones, geen luide muziek, beperkte bootverhuur." }],
           basiskennis: [{ onderwerp: "Niet andere", uitleg: "Volendam = visserij + paling. Kinderdijk = molens. Marken = klederdracht/visserij. Allemaal toeristisch maar geen 'Venetië'." }],
           niveaus: { basis: "Giethoorn.", simpeler: "'Venetië van NL' = Giethoorn (Overijssel, dorp met grachten).", nogSimpeler: "Giethoorn" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke lange dijk ligt tussen **Noord-Holland** en **Friesland**?",
+        options: ["De Afsluitdijk", "De Oosterscheldekering", "De Maeslantkering", "De Kinderdijk"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Deze ligt in Zeeland. Ligt die tussen Noord-Holland en Friesland?",
+          null,
+          "Dit is een plaats met oude molens in Zuid-Holland.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Afsluitdijk",
+              tekst: "De **Afsluitdijk** ligt tussen **Noord-Holland** en **Friesland**. Hij sloot in **1932** de **Zuiderzee** af. Zo ontstond het **IJsselmeer**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "Afsluitdijk",
+              uitleg: "Lange dijk tussen Noord-Holland en Friesland.",
+            },
+          ],
+          theorie: "De naam zegt het al: de dijk sloot de Zuiderzee af.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Zuiderzee + Afsluitdijk → IJsselmeer.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "IJsselmeer",
+              uitleg: "Het meer dat vroeger de Zuiderzee was.",
+            },
+          ],
+          niveaus: {
+            basis: "De Afsluitdijk.",
+            simpeler: "Noord-Holland ↔ Friesland = Afsluitdijk.",
+            nogSimpeler: "Afsluitdijk",
+          },
+        },
+      },
+      {
+        q: "Vanaf welke plaats bij **Rotterdam** varen veerboten naar **Engeland**?",
+        options: ["Hoek van Holland", "Den Helder", "Volendam", "Giethoorn"],
+        answer: 0,
+        wrongHints: [null, "Deze plaats ligt in het noorden van Noord-Holland, niet bij Rotterdam.", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Hoek van Holland",
+              tekst: "**Hoek van Holland** ligt aan zee bij **Rotterdam**. Daar vertrekken **veerboten** naar Engeland.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "veerboot",
+              uitleg: "Een boot die mensen en auto's naar de overkant brengt.",
+            },
+          ],
+          theorie: "Kustplaatsen: Den Helder (marine), IJmuiden (sluizen), Scheveningen (strand), Hoek van Holland (veerboten), Vlissingen (havens).",
+          voorbeelden: [
+            {
+              type: "kaart",
+              tekst: "Hoek van Holland ligt aan de Noordzee, vlak bij Rotterdam.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Kust",
+              uitleg: "Het land vlak langs de zee.",
+            },
+          ],
+          niveaus: {
+            basis: "Hoek van Holland.",
+            simpeler: "Veerboot naar Engeland = Hoek van Holland.",
+            nogSimpeler: "Hoek van Holland",
+          },
+        },
+      },
+      {
+        q: "Welke plaats bij **Den Haag** is bekend om de **pier** en het **strand**?",
+        options: ["Scheveningen", "Volendam", "Giethoorn", "Marken"],
+        answer: 0,
+        wrongHints: [null, null, "Hier vaar je door grachten. Is er een strand aan zee?", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Scheveningen",
+              tekst: "**Scheveningen** hoort bij **Den Haag** en ligt aan de Noordzee. Het is bekend om de **pier** en het **strand**.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "pier",
+              uitleg: "Een lange steiger die vanaf het strand de zee in gaat.",
+            },
+          ],
+          theorie: "Den Haag ligt aan zee. Het strand van Den Haag heet Scheveningen.",
+          voorbeelden: [
+            {
+              type: "kaart",
+              tekst: "Scheveningen ligt aan de kust van Zuid-Holland.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Kustplaats",
+              uitleg: "Een plaats aan de zee.",
+            },
+          ],
+          niveaus: {
+            basis: "Scheveningen.",
+            simpeler: "Strand van Den Haag = Scheveningen.",
+            nogSimpeler: "Scheveningen",
+          },
+        },
+      },
+      {
+        q: "Welk **vissersdorp** in Noord-Holland is bekend om zijn **klederdracht**?",
+        options: ["Volendam", "Giethoorn", "Kinderdijk", "Maastricht"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dit dorp ligt in Overijssel en is bekend om grachten.",
+          "Hier staan oude molens. Is het een vissersdorp?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Volendam",
+              tekst: "**Volendam** is een **vissersdorp** in **Noord-Holland**. Het is bekend om de **klederdracht**: de traditionele kleding.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "klederdracht",
+              uitleg: "Traditionele kleding van een dorp of streek.",
+            },
+          ],
+          theorie: "Toeristen-plekken: Volendam (vissersdorp), Marken (vroeger eiland), Giethoorn (grachten), Kinderdijk (molens).",
+          voorbeelden: [
+            {
+              type: "verwarring",
+              tekst: "Giethoorn = grachten. Kinderdijk = molens. Volendam = vissers en klederdracht.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Noord-Holland",
+              uitleg: "Provincie met Amsterdam, Haarlem en Volendam.",
+            },
+          ],
+          niveaus: {
+            basis: "Volendam.",
+            simpeler: "Vissersdorp + klederdracht = Volendam.",
+            nogSimpeler: "Volendam",
+          },
+        },
+      },
+      {
+        q: "Wat was **Marken** vroeger?",
+        options: ["Een eiland", "Een berg", "Een luchthaven", "Een rivier"],
+        answer: 0,
+        wrongHints: [null, "Nederland is heel plat. Zou dit kloppen?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Marken = vroeger eiland",
+              tekst: "**Marken** was vroeger een **eiland** in de Zuiderzee. Nu is het met een dijk aan het vasteland vast.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "eiland",
+              uitleg: "Een stuk land met aan alle kanten water.",
+            },
+          ],
+          theorie: "'Voormalig eiland' = vroeger een eiland, nu niet meer.",
+          voorbeelden: [
+            {
+              type: "stap",
+              tekst: "Marken = vroeger eiland, nu vast aan het land.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Voormalig",
+              uitleg: "Wat vroeger zo was, maar nu niet meer.",
+            },
+          ],
+          niveaus: {
+            basis: "Een eiland.",
+            simpeler: "Marken was een eiland.",
+            nogSimpeler: "Eiland",
+          },
+        },
+      },
+      {
+        q: "Wat is de **Oosterscheldekering**?",
+        options: [
+          "Een beweegbare stormvloedkering in Zeeland",
+          "Een hoge brug over de Maas in Limburg",
+          "Een grote sluis bij de haven van Amsterdam",
+          "Een lange dijk tussen Friesland en Noord-Holland",
+        ],
+        answer: 0,
+        wrongHints: [null, null, null, "Dat is een andere bekende dijk. Hoe heet die?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Oosterscheldekering",
+              tekst: "De **Oosterscheldekering** ligt in **Zeeland**. Het is een **beweegbare stormvloedkering**: hij gaat alleen dicht bij een zware storm.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "stormvloedkering",
+              uitleg: "Een grote dam met deuren die dichtgaan als er een zware storm op zee is.",
+            },
+          ],
+          theorie: "De Oosterscheldekering is het bekendste deel van de Deltawerken.",
+          voorbeelden: [
+            {
+              type: "verwarring",
+              tekst: "De lange dijk tussen Friesland en Noord-Holland is de Afsluitdijk.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Deltawerken",
+              uitleg: "Dammen en keringen in Zeeland tegen overstromingen.",
+            },
+          ],
+          niveaus: {
+            basis: "Een stormvloedkering in Zeeland.",
+            simpeler: "Zeeland + gaat dicht bij storm.",
+            nogSimpeler: "Stormvloedkering",
+          },
         },
       },
     ],

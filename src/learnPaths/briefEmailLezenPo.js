@@ -312,6 +312,113 @@ Handig ezelsbruggetje: **de randen van de brief vertellen wie, wanneer en waarov
           },
         },
       },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een brief eindigt zo: *\"Met vriendelijke groet, Meester Ahmed\"*. Hoe heet het stukje **'Meester Ahmed'**?",
+        options: ["De ondertekening", "De aanhef", "De kern", "Het onderwerp"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat onderdeel staat aan het begín van een brief, met 'Beste' of 'Geachte'. Waar staat deze naam?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kijk naar de plek",
+              tekst: "'Meester Ahmed' staat helemaal aan het einde, direct onder de groet 'Met vriendelijke groet,'.",
+            },
+            {
+              titel: "Groet en naam",
+              tekst: "De groet heet de afsluiting. De naam van de schrijver direct daaronder heeft een eigen naam.",
+            },
+            {
+              titel: "Wat vertelt dit?",
+              tekst: "Deze naam vertelt wie de brief geschreven heeft. Meester Ahmed is dus de afzender.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "ondertekening",
+              uitleg: "De naam van de schrijver, helemaal onderaan de brief, onder de groet.",
+            },
+            {
+              woord: "afsluiting",
+              uitleg: "De groet aan het einde, zoals 'Met vriendelijke groet,'.",
+            },
+          ],
+          theorie: "**Het einde van een brief**\n\nEen brief eindigt met twee onderdelen:\n\n1. **Afsluiting** — de groet: 'Met vriendelijke groet,'\n2. **Ondertekening** — de naam van de schrijver, direct onder de groet.\n\nDe ondertekening is dé plek om de afzender te vinden.",
+          voorbeelden: [
+            {
+              type: "brief",
+              tekst: "'Met vriendelijke groet, Juf Annemiek' → 'Met vriendelijke groet' is de afsluiting, 'Juf Annemiek' is de ondertekening.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Naam onderaan",
+              uitleg: "De naam onder de groet vertelt altijd wie de brief schreef.",
+            },
+          ],
+          niveaus: {
+            basis: "Deze naam staat helemaal onderaan, onder de groet. Hoe heet dat onderdeel?",
+            simpeler: "De groet zelf heet de afsluiting. Hoe heet de naam die eronder staat?",
+            nogSimpeler: "Welk onderdeel bevat de naam van de schrijver?",
+          },
+        },
+      },
+      {
+        q: "In welk deel van een brief staat het echte verhaal: wat er aan de hand is?",
+        options: ["In de kern", "In de aanhef", "In de ondertekening", "In de afsluiting"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is de korte begroeting aan het begin, zoals 'Beste ouders en verzorgers,'. Past daar een heel verhaal in?",
+          null,
+          "Dat is alleen de groet aan het einde. Waar staat het lange stuk tekst?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "De randen",
+              tekst: "Aan de randen van een brief staan de korte onderdelen: datum, aanhef, afsluiting en ondertekening.",
+            },
+            {
+              titel: "Het midden",
+              tekst: "Tussen de aanhef en de afsluiting staat het lange middenstuk. Daar vertelt de schrijver wat er aan de hand is.",
+            },
+            {
+              titel: "De naam van het midden",
+              tekst: "Dat middenstuk heeft een eigen naam: het is het hart van de brief.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kern",
+              uitleg: "Het middenstuk van een brief, waar het echte verhaal staat.",
+            },
+          ],
+          theorie: "**Het ezelsbruggetje**\n\nDe randen van de brief vertellen wie, wanneer en waarover. Het midden vertelt wat er aan de hand is.\n\n- boven: datum, aanhef\n- midden: **kern**\n- onder: afsluiting, ondertekening",
+          voorbeelden: [
+            {
+              type: "kern",
+              tekst: "In een brief over de sportdag staat in het midden waar en wanneer de sportdag is en wat je moet meenemen. Dat is de kern.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Midden = verhaal",
+              uitleg: "Wil je weten wat er aan de hand is? Lees het middenstuk van de brief.",
+            },
+          ],
+          niveaus: {
+            basis: "Welk onderdeel staat in het midden van de brief, tussen de begroeting en de groet?",
+            simpeler: "De aanhef, de afsluiting en de ondertekening zijn allemaal kort. Welk onderdeel is lang?",
+            nogSimpeler: "Hoe heet het middenstuk van een brief?",
+          },
+        },
+      },
     ],
   },
 
@@ -531,6 +638,127 @@ Beantwoord nu de vier vragen over de brief hierboven. Zoek het antwoord altijd �
             basis: "Er staan drie datums in de brief. Zoek de zin waarin het woord 'sportdag' sámen met een datum staat.",
             simpeler: "Eén datum hoort bij het strookje, één staat bovenaan naast de plaatsnaam. Welke datum blijft er over — en wat gebeurt er op die dag?",
             nogSimpeler: "Lees de allereerste zin van de brief nog eens heel precies.",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Voor wie is deze brief bedoeld?",
+        options: [
+          "Voor de ouders en verzorgers",
+          "Voor meester Jasper de Vries",
+          "Voor de kinderen van groep 6, 7 en 8",
+          "Voor sportpark De Weide",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Die naam staat onderaan, bij de ondertekening. Is dat de schrijver of de lezer?",
+          "De kinderen doen mee aan de sportdag. Maar wie wordt er begroet aan het begin van de brief?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoek de aanhef",
+              tekst: "De ontvanger vind je in de aanhef, de begroeting aan het begin: 'Beste ouders en verzorgers,'.",
+            },
+            {
+              titel: "Check de rest",
+              tekst: "De brief spreekt de lezer aan met 'u': 'Wilt u uw kind...'. Dat zijn dus de ouders en verzorgers, niet de kinderen zelf.",
+            },
+            {
+              titel: "Draai niet om",
+              tekst: "De naam onderaan is van de schrijver, de afzender. Die is niet de ontvanger.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "ontvanger",
+              uitleg: "Degene voor wie de brief bedoeld is.",
+            },
+            {
+              woord: "aanhef",
+              uitleg: "De begroeting waarmee de brief begint, zoals 'Beste ouders en verzorgers,'.",
+            },
+          ],
+          theorie: "**Ontvanger zoeken**\n\n- De **aanhef** noemt de lezer: 'Beste ouders en verzorgers,'.\n- De **ondertekening** noemt de schrijver: 'Meester Jasper de Vries'.\n\nDe brief gaat over de kinderen, maar is geschreven voor de ouders en verzorgers. Dat zie je ook aan 'uw kind'.",
+          voorbeelden: [
+            {
+              type: "ontvanger",
+              tekst: "'Beste leden van de tennisclub, ... Trainer Bas' → de ontvangers zijn de leden.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Aanhef = lezer",
+              uitleg: "Wil je weten voor wie een brief is? Lees de aanhef.",
+            },
+          ],
+          niveaus: {
+            basis: "Lees de begroeting helemaal aan het begin van de brief. Wie wordt daar genoemd?",
+            simpeler: "De brief zegt 'Wilt u uw kind...'. Wie wordt er met 'u' aangesproken?",
+            nogSimpeler: "Wie staat er achter 'Beste' in de aanhef?",
+          },
+        },
+      },
+      {
+        q: "Bij wie moet het strookje worden ingeleverd?",
+        options: [
+          "Bij de juf of meester van het kind",
+          "Bij de beheerder van sportpark De Weide",
+          "Bij de conciërge van de school",
+          "Bij de hulpouders op de sportdag",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Het sportpark is de plek van de sportdag. Zoek de zin met het woord 'inleveren'.",
+          null,
+          "Het strookje moet al vóór de sportdag binnen zijn. Lees de zin met 'uiterlijk woensdag 13 mei' nog eens.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoekwoord",
+              tekst: "De vraag gaat over inleveren. Scan de brief op het woord 'inleveren'.",
+            },
+            {
+              titel: "Precies lezen",
+              tekst: "'Wilt u het strookje invullen en uiterlijk woensdag 13 mei inleveren bij de juf of meester van uw kind?'",
+            },
+            {
+              titel: "Controleer",
+              tekst: "De zin noemt één plek om in te leveren. Andere mensen of plekken staan er niet bij.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "strookje",
+              uitleg: "Een klein stukje papier onderaan een brief dat je invult en terugbrengt.",
+            },
+            {
+              woord: "uiterlijk",
+              uitleg: "Op zijn laatst. 'Uiterlijk woensdag' betekent: woensdag of eerder.",
+            },
+          ],
+          theorie: "**De doe-zin lezen**\n\nIn de doe-zin staan vaak drie dingen tegelijk:\n\n1. **Wat** — het strookje invullen\n2. **Wanneer** — uiterlijk woensdag 13 mei\n3. **Waar of bij wie** — bij de juf of meester\n\nLees de hele zin, dan mis je geen stukje.",
+          voorbeelden: [
+            {
+              type: "doe-zin",
+              tekst: "'Wilt u het formulier vóór vrijdag inleveren bij de balie?' → wat: formulier, wanneer: vóór vrijdag, waar: bij de balie.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lees de hele zin",
+              uitleg: "Een doe-zin bevat vaak wat, wanneer én waar. Stop niet halverwege met lezen.",
+            },
+          ],
+          niveaus: {
+            basis: "Zoek de zin met het woord 'inleveren'. Bij wie staat daar?",
+            simpeler: "De zin begint met 'Wilt u het strookje invullen...'. Lees hem tot het einde.",
+            nogSimpeler: "Wie ziet het kind elke dag in de klas?",
           },
         },
       },
@@ -762,6 +990,122 @@ Oefen deze drie gevallen hieronder met korte stukjes brief.`,
             basis: "Hoe voelt de schrijver zich: boos, verdrietig of blij? En wat zegt de laatste zin?",
             simpeler: "De schrijver heeft iets gekregen en roept 'duizend keer...' — wat wil hij daarmee tegen oma zeggen?",
             nogSimpeler: "Lees de laatste twee woorden van het briefje hardop.",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "*\"Bergdorp, 10 maart 2026. Beste leden, op zaterdag 28 maart houden we de grote opruimdag. Geef je uiterlijk 20 maart op.\"* — Wat is de deadline om je op te geven?",
+        options: ["20 maart", "28 maart", "10 maart", "Dat staat niet in de brief"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Op die dag is de opruimdag zelf. Zoek de zin met 'Geef je'.",
+          "Die datum staat bovenaan, naast de plaatsnaam. Wat betekent een datum op die plek?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Drie datums",
+              tekst: "In dit stukje staan drie datums: 10 maart, 28 maart en 20 maart. Elke datum betekent iets anders.",
+            },
+            {
+              titel: "Koppel elke datum",
+              tekst: "10 maart staat bovenaan bij de plaatsnaam: de dag waarop de brief is geschreven. 28 maart is de dag van de opruimdag. 20 maart staat in de zin over opgeven.",
+            },
+            {
+              titel: "Lees de vraag precies",
+              tekst: "De vraag gaat over opgeven. Dan telt alleen de datum uit de zin 'Geef je uiterlijk ... op'.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "deadline",
+              uitleg: "De uiterste dag waarop je iets moet doen.",
+            },
+            {
+              woord: "schrijfdatum",
+              uitleg: "De dag waarop de brief geschreven is. Staat bovenaan, vaak met de plaatsnaam ervoor.",
+            },
+          ],
+          theorie: "**Meerdere datums in één brief**\n\n| Plek | Betekenis |\n|---|---|\n| bovenaan, bij de plaatsnaam | wanneer de brief geschreven is |\n| in de kern, bij het evenement | wanneer iets plaatsvindt |\n| in de kern, bij 'vóór' of 'uiterlijk' | de deadline |\n\nLees bij elke datum-vraag precies welke datum er gevraagd wordt.",
+          voorbeelden: [
+            {
+              type: "datums",
+              tekst: "'Zonnedorp, 4 mei. Sportdag op 22 mei. Strookje inleveren uiterlijk 13 mei.' → geschreven op 4 mei, sportdag 22 mei, deadline 13 mei.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Datum + zin = betekenis",
+              uitleg: "Een datum zegt pas iets als je de zin eromheen leest.",
+            },
+          ],
+          niveaus: {
+            basis: "Zoek de zin waarin staat dat je je moet opgeven. Welke datum staat daarin?",
+            simpeler: "Er staan drie datums. Eén is de schrijfdatum en één is de opruimdag zelf. Welke blijft over?",
+            nogSimpeler: "Welke datum staat direct achter 'Geef je uiterlijk'?",
+          },
+        },
+      },
+      {
+        q: "*\"Lieve Mira, zaterdag word ik tien jaar! Ik geef een feestje bij mij thuis, van twee tot vijf uur. Kom je ook? Groetjes, Lotte\"* — Wat is het doel van dit briefje?",
+        options: [
+          "Mira uitnodigen voor het feestje",
+          "Mira vertellen hoe oud Lotte wordt",
+          "Mira bedanken voor een cadeau",
+          "Mira vragen waar ze woont",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat staat er wel in, maar het is één feitje. Wat wil Lotte met het héle briefje bereiken?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Doel of detail?",
+              tekst: "'Ik word tien jaar' is één feitje uit het briefje: een detail. Het doel is waarom het hele briefje geschreven is.",
+            },
+            {
+              titel: "Zoek wat Lotte wil",
+              tekst: "Lotte noemt een feestje, een plek en een tijd, en vraagt dan: 'Kom je ook?'",
+            },
+            {
+              titel: "Het doel",
+              tekst: "Een dag, een tijd en de vraag of je komt: zo ziet een uitnodiging eruit.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "doel",
+              uitleg: "Waarom de schrijver de hele brief geschreven heeft: wat wil hij bereiken?",
+            },
+            {
+              woord: "detail",
+              uitleg: "Eén klein feitje uit de brief.",
+            },
+          ],
+          theorie: "**Doel of detail?**\n\nVraag jezelf: wat wil de schrijver met de héle brief bereiken?\n\n- Een detail is één feitje (Lotte wordt tien).\n- Het doel is wat de schrijver wil dat er gebeurt (Mira komt naar het feestje).\n\nToetsmakers zetten een detail graag tussen de antwoorden bij een doel-vraag.",
+          voorbeelden: [
+            {
+              type: "detail-valkuil",
+              tekst: "Klachtbrief over een lekke bal: 'de bal was lek' is een detail, het doel is klagen en je geld terugvragen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Kijk naar de vraag in de brief",
+              uitleg: "Staat er een vraag als 'Kom je ook?', dan zegt die vaak veel over het doel.",
+            },
+          ],
+          niveaus: {
+            basis: "Welke vraag stelt Lotte aan Mira? Wat wil ze daarmee?",
+            simpeler: "Er staan een dag, een tijd en een plek in. Wat voor briefje is dat meestal?",
+            nogSimpeler: "Wat wil Lotte dat Mira op zaterdag doet?",
           },
         },
       },
@@ -1017,6 +1361,113 @@ Pak je vaste stappenplan erbij: kijk eerst naar de **randen** (Van, Aan, Datum, 
             basis: "Zoek de zin die met 'Van maandag...' begint. Welke twee datums staan daarin, en welke is de startdag?",
             simpeler: "Eén datum is de aanmeld-grens, één staat bij 'Datum:' bovenaan. Zoek de zin over het zwemmen zelf: wanneer begint dat?",
             nogSimpeler: "Lees de allereerste zin ná 'Beste zwemmers en ouders' heel precies.",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat krijg je als je alle vier de avonden meedoet aan de Zwemvierdaagse?",
+        options: ["Een echte medaille", "Je € 3,50 terug", "Een zwemdiploma", "Een gratis zwemles"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Lees de zin over het geld nog eens. Staat daar iets over teruggeven?",
+          "Dat diploma moet je juist al hebben om mee te mogen doen. Zoek de zin met 'alle vier de avonden'.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoekwoord",
+              tekst: "De vraag gaat over alle vier de avonden meedoen. Scan de e-mail op 'vier avonden'.",
+            },
+            {
+              titel: "Precies lezen",
+              tekst: "In de eerste alinea van de kern staat: 'Wie alle vier de avonden meedoet, krijgt op donderdag een echte medaille.'",
+            },
+            {
+              titel: "Pas op voor het diploma",
+              tekst: "Het zwemdiploma staat verderop in de e-mail. Dat moet je meenemen om mee te mogen doen. Je krijgt het niet.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "medaille",
+              uitleg: "Een metalen plaatje aan een lint dat je krijgt als beloning, bijvoorbeeld na een sportwedstrijd.",
+            },
+          ],
+          theorie: "**Detail opzoeken in een e-mail**\n\n1. Kies een zoekwoord uit de vraag (hier: 'vier avonden').\n2. Scan de kern van de e-mail.\n3. Lees de zin precies.\n4. Check: gaat deze zin echt over wat je krijgt, en niet over wat je moet meenemen?",
+          voorbeelden: [
+            {
+              type: "verwarring",
+              tekst: "'Neem je diploma mee' (moet je hebben) ≠ 'je krijgt een medaille' (krijg je).",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Krijgen of meenemen?",
+              uitleg: "Lees goed of een zin gaat over iets wat je krijgt of iets wat je moet meebrengen.",
+            },
+          ],
+          niveaus: {
+            basis: "Zoek de zin met 'alle vier de avonden'. Wat krijg je dan?",
+            simpeler: "Het diploma moet je meenemen. Wat krijg je op donderdag?",
+            nogSimpeler: "Wat krijgen sporters vaak als beloning na een sportevenement?",
+          },
+        },
+      },
+      {
+        q: "Hoe lang zwem je op elke avond van de Zwemvierdaagse?",
+        options: ["Een halfuur", "Anderhalf uur", "Een uur", "Twee uur"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Van 18.00 tot 19.30 uur is de tijd waarin je kunt zwemmen. Moet je die hele tijd in het water? Lees de zin met 'elke avond' precies.",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zoekwoord",
+              tekst: "De vraag gaat over 'elke avond'. Scan de e-mail op die woorden.",
+            },
+            {
+              titel: "Precies lezen",
+              tekst: "'Vier avonden achter elkaar zwem je baantjes: elke avond een halfuur, tussen 18.00 en 19.30 uur.'",
+            },
+            {
+              titel: "Pas op voor de tijden",
+              tekst: "Tussen 18.00 en 19.30 uur zit anderhalf uur. Dat is de tijd waarbinnen je kunt zwemmen. Zelf zwem je maar een halfuur.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "halfuur",
+              uitleg: "Dertig minuten.",
+            },
+            {
+              woord: "baantjes zwemmen",
+              uitleg: "Heen en weer zwemmen van de ene kant van het bad naar de andere.",
+            },
+          ],
+          theorie: "**Bijna-goed-valkuil met tijden**\n\nIn één zin staan twee dingen:\n\n- hoe lang je zwemt: een halfuur;\n- wanneer dat kan: tussen 18.00 en 19.30 uur.\n\nWie de tijden van elkaar aftrekt, krijgt anderhalf uur. Maar dat is niet wat de vraag vraagt.",
+          voorbeelden: [
+            {
+              type: "tijden",
+              tekst: "'De bieb is open van 9 tot 12 uur, je mag 20 minuten op de computer.' → je zit 20 minuten op de computer, niet 3 uur.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Lees wat er staat",
+              uitleg: "Neem het getal over dat in de tekst staat. Ga niet zelf rekenen als dat niet nodig is.",
+            },
+          ],
+          niveaus: {
+            basis: "Zoek de zin met 'elke avond'. Hoe lang staat daar?",
+            simpeler: "Tussen 18.00 en 19.30 uur is de tijd waarin het kan. Hoe lang zwem je zelf?",
+            nogSimpeler: "Lees de woorden direct achter 'elke avond'.",
           },
         },
       },

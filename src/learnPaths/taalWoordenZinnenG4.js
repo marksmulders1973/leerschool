@@ -62,6 +62,123 @@ const steps = [
           niveaus: { basis: "Het alfabet heeft 26 letters.", simpeler: "a tot z = 26.", nogSimpeler: "26" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke letter komt **net vóór de h**?",
+        options: ["g", "i", "j", "k"],
+        answer: 0,
+        wrongHints: [null, "Die komt na de h.", null, "Die komt een stuk later."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zeg het rijtje",
+              tekst: "e, f, **g, h**, i. Net vóór de h komt de g.",
+            },
+          ],
+          niveaus: {
+            basis: "Net vóór de h staat de g.",
+            simpeler: "Zeg maar: f... g... h!",
+            nogSimpeler: "g",
+          },
+        },
+      },
+      {
+        q: "Welk woord staat **het laatst** in het woordenboek?",
+        options: ["zon", "maan", "ster", "regen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "De m komt vrij vroeg in het alfabet.",
+          "Die komt laat, maar er is er één die nog later komt.",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerste letter kijken",
+              tekst: "zon begint met **z**. De z is de allerlaatste letter van het alfabet. Dus *zon* staat achteraan.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "woordenboek",
+              uitleg: "Een boek met heel veel woorden, op alfabet.",
+            },
+          ],
+          niveaus: {
+            basis: "De z komt na de m, r en s.",
+            simpeler: "Welke letter komt het laatst: z, m, s of r?",
+            nogSimpeler: "zon",
+          },
+        },
+      },
+      {
+        q: "Welke rij letters staat **goed** op alfabet?",
+        options: ["a – b – c", "a – c – b", "b – a – c", "c – b – a"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk naar de laatste twee letters.",
+          "Welke letter komt helemaal vooraan in het alfabet?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Zeg het rijtje",
+              tekst: "Het alfabet begint zo: **a, b, c**. Eerst de a, dan de b, dan de c.",
+            },
+          ],
+          niveaus: {
+            basis: "a, b, c is de goede volgorde.",
+            simpeler: "Zeg maar: a... b... c!",
+            nogSimpeler: "a – b – c",
+          },
+        },
+      },
+      {
+        q: "Wat is de **laatste** letter van het alfabet?",
+        options: ["z", "y", "x", "a"],
+        answer: 0,
+        wrongHints: [null, "Bijna — er komt nog één letter na.", null, "Dat is juist de eerste letter."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Het einde van het rijtje",
+              tekst: "..., v, w, x, y, **z**. Na de z komt er niets meer.",
+            },
+          ],
+          niveaus: {
+            basis: "Het alfabet eindigt met de z.",
+            simpeler: "Zeg maar: x... y... z!",
+            nogSimpeler: "z",
+          },
+        },
+      },
+      {
+        q: "Op de klassenlijst staan de namen op alfabet. Welke naam staat **bovenaan**?",
+        options: ["Daan", "Fleur", "Sem", "Noor"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk naar de eerste letter: komt de f vóór de d?",
+          null,
+          "De n komt later in het alfabet.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Eerste letter kijken",
+              tekst: "Daan begint met **D**, Fleur met F, Noor met N en Sem met S. De d komt het eerst in het alfabet. Dus *Daan* staat bovenaan.",
+            },
+          ],
+          niveaus: {
+            basis: "d komt vóór f, n en s.",
+            simpeler: "Welke letter komt het eerst: d, f, n of s?",
+            nogSimpeler: "Daan",
+          },
+        },
+      },
     ],
   },
 
@@ -124,6 +241,109 @@ const steps = [
           niveaus: { basis: "appel is er één, de rest is meer.", simpeler: "Waar staat géén -s of -en achter?", nogSimpeler: "appel" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is het meervoud van **hond**?",
+        options: ["honden", "honds", "hondes", "hondens"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zeg het hardop — zeg je 'twee honds'?",
+          "Dat is geen woord.",
+          "Daar zit iets te veel in.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "-en erachter",
+              tekst: "één hond → twee hond + **en** = honden.",
+            },
+          ],
+          niveaus: {
+            basis: "hond → honden.",
+            simpeler: "Doe -en erachter.",
+            nogSimpeler: "honden",
+          },
+        },
+      },
+      {
+        q: "Wat is het meervoud van **jongen**?",
+        options: ["jongens", "jongenen", "jongense", "jongen"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zeg het hardop — zeg je 'twee jongenen'?",
+          "Dat is geen woord.",
+          "Dat is er maar één.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "-s erachter",
+              tekst: "één jongen → twee jongen + **s** = jongens. Bij woorden die eindigen op -en komt er vaak een -s.",
+            },
+          ],
+          niveaus: {
+            basis: "jongen → jongens.",
+            simpeler: "Doe -s erachter.",
+            nogSimpeler: "jongens",
+          },
+        },
+      },
+      {
+        q: "Wat is het meervoud van **brief**?",
+        options: ["brieven", "briefen", "briefs", "brievs"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Bijna! De f verandert in een andere letter.",
+          "Zeg het hardop — klinkt dat goed?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "De f wordt een v",
+              tekst: "één brief → twee **brieven**. De f verandert in een v, en er komt -en achter.",
+            },
+          ],
+          niveaus: {
+            basis: "brief → brieven (f wordt v).",
+            simpeler: "Zeg maar: twee brie-ven.",
+            nogSimpeler: "brieven",
+          },
+        },
+      },
+      {
+        q: "Wat is het meervoud van **ei**?",
+        options: ["eieren", "eien", "eiens", "eiers"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zeg het hardop — zeg je 'twee eien'?",
+          "Dat is geen woord.",
+          "Dit woord doet gek — er komt iets anders achter.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Gek woord",
+              tekst: "één ei → twee **eieren**. Dit is een uitzondering: er komt -eren achter. Net als: één kind → twee kinderen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "uitzondering",
+              uitleg: "Een woord dat zich niet aan de gewone regel houdt.",
+            },
+          ],
+          niveaus: {
+            basis: "ei → eieren.",
+            simpeler: "Dit woord doet gek: ei-e-ren.",
+            nogSimpeler: "eieren",
+          },
+        },
+      },
     ],
   },
 
@@ -171,6 +391,141 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Terugdenken", tekst: "poes**je** = poes + je. Het gewone woord is **poes**." }],
           niveaus: { basis: "poesje komt van poes.", simpeler: "Haal -je weg: poes.", nogSimpeler: "poes" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is het verkleinwoord van **huis**?",
+        options: ["huisje", "huistje", "huispje", "huizje"],
+        answer: 0,
+        wrongHints: [null, "Zeg het hardop — klinkt dat goed?", "-pje hoort bij woorden met een m.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "-je erachter",
+              tekst: "huis → huis + **je** = huisje. Zeg het hardop: huis-je klinkt goed.",
+            },
+          ],
+          niveaus: {
+            basis: "huis → huisje.",
+            simpeler: "Doe -je erachter.",
+            nogSimpeler: "huisje",
+          },
+        },
+      },
+      {
+        q: "Wat is het verkleinwoord van **duim**?",
+        options: ["duimpje", "duimje", "duimtje", "duimetje"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Bijna — na een m klinkt een andere letter beter.",
+          "Zeg het hardop — klinkt dat goed?",
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Na een m: -pje",
+              tekst: "duim eindigt op een **m**. Dan komt er **-pje**: duimpje. Zo ook: boom → boompje.",
+            },
+          ],
+          niveaus: {
+            basis: "duim → duimpje.",
+            simpeler: "Na een m komt -pje.",
+            nogSimpeler: "duimpje",
+          },
+        },
+      },
+      {
+        q: "Wat is het verkleinwoord van **ei**?",
+        options: ["eitje", "eije", "eipje", "eietje"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zeg het hardop — klinkt dat goed?",
+          "-pje hoort bij woorden met een m.",
+          "Daar zit iets te veel in.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "-tje erachter",
+              tekst: "ei → ei + **tje** = eitje. Zeg het hardop: ei-tje klinkt goed.",
+            },
+          ],
+          niveaus: {
+            basis: "ei → eitje.",
+            simpeler: "Zeg maar: ei-tje.",
+            nogSimpeler: "eitje",
+          },
+        },
+      },
+      {
+        q: "Wat is het verkleinwoord van **boek**?",
+        options: ["boekje", "boektje", "boekpje", "boekeje"],
+        answer: 0,
+        wrongHints: [null, "Zeg het hardop — klinkt dat goed?", null, "Daar zit een letter te veel."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "-je erachter",
+              tekst: "boek → boek + **je** = boekje. Zeg het hardop: boek-je klinkt goed.",
+            },
+          ],
+          niveaus: {
+            basis: "boek → boekje.",
+            simpeler: "Doe -je erachter.",
+            nogSimpeler: "boekje",
+          },
+        },
+      },
+      {
+        q: "Wat is het verkleinwoord van **wiel**?",
+        options: ["wieltje", "wielje", "wielpje", "wieletje"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Zeg het hardop — klinkt dat goed?",
+          "-pje hoort bij woorden met een m.",
+          "Daar zit een letter te veel.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Na een l: -tje",
+              tekst: "wiel → **wieltje**. Zo ook: stoel → stoeltje. Zeg het hardop, dan hoor je het: wiel-tje klinkt goed.",
+            },
+          ],
+          niveaus: {
+            basis: "wiel → wieltje.",
+            simpeler: "Zeg maar: wiel-tje.",
+            nogSimpeler: "wieltje",
+          },
+        },
+      },
+      {
+        q: "Welk woord is een **verkleinwoord**?",
+        options: ["bloempje", "bloemen", "bloem", "bloemkool"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat zijn er meer, maar zijn ze ook klein gemaakt?",
+          null,
+          "Kijk naar het einde van het woord: staat er -je, -tje of -pje?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Kijk naar het eind",
+              tekst: "bloem**pje** eindigt op **-pje**. Dan is het een verkleinwoord: een kleine bloem.",
+            },
+          ],
+          niveaus: {
+            basis: "bloempje = een kleine bloem.",
+            simpeler: "Welk woord eindigt op -je?",
+            nogSimpeler: "bloempje",
+          },
         },
       },
     ],
@@ -222,6 +577,102 @@ const steps = [
           niveaus: { basis: "Dag en nacht zijn precies andersom.", simpeler: "Wanneer is het licht? En wanneer donker?", nogSimpeler: "dag en nacht" },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is de tegenstelling van **groot**?",
+        options: ["klein", "lang", "zwaar", "breed"],
+        answer: 0,
+        wrongHints: [null, "Dat gaat over hoe lang iets is.", null, "Dat gaat over hoe breed iets is."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Andersom denken",
+              tekst: "groot ↔ **klein**. De olifant is groot, de muis is klein.",
+            },
+          ],
+          niveaus: {
+            basis: "Groot en klein zijn tegenstellingen.",
+            simpeler: "De olifant is groot, de muis is…",
+            nogSimpeler: "klein",
+          },
+        },
+      },
+      {
+        q: "Wat is de tegenstelling van **blij**?",
+        options: ["verdrietig", "vrolijk", "lief", "moe"],
+        answer: 0,
+        wrongHints: [null, "Dat betekent bijna hetzelfde als blij.", null, "Dat gaat over slaap nodig hebben."],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Andersom denken",
+              tekst: "blij ↔ **verdrietig**. Op je verjaardag ben je blij. Als je knuffel kwijt is, ben je verdrietig.",
+            },
+          ],
+          niveaus: {
+            basis: "Blij en verdrietig zijn tegenstellingen.",
+            simpeler: "Je huilt. Je bent niet blij maar…",
+            nogSimpeler: "verdrietig",
+          },
+        },
+      },
+      {
+        q: "Wat is de tegenstelling van **nat**?",
+        options: ["droog", "vochtig", "koud", "schoon"],
+        answer: 0,
+        wrongHints: [null, "Dat betekent bijna hetzelfde als nat.", "Dat gaat over warm of niet.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Andersom denken",
+              tekst: "nat ↔ **droog**. Na het zwemmen ben je nat. Na het afdrogen ben je droog.",
+            },
+          ],
+          niveaus: {
+            basis: "Nat en droog zijn tegenstellingen.",
+            simpeler: "Een handdoek maakt je niet nat maar…",
+            nogSimpeler: "droog",
+          },
+        },
+      },
+      {
+        q: "Wat is de tegenstelling van **open**?",
+        options: ["dicht", "half", "stil", "kapot"],
+        answer: 0,
+        wrongHints: [null, "Dat zit er tussenin.", "Dat gaat over geluid.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Andersom denken",
+              tekst: "open ↔ **dicht**. Een open deur en een dichte deur.",
+            },
+          ],
+          niveaus: {
+            basis: "Open en dicht zijn tegenstellingen.",
+            simpeler: "Je doet de deur niet open maar…",
+            nogSimpeler: "dicht",
+          },
+        },
+      },
+      {
+        q: "Wat is de tegenstelling van **hoog**?",
+        options: ["laag", "lang", "dik", "smal"],
+        answer: 0,
+        wrongHints: [null, "Dat gaat over hoe lang iets is.", "Dat gaat over hoe dik iets is.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Andersom denken",
+              tekst: "hoog ↔ **laag**. Een vogel vliegt hoog in de lucht. Een slak kruipt laag over de grond.",
+            },
+          ],
+          niveaus: {
+            basis: "Hoog en laag zijn tegenstellingen.",
+            simpeler: "Niet bovenin de lucht, maar onderaan bij de grond: …",
+            nogSimpeler: "laag",
+          },
+        },
+      },
     ],
   },
 
@@ -271,6 +722,85 @@ const steps = [
           stappen: [{ titel: "Twee regels", tekst: "1. Het **eerste woord** van de zin krijgt een hoofdletter: Gisteren. 2. Een **naam** krijgt altijd een hoofdletter: Lisa. Dus: *Gisteren ging Lisa naar school.*" }],
           theorie: "Namen van mensen, plaatsen en landen krijgen altijd een hoofdletter, waar ze ook in de zin staan.",
           niveaus: { basis: "Eerste woord + namen = hoofdletter.", simpeler: "De zin begint groot, en Lisa is een naam.", nogSimpeler: "gisteren én lisa" },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welke zin is een **vraag**?",
+        options: ["Waar is mijn jas?", "Mijn jas is rood.", "Pak je jas!", "Ik zoek mijn jas."],
+        answer: 0,
+        wrongHints: [null, "Wordt hier iets gevraagd?", "Hier roept iemand iets.", null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vraag of niet?",
+              tekst: "**Waar is mijn jas?** — hier wordt iets gevraagd. Daarom staat er een **vraagteken (?)** aan het eind.",
+            },
+          ],
+          voorbeelden: [
+            {
+              type: "voorbeeld",
+              tekst: "Waar woon jij? Hoe oud ben je? Waar is de hond?",
+            },
+          ],
+          niveaus: {
+            basis: "Een vraag eindigt met een vraagteken.",
+            simpeler: "Zoek de zin met een ?",
+            nogSimpeler: "Waar is mijn jas?",
+          },
+        },
+      },
+      {
+        q: "Zet de woorden in de goede volgorde: **school — naar — ik — fiets**",
+        options: [
+          "Ik fiets naar school.",
+          "Naar ik fiets school.",
+          "School fiets ik naar.",
+          "Ik naar school fiets.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Zeg het hardop — klinkt dat goed?", null, "Zeg het hardop — klinkt dat goed?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Hardop zeggen",
+              tekst: "Zeg de zin hardop. **Ik fiets naar school.** klinkt goed: eerst wie (ik), dan wat ik doe (fiets naar school).",
+            },
+          ],
+          niveaus: {
+            basis: "Eerst wie, dan wat die doet.",
+            simpeler: "Wie fietst er? Ik. Dus: Ik fiets…",
+            nogSimpeler: "Ik fiets naar school.",
+          },
+        },
+      },
+      {
+        q: "Wat is er **fout** aan deze zin? **mijn broer speelt buiten.**",
+        options: [
+          "Er mist een hoofdletter.",
+          "Er mist een punt.",
+          "Er mist een vraagteken.",
+          "Er is niets fout.",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kijk eens naar het einde: staat daar al iets?",
+          null,
+          "Kijk goed naar de eerste letter.",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Checklist",
+              tekst: "Hoofdletter aan het begin? ✗ Punt aan het eind? ✓ → Het moet zijn: **Mijn broer speelt buiten.**",
+            },
+          ],
+          niveaus: {
+            basis: "Een zin begint met een hoofdletter.",
+            simpeler: "Kijk naar de eerste letter: m of M?",
+            nogSimpeler: "Er mist een hoofdletter.",
+          },
         },
       },
     ],

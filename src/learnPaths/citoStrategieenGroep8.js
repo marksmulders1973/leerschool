@@ -131,6 +131,332 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Je schooladvies is **havo**. Je toetsadvies is **vwo**. Wat moet de school doen?",
+        options: [
+          "Het schooladvies heroverwegen",
+          "Je advies verlagen naar vmbo",
+          "Niets, want het toetsadvies telt niet",
+          "Je de toets opnieuw laten maken",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Is vwo hoger of lager dan havo? Welke kant gaat het dan op?",
+          null,
+          "Maak je de Doorstroomtoets één keer of vaker?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vergelijk",
+              tekst: "Toetsadvies vwo is hoger dan schooladvies havo.",
+            },
+            {
+              titel: "Regel",
+              tekst: "Is het toetsadvies hoger? Dan MOET de school het schooladvies opnieuw bekijken.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "heroverwegen",
+              uitleg: "Opnieuw goed nadenken over een besluit.",
+            },
+          ],
+          theorie: "Toetsadvies hoger dan schooladvies → de school moet heroverwegen. Vaak gaat het advies dan omhoog.",
+          voorbeelden: [
+            {
+              type: "advies-flow",
+              tekst: "Schooladvies havo + toetsadvies vwo → de school moet het advies opnieuw bekijken.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Moet, niet kan",
+              uitleg: "De school is verplicht om opnieuw te kijken. Het is geen keuze.",
+            },
+          ],
+          niveaus: {
+            basis: "De school moet het advies opnieuw bekijken.",
+            simpeler: "Je toets ging beter dan je advies. Dan moet de school nog eens goed nadenken over jouw advies.",
+            nogSimpeler: "Opnieuw bekijken",
+          },
+        },
+      },
+      {
+        q: "Je schooladvies is **havo**. Je toetsadvies is **vmbo-gt**. Wat gebeurt er?",
+        options: [
+          "Je schooladvies havo blijft staan",
+          "Je advies wordt vmbo-gt",
+          "Je moet de toets overdoen",
+          "Je krijgt een advies ertussenin",
+        ],
+        answer: 0,
+        wrongHints: [null, "Kan de toets je advies omlaag halen?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vergelijk",
+              tekst: "Toetsadvies vmbo-gt is lager dan schooladvies havo.",
+            },
+            {
+              titel: "Regel",
+              tekst: "Is het toetsadvies lager? Dan blijft het schooladvies gewoon staan.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "toetsadvies",
+              uitleg: "Het advies dat uit de Doorstroomtoets komt.",
+            },
+          ],
+          theorie: "De toets kan alleen helpen, niet schaden. Een lager toetsadvies verandert je schooladvies niet.",
+          voorbeelden: [
+            {
+              type: "advies-flow",
+              tekst: "Schooladvies havo + toetsadvies vmbo-gt → advies blijft havo.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet bang zijn",
+              uitleg: "Je kunt door de toets niet 'omlaag vallen'.",
+            },
+          ],
+          niveaus: {
+            basis: "Het schooladvies blijft staan.",
+            simpeler: "Ging de toets minder goed dan je advies? Dan houd je gewoon je schooladvies.",
+            nogSimpeler: "Advies blijft",
+          },
+        },
+      },
+      {
+        q: "Kun je **zakken** voor de Doorstroomtoets?",
+        options: [
+          "Nee, iedereen 'haalt' de toets",
+          "Ja, als je minder dan de helft goed hebt",
+          "Ja, en dan doe je groep 8 over",
+          "Alleen als je te veel vragen overslaat",
+        ],
+        answer: 0,
+        wrongHints: [null, "Is de Doorstroomtoets een examen waarvoor je kunt slagen of zakken?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Geen examen",
+              tekst: "De Doorstroomtoets is geen examen met slagen of zakken.",
+            },
+            {
+              titel: "Wat dan wel?",
+              tekst: "Je krijgt een toetsadvies voor de middelbare school.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "zakken",
+              uitleg: "Niet slagen voor een examen.",
+            },
+          ],
+          theorie: "Iedereen 'haalt' de toets. De uitslag is een advies, geen voldoende of onvoldoende.",
+          voorbeelden: [
+            {
+              type: "uitslag",
+              tekst: "Na de toets krijg je een toetsadvies, bijvoorbeeld havo. Niet 'geslaagd' of 'gezakt'.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Fouten mogen",
+              uitleg: "Je hoeft niet alles goed te hebben. Iedereen maakt fouten.",
+            },
+          ],
+          niveaus: {
+            basis: "Je kunt niet zakken.",
+            simpeler: "De toets is geen examen. Je kunt dus niet zakken. Je laat gewoon zien wat je kunt.",
+            nogSimpeler: "Geen zakken",
+          },
+        },
+      },
+      {
+        q: "Hoe heette de Doorstroomtoets **vroeger**?",
+        options: ["De Eindtoets", "De Begintoets", "Het Eindexamen", "De Brugtoets"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Wordt de toets aan het begin of aan het eind van de basisschool gemaakt?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Oude naam",
+              tekst: "Vroeger heette de toets de 'Eindtoets'.",
+            },
+            {
+              titel: "Nieuwe naam",
+              tekst: "Sinds 2024 heet hij de Doorstroomtoets.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "doorstromen",
+              uitleg: "Doorgaan naar de volgende school: van de basisschool naar de middelbare school.",
+            },
+          ],
+          theorie: "De naam veranderde, het doel bleef: een advies voor de middelbare school.",
+          voorbeelden: [
+            {
+              type: "naam",
+              tekst: "Je ouder of verzorger zegt misschien nog 'Eindtoets'. Dat is dezelfde soort toets.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Eindexamen",
+              uitleg: "Een eindexamen maak je pas aan het eind van de middelbare school.",
+            },
+          ],
+          niveaus: {
+            basis: "Vroeger: de Eindtoets.",
+            simpeler: "De Doorstroomtoets heette vroeger de Eindtoets. Je maakt hem aan het eind van groep 8.",
+            nogSimpeler: "Eindtoets",
+          },
+        },
+      },
+      {
+        q: "In welke maand maak je de Doorstroomtoets?",
+        options: ["Februari", "Juni", "September", "December"],
+        answer: 0,
+        wrongHints: [null, "Komt de toets vóór of ná je schooladvies van eind januari?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Schooladvies",
+              tekst: "Uiterlijk eind januari krijg je je schooladvies.",
+            },
+            {
+              titel: "Toets",
+              tekst: "Daarna, in februari, maak je de Doorstroomtoets.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "dagdeel",
+              uitleg: "Een ochtend of een middag.",
+            },
+          ],
+          theorie: "De toets is in februari en duurt meerdere dagdelen.",
+          voorbeelden: [
+            {
+              type: "kalender",
+              tekst: "Januari: schooladvies. Februari: de toets.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Direct na het advies",
+              uitleg: "De toets komt kort na het schooladvies.",
+            },
+          ],
+          niveaus: {
+            basis: "In februari.",
+            simpeler: "Eerst krijg je in januari je schooladvies. Een paar weken later, in februari, maak je de toets.",
+            nogSimpeler: "Februari",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welk hulpmiddel mag je **niet** gebruiken bij de Doorstroomtoets?",
+        options: ["Een rekenmachine", "Kladpapier", "Een potlood", "Een gum"],
+        answer: 0,
+        wrongHints: [null, "Waar zou je anders de tussenstappen van een lastige som opschrijven?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Uit je hoofd of op papier",
+              tekst: "Bij de toets reken je zonder rekenmachine: uit je hoofd of op papier.",
+            },
+            {
+              titel: "Kladpapier",
+              tekst: "Kladpapier mag meestal wel. Gebruik het voor je tussenstappen!",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kladpapier",
+              uitleg: "Papier waarop je mag rekenen en dingen opschrijven. Het wordt niet nagekeken.",
+            },
+          ],
+          theorie: "Bij de Doorstroomtoets mag je geen rekenmachine gebruiken. Je rekent alles uit je hoofd of op papier.",
+          voorbeelden: [
+            {
+              type: "rekenen",
+              tekst: "Een lastige som? Schrijf de stappen op je kladpapier, dan raak je de draad niet kwijt.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Oefenen zonder rekenmachine",
+              uitleg: "Oefen thuis ook sommen zonder rekenmachine, dan ben je eraan gewend.",
+            },
+          ],
+          niveaus: {
+            basis: "Geen rekenmachine.",
+            simpeler: "Je rekent zelf: in je hoofd of op papier. Een rekenmachine mag niet mee.",
+            nogSimpeler: "Geen rekenmachine",
+          },
+        },
+      },
+      {
+        q: "Wat moet je volgens de uitleg **wel** kunnen voor de Doorstroomtoets?",
+        options: [
+          "Een tabel of grafiek lezen",
+          "Heel diepgaande wereldkennis hebben",
+          "Een Engelse tekst vertalen",
+          "Een spreekbeurt houden",
+        ],
+        answer: 0,
+        wrongHints: [null, "Hoeveel wereldkennis heb je nodig: heel veel, of vooral de basis?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat je wel moet kunnen",
+              tekst: "Tekst lezen, rekenen, spellen en informatie opzoeken in tabellen, grafieken en kaarten.",
+            },
+            {
+              titel: "Wat niet hoeft",
+              tekst: "Heel diepgaande wereldkennis is niet nodig. De basis is genoeg.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tabel",
+              uitleg: "Een overzicht met rijen en kolommen, waarin je gegevens kunt opzoeken.",
+            },
+          ],
+          theorie: "Informatie opzoeken in tabellen, grafieken en kaarten komt terug in lees- en rekenvragen.",
+          voorbeelden: [
+            {
+              type: "tabel",
+              tekst: "In een tabel zoek je op hoe laat de bus vertrekt. Dat is informatie opzoeken.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Basis is genoeg",
+              uitleg: "Van wereldoriëntatie hoef je vooral de basis te kennen.",
+            },
+          ],
+          niveaus: {
+            basis: "Tabellen en grafieken lezen.",
+            simpeler: "Je moet informatie kunnen vinden in een tabel, een grafiek of een kaart. Dat komt vaak terug in de toets.",
+            nogSimpeler: "Tabel lezen",
+          },
+        },
+      },
     ],
   },
   {
@@ -149,6 +475,60 @@ const steps = [
         options: ["Woordenboek + kaart + grafiek aflezen","Spelling + werkwoorden","Optellen + aftrekken","Geschiedenis + aardrijkskunde"],
         answer: 0,
         wrongHints: [null,"In welk vak leer je over werkwoorden en spelling?","In welk vak doe je sommen?","In welk vak leer je over Nederland en de wereld?"],
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Welk onderdeel is **niet** verplicht in de Doorstroomtoets?",
+        options: ["Wereldoriëntatie", "Rekenen", "Lezen", "Taalverzorging"],
+        answer: 0,
+        wrongHints: [null, "Welke drie onderdelen maakt iedereen?", null, null],
+      },
+      {
+        q: "Welke vraag kun je verwachten bij het onderdeel **rekenen**?",
+        options: [
+          "Hoeveel is 25% van €80?",
+          "Wat is een synoniem van 'snel'?",
+          "Schrijf je 'hij wordt' of 'hij word'?",
+          "Wat betekent het woord 'bezorgd'?",
+        ],
+        answer: 0,
+        wrongHints: [null, "Bij welke vraag moet je met getallen werken?", null, null],
+      },
+      {
+        q: "Je moet kiezen tussen 'ze loopt' en 'ze loopd'. Bij welk onderdeel hoort deze vraag?",
+        options: ["Taalverzorging", "Rekenen", "Wereldoriëntatie", "Studievaardigheden"],
+        answer: 0,
+        wrongHints: [null, "Gaat deze vraag over getallen, over de wereld, of over goed schrijven?", null, null],
+      },
+      {
+        q: "Bij welk onderdeel horen **stijlfiguren**, zoals een vergelijking?",
+        options: ["Lezen en taal", "Rekenen", "Wereldoriëntatie", "Studievaardigheden"],
+        answer: 0,
+        wrongHints: [null, "Gaat een stijlfiguur over getallen, of over hoe iets geschreven is?", null, null],
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Je moet uitrekenen hoeveel km per uur een fietser rijdt. Bij welk onderdeel hoort die vraag?",
+        options: ["Rekenen", "Taalverzorging", "Lezen", "Studievaardigheden"],
+        answer: 0,
+        wrongHints: [null, "Moet je bij deze vraag schrijven, of iets uitrekenen?", null, null],
+      },
+      {
+        q: "Wat hoort **niet** bij taalverzorging?",
+        options: ["Breuken vereenvoudigen", "Hoofdletters", "Leestekens", "Werkwoordsvormen"],
+        answer: 0,
+        wrongHints: [null, "Moet je bij het schrijven van een zin op hoofdletters letten?", null, null],
+      },
+      {
+        q: "Wat hoort bij **wereldoriëntatie**?",
+        options: [
+          "De provincies van Nederland",
+          "Procenten uitrekenen",
+          "De d/t-regels",
+          "Een register gebruiken",
+        ],
+        answer: 0,
+        wrongHints: [null, null, null, "Bij welk extra onderdeel hoort zoeken in een register?"],
       },
     ],
   },
@@ -217,6 +597,284 @@ const steps = [
             basis: "Gokken = altijd beter dan leeg.",
             simpeler: "Stel: leeg = 0 punten. Gokken = misschien 1 punt. Wat kies je? Gokken natuurlijk.",
             nogSimpeler: "Leeg nooit = gokken",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Je bent bij vraag 25, maar je bent al 35 minuten bezig. Wat doe je?",
+        options: [
+          "Moeilijke vragen overslaan en later terugkomen",
+          "Rustig aan doen en alles extra checken",
+          "Op elke vraag nog langer nadenken",
+          "Stoppen met de toets",
+        ],
+        answer: 0,
+        wrongHints: [null, "Loop je voor of achter op het schema van ongeveer 1 minuut per vraag?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vergelijk",
+              tekst: "Vraag 25 → je zou ~25 minuten bezig moeten zijn. Jij bent 35 minuten bezig.",
+            },
+            {
+              titel: "Je loopt achter",
+              tekst: "Sla moeilijke vragen over en kom er later op terug.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "pacing",
+              uitleg: "Je tempo bewaken zodat je op tijd klaar bent.",
+            },
+          ],
+          theorie: "Vergelijk het vraagnummer met de minuten. Meer minuten dan vragen = je loopt achter.",
+          voorbeelden: [
+            {
+              type: "klok-check",
+              tekst: "Vraag 25, 35 minuten → 10 minuten achter. Moeilijke vragen even overslaan.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Evenveel punten",
+              uitleg: "Een makkelijke vraag is evenveel waard als een moeilijke.",
+            },
+          ],
+          niveaus: {
+            basis: "Achter? Sla moeilijke vragen over.",
+            simpeler: "Je bent langzamer dan het schema. Doe eerst de vragen die je snel kunt. Kom later terug bij de moeilijke.",
+            nogSimpeler: "Achter = overslaan",
+          },
+        },
+      },
+      {
+        q: "Je bent al bij vraag 40, maar pas 30 minuten bezig. Wat doe je?",
+        options: [
+          "Rustig aan doen en extra checken",
+          "Nog sneller gaan",
+          "Expres vragen overslaan",
+          "De laatste vragen leeg laten",
+        ],
+        answer: 0,
+        wrongHints: [null, "Loop je voor of achter op het schema?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vergelijk",
+              tekst: "Vraag 40 → je zou ~40 minuten bezig moeten zijn. Jij bent pas 30 minuten bezig.",
+            },
+            {
+              titel: "Je loopt voor",
+              tekst: "Doe rustig aan en kijk je antwoorden extra goed na.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "voorlopen",
+              uitleg: "Sneller zijn dan het schema.",
+            },
+          ],
+          theorie: "Minder minuten dan vragen = je loopt voor. Gebruik die tijd om zorgvuldig te werken.",
+          voorbeelden: [
+            {
+              type: "klok-check",
+              tekst: "Vraag 40, 30 minuten → 10 minuten voor. Tijd over voor controle.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Te snel = dom-fouten",
+              uitleg: "Wie te snel gaat, leest dingen verkeerd.",
+            },
+          ],
+          niveaus: {
+            basis: "Voor? Rustig aan en extra checken.",
+            simpeler: "Je bent sneller dan nodig. Neem dus de tijd om goed te lezen en je antwoorden na te kijken.",
+            nogSimpeler: "Voor = rustig aan",
+          },
+        },
+      },
+      {
+        q: "Hoeveel tijd bewaar je aan het einde van een onderdeel voor **controle**?",
+        options: ["Ongeveer 5 minuten", "Helemaal geen tijd", "Een half uur", "De helft van de tijd"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Moet je controle-tijd overhouden, of alles tot de laatste seconde gebruiken voor nieuwe vragen?",
+          null,
+          "Hoeveel vragen zou je dan niet meer kunnen maken?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Controle-tijd",
+              tekst: "Houd aan het eind ongeveer 5 minuten over.",
+            },
+            {
+              titel: "Wat doe je dan?",
+              tekst: "Ga terug naar de vragen die je hebt gemarkeerd.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "markeren",
+              uitleg: "Een teken zetten bij een vraag zodat je hem later terugvindt.",
+            },
+          ],
+          theorie: "5 minuten is genoeg om je twijfel-vragen nog eens te bekijken, zonder dat je te weinig tijd hebt voor de rest.",
+          voorbeelden: [
+            {
+              type: "controle",
+              tekst: "Je hebt 3 vragen gemarkeerd. In de laatste 5 minuten bekijk je die opnieuw.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Tweede keer",
+              uitleg: "Vaak weet je het antwoord de tweede keer wél.",
+            },
+          ],
+          niveaus: {
+            basis: "Bewaar ongeveer 5 minuten.",
+            simpeler: "Zorg dat je aan het eind nog 5 minuten over hebt. Dan kijk je je twijfel-vragen nog eens na.",
+            nogSimpeler: "5 minuten",
+          },
+        },
+      },
+      {
+        q: "Hoe vaak kijk je op de klok bij het **pacing-trucje**?",
+        options: ["Om de 10 vragen", "Na elke vraag", "Alleen aan het einde", "Nooit, dat leidt af"],
+        answer: 0,
+        wrongHints: [null, "Hoeveel tijd kost het als je bij elke vraag op de klok kijkt?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vaste momenten",
+              tekst: "Kijk bij vraag 10, 20, 30, 40 op de klok.",
+            },
+            {
+              titel: "Vergelijk",
+              tekst: "Het vraagnummer is ongeveer het aantal minuten.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "pacing",
+              uitleg: "Je tempo bewaken.",
+            },
+          ],
+          theorie: "Om de 10 vragen kijken is vaak genoeg om bij te sturen, maar niet zo vaak dat het afleidt.",
+          voorbeelden: [
+            {
+              type: "klok",
+              tekst: "Vraag 10 → ~10 minuten. Vraag 20 → ~20 minuten.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Bijsturen",
+              uitleg: "Loop je voor: rustig aan. Loop je achter: moeilijke overslaan.",
+            },
+          ],
+          niveaus: {
+            basis: "Om de 10 vragen.",
+            simpeler: "Kijk niet steeds op de klok, maar bij elke tiende vraag. Dan weet je of je op schema zit.",
+            nogSimpeler: "Elke 10 vragen",
+          },
+        },
+      },
+      {
+        q: "Waarom laat je bij de Doorstroomtoets **nooit** een vraag leeg?",
+        options: [
+          "Je krijgt geen aftrek voor een fout antwoord",
+          "Een lege vraag geeft strafpunten",
+          "Je mag pas inleveren als alles vol is",
+          "Een leeg antwoord telt als twee fouten",
+        ],
+        answer: 0,
+        wrongHints: [null, "Wat verlies je als je gokt en het is fout?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Geen aftrek",
+              tekst: "Een fout antwoord kost je geen punten.",
+            },
+            {
+              titel: "Gokje = kans",
+              tekst: "Een lege vraag is zeker 0 punten. Een gok kan goed zijn.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "aftrek",
+              uitleg: "Punten die eraf gaan.",
+            },
+          ],
+          theorie: "Leeg = zeker geen punt. Ingevuld = kans op een punt. Dus altijd iets invullen.",
+          voorbeelden: [
+            {
+              type: "kans",
+              tekst: "Bij 4 opties heb je met gokken 1 kans op 4 dat het goed is.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Eerst denken",
+              uitleg: "Gokken doe je pas als je echt geen tijd of idee meer hebt.",
+            },
+          ],
+          niveaus: {
+            basis: "Fout kost niets, dus vul iets in.",
+            simpeler: "Je krijgt geen minpunten voor fout. Een gok kan dus alleen maar helpen.",
+            nogSimpeler: "Altijd invullen",
+          },
+        },
+      },
+      {
+        q: "Hoe pak je de eerste, makkelijke vragen aan?",
+        options: [
+          "Vlot, maar wel zorgvuldig",
+          "Zo snel mogelijk, zonder goed te lezen",
+          "Heel langzaam, alles drie keer lezen",
+          "Overslaan, die zijn te makkelijk",
+        ],
+        answer: 0,
+        wrongHints: [null, "Wat gebeurt er als je zo snel gaat dat je niet meer goed leest?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Vlot",
+              tekst: "Makkelijke vragen doe je snel, zo'n 30 seconden per vraag.",
+            },
+            {
+              titel: "Zorgvuldig",
+              tekst: "Niet zó snel dat je dom-fouten maakt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "dom-fout",
+              uitleg: "Een fout die je maakt omdat je niet goed oplet.",
+            },
+          ],
+          theorie: "Snel bij de makkelijke vragen = tijd over voor de moeilijke. Maar goed lezen blijft nodig.",
+          voorbeelden: [
+            {
+              type: "tempo",
+              tekst: "Vraag 1-12: vlot werken. Zo hou je tijd over voor de lastige vragen later.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Gratis punten",
+              uitleg: "Makkelijke vragen zijn punten die je niet wilt weggeven.",
+            },
+          ],
+          niveaus: {
+            basis: "Vlot, maar goed lezen.",
+            simpeler: "Bij de makkelijke vragen ga je lekker door. Maar je leest elke vraag wel goed, anders maak je slordige fouten.",
+            nogSimpeler: "Vlot en goed",
           },
         },
       },
@@ -295,6 +953,253 @@ const steps = [
           },
         },
       },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat is de **eerste** stap van de eliminatie-techniek?",
+        options: [
+          "De vraag twee keer rustig lezen",
+          "Foute opties doorstrepen",
+          "Meteen de langste optie kiezen",
+          "Een antwoord gokken",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kun je opties wegstrepen als je nog niet precies weet wat er gevraagd wordt?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 1",
+              tekst: "Lees de vraag twee keer rustig. Wat wordt er precies gevraagd?",
+            },
+            {
+              titel: "Daarna",
+              tekst: "Pas dan bedenk je een antwoord en kijk je naar de opties.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "eliminatie",
+              uitleg: "Foute antwoorden uitsluiten.",
+            },
+          ],
+          theorie: "Eerst begrijpen wat er gevraagd wordt. Anders streep je misschien de goede optie weg.",
+          voorbeelden: [
+            {
+              type: "vraag lezen",
+              tekst: "Twee keer lezen helpt om woorden als 'niet' of 'eerst' te zien.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Rustig",
+              uitleg: "Rustig lezen kost een paar seconden en voorkomt fouten.",
+            },
+          ],
+          niveaus: {
+            basis: "Eerst de vraag 2× lezen.",
+            simpeler: "Voordat je iets doorstreept, lees je de vraag twee keer. Dan weet je zeker wat er gevraagd wordt.",
+            nogSimpeler: "Eerst lezen",
+          },
+        },
+      },
+      {
+        q: "Twee opties lijken **bijna hetzelfde**. Wat doe je?",
+        options: [
+          "Heel goed kijken wat het kleine verschil is",
+          "Ze allebei doorstrepen",
+          "Een andere optie kiezen",
+          "De bovenste van de twee kiezen",
+        ],
+        answer: 0,
+        wrongHints: [null, "Kan het goede antwoord juist één van die twee zijn?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Let op",
+              tekst: "Bij twee bijna gelijke opties is vaak één van de twee goed.",
+            },
+            {
+              titel: "Verschil zoeken",
+              tekst: "Kijk heel precies welk woord of getal anders is.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "valstrik",
+              uitleg: "Een optie die expres op het goede antwoord lijkt, om je te verwarren.",
+            },
+          ],
+          theorie: "De maker zet soms een klein verschil tussen twee opties. Dat kleine verschil beslist.",
+          voorbeelden: [
+            {
+              type: "verschil",
+              tekst: "'Hij loopt' en 'hij loopt niet' lijken op elkaar, maar betekenen het tegenovergestelde.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet wegstrepen",
+              uitleg: "Streep ze niet zomaar allebei weg.",
+            },
+          ],
+          niveaus: {
+            basis: "Zoek het kleine verschil.",
+            simpeler: "Lijken twee antwoorden op elkaar? Lees ze allebei woord voor woord. Waar zit het verschil?",
+            nogSimpeler: "Verschil zoeken",
+          },
+        },
+      },
+      {
+        q: "Vraag: 'Wat was de aanleiding voor de Eerste Wereldoorlog?' Waarom kun je **Pearl Harbor** wegstrepen?",
+        options: [
+          "Dat hoort bij de Tweede Wereldoorlog",
+          "Dat gebeurde in Nederland",
+          "Dat is geen gebeurtenis maar een boek",
+          "Dat antwoord is te kort",
+        ],
+        answer: 0,
+        wrongHints: [null, "In welke oorlog gebeurde Pearl Harbor?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat weet je?",
+              tekst: "Pearl Harbor was in 1941, tijdens de Tweede Wereldoorlog.",
+            },
+            {
+              titel: "Dus",
+              tekst: "Het past niet bij de Eerste Wereldoorlog. Wegstrepen.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "aanleiding",
+              uitleg: "De gebeurtenis waardoor iets begint.",
+            },
+          ],
+          theorie: "Je hoeft het goede antwoord niet meteen te weten. Weet je dat een optie bij iets anders hoort, dan kun je hem wegstrepen.",
+          voorbeelden: [
+            {
+              type: "eliminatie",
+              tekst: "Polen-inval en Pearl Harbor = WO2 → weg. Zo blijft er minder over.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Wat je wél weet",
+              uitleg: "Gebruik kennis die je hebt om foute opties te vinden.",
+            },
+          ],
+          niveaus: {
+            basis: "Pearl Harbor hoort bij WO2.",
+            simpeler: "Pearl Harbor was in de Tweede Wereldoorlog. De vraag gaat over de Eerste. Dus kan het niet kloppen.",
+            nogSimpeler: "WO2, dus weg",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Wat zegt de uitleg over de trucjes voor meerkeuzevragen?",
+        options: [
+          "Ze helpen, maar eerst denk je zelf na",
+          "Daardoor hoef je niet meer te leren",
+          "Je mag ze niet gebruiken in de toets",
+          "Je gebruikt ze voordat je de vraag leest",
+        ],
+        answer: 0,
+        wrongHints: [null, "Kun je foute opties herkennen als je niets van het onderwerp weet?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Hulpmiddel",
+              tekst: "De trucjes zijn een hulpmiddel, geen vervanger voor kennis.",
+            },
+            {
+              titel: "Volgorde",
+              tekst: "Eerst denken, dan eliminatie als hulp.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "hulpmiddel",
+              uitleg: "Iets dat je helpt, maar het werk niet helemaal voor je doet.",
+            },
+          ],
+          theorie: "Met kennis kun je foute opties herkennen. De trucjes helpen je daarbij, maar ze vervangen het leren niet.",
+          voorbeelden: [
+            {
+              type: "kennis",
+              tekst: "Weet je dat Pearl Harbor in de Tweede Wereldoorlog was? Dan kun je die optie bij een vraag over de Eerste Wereldoorlog wegstrepen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Leren blijft nodig",
+              uitleg: "Hoe meer je weet, hoe beter eliminatie werkt.",
+            },
+          ],
+          niveaus: {
+            basis: "Eerst denken, trucjes als hulp.",
+            simpeler: "De trucjes zijn handig, maar je moet nog steeds zelf nadenken en dingen weten.",
+            nogSimpeler: "Eerst denken",
+          },
+        },
+      },
+      {
+        q: "Vraag: 'Welk dier is een zoogdier?' Je weet niet meteen het antwoord, maar je weet zeker dat een **haai** een vis is. Wat doe je met de optie 'haai'?",
+        options: [
+          "Wegstrepen, want die kan niet goed zijn",
+          "Kiezen, want dat dier ken je",
+          "Laten staan tot het eind van de toets",
+          "Samen met een andere optie aankruisen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Lees de vraag nog eens: welk soort dier wordt er gezocht?",
+          null,
+          "Hoeveel opties mag je bij één vraag kiezen?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Wat weet je zeker?",
+              tekst: "Een haai is een vis. De vraag zoekt een zoogdier.",
+            },
+            {
+              titel: "Wegstrepen",
+              tekst: "Een vis is geen zoogdier. Dus streep je 'haai' door.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "eliminatie",
+              uitleg: "Foute antwoorden uitsluiten.",
+            },
+          ],
+          theorie: "Je hoeft het goede antwoord niet meteen te weten. Elke optie die zeker fout is, streep je weg. Zo blijft er minder over.",
+          voorbeelden: [
+            {
+              type: "eliminatie",
+              tekst: "Weet je ook dat een mus een vogel is? Dan streep je die ook weg. Zo houd je er nog maar twee over.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Wat je wél weet",
+              uitleg: "Gebruik wat je zeker weet om foute opties te vinden.",
+            },
+          ],
+          niveaus: {
+            basis: "Een haai is een vis, dus wegstrepen.",
+            simpeler: "De vraag zoekt een zoogdier. Een haai is een vis. Die kan dus niet goed zijn.",
+            nogSimpeler: "Haai weg",
+          },
+        },
+      },
     ],
   },
   {
@@ -362,6 +1267,300 @@ const steps = [
             basis: "Onderlijn 'NIET'.",
             simpeler: "'NIET' is een klein woord, makkelijk te missen. Onderlijn 'm direct als je 'm ziet — dan vergeet je niet dat je het TEGENGESTELDE zoekt.",
             nogSimpeler: "Markeer NIET",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Hoe **skim** je een tekst?",
+        options: [
+          "Titel en eerste zin van elke alinea lezen",
+          "Alleen de laatste zin van de tekst lezen",
+          "Elk woord van de tekst hardop lezen",
+          "De tekst van achter naar voren lezen",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Wat geeft je in een halve minuut het beste beeld waar de tekst over gaat?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Skimmen",
+              tekst: "Lees de titel en de eerste zin van elke alinea.",
+            },
+            {
+              titel: "Doel",
+              tekst: "In ~30 seconden weet je waar de tekst over gaat.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "skimmen",
+              uitleg: "Snel een tekst bekijken om te zien waar hij over gaat.",
+            },
+          ],
+          theorie: "De eerste zin van een alinea zegt vaak waar die alinea over gaat. Zo krijg je snel een overzicht.",
+          voorbeelden: [
+            {
+              type: "skim",
+              tekst: "Titel 'Bijen in de stad' + eerste zinnen → de tekst gaat over bijen die in steden leven.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet alles lezen",
+              uitleg: "Woord voor woord lezen kost te veel tijd.",
+            },
+          ],
+          niveaus: {
+            basis: "Titel + eerste zinnen lezen.",
+            simpeler: "Lees de titel en van elke alinea alleen de eerste zin. Dan weet je snel waar het over gaat.",
+            nogSimpeler: "Titel + eerste zinnen",
+          },
+        },
+      },
+      {
+        q: "Een vraag is: 'Wat is de **boodschap** van de tekst?' Waar kijk je vooral?",
+        options: [
+          "Naar de eerste en laatste alinea",
+          "Alleen naar de middelste alinea",
+          "Naar het aantal woorden in de tekst",
+          "Naar de moeilijkste woorden",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Waar vertelt een schrijver meestal waar het om gaat: in het begin en eind, of ergens in het midden?",
+          null,
+          null,
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Hoofd-idee",
+              tekst: "De boodschap staat vaak in de eerste en laatste alinea.",
+            },
+            {
+              titel: "Signaalwoorden",
+              tekst: "Let op woorden als 'kortom' en 'samenvattend'.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "boodschap",
+              uitleg: "Wat de schrijver je vooral wil vertellen.",
+            },
+          ],
+          theorie: "Aan het begin zegt de schrijver waar het over gaat. Aan het eind vat hij het vaak samen.",
+          voorbeelden: [
+            {
+              type: "kortom",
+              tekst: "'Kortom: bijen zijn belangrijk voor de stad.' → dat is de boodschap.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Niet één detail",
+              uitleg: "De boodschap gaat over de hele tekst, niet over één klein stukje.",
+            },
+          ],
+          niveaus: {
+            basis: "Kijk naar begin en eind.",
+            simpeler: "Wil je weten wat de schrijver vooral bedoelt? Lees dan goed de eerste en de laatste alinea.",
+            nogSimpeler: "Begin + eind",
+          },
+        },
+      },
+      {
+        q: "Je weet niet wat een **woord** in de tekst betekent. Wat doe je?",
+        options: [
+          "Kijk naar de zin eromheen",
+          "Sla de hele tekst over",
+          "Kies het langste antwoord",
+          "Kies wat jij zelf het mooiste vindt",
+        ],
+        answer: 0,
+        wrongHints: [null, "Wat helpt je raden wat een onbekend woord betekent?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Context",
+              tekst: "Lees de zin waar het woord in staat, en de zin ervoor en erna.",
+            },
+            {
+              titel: "Proberen",
+              tekst: "Zet de opties op de plek van het woord. Welke past?",
+            },
+          ],
+          woorden: [
+            {
+              woord: "context",
+              uitleg: "De woorden en zinnen rondom een woord.",
+            },
+          ],
+          theorie: "De zinnen eromheen geven vaak een hint over wat een woord betekent.",
+          voorbeelden: [
+            {
+              type: "woordbetekenis",
+              tekst: "'Het was een gure dag: koud, nat en veel wind.' → 'guur' betekent dus koud en ongezellig.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "In de tekst",
+              uitleg: "Ook bij woordvragen staat de hint in de tekst.",
+            },
+          ],
+          niveaus: {
+            basis: "Kijk naar de zin eromheen.",
+            simpeler: "Lees de zin met het woord nog eens. De woorden ernaast vertellen vaak wat het betekent.",
+            nogSimpeler: "Zin eromheen",
+          },
+        },
+      },
+      {
+        q: "Je hebt een antwoord gekozen. Wat is de **laatste stap**?",
+        options: [
+          "Je antwoord vergelijken met het stukje tekst",
+          "Meteen door zonder nog te kijken",
+          "De hele tekst opnieuw woord voor woord lezen",
+          "Je antwoord veranderen in het langste",
+        ],
+        answer: 0,
+        wrongHints: [null, "Hoe weet je zeker dat je antwoord echt bij de tekst past?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Stap 5",
+              tekst: "Check je antwoord: vergelijk het met het stukje tekst.",
+            },
+            {
+              titel: "Klopt het?",
+              tekst: "Staat het echt zo in de tekst? Dan houd je het.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "checken",
+              uitleg: "Controleren of iets klopt.",
+            },
+          ],
+          theorie: "Een korte check bij het juiste stukje tekst vangt fouten, zonder dat je alles opnieuw hoeft te lezen.",
+          voorbeelden: [
+            {
+              type: "check",
+              tekst: "Antwoord: 'in de zomer'. Je kijkt terug: 'Bijen zijn het drukst in de zomer.' Klopt!",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Gericht",
+              uitleg: "Alleen het stukje bij de vraag teruglezen, niet de hele tekst.",
+            },
+          ],
+          niveaus: {
+            basis: "Vergelijk met de tekst.",
+            simpeler: "Kijk nog even terug in de tekst. Staat jouw antwoord er echt? Dan is het goed.",
+            nogSimpeler: "Terugkijken",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een vraag is: 'Waarom doet de hoofdpersoon dat?' Het staat niet letterlijk in de tekst. Wat doe je?",
+        options: [
+          "Tussen de regels lezen",
+          "Je eigen mening opschrijven",
+          "Alleen naar de titel kijken",
+          "De vraag overslaan, het staat er niet",
+        ],
+        answer: 0,
+        wrongHints: [null, "Telt bij begrijpend lezen wat jij vindt, of wat de tekst laat zien?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Niet letterlijk",
+              tekst: "Bij een waarom-vraag staat het antwoord soms niet letterlijk in de tekst.",
+            },
+            {
+              titel: "Tussen de regels",
+              tekst: "Let op woorden die laten zien wat iemand voelt of vindt.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "tussen de regels lezen",
+              uitleg: "Snappen wat de tekst bedoelt, ook als het er niet precies zo staat.",
+            },
+          ],
+          theorie: "Bij een vraag naar wat iemand denkt of waarom iemand iets doet, kijk je naar woorden met emotie of een mening.",
+          voorbeelden: [
+            {
+              type: "tussen de regels",
+              tekst: "'Tom smeet zijn tas in de hoek en zei niets.' Er staat niet dat Tom boos is, maar je kunt het wel uit de tekst halen.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Het bewijs zit in de tekst",
+              uitleg: "Ook als het niet letterlijk staat, haal je het antwoord uit de tekst, niet uit je eigen mening.",
+            },
+          ],
+          niveaus: {
+            basis: "Lees tussen de regels.",
+            simpeler: "Staat het er niet precies? Kijk dan naar wat iemand doet of zegt. Daaruit kun je opmaken waarom.",
+            nogSimpeler: "Tussen de regels",
+          },
+        },
+      },
+      {
+        q: "Een tekst beschrijft eerst een **probleem** en daarna een **oplossing**. Bij welke vraag helpt je dat?",
+        options: [
+          "Hoe is de tekst opgebouwd?",
+          "Wat betekent een moeilijk woord?",
+          "Wat staat er niet in de tekst?",
+          "Hoeveel alinea's heeft de tekst?",
+        ],
+        answer: 0,
+        wrongHints: [null, "Gaat dit over één woord, of over de hele tekst?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Tekstopbouw",
+              tekst: "Bij een vraag over de opbouw kijk je naar de volgorde van de alinea's.",
+            },
+            {
+              titel: "Soorten opbouw",
+              tekst: "Bijvoorbeeld: probleem en oplossing, voor en tegen, of een tijdlijn.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "opbouw",
+              uitleg: "Hoe de delen van een tekst na elkaar komen.",
+            },
+          ],
+          theorie: "Een tekst heeft vaak een vaste opbouw. Herken je die, dan kun je een opbouwvraag snel beantwoorden.",
+          voorbeelden: [
+            {
+              type: "probleem-oplossing",
+              tekst: "Alinea 1: er ligt veel afval op het plein. Alinea 2: de klas zet extra prullenbakken neer. Dat is probleem en oplossing.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Kijk naar de volgorde",
+              uitleg: "Waar gaat de eerste alinea over, en waar de volgende?",
+            },
+          ],
+          niveaus: {
+            basis: "Bij de opbouw van de tekst.",
+            simpeler: "Eerst een probleem, dan een oplossing: dat zegt iets over hoe de tekst in elkaar zit.",
+            nogSimpeler: "Opbouw",
           },
         },
       },
@@ -442,6 +1641,307 @@ const steps = [
             basis: "Goedkoper = −, verhoogd = +.",
             simpeler: "Goedkoper = prijs gaat OMLAAG. Verhoogd = prijs gaat OMHOOG. Helemaal verschillend, ook al is het percentage gelijk.",
             nogSimpeler: "Min vs plus",
+          },
+        },
+      },
+      // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een kaart heeft schaal **1:50.000**. Een weg is op de kaart 6 cm. Hoe lang is de weg echt?",
+        options: ["3 km", "30 km", "300 m", "6 km"],
+        answer: 0,
+        wrongHints: [null, "Hoeveel meter is 1 cm op deze kaart in het echt?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "1 cm op de kaart",
+              tekst: "1 cm = 50.000 cm = 500 m = 0,5 km.",
+            },
+            {
+              titel: "6 cm",
+              tekst: "6 × 0,5 km = 3 km.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schaal",
+              uitleg: "Hoeveel keer kleiner de kaart is dan het echt is.",
+            },
+          ],
+          theorie: "Bij 1:50.000 is 1 cm op de kaart 0,5 km in het echt. Vermenigvuldig met het aantal cm.",
+          voorbeelden: [
+            {
+              type: "schaal",
+              tekst: "4 cm = 2 km. 6 cm = 3 km. 8 cm = 4 km.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "cm naar km",
+              uitleg: "100 cm = 1 m. 1.000 m = 1 km.",
+            },
+          ],
+          niveaus: {
+            basis: "6 × 0,5 km = 3 km.",
+            simpeler: "Op deze kaart is elke cm een halve kilometer. 6 halve kilometers is 3 km.",
+            nogSimpeler: "3 km",
+          },
+        },
+      },
+      {
+        q: "Een trein rijdt **90 km in 45 minuten**. Hoe hard rijdt hij gemiddeld?",
+        options: ["120 km/u", "90 km/u", "60 km/u", "135 km/u"],
+        answer: 0,
+        wrongHints: [null, "Hoeveel uur is 45 minuten als kommagetal?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Minuten naar uren",
+              tekst: "45 minuten = 0,75 uur.",
+            },
+            {
+              titel: "Delen",
+              tekst: "Snelheid = afstand ÷ tijd = 90 ÷ 0,75 = 120 km/u.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "km/u",
+              uitleg: "Hoeveel kilometer je in één uur aflegt.",
+            },
+          ],
+          theorie: "Snelheid = afstand ÷ tijd. Zet de tijd altijd eerst om naar uren.",
+          voorbeelden: [
+            {
+              type: "snelheid",
+              tekst: "90 km in 45 min → in 15 min 30 km → in 60 min 120 km.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Schatten",
+              uitleg: "Minder dan een uur voor 90 km → snelheid moet méér dan 90 km/u zijn.",
+            },
+          ],
+          niveaus: {
+            basis: "90 ÷ 0,75 = 120 km/u.",
+            simpeler: "In 45 minuten 90 km. Dat is 30 km per kwartier. Een uur heeft 4 kwartier: 4 × 30 = 120 km/u.",
+            nogSimpeler: "120 km/u",
+          },
+        },
+      },
+      {
+        q: "Een jas kost €60. De prijs wordt **20% hoger**. Wat kost de jas nu?",
+        options: ["€72", "€48", "€80", "€62"],
+        answer: 0,
+        wrongHints: [null, "Gaat de prijs omhoog of omlaag?", null, "Hoeveel euro is 20% van €60?"],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "20% van 60",
+              tekst: "10% van 60 = 6, dus 20% = 12.",
+            },
+            {
+              titel: "Hoger",
+              tekst: "60 + 12 = €72.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "procent",
+              uitleg: "Per honderd. 20% = 20 van de 100.",
+            },
+          ],
+          theorie: "Eerst het procent uitrekenen, dan kijken: komt het erbij (hoger) of gaat het eraf (goedkoper)?",
+          voorbeelden: [
+            {
+              type: "verhogen",
+              tekst: "€100 + 20% = €120. €60 + 20% = €72.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Let op het woord",
+              uitleg: "'Hoger' of 'verhoogd' = erbij. 'Goedkoper' = eraf.",
+            },
+          ],
+          niveaus: {
+            basis: "60 + 12 = €72.",
+            simpeler: "20% van €60 is €12. De prijs wordt hoger, dus €60 + €12 = €72.",
+            nogSimpeler: "€72",
+          },
+        },
+      },
+      {
+        q: "Je moet **31 × 19** uitrekenen. Welke schatting helpt het meest?",
+        options: ["30 × 20 = 600", "30 × 10 = 300", "40 × 20 = 800", "3 × 2 = 6"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Rond je 19 af naar 10 of naar 20?",
+          null,
+          "Hoe groot is het antwoord ongeveer: rond de 6 of rond de 600?",
+        ],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Afronden",
+              tekst: "31 ≈ 30 en 19 ≈ 20.",
+            },
+            {
+              titel: "Schatten",
+              tekst: "30 × 20 = 600. Het echte antwoord ligt daar dichtbij.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "schatten",
+              uitleg: "Grof uitrekenen met afgeronde getallen.",
+            },
+          ],
+          theorie: "Rond beide getallen af naar het dichtstbijzijnde tiental. Dan kun je snel schatten.",
+          voorbeelden: [
+            {
+              type: "schatting",
+              tekst: "31 × 19 = 589. Dat ligt dicht bij de schatting 600.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Waarom schatten?",
+              uitleg: "Ligt je antwoord ver van de schatting? Dan heb je waarschijnlijk een rekenfout.",
+            },
+          ],
+          niveaus: {
+            basis: "Rond af: 30 × 20 = 600.",
+            simpeler: "31 is bijna 30 en 19 is bijna 20. 30 × 20 = 600. Het antwoord ligt dus rond 600.",
+            nogSimpeler: "Ongeveer 600",
+          },
+        },
+      },
+      {
+        q: "Een fietstocht duurt **1 uur en 15 minuten**. Hoeveel uur is dat als kommagetal?",
+        options: ["1,25 uur", "1,15 uur", "1,5 uur", "1,75 uur"],
+        answer: 0,
+        wrongHints: [null, "Welk deel van een uur is 15 minuten?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "15 minuten",
+              tekst: "15 minuten = een kwart uur = 0,25 uur.",
+            },
+            {
+              titel: "Optellen",
+              tekst: "1 + 0,25 = 1,25 uur.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "kommagetal",
+              uitleg: "Een getal met een komma, zoals 1,25.",
+            },
+          ],
+          theorie: "Minuten kun je niet zomaar achter de komma zetten. Reken ze om: deel door 60.",
+          voorbeelden: [
+            {
+              type: "omrekenen",
+              tekst: "30 min = 0,5 uur. 15 min = 0,25 uur. 45 min = 0,75 uur.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Valkuil",
+              uitleg: "1 uur 15 min is NIET 1,15 uur.",
+            },
+          ],
+          niveaus: {
+            basis: "15 min = 0,25 uur, dus 1,25 uur.",
+            simpeler: "Een kwartier is een kwart van een uur. Een kwart is 0,25. Samen met 1 uur: 1,25 uur.",
+            nogSimpeler: "1,25",
+          },
+        },
+      },
+      {
+        q: "Van de 60 kinderen komen er **15 op de fiets**. Hoeveel procent is dat?",
+        options: ["25%", "15%", "40%", "4%"],
+        answer: 0,
+        wrongHints: [null, "Welk deel van 60 is 15?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "Deel van het geheel",
+              tekst: "15 van de 60 = 15/60 = 1/4.",
+            },
+            {
+              titel: "Naar procent",
+              tekst: "1/4 = 25%.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "procent",
+              uitleg: "Per honderd.",
+            },
+          ],
+          theorie: "'X is hoeveel procent van Y' = X ÷ Y × 100%.",
+          voorbeelden: [
+            {
+              type: "procent",
+              tekst: "15 ÷ 60 = 0,25 → 0,25 × 100% = 25%.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Bekende delen",
+              uitleg: "1/2 = 50%, 1/4 = 25%, 1/10 = 10%.",
+            },
+          ],
+          niveaus: {
+            basis: "15/60 = 1/4 = 25%.",
+            simpeler: "15 past 4 keer in 60. Dus het is een kwart. Een kwart is 25%.",
+            nogSimpeler: "25%",
+          },
+        },
+      },
+      // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
+      {
+        q: "Een bak heeft een inhoud van **2 m³**. Hoeveel liter is dat?",
+        options: ["2.000 liter", "200 liter", "20 liter", "20.000 liter"],
+        answer: 0,
+        wrongHints: [null, "Hoeveel liter past er in 1 m³?", null, null],
+        uitlegPad: {
+          stappen: [
+            {
+              titel: "1 m³",
+              tekst: "1 m³ = 1.000 liter.",
+            },
+            {
+              titel: "2 m³",
+              tekst: "2 × 1.000 = 2.000 liter.",
+            },
+          ],
+          woorden: [
+            {
+              woord: "m³",
+              uitleg: "Kubieke meter: een kubus van 1 meter lang, 1 meter breed en 1 meter hoog.",
+            },
+          ],
+          theorie: "Eenheden omrekenen: 1 m³ = 1.000 liter. Vermenigvuldig met het aantal m³.",
+          voorbeelden: [
+            {
+              type: "omrekenen",
+              tekst: "3 m³ = 3.000 liter. 5 m³ = 5.000 liter.",
+            },
+          ],
+          basiskennis: [
+            {
+              onderwerp: "Check de eenheid",
+              uitleg: "Vraagt de som om liter? Zet dan liter achter je antwoord, niet m³.",
+            },
+          ],
+          niveaus: {
+            basis: "2 × 1.000 = 2.000 liter.",
+            simpeler: "In 1 m³ past 1.000 liter. Je hebt er 2, dus 2.000 liter.",
+            nogSimpeler: "2.000 liter",
           },
         },
       },

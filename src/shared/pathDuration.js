@@ -5,11 +5,18 @@
 // Formule: leestijd explanation (~1500 chars/min) + ~24 sec per check.
 // Resultaat wordt afgerond naar handige stappen (5, 10, 15, 20, 25, 30, 45, 60).
 
+import { VRAGEN_PER_BEZOEK } from "./geziendeVragen.js";
+
 function rawMinutes(path) {
   if (!path || !Array.isArray(path.steps)) return 15;
   const steps = path.steps;
   const explChars = steps.reduce((sum, s) => sum + ((s?.explanation || "").length), 0);
-  const checks = steps.reduce((sum, s) => sum + (Array.isArray(s?.checks) ? s.checks.length : 0), 0);
+  // 👀 Per stapbezoek hoogstens VRAGEN_PER_BEZOEK vragen (geziendeVragen.js); examens: alle.
+  const examen = String(path.id || "").startsWith("examen-");
+  const checks = steps.reduce((sum, s) => {
+    const n = Array.isArray(s?.checks) ? s.checks.length : 0;
+    return sum + (examen ? n : Math.min(n, VRAGEN_PER_BEZOEK));
+  }, 0);
   return explChars / 1500 + checks * 0.4;
 }
 
@@ -36,7 +43,7 @@ export function formatPathDuration(path) {
 export function estimateStepMinutes(step) {
   if (!step) return 2;
   const explChars = (step.explanation || "").length;
-  const checks = Array.isArray(step.checks) ? step.checks.length : 0;
+  const checks = Math.min(Array.isArray(step.checks) ? step.checks.length : 0, VRAGEN_PER_BEZOEK);
   const raw = explChars / 1500 + checks * 0.4;
   return Math.max(1, Math.round(raw));
 }

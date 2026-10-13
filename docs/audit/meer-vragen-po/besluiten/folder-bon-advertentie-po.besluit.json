@@ -1,0 +1,297 @@
+{
+ "pathId": "folder-bon-advertentie-po",
+ "geschreven": 13,
+ "opgenomen": [
+  {
+   "stap": 0,
+   "q": "Op een kassabon is één bedrag onleesbaar:\n• Pennen 3 × €1,25 = €…\n\nWelk bedrag hoort op de plek van de puntjes?",
+   "options": [
+    "€3,75",
+    "€4,25",
+    "€3,25",
+    "€1,25"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Reken 3 × €1,25 eens uit als €1,25 + €1,25 + €1,25.",
+    null,
+    "Dat is de prijs van één pen."
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Aantal × prijs per stuk",
+      "tekst": "3 pennen van €1,25: €1,25 + €1,25 + €1,25 = €3,75."
+     }
+    ],
+    "niveaus": {
+     "basis": "3 × €1,25 = €3,75.",
+     "simpeler": "Drie keer €1 is €3, drie keer 25 cent is 75 cent.",
+     "nogSimpeler": "€3 + €0,75 = ?"
+    }
+   },
+   "id": "folder-bon-advertentie-po#1"
+  },
+  {
+   "stap": 0,
+   "q": "Onderaan een kassabon staat:\n• Totaal: €13,65\n• Betaald (contant): €20,00\n• Terug: €…\n\nHoeveel krijg je terug?",
+   "options": [
+    "€6,35",
+    "€7,35",
+    "€6,45",
+    "€7,65"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Reken van €13,65 omhoog naar €20,00.",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Betaald − totaal",
+      "tekst": "€20,00 − €13,65 = €6,35. Controle: €13,65 + €6,35 = €20,00."
+     }
+    ],
+    "niveaus": {
+     "basis": "Wisselgeld = €20,00 − €13,65 = €6,35.",
+     "simpeler": "Van €13,65 naar €14,00 is €0,35. Van €14,00 naar €20,00 is €6,00.",
+     "nogSimpeler": "€0,35 + €6,00 = ?"
+    }
+   },
+   "id": "folder-bon-advertentie-po#2"
+  },
+  {
+   "stap": 0,
+   "q": "Onderaan een kassabon staat:\n• Totaal: €7,26\n• Waarvan btw: €1,26\n\nHoeveel heb je in totaal betaald?",
+   "options": [
+    "€7,26",
+    "€8,52",
+    "€6,00",
+    "€1,26"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Lees in de uitleg nog eens na waar de btw zit.",
+    null,
+    "Dat is maar een deel van het bedrag."
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Btw zit al in de prijs",
+      "tekst": "De btw is belasting die al in de prijs zit. 'Waarvan btw' betekent: van de €7,26 is €1,26 belasting. Je betaalt dus €7,26."
+     }
+    ],
+    "niveaus": {
+     "basis": "Je betaalt het totaal: €7,26. De btw zit daar al in.",
+     "simpeler": "Komt de btw er nog bij, of zit hij al in het totaal? Hij zit er al in.",
+     "nogSimpeler": "Welk bedrag staat bij 'Totaal'?"
+    }
+   },
+   "id": "folder-bon-advertentie-po#3"
+  },
+  {
+   "stap": 1,
+   "q": "Folder:\n• Kaas: 2e halve prijs\n• Brood: 25% korting\n• Melk: op = op\n• Eieren: 2 halen, 1 betalen\n\nBij welk product krijg je er één **gratis** bij?",
+   "options": [
+    "eieren",
+    "kaas",
+    "brood",
+    "melk"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Voor het tweede stuk betaal je hier nog wel iets.",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "2 halen, 1 betalen",
+      "tekst": "Bij '2 halen, 1 betalen' neem je er 2 mee en betaal je er 1. Eentje krijg je dus gratis. Dat staat bij de eieren."
+     }
+    ],
+    "niveaus": {
+     "basis": "'2 halen, 1 betalen' = één gratis → eieren.",
+     "simpeler": "Bij welke aanbieding betaal je voor het tweede stuk helemaal niets?",
+     "nogSimpeler": "Welke tekst zegt '1 betalen'?"
+    }
+   },
+   "id": "folder-bon-advertentie-po#6"
+  },
+  {
+   "stap": 2,
+   "q": "Advertentie:\nGRATIS pet bij elke fles!*\n*Alleen bij aankoop van 2 flessen, zolang de voorraad strekt.\n\nJe koopt 1 fles. Krijg je een pet?",
+   "options": [
+    "nee, daarvoor moet je 2 flessen kopen",
+    "ja, want bij elke fles hoort een pet",
+    "ja, als je bij de kassa om een pet vraagt",
+    "nee, want petten zijn nooit gratis"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Waar verwijst het sterretje naar?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Kleine lettertjes = voorwaarden",
+      "tekst": "Het sterretje verwijst naar de kleine lettertjes. Daar staat de voorwaarde: alleen bij 2 flessen. Met 1 fles krijg je dus geen pet."
+     }
+    ],
+    "niveaus": {
+     "basis": "De kleine lettertjes zeggen: alleen bij 2 flessen.",
+     "simpeler": "Wat staat er onder het sterretje?",
+     "nogSimpeler": "Koop je 1 fles of 2 flessen?"
+    }
+   },
+   "id": "folder-bon-advertentie-po#8"
+  },
+  {
+   "stap": 2,
+   "q": "Welke informatie zet een verkoper bijna nooit in zijn advertentie?",
+   "options": [
+    "de nadelen van het product",
+    "de prijs van het product",
+    "een foto van het product",
+    "de naam van het product"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Kijk eens in een folder: wat staat daar vaak groot bij een product?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Reclame toont de goede kant",
+      "tekst": "Een advertentie wil dat je iets koopt. Daarom laat hij vooral de goede kanten zien en vertelt hij de nadelen meestal niet."
+     }
+    ],
+    "niveaus": {
+     "basis": "Nadelen staan bijna nooit in reclame.",
+     "simpeler": "Wil een verkoper dat je de minder mooie kant ziet?",
+     "nogSimpeler": "Laat reclame de goede of de slechte kanten zien?"
+    }
+   },
+   "id": "folder-bon-advertentie-po#9"
+  },
+  {
+   "stap": 3,
+   "q": "Folder:\nYoghurt €1,10 per pak — 3 halen, 2 betalen\n\nJe neemt 3 pakken. Wat betaal je?",
+   "options": [
+    "€2,20",
+    "€3,30",
+    "€1,10",
+    "€4,40"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Dan betaal je voor alle drie de pakken.",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Eentje gratis",
+      "tekst": "Bij '3 halen, 2 betalen' betaal je voor 2 pakken: 2 × €1,10 = €2,20. Het derde pak is gratis."
+     }
+    ],
+    "niveaus": {
+     "basis": "Je betaalt 2 × €1,10 = €2,20.",
+     "simpeler": "Voor hoeveel van de 3 pakken betaal je?",
+     "nogSimpeler": "€1,10 + €1,10 = ?"
+    }
+   },
+   "id": "folder-bon-advertentie-po#11"
+  },
+  {
+   "stap": 3,
+   "q": "Folder:\nRugzak — van €35 voor €28\n\nJe koopt er 2: één voor jou en één voor je broer. Hoeveel bespaar je samen?",
+   "options": [
+    "€14",
+    "€7",
+    "€56",
+    "€70"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Voor hoeveel rugzakken krijg je de korting?",
+    null,
+    null
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Besparing × aantal",
+      "tekst": "Op één rugzak bespaar je €35 − €28 = €7. Je koopt er 2, dus je bespaart 2 × €7 = €14."
+     }
+    ],
+    "niveaus": {
+     "basis": "€7 per rugzak × 2 = €14.",
+     "simpeler": "Wat bespaar je op één rugzak? Doe dat dan keer 2.",
+     "nogSimpeler": "€7 + €7 = ?"
+    }
+   },
+   "id": "folder-bon-advertentie-po#12"
+  }
+ ],
+ "afgekeurd": [
+  {
+   "id": "folder-bon-advertentie-po#0",
+   "stap": 0,
+   "q": "Kassabon:\n• Appels 4 × €0,60 = €2,40\n• Kaas 1 × €3,85 = €3,85\n• Sap 2 × €1,15 = €2,30\n\nWat is het **totaalbedrag** van deze bon?",
+   "redenen": [
+    "nakijker B: Fase 2: wrongHint bij €7,40 ('kijk naar de totalen per regel, niet de prijs per stuk') past niet bij die optie: de prijzen per stuk tellen op tot €5,60, niet €7,40. Hint hoort niet bij de afleider."
+   ]
+  },
+  {
+   "id": "folder-bon-advertentie-po#4",
+   "stap": 1,
+   "q": "Folder:\n• Winkel A: ijsjes van €4,80 voor €3,80\n• Winkel B: ijsjes €4,80, nu 25% korting\n\nIn welke winkel is het ijsje het goedkoopst?",
+   "redenen": [
+    "nakijker A: Vraag vergelijkt twee winkels: 'het goedkoopst' beter 'goedkoper' (vergrotende trap bij twee). Inhoudelijk klopt het (B €3,60 < A €3,80)."
+   ]
+  },
+  {
+   "id": "folder-bon-advertentie-po#5",
+   "stap": 1,
+   "q": "Folder:\nZonnebrandcrème — van €12 voor €9\nAlleen geldig t/m zondag. Op = op.\n\nHet is zaterdag. De winkel heeft geen zonnebrandcrème meer. Kun je de aanbieding nog krijgen?",
+   "redenen": [
+    "nakijker A: 'hij' is onduidelijk: verwijst het naar de aanbieding of naar de crème? Beter 'nee, want de crème is op'.",
+    "nakijker B: Verwijswoord 'hij' wisselt: in optie 'hij geldt' = de aanbieding, in 'hij is op' = de crème (en de vraag gaat over 'de aanbieding'). Beter: 'nee, want de crème is op'."
+   ]
+  },
+  {
+   "id": "folder-bon-advertentie-po#7",
+   "stap": 2,
+   "q": "Advertentie:\nSUPERSAP — het lekkerste sap van Nederland! Iedereen is er dol op. Een fantastische smaak. Nu in een fles van 1 liter.\n\nWelke zin uit de advertentie is een **feit**?",
+   "redenen": [
+    "nakijker A: Ligt dicht bij bestaande vraag 'Welke zin uit een advertentie is reclame-taal (geen feit)?' (zelfde vraagvorm, alleen omgekeerd). Mag blijven als bewuste spiegelvraag, maar is bijna-dubbel."
+   ]
+  },
+  {
+   "id": "folder-bon-advertentie-po#10",
+   "stap": 3,
+   "q": "Folder:\n• Winkel A: pak sap €2,40, 2e halve prijs\n• Winkel B: pak sap €2,40, 25% korting\n\nJe koopt 2 pakken sap. Waar ben je het voordeligst uit?",
+   "redenen": [
+    "nakijker A: A: €2,40 + €1,20 = €3,60; B: €4,80 × 0,75 = €3,60, dus even duur. Klopt, maar 'het voordeligst' bij twee winkels beter 'voordeliger'; en optie-vorm 'in beide winkels even duur' sluit grammaticaal niet goed aan op 'Waar ben je het voordeligst uit?'. Lijkt sterk op nieuwe vraag #4 (zelfde winkel A/B-opzet met 25% korting)."
+   ]
+  }
+ ]
+}

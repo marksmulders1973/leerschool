@@ -1,0 +1,478 @@
+{
+ "pathId": "tijdsduur-rekenen-po",
+ "geschreven": 28,
+ "opgenomen": [
+  {
+   "stap": 0,
+   "q": "Welke zin gaat over een **tijdstip**?",
+   "options": [
+    "De les begint om 10:15 uur.",
+    "De les duurt 45 minuten.",
+    "De film duurt 2 uur.",
+    "Ik slaap 9 uur per nacht."
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Gaat deze zin over 'wanneer' of over 'hoe lang'?",
+    "Gaat deze zin over 'wanneer' of over 'hoe lang'?",
+    "Gaat deze zin over 'wanneer' of over 'hoe lang'?"
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Tijdstip = wanneer",
+      "tekst": "Een tijdstip zegt wanneer iets gebeurt, zoals 'om 10:15 uur'."
+     },
+     {
+      "titel": "Tijdsduur = hoe lang",
+      "tekst": "Woorden als 'duurt' en '9 uur per nacht' gaan over hoe lang iets is."
+     },
+     {
+      "titel": "Kijk naar de woorden",
+      "tekst": "'Om' + kloktijd → tijdstip. 'Duurt' → tijdsduur."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "tijdstip",
+      "uitleg": "Wanneer iets gebeurt (een kloktijd)."
+     }
+    ],
+    "theorie": "Tijdstip = wanneer? Tijdsduur = hoe lang?",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "'Om 10:15 uur' = tijdstip. '45 minuten' = tijdsduur."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "Kun je 'hoe laat?' vragen? Dan is het een tijdstip."
+     }
+    ],
+    "niveaus": {
+     "basis": "De les begint om 10:15 uur.",
+     "simpeler": "'Om 10:15 uur' zegt wanneer. Dat is een tijdstip.",
+     "nogSimpeler": "Om 10:15"
+    }
+   },
+   "id": "tijdsduur-rekenen-po#1"
+  },
+  {
+   "stap": 0,
+   "q": "Welke eenheid gebruik je om te zeggen hoe lang **een knipoog** duurt?",
+   "options": [
+    "seconden",
+    "minuten",
+    "uren",
+    "dagen"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Duurt een knipoog lang of heel kort?",
+    "Duurt een knipoog lang of heel kort?",
+    "Duurt een knipoog lang of heel kort?"
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Heel kort",
+      "tekst": "Een knipoog duurt minder dan 1 seconde (ongeveer 0,3 s)."
+     },
+     {
+      "titel": "Kleinste eenheid",
+      "tekst": "Voor heel korte dingen gebruik je seconden."
+     },
+     {
+      "titel": "Rijtje",
+      "tekst": "seconden < minuten < uren < dagen."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "seconde",
+      "uitleg": "Een heel korte tijd. 60 seconden = 1 minuut."
+     }
+    ],
+    "theorie": "Kies de eenheid die past bij hoe lang iets duurt: kort → seconden, lang → uren of dagen.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "Knipoog: seconden. Les: minuten. Schooldag: uren. Vakantie: dagen."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Past het?",
+      "uitleg": "Een knipoog van 1 minuut zou heel raar zijn."
+     }
+    ],
+    "niveaus": {
+     "basis": "Seconden.",
+     "simpeler": "Een knipoog is heel kort. Dus seconden.",
+     "nogSimpeler": "seconden"
+    }
+   },
+   "id": "tijdsduur-rekenen-po#2"
+  },
+  {
+   "stap": 0,
+   "q": "Hoeveel **seconden** zitten er in **1 uur**?",
+   "options": [
+    "3600",
+    "60",
+    "600",
+    "6000"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Dat is het aantal minuten in een uur — en elke minuut heeft ook nog seconden.",
+    "Hoeveel minuten heeft een uur? En hoeveel seconden heeft elke minuut?",
+    "Rekende je ergens met 100 in plaats van 60?"
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Stap 1",
+      "tekst": "1 uur = 60 minuten."
+     },
+     {
+      "titel": "Stap 2",
+      "tekst": "1 minuut = 60 seconden."
+     },
+     {
+      "titel": "Stap 3",
+      "tekst": "60 × 60 = 3600 seconden."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "seconde",
+      "uitleg": "60 seconden = 1 minuut."
+     }
+    ],
+    "theorie": "Uur → minuten: × 60. Minuten → seconden: nog eens × 60.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "1 uur = 60 min = 60 × 60 = 3600 seconden."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Truc",
+      "uitleg": "6 × 6 = 36, met twee nullen erachter: 3600."
+     }
+    ],
+    "niveaus": {
+     "basis": "3600 seconden.",
+     "simpeler": "60 minuten, elk 60 seconden: 60 × 60 = 3600.",
+     "nogSimpeler": "3600"
+    }
+   },
+   "id": "tijdsduur-rekenen-po#3"
+  },
+  {
+   "stap": 0,
+   "q": "Hoeveel **uur** zitten er in **2 dagen**?",
+   "options": [
+    "48",
+    "24",
+    "120",
+    "200"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Dat is maar 1 dag.",
+    "Rekende je met 60? Hoeveel uur heeft 1 dag?",
+    "Een dag heeft geen 100 uur."
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Stap 1",
+      "tekst": "1 dag = 24 uur."
+     },
+     {
+      "titel": "Stap 2",
+      "tekst": "2 dagen = 2 × 24 = 48 uur."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "dag",
+      "uitleg": "Een dag duurt 24 uur."
+     }
+    ],
+    "theorie": "Dagen → uren: × 24 (niet × 60 en niet × 100).",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "2 dagen = 24 + 24 = 48 uur."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Onthouden",
+      "uitleg": "1 dag = 24 uur. 1 week = 7 dagen."
+     }
+    ],
+    "niveaus": {
+     "basis": "48 uur.",
+     "simpeler": "24 + 24 = 48.",
+     "nogSimpeler": "48"
+    }
+   },
+   "id": "tijdsduur-rekenen-po#4"
+  },
+  {
+   "stap": 0,
+   "q": "Hoeveel minuten is **3 uur en 20 minuten** samen?",
+   "options": [
+    "200",
+    "320",
+    "180",
+    "80"
+   ],
+   "answer": 0,
+   "wrongHints": [
+    null,
+    "Je schreef de getallen achter elkaar — maar 1 uur is 60 minuten.",
+    "Je bent de 20 minuten vergeten.",
+    "Hoeveel minuten zijn 3 uur, niet 1 uur?"
+   ],
+   "uitlegPad": {
+    "stappen": [
+     {
+      "titel": "Stap 1: uren",
+      "tekst": "3 uur = 3 × 60 = 180 min."
+     },
+     {
+      "titel": "Stap 2: minuten erbij",
+      "tekst": "180 + 20 = 200 min."
+     }
+    ],
+    "woorden": [
+     {
+      "woord": "omrekenen",
+      "uitleg": "Uren naar minuten: keer 60."
+     }
+    ],
+    "theorie": "Uren × 60, en dan de losse minuten erbij optellen.",
+    "voorbeelden": [
+     {
+      "type": "stap",
+      "tekst": "3 uur 20 min = 180 + 20 = 200 min."
+     }
+    ],
+    "basiskennis": [
+     {
+      "onderwerp": "Niet 320",
+      "uitleg": "3 uur is geen 300 minuten. 1 uur = 60 min."
+     }
+    ],
+    "niveaus": {
+     "basis": "200 minuten.",
+     "simpeler": "3 × 60 = 180. 180 + 20 = 200.",
+     "nogSimpeler": "200"
+    }
+   },
+   "id": "tijdsduur-rekenen-po#5"
+  }
+ ],
+ "afgekeurd": [
+  {
+   "id": "tijdsduur-rekenen-po#0",
+   "stap": 0,
+   "q": "Een schoolreis met de bus duurt **150 minuten**. Hoeveel is dat in uren en minuten?",
+   "redenen": [
+    "nakijker B: FASE 2: Taal in wrongHint bij \"2 uur 50 min\": \"150 min min 2 uur\" (dubbel \"min\", verwarrend); liever \"150 minuten min 120 minuten\"."
+   ]
+  },
+  {
+   "id": "tijdsduur-rekenen-po#6",
+   "stap": 1,
+   "q": "Van **10:40** tot **12:15** is hoe lang?",
+   "redenen": [
+    "nakijker B: Klein: ligt zeer dicht bij uitleg-voorbeeld 10:45 → 12:20 (zelfde antwoord 1 uur 35 min). | FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: Klein: wrongHints \"Te veel\"/\"Te weinig\" op opties rond het antwoord sluiten het goede antwoord in (eliminatie-lek)."
+   ]
+  },
+  {
+   "id": "tijdsduur-rekenen-po#7",
+   "stap": 1,
+   "q": "De les begint om **13:35** en eindigt om **14:20**. Hoe lang duurt de les?",
+   "redenen": [
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een)."
+   ]
+  },
+  {
+   "id": "tijdsduur-rekenen-po#8",
+   "stap": 1,
+   "q": "Een treinrit duurt van **7:55** tot **9:10**. Hoe lang zit je in de trein?",
+   "redenen": [
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: Klein: wrongHints \"Te veel\"/\"Te weinig\" op opties rond het antwoord sluiten het goede antwoord in (eliminatie-lek)."
+   ]
+  },
+  {
+   "id": "tijdsduur-rekenen-po#9",
+   "stap": 1,
+   "q": "Opa zet de soep op het vuur om **16:25**. Om **17:05** is de soep klaar. Hoe lang heeft de soep gekookt?",
+   "redenen": [
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een)."
+   ]
+  },
+  {
+   "id": "tijdsduur-rekenen-po#10",
+   "stap": 1,
+   "q": "Van **8:20** tot **11:05** is hoe lang?",
+   "redenen": [
+    "nakijker B: Klein: ligt zeer dicht bij uitleg-voorbeeld 8:30 → 11:15 (zelfde antwoord 2 uur 45 min). | FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: Klein: wrongHints \"Te veel\"/\"Te weinig\" op opties rond het antwoord sluiten het goede antwoord in (eliminatie-lek)."
+   ]
+  },
+  {
+   "id": "tijdsduur-rekenen-po#11",
+   "stap": 1,
+   "q": "Welke tijdsduur is het **langst**?",
+   "redenen": [
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een)."
+   ]
+  },
+  {
+   "id": "tijdsduur-rekenen-po#12",
+   "stap": 2,
+   "q": "Mees fietst **1 uur 35 min** naar zijn opa en **2 uur 45 min** terug, want hij neemt een omweg. Hoe lang fietst hij in totaal?",
+   "redenen": [
+    "nakijker A: Afleider '3 uur 80 min' is rekenkundig gelijk aan het goede antwoord (3u80 = 260 min = 4u20): twee opties verdedigbaar. Vervang door bv. '3 uur 70 min' of '5 uur 20 min'. | FASE 2: de eigen wrongHint bij \"3 uur 80 min\" (\"schrijven we niet zo\") bevestigt dat de waarde wél klopt; bezwaar blijft.",
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een)."
+   ]
+  },
+  {
+   "id": "tijdsduur-rekenen-po#13",
+   "stap": 2,
+   "q": "Een toneelstuk begint om **18:40** en duurt **1 uur 35 min**. Hoe laat is het afgelopen?",
+   "redenen": [
+    "nakijker A: Afleider '19:75' is (als je doorrekent) hetzelfde moment als 20:15; liever een afleider die echt een ander tijdstip is (bv. '19:15' staat er al; vervang 19:75 door '20:25').",
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een)."
+   ]
+  },
+  {
+   "id": "tijdsduur-rekenen-po#14",
+   "stap": 2,
+   "q": "Je moet om **8:20** op school zijn. Lopen duurt **35 minuten**. Hoe laat moet je **uiterlijk** vertrekken?",
+   "redenen": [
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een)."
+   ]
+  },
+  {
+   "id": "tijdsduur-rekenen-po#15",
+   "stap": 2,
+   "q": "De klok wijst **14:05**. Hoe laat was het **50 minuten** geleden?",
+   "redenen": [
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een)."
+   ]
+  },
+  {
+   "id": "tijdsduur-rekenen-po#16",
+   "stap": 2,
+   "q": "Een film duurt **2 uur 5 min**. Je hebt er al **1 uur 50 min** van gekeken. Hoe lang duurt de film nog?",
+   "redenen": [
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een)."
+   ]
+  },
+  {
+   "id": "tijdsduur-rekenen-po#17",
+   "stap": 3,
+   "q": "Hoe laat is **19:00** in gewone woorden?",
+   "redenen": [
+    "nakijker A: FASE 2: wrongHint \"Wat is 19 min 12?\" is verwarrend in een tijd-pad (\"min\" = minuten); schrijf \"19 − 12\".",
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: wrongHint \"Wat is 19 min 12?\" is verwarrend (\"min\" lijkt op minuten); liever \"19 − 12\"."
+   ]
+  },
+  {
+   "id": "tijdsduur-rekenen-po#18",
+   "stap": 3,
+   "q": "Welke tijd valt **'s nachts**?",
+   "redenen": [
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een)."
+   ]
+  },
+  {
+   "id": "tijdsduur-rekenen-po#19",
+   "stap": 3,
+   "q": "De trein vertrekt om **09:25** en komt aan om **13:10**. Hoe lang duurt de reis?",
+   "redenen": [
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: Klein: wrongHints \"Te veel\"/\"Te weinig\" op opties rond het antwoord sluiten het goede antwoord in (eliminatie-lek)."
+   ]
+  },
+  {
+   "id": "tijdsduur-rekenen-po#20",
+   "stap": 3,
+   "q": "Een nachtvlucht vertrekt om **21:50** en duurt **4 uur 30 min**. Hoe laat landt het vliegtuig?",
+   "redenen": [
+    "nakijker A: Afleiders '25:80' en '26:20' komen beide neer op 02:20 (volgende dag), dus gelijk aan het goede antwoord; '26:20' is zelfs de uitleg-tussenstap ('25:30 = 01:30'). Vervang door echt foute tijden (bv. '01:50', '02:50').",
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: wrongHint bij \"01:20\" is misleidend: \"Is 21:50 + 4 uur echt 01:50?\" suggereert dat dit niet klopt, terwijl 21:50 + 4 uur wél 01:50 is. Liever: \"21:50 + 4 uur = 01:50. Hoeveel minuten moeten er nog bij?\""
+   ]
+  },
+  {
+   "id": "tijdsduur-rekenen-po#21",
+   "stap": 3,
+   "q": "Een tv-programma begint om **17:40** en eindigt om **19:05**. Hoe lang duurt het?",
+   "redenen": [
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: Klein: wrongHints \"Te veel\"/\"Te weinig\" op opties rond het antwoord sluiten het goede antwoord in (eliminatie-lek)."
+   ]
+  },
+  {
+   "id": "tijdsduur-rekenen-po#22",
+   "stap": 4,
+   "q": "Een musical heeft deel 1 van **55 min**, dan **20 min** pauze en deel 2 van **50 min**. Hij begint om **19:30**. Hoe laat is hij afgelopen?",
+   "redenen": [
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een)."
+   ]
+  },
+  {
+   "id": "tijdsduur-rekenen-po#23",
+   "stap": 4,
+   "q": "Het zwembad is open van **7:30** tot **21:45**. Hoe lang is het zwembad per dag open?",
+   "redenen": [
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een). | FASE 2: Klein: wrongHints \"Te veel\"/\"Te weinig\" op opties rond het antwoord sluiten het goede antwoord in (eliminatie-lek)."
+   ]
+  },
+  {
+   "id": "tijdsduur-rekenen-po#24",
+   "stap": 4,
+   "q": "Je zit in de trein van **8:50** tot **9:35**. Daarna zit je in de bus van **9:45** tot **10:10**. Hoe lang zit je **in de trein en de bus samen**?",
+   "redenen": [
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een)."
+   ]
+  },
+  {
+   "id": "tijdsduur-rekenen-po#25",
+   "stap": 4,
+   "q": "Een schooldag duurt van **8:30** tot **14:00**, met **45 min** middagpauze. Hoeveel tijd is er **les**?",
+   "redenen": [
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een)."
+   ]
+  },
+  {
+   "id": "tijdsduur-rekenen-po#26",
+   "stap": 4,
+   "q": "Een training begint om **16:15** en bestaat uit **3 rondes van 25 minuten**, zonder pauze. Hoe laat is de training klaar?",
+   "redenen": [
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een)."
+   ]
+  },
+  {
+   "id": "tijdsduur-rekenen-po#27",
+   "stap": 4,
+   "q": "De bibliotheek is open van **10:00** tot **16:30**. Jij komt om **13:45** en blijft tot sluitingstijd. Hoe lang ben je in de bibliotheek?",
+   "redenen": [
+    "nakijker B: FASE 2: uitlegPad ontbreekt (bestaande vragen in deze stap hebben er wel een)."
+   ]
+  }
+ ]
+}
