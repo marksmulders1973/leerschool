@@ -218,7 +218,7 @@ const steps = [
         wrongHints: [
           null,
           "'Zou' is alleen de pv. Het werkwoordelijk gezegde bevat ALLE werkwoorden samen.",
-          "Je mist 'zou' (de pv). Het hele werkwoordelijk gezegde = pv + alle andere werkwoorden.",
+          "Welke werkwoorden staan er in de zin? Tel ze allemaal, ook de persoonsvorm.",
           "'Thuis' is een bepaling (waar?), geen werkwoord. Tel alleen de werkwoorden.",
         ],
         uitlegPad: {
@@ -714,16 +714,16 @@ const steps = [
         q: "*Hoeveel persoonsvormen staan er in: \"Toen ik thuiskwam, lag de hond al te slapen.\"?*",
         options: [
           "Twee (thuiskwam + lag)",
-          "Een (lag)",
+          "Eén (lag, in de hoofdzin)",
           "Drie (thuiskwam + lag + slapen)",
-          "Vier",
+          "Twee (lag + slapen)",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Bij samengestelde zinnen heb je vaak meerdere persoonsvormen — één per deelzin. Tel beide deelzinnen.",
           "'Slapen' is geen persoonsvorm hier — het is een infinitief in een werkwoordelijk restdeel ('lag te slapen').",
-          "Te veel. Tel alleen werkwoorden die echt vervoegd zijn naar persoon en tijd.",
+          "'Slapen' staat na 'te' en is niet vervoegd. Welk ander werkwoord in de zin is wél vervoegd?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Twee deelzinnen, twee pv", tekst: "Toen ik thuiskwam (bijzin: thuiskwam) + lag de hond (hoofdzin: lag) = 2 pv." }],
@@ -746,7 +746,7 @@ const steps = [
         wrongHints: [
           null,
           "'Moet' is alleen de pv — het werkwoordelijk gezegde bestaat uit ALLE werkwoorden samen.",
-          "Je mist 'moet' (de pv).",
+          "Welke werkwoorden staan er in de zin? Tel ze allemaal, ook de persoonsvorm.",
           "'Morgen vroeg' zijn bepalingen, geen werkwoorden. Tel alleen de werkwoorden.",
         ],
         uitlegPad: {

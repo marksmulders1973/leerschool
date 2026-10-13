@@ -22,9 +22,9 @@ const steps = [
     checks: [
       {
         q: "Waarom is een briefje van €10 echt iets waard?",
-        options: ["Omdat iedereen afspreekt en vertrouwt dat het 10 euro waard is", "Omdat de bank voor elk briefje goud in de kluis bewaart", "Omdat het bedrag van 10 euro erop gedrukt staat", "Omdat de winkel het briefje zelf maakt en goedkeurt"],
+        options: ["Omdat iedereen erop vertrouwt dat het 10 euro waard is", "Omdat de bank voor elk briefje goud in de kluis bewaart", "Omdat het bedrag van 10 euro erop gedrukt staat", "Omdat het papier en de inkt veel geld kosten"],
         answer: 0,
-        wrongHints: [null, "Vroeger was geld gekoppeld aan goud, nu niet meer. Waar draait het dan om?", "Iedereen kan '10' op een papiertje schrijven. Waarom is dít papiertje dan wél iets waard?", "Winkels maken geen geld."],
+        wrongHints: [null, "Vroeger was geld gekoppeld aan goud, nu niet meer. Waar draait het dan om?", "Iedereen kan '10' op een papiertje schrijven. Waarom is dít papiertje dan wél iets waard?", "Een briefje kost maar een paar cent om te maken. Waarom is het dan toch €10 waard?"],
         uitlegPad: {
           stappen: [{ titel: "Geld = afspraak + vertrouwen", tekst: "Geld werkt omdat iedereen erop vertrouwt dat het waarde heeft, niet door het materiaal." }],
           niveaus: {
@@ -68,9 +68,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een belangrijk verschil tussen crypto (zoals Bitcoin) en het geld op je bankrekening?",
-        options: ["Crypto wordt niet door een bank beheerd, maar door een computernetwerk", "Crypto wordt door de Europese Centrale Bank uitgegeven", "Crypto staat op je bankrekening, maar in een aparte munt", "Crypto heeft dezelfde spaargarantie tot €100.000 als een bank"],
+        options: ["Crypto beheert geen bank, maar een netwerk van computers", "Crypto wordt beheerd door de beurs waar je het koopt", "Crypto is anoniem en kan daarom niet gestolen worden", "Crypto heeft een vaste koers die de overheid bepaalt"],
         answer: 0,
-        wrongHints: [null, "Geeft de ECB bitcoin uit, zoals de euro? Wie houdt de bitcoin-boekhouding dan bij?", "Bitcoin staat niet bij je bank maar in een wallet. Wie houdt die boekhouding bij?", "Krijg je bij crypto ook de spaargarantie tot €100.000 die een bank biedt?"],
+        wrongHints: [null, "Een beurs of app is alleen de winkel waar je crypto koopt. Wie houdt de boekhouding van bitcoin bij?", "Crypto wordt geregeld gestolen, bijvoorbeeld via hacks of nep-apps. Waar zit het echte verschil met je bankrekening?", "De koers van crypto schommelt elke dag en geen overheid zet hem vast. Wie houdt de boekhouding dan bij?"],
         uitlegPad: {
           stappen: [{ titel: "Geen bank, maar een netwerk", tekst: "Crypto wordt decentraal beheerd door computers wereldwijd, niet door een bank of overheid." }],
           niveaus: {
@@ -91,9 +91,9 @@ const steps = [
     checks: [
       {
         q: "Waarom is het zo moeilijk om vals te spelen met een blockchain?",
-        options: ["Heel veel computers houden dezelfde kopie bij, dus geknoei valt meteen op", "Alle betalingen staan op één centrale server met zware beveiliging", "De overheid keurt elke betaling eerst goed voordat hij doorgaat", "Iedereen moet zich met paspoort aanmelden, dus valsspelers worden gepakt"],
+        options: ["Heel veel computers houden dezelfde kopie bij, dus geknoei valt meteen op", "Alle betalingen staan op één centrale server met zware beveiliging", "Elke betaling is versleuteld, dus niemand kan hem lezen", "Iedereen moet zich met paspoort aanmelden, dus valsspelers worden gepakt"],
         answer: 0,
-        wrongHints: [null, "Eén server is juist kwetsbaar: wie die hackt, kan alles veranderen. Hoe zit dat bij een blockchain?", "Juist de overheid is er níét de baas over.", "Bij bitcoin hoef je je naam niet op te geven. Waarom valt geknoei dan toch op?"],
+        wrongHints: [null, "Eén server is juist kwetsbaar: wie die hackt, kan alles veranderen. Hoe zit dat bij een blockchain?", "De blockchain is juist openbaar: iedereen kan alle betalingen zien. Waarom valt geknoei dan toch op?", "Bij bitcoin hoef je je naam niet op te geven. Waarom valt geknoei dan toch op?"],
         uitlegPad: {
           stappen: [{ titel: "Veel kopieën = controle", tekst: "Omdat iedereen dezelfde kopie heeft, wijkt geknoei meteen af van de rest." }],
           niveaus: {
@@ -115,9 +115,9 @@ const steps = [
     checks: [
       {
         q: "Je raakt de geheime sleutel (seed) van je crypto kwijt. Wat gebeurt er?",
-        options: ["Je bent je crypto voorgoed kwijt; geen bank kan het terughalen", "Je bank stuurt je binnen een paar dagen een nieuwe sleutel", "De wallet-app maakt met je pincode een nieuwe sleutel aan", "Niets aan de hand, je logt gewoon opnieuw in met je e-mail"],
+        options: ["Je crypto is voorgoed weg; niemand kan het terughalen", "Je bank boekt het na een melding binnen 30 dagen terug", "De wallet-app maakt met je pincode een nieuwe sleutel aan", "De helpdesk zet het terug na een check van je paspoort"],
         answer: 0,
-        wrongHints: [null, "Bij crypto is er juist geen bank die kan helpen.", "Een pincode opent alleen de app op je telefoon. Kan die de geheime sleutel opnieuw maken?", "Er is geen 'wachtwoord vergeten'-knop zoals bij een website."],
+        wrongHints: [null, "Staat crypto eigenlijk bij je bank? Wie zou het dan moeten terugboeken?", "Een pincode opent alleen de app op je telefoon. Kan die de geheime sleutel opnieuw maken?", "Bij een bank bewaart een bedrijf jouw gegevens. Is er bij crypto ook zo'n centraal bedrijf dat je sleutel kent?"],
         uitlegPad: {
           stappen: [{ titel: "Geen bank = geen reset", tekst: "Zonder je sleutel kan niemand bij je crypto, en niemand kan 'm voor je herstellen." }],
           niveaus: {

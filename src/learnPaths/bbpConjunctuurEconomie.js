@@ -56,15 +56,15 @@ const steps = [
     checks: [
       {
         q: "Wat staat **BBP** voor?",
-        options: ["Bruto Binnenlands Product", "Bruto Buitenlands Product", "Bruto Binnenlands Prijspeil", "Begroting Binnenlands Product"],
+        options: ["Bruto Binnenlands Product", "Bruto Buitenlands Prijspeil", "Begroting Binnenlands Prijspeil", "Begroting Buitenlands Product"],
         answer: 0,
-        wrongHints: [null, "Het BBP meet wat er bínnen de landsgrenzen gemaakt wordt. Past 'buitenlands' daarbij?", "Het BBP meet hoeveel een land maakt, niet hoe hoog de prijzen zijn. Waar staat de laatste P dan voor?", "De begroting is het huishoudboekje van de overheid. Het BBP meet iets anders: waar staat de eerste B voor?"],
+        wrongHints: [null, "Het BBP meet hoeveel er bínnen de landsgrenzen gemaakt wordt, niet de prijzen in het buitenland.", "De begroting is het huishoudboekje van de overheid, en prijzen meet je met inflatie. Wat meet het BBP?", "De begroting is het huishoudboekje van de overheid. Gaat het BBP over wat er in het buitenland gebeurt?"],
       },
       {
         q: "Wat wordt **NIET** in BBP gerekend?",
-        options: ["Huishoudelijk werk en vrijwilligerswerk", "Het werk van een ambtenaar bij de gemeente", "Een etentje in een restaurant", "Auto's die naar het buitenland gaan"],
+        options: ["Vrijwilligerswerk bij de voetbalclub", "Het werk van een ambtenaar bij de gemeente", "Gratis les op een openbare basisschool", "Auto's die naar het buitenland gaan"],
         answer: 0,
-        wrongHints: [null, "Ook de overheid levert diensten en betaalt daar lonen voor. Telt het BBP die mee?", "Je rekent er af — het BBP telt betaalde diensten mee. Wat wordt níét betaald?", "Export is wel in Nederland gemaakt. Telt het BBP wat er bínnen het land geproduceerd wordt, of waar het verkocht wordt?"],
+        wrongHints: [null, "Ook de overheid levert diensten en betaalt daar lonen voor. Telt het BBP die mee?", "Ouders betalen niets, maar de school en de leraren worden wel betaald door de overheid. Telt het BBP dat mee?", "Export is wel in Nederland gemaakt. Telt het BBP wat er bínnen het land geproduceerd wordt, of waar het verkocht wordt?"],
       },
       {
         q: "Wat is **reëel** BBP?",
@@ -108,15 +108,15 @@ const steps = [
       },
       {
         q: "Wanneer is er officieel **recessie**?",
-        options: ["2 kwartalen negatieve BBP-groei", "2 kwartalen stijgende werkloosheid", "1 kwartaal negatieve BBP-groei", "2 kwartalen stijgende inflatie"],
+        options: ["2 kwartalen negatieve BBP-groei", "2 kwartalen stijgende werkloosheid", "1 kwartaal negatieve BBP-groei", "Een jaar lang stijgende werkloosheid"],
         answer: 0,
-        wrongHints: [null, "Werkloosheid stijgt vaak in een recessie, maar de officiële maat is een ander cijfer.", "Eén slecht kwartaal kan toeval zijn. Hoe lang moet het duren?", "Inflatie gaat over prijzen. Welk cijfer laat zien of de economie krimpt?"],
+        wrongHints: [null, "Werkloosheid stijgt vaak in een recessie, maar loopt achter op de economie. Welk cijfer is de officiële maat?", "Eén slecht kwartaal kan toeval zijn. Hoe lang moet het duren?", "Werkloosheid loopt vaak achter op de economie. Welk cijfer gebruiken economen voor de officiële grens?"],
       },
       {
         q: "Wat gebeurt bij **opgang**?",
-        options: ["Lonen en prijzen stijgen, werkloosheid daalt", "Lonen en prijzen stijgen, werkloosheid stijgt", "Lonen en prijzen dalen, werkloosheid daalt", "Lonen en prijzen dalen, werkloosheid stijgt"],
+        options: ["Lonen en prijzen stijgen, werkloosheid daalt", "Lonen en prijzen stijgen, werkloosheid stijgt", "Lonen stijgen, prijzen dalen, werkloosheid daalt", "Lonen en prijzen dalen, werkloosheid stijgt"],
         answer: 0,
-        wrongHints: [null, "Als bedrijven meer verkopen, hebben ze dan meer of minder personeel nodig?", "Als er meer vraag is en personeel schaarser wordt, wat doen lonen en prijzen dan?", "Dat hoort bij neergang. Wat gebeurt er als de economie juist groeit?"],
+        wrongHints: [null, "Als bedrijven meer verkopen, hebben ze dan meer of minder personeel nodig?", "Als er meer gekocht wordt, laten winkels hun prijzen dan zakken, of verhogen ze die juist?", "Dat hoort bij neergang. Wat gebeurt er als de economie juist groeit?"],
       },
       {
         q: "Welke crisis was in **2008**?",
@@ -141,9 +141,9 @@ const steps = [
       },
       {
         q: "Welke is **vraag-inflatie**?",
-        options: ["Bestedingen groeien sneller dan de productie", "Lonen en grondstoffen worden duurder", "Ingevoerde producten worden duurder", "De centrale bank verhoogt de rente"],
+        options: ["Bestedingen groeien sneller dan de productie", "Vakbonden vragen en krijgen hogere lonen", "Ingevoerde producten worden duurder", "De centrale bank verhoogt de rente"],
         answer: 0,
-        wrongHints: [null, "Duurdere lonen en grondstoffen duwen prijzen omhoog via de kosten. Hoe heet dat soort inflatie?", "Duurdere import heet geïmporteerde inflatie. Welke vorm ontstaat in het land zelf, door kopers?", "Een hogere rente remt juist de bestedingen. Jaagt dat de prijzen op?"],
+        wrongHints: [null, "Hogere lonen maken produceren duurder: dat duwt prijzen omhoog via de kosten. Hoe heet dat soort inflatie?", "Duurdere import heet geïmporteerde inflatie. Welke vorm ontstaat in het land zelf, door kopers?", "Een hogere rente remt juist de bestedingen. Jaagt dat de prijzen op?"],
       },
       {
         q: "**Loon 3%, inflatie 5%** — koopkracht?",
@@ -155,7 +155,7 @@ const steps = [
         q: "Wat is **hyperinflatie**?",
         options: ["Extreem hoge inflatie", "Een klein beetje inflatie", "Prijzen die dalen", "Prijzen die gelijk blijven"],
         answer: 0,
-        wrongHints: [null, "Wat betekent het voorvoegsel 'hyper': een beetje, of juist extreem veel?", "Dalende prijzen heet deflatie. Wat betekent 'hyper'?", "Gelijke prijzen betekent nul inflatie. Wat zegt 'hyper' over de hoeveelheid?"],
+        wrongHints: [null, "Een paar procent prijsstijging per jaar is heel gewoon. Zou dat een aparte, zware naam krijgen?", "Dalende prijzen heet deflatie. Wat betekent 'hyper'?", "Als prijzen gelijk blijven, is er helemaal geen inflatie. Kan dat dan een soort inflatie heten?"],
       },
     ],
   },
@@ -168,9 +168,9 @@ const steps = [
     checks: [
       {
         q: "**4 soorten werkloosheid** zijn?",
-        options: ["Frictie / conjunctureel / structureel / seizoen", "Frictie / conjunctureel / structureel / inflatoir", "Conjunctureel / structureel / tijdelijk / vrijwillig", "Frictie / seizoen / jeugd / langdurig"],
+        options: ["Frictie / conjunctureel / structureel / seizoen", "Frictie / conjunctureel / seizoen / jeugd", "Frictie / structureel / seizoen / jeugd", "Conjunctureel / structureel / jeugd / inflatoir"],
         answer: 0,
-        wrongHints: [null, "Inflatie gaat over prijzen, niet over banen. Welke soort werkloosheid hangt af van de tijd van het jaar?", "'Tijdelijk' en 'vrijwillig' noemen geen oorzaak. Kijk naar de óórzaak van de werkloosheid.", "Jeugd- en langdurige werkloosheid zeggen wie of hoe lang, niet waardoor. Kijk naar de óórzaak."],
+        wrongHints: [null, "Jeugdwerkloosheid zegt wíé er werkloos is, niet waardoor. Kijk bij elk woord: noemt het een óórzaak?", "Jeugdwerkloosheid zegt wíé er werkloos is, niet waardoor. Kijk bij elk woord: noemt het een óórzaak?", "Inflatie gaat over prijzen, en jeugd zegt wie er werkloos is. Kijk bij elk woord: noemt het een óórzaak?"],
       },
       {
         q: "Werkloosheid van **mijnwerkers nadat mijnen sluiten** — welke?",
@@ -186,9 +186,9 @@ const steps = [
       },
       {
         q: "**WW-uitkering** is voor wie?",
-        options: ["Onvrijwillig werklozen met arbeidsverleden", "Iedereen vanaf 18 jaar die geen baan heeft", "Studenten die hun bijbaan zelf opzeggen", "Gepensioneerden boven de AOW-leeftijd"],
+        options: ["Werknemers die buiten eigen schuld hun baan kwijtraken", "Schoolverlaters die nog geen eerste baan vinden", "Werknemers die zelf ontslag nemen voor een opleiding", "Werknemers die langdurig ziek zijn en niet kunnen werken"],
         answer: 0,
-        wrongHints: [null, "Heeft iemand die nooit gewerkt heeft premie betaald voor de WW?", "Wie zelf opzegt, is vrijwillig werkloos. Krijg je dan WW?", "Na de AOW-leeftijd krijg je AOW, geen WW."],
+        wrongHints: [null, "De WW is een verzekering: je bouwt recht op door eerst te werken. Heeft een schoolverlater dat al gedaan?", "Wie zelf opzegt, kiest er zelf voor om te stoppen. Krijg je dan WW?", "Bij langdurige ziekte zijn er andere regelingen, zoals de Ziektewet en de WIA. Waarvoor is de WW bedoeld?"],
       },
     ],
   },
@@ -201,9 +201,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **monetair beleid**?",
-        options: ["Door centrale bank — rente + geld", "Door overheid — belasting + uitgaven", "Door bedrijven — prijzen + lonen", "Door burgers — sparen + lenen"],
+        options: ["Door centrale bank — rente + geld", "Door overheid — belasting + uitgaven", "Door commerciële banken — spaargeld + leningen", "Door burgers — sparen + lenen"],
         answer: 0,
-        wrongHints: [null, "Dat is begrotingsbeleid.", "Bedrijven bepalen hun eigen prijzen, maar maken geen landelijk beleid.", "Burgers maken eigen keuzes, geen beleid. Wat betekent 'monetair'?"],
+        wrongHints: [null, "Belasting en overheidsuitgaven heten begrotingsbeleid. Monetair beleid voert iemand anders: wie?", "Gewone banken voeren geen landelijk beleid; ze volgen de rente die een ander vaststelt. Wie is dat?", "Burgers maken eigen keuzes, geen beleid. Wat betekent 'monetair'?"],
       },
       {
         q: "Wat doet overheid bij **recessie**?",
@@ -234,15 +234,15 @@ const steps = [
     checks: [
       {
         q: "BBP staat voor?",
-        options: ["Bruto Binnenlands Product", "Bruto Bedrijfs Productie", "Netto Binnenlands Product", "Bruto Buitenlands Product"],
+        options: ["Bruto Binnenlands Product", "Basis Binnenlands Productie", "Basis Bedrijfs Product", "Bruto Bedrijfs Productie"],
         answer: 0,
-        wrongHints: [null, "Het BBP telt álles wat in een land gemaakt wordt, ook door de overheid. Gaat het alleen om bedrijven?", "Het Netto Binnenlands Product bestaat ook, maar dat heet NBP. Waar staat de eerste B voor?", "Het BBP meet wat er bínnen de landsgrenzen gemaakt wordt. Past 'buitenlands' daarbij?"],
+        wrongHints: [null, "'Basis' en 'productie' kloppen hier niet. De eerste B betekent: de afschrijvingen zijn er nog niet af. Welk woord past daarbij?", "Het BBP telt álles wat in een land gemaakt wordt, ook door de overheid. Gaat het alleen om bedrijven?", "Het BBP telt álles wat in een land gemaakt wordt, ook door de overheid. Gaat het alleen om bedrijven?"],
       },
       {
         q: "Welke is een **conjunctuurfase**?",
-        options: ["Piek", "Inflatie", "Trend", "Werkloosheid"],
+        options: ["Piek", "Cyclus", "Trend", "Werkloosheid"],
         answer: 0,
-        wrongHints: [null, "Inflatie is een prijsstijging, die in elke fase kan voorkomen. Welke fasen ken je uit de golf?", "De trend is de lange lijn waar de golf omheen beweegt, geen fase van die golf.", "Werkloosheid beweegt mee met de golf, maar is een cijfer, geen fase. Welke vier fasen heeft de golf?"],
+        wrongHints: [null, "De cyclus is de héle golf, van begin tot eind. Een fase is maar één stuk van die golf.", "De trend is de lange lijn waar de golf omheen beweegt, geen fase van die golf.", "Werkloosheid beweegt mee met de golf, maar is een cijfer, geen fase. Welke vier fasen heeft de golf?"],
       },
       {
         q: "**ECB-doel** voor inflatie?",
@@ -252,7 +252,7 @@ const steps = [
       },
       {
         q: "Werkloosheid van **ijsverkoper in januari** — welk soort?",
-        options: ["Seizoens", "Frictie", "Conjunctureel", "Structureel"],
+        options: ["Seizoen", "Frictie", "Conjunctureel", "Structureel"],
         answer: 0,
         wrongHints: [null, "Frictie ontstaat als mensen van baan wisselen. Waarom verkoopt de ijsverkoper in januari niets?", "Conjunctureel komt door een slechte economie. Is dat de reden dat er in januari weinig ijs wordt gekocht?", "Structureel betekent: het werk komt niet terug. Verkoopt de ijsverkoper in de zomer weer?"],
       },
@@ -282,13 +282,13 @@ const steps = [
       },
       {
         q: "**Werkloosheid door bankcrisis 2008** — welke?",
-        options: ["Conjunctureel", "Structureel", "Frictie", "Seizoens"],
+        options: ["Conjunctureel", "Structureel", "Frictie", "Seizoen"],
         answer: 0,
         wrongHints: [null, "Structureel betekent: het werk komt niet terug. Kwamen de banen na de crisis terug?", "Frictie ontstaat als mensen van baan wisselen. Wat veroorzaakte hier het baanverlies?", "Seizoenswerkloosheid hangt af van de tijd van het jaar. Was dat in 2008 de oorzaak?"],
       },
       {
         q: "**Mijnwerker na sluiting mijnen** — welke werkloosheid?",
-        options: ["Structureel", "Conjunctureel", "Frictie", "Seizoens"],
+        options: ["Structureel", "Conjunctureel", "Frictie", "Seizoen"],
         answer: 0,
         wrongHints: [null, "Conjunctureel gaat over als de economie herstelt. Gaan de mijnen dan weer open?", "Frictie is kort, tussen twee banen. Komen de mijnbanen ooit terug?", "Seizoenswerkloosheid hangt af van de tijd van het jaar. Is dat hier de reden?"],
       },
@@ -300,33 +300,33 @@ const steps = [
       },
       {
         q: "**ECB-rente verhogen** — gevolg?",
-        options: ["Lenen duurder, inflatie remmen", "Lenen goedkoper, meer bestedingen", "Inflatie gaat juist omhoog", "Sparen wordt minder aantrekkelijk"],
+        options: ["Lenen duurder, inflatie remmen", "Lenen goedkoper, meer bestedingen", "Lenen duurder, inflatie stijgt", "Lenen goedkoper, inflatie remmen"],
         answer: 0,
-        wrongHints: [null, "Hogere rente betekent: lenen kost meer. Gaan mensen dan meer of minder lenen?", "Rente verhogen is juist een middel van de ECB tegen een probleem. Welk probleem?", "Bij een hogere rente krijg je meer op je spaargeld. Wordt sparen dan minder of juist meer aantrekkelijk?"],
+        wrongHints: [null, "Hogere rente betekent: lenen kost meer. Gaan mensen dan meer of minder lenen?", "Als lenen duurder wordt, kopen mensen en bedrijven dan meer of minder? Wat doet dat met de prijzen?", "Bij een hogere rente krijg je meer op je spaargeld, maar wat kost lenen dan?"],
       },
       {
         q: "Een **stijgende lijn op BBP-grafiek over jaar 2024-2025** wijst op?",
-        options: ["Hoogconjunctuur / herstel", "Recessie / neergang", "Stijgende inflatie", "Stijgende werkloosheid"],
+        options: ["Hoogconjunctuur / herstel", "Recessie / neergang", "Dalende inflatie", "Stijgende werkloosheid"],
         answer: 0,
         wrongHints: [null, "Bij een recessie krimpt het BBP. Wat doet de lijn hier?", "Een BBP-grafiek laat de productie zien, niet de prijzen. Wat zegt een stijgende lijn over de productie?", "Bij groei daalt de werkloosheid meestal juist."],
       },
       {
         q: "Wat is **stagflatie**?",
-        options: ["Hoge inflatie + lage groei + werkloosheid tegelijk", "Hoge groei + lage inflatie + weinig werkloosheid", "Lage inflatie + lage groei + werkloosheid tegelijk", "Hoge rente + dalende huizenprijzen tegelijk"],
+        options: ["Hoge inflatie + lage groei + werkloosheid tegelijk", "Hoge groei + lage inflatie + weinig werkloosheid", "Lage inflatie + lage groei + werkloosheid tegelijk", "Hoge inflatie + hoge groei + weinig werkloosheid"],
         answer: 0,
-        wrongHints: [null, "Dat klinkt als een gezonde economie. Is 'stagflatie' iets goeds?", "Kijk naar het woord: 'stag-' + '-flatie'. Welk deel klopt hier niet?", "Stagflatie gaat over de hele economie, niet alleen over rente en huizen."],
+        wrongHints: [null, "Dat klinkt als een gezonde economie. Is 'stagflatie' iets goeds?", "Bij stagflatie is er een prijsprobleem én een groeiprobleem. Klopt het prijsdeel hier?", "Hoge groei en weinig werkloosheid zijn juist goed nieuws. Is stagflatie goed nieuws?"],
       },
       {
         q: "Welke **combinatie van cijfers** geeft het beste beeld van de economische gezondheid?",
-        options: ["BBP-groei + inflatie + werkloosheid", "BBP-groei + beurskoersen + rente", "Inflatie + rente + staatsschuld", "Werkloosheid + lonen + huizenprijzen"],
+        options: ["BBP-groei + inflatie + werkloosheid", "BBP-groei + beurskoersen + rente", "Inflatie + rente + staatsschuld", "BBP-groei + werkloosheid + rente"],
         answer: 0,
-        wrongHints: [null, "Beurskoersen schommelen sterk en zeggen weinig over gewone gezinnen. Welke cijfers gaan over banen en prijzen?", "Hiermee zie je nog niet of de economie groeit of krimpt, en ook niet hoeveel mensen werk hebben.", "Hiermee mis je hoe hard de productie groeit en hoe snel de prijzen stijgen."],
+        wrongHints: [null, "Beurskoersen schommelen sterk en zeggen weinig over gewone gezinnen. Welke cijfers gaan over banen en prijzen?", "Hiermee zie je nog niet of de economie groeit of krimpt, en ook niet hoeveel mensen werk hebben.", "De rente stelt de centrale bank zelf vast. Zegt dat cijfer iets over hoe het met de economie gáát?"],
       },
       {
         q: "**Hyperinflatie 1923 Duitsland** — wat gebeurde er?",
-        options: ["Geld werd bijna waardeloos", "Spaargeld werd meer waard", "Lonen stegen sneller dan prijzen", "Papiergeld werd afgeschaft"],
+        options: ["Geld werd bijna waardeloos", "Prijzen daalden door geldgebrek", "Lonen stegen sneller dan prijzen", "Er werd te weinig geld bijgedrukt"],
         answer: 0,
-        wrongHints: [null, "Als alles steeds duurder wordt, wat kun je dan nog kopen van je spaargeld?", "Lonen stegen wel, maar liepen steeds achter. Kon je met je loon meer of minder kopen?", "Het papiergeld bleef in gebruik; de overheid drukte er juist steeds meer van."],
+        wrongHints: [null, "Dalende prijzen heten deflatie. Wat gebeurt er bij hyperinflatie met de prijzen?", "Lonen stegen wel, maar liepen steeds achter. Kon je met je loon meer of minder kopen?", "Hoeveel geld drukte de Duitse overheid bij: te weinig, of steeds méér?"],
       },
       {
         q: "**Krimp BBP 2 kwartalen achter elkaar** = ___?",

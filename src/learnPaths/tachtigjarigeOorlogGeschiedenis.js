@@ -179,15 +179,15 @@ const steps = [
       },
       {
         q: "Welke godsdienst werd vervolgd door Filips II?",
-        options: ["Calvinisme", "Katholicisme", "Jodendom", "Islam"],
+        options: ["Calvinisme", "Katholicisme", "Anglicanisme", "Orthodoxie"],
         answer: 0,
-        wrongHints: [null, "Filips II was juist katholiek — hij beschermde dat geloof.", "Wel ook (joden), maar dat was niet de hoofdvervolging in dit conflict.", "Niet relevant in 16e-eeuws NL."],
+        wrongHints: [null, "Filips II was juist katholiek — hij beschermde dat geloof.", "Het anglicanisme was de staatskerk van Engeland en speelde in de Nederlanden geen rol.", "De orthodoxe kerk zat in Oost-Europa en Griekenland, niet in de Nederlanden."],
         uitlegPad: {
           stappen: [{ titel: "Calvinisten vervolgd", tekst: "In 16e eeuw verspreidde calvinisme (Johannes Calvijn, Zwitsers protestant) snel in Nederlanden. Filips II zag calvinisten als ketters + bedreiging katholieke kerk. Inquisitie pakte ze op, martelde, verbrandde op brandstapel. Vooral in steden Antwerpen, Gent." }],
           woorden: [{ woord: "calvinisme", uitleg: "Protestants geloof. Streng, sober, geen heiligenbeelden. Volgers van Calvijn (1509-1564)." }, { woord: "inquisitie", uitleg: "Kerkelijke rechtbank tegen ketters. Bekend om martelmethoden." }],
           theorie: "Reformatie 1517 (Luther): protestantisme ontstond. Calvinisme tak: strenger. Verspreidde in NL ~1540. Filips II zag dit als bedreiging — vervolging.",
           voorbeelden: [{ type: "feit", tekst: "Tussen 1523 en 1566 werden ~1300 mensen in NL ter dood gebracht voor ketterij. Veel vluchtten naar Engeland of Duitsland." }],
-          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Filips II zelf katholiek (beschermde dat). Joden ook vervolgd elders, maar niet hoofdvervolging hier. Islam niet relevant 16e-eeuws NL." }],
+          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Filips II was zelf katholiek en beschermde dat geloof. Anglicanen (Engeland) en orthodoxe christenen (Oost-Europa) woonden niet in de Nederlanden." }],
           niveaus: { basis: "Calvinisme.", simpeler: "Vervolgd: calvinisten (protestanten).", nogSimpeler: "Calvinisme" },
         },
       },
@@ -216,15 +216,15 @@ const steps = [
       },
       {
         q: "Wat betekent de naam **'geuzen'**?",
-        options: ["Bedelaars","Krijgers","Edelen","Calvinistische dominees"],
+        options: ["Bedelaars", "Krijgers", "Edelen", "Ketters"],
         answer: 0,
-        wrongHints: [null, "Wel werden ze later strijders, maar dat was de oorspronkelijke betekenis niet.", "Wel werden edelen zo genoemd — maar wat betekent het woord zelf?", "Niet specifiek dominees."],
+        wrongHints: [null, "Later werden ze wel strijders, maar wat betekende het woord oorspronkelijk?", "Wel werden edelen zo genoemd — maar wat betekent het woord zelf?", "'Ketter' was een scheldwoord van de kerk. Wat riep een spotter toen de edelen kwamen smeken?"],
         uitlegPad: {
           stappen: [{ titel: "Spotnaam → eretitel", tekst: "1566: lage adel diende bij landvoogdes Smeekschrift der Edelen (verzoek stop vervolging). Adviseur Berlaymont zei spottend 'ce ne sont que des gueux' (Frans: 'het zijn maar bedelaars'). NL adel pikte naam trots op: 'wij ZIJN geuzen!' Werd eretitel verzet." }],
           woorden: [{ woord: "geus", uitleg: "Frans 'gueux' = bedelaar. Spottend → eretitel verzet." }, { woord: "Watergeuzen", uitleg: "Geuzen die ter zee opereerden (1568-1572). Plunderden Spaanse schepen." }],
           theorie: "Patroon: groep krijgt spotnaam → eigent zich naam toe → wordt eretitel. Modern voorbeeld: 'suffragette' was ook spottend, werd erenaam vrouwenkiesrecht-strijdsters.",
           voorbeelden: [{ type: "soorten", tekst: "Bosgeuzen = op land. Watergeuzen = op zee. Beggars = Engelse benaming. Geuzenliederen werden tijdens oorlog gezongen." }],
-          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Oorspronkelijk = bedelaars/armoedig. Later wel strijders, maar die betekenis kwam later. Niet specifiek edelen of dominees." }],
+          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Oorspronkelijk = bedelaars/armoedig. Later wel strijders, maar die betekenis kwam later. Geen woord voor edelen of ketters." }],
           niveaus: { basis: "Bedelaars (spotnaam).", simpeler: "Geuzen = oorspronkelijk 'bedelaars' (spotnaam Spaanse adviseur). Werd eretitel.", nogSimpeler: "Bedelaars" },
         },
       },
@@ -237,15 +237,15 @@ const steps = [
     checks: [
       {
         q: "Wat was de **Bloedraad**?",
-        options: ["Een rechtbank van Alva","Een vrijwilligersleger","Een Nederlandse opstandsbeweging","Een soort straat in Brussel"],
+        options: ["Een rechtbank van Alva", "Een vrijwilligersleger", "Een Nederlandse opstandsbeweging", "Een bloedige veldslag"],
         answer: 0,
-        wrongHints: [null, "Geen leger — een rechtbank.", "Andersom — de Bloedraad stond aan de kant van Spanje.", "Niet een straat — een bestuurslichaam."],
+        wrongHints: [null, "Deze raad trok niet ten strijde. Wat deed hij dan met gevangen opstandelingen?", "Andersom — de Bloedraad stond aan de kant van Spanje.", "Ondanks de naam was het geen veldslag. Wat deed deze raad met opstandelingen?"],
         uitlegPad: {
           stappen: [{ titel: "Raad van Beroerten — Alva 1567", tekst: "Hertog van Alva stelde 1567 nieuwe rechtbank in: officieel 'Raad van Beroerten' (= 'onlusten'). NL noemden het Bloedraad omdat duizenden ter dood werden veroordeeld voor deelname Beeldenstorm. Bekendste slachtoffers: graven Egmond + Hoorne, onthoofd 1568 in Brussel." }],
           woorden: [{ woord: "Bloedraad", uitleg: "Bijnaam van Nederlanders voor Alva's rechtbank. Officieel: Raad van Beroerten." }, { woord: "Alva", uitleg: "Fernando Álvarez de Toledo, hertog van Alva. Spaanse generaal. Bijnaam 'IJzeren Hertog'." }],
           theorie: "Bloedraad maakte verzet erger, niet kleiner. NL'ers werden bang + boos → vluchtten naar Duitsland/Engeland → vormden verzets-legers. Averechts effect.",
           voorbeelden: [{ type: "slachtoffers", tekst: "Egmond + Hoorne (juni 1568): twee populaire NL-edelen onthoofd op Grote Markt Brussel. Schokte heel Europa. Wereld zag Alva als wreed." }],
-          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Rechtbank, niet leger. Strafte juist opstand, was niet zelf opstand. Geen straat-naam." }],
+          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Rechtbank, niet leger. Strafte juist opstand, was niet zelf opstand. Ondanks de naam geen veldslag." }],
           niveaus: { basis: "Alva's strafrechtbank.", simpeler: "Bloedraad = Alva's rechtbank die opstandelingen ter dood veroordeelde.", nogSimpeler: "Rechtbank Alva" },
         },
       },
@@ -253,7 +253,7 @@ const steps = [
         q: "Wanneer begon de Tachtigjarige Oorlog officieel?",
         options: ["1568", "1566", "1572", "1581"],
         answer: 0,
-        wrongHints: [null, "Beeldenstorm was 1566, maar oorlog begon pas met de slag.", "Den Briel werd ingenomen in 1572, maar oorlog was al bezig.", "Plakkaat van Verlatinghe was 1581 — onafhankelijkheidsverklaring, geen begin."],
+        wrongHints: [null, "In 1566 was de Beeldenstorm. Werd er toen al met legers gevochten?", "In 1572 veroverden de Watergeuzen hun eerste stad. Was de oorlog toen al begonnen?", "In 1581 zwoeren de gewesten de koning af. Was dat het begin, of zat men al midden in de strijd?"],
         uitlegPad: {
           stappen: [{ titel: "Mei 1568 — Heiligerlee", tekst: "23 mei 1568: Slag bij Heiligerlee (Groningen). Lodewijk van Nassau (broer Willem van Oranje) versloeg klein Spaans leger. EERSTE militaire overwinning opstand. Hoewel later verloren, geldt 1568 als officieel begin Tachtigjarige Oorlog. Eindigt 80 jaar later in 1648." }],
           woorden: [{ woord: "Heiligerlee", uitleg: "Plaatsje Groningen. Slag 23 mei 1568. Begin oorlog." }, { woord: "Lodewijk van Nassau", uitleg: "Broer Willem van Oranje. Militair commandant. Stierf later in andere slag." }],
@@ -309,15 +309,15 @@ const steps = [
     checks: [
       {
         q: "Hoe werd Leiden in 1574 ontzet?",
-        options: ["Door dijken door te steken","Een tunnel onder de Spanjaarden door","Ze gaven zich over","Door massaal protest"],
+        options: ["Door dijken door te steken", "Door een Engels hulpleger", "Door de stadsmuren te verhogen", "Door een uitval van de schutterij"],
         answer: 0,
-        wrongHints: [null, "Geen tunnel — het was een waterplan.", "Andersom — Leiden gaf zich juist NIET over.", "Geen protest, maar een militaire actie."],
+        wrongHints: [null, "Engelse troepen kwamen pas na 1585. Wat deden de geuzen zelf met het land rond Leiden?", "Hoge muren hielden de Spanjaarden buiten, maar maakten geen einde aan de honger. Wie verjoeg het leger?", "De uitgehongerde Leidenaars waren te zwak om zelf aan te vallen. Hoe kwamen de geuzen tot aan de stad?"],
         uitlegPad: {
           stappen: [{ titel: "Dijken doorsteken — slim waterplan", tekst: "Leiden belegerd mei 1574. Honger, pest, duizenden doden. Willem van Oranje + Staten van Holland: dijken doorsteken! Water overstroomde polders. Boeren razend (akkers vernield) maar het werkte. 2 oktober: noordenwind → water steeg snel. Geuzenvloot voer naar Leiden. 3 oktober: bevrijding met brood + haring." }],
           woorden: [{ woord: "ontzet", uitleg: "Bevrijding belegerde stad door extern leger." }, { woord: "polder", uitleg: "Laaggelegen land achter dijken, drooggemaakt. Bij dijken-door = onder water." }],
           theorie: "Slim plan combineerde NL-watercultuur + getij + wind. Beroemd doordat het werkte ondanks hoge kosten (akkers, oogst). Symbool: NL ZAL zijn ding doen, hoe extreem ook.",
           voorbeelden: [{ type: "details", tekst: "Spanjaarden in paniek toen ze water zagen oprukken — bang dat ze zouden verdrinken. Vluchtten. Zo'n 1/3 van de Leidenaars overleefde het beleg niet." }],
-          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Geen tunnel (te complex 16e eeuw). Leiden gaf zich NIET over (anders had Willem niet beloofd hulp). Geen vreedzaam protest — militair ontzet." }],
+          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Engelse troepen kwamen pas na 1585. Hogere muren losten de honger niet op, en de uitgehongerde schutterij was te zwak voor een uitval. Het water bracht de geuzen tot aan de stad." }],
           niveaus: { basis: "Dijken door, water + schepen.", simpeler: "Leiden ontzet 1574 = dijken doorsteken, water hoog, geuzen kwamen per schip.", nogSimpeler: "Dijken door" },
         },
       },
@@ -325,7 +325,7 @@ const steps = [
         q: "Wat krijgen Leidenaars elk jaar op **3 oktober** te eten?",
         options: ["Haring en wittebrood", "Snert en roggebrood", "Pannenkoeken met stroop", "Worst en zuurkool"],
         answer: 0,
-        wrongHints: [null, "Lekker, maar geen 3-oktober-traditie.", "Geen Leidens Ontzet-traditie.", "Geen 3-oktober-gerecht."],
+        wrongHints: [null, "Snert eet je in de winter, maar het hoort niet bij het verhaal van het ontzet.", "Pannenkoeken komen in het verhaal niet voor. Wat lag er op de schepen van de geuzen?", "Zuurkool is een wintergerecht. Wat deelden de geuzen uit toen ze de stad binnenvoeren?"],
         uitlegPad: {
           stappen: [{ titel: "Haring + wittebrood — symbool", tekst: "3 oktober 1574: eerste geuzenschepen bereikten Leiden met brood + haring voor uitgehongerde bevolking. Tot vandaag: jaarlijks vieren Leidenaars 'Leidens Ontzet' met haring + wittebrood. Plus hutspot (gevonden in verlaten Spaans kamp). Vrije dag in Leiden, gratis brood op straat." }],
           woorden: [{ woord: "Leidens Ontzet", uitleg: "Jaarlijkse Leidse herdenking 3 oktober. Sinds 1574, onafgebroken." }, { woord: "hutspot", uitleg: "Stamppot met aardappelen + wortelen + uien. Volgens legende gevonden door wees in Spaans kamp." }],
@@ -344,15 +344,15 @@ const steps = [
     checks: [
       {
         q: "Wat was de **Unie van Utrecht** (1579)?",
-        options: ["Een verbond tegen Spanje","Een katholiek vredesverdrag","Een handelsverbond","Een Spaanse legereenheid"],
+        options: ["Een verbond tegen Spanje", "Een unie van zuidelijke gewesten", "Een handelsverbond", "Een vredesakkoord met Filips II"],
         answer: 0,
-        wrongHints: [null, "Nee — de katholieke zuidelijke provincies sloten een ándere unie.", "Geen handelsverbond — politiek-militair.", "Niet Spaans — anti-Spaans."],
+        wrongHints: [null, "De zuidelijke, katholieke gewesten sloten de Unie van Atrecht. Wat deden de noordelijke gewesten in Utrecht?", "Handel dreven de steden al lang samen. Waarom moesten de gewesten in 1579 ineens zo nauw samenwerken?", "Met Spanje kwam pas veel later vrede. Waren de gewesten in 1579 klaar met vechten?"],
         uitlegPad: {
           stappen: [{ titel: "Unie Utrecht — fundament Republiek", tekst: "Januari 1579: 7 noordelijke protestantse provincies tekenden Unie van Utrecht: Holland, Zeeland, Utrecht, Gelderland, Friesland, Groningen, Overijssel. Verbond tegen Spanje + voor godsdienstvrijheid. Werd 2 jaar later (1581) basis voor onafhankelijkheid. Tegelijk: Unie van Atrecht (zuidelijk + katholiek) bleef Filips trouw." }],
           woorden: [{ woord: "Unie van Utrecht", uitleg: "Verbond 7 noordelijke provincies 1579. Tegen Spanje." }, { woord: "Unie van Atrecht", uitleg: "Tegenpool 1579: zuidelijke katholieke provincies bleven Filips II trouw." }],
           theorie: "Splitsing 1579 = definitief begin van wat nu NL (noord) en België/Lux (zuid) heet. Ruim 400 jaar later nog steeds zo. Geboorte van afgescheiden Noord-Nederland.",
           voorbeelden: [{ type: "kaart", tekst: "Noord: Holland-Zeeland-Utrecht-Gelderland-Friesland-Groningen-Overijssel = Republiek. Zuid: huidig België/Lux + delen Noord-Frankrijk = Spaanse Nederlanden." }],
-          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Niet katholiek (juist anti). Niet alleen handel (politiek-militair). Niet Spaans (anti-Spaans)." }],
+          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Niet van de zuidelijke gewesten (die sloten de Unie van Atrecht). Niet alleen handel (politiek-militair). Geen vrede met Filips II (de strijd ging door)." }],
           niveaus: { basis: "7 provincies tegen Spanje.", simpeler: "Unie van Utrecht 1579 = 7 noordelijke protestantse provincies samen tegen Spanje.", nogSimpeler: "7 provincies" },
         },
       },
@@ -430,7 +430,7 @@ const steps = [
     checks: [
       {
         q: "Welk principe staat in het Plakkaat van Verlatinghe?",
-        options: ["Bij tirannie mag het volk de koning afzweren","Belastingen moeten eerlijk verdeeld worden","Iedereen mag vrij zijn eigen geloof kiezen","Alle Spaanse soldaten moeten het land uit"],
+        options: ["Bij tirannie mag het volk de koning afzweren", "Belastingen moeten eerlijk verdeeld worden", "Iedereen mag vrij zijn eigen geloof kiezen", "Spaanse soldaten moeten het land verlaten"],
         answer: 0,
         wrongHints: [null, "Wel een grief, maar niet het hoofdprincipe.", "Gewetensvrijheid stond in de Unie van Utrecht (1579), niet in het Plakkaat.", "Wel een gevolg, maar niet het juridisch principe."],
         uitlegPad: {
@@ -467,15 +467,15 @@ const steps = [
     checks: [
       {
         q: "Wat was het **Twaalfjarig Bestand** (1609-1621)?",
-        options: ["Een wapenstilstand","Een oorlog tussen NL en Engeland","Een handelsverdrag","Een nieuwe belasting"],
+        options: ["Een wapenstilstand", "Een vredesverdrag", "Een handelsverdrag", "Een verbond met Frankrijk"],
         answer: 0,
-        wrongHints: [null, "Geen oorlog — juist een pauze.", "Wel was er handel, maar dit ging over oorlog/vrede.", "Niet over belasting."],
+        wrongHints: [null, "Een vrede is voorgoed. Werd er na 1621 weer gevochten?", "Er werd wel volop gehandeld, maar wat gebeurde er in die twaalf jaar met de gevechten?", "Met Frankrijk werkte de Republiek later samen, maar 'bestand' gaat over de oorlog met Spanje."],
         uitlegPad: {
           stappen: [{ titel: "1609-1621 — 12 jaar pauze", tekst: "Na 40 jaar oorlog waren beide partijen uitgeput. 1609: wapenstilstand voor 12 jaar (Twaalfjarig Bestand). Spanje erkende Republiek FEITELIJK (niet juridisch). Periode bloei: VOC, Amsterdam-haven, Rembrandt-tijdperk. 1621 hervatte oorlog tot Vrede van Münster 1648." }],
           woorden: [{ woord: "Twaalfjarig Bestand", uitleg: "Wapenstilstand 1609-1621. 12 jaar geen gevechten." }, { woord: "wapenstilstand", uitleg: "Tijdelijke stop gevechten, geen formele vrede." }],
           theorie: "Tijdens Bestand: religieuze spanningen Republiek (Remonstranten vs Contraremonstranten). 1619: Johan van Oldenbarnevelt onthoofd Den Haag — politiek dieptepunt. 1621: oorlog hervat (eerst nog onder Maurits).",
           voorbeelden: [{ type: "tijdvakken", tekst: "1568-1609 = eerste oorlogsperiode (41 jaar). 1609-1621 = Bestand (12 jaar). 1621-1648 = tweede oorlogsperiode (27 jaar). Totaal 80 jaar (met pauze)." }],
-          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Geen NL-Engeland-oorlog (kwam later: Engelse Oorlogen 1652+). Geen handelsverdrag. Geen belasting." }],
+          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Geen echte vrede (na 1621 werd weer gevochten). Geen handelsverdrag. Geen verbond met Frankrijk." }],
           niveaus: { basis: "Wapenstilstand Republiek-Spanje.", simpeler: "Twaalfjarig Bestand 1609-1621 = 12 jaar pauze in oorlog tussen Republiek + Spanje.", nogSimpeler: "12j pauze" },
         },
       },
@@ -504,7 +504,7 @@ const steps = [
         q: "In welk jaar eindigde de Tachtigjarige Oorlog?",
         options: ["1648", "1568", "1581", "1609"],
         answer: 0,
-        wrongHints: [null, "Dat was juist het BEGIN.", "Plakkaat van Verlatinghe — onafhankelijkheidsverklaring, geen vredesakkoord.", "Twaalfjarig Bestand begon, niet einde van de oorlog."],
+        wrongHints: [null, "Dat jaar hoort bij een heel ander moment in de oorlog dan het einde.", "In 1581 zwoeren de gewesten Filips II af, maar er werd daarna nog lang gevochten.", "In 1609 begon het Twaalfjarig Bestand, een pauze. Wat gebeurde er toen die pauze voorbij was?"],
         uitlegPad: {
           stappen: [{ titel: "1648 — Vrede van Münster", tekst: "30 januari 1648: Vrede van Münster getekend. Officieel einde Tachtigjarige Oorlog (1568-1648 = 80 jaar). Deel van Vrede van Westfalen (einde Dertigjarige Oorlog ook). Spanje erkende Republiek juridisch onafhankelijk. Schelde gesloten. Begin echte NL-onafhankelijkheid." }],
           woorden: [{ woord: "Vrede van Münster", uitleg: "30 januari 1648. Spaans-Nederlands vredesverdrag." }, { woord: "Westfaalse Vrede", uitleg: "Verzameling vredesverdragen 1648 (Münster + Osnabrück). Einde Dertigjarige + Tachtigjarige Oorlog." }],

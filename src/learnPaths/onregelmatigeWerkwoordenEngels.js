@@ -105,7 +105,7 @@ const steps = [
           null,
           "Kijk goed: blijft de stam van work heel?",
           "Bestaat niet — de klinker van work verandert niet.",
-          "Geen Engelse vervoeging — het werkt anders.",
+          "-en lijkt op een Nederlandse of Duitse vorm. Hoe maakt een regelmatig Engels werkwoord de verleden tijd?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Work = regelmatig", tekst: "work + ed = worked." }],
@@ -155,7 +155,7 @@ const steps = [
           null,
           "Dat is V3 (past participle). V2 is de gewone past simple.",
           "Bestaat niet — see is onregelmatig, krijgt geen -ed.",
-          "Niet de normale vorm. Denk aan *Yesterday I ___ a film.*",
+          "Sawn is een vorm van 'to saw' (zagen). Wat zeg je in 'Yesterday I ___ a film'?",
         ],
         uitlegPad: {
           stappen: [{ titel: "see → saw → seen", tekst: "V2 van see = saw." }],
@@ -245,7 +245,7 @@ const steps = [
           null,
           "Put is onregelmatig — geen -ed erachter.",
           "Pat is een ander werkwoord (aaien) — geen vorm van put.",
-          "Geen Engelse vervoeging.",
+          "Putt is een golfterm: de bal zacht naar de hole slaan. Welke vorm heeft put in de verleden tijd?",
         ],
         uitlegPad: {
           stappen: [{ titel: "put-put-put", tekst: "Put is groep 1: alle 3 vormen gelijk." }],
@@ -375,7 +375,7 @@ const steps = [
           null,
           "Dat is V1 én V3. V2 heeft een andere klinker.",
           "Run is onregelmatig — geen -ed.",
-          "Niet bestaand woord.",
+          "Ran is al een vorm van de verleden tijd. Mag daar nog -ed achter?",
         ],
         uitlegPad: {
           stappen: [{ titel: "run-ran-run", tekst: "V2 = ran. Klinker u → a." }],
@@ -406,7 +406,7 @@ const steps = [
         wrongHints: [
           null,
           "Bijna! Dat is V2. Welke klinker hoort bij V3 in het rijtje i → a → …?",
-          "Swim is onregelmatig.",
+          "Swim is onregelmatig en krijgt geen -ed. Denk aan het rijtje sing – sang – ... .",
           "Dat is de -ing-vorm, niet V3.",
         ],
         uitlegPad: {
@@ -482,8 +482,8 @@ const steps = [
         wrongHints: [
           null,
           "Bijna — dat is V2. Welke vorm komt er na have?",
-          "Break is onregelmatig.",
-          "Geen -ed bij onregelmatige werkwoorden.",
+          "Break is onregelmatig. Welke vorm zeg je in 'My phone is ___'?",
+          "Break krijgt als onregelmatig werkwoord geen -ed. Welke vorm zeg je in 'The window is ___'?",
         ],
         uitlegPad: {
           stappen: [{ titel: "break-broke-broken", tekst: "V3 = broken (-en achter)." }],
@@ -516,7 +516,7 @@ ${["be / am-is-are", "have / has", "do / does", "go / goes"].map((v, i) => `
         wrongHints: [
           null,
           "Dat is V2 — past simple. V3 staat na have/has/had.",
-          "Dat is de -ing-vorm.",
+          "Going hoort na be: 'I am going'. Welke vorm hoort na have?",
           "Geen Engels woord — go is onregelmatig.",
         ],
         uitlegPad: {

@@ -61,15 +61,15 @@ const steps = [
       },
       {
         q: "Wat is een **zzp'er**?",
-        options: ["Zelfstandige zonder personeel", "Vaste werknemer met een contract", "Iemand die uitzendwerk doet", "Werkloze die een uitkering krijgt"],
+        options: ["Zelfstandige zonder personeel", "Zelfstandige zorgprofessional", "Zakelijk zelfstandig persoon", "Zelfstandig zakelijk partner"],
         answer: 0,
-        wrongHints: [null, "Wie een vast contract heeft, is werknemer in loondienst. Waar staan de letters z-z-p voor?", "Een uitzendkracht is in dienst van het uitzendbureau. Waar staan de letters z-z-p voor?", "Een zzp'er werkt juist, voor eigen rekening. Waar staan de letters z-z-p voor?"],
+        wrongHints: [null, "Een zzp'er kan in de zorg werken, maar net zo goed als schilder of fotograaf. Wat zegt de naam over hoe hij zijn bedrijf runt?", "Iedere ondernemer is zakelijk bezig. Wat is er bijzonder aan een zzp'er vergeleken met een gewoon bedrijf?", "Een zzp'er werkt voor eigen rekening, niet als partner in een ander bedrijf. Wat zegt de naam over zijn bedrijf?"],
         uitlegPad: {
           stappen: [{ titel: "Zelfstandige, geen team", tekst: "ZZP = Zelfstandige Zonder Personeel. Werkt voor klanten/opdrachtgevers maar IS GEEN WERKNEMER. Regelt zelf belasting, verzekering, pensioen, vakantie." }],
           woorden: [{ woord: "zzp'er", uitleg: "Zelfstandige zonder personeel. Eigen ondernemer, ingeschreven bij KvK." }, { woord: "opdrachtgever", uitleg: "Klant van een zzp'er. Geen werkgever — geen loonheffing, geen vakantiegeld." }],
           theorie: "Voordelen: vrijheid, eigen tarief, zelfstandigenaftrek (belastingvoordeel). Nadelen: geen werkloosheidsuitkering, zelf pensioen/AOV regelen, geen vakantiegeld, geen werkgever die jou ondersteunt.",
           voorbeelden: [{ type: "praktijk", tekst: "Webdesigner-zzp bouwt sites voor 8 klanten/jaar. Stuurt factuur per project. Regelt eigen belasting + verzekering." }],
-          basiskennis: [{ onderwerp: "Niet werkloos", uitleg: "Zzp werkt actief — heeft alleen geen vaste werkgever. Tegenovergesteld van werkloos." }],
+          basiskennis: [{ onderwerp: "Niet alleen in de zorg", uitleg: "Een zzp'er kan in elk vak werken: zorg, bouw, fotografie. Hij heeft geen vaste werkgever en geen mensen in dienst." }],
           niveaus: { basis: "Zelfstandige zonder personeel.", simpeler: "Zzp = je werkt voor jezelf, voor verschillende opdrachtgevers. Geen baas.", nogSimpeler: "Zelfstandig" },
         },
       },
@@ -77,7 +77,7 @@ const steps = [
         q: "Welk contract geeft de **meeste zekerheid**?",
         options: ["Vast", "Oproep", "Uitzend", "Tijdelijk 6 maanden"],
         answer: 0,
-        wrongHints: [null, "Oproep = werken als baas belt.", "Uitzend = via bureau, snel klaar.", "Tijdelijk eindigt na 6 mnd."],
+        wrongHints: [null, "Bij een oproepcontract weet je niet hoeveel uur je krijgt. Hoe zeker is je inkomen dan?", "Een uitzendkracht kan snel naar een andere plek moeten, of zonder werk komen. Is dat de meeste zekerheid?", "Na zes maanden kan dit contract gewoon stoppen. Is dat de meeste zekerheid?"],
         uitlegPad: {
           stappen: [{ titel: "Vast = goed beschermd", tekst: "Vast contract (onbepaalde tijd) = grootste zekerheid: geen einddatum, opzeg-procedure beschermt jou, ontslag vraagt UWV of rechter. Alle andere contractvormen zijn beperkter." }],
           woorden: [{ woord: "vast contract", uitleg: "Onbepaalde tijd. Geen einddatum. Wettelijk beschermd tegen willekeurig ontslag." }, { woord: "ontslagbescherming", uitleg: "Reeks regels die voorkomen dat werkgever zomaar mag ontslaan — UWV-route of vaststellingsovereenkomst." }],
@@ -186,7 +186,7 @@ const steps = [
         q: "Een **concurrentiebeding** in je contract betekent:",
         options: ["Je mag na ontslag niet direct bij een concurrent werken", "Je krijgt een bonus als het bedrijf de concurrent verslaat", "Je moet overuren maken als de concurrentie groeit", "Je krijgt een opleiding om beter te concurreren"],
         answer: 0,
-        wrongHints: [null, "Een beding is een beperking in je contract, geen beloning. Wat zou een werkgever willen voorkomen?", "Overuren staan los van dit beding. Waar zou een werkgever bang voor zijn als jij vertrekt?", "Een opleiding staat los van dit beding."],
+        wrongHints: [null, "Een beding is een beperking in je contract, geen beloning. Wat zou een werkgever willen voorkomen?", "Overuren staan los van dit beding. Waar zou een werkgever bang voor zijn als jij vertrekt?", "Een opleiding helpt je vooruit, maar een beding is een beperking. Wat zou een werkgever willen voorkomen als jij vertrekt?"],
         uitlegPad: {
           stappen: [{ titel: "Beperking na ontslag", tekst: "Concurrentiebeding = clausule in arbeidscontract die jou verbiedt om na vertrek bij een concurrent te gaan werken voor X tijd in Y gebied. Beschermt werkgever's bedrijfsgeheimen + klanten." }],
           woorden: [{ woord: "concurrentiebeding", uitleg: "Contract-clausule die werknemer beperkt om na uitdiensttreding bij een concurrent te werken." }, { woord: "relatiebeding", uitleg: "Specifiekere versie: mag geen oud-klanten benaderen." }],
@@ -214,7 +214,7 @@ const steps = [
         q: "Met **wederzijds goedvinden** ontslag: wat is dat?",
         options: ["Werkgever en werknemer maken samen afspraken", "De werkgever ontslaat, het UWV geeft toestemming", "De werknemer neemt zelf ontslag met opzegtermijn", "Een rechter besluit wie er gelijk heeft"],
         answer: 0,
-        wrongHints: [null, "Ontslag via het UWV is een andere route, voor als er geen akkoord is. Wat betekent 'wederzijds'?", "Zelf opzeggen is eenzijdig. Wat betekent 'wederzijds'?", "Rechter kan ook nodig zijn, maar 'wederzijds' = samen."],
+        wrongHints: [null, "Ontslag via het UWV is een andere route, voor als er geen akkoord is. Wat betekent 'wederzijds'?", "Zelf opzeggen beslis je alleen. Doet de werkgever daar ook aan mee?", "Een rechter komt pas in beeld als werkgever en werknemer het niet eens worden. Is dat hier zo?"],
         uitlegPad: {
           stappen: [{ titel: "Samen afspraken maken", tekst: "Wederzijds goedvinden = jij EN werkgever leggen ontslag samen vast in een 'vaststellingsovereenkomst'. Geen rechter, geen UWV. Werkgever betaalt vaak een vergoeding (soms hoger dan transitievergoeding) om snel klaar te zijn." }],
           woorden: [{ woord: "vaststellingsovereenkomst", uitleg: "Schriftelijk akkoord ontslag met afspraken over einddatum, vergoeding, WW-aanspraak." }, { woord: "wederzijds goedvinden", uitleg: "Wettelijke beëindigingsmethode waarbij beide partijen instemmen." }],
@@ -472,7 +472,7 @@ const steps = [
     checks: [
       {
         q: "Een typist verliest haar baan omdat alle bedrijven over zijn op spraakherkenning. Welke werkloosheid?",
-        options: ["Structureel", "Frictie", "Conjunctureel", "Seizoens"],
+        options: ["Structureel", "Frictie", "Conjunctureel", "Seizoen"],
         answer: 0,
         wrongHints: [null, "Frictie is kort tussen banen.", "Conjunctureel is door slechte economie.", "Seizoens hangt af van jaargetijde."],
         uitlegPad: {
@@ -486,9 +486,9 @@ const steps = [
       },
       {
         q: "Wat is de **beroepsbevolking**?",
-        options: ["Werkenden + werkzoekenden van 15-75 jaar", "Alle inwoners van Nederland", "Alleen de werkenden van 15-75 jaar", "Alleen de werkzoekenden van 15-75 jaar"],
+        options: ["Werkenden + werkzoekenden van 15-75 jaar", "Alle inwoners tussen 15 en 75 jaar oud", "Iedereen met betaald werk van 15-75 jaar", "Werkenden + werkzoekenden + studenten"],
         answer: 0,
-        wrongHints: [null, "Niet alle inwoners.", "Ook werkloze zoekenden tellen mee.", "Werkenden ook."],
+        wrongHints: [null, "Ook scholieren, studenten en gepensioneerden van die leeftijd? Wie telt écht mee?", "De beroepsbevolking gaat over het aanbod van arbeid. Wie biedt er allemaal arbeid aan?", "De meeste studenten volgen een opleiding en zoeken geen baan. Horen zij er dan bij?"],
         uitlegPad: {
           stappen: [{ titel: "Wil + kan werken", tekst: "Beroepsbevolking = mensen 15-75 jaar die WILLEN én KUNNEN werken. Dus: werkende mensen + actief zoekenden. Niet: kinderen, studenten die niet werken, huisvrouwen die niet zoeken, gepensioneerden." }],
           woorden: [{ woord: "beroepsbevolking", uitleg: "Totaal werkenden + actieve werkzoekenden 15-75 jaar." }, { woord: "participatiegraad", uitleg: "Beroepsbevolking als % van bevolking 15-75. Hoger = meer mensen actief op arbeidsmarkt." }],
@@ -514,7 +514,7 @@ const steps = [
       },
       {
         q: "Door **recessie** verliezen veel mensen hun baan. Welk type werkloosheid?",
-        options: ["Conjunctureel", "Frictie", "Structureel", "Seizoens"],
+        options: ["Conjunctureel", "Frictie", "Structureel", "Seizoen"],
         answer: 0,
         wrongHints: [null, "Frictie ontstaat niet door recessie.", "Structurele werkloosheid blijft ook als de economie herstelt. Is dat bij een recessie zo?", "Seizoenswerkloosheid hangt af van de tijd van het jaar. Wat is hier de oorzaak?"],
         uitlegPad: {
@@ -528,9 +528,9 @@ const steps = [
       },
       {
         q: "Een **skileraar zonder werk in de zomer** — welk type?",
-        options: ["Seizoens", "Conjunctureel", "Frictie", "Structureel"],
+        options: ["Seizoen", "Conjunctureel", "Frictie", "Structureel"],
         answer: 0,
-        wrongHints: [null, "Conjuncturele werkloosheid komt door een slechte economie. Is dat waarom skileraren in de zomer stilzitten?", "Niet 'tussen banen' maar terugkerend per jaar.", "Structureel betekent: het werk komt niet terug. Gaan de skileraren in de winter weer aan de slag?"],
+        wrongHints: [null, "Conjuncturele werkloosheid komt door een slechte economie. Is dat waarom skileraren in de zomer stilzitten?", "Frictie ontstaat als je tussen twee banen zit. Is de skileraar van baan aan het wisselen?", "Structureel betekent: het werk komt niet terug. Gaan de skileraren in de winter weer aan de slag?"],
         uitlegPad: {
           stappen: [{ titel: "Per seizoen", tekst: "Skileraar werkt in winter, geen vraag in zomer. Komt jaarlijks terug = SEIZOENSwerkloosheid. Voorspelbaar patroon door jaargetijde." }],
           woorden: [{ woord: "seizoenswerkloosheid", uitleg: "Werkloosheid die terugkomt in bepaalde periode van het jaar." }],
@@ -581,7 +581,7 @@ const steps = [
         q: "Wat is **productiviteit**?",
         options: ["Hoeveel je per uur produceert", "Hoe lang je per dag werkt", "Hoeveel je per maand verdient", "Hoeveel vakantiedagen je hebt"],
         answer: 0,
-        wrongHints: [null, "Lang werken ≠ productief.", "Salaris is iets anders.", "Vakantie is geen productie."],
+        wrongHints: [null, "Lang werken zegt nog niet hoeveel je in die tijd maakt. Waar gaat productiviteit over?", "Je salaris is wat je verdient, niet wat je maakt. Waar gaat productiviteit over?", "Vakantiedagen zeggen iets over vrije tijd. Wat meet productiviteit?"],
         uitlegPad: {
           stappen: [{ titel: "Output ÷ input", tekst: "Productiviteit = hoeveel produceer je per UUR (of per werknemer). Bakker met 100 broden in 8u = 12,5 brood/uur. Niet hoeveel UREN je werkt — wat je in die uren maakt." }],
           woorden: [{ woord: "productiviteit", uitleg: "Output per ingezette eenheid arbeid (uur of werknemer)." }, { woord: "arbeidsproductiviteit", uitleg: "Specifiek: output per gewerkt uur." }],
@@ -593,9 +593,9 @@ const steps = [
       },
       {
         q: "Wat **verhoogt productiviteit**?",
-        options: ["Betere machines + opleiding + organisatie", "Minder vakantie + langere werkdagen", "Lagere lonen + goedkopere grondstoffen", "Meer werknemers + meer werkplekken"],
+        options: ["Betere machines + beter opgeleid personeel", "Minder vakantie + langere werkdagen", "Lagere lonen + goedkopere grondstoffen", "Meer werknemers + meer werkplekken"],
         answer: 0,
-        wrongHints: [null, "Minder vakantie ≠ productiever per uur.", "Lagere kosten maken produceren goedkoper, maar maak je dan per uur méér?", "Meer mensen = meer totaal, niet per persoon."],
+        wrongHints: [null, "Langer werken levert meer op per dag. Maar maak je ook meer per úúr?", "Lagere kosten maken produceren goedkoper, maar maak je dan per uur méér?", "Met meer mensen maak je meer in totaal. Maakt elke werknemer dan ook meer per uur?"],
         uitlegPad: {
           stappen: [{ titel: "3 hefbomen", tekst: "(1) BETERE MACHINES: nieuwe oven/automatisering doet meer in zelfde tijd. (2) BETERE OPLEIDING: werknemer kan meer/sneller. (3) BETERE ORGANISATIE: slimmere processen, minder verspilling." }],
           woorden: [{ woord: "productiviteits-driver", uitleg: "Factor die productiviteit verhoogt: machines, opleiding, organisatie, specialisatie." }],
@@ -607,7 +607,7 @@ const steps = [
       },
       {
         q: "Hogere productiviteit kan leiden tot:",
-        options: ["Goedkoper produceren OF hogere lonen", "Hogere prijzen voor de consument", "Meer werkloosheid en lagere lonen", "Minder winst voor bedrijven"],
+        options: ["Lagere kosten per product of hogere lonen", "Hogere prijzen en hogere lonen", "Meer werkloosheid en lagere lonen", "Minder winst voor bedrijven"],
         answer: 0,
         wrongHints: [null, "Als je per uur meer maakt, wordt elk product dan duurder of goedkoper om te maken?", "Soms verdwijnt werk door machines, maar wat gebeurt er gemiddeld met lonen als iedereen meer per uur maakt?", "Als je met hetzelfde werk meer maakt, dalen je kosten per product. Wat doet dat met de winst?"],
         uitlegPad: {
@@ -621,43 +621,43 @@ const steps = [
       },
       {
         q: "Productiviteit Nederland is ongeveer:",
-        options: ["€60 per gewerkt uur", "€25 per uur", "€150 per uur", "Niet meetbaar"],
+        options: ["€60 per gewerkt uur", "€25 per uur", "€150 per uur", "€35 per uur"],
         answer: 0,
-        wrongHints: [null, "Dat is nog maar iets meer dan het minimumloon. Een gewerkt uur levert gemiddeld veel meer op.", "Zoveel levert een gemiddeld uur niet op: ook winkelpersoneel en schoonmakers tellen mee.", "Je kunt het uitrekenen: deel het BBP door het aantal gewerkte uren."],
+        wrongHints: [null, "Met €25 per uur zou Nederland bij de armere landen horen, zoals Mexico. Klopt dat?", "Zoveel levert een gemiddeld uur niet op: ook winkelpersoneel en schoonmakers tellen mee.", "Zelfs Duitsland zit een stuk hoger. Waar staat Nederland in het rijtje?"],
         uitlegPad: {
           stappen: [{ titel: "BBP per uur", tekst: "Productiviteit per land = BBP / totaal gewerkte uren. NL: ~€1000mrd BBP / ~17mrd uren = ~€60 per uur. Wereldwijde top (samen met Noorwegen, Zwitserland)." }],
           woorden: [{ woord: "productiviteit per land", uitleg: "BBP gedeeld door totaal gewerkte uren. Maatstaf voor economische efficiëntie." }],
           theorie: "Vergelijking 2024: NL ~€60/uur, Duitsland ~€55, VS ~€65, Mexico ~€20, India ~€8. NL werkt weinig uren maar zeer productief — vergelijkbare welvaart met meer-werkende landen.",
           voorbeelden: [{ type: "vergelijking", tekst: "NL gemiddeld 30 uur/week, VS 38 uur/week. Per uur ongeveer even productief; de VS haalt meer BBP per persoon door meer uren." }],
-          basiskennis: [{ onderwerp: "Niet €25/€150", uitleg: "€25 ligt maar iets boven het minimumloon. €150 halen alleen een paar zeer productieve sectoren, niet het gemiddelde." }],
+          basiskennis: [{ onderwerp: "Niet €25/€150", uitleg: "€25 per uur past eerder bij een armer land zoals Mexico (~€20). €150 halen alleen een paar zeer productieve sectoren, niet het gemiddelde." }],
           niveaus: { basis: "~€60/uur.", simpeler: "Nederland: ongeveer €60 BBP per gewerkt uur. Wereldwijd hoog.", nogSimpeler: "€60" },
         },
       },
       {
         q: "Wat is de **productiviteitsparadox**?",
-        options: ["Ondanks computers stijgt productiviteit langzamer dan verwacht", "Productiviteit is altijd hoog als je met computers werkt", "Computers maakten werk veel sneller productief dan verwacht", "Computers werken slechter dan mensen die het met de hand doen"],
+        options: ["Ondanks computers stijgt productiviteit langzamer dan verwacht", "Ondanks langere werkdagen daalt de productiviteit per uur", "Computers maakten werk veel sneller productief dan verwacht", "Ondanks lagere lonen stijgt de productiviteit sneller"],
         answer: 0,
-        wrongHints: [null, "Een paradox gaat tegen je verwachting in. Wat is hier dan onverwacht?", "Zie je die snelle groei terug in de cijfers?", "Zijn computers echt trager dan met de hand rekenen of schrijven?"],
+        wrongHints: [null, "Moe worden na lange werkdagen is logisch, geen paradox. Wat was er in de cijfers wél onverwacht?", "Zie je die snelle groei terug in de cijfers?", "Lagere lonen zeggen niets over hoeveel je per uur maakt. Wat was er in de cijfers wél onverwacht?"],
         uitlegPad: {
           stappen: [{ titel: "Verwacht versus werkelijk", tekst: "Sinds de jaren 90: computers, internet, smartphones. Verwacht: enorme productiviteitsstijging. Werkelijk: slechts ~1-2% per jaar — minder dan voorgaande decennia. PARADOX." }],
           woorden: [{ woord: "productiviteitsparadox", uitleg: "Discrepantie tussen verwachte (door technologie) en werkelijke productiviteitsstijging." }, { woord: "Solow-paradox", uitleg: "Robert Solow 1987: 'Je ziet computers overal, behalve in productiviteitscijfers'." }],
           theorie: "Mogelijke verklaringen: (1) afleiding door e-mail/social media, (2) administratieve overhead, (3) productiviteit moeilijk meetbaar in dienstensector, (4) gewenning aan tools duurt jaren. Sinds AI hoop op nieuwe stijging.",
           voorbeelden: [{ type: "praktijk", tekst: "Kantoorwerker uit 1990 (typmachine) → 2024 (computer/internet) → MEER tools, maar gemeten productiviteit steeg minder dan verwacht." }],
-          basiskennis: [{ onderwerp: "Niet 'altijd hoog'", uitleg: "Tegendeel: productiviteit groeit MINDER dan verwacht ondanks technologie." }],
+          basiskennis: [{ onderwerp: "Niet over vermoeidheid of lonen", uitleg: "De paradox gaat over technologie: productiviteit groeit MINDER dan verwacht, ondanks computers." }],
           niveaus: { basis: "Trage groei ondanks tech.", simpeler: "Verwacht: computers maken alles veel productiever. Realiteit: minder dan gedacht.", nogSimpeler: "Paradox" },
         },
       },
       {
         q: "Wat is het verband tussen **lonen** en **productiviteit**?",
-        options: ["Op lange termijn stijgen lonen mee met productiviteit", "Er is geen verband tussen lonen en productiviteit", "Op lange termijn dalen lonen bij hogere productiviteit", "Lonen stijgen alleen als werknemers gaan staken"],
+        options: ["Op lange termijn stijgen lonen mee met productiviteit", "Op lange termijn stijgen lonen sneller dan productiviteit", "Op lange termijn dalen lonen bij hogere productiviteit", "Lonen stijgen vooral als vakbonden actie voeren"],
         answer: 0,
-        wrongHints: [null, "Kijk naar de lange termijn: zie je dan echt geen samenhang?", "Als je per uur meer oplevert, waarom zou je loon dan dalen?", "Stakingen zijn 1 factor, niet de enige."],
+        wrongHints: [null, "Als lonen sneller stijgen dan wat je per uur oplevert, wat gebeurt er dan met de kosten van een bedrijf?", "Als je per uur meer oplevert, waarom zou je loon dan dalen?", "Acties kunnen een loonsverhoging afdwingen, maar waar moet dat geld op lange termijn vandaan komen?"],
         uitlegPad: {
           stappen: [{ titel: "Productiviteit financiert loonstijging", tekst: "Werkgever kan blijvend hogere lonen alleen betalen als werknemer meer per uur produceert. Op LANGE termijn dus: productiviteitsgroei → loongroei. Anders concurrentievermogen kwijt." }],
           woorden: [{ woord: "reële loongroei", uitleg: "Loonstijging boven inflatie. Volgt productiviteitsgroei op lange termijn." }],
           theorie: "20e eeuw: productiviteit en reëel loon stegen allebei sterk. Recente decennia: productiviteit groeit trager → loonstijging ook trager. Sommige landen (VS): productiviteit groeit harder dan lonen → eigenaars profiteren meer.",
           voorbeelden: [{ type: "ASML", tekst: "ASML productiviteit per medewerker hoog (chipmachines van honderden miljoenen) → kan hoge lonen betalen." }, { type: "supermarkt", tekst: "Caissière: lage productiviteit per uur → rond minimumloon." }],
-          basiskennis: [{ onderwerp: "Niet alleen stakingen", uitleg: "Stakingen kunnen wel kortdurend loonsverhoging afdwingen, maar lange termijn = productiviteit." }],
+          basiskennis: [{ onderwerp: "Niet vooral acties", uitleg: "Acties en stakingen kunnen wel kortdurend loonsverhoging afdwingen, maar lange termijn = productiviteit." }],
           niveaus: { basis: "Loon volgt productiviteit.", simpeler: "Op lange termijn stijgen lonen mee met hoe productief werknemers worden.", nogSimpeler: "Mee" },
         },
       },
@@ -754,15 +754,15 @@ const steps = [
       },
       {
         q: "Waarom staat sociale zekerheid **onder druk**?",
-        options: ["Door de vergrijzing", "Door stijgende lonen", "Door minder werklozen", "Door meer werkenden"],
+        options: ["Door de vergrijzing van de bevolking", "Door fraude met uitkeringen", "Door de hoge staatsschuld", "Door de lage rente op spaargeld"],
         answer: 0,
-        wrongHints: [null, "Hogere lonen betekenen juist meer premie-inkomsten. Wat zorgt dan voor druk?", "Minder werklozen betekent minder WW-uitkeringen. Is dat een probleem voor het stelsel?", "Meer werkenden betalen meer premie. Wat zorgt dan juist voor meer uitkeringen?"],
+        wrongHints: [null, "Fraude komt voor, maar het gaat om een klein deel van het geld. Wat zorgt voor een veel grotere groei van de kosten?", "De staatsschuld is een ander probleem van de overheid. Waarom stijgen juist de uitgaven aan uitkeringen zelf?", "Rente op spaargeld raakt spaarders, maar AOW en WW worden niet uit spaargeld betaald. Wat zorgt dan voor druk?"],
         uitlegPad: {
           stappen: [{ titel: "Demografische onbalans", tekst: "Vergrijzing = meer ouderen, minder jongeren. Meer mensen krijgen AOW + zorg, minder mensen betalen premies. Sociale zekerheid raakt onder druk: ofwel premies omhoog, ofwel uitkeringen omlaag, ofwel pensioenleeftijd omhoog." }],
           woorden: [{ woord: "vergrijzing", uitleg: "Demografische trend: groter % ouderen. NL is sinds jaren bezig." }, { woord: "i/a-ratio", uitleg: "Inactieven (gepensioneerden/uitkeringsontvangers) / actieven (werkenden). Hoog = druk op systeem." }],
           theorie: "Maatregelen: AOW-leeftijd verhoogd (was 65, nu 67+, stijgt mee met de levensverwachting). Pensioenstelsel hervormd. Discussie: nivellering vs eigen verantwoordelijkheid. Geen makkelijke oplossing.",
           voorbeelden: [{ type: "1965", tekst: "5 werkenden per gepensioneerde. Sociaal systeem ruim financierbaar." }, { type: "2050", tekst: "Verwacht 2 werkenden per gepensioneerde. Krappere financiering — vandaar hervormingen." }],
-          basiskennis: [{ onderwerp: "Niet 'meer werkenden'", uitleg: "Meer werkenden en minder werklozen geven juist méér premie-inkomsten. De druk komt van meer ouderen en te weinig jongeren: de vergrijzing." }],
+          basiskennis: [{ onderwerp: "Niet fraude of de staatsschuld", uitleg: "Fraude en de staatsschuld spelen mee in de politiek, maar de grote druk komt van meer ouderen en te weinig jongeren: de vergrijzing." }],
           niveaus: { basis: "Vergrijzing.", simpeler: "Meer ouderen + minder jongeren → minder premies + meer uitkeringen → druk op systeem.", nogSimpeler: "Vergrijzing" },
         },
       },

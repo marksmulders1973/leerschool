@@ -122,7 +122,7 @@ const steps = [
           woorden: [{ woord: "Ides van Maart", uitleg: "15 maart in de Romeinse kalender." }, { woord: "samenzweerders", uitleg: "Groep mensen die in het geheim plannen iets te doen, vaak iets gewelddadigs." }],
           theorie: "Beroemde quote (bekend van Shakespeare): 'Et tu, Brute?' — 'Ook jij, Brutus?'",
           voorbeelden: [{ type: "stap", tekst: "Brutus was een vriend en beschermeling van Caesar; zijn deelname maakte de moord extra tragisch." }],
-          basiskennis: [{ onderwerp: "Eind Republiek", uitleg: "Na deze moord brak burgeroorlog uit; Augustus werd uiteindelijk eerste keizer (27 v.Chr.)." }],
+          basiskennis: [{ onderwerp: "Eind Republiek", uitleg: "Na deze moord brak een burgeroorlog uit. Daarna eindigde de Republiek en begon in 27 v.Chr. het keizerrijk." }],
           niveaus: {
             basis: "Vermoord in de Senaat.",
             simpeler: "Op 15 maart 44 v.Chr. werd Caesar in de Senaat doodgestoken door samenzweerders die bang waren dat hij koning wilde worden.",
