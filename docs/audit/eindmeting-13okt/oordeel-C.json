@@ -1,0 +1,352 @@
+[
+  {
+    "nr": 101,
+    "waar": "korte-teksten-snappen-g4 stap 1 vraag 1",
+    "eigenKeuze": "A) de poes",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 102,
+    "waar": "korte-teksten-snappen-g4 stap 3 vraag 7",
+    "eigenKeuze": "A) 's nachts",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 103,
+    "waar": "koude-oorlog-modern-po stap 3 vraag 1",
+    "eigenKeuze": "A) 1989",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 104,
+    "waar": "krachten-natuurkunde stap 9 vraag 2",
+    "eigenKeuze": "A) Muur duwt schaatser even hard terug, schaatser glijdt weg",
+    "oordeel": "fout",
+    "reden": "wrongHint bij D (\"Volgens Newton 3 wordt schaatser teruggeduwd\") verklapt het goede antwoord; A is bovendien de enige uitgewerkte optie (opvallend langer)."
+  },
+  {
+    "nr": 105,
+    "waar": "leestekens-hoofdletters-po stap 3 vraag 7",
+    "eigenKeuze": "A) Ja, dat vind ik ook.",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 106,
+    "waar": "licht-geluid-natuurkunde stap 6 vraag 1",
+    "eigenKeuze": "A) Trillingen door materie",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 107,
+    "waar": "lineaire-formules stap 7 vraag 1",
+    "eigenKeuze": "A) (2, 4)",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 108,
+    "waar": "lineaire-formules stap 17 vraag 7",
+    "eigenKeuze": "A) x = 5",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 109,
+    "waar": "literatuurgeschiedenis stap 10 vraag 1",
+    "eigenKeuze": "A) De aanslag",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 110,
+    "waar": "logaritmen-exponentieel-havo-vwo stap 3 vraag 5",
+    "eigenKeuze": "A) 5",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 111,
+    "waar": "logaritmen-exponentieel-havo-vwo stap 4 vraag 1",
+    "eigenKeuze": "A) 64×",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 112,
+    "waar": "logaritmen-exponentieel-havo-vwo stap 5 vraag 1",
+    "eigenKeuze": "A) ~€608",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 113,
+    "waar": "maten-eenheden stap 4 vraag 5",
+    "eigenKeuze": "A) 40",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 114,
+    "waar": "media-wijsheid-maatschappijleer stap 5 vraag 2",
+    "eigenKeuze": "A) 0800-0432",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 115,
+    "waar": "meetkunde-bouwsels stap 5 vraag 7",
+    "eigenKeuze": "A) Nee, de doos is 1000 cm³ te klein",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 116,
+    "waar": "mensenrechten-maatschappijleer stap 6 vraag 6",
+    "eigenKeuze": "A) Amnesty International",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 117,
+    "waar": "mol-stoichiometrie-havo-vwo stap 3 vraag 2",
+    "eigenKeuze": "A) 100 g",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 118,
+    "waar": "mol-stoichiometrie-havo-vwo stap 5 vraag 1",
+    "eigenKeuze": "A) 0 mol",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 119,
+    "waar": "nederlandse-staat-maatschappijleer stap 11 vraag 13",
+    "eigenKeuze": "4",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 120,
+    "waar": "negatieve-getallen stap 10 vraag 14",
+    "eigenKeuze": "A) −2",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 121,
+    "waar": "negatieve-getallen-po stap 1 vraag 1",
+    "eigenKeuze": "A) −3",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 122,
+    "waar": "nieuwsbericht-lezen-po stap 4 vraag 3",
+    "eigenKeuze": "A) Woensdagmiddag",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 123,
+    "waar": "olympische-spelen-po stap 2 vraag 2",
+    "eigenKeuze": "A) Goud",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 124,
+    "waar": "olympische-spelen-po stap 4 vraag 12",
+    "eigenKeuze": "A) 4 jaar",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 125,
+    "waar": "ontdekkingsreizen-po stap 2 vraag 2",
+    "eigenKeuze": "A) Vasco da Gama",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 126,
+    "waar": "ontdekkingsreizen-po stap 4 vraag 25",
+    "eigenKeuze": "A) Specerijen + thee + porselein",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 127,
+    "waar": "optica-havo-vwo stap 5 vraag 1",
+    "eigenKeuze": "A) ~32°",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 128,
+    "waar": "pincode-buitenland-eu stap 2 vraag 6",
+    "eigenKeuze": "A) VOORDEEL: eigen banen beschermd. NADEEL: duurder voor consument",
+    "oordeel": "fout",
+    "reden": "Goede optie herkenbaar zonder kennis: vraag vraagt voor- én nadeel, alleen A geeft beide en is veel langer; B/C/D (\"alleen voordelen\", \"alleen nadelen\", \"geen effect\") zijn stro-afleiders."
+  },
+  {
+    "nr": 129,
+    "waar": "pincode-buitenland-eu stap 6 vraag 6",
+    "eigenKeuze": "A) EU + OESO + ESG-criteria",
+    "oordeel": "fout",
+    "reden": "Goede optie herkenbaar zonder kennis: enige specifieke optie tegenover \"Niemand\"/\"Alleen vakbonden\"/\"Alleen consumenten\". Inhoudelijk ook wankel: ESG-criteria zijn geen toezichthouder en de OESO houdt geen toezicht maar maakt afspraken/richtlijnen."
+  },
+  {
+    "nr": 130,
+    "waar": "pincode-buitenland-eu stap 7 vraag 6",
+    "eigenKeuze": "A) Politici willen rente vaak verlagen voor verkiezingen, ten koste van inflatie",
+    "oordeel": "fout",
+    "reden": "wrongHint bij B (\"Omdat de ECB dat zelf zo wil\") luidt \"Wel een reden.\" — zegt dat de foute optie wél een reden is (bedoeld: geen reden). Daarnaast is A de enige uitgewerkte optie en is D (\"politici weten te veel\") onzin."
+  },
+  {
+    "nr": 131,
+    "waar": "pincode-geld-sparen-lenen stap 4 vraag 7",
+    "eigenKeuze": "A) Heel hoog risico, zonder garantie",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 132,
+    "waar": "pincode-geld-sparen-lenen stap 9 vraag 2",
+    "eigenKeuze": "A) Het huis zelf",
+    "oordeel": "fout",
+    "reden": "wrongHint bij C noemt het goede antwoord letterlijk: \"maar onderpand = het huis zelf.\""
+  },
+  {
+    "nr": 133,
+    "waar": "pincode-ondernemen stap 3 vraag 1",
+    "eigenKeuze": "A) De mensen voor wie jouw product bedoeld is",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 134,
+    "waar": "pincode-ondernemen stap 6 vraag 6",
+    "eigenKeuze": "A) Oligopolie",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 135,
+    "waar": "pincode-ondernemen stap 7 vraag 4",
+    "eigenKeuze": "A) Eenmanszaak",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 136,
+    "waar": "pincode-ontwikkelingslanden stap 5 vraag 3",
+    "eigenKeuze": "A) Beginnende kleine ondernemers in arme landen",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 137,
+    "waar": "pincode-overheid stap 1 vraag 6",
+    "eigenKeuze": "A) Een fabriek vervuilt een rivier en omwonenden lijden eronder",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 138,
+    "waar": "plattegrond-legenda-po stap 2 vraag 8",
+    "eigenKeuze": "A) de rode lijn",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 139,
+    "waar": "politiek-democratie-po stap 1 vraag 1",
+    "eigenKeuze": "A) Volk beslist",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 140,
+    "waar": "politiek-democratie-po stap 4 vraag 2",
+    "eigenKeuze": "A) De Koning",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 141,
+    "waar": "procenten-po stap 6 vraag 2",
+    "eigenKeuze": "A) 60%",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 142,
+    "waar": "programmeren-basis-informatica stap 2 vraag 4",
+    "eigenKeuze": "A) Anders, als deze andere voorwaarde geldt",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 143,
+    "waar": "pubertijd-groei-po stap 4 vraag 5",
+    "eigenKeuze": "A) 0800-0432",
+    "oordeel": "fout",
+    "reden": "Goede optie herkenbaar aan vorm: A is het enige volledige telefoonnummer naast 112 (spoed); \"0900\" en \"06\" zijn losse prefixen zonder nummer — onzinnige afleiders."
+  },
+  {
+    "nr": 144,
+    "waar": "pythagoras stap 7 vraag 1",
+    "eigenKeuze": "A) Bij een rechthoekige driehoek met 2 zijden bekend",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 145,
+    "waar": "pythagoras stap 9 vraag 1",
+    "eigenKeuze": "A) 289",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 146,
+    "waar": "redactiesommen-pad stap 4 vraag 3",
+    "eigenKeuze": "A) € 1,50",
+    "oordeel": "goed",
+    "reden": ""
+  },
+  {
+    "nr": 147,
+    "waar": "rekenen-tot-100-nieuwkomers stap 1 vraag 2",
+    "eigenKeuze": "C) 50",
+    "oordeel": "twijfel",
+    "reden": "wrongHint bij A (\"60 is tien te veel\") plus bij elke foute optie \"Tien erbij: 40 + 10\" maakt het antwoord 50 vrijwel direct duidelijk; voor nieuwkomers is dat bewust steigerend, maar valt mogelijk onder \"hint verklapt antwoord\"."
+  },
+  {
+    "nr": 148,
+    "waar": "rekenen-tot-20-nieuwkomers stap 5 vraag 4",
+    "eigenKeuze": "A) 7",
+    "oordeel": "twijfel",
+    "reden": "wrongHint bij C (\"6 is één te weinig\") geeft het antwoord 7 direct prijs; bewust corrigerende nieuwkomers-feedback, dus twijfel."
+  },
+  {
+    "nr": 149,
+    "waar": "rekenverhaaltjes-nieuwkomers stap 2 vraag 4",
+    "eigenKeuze": "A) 30",
+    "oordeel": "twijfel",
+    "reden": "wrongHint bij D (\"31 is één te veel\") geeft het antwoord 30 direct prijs; bewust corrigerende nieuwkomers-feedback, dus twijfel."
+  },
+  {
+    "nr": 150,
+    "waar": "rijmen-letters-kleuters-po stap 1 vraag 4",
+    "eigenKeuze": "A) banaan 🍌",
+    "oordeel": "goed",
+    "reden": ""
+  }
+]

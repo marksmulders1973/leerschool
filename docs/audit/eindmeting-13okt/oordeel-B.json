@@ -1,0 +1,352 @@
+[
+ {
+  "nr": 51,
+  "waar": "ecosystemen-biologie stap 3 vraag 1",
+  "eigenKeuze": "~10%",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 52,
+  "waar": "emoties-sociaal-po stap 2 vraag 4",
+  "eigenKeuze": "Goede vrienden = langer leven",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 53,
+  "waar": "energie-hulpbronnen-havo-vwo stap 5 vraag 1",
+  "eigenKeuze": "49% CO₂-reductie vs 1990",
+  "oordeel": "fout",
+  "reden": "Goede optie '49% CO₂-reductie vs 1990' is als enige specifiek (CO₂ + referentiejaar); afleiders kaal/onzinnig ('Geen doel', '100% reductie') → herkenbaar zonder kennis."
+ },
+ {
+  "nr": 54,
+  "waar": "energiebronnen-po stap 6 vraag 13",
+  "eigenKeuze": "Warmte",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 55,
+  "waar": "engels-literatuur-havo-vwo stap 3 vraag 4",
+  "eigenKeuze": "James Joyce",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 56,
+  "waar": "engels-schrijven-spreken-havo-vwo stap 1 vraag 2",
+  "eigenKeuze": "I have lived here for 10 years",
+  "oordeel": "fout",
+  "reden": "uitlegPad.niveaus.nogSimpeler = 'A.' verwijst naar een optieletter, terwijl opties gehusseld worden (shuffleOptions in LearnPath.jsx)."
+ },
+ {
+  "nr": 57,
+  "waar": "europese-unie-po stap 1 vraag 1",
+  "eigenKeuze": "27 landen",
+  "oordeel": "fout",
+  "reden": "wrongHint bij '30 landen' luidt 'Hoger dan dit — geen 30. Lager.' (zegt hoger én lager, tegenstrijdig); hints bij 25 en 28 rekenen het antwoord 27 vrijwel voor (28 − VK)."
+ },
+ {
+  "nr": 58,
+  "waar": "europese-unie-po stap 6 vraag 3",
+  "eigenKeuze": "9 mei (Schuman-verklaring 1950)",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 59,
+  "waar": "evolutie-havo-vwo stap 2 vraag 1",
+  "eigenKeuze": "Neutraal of schadelijk",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 60,
+  "waar": "evolutie-havo-vwo stap 3 vraag 1",
+  "eigenKeuze": "Kleine populaties",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 61,
+  "waar": "evolutie-havo-vwo stap 5 vraag 1",
+  "eigenKeuze": "Recente menselijke evolutie door selectie",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 62,
+  "waar": "examen-economie-2024-t2 stap 5 vraag 1",
+  "eigenKeuze": "structurele hulp",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 63,
+  "waar": "examen-geschiedenis-2023-t1 stap 5 vraag 1",
+  "eigenKeuze": "tot het populisme",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 64,
+  "waar": "examen-geschiedenis-2024-t1 stap 5 vraag 1",
+  "eigenKeuze": "de Cubacrisis",
+  "oordeel": "fout",
+  "reden": "wrongHint bij 'de stichting van de DDR' noemt letterlijk 'Cubacrisis' (het goede antwoord)."
+ },
+ {
+  "nr": 65,
+  "waar": "examen-nederlands-2022-t2 stap 1 vraag 1",
+  "eigenKeuze": "oplossing om bomenkap tegen te gaan",
+  "oordeel": "fout",
+  "reden": "bronTekst eindigt met '(Hoofdonderwerp: een oplossing om onnodige bomenkap tegen te gaan …)' — de getoonde brontekst geeft het antwoord letterlijk."
+ },
+ {
+  "nr": 66,
+  "waar": "examen-nederlands-2022-t2 stap 4 vraag 1",
+  "eigenKeuze": "verklaringen voor gapen",
+  "oordeel": "fout",
+  "reden": "bronTekst zet in alinea 3-5 het woord *verklaringen* cursief — markeert precies het antwoordwoord van optie 'verklaringen voor gapen'."
+ },
+ {
+  "nr": 67,
+  "waar": "financiele-vorming-po stap 3 vraag 2",
+  "eigenKeuze": "€102",
+  "oordeel": "fout",
+  "reden": "wrongHint 'Te veel.' bij €20 past niet: €20 is als eindbedrag juist minder dan €102 (en minder dan de inleg)."
+ },
+ {
+  "nr": 68,
+  "waar": "financiele-vorming-po stap 6 vraag 9",
+  "eigenKeuze": "€40",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 69,
+  "waar": "fotosynthese-biologie stap 2 vraag 3",
+  "eigenKeuze": "Voedingsstoffen in mest",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 70,
+  "waar": "geld-rekenen stap 3 vraag 2",
+  "eigenKeuze": "€ 1,25",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 71,
+  "waar": "geld-rekenen stap 5 vraag 24",
+  "eigenKeuze": "€10",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 72,
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 1 vraag 5",
+  "eigenKeuze": "wat er gisteren op school gebeurde",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 73,
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 2 vraag 5",
+  "eigenKeuze": "nu",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 74,
+  "waar": "getallen-tot-20-po stap 2 vraag 7",
+  "eigenKeuze": "9",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 75,
+  "waar": "gezonde-voeding-po stap 2 vraag 3",
+  "eigenKeuze": "Ontbijt",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 76,
+  "waar": "grafieken-lezen-po stap 1 vraag 6",
+  "eigenKeuze": "Kilogram (kg)",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 77,
+  "waar": "hardware-besturingssysteem-informatica stap 3 vraag 4",
+  "eigenKeuze": "Software die een apparaat laat samenwerken met het systeem",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 78,
+  "waar": "hardware-besturingssysteem-informatica stap 4 vraag 5",
+  "eigenKeuze": "Belangrijke bestanden op meer dan één plek bewaren",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 79,
+  "waar": "hart-bloed-ademhaling-havo-vwo stap 3 vraag 1",
+  "eigenKeuze": "O₂",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 80,
+  "waar": "in-de-klas-nieuwkomers stap 3 vraag 5",
+  "eigenKeuze": "Tot morgen!",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 81,
+  "waar": "in-de-klas-nieuwkomers stap 4 vraag 2",
+  "eigenKeuze": "Ik voel me niet goed.",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 82,
+  "waar": "industriele-revolutie-po stap 3 vraag 1",
+  "eigenKeuze": "12-16 uur",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 83,
+  "waar": "industriele-revolutie-po stap 6 vraag 11",
+  "eigenKeuze": "Organisaties voor werknemers-rechten",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 84,
+  "waar": "informatiebronnen-po stap 3 vraag 3",
+  "eigenKeuze": "Inhoudsopgave",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 85,
+  "waar": "informatiebronnen-po stap 5 vraag 5",
+  "eigenKeuze": "Woordenboek",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 86,
+  "waar": "inhoudsopgave-register-po stap 2 vraag 5",
+  "eigenKeuze": "2",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 87,
+  "waar": "integralen-havo-vwo stap 2 vraag 3",
+  "eigenKeuze": "x = 0 en x = 2",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 88,
+  "waar": "interpunctie-po stap 6 vraag 15",
+  "eigenKeuze": "Ik ga naar Amsterdam.",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 89,
+  "waar": "kaartlezen-po stap 5 vraag 9",
+  "eigenKeuze": "Symbool dat noord, oost, zuid, west aanwijst",
+  "oordeel": "twijfel",
+  "reden": "Antwoord klopt; uitlegPad-voorbeeld 'Atlas-kaarten: windroos altijd zichtbaar in legenda' is feitelijk onjuist (veel atlaskaarten hebben geen windroos, noorden is boven) — klein, in voorbeeld."
+ },
+ {
+  "nr": 90,
+  "waar": "kalender-rekenen-po stap 2 vraag 9",
+  "eigenKeuze": "Donderdag",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 91,
+  "waar": "kansrekening stap 14 vraag 1",
+  "eigenKeuze": "1 − (5/6)³ = 91/216",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 92,
+  "waar": "kansrekening-havo-vwo stap 2 vraag 3",
+  "eigenKeuze": "8",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 93,
+  "waar": "klimaatverandering-aardrijkskunde stap 1 vraag 3",
+  "eigenKeuze": "VN-klimaatpanel met wetenschappers",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 94,
+  "waar": "klimaten-aardrijkskunde stap 3 vraag 2",
+  "eigenKeuze": "Savanne heeft een droge en natte tijd, regenwoud is altijd nat",
+  "oordeel": "fout",
+  "reden": "Goede optie is opvallend langer en de enige met inhoudelijke uitleg; afleiders onzinnig ('Regenwoud heeft sneeuw', 'Savanne ligt bij de polen') → herkenbaar zonder kennis."
+ },
+ {
+  "nr": 95,
+  "waar": "klokkijken stap 2 vraag 4",
+  "eigenKeuze": "5 uur",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 96,
+  "waar": "klokkijken stap 4 vraag 6",
+  "eigenKeuze": "4",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 97,
+  "waar": "klokkijken stap 8 vraag 22",
+  "eigenKeuze": "14:25",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 98,
+  "waar": "kolonie-indonesie stap 5 vraag 3",
+  "eigenKeuze": "Soekarno",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 99,
+  "waar": "kommagetallen-po stap 3 vraag 1",
+  "eigenKeuze": "0,08",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 100,
+  "waar": "kommagetallen-po stap 6 vraag 12",
+  "eigenKeuze": "0,5",
+  "oordeel": "goed",
+  "reden": ""
+ }
+]

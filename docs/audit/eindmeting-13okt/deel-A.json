@@ -1,0 +1,957 @@
+[
+ {
+  "nr": 1,
+  "bron": "leerpaden",
+  "waar": "ai-machine-learning-informatica stap 2 vraag 3",
+  "q": "Wat betekent **'garbage in, garbage out'** bij machine learning?",
+  "options": [
+   "Slechte/eenzijdige data → slechte voorspellingen",
+   "Computers maken vuilnis",
+   "Je moet je bestanden weggooien",
+   "AI werkt altijd perfect"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het is een uitdrukking over data-kwaliteit, niet letterlijk afval.",
+   "Het gaat niet over bestanden wissen.",
+   "Juist niet — slechte data geeft slechte resultaten."
+  ]
+ },
+ {
+  "nr": 2,
+  "bron": "leerpaden",
+  "waar": "alfabet-woordenboek-po stap 2 vraag 9",
+  "q": "Je slaat het woordenboek open bij woorden met een M. Je zoekt het woord 'vork'. Welke kant blader je op?",
+  "options": [
+   "naar achteren",
+   "naar voren",
+   "nergens heen, je bent al goed",
+   "het maakt niet uit welke kant"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Komt de V in het alfabet vóór of ná de M?",
+   null,
+   "Als je de goede kant kiest, ben je veel sneller klaar."
+  ]
+ },
+ {
+  "nr": 3,
+  "bron": "leerpaden",
+  "waar": "algoritmen-programmeren-po stap 4 vraag 27",
+  "q": "Wie ontwierp het **WWW** (web)?",
+  "options": [
+   "Tim Berners-Lee",
+   "Bill Gates",
+   "Steve Jobs",
+   "Linus Torvalds"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bill Gates is bekend van Microsoft en Windows op je computer — is dat hetzelfde als het web bedenken?",
+   "Steve Jobs maakte de iPhone en Apple-computers — bouwde hij ook het wereldwijde web?",
+   "Linus Torvalds maakte het besturingssysteem Linux — vond hij daarmee het web uit?"
+  ]
+ },
+ {
+  "nr": 4,
+  "bron": "leerpaden",
+  "waar": "alinea-functies-tussenkopjes-po stap 1 vraag 4",
+  "q": "*\"Katten slapen gemiddeld vijftien uur per dag. Dat is meer dan de helft van een etmaal. Overdag dommelen ze het liefst op een warm plekje. 's Nachts zijn ze juist actief.\"* — Welke zin is de kernzin van deze alinea?",
+  "options": [
+   "Katten slapen gemiddeld vijftien uur per dag.",
+   "Dat is meer dan de helft van een etmaal.",
+   "Overdag dommelen ze het liefst op een warm plekje.",
+   "'s Nachts zijn ze juist actief."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Die zin legt de eerste zin alleen maar uit. Welke zin heeft de andere drie zinnen als 'uitleg' nodig?",
+   "Dit is een detail over overdag. Welke zin dekt ook de nacht en het getal van vijftien uur?",
+   null
+  ]
+ },
+ {
+  "nr": 5,
+  "bron": "leerpaden",
+  "waar": "argumentatieleer stap 3 vraag 1",
+  "q": "*\"Jongeren bewegen te weinig. Mijn buurjongen zit elke avond achter zijn PlayStation.\"* — Is de tweede zin een argument?",
+  "options": [
+   "Nee, het is een voorbeeld dat een argument zou kunnen illustreren.",
+   "Ja, want het bewijst dat jongeren niet bewegen.",
+   "Ja, het is een hoofdargument.",
+   "Nee, het is een drogreden."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Eén buurjongen bewijst niets over alle jongeren. Wat is het verschil tussen een algemene uitspraak en een individueel voorbeeld?",
+   "Een hoofdargument is een algemene reden. Hier wordt één concreet geval genoemd.",
+   "Een drogreden is een onjuist *type* argument. Maar dit is gewoon een voorbeeld, geen argument."
+  ]
+ },
+ {
+  "nr": 6,
+  "bron": "leerpaden",
+  "waar": "bedrijfseconomie-havo-vwo stap 4 vraag 2",
+  "q": "Wat is **psychologische prijs**?",
+  "options": [
+   "€9,99 voelt veel lager dan €10",
+   "Geheime prijs",
+   "Tijdelijke prijs",
+   "Prijs voor psychologen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het gaat niet om geheimhouding — het gaat om hoe de prijs op de klant óverkomt.",
+   "Een tijdelijke prijs is een aanbieding — hier verandert niet de prijs maar de beleving.",
+   null
+  ]
+ },
+ {
+  "nr": 7,
+  "bron": "leerpaden",
+  "waar": "begrijpend-lezen-strategie stap 1 vraag 7",
+  "q": "Wat maakt begrijpend lezen **vaak lastig**?",
+  "options": [
+   "Moeilijke woorden en lange zinnen",
+   "Te weinig plaatjes bij de tekst",
+   "Een saaie kleur papier",
+   "Een te groot lettertype"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Heb je plaatjes nodig om een tekst te snappen?",
+   null,
+   "Is grote letters lezen moeilijker dan kleine?"
+  ]
+ },
+ {
+  "nr": 8,
+  "bron": "leerpaden",
+  "waar": "begrijpend-lezen-strategie stap 1 vraag 8",
+  "q": "Wat is het **goede nieuws** over begrijpend lezen?",
+  "options": [
+   "Je kunt het leren door slim aan te pakken",
+   "Alleen heel slimme kinderen kunnen het",
+   "Het lukt pas als je volwassen bent",
+   "Oefenen helpt er helemaal niet bij"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Heb je een speciaal soort hersenen nodig, of kan iedereen het oefenen?",
+   null,
+   "Wat gebeurt er meestal als je iets vaak oefent?"
+  ]
+ },
+ {
+  "nr": 9,
+  "bron": "leerpaden",
+  "waar": "begrijpend-lezen-teksten-po stap 1 vraag 1",
+  "q": "In welk jaar werd de eerste fiets uitgevonden?",
+  "options": [
+   "1817",
+   "1860",
+   "1885",
+   "1900"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Toen werden pedalen toegevoegd — de fiets bestond toen al. Zoek het allereerste jaartal.",
+   "Toen ontstond pas de moderne fiets met ketting. Zoek de uitvinding van de allereerste.",
+   "Toen werd de fiets populair in Nederland — niet de uitvinding zelf."
+  ]
+ },
+ {
+  "nr": 10,
+  "bron": "leerpaden",
+  "waar": "begrijpend-lezen-teksten-po stap 1 vraag 3",
+  "q": "Wat betekent 'pedaalomwenteling' in deze tekst?",
+  "options": [
+   "Eén keer rond met de pedalen trappen",
+   "Een speciaal soort fietsband",
+   "Een bekend Frans automerk",
+   "Een onderdeel van de remmen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Banden komen niet voor in dit stuk. Lees terug: 'pedaal' + 'omwenteling'.",
+   "Geen automerk — let op de twee woorddelen.",
+   "Geen rem-onderdeel. Pedalen + omwenteling = ?"
+  ]
+ },
+ {
+  "nr": 11,
+  "bron": "leerpaden",
+  "waar": "bekende-boeken-literatuur-po stap 2 vraag 1",
+  "q": "Welke schrijfster: **'Hoe overleef ik...'-serie**?",
+  "options": [
+   "Francine Oomen",
+   "Annie M.G. Schmidt",
+   "Carry Slee",
+   "Mirjam Mous"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Klassiek.",
+   "Pesten.",
+   "Spanning."
+  ]
+ },
+ {
+  "nr": 12,
+  "bron": "leerpaden",
+  "waar": "bekende-boeken-literatuur-po stap 4 vraag 8",
+  "q": "Wie schreef **'De brief voor de koning'** (1962, ook verfilmd op Netflix)?",
+  "options": [
+   "Tonke Dragt",
+   "Annie M.G. Schmidt",
+   "Thea Beckman",
+   "Roald Dahl"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — Schmidt schreef kortere boeken (Jip+Janneke).",
+   "Niet — Beckman schreef Spijkerbroek.",
+   "Niet — Dahl was Brits."
+  ]
+ },
+ {
+  "nr": 13,
+  "bron": "leerpaden",
+  "waar": "bekende-wetenschappers-po stap 5 vraag 21",
+  "q": "Wie ontwikkelde de **fiets** (eerste vorm)?",
+  "options": [
+   "Karl Drais",
+   "Edison",
+   "Tesla",
+   "Newton"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Edison = gloeilamp + fonograaf.",
+   "Tesla = wisselstroom + elektriciteit.",
+   "Newton = zwaartekracht, geen voertuig."
+  ]
+ },
+ {
+  "nr": 14,
+  "bron": "leerpaden",
+  "waar": "belasting-po stap 1 vraag 5",
+  "q": "Welke van deze dingen wordt **niet** van belasting betaald?",
+  "options": [
+   "Je eigen ijsje",
+   "De brandweer",
+   "Wegen en fietspaden",
+   "Scholen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De brandweer wordt juist wél van belasting betaald.",
+   "Wegen worden wél van belasting betaald.",
+   "Scholen worden wél van belasting betaald."
+  ]
+ },
+ {
+  "nr": 15,
+  "bron": "leerpaden",
+  "waar": "betrouwbaarheid-bronnen-po stap 3 vraag 1",
+  "q": "Hoe controleer je het best of informatie klopt?",
+  "options": [
+   "kijken of meerdere betrouwbare bronnen het zeggen",
+   "kijken of het mooi en netjes is opgemaakt",
+   "kijken of er veel kleuren en plaatjes in staan",
+   "het geloven als veel mensen het delen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Mooie opmaak zegt niets over of het klopt.",
+   "Kleuren maken iets niet waar.",
+   "Vaak gedeeld betekent nog niet dat het klopt."
+  ]
+ },
+ {
+  "nr": 16,
+  "bron": "leerpaden",
+  "waar": "binair-datarepresentatie-informatica stap 2 vraag 1",
+  "q": "Welke waarde heeft het hex-teken **A**?",
+  "options": [
+   "10",
+   "1",
+   "11",
+   "16"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "A is geen 1 — het komt ná de 9.",
+   "Dat is B.",
+   "16 is het grondtal; A zelf is kleiner."
+  ]
+ },
+ {
+  "nr": 17,
+  "bron": "leerpaden",
+  "waar": "binair-datarepresentatie-informatica stap 4 vraag 3",
+  "q": "Welk formaat gebruikt **lossy** (met verlies) compressie?",
+  "options": [
+   "JPG",
+   "PNG",
+   "ZIP",
+   "Tekstbestand (.txt)"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "PNG is juist verliesvrij.",
+   "ZIP geeft de data exact terug — verliesvrij.",
+   "Platte tekst wordt niet 'lossy' opgeslagen."
+  ]
+ },
+ {
+  "nr": 18,
+  "bron": "leerpaden",
+  "waar": "breuken-po stap 1 vraag 2",
+  "q": "Welke breuk is **groter dan 1**?",
+  "options": [
+   "7/4",
+   "3/4",
+   "1/2",
+   "4/4"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kleiner dan 1 — teller < noemer.",
+   "Veel kleiner dan 1.",
+   "Precies 1 — niet groter."
+  ]
+ },
+ {
+  "nr": 19,
+  "bron": "leerpaden",
+  "waar": "chemische-reacties-scheikunde stap 8 vraag 2",
+  "q": "Wat doet een **katalysator**?",
+  "options": [
+   "Versnelt de reactie",
+   "Levert extra warmte aan de reactie",
+   "Remt de reactie af",
+   "Wordt zelf opgebruikt in de reactie"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet vooral over warmte.",
+   "Niet — kijk wat er met de activeringsenergie gebeurt.",
+   "Niet — de katalysator is na afloop nog helemaal over."
+  ]
+ },
+ {
+  "nr": 20,
+  "bron": "leerpaden",
+  "waar": "cito-strategieen-groep8 stap 1 vraag 1",
+  "q": "Wat is de Doorstroomtoets?",
+  "options": [
+   "Een toets in groep 8 die advies geeft voor de middelbare school",
+   "Een toets die bepaalt of je groep 8 nog een keer moet doen",
+   "Een examen dat in alle landen van Europa tegelijk wordt gemaakt",
+   "Een toets die je thuis als huiswerk maakt, zonder je juf"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wat denk je: zakt iemand voor de Doorstroomtoets, of mag iedereen door?",
+   "Wordt deze toets ook in andere landen afgenomen?",
+   "Wie maakt deze toets — alleen jij thuis, of iedereen op school?"
+  ]
+ },
+ {
+  "nr": 21,
+  "bron": "leerpaden",
+  "waar": "cito-strategieen-groep8 stap 4 vraag 8",
+  "q": "Vraag: 'Welk dier is een zoogdier?' Je weet niet meteen het antwoord, maar je weet zeker dat een **haai** een vis is. Wat doe je met de optie 'haai'?",
+  "options": [
+   "Wegstrepen, want die kan niet goed zijn",
+   "Kiezen, want dat dier ken je",
+   "Laten staan tot het eind van de toets",
+   "Samen met een andere optie aankruisen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Lees de vraag nog eens: welk soort dier wordt er gezocht?",
+   null,
+   "Hoeveel opties mag je bij één vraag kiezen?"
+  ]
+ },
+ {
+  "nr": 22,
+  "bron": "leerpaden",
+  "waar": "cito-strategieen-groep8 stap 7 vraag 4",
+  "q": "Wat is het verschil tussen schooladvies en toetsadvies (sinds 2024)?",
+  "options": [
+   "Schooladvies telt; bij hoger toetsadvies kijkt school opnieuw",
+   "Toetsadvies is leidend; het schooladvies telt niet mee",
+   "Ze tellen allebei precies even zwaar mee bij je advies",
+   "Geen verschil: het is twee keer precies hetzelfde advies"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wat is jaren leerkracht-observatie waard versus één toetsdag?",
+   "Welk advies krijg je het eerst in groep 8?",
+   "Wat zou er gebeuren als één toets meer telt dan jouw hele schoolervaring?"
+  ]
+ },
+ {
+  "nr": 23,
+  "bron": "leerpaden",
+  "waar": "cito-strategieen-groep8 stap 7 vraag 24",
+  "q": "Waar gaat de Doorstroomtoets in **groep 8** over?",
+  "options": [
+   "Lezen + taalverzorging + rekenen",
+   "Rekenen + geschiedenis + Engels",
+   "Aardrijkskunde + biologie + lezen",
+   "Alleen rekenen + topografie"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Denk aan de vakken die je elke dag op school oefent. Zitten die er allemaal in?",
+   "Denk aan de vakken die je elke dag op school oefent. Zitten die er allemaal in?",
+   "Denk aan de vakken die je elke dag op school oefent. Zitten die er allemaal in?"
+  ]
+ },
+ {
+  "nr": 24,
+  "bron": "leerpaden",
+  "waar": "conditionals-engels stap 4 vraag 2",
+  "q": "**'If she ___ (call), I would have answered.'**",
+  "options": [
+   "had called",
+   "called",
+   "calls",
+   "had been calling"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Past simple = Type 2.",
+   "Present.",
+   "Te complex tense."
+  ]
+ },
+ {
+  "nr": 25,
+  "bron": "leerpaden",
+  "waar": "continenten-wereld-po stap 6 vraag 6",
+  "q": "**Antarctica** is bekend om ... ?",
+  "options": [
+   "IJs en pinguïns",
+   "Tropisch regenwoud",
+   "Grote steden",
+   "Lange rivieren"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te koud voor regenwoud.",
+   "Geen steden — onbewoond.",
+   "Geen lange rivieren — ijs."
+  ]
+ },
+ {
+  "nr": 26,
+  "bron": "leerpaden",
+  "waar": "cse-leesvaardigheid-engels stap 5 vraag 4",
+  "q": "*'The exam was hard. The time was short. **This** is why students failed.'* Wat is **this**?",
+  "options": [
+   "Moeilijk examen én korte tijd",
+   "De examenuitslag",
+   "Alleen het tijd-element",
+   "Alleen het moeilijk-element"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet expliciet genoemd.",
+   "Te beperkt.",
+   "Te beperkt."
+  ]
+ },
+ {
+  "nr": 27,
+  "bron": "leerpaden",
+  "waar": "cse-leesvaardigheid-nederlands stap 2 vraag 3",
+  "q": "Tekst over bijen: 'Bijen zijn vitaal. Ze bestuiven 90%. We moeten ze beschermen.' Hoofdgedachte?",
+  "options": [
+   "Bijen zijn belangrijk en moeten worden beschermd",
+   "Bijen bestuiven 90% gewassen",
+   "Bijen sterven uit",
+   "Pesticide is slecht"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Detail.",
+   "Niet expliciet in deze samenvatting.",
+   "Niet de hoofdgedachte."
+  ]
+ },
+ {
+  "nr": 28,
+  "bron": "leerpaden",
+  "waar": "delen-po stap 4 vraag 1",
+  "q": "**11 ÷ 3** = ?",
+  "options": [
+   "3 rest 2",
+   "4 rest 1",
+   "3 rest 1",
+   "Onmogelijk"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is te veel — hoeveel maal 3 past nét niet meer in 11?",
+   "Reken na: hoeveel is 3 groepjes van 3, en hoeveel scheelt dat met 11?",
+   "Wel mogelijk."
+  ]
+ },
+ {
+  "nr": 29,
+  "bron": "leerpaden",
+  "waar": "delen-po stap 4 vraag 8",
+  "q": "Wat is de **rest** bij **29 ÷ 6**?",
+  "options": [
+   "5",
+   "4",
+   "3",
+   "1"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is hoe vaak 6 in 29 past. Maar wat blijft er over?",
+   null,
+   null
+  ]
+ },
+ {
+  "nr": 30,
+  "bron": "leerpaden",
+  "waar": "dichten-poezie-rijmen-po stap 2 vraag 5",
+  "q": "Wat is **binnenrijm**?",
+  "options": [
+   "Rijm midden in een regel",
+   "Rijm aan het eind van twee regels",
+   "Woorden die met dezelfde letter beginnen",
+   "Een vast patroon van klemtonen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Waar staan de woorden die rijmen: aan het eind of ergens anders?",
+   null,
+   "Klemtonen horen bij ritme. Gaat het hier over ritme?"
+  ]
+ },
+ {
+  "nr": 31,
+  "bron": "leerpaden",
+  "waar": "dienstregeling-roosters-po stap 2 vraag 5",
+  "q": "Gym staat op maandag het 3e uur en op woensdag het 1e uur. Hoe vaak heb je deze week (ma–wo) gym?",
+  "options": [
+   "2 keer",
+   "3 keer",
+   "1 keer",
+   "4 keer"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tel alleen de dagen waar gym écht staat.",
+   "Er zijn meer dan dat genoemd.",
+   "Tel nog eens op hoeveel dagen gym genoemd wordt."
+  ]
+ },
+ {
+  "nr": 32,
+  "bron": "leerpaden",
+  "waar": "dierenklassen-po stap 3 vraag 4",
+  "q": "**Vissen** zijn ... ?",
+  "options": [
+   "Koudbloedig",
+   "Warmbloedig",
+   "Zoogdieren",
+   "Amfibieën"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — alleen zoogdieren+vogels.",
+   "Vissen geven geen melk en hebben geen vacht.",
+   "Amfibieën leven als volwassene vooral op land."
+  ]
+ },
+ {
+  "nr": 33,
+  "bron": "leerpaden",
+  "waar": "differentialen-havo-vwo stap 4 vraag 3",
+  "q": "**f(x) = x³** op x = 0. f'(0) = 0. Is dit top/dal/anders?",
+  "options": [
+   "Buigpunt — niet top/dal",
+   "Top",
+   "Dal",
+   "Niet bepaald"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — geen omkering.",
+   "Niet — geen omkering.",
+   "Wel bepaald via 1e-afgeleidetoets."
+  ]
+ },
+ {
+  "nr": 34,
+  "bron": "leerpaden",
+  "waar": "digitale-geletterdheid-po stap 4 vraag 17",
+  "q": "Wat is een **browser**?",
+  "options": [
+   "Programma om websites te openen",
+   "Een toetsenbord om te typen",
+   "Een camera boven je scherm",
+   "Een zoekwoord dat je intypt"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een toetsenbord kun je vastpakken. Een browser niet.",
+   "Een camera kun je vastpakken. Een browser niet.",
+   "Een zoekwoord typ je ín een programma."
+  ]
+ },
+ {
+  "nr": 35,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 2",
+  "q": "Wat is **1/3 + 1/4**?",
+  "options": [
+   "7/12",
+   "2/7",
+   "1/12",
+   "2/12"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Mag je echt tellers EN noemers gewoon optellen?",
+   "Eerst gelijknamig maken. KGN van 3 en 4?",
+   "Vereenvoudig pas aan einde — nu eerst KGN zoeken."
+  ]
+ },
+ {
+  "nr": 36,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 9",
+  "q": "Schrijf **0,8 als breuk** in eenvoudigste vorm.",
+  "options": [
+   "4/5",
+   "8/10",
+   "0,8",
+   "5/4"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Klopt qua waarde maar niet vereenvoudigd.",
+   "Dat is decimaal, niet breuk.",
+   "Groter dan 1 — verkeerd."
+  ]
+ },
+ {
+  "nr": 37,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 35",
+  "q": "**1/2 × 1/2** is?",
+  "options": [
+   "1/4",
+   "1",
+   "2/2",
+   "1/2"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Veel te groot.",
+   "Niet vermenigvuldigen, dat is een dubbelvorm van 1.",
+   "Dat is waar je mee begon — je neemt nog de helft van die helft."
+  ]
+ },
+ {
+  "nr": 38,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 7",
+  "q": "**40% van 200** is?",
+  "options": [
+   "80",
+   "60",
+   "100",
+   "240"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig.",
+   "Dat is 50%.",
+   "Niet — wel onder 200."
+  ]
+ },
+ {
+  "nr": 39,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 19",
+  "q": "Welk **windstreek-symbool** staat meestal **bovenaan** op een kaart?",
+  "options": [
+   "N (noord)",
+   "Z (zuid)",
+   "O (oost)",
+   "W (west)"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Onderaan.",
+   "Rechts.",
+   "Links."
+  ]
+ },
+ {
+  "nr": 40,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 31",
+  "q": "Welke **richting** ligt **tegenover west**?",
+  "options": [
+   "Oost",
+   "Zuid",
+   "Noord",
+   "Zuid-west"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "90° draaiing.",
+   "90° draaiing.",
+   "Zuidwest ligt juist vlak naast west."
+  ]
+ },
+ {
+  "nr": 41,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 15",
+  "q": "Schaal **1:500.000**. Op kaart **6 cm**. Werkelijk?",
+  "options": [
+   "30 km",
+   "300 m",
+   "3 km",
+   "30 m"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Veel te weinig.",
+   "Te weinig.",
+   "Veel te weinig."
+  ]
+ },
+ {
+  "nr": 42,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 10",
+  "q": "**Pont-tijden:** de pont vaart elk kwartier: 18:15, 18:30, 18:45 en 19:00 (laatste). Je bent om **18:50** bij de steiger. Welke pont kun je nog halen?",
+  "options": [
+   "Die van 19:00",
+   "Die van 18:45",
+   "Geen enkele meer",
+   "Die van 18:30"
+  ],
+  "answer": 0,
+  "explanation": "Na 18:50 vertrekt er nog precies één pont — de **laatste** van het rijtje.",
+  "wrongHints": [
+   null,
+   "Die is al weg als jij om 18:50 aankomt.",
+   "Er staat ná 18:50 nog een vertrektijd in het rijtje.",
+   "Die is al twintig minuten weg."
+  ]
+ },
+ {
+  "nr": 43,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 20",
+  "q": "Waarom staat er in een dienstregeling vaak **'ma-vr'** boven een kolom?",
+  "options": [
+   "Die tijden gelden alleen op maandag tot en met vrijdag",
+   "De bus rijdt alleen in de maand maart",
+   "Dat is de naam van de buslijn",
+   "Die kolom is alleen voor volwassenen"
+  ],
+  "answer": 0,
+  "explanation": "**ma-vr** = maandag tot en met vrijdag. In het weekend gelden vaak andere tijden — check altijd de juiste kolom.",
+  "wrongHints": [
+   null,
+   "Het zijn afkortingen van dágen, niet van een maand.",
+   "Een buslijn heeft een nummer als naam.",
+   "Dienstregelingen maken geen verschil tussen kinderen en volwassenen."
+  ]
+ },
+ {
+  "nr": 44,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 44",
+  "q": "Wat betekent het spreekwoord *'**Wie het laatst lacht, lacht het best**'*?",
+  "options": [
+   "Wie aan het eind wint, heeft echt gewonnen",
+   "Lachen is goed voor je gezondheid",
+   "De laatste grap is het grappigst",
+   "Je moet altijd blijven lachen en vrolijk zijn"
+  ],
+  "answer": 0,
+  "explanation": "Betekenis: juich niet te vroeg — wie aan het **einde** als winnaar overblijft, heeft pas echt gewonnen.",
+  "wrongHints": [
+   null,
+   "Het spreekwoord gaat niet over gezondheid — wannéér lach je 'het laatst'?",
+   "Het gaat niet om grappen, maar om wie er aan het einde gelijk krijgt.",
+   "Het zegt niet dat je móét lachen — het waarschuwt tegen te vroeg juichen."
+  ]
+ },
+ {
+  "nr": 45,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 15",
+  "q": "Signaalwoord **'omdat'** introduceert?",
+  "options": [
+   "Reden / oorzaak",
+   "Gevolg",
+   "Tegenstelling",
+   "Voorbeeld"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Gevolg = 'daardoor'.",
+   "Tegenstelling = 'maar'.",
+   "Voorbeeld = 'bijvoorbeeld'."
+  ]
+ },
+ {
+  "nr": 46,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 17",
+  "q": "**'Het kind ___ blij'** — welk werkwoord (tegenwoordige tijd)?",
+  "options": [
+   "is",
+   "zijn",
+   "was",
+   "ben"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Meervoud.",
+   "Verleden tijd.",
+   "1e persoon."
+  ]
+ },
+ {
+  "nr": 47,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 18",
+  "q": "*'Gisteren **... we naar opa.'* Welk werkwoord?",
+  "options": [
+   "wandelden",
+   "wandelde",
+   "wandelten",
+   "wandelt"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Enkelvoud — 'we' is meervoud.",
+   "Stam 'wandel' eindigt niet op kofschip-letter → +den, niet +ten.",
+   "Tegenwoordige tijd, hier verleden."
+  ]
+ },
+ {
+  "nr": 48,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 4",
+  "q": "Wat is de **verleden tijd** van *praten* (hij-vorm)?",
+  "options": [
+   "praatte",
+   "praate",
+   "prate",
+   "praatde"
+  ],
+  "answer": 0,
+  "explanation": "Stam 'praat' eindigt op t ('t kofschip) → +te. Samen: praat + te = **praatte**, met dubbel-t.",
+  "wrongHints": [
+   null,
+   "De stam eindigt al op een t én er komt nog een uitgang achter. Hoeveel t's worden dat samen?",
+   "Waar is de lange aa gebleven? Zeg het woord hardop.",
+   "Staat de t van de stam in 't kofschip? Dan geen -de."
+  ]
+ },
+ {
+  "nr": 49,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 20",
+  "q": "Welke zin is **goed gespeld**?",
+  "options": [
+   "Hij heeft beterschap beloofd.",
+   "Hij heeft beterschap belooft.",
+   "Hij heeft beterschap beloovd.",
+   "Hij heeft beterschap beloofde."
+  ],
+  "answer": 0,
+  "explanation": "Voltooid deelwoord van beloven: verleng-truc 'beloof**d**e' → eindigt op een d (de v wordt een f).",
+  "wrongHints": [
+   null,
+   "Verleng het deelwoord: 'de beloo...e beterschap' — hoor je een d of een t?",
+   "Een v kan niet aan het eind van een lettergreep blijven staan — maar welke slotletter komt erna?",
+   "Dat is een verleden tijd — na 'heeft' hoort een voltooid deelwoord zonder e."
+  ]
+ },
+ {
+  "nr": 50,
+  "bron": "leerpaden",
+  "waar": "duits-cse-havo-vwo stap 2 vraag 1",
+  "q": "*Ich gehe in **die** Schule* — welke naamval?",
+  "options": [
+   "Akkusativ (beweging-richting)",
+   "Dativ (plaats)",
+   "Nominativ",
+   "Genitiv"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — bij plaats: *in der Schule*.",
+   "Niet — onderwerp.",
+   "Niet — geen bezit."
+  ]
+ }
+]

@@ -1,0 +1,352 @@
+[
+ {
+  "nr": 1,
+  "waar": "ai-machine-learning-informatica stap 2 vraag 3",
+  "eigenKeuze": "Slechte/eenzijdige data → slechte voorspellingen",
+  "oordeel": "fout",
+  "reden": "Goede optie herkenbaar zonder kennis: enige optie die over data/voorspellingen gaat; afleiders onzinnig (\"Computers maken vuilnis\", \"Je moet je bestanden weggooien\", \"AI werkt altijd perfect\")."
+ },
+ {
+  "nr": 2,
+  "waar": "alfabet-woordenboek-po stap 2 vraag 9",
+  "eigenKeuze": "naar achteren",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 3,
+  "waar": "algoritmen-programmeren-po stap 4 vraag 27",
+  "eigenKeuze": "Tim Berners-Lee",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 4,
+  "waar": "alinea-functies-tussenkopjes-po stap 1 vraag 4",
+  "eigenKeuze": "Katten slapen gemiddeld vijftien uur per dag.",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 5,
+  "waar": "argumentatieleer stap 3 vraag 1",
+  "eigenKeuze": "Nee, het is een voorbeeld dat een argument zou kunnen illustreren.",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 6,
+  "waar": "bedrijfseconomie-havo-vwo stap 4 vraag 2",
+  "eigenKeuze": "€9,99 voelt veel lager dan €10",
+  "oordeel": "fout",
+  "reden": "Goede optie herkenbaar zonder kennis: enige concrete/specifieke optie (met voorbeeld €9,99 vs €10) tegenover kale tweewoord-afleiders waarvan één onzinnig (\"Prijs voor psychologen\"). Bovendien is de uitlegPad-titel \"Linksomafronding\" geen bestaand begrip."
+ },
+ {
+  "nr": 7,
+  "waar": "begrijpend-lezen-strategie stap 1 vraag 7",
+  "eigenKeuze": "Moeilijke woorden en lange zinnen",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 8,
+  "waar": "begrijpend-lezen-strategie stap 1 vraag 8",
+  "eigenKeuze": "Je kunt het leren door slim aan te pakken",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 9,
+  "waar": "begrijpend-lezen-teksten-po stap 1 vraag 1",
+  "eigenKeuze": "1817",
+  "oordeel": "fout",
+  "reden": "uitlegPad.voorbeelden verwijst naar optieletter: \"Antwoord = 1817 (=A)\"; opties worden gehusseld en deze tekst wordt niet gestript."
+ },
+ {
+  "nr": 10,
+  "waar": "begrijpend-lezen-teksten-po stap 1 vraag 3",
+  "eigenKeuze": "Eén keer rond met de pedalen trappen",
+  "oordeel": "fout",
+  "reden": "uitlegPad.niveaus.simpeler eindigt op \"Dat is A.\" (optieletter bij gehusselde opties); de runtime-strip haalt alleen \" A.\" weg, waardoor \"…Dat is\" overblijft. Ook theorie bevat tikfout \"geen ban-deel = geen band\"."
+ },
+ {
+  "nr": 11,
+  "waar": "bekende-boeken-literatuur-po stap 2 vraag 1",
+  "eigenKeuze": "Francine Oomen",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 12,
+  "waar": "bekende-boeken-literatuur-po stap 4 vraag 8",
+  "eigenKeuze": "Tonke Dragt",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 13,
+  "waar": "bekende-wetenschappers-po stap 5 vraag 21",
+  "eigenKeuze": "Karl Drais",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 14,
+  "waar": "belasting-po stap 1 vraag 5",
+  "eigenKeuze": "Je eigen ijsje",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 15,
+  "waar": "betrouwbaarheid-bronnen-po stap 3 vraag 1",
+  "eigenKeuze": "kijken of meerdere betrouwbare bronnen het zeggen",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 16,
+  "waar": "binair-datarepresentatie-informatica stap 2 vraag 1",
+  "eigenKeuze": "10",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 17,
+  "waar": "binair-datarepresentatie-informatica stap 4 vraag 3",
+  "eigenKeuze": "JPG",
+  "oordeel": "fout",
+  "reden": "uitlegPad.niveaus.nogSimpeler = \"A.\" = optieletter van JPG; opties worden gehusseld en de strip-regex pakt een losse \"A.\" (zonder voorafgaande spatie) niet, dus de leerling ziet een mogelijk verkeerde letter."
+ },
+ {
+  "nr": 18,
+  "waar": "breuken-po stap 1 vraag 2",
+  "eigenKeuze": "7/4",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 19,
+  "waar": "chemische-reacties-scheikunde stap 8 vraag 2",
+  "eigenKeuze": "Versnelt de reactie",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 20,
+  "waar": "cito-strategieen-groep8 stap 1 vraag 1",
+  "eigenKeuze": "Een toets in groep 8 die advies geeft voor de middelbare school",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 21,
+  "waar": "cito-strategieen-groep8 stap 4 vraag 8",
+  "eigenKeuze": "Wegstrepen, want die kan niet goed zijn",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 22,
+  "waar": "cito-strategieen-groep8 stap 7 vraag 4",
+  "eigenKeuze": "Schooladvies telt; bij hoger toetsadvies kijkt school opnieuw",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 23,
+  "waar": "cito-strategieen-groep8 stap 7 vraag 24",
+  "eigenKeuze": "Lezen + taalverzorging + rekenen",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 24,
+  "waar": "conditionals-engels stap 4 vraag 2",
+  "eigenKeuze": "had called",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 25,
+  "waar": "continenten-wereld-po stap 6 vraag 6",
+  "eigenKeuze": "IJs en pinguïns",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 26,
+  "waar": "cse-leesvaardigheid-engels stap 5 vraag 4",
+  "eigenKeuze": "Moeilijk examen én korte tijd",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 27,
+  "waar": "cse-leesvaardigheid-nederlands stap 2 vraag 3",
+  "eigenKeuze": "Bijen zijn belangrijk en moeten worden beschermd",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 28,
+  "waar": "delen-po stap 4 vraag 1",
+  "eigenKeuze": "3 rest 2",
+  "oordeel": "twijfel",
+  "reden": "wrongHint bij \"4 rest 1\" (\"hoeveel maal 3 past nét niet meer in 11?\") is verwarrend geformuleerd: het antwoord op die vraag is juist 4. Bedoeld is waarschijnlijk \"past nog nét in 11\". Antwoord zelf klopt."
+ },
+ {
+  "nr": 29,
+  "waar": "delen-po stap 4 vraag 8",
+  "eigenKeuze": "5",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 30,
+  "waar": "dichten-poezie-rijmen-po stap 2 vraag 5",
+  "eigenKeuze": "Rijm midden in een regel",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 31,
+  "waar": "dienstregeling-roosters-po stap 2 vraag 5",
+  "eigenKeuze": "2 keer",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 32,
+  "waar": "dierenklassen-po stap 3 vraag 4",
+  "eigenKeuze": "Koudbloedig",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 33,
+  "waar": "differentialen-havo-vwo stap 4 vraag 3",
+  "eigenKeuze": "Buigpunt — niet top/dal",
+  "oordeel": "fout",
+  "reden": "Goede optie herkenbaar zonder kennis: enige optie met toelichting (\"Buigpunt — niet top/dal\") tegenover kale eenwoord-afleiders (Top/Dal/Niet bepaald)."
+ },
+ {
+  "nr": 34,
+  "waar": "digitale-geletterdheid-po stap 4 vraag 17",
+  "eigenKeuze": "Programma om websites te openen",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 35,
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 2",
+  "eigenKeuze": "7/12",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 36,
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 9",
+  "eigenKeuze": "4/5",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 37,
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 35",
+  "eigenKeuze": "1/4",
+  "oordeel": "twijfel",
+  "reden": "wrongHint bij \"2/2\" (\"Niet vermenigvuldigen, dat is een dubbelvorm van 1\") kan gelezen worden als instructie \"niet vermenigvuldigen\", terwijl vermenigvuldigen juist moet; bedoeld is \"dat is geen vermenigvuldiging\". Antwoord klopt."
+ },
+ {
+  "nr": 38,
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 7",
+  "eigenKeuze": "80",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 39,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 19",
+  "eigenKeuze": "N (noord)",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 40,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 31",
+  "eigenKeuze": "Oost",
+  "oordeel": "fout",
+  "reden": "Spelfout in afleider: \"Zuid-west\" moet \"zuidwest\" (windrichtingen aaneen); de wrongHint schrijft zelf wel \"Zuidwest\"."
+ },
+ {
+  "nr": 41,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 15",
+  "eigenKeuze": "30 km",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 42,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 10",
+  "eigenKeuze": "Die van 19:00",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 43,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 7 vraag 20",
+  "eigenKeuze": "Die tijden gelden alleen op maandag tot en met vrijdag",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 44,
+  "waar": "doorstroomtoets-taal-g8 stap 1 vraag 44",
+  "eigenKeuze": "Wie aan het eind wint, heeft echt gewonnen",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 45,
+  "waar": "doorstroomtoets-taal-g8 stap 2 vraag 15",
+  "eigenKeuze": "Reden / oorzaak",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 46,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 17",
+  "eigenKeuze": "is",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 47,
+  "waar": "doorstroomtoets-taal-g8 stap 3 vraag 18",
+  "eigenKeuze": "wandelden",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 48,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 4",
+  "eigenKeuze": "praatte",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 49,
+  "waar": "doorstroomtoets-taal-g8 stap 5 vraag 20",
+  "eigenKeuze": "Hij heeft beterschap beloofd.",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 50,
+  "waar": "duits-cse-havo-vwo stap 2 vraag 1",
+  "eigenKeuze": "Akkusativ (beweging-richting)",
+  "oordeel": "goed",
+  "reden": ""
+ }
+]

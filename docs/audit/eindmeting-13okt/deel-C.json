@@ -1,0 +1,940 @@
+[
+ {
+  "nr": 101,
+  "bron": "leerpaden",
+  "waar": "korte-teksten-snappen-g4 stap 1 vraag 1",
+  "q": "*De poes slaapt op de bank.*\n\n**Wie** gaat deze zin over?",
+  "options": [
+   "de poes",
+   "de bank",
+   "het slapen",
+   "de kamer"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Daar ligt iemand óp — maar wie?",
+   "Dat is wat er gebeurt, niet wie het doet.",
+   "Die staat niet in de zin."
+  ]
+ },
+ {
+  "nr": 102,
+  "bron": "leerpaden",
+  "waar": "korte-teksten-snappen-g4 stap 3 vraag 7",
+  "q": "*Een uil slaapt overdag. 's Nachts gaat hij op jacht. Hij eet graag muizen. Een uil kan heel goed zien in het donker.*\n\n**Wanneer** gaat de uil op jacht?",
+  "options": [
+   "'s nachts",
+   "overdag",
+   "'s middags",
+   "'s ochtends vroeg"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wat doet de uil overdag?",
+   null,
+   "Staat dat in de tekst?"
+  ]
+ },
+ {
+  "nr": 103,
+  "bron": "leerpaden",
+  "waar": "koude-oorlog-modern-po stap 3 vraag 1",
+  "q": "Wanneer **viel de Berlijnse Muur**?",
+  "options": [
+   "1989",
+   "1961",
+   "2001",
+   "2022"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Toen gebouwd.",
+   "9/11.",
+   "Oekraïne."
+  ]
+ },
+ {
+  "nr": 104,
+  "bron": "leerpaden",
+  "waar": "krachten-natuurkunde stap 9 vraag 2",
+  "q": "Een schaatser duwt de muur weg. Wat gebeurt er?",
+  "options": [
+   "Muur duwt schaatser even hard terug, schaatser glijdt weg",
+   "Niets gebeurt",
+   "Muur valt om",
+   "Schaatser blijft staan"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wel: actie-reactie werkt altijd.",
+   "Muur is veel zwaarder, blijft staan.",
+   "Volgens Newton 3 wordt schaatser teruggeduwd."
+  ]
+ },
+ {
+  "nr": 105,
+  "bron": "leerpaden",
+  "waar": "leestekens-hoofdletters-po stap 3 vraag 7",
+  "q": "Waar hoort de komma? *Ja dat vind ik ook.*",
+  "options": [
+   "Ja, dat vind ik ook.",
+   "Ja dat, vind ik ook.",
+   "Ja dat vind, ik ook.",
+   "Ja dat vind ik, ook."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Lees de zin hardop: waar haal je echt even adem?",
+   null,
+   "Zou je vlak voor het laatste woord pauzeren?"
+  ]
+ },
+ {
+  "nr": 106,
+  "bron": "leerpaden",
+  "waar": "licht-geluid-natuurkunde stap 6 vraag 1",
+  "q": "Hoe verspreidt **geluid** zich?",
+  "options": [
+   "Trillingen door materie",
+   "Stralen door vacuüm",
+   "Met licht",
+   "Met magneten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is licht.",
+   "Geen verband.",
+   "Geen verband."
+  ]
+ },
+ {
+  "nr": 107,
+  "bron": "leerpaden",
+  "waar": "lineaire-formules stap 7 vraag 1",
+  "q": "Bij y = 3x − 2, welk punt ligt op de lijn?",
+  "options": [
+   "(2, 4)",
+   "(2, 6)",
+   "(2, -6)",
+   "(0, 2)"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je bent de −2 vergeten mee te nemen. Vul het gegeven getal voor x in en reken stap voor stap uit.",
+   "Controleer het teken: staat er een plus of een min achter 3x?",
+   "Kijk wat b is in deze formule — heeft het snijpunt met de y-as een positieve of negatieve y-waarde?"
+  ]
+ },
+ {
+  "nr": 108,
+  "bron": "leerpaden",
+  "waar": "lineaire-formules stap 17 vraag 7",
+  "q": "Los op: 3x + 4 = 19",
+  "options": [
+   "x = 5",
+   "x = 7",
+   "x = 4",
+   "x = 15"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Controleer: klopt 3 · 7 + 4 = 19? Werk stap voor stap met de balansmethode.",
+   "Controleer: klopt 3 · 4 + 4 = 19?",
+   "15 is 19 − 4. Staat x daarmee al alleen?"
+  ]
+ },
+ {
+  "nr": 109,
+  "bron": "leerpaden",
+  "waar": "literatuurgeschiedenis stap 10 vraag 1",
+  "q": "*Welke roman is van Harry Mulisch?*",
+  "options": [
+   "De aanslag",
+   "De avonden",
+   "Eline Vere",
+   "Max Havelaar"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De avonden is van Gerard Reve (1947).",
+   "Eline Vere is van Couperus (Naturalisme, 1889).",
+   "Max Havelaar is van Multatuli (Romantiek, 1860)."
+  ]
+ },
+ {
+  "nr": 110,
+  "bron": "leerpaden",
+  "waar": "logaritmen-exponentieel-havo-vwo stap 3 vraag 5",
+  "q": "Vergelijking **2^x = 32**. x = ?",
+  "options": [
+   "5",
+   "16",
+   "10",
+   "30"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — verwarring.",
+   "Niet — verkeerde rekensom.",
+   "Onzin."
+  ]
+ },
+ {
+  "nr": 111,
+  "bron": "leerpaden",
+  "waar": "logaritmen-exponentieel-havo-vwo stap 4 vraag 1",
+  "q": "Bacteriën verdubbelen elke 20 min. Hoeveel keer na **2 uur** (120 min)?",
+  "options": [
+   "64×",
+   "6×",
+   "32×",
+   "12×"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — exponentieel.",
+   "Niet — verdubbeling 5×.",
+   "Niet — controleer."
+  ]
+ },
+ {
+  "nr": 112,
+  "bron": "leerpaden",
+  "waar": "logaritmen-exponentieel-havo-vwo stap 5 vraag 1",
+  "q": "Een spaarrekening: **€500 sparen, 4% rente per jaar**. Na 5 jaar?",
+  "options": [
+   "~€608",
+   "~€500",
+   "~€600",
+   "~€700"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — rente erbij.",
+   "Dat is 5 × 4% gewone rente. Vergeet je de rente op rente niet?",
+   "Te veel."
+  ]
+ },
+ {
+  "nr": 113,
+  "bron": "leerpaden",
+  "waar": "maten-eenheden stap 4 vraag 5",
+  "q": "**4 cL** is hoeveel **mL**?",
+  "options": [
+   "40",
+   "400",
+   "4",
+   "0,4"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te veel — 1 cL is 10 mL, niet 100 mL.",
+   null,
+   "Andersom — mL is kleiner dan cL, dus je krijgt een groter getal."
+  ]
+ },
+ {
+  "nr": 114,
+  "bron": "leerpaden",
+  "waar": "media-wijsheid-maatschappijleer stap 5 vraag 2",
+  "q": "**Kindertelefoon**-nummer?",
+  "options": [
+   "0800-0432",
+   "112",
+   "0900-9292",
+   "Onbekend"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Spoed.",
+   "Niet relevant.",
+   "Wel bekend."
+  ]
+ },
+ {
+  "nr": 115,
+  "bron": "leerpaden",
+  "waar": "meetkunde-bouwsels stap 5 vraag 7",
+  "q": "Een doos is **25 cm × 12 cm × 10 cm**. Een speelgoedset heeft minstens **4000 cm³** ruimte nodig. Past de set in de doos?",
+  "options": [
+   "Nee, de doos is 1000 cm³ te klein",
+   "Ja, er blijft 1000 cm³ over",
+   "Ja, de doos is precies groot genoeg",
+   "Nee, de doos is 2000 cm³ te klein"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Reken eerst het volume van de doos uit. Is dat meer of minder dan 4000?",
+   null,
+   "Reken het volume van de doos nog eens na."
+  ]
+ },
+ {
+  "nr": 116,
+  "bron": "leerpaden",
+  "waar": "mensenrechten-maatschappijleer stap 6 vraag 6",
+  "q": "Welke NGO begon met **'schrijfacties' voor politieke gevangenen**?",
+  "options": [
+   "Amnesty International",
+   "Greenpeace",
+   "Rode Kruis",
+   "WWF"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Milieu.",
+   "Medisch + ramp.",
+   "Natuur."
+  ]
+ },
+ {
+  "nr": 117,
+  "bron": "leerpaden",
+  "waar": "mol-stoichiometrie-havo-vwo stap 3 vraag 2",
+  "q": "Hoeveel **g CaCO₃** nodig om door zoutzuur **44 g CO₂** te maken? (CaCO₃ + 2 HCl → CaCl₂ + CO₂ + H₂O, M_CaCO₃=100, M_CO₂=44)",
+  "options": [
+   "100 g",
+   "200 g",
+   "44 g",
+   "50 g"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — controleer de molverhouding CaCO₃ : CO₂.",
+   "Niet — dat is massa CO₂.",
+   "Te weinig."
+  ]
+ },
+ {
+  "nr": 118,
+  "bron": "leerpaden",
+  "waar": "mol-stoichiometrie-havo-vwo stap 5 vraag 1",
+  "q": "Hoeveel **mol H₂** bij verbranding van **8 g** methaan (M=16)?",
+  "options": [
+   "0 mol",
+   "0,5 mol",
+   "1 mol",
+   "0,25 mol"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — welke producten ontstaan er bij verbranding?",
+   "Niet — schrijf eerst de reactievergelijking op.",
+   "Niet — kijk goed welke stoffen rechts van de pijl staan."
+  ]
+ },
+ {
+  "nr": 119,
+  "bron": "leerpaden",
+  "waar": "nederlandse-staat-maatschappijleer stap 11 vraag 13",
+  "q": "**Open vraag**: hoeveel jaar zit een Tweede Kamer-periode normaal? (typ getal)",
+  "explanation": "Standaard zittingstermijn Tweede Kamer = 4 jaar."
+ },
+ {
+  "nr": 120,
+  "bron": "leerpaden",
+  "waar": "negatieve-getallen stap 10 vraag 14",
+  "q": "Reken: 10 − 4 × 3",
+  "options": [
+   "−2",
+   "18",
+   "6",
+   "30"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Eerst −, dan × — verkeerde volgorde.",
+   "Je bent de × 3 vergeten.",
+   "Geen haakjes — × eerst."
+  ]
+ },
+ {
+  "nr": 121,
+  "bron": "leerpaden",
+  "waar": "negatieve-getallen-po stap 1 vraag 1",
+  "q": "Welk getal is **groter**: −3 of −7?",
+  "options": [
+   "−3",
+   "−7",
+   "Hetzelfde",
+   "Niet vergelijkbaar"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Andersom — −7 is verder van nul aan de min-kant.",
+   "Ze zijn niet hetzelfde.",
+   "Wel vergelijkbaar — denk aan thermometer."
+  ]
+ },
+ {
+  "nr": 122,
+  "bron": "leerpaden",
+  "waar": "nieuwsbericht-lezen-po stap 4 vraag 3",
+  "q": "Wanneer werd Berry teruggevonden?",
+  "options": [
+   "Woensdagmiddag",
+   "Maandagochtend",
+   "In het weekend",
+   "Op donderdag 12 maart"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Op dat moment werd juist ontdekt dat Berry wég was. Zoek de zin waarin hij wordt teruggevonden.",
+   null,
+   "Kijk goed: die datum staat hélemaal bovenaan. Wat betekent een datum op die plek ook alweer?"
+  ]
+ },
+ {
+  "nr": 123,
+  "bron": "leerpaden",
+  "waar": "olympische-spelen-po stap 2 vraag 2",
+  "q": "Welke medaille bij **1e plaats**?",
+  "options": [
+   "Goud",
+   "Zilver",
+   "Brons",
+   "Diploma"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "2e.",
+   "3e.",
+   "4e-8e."
+  ]
+ },
+ {
+  "nr": 124,
+  "bron": "leerpaden",
+  "waar": "olympische-spelen-po stap 4 vraag 12",
+  "q": "Hoeveel jaar tussen **Zomerspelen**?",
+  "options": [
+   "4 jaar",
+   "1 jaar",
+   "2 jaar",
+   "10 jaar"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te vaak.",
+   "Te vaak.",
+   "Te zelden."
+  ]
+ },
+ {
+  "nr": 125,
+  "bron": "leerpaden",
+  "waar": "ontdekkingsreizen-po stap 2 vraag 2",
+  "q": "Wie ging **rond Afrika naar India**?",
+  "options": [
+   "Vasco da Gama",
+   "Columbus",
+   "Magellan",
+   "Cook"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Westwaarts.",
+   "Rond aarde.",
+   "Australië."
+  ]
+ },
+ {
+  "nr": 126,
+  "bron": "leerpaden",
+  "waar": "ontdekkingsreizen-po stap 4 vraag 25",
+  "q": "Welke producten bracht de **VOC** mee terug?",
+  "options": [
+   "Specerijen + thee + porselein",
+   "Aardappels + tomaten + maïs",
+   "Bont + hout uit Noord-Amerika",
+   "Kaas + haring + wol uit Holland"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Die kwamen uit Amerika.",
+   "Noord-Amerika was niet het werkgebied van de VOC. Waar voer de VOC heen?",
+   "Dat kwam juist uit Nederland zelf. Wat haalde de VOC uit het Oosten?"
+  ]
+ },
+ {
+  "nr": 127,
+  "bron": "leerpaden",
+  "waar": "optica-havo-vwo stap 5 vraag 1",
+  "q": "Bij **invalshoek 45°** op water (n=1,33), brekingshoek?",
+  "options": [
+   "~32°",
+   "~45°",
+   "~60°",
+   "Totaal reflecteren"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — wel breking, geen 45.",
+   "Niet — te groot.",
+   "Niet — bij intreden water (dichter)."
+  ]
+ },
+ {
+  "nr": 128,
+  "bron": "leerpaden",
+  "waar": "pincode-buitenland-eu stap 2 vraag 6",
+  "q": "Voor- en nadeel protectionisme:",
+  "options": [
+   "VOORDEEL: eigen banen beschermd. NADEEL: duurder voor consument",
+   "Alleen voordelen, geen nadelen",
+   "Alleen nadelen, geen voordelen",
+   "Geen effect op banen of prijzen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Beide kanten zijn er.",
+   "Beide kanten zijn er.",
+   "Wel groot effect."
+  ]
+ },
+ {
+  "nr": 129,
+  "bron": "leerpaden",
+  "waar": "pincode-buitenland-eu stap 6 vraag 6",
+  "q": "Internationaal **toezicht** op multinationals via:",
+  "options": [
+   "EU + OESO + ESG-criteria",
+   "Niemand",
+   "Alleen vakbonden",
+   "Alleen consumenten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wel toezicht.",
+   "Vakbonden zijn 1 partij.",
+   "Consumenten zijn 1 partij."
+  ]
+ },
+ {
+  "nr": 130,
+  "bron": "leerpaden",
+  "waar": "pincode-buitenland-eu stap 7 vraag 6",
+  "q": "Waarom is de ECB **onafhankelijk** van politici?",
+  "options": [
+   "Politici willen rente vaak verlagen voor verkiezingen, ten koste van inflatie",
+   "Omdat de ECB dat zelf zo wil",
+   "Dat is gewoon toeval",
+   "Omdat politici te veel weten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wel een reden.",
+   "Geen toeval.",
+   "Onzin."
+  ]
+ },
+ {
+  "nr": 131,
+  "bron": "leerpaden",
+  "waar": "pincode-geld-sparen-lenen stap 4 vraag 7",
+  "q": "**Crypto** als belegging:",
+  "options": [
+   "Heel hoog risico, zonder garantie",
+   "Veilig en gegarandeerd",
+   "Levert vast 10% per jaar",
+   "Wettelijk verzekerd"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tegendeel — heel volatiel.",
+   "Geen garantie.",
+   "Geen verzekering."
+  ]
+ },
+ {
+  "nr": 132,
+  "bron": "leerpaden",
+  "waar": "pincode-geld-sparen-lenen stap 9 vraag 2",
+  "q": "Wat is **onderpand** bij een hypotheek?",
+  "options": [
+   "Het huis zelf",
+   "Een spaarrekening",
+   "Een verzekering",
+   "Een toeslag"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Spaarrekening is iets anders.",
+   "Verzekering kan helpen, maar onderpand = het huis zelf.",
+   "Toeslagen hebben hier niets mee te maken."
+  ]
+ },
+ {
+  "nr": 133,
+  "bron": "leerpaden",
+  "waar": "pincode-ondernemen stap 3 vraag 1",
+  "q": "Wat is een **doelgroep**?",
+  "options": [
+   "De mensen voor wie jouw product bedoeld is",
+   "Het personeel",
+   "Concurrenten",
+   "Leveranciers"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Personeel = jouw mensen, geen klanten.",
+   "Concurrenten zijn andere bedrijven.",
+   "Leveranciers leveren AAN jou."
+  ]
+ },
+ {
+  "nr": 134,
+  "bron": "leerpaden",
+  "waar": "pincode-ondernemen stap 6 vraag 6",
+  "q": "Bij welke marktvorm is **vergelijken** het meest waardevol?",
+  "options": [
+   "Oligopolie",
+   "Volkomen concurrentie",
+   "Monopolie",
+   "Overal gelijk"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij volkomen alles gelijke prijs.",
+   "Geen alternatief.",
+   "Wel verschil."
+  ]
+ },
+ {
+  "nr": 135,
+  "bron": "leerpaden",
+  "waar": "pincode-ondernemen stap 7 vraag 4",
+  "q": "Sam wil zelfstandig starten met **lage start-kosten**. Welke rechtsvorm is meest geschikt?",
+  "options": [
+   "Eenmanszaak",
+   "BV",
+   "VOF",
+   "Stichting"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "BV heeft notariskosten van €500-€1.500.",
+   "VOF heeft 2 personen nodig — hij wil alleen.",
+   "Stichting is voor non-profit, niet ondernemen."
+  ]
+ },
+ {
+  "nr": 136,
+  "bron": "leerpaden",
+  "waar": "pincode-ontwikkelingslanden stap 5 vraag 3",
+  "q": "**Microkrediet** werkt vooral voor:",
+  "options": [
+   "Beginnende kleine ondernemers in arme landen",
+   "Internationale grote bedrijven",
+   "NL-studenten",
+   "Hele dorpen tegelijk"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Grote bedrijven hebben gewone leningen.",
+   "DUO doet dat in NL.",
+   "Per persoon."
+  ]
+ },
+ {
+  "nr": 137,
+  "bron": "leerpaden",
+  "waar": "pincode-overheid stap 1 vraag 6",
+  "q": "Een **extern effect** is bv:",
+  "options": [
+   "Een fabriek vervuilt een rivier en omwonenden lijden eronder",
+   "Een belastingverlaging voor bedrijven",
+   "Hogere lonen voor werknemers van de fabriek",
+   "Spaargeld van de fabriekseigenaar"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Beleidsmaatregel, geen extern effect.",
+   "Werknemers doen zelf mee — dat is geen effect op buitenstaanders.",
+   "Spaargeld is privé."
+  ]
+ },
+ {
+  "nr": 138,
+  "bron": "leerpaden",
+  "waar": "plattegrond-legenda-po stap 2 vraag 8",
+  "q": "Legenda van een fietskaart:\nblauwe lijn = wandelroute\nrode lijn = fietsroute\nstippellijn = onverhard pad\n\nJe wilt een fietstocht maken. Welke lijn volg je?",
+  "options": [
+   "de rode lijn",
+   "de blauwe lijn",
+   "de stippellijn",
+   "de dikste lijn"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Waar is de blauwe lijn volgens de legenda voor bedoeld?",
+   null,
+   "Staat er in de legenda iets over dikke lijnen?"
+  ]
+ },
+ {
+  "nr": 139,
+  "bron": "leerpaden",
+  "waar": "politiek-democratie-po stap 1 vraag 1",
+  "q": "Wat is **democratie**?",
+  "options": [
+   "Volk beslist",
+   "Eén leider beslist",
+   "Rechters beslissen",
+   "Koning beslist"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dictatuur.",
+   "Rechters spreken recht — maar wie heeft in een democratie de macht?",
+   "Niet meer."
+  ]
+ },
+ {
+  "nr": 140,
+  "bron": "leerpaden",
+  "waar": "politiek-democratie-po stap 4 vraag 2",
+  "q": "Wie benoemt de **burgemeester**?",
+  "options": [
+   "De Koning",
+   "De inwoners",
+   "De wethouders",
+   "De Tweede Kamer"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "In NL niet.",
+   "Wethouders werken juist sámen met de burgemeester — wie benoemt hem of haar?",
+   "De Tweede Kamer benoemt geen burgemeesters."
+  ]
+ },
+ {
+  "nr": 141,
+  "bron": "leerpaden",
+  "waar": "procenten-po stap 6 vraag 2",
+  "q": "**Op 30 voetbalwedstrijden won Tom er 18.** Welk **percentage gewonnen**?",
+  "options": [
+   "60%",
+   "30%",
+   "40%",
+   "18%"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet het aantal wedstrijden — dat is totaal.",
+   "Te weinig — 18 is meer dan de helft van 30.",
+   "Niet het aantal gewonnen — eerst delen door totaal × 100."
+  ]
+ },
+ {
+  "nr": 142,
+  "bron": "leerpaden",
+  "waar": "programmeren-basis-informatica stap 2 vraag 4",
+  "q": "Wat betekent **`elif`**?",
+  "options": [
+   "Anders, als deze andere voorwaarde geldt",
+   "Altijd uitvoeren",
+   "Het einde van het programma",
+   "Een variabele maken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Altijd' hoort niet bij een voorwaarde.",
+   "elif stopt niets — het is een extra keuze.",
+   "Een variabele maak je met `=`."
+  ]
+ },
+ {
+  "nr": 143,
+  "bron": "leerpaden",
+  "waar": "pubertijd-groei-po stap 4 vraag 5",
+  "q": "Welk nummer **Kindertelefoon**?",
+  "options": [
+   "0800-0432",
+   "112",
+   "0900",
+   "06"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Spoed.",
+   "Niet.",
+   "Niet."
+  ]
+ },
+ {
+  "nr": 144,
+  "bron": "leerpaden",
+  "waar": "pythagoras stap 7 vraag 1",
+  "q": "Wanneer kun je Pythagoras gebruiken?",
+  "options": [
+   "Bij een rechthoekige driehoek met 2 zijden bekend",
+   "Bij elke driehoek",
+   "Alleen bij gelijkbenige driehoeken",
+   "Bij vierhoeken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij driehoeken zonder rechte hoek werkt Pythagoras niet. Daar gebruik je andere methodes.",
+   "Gelijkbenig betekent twee zijden gelijk — dat zegt niets over of er een rechte hoek is.",
+   "Pythagoras is voor driehoeken (3 zijden), niet vierhoeken."
+  ]
+ },
+ {
+  "nr": 145,
+  "bron": "leerpaden",
+  "waar": "pythagoras stap 9 vraag 1",
+  "q": "Een driehoek heeft a = 8 en b = 15. Wat is c²?",
+  "options": [
+   "289",
+   "23",
+   "120",
+   "529"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet eerst optellen — kwadrateer eerst beide getallen, tel dan pas op.",
+   "Niet vermenigvuldigen. De stelling gebruikt + tussen kwadraten, geen ×.",
+   "Bijna goed pad — maar je hebt de SOM gekwadrateerd, niet de termen apart. Welke volgorde klopt?"
+  ]
+ },
+ {
+  "nr": 146,
+  "bron": "leerpaden",
+  "waar": "redactiesommen-pad stap 4 vraag 3",
+  "q": "*'30 leerlingen verdelen € 90 eerlijk. Iedereen krijgt 1 ijsje van € 1,50. Hoeveel **over per kind**?'*",
+  "options": [
+   "€ 1,50",
+   "€ 3",
+   "€ 0",
+   "€ 4,50"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te veel — dat is wat ieder krijgt. Het ijsje moet er nog af.",
+   "Niet 0 — er blijft wat over per kind.",
+   "Je telde op — het ijsje kost geld, dus trek je af."
+  ]
+ },
+ {
+  "nr": 147,
+  "bron": "leerpaden",
+  "waar": "rekenen-tot-100-nieuwkomers stap 1 vraag 2",
+  "q": "Tel met **tien** verder. Wat komt na **40**?",
+  "options": [
+   "60",
+   "41",
+   "50",
+   "40"
+  ],
+  "answer": 2,
+  "wrongHints": [
+   "Nee, 60 is tien te veel. Kijk goed naar de tientallen. Tien erbij: 40 + 10.",
+   "Nee, 41 is er één bij. Je moet er tien bij doen. Tien erbij: 40 + 10.",
+   null,
+   "Nee, 40 staat al in de vraag. Wat komt erna? Tien erbij: 40 + 10."
+  ]
+ },
+ {
+  "nr": 148,
+  "bron": "leerpaden",
+  "waar": "rekenen-tot-20-nieuwkomers stap 5 vraag 4",
+  "q": "Er staan **15 stoelen**. **8 stoelen** zijn bezet. Hoeveel stoelen zijn leeg?",
+  "options": [
+   "7",
+   "23",
+   "6",
+   "8"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Nee, 23 is 15 + 8. Maar hier gaat er iets af (−). Lees de som nog een keer. Is het erbij of eraf?",
+   "Nee, 6 is één te weinig. Tel nog eens precies. Lees de som nog een keer. Is het erbij of eraf?",
+   "Nee, 8 staat al in de vraag. Je moet nog rekenen. Lees de som nog een keer. Is het erbij of eraf?"
+  ]
+ },
+ {
+  "nr": 149,
+  "bron": "leerpaden",
+  "waar": "rekenverhaaltjes-nieuwkomers stap 2 vraag 4",
+  "q": "In de bus zitten 40 mensen. Bij de halte stappen er 10 uit. Hoeveel mensen zitten er nog in de bus?",
+  "options": [
+   "30",
+   "50",
+   "10",
+   "31"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Nee, 50 is 40 + 10. Maar hier gaat er iets af (−). Gaat er iets weg? Wat heb je dan nog?",
+   "Nee, 10 staat al in de vraag. Je moet nog rekenen. Gaat er iets weg? Wat heb je dan nog?",
+   "Nee, 31 is één te veel. Tel nog eens precies. Gaat er iets weg? Wat heb je dan nog?"
+  ]
+ },
+ {
+  "nr": 150,
+  "bron": "leerpaden",
+  "waar": "rijmen-letters-kleuters-po stap 1 vraag 4",
+  "q": "Wat rijmt op **maan** 🌙?",
+  "options": [
+   "banaan 🍌",
+   "ster ⭐",
+   "zon ☀️",
+   "boek 📖"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Die staat ook in de lucht — maar luister: klinkt het einde als *aan*?",
+   "Zeg ze hardop: maan... zon... Hoor je hetzelfde einde?",
+   "Luister goed — welk woord eindigt op *aan*?"
+  ]
+ }
+]

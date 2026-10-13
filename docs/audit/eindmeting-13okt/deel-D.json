@@ -1,0 +1,946 @@
+[
+ {
+  "nr": 151,
+  "bron": "leerpaden",
+  "waar": "romeinen-geschiedenis stap 2 vraag 2",
+  "q": "Wie waren de **2 consuls** in de Republiek?",
+  "options": [
+   "Hoogste leiders",
+   "Lijfwachten",
+   "Slaven",
+   "Boeren"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Lijfwachten bewaakten iemand — maar wat deden de consuls?",
+   "Slaven hadden in Rome geen enkele macht.",
+   "Boeren bewerkten het land — wat deden de consuls?"
+  ]
+ },
+ {
+  "nr": 152,
+  "bron": "leerpaden",
+  "waar": "ruimtemeetkunde stap 10 vraag 1",
+  "q": "Een balk is 8 cm lang, 5 cm breed en 2 cm hoog. Wat is de inhoud?",
+  "options": [
+   "80 cm³",
+   "15 cm³",
+   "40 cm³",
+   "80 cm²"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je hebt 8 + 5 + 2 gedaan. Bij inhoud moet je vermenigvuldigen, niet optellen.",
+   "Je hebt alleen lengte × breedte gedaan (oppervlakte van één vlak). Welke afmeting mist er nog?",
+   "Kijk naar de eenheid: past cm² (2D) bij inhoud?"
+  ]
+ },
+ {
+  "nr": 153,
+  "bron": "leerpaden",
+  "waar": "schatten-afronden stap 5 vraag 27",
+  "q": "Verschil tussen 'schatten' en 'afronden'?",
+  "options": [
+   "Schatten = ruw idee; afronden = vaste regel per cijfer",
+   "Ze betekenen precies hetzelfde",
+   "Schatten is altijd preciezer dan afronden",
+   "Afronden doe je alleen met geld"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wel verschil.",
+   "Schatten is juist een ruwe inschatting.",
+   "Afronden kan met elk getal."
+  ]
+ },
+ {
+  "nr": 154,
+  "bron": "leerpaden",
+  "waar": "schemas-stappenplannen-po stap 3 vraag 8",
+  "q": "Wat is het **verschil** tussen een beslisboom en een stappenplan?",
+  "options": [
+   "Bij een beslisboom volg je alleen jouw eigen pad",
+   "Bij een beslisboom doe je altijd alle stappen",
+   "Een stappenplan heeft altijd ja/nee-vragen",
+   "Een stappenplan heeft nooit een volgorde"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Volg je in een beslisboom zowel de ja-pijl als de nee-pijl?",
+   null,
+   "Waar draait een stappenplan juist om?"
+  ]
+ },
+ {
+  "nr": 155,
+  "bron": "leerpaden",
+  "waar": "schemas-stappenplannen-po stap 4 vraag 1",
+  "q": "Voedselketen: gras → konijn → vos.\n\n**Wat eet vos**?",
+  "options": [
+   "konijn",
+   "gras",
+   "vlinder",
+   "vos"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk welk dier direct vóór de vos in de keten staat.",
+   "Niet in dit schema.",
+   "Vos eet zichzelf niet."
+  ]
+ },
+ {
+  "nr": 156,
+  "bron": "leerpaden",
+  "waar": "sociale-zekerheid-nl stap 5 vraag 1",
+  "q": "Welke wet was **eerste sociale verzekering** (1901)?",
+  "options": [
+   "Ongevallenwet",
+   "AOW",
+   "Kinderbijslag",
+   "WAO"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "1957.",
+   "Veel later (1962).",
+   "1967."
+  ]
+ },
+ {
+  "nr": 157,
+  "bron": "leerpaden",
+  "waar": "soorten-teksten-po stap 4 vraag 7",
+  "q": "Welke vraag helpt je om het soort tekst te bepalen?",
+  "options": [
+   "Waarom is deze tekst geschreven?",
+   "Hoe lang is de tekst?",
+   "Wie heeft de tekst geschreven?",
+   "Wanneer is de tekst geschreven?"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De lengte zegt niets over het soort tekst.",
+   "De schrijver bepaalt niet automatisch het soort tekst.",
+   "De datum zegt niets over het doel."
+  ]
+ },
+ {
+  "nr": 158,
+  "bron": "leerpaden",
+  "waar": "spelling-eerste-woorden-g3 stap 2 vraag 8",
+  "q": "Hoe schrijf je het woord voor dit fruit: 🍐?",
+  "options": [
+   "peer",
+   "per",
+   "pier",
+   "puur"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Luister: is de e kort of lang?",
+   "Dat is de ie-klank — luister nog eens.",
+   null
+  ]
+ },
+ {
+  "nr": 159,
+  "bron": "leerpaden",
+  "waar": "spelling-eerste-woorden-g3 stap 3 vraag 10",
+  "q": "Zeg langzaam: **p - oe - s**. Hoeveel **klanken** hoor je?",
+  "options": [
+   "3",
+   "4",
+   "2",
+   "5"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tel je nu de letters? Tel de klanken: p... oe... s...",
+   null,
+   null
+  ]
+ },
+ {
+  "nr": 160,
+  "bron": "leerpaden",
+  "waar": "spreekwoorden-uitdrukkingen-po stap 1 vraag 3",
+  "q": "Wat is een **vergelijking**?",
+  "options": [
+   "Een zin als 'zo sterk als een beer'",
+   "Een zin als 'hij is een beer'",
+   "Een zin als 'wie wat bewaart, heeft wat'",
+   "Een zin als 'ik eet een appel'"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is een metafoor — er staat geen 'als'.",
+   "Dat is een spreekwoord met een les.",
+   "Dat is letterlijk taalgebruik."
+  ]
+ },
+ {
+  "nr": 161,
+  "bron": "leerpaden",
+  "waar": "staatsinrichting-1848 stap 1 vraag 3",
+  "q": "Welk **Europees jaar** was de directe aanleiding voor de Nederlandse grondwetsherziening?",
+  "options": [
+   "1848 — revolutiejaar",
+   "1789 — Franse Revolutie",
+   "1914 — WO1 begint",
+   "1830 — Belgische Opstand"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Eerder — wel inspiratie maar 60 jaar te vroeg.",
+   "Te laat — grondwet was al 66 jaar oud.",
+   "Dichtbij maar 18 jaar te vroeg."
+  ]
+ },
+ {
+  "nr": 162,
+  "bron": "leerpaden",
+  "waar": "stedelijke-ontwikkeling-havo-vwo stap 2 vraag 1",
+  "q": "**CBD** staat voor:",
+  "options": [
+   "Central Business District",
+   "Centraal Bestuur Departement",
+   "Centrale Bouw Dienst",
+   "City Bus Depot"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het is een Engelse term uit de stadsgeografie — over welk deel van de stad gaat het?",
+   "Denk aan het zakelijke hart van de stad, niet aan een overheidsdienst.",
+   "Het gaat om een deel van de stad met kantoren en winkels, niet om vervoer."
+  ]
+ },
+ {
+  "nr": 163,
+  "bron": "leerpaden",
+  "waar": "stelsels stap 14 vraag 6",
+  "q": "Grafisch: snijpunt twee lijnen = ?",
+  "options": [
+   "Oplossing van stelsel",
+   "Niets",
+   "Y-as",
+   "X-as"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wel iets.",
+   "Niet relevant.",
+   "Niet relevant."
+  ]
+ },
+ {
+  "nr": 164,
+  "bron": "leerpaden",
+  "waar": "synoniemen-tegenstellingen-po stap 1 vraag 5",
+  "q": "Welk woord betekent bijna hetzelfde als **'schitterend'**?",
+  "options": [
+   "Prachtig",
+   "Lelijk",
+   "Saai",
+   "Klein"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is juist het omgekeerde.",
+   null,
+   null
+  ]
+ },
+ {
+  "nr": 165,
+  "bron": "leerpaden",
+  "waar": "synoniemen-tegenstellingen-po stap 5 vraag 2",
+  "q": "Tegenstelling van **'binnen'**?",
+  "options": [
+   "Buiten",
+   "Naast",
+   "Over",
+   "Tussen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet het tegenovergestelde — naast is een plek-aanduiding.",
+   "Iets anders.",
+   "Iets anders."
+  ]
+ },
+ {
+  "nr": 166,
+  "bron": "leerpaden",
+  "waar": "taal-leren-lezen-g3 stap 3 vraag 4",
+  "q": "Hoeveel klanken hoor je in **vis**?",
+  "options": [
+   "3",
+   "2",
+   "4",
+   "1"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Hak maar: v... i... s. Tel nog eens.",
+   "Hak maar: v... i... s. Tel nog eens.",
+   "Een woord heeft bijna altijd meer klanken."
+  ]
+ },
+ {
+  "nr": 167,
+  "bron": "leerpaden",
+  "waar": "tabellen-grafieken stap 7 vraag 22",
+  "q": "Een **histogram** lijkt op?",
+  "options": [
+   "Staafdiagram",
+   "Lijn",
+   "Taart",
+   "Tijdslijn"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een lijn = lijngrafiek (verloop tijd), iets anders.",
+   "Taart = cirkeldiagram (verdeling), iets anders.",
+   "Tijdslijn = historische volgorde, iets anders."
+  ]
+ },
+ {
+  "nr": 168,
+  "bron": "leerpaden",
+  "waar": "tachtigjarige-oorlog-geschiedenis stap 6 vraag 2",
+  "q": "Wat is het **Plakkaat van Verlatinghe** (1581)?",
+  "options": [
+   "Onafhankelijkheidsverklaring tegen Filips II",
+   "Een belastingwet",
+   "Een vredesakkoord",
+   "Een godsdienstwet"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Geen belasting — een politieke verklaring.",
+   "Geen vredesakkoord — juist tegenovergesteld.",
+   "Niet specifiek over godsdienst."
+  ]
+ },
+ {
+  "nr": 169,
+  "bron": "leerpaden",
+  "waar": "tachtigjarige-oorlog-geschiedenis stap 11 vraag 1",
+  "q": "In welk jaar begon de Tachtigjarige Oorlog?",
+  "options": [
+   "1568",
+   "1572",
+   "1581",
+   "1609"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Den Briel veroverd — al midden in de oorlog.",
+   "Plakkaat van Verlatinghe — juist al 13 jaar na het begin.",
+   "Twaalfjarig Bestand — pauze, geen begin."
+  ]
+ },
+ {
+  "nr": 170,
+  "bron": "leerpaden",
+  "waar": "tafels-po stap 6 vraag 11",
+  "q": "6 × 7 = ?",
+  "options": [
+   "42",
+   "13",
+   "36",
+   "49"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Som.",
+   "Niet.",
+   "Niet."
+  ]
+ },
+ {
+  "nr": 171,
+  "bron": "leerpaden",
+  "waar": "tekstanalyse stap 6 vraag 1",
+  "q": "*De laatste alinea van een tekst begint met \"Concluderend laat zich vaststellen dat...\". Tot welk deel hoort deze alinea?*",
+  "options": [
+   "Slot",
+   "Inleiding",
+   "Middenstuk",
+   "Aanleiding"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De inleiding kondigt aan, vat niet samen. \"Concluderend\" is juist een afsluitend signaal.",
+   "Het middenstuk werkt argumenten/onderwerpen uit. Hier wordt afgesloten met een conclusie.",
+   "Aanleiding staat juist vooraan in de inleiding (waarom schrijven we hier nu over). Niet het einde."
+  ]
+ },
+ {
+  "nr": 172,
+  "bron": "leerpaden",
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 2 vraag 2",
+  "q": "Milan moest het laatste stuk naar school lopen. Wat was daarvan de oorzaak?",
+  "options": [
+   "Hij had geen pomp bij zich",
+   "Juf Karin had het hem gevraagd",
+   "Hij wilde graag bewegen",
+   "Het regende te hard om te fietsen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De juf komt pas op school in het verhaal voor. Zoek de zin in de tekst die met 'omdat' begint.",
+   null,
+   "Staat er ergens in de tekst iets over regen? Blijf bij wat er écht in het verhaal gebeurt."
+  ]
+ },
+ {
+  "nr": 173,
+  "bron": "leerpaden",
+  "waar": "tellen-kleuters-po stap 3 vraag 2",
+  "q": "Welke vorm is dit? 🔺",
+  "options": [
+   "driehoek",
+   "cirkel",
+   "vierkant"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk goed: deze vorm heeft punten — is hij dan rond?",
+   "Tel de punten maar met je vinger: hoeveel zijn het er?"
+  ]
+ },
+ {
+  "nr": 174,
+  "bron": "leerpaden",
+  "waar": "tellen-kleuters-po stap 4 vraag 1",
+  "q": "Wat is gróót? 🐘 of 🐭",
+  "options": [
+   "🐘",
+   "🐭"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Denk maar: past een muisje op je hand? En een olifant?"
+  ]
+ },
+ {
+  "nr": 175,
+  "bron": "leerpaden",
+  "waar": "tijd-snelheid-afstand-po stap 2 vraag 6",
+  "q": "Wat betekent een snelheid van **60 km/h**?",
+  "options": [
+   "In 1 uur leg je 60 km af",
+   "In 60 uur leg je 1 km af",
+   "In 1 minuut leg je 60 km af",
+   "In 1 uur leg je 60 m af"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wat staat er vóór de streep en wat erachter?",
+   null,
+   "Kijk goed naar de afstand: km of m?"
+  ]
+ },
+ {
+  "nr": 176,
+  "bron": "leerpaden",
+  "waar": "tijd-snelheid-afstand-po stap 5 vraag 5",
+  "q": "Auto + fiets tegelijk, beide vanuit Amsterdam naar Utrecht (40 km). Auto 80 km/h, fiets 16 km/h. Hoeveel **eerder** is de auto er?",
+  "options": [
+   "2 uur",
+   "30 min",
+   "5 uur",
+   "Gelijk"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig.",
+   "Te veel.",
+   "Onjuist."
+  ]
+ },
+ {
+  "nr": 177,
+  "bron": "leerpaden",
+  "waar": "tijdsduur-rekenen-po stap 1 vraag 2",
+  "q": "**3 minuten** = ... **seconden**?",
+  "options": [
+   "180 sec",
+   "30 sec",
+   "60 sec",
+   "300 sec"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — hoeveel seconden zitten er in 1 minuut, en bereken dat dan voor 3 minuten.",
+   "Dat is maar 1 minuut, niet 3.",
+   "Te veel — tijd rekent niet met 100. Hoeveel seconden heeft 1 minuut?"
+  ]
+ },
+ {
+  "nr": 178,
+  "bron": "leerpaden",
+  "waar": "tijdsduur-rekenen-po stap 2 vraag 4",
+  "q": "Van **11:50** tot **12:10** is hoe lang?",
+  "options": [
+   "20 min",
+   "1 uur 40 min",
+   "40 min",
+   "10 min"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet 1u40 — het is kort over de 12 heen.",
+   "Te veel — het is minder dan een uur.",
+   "Te weinig — reken vóór 12 + ná 12 samen op."
+  ]
+ },
+ {
+  "nr": 179,
+  "bron": "leerpaden",
+  "waar": "tijdvakken-nederland-po stap 5 vraag 3",
+  "q": "In welke **eeuw** was de Gouden Eeuw?",
+  "options": [
+   "17e eeuw",
+   "16e eeuw",
+   "18e eeuw",
+   "15e eeuw"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Begin van de Tachtigjarige Oorlog — net iets te vroeg voor 'goud'.",
+   "Periode van verval (pruikentijd).",
+   "Middeleeuwen."
+  ]
+ },
+ {
+  "nr": 180,
+  "bron": "leerpaden",
+  "waar": "toestand-stoffen-po stap 4 vraag 1",
+  "q": "Wat is **smelten**?",
+  "options": [
+   "Vast → vloeibaar",
+   "Vloeibaar → vast",
+   "Gas → vloeibaar",
+   "Vloeibaar → gas"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is stollen.",
+   "Dat is condenseren.",
+   "Dat is verdampen."
+  ]
+ },
+ {
+  "nr": 181,
+  "bron": "leerpaden",
+  "waar": "toestand-stoffen-po stap 5 vraag 3",
+  "q": "Welke is **GEEN vloeistof**?",
+  "options": [
+   "IJs",
+   "Water",
+   "Olie",
+   "Melk"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Water stroomt — is dus vloeibaar.",
+   "Olie stroomt — is dus vloeibaar.",
+   "Melk stroomt — is dus vloeibaar."
+  ]
+ },
+ {
+  "nr": 182,
+  "bron": "leerpaden",
+  "waar": "topografie-nederland stap 8 vraag 7",
+  "q": "Welk **vissersdorp** in Noord-Holland is bekend om zijn **klederdracht**?",
+  "options": [
+   "Volendam",
+   "Giethoorn",
+   "Kinderdijk",
+   "Maastricht"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dit dorp ligt in Overijssel en is bekend om grachten.",
+   "Hier staan oude molens. Is het een vissersdorp?",
+   null
+  ]
+ },
+ {
+  "nr": 183,
+  "bron": "leerpaden",
+  "waar": "verhoudingen stap 2 vraag 1",
+  "q": "Vereenvoudig 16 : 24.",
+  "options": [
+   "2 : 3",
+   "8 : 12",
+   "4 : 6",
+   "16 : 24"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "8 : 12 is een tussenstap. Door welk getal kun je nog verder delen?",
+   "4 : 6 is een tussenstap. Kun je nog kleiner — door welk getal?",
+   "Dat is de oorspronkelijke. Wat is het grootste getal waar 16 én 24 door deelbaar zijn?"
+  ]
+ },
+ {
+  "nr": 184,
+  "bron": "leerpaden",
+  "waar": "verhoudingen stap 6 vraag 1",
+  "q": "Recept voor 3 personen: 150g rijst. Hoeveel voor 8 personen?",
+  "options": [
+   "400 g",
+   "250 g",
+   "300 g",
+   "600 g"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bereken eerst hoeveel rijst er per persoon nodig is (150 ÷ 3). Daarna × 8.",
+   "Dat is voor minder dan 8 personen. Reken eerst per persoon, dan × 8.",
+   "Te veel. Reken eerst per persoon, daarna keer het aantal personen."
+  ]
+ },
+ {
+  "nr": 185,
+  "bron": "leerpaden",
+  "waar": "vlakke-figuren stap 17 vraag 1",
+  "q": "Wat is de oppervlakte van de **hele speeltuin**?",
+  "options": [
+   "96 m²",
+   "20 m²",
+   "40 m²",
+   "120 m²"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is alleen de omtrek-helft (12 + 8). Oppervlakte = lengte × breedte.",
+   "Heb je de juiste berekening gebruikt? Oppervlakte rechthoek = lengte × breedte.",
+   "Controleer je vermenigvuldiging — heb je de goede getallen gebruikt?"
+  ]
+ },
+ {
+  "nr": 186,
+  "bron": "leerpaden",
+  "waar": "warmte-thermodynamica-havo-vwo stap 5 vraag 5",
+  "q": "**Stefan-Boltzmann**: vermogen ~ T⁴. Verdubbel T: vermogen wordt:",
+  "options": [
+   "16× hoger",
+   "2× hoger",
+   "4× hoger",
+   "8× hoger"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — vierde macht.",
+   "Niet — kwadraat zou 4× zijn.",
+   "Niet — derde macht."
+  ]
+ },
+ {
+  "nr": 187,
+  "bron": "leerpaden",
+  "waar": "weersvoorspelling-po stap 4 vraag 14",
+  "q": "Wat is **luchtdruk**?",
+  "options": [
+   "Kracht waarmee lucht drukt",
+   "Snelheid waarmee lucht waait",
+   "Warmte die in de lucht zit",
+   "Vocht dat in de lucht zit"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is wind.",
+   "Dat is temperatuur.",
+   "Dat is luchtvochtigheid."
+  ]
+ },
+ {
+  "nr": 188,
+  "bron": "leerpaden",
+  "waar": "wereldoorlog2-geschiedenis stap 9 vraag 2",
+  "q": "Wat was **Westerbork**?",
+  "options": [
+   "Een doorgangskamp",
+   "Een verzetsorganisatie",
+   "Een Duits eindkamp",
+   "Een Engels vliegveld"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Westerbork was een gevangenkamp, geen verzetsgroep.",
+   "Bijna — maar vermoord werd vooral in kampen in bezet Polen. Welke rol had dit kamp in Drenthe dan?",
+   "Westerbork lag in Drenthe (NL), geen Engels vliegveld."
+  ]
+ },
+ {
+  "nr": 189,
+  "bron": "leerpaden",
+  "waar": "werkwoord-tijden-po stap 5 vraag 16",
+  "q": "Vul in: 'Ik ___ een boek.' (lezen, tegenwoordige tijd)",
+  "options": [
+   "lees",
+   "leest",
+   "lezen",
+   "las"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Hij/zij/het.",
+   "Hele/meervoud.",
+   "Verleden."
+  ]
+ },
+ {
+  "nr": 190,
+  "bron": "leerpaden",
+  "waar": "werkwoord-tijden-po stap 5 vraag 17",
+  "q": "Verleden tijd 'fietsen' (ik)?",
+  "options": [
+   "fietste",
+   "fietsde",
+   "fiets",
+   "fietsten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Op welke letter eindigt de stam? Zit die in 't kofschip?",
+   "Tegenwoordige tijd.",
+   "Meervoud."
+  ]
+ },
+ {
+  "nr": 191,
+  "bron": "leerpaden",
+  "waar": "werkwoordsspelling-dt stap 3 vraag 4",
+  "q": "Kies de juiste vorm van **binden**: 'De juf ____ de ballonnen aan het hek.'",
+  "options": [
+   "bindt",
+   "bind",
+   "bint",
+   "binden"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De juf = zij. Krijgt zij een t achter de stam?",
+   null,
+   null
+  ]
+ },
+ {
+  "nr": 192,
+  "bron": "leerpaden",
+  "waar": "werkwoordsspelling-dt stap 7 vraag 4",
+  "q": "Kies de juiste: **'Jij ____ steeds beter in rekenen.'**",
+  "options": [
+   "wordt",
+   "word",
+   "wordd",
+   "worden"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Staat 'jij' vóór of achter het werkwoord?",
+   "Een woord eindigt nooit op dd.",
+   null
+  ]
+ },
+ {
+  "nr": 193,
+  "bron": "leerpaden",
+  "waar": "werkwoordsvervoeging stap 10 vraag 1",
+  "q": "*Ik ___ morgen 13 jaar.*",
+  "options": [
+   "word",
+   "wordt",
+   "wort",
+   "worden"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij **ik** komt er nooit een -t. Doe de truc: \"ik loop\"... met t of zonder?",
+   "Niet bestaand woord. Toets: bij ik = stam zonder uitgang.",
+   "Hele werkwoord. Bij \"ik\" gebruik je de stam."
+  ]
+ },
+ {
+  "nr": 194,
+  "bron": "leerpaden",
+  "waar": "winst-rekenen-po stap 2 vraag 9",
+  "q": "Een flesje drinken koop je in voor **€0,60** en verkoop je voor **€1,00**. Je verkoopt er **15**. Hoeveel **totale winst**?",
+  "options": [
+   "€6",
+   "€15",
+   "€9",
+   "€0,40"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is al het geld dat binnenkomt. De inkoop moet er nog af.",
+   "Dat is wat alle flesjes jou samen kostten.",
+   null
+  ]
+ },
+ {
+  "nr": 195,
+  "bron": "leerpaden",
+  "waar": "wiskunde-d-vwo stap 2 vraag 2",
+  "q": "Bij **vermenigvuldigen in polair** doe je:",
+  "options": [
+   "Modulus × en argumenten +",
+   "Beide ×",
+   "Beide +",
+   "Modulus + en arg ×"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet correct.",
+   "Niet correct.",
+   "Tegenovergesteld."
+  ]
+ },
+ {
+  "nr": 196,
+  "bron": "leerpaden",
+  "waar": "woorden-2-nieuwkomers stap 5 vraag 4",
+  "q": "Je poetst ze elke dag in je mond. Wat zijn het?",
+  "options": [
+   "de arm",
+   "de vinger",
+   "het haar",
+   "de tand"
+  ],
+  "answer": 3,
+  "wrongHints": [
+   "Nee, je arm zit tussen je schouder en je hand. Probeer het nog eens.",
+   "Nee, aan je hand zitten vijf vingers. Probeer het nog eens.",
+   "Nee, je haar zit op je hoofd. Probeer het nog eens.",
+   null
+  ]
+ },
+ {
+  "nr": 197,
+  "bron": "leerpaden",
+  "waar": "woordsoorten-po stap 4 vraag 6",
+  "q": "*'**Welke** kleur vind jij mooi?'* — welk soort woord is 'welke'?",
+  "options": [
+   "vragend voornaamwoord",
+   "aanwijzend voornaamwoord",
+   "persoonlijk voornaamwoord",
+   "lidwoord"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wijs je hier iets aan, of stel je een vraag?",
+   null,
+   null
+  ]
+ },
+ {
+  "nr": 198,
+  "bron": "leerpaden",
+  "waar": "zenuwstelsel-hormonen-havo-vwo stap 4 vraag 1",
+  "q": "Wat is **homeostase**?",
+  "options": [
+   "Stabiele interne omstandigheden handhaven",
+   "Hormonen produceren",
+   "Hersenactiviteit",
+   "Snel groeien"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Onderdeel ervan, niet definitie.",
+   "Niet — alleen onderdeel.",
+   "Niet relevant."
+  ]
+ },
+ {
+  "nr": 199,
+  "bron": "leerpaden",
+  "waar": "zinsontleding stap 14 vraag 1",
+  "q": "*Wat is de PERSOONSVORM in: \"Mijn ouders zullen volgend jaar verhuizen naar Spanje.\"?*",
+  "options": [
+   "zullen",
+   "verhuizen",
+   "ouders",
+   "Spanje"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Verhuizen is een werkwoord, maar niet vervoegd. 'Zullen' is wel vervoegd: meervoud, passend bij 'mijn ouders'.",
+   "Ouders = onderwerp.",
+   "Spanje = bep. van plaats."
+  ]
+ },
+ {
+  "nr": 200,
+  "bron": "leerpaden",
+  "waar": "zinsontleding-onderwerp-persoonsvorm-po stap 2 vraag 8",
+  "q": "Wat is het onderwerp? *Op zaterdag gaat mijn vader vissen.*",
+  "options": [
+   "mijn vader",
+   "zaterdag",
+   "gaat",
+   "vissen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat zegt wannéér, niet wie het doet.",
+   "Dat is de persoonsvorm.",
+   null
+  ]
+ }
+]

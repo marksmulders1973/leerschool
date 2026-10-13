@@ -1,0 +1,957 @@
+[
+ {
+  "nr": 51,
+  "bron": "leerpaden",
+  "waar": "ecosystemen-biologie stap 3 vraag 1",
+  "q": "Welk percentage **energie** gaat per niveau ongeveer door?",
+  "options": [
+   "~10%",
+   "~50%",
+   "~100%",
+   "~1%"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te veel.",
+   "Onmogelijk.",
+   "Te weinig — dat is 2 niveaus."
+  ]
+ },
+ {
+  "nr": 52,
+  "bron": "leerpaden",
+  "waar": "emoties-sociaal-po stap 2 vraag 4",
+  "q": "**Vriendschap + leven**?",
+  "options": [
+   "Goede vrienden = langer leven",
+   "Geen verband tussen die twee",
+   "Vrienden = korter leven",
+   "Dat is nog nooit onderzocht"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Onderzoekers vonden wel een verband.",
+   "Maken vrienden je leven slechter?",
+   "Er is wel onderzoek naar gedaan."
+  ]
+ },
+ {
+  "nr": 53,
+  "bron": "leerpaden",
+  "waar": "energie-hulpbronnen-havo-vwo stap 5 vraag 1",
+  "q": "**NL Klimaatakkoord 2019** doel 2030:",
+  "options": [
+   "49% CO₂-reductie vs 1990",
+   "Geen doel",
+   "100% reductie",
+   "10% reductie"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wel doel.",
+   "Niet realistisch 2030.",
+   "Te weinig."
+  ]
+ },
+ {
+  "nr": 54,
+  "bron": "leerpaden",
+  "waar": "energiebronnen-po stap 6 vraag 13",
+  "q": "Welke energie uit **gas-fornuis**?",
+  "options": [
+   "Warmte",
+   "Elektrisch",
+   "Mechanisch",
+   "Magnetisch"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Er gaat geen stroom door de gasvlam.",
+   "Er beweegt niets dat iets aandrijft.",
+   "Er zit geen magneet in een gasfornuis."
+  ]
+ },
+ {
+  "nr": 55,
+  "bron": "leerpaden",
+  "waar": "engels-literatuur-havo-vwo stap 3 vraag 4",
+  "q": "**Ulysses** (1922) is het hoofdwerk van:",
+  "options": [
+   "James Joyce",
+   "George Orwell",
+   "Charles Dickens",
+   "Virginia Woolf"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — politieke fictie.",
+   "Niet — Victoriaans.",
+   "Niet — wel modernist, ander werk."
+  ]
+ },
+ {
+  "nr": 56,
+  "bron": "leerpaden",
+  "waar": "engels-schrijven-spreken-havo-vwo stap 1 vraag 2",
+  "q": "Welke is **present perfect**?",
+  "options": [
+   "I have lived here for 10 years",
+   "I lived here 10 years ago",
+   "I am living here",
+   "I will live here"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Past simple.",
+   "Present continuous.",
+   "Future."
+  ]
+ },
+ {
+  "nr": 57,
+  "bron": "leerpaden",
+  "waar": "europese-unie-po stap 1 vraag 1",
+  "q": "Hoeveel landen zitten er in de Europese Unie (in 2025)?",
+  "options": [
+   "25 landen",
+   "27 landen",
+   "28 landen",
+   "30 landen"
+  ],
+  "answer": 1,
+  "explanation": "**27 lidstaten** sinds 2020 (Brexit = vertrek VK). Daarvoor was het 28. Geen ander land vertrok daarna; geen nieuw land kwam erbij (Turkije/Oekraïne staan op wachtlijst).",
+  "wrongHints": [
+   "Tussen 2007 en 2013 was het 27, daarna 28. Maar sinds Brexit?",
+   null,
+   "Tot 2020 was het 28 — toen vertrok het Verenigd Koninkrijk. Hoeveel nu?",
+   "Hoger dan dit — geen 30. Lager."
+  ]
+ },
+ {
+  "nr": 58,
+  "bron": "leerpaden",
+  "waar": "europese-unie-po stap 6 vraag 3",
+  "q": "Op welke datum vieren we elk jaar **Dag van Europa**?",
+  "options": [
+   "1 mei (Dag van de Arbeid)",
+   "9 mei (Schuman-verklaring 1950)",
+   "1 januari (oprichting euro)",
+   "31 januari (Brexit)"
+  ],
+  "answer": 1,
+  "explanation": "**9 mei** = Schuman-dag, naar Robert Schuman (Franse minister van Buitenlandse Zaken) die op 9 mei 1950 het plan voor de Europese samenwerking presenteerde (kolen + staal). Dat is officieel het begin van de EU-samenwerking.",
+  "wrongHints": [
+   "1 mei is Dag van de Arbeid (vakbonden-dag), niet EU.",
+   null,
+   "1 jan 2002 = invoering euro, maar geen Europa-dag.",
+   "31 jan 2020 = Brexit — geen viering!"
+  ]
+ },
+ {
+  "nr": 59,
+  "bron": "leerpaden",
+  "waar": "evolutie-havo-vwo stap 2 vraag 1",
+  "q": "De meeste **mutaties** zijn:",
+  "options": [
+   "Neutraal of schadelijk",
+   "Allemaal gunstig",
+   "Allemaal schadelijk",
+   "Bewust gekozen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — meeste niet zo.",
+   "Niet — neutrale wel.",
+   "Onmogelijk."
+  ]
+ },
+ {
+  "nr": 60,
+  "bron": "leerpaden",
+  "waar": "evolutie-havo-vwo stap 3 vraag 1",
+  "q": "**Genetische drift** werkt sterker in:",
+  "options": [
+   "Kleine populaties",
+   "Grote populaties",
+   "Bij sterke selectie",
+   "Bij hoge mutatie-snelheid"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tegenovergesteld.",
+   "Niet — drift is naast selectie.",
+   "Mutaties leveren variatie, niet drift."
+  ]
+ },
+ {
+  "nr": 61,
+  "bron": "leerpaden",
+  "waar": "evolutie-havo-vwo stap 5 vraag 1",
+  "q": "**Lactose-tolerantie** bij Noord-Europeanen is voorbeeld van:",
+  "options": [
+   "Recente menselijke evolutie door selectie",
+   "Aangeleerd gedrag",
+   "Cultureel verschijnsel zonder genen",
+   "Toeval"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — gen bepaalt.",
+   "Wel genetisch.",
+   "Wel selectie."
+  ]
+ },
+ {
+  "nr": 62,
+  "bron": "leerpaden",
+  "waar": "examen-economie-2024-t2 stap 5 vraag 1",
+  "q": "De inkoop en verkoop van fairtrade producten is een vorm van particuliere ontwikkelingshulp. Hoe noemen we deze hulp?",
+  "options": [
+   "bilaterale hulp",
+   "noodhulp",
+   "structurele hulp"
+  ],
+  "answer": 2,
+  "explanation": "Fairtrade biedt boeren in ontwikkelingslanden een eerlijke prijs voor hun producten — over jaren heen. Dat is structurele hulp: gericht op duurzame verbetering van inkomens. Tegenover noodhulp (acuut, kortlopend) staat structurele hulp (lange termijn, op de oorzaken van armoede gericht).",
+  "wrongHints": [
+   "Bilateraal = land-tot-land hulp (overheid). Fairtrade is privaat.",
+   "Noodhulp = bij rampen (voedsel, medicijnen, snel). Fairtrade is langdurig.",
+   null
+  ]
+ },
+ {
+  "nr": 63,
+  "bron": "leerpaden",
+  "waar": "examen-geschiedenis-2023-t1 stap 5 vraag 1",
+  "q": "Iemand heeft kritiek op een aantal Nederlandse politieke partijen die na 2001 zijn opgericht, zoals de LPF (Pim Fortuyn) en de PVV (Geert Wilders). Tot welke politieke stroming worden deze partijen gerekend?",
+  "options": [
+   "tot het confessionalisme",
+   "tot het liberalisme",
+   "tot het populisme",
+   "tot het socialisme"
+  ],
+  "answer": 2,
+  "explanation": "**Populisme** = politieke stroming die zichzelf als 'stem van het volk' presenteert tegen de 'elite' (politici, media, EU). Vaak: simpele oplossingen, sterke leider, focus op 1-2 thema's (vaak immigratie, EU). LPF (2002), PVV (2006), FvD (2016), BBB (2019) — allemaal NL-populistische partijen, elk met eigen accent. Term is descriptief, niet alleen kritisch.",
+  "wrongHints": [
+   "Confessionalisme = christelijke partijen (CDA, SGP, CU). Geen LPF/PVV-stijl.",
+   "Liberalisme = VVD, D66 (klassieke). LPF/PVV onderscheiden zich juist daarvan.",
+   null,
+   "Socialisme = SP, PvdA. Linksere stroming, niet LPF/PVV."
+  ]
+ },
+ {
+  "nr": 64,
+  "bron": "leerpaden",
+  "waar": "examen-geschiedenis-2024-t1 stap 5 vraag 1",
+  "q": "In 1963 werd een directe communicatielijn (de 'hotline') aangelegd tussen de leider van de Sovjet-Unie en de leider van de Verenigde Staten. Welke gebeurtenis was de aanleiding?",
+  "options": [
+   "de Blokkade van Berlijn",
+   "de Cubacrisis",
+   "de Praagse Lente",
+   "de stichting van de DDR"
+  ],
+  "answer": 1,
+  "explanation": "Tijdens de **Cubacrisis** (oktober 1962) waren VS en USSR ongeveer 13 dagen lang op de rand van een kernoorlog. Het gebrek aan directe communicatie maakte misverstanden gevaarlijk. Daarom werd in 1963 de 'hotline' (eerst een teletype-verbinding) opgezet — direct contact tussen Kremlin en Witte Huis.",
+  "wrongHints": [
+   "De Blokkade van Berlijn speelde zich al in de jaren veertig af — was de hotline er toen al?",
+   null,
+   "De Praagse Lente vond later plaats dan de aanleg van de hotline — denk aan de volgorde.",
+   "De DDR werd gesticht nog vóór de Cubacrisis — pas op de tijdlijn."
+  ]
+ },
+ {
+  "nr": 65,
+  "bron": "leerpaden",
+  "waar": "examen-nederlands-2022-t2 stap 1 vraag 1",
+  "q": "Wat is het hoofdonderwerp van deze tekst?",
+  "options": [
+   "gevolgen van bomenkap op de leefomgeving",
+   "oplossing om bomenkap tegen te gaan",
+   "positieve milieueffecten van bomen",
+   "samenwerking tussen boomeigenaren"
+  ],
+  "answer": 1,
+  "explanation": "De hele tekst draait om bomenmakelaar.nl: een manier om bomen te verplaatsen in plaats van te kappen. Dat is dé oplossing om onnodige bomenkap tegen te gaan.",
+  "wrongHints": [
+   "Te smal — de gevolgen van kap zijn achtergrond; waar gaan de meeste alinea's echt over?",
+   null,
+   "Dat is een deelonderwerp (alinea 4-7), niet waar de hele tekst om draait.",
+   "Te smal — samenwerking is een detail; wat is de rode draad door alle alinea's?"
+  ]
+ },
+ {
+  "nr": 66,
+  "bron": "leerpaden",
+  "waar": "examen-nederlands-2022-t2 stap 4 vraag 1",
+  "q": "De alinea's 3, 4 en 5 hebben een gezamenlijk deelonderwerp. Welk deelonderwerp hebben deze alinea's?",
+  "options": [
+   "bewijs voor gapen",
+   "gapen tegen verveling",
+   "gapen vermindert spanningen",
+   "verklaringen voor gapen"
+  ],
+  "answer": 3,
+  "explanation": "Alinea 3-5 zetten verschillende theorieën/verklaringen voor gapen op een rij (sociale spanning, zuurstof, overgangsfases). De rode draad door dit blok = verklaringen voor gapen.",
+  "wrongHints": [
+   "Te vaag — wordt er in deze alinea's iets bewezen, of worden er ideeën naast elkaar gezet?",
+   "Gaan alinea 3-5 alleen over verveling? Kijk welke ideeën er allemaal genoemd worden.",
+   "Te smal — spanning verminderen is één theorie tussen meerdere.",
+   null
+  ]
+ },
+ {
+  "nr": 67,
+  "bron": "leerpaden",
+  "waar": "financiele-vorming-po stap 3 vraag 2",
+  "q": "**€100** met **2% rente** per jaar — na 1 jaar?",
+  "options": [
+   "€102",
+   "€2",
+   "€20",
+   "€200"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Alleen rente, niet totaal.",
+   "Te veel.",
+   "Te veel."
+  ]
+ },
+ {
+  "nr": 68,
+  "bron": "leerpaden",
+  "waar": "financiele-vorming-po stap 6 vraag 9",
+  "q": "€10 zakgeld × 4 weken = totaal in 1 maand?",
+  "options": [
+   "€40",
+   "€14",
+   "€10",
+   "€100"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Som.",
+   "Per week.",
+   "Te veel."
+  ]
+ },
+ {
+  "nr": 69,
+  "bron": "leerpaden",
+  "waar": "fotosynthese-biologie stap 2 vraag 3",
+  "q": "Wat is **NPK**?",
+  "options": [
+   "Voedingsstoffen in mest",
+   "Plant-soort",
+   "Bladsoort",
+   "Bloem-naam"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet plant-soort.",
+   "Niet blad.",
+   "Niet bloem."
+  ]
+ },
+ {
+  "nr": 70,
+  "bron": "leerpaden",
+  "waar": "geld-rekenen stap 3 vraag 2",
+  "q": "**3 koeken van € 1,25** met een **€ 5-biljet**. Wisselgeld?",
+  "options": [
+   "€ 1,25",
+   "€ 0,75",
+   "€ 2,25",
+   "€ 3,75"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — reken eerst uit wat de 3 koeken samen kosten.",
+   "Te veel — controleer som van koeken.",
+   "Dat is wat de koeken kosten, niet wisselgeld."
+  ]
+ },
+ {
+  "nr": 71,
+  "bron": "leerpaden",
+  "waar": "geld-rekenen stap 5 vraag 24",
+  "q": "Je verdient **€2,50/uur** als oppas. 4 uur = ?",
+  "options": [
+   "€10",
+   "€8",
+   "€12",
+   "€2,50"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet.",
+   "Niet.",
+   "Per uur."
+  ]
+ },
+ {
+  "nr": 72,
+  "bron": "leerpaden",
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 1 vraag 5",
+  "q": "Welk van deze dingen is **ook geschiedenis**?",
+  "options": [
+   "wat er gisteren op school gebeurde",
+   "wat je morgen gaat doen",
+   "wat je volgende week gaat eten",
+   "een verzonnen sprookje"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Is morgen al gebeurd?",
+   null,
+   "Is dat echt gebeurd?"
+  ]
+ },
+ {
+  "nr": 73,
+  "bron": "leerpaden",
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 2 vraag 5",
+  "q": "Wat staat er **helemaal rechts** op een tijdbalk?",
+  "options": [
+   "nu",
+   "wat het langst geleden is",
+   "de tijd van de ridders",
+   "honderd jaar geleden"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat staat juist aan de andere kant.",
+   null,
+   null
+  ]
+ },
+ {
+  "nr": 74,
+  "bron": "leerpaden",
+  "waar": "getallen-tot-20-po stap 2 vraag 7",
+  "q": "**8 + 1** = ?",
+  "options": [
+   "9",
+   "8",
+   "10",
+   "7"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Er komt wel iets bij: 1.",
+   "Dat is 8 + 2.",
+   null
+  ]
+ },
+ {
+  "nr": 75,
+  "bron": "leerpaden",
+  "waar": "gezonde-voeding-po stap 2 vraag 3",
+  "q": "Welke maaltijd moet je niet overslaan, omdat hij je **energie voor de ochtend op school** geeft?",
+  "options": [
+   "Ontbijt",
+   "Lunch",
+   "Avondeten",
+   "Snack"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Die eet je pas halverwege de schooldag.",
+   "Die eet je pas na school.",
+   "Een tussendoortje is geen hoofdmaaltijd."
+  ]
+ },
+ {
+  "nr": 76,
+  "bron": "leerpaden",
+  "waar": "grafieken-lezen-po stap 1 vraag 6",
+  "q": "Een grafiek heet **'Gewicht van een puppy per week'**. Welke eenheid past bij de getallen aan de zijkant?",
+  "options": [
+   "Kilogram (kg)",
+   "Graden (°C)",
+   "Millimeter (mm)",
+   "Euro (€)"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Gaat de titel over hoe warm iets is?",
+   null,
+   "Gaat de titel over geld?"
+  ]
+ },
+ {
+  "nr": 77,
+  "bron": "leerpaden",
+  "waar": "hardware-besturingssysteem-informatica stap 3 vraag 4",
+  "q": "Wat is een **driver**?",
+  "options": [
+   "Software die een apparaat laat samenwerken met het systeem",
+   "Iemand die de computer bestuurt",
+   "Software die virussen opspoort",
+   "Het werkgeheugen van de computer"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het is software, geen persoon.",
+   "Dat is een virusscanner — die beschermt, maar laat geen apparaat werken.",
+   "RAM is iets heel anders."
+  ]
+ },
+ {
+  "nr": 78,
+  "bron": "leerpaden",
+  "waar": "hardware-besturingssysteem-informatica stap 4 vraag 5",
+  "q": "Wat is een goede **back-up-regel**?",
+  "options": [
+   "Belangrijke bestanden op meer dan één plek bewaren",
+   "Eén kopie is altijd genoeg",
+   "Nooit een kopie maken",
+   "Alles alleen in het RAM zetten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Ook die ene kopie kun je kwijtraken.",
+   "Zonder kopie ben je bij een crash alles kwijt.",
+   "RAM is vluchtig — daar ben je het meteen kwijt."
+  ]
+ },
+ {
+  "nr": 79,
+  "bron": "leerpaden",
+  "waar": "hart-bloed-ademhaling-havo-vwo stap 3 vraag 1",
+  "q": "**Hemoglobine** bindt:",
+  "options": [
+   "O₂",
+   "CO₂ uitsluitend",
+   "Glucose",
+   "Vet"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wel deels, maar O₂ primair.",
+   "Niet — glucose zit opgelost in plasma.",
+   "Niet."
+  ]
+ },
+ {
+  "nr": 80,
+  "bron": "leerpaden",
+  "waar": "in-de-klas-nieuwkomers stap 3 vraag 5",
+  "q": "De school is uit. Wat zeg je tegen de juf?",
+  "options": [
+   "Tot morgen!",
+   "Goedemorgen!",
+   "Mag ik meedoen?",
+   "Ik snap het niet."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Nee, 'Goedemorgen!' zeg je als je 's ochtends binnenkomt. Aan het eind van de dag zeg je dag.",
+   "Nee, 'Mag ik meedoen?' vraag je als je wilt meespelen. Aan het eind van de dag zeg je dag.",
+   "Nee, 'Ik snap het niet.' zeg je als je iets niet begrijpt. Aan het eind van de dag zeg je dag."
+  ]
+ },
+ {
+  "nr": 81,
+  "bron": "leerpaden",
+  "waar": "in-de-klas-nieuwkomers stap 4 vraag 2",
+  "q": "Je bent ziek. Wat zeg je tegen de juf?",
+  "options": [
+   "Ik voel me niet goed.",
+   "Ik ben blij.",
+   "Mag ik meedoen?",
+   "Tot morgen!"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Nee, 'Ik ben blij.' zeg je als je je fijn voelt. Ziek zijn = je voelt je niet goed.",
+   "Nee, 'Mag ik meedoen?' vraag je als je wilt meespelen. Ziek zijn = je voelt je niet goed.",
+   "Nee, 'Tot morgen!' zeg je als je naar huis gaat. Ziek zijn = je voelt je niet goed."
+  ]
+ },
+ {
+  "nr": 82,
+  "bron": "leerpaden",
+  "waar": "industriele-revolutie-po stap 3 vraag 1",
+  "q": "Werkdag in **vroege fabriek**?",
+  "options": [
+   "12-16 uur",
+   "8 uur",
+   "4 uur",
+   "24 uur"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Veel meer.",
+   "Niet.",
+   "Onmogelijk."
+  ]
+ },
+ {
+  "nr": 83,
+  "bron": "leerpaden",
+  "waar": "industriele-revolutie-po stap 6 vraag 11",
+  "q": "Wat zijn **vakbonden**?",
+  "options": [
+   "Organisaties voor werknemers-rechten",
+   "Organisaties van fabriekseigenaren",
+   "Clubs voor sport",
+   "Winkels voor gereedschap"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Andere kant.",
+   "Het gaat om werk.",
+   "Geen winkel."
+  ]
+ },
+ {
+  "nr": 84,
+  "bron": "leerpaden",
+  "waar": "informatiebronnen-po stap 3 vraag 3",
+  "q": "*'Hoofdstuk 4 — Middeleeuwen ... blz 58'* — dit hoort bij?",
+  "options": [
+   "Inhoudsopgave",
+   "Index",
+   "Bibliografie",
+   "Voetnoot"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — index is alfabetisch.",
+   "Bibliografie = boekenlijst.",
+   "Voetnoot = uitleg onderaan bladzijde."
+  ]
+ },
+ {
+  "nr": 85,
+  "bron": "leerpaden",
+  "waar": "informatiebronnen-po stap 5 vraag 5",
+  "q": "Voor de spelling van het woord **'metaforisch'** — welke bron?",
+  "options": [
+   "Woordenboek",
+   "Encyclopedie",
+   "Atlas",
+   "Krant"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een encyclopedie vertelt veel over een onderwerp. In welk boek zoek je op hoe je een woord schrijft?",
+   "Atlas heeft geen woorden.",
+   "Krant heeft geen spelling-uitleg."
+  ]
+ },
+ {
+  "nr": 86,
+  "bron": "leerpaden",
+  "waar": "inhoudsopgave-register-po stap 2 vraag 5",
+  "q": "In het register staat: 'bij ... 12, 30'. Op hoeveel pagina's wordt 'bij' genoemd?",
+  "options": [
+   "2",
+   "12",
+   "30",
+   "42"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is het éérste paginanummer, geen aantal.",
+   "Dat is het tweede paginanummer.",
+   "Je hoeft de pagina's niet op te tellen."
+  ]
+ },
+ {
+  "nr": 87,
+  "bron": "leerpaden",
+  "waar": "integralen-havo-vwo stap 2 vraag 3",
+  "q": "Oppervlakte tussen **f(x)=x²** (onder) en **g(x)=2x** (boven) op interval waar ze elkaar omsluiten:\n\nSnijpunten?",
+  "options": [
+   "x = 0 en x = 2",
+   "x = 1 en x = 2",
+   "x = 0 en x = 4",
+   "Alleen x = 1"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — stel de twee functies gelijk aan elkaar en los op.",
+   "Niet — er is een andere oplossing; check de vergelijking nogmaals.",
+   "Niet — er zijn twee snijpunten."
+  ]
+ },
+ {
+  "nr": 88,
+  "bron": "leerpaden",
+  "waar": "interpunctie-po stap 6 vraag 15",
+  "q": "Welke zin is goed?",
+  "options": [
+   "Ik ga naar Amsterdam.",
+   "ik ga naar amsterdam.",
+   "ik ga naar Amsterdam.",
+   "Ik ga naar amsterdam."
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Geen hoofdletters.",
+   "Begin mist.",
+   "Plaats mist."
+  ]
+ },
+ {
+  "nr": 89,
+  "bron": "leerpaden",
+  "waar": "kaartlezen-po stap 5 vraag 9",
+  "q": "Wat is de **windroos** op een kaart?",
+  "options": [
+   "Symbool dat noord, oost, zuid, west aanwijst",
+   "Versiering in de vorm van een bloem",
+   "Teken dat laat zien hoe hard het waait",
+   "Soort kaart"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — hij lijkt op een bloem, maar heeft een taak.",
+   "Niet — over hoe hard het waait zegt hij niets.",
+   "Niet — onderdeel van kaart, niet kaart-type."
+  ]
+ },
+ {
+  "nr": 90,
+  "bron": "leerpaden",
+  "waar": "kalender-rekenen-po stap 2 vraag 9",
+  "q": "Vandaag is **woensdag 1 juli**. Welke dag is **16 juli**?",
+  "options": [
+   "Donderdag",
+   "Woensdag",
+   "Vrijdag",
+   "Dinsdag"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Is 16 − 1 een veelvoud van 7?",
+   null,
+   null
+  ]
+ },
+ {
+  "nr": 91,
+  "bron": "leerpaden",
+  "waar": "kansrekening stap 14 vraag 1",
+  "q": "*\"Een dobbelsteen 3× rollen — kans op minstens één 6?\"*",
+  "options": [
+   "1 − (5/6)³ = 91/216",
+   "(1/6)³ = 1/216",
+   "3 · 1/6 = 1/2",
+   "1/6"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is kans op 3× zes — heel klein.",
+   "Optellen werkt hier niet — gebruik het complement: bereken eerst de kans dat je géén zes gooit in alle 3 worpen.",
+   "1/6 is kans bij één worp. Bij 3 worpen verandert het."
+  ]
+ },
+ {
+  "nr": 92,
+  "bron": "leerpaden",
+  "waar": "kansrekening-havo-vwo stap 2 vraag 3",
+  "q": "Drie keer muntje gooien. Hoeveel paden in boom?",
+  "options": [
+   "8",
+   "6",
+   "3",
+   "27"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — elke worp verdubbelt het aantal paden. Hoe vaak verdubbel je?",
+   "Niet — aantal worpen.",
+   "Niet — dat is 3³, niet 2³."
+  ]
+ },
+ {
+  "nr": 93,
+  "bron": "leerpaden",
+  "waar": "klimaatverandering-aardrijkskunde stap 1 vraag 3",
+  "q": "Wat is **IPCC**?",
+  "options": [
+   "VN-klimaatpanel met wetenschappers",
+   "Politieke partij",
+   "Bedrijf",
+   "Milieu-actiegroep zoals Greenpeace"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Geen verkiezingsclub — een onderzoeksgroep.",
+   "Geen winstdoel — een wetenschappelijke commissie.",
+   "Geen actiegroep — wetenschappers die al het onderzoek samenvatten."
+  ]
+ },
+ {
+  "nr": 94,
+  "bron": "leerpaden",
+  "waar": "klimaten-aardrijkskunde stap 3 vraag 2",
+  "q": "Wat is het verschil tussen regenwoud en savanne?",
+  "options": [
+   "Savanne heeft een droge en natte tijd, regenwoud is altijd nat",
+   "Savanne is kouder",
+   "Regenwoud heeft sneeuw",
+   "Savanne ligt bij de polen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Beide zijn warm.",
+   "Sneeuw kan bijna nooit in tropisch klimaat.",
+   "Beide liggen rond de evenaar."
+  ]
+ },
+ {
+  "nr": 95,
+  "bron": "leerpaden",
+  "waar": "klokkijken stap 2 vraag 4",
+  "q": "De grote wijzer staat op de **12**. De kleine wijzer staat op de **5**. Hoe laat is het?",
+  "options": [
+   "5 uur",
+   "12 uur",
+   "Half 5",
+   "Kwart over 5"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Welke wijzer zegt het uur: de grote of de kleine?",
+   "Bij een half uur staat de grote wijzer onderaan, op de 6.",
+   null
+  ]
+ },
+ {
+  "nr": 96,
+  "bron": "leerpaden",
+  "waar": "klokkijken stap 4 vraag 6",
+  "q": "Hoeveel **kwartieren** zitten er in 1 uur?",
+  "options": [
+   "4",
+   "2",
+   "3",
+   "15"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zoveel kwartieren zitten in een half uur.",
+   null,
+   "Dat is het aantal minuten in één kwartier."
+  ]
+ },
+ {
+  "nr": 97,
+  "bron": "leerpaden",
+  "waar": "klokkijken stap 8 vraag 22",
+  "q": "**5 voor half 3** = welke tijd?",
+  "options": [
+   "14:25",
+   "14:35",
+   "2:35",
+   "15:25"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is 5 óver half 3.",
+   "Dat is 5 óver half 3, en dan 's nachts.",
+   "Dat is 5 voor half 4."
+  ]
+ },
+ {
+  "nr": 98,
+  "bron": "leerpaden",
+  "waar": "kolonie-indonesie stap 5 vraag 3",
+  "q": "Wie was de eerste **president** van Indonesië (1945-1967)?",
+  "options": [
+   "Soekarno",
+   "Hatta",
+   "Soeharto",
+   "Habibie"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Hatta was vicepresident.",
+   "Soeharto = tweede president (1967-1998), na een machtsgreep.",
+   "Habibie werd pas in 1998 president, na Soeharto."
+  ]
+ },
+ {
+  "nr": 99,
+  "bron": "leerpaden",
+  "waar": "kommagetallen-po stap 3 vraag 1",
+  "q": "**0,4 × 0,2** = ?",
+  "options": [
+   "0,08",
+   "0,8",
+   "8",
+   "0,008"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te veel — hoeveel decimalen heeft elk getal? Tel ze op.",
+   "Komma vergeten — er moet er één in.",
+   "Te ver naar links — 1 decimaal te veel."
+  ]
+ },
+ {
+  "nr": 100,
+  "bron": "leerpaden",
+  "waar": "kommagetallen-po stap 6 vraag 12",
+  "q": "Schrijf ½ als kommagetal",
+  "options": [
+   "0,5",
+   "0,2",
+   "0,1",
+   "0,05"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is ⅕.",
+   "Dat is ¹⁄₁₀.",
+   "Dat is ¹⁄₂₀."
+  ]
+ }
+]

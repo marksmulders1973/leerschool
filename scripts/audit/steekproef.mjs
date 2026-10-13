@@ -2,10 +2,11 @@
 // Pool = alle leerpaden via het manifest (ook .jsx) + alle exports van
 // sampleQuestions.js, textbookQuestions.js en topics.js (zelfde wandeling als check-vragen.mjs).
 // Trekking: mulberry32(seed), Fisher-Yates over de hele pool, eerste N; daarna gesorteerd op bron en pool-volgorde.
-// Gebruik: node scripts/audit/steekproef.mjs [seed=20261006] [n=200] [basismap=.] [--json uit.json]
+// Gebruik: node scripts/audit/steekproef.mjs [seed=20261006] [n=200] [basismap=.] [--json uit.json] [--leerpaden]
+// --leerpaden: alleen de leerpaden (zelfde populatie als de eindmeting van 8 okt, seed 20261008).
 import { register } from "node:module";
 import fs from "node:fs"; import path from "node:path"; import { pathToFileURL } from "node:url";
-register(pathToFileURL(path.resolve(path.dirname(new URL(import.meta.url).pathname), "jsx-hook.mjs")).href);
+register(new URL("./jsx-hook.mjs", import.meta.url).href);
 
 const args = process.argv.slice(2).filter((a) => !a.startsWith("--"));
 const seed = Number(args[0] ?? 20261006), N = Number(args[1] ?? 200), base = path.resolve(args[2] ?? ".");
@@ -26,6 +27,7 @@ for (const f of Object.keys(BRON)) {
   const loop = (x, waar) => { if (Array.isArray(x)) x.forEach((v, i) => (v && typeof v === "object" && "q" in v ? pool.push({ bron: BRON[f], waar: `${waar}[${i}]`, v }) : loop(v, `${waar}[${i}]`))); else if (x && typeof x === "object") for (const k of Object.keys(x)) loop(x[k], waar ? `${waar}.${k}` : k); };
   for (const [naam, w] of Object.entries(mod)) loop(w, naam);
 }
+if (process.argv.includes("--leerpaden")) pool.splice(0, pool.length, ...pool.filter((x) => x.bron === "leerpaden"));
 const idx = pool.map((_, i) => i), r = mulberry32(seed);
 for (let i = idx.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [idx[i], idx[j]] = [idx[j], idx[i]]; }
 const VOLG = ["leerpaden", "sampleQuestions", "textbookQuestions", "topics"];
