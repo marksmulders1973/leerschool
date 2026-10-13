@@ -54,9 +54,9 @@ const steps = [
       },
       {
         q: "Welke tekst is een **uiteenzetting**?",
-        options: ["Wikipedia-artikel over fotosynthese","Opinie-stuk over euthanasie","Toespraak van een partijleider","Romanfragment over een zomer"],
+        options: ["Wikipedia-artikel over fotosynthese","Krantenstuk dat voor- en nadelen van kernenergie afweegt","Toespraak van een partijleider","Romanfragment over een zomer"],
         answer: 0,
-        wrongHints: [null, "Een opiniestuk geeft een mening of een afweging. Welke tekst legt uit hoe iets werkt, zonder mening?", "Een partijleider wil kiezers overtuigen. Welke tekst geeft neutrale informatie?", "Een romanfragment vertelt een verhaal. Welke tekst legt iets uit zonder mening?"],
+        wrongHints: [null, "Wie voor- en nadelen tegen elkaar afweegt, schrijft een beschouwing. Welke tekst legt alleen uit hoe iets werkt?", "Een partijleider wil kiezers overtuigen. Welke tekst geeft neutrale informatie?", "Een romanfragment vertelt een verhaal. Welke tekst legt iets uit zonder mening?"],
         uitlegPad: {
           stappen: [{ titel: "Wikipedia = informeren", tekst: "**Uiteenzetting** = informatieve tekst zonder mening. Wikipedia-artikelen, schoolboek-paragrafen, instructies horen hier. Doel: **kennis overdragen**." }],
           theorie: "Toets-truc: titel 'Wat is X?' of 'Hoe werkt Y?' → uiteenzetting.",
@@ -95,7 +95,7 @@ const steps = [
     checks: [
       {
         q: "Wat hoort in de **inleiding** van een betoog?",
-        options: ["Aanleiding + stelling","Conclusie + actie","Voorbeelden","Tegenargumenten"],
+        options: ["Aanleiding + stelling","Conclusie + actie","Voorbeelden + argumenten","Tegenargument + weerlegging"],
         answer: 0,
         wrongHints: [null, "Een conclusie en een oproep tot actie horen aan het eind, in het slot. Wat vertel je de lezer eerst?", "Voorbeelden ondersteunen je argumenten in het middenstuk. Wat moet de lezer weten vóórdat de argumenten komen?", "Tegenargumenten bespreek en weerleg je in het middenstuk. Waarmee open je een betoog?"],
         uitlegPad: {
@@ -140,7 +140,7 @@ const steps = [
         q: "Wat hoort NIET in het **slot** van een betoog?",
         options: ["Nieuwe argumenten","Stelling herhalen","Oproep tot actie","Conclusie"],
         answer: 0,
-        wrongHints: [null, "Het slot herhaalt de stelling vaak, krachtiger dan eerst. Wat hoort er juist níét in?", "Een oproep tot actie past goed in een slot. Waar zou de lezer in het slot niet meer op kunnen reageren?", "Het slot is de plek voor de conclusie. Wat hoort al eerder in de tekst te staan?"],
+        wrongHints: [null, "Het slot herhaalt de stelling vaak, krachtiger dan eerst. Wat hoort er juist níét in?", "Een oproep als 'Teken daarom de petitie!' is een gebruikelijk slot. Hoort die dus wel of niet in het slot?", "Het slot is de plek voor de conclusie. Wat hoort al eerder in de tekst te staan?"],
         uitlegPad: {
           stappen: [{ titel: "Slot = afsluiten, niet openen", tekst: "Slot **sluit af**. Geen nieuwe argumenten — die horen in middenstuk. Slot herhaalt stelling (krachtiger) + eventueel oproep. Nieuw materiaal in slot = zwak betoog (lezer kan niet meer reageren)." }],
           theorie: "Toets-tip: in slot 'Concluderend...' / 'Daarom blijft...' / 'Het moet duidelijk zijn dat...' zijn signaalwoorden.",
@@ -170,7 +170,7 @@ const steps = [
         q: "*'Óf je stemt voor de nieuwe sporthal, óf sport voor kinderen kan je niets schelen.'* — welke drogreden?",
         options: ["Vals dilemma","Generalisatie","Stroman","Hellend vlak"],
         answer: 0,
-        wrongHints: [null, "Bij een generalisatie doe je een uitspraak over een hele groep. Hoeveel keuzes worden hier voorgesteld?", "Bij een stroman wordt het standpunt van de ander verdraaid. Wordt hier iemands standpunt verdraaid?", "Bij een hellend vlak leidt één stap tot een keten van gevolgen. Zie je hier zo'n keten, of iets anders?"],
+        wrongHints: [null, "Bij een generalisatie trek je een conclusie over een hele groep uit een paar gevallen. Welke gevallen worden hier genoemd?", "Bij een stroman wordt het standpunt van de ander verdraaid. Wordt hier iemands standpunt verdraaid?", "Bij een hellend vlak leidt één stap tot een keten van gevolgen. Zie je hier zo'n keten, of iets anders?"],
         uitlegPad: {
           stappen: [{ titel: "Of-of zonder middenweg", tekst: "**Vals dilemma**: doen alsof er maar 2 opties zijn (voor of tegen). In realiteit kun je tegen déze sporthal zijn en sport voor kinderen tóch belangrijk vinden. Onterecht binair maken." }],
           theorie: "Toets-favoriet: vals dilemma + 'wie niet voor is, is tegen' / 'óf X óf Y' / 'er is geen andere optie'.",
@@ -181,7 +181,7 @@ const steps = [
         q: "*'Mijn tegenstander wil het leger volledig afschaffen!'* (terwijl hij alleen bezuinigen voorstelde) — drogreden:",
         options: ["Stroman","Hellend vlak","Generalisatie","Cirkelredenering"],
         answer: 0,
-        wrongHints: [null, "Bij een hellend vlak voorspel je een keten van gevolgen. Wat gebeurt hier met wat de tegenstander voorstelde?", "Bij een generalisatie doe je een uitspraak over een hele groep. Gaat deze zin over een groep?", "Bij een cirkelredenering bewijst de conclusie zichzelf. Vergelijk wat de tegenstander zei met wat hier staat."],
+        wrongHints: [null, "Bij een hellend vlak voorspel je een keten van gevolgen: als A, dan B, dan C. Zie je hier zo'n keten?", "Bij een generalisatie doe je een uitspraak over een hele groep. Gaat deze zin over een groep?", "Bij een cirkelredenering bewijst de conclusie zichzelf. Vergelijk wat de tegenstander zei met wat hier staat."],
         uitlegPad: {
           stappen: [{ titel: "Stroman = verdraaid tegenstandpunt", tekst: "**Stroman-drogreden**: argument tegenstander **verdraaien tot extreme versie** die makkelijker te verslaan is. Bezuinigen ≠ afschaffen. Vechten tegen iets dat tegenstander niet zei." }],
           theorie: "Strawman (Engels) — je schiet een stropop neer in plaats van het echte argument.",
@@ -234,7 +234,7 @@ const steps = [
         q: "*'Het leven is een rivier.'* — welk stijlmiddel?",
         options: ["Metafoor","Vergelijking","Hyperbool","Ironie"],
         answer: 0,
-        wrongHints: [null, "Niet — bij vergelijking zou 'als' of 'zoals' staan.", "Een hyperbool overdrijft iets. Wordt het leven hier groter gemaakt dan het is?", "Bij ironie bedoel je het tegenovergestelde van wat je zegt. Bedoelt de schrijver hier het omgekeerde?"],
+        wrongHints: [null, "Een vergelijking gebruikt 'als' of 'zoals', bijvoorbeeld 'het leven is als een rivier'. Staat zo'n woord in deze zin?", "Een hyperbool overdrijft iets. Wordt het leven hier groter gemaakt dan het is?", "Bij ironie bedoel je het tegenovergestelde van wat je zegt. Bedoelt de schrijver hier het omgekeerde?"],
         uitlegPad: {
           stappen: [{ titel: "Metafoor = zonder 'als'", tekst: "**Metafoor**: beeldspraak die A = B claimt (zonder 'als'). 'Leven IS rivier'. Vergelijking gebruikt WEL 'als': 'Het leven is ALS een rivier'." }],
           theorie: "Toets-tip: ezelsbrug 'Metafoor zonder als'. Vergelijking met 'als' of 'zoals'.",
@@ -245,7 +245,7 @@ const steps = [
         q: "Wat is een **understatement**?",
         options: ["Bewust afzwakken","Bewust overdrijven","Vraag stellen","Beeldspraak"],
         answer: 0,
-        wrongHints: [null, "Bewust overdrijven heet een hyperbool. Wat betekent 'under' in understatement?", "Een vraag waarop je geen antwoord verwacht, heet een retorische vraag. Waar gaat een understatement over?", "Beeldspraak is een metafoor of vergelijking. Wat betekent 'under' in understatement?"],
+        wrongHints: [null, "Bewust overdrijven heet een hyperbool. Zou een ander stijlmiddel dan precies hetzelfde doen?", "Een vraag waarop je geen antwoord verwacht, heet een retorische vraag. Waar gaat een understatement over?", "Beeldspraak is een metafoor of vergelijking. Wat betekent 'under' in understatement?"],
         uitlegPad: {
           stappen: [{ titel: "Understatement = onderbenadrukking", tekst: "**Understatement** = bewust afzwakken. 'Niet onaardig' = heel aardig. 'Het regent een beetje' (terwijl 't plenst). Engels: 'It's a bit chilly' (bij −20°C). Vaak ironisch effect." }],
           theorie: "Britse humor-favoriet. Tegenovergesteld van hyperbool.",
@@ -287,7 +287,7 @@ const steps = [
         q: "*'Alle moderne muziek is vreselijk, want dat zegt mijn opa.'* — drogreden:",
         options: ["Autoriteits-misbruik + generalisatie","Vals dilemma + persoonlijke aanval","Hellend vlak + cirkelredenering","Geldig autoriteitsargument"],
         answer: 0,
-        wrongHints: [null, "Er wordt geen of-of-keuze gegeven en niemand wordt persoonlijk aangevallen. Wie wordt hier als bron opgevoerd?", "Er volgt geen kettingreactie en de conclusie herhaalt zichzelf niet. Kijk naar het woord 'alle' en naar de bron.", "Is een opa deskundig op het gebied van moderne muziek? Wanneer is een beroep op iemand terecht?"],
+        wrongHints: [null, "Bij een vals dilemma krijg je twee keuzes en bij een persoonlijke aanval wordt iemand afgekraakt. Gebeurt een van die twee hier?", "Er volgt geen kettingreactie en de conclusie herhaalt zichzelf niet. Kijk naar het woord 'alle' en naar de bron.", "Is een opa deskundig op het gebied van moderne muziek? Wanneer is een beroep op iemand terecht?"],
         uitlegPad: {
           stappen: [{ titel: "Dubbel: opa + alle", tekst: "**Twee drogredenen**: (1) opa is geen muziek-expert → autoriteits-misbruik. (2) 'Alle moderne muziek' → generalisatie. Combinatie maakt argument extra zwak." }],
           niveaus: { basis: "Autoriteit + generalisatie.", simpeler: "Opa + alle = twee drogredenen", nogSimpeler: "Drogreden" },
