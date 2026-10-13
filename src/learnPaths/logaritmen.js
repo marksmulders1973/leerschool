@@ -414,7 +414,7 @@ const steps = [
           null,
           "Aftrekken in het argument werkt niet — welke regel zegt wat je met een verschil van logs doet?",
           "Optellen klopt ook niet. Wat wordt het argument bij het verschil van twee logs?",
-          "Reken los uit: log₂(64) = 6 en log₂(8) = 3. Wat is 6 − 3?",
+          "Controleer 5 door beide logs apart uit te rekenen en af te trekken. Kom je echt op 5?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Verschil = log van deling", tekst: "log₂(64) − log₂(8) = log₂(64/8) = log₂(8) = 3." }],
