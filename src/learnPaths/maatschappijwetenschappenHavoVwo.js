@@ -42,9 +42,9 @@ const steps = [
       },
       {
         q: "NL is een **constitutionele monarchie + parlementaire democratie**. Wat houdt 'constitutionele' in?",
-        options: ["Koning gebonden aan grondwet, niet absoluut","Koning kiest zelf alle ministers uit","Het volk kiest zelf het staatshoofd","Koning mag de grondwet zelf veranderen"],
+        options: ["Koning is gebonden aan de grondwet","Koning toetst wetten aan de grondwet","Het volk kiest zelf het staatshoofd","Koning mag de grondwet zelf veranderen"],
         answer: 0,
-        wrongHints: [null, "Wie bepaalt na verkiezingen welke ministers er komen: de koning of de formatie?", "Kiest het volk in Nederland de koning?", "Wie mag de Grondwet wijzigen: één persoon, of het parlement?"],
+        wrongHints: [null, "Toetsen aan de Grondwet doen regering en parlement. Heeft de koning zelf politieke macht?", "Kiest het volk in Nederland de koning?", "Wie mag de Grondwet wijzigen: één persoon, of het parlement?"],
         uitlegPad: {
           stappen: [{ titel: "Grondwet > koning", tekst: "**Constitutionele monarchie**: monarch (koning) onderworpen aan **grondwet**. Niet absoluut zoals Lodewijk XIV ('l'État c'est moi'). Koning heeft een ceremoniële rol. NL sinds 1815 (Willem I) constitutioneel; ministersverantwoordelijkheid sinds 1848 (Thorbecke)." }],
           niveaus: { basis: "Koning gebonden aan grondwet.", simpeler: "Const. = grondwet boven koning", nogSimpeler: "Koning gebonden aan grondwet" },
@@ -111,9 +111,9 @@ const steps = [
       },
       {
         q: "**Affectieve polarisatie** is:",
-        options: ["Emotionele afkeer van de andere groep","Geweld tussen twee vijandige groepen","Groeiend verschil in politieke standpunten","Stemmen verspreid over veel kleine partijen"],
+        options: ["Afkeer en wantrouwen van de andere groep","Geweld tussen twee vijandige groepen","Groeiend verschil in politieke standpunten","Stemmen verspreid over veel kleine partijen"],
         answer: 0,
-        wrongHints: [null, "Geweld kan een gevolg zijn, maar 'affectief' verwijst naar iets innerlijks. Naar wat?", "Dat heet ideologische polarisatie. Waar verwijst het woord 'affectief' naar?", "Dat heet versplintering. Waar verwijst het woord 'affectief' naar?"],
+        wrongHints: [null, "Geweld kan een gevolg zijn, maar polarisatie is nog geen geweld.", "Dat heet ideologische polarisatie: verschil in standpunten. Wat is dan het andere soort?", "Dat heet versplintering van het partijlandschap."],
         uitlegPad: {
           stappen: [{ titel: "Emotioneel verschil", tekst: "**Affectieve polarisatie**: niet op inhoud maar **emotioneel**. Ik kan ander politiek standpunt verdragen, maar **vind aanhanger niet aardig + wantrouw die**. Onderzoek toont stijging laatste 10 jaar. Filterbubbels online versterken." }],
           theorie: "Toets-actueel: COVID-maatregelen, klimaat, migratie, Israël-Palestina-debat hebben affectieve polarisatie versterkt.",
@@ -171,9 +171,9 @@ const steps = [
       },
       {
         q: "**Bourdieu's** habitus is:",
-        options: ["Aangeleerde manier van denken en doen","Het geld en bezit dat je erft","Kleding waarmee je laat zien wie je bent","De wijk of omgeving waarin je woont"],
+        options: ["Aangeleerde manier van denken en doen","Kennis en diploma's die je hebt opgedaan","Netwerk van mensen dat je kunt inzetten","Geld en bezit dat je hebt geërfd"],
         answer: 0,
-        wrongHints: [null, "Geld is bij Bourdieu economisch kapitaal — verwant, maar een ander begrip.", "Kleding kan je habitus laten zien, maar is het niet zelf.", "Habitus lijkt op 'habitat', maar gaat het over een plek?"],
+        wrongHints: [null, "Kennis en diploma's noemt Bourdieu cultureel kapitaal. Habitus is iets anders: wat?", "Een netwerk is sociaal kapitaal. Wat bedoelt Bourdieu met habitus?", "Geld en bezit noemt Bourdieu economisch kapitaal — verwant, maar een ander begrip."],
         uitlegPad: {
           stappen: [{ titel: "Onbewuste smaak", tekst: "**Habitus** (Bourdieu): aangeleerde + grotendeels onbewuste manier van denken/voelen/handelen. Gevormd door omgeving (klasse, gezin). Bepaalt smaak (klassieke muziek vs hardcore, krant vs tv), praat, manieren. **Reproductie**: kinderen erven habitus → klasse blijft gereproduceerd ondanks formele gelijkheid." }],
           theorie: "Toets-patroon: 'leg uit waarom onderwijssucces deels afhangt van gezinscultuur' → Bourdieu's habitus + cultureel kapitaal.",
@@ -192,9 +192,9 @@ const steps = [
       },
       {
         q: "Welk **generatie-kenmerk** past bij **Gen Z**?",
-        options: ["Smartphone-natives + klimaat-angst","Oorlogstrauma + zuinig leven","Wederopbouw-optimisme + groot gezin","No future + punk in de jaren '80"],
+        options: ["Smartphone vanaf jonge leeftijd + klimaatangst","Internet als tiener + crisis van 2008","Opkomst van de pc + punk en 'no future'","Wederopbouw-optimisme + groot gezin"],
         answer: 0,
-        wrongHints: [null, "Niet — stille generatie.", "Niet — boomers.", "Niet — Gen X."],
+        wrongHints: [null, "Dat past bij millennials (geboren ca. 1981-1996).", "Dat past bij Generatie X (geboren ca. 1965-1980).", "Dat past bij de babyboomers (geboren ca. 1946-1964)."],
         uitlegPad: {
           stappen: [{ titel: "1997-2012", tekst: "**Gen Z** (geboren 1997-2012): **smartphone-natives** (geen tijd zonder), opgroeiend met **klimaatangst** (Greta Thunberg-generatie), **COVID** raakte hen op middelbare/HBO-leeftijd, mentale gezondheid groot thema, fluïde identiteits-opvattingen (gender, seksualiteit)." }],
           theorie: "toetsvraag-patroon: 'koppel maatschappelijke verandering aan generatie'. Bv: klimaatbeleid groot voor Gen Z, pensioen voor boomers.",
@@ -212,7 +212,7 @@ const steps = [
     checks: [
       {
         q: "Welk recht is een **klassiek grondrecht**?",
-        options: ["Vrijheid van meningsuiting","Recht op betaald werk","Recht op gezondheidszorg","Recht op sociale zekerheid"],
+        options: ["Recht op vrije meningsuiting","Recht op betaald werk","Recht op gezondheidszorg","Recht op sociale zekerheid"],
         answer: 0,
         wrongHints: [null, "Moet de overheid hier actief iets voor je regelen? Dan gaat het om een ander soort grondrecht.", "Zorg moet de overheid actief organiseren. Is dat klassiek of sociaal?", "Moet de overheid hier iets regelen, of juist van je afblijven?"],
         uitlegPad: {
@@ -233,9 +233,9 @@ const steps = [
       },
       {
         q: "Welk recht is **privaat recht**?",
-        options: ["Koopcontract tussen burgers","Rechtszaak tegen een inbreker","Aanslag van de Belastingdienst","Verblijfsvergunning van de IND"],
+        options: ["Koopcontract tussen twee burgers","Aangifte tegen een buurman die steelt","Aanslag van de Belastingdienst","Verblijfsvergunning van de IND"],
         answer: 0,
-        wrongHints: [null, "Bij strafrecht staat de stáát tegenover de verdachte — waar staan burgers tegenover elkáár?", "Belasting betaal je aan de overheid — dat is publiek. Waar is geen overheid bij betrokken?", "De IND is een overheidsdienst — zoek de relatie tussen twee gewone burgers."],
+        wrongHints: [null, "Diefstal is strafrecht: dan vervolgt de staat de dader, ook als het je buurman is.", "Belasting betaal je aan de overheid — dat is publiek. Waar is geen overheid bij betrokken?", "De IND is een overheidsdienst — zoek de relatie tussen twee gewone burgers."],
         uitlegPad: {
           stappen: [{ titel: "Burgers onderling", tekst: "**Privaat (civiel) recht**: regelt verhoudingen tussen burgers/organisaties: contracten, eigendom, huur, huwelijk, schadevergoeding. Conflict → civiele rechter (kantonrechter, rechtbank). **Publiek recht**: staat ↔ burger: strafrecht (overheid vervolgt), bestuursrecht (vergunning), staatsrecht (grondwet), belastingrecht." }],
           niveaus: { basis: "Koopcontract.", simpeler: "Privaat = burger-burger", nogSimpeler: "Koopcontract" },
@@ -243,9 +243,9 @@ const steps = [
       },
       {
         q: "De **Toeslagenaffaire** illustreert vooral falen van:",
-        options: ["Rechtsstaat","Verkiezingen","Marktwerking","Vrije pers"],
+        options: ["Rechtsstaat","Verzorgingsstaat","Marktwerking","Vrije pers"],
         answer: 0,
-        wrongHints: [null, "De affaire ging over hoe de overheid burgers behandelde. Ging er iets mis bij het stemmen?", "Werd de fout gemaakt door bedrijven op een markt, of door een overheidsdienst?", "Juist journalisten brachten de affaire aan het licht. Wie faalde er dan?"],
+        wrongHints: [null, "Toeslagen horen bij de verzorgingsstaat. Maar ging het mis met de hoogte van de toeslag, of met hoe de overheid burgers behandelde?", "Werd de fout gemaakt door bedrijven op een markt, of door een overheidsdienst?", "Juist journalisten brachten de affaire aan het licht. Wie faalde er dan?"],
         uitlegPad: {
           stappen: [{ titel: "Rechtsstaat-crisis", tekst: "**Toeslagenaffaire**: belastingdienst beschuldigde duizenden ouders **zonder grondige check** van fraude. Hoge boetes, schuld, gezinsdrama's. **Rechtsstaat** faalde: geen eerlijke procedure, ouders niet gehoord, discriminatie op herkomst. Rapport-Donner + Parlementaire Enquête lieten zien dat ambtenaren-cultuur + politieke druk samenwerkten." }],
           theorie: "Toets-patroon: 'leg uit waarom Toeslagenaffaire schadelijk voor rechtsstaat'. Antwoord: schending grondrechten + onafhankelijke rechter omzeild.",
@@ -254,9 +254,9 @@ const steps = [
       },
       {
         q: "Welke is een **doel van straf**?",
-        options: ["Resocialisatie","Persoonlijke wraak","Bekentenis afdwingen","Openbare vernedering"],
+        options: ["Resocialisatie","Waarheidsvinding","Opsporing","Eigenrichting"],
         answer: 0,
-        wrongHints: [null, "Eigenrichting wil de rechtsstaat juist voorkomen. De staat straft, niet het slachtoffer.", "Een bekentenis hoort bij het onderzoek, niet bij de straf. Wat moet een straf bereiken?", "De schandpaal is al eeuwen afgeschaft. Welke doelen van straf noemt het strafrecht wel?"],
+        wrongHints: [null, "Waarheidsvinding is het doel van het proces, vóór de uitspraak. Wat moet de straf daarna bereiken?", "Opsporing doet de politie, voordat er een straf is. Wat moet de straf zelf bereiken?", "Eigenrichting (zelf wraak nemen) wil de rechtsstaat juist voorkomen."],
         uitlegPad: {
           stappen: [{ titel: "Vier doelen", tekst: "Strafdoelen: **vergelding** (verdiende straf), **preventie** (speciaal: afschrikken dader; generaal: afschrikken anderen), **resocialisatie** (heropvoeden, terug in maatschappij), **beveiliging** (gevaarlijke daders weg).\n\nHet Nederlandse strafrecht legt nadruk op resocialisatie (TBS-systeem, kortere straffen dan VS)." }],
           niveaus: { basis: "Resocialisatie.", simpeler: "Doel = resocial.", nogSimpeler: "Resocialisatie" },
@@ -313,9 +313,9 @@ const steps = [
       },
       {
         q: "Wat is **populisme** als ideologie?",
-        options: ["Volk tegenover elite","Religieus extremisme","Communisme","Liberalisme"],
+        options: ["Het zuivere volk tegenover de elite","De eigen natie boven alles","Klassenstrijd en gemeenschappelijk bezit","Individuele vrijheid en een kleine overheid"],
         answer: 0,
-        wrongHints: [null, "Populisme kan religieus gekleurd zijn, maar wat is de kern van het idee?", "Communisme draait om klassenstrijd en gemeenschappelijk bezit. Is dat de kern van populisme?", "Liberalisme draait om individuele vrijheid. Is dat de kern van populisme?"],
+        wrongHints: [null, "Dat is de kern van nationalisme. Populisten zijn vaak nationalistisch, maar wat is de kern van populisme?", "Dat is de kern van communisme. Is dat ook de kern van populisme?", "Dat is de kern van liberalisme. Is dat ook de kern van populisme?"],
         uitlegPad: {
           stappen: [{ titel: "Anti-elite politiek", tekst: "**Populisme**: politieke stijl die ' **zuivere volk** ' contrasteert met ' **corrupte elite** '. Kan links (Chavez, La France Insoumise) of rechts (PVV, FvD, Trump) zijn. Vaak charismatische leider, simpele oplossingen voor complexe problemen, weerstand tegen mainstream-media + experts." }],
           theorie: "Toets-trend: opkomst populisme in westen sinds 2008-crisis + 2016 (Brexit, Trump).",

@@ -268,3 +268,60 @@ Controle: `node --check` groen voor alle 6 bestanden; `vergelijk-met-main.mjs --
 - **wereld-globalisering-havo-vwo** (wereldAardrijkskundeHavoVwo.js) stap 5 vraag 2 · optie 2: "Nederland" → "Namibië" · optie 3: "Zweden" → "Brazilië" · optie 4: "Japan" → "Verenigde Staten" · hint 2: "0,28 — laag." → "Namibië is na zijn buurland het meest ongelijke land (ongeveer 0,59). Welk buurland met een apartheidsverleden scoort nog hoger?" · hint 3: "0,29 — laag." → "Brazilië is erg ongelijk (ongeveer 0,52), maar een land in zuidelijk Afrika scoort nog hoger. Welk land met een apartheidsverleden?" · hint 4: "0,33 — matig." → "De VS is het meest ongelijke rijke westerse land (ongeveer 0,40). Is dat ook het hoogste ter wereld?"
 - **wereld-globalisering-havo-vwo** (wereldAardrijkskundeHavoVwo.js) stap 5 vraag 3 · optie 2: "Iedereen is er welvarend" → "Te weinig olie om te exporteren" · optie 3: "Stabiele democratie" → "Een tekort aan arbeidskrachten" · hint 2: "Het woord 'maar' in de vraag wijst op een tegenstelling. Past 'welvarend' daarbij?" → "Nigeria is juist een van de grootste olieproducenten van Afrika. Wat gaat er mis met al dat geld?" · hint 3: "Niet stabiel." → "Nigeria heeft een snelgroeiende, jonge bevolking van ruim 200 miljoen. Is een tekort aan werkkrachten het probleem?"
 - **wereld-globalisering-havo-vwo** (wereldAardrijkskundeHavoVwo.js) stap 5 vraag 4 · optie 4: "NL" → "India" · hint 2: "Niet meer." → "De VS was lang een grote partner, maar werd ingehaald. Door welk land, in 2009?" · hint 3: "Was, niet meer." → "Frankrijk was als oude koloniale macht lang belangrijk. Welk Aziatisch land haalde het in?" · hint 4: "Wel groot maar niet grootste." → "India handelt steeds meer met Afrika, maar is (nog) kleiner. Welk land bouwt met de Nieuwe Zijderoute havens en spoorlijnen in Afrika?"
+
+
+## Ronde 3 (na blinde detectie)
+
+**Tellingen:** 57 gemarkeerd · 43 hersteld · 6 vals alarm · 8 twijfel. Controle: `node --check` op alle 6 bestanden groen; `vergelijk-met-main` → 0 afwijkingen (answer, q en aantal opties ongewijzigd). Geen van de bekende steekproef-vondsten viel in deze bestanden.
+
+**Vals alarm (begrip in het antwoord = de lesstof zelf, afleiders zijn echte verwisselingen):** globalisering stap 2 vraag 1 (comparatief vs absoluut voordeel) · klimaatverandering stap 2 vraag 4 (welke gassen broeikasgas zijn ís de stof; kale hints bij zuurstof/argon wel herschreven tot denkprikkel; lachgas/F-gassen kunnen geen afleider zijn, die houden óók meer warmte vast) · klimaten stap 7 vraag 2 (Siberië/IJsland/Canada zijn echte verwisselingen) · platentektoniek stap 3 vraag 2 (Euraziatisch) en stap 5 vraag 3 (trog = geul) · wereld stap 1 vraag 3 (afleiders combineren al globaal + lokaal).
+
+### Twijfel voor Mark
+- globalisering stap 4 vraag 3 (**brain drain**): de Engelse term vertaalt zich in het antwoord; hints herschreven zodat ze 'drain' niet meer voorzeggen.
+- klimaten stap 10 vraag 10/11/12 (woestijn = droog, thermometer, Sahara = woestijn): eindtoets-basisvragen, bewust laag niveau; met lesstof-afleiders niet moeilijker te maken zonder twee goede antwoorden (bv. "heet" bij woestijn).
+- nederlandWater stap 5 vraag 2 (IJssel → IJsselmeer): antwoord staat in `q`.
+- wereld stap 1 vraag 5: `q` "Welk **antiglobalisering**-fenomeen?" is geen goede zin (voorstel: "Welk verschijnsel past bij antiglobalisering?"); `q` mag ik niet wijzigen.
+- wereld stap 3 vraag 2 (resource curse, "paradox" in `q`) en stap 5 vraag 5 (SDG voluit in `q`): antwoord volgt uit de vraag; hints bij stap 5 vraag 5 zeggen niet meer "waar staat de D/S voor".
+
+### Herstelde vragen (oud → nieuw)
+- globalisering 1·1: afleiders schaalniveaus/sectoren/hobby's → drie andere "dimensie-viertallen" (duurzaamheidspijlers, militair/religieus, demografisch/ecologisch) met denkprikkel-hints.
+- globalisering 1·5: "Politieke integratie"/"Meer vrije handel" → "Re-shoring"/"Near-shoring" (ook 'terugtrekken', maar bedrijfsstrategie i.p.v. trend van een land).
+- globalisering 2·2: klimaat/mensenrechten/militair → handelsdoelen van andere organisaties (één munt = EU, leningen = IMF, olieprijzen = OPEC).
+- globalisering 2·4: drie absurde wereldmaatregelen → drie "wereldwijde … van 15%" (max. invoerheffing, CO₂-heffing vliegtickets, btw-minimum = EU-regel).
+- globalisering 3·4: "Grote leningen aan regeringen"/"voedselpakketten" → "Kleine giften …"/"Kleine subsidies …"; hint "'Micro' betekent heel klein" weg.
+- globalisering 3·5: "De kwaliteit van instituties zoals rechtspraak" → "De kwaliteit van rechtspraak en bestuur" (woord uit `q` weg).
+- globalisering 4·5: "Goede scholen in het herkomstland" → "Strenge grenscontroles onderweg" (obstakel, ook negatief).
+- globalisering 5·2: Olympische idealen/EU-richtlijnen/WO2 → "De Millenniumdoelen uit 2000" vs Agenda 21 (1992), Kyoto-doelen (1997), Brundtland-rapport (1987).
+- globalisering 5·3: subsidie groene fabrieken/auto-normen → exportsubsidie groene producten/verbod afvalexport; hints zeggen niet meer "'Border' = grens".
+- globalisering 5·5: "Productie terughalen naar het thuisland" + losse afleiders → "Productie verplaatsen naar het eigen land" vs near-shoring, off-shoring, outsourcing.
+- klimaatverandering 1·3: "VN-panel …" → "VN-orgaan …"; afleiders EU-dienst/milieuclub → VN-bureau dat het weer meet (WMO), VN-klimaatfonds.
+- klimaatverandering 1·4: oude kranten/rotstekeningen/thermometers overal → drie wetenschappelijke drietallen (satellieten/ballonnen/radar, weerstations, kronieken/logboeken).
+- klimaatverandering 3·1 en 6·4 (kantelpunt): weer/record/vanzelf stoppen/seizoenen → 1,5 °C-grens, piek in de uitstoot, netto-nul.
+- klimaatverandering 4·1: "… onder zeeniveau en er wonen veel mensen" → "Een groot deel van het land ligt onder zeeniveau"; hints vragen niet meer naar "als de zee stijgt".
+- klimaatverandering 4·4: "Aanpassen aan de gevolgen …" → "Maatregelen tegen de gevolgen van opwarming"; hint 'Adaptatie is een soort maatregel' weg.
+- klimaatverandering 5·3 (NDC): "Nationaal klimaatplan per land" → "Klimaatplan dat een land zelf opstelt"; alle opties beginnen met "Klimaat…"; hints "waar staat de N voor" weg.
+- klimaatverandering 6·5: "Zonnepanelen en windmolens" → "Windenergie op zee" (enige tweeledige optie weg).
+- klimaatverandering 6·6: "Aarde koelt af"/"Zeespiegel daalt" → "Golfstroom wordt sterker"/"Zeewater wordt zouter".
+- klimaten 1·2: "Vandaag is het zonnig …" → "Afgelopen zomer was Italië extreem heet en droog" (uitlegPad mee).
+- klimaten 2·2 (twee-goed): "De zon komt er bijna nooit boven de horizon" → "De aarde draait daar langzamer rond" (basiskennis mee).
+- klimaten 7·1: sneeuw/rijp → "Bodem die elke winter even bevriest"/"IJs dat altijd op een bergtop ligt"; hints "'perma' betekent blijvend" weg.
+- klimaten 8·2: "Er waait koude wind van Antarctica" → "Het is daar winter als het bij ons zomer is".
+- klimaten 9·1: "Uitstoot van gassen door vulkanen" → "Het ozongat door cfk's van mensen" (niet meer enige optie met 'mensen').
+- klimaten 9·2: "De zeespiegel daalt doordat ijs aangroeit" → "Woestijnen krijgen meer regen en worden groen".
+- klimaten 10·3: "Toendra" → "Steppeklimaat".
+- klimaten 10·5: "Seizoenswind die een natte en een droge tijd brengt" → "Seizoenswind met een natte en een droge tijd" (lengte).
+- klimaten 10·6 (Köppen): wolken/windkracht/graden → "Indeling van de aarde naar temperatuur en regen" vs tijdzones, passaatwindgordels, afstand tot de evenaar.
+- klimaten 10·15: "Klimaatopwarming" → "Het versterkte broeikaseffect"; "Zure regen" → "Zure regen door uitlaatgassen".
+- klimaten 10·17: "Droge wind uit de woestijn"/"Koude wind uit het noorden" → "Droge zomerwind …"/"Koude winterwind …" (ook seizoensgebonden).
+- klimaten 10·19: "Minder droogte" → "Meer zee-ijs rond de Noordpool"; hints zeggen het antwoord niet meer.
+- nederlandWater 1·4: "~1.836 doden" + ronde getallen → "Ruim 1.800 / 600 / 6.000 / 25.000 doden".
+- nederlandWater 2·4: Drenthe/Limburg → Noord-Holland/Zeeland (ook met polders, maar al eeuwen provincie).
+- nederlandWater 3·1: "62 schuiven die open en dicht kunnen" → "Beweegbare schuiven die bij storm dichtgaan".
+- nederlandWater 4·2: "Rivieren meer ruimte geven, niet hogere dijken" → "Uiterwaarden verdiepen en nevengeulen graven"; bruggen/tunnels → "Dijken flink verhogen en verzwaren"/"Rivieren rechttrekken voor snellere afvoer".
+- nederlandWater 5·4 (taal): "Geen eigen verkiezingen" (dubbele ontkenning) → "De provincie kiest hun bestuur"; andere opties als zinnen ("Ze heffen eigen belasting" …); uitlegPad mee.
+- platentektoniek 5·1: "Indische en Euraziatische Plaat botsen" + niet-tektonische afleiders → "Doordat twee platen daar op elkaar botsen" vs langs elkaar schuiven, rivierdalen, uit elkaar scheuren.
+- platentektoniek 7·2 (Richter): "10×" → "10× zo grote uitslag" (ook 100×/1000×/2× "zo grote uitslag"); uitleg: "10× sterker" → 10× grotere uitslag (amplitude), ~32× meer energie.
+- platentektoniek 10·2: "Snel je spullen van het strand pakken" → "Met de auto over de kustweg wegrijden".
+- platentektoniek 11·1 en 11·2: "Convergent (platen botsen)" / "Divergent — Mid-Atlantische Rug" → kale termen "Een convergente/divergente plaatgrens", "Een transformgrens", "Een hotspot midden op een plaat"; kale hints → denkprikkels.
+- platentektoniek 11·4: Eyjafjallajökull → "Tsunami bij Fukushima in Japan" (ook zeebeving, 2011); kale hint Christchurch → denkprikkel.
+- wereld 5·3 (Nigeria): "Te weinig olie om te exporteren"/"Leider in de industrie van Afrika" → "Een olievoorraad die bijna op is"/"Te weinig grote zeehavens".

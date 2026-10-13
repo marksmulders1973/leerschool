@@ -113,7 +113,7 @@ const steps = [
         q: "Wat zijn **push-factoren** bij migratie?",
         options: ["Redenen om thuisland te verlaten","Redenen om juist naar een land te gaan","Regels die migratie naar een land beperken","Gevolgen van migratie voor het nieuwe land"],
         answer: 0,
-        wrongHints: [null, "Dat zijn pull-factoren.", "Dat zijn belemmeringen onderweg. Push betekent 'duwen' — wat duwt iemand weg?", "Gaat het om gevolgen achteraf, of om redenen vooraf?"],
+        wrongHints: [null, "Dat zijn pull-factoren.", "Dat zijn belemmeringen onderweg, geen redenen om te migreren. Welke twee soorten redenen onderscheid je?", "Gaat het om gevolgen achteraf, of om redenen vooraf?"],
         uitlegPad: {
           stappen: [{ titel: "Push vs Pull", tekst: "**Push-factoren**: redenen om **weg** te gaan uit thuisland — oorlog, vervolging, armoede, klimaat. **Pull-factoren**: redenen om naar **nieuw** land te gaan — werk, kansen, familie, veiligheid. Migratie-beslissing meestal combinatie van beide. Vluchteling: push dominant. Expat: pull dominant." }],
           niveaus: { basis: "Weg-redenen.", simpeler: "Push = weg", nogSimpeler: "Weg-redenen" },
@@ -160,9 +160,9 @@ const steps = [
       },
       {
         q: "Welk verdrag is **juridisch bindend** voor lidstaten?",
-        options: ["EVRM (Europees Verdrag)","UVRM (Universele Verklaring)","Geen van beide (alleen beloftes)","Allebei (EVRM en UVRM)"],
+        options: ["Het EVRM","De UVRM","Geen van beide","Zowel EVRM als UVRM"],
         answer: 0,
-        wrongHints: [null, "Niet — moreel sterk, niet bindend.", "Is er een rechter waar je een land kunt aanklagen?", "Is een 'verklaring' net zo bindend als een 'verdrag'?"],
+        wrongHints: [null, "De UVRM is een tekst van de VN uit 1948. Kan een rechter een land daaraan houden?", "Is er een rechter waar je een land kunt aanklagen?", "Bij welke van de twee hoort een hof waar je een land kunt aanklagen?"],
         uitlegPad: {
           stappen: [{ titel: "Hof Straatsburg", tekst: "**EVRM** (Europees Verdrag Rechten van de Mens, 1950) is **juridisch bindend** voor Raad van Europa-lidstaten. Burgers kunnen klagen bij **Europees Hof Mensenrechten (EHRM) Straatsburg**. **UVRM** (Universele Verklaring, 1948) is wereldwijd moreel sterk maar **niet juridisch bindend**." }],
           theorie: "Toets-actueel: in de Urgenda-klimaatzaak gebruikte de Nederlandse rechter het EVRM om de overheid tot actie te dwingen.",
@@ -210,9 +210,9 @@ const steps = [
     checks: [
       {
         q: "**Witteboorden-criminaliteit** wordt gepleegd door:",
-        options: ["'Nette' mensen in hun beroep","Jongeren in een straatbende","Daklozen die uit nood stelen","Georganiseerde drugsbendes"],
+        options: ["Werknemers die hun functie misbruiken voor fraude","Hackers die van buitenaf bedrijven aanvallen","Bendes die drugs via de haven smokkelen","Jongeren die winkels en auto's openbreken"],
         answer: 0,
-        wrongHints: [null, "Waar komt de naam 'witte boord' vandaan?", "Wie draagt er doorgaans een overhemd met een witte boord?", "Dat is georganiseerde misdaad — een andere categorie."],
+        wrongHints: [null, "Hacken van buitenaf heet cybercriminaliteit. Wie pleegt witteboordencriminaliteit, en waar?", "Dat is georganiseerde criminaliteit, een andere categorie.", "Dat heet veelvoorkomende criminaliteit of 'street crime', een andere categorie."],
         uitlegPad: {
           stappen: [{ titel: "Edwin Sutherland 1939", tekst: "**White-collar crime** (Edwin Sutherland 1939): door **'nette' mensen** in hun beroep gepleegd. Fraude, omkoping, witwassen, milieumisdrijven, belastingontduiking. **Tegenovergesteld** klassieke 'street crime'. Vaak: hogere schade, lager opsporings-percentage, mildere straffen. Voorbeelden NL: Vestia-affaire, Imtech-faillissement, recente ABN AMRO-witwasboetes." }],
           niveaus: { basis: "'Nette' functies.", simpeler: "Witteboord = nette", nogSimpeler: "Nette mensen" },
@@ -230,9 +230,9 @@ const steps = [
       },
       {
         q: "**Broken windows-theorie** zegt:",
-        options: ["Verloedering buurt → meer criminaliteit","Meer camera's → minder criminaliteit","Meer politie op straat → meer aangiftes","Strengere straffen → minder diefstal"],
+        options: ["Zichtbare verloedering lokt meer criminaliteit uit","Armoede in een buurt lokt meer criminaliteit uit","Meer politie op straat leidt tot meer aangiftes","Strengere straffen leiden tot minder diefstal"],
         answer: 0,
-        wrongHints: [null, "Speelt techniek een rol in deze theorie? Denk aan de naam: kapotte ruiten.", "Wat zegt een kapotte ruit over een buurt?", "Gaat deze theorie over straffen?"],
+        wrongHints: [null, "Armoede staat centraal in andere theorieën. Wat zien mogelijke daders als ze door een buurt lopen?", "Deze theorie gaat niet over aangiftes. Wat zien mogelijke daders als ze door een buurt lopen?", "Afschrikking door straf is een ander idee. Waar kijkt deze theorie naar?"],
         uitlegPad: {
           stappen: [{ titel: "Kelling + Wilson 1982", tekst: "**Broken windows-theorie**: zichtbare verloedering (gebroken ramen, graffiti, vandalisme) signaleert dat niemand controleert → mensen denken normen zijn afwezig → meer criminaliteit. Aanpak: snel ingrijpen op kleine vergrijpen + buurt schoon houden. **New York-burgemeester Giuliani** paste dit in de jaren 90 radicaal toe — criminaliteit daalde (oorzaak omstreden). Kritiek: leidt tot etnisch profileren + over-aanhouding minderheden." }],
           niveaus: { basis: "Verloedering → crim.", simpeler: "BW = verloedering", nogSimpeler: "Verloedering → criminaliteit" },
@@ -240,9 +240,9 @@ const steps = [
       },
       {
         q: "Welke is **georganiseerde criminaliteit** NL?",
-        options: ["Drugshandel via havens","Vandalisme na een voetbalduel","Fraude door een directeur","Winkeldiefstal door tieners"],
+        options: ["Drugshandel via havens","Rellen door een groep hooligans","Fraude door een directeur","Milieudelict door een fabriek"],
         answer: 0,
-        wrongHints: [null, "Dat is impulsief geweld van losse groepjes. Zit er een vaste organisatie met winstdoel achter?", "Fraude binnen een gewoon bedrijf heet witteboordencriminaliteit.", "Een losse diefstal is veelvoorkomende criminaliteit. Zit er een netwerk achter?"],
+        wrongHints: [null, "Een groep is nog geen criminele organisatie. Zit er een vaste structuur met winstdoel achter?", "Fraude binnen een gewoon bedrijf heet witteboordencriminaliteit.", "Misdaad door een gewoon, legaal bedrijf heet organisatiecriminaliteit. Dat klinkt hetzelfde, maar is het niet."],
         uitlegPad: {
           stappen: [{ titel: "Cocaïne + heroïne via havens", tekst: "**Georganiseerde criminaliteit NL**: vooral **drugshandel** via Rotterdam + Antwerpen-havens. NL = belangrijk doorvoerland EU. Bij smokkel via containers: enorme bedragen + geweld. Liquidaties (Marengo-zaak Ridouan Taghi). **Peter R. de Vries vermoord 2021** door criminele organisatie. Discussie 'narcostaat'. Aanpak via 'ondermijningsfonds' + politie + justitie." }],
           niveaus: { basis: "Drugs.", simpeler: "Georg = drugs", nogSimpeler: "Drugshandel" },
@@ -289,9 +289,9 @@ const steps = [
       },
       {
         q: "Wat is **bronbescherming** voor journalisten?",
-        options: ["Recht om bron niet te onthullen","Bescherming tegen geweld op straat","Plicht om elke bron te controleren","Recht op inzage in overheidsstukken"],
+        options: ["Recht om je bron geheim te houden","Plicht om je bron bij naam te vermelden","Plicht om elke bron eerst te controleren","Recht om overheidsstukken in te zien"],
         answer: 0,
-        wrongHints: [null, "Het gaat niet om de veiligheid van de journalist — wat heeft een anonieme tipgever nodig om veilig te praten?", "Controleren is belangrijk, maar wat moet een klokkenluider kunnen vertrouwen bij een journalist?", "Dat regelt de Wet open overheid. Denk aan de anonieme informant van een journalist."],
+        wrongHints: [null, "Dat is bronvermelding: laten zien waar je info vandaan komt. Wat heeft een anonieme tipgever nodig?", "Controleren is belangrijk, maar wat moet een klokkenluider kunnen vertrouwen bij een journalist?", "Dat regelt de Wet open overheid. Denk aan de anonieme informant van een journalist."],
         uitlegPad: {
           stappen: [{ titel: "Wet 2018", tekst: "**Bronbescherming**: journalisten hoeven hun **bron niet te onthullen**, ook niet aan rechter of politie (behalve uitzonderlijke gevallen, bv. terrorisme). Wet bronbescherming 2018 NL. Cruciaal voor **persvrijheid** — zonder bronbescherming durven mensen geen info te geven. Beschermd ook door EVRM art 10 (vrijheid van meningsuiting + ontvangen)." }],
           niveaus: { basis: "Bron geheim.", simpeler: "Bronbescherming", nogSimpeler: "Bron geheim" },
