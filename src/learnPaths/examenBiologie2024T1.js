@@ -443,8 +443,8 @@ const steps = [
         wrongHints: [
           "Denk aan aderen: wat zorgt daar dat het bloed niet terugstroomt? Hebben lymfevaten iets vergelijkbaars?",
           null,
-          "Finn heeft het mis — het hart pompt BLOED, niet lymfe. Lymfe stroomt door spier-bewegingen + kleppen.",
-          "Finn heeft het mis — de pomp-werking van het hart gaat door BLOEDvaten, niet door lymfevaten.",
+          "Bekijk de uitspraak van Finn apart: lopen de lymfevaten via het hart, zoals de bloedvaten? En wat zei Julia over de lymfevaten zelf?",
+          "Kijk naar elke uitspraak apart. Hebben lymfevaten iets wat lijkt op de kleppen in aderen? En pompt het hart ook de lymfe rond?",
         ],
         explanation: "Het hart pompt BLOED door de slag- en aderen. De lymfevaten hebben geen aansluiting op de hart-pomp. Lymfe stroomt door (1) druk uit weefsels + (2) spier-bewegingen (skeletspieren knijpen lymfe vooruit) en wordt door (3) KLEPPEN in de juiste richting gehouden. Alleen Julia heeft dus gelijk.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 33",

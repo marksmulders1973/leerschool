@@ -38,8 +38,8 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Wat is een meerling?", tekst: "**Meerling** = 2 of meer kinderen tegelijk geboren. Tweeling (2), drieling (3), etc. Komt zeldzaam voor." },
-            { titel: "Statistiek NL", tekst: "Ongeveer **1% van alle geboortes** in NL is een meerling. Dat zijn ~12 per 1000 geboortes (= 1,2%). Afgerond: 1%." },
-            { titel: "Genen + FSH-rol", tekst: "Hoe meer FSH → meer eicellen rijpen tegelijk → grotere kans op meerlingen. Vrouwen met FSH-genen krijgen vaker tweelingen. Maar gemiddeld over hele bevolking blijft 1%." },
+            { titel: "Statistiek NL", tekst: "In NL is ongeveer **1 tot 2% van alle bevallingen** een meerling (rond de 1,6%). Van de vier opties ligt **1%** daar het dichtst bij." },
+            { titel: "Genen + FSH-rol", tekst: "Hoe meer FSH → meer eicellen rijpen tegelijk → grotere kans op meerlingen. Vrouwen met FSH-genen krijgen vaker tweelingen. Maar gemiddeld over de hele bevolking blijft het rond de 1 à 2%." },
           ],
           woorden: [{ woord: "FSH", uitleg: "Follikel-Stimulerend Hormoon — uit hypofyse, stimuleert eicel-rijping." }, { woord: "hypofyse", uitleg: "Klier in hersenen die meerdere hormonen produceert." }],
           theorie: "Toets-truc: voor kans-statistiek-vragen — onthoud Nederlandse gemiddelden. Meerling ≈ 1% (tweelingen ~1,2 per 100 geboortes, afgerond 1%). IVF verhoogt naar ~10%.",
