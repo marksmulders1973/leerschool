@@ -1860,10 +1860,10 @@ const steps = [
         wrongHints: [null, "Dat is een kader met conclusie.", "Het begin staat meestal in een ovaal.", "Einde ook in apart vakje."],
       },
       {
-        q: "Stappenplan **tandenpoetsen**: pasta op borstel → poetsen → spoelen. Wat is **stap 1**?",
-        options: ["Pasta op borstel", "Poetsen", "Spoelen", "Slapen"],
+        q: "In een stappenplan voor **tandenpoetsen** staan de stappen door elkaar: spoelen – uitspugen – poetsen – pasta op borstel. Wat is **stap 1**?",
+        options: ["Pasta op borstel", "Poetsen", "Spoelen", "Uitspugen"],
         answer: 0,
-        wrongHints: [null, "Daarvoor moet pasta erop.", "Komt na poetsen.", "Niet relevant."],
+        wrongHints: [null, "Kun je al poetsen als er nog niets op je tandenborstel zit?", "Spoelen doe je pas als je klaar bent met poetsen.", "Uitspugen doe je na het poetsen. Wat heb je nodig voordat je kunt beginnen?"],
       },
       {
         q: "In een **stappenplan-schema** wijzen de pijlen...",

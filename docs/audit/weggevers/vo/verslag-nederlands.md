@@ -400,3 +400,168 @@ De twee twijfels uit ronde 1 (tekstanalyse stap 13 vraag 2, zinsontleding stap 1
 - tekstanalyse.js stap 12 vraag 1 · optie 2: "Er wordt een retorische vraag gesteld" → "Het onderwerp "regering" + het woord "dossier"" · optie 3: "Er wordt een controleerbaar feit genoemd" → "Het werkwoord "omgaat" in de tegenwoordige tijd" · optie 4: "Er ontbreekt een bron voor deze bewering" → "Het ontbreken van een bron bij "dit dossier"" · hint 2, 3, 4 herschreven
 - tekstanalyse.js stap 13 vraag 3 · optie 4: "Suikerbelasting in Nederland en de gevolgen daarvan." → "Een blikje frisdrank bevat ruim zeven suikerklontjes." · hint 2, 3, 4 herschreven
 - tekstanalyse.js stap 13 vraag 11 · optie 2: "Welk onderwerp noemt de titel?" → "Welke vraag beantwoordt de eerste alinea?" · optie 4: "Wie heeft de tekst geschreven?" → "Welke vraag beantwoordt het middenstuk?" · hint 2, 3, 4 herschreven
+
+## Tweede controle (na steekproef)
+
+**Aanleiding**: de blinde steekproef vond na drie rondes nog spelling st4 v1 (melk: zwakke afleiders, vraag past niet bij de les). Daarom zijn alle meerkeuzevragen in de 13 bestanden opnieuw nagelopen met de strengere maatstaf (zelf oplossen, "kan het zonder lesstof?", kale of verklappende hints).
+
+**Tellingen**: 355 meerkeuzevragen nagekeken · 144 hersteld (26 met nieuwe afleiders, 118 alleen hints) · 0 fout antwoord gevonden · 7 twijfel voor Mark. Controle: `node --check` groen op alle 13 bestanden; `vergelijk-met-main --alleen …` → 13 bestanden · 0 afwijkingen (answer, q en het aantal opties ongewijzigd).
+
+**Wat er vooral mis was**
+- Afleiders die je met gezond verstand wegstreept: onzinspelling ("l-open", "td", "vreyheid", "boompetje", "pan-koek"), niet-drogredenen tussen drogredenen ("Vergelijking", "Autoriteit"), en te informele opties bij formele-brief-vragen ("Groetjes", "Liefs", "Hallo allemaal", "Slang"). Vervangen door fouten die kinderen echt maken (lope-n, paddestoel van vóór 2005, meningenverschil, hij wort, lieve/lief) of echte buurbegrippen (Met vriendelijke groet tegenover Hoogachtend, overhaaste generalisatie, cirkelredenering).
+- Hints die het antwoord omschreven ("Hier wordt een eigenschap van de film genoemd", "Hier staat er maar één", "de twee zinnen zijn juist tegengesteld"), en telegramhints ("Kat = zelfstandig nw.", "Schreef = persoonsvorm.", "Niet — dat doet het slot."). Herschreven tot een vraag bij díe optie (de vraagtruc: "wie of wat …?", "kun je er 'de' voor zetten?", "kun je het vervangen door 'is'?").
+
+**Twijfel voor Mark**
+1. **spelling st4 v1** (melk): de vraag zegt "Strikvraag over ei/ij", maar de les gaat over ei/ij en 'melk' heeft geen ei/ij. Afleiders met ei/ij (meilk, mijlk) streept iedereen weg. De opties zijn nu echte spelfouten (mellek, melg, melluk), maar de vraag blijft scheef. Voorstel: vervang de vraag door een echte ei/ij-vraag, bijv. q "Hoe schrijf je het tegenovergestelde van groot?" met opties klein / klijn / kleijn / kleien, en pas de uitleg aan.
+2. **spelling st3 v1** (paard): er is geen vierde echte fout naast t/dt; "td" is vervangen door "t of d, allebei goed" (een echte misvatting), maar die optie is langer dan de rest.
+3. **werkwoordsvervoeging st4 v2** ("krijgd") en **st5 v2** ("Gaad"): weinig kinderen schrijven dit; alleen de hints zijn herschreven. Er is geen betere vierde vorm.
+4. **zinsontleding st14 v4** ('ongelooflijk' als bijwoord): de afleiders zijn een zelfstandig naamwoord en een voorzetsel, dus het enige beschrijvende woord valt op. 'Snel' is ook een bijwoord maar staat er niet bij. Voorstel: q "Welk woord is een bijwoord dat 'snel' versterkt?" of de zin zo kiezen dat er een bijvoeglijk naamwoord als afleider in staat.
+5. **argumentatieleer st9–11 en st15 v2/v4**: bij vragen naar de structuur (enkelvoudig/neven-/onderschikkend) is "Geen argumentatie" de vierde optie; er bestaat geen vierde structuur. Laten staan, hints herschreven.
+6. **Taal in q** (q niet gewijzigd): betoog st1 v1 "doel lezer overtuigen" → "het doel de lezer te overtuigen"; betoog st1 v5 "is schrijver" → "is de schrijver"; cseSchrijf st1 v3 "in formele brief" → "in een formele brief", st4 v1 "in samenvatting" → "in een samenvatting"; cseLees st6 v3 "Wat is hoofdgedachte typisch?" → "Wat is de hoofdgedachte meestal?".
+7. **tekstanalyse st10 v1**: de goede optie was de enige zin zonder jaartal of bron; afleider 1 is nu ook een feit zonder jaartal ("Op TikTok mag je pas vanaf 13 jaar een account maken"). Controleer of die leeftijdsgrens zo in de les mag (TikTok-voorwaarden: 13 jaar).
+
+**Per herstelde vraag (oud → nieuw; basis f601737)**
+- argumentatieleer.js stap 1 vraag 2 · hint 3, 4 herschreven
+- argumentatieleer.js stap 2 vraag 1 · hint 4 herschreven
+- argumentatieleer.js stap 4 vraag 1 · hint 2, 3, 4 herschreven
+- argumentatieleer.js stap 6 vraag 1 · hint 2, 3, 4 herschreven
+- argumentatieleer.js stap 7 vraag 1 · hint 2, 3, 4 herschreven
+- argumentatieleer.js stap 9 vraag 1 · hint 2, 3, 4 herschreven
+- argumentatieleer.js stap 10 vraag 1 · hint 3, 4 herschreven
+- argumentatieleer.js stap 11 vraag 1 · hint 2, 3, 4 herschreven
+- argumentatieleer.js stap 13 vraag 1 · hint 2, 3, 4 herschreven
+- argumentatieleer.js stap 13 vraag 2 · hint 2, 3, 4 herschreven
+- argumentatieleer.js stap 14 vraag 1 · hint 2, 3, 4 herschreven
+- argumentatieleer.js stap 15 vraag 1 · hint 2, 3 herschreven
+- argumentatieleer.js stap 15 vraag 2 · hint 2, 4 herschreven
+- argumentatieleer.js stap 15 vraag 3 · hint 2, 3, 4 herschreven
+- argumentatieleer.js stap 15 vraag 4 · hint 2, 3, 4 herschreven
+- argumentatieleer.js stap 15 vraag 5 · optie 4: "Vergelijking" → "Overhaaste generalisatie" · hint 3, 4 herschreven
+- argumentatieleer.js stap 15 vraag 6 · optie 3: "Autoriteit" → "Cirkelredenering" · optie 4: "Vergelijking" → "Overhaaste generalisatie" · hint 2, 3, 4 herschreven
+- argumentatieleer.js stap 15 vraag 11 · hint 4 herschreven
+- betoogBeschouwingHavoVwo.js stap 1 vraag 3 · optie 2: "Opinie-stuk over euthanasie" → "Krantenstuk dat voor- en nadelen van kernenergie afweegt" · hint 2 herschreven
+- betoogBeschouwingHavoVwo.js stap 2 vraag 1 · optie 3: "Voorbeelden" → "Voorbeelden + argumenten" · optie 4: "Tegenargumenten" → "Tegenargument + weerlegging"
+- betoogBeschouwingHavoVwo.js stap 2 vraag 5 · hint 3, 4 herschreven
+- betoogBeschouwingHavoVwo.js stap 3 vraag 2 · hint 2 herschreven
+- betoogBeschouwingHavoVwo.js stap 3 vraag 3 · hint 2, 4 herschreven
+- betoogBeschouwingHavoVwo.js stap 4 vraag 1 · hint 4 herschreven
+- betoogBeschouwingHavoVwo.js stap 4 vraag 2 · hint 2 herschreven
+- betoogBeschouwingHavoVwo.js stap 4 vraag 3 · hint 2, 4 herschreven
+- betoogBeschouwingHavoVwo.js stap 5 vraag 1 · hint 2, 3 herschreven
+- cseLeesvaardigheidNederlands.js stap 5 vraag 2 · optie 4: "Verkopen" → "Overtuigen" · hint 4 herschreven
+- cseLeesvaardigheidNederlands.js stap 6 vraag 2 · hint 2, 3, 4 herschreven
+- cseLeesvaardigheidNederlands.js stap 6 vraag 4 · hint 2, 3, 4 herschreven
+- cseSchrijfvaardigheidNederlands.js stap 1 vraag 2 · optie 2: "Groetjes," → "Met vriendelijke groet," · optie 3: "Liefs," → "Met hartelijke groet," · hint 2, 3 herschreven
+- cseSchrijfvaardigheidNederlands.js stap 1 vraag 5 · optie 3: "Hallo allemaal" → "Dag meneer / mevrouw" · optie 4: "Beste vriend / vriendin" → "Hallo heer / mevrouw" · hint 3, 4 herschreven
+- cseSchrijfvaardigheidNederlands.js stap 5 vraag 1 · optie 4: "Hij worden" → "Hij wort" · hint 4 herschreven
+- cseSchrijfvaardigheidNederlands.js stap 5 vraag 4 · hint 3 herschreven
+- cseSchrijfvaardigheidNederlands.js stap 6 vraag 1 · optie 2: "Hoi!" → "Geachte heer Jansen," · optie 3: "Lieve familie," → "Hallo heer/mevrouw," · optie 4: "Beste vriend," → "Dag meneer/mevrouw," · hint 2, 3, 4 herschreven
+- cseSchrijfvaardigheidNederlands.js stap 6 vraag 2 · optie 4: "Slang" → "Neutraal" · hint 2, 4 herschreven
+- literatuurgeschiedenis.js stap 2 vraag 1 · hint 3, 4 herschreven
+- literatuurgeschiedenis.js stap 12 vraag 1 · hint 3, 4 herschreven
+- literatuurgeschiedenis.js stap 13 vraag 1 · hint 2, 3, 4 herschreven
+- literatuurgeschiedenis.js stap 13 vraag 2 · hint 2, 3 herschreven
+- literatuurgeschiedenis.js stap 14 vraag 3 · hint 2, 4 herschreven
+- literatuurgeschiedenis.js stap 14 vraag 4 · hint 2, 3 herschreven
+- literatuurgeschiedenis.js stap 14 vraag 5 · hint 2 herschreven
+- literatuurgeschiedenis.js stap 14 vraag 7 · hint 2 herschreven
+- literatuurgeschiedenis.js stap 14 vraag 11 · hint 3 herschreven
+- nederlandsCseHavoVwo.js stap 5 vraag 3 · hint 2, 3, 4 herschreven
+- schrijfvaardigheid.js stap 1 vraag 1 · hint 2, 3 herschreven
+- schrijfvaardigheid.js stap 1 vraag 2 · hint 2, 3 herschreven
+- schrijfvaardigheid.js stap 2 vraag 1 · hint 4 herschreven
+- schrijfvaardigheid.js stap 7 vraag 1 · optie 3: "Willekeurig — volgorde maakt niet uit" → "Ondersteunend → allersterkste → redelijk sterk" · hint 3 herschreven
+- schrijfvaardigheid.js stap 8 vraag 1 · optie 2: "Werken tot 67 is onvermijdelijk en daarom een verstandige keuze van de overheid." → "Zo moest een stratenmaker uit Tilburg al op zijn 58e stoppen door rugklachten." · hint 2 herschreven
+- schrijfvaardigheid.js stap 9 vraag 1 · hint 2, 3, 4 herschreven
+- schrijfvaardigheid.js stap 10 vraag 1 · hint 2, 3, 4 herschreven
+- schrijfvaardigheid.js stap 10 vraag 2 · hint 2, 3, 4 herschreven
+- schrijfvaardigheid.js stap 13 vraag 1 · hint 3 herschreven
+- schrijfvaardigheid.js stap 13 vraag 3 · hint 2, 3, 4 herschreven
+- schrijfvaardigheid.js stap 13 vraag 4 · hint 2 herschreven
+- schrijfvaardigheid.js stap 13 vraag 6 · optie 4: "Mening kiezen" → "Vermaken" · hint 4 herschreven
+- schrijfvaardigheid.js stap 13 vraag 9 · hint 2, 3, 4 herschreven
+- spelling.js stap 1 vraag 1 · optie 3: "l-open" → "lo-pe-n" · optie 4: "lopen" → "lope-n" · hint 2, 3, 4 herschreven
+- spelling.js stap 1 vraag 2 · optie 1 (goed): "Gesloten" → "Gesloten, want 'kam' eindigt op een medeklinker" · optie 2: "Open" → "Open, want de a in 'kam' klinkt kort" · optie 3: "Halfopen" → "Open, want 'kam' eindigt op een klinker" · optie 4: "Geen van beide" → "Gesloten, want de a in 'kam' klinkt lang" · hint 2, 3, 4 herschreven · uitlegPad bijgewerkt
+- spelling.js stap 2 vraag 1 · hint 3 herschreven
+- spelling.js stap 2 vraag 2 · hint 4 herschreven
+- spelling.js stap 3 vraag 1 · optie 3: "td" → "t of d, allebei goed" · hint 3, 4 herschreven · uitlegPad bijgewerkt
+- spelling.js stap 3 vraag 2 · optie 3: "ff" → "ve" · optie 4: "vt" → "ft" · hint 3, 4 herschreven
+- spelling.js stap 4 vraag 1 · optie 3: "meelk" → "melg" · hint 3 herschreven
+- spelling.js stap 4 vraag 2 · optie 4: "vreyheid" → "vrijhijd" · hint 3, 4 herschreven
+- spelling.js stap 5 vraag 1 · optie 4: "oto" → "autoo" · hint 4 herschreven
+- spelling.js stap 6 vraag 1 · hint 2 herschreven
+- spelling.js stap 8 vraag 1 · optie 4: "pan-koek" → "pankoek" · hint 4 herschreven
+- spelling.js stap 9 vraag 1 · optie 3: "mening-verschil" → "meningenverschil" · hint 3, 4 herschreven
+- spelling.js stap 11 vraag 1 · optie 3: "boompetje" → "bompje" · hint 3, 4 herschreven
+- spelling.js stap 12 vraag 1 · hint 3, 4 herschreven
+- spelling.js stap 13 vraag 1 · optie 4: "pad-stoel" → "paddestoel" · hint 3, 4 herschreven
+- spelling.js stap 13 vraag 2 · hint 4 herschreven
+- spelling.js stap 13 vraag 4 · hint 3 herschreven
+- spelling.js stap 14 vraag 2 · hint 3, 4 herschreven
+- stijlLiteratuurHavoVwo.js stap 1 vraag 2 · hint 3 herschreven
+- stijlLiteratuurHavoVwo.js stap 1 vraag 4 · hint 2 herschreven
+- stijlLiteratuurHavoVwo.js stap 2 vraag 4 · hint 3 herschreven
+- tekstanalyse.js stap 1 vraag 1 · hint 2 herschreven
+- tekstanalyse.js stap 1 vraag 2 · hint 2, 3, 4 herschreven
+- tekstanalyse.js stap 6 vraag 1 · hint 4 herschreven
+- tekstanalyse.js stap 10 vraag 1 · optie 1: "De zorgpremie is in 2025 gestegen." → "Op TikTok mag je pas vanaf 13 jaar een account maken." · hint 1 herschreven
+- tekstanalyse.js stap 10 vraag 2 · hint 2, 3, 4 herschreven
+- tekstanalyse.js stap 11 vraag 1 · hint 4 herschreven
+- tekstanalyse.js stap 13 vraag 1 · hint 2, 3, 4 herschreven
+- tekstanalyse.js stap 13 vraag 3 · hint 2 herschreven
+- tekstanalyse.js stap 13 vraag 4 · hint 2, 3 herschreven
+- werkwoordsvervoeging.js stap 1 vraag 1 · hint 4 herschreven
+- werkwoordsvervoeging.js stap 1 vraag 2 · hint 3, 4 herschreven
+- werkwoordsvervoeging.js stap 2 vraag 1 · optie 4: "fie" → "fiet" · hint 4 herschreven
+- werkwoordsvervoeging.js stap 4 vraag 2 · hint 4 herschreven
+- werkwoordsvervoeging.js stap 5 vraag 2 · hint 4 herschreven
+- werkwoordsvervoeging.js stap 8 vraag 2 · hint 3 herschreven
+- werkwoordsvervoeging.js stap 8 vraag 3 · hint 3 herschreven
+- werkwoordsvervoeging.js stap 9 vraag 1 · hint 3 herschreven
+- werkwoordsvervoeging.js stap 11 vraag 1 · hint 3 herschreven
+- werkwoordsvervoeging.js stap 13 vraag 3 · hint 3 herschreven
+- werkwoordsvervoeging.js stap 14 vraag 3 · hint 3 herschreven
+- werkwoordsvervoeging.js stap 14 vraag 4 · hint 3 herschreven
+- woordsoortenNederlands.js stap 1 vraag 1 · hint 2, 3, 4 herschreven
+- woordsoortenNederlands.js stap 1 vraag 2 · hint 2, 3, 4 herschreven
+- woordsoortenNederlands.js stap 2 vraag 1 · hint 2, 3, 4 herschreven
+- woordsoortenNederlands.js stap 2 vraag 2 · hint 2, 3, 4 herschreven
+- woordsoortenNederlands.js stap 3 vraag 1 · hint 2, 3, 4 herschreven
+- woordsoortenNederlands.js stap 4 vraag 2 · hint 2, 3, 4 herschreven
+- woordsoortenNederlands.js stap 5 vraag 1 · hint 2, 3, 4 herschreven
+- woordsoortenNederlands.js stap 5 vraag 2 · hint 2, 3, 4 herschreven
+- woordsoortenNederlands.js stap 6 vraag 1 · hint 2, 3, 4 herschreven
+- woordsoortenNederlands.js stap 6 vraag 2 · hint 2, 3, 4 herschreven
+- woordsoortenNederlands.js stap 7 vraag 1 · hint 2, 3, 4 herschreven
+- woordsoortenNederlands.js stap 7 vraag 2 · hint 2, 3, 4 herschreven
+- woordsoortenNederlands.js stap 8 vraag 1 · hint 2, 3, 4 herschreven
+- woordsoortenNederlands.js stap 8 vraag 2 · hint 2, 3, 4 herschreven
+- woordsoortenNederlands.js stap 9 vraag 2 · hint 2, 3, 4 herschreven
+- woordsoortenNederlands.js stap 10 vraag 1 · hint 2, 3, 4 herschreven
+- woordsoortenNederlands.js stap 10 vraag 2 · hint 2, 3, 4 herschreven
+- woordsoortenNederlands.js stap 11 vraag 1 · hint 2, 3, 4 herschreven
+- woordsoortenNederlands.js stap 11 vraag 2 · hint 2, 3, 4 herschreven
+- woordsoortenNederlands.js stap 11 vraag 3 · hint 2 herschreven
+- woordsoortenNederlands.js stap 11 vraag 4 · hint 2, 3, 4 herschreven
+- woordsoortenNederlands.js stap 11 vraag 5 · hint 2 herschreven
+- zinsontleding.js stap 1 vraag 1 · hint 2, 4 herschreven
+- zinsontleding.js stap 1 vraag 2 · hint 3, 4 herschreven
+- zinsontleding.js stap 2 vraag 1 · hint 2, 3, 4 herschreven
+- zinsontleding.js stap 2 vraag 2 · hint 2, 4 herschreven
+- zinsontleding.js stap 5 vraag 1 · hint 2, 3, 4 herschreven
+- zinsontleding.js stap 6 vraag 1 · hint 2, 3, 4 herschreven
+- zinsontleding.js stap 7 vraag 1 · hint 2, 3, 4 herschreven
+- zinsontleding.js stap 7 vraag 2 · hint 2, 3, 4 herschreven
+- zinsontleding.js stap 8 vraag 1 · hint 2, 3, 4 herschreven
+- zinsontleding.js stap 9 vraag 1 · hint 2, 3, 4 herschreven
+- zinsontleding.js stap 9 vraag 2 · hint 2, 3, 4 herschreven
+- zinsontleding.js stap 10 vraag 1 · hint 2, 3, 4 herschreven
+- zinsontleding.js stap 11 vraag 1 · hint 2, 3, 4 herschreven
+- zinsontleding.js stap 12 vraag 1 · hint 2, 3, 4 herschreven
+- zinsontleding.js stap 12 vraag 2 · hint 2, 3, 4 herschreven
+- zinsontleding.js stap 12 vraag 3 · hint 2, 3, 4 herschreven
+- zinsontleding.js stap 12 vraag 4 · hint 2, 3, 4 herschreven
+- zinsontleding.js stap 13 vraag 3 · hint 2, 3 herschreven
+- zinsontleding.js stap 14 vraag 1 · hint 3, 4 herschreven
+- zinsontleding.js stap 14 vraag 3 · hint 2, 3, 4 herschreven
+- zinsontleding.js stap 14 vraag 4 · hint 2, 3, 4 herschreven

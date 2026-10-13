@@ -221,9 +221,9 @@ const steps = [
       },
       {
         q: "Wat is de **bedoeling** van een **schoolboek-tekst**?",
-        options: ["Informeren", "Activeren", "Amuseren", "Verkopen"],
+        options: ["Informeren", "Activeren", "Amuseren", "Overtuigen"],
         answer: 0,
-        wrongHints: [null, "Roept een schoolboek-tekst je op om iets te kopen of te gaan doen?", "Een schoolboek mag leuk zijn, maar waarvoor gebruik je het in de les?", "Probeert een schoolboek je echt iets te verkopen?"],
+        wrongHints: [null, "Roept een schoolboek-tekst je op om iets te kopen of te gaan doen?", "Een schoolboek mag leuk zijn, maar waarvoor gebruik je het in de les?", "Overtuigen = de lezer van een mening laten uitgaan. Welke mening zou een schoolboek over fotosynthese je willen opdringen?"],
       },
       {
         q: "Een **column** met humor + mening — bedoeling?",
@@ -256,7 +256,7 @@ const steps = [
         q: "*'Het regende. **Daarom** bleef ik thuis.'* Welk soort signaalwoord?",
         options: ["Gevolg", "Reden", "Tegenstelling", "Voorbeeld"],
         answer: 0,
-        wrongHints: [null, "Reden is 'omdat'.", "Tegenstelling 'maar'.", "Voorbeeld 'zoals'."],
+        wrongHints: [null, "Een reden kondig je aan met 'omdat': het regende, omdat … Komt wat na 'daarom' staat vóór of ná het regenen?", "Een tegenstelling kondig je aan met 'maar'. Staat thuisblijven tegenover de regen?", "Een voorbeeld kondig je aan met 'zoals'. Is thuisblijven een voorbeeld van regen?"],
       },
       {
         q: "Wat is **hoofdgedachte** typisch?",
@@ -268,7 +268,7 @@ const steps = [
         q: "Schrijver gebruikt **'Volgens hoogleraar Jansen van de TU Delft ...'**. Welk argument-type?",
         options: ["Autoriteit", "Emotioneel", "Praktisch", "Voorbeeld"],
         answer: 0,
-        wrongHints: [null, "Een emotioneel argument speelt in op je gevoel. Wie wordt hier genoemd, en waarom?", "Een praktisch argument gaat over wat werkt of handig is. Wie wordt hier als bron opgevoerd?", "Wordt hier een concreet geval beschreven, of wordt iemand aangehaald?"],
+        wrongHints: [null, "Een emotioneel argument speelt in op je gevoel. Welk gevoel roept deze zin bij je op?", "Een praktisch argument gaat over wat werkt of handig is. Zegt deze zin iets over wat handig is?", "Een voorbeeldargument beschrijft één concreet geval. Welk geval wordt hier beschreven?"],
       },
       {
         q: "Welke bedoeling heeft een **advertentie**?",

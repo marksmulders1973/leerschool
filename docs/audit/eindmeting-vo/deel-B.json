@@ -1,0 +1,992 @@
+[
+ {
+  "nr": 51,
+  "bron": "leerpaden",
+  "waar": "energiebronnen-po stap 6 vraag 14",
+  "q": "Wat is **isolatie** thuis?",
+  "options": [
+   "Materiaal dat warmte vasthoudt",
+   "Apparaat dat je huis verwarmt",
+   "Paneel dat stroom maakt uit zon",
+   "Meter die je verbruik bijhoudt"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is de verwarming — isolatie maakt zelf geen warmte.",
+   "Isolatie maakt geen energie.",
+   "Dat is een energiemeter."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 52,
+  "bron": "leerpaden",
+  "waar": "engels-schrijven-spreken-havo-vwo stap 5 vraag 1",
+  "q": "Welke is **correct Engels**?",
+  "options": [
+   "She works hard",
+   "She work hard",
+   "She is work hard",
+   "She working hard"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — let op de 3e persoon enkelvoud.",
+   "'Is' en 'work' zijn twee werkwoorden die hier niet samengaan. Heb je 'is' nodig in de present simple?",
+   "Niet — hier ontbreekt de persoonsvorm."
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 53,
+  "bron": "leerpaden",
+  "waar": "examen-biologie-2024-t1 stap 4 vraag 1",
+  "q": "Hans en Karlijn willen geen kinderen meer. Op de poli stellen ze vragen over sterilisatie. Na het gesprek over de sterilisatie bespreken Hans en Karlijn wat er verandert aan de zaadlozing. Hans zegt dat er na de operatie geen zaadcellen meer gemaakt worden waardoor hij onvruchtbaar is. Karlijn zegt dat er na de operatie geen testosteron meer gemaakt wordt waardoor Hans onvruchtbaar is. Wie heeft gelijk?",
+  "options": [
+   "Geen van beiden heeft gelijk.",
+   "Alleen Hans heeft gelijk.",
+   "Alleen Karlijn heeft gelijk.",
+   "Hans heeft gelijk en Karlijn heeft gelijk."
+  ],
+  "answer": 0,
+  "explanation": "Bij sterilisatie van de man (vasectomie) worden de zaadleiders doorgeknipt of afgesloten. De testikels blijven gewoon zaadcellen MAKEN én testosteron produceren. De zaadcellen kunnen alleen niet meer naar buiten — ze worden in het lichaam afgebroken. Onvruchtbaarheid ontstaat dus niet door minder productie, maar door blokkade van de doorgang.",
+  "wrongHints": [
+   null,
+   "Bekijk de uitspraak van Hans apart: wat wordt er bij sterilisatie van een man doorgeknipt? Stoppen de testikels daardoor met zaadcellen maken? En wat zei Karlijn?",
+   "Bekijk elke uitspraak apart. Waar wordt testosteron gemaakt, en verandert er iets aan dat orgaan als alleen de zaadleiders worden doorgeknipt? Geldt dat ook voor de zaadcellen?",
+   "Wat wordt er bij sterilisatie van een man precies doorgeknipt? Zit dat in de testikels zelf, of erachter?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 54,
+  "bron": "leerpaden",
+  "waar": "examen-biologie-2025-t1 stap 6 vraag 1",
+  "q": "Is het vingerdier een consument, een producent of een reducent?",
+  "options": [
+   "een consument",
+   "een producent",
+   "een reducent"
+  ],
+  "answer": 0,
+  "explanation": "Een **vingerdier** is een primaat uit Madagaskar die larven eet. Dieren die andere organismen (planten of dieren) eten = **consumenten**. Producenten = planten/algen (fotosynthese). Reducenten = schimmels/bacteriën (afbraak van dood materiaal).",
+  "wrongHints": [
+   null,
+   "Producent = plant of alg die zelf voedsel maakt met fotosynthese. Kan een vingerdier dat?",
+   "Reducent = afbreker (schimmel, bacterie die dood materiaal afbreekt). Breekt een vingerdier dood materiaal af, of doet het iets anders om aan voedsel te komen?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 55,
+  "bron": "leerpaden",
+  "waar": "examen-engels-2025-t2 stap 2 vraag 1",
+  "q": "Why did Joan ask her aunt Adell to sign up for the spelling contest again, according to the text?",
+  "options": [
+   "because Joan could not participate in the competition herself",
+   "because Joan wanted to help the school to raise more money",
+   "because she was a bit fed up with Adell's continuous boasting",
+   "because she was certain that Adell was still up to the task"
+  ],
+  "answer": 2,
+  "explanation": "Sleutel-zin alinea 2: *'Joan ... admits she was a little tired of hearing her aunt boast about her unbeaten record.'* En: *'So I said: prove it.'* Joan was de eeuwige opscheppen-verhalen zat → daagde Adell uit om het te bewijzen. 'Fed up with boasting' = klaar met opschepperij.",
+  "wrongHints": [
+   "Niet genoemd dat Joan zelf wilde meedoen — ze leidt de competitie.",
+   "Niet over school-geld — gaat over Adells record en bewijzen.",
+   null,
+   "Staat er dat Joan zeker wist dat Adell het nog kon? Lees wat Joan 'admits'."
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 56,
+  "bron": "leerpaden",
+  "waar": "examen-nederlands-2022-t1 stap 6 vraag 1",
+  "q": "Wat is de belangrijkste boodschap uit het onderzoek van Milieu Centraal, volgens de alinea's 1 en 2?",
+  "options": [
+   "We kunnen nog niet duurzamer leven, omdat er te veel hindernissen zijn.",
+   "We vinden vooral dat anderen duurzamer moeten leven, zelf doen we al genoeg.",
+   "We wensen een duurzamer leven, maar weigeren ons gedrag aan te passen.",
+   "We willen wel duurzamer leven, maar het lukt ons nog niet om te veranderen."
+  ],
+  "answer": 3,
+  "explanation": "Alinea 1-2: 'we willen wel, maar we doen het niet' — een discrepantie tussen wens en gedrag. Niet onwil, maar het lukt nog niet.",
+  "wrongHints": [
+   "Te negatief — zegt de tekst dat duurzamer leven onmogelijk is door hindernissen?",
+   "Gaat het onderzoek over wat we van anderen vinden, of over wat we zelf doen?",
+   "Is 'weigeren' niet te sterk? Lees in alinea 1 en 2 nog eens hoe de tekst ons gedrag beschrijft.",
+   null
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 57,
+  "bron": "leerpaden",
+  "waar": "feiten-details-opzoeken-po stap 3 vraag 1",
+  "q": "*\"Een toegangsbewijs voor het zwembad kost vier euro.\"* — Vraag: 'Hoe duur is een kaartje voor het zwembad?' Wat is het antwoord?",
+  "options": [
+   "Vier euro",
+   "Dat staat niet in de tekst",
+   "Veertien euro",
+   "Niets, het zwembad is gratis"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het woord 'kaartje' staat er inderdaad niet letterlijk — maar welk woord in de tekst betekent hetzelfde?",
+   "Lees het bedrag in de tekst nog eens heel precies. Neem het exact over, niet ongeveer.",
+   null
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 58,
+  "bron": "leerpaden",
+  "waar": "financiele-vorming-po stap 1 vraag 2",
+  "q": "Hoeveel **landen** gebruiken de euro?",
+  "options": [
+   "21 (eurozone)",
+   "5",
+   "27 (alle EU = Europese Unie)",
+   "50"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig.",
+   "Niet alle EU-landen gebruiken de euro — de eurozone is kleiner dan de EU zelf.",
+   "Veel te veel."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 59,
+  "bron": "leerpaden",
+  "waar": "financiele-vorming-po stap 1 vraag 7",
+  "q": "Vroeger ruilden mensen spullen met elkaar, zonder geld. Wat was daar een **probleem** bij?",
+  "options": [
+   "De ander wil jouw spullen misschien niet hebben",
+   "Je mocht alleen ruilen met je familie",
+   "Je moest bij elke ruil rente betalen",
+   "Je moest eerst een bankrekening hebben"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Was ruilen alleen binnen de familie?",
+   null,
+   "Bestonden banken toen al voor iedereen?"
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 60,
+  "bron": "leerpaden",
+  "waar": "financiele-vorming-po stap 5 vraag 5",
+  "q": "Waarom **kost** lenen geld?",
+  "options": [
+   "Je betaalt rente over wat je leent",
+   "Je krijgt rente van de bank",
+   "De bank geeft je korting",
+   "Je moet statiegeld betalen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Krijg je rente bij lenen, of bij sparen?",
+   null,
+   null
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 61,
+  "bron": "leerpaden",
+  "waar": "fotosynthese-biologie stap 6 vraag 3",
+  "q": "**Chlorofyl** zit in:",
+  "options": [
+   "Chloroplasten",
+   "Mitochondriën",
+   "Chromoplasten",
+   "Vacuole"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Mitochondriën verbranden suiker. Vangen ze ook licht op?",
+   "Chromoplasten geven bloemen en vruchten hun gele of rode kleur. Zit daar het groene pigment in?",
+   "De vacuole is gevuld met celvocht. Is dat de groene kleurstof?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 62,
+  "bron": "leerpaden",
+  "waar": "franse-revolutie-geschiedenis stap 4 vraag 3",
+  "q": "Wat gebeurde uiteindelijk met **Robespierre**?",
+  "options": [
+   "Zelf onthoofd in 1794",
+   "Keizer geworden in 1804",
+   "Gevlucht naar Engeland",
+   "Vermoord in zijn bad"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Keizer werd Napoleon, in 1804. Robespierre was toen al lang uit beeld. Hoe kwam dat?",
+   "Robespierre vluchtte niet: in juli 1794 lieten zijn tegenstanders hem oppakken. Wat deden ze met hem?",
+   "Zo werd Jean-Paul Marat vermoord, door Charlotte Corday. Robespierre stierf een jaar later, op een andere manier."
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 63,
+  "bron": "leerpaden",
+  "waar": "geld-rekenen stap 3 vraag 1",
+  "q": "Een tas kost **€ 24,50**. Je betaalt met **€ 50**. Wisselgeld?",
+  "options": [
+   "€ 25,50",
+   "€ 24,50",
+   "€ 26,50",
+   "€ 35,50"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is de prijs — je hebt aftrekking nodig.",
+   "Te veel — heb je 50 wel meegenomen?",
+   "Veel te veel — controleer met schatting."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 64,
+  "bron": "leerpaden",
+  "waar": "gemiddelden-statistiek-po stap 3 vraag 5",
+  "q": "Acht kinderen vertellen hoeveel huisdieren ze hebben: **1, 0, 2, 1, 3, 1, 0, 2**. Wat is de **modus**?",
+  "options": [
+   "1",
+   "0",
+   "2",
+   "3"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tel hoe vaak 0 voorkomt. Komt een ander getal vaker voor?",
+   null,
+   "3 is het grootste getal. Is de modus het grootste getal?"
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 65,
+  "bron": "leerpaden",
+  "waar": "gemiddelden-statistiek-po stap 3 vraag 7",
+  "q": "Kinderen kiezen hun lievelingsfruit: **appel, banaan, appel, peer, banaan, appel, kiwi**. Wat is de **modus**?",
+  "options": [
+   "Appel",
+   "Banaan",
+   "Peer",
+   "Kiwi"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tel hoe vaak banaan voorkomt. Is er fruit dat vaker gekozen is?",
+   null,
+   null
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 66,
+  "bron": "leerpaden",
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 1 vraag 3",
+  "q": "Wat bestond er **nog niet** toen jouw opa en oma kind waren?",
+  "options": [
+   "mobiele telefoons met apps",
+   "fietsen met een bagagedrager",
+   "boeken met mooie plaatjes",
+   "treinen met een conducteur"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Fietsen bestaan al meer dan honderd jaar.",
+   "Boeken bestaan al honderden jaren.",
+   "Treinen rijden al heel lang door Nederland."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 67,
+  "bron": "leerpaden",
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 4 vraag 1",
+  "q": "Wat is een **harnas**?",
+  "options": [
+   "het metalen pak van de ridder",
+   "het paard van de ridder",
+   "het zwaard van de ridder",
+   "de vlag op het kasteel"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een paard is een dier. Een harnas is iets anders.",
+   "Met een zwaard vecht je. Lees de vraag nog eens.",
+   "Die wappert op de toren."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 68,
+  "bron": "leerpaden",
+  "waar": "geschiedenis-vroeger-en-nu-g5 stap 5 vraag 5",
+  "q": "Hoeveel jaar is **een halve eeuw**?",
+  "options": [
+   "50 jaar",
+   "5 jaar",
+   "500 jaar",
+   "25 jaar"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   null,
+   "Dat is meer dan een hele eeuw!",
+   null
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 69,
+  "bron": "leerpaden",
+  "waar": "getallen-tot-20-po stap 3 vraag 8",
+  "q": "**9 - 3** = ?",
+  "options": [
+   "6",
+   "5",
+   "7",
+   "12"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — tel 3 stappen terug, niet 4.",
+   "Te veel — tel 3 stappen terug, niet 2.",
+   "Dat is 9 + 3."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 70,
+  "bron": "leerpaden",
+  "waar": "grafieken-lezen-po stap 6 vraag 4",
+  "q": "Staafdiagram huisdieren: hond 12, kat 18, vogel 4, vis 6. **Welk dier komt het minst voor**?",
+  "options": [
+   "Vogel",
+   "Hond",
+   "Kat",
+   "Vis"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Hond is 12 — niet de minste.",
+   "Kat is 18 — dat is juist de MEESTE.",
+   "Vis is 6 — er is nog een dier dat minder voorkomt."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 71,
+  "bron": "leerpaden",
+  "waar": "industriele-revolutie-havo-vwo stap 1 vraag 5",
+  "q": "Vóór 1750 werkte ~**80%** van bevolking in:",
+  "options": [
+   "Landbouw",
+   "Huisnijverheid",
+   "Mijnen",
+   "Handel"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Thuis spinnen en weven deden veel gezinnen erbij, als bijverdienste naast hun hoofdwerk. Wat was dat hoofdwerk?",
+   "Mijnen waren er wel, maar klein. Wat moest bijna iedereen doen om aan eten te komen?",
+   "Kooplieden zaten in de steden, maar de meeste mensen woonden op het platteland."
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 72,
+  "bron": "leerpaden",
+  "waar": "industriele-revolutie-havo-vwo stap 4 vraag 1",
+  "q": "**Lopende band** voor auto-productie was door:",
+  "options": [
+   "Henry Ford",
+   "Karl Benz",
+   "Thomas Edison",
+   "James Watt"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — Benz vond de auto uit, niet de lopende band.",
+   "Edison was uitvinder op het gebied van elektriciteit, niet van auto's.",
+   "Watt leefde ruim honderd jaar eerder, in de tijd van de stoom."
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 73,
+  "bron": "leerpaden",
+  "waar": "industriele-revolutie-po stap 6 vraag 18",
+  "q": "Wat zijn **goede gevolgen**?",
+  "options": [
+   "Goedkopere kleding en betere voeding",
+   "Schonere lucht in de grote steden",
+   "Meer oorlogen tussen landen",
+   "Meteen kortere werkdagen voor iedereen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Fabrieken gaven juist veel rook.",
+   "Is oorlog een goed gevolg?",
+   "Werkdagen waren eerst juist heel lang."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 74,
+  "bron": "leerpaden",
+  "waar": "informatiebronnen-po stap 4 vraag 1",
+  "q": "Welke bron is **het meest betrouwbaar** voor info over de Tweede Wereldoorlog?",
+  "options": [
+   "Website van oorlogsinstituut NIOD",
+   "Video van een willekeurige vlogger",
+   "TikTok-filmpje zonder bron",
+   "Blog zonder naam van de schrijver"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Vlogger = vaak mening, geen historicus.",
+   "TikTok zonder bron = onbetrouwbaar.",
+   "Anoniem = wie schreef? Niet te checken."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 75,
+  "bron": "leerpaden",
+  "waar": "interpunctie-po stap 1 vraag 2",
+  "q": "**Waarom** gebruiken we leestekens?",
+  "options": [
+   "Voor goed lezen",
+   "Voor mooi maken",
+   "Geen reden",
+   "Om woorden te tellen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Mooi maken is niet hun functie.",
+   "Wél een reden — duidelijk lezen.",
+   "Woorden tellen doen leestekens niet."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 76,
+  "bron": "leerpaden",
+  "waar": "kaartlezen-po stap 5 vraag 19",
+  "q": "Op kaart 1 cm bij schaal 1:25.000 = ?",
+  "options": [
+   "250 m",
+   "2,5 km",
+   "25 m",
+   "2.500 m"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te veel.",
+   "Te weinig.",
+   "Dat is 2,5 km."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 77,
+  "bron": "leerpaden",
+  "waar": "kalender-rekenen-po stap 5 vraag 6",
+  "q": "Een schoolreis duurt **3 dagen**. Je vertrekt op **woensdag 8 april**. Op welke dag kom je terug (de laatste dag van de reis)?",
+  "options": [
+   "Vrijdag 10 april",
+   "Donderdag 9 april",
+   "Zaterdag 11 april",
+   "Vrijdag 11 april"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Telt woensdag 8 april zelf ook als dag 1?",
+   null,
+   "Klopt deze dag-naam bij deze datum?"
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 78,
+  "bron": "leerpaden",
+  "waar": "kansrekening-havo-vwo stap 1 vraag 5",
+  "q": "Kans P(A) kan zijn:",
+  "options": [
+   "Tussen 0 en 1",
+   "Boven 1",
+   "Negatief",
+   "Tussen 0 en 100"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kans 1 betekent al 'zeker'. Kan iets nog zekerder zijn dan zeker?",
+   "Kans 0 betekent 'onmogelijk'. Kan iets nog onmogelijker zijn dan onmogelijk?",
+   "Percentages lopen van 0 tot 100%. Maar wat is de grootste waarde als je een kans als getal schrijft?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 79,
+  "bron": "leerpaden",
+  "waar": "kansrekening-havo-vwo stap 2 vraag 4",
+  "q": "Vaas 2 rood + 3 blauw, trek 2 ZONDER terugleggen. P(beide rood)?",
+  "options": [
+   "1/10",
+   "4/25",
+   "2/5",
+   "1/5"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "4/25 = (2/5)² hoort bij trekken mét terugleggen. Wat verandert er in de vaas na de eerste rode?",
+   "Niet — dat is alleen de kans op rood bij de eerste trekking.",
+   "Je nam bij de tweede trekking 2 rode van de 4. Hoeveel rode zitten er nog in de vaas als de eerste rood was?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 80,
+  "bron": "leerpaden",
+  "waar": "kansrekening-havo-vwo stap 4 vraag 5",
+  "q": "Lot kost €5. Win €20 met kans 1/10, anders niets. E(winst) = ?",
+  "options": [
+   "−€3",
+   "€20",
+   "€2",
+   "−€5"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "€20 krijg je alleen bij winst, en dat gebeurt maar 1 op de 10 keer. Wat krijg je gemiddeld per lot?",
+   "Dat is de gemiddelde uitkering — trek de inzet nog af.",
+   "−€5 is je verlies als je níét wint. Maar 1 op de 10 keer krijg je €20: hoeveel scheelt dat gemiddeld?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 81,
+  "bron": "leerpaden",
+  "waar": "klassieke-muziek-po stap 3 vraag 3",
+  "q": "Welk **NL-orkest** is wereldtop?",
+  "options": [
+   "Concertgebouworkest",
+   "Een dorpsfanfare",
+   "Een schoolorkest",
+   "Een popband"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Leuk, maar geen wereldtop.",
+   "Leuk, maar geen wereldtop.",
+   "Een band is geen orkest."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 82,
+  "bron": "leerpaden",
+  "waar": "kleur-licht-compositie-kunst stap 1 vraag 4",
+  "q": "Waarom kan dezelfde kleur **verschillende betekenissen** hebben?",
+  "options": [
+   "Kleursymboliek verschilt per cultuur en tijd",
+   "Elk mens ziet kleuren net iets anders",
+   "Kleur verandert door het licht in de ruimte",
+   "Elke kunstenaar kiest zelf wat een kleur betekent"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Ook mensen die precies hetzelfde zien, geven wit soms een andere betekenis. Waar komt dat verschil vandaan?",
+   "Licht verandert hoe een kleur eruitziet. Verandert het ook wat rood betekent?",
+   "Als iedere kunstenaar dat zelf koos, kon wit dan in een hele cultuur rouw betekenen? Waar komt zo'n gedeelde betekenis vandaan?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 83,
+  "bron": "leerpaden",
+  "waar": "klimaatverandering-aardrijkskunde stap 1 vraag 4",
+  "q": "Hoe weten we **historisch klimaat**?",
+  "options": [
+   "IJskernen, boomringen en koraal",
+   "Satellieten, weerballonnen en radar",
+   "Weerstations, thermometers en regenmeters",
+   "Kronieken, scheepslogboeken en rotstekeningen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Satellieten meten pas sinds de jaren 1970. Hoe kijk je honderdduizenden jaren terug?",
+   "Weerstations met thermometers meten pas zo'n 150 tot 300 jaar. Hoe kijk je nog veel verder terug?",
+   "Geschreven bronnen en tekeningen gaan hooguit een paar duizend jaar terug, en meten geen temperatuur. Welke natuurlijke 'archieven' groeien elk jaar een laagje aan?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 84,
+  "bron": "leerpaden",
+  "waar": "klimaatverandering-aardrijkskunde stap 6 vraag 4",
+  "q": "Wat is **kantelpunt** in klimaat?",
+  "options": [
+   "Onomkeerbare verandering",
+   "De grens van 1,5 °C",
+   "Piek in de uitstoot",
+   "Netto-nul uitstoot"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "1,5 °C is een afgesproken doel uit het Parijs-akkoord. Wat gebeurt er bij een kantelpunt, zoals bij smeltende permafrost?",
+   "Na de piek gaat de uitstoot dalen. Wat gebeurt er bij een kantelpunt, zoals bij een smeltende ijskap?",
+   "Netto-nul betekent evenveel uitstoten als opnemen. Wat gebeurt er bij een kantelpunt, zoals bij smeltende permafrost?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 85,
+  "bron": "leerpaden",
+  "waar": "klokkijken stap 2 vraag 4",
+  "q": "De grote wijzer staat op de **12**. De kleine wijzer staat op de **5**. Hoe laat is het?",
+  "options": [
+   "5 uur",
+   "12 uur",
+   "Half 5",
+   "Kwart over 5"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Welke wijzer zegt het uur: de grote of de kleine?",
+   "Bij een half uur staat de grote wijzer onderaan, op de 6.",
+   null
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 86,
+  "bron": "leerpaden",
+  "waar": "koude-oorlog-modern-po stap 4 vraag 4",
+  "q": "Wat is **NAVO**?",
+  "options": [
+   "Westers militair bondgenootschap",
+   "Oosters militair bondgenootschap",
+   "Wereldwijde organisatie voor vrede",
+   "Europese samenwerking voor handel"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat was het Warschaupact, rond de Sovjet-Unie.",
+   "Dat lijkt op de VN. Doen bij de NAVO alle landen van de wereld mee?",
+   "Dat lijkt op de EU. Ging de NAVO over handel, of over iets anders?"
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 87,
+  "bron": "leerpaden",
+  "waar": "kritisch-denken-po stap 1 vraag 1",
+  "q": "Wat is **kritisch denken**?",
+  "options": [
+   "Goed nadenken voor je iets gelooft",
+   "Altijd negatief zijn over alles",
+   "Alles meteen afwijzen wat je hoort",
+   "Alles geloven wat je leest"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Is kritisch denken hetzelfde als zeuren of klagen?",
+   "Denk je goed na als je alles meteen afwijst?",
+   "Denk je goed na als je alles meteen gelooft?"
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 88,
+  "bron": "leerpaden",
+  "waar": "kwadraten-wortels stap 2 vraag 1",
+  "q": "Hoeveel is 8²?",
+  "options": [
+   "64",
+   "16",
+   "82",
+   "48"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet optellen — een kwadraat is een vermenigvuldiging met zichzelf.",
+   "Niet samenstellen — een kwadraat is geen nieuw getal opbouwen, het is een bewerking.",
+   "Welke bewerking zit er in een kwadraat? Doe je + of ×, en met welk ander getal?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 89,
+  "bron": "leerpaden",
+  "waar": "kwadratische-vergelijkingen stap 7 vraag 1",
+  "q": "Los op: x · (x − 7) = 0.",
+  "options": [
+   "x = 0 of x = 7",
+   "x = 7",
+   "x = 0",
+   "x = 0 of x = −7"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is maar één oplossing — kijk ook naar de eerste factor. Wanneer is die gelijk aan nul?",
+   "Dat is maar één oplossing — kijk ook naar de tweede factor. Wanneer is x − 7 gelijk aan nul?",
+   "Let op het teken in de tweede factor: staat er plus of min? Welk teken heeft x dan?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 90,
+  "bron": "leerpaden",
+  "waar": "kwadratische-vergelijkingen stap 13 vraag 9",
+  "q": "**Discriminant** = ?",
+  "options": [
+   "b² − 4ac",
+   "b² + 4ac",
+   "4ac",
+   "b · ac"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bijna. Kijk goed naar het rekenteken tussen de twee delen van de formule.",
+   "4ac is maar een deel van de formule. Welk deel mis je?",
+   "In de discriminant staat b in het kwadraat. Zie je dat hier?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 91,
+  "bron": "leerpaden",
+  "waar": "lange-toets-teksten-g8-po stap 1 vraag 7",
+  "q": "Je slaat een lastige vraag over. Waarom lukt die vraag aan het einde vaak ineens wél?",
+  "options": [
+   "De andere vragen hebben je al door de tekst geholpen",
+   "Aan het einde krijg je extra hints van de toets",
+   "Aan het einde wordt de vraag makkelijker gemaakt",
+   "Je kent de tekst dan helemaal uit je hoofd"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Verandert de toets zelf iets aan de vraag? Of ben jij veranderd?",
+   null,
+   "Heb je de tekst uit je hoofd geleerd, of ben je er wel vaak in teruggezocht?"
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 92,
+  "bron": "leerpaden",
+  "waar": "leestekens-hoofdletters-po stap 2 vraag 6",
+  "q": "Welke zin heeft het goede eindteken?",
+  "options": [
+   "Ik ga morgen naar school.",
+   "Ik ga morgen naar school?",
+   "Ik ga morgen naar school!",
+   "Ik ga morgen naar school,"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het is geen vraag — er wordt niets gevraagd.",
+   "Het is geen uitroep met nadruk.",
+   "Een komma sluit geen zin af."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 93,
+  "bron": "leerpaden",
+  "waar": "lineaire-formules stap 17 vraag 15",
+  "q": "**Open vraag**: bereken y bij x=10 voor y=2x+5. Typ getal.",
+  "explanation": "y = 2·10 + 5 = 25.",
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 94,
+  "bron": "leerpaden",
+  "waar": "logaritmen stap 14 vraag 7",
+  "q": "log(a/b) = ?",
+  "options": [
+   "log(a) − log(b)",
+   "log(a) + log(b)",
+   "log(a) · log(b)",
+   "log(a − b)"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Optellen van logs hoort bij vermenigvuldigen binnen de log. Staat er een vermenigvuldiging?",
+   "Probeer a = 100 en b = 10: log(10) = 1. Wat geeft log(100) · log(10)?",
+   "Probeer a = 100 en b = 10: log(10) = 1. Wat is log(100 − 10)?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 95,
+  "bron": "leerpaden",
+  "waar": "logaritmen stap 14 vraag 11",
+  "q": "Welke basis hoort bij **ln**?",
+  "options": [
+   "e",
+   "10",
+   "2",
+   "½"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Basis 10 hoort bij de gewone log. Waar staat de n in ln voor?",
+   "Basis 2 heet de binaire logaritme. Welk bijzonder getal hoort bij de natuurlijke logaritme?",
+   "Een basis kleiner dan 1 gebruik je zelden. Waar staat de n in ln voor?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 96,
+  "bron": "leerpaden",
+  "waar": "logaritmen-exponentieel-havo-vwo stap 4 vraag 4",
+  "q": "Een **logistische curve** lijkt op exponentieel bij:",
+  "options": [
+   "Lage N (ver onder draagkracht K)",
+   "Hoge N (vlak onder draagkracht K)",
+   "N precies gelijk aan draagkracht K",
+   "N ruim boven draagkracht K"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dicht bij K remt de groei af en wordt de curve vlak.",
+   "Op N = K groeit de populatie niet meer.",
+   "Boven K neemt de populatie juist af. Waar groeit hij het minst geremd?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 97,
+  "bron": "leerpaden",
+  "waar": "machten stap 13 vraag 9",
+  "q": "**a^(−1)** = ?",
+  "options": [
+   "1/a",
+   "−a",
+   "a²",
+   "Bestaat niet"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — de min in de exponent maakt het getal niet negatief.",
+   "Probeer a = 2: is 2⁻¹ groter of kleiner dan 2⁰ = 1?",
+   "Wat krijg je als je 2⁰ = 1 nog een keer door 2 deelt? Bestaat dat getal?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 98,
+  "bron": "leerpaden",
+  "waar": "maten-eenheden stap 6 vraag 10",
+  "q": "**1,08 m** in **cm**?",
+  "options": [
+   "108",
+   "10,8",
+   "1080",
+   "180"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — m → cm is 2 stappen. Heb je er maar 1 gedaan?",
+   null,
+   "Kijk goed naar de 0 na de komma. Mag die weg?"
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 99,
+  "bron": "leerpaden",
+  "waar": "mechanica-havo-vwo stap 4 vraag 5",
+  "q": "Bal A 5 m/s raakt **gelijke** bal B in rust, elastisch. Na botsing:",
+  "options": [
+   "A staat stil, B 5 m/s",
+   "A en B elk 2,5 m/s",
+   "A 5 m/s terug, B blijft stil",
+   "A en B allebei stil"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij 2,5 m/s elk klopt de impuls. Reken de bewegingsenergie vóór en na eens uit: is die gelijk gebleven?",
+   "Zo kaatst een bal terug van een muur. Kan een even zware bal B blijven liggen als hij geraakt wordt?",
+   "Als beide ballen stilstaan, is alle impuls verdwenen. Kan dat bij een botsing?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 100,
+  "bron": "leerpaden",
+  "waar": "meetkunde-bouwsels stap 3 vraag 3",
+  "q": "Aquarium: **40 cm × 20 cm × 25 cm**. Volume?",
+  "options": [
+   "20.000 cm³",
+   "85 cm³",
+   "1.000 cm³",
+   "800 cm³"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — dat is 40 + 20 + 25. Probeer keer.",
+   "Te weinig — alleen 40 × 25 gedaan, breedte vergeten.",
+   "Te weinig — alleen 40 × 20 gedaan, hoogte vergeten."
+  ],
+  "niveau": "middelbaar"
+ }
+]

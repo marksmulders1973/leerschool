@@ -391,7 +391,7 @@ const steps = [
       { q: "Spelen — verleden tijd: 'wij ____'?", options: ["speelden","speelde","speelten","spelen"], answer: 0, wrongHints: [null, "Dat is enkelvoud.", "Niet — l zit niet in kofschip.", "Tegenwoordige tijd."] },
       { q: "Welke letters zijn de 't kofschip'-letters?", options: ["t-k-f-s-ch-p","t-k-h-s-d","a-e-i-o-u","b-d-g-w"], answer: 0, wrongHints: [null, "Niet — h en d horen er niet bij.", "Dat zijn klinkers.", "Andere letters."] },
       { q: "Ik **bak** brood. Stam = ?", options: ["bak","ba","bakk","bakken"], answer: 0, wrongHints: [null, "Te kort.", "Verdubbeling klopt niet hier.", "Hele werkwoord."] },
-      { q: "Vul in: 'Wij ___ blij.' (zijn, tegenwoordige tijd)", options: ["zijn","is","bent","waren"], answer: 0, wrongHints: [null, "Hij/zij-vorm.", "Jij-vorm.", "Verleden."] },
+      { q: "Vul de goede vorm in (tegenwoordige tijd): 'Wij ___ blij.'", options: ["zijn","is","bent","waren"], answer: 0, wrongHints: [null, "'Is' hoort bij hij, zij of het. Welke vorm hoort bij wij?", "'Bent' hoort bij jij of u. Welke vorm hoort bij wij?", "'Waren' is verleden tijd. Hoe zeg je het nu, in de tegenwoordige tijd?"] },
       { q: "Vul in: 'Jij ___ mooi.' (zijn)", options: ["bent","is","zijn","waren"], answer: 0, wrongHints: [null, "Hij/zij/het.", "Wij/jullie/zij.", "Verleden."] },
       { q: "Vul in: 'Ik ___ een boek.' (lezen, tegenwoordige tijd)", options: ["lees","leest","lezen","las"], answer: 0, wrongHints: [null, "Hij/zij/het.", "Hele/meervoud.", "Verleden."] },
       { q: "Verleden tijd 'fietsen' (ik)?", options: ["fietste","fietsde","fiets","fietsten"], answer: 0, wrongHints: [null, "Op welke letter eindigt de stam? Zit die in 't kofschip?", "Tegenwoordige tijd.", "Meervoud."] },

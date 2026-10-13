@@ -308,7 +308,7 @@ const steps = [
         wrongHints: [
           null,
           "In de spreektaal zeggen veel mensen 'mellek', met een extra klank tussen l en k. Schrijf je die klank ook op?",
-          "Aan het eind hoor je een k-klank. Maak het woord langer: 'melken'. Hoor je dan een g of een k?",
+          "Aan het eind hoor je een k-klank. Maak het woord langer, met het werkwoord dat erbij hoort. Hoor je dan een g of een k?",
           "'Melluk' schrijf je zoals sommige mensen het uitspreken. Hoort die extra klank in het geschreven woord?",
         ],
         uitlegPad: {
@@ -711,7 +711,7 @@ const steps = [
           null,
           "Na een m past -tje niet. Welke letter glijdt er bij het uitspreken vanzelf tussen m en -je?",
           "Klinkt de o in 'boom' lang of kort? Blijft die klank lang als je er -pje achter zet?",
-          "Zeg 'boomje' en 'boompje' hardop. Welke klank glijdt er vanzelf tussen de m en -je?",
+          "Zeg 'boomje' hardop. Glijdt er tussen de m en -je vanzelf nog een klank naar binnen?",
         ],
         uitlegPad: {
           stappen: [

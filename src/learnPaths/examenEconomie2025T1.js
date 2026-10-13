@@ -190,7 +190,7 @@ const steps = [
         wrongHints: [
           "Kun je een souvenir vastpakken? Is het dan een goed of een dienst?",
           null,
-          "Sint-Maarten verkoopt — niet importeert.",
+          "Bekijk beide delen apart. Wie verkoopt het souvenir aan wie? En kun je een souvenir vastpakken?",
           "Wie verkoopt het souvenir hier aan wie? Koopt Sint-Maarten iets in het buitenland?",
         ],
         explanation: "Een souvenir is een goed (tastbaar). Een buitenlandse toerist die het op Sint-Maarten koopt, betaalt aan een Sint-Maartens bedrijf — dat heet export van goederen door Sint-Maarten.",

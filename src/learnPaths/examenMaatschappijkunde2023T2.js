@@ -182,7 +182,7 @@ const steps = [
         "de wetgevende en uitvoerende macht",
       ],
       answer: 2,
-      wrongHints: ["'Controlerende macht' is niet de officiële vierde — Trias kent 3 (wetgevend/uitvoerend/rechterlijk).", "Wetgevende macht = parlement maakt wetten. Hier is GEEN wet gemaakt, alleen toegepast.", null, "Wetgevend + uitvoerend = parlement + regering. Geen rechter erbij."],
+      wrongHints: ["Bekijk beide machten apart. Welke drie machten kent de Trias Politica? Staat 'controlerende macht' daartussen?", "Bekijk beide machten apart. Wie maakt de wetten? Zie je die in deze situatie terug?", null, "Bekijk beide machten apart. Wie eist hier de straf en wie beslist? Bij welke machten horen die twee?"],
       explanation: "**Trias Politica** (Montesquieu): WETGEVENDE macht (parlement maakt wetten), UITVOERENDE macht (regering + OM voeren uit), RECHTERLIJKE macht (rechters spreken recht). OM = onderdeel uitvoerende macht (eist straf). Rechter = rechterlijke macht (beslist).",
       examenBron: BRON_LABEL(21),
       bronLink: BRON_LINK,

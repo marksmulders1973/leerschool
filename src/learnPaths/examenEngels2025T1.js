@@ -47,7 +47,7 @@ const steps = [
         wrongHints: [
           "Roswell wordt wel genoemd, maar als context (1947 crash). Niet als plek waar je vandaag UFO's ziet.",
           null,
-          "Een vliegveld wordt nergens genoemd. Lees de laatste alinea: welke plekken mijden UFO's?",
+          "Een vliegveld wordt nergens genoemd. Welke plekken worden in de tekst wél genoemd?",
           "Tekst zegt: 'They seldom disturb earthlings during working hours.' Dus juist NIET tijdens werk.",
         ],
         explanation: "De tekst zegt: 'UFOs tend to shun big cities, where there are lots of other lights.' En populaire plekken zijn 'thinly populated northern part' van Washington — donkere, dunbevolkte gebieden. Dus: weinig kunstlicht.",

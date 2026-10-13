@@ -59,7 +59,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Overtuigen vereist een mening of standpunt. Hier is geen voorkeur.",
+          "Overtuigen vraagt om een mening of standpunt. Welk standpunt over de hybride motor zie je in de beschrijving?",
           "Beschouwen zet meerdere standpunten naast elkaar. Worden hier standpunten afgewogen?",
           "Onderhouden past bij een column of verhaal. Is een neutraal artikel in een wetenschapskatern bedoeld om te vermaken?",
         ],
@@ -78,9 +78,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Een oproep tot actie is geen feitelijke informatie-overdracht. Welk doel past bij \"Het is hoog tijd dat...\"?",
-          "Beschouwen zet kanten naast elkaar. Hier wordt juist een conclusie geforceerd: actie nu.",
-          "Een uiteenzetting eindigt neutraal. Hier wordt aangedrongen op handelen — dat is andere intentie.",
+          "Informeren is neutraal feiten geven. Is \"Het is hoog tijd dat…\" een neutraal feit?",
+          "Beschouwen zet kanten naast elkaar en laat de lezer zelf kiezen. Laat deze slotzin de lezer vrij?",
+          "Een uiteenzetting eindigt met een samenvatting van de uitleg. Vat deze slotzin iets samen?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Oproep = overtuigen", tekst: "'Hoog tijd dat regering ingrijpt' = oproep tot actie = overtuigen." }],
@@ -291,7 +291,7 @@ const steps = [
           null,
           "De inleiding kondigt aan, maar vat niet samen. Past het signaalwoord 'concluderend' bij een opening?",
           "Het middenstuk werkt argumenten of onderwerpen uit. Welk deel van de tekst trekt de conclusie?",
-          "Aanleiding staat juist vooraan in de inleiding (waarom schrijven we hier nu over). Niet het einde.",
+          "Een aanleiding vertelt waarom je nu over het onderwerp schrijft. Waar in de tekst staat die, en past 'concluderend' daarbij?",
         ],
         uitlegPad: {
           stappen: [{ titel: "'Concluderend' = slot", tekst: "Signaalwoord 'concluderend' = afsluiting → slot." }],
@@ -458,14 +458,14 @@ const steps = [
       {
         q: "*Welke zin is een MENING (geen feit)?*",
         options: [
-          "De zorgpremie is in 2025 gestegen.",
+          "Op TikTok mag je pas vanaf 13 jaar een account maken.",
           "Sociale media zijn schadelijk voor kinderen.",
           "Volgens het IPCC-rapport van 2021 stijgt de zeespiegel deze eeuw verder.",
           "In Nederland geldt sinds 2008 een rookverbod in de horeca.",
         ],
         answer: 1,
         wrongHints: [
-          "Dat is een controleerbaar gegeven. De juiste optie is iets dat je niet objectief kunt toetsen.",
+          "Dit is een regel die je in de voorwaarden van de app kunt opzoeken. Is het dan een feit of een mening?",
           null,
           "Of dit in het rapport staat, kun je bij de bron controleren. Welke optie is een waardeoordeel?",
           "Een wettelijke regeling met datum is feitelijk. Welke optie bevat een waardeoordeel?",
@@ -490,9 +490,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "\"Iedereen weet\" is geen objectieve toetsing. Het probeert vanzelfsprekend te klinken, maar er valt over te discussiëren.",
-          "Een argumentatie heeft *waarom*-onderbouwing. Hier wordt iets als bekend aangenomen zonder onderbouwing.",
-          "Een conclusie volgt op argumenten. Hier ontbreken die — alleen een appel op vanzelfsprekendheid.",
+          "Kun je controleren wat 'iedereen' weet? Staat er in de zin een bron of onderzoek waarmee je dit kunt toetsen?",
+          "Een argumentatie geeft een reden met 'want' of 'omdat'. Zie je in deze zin zo'n reden?",
+          "Een conclusie volgt op argumenten. Welke argumenten gaan aan deze zin vooraf?",
         ],
         uitlegPad: {
           stappen: [{ titel: "'Iedereen weet' = mening vermomd", tekst: "Klinkt zeker, maar is een mening — niet objectief toetsbaar." }],
@@ -533,7 +533,7 @@ const steps = [
           null,
           "De bron (artsen) wordt wel duidelijk genoemd. Waar zit het probleem dan wel?",
           "Artsen zijn wel deskundig op hun gebied. De kritiek gaat niet over deskundigheid.",
-          "Dat is een aparte vraag (conclusie-aanwezigheid). Hier gaat het specifiek over bron-keuze.",
+          "Of er een conclusie is, kun je uit deze beschrijving niet weten. Wat vertelt de vraag wél over de tekst?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Selectief = één perspectief", tekst: "Alleen artsen aangehaald = andere kanten weggelaten." }],
@@ -613,9 +613,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Informeren = neutrale feiten. Hier wordt aangedrongen op handelen — andere intentie.",
-          "Beschouwen weegt af. Hier wordt juist één conclusie geforceerd.",
-          "Uitleggen is informatieoverdracht. Hier is sprake van een oproep, niet van uitleg.",
+          "Informeren is neutraal feiten geven. Is \"zo snel mogelijk herzien\" een neutraal feit?",
+          "Beschouwen zet kanten naast elkaar en laat de lezer zelf kiezen. Laat dit slot de lezer vrij?",
+          "Uitleggen is vertellen hoe iets werkt of zit. Wordt in dit slot iets uitgelegd?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Slot met 'moet' = overtuigen", tekst: "'Regering moet beleid herzien' = oproep = overtuigen." }],
@@ -661,7 +661,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dat is alleen het onderwerp. Wat beweert de schrijver erover?",
+          "Dit noemt waar de tekst over gaat. Beweert de schrijver hier ook iets over?",
           "Een vraag over één onderdeel is een deelvraag. Wat is de kernboodschap van de hele tekst?",
           "Dit is een los feit dat een tekst kan noemen. Is het ook de boodschap van de hele tekst?",
         ],
@@ -685,8 +685,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "\"Beter\" is een waardeoordeel — niet objectief toetsbaar. Welke categorie past?",
-          "Een argumentatie heeft *waarom*-onderbouwing. Hier wordt iets als vanzelfsprekend gepresenteerd zonder onderbouwing.",
+          "Kun je meten of controleren welke muziek \"beter\" is?",
+          "Een argumentatie geeft een reden met 'want' of 'omdat'. Zie je in deze zin zo'n reden?",
           "Een definitie legt uit wat een woord betekent. Hier wordt iets beweerd — wat voor soort uitspraak is dat?",
         ],
         uitlegPad: {

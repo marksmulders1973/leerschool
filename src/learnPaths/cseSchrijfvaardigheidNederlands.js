@@ -61,9 +61,9 @@ const steps = [
       },
       {
         q: "**Zeer formele** ondertekening?",
-        options: ["Hoogachtend,", "Groetjes,", "Liefs,", "Met groet,"],
+        options: ["Hoogachtend,", "Met vriendelijke groet,", "Met hartelijke groet,", "Met groet,"],
         answer: 0,
-        wrongHints: [null, "'Groetjes' is een verkleinwoord. Hoort dat onder een zeer formele brief?", "'Liefs' schrijf je aan iemand die je goed kent. Past dat bij een zeer formele brief?", "'Met groet' is netjes, maar kort en zakelijk. Is er een ondertekening die nog plechtiger is?"],
+        wrongHints: [null, "'Met vriendelijke groet' is de gewone, formele afsluiting. Is er een die nog plechtiger en afstandelijker is?", "'Hartelijk' klinkt warm en persoonlijk. Past dat bij een zeer formele, afstandelijke brief?", "'Met groet' is netjes, maar kort en zakelijk. Is er een ondertekening die nog plechtiger is?"],
       },
       {
         q: "Mag je **'je/jij'** in formele brief?",
@@ -79,9 +79,9 @@ const steps = [
       },
       {
         q: "Welke aanhef is **formeel** in het Nederlands?",
-        options: ["Geachte heer / mevrouw", "Hoi meneer / mevrouw", "Hallo allemaal", "Beste vriend / vriendin"],
+        options: ["Geachte heer / mevrouw", "Hoi meneer / mevrouw", "Dag meneer / mevrouw", "Hallo heer / mevrouw"],
         answer: 0,
-        wrongHints: [null, "'Hoi' blijft informeel, ook met 'meneer' erachter. Zou je zo een bedrijf aanschrijven?", "'Hallo allemaal' klinkt als een groepsappje. Past dat in een nette brief?", "'Vriend' en 'vriendin' schrijf je aan iemand die je goed kent. Is dat bij een formele brief zo?"],
+        wrongHints: [null, "'Hoi' blijft informeel, ook met 'meneer' erachter. Zou je zo een bedrijf aanschrijven?", "'Dag' en 'meneer' hoor je vaak in de spreektaal. Welke woorden gebruik je in een nette, geschreven aanhef?", "'Heer' is netjes, maar is 'Hallo' het woord waarmee je een formele brief opent?"],
       },
       {
         q: "Welke afsluiting hoort bij een **formele brief**?",
@@ -241,9 +241,9 @@ const steps = [
     checks: [
       {
         q: "**Hij wordt** of **hij word**?",
-        options: ["Hij wordt", "Hij word", "Beide goed", "Hij worden"],
+        options: ["Hij wordt", "Hij word", "Beide goed", "Hij wort"],
         answer: 0,
-        wrongHints: [null, "Wat is de stam van 'worden'? Komt er bij 'hij' nog iets achter die stam?", "Er is maar één vorm goed. Wat zet je bij 'hij' achter de stam?", "Meervoudsvorm — past niet bij 'hij'."],
+        wrongHints: [null, "Wat is de stam van 'worden'? Komt er bij 'hij' nog iets achter die stam?", "Er is maar één vorm goed. Wat zet je bij 'hij' achter de stam?", "Je hoort een t-klank aan het eind. Maar wat is de stam van 'worden'? Schrijf je die stam met een t?"],
       },
       {
         q: "**Groter dan ik** of **groter als ik**?",
@@ -261,7 +261,7 @@ const steps = [
         q: "*'Ik heb hem ___ 2020 niet meer gezien.'* — **sinds** of **vanaf**?",
         options: ["Sinds", "Vanaf", "Beide", "Geen verschil"],
         answer: 0,
-        wrongHints: [null, "'Vanaf' gebruik je vooral voor een startmoment zonder 'tot nu toe', zoals 'vanaf morgen'.", "Hier past maar één van de twee.", "Sinds en vanaf lijken op elkaar, maar ze worden anders gebruikt. Loopt 'niet meer gezien' door tot nu?"],
+        wrongHints: [null, "'Vanaf' gebruik je vooral voor een startmoment zonder 'tot nu toe', zoals 'vanaf morgen'.", "Loopt de periode van 'niet meer gezien' door tot nu? Past dat bij beide woorden even goed?", "Sinds en vanaf lijken op elkaar, maar ze worden anders gebruikt. Loopt 'niet meer gezien' door tot nu?"],
       },
     ],
   },
@@ -274,15 +274,15 @@ const steps = [
     checks: [
       {
         q: "**Formele aanhef** (naam onbekend)?",
-        options: ["Geachte heer/mevrouw,", "Hoi!", "Lieve familie,", "Beste vriend,"],
+        options: ["Geachte heer/mevrouw,", "Geachte heer Jansen,", "Hallo heer/mevrouw,", "Dag meneer/mevrouw,"],
         answer: 0,
-        wrongHints: [null, "'Hoi' zeg je tegen bekenden. Past dat bij iemand die je niet kent, in een formele brief?", "'Lieve' gebruik je voor mensen die dicht bij je staan. Ken je de lezer van een formele brief zo goed?", "'Vriend' schrijf je aan iemand die je goed kent. Hoe spreek je iemand aan van wie je de naam niet weet?"],
+        wrongHints: [null, "Netjes, maar in de vraag is de naam onbekend. Hoe spreek je iemand formeel aan van wie je de naam niet weet?", "'Heer/mevrouw' klopt, maar is 'Hallo' het woord waarmee je een formele brief opent?", "'Dag' en 'meneer' hoor je vaak in de spreektaal. Welke woorden gebruik je in een nette, geschreven aanhef?"],
       },
       {
         q: "**Hoogachtend** — hoe formeel?",
-        options: ["Zeer formeel", "Informeel", "Persoonlijk", "Slang"],
+        options: ["Zeer formeel", "Informeel", "Persoonlijk", "Neutraal"],
         answer: 0,
-        wrongHints: [null, "'Hoogachtend' klinkt plechtig en afstandelijk — is dat losse, informele taal?", "Zou je 'Hoogachtend' onder een briefje aan je beste vriend zetten? Voelt dat warm en persoonlijk?", "Slang is straattaal onder vrienden — past het deftige woord 'Hoogachtend' daarbij?"],
+        wrongHints: [null, "Informeel is losse taal tussen bekenden. In wat voor brief kom je 'Hoogachtend' tegen?", "Zou je 'Hoogachtend' onder een briefje aan je beste vriend zetten? Voelt dat warm en persoonlijk?", "Neutraal past bij elke lezer, zoals 'Met groet'. Is 'Hoogachtend' net zo gewoon, of juist niet?"],
       },
       {
         q: "Welk signaalwoord = **conclusie**?",

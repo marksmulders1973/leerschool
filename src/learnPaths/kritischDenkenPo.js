@@ -18,9 +18,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **kritisch denken**?",
-        options: ["Goed nadenken voor je iets gelooft","Altijd negatief zijn over alles","Alles meteen afwijzen wat je hoort","Alles geloven wat je leest"],
+        options: ["Goed nadenken voor je iets gelooft","Kritiek geven op wat anderen doen","Snel kiezen op je eerste gevoel","Geloven wat de meeste mensen zeggen"],
         answer: 0,
-        wrongHints: [null,"Is kritisch denken hetzelfde als zeuren of klagen?","Denk je goed na als je alles meteen afwijst?","Denk je goed na als je alles meteen gelooft?"],
+        wrongHints: [null,"Kritiek geven op anderen is iets anders. Gaat kritisch denken over anderen afkraken, of over zelf goed nadenken?","Je eerste gevoel kan je misleiden. Wat doe je bij kritisch denken voordat je iets aanneemt?","Ook veel mensen samen kunnen zich vergissen. Wat doe je zelf voordat je iets gelooft?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is kritisch denken?", tekst: "Kritisch denken = **goed NADENKEN voordat je iets gelooft**. Niet alles meteen aannemen, maar vragen stellen: 'klopt dit?', 'wie zegt dit?', 'wat is bewijs?'." },
@@ -235,7 +235,7 @@ const steps = [
     title: "Eind-toets — kritisch mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
-      { q: "Wat is **kritisch denken**?", options: ["Goed nadenken voor je iets gelooft","Altijd negatief zijn over alles","Alles meteen afwijzen wat je hoort","Alles geloven wat je leest"], answer: 0, wrongHints: [null,"Is kritisch denken hetzelfde als zeuren of klagen?","Denk je goed na als je alles meteen afwijst?","Denk je goed na als je alles meteen gelooft?"] },
+      { q: "Wat is **kritisch denken**?", options: ["Goed nadenken voor je iets gelooft","Kritiek geven op wat anderen doen","Snel kiezen op je eerste gevoel","Geloven wat de meeste mensen zeggen"], answer: 0, wrongHints: [null,"Kritiek geven op anderen is iets anders. Gaat kritisch denken over anderen afkraken, of over zelf goed nadenken?","Je eerste gevoel kan je misleiden. Wat doe je bij kritisch denken voordat je iets aanneemt?","Ook veel mensen samen kunnen zich vergissen. Wat doe je zelf voordat je iets gelooft?"] },
       { q: "Wat is **bevestigingsbias**?", options: ["Zoeken naar info die je idee bevestigt","Steeds twijfelen aan je eigen idee","Logisch nadenken over elk argument","Info van twee kanten eerlijk lezen"], answer: 0, wrongHints: [null,"Tegenovergesteld.","Is logisch nadenken een denkfout?","Dat is juist de oplossing ervoor."] },
       { q: "Wat zijn **drogredenen**?", options: ["Slechte argumenten die goed lijken","Sterke argumenten die goed kloppen","Feiten die door onderzoek bewezen zijn","Rekenregels uit de wiskundeles"], answer: 0, wrongHints: [null,"Tegenovergesteld.","Een feit is geen argument dat slecht kan zijn.","Heeft een drogreden met rekenen te maken?"] },
       { q: "Waarom is **stereotypering** fout?", options: ["Groep beoordelen in plaats van persoon","Het is niet fout, het is slim","Het is niet fout, het mag gewoon","Omdat het over iedereen klopt"], answer: 0, wrongHints: [null,"Is het slim om iemand te beoordelen op een groep?","Is het eerlijk om iemand te beoordelen op een groep?","Klopt een oordeel over een hele groep voor iedereen?"] },

@@ -315,7 +315,7 @@ const steps = [
         ],
         answer: 1,
         wrongHints: [
-          "Tegendeel — invoerrechten maken Chinees staal DUURDER, niet goedkoper.",
+          "Een invoerrecht is een extra heffing aan de grens. Wordt Chinees staal daardoor goedkoper of duurder voor een Amerikaans bedrijf?",
           null,
           "Wat doet een extra heffing met de prijs van Chinees staal voor een Amerikaans bedrijf?",
           "Bekijk beide delen van deze optie apart: wat doet een invoerrecht met de prijs van Chinees staal, en waar koopt een bedrijf dan liever?",
@@ -376,8 +376,8 @@ const steps = [
         wrongHints: [
           "Wat gebeurt er met de prijs van iets als heel veel mensen het tegelijk willen kopen?",
           null,
-          "China KOOPT dollars (vraag) — geen aanbod.",
-          "China KOOPT dollars (vraag) — geen aanbod.",
+          "Lees de vraag nog eens: koopt China dollars, of verkoopt China dollars? Hoort dat bij vraag of bij aanbod?",
+          "Lees de vraag nog eens: koopt China dollars, of verkoopt China dollars? Hoort dat bij vraag of bij aanbod?",
         ],
         explanation: "Wet van vraag en aanbod werkt ook voor valuta. Veel vraag naar dollars (China koopt) → koers dollar stijgt. Net zoals bij elke andere markt: hoge vraag + onveranderd aanbod = hogere prijs.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 30",

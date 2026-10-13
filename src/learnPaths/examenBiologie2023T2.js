@@ -33,7 +33,7 @@ const steps = [
         "De kegeltjes en de staafjes maken evenveel impulsen.",
       ],
       answer: 1,
-      wrongHints: ["Kegeltjes = kleur + scherp zien, werken in LICHT. In donker leveren ze weinig impulsen.", null, "Niet evenveel — duidelijk verschil. Welk type werkt 's nachts/in donker?"],
+      wrongHints: ["Kegeltjes zorgen voor kleur en scherp zien. Hoeveel licht hebben ze daarvoor nodig, en hoeveel licht is er in de hal?", null, "Niet evenveel — duidelijk verschil. Welk type werkt 's nachts/in donker?"],
       explanation: "**2 typen zintuigcellen in netvlies**: KEGELTJES (kleur + scherp, alleen bij genoeg licht) + STAAFJES (geen kleur, wel licht-gevoelig, werken óók in schemer/donker). Donkere achtbaan-hal = weinig licht = STAAFJES nemen het over.",
       examenBron: BRON_LABEL(8),
       bronLink: BRON_LINK,

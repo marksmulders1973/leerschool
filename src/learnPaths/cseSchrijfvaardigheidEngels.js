@@ -106,13 +106,13 @@ const steps = [
       "Aan **vriend / familie / leerling-uitwisseling** schrijf je **informeel**.\n\n**Structuur informele e-mail**:\n\n**1. Aanhef**:\n• 'Hi Tom,' / 'Hey John,' / 'Dear Anna,'\n\n**2. Opening — friendly**:\n• 'How are you?'\n• 'Hope you're well.'\n• 'It's been a while!'\n• 'Thanks for your last email!'\n\n**3. Body**:\n• Vrije volgorde — meer flexibel dan formeel.\n• Persoonlijke verhalen.\n• Vragen aan ontvanger.\n\n**4. Closing**:\n• 'Write back soon!'\n• 'Looking forward to hearing from you.'\n• 'Hope to see you soon.'\n\n**5. Sign-off**:\n• 'Take care,'\n• 'Cheers,'\n• 'See you,' / 'Bye,'\n• 'Love,' *(naaste familie/partners)*.\n• 'Best,' *(redelijk vriendelijk)*.\n\n**Informele kenmerken**:\n\n**Mag wel**:\n• Samentrekkingen: I'm / don't / can't / won't / it's.\n• Slang in gepaste mate: cool / awesome / great.\n• Emoji 😊 *(als context past)*.\n• Persoonlijke verhalen.\n• Vragen stellen.\n• Uitroepen: 'That's amazing!'\n\n**Niet**:\n• 'Dear Sir or Madam' aan vriend — te formeel, raar.\n• 'Yours faithfully' aan vriend.\n• Te lange/formele zinnen.\n\n**Voorbeeld informele e-mail**:\n```\nHi Sarah,\n\nHow are you? Hope you're enjoying your holidays!\nI'm having a great time in the Netherlands.\nThe weather is nice and the food is amazing.\n\nLast weekend I went to Amsterdam with my parents.\nWe visited the Anne Frank House — really moving.\nWe also tried stroopwafels — you should try them!\n\nHow's your summer going? Any plans for next month?\nWrite back soon!\n\nCheers,\nAnna\n```\n\n**Vergelijking formeel vs informeel**:\n\n| Formeel | Informeel |\n|---|---|\n| Dear Mr Smith, | Hi Tom, |\n| I am writing to | I'm writing to |\n| I would like to | I'd like to |\n| Yours sincerely, | Cheers, |\n| Please reply | Write back soon |\n| I look forward to | Can't wait to |\n\n**Toets-tip — let op de prompt**:\n• 'Write a formal letter to ...' → formeel.\n• 'Email your friend ...' → informeel.\n• 'Write a complaint to the manager ...' → formeel.\n• 'Reply to Sarah's email ...' → informeel.\n\nVerkeerde toon = **punten-aftrek**.",
     checks: [
       {
-        q: "Welke **aanhef** voor vriend?",
+        q: "Welke **aanhef** gebruik je in een mail aan een vriend?",
         options: ["Hi Tom,", "Cheers, Tom", "Hi Mr Tom,", "Love, Tom"],
         answer: 0,
         wrongHints: [null, "'Cheers' is informeel, maar waar in de mail staat het: bovenaan of onderaan?", "'Hi' is informeel, maar 'Mr' maakt het afstandelijk (en hoort vóór een achternaam). Hoe spreek je een vriend aan?", "'Love' is informeel, maar is het een begroeting of een groet waarmee je afsluit?"],
       },
       {
-        q: "Welke **sign-off** voor vriend?",
+        q: "Welke **sign-off** gebruik je in een mail aan een vriend?",
         options: ["Cheers,", "Hi there,", "Dear Tom,", "Best regards,"],
         answer: 0,
         wrongHints: [null, "'Hi there' is informeel, maar staat het bovenaan of onderaan je mail?", "'Dear Tom' kan in een informele mail, maar waar? Is het een aanhef of een afsluiting?", "'Best regards' is netjes en een beetje zakelijk. Wat schrijf je onder een losse mail aan een vriend?"],

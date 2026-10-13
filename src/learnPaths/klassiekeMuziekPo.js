@@ -91,10 +91,10 @@ const steps = [
         wrongHints: [null, "Concertmeester strijkers.", "Niet primair.", "Wel."],
       },
       {
-        q: "Welk **NL-orkest** is wereldtop?",
-        options: ["Concertgebouworkest", "Een dorpsfanfare", "Een schoolorkest", "Een popband"],
+        q: "Welk **Nederlands orkest** hoort bij de wereldtop?",
+        options: ["Concertgebouworkest", "Berliner Philharmoniker", "Wiener Philharmoniker", "London Symphony Orchestra"],
         answer: 0,
-        wrongHints: [null, "Leuk, maar geen wereldtop.", "Leuk, maar geen wereldtop.", "Een band is geen orkest."],
+        wrongHints: [null, "De Berliner Philharmoniker is wereldtop, maar komt uit Duitsland (Berlijn). Welk orkest speelt in Amsterdam?", "De Wiener Philharmoniker is wereldtop, maar komt uit Oostenrijk (Wenen). Welk orkest speelt in Amsterdam?", "Het London Symphony Orchestra is wereldtop, maar komt uit Engeland (Londen). Welk orkest speelt in Amsterdam?"],
       },
       {
         q: "Wie won **Eurovisie 2019** voor NL?",

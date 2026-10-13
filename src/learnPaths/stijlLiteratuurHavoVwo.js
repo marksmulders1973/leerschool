@@ -34,7 +34,7 @@ const steps = [
         q: "'Haar tanden zijn parels' is een:",
         options: ["Metafoor", "Vergelijking", "Hyperbool", "Personificatie"],
         answer: 0,
-        wrongHints: [null, "Een vergelijking gebruikt 'als' of 'zoals': 'tanden als parels'. Staat dat woord hier?", "Wordt hier vooral iets overdreven, of wordt de ene zaak door een beeld vervangen?", "Bij personificatie krijgt een ding menselijke eigenschappen. Doen de tanden hier iets menselijks?"],
+        wrongHints: [null, "Een vergelijking gebruikt 'als' of 'zoals': 'tanden als parels'. Staat dat woord hier?", "Een hyperbool overdrijft, zoals 'ik heb het duizend keer gezegd'. Wordt hier iets groter of erger gemaakt dan het is?", "Bij personificatie krijgt een ding menselijke eigenschappen. Doen de tanden hier iets menselijks?"],
         uitlegPad: {
           stappen: [{ titel: "Geen signaalwoord = metafoor", tekst: "Bij **vergelijking**: 'haar tanden zijn ALS parels' (met als/gelijk/zoals). Bij **metafoor**: 'haar tanden ZIJN parels' (zonder signaalwoord — beeld vervangt zaak direct). Sterk beeld + compact." }],
           niveaus: { basis: "Metafoor.", simpeler: "Geen 'als' = metafoor.", nogSimpeler: "Metafoor" },
@@ -55,7 +55,7 @@ const steps = [
         q: "'Het Witte Huis besluit tot sancties.' Stijlfiguur?",
         options: ["Metonymia", "Synecdoche", "Personificatie", "Hyperbool"],
         answer: 0,
-        wrongHints: [null, "Verwante vorm maar specifieker — synecdoche is deel/geheel.", "Bij personificatie krijgt een ding menselijke trekjes. Gaat het hier om het gebouw zelf, of om iets wat ermee samenhangt?", "Een hyperbool overdrijft. Wordt hier iets overdreven?"],
+        wrongHints: [null, "Bij een synecdoche noem je een deel voor het geheel, zoals 'een dak boven je hoofd'. Is het Witte Huis een deel van de regering, of iets wat ermee samenhangt?", "Bij personificatie krijgt een ding menselijke trekjes. Gaat het hier om het gebouw zelf, of om iets wat ermee samenhangt?", "Een hyperbool overdrijft. Wordt hier iets overdreven?"],
         uitlegPad: {
           stappen: [{ titel: "Verwant begrip", tekst: "Het Witte Huis is GEBOUW, kan zelf niet besluiten. Bedoeld: de **president/regering** die daar zit. Vervanging door VERWANT begrip = metonymia. Soms genoemd 'metonymie' in school-NL." }],
           theorie: "Andere voorbeelden: 'Den Haag besluit' (=overheid), 'glas drinken' (=inhoud), 'een Picasso' (=schilderij van Picasso).",
@@ -130,7 +130,7 @@ const steps = [
           "Multatuli, Couperus, Nescio"
         ],
         answer: 0,
-        wrongHints: [null, "Vondel, Bredero en Hooft zijn schrijvers uit de Renaissance (17e eeuw). Wie schreven er proza na 1945?", "Niet — dat zijn Vijftigers (poëzie).", "Multatuli, Couperus en Nescio schreven vóór de Tweede Wereldoorlog. Wie schreven er proza na 1945?"],
+        wrongHints: [null, "Vondel, Bredero en Hooft zijn schrijvers uit de Renaissance (17e eeuw). Wie schreven er proza na 1945?", "Lucebert, Kouwenaar en Campert schreven vooral gedichten. Zijn dat de prozaschrijvers van na 1945?", "Multatuli, Couperus en Nescio schreven vóór de Tweede Wereldoorlog. Wie schreven er proza na 1945?"],
         uitlegPad: {
           stappen: [
             { titel: "Naoorlogs proza-klassieken", tekst: "**W.F. Hermans** (1921-1995): 'De donkere kamer van Damocles', 'Nooit meer slapen'.\n**Gerard Reve** (1923-2006): 'De avonden', 'Op weg naar het einde'.\n**Harry Mulisch** (1927-2010): 'De aanslag', 'De ontdekking van de hemel'.\nZe domineerden het NL-proza tussen 1947 en 2000." },

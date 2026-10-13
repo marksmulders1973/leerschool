@@ -104,8 +104,8 @@ const steps = [
       wrongHints: [
         "Te smal — overheidssamenwerking komt 1× ter sprake, geen rode draad.",
         null,
-        "Overtuigen = mening + actie-oproep. Interview noemt geen oproep om de app te gaan gebruiken.",
-        "Overtuigen vraagt MENING. Interview is feitelijk + chronologisch, geen pleidooi.",
+        "Roept de tekst je ergens op om de app te gaan gebruiken? Zoek naar zo'n oproep.",
+        "Zegt de schrijver ergens zelf dat de app nuttig is voor weggebruikers? Zoek naar een zin met een mening van de schrijver.",
       ],
       explanation: "Interview-tekst over hoe Flitsmeister zich ONTWIKKELDE — van flitserlijst naar volledige app. Chronologisch + feitelijk = informeren. Specifiek: VERANDERINGEN die het bedrijf doormaakte.",
       examenBron: BRON_LABEL(9),
@@ -144,11 +144,11 @@ const steps = [
       answer: 2,
       wrongHints: [
         "Te smal — dat jongeren slechter spellen wordt kort genoemd, maar is dat waar de hele tekst over gaat?",
-        "Te smal — datingsite is 1 van de contexten (peiling NRC), maar de tekst zegt veel meer.",
+        "Gaat de tekst alleen over datingsites? Lees de andere alinea's ook nog eens: waar gaan die over?",
         null,
         "Te smal + verkeerd accent — gaat de tekst vooral over welke fouten jongeren op sociale media MAKEN?",
       ],
-      explanation: "De tekst combineert ONDERZOEK (Vandekerckhove + NRC-peiling) met wat jongeren VINDEN van spelfouten. Antwoord C is breed genoeg om beide te dekken — 'onderzoek wat jongeren van spelfouten vinden'. Antwoord B is té smal (alleen datingsite).",
+      explanation: "De tekst combineert ONDERZOEK (Vandekerckhove + NRC-peiling) met wat jongeren VINDEN van spelfouten. Het juiste antwoord is breed genoeg om beide te dekken — 'onderzoek wat jongeren van spelfouten vinden'. De optie over datingsites is té smal.",
       examenBron: BRON_LABEL(18),
       bronLink: BRON_LINK,
       bronTekst: tekst2,
@@ -158,10 +158,10 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "informeren over X — precisie — kern" },
       ],
       uitlegPad: compact(
-        "Bij doel-vragen: kijk welke optie ALLE alinea's dekt. Tekst combineert onderzoek + opinie van jongeren = 'onderzoek wat jongeren VAN spelfouten VINDEN'. Optie C dekt zowel onderzoek als mening.",
+        "Bij doel-vragen: kijk welke optie ALLE alinea's dekt. Tekst combineert onderzoek + opinie van jongeren = 'onderzoek wat jongeren VAN spelfouten VINDEN'. Het juiste antwoord dekt zowel onderzoek als mening.",
         {
-          basis: "Onderzoek + mening jongeren = optie C dekt allebei.",
-          simpeler: "Wat zit ER ALLEMAAL in? Onderzoek + opinie. C zegt dat.",
+          basis: "Onderzoek + mening jongeren = het juiste antwoord dekt allebei.",
+          simpeler: "Wat zit ER ALLEMAAL in? Onderzoek + opinie. Het juiste antwoord zegt dat.",
           nogSimpeler: "Onderzoek+opinie",
         },
         [
@@ -185,7 +185,7 @@ const steps = [
       answer: 2,
       wrongHints: [
         "Kinderen sluiten geen zorgverzekering af — ze worden niet ZELF aangesproken.",
-        "Te breed? Kijk naar de afbeelding en naar 'jouw kind': over welke zorg en voor wie gaat deze advertentie precies?",
+        "Te breed? Lees de advertentie nog eens en kijk naar de afbeelding: gaat ze over iedereen die een zorgverzekering zoekt?",
         null,
         "Zorgverzekeraars zijn de CONCURRENTEN/leveranciers, niet de doelgroep van een vergelijkings-advertentie.",
       ],
@@ -227,8 +227,8 @@ const steps = [
       wrongHints: [
         "Te specifiek — gaat de oproep alleen over verzekeringen die beugels vergoeden?",
         null,
-        "Informeren ≠ doel van een advertentie. Advertentie WIL actie.",
-        "Informeren ≠ doel van een advertentie. Independer verkoopt geen eigen verzekeringen, vergelijkt ze.",
+        "Bekijk beide delen apart. Wat wil een advertentie meestal bereiken bij de lezer? En noemt deze advertentie 'de beste' verzekering?",
+        "Bekijk beide delen apart. Independer verkoopt zelf geen verzekeringen, maar vergelijkt ze. Wat wil een advertentie meestal bereiken bij de lezer?",
       ],
       explanation: "Advertentie = activeren. Specifiek: 'Sluit eenvoudig en snel af via Independer.nl' — de oproep is om VIA INDEPENDER te kiezen, niet om een specifieke verzekering.",
       examenBron: BRON_LABEL(24),
@@ -266,10 +266,10 @@ const steps = [
       ],
       answer: 1,
       wrongHints: [
-        "Te smal — de tekst noemt niet alleen nadelen (plastic), maar ook biobased alternatieven.",
+        "Gaat de tekst alleen over nadelen? Lees alinea 3-7 en het slot nog eens.",
         null,
-        "Overhalen = mening + aansporing. Tekst neemt geen kant — beschrijft.",
-        "Overhalen = mening + aansporing. Tekst is genuanceerd — geen 'koop alleen X' boodschap.",
+        "Raadt de tekst je ergens aan om dierlijk leer te kopen? Zoek naar zo'n zin.",
+        "Zegt de tekst ergens dat je voortaan alleen vegan leer moet kopen? Lees nog eens wat er over vegan leer van plastic staat.",
       ],
       explanation: "Tekst legt 3 generaties vegan leer uit (plastic → biobased), met voor- en nadelen. Geen mening 'koop dit'. = informeren. Specifiek: ONTWIKKELING door de tijd.",
       examenBron: BRON_LABEL(33),

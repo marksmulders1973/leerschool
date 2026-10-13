@@ -233,10 +233,10 @@ const steps = [
         wrongHints: [null, "Twee dingen die je allebei moet onthouden? Denk eerder aan een code op je telefoon.", "Een virusscanner zoekt schadelijke programma's.", "Je adres heeft er niets mee te maken."],
       },
       {
-        q: "**Screen-tijd advies** kind 6-12 jaar?",
-        options: ["~2 uur entertainment per dag", "Helemaal geen schermtijd", "Zeker 8 uur of meer per dag", "Onbeperkt, zoveel als je wilt"],
+        q: "Hoeveel **schermtijd** voor ontspanning is het advies voor kinderen van 6 tot 12 jaar?",
+        options: ["~2 uur entertainment per dag", "~4 uur entertainment per dag", "~15 minuten entertainment per week", "~6 uur entertainment per dag"],
         answer: 0,
-        wrongHints: [null, "Een beetje scherm mag best.", "Dat is langer dan een hele schooldag.", "Zonder grens wordt het snel te veel."],
+        wrongHints: [null, "4 uur is het dubbele van het advies. Denk ook aan tijd voor buiten spelen, huiswerk en slapen.", "Een kwartier per week is wel heel weinig; zo streng is het advies niet. Een beetje scherm per dag mag best.", "6 uur is bijna een hele schooldag achter een scherm. Het advies is veel minder."],
       },
     ],
   },
