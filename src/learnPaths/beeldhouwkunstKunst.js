@@ -20,9 +20,9 @@ const steps = [
     checks: [
       {
         q: "Wat is het kenmerkende verschil tussen beeldhouwkunst en schilderkunst?",
-        options: ["Beeldhouwkunst is 3D, schilderkunst 2D", "Beeldhouwkunst gebruikt geen kleur", "Schilderkunst is figuratief, beelden abstract", "Beelden zijn duurzamer dan schilderijen"],
+        options: ["Beeldhouwkunst is 3D, schilderkunst 2D", "Beelden zijn meestal kleurloos", "Schilderkunst is figuratief, beelden abstract", "Beelden zijn duurzamer dan schilderijen"],
         answer: 0,
-        wrongHints: [null, "Beelden kunnen wél kleur hebben (bv. beschilderd).", "Er bestaan abstracte schilderijen en heel realistische beelden. Waar zit het echte verschil?", "Er zijn ook beelden van ijs, zand of klei. Denk aan hoe je elk kunstwerk bekijkt."],
+        wrongHints: [null, "Griekse beelden waren vroeger beschilderd en er bestaan felgekleurde moderne beelden. Is kleur dan het echte verschil?", "Er bestaan abstracte schilderijen en heel realistische beelden. Waar zit het echte verschil?", "Er zijn ook beelden van ijs, zand of klei. Denk aan hoe je elk kunstwerk bekijkt."],
         uitlegPad: {
           stappen: [{ titel: "Eromheen lopen", tekst: "**Beeldhouwkunst** is **driedimensionaal (3D)** — je kunt er **omheen** lopen. Een **schilderij** is tweedimensionaal (2D, plat). Daardoor spelen bij sculptuur massa, volume en standpunt een rol die een schilderij niet heeft." }],
           niveaus: { basis: "3D vs 2D.", simpeler: "Beeld = 3D", nogSimpeler: "A." },
@@ -32,7 +32,7 @@ const steps = [
         q: "Wat is een **reliëf**?",
         options: ["Beeld dat uit een vlakke achtergrond steekt", "Een vrijstaand beeld waar je omheen loopt", "Een schildering met diepte door perspectief", "Een beeld dat uit één blok steen is gehakt"],
         answer: 0,
-        wrongHints: [null, "Dat is juist een vrijstaand beeld (in het rond).", "Bij perspectief lijkt iets alleen diep. Is een reliëf plat of echt ruimtelijk?", "Dat zegt iets over de techniek; ook een vrijstaand beeld kan uit één blok komen. Waar gaat reliëf over?"],
+        wrongHints: [null, "Om een vrijstaand beeld kun je heen lopen. Kan dat ook bij een beeld dat aan een muur of achtergrond vastzit?", "Bij perspectief lijkt iets alleen diep. Is een reliëf plat of echt ruimtelijk?", "Dat zegt iets over de techniek; ook een vrijstaand beeld kan uit één blok komen. Waar gaat reliëf over?"],
         uitlegPad: {
           stappen: [{ titel: "Half uit de muur", tekst: "Een **reliëf** steekt (deels) uit een **achtergrond** en is bedoeld om van **voren** te bekijken — bv. op een muur of munt. **Bas-reliëf** is ondiep, **hoog-reliëf** steekt ver uit. Een **vrijstaand** beeld kun je daarentegen van alle kanten bekijken." }],
           niveaus: { basis: "Steekt uit een achtergrond.", simpeler: "Reliëf = uit de muur", nogSimpeler: "A." },
@@ -59,9 +59,9 @@ const steps = [
     checks: [
       {
         q: "Bij een **marmeren** beeld werk je vooral…",
-        options: ["Wegnemend (materiaal weghakken)", "Opbouwend (materiaal toevoegen)", "Door te gieten", "Door te lassen"],
+        options: ["Wegnemend (materiaal weghakken)", "Opbouwend (materiaal toevoegen)", "Gietend (vloeibaar materiaal in een mal)", "Verbindend (delen aan elkaar lassen)"],
         answer: 0,
-        wrongHints: [null, "Toevoegen past bij klei (boetseren), niet bij marmer.", "Gieten hoort bij brons.", "Lassen is voor metaal."],
+        wrongHints: [null, "Toevoegen past bij klei (boetseren), niet bij marmer.", "Gieten doe je met vloeibaar metaal zoals brons. Kun je marmer vloeibaar maken?", "Lassen verbindt stukken metaal met hitte. Is marmer een metaal?"],
         uitlegPad: {
           stappen: [{ titel: "Hakken = wegnemen", tekst: "**Steen/marmer** bewerk je **wegnemend (subtractief)**: je hakt en beitelt materiaal **weg** uit een blok. Onomkeerbaar — een fout kun je niet terugplakken. **Boetseren** (klei) is juist **opbouwend** en corrigeerbaar." }],
           niveaus: { basis: "Wegnemend.", simpeler: "Marmer = weghakken", nogSimpeler: "A." },
@@ -100,7 +100,7 @@ const steps = [
         q: "Wat is **contrapost** in een (Grieks) beeld?",
         options: ["Het gewicht op één been, met een licht gedraaid lichaam", "Twee figuren die elkaars houding spiegelen", "Een stijve houding, recht van voren gezien", "Het gewicht gelijk verdeeld over beide benen"],
         answer: 0,
-        wrongHints: [null, "Het gaat om de houding van één figuur.", "Dat past bij oudere, strakke beelden zoals de kouros. Wat veranderden de Grieken juist?", "Staat een figuur dan ontspannen of stijf? Kijk naar de heupen bij een Grieks beeld."],
+        wrongHints: [null, "Kijk naar één staand Grieks beeld. Gaat contrapost over twee figuren of over de houding van één?", "Dat past bij oudere, strakke beelden zoals de kouros. Wat veranderden de Grieken juist?", "Staat een figuur dan ontspannen of stijf? Kijk naar de heupen bij een Grieks beeld."],
         uitlegPad: {
           stappen: [{ titel: "Levendige houding", tekst: "**Contrapost**: de figuur zet het gewicht op **één been**, waardoor heupen en schouders licht kantelen en het lichaam natuurlijk 'leeft' in plaats van stijf rechtop staat. Een Griekse vinding (Polykleitos) die de Renaissance weer oppakte (Michelangelo's David)." }],
           niveaus: { basis: "Gewicht op één been.", simpeler: "Contrapost = één been belast", nogSimpeler: "A." },
@@ -110,7 +110,7 @@ const steps = [
         q: "Waardoor valt **barok** beeldhouwwerk (Bernini) op?",
         options: ["Drama en beweging — een bevroren emotioneel moment", "Rust en evenwicht — een ideaal, tijdloos lichaam", "Eenvoud — gladde vormen zonder versiering", "Abstractie — vormen die niets herkenbaars tonen"],
         answer: 0,
-        wrongHints: [null, "Rust/strakheid past juist bij klassiek/neoclassicisme.", "Kijk naar de plooien en haren in een beeld van Bernini. Zijn die eenvoudig?", "Barok is figuratief, niet abstract."],
+        wrongHints: [null, "Rust en een ideaal lichaam passen bij de klassieke Griekse beelden. Staat een figuur van Bernini stil?", "Kijk naar de plooien en haren in een beeld van Bernini. Zijn die eenvoudig?", "Bij Bernini zie je duidelijk mensen, plooien en gezichten. Is dat abstract?"],
         uitlegPad: {
           stappen: [{ titel: "Marmer dat beweegt", tekst: "**Barok** (Bernini) draait om **drama en beweging**: een bevroren moment vol emotie en dynamiek, met wapperende stof en draaiende lichamen. *Apollo en Daphne* laat marmer bijna 'bewegen' — heel anders dan de strakke klassieke rust." }],
           niveaus: { basis: "Drama + beweging.", simpeler: "Barok = drama", nogSimpeler: "A." },
@@ -120,7 +120,7 @@ const steps = [
         q: "Wat is kenmerkend voor veel **20e-eeuwse** beeldhouwkunst (Moore, Brancusi)?",
         options: ["Abstractie — het hoeft niet realistisch iets voor te stellen", "Realisme — een perfect, natuurgetrouw ideaalbeeld", "Religie — beelden vooral voor kerken en kapellen", "Drama — beweging en heftige emotie in marmer"],
         answer: 0,
-        wrongHints: [null, "Realisme was juist het oude ideaal; de 20e eeuw breekt ermee.", "Kerkbeelden waren vooral belangrijk in de middeleeuwen en de barok. Wat deden Moore en Brancusi anders?", "Dat past bij de barok van Bernini. Lijken de gladde vormen van Brancusi daarop?"],
+        wrongHints: [null, "Een vogel van Brancusi is een gladde, glanzende vorm. Lijkt die natuurgetrouw op een echte vogel?", "Kerkbeelden waren vooral belangrijk in de middeleeuwen en de barok. Wat deden Moore en Brancusi anders?", "Kijk naar een beeld van Brancusi: zie je heftige emotie, of rustige vormen? Lijken de gladde vormen van Brancusi daarop?"],
         uitlegPad: {
           stappen: [{ titel: "Vorm boven gelijkenis", tekst: "In de **20e eeuw** wordt beeldhouwkunst vaak **abstract**: het hoeft niet meer realistisch 'iets' voor te stellen. **Brancusi** vereenvoudigt tot de essentie, **Moore** maakt organische figuren met **gaten** (negatieve ruimte), **Calder** maakt bewegende **mobiles**." }],
           niveaus: { basis: "Abstractie.", simpeler: "20e eeuw = abstract", nogSimpeler: "A." },

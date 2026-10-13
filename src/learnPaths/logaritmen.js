@@ -77,14 +77,14 @@ const steps = [
           "5³ = 125",
           "3⁵ = 125",
           "125³ = 5",
-          "5 + 3 = 125",
+          "125 : 5 = 3",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Verkeerd grondtal. Bij log_a(b) = c geldt: a^c = b.",
-          "Grondtal en argument verwisseld.",
-          "Logaritme is geen som — het is een macht-relatie.",
+          "Welk getal is het grondtal in log₅? Staat dat onderaan in de macht?",
+          "Wat is 125³? Is dat 5?",
+          "Vraagt een logaritme naar een deling, of naar een exponent?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Macht-relatie", tekst: "log₅(125) = 3 → 5³ = 125. Grondtal^log = argument." }],
@@ -142,7 +142,7 @@ const steps = [
         wrongHints: [
           null,
           "Dat is ln(e), niet ln(1). Welke exponent hoort bij e^? = 1?",
-          "Geen logische uitkomst — log van 1 in willekeurige basis is altijd hetzelfde getal.",
+          "Welke macht van e geeft 1? Is e¹ gelijk aan 1?",
           "ln(1) is wél bepaald — ln(0) zou onbepaald zijn. Welke exponent geeft 1?",
         ],
         uitlegPad: {
@@ -190,7 +190,7 @@ const steps = [
         wrongHints: [
           null,
           "Verwar 1000 niet met 0,001 — schrijf 0,001 als macht van 10 en kijk wat de exponent is.",
-          "Geen logische uitkomst.",
+          "0,001 is het getal ín de log. Tot welke macht moet 10 om 0,001 te krijgen?",
           "Denk aan log van 1 — dat is nul. Is 0,001 gelijk aan 1?",
         ],
         uitlegPad: {
@@ -272,9 +272,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Aftrekken werkt voor andere log-eigenschappen, niet voor grondtal-omschakeling.",
-          "Te simpel — log is geen deling.",
-          "Optellen of vermenigvuldigen in het argument heeft geen direct verband met basis-omschakeling.",
+          "log(20) − log(2) = log(10) = 1. Is 2¹ gelijk aan 20?",
+          "20 / 2 = 10, en 2¹⁰ = 1024. Is dat 20?",
+          "log(20 · 2) = log(40) ≈ 1,6. Is 2 tot de macht 1,6 ongeveer 20?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Grondtal-omschakeling", tekst: "log_a(b) = log(b) / log(a). Twee logs, niet één." }],
@@ -364,15 +364,15 @@ const steps = [
         options: [
           "log(21)",
           "log(10)",
-          "log(3+7)",
-          "log(3·log(7))",
+          "7 · log(3)",
+          "log(3) · log(7)",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "log(3) + log(7) ≠ log(3 + 7). De regel zegt: som van logs = log van product.",
-          "Zelfde fout — som van logs = log van product, niet log van som.",
-          "Geen logische bewerking. log(a) + log(b) = log(a·b).",
+          "log(10) is log(3 + 7). Wordt een som van logs de log van een som?",
+          "7 · log(3) is log(3⁷). Staat er een macht in de opgave?",
+          "Probeer met getallen: log(10) + log(10) = 2, maar log(10) · log(10) = 1. Is optellen hetzelfde als vermenigvuldigen?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Som van logs = log van product", tekst: "log(3) + log(7) = log(3·7) = log(21)." }],
@@ -414,7 +414,7 @@ const steps = [
           null,
           "Aftrekken in het argument werkt niet — welke regel zegt wat je met een verschil van logs doet?",
           "Optellen klopt ook niet. Wat wordt het argument bij het verschil van twee logs?",
-          "Je kunt ook de losse log-waarden uitrekenen en dan aftrekken — is het antwoord dan precies gelijk aan de uitdrukking?",
+          "Reken los uit: log₂(64) = 6 en log₂(8) = 3. Wat is 6 − 3?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Verschil = log van deling", tekst: "log₂(64) − log₂(8) = log₂(64/8) = log₂(8) = 3." }],
@@ -499,7 +499,7 @@ const steps = [
           null,
           "Delen werkt niet — x staat in de exponent. Welke bewerking haalt een exponent naar beneden?",
           "Aftrekken werkt niet voor een exponent — welke methode zet je 5^x gelijk aan 100?",
-          "Te groot — hoeveel maal 5 moet je vermenigvuldigen om in de buurt van 100 te komen?",
+          "5⁵ = 3125. Is dat in de buurt van 100?",
         ],
         uitlegPad: {
           stappen: [{ titel: "log van beide kanten", tekst: "5^x = 100 → x·log(5) = log(100) → x = log(100)/log(5) ≈ 2,86." }],
@@ -540,8 +540,8 @@ const steps = [
         wrongHints: [
           null,
           "Dat is het percentage, niet de tijd — hoe deel je 70 door het percentage?",
-          "Dat is de regel-constante zelf, niet de uitkomst.",
-          "Te lang — deel 70 door het groeipercentage.",
+          "70 is het getal uit de regel van 70 zelf. Waar deel je het door?",
+          "Na 100 jaar is het bedrag al vele keren verdubbeld. Hoe gebruik je de regel van 70?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Regel van 70", tekst: "T ≈ 70 / r%. Hier: 70/7 = 10 jaar." }],
@@ -591,14 +591,14 @@ const steps = [
           "log(10) = 1",
           "log(45)",
           "log(55)",
-          "log(50/log(5))",
+          "log(50) / log(5)",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Aftrekken in het argument werkt niet — welke regel zegt wat je met een verschil van logs doet?",
-          "Optellen werkt niet. log(a) - log(b) = log(a/b).",
-          "Geen logische bewerking.",
+          "log(55) is log(50 + 5). Hoort optellen bij een verschil van logs?",
+          "Een deling van logs gebruik je om een grondtal om te rekenen, zoals log₅(50). Staat er een deling in de opgave?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Verschil = log van deling", tekst: "log(50) − log(5) = log(50/5) = log(10) = 1." }],
@@ -774,7 +774,7 @@ const steps = [
         wrongHints: [
           null,
           "Te kort — na twee halveringstijden is er nog meer dan 10% over. Hoeveel halveringstijden heb je nodig?",
-          "Veel te lang.",
+          "40 uur zijn 10 halveringstijden. Hoeveel procent is er dan nog over?",
           "Na vier halveringstijden is er minder dan 10% over. Wanneer is er precies 10% over — eerder of later?",
         ],
         uitlegPad: {
@@ -786,14 +786,14 @@ const steps = [
           niveaus: { basis: "t = 4 · log(0,1)/log(0,5) ≈ 13,3.", simpeler: "Tussen 8 en 16 uur.", nogSimpeler: "≈ 13 uur." },
         },
       },
-      { q: "log(1000) = ? (basis 10)", options: ["3","2","1000","10"], answer: 0, wrongHints: [null, "Niet — hoeveel nullen heeft 1000, en wat is de exponent van 10 daarvoor?", "Dat is argument.", "Dat is basis."] },
+      { q: "log(1000) = ? (basis 10)", options: ["3","2","1000","10"], answer: 0, wrongHints: [null, "Niet — hoeveel nullen heeft 1000, en wat is de exponent van 10 daarvoor?", "1000 is het getal ín de log. Tot welke macht moet 10 om 1000 te krijgen?", "10 is het grondtal. Is de uitkomst het grondtal of de exponent?"] },
       { q: "Wat is **log(a · b)** volgens eigenschap?", options: ["log(a) + log(b)","log(a) · log(b)","log(a) − log(b)","log(a/b)"], answer: 0, wrongHints: [null, "Wordt vermenigvuldigen binnen de log ook vermenigvuldigen buiten de log? Probeer a = b = 10.", "Aftrekken hoort bij delen binnen de log. Staat er een deling?", "log(a/b) hoort bij een deling. Staat er a gedeeld door b?"] },
       { q: "**log(10)** = ? (basis 10)", options: ["1","10","0","100"], answer: 0, wrongHints: [null,"10 is het getal ín de log. Tot welke macht moet je 10 verheffen om 10 te krijgen?","0 is log(1), want 10⁰ = 1. Welke macht van 10 geeft 10?","10² = 100. Is de uitkomst van een log het getal zelf, of de exponent?"] },
-      { q: "**log(1)** = ? (welke basis dan ook)", options: ["0","1","∞","Niet bepaald"], answer: 0, wrongHints: [null,"Niet — log(basis).","Niet — log groeit logaritmisch.","Wel bepaald."] },
-      { q: "log(a/b) = ?", options: ["log(a) − log(b)","log(a) + log(b)","log(a) · log(b)","log(a − b)"], answer: 0, wrongHints: [null,"Product.","Andere eigenschap.","Geen relatie."] },
+      { q: "**log(1)** = ? (welke basis dan ook)", options: ["0","1","−1","Niet bepaald"], answer: 0, wrongHints: [null,"1 krijg je als het getal ín de log gelijk is aan het grondtal. Welke macht van een getal geeft 1?","−1 hoort bij 1 gedeeld door het grondtal, zoals log(0,1). Welke macht geeft precies 1?","Onbepaald is log(0). Welke exponent maakt elk grondtal gelijk aan 1?"] },
+      { q: "log(a/b) = ?", options: ["log(a) − log(b)","log(a) + log(b)","log(a) · log(b)","log(a − b)"], answer: 0, wrongHints: [null,"Optellen van logs hoort bij vermenigvuldigen binnen de log. Staat er een vermenigvuldiging?","Probeer a = 100 en b = 10: log(10) = 1. Wat geeft log(100) · log(10)?","Probeer a = 100 en b = 10: log(10) = 1. Wat is log(100 − 10)?"] },
       { q: "log(a^n) = ?", options: ["n · log(a)","log(a)^n","log(n · a)","n + log(a)"], answer: 0, wrongHints: [null,"Niet — staat n in deze eigenschap als exponent óf als factor vóór de log?","Probeer a = 10 en n = 2: log(100) = 2. Wat geeft log(n · a) = log(20)?","Probeer a = 10 en n = 2: log(100) = 2. Wat geeft n + log(a)?"] },
       { q: "ln(e) = ?", options: ["1","0","e","∞"], answer: 0, wrongHints: [null,"0 is ln(1), want e⁰ = 1. Welke macht van e geeft e?","e is het getal ín de ln. Met welke exponent wordt e precies e?","ln(e) is een gewoon getal. Welke macht van e geeft precies e?"] },
-      { q: "Wat is **e** ongeveer?", options: ["2,718","2","3","1,41"], answer: 0, wrongHints: [null,"Niet exact.","Niet exact.","Dat is √2."] },
+      { q: "Wat is **e** ongeveer?", options: ["2,718","2","3","1,41"], answer: 0, wrongHints: [null,"e is geen heel getal. Wat staat er achter de komma?","e is geen heel getal. Ligt het dichter bij 2 of bij 3, en wat staat er achter de komma?","Dat is √2."] },
       { q: "Welke basis hoort bij **ln**?", options: ["e","10","2","½"], answer: 0, wrongHints: [null,"Basis 10 hoort bij de gewone log. Waar staat de n in ln voor?","Basis 2 heet de binaire logaritme. Welk bijzonder getal hoort bij de natuurlijke logaritme?","Een basis kleiner dan 1 gebruik je zelden. Waar staat de n in ln voor?"] },
       { q: "**Open vraag**: bereken log(100) met basis 10. Typ getal.", kind: "open", acceptedAnswers: ["2"], numericTolerance: 0, explanation: "10² = 100 → log(100) = 2." },
       { q: "**Open vraag**: los op: 2^x = 8. Typ x.", kind: "open", acceptedAnswers: ["3"], numericTolerance: 0, explanation: "2³ = 8 → x = 3." },

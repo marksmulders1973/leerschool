@@ -180,7 +180,7 @@ const steps = [
         answer: 2,
         wrongHints: [
           "Je hebt de teller met 4 vermenigvuldigd. Is de noemer dan ook met 4 vermenigvuldigd?",
-          "⅔ is twee derde, niet één derde.",
+          "Bij een gelijke breuk vermenigvuldig je teller én noemer met hetzelfde getal. Lukt dat van ⅓ naar ⅔?",
           null,
           "³⁄₆ is de helft. Is ⅓ evenveel als de helft?",
         ],
@@ -218,9 +218,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "⅓ is iets anders — dat is 4/12 niet 9/12. Reken: deel 9 en 12 door 3.",
-          "⁹⁄₁₂ is wel een breuk maar niet vereenvoudigd. Beide deelbaar door 3.",
-          "²⁄₃ = ⁸⁄₁₂, niet ⁹⁄₁₂. Probeer: 9 ÷ 3 = ?, 12 ÷ 3 = ?",
+          "⅓ is hetzelfde als ⁴⁄₁₂. Hoeveel twaalfden heb jij? Door welk getal kun je 9 én 12 allebei delen?",
+          "Dit is de breuk zelf. Is er een getal waardoor 9 én 12 allebei deelbaar zijn?",
+          "²⁄₃ is hetzelfde als ⁸⁄₁₂. Is dat evenveel als ⁹⁄₁₂?",
         ],
         uitlegPad: {
           stappen: [{ titel: "÷ 3", tekst: "9÷3=3, 12÷3=4 → ¾." }],
@@ -379,13 +379,13 @@ const steps = [
     checks: [
       {
         q: "Reken uit: ⅚ − ⅓.",
-        options: ["½", "⁴⁄₆", "⁴⁄₃", "²⁄₃"],
+        options: ["½", "⁴⁄₆", "⁴⁄₃", "⅙"],
         answer: 0,
         wrongHints: [
           null,
-          "⁴⁄₆ is geen vereenvoudigde breuk — maar klopt het ook inhoudelijk? Zet ⅓ eerst gelijknamig en reken dan ⅚ − dat getal.",
+          "Je trok 1 van 5 af, maar ⅓ is geen zesde. Hoeveel zesden is ⅓?",
           "Controleer: hoeveel is ⅓ als breuk met noemer 6? Trek dat vervolgens van ⅚ af.",
-          "²⁄₃ = ⁴⁄₆ — maar hoeveel is ⅓ als breuk met noemer 6? Dat is niet hetzelfde als ²⁄₃.",
+          "Hoeveel zesden is ⅓ precies? Controleer: is ⅓ echt evenveel als ⁴⁄₆?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Gelijknamig + aftrekken", tekst: "⅓ = ²⁄₆. ⅚ − ²⁄₆ = ³⁄₆ = ½." }],
@@ -660,10 +660,10 @@ const steps = [
       { q: "3/4 als decimaal?", options: ["0,75","0,34","0,43","0,8"], answer: 0, wrongHints: [null, "Je hebt de cijfers 3 en 4 achter de komma gezet. Wat is 3 gedeeld door 4?", "Je hebt 4 en 3 achter de komma gezet. Wat is 3 gedeeld door 4?", "Hoeveel is 4 × 0,8? Is dat 3?"] },
       { q: "¼ + ⅛ = ?", options: ["⅜","½","⅙","⅔"], answer: 0, wrongHints: [null, "Schrijf ¼ als achtsten. Hoeveel achtsten heb je dan samen?", "Mag je de noemers 4 en 8 zomaar bij elkaar optellen?", "⅔ is meer dan de helft. Zijn ¼ en ⅛ samen zoveel?"] },
       { q: "2½ + 1¼ = ?", options: ["3¾","3¼","4","4½"], answer: 0, wrongHints: [null, "De hele getallen kloppen: 2 + 1 = 3. Wat is ½ + ¼?", "Tel eerst de hele getallen op en daarna ½ + ¼. Kom je dan op een heel getal uit?", "2 + 1 = 3, en ½ + ¼ is minder dan 1. Hoe kom je dan boven de 4?"] },
-      { q: "Welke breuk is groter: ⅓ of ¼?", options: ["⅓","¼","Gelijk","Niet te zeggen"], answer: 0, wrongHints: [null, "Niet — andersom.", "Niet — verschillend.", "Wel te zeggen — vergelijk de noemers."] },
+      { q: "Welke breuk is groter: ⅓ of ¼?", options: ["⅓","¼","Gelijk","Niet te zeggen"], answer: 0, wrongHints: [null, "Bij ¼ deel je in 4 stukken, bij ⅓ in 3. Welke stukken worden groter?", "Is een derde van een pizza even groot als een kwart van dezelfde pizza?", "Teken twee even grote pizza's: één in 3 stukken, één in 4. Welk stuk is groter?"] },
       { q: "1 − ⅖ = ?", options: ["⅗","⅖","⅘","½"], answer: 0, wrongHints: [null, "⅖ is het stuk dat je weghaalt. Hoeveel vijfden blijven er over?", "Hoeveel vijfden zitten er in 1 hele? Haal er daarna 2 af.", "Schrijf 1 als vijfden. Kan er dan een helft overblijven?"] },
-      { q: "Wat is **¼ als procent**?", options: ["25%","14%","40%","20%"], answer: 0, wrongHints: [null, "Je hebt de cijfers 1 en 4 achter elkaar gezet. Hoeveel is 100 gedeeld door 4?", "Niet — denk na: hoeveel procent is de helft, en hoe verhoudt een kwart zich daartoe?", "20% is één vijfde. In hoeveel stukken deel je iets bij een kwart?"] },
-      { q: "Wat is **⅗ als procent**?", options: ["60%","35%","53%","30%"], answer: 0, wrongHints: [null, "Cijfers gehusseld.", "Niet — reken 3 ÷ 5 uit en zet dat om naar procent.", "Hoeveel procent is ⅕? En ⅗ is drie keer zoveel."] },
+      { q: "Wat is **¼ als procent**?", options: ["25%","14%","40%","20%"], answer: 0, wrongHints: [null, "Je hebt de cijfers 1 en 4 achter elkaar gezet. Hoeveel is 100 gedeeld door 4?", "Je maakte van de 4 een 40. Hoeveel kwarten passen in een geheel, en wat is 100% gedeeld door dat aantal?", "20% is één vijfde. In hoeveel stukken deel je iets bij een kwart?"] },
+      { q: "Wat is **⅗ als procent**?", options: ["60%","35%","53%","30%"], answer: 0, wrongHints: [null, "Je zette de cijfers 3 en 5 naast elkaar. Wat is 3 gedeeld door 5?", "Je zette 5 en 3 naast elkaar. Wat is 3 gedeeld door 5 als kommagetal, en hoeveel procent is dat?", "Hoeveel procent is ⅕? En ⅗ is drie keer zoveel."] },
       { q: "½ × 4 = ?", options: ["2","½","¼","4½"], answer: 0, wrongHints: [null, "Vier keer een halve pizza: houd je dan maar een halve over?", "Je hebt ½ door 4 gedeeld. Bij × 4 neem je ½ vier keer.", "Je hebt 4 en ½ opgeteld. Bij keer neem je ½ vier keer."] },
       { q: "Welke breuk = ½?", options: ["²⁄₄","⅔","⅓","¾"], answer: 0, wrongHints: [null, "⅔ is meer dan een half. Is de teller precies de helft van de noemer?", "⅓ is minder dan een half. Hoe verhouden teller en noemer zich bij ½?", "¾ is meer dan een half. Hoe verhouden teller en noemer zich bij ½?"] },
       { q: "**Open vraag**: vereenvoudig **8/12** (typ als breuk a/b).", kind: "open", acceptedAnswers: ["2/3", "2 / 3"], explanation: "8 en 12 zijn beide deelbaar door 4: 8/12 = 2/3." },

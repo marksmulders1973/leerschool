@@ -78,7 +78,7 @@ const steps = [
         q: "*Is x = 5, y = 2 een oplossing van het stelsel: x + y = 7 én 2x − y = 8?*",
         options: ["Ja — beide vergelijkingen kloppen","Nee — alleen de eerste klopt","Nee — alleen de tweede klopt","Nee — geen van beide klopt"],
         answer: 0,
-        wrongHints: [null, "Vul het paar in BEIDE vergelijkingen — kloppen ze allebei?", "Heb je beide vergelijkingen los gecheckt? Eén klopt niet automatisch betekent 'beide niet'.", "Reken rustig na: vul x en y in elke vergelijking apart — kloppen ze dan allebei?"],
+        wrongHints: [null, "Vul het paar in BEIDE vergelijkingen — kloppen ze allebei?", "Vul x = 5 en y = 2 in de eerste vergelijking in: wat is 5 + 2?", "Reken rustig na: vul x en y in elke vergelijking apart — kloppen ze dan allebei?"],
         uitlegPad: {
           stappen: [{ titel: "Beide vergelijkingen checken", tekst: "Vgl 1: 5+2=7 ✓. Vgl 2: 2·5−2=10−2=8 ✓. Beide kloppen → oplossing." }],
           woorden: [{ woord: "stelsel-oplossing", uitleg: "Paar (x,y) dat BEIDE vergelijkingen waar maakt." }],
@@ -181,7 +181,7 @@ const steps = [
         q: "*Stelsel: y = 3x − 1 én x + y = 7. Wat doe je in stap 2 (substitutie)?*",
         options: ["Vul 3x − 1 in voor y in x + y = 7","Vul x = 7 − y in beide vergelijkingen","Tel beide vergelijkingen bij elkaar op","Vermenigvuldig beide kanten met 3"],
         answer: 0,
-        wrongHints: [null, "Met x = 7 − y moet je eerst omschrijven en in twee vergelijkingen invullen. Kijk naar de eerste vergelijking: welke variabele staat daar al alleen?", "Dat is optellen-methode, niet substitutie.", "Vermenigvuldigen is geen onderdeel van de basis-substitutie-stap."],
+        wrongHints: [null, "Met x = 7 − y moet je eerst omschrijven en in twee vergelijkingen invullen. Kijk naar de eerste vergelijking: welke variabele staat daar al alleen?", "Dat is optellen-methode, niet substitutie.", "Waarom zou je met 3 vermenigvuldigen? Bij substitutie vul je iets in. Welke variabele staat al alleen?"],
         uitlegPad: {
           stappen: [{ titel: "Y al klaar, invullen", tekst: "y = 3x−1 is al geïsoleerd. Vul (3x−1) in voor y in 2e vergelijking: x + (3x−1) = 7." }],
           woorden: [{ woord: "substitutie", uitleg: "Vervangen. Hier: y vervangen door uitdrukking met x." }],
@@ -247,7 +247,7 @@ const steps = [
         q: "*In stelsel \"x + 3y = 8 en 2x + 5y = 14\" — welke variabele isoleer je het eerst?*",
         options: ["x in vergelijking 1 (heeft coëfficiënt 1)","y in vergelijking 1 (heeft coëfficiënt 3)","x in vergelijking 2 (heeft coëfficiënt 2)","Geen verschil — kies willekeurig"],
         answer: 0,
-        wrongHints: [null, "Coëfficiënt 3 betekent meer rekenwerk. Coëfficiënt 1 is veel makkelijker.", "Coëfficiënt 2 vereist een breuk. Coëfficiënt 1 is ideaal.", "Coëfficiënt 1 is altijd handiger — minder breuken, minder fouten."],
+        wrongHints: [null, "Als je y vrijmaakt, moet je door 3 delen. Krijg je dan breuken?", "Als je x uit vergelijking 2 vrijmaakt, deel je door 2. Krijg je dan breuken, en kan het ook zonder?", "Maakt het voor het rekenwerk uit of je door 1, 2 of 3 moet delen?"],
         uitlegPad: {
           stappen: [{ titel: "Kies coëfficiënt 1", tekst: "x in vgl 1 heeft coëfficiënt 1 — meteen klaar voor isoleren: x = 8 − 3y. Geen breuken. Andere keuzes geven breuken." }],
           woorden: [{ woord: "coëfficiënt", uitleg: "Getal vóór variabele. Bij x of 1x = coëff 1." }],
@@ -412,7 +412,7 @@ const steps = [
         q: "*\"Twee getallen samen 20, hun verschil 6. Welke vergelijkingen?\"*",
         options: ["x + y = 20 en x − y = 6","x · y = 20 en x · y = 6","x + y = 20 en 2x + 2y = 6","x − y = 20 en x − y = 6"],
         answer: 0,
-        wrongHints: [null, "'Samen' = optellen, niet vermenigvuldigen.", "'Verschil' = aftrekken, niet 2x + 2y.", "'Samen' betekent optellen — de eerste vergelijking moet een som zijn."],
+        wrongHints: [null, "Betekent 'samen' keer elkaar, of bij elkaar opgeteld?", "Wat betekent 'verschil' bij twee getallen: verdubbelen en optellen, of aftrekken?", "Is 'samen 20' een verschil of een som?"],
         uitlegPad: {
           stappen: [{ titel: "Vertaal woorden", tekst: "'Samen 20' = som = x+y=20. 'Verschil 6' = aftrekken = x−y=6 (grotere - kleinere)." }],
           woorden: [{ woord: "som", uitleg: "Resultaat optelling." }, { woord: "verschil", uitleg: "Resultaat aftrekking." }],
@@ -440,7 +440,7 @@ const steps = [
         q: "*Los op: x + y = 10 en 2x − y = 5. Wat is x?*",
         options: ["x = 5", "x = 10", "x = 7,5", "x = 3,33"],
         answer: 0,
-        wrongHints: [null, "Optellen elimineert y. Wat krijg je dan voor 3x — en deel je dat door 3?", "Hoe komt 7,5 eruit? Even nagaan welk getal je deelt en door wat.", "Geen ingewikkelde breuk hier — je krijgt een mooi heel getal als je correct deelt."],
+        wrongHints: [null, "Optellen elimineert y. Wat krijg je dan voor 3x — en deel je dat door 3?", "7,5 is 15 / 2. Hoeveel x heb je na het optellen: 2x of 3x?", "3,33 is 10 / 3. Welk getal staat rechts na het optellen: 10 of 15?"],
         uitlegPad: {
           stappen: [
             { titel: "Optellen", tekst: "x+y=10, 2x−y=5. Optellen: 3x=15 → x=5." },
@@ -491,7 +491,7 @@ const steps = [
         q: "*\"Een hond + 2 katten = 8 kg. 2 honden + 1 kat = 11 kg.\" Hoeveel weegt een hond?*",
         options: ["Hond = 4,67 kg", "Hond = 4 kg", "Hond = 5 kg", "Hond = 3 kg"],
         answer: 0,
-        wrongHints: [null, "Stel eerst het stelsel op met h en k — vul dan beide gegevens in en los op.", "Vul dit gewicht in voor h en bereken k — klopt die k dan ook in de tweede vergelijking?", "Vul dit gewicht in voor h en bereken k — klopt die k dan ook in de tweede vergelijking?"],
+        wrongHints: [null, "Vul h = 4 in: dan wegen 2 katten samen 4 kg, dus k = 2. Klopt 2h + k = 11 dan?", "Vul dit gewicht in voor h en bereken k — klopt die k dan ook in de tweede vergelijking?", "Vul dit gewicht in voor h en bereken k — klopt die k dan ook in de tweede vergelijking?"],
         uitlegPad: {
           stappen: [
             { titel: "Stel stelsel op", tekst: "h+2k=8 en 2h+k=11. Verg 2 ·2: 4h+2k=22. Aftrekken: 3h=14 → h=14/3≈4,67." },
@@ -537,7 +537,7 @@ const steps = [
         q: "*\"Een fietsentocht: 60 km. Eerste deel 15 km/u, tweede 20 km/u. Totaal 3,5 uur.\" Hoe lang duurde het eerste deel?*",
         options: ["2 uur","1 uur","1,5 uur","3 uur"],
         answer: 0,
-        wrongHints: [null, "Stel het stelsel op met t1 en t2 — klopt de tijd én de afstand voor dit getal?", "Stel het stelsel op met t1 en t2 — klopt de tijd én de afstand voor dit getal?", "Stel het stelsel op met t1 en t2 — klopt de tijd én de afstand voor dit getal?"],
+        wrongHints: [null, "Bij 1 uur fiets je 15 km; er blijft 45 km over voor 2,5 uur. Is dat 20 km/u?", "Bij 1,5 uur fiets je 22,5 km; er blijft 37,5 km over voor 2 uur. Is dat 20 km/u?", "Bij 3 uur fiets je 45 km; er blijft 15 km over voor een half uur. Is dat 20 km/u?"],
         uitlegPad: {
           stappen: [
             { titel: "Stel stelsel op", tekst: "t1+t2=3,5 (tijd). 15·t1+20·t2=60 (afstand)." },

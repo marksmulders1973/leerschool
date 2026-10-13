@@ -117,7 +117,7 @@ const steps = [
         q: "**1 m³** is hetzelfde als ... liter?",
         options: ["1000 liter", "100 liter", "10 liter", "10.000 liter"],
         answer: 0,
-        wrongHints: [null, "Te weinig — denk groter. Een m³ is een kubus van 1 m × 1 m × 1 m.", "Veel te weinig — een douchecabine alleen al is meer.", "Te veel — controleer."],
+        wrongHints: [null, "Te weinig — denk groter. Een m³ is een kubus van 1 m × 1 m × 1 m.", "Veel te weinig — een douchecabine alleen al is meer.", "10.000 liter is 10 m³. Hoeveel dm³ past er in een kubus van 10 × 10 × 10 dm?"],
         uitlegPad: {
           stappen: [
             { titel: "Reken het uit", tekst: "1 m = 10 dm. Dus 1 m³ = 10 × 10 × 10 = 1000 dm³. En 1 dm³ = 1 liter. Dus 1 m³ = 1000 liter." },
@@ -280,7 +280,7 @@ const steps = [
         q: "Volume kubus met zijde **2 cm** = ?",
         options: ["8 cm³", "6 cm³", "4 cm³", "12 cm³"],
         answer: 0,
-        wrongHints: [null, "Te weinig — heb je 2 + 2 + 2 gedaan? Het is keer-keer, niet plus-plus.", "Te weinig — heb je per ongeluk 2 × 2 gedaan?", "Te veel — controleer 2 × 2 × 2."],
+        wrongHints: [null, "Te weinig — heb je 2 + 2 + 2 gedaan? Het is keer-keer, niet plus-plus.", "Te weinig — heb je per ongeluk 2 × 2 gedaan?", "Hoe kom je aan 12? Vermenigvuldig lengte, breedte en hoogte: 2 × 2 × …?"],
         uitlegPad: {
           stappen: [
             { titel: "Formule kubus", tekst: "V = zijde × zijde × zijde = 2 cm × 2 cm × 2 cm = 8 cm³." },
@@ -300,19 +300,19 @@ const steps = [
         q: "Volume kubus met zijde **5 cm** = ?",
         options: ["125 cm³", "25 cm³", "15 cm³", "75 cm³"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dat is 5 × 5 (alleen 2 keer). Doe nog × 5.", "Te weinig — dat is 5 + 5 + 5. Volume is keer-keer-keer.", "Te weinig — controleer 5 × 5 × 5."],
+        wrongHints: [null, "Te weinig — dat is 5 × 5 (alleen 2 keer). Doe nog × 5.", "Te weinig — dat is 5 + 5 + 5. Volume is keer-keer-keer.", "75 is 25 × 3. Moet je de laatste keer met 3 of met 5 vermenigvuldigen?"],
       },
       {
         q: "Een ijsblokje is een kubus van **3 cm**. Volume?",
         options: ["27 cm³", "9 cm³", "6 cm³", "12 cm³"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dat is 3 × 3. Nog één keer × 3.", "Te weinig — dat is 3 + 3.", "Te weinig — geen kubus-formule gebruikt."],
+        wrongHints: [null, "Te weinig — dat is 3 × 3. Nog één keer × 3.", "Te weinig — dat is 3 + 3.", "12 is 3 × 4. Welke drie getallen vermenigvuldig je bij een kubus van 3 cm?"],
       },
       {
         q: "Een speelblokje is een kubus van **10 cm**. Volume?",
         options: ["1000 cm³", "100 cm³", "30 cm³", "10.000 cm³"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dat is 10 × 10. Nog één keer × 10.", "Te weinig — dat is 10 + 10 + 10.", "Te veel — controleer 10 × 10 × 10."],
+        wrongHints: [null, "Te weinig — dat is 10 × 10. Nog één keer × 10.", "Te weinig — dat is 10 + 10 + 10.", "Tel de nullen: hoeveel nullen krijg je bij 10 × 10 × 10?"],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -832,7 +832,7 @@ const steps = [
         q: "**4 m³** = ... liter?",
         options: ["4000 liter", "400 liter", "40 liter", "4 liter"],
         answer: 0,
-        wrongHints: [null, "Te weinig — hoeveel liter past in 1 m³? Vermenigvuldig dat met 4.", "Te weinig — komma 1 plek verkeerd.", "Te weinig — m³ is een grote eenheid; reken nog eens."],
+        wrongHints: [null, "Te weinig — hoeveel liter past in 1 m³? Vermenigvuldig dat met 4.", "40 liter zijn maar een paar emmers water. Past er in een kubus van 1 bij 1 bij 1 meter niet veel meer?", "Te weinig — m³ is een grote eenheid; reken nog eens."],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -1150,7 +1150,7 @@ const steps = [
         q: "Een **dobbelsteen** is een kubus met zijde **2 cm**. Volume?",
         options: ["8 cm³", "6 cm³", "4 cm³", "12 cm³"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dat is 2 + 2 + 2. Volume is keer-keer.", "Te weinig — dat is 2 × 2. Nog × 2 erbij.", "Te veel — controleer 2 × 2 × 2."],
+        wrongHints: [null, "Te weinig — dat is 2 + 2 + 2. Volume is keer-keer.", "Te weinig — dat is 2 × 2. Nog × 2 erbij.", "Hoe kom je aan 12? Vermenigvuldig lengte, breedte en hoogte: 2 × 2 × …?"],
       },
       {
         q: "**Melkpak** van **1 liter** = hoeveel **cm³**?",
@@ -1498,7 +1498,7 @@ const steps = [
         q: "Een **kamer** is **5 m × 4 m × 3 m**. Hoeveel **m³** lucht?",
         options: ["60 m³", "12 m³", "20 m³", "120 m³"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dat is 5 + 4 + 3. Volume is keer.", "Te weinig — alleen 5 × 4 gedaan.", "Te veel — controleer 5 × 4 × 3."],
+        wrongHints: [null, "Te weinig — dat is 5 + 4 + 3. Volume is keer.", "Te weinig — alleen 5 × 4 gedaan.", "Hoe kom je aan 120? Reken eerst 5 × 4 uit en vermenigvuldig dan met de hoogte."],
       },
       {
         q: "**2,5 liter** = ... **mL**?",
@@ -1528,18 +1528,18 @@ const steps = [
         },
       },
       { q: "Volume van een kubus met **ribbe 3 cm**?", options: ["27 cm³","9 cm³","6 cm³","12 cm³"], answer: 0, wrongHints: [null, "3 × 3 = 9 is de oppervlakte van één vlak. Welke maat mis je nog voor het volume?", "3 + 3 = 6. Volume reken je met keer, niet met plus. Welke maten vermenigvuldig je?", "4 × 3 = 12 is de omtrek van één vlak. Welke drie maten vermenigvuldig je voor het volume?"] },
-      { q: "Volume balk **5 × 4 × 2** cm?", options: ["40 cm³","11 cm³","20 cm³","80 cm³"], answer: 0, wrongHints: [null, "Som.", "2 dimensies.", "×2 fout."] },
+      { q: "Volume balk **5 × 4 × 2** cm?", options: ["40 cm³","11 cm³","20 cm³","80 cm³"], answer: 0, wrongHints: [null, "11 is 5 + 4 + 2. Tel je bij volume de maten op, of vermenigvuldig je ze?", "20 is 5 × 4. Heb je de hoogte van 2 cm ook gebruikt?", "80 is twee keer te veel. Heb je met één maat te vaak vermenigvuldigd?"] },
       { q: "Een **kubus** heeft hoeveel ribben?", options: ["12","8","6","4"], answer: 0, wrongHints: [null, "8 is het aantal hoekpunten. Tel de randen: 4 boven, 4 onder en …?", "6 is het aantal vlakken. Een ribbe is een rand tussen twee vlakken. Hoeveel randen zijn er?", "4 ribben heeft alleen het bovenvlak al. Tel ook de onderkant en de staande ribben."] },
-      { q: "Een **kubus** heeft hoeveel **vlakken**?", options: ["6","4","8","12"], answer: 0, wrongHints: [null, "Te weinig — tel ook de boven- en onderkant mee.", "Hoekpunten.", "Ribben."] },
-      { q: "1 dm³ = hoeveel L?", options: ["1","100","1000","10"], answer: 0, wrongHints: [null, "Te veel — denk aan de directe omzetting dm³ ↔ liter.", "Te veel — dat is cm³ per liter.", "Te veel — komma 1 plek verkeerd."] },
-      { q: "Aquarium 50×30×40 cm. Volume in cm³?", options: ["60.000","12.000","120","6000"], answer: 0, wrongHints: [null, "Te weinig — controleer 50 × 30 × 40.", "Veel te weinig — vergeet je een nul?", "Komma 1 plek verkeerd."] },
-      { q: "1 m³ = hoeveel L?", options: ["1000","100","10","10.000"], answer: 0, wrongHints: [null, "Te weinig — komma verkeerd.", "Veel te weinig — denk groot, 1 m³ = veel liters.", "Te veel — komma 1 plek verkeerd."] },
+      { q: "Een **kubus** heeft hoeveel **vlakken**?", options: ["6","4","8","12"], answer: 0, wrongHints: [null, "Te weinig — tel ook de boven- en onderkant mee.", "8 is het aantal hoekpunten. Tel de platte kanten: boven, onder en …?", "12 is het aantal ribben. Hoeveel platte kanten heeft een dobbelsteen?"] },
+      { q: "1 dm³ = hoeveel L?", options: ["1","100","1000","10"], answer: 0, wrongHints: [null, "Een kubus van 1 dm is 10 × 10 × 10 cm. Hoeveel liter is 1000 cm³?", "1000 cm³ gaan er in 1 liter. Hoeveel cm³ is 1 dm³?", "Heb je dm³ met dL verwisseld? Hoeveel liter is een kubus van 10 × 10 × 10 cm?"] },
+      { q: "Aquarium 50×30×40 cm. Volume in cm³?", options: ["60.000","12.000","120","6000"], answer: 0, wrongHints: [null, "Reken in stappen: 50 × 30 = 1500. Wat is 1500 × 40?", "Je bent nullen kwijtgeraakt. Wat is 5 × 3 × 4, en hoeveel nullen komen erachter?", "Er mist een nul. Hoeveel nullen staan er in 50, 30 en 40 samen?"] },
+      { q: "1 m³ = hoeveel L?", options: ["1000","100","10","10.000"], answer: 0, wrongHints: [null, "1 m³ is een kubus van 10 × 10 × 10 dm. Hoeveel dm³ is dat, en hoeveel liter?", "10 liter is één emmer. Past er in een kubus van 1 bij 1 bij 1 meter maar één emmer?", "10.000 liter is 10 m³. Hoeveel dm³ is een kubus van 10 × 10 × 10 dm?"] },
       { q: "Een **kubus** heeft hoeveel hoekpunten?", options: ["8","6","4","12"], answer: 0, wrongHints: [null, "6 is het aantal vlakken. Tel de hoeken: hoeveel boven en hoeveel onder?", "4 hoekpunten zitten alleen al aan de bovenkant. Hoeveel zitten er onder?", "12 is het aantal ribben. Tel nu de punten waar ribben samenkomen."] },
-      { q: "Volume formule **balk**?", options: ["l × b × h","l + b + h","l × b","l × h"], answer: 0, wrongHints: [null, "Som = niet volume.", "2 dimensies.", "2 dimensies."] },
+      { q: "Volume formule **balk**?", options: ["l × b × h","l + b + h","l × b","l × h"], answer: 0, wrongHints: [null, "Optellen geeft geen ruimte. Hoeveel blokjes van 1 cm³ passen er in een balk van 2 × 2 × 2?", "l × b is de oppervlakte van de bodem. Hoe hoog is de balk?", "l × h is de oppervlakte van één zijkant. Waar is de breedte gebleven?"] },
       { q: "Een **doos** 10 × 10 × 10 cm. Volume?", options: ["1000 cm³","100 cm³","10 cm³","10.000 cm³"], answer: 0, wrongHints: [null, "10 × 10 = 100 is één vlak. Welke maat mis je nog?", "10 cm is de lengte van één ribbe. Wat moet je met de drie maten doen?", "Heb je één keer te vaak met 10 vermenigvuldigd? Hoeveel maten heeft de doos?"] },
       { q: "Volume in **liters** voor 8000 cm³?", options: ["8 L","800 L","80 L","0,8 L"], answer: 0, wrongHints: [null, "Je hebt door 10 gedeeld. Hoeveel cm³ gaat er in 1 liter?", "Je hebt door 100 gedeeld. Hoeveel cm³ gaat er in 1 liter?", "Je hebt door 10.000 gedeeld. Hoeveel cm³ gaat er in 1 liter?"] },
       { q: "**Inhoud** is een ander woord voor?", options: ["Volume","Lengte","Oppervlakte","Massa"], answer: 0, wrongHints: [null, "Lengte meet je in één richting. Wat meet je als je wilt weten hoeveel erin past?", "Oppervlakte meet een plat vlak. Past er water in een plat vlak?", "Massa is hoe zwaar iets is. Wat zegt hoeveel erin past?"] },
-      { q: "Welke **eenheid** voor volume kun je gebruiken?", options: ["cm³","cm","kg","°C"], answer: 0, wrongHints: [null, "Lengte.", "Massa.", "Temperatuur."] },
+      { q: "Welke **eenheid** voor volume kun je gebruiken?", options: ["cm³","cm","kg","cm²"], answer: 0, wrongHints: [null, "cm meet een lengte in één richting. Volume gaat over lengte, breedte én hoogte. Welke eenheid past daarbij?", "kg meet hoe zwaar iets is. Gaat volume over gewicht of over ruimte?", "cm² hoort bij een plat vlak, zoals een vloer. Heeft volume ook hoogte?"] },
       { q: "Kistje 4×4×4 cm. Volume?", options: ["64 cm³","12 cm³","16 cm³","48 cm³"], answer: 0, wrongHints: [null, "4 + 4 + 4 = 12. Bij volume tel je de maten niet op. Wat doe je dan?", "4 × 4 = 16 is één vlak. Welke maat mis je nog?", "48 = 3 × 16. Hoe vaak moet je met 4 vermenigvuldigen?"] },
       { q: "Hoeveel **water** past in een doos van 10 × 5 × 4 cm?", options: ["200 mL","19 mL","100 mL","2000 mL"], answer: 0, wrongHints: [null, "10 + 5 + 4 = 19. Bij inhoud tel je de maten niet op. Wat doe je dan?", "Controleer je vermenigvuldiging: heb je alle drie de maten van de doos gebruikt?", "Heb je één keer te vaak met 10 vermenigvuldigd? Hoeveel maten heeft de doos?"] },
     ],

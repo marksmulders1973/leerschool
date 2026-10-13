@@ -66,9 +66,9 @@ const steps = [
       },
       {
         q: "*Hoe spreek je 5² uit?*",
-        options: ["Vijf in het kwadraat","Twee tot de vijfde","Vijf maal twee","Tweederde van vijf"],
+        options: ["Vijf in het kwadraat","Twee tot de vijfde","Vijf maal twee","Wortel uit vijf"],
         answer: 0,
-        wrongHints: [null, "Andersom — welk getal staat onder en welk boven in 5²? Welke spreek je eerst uit?", "Niet vermenigvuldigen — 5² is geen 5 keer 2. Wat doet het kwadraat?", "Niet zinnig opgeschreven. Hoe spreek je een macht ECHT uit? Denk aan 'kwadraat'."],
+        wrongHints: [null, "Andersom — welk getal staat onder en welk boven in 5²? Welke spreek je eerst uit?", "Niet vermenigvuldigen — 5² is geen 5 keer 2. Wat doet het kwadraat?", "De wortel is juist het omgekeerde van een kwadraat. Wat betekent het kleine 2'tje rechtsboven de 5?"],
         uitlegPad: {
           stappen: [{ titel: "Grondtal² = kwadraat", tekst: "5²: grondtal 5, exponent 2. Spreek uit: 'vijf in het kwadraat' of 'vijf tot de tweede macht'. Grondtal eerst." }],
           woorden: [{ woord: "grondtal", uitleg: "Onderste getal dat vermenigvuldigd wordt." }, { woord: "kwadraat", uitleg: "Speciale naam voor 'tot de tweede macht'." }],
@@ -161,7 +161,7 @@ const steps = [
         q: "*Wat is (3 + 1)² · 2?*",
         options: ["32", "10", "17", "16"],
         answer: 0,
-        wrongHints: [null, "Niet juist — wat is (3+1)² eerst, en wat doe je daarna nog?", "Onjuist — eerst haakjes, dan macht, dan ·.", "Bijna — je hebt de macht al uitgerekend, maar welke stap ontbreekt er nog?"],
+        wrongHints: [null, "Niet juist — wat is (3+1)² eerst, en wat doe je daarna nog?", "Hoe kom je aan 17? Wat is (3 + 1)², en wat doe je daarna met de · 2?", "Bijna — je hebt de macht al uitgerekend, maar welke stap ontbreekt er nog?"],
         uitlegPad: {
           stappen: [
             { titel: "Haakjes", tekst: "(3+1)² · 2. Haakjes: 3+1=4. Macht: 4²=16. Vermenigvuldigen: 16·2=32." },
@@ -229,7 +229,7 @@ const steps = [
         q: "*Versimpel: y⁸ / y³.*",
         options: ["y⁵", "y¹¹", "y³", "y²⁴"],
         answer: 0,
-        wrongHints: [null, "Bij delen van machten met dezelfde basis — wat doe je met de exponenten?", "Geen correcte uitkomst. Welke bewerking met exponenten geldt bij delen?", "Dat is machtsmacht (³ keer toepassen). Hier delen we — andere regel."],
+        wrongHints: [null, "Bij delen van machten met dezelfde basis — wat doe je met de exponenten?", "y³ is de deler zelf. Wat doe je met de exponenten 8 en 3 bij delen?", "Dat is machtsmacht (³ keer toepassen). Hier delen we — andere regel."],
         uitlegPad: {
           stappen: [{ titel: "Regel 2: aftrekken", tekst: "y⁸ / y³ = y^(8−3) = y⁵. Bij delen trekken we exponenten af." }],
           woorden: [{ woord: "machtsregel ÷", uitleg: "a^m / a^n = a^(m−n)." }],
@@ -552,7 +552,7 @@ const steps = [
         q: "*Versimpel: (3x⁴)² / (3x²)³.*",
         options: ["x²/3", "9x²", "3x²", "x⁵"],
         answer: 0,
-        wrongHints: [null, "Werk teller en noemer apart uit, dan pas delen — wat wordt de teller, wat de noemer?", "Versimpel de getalsverhouding — hoe vaak past 9 in 27?", "Geen 5 als exponent — werk teller en noemer apart uit met de juiste regels."],
+        wrongHints: [null, "Werk teller en noemer apart uit, dan pas delen — wat wordt de teller, wat de noemer?", "Versimpel de getalsverhouding — hoe vaak past 9 in 27?", "Hoe kom je aan exponent 5? Wat is (x⁴)² en wat is (x²)³?"],
         uitlegPad: {
           stappen: [
             { titel: "Teller", tekst: "(3x⁴)² = 9x⁸." },
@@ -598,7 +598,7 @@ const steps = [
         q: "*Versimpel: (a²b³)⁴.*",
         options: ["a⁸b¹²", "a⁶b⁷", "a⁸b³", "a²b¹²"],
         answer: 0,
-        wrongHints: [null, "Bij macht-van-macht worden de exponenten vermenigvuldigd, niet opgeteld. Wat geeft dat voor a en voor b?", "Ook b³ krijgt de macht 4.", "Ook a² krijgt de macht 4."],
+        wrongHints: [null, "Bij macht-van-macht worden de exponenten vermenigvuldigd, niet opgeteld. Wat geeft dat voor a en voor b?", "Je hebt alleen a tot de macht 4 gedaan. Geldt de 4 buiten de haakjes ook voor b³?", "Je hebt alleen b tot de macht 4 gedaan. Geldt de 4 buiten de haakjes ook voor a²?"],
         uitlegPad: {
           stappen: [{ titel: "Beide gevierd", tekst: "(a²b³)⁴ = (a²)⁴ · (b³)⁴ = a⁸ · b¹² = a⁸b¹². Macht over product + machtsmacht." }],
           woorden: [{ woord: "combo", uitleg: "(ab)^n = a^n·b^n + (a^m)^n = a^(mn)." }],
@@ -609,14 +609,14 @@ const steps = [
         },
       },
       { q: "2³ = ?", options: ["8","6","9","5"], answer: 0, wrongHints: [null, "Dat is 2 × 3. Bij 2³ vermenigvuldig je 2 hoe vaak met zichzelf?", "Dat is 3². Welk getal is bij 2³ het grondtal?", "Dat is 2 + 3. Wat betekent het kleine getal 3 bij 2³?"] },
-      { q: "5² = ?", options: ["25","10","20","52"], answer: 0, wrongHints: [null,"Niet — niet 5+5.","Niet — niet 5×4.","Niet — niet cijfers samen."] },
-      { q: "**a⁰** = ? (a ≠ 0)", options: ["1","0","a","Niet bepaald"], answer: 0, wrongHints: [null,"Niet bij a≠0.","Andere macht.","Wel bepaald."] },
-      { q: "**a^1** = ?", options: ["a","1","0","a²"], answer: 0, wrongHints: [null,"Dat is a⁰.","Dat is a · 0.","Hogere macht."] },
-      { q: "**a^(−1)** = ?", options: ["1/a","−a","a²","Bestaat niet"], answer: 0, wrongHints: [null,"Niet — de min in de exponent maakt het getal niet negatief.","Dat is a · a, exponent +2.","Bestaat wel (als a ≠ 0)."] },
+      { q: "5² = ?", options: ["25","10","20","52"], answer: 0, wrongHints: [null,"10 is 5 + 5 of 5 × 2. Wat betekent het kleine 2'tje bij 5²?","20 is 5 × 4. Hoe vaak vermenigvuldig je 5 met zichzelf bij 5²?","Je hebt de cijfers 5 en 2 naast elkaar gezet. Wat betekent het kleine 2'tje?"] },
+      { q: "**a⁰** = ? (a ≠ 0)", options: ["1","0","a","Niet bepaald"], answer: 0, wrongHints: [null,"Probeer 2³ : 2³. Volgens de regel is dat 2⁰. Wat is 8 : 8?","a zelf is a¹. Wat krijg je als je a³ door a³ deelt?","Probeer a³ : a³, een getal gedeeld door zichzelf. Kun je dat uitrekenen?"] },
+      { q: "**a^1** = ?", options: ["a","1","0","a²"], answer: 0, wrongHints: [null,"1 is de uitkomst van a⁰. Hoeveel keer schrijf je de 2 op bij 2¹?","Probeer a = 5: wat is 5¹?","a² is a · a. Hoeveel keer staat a er bij a¹?"] },
+      { q: "**a^(−1)** = ?", options: ["1/a","−a","a²","Bestaat niet"], answer: 0, wrongHints: [null,"Niet — de min in de exponent maakt het getal niet negatief.","Probeer a = 2: is 2⁻¹ groter of kleiner dan 2⁰ = 1?","Wat krijg je als je 2⁰ = 1 nog een keer door 2 deelt? Bestaat dat getal?"] },
       { q: "**a^m · a^n** = ?", options: ["a^(m+n)","a^(m·n)","a^(m−n)","2a^m"], answer: 0, wrongHints: [null,"Exponenten vermenigvuldigen hoort bij (a^m)^n. Probeer 2² · 2³ = 4 · 8 = 32: is dat 2⁶?","Exponenten aftrekken hoort bij delen. Probeer 2² · 2³ = 4 · 8 = 32: is dat 2⁻¹?","Probeer 2² · 2³ = 4 · 8 = 32. Geeft 2 · 2² dat ook?"] },
       { q: "**(a^m)^n** = ?", options: ["a^(m·n)","a^(m+n)","a^(m−n)","m·n·a"], answer: 0, wrongHints: [null,"Exponenten optellen hoort bij a^m · a^n. Probeer (2²)³ = 4³ = 64: is dat 2⁵?","Exponenten aftrekken hoort bij delen. Probeer (2²)³ = 64: is dat 2⁻¹?","Probeer (2²)³ = 64. Geeft 2 · 3 · 2 dat ook?"] },
-      { q: "**(ab)^n** = ?", options: ["a^n · b^n","a^n + b^n","(a+b)^n","ab^n"], answer: 0, wrongHints: [null,"Niet — vermenigvuldigen.","Geen relatie.","Onvolledig."] },
-      { q: "10³ = ?", options: ["1000","30","100","10000"], answer: 0, wrongHints: [null,"Niet — 10×10×10.","Te laag.","Te hoog."] },
+      { q: "**(ab)^n** = ?", options: ["a^n · b^n","a^n + b^n","(a+b)^n","ab^n"], answer: 0, wrongHints: [null,"Probeer a = 2, b = 3, n = 2: 6² = 36. Is 2² + 3² ook 36?","Probeer a = 2, b = 3, n = 2: 6² = 36. Is (2 + 3)² ook 36?","Probeer a = 2, b = 3, n = 2: 6² = 36. Is 2 · 3² ook 36?"] },
+      { q: "10³ = ?", options: ["1000","30","100","10000"], answer: 0, wrongHints: [null,"30 is 10 × 3. Wat betekent het kleine 3'tje bij 10³?","100 is 10². Hoe vaak vermenigvuldig je 10 met zichzelf bij 10³?","10000 is 10⁴. Hoeveel nullen hoort 10³ te hebben?"] },
       { q: "**Open vraag**: bereken 4². Typ getal.", kind: "open", acceptedAnswers: ["16"], numericTolerance: 0, explanation: "4 × 4 = 16." },
       { q: "**Open vraag**: bereken 2⁵. Typ getal.", kind: "open", acceptedAnswers: ["32"], numericTolerance: 0, explanation: "2 × 2 × 2 × 2 × 2 = 32." },
     ],

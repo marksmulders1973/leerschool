@@ -44,9 +44,9 @@ const steps = [
     checks: [
       {
         q: "Welke is een kwadratische vergelijking?",
-        options: ["x² − 2x = 5","3x + 7 = 10","x = 4","5 + 5 = 10"],
+        options: ["x² − 2x = 5","3x + 7 = 10","x = 4","x³ − 2x = 5"],
         answer: 0,
-        wrongHints: [null, "Geen x² in zicht — dit is een gewone (lineaire) vergelijking.", "Gewoon een waarde — er is geen kwadraat-term.", "Geen onbekende, geen x². Dit is gewoon een rekenfeit."],
+        wrongHints: [null, "Geen x² in zicht — dit is een gewone (lineaire) vergelijking.", "Gewoon een waarde — er is geen kwadraat-term.", "Wat is de hoogste macht van x hier? Bij een kwadratische vergelijking is dat het kwadraat."],
         uitlegPad: {
           stappen: [{ titel: "Sleutel: x²", tekst: "Kwadratische vergelijking = vergelijking met ergens x² erin. Mag ook gewone x of getal bij hebben, maar MOET x² hebben. Voorbeeld x² − 2x = 5: heeft x² → kwadratisch." }],
           woorden: [{ woord: "kwadratisch", uitleg: "Met x² (x in het kwadraat). 'Quadratus' = vierkant." }, { woord: "lineair", uitleg: "Met alleen x (geen x²). Bv. 2x+3=7." }],
@@ -453,9 +453,9 @@ const steps = [
     checks: [
       {
         q: "Wanneer is de bal **weer op de grond** (h = 0)?",
-        options: ["Bij t = 4 sec", "Bij t = 5 sec", "Bij t = 20 sec", "Nooit"],
+        options: ["Bij t = 4 sec", "Bij t = 5 sec", "Bij t = 20 sec", "Bij t = 2 sec"],
         answer: 0,
-        wrongHints: [null, "Bijna — welke hoogte heeft de bal als hij de grond raakt? Stel h gelijk aan dat en factoriseer.", "Dat is veel te lang voor zo'n worp. Bedenk een realistischer tijdsduur.", "Wat omhoog gaat komt naar beneden — stel h gelijk aan de grondwaarde en zoek t."],
+        wrongHints: [null, "Vul t = 5 in: −5 · 25 + 20 · 5 = −25. Is de bal dan precies op de grond?", "20 is het getal vóór t in de formule. Vul t = 20 in: is −5 · 400 + 20 · 20 gelijk aan 0?", "Bij t = 2 sec is de bal op zijn hoogste punt. Is h dan 0?"],
         uitlegPad: {
           stappen: [
             { titel: "h = 0 invullen", tekst: "Bal op grond = hoogte 0. Dus: −5t² + 20t = 0." },
@@ -505,14 +505,14 @@ const steps = [
       { q: "Los op: x² = 16", options: ["x = 4 of x = −4","x = 4","x = 8 of x = −8","x = 256"], answer: 0, wrongHints: [null, "Welk ander getal geeft in het kwadraat ook 16? Denk aan negatieve getallen.", "Worteltrekken is iets anders dan delen door 2. Wat is 8²?", "Je hebt 16 gekwadrateerd. Welke bewerking haalt het kwadraat juist weg?"] },
       { q: "Los op: x² = 25", options: ["x = ±5","x = 5","x = 25","x = ±25"], answer: 0, wrongHints: [null, "Welk ander getal geeft in het kwadraat ook 25?", "Het kwadraat staat er nog. Welk getal keer zichzelf is 25?", "Wat is 25²? Je moet de wortel uit 25 nemen, niet 25 zelf gebruiken."] },
       { q: "Wat is **factoriseren**?", options: ["Een uitdrukking schrijven als een product","Haakjes wegwerken door uit te vermenigvuldigen","Alle termen naar één kant brengen","Gelijksoortige termen bij elkaar optellen"], answer: 0, wrongHints: [null, "Dat is juist het omgekeerde: uitwerken. Kijk naar x² + 4x = x(x + 4) — welke kant op ga je bij factoriseren?", "Dat doe je om de standaardvorm te krijgen. Wat verandert er aan de vorm bij x² + 4x = x(x + 4)?", "Dat heet herleiden. Wat verandert er aan de vorm bij x² + 4x = x(x + 4)?"] },
-      { q: "Haal x buiten haakjes in x² + 5x:", options: ["x(x+5)","x·5","x² · 5","x+5"], answer: 0, wrongHints: [null, "Niet — kwadraat klopt niet.", "Andere bewerking.", "Niet — x weg."] },
-      { q: "Los op: x(x − 3) = 0", options: ["x=0 of x=3","x=3","x=0","x=−3"], answer: 0, wrongHints: [null, "Niet — beide.", "Niet — beide.", "Niet — andersom teken."] },
+      { q: "Haal x buiten haakjes in x² + 5x:", options: ["x(x+5)","x·5","x² · 5","x+5"], answer: 0, wrongHints: [null, "Werk x · 5 uit: krijg je dan x² + 5x terug?", "Werk x² · 5 uit: dat is 5x². Staat dat in de vraag?", "Wat is er met de x vóór de haakjes gebeurd? Werk je antwoord uit en vergelijk."] },
+      { q: "Los op: x(x − 3) = 0", options: ["x=0 of x=3","x=3","x=0","x=−3"], answer: 0, wrongHints: [null, "x = 3 maakt de tweede factor 0. Welke waarde maakt de eerste factor x nul?", "x = 0 maakt de eerste factor 0. Wanneer is x − 3 gelijk aan 0?", "Vul x = −3 in: wat is −3 − 3? Is dat 0?"] },
       { q: "**Discriminant** = ?", options: ["b² − 4ac","b² + 4ac","4ac","b · ac"], answer: 0, wrongHints: [null, "Bijna. Kijk goed naar het rekenteken tussen de twee delen van de formule.", "4ac is maar een deel van de formule. Welk deel mis je?", "In de discriminant staat b in het kwadraat. Zie je dat hier?"] },
-      { q: "Discriminant D > 0 betekent?", options: ["2 oplossingen","1 oplossing","Geen oplossingen","Oneindig"], answer: 0, wrongHints: [null, "Bij D=0.", "Bij D<0.", "Niet bij kwadratisch."] },
+      { q: "Discriminant D > 0 betekent?", options: ["2 oplossingen","1 oplossing","Geen oplossingen","Oneindig"], answer: 0, wrongHints: [null, "Eén oplossing hoort bij D = 0. Hoeveel waarden geeft ±√D als D groter is dan 0?", "Geen oplossingen hoort bij D < 0. Kun je de wortel trekken uit een positief getal?", "Een kwadratische vergelijking heeft hooguit twee oplossingen. Hoeveel waarden geeft ±√D?"] },
       { q: "**abc-formule** lost op?", options: ["ax² + bx + c = 0","ax + b = 0","ax³ + bx² + c = 0","2x + 1 = 0"], answer: 0, wrongHints: [null, "Dat is een lineaire vergelijking; die los je op door te balanceren. Waar is de abc-formule voor?", "De abc-formule werkt tot en met x². Wat is de hoogste macht in deze vergelijking?", "Zo'n lineaire vergelijking los je zonder formule op. Welke vorm hoort bij de abc-formule?"] },
-      { q: "Discriminant van x² − 5x + 6 = ?", options: ["1","49","25","6"], answer: 0, wrongHints: [null, "Niet — het is b² mín 4ac, niet plus.", "Alleen b².", "6 is de waarde van c. Wat moet je met b en 4ac doen?"] },
+      { q: "Discriminant van x² − 5x + 6 = ?", options: ["1","49","25","6"], answer: 0, wrongHints: [null, "Je hebt 4ac opgeteld bij b². Welk rekenteken staat er in de formule?", "25 is b². Wat moet je daar nog van aftrekken?", "6 is de waarde van c. Wat moet je met b en 4ac doen?"] },
       { q: "x² + 6x + 9 kun je schrijven als (x + 3)². Hoe heet zo'n vorm?", options: ["Volkomen kwadraat","Standaardvorm","Verschil van twee kwadraten","Lineaire vorm"], answer: 0, wrongHints: [null, "De standaardvorm is ax² + bx + c. Hoe heet de vorm (x + 3)²?", "Een verschil van twee kwadraten ziet eruit als a² − b². Staat hier een min?", "Lineair betekent: geen kwadraat. Hier staat wel een kwadraat."] },
-      { q: "**Discriminant D = 0** betekent?", options: ["1 oplossing","2 oplossingen","Geen oplossingen","Oneindig"], answer: 0, wrongHints: [null,"Bij D>0.","Bij D<0.","Niet bij kwadratisch."] },
+      { q: "**Discriminant D = 0** betekent?", options: ["1 oplossing","2 oplossingen","Geen oplossingen","Oneindig"], answer: 0, wrongHints: [null,"Twee oplossingen horen bij D > 0. Wat is +√0 en wat is −√0?","Geen oplossingen horen bij D < 0. Kun je √0 uitrekenen?","Een kwadratische vergelijking heeft hooguit twee oplossingen. Wat geeft ±√0?"] },
       { q: "**D < 0** betekent (reëel)?", options: ["Geen reële oplossingen","Twee reële oplossingen","Eén reële oplossing","Oneindig veel oplossingen"], answer: 0, wrongHints: [null,"Twee oplossingen krijg je als D positief is. Wat gebeurt er met √D als D negatief is?","Eén oplossing krijg je als D precies 0 is. Wat gebeurt er met √D als D negatief is?","Een kwadratische vergelijking heeft nooit oneindig veel oplossingen. Kun je de wortel uit een negatief getal trekken?"] },
       { q: "**Top** van parabool y = (x − 2)² is op?", options: ["x=2","x=−2","x=0","x=4"], answer: 0, wrongHints: [null,"Vul x = −2 in: (−2 − 2)² = 16. Is dat de laagste waarde?","Bij y = x² ligt de top bij x = 0. Wat doet de − 2 tussen de haakjes met de grafiek?","Vul x = 4 in: (4 − 2)² = 4. Is dat het laagste punt?"] },
       { q: "Snijpunt parabool **y = x² − 4** met **x-as**?", options: ["x = 2 en x = −2","x = 0 en x = 4","x = 4","x = 4 en x = −4"], answer: 0, wrongHints: [null,"Vul x = 0 in: 0² − 4 = −4. Is y dan 0?","Vul x = 4 in: 4² − 4 = 12. Is y dan 0?","x² − 4 = 0 geeft x² = 4. Moet je dan nog de wortel trekken?"] },

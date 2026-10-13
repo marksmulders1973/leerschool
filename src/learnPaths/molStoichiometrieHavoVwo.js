@@ -35,7 +35,7 @@ const steps = [
         q: "Hoeveel mol zit er in **36 g water** (M=18 g/mol)?",
         options: ["2,0 mol", "0,5 mol", "18 mol", "36 mol"],
         answer: 0,
-        wrongHints: [null, "Niet — andersom (m/M).", "Niet — verwarring m vs n.", "Niet — controleer formule."],
+        wrongHints: [null, "Je deelde M door m. Welke formule hoort bij n: m/M of M/m?", "18 is de molaire massa. Hoe reken je van gram naar mol?", "36 is de massa in gram. Is een gram hetzelfde als een mol?"],
         uitlegPad: {
           stappen: [{ titel: "n = m/M", tekst: "n = 36/18 = **2,0 mol** water." }],
           niveaus: { basis: "36/18=2.", simpeler: "Massa delen door molaire massa: 2 mol.", nogSimpeler: "2,0" },
@@ -45,7 +45,7 @@ const steps = [
         q: "Bij STP (0 °C, 1 atm): hoeveel L heeft **2 mol stikstofgas (N₂)**?",
         options: ["44,8 L", "22,4 L", "11,2 L", "2,8 L"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is 1 mol.", "Niet — half.", "Niet — gebruik het molair volume bij STP."],
+        wrongHints: [null, "Dat is het volume van 1 mol gas. Hoeveel mol stikstof heb je hier?", "Je deelde door 2. Krijg je bij meer mol gas meer of minder liter?", "Niet — gebruik het molair volume bij STP."],
         uitlegPad: {
           stappen: [{ titel: "V = n · V_mol", tekst: "V = 2 · 22,4 = **44,8 L**. Alle ideale gassen nemen hetzelfde volume per mol bij STP — onafhankelijk van stof." }],
           theorie: "Bij 25 °C i.p.v. 0 °C: gebruik 24,5 L/mol.",
@@ -56,7 +56,7 @@ const steps = [
         q: "Hoeveel **moleculen** in 0,50 mol glucose?",
         options: ["3,01·10²³", "6,02·10²³", "1,5·10²⁴", "0,5"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is 1 mol.", "Niet — te veel.", "Niet — dat is mol, geen deeltjes."],
+        wrongHints: [null, "Dat is het aantal deeltjes in 1 mol. Heb je hier meer of minder dan 1 mol?", "Je hebt minder dan 1 mol. Kan het aantal moleculen dan groter zijn dan in 1 mol?", "Niet — dat is mol, geen deeltjes."],
         uitlegPad: {
           stappen: [{ titel: "N = n · N_A", tekst: "N = 0,50 · 6,022·10²³ = **3,01·10²³** moleculen. Avogadro-getal is constant — onafhankelijk van stof." }],
           niveaus: { basis: "0,5·6·10²³ = 3·10²³.", simpeler: "Half van Avogadro = 3·10²³.", nogSimpeler: "3·10²³" },
@@ -66,7 +66,7 @@ const steps = [
         q: "Een NaCl-oplossing: 11,7 g NaCl in 0,50 L water. Concentratie? (M_NaCl = 58,5 g/mol)",
         options: ["0,40 M", "11,7 M", "0,20 M", "4,0 M"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is m, geen c.", "Niet — controleer rekening.", "Te hoog."],
+        wrongHints: [null, "Niet — 11,7 is de massa in gram, geen concentratie.", "0,20 is het aantal mol NaCl. Door welk volume moet je nog delen?", "Is er een komma verschoven? Reken n = m/M opnieuw en deel door 0,50 L."],
         uitlegPad: {
           stappen: [
             { titel: "c = n/V", tekst: "n = 11,7/58,5 = 0,20 mol. c = 0,20/0,50 = **0,40 M** (mol/L). Vrij geconcentreerde NaCl-oplossing — vergelijkbaar met zeewater (~0,6 M)." },
@@ -97,7 +97,7 @@ const steps = [
         q: "Verbranding propaan: C₃H₈ + ___ O₂ → ___ CO₂ + ___ H₂O?",
         options: ["5, 3, 4", "3, 3, 4", "4, 3, 3", "5, 3, 8"],
         answer: 0,
-        wrongHints: [null, "Niet — O is verkeerd.", "Niet — controleer H.", "Niet — H telling."],
+        wrongHints: [null, "Tel de O-atomen rechts: in 3 CO₂ en 4 H₂O samen. Zijn dat er 6?", "C₃H₈ heeft 8 H-atomen. Hoeveel H₂O-moleculen heb je dan rechts nodig?", "Met 8 H₂O heb je rechts 16 H-atomen. Hoeveel H heeft C₃H₈?"],
         uitlegPad: {
           stappen: [
             { titel: "C, H, dan O", tekst: "C₃H₈ + O₂ → CO₂ + H₂O. 3 C → 3 CO₂. 8 H → 4 H₂O. Rechts: 3·2 + 4·1 = 10 O → 5 O₂.\n\n**C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O**." },
@@ -115,7 +115,7 @@ const steps = [
           "Het aantal mol blijft behouden"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — moleculen veranderen wel.", "Bij gassen kan het volume veranderen. Wat telt er mee in de massa?", "Kijk naar 2 H₂ + O₂ → 2 H₂O: links 3 mol, rechts 2 mol. Wat blijft er dan gelijk?"],
+        wrongHints: [null, "Bij een reactie ontstaan nieuwe stoffen. Blijven de moleculen dan dezelfde?", "Bij gassen kan het volume veranderen. Wat telt er mee in de massa?", "Kijk naar 2 H₂ + O₂ → 2 H₂O: links 3 mol, rechts 2 mol. Wat blijft er dan gelijk?"],
         uitlegPad: {
           stappen: [{ titel: "Wet Lavoisier", tekst: "Atomen blijven hetzelfde; ze schuiven alleen naar nieuwe combinaties. Daarom telt links = rechts per element. Massa-behoud is gevolg." }],
           niveaus: { basis: "Atomen behouden.", simpeler: "Aantal atomen elk element gelijk.", nogSimpeler: "Atomen" },
@@ -123,9 +123,9 @@ const steps = [
       },
       {
         q: "**Neutralisatie**: HCl + NaOH → ___ + ___?",
-        options: ["NaCl + H₂O", "NaH + ClOH", "Na + HCl + OH", "2 NaCl"],
+        options: ["NaCl + H₂O", "NaCl + H₂", "NaClO + H₂", "2 NaCl"],
         answer: 0,
-        wrongHints: [null, "Niet — combinaties bestaan zo niet.", "Niet — molecuul vorm.", "Niet — waar blijven de H- en O-atomen?"],
+        wrongHints: [null, "Tel de O-atomen: links zit er één O in NaOH. Waar is die rechts gebleven?", "NaClO is bleekmiddel, en dat ontstaat niet bij een neutralisatie. Wat vormen H⁺ en OH⁻ samen?", "Niet — waar blijven de H- en O-atomen?"],
         uitlegPad: {
           stappen: [
             { titel: "Zuur + base → zout + water", tekst: "HCl(aq) + NaOH(aq) → **NaCl(aq) + H₂O(l)**. Klassiek neutralisatie-patroon — zuur en base heffen elkaar op." },
@@ -136,9 +136,9 @@ const steps = [
       },
       {
         q: "Welk verbrandingsproduct ontstaat uit **koolstof + zuurstof** bij voldoende O₂?",
-        options: ["CO₂", "CO", "C₂O", "H₂O"],
+        options: ["CO₂", "CO", "O₃", "CO₃"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is bij O-tekort.", "Bestaat niet.", "Geen waterstof in C+O."],
+        wrongHints: [null, "CO ontstaat juist als er te weinig zuurstof is. Is er hier genoeg?", "Ozon (O₃) bevat alleen zuurstof. Waar blijft het koolstofatoom dan?", "Een C-atoom maakt vier bindingen. Hoeveel dubbel gebonden O-atomen passen daar dan aan?"],
         uitlegPad: {
           stappen: [{ titel: "C + O₂ → CO₂", tekst: "Bij voldoende zuurstof: volledige verbranding → CO₂ (koolstof-dioxide). Bij tekort O: CO (koolmonoxide, GIFTIG, kleur- en reukloos = stille killer). Daarom altijd ventileren bij gas-apparaten." }],
           niveaus: { basis: "CO₂ bij voldoende O.", simpeler: "Volledig: CO₂. Tekort: CO.", nogSimpeler: "CO₂" },
@@ -157,7 +157,7 @@ const steps = [
         q: "Reactie: **N₂ + 3 H₂ → 2 NH₃** (Haber-Bosch). Hoeveel mol NH₃ uit **6 mol H₂** (overmaat N₂)?",
         options: ["4 mol", "6 mol", "2 mol", "12 mol"],
         answer: 0,
-        wrongHints: [null, "Niet — kijk naar de molverhouding H₂ : NH₃.", "Niet — half.", "Niet — te veel."],
+        wrongHints: [null, "Niet — kijk naar de molverhouding H₂ : NH₃.", "Uit 3 mol H₂ krijg je 2 mol NH₃. Hoe vaak past 3 mol in 6 mol?", "Je vermenigvuldigde 6 met 2. Hoeveel NH₃ krijg je uit 3 mol H₂?"],
         uitlegPad: {
           stappen: [
             { titel: "Mol-verhouding 3 H₂ : 2 NH₃", tekst: "n(NH₃) = 6 · (2/3) = **4 mol**. Met N₂ in overmaat is H₂ limiterend." },
@@ -182,7 +182,7 @@ const steps = [
         q: "Een fabrikant maakt 80 g aspirine maar theoretisch zou 100 g mogelijk zijn. **Opbrengst** %?",
         options: ["80%", "20%", "100%", "125%"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is verlies.", "Niet — verlies aanwezig.", "Onmogelijk."],
+        wrongHints: [null, "Niet — 20% is het deel dat verloren ging.", "100% haal je alleen als alles wordt omgezet. Kreeg de fabrikant 100 g?", "Je deelde 100 door 80. Deel je de echte opbrengst door de theoretische, of andersom?"],
         uitlegPad: {
           stappen: [{ titel: "Opbrengst = werk/theor × 100", tekst: "= 80/100 · 100% = **80%**. 20% verlies door niet-perfecte reactie + zuivering." }],
           niveaus: { basis: "80%.", simpeler: "80 uit 100 = 80%.", nogSimpeler: "80" },
@@ -192,7 +192,7 @@ const steps = [
         q: "Bij **2 mol H₂ + 3 mol O₂** (2H₂ + O₂ → 2 H₂O): welke is limiterend?",
         options: ["H₂", "O₂", "Beide gelijk", "Geen — overmaat beide"],
         answer: 0,
-        wrongHints: [null, "Niet — reken uit hoeveel mol O₂ je nodig hebt voor 2 mol H₂.", "Niet — verhouding klopt niet.", "Niet — een is meer dan nodig."],
+        wrongHints: [null, "Niet — reken uit hoeveel mol O₂ je nodig hebt voor 2 mol H₂.", "Hoeveel mol O₂ verbruikt 2 mol H₂? Is dat precies 3 mol?", "Een reactie stopt zodra één stof op is. Welke stof raakt hier het eerst op?"],
         uitlegPad: {
           stappen: [
             { titel: "Verhouding 2:1, gegeven 2:3", tekst: "Voor 2 mol H₂ heb je 1 mol O₂ nodig. Je hebt 3 mol O₂ = overmaat. **H₂ is limiterend** — het loopt eerder op. Resultaat: 2 mol H₂O + 2 mol O₂ over." },
@@ -204,7 +204,7 @@ const steps = [
         q: "Bij volledige verbranding van 1 mol methaan: hoeveel **L CO₂** ontstaat? (STP, 22,4 L/mol)",
         options: ["22,4 L", "44,8 L", "11,2 L", "1 L"],
         answer: 0,
-        wrongHints: [null, "Niet — kijk naar de molverhouding CH₄ : CO₂.", "Niet — half.", "Niet — 1 mol gas neemt bij STP veel meer ruimte in."],
+        wrongHints: [null, "Niet — kijk naar de molverhouding CH₄ : CO₂.", "Uit één CH₄ ontstaat één CO₂. Hoeveel mol CO₂ krijg je dan uit 1 mol methaan?", "Niet — 1 mol gas neemt bij STP veel meer ruimte in."],
         uitlegPad: {
           stappen: [
             { titel: "1:1 CH₄:CO₂", tekst: "CH₄ + 2 O₂ → CO₂ + 2 H₂O. 1 mol CH₄ → 1 mol CO₂ → V = 1 · 22,4 = **22,4 L** bij STP." },
@@ -225,7 +225,7 @@ const steps = [
         q: "Reactie: **Zn + Cu²⁺ → Zn²⁺ + Cu**. Wat wordt **geoxideerd**?",
         options: ["Zn", "Cu²⁺", "Zn²⁺", "Cu"],
         answer: 0,
-        wrongHints: [null, "Niet — Cu²⁺ wordt gereduceerd.", "Niet — dat is een ION-product.", "Niet — eindproduct, zegt niets over reactie."],
+        wrongHints: [null, "Cu²⁺ neemt twee elektronen op en wordt Cu. Is dat oxidatie of reductie?", "Zn²⁺ ontstaat pas in de reactie. Welk deeltje links verloor daarvoor elektronen?", "Cu ontstaat pas in de reactie. Welk deeltje links verliest elektronen?"],
         uitlegPad: {
           stappen: [{ titel: "Zn: 0 → +2 = oxidatie", tekst: "Zn verliest 2 elektronen → wordt Zn²⁺. Oxidatie = elektronen verlies. Zn is dus reductor (geeft elektronen aan Cu²⁺ over)." }],
           theorie: "Klassiek demonstratie-experiment: Zn-staaf in CuSO₄-oplossing → kopermetaal slaat neer op staaf, oplossing wordt kleurloos.",
@@ -241,7 +241,7 @@ const steps = [
           "Reactie met water"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is reductie.", "Niet — verwarring zuur-base.", "Niet — niet specifiek voor redox."],
+        wrongHints: [null, "Bij winst van elektronen daalt de lading. Hoort dat bij oxidatie of bij reductie?", "Een zuur geeft H⁺ af. Bij redox gaat het om een ander deeltje. Welk?", "IJzer in droge zuurstof oxideert ook, zonder water. Waar draait oxidatie dan echt om?"],
         uitlegPad: {
           stappen: [{ titel: "OIL — Oxidation Is Loss", tekst: "Onthoud-truc: OIL RIG.\n- **O**xidation **I**s **L**oss (of electrons).\n- **R**eduction **I**s **G**ain.\nOoit verwarring? Bedenk: oxidatie kwam oorspronkelijk van 'reactie met zuurstof' (oxygenium, O₂). Breder: 'elektronenverlies' is de moderne definitie." }],
           niveaus: { basis: "Verlies van e⁻.", simpeler: "Oxidatie = elektronen weggeven.", nogSimpeler: "Verlies" },
@@ -251,7 +251,7 @@ const steps = [
         q: "Oxidatiegetal van Mn in **KMnO₄**?",
         options: ["+7", "+5", "+4", "−1"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer som.", "Niet — dat is MnO₂.", "Onjuist teken."],
+        wrongHints: [null, "K is +1 en vier O-atomen zijn samen −8. Wat moet Mn dan zijn om op 0 uit te komen?", "+4 is het getal van Mn in MnO₂. Hoeveel O-atomen en welk K-ion heb je hier?", "−1 is de lading van het hele MnO₄⁻-ion. Wat is het getal van Mn zelf?"],
         uitlegPad: {
           stappen: [
             { titel: "Som = 0 oplossen", tekst: "K: +1 (alkali-metaal). O: −2 (×4 = −8). Totaal molecuul: 0.\n+1 + Mn + (−8) = 0 → Mn = **+7**. Sterke oxidator (paars zout, lab-reagens)." },
@@ -269,7 +269,7 @@ const steps = [
           "Opgelost"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — neemt Fe elektronen op of staat het ze af?", "Onjuist concept.", "Niet — er verandert iets aan de elektronen van Fe."],
+        wrongHints: [null, "Niet — neemt Fe elektronen op of staat het ze af?", "Verzuren gaat over de pH. Wat gebeurt er met de elektronen van ijzer?", "Niet — er verandert iets aan de elektronen van Fe."],
         uitlegPad: {
           stappen: [{ titel: "Fe → Fe³⁺ in roest", tekst: "In Fe(OH)₃ of Fe₂O₃ heeft Fe oxidatiegetal +3. Ging van 0 (metaal) naar +3 = oxidatie. O₂ is hier oxidator (wordt zelf gereduceerd van 0 naar −2 in OH⁻)." }],
           theorie: "Voorkoming roest: galvaniseren (zinklaag → 'offert zich op', beschermt Fe), schilderen (lucht buiten houden), of een beschermend laagje van een ander metaal.",
@@ -280,12 +280,12 @@ const steps = [
         q: "In een batterij is de **anode**:",
         options: [
           "De plek waar oxidatie plaatsvindt",
-          "Altijd + pool",
-          "Heeft geen functie",
+          "De positieve pool (+)",
+          "De plek waar de elektrolyt zit",
           "De plek waar reductie plaatsvindt"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — in batterij is anode −.", "Onjuist.", "Niet — dat is kathode."],
+        wrongHints: [null, "In een batterij is de positieve pool de kathode. Wat gebeurt er aan de anode?", "De elektrolyt zit tussen de twee elektroden. Wat gebeurt er aan de anode zelf?", "Reductie gebeurt aan de andere elektrode. Hoe heet die, en wat gebeurt er dan aan de anode?"],
         uitlegPad: {
           stappen: [
             { titel: "Anode = oxidatie", tekst: "Anode is per definitie waar oxidatie plaatsvindt (elektronen verlaten elektrode → naar extern circuit). In gewone batterij (galvanische cel): anode = − pool. In elektrolyse-cel: anode = + pool (geforceerd). Verwarrend! Onthoud: AnOx — RedKat (anode = oxidatie, reductie = kathode)." },
@@ -327,7 +327,7 @@ const steps = [
           "Hangt af van katalysator"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — aan welke kant staan minder mol gasdeeltjes?", "Onjuist — Le Chatelier reageert.", "Katalysator verandert evenwicht niet."],
+        wrongHints: [null, "Niet — aan welke kant staan minder mol gasdeeltjes?", "Volgens Le Chatelier reageert een evenwicht op een verstoring. Is hogere druk een verstoring?", "Er staat geen katalysator in de vraag. Wat doet het evenwicht bij hogere druk met het aantal gasdeeltjes?"],
         uitlegPad: {
           stappen: [
             { titel: "Le Chatelier — minder mol", tekst: "Links: 1+3 = 4 mol gas. Rechts: 2 mol. Hogere druk → evenwicht naar zijde met minder mol → **rechts** (meer NH₃). Daarom werkt Haber-Bosch op 200 atm." },
@@ -356,7 +356,7 @@ const steps = [
         q: "Concentratie-eenheid M (molair) is gelijk aan:",
         options: ["mol/L", "g/L", "mol/kg", "deeltjes/L"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is massaconcentratie.", "Niet — dat is molaliteit.", "Niet — deeltjes ≠ mol."],
+        wrongHints: [null, "Niet — dat is massaconcentratie.", "Niet — dat is molaliteit.", "Een mol is een vast pakket van 6,02·10²³ deeltjes. Telt M losse deeltjes of mol?"],
         uitlegPad: {
           stappen: [{ titel: "M = molair = mol/L", tekst: "Bv. 1 M HCl = 1 mol opgelost in 1 L oplossing. Veel gebruikt in lab + medische context." }],
           niveaus: { basis: "M = mol/L.", simpeler: "Molair = mol per liter.", nogSimpeler: "mol/L" },
@@ -371,7 +371,7 @@ const steps = [
           "O₂-gas"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — Cl₂ vormt zich aan ANODE.", "Niet — geen water aanwezig.", "Niet — geen O."],
+        wrongHints: [null, "Chloride-ionen staan elektronen af. Gebeurt dat aan de kathode of aan de anode?", "Bij gesmolten zout is er geen water. Waar zou waterstof dan vandaan komen?", "Zit er zuurstof in gesmolten NaCl?"],
         uitlegPad: {
           stappen: [
             { titel: "Kathode = reductie", tekst: "Aan kathode (− pool): Na⁺ + e⁻ → Na (reductie). Aan anode (+ pool): 2 Cl⁻ → Cl₂ + 2 e⁻ (oxidatie). Industriële Na + Cl₂ productie via dit proces (Downs-proces)." },

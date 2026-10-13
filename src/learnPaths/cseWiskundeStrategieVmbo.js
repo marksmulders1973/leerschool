@@ -64,9 +64,9 @@ const steps = [
       },
       {
         q: "Vraag: *'Wat betaalt hij na **30% korting** op €50?'* Wat reken je?",
-        options: ["70% van €50 = €35", "30% van €50 = €15", "€50 + 30%", "€50 + €15"],
+        options: ["70% van €50 = €35", "30% van €50 = €15", "€50 − €30 = €20", "€50 + €15 = €65"],
         answer: 0,
-        wrongHints: [null, "Dat is wat je BESPAART, niet wat je betaalt.", "Verkeerde richting.", "Optellen van fout bedrag."],
+        wrongHints: [null, "€15 is de korting zelf. Is dat wat hij betaalt, of wat hij bespaart?", "Is 30% korting hetzelfde als €30 korting? Hoeveel is 30% van €50?", "Wordt de prijs door korting hoger of lager?"],
       },
       {
         q: "Waarom **schat** je voor je rekent?",
@@ -76,9 +76,9 @@ const steps = [
       },
       {
         q: "Vraag vraagt **oppervlak in cm²** — wat schrijf je?",
-        options: ["Cijfer + cm²", "Cijfer alleen", "Cijfer + m²", "In mm²"],
+        options: ["Getal + cm²", "Alleen het getal", "Getal + cm", "Getal + m²"],
         answer: 0,
-        wrongHints: [null, "Mist eenheid.", "Verkeerde eenheid.", "Verkeerde eenheid."],
+        wrongHints: [null, "Zonder eenheid weet de nakijker niet of je cm², m² of iets anders bedoelt. Wat vraagt de opgave?", "cm is een lengtemaat. Welke eenheid hoort bij een oppervlakte?", "In welke eenheid vraagt de opgave het antwoord? Lees de vraag nog eens."],
       },
       {
         q: "Wat onderstreep je in een examenvraag **als eerste**?",
@@ -117,13 +117,13 @@ const steps = [
         q: "**5 − (−3)** = ?",
         options: ["8", "2", "−8", "−2"],
         answer: 0,
-        wrongHints: [null, "Verkeerd teken.", "Verkeerd.", "Verkeerd."],
+        wrongHints: [null, "Je deed 5 − 3. Wat gebeurt er als je een negatief getal aftrekt?", "Begin bij 5 op de getallenlijn. Ga je bij − (−3) naar links of naar rechts?", "Je begon bij −5 of bij 3. Met welk getal begint de som?"],
       },
       {
         q: "**−2 × −3** = ?",
         options: ["6", "−6", "5", "−5"],
         answer: 0,
-        wrongHints: [null, "Verkeerd teken.", "Optelling.", "Optelling met -."],
+        wrongHints: [null, "Tel de mintekens. Wat is de regel voor min keer min?", "Je hebt 2 en 3 opgeteld. Staat er plus of keer?", "Je hebt −2 en −3 opgeteld. Staat er plus of keer?"],
       },
       {
         q: "Bij **rekensom met haakjes**: wat doe je **eerst**?",
@@ -155,15 +155,15 @@ const steps = [
       },
       {
         q: "Veiligste manier om **25% van X** te rekenen?",
-        options: ["× 0,25", "× 25%", "× 25", "Alles werkt"],
+        options: ["× 0,25", "× 25%", "× 25", "÷ 0,25"],
         answer: 0,
-        wrongHints: [null, "%-knop niet uniform.", "Dat maakt het getal 25 keer zo groot — procent betekent 'per honderd'.", "%-knop kan fout gaan."],
+        wrongHints: [null, "De %-knop werkt niet op elke rekenmachine hetzelfde. Welke manier geeft altijd hetzelfde antwoord?", "Dat maakt het getal 25 keer zo groot — procent betekent 'per honderd'.", "Delen door 0,25 maakt het getal 4 keer zo groot. Kan 25% van X groter zijn dan X?"],
       },
       {
         q: "Bij goniometrie op rekenmachine — welke modus?",
         options: ["Degree (graden)", "Radian (radialen)", "Float", "Modus maakt niet uit"],
         answer: 0,
-        wrongHints: [null, "Voor hogere wiskunde.", "Display-mode, niet relevant.", "Het maakt wél uit — de verkeerde modus geeft fouten."],
+        wrongHints: [null, "Radialen gebruik je pas bij hogere wiskunde. In welke eenheid staan de hoeken in een vmbo-opgave?", "Float bepaalt alleen hoeveel cijfers je op het scherm ziet. Welke instelling gaat over hoeken?", "Probeer sin(30) in twee verschillende standen. Krijg je hetzelfde antwoord?"],
       },
       {
         q: "Wat doe je met **tussenstappen** in lange berekening?",
@@ -202,31 +202,31 @@ const steps = [
         q: "Formule oppervlakte **driehoek**?",
         options: ["½ × basis × hoogte", "basis × hoogte", "π × r²", "2(l + b)"],
         answer: 0,
-        wrongHints: [null, "Dat is rechthoek.", "Dat is cirkel.", "Dat is omtrek rechthoek."],
+        wrongHints: [null, "basis × hoogte is de oppervlakte van een rechthoek. Welk deel van die rechthoek is de driehoek?", "π × r² hoort bij een figuur met een straal. Heeft een driehoek een straal?", "2(l + b) is de omtrek van een rechthoek. Vraagt de opgave om een omtrek of een oppervlakte?"],
       },
       {
         q: "Formule volume **kubus** met zijde z?",
         options: ["z³", "z²", "6 × z²", "z"],
         answer: 0,
-        wrongHints: [null, "Dat is oppervlak 1 vlak.", "Totaal oppervlak alle vlakken.", "Dat is alleen de lengte van één zijde."],
+        wrongHints: [null, "z² is de oppervlakte van één zijvlak. Is inhoud een plat vlak of een ruimte?", "6 × z² is de oppervlakte van alle zes vlakken samen. Vraagt de opgave om de buitenkant of om wat erin past?", "z is alleen de lengte van één ribbe. In hoeveel richtingen heeft een kubus een maat?"],
       },
       {
         q: "Welk **trigger-woord** wijst op procenten-vraag?",
         options: ["korting", "schaal", "volume", "gemiddelde"],
         answer: 0,
-        wrongHints: [null, "Verhouding.", "Ruimte.", "Statistiek."],
+        wrongHints: [null, "Schaal hoort bij kaarten en tekeningen, zoals 1 : 100. Welk woord gaat over een deel van een prijs?", "Volume gaat over hoeveel er in een ruimte past. Gaat zo'n vraag over procenten?", "Een gemiddelde reken je met optellen en delen door het aantal. Welk woord gaat over een deel van honderd?"],
       },
       {
         q: "Formule **oppervlakte rechthoek** (l = lengte, b = breedte)?",
         options: ["l × b", "l + b", "2 × (l + b)", "l²"],
         answer: 0,
-        wrongHints: [null, "Optelling, geen oppervlak.", "Omtrek.", "Vierkant."],
+        wrongHints: [null, "l + b is lengte plus breedte. Hoeveel vakjes van 1 bij 1 passen er in een rechthoek van 3 bij 2?", "2 × (l + b) is de lengte van de rand: de omtrek. Vraagt de opgave om de rand of om de vlakte?", "l² werkt alleen als lengte en breedte gelijk zijn. Is elke rechthoek een vierkant?"],
       },
       {
         q: "**Schaal 1:1000**, 5 cm op kaart = werkelijk in **meter**?",
         options: ["50 m", "5 m", "500 m", "5 km"],
         answer: 0,
-        wrongHints: [null, "10× te weinig.", "10× te veel.", "100× te veel."],
+        wrongHints: [null, "5 cm × 1000 = 5000 cm. Hoeveel centimeter zitten er in 1 meter?", "Je deelde 5000 cm door 10. Hoeveel centimeter zitten er in 1 meter?", "5 km is 5000 m. Heb je 5000 cm per ongeluk als meter gelezen?"],
       },
       {
         q: "**Open vraag**: stelling van Pythagoras toepassen op rechthoekige driehoek met benen 3 en 4 — hoe lang is de schuine zijde?",
@@ -248,7 +248,7 @@ const steps = [
         q: "CSE Wiskunde VMBO duurt **hoe lang**?",
         options: ["120 min", "60 min", "180 min", "30 min"],
         answer: 0,
-        wrongHints: [null, "Te kort.", "Te lang.", "Te kort."],
+        wrongHints: [null, "Reken met ongeveer 3 minuten per vraag en 30 à 40 vragen. Hoe lang duurt het examen dan ongeveer?", "Drie uur is lang voor een examen van 30 à 40 vragen. Reken met ongeveer 3 minuten per vraag.", "Een half uur voor 30 à 40 vragen? Hoeveel tijd per vraag zou dat zijn?"],
       },
       {
         q: "Wat doe je bij **5+ min op 1 vraag vastlopen**?",
@@ -258,9 +258,9 @@ const steps = [
       },
       {
         q: "Bij **meerkeuze** en niet zeker — wat doe je?",
-        options: ["Toch iets invullen", "Leeglaten", "Vraag overslaan", "Buurman kopiëren"],
+        options: ["Wegstrepen en dan één kiezen", "Leeg laten, want fout kost punten", "Twee antwoorden aankruisen", "Opschrijven waarom je twijfelt"],
         answer: 0,
-        wrongHints: [null, "Levert 0 op.", "Wel terug, maar uiteindelijk invullen.", "Spieken = uitsluiting."],
+        wrongHints: [null, "Krijg je bij meerkeuze strafpunten voor een fout antwoord? Wat levert een lege vraag op?", "Mag je bij meerkeuze meer dan één antwoord geven? Hoe telt de nakijker dat?", "Bij meerkeuze kijkt de nakijker alleen naar de letter die je kiest. Levert uitleg erbij dan punten op?"],
       },
       {
         q: "Wat doe je in de laatste **5 minuten**?",
@@ -272,7 +272,7 @@ const steps = [
         q: "Een vraag is van **3 punten** en je hebt **120 min voor 60 punten** — gem **per punt**?",
         options: ["2 min", "1 min", "5 min", "30 sec"],
         answer: 0,
-        wrongHints: [null, "Te krap.", "Te ruim.", "Veel te krap."],
+        wrongHints: [null, "Reken het uit: 120 minuten gedeeld door 60 punten. Komt daar 1 uit?", "5 minuten per punt keer 60 punten is 300 minuten. Past dat in 120 minuten?", "30 seconden per punt keer 60 punten is 30 minuten. Wat doe je dan met de rest van de tijd?"],
       },
       {
         q: "**Halverwege examen** moet je ongeveer ___ van vragen klaar hebben?",
@@ -291,9 +291,9 @@ const steps = [
     checks: [
       {
         q: "**Dag voor examen** — wat is belangrijkst?",
-        options: ["Goed slapen", "All-nighter leren", "Geen ontbijt", "Examen-paniek"],
+        options: ["Op tijd naar bed en goed slapen", "Tot laat doorleren tot alles erin zit", "Energydrinks nemen voor extra focus", "Vroeg opstaan om nog even te leren"],
         answer: 0,
-        wrongHints: [null, "Verlies van scherpte.", "Energie nodig.", "Niet helpend."],
+        wrongHints: [null, "Hoe scherp ben je de volgende dag als je laat naar bed gaat?", "Een energydrink geeft een korte opkikker. Hoe slaap je daarna, en hoe fris ben je dan?", "Vroeg opstaan kost je slaap. Wat heb je op de examendag het hardst nodig?"],
       },
       {
         q: "Tijd-strategie tijdens examen?",

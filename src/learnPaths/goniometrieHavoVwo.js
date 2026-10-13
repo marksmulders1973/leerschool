@@ -24,7 +24,7 @@ const steps = [
         q: "In een rechthoekige driehoek met **schuine zijde 5** en overstaande zijde **3**, wat is **sin α**?",
         options: ["0,6", "0,8", "0,75", "1,67"],
         answer: 0,
-        wrongHints: [null, "Niet — dat zou cos zijn.", "Niet — dat is tan.", "Niet — sin is altijd ≤ 1."],
+        wrongHints: [null, "0,8 is 4/5. Is 4 de overstaande of de aanliggende zijde, en welke hoort bij de sinus?", "0,75 is 3/4: overstaande gedeeld door aanliggende. Is dat de sinus of de tangens?", "Je deelde 5 door 3. Kan de overstaande zijde langer zijn dan de schuine zijde?"],
         uitlegPad: {
           stappen: [{ titel: "SOH: sin = O/S", tekst: "sin α = overstaand/schuin = 3/5 = **0,6**. Cos zou 4/5 = 0,8 (aanliggend met pythagoras: √(25-9)=4)." }],
           niveaus: { basis: "3/5=0,6.", simpeler: "Overstaande/schuine = 3/5 = 0,6.", nogSimpeler: "0,6" },
@@ -34,7 +34,7 @@ const steps = [
         q: "**tan 45°** = ?",
         options: ["1", "0,5", "√2", "0"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is sin 30°.", "Niet — dat is bvb sin 45° + cos 45° gecombineerd.", "Niet — dat is tan 0°."],
+        wrongHints: [null, "0,5 hoort bij sin 30°. Hoe verhouden de twee rechthoekszijden zich bij een hoek van 45°?", "√2 is de schuine zijde van een driehoek met rechthoekszijden 1. Gebruikt tan de schuine zijde?", "tan 0° is 0. Is de overstaande zijde bij 45° nul?"],
         uitlegPad: {
           stappen: [{ titel: "45° = gelijkbenig", tekst: "In 45°-driehoek: overstaande = aanliggende → tan = O/A = 1. Klassiek getal te onthouden." }],
           niveaus: { basis: "1.", simpeler: "tan 45° = 1.", nogSimpeler: "1" },
@@ -44,7 +44,7 @@ const steps = [
         q: "Pythagoras: rechthoekige driehoek met rechthoekszijden 6 en 8. Schuine zijde?",
         options: ["10", "14", "48", "√48"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is som.", "Niet — dat is product.", "Niet — controleer berekening."],
+        wrongHints: [null, "6 + 8 = 14. Tel je bij Pythagoras de zijden zelf op, of hun kwadraten?", "6 · 8 = 48. Zegt a² + b² = c² dat je moet vermenigvuldigen?", "Wat is 6² + 8²? Is dat 48?"],
         uitlegPad: {
           stappen: [{ titel: "c² = a² + b²", tekst: "c² = 6² + 8² = 36+64 = 100 → c = **10**. Klassieke 6-8-10 (= 3-4-5 × 2) driehoek." }],
           theorie: "3-4-5, 5-12-13, 8-15-17 zijn klassieke gehele-driehoeken (Pythagoreïsche drietallen).",
@@ -65,7 +65,7 @@ const steps = [
         q: "Een ladder van 5 m staat met de voet 3 m van een muur. Welke hoek maakt de ladder met de grond?",
         options: ["~53°", "~37°", "~60°", "~30°"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is met de muur, niet de grond.", "Niet — controleer cos vs sin.", "Niet — controleer rekening."],
+        wrongHints: [null, "De 3 m ligt naast de hoek met de grond. Heb je sin gebruikt waar cos hoort?", "cos 60° = 0,5. Is 3/5 gelijk aan 0,5?", "sin 30° = 0,5. Welke verhouding heb je hier: 3/5 of 1/2?"],
         uitlegPad: {
           stappen: [
             { titel: "cos α = aanliggend/schuin", tekst: "cos α = 3/5 = 0,6 → α = arccos(0,6) ≈ **53°**. Hoek tussen ladder en grond. (Met muur zou 37° zijn.)" },
@@ -114,9 +114,9 @@ const steps = [
       },
       {
         q: "Welke uitspraak klopt over **sin(−30°)**?",
-        options: ["= −sin 30° = −0,5", "= sin 30° = +0,5", "= cos 30°", "Niet bepaald"],
+        options: ["= −sin 30° = −0,5", "= sin 30° = +0,5", "= cos 30°", "= −cos 30°"],
         answer: 0,
-        wrongHints: [null, "Niet — sin is oneven.", "Niet — verwisseling.", "Wel bepaald."],
+        wrongHints: [null, "Ligt −30° boven of onder de x-as op de eenheidscirkel? Welk teken krijgt de y-coördinaat dan?", "cos 30° ≈ 0,87. Is dat de hoogte bij −30° op de eenheidscirkel?", "Het minteken klopt. Maar is de hoogte bij −30° even groot als cos 30° ≈ 0,87?"],
         uitlegPad: {
           stappen: [{ titel: "sin is oneven", tekst: "sin(−x) = −sin(x) voor alle x. Op eenheidscirkel: hoek −30° = 30° onder x-as → y-coord is omgekeerd → −0,5." }],
           niveaus: { basis: "−0,5.", simpeler: "sin negatieve hoek = min sin positieve.", nogSimpeler: "−0,5" },
@@ -143,9 +143,9 @@ const steps = [
     checks: [
       {
         q: "Een driehoek heeft a=10, b=14, hoek C=90°. Cosinusregel geeft c² = ?",
-        options: ["296", "16", "156", "Niet te bepalen"],
+        options: ["296", "16", "156", "576"],
         answer: 0,
-        wrongHints: [null, "Verfijn — wat is cos 90°?", "Je rekent alsof cos C = 0,5 — maar hoek C is 90°.", "Wel — alle gegevens voor de cosinusregel zijn er."],
+        wrongHints: [null, "16 = (14 − 10)². Trek je in de cosinusregel de zijden van elkaar af? Wat is cos 90°?", "Je rekent alsof cos C = 0,5 — maar hoek C is 90°.", "576 = (10 + 14)². Tel je in de cosinusregel de zijden op vóór het kwadrateren?"],
         uitlegPad: {
           stappen: [{ titel: "cos 90° = 0", tekst: "c² = 10² + 14² − 2·10·14·0 = 100 + 196 = 296. c = √296 ≈ 17,2. Bij C=90° vervalt cosinusregel naar **Pythagoras**." }],
           theorie: "Cosinusregel is een super-Pythagoras voor elke hoek.",
@@ -178,9 +178,9 @@ const steps = [
       },
       {
         q: "Hoeken-som van een driehoek?",
-        options: ["180°", "360°", "90°", "Hangt af"],
+        options: ["180°", "360°", "90°", "Hangt af van de vorm"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is volle cirkel.", "Niet — alleen rechte hoek.", "Vast getal."],
+        wrongHints: [null, "360° is de hoekensom van een vierhoek. Hoeveel driehoeken passen er in een vierhoek?", "90° is alleen de rechte hoek. Hoeveel hoeken heeft een driehoek nog meer?", "Teken een paar verschillende driehoeken en tel de hoeken op. Komt er steeds iets anders uit?"],
         uitlegPad: {
           stappen: [{ titel: "Klassieke regel", tekst: "In een **vlakke** driehoek: A + B + C = 180°. Of in radialen: π. Gevolg: bij 2 hoeken bekend → derde = 180° − (A + B)." }],
           theorie: "Op een bol (zoals aarde) is hoekensom > 180° — sferische geometrie. Niet voor middelbare wiskunde, maar wel bij navigatie/astronomie.",
@@ -191,7 +191,7 @@ const steps = [
         q: "Driehoek met a=5, b=7, c=8. Cosinusregel: cos C = ?",
         options: ["0,143", "0,500", "1", "−0,143"],
         answer: 0,
-        wrongHints: [null, "Niet — geen 60°.", "Niet — controleer formule.", "Wel positief."],
+        wrongHints: [null, "0,500 hoort bij een hoek van 60°. Reken (5² + 7² − 8²) / (2 · 5 · 7) eens uit.", "cos C = 1 hoort bij een hoek van 0°. Kan een hoek in een driehoek 0° zijn?", "Waar komt het minteken vandaan? Is 25 + 49 groter of kleiner dan 64?"],
         uitlegPad: {
           stappen: [
             { titel: "cos C = (a² + b² − c²)/(2ab)", tekst: "cos C = (25 + 49 − 64) / (2·5·7) = 10/70 = **1/7 ≈ 0,143**. → C = arccos(0,143) ≈ 81,8°." },
@@ -212,7 +212,7 @@ const steps = [
         q: "**Periode** van y = sin x is:",
         options: ["2π", "π", "π/2", "4π"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is tan-periode.", "Niet — kwart-periode.", "Niet — twee periodes."],
+        wrongHints: [null, "Niet — dat is tan-periode.", "π/2 is een kwart golf. Na hoeveel radialen herhaalt sin x zich helemaal?", "Na 4π heb je twee hele golven gehad. Wanneer begint de eerste herhaling al?"],
         uitlegPad: {
           stappen: [{ titel: "360° herhaalt", tekst: "sin x = sin(x + 2π) voor alle x. Volledig patroon herhaalt na 2π radialen = 360°." }],
           niveaus: { basis: "2π.", simpeler: "Sin herhaalt elke 360° = 2π.", nogSimpeler: "2π" },
@@ -230,9 +230,9 @@ const steps = [
       },
       {
         q: "Voor welke x heeft tan x **asymptoot** (= niet gedefinieerd)?",
-        options: ["x = π/2 + kπ", "x = 0", "x = π", "Bij elke x"],
+        options: ["x = π/2 + kπ", "x = 0", "x = π", "x = π/4 + kπ"],
         answer: 0,
-        wrongHints: [null, "Niet — daar is tan gedefinieerd en gelijk aan nul; de asymptoot ligt ergens anders.", "Idem — ook een nulpunt.", "Onjuist — tan bestaat voor bijna alle x, maar niet overal."],
+        wrongHints: [null, "Niet — daar is tan gedefinieerd en gelijk aan nul; de asymptoot ligt ergens anders.", "tan π = 0. Bestaat tan dan wel bij x = π?", "tan(π/4) = 1. Is tan daar gewoon gedefinieerd?"],
         uitlegPad: {
           stappen: [
             { titel: "tan = sin/cos → asymp waar cos=0", tekst: "cos x = 0 bij x = π/2, 3π/2, 5π/2, ... (= π/2 + k·π). Daar wordt tan x = sin x / 0 → ±∞ → verticale asymptoot." },
@@ -244,7 +244,7 @@ const steps = [
         q: "Een sinus-grafiek heeft tops op 5 en dalen op −1. Evenwichtslijn?",
         options: ["y = 2", "y = 0", "y = 3", "y = 4"],
         answer: 0,
-        wrongHints: [null, "Niet — daar zou geen verschuiving zijn.", "Niet — controleer gemiddelde.", "Te hoog."],
+        wrongHints: [null, "y = 0 ligt niet midden tussen 5 en −1. Wat is het gemiddelde van de top en het dal?", "y = 3 ligt 2 onder de top en 4 boven het dal. Ligt dat precies in het midden?", "y = 4 ligt dichter bij de top dan bij het dal. Waar ligt het midden?"],
         uitlegPad: {
           stappen: [
             { titel: "(top + min) / 2", tekst: "(5 + (−1)) / 2 = 4/2 = **2**. Functie ziet eruit als y = 3·sin(...) + 2 (amplitude 3, verschuiving 2 omhoog)." },
@@ -275,7 +275,7 @@ const steps = [
         q: "**sin 2α** = ?",
         options: ["2 sin α · cos α", "sin² α", "1 − cos α", "2 sin α"],
         answer: 0,
-        wrongHints: [null, "Niet — geen kwadraat.", "Niet — andere identiteit.", "Niet — vergeet cos."],
+        wrongHints: [null, "Controleer met α = 30°: sin 60° ≈ 0,87, maar sin² 30° = 0,25. Klopt dat?", "Controleer met α = 30°: sin 60° ≈ 0,87. Wat is 1 − cos 30°?", "Controleer met α = 30°: sin 60° ≈ 0,87. Is 2 sin 30° = 1 dan goed?"],
         uitlegPad: {
           stappen: [{ titel: "Dubbele-hoek identiteit", tekst: "sin 2α = 2·sin α·cos α. Klassiek te onthouden. Bv. sin 60° = 2 · sin 30° · cos 30° = 2 · 0,5 · √3/2 = √3/2 ✓." }],
           niveaus: { basis: "2 sin α cos α.", simpeler: "Vaste formule.", nogSimpeler: "2sin·cos" },
@@ -308,7 +308,7 @@ const steps = [
         q: "Een trilling: u(t) = 5 sin(2π · 3 · t). Frequentie?",
         options: ["3 Hz", "6 Hz", "2π Hz", "5 Hz"],
         answer: 0,
-        wrongHints: [null, "Niet — vergelijk standaardvorm.", "Niet — 2π is omrekening.", "Niet — dat is amplitude."],
+        wrongHints: [null, "6 = 2 · 3. Welk getal staat in de vorm sin(2π · f · t) op de plek van f?", "2π hoort bij elke trilling in deze vorm. Welk getal staat er nog tussen 2π en t?", "Niet — dat is amplitude."],
         uitlegPad: {
           stappen: [
             { titel: "u(t) = A sin(2π f t)", tekst: "Standaardvorm voor trilling: u(t) = A·sin(2π·f·t). Vergelijk: A = 5, **f = 3 Hz**, T = 1/3 s." },

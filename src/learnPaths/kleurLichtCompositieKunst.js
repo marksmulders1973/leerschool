@@ -20,9 +20,9 @@ const steps = [
     checks: [
       {
         q: "Welke zijn de **primaire kleuren**?",
-        options: ["Rood, geel, blauw", "Oranje, groen, paars", "Wit, zwart, grijs", "Roze, bruin, beige"],
+        options: ["Rood, geel, blauw", "Oranje, groen, paars", "Wit, zwart, grijs", "Rood, geel, groen"],
         answer: 0,
-        wrongHints: [null, "Dat zijn juist de secundaire kleuren.", "Dat zijn geen kleuren maar tonen (grijswaarden).", "Dat zijn mengkleuren."],
+        wrongHints: [null, "Deze kleuren ontstaan als je twee andere kleuren mengt. Kun je een primaire kleur mengen?", "Wit, zwart en grijs zijn tonen: ze maken iets lichter of donkerder. Zitten ze in de kleurencirkel?", "Groen kun je mengen uit geel en blauw. Is groen dan een primaire kleur?"],
         uitlegPad: {
           stappen: [{ titel: "Niet te mengen", tekst: "**Primaire kleuren** (rood, geel, blauw) kun je zelf niet uit andere kleuren mengen — maar je maakt er wél alle andere mee. Rood+geel=oranje, geel+blauw=groen, rood+blauw=paars (de **secundaire** kleuren)." }],
           niveaus: { basis: "Rood, geel, blauw.", simpeler: "Primair = rood/geel/blauw", nogSimpeler: "Rood, geel, blauw." },
@@ -81,7 +81,7 @@ const steps = [
         q: "Wat is **clair-obscur** (chiaroscuro)?",
         options: ["Sterk contrast tussen licht en donker", "Sterk contrast tussen warm en koud", "Zacht vervagen van contouren", "Schilderen in grijs, zwart en wit"],
         answer: 0,
-        wrongHints: [null, "Warm en koud is een kleurcontrast. Wat valt het meest op in een schilderij van Caravaggio?", "Dat is sfumato, zoals bij de Mona Lisa. Wat betekenen de woorden clair en obscur?", "Dat heet grisaille. Bij Caravaggio zie je juist volle kleur. Waar zit dan het effect?"],
+        wrongHints: [null, "Warm en koud is een kleurcontrast. Wat valt het meest op in een schilderij van Caravaggio?", "Zacht vervagen van randen heeft een eigen naam. Wat betekenen de Franse woorden clair en obscur?", "Dat heet grisaille. Bij Caravaggio zie je juist volle kleur. Waar zit dan het effect?"],
         uitlegPad: {
           stappen: [{ titel: "Drama door licht", tekst: "**Clair-obscur / chiaroscuro** is een sterk **licht-donkercontrast**, vaak met één lichtbron, dat **drama** geeft en de aandacht richt op het belangrijkste. Kenmerkend voor de **barok** — denk aan **Caravaggio** en **Rembrandt**." }],
           niveaus: { basis: "Licht-donkercontrast.", simpeler: "Clair-obscur = licht/donker", nogSimpeler: "Licht tegen donker." },
@@ -110,7 +110,7 @@ const steps = [
         q: "Wat doet een **symmetrische** compositie meestal met de sfeer?",
         options: ["Rust en evenwicht", "Chaos en snelheid", "Diepte en ruimte", "Verrassing en speelsheid"],
         answer: 0,
-        wrongHints: [null, "Dat past juist bij asymmetrie/dynamiek.", "Diepte maak je met overlapping en perspectief. Heeft een spiegelbeeld daar iets mee te maken?", "Verrassing komt vaak van iets dat uit balans is. Wat gebeurt er als links en rechts gelijk zijn?"],
+        wrongHints: [null, "Snelheid zie je vaak bij schuine lijnen en een scheve verdeling. Is een spiegelbeeld scheef?", "Een spiegelbeeld gaat over links en rechts. Zegt dat iets over wat vóór en wat achter staat?", "Verrassing komt vaak van iets dat uit balans is. Wat gebeurt er als links en rechts gelijk zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Spiegelen = rust", tekst: "Bij **symmetrie** spiegelen de helften → het voelt **rustig, plechtig, in evenwicht** (denk aan een kerk-interieur). **Asymmetrie** is juist dynamischer en spannender." }],
           niveaus: { basis: "Rust/evenwicht.", simpeler: "Symmetrie = rust", nogSimpeler: "Spiegelen = rust." },
@@ -149,7 +149,7 @@ const steps = [
         q: "Welke techniek suggereert **diepte** in een plat schilderij?",
         options: ["Overlapping", "Symmetrie", "Herhaling", "Egale kleurvlakken"],
         answer: 0,
-        wrongHints: [null, "Symmetrie geeft evenwicht en rust. Zie je er ook diepte door?", "Herhaling geeft ritme. Hoe laat je zien dat het ene ding achter het andere staat?", "Een egaal vlak zonder schaduw oogt juist plat. Hoe laat je zien wat vóór en wat achter staat?"],
+        wrongHints: [null, "Symmetrie gaat over links en rechts. Zie je daardoor wat vóór en wat achter staat?", "Herhaling geeft ritme. Hoe laat je zien dat het ene ding achter het andere staat?", "Een egaal vlak zonder schaduw oogt juist plat. Hoe laat je zien wat vóór en wat achter staat?"],
         uitlegPad: {
           stappen: [{ titel: "Manieren om diepte te maken", tekst: "**Overlapping** (een voorwerp dat een ander deels bedekt, lijkt dichterbij) suggereert diepte. Andere manieren: **lineair perspectief** (lijnen naar een verdwijnpunt), **afnemende grootte**, en **lucht-/kleurperspectief** (ver weg = vager/blauwer/lichter)." }],
           niveaus: { basis: "Overlapping.", simpeler: "Diepte = overlapping", nogSimpeler: "Ervoor = dichterbij." },
@@ -159,7 +159,7 @@ const steps = [
         q: "Welke vormen/lijnen geven vaak een gevoel van **spanning en beweging**?",
         options: ["Hoekige vormen en diagonale lijnen", "Ronde vormen en horizontale lijnen", "Ronde vormen en verticale lijnen", "Rechthoekige vlakken en horizontale lijnen"],
         answer: 0,
-        wrongHints: [null, "Rond + horizontaal geeft juist rust.", "Verticale lijnen staan stevig, zoals een boom of een toren. Voelt dat als beweging?", "Horizontaal ligt stil, zoals een horizon. Geeft dat spanning?"],
+        wrongHints: [null, "Denk aan een kalme zee met zachte golven en een rechte horizon. Voelt dat gespannen?", "Verticale lijnen staan stevig, zoals een boom of een toren. Voelt dat als beweging?", "Horizontaal ligt stil, zoals een horizon. Geeft dat spanning?"],
         uitlegPad: {
           stappen: [{ titel: "Diagonaal = dynamiek", tekst: "**Hoekige vormen** en **diagonale lijnen** geven **spanning en beweging**. **Ronde, vloeiende** vormen en **horizontale** lijnen geven juist **rust** en vriendelijkheid. Zo stuurt de kunstenaar het gevoel van de kijker." }],
           niveaus: { basis: "Hoekig + diagonaal.", simpeler: "Diagonaal = beweging", nogSimpeler: "Schuin = beweging." },

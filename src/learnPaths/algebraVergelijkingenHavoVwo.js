@@ -24,7 +24,7 @@ const steps = [
         q: "Werk haakjes weg: **3(2x − 5)** = ?",
         options: ["6x − 15", "6x − 5", "5x − 15", "6x + 15"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet −5 te vermenigvuldigen.", "Niet — vermenigvuldig met 3.", "Niet — let op teken."],
+        wrongHints: [null, "Je hebt 3 · 2x gedaan. Wat gebeurt er met de −5 als je met 3 vermenigvuldigt?", "Wat is 3 keer 2x? Tel je de 3 erbij op of vermenigvuldig je?", "Wat is 3 keer −5? Blijft het minteken staan?"],
         uitlegPad: {
           stappen: [{ titel: "a(b−c) = ab − ac", tekst: "3 × 2x = 6x. 3 × (−5) = −15. Resultaat: **6x − 15**." }],
           niveaus: { basis: "6x−15.", simpeler: "3 maal elk: 6x en −15.", nogSimpeler: "6x−15" },
@@ -46,7 +46,7 @@ const steps = [
         q: "Factoriseer: **x² − 36** = ?",
         options: ["(x − 6)(x + 6)", "(x − 6)²", "(x + 6)²", "x(x − 36)"],
         answer: 0,
-        wrongHints: [null, "Niet — geen middenterm.", "Niet — geen middenterm.", "Niet — −36 niet 0."],
+        wrongHints: [null, "Werk (x − 6)² eens uit: krijg je dan ook een term met x erin? Staat die in x² − 36?", "Werk (x + 6)² eens uit: krijg je dan +12x erbij? Staat die in x² − 36?", "Werk x(x − 36) uit: krijg je dan −36 of −36x?"],
         uitlegPad: {
           stappen: [
             { titel: "Verschil van kwadraten", tekst: "x² − 36 = x² − 6² = **(x − 6)(x + 6)**. Standaardformule a² − b² = (a−b)(a+b). Check: (x−6)(x+6) = x² + 6x − 6x − 36 = x² − 36 ✓." },
@@ -58,7 +58,7 @@ const steps = [
         q: "Vereenvoudig: **(x² + 5x + 6) / (x + 2)** = ?",
         options: ["x + 3", "x + 6", "x − 2", "x + 5"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer factorisatie.", "Niet — andere factor weg.", "Niet — verkeerde rest."],
+        wrongHints: [null, "Ontbind x² + 5x + 6: welke twee getallen geven samen 5 en keer elkaar 6?", "Na het ontbinden staat er (x + 2) in de teller. Kun je die wegdelen tegen (x − 2)?", "Mag je elke term los door x + 2 delen? Ontbind de teller eerst in twee haakjes."],
         uitlegPad: {
           stappen: [
             { titel: "Eerst boven factoriseren", tekst: "x² + 5x + 6 = (x+2)(x+3). Boven gedeeld door (x+2) → blijft **(x+3)**. Mits x ≠ −2." },
@@ -70,7 +70,7 @@ const steps = [
         q: "**√50** vereenvoudig:",
         options: ["5√2", "√50 (kan niet)", "25√2", "10"],
         answer: 0,
-        wrongHints: [null, "Wel — kijk of 50 een kwadraat-factor heeft die je eruit kunt halen.", "Niet — vereenvoudigen is hier wel mogelijk.", "Niet — controleer: wat is de vierkantswortel van jouw antwoord?"],
+        wrongHints: [null, "Kan het toch? Kijk of 50 een kwadraat als factor heeft, zoals 4, 9 of 25.", "50 = 25 · 2. Wat is de wortel van 25, en wat zet je dus vóór √2?", "Wat is 10²? Is dat 50?"],
         uitlegPad: {
           stappen: [
             { titel: "Kwadraat-factor afsplitsen", tekst: "50 = 25 × 2. √50 = √25 · √2 = **5√2** ≈ 7,07. Vorm onder wortel zo klein mogelijk schrijven." },
@@ -103,7 +103,7 @@ const steps = [
         q: "Los op: **3(x − 4) = 2x + 5**.",
         options: ["x = 17", "x = 9", "x = 5", "x = 1"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer optelling.", "Niet — controleer haakjes.", "Niet — controleer verplaatsing."],
+        wrongHints: [null, "Werk de haakjes uit: 3 · (x − 4). Heb je de 4 ook met 3 vermenigvuldigd?", "Vul x = 5 in: links 3 · 1 = 3, rechts 15. Waar ging het mis, bij het verplaatsen van −12?", "Vul x = 1 in: links −9, rechts 7. Tel je 12 en 5 op, of trek je ze af?"],
         uitlegPad: {
           stappen: [
             { titel: "Haakjes + verplaatsen", tekst: "3x − 12 = 2x + 5.\n3x − 2x = 5 + 12.\nx = **17**.\nCheck: 3(17−4) = 39. 2·17+5 = 39 ✓." },
@@ -115,7 +115,7 @@ const steps = [
         q: "Een **rechthoek** heeft omtrek 30 cm. Lengte is 5 meer dan breedte. Wat is breedte?",
         options: ["5", "10", "12,5", "15"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is lengte.", "Onmogelijk in deze som.", "Onmogelijk."],
+        wrongHints: [null, "Bij breedte 10 is de lengte 15. Hoe groot wordt de omtrek dan?", "Lengte + breedte is de helft van de omtrek, dus 15. Hoe verdeel je 15 als de lengte 5 meer is?", "15 is lengte en breedte samen (de halve omtrek). Hoe groot is de breedte zelf?"],
         uitlegPad: {
           stappen: [
             { titel: "Vergelijking opstellen", tekst: "Breedte = b, lengte = b + 5. Omtrek = 2(L + B) = 30 → 2(b+5+b) = 30 → 4b + 10 = 30 → 4b = 20 → **b = 5**. Lengte 10. Check: 2(5+10)=30 ✓." },
@@ -125,9 +125,9 @@ const steps = [
       },
       {
         q: "Wat is de oplossing van **2x + 5 = 2x + 8**?",
-        options: ["Geen oplossing", "x = 0", "x = 3", "x = oneindig"],
+        options: ["Geen oplossing", "x = 0", "x = 3", "Elke waarde van x"],
         answer: 0,
-        wrongHints: [null, "Vul x = 0 in: wordt links dan echt gelijk aan rechts?", "Vul x = 3 in: wordt links dan echt gelijk aan rechts?", "Breng alle x naar één kant — wat blijft er dan over, en is dat ooit waar?"],
+        wrongHints: [null, "Vul x = 0 in: wordt links dan echt gelijk aan rechts?", "Vul x = 3 in: wordt links dan echt gelijk aan rechts?", "Als elke x werkt, zijn links en rechts altijd gelijk. Is 2x + 5 ooit gelijk aan 2x + 8?"],
         uitlegPad: {
           stappen: [
             { titel: "Tegenspraak", tekst: "Verplaats x: 2x − 2x = 8 − 5 → 0 = 3. **Vals voor elke x**. Daarom: GEEN oplossing. Visueel: 2 evenwijdige lijnen (zelfde helling, ander snijpunt-y) snijden nooit." },
@@ -161,7 +161,7 @@ const steps = [
         q: "Los op: **x² − 7x + 12 = 0**.",
         options: ["x = 3 of x = 4", "x = 6 of x = 2", "x = −3 of x = −4", "x = 7 of x = 12"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer p·q.", "Niet — tekens andersom.", "Niet — niet oplossingen."],
+        wrongHints: [null, "6 · 2 = 12 klopt. Maar is 6 + 2 gelijk aan 7?", "Vul x = −3 in: 9 + 21 + 12. Is dat 0?", "7 en 12 zijn getallen uit de vergelijking zelf. Vul x = 7 in: is 49 − 49 + 12 gelijk aan 0?"],
         uitlegPad: {
           stappen: [
             { titel: "Ontbinden", tekst: "Zoek p, q met p+q=−7, p·q=12 → −3, −4. (x−3)(x−4)=0 → **x=3 of x=4**. Check: 3²−7·3+12 = 9−21+12 = 0 ✓." },
@@ -173,7 +173,7 @@ const steps = [
         q: "ABC-formule voor **x² + 4x + 1 = 0**. Discriminant D?",
         options: ["12", "20", "−12", "4"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer.", "Niet — wel positief.", "Niet — alleen b²."],
+        wrongHints: [null, "Je hebt 4ac opgeteld. Staat er b² + 4ac of b² − 4ac?", "Waar komt het minteken vandaan? Reken b² en 4ac apart uit en trek ze af.", "4 is b zelf. Wat is b², en wat trek je daar nog van af?"],
         uitlegPad: {
           stappen: [
             { titel: "D = b² − 4ac", tekst: "a=1, b=4, c=1. D = 16 − 4·1·1 = 16 − 4 = **12**. D>0 → twee reële oplossingen." },
@@ -215,7 +215,7 @@ const steps = [
           "Geen oplossing"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — controleer je uitwerking.", "Idem.", "Er is wel een oplossing — bereken de discriminant en kijk of die positief is."],
+        wrongHints: [null, "Je deelde door 2. In de abc-formule deel je door 2a. Wat is a hier?", "Vul x = 3 in: 18 − 9 − 5 = 4. Is dat 0?", "Er is wel een oplossing — bereken de discriminant en kijk of die positief is."],
         uitlegPad: {
           stappen: [
             { titel: "ABC stap-voor-stap", tekst: "a=2, b=−3, c=−5. D = 9 + 40 = 49 → √49 = 7.\nx = (3 ± 7) / 4.\nx = 10/4 = 2,5 OF x = −4/4 = −1.\n→ **x = 2,5 of x = −1**.\nCheck: 2(2,5)² − 3(2,5) − 5 = 12,5 − 7,5 − 5 = 0 ✓." },
@@ -236,7 +236,7 @@ const steps = [
         q: "Stelsel: x + y = 10, x − y = 4. Wat is x?",
         options: ["7", "5", "6", "10"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is (x+y)/2.", "Niet — controleer.", "Niet — geen som van vergelijkingen."],
+        wrongHints: [null, "Bij x = 5 is y ook 5. Klopt x − y = 4 dan?", "Bij x = 6 is y = 4. Wat is dan x − y?", "10 is x + y samen. Tel beide vergelijkingen op: wat is dan 2x?"],
         uitlegPad: {
           stappen: [
             { titel: "Optellen + delen door 2", tekst: "x + y = 10\nx − y = 4\nOptellen: 2x = 14 → **x = 7**. y = 10 − 7 = 3. Check: 7−3=4 ✓." },
@@ -278,7 +278,7 @@ const steps = [
         q: "Een sportclub rekent met teams: 4 senioren + 3 junioren = 50 punten. 2 senioren + 5 junioren = 46 punten. Hoeveel punten is één senior waard?",
         options: ["7", "8", "5", "10"],
         answer: 1,
-        wrongHints: ["Vul het in: klopt 4s + 3j = 50 dan nog?", null, "Controleer met de tweede vergelijking.", "Controleer met de tweede vergelijking."],
+        wrongHints: ["Vul het in: klopt 4s + 3j = 50 dan nog?", null, "Bij s = 5 moeten 3 junioren samen 30 punten zijn, dus j = 10. Klopt 2s + 5j = 46 dan?", "Bij s = 10 blijven er voor 3 junioren 10 punten over. Is dat een heel getal per junior, en klopt de tweede vergelijking?"],
         uitlegPad: {
           stappen: [
             { titel: "Eliminatie", tekst: "4s + 3j = 50\n2s + 5j = 46 (×2): 4s + 10j = 92\nAftrekken: 7j = 42 → j = 6.\nInvullen: 4s + 18 = 50 → 4s = 32 → s = 8." },
@@ -314,7 +314,7 @@ const steps = [
         q: "Los op: **2x + 5 > 13**. Oplossing?",
         options: ["x > 4", "x < 4", "x > 9", "x ≥ 4"],
         answer: 0,
-        wrongHints: [null, "Niet — teken niet omdraaien (delen door +).", "Niet — controleer.", "Niet — geen ≥."],
+        wrongHints: [null, "Je deelt door +2. Moet het teken dan omklappen?", "Vul x = 5 in: 2 · 5 + 5 = 15, en 15 > 13. Hoort x = 5 dan bij jouw oplossing?", "Vul x = 4 in: 2 · 4 + 5 = 13. Is 13 groter dan 13?"],
         uitlegPad: {
           stappen: [{ titel: "Zoals vergelijking + > teken", tekst: "2x + 5 > 13. Verplaats: 2x > 8. Deel door 2 (positief, teken blijft): **x > 4**." }],
           niveaus: { basis: "x>4.", simpeler: "Verplaats + delen.", nogSimpeler: "x>4" },
@@ -324,7 +324,7 @@ const steps = [
         q: "Los op: **−2x ≥ 6**. Oplossing?",
         options: ["x ≤ −3", "x ≥ −3", "x ≤ 3", "x ≥ 3"],
         answer: 0,
-        wrongHints: [null, "Niet — teken omdraaien bij ÷ negatief.", "Niet — verkeerd teken.", "Niet — controleer."],
+        wrongHints: [null, "Je deelde door −2. Wat gebeurt er dan met het ongelijkheidsteken?", "Wat is 6 gedeeld door −2? Klopt het getal in jouw antwoord?", "Vul x = 3 in: −2 · 3 = −6. Is −6 groter dan of gelijk aan 6?"],
         uitlegPad: {
           stappen: [
             { titel: "Delen door −2: TEKEN OMDRAAIEN", tekst: "−2x ≥ 6. Deel door −2 (NEGATIEF): **x ≤ −3** (≥ wordt ≤). Check: x = −5: −2(−5) = 10 ≥ 6 ✓. x = 0: 0 ≥ 6 ✗ → klopt." },
@@ -358,7 +358,7 @@ const steps = [
           "Geen oplossing"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — daar is x²<4.", "Je moet de wortel uit 4 nemen, niet 4 zelf. Probeer ook x = 3 en x = −3: is x² − 4 dan positief?", "Probeer x = 3: is 3² − 4 groter dan 0?"],
+        wrongHints: [null, "Probeer x = 0: is 0² − 4 groter dan 0?", "Je moet de wortel uit 4 nemen, niet 4 zelf. Probeer ook x = 3 en x = −3: is x² − 4 dan positief?", "Probeer x = 3: is 3² − 4 groter dan 0?"],
         uitlegPad: {
           stappen: [
             { titel: "Parabool-analyse", tekst: "x² − 4 = 0 → x = ±2. Parabool y = x² − 4 opent omhoog. BOVEN x-as wanneer x kleiner dan −2 OF groter dan 2. Onder x-as tussen −2 en 2. Dus x²−4 > 0 → **x < −2 of x > 2**." },
@@ -368,9 +368,9 @@ const steps = [
       },
       {
         q: "Voor welke a heeft **x² + 2x + a = 0** GEEN reële oplossing?",
-        options: ["a > 1", "a < 1", "a = 1", "Alle a"],
+        options: ["a > 1", "a < 1", "a = 1", "a > 0"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — kijk wanneer de discriminant negatief wordt.", "Dat is het grens-geval, niet het geval zonder oplossingen.", "Onjuist — niet voor alle waarden van a heeft de vergelijking geen oplossing."],
+        wrongHints: [null, "Probeer a = 0: x² + 2x = 0. Heeft dat een oplossing?", "Dat is het grens-geval, niet het geval zonder oplossingen.", "Probeer a = 0,5: de discriminant is 4 − 2 = 2. Is er dan echt geen oplossing?"],
         uitlegPad: {
           stappen: [
             { titel: "D < 0 vereist", tekst: "D = 4 − 4a. Voor geen reële oplossing: D < 0 → 4 − 4a < 0 → a > 1. Dus **a > 1**. Test a=2: D = −4 → geen reële wortel. Test a=0: D=4 → twee oplossingen ✓." },

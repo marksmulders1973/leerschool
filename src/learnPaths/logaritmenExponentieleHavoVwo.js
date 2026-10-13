@@ -24,7 +24,7 @@ const steps = [
         q: "**2³ · 2⁴** = ?",
         options: ["2⁷", "2¹²", "4⁷", "16"],
         answer: 0,
-        wrongHints: [null, "Niet — m+n, niet m·n.", "Niet — grondtal blijft 2.", "Niet — 16 is maar 2⁴. Wat doe je met de exponenten als je machten vermenigvuldigt?"],
+        wrongHints: [null, "Je vermenigvuldigde de exponenten 3 en 4. Schrijf 2³ · 2⁴ uit als losse factoren 2: hoeveel zijn het er?", "Je vermenigvuldigde ook de grondtallen. Blijft het grondtal bij a^m · a^n hetzelfde of verandert het?", "Niet — 16 is maar 2⁴. Wat doe je met de exponenten als je machten vermenigvuldigt?"],
         uitlegPad: {
           stappen: [{ titel: "a^m · a^n = a^(m+n)", tekst: "2³ · 2⁴ = 2^(3+4) = **2⁷ = 128**. Bij MACHTEN-product: tellen op (zelfde grondtal)." }],
           niveaus: { basis: "2⁷.", simpeler: "Exponenten optellen: 3+4=7.", nogSimpeler: "2⁷" },
@@ -34,7 +34,7 @@ const steps = [
         q: "**Hoeveel is 5⁰**?",
         options: ["1", "0", "5", "Onbepaald"],
         answer: 0,
-        wrongHints: [null, "Niet — a⁰ is niet 0. Denk aan a^n / a^n.", "Niet — dat is 5¹.", "Niet — voor a ≠ 0 is a⁰ wel bepaald."],
+        wrongHints: [null, "Reken 5³ / 5³ uit: dat is volgens de rekenregels 5⁰. Wat komt er uit een getal gedeeld door zichzelf?", "5 is 5¹. Wat gebeurt er als je 5¹ nog een keer door 5 deelt?", "Voor elk grondtal behalve 0 ligt a⁰ vast. Bekijk 5², 5¹, 5⁰: door welk getal deel je steeds?"],
         uitlegPad: {
           stappen: [{ titel: "Elke a⁰ = 1 (a≠0)", tekst: "Volgt uit regel a^n / a^n = a^(n-n) = a⁰ = (per definitie van delen) 1. Werkt voor elke a ≠ 0. 0⁰ is wiskundig onbepaald." }],
           niveaus: { basis: "1.", simpeler: "Elk getal-tot-de-nul = 1.", nogSimpeler: "1" },
@@ -44,7 +44,7 @@ const steps = [
         q: "**8^(1/3)** = ?",
         options: ["2", "3", "24", "8/3"],
         answer: 0,
-        wrongHints: [null, "Niet — verkeerde berekening.", "Niet — dat is keer.", "Niet — geen breuk."],
+        wrongHints: [null, "Je nam de 3 uit de exponent als antwoord. 8^(1/3) is de derdemachtswortel: welk getal drie keer met zichzelf vermenigvuldigd geeft 8?", "24 = 8 · 3. Een exponent 1/3 betekent een wortel, geen vermenigvuldiging.", "8/3 = 8 · (1/3): je vermenigvuldigde met de exponent. Wat betekent een exponent 1/3?"],
         uitlegPad: {
           stappen: [{ titel: "Derdemachtswortel", tekst: "a^(1/3) = ³√a. ³√8 = **2** (want 2³=8). 1/3-de macht is derdemachtswortel." }],
           niveaus: { basis: "2.", simpeler: "³√8 = 2.", nogSimpeler: "2" },
@@ -54,7 +54,7 @@ const steps = [
         q: "**a⁻² · a⁵** = ?",
         options: ["a³", "a⁷", "a⁻¹⁰", "1/a"],
         answer: 0,
-        wrongHints: [null, "Niet — niet vergeten teken.", "Niet — vermenigvuldigen ipv optellen.", "Niet — controleer optelling."],
+        wrongHints: [null, "Je rekende met +2 als exponent. Kijk nog eens naar het teken van de eerste exponent.", "Je vermenigvuldigde −2 en 5. Wat doe je met de exponenten als je machten met hetzelfde grondtal vermenigvuldigt?", "1/a = a⁻¹. Tel de exponenten −2 en 5 nog eens zorgvuldig op."],
         uitlegPad: {
           stappen: [{ titel: "−2 + 5 = 3", tekst: "a⁻² · a⁵ = a^(−2+5) = **a³**. Negatieve exponenten gewoon optellen volgens reken-regel." }],
           niveaus: { basis: "a³.", simpeler: "-2 + 5 = 3, dus a³.", nogSimpeler: "a³" },
@@ -64,7 +64,7 @@ const steps = [
         q: "Welke gelijkheid klopt?",
         options: ["a^(m·n) = (a^m)^n", "a^m · b^m = (a·b)^(m²)", "a^m + a^n = a^(m+n)", "(a+b)^m = a^m + b^m"],
         answer: 0,
-        wrongHints: [null, "Niet — exponent niet kwadrateren.", "Niet — som vs product verwarring.", "Niet — populair maar fout."],
+        wrongHints: [null, "Bij a^m · b^m blijft de exponent m gewoon staan. Waarom zou er m² komen?", "De regel met a^(m+n) hoort bij a^m · a^n, met een keer-teken. Geldt hij ook bij een plus?", "Probeer (1 + 1)² en 1² + 1²: komt er hetzelfde uit?"],
         uitlegPad: {
           stappen: [
             { titel: "Macht-van-macht", tekst: "(a^m)^n = a^(m·n) — exponenten vermenigvuldigen. Voorbeeld: (2³)² = 2⁶ = 64 = 8² ✓. Andere fouten zijn klassieke valkuilen: (a+b)² = a² + 2ab + b² (NIET a² + b²)." },
@@ -85,7 +85,7 @@ const steps = [
         q: "Een populatie groeit met 3% per jaar. Groei-factor b?",
         options: ["1,03", "0,03", "3", "1,3"],
         answer: 0,
-        wrongHints: [null, "Niet — alleen de groei, niet totaal.", "Niet — drie keer is te veel.", "Niet — 30%."],
+        wrongHints: [null, "0,03 is alleen het stuk dat erbij komt. Wat gebeurt er met de 100% die je al had?", "Met factor 3 wordt de populatie elk jaar drie keer zo groot. Hoe schrijf je 3% als decimaal getal?", "1,3 hoort bij 30% groei. Hoe schrijf je 3% als decimaal getal?"],
         uitlegPad: {
           stappen: [{ titel: "1 + r", tekst: "Bij groei: b = 1 + r/100. 3% groei → b = 1 + 0,03 = **1,03** per jaar. Na 10 jaar: factor 1,03¹⁰ ≈ 1,34 (34% meer)." }],
           niveaus: { basis: "1,03.", simpeler: "100% + 3% = 1,03.", nogSimpeler: "1,03" },
@@ -93,9 +93,9 @@ const steps = [
       },
       {
         q: "Een radioactieve stof: halveringstijd 5 jaar. Hoeveel over na **20 jaar**?",
-        options: ["6,25%", "25%", "50%", "0%"],
+        options: ["6,25%", "25%", "50%", "12,5%"],
         answer: 0,
-        wrongHints: [null, "Niet — na 1 halvering.", "Niet — na 2 halveringen.", "Onmogelijk — nooit volledig nul."],
+        wrongHints: [null, "25% is er na 2 halveringen (10 jaar) over. Hoeveel halveringstijden passen er in 20 jaar?", "50% is er na één halveringstijd (5 jaar) over. Hoe vaak halveert de stof in 20 jaar?", "12,5% hoort bij 3 halveringen (15 jaar). Hoeveel halveringstijden van 5 jaar passen er in 20 jaar?"],
         uitlegPad: {
           stappen: [
             { titel: "(½)^(20/5) = (½)⁴", tekst: "20/5 = 4 halveringen. (½)⁴ = 1/16 = **6,25%** over. Tabel: 100→50→25→12,5→6,25." },
@@ -120,7 +120,7 @@ const steps = [
         q: "**Verdubbelingstijd** bij 7% groei per jaar?",
         options: ["~10 jaar", "~7 jaar", "~14 jaar", "~70 jaar"],
         answer: 0,
-        wrongHints: [null, "Niet — verwarring met %.", "Niet — dat hoort bij 5% groei.", "Niet — 70 is het getal uit de vuistregel zelf, nog niet de verdubbelingstijd."],
+        wrongHints: [null, "7 is het groeipercentage zelf, geen tijd. Hoe lang duurt het met 7% per jaar voordat je het dubbele hebt?", "~14 jaar hoort bij ongeveer 5% groei. Gaat 7% groei sneller of langzamer?", "Niet — 70 is het getal uit de vuistregel zelf, nog niet de verdubbelingstijd."],
         uitlegPad: {
           stappen: [{ titel: "Rule of 70", tekst: "Verdubbelingstijd ≈ 70 / groei-%. Bij 7%: 70/7 = **10 jaar**. Handige vuistregel — exact via t = ln(2)/ln(1+r) ≈ 0,693/0,0677 ≈ 10,2 jaar." }],
           niveaus: { basis: "~10 jaar.", simpeler: "70/7=10.", nogSimpeler: "10" },
@@ -130,7 +130,7 @@ const steps = [
         q: "Een functie y = 100 · (0,8)^x. Wat gebeurt bij grote x?",
         options: ["y nadert 0", "y stijgt explosief", "y is constant", "y wordt negatief"],
         answer: 0,
-        wrongHints: [null, "Niet — b<1 = daling.", "Niet — daalt.", "Niet — exponentieel nooit negatief."],
+        wrongHints: [null, "Een groeifactor 0,8 betekent: elke stap gaat er 20% af. Kan y dan stijgen?", "Bij elke stap van x vermenigvuldig je y met 0,8. Blijft y dan gelijk?", "Je neemt steeds 80% van een positief getal. Kan dat ooit onder 0 komen?"],
         uitlegPad: {
           stappen: [{ titel: "0 < b < 1 → verval", tekst: "Groei-factor 0,8 < 1 → elke stap 20% minder. Bij grote x → 0 (asymptoot, nooit precies 0)." }],
           niveaus: { basis: "Nadert 0.", simpeler: "Daalt naar nul.", nogSimpeler: "0" },
@@ -149,7 +149,7 @@ const steps = [
         q: "**log₂(32)** = ?",
         options: ["5", "16", "2", "6"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is helft.", "Niet — dat is het grondtal.", "Niet — controleer met de machten van 2."],
+        wrongHints: [null, "16 is de helft van 32. log₂(32) vraagt: hoe vaak moet je 2 met zichzelf vermenigvuldigen om 32 te krijgen?", "2 is het grondtal. Welke exponent moet je op 2 zetten om 32 te krijgen?", "Reken 2⁶ uit: is dat 32?"],
         uitlegPad: {
           stappen: [{ titel: "2^? = 32", tekst: "32 = 2 · 2 · 2 · 2 · 2 = 2⁵. Dus log₂(32) = **5**. Tot welke macht moet 2 verheven worden? 5." }],
           niveaus: { basis: "5.", simpeler: "2⁵=32, dus log₂(32)=5.", nogSimpeler: "5" },
@@ -159,7 +159,7 @@ const steps = [
         q: "**ln(e²)** = ?",
         options: ["2", "e", "e²", "1"],
         answer: 0,
-        wrongHints: [null, "Niet — log van zichzelf.", "Niet — log van macht.", "Niet — dat is ln(e)."],
+        wrongHints: [null, "ln vraagt: tot welke macht moet je e verheffen? Is het antwoord dan e zelf?", "ln en e-macht heffen elkaar op. Wat blijft er van e² over: e² zelf of alleen de exponent?", "1 is ln(e), zonder kwadraat. Wat doet de exponent 2?"],
         uitlegPad: {
           stappen: [{ titel: "ln(e^n) = n", tekst: "ln neemt log met grondtal e. Macht n van e: ln(e^n) = n. Hier n=2 → **2**. Generaliseerd: log_b(b^n) = n." }],
           niveaus: { basis: "2.", simpeler: "ln en e zijn omgekeerd.", nogSimpeler: "2" },
@@ -169,7 +169,7 @@ const steps = [
         q: "Vereenvoudig **log(100) + log(10)**:",
         options: ["3", "log 110", "1000", "2"],
         answer: 0,
-        wrongHints: [null, "Niet — log(som) ≠ som(log).", "Niet — 1000 is het product; neem daar nog de log van.", "Niet — dat is alleen log(100)."],
+        wrongHints: [null, "log(a) + log(b) is de log van een product, niet van een som. Wat is 100 · 10?", "1000 is het product 100 · 10. Welke stap moet je daarna nog doen?", "2 is alleen log(100). Wat is log(10), en wat doe je daarmee?"],
         uitlegPad: {
           stappen: [
             { titel: "log(a) + log(b) = log(a·b)", tekst: "log(100) + log(10) = log(100·10) = log(1000) = **3**. Productregel logaritmen." },
@@ -213,7 +213,7 @@ const steps = [
         q: "Bacteriën verdubbelen elke 20 min. Hoeveel keer na **2 uur** (120 min)?",
         options: ["64×", "6×", "32×", "12×"],
         answer: 0,
-        wrongHints: [null, "Niet — exponentieel.", "Niet — verdubbeling 5×.", "Niet — controleer."],
+        wrongHints: [null, "6 is het aantal verdubbelingen. Verdubbel je 6 keer, dan vermenigvuldig je zes keer met 2: is dat 6×?", "32 = 2⁵ hoort bij 5 verdubbelingen. Hoeveel keer 20 minuten passen er in 120 minuten?", "12 = 6 · 2: je telde 6 verdubbelingen als 6 keer 2. Verdubbel stap voor stap: 2, 4, 8, …"],
         uitlegPad: {
           stappen: [{ titel: "120 / 20 = 6 stappen", tekst: "Aantal verdubbelingen = 120/20 = 6. Vermenigvuldigingsfactor = 2⁶ = **64**. Dus 1 bacterie → 64 in 2 uur." }],
           theorie: "Realiteit: na een tijd loopt het tegen draagkracht (voedsel op, ruimte op) → logistische groei.",
@@ -224,7 +224,7 @@ const steps = [
         q: "Een isotoop heeft λ = 0,1 per jaar. Halveringstijd?",
         options: ["~6,93 jaar", "~0,1 jaar", "~10 jaar", "Onbepaald"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is λ zelf.", "Niet — dat is 1/λ. Welke factor hoort er nog bij in de formule voor de halveringstijd?", "Wel bepaald."],
+        wrongHints: [null, "0,1 is λ zelf, de vervalconstante. Welke formule koppelt λ aan de halveringstijd?", "Niet — dat is 1/λ. Welke factor hoort er nog bij in de formule voor de halveringstijd?", "Met λ ligt de halveringstijd vast. Welke formule verbindt λ en t½?"],
         uitlegPad: {
           stappen: [{ titel: "t½ = ln(2)/λ", tekst: "t½ = 0,693 / 0,1 = **6,93 jaar**. Na ~7 jaar helft over. Na ~14 jaar kwart over." }],
           niveaus: { basis: "ln(2)/0,1 ≈ 6,93.", simpeler: "0,693/0,1 = ~7.", nogSimpeler: "6,93" },
@@ -232,9 +232,9 @@ const steps = [
       },
       {
         q: "Een virus met R₀ = 3, generatie 5 dagen. Na **15 dagen**?",
-        options: ["27× zoveel", "3× zoveel", "15× zoveel", "45× zoveel"],
+        options: ["27× zoveel", "3× zoveel", "15× zoveel", "9× zoveel"],
         answer: 0,
-        wrongHints: [null, "Niet — eerste generatie.", "Niet — verwarring lineair.", "Niet — onjuist."],
+        wrongHints: [null, "3× is na één generatie (5 dagen). Hoeveel generaties passen er in 15 dagen?", "Je vermenigvuldigde 3 met 5. Bij elke generatie wordt het aantal 3 keer zo groot: hoe vaak gebeurt dat in 15 dagen?", "9 = 3² hoort bij twee generaties (10 dagen). Hoeveel generaties van 5 dagen passen er in 15 dagen?"],
         uitlegPad: {
           stappen: [
             { titel: "3 generaties", tekst: "15/5 = 3 generaties. 3³ = **27**. Dus 27× besmettingen na 15 dagen. Exponentiële groei is 'verraderlijk': lijkt klein vroeg, explodeert later." },
@@ -262,9 +262,9 @@ const steps = [
       },
       {
         q: "Een houtmonster heeft 12,5% van ¹⁴C. Hoe oud? (t½=5730 j)",
-        options: ["~17 190 jaar", "~5 730 jaar", "~11 460 jaar", "Pas dood"],
+        options: ["~17 190 jaar", "~5 730 jaar", "~11 460 jaar", "~22 920 jaar"],
         answer: 0,
-        wrongHints: [null, "Niet — 50% over.", "Niet — 25% over.", "Niet — al ver in tijd."],
+        wrongHints: [null, "Na 5730 jaar is er nog 50% over. Hoe vaak moet je halveren om van 100% op 12,5% te komen?", "Na 2 halveringstijden is er nog 25% over. Is 12,5% nog een keer gehalveerd?", "22 920 jaar is 4 halveringstijden: dan is er 6,25% over. Hoeveel halveringen horen bij 12,5%?"],
         uitlegPad: {
           stappen: [
             { titel: "12,5% = (½)³ = 3 halveringstijden", tekst: "100% → 50% → 25% → 12,5%. Drie halveringstijden = 3·5730 = **17 190 jaar**. Prehistorisch (late ijstijd)." },
@@ -295,7 +295,7 @@ const steps = [
         q: "**ln(e^7 · e^3)** = ?",
         options: ["10", "21", "e^10", "ln(10)"],
         answer: 0,
-        wrongHints: [null, "Niet — exponenten optellen, niet vermenigvuldigen.", "Niet — dat staat binnen de ln; pas de ln nog toe.", "Niet — de e mag je niet zomaar weglaten."],
+        wrongHints: [null, "21 = 7 · 3: je vermenigvuldigde de exponenten. Wat doe je met de exponenten bij e^7 · e^3?", "e^10 is wat er binnen de ln staat. Wat doet ln daarna met e^10?", "Niet — de e mag je niet zomaar weglaten."],
         uitlegPad: {
           stappen: [
             { titel: "Eerst product simplificeren", tekst: "e^7 · e^3 = e^10. ln(e^10) = **10**. Macht-regel + ln-eigenschap." },
@@ -334,7 +334,7 @@ const steps = [
         q: "Een muziek-octaaf verdubbelt frequentie. **Vier octaven hoger** = factor:",
         options: ["16×", "8×", "4×", "32×"],
         answer: 0,
-        wrongHints: [null, "Niet — drie octaven.", "Niet — twee octaven.", "Niet — vijf octaven."],
+        wrongHints: [null, "8 = 2³ hoort bij drie octaven. Hoe vaak verdubbel je bij vier octaven?", "4× krijg je bij twee octaven. Een octaaf verdubbelt: hoe vaak gebeurt dat hier?", "32 = 2⁵ hoort bij vijf octaven. Tel je verdubbelingen nog eens."],
         uitlegPad: {
           stappen: [
             { titel: "2⁴", tekst: "Per octaaf 2×. Vier octaven: 2⁴ = **16×**. Bv. A2 (110 Hz) → A6 (1760 Hz). Klassiek voorbeeld log-schaal in muziek." },
