@@ -1,0 +1,1282 @@
+[
+ {
+  "pad": "comparatives-engels",
+  "file": "./comparativesEngels.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Welke trap voor 'allerhoogste'?",
+  "opties": [
+   "Superlative met 'the'",
+   "Comparative",
+   "Stellend",
+   "Wisselt"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "comparatives-engels",
+  "file": "./comparativesEngels.js",
+  "stap": 5,
+  "vraag": 8,
+  "soort": "H",
+  "q": "'This is the ___ day of my life.' (good — overtreffend)",
+  "opties": [
+   "best",
+   "goodest",
+   "most good",
+   "more best"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "comparatives-engels",
+  "file": "./comparativesEngels.js",
+  "stap": 5,
+  "vraag": 11,
+  "soort": "SK",
+  "q": "Een comparative (vergrotende trap) gebruik je als je ___ vergelijkt?",
+  "opties": [
+   "2 dingen",
+   "3 of meer dingen",
+   "Geen dingen",
+   "Niet relevant"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "comparatives-engels",
+  "file": "./comparativesEngels.js",
+  "stap": 5,
+  "vraag": 12,
+  "soort": "L",
+  "q": "Een superlative (overtreffende trap) gebruik je bij ___?",
+  "opties": [
+   "3 of meer dingen, of 'meeste/best'",
+   "2 dingen",
+   "1 ding",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-leesvaardigheid-engels",
+  "file": "./cseLeesvaardigheidEngels.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is het doel van een opinion piece?",
+  "opties": [
+   "Lezer overtuigen van mening",
+   "Verkopen",
+   "Vermaken",
+   "Wetenschappelijk uitleggen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-leesvaardigheid-engels",
+  "file": "./cseLeesvaardigheidEngels.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "*'A new study by Oxford shows...'* Welk soort?",
+  "opties": [
+   "News / informational",
+   "Opinion",
+   "Review",
+   "Advertentie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-leesvaardigheid-engels",
+  "file": "./cseLeesvaardigheidEngels.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "*'In my opinion, this movie was disappointing.'* Welk soort?",
+  "opties": [
+   "Opinion / mening",
+   "News",
+   "Recipe",
+   "Manual"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-leesvaardigheid-engels",
+  "file": "./cseLeesvaardigheidEngels.js",
+  "stap": 1,
+  "vraag": 5,
+  "soort": "L",
+  "q": "*'Step 1: turn on the device. Step 2: press the button.'* Welk soort?",
+  "opties": [
+   "Instruction / manual",
+   "News",
+   "Opinion",
+   "Story"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-leesvaardigheid-engels",
+  "file": "./cseLeesvaardigheidEngels.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*'She was usually cheerful, but today she was morose.'* Wat betekent morose?",
+  "opties": [
+   "Somber / chagrijnig",
+   "Vrolijk",
+   "Boos",
+   "Bang"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-leesvaardigheid-engels",
+  "file": "./cseLeesvaardigheidEngels.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "*'un-'* aan begin van woord betekent meestal?",
+  "opties": [
+   "Niet / het tegenovergestelde",
+   "Heel erg",
+   "Vroeger",
+   "Tussen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-leesvaardigheid-engels",
+  "file": "./cseLeesvaardigheidEngels.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Waar staat de hoofdgedachte meestal?",
+  "opties": [
+   "Eerste of laatste alinea",
+   "In het midden",
+   "Verspreid",
+   "Onder een plaatje"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-leesvaardigheid-engels",
+  "file": "./cseLeesvaardigheidEngels.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is een detail-vraag?",
+  "opties": [
+   "Vraag naar specifiek feit (jaar, aantal)",
+   "Vraag naar mening",
+   "Hoofdpunt vragen",
+   "Niet relevant"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-leesvaardigheid-engels",
+  "file": "./cseLeesvaardigheidEngels.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "*'What is true according to the text?'* Welke aanpak?",
+  "opties": [
+   "Antwoord moet letterlijk in tekst staan",
+   "Wat ik denk",
+   "Wat het beste klinkt",
+   "Eigen kennis gebruiken"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-leesvaardigheid-engels",
+  "file": "./cseLeesvaardigheidEngels.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Tekst: *'Bees are vital. They pollinate 90% of crops. Without bees, food would disappear.'* Wat is hoofdgedachte?",
+  "opties": [
+   "Bijen zijn belangrijk voor voedsel",
+   "Bijen bestuiven 90%",
+   "Voedsel verdwijnt",
+   "Bijen leven in nesten"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-leesvaardigheid-engels",
+  "file": "./cseLeesvaardigheidEngels.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Bij examen-vraag 'What is the main point?' zoek je naar?",
+  "opties": [
+   "Hoofdgedachte van de tekst",
+   "Eerste zin",
+   "Mooie zin",
+   "Auteur"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-leesvaardigheid-engels",
+  "file": "./cseLeesvaardigheidEngels.js",
+  "stap": 3,
+  "vraag": 5,
+  "soort": "S",
+  "q": "*'Skimming'* is een leestechniek waarbij je...?",
+  "opties": [
+   "Snel scant op hoofdlijnen",
+   "Elk woord langzaam leest",
+   "Niets leest",
+   "Alleen titel leest"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-leesvaardigheid-engels",
+  "file": "./cseLeesvaardigheidEngels.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "H",
+  "q": "*'Sarah loves cats. They are her favorite animals.'* Wat is they?",
+  "opties": [
+   "Cats",
+   "Sarah",
+   "Animals",
+   "Personen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-leesvaardigheid-engels",
+  "file": "./cseLeesvaardigheidEngels.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "S",
+  "q": "*'The exam was hard. The time was short. This is why students failed.'* Wat is this?",
+  "opties": [
+   "Moeilijk examen én korte tijd",
+   "De examenuitslag",
+   "Alleen het tijd-element",
+   "Alleen het moeilijk-element"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-leesvaardigheid-engels",
+  "file": "./cseLeesvaardigheidEngels.js",
+  "stap": 4,
+  "vraag": 5,
+  "soort": "K",
+  "q": "*'I bought a phone. It has a great camera.'* Waar verwijst 'it' naar?",
+  "opties": [
+   "De telefoon",
+   "De camera",
+   "De winkel",
+   "Ik"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-leesvaardigheid-engels",
+  "file": "./cseLeesvaardigheidEngels.js",
+  "stap": 4,
+  "vraag": 6,
+  "soort": "L",
+  "q": "*'The students who studied passed. They worked hard.'* Waar verwijst 'they' naar?",
+  "opties": [
+   "Studenten die studeerden",
+   "Iedereen",
+   "De docent",
+   "Onbekend"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-leesvaardigheid-engels",
+  "file": "./cseLeesvaardigheidEngels.js",
+  "stap": 5,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Hoofdgedachte van: *'Climate change threatens the polar bears. Their ice habitat is melting.'*",
+  "opties": [
+   "Klimaatverandering bedreigt ijsberen",
+   "IJsberen wonen op ijs",
+   "Klimaat verandert",
+   "IJs smelt"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-strategie-engels-vmbo",
+  "file": "./cseStrategieEngelsVmbo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Welke lees-strategie gebruik je om 1 jaartal te vinden in een lange tekst?",
+  "opties": [
+   "Scannen",
+   "Skim",
+   "Detail-lezen",
+   "Mediteren"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-strategie-engels-vmbo",
+  "file": "./cseStrategieEngelsVmbo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Hoe begin je een leesvaardigheid-CSE-vraag?",
+  "opties": [
+   "Lees eerst de vragen, dan skim de tekst",
+   "Lees hele tekst zorgvuldig vooraf",
+   "Vermijd de tekst",
+   "Schrijf direct antwoord op"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-strategie-engels-vmbo",
+  "file": "./cseStrategieEngelsVmbo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is het verschil tussen scannen en skim?",
+  "opties": [
+   "Scannen zoekt specifiek; skim geeft overzicht",
+   "Scannen langzamer dan skim",
+   "Geen verschil",
+   "Skim alleen voor poëzie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-strategie-engels-vmbo",
+  "file": "./cseStrategieEngelsVmbo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Voor een woord-betekenis-vraag wat kun je het beste doen?",
+  "opties": [
+   "Context + voor/achter woord lezen",
+   "Direct het woordenboek pakken",
+   "Het woord overslaan",
+   "Raden willekeurig"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-strategie-engels-vmbo",
+  "file": "./cseStrategieEngelsVmbo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Wat is een 'false friend' in talen?",
+  "opties": [
+   "Woord dat lijkt op een NL-woord maar iets anders betekent",
+   "Vriend die je niet kunt vertrouwen",
+   "Woord dat in geen enkele taal bestaat",
+   "Woord dat in beide talen hetzelfde betekent"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-strategie-engels-vmbo",
+  "file": "./cseStrategieEngelsVmbo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een 'distractor' in CSE-meerkeuze?",
+  "opties": [
+   "Fout antwoord dat plausibel lijkt",
+   "Lange tekst",
+   "Tijdsdruk",
+   "Onbekend woord"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-strategie-engels-vmbo",
+  "file": "./cseStrategieEngelsVmbo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Bij vraag *'Which is NOT correct?'* wat doe je?",
+  "opties": [
+   "Onderstreep 'NOT' + zoek welke optie niet klopt",
+   "Negeer 'NOT'",
+   "Geef altijd eerste optie",
+   "Skip vraag"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-strategie-engels-vmbo",
+  "file": "./cseStrategieEngelsVmbo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat doe je in de laatste 10 minuten van het examen?",
+  "opties": [
+   "Terug naar overgeslagen + onzekere vragen",
+   "Stoppen + naar buiten",
+   "Hele tekst opnieuw lezen",
+   "Naar antwoorden-blad kopiëren"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-strategie-engels-vmbo",
+  "file": "./cseStrategieEngelsVmbo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Bij een open vraag (niet multiple choice) hoe schrijf je antwoord?",
+  "opties": [
+   "Kort in het Nederlands, met tekstbewijs",
+   "Engels antwoord, woord-voor-woord",
+   "Trefwoord alleen",
+   "Lange uitleg in Engels"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-strategie-engels-vmbo",
+  "file": "./cseStrategieEngelsVmbo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L2K",
+  "q": "Welke lees-strategie gebruik je om overzicht van een tekst te krijgen?",
+  "opties": [
+   "Skim — eerste/laatste zin alinea",
+   "Scan — zoek 1 woord",
+   "Detail-lezen — woord-voor-woord",
+   "Negeer tekst"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-strategie-engels-vmbo",
+  "file": "./cseStrategieEngelsVmbo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Wat betekent 'eventually' in het Engels?",
+  "opties": [
+   "Uiteindelijk",
+   "Eventueel / misschien",
+   "Snel",
+   "Vroeger"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-strategie-engels-vmbo",
+  "file": "./cseStrategieEngelsVmbo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Wat is synoniem voor 'difficult'?",
+  "opties": [
+   "Hard",
+   "Easy",
+   "Big",
+   "Slow"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-strategie-engels-vmbo",
+  "file": "./cseStrategieEngelsVmbo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "'However' signaleert:",
+  "opties": [
+   "Tegenstelling / contrast",
+   "Reden",
+   "Tijd",
+   "Voorbeeld"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-strategie-engels-vmbo",
+  "file": "./cseStrategieEngelsVmbo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Bij 'What does 'it' refer to in line 5?' kijk je:",
+  "opties": [
+   "In 1-2 zinnen vóór regel 5",
+   "Aan einde tekst",
+   "In titel",
+   "In voetnoten"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "duits-cse-havo-vwo",
+  "file": "./duitsCseHavoVwo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Hoeveel teksten ongeveer op CSE Duits?",
+  "opties": [
+   "~10",
+   "~3",
+   "~25",
+   "~50"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "duits-cse-havo-vwo",
+  "file": "./duitsCseHavoVwo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*Ich gehe in die Schule* — welke naamval?",
+  "opties": [
+   "Akkusativ (beweging-richting)",
+   "Dativ (plaats)",
+   "Nominativ",
+   "Genitiv"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "duits-cse-havo-vwo",
+  "file": "./duitsCseHavoVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Welk register is Jugendsprache?",
+  "opties": [
+   "Informeel jongerentaal",
+   "Formele bestuurstaal",
+   "Wetenschappelijk",
+   "Standaard"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "duits-cse-havo-vwo",
+  "file": "./duitsCseHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "*Während* kan in tekst betekenen:",
+  "opties": [
+   "Tijd 'terwijl' óf tegenstelling 'daarentegen'",
+   "Alleen tijd",
+   "Alleen tegenstelling",
+   "Daarom"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "duits-cse-havo-vwo",
+  "file": "./duitsCseHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Hoeveel officiële talen heeft Zwitserland?",
+  "opties": [
+   "4",
+   "2",
+   "6",
+   "1"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "duits-cse-havo-vwo",
+  "file": "./duitsCseHavoVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Energiewende verwijst naar:",
+  "opties": [
+   "Overgang van fossiel/kern naar hernieuwbare energie",
+   "Stoom-revolutie 19e eeuw",
+   "Oost-uitbreiding EU",
+   "Vrouwen-emancipatie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "duits-cse-havo-vwo",
+  "file": "./duitsCseHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "K",
+  "q": "*Eventuell* in Duits betekent:",
+  "opties": [
+   "Mogelijk",
+   "Beslist",
+   "Vroeger",
+   "Hier"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "duits-cse-havo-vwo",
+  "file": "./duitsCseHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Bij Wechselpräposition (an/auf/in/etc) bij beweging naar plek: welke naamval?",
+  "opties": [
+   "Akkusativ",
+   "Dativ",
+   "Nominativ",
+   "Genitiv"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "engels-literatuur-havo-vwo",
+  "file": "./engelsLiteratuurHavoVwo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Booker Prize wordt uitgereikt voor:",
+  "opties": [
+   "Beste roman geschreven in het Engels",
+   "Beste Amerikaanse boek",
+   "Beste poëzie",
+   "Beste filmscript"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-literatuur-havo-vwo",
+  "file": "./engelsLiteratuurHavoVwo.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Modernism (1900-1945) kenmerken:",
+  "opties": [
+   "Experimenteel, gebroken vorm, stream-of-consciousness",
+   "Realistisch + chronologisch",
+   "Religieus dominant",
+   "Strakke klassieke vormregels"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-literatuur-havo-vwo",
+  "file": "./engelsLiteratuurHavoVwo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "K",
+  "q": "'To be or not to be' komt uit welk werk?",
+  "opties": [
+   "Hamlet",
+   "Macbeth",
+   "Romeo and Juliet",
+   "King Lear"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "engels-literatuur-havo-vwo",
+  "file": "./engelsLiteratuurHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Globe Theatre in Shakespeare's tijd:",
+  "opties": [
+   "Open-air, 3000 toeschouwers, alle rollen door mannen",
+   "Modern theater met stoelen",
+   "Privé voor koning",
+   "Bestond niet"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-literatuur-havo-vwo",
+  "file": "./engelsLiteratuurHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Beat Generation schrijvers (1950s) reageerden op:",
+  "opties": [
+   "Conformisme + materialisme van naoorlogs Amerika",
+   "Eerste Wereldoorlog",
+   "Slavernij",
+   "Vietnam-oorlog"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-literatuur-havo-vwo",
+  "file": "./engelsLiteratuurHavoVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Mark Twain's Huckleberry Finn (1884) is bijzonder door:",
+  "opties": [
+   "Amerikaanse spreektaal + kritiek op slavernij",
+   "Engelse koloniale stijl",
+   "Vol Shakespeare-citaten",
+   "Geen plot"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-literatuur-havo-vwo",
+  "file": "./engelsLiteratuurHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Symbolism in literatuur betekent:",
+  "opties": [
+   "Object/figuur staat voor groter idee",
+   "Letterlijke betekenis",
+   "Beschrijving zonder doel",
+   "Random toeval"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-literatuur-havo-vwo",
+  "file": "./engelsLiteratuurHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Stream of consciousness is een techniek van:",
+  "opties": [
+   "Gedachten zoals ze opkomen, ongefilterd op papier",
+   "Plot in chronologische volgorde",
+   "Korte simpele zinnen",
+   "Geen verteller"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-literatuur-havo-vwo",
+  "file": "./engelsLiteratuurHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "'Foreshadowing' is:",
+  "opties": [
+   "Hints geven over wat later in verhaal gaat gebeuren",
+   "Terugblik",
+   "Plot-twist",
+   "Personage-introductie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "frans-cse-havo-vwo",
+  "file": "./fransCseHavoVwo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Het CSE Frans test:",
+  "opties": [
+   "Alleen leesvaardigheid",
+   "Lees + luister + spreek",
+   "Alleen luistervaardigheid",
+   "Alleen schrijfvaardigheid"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "frans-cse-havo-vwo",
+  "file": "./fransCseHavoVwo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Welk woordenboek is toegestaan bij CSE Frans?",
+  "opties": [
+   "Tweetalig Frans-Nederlands / Nederlands-Frans",
+   "Alleen een eentalig Frans woordenboek",
+   "Eentalig én tweetalig tegelijk",
+   "Geen enkel woordenboek"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "frans-cse-havo-vwo",
+  "file": "./fransCseHavoVwo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Bij 'Wat is de hoofdgedachte van de tekst?' — beste tactiek?",
+  "opties": [
+   "Lees eerste + laatste alinea aandachtig",
+   "Scan op kernwoord",
+   "Lees alle alinea's woord-voor-woord",
+   "Tel woorden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "frans-cse-havo-vwo",
+  "file": "./fransCseHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "K",
+  "q": "*Librairie* betekent in het Frans:",
+  "opties": [
+   "Boekwinkel",
+   "Bibliotheek",
+   "Wijnhandel",
+   "Apotheek"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "frans-cse-havo-vwo",
+  "file": "./fransCseHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Connector *cependant* betekent:",
+  "opties": [
+   "Echter / maar",
+   "Dus",
+   "Omdat",
+   "Daarna"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "frans-cse-havo-vwo",
+  "file": "./fransCseHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L2K",
+  "q": "Bij 'Waarnaar verwijst *cela* in regel 24?' — kijk je:",
+  "opties": [
+   "In de zinnen er vlak vóór",
+   "Aan het eind van tekst",
+   "In titel",
+   "In voetnoot"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "frans-cse-havo-vwo",
+  "file": "./fransCseHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "K",
+  "q": "*Bouquin* is argot voor:",
+  "opties": [
+   "Boek",
+   "Bouquet (bloemen)",
+   "Bouwer",
+   "Buurt"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "frans-cse-havo-vwo",
+  "file": "./fransCseHavoVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "*Imparfait* (bv. *je mangeais*) gebruik je voor:",
+  "opties": [
+   "Doorlopende of gewoonte-actie in verleden",
+   "Voltooide actie",
+   "Toekomst",
+   "Wens"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "frans-cse-havo-vwo",
+  "file": "./fransCseHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Een alinea midden in een betoog begint met *certes, il est vrai que...* Welke functie heeft die alinea waarschijnlijk?",
+  "opties": [
+   "Tegenargument erkennen",
+   "Inleiding",
+   "Conclusie",
+   "Voorbeeld"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "frans-cse-havo-vwo",
+  "file": "./fransCseHavoVwo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Wat is laïcité?",
+  "opties": [
+   "Staats-secularisme",
+   "Liefde voor Frankrijk",
+   "Onderwijssysteem",
+   "Belasting"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "frans-cse-havo-vwo",
+  "file": "./fransCseHavoVwo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Le Monde is welke krant?",
+  "opties": [
+   "Kwaliteits-krant, links-liberaal",
+   "Rechts-extreem",
+   "Sport-krant",
+   "Tabloid"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "frans-cse-havo-vwo",
+  "file": "./fransCseHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Hoeveel EU-lidstaten sinds Brexit?",
+  "opties": [
+   "27",
+   "28",
+   "26",
+   "25"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "frans-cse-havo-vwo",
+  "file": "./fransCseHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "*Banlieue* heeft vaak welke connotatie?",
+  "opties": [
+   "Sociaal-kwetsbare voorstad",
+   "Luxe-wijk",
+   "Centrum",
+   "Platteland"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "frans-cse-havo-vwo",
+  "file": "./fransCseHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Tijdens CSE mag je:",
+  "opties": [
+   "Een tweetalig woordenboek",
+   "Telefoon",
+   "Vertaal-app",
+   "Internet"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "frans-cse-havo-vwo",
+  "file": "./fransCseHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Bij lange tekst verdeel je tijd voor:",
+  "opties": [
+   "Globaal lezen + vragen + check",
+   "Alleen vragen lezen",
+   "Alleen tekst lezen",
+   "Woorden tellen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "onregelmatige-werkwoorden-engels",
+  "file": "./onregelmatigeWerkwoordenEngels.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Welke vorm gebruik je na have / has / had?",
+  "opties": [
+   "V3 (past participle)",
+   "V1 (infinitive)",
+   "V2 (past simple)",
+   "Maakt niet uit"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "onregelmatige-werkwoorden-engels",
+  "file": "./onregelmatigeWerkwoordenEngels.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "H",
+  "q": "Welke vorm hoort hier? — *He has just ___ home.* (come)",
+  "opties": [
+   "come",
+   "came",
+   "comes",
+   "coming"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "onregelmatige-werkwoorden-engels",
+  "file": "./onregelmatigeWerkwoordenEngels.js",
+  "stap": 9,
+  "vraag": 2,
+  "soort": "H",
+  "q": "Welke vorm hoort hier? — *I ___ a strange noise last night.* (hear)",
+  "opties": [
+   "heard",
+   "heared",
+   "hear",
+   "heart"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "passe-compose-frans",
+  "file": "./passeComposeFrans.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat is passé composé?",
+  "opties": [
+   "Voltooid tegenwoordige tijd",
+   "Tegenwoordige tijd",
+   "Toekomende tijd",
+   "Onvoltooid verleden tijd"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "passe-compose-frans",
+  "file": "./passeComposeFrans.js",
+  "stap": 8,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Welk hulpwerkwoord bij manger?",
+  "opties": [
+   "avoir",
+   "être",
+   "Beide kunnen",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "passe-compose-frans",
+  "file": "./passeComposeFrans.js",
+  "stap": 8,
+  "vraag": 1,
+  "soort": "H",
+  "q": "Welk hulpwerkwoord bij arriver?",
+  "opties": [
+   "être",
+   "avoir",
+   "Beide kunnen",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "passe-compose-frans",
+  "file": "./passeComposeFrans.js",
+  "stap": 9,
+  "vraag": 4,
+  "soort": "H",
+  "q": "Welk hulpwerkwoord bij 'aller' (gaan) in passé composé?",
+  "opties": [
+   "être",
+   "avoir",
+   "faire",
+   "aller"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "passe-compose-frans",
+  "file": "./passeComposeFrans.js",
+  "stap": 9,
+  "vraag": 7,
+  "soort": "L",
+  "q": "Passé composé drukt uit?",
+  "opties": [
+   "Afgeronde actie in het verleden",
+   "Toekomst",
+   "Heden",
+   "Algemene waarheid"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "passe-compose-frans",
+  "file": "./passeComposeFrans.js",
+  "stap": 9,
+  "vraag": 11,
+  "soort": "K",
+  "q": "P.P. van 'être' zelf?",
+  "opties": [
+   "été",
+   "êté",
+   "étu",
+   "étri"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "passe-compose-frans",
+  "file": "./passeComposeFrans.js",
+  "stap": 9,
+  "vraag": 12,
+  "soort": "S",
+  "q": "Bij être-ww komt overeenkomst met onderwerp. Welke -e/-s/-es?",
+  "opties": [
+   "Vrouw +e, meervoud +s, vrouw-mv +es",
+   "Geen verandering, net als bij avoir",
+   "Altijd +s, ook bij één persoon",
+   "Alleen +e, ook bij meervoud"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "present-tenses-engels",
+  "file": "./presentTensesEngels.js",
+  "stap": 9,
+  "vraag": 1,
+  "soort": "H",
+  "q": "*We ___ that man.* (know — state verb!)",
+  "opties": [
+   "know",
+   "are knowing",
+   "knows",
+   "knowing"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "werkwoordsvervoeging-duits",
+  "file": "./werkwoordsvervoegingDuits.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "SK",
+  "q": "Welk verschil tussen 'sie' en 'Sie'?",
+  "opties": [
+   "sie = zij, Sie = u",
+   "Geen verschil",
+   "Verkeerd gespeld",
+   "sie = man, Sie = vrouw"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "woordenschat-engels",
+  "file": "./woordenschatEngels.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Welke leertruc helpt het meest voor woordenschat?",
+  "opties": [
+   "Per thema + herhalen over een week",
+   "Eén keer hardop, dan klaar",
+   "Alleen vertalingen invullen",
+   "Alleen lezen zonder vertalen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ }
+]

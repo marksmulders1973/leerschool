@@ -1,0 +1,1346 @@
+[
+ {
+  "pad": "cel-biologie",
+  "file": "./celBiologie.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een cel?",
+  "opties": [
+   "De kleinste levende bouwsteen van een organisme",
+   "Een soort virus",
+   "Een orgaan van het lichaam",
+   "Een molecuul met DNA"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cel-biologie",
+  "file": "./celBiologie.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wat klopt over een meercellig organisme?",
+  "opties": [
+   "Cellen specialiseren zich in verschillende functies",
+   "Elke cel doet alles zelf, net als bij eencelligen",
+   "Het bestaat uit precies twee cellen",
+   "Het kan niet groeien"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cel-biologie",
+  "file": "./celBiologie.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat doet het celmembraan?",
+  "opties": [
+   "Bepaalt welke stoffen de cel in en uit gaan",
+   "Maakt energie",
+   "Bevat het DNA",
+   "Verteert voedsel"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cel-biologie",
+  "file": "./celBiologie.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is cytoplasma?",
+  "opties": [
+   "De vloeistof binnenin de cel waarin organellen zweven",
+   "Het vlies om de cel",
+   "Het DNA",
+   "Een soort cel"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cel-biologie",
+  "file": "./celBiologie.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat doen mitochondriën?",
+  "opties": [
+   "Energie maken (verbranding van glucose)",
+   "DNA bewaren",
+   "Voedsel verteren",
+   "Fotosynthese (zonlicht omzetten)"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cel-biologie",
+  "file": "./celBiologie.js",
+  "stap": 7,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Welke functie hoort bij mitochondriën?",
+  "opties": [
+   "Energie maken (verbranding)",
+   "Stevigheid (cellulose)",
+   "Fotosynthese (zonlicht)",
+   "DNA bewaren"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cel-biologie",
+  "file": "./celBiologie.js",
+  "stap": 10,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Welke bewering klopt over mitochondriën?",
+  "opties": [
+   "Ze zitten in zowel plant- als dierlijke cellen en maken energie",
+   "Ze zitten alleen in plantcellen",
+   "Ze maken zuurstof",
+   "Ze zijn hetzelfde als de celkern"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cel-biologie",
+  "file": "./celBiologie.js",
+  "stap": 10,
+  "vraag": 4,
+  "soort": "S",
+  "q": "Wat is het verschil tussen een prokaryoot en een eukaryoot?",
+  "opties": [
+   "Prokaryoot heeft GEEN kern, eukaryoot WEL",
+   "Prokaryoot is een plant, eukaryoot een dier",
+   "Eukaryoot is kleiner",
+   "Geen verschil"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cel-biologie",
+  "file": "./celBiologie.js",
+  "stap": 10,
+  "vraag": 6,
+  "soort": "S",
+  "q": "Celwand (stevig + niet flexibel) vind je in?",
+  "opties": [
+   "Planten",
+   "Dieren",
+   "Niet — bestaat niet",
+   "Alleen bacteriën"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cel-biologie",
+  "file": "./celBiologie.js",
+  "stap": 10,
+  "vraag": 10,
+  "soort": "K",
+  "q": "Bacteriën zijn?",
+  "opties": [
+   "Prokaryoten",
+   "Eukaryoten",
+   "Geen levende wezens",
+   "Planten"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cel-biologie",
+  "file": "./celBiologie.js",
+  "stap": 10,
+  "vraag": 11,
+  "soort": "L2",
+  "q": "Een virus is...?",
+  "opties": [
+   "Geen cel, wel erfelijk materiaal",
+   "Een kleine soort bacterie",
+   "Een heel kleine plantcel",
+   "Een piepklein dier"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "ecosystemen-havo-vwo",
+  "file": "./ecosystemenHavoVwo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een producent in een ecosysteem?",
+  "opties": [
+   "Plant of alg die via fotosynthese eigen voedsel maakt",
+   "Carnivoor die andere dieren eet",
+   "Bacterie die dode stof afbreekt",
+   "Mens die voedsel produceert"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ecosystemen-havo-vwo",
+  "file": "./ecosystemenHavoVwo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Energie-verlies per trofische stap is ongeveer:",
+  "opties": [
+   "90%",
+   "10%",
+   "50%",
+   "99%"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "ecosystemen-havo-vwo",
+  "file": "./ecosystemenHavoVwo.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Een toppredator zoals adelaar zit aan top van piramide omdat:",
+  "opties": [
+   "Energie-verliezen maken hoger niveau onmogelijk te ondersteunen",
+   "Adelaars zijn de grootste vogels",
+   "Adelaars kunnen het hoogst vliegen",
+   "Adelaars zijn beschermd"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ecosystemen-havo-vwo",
+  "file": "./ecosystemenHavoVwo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is draagkracht K van een ecosysteem?",
+  "opties": [
+   "Maximale populatie-grootte die ecosysteem duurzaam kan onderhouden",
+   "Het gewicht van een groep",
+   "De totale biomassa",
+   "Het aantal soorten"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ecosystemen-havo-vwo",
+  "file": "./ecosystemenHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Exponentiële groei (J-curve) gebeurt typisch:",
+  "opties": [
+   "Bij invasieve soorten zonder predatoren + overvloed voedsel",
+   "Bij stabiel evenwicht",
+   "Bij hoge densiteit",
+   "Bij oude populaties"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ecosystemen-havo-vwo",
+  "file": "./ecosystemenHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Concurrentie-uitsluitings-principe (Gause):",
+  "opties": [
+   "Twee soorten met identieke niche kunnen niet duurzaam samen leven",
+   "Sterkste soort wint altijd",
+   "Soorten delen netjes",
+   "Geen concurrentie in natuur"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ecosystemen-havo-vwo",
+  "file": "./ecosystemenHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Een orkaan vernietigt 50% van een bos — voorbeeld van welke factor?",
+  "opties": [
+   "Densiteit-onafhankelijke factor",
+   "Densiteit-afhankelijke factor",
+   "Predator-effect",
+   "Concurrentie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ecosystemen-havo-vwo",
+  "file": "./ecosystemenHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Stikstoffixatie wordt vooral gedaan door:",
+  "opties": [
+   "Bacteriën en bliksem",
+   "Alle planten direct uit lucht",
+   "Mensen via Haber-Bosch alleen",
+   "Vissen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "ecosystemen-havo-vwo",
+  "file": "./ecosystemenHavoVwo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Een ecosysteemdienst is:",
+  "opties": [
+   "Natuurlijke functie waarvan de mens profiteert",
+   "Service van overheid",
+   "Internet-dienst",
+   "Schoonmaak-service voor parken"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ecosystemen-havo-vwo",
+  "file": "./ecosystemenHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Cheetah's hebben lage genetische diversiteit door een flessenhals. Waarom is dat een probleem?",
+  "opties": [
+   "Minder veerkracht tegen ziekten + omgevingsverandering",
+   "Cheetah's worden steeds langzamer",
+   "Cheetah's zijn alleen geel",
+   "Geen probleem"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ecosystemen-havo-vwo",
+  "file": "./ecosystemenHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Stikstof-overschot in NL bedreigt biodiversiteit doordat:",
+  "opties": [
+   "Snelle groeiers verdringen zeldzame planten",
+   "N₂ is giftig voor planten",
+   "N maakt de bodem droger",
+   "N verlaagt CO₂"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ecosystemen-havo-vwo",
+  "file": "./ecosystemenHavoVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Welke is GEEN bedreiging voor biodiversiteit?",
+  "opties": [
+   "Beschermde Natura 2000-gebieden",
+   "Plastic in zee",
+   "Ontbossing voor palmolie",
+   "Klimaatverandering"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ecosystemen-havo-vwo",
+  "file": "./ecosystemenHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wolven uit Yellowstone weg → elanden over-grazen wilg → erosie. Wolven terug → herstel. Voorbeeld van:",
+  "opties": [
+   "Trofische cascade (keystone species)",
+   "Successie",
+   "Klimaatverandering",
+   "Mutualisme"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ecosystemen-havo-vwo",
+  "file": "./ecosystemenHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Eutrofiëring van een meer is:",
+  "opties": [
+   "Overmaat aan voedingsstoffen in het water",
+   "Uitdroging van meer",
+   "Stijging van pH",
+   "Vermindering van planten"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ecosystemen-havo-vwo",
+  "file": "./ecosystemenHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Het 6e massa-uitsterven is uniek omdat:",
+  "opties": [
+   "Het wordt veroorzaakt door de mens",
+   "Het al gestopt is",
+   "Het is een goede zaak",
+   "Het is bedacht"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ecosystemen-havo-vwo",
+  "file": "./ecosystemenHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is de effectiefste persoonlijke actie tegen klimaat- + biodiversiteit-crisis?",
+  "opties": [
+   "Minder vlees eten, autorijden en vliegen",
+   "Recyclen flessen",
+   "Plastic rietjes vermijden",
+   "LED-lampen kopen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "evolutie-havo-vwo",
+  "file": "./evolutieHavoVwo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Welke is GEEN voorwaarde voor natuurlijke selectie?",
+  "opties": [
+   "Vrije keuze van het individu om te evolueren",
+   "Variatie binnen populatie",
+   "Erfelijkheid van eigenschappen",
+   "Selectiedruk uit omgeving"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "evolutie-havo-vwo",
+  "file": "./evolutieHavoVwo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Pepermot-evolutie in 19e eeuw: licht → donker. Door wat?",
+  "opties": [
+   "Selectie door vogels op roetzwarte bomen",
+   "Motten 'wilden' donker worden",
+   "Selectie door vrouwelijke motten",
+   "Toeval zonder selectie"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "evolutie-havo-vwo",
+  "file": "./evolutieHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Recombinatie bij seksuele voortplanting:",
+  "opties": [
+   "Mengt bestaande genen, geen nieuwe genen",
+   "Maakt nieuwe genen",
+   "Verdwijnt bij meiose",
+   "Werkt alleen voor mannetjes"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "evolutie-havo-vwo",
+  "file": "./evolutieHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Een kleine populatie loopt risico op:",
+  "opties": [
+   "Verlies van genetische variatie",
+   "Te veel variatie",
+   "Mutaties uitgesloten",
+   "Geen evolutie mogelijk"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "evolutie-havo-vwo",
+  "file": "./evolutieHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Gene flow is:",
+  "opties": [
+   "Uitwisseling van allelen door migratie",
+   "Genen die door cel stromen",
+   "Mutaties die zich verspreiden",
+   "DNA-replicatie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "evolutie-havo-vwo",
+  "file": "./evolutieHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Allopatrische soortvorming vereist:",
+  "opties": [
+   "Geografische scheiding tussen populaties",
+   "Polyploïdie",
+   "Sympatrische co-existentie",
+   "Hybriden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "evolutie-havo-vwo",
+  "file": "./evolutieHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Cheetah's hebben weinig genetische variatie. Oorzaak?",
+  "opties": [
+   "Een flessenhals in het verleden",
+   "Inteelt door menselijke ingreep",
+   "Stichter-effect",
+   "Sympatrische soortvorming"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "evolutie-havo-vwo",
+  "file": "./evolutieHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Co-evolutie voorbeeld:",
+  "opties": [
+   "Orchidee en nachtvlinder met lange tong",
+   "Eenzaam mos in toendra",
+   "Genetische drift in klein dorp",
+   "Mutatie in DNA"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "evolutie-havo-vwo",
+  "file": "./evolutieHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Mens + chimpansee delen welk percentage DNA?",
+  "opties": [
+   "~98,8%",
+   "~80%",
+   "~50%",
+   "~10%"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "evolutie-havo-vwo",
+  "file": "./evolutieHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Antibiotica-resistentie in bacteriën:",
+  "opties": [
+   "Directe + lopende evolutie door selectiedruk",
+   "Bewijst dat evolutie niet bestaat",
+   "Bewijst intelligent ontwerp",
+   "Bacteriën besluiten resistent te worden"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "evolutie-havo-vwo",
+  "file": "./evolutieHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Lactose-tolerantie bij Noord-Europeanen is voorbeeld van:",
+  "opties": [
+   "Recente menselijke evolutie door selectie",
+   "Aangeleerd gedrag",
+   "Cultureel verschijnsel zonder genen",
+   "Toeval"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "evolutie-havo-vwo",
+  "file": "./evolutieHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Sikkel-cel-anemie: HbS-allel beschermt tegen malaria. Wat verklaart hoge frequentie in Afrika?",
+  "opties": [
+   "Heterozygoot voordeel — drager beschermd, homozygoot ziek",
+   "Toeval",
+   "Mensen die geen anemie willen",
+   "Allel verdwijnt door selectie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "evolutie-havo-vwo",
+  "file": "./evolutieHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Een theorie in wetenschap (zoals evolutie-theorie) betekent:",
+  "opties": [
+   "Een goed onderbouwde verklaring",
+   "Een gok of speculatie",
+   "Iets onbewezen",
+   "Tegenovergesteld van feit"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "evolutie-havo-vwo",
+  "file": "./evolutieHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Kunstmatige selectie door mens (zoals honden-fokken):",
+  "opties": [
+   "Vergelijkbaar mechanisme, mens kiest in plaats van omgeving",
+   "Werkt niet",
+   "Maakt nieuwe genen",
+   "Verbiedt evolutie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "evolutie-havo-vwo",
+  "file": "./evolutieHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Volgens 2e thermodynamica-wet: entropie neemt toe in gesloten systeem. Argument 'dit verbiedt evolutie' is:",
+  "opties": [
+   "Onjuist — de aarde krijgt energie van de zon",
+   "Correct — evolutie verbroken",
+   "Niet relevant",
+   "Bewijst evolutie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "fotosynthese-biologie",
+  "file": "./fotosyntheseBiologie.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat is fotosynthese?",
+  "opties": [
+   "Planten maken voedsel met zonlicht",
+   "Planten eten dieren",
+   "Planten ademen 's nachts uit",
+   "Planten groeien zonder licht"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "fotosynthese-biologie",
+  "file": "./fotosyntheseBiologie.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is NPK?",
+  "opties": [
+   "Voedingsstoffen in mest",
+   "Plant-soort",
+   "Bladsoort",
+   "Bloem-naam"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "fotosynthese-biologie",
+  "file": "./fotosyntheseBiologie.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat heeft een plant NIET nodig?",
+  "opties": [
+   "Kant-en-klare suiker van buitenaf",
+   "Zonlicht",
+   "Water",
+   "CO₂"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "fotosynthese-biologie",
+  "file": "./fotosyntheseBiologie.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een huidmondje?",
+  "opties": [
+   "Klein gaatje in blad voor gas-uitwisseling",
+   "Mond van een plant-dier",
+   "Bladnerf",
+   "Wortel-haar"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "fotosynthese-biologie",
+  "file": "./fotosyntheseBiologie.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Waarom vallen bladeren in herfst?",
+  "opties": [
+   "Boom spaart energie/water voor winter",
+   "Bladeren zijn 'op'",
+   "Wind blaast ze los",
+   "Dieren eten ze"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "fotosynthese-biologie",
+  "file": "./fotosyntheseBiologie.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Wat geven planten overdag AF?",
+  "opties": [
+   "Zuurstof",
+   "CO₂",
+   "Suiker",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "fotosynthese-biologie",
+  "file": "./fotosyntheseBiologie.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat produceert het meeste zuurstof voor de hele aarde?",
+  "opties": [
+   "Algen + fytoplankton in oceanen",
+   "De Amazone alleen",
+   "Tropisch bos op land",
+   "Mensen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "fotosynthese-biologie",
+  "file": "./fotosyntheseBiologie.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L2SK",
+  "q": "Wat gebeurt als planten allemaal verdwijnen?",
+  "opties": [
+   "De zuurstof zou opraken",
+   "Niets",
+   "Meer dieren",
+   "Aarde wordt groener"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "fotosynthese-biologie",
+  "file": "./fotosyntheseBiologie.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Waarom eten mensen energie-efficiënter als vegetariër?",
+  "opties": [
+   "Lager in voedselketen = minder energieverlies",
+   "Plantaardig is duurder",
+   "Vlees bevat geen energie",
+   "Onbekend"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "fotosynthese-biologie",
+  "file": "./fotosyntheseBiologie.js",
+  "stap": 5,
+  "vraag": 4,
+  "soort": "S",
+  "q": "Wanneer geven planten zuurstof af?",
+  "opties": [
+   "Overdag",
+   "'s Nachts",
+   "Alleen 's zomers",
+   "Nooit"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "genetica-havo-vwo",
+  "file": "./geneticaHavoVwo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Wat is fenotype?",
+  "opties": [
+   "Uiterlijk kenmerk (zichtbaar)",
+   "Allel-combinatie (genotype)",
+   "DNA-volgorde",
+   "Chromosoom-aantal"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "genetica-havo-vwo",
+  "file": "./geneticaHavoVwo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Welke verhouding krijg je in F2 bij kruising Bb × Bb (volledige dominantie)?",
+  "opties": [
+   "3 dominant : 1 recessief",
+   "1 : 1",
+   "2 : 1",
+   "Allemaal hetzelfde"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "genetica-havo-vwo",
+  "file": "./geneticaHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "SK",
+  "q": "Bij onvolledige dominantie rood (RR) × wit (rr) → F1:",
+  "opties": [
+   "Roze",
+   "Helft rood, helft wit",
+   "Alleen rood",
+   "Alleen wit"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "genetica-havo-vwo",
+  "file": "./geneticaHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wie was Gregor Mendel?",
+  "opties": [
+   "Monnik die erwt-erfelijkheid ontdekte",
+   "Ontdekker DNA-structuur",
+   "Eerste evolutie-bioloog",
+   "Engelse koning"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "genetica-havo-vwo",
+  "file": "./geneticaHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Waarom hebben mannen vaker geslachtsgebonden ziekten dan vrouwen?",
+  "opties": [
+   "Mannen hebben maar 1 X, geen tweede kopie",
+   "Mannen-DNA is anders",
+   "Y veroorzaakt ziekten",
+   "Hormonen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "genetica-havo-vwo",
+  "file": "./geneticaHavoVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is een testcross?",
+  "opties": [
+   "Onbekende × homozygoot recessief",
+   "BB × BB",
+   "Bb × Bb",
+   "Geen kruising"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "genetica-havo-vwo",
+  "file": "./geneticaHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Hemofilie is een __ aandoening.",
+  "opties": [
+   "Geslachtsgebonden recessieve",
+   "Autosomaal dominante",
+   "Autosomaal recessieve",
+   "Mitochondriale"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "genetica-havo-vwo",
+  "file": "./geneticaHavoVwo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "H",
+  "q": "In een stamboom: 2 gezonde ouders krijgen een aangedaan kind. Wat zegt dit?",
+  "opties": [
+   "Recessief",
+   "Dominant",
+   "Geslachtsgebonden",
+   "Geen erfelijke aandoening"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "genetica-havo-vwo",
+  "file": "./geneticaHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is een frameshift-mutatie?",
+  "opties": [
+   "Invoeging/deletie verschuift leeskader",
+   "1 base verandert",
+   "Hele chromosoom verloren",
+   "Geen effect"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "genetica-havo-vwo",
+  "file": "./geneticaHavoVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Cystic fibrosis (taaislijmziekte) is:",
+  "opties": [
+   "Autosomaal recessief",
+   "Geslachtsgebonden",
+   "Dominant",
+   "Trisomie"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "genetica-havo-vwo",
+  "file": "./geneticaHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Een draagster-moeder voor hemofilie krijgt met gezonde man:",
+  "opties": [
+   "50% zonen ziek, 50% dochters draagster",
+   "100% zieke zonen",
+   "Geen kans op ziekte",
+   "50% van alle kinderen ziek"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "genetica-havo-vwo",
+  "file": "./geneticaHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "S",
+  "q": "Welk celdelingstype geeft haploïde dochtercellen?",
+  "opties": [
+   "Meiose",
+   "Mitose",
+   "Beide",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "genetica-havo-vwo",
+  "file": "./geneticaHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat ontdekten Watson + Crick in 1953?",
+  "opties": [
+   "Dubbele helix DNA-structuur",
+   "Mendels wetten",
+   "Evolutie-theorie",
+   "Eerste vaccin"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "hart-bloed-ademhaling-havo-vwo",
+  "file": "./hartBloedAdemhalingHavoVwo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Een longslagader bevat:",
+  "opties": [
+   "Zuurstofarm bloed",
+   "Zuurstofrijk bloed",
+   "Geen bloed",
+   "Voedingsstoffen alleen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "hart-bloed-ademhaling-havo-vwo",
+  "file": "./hartBloedAdemhalingHavoVwo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Sinusknoop zit in:",
+  "opties": [
+   "Rechterboezem",
+   "Linkerkamer",
+   "Hersens",
+   "Longen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "hart-bloed-ademhaling-havo-vwo",
+  "file": "./hartBloedAdemhalingHavoVwo.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Hartminuutvolume in rust van volwassene ~?",
+  "opties": [
+   "5 L/min",
+   "1 L/min",
+   "20 L/min",
+   "50 L/min"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "hart-bloed-ademhaling-havo-vwo",
+  "file": "./hartBloedAdemhalingHavoVwo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Een haarvat (capillair) heeft als hoofdfunctie:",
+  "opties": [
+   "Uitwisseling stoffen tussen bloed + cellen",
+   "Bloed snel transporteren",
+   "Druk genereren",
+   "Filter"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "hart-bloed-ademhaling-havo-vwo",
+  "file": "./hartBloedAdemhalingHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Aderen hebben kleppen vooral in:",
+  "opties": [
+   "Benen",
+   "Hoofd",
+   "Slagaders",
+   "Haarvaten"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "hart-bloed-ademhaling-havo-vwo",
+  "file": "./hartBloedAdemhalingHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Atherosclerose = ?",
+  "opties": [
+   "Vetafzetting in de slagaderwand",
+   "Aderwand-zwakte",
+   "Hartritmestoornis",
+   "Bloedstolling"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "hart-bloed-ademhaling-havo-vwo",
+  "file": "./hartBloedAdemhalingHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Spataders ontstaan door:",
+  "opties": [
+   "Aderkleppen die niet goed sluiten",
+   "Slagaders te smal",
+   "Hartinfarct",
+   "Allergie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "hart-bloed-ademhaling-havo-vwo",
+  "file": "./hartBloedAdemhalingHavoVwo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Hemoglobine bindt:",
+  "opties": [
+   "O₂",
+   "CO₂ uitsluitend",
+   "Glucose",
+   "Vet"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "hart-bloed-ademhaling-havo-vwo",
+  "file": "./hartBloedAdemhalingHavoVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Hemofilie is:",
+  "opties": [
+   "Erfelijke stollingsziekte",
+   "Bloedkanker",
+   "Te dik bloed",
+   "Bloedgroep-mismatch"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "hart-bloed-ademhaling-havo-vwo",
+  "file": "./hartBloedAdemhalingHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Anemie = ?",
+  "opties": [
+   "Te weinig rode bloedcellen of hemoglobine",
+   "Te veel rode bloedcellen",
+   "Bloed-infectie",
+   "Hartritmestoornis"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "hart-bloed-ademhaling-havo-vwo",
+  "file": "./hartBloedAdemhalingHavoVwo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Diafragma beweegt tijdens inademen:",
+  "opties": [
+   "Naar beneden",
+   "Naar boven",
+   "Niet",
+   "Zijwaarts"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "hart-bloed-ademhaling-havo-vwo",
+  "file": "./hartBloedAdemhalingHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L2K",
+  "q": "Wij ademen voornamelijk op:",
+  "opties": [
+   "CO₂-niveau in het bloed",
+   "O₂-tekort",
+   "Spier-vermoeidheid",
+   "Hersengolven"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "hart-bloed-ademhaling-havo-vwo",
+  "file": "./hartBloedAdemhalingHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "K",
+  "q": "COPD wordt vooral veroorzaakt door:",
+  "opties": [
+   "Roken",
+   "Allergie",
+   "Genen",
+   "Virus"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "hart-bloed-ademhaling-havo-vwo",
+  "file": "./hartBloedAdemhalingHavoVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is vitale capaciteit?",
+  "opties": [
+   "Maximum dat je in + uit kunt ademen",
+   "Constant ademvolume",
+   "O₂-niveau bloed",
+   "Hartslag"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "hart-bloed-ademhaling-havo-vwo",
+  "file": "./hartBloedAdemhalingHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "K",
+  "q": "FAST-acroniem voor beroerte:",
+  "opties": [
+   "Face / Arm / Speech / Time",
+   "Fast / Aspirin / Sport / Talk",
+   "Food / Air / Stand / Talk",
+   "Geen acroniem"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "hart-bloed-ademhaling-havo-vwo",
+  "file": "./hartBloedAdemhalingHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Het mediterrane dieet is goed omdat:",
+  "opties": [
+   "Veel plantaardig en gezonde vetten",
+   "Veel vlees",
+   "Veel suiker",
+   "Geen relatie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "hart-bloed-ademhaling-havo-vwo",
+  "file": "./hartBloedAdemhalingHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Roken stoppen: risico hart-vaatziekte daalt:",
+  "opties": [
+   "Flink, al binnen een jaar",
+   "Direct naar nul",
+   "Pas na 30 jaar",
+   "Nooit"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "hart-bloed-ademhaling-havo-vwo",
+  "file": "./hartBloedAdemhalingHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Een AED is:",
+  "opties": [
+   "Automatische Externe Defibrillator",
+   "Adem-Eerste-Devies",
+   "Allergie-Eet-Dieet",
+   "Anti-Drugs"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "hart-bloed-ademhaling-havo-vwo",
+  "file": "./hartBloedAdemhalingHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "WHO-advies voor sport voor hart:",
+  "opties": [
+   "150 min/week matig of 75 min intensief",
+   "10 min/dag",
+   "30 min/maand",
+   "Geen advies"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ }
+]

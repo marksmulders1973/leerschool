@@ -1,0 +1,1458 @@
+[
+ {
+  "pad": "balans-beco",
+  "file": "./balansBeco.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een onderneming?",
+  "opties": [
+   "Organisatie die producten/diensten verkoopt om winst te maken",
+   "Een vereniging zonder winstdoel",
+   "Een privépersoon",
+   "De overheid"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "balans-beco",
+  "file": "./balansBeco.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat doet een balans?",
+  "opties": [
+   "Toont op één moment wat het bedrijf heeft + schuldig is",
+   "Berekent winst over een jaar",
+   "Voorspelt verkoop",
+   "Lijst klanten"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "balans-beco",
+  "file": "./balansBeco.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is eigen vermogen?",
+  "opties": [
+   "Geld van de eigenaar zelf, dat hoeft niet terug",
+   "Een lening van de bank",
+   "Voorraad in het magazijn",
+   "Kas en bank"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "balans-beco",
+  "file": "./balansBeco.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat zijn crediteuren?",
+  "opties": [
+   "Leveranciers die nog betaald moeten worden",
+   "Klanten die nog moeten betalen",
+   "Een bank",
+   "Personeel"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "balans-beco",
+  "file": "./balansBeco.js",
+  "stap": 7,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat klopt over afschrijven?",
+  "opties": [
+   "Het is een kostenpost, geen daadwerkelijke geldstroom",
+   "Het is geld dat van de bank gaat",
+   "Het is een soort belasting",
+   "Alleen banken doen het"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "balans-beco",
+  "file": "./balansBeco.js",
+  "stap": 8,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is btw?",
+  "opties": [
+   "Belasting die het bedrijf afdraagt aan de Belastingdienst",
+   "Winst van het bedrijf",
+   "Kostprijs",
+   "Vaste kosten"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "balans-beco",
+  "file": "./balansBeco.js",
+  "stap": 9,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat staat aan de DEBET-kant van een balans?",
+  "opties": [
+   "Bezittingen (activa)",
+   "Schulden",
+   "Winst",
+   "Inkomen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "balans-beco",
+  "file": "./balansBeco.js",
+  "stap": 9,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wat is liquiditeit?",
+  "opties": [
+   "Hoe snel je bezit kunt omzetten in geld",
+   "Hoeveelheid winst",
+   "Hoeveel je verdient",
+   "Hoeveel eigen vermogen je hebt"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "balans-beco",
+  "file": "./balansBeco.js",
+  "stap": 9,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Wat is afschrijven (boekhoudkundig)?",
+  "opties": [
+   "Waarde-vermindering vaste activa over levensduur",
+   "Iets weggooien",
+   "Korting",
+   "Belasting"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "balans-beco",
+  "file": "./balansBeco.js",
+  "stap": 9,
+  "vraag": 12,
+  "soort": "L2",
+  "q": "Eigen vermogen = ?",
+  "opties": [
+   "Activa − Vreemd vermogen",
+   "Activa + Schulden",
+   "Schulden alleen",
+   "Winst alleen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "balans-beco",
+  "file": "./balansBeco.js",
+  "stap": 9,
+  "vraag": 13,
+  "soort": "L",
+  "q": "Winst & Verliesrekening toont?",
+  "opties": [
+   "Opbrengsten − kosten over een periode",
+   "Bezittingen op balans-datum",
+   "Schulden alleen",
+   "Eigen vermogen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "balans-beco",
+  "file": "./balansBeco.js",
+  "stap": 9,
+  "vraag": 15,
+  "soort": "L",
+  "q": "Debiteur = ?",
+  "opties": [
+   "Klant die nog moet betalen",
+   "Leverancier",
+   "Eigenaar",
+   "Bank"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "bbp-conjunctuur-economie",
+  "file": "./bbpConjunctuurEconomie.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat wordt NIET in BBP gerekend?",
+  "opties": [
+   "Huishoudelijk werk + vrijwilligers",
+   "Auto-fabricage",
+   "Restaurant-bezoek",
+   "Knipbeurt bij kapper"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "bbp-conjunctuur-economie",
+  "file": "./bbpConjunctuurEconomie.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Wat is reëel BBP?",
+  "opties": [
+   "BBP gecorrigeerd voor inflatie",
+   "BBP zonder belasting",
+   "BBP per huishouden",
+   "BBP van vorig jaar"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bbp-conjunctuur-economie",
+  "file": "./bbpConjunctuurEconomie.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is BBP per hoofd?",
+  "opties": [
+   "BBP gedeeld door inwoneraantal",
+   "BBP × inwoners",
+   "BBP plus inwoners",
+   "BBP min belasting"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "bbp-conjunctuur-economie",
+  "file": "./bbpConjunctuurEconomie.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Wat is conjunctuur?",
+  "opties": [
+   "Golfbeweging economie",
+   "Belasting van bedrijf",
+   "Soort munt",
+   "BBP per hoofd"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bbp-conjunctuur-economie",
+  "file": "./bbpConjunctuurEconomie.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wanneer is er officieel recessie?",
+  "opties": [
+   "2 kwartalen negatieve BBP-groei",
+   "1 jaar negatief",
+   "1 kwartaal negatief",
+   "BBP onder 0"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "bbp-conjunctuur-economie",
+  "file": "./bbpConjunctuurEconomie.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Wat gebeurt bij opgang?",
+  "opties": [
+   "Lonen + prijzen stijgen, werkloosheid daalt",
+   "Lonen dalen, werkloosheid stijgt",
+   "BBP daalt twee kwartalen op rij",
+   "Veel bedrijven gaan failliet"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bbp-conjunctuur-economie",
+  "file": "./bbpConjunctuurEconomie.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Wat is hyperinflatie?",
+  "opties": [
+   "Extreem hoge inflatie",
+   "Een klein beetje inflatie",
+   "Prijzen die dalen",
+   "Prijzen die gelijk blijven"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bbp-conjunctuur-economie",
+  "file": "./bbpConjunctuurEconomie.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "4 soorten werkloosheid zijn?",
+  "opties": [
+   "Frictie / conjunctureel / structureel / seizoen",
+   "Hoog / midden / laag / nul",
+   "Jong / oud / tijdelijk / vast",
+   "Vrijwillig / betaald / zwart / parttime"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bbp-conjunctuur-economie",
+  "file": "./bbpConjunctuurEconomie.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "WW-uitkering is voor wie?",
+  "opties": [
+   "Onvrijwillig werklozen met arbeidsverleden",
+   "Iedereen boven de 18 jaar",
+   "Studenten zonder bijbaan",
+   "Gepensioneerden boven de AOW-leeftijd"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bbp-conjunctuur-economie",
+  "file": "./bbpConjunctuurEconomie.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat is monetair beleid?",
+  "opties": [
+   "Door centrale bank — rente + geld",
+   "Door overheid — belasting",
+   "Door bedrijven — prijzen",
+   "Door burgers — sparen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bbp-conjunctuur-economie",
+  "file": "./bbpConjunctuurEconomie.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "S",
+  "q": "Welke is Keynesiaans?",
+  "opties": [
+   "Anti-cyclisch beleid",
+   "Geen overheidsingrijpen",
+   "Pro-cyclisch beleid",
+   "Alleen de rente aanpassen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bbp-conjunctuur-economie",
+  "file": "./bbpConjunctuurEconomie.js",
+  "stap": 5,
+  "vraag": 4,
+  "soort": "SK",
+  "q": "Bij hoge inflatie wat doet ECB?",
+  "opties": [
+   "Rente omhoog",
+   "Rente omlaag",
+   "Geld bijdrukken",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bbp-conjunctuur-economie",
+  "file": "./bbpConjunctuurEconomie.js",
+  "stap": 5,
+  "vraag": 10,
+  "soort": "SK",
+  "q": "Bij recessie wat doet de overheid vaak (Keynesiaans)?",
+  "opties": [
+   "Meer uitgeven",
+   "Minder uitgeven",
+   "Niets",
+   "Bedrijven sluiten"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bbp-conjunctuur-economie",
+  "file": "./bbpConjunctuurEconomie.js",
+  "stap": 5,
+  "vraag": 12,
+  "soort": "L2",
+  "q": "Een stijgende lijn op BBP-grafiek over jaar 2024-2025 wijst op?",
+  "opties": [
+   "Hoogconjunctuur / herstel",
+   "Recessie",
+   "Krimp van de economie",
+   "Stijgende werkloosheid"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bbp-conjunctuur-economie",
+  "file": "./bbpConjunctuurEconomie.js",
+  "stap": 5,
+  "vraag": 13,
+  "soort": "L2SK",
+  "q": "Wat is stagflatie?",
+  "opties": [
+   "Hoge inflatie + lage groei + werkloosheid tegelijk",
+   "Hoge groei + lage inflatie tegelijk",
+   "Lage rente + hoge groei tegelijk",
+   "Alleen een daling van het BBP"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "bbp-conjunctuur-economie",
+  "file": "./bbpConjunctuurEconomie.js",
+  "stap": 5,
+  "vraag": 14,
+  "soort": "L",
+  "q": "Welke combinatie van cijfers geeft het beste beeld van de economische gezondheid?",
+  "opties": [
+   "BBP-groei + inflatie + werkloosheid",
+   "Alleen BBP",
+   "Alleen inflatie",
+   "Alleen bevolkingsaantal"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "bbp-conjunctuur-economie",
+  "file": "./bbpConjunctuurEconomie.js",
+  "stap": 5,
+  "vraag": 17,
+  "soort": "L2K",
+  "q": "Een rente-verlaging door ECB wordt vaak gedaan bij ___?",
+  "opties": [
+   "Recessie / lage groei",
+   "Hoge inflatie",
+   "Hoogconjunctuur",
+   "Geen reden"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "crypto-blockchain-geld-beco",
+  "file": "./cryptoBlockchainGeldBeco.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Waarom is een briefje van €10 echt iets waard?",
+  "opties": [
+   "Omdat we met z'n allen afspreken en vertrouwen dat het 10 euro waard is",
+   "Omdat het papier en de inkt samen 10 euro kosten",
+   "Omdat er een klein beetje goud in het briefje zit",
+   "Omdat de winkel het briefje zelf maakt en goedkeurt"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "crypto-blockchain-geld-beco",
+  "file": "./cryptoBlockchainGeldBeco.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Er komt heel veel extra geld bij, maar er zijn niet meer spullen te koop. Wat gebeurt er meestal?",
+  "opties": [
+   "De prijzen stijgen: alles wordt duurder",
+   "Alles wordt goedkoper",
+   "Er verandert helemaal niets",
+   "Iedereen wordt er echt rijker van"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "crypto-blockchain-geld-beco",
+  "file": "./cryptoBlockchainGeldBeco.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat is een belangrijk verschil tussen crypto (zoals Bitcoin) en het geld op je bankrekening?",
+  "opties": [
+   "Crypto wordt niet door een bank/overheid beheerd, maar door een netwerk van computers",
+   "Crypto is gemaakt van speciaal papier met een geheime code erop",
+   "Crypto werkt alleen in Nederland en niet in andere landen",
+   "Crypto is precies hetzelfde als sparen bij de bank"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "moederbedrijf-overname-sonac-beco",
+  "file": "./moederbedrijfOvernameSonacBeco.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Onder welk internationaal moederbedrijf valt Sonac sinds 2014?",
+  "opties": [
+   "Darling Ingredients",
+   "Vion",
+   "Sovion",
+   "Smits"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is giraal geld?",
+  "opties": [
+   "Geld op je bankrekening",
+   "Munten en biljetten",
+   "Goud",
+   "Een lening"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Waarom is ruilhandel lastig?",
+  "opties": [
+   "Je moet iemand vinden die jouw spullen wil EN heeft wat jij wilt",
+   "Het is verboden",
+   "Spullen zijn duur",
+   "Internet is nodig"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Marie ziet een €200 jas en denkt: 'oh, met Klarna betaal ik pas later.' Wat is het beste financiële advies?",
+  "opties": [
+   "Vraag jezelf af: kan ik €200 nu missen? Zo niet, niet kopen.",
+   "Altijd Klarna gebruiken want het is gratis",
+   "Drie keer Klarna nemen, dan is het pas €600 over een jaar",
+   "Het maakt niet uit, alles loopt los"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wat is samengestelde rente?",
+  "opties": [
+   "Rente over de eerder ontvangen rente",
+   "Een speciaal soort lening",
+   "Hogere rente voor zakelijke klanten",
+   "Belasting op spaargeld"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Waarom betaalt een bank jou rente op je spaargeld?",
+  "opties": [
+   "Zij leent jouw geld duurder uit aan anderen",
+   "Uit dankbaarheid",
+   "Het is verplicht door de wet",
+   "Geld is duurder geworden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "H",
+  "q": "Anna spaart €2.500 voor haar rijbewijs. Welk type rekening is geschikt?",
+  "opties": [
+   "Een spaarrekening",
+   "Een hypotheekrekening",
+   "Een creditcard-rekening",
+   "Een doorlopend krediet"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Een bank biedt een spaarrekening met 0% rente. Waarom is sparen dan nóg steeds zinvol?",
+  "opties": [
+   "Je houdt geld apart voor doelen of buffers",
+   "Het is verplicht",
+   "Je krijgt korting in winkels",
+   "Het levert toch geld op"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 2,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wat gebeurt er bij een negatieve rente op je spaargeld?",
+  "opties": [
+   "Je betaalt de bank in plaats van andersom",
+   "Je krijgt extra geld",
+   "De bank gaat failliet",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat is een aandeel?",
+  "opties": [
+   "Stukje eigendom in een bedrijf",
+   "Een lening aan een bedrijf",
+   "Een spaarrekening",
+   "Een soort BTW"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wat is het verschil tussen sparen en beleggen?",
+  "opties": [
+   "Sparen is veilig met lage rente; beleggen kan meer opleveren maar ook verlies",
+   "Geen verschil: allebei zijn even veilig en leveren evenveel op",
+   "Beleggen is altijd veiliger en levert altijd meer op",
+   "Sparen levert altijd verlies op, beleggen nooit"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Iemand belooft gegarandeerd 30% rendement per jaar. Wat denk je?",
+  "opties": [
+   "Vrijwel zeker oplichting — bestaat niet",
+   "Geweldig, meteen instappen",
+   "Standaard rendement",
+   "Dat hoort bij de bank"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is een ETF (beleggingsfonds)?",
+  "opties": [
+   "Verzameling van veel aandelen tegelijk → spreiding",
+   "Een spaarrekening",
+   "Een hypotheek",
+   "Een belasting"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 3,
+  "vraag": 6,
+  "soort": "L2",
+  "q": "Crypto als belegging:",
+  "opties": [
+   "Heel hoog risico, zonder garantie",
+   "Veilig en gegarandeerd",
+   "Levert vast 10% per jaar",
+   "Wettelijk verzekerd"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat doet een bank met jouw spaargeld?",
+  "opties": [
+   "Klein deel houdt ze in kas, rest leent ze uit aan anderen",
+   "Bewaart het in een kluis",
+   "Stuurt het door naar de Belastingdienst",
+   "Belegt alles in aandelen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is geldschepping door banken?",
+  "opties": [
+   "Banken vergroten de geldhoeveelheid door uit te lenen",
+   "Banken drukken geld bij",
+   "Belastingdienst maakt geld",
+   "Niemand kan geld scheppen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Wat is een bank run?",
+  "opties": [
+   "Veel klanten halen tegelijk hun geld op",
+   "Bank organiseert een hardloopevenement",
+   "Bank heeft promotie",
+   "Klanten lopen weg uit boosheid"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "SK",
+  "q": "Hoeveel garandeert het DGS per spaarder per bank?",
+  "opties": [
+   "€100.000",
+   "€10.000",
+   "€1 miljoen",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is M1 geldhoeveelheid?",
+  "opties": [
+   "Contant geld (M0) + giraal geld op betaalrekeningen",
+   "Alleen contant geld",
+   "Alle spaargeld + beleggingen",
+   "Buitenlandse munten"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 4,
+  "vraag": 5,
+  "soort": "K",
+  "q": "Wanneer 'rolt' geld snel door de economie?",
+  "opties": [
+   "Bij hoogconjunctuur",
+   "Bij recessie",
+   "Wanneer geen geld bestaat",
+   "Altijd even snel"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 4,
+  "vraag": 6,
+  "soort": "L2",
+  "q": "Stort jij €1.000 op de bank. Wat gebeurt er ongeveer?",
+  "opties": [
+   "Bank houdt ~5% (€50) als reserve, leent ~€950 uit",
+   "Geld blijft op jouw rekening, niets gebeurt",
+   "Bank leent de volle €1.000 meteen uit",
+   "Bank kan jouw geld nooit aanraken"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "K",
+  "q": "CPI 2025 = 108 (basis 2023 = 100). Hoeveel zijn de prijzen gestegen sinds 2023?",
+  "opties": [
+   "8%",
+   "108%",
+   "0,8%",
+   "1,08%"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 5,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Je loon stijgt 2%, prijzen stijgen 5%. Wat gebeurt met je koopkracht?",
+  "opties": [
+   "Daalt met ongeveer 3%",
+   "Stijgt met 2%",
+   "Stijgt met 7%",
+   "Blijft gelijk"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Je krijgt 1% rente op spaargeld, inflatie is 3%. Wat doet je koopkracht?",
+  "opties": [
+   "Daalt met ongeveer 2% per jaar",
+   "Stijgt met 1%",
+   "Blijft precies gelijk",
+   "Stijgt met 4%"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 5,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat zou inflatie kunnen veroorzaken?",
+  "opties": [
+   "Energieprijzen stijgen sterk (gas, olie)",
+   "Iedereen gaat meer sparen",
+   "Belastingen worden afgeschaft",
+   "Het regent veel"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 5,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is hyperinflatie?",
+  "opties": [
+   "Prijzen verdubbelen extreem snel — bv. elke maand",
+   "Prijzen dalen",
+   "Lonen verdubbelen",
+   "Geen inflatie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 6,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Waarom is eerst sparen, dan uitgeven beter dan andersom?",
+  "opties": [
+   "Anders blijft er aan het einde van de maand niets over",
+   "Sparen kost belasting",
+   "Spaarrente is altijd 0%",
+   "Banken sluiten je rekening anders"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 6,
+  "vraag": 5,
+  "soort": "L2",
+  "q": "Wat is een buffer op je spaarrekening?",
+  "opties": [
+   "Geld voor onverwachte uitgaven",
+   "Verplicht door de bank",
+   "Een soort lening",
+   "Cashback van Klarna"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 7,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Waarom heeft rood staan een hoge rente?",
+  "opties": [
+   "Geen onderpand, kort termijn — bank loopt risico",
+   "Banken willen klanten straffen",
+   "Het is illegaal",
+   "Door de overheid bepaald"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 7,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is een BKR-toets?",
+  "opties": [
+   "Check of je al andere schulden of betalingsproblemen hebt",
+   "Examen voor bankmedewerkers",
+   "Belastingaanslag",
+   "Spaarrekening met bonus"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 7,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wanneer is lenen meestal zinvol?",
+  "opties": [
+   "Voor een huis of een opleiding",
+   "Voor een vakantie",
+   "Voor een nieuwe telefoon",
+   "Voor kleren"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 7,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wat gebeurt er als je Klarna 'achteraf' niet op tijd betaalt?",
+  "opties": [
+   "Hoge boetes, daarna deurwaarder + BKR-registratie",
+   "Klarna scheldt het kwijt",
+   "Je krijgt extra tijd zonder kosten",
+   "Klarna betaalt het zelf"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 8,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is het belangrijkste verschil tussen annuïteit en lineaire hypotheek?",
+  "opties": [
+   "Annuïteit heeft vaste maandlast, lineair heeft vaste aflossing",
+   "Annuïteit is voor huurders",
+   "Lineair is alleen voor BV's",
+   "Geen verschil"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 8,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Welke kosten komen bovenop de huisprijs bij koop?",
+  "opties": [
+   "Notaris, taxatie, advies en eventueel overdrachtsbelasting",
+   "Alleen extra rente",
+   "Niets",
+   "Alleen de makelaar van de verkoper"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-geld-sparen-lenen",
+  "file": "./pincodeGeldSparenLenen.js",
+  "stap": 8,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Waarom is een buffer op de spaarrekening nuttig als je een hypotheek hebt?",
+  "opties": [
+   "Om bij baanverlies de hypotheek te kunnen blijven betalen",
+   "Banken eisen het",
+   "Spaargeld levert hypotheek-korting op",
+   "Het is verboden om geen buffer te hebben"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Hoeveel vakantiegeld krijg je standaard in Nederland?",
+  "opties": [
+   "8% van het jaarloon",
+   "10% van het maandloon",
+   "Een vast bedrag €500",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is een zzp'er?",
+  "opties": [
+   "Zelfstandige zonder personeel",
+   "Vaste werknemer",
+   "Iemand die uitzendwerk doet",
+   "Werkloze"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 0,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wat hoort op een loonstrookje?",
+  "opties": [
+   "Brutoloon, inhoudingen, nettoloon en vakantiegeld",
+   "Alleen het bedrag op je rekening",
+   "Alleen de werkgevers-naam",
+   "Niets verplicht"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Een concurrentiebeding in je contract betekent:",
+  "opties": [
+   "Je mag na ontslag niet direct bij een concurrent werken",
+   "Je krijgt een bonus",
+   "Je moet altijd overuren maken",
+   "Je krijgt een opleiding"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Met wederzijds goedvinden ontslag: wat is dat?",
+  "opties": [
+   "Werkgever en werknemer maken samen afspraken",
+   "Werkgever besluit eenzijdig",
+   "Werknemer besluit eenzijdig",
+   "Rechter besluit"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 1,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Bij een contract korter dan 6 maanden, mag er een proeftijd in?",
+  "opties": [
+   "Nee, dat is wettelijk niet toegestaan",
+   "Ja, altijd 1 maand",
+   "Ja, 2 maanden",
+   "Alleen voor jongeren"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wie ondertekent samen een CAO?",
+  "opties": [
+   "Vakbonden + werkgeversorganisaties",
+   "Overheid + bedrijven",
+   "Werknemer + werkgever individueel",
+   "De Belastingdienst"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wat is krapte op de arbeidsmarkt?",
+  "opties": [
+   "Meer vraag dan aanbod",
+   "Iedereen werkt",
+   "Lonen dalen",
+   "Veel werklozen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is een vakbond?",
+  "opties": [
+   "Organisatie die opkomt voor werknemers",
+   "Een groep werkgevers",
+   "Een uitzendbureau",
+   "Belastingdienst-afdeling"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "H",
+  "q": "Bij hoger loon wil de werkgever ... mensen aannemen.",
+  "opties": [
+   "Minder",
+   "Meer",
+   "Net zoveel",
+   "Het maakt niet uit"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "H",
+  "q": "Bij hoger loon willen ... mensen werken.",
+  "opties": [
+   "Meer",
+   "Minder",
+   "Net zoveel",
+   "Alleen wie nu geen werk heeft"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is het evenwichtsloon?",
+  "opties": [
+   "Loon waarbij vraag = aanbod",
+   "Het hoogste loon",
+   "Het minimumloon",
+   "Het gemiddelde"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Tijdens vergrijzing verschuift het aanbod van arbeid:",
+  "opties": [
+   "Naar links (minder mensen werken)",
+   "Naar rechts (meer)",
+   "Niet",
+   "Wisselend"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 3,
+  "vraag": 5,
+  "soort": "L2",
+  "q": "Wat zijn secundaire arbeidsvoorwaarden?",
+  "opties": [
+   "Extra's bovenop het loon",
+   "Het brutoloon",
+   "De vakantiedagen alleen",
+   "De CAO"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 4,
+  "vraag": 5,
+  "soort": "L2",
+  "q": "Wat is verborgen werkloosheid?",
+  "opties": [
+   "Mensen die willen werken maar niet meer zoeken",
+   "Mensen met een tweede baan",
+   "Buitenlanders zonder verblijfsstatus",
+   "Mensen die tijdelijk ziek thuis zitten"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat is productiviteit?",
+  "opties": [
+   "Hoeveel je per uur produceert",
+   "Hoe lang je werkt",
+   "Salaris per maand",
+   "Aantal vakantiedagen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 5,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat verhoogt productiviteit?",
+  "opties": [
+   "Betere machines + opleiding + organisatie",
+   "Minder vakantie",
+   "Hogere belasting",
+   "Meer werknemers in dienst"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Hogere productiviteit kan leiden tot:",
+  "opties": [
+   "Goedkoper produceren OF hogere lonen",
+   "Hogere belasting",
+   "Meer werkloosheid altijd",
+   "Geen effect"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 5,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Wat is de productiviteitsparadox?",
+  "opties": [
+   "Ondanks computers stijgt productiviteit langzamer dan verwacht",
+   "Productiviteit is altijd hoog",
+   "Computers maakten werk veel sneller productief dan verwacht",
+   "Computers slechter dan handmatig"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 5,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Wat is het verband tussen lonen en productiviteit?",
+  "opties": [
+   "Op lange termijn stijgen lonen mee met productiviteit",
+   "Geen verband",
+   "Lonen dalen bij hogere productiviteit",
+   "Lonen stijgen alleen bij stakingen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 6,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wie krijgt AOW?",
+  "opties": [
+   "Iedereen vanaf de pensioenleeftijd",
+   "Alleen werknemers",
+   "Alleen ondernemers",
+   "Alleen wie veel verdient"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 6,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is bijstand?",
+  "opties": [
+   "Een vangnet via de gemeente",
+   "Salaris",
+   "Toeslag",
+   "Zorgverzekering"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 6,
+  "vraag": 3,
+  "soort": "L",
+  "q": "WW-uitkering is in de eerste 2 maanden ongeveer:",
+  "opties": [
+   "75% van laatste loon",
+   "100%",
+   "30%",
+   "Vast bedrag €500"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "pincode-werk-arbeidsmarkt",
+  "file": "./pincodeWerkArbeidsmarkt.js",
+  "stap": 6,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is een belangrijk verschil verzekering vs voorziening?",
+  "opties": [
+   "Bij een verzekering heb je zelf premie betaald",
+   "Geen verschil",
+   "Verzekering is alleen voor rijken",
+   "Voorziening is alleen voor 65+"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ }
+]

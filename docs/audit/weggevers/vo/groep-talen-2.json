@@ -1,0 +1,1266 @@
+[
+ {
+  "pad": "conditionals-engels",
+  "file": "./conditionalsEngels.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Welke 2 delen heeft een conditional?",
+  "opties": [
+   "If-clause + main clause",
+   "Subject + object",
+   "Verb + adverb",
+   "Adjective + noun"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "conditionals-engels",
+  "file": "./conditionalsEngels.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "'If I had studied medicine, I ___ a doctor now.' Welk type?",
+  "opties": [
+   "Mixed (Type 3 + 2)",
+   "Type 1",
+   "Type 2",
+   "Type 3"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "conditionals-engels",
+  "file": "./conditionalsEngels.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "H",
+  "q": "'If she had known, she ___ have helped.'",
+  "opties": [
+   "would",
+   "will",
+   "had",
+   "would be"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "conditionals-engels",
+  "file": "./conditionalsEngels.js",
+  "stap": 5,
+  "vraag": 6,
+  "soort": "L2",
+  "q": "Zero conditional wordt gebruikt voor?",
+  "opties": [
+   "Algemene waarheden",
+   "Hypotheses",
+   "Verleden",
+   "Toekomst"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "conditionals-engels",
+  "file": "./conditionalsEngels.js",
+  "stap": 5,
+  "vraag": 9,
+  "soort": "K",
+  "q": "'If she ___ harder, she would have passed.' Type 3?",
+  "opties": [
+   "had studied",
+   "studied",
+   "would study",
+   "studies"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "conditionals-engels",
+  "file": "./conditionalsEngels.js",
+  "stap": 5,
+  "vraag": 12,
+  "soort": "L",
+  "q": "Type 2 beschrijft?",
+  "opties": [
+   "Onwaarschijnlijk / hypothetisch heden",
+   "Reëel heden",
+   "Verleden",
+   "Toekomst zeker"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-engels",
+  "file": "./cseSchrijfvaardigheidEngels.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Welke aanhef is formeel? *(naam onbekend)*",
+  "opties": [
+   "Dear Sir or Madam,",
+   "Hey!",
+   "Hi Tom,",
+   "Yo!"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-engels",
+  "file": "./cseSchrijfvaardigheidEngels.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "*'Yours sincerely'* gebruik je in een formele brief als je ___?",
+  "opties": [
+   "De naam van de ontvanger kent",
+   "Niemand kent",
+   "Boos bent",
+   "Het over een vriend hebt"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-engels",
+  "file": "./cseSchrijfvaardigheidEngels.js",
+  "stap": 0,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Welke aanhef is formeel?",
+  "opties": [
+   "Dear Sir or Madam,",
+   "Hi there!",
+   "Yo!",
+   "Hey"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-engels",
+  "file": "./cseSchrijfvaardigheidEngels.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Mag je samentrekkingen (I'm, don't) in informele e-mail?",
+  "opties": [
+   "Ja",
+   "Nee",
+   "Soms",
+   "Alleen in formele"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-engels",
+  "file": "./cseSchrijfvaardigheidEngels.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat WEL meenemen in samenvatting?",
+  "opties": [
+   "Hoofdgedachte + 2-3 kernpunten",
+   "Alle details",
+   "Voorbeelden",
+   "Anekdotes"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-engels",
+  "file": "./cseSchrijfvaardigheidEngels.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "S",
+  "q": "Hoe vermijd je plagiaat?",
+  "opties": [
+   "Eigen woorden + zinsbouw",
+   "Letterlijk overnemen",
+   "Wijzig 1 woord",
+   "Alleen latere alinea's overnemen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-engels",
+  "file": "./cseSchrijfvaardigheidEngels.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Een samenvatting is meestal hoeveel korter dan het origineel?",
+  "opties": [
+   "1/3 tot 1/4 van origineel",
+   "Even lang",
+   "10× zo lang",
+   "1 zin altijd"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-engels",
+  "file": "./cseSchrijfvaardigheidEngels.js",
+  "stap": 2,
+  "vraag": 5,
+  "soort": "S",
+  "q": "In een Engelse opsomming gebruik je bullet points met...?",
+  "opties": [
+   "• of - per item",
+   "Geen tekens",
+   "Alleen getallen",
+   "Lange uitleg"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-engels",
+  "file": "./cseSchrijfvaardigheidEngels.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is in een essay de conclusion?",
+  "opties": [
+   "Slot-alinea + samenvatting",
+   "Eerste alinea",
+   "Een voorbeeld",
+   "Lijstje"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-engels",
+  "file": "./cseSchrijfvaardigheidEngels.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Welke structuur past bij 5-paragraaf essay?",
+  "opties": [
+   "Intro + 3 argumenten + conclusie",
+   "1 lange alinea",
+   "Alleen voor-argumenten",
+   "Eind eerst"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-engels",
+  "file": "./cseSchrijfvaardigheidEngels.js",
+  "stap": 3,
+  "vraag": 5,
+  "soort": "L",
+  "q": "In je conclusie doe je wat?",
+  "opties": [
+   "Hoofdpunten samenvatten + slot-zin",
+   "Nieuwe argumenten introduceren",
+   "Niets schrijven",
+   "Citaten herhalen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-engels",
+  "file": "./cseSchrijfvaardigheidEngels.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Wat is 'eventual' in Engels?",
+  "opties": [
+   "Uiteindelijk",
+   "Eventueel (Nederlandse betekenis)",
+   "Snel",
+   "Soms"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-engels",
+  "file": "./cseSchrijfvaardigheidEngels.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L2S",
+  "q": "It's vs Its — verschil?",
+  "opties": [
+   "It's = it is, Its = van het",
+   "Geen verschil",
+   "Beide samentrekking",
+   "Beide bezittelijk"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-engels",
+  "file": "./cseSchrijfvaardigheidEngels.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Aanhef voor formele brief (naam onbekend)?",
+  "opties": [
+   "Dear Sir or Madam,",
+   "Hi!",
+   "Dear friend,",
+   "Hello!"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-engels",
+  "file": "./cseSchrijfvaardigheidEngels.js",
+  "stap": 5,
+  "vraag": 4,
+  "soort": "S",
+  "q": "Their vs There — welke is van bezit?",
+  "opties": [
+   "Their",
+   "There",
+   "Beide",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-engels",
+  "file": "./cseSchrijfvaardigheidEngels.js",
+  "stap": 5,
+  "vraag": 5,
+  "soort": "L2",
+  "q": "Een samenvatting is ... ?",
+  "opties": [
+   "Korte versie in eigen woorden",
+   "Letterlijke kopie",
+   "Mening over de tekst",
+   "Lijst voorbeelden"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "engels-cse-havo-vwo",
+  "file": "./engelsCseHavoVwo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Welk hulpmiddel is toegestaan op CSE Engels HAVO/VWO?",
+  "opties": [
+   "Papieren woordenboek Engels-NL",
+   "Google Translate",
+   "Smartphone",
+   "Elektronisch woordenboek"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-cse-havo-vwo",
+  "file": "./engelsCseHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Een artikel gebruikt veel woorden als 'consequently', 'notwithstanding', 'whereupon'. Wat is het register?",
+  "opties": [
+   "Formal/academic",
+   "Informal",
+   "Slang",
+   "Mixed"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "engels-cse-havo-vwo",
+  "file": "./engelsCseHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Welke toon past bij: *'Oh great, another rainy day. Just what I needed.'*?",
+  "opties": [
+   "Sarcastisch/ironisch",
+   "Enthousiast",
+   "Neutraal",
+   "Wetenschappelijk"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "engels-cse-havo-vwo",
+  "file": "./engelsCseHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "*'What is the FUNCTION of paragraph 3?'* — wat moet je doen?",
+  "opties": [
+   "Bepalen wat deze alinea toevoegt aan tekst",
+   "Vertaling geven",
+   "Tellen aantal woorden",
+   "Spelling controleren"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-cse-havo-vwo",
+  "file": "./engelsCseHavoVwo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat doe je het EERST bij een lange tekst?",
+  "opties": [
+   "Titel + eerste/laatste alinea lezen",
+   "Hele tekst lezen",
+   "Vragen invullen",
+   "Woordenboek pakken"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-cse-havo-vwo",
+  "file": "./engelsCseHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wanneer is markeren (vragen overslaan) handig?",
+  "opties": [
+   "Bij twijfel-vraag waar je langer over zou denken",
+   "Bij elke vraag",
+   "Nooit",
+   "Alleen open vragen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-cse-havo-vwo",
+  "file": "./engelsCseHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Hoe schrijf je een open vraag-antwoord op HAVO/VWO?",
+  "opties": [
+   "NL zin met bewijs uit de tekst",
+   "Engels woord-voor-woord",
+   "Alleen trefwoord",
+   "Lang essay"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-cse-havo-vwo",
+  "file": "./engelsCseHavoVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat doe je als je een onbekend woord tegenkomt in lange tekst?",
+  "opties": [
+   "Eerst context + 1-2 zinnen rond lezen",
+   "Direct woordenboek",
+   "Hele tekst opnieuw lezen",
+   "Vraag overslaan"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-cse-havo-vwo",
+  "file": "./engelsCseHavoVwo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is het verschil tussen mood en tone?",
+  "opties": [
+   "Mood = sfeer voor lezer; tone = houding auteur",
+   "Hetzelfde",
+   "Mood = personage; tone = verteller",
+   "Mood = goede toon; tone = slechte"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-cse-havo-vwo",
+  "file": "./engelsCseHavoVwo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Een unreliable narrator is een verteller die:",
+  "opties": [
+   "De lezer misleidt of belangrijke info mist",
+   "Altijd betrouwbaar is",
+   "Niet bestaat",
+   "Wetenschappelijke uitleg geeft"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-cse-havo-vwo",
+  "file": "./engelsCseHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is foreshadowing?",
+  "opties": [
+   "Hint vooraf op latere gebeurtenis",
+   "Terugblik",
+   "Beeldspraak",
+   "Karakter-beschrijving"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-cse-havo-vwo",
+  "file": "./engelsCseHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "*'She walked into the empty house, her footsteps echoing in the silence.'* Welke mood?",
+  "opties": [
+   "Eenzaam/spookachtig",
+   "Vrolijk",
+   "Zakelijk",
+   "Romantisch"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "engels-cse-havo-vwo",
+  "file": "./engelsCseHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L2K",
+  "q": "*'Notwithstanding the criticism, the experiment yielded valuable results.'* Wat doet 'notwithstanding'?",
+  "opties": [
+   "Concessie/contrast",
+   "Versterking",
+   "Reden",
+   "Voorbeeld"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "engels-cse-havo-vwo",
+  "file": "./engelsCseHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Een opinion column met sarcastische toon test typisch:",
+  "opties": [
+   "Intentie + ironie herkennen",
+   "Spelling",
+   "Datums onthouden",
+   "Statistiek"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-cse-havo-vwo",
+  "file": "./engelsCseHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Welke vraag is typisch literair-fragment-vraag (VWO)?",
+  "opties": [
+   "'What does the silence at the dinner table reveal?'",
+   "'When was the law passed?'",
+   "'What is the GDP in 2020?'",
+   "'Define 'mitochondria'.'"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-cse-havo-vwo",
+  "file": "./engelsCseHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Voor een open vraag schrijf je antwoord het beste in:",
+  "opties": [
+   "Nederlandse volle zin met bewijs uit tekst",
+   "Engelse korte zin",
+   "Steekwoorden",
+   "Lang essay"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-cse-havo-vwo",
+  "file": "./engelsCseHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Een tekst zegt: *'The findings, while preliminary, suggest a new direction.'* Wat zegt dit over de bevindingen?",
+  "opties": [
+   "Voorlopig + suggestief, niet definitief",
+   "Definitief bewezen",
+   "Verkeerd",
+   "Compleet onaf"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-schrijven-spreken-havo-vwo",
+  "file": "./engelsSchrijvenSprekenHavoVwo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "3e persoon enkelvoud present simple krijgt:",
+  "opties": [
+   "-s aan einde werkwoord",
+   "Geen verandering",
+   "-ed",
+   "-ing"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-schrijven-spreken-havo-vwo",
+  "file": "./engelsSchrijvenSprekenHavoVwo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Welke is present perfect?",
+  "opties": [
+   "I have lived here for 10 years",
+   "I lived here 10 years ago",
+   "I am living here",
+   "I will live here"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "engels-schrijven-spreken-havo-vwo",
+  "file": "./engelsSchrijvenSprekenHavoVwo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "'If I had money, I would travel' is conditional type:",
+  "opties": [
+   "Type 2 (onwaarschijnlijk)",
+   "Type 1 (mogelijk)",
+   "Type 3 (verleden)",
+   "Type 0"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "engels-schrijven-spreken-havo-vwo",
+  "file": "./engelsSchrijvenSprekenHavoVwo.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "An apple — waarom 'an' ipv 'a'?",
+  "opties": [
+   "Apple begint met klinker-klank",
+   "Apple is meervoud",
+   "Apple is mannelijk",
+   "Geen regel"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-schrijven-spreken-havo-vwo",
+  "file": "./engelsSchrijvenSprekenHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Welk subject line is best?",
+  "opties": [
+   "Application for Marketing Internship Summer 2026",
+   "Hi",
+   "Question",
+   "Help please"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-schrijven-spreken-havo-vwo",
+  "file": "./engelsSchrijvenSprekenHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "'Please find my CV attached' is:",
+  "opties": [
+   "Standaard formele zin in sollicitatie",
+   "Te informeel",
+   "Verkeerd Engels",
+   "Te direct"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-schrijven-spreken-havo-vwo",
+  "file": "./engelsSchrijvenSprekenHavoVwo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Goede thesis-statement is:",
+  "opties": [
+   "Specifiek + omstreden + onderbouwbaar",
+   "Algemeen + neutraal",
+   "Lang + ingewikkeld",
+   "Vraag aan lezer"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-schrijven-spreken-havo-vwo",
+  "file": "./engelsSchrijvenSprekenHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Wat moet je vermijden in formele essay?",
+  "opties": [
+   "Contractions (don't, I'm)",
+   "Topic sentences",
+   "Connector-zinnen",
+   "Voorbeelden"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "engels-schrijven-spreken-havo-vwo",
+  "file": "./engelsSchrijvenSprekenHavoVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L2S",
+  "q": "Active voice is beter dan passive omdat:",
+  "opties": [
+   "Directer + sterker",
+   "Formeler",
+   "Engelser",
+   "Geen verschil"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "engels-schrijven-spreken-havo-vwo",
+  "file": "./engelsSchrijvenSprekenHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Wat moet je vermijden in spreek-examen?",
+  "opties": [
+   "Uit hoofd leren tekst",
+   "Speech-fillers",
+   "Vragen stellen",
+   "Voorbeelden"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "engels-schrijven-spreken-havo-vwo",
+  "file": "./engelsSchrijvenSprekenHavoVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Welke is beleefde manier om oneens te zijn?",
+  "opties": [
+   "'I see your point, but I think...'",
+   "'You're wrong'",
+   "'That's stupid'",
+   "'No'"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-schrijven-spreken-havo-vwo",
+  "file": "./engelsSchrijvenSprekenHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "'It's important TO ___' — wat volgt?",
+  "opties": [
+   "Infinitief (study, work, etc.)",
+   "Gerund (-ing)",
+   "Past simple",
+   "Past participle"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "engels-schrijven-spreken-havo-vwo",
+  "file": "./engelsSchrijvenSprekenHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Bij spreekexamen beoordeling kijkt examinator naar:",
+  "opties": [
+   "Inhoud + taal + uitspraak + interactie",
+   "Alleen woordenaantal",
+   "Alleen accent",
+   "Alleen grammatica"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "grieks-vwo",
+  "file": "./grieksVwo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Hoeveel naamvallen heeft Grieks?",
+  "opties": [
+   "5",
+   "6",
+   "4",
+   "3"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "grieks-vwo",
+  "file": "./grieksVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "SK",
+  "q": "Logos (λόγος) hoort bij welke declinatie?",
+  "opties": [
+   "2e (mannelijk -ος)",
+   "1e (vrouwelijk -α)",
+   "3e (divers)",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "grieks-vwo",
+  "file": "./grieksVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Welke geslachten heeft Grieks?",
+  "opties": [
+   "Mannelijk + vrouwelijk + onzijdig",
+   "Mannelijk + vrouwelijk",
+   "Mannelijk + niet-mannelijk",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "grieks-vwo",
+  "file": "./grieksVwo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Grieks aspect-onderscheid is uniek t.o.v. Latijn:",
+  "opties": [
+   "Imperfectief vs aoristisch vs perfectief",
+   "Twee tijden",
+   "Alleen verleden",
+   "Geen verschil"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "grieks-vwo",
+  "file": "./grieksVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "SK",
+  "q": "Hoeveel wijzen heeft Grieks?",
+  "opties": [
+   "4",
+   "2",
+   "6",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "grieks-vwo",
+  "file": "./grieksVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Grotgelijkenis komt van:",
+  "opties": [
+   "Plato",
+   "Aristoteles",
+   "Sokrates",
+   "Homerus"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "grieks-vwo",
+  "file": "./grieksVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Slag bij Marathon (490 v.Chr.) was tussen:",
+  "opties": [
+   "Atheners + Perzen",
+   "Atheners + Spartanen",
+   "Romeinen + Galliërs",
+   "Egyptenaren + Hettieten"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "grieks-vwo",
+  "file": "./grieksVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "K",
+  "q": "*Panta rhei* (πάντα ῥεῖ) van Heraclitus betekent:",
+  "opties": [
+   "Alles stroomt",
+   "Alles is één",
+   "Alles is verboden",
+   "Wijsheid is liefde"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "grieks-vwo",
+  "file": "./grieksVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "H",
+  "q": "Welke filosoof zei 'Ik weet dat ik niets weet'?",
+  "opties": [
+   "Sokrates",
+   "Plato",
+   "Aristoteles",
+   "Heraclitus"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "grieks-vwo",
+  "file": "./grieksVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Welk theaterstuk schreef Sofokles?",
+  "opties": [
+   "Oidipous Tyrannos",
+   "Medea",
+   "Wolken",
+   "Ilias"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "latijn-vwo",
+  "file": "./latijnVwo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Hoeveel letters had het klassieke Latijnse alfabet?",
+  "opties": [
+   "23",
+   "26",
+   "20",
+   "30"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "latijn-vwo",
+  "file": "./latijnVwo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "K",
+  "q": "MMXXV in arabische cijfers:",
+  "opties": [
+   "2025",
+   "2055",
+   "2520",
+   "1925"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "latijn-vwo",
+  "file": "./latijnVwo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Hoeveel naamvallen heeft het Latijn?",
+  "opties": [
+   "6",
+   "4",
+   "8",
+   "2"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "latijn-vwo",
+  "file": "./latijnVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Caesarem (acc) past bij welke functie?",
+  "opties": [
+   "Lijdend voorwerp",
+   "Onderwerp",
+   "Bezit",
+   "Aanspreken"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "latijn-vwo",
+  "file": "./latijnVwo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Amat is welke vorm?",
+  "opties": [
+   "3e persoon enkelvoud",
+   "2e persoon",
+   "1e meervoud",
+   "Imperatief"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "latijn-vwo",
+  "file": "./latijnVwo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Wanneer werd Rome gesticht volgens de legende?",
+  "opties": [
+   "753 v.Chr.",
+   "27 v.Chr.",
+   "476 n.Chr.",
+   "1492"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "latijn-vwo",
+  "file": "./latijnVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Welke betekenis heeft 'carpe diem'?",
+  "opties": [
+   "Pluk de dag",
+   "Met de dag",
+   "Lange dag",
+   "Donder dag"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "latijn-vwo",
+  "file": "./latijnVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is Pax Romana?",
+  "opties": [
+   "Periode van relatieve vrede",
+   "Vredesakkoord",
+   "Tempel",
+   "Sport"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "naamvallen-duits",
+  "file": "./naamvallenDuits.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "\"Ich gebe dem Mann das Buch.\" Welke naamval is 'dem Mann'?",
+  "opties": [
+   "Datief (meewerkend)",
+   "Nominatief",
+   "Accusatief",
+   "Genitief"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "naamvallen-duits",
+  "file": "./naamvallenDuits.js",
+  "stap": 8,
+  "vraag": 8,
+  "soort": "K",
+  "q": "Mein Vater fährt mit _____ Auto. (mit + DAT onzijdig)",
+  "opties": [
+   "dem",
+   "das",
+   "der",
+   "den"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "naamvallen-duits",
+  "file": "./naamvallenDuits.js",
+  "stap": 8,
+  "vraag": 9,
+  "soort": "K",
+  "q": "Hoeveel naamvallen heeft het Duits?",
+  "opties": [
+   "4",
+   "2",
+   "3",
+   "6"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "naamvallen-duits",
+  "file": "./naamvallenDuits.js",
+  "stap": 8,
+  "vraag": 11,
+  "soort": "L2",
+  "q": "Akkusativ = ___?",
+  "opties": [
+   "Lijdend voorwerp",
+   "Onderwerp",
+   "Meewerkend",
+   "Bezit"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "naamvallen-duits",
+  "file": "./naamvallenDuits.js",
+  "stap": 8,
+  "vraag": 12,
+  "soort": "L2",
+  "q": "Dativ = ___?",
+  "opties": [
+   "Meewerkend voorwerp",
+   "Onderwerp",
+   "Lijdend voorwerp",
+   "Bezit"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "past-tenses-engels",
+  "file": "./pastTensesEngels.js",
+  "stap": 9,
+  "vraag": 11,
+  "soort": "K",
+  "q": "Signaalwoord 'while' past meestal bij?",
+  "opties": [
+   "Past continuous",
+   "Past simple alleen",
+   "Present perfect",
+   "Future"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "past-tenses-engels",
+  "file": "./pastTensesEngels.js",
+  "stap": 9,
+  "vraag": 12,
+  "soort": "L",
+  "q": "Verschil 'I lived' vs 'I have lived'?",
+  "opties": [
+   "Lived = afgerond verleden; have lived = link met nu",
+   "Geen verschil",
+   "Beide present",
+   "Beide future"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "werkwoordsvervoeging-frans",
+  "file": "./werkwoordsvervoegingFrans.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "S",
+  "q": "Waarom 'j'aime' en niet 'je aime'?",
+  "opties": [
+   "Voor een klinker wordt je → j'",
+   "Omdat aimer onregelmatig is",
+   "Omdat 'aime' vrouwelijk is",
+   "Alleen in gedichten"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "werkwoordsvervoeging-frans",
+  "file": "./werkwoordsvervoegingFrans.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Wanneer gebruik je Imparfait?",
+  "opties": [
+   "Beschrijven hoe het was of een gewoonte",
+   "Een eenmalige, afgeronde actie",
+   "Iets wat nog moet gebeuren",
+   "Iets wat nu gebeurt"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ }
+]

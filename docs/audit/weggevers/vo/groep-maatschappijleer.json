@@ -1,0 +1,2082 @@
+[
+ {
+  "pad": "filosofie-havo-vwo",
+  "file": "./filosofieHavoVwo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "SK",
+  "q": "Aristoteles stond voor:",
+  "opties": [
+   "Leren door waarnemen",
+   "Een pure ideeën-wereld",
+   "Alleen goden bestuderen",
+   "Kennis is aangeboren"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "filosofie-havo-vwo",
+  "file": "./filosofieHavoVwo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Stoïcisme leert:",
+  "opties": [
+   "Aanvaard wat je niet kunt veranderen",
+   "Vermijd alle gevoelens",
+   "Zoek zoveel mogelijk genot",
+   "Streef naar zoveel mogelijk bezit"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "filosofie-havo-vwo",
+  "file": "./filosofieHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Verlichting-motto van Kant:",
+  "opties": [
+   "'Sapere aude' — durf te denken",
+   "'Ik denk, dus ik ben'",
+   "'Alles stroomt'",
+   "'God is dood'"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "filosofie-havo-vwo",
+  "file": "./filosofieHavoVwo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Kants categorische imperatief:",
+  "opties": [
+   "Handel zo dat je regel een algemene wet kan worden",
+   "Doe wat je wil",
+   "Volg God",
+   "Maximaliseer plezier"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "filosofie-havo-vwo",
+  "file": "./filosofieHavoVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Utilitarisme (Bentham/Mill):",
+  "opties": [
+   "Grootste geluk voor het grootste aantal",
+   "Plicht boven gevolg",
+   "Individu boven groep",
+   "Leef volgens de deugden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "filosofie-havo-vwo",
+  "file": "./filosofieHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Hegels dialectiek:",
+  "opties": [
+   "These → antithese → synthese",
+   "Argumenten in een cirkel",
+   "Twijfel aan alles",
+   "Wiskundig bewijs"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "filosofie-havo-vwo",
+  "file": "./filosofieHavoVwo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "'Je wordt niet vrouw geboren, je wordt het' is van:",
+  "opties": [
+   "Simone de Beauvoir",
+   "Sartre",
+   "Camus",
+   "Foucault"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "filosofie-havo-vwo",
+  "file": "./filosofieHavoVwo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L2K",
+  "q": "Rawls' 'veil of ignorance' vraagt:",
+  "opties": [
+   "Kies regels zonder je eigen positie te kennen",
+   "Sluit je ogen voor onrecht",
+   "Negeer de geschiedenis",
+   "Kies regels die jou het meeste opleveren"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "filosofie-havo-vwo",
+  "file": "./filosofieHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Hannah Arendts 'banaliteit van het kwaad':",
+  "opties": [
+   "Gewone mensen kunnen groot kwaad doen",
+   "Kwaad is altijd spectaculair",
+   "Alleen monsters plegen groot kwaad",
+   "Kwaad bestaat niet echt"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "filosofie-havo-vwo",
+  "file": "./filosofieHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Deontologie (Kant) zou bij trolley-probleem zeggen:",
+  "opties": [
+   "Niet doen — actief een onschuldige doden mag niet",
+   "Doen — 5>1",
+   "Doen, als de meerderheid dat wil",
+   "Doe wat je wil"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "filosofie-havo-vwo",
+  "file": "./filosofieHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Drogreden 'hellend vlak' is:",
+  "opties": [
+   "Onbewezen kettingredenering van A naar Z",
+   "Logische argumentatie",
+   "Wiskundig bewijs",
+   "Persoonlijke voorkeur"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "filosofie-havo-vwo",
+  "file": "./filosofieHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "NL euthanasie-wet vereist:",
+  "opties": [
+   "Uitzichtloos lijden + toetsing door artsen",
+   "Alleen een verzoek van de patiënt",
+   "Euthanasie is verboden",
+   "Iedereen kan euthanasie krijgen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "filosofie-havo-vwo",
+  "file": "./filosofieHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Welk rijtje wordt vaak genoemd als hoofdwaarden van de westerse ethiek?",
+  "opties": [
+   "Vrijheid, gelijkheid, solidariteit, verantwoordelijkheid",
+   "Macht, geld, rust, plezier",
+   "God, koning, vaderland",
+   "Eer, gehoorzaamheid, traditie, orde"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "filosofie-vwo",
+  "file": "./filosofieVwo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Welke kennis is analytisch?",
+  "opties": [
+   "Alle vrijgezellen zijn ongehuwd",
+   "Water kookt bij 100°C",
+   "Aarde is rond",
+   "Sokrates was leraar"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "filosofie-vwo",
+  "file": "./filosofieVwo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wie zegt: 'esse est percipi' (zijn = waargenomen worden)?",
+  "opties": [
+   "George Berkeley",
+   "Plato",
+   "Aristoteles",
+   "Hume"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "filosofie-vwo",
+  "file": "./filosofieVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Bij dualisme (Descartes) zijn er hoeveel substanties?",
+  "opties": [
+   "Twee",
+   "Een",
+   "Drie",
+   "Oneindig"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "filosofie-vwo",
+  "file": "./filosofieVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Welk standpunt verzoent vrije wil + determinisme?",
+  "opties": [
+   "Compatibilisme",
+   "Libertarisme",
+   "Hard determinisme",
+   "Idealisme"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "filosofie-vwo",
+  "file": "./filosofieVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is het probleem van het kwaad?",
+  "opties": [
+   "Hoe kan God almachtig + goed zijn bij veel lijden?",
+   "Wat is moreel kwaad?",
+   "Hoe stop je oorlog?",
+   "Wat is zonde?"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "filosofie-vwo",
+  "file": "./filosofieVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Volgens Spinoza is alles:",
+  "opties": [
+   "Uitdrukking van één substantie",
+   "Twee aparte werelden",
+   "Toeval",
+   "Illusie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "filosofie-vwo",
+  "file": "./filosofieVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Aristotelische eudaimonia betekent:",
+  "opties": [
+   "Goed leven / menselijke bloei",
+   "Geluksgevoel (kort)",
+   "Roem",
+   "Rijkdom"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "filosofie-vwo",
+  "file": "./filosofieVwo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Hobbes' natuurtoestand wordt beschreven als:",
+  "opties": [
+   "Oorlog van allen tegen allen",
+   "Paradijs",
+   "Communistisch",
+   "Vrij + vredig"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "filosofie-vwo",
+  "file": "./filosofieVwo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Rawls' sluier van onwetendheid test:",
+  "opties": [
+   "Welke principes je kiest als je niet weet wie je wordt",
+   "Welke principes jou persoonlijk het meest opleveren",
+   "Welke principes de meerderheid nu al aanhangt",
+   "Of mensen eerlijk zijn als niemand kijkt"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "filosofie-vwo",
+  "file": "./filosofieVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Montesquieus scheiding der machten:",
+  "opties": [
+   "Wetgevend / uitvoerend / rechterlijk",
+   "Staat / kerk",
+   "Rijk / arm",
+   "Stad / platteland"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "filosofie-vwo",
+  "file": "./filosofieVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Aristoteles' deugd ligt volgens hem:",
+  "opties": [
+   "Tussen twee uitersten",
+   "Aan extreme kant",
+   "Bij meerderheid",
+   "Bij God"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "filosofie-vwo",
+  "file": "./filosofieVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Foucault stelt: macht is:",
+  "opties": [
+   "Overal aanwezig + relationeel",
+   "Alleen bij staat",
+   "Alleen onderdrukkend",
+   "Niet bestaand"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "filosofie-vwo",
+  "file": "./filosofieVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Nietzsches beroemde uitspraak 'God is dood' betekent:",
+  "opties": [
+   "Het geloof in God verliest zijn gezag",
+   "God is letterlijk gestorven",
+   "God bestaat niet",
+   "Atheïsme verplicht"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "maatschappijleer-havo-vwo",
+  "file": "./maatschappijleerHavoVwo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Hoeveel leden heeft de Tweede Kamer?",
+  "opties": [
+   "150",
+   "75",
+   "100",
+   "225"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "maatschappijleer-havo-vwo",
+  "file": "./maatschappijleerHavoVwo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "H",
+  "q": "Trias politica is bedacht door:",
+  "opties": [
+   "Montesquieu",
+   "Karl Marx",
+   "John Locke",
+   "Rousseau"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "maatschappijleer-havo-vwo",
+  "file": "./maatschappijleerHavoVwo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is een kabinet?",
+  "opties": [
+   "Ministers + staatssecretarissen samen",
+   "Koning + ministers",
+   "Alle volksvertegenwoordigers",
+   "Politieke partij"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "maatschappijleer-havo-vwo",
+  "file": "./maatschappijleerHavoVwo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Sinds wanneer hebben vrouwen stemrecht in NL?",
+  "opties": [
+   "1919",
+   "1948",
+   "1789",
+   "1965"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "maatschappijleer-havo-vwo",
+  "file": "./maatschappijleerHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat zijn push-factoren bij migratie?",
+  "opties": [
+   "Redenen om thuisland te verlaten",
+   "Aantrekkings-redenen",
+   "Welvaart-creatie",
+   "Politiek-belang"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "maatschappijleer-havo-vwo",
+  "file": "./maatschappijleerHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L2K",
+  "q": "Toeslagenaffaire illustreert:",
+  "opties": [
+   "Discriminatie door de overheid",
+   "Goede uitvoering belastingen",
+   "Migratiebeleid",
+   "Sociaal vangnet"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "maatschappijleer-havo-vwo",
+  "file": "./maatschappijleerHavoVwo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Klassieke grondrechten beschermen burger:",
+  "opties": [
+   "Tegen de overheid",
+   "Voor overheid",
+   "Tegen andere burgers alleen",
+   "Tegen EU"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "maatschappijleer-havo-vwo",
+  "file": "./maatschappijleerHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Welk verdrag is juridisch bindend voor lidstaten?",
+  "opties": [
+   "EVRM (Europees Verdrag)",
+   "UVRM (VN)",
+   "Geen",
+   "Allebei niet"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "maatschappijleer-havo-vwo",
+  "file": "./maatschappijleerHavoVwo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Witteboorden-criminaliteit wordt gepleegd door:",
+  "opties": [
+   "'Nette' mensen in hun beroep",
+   "Tieners",
+   "Daklozen",
+   "Buitenlandse groepen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "maatschappijleer-havo-vwo",
+  "file": "./maatschappijleerHavoVwo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Aangifte-bereidheid bij politie:",
+  "opties": [
+   "Sterk gedaald sinds 2002",
+   "Sterk gestegen",
+   "Stabiel",
+   "Onbekend"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "maatschappijleer-havo-vwo",
+  "file": "./maatschappijleerHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Broken windows-theorie zegt:",
+  "opties": [
+   "Verloedering buurt → meer criminaliteit",
+   "Cameratoezicht werkt niet",
+   "Politie heeft macht",
+   "Te veel diefstal"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "maatschappijleer-havo-vwo",
+  "file": "./maatschappijleerHavoVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Subjectieve veiligheid is:",
+  "opties": [
+   "Hoe veilig je je voelt",
+   "Aantal misdrijven",
+   "Politie-cijfers",
+   "Cameratoezicht"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "maatschappijleer-havo-vwo",
+  "file": "./maatschappijleerHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een filterbubbel?",
+  "opties": [
+   "Online omgeving waar je alleen eigen mening tegenkomt",
+   "Filter wasmachine",
+   "Soort bubbeltjes",
+   "Internet-protocol"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "maatschappijleer-havo-vwo",
+  "file": "./maatschappijleerHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "S",
+  "q": "Hoe wordt NPO gefinancierd?",
+  "opties": [
+   "Belasting",
+   "Alleen reclame",
+   "Donaties",
+   "Aandeelhouders"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "maatschappijleer-havo-vwo",
+  "file": "./maatschappijleerHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Wat is bronbescherming voor journalisten?",
+  "opties": [
+   "Recht om bron niet te onthullen",
+   "Verzekering tegen geweld",
+   "Vrije parkeerplaats",
+   "Goedkope koffie"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "maatschappijleer-havo-vwo",
+  "file": "./maatschappijleerHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Vierde macht is een ander woord voor:",
+  "opties": [
+   "Onafhankelijke media",
+   "Politie",
+   "Leger",
+   "EU"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "maatschappijleer-havo-vwo",
+  "file": "./maatschappijleerHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Onderzoeker Jonathan Haidt waarschuwt voor:",
+  "opties": [
+   "Mentale gezondheid jongeren door sociale media",
+   "Klimaatverandering",
+   "Inflatie",
+   "Migratie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "maatschappijwetenschappen-havo-vwo",
+  "file": "./maatschappijwetenschappenHavoVwo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Max Weber's drie soorten gezag zijn:",
+  "opties": [
+   "Traditioneel / charismatisch / rationeel-legaal",
+   "Goed / slecht / neutraal",
+   "Wettelijk / illegaal",
+   "Mannelijk / vrouwelijk / divers"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "maatschappijwetenschappen-havo-vwo",
+  "file": "./maatschappijwetenschappenHavoVwo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "NL is een constitutionele monarchie + parlementaire democratie. Wat houdt 'constitutionele' in?",
+  "opties": [
+   "Koning gebonden aan grondwet, niet absoluut",
+   "Koning kiest minister",
+   "Volledig democratisch",
+   "Geen regering"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "maatschappijwetenschappen-havo-vwo",
+  "file": "./maatschappijwetenschappenHavoVwo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is een burgerinitiatief?",
+  "opties": [
+   "Met handtekeningen een onderwerp op de Kamer-agenda zetten",
+   "Verplicht stemmen",
+   "Een wet over burgers",
+   "Belasting initiatief"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "maatschappijwetenschappen-havo-vwo",
+  "file": "./maatschappijwetenschappenHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Primaire socialisatie vindt vooral plaats in:",
+  "opties": [
+   "Familie / gezin",
+   "School",
+   "Werk",
+   "Online"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "maatschappijwetenschappen-havo-vwo",
+  "file": "./maatschappijwetenschappenHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Affectieve polarisatie is:",
+  "opties": [
+   "Emotionele afkeer van de andere groep",
+   "Geweld",
+   "Verkiezingen",
+   "Migratie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "maatschappijwetenschappen-havo-vwo",
+  "file": "./maatschappijwetenschappenHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Durkheim's verschil traditioneel vs modern:",
+  "opties": [
+   "Mechanische → organische solidariteit",
+   "Religieus → atheïstisch",
+   "Boer → arbeider",
+   "Rijk → arm"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "maatschappijwetenschappen-havo-vwo",
+  "file": "./maatschappijwetenschappenHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Bridging capital (Putnam) is:",
+  "opties": [
+   "Verbinding tussen verschillende groepen",
+   "Binnen eigen groep",
+   "Internetkabel",
+   "Geld lenen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "maatschappijwetenschappen-havo-vwo",
+  "file": "./maatschappijwetenschappenHavoVwo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Secularisatie betekent:",
+  "opties": [
+   "Religie verliest maatschappelijke invloed",
+   "Mensen worden religieuzer",
+   "Meer kerken bouwen",
+   "Religieus onderwijs"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "maatschappijwetenschappen-havo-vwo",
+  "file": "./maatschappijwetenschappenHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Weber verbond opkomst kapitalisme met:",
+  "opties": [
+   "Calvinistische werkethiek",
+   "Boeddhisme",
+   "Communisme",
+   "Tovenarij"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "maatschappijwetenschappen-havo-vwo",
+  "file": "./maatschappijwetenschappenHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Bourdieu's habitus is:",
+  "opties": [
+   "Aangeleerde manier van denken en doen",
+   "Geld",
+   "Klederdracht",
+   "Habitat (woonomgeving)"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "maatschappijwetenschappen-havo-vwo",
+  "file": "./maatschappijwetenschappenHavoVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Beck's risikogesellschaft zegt dat moderne maatschappij:",
+  "opties": [
+   "Zelf nieuwe risico's produceert",
+   "Geen risico's heeft",
+   "Alleen oude risico's",
+   "Veilig is"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "maatschappijwetenschappen-havo-vwo",
+  "file": "./maatschappijwetenschappenHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Welk generatie-kenmerk past bij Gen Z?",
+  "opties": [
+   "Smartphone-natives + klimaat-angst",
+   "WO2-trauma",
+   "Wederopbouw-optimisme",
+   "No future jaren '80"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "maatschappijwetenschappen-havo-vwo",
+  "file": "./maatschappijwetenschappenHavoVwo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Welk recht is een klassiek grondrecht?",
+  "opties": [
+   "Vrijheid van meningsuiting",
+   "Recht op werk",
+   "Recht op zorg",
+   "Recht op vakantie"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "maatschappijwetenschappen-havo-vwo",
+  "file": "./maatschappijwetenschappenHavoVwo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L2S",
+  "q": "EVRM verschilt van UVRM doordat:",
+  "opties": [
+   "EVRM is juridisch bindend",
+   "UVRM is bindend",
+   "Geen verschil",
+   "UVRM is Europees"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "maatschappijwetenschappen-havo-vwo",
+  "file": "./maatschappijwetenschappenHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Welk recht is privaat recht?",
+  "opties": [
+   "Koopcontract tussen burgers",
+   "Strafrecht",
+   "Belastingrecht",
+   "Vreemdelingenrecht"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "maatschappijwetenschappen-havo-vwo",
+  "file": "./maatschappijwetenschappenHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "K",
+  "q": "De Toeslagenaffaire illustreert vooral falen van:",
+  "opties": [
+   "Rechtsstaat",
+   "Verkiezingen",
+   "NAVO",
+   "EU"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "maatschappijwetenschappen-havo-vwo",
+  "file": "./maatschappijwetenschappenHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L2K",
+  "q": "Welk concept gaat over gedeelde waarden + cultuur?",
+  "opties": [
+   "Cognitieve binding",
+   "Politiek",
+   "Macht",
+   "Privaat recht"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "maatschappijwetenschappen-havo-vwo",
+  "file": "./maatschappijwetenschappenHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Scheiding der machten voorkomt:",
+  "opties": [
+   "Tirannie",
+   "Belastingontduiking",
+   "Klimaatverandering",
+   "Migratie"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "maatschappijwetenschappen-havo-vwo",
+  "file": "./maatschappijwetenschappenHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Wat is populisme als ideologie?",
+  "opties": [
+   "Volk tegenover elite",
+   "Religieus extremisme",
+   "Communisme",
+   "Liberalisme"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "media-wijsheid-maatschappijleer",
+  "file": "./mediaWijsheidMaatschappijleer.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is mediawijsheid?",
+  "opties": [
+   "Kritisch omgaan met alle media",
+   "Heel veel media kijken",
+   "Tegen media zijn",
+   "Telefoon weg"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "media-wijsheid-maatschappijleer",
+  "file": "./mediaWijsheidMaatschappijleer.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is satire?",
+  "opties": [
+   "Grappige nep — niet serieus bedoeld",
+   "Echt nieuws",
+   "Reclame",
+   "Mening"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "media-wijsheid-maatschappijleer",
+  "file": "./mediaWijsheidMaatschappijleer.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Hoeveel uur per dag zitten kinderen en tieners gemiddeld op een scherm?",
+  "opties": [
+   "4-7 uur",
+   "1 uur",
+   "30 min",
+   "12+ uur"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "media-wijsheid-maatschappijleer",
+  "file": "./mediaWijsheidMaatschappijleer.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Welke is geen media?",
+  "opties": [
+   "Een glas water",
+   "Krant",
+   "TikTok",
+   "Radio"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "media-wijsheid-maatschappijleer",
+  "file": "./mediaWijsheidMaatschappijleer.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is desinformatie?",
+  "opties": [
+   "Opzettelijk onjuiste info om te misleiden",
+   "Per ongeluk onjuist",
+   "Mening",
+   "Reclame"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "media-wijsheid-maatschappijleer",
+  "file": "./mediaWijsheidMaatschappijleer.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Hoe check je een nieuwsbericht?",
+  "opties": [
+   "Meerdere bronnen vergelijken",
+   "Eerst delen",
+   "1 keer lezen",
+   "Alleen kop kijken"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "media-wijsheid-maatschappijleer",
+  "file": "./mediaWijsheidMaatschappijleer.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is clickbait?",
+  "opties": [
+   "Misleidende kop voor clicks",
+   "Echt nieuws",
+   "Saaie kop",
+   "Reclame"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "media-wijsheid-maatschappijleer",
+  "file": "./mediaWijsheidMaatschappijleer.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is een filterbubbel?",
+  "opties": [
+   "Zelfde meningen + content steeds zien",
+   "Reclame-blok",
+   "Filter op camera",
+   "Privacy-instellingen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "media-wijsheid-maatschappijleer",
+  "file": "./mediaWijsheidMaatschappijleer.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Hoe schermtijd verminderen?",
+  "opties": [
+   "App-limieten + notificaties uit",
+   "Meer apps installeren",
+   "Vaker checken",
+   "Niets doen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "media-wijsheid-maatschappijleer",
+  "file": "./mediaWijsheidMaatschappijleer.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "SK",
+  "q": "Wat doen influencers met merken?",
+  "opties": [
+   "Betaald aanprijzen",
+   "Gratis aanbevelen",
+   "Negatief beoordelen",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "media-wijsheid-maatschappijleer",
+  "file": "./mediaWijsheidMaatschappijleer.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Tracking cookies — wat doen ze?",
+  "opties": [
+   "Volgen jou van site naar site",
+   "Maken site sneller",
+   "Verwijderen reclame",
+   "Beveiligen wachtwoord"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "media-wijsheid-maatschappijleer",
+  "file": "./mediaWijsheidMaatschappijleer.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat doe je bij cyberpesten?",
+  "opties": [
+   "Niet reageren, bewijs bewaren, melden",
+   "Terug pesten",
+   "Je account meteen verwijderen",
+   "Wachtwoord delen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "media-wijsheid-maatschappijleer",
+  "file": "./mediaWijsheidMaatschappijleer.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "SK",
+  "q": "Kindertelefoon-nummer?",
+  "opties": [
+   "0800-0432",
+   "112",
+   "0900-9292",
+   "Onbekend"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "media-wijsheid-maatschappijleer",
+  "file": "./mediaWijsheidMaatschappijleer.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is grooming?",
+  "opties": [
+   "Volwassene bouwt online vertrouwen met kind voor misbruik",
+   "Haartrim",
+   "Sport",
+   "Game"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "media-wijsheid-maatschappijleer",
+  "file": "./mediaWijsheidMaatschappijleer.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Bij sextortion — wat doen?",
+  "opties": [
+   "Niet betalen, melden bij politie",
+   "Betalen",
+   "Negeren",
+   "Foto sturen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "media-wijsheid-maatschappijleer",
+  "file": "./mediaWijsheidMaatschappijleer.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Mediawijsheid is?",
+  "opties": [
+   "Kritisch met media omgaan",
+   "Tegen media",
+   "Geen media",
+   "Veel media"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "media-wijsheid-maatschappijleer",
+  "file": "./mediaWijsheidMaatschappijleer.js",
+  "stap": 5,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Desinformatie = ?",
+  "opties": [
+   "Opzettelijk onjuist",
+   "Per ongeluk",
+   "Mening",
+   "Reclame"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "media-wijsheid-maatschappijleer",
+  "file": "./mediaWijsheidMaatschappijleer.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Wat doen algoritmes?",
+  "opties": [
+   "Kiezen wat jij ziet",
+   "Verbergen reclame",
+   "Beveiligen",
+   "Doen niets"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "media-wijsheid-maatschappijleer",
+  "file": "./mediaWijsheidMaatschappijleer.js",
+  "stap": 5,
+  "vraag": 4,
+  "soort": "L2K",
+  "q": "2FA = ?",
+  "opties": [
+   "Twee-staps-verificatie",
+   "Twee accounts",
+   "2x foto",
+   "Tweede e-mailadres"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mensenrechten-maatschappijleer",
+  "file": "./mensenrechtenMaatschappijleer.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "S",
+  "q": "Universeel betekent ... ?",
+  "opties": [
+   "Geldt voor alle mensen",
+   "Alleen voor Europeanen",
+   "Alleen voor mannen",
+   "Onbekend"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mensenrechten-maatschappijleer",
+  "file": "./mensenrechtenMaatschappijleer.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Welke historische gebeurtenis was direct aanleiding voor moderne mensenrechten?",
+  "opties": [
+   "WO2 (1939-1945) + Holocaust",
+   "Romeinse Rijk",
+   "Industriële Revolutie",
+   "WO1"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mensenrechten-maatschappijleer",
+  "file": "./mensenrechtenMaatschappijleer.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Welke organisatie nam UVRM aan?",
+  "opties": [
+   "Verenigde Naties (VN)",
+   "EU",
+   "NAVO",
+   "VS"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mensenrechten-maatschappijleer",
+  "file": "./mensenrechtenMaatschappijleer.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Wat zegt Artikel 1 UVRM?",
+  "opties": [
+   "Iedereen gelijk + vrij geboren",
+   "Niemand mag stelen",
+   "Iedereen moet werken",
+   "Kinderen niet werken"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mensenrechten-maatschappijleer",
+  "file": "./mensenrechtenMaatschappijleer.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Vrijheid van meningsuiting — welke generatie?",
+  "opties": [
+   "1e (burgerlijk + politiek)",
+   "2e (sociaal)",
+   "3e (collectief)",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mensenrechten-maatschappijleer",
+  "file": "./mensenrechtenMaatschappijleer.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "S",
+  "q": "Recht op onderwijs — welke generatie?",
+  "opties": [
+   "2e (sociaal-economisch)",
+   "1e (burgerlijk + politiek)",
+   "3e (collectief)",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mensenrechten-maatschappijleer",
+  "file": "./mensenrechtenMaatschappijleer.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is de Toeslagenaffaire?",
+  "opties": [
+   "Duizenden ouders onterecht beschuldigd van fraude",
+   "Een belastingverlaging",
+   "Een nieuw toeslagsysteem",
+   "Niet relevant"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mensenrechten-maatschappijleer",
+  "file": "./mensenrechtenMaatschappijleer.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Hoeveel kinderen werkten wereldwijd ongeveer in 2020 (ILO)?",
+  "opties": [
+   "~160 miljoen",
+   "~10.000",
+   "~1 miljard",
+   "~1.000"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mensenrechten-maatschappijleer",
+  "file": "./mensenrechtenMaatschappijleer.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Amnesty International is een ... ?",
+  "opties": [
+   "NGO voor mensenrechten",
+   "Politieke partij",
+   "Bedrijf",
+   "VN-orgaan"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mensenrechten-maatschappijleer",
+  "file": "./mensenrechtenMaatschappijleer.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Welke 5 landen hebben veto-recht in VN-Veiligheidsraad?",
+  "opties": [
+   "VS, China, Rusland, Frankrijk, UK",
+   "G7-landen",
+   "EU-leden",
+   "VN-Algemene Vergadering"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mensenrechten-maatschappijleer",
+  "file": "./mensenrechtenMaatschappijleer.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat doet Amnesty International?",
+  "opties": [
+   "Vecht voor mensenrechten wereldwijd",
+   "Maakt wetten",
+   "Heeft militair leger",
+   "Verkoopt verzekeringen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mensenrechten-maatschappijleer",
+  "file": "./mensenrechtenMaatschappijleer.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Waar kun je in NL klagen over de overheid?",
+  "opties": [
+   "Nationale Ombudsman",
+   "Politieke partij",
+   "School",
+   "Bibliotheek"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mensenrechten-maatschappijleer",
+  "file": "./mensenrechtenMaatschappijleer.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een mensenrecht?",
+  "opties": [
+   "Recht dat iedereen heeft als mens",
+   "Recht van rijke mensen",
+   "Een wet uit 2000",
+   "Iets dat niemand heeft"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mensenrechten-maatschappijleer",
+  "file": "./mensenrechtenMaatschappijleer.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Vrijheid van meningsuiting — welke generatie?",
+  "opties": [
+   "1e (burgerlijk + politiek)",
+   "2e (sociaal-economisch)",
+   "3e (collectief)",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mensenrechten-maatschappijleer",
+  "file": "./mensenrechtenMaatschappijleer.js",
+  "stap": 5,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Welke NGO begon met 'schrijfacties' voor politieke gevangenen?",
+  "opties": [
+   "Amnesty International",
+   "Greenpeace",
+   "Rode Kruis",
+   "WWF"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mensenrechten-vn-havo-vwo",
+  "file": "./mensenrechtenVnHavoVwo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "K",
+  "q": "UDHR werd aangenomen op:",
+  "opties": [
+   "10 december 1948",
+   "10 december 1945",
+   "1 januari 2000",
+   "Geen vaste datum"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mensenrechten-vn-havo-vwo",
+  "file": "./mensenrechtenVnHavoVwo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L2K",
+  "q": "1e generatie mensenrechten zijn:",
+  "opties": [
+   "Burger- en politieke rechten",
+   "Economische rechten",
+   "Collectieve rechten",
+   "Geen onderscheid"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mensenrechten-vn-havo-vwo",
+  "file": "./mensenrechtenVnHavoVwo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "EVRM (Europees Verdrag) wordt afgedwongen door:",
+  "opties": [
+   "Europees Hof voor de Rechten van de Mens",
+   "VN-Veiligheidsraad",
+   "Internationaal Strafhof Den Haag",
+   "Geen rechtbank"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mensenrechten-vn-havo-vwo",
+  "file": "./mensenrechtenVnHavoVwo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Convention on the Rights of the Child (CRC):",
+  "opties": [
+   "Kinderrechtenverdrag uit 1989",
+   "Volwassenen-verdrag",
+   "Bestaat niet",
+   "Alleen Europees"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mensenrechten-vn-havo-vwo",
+  "file": "./mensenrechtenVnHavoVwo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Welke landen hebben vetorecht in VN-Veiligheidsraad?",
+  "opties": [
+   "VS, UK, Frankrijk, Rusland, China",
+   "Alle 193 lidstaten",
+   "Geen — niet meer",
+   "Alleen VS"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mensenrechten-vn-havo-vwo",
+  "file": "./mensenrechtenVnHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Hoeveel lidstaten heeft de VN?",
+  "opties": [
+   "193",
+   "100",
+   "50",
+   "Onbeperkt"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mensenrechten-vn-havo-vwo",
+  "file": "./mensenrechtenVnHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "K",
+  "q": "VN vredesoperatie-troepen worden genoemd:",
+  "opties": [
+   "Blauwhelmen",
+   "Marines",
+   "Brigade Anti-Terreur",
+   "Groene baretten"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mensenrechten-vn-havo-vwo",
+  "file": "./mensenrechtenVnHavoVwo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat doet ICC (International Criminal Court)?",
+  "opties": [
+   "Berecht personen voor oorlogsmisdaden",
+   "Beslecht staten-conflicten",
+   "Maakt VN-wetten",
+   "Bewaakt grenzen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mensenrechten-vn-havo-vwo",
+  "file": "./mensenrechtenVnHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Neurenberg-principe:",
+  "opties": [
+   "'Orders volgen' geen verdediging voor oorlogsmisdaden",
+   "Soldaten altijd vrij",
+   "Alleen leiders berecht",
+   "Geen straf mogelijk"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mensenrechten-vn-havo-vwo",
+  "file": "./mensenrechtenVnHavoVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Genocide-definitie vereist:",
+  "opties": [
+   "Opzet om een etnische of religieuze groep te vernietigen",
+   "Veel doden",
+   "Etnisch geweld",
+   "Politieke conflicten"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mensenrechten-vn-havo-vwo",
+  "file": "./mensenrechtenVnHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Universele jurisdictie:",
+  "opties": [
+   "Sommige misdrijven zo erg dat elke staat ze mag berechten",
+   "Alleen eigen burger",
+   "Bestaat niet",
+   "VN beslist altijd"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mensenrechten-vn-havo-vwo",
+  "file": "./mensenrechtenVnHavoVwo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Oeigoeren (China-Xinjiang) volgens westerse bronnen:",
+  "opties": [
+   "Meer dan 1 miljoen vastgehouden in kampen",
+   "Vrijheid",
+   "Normale werkomstandigheden",
+   "Geen probleem"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mensenrechten-vn-havo-vwo",
+  "file": "./mensenrechtenVnHavoVwo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "ICC-arrestatiebevel Poetin (maart 2023) voor:",
+  "opties": [
+   "Deportatie van Oekraïense kinderen",
+   "Cyberaanvallen",
+   "Sancties",
+   "Verkiezingen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mensenrechten-vn-havo-vwo",
+  "file": "./mensenrechtenVnHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L2K",
+  "q": "Mahsa Amini-protesten Iran (2022):",
+  "opties": [
+   "Protest tegen de verplichte hoofddoek en het regime",
+   "Protest tegen klimaatverandering",
+   "Protest tegen hoge prijzen",
+   "Protest tegen een oorlog met een buurland"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mensenrechten-vn-havo-vwo",
+  "file": "./mensenrechtenVnHavoVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "SK",
+  "q": "Hoeveel landen criminaliseren homoseksualiteit nog (2024)?",
+  "opties": [
+   "~64 landen",
+   "Geen",
+   "Alle behalve EU",
+   "200+"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mensenrechten-vn-havo-vwo",
+  "file": "./mensenrechtenVnHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Art. 1 Nederlandse Grondwet verbiedt:",
+  "opties": [
+   "Discriminatie op welke grond dan ook",
+   "Alleen rassendiscriminatie",
+   "Niets",
+   "Vrijheid"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mensenrechten-vn-havo-vwo",
+  "file": "./mensenrechtenVnHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Toeslagenaffaire is voorbeeld van:",
+  "opties": [
+   "Discriminatie en onterechte fraudebeschuldigingen",
+   "Slecht weer",
+   "Goed beleid",
+   "Geen issue"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mensenrechten-vn-havo-vwo",
+  "file": "./mensenrechtenVnHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Urgenda-zaak (2019):",
+  "opties": [
+   "Rechter dwong de staat tot meer CO₂-reductie",
+   "Verloor",
+   "Geen klimaat-zaak",
+   "Shell moest van de rechter minder uitstoten"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mensenrechten-vn-havo-vwo",
+  "file": "./mensenrechtenVnHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "College voor de Rechten van de Mens (NL):",
+  "opties": [
+   "Instituut dat discriminatieklachten beoordeelt",
+   "Politie",
+   "Rechter",
+   "Geen functie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mensenrechten-vn-havo-vwo",
+  "file": "./mensenrechtenVnHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is effectiefste persoonlijke actie voor mensenrechten?",
+  "opties": [
+   "Combinatie: stemmen + ngo-lid + bewust kopen + onderwijs",
+   "Niets doen",
+   "Alleen klagen",
+   "Alleen geld geven"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederlandse-staat-maatschappijleer",
+  "file": "./nederlandseStaatMaatschappijleer.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is een constitutionele monarchie?",
+  "opties": [
+   "Koning heeft beperkte macht door grondwet",
+   "Koning heeft alle macht",
+   "Geen koning, alleen president",
+   "Geen wet"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederlandse-staat-maatschappijleer",
+  "file": "./nederlandseStaatMaatschappijleer.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wat is een coalitie?",
+  "opties": [
+   "Meerdere partijen die samen regeren",
+   "Een politieke partij",
+   "Een verkiezingscampagne",
+   "Een internationaal verdrag"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "nederlandse-staat-maatschappijleer",
+  "file": "./nederlandseStaatMaatschappijleer.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Hoe wordt de Eerste Kamer gekozen?",
+  "opties": [
+   "Indirect, door Provinciale Staten",
+   "Direct, door het volk",
+   "Door de Koning",
+   "Door de premier"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederlandse-staat-maatschappijleer",
+  "file": "./nederlandseStaatMaatschappijleer.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wie is de huidige Koning van Nederland?",
+  "opties": [
+   "Willem-Alexander",
+   "Beatrix",
+   "Juliana",
+   "Amalia"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "nederlandse-staat-maatschappijleer",
+  "file": "./nederlandseStaatMaatschappijleer.js",
+  "stap": 6,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat zegt artikel 1 van de Grondwet?",
+  "opties": [
+   "Iedereen wordt in gelijke gevallen gelijk behandeld",
+   "De Koning is staatshoofd",
+   "Stemmen vanaf 18 jaar",
+   "Vrijheid van godsdienst"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederlandse-staat-maatschappijleer",
+  "file": "./nederlandseStaatMaatschappijleer.js",
+  "stap": 7,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een rechtsstaat?",
+  "opties": [
+   "Land waar iedereen zich aan dezelfde wetten moet houden",
+   "Land geleid door rechters",
+   "Land zonder politie",
+   "Land met religieuze regering"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederlandse-staat-maatschappijleer",
+  "file": "./nederlandseStaatMaatschappijleer.js",
+  "stap": 9,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wat betekent artikel 5 van de NAVO?",
+  "opties": [
+   "Aanval op één lid = aanval op allen",
+   "Iedereen krijgt euro's",
+   "Vrij verkeer van personen",
+   "Geen oorlog tussen leden"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "nederlandse-staat-maatschappijleer",
+  "file": "./nederlandseStaatMaatschappijleer.js",
+  "stap": 10,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Wat is de NAVO (Noord-Atlantische Verdragsorganisatie)?",
+  "opties": [
+   "Militair bondgenootschap",
+   "Een EU-instituut",
+   "Een Nederlandse politieke partij",
+   "Een sportbond"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "nederlandse-staat-maatschappijleer",
+  "file": "./nederlandseStaatMaatschappijleer.js",
+  "stap": 10,
+  "vraag": 5,
+  "soort": "L2",
+  "q": "Wie is staatshoofd van Nederland?",
+  "opties": [
+   "Koning Willem-Alexander",
+   "Mark Rutte",
+   "Dilan Yesilgöz",
+   "Frans Timmermans"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "nederlandse-staat-maatschappijleer",
+  "file": "./nederlandseStaatMaatschappijleer.js",
+  "stap": 10,
+  "vraag": 6,
+  "soort": "L2",
+  "q": "Wat doet de Eerste Kamer?",
+  "opties": [
+   "Wetten controleren die de Tweede Kamer al heeft aangenomen",
+   "Zelf nieuwe wetsvoorstellen indienen",
+   "De belastingaangiftes van burgers nakijken",
+   "De ministers en de premier benoemen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "nederlandse-staat-maatschappijleer",
+  "file": "./nederlandseStaatMaatschappijleer.js",
+  "stap": 10,
+  "vraag": 7,
+  "soort": "K",
+  "q": "Hoeveel zetels heeft de Tweede Kamer in Nederland?",
+  "opties": [
+   "150",
+   "75",
+   "100",
+   "200"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "nederlandse-staat-maatschappijleer",
+  "file": "./nederlandseStaatMaatschappijleer.js",
+  "stap": 10,
+  "vraag": 9,
+  "soort": "SK",
+  "q": "Trias politica verdeelt macht in?",
+  "opties": [
+   "3",
+   "2",
+   "4",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "nederlandse-staat-maatschappijleer",
+  "file": "./nederlandseStaatMaatschappijleer.js",
+  "stap": 10,
+  "vraag": 10,
+  "soort": "L",
+  "q": "Demonstreren is in NL een grondrecht. Op basis van welk recht?",
+  "opties": [
+   "Recht op vergadering en betoging",
+   "Recht op onderwijs",
+   "Vrijheid van godsdienst",
+   "Recht op privacy"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederlandse-staat-maatschappijleer",
+  "file": "./nederlandseStaatMaatschappijleer.js",
+  "stap": 10,
+  "vraag": 11,
+  "soort": "L",
+  "q": "Wie kiezen de Tweede Kamer?",
+  "opties": [
+   "Nederlandse burgers ≥18 jaar",
+   "Alleen koning",
+   "Provincies",
+   "Bedrijven"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ }
+]

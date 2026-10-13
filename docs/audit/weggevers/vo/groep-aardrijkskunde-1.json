@@ -1,0 +1,1394 @@
+[
+ {
+  "pad": "globalisering-havo-vwo",
+  "file": "./globaliseringHavoVwo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Globalisering heeft welke 4 dimensies?",
+  "opties": [
+   "Economisch, cultureel, politiek, technologisch",
+   "Lokaal, regionaal, nationaal, mondiaal",
+   "Landbouw, industrie, diensten, handel",
+   "Sport, kunst, reizen, werk"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "globalisering-havo-vwo",
+  "file": "./globaliseringHavoVwo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Welke is een politiek aspect van globalisering?",
+  "opties": [
+   "Internationale organisaties",
+   "Hollywood-films",
+   "iPhone-productie keten",
+   "Internet"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "globalisering-havo-vwo",
+  "file": "./globaliseringHavoVwo.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Brexit (2016) past bij welke trend?",
+  "opties": [
+   "De-globalisering / anti-globalisering",
+   "Hyperglobalisering",
+   "Politieke integratie",
+   "Vrije handel"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "globalisering-havo-vwo",
+  "file": "./globaliseringHavoVwo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat is comparatief voordeel (Ricardo)?",
+  "opties": [
+   "Elk land specialiseert in wat het relatief efficiënter produceert",
+   "Het sterkste land wint altijd de handel",
+   "Landen hoeven dan geen handel meer te drijven",
+   "Elk land produceert zelf alles wat het nodig heeft"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "globalisering-havo-vwo",
+  "file": "./globaliseringHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "WTO = World Trade Organization. Doel?",
+  "opties": [
+   "Vrije handel + handelsgeschillen beslechten",
+   "Klimaat regelen",
+   "Mensenrechten beschermen",
+   "Militair samenwerken"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "globalisering-havo-vwo",
+  "file": "./globaliseringHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Off-shoring is:",
+  "opties": [
+   "Productie verplaatsen naar lage-loon-land",
+   "Productie terughalen",
+   "Productie verplaatsen naar een buurland",
+   "Belastingontwijking"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "globalisering-havo-vwo",
+  "file": "./globaliseringHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "G20-akkoord 2021 introduceerde:",
+  "opties": [
+   "Globale minimum-vennootschapsbelasting 15%",
+   "Klimaatakkoord",
+   "Migratiequota",
+   "Handelsverbod China"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "globalisering-havo-vwo",
+  "file": "./globaliseringHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Een iPhone wordt gemaakt via:",
+  "opties": [
+   "Een wereldwijde toeleveringsketen",
+   "Alles wordt in de VS gemaakt",
+   "Alles wordt in China gemaakt",
+   "Alles wordt in Europa gemaakt"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "globalisering-havo-vwo",
+  "file": "./globaliseringHavoVwo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Wat is HDI?",
+  "opties": [
+   "Een index die BBP, onderwijs en levensduur combineert",
+   "Een index die alleen het BBP per inwoner meet",
+   "Een index van het aantal soldaten per land",
+   "Een index van de olieproductie per land"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "globalisering-havo-vwo",
+  "file": "./globaliseringHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Zuid-Korea is sinds 1960 economisch:",
+  "opties": [
+   "Van arm-land tot top-15 economie wereldwijd",
+   "Gelijk gebleven",
+   "Achteruitgegaan",
+   "Altijd rijk geweest"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "globalisering-havo-vwo",
+  "file": "./globaliseringHavoVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Microfinanciering (Yunus, Nobel 2006):",
+  "opties": [
+   "Kleine leningen aan armen om eigen bedrijf te starten",
+   "Internationale bankenfusies",
+   "Belastingen verlagen",
+   "Hulp-pakketten"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "globalisering-havo-vwo",
+  "file": "./globaliseringHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Volgens institutionele theorie (Acemoglu) ligt verschil rijk/arm in:",
+  "opties": [
+   "Het soort instituties",
+   "Klimaat alleen",
+   "Cultuur alleen",
+   "Toeval"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "globalisering-havo-vwo",
+  "file": "./globaliseringHavoVwo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Remittances zijn:",
+  "opties": [
+   "Geld dat migranten naar familie thuis sturen",
+   "Belasting op migranten",
+   "Reiskosten",
+   "Visa-kosten"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "globalisering-havo-vwo",
+  "file": "./globaliseringHavoVwo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Een vluchteling verschilt van economische migrant door:",
+  "opties": [
+   "Vlucht voor oorlog of vervolging",
+   "Komt uit Afrika",
+   "Heeft geen geld",
+   "Geen verschil"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "globalisering-havo-vwo",
+  "file": "./globaliseringHavoVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Push-factor voor migratie is bv:",
+  "opties": [
+   "Oorlog of armoede in herkomstland",
+   "Goed werk in doelland",
+   "Familie in doelland",
+   "Veiligheid in doelland"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "globalisering-havo-vwo",
+  "file": "./globaliseringHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "SDGs vervangen welke oudere doelen?",
+  "opties": [
+   "Millennium Development Goals",
+   "Olympische idealen",
+   "EU-richtlijnen",
+   "WO2-akkoorden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "globalisering-havo-vwo",
+  "file": "./globaliseringHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Re-shoring is:",
+  "opties": [
+   "Productie terughalen naar het thuisland",
+   "Klimaat-actie",
+   "Migratie",
+   "Off-shoring uitbreiden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "klimaatverandering-aardrijkskunde",
+  "file": "./klimaatveranderingAardrijkskunde.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Verschil weer en klimaat?",
+  "opties": [
+   "Weer = nu, klimaat = gemiddelde over jaren",
+   "Geen verschil",
+   "Weer is in NL, klimaat wereldwijd",
+   "Weer is wetenschap"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "klimaatverandering-aardrijkskunde",
+  "file": "./klimaatveranderingAardrijkskunde.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Hoeveel warmer is aarde sinds 1880?",
+  "opties": [
+   "~1,1 °C",
+   "10 °C",
+   "0,1 °C",
+   "~3 °C"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klimaatverandering-aardrijkskunde",
+  "file": "./klimaatveranderingAardrijkskunde.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat is het broeikaseffect?",
+  "opties": [
+   "Gassen houden zonne-warmte vast in atmosfeer",
+   "Gat in de ozonlaag door vervuiling",
+   "Wolken die zonlicht tegenhouden",
+   "Warmte uit vulkanen in de aarde"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klimaatverandering-aardrijkskunde",
+  "file": "./klimaatveranderingAardrijkskunde.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Hoeveel CO₂ per jaar stoot gemiddelde Nederlander uit?",
+  "opties": [
+   "~10 ton",
+   "~100 kg",
+   "~100 ton",
+   "~1 kg"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klimaatverandering-aardrijkskunde",
+  "file": "./klimaatveranderingAardrijkskunde.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Hoeveel is zeespiegel sinds 1900 gestegen?",
+  "opties": [
+   "~20 cm",
+   "1 m",
+   "2 cm",
+   "5 m"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klimaatverandering-aardrijkskunde",
+  "file": "./klimaatveranderingAardrijkskunde.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "K",
+  "q": "NL klimaatakkoord doel 2030?",
+  "opties": [
+   "49% minder CO₂",
+   "Geen vermindering",
+   "Compleet emissieloos",
+   "10%"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klimaatverandering-aardrijkskunde",
+  "file": "./klimaatveranderingAardrijkskunde.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "S",
+  "q": "Wanneer stopt NL gas uit Groningen?",
+  "opties": [
+   "2024",
+   "2050",
+   "Nooit",
+   "1980"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klimaatverandering-aardrijkskunde",
+  "file": "./klimaatveranderingAardrijkskunde.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is klimaatadaptatie?",
+  "opties": [
+   "Aanpassen aan verandering",
+   "Veroorzaken",
+   "Negeren",
+   "Voorspellen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "klimaatverandering-aardrijkskunde",
+  "file": "./klimaatveranderingAardrijkskunde.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Wat is mitigatie?",
+  "opties": [
+   "Minder uitstoot",
+   "Aanpassen",
+   "Negeren",
+   "Veroorzaken"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klimaatverandering-aardrijkskunde",
+  "file": "./klimaatveranderingAardrijkskunde.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Klimaat vs weer?",
+  "opties": [
+   "Klimaat = gemiddelde jaren, weer = nu",
+   "Geen verschil",
+   "Klimaat = temperatuur, weer = regen",
+   "Andersom"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "klimaatverandering-aardrijkskunde",
+  "file": "./klimaatveranderingAardrijkskunde.js",
+  "stap": 5,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is CO₂?",
+  "opties": [
+   "Belangrijkste broeikasgas door de mens",
+   "Zuurstof",
+   "Stikstof",
+   "Water"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "klimaatverandering-aardrijkskunde",
+  "file": "./klimaatveranderingAardrijkskunde.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "L",
+  "q": "1,5 °C doel komt uit?",
+  "opties": [
+   "Parijs-akkoord 2015",
+   "Kyoto",
+   "EU-wet",
+   "NASA"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "klimaatverandering-aardrijkskunde",
+  "file": "./klimaatveranderingAardrijkskunde.js",
+  "stap": 5,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Welke is hernieuwbare energie?",
+  "opties": [
+   "Zonnepaneel + windmolen",
+   "Kolen",
+   "Olie",
+   "Gas"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "klimaatverandering-aardrijkskunde",
+  "file": "./klimaatveranderingAardrijkskunde.js",
+  "stap": 5,
+  "vraag": 5,
+  "soort": "SK",
+  "q": "Wat doet smelten van landijs (Groenland + Antarctica)?",
+  "opties": [
+   "Zeespiegel stijgt",
+   "Niets",
+   "Verkoelt aarde",
+   "Zeespiegel daalt"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klimaten-aardrijkskunde",
+  "file": "./klimatenAardrijkskunde.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is klimaat?",
+  "opties": [
+   "Het gemiddelde weer over minstens 30 jaar",
+   "Het weer van vandaag",
+   "De temperatuur op één plek nu",
+   "De voorspelling voor morgen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "klimaten-aardrijkskunde",
+  "file": "./klimatenAardrijkskunde.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Welke uitspraak gaat over klimaat?",
+  "opties": [
+   "Italië heeft warme zomers en milde winters",
+   "Het regent nu in Rome",
+   "Morgen wordt het 18 °C",
+   "Vandaag is het zonnig"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "klimaten-aardrijkskunde",
+  "file": "./klimatenAardrijkskunde.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Waarom is het bij de polen zo koud?",
+  "opties": [
+   "Zonlicht valt schuin in en verspreidt over groter oppervlak",
+   "De polen staan dichter bij de zon",
+   "Er is geen atmosfeer",
+   "Daar regent het altijd"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "klimaten-aardrijkskunde",
+  "file": "./klimatenAardrijkskunde.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Welk klimaat heeft Nederland?",
+  "opties": [
+   "Gematigd zeeklimaat",
+   "Tropisch",
+   "Mediterraan",
+   "Landklimaat"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klimaten-aardrijkskunde",
+  "file": "./klimatenAardrijkskunde.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Waarom is het in Nederland 's winters zo zacht?",
+  "opties": [
+   "De zee/oceaan zorgt met westenwind voor warmte",
+   "Nederland ligt dicht bij de evenaar",
+   "Door alle steden",
+   "Er is hier veel sneeuw"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "klimaten-aardrijkskunde",
+  "file": "./klimatenAardrijkskunde.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat klopt over landklimaat?",
+  "opties": [
+   "Grote temperatuurverschillen tussen zomer en winter",
+   "Constant warm",
+   "Het hele jaar koud",
+   "Veel regen, vooral 's winters"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "klimaten-aardrijkskunde",
+  "file": "./klimatenAardrijkskunde.js",
+  "stap": 5,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Waar vind je een landklimaat?",
+  "opties": [
+   "Centraal Rusland",
+   "Nederland",
+   "Brazilië",
+   "Egypte"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klimaten-aardrijkskunde",
+  "file": "./klimatenAardrijkskunde.js",
+  "stap": 6,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat is permafrost?",
+  "opties": [
+   "Bodem die altijd bevroren is",
+   "Een soort sneeuwvlok",
+   "Een berg op de pool",
+   "Een ijsbeer"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klimaten-aardrijkskunde",
+  "file": "./klimatenAardrijkskunde.js",
+  "stap": 7,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Hoe kan er sneeuw liggen op de Kilimanjaro, terwijl die vlak bij de evenaar staat?",
+  "opties": [
+   "Hoogte zorgt dat het toch koud wordt",
+   "Hij ligt in Antarctica",
+   "Het is een vulkaan",
+   "Klimaatverandering smelt dat"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klimaten-aardrijkskunde",
+  "file": "./klimatenAardrijkskunde.js",
+  "stap": 8,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is de hoofdoorzaak van klimaatverandering?",
+  "opties": [
+   "Uitstoot van broeikasgassen door mensen",
+   "Vulkanen",
+   "De aarde draait sneller",
+   "De zon is heter geworden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "klimaten-aardrijkskunde",
+  "file": "./klimatenAardrijkskunde.js",
+  "stap": 9,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Welk klimaat: \"Vier seizoenen, zachte winters, regen door het hele jaar\"?",
+  "opties": [
+   "Gematigd zeeklimaat",
+   "Tropisch",
+   "Woestijn",
+   "IJsklimaat"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klimaten-aardrijkskunde",
+  "file": "./klimatenAardrijkskunde.js",
+  "stap": 9,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Wat is een moesson?",
+  "opties": [
+   "Seizoenswind die een natte en een droge tijd brengt",
+   "Zware storm boven de oceaan",
+   "Warme, droge wind die van de bergen af waait",
+   "Koude wind uit het noorden in de winter"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klimaten-aardrijkskunde",
+  "file": "./klimatenAardrijkskunde.js",
+  "stap": 9,
+  "vraag": 5,
+  "soort": "L2",
+  "q": "Wat zijn klimaatzones Köppen?",
+  "opties": [
+   "Indeling van klimaten in hoofdgroepen",
+   "Indeling van wolken in soorten",
+   "Schaal voor windkracht",
+   "Schaal voor temperatuur"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klimaten-aardrijkskunde",
+  "file": "./klimatenAardrijkskunde.js",
+  "stap": 9,
+  "vraag": 7,
+  "soort": "L2",
+  "q": "Welk klimaat heeft NL?",
+  "opties": [
+   "Gematigd zeeklimaat",
+   "Tropisch",
+   "Woestijn",
+   "Toendra"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klimaten-aardrijkskunde",
+  "file": "./klimatenAardrijkskunde.js",
+  "stap": 9,
+  "vraag": 9,
+  "soort": "K",
+  "q": "Woestijnklimaat is vooral?",
+  "opties": [
+   "Droog",
+   "Nat",
+   "Koud",
+   "Tropisch"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klimaten-aardrijkskunde",
+  "file": "./klimatenAardrijkskunde.js",
+  "stap": 9,
+  "vraag": 11,
+  "soort": "K",
+  "q": "Welk klimaat heeft de Sahara?",
+  "opties": [
+   "Woestijn",
+   "Tropisch",
+   "Toendra",
+   "Bergklimaat"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klimaten-aardrijkskunde",
+  "file": "./klimatenAardrijkskunde.js",
+  "stap": 9,
+  "vraag": 12,
+  "soort": "L2K",
+  "q": "Wat is klimaat versus weer?",
+  "opties": [
+   "Klimaat = lange termijn (30+ jaar); weer = nu",
+   "Hetzelfde, alleen een ander woord",
+   "Klimaat = dag; weer = maand",
+   "Klimaat = temperatuur; weer = regen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klimaten-aardrijkskunde",
+  "file": "./klimatenAardrijkskunde.js",
+  "stap": 9,
+  "vraag": 15,
+  "soort": "L2K",
+  "q": "In welke klimaatzone vind je toendra?",
+  "opties": [
+   "Subpolair / koud",
+   "Tropisch",
+   "Woestijn",
+   "Gematigd"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "klimaten-aardrijkskunde",
+  "file": "./klimatenAardrijkskunde.js",
+  "stap": 9,
+  "vraag": 16,
+  "soort": "L",
+  "q": "Wat is een moesson?",
+  "opties": [
+   "Seizoenswind met regen (vooral Azië)",
+   "Storm",
+   "Droge wind uit de woestijn",
+   "Koude wind uit het noorden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederland-water-vo",
+  "file": "./nederlandWaterVo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Wanneer was de Watersnoodramp?",
+  "opties": [
+   "1 februari 1953",
+   "31 december 1953",
+   "1 januari 2000",
+   "12 mei 1940"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "nederland-water-vo",
+  "file": "./nederlandWaterVo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Welke provincies werden het hardst getroffen in 1953?",
+  "opties": [
+   "Zeeland + Zuid-Holland + Brabant",
+   "Groningen + Friesland",
+   "Limburg + Overijssel",
+   "Utrecht + Gelderland"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "nederland-water-vo",
+  "file": "./nederlandWaterVo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is een waterschap?",
+  "opties": [
+   "Bestuurslaag verantwoordelijk voor water-beheer",
+   "Schap in supermarkt",
+   "Waterleidingbedrijf",
+   "Het Rijksinstituut voor Volksgezondheid"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederland-water-vo",
+  "file": "./nederlandWaterVo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Hoeveel doden vielen bij de Watersnoodramp 1953 in NL?",
+  "opties": [
+   "~1.836 doden",
+   "~100 doden",
+   "~10.000 doden",
+   "~50.000 doden"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "nederland-water-vo",
+  "file": "./nederlandWaterVo.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is een dijk?",
+  "opties": [
+   "Een wal van grond/zand/klei tegen water",
+   "Een diep gat",
+   "Een waterloop",
+   "Een stuw"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederland-water-vo",
+  "file": "./nederlandWaterVo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "H",
+  "q": "Hoe heet het meer dat door de Afsluitdijk ontstond?",
+  "opties": [
+   "IJsselmeer",
+   "Markermeer",
+   "Zuiderzee",
+   "Waddenzee"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederland-water-vo",
+  "file": "./nederlandWaterVo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is Markerwaard?",
+  "opties": [
+   "Geplande maar geschrapte polder",
+   "5e Deltawerk",
+   "Vissersdorp",
+   "Stad in Friesland"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederland-water-vo",
+  "file": "./nederlandWaterVo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is kenmerkend voor de Oosterscheldekering (1986)?",
+  "opties": [
+   "62 schuiven die open/dicht kunnen",
+   "Volledig dichte dam",
+   "Drijvende brug",
+   "Tunnel onder water"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederland-water-vo",
+  "file": "./nederlandWaterVo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is ir. Johan van Veen beroemd om?",
+  "opties": [
+   "Hoofdontwerper Deltawerken",
+   "Premier 1953",
+   "Afsluitdijk",
+   "Watersnood-redder"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederland-water-vo",
+  "file": "./nederlandWaterVo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is 'Ruimte voor de Rivier'?",
+  "opties": [
+   "Rivieren krijgen meer ruimte ipv hogere dijken",
+   "Rivieren afsluiten",
+   "Brug-bouw",
+   "Tunnels onder rivieren"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederland-water-vo",
+  "file": "./nederlandWaterVo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is de Watertoets?",
+  "opties": [
+   "Verplichte check op water-impact bij bouwplannen",
+   "Examen voor zwemmen",
+   "Drinkwater-keuring",
+   "Belasting"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederland-water-vo",
+  "file": "./nederlandWaterVo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "H",
+  "q": "Welke rivier geeft het IJsselmeer zijn naam?",
+  "opties": [
+   "IJssel",
+   "Rijn",
+   "Maas",
+   "Waal"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "platentektoniek-aardrijkskunde",
+  "file": "./platentektoniekAardrijkskunde.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een midoceanische rug?",
+  "opties": [
+   "Onderzeese bergketen waar nieuwe korst ontstaat",
+   "Diepe geul waar platen onder elkaar duiken",
+   "Een grote berg op land",
+   "Een soort gletsjer"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "platentektoniek-aardrijkskunde",
+  "file": "./platentektoniekAardrijkskunde.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Hoe is de Himalaya ontstaan?",
+  "opties": [
+   "Indische Plaat botst tegen Euraziatische Plaat",
+   "Een grote vulkaanuitbarsting",
+   "Erosie van een hoogvlakte",
+   "Door een meteoriet"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "platentektoniek-aardrijkskunde",
+  "file": "./platentektoniekAardrijkskunde.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is subductie?",
+  "opties": [
+   "De zwaardere plaat duikt onder de lichtere",
+   "Twee platen breken volledig",
+   "Een plaat splitst in tweeën",
+   "Vulkanen die uitbarsten"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "platentektoniek-aardrijkskunde",
+  "file": "./platentektoniekAardrijkskunde.js",
+  "stap": 6,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is het epicentrum van een aardbeving?",
+  "opties": [
+   "Het punt aan het oppervlak boven de bron",
+   "Het diepste punt onder de grond",
+   "Een soort vulkaan",
+   "De totale schade-zone"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "platentektoniek-aardrijkskunde",
+  "file": "./platentektoniekAardrijkskunde.js",
+  "stap": 6,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Waarom zijn er in Groningen kunstmatige aardbevingen?",
+  "opties": [
+   "Door gaswinning is de bodem verzakt en ontstaat spanning",
+   "Door een actieve vulkaan",
+   "Door zware regenval",
+   "Door het verkeer"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "platentektoniek-aardrijkskunde",
+  "file": "./platentektoniekAardrijkskunde.js",
+  "stap": 7,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat is het verschil tussen magma en lava?",
+  "opties": [
+   "Magma = onder de grond, lava = boven de grond",
+   "Hetzelfde — gewoon twee namen",
+   "Magma is heter dan lava",
+   "Lava is een soort steen, magma is gas"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "platentektoniek-aardrijkskunde",
+  "file": "./platentektoniekAardrijkskunde.js",
+  "stap": 8,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat veroorzaakte het 'jaar zonder zomer' (1816)?",
+  "opties": [
+   "De uitbarsting van de Tambora",
+   "Een grote oorlog",
+   "Een ijstijd",
+   "Een meteoriet-inslag"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "platentektoniek-aardrijkskunde",
+  "file": "./platentektoniekAardrijkskunde.js",
+  "stap": 10,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Bij welke plaatbeweging hoort de Himalaya?",
+  "opties": [
+   "Convergent (continentale platen tegen elkaar)",
+   "Divergent (uit elkaar)",
+   "Transform (langs elkaar)",
+   "Geen — gewoon erosie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "platentektoniek-aardrijkskunde",
+  "file": "./platentektoniekAardrijkskunde.js",
+  "stap": 10,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Bij welke plaatgrens hoort IJsland met z'n vulkanen?",
+  "opties": [
+   "Divergent — Mid-Atlantische Rug",
+   "Convergent — subductie",
+   "Transform — schuif",
+   "Helemaal geen plaatgrens"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wereld-globalisering-havo-vwo",
+  "file": "./wereldAardrijkskundeHavoVwo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "K",
+  "q": "WTO = ?",
+  "opties": [
+   "World Trade Organization",
+   "Western Travel Office",
+   "World Tourism Organization",
+   "World Transport Organization"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wereld-globalisering-havo-vwo",
+  "file": "./wereldAardrijkskundeHavoVwo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "S",
+  "q": "Wat is glokalisering?",
+  "opties": [
+   "Globaal product met lokale aanpassing",
+   "Alleen globaal",
+   "Alleen lokaal",
+   "Lokaal product dat onveranderd wereldwijd wordt verkocht"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wereld-globalisering-havo-vwo",
+  "file": "./wereldAardrijkskundeHavoVwo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Welke index combineert BBP + onderwijs + levensverwachting?",
+  "opties": [
+   "HDI",
+   "Gini-coëfficiënt",
+   "BBP per cap",
+   "Big Mac Index"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wereld-globalisering-havo-vwo",
+  "file": "./wereldAardrijkskundeHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "K",
+  "q": "BRICS-landen zijn:",
+  "opties": [
+   "Brazilië, Rusland, India, China, Zuid-Afrika",
+   "Vijf Aziatische landen",
+   "Vijf rijke landen",
+   "Brazilië, Republiek Congo, Israël, China, Spanje"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wereld-globalisering-havo-vwo",
+  "file": "./wereldAardrijkskundeHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Gini = 0 betekent:",
+  "opties": [
+   "Perfecte gelijkheid",
+   "Maximale ongelijkheid",
+   "Geen meting",
+   "Slechte economie"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wereld-globalisering-havo-vwo",
+  "file": "./wereldAardrijkskundeHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Welke verklaring komt van Acemoglu + Robinson?",
+  "opties": [
+   "Instellingen bepalen welvaart",
+   "Klimaat beslist",
+   "Genen",
+   "Toeval"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wereld-globalisering-havo-vwo",
+  "file": "./wereldAardrijkskundeHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Wereld-armoede (<$2,15/dag) is sinds 1990:",
+  "opties": [
+   "Sterk afgenomen",
+   "Verdubbeld",
+   "Stabiel",
+   "Verviervoudigd"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wereld-globalisering-havo-vwo",
+  "file": "./wereldAardrijkskundeHavoVwo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Demografische uitdaging Sub-Sahara:",
+  "opties": [
+   "Snelle bevolkingsgroei",
+   "Vergrijzing",
+   "Bevolkingsdaling",
+   "Stabiel"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wereld-globalisering-havo-vwo",
+  "file": "./wereldAardrijkskundeHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Resource curse (grondstoffen-paradox):",
+  "opties": [
+   "Landen rijk aan grondstoffen vaak relatief arm",
+   "Grondstoffen altijd goed",
+   "Geen verband",
+   "Allemaal export-rijk"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wereld-globalisering-havo-vwo",
+  "file": "./wereldAardrijkskundeHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is Sahel-regio?",
+  "opties": [
+   "Overgangszone tussen Sahara en savanne",
+   "Sahara zelf",
+   "Zuid-Afrika",
+   "Hoorn van Afrika"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wereld-globalisering-havo-vwo",
+  "file": "./wereldAardrijkskundeHavoVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Belt + Road Initiative (BRI) is van:",
+  "opties": [
+   "China",
+   "VS",
+   "EU",
+   "Rusland"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wereld-globalisering-havo-vwo",
+  "file": "./wereldAardrijkskundeHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Welk land overhaalde China qua bevolking in 2023?",
+  "opties": [
+   "India",
+   "Indonesië",
+   "Pakistan",
+   "Nigeria"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wereld-globalisering-havo-vwo",
+  "file": "./wereldAardrijkskundeHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Welke is China's demografische uitdaging?",
+  "opties": [
+   "Vergrijzing + bevolkingsdaling",
+   "Te veel jongeren",
+   "Migratie-tekort",
+   "Geen probleem"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wereld-globalisering-havo-vwo",
+  "file": "./wereldAardrijkskundeHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wereldhandel groeit sinds 1950:",
+  "opties": [
+   "Sneller dan wereld-BBP",
+   "Trager",
+   "Gelijk",
+   "Krimpt"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "wereld-globalisering-havo-vwo",
+  "file": "./wereldAardrijkskundeHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Nigeria is rijk aan grondstoffen maar:",
+  "opties": [
+   "Veel armoede + corruptie",
+   "Heel welvarend",
+   "Stabiele democratie",
+   "Industrieleider"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "wereld-globalisering-havo-vwo",
+  "file": "./wereldAardrijkskundeHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "SDG's (Sustainable Development Goals) van VN gaan over:",
+  "opties": [
+   "Doelen voor duurzame ontwikkeling in 2030",
+   "Regels voor de wereldhandel",
+   "Vredesakkoorden",
+   "Belastingafspraken tussen landen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ }
+]

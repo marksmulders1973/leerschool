@@ -1,0 +1,2002 @@
+[
+ {
+  "pad": "argumentatieleer",
+  "file": "./argumentatieleer.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*\"Jongeren bewegen te weinig. Mijn buurjongen zit elke avond achter zijn PlayStation.\"* — Is de tweede zin een argument?",
+  "opties": [
+   "Nee, het is een voorbeeld dat een argument zou kunnen illustreren.",
+   "Ja, want het bewijst dat jongeren niet bewegen.",
+   "Ja, het is een hoofdargument.",
+   "Nee, het is een drogreden."
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "argumentatieleer",
+  "file": "./argumentatieleer.js",
+  "stap": 11,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat is het verschil tussen een drogreden en een zwak argument?",
+  "opties": [
+   "Bij een drogreden deugt de redenering zelf niet.",
+   "Een drogreden is altijd een leugen.",
+   "Er is geen verschil.",
+   "Een drogreden komt alleen voor in reclames."
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "argumentatieleer",
+  "file": "./argumentatieleer.js",
+  "stap": 14,
+  "vraag": 0,
+  "soort": "H",
+  "q": "*\"Het is bewezen dat een latere starttijd op school beter is voor tieners. Slaaponderzoekers van de Nederlandse Vereniging voor Slaap-Waakonderzoek wijzen erop ",
+  "opties": [
+   "Autoriteitsargument",
+   "Vergelijkingsargument",
+   "Oorzaak-gevolg",
+   "Vals beroep op autoriteit"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "argumentatieleer",
+  "file": "./argumentatieleer.js",
+  "stap": 14,
+  "vraag": 7,
+  "soort": "L2",
+  "q": "*'Iedereen doet het, dus jij moet het ook doen.'* Welke drogreden?",
+  "opties": [
+   "Beroep op meerderheid",
+   "Cirkelredenering",
+   "Ad hominem",
+   "Vals dilemma"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "argumentatieleer",
+  "file": "./argumentatieleer.js",
+  "stap": 14,
+  "vraag": 9,
+  "soort": "L",
+  "q": "Wat is een standpunt?",
+  "opties": [
+   "Mening die je verdedigt",
+   "Een vraag",
+   "Een feit",
+   "Een citaat"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "argumentatieleer",
+  "file": "./argumentatieleer.js",
+  "stap": 14,
+  "vraag": 10,
+  "soort": "S",
+  "q": "Een subargument ondersteunt?",
+  "opties": [
+   "Een ander argument",
+   "Het standpunt direct",
+   "Niets",
+   "Een tegenargument"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "argumentatieleer",
+  "file": "./argumentatieleer.js",
+  "stap": 14,
+  "vraag": 11,
+  "soort": "L2",
+  "q": "Een tegenargument is?",
+  "opties": [
+   "Argument tegen je standpunt",
+   "Argument voor je standpunt",
+   "Geen argument",
+   "Een vraag"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "betoog-beschouwing-havo-vwo",
+  "file": "./betoogBeschouwingHavoVwo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Een beschouwing kenmerkt zich door:",
+  "opties": [
+   "Voor- en tegenargumenten afwegen",
+   "Eén duidelijke mening",
+   "Alleen feiten",
+   "Spanning/spanningsboog"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "betoog-beschouwing-havo-vwo",
+  "file": "./betoogBeschouwingHavoVwo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Welke tekst is een uiteenzetting?",
+  "opties": [
+   "Wikipedia-artikel over fotosynthese",
+   "Opinie-stuk over euthanasie",
+   "Verkiezings-toespraak",
+   "Roman-fragment"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "betoog-beschouwing-havo-vwo",
+  "file": "./betoogBeschouwingHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Welke is de sterkste stelling voor een betoog?",
+  "opties": [
+   "'Vanaf groep 8 moet schooladvies door de leerling zelf gegeven worden'",
+   "'School is voor iedereen heel erg belangrijk'",
+   "'Het is vandaag in het klaslokaal erg warm'",
+   "'Misschien moeten kinderen op school meer dingen leren'"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "betoog-beschouwing-havo-vwo",
+  "file": "./betoogBeschouwingHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Welk argument is het sterkst voor 'sport is goed'?",
+  "opties": [
+   "WHO-onderzoek toont 30% minder hart- en vaatziekten bij actieve mensen",
+   "Iedereen weet toch allang dat sporten goed is",
+   "Mijn vader zegt het en die sport elke dag",
+   "Sport is gewoon heel erg leuk om te doen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "betoog-beschouwing-havo-vwo",
+  "file": "./betoogBeschouwingHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*'Alle moderne muziek is vreselijk, want dat zegt mijn opa.'* — drogreden:",
+  "opties": [
+   "Autoriteits-misbruik + generalisatie",
+   "Vals dilemma",
+   "Stroman",
+   "Goed argument"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "betoog-beschouwing-havo-vwo",
+  "file": "./betoogBeschouwingHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is een anafoor?",
+  "opties": [
+   "Herhaling aan begin van zinnen",
+   "Vraag-zonder-antwoord",
+   "Tegenstelling",
+   "Beeldspraak"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-leesvaardigheid-nederlands",
+  "file": "./cseLeesvaardigheidNederlands.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is de eerste stap bij een CSE-tekst?",
+  "opties": [
+   "Skimmen — titel + eerste alinea + plaatjes",
+   "Direct vragen beantwoorden",
+   "Alles letter voor letter lezen",
+   "Slot lezen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-leesvaardigheid-nederlands",
+  "file": "./cseLeesvaardigheidNederlands.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat doe je met een lastige vraag op CSE?",
+  "opties": [
+   "Overslaan + later terugkomen",
+   "Lang piekeren",
+   "Gokken zonder lezen",
+   "Skip helemaal"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-leesvaardigheid-nederlands",
+  "file": "./cseLeesvaardigheidNederlands.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Waar staat de hoofdgedachte meestal?",
+  "opties": [
+   "Eerste of laatste alinea",
+   "Midden",
+   "Onder de kop",
+   "Bij een plaatje"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-leesvaardigheid-nederlands",
+  "file": "./cseLeesvaardigheidNederlands.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "*'Volgens de tekst, ___'* Wat doe je?",
+  "opties": [
+   "Zoek letterlijk in tekst",
+   "Geef eigen mening",
+   "Gok beste antwoord",
+   "Sla over"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-leesvaardigheid-nederlands",
+  "file": "./cseLeesvaardigheidNederlands.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Tekst over bijen: 'Bijen zijn vitaal. Ze bestuiven 90%. We moeten ze beschermen.' Hoofdgedachte?",
+  "opties": [
+   "Bijen zijn belangrijk en moeten worden beschermd",
+   "Bijen bestuiven 90% gewassen",
+   "Bijen sterven uit",
+   "Pesticide is slecht"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-leesvaardigheid-nederlands",
+  "file": "./cseLeesvaardigheidNederlands.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Welk antwoord is te specifiek voor 'hoofdgedachte'?",
+  "opties": [
+   "Specifiek getal of voorbeeld",
+   "Algemene boodschap",
+   "Wat in titel staat",
+   "Conclusie aan eind"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-leesvaardigheid-nederlands",
+  "file": "./cseLeesvaardigheidNederlands.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L2S",
+  "q": "Wat is 'dit' in *'Het regende. De weg was glad. Dit veroorzaakte ongelukken.'*?",
+  "opties": [
+   "Regen én gladde weg samen",
+   "Alleen regen",
+   "Alleen gladde weg",
+   "De ongelukken"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-leesvaardigheid-nederlands",
+  "file": "./cseLeesvaardigheidNederlands.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L2S",
+  "q": "Verschil tussen 'deze' en 'die'?",
+  "opties": [
+   "Deze = dichtbij, die = verder weg",
+   "Geen verschil",
+   "Deze = man, die = vrouw",
+   "Deze = enkelvoud, die = meervoud"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-leesvaardigheid-nederlands",
+  "file": "./cseLeesvaardigheidNederlands.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "*'Anna en Lisa kochten boeken. Zij las graag.'* Wie is zij?",
+  "opties": [
+   "Niet duidelijk — kan beide",
+   "Anna sowieso",
+   "Lisa sowieso",
+   "Niemand"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-leesvaardigheid-nederlands",
+  "file": "./cseLeesvaardigheidNederlands.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een stelling?",
+  "opties": [
+   "De mening / het standpunt",
+   "Een reden",
+   "Een feit",
+   "Een voorbeeld"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-leesvaardigheid-nederlands",
+  "file": "./cseLeesvaardigheidNederlands.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is een tegenwerping?",
+  "opties": [
+   "Argument tegen de stelling",
+   "Argument voor",
+   "Een feit",
+   "Een vraag"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-leesvaardigheid-nederlands",
+  "file": "./cseLeesvaardigheidNederlands.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Wat is de bedoeling van een reclame?",
+  "opties": [
+   "Activeren",
+   "Informeren",
+   "Amuseren",
+   "Beschouwen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-leesvaardigheid-nederlands",
+  "file": "./cseLeesvaardigheidNederlands.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Wat is de bedoeling van een schoolboek-tekst?",
+  "opties": [
+   "Informeren",
+   "Activeren",
+   "Amuseren",
+   "Verkopen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-leesvaardigheid-nederlands",
+  "file": "./cseLeesvaardigheidNederlands.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "S",
+  "q": "Een column met humor + mening — bedoeling?",
+  "opties": [
+   "Amuseren + overtuigen",
+   "Alleen informeren",
+   "Alleen activeren",
+   "Alleen beschrijven"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-leesvaardigheid-nederlands",
+  "file": "./cseLeesvaardigheidNederlands.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is hoofdgedachte typisch?",
+  "opties": [
+   "Algemene boodschap van hele tekst",
+   "Specifiek getal",
+   "1 zin uit alinea 2",
+   "Bijschrift bij foto"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-leesvaardigheid-nederlands",
+  "file": "./cseLeesvaardigheidNederlands.js",
+  "stap": 5,
+  "vraag": 3,
+  "soort": "H",
+  "q": "Schrijver gebruikt 'Volgens hoogleraar Jansen van de TU Delft ...'. Welk argument-type?",
+  "opties": [
+   "Autoriteit",
+   "Emotioneel",
+   "Praktisch",
+   "Voorbeeld"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-leesvaardigheid-nederlands",
+  "file": "./cseLeesvaardigheidNederlands.js",
+  "stap": 5,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Welke bedoeling heeft een advertentie?",
+  "opties": [
+   "Activeren",
+   "Informeren neutraal",
+   "Amuseren",
+   "Wetenschappelijk"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-nederlands",
+  "file": "./cseSchrijfvaardigheidNederlands.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Welke is een formele aanhef?",
+  "opties": [
+   "Geachte heer Jansen,",
+   "Hoi Tom!",
+   "Hey daar,",
+   "Lieve Anna,"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-nederlands",
+  "file": "./cseSchrijfvaardigheidNederlands.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "S",
+  "q": "Mag je 'je/jij' in formele brief?",
+  "opties": [
+   "Nee, 'u' gebruiken",
+   "Ja, maakt niet uit",
+   "Soms",
+   "Alleen aan vrienden"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-nederlands",
+  "file": "./cseSchrijfvaardigheidNederlands.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Wat hoort in aanleiding *(eerste alinea)*?",
+  "opties": [
+   "Waarom je schrijft",
+   "Slot-verzoek",
+   "Adres",
+   "Aanhef"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-nederlands",
+  "file": "./cseSchrijfvaardigheidNederlands.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Welke aanhef is formeel in het Nederlands?",
+  "opties": [
+   "Geachte heer / mevrouw",
+   "Hoi",
+   "Hallo daar",
+   "Yo"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-nederlands",
+  "file": "./cseSchrijfvaardigheidNederlands.js",
+  "stap": 0,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Welke afsluiting hoort bij een formele brief?",
+  "opties": [
+   "Met vriendelijke groet,",
+   "Doei",
+   "X",
+   "Tot snel"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-nederlands",
+  "file": "./cseSchrijfvaardigheidNederlands.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Verschil betogend en beschouwend?",
+  "opties": [
+   "Betogend kiest 1 kant; beschouwend weegt pro+contra",
+   "Geen verschil",
+   "Betogend is langer",
+   "Beschouwend is feitelijk"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-nederlands",
+  "file": "./cseSchrijfvaardigheidNederlands.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "In een betoog wil je de lezer ___?",
+  "opties": [
+   "Overtuigen van je standpunt",
+   "Informeren neutraal",
+   "Vermaken",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-nederlands",
+  "file": "./cseSchrijfvaardigheidNederlands.js",
+  "stap": 1,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Een goede argumentstructuur is?",
+  "opties": [
+   "Standpunt + argument + voorbeeld",
+   "Alleen mening",
+   "Alleen feiten",
+   "Vragen stellen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-nederlands",
+  "file": "./cseSchrijfvaardigheidNederlands.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Verschil verslag en betoog?",
+  "opties": [
+   "Verslag = wat is gebeurd; betoog = standpunt verdedigen",
+   "Geen verschil",
+   "Verslag is langer",
+   "Betoog is fictie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-nederlands",
+  "file": "./cseSchrijfvaardigheidNederlands.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "S",
+  "q": "*'Ik liep door de straat'* = welk perspectief?",
+  "opties": [
+   "Ik-perspectief",
+   "Hij/zij-perspectief",
+   "Alwetend",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-nederlands",
+  "file": "./cseSchrijfvaardigheidNederlands.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is 'show, don't tell'?",
+  "opties": [
+   "Beschrijf wat personage doet/voelt i.p.v. zeggen",
+   "Niet vertellen",
+   "Plaatjes gebruiken",
+   "Alleen dialoog gebruiken"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-nederlands",
+  "file": "./cseSchrijfvaardigheidNederlands.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L2S",
+  "q": "Een verhaal heeft meestal welke 3 delen?",
+  "opties": [
+   "Begin + midden + eind",
+   "Alleen midden",
+   "Alleen begin",
+   "Eind eerst"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-nederlands",
+  "file": "./cseSchrijfvaardigheidNederlands.js",
+  "stap": 2,
+  "vraag": 5,
+  "soort": "L",
+  "q": "Een goed personage heeft ___?",
+  "opties": [
+   "Karaktereigenschappen + doelen + obstakels",
+   "Geen naam",
+   "Alleen kleren",
+   "Alleen leeftijd"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-nederlands",
+  "file": "./cseSchrijfvaardigheidNederlands.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Hoeveel kernpunten ongeveer in samenvatting?",
+  "opties": [
+   "3-5",
+   "10+",
+   "1",
+   "Alle alinea's"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-nederlands",
+  "file": "./cseSchrijfvaardigheidNederlands.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is plagiaat bij samenvatting?",
+  "opties": [
+   "Letterlijk overnemen uit tekst",
+   "Eigen woorden",
+   "Synoniemen gebruiken",
+   "Korter maken"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-nederlands",
+  "file": "./cseSchrijfvaardigheidNederlands.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Verschil liggen en leggen?",
+  "opties": [
+   "Liggen = positie, leggen = actie",
+   "Geen verschil",
+   "Beide goed",
+   "Liggen voor mensen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-nederlands",
+  "file": "./cseSchrijfvaardigheidNederlands.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "S",
+  "q": "*'Ik heb hem ___ 2020 niet meer gezien.'* — sinds of vanaf?",
+  "opties": [
+   "Sinds",
+   "Vanaf",
+   "Beide",
+   "Geen verschil"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-nederlands",
+  "file": "./cseSchrijfvaardigheidNederlands.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Formele aanhef (naam onbekend)?",
+  "opties": [
+   "Geachte heer/mevrouw,",
+   "Hoi!",
+   "Lieve familie,",
+   "Beste vriend,"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-nederlands",
+  "file": "./cseSchrijfvaardigheidNederlands.js",
+  "stap": 5,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Plagiaat in samenvatting = wat?",
+  "opties": [
+   "Letterlijk overnemen",
+   "Eigen woorden",
+   "Korter maken",
+   "Synoniemen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cse-schrijfvaardigheid-nederlands",
+  "file": "./cseSchrijfvaardigheidNederlands.js",
+  "stap": 5,
+  "vraag": 5,
+  "soort": "L2S",
+  "q": "Welk perspectief is *'Tom liep door de straat. Hij was moe.'*?",
+  "opties": [
+   "Hij/zij-perspectief",
+   "Ik-perspectief",
+   "Alwetend",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "literatuurgeschiedenis",
+  "file": "./literatuurgeschiedenis.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*Wat is op havo 4 NIET vereist bij literatuurgeschiedenis?*",
+  "opties": [
+   "Letterlijke jaartallen van geboorte/sterfte van elke schrijver kennen",
+   "Een gelezen werk in een stroming kunnen plaatsen",
+   "Kenmerken van stromingen kunnen noemen",
+   "Top-schrijvers per stroming herkennen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "literatuurgeschiedenis",
+  "file": "./literatuurgeschiedenis.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "H",
+  "q": "*Welke stroming komt het eerst in de tijd?*",
+  "opties": [
+   "Middeleeuwen",
+   "Renaissance",
+   "Romantiek",
+   "Modernisme"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "literatuurgeschiedenis",
+  "file": "./literatuurgeschiedenis.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "*Wie is de auteur van het treurspel \"Gysbreght van Aemstel\"?*",
+  "opties": [
+   "Joost van den Vondel",
+   "P.C. Hooft",
+   "Bredero",
+   "Multatuli"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "literatuurgeschiedenis",
+  "file": "./literatuurgeschiedenis.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "*Welke roman is een product van de Verlichting?*",
+  "opties": [
+   "Sara Burgerhart (Wolff & Deken, 1782)",
+   "Max Havelaar (Multatuli, 1860)",
+   "Eline Vere (Couperus, 1889)",
+   "De avonden (Reve, 1947)"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "literatuurgeschiedenis",
+  "file": "./literatuurgeschiedenis.js",
+  "stap": 6,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*Wat is een centraal idee van het Naturalisme?*",
+  "opties": [
+   "De mens is product van erfelijkheid en milieu — geen vrije wil",
+   "Het gevoel staat boven het verstand",
+   "De rede leidt tot een betere wereld",
+   "Vorm-experiment is belangrijker dan inhoud"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "literatuurgeschiedenis",
+  "file": "./literatuurgeschiedenis.js",
+  "stap": 9,
+  "vraag": 1,
+  "soort": "L",
+  "q": "*Wat is een typisch kenmerk van postmoderne literatuur?*",
+  "opties": [
+   "Ironie en intertekstualiteit (verwijzingen naar andere werken)",
+   "Vaste klassieke versmaten",
+   "Mondelinge overlevering",
+   "Religieuze mystiek"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "literatuurgeschiedenis",
+  "file": "./literatuurgeschiedenis.js",
+  "stap": 11,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*\"Hij liep over straat. Wat hij niet wist, was dat zijn vrouw thuis al haar koffers aan het pakken was.\"* — Welk perspectief?",
+  "opties": [
+   "Auctorieel (alwetende verteller)",
+   "Ik-perspectief",
+   "Personaal (één personage)",
+   "Wisselend"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "literatuurgeschiedenis",
+  "file": "./literatuurgeschiedenis.js",
+  "stap": 13,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "*\"Eline Vere\" van Couperus (1889) hoort bij welke stroming?*",
+  "opties": [
+   "Realisme / Naturalisme",
+   "Romantiek",
+   "Modernisme",
+   "Postmodernisme"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "literatuurgeschiedenis",
+  "file": "./literatuurgeschiedenis.js",
+  "stap": 13,
+  "vraag": 2,
+  "soort": "L",
+  "q": "*\"Hij liep over straat. Hij dacht: vandaag wordt geen goede dag.\"* — Welk vertelperspectief?",
+  "opties": [
+   "Personaal (= we zien het door één personage)",
+   "Auctorieel (alwetend)",
+   "Ik-perspectief",
+   "Wisselend"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "literatuurgeschiedenis",
+  "file": "./literatuurgeschiedenis.js",
+  "stap": 13,
+  "vraag": 4,
+  "soort": "L",
+  "q": "*Max Havelaar* (Multatuli) protesteerde tegen?",
+  "opties": [
+   "Koloniale uitbuiting in Indië",
+   "Koningshuis",
+   "Industrialisatie",
+   "Religie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "literatuurgeschiedenis",
+  "file": "./literatuurgeschiedenis.js",
+  "stap": 13,
+  "vraag": 6,
+  "soort": "L",
+  "q": "De Tachtigers stonden bekend om?",
+  "opties": [
+   "L'art pour l'art / individualisme",
+   "Realisme",
+   "Klassieke regels",
+   "Religieuze poëzie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "literatuurgeschiedenis",
+  "file": "./literatuurgeschiedenis.js",
+  "stap": 13,
+  "vraag": 7,
+  "soort": "L",
+  "q": "Welk verschil is er tussen 'ik-perspectief' en 'auctorieel'?",
+  "opties": [
+   "Ik = 1e persoon binnenuit; auctorieel = alwetende verteller",
+   "Geen verschil",
+   "Ik is altijd onbetrouwbaar",
+   "Auctorieel = 1e persoon"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "literatuurgeschiedenis",
+  "file": "./literatuurgeschiedenis.js",
+  "stap": 13,
+  "vraag": 9,
+  "soort": "L",
+  "q": "Metafoor: 'Hij is een leeuw' — wat is dat?",
+  "opties": [
+   "Vergelijking ZONDER 'als/zoals'",
+   "Met 'als/zoals'",
+   "Tegenstelling",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "literatuurgeschiedenis",
+  "file": "./literatuurgeschiedenis.js",
+  "stap": 13,
+  "vraag": 10,
+  "soort": "L",
+  "q": "Wat is personificatie?",
+  "opties": [
+   "Niet-levend ding krijgt menselijke eigenschap",
+   "Mens wordt object",
+   "Vergelijking met als/zoals",
+   "Overdrijving voor effect"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederlands-cse-havo-vwo",
+  "file": "./nederlandsCseHavoVwo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Wat test CSE Nederlands?",
+  "opties": [
+   "Leesvaardigheid",
+   "Alleen spreken",
+   "Alleen schrijven",
+   "Alleen luisteren"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "nederlands-cse-havo-vwo",
+  "file": "./nederlandsCseHavoVwo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Welk hulpmiddel mag je gebruiken bij het CSE Nederlands?",
+  "opties": [
+   "Een papieren woordenboek Nederlands",
+   "Je telefoon",
+   "Je eigen aantekeningen",
+   "Een vertaalapp"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederlands-cse-havo-vwo",
+  "file": "./nederlandsCseHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Een tekst schetst eerst een misstand, bespreekt daarna mogelijke maatregelen en beveelt er één aan. Welk tekststructuur-patroon?",
+  "opties": [
+   "Probleem-oplossing-structuur",
+   "Chronologisch",
+   "Vergelijkend",
+   "Voor-en-tegen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederlands-cse-havo-vwo",
+  "file": "./nederlandsCseHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Verwijswoord *dit* verwijst meestal:",
+  "opties": [
+   "Terug naar iets eerder genoemd",
+   "Vooruit",
+   "Naar titel",
+   "Naar voetnoot"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederlands-cse-havo-vwo",
+  "file": "./nederlandsCseHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Welke signaalwoord-groep markeert opsomming?",
+  "opties": [
+   "Ten eerste, ten tweede, bovendien",
+   "Maar, echter",
+   "Daarom, dus",
+   "Omdat, doordat"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederlands-cse-havo-vwo",
+  "file": "./nederlandsCseHavoVwo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Ad hominem is:",
+  "opties": [
+   "Persoonlijke aanval ipv argument",
+   "Vergelijking",
+   "Voorbeeld",
+   "Statistiek"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederlands-cse-havo-vwo",
+  "file": "./nederlandsCseHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Welke is een hellend-vlak-drogreden?",
+  "opties": [
+   "Als X, dan onvermijdelijk Y en daarna ramp Z",
+   "Iedereen doet het",
+   "Stel persoon ter discussie",
+   "Vergelijking"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederlands-cse-havo-vwo",
+  "file": "./nederlandsCseHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Stroman is:",
+  "opties": [
+   "Vertekenen van tegenstanders standpunt",
+   "Echte persoon",
+   "Type argument",
+   "Conclusie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederlands-cse-havo-vwo",
+  "file": "./nederlandsCseHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Cirkelredenering:",
+  "opties": [
+   "Conclusie als argument gebruiken",
+   "Vergelijking",
+   "Generalisatie",
+   "Vals dilemma"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederlands-cse-havo-vwo",
+  "file": "./nederlandsCseHavoVwo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "SK",
+  "q": "Mag je citaten gebruiken in samenvatting?",
+  "opties": [
+   "Nee — eigen woorden",
+   "Ja altijd",
+   "Alleen titels",
+   "Alleen voor één zin"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "nederlands-cse-havo-vwo",
+  "file": "./nederlandsCseHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat hoort niet in samenvatting?",
+  "opties": [
+   "Eigen mening over standpunt auteur",
+   "Hoofdgedachte",
+   "Hoofdargumenten",
+   "Conclusie tekst"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederlands-cse-havo-vwo",
+  "file": "./nederlandsCseHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Welke is prioriteit in samenvatting?",
+  "opties": [
+   "Hoofdpunten over details",
+   "Aantal woorden over inhoud",
+   "Mooie taal",
+   "Citaten"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "nederlands-cse-havo-vwo",
+  "file": "./nederlandsCseHavoVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Je hebt 45 minuten voor een oefen-samenvatting van een hele tekst. Goede tijdsverdeling?",
+  "opties": [
+   "15 min lezen+schema, 25 min schrijven, 5 min check",
+   "Alle 45 min schrijven",
+   "Direct schrijven",
+   "30 min lezen, 15 schrijven"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederlands-cse-havo-vwo",
+  "file": "./nederlandsCseHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Welk signaalwoord markeert conclusie?",
+  "opties": [
+   "Kortom / samenvattend",
+   "Bijvoorbeeld",
+   "Echter",
+   "Omdat"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederlands-cse-havo-vwo",
+  "file": "./nederlandsCseHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Alinea-functie 'voorbeeld geven':",
+  "opties": [
+   "Illustratie van eerder argument",
+   "Hoofdgedachte",
+   "Tegenargument",
+   "Conclusie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederlands-cse-havo-vwo",
+  "file": "./nederlandsCseHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Hoofdgedachte tekst vind je vaak in:",
+  "opties": [
+   "Eerste of laatste alinea",
+   "Voetnoot",
+   "Bron-vermelding",
+   "Titel alleen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "nederlands-cse-havo-vwo",
+  "file": "./nederlandsCseHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Je antwoord op een samenvattingsvraag is langer dan het maximum aantal woorden. Wat gebeurt er?",
+  "opties": [
+   "Het deel na het maximum wordt niet beoordeeld",
+   "Je krijgt extra punten",
+   "Het hele antwoord telt dubbel",
+   "Niets, lengte maakt niet uit"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "schrijfvaardigheid",
+  "file": "./schrijfvaardigheid.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "H",
+  "q": "*Een tekst noemt drie standpunten over werken-tot-67, weegt ze af, en eindigt zonder eigen positie.* — Welke tekstsoort?",
+  "opties": [
+   "Beschouwing",
+   "Betoog",
+   "Uiteenzetting",
+   "Argumentatie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "schrijfvaardigheid",
+  "file": "./schrijfvaardigheid.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*Welke zin past het best als topic sentence van een alinea over jongeren en slaaptekort?*",
+  "opties": [
+   "Veel jongeren krijgen structureel te weinig slaap, met merkbare gevolgen voor hun schoolprestaties.",
+   "Mijn neefje gaat altijd om half twee naar bed.",
+   "Slapen is leuk.",
+   "Hoeveel uur slaap heb je eigenlijk nodig?"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "schrijfvaardigheid",
+  "file": "./schrijfvaardigheid.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Welke fout zit in dit slot? — *\"Concluderend: er is veel te zeggen voor lagere snelheden. Daarnaast is uit recent onderzoek gebleken dat 80 km/u nog veiliger zo",
+  "opties": [
+   "Er wordt een nieuw argument geïntroduceerd dat in het middenstuk hoort.",
+   "Het slot is te kort.",
+   "Er staat geen conclusie in.",
+   "De toon is te informeel."
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "schrijfvaardigheid",
+  "file": "./schrijfvaardigheid.js",
+  "stap": 7,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*Een leerling schrijft een beschouwing over werken-tot-67. Welke openingszin van een alinea past het best?*",
+  "opties": [
+   "Wie kijkt naar het standpunt van vakbonden, ziet dat zij vooral wijzen op de fysieke belasting van zware beroepen.",
+   "Werken tot 67 is gewoon belachelijk en moet onmiddellijk worden afgeschaft.",
+   "Daarom is werken tot 67 de enige juiste oplossing.",
+   "Het is duidelijk dat alleen aso's nog tegen deze maatregel zijn."
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "schrijfvaardigheid",
+  "file": "./schrijfvaardigheid.js",
+  "stap": 8,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*In een uiteenzetting over hoe vaccinatie werkt, staat: \"Vaccinaties zijn echt geweldig en iedereen zou er een moeten halen.\" — Wat is de fout?*",
+  "opties": [
+   "Een uiteenzetting hoort neutraal te zijn — geen mening of oproep.",
+   "De zin is grammaticaal incorrect.",
+   "De zin is te kort.",
+   "Er ontbreekt een vakterm."
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "schrijfvaardigheid",
+  "file": "./schrijfvaardigheid.js",
+  "stap": 10,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*Welke formulering is het sterkst voor een betoog?*",
+  "opties": [
+   "Volgens het RIVM sterven in Nederland jaarlijks duizenden mensen vroegtijdig door luchtvervuiling.",
+   "Heel erg veel mensen sterven super vroeg door slechte lucht.",
+   "Er zijn dingen die wijzen op gezondheidsschade door lucht.",
+   "Mensen kunnen ziek worden van vieze lucht, dat weet iedereen."
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "schrijfvaardigheid",
+  "file": "./schrijfvaardigheid.js",
+  "stap": 12,
+  "vraag": 1,
+  "soort": "L",
+  "q": "*Welke alinea-volgorde is het sterkst voor een betoog vóór gratis kinderopvang?*",
+  "opties": [
+   "Redelijk sterk eerst, ondersteunend in het midden, sterkste als laatste",
+   "Argument: sterkste eerst, dan zwakste",
+   "Tegenargumenten eerst, eigen argumenten daarna",
+   "Willekeurig — volgorde maakt geen verschil"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "schrijfvaardigheid",
+  "file": "./schrijfvaardigheid.js",
+  "stap": 12,
+  "vraag": 3,
+  "soort": "L",
+  "q": "*Een leerling schrijft in een uiteenzetting: \"Persoonlijk vind ik dat gemeenten meer geld zouden moeten krijgen voor jeugdzorg.\" Wat klopt er niet?*",
+  "opties": [
+   "Een uiteenzetting hoort neutraal te zijn — geen \"ik vind\".",
+   "De zin is grammaticaal incorrect.",
+   "De zin is te lang.",
+   "Er ontbreekt een cijfer."
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "schrijfvaardigheid",
+  "file": "./schrijfvaardigheid.js",
+  "stap": 12,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Een beschouwing geeft?",
+  "opties": [
+   "Verschillende kanten zonder definitieve keuze",
+   "Eén mening",
+   "Alleen feiten",
+   "Alleen voorbeelden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "schrijfvaardigheid",
+  "file": "./schrijfvaardigheid.js",
+  "stap": 12,
+  "vraag": 8,
+  "soort": "L",
+  "q": "Wat moet in de inleiding van een tekst?",
+  "opties": [
+   "Onderwerp + aanleiding + opbouw",
+   "De conclusie",
+   "Alle voorbeelden",
+   "De bronnen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "schrijfvaardigheid",
+  "file": "./schrijfvaardigheid.js",
+  "stap": 12,
+  "vraag": 9,
+  "soort": "L",
+  "q": "Wat is een topic sentence?",
+  "opties": [
+   "De kernzin van een alinea",
+   "De titel",
+   "De laatste zin",
+   "De inleiding"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "schrijfvaardigheid",
+  "file": "./schrijfvaardigheid.js",
+  "stap": 12,
+  "vraag": 10,
+  "soort": "L",
+  "q": "Welke stap doe je bij reviseren als laatste?",
+  "opties": [
+   "Spelling + interpunctie checken",
+   "De argumenten bedenken",
+   "Structuur veranderen",
+   "Tekst schrijven"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "spelling",
+  "file": "./spelling.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "*In het woord 'kammen' (= het meervoud van kam): is de eerste lettergreep 'kam' open of gesloten?*",
+  "opties": [
+   "Gesloten (eindigt op m)",
+   "Open (eindigt op a)",
+   "Halfopen",
+   "Geen van beide"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "spelling",
+  "file": "./spelling.js",
+  "stap": 12,
+  "vraag": 2,
+  "soort": "L",
+  "q": "*Hoofdletters: \"In de zomer ga ik op vakantie naar frankrijk in Augustus.\" — Welke fouten?*",
+  "opties": [
+   "frankrijk moet Frankrijk (hoofdletter, eigennaam) en augustus klein (geen hoofdletter)",
+   "Zomer moet Zomer en Vakantie moet Vakantie",
+   "Alleen Augustus is fout — moet augustus",
+   "Alleen Frankrijk is fout — moet frankrijk"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "stijl-literatuur-havo-vwo",
+  "file": "./stijlLiteratuurHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wat is personaal perspectief?",
+  "opties": [
+   "Hij/zij-verteller vanuit één personage",
+   "Ik-verteller (1e persoon)",
+   "Hij/zij-verteller die alles weet",
+   "Geen verteller, alleen dialoog"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "stijl-literatuur-havo-vwo",
+  "file": "./stijlLiteratuurHavoVwo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is het thema van een verhaal?",
+  "opties": [
+   "De centrale gedachte of het hoofdidee",
+   "De plotsamenvatting",
+   "De hoofdpersoon",
+   "De plaats van handeling"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "stijl-literatuur-havo-vwo",
+  "file": "./stijlLiteratuurHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Vertelde tijd is:",
+  "opties": [
+   "Hoeveel tijd er in het verhaal verloopt",
+   "Hoeveel pagina's er zijn",
+   "Wanneer het boek geschreven is",
+   "Hoe lang lezer over boek doet"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "stijl-literatuur-havo-vwo",
+  "file": "./stijlLiteratuurHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Een rond personage is:",
+  "opties": [
+   "Complex en ontwikkelt zich",
+   "Eén dominante eigenschap",
+   "Bijfiguur",
+   "Antagonist"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "stijl-literatuur-havo-vwo",
+  "file": "./stijlLiteratuurHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "'De avond is ongemak' (Marieke Lucas Rijneveld) won welke prijs?",
+  "opties": [
+   "International Booker Prize",
+   "Nobelprijs",
+   "Pulitzer",
+   "Hugo-prijs"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "stijl-literatuur-havo-vwo",
+  "file": "./stijlLiteratuurHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Een personaal verteller kan:",
+  "opties": [
+   "Alleen gedachten/gevoel van één personage weten",
+   "Alle gedachten van iedereen",
+   "Niet vertellen",
+   "Alleen feiten"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "stijl-literatuur-havo-vwo",
+  "file": "./stijlLiteratuurHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Een open einde is:",
+  "opties": [
+   "Slot dat de lezer zelf invult",
+   "Slot dat alles oplost",
+   "Geen slot",
+   "Twist"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tekstanalyse",
+  "file": "./tekstanalyse.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*Een tekst gebruikt veel medische vakjargon (\"contra-indicatie\", \"comorbiditeit\") zonder uitleg.* — Wie is waarschijnlijk de doelgroep?",
+  "opties": [
+   "Medisch geschoolde lezers (artsen, verpleegkundigen)",
+   "Basisschoolleerlingen",
+   "Algemeen publiek",
+   "Patiënten zonder medische achtergrond"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tekstanalyse",
+  "file": "./tekstanalyse.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*Een tekst gaat over schermtijd bij jongeren. Welke optie is de hoofdgedachte (niet alleen het onderwerp)?*",
+  "opties": [
+   "Te veel schermtijd schaadt de schoolprestaties van jongeren en moet daarom worden beperkt.",
+   "Schermtijd bij jongeren.",
+   "Smartphones.",
+   "Onderzoek naar jongeren."
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tekstanalyse",
+  "file": "./tekstanalyse.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "*Hoofdgedachte van een tekst: \"Sociale media zijn schadelijk voor jongeren en zouden pas vanaf 13 jaar mogen.\" Wat is de bijbehorende hoofdvraag?*",
+  "opties": [
+   "Zijn sociale media schadelijk voor jongeren?",
+   "Wat zijn sociale media?",
+   "Wie heeft sociale media uitgevonden?",
+   "Hoeveel jongeren gebruiken TikTok?"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "tekstanalyse",
+  "file": "./tekstanalyse.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "*Hoofdvraag: \"Hoe is de woningmarktcrisis ontstaan?\" Welke optie is een logische deelvraag?*",
+  "opties": [
+   "Welke rol speelt de lage rente sinds 2010?",
+   "Wat is een woning?",
+   "Hoeveel mensen wonen in Nederland?",
+   "Bestaat er een woningmarktcrisis?"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "tekstanalyse",
+  "file": "./tekstanalyse.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "H",
+  "q": "*De laatste alinea van een tekst begint met \"Concluderend laat zich vaststellen dat...\". Tot welk deel hoort deze alinea?*",
+  "opties": [
+   "Slot",
+   "Inleiding",
+   "Middenstuk",
+   "Aanleiding"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tekstanalyse",
+  "file": "./tekstanalyse.js",
+  "stap": 8,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "*Examenvraag: \"Welk gevolg noemt de schrijver van een lagere snelheidslimiet?\" Welke signaalwoord-zin scan je het eerst?*",
+  "opties": [
+   "\"...met als gevolg dat de luchtkwaliteit aantoonbaar verbetert.\"",
+   "\"Echter, niet iedereen is hiervan overtuigd.\"",
+   "\"Bijvoorbeeld in Duitsland wordt al getest.\"",
+   "\"Concluderend kan worden gesteld dat...\""
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "tekstanalyse",
+  "file": "./tekstanalyse.js",
+  "stap": 10,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*Een betoog over zorgkosten haalt alleen artsen aan en geen patiënten of verzekeraars. Welk soort kritiek is hier passend?*",
+  "opties": [
+   "De schrijver gebruikt selectieve bronnen — alleen één perspectief.",
+   "De schrijver gebruikt geen bronnen.",
+   "De bronnen zijn ondeskundig.",
+   "Er ontbreekt een conclusie."
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tekstanalyse",
+  "file": "./tekstanalyse.js",
+  "stap": 11,
+  "vraag": 0,
+  "soort": "L",
+  "q": "*\"Het is werkelijk schandalig hoe de regering met dit dossier omgaat.\"* — Welk kenmerk maakt deze zin subjectief?",
+  "opties": [
+   "Het waardeoordeel \"schandalig\" + de versterker \"werkelijk\"",
+   "De zin is te kort",
+   "Er wordt een controleerbaar feit genoemd",
+   "Er ontbreekt een bron"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tekstanalyse",
+  "file": "./tekstanalyse.js",
+  "stap": 12,
+  "vraag": 1,
+  "soort": "H",
+  "q": "*Alinea begint met: \"Concluderend kan worden gesteld dat de drie genoemde maatregelen samen de gewenste daling kunnen bewerkstelligen.\"* — Welke functie heeft d",
+  "opties": [
+   "Concluderend",
+   "Inleidend",
+   "Tegenstellend",
+   "Voorbeelden gevend"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tekstanalyse",
+  "file": "./tekstanalyse.js",
+  "stap": 12,
+  "vraag": 2,
+  "soort": "L",
+  "q": "*Welke optie is de hoofdgedachte (geen onderwerp, geen deelvraag) van een tekst?*",
+  "opties": [
+   "Een hogere belasting op suiker zou de volksgezondheid aantoonbaar verbeteren.",
+   "Suiker.",
+   "Hoeveel suiker eet een Nederlander gemiddeld?",
+   "Suikerbelasting in Nederland."
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tekstanalyse",
+  "file": "./tekstanalyse.js",
+  "stap": 12,
+  "vraag": 4,
+  "soort": "K",
+  "q": "*'De zonneschijn voelt heerlijk warm.'* — Welke uitspraak?",
+  "opties": [
+   "Mening",
+   "Feit",
+   "Hypothese",
+   "Wet"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "tekstanalyse",
+  "file": "./tekstanalyse.js",
+  "stap": 12,
+  "vraag": 7,
+  "soort": "L",
+  "q": "Wat is een tekstdoel?",
+  "opties": [
+   "Waarom de schrijver de tekst schreef",
+   "De titel",
+   "Het aantal woorden",
+   "De zinslengte"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "tekstanalyse",
+  "file": "./tekstanalyse.js",
+  "stap": 12,
+  "vraag": 9,
+  "soort": "L2",
+  "q": "Wat is de doelgroep van een tekst?",
+  "opties": [
+   "Voor wie de tekst is bedoeld",
+   "Hoe lang de tekst is",
+   "Wat het tekstdoel is",
+   "Wie de tekst schreef"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "tekstanalyse",
+  "file": "./tekstanalyse.js",
+  "stap": 12,
+  "vraag": 10,
+  "soort": "L",
+  "q": "Welke vraag stel je om de hoofdvraag te vinden?",
+  "opties": [
+   "Wat is de centrale vraag die de tekst beantwoordt?",
+   "Hoeveel alinea's heeft de tekst?",
+   "Wat staat in de eerste zin?",
+   "Wie heeft de tekst geschreven?"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "werkwoordsvervoeging",
+  "file": "./werkwoordsvervoeging.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "H",
+  "q": "Welke vorm is correct? — *Ik ___ je bericht net binnen.* (werkwoord: krijgen)",
+  "opties": [
+   "krijg",
+   "krijgt",
+   "krijgen",
+   "krijgd"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "woordsoorten-nederlands",
+  "file": "./woordsoortenNederlands.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Welke is een bijvoeglijk naamwoord in: *de snelle auto*?",
+  "opties": [
+   "snelle",
+   "de",
+   "auto",
+   "geen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "woordsoorten-nederlands",
+  "file": "./woordsoortenNederlands.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "H",
+  "q": "Welke vorm is goed? — *een ___ kind* (klein)",
+  "opties": [
+   "klein",
+   "kleine",
+   "kleins",
+   "kleinen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "woordsoorten-nederlands",
+  "file": "./woordsoortenNederlands.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Welk bepaald lidwoord (de of het) hoort bij boekje?",
+  "opties": [
+   "het",
+   "de",
+   "een",
+   "geen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "woordsoorten-nederlands",
+  "file": "./woordsoortenNederlands.js",
+  "stap": 10,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Welke woordsoort is mooie in: *een mooie dag*?",
+  "opties": [
+   "bijvoeglijk naamwoord",
+   "zelfstandig nw",
+   "bijwoord",
+   "voornaamwoord"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "zinsontleding",
+  "file": "./zinsontleding.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "H",
+  "q": "*Wat is de persoonsvorm in: \"De koffie smaakt heerlijk vandaag.\"?*",
+  "opties": [
+   "smaakt",
+   "koffie",
+   "heerlijk",
+   "vandaag"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "zinsontleding",
+  "file": "./zinsontleding.js",
+  "stap": 11,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "*Wat is het lijdend voorwerp in: \"De juf gaf de leerlingen na de les hun eerste rapport.\"?*",
+  "opties": [
+   "hun eerste rapport",
+   "de leerlingen",
+   "de juf",
+   "na de les"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "zinsontleding",
+  "file": "./zinsontleding.js",
+  "stap": 12,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "*Wat is de bepaling van REDEN in: \"We blijven binnen omdat het regent.\"?*",
+  "opties": [
+   "omdat het regent",
+   "binnen",
+   "we",
+   "blijven"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "zinsontleding",
+  "file": "./zinsontleding.js",
+  "stap": 13,
+  "vraag": 0,
+  "soort": "H",
+  "q": "*Wat is de PERSOONSVORM in: \"Mijn ouders zullen volgend jaar verhuizen naar Spanje.\"?*",
+  "opties": [
+   "zullen",
+   "verhuizen",
+   "ouders",
+   "Spanje"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ }
+]

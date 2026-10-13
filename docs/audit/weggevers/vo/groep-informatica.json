@@ -1,0 +1,1554 @@
+[
+ {
+  "pad": "ai-machine-learning-informatica",
+  "file": "./aiMachineLearningInformatica.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Welke van deze is een voorbeeld van AI in het dagelijks leven?",
+  "opties": [
+   "Aanbevelingen op YouTube/Netflix",
+   "Een gewone rekenmachine",
+   "Een lichtschakelaar",
+   "Een papieren agenda"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "ai-machine-learning-informatica",
+  "file": "./aiMachineLearningInformatica.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is het verschil tussen machine learning en klassiek programmeren?",
+  "opties": [
+   "Bij ML leert de computer de regels uit data",
+   "Er is geen verschil",
+   "ML gebruikt geen computer",
+   "Klassiek programmeren leert uit data"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ai-machine-learning-informatica",
+  "file": "./aiMachineLearningInformatica.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wat gebeurt er in de trainingsfase van machine learning?",
+  "opties": [
+   "Het model leert patronen uit trainingsdata",
+   "De gebruiker betaalt voor de app",
+   "De computer wordt gereset",
+   "Er wordt niets opgeslagen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "ai-machine-learning-informatica",
+  "file": "./aiMachineLearningInformatica.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Waarom test je een ML-model op nieuwe data die het tijdens het trainen niet zag?",
+  "opties": [
+   "Om te checken of het echt goed werkt",
+   "Om de computer sneller te maken",
+   "Om stroom te besparen",
+   "Dat hoeft eigenlijk nooit"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "ai-machine-learning-informatica",
+  "file": "./aiMachineLearningInformatica.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Bij supervised learning leert het model van…",
+  "opties": [
+   "Gelabelde voorbeelden",
+   "Data zonder enige labels",
+   "Helemaal geen data",
+   "Alleen straf"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "ai-machine-learning-informatica",
+  "file": "./aiMachineLearningInformatica.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Hoe maakt een taalmodel (chatbot/LLM) een zin?",
+  "opties": [
+   "Door woord voor woord te voorspellen wat waarschijnlijk volgt",
+   "Door de zin op te zoeken in een boek",
+   "Door echt te begrijpen wat het zegt",
+   "Door willekeurige letters te plaatsen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ai-machine-learning-informatica",
+  "file": "./aiMachineLearningInformatica.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is een neuraal netwerk?",
+  "opties": [
+   "Lagen van rekenknopen, losjes geïnspireerd op hersencellen",
+   "Een echt menselijk brein in de computer",
+   "Een sociaal netwerk zoals Instagram",
+   "Een soort internetkabel"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ai-machine-learning-informatica",
+  "file": "./aiMachineLearningInformatica.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Hoe ontstaat bias (vooringenomenheid) in een AI-model?",
+  "opties": [
+   "Doordat het leert van scheve/eenzijdige data",
+   "Doordat de AI gemeen is",
+   "Door een te snelle computer",
+   "Door te weinig stroom"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ai-machine-learning-informatica",
+  "file": "./aiMachineLearningInformatica.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is de juiste houding bij het gebruik van (generatieve) AI?",
+  "opties": [
+   "Gebruik het als hulpmiddel en controleer de uitkomst kritisch",
+   "Geloof altijd alles wat het zegt",
+   "Gebruik het nooit",
+   "Deel er gerust al je persoonsgegevens mee"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ai-machine-learning-informatica",
+  "file": "./aiMachineLearningInformatica.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Waarom botst machine learning vaak met privacy (AVG)?",
+  "opties": [
+   "ML heeft veel data nodig, vaak persoonsgegevens",
+   "ML gebruikt nooit data",
+   "Privacy heeft niets met data te maken",
+   "ML werkt alleen op papier"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "algoritmen-pseudocode-informatica",
+  "file": "./algoritmenPseudocodeInformatica.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een algoritme?",
+  "opties": [
+   "Een stapsgewijs plan om een taak op te lossen",
+   "Een programmeertaal",
+   "Een soort computer",
+   "Een foutmelding"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "algoritmen-pseudocode-informatica",
+  "file": "./algoritmenPseudocodeInformatica.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Een stap in een algoritme moet eenduidig zijn. Dat betekent:",
+  "opties": [
+   "Er is maar één manier om de stap op te vatten",
+   "Je mag de stap overslaan",
+   "De stap moet lang duren",
+   "De stap is geheim"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "algoritmen-pseudocode-informatica",
+  "file": "./algoritmenPseudocodeInformatica.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "H",
+  "q": "HERHAAL 10 keer: … is een voorbeeld van:",
+  "opties": [
+   "Herhaling",
+   "Selectie",
+   "Sequentie",
+   "Een foutmelding"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "algoritmen-pseudocode-informatica",
+  "file": "./algoritmenPseudocodeInformatica.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wanneer ontstaat een oneindige lus?",
+  "opties": [
+   "Als de voorwaarde van een 'zolang'-lus nooit onwaar wordt",
+   "Als een programma precies één keer draait",
+   "Als je een variabele gebruikt",
+   "Als de lijst gesorteerd is"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "algoritmen-pseudocode-informatica",
+  "file": "./algoritmenPseudocodeInformatica.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is pseudocode?",
+  "opties": [
+   "Een algoritme in leesbare 'bijna-taal'",
+   "Een echte programmeertaal",
+   "Een soort virus",
+   "Een stroomdiagram"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "algoritmen-pseudocode-informatica",
+  "file": "./algoritmenPseudocodeInformatica.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Waarom schrijf je een algoritme vaak eerst in pseudocode of een flowchart?",
+  "opties": [
+   "Denkfouten vind je sneller dan in echte code",
+   "Het draait sneller",
+   "De computer eist het",
+   "Het maakt het bestand kleiner"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "algoritmen-pseudocode-informatica",
+  "file": "./algoritmenPseudocodeInformatica.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Waarom is pseudocode taal-onafhankelijk handig?",
+  "opties": [
+   "Dezelfde opzet kun je later in Python óf Java uitwerken",
+   "Het draait vanzelf op elke computer",
+   "Het is korter dan één woord",
+   "De computer voert het meteen uit"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "algoritmen-pseudocode-informatica",
+  "file": "./algoritmenPseudocodeInformatica.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Waarom is de efficiëntie van een algoritme belangrijk?",
+  "opties": [
+   "Bij grote hoeveelheden data scheelt het enorm veel tijd",
+   "Het maakt de code mooier",
+   "Het is alleen belangrijk voor kleine lijstjes",
+   "Het verandert het antwoord"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "algoritmen-pseudocode-informatica",
+  "file": "./algoritmenPseudocodeInformatica.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Waarom is binair zoeken sneller dan lineair zoeken?",
+  "opties": [
+   "Het gooit bij elke stap de helft van de lijst weg",
+   "Het bekijkt elk item apart",
+   "Het gebruikt meer geheugen",
+   "Het werkt zonder de lijst te bekijken"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "binair-datarepresentatie-informatica",
+  "file": "./binairDatarepresentatieInformatica.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Hoeveel kleuren kun je maken met 24-bit RGB (1 byte per kanaal)?",
+  "opties": [
+   "Ongeveer 16,7 miljoen",
+   "256",
+   "24",
+   "1024"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "binair-datarepresentatie-informatica",
+  "file": "./binairDatarepresentatieInformatica.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Een computer slaat tekst eigenlijk op als…",
+  "opties": [
+   "Getallen volgens een afgesproken tekenset",
+   "Foto's van letters",
+   "Klanken",
+   "Niets — letters zijn al digitaal"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "binair-datarepresentatie-informatica",
+  "file": "./binairDatarepresentatieInformatica.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L2S",
+  "q": "Waarvoor heb je Unicode/UTF-8 nodig in plaats van ASCII?",
+  "opties": [
+   "Voor alle talen, symbolen én emoji",
+   "Om sneller te rekenen",
+   "Om bestanden te verkleinen",
+   "Alleen voor hoofdletters"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "binair-datarepresentatie-informatica",
+  "file": "./binairDatarepresentatieInformatica.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat betekent een hogere samplefrequentie (Hz) bij geluid?",
+  "opties": [
+   "Vaker meten per seconde → beter geluid",
+   "Hogere toonhoogte",
+   "Een korter bestand",
+   "Minder kleuren"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cybersecurity-encryptie-informatica",
+  "file": "./cybersecurityEncryptieInformatica.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is ransomware?",
+  "opties": [
+   "Malware die je bestanden gijzelt en losgeld eist",
+   "Een gratis antivirusprogramma",
+   "Een sterk wachtwoord",
+   "Een soort firewall"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cybersecurity-encryptie-informatica",
+  "file": "./cybersecurityEncryptieInformatica.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is phishing?",
+  "opties": [
+   "Een nep-bericht om je gegevens/geld te ontfutselen",
+   "Een snelle internetverbinding",
+   "Een back-upmethode",
+   "Een programmeertaal"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cybersecurity-encryptie-informatica",
+  "file": "./cybersecurityEncryptieInformatica.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Een trojaans paard herken je aan…",
+  "opties": [
+   "Het doet zich voor als iets nuttigs, maar doet stiekem iets kwaads",
+   "Het versleutelt je bestanden en eist losgeld",
+   "Het is altijd een mail van je bank",
+   "Het is een sterk wachtwoord"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cybersecurity-encryptie-informatica",
+  "file": "./cybersecurityEncryptieInformatica.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wat is tweestapsverificatie (2FA)?",
+  "opties": [
+   "Een tweede bewijs naast je wachtwoord",
+   "Twee keer hetzelfde wachtwoord",
+   "Een dubbel zo lang wachtwoord",
+   "Twee gebruikersnamen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "cybersecurity-encryptie-informatica",
+  "file": "./cybersecurityEncryptieInformatica.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Waarom is hetzelfde wachtwoord op meerdere sites gebruiken gevaarlijk?",
+  "opties": [
+   "Lekt één site, dan kunnen aanvallers er meteen je andere accounts mee proberen",
+   "Het is juist het veiligst",
+   "Websites worden er trager van",
+   "Je onthoudt het dan slechter"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cybersecurity-encryptie-informatica",
+  "file": "./cybersecurityEncryptieInformatica.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat doet een wachtwoordmanager?",
+  "opties": [
+   "Onthoudt sterke, unieke wachtwoorden achter één hoofdwachtwoord",
+   "Zet je wachtwoorden openbaar op internet",
+   "Maakt je wachtwoorden korter",
+   "Deelt je wachtwoorden met je vrienden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cybersecurity-encryptie-informatica",
+  "file": "./cybersecurityEncryptieInformatica.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat doet encryptie?",
+  "opties": [
+   "Data onleesbaar maken zonder de juiste sleutel",
+   "Bestanden kleiner maken",
+   "Het internet sneller maken",
+   "Virussen verwijderen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cybersecurity-encryptie-informatica",
+  "file": "./cybersecurityEncryptieInformatica.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Bij asymmetrische encryptie zijn er…",
+  "opties": [
+   "Twee sleutels: een publieke en een privé",
+   "Eén sleutel voor alles",
+   "Helemaal geen sleutels",
+   "Een sleutel per letter"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cybersecurity-encryptie-informatica",
+  "file": "./cybersecurityEncryptieInformatica.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Het slotje 🔒 (HTTPS) gebruikt encryptie om…",
+  "opties": [
+   "Het verkeer tussen jou en de server af te schermen",
+   "De site gratis te maken",
+   "Reclame te blokkeren",
+   "De site sneller te laden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cybersecurity-encryptie-informatica",
+  "file": "./cybersecurityEncryptieInformatica.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is het lastige aan symmetrische encryptie (één gedeelde sleutel)?",
+  "opties": [
+   "Je moet die ene geheime sleutel veilig bij de ander zien te krijgen",
+   "Er zijn altijd te veel sleutels",
+   "Versleutelde data is nooit meer te lezen",
+   "Het werkt alleen zonder internet"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cybersecurity-encryptie-informatica",
+  "file": "./cybersecurityEncryptieInformatica.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Waarom is het slotje 🔒 (HTTPS) juist op openbare wifi belangrijk?",
+  "opties": [
+   "Anderen op hetzelfde netwerk kunnen onversleuteld verkeer meelezen",
+   "Openbare wifi is dan sneller",
+   "Het bespaart stroom",
+   "Het maakt de site gratis"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cybersecurity-encryptie-informatica",
+  "file": "./cybersecurityEncryptieInformatica.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "De AVG gaat over…",
+  "opties": [
+   "Hoe organisaties met persoonsgegevens moeten omgaan",
+   "Hoe je sneller internet krijgt",
+   "Welke kleuren een website mag hebben",
+   "Hoe je een virus maakt"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "cybersecurity-encryptie-informatica",
+  "file": "./cybersecurityEncryptieInformatica.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Volgens de AVG mag een organisatie…",
+  "opties": [
+   "Alleen persoonsgegevens verzamelen die echt nodig zijn",
+   "Alle gegevens verzamelen die ze maar wil",
+   "Je gegevens nooit laten inzien",
+   "Je gegevens altijd doorverkopen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "databases-sql-informatica",
+  "file": "./databasesSqlInformatica.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een database?",
+  "opties": [
+   "Een geordende verzameling gegevens",
+   "Eén losse foto",
+   "Een programmeertaal",
+   "Een netwerkkabel"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "databases-sql-informatica",
+  "file": "./databasesSqlInformatica.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Waarom een database in plaats van één groot tekstbestand?",
+  "opties": [
+   "Snel zoeken/filteren/combineren, ook bij veel data",
+   "Het is mooier om te lezen",
+   "Bestanden bestaan niet meer",
+   "Een database kost geen ruimte"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "databases-sql-informatica",
+  "file": "./databasesSqlInformatica.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "In een tabel: wat is een veld?",
+  "opties": [
+   "Eén kolom: één eigenschap",
+   "Eén rij: één exemplaar",
+   "De hele tabel",
+   "Een foutmelding"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "databases-sql-informatica",
+  "file": "./databasesSqlInformatica.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is een DBMS (zoals MySQL of PostgreSQL)?",
+  "opties": [
+   "Een programma dat databases beheert",
+   "Een programmeertaal voor games",
+   "Een soort virus",
+   "Een netwerkkabel"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "databases-sql-informatica",
+  "file": "./databasesSqlInformatica.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een primaire sleutel (primary key)?",
+  "opties": [
+   "Een uniek kenmerk dat elk record aanwijst",
+   "Een wachtwoord voor de database",
+   "De grootste kolom",
+   "Een tabel zonder gegevens"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "databases-sql-informatica",
+  "file": "./databasesSqlInformatica.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Een foreign key (verwijssleutel) wordt gebruikt om…",
+  "opties": [
+   "Tabellen aan elkaar te koppelen",
+   "De database te beveiligen",
+   "Een back-up te maken",
+   "Tekst te versleutelen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "databases-sql-informatica",
+  "file": "./databasesSqlInformatica.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Twee leerlingen heten allebei 'Sara'. Hoe houdt de database ze uit elkaar?",
+  "opties": [
+   "Via hun unieke primaire sleutel",
+   "Dat kan de database niet",
+   "Via de kleur van de rij",
+   "Via hun wachtwoord"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "databases-sql-informatica",
+  "file": "./databasesSqlInformatica.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat doet `WHERE cijfer >= 6` in een query?",
+  "opties": [
+   "Toont alleen records met cijfer 6 of hoger",
+   "Verandert alle cijfers in 6",
+   "Verwijdert lage cijfers",
+   "Sorteert op cijfer"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "databases-sql-informatica",
+  "file": "./databasesSqlInformatica.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Je wilt alle kolommen van álle leerlingen in groep 7. Welke query?",
+  "opties": [
+   "SELECT * FROM Leerlingen WHERE groep = 7;",
+   "DELETE FROM Leerlingen;",
+   "SELECT 7 FROM groep;",
+   "WHERE Leerlingen = 7;"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "databases-sql-informatica",
+  "file": "./databasesSqlInformatica.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat doet `ORDER BY cijfer DESC` in een query?",
+  "opties": [
+   "Sorteert op cijfer, hoogste bovenaan",
+   "Verwijdert lage cijfers",
+   "Telt de cijfers",
+   "Filtert op cijfer 6"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "databases-sql-informatica",
+  "file": "./databasesSqlInformatica.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Waarom is bij UPDATE en DELETE een WHERE zo belangrijk?",
+  "opties": [
+   "Zonder WHERE pas je álle records aan / wis je alles",
+   "Anders werkt de query niet",
+   "Het maakt de query mooier",
+   "WHERE versnelt de database"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "hardware-besturingssysteem-informatica",
+  "file": "./hardwareBesturingssysteemInformatica.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is kenmerkend voor RAM (werkgeheugen)?",
+  "opties": [
+   "Snel en tijdelijk — leeg bij uitzetten",
+   "Bewaart bestanden voor altijd",
+   "Maakt beeld voor games",
+   "Levert de stroom"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "hardware-besturingssysteem-informatica",
+  "file": "./hardwareBesturingssysteemInformatica.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Wat is het verschil tussen een SSD en een HDD?",
+  "opties": [
+   "SSD is sneller en heeft geen bewegende delen",
+   "SSD is werkgeheugen, HDD niet",
+   "HDD is altijd groter dan een SSD kan zijn",
+   "Ze zijn precies hetzelfde"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "hardware-besturingssysteem-informatica",
+  "file": "./hardwareBesturingssysteemInformatica.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Waarvoor is de GPU (grafische kaart) vooral sterk?",
+  "opties": [
+   "Beeld en veel berekeningen tegelijk",
+   "Het blijvend bewaren van bestanden",
+   "Het leveren van stroom",
+   "Het typen van tekst"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "hardware-besturingssysteem-informatica",
+  "file": "./hardwareBesturingssysteemInformatica.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Wat doet het moederbord?",
+  "opties": [
+   "Verbindt alle onderdelen met elkaar",
+   "Rekent alle instructies uit",
+   "Bewaart bestanden blijvend",
+   "Toont het beeld"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "hardware-besturingssysteem-informatica",
+  "file": "./hardwareBesturingssysteemInformatica.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat ben je kwijt als je de computer uitzet zonder op te slaan?",
+  "opties": [
+   "Het werk dat alleen in het RAM stond",
+   "Alles op je SSD",
+   "Het besturingssysteem",
+   "Niets, alles is altijd veilig"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "hardware-besturingssysteem-informatica",
+  "file": "./hardwareBesturingssysteemInformatica.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is waar over de geheugenhiërarchie?",
+  "opties": [
+   "Dichter bij de CPU = sneller maar kleiner",
+   "Opslag is sneller dan RAM",
+   "RAM is groter dan opslag",
+   "Cache is het traagst"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "hardware-besturingssysteem-informatica",
+  "file": "./hardwareBesturingssysteemInformatica.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Wat betekent de kloksnelheid (in GHz) van een CPU?",
+  "opties": [
+   "Hoeveel cycli hij per seconde doorloopt",
+   "Hoeveel bestanden erop passen",
+   "Hoe groot het scherm is",
+   "Hoeveel stroom hij levert"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "hardware-besturingssysteem-informatica",
+  "file": "./hardwareBesturingssysteemInformatica.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is het voordeel van meerdere cores in een CPU?",
+  "opties": [
+   "Meerdere instructies tegelijk uitvoeren",
+   "Meer opslagruimte",
+   "Een groter scherm",
+   "Gegarandeerd minder stroomverbruik"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "hardware-besturingssysteem-informatica",
+  "file": "./hardwareBesturingssysteemInformatica.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is de hoofdtaak van een besturingssysteem (OS)?",
+  "opties": [
+   "De hardware beheren en programma's laten draaien",
+   "Foto's bewerken",
+   "Het internet aanleggen",
+   "Alleen games spelen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "hardware-besturingssysteem-informatica",
+  "file": "./hardwareBesturingssysteemInformatica.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "H",
+  "q": "Dat meerdere programma's 'tegelijk' lijken te draaien, regelt het OS met…",
+  "opties": [
+   "Multitasking",
+   "Een snellere internetverbinding",
+   "Meer schermen",
+   "Een grotere SSD"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "hardware-besturingssysteem-informatica",
+  "file": "./hardwareBesturingssysteemInformatica.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is een driver?",
+  "opties": [
+   "Software die een apparaat laat samenwerken met het systeem",
+   "Iemand die de computer bestuurt",
+   "Software die virussen opspoort",
+   "Het werkgeheugen van de computer"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "hardware-besturingssysteem-informatica",
+  "file": "./hardwareBesturingssysteemInformatica.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Windows en macOS zijn gesloten (closed source). Dat betekent:",
+  "opties": [
+   "De broncode is eigendom van het bedrijf en niet openbaar",
+   "Ze werken niet zonder internet",
+   "Ze zijn altijd gratis",
+   "Iedereen mag de code vrij aanpassen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "hardware-besturingssysteem-informatica",
+  "file": "./hardwareBesturingssysteemInformatica.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat vertelt de extensie (achter de punt, bv. `.jpg`) van een bestand?",
+  "opties": [
+   "Het bestandstype / met welk programma het opent",
+   "Hoe groot het bestand is",
+   "Wie het gemaakt heeft",
+   "Op welke schijf het staat"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "hardware-besturingssysteem-informatica",
+  "file": "./hardwareBesturingssysteemInformatica.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wat is een voordeel van bestanden in de cloud opslaan?",
+  "opties": [
+   "Overal bereikbaar + automatische back-up",
+   "Werkt altijd zonder internet",
+   "Niemand anders kan het ooit zien",
+   "Het kost nooit opslag"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "hardware-besturingssysteem-informatica",
+  "file": "./hardwareBesturingssysteemInformatica.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is een goede back-up-regel?",
+  "opties": [
+   "Belangrijke bestanden op meer dan één plek bewaren",
+   "Eén kopie is altijd genoeg",
+   "Nooit een kopie maken",
+   "Alles alleen in het RAM zetten"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "informatica-havo-vwo",
+  "file": "./informaticaHavoVwo.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een algoritme?",
+  "opties": [
+   "Stap-voor-stap-recept om probleem op te lossen",
+   "Een soort computer",
+   "Een database",
+   "Een netwerk"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "informatica-havo-vwo",
+  "file": "./informaticaHavoVwo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Python-syntax: hoe schrijf je een for-lus die 5x print?",
+  "opties": [
+   "for i in range(5): print(i)",
+   "loop 5 times print(i)",
+   "for(i=0;i<5;i++)",
+   "while i<5: print"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "informatica-havo-vwo",
+  "file": "./informaticaHavoVwo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Binair zoeken werkt:",
+  "opties": [
+   "In gesorteerde lijst, halveer bereik elke stap",
+   "In ongesorteerde lijst",
+   "Alleen op binaire bestanden",
+   "Alleen op getallen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "informatica-havo-vwo",
+  "file": "./informaticaHavoVwo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat doet DNS?",
+  "opties": [
+   "Vertaalt domeinnaam naar IP-adres",
+   "Encryptie",
+   "Routering pakketten",
+   "Bestand-overdracht"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "informatica-havo-vwo",
+  "file": "./informaticaHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "HTTPS verschilt van HTTP doordat:",
+  "opties": [
+   "Verkeer wordt versleuteld",
+   "Sneller",
+   "Goedkoper",
+   "Alleen voor Google"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "informatica-havo-vwo",
+  "file": "./informaticaHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is een DDoS-aanval?",
+  "opties": [
+   "Overspoelen server met verkeer",
+   "Wachtwoord stelen",
+   "Database-corruptie",
+   "Virus"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "informatica-havo-vwo",
+  "file": "./informaticaHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "AVG / GDPR is:",
+  "opties": [
+   "EU-privacy-wet sinds 2018",
+   "NL-belastingwet",
+   "Beveiliging-standaard",
+   "Verkeers-regel"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "informatica-havo-vwo",
+  "file": "./informaticaHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Welke SQL-query selecteert alle leerlingen uit klas 4A?",
+  "opties": [
+   "SELECT * FROM Leerlingen WHERE klas = '4A'",
+   "GET Leerlingen FROM 4A",
+   "SHOW LEERLING klas=4A",
+   "FIND Leerlingen.klas:4A"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "informatica-havo-vwo",
+  "file": "./informaticaHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "JOIN in SQL doet:",
+  "opties": [
+   "Combineert rijen uit 2+ tabellen",
+   "Sorteert rijen",
+   "Verwijdert duplicates",
+   "Maakt nieuwe tabel"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "informatica-havo-vwo",
+  "file": "./informaticaHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Big Data 4 V's:",
+  "opties": [
+   "Volume + Velocity + Variety + Veracity",
+   "Vier kleuren",
+   "Vier vakken",
+   "Verkoop"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "informatica-havo-vwo",
+  "file": "./informaticaHavoVwo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Turing-test test:",
+  "opties": [
+   "Of machine onderscheidbaar is van mens",
+   "Computerkracht",
+   "Internetsnelheid",
+   "Programma-correctheid"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "informatica-havo-vwo",
+  "file": "./informaticaHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is AI-hallucinatie?",
+  "opties": [
+   "AI produceert plausibel-klinkende onzin",
+   "AI-storing",
+   "Visuele AI",
+   "Geluidsverwerking"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "informatica-havo-vwo",
+  "file": "./informaticaHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "AI-bias ontstaat door:",
+  "opties": [
+   "Vooringenomen trainingsdata",
+   "Computer-fouten",
+   "Magie",
+   "Stroomstoring"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "informatica-havo-vwo",
+  "file": "./informaticaHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Hoeveel operaties doet binair zoeken in lijst van 1 miljoen items (worst case)?",
+  "opties": [
+   "~20",
+   "~500.000",
+   "~1.000.000",
+   "~1.000"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "informatica-havo-vwo",
+  "file": "./informaticaHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Hashing wordt gebruikt voor:",
+  "opties": [
+   "Wachtwoorden veilig opslaan",
+   "Encryptie tweezijdig",
+   "Bestandsoverdracht",
+   "Routing"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "informatica-havo-vwo",
+  "file": "./informaticaHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Supervised learning is:",
+  "opties": [
+   "ML met gelabelde trainingsdata",
+   "ML zonder data",
+   "Versleuteld leren",
+   "Schoolles"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "netwerken-internet-informatica",
+  "file": "./netwerkenInternetInformatica.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is het internet?",
+  "opties": [
+   "Een wereldwijd netwerk van netwerken",
+   "Eén grote computer",
+   "Een website",
+   "Een programmeertaal"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "netwerken-internet-informatica",
+  "file": "./netwerkenInternetInformatica.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wat is het verschil tussen het internet en het web (www)?",
+  "opties": [
+   "Internet = de infrastructuur; web = één dienst erop",
+   "Ze zijn precies hetzelfde",
+   "Het web is groter dan het internet",
+   "Het web bestaat uit kabels, internet uit sites"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "netwerken-internet-informatica",
+  "file": "./netwerkenInternetInformatica.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een IP-adres?",
+  "opties": [
+   "Een uniek adres van een apparaat op een netwerk",
+   "De naam van een website",
+   "Een wachtwoord",
+   "Een soort virus"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "netwerken-internet-informatica",
+  "file": "./netwerkenInternetInformatica.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat doet DNS (Domain Name System)?",
+  "opties": [
+   "Vertaalt een domeinnaam naar een IP-adres",
+   "Beveiligt je wachtwoord",
+   "Maakt websites sneller laden",
+   "Slaat je bestanden op"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "netwerken-internet-informatica",
+  "file": "./netwerkenInternetInformatica.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Je typt `leerkwartier.app` in je browser. Wat gebeurt er eerst?",
+  "opties": [
+   "DNS zoekt het bijbehorende IP-adres op",
+   "De pagina wordt meteen versleuteld",
+   "Er wordt een back-up gemaakt",
+   "De CPU wordt gereset"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "netwerken-internet-informatica",
+  "file": "./netwerkenInternetInformatica.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L2S",
+  "q": "Hoe gaat data over internet?",
+  "opties": [
+   "Opgeknipt in kleine pakketjes",
+   "Altijd als één groot geheel",
+   "Alleen als tekst",
+   "Nooit via routers"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "netwerken-internet-informatica",
+  "file": "./netwerkenInternetInformatica.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is een protocol in een netwerk?",
+  "opties": [
+   "Een afspraak voor communicatie",
+   "Een soort kabel",
+   "Een wachtwoord",
+   "Een website"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "netwerken-internet-informatica",
+  "file": "./netwerkenInternetInformatica.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat betekent het slotje 🔒 / HTTPS in de adresbalk?",
+  "opties": [
+   "Je verbinding met de site is versleuteld",
+   "De site is gratis",
+   "De site is populair",
+   "De site is van de overheid"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "programmeren-basis-informatica",
+  "file": "./programmerenBasisInformatica.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is een variabele?",
+  "opties": [
+   "Een benoemd 'doosje' dat een waarde bewaart",
+   "Een foutmelding",
+   "Een soort scherm",
+   "Een internetverbinding"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "programmeren-basis-informatica",
+  "file": "./programmerenBasisInformatica.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "S",
+  "q": "Wat geeft `input(\"Naam? \")` terug?",
+  "opties": [
+   "Tekst — een string",
+   "Altijd een getal",
+   "Een boolean",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "programmeren-basis-informatica",
+  "file": "./programmerenBasisInformatica.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wanneer wordt het blok onder `if leeftijd >= 18:` uitgevoerd?",
+  "opties": [
+   "Als de voorwaarde True is",
+   "Altijd",
+   "Nooit",
+   "Alleen bij tekst"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "programmeren-basis-informatica",
+  "file": "./programmerenBasisInformatica.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L2S",
+  "q": "`if leeftijd >= 12 and leeftijd < 20:` is waar als…",
+  "opties": [
+   "Beide voorwaarden waar zijn",
+   "Eén van beide waar is",
+   "Geen van beide waar is",
+   "Altijd"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "programmeren-basis-informatica",
+  "file": "./programmerenBasisInformatica.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat betekent `elif`?",
+  "opties": [
+   "Anders, als deze andere voorwaarde geldt",
+   "Altijd uitvoeren",
+   "Het einde van het programma",
+   "Een variabele maken"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "programmeren-basis-informatica",
+  "file": "./programmerenBasisInformatica.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L2S",
+  "q": "Wat geeft de vergelijking `5 > 3` terug?",
+  "opties": [
+   "True (een boolean)",
+   "8",
+   "\"5>3\" (tekst)",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "programmeren-basis-informatica",
+  "file": "./programmerenBasisInformatica.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Wat print `for i in range(5): print(i)`?",
+  "opties": [
+   "0 1 2 3 4",
+   "1 2 3 4 5",
+   "5 keer het getal 5",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "programmeren-basis-informatica",
+  "file": "./programmerenBasisInformatica.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Wat gebeurt er als je in een while-loop de teller niet ophoogt?",
+  "opties": [
+   "Een oneindige lus — het stopt nooit",
+   "Het programma gaat sneller",
+   "De loop draait precies één keer",
+   "Niets, dat mag gewoon"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "programmeren-basis-informatica",
+  "file": "./programmerenBasisInformatica.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat doet `for naam in [\"Sara\", \"Tim\"]: print(naam)`?",
+  "opties": [
+   "Print elke naam in de lijst, één voor één",
+   "Print de lijst één keer als geheel",
+   "Doet niets",
+   "Telt tot 2"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "programmeren-basis-informatica",
+  "file": "./programmerenBasisInformatica.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Waarvoor gebruik je een functie?",
+  "opties": [
+   "Een stukje code benoemen en hergebruiken",
+   "De computer afsluiten",
+   "Het scherm groter maken",
+   "Internet sneller maken"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "programmeren-basis-informatica",
+  "file": "./programmerenBasisInformatica.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat doet `return` in een functie?",
+  "opties": [
+   "Geeft een waarde terug om verder te gebruiken",
+   "Print iets op het scherm",
+   "Stopt de computer",
+   "Maakt een variabele"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ }
+]

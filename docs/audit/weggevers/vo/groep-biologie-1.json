@@ -1,0 +1,1282 @@
+[
+ {
+  "pad": "ecosystemen-biologie",
+  "file": "./ecosystemenBiologie.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat is een ecosysteem?",
+  "opties": [
+   "Alle levende + niet-levende delen van een gebied die op elkaar inwerken",
+   "Alle dieren die samen in een bepaald gebied leven",
+   "Alle planten en dieren van een gebied, zonder water en bodem",
+   "Alle individuen van één soort die in een gebied leven"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "ecosystemen-biologie",
+  "file": "./ecosystemenBiologie.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is een populatie?",
+  "opties": [
+   "Alle individuen van 1 soort in een gebied",
+   "Alle dieren in een gebied",
+   "Alle soorten in een bos samen",
+   "Eén plant of dier"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ecosystemen-biologie",
+  "file": "./ecosystemenBiologie.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat doet een afbreker?",
+  "opties": [
+   "Breekt dood materiaal af tot voedingsstoffen",
+   "Eet planten",
+   "Eet andere dieren",
+   "Maakt voedsel via zonlicht"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ecosystemen-biologie",
+  "file": "./ecosystemenBiologie.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Welk percentage energie gaat per niveau ongeveer door?",
+  "opties": [
+   "~10%",
+   "~50%",
+   "~100%",
+   "~1%"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "ecosystemen-biologie",
+  "file": "./ecosystemenBiologie.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "H",
+  "q": "Welk organisme is meestal het zeldzaamst in een ecosysteem?",
+  "opties": [
+   "Toproofdier",
+   "Plant",
+   "Herbivoor",
+   "Insect"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ecosystemen-biologie",
+  "file": "./ecosystemenBiologie.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "S",
+  "q": "In voedselketen 'gras → muis → uil' — wat eet de muis?",
+  "opties": [
+   "Gras",
+   "Uil",
+   "Beide",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "ecosystemen-biologie",
+  "file": "./ecosystemenBiologie.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat gebeurt als wolven verdwijnen uit Yellowstone-park?",
+  "opties": [
+   "Herten worden te talrijk, ecosysteem verstoort",
+   "Niets",
+   "Meer wolven",
+   "Mensen krijgen meer ruimte"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ecosystemen-biologie",
+  "file": "./ecosystemenBiologie.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "H",
+  "q": "In een voedselketen plant → konijn → vos — wat is een producent?",
+  "opties": [
+   "Plant",
+   "Konijn",
+   "Vos",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ecosystemen-biologie",
+  "file": "./ecosystemenBiologie.js",
+  "stap": 2,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Reducenten (afbrekers) doen wat?",
+  "opties": [
+   "Dode organismen afbreken naar voedingsstoffen",
+   "Levende planten opeten",
+   "Zonlicht omzetten in suiker",
+   "Andere dieren vangen en opeten"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ecosystemen-biologie",
+  "file": "./ecosystemenBiologie.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat is de koolstofkringloop?",
+  "opties": [
+   "CO₂ → plant → dier → afbreker → CO₂",
+   "Water → wolk → regen",
+   "Stikstof → bacterie → plant",
+   "Zon → energie → warmte"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "ecosystemen-biologie",
+  "file": "./ecosystemenBiologie.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Waarom stijgt CO₂ in lucht sinds 19e eeuw?",
+  "opties": [
+   "Mensen verbranden veel fossiele brandstof",
+   "Meer planten",
+   "Meer dieren ademen",
+   "Onbekend"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ecosystemen-biologie",
+  "file": "./ecosystemenBiologie.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Wat is de stikstofkringloop?",
+  "opties": [
+   "N₂ uit lucht → bacterie → nitraten → plant → terug",
+   "Water → waterdamp → wolk → regen → zee",
+   "CO₂ → plant → dier → afbreker → CO₂",
+   "Zon → plant → dier → warmte → ruimte"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "ecosystemen-biologie",
+  "file": "./ecosystemenBiologie.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Verschil tussen materie en energie?",
+  "opties": [
+   "Materie kringloopt, energie stroomt door",
+   "Beide kringlopen",
+   "Beide stromen door",
+   "Geen verschil"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ecosystemen-biologie",
+  "file": "./ecosystemenBiologie.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is een invasieve soort?",
+  "opties": [
+   "Nieuwe soort die andere verdringt",
+   "Bedreigde soort",
+   "Grote soort",
+   "Soort met veel pups"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ecosystemen-biologie",
+  "file": "./ecosystemenBiologie.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is endemisch?",
+  "opties": [
+   "Komt alleen in 1 gebied voor",
+   "Veel voorkomend",
+   "Ziek",
+   "Uitgestorven"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "ecosystemen-biologie",
+  "file": "./ecosystemenBiologie.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Energie gaat per niveau ongeveer hoeveel door?",
+  "opties": [
+   "~10%",
+   "~50%",
+   "~99%",
+   "~1%"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "ecosystemen-biologie",
+  "file": "./ecosystemenBiologie.js",
+  "stap": 5,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Welke is een invasieve soort in NL?",
+  "opties": [
+   "Amerikaanse rivierkreeft",
+   "Eekhoorn",
+   "Vos",
+   "Hert"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "genetica-erfelijkheid-biologie",
+  "file": "./geneticaErfelijkheidBiologie.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat is erfelijkheid?",
+  "opties": [
+   "Doorgeven van eigenschappen via genen van ouders aan kinderen",
+   "Een ziekte die in sommige families vaker voorkomt",
+   "De kleur van je haar en de kleur van je ogen",
+   "Hoe lang je leeft en hoe gezond je blijft"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "genetica-erfelijkheid-biologie",
+  "file": "./geneticaErfelijkheidBiologie.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Welke eigenschap is niet erfelijk?",
+  "opties": [
+   "Welke taal je spreekt",
+   "Oogkleur",
+   "Bloedgroep",
+   "Je haarkleur"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "genetica-erfelijkheid-biologie",
+  "file": "./geneticaErfelijkheidBiologie.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Hoeveel chromosomen zitten er in een lichaamscel van een mens?",
+  "opties": [
+   "46",
+   "23",
+   "92",
+   "100"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "genetica-erfelijkheid-biologie",
+  "file": "./geneticaErfelijkheidBiologie.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wat is een gen?",
+  "opties": [
+   "Stukje DNA dat een eigenschap bepaalt",
+   "Een hele cel met een kern",
+   "Een paar van twee chromosomen",
+   "Een eiwit dat in de cel werkt"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "genetica-erfelijkheid-biologie",
+  "file": "./geneticaErfelijkheidBiologie.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Welke 4 basen vormen DNA?",
+  "opties": [
+   "A, T, C, G",
+   "A, B, C, D",
+   "X, Y, Z, W",
+   "1, 2, 3, 4"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "genetica-erfelijkheid-biologie",
+  "file": "./geneticaErfelijkheidBiologie.js",
+  "stap": 5,
+  "vraag": 0,
+  "soort": "S",
+  "q": "In een stamboom: wat betekent een vierkant symbool?",
+  "opties": [
+   "Man",
+   "Vrouw",
+   "Drager",
+   "Onbekend"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "genetica-erfelijkheid-biologie",
+  "file": "./geneticaErfelijkheidBiologie.js",
+  "stap": 6,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wat is het verschil tussen erfelijk en aangeboren?",
+  "opties": [
+   "Erfelijk = via DNA van ouders; aangeboren = aanwezig vanaf de geboorte",
+   "Geen verschil — het zijn twee woorden voor hetzelfde",
+   "Erfelijk = door een ongeluk; aangeboren = via DNA van ouders",
+   "Erfelijk is altijd ernstiger dan aangeboren"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "genetica-erfelijkheid-biologie",
+  "file": "./geneticaErfelijkheidBiologie.js",
+  "stap": 7,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wat is CRISPR?",
+  "opties": [
+   "Een 'genetische schaar' om DNA precies te bewerken",
+   "Een virus dat cellen ziek maakt",
+   "Een DNA-test om vaderschap aan te tonen",
+   "Een erfelijke ziekte van het bloed"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "genetica-erfelijkheid-biologie",
+  "file": "./geneticaErfelijkheidBiologie.js",
+  "stap": 8,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wie heeft de hoogste kans op kleurenblindheid?",
+  "opties": [
+   "Mannen — slechts 1 X-chromosoom",
+   "Vrouwen — 2 X-chromosomen",
+   "Even hoog",
+   "Mensen met blauwe ogen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "genetica-erfelijkheid-biologie",
+  "file": "./geneticaErfelijkheidBiologie.js",
+  "stap": 8,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Hoeveel chromosoomparen heeft een mens?",
+  "opties": [
+   "23",
+   "46",
+   "92",
+   "100"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "genetica-erfelijkheid-biologie",
+  "file": "./geneticaErfelijkheidBiologie.js",
+  "stap": 8,
+  "vraag": 7,
+  "soort": "K",
+  "q": "Dominante allel wordt geschreven als?",
+  "opties": [
+   "Hoofdletter (A)",
+   "Kleine letter (a)",
+   "Cijfer",
+   "Geen symbool"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "genetica-erfelijkheid-biologie",
+  "file": "./geneticaErfelijkheidBiologie.js",
+  "stap": 8,
+  "vraag": 8,
+  "soort": "K",
+  "q": "Recessief allel wordt geschreven als?",
+  "opties": [
+   "Kleine letter (a)",
+   "Hoofdletter (A)",
+   "Cijfer",
+   "Geen symbool"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "genetica-erfelijkheid-biologie",
+  "file": "./geneticaErfelijkheidBiologie.js",
+  "stap": 8,
+  "vraag": 11,
+  "soort": "K",
+  "q": "Aantal chromosomen in mensenlichaamscel (geen geslachtscel)?",
+  "opties": [
+   "46",
+   "23",
+   "48",
+   "100"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "genetica-erfelijkheid-biologie",
+  "file": "./geneticaErfelijkheidBiologie.js",
+  "stap": 8,
+  "vraag": 12,
+  "soort": "L",
+  "q": "Een Punnett-vierkant wordt gebruikt om?",
+  "opties": [
+   "Kruisingen + kansen tonen",
+   "Cellen tekenen",
+   "DNA-volgorde",
+   "Sterftecijfer"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "genetica-erfelijkheid-biologie",
+  "file": "./geneticaErfelijkheidBiologie.js",
+  "stap": 8,
+  "vraag": 13,
+  "soort": "SK",
+  "q": "XX in mensen = ?",
+  "opties": [
+   "Vrouwelijk",
+   "Mannelijk",
+   "Onbepaald",
+   "Niet relevant"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "genetica-erfelijkheid-biologie",
+  "file": "./geneticaErfelijkheidBiologie.js",
+  "stap": 8,
+  "vraag": 14,
+  "soort": "SK",
+  "q": "XY in mensen = ?",
+  "opties": [
+   "Mannelijk",
+   "Vrouwelijk",
+   "Onbepaald",
+   "Niet relevant"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "immuunsysteem-havo-vwo",
+  "file": "./immuunsysteemHavoVwo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is fagocytose?",
+  "opties": [
+   "Witte bloedcellen 'eten' pathogenen op",
+   "Antilichamen aanmaken",
+   "Koorts verhogen",
+   "Trilharen bewegen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "immuunsysteem-havo-vwo",
+  "file": "./immuunsysteemHavoVwo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Koorts is een immuunmechanisme dat:",
+  "opties": [
+   "Ziekteverwekkers remt en de afweer versnelt",
+   "Direct virussen doodt",
+   "Antilichamen aanmaakt",
+   "Geen functie heeft"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "immuunsysteem-havo-vwo",
+  "file": "./immuunsysteemHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "T-helper-cellen (CD4+) zijn cruciaal omdat ze:",
+  "opties": [
+   "B-cellen en andere T-cellen activeren",
+   "Direct pathogenen eten",
+   "Antilichamen maken",
+   "Bloed-stolling regelen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "immuunsysteem-havo-vwo",
+  "file": "./immuunsysteemHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is een antigeen?",
+  "opties": [
+   "Molecuul op pathogeen dat immuunsysteem herkent",
+   "Antilichaam dat lichaam maakt",
+   "Virus zelf",
+   "Vaccin"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "immuunsysteem-havo-vwo",
+  "file": "./immuunsysteemHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Wat is secundaire immuunrespons?",
+  "opties": [
+   "Snellere, sterkere reactie bij hercontact",
+   "Eerste reactie op pathogeen",
+   "Allergische reactie",
+   "Auto-immuun"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "immuunsysteem-havo-vwo",
+  "file": "./immuunsysteemHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "T-killer-cellen doden vooral:",
+  "opties": [
+   "Lichaamscellen die door virus geïnfecteerd zijn",
+   "Bacteriën direct",
+   "Allergenen",
+   "Schimmels"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "immuunsysteem-havo-vwo",
+  "file": "./immuunsysteemHavoVwo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Actieve immuniteit krijg je via:",
+  "opties": [
+   "Ziekte doormaken OF vaccinatie",
+   "Antilichaam-injectie",
+   "Borstvoeding",
+   "Erfelijkheid"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "immuunsysteem-havo-vwo",
+  "file": "./immuunsysteemHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Groepsimmuniteit beschermt vooral:",
+  "opties": [
+   "Niet-vaccineerbare mensen",
+   "Gevaccineerden",
+   "Alleen kinderen",
+   "Niemand"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "immuunsysteem-havo-vwo",
+  "file": "./immuunsysteemHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "mRNA-vaccins (Pfizer, Moderna) werken door:",
+  "opties": [
+   "Eigen cellen maken zelf het antigeen",
+   "Levend virus injecteren",
+   "Antilichaam direct geven",
+   "Bloed-transfusie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "immuunsysteem-havo-vwo",
+  "file": "./immuunsysteemHavoVwo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Type-1 diabetes is auto-immuun omdat:",
+  "opties": [
+   "Immuunsysteem vernietigt insuline-cellen in pancreas",
+   "Te veel insuline geproduceerd",
+   "Suiker-tolerantie verloren",
+   "Geen verband"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "immuunsysteem-havo-vwo",
+  "file": "./immuunsysteemHavoVwo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Anafylaxie is:",
+  "opties": [
+   "Levensgevaarlijke allergische reactie",
+   "Milde allergie",
+   "Auto-immuun",
+   "Bacterie-infectie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "immuunsysteem-havo-vwo",
+  "file": "./immuunsysteemHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Hygiëne-hypothese suggereert:",
+  "opties": [
+   "Te schoon opgroeien geeft meer allergie",
+   "Hygiëne voorkomt allergie",
+   "Schoonmaken is altijd goed",
+   "Geen verband"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "immuunsysteem-havo-vwo",
+  "file": "./immuunsysteemHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "HIV veroorzaakt AIDS doordat:",
+  "opties": [
+   "T-helpercellen worden vernietigd",
+   "Bacteriële infectie",
+   "Allergische reactie",
+   "Auto-immuun"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "immuunsysteem-havo-vwo",
+  "file": "./immuunsysteemHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Een virus met R₀ = 2 zonder maatregelen:",
+  "opties": [
+   "Groeit exponentieel",
+   "Sterft uit",
+   "Stabiel aantal besmettingen",
+   "Heeft geen invloed"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "immuunsysteem-havo-vwo",
+  "file": "./immuunsysteemHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Microbioom = ?",
+  "opties": [
+   "Alle bacteriën die in/op ons lichaam leven",
+   "Klein virus",
+   "Type kanker",
+   "Vaccin"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "immuunsysteem-havo-vwo",
+  "file": "./immuunsysteemHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Bij orgaantransplantatie: waarom HLA-matching?",
+  "opties": [
+   "Om afstoting van het orgaan te voorkomen",
+   "HLA = bloedgroep",
+   "Niet belangrijk",
+   "Alleen voor cosmetisch"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "immuunsysteem-havo-vwo",
+  "file": "./immuunsysteemHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "CAR-T-therapie voor kanker:",
+  "opties": [
+   "Eigen T-cellen die kanker leren herkennen",
+   "Bestralingstherapie",
+   "Chirurgie",
+   "Antibiotica"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mens-biologie-vmbo",
+  "file": "./mensBiologieVmbo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat zorgt ervoor dat lymfevocht maar in één richting stroomt?",
+  "opties": [
+   "Kleppen in lymfevaten + spierwerking",
+   "Het hart pompt lymfe rond",
+   "Diafragma duwt lymfe omhoog",
+   "Zwaartekracht"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mens-biologie-vmbo",
+  "file": "./mensBiologieVmbo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "H",
+  "q": "Welke spier is het belangrijkste voor de ademhaling?",
+  "opties": [
+   "Middenrif",
+   "Hart",
+   "Tussenribspieren alleen",
+   "Buikspieren"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mens-biologie-vmbo",
+  "file": "./mensBiologieVmbo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "S",
+  "q": "Bloed dat de longen verlaat (via longader) bevat:",
+  "opties": [
+   "veel zuurstof + weinig CO₂",
+   "veel CO₂ + weinig zuurstof",
+   "alleen zuurstof",
+   "alleen CO₂"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mens-biologie-vmbo",
+  "file": "./mensBiologieVmbo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "H",
+  "q": "In welk orgaan ontstaat ureum?",
+  "opties": [
+   "lever",
+   "nier",
+   "darm",
+   "maag"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "mens-biologie-vmbo",
+  "file": "./mensBiologieVmbo.js",
+  "stap": 5,
+  "vraag": 5,
+  "soort": "H",
+  "q": "Welke spier is de belangrijkste ademspier?",
+  "opties": [
+   "Middenrif",
+   "Hart",
+   "Buikspieren",
+   "Tussenribspieren alleen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "voortplanting-hormonen-biologie",
+  "file": "./voortplantingHormonenBiologie.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat zijn hormonen?",
+  "opties": [
+   "Chemische boodschappers in het bloed",
+   "Een soort spier",
+   "Een soort vitamine",
+   "Een onderdeel van het zenuwstelsel"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "voortplanting-hormonen-biologie",
+  "file": "./voortplantingHormonenBiologie.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "H",
+  "q": "Welke klier wordt vaak de 'baas' van het hormoonstelsel genoemd?",
+  "opties": [
+   "Hypofyse",
+   "Schildklier",
+   "Bijnieren",
+   "Alvleesklier"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "voortplanting-hormonen-biologie",
+  "file": "./voortplantingHormonenBiologie.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "H",
+  "q": "Waar vindt bevruchting meestal plaats?",
+  "opties": [
+   "In de eileider",
+   "In de baarmoeder",
+   "In de eierstok",
+   "In de vagina"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "voortplanting-hormonen-biologie",
+  "file": "./voortplantingHormonenBiologie.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat gebeurt er bij de menopauze?",
+  "opties": [
+   "De eierstokken stoppen geleidelijk met werken",
+   "De baarmoeder verdwijnt",
+   "Vrouwen krijgen extra eicellen",
+   "Niks bijzonders"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "voortplanting-hormonen-biologie",
+  "file": "./voortplantingHormonenBiologie.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Waarom hangen de teelballen buiten het lichaam in de balzak?",
+  "opties": [
+   "Zaadcellen hebben een iets lagere temperatuur nodig dan 37 °C",
+   "Het is gewoon zo gegroeid, geen reden",
+   "Anders kan de man niet plassen",
+   "Voor de zwaartekracht"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "voortplanting-hormonen-biologie",
+  "file": "./voortplantingHormonenBiologie.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L2K",
+  "q": "Hoeveel zaadcellen zitten er ongeveer in één uitstoot van sperma?",
+  "opties": [
+   "~200-400 miljoen",
+   "~10",
+   "~1.000",
+   "~10 miljard"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "voortplanting-hormonen-biologie",
+  "file": "./voortplantingHormonenBiologie.js",
+  "stap": 5,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Wat is het verschil tussen een eeneiige en twee-eiige tweeling?",
+  "opties": [
+   "Eeneiig = 1 bevruchte eicel splitst, twee-eiig = 2 verschillende eicellen",
+   "Eeneiig is altijd een meisje, twee-eiig altijd een jongen",
+   "Eeneiig wordt geboren in 1 maand, twee-eiig duurt langer",
+   "Geen verschil — gewoon twee namen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "voortplanting-hormonen-biologie",
+  "file": "./voortplantingHormonenBiologie.js",
+  "stap": 7,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wat is het verschil tussen diabetes type 1 en type 2?",
+  "opties": [
+   "Type 1: geen insuline meer; type 2: cellen reageren slecht op insuline",
+   "Type 1 is een lichte vorm, type 2 een zware vorm",
+   "Type 2 is besmettelijk, type 1 is niet besmettelijk",
+   "Geen verschil — twee namen voor hetzelfde"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "voortplanting-hormonen-biologie",
+  "file": "./voortplantingHormonenBiologie.js",
+  "stap": 8,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat doet schildklierhormoon vooral?",
+  "opties": [
+   "Regelt de stofwisselingssnelheid",
+   "Maakt zaadcellen",
+   "Bestrijdt bacteriën",
+   "Reguleert slaap"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "voortplanting-hormonen-biologie",
+  "file": "./voortplantingHormonenBiologie.js",
+  "stap": 9,
+  "vraag": 0,
+  "soort": "L2S",
+  "q": "Hoe wordt diabetes type 1 behandeld?",
+  "opties": [
+   "Dagelijks insuline injecteren of via pomp",
+   "Alleen met een speciaal dieet",
+   "Met een operatie aan de alvleesklier",
+   "Met een kuur antibiotica"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "voortplanting-hormonen-biologie",
+  "file": "./voortplantingHormonenBiologie.js",
+  "stap": 9,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Wat is PCOS?",
+  "opties": [
+   "Een syndroom met hormonale onbalans bij vrouwen",
+   "Een besmettelijke ziekte door een virus",
+   "Een huidziekte met veel uitslag",
+   "Een tekort aan vitamines bij vrouwen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "voortplanting-hormonen-biologie",
+  "file": "./voortplantingHormonenBiologie.js",
+  "stap": 10,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Wat doet progesteron?",
+  "opties": [
+   "Houdt het slijmvlies in de baarmoeder in stand",
+   "Verlaagt de bloedsuiker na het eten",
+   "Zorgt voor de aanmaak van zaadcellen",
+   "Regelt het slaap-waakritme"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "zenuwstelsel-hormonen-havo-vwo",
+  "file": "./zenuwstelselHormonenHavoVwo.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Welk neuron stuurt prikkel van CZS naar spier?",
+  "opties": [
+   "Motorisch",
+   "Sensorisch",
+   "Schakelneuron",
+   "Bipolair"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "zenuwstelsel-hormonen-havo-vwo",
+  "file": "./zenuwstelselHormonenHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat gebeurt tijdens depolarisatie?",
+  "opties": [
+   "Na⁺ stroomt cel in, spanning naar +",
+   "K⁺ stroomt eruit",
+   "Cel rust",
+   "Cel deelt"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "zenuwstelsel-hormonen-havo-vwo",
+  "file": "./zenuwstelselHormonenHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Reflexboog loopt via:",
+  "opties": [
+   "Sensor → ruggenmerg → motorneuron → spier",
+   "Sensor → grote hersenen → spier",
+   "Direct sensor → spier",
+   "Hormoon → spier"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "zenuwstelsel-hormonen-havo-vwo",
+  "file": "./zenuwstelselHormonenHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Bij MS is welk deel beschadigd?",
+  "opties": [
+   "Myelineschede",
+   "Cellichaam",
+   "Synaps",
+   "Dendriet"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "zenuwstelsel-hormonen-havo-vwo",
+  "file": "./zenuwstelselHormonenHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Bij diabetes type 1 is welk hormoon-tekort?",
+  "opties": [
+   "Insuline",
+   "Glucagon",
+   "Cortisol",
+   "Thyroxine"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "zenuwstelsel-hormonen-havo-vwo",
+  "file": "./zenuwstelselHormonenHavoVwo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is homeostase?",
+  "opties": [
+   "Stabiele interne omstandigheden handhaven",
+   "Hormonen produceren",
+   "Hersenactiviteit",
+   "Snel groeien"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "zenuwstelsel-hormonen-havo-vwo",
+  "file": "./zenuwstelselHormonenHavoVwo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Hoe heet het mechanisme te warm → zweten → afkoeling?",
+  "opties": [
+   "Negatieve terugkoppeling",
+   "Positieve terugkoppeling",
+   "Reflex",
+   "Pavlov-conditie"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "zenuwstelsel-hormonen-havo-vwo",
+  "file": "./zenuwstelselHormonenHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Welk hormoon bewaart water in nieren?",
+  "opties": [
+   "ADH",
+   "Insuline",
+   "Adrenaline",
+   "Oestrogeen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "zenuwstelsel-hormonen-havo-vwo",
+  "file": "./zenuwstelselHormonenHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Hoe reageert lichaam bij lage bloedsuiker?",
+  "opties": [
+   "Glucagon",
+   "Insuline",
+   "Geen actie",
+   "Slapen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "zenuwstelsel-hormonen-havo-vwo",
+  "file": "./zenuwstelselHormonenHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Iemand schrikt — hartslag schiet omhoog binnen seconde. Welk systeem + stof?",
+  "opties": [
+   "Sympathisch zenuwstelsel + adrenaline",
+   "Parasympathisch + insuline",
+   "Hypofyse + groeihormoon",
+   "Schildklier + thyroxine"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "zenuwstelsel-hormonen-havo-vwo",
+  "file": "./zenuwstelselHormonenHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Een prikkel gaat 30 m/s door een zenuw. Heeft die zenuw waarschijnlijk myeline?",
+  "opties": [
+   "Ja — zonder myeline veel trager",
+   "Nee — myeline vertraagt",
+   "Geen verband",
+   "Onmogelijk te zeggen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "zenuwstelsel-hormonen-havo-vwo",
+  "file": "./zenuwstelselHormonenHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Welk type terugkoppeling is bevalling (weeën versterken zichzelf)?",
+  "opties": [
+   "Positief",
+   "Negatief",
+   "Reflex",
+   "Hormoonloos"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "zenuwstelsel-hormonen-havo-vwo",
+  "file": "./zenuwstelselHormonenHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Verschil zenuw vs hormoon-werking:",
+  "opties": [
+   "Zenuw: snel + kort, hormoon: traag + lang",
+   "Zenuw: traag, hormoon: snel",
+   "Beide gelijk",
+   "Zenuwen niet betrokken bij regulatie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ }
+]

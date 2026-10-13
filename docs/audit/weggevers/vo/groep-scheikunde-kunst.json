@@ -1,0 +1,1394 @@
+[
+ {
+  "pad": "atoombouw-scheikunde",
+  "file": "./atoombouwScheikunde.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat hebben elementen in dezelfde groep gemeen?",
+  "opties": [
+   "Aantal buitenste elektronen",
+   "Aantal protonen",
+   "Massa",
+   "Aantal schillen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "atoombouw-scheikunde",
+  "file": "./atoombouwScheikunde.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "H",
+  "q": "Welke groep zijn de edelgassen?",
+  "opties": [
+   "Groep 18",
+   "Groep 1",
+   "Groep 7",
+   "Groep 17"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "atoombouw-scheikunde",
+  "file": "./atoombouwScheikunde.js",
+  "stap": 7,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Hoeveel atomen heeft het molecuul CO₂?",
+  "opties": [
+   "3",
+   "2",
+   "1",
+   "5"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "atoombouw-scheikunde",
+  "file": "./atoombouwScheikunde.js",
+  "stap": 8,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat zegt de wet van behoud van atomen?",
+  "opties": [
+   "Aantal atomen links en rechts is gelijk",
+   "Atomen verdwijnen tijdens reactie",
+   "Massa wordt gemaakt",
+   "Er ontstaan nieuwe soorten atomen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "atoombouw-scheikunde",
+  "file": "./atoombouwScheikunde.js",
+  "stap": 8,
+  "vraag": 1,
+  "soort": "S",
+  "q": "Wat ontstaat bij verbranding van methaan?",
+  "opties": [
+   "CO₂ en water + warmte",
+   "Alleen rook",
+   "Waterstof en koolstof",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "atoombouw-scheikunde",
+  "file": "./atoombouwScheikunde.js",
+  "stap": 9,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Wat is een atoomkern?",
+  "opties": [
+   "Het midden van het atoom",
+   "Buitenste laag",
+   "Elektron-wolk",
+   "Een groep atomen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "atoombouw-scheikunde",
+  "file": "./atoombouwScheikunde.js",
+  "stap": 9,
+  "vraag": 6,
+  "soort": "L2",
+  "q": "Wat is een isotoop?",
+  "opties": [
+   "Zelfde element, ander aantal neutronen",
+   "Atoom met extra elektronen",
+   "Atoom met ander aantal protonen",
+   "Twee atomen aan elkaar"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "atoombouw-scheikunde",
+  "file": "./atoombouwScheikunde.js",
+  "stap": 9,
+  "vraag": 7,
+  "soort": "K",
+  "q": "Wat is de lading van een proton?",
+  "opties": [
+   "+1",
+   "-1",
+   "0",
+   "+2"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "atoombouw-scheikunde",
+  "file": "./atoombouwScheikunde.js",
+  "stap": 9,
+  "vraag": 8,
+  "soort": "K",
+  "q": "Wat is de lading van een neutron?",
+  "opties": [
+   "0",
+   "+1",
+   "-1",
+   "+2"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "atoombouw-scheikunde",
+  "file": "./atoombouwScheikunde.js",
+  "stap": 9,
+  "vraag": 9,
+  "soort": "K",
+  "q": "Wat is de lading van een elektron?",
+  "opties": [
+   "-1",
+   "+1",
+   "0",
+   "+2"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "atoombouw-scheikunde",
+  "file": "./atoombouwScheikunde.js",
+  "stap": 9,
+  "vraag": 10,
+  "soort": "S",
+  "q": "Welke deeltjes bevinden zich in de kern van het atoom?",
+  "opties": [
+   "Proton + neutron",
+   "Alleen elektron",
+   "Alleen proton",
+   "Alle drie"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "atoombouw-scheikunde",
+  "file": "./atoombouwScheikunde.js",
+  "stap": 9,
+  "vraag": 11,
+  "soort": "K",
+  "q": "Het atoomnummer = aantal ___?",
+  "opties": [
+   "protonen",
+   "neutronen",
+   "elektronen",
+   "atomen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "atoombouw-scheikunde",
+  "file": "./atoombouwScheikunde.js",
+  "stap": 9,
+  "vraag": 12,
+  "soort": "SK",
+  "q": "Het massagetal = ?",
+  "opties": [
+   "protonen + neutronen",
+   "alleen protonen",
+   "alleen elektronen",
+   "protonen × neutronen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "beeldhouwkunst-kunst",
+  "file": "./beeldhouwkunstKunst.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat is het kenmerkende verschil tussen beeldhouwkunst en schilderkunst?",
+  "opties": [
+   "Beeldhouwkunst is 3D, schilderkunst 2D",
+   "Beeldhouwkunst gebruikt geen kleur",
+   "Schilderkunst is altijd groter",
+   "Er is geen verschil"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "beeldhouwkunst-kunst",
+  "file": "./beeldhouwkunstKunst.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is een reliëf?",
+  "opties": [
+   "Beeld dat uit een achtergrond steekt, voor aanzicht van voren",
+   "Een vrijstaand beeld waar je omheen loopt",
+   "Een soort verf",
+   "Een schildersezel"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "beeldhouwkunst-kunst",
+  "file": "./beeldhouwkunstKunst.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Waarom speelt het standpunt een grote rol bij een vrijstaand beeld?",
+  "opties": [
+   "Het beeld verandert terwijl je eromheen loopt",
+   "Beelden mag je niet bekijken",
+   "Er is altijd maar één juiste kant",
+   "Standpunt heeft geen invloed"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "beeldhouwkunst-kunst",
+  "file": "./beeldhouwkunstKunst.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is een voordeel van brons gieten?",
+  "opties": [
+   "Je kunt meerdere exemplaren maken + dunne uitstekende delen",
+   "Het kan maar één keer en breekt snel",
+   "Het hoeft niet in een mal",
+   "Het is altijd goedkoper dan klei"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "beeldhouwkunst-kunst",
+  "file": "./beeldhouwkunstKunst.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is een readymade?",
+  "opties": [
+   "Een bestaand voorwerp tot kunst verklaard",
+   "Een marmeren beeld",
+   "Een schildertechniek",
+   "Een soort lijm"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "beeldhouwkunst-kunst",
+  "file": "./beeldhouwkunstKunst.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is contrapost in een (Grieks) beeld?",
+  "opties": [
+   "Het gewicht op één been, met een licht gedraaid lichaam",
+   "Twee beelden naast elkaar",
+   "Een beeld zonder armen",
+   "Een beeld van brons"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "beeldhouwkunst-kunst",
+  "file": "./beeldhouwkunstKunst.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Waardoor valt barok beeldhouwwerk (Bernini) op?",
+  "opties": [
+   "Drama en beweging — een bevroren emotioneel moment",
+   "Volstrekte rust en strakheid",
+   "Het ontbreken van details",
+   "Alleen abstracte vormen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "beeldhouwkunst-kunst",
+  "file": "./beeldhouwkunstKunst.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is kenmerkend voor veel 20e-eeuwse beeldhouwkunst (Moore, Brancusi)?",
+  "opties": [
+   "Abstractie — het hoeft niet realistisch iets voor te stellen",
+   "Steeds realistischer ideaalbeelden",
+   "Alleen religieuze beelden",
+   "Geen nieuwe materialen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "beeldhouwkunst-kunst",
+  "file": "./beeldhouwkunstKunst.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is installatiekunst?",
+  "opties": [
+   "Een werk dat een hele ruimte vult en waar je in stapt",
+   "Een klein beeld op een sokkel",
+   "Een schilderij aan de muur",
+   "Een soort verf"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "beeldhouwkunst-kunst",
+  "file": "./beeldhouwkunstKunst.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat betekent site-specific?",
+  "opties": [
+   "Gemaakt voor één bepaalde plek; verplaatsen verandert de betekenis",
+   "Gemaakt om overal te kunnen staan",
+   "Gemaakt van steen",
+   "Gemaakt door één kunstenaar"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "chemische-reacties-scheikunde",
+  "file": "./chemischeReactiesScheikunde.js",
+  "stap": 0,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Wat zijn reactanten in een reactievergelijking?",
+  "opties": [
+   "De uitgangsstoffen (links van de pijl)",
+   "De eindstoffen (rechts van de pijl)",
+   "Stoffen die niet reageren",
+   "De pijl zelf"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "chemische-reacties-scheikunde",
+  "file": "./chemischeReactiesScheikunde.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Welk verschijnsel is geen chemische reactie?",
+  "opties": [
+   "Suiker oplossen in koffie",
+   "Hout verbranden",
+   "IJzer roesten",
+   "Magnesiumlint branden"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "chemische-reacties-scheikunde",
+  "file": "./chemischeReactiesScheikunde.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L2S",
+  "q": "Wat zegt de Wet van Behoud van Massa?",
+  "opties": [
+   "Massa van producten = massa van reactanten",
+   "Massa neemt altijd toe",
+   "Massa verdwijnt bij verbranding",
+   "Alleen gassen hebben massa"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "chemische-reacties-scheikunde",
+  "file": "./chemischeReactiesScheikunde.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Welk getal mag je nooit veranderen bij balanceren?",
+  "opties": [
+   "De index (klein cijfertje achter element, zoals de 2 in H₂)",
+   "De coëfficiënt (groot getal vóór molecuul)",
+   "Allebei",
+   "Geen van beide"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "chemische-reacties-scheikunde",
+  "file": "./chemischeReactiesScheikunde.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Bij balanceren: wat doe je eerst?",
+  "opties": [
+   "Tellen van atomen aan beide kanten",
+   "H en O balanceren",
+   "Indices veranderen",
+   "Alle coëfficiënten op 1 zetten"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "chemische-reacties-scheikunde",
+  "file": "./chemischeReactiesScheikunde.js",
+  "stap": 5,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat betekent het Haber-proces?",
+  "opties": [
+   "Industrieel maken van ammoniak voor kunstmest",
+   "Een reactie van koolstof",
+   "Een methode om water te ontleden",
+   "Een soort katalysator"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "chemische-reacties-scheikunde",
+  "file": "./chemischeReactiesScheikunde.js",
+  "stap": 6,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is een verbrandingsreactie?",
+  "opties": [
+   "Reactie met O₂, vaak met warmte/licht",
+   "Een ontleding zonder O₂",
+   "Stof oplossen",
+   "Twee stoffen wisselen partner"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "chemische-reacties-scheikunde",
+  "file": "./chemischeReactiesScheikunde.js",
+  "stap": 8,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Wat is een chemische reactie?",
+  "opties": [
+   "Stoffen veranderen in andere stoffen",
+   "Stoffen worden warm",
+   "Stoffen verkleuren",
+   "Volume verandert"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "chemische-reacties-scheikunde",
+  "file": "./chemischeReactiesScheikunde.js",
+  "stap": 8,
+  "vraag": 6,
+  "soort": "L",
+  "q": "Wat is een molecuul?",
+  "opties": [
+   "Groep atomen samen verbonden",
+   "Klein metaal",
+   "Een type cel",
+   "Atoomkern"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "chemische-reacties-scheikunde",
+  "file": "./chemischeReactiesScheikunde.js",
+  "stap": 8,
+  "vraag": 7,
+  "soort": "L2",
+  "q": "Wat is een pH-waarde?",
+  "opties": [
+   "Mate van zuurgraad",
+   "Temperatuur",
+   "Gewicht",
+   "Druk"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "chemische-reacties-scheikunde",
+  "file": "./chemischeReactiesScheikunde.js",
+  "stap": 8,
+  "vraag": 10,
+  "soort": "K",
+  "q": "CO₂ is?",
+  "opties": [
+   "Koolstofdioxide",
+   "Koolstofmonoxide",
+   "Calcium",
+   "Waterstof"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "chemische-reacties-scheikunde",
+  "file": "./chemischeReactiesScheikunde.js",
+  "stap": 8,
+  "vraag": 12,
+  "soort": "SK",
+  "q": "Bij verbranding komt iets vrij — wat?",
+  "opties": [
+   "Warmte + licht",
+   "Alleen kou",
+   "Alleen geluid",
+   "Niets"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "chemische-reacties-scheikunde",
+  "file": "./chemischeReactiesScheikunde.js",
+  "stap": 8,
+  "vraag": 13,
+  "soort": "L",
+  "q": "Wat is een chemische reactie?",
+  "opties": [
+   "Stoffen veranderen in nieuwe stoffen",
+   "Stoffen blijven gelijk",
+   "Alleen smelten",
+   "Alleen koken"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "kleur-licht-compositie-kunst",
+  "file": "./kleurLichtCompositieKunst.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat zijn complementaire kleuren?",
+  "opties": [
+   "Kleuren die tegenover elkaar staan en elkaar versterken",
+   "Kleuren die naast elkaar liggen",
+   "Alleen warme kleuren",
+   "Zwart en wit"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "kleur-licht-compositie-kunst",
+  "file": "./kleurLichtCompositieKunst.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Welke kleuren lijken naar voren te komen (en suggereren nabijheid)?",
+  "opties": [
+   "Warme kleuren (rood, oranje, geel)",
+   "Koude kleuren (blauw, groen)",
+   "Alleen zwart",
+   "Alleen pastelkleuren"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "kleur-licht-compositie-kunst",
+  "file": "./kleurLichtCompositieKunst.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "S",
+  "q": "Waarom kan dezelfde kleur verschillende betekenissen hebben?",
+  "opties": [
+   "Kleursymboliek verschilt per cultuur en tijd",
+   "Kleuren betekenen overal precies hetzelfde",
+   "Alleen kunstenaars zien kleur",
+   "Betekenis hangt af van de prijs"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kleur-licht-compositie-kunst",
+  "file": "./kleurLichtCompositieKunst.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "L",
+  "q": "Wat is toonwaarde (valeur)?",
+  "opties": [
+   "De mate van licht of donker, los van de kleur",
+   "De prijs van een schilderij",
+   "Hoe duur de verf is",
+   "De grootte van het doek"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "kleur-licht-compositie-kunst",
+  "file": "./kleurLichtCompositieKunst.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is clair-obscur (chiaroscuro)?",
+  "opties": [
+   "Sterk contrast tussen licht en donker",
+   "Veel felle kleuren",
+   "Buiten schilderen",
+   "Een soort lijst"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "kleur-licht-compositie-kunst",
+  "file": "./kleurLichtCompositieKunst.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat is het verschil tussen eigen schaduw en slagschaduw?",
+  "opties": [
+   "Eigen schaduw zit op het voorwerp; slagschaduw werpt het voorwerp",
+   "Ze zijn hetzelfde",
+   "Slagschaduw zit op het voorwerp",
+   "Eigen schaduw is altijd zwart"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "kleur-licht-compositie-kunst",
+  "file": "./kleurLichtCompositieKunst.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "L",
+  "q": "Wat is de derderegel / gulden snede in compositie?",
+  "opties": [
+   "Belangrijke elementen op ongeveer ⅓ plaatsen, niet in het midden",
+   "Alles precies in het midden",
+   "Het beeld in drie kleuren maken",
+   "Drie figuren afbeelden"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "kleur-licht-compositie-kunst",
+  "file": "./kleurLichtCompositieKunst.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Welke techniek suggereert diepte in een plat schilderij?",
+  "opties": [
+   "Overlapping",
+   "Alles even groot maken",
+   "Alleen één kleur gebruiken",
+   "Het doek kantelen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kleur-licht-compositie-kunst",
+  "file": "./kleurLichtCompositieKunst.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "S",
+  "q": "Welke vormen/lijnen geven vaak een gevoel van spanning en beweging?",
+  "opties": [
+   "Hoekige vormen en diagonale lijnen",
+   "Ronde vormen en horizontale lijnen",
+   "Alleen de kleur wit",
+   "Een vierkante lijst"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kleur-licht-compositie-kunst",
+  "file": "./kleurLichtCompositieKunst.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Hoe analyseer je een kunstwerk met beeldaspecten?",
+  "opties": [
+   "Benoem wat je ziet en koppel het aan het effect",
+   "Alleen zeggen of je het mooi vindt",
+   "Raden wat het kostte",
+   "Tellen hoeveel kleuren er zijn"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "kunst-havo-vwo",
+  "file": "./kunstHavoVwo.js",
+  "stap": 0,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Welk Renaissance-kunstwerk schilderde Michelangelo?",
+  "opties": [
+   "Sixtijnse Kapel-plafond",
+   "Mona Lisa",
+   "Lam Gods",
+   "Tuin der Lusten"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "kunst-havo-vwo",
+  "file": "./kunstHavoVwo.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "K",
+  "q": "Wat is humanisme in Renaissance-zin?",
+  "opties": [
+   "Mens centraal",
+   "Mensenrechten-beweging",
+   "Helpen-organisatie",
+   "Geen religie"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kunst-havo-vwo",
+  "file": "./kunstHavoVwo.js",
+  "stap": 1,
+  "vraag": 1,
+  "soort": "L2K",
+  "q": "Chiaroscuro is:",
+  "opties": [
+   "Sterk licht-donker-contrast",
+   "Veel kleur",
+   "Geometrische vormen",
+   "Buiten schilderen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kunst-havo-vwo",
+  "file": "./kunstHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "L2K",
+  "q": "Impressionisme kenmerkt zich door:",
+  "opties": [
+   "Korte penseelstreken + buiten + licht",
+   "Geometrische abstracte vormen",
+   "Gouden achtergronden",
+   "Streng lineair perspectief"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kunst-havo-vwo",
+  "file": "./kunstHavoVwo.js",
+  "stap": 1,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Welke schilder werd na zijn dood pas beroemd?",
+  "opties": [
+   "Vincent van Gogh",
+   "Rembrandt",
+   "Monet",
+   "Picasso"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kunst-havo-vwo",
+  "file": "./kunstHavoVwo.js",
+  "stap": 1,
+  "vraag": 4,
+  "soort": "L",
+  "q": "NL Gouden Eeuw kunst-specialiteit was:",
+  "opties": [
+   "Genre-stukken + landschappen + stillevens",
+   "Kerk-fresco's",
+   "Mythologische scènes",
+   "Tapijten"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "kunst-havo-vwo",
+  "file": "./kunstHavoVwo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "K",
+  "q": "De Stijl beweging stamt uit:",
+  "opties": [
+   "Nederland",
+   "Italië",
+   "Duitsland",
+   "Frankrijk"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kunst-havo-vwo",
+  "file": "./kunstHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L2K",
+  "q": "Surrealisme wordt geïnspireerd door:",
+  "opties": [
+   "Onbewuste + dromen",
+   "Politiek",
+   "Wetenschap",
+   "Industrie"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kunst-havo-vwo",
+  "file": "./kunstHavoVwo.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Banksy is bekend om:",
+  "opties": [
+   "Anonieme politieke street art",
+   "Renaissance-schilderijen",
+   "Klassieke beeldhouwwerken",
+   "Architectuur"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kunst-havo-vwo",
+  "file": "./kunstHavoVwo.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "De kunstanalyse-niveaus van Panofsky:",
+  "opties": [
+   "Pre-iconografisch / iconografisch / iconologisch",
+   "Eén niveau",
+   "Vijf niveaus",
+   "Geen niveaus"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "kunst-havo-vwo",
+  "file": "./kunstHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Welk museum heeft *Meisje met de parel*?",
+  "opties": [
+   "Mauritshuis Den Haag",
+   "Louvre",
+   "Rijksmuseum",
+   "Van Gogh Museum"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kunst-havo-vwo",
+  "file": "./kunstHavoVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L",
+  "q": "AI-generated art (DALL-E, Midjourney) controverse over:",
+  "opties": [
+   "Auteursrecht trainingsdata",
+   "Kleur-keuze",
+   "Prijs",
+   "Spelfouten"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "kunst-havo-vwo",
+  "file": "./kunstHavoVwo.js",
+  "stap": 4,
+  "vraag": 0,
+  "soort": "L2",
+  "q": "Welk werk is Pop Art?",
+  "opties": [
+   "Campbell's Soup Cans",
+   "Mona Lisa",
+   "De Schreeuw",
+   "Sterrennacht"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kunst-havo-vwo",
+  "file": "./kunstHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "L2",
+  "q": "Sfumato-techniek wordt geassocieerd met:",
+  "opties": [
+   "Leonardo da Vinci",
+   "Caravaggio",
+   "Picasso",
+   "Mondriaan"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kunst-havo-vwo",
+  "file": "./kunstHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Bauhaus was:",
+  "opties": [
+   "Designschool",
+   "Renaissance-paleis",
+   "Kerk",
+   "Galerij"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "kunst-havo-vwo",
+  "file": "./kunstHavoVwo.js",
+  "stap": 4,
+  "vraag": 4,
+  "soort": "L2S",
+  "q": "Bij kunstanalyse kijk je naar:",
+  "opties": [
+   "Vorm + inhoud + context",
+   "Alleen vorm",
+   "Alleen prijs",
+   "Alleen jaartal"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mol-stoichiometrie-havo-vwo",
+  "file": "./molStoichiometrieHavoVwo.js",
+  "stap": 1,
+  "vraag": 2,
+  "soort": "S",
+  "q": "Wat behoudt massa + aantal atomen in een reactie?",
+  "opties": [
+   "Atomen blijven behouden",
+   "Moleculen behouden",
+   "Alleen energie blijft behouden",
+   "Geen behoud"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mol-stoichiometrie-havo-vwo",
+  "file": "./molStoichiometrieHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Hoeveel g CaCO₃ nodig om door zoutzuur 44 g CO₂ te maken? (CaCO₃ + 2 HCl → CaCl₂ + CO₂ + H₂O, M_CaCO₃=100, M_CO₂=44)",
+  "opties": [
+   "100 g",
+   "200 g",
+   "44 g",
+   "50 g"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "mol-stoichiometrie-havo-vwo",
+  "file": "./molStoichiometrieHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Een katalysator:",
+  "opties": [
+   "Versnelt reactie zonder evenwicht te verschuiven",
+   "Verschuift evenwicht naar producten",
+   "Werkt alleen bij hoge T",
+   "Wordt verbruikt in reactie"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "organische-chemie-havo-vwo",
+  "file": "./organischeChemieHavoVwo.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L",
+  "q": "Welke binding-soorten kan koolstof vormen?",
+  "opties": [
+   "Enkele, dubbele, drievoudige",
+   "Alleen enkele",
+   "Alleen dubbele",
+   "Onbeperkt veel"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "organische-chemie-havo-vwo",
+  "file": "./organischeChemieHavoVwo.js",
+  "stap": 1,
+  "vraag": 0,
+  "soort": "K",
+  "q": "Wat is de algemene formule van een alkaan?",
+  "opties": [
+   "CₙH₂ₙ₊₂",
+   "CₙH₂ₙ",
+   "CₙHₙ",
+   "CₙH₂ₙ₋₂"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "organische-chemie-havo-vwo",
+  "file": "./organischeChemieHavoVwo.js",
+  "stap": 2,
+  "vraag": 4,
+  "soort": "L2",
+  "q": "Een amine is basisch omdat:",
+  "opties": [
+   "Het N-atoom een H⁺ kan opnemen",
+   "Het H⁺-ionen afstaat",
+   "Het een -OH-groep bevat",
+   "Het een C=O-groep heeft"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "organische-chemie-havo-vwo",
+  "file": "./organischeChemieHavoVwo.js",
+  "stap": 3,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Bij volledige verbranding van methaan ontstaat:",
+  "opties": [
+   "CO₂ + H₂O",
+   "CO + H₂O",
+   "CH₂O",
+   "Alleen O₂"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "organische-chemie-havo-vwo",
+  "file": "./organischeChemieHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Wat is polyetheen (PE)?",
+  "opties": [
+   "Polymeer van etheen-monomeren",
+   "Eén molecuul etheen",
+   "Mengsel etheen + alcohol",
+   "Aluminium"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "organische-chemie-havo-vwo",
+  "file": "./organischeChemieHavoVwo.js",
+  "stap": 3,
+  "vraag": 4,
+  "soort": "L2K",
+  "q": "Verbranding van koolstof-verbindingen is schadelijk voor klimaat omdat:",
+  "opties": [
+   "CO₂ versterkt broeikaseffect",
+   "O₂ verdwijnt",
+   "Te veel water ontstaat",
+   "Methaan ontstaat"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "organische-chemie-havo-vwo",
+  "file": "./organischeChemieHavoVwo.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "K",
+  "q": "Wat zijn isomeren?",
+  "opties": [
+   "Zelfde formule, andere structuur",
+   "Verschillende formule",
+   "Atomen met een ander aantal neutronen",
+   "Polymeer"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "stoffen-mengsels-scheikunde",
+  "file": "./stoffenMengselsScheikunde.js",
+  "stap": 3,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Dichtheid water = ?",
+  "opties": [
+   "1 g/cm³",
+   "7,9 g/cm³",
+   "0,5 g/cm³",
+   "10 g/cm³"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "stoffen-mengsels-scheikunde",
+  "file": "./stoffenMengselsScheikunde.js",
+  "stap": 3,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Olie drijft op water omdat ... ?",
+  "opties": [
+   "Olie lagere dichtheid heeft",
+   "Olie warmer is",
+   "Olie helderder is",
+   "Toeval"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "stoffen-mengsels-scheikunde",
+  "file": "./stoffenMengselsScheikunde.js",
+  "stap": 4,
+  "vraag": 2,
+  "soort": "L",
+  "q": "Wat doe je als er een chemische stof in je oog spat?",
+  "opties": [
+   "15 minuten spoelen met water",
+   "Drogen",
+   "Afvegen",
+   "Wachten"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "stoffen-mengsels-scheikunde",
+  "file": "./stoffenMengselsScheikunde.js",
+  "stap": 5,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Dichtheid water?",
+  "opties": [
+   "1 g/cm³",
+   "7,9 g/cm³",
+   "0,1 g/cm³",
+   "10 g/cm³"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "stoffen-mengsels-scheikunde",
+  "file": "./stoffenMengselsScheikunde.js",
+  "stap": 5,
+  "vraag": 5,
+  "soort": "K",
+  "q": "Hoeveel elementen in periodiek systeem?",
+  "opties": [
+   "~118",
+   "~50",
+   "~10",
+   "~1000"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "zuren-basen-havo-vwo",
+  "file": "./zurenBasenHavoVwo.js",
+  "stap": 0,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Welke is de geconjugeerde base van HCl?",
+  "opties": [
+   "Cl⁻",
+   "H₂O",
+   "H₃O⁺",
+   "NaOH"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "zuren-basen-havo-vwo",
+  "file": "./zurenBasenHavoVwo.js",
+  "stap": 0,
+  "vraag": 2,
+  "soort": "L2K",
+  "q": "Water is amfoteer. Welke betekenis?",
+  "opties": [
+   "Kan zuur én base zijn",
+   "Onveranderbaar",
+   "Altijd zuur",
+   "Smaakloos"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "zuren-basen-havo-vwo",
+  "file": "./zurenBasenHavoVwo.js",
+  "stap": 0,
+  "vraag": 4,
+  "soort": "L2S",
+  "q": "Zuur + base (bv. HCl + NaOH) → ?",
+  "opties": [
+   "Zout + water",
+   "Niets",
+   "Gas",
+   "Vlam"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "zuren-basen-havo-vwo",
+  "file": "./zurenBasenHavoVwo.js",
+  "stap": 2,
+  "vraag": 0,
+  "soort": "S",
+  "q": "Zwak zuur dissocieert:",
+  "opties": [
+   "Gedeeltelijk",
+   "Volledig",
+   "Niet",
+   "Alleen bij hitte"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "zuren-basen-havo-vwo",
+  "file": "./zurenBasenHavoVwo.js",
+  "stap": 2,
+  "vraag": 1,
+  "soort": "K",
+  "q": "Lage Ka betekent:",
+  "opties": [
+   "Zwakker zuur",
+   "Sterker zuur",
+   "Geen zuur",
+   "Sterke base"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "zuren-basen-havo-vwo",
+  "file": "./zurenBasenHavoVwo.js",
+  "stap": 2,
+  "vraag": 2,
+  "soort": "L2",
+  "q": "Wat is een buffer?",
+  "opties": [
+   "Mengsel zwak zuur + geconjugeerde base",
+   "Mengsel sterk zuur + sterke base",
+   "Volledig neutraal water",
+   "Mengsel van twee sterke zuren"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "zuren-basen-havo-vwo",
+  "file": "./zurenBasenHavoVwo.js",
+  "stap": 2,
+  "vraag": 3,
+  "soort": "L2",
+  "q": "Bij toevoegen klein beetje HCl aan een acetaat-buffer:",
+  "opties": [
+   "pH blijft ongeveer gelijk",
+   "pH daalt heel sterk",
+   "Buffer verdampt",
+   "Geen reactie"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "zuren-basen-havo-vwo",
+  "file": "./zurenBasenHavoVwo.js",
+  "stap": 3,
+  "vraag": 3,
+  "soort": "L",
+  "q": "Een buret wordt gebruikt voor:",
+  "opties": [
+   "Variabel volume toevoegen",
+   "Vast volume meten",
+   "Verhitten",
+   "Mengen"
+  ],
+  "answer": 0,
+  "lijst": "scan"
+ },
+ {
+  "pad": "zuren-basen-havo-vwo",
+  "file": "./zurenBasenHavoVwo.js",
+  "stap": 4,
+  "vraag": 1,
+  "soort": "SK",
+  "q": "Welke is geconjugeerd zuur van NH₃?",
+  "opties": [
+   "NH₄⁺",
+   "NH₂⁻",
+   "N₂",
+   "Geen"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ },
+ {
+  "pad": "zuren-basen-havo-vwo",
+  "file": "./zurenBasenHavoVwo.js",
+  "stap": 4,
+  "vraag": 3,
+  "soort": "K",
+  "q": "Mengsel CH₃COOH + CH₃COONa = ?",
+  "opties": [
+   "Buffer",
+   "Sterk zuur",
+   "Sterke base",
+   "Geen reactie"
+  ],
+  "answer": 0,
+  "lijst": "extra"
+ }
+]
