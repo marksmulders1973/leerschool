@@ -85,9 +85,9 @@ const steps = [
     checks: [
       {
         q: "Wat betekent **40%**?",
-        options: ["40 per 100","40 keer iets","40 + 100","40 jaar"],
+        options: ["40 per 100","40 per 1000","40 keer 100","100 per 40"],
         answer: 0,
-        wrongHints: [null,"Procent betekent niet 'keer'. Wat zou 'per' betekenen?","Niet optellen. Procent is een verhouding.","Procent gaat niet over leeftijd of jaren."],
+        wrongHints: [null,"Per 1000 heet promille (‰). Welk getal hoort bij 'procent'?","Dat zou 4000 zijn. Procent betekent niet 'keer' — wat betekent 'per'?","Je hebt de getallen omgedraaid. Welk getal staat vóór het %-teken?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent procent?", tekst: "Het woord **procent** komt van het Latijnse 'per centum' = 'per honderd'. Dus 40% betekent letterlijk: **40 per 100**." },
@@ -143,21 +143,21 @@ const steps = [
         },
       },
       {
-        q: "Stel: 100 leerlingen op school — **45** zijn meisjes. Welk percentage is dat?",
+        q: "Op een school zitten **100 leerlingen**. **45** daarvan zijn meisjes. Welk percentage is dat?",
         options: ["45%","50%","55%","4,5%"],
         answer: 0,
-        wrongHints: [null,"Niet automatisch de helft — tel rustig.","Te veel — als 45 meisjes en 55 jongens, hoeveel meisjes is dat?","Dat is tien keer te weinig — hoeveel per 100 zijn het?"],
+        wrongHints: [null,"Niet automatisch de helft. Hoeveel meisjes zijn er van de 100?","Te veel — als 45 meisjes en 55 jongens, hoeveel meisjes is dat?","Dat is tien keer te weinig — hoeveel per 100 zijn het?"],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "Hoe spreek je het teken **%** uit?",
-        options: ["procent", "honderd", "keer", "plus"],
+        options: ["procent", "promille", "percentage", "honderdste"],
         answer: 0,
         wrongHints: [
           null,
-          "Het teken betekent wel 'per 100', maar je zegt een ander woord.",
-          "'Keer' heeft een eigen teken: ×.",
-          null,
+          "Promille heeft een eigen teken: ‰ (per 1000).",
+          "Een percentage is een getal mét het teken, zoals 25%. Welk woord zeg je bij het teken zelf?",
+          "Een honderdste schrijf je als 0,01. Welk woord lees je bij het teken?",
         ],
         uitlegPad: {
           stappen: [
@@ -202,13 +202,13 @@ const steps = [
       },
       {
         q: "In een zak zitten **100 snoepjes**. Je geeft er **30** weg. Hoeveel procent heb je **nog over**?",
-        options: ["70%", "30%", "100%", "130%"],
+        options: ["70%", "30%", "100%", "7%"],
         answer: 0,
         wrongHints: [
           null,
           "Dat deel heb je weggegeven. De vraag gaat over wat er over is.",
-          null,
-          "Kan er meer over zijn dan je had?",
+          "100% is de hele zak. Heb je dan niets weggegeven?",
+          "Er zijn 70 van de 100 over. Hoeveel per 100 is dat?",
         ],
         uitlegPad: {
           stappen: [
@@ -256,15 +256,15 @@ const steps = [
         options: [
           "Van elke 100 kinderen slaagden er 80",
           "Van elke 100 kinderen zakten er 80",
-          "Van elke 10 kinderen slaagden er 80",
+          "Er slaagden precies 80 kinderen",
           "Van elke 80 kinderen slaagde er 1",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Kijk goed: gaat het over slagen of zakken?",
-          "Kunnen er van 10 kinderen 80 slagen?",
-          null,
+          "Weet je hoeveel kinderen er in de klas zitten? 80% zegt iets over 'per 100'.",
+          "Je hebt de getallen omgedraaid. Hoeveel van elke 100 kinderen slaagden er?",
         ],
         uitlegPad: {
           stappen: [
@@ -321,10 +321,10 @@ const steps = [
     svg: tabelSvg(),
     checks: [
       {
-        q: "**75%** = ?",
-        options: ["¾","½","⅓","⅖"],
+        q: "Welke breuk hoort bij **75%**?",
+        options: ["¾","½","⅓","⅗"],
         answer: 0,
-        wrongHints: [null,"De helft is minder dan 75% — welke breuk staat voor meer dan de helft?","Een derde is kleiner dan de helft — maar 75% is juist groter dan de helft.","Past niet bij de standaard-percentages."],
+        wrongHints: [null,"De helft is minder dan 75% — welke breuk staat voor meer dan de helft?","Een derde is kleiner dan de helft — maar 75% is juist groter dan de helft.","⅗ is 3 van de 5 delen, dat is 60%. Is dat 75%?"],
         uitlegPad: {
           stappen: [
             { titel: "% omzetten naar breuk", tekst: "75% = 75 per 100 = breuk 75/100. Vereenvoudig: deel teller en noemer door 25. 75÷25 = 3, 100÷25 = 4. Dus 75/100 = **3/4** = ¾." },
@@ -349,27 +349,27 @@ const steps = [
         },
       },
       {
-        q: "**0,25** als percentage?",
+        q: "Schrijf **0,25** als percentage.",
         options: ["25%","2,5%","250%","0,25%"],
         answer: 0,
         wrongHints: [null,"Je hebt de komma maar 1 plek verschoven — keer 100 betekent 2 plaatsen naar rechts.","Veel te veel — dat zou meer dan het geheel zijn.","Je moet de komma nog verschuiven: keer 100 = hoeveel plaatsen?"],
       },
       {
-        q: "**60%** als kommagetal?",
+        q: "Schrijf **60%** als kommagetal.",
         options: ["0,6","0,06","6","60"],
         answer: 0,
         wrongHints: [null,"Komma 1 plek te ver — je had 2 plekken moeten verschuiven, niet 3.","Je deelde door 10 — procent betekent per 100.","Geen kommagetal — eerst delen door 100."],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "**45%** als kommagetal?",
+        q: "Schrijf **45%** als kommagetal.",
         options: ["0,45", "4,5", "0,045", "45"],
         answer: 0,
         wrongHints: [
           null,
           "Je schoof de komma maar 1 plek. Hoeveel plekken moet het bij ÷ 100?",
           "Dat is 3 plekken. Tel nog eens.",
-          null,
+          "45 is het percentage zelf. Wat krijg je als je 45 door 100 deelt?",
         ],
         uitlegPad: {
           stappen: [
@@ -413,13 +413,13 @@ const steps = [
         },
       },
       {
-        q: "**4%** als kommagetal?",
+        q: "Schrijf **4%** als kommagetal.",
         options: ["0,04", "0,4", "40", "0,004"],
         answer: 0,
         wrongHints: [
           null,
           "0,4 is 40%. Hoeveel plekken schoof je de komma?",
-          null,
+          "40 is groter dan 4. Moet het getal bij delen door 100 groter of kleiner worden?",
           "Dat is 3 plekken naar links. Het moeten er 2 zijn.",
         ],
         uitlegPad: {
@@ -464,14 +464,14 @@ const steps = [
         },
       },
       {
-        q: "**0,3** als percentage?",
+        q: "Schrijf **0,3** als percentage.",
         options: ["30%", "3%", "0,3%", "300%"],
         answer: 0,
         wrongHints: [
           null,
           "Je schoof de komma maar 1 plek. Keer 100 is 2 plekken.",
           "Je hebt de komma nog niet verschoven.",
-          null,
+          "300% is drie keer het geheel. Is 0,3 meer dan 1?",
         ],
         uitlegPad: {
           stappen: [
@@ -515,13 +515,13 @@ const steps = [
         },
       },
       {
-        q: "**0,07** als percentage?",
+        q: "Schrijf **0,07** als percentage.",
         options: ["7%", "70%", "0,7%", "700%"],
         answer: 0,
         wrongHints: [
           null,
           "Dat zou 0,7 zijn. Kijk naar de nul na de komma.",
-          null,
+          "Je schoof de komma de verkeerde kant op. Bij × 100 gaat hij naar rechts.",
           "Veel te veel: dat is meer dan alles.",
         ],
         uitlegPad: {
@@ -583,7 +583,7 @@ const steps = [
         q: "**10% van 250** = ?",
         options: ["25","2,5","250","100"],
         answer: 0,
-        wrongHints: [null,"Komma verkeerd — heb je per ongeluk × 0,01 ipv ÷ 10 gedaan?","Geen verandering — heb je überhaupt iets gedaan? 10% is ÷ 10.","Te veel — dat zou 40% zijn."],
+        wrongHints: [null,"Komma verkeerd: heb je door 100 gedeeld in plaats van door 10?","Dat is 100% van 250. Hoe vind je 10%?","Te veel — dat zou 40% zijn."],
       },
       {
         q: "Een fiets kost **€ 200**. **25% korting**. Hoeveel **bespaar je**?",
@@ -628,7 +628,7 @@ const steps = [
           null,
           "Dan heb je niets uitgerekend. 10% is maar een klein deel.",
           "Dat is 1% van 70. Hoe reken je 10%?",
-          null,
+          "10 is het percentage zelf. Welk deel van 70 is 10%?",
         ],
         uitlegPad: {
           stappen: [
@@ -679,7 +679,7 @@ const steps = [
           null,
           "Dat is het percentage zelf, niet het deel van 40.",
           "Dat is de helft van 40. Is 25% de helft?",
-          null,
+          "4 is 10% van 40. Is 25% hetzelfde als 10%?",
         ],
         uitlegPad: {
           stappen: [
@@ -730,7 +730,7 @@ const steps = [
           null,
           "Dat is het percentage, geen antwoord op 'hoeveel'.",
           "Dat is 10% van 50. Hoeveel keer 10% heb je nodig?",
-          null,
+          "20 is 40% van 50. Hoeveel keer 10% heb je nodig?",
         ],
         uitlegPad: {
           stappen: [
@@ -779,7 +779,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          null,
+          "Je deelde 70 door 10. Bereken eerst 10% van 30.",
           "Dat is 10% van 30. Hoeveel keer 10% is 70%?",
           "Dat is 90% van 30. Hoeveel keer 10% heb je nodig?",
         ],
@@ -884,10 +884,10 @@ const steps = [
     explanation: "In de winkel zie je vaak korting-bordjes. Bijvoorbeeld:\n\n*'Spijkerbroek normaal € 60. Nu 25% korting.'*\n\n**Vraag**: hoeveel betaal je nu?\n\n**Slimme aanpak — 2 manieren**:\n\n**Manier 1 — bereken korting, trek af**:\n• Korting = 25% van €60 = ¼ × €60 = **€15**\n• Nieuwe prijs = €60 − €15 = **€45**\n\n**Manier 2 — direct het overgebleven deel** *(sneller!)*:\n• Als je 25% korting krijgt, betaal je nog **75%** *(want 100% − 25% = 75%)*.\n• 75% van €60 = ¾ × €60 = **€45**.\n\nManier 2 is **één stap sneller** — je hoeft niet eerst korting te berekenen + dan af te trekken.\n\n**Toets-trucs voor populaire kortingen**:\n• **50% korting** → betaal je de helft\n• **25% korting** → betaal je 75% (drie kwart)\n• **10% korting** → betaal je 90%\n• **75% korting** → betaal je 25% (een kwart)\n\n**Voorbeeldsom**:\n*'Een telefoon van € 400 heeft 30% korting. Wat betaal je?'*\n\n**Manier 2 (snelst)**:\n• Je betaalt 100% − 30% = **70%** van de prijs.\n• 10% van €400 = €40.\n• 70% van €400 = 7 × €40 = **€280**.",
     checks: [
       {
-        q: "Een schoen normaal **€ 80**, met **25% korting**. Hoeveel **betaal je**?",
+        q: "Een schoen kost normaal **€ 80**. Er is **25% korting**. Hoeveel **betaal je**?",
         options: ["€ 60","€ 20","€ 40","€ 75"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dat is wat je BESPAART, niet wat je betaalt. Trek af van €80.", "Te weinig — €40 is de halve prijs; bij 25% korting gaat er minder af.", "Te veel — heb je überhaupt korting gepakt?"],
+        wrongHints: [null, "Te weinig — dat is wat je BESPAART, niet wat je betaalt. Trek af van €80.", "Te weinig — €40 is de halve prijs; bij 25% korting gaat er minder af.", "Je haalde maar € 5 eraf. Hoeveel euro is 25% van € 80?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is de vraag?", tekst: "**Hoeveel BETAAL je?** Niet 'hoeveel bespaar je'. Lees rustig — de toets test of je dit verschil herkent." },
@@ -916,24 +916,24 @@ const steps = [
         q: "Een tas van **€ 50** heeft **50% korting**. Wat **betaal** je?",
         options: ["€ 25","€ 50","€ 0","€ 75"],
         answer: 0,
-        wrongHints: [null,"Geen korting toegepast — heb je 50% wel gerekend?","Niet alles gratis — 50% korting betekent halve prijs.","Hoger dan de oorspronkelijke prijs — kan niet bij korting."],
+        wrongHints: [null,"Geen korting toegepast — heb je 50% wel gerekend?","Je haalde € 50 eraf. Maar de korting is 50 procent, niet 50 euro.","Bij korting wordt het goedkoper. Kan het dan meer kosten dan € 50?"],
       },
       {
         q: "Een t-shirt van **€ 30** heeft **10% korting**. Wat is de **nieuwe prijs**?",
         options: ["€ 27","€ 3","€ 33","€ 20"],
         answer: 0,
-        wrongHints: [null,"Te weinig — dat is alleen het korting-bedrag, niet de nieuwe prijs.","Hoger dan oorspronkelijk — bij korting wordt 't goedkoper.","Te weinig — 10% korting is maar een klein beetje lager."],
+        wrongHints: [null,"Te weinig — dat is alleen het korting-bedrag, niet de nieuwe prijs.","Bij korting wordt het goedkoper, niet duurder.","Je haalde € 10 eraf. Maar het is 10 procent, niet 10 euro."],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "Een jas kost **€ 100**. Nu **30% korting**. Wat **betaal** je?",
+        q: "Een jas kost **€ 100**. Er is **30% korting**. Wat **betaal** je?",
         options: ["€ 70", "€ 30", "€ 130", "€ 97"],
         answer: 0,
         wrongHints: [
           null,
           "Dat is de korting. Wat moet je nog betalen?",
           "Korting maakt iets goedkoper, niet duurder.",
-          null,
+          "Je haalde maar € 3 eraf. Hoeveel euro is 30% van € 100?",
         ],
         uitlegPad: {
           stappen: [
@@ -984,7 +984,7 @@ const steps = [
           null,
           "Dat is de korting. Je moet weten wat je nog betaalt.",
           "Dat zou 50% korting zijn.",
-          null,
+          "Dan heb je geen korting gehad. Hoeveel is 75% van € 40?",
         ],
         uitlegPad: {
           stappen: [
@@ -1031,7 +1031,7 @@ const steps = [
         q: "Bij **10% korting** betaal je nog…",
         options: ["90% van de prijs", "10% van de prijs", "100% van de prijs", "110% van de prijs"],
         answer: 0,
-        wrongHints: [null, "Dat deel gaat er juist af.", null, "Wordt iets duurder als er korting is?"],
+        wrongHints: [null, "Dat deel gaat er juist af.", "Dan heb je geen korting gekregen.", "Wordt iets duurder als er korting is?"],
         uitlegPad: {
           stappen: [
             {
@@ -1081,7 +1081,7 @@ const steps = [
           null,
           "Dan heb je geen korting gehad.",
           "Dat is een kwart van de prijs. Wat is de helft?",
-          null,
+          "Je haalde € 4 eraf, maar dat is een kwart. Hoeveel is 50%?",
         ],
         uitlegPad: {
           stappen: [
@@ -1132,7 +1132,7 @@ const steps = [
           null,
           "Dat betaal je. De vraag is hoeveel je bespaart.",
           "Dat is 10%. Hoeveel keer 10% is 20%?",
-          null,
+          "Je nam 20 euro in plaats van 20 procent. Hoeveel is 10% van € 90?",
         ],
         uitlegPad: {
           stappen: [
@@ -1183,7 +1183,7 @@ const steps = [
           null,
           "Dat is de korting. De vraag is de nieuwe prijs.",
           "Je haalde 25 euro eraf. Maar het is 25 procent.",
-          null,
+          "€ 60 is de halve prijs. Is 25% korting de helft?",
         ],
         uitlegPad: {
           stappen: [
@@ -1238,7 +1238,7 @@ const steps = [
         wrongHints: [
           null,
           "10% van € 30 is € 3. Wat betaal je dan?",
-          null,
+          "Reken ook de andere truien met korting uit. Komt er één onder de € 24?",
           "Reken eerst een kwart van € 28 uit. Wat blijft er over?",
         ],
         uitlegPad: {
@@ -1291,10 +1291,10 @@ const steps = [
     explanation: "De omgekeerde toetsvraag: *'X van Y — welk percentage is dat?'*\n\nVoorbeeld: *'In een klas van 25 leerlingen zijn 5 meisjes. Welk percentage meisjes is dat?'*\n\n**Aanpak — de gouden regel**:\n• % = (deel ÷ totaal) × 100\n• Hier: 5 ÷ 25 = 0,20 → × 100 = **20%**\n\n**Slimme aanpak voor kleine breuken** *(sneller)*:\n• 5 op 25 = 1 op 5 *(beide ÷ 5)* = 1/5 = **20%**\n• Hoofd: 1/5 = 20%, 1/4 = 25%, 1/2 = 50%, 1/10 = 10%.\n\n**Voorbeelden uit de toets**:\n*'Op een toets van 40 vragen heeft Tim 30 goed. Welk percentage is dat?'*\n• 30/40 = 3/4 = **75%**.\n\n*'Van de 200 leerlingen op school spelen er 40 voetbal. Welk percentage?'*\n• 40/200 = 1/5 = **20%**.\n\n**Truc**: probeer eerst te delen tot je een 'mooie' breuk krijgt (1/2, 1/4, 1/5, 1/10).\n\n**Veel-voorkomende fout**:\nVergeten te × 100. Dan krijg je 0,2 ipv 20%. Beide kloppen wiskundig, maar de vraag vraagt een **percentage**.",
     checks: [
       {
-        q: "Op een toets van **20 vragen** heeft Sven **15 goed**. Welk **percentage**?",
+        q: "Op een toets van **20 vragen** heeft Sven **15 goed**. Welk **percentage** heeft hij goed?",
         options: ["75%","15%","85%","60%"],
         answer: 0,
-        wrongHints: [null, "Niet het aantal goed-antwoorden — dat is je teller, niet het percentage.", "Dat zou 17 goed zijn — niet hier.", "Te weinig — 15 van 20 is meer dan de helft."],
+        wrongHints: [null, "15 is het aantal goede antwoorden, nog geen percentage.", "Dat zou 17 goed zijn — niet hier.", "Te weinig — 15 van 20 is meer dan de helft."],
         uitlegPad: {
           stappen: [
             { titel: "Omgekeerde percentage-vraag", tekst: "Bij 'welk percentage is X van Y?' bereken je: (deel / totaal) × 100. Hier: deel = 15 (goede vragen), totaal = 20 (alle vragen)." },
@@ -1320,10 +1320,10 @@ const steps = [
         },
       },
       {
-        q: "In een klas van **25 leerlingen** spelen **5 voetbal**. Welk **percentage**?",
+        q: "In een klas van **25 leerlingen** spelen **5** kinderen voetbal. Welk **percentage** is dat?",
         options: ["20%","5%","25%","10%"],
         answer: 0,
-        wrongHints: [null,"Niet het aantal voetballers — dat is alleen de teller.","Te veel — 5 op 25 is niet 1 op 4.","Te weinig — 1 op 25 zou 4% zijn, hier 5 op 25."],
+        wrongHints: [null,"5 is het aantal voetballers, nog geen percentage.","Te veel — 5 op 25 is niet 1 op 4.","Te weinig — 1 op 25 zou 4% zijn, hier 5 op 25."],
       },
       {
         q: "Van **50 vogels** zijn **30 mussen**. Welk **percentage** is geen mus?",
@@ -1333,14 +1333,14 @@ const steps = [
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
-        q: "In een klas van **20 kinderen** hebben **10** een fiets. Welk **percentage**?",
+        q: "In een klas van **20 kinderen** hebben **10** een fiets. Welk **percentage** is dat?",
         options: ["50%", "10%", "20%", "5%"],
         answer: 0,
         wrongHints: [
           null,
           "Dat is het aantal kinderen, nog geen percentage.",
           "Dat is het totaal. Welk deel heeft een fiets?",
-          null,
+          "Dat is 10 gedeeld door 2. Welk deel van de 20 kinderen is 10?",
         ],
         uitlegPad: {
           stappen: [
@@ -1388,14 +1388,14 @@ const steps = [
         },
       },
       {
-        q: "Van de **40 kinderen** spelen er **10** hockey. Welk **percentage**?",
+        q: "Van de **40 kinderen** spelen er **10** hockey. Welk **percentage** is dat?",
         options: ["25%", "10%", "40%", "4%"],
         answer: 0,
         wrongHints: [
           null,
           "Dat is het aantal hockeyers, nog geen percentage.",
           "Dat is het totaal, niet het deel.",
-          null,
+          "Je deelde 40 door 10. Welk deel van 40 is 10?",
         ],
         uitlegPad: {
           stappen: [
@@ -1446,7 +1446,7 @@ const steps = [
           null,
           "Dat is het aantal goede sommen, nog geen percentage.",
           "Dat zijn de sommen die fout waren.",
-          null,
+          "10 is het totaal aantal sommen. Hoeveel per 100 had je goed?",
         ],
         uitlegPad: {
           stappen: [
@@ -1490,14 +1490,14 @@ const steps = [
         },
       },
       {
-        q: "Op een school zijn **300 leerlingen**. **30** komen lopend. Welk **percentage**?",
+        q: "Op een school zijn **300 leerlingen**. **30** komen lopend. Welk **percentage** is dat?",
         options: ["10%", "30%", "3%", "33%"],
         answer: 0,
         wrongHints: [
           null,
           "Dat is het aantal lopers, nog geen percentage.",
           "Deel 30 door 300. Kijk goed naar de nullen.",
-          null,
+          "Dat is ongeveer 1 op 3. Hoe vaak past 30 in 300?",
         ],
         uitlegPad: {
           stappen: [
@@ -1548,7 +1548,7 @@ const steps = [
           null,
           "Dat is het aantal rode ballonnen, nog geen percentage.",
           "Dat is het deel dat níét rood is.",
-          null,
+          "Is 20 de helft van 50?",
         ],
         uitlegPad: {
           stappen: [
@@ -1599,7 +1599,7 @@ const steps = [
           null,
           "Dat is het aantal minuten, nog geen percentage.",
           "Dat deel heb je nog níét gezien.",
-          null,
+          "Je deelde 60 door 15. Welk deel van 60 is 15?",
         ],
         uitlegPad: {
           stappen: [
@@ -1646,7 +1646,7 @@ const steps = [
         q: "Lotte rekent: **6 van de 30** = 6 ÷ 30 = **0,2**. Welk **percentage** is dat?",
         options: ["20%", "2%", "0,2%", "6%"],
         answer: 0,
-        wrongHints: [null, "0,2 × 100 = ? Tel de plekken van de komma.", "Je moet nog × 100 doen.", null],
+        wrongHints: [null, "0,2 × 100 = ? Tel de plekken van de komma.", "Je moet nog × 100 doen.", "6 is het aantal, nog geen percentage. Wat is 0,2 × 100?"],
         uitlegPad: {
           stappen: [
             {
@@ -1700,16 +1700,16 @@ const steps = [
         q: "Een hoodie van **€ 80** heeft **40% korting**. Wat **betaal** je?",
         options: ["€ 48","€ 32","€ 40","€ 24"],
         answer: 0,
-        wrongHints: [null,"Te weinig — dat is wat je BESPAART, niet wat je betaalt.","Te weinig — 40% korting betekent betalen van 60%, niet 50%.","Veel te weinig."],
+        wrongHints: [null,"Te weinig — dat is wat je BESPAART, niet wat je betaalt.","Te weinig — 40% korting betekent betalen van 60%, niet 50%.","€ 24 is 30% van € 80. Hoeveel euro is 40% korting?"],
       },
       {
-        q: "**Op 30 voetbalwedstrijden won Tom er 18.** Welk **percentage gewonnen**?",
+        q: "Tom speelde **30 voetbalwedstrijden** en won er **18**. Welk **percentage** won hij?",
         options: ["60%","30%","40%","18%"],
         answer: 0,
-        wrongHints: [null,"Niet het aantal wedstrijden — dat is totaal.","Te weinig — 18 is meer dan de helft van 30.","Niet het aantal gewonnen — eerst delen door totaal × 100."],
+        wrongHints: [null,"30 is het totaal aantal wedstrijden, nog geen percentage.","Te weinig — 18 is meer dan de helft van 30.","Niet het aantal gewonnen — eerst delen door totaal × 100."],
       },
       {
-        q: "Een laptop kost **€ 800**. Anna betaalt **€ 720**. Welk **kortings-percentage**?",
+        q: "Een laptop kost **€ 800**. Anna betaalt **€ 720**. Hoeveel procent **korting** krijgt ze?",
         options: ["10%","20%","80%","8%"],
         answer: 0,
         wrongHints: [null,"Te veel — hoeveel euro korting is het precies? Vergelijk dat met €800.","Klopt niet — dat verwart het betaalde bedrag met de korting.","Klopt niet — vergelijk het kortingsbedrag met de oude prijs van €800."],
@@ -1723,15 +1723,15 @@ const steps = [
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "Een rugzak van **€ 50** heeft **30% korting**. Wat **betaal** je?",
-        options: ["€ 35", "€ 15", "€ 25", "€ 50"],
+        options: ["€ 35", "€ 15", "€ 25", "€ 20"],
         answer: 0,
-        wrongHints: [null, "Dat is wat je bespaart, niet wat je betaalt.", "Dat zou 50% korting zijn.", null],
+        wrongHints: [null, "Dat is wat je bespaart, niet wat je betaalt.", "Dat zou 50% korting zijn.", "Je haalde € 30 eraf. Maar het is 30 procent, niet 30 euro."],
       },
       {
         q: "Je bespaart **€ 16** op een spel van **€ 80**. Welk **kortingspercentage** is dat?",
         options: ["20%", "16%", "80%", "25%"],
         answer: 0,
-        wrongHints: [null, "Dat is het bedrag in euro's, nog geen percentage.", "Dat deel betaal je nog.", null],
+        wrongHints: [null, "Dat is het bedrag in euro's, nog geen percentage.", "Dat deel betaal je nog.", "Hoe vaak past € 16 in € 80? Welk percentage hoort daarbij?"],
       },
       {
         q: "In een bak liggen **60 appels**. **20%** is rot. Hoeveel appels zijn **niet rot**?",
@@ -1741,14 +1741,14 @@ const steps = [
           null,
           "Dat zijn de rotte appels. Lees de vraag nog eens.",
           "Je haalde 20 appels eraf. Maar het is 20 procent.",
-          null,
+          "20 is het percentage. Hoeveel appels zijn 20% van 60?",
         ],
       },
       {
         q: "Een fiets van **€ 250** krijgt **20% korting**. Wat **betaal** je?",
         options: ["€ 200", "€ 50", "€ 230", "€ 225"],
         answer: 0,
-        wrongHints: [null, "Dat is de korting zelf.", "Je haalde 20 euro eraf. Maar het is 20 procent.", null],
+        wrongHints: [null, "Dat is de korting zelf.", "Je haalde 20 euro eraf. Maar het is 20 procent.", "Je haalde 10% eraf. Hoeveel euro is 20%?"],
       },
     ],
   },
@@ -1792,22 +1792,22 @@ const steps = [
         q: "Een waterfles bevat **2 liter**. Je drinkt **75%**. Hoeveel **liter** drink je?",
         options: ["1,5 liter","0,5 liter","2 liter","1 liter"],
         answer: 0,
-        wrongHints: [null,"Te weinig — 75% is meer dan de helft.","Klopt niet — heb je 75% gedronken? Dan blijft maar weinig over.","Te weinig — dat is 50%, niet 75%."],
+        wrongHints: [null,"Te weinig — 75% is meer dan de helft.","2 liter is de hele fles, dat is 100%.","Te weinig — dat is 50%, niet 75%."],
       },
-      { q: "10% van 50 = ?", options: ["5","10","50","0,5"], answer: 0, wrongHints: [null, "Niet — % zelf.", "Niet.", "Niet."] },
-      { q: "25% van 80 = ?", options: ["20","25","40","2"], answer: 0, wrongHints: [null, "Dat is %.", "Helft.", "Niet."] },
-      { q: "Trui van €40 met 20% korting = ?", options: ["€32","€20","€8","€40"], answer: 0, wrongHints: [null, "Niet — korting niet 50%.", "Dat is de korting.", "Geen korting?"] },
-      { q: "Welk percentage is **0,5**?", options: ["50%","5%","½%","500%"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Veel meer."] },
-      { q: "5% van 200 = ?", options: ["10","5","20","100"], answer: 0, wrongHints: [null, "Niet — % zelf.", "Niet.", "Helft."] },
-      { q: "**Stijging** 50 → 75 is welk percentage?", options: ["50%","25%","20%","75%"], answer: 0, wrongHints: [null, "Stijging absoluut, niet %.", "Niet.", "Niet relevant."] },
-      { q: "Welk percentage is **¼**?", options: ["25%","20%","½%","75%"], answer: 0, wrongHints: [null, "Vijfde.", "Niet.", "Drie kwart."] },
-      { q: "100% van 60 = ?", options: ["60","100","0","6"], answer: 0, wrongHints: [null, "Niet getal zelf.", "Niet — alles.", "Tiende."] },
-      { q: "30% van 200 = ?", options: ["60","30","20","6"], answer: 0, wrongHints: [null, "Dat is %.", "Niet.", "10% van 60."] },
-      { q: "Welk percentage past bij **½**?", options: ["50%","25%","75%","100%"], answer: 0, wrongHints: [null, "Niet — kwart.", "Niet — driekwart.", "Heel."] },
-      { q: "Een fles van €5 wordt 10% goedkoper. Nieuwe prijs?", options: ["€4,50","€4,00","€5,50","€10"], answer: 0, wrongHints: [null, "Te veel korting.", "Niet — eraf, niet erbij.", "Niet."] },
-      { q: "Hoeveel % is 1 op 10?", options: ["10%","1%","100%","0,1%"], answer: 0, wrongHints: [null, "Niet.", "Geheel.", "Te klein."] },
-      { q: "Hoeveel % is 50 op 200?", options: ["25%","50%","100%","75%"], answer: 0, wrongHints: [null, "Niet — helft van 200 is 100.", "Niet.", "Niet."] },
-      { q: "**150%** van 20 = ?", options: ["30","20","15","150"], answer: 0, wrongHints: [null, "Origineel.", "Niet — minder.", "Veel te veel."] },
+      { q: "10% van 50 = ?", options: ["5","10","50","0,5"], answer: 0, wrongHints: [null, "Dat is het percentage zelf. Welk deel van 50 is 10%?", "50 is de hele 50, dat is 100%.", "0,5 is 1% van 50. Hoe reken je 10% uit?"] },
+      { q: "25% van 80 = ?", options: ["20","25","40","8"], answer: 0, wrongHints: [null, "Dat is het percentage zelf, nog niet het deel van 80.", "40 is de helft van 80. Is 25% de helft?", "8 is 10% van 80. Is 25% hetzelfde als 10%?"] },
+      { q: "Een trui kost €40. Er is 20% korting. Wat betaal je?", options: ["€32","€20","€8","€36"], answer: 0, wrongHints: [null, "Je haalde €20 eraf. Maar het is 20 procent, niet 20 euro.", "Dat is de korting. Wat betaal je dan nog?", "Je haalde 10% eraf. Hoeveel euro is 20% van €40?"] },
+      { q: "Welk percentage is **0,5**?", options: ["50%","5%","½%","500%"], answer: 0, wrongHints: [null, "Je schoof de komma maar 1 plek. Bij × 100 gaan er 2.", "½% is nog geen 1 procent. Je moet nog × 100 doen.", "500% is vijf keer het geheel. Is 0,5 meer dan 1?"] },
+      { q: "5% van 200 = ?", options: ["10","5","20","100"], answer: 0, wrongHints: [null, "Dat is het percentage zelf. Welk deel van 200 is 5%?", "20 is 10% van 200. Is 5% meer of minder dan 10%?", "100 is de helft van 200, dat is 50%."] },
+      { q: "Een getal stijgt van **50** naar **75**. Met hoeveel procent is het **gestegen**?", options: ["50%","25%","33%","75%"], answer: 0, wrongHints: [null, "25 is de stijging in getallen. Hoeveel procent van 50 is dat?", "Je vergeleek de stijging met 75. Met welk getal begon je?", "75 is het nieuwe getal, niet de stijging."] },
+      { q: "Welk percentage is **¼**?", options: ["25%","20%","4%","75%"], answer: 0, wrongHints: [null, "20% is een vijfde. Is ¼ een vijfde?", "Je keek alleen naar de 4. Hoeveel procent is één van vier gelijke delen?", "75% hoort bij drie van de vier delen. Hoeveel delen heb je hier?"] },
+      { q: "100% van 60 = ?", options: ["60","100","30","6"], answer: 0, wrongHints: [null, "100 is het percentage. Hoeveel is het hele getal hier?", "30 is de helft van 60, dat is 50%.", "6 is 10% van 60."] },
+      { q: "30% van 200 = ?", options: ["60","30","20","6"], answer: 0, wrongHints: [null, "Dat is het percentage zelf, nog niet het deel van 200.", "20 is 10% van 200. Hoeveel keer 10% heb je nodig?", "Kijk naar de nullen: 10% van 200 is al 20."] },
+      { q: "Welk percentage past bij **½**?", options: ["50%","25%","75%","100%"], answer: 0, wrongHints: [null, "25% is een kwart. Is ½ een kwart?", "75% is drie van de vier delen. Is dat ½?", "100% is het geheel. Is ½ het geheel?"] },
+      { q: "Een fles van €5 wordt 10% goedkoper. Wat is de nieuwe prijs?", options: ["€4,50","€4,00","€5,50","€0,50"], answer: 0, wrongHints: [null, "Je haalde €1 eraf. Hoeveel is 10% van €5?", "Goedkoper betekent eraf, niet erbij.", "Dat is de korting zelf. Wat kost de fles nu?"] },
+      { q: "Hoeveel procent is 1 op de 10?", options: ["10%","1%","100%","0,1%"], answer: 0, wrongHints: [null, "1% is 1 op de 100. Hier is het 1 op de 10.", "100% zou alle 10 zijn.", "0,1 is het kommagetal. Hoeveel procent hoort daarbij?"] },
+      { q: "Hoeveel procent is 50 op de 200?", options: ["25%","50%","100%","75%"], answer: 0, wrongHints: [null, "50% van 200 is 100. Is 50 de helft van 200?", "100% zou alle 200 zijn.", "75% van 200 is 150. Is 50 zoveel?"] },
+      { q: "**150%** van 20 = ?", options: ["30","20","15","150"], answer: 0, wrongHints: [null, "20 is 100% van 20. 150% is meer dan het geheel.", "15 is minder dan 20. Is 150% meer of minder dan het geheel?", "150 is het percentage zelf. Hoeveel is 50% van 20?"] },
     ],
   },
 ];

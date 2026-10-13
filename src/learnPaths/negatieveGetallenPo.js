@@ -63,10 +63,10 @@ const steps = [
     svg: thermometerSvg(-5, "Vijf graden onder nul"),
     checks: [
       {
-        q: "Welk getal is **groter**: −3 of −7?",
-        options: ["−3","−7","Hetzelfde","Niet vergelijkbaar"],
+        q: "Welk getal is het **grootst**: −7, −3, −10 of −5?",
+        options: ["−3","−7","−10","−5"],
         answer: 0,
-        wrongHints: [null,"Andersom — −7 is verder van nul aan de min-kant.","Ze zijn niet hetzelfde.","Wel vergelijkbaar — denk aan thermometer."],
+        wrongHints: [null,"−7 ligt verder van nul aan de min-kant. Is dat groter?","−10 ligt nog verder links op de getallenlijn. Is dat groter?","Welk getal ligt het dichtst bij 0?"],
         uitlegPad: {
           stappen: [{ titel: "Dichter bij 0 = groter", tekst: "Bij negatieve getallen: dichter bij 0 = groter. −3 ligt dichter bij 0 dan −7." }],
           woorden: [{ woord: "groter (negatief)", uitleg: "Hoger op getalslijn = groter (ook bij negatief)." }],
@@ -77,10 +77,10 @@ const steps = [
         },
       },
       {
-        q: "**−12 °C** — wat is dat?",
-        options: ["12 graden onder nul","12 graden boven nul","Niets — bestaat niet","12 graden warm"],
+        q: "Wat betekent **−12 °C**?",
+        options: ["12 graden onder nul","12 graden boven nul","12 graden kouder dan gisteren","12 graden warmer dan gisteren"],
         answer: 0,
-        wrongHints: [null,"Andersom — min-teken = onder nul.","Wel — denk aan winter.","Andersom — boven nul = positief."],
+        wrongHints: [null,"Andersom — het min-teken betekent onder nul.","Een temperatuur zegt hoe warm het nú is, niet hoeveel het veranderd is.","Het min-teken zegt niets over gisteren. Wat betekent min op een thermometer?"],
         uitlegPad: {
           stappen: [{ titel: "Min = onder nul", tekst: "−12 °C = 12 graden ONDER nul. Min-teken = onder/min." }],
           woorden: [{ woord: "−X °C", uitleg: "X graden onder nul (vriespunt)." }],
@@ -94,7 +94,7 @@ const steps = [
         q: "Welk getal is het **kleinst**: 0, −1, +5, −10?",
         options: ["−10","−1","0","+5"],
         answer: 0,
-        wrongHints: [null,"Niet de kleinste — er is een getal dat nog verder van nul aan de min-kant ligt.","Niet de kleinste.","De grootste."],
+        wrongHints: [null,"Niet de kleinste — er is een getal dat nog verder van nul aan de min-kant ligt.","0 is groter dan elk getal met een min ervoor.","+5 ligt rechts van 0. Is dat klein?"],
         uitlegPad: {
           stappen: [{ titel: "Verste links", tekst: "Op getalslijn: verste links = kleinst. −10 ligt het verst links." }],
           woorden: [{ woord: "kleinst", uitleg: "Verste naar links op getalslijn (= meest negatief)." }],
@@ -107,12 +107,12 @@ const steps = [
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "Welke zin **klopt**?",
-        options: ["−4 is groter dan −9", "−9 is groter dan −4", "−4 is kleiner dan −9", "−9 is groter dan 0"],
+        options: ["−4 is groter dan −9", "−9 is groter dan −4", "−4 is groter dan −1", "−9 is groter dan 0"],
         answer: 0,
         wrongHints: [
           null,
           "Welk van de twee ligt dichter bij 0?",
-          null,
+          "Welk van de twee ligt dichter bij 0: −4 of −1?",
           "Kan een getal onder nul groter zijn dan 0?",
         ],
         uitlegPad: {
@@ -188,9 +188,9 @@ const steps = [
       },
       {
         q: "Je stapt in de lift en drukt op **−1**. Waar kom je uit?",
-        options: ["Onder de grond", "Op de begane grond", "Op de eerste verdieping", "Op het dak"],
+        options: ["Onder de grond", "Op de begane grond", "Op de eerste verdieping", "Op de tweede verdieping"],
         answer: 0,
-        wrongHints: [null, "Ligt −1 boven of onder nul?", null, null],
+        wrongHints: [null, "Ligt −1 boven of onder nul?", "Dat is de knop 1. Wat betekent het min-teken ervoor?", "Hoe hoger de verdieping, hoe groter het getal. Is −1 een groot getal?"],
         uitlegPad: {
           stappen: [
             {
@@ -236,7 +236,7 @@ const steps = [
         wrongHints: [
           null,
           "Wat betekent het min-teken bij geld?",
-          null,
+          "Bij 0 euro heeft hij niets en hoeft hij niets. Wat doet het min-teken?",
           "Denk aan een schuld: krijg je dan geld of moet je betalen?",
         ],
         uitlegPad: {
@@ -276,7 +276,7 @@ const steps = [
         q: "Welk getal is **niet negatief**?",
         options: ["+2", "−2", "−20", "−1"],
         answer: 0,
-        wrongHints: [null, "Kijk naar het teken voor het getal.", null, null],
+        wrongHints: [null, "Kijk naar het teken voor het getal.", "Kijk naar het teken, niet naar hoe groot het getal is.", "Ook een klein getal met een min ervoor is negatief."],
         uitlegPad: {
           stappen: [
             {
@@ -317,7 +317,7 @@ const steps = [
         wrongHints: [
           null,
           "Zoek tussen de twee getallen, aan de min-kant.",
-          null,
+          "0 ligt rechts van −1. Ligt het dan tussen −3 en −1?",
           "Ligt dat getal tussen −3 en −1, of ernaast?",
         ],
         uitlegPad: {
@@ -365,7 +365,7 @@ const steps = [
         q: "**4 − 6** = ?",
         options: ["−2","2","10","−10"],
         answer: 0,
-        wrongHints: [null,"Andersom — 4 < 6, dus negatief.","Veel te veel — heb je optellen gedaan?","Te veel."],
+        wrongHints: [null,"4 is kleiner dan 6. Kom je dan boven of onder nul uit?","Veel te veel — heb je optellen gedaan?","Je telde 4 en 6 op. Je moet 6 stappen terug vanaf 4."],
         uitlegPad: {
           stappen: [{ titel: "Onder nul gaan", tekst: "Begin op 4. 6 stappen links: 4→3→2→1→0→−1→−2." }],
           woorden: [{ woord: "stappen tellen", uitleg: "Aftrekken = naar links lopen op getalslijn." }],
@@ -379,7 +379,7 @@ const steps = [
         q: "**−3 + 5** = ?",
         options: ["+2","−2","−8","+8"],
         answer: 0,
-        wrongHints: [null,"Andersom — loop 5 stappen naar rechts vanaf −3: kom je onder of boven nul uit?","Te ver naar links — controleer richting.","Te ver naar rechts."],
+        wrongHints: [null,"Andersom — loop 5 stappen naar rechts vanaf −3: kom je onder of boven nul uit?","Bij plus loop je naar rechts. Waarom kom je dan verder links uit?","Je telde 3 en 5 op. Maar je begint op −3, niet op +3."],
         uitlegPad: {
           stappen: [{ titel: "Naar rechts", tekst: "Begin op −3. 5 stappen rechts: −3→−2→−1→0→1→2." }],
           woorden: [{ woord: "optellen vanaf negatief", uitleg: "Plus = naar rechts. Vanaf −3 + 5 → +2." }],
@@ -393,7 +393,7 @@ const steps = [
         q: "**−5 − 4** = ?",
         options: ["−9","−1","+9","+1"],
         answer: 0,
-        wrongHints: [null,"Te dichtbij — controleer: 4 stappen LINKS vanaf −5.","Andersom — verder van nul.","Andersom — links, niet rechts."],
+        wrongHints: [null,"Te dichtbij — controleer: 4 stappen LINKS vanaf −5.","Je loopt naar links vanaf −5. Kun je dan boven nul uitkomen?","Bij min loop je naar links, niet naar rechts."],
         uitlegPad: {
           stappen: [{ titel: "Verder onder nul", tekst: "Begin op −5. 4 stappen links: −5→−6→−7→−8→−9." }],
           woorden: [{ woord: "negatief - positief", uitleg: "Min van negatief: nog dieper onder nul." }],
@@ -411,7 +411,7 @@ const steps = [
         wrongHints: [
           null,
           "7 is meer dan 2: kom je boven of onder nul uit?",
-          null,
+          "Je telde 2 en 7 op. Bij min ga je naar links.",
           "Ga je 7 stappen naar links vanaf 2, of vanaf −2?",
         ],
         uitlegPad: {
@@ -455,7 +455,7 @@ const steps = [
           null,
           "Kom je met 4 stappen naar rechts vanaf −6 al voorbij 0?",
           "Plus = welke kant op?",
-          null,
+          "Je telde 6 en 4 op. Begin je op +6 of op −6?",
         ],
         uitlegPad: {
           stappen: [
@@ -497,7 +497,7 @@ const steps = [
         wrongHints: [
           null,
           "Ga je bij min naar links of naar rechts?",
-          null,
+          "Het teken klopt niet: je begint onder nul en loopt verder naar links.",
           "Kom je ooit boven nul als je naar links loopt vanaf −1?",
         ],
         uitlegPad: {
@@ -537,7 +537,7 @@ const steps = [
         q: "**−2 + 8** = ?",
         options: ["+6", "−6", "+10", "−10"],
         answer: 0,
-        wrongHints: [null, "Na 2 stappen ben je al bij 0. Hoeveel stappen heb je dan nog over?", null, null],
+        wrongHints: [null, "Na 2 stappen ben je al bij 0. Hoeveel stappen heb je dan nog over?", "Je telde 2 en 8 op. Maar je begint op −2, niet op +2.", "Bij plus loop je naar rechts. Kom je dan verder onder nul?"],
         uitlegPad: {
           stappen: [
             {
@@ -578,7 +578,7 @@ const steps = [
         wrongHints: [
           null,
           "Links is de kant van de kleinere getallen.",
-          null,
+          "Links lopen vanaf −4 brengt je verder onder nul, niet erboven.",
           "Je begint onder nul en gaat naar links. Kom je dan boven nul?",
         ],
         uitlegPad: {
@@ -621,7 +621,7 @@ const steps = [
         wrongHints: [
           null,
           "Tel eerst de stappen tot 0, en dan de stappen onder nul.",
-          null,
+          "3 stappen brengen je van 0 naar −3. Hoeveel stappen zijn er van 2 naar 0?",
           "Vergeet je de stap van 0 naar −1 niet?",
         ],
         uitlegPad: {
@@ -661,7 +661,7 @@ const steps = [
         q: "Welke som hoort bij: **begin op 1 en loop 4 stappen naar links**?",
         options: ["1 − 4", "1 + 4", "4 − 1", "−1 + 4"],
         answer: 0,
-        wrongHints: [null, "Naar links lopen hoort bij plus of bij min?", null, "Bij welk getal begin je?"],
+        wrongHints: [null, "Naar links lopen hoort bij plus of bij min?", "Bij welk getal begin je? Dat getal staat vooraan in de som.", "Bij welk getal begin je?"],
         uitlegPad: {
           stappen: [
             {
@@ -720,7 +720,7 @@ const steps = [
         q: "**−4 + (−6)** = ?",
         options: ["−10","+10","−2","+2"],
         answer: 0,
-        wrongHints: [null,"Niet plus — kijk hoe de twee tekens samen werken.","Te dichtbij — heb je 4 − 6 gedaan in plaats van −4 − 6?","Andersom — het antwoord is negatief."],
+        wrongHints: [null,"Niet plus — kijk hoe de twee tekens samen werken.","Te dichtbij — heb je 4 − 6 gedaan in plaats van −4 − 6?","Kijk naar de tekens: kan het antwoord boven nul uitkomen?"],
         uitlegPad: {
           stappen: [{ titel: "+− = −", tekst: "+(−6) wordt −6. Dus −4 + (−6) = −4 − 6 = −10." }],
           woorden: [{ woord: "plus een minus", uitleg: "Plus voor minus-getal = aftrekken." }],
@@ -734,7 +734,7 @@ const steps = [
         q: "**5 + (−2)** = ?",
         options: ["+3","+7","−3","−7"],
         answer: 0,
-        wrongHints: [null,"Niet optellen — er staat een min in de haakjes.","Andersom — 5 > 2, dus het antwoord is positief.","Veel te ver."],
+        wrongHints: [null,"Niet optellen — er staat een min in de haakjes.","Andersom — 5 > 2, dus het antwoord is positief.","Je begint op 5, niet op −5."],
         uitlegPad: {
           stappen: [{ titel: "+− = −", tekst: "5 + (−2) → +(−) = − → 5 − 2 = 3." }],
           woorden: [{ woord: "plus een negatief", uitleg: "+(−X) = −X (gewoon aftrekken)." }],
@@ -749,7 +749,7 @@ const steps = [
         q: "**6 − (−2)** = ?",
         options: ["8", "4", "−8", "−4"],
         answer: 0,
-        wrongHints: [null, "Kijk naar de twee min-tekens op rij.", null, "Twee min-tekens samen worden…?"],
+        wrongHints: [null, "Kijk naar de twee min-tekens op rij.", "Begin je op 6 of op −6?", "Twee min-tekens samen worden…?"],
         uitlegPad: {
           stappen: [
             {
@@ -787,7 +787,7 @@ const steps = [
         q: "**2 + (−5)** = ?",
         options: ["−3", "+7", "+3", "−7"],
         answer: 0,
-        wrongHints: [null, "Plus en min op rij worden samen…?", null, "Begin je op 2 of op −2?"],
+        wrongHints: [null, "Plus en min op rij worden samen…?", "Het getal klopt, maar 5 is meer dan 2. Kom je boven of onder nul uit?", "Begin je op 2 of op −2?"],
         uitlegPad: {
           stappen: [
             {
@@ -825,7 +825,7 @@ const steps = [
         q: "**−3 − (−1)** = ?",
         options: ["−2", "−4", "+2", "+4"],
         answer: 0,
-        wrongHints: [null, "Wat gebeurt er met de twee min-tekens in het midden?", null, null],
+        wrongHints: [null, "Wat gebeurt er met de twee min-tekens in het midden?", "Je begint op −3 en gaat maar 1 stap. Kom je dan boven nul?", "Begin je op +3 of op −3?"],
         uitlegPad: {
           stappen: [
             {
@@ -863,7 +863,7 @@ const steps = [
         q: "**−5 + (−2)** = ?",
         options: ["−7", "−3", "+7", "+3"],
         answer: 0,
-        wrongHints: [null, "Wordt + − samen plus of min?", null, "Je begint op −5. Kom je dan boven nul?"],
+        wrongHints: [null, "Wordt + − samen plus of min?", "Je begint op −5 en gaat naar links. Kom je dan boven nul?", "Je deed 5 − 2. Wat worden + en − samen, en waar begin je?"],
         uitlegPad: {
           stappen: [
             {
@@ -901,7 +901,7 @@ const steps = [
         q: "**9 − (−1)** = ?",
         options: ["10", "8", "−10", "−8"],
         answer: 0,
-        wrongHints: [null, "Er staan twee min-tekens op rij. Wat worden die samen?", null, null],
+        wrongHints: [null, "Er staan twee min-tekens op rij. Wat worden die samen?", "Begin je op 9 of op −9?", "Twee min-tekens op rij worden plus. Ga je dan naar onder nul?"],
         uitlegPad: {
           stappen: [
             {
@@ -942,7 +942,7 @@ const steps = [
         wrongHints: [
           null,
           "Kijk naar de twee tekens tussen 10 en 6.",
-          null,
+          "De 10 aan het begin verandert niet. Alleen de tekens in het midden.",
           "Verandert het eerste getal, de 10?",
         ],
         uitlegPad: {
@@ -1000,10 +1000,10 @@ const steps = [
         },
       },
       {
-        q: "Verschil tussen **+12 °C en −5 °C**?",
+        q: "Hoeveel graden verschil is er tussen **+12 °C** en **−5 °C**?",
         options: ["17","7","−17","−7"],
         answer: 0,
-        wrongHints: [null,"Te weinig — min een negatief getal wordt optellen. Tel het positieve deel én het negatieve deel apart.","Andersom — verschil is altijd positief.","Andersom."],
+        wrongHints: [null,"Te weinig — tel het stuk boven nul én het stuk onder nul allebei mee.","Een verschil is een afstand. Kan een afstand negatief zijn?","Een verschil is nooit negatief. En tel je het stuk onder nul wel mee?"],
         uitlegPad: {
           stappen: [{ titel: "Tel beide stukken", tekst: "+12 → 0 = 12 graden. 0 → −5 = 5 graden. Totaal 12+5 = 17." }],
           woorden: [{ woord: "verschil", uitleg: "Hoeveel graden tussen twee waarden. Altijd positief." }],
@@ -1014,10 +1014,10 @@ const steps = [
         },
       },
       {
-        q: "Anna had **−€ 30 saldo** *(rood)*. Krijgt **€ 80 zakgeld**. Nieuw saldo?",
+        q: "Anna staat **€ 30 rood** (saldo −€ 30). Ze krijgt **€ 80 zakgeld**. Wat is haar saldo nu?",
         options: ["+€ 50","+€ 110","−€ 50","−€ 110"],
         answer: 0,
-        wrongHints: [null,"Te veel — heb je rood vergeten?","Andersom — krijgt erbij, dus stijgt naar plus.","Veel te ver."],
+        wrongHints: [null,"Te veel — heb je rood vergeten?","Andersom — krijgt erbij, dus stijgt naar plus.","Ze krijgt geld erbij. Kan haar schuld dan groter worden?"],
         uitlegPad: {
           stappen: [{ titel: "Schuld eerst weg", tekst: "−30 + 80: eerst 30 om bij 0 te komen, dan nog 50 over. → +50." }],
           woorden: [{ woord: "rood saldo", uitleg: "Negatief saldo = schuld bij bank." }],
@@ -1035,7 +1035,7 @@ const steps = [
         wrongHints: [
           null,
           "Tel het stuk boven nul en het stuk onder nul allebei mee.",
-          null,
+          "Een daling geef je als een aantal graden, zonder min. En telt het stuk onder nul mee?",
           "Kan het aantal graden dat het daalt negatief zijn?",
         ],
         uitlegPad: {
@@ -1078,7 +1078,7 @@ const steps = [
         wrongHints: [
           null,
           "Ze betaalt meer dan ze heeft. Staat ze dan rood of niet?",
-          null,
+          "Je telde 10 en 18 op. Ze betaalt, dus er gaat geld af.",
           "Gaat er geld bij of af?",
         ],
         uitlegPad: {
@@ -1118,7 +1118,7 @@ const steps = [
         q: "Op de rekening van Joris staat **−€ 12**. Hij krijgt **€ 25**. Wat is zijn saldo nu?",
         options: ["+€ 13", "−€ 13", "+€ 37", "−€ 37"],
         answer: 0,
-        wrongHints: [null, "Met de eerste € 12 is zijn schuld weg. Hoeveel blijft er dan over?", null, null],
+        wrongHints: [null, "Met de eerste € 12 is zijn schuld weg. Hoeveel blijft er dan over?", "Je telde 12 en 25 op. Maar die € 12 was een schuld.", "Hij krijgt geld erbij. Kan zijn schuld dan groter worden?"],
         uitlegPad: {
           stappen: [
             {
@@ -1159,7 +1159,7 @@ const steps = [
         wrongHints: [
           null,
           "De zeespiegel is 0. Tel het stuk erboven en het stuk eronder.",
-          null,
+          "Een afstand is nooit negatief. En tel je het stuk onder de zeespiegel mee?",
           "Kan een afstand negatief zijn?",
         ],
         uitlegPad: {
@@ -1202,7 +1202,7 @@ const steps = [
         wrongHints: [
           null,
           "Kom je met 5 graden omhoog vanaf −6 al boven nul?",
-          null,
+          "Warmer betekent omhoog op de thermometer. Ga je dan verder onder nul?",
           "Warmer = omhoog of omlaag op de thermometer?",
         ],
         uitlegPad: {
@@ -1242,7 +1242,7 @@ const steps = [
         q: "Het is **−2 °C**. Het wordt **6 graden kouder**. Hoe koud is het dan?",
         options: ["−8 °C", "+4 °C", "−4 °C", "+8 °C"],
         answer: 0,
-        wrongHints: [null, "Kouder = omhoog of omlaag op de thermometer?", null, null],
+        wrongHints: [null, "Kouder = omhoog of omlaag op de thermometer?", "Begin je op +2 of op −2?", "Het wordt kouder. Kan de temperatuur dan boven nul uitkomen?"],
         uitlegPad: {
           stappen: [
             {
@@ -1287,7 +1287,7 @@ const steps = [
         q: "**−8 + 5** = ?",
         options: ["−3","+3","−13","+13"],
         answer: 0,
-        wrongHints: [null,"Andersom — 5 stappen rechts vanaf −8.","Te ver naar links — kijk richting.","Veel te ver."],
+        wrongHints: [null,"Andersom — 5 stappen rechts vanaf −8.","Te ver naar links — kijk richting.","Je telde 8 en 5 op. Maar je begint op −8."],
         uitlegPad: {
           stappen: [{ titel: "Naar rechts", tekst: "Begin op −8. 5 stappen rechts: −8 + 5 = −3 (nog onder nul)." }],
           woorden: [{ woord: "splits", uitleg: "Optellen vanaf negatief: gebruik deel om bij 0 te komen, rest erna." }],
@@ -1315,7 +1315,7 @@ const steps = [
         q: "Welk getal is het **grootst**: −8, −2, 0, −15?",
         options: ["0","−2","−8","−15"],
         answer: 0,
-        wrongHints: [null,"Er ligt nog een getal rechts van −2 op de getalslijn.","Er liggen nog getallen rechts van −8.","Kleinste."],
+        wrongHints: [null,"Er ligt nog een getal rechts van −2 op de getalslijn.","Er liggen nog getallen rechts van −8.","−15 ligt het verst links op de getallenlijn."],
         uitlegPad: {
           stappen: [{ titel: "Verste rechts", tekst: "Op getalslijn: rechts = groter. 0 ligt rechts van alle negatieven." }],
           woorden: [{ woord: "grootst", uitleg: "Verste rechts op getalslijn." }],
@@ -1329,7 +1329,7 @@ const steps = [
         q: "**3 − (−7)** = ?",
         options: ["+10","−10","−4","+4"],
         answer: 0,
-        wrongHints: [null,"Andersom — min een minus = plus.","Niet aftrekken.","Niet aftrekken — twee minnen heffen op."],
+        wrongHints: [null,"Andersom — min een min wordt plus.","Je deed 3 − 7. Kijk naar de twee min-tekens op rij.","Niet aftrekken — twee minnen heffen op."],
         uitlegPad: {
           stappen: [{ titel: "−− = +", tekst: "3 − (−7) = 3 + 7 = 10." }],
           woorden: [{ woord: "min een minus", uitleg: "−− = +" }],
@@ -1340,10 +1340,10 @@ const steps = [
         },
       },
       {
-        q: "Marc had **+€ 15** zakgeld. Hij geeft **€ 22 uit**. Saldo?",
+        q: "Marc had **+€ 15** zakgeld. Hij geeft **€ 22 uit**. Wat is zijn saldo nu?",
         options: ["−€ 7","+€ 7","−€ 37","+€ 37"],
         answer: 0,
-        wrongHints: [null,"Andersom — gaat onder nul (rood).","Te veel — heb je optellen gedaan?","Te veel — heb je 15 + 22 ipv 15−22?"],
+        wrongHints: [null,"Andersom — gaat onder nul (rood).","Te veel — heb je optellen gedaan?","Je telde 15 en 22 op. Hij geeft geld uit, dus er gaat geld af."],
         uitlegPad: {
           stappen: [{ titel: "15 − 22 = −7", tekst: "Hij geeft meer uit dan hij heeft. Saldo onder nul: 15 − 22 = −7." }],
           woorden: [{ woord: "uitgeven", uitleg: "Aftrekken van saldo." }],
@@ -1354,10 +1354,10 @@ const steps = [
         },
       },
       {
-        q: "**Verschil tussen +12 °C en −5 °C** = ?",
+        q: "Hoeveel graden **verschil** is er tussen **+12 °C** en **−5 °C**?",
         options: ["17 °C","7 °C","−7 °C","−17 °C"],
         answer: 0,
-        wrongHints: [null, "Te weinig — vergeet de stappen onder nul niet.", "Verschil is altijd positief (afstand).", "Verschil is altijd positief — geen min ervoor."],
+        wrongHints: [null, "Te weinig — vergeet de stappen onder nul niet.", "Een verschil is een afstand. Kan die negatief zijn?", "Een verschil is een afstand — zonder min ervoor."],
         uitlegPad: {
           stappen: [
             { titel: "Verschil = afstand op getalslijn", tekst: "Van −5 °C naar +12 °C: tel stappen. Stappen tot 0: **5**. Stappen van 0 tot 12: **12**. Samen: 5 + 12 = **17**." },
@@ -1378,10 +1378,10 @@ const steps = [
         },
       },
       {
-        q: "Een duiker zwemt op **−12 m** *(diepte)*. Hij stijgt **8 meter**. Waar **nu**?",
+        q: "Een duiker zwemt op **−12 m** *(diepte)*. Hij stijgt **8 meter**. Op welke diepte zwemt hij nu?",
         options: ["−4 m","−20 m","+4 m","−8 m"],
         answer: 0,
-        wrongHints: [null, "Andersom — stijgen is omhoog (richting 0), niet omlaag.", "Te veel — niet genoeg gestegen om boven water te zijn.", "Te weinig — controleer."],
+        wrongHints: [null, "Andersom — stijgen is omhoog (richting 0), niet omlaag.", "Kom je met 8 meter stijgen vanaf −12 al boven water?", "−8 is hoeveel hij stijgt, niet waar hij uitkomt. Begin bij −12."],
         uitlegPad: {
           stappen: [
             { titel: "Diepte = negatief", tekst: "Onder zeespiegel: getallen negatief. −12 m = 12 meter onder water." },
@@ -1405,7 +1405,7 @@ const steps = [
         q: "Welke rij is **op volgorde van klein naar groot**?",
         options: ["−9, −3, 0, +4","0, −3, +4, −9","−3, −9, 0, +4","+4, 0, −3, −9"],
         answer: 0,
-        wrongHints: [null, "Niet op volgorde — 0 hoort tussen negatieven en positieven.", "Niet — −9 < −3, dus −9 hoort eerst.", "Andersom — dat is groot naar klein."],
+        wrongHints: [null, "Niet op volgorde — 0 hoort tussen negatieven en positieven.", "Welk getal is kleiner: −3 of −9?", "Andersom — dat is groot naar klein."],
         uitlegPad: {
           stappen: [
             { titel: "Negatieven: groter cijfer = kleiner getal", tekst: "Bij negatieve getallen is het andersom dan bij positieven. **−9 < −3** (omdat −9 verder van 0 ligt, dus kleiner)." },
@@ -1429,7 +1429,7 @@ const steps = [
         q: "**(−5) × 3** = ?",
         options: ["−15","+15","−8","+8"],
         answer: 0,
-        wrongHints: [null, "Niet — bij min×plus blijft het minteken.", "Niet aftrekken — vermenigvuldigen.", "Andersom."],
+        wrongHints: [null, "Het getal klopt. Welk teken krijg je bij min keer plus?", "Je trok 3 af van −5. Maar het is een keersom.", "Je telde 5 en 3 op. Bij × reken je 5 × 3."],
         uitlegPad: {
           stappen: [
             { titel: "Min × plus = min", tekst: "Regel: bij vermenigvuldigen tellen we de minnen.\n• min × plus → **min**\n• plus × min → **min**\n• min × min → **plus**\n• plus × plus → **plus**\nHier: (−5) × 3 → één min → **negatief antwoord**." },
@@ -1450,25 +1450,25 @@ const steps = [
           niveaus: { basis: "−15.", simpeler: "Min × plus = min. 5 × 3 = 15. Met minteken: −15.", nogSimpeler: "−15" },
         },
       },
-      { q: "Het is −3°C. De temperatuur stijgt 8°. Hoe warm is het nu?", options: ["5°C","11°C","−11°C","−5°C"], answer: 0, wrongHints: [null, "Niet — niet bij elkaar optellen zonder min.", "Niet — getal is gestegen.", "Niet — je telt erbij op, daalt niet."] },
-      { q: "Op een rekening staat −€20. Er komt €35 bij. Saldo nu?", options: ["+€15","+€55","−€55","−€15"], answer: 0, wrongHints: [null, "Niet — de schuld van €20 gaat er eerst af.", "Niet — je VOEGT TOE.", "Niet — €35 is meer dan de schuld, dus je komt boven nul."] },
-      { q: "−6 − 4 = ?", options: ["−10","−2","2","10"], answer: 0, wrongHints: [null, "Niet — schuld wordt groter, niet kleiner.", "Niet — antwoord is negatief.", "Niet — beide min, getal wordt min."] },
-      { q: "Welke is het kleinst?", options: ["−8","−3","0","5"], answer: 0, wrongHints: [null, "Niet — dichter bij nul = groter.", "Niet — er zijn nog kleinere.", "Niet — dat is de grootste."] },
-      { q: "**5 − 8** = ?", options: ["−3","3","−13","13"], answer: 0, wrongHints: [null, "Verkeerd teken.", "Te ver.", "Niet."] },
-      { q: "Welke is **grootst**?", options: ["3","0","−1","−5"], answer: 0, wrongHints: [null, "Niet.", "Negatief is kleiner.", "Veel kleiner."] },
-      { q: "Van −10 naar −3, hoeveel **opgewarmd**?", options: ["7°","−7°","13°","3°"], answer: 0, wrongHints: [null, "Niet — opwarming positief.", "Te veel.", "Niet."] },
-      { q: "0 − 4 = ?", options: ["−4","4","0","−40"], answer: 0, wrongHints: [null, "Niet — onder nul.", "Niet — eraf.", "Te ver."] },
-      { q: "Wat is **tegengestelde** van −7?", options: ["7","−7","0","14"], answer: 0, wrongHints: [null, "Niet — zichzelf.", "Niet.", "Niet."] },
-      { q: "Hoogte mens: 1,5 m boven zee. Duiker −3 m. Verschil?", options: ["4,5 m","1,5 m","−4,5 m","−1,5 m"], answer: 0, wrongHints: [null, "Maar 1 zijde.", "Verkeerd teken voor verschil.", "Niet."] },
-      { q: "Welke getallenrij is **kleinst → grootst**?", options: ["−5, −2, 0, 3","3, 0, −2, −5","0, −2, −5, 3","−2, −5, 0, 3"], answer: 0, wrongHints: [null, "Andersom.", "Niet gesorteerd.", "Niet."] },
-      { q: "Een hoogte onder zeeniveau is…", options: ["Negatief","Positief","Nul","Niet relevant"], answer: 0, wrongHints: [null, "Boven.", "Op niveau.", "Wel."] },
-      { q: "**−7 + 7** = ?", options: ["0","−14","14","7"], answer: 0, wrongHints: [null, "Niet — tegengestelde.", "Niet — tegengestelde.", "Niet."] },
-      { q: "**−3 × 2** = ?", options: ["−6","6","−1","−5"], answer: 0, wrongHints: [null, "Verkeerd teken.", "Niet zo.", "Niet."] },
+      { q: "Het is −3°C. De temperatuur stijgt 8°. Hoe warm is het nu?", options: ["5°C","11°C","−11°C","−5°C"], answer: 0, wrongHints: [null, "Je telde 3 en 8 op. Maar je begint op −3, niet op +3.", "Het wordt warmer. Kan het dan kouder worden dan −3?", "Na 3 graden ben je al bij 0. Ben je daarna nog onder nul?"] },
+      { q: "Op een rekening staat −€20. Er komt €35 bij. Wat is het saldo nu?", options: ["+€15","+€55","−€55","−€15"], answer: 0, wrongHints: [null, "Je telde 20 en 35 op. Maar die €20 was een schuld.", "Er komt geld bij. Kan de schuld dan groter worden?", "Is €35 meer of minder dan de schuld van €20?"] },
+      { q: "−6 − 4 = ?", options: ["−10","−2","2","10"], answer: 0, wrongHints: [null, "Bij min loop je naar links, verder van nul af. Kom je dan dichter bij nul?", "Je begint onder nul en loopt naar links. Kom je dan boven nul?", "Het getal 10 klopt, maar kijk naar het teken: waar begin je?"] },
+      { q: "Welk getal is het kleinst?", options: ["−8","−3","0","5"], answer: 0, wrongHints: [null, "−3 ligt dichter bij 0. Is het dan het kleinst?", "Getallen met een min ervoor zijn kleiner dan 0.", "5 ligt rechts van 0. Is dat klein?"] },
+      { q: "**5 − 8** = ?", options: ["−3","3","−13","13"], answer: 0, wrongHints: [null, "5 is kleiner dan 8. Kom je dan boven of onder nul uit?", "Je telde 5 en 8 op en zette er een min voor. Het is 8 stappen terug vanaf 5.", "Je telde 5 en 8 op. Bij min ga je naar links."] },
+      { q: "Welk getal is het **grootst**?", options: ["3","0","−1","−5"], answer: 0, wrongHints: [null, "Ligt 0 het meest rechts op de getallenlijn?", "−1 ligt links van 0. Is dat het grootst?", "−5 ligt het verst links. Is dat groot of klein?"] },
+      { q: "De temperatuur gaat van **−10 °C** naar **−3 °C**. Hoeveel graden is het **warmer** geworden?", options: ["7°","−7°","13°","3°"], answer: 0, wrongHints: [null, "Het wordt warmer. Kan dat een negatief aantal graden zijn?", "Je telde 10 en 3 op. Maar allebei liggen ze onder nul.", "−3 is waar je eindigt, niet hoeveel het warmer werd."] },
+      { q: "0 − 4 = ?", options: ["−4","4","0","−40"], answer: 0, wrongHints: [null, "Je begint op 0 en gaat naar links. Kom je dan boven nul?", "Er gaat 4 af. Blijf je dan op 0?", "Je loopt 4 stappen, geen 40."] },
+      { q: "Wat is het **tegengestelde** van −7?", options: ["7","−7","0","14"], answer: 0, wrongHints: [null, "Dat is hetzelfde getal. Het tegengestelde ligt aan de andere kant van 0.", "0 is het midden. Het tegengestelde ligt even ver van 0 als −7.", "14 ligt twee keer zo ver van 0 als −7."] },
+      { q: "Een wandelaar staat op een duin **1,5 m** boven de zeespiegel. Een duiker zwemt op **−3 m**. Hoeveel meter zit er tussen hen?", options: ["4,5 m","1,5 m","−4,5 m","−1,5 m"], answer: 0, wrongHints: [null, "Je trok 1,5 af van 3. Tel het stuk boven én onder de zeespiegel.", "Een afstand kan niet negatief zijn.", "Een afstand kan niet negatief zijn. En tel je het stuk onder water mee?"] },
+      { q: "Welke rij staat op volgorde van **klein naar groot**?", options: ["−5, −2, 0, 3","3, 0, −2, −5","0, −2, −5, 3","−2, −5, 0, 3"], answer: 0, wrongHints: [null, "Deze rij gaat van groot naar klein.", "Begin met het getal dat het verst links ligt op de getallenlijn.", "Welk getal is kleiner: −2 of −5?"] },
+      { q: "Een hoogte onder de zeespiegel is…", options: ["Negatief","Positief","Nul","Soms positief, soms negatief"], answer: 0, wrongHints: [null, "Positief hoort bij boven de zeespiegel.", "Nul is precies óp de zeespiegel.", "Is een plek onder de zeespiegel ooit hoger dan 0?"] },
+      { q: "**−7 + 7** = ?", options: ["0","−14","14","7"], answer: 0, wrongHints: [null, "Bij +7 loop je naar rechts. Ga je dan verder van nul af?", "Je begint op −7, niet op +7.", "7 krijg je als je bij 0 begint. Waar begin je hier?"] },
+      { q: "**−3 × 2** = ?", options: ["−6","6","−1","−5"], answer: 0, wrongHints: [null, "Het getal klopt. Welk teken krijg je bij min keer plus?", "Je telde −3 en 2 op. Het is een keersom.", "Je trok 2 af van −3. Maar het is een keersom."] },
       { q: "**−2 × −3** = ?", options: ["6","−6","−5","5"], answer: 0, wrongHints: [null, "2 × 3 = 6 klopt, maar kijk naar het teken: min keer min wordt plus.", "Je hebt opgeteld in plaats van vermenigvuldigd, en min keer min wordt plus. Reken eerst 2 × 3.", "Het teken klopt, maar 5 is 2 + 3. Bij × reken je 2 × 3."] },
-      { q: "Welk getal ligt **2 onder −5**?", options: ["−7","−3","2","7"], answer: 0, wrongHints: [null, "Andersom.", "Niet.", "Niet."] },
-      { q: "**Verschil** tussen −4 en 6?", options: ["10","2","−10","−2"], answer: 0, wrongHints: [null, "Niet.", "Niet — verschil positief.", "Niet."] },
-      { q: "Op getallenlijn: welke ligt **rechts** van −3?", options: ["0","−5","−10","−4"], answer: 0, wrongHints: [null, "Links.", "Verder links.", "Verder links."] },
-      { q: "**−1 − (−4)** = ?", options: ["3","−5","5","−3"], answer: 0, wrongHints: [null, "Niet — twee min = plus.", "Verkeerd teken.", "Niet."] },
+      { q: "Welk getal ligt **2 lager** dan −5?", options: ["−7","−3","−6","−10"], answer: 0, wrongHints: [null, "−3 ligt hoger dan −5. Lager betekent verder naar beneden.", "Je ging maar 1 stap omlaag. Hoeveel stappen moeten het zijn?", "Je deed −5 keer 2. Het zijn maar 2 stappen omlaag."] },
+      { q: "Wat is het **verschil** tussen −4 en 6?", options: ["10","2","−10","−2"], answer: 0, wrongHints: [null, "Je trok 4 af van 6. Maar −4 ligt onder nul: tel beide stukken.", "Een verschil is een afstand — die is nooit negatief.", "Een verschil kan niet negatief zijn. En tel je het stuk onder nul mee?"] },
+      { q: "Welk getal ligt op de getallenlijn **rechts** van −3?", options: ["0","−5","−10","−4"], answer: 0, wrongHints: [null, "−5 is kleiner dan −3. Ligt het dan links of rechts?", "−10 ligt nog verder van 0 dan −3. Welke kant is dat?", "−4 is kleiner dan −3. Aan welke kant liggen kleinere getallen?"] },
+      { q: "**−1 − (−4)** = ?", options: ["3","−5","5","−3"], answer: 0, wrongHints: [null, "Je deed −1 − 4. Wat worden de twee min-tekens in het midden?", "Je telde 1 en 4 op. Maar je begint op −1.", "Twee min-tekens worden plus: je gaat naar rechts vanaf −1. Kom je onder of boven nul uit?"] },
     ],
   },
 ];
