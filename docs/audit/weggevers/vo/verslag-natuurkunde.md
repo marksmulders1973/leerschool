@@ -331,3 +331,52 @@ Alle 291 meerkeuzevragen in de 11 bestanden zelf opgelost en met de toets uit `s
 - **warmte-thermodynamica-havo-vwo** (warmteThermodynamicaHavoVwo.js) stap 5 vraag 3 · hint 2: "Niet — vlam levert warmte, niet directe duw." → "De vlam verwarmt de lucht in de ballon. Duwt de vlam zelf de ballon omhoog, zoals bij een raket?"
 - **warmte-thermodynamica-havo-vwo** (warmteThermodynamicaHavoVwo.js) stap 5 vraag 5 · hint 2: "Niet — vierde macht." → "Hoe vaak vermenigvuldig je de factor 2 met zichzelf bij een vierde macht?" · hint 3: "Niet — kwadraat zou 4× zijn." → "4× hoort bij een kwadraat (T²). Staat er een kwadraat in de wet?" · hint 4: "Niet — derde macht." → "8× hoort bij een derde macht (T³). Welke macht staat in de wet?"
 - **licht-geluid-natuurkunde** (lichtGeluidNatuurkunde.js) stap 4 vraag 1 · hint 2: "Dat zijn primaire kleuren." → "3 is het aantal primaire kleuren van licht. Hoeveel kleurbanden zie je in een regenboog?"
+
+## Ronde 3 (na blinde detectie)
+
+**Tellingen:** 39 markeringen op 38 vragen · **27 hersteld** · **1 vals alarm** · **10 twijfel** (plus 1 taal-markering in `q` bij een vraag die wél hersteld is).
+Controle: `node --check` op alle 9 bestanden is groen, en `vergelijk-met-main --alleen` (9 bestanden) geeft 0 afwijkingen. `answer`, `q` en het aantal en de volgorde van de opties zijn niet aangeraakt.
+
+**Vals alarm**
+- krachtenNatuurkunde.js stap 10 vraag 3 (wrijving remt): "wrijving" is de kern van de les zelf. De afleiders zijn andere krachten uit dezelfde les, dus dezelfde categorie.
+
+**Twijfel voor Mark** (niet op te lossen zonder `q` te wijzigen)
+- bewegingenSnelheidNatuurkunde.js stap 1 vraag 5: "60 km in 1 uur": het antwoord staat in de vraag. Bewust een instapsom?
+- lichtGeluidNatuurkunde.js stap 4 vraag 3 en opticaHavoVwo.js stap 4 vraag 1: "(RGB)" in `q` verklapt rood/groen/blauw. Liever "RGB" uit de vraag halen.
+- lichtGeluidNatuurkunde.js stap 4 vraag 4 en stap 6 vraag 5: "UV" verklapt "(ultra)violet". Bij stap 6 vraag 5 is de geluid-afleider wel concreter gemaakt ("Onhoorbaar geluid boven 20.000 Hz") en zijn hints 2 en 3 herschreven.
+- lichtGeluidNatuurkunde.js stap 6 vraag 4: "gele citroen" → antwoord "Geel" staat in de vraag.
+- quantumAtoommodelHavoVwo.js stap 1 vraag 5: "gele lamp" → "Zichtbaar (geel)" staat in de vraag. Voorstel: "Een lamp zendt fotonen van 2,1 eV uit".
+- krachtenNatuurkunde.js stap 10 vraag 4: "Wie schreef deze drie wetten op?" De vraag mist context (welke wetten?). Newton is overal in de les te zien.
+- Taal in `q`: elektriciteitNatuurkunde.js stap 9 vraag 2 "aardingdraad" → "aardedraad"; elektromagnetismeHavoVwo.js stap 4 vraag 3 "Waarom transport elektriciteit" → "Waarom wordt elektriciteit getransporteerd"; radioactiviteitHavoVwo.js stap 2 vraag 2 "verval β⁻ naar" → "vervalt via β⁻-verval naar". Bij alle drie zijn de hints wel herschreven: "aardedraad", en geen kale "Niet —"-hints meer.
+
+**Hersteld (oud → nieuw)**
+- elektriciteitNatuurkunde.js stap 1 vraag 2 · optie 3: "IJzer" → "Zout water" · optie 4: "Aluminium" → "Potloodstift (grafiet)" · hints 3,4 herschreven tot denkprikkel
+- elektriciteitNatuurkunde.js stap 9 vraag 1 · optie 2: "Filtert storingen uit de stroom" → "Leidt lekstroom van de metalen behuizing naar de aarde" · optie 3: "Verlaagt de spanning naar een veilig niveau" → "Leidt bij blikseminslag de stroom naar de aarde" · hints 2,3 herschreven tot denkprikkel
+- elektriciteitNatuurkunde.js stap 9 vraag 2 · optie 2: "Zodat het apparaat minder stroom en energie verbruikt" → "Zodat het apparaat uitschakelt als het oververhit raakt" · optie 3: "Zodat het apparaat zijn warmte kwijt kan aan de grond" → "Zodat het apparaat niet kapotgaat als de spanning piekt" · hints 2,3,4 herschreven tot denkprikkel
+- elektriciteitNatuurkunde.js stap 10 vraag 1 · optie 3: "1.000 watt per uur" → "Een apparaat van 1 W dat 1 uur aan staat" · optie 4: "1.000 watt vermogen" → "Een apparaat van 1.000 kW dat 1 uur aan staat" · hints 3,4 herschreven tot denkprikkel
+- elektriciteitNatuurkunde.js stap 11 vraag 4 · optie 4: "E = P × t" → "R-totaal = R₁ + R₂ (serie)" · hints 4 herschreven tot denkprikkel
+- elektromagnetismeHavoVwo.js stap 1 vraag 5 · optie 2: "Spoel langer maken bij vaste windingen" → "Spoel langer, zelfde windingen" · optie 3: "Draad dunner maken" → "Spoel breder, zelfde windingen" · optie 4: "Wisselstroom gebruiken in plaats van gelijkstroom" → "2× windingen op 2× langere spoel" · hints 3,4 herschreven tot denkprikkel
+- elektromagnetismeHavoVwo.js stap 2 vraag 4 · optie 1: "Massa, snelheid, lading én B-sterkte" → "r = m·v / (q·B)" · optie 2: "Lading, snelheid én B-sterkte" → "r = q·B / (m·v)" · optie 3: "Massa, lading én B-sterkte" → "r = m·v² / (q·B)" · optie 4: "Massa, snelheid én B-sterkte" → "r = m / (q·v·B)" · hints 2,3,4 herschreven tot denkprikkel
+- elektromagnetismeHavoVwo.js stap 2 vraag 5 · optie 2: "Spoel sneller laten draaien" → "Stroom- én veldrichting omkeren" · optie 4: "Spanning verhogen" → "Hogere spanning op de spoel zetten" · hints 2 herschreven tot denkprikkel
+- elektromagnetismeHavoVwo.js stap 4 vraag 3 · hints 2,3 herschreven tot denkprikkel
+- krachtenNatuurkunde.js stap 6 vraag 2 · optie 1: "Kracht in een gespannen touw of kabel" → "Kracht waarmee een strak touw of kabel trekt" · optie 2: "Kracht waarmee een ingedrukte veer terugduwt" → "Kracht waarmee een opgespannen elastiek terugtrekt" · hints 2,4 herschreven tot denkprikkel
+- krachtenNatuurkunde.js stap 9 vraag 2 · optie 2: "Muur duwt niet terug, er gebeurt helemaal niets" → "Muur duwt even hard terug, schaatser blijft staan" · optie 3: "Muur valt om door de duw, schaatser blijft staan" → "Muur duwt zachter terug, schaatser glijdt weg" · hints 2,3 herschreven tot denkprikkel
+- krachtenNatuurkunde.js stap 10 vraag 14 · optie 2: "Vallende steen" → "Strak sleeptouw" · optie 4: "Drijvend bootje" → "Uitgerekte kauwgom" · hints 2,4 herschreven tot denkprikkel
+- lichtGeluidNatuurkunde.js stap 2 vraag 4 · optie 2: "Tijd die licht nodig heeft voor 1 km" → "Tijd die zonlicht nodig heeft tot de aarde" · optie 3: "Afstand die geluid in 1 jaar aflegt" → "Afstand die de aarde in 1 jaar aflegt" · optie 4: "Hoe lang een ster licht blijft geven" → "Tijd die een ster licht blijft geven" · hints 2,3,4 herschreven tot denkprikkel
+- lichtGeluidNatuurkunde.js stap 3 vraag 1 · optie 1: "Lens dikker in midden, vergroot" → "Dikker in het midden, bundelt het licht" · optie 2: "Lens dunner in midden, verkleint" → "Dunner in het midden, bundelt het licht" · optie 3: "Gebogen spiegel, vergroot" → "Dikker in het midden, spreidt het licht" · optie 4: "Vlakke glazen plaat, vergroot" → "Dunner in het midden, spreidt het licht" · hints 2,3,4 herschreven tot denkprikkel
+- lichtGeluidNatuurkunde.js stap 5 vraag 3 · optie 2: "Alle kleuren door elkaar" → "Alle kleuren, golven in fase" · optie 3: "Sneller dan gewoon licht" → "Eén golflengte, golven niet in fase" · optie 4: "Buigt om hoeken heen" → "Alle kleuren, golven niet in fase" · hints 2,3,4 herschreven tot denkprikkel
+- lichtGeluidNatuurkunde.js stap 6 vraag 3 · optie 1: "Hoek van weerkaatsing" → "Hoek tussen teruggekaatste straal en normaal" · optie 2: "Hoek van breking" → "Hoek tussen gebroken straal en normaal" · optie 3: "Hoek met de spiegel" → "Hoek tussen teruggekaatste straal en spiegel" · optie 4: "90° min weerkaatsing" → "Hoek tussen invallende straal en spiegel" · hints 2,3,4 herschreven tot denkprikkel
+- lichtGeluidNatuurkunde.js stap 6 vraag 5 · optie 3: "Een soort geluid dat je niet hoort" → "Onhoorbaar geluid boven 20.000 Hz" · hints 2,3 herschreven tot denkprikkel
+- opticaHavoVwo.js stap 4 vraag 4 · optie 1: "Rayleigh-verstrooiing — blauw wordt meer verstrooid dan rood" → "Verstrooiing — blauw wordt sterker verstrooid dan rood" · hints 3,4 herschreven tot denkprikkel
+- quantumAtoommodelHavoVwo.js stap 2 vraag 4 · optie 2: "Thermo-elektrisch effect door opwarming" → "Fotothermisch effect: licht warmt de cel op"
+- quantumAtoommodelHavoVwo.js stap 2 vraag 5 · optie 2: "W (watt)" → "W (of J/s)" · optie 3: "V (volt)" → "V (of J/C)" · optie 4: "Hz" → "Hz (of 1/s)" · hints 2,3,4 herschreven tot denkprikkel
+- radioactiviteitHavoVwo.js stap 1 vraag 2 · optie 1: "¹²C en ¹⁴C" → "Z=6, A=12 en Z=6, A=14" · optie 2: "¹²C en ¹²N" → "Z=6, A=14 en Z=7, A=14" · optie 3: "¹⁴N en ¹⁴C" → "Z=6, A=12 en Z=7, A=13" · optie 4: "¹H en ⁴He" → "Z=1, A=1 en Z=2, A=4" · hints 2,3,4 herschreven tot denkprikkel
+- radioactiviteitHavoVwo.js stap 2 vraag 2 · hints 2,3 herschreven tot denkprikkel
+- radioactiviteitHavoVwo.js stap 5 vraag 5 · optie 1: "α — alle energie in klein volume + Q=20" → "α — geeft alle energie af op een kort stukje" · hints 3 herschreven tot denkprikkel
+- trillingenGolvenHavoVwo.js stap 2 vraag 4 · optie 1: "v hangt af van het medium" → "v hangt af van het medium, niet van de bron" · optie 2: "v hangt alleen af van de bron" → "v hangt af van de bron, niet van het medium" · hints 2,3 herschreven tot denkprikkel
+- trillingenGolvenHavoVwo.js stap 2 vraag 5 · optie 1: "Lucht-deeltjes bewegen heen en weer in de voortplantingsrichting" → "Lucht-deeltjes trillen heen en weer in de looprichting" · optie 2: "Lucht-deeltjes bewegen loodrecht op de voortplanting" → "Lucht-deeltjes trillen loodrecht op de looprichting" · hints 2 herschreven tot denkprikkel
+- warmteThermodynamicaHavoVwo.js stap 1 vraag 2 · optie 2: "0 °C" → "−237,15 °C" · optie 3: "−100 °C" → "−459,67 °C" · optie 4: "−459 °C" → "−373,15 °C" · hints 2,3,4 herschreven tot denkprikkel
+- warmteThermodynamicaHavoVwo.js stap 1 vraag 4 · optie 4: "Naar de plek met de meeste massa" → "Van veel energie naar weinig" · hints 4 herschreven tot denkprikkel
+- warmteThermodynamicaHavoVwo.js stap 1 vraag 5 · optie 1: "Water en kamer krijgen dezelfde T" → "Water warmt op tot ongeveer kamertemperatuur" · optie 2: "Water blijft koud, kamer warm" → "Beide eindigen op het gemiddelde van de twee" · optie 3: "Water wordt warmer dan de kamer" → "Water warmt op tot boven kamertemperatuur" · hints 2,3 herschreven tot denkprikkel
+- warmteThermodynamicaHavoVwo.js stap 4 vraag 4 · optie 4: "Koper" → "Aluminiumfolie" · hints 4 herschreven tot denkprikkel
+- warmteThermodynamicaHavoVwo.js stap 5 vraag 3 · optie 1: "Hete lucht is lichter dan koude lucht" → "Hete lucht heeft een kleinere dichtheid dan koude" · optie 3: "Opwaartse wind blaast de ballon omhoog" → "Hete lucht heeft een hogere druk en duwt omhoog" · optie 4: "Hete lucht is zwaarder en duwt koude weg" → "Hete luchtdeeltjes zijn zelf lichter dan koude" · hints 3,4 herschreven tot denkprikkel

@@ -90,9 +90,9 @@ const steps = [
     checks: [
       {
         q: "Wat betekent **VOC**?",
-        options: ["Verenigde Oostindische Compagnie", "Verenigde Oostzee Compagnie", "Verenigde Oranje Compagnie", "Vrije Oostindische Compagnie"],
+        options: ["Verenigde Oostindische Compagnie", "Verenigde Oostzee Compagnie", "Vrije Oostzee Compagnie", "Vrije Oostindische Compagnie"],
         answer: 0,
-        wrongHints: [null, "De VOC voer niet naar de Oostzee, maar veel verder weg.", "De naam verwijst niet naar de Oranjes, maar naar het gebied waar gehandeld werd.", "Waar staat de V voor? Denk aan wat er in 1602 met de losse compagnieën gebeurde."],
+        wrongHints: [null, "De VOC voer niet naar de Oostzee, maar veel verder weg.", "Kijk naar de O: voer de VOC naar de Oostzee of veel verder weg? En wat gebeurde er in 1602 met de losse compagnieën?", "Waar staat de V voor? Denk aan wat er in 1602 met de losse compagnieën gebeurde."],
       },
       {
         q: "Wanneer werd de **VOC opgericht**?",
@@ -102,9 +102,9 @@ const steps = [
       },
       {
         q: "Wat handelde VOC vooral?",
-        options: ["Specerijen uit Indonesië", "Suiker uit Suriname", "Bont uit Noord-Amerika", "Graan uit het Oostzeegebied"],
+        options: ["Specerijen uit de Molukken", "Suiker uit Nederlands-Brazilië", "Bont uit Nieuw-Nederland", "Graan uit het Oostzeegebied"],
         answer: 0,
-        wrongHints: [null, "Suriname ligt in het westen. Welke compagnie werkte aan de westkant van de wereld?", "De bonthandel in Nieuw-Nederland viel onder de WIC. Waar voer de VOC naartoe?", "De graanhandel op de Oostzee deden kooplieden los van de VOC. Wat haalde de VOC uit het Oosten?"],
+        wrongHints: [null, "Brazilië ligt in het westen. Welke compagnie werkte aan de westkant van de wereld?", "De bonthandel in Nieuw-Nederland viel onder de WIC. Waar voer de VOC naartoe?", "De graanhandel op de Oostzee deden kooplieden los van de VOC. Wat haalde de VOC uit Azië?"],
       },
       {
         q: "Welke stad **was eerst Nederlands** maar werd later New York?",
@@ -141,9 +141,9 @@ const steps = [
       },
       {
         q: "**Waarom** waren Amsterdamse huizen **smal en hoog**?",
-        options: ["Belasting was op breedte", "Bevel van de koning", "Smalle gevels waren mode", "Minder last van wind"],
+        options: ["Belasting was op breedte", "Brede huizen zakten in het veen", "Smalle gevels waren mode", "Minder last van wind"],
         answer: 0,
-        wrongHints: [null, "Had de Republiek wel een koning?", "Mode verklaart niet waarom bijna alle grachtenhuizen zo smal werden gebouwd.", "Hadden huizen op het winderige platteland dan ook smalle gevels?"],
+        wrongHints: [null, "Grachtenhuizen stonden op lange houten palen, dus ook een breed huis zakte niet weg. Waarom kozen bouwers dan toch een smalle gevel?", "Mode verklaart niet waarom bijna alle grachtenhuizen zo smal werden gebouwd.", "Hadden huizen op het winderige platteland dan ook smalle gevels?"],
         uitlegPad: {
           stappen: [
             { titel: "Belasting-truc", tekst: "De gemeente belastte huizen op de breedte van de gevel. Daarom bouwden rijke kooplieden hun huizen smal maar wel hoog (en diep, want diepte werd niet belast). Spaarde geld." },
@@ -188,7 +188,7 @@ const steps = [
       },
       {
         q: "Op welk eiland mocht alleen Nederland **nootmuskaat** verbouwen?",
-        options: ["Banda-eilanden", "Ambon", "Ceylon", "Java"],
+        options: ["Banda", "Ambon", "Ceylon", "Java"],
         answer: 0,
         wrongHints: [null, "Op Ambon liet de VOC kruidnagel verbouwen. Welke eilandjes hadden de nootmuskaat?", "Ceylon (nu Sri Lanka) was bekend om kaneel, niet om nootmuskaat.", "Op Java werden later vooral koffie en suiker verbouwd."],
       },
@@ -223,7 +223,7 @@ const steps = [
         q: "Wanneer werd Indonesië **onafhankelijk**?",
         options: ["1945", "1799", "1942", "1962"],
         answer: 0,
-        wrongHints: [null, "In 1799 ging de VOC failliet en nam de staat de kolonie over. Werd Indonesië toen vrij?", "In 1942 bezette Japan Indonesië. Wanneer riep Soekarno de onafhankelijkheid uit?", "In 1962 ging het alleen nog om Nieuw-Guinea, het laatste stukje."],
+        wrongHints: [null, "In 1799 ging de VOC failliet en nam de staat de kolonie over. Werd Indonesië toen vrij?", "In 1942 bezette Japan Indonesië. Wanneer riep Soekarno de onafhankelijkheid uit?", "In 1962 ging het alleen nog om Nieuw-Guinea, het laatste stukje. Wanneer riep Soekarno de onafhankelijkheid uit?"],
       },
     ],
   },
@@ -236,9 +236,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **VOC**?",
-        options: ["Verenigde Oostindische Compagnie", "Verenigde Oostzee Compagnie", "Verenigde Oranje Compagnie", "Vrije Oostindische Compagnie"],
+        options: ["Verenigde Oostindische Compagnie", "Verenigde Oostzee Compagnie", "Vrije Oostzee Compagnie", "Vrije Oostindische Compagnie"],
         answer: 0,
-        wrongHints: [null, "De handel op de Oostzee (graan en hout) liep niet via de VOC.", "De naam verwijst niet naar de Oranjes, maar naar het gebied waar gehandeld werd.", "Waar staat de V voor? Denk aan wat er in 1602 met de losse compagnieën gebeurde."],
+        wrongHints: [null, "De handel op de Oostzee (graan en hout) liep niet via de VOC.", "Kijk naar de O: voer de VOC naar de Oostzee of veel verder weg? En wat gebeurde er in 1602 met de losse compagnieën?", "Waar staat de V voor? Denk aan wat er in 1602 met de losse compagnieën gebeurde."],
       },
       {
         q: "Wie schilderde **De Nachtwacht**?",
