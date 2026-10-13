@@ -65,13 +65,13 @@ const steps = [
         q: "Wat is **satire**?",
         options: ["Grappige nep — niet serieus bedoeld", "Nepnieuws — bedoeld om te misleiden", "Reclame — verkopen met een grap", "Column — iemands eigen mening"],
         answer: 0,
-        wrongHints: [null, "Satire is ook niet echt, maar wil het dat je het gelooft?", "Geen verkoopdoel — een lach.", "Een columnstuk is iets anders dan een grap-stuk."],
+        wrongHints: [null, "Satire is ook niet echt, maar wil het dat je het gelooft?", "Wil satire je iets laten kopen?", "Ook een columnist kan grappig zijn. Maar doet een column alsof het echt nieuws is?"],
       },
       {
         q: "Hoeveel uur per dag zitten kinderen en tieners gemiddeld op een scherm?",
-        options: ["4-7 uur", "1 uur", "30 min", "12+ uur"],
+        options: ["4-7 uur", "1-2 uur", "2-3 uur", "10-12 uur"],
         answer: 0,
-        wrongHints: [null, "Tel school, telefoon, gamen en tv eens bij elkaar op — kom je dan op maar 1 uur?", "Alleen al je telefoon gebruik je waarschijnlijk langer dan dat.", "Dan blijft er bijna geen tijd over voor school en slapen."],
+        wrongHints: [null, "Tel school, telefoon, gamen en tv eens bij elkaar op. Kom je dan op maar 1 à 2 uur?", "Alleen al je telefoon gebruik je waarschijnlijk zo lang, en dan tel je school en tv nog niet mee.", "Dan blijft er bijna geen tijd over voor school, sport en slapen."],
       },
       {
         q: "Welke is **geen** media?",
@@ -90,7 +90,7 @@ const steps = [
         q: "Wat is **desinformatie**?",
         options: ["Opzettelijk onjuiste info om te misleiden", "Onjuiste info die per ongeluk gedeeld wordt", "Een eerlijke mening in een column of vlog", "Betaalde info om een product te verkopen"],
         answer: 0,
-        wrongHints: [null, "Dat is mis-informatie.", "Een mening mag, ook als je het er niet mee eens bent. Is dat misleiden?", "Reclame wil je iets verkopen — is dat de kern van desinformatie?"],
+        wrongHints: [null, "Dat heet misinformatie. Is er dan sprake van opzet?", "Een mening mag, ook als je het er niet mee eens bent. Is dat misleiden?", "Reclame wil je iets verkopen — is dat de kern van desinformatie?"],
         uitlegPad: {
           stappen: [
             { titel: "Verschil mis- en desinformatie", tekst: "**Mis-informatie** = per ONGELUK onjuist (je dacht dat het klopte, maar nee). **Des-informatie** = met **OPZET** onjuiste info, om mensen bewust te MISLEIDEN." },
@@ -117,15 +117,15 @@ const steps = [
       },
       {
         q: "Hoe **check** je een nieuwsbericht?",
-        options: ["Meerdere bronnen vergelijken", "Kijken hoeveel likes het heeft", "Kijken of de kop betrouwbaar klinkt", "Vragen of je vrienden het geloven"],
+        options: ["Meerdere bronnen vergelijken", "Kijken of er een foto bij staat", "Kijken of de kop betrouwbaar klinkt", "Kijken of de tekst foutloos is"],
         answer: 0,
-        wrongHints: [null, "Veel likes betekent veel aandacht — maar is het daarom waar?", "Een kop kan heel betrouwbaar klinken en toch misleiden.", "Je vrienden kunnen hetzelfde nepbericht gezien hebben. Wat zegt hun mening dan?"],
+        wrongHints: [null, "Foto's kunnen oud of bewerkt zijn, of uit een ander verhaal komen. Bewijst een foto dan iets?", "Een kop kan heel betrouwbaar klinken en toch misleiden.", "Ook nepberichten kunnen keurig geschreven zijn. Wat zegt de spelling over de inhoud?"],
       },
       {
         q: "Welke is **betrouwbaar** in NL?",
-        options: ["NOS", "Anoniem Twitter-account", "Random TikTok-video", "Reclame-mail"],
+        options: ["Nieuws van de NOS", "Een site met .nl-adres", "Account met blauw vinkje", "Filmpje met veel views"],
         answer: 0,
-        wrongHints: [null, "Geen naam erbij = geen verantwoording.", "Onbekende maker, geen redactie.", "Doel = jou iets verkopen, niet informeren."],
+        wrongHints: [null, "Iedereen kan een .nl-site maken. Zegt de extensie iets over wie de berichten controleert?", "Een vinkje kun je tegenwoordig vaak kopen. Controleert iemand dan wat er gepost wordt?", "Veel kijkers betekent veel aandacht. Is het daarom ook gecontroleerd?"],
       },
       {
         q: "Wat is **clickbait**?",
@@ -164,9 +164,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **algoritme** op social media?",
-        options: ["Programma dat kiest wat jij ziet", "Mens die beslist", "Toeval", "Volgorde waarin posts geplaatst zijn"],
+        options: ["Programma dat kiest wat jij ziet", "Een moderator die posts controleert", "Een lijst met verboden woorden", "Volgorde waarin posts geplaatst zijn"],
         answer: 0,
-        wrongHints: [null, "Geen mens primair.", "Bewust gekozen.", "Dan zag je alles op tijd — maar je feed wordt juist voor je uitgekozen."],
+        wrongHints: [null, "Moderators halen soms posts weg, maar kan een mens miljoenen tijdlijnen samenstellen?", "Zo'n lijst helpt bij het weghalen van posts. Maar wie bepaalt de volgorde van jouw tijdlijn?", "Dan zag je alles op tijd — maar je feed wordt juist voor je uitgekozen."],
       },
       {
         q: "Wat is een **filterbubbel**?",
@@ -195,27 +195,27 @@ const steps = [
     checks: [
       {
         q: "Wat is **AVG**?",
-        options: ["EU-privacy-wet", "Auto-vereniging", "Sociale media", "Belasting"],
+        options: ["EU-wet die privacy beschermt", "EU-wet tegen nepnieuws", "Wet op het auteursrecht", "Regels voor online winkels"],
         answer: 0,
-        wrongHints: [null, "Verwarring met ANWB? Andere afkorting.", "Geen platform — een wet.", "Geen heffing — een regel."],
+        wrongHints: [null, "Tegen nepnieuws en illegale inhoud is er een andere EU-wet. Waar staat de 'G' in AVG voor?", "Auteursrecht gaat over wie een foto of tekst mag gebruiken. Wat beschermt de AVG?", "Voor webwinkels gelden regels voor consumenten. Waar staat de 'G' in AVG voor?"],
       },
       {
         q: "**Tracking cookies** — wat doen ze?",
         options: ["Volgen jou van site naar site", "Een website sneller laten laden", "Reclame op websites blokkeren", "Je inlog op één site onthouden"],
         answer: 0,
-        wrongHints: [null, "Soms gevolg, niet doel.", "Juist niet — waar gebruiken adverteerders jouw surfgedrag voor?", "Dat doen functionele cookies. Wat doet een tracking-cookie?"],
+        wrongHints: [null, "Snelheid regelen andere technieken. Waarvoor is een tracking-cookie bedoeld?", "Juist niet — waar gebruiken adverteerders jouw surfgedrag voor?", "Dat doen functionele cookies. Wat doet een tracking-cookie?"],
       },
       {
         q: "Wat is **2FA**?",
-        options: ["Twee-staps-verificatie", "Twee apparaten tegelijk ingelogd", "2x foto", "Twee accounts"],
+        options: ["Tweestapsverificatie bij inloggen", "Op twee apparaten ingelogd", "Wachtwoord twee keer typen", "Wachtwoord van twee woorden"],
         answer: 0,
-        wrongHints: [null, "Het gaat niet om waar je inlogt, maar hoe.", "Niet over foto's — over inloggen.", "Geen extra account — een extra check."],
+        wrongHints: [null, "Het gaat niet om waar je inlogt, maar hoe.", "Twee keer hetzelfde typen is nog steeds één ding dat je weet. Wat is een tweede controle?", "Een langer wachtwoord is fijn, maar het blijft één controle. Wat komt er bij 2FA bij?"],
       },
       {
         q: "Welke deel je **NIET** online?",
         options: ["Wachtwoord + paspoort", "Vakantie-foto van zee", "Verjaardagswens", "Boekrecensie"],
         answer: 0,
-        wrongHints: [null, "Locatie eventueel — anders OK.", "OK.", "OK."],
+        wrongHints: [null, "Een foto van de zee kan prima; zet er alleen niet bij dat je huis nu leeg staat.", "Iemand feliciteren is vriendelijk en verraadt weinig over jou. Wat is gevoeliger?", "Je mening over een boek is geen privé-informatie. Wat kan een oplichter wel misbruiken?"],
       },
     ],
   },
@@ -226,9 +226,9 @@ const steps = [
     checks: [
       {
         q: "Wat doe je bij **cyberpesten**?",
-        options: ["Niet reageren, bewijs bewaren, melden", "Rustig terugschrijven dat het moet stoppen", "Je account meteen verwijderen", "Het negeren en het aan niemand vertellen"],
+        options: ["Niet reageren, bewijs bewaren, melden", "Rustig terugschrijven dat het moet stoppen", "Je account meteen verwijderen", "Het negeren en wachten tot het overwaait"],
         answer: 0,
-        wrongHints: [null, "Een reactie geeft de pester vaak juist aandacht. Wat werkt beter?", "Dan raak je ook je bewijs kwijt — en stopt de pester er niet door.", "Negeren kan helpen, maar wie kan je steunen als niemand het weet?"],
+        wrongHints: [null, "Een reactie geeft de pester vaak juist aandacht. Wat werkt beter?", "Dan raak je ook je bewijs kwijt — en stopt de pester er niet door.", "Negeren helpt soms, maar wie kan je steunen als niemand het weet? En heb je dan bewijs?"],
       },
       {
         q: "**Kindertelefoon**-nummer?",
@@ -255,11 +255,11 @@ const steps = [
     explanation: "Mix-toets in Doorstroomtoets-stijl. Door elkaar: nepnieuws, algoritmes, privacy, veiligheid.\n\nVeel succes!",
     checks: [
       { q: "**Mediawijsheid** is?", options: ["Kritisch met media omgaan", "Zo min mogelijk media gebruiken", "Handig zijn met apps en sites", "Vooral nieuws van bekende kranten lezen"], answer: 0, wrongHints: [null, "Minder kijken kan verstandig zijn, maar ben je dan ook wijs met wat je wél ziet?", "Handig zijn met apps is een digitale vaardigheid. Snap je daardoor ook wat je ziet?", "Ook bekende kranten maken fouten. Is één soort bron genoeg?"] },
-      { q: "**Desinformatie** = ?", options: ["Opzettelijk onjuist", "Per ongeluk onjuist", "Een eerlijke mening", "Betaalde reclame"], answer: 0, wrongHints: [null, "Misinformatie.", "Een mening mag. Is die bedoeld om te misleiden?", "Reclame wil je iets verkopen — is dat de kern van desinformatie?"] },
+      { q: "**Desinformatie** = ?", options: ["Opzettelijk onjuist", "Per ongeluk onjuist", "Een eerlijke mening", "Betaalde reclame"], answer: 0, wrongHints: [null, "Dat heet misinformatie. Is er dan sprake van opzet?", "Een mening mag. Is die bedoeld om te misleiden?", "Reclame wil je iets verkopen — is dat de kern van desinformatie?"] },
       { q: "Wat doen **algoritmes**?", options: ["Kiezen wat jij ziet", "Reclame van je scherm weghalen", "Je account beveiligen tegen hackers", "Berichten sorteren op tijd"], answer: 0, wrongHints: [null, "Halen algoritmes reclame weg, of laten ze je juist gerichte reclame zien?", "Dat doen wachtwoorden en 2FA. Wat doet een algoritme op TikTok?", "Dan zou iedereen hetzelfde zien. Is jouw tijdlijn gelijk aan die van een vriend?"] },
       { q: "**AVG** = ?", options: ["EU-privacywet", "EU-wet tegen nepnieuws", "Wet op het auteursrecht", "Leeftijdsgrens voor sociale media"], answer: 0, wrongHints: [null, "Dat gaat over de inhoud van berichten. Waar staat de 'G' van AVG voor?", "Auteursrecht gaat over wie een foto of tekst mag gebruiken. Waar staat de 'G' van AVG voor?", "Er staat in de AVG wel iets over leeftijd, maar wat beschermt de wet in het algemeen?"] },
-      { q: "**2FA** = ?", options: ["Twee-staps-verificatie", "Twee accounts op dezelfde app", "Wachtwoord twee keer intypen", "Een tweede e-mailadres als reserve"], answer: 0, wrongHints: [null, "Meer accounts maken je niet veiliger. Waar slaat de 'F' van factor op?", "Twee keer hetzelfde intypen is nog steeds één ding dat je weet. Is dat extra veilig?", "Een reserve-adres helpt bij herstel, maar is het een extra controle bij het inloggen?"] },
-      { q: "Wat NOOIT delen online?", options: ["Wachtwoord", "Boekrecensie", "Vakantie-foto", "Vriendelijk bericht"], answer: 0, wrongHints: [null, "OK.", "OK (eventueel zonder locatie).", "OK."] },
+      { q: "**2FA** = ?", options: ["Tweestapsverificatie bij inloggen", "Twee accounts op dezelfde app", "Wachtwoord twee keer intypen", "Een tweede e-mailadres als reserve"], answer: 0, wrongHints: [null, "Meer accounts maken je niet veiliger. Waar slaat de 'F' van factor op?", "Twee keer hetzelfde intypen is nog steeds één ding dat je weet. Is dat extra veilig?", "Een reserve-adres helpt bij herstel, maar is het een extra controle bij het inloggen?"] },
+      { q: "Wat NOOIT delen online?", options: ["Wachtwoord", "Boekrecensie", "Vakantie-foto", "Vriendelijk bericht"], answer: 0, wrongHints: [null, "Je mening over een boek is geen privé-informatie. Wat kan een oplichter wel misbruiken?", "Een vakantiefoto kan prima, liefst zonder te laten zien waar je huis is. Wat is gevoeliger?", "Een aardig bericht verraadt niets over jou. Wat geeft iemand toegang tot je account?"] },
     ],
   },
 ];
