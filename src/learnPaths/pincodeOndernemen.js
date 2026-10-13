@@ -535,7 +535,7 @@ const steps = [
         q: "**Evenwichtsprijs** is:",
         options: ["Prijs waar vraag = aanbod", "Hoogste prijs op de markt", "Laagste prijs op de markt", "Gemiddelde van alle prijzen"],
         answer: 0,
-        wrongHints: [null, "Niet automatisch.", "Niet automatisch.", "Niet de definitie."],
+        wrongHints: [null, "Bij de hoogste prijs willen kopers maar weinig. Blijft er dan iets onverkocht?", "Bij de laagste prijs willen verkopers maar weinig leveren. Is dat een evenwicht?", "Een gemiddelde zegt niets over kopers en verkopers. Wanneer is de markt in evenwicht?"],
         uitlegPad: {
           stappen: [{ titel: "Waar curves elkaar kruisen", tekst: "Op een grafiek: waar vraagcurve en aanbodcurve elkaar SNIJDEN — dat is de evenwichtsprijs. Vraag = aanbod, markt is in balans." }],
           woorden: [{ woord: "evenwichtsprijs", uitleg: "Prijs waarbij hoeveelheid vraag = hoeveelheid aanbod. Markt 'klikt'." }, { woord: "marktevenwicht", uitleg: "Toestand waar vraag en aanbod elkaar in balans houden." }],
@@ -547,9 +547,9 @@ const steps = [
       },
       {
         q: "Veel **vraag**, weinig aanbod → prijs gaat:",
-        options: ["Omhoog", "Omlaag", "Blijft gelijk", "Naar 0"],
+        options: ["Omhoog", "Omlaag", "Blijft gelijk", "Daalt tot de kostprijs"],
         answer: 0,
-        wrongHints: [null, "Tegendeel.", "Wel beweging.", "Onmogelijk in normale markt."],
+        wrongHints: [null, "Als veel mensen iets willen en er is weinig van, moeten verkopers dan zakken met hun prijs?", "Er is te weinig voor alle kopers. Kan de prijs dan gelijk blijven?", "Bij schaarste hoeven verkopers niet te zakken. Wat doen kopers die het graag willen hebben?"],
         uitlegPad: {
           stappen: [{ titel: "Krapte = duurder", tekst: "Veel kopers willen, weinig is beschikbaar. Verkopers kunnen meer vragen — kopers betalen om het te krijgen. Prijs stijgt." }],
           woorden: [{ woord: "krapte", uitleg: "Vraag > aanbod. Resultaat: prijsstijging." }, { woord: "overschot", uitleg: "Aanbod > vraag. Resultaat: prijs daalt." }],
@@ -575,9 +575,9 @@ const steps = [
       },
       {
         q: "Bij €3 per kg vragen kopers 100 kg, bij €1 vragen ze 400 kg. Wat heet dit?",
-        options: ["Wet van de vraag", "Wet van het aanbod", "Inflatie", "Recessie"],
+        options: ["Wet van de vraag", "Wet van het aanbod", "Evenwichtsprijs", "Substitutie"],
         answer: 0,
-        wrongHints: [null, "Verkeerde wet.", "Inflatie is iets anders.", "Recessie is iets anders."],
+        wrongHints: [null, "De wet van het aanbod gaat over verkopers. Wie reageert hier op de prijs?", "De evenwichtsprijs is één prijs waarbij vraag en aanbod gelijk zijn. Hier zie je alleen kopers bij twee prijzen.", "Bij substitutie stap je over op een ander product. Gaat het hier om een ander product?"],
         uitlegPad: {
           stappen: [{ titel: "Patroon herkennen", tekst: "€3 → 100 kg. €1 → 400 kg. Prijs OMHOOG → aantal OMLAAG. Dat is de Wet van de Vraag." }],
           woorden: [{ woord: "wet van de vraag", uitleg: "Hogere prijs = minder gevraagd aantal. Loopt OMGEKEERD." }],
@@ -647,7 +647,7 @@ const steps = [
         q: "**Monopolie** kenmerk:",
         options: ["1 aanbieder bepaalt prijs", "Veel kleine aanbieders", "Weinig grote aanbieders", "Lage prijs door concurrentie"],
         answer: 0,
-        wrongHints: [null, "Tegendeel.", "Dat is een oligopolie.", "Is er bij een monopolie concurrentie die de prijs laag houdt?"],
+        wrongHints: [null, "Veel kleine aanbieders past bij volkomen concurrentie. Wat betekent 'mono'?", "Dat is een oligopolie.", "Is er bij een monopolie concurrentie die de prijs laag houdt?"],
         uitlegPad: {
           stappen: [{ titel: "Mono = 1", tekst: "Monopolie betekent letterlijk 'één verkoper'. Eén aanbieder = volledige macht over prijs. Geen concurrentie = hoge prijs mogelijk." }],
           woorden: [{ woord: "monopolie", uitleg: "Marktvorm met 1 aanbieder. Heeft volledige prijsmacht." }],
@@ -661,7 +661,7 @@ const steps = [
         q: "Wat doet de **ACM**?",
         options: ["Bewaakt eerlijke concurrentie", "Maakt de wetten voor bedrijven", "Int de belasting van bedrijven", "Verdeelt subsidies aan bedrijven"],
         answer: 0,
-        wrongHints: [null, "Wetten = parlement.", "Belastingdienst.", "Subsidies lopen via andere instanties, zoals RVO."],
+        wrongHints: [null, "Wetten maakt het parlement. Waar let een toezichthouder op de markt op?", "Belasting innen doet de Belastingdienst. Waar let een toezichthouder op de markt op?", "Subsidies lopen via andere instanties, zoals RVO."],
         uitlegPad: {
           stappen: [{ titel: "Marktwaakhond", tekst: "Autoriteit Consument & Markt = overheidstoezichthouder. Voorkomt prijsafspraken (kartels) tussen concurrenten en zorgt dat fusies de markt niet domineren." }],
           woorden: [{ woord: "ACM", uitleg: "Autoriteit Consument & Markt. Onafhankelijke waakhond voor eerlijke markt." }, { woord: "kartel", uitleg: "Illegale prijsafspraak tussen concurrenten om gezamenlijk hogere prijs te vragen." }],
@@ -750,9 +750,9 @@ const steps = [
       },
       {
         q: "Twee vrienden starten een **VOF** voor hun foodtruck. Wat is het belangrijkste risico?",
-        options: ["Ze staan in voor elkaars schulden", "Ze mogen samen geen winst maken", "Ze betalen dubbele belasting", "Ze moeten verplicht naar de notaris"],
+        options: ["Ze staan in voor elkaars schulden", "Ze moeten de winst precies gelijk delen", "Ze betalen dubbele belasting", "Ze moeten verplicht naar de notaris"],
         answer: 0,
-        wrongHints: [null, "Winst maken is juist het doel.", "Bij VOF betaalt elk apart IB.", "Notaris is voor BV, niet VOF."],
+        wrongHints: [null, "Hoe je de winst verdeelt, spreek je zelf af. Wat gebeurt er als één vennoot iets fout doet?", "Bij een VOF betaalt ieder alleen inkomstenbelasting over zijn eigen deel van de winst.", "Een notaris is nodig voor een BV, niet voor een VOF."],
         uitlegPad: {
           stappen: [{ titel: "Hoofdelijk aansprakelijk = voor de hele schuld", tekst: "Bij VOF zijn alle vennoten HOOFDELIJK aansprakelijk. Als jouw vennoot een grote schuld maakt, kunnen schuldeisers het GEHELE bedrag bij JOU komen halen — niet alleen jouw deel." }],
           woorden: [{ woord: "VOF", uitleg: "Vennootschap onder firma. 2+ vennoten, allen privé én hoofdelijk aansprakelijk." }, { woord: "hoofdelijk aansprakelijk", uitleg: "Schuldeiser kan voor de HELE schuld bij één persoon aankloppen, niet alleen voor zijn deel." }],
@@ -764,9 +764,9 @@ const steps = [
       },
       {
         q: "Welke belasting betaalt een **BV**?",
-        options: ["Vennootschapsbelasting (VPB)", "Inkomstenbelasting (IB)", "Alleen BTW over de omzet", "Geen, BV's zijn vrijgesteld"],
+        options: ["Vennootschapsbelasting (VPB)", "Inkomstenbelasting (IB)", "Alleen BTW over de omzet", "Dividendbelasting over de winst"],
         answer: 0,
-        wrongHints: [null, "De eigenaar betaalt IB over zijn loon — maar welke belasting betaalt de BV zelf over haar winst?", "BTW betalen alle ondernemingen.", "BV's betalen wél belasting."],
+        wrongHints: [null, "De eigenaar betaalt IB over zijn loon — maar welke belasting betaalt de BV zelf over haar winst?", "BTW betalen alle ondernemingen — dat is geen belasting op winst.", "Dividendbelasting gaat over winst die aan de aandeelhouders wordt uitgekeerd. Welke belasting betaalt de BV zelf?"],
         uitlegPad: {
           stappen: [{ titel: "BV = aparte belasting", tekst: "Omdat BV een aparte 'persoon' is, betaalt BV zelf vennootschapsbelasting (VPB) over de winst — niet de eigenaar zelf." }],
           woorden: [{ woord: "VPB", uitleg: "Vennootschapsbelasting. Belasting op winst van BV's en NV's." }, { woord: "IB", uitleg: "Inkomstenbelasting. Voor natuurlijke personen (zoals eenmanszaak-eigenaar)." }],
@@ -792,9 +792,9 @@ const steps = [
       },
       {
         q: "Bij welk winst-niveau wordt een **BV vaak interessanter** dan eenmanszaak?",
-        options: ["Boven ongeveer €100.000 winst per jaar", "Al vanaf de eerste euro winst per jaar", "Pas boven €1 miljoen winst per jaar", "Nooit, eenmanszaak is altijd voordeliger"],
+        options: ["Boven ongeveer €100.000 winst per jaar", "Al vanaf de eerste euro winst per jaar", "Boven ongeveer €1 miljoen winst per jaar", "Boven ongeveer €20.000 winst per jaar"],
         answer: 0,
-        wrongHints: [null, "Bij een kleine winst is een eenmanszaak (met aftrekposten) juist voordeliger.", "Te hoog — al ruim voor €1 miljoen omslagpunt.", "BV kan zeker voordeliger worden."],
+        wrongHints: [null, "Bij een kleine winst is een eenmanszaak (met aftrekposten) juist voordeliger.", "Te hoog — het omslagpunt ligt al ruim vóór €1 miljoen.", "Bij €20.000 winst levert een eenmanszaak met de ondernemersaftrek meestal meer op. Waar ligt het omslagpunt ongeveer?"],
         uitlegPad: {
           stappen: [{ titel: "Omslagpunt rond €100k", tekst: "Onder €100k winst: eenmanszaak met zelfstandigenaftrek + MKB-winstvrijstelling = lagere belasting dan BV. Boven: VPB-tarief van BV wint." }],
           woorden: [{ woord: "omslagpunt", uitleg: "Punt waar één rechtsvorm fiscaal voordeliger wordt dan de andere." }, { woord: "zelfstandigenaftrek", uitleg: "Aftrekpost voor eenmanszaak-eigenaren — alleen geldig bij genoeg gewerkte uren." }],
@@ -806,9 +806,9 @@ const steps = [
       },
       {
         q: "Wat is een **rechtspersoon**?",
-        options: ["Bedrijf dat juridisch zelf een 'persoon' is", "Een advocaat die voor bedrijven werkt", "Een ondernemer met een geldig diploma", "Een werknemer met een vast contract"],
+        options: ["Bedrijf dat juridisch zelf een 'persoon' is", "Een advocaat die voor bedrijven werkt", "Een eigenaar die met zijn privégeld instaat", "Een werknemer met een vast contract"],
         answer: 0,
-        wrongHints: [null, "Advocaat is een beroep, niet rechtsvorm.", "Niet diplomastatus.", "Werknemer = geen rechtspersoon."],
+        wrongHints: [null, "Een advocaat helpt je met het recht, maar is gewoon een mens met een beroep. Wat kan er nog meer een 'persoon' zijn in de wet?", "Dat is juist de eenmanszaak: daar staat de eigenaar zelf in. Wat is er anders bij een rechtspersoon?", "Een werknemer is een gewoon mens (een natuurlijk persoon). Wat kan er nog meer een 'persoon' zijn in de wet?"],
         uitlegPad: {
           stappen: [{ titel: "Juridisch een 'persoon'", tekst: "Rechtspersoon = juridisch een eigen entiteit. Heeft eigen bezit, eigen schulden, kan contracten sluiten in eigen naam — los van de eigenaars." }],
           woorden: [{ woord: "rechtspersoon", uitleg: "Juridische entiteit (BV, NV, stichting, vereniging) met eigen rechten en plichten." }, { woord: "natuurlijke persoon", uitleg: "Een mens van vlees en bloed. Heeft eigen rechten en plichten." }],
@@ -848,9 +848,9 @@ const steps = [
     checks: [
       {
         q: "Welk **BTW-tarief** geldt voor boodschappen (eten/drinken)?",
-        options: ["9% (laag)", "21% (algemeen)", "0%", "25%"],
+        options: ["9% (laag)", "21% (algemeen)", "0% (nultarief)", "25% (luxe)"],
         answer: 0,
-        wrongHints: [null, "21% is voor andere dingen.", "0% is alleen voor specifieke gevallen.", "25% bestaat niet als NL-tarief."],
+        wrongHints: [null, "21% is het algemene tarief, bijvoorbeeld voor kleding. Geldt dat ook voor eten?", "Het nultarief geldt vooral bij export. Betaal je in de supermarkt echt geen btw?", "Een tarief van 25% kent Nederland niet; dat hebben landen als Denemarken."],
         uitlegPad: {
           stappen: [{ titel: "Eten/drinken = 9%", tekst: "Voedsel en drinken (geen alcohol) vallen onder het LAGE BTW-tarief van 9%. Ook boeken, kapper, openbaar vervoer." }],
           woorden: [{ woord: "9% tarief", uitleg: "Verlaagd BTW-tarief voor eerste levensbehoeften en cultuur." }, { woord: "21% tarief", uitleg: "Algemeen BTW-tarief voor de meeste producten en diensten." }],
@@ -864,7 +864,7 @@ const steps = [
         q: "Een product kost **€100 zonder BTW**. Wat is de prijs **inclusief 21% BTW**?",
         options: ["€121", "€100", "€79", "€21"],
         answer: 0,
-        wrongHints: [null, "Inclusief BTW is meer dan zonder.", "Dat zou aftrek zijn.", "Dat is alleen het BTW-bedrag."],
+        wrongHints: [null, "Inclusief BTW is meer dan zonder.", "Je trok 21% af. Moet de btw bij 'inclusief' erbij of eraf?", "Dat is alleen het BTW-bedrag."],
         uitlegPad: {
           stappen: [{ titel: "Tel 21% er bij op", tekst: "Inclusief BTW = excl + (excl × 21%). €100 + €100 × 0,21 = €100 + €21 = €121." }],
           woorden: [{ woord: "exclusief BTW", uitleg: "Prijs zonder BTW. Wat de verkoper zelf overhoudt vóór belasting." }, { woord: "inclusief BTW", uitleg: "Prijs MET BTW erbij. Wat klant uiteindelijk betaalt." }],
@@ -876,9 +876,9 @@ const steps = [
       },
       {
         q: "Hoeveel BTW zit in een product van **€121 inclusief 21% BTW**?",
-        options: ["€21", "€25,41", "€121", "€100"],
+        options: ["€21", "€25,41", "€12,10", "€100"],
         answer: 0,
-        wrongHints: [null, "Niet 21% van €121 — de 21% gaat over het bedrag zónder BTW. Met welk getal deel je de €121 dan?", "Dat is de hele prijs.", "Dat is exclusief BTW."],
+        wrongHints: [null, "Niet 21% van €121 — de 21% gaat over het bedrag zónder BTW. Met welk getal deel je de €121 dan?", "Dat is 10% van €121. Welk percentage hoort bij de prijs zonder btw, en welk bij de prijs mét btw?", "€100 is de prijs zonder btw. Welk deel van de €121 is dan de btw?"],
         uitlegPad: {
           stappen: [{ titel: "Eerst excl, dan verschil", tekst: "Inclusief / 1,21 = exclusief. €121 / 1,21 = €100. BTW = incl − excl = €121 − €100 = €21." }],
           woorden: [{ woord: "BTW-berekening incl", uitleg: "BTW = incl − (incl / (1 + tarief))." }],
@@ -890,9 +890,9 @@ const steps = [
       },
       {
         q: "Wat is verplicht op een **factuur**?",
-        options: ["KvK- en BTW-nummer, datum, factuurnummer en BTW", "Alleen het bedrag, de datum en je naam", "Alleen jouw naam, adres en handtekening", "Je logo, je slogan en het totaalbedrag"],
+        options: ["KvK- en BTW-nummer, datum, factuurnummer en BTW", "Naam, adres, datum, totaalbedrag en IBAN", "Handtekening, datum, bedrag en betaaltermijn", "Je logo, je slogan en het totaalbedrag"],
         answer: 0,
-        wrongHints: [null, "Te weinig — wettelijk verplichte items.", "Te weinig.", "Een logo is leuk, maar wat moet de Belastingdienst op de factuur kunnen terugvinden?"],
+        wrongHints: [null, "Een IBAN is handig, maar welke nummers moet de Belastingdienst op de factuur kunnen terugvinden?", "Een handtekening is niet verplicht op een factuur. Welke gegevens zijn dat wel?", "Een logo is leuk, maar wat moet de Belastingdienst op de factuur kunnen terugvinden?"],
         uitlegPad: {
           stappen: [{ titel: "Wettelijke factuur-eisen", tekst: "Een factuur moet bevatten: jouw naam+adres+KvK+BTW, klant naam+adres, datum, uniek nummer, omschrijving, prijs (excl BTW + BTW-bedrag + totaal)." }],
           woorden: [{ woord: "factuur", uitleg: "Officieel document voor zakelijke transactie. Bewijs voor administratie + BTW." }, { woord: "factuurnummer", uitleg: "Uniek volgnummer per factuur. Onmisbaar voor administratie." }],
@@ -904,9 +904,9 @@ const steps = [
       },
       {
         q: "Hoe lang moet je **bonnen en administratie bewaren**?",
-        options: ["7 jaar", "1 jaar", "Tot het volgende boekjaar", "Niet"],
+        options: ["7 jaar", "1 jaar", "5 jaar", "3 jaar"],
         answer: 0,
-        wrongHints: [null, "Veel te kort.", "Wettelijke termijn is langer.", "Wel verplicht."],
+        wrongHints: [null, "Na een jaar kan de Belastingdienst nog steeds komen controleren. Hoe lang moet je het dan bewaren?", "De Belastingdienst kan 5 jaar terug navorderen, maar de bewaarplicht is langer.", "Ook na 3 jaar kan de Belastingdienst nog controleren. De bewaarplicht is langer."],
         uitlegPad: {
           stappen: [{ titel: "7 jaar = wet", tekst: "Belastingdienst kan tot 7 jaar terug onderzoeken. Bewaarplicht = 7 jaar voor alle bedrijfsadministratie." }],
           woorden: [{ woord: "bewaarplicht", uitleg: "Wettelijke verplichting om administratie 7 jaar te bewaren — papier of digitaal." }],
@@ -920,7 +920,7 @@ const steps = [
         q: "Sam ontvangt **€1.000 omzet inclusief 9% BTW** op een dag. Hoeveel houdt hij apart voor BTW?",
         options: ["€83", "€90", "€100", "€9"],
         answer: 0,
-        wrongHints: [null, "Niet 9% van €1.000 — die €1.000 is al inclusief BTW.", "Dat is 10% van €1.000. Klopt het tarief, en is die €1.000 inclusief of exclusief BTW?", "Dat is maar 0,9% van €1.000. Met welk percentage moet je rekenen?"],
+        wrongHints: [null, "Je nam 9% van €1.000, maar die €1.000 is al inclusief BTW. Over welk bedrag wordt de 9% berekend?", "Dat is 10% van €1.000. Klopt het tarief, en is die €1.000 inclusief of exclusief BTW?", "Dat is maar 0,9% van €1.000. Met welk percentage moet je rekenen?"],
         uitlegPad: {
           stappen: [{ titel: "BTW eruit halen", tekst: "€1.000 incl 9% = €1.000 / 1,09 = €917,43 excl. BTW = €1.000 − €917,43 = €82,57. Sam houdt ~€83 apart." }],
           woorden: [{ woord: "BTW-deel", uitleg: "Deel van incl-bedrag dat naar Belastingdienst gaat." }],
@@ -956,9 +956,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **debiteurenrisico**?",
-        options: ["Klanten betalen niet of te laat", "Belastingdienst stuurt brief", "Concurrenten worden goedkoper", "Personeel wordt ziek"],
+        options: ["Klanten betalen niet of te laat", "Je kunt je leveranciers niet betalen", "Concurrenten worden goedkoper", "Je personeel wordt langdurig ziek"],
         answer: 0,
-        wrongHints: [null, "Belasting is een ander risico-type.", "Concurrentie-risico.", "Persoonlijk risico."],
+        wrongHints: [null, "Leveranciers aan wie jij geld schuldig bent, heten crediteuren. Wie zijn dan je debiteuren?", "Dat is een risico door concurrentie. Bij debiteuren gaat het om mensen met een schuld — bij wie?", "Dat is een personeelsrisico. Een debiteur is iemand die nog moet betalen — aan wie?"],
         uitlegPad: {
           stappen: [{ titel: "Wie is jou geld schuldig?", tekst: "Debiteur = klant die JOU geld schuldig is (factuur niet betaald). Debiteurenrisico = kans dat ze toch NIET betalen of pas heel laat." }],
           woorden: [{ woord: "debiteur", uitleg: "Een klant met een openstaande factuur — schuldenaar." }, { woord: "crediteur", uitleg: "Iemand aan wie jij geld schuldig bent." }],
@@ -970,9 +970,9 @@ const steps = [
       },
       {
         q: "Bij een **faillissement van een eenmanszaak**, wat is het belangrijkste verschil met een BV?",
-        options: ["Ook je privéspullen kunnen worden verkocht", "Er is eigenlijk geen enkel verschil", "Bij een eenmanszaak gebeurt er niets", "Een BV-faillissement is altijd erger"],
+        options: ["Ook je privéspullen kunnen worden verkocht", "Alleen de spullen van de zaak worden verkocht", "De bank neemt alle schulden over", "Bij een BV is de eigenaar ook privé aansprakelijk"],
         answer: 0,
-        wrongHints: [null, "Waarom zouden ondernemers dan moeite doen om een BV op te richten?", "Curator komt ook bij eenmanszaak.", "Waarom kiezen voorzichtige ondernemers dan juist vaak voor een BV?"],
+        wrongHints: [null, "Zo werkt het bij een BV. Bij een eenmanszaak zijn jij en je bedrijf juridisch hetzelfde — wat betekent dat?", "Een bank neemt geen schulden over; die wil zelf haar geld terug. Wie moet er bij een eenmanszaak betalen?", "Waarom kiezen voorzichtige ondernemers dan juist vaak voor een BV?"],
         uitlegPad: {
           stappen: [{ titel: "Eenmanszaak = privé bedreigd", tekst: "Eenmanszaak en eigenaar zijn juridisch 1 persoon. Schuldeisers kunnen privé-bezittingen (huis, auto, spaargeld) opeisen om schuld te dekken." }],
           woorden: [{ woord: "faillissement eenmanszaak", uitleg: "Curator mag privé-vermogen pakken want eenmanszaak ≠ aparte juridische entiteit." }, { woord: "faillissement BV", uitleg: "Curator pakt alleen BV-vermogen. Eigenaars privé veilig (mits niet onbehoorlijk bestuurd)." }],
@@ -984,9 +984,9 @@ const steps = [
       },
       {
         q: "Wie wordt aangesteld bij een faillissement?",
-        options: ["Een curator", "Een nieuwe ondernemer", "De accountant", "De Belastingdienst"],
+        options: ["Een curator", "Een deurwaarder", "De accountant", "De Belastingdienst"],
         answer: 0,
-        wrongHints: [null, "Bedrijf wordt vaak gestopt, geen overname.", "Accountant is administratief.", "Belastingdienst is wel schuldeiser, niet curator."],
+        wrongHints: [null, "Een deurwaarder int losse schulden. Wie regelt bij een faillissement alles en verdeelt het geld?", "Een accountant controleert de boekhouding, maar wikkelt het faillissement niet af.", "Belastingdienst is wel schuldeiser, niet curator."],
         uitlegPad: {
           stappen: [{ titel: "Rechter benoemt curator", tekst: "Bij faillissement-uitspraak benoemt de rechtbank een CURATOR (vaak een advocaat). Hij/zij beheert het faillissement: bezittingen verkopen + geld onder schuldeisers verdelen." }],
           woorden: [{ woord: "curator", uitleg: "Door rechter benoemde persoon (vaak advocaat) die failliete onderneming afwikkelt." }, { woord: "faillissement", uitleg: "Juridische staat waarin schulden niet meer betaald kunnen worden. Rechter verklaart bedrijf failliet." }],
@@ -998,9 +998,9 @@ const steps = [
       },
       {
         q: "Welke maatregel beperkt **risico** voor een ondernemer?",
-        options: ["Een geldbuffer voor 3-6 maanden kosten", "Snel veel nieuw personeel aannemen", "Alleen werken voor 1 grote klant", "Geen verzekering nemen, dat scheelt geld"],
+        options: ["Een spaarbuffer voor een paar maanden kosten", "Al je spaargeld in de zaak investeren", "Eén grote vaste klant met een lang contract", "Veel voorraad inkopen voor een lage prijs"],
         answer: 0,
-        wrongHints: [null, "Snel groeien = juist meer risico.", "1 grote klant = afhankelijk = risico.", "Geen verzekering = blootgesteld."],
+        wrongHints: [null, "Dan heb je niets meer achter de hand als het tegenzit. Wat beperkt het risico wél?", "Klinkt zeker, maar wat gebeurt er als die ene klant toch stopt?", "Een grote voorraad kost geld en kan blijven liggen. Wat helpt als de omzet even wegvalt?"],
         uitlegPad: {
           stappen: [{ titel: "Buffer = veiligheidsnet", tekst: "Een geldbuffer van 3-6 maanden vaste kosten is je schokdemper. Klanten betalen 30 dagen later, machine kapot, ziekte — buffer overbrugt het." }],
           woorden: [{ woord: "buffer", uitleg: "Spaargeld om onverwachte tegenvallers op te vangen. Cruciaal voor zzp en MKB." }, { woord: "cashflow", uitleg: "Stroom in/uit van geld. Goede cashflow = altijd genoeg geld klaar voor betalingen." }],
@@ -1012,9 +1012,9 @@ const steps = [
       },
       {
         q: "Wat betekent **diversificatie van klanten**?",
-        options: ["Veel verschillende soorten klanten hebben", "Je richten op één vaste soort klant", "Klanten verschillende prijzen geven", "Veel geld in advertenties investeren"],
+        options: ["Veel verschillende soorten klanten hebben", "Je richten op één vaste soort klant", "Klanten verschillende prijzen geven", "Klanten in verschillende groepen indelen"],
         answer: 0,
-        wrongHints: [null, "Wat gebeurt er als die ene soort klant wegblijft?", "Prijsverschil heeft niets met diversificatie te maken.", "Reclame is iets anders."],
+        wrongHints: [null, "Wat gebeurt er als die ene soort klant wegblijft?", "Prijsverschil heeft niets met diversificatie te maken.", "Klanten indelen in groepen heet segmenteren. Bij diversificatie gaat het erom dat je niet afhankelijk bent van… wat?"],
         uitlegPad: {
           stappen: [{ titel: "Niet alle eieren in 1 mand", tekst: "Diversificatie = SPREIDING. Met 10 kleine klanten ben je weerbaar als er 1 wegvalt. Met 1 grote klant kan dat ene vertrek je bedrijf laten instorten." }],
           woorden: [{ woord: "diversificatie", uitleg: "Spreiding over meerdere klanten, producten, markten — risico verlagen." }, { woord: "concentratierisico", uitleg: "Risico door grote afhankelijkheid van 1 klant of leverancier." }],
@@ -1026,9 +1026,9 @@ const steps = [
       },
       {
         q: "Wat is een belangrijk **persoonlijk risico** voor een eenmanszaak-eigenaar?",
-        options: ["Ziekte of burn-out → geen omzet meer", "Vergeten op tijd BTW-aangifte te doen", "Te weinig adverteren op social media", "Geen mooi logo voor je bedrijf"],
+        options: ["Je wordt ziek en verdient niets meer", "Vergeten op tijd BTW-aangifte te doen", "Te weinig adverteren op social media", "Een klant die zijn rekening niet betaalt"],
         answer: 0,
-        wrongHints: [null, "Vergeten BTW is operationeel, niet persoonlijk.", "Marketing-issue, niet persoonlijk risico.", "Logo's zijn cosmetisch, geen risico."],
+        wrongHints: [null, "Een vergeten aangifte is een fout in je administratie. Welk risico heeft met jezelf als persoon te maken?", "Dat is een marketingkeuze, geen persoonlijk risico.", "Dat is debiteurenrisico. Welk risico zit in jou als persoon?"],
         uitlegPad: {
           stappen: [{ titel: "Jij = het bedrijf", tekst: "Bij eenmanszaak BEN JIJ het bedrijf. Word je ziek → geen omzet. Burn-out → geen omzet. Geen werknemers om over te nemen. Daarom AOV-verzekering belangrijk." }],
           woorden: [{ woord: "persoonlijk risico", uitleg: "Risico dat in jouzelf zit (gezondheid, energie) — bij eenmanszaak direct verbonden aan bedrijf." }, { woord: "AOV", uitleg: "Arbeidsongeschiktheidsverzekering. Vervangt deel inkomen als je niet kunt werken." }],

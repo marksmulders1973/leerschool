@@ -6,7 +6,7 @@
 const bron12 = {
   titel: "Bron 12 — Politieke tekening 'Niet dezelfde leeuw als vroeger' (1938)",
   body:
-    "Britse spotprent uit 1938. Te zien: een 'Tsjechische kapperszaak' van Hitler, waarin een nogal kleine en gemoedelijke Britse leeuw zit. Hitler heeft een groot scheermes en pakt op kalme manier de leeuw bij de kop. Daar omheen staan kleinere figuren: Italië en gewapende Duitse soldaten.\n\nDe Britse leeuw staat symbool voor Groot-Brittannië. Het beeld toont hoe Groot-Brittannië in 1938 toegaf aan Hitler bij de Conferentie van München — Tsjecho-Slowakije moest delen van het land afstaan aan Duitsland, om 'oorlog te voorkomen'. De symbolen rond de tekening (geweren, Duitse soldaten, Italiaanse vlag) tonen het idee van militaire dreiging en politieke indoctrinatie.",
+    "Britse spotprent uit 1938. Te zien: een 'Tsjechische kapperszaak' van Hitler, waarin een nogal kleine en gemoedelijke Britse leeuw zit. Hitler heeft een groot scheermes en pakt op kalme manier de leeuw bij de kop. Daar omheen staan kleinere figuren: Italië en gewapende Duitse soldaten.\n\nDe Britse leeuw staat symbool voor Groot-Brittannië.",
 };
 
 const BRON_LABEL = (n) => `🎓 Echt examen VMBO-GL/TL Geschiedenis 2023 tijdvak 2, vraag ${n}`;
@@ -98,7 +98,7 @@ const steps = [
         "rassenleer en censuur",
       ],
       answer: 1,
-      wrongHints: ["Censuur = persvrijheid-onderdrukking. Niet zichtbaar in de tekening — geen kranten/boeken.", null, "Rassenleer (jodenvervolging) is niet WAT in de tekening centraal staat — wel geweren/soldaten = militair.", "Kijk nog eens goed: zie je in de tekening iets over rassen, of over kranten en boeken die verboden worden?"],
+      wrongHints: ["Censuur = persvrijheid-onderdrukking. Niet zichtbaar in de tekening — geen kranten/boeken.", null, "Kijk welke figuren en voorwerpen er in de tekening staan: wijst daar iets op het denken over rassen?", "Kijk nog eens goed: zie je in de tekening iets over rassen, of over kranten en boeken die verboden worden?"],
       explanation: "Tekening 1938 toont: Duitse SOLDATEN met geweren (= **militarisme** = leger-cultus, oorlog-paraatheid) + Hitler die 'kapperszaak' runt waar Britse leeuw vrijwillig komt zitten (= **indoctrinatie** = mensen overtuigen via beelden/symbolen). Geen rassenleer (Joden), geen censuur (pers).",
       examenBron: BRON_LABEL(20),
       bronLink: BRON_LINK,
@@ -128,7 +128,7 @@ const steps = [
         "het Verdrag van Versailles",
       ],
       answer: 0,
-      wrongHints: [null, "De Kristallnacht was een antisemitische actie in Duitsland zelf — dit gaat over een diplomatieke bijeenkomst met Brittannië en Tsjechië.", "De Weimar Republiek werd vlak na de Eerste Wereldoorlog opgericht — dat is een andere tijd en context dan Tsjechië 1938.", "Het Verdrag van Versailles werd gesloten na de Eerste Wereldoorlog — wat is het verband met de Britse politiek ten opzichte van Hitler?"],
+      wrongHints: [null, "De Kristallnacht was een antisemitische actie in Duitsland zelf. Wat heeft dat te maken met een Britse leeuw in een 'Tsjechische' kapperszaak?", "De Weimar Republiek werd vlak na de Eerste Wereldoorlog opgericht — dat is een andere tijd en context dan Tsjechië 1938.", "Het Verdrag van Versailles werd gesloten na de Eerste Wereldoorlog — wat is het verband met de Britse politiek ten opzichte van Hitler?"],
       explanation: "**Conferentie van München** (sept 1938): Chamberlain (UK) + Daladier (FR) + Hitler + Mussolini. Britten en Fransen stonden Hitler toe Sudetenland (deel van Tsjecho-Slowakije) te annexeren — appeasement = toegeven om oorlog te voorkomen. Achteraf desastreus (Hitler annexeerde rest Tsjechië 1939). De spotprent toont de Britse 'tamme leeuw' die toegeeft aan Hitler-de-kapper.",
       examenBron: BRON_LABEL(21),
       bronLink: BRON_LINK,
