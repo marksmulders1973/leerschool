@@ -273,12 +273,7 @@ const steps = [
     checks: [
       {
         q: "Wat zijn hormonen?",
-        options: [
-          "Chemische boodschappers in het bloed",
-          "Een soort spier",
-          "Een soort vitamine",
-          "Een onderdeel van het zenuwstelsel",
-        ],
+        options: ["Chemische boodschappers in het bloed", "Kleine spiertjes die organen bewegen", "Vitamines die je via je eten binnenkrijgt", "Een onderdeel van het zenuwstelsel"],
         answer: 0,
         wrongHints: [
           null,
@@ -325,12 +320,7 @@ const steps = [
         q: "Welke klier wordt vaak de 'baas' van het hormoonstelsel genoemd?",
         options: ["Hypofyse", "Schildklier", "Bijnieren", "Alvleesklier"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Wordt door de hypofyse aangestuurd, niet andersom.",
-          "Maken adrenaline maar sturen anderen niet aan.",
-          "Maakt insuline, geen stuurhormonen.",
-        ],
+        wrongHints: [null, "De schildklier wordt zelf aangestuurd door een andere klier. Welke?", "Maken adrenaline maar sturen anderen niet aan.", "Maakt insuline, geen stuurhormonen."],
         uitlegPad: {
           stappen: [{ titel: "Hypofyse = baas-klier", tekst: "De hypofyse zit onderin de hersenen. Hij stuurt andere klieren aan via stuurhormonen (TSH → schildklier, LH/FSH → eierstokken)." }],
           woorden: [{ woord: "stuurhormoon", uitleg: "hormoon dat andere klieren activeert" }],
@@ -377,12 +367,7 @@ const steps = [
         q: "Waar vindt **bevruchting** meestal plaats?",
         options: ["In de eileider", "In de baarmoeder", "In de eierstok", "In de vagina"],
         answer: 0,
-        wrongHints: [
-          null,
-          "In de baarmoeder vindt de innesteling plaats — bevruchting is eerder.",
-          "In de eierstok rijpt de eicel; die komt eerst los voordat bevruchting kan.",
-          "Daar komt sperma binnen, maar het zwemt door tot in de eileider.",
-        ],
+        wrongHints: [null, "In de baarmoeder vindt de innesteling plaats — bevruchting is eerder.", "In de eierstok rijpt de eicel; die komt eerst los voordat bevruchting kan.", "Daar komt sperma binnen, maar de zaadcellen zwemmen nog een heel eind door. Waar komen ze de eicel tegen?"],
         uitlegPad: {
           stappen: [{ titel: "Bevruchting in eileider", tekst: "Eicel komt uit eierstok → wordt opgevangen door eileider. Zaadcellen zwemmen vanaf vagina door baarmoeder de eileider in. Daar ontmoeten ze elkaar." }],
           woorden: [{ woord: "eileider", uitleg: "buisje tussen eierstok en baarmoeder" }],
@@ -418,19 +403,9 @@ const steps = [
       },
       {
         q: "Wat gebeurt er bij de **menopauze**?",
-        options: [
-          "De eierstokken stoppen geleidelijk met werken",
-          "De baarmoeder verdwijnt",
-          "Vrouwen krijgen extra eicellen",
-          "Niks bijzonders",
-        ],
+        options: ["De eierstokken stoppen geleidelijk met werken", "De baarmoeder wordt langzaam afgebroken", "De eierstokken maken juist extra eicellen", "De menstruatie wordt juist vaker en heviger"],
         answer: 0,
-        wrongHints: [
-          null,
-          "De baarmoeder blijft, maar functioneert niet meer voor zwangerschap.",
-          "Andersom — eicellen raken juist op.",
-          "Wel degelijk een grote verandering met hormonale gevolgen.",
-        ],
+        wrongHints: [null, "De baarmoeder blijft, maar functioneert niet meer voor zwangerschap.", "Andersom — eicellen raken juist op.", "Komt er na de menopauze meer of minder menstruatie?"],
         uitlegPad: {
           stappen: [{ titel: "Menopauze = eierstokken stoppen", tekst: "Rond 45-55 jaar stoppen de eierstokken geleidelijk: geen rijpe eicellen meer, geen menstruatie. Hormonen oestrogeen + progesteron dalen sterk." }],
           woorden: [{ woord: "menopauze", uitleg: "einde van vruchtbare periode" }],
@@ -449,19 +424,9 @@ const steps = [
     checks: [
       {
         q: "Waarom hangen de teelballen **buiten** het lichaam in de balzak?",
-        options: [
-          "Zaadcellen hebben een iets lagere temperatuur nodig dan 37 °C",
-          "Het is gewoon zo gegroeid, geen reden",
-          "Anders kan de man niet plassen",
-          "Voor de zwaartekracht",
-        ],
+        options: ["Zaadcellen hebben het iets koeler nodig dan 37 °C", "Er is geen reden, het is gewoon zo gegroeid", "Anders zitten ze de plasbuis in de weg", "Zo zakken zaadcellen makkelijker naar beneden"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Er is wel degelijk een reden — denk aan wat zaadcellen nodig hebben om goed te groeien.",
-          "Plassen heeft niets met de teelballen te maken.",
-          "Niets met zwaartekracht.",
-        ],
+        wrongHints: [null, "Er is wel degelijk een reden — denk aan wat zaadcellen nodig hebben om goed te groeien.", "Plassen heeft niets met de teelballen te maken.", "Zaadcellen worden door spieren weggeduwd, niet door de zwaartekracht."],
         uitlegPad: {
           stappen: [{ titel: "Zaadcellen willen koeler", tekst: "Zaadcellen ontwikkelen zich het best bij ~35°C (2°C lager dan lichaamstemperatuur). Daarom hangen de teelballen buiten het lichaam in de balzak." }],
           woorden: [{ woord: "balzak (scrotum)", uitleg: "huidzak buiten het lichaam" }],
@@ -473,14 +438,9 @@ const steps = [
       },
       {
         q: "Hoeveel zaadcellen zitten er ongeveer in één uitstoot van sperma?",
-        options: ["~200-400 miljoen", "~10", "~1.000", "~10 miljard"],
+        options: ["~200-400 miljoen", "~10-20 duizend", "~1-2 miljoen", "~10-20 miljard"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Veel te weinig — de meeste zaadcellen sterven onderweg, dus er moeten er enorm veel vertrekken.",
-          "Te weinig.",
-          "Te veel — niet zo'n groot aantal.",
-        ],
+        wrongHints: [null, "Veel te weinig — de meeste zaadcellen sterven onderweg, dus er moeten er enorm veel vertrekken.", "Nog steeds te weinig — de meeste zaadcellen halen de eicel niet.", "Te veel — zo'n groot aantal past niet in een paar milliliter sperma."],
         uitlegPad: {
           stappen: [{ titel: "200-400 miljoen", tekst: "Eén uitstoot sperma (2-5 ml) bevat ~200-400 miljoen zaadcellen. Maar slechts één kan een eicel bevruchten — concurrentie is enorm." }],
           woorden: [{ woord: "ejaculaat", uitleg: "uitgestoten sperma" }],
@@ -613,12 +573,7 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen een **eeneiige** en **twee-eiige** tweeling?",
-        options: [
-          "Eeneiig = 1 bevruchte eicel splitst, twee-eiig = 2 verschillende eicellen",
-          "Eeneiig is altijd een meisje, twee-eiig altijd een jongen",
-          "Eeneiig wordt geboren in 1 maand, twee-eiig duurt langer",
-          "Geen verschil — gewoon twee namen",
-        ],
+        options: ["Eeneiig = 1 eicel splitst; twee-eiig = 2 eicellen", "Eeneiig is altijd een meisje, twee-eiig altijd een jongen", "Eeneiig wordt geboren in 1 maand, twee-eiig duurt langer", "Geen verschil — twee namen voor dezelfde tweeling"],
         answer: 0,
         wrongHints: [
           null,
@@ -741,12 +696,7 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen **diabetes type 1** en **type 2**?",
-        options: [
-          "Type 1: geen insuline meer; type 2: cellen reageren slecht op insuline",
-          "Type 1 is een lichte vorm, type 2 een zware vorm",
-          "Type 2 is besmettelijk, type 1 is niet besmettelijk",
-          "Geen verschil — twee namen voor hetzelfde",
-        ],
+        options: ["Type 1: geen insuline; type 2: cellen reageren er slecht op", "Type 1 is een lichte vorm, type 2 een zware vorm", "Type 2 is besmettelijk, type 1 is niet besmettelijk", "Geen verschil — twee namen voor precies dezelfde ziekte"],
         answer: 0,
         wrongHints: [
           null,
@@ -796,19 +746,9 @@ const steps = [
       },
       {
         q: "Wat doet schildklierhormoon vooral?",
-        options: [
-          "Regelt de stofwisselingssnelheid",
-          "Maakt zaadcellen",
-          "Bestrijdt bacteriën",
-          "Reguleert slaap",
-        ],
+        options: ["Regelt de stofwisselingssnelheid", "Zorgt voor de aanmaak van zaadcellen", "Bestrijdt bacteriën in het bloed", "Regelt wanneer je slaap krijgt"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Zaadcellen komen uit de teelballen.",
-          "Niet de taak van schildklier.",
-          "Slaap wordt vooral door melatonine geregeld.",
-        ],
+        wrongHints: [null, "Zaadcellen komen uit de teelballen.", "Bacteriën worden door witte bloedcellen bestreden.", "Slaap wordt vooral door melatonine geregeld."],
         uitlegPad: {
           stappen: [{ titel: "Schildklier = stofwisselingssnelheid", tekst: "Schildklierhormoon (T3, T4) bepaalt hoe snel je cellen energie verbranden. Hoger = sneller (warmte, energie). Lager = trager (moe, koud)." }],
           woorden: [{ woord: "T3/T4", uitleg: "schildklierhormonen (T3 = trijoodthyronine, T4 = thyroxine)" }],
@@ -829,12 +769,7 @@ const steps = [
     checks: [
       {
         q: "Hoe wordt **diabetes type 1** behandeld?",
-        options: [
-          "Dagelijks insuline injecteren of via pomp",
-          "Alleen met een speciaal dieet",
-          "Met een operatie aan de alvleesklier",
-          "Met een kuur antibiotica",
-        ],
+        options: ["Dagelijks insuline injecteren of via pomp", "Alleen met een speciaal suikerarm dieet", "Met een operatie aan de alvleesklier", "Met een kuur antibiotica van enkele weken"],
         answer: 0,
         wrongHints: [
           null,
@@ -853,12 +788,7 @@ const steps = [
       },
       {
         q: "Wat is **PCOS**?",
-        options: [
-          "Een syndroom met hormonale onbalans bij vrouwen",
-          "Een besmettelijke ziekte door een virus",
-          "Een huidziekte met veel uitslag",
-          "Een tekort aan vitamines bij vrouwen",
-        ],
+        options: ["Een syndroom met hormonale onbalans bij vrouwen", "Een besmettelijke ziekte door een virus", "Een huidziekte met veel uitslag en jeuk", "Een tekort aan vitamines bij jonge vrouwen"],
         answer: 0,
         wrongHints: [
           null,
@@ -924,12 +854,7 @@ const steps = [
       },
       {
         q: "Wat doet **progesteron**?",
-        options: [
-          "Houdt het slijmvlies in de baarmoeder in stand",
-          "Verlaagt de bloedsuiker na het eten",
-          "Zorgt voor de aanmaak van zaadcellen",
-          "Regelt het slaap-waakritme",
-        ],
+        options: ["Houdt het baarmoederslijmvlies in stand", "Verlaagt de bloedsuiker na het eten", "Zorgt voor de aanmaak van zaadcellen", "Regelt het slaap-waakritme in je lichaam"],
         answer: 0,
         wrongHints: [
           null,

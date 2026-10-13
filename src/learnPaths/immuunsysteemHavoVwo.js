@@ -37,14 +37,9 @@ const steps = [
       },
       {
         q: "Wat is **fagocytose**?",
-        options: [
-          "Witte bloedcellen 'eten' pathogenen op",
-          "Antilichamen aanmaken",
-          "Koorts verhogen",
-          "Trilharen bewegen"
-        ],
+        options: ["Witte bloedcellen 'eten' pathogenen op", "B-cellen maken antilichamen aan", "Lichaamstemperatuur verhogen bij infectie", "Trilharen voeren slijm met ziekteverwekkers af"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is specifieke afweer.", "Niet — gevolg, niet mechanisme.", "Niet — wel afweer, ander."],
+        wrongHints: [null, "Dat hoort bij de specifieke afweer. Fagocytose is aspecifiek.", "Koorts is een gevolg van de ontsteking, geen opnamemechanisme.", "Dat is ook afweer, maar dan via een barrière in de luchtwegen."],
         uitlegPad: {
           stappen: [{ titel: "'Fago' = eten, 'cyt' = cel", tekst: "Macrofagen + neutrofielen omsluiten pathogeen met celmembraan → opnemen in cel → afbreken met enzymen. Klassieke aspecifieke afweer. Macrofaag = 'grote eter' in Grieks." }],
           niveaus: { basis: "Cellen eten pathogeen.", simpeler: "Witte bloedcel slokt op.", nogSimpeler: "Eten" },
@@ -52,14 +47,9 @@ const steps = [
       },
       {
         q: "**Koorts** is een immuunmechanisme dat:",
-        options: [
-          "Ziekteverwekkers remt en de afweer versnelt",
-          "Direct virussen doodt",
-          "Antilichamen aanmaakt",
-          "Geen functie heeft"
-        ],
+        options: ["Ziekteverwekkers remt en de afweer versnelt", "Virussen direct doodkookt door de hitte", "Zelf antilichamen tegen de ziekteverwekker aanmaakt", "Een bijwerking is zonder nut voor de afweer"],
         answer: 0,
-        wrongHints: [null, "Niet — indirect.", "Niet — dat doen B-cellen.", "Wel functie."],
+        wrongHints: [null, "Niet — 39 °C doodt een virus niet direct; het effect is indirect.", "Niet — antilichamen worden door B-cellen gemaakt.", "Waarom zou het lichaam via de hypothalamus de temperatuur actief omhoog zetten?"],
         uitlegPad: {
           stappen: [
             { titel: "T-stijging als wapen", tekst: "Bij infectie maakt lichaam **pyrogenen** (interleukine-1) die hypothalamus opdragen T omhoog te zetten. Pathogenen + virus-replicatie worden geremd bij hogere T. Immuuncel-werking versnelt. Bij T>40°C wel risico — paracetamol-grens." },
@@ -120,14 +110,9 @@ const steps = [
       },
       {
         q: "**T-helper-cellen** (CD4+) zijn cruciaal omdat ze:",
-        options: [
-          "B-cellen en andere T-cellen activeren",
-          "Direct pathogenen eten",
-          "Antilichamen maken",
-          "Bloed-stolling regelen"
-        ],
+        options: ["B-cellen en andere T-cellen activeren", "Ziekteverwekkers zelf opeten en afbreken", "Zelf antilichamen in het bloed afgeven", "De bloedstolling bij een wond regelen"],
         answer: 0,
-        wrongHints: [null, "Niet — fagocyten doen dat.", "Niet — dat is B-cel.", "Niet — irrelevant."],
+        wrongHints: [null, "Niet — dat doen fagocyten.", "Niet — dat doen plasmacellen (uit B-cellen).", "Bloedstolling regelen bloedplaatjes, geen T-cellen."],
         uitlegPad: {
           stappen: [
             { titel: "HIV vernietigt deze cellen", tekst: "T-helper coördineert hele immuunrespons. HIV-virus richt zich specifiek op T-helpers → bij AIDS vermindering tot <200 cellen/mm³ → immuunsysteem instort → opportunistische infecties. Daarom werkt HIV-therapie via T-helper-bescherming." },
@@ -137,14 +122,9 @@ const steps = [
       },
       {
         q: "Wat is een **antigeen**?",
-        options: [
-          "Molecuul op pathogeen dat immuunsysteem herkent",
-          "Antilichaam dat lichaam maakt",
-          "Virus zelf",
-          "Vaccin"
-        ],
+        options: ["Molecuul op pathogeen dat immuunsysteem herkent", "Eiwit dat B-cellen maken om pathogenen te binden", "Het hele virus of de hele bacterie zelf", "Verzwakt virus dat je bij vaccinatie krijgt"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — antigenen ZITTEN op pathogeen.", "Niet — bevat antigeen maar is niet hetzelfde."],
+        wrongHints: [null, "Dat is een antilichaam. Waar bindt een antilichaam aan?", "Niet — antigenen ZITTEN op een pathogeen.", "Niet — een vaccin bevat antigeen, maar is niet hetzelfde."],
         uitlegPad: {
           stappen: [
             { titel: "Antigeen = herken-molecuul", tekst: "Antigenen zijn eiwitten/suikers op pathogeen-oppervlak. Antilichamen binden specifiek aan één antigeen. Vaccin bevat (verzwakt) antigeen → lichaam maakt geheugen zonder ziekte." },
@@ -154,14 +134,9 @@ const steps = [
       },
       {
         q: "Wat is **secundaire immuunrespons**?",
-        options: [
-          "Snellere, sterkere reactie bij hercontact",
-          "Eerste reactie op pathogeen",
-          "Allergische reactie",
-          "Auto-immuun"
-        ],
+        options: ["Snellere, sterkere reactie bij hercontact", "Eerste reactie bij het eerste contact", "Overdreven reactie op onschuldige stoffen", "Afweerreactie tegen eigen lichaamscellen"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is primair.", "Niet — apart proces.", "Niet — fout-reactie."],
+        wrongHints: [null, "Niet — dat is de primaire respons.", "Dat is een allergie — een apart proces.", "Dat is auto-immuniteit — een fout-reactie."],
         uitlegPad: {
           stappen: [
             { titel: "Sneller via geheugen", tekst: "Primair: 1-2 weken voor antilichaam-productie. Secundair: 1-3 dagen, met 10-100× meer antilichamen. Verklaart waarom mazelen na één keer nooit meer terugkomt + waarom vaccinaties werken." },
@@ -171,14 +146,9 @@ const steps = [
       },
       {
         q: "**T-killer-cellen** doden vooral:",
-        options: [
-          "Lichaamscellen die door virus geïnfecteerd zijn",
-          "Bacteriën direct",
-          "Allergenen",
-          "Schimmels"
-        ],
+        options: ["Lichaamscellen die met een virus besmet zijn", "Bacteriën die vrij in het bloed zwemmen", "Stuifmeelkorrels en andere allergenen", "Schimmelsporen op de huid en slijmvliezen"],
         answer: 0,
-        wrongHints: [null, "Niet — bacteriën via antilichamen + fagocyten.", "Geen rol.", "Geen rol."],
+        wrongHints: [null, "Niet — bacteriën worden opgeruimd via antilichamen + fagocyten.", "Bij een allergie spelen antilichamen (IgE) en histamine de hoofdrol.", "Schimmels worden vooral door fagocyten aangepakt."],
         uitlegPad: {
           stappen: [
             { titel: "Virus-respons", tekst: "Virussen verstoppen binnen lichaamscellen → antilichamen kunnen daar niet komen. T-killers herkennen geïnfecteerde cellen via virale antigenen op celoppervlak → doden cel (apoptose) → virus stopt vermenigvuldiging. Cruciaal voor virus-bestrijding." },
@@ -197,12 +167,7 @@ const steps = [
     checks: [
       {
         q: "**Actieve immuniteit** krijg je via:",
-        options: [
-          "Ziekte doormaken OF vaccinatie",
-          "Antilichaam-injectie",
-          "Borstvoeding",
-          "Erfelijkheid"
-        ],
+        options: ["Een ziekte doormaken of een vaccinatie", "Een injectie met kant-en-klare antilichamen", "Antilichamen uit de moedermelk krijgen", "Afweer die je erft van je ouders"],
         answer: 0,
         wrongHints: [null, "Passieve immuniteit.", "Passief (via moedermelk).", "Geen erfelijke immuniteit."],
         uitlegPad: {
@@ -212,14 +177,9 @@ const steps = [
       },
       {
         q: "**Groepsimmuniteit** beschermt vooral:",
-        options: [
-          "Niet-vaccineerbare mensen",
-          "Gevaccineerden",
-          "Alleen kinderen",
-          "Niemand"
-        ],
+        options: ["Niet-vaccineerbare mensen", "Mensen die al gevaccineerd zijn", "Alleen kinderen onder de vier", "Vooral oudere, gezonde mensen"],
         answer: 0,
-        wrongHints: [null, "Die zijn al beschermd.", "Niet beperkt.", "Wel effect."],
+        wrongHints: [null, "Die zijn al beschermd.", "Groepsimmuniteit beschermt niet op leeftijd. Wie heeft het écht nodig?", "Gezonde ouderen kunnen zich meestal zelf laten vaccineren. Wie kan dat niet?"],
         uitlegPad: {
           stappen: [
             { titel: "Indirecte bescherming", tekst: "Bij hoge vaccinatie-graad: pathogeen kan niet circuleren. Zelfs niet-immune individu (baby <14 mnd voor BMR, chemo-patiënt, allergische voor vaccin) wordt beschermd want niemand om hem heen kan ziek worden. **Solidariteits-aspect** van vaccinatie." },
@@ -230,14 +190,9 @@ const steps = [
       },
       {
         q: "**mRNA-vaccins** (Pfizer, Moderna) werken door:",
-        options: [
-          "Eigen cellen maken zelf het antigeen",
-          "Levend virus injecteren",
-          "Antilichaam direct geven",
-          "Bloed-transfusie"
-        ],
+        options: ["Eigen cellen maken zelf het antigeen", "Een verzwakt levend virus inspuiten", "Kant-en-klare antilichamen inspuiten", "Het DNA van je cellen aanpassen"],
         answer: 0,
-        wrongHints: [null, "Niet — geen levend virus.", "Niet — actief, niet passief.", "Onzin."],
+        wrongHints: [null, "Niet — geen levend virus.", "Niet — actief, niet passief.", "mRNA komt niet in de celkern en verandert je DNA niet."],
         uitlegPad: {
           stappen: [
             { titel: "Eerste mRNA-vaccin breed gebruikt 2021", tekst: "Lipid-nanodeeltjes leveren mRNA aan cellen → cellen produceren spike-eiwit (van coronavirus) → immuunsysteem leert dit eiwit herkennen. mRNA wordt binnen dagen afgebroken. Voordeel: snel ontwikkelbaar (~weken na ontdekking pathogeen). Werd gebruikt voor COVID-19 in record-tijd." },
@@ -291,14 +246,9 @@ const steps = [
     checks: [
       {
         q: "**Type-1 diabetes** is auto-immuun omdat:",
-        options: [
-          "Immuunsysteem vernietigt insuline-cellen in pancreas",
-          "Te veel insuline geproduceerd",
-          "Suiker-tolerantie verloren",
-          "Geen verband"
-        ],
+        options: ["Immuunsysteem vernietigt insuline-cellen in pancreas", "De alvleesklier maakt juist te veel insuline", "Lichaamscellen reageren slecht op insuline", "Door te veel suiker raakt de pancreas uitgeput"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — te weinig.", "Gevolg, niet oorzaak.", "Wel verband."],
+        wrongHints: [null, "Zou te veel insuline de bloedsuiker laten stijgen of dalen?", "Dat past bij type 2. Wat maakt type 1 auto-immuun?", "Dat is een fabel. Wat betekent 'auto-immuun' precies?"],
         uitlegPad: {
           stappen: [
             { titel: "β-cellen weg", tekst: "T-cellen herkennen β-cel-antigenen als 'vreemd' → vernietigen. Geen insuline-productie → bloedsuiker stijgt. Patiënt moet levenslang insuline inspuiten. Verschilt van type-2 (insuline-resistentie, leefstijl-gerelateerd)." },
@@ -308,14 +258,9 @@ const steps = [
       },
       {
         q: "**Anafylaxie** is:",
-        options: [
-          "Levensgevaarlijke allergische reactie",
-          "Milde allergie",
-          "Auto-immuun",
-          "Bacterie-infectie"
-        ],
+        options: ["Levensgevaarlijke allergische reactie", "Milde allergische reactie zoals hooikoorts", "Afweer die eigen weefsel aanvalt", "Ernstige infectie met bacteriën in het bloed"],
         answer: 0,
-        wrongHints: [null, "Niet — extreem.", "Niet — allergisch.", "Niet — geen infectie."],
+        wrongHints: [null, "Hooikoorts is mild. Waarom heeft iemand met anafylaxie een EpiPen bij zich?", "Dat is auto-immuniteit. Waar reageert het lichaam bij anafylaxie op?", "Dat is bloedvergiftiging (sepsis) — een infectie."],
         uitlegPad: {
           stappen: [
             { titel: "EpiPens redden levens", tekst: "Systemische IgE-reactie: massa histamine → bloedvaten verwijden + lekken → bloeddruk valt + luchtweg zwelt. Binnen minuten levensbedreigend. **Adrenaline-injectie (EpiPen)** keert reactie om → naar ziekenhuis. Triggers: pinda's, schaaldieren, wespsteek, medicijnen." },
@@ -325,14 +270,9 @@ const steps = [
       },
       {
         q: "**Hygiëne-hypothese** suggereert:",
-        options: [
-          "Te schoon opgroeien geeft meer allergie",
-          "Hygiëne voorkomt allergie",
-          "Schoonmaken is altijd goed",
-          "Geen verband"
-        ],
+        options: ["Te schoon opgroeien geeft meer allergie", "Veel hygiëne beschermt kinderen tegen allergie", "Goed schoonmaken voorkomt alle infecties", "Allergie hangt alleen van je genen af"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet altijd.", "Wel theorie."],
+        wrongHints: [null, "Waarom hebben boerderijkinderen dan juist minder allergie?", "Gaat de hypothese over infecties of over allergie?", "Waarom zou allergie dan in korte tijd zo sterk stijgen?"],
         uitlegPad: {
           stappen: [
             { titel: "'Immuun-training'", tekst: "Sinds 1950 stijgen allergie + auto-immuun in westerse landen. Theorie: te schoon → immuunsysteem 'verveelt' → reageert op stuifmeel, eten. Boerderijkinderen hebben minder allergie (vroeg contact met dieren)." },
@@ -343,14 +283,9 @@ const steps = [
       },
       {
         q: "**HIV** veroorzaakt AIDS doordat:",
-        options: [
-          "T-helpercellen worden vernietigd",
-          "Bacteriële infectie",
-          "Allergische reactie",
-          "Auto-immuun"
-        ],
+        options: ["T-helpercellen worden vernietigd", "Bacteriën de longen infecteren", "Een allergische reactie op het virus", "Afweer de eigen cellen gaat aanvallen"],
         answer: 0,
-        wrongHints: [null, "Niet — virus.", "Niet — virus.", "Niet — verworven immuundeficiëntie."],
+        wrongHints: [null, "HIV is geen bacterie maar een virus.", "Bij een allergie reageert de afweer te sterk. Is dat bij AIDS zo?", "Niet — AIDS is een verworven immuundeficiëntie."],
         uitlegPad: {
           stappen: [
             { titel: "T-helpers cruciaal", tekst: "HIV bindt CD4-receptor op T-helpers → infecteert + doodt ze. CD4-aantal daalt onder 200/mm³ = AIDS. Zonder T-helpers: geen activatie B + T-killer cellen → opportunistische infecties (PCP-longontsteking, Kaposi-sarcoom). Antiretrovirale therapie (ART) houdt virus laag en behoudt CD4." },
@@ -394,7 +329,7 @@ const steps = [
           "Heeft geen invloed"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — R>1 groeit.", "Niet — niet stabiel.", "Wel."],
+        wrongHints: [null, "Bij R₀ = 2 steekt iedereen gemiddeld twee mensen aan. Kan het virus dan uitsterven?", "Stabiel hoort bij R = 1. Hier is R groter.", "Elke besmette persoon steekt twee anderen aan. Wat doet dat met het aantal zieken?"],
         uitlegPad: {
           stappen: [{ titel: "Elke besmetting verdubbelt", tekst: "R₀ = 2: elke besmette geeft 2 nieuwe. Generatie 1: 1 → 2 → 4 → 8 → ... Exponentieel. Daarom maatregelen zoeken om R<1 te krijgen. COVID-Omicron R₀ tot ~10. Mazelen R₀ 12-18 (extreem besmettelijk)." }],
           niveaus: { basis: "Exponentieel.", simpeler: "Verdubbelt per generatie.", nogSimpeler: "Groei" },
@@ -414,14 +349,9 @@ const steps = [
       },
       {
         q: "**Microbioom** = ?",
-        options: [
-          "Alle bacteriën die in/op ons lichaam leven",
-          "Klein virus",
-          "Type kanker",
-          "Vaccin"
-        ],
+        options: ["Alle bacteriën in en op ons lichaam", "Een heel klein virus in de darmen", "Een soort kanker in de darmwand", "Een vaccin met levende bacteriën"],
         answer: 0,
-        wrongHints: [null, "Niet — geen virus.", "Onzin.", "Onzin."],
+        wrongHints: [null, "Micro = klein, bioom = leefgemeenschap. Is één virus een leefgemeenschap?", "Het microbioom hoort gewoon bij een gezond lichaam. Is kanker dat?", "Een vaccin krijg je ingespoten. Het microbioom heb je altijd bij je."],
         uitlegPad: {
           stappen: [
             { titel: "Wij = 50% niet-menselijk", tekst: "~38 biljoen bacteriële cellen vs ~30 biljoen menselijke cellen. Vooral in darmen. Helpen vertering, vitamine-aanmaak, immuun-training. Verstoring (slecht dieet, te veel antibiotica) → diverse ziektes. Nieuw veld: probiotica + faeces-transplantatie." },
@@ -431,14 +361,9 @@ const steps = [
       },
       {
         q: "Bij **orgaantransplantatie**: waarom HLA-matching?",
-        options: [
-          "Om afstoting van het orgaan te voorkomen",
-          "HLA = bloedgroep",
-          "Niet belangrijk",
-          "Alleen voor cosmetisch"
-        ],
+        options: ["Om afstoting van het orgaan te voorkomen", "Omdat HLA hetzelfde is als bloedgroep", "Om het orgaan sneller te laten groeien", "Zodat het orgaan er mooier uitziet"],
         answer: 0,
-        wrongHints: [null, "Niet — los systeem.", "Wel cruciaal.", "Onzin."],
+        wrongHints: [null, "Niet — HLA is een apart systeem naast de bloedgroep.", "Een donororgaan is al volgroeid. Waar gaat het om bij een 'match'?", "Een orgaan zit binnenin. Waarom zou het afweersysteem iets met HLA doen?"],
         uitlegPad: {
           stappen: [
             { titel: "Major Histocompatibility Complex", tekst: "HLA = MHC bij mensen. Eiwitten op celoppervlak die immuunsysteem 'eigen' vs 'vreemd' onderscheiden. Bij transplantatie: hoe meer HLA-match donor/ontvanger, hoe minder afstotingsrisico. Plus levenslange immuunsuppressiva." },
@@ -449,14 +374,9 @@ const steps = [
       },
       {
         q: "**CAR-T-therapie** voor kanker:",
-        options: [
-          "Eigen T-cellen die kanker leren herkennen",
-          "Bestralingstherapie",
-          "Chirurgie",
-          "Antibiotica"
-        ],
+        options: ["Eigen T-cellen die kanker leren herkennen", "Tumor bestralen met radioactieve straling", "Tumor operatief weghalen uit het lichaam", "Antibiotica die kankercellen doden"],
         answer: 0,
-        wrongHints: [null, "Apart middel.", "Apart.", "Werkt niet."],
+        wrongHints: [null, "Dat is bestraling, een aparte behandeling.", "Dat is chirurgie, een aparte behandeling.", "Antibiotica werken tegen bacteriën, niet tegen kankercellen."],
         uitlegPad: {
           stappen: [
             { titel: "Eigen leger van de patiënt uitrusten", tekst: "T-cellen uit patiënt → laboratorium genetisch wijzigen met **Chimeric Antigen Receptor (CAR)** die kanker-antigeen herkent → terug ingespoten → vermenigvuldigen + vernietigen kanker. Eerst voor bloedkankers (leukemie, lymfoom). Spectaculaire resultaten, maar duur (€300-500k) + bijwerkingen mogelijk." },

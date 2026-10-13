@@ -77,7 +77,7 @@ const steps = [
         q: "Welk neuron stuurt prikkel **van CZS naar spier**?",
         options: ["Motorisch","Sensorisch","Schakelneuron","Bipolair"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld richting.", "Niet — binnen CZS.", "Niet relevant."],
+        wrongHints: [null, "Een sensorisch neuron vervoert informatie vanaf een zintuig. Welke kant op is dat?", "Een schakelneuron ligt helemaal binnen het CZS. Bereikt het de spier?", "Bipolair zegt iets over de vorm van een neuron (bv. in het netvlies), niet over de richting naar een spier."],
         uitlegPad: {
           stappen: [{ titel: "Motor = beweging", tekst: "**Motorisch neuron** = van CZS naar effector (spier of klier). Veroorzaakt beweging of secretie. Tegenover: **sensorisch** (zintuig → CZS). Daartussen vaak: **schakelneuron** binnen CZS." }],
           niveaus: { basis: "Motorisch.", simpeler: "Naar spier = motor", nogSimpeler: "Motor" },
@@ -104,9 +104,9 @@ const steps = [
       },
       {
         q: "Wat gebeurt tijdens **depolarisatie**?",
-        options: ["Na⁺ stroomt cel in, spanning naar +","K⁺ stroomt eruit","Cel rust","Cel deelt"],
+        options: ["Na⁺ stroomt cel in, spanning naar +", "K⁺ stroomt cel uit, spanning naar −", "Na⁺ stroomt cel uit, spanning naar −", "Cel rust, spanning blijft op −70 mV"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is repolarisatie.", "Niet — wel actief.", "Niet relevant."],
+        wrongHints: [null, "Dat gebeurt bij repolarisatie.", "Is er meer Na⁺ binnen of buiten de cel? Welke kant stroomt het dan op?", "Dat is de rustpotentiaal. Bij depolarisatie verandert de spanning."],
         uitlegPad: {
           stappen: [{ titel: "Na⁺ binnenstromen", tekst: "**Depolarisatie**: drempel overschreden → Na⁺-kanalen openen → Na⁺ stroomt naar binnen (sterke gradiënt). Spanning klimt van −70 naar +40 mV. Begint actiepotentiaal." }],
           theorie: "Cyclus: rust (−70) → depolarisatie (+40) → repolarisatie (−70) → hyperpolarisatie (−80) → rust.",
@@ -126,9 +126,9 @@ const steps = [
       },
       {
         q: "**Reflexboog** loopt via:",
-        options: ["Sensor → ruggenmerg → motorneuron → spier","Sensor → grote hersenen → spier","Direct sensor → spier","Hormoon → spier"],
+        options: ["Sensor → ruggenmerg → motorneuron → spier", "Sensor → grote hersenen → motorneuron → spier", "Sensor → motorneuron → spier, zonder CZS", "Hormoon → bloed → ruggenmerg → spier"],
         answer: 0,
-        wrongHints: [null, "Niet — te traag, reflex omzeilt hersenen.", "Niet — wel via ruggenmerg.", "Niet — verkeerd systeem."],
+        wrongHints: [null, "Niet — te traag, een reflex omzeilt de grote hersenen.", "Niet — er zit altijd een deel van het CZS tussen.", "Niet — verkeerd systeem: een reflex gaat via zenuwen."],
         uitlegPad: {
           stappen: [{ titel: "Snel = via ruggenmerg", tekst: "**Reflexboog**: receptor → sensorisch neuron → ruggenmerg (eventueel schakelneuron) → motorneuron → spier. **Omzeilt** grote hersenen. Bewustzijn ('au!') komt later via opwaartse banen." }],
           theorie: "Toets-favoriet: 'waarom is reflex zo snel?' Antwoord: omzeilt grote hersenen.",
@@ -139,7 +139,7 @@ const steps = [
         q: "Bij **MS** is welk deel beschadigd?",
         options: ["Myelineschede","Cellichaam","Synaps","Dendriet"],
         answer: 0,
-        wrongHints: [null, "Niet primair — denk aan de isolatielaag die de geleiding versnelt.", "Niet primair.", "Niet primair."],
+        wrongHints: [null, "Niet primair — MS vertraagt de geleiding. Welk deel zorgt normaal voor snelle geleiding?", "Niet primair — bij MS gaat het om de geleiding langs het axon.", "Niet primair — dendrieten vangen signalen op; bij MS raakt de geleiding vertraagd."],
         uitlegPad: {
           stappen: [{ titel: "MS = myeline aangetast", tekst: "**Multiple Sclerose**: auto-immuun-aandoening waarbij eigen afweersysteem myeline rond axonen afbreekt. Gevolgen: tragere geleiding, fouten, klachten als spierzwakte, vermoeidheid, visusproblemen. Toets-eindexamen-classic." }],
           theorie: "Onderscheid: MS = myeline. ALS = motorneuron-cellichaam. Parkinson = dopamine-neuronen. Alzheimer = hippocampus-cellen.",
@@ -201,7 +201,7 @@ const steps = [
         q: "Bij **diabetes type 1** is welk hormoon-tekort?",
         options: ["Insuline","Glucagon","Cortisol","Thyroxine"],
         answer: 0,
-        wrongHints: [null, "Niet — werkt andersom.", "Niet relevant.", "Niet — andere aandoening."],
+        wrongHints: [null, "Niet — werkt andersom.", "Cortisol is een stresshormoon uit de bijnieren. Welk hormoon verlaagt de bloedsuiker?", "Een tekort aan thyroxine is een schildklierprobleem, geen diabetes."],
         uitlegPad: {
           stappen: [{ titel: "Type 1 = β-cellen kapot", tekst: "**Diabetes type 1**: eigen afweersysteem vernietigt β-cellen alvleesklier → geen insuline-productie meer. Patiënt moet dagelijks insuline spuiten. Vaak vanaf jonge leeftijd. **Type 2**: cellen reageren slechter op insuline (resistentie) — vaak ouder + leefstijl-gerelateerd." }],
           niveaus: { basis: "Insuline.", simpeler: "DM1 = insuline-tekort", nogSimpeler: "Insuline" },
@@ -218,9 +218,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **homeostase**?",
-        options: ["Stabiele interne omstandigheden handhaven","Hormonen produceren","Hersenactiviteit","Snel groeien"],
+        options: ["Stabiele interne omstandigheden handhaven", "Zoveel mogelijk hormonen produceren", "Alle hersenactiviteit in het lichaam", "Zo snel mogelijk groeien en ontwikkelen"],
         answer: 0,
-        wrongHints: [null, "Onderdeel ervan, niet definitie.", "Niet — alleen onderdeel.", "Niet relevant."],
+        wrongHints: [null, "Onderdeel ervan, niet de definitie.", "Hersenen helpen mee, maar dat is maar een onderdeel.", "Groei is een ander proces. Denk aan je lichaamstemperatuur: wat doet je lichaam daarmee?"],
         uitlegPad: {
           stappen: [{ titel: "Inwendige balans", tekst: "**Homeostase** = stabiele interne omstandigheden (T, glucose, pH, water, etc.) ondanks externe verandering. Continu actief proces via sensors → CZS/hormonen → effectoren." }],
           niveaus: { basis: "Stabiel intern.", simpeler: "Homeostase = balans", nogSimpeler: "Balans" },
@@ -230,7 +230,7 @@ const steps = [
         q: "Hoe heet het mechanisme **te warm → zweten → afkoeling**?",
         options: ["Negatieve terugkoppeling","Positieve terugkoppeling","Reflex","Pavlov-conditie"],
         answer: 0,
-        wrongHints: [null, "Niet — versterkt juist niet, corrigeert.", "Reflex is iets anders.", "Niet relevant."],
+        wrongHints: [null, "Wordt het effect hier versterkt, of juist teruggedraaid?", "Een reflex is één snelle reactie. Hier wordt een waarde steeds bijgestuurd.", "Pavlov gaat over aangeleerd gedrag, niet over het bijsturen van je temperatuur."],
         uitlegPad: {
           stappen: [{ titel: "Negatief = tegen-bewegend", tekst: "**Negatieve terugkoppeling**: afwijking → tegenmaatregel → terug naar setpoint. Te warm → zweten → koeler. Te koud → rillen → warmer. Werkt zoals thermostaat: stabiliseert systeem." }],
           theorie: "Toets-favoriet: 'beschrijf negatieve terugkoppeling bij lichaamstemperatuur' — bovenstaande regel.",
@@ -241,7 +241,7 @@ const steps = [
         q: "Welk hormoon **bewaart water** in nieren?",
         options: ["ADH","Insuline","Adrenaline","Oestrogeen"],
         answer: 0,
-        wrongHints: [null, "Niet — bloedsuiker.", "Niet — acute stress.", "Niet relevant."],
+        wrongHints: [null, "Insuline regelt de bloedsuiker, niet het water.", "Adrenaline is voor acute stress, niet voor de waterbalans.", "Oestrogeen is een geslachtshormoon; het regelt niet je waterbalans."],
         uitlegPad: {
           stappen: [{ titel: "ADH = anti-diuretisch", tekst: "**ADH** (anti-diuretisch hormoon = vasopressine, hypofyse). 'Anti-diuretisch' = tegen plassen. Zorgt dat nieren water terugresorberen → minder + geconcentreerder urine. Bij dorst hoge ADH. Alcohol remt de ADH-afgifte → meer plassen + uitdroging." }],
           niveaus: { basis: "ADH.", simpeler: "Water vasthouden = ADH", nogSimpeler: "ADH" },
@@ -249,9 +249,9 @@ const steps = [
       },
       {
         q: "Hoe reageert lichaam bij **lage bloedsuiker**?",
-        options: ["Glucagon","Insuline","Geen actie","Slapen"],
+        options: ["Glucagon", "Insuline", "ADH", "Melatonine"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — verlaagt suiker.", "Wel actie.", "Niet relevant."],
+        wrongHints: [null, "Insuline verlaagt de suiker juist. Is dat nodig als hij al laag is?", "ADH regelt de waterbalans in de nieren, niet de bloedsuiker.", "Melatonine regelt slaap, niet je bloedsuiker."],
         uitlegPad: {
           stappen: [{ titel: "Glucagon mobiliseert", tekst: "**Lage bloedsuiker** → α-cellen alvleesklier geven **glucagon** → lever breekt **glycogeen** (opslag-glucose) af → glucose vrij in bloed → suiker normaal. Bij langere honger ook: adrenaline + cortisol." }],
           niveaus: { basis: "Glucagon.", simpeler: "Laag suiker = glucagon", nogSimpeler: "Glucagon" },
@@ -279,9 +279,9 @@ const steps = [
     checks: [
       {
         q: "Iemand schrikt — hartslag schiet omhoog binnen seconde. Welk **systeem + stof**?",
-        options: ["Sympathisch zenuwstelsel + adrenaline","Parasympathisch + insuline","Hypofyse + groeihormoon","Schildklier + thyroxine"],
+        options: ["Sympathisch zenuwstelsel + adrenaline", "Parasympathisch zenuwstelsel + insuline", "Hypofyse + groeihormoon via het bloed", "Schildklier + thyroxine via het bloed"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — rust + suiker.", "Niet — werkt veel trager.", "Niet — stofwisseling."],
+        wrongHints: [null, "Het parasympathisch zenuwstelsel hoort bij rust. Past dat bij schrikken?", "Niet — werkt veel trager.", "Niet — stofwisseling."],
         uitlegPad: {
           stappen: [{ titel: "Acute schrik = vecht-vlucht", tekst: "Schrik → sympathisch zenuwstelsel direct actief (seconden) + bijniermerg geeft adrenaline (versterkt sympathisch effect). Hartslag↑, ademhaling↑, bloedsuiker↑." }],
           niveaus: { basis: "Sympathisch + adrenaline.", simpeler: "Schrik = sympathisch+adrenaline", nogSimpeler: "Sympathisch" },
@@ -289,9 +289,9 @@ const steps = [
       },
       {
         q: "Een prikkel gaat **30 m/s** door een zenuw. Heeft die zenuw waarschijnlijk **myeline**?",
-        options: ["Ja — zonder myeline veel trager","Nee — myeline vertraagt","Geen verband","Onmogelijk te zeggen"],
+        options: ["Ja — zonder myeline veel trager", "Nee — myeline vertraagt de geleiding", "Nee — snelheid hangt af van de prikkel", "Niet te zeggen — snelheid zegt niets"],
         answer: 0,
-        wrongHints: [null, "Niet — versnelt juist.", "Wel verband.", "Wel mogelijk in te schatten."],
+        wrongHints: [null, "Wat doet een isolatielaag met de snelheid van het signaal?", "Hoe sterk een prikkel ook is, de geleidingssnelheid verandert daar niet door.", "Vergelijk met zenuwen zonder myeline (rond 1 m/s). Wat valt op?"],
         uitlegPad: {
           stappen: [{ titel: "Myeline = sprong-geleiding", tekst: "Zonder myeline: 1-5 m/s. Met myeline: tot 120 m/s via sprong-geleiding tussen knopen van Ranvier. **30 m/s** is duidelijk gemyeliniseerd." }],
           niveaus: { basis: "Ja.", simpeler: "30 m/s = met myeline", nogSimpeler: "Ja" },
@@ -312,7 +312,7 @@ const steps = [
         q: "Welk type **terugkoppeling** is bevalling (weeën versterken zichzelf)?",
         options: ["Positief","Negatief","Reflex","Hormoonloos"],
         answer: 0,
-        wrongHints: [null, "Niet — versterkt juist.", "Niet relevant.", "Wel hormonen (oxytocine)."],
+        wrongHints: [null, "Bij negatieve terugkoppeling wordt een effect teruggedraaid. Gebeurt dat bij weeën?", "Een reflex is geen vorm van terugkoppeling. Wordt het effect hier groter of kleiner?", "Wel hormonen (oxytocine)."],
         uitlegPad: {
           stappen: [{ titel: "Positief = versterking", tekst: "**Bevalling**: weeën rekken baarmoederhals → hypofyse geeft oxytocine → meer weeën → meer rek → meer oxytocine. **Positieve terugkoppeling**: versterkt zichzelf tot geboorte plaatsvindt. Daarna stopt cyclus." }],
           theorie: "Andere voorbeelden positieve terugkoppeling: bloedstolling (cascade), borstvoeding (prolactine), eisprong (LH-piek).",
@@ -321,9 +321,9 @@ const steps = [
       },
       {
         q: "Verschil zenuw vs hormoon-werking:",
-        options: ["Zenuw: snel + kort, hormoon: traag + lang","Zenuw: traag, hormoon: snel","Beide gelijk","Zenuwen niet betrokken bij regulatie"],
+        options: ["Zenuw: snel + kort, hormoon: traag + lang", "Zenuw: traag + lang, hormoon: snel + kort", "Zenuw: snel + lang, hormoon: traag + kort", "Zenuw: traag + kort, hormoon: snel + lang"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — significant verschillend.", "Wel — animale + autonoom."],
+        wrongHints: [null, "Welke reageert sneller als je je hand brandt: zenuw of hormoon?", "Hoe lang werkt een zenuwprikkel na? En een hormoon dat in het bloed blijft?", "Welke reageert sneller als je je hand brandt: zenuw of hormoon?"],
         uitlegPad: {
           stappen: [{ titel: "Snel vs aanhoudend", tekst: "**Zenuwstelsel** = elektrische signalen, ms-snel, specifiek doelcel, korte werking. **Hormoonstelsel** = chemische stoffen in bloed, sec tot dagen, alle cellen met receptor, langere werking. Samenwerken voor regulatie." }],
           niveaus: { basis: "Zenuw snel+kort, hormoon traag+lang.", simpeler: "Zenuw: snel kort, hormoon: traag lang", nogSimpeler: "Zenuw snel, hormoon traag" },

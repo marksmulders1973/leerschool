@@ -120,12 +120,7 @@ const steps = [
     checks: [
       {
         q: "Wat is **erfelijkheid**?",
-        options: [
-          "Doorgeven van eigenschappen via genen van ouders aan kinderen",
-          "Een ziekte die in sommige families vaker voorkomt",
-          "De kleur van je haar en de kleur van je ogen",
-          "Hoe lang je leeft en hoe gezond je blijft",
-        ],
+        options: ["Doorgeven van eigenschappen via genen aan kinderen", "Een ziekte die in sommige families vaker voorkomt", "De kleur van je haar en de kleur van je ogen", "Hoe lang je leeft en hoe gezond je blijft"],
         answer: 0,
         wrongHints: [
           null,
@@ -144,12 +139,7 @@ const steps = [
       },
       {
         q: "Welke eigenschap is **niet erfelijk**?",
-        options: [
-          "Welke taal je spreekt",
-          "Oogkleur",
-          "Bloedgroep",
-          "Je haarkleur",
-        ],
+        options: ["Welke taal je spreekt", "De kleur van je ogen", "Welke bloedgroep je hebt", "De kleur van je haar"],
         answer: 0,
         wrongHints: [
           null,
@@ -179,12 +169,7 @@ const steps = [
         q: "Hoeveel chromosomen zitten er in een lichaamscel van een mens?",
         options: ["46", "23", "92", "100"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Dat is het aantal paren, niet het totale aantal chromosomen — elk paar bestaat uit twee losse chromosomen.",
-          "Te veel — tel hoeveel paren er zijn en hoeveel chromosomen er in één paar zitten.",
-          "Te veel.",
-        ],
+        wrongHints: [null, "Dat is het aantal paren, niet het totale aantal chromosomen — elk paar bestaat uit twee losse chromosomen.", "Te veel — tel hoeveel paren er zijn en hoeveel chromosomen er in één paar zitten.", "Zo veel heeft een mens er niet. Hoeveel paren zijn het, en hoeveel chromosomen zitten er in één paar?"],
         uitlegPad: {
           stappen: [{ titel: "46 chromosomen = 23 paren", tekst: "Mens heeft 23 paren. Elk paar: één chromosoom van mama + één van papa. 23 × 2 = 46 totaal." }],
           woorden: [{ woord: "chromosoompaar", uitleg: "twee chromosomen met dezelfde genen" }],
@@ -222,12 +207,7 @@ const steps = [
         q: "Welke 4 basen vormen DNA?",
         options: ["A, T, C, G", "A, B, C, D", "X, Y, Z, W", "1, 2, 3, 4"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Niet de eerste vier letters van het alfabet — elke letter staat voor een base.",
-          "Geen.",
-          "Niet getallen — letters.",
-        ],
+        wrongHints: [null, "Niet de eerste vier letters van het alfabet — elke letter staat voor een base.", "X en Y ken je van de geslachtschromosomen. Welke letters horen bij de vier basen?", "Niet getallen — letters."],
         uitlegPad: {
           stappen: [{ titel: "A-T en C-G", tekst: "DNA gebruikt 4 letters: Adenine (A), Thymine (T), Cytosine (C), Guanine (G). A koppelt altijd aan T, C koppelt altijd aan G." }],
           woorden: [{ woord: "basenpaar", uitleg: "twee basen die altijd samen voorkomen" }],
@@ -498,12 +478,7 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen **erfelijk** en **aangeboren**?",
-        options: [
-          "Erfelijk = via DNA van ouders; aangeboren = aanwezig vanaf de geboorte",
-          "Geen verschil — het zijn twee woorden voor hetzelfde",
-          "Erfelijk = door een ongeluk; aangeboren = via DNA van ouders",
-          "Erfelijk is altijd ernstiger dan aangeboren",
-        ],
+        options: ["Erfelijk = via DNA van ouders; aangeboren = al vanaf de geboorte", "Geen verschil — beide betekenen dat je het via DNA kreeg", "Erfelijk = door een ongeluk; aangeboren = via DNA van ouders", "Erfelijk = altijd ernstig; aangeboren = altijd onschuldig"],
         answer: 0,
         wrongHints: [
           null,
@@ -555,12 +530,7 @@ const steps = [
       },
       {
         q: "Wat is **CRISPR**?",
-        options: [
-          "Een 'genetische schaar' om DNA precies te bewerken",
-          "Een virus dat cellen ziek maakt",
-          "Een DNA-test om vaderschap aan te tonen",
-          "Een erfelijke ziekte van het bloed",
-        ],
+        options: ["Een 'genetische schaar' die DNA bewerkt", "Een virus dat cellen in je lichaam ziek maakt", "Een DNA-test om vaderschap aan te tonen", "Een erfelijke ziekte van de rode bloedcellen"],
         answer: 0,
         wrongHints: [
           null,
@@ -631,19 +601,9 @@ const steps = [
       },
       {
         q: "Wie heeft de hoogste kans op **kleurenblindheid**?",
-        options: [
-          "Mannen — slechts 1 X-chromosoom",
-          "Vrouwen — 2 X-chromosomen",
-          "Even hoog",
-          "Mensen met blauwe ogen",
-        ],
+        options: ["Mannen — slechts 1 X-chromosoom", "Vrouwen — 2 X-chromosomen", "Even hoog — geen geslachtsverschil", "Blauwogigen — minder pigment in de ogen"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Andersom — vrouwen hebben 'back-up' X.",
-          "Verschil door aantal X-chromosomen.",
-          "Geen verband met oogkleur.",
-        ],
+        wrongHints: [null, "Een vrouw met één 'kapot' allel heeft nog een tweede X. Wat doet dat met haar kans?", "Op welk chromosoom ligt het gen voor kleurenzien? Hebben mannen en vrouwen daar evenveel van?", "Oogkleur en kleurenzien worden door verschillende genen bepaald."],
         uitlegPad: {
           stappen: [{ titel: "Mannen 1 X — geen back-up", tekst: "Kleurenblindheid-allel zit op X. Vrouwen (XX) hebben 2 kansen — kapot allel wordt gemaskeerd. Mannen (XY) hebben maar 1 X — geen back-up." }],
           woorden: [{ woord: "X-recessief", uitleg: "ziekte-allel op X, recessief uitgedrukt" }],
@@ -657,12 +617,7 @@ const steps = [
         q: "Hoeveel chromosoomparen heeft een mens?",
         options: ["23", "46", "92", "100"],
         answer: 0,
-        wrongHints: [
-          null,
-          "46 is het totaal aantal chromosomen — paren is helft.",
-          "Te veel.",
-          "Te veel.",
-        ],
+        wrongHints: [null, "Dat is het totaal aantal losse chromosomen. Hoeveel paren vormen die samen?", "Zo veel heeft een mens er niet. Hoeveel chromosomen zitten er in één paar?", "Zo veel heeft een mens er niet. Hoeveel chromosomen heeft een lichaamscel in totaal?"],
         uitlegPad: {
           stappen: [{ titel: "23 paren = 46 totaal", tekst: "Mens heeft 46 chromosomen, samengevoegd tot 23 paren. Per paar: één van mama + één van papa." }],
           woorden: [{ woord: "diploïd", uitleg: "twee sets chromosomen" }],
@@ -675,14 +630,14 @@ const steps = [
       { q: "Twee heterozygote ouders (Aa × Aa). Kans dominant fenotype kind?", options: ["75%","50%","25%","100%"], answer: 0, wrongHints: [null,"Niet — maak een Punnett-vierkant en tel hoeveel uitkomsten dominant fenotype geven.","Te laag — hoeveel van de vier Punnett-vakjes tonen een recessief fenotype?","Niet — kan er bij Aa × Aa ook een kind met twee recessieve allelen ontstaan?"] },
       { q: "**Cystische fibrose** is een recessieve aandoening. Beide ouders Aa. Kans op ziek kind?", options: ["25%","50%","75%","100%"], answer: 0, wrongHints: [null,"Te hoog — maak een Punnett-vierkant: welke combinatie is ziek, en in hoeveel vakjes staat die?","Te hoog — dragers (Aa) zijn niet ziek.","Niet — gezonde dragers mogelijk."] },
       { q: "Wat is het verschil tussen **genotype** en **fenotype**?", options: ["Genotype = DNA-code; fenotype = zichtbaar kenmerk","Genotype = zichtbaar kenmerk; fenotype = DNA-code","Genotype en fenotype betekenen hetzelfde","Genotype = bij mannen; fenotype = bij vrouwen"], answer: 0, wrongHints: [null,"Precies omgedraaid — geno hoort bij genen, feno bij wat je ziet.","Wel verschil — kenmerk zichtbaar vs erfelijke code.","Heeft dit iets met man of vrouw te maken?"] },
-      { q: "**Dominante allel** wordt geschreven als?", options: ["Hoofdletter (A)","Kleine letter (a)","Cijfer","Geen symbool"], answer: 0, wrongHints: [null,"Recessief.","Niet relevant.","Wel symbool."] },
-      { q: "**Recessief allel** wordt geschreven als?", options: ["Kleine letter (a)","Hoofdletter (A)","Cijfer","Geen symbool"], answer: 0, wrongHints: [null,"Dominant.","Niet relevant.","Wel."] },
+      { q: "**Dominante allel** wordt geschreven als?", options: ["Hoofdletter (A)", "Kleine letter (a)", "Cijfer (1)", "Griekse letter (α)"], answer: 0, wrongHints: [null, "Welk soort allel krijgt de kleine letter: het sterke of het zwakke?", "In een kruisingsschema zie je letters, geen cijfers. Welke soort letter?", "Biologen gebruiken gewone letters uit ons alfabet. Groot of klein?"] },
+      { q: "**Recessief allel** wordt geschreven als?", options: ["Kleine letter (a)", "Hoofdletter (A)", "Cijfer (1)", "Griekse letter (α)"], answer: 0, wrongHints: [null, "Welk soort allel krijgt de hoofdletter: het sterke of het zwakke?", "In een kruisingsschema zie je letters, geen cijfers. Welke soort letter?", "Biologen gebruiken gewone letters uit ons alfabet. Groot of klein?"] },
       { q: "**Homozygoot** betekent?", options: ["Beide allelen gelijk","Beide verschillend","1 allel","Geen allelen"], answer: 0, wrongHints: [null,"Heterozygoot.","Onmogelijk in diploïd.","Onmogelijk."] },
       { q: "**Heterozygoot** = ?", options: ["Aa","AA","aa","Helemaal niets"], answer: 0, wrongHints: [null,"Homozygoot dominant.","Homozygoot recessief.","Onmogelijk."] },
-      { q: "Aantal chromosomen in **mensenlichaamscel** (geen geslachtscel)?", options: ["46","23","48","100"], answer: 0, wrongHints: [null,"Geslachtscel.","Niet voor mensen.","Te veel."] },
-      { q: "Een **Punnett-vierkant** wordt gebruikt om?", options: ["Kruisingen + kansen tonen","Cellen tekenen","DNA-volgorde","Sterftecijfer"], answer: 0, wrongHints: [null,"Niet primair.","Niet primair.","Niet."] },
-      { q: "**XX** in mensen = ?", options: ["Vrouwelijk","Mannelijk","Onbepaald","Niet relevant"], answer: 0, wrongHints: [null,"XY.","Wel bekend.","Wel."] },
-      { q: "**XY** in mensen = ?", options: ["Mannelijk","Vrouwelijk","Onbepaald","Niet relevant"], answer: 0, wrongHints: [null,"XX.","Wel bekend.","Wel."] },
+      { q: "Aantal chromosomen in **mensenlichaamscel** (geen geslachtscel)?", options: ["46","23","48","100"], answer: 0, wrongHints: [null, "Geslachtscel.", "Niet voor mensen.", "Zo veel heeft een mens er niet. Hoeveel paren zijn het, en hoeveel chromosomen zitten er in één paar?"] },
+      { q: "Een **Punnett-vierkant** wordt gebruikt om?", options: ["Kruisingen en hun kansen tonen", "Cellen en hun delen tekenen", "De volgorde van DNA-basen lezen", "Groei van een populatie tonen"], answer: 0, wrongHints: [null, "In het vierkant staan letters voor allelen, geen tekening van een cel.", "In het vierkant staan allelen van twee ouders, geen rij basen.", "Een Punnett-vierkant gaat over de kinderen van twee ouders, niet over een hele groep."] },
+      { q: "**XX** in mensen = ?", options: ["Vrouwelijk", "Mannelijk", "Eeneiige tweeling", "Onvruchtbaar"], answer: 0, wrongHints: [null, "Welk chromosoom heeft een man wél, dat hier ontbreekt?", "XX zegt iets over één persoon, niet over een tweeling.", "XX is het gewone patroon bij heel veel mensen. Wat bepalen de X en Y?"] },
+      { q: "**XY** in mensen = ?", options: ["Mannelijk", "Vrouwelijk", "Eeneiige tweeling", "Onvruchtbaar"], answer: 0, wrongHints: [null, "Hoeveel X-chromosomen heeft een vrouw? Is dat hier zo?", "XY zegt iets over één persoon, niet over een tweeling.", "XY is het gewone patroon bij heel veel mensen. Wat bepalen de X en Y?"] },
       { q: "**Open vraag**: hoe heet de wetenschapper die de erfelijkheidswetten ontdekte (met erwten)?", kind: "open", acceptedAnswers: ["mendel", "gregor mendel"], explanation: "Gregor Mendel — monnik in Brno (nu Tsjechië), jaren 1860. Erfelijkheids-grondlegger met erwt-experimenten." },
       { q: "**Open vraag**: typ het resultaat van Punnett-kruising Aa × Aa als percentage dominant fenotype.", kind: "open", acceptedAnswers: ["75", "75%", "75 %"], explanation: "Aa × Aa = 1 AA + 2 Aa + 1 aa. Dominant fenotype: 3 van 4 = 75%." },
     ],

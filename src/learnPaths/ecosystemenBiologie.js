@@ -65,7 +65,7 @@ const steps = [
     checks: [
       {
         q: "Wat is een **ecosysteem**?",
-        options: ["Alle levende + niet-levende delen van een gebied die op elkaar inwerken", "Alle dieren die samen in een bepaald gebied leven", "Alle planten en dieren van een gebied, zonder water en bodem", "Alle individuen van één soort die in een gebied leven"],
+        options: ["Alle levende en niet-levende delen van een gebied samen", "Alle dieren die samen in een bepaald gebied leven", "Alle planten en dieren van een gebied, zonder water en bodem", "Alle individuen van één soort die in een gebied leven"],
         answer: 0,
         wrongHints: [null, "Alleen dieren? Waar blijven de planten, het water en de grond?", "Hoort de niet-levende omgeving er bij een ecosysteem ook bij?", "Dat is een populatie — een ecosysteem omvat veel meer."],
       },
@@ -77,9 +77,9 @@ const steps = [
       },
       {
         q: "Wat is een **populatie**?",
-        options: ["Alle individuen van 1 soort in een gebied", "Alle dieren in een gebied", "Alle soorten in een bos samen", "Eén plant of dier"],
+        options: ["Alle individuen van 1 soort in een gebied", "Alle dieren van verschillende soorten in een gebied", "Alle planten en dieren van een bos samen", "Eén individu van een soort in een gebied"],
         answer: 0,
-        wrongHints: [null, "Te ruim — alle dieren zijn meerdere soorten.", "Dat is een levensgemeenschap.", "Dat is een individu."],
+        wrongHints: [null, "Verschillende soorten samen — is dat nog één populatie?", "Dat is een levensgemeenschap.", "Eén exemplaar is een individu. Hoeveel horen er bij een populatie?"],
       },
       {
         q: "Welke is een **biotische** factor?",
@@ -116,9 +116,9 @@ const steps = [
       },
       {
         q: "Wat doet een **afbreker**?",
-        options: ["Breekt dood materiaal af tot voedingsstoffen", "Eet planten", "Eet andere dieren", "Maakt voedsel via zonlicht"],
+        options: ["Breekt dood materiaal af tot voedingsstoffen", "Eet levende planten op voor energie", "Jaagt op andere dieren en eet ze op", "Maakt zelf suiker met behulp van zonlicht"],
         answer: 0,
-        wrongHints: [null, "Dat is herbivoor.", "Dat is carnivoor.", "Dat is producent."],
+        wrongHints: [null, "Dat doet een planteneter (herbivoor).", "Dat doet een vleeseter (carnivoor).", "Dat doet een producent."],
       },
       {
         q: "Een **leeuw** eet zebra's. Wat is een leeuw?",
@@ -159,31 +159,31 @@ const steps = [
         q: "Welk percentage **energie** gaat per niveau ongeveer door?",
         options: ["~10%", "~50%", "~100%", "~1%"],
         answer: 0,
-        wrongHints: [null, "Te veel.", "Onmogelijk.", "Te weinig — dat is 2 niveaus."],
+        wrongHints: [null, "Een dier gebruikt het meeste voedsel voor bewegen en warmte. Blijft dan de helft over?", "Een dier verbruikt zelf ook energie om te leven. Kan dan alles doorgaan?", "Dan zou er na twee niveaus bijna niets over zijn. Is het per stap echt zó weinig?"],
       },
       {
         q: "Welk organisme is meestal het **zeldzaamst** in een ecosysteem?",
         options: ["Toproofdier", "Plant", "Herbivoor", "Insect"],
         answer: 0,
-        wrongHints: [null, "Vaak juist meest aanwezig.", "Talrijker dan toproofdier.", "Talrijker dan toproofdier."],
+        wrongHints: [null, "Planten vormen de onderste laag van de energiepiramide. Zijn die schaars?", "Een planteneter staat laag in de piramide. Is daar weinig energie?", "Hoe hoger in de piramide, hoe minder energie. Staan insecten hoog of laag?"],
       },
       {
         q: "In voedselketen 'gras → muis → uil' — wat **eet de muis**?",
-        options: ["Gras", "Uil", "Beide", "Niets"],
+        options: ["Gras", "Uil", "Zonlicht", "Uil en gras"],
         answer: 0,
-        wrongHints: [null, "Andersom — uil eet muis.", "Niet uil.", "Wel iets."],
+        wrongHints: [null, "De pijl wijst van muis naar uil. Wie eet hier wie?", "Zonlicht gebruikt een plant om voedsel te maken. Kan een muis zonlicht eten?", "Eet een kleine muis een uil op? Volg de pijlen nog eens."],
       },
       {
         q: "Wat gebeurt als **wolven verdwijnen** uit Yellowstone-park?",
-        options: ["Herten worden te talrijk, ecosysteem verstoort", "Niets", "Meer wolven", "Mensen krijgen meer ruimte"],
+        options: ["Herten worden te talrijk, het ecosysteem raakt verstoord", "Er verandert weinig, het ecosysteem blijft gelijk", "Het aantal herten daalt, het bos groeit harder", "Planten en bomen groeien overal veel beter"],
         answer: 0,
-        wrongHints: [null, "Wel veel impact.", "Tegenovergesteld.", "Niet hoofdgevolg."],
+        wrongHints: [null, "Wolven eten herten. Wat gebeurt er met de herten als hun jager weg is?", "Daalt het aantal prooidieren als hun jager verdwijnt?", "Wie eten de jonge boompjes op als er veel herten rondlopen?"],
       },
       {
         q: "In een voedselketen **plant → konijn → vos** — wat is een **producent**?",
-        options: ["Plant", "Konijn", "Vos", "Geen"],
+        options: ["Plant", "Konijn", "Vos", "Zon"],
         answer: 0,
-        wrongHints: [null, "Consument (planteneter).", "Consument (vleeseter).", "Wel iemand."],
+        wrongHints: [null, "Een konijn eet iets op. Maakt het zelf voedsel?", "Een vos jaagt op konijnen. Maakt hij zelf voedsel?", "De zon levert energie, maar is geen levend wezen. Wie in de keten maakt voedsel?"],
       },
       {
         q: "Een **consument** is een organisme dat?",
@@ -193,9 +193,9 @@ const steps = [
       },
       {
         q: "**Reducenten** (afbrekers) doen wat?",
-        options: ["Dode organismen afbreken naar voedingsstoffen", "Levende planten opeten", "Zonlicht omzetten in suiker", "Andere dieren vangen en opeten"],
+        options: ["Dode resten afbreken tot voedingsstoffen", "Levende planten opeten voor hun energie", "Zonlicht met bladgroen omzetten in suiker", "Op andere dieren jagen en ze opeten"],
         answer: 0,
-        wrongHints: [null, "Niet — consumenten doen dat.", "Niet — producenten doen dat.", "Dat doen roofdieren (carnivoren)."],
+        wrongHints: [null, "Dat doen consumenten (planteneters).", "Dat doen producenten.", "Dat doen roofdieren (carnivoren)."],
       },
     ],
   },
@@ -208,27 +208,27 @@ const steps = [
     checks: [
       {
         q: "Wat is de **koolstofkringloop**?",
-        options: ["CO₂ → plant → dier → afbreker → CO₂", "Water → wolk → regen", "Stikstof → bacterie → plant", "Zon → energie → warmte"],
+        options: ["CO₂ → plant → dier → afbreker → CO₂", "Water → waterdamp → wolk → regen → zee", "N₂ → bacterie → nitraat → plant → dier", "Zon → plant → dier → warmte → ruimte"],
         answer: 0,
-        wrongHints: [null, "Dat is waterkringloop.", "Dat is N-kringloop.", "Dat is energiestroom (geen kringloop)."],
+        wrongHints: [null, "Dat is de waterkringloop.", "Dat is de stikstofkringloop.", "Dat is een energiestroom (geen kringloop)."],
       },
       {
         q: "Waarom stijgt **CO₂ in lucht** sinds 19e eeuw?",
-        options: ["Mensen verbranden veel fossiele brandstof", "Meer planten", "Meer dieren ademen", "Onbekend"],
+        options: ["Mensen verbranden veel fossiele brandstof", "Er groeien steeds meer planten op aarde", "Er leven veel meer dieren die ademen", "Vulkanen spuwen steeds meer gassen uit"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld effect.", "Geen significante invloed.", "Wel bekend."],
+        wrongHints: [null, "Planten nemen CO₂ juist op. Wat doet dat met de hoeveelheid in de lucht?", "Ademen geeft CO₂, maar is dat sinds 1800 zo sterk toegenomen?", "Zijn er sinds 1800 echt veel meer vulkaanuitbarstingen gekomen?"],
       },
       {
         q: "Wat is de **stikstofkringloop**?",
-        options: ["N₂ uit lucht → bacterie → nitraten → plant → terug", "Water → waterdamp → wolk → regen → zee", "CO₂ → plant → dier → afbreker → CO₂", "Zon → plant → dier → warmte → ruimte"],
+        options: ["N₂ → bacterie → nitraat → plant → terug", "Water → waterdamp → wolk → regen → zee", "CO₂ → plant → dier → afbreker → CO₂", "Zon → plant → dier → warmte → ruimte"],
         answer: 0,
         wrongHints: [null, "Dat is de waterkringloop.", "Dat is de koolstofkringloop.", "Dat is een energiestroom — geen kringloop."],
       },
       {
         q: "Verschil tussen **materie** en **energie**?",
-        options: ["Materie kringloopt, energie stroomt door", "Beide kringlopen", "Beide stromen door", "Geen verschil"],
+        options: ["Materie kringloopt, energie stroomt door", "Allebei gaan ze rond in een kringloop", "Allebei stromen ze door en raken op", "Energie kringloopt, materie stroomt door"],
         answer: 0,
-        wrongHints: [null, "Energie kringloopt niet.", "Materie blijft circuleren.", "Wel verschil."],
+        wrongHints: [null, "Krijgt een plant zijn energie terug van de afbreker, of steeds nieuw van de zon?", "Wat doen afbrekers met de stoffen uit dode resten?", "Komt de energie van de zon ooit terug bij de plant?"],
         uitlegPad: {
           stappen: [
             { titel: "Materie kringloopt", tekst: "Atomen kunnen niet uit het niets verschijnen of verdwijnen. Een koolstof-atoom in jouw lichaam kan ooit in een dinosaurus hebben gezeten. Dat is materie-cyclus." },
@@ -268,15 +268,15 @@ const steps = [
       },
       {
         q: "Wat is een **invasieve soort**?",
-        options: ["Nieuwe soort die andere verdringt", "Bedreigde soort", "Grote soort", "Soort met veel pups"],
+        options: ["Nieuwe soort die andere verdringt", "Inheemse soort die bijna uitsterft", "Soort die heel groot wordt en veel eet", "Soort die heel veel jongen krijgt"],
         answer: 0,
-        wrongHints: [null, "Andersom — invasief is sterk.", "Niet noodzakelijk groot.", "Geen voortplanting-iets."],
+        wrongHints: [null, "Invasieve soorten zijn juist heel sterk. Past 'bijna uitsterven' daarbij?", "Gaat het bij invasief om grootte, of om wat de soort met andere soorten doet?", "Veel jongen kan helpen, maar wat betekent 'invasief' letterlijk?"],
       },
       {
         q: "Wat is **endemisch**?",
-        options: ["Komt alleen in 1 gebied voor", "Veel voorkomend", "Ziek", "Uitgestorven"],
+        options: ["Komt alleen in 1 gebied voor", "Komt over de hele wereld voor", "Is een besmettelijke ziekte", "Is helemaal uitgestorven"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Endemisch ≠ ziekte (al betekent pandemie wél 'over de hele wereld').", "Endemisch betekent juist nog wél bestaan."],
+        wrongHints: [null, "Een soort die overal leeft is niet bijzonder voor één plek. Wat betekent endemisch dan?", "Endemisch ≠ ziekte (al betekent pandemie wél 'over de hele wereld').", "Endemisch betekent juist nog wél bestaan."],
       },
     ],
   },
@@ -303,7 +303,7 @@ const steps = [
         q: "Energie gaat **per niveau** ongeveer hoeveel door?",
         options: ["~10%", "~50%", "~99%", "~1%"],
         answer: 0,
-        wrongHints: [null, "Te veel.", "Onmogelijk.", "Te weinig."],
+        wrongHints: [null, "Een dier gebruikt het meeste voedsel voor bewegen en warmte. Blijft dan de helft over?", "Een dier verbruikt zelf ook energie om te leven. Kan dan bijna alles doorgaan?", "Dan zou er na twee niveaus bijna niets over zijn. Is het per stap echt zó weinig?"],
       },
       {
         q: "Wat stroomt **door een ecosysteem** als eenrichting?",
@@ -313,9 +313,9 @@ const steps = [
       },
       {
         q: "Welke is een **invasieve soort** in NL?",
-        options: ["Amerikaanse rivierkreeft", "Eekhoorn", "Vos", "Hert"],
+        options: ["Amerikaanse rivierkreeft", "Europese rode eekhoorn", "Noordse woelmuis", "Europees edelhert"],
         answer: 0,
-        wrongHints: [null, "Komt al eeuwen in NL voor.", "NL-roofdier, hier thuis.", "NL-zoogdier, behoort tot eigen natuur."],
+        wrongHints: [null, "Komt al eeuwen in NL voor.", "Klinkt uitheems, maar leeft al sinds de ijstijd in Nederland.", "Behoort al eeuwen tot de eigen natuur."],
       },
       {
         q: "Wat is de rol van **schimmels** in ecosysteem?",

@@ -138,7 +138,7 @@ const steps = [
       },
       {
         q: "Wat zorgt ervoor dat lymfevocht maar in één richting stroomt?",
-        options: ["Kleppen in lymfevaten + spierwerking", "Het hart pompt lymfe rond", "Diafragma duwt lymfe omhoog", "Zwaartekracht"],
+        options: ["Kleppen in lymfevaten + spierwerking", "Het hart pompt de lymfe door de vaten", "Het middenrif duwt de lymfe omhoog", "Zwaartekracht trekt de lymfe naar beneden"],
         answer: 0,
         wrongHints: [
           null,
@@ -215,24 +215,14 @@ const steps = [
         q: "Welke spier is het belangrijkste voor de ademhaling?",
         options: ["Middenrif", "Hart", "Tussenribspieren alleen", "Buikspieren"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Hart pompt bloed, geen lucht.",
-          "Tussenribspieren helpen wel mee maar middenrif is hoofdspier.",
-          "Buikspieren helpen bij geforceerd uitademen maar zijn niet hoofdspier.",
-        ],
+        wrongHints: [null, "Hart pompt bloed, geen lucht.", "Tussenribspieren helpen wel mee, maar doen niet het meeste werk. Welke spier doet dat wel?", "Buikspieren helpen bij hard uitademen, maar bij gewoon ademen doen ze weinig."],
         explanation: "Middenrif is de grote koepelvormige spier onder de longen. Trekt samen = zakt = borstkas groter = lucht stroomt in.",
       },
       {
         q: "Bloed dat de longen verlaat (via longader) bevat:",
-        options: ["veel zuurstof + weinig CO₂", "veel CO₂ + weinig zuurstof", "alleen zuurstof", "alleen CO₂"],
+        options: ["veel zuurstof + weinig CO₂", "veel CO₂ + weinig zuurstof", "weinig zuurstof + weinig CO₂", "veel zuurstof + veel CO₂"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Andersom — dát is bloed dat NAAR de longen gaat.",
-          "Bloed bevat altijd ook andere stoffen + wat CO₂.",
-          "Bloed bevat altijd zowel O₂ als CO₂, alleen verhouding verschilt.",
-        ],
+        wrongHints: [null, "Andersom — dát is bloed dat NAAR de longen gaat.", "In de longen neemt het bloed iets op. Waar zit daarna dan meer van in?", "In de longen geeft het bloed ook iets af. Waar blijft daarna weinig van over?"],
         explanation: "Na gaswisseling: bloed heeft O₂ opgenomen + CO₂ afgegeven. Verlaat longen via longader → hart → lichaam.",
       },
       {
@@ -365,12 +355,7 @@ const steps = [
         q: "In welk orgaan ontstaat ureum?",
         options: ["lever", "nier", "darm", "maag"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Nier VERWIJDERT ureum uit bloed, maakt het niet zelf.",
-          "Darm = opname voedingsstoffen + uitscheiding ontlasting.",
-          "Maag = vertering eiwit. Aminozuren komen daarna in lever terecht.",
-        ],
+        wrongHints: [null, "Nier VERWIJDERT ureum uit bloed, maakt het niet zelf.", "Darm = opname voedingsstoffen + uitscheiding ontlasting.", "Maag = vertering eiwit. Waar gaan de aminozuren daarna naartoe om afgebroken te worden?"],
         explanation: "Lever breekt aminozuren (uit eiwit-vertering) af en maakt daarbij ureum als afvalstof. Ureum gaat via bloed naar nieren → urine.",
       },
       {
@@ -444,7 +429,7 @@ const steps = [
         q: "Welke spier is de belangrijkste ademspier?",
         options: ["Middenrif", "Hart", "Buikspieren", "Tussenribspieren alleen"],
         answer: 0,
-        wrongHints: [null, "Hart pompt bloed, niet lucht.", "Buikspieren helpen forceren maar zijn niet hoofdspier.", "Tussenribspieren helpen, maar middenrif doet ~75% van het werk."],
+        wrongHints: [null, "Hart pompt bloed, niet lucht.", "Buikspieren helpen bij hard uitademen, maar bij gewoon ademen doen ze weinig.", "Tussenribspieren helpen wel mee, maar doen niet het meeste werk. Welke spier doet dat wel?"],
         explanation: "Middenrif = grote koepelspier onder longen. Trekt samen = zakt = borstkas groter = lucht in.",
       },
     ],
