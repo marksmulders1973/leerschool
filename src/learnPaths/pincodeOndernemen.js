@@ -100,9 +100,9 @@ const steps = [
       },
       {
         q: "Een ondernemer **neemt risico**. Wat betekent dat?",
-        options: ["Hij kan zijn geld verliezen", "Hij krijgt altijd zijn geld terug", "Hij betaalt geen belasting", "Hij hoeft niet te werken"],
+        options: ["Hij kan zijn geld verliezen", "Hij moet een verzekering afsluiten", "Hij is verplicht een lening af te sluiten", "Hij mag de prijzen zelf bepalen"],
         answer: 0,
-        wrongHints: [null, "Geen garantie — anders was het geen risico.", "Ondernemers betalen wél belasting.", "Ondernemers werken vaak heel hard juist door risico."],
+        wrongHints: [null, "Een verzekering kan helpen, maar daar gaat 'risico nemen' niet over. Wat kan er misgaan met wat hij in zijn bedrijf stopt?", "Lenen mag, maar is niet verplicht. Wat staat er op het spel als het tegenzit?", "Dat klopt vaak, maar dat is vrijheid, geen risico. Wat kan hij kwijtraken?"],
         uitlegPad: {
           stappen: [{ titel: "Geld weg = mogelijk", tekst: "Risico = de kans dat het MIS gaat. De ondernemer kan zijn ingelegde geld kwijtraken als het bedrijf niet werkt." }],
           woorden: [{ woord: "ondernemersrisico", uitleg: "Kans op verlies van investering bij slecht resultaat. Daarom recht op winst als het wél lukt." }, { woord: "investering", uitleg: "Geld dat je in een bedrijf steekt: voorraad, machines, marketing." }],
@@ -187,9 +187,9 @@ const steps = [
       },
       {
         q: "Sam zet een Instagram-poll uit. Welk type onderzoek is dat?",
-        options: ["Veldonderzoek", "Deskresearch", "SWOT-analyse", "Boekhouding"],
+        options: ["Veldonderzoek", "Deskresearch", "SWOT-analyse", "Concurrentieanalyse"],
         answer: 0,
-        wrongHints: [null, "Desk = bestaande info verzamelen.", "SWOT = analyse-methode, geen onderzoek-type.", "Boekhouding = administratie."],
+        wrongHints: [null, "Bij deskresearch gebruik je informatie die al bestaat. Bestonden de antwoorden op Sams poll al?", "Met een SWOT zet je sterke en zwakke punten op een rij. Stelt Sam hier vragen aan mensen?", "Bij een concurrentieanalyse bekijk je andere bedrijven. Wie vraagt Sam hier iets?"],
         uitlegPad: {
           stappen: [{ titel: "Vragen aan publiek", tekst: "Een poll = jij stelt vragen aan jouw publiek (potentiële klanten). Dat is een digitale ENQUÊTE = veldonderzoek." }],
           woorden: [{ woord: "enquête", uitleg: "Vragenlijst aan een groep mensen om hun mening of gedrag te onderzoeken." }, { woord: "veldonderzoek", uitleg: "Zelf nieuwe data verzamelen — interview, enquête, observatie, test." }],
@@ -203,7 +203,7 @@ const steps = [
         q: "Wat staat de **W** voor in een SWOT-analyse?",
         options: ["Weaknesses", "Wins", "Wishes", "Workers"],
         answer: 0,
-        wrongHints: [null, "Niet wat het betekent.", "Niet de afkorting.", "Workers heeft niets met SWOT te maken."],
+        wrongHints: [null, "Wins klinkt positief, maar het positieve staat al bij de S (Strengths). Wat is de tegenhanger van sterk?", "Wensen staan niet in een SWOT. Na de sterke punten (S) komen de…?", "Personeel kan een sterk of zwak punt zijn, maar is geen letter van SWOT. Wat is het tegenovergestelde van Strengths?"],
         uitlegPad: {
           stappen: [{ titel: "SWOT-letters", tekst: "S = Strengths (sterk). W = Weaknesses (zwak). O = Opportunities (kansen). T = Threats (bedreigingen). 4 kwadranten." }],
           woorden: [{ woord: "SWOT", uitleg: "Analyse-methode: sterke + zwakke punten (INTERN) en kansen + bedreigingen (EXTERN) in 1 schema." }, { woord: "Weaknesses", uitleg: "Engels voor zwakke punten — wat kan in jouw bedrijf BETER?" }],
@@ -217,7 +217,7 @@ const steps = [
         q: "Wat zou een **bedreiging** (T) zijn voor een nieuwe foodtruck?",
         options: ["Een grote concurrent op hetzelfde festival", "Een trouwe groep vaste klanten in de buurt", "Lage huur voor een goede standplaats", "Veel goede recensies van eerdere klanten"],
         answer: 0,
-        wrongHints: [null, "Trouwe klanten = sterk punt.", "Lage huur = kans.", "Goede recensies = sterk punt."],
+        wrongHints: [null, "Vaste klanten zijn iets goeds van jezelf (een sterkte). Een bedreiging komt van buiten en is negatief.", "Een lage huur is gunstig. Is iets gunstigs een bedreiging?", "Goede recensies helpen je juist. Wat van buitenaf kan je omzet afpakken?"],
         uitlegPad: {
           stappen: [{ titel: "Wat KAN MIS GAAN buiten jezelf?", tekst: "Bedreiging = EXTERN gevaar dat je niet zelf controleert. Een concurrent die je markt opslokt = klassieke T." }],
           woorden: [{ woord: "bedreiging (T)", uitleg: "Externe ontwikkeling die jou kan SCHADEN: concurrenten, wetgeving, recessie, weer." }, { woord: "kans (O)", uitleg: "Externe ontwikkeling die jou kan HELPEN: trend, technologie, wegvallen concurrent." }],
