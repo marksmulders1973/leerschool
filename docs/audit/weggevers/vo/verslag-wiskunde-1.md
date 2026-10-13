@@ -348,3 +348,47 @@ Alle 559 meerkeuzevragen in de 16 bestanden zelf nagerekend; geen gemarkeerd ant
 - **stelsels** (stelsels.js) stap 12 vraag 1 · hint 3: "Hoe komt 7,5 eruit? Even nagaan welk getal je deelt en door wat." → "7,5 is 15 / 2. Hoeveel x heb je na het optellen: 2x of 3x?" · hint 4: "Geen ingewikkelde breuk hier — je krijgt een mooi heel getal als je correct deelt." → "3,33 is 10 / 3. Welk getal staat rechts na het optellen: 10 of 15?"
 - **stelsels** (stelsels.js) stap 12 vraag 4 · hint 2: "Stel eerst het stelsel op met h en k — vul dan beide gegevens in en los op." → "Vul h = 4 in: dan wegen 2 katten samen 4 kg, dus k = 2. Klopt 2h + k = 11 dan?"
 - **stelsels** (stelsels.js) stap 13 vraag 2 · hint 2: "Stel het stelsel op met t1 en t2 — klopt de tijd én de afstand voor dit getal?" → "Bij 1 uur fiets je 15 km; er blijft 45 km over voor 2,5 uur. Is dat 20 km/u?" · hint 3: "Stel het stelsel op met t1 en t2 — klopt de tijd én de afstand voor dit getal?" → "Bij 1,5 uur fiets je 22,5 km; er blijft 37,5 km over voor 2 uur. Is dat 20 km/u?" · hint 4: "Stel het stelsel op met t1 en t2 — klopt de tijd én de afstand voor dit getal?" → "Bij 3 uur fiets je 45 km; er blijft 15 km over voor een half uur. Is dat 20 km/u?"
+
+## Ronde 3 (na blinde detectie)
+
+**Tellingen:** 44 gemarkeerd · 28 hersteld · 4 vals alarm · 12 twijfel. Geen bekende steekproef-vondsten in deze bestanden. Alle getallen nagerekend (afleiders = typische rekenfouten in dezelfde vorm, bv. log(5)/log(100), log(2)/0,04, lineair rekenen i.p.v. groeifactor, aantal halveringen vergeten × T). Controle: `node --check` + vergelijk-met-main → 0 afwijkingen.
+
+**Vals alarm:** kwadratischeVergelijkingen.js stap 13 vraag 1-3 (de formule h = −5t² + 20t staat in de stap-uitleg) · cseWiskundeStrategieVmbo.js stap 3 vraag 6 ("verschilt per model" is precies de bedoelde les; de andere twee volgordes kloppen elk maar voor één soort rekenmachine).
+
+### Twijfel voor Mark
+- coordinatenstelsel.js stap 2 vraag 1, stap 14 vraag 1 en 7 (oorsprong = (0, 0)): het is een definitie, dus elke andere coördinaat valt af. Niet te repareren zonder de vraag te veranderen.
+- coordinatenstelsel.js stap 10 vraag 1 ("dalend") en veranderingGroeiHavoVwo.js stap 4 vraag 2 ("periodiek" bij eb en vloed): het vakwoord betekent hetzelfde als in gewone taal.
+- cseWiskundeStrategieVmbo.js stap 1 vraag 4 (cm² staat in de vraag), stap 2 vraag 5 (haakjes staan in de vraag), stap 5 vraag 6 ("halverwege" → helft) en stap 6 vraag 3 ("vlakke figuren" → oppervlakte): het antwoord zit in de vraag zelf.
+- logaritmen.js stap 14 vraag 1: "uitdrukking(en) is/zijn" + "Alle drie de andere" verraadt het antwoord. Dit kan alleen opgelost worden door de vraag te veranderen (bijv. naar "Welke uitdrukking is NIET gelijk aan …").
+- algebraVergelijkingenHavoVwo.js stap 4 vraag 2: in de vraag moet "Twee kogels:" worden "Twee soorten kogels:", en "Kogel A = ?" moet worden "Wat kost één kogel A?". q is niet gewijzigd.
+- goniometrieHavoVwo.js stap 5 vraag 2: in de vraag moet "Oplos:" worden "Los op:". q is niet gewijzigd; de kale hint bij "x = 0 of π" is wel herschreven.
+
+### Herstelde vragen (oud → nieuw)
+- **algebraVergelijkingenHavoVwo.js** stap 4 vraag 5: "Pythagoras-formule" → "ABC-formule"
+- **coordinatenstelsel.js** stap 11 vraag 1: "Parallel" → "Lineair"; "Diagonaal" → "Congruent" (+ hints)
+- **klokkijken.js** stap 6 vraag 3: "24:00" → "23:59" (+ hints)
+- **lineaireFormules.js** stap 5 vraag 2: "y = -3x + 1" → "y = −3x + 1"; "y = 3x + 1" → "y = 3x − 1"; "y = x − 1" → "y = −1 + x"; "y = 5" → "y = −5" (+ hints)
+- **lineaireFormules.js** stap 17 vraag 12: "Cirkel" → "Rechte lijn door (0, 0)" (+ hints)
+- **logaritmen.js** stap 10 vraag 1: "x = 20 (= 100/5)" → "x ≈ 0,35"; "x = 95" → "x ≈ 1,30"; "x = 5" → "x ≈ 2,51" (+ hints)
+- **logaritmen.js** stap 13 vraag 2: "≈ 25 jaar" → "≈ 25,0 jaar"; "≈ 50 jaar" → "≈ 7,5 jaar"; "≈ 4 jaar" → "≈ 2,1 jaar" (+ hints)
+- **logaritmen.js** stap 14 vraag 2: "≈ 8 uur" → "≈ 3,3 uur"; "≈ 40 uur" → "≈ 7,2 uur"; "≈ 16 uur" → "≈ 16,0 uur" (+ hints)
+- **meetkundeBouwsels.js** stap 1 vraag 6: "1 liter" → "900 liter"; "1 dm³" → "500 dm³"; "1000 cm³" → "800.000 cm³" (+ hints)
+- **stelsels.js** stap 9 vraag 1: "Eliminatie (vergelijkingen optellen)" → "Eliminatie (y staat in beide)"; "Eliminatie (vergelijkingen aftrekken)" → "Eliminatie (x staat in beide)"; "Grafisch (beide lijnen tekenen)" → "Grafisch (twee rechte lijnen)" (+ hints)
+- **stelsels.js** stap 11 vraag 1: "x · y = 20 en x · y = 6" → "x + y = 6 en x − y = 20"; "x + y = 20 en 2x + 2y = 6" → "x · y = 20 en x − y = 6"; "x − y = 20 en x − y = 6" → "x + y = 20 en x : y = 6" (+ hints)
+- **veranderingGroeiHavoVwo.js** stap 3 vraag 2: "~10 jaar" → "~20,0 jaar"; "~20 jaar" → "~6,0 jaar"; "~40 jaar" → "~155,8 jaar" (+ hints)
+- **veranderingGroeiHavoVwo.js** stap 3 vraag 4: "5730 jaar" → "~8.595 jaar"; "2865 jaar" → "~22.920 jaar"; "23.000 jaar" → "~17.190 jaar" (+ hints)
+- **veranderingGroeiHavoVwo.js** stap 4 vraag 4: "Logistisch" → "Logistisch: eerst snel, dan afvlakkend"; "Lineair" → "Lineair: elke dag evenveel erbij"; "Periodiek alleen" → "Periodiek: steeds op en neer"; "Exponentieel" → "Exponentieel: steeds sneller omhoog" (+ hints)
+- **cseWiskundeStrategieVmbo.js** stap 1 vraag 1: "De vraag rustig lezen en onderstrepen" → "De vraag twee keer rustig lezen"; "Meteen de berekening opschrijven" → "Een schets van de situatie maken" (+ hints)
+- **cseWiskundeStrategieVmbo.js** stap 1 vraag 3: "Om te checken of je antwoord redelijk is" → "Om je uitkomst er straks mee te vergelijken"; "Om de rekenmachine niet te hoeven gebruiken" → "Om een antwoord klaar te hebben bij tijdnood" (+ hints)
+- **cseWiskundeStrategieVmbo.js** stap 1 vraag 5: "De gegeven getallen + wat gevraagd wordt" → "De gegevens en wat er gevraagd wordt"; "De eerste zin van elke alinea" → "Alle getallen die in de tekst staan"; "Alle woorden die vetgedrukt staan" → "De zin met het vraagteken erin" (+ hints)
+- **cseWiskundeStrategieVmbo.js** stap 3 vraag 1: "Eenvoudige tafel zoals 7×8" → "Een tafelsom zoals 7 × 8"; "Rekenen met lange getallen" → "Een procent zoals 12% van €350"; "Een wortel zoals √17 uitrekenen" → "Een wortel zoals √324"; "Sinus of cosinus van een hoek" → "Een sinus zoals sin(35°)" (+ hints)
+- **cseWiskundeStrategieVmbo.js** stap 3 vraag 4: "Meteen op papier opschrijven" → "Elk tussenresultaat op papier zetten"; "In je rekenmachine laten staan" → "Opslaan in het geheugen met M+"; "Onthouden en meteen doorrekenen" → "Met de Ans-knop direct doorrekenen"; "Pas aan het eind netjes noteren" → "Aan het eind alles netjes noteren" (+ hints)
+- **cseWiskundeStrategieVmbo.js** stap 4 vraag 4: "korting" → "rente"; "schaal" → "wisselgeld"; "volume" → "schaal" (+ hints)
+- **cseWiskundeStrategieVmbo.js** stap 5 vraag 2: "Markeer + verder, later terug" → "Markeren, doorgaan en later terugkomen"; "Nog 5 minuten extra doorzetten" → "Nog even doorzetten, je bent al ver"; "De surveillant om een tip vragen" → "Een gok invullen en verder gaan"; "Overslaan en niet meer terugkomen" → "Rustig ademhalen en opnieuw proberen" (+ hints)
+- **cseWiskundeStrategieVmbo.js** stap 5 vraag 3: "Wegstrepen en dan één kiezen" → "Foute opties wegstrepen en dan kiezen"; "Leeg laten, want fout kost punten" → "Je allereerste ingeving aankruisen"; "Twee antwoorden aankruisen" → "Leeg laten, want fout kost punten"; "Opschrijven waarom je twijfelt" → "Kiezen wat vaak goed is, zoals C" (+ hints)
+- **cseWiskundeStrategieVmbo.js** stap 5 vraag 4: "Je antwoorden nog eens controleren" → "Al je antwoorden nog eens nalopen"; "Nog een nieuwe opgave beginnen" → "Een gemarkeerde lastige vraag afmaken"; "Je kladpapier netjes overschrijven" → "Je kladwerk netjes overschrijven"; "Inleveren en alvast vertrekken" → "Nog een nieuwe opgave beginnen" (+ hints)
+- **cseWiskundeStrategieVmbo.js** stap 6 vraag 1: "Tot laat doorleren tot alles erin zit" → "Alle stof nog een keer doornemen"; "Energydrinks nemen voor extra focus" → "Nog een oud examen helemaal maken"; "Vroeg opstaan om nog even te leren" → "De formules nog eens uit je hoofd leren" (+ hints)
+- **cseWiskundeStrategieVmbo.js** stap 6 vraag 2: "Makkelijke eerst + lastige markeren" → "Makkelijke eerst, lastige later"
+- **cseWiskundeStrategieVmbo.js** stap 6 vraag 6: "Markeer + ga verder, kom terug" → "Markeren, verder en later terugkomen"; "Blijf proberen tot je het weet" → "Blijven proberen, je bent al ver"; "Vraag de surveillant om hulp" → "Meteen een gok invullen en verder" (+ hints)
+- **cseWiskundeStrategieVmbo.js** stap 6 vraag 7: "Grafische rekenmachine, liniaal en pen" → "Grafische rekenmachine, geodriehoek en pen"; "Telefoon als rekenmachine en pen" → "Rekenmachine, eigen formulekaart en pen"; "Laptop met rekenprogramma en pen" → "Rekenmachine, geodriehoek en smartwatch" (+ hints)
+- **cseWiskundeStrategieVmbo.js** stap 6 vraag 8: "Wetenschappelijke rekenmachine" → "Een losse wetenschappelijke rekenmachine"; "Rekenapp op je telefoon" → "Rekenapp op je telefoon in vliegtuigmodus"; "Rekenfunctie op een smartwatch" → "Rekenmachine op een laptop zonder internet"; "Rekenmachine op een laptop" → "Een rekenmachine met eigen notities erin" (+ hints)
