@@ -203,7 +203,7 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
           niveaus: {
             basis: "Hoeveel gouden vragen zijn er — en welke letters beginnen ze?",
             simpeler: "De vijf W's ken je misschien al. Welke extra vraag hoort er ook bij?",
-            nogSimpeler: "Zoek het antwoord dat zes vragen noemt en ook 'hoe' erbij heeft.",
+            nogSimpeler: "Zoek het rijtje met de vijf W's (wie, wat, waar, wanneer, waarom) én 'hoe'.",
           },
         },
       },

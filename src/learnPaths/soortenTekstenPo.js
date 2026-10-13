@@ -37,7 +37,7 @@ const steps = [
       {
         q: "Welke van deze is een informatieve tekst?",
         options: [
-          "een nieuwsbericht over het weer van morgen",
+          "een nieuwsbericht over het weer",
           "een recept voor pannenkoeken",
           "een sprookje over een draak",
           "een advertentie voor sportschoenen",
@@ -133,7 +133,7 @@ const steps = [
           "een betogende tekst",
         ],
         answer: 0,
-        wrongHints: [null, null, "Zoek je een verzonnen verhaal, of wil je iets te weten komen?", null],
+        wrongHints: [null, "Moet je iets dóén, of wil je iets te weten komen?", "Zoek je een verzonnen verhaal, of wil je iets te weten komen?", "Zoek je een mening, of wil je iets te weten komen?"],
         uitlegPad: {
           stappen: [
             {
@@ -157,7 +157,7 @@ const steps = [
           "Knip de walvis uit en plak hem op een blauw vel.",
         ],
         answer: 0,
-        wrongHints: [null, null, "Vertelt deze zin je een feit, of wil hij je ergens naartoe krijgen?", null],
+        wrongHints: [null, "Begint zo een verzonnen verhaal, of een tekst met feiten?", "Vertelt deze zin je een feit, of wil hij je ergens naartoe krijgen?", "Vertelt deze zin je een feit, of zegt hij wat je moet doen?"],
         uitlegPad: {
           stappen: [
             {
@@ -181,7 +181,7 @@ const steps = [
           "Bezoek ons zebrapark: het leukste uitje!",
         ],
         answer: 0,
-        wrongHints: [null, "Klinkt dit als het begin van een verhaal of als uitleg?", null, null],
+        wrongHints: [null, "Klinkt dit als het begin van een verhaal of als uitleg?", "Leer je hier feiten over zebra's, of moet je iets doen?", "Leer je hier feiten, of wil de titel je ergens naartoe krijgen?"],
         uitlegPad: {
           stappen: [
             {
@@ -323,7 +323,7 @@ const steps = [
           "een artikel over de geschiedenis van kamperen",
         ],
         answer: 0,
-        wrongHints: [null, null, null, "Leer je daarvan hoe je jouw tent opzet, of iets over vroeger?"],
+        wrongHints: [null, "Staat in een verhaal stap voor stap hoe je een tent opzet?", "Wil een advertentie je iets leren, of iets verkopen?", "Leer je daarvan hoe je jouw tent opzet, of iets over vroeger?"],
         uitlegPad: {
           stappen: [
             {
@@ -347,7 +347,7 @@ const steps = [
           "In Nederland eten veel mensen graag pannenkoeken.",
         ],
         answer: 0,
-        wrongHints: [null, null, "Zegt deze zin wat je moet doen, of wat de schrijver ervan vindt?", null],
+        wrongHints: [null, "Begint zo een recept, of een verhaal?", "Zegt deze zin wat je moet doen, of wat de schrijver ervan vindt?", "Is dit een stap die je doet, of een feit?"],
         uitlegPad: {
           stappen: [
             {
@@ -371,7 +371,7 @@ const steps = [
           "om te lachen om een grappig verhaal",
         ],
         answer: 0,
-        wrongHints: [null, "Wat ga jij doen terwijl je dit stappenplan leest?", null, null],
+        wrongHints: [null, "Wat ga jij doen terwijl je dit stappenplan leest?", "Staat er in een stappenplan wat de schrijver ergens van vindt?", "Is een stappenplan een grappig verhaal?"],
         uitlegPad: {
           stappen: [
             {
@@ -461,7 +461,7 @@ const steps = [
       },
       {
         q: "Wat is het kenmerk van een betogende tekst?",
-        options: ["een mening met argumenten ('want', 'daarom')", "stappen die je moet uitvoeren", "personages in een verzonnen verhaal", "feiten over de wereld"],
+        options: ["een mening met argumenten", "stappen die je moet uitvoeren", "personages in een verzonnen verhaal", "feiten over de wereld"],
         answer: 0,
         wrongHints: [null, "Stappen horen bij een instructieve tekst.", "Personages in een verhaal horen bij een verhalende tekst.", "Feiten horen bij een informatieve tekst."],
         uitlegPad: {
@@ -511,7 +511,7 @@ const steps = [
           "je laten zien hoe je iets maakt",
         ],
         answer: 0,
-        wrongHints: [null, "Staat er een verhaal op de poster?", null, null],
+        wrongHints: [null, "Staat er een verhaal op de poster?", "Wordt er uitgelegd hoe iets werkt, of wil de poster dat je iets doet?", "Staan er stappen op de poster om iets te maken?"],
         uitlegPad: {
           stappen: [
             {
@@ -535,7 +535,7 @@ const steps = [
           "het begin van een sprookje",
         ],
         answer: 0,
-        wrongHints: [null, "Is iedereen het hiermee eens, of vindt de schrijver dit?", null, null],
+        wrongHints: [null, "Is iedereen het hiermee eens, of vindt de schrijver dit?", "Staan er stappen in die je moet uitvoeren?", "Begint zo een sprookje? Denk aan 'er was eens'."],
         uitlegPad: {
           stappen: [
             {
@@ -677,7 +677,7 @@ const steps = [
           "verhalend (vermaken)",
         ],
         answer: 0,
-        wrongHints: [null, "Vertelt het kaartje je alleen iets, of moet jij er ook iets mee doen?", null, null],
+        wrongHints: [null, "Vertelt het kaartje je alleen iets, of moet jij er ook iets mee doen?", "Wil het kaartje je ergens van overtuigen?", "Is dit een verhaal?"],
         uitlegPad: {
           stappen: [
             {
@@ -701,7 +701,7 @@ const steps = [
           "verhalend (vermaken)",
         ],
         answer: 0,
-        wrongHints: [null, null, "Probeert het bord je ergens toe over te halen?", null],
+        wrongHints: [null, "Moet je iets doen met deze zinnen?", "Probeert het bord je ergens toe over te halen?", "Is dit een verzonnen verhaal?"],
         uitlegPad: {
           stappen: [
             {
@@ -725,7 +725,7 @@ const steps = [
           "instructief (laten doen)",
         ],
         answer: 0,
-        wrongHints: [null, "Leer je hier echte feiten over een dorp?", null, null],
+        wrongHints: [null, "Leer je hier echte feiten over een dorp?", "Wil de schrijver je hier ergens van overtuigen?", "Staan er stappen in die je moet uitvoeren?"],
         uitlegPad: {
           stappen: [
             {

@@ -114,7 +114,7 @@ const steps = [
         wrongHints: [
           null,
           "Botst het etui met de boeken? Of komt er gewoon iets bij?",
-          null,
+          "Geeft dit woord een reden? Past het vooraan in deze zin?",
           "Is het etui een gevolg van de boeken?",
         ],
         uitlegPad: {
@@ -138,7 +138,7 @@ const steps = [
         wrongHints: [
           null,
           "Laat je je jas thuis omdát het koud is?",
-          null,
+          "Is geen jas dragen een gevolg van de kou? Lees de zin nog eens.",
           "Kan dit woord vooraan staan met 'droeg' direct erachter?",
         ],
         uitlegPad: {
@@ -264,7 +264,7 @@ const steps = [
           null,
           "Botst wakker worden met de wekker zetten?",
           "Word je wakker en zet je dáárom de wekker? Of andersom?",
-          null,
+          "Zet 'maar' twee dingen tegenover elkaar? Lees de zin nog eens.",
         ],
         uitlegPad: {
           stappen: [
@@ -292,7 +292,7 @@ const steps = [
         wrongHints: [
           null,
           "Zorgt de kleur van de bal voor de kleur van de hond?",
-          null,
+          "Zorgt het ene hier voor het andere? Of worden ze tegenover elkaar gezet?",
           "Wordt hier iets veroorzaakt, of moet je kiezen?",
         ],
         uitlegPad: {
@@ -317,7 +317,7 @@ const steps = [
           null,
           "Is dat de reden, of is dat wat er dáárdoor gebeurt?",
           "Lees de zin nog eens: wie valt er om?",
-          null,
+          "Lees de zin nog eens: wie moet er lachen?",
         ],
         uitlegPad: {
           stappen: [
@@ -437,7 +437,7 @@ const steps = [
         wrongHints: [
           null,
           "Dekte je de tafel vóórdat papa begon te koken?",
-          null,
+          "Staat er iets over wat als laatste gebeurt? Lees de zin nog eens.",
           "Gaat het om een reden, of om wanneer iets gebeurt?",
         ],
         uitlegPad: {
@@ -462,7 +462,7 @@ const steps = [
           null,
           "Gaat het om een reden, of om wannéér we naar huis gingen?",
           "Past dit woord midden in deze zin, vóór 'de film was afgelopen'?",
-          null,
+          "Ging je pas helemaal aan het eind naar huis, of gaat het om wanneer?",
         ],
         uitlegPad: {
           stappen: [
@@ -485,7 +485,7 @@ const steps = [
         wrongHints: [
           null,
           "Kan dit woord midden in de zin staan, met 'opa de afwas deed' erachter?",
-          null,
+          "Kan dit woord midden in de zin staan, met 'opa de afwas deed' erachter?",
           "Past dit woord hier, of hoort het aan het begin van een nieuwe stap?",
         ],
         uitlegPad: {
@@ -562,7 +562,7 @@ const steps = [
         q: "*Eerst kook je het water, vervolgens doe je de pasta erin.* Welk soort verband is dit?",
         options: ["tijd/volgorde", "tegenstelling", "oorzaak en gevolg", "opsomming"],
         answer: 0,
-        wrongHints: [null, "Er botst niets.", "Het een veroorzaakt het ander niet direct — het zijn stappen.", "Het is meer dan een rijtje: het is een vólgorde."],
+        wrongHints: [null, "Er botst niets.", "Het een veroorzaakt het ander niet direct — het zijn stappen.", "Worden hier gewoon dingen opgeteld? Lees de zin nog eens."],
         uitlegPad: {
           stappen: [{ titel: "Eerst → vervolgens", tekst: "'Eerst' en 'vervolgens' geven de volgorde van stappen aan: dit is een tijd/volgorde-verband." }],
           niveaus: {
@@ -622,7 +622,7 @@ const steps = [
         wrongHints: [
           null,
           "Botst 'goed voor het milieu' met 'gezond'?",
-          null,
+          "Is fietsen goed voor het milieu omdát het gezond is?",
           "Gaat het om stappen in de tijd?",
         ],
         uitlegPad: {
@@ -646,7 +646,7 @@ const steps = [
         wrongHints: [
           null,
           "Wordt er gewoon iets opgeteld?",
-          null,
+          "Botst de paraplu met de regen?",
           "Gaat het om wat eerst en wat daarna gebeurt?",
         ],
         uitlegPad: {
@@ -671,7 +671,7 @@ const steps = [
           null,
           "Botst de speeltuin met de pannenkoeken?",
           "Gingen we naar de speeltuin dóór de pannenkoeken?",
-          null,
+          "Worden hier gewoon dingen opgeteld? Lees de zin nog eens.",
         ],
         uitlegPad: {
           stappen: [
