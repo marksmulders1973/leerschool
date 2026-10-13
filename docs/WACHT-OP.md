@@ -125,3 +125,5 @@
 | **Kindcentrum De Linge — Annelies Minnaard** | 29 sep 05:57: werkt er niet meer, wil van de lijst (thread 1a0ebbe8686252ff). | 29 sep | ✅ Adres in NIET-MEER-MAILEN.md · ✅ 16:05 bevestiging verstuurd. Lus dicht. |
 
 - **Leergeld Het Hoogeland (Detty Wiltjer, coordinator@leergeldhoogeland.nl)** — 13 okt plakteksten FB/website/nieuwsbrief + code HOOGELAND2027 + QR verstuurd vanaf hallo@. Wacht op: plaatsing FB/website; aanbod flyer met hun logo open. Scans volgen via HOOGELAND2027.
+
+- **13 okt:** Gemeente Tilburg (Evy Calon) nee via Meedoenregeling; wil gebruikscijfers Den Haag zien → in voorjaar 2027 terugkoppelen (concept na Marks ja). Jarige Job (Amber) nee na beraad → lus dicht.
