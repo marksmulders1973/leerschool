@@ -68,9 +68,9 @@ const steps = [
       },
       {
         q: "Vóór 1945 was hulp bij armoede vooral een zaak van:",
-        options: ["Familie, kerk en liefdadigheid", "De overheid via uitkeringen", "Werkgevers via een verplicht fonds", "Ziekenhuizen en artsen"],
+        options: ["Familie, kerk en liefdadigheid", "De staat, via AOW en bijstand", "Werkgevers, via een verplicht fonds", "De SER, met werkgevers en bonden"],
         answer: 0,
-        wrongHints: [null, "Niet: de overheid bemoeide zich er nauwelijks mee.", "Soms hielpen werkgevers wel, maar dat was geen verplichting.", "Artsen hielpen zieken, maar wie gaf arme gezinnen eten en geld?"],
+        wrongHints: [null, "De AOW (1957) en de bijstand (1965) kwamen pas na de oorlog. Wie hielp arme mensen daarvóór?", "Soms hielpen werkgevers wel, maar dat was geen verplichting. Wie hielp arme gezinnen dan?", "De SER werd pas in 1950 opgericht en adviseert de regering. Wie hielp arme gezinnen vóór die tijd?"],
         uitlegPad: {
           stappen: [{ titel: "Particuliere zorg = traditie", tekst: "Vóór WO2 sterk **verzuild**: katholieken hielpen katholieken (parochiale armenzorg), protestanten via **diaconie**, joden via joodse gemeente. Plus rijke filantropen + werkhuizen. Overheid bemoeide zich amper — armoede zag men als 'individueel falen'." }],
           woorden: [{ woord: "verzuiling", uitleg: "NL-systeem waarbij katholieken/protestanten/socialisten/liberalen in aparte 'zuilen' leefden — eigen scholen/kranten/sportclubs/ziekenhuizen." }],
@@ -111,14 +111,14 @@ const steps = [
       },
       {
         q: "Wat betekent **'volksverzekering'**?",
-        options: ["Voor iedereen verplicht", "Verplicht voor alle werknemers", "Vrijwillige verzekering", "Voor mensen met een laag inkomen"],
+        options: ["Verplicht voor alle inwoners", "Verplicht voor alle werknemers", "Vrijwillig voor alle inwoners", "Verplicht voor alle lage inkomens"],
         answer: 0,
         wrongHints: [null, "Dat is een werknemersverzekering, zoals de WW.", "Dan kies je zelf of je meedoet. Is dat zo bij de AOW?", "Dat gold vroeger voor het ziekenfonds. Wie krijgt er later allemaal AOW?"],
         uitlegPad: {
           stappen: [{ titel: "Volks- vs werknemers-verzekering", tekst: "**Volksverzekering** (AOW, AKW kinderbijslag, AWBZ/Wlz langdurige zorg): iedereen verplicht verzekerd, ook huisvrouwen + zelfstandigen + studenten. **Werknemersverzekering** (WW, WIA, ZW): alleen voor wie loon krijgt." }],
           woorden: [{ woord: "volksverzekering", uitleg: "Verzekering voor heel NL-volk, ongeacht beroep." }, { woord: "werknemersverzekering", uitleg: "Alleen voor mensen met loondienst." }],
           theorie: "Volksverzekeringen worden betaald uit **AOW-premie** (15-jaar+ betalen) + algemene middelen. Werknemersverzekeringen via **werkgevers + werknemers** premies.",
-          niveaus: { basis: "Voor iedereen verplicht.", simpeler: "Volksverzekering = elke burger", nogSimpeler: "Iedereen" },
+          niveaus: { basis: "Verplicht voor alle inwoners.", simpeler: "Volksverzekering = elke burger", nogSimpeler: "Iedereen" },
         },
       },
       {
@@ -167,9 +167,9 @@ const steps = [
     checks: [
       {
         q: "Welke wet (1967) regelde **arbeidsongeschiktheidsuitkering**?",
-        options: ["WAO","AOW","ABW","AKW"],
+        options: ["WAO","AOW","WIA","AWBZ"],
         answer: 0,
-        wrongHints: [null, "De AOW is het pensioen voor ouderen, uit 1957.", "De ABW is de bijstandswet, uit 1965.", "De AKW gaat niet over ziekte of een handicap. In welke afkorting zit 'arbeidsongeschiktheid'?"],
+        wrongHints: [null, "De AOW is het pensioen voor ouderen, uit 1957.", "De WIA kwam pas in 2006, als strengere opvolger. Welke wet bestond er al in 1967?", "De AWBZ (1968) betaalde langdurige zorg, zoals een verpleeghuis. Je loon werd er niet mee vervangen."],
         uitlegPad: {
           stappen: [{ titel: "WAO = arbeidsongeschiktheid", tekst: "**Wet op de Arbeidsongeschiktheidsverzekering 1967**. Werknemer die langdurig niet kan werken door ziekte/handicap kreeg 80% van laatste loon. Veel te ruim — gebruikt voor verborgen ontslag in jaren '80. Vervangen door **WIA** (2006) met strenger criterium." }],
           woorden: [{ woord: "WAO", uitleg: "Wet op de Arbeidsongeschiktheidsverzekering 1967-2005." }, { woord: "WIA", uitleg: "Wet werk en inkomen naar arbeidsvermogen, vanaf 2006." }],
@@ -216,9 +216,9 @@ const steps = [
       },
       {
         q: "Wat is **AKW**?",
-        options: ["Kinderbijslag voor ouders","Pensioen vanaf 65 jaar","Bijstand bij armoede","Uitkering bij werkloosheid"],
+        options: ["Kinderbijslag voor ouders","Toeslag voor kinderopvang","Uitkering voor weduwen en wezen","Zorg voor gehandicapte kinderen"],
         answer: 0,
-        wrongHints: [null, "Dat is de AOW, de Algemene Ouderdomswet. Waar staan de letters van AKW voor?", "Bijstand regelt de ABW, de Algemene Bijstandswet. Lees de letters van AKW eens goed.", "Dat is de WW, de Werkloosheidswet. Welke wet heeft de letters AKW?"],
+        wrongHints: [null, "De kinderopvangtoeslag kwam pas in 2005 (denk aan de toeslagenaffaire). De AKW is veel ouder: uit 1962.", "Dat is de AWW (1959), de Algemene Weduwen- en Wezenwet. Lees de letters van AKW nog eens.", "Langdurige zorg, ook voor gehandicapten, regelde de AWBZ uit 1968."],
         uitlegPad: {
           stappen: [{ titel: "AKW sinds 1962", tekst: "**Algemene Kinderbijslagwet** (AKW). Iedere ouder krijgt **per kind een vast bedrag per kwartaal** van overheid, ongeacht inkomen. Volksverzekering. Bedrag stijgt met leeftijd kind." }],
           woorden: [{ woord: "AKW", uitleg: "Algemene Kinderbijslagwet — uitkering per kind aan ouders." }],
@@ -333,9 +333,9 @@ const steps = [
       },
       {
         q: "Vergrijzing betekent:",
-        options: ["Meer ouderen, minder jongeren in bevolking", "Meer jongeren, minder ouderen in bevolking", "Het aantal inwoners van NL daalt", "Gezinnen krijgen minder kinderen"],
+        options: ["Groter aandeel ouderen in de bevolking", "Ouderen gaan later met pensioen", "Het aantal inwoners van NL daalt", "Gezinnen krijgen minder kinderen"],
         answer: 0,
-        wrongHints: [null, "Andersom: kijk naar wat er met de leeftijd van de bevolking gebeurt.", "Dat heet bevolkingskrimp. Vergrijzing gaat over de leeftijd van de bevolking.", "Dat heet ontgroening. Het is wel een oorzaak, maar wat betekent vergrijzing zelf?"],
+        wrongHints: [null, "Later met pensioen gaan (AOW-leeftijd 67) is een maatregel van de overheid, geen verandering in de bevolking zelf.", "Dat heet bevolkingskrimp. Vergrijzing gaat over de leeftijd van de bevolking.", "Dat heet ontgroening. Het is wel een oorzaak, maar wat betekent vergrijzing zelf?"],
         uitlegPad: {
           stappen: [{ titel: "Demografische vergrijzing", tekst: "Vergrijzing = **demografie**: aandeel 65+ groeit, aandeel jongeren krimpt. NL: 1900 ~5% boven 65, 2025 ~20%, 2050 verwacht ~25%. Gevolgen: meer AOW + zorg, minder werkenden per gepensioneerde." }],
           niveaus: { basis: "Meer ouderen.", simpeler: "Vergrijzing = meer 65+", nogSimpeler: "Meer ouderen" },

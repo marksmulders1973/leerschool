@@ -96,7 +96,7 @@ const steps = [
     checks: [
       {
         q: "*'What is the author's purpose in the final paragraph?'* — welke vraag-type?",
-        options: ["Intentie","Hoofdgedachte","Verwijzing","Toon"],
+        options: ["Intentie","Hoofdgedachte","Verwijzing","Toon/houding"],
         answer: 0,
         wrongHints: [null, "Bij de hoofdgedachte gaat het om de kern van de hele tekst. Gaat deze vraag over de hele tekst of over één alinea?", "Een verwijzingsvraag gaat over een woord als 'this' of 'they'. Vraagt 'purpose' daarnaar?", "Toon gaat over de houding van de schrijver (sarcastisch, kritisch). Vraagt 'purpose' naar een houding of naar een doel?"],
         uitlegPad: {
@@ -267,9 +267,9 @@ const steps = [
       },
       {
         q: "Een **first-person narrator** gebruikt:",
-        options: ["'I' en 'we'","'I' en 'you'","'You' en 'your'","'We' en 'they'"],
+        options: ["'I' en 'we'","'I' en 'you'","'He' en 'she'","'We' en 'they'"],
         answer: 0,
-        wrongHints: [null, "'You' spreekt de lezer aan: dat is second-person. Welke voornaamwoorden horen samen bij de eerste persoon?", "Niet — dat is second-person.", "'They' hoort bij third-person. Welke voornaamwoorden horen samen bij de eerste persoon?"],
+        wrongHints: [null, "'You' spreekt de lezer aan: dat is second-person. Welke voornaamwoorden horen samen bij de eerste persoon?", "'He' en 'she' gebruik je als iemand óver een ander vertelt: third-person. Wie praat er bij de eerste persoon?", "'They' hoort bij third-person. Welke voornaamwoorden horen samen bij de eerste persoon?"],
         uitlegPad: {
           stappen: [{ titel: "First-person = ik", tekst: "**First-person**: 'I went to the store.' Verteller = personage. **Subjectief** — beperkt tot wat dit personage weet. Catcher in the Rye, To Kill a Mockingbird etc." }],
           theorie: "VWO-CSE-vraag: 'From whose POV is this fragment told?' Antwoord: kijk naar voornaamwoorden + bewustzijn.",

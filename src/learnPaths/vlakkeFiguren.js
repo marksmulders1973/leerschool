@@ -695,9 +695,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Bissectrices kruisen in het middelpunt van de **ingeschreven** cirkel.",
-          "Middelloodlijnen kruisen in het middelpunt van de **omgeschreven** cirkel.",
-          "Hoogtelijnen kruisen elkaar in het hoogtepunt. Welke lijnen lopen van een hoek naar het midden van de overstaande zijde?",
+          "Bissectrices kruisen in het middelpunt van de **ingeschreven** cirkel. Is dat het punt waar de vraag naar zoekt?",
+          "Middelloodlijnen kruisen in het middelpunt van de **omgeschreven** cirkel. Is dat het punt waar de vraag naar zoekt?",
+          "Hoogtelijnen kruisen elkaar in het hoogtepunt. Welk snijpunt hoort bij welke soort lijnen?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Zwaartepunt", tekst: "3 zwaartelijnen kruisen in het zwaartepunt Z." }],

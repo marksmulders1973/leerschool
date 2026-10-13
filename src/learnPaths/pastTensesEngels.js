@@ -360,7 +360,7 @@ const steps = [
         q: "Wat is **haven't**?",
         options: ["have not", "had not", "has not", "have no"],
         answer: 0,
-        wrongHints: [null, "Hadn't = had not.", "Hasn't = has not.", "'Have no' betekent 'heb geen'. Welk woord staat er voluit in haven't?"],
+        wrongHints: [null, "'Had not' trek je samen tot 'hadn't'. Welk werkwoord zit er in haven't?", "'Has not' trek je samen tot 'hasn't'. Bij welk onderwerp hoort has, en welke vorm zie je in haven't?", "'Have no' betekent 'heb geen'. Welk woord staat er voluit in haven't?"],
         uitlegPad: {
           stappen: [{ titel: "haven't = have not", tekst: "Contractie van have + not." }],
           woorden: [{ woord: "ontkenning", uitleg: "have not = haven't" }],

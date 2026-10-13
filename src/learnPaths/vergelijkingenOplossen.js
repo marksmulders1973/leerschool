@@ -115,7 +115,7 @@ const steps = [
     checks: [
       {
         q: "*Bij de vergelijking 8x = 24 — welke actie isoleert x?*",
-        options: ["Beide kanten delen door 8","Beide kanten aftrekken met 8","Beide kanten optellen met 8","Beide kanten vermenigvuldigen met 8"],
+        options: ["Beide kanten delen door 8","Van beide kanten 8 aftrekken","Bij beide kanten 8 optellen","Beide kanten vermenigvuldigen met 8"],
         answer: 0,
         wrongHints: [null, "8x is een vermenigvuldiging, geen optelling. Welke bewerking is de tegenhanger van keer-doen?", "Welke bewerking heft de 'keer 8' op? Optellen werkt niet bij vermenigvuldiging.", "Vermenigvuldigen maakt het groter, jij wil x alleen overhouden. Welke bewerking doet dat?"],
         uitlegPad: {

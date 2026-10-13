@@ -55,9 +55,9 @@ const steps = [
       },
       {
         q: "**Wanneer is schatten handig**?",
-        options: ["Om snel te checken of een antwoord klopt","Als je een precies antwoord moet geven","Om sommen niet uit te hoeven rekenen","Bij het uitrekenen van wisselgeld"],
+        options: ["Om snel te checken of een antwoord klopt","Om de precieze uitkomst sneller te vinden","Om een getal op een tiental te laten eindigen","Om een lange som korter op te schrijven"],
         answer: 0,
-        wrongHints: [null,"Een precies antwoord vraagt juist exact rekenen. Wanneer is een ruw antwoord genoeg?","Schatten vervangt het rekenen niet als het precies moet. Waarvoor gebruik je de schatting dan?","Wisselgeld moet tot op de cent kloppen. Is een schatting dan genoeg?"],
+        wrongHints: [null,"Een schatting geeft een ruwe uitkomst, geen precieze. Wat kun je met zo'n ruwe uitkomst wel?","Dat is afronden van één getal. Schatten gaat over een hele berekening: waarvoor gebruik je die ruwe uitkomst?","Bij schatten schrijf je de som niet anders op, je rekent met ronde getallen. Wat heb je aan die uitkomst?"],
       },
       {
         q: "**Schat het totaal**: € 4,80 + € 7,20 + € 12,30",
@@ -137,8 +137,8 @@ const steps = [
         wrongHints: [
           null,
           "Vergelijk met de schatting 600: is dit ongeveer even groot?",
-          null,
-          "Dat is 300 meer dan de schatting — dat is te ver weg.",
+          "59 is maar ongeveer een tiende van de schatting 600. Kan het echte antwoord zo veel kleiner zijn?",
+          "899 ligt 300 boven de schatting 600. Kan afronden van 213 en 386 zo'n groot verschil geven?",
         ],
         uitlegPad: {
           stappen: [
@@ -1386,9 +1386,9 @@ const steps = [
       },
       {
         q: "**Schat 612 ÷ 7**:",
-        options: ["~87","~100","~70","~120"],
+        options: ["~90","~9","~70","~900"],
         answer: 0,
-        wrongHints: [null,"Te veel — 7 × 100 is al 700, en dat is meer dan 612.","Te weinig — 7 × 70 is maar 490, dat is ver onder 612.","7 × 120 = 840. Ligt dat dicht bij 612?"],
+        wrongHints: [null,"Reken terug: is 7 × 9 ongeveer 612?","Te weinig — 7 × 70 is maar 490, dat is ver onder 612.","Reken terug: 7 × 900 = 6300. Ligt dat in de buurt van 612?"],
       },
       {
         q: "**Rond 2849 af op 100**:",
@@ -1513,7 +1513,7 @@ const steps = [
       { q: "Hoeveel is **±1.000 + ±2.000**?", options: ["~3.000","~3.500","~2.500","~5.000"], answer: 0, wrongHints: [null, "Waar komt die extra 500 vandaan? Tel 1.000 en 2.000 gewoon op.", "Tel 1.000 en 2.000 op. Kom je onder de 3.000 uit?", "5.000 is meer dan 1.000 + 2.000. Heb je iets dubbel geteld?"] },
       { q: "Een mens is 1,72 m lang. Afgerond op hele tientallen cm is dat ongeveer…", options: ["~170 cm","~180 cm","~172 cm","~150 cm"], answer: 0, wrongHints: [null, "Kijk naar de eenheden van 172: een 2. Ligt 172 dichter bij 170 of bij 180?", "172 cm is de lengte zelf. Afronden op tientallen betekent: eindigen op een 0.", "150 cm is meer dan 20 cm korter. Welke tientallen liggen direct om 172 heen?"] },
       { q: "Rond €19,80 af op euro", options: ["€20","€19","€19,80","€21"], answer: 0, wrongHints: [null, "Kijk naar het cijfer achter de komma: een 8. Rond je dan naar boven of naar beneden af?", "€ 19,80 is het bedrag zelf. Afronden op euro's betekent: geen centen meer.", "Te ver — 19,80 ligt dicht bij 20."] },
-      { q: "Wanneer **schatten** ipv exact?", options: ["Bij snelle controle of als precisie niet hoeft","Als het antwoord tot op de cent moet kloppen","Als je een som op papier moet uitwerken","Als je medicijnen precies moet afmeten"], answer: 0, wrongHints: [null, "Tot op de cent is precies rekenen. Wanneer is een ruwe uitkomst genoeg?", "Bij het uitwerken op papier reken je juist exact. Waar helpt een schatting dan wel bij?", "Bij medicijnen moet de hoeveelheid precies kloppen. Wanneer kan een schatting wel?"] },
+      { q: "Wanneer **schatten** ipv exact?", options: ["Als een ongeveer-antwoord genoeg is","Als de getallen al rond zijn, zoals 300 + 500","Bij elke toetsvraag, in plaats van uitrekenen","Als je een prijs tot op de cent wilt weten"], answer: 0, wrongHints: [null, "300 + 500 reken je meteen precies uit, dat is al makkelijk. Wanneer heeft schatten dan wél zin?", "Op de toets moet je meestal een precies antwoord geven. Waarvoor gebruik je een schatting daar dan?", "Een schatting kan er een paar euro naast zitten. Past dat bij 'tot op de cent'?"] },
       { q: "10 × ~9 ≈ wat?", options: ["~90","~100","~10","~900"], answer: 0, wrongHints: [null, "Je rondde 9 af naar 10. Wat is 10 × 9 zonder afronden?", "10 × 9 is tien keer 9 bij elkaar. Kan dat ongeveer 10 zijn?", "Je deed 100 × 9. Hoeveel nullen heeft 10?"] },
       { q: "Hoeveel is 998 + 1.005 ongeveer?", options: ["~2.000","~3.000","~1.500","~10.000"], answer: 0, wrongHints: [null, "Rond 998 en 1.005 af op duizendtallen. Welke twee getallen tel je dan op?", "998 is bijna 1.000 en 1.005 ook. Kom je dan onder de 2.000 uit?", "Dat is tien keer zoveel. Heb je een nul te veel geschreven?"] },
       { q: "Het cijfer na de afrondplek is een 5. Wat doe je?", options: ["Naar boven","Naar beneden","Willekeurig","Niet afronden"], answer: 0, wrongHints: [null, "Bij 0 tot en met 4 rond je naar beneden af. Hoort de 5 daarbij?", "Afronden volgt een vaste regel, zodat iedereen hetzelfde antwoord krijgt. Wat is die regel bij een 5?", "De vraag gaat over afronden: je moet wél een kant kiezen. Welke kant hoort bij een 5?"] },

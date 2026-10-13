@@ -32,20 +32,20 @@ const steps = [
     checks: [
       {
         q: "**Verdrag van Versailles 1919**: wat bepaalde 'oorlogsschuld-clausule' (art 231)?",
-        options: ["Duitsland is alleen schuldig aan WO1", "Duitsland moet zijn leger opheffen", "Alle landen zijn even schuldig aan WO1", "Frankrijk en Rusland zijn schuldig aan WO1"],
+        options: ["Duitsland en zijn bondgenoten zijn schuldig", "Duitsland moet zijn leger opheffen", "Alle landen zijn even schuldig aan WO1", "Frankrijk en Rusland zijn schuldig aan WO1"],
         answer: 0,
         wrongHints: [null, "Duitsland mocht een klein leger houden (100.000 man). En dit artikel ging over schuld.", "Dat vonden de Duitsers zelf, maar de winnaars schreven iets anders.", "Frankrijk hoorde bij de winnaars die het verdrag schreven."],
         uitlegPad: {
-          stappen: [{ titel: "Allein-schuld DE", tekst: "**Artikel 231 Versailles**: 'Duitsland is alleen verantwoordelijk voor WO1 + alle schade'. Basis voor schadevergoeding (132 mld). Voor Duitsers vernederend + economisch verlammend. Voedde nationalistische haat en speelde Hitler in de kaart." }],
+          stappen: [{ titel: "Oorlogsschuld bij Duitsland", tekst: "**Artikel 231 Versailles**: 'Duitsland en zijn bondgenoten zijn verantwoordelijk voor alle verlies en schade' van WO1. In de praktijk kreeg vooral Duitsland de schuld en de rekening: basis voor schadevergoeding (132 mld). Voor Duitsers vernederend + economisch verlammend. Voedde nationalistische haat en speelde Hitler in de kaart." }],
           theorie: "Toets-favoriet: leg uit waarom Versailles bijdroeg aan WO2. Antwoord: vernedering + economische ellende → Hitler-aanhang.",
-          niveaus: { basis: "DE alleen schuldig.", simpeler: "Art 231 = DE schuld", nogSimpeler: "DE kreeg alle schuld" },
+          niveaus: { basis: "Duitsland (en bondgenoten) schuldig.", simpeler: "Art 231 = DE schuld", nogSimpeler: "DE kreeg de schuld" },
         },
       },
       {
         q: "Wanneer **Beurskrach Wall Street**?",
         options: ["Oktober 1929","Juni 1914","September 1939","Oktober 1917"],
         answer: 0,
-        wrongHints: [null, "Niet — WO1.", "Niet — WO2.", "Niet — Russ. Revolutie."],
+        wrongHints: [null, "In juni 1914 werd in Sarajevo de aartshertog vermoord: de aanleiding voor de Eerste Wereldoorlog.", "In september 1939 begon de Tweede Wereldoorlog. De crisis die Hitler aan de macht hielp, kwam eerder.", "In oktober 1917 was de Russische Revolutie. De beurskrach kwam na de Eerste Wereldoorlog."],
         uitlegPad: {
           stappen: [{ titel: "Zwarte donderdag", tekst: "**24 oktober 1929 'Zwarte Donderdag'** + dagen daarna (29 okt 'Black Tuesday'): New York-beurs ineen. Begin **Grote Depressie** 1929-1939 wereldwijd. Werkloosheid VS naar 25%, DE 30%, NL 25%." }],
           niveaus: { basis: "Okt 1929.", simpeler: "1929 krach", nogSimpeler: "1929" },
@@ -104,7 +104,7 @@ const steps = [
         q: "Wanneer **D-Day**?",
         options: ["6 juni 1944","6 augustus 1945","5 mei 1945","1 sept 1939"],
         answer: 0,
-        wrongHints: [null, "Niet — Hiroshima.", "Niet — bevrijding NL.", "Niet — begin WO2."],
+        wrongHints: [null, "Op 6 augustus 1945 viel de atoombom op Hiroshima, kort voor het einde van de oorlog.", "Op 5 mei 1945 werd Nederland bevrijd. De landing in Normandië ging daaraan vooraf.", "Op 1 september 1939 viel Duitsland Polen binnen: het begin van de oorlog."],
         uitlegPad: {
           stappen: [{ titel: "Operation Overlord", tekst: "**6 juni 1944 = D-Day**: geallieerden (UK + VS + CAN + Vrij FR) landen Normandië, NW-Frankrijk. ~150.000 mannen eerste dag. Eisenhower leidde. Begin bevrijding West-Europa." }],
           niveaus: { basis: "6 juni 1944.", simpeler: "D-Day = 6-6-44", nogSimpeler: "1944" },
@@ -165,7 +165,7 @@ const steps = [
         q: "Wanneer **Bouw Berlijnse Muur**?",
         options: ["13 augustus 1961","9 november 1989","5 mei 1945","7 oktober 1949"],
         answer: 0,
-        wrongHints: [null, "Op die datum stond de Muur er al bijna dertig jaar.", "Niet — WO2-einde.", "Op 7 oktober 1949 werd de DDR opgericht. De Muur kwam pas later."],
+        wrongHints: [null, "Op die datum stond de Muur er al bijna dertig jaar.", "Op 5 mei 1945 werd Nederland bevrijd. Toen bestond de DDR nog niet eens.", "Op 7 oktober 1949 werd de DDR opgericht. De Muur kwam pas later."],
         uitlegPad: {
           stappen: [{ titel: "Stop vlucht naar West", tekst: "**13 augustus 1961**: DDR begint Muur te bouwen om vlucht naar West-Berlijn te stoppen. Tot dan: ~3 mln mensen vluchten uit DDR via Berlijn (1949-61). Muur 155 km lang. **9 november 1989**: Muur valt → einde Koude Oorlog symbolisch." }],
           niveaus: { basis: "13-8-1961.", simpeler: "Muur 1961", nogSimpeler: "1961" },
@@ -224,7 +224,7 @@ const steps = [
         q: "Wanneer **viel Berlijnse Muur**?",
         options: ["9 november 1989","13 augustus 1961","25 december 1991","3 oktober 1990"],
         answer: 0,
-        wrongHints: [null, "Niet — bouw.", "Niet — USSR-einde.", "Niet — Duitse hereniging."],
+        wrongHints: [null, "Op 13 augustus 1961 werd de Muur juist gebouwd.", "Op 25 december 1991 viel de Sovjet-Unie uit elkaar. De Muur was toen al weg.", "Op 3 oktober 1990 werd Duitsland herenigd. De Muur was toen al open."],
         uitlegPad: {
           stappen: [{ titel: "9 nov 1989 = Mauerfall", tekst: "**9 november 1989: Berlijnse Muur valt**. DDR-woordvoerder Schabowski maakt foutje in persconferentie ('per direct grenzen open'). Mensen stormen muur — DDR-grenswachters openen poorten. Iconisch beeld einde Koude Oorlog. **3 okt 1990**: Duitse hereniging." }],
           niveaus: { basis: "9 nov 1989.", simpeler: "1989 Muur valt", nogSimpeler: "1989" },
@@ -242,9 +242,9 @@ const steps = [
       },
       {
         q: "**Srebrenica 1995** is NL-trauma omdat:",
-        options: ["Dutchbat kon de moslimmannen niet beschermen", "Nederlandse soldaten pleegden de moorden", "Veel Nederlandse soldaten sneuvelden er", "Nederland weigerde soldaten te sturen"],
+        options: ["Dutchbat kon de moslimmannen niet beschermen", "Dutchbat-soldaten pleegden zelf de moorden", "Veel Dutchbat-soldaten sneuvelden er", "Dutchbat bombardeerde de stad per vergissing"],
         answer: 0,
-        wrongHints: [null, "Niet: de moorden werden gepleegd door Bosnisch-Servische troepen.", "Er sneuvelde één Nederlandse soldaat. Het trauma gaat over wat er met anderen gebeurde.", "Lees de vraag nog eens: waarom zou het dan een Nederlands trauma zijn?"],
+        wrongHints: [null, "De moorden werden gepleegd door Bosnisch-Servische troepen onder generaal Mladić.", "Er sneuvelde één Nederlandse soldaat. Het trauma gaat over wat er met anderen gebeurde.", "Dutchbat had alleen lichte wapens en geen vliegtuigen. Luchtsteun van de NAVO bleef juist grotendeels uit."],
         uitlegPad: {
           stappen: [{ titel: "Falen 'safe area'", tekst: "**Srebrenica juli 1995**: Bosnische enclave was 'VN safe area' onder bescherming van **Nederlands bataljon (Dutchbat)** (~600 lichtbewapend). Servische troepen onder generaal **Mladić** drongen door, Dutchbat kon niet stoppen → **8.372 moslim-mannen + jongens vermoord** in dagen. Grootste massamoord Europa na WO2. NIOD-rapport 2002 → kabinet-Kok treedt af. Mladić in 2017 levenslang ICTY. Trauma + schaamte NL." }],
           theorie: "Toets-favoriet: 'leg uit waarom Srebrenica NL-trauma'. Antwoord: NL faalde mensen te beschermen, hoewel mandaat te zwak was.",
@@ -292,9 +292,9 @@ const steps = [
       },
       {
         q: "**Korea-oorlog** (1950-53) was tussen:",
-        options: ["Noord-Korea en Zuid-Korea", "Oost- en West-Duitsland", "De VS en Noord-Vietnam", "Japan en de Verenigde Staten"],
+        options: ["Noord-Korea en Zuid-Korea", "Oost- en West-Duitsland", "De VS en Noord-Vietnam", "Zuid-Korea en de Sovjet-Unie"],
         answer: 0,
-        wrongHints: [null, "Duitsland was verdeeld, maar daar werd geen oorlog gevoerd.", "Dat was de Vietnam-oorlog, later.", "Japan en de VS vochten in de Tweede Wereldoorlog, tot 1945."],
+        wrongHints: [null, "Duitsland was verdeeld, maar daar werd geen oorlog gevoerd.", "Dat was de Vietnam-oorlog, later.", "De Sovjet-Unie leverde wapens en hielp in het geheim, maar stuurde officieel geen leger. Welk land begon in juni 1950 de aanval?"],
         uitlegPad: {
           stappen: [{ titel: "Eerste Koude-Oorlog-proxy", tekst: "**Korea-oorlog 1950-53**: communistisch **Noord-Korea** (Kim Il-sung, gesteund door China + USSR) viel pro-westers **Zuid-Korea** (gesteund door VS + VN) aan. VS-generaal MacArthur. China stuurde massaal 'vrijwilligers'. Eindigde met **wapenstilstand 1953 — geen vrede**. Demilitarized Zone (DMZ) bestaat nog. NL stuurde ook troepen." }],
           niveaus: { basis: "Noord vs Zuid Korea.", simpeler: "Korea = N-Z", nogSimpeler: "Noord tegen Zuid" },
@@ -304,7 +304,7 @@ const steps = [
         q: "Wanneer **NL erkende Indonesische onafhankelijkheid**?",
         options: ["27 december 1949", "17 augustus 1945", "5 mei 1945", "15 augustus 1962"],
         answer: 0,
-        wrongHints: [null, "Niet: dat is de uitroeping door Soekarno.", "Op 5 mei 1945 werd Nederland zelf bevrijd. Indonesië was toen nog bezet door Japan.", "In 1962 ging het om Nieuw-Guinea, niet om Indonesië als geheel."],
+        wrongHints: [null, "Op 17 augustus 1945 riep Soekarno de onafhankelijkheid uit. Nederland erkende die toen nog niet.", "Op 5 mei 1945 werd Nederland zelf bevrijd. Indonesië was toen nog bezet door Japan.", "In 1962 ging het om Nieuw-Guinea, niet om Indonesië als geheel."],
         uitlegPad: {
           stappen: [{ titel: "Vier-jarig conflict", tekst: "**17 aug 1945**: Soekarno + Hatta riepen Republiek Indonesia uit (twee dagen na Japanse capitulatie). NL probeerde koloniaal gezag te herstellen via **politionele acties** 1947 + 1948 (eufemisme voor oorlog). Internationale druk (VS dreigde Marshall-Plan stop) → **27 dec 1949**: NL erkent Indonesische onafhankelijkheid. NL sprak in 2005 (Bot) spijt uit en bood in 2022 (Rutte) excuses aan voor het geweld." }],
           niveaus: { basis: "27-12-1949.", simpeler: "1949 = NL erkent", nogSimpeler: "1949" },

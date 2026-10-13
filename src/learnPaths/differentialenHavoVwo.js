@@ -207,7 +207,7 @@ const steps = [
         q: "Afgeleide van **y = x² / x** (na simplificeren):",
         options: ["1", "2x/x²", "x", "2x"],
         answer: 0,
-        wrongHints: [null, "Je deelde de afgeleide van x² door x². Zo differentieer je een breuk niet: vereenvoudig x²/x eerst.", "Niet — dat is de vereenvoudigde functie zelf, niet de helling ervan.", "2x is de afgeleide van x². Maar wat blijft er van x²/x over als je eerst vereenvoudigt?"],
+        wrongHints: [null, "Je deelde de afgeleide van x² door x². Zo differentieer je een breuk niet: vereenvoudig x²/x eerst.", "x is de vereenvoudigde functie zelf, niet de helling ervan. Welke afgeleide hoort bij y = x?", "2x is de afgeleide van x². Maar wat blijft er van x²/x over als je eerst vereenvoudigt?"],
         uitlegPad: {
           stappen: [{ titel: "Eerst vereenvoudigen", tekst: "x²/x = x (voor x≠0). y = x, dus y' = **1**. Quotiëntregel werkt ook maar omslachtig. Tip: altijd eerst proberen te vereenvoudigen." }],
           niveaus: { basis: "1.", simpeler: "Functie vereenvoudigt tot x.", nogSimpeler: "1" },

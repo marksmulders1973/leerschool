@@ -179,12 +179,12 @@ const steps = [
       },
       {
         q: "Een aardbeving 7 op Richter is **hoeveel sterker** dan 5?",
-        options: ["100× sterker", "2× sterker", "20× sterker", "10× sterker"],
+        options: ["100× zo grote uitslag", "2× zo grote uitslag", "20× zo grote uitslag", "10× zo grote uitslag"],
         answer: 0,
-        wrongHints: [null, "Je keek naar het verschil 7 − 5 = 2. Maar de schaal is logaritmisch: wat betekent één stap omhoog?", "Je deed 2 × 10. Maar elke stap is een factor 10: wat krijg je bij twee stappen achter elkaar?", "Dat zou het verschil tussen 6 en 5 zijn. Hoeveel stappen liggen er tussen 7 en 5?"],
+        wrongHints: [null, "Je keek naar het verschil 7 − 5 = 2. Maar de schaal is logaritmisch: wat doet één stap omhoog met de uitslag?", "Je deed 2 × 10. Maar elke stap maakt de uitslag 10× zo groot: wat krijg je bij twee stappen achter elkaar?", "Dat zou het verschil tussen 6 en 5 zijn. Hoeveel stappen liggen er tussen 7 en 5?"],
         uitlegPad: {
           stappen: [
-            { titel: "10× per magnitude", tekst: "Richter is log₁₀-schaal. 7−5 = 2 stappen → 10² = **100× sterker** amplitude. Energie zelfs ~32× per magnitude → bij verschil 2: ~1000× energie." },
+            { titel: "10× per magnitude", tekst: "Richter is log₁₀-schaal. 7−5 = 2 stappen → 10² = **100× zo grote uitslag** (amplitude). Energie zelfs ~32× per magnitude → bij verschil 2: ~1000× energie." },
           ],
           theorie: "Aardbeving 9,1 (Sumatra 2004) ~ 1000× meer energie dan 7 — uitzonderlijk vernietigend.",
           niveaus: { basis: "100×.", simpeler: "Log-schaal: 2 stappen = 100×.", nogSimpeler: "100" },
@@ -298,7 +298,7 @@ const steps = [
         wrongHints: [null, "21 = 7 · 3: je vermenigvuldigde de exponenten. Wat doe je met de exponenten bij e^7 · e^3?", "e^10 is wat er binnen de ln staat. Wat doet ln daarna met e^10?", "Niet — de e mag je niet zomaar weglaten."],
         uitlegPad: {
           stappen: [
-            { titel: "Eerst product simplificeren", tekst: "e^7 · e^3 = e^10. ln(e^10) = **10**. Macht-regel + ln-eigenschap." },
+            { titel: "Eerst product vereenvoudigen", tekst: "e^7 · e^3 = e^10. ln(e^10) = **10**. Macht-regel + ln-eigenschap." },
           ],
           niveaus: { basis: "10.", simpeler: "7+3=10, ln(e^10)=10.", nogSimpeler: "10" },
         },

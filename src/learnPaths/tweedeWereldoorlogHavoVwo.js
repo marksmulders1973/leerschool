@@ -21,9 +21,9 @@ const steps = [
     checks: [
       {
         q: "**Verdrag van Versailles** (1919) gaf Duitsland:",
-        options: ["Schuld, sancties en herstelbetalingen", "Verdeling in vier bezettingszones", "Een vereniging met Oostenrijk", "Een zetel in de Volkenbond"],
+        options: ["Schuld, sancties en herstelbetalingen", "Bezetting, vier zones en ontwapening", "Een vrede zonder winnaars of verliezers", "Steun en leningen via het Marshallplan"],
         answer: 0,
-        wrongHints: [null, "Die verdeling in vier zones kwam pas na de Tweede Wereldoorlog, in 1945.", "Een vereniging met Oostenrijk werd in Versailles juist verboden. Hitler deed het toch, in 1938.", "Duitsland mocht in 1919 juist niet bij de Volkenbond; dat kwam pas in 1926."],
+        wrongHints: [null, "Een bezetting in vier zones kwam pas na de Tweede Wereldoorlog, in 1945.", "Zo'n vrede zonder overwinnaars wilde de Amerikaanse president Wilson, maar Frankrijk en Engeland kregen hun zin. Hoe keken zij naar Duitsland?", "Het Marshallplan was Amerikaanse hulp ná de Tweede Wereldoorlog, vanaf 1947."],
         uitlegPad: {
           stappen: [
             { titel: "Vernederend voor Duitsland", tekst: "DE moest 'oorlogsschuld' accepteren (artikel 231), 132 mld goudmark betalen, leger inkrimpen tot 100k man, kolonies + grondgebied verliezen. Werd als 'Diktat' ervaren. Voedde later extremisme + Hitlers belofte 'recht doen'. Veel historici zien het als een van de oorzaken van WO2." },
@@ -43,9 +43,9 @@ const steps = [
       },
       {
         q: "**Lebensraum** = ?",
-        options: ["Leefruimte in Oost-Europa", "Herstel van de grenzen van 1914", "Eén rijk voor alle Duitstaligen", "Koloniën in Afrika"],
+        options: ["Leefruimte in Oost-Europa", "Herstel van de grenzen van 1914", "Eén rijk voor alle Duitstaligen", "Leefruimte in koloniën overzee"],
         answer: 0,
-        wrongHints: [null, "Hitler wilde veel meer dan de oude grenzen terug. Waar zag hij nieuw land voor Duitsers?", "Dat idee heet 'Heim ins Reich'. Lebensraum ging over land voor boeren en grondstoffen.", "Niet: Hitler zocht land dichter bij Duitsland."],
+        wrongHints: [null, "Hitler wilde veel meer dan de oude grenzen terug. Waar zag hij nieuw land voor Duitsers?", "Dat idee heet 'Heim ins Reich'. Lebensraum ging over land voor boeren en grondstoffen.", "Duitsland verloor in 1919 zijn koloniën, maar Hitler zocht geen land overzee. In welke richting keek hij?"],
         uitlegPad: {
           stappen: [
             { titel: "Rechtvaardiging invasie", tekst: "Hitler: DE bevolking groeit, heeft meer ruimte nodig. Oost-Europa (Polen, Oekraïne, Rusland) zou herkoloniseerd worden als DE leefruimte. Slaven 'inferieur' → onderdrukken of uitroeien. Argument voor invasie 1941 USSR (Operatie Barbarossa)." },
@@ -69,7 +69,7 @@ const steps = [
         q: "**WO2 begon** met DE-invasie van:",
         options: ["Polen", "Frankrijk", "USSR", "Nederland"],
         answer: 0,
-        wrongHints: [null, "Niet — mei 1940.", "Niet — juni 1941.", "Niet — mei 1940."],
+        wrongHints: [null, "Frankrijk werd pas in mei 1940 aangevallen. Na welke inval verklaarden Engeland en Frankrijk Duitsland de oorlog?", "De Sovjet-Unie werd pas in juni 1941 aangevallen. In 1939 sloot Stalin juist een pact met Hitler.", "Nederland werd pas in mei 1940 aangevallen; tot dan bleef het neutraal."],
         uitlegPad: {
           stappen: [
             { titel: "Datum WO2-start", tekst: "1 sept 1939 vroeg ochtend: DE valt Polen binnen na grens-incident (gefabriceerd door SS). 3 sept: UK + FR verklaren oorlog aan DE. 17 sept: USSR valt OOST-Polen aan (Molotov-Ribbentrop-pact). Polen bezet binnen weken." },
@@ -90,7 +90,7 @@ const steps = [
         q: "Nederland werd door DE bezet in:",
         options: ["Mei 1940", "September 1939", "Juni 1941", "Juli 1944"],
         answer: 0,
-        wrongHints: [null, "In september 1939 viel Duitsland Polen aan. Nederland bleef toen nog neutraal.", "In juni 1941 viel Duitsland de Sovjet-Unie aan. Toen was Nederland al een jaar bezet.", "Niet — toen was Nederland al vier jaar bezet."],
+        wrongHints: [null, "In september 1939 viel Duitsland Polen aan. Nederland bleef toen nog neutraal.", "In juni 1941 viel Duitsland de Sovjet-Unie aan. Toen was Nederland al een jaar bezet.", "In juli 1944 was Nederland al vier jaar bezet; in september 1944 werd het zuiden bevrijd."],
         uitlegPad: {
           stappen: [
             { titel: "5-daagse oorlog", tekst: "10 mei 1940 vroeg ochtend: DE valt NL aan (Westfeldzug). 14 mei: Rotterdam-bombardement → NL capituleert om verdere steden te sparen. Koningin + regering naar Londen. Beneluxlanden + FR allemaal in 6 weken bezet — Blitzkrieg-succes." },
@@ -186,7 +186,7 @@ const steps = [
       },
       {
         q: "**Anne Frank** stierf:",
-        options: ["Bergen-Belsen", "Auschwitz", "Westerbork", "Amsterdam"],
+        options: ["In Bergen-Belsen", "In Auschwitz", "In Westerbork", "In Amsterdam"],
         answer: 0,
         wrongHints: [null, "Anne werd in 1944 naar Auschwitz gebracht, maar daarna nog verder vervoerd.", "Westerbork was een doorgangskamp in Drenthe: Anne zat er maar kort.", "In Amsterdam zat Anne ondergedoken in het Achterhuis, tot ze in 1944 werd opgepakt."],
         uitlegPad: {
@@ -281,12 +281,12 @@ const steps = [
         q: "**Bloedbad van Nanjing** (dec 1937):",
         options: [
           "Massamoord door Japanse troepen op Chinezen",
-          "Grote Chinese overwinning op Japan",
-          "Vredesverdrag tussen China en Japan",
+          "Massamoord door Chinese troepen op Japanners",
+          "Opstand van Chinese boeren tegen hun regering",
           "Duits bombardement op een Chinese stad"
         ],
         answer: 0,
-        wrongHints: [null, "Een 'bloedbad' is geen overwinning. Wie veroverde Nanjing in december 1937?", "Een vredesverdrag kwam er toen niet: de oorlog tussen China en Japan ging nog door tot 1945.", "Niet Duits — in China vochten in 1937 Japan en China tegen elkaar."],
+        wrongHints: [null, "Het bloedbad gebeurde toen de Chinese hoofdstad in december 1937 werd veroverd. Door welk leger?", "In China vochten communisten en nationalisten ook tegen elkaar, maar dit bloedbad gebeurde toen een buitenlands leger de hoofdstad innam.", "Duitsland was in 1937 niet in oorlog met China. Welk land viel China in 1937 binnen?"],
         uitlegPad: {
           stappen: [
             { titel: "'Rape of Nanking'", tekst: "Toen Japanse leger de Chinese hoofdstad Nanjing innam: massamoord + verkrachting van Chinese burgers + krijgsgevangenen. Schattingen 200-300k doden in 6 weken. Eén van ergste oorlogsmisdaden 20e eeuw. Belangrijke reden voor naoorlogse anti-Japan-sentiment in China. Sommige Japanse nationalisten ontkennen schaal nog steeds — diplomatiek spanningsveld." },
@@ -319,12 +319,12 @@ const steps = [
         q: "**Neurenberg-principe**:",
         options: [
           "'Bevelen opvolgen' is geen excuus voor misdaden",
-          "Leiders van een staat zijn niet te berechten",
-          "Soldaten zijn schuldig, hun leiders niet",
+          "Wie het bevel geeft is schuldig, de uitvoerder niet",
+          "Een staat berecht zelf zijn eigen oorlogsmisdadigers",
           "Een land betaalt voor de misdaden van zijn leiders"
         ],
         answer: 0,
-        wrongHints: [null, "Göring en andere nazi-kopstukken werden in Neurenberg gewoon berecht.", "Juist de leiders stonden in Neurenberg terecht.", "Het ging in Neurenberg om de schuld van personen, niet van een land."],
+        wrongHints: [null, "Dit klopt maar half. Lees de tweede helft van deze zin nog eens kritisch.", "In Neurenberg zaten rechters uit de VS, de Sovjet-Unie, Engeland en Frankrijk. Berechtte Duitsland daar zijn eigen oorlogsmisdadigers?", "Het ging in Neurenberg om de schuld van personen, niet van een land."],
         uitlegPad: {
           stappen: [
             { titel: "Individuele verantwoordelijkheid", tekst: "Klassiek beginsel: ook ambtenaren + soldaten zijn verantwoordelijk voor hun handelingen. Eichmann probeerde dit verweer ('ich war nur ein kleines Rädchen') — werd verworpen. Vandaag basis voor het Internationaal Strafhof in Den Haag (ICC) waar oorlogsmisdaden berecht worden." },
@@ -346,9 +346,9 @@ const steps = [
       },
       {
         q: "**Europese integratie** (EGKS → EU) had als hoofddoel:",
-        options: ["Vrede door economische samenwerking", "Eén Europees leger vormen", "Eén munt voor heel Europa", "Samen sterk staan tegen de VS"],
+        options: ["Vrede door economische samenwerking", "Eén Europees leger tegen de Sovjet-Unie", "Eén munt om de handel makkelijker te maken", "Concurreren met de economie van de VS"],
         answer: 0,
-        wrongHints: [null, "Dat Europese leger kwam er juist níét. Waarom deelden landen hun kolen en staal?", "De euro kwam pas in 1999/2002. Waarom begonnen landen in 1951 samen te werken?", "De VS steunden de Europese samenwerking juist."],
+        wrongHints: [null, "Een Europees leger werd in 1954 juist afgewezen. Waarom deelden landen hun kolen en staal?", "De euro kwam pas in 1999/2002. Waarom begonnen landen in 1951 samen te werken?", "De VS steunden de Europese samenwerking juist, onder meer met het Marshallplan. Waarom legden juist Frankrijk en Duitsland hun kolen en staal samen?"],
         uitlegPad: {
           stappen: [
             { titel: "Schuman + Monnet", tekst: "1951: kolen + staal-industrie (oorlogsbasis) onder gemeenschappelijk bestuur Schumanplan. Idee: landen die handel + economie delen, gaan geen oorlog meer voeren. Werkt: geen oorlog meer tussen EU-leden sinds 1945. Nobelvredesprijs 2012 voor EU." },

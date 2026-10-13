@@ -284,3 +284,79 @@ Controle: `node --check` op alle 9 bestanden groen; `vergelijk-met-main.mjs --al
 - **werkwoordsvervoeging-frans** (werkwoordsvervoegingFrans.js) stap 6 vraag 2 · hint 2: "Avoir." → "'A' is een vorm van avoir (hebben). Welke vorm van être hoort bij il?"
 - **werkwoordsvervoeging-frans** (werkwoordsvervoegingFrans.js) stap 6 vraag 4 · hint 2: "Niet correct." → "De uitgang -u hoort bij groep 3 (vendu). Finir is groep 2 — welke uitgang krijgt het?" · hint 4: "Bestaat niet." → "-é hoort bij -er-werkwoorden, en 'finiss-' gebruik je alleen in het meervoud van de présent. Welke korte vorm hoort bij finir?"
 - **werkwoordsvervoeging-frans** (werkwoordsvervoegingFrans.js) stap 6 vraag 5 · hint 2: "Niet voor aller." → "Avoir is het gewone hulpwerkwoord, maar zie je de -s in 'allés'? Welk hulpwerkwoord krijgt aller?"
+
+## Ronde 3 (na blinde detectie)
+
+**Tellingen:** 61 gemarkeerd · 56 hersteld · 0 vals alarm · 5 twijfel (3 daarvan wel aangescherpt).
+
+Werkwijze: afleiders vervangen door correct gespelde, complete opties die inhoudelijk fout zijn (verkeerd register, aanhef↔afsluiting verwisseld, verkeerde tijd, buurbegrip uit de lesstof, bv. "As far as I know" naast "As far as I'm concerned", "After all/Above all/First of all" naast "All in all"). Waar het antwoord in de vraag zit (register, conclusie-signaal, opinion) zijn opties met een reden/plaats toegevoegd, zodat herkennen alleen niet genoeg is. Twee-goed-gevallen opgelost door de tweede goede optie te vervangen ("Do you see the film?" → "Saw you the film?", "did see" → "seen", "Eerste indruk volgen" → "Foute opties meteen schrappen"). Grieks: 1896 vervangen door 399 v.Chr. Hints van alle 61 vragen nagelopen; kale hints herschreven. `answer`, `q` en volgorde ongewijzigd; vergelijk-met-main: 0 afwijkingen.
+
+### Twijfel voor Mark
+- engelsCseHavoVwo.js stap 5 vraag 2: de vraag noemt al "sarcastische toon", dus "ironie herkennen" ligt voor de hand. Dat valt alleen op te lossen door `q` te wijzigen. Ongewijzigd.
+- pastTensesEngels.js stap 8 vraag 2: "haven't" bevat zichtbaar "have" + "n't". Dat zit in de vraag zelf. Alleen de hints zijn herschreven.
+- engelsCseHavoVwo.js stap 1 vraag 4: de vraag bevat de rekensom (150/42). De afleiders liggen nu dicht bij elkaar (2,5 / 4,5 / 5), maar het antwoord blijft uit te rekenen.
+- engelsCseHavoVwo.js stap 2 vraag 2: deftige woorden leiden vanzelf naar "formal". "Slang" is vervangen door "Literary/poetic", maar het blijft herkenbaar.
+- werkwoordsvervoegingFrans.js stap 1 vraag 1: "(-er)" staat in de vraag. "aller" (twee-goed-risico) is vervangen door "voir". Daardoor is het antwoord nu aan de uitgang te zien. Wil je dat de vraag "regelmatig -er" wordt?
+
+### Per vraag (oud → nieuw)
+- conditionalsEngels.js stap 1 vraag 2: "If-clause + relative clause" → "If-clause + unless-clause"; "Main clause + question tag" → "Time clause + main clause"; "Two main clauses with 'and'" → "Main clause + result clause" (+3 hints)
+- conditionalsEngels.js stap 5 vraag 4: "if" → "in any case"; "when" → "in that case" (+2 hints)
+- cseSchrijfvaardigheidEngels.js stap 1 vraag 1: "Dear Mr Smith," → "Dear Mr or Mrs,"; "Hello Sir or Madam," → "Dear Ladies and Sirs,"; "Dear friend," → "Respected Sir or Madam," (+3 hints)
+- cseSchrijfvaardigheidEngels.js stap 1 vraag 3: "I'm (geen verschil)" → "I was"; "Im" → "I have"; "I'am" → "I would" (+3 hints)
+- cseSchrijfvaardigheidEngels.js stap 1 vraag 6: "Hey Sir or Madam," → "Dear Mrs Sarah,"; "Hi there, Mr Smith," → "Dear Sir or Madam Smith,"; "Hello my dear friend," → "Dear Teacher Brown," (+3 hints)
+- cseSchrijfvaardigheidEngels.js stap 2 vraag 1: "Dear Sir or Madam," → "Cheers, Tom"; "Yours sincerely" → "Hi Mr Tom,"; "Dear Mr Thompson," → "Love, Tom" (+3 hints)
+- cseSchrijfvaardigheidEngels.js stap 2 vraag 2: "Yours sincerely," → "Hi there,"; "Yours faithfully," → "Dear Tom," (+2 hints)
+- cseSchrijfvaardigheidEngels.js stap 2 vraag 3: "Ja" → "Ja, dat past bij de toon"; "Nee" → "Nee, alleen in spreektaal"; "Soms" → "Alleen in de afsluiting"; "Alleen in formele" → "Alleen 'I'm', niet 'don't'" (+3 hints)
+- cseSchrijfvaardigheidEngels.js stap 2 vraag 4: "Informeel" → "Informeel: Hi + Cheers"; "Formeel" → "Informeel: Dear + Yours sincerely"; "Half-formeel" → "Formeel: Hi + Best regards"; "Neutraal" → "Half-formeel: Dear + Take care" (+3 hints)
+- cseSchrijfvaardigheidEngels.js stap 2 vraag 5: "Yours sincerely" → "Hi there"; "Best regards" → "Dear Sam" (+2 hints)
+- cseSchrijfvaardigheidEngels.js stap 2 vraag 6: "Informeel" → "Informeel, door 'mate' en 'how's'"; "Formeel" → "Informeel, door de vraag aan het eind"; "Neutraal" → "Half-formeel, door 'Hi' zonder naam"; "Half-formeel" → "Formeel, door de volledige zin" (+3 hints)
+- cseSchrijfvaardigheidEngels.js stap 3 vraag 1: "Belangrijkste zinnen overnemen" → "Hoofdpunten in de zinnen van de tekst"; "Alle voorbeelden meenemen" → "Alle details in eigen woorden"; "Eigen mening toevoegen" → "Hoofdpunten plus je eigen oordeel" (+3 hints)
+- cseSchrijfvaardigheidEngels.js stap 3 vraag 2: "good" → "slight"; "fast" → "brief"; "old" → "minor" (+3 hints)
+- cseSchrijfvaardigheidEngels.js stap 3 vraag 3: "Hoofdgedachte + alle voorbeelden" → "Hoofdgedachte + 2-3 voorbeelden"; "Kernpunten + je eigen mening" → "Kernpunten + 2-3 citaten"; "Inleiding + slot van de tekst" → "Hoofdgedachte + jouw reactie" (+3 hints)
+- cseSchrijfvaardigheidEngels.js stap 3 vraag 4: "Eigen woorden + zinsbouw" → "Eigen woorden + eigen zinsbouw"; "Een paar woorden vervangen" → "Synoniemen + dezelfde zinsbouw"; "Zinnen in andere volgorde" → "Zelfde zinnen + andere volgorde"; "Elk woord door een synoniem" → "Zelfde woorden + kortere zinnen" (+3 hints)
+- cseSchrijfvaardigheidEngels.js stap 3 vraag 6: "Een • of - vóór elk item" → "Een • of - vóór elk kort item"; "Een cijfer per item (1, 2, 3)" → "Een • vóór elke lange alinea"; "Een komma na elk item" → "Een • vóór elk item en 'and' bij het laatste"; "Een volledige alinea per item" → "Een cijfer vóór elk item (1, 2, 3)" (+3 hints)
+- cseSchrijfvaardigheidEngels.js stap 4 vraag 1: "Slot-alinea + samenvatting" → "Slot-alinea: samenvatten + afronden"; "Eerste alinea + stelling" → "Slot-alinea: nieuw argument + afronden"; "Middenalinea + voorbeeld" → "Eerste alinea: stelling + aanleiding"; "Bronnenlijst + verwijzingen" → "Laatste middenalinea: sterkste argument" (+3 hints)
+- cseSchrijfvaardigheidEngels.js stap 4 vraag 2: "In my opinion" → "As far as I'm concerned"; "Generally speaking" → "As far as I know"; "Indeed" → "Generally speaking"; "Furthermore" → "On the other hand" (+3 hints)
+- cseSchrijfvaardigheidEngels.js stap 4 vraag 3: "In conclusion" → "To sum up"; "Firstly" → "Consequently"; "For example" → "Moreover"; "However" → "For instance" (+3 hints)
+- cseSchrijfvaardigheidEngels.js stap 4 vraag 4: "Noem en weerleg" → "Noemen en dan weerleggen"; "Laat hem weg" → "Noemen en dan samenvatten"; "Bewaar voor je slot" → "Noemen in je slot-alinea"; "Geef hem gelijk" → "Noemen als eerste argument" (+3 hints)
+- cseSchrijfvaardigheidEngels.js stap 4 vraag 5: "Intro + 4 argumenten, geen slot" → "Intro + 4 korte argument-alinea's"; "Intro + 2 voor- en 2 tegenargumenten" → "Intro + stelling + 2 argumenten + slot"; "Samenvatting + 3 argumenten + slot" → "Hook + intro + 2 argumenten + slot" (+3 hints)
+- cseSchrijfvaardigheidEngels.js stap 4 vraag 6: "Nieuwe argumenten introduceren" → "Nieuw argument noemen + slot-zin"; "Een nieuw voorbeeld uitwerken" → "Een nieuw voorbeeld + slot-zin"; "Je inleiding letterlijk herhalen" → "Tegenargument weerleggen + slot-zin" (+1 hint)
+- cseSchrijfvaardigheidEngels.js stap 6 vraag 1: "Hi Sir or Madam," → "Dear Sir or Mrs,"; "Dear unknown friend," → "Dear Mister or Madam,"; "Hello, dear reader," → "Honoured Sir or Madam," (+3 hints)
+- cseSchrijfvaardigheidEngels.js stap 6 vraag 3: "I'm" → "I'm (late)"; "I am" → "I am (late)"; "Im" → "its (paw)"; "I'am" → "Tom's (book)" (+2 hints)
+- cseSchrijfvaardigheidEngels.js stap 6 vraag 4: "In conclusion" → "All in all"; "Firstly" → "After all"; "For example" → "Above all"; "However" → "First of all" (+3 hints)
+- cseSchrijfvaardigheidEngels.js stap 6 vraag 6: "Kopie van de belangrijkste zinnen" → "Korte versie in de woorden van de schrijver"; "Korte versie met je eigen mening" → "Korte versie met jouw oordeel"; "Uitgebreide uitleg van de tekst" → "Even lange versie in eigen woorden" (+3 hints)
+- engelsCseHavoVwo.js stap 1 vraag 4: "~6 minuten" → "~2,5 minuut"; "~1 minuut" → "~4,5 minuut"; "~10 minuten" → "~5 minuten" (+3 hints)
+- engelsCseHavoVwo.js stap 1 vraag 5: "Interview" → "Opinion poll report" (+1 hint)
+- engelsCseHavoVwo.js stap 2 vraag 1: "Detail" → "Hoofdgedachte"; "Register" → "Toon/houding" (+2 hints)
+- engelsCseHavoVwo.js stap 2 vraag 2: "Informal/chatty" → "Informal/journalistic"; "Slang/street talk" → "Literary/poetic"; "Mixed/neutral" → "Neutral/news-style" (+3 hints)
+- engelsCseHavoVwo.js stap 2 vraag 5: "Bepalen wat de alinea toevoegt" → "Bepalen welke rol de alinea speelt"; "De alinea in het Nederlands vertalen" → "Bepalen wat de hoofdgedachte is"; "Moeilijke woorden opzoeken" → "Bepalen wat de schrijver ervan vindt" (+2 hints)
+- engelsCseHavoVwo.js stap 3 vraag 1: "De hele tekst woord voor woord lezen" → "Alle vragen bij de tekst lezen"; "Meteen bij vraag 1 beginnen" → "Eerste + laatste zin per alinea"; "Onbekende woorden opzoeken" → "Alinea-thema's in de kantlijn" (+3 hints)
+- engelsCseHavoVwo.js stap 3 vraag 2: "Bij vragen die je zeker weet" → "Bij een trefwoord uit de vraag"; "Bij vragen over lange alinea's" → "Bij een signaalwoord in de tekst"; "Bij de open vragen aan het eind" → "Bij een vraag over de hoofdgedachte" (+3 hints)
+- engelsCseHavoVwo.js stap 3 vraag 4: "Meteen het woordenboek pakken" → "Eerst het woordenboek erbij pakken"; "De hele tekst opnieuw lezen" → "Eerst de vraag erover overslaan"; "De vraag erover overslaan" → "Eerst de hele tekst opnieuw lezen" (+3 hints)
+- engelsCseHavoVwo.js stap 3 vraag 5: "Eerste indruk volgen" → "Foute opties meteen schrappen" (+1 hint)
+- engelsCseHavoVwo.js stap 4 vraag 2: "De lezer een vertekend beeld geeft" → "Informatie verdraait of achterhoudt"; "Altijd in de ik-vorm vertelt" → "Alleen weet wat de hoofdpersoon weet"; "Alles weet over alle personages" → "Een andere toon heeft dan de auteur"; "Wetenschappelijke uitleg geeft" → "De lezer aanspreekt met 'you'" (+3 hints)
+- engelsCseHavoVwo.js stap 4 vraag 3: "Terugblik op eerdere gebeurtenis" → "Samenvatting vooraf van het verhaal"; "Vergelijking zonder 'zoals'" → "Terugblik op een eerdere gebeurtenis"; "Beschrijving van een personage" → "Sombere sfeer die de lezer voelt" (+3 hints)
+- engelsCseHavoVwo.js stap 4 vraag 5: "'He' en 'she'" → "'I' en 'you'"; "'You' en 'your'" → "'He' en 'she'"; "'They' en 'them'" → "'We' en 'they'" (+3 hints)
+- engelsCseHavoVwo.js stap 5 vraag 2: opties ongewijzigd
+- engelsCseHavoVwo.js stap 5 vraag 3: "'When was the law on school dinners passed?'" → "'What does the survey on family dinners reveal?'"; "'What was the average GDP in Europe in 2020?'" → "'Which argument does the writer use against fast food?'" (+2 hints)
+- engelsSchrijvenSprekenHavoVwo.js stap 1 vraag 5: "Apple begint met klinker-klank" → "Apple begint met een klinker-klank"; "Apple heeft meer dan één lettergreep" → "Apple begint met een klinker-letter"; "Apple is een vrouwelijk woord" → "Apple is een telbaar woord"; "Apple is een uitzondering" → "Apple heeft de klemtoon vooraan" (+3 hints)
+- engelsSchrijvenSprekenHavoVwo.js stap 2 vraag 2: "Question about your company" → "Re: Application Marketing Internship"; "Hello from a motivated student" → "Fwd: Application Marketing Internship" (+2 hints)
+- engelsSchrijvenSprekenHavoVwo.js stap 2 vraag 3: "Een standaard formele zin" → "Een vaste zin uit een formele mail"; "Te informeel voor een brief" → "Een vaste zin uit een informele mail"; "Grammaticaal fout Engels" → "Een vaste openingszin van een mail"; "Te direct en onbeleefd" → "Een vaste sluit-groet van een mail" (+2 hints)
+- engelsSchrijvenSprekenHavoVwo.js stap 2 vraag 5: "Looking forward hearing you" → "Looking forward to hear from you"; "Look forward to hear from you" → "Looking forward for hearing from you"; "Looking forward hear from you" → "Looking forward to be hearing from you" (+3 hints)
+- engelsSchrijvenSprekenHavoVwo.js stap 3 vraag 1: "Neutraal + feitelijk + objectief" → "Specifiek + feitelijk + onbetwistbaar"; "Breed + algemeen + herkenbaar" → "Breed + omstreden + onderbouwbaar" (+2 hints)
+- engelsSchrijvenSprekenHavoVwo.js stap 3 vraag 2: "Toevoegen" → "Toevoegen (bovendien)"; "Contrast" → "Contrast (desondanks)"; "Gevolg" → "Gevolg (daardoor)"; "Tijd" → "Tijd (vervolgens)" (+3 hints)
+- engelsSchrijvenSprekenHavoVwo.js stap 3 vraag 3: "Topic sentences (per alinea)" → "Een vraag als hook (Why…?)"; "Connectors (however, thus)" → "Een citaat als opening"; "Voorbeelden (for instance)" → "Connectors (however, thus)" (+3 hints)
+- engelsSchrijvenSprekenHavoVwo.js stap 3 vraag 4: "Langer + uitgebreider" → "Objectiever + zakelijker" (+1 hint)
+- engelsSchrijvenSprekenHavoVwo.js stap 4 vraag 1: "'Eh euh euh...'" → "'In conclusion, I think...'"; "'You know, like, like...'" → "'I see your point, but...'"; "'Sorry, I don't know.'" → "'For instance, last year...'" (+3 hints)
+- engelsSchrijvenSprekenHavoVwo.js stap 4 vraag 4: "Uit hoofd leren tekst" → "Een tekst woordelijk instuderen"; "Af en toe speech-fillers" → "Zeggen dat je een woord kwijt bent"; "Vragen terugstellen" → "Een Nederlands woord omschrijven"; "Voorbeelden noemen" → "Vooraf je structuur voorbereiden" (+3 hints)
+- engelsSchrijvenSprekenHavoVwo.js stap 4 vraag 5: "'Sorry, but you're just wrong.'" → "'Exactly, that's what I think.'"; "'No. I disagree. Next question.'" → "'Why do you say that?'"; "'With respect, that's nonsense.'" → "'No, I don't agree, that's wrong.'" (+3 hints)
+- engelsSchrijvenSprekenHavoVwo.js stap 5 vraag 5: "Woordenaantal + spreektijd + accent" → "Inhoud + spelling + uitspraak + interactie"; "Accent + spreeksnelheid + houding" → "Inhoud + taal + accent + spreektijd"; "Grammatica + spelling + woordkeus" → "Woordenaantal + taal + uitspraak + houding" (+3 hints)
+- grieksVwo.js stap 2 vraag 5: "Mannelijk en vrouwelijk" → "Mannelijk, vrouwelijk, gemeenslachtig"; "Mannelijk en onzijdig" → "Mannelijk, onzijdig, dualis"; "Vrouwelijk en onzijdig" → "Vrouwelijk, onzijdig, vocatief" (+3 hints)
+- grieksVwo.js stap 4 vraag 2: "1896" → "399 v.Chr." (+1 hint)
+- pastTensesEngels.js stap 1 vraag 1: "plaied" → "plays"; "playd" → "has played"; "playyed" → "playing" (+3 hints)
+- pastTensesEngels.js stap 2 vraag 1: "Do you see the film?" → "Saw you the film?" (+3 hints)
+- pastTensesEngels.js stap 6 vraag 1: "did see" → "seen" (+2 hints)
+- pastTensesEngels.js stap 8 vraag 2: opties ongewijzigd (+2 hints)
+- pastTensesEngels.js stap 10 vraag 7: "plaid" → "had played"; "playing" → "was playing" (+2 hints)
+- werkwoordsvervoegingFrans.js stap 1 vraag 1: "aller (gaan)" → "voir (zien)" (+1 hint)
+- werkwoordsvervoegingFrans.js stap 1 vraag 4: "Omdat aimer onregelmatig is" → "Voor een -er-werkwoord wordt je → j'"; "Omdat 'aime' vrouwelijk is" → "Voor een medeklinker wordt je → j'"; "Omdat het in spreektaal mag" → "In spreektaal wordt je → j'" (+3 hints)

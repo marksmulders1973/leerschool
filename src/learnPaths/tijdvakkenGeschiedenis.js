@@ -135,7 +135,7 @@ const steps = [
   },
   {
     title: "Tijdvak 2 — Grieken en Romeinen (3000 v.Chr. – 500)",
-    explanation: "Met de uitvinding van het **schrift** begint de **echte geschiedenis** (vandaar het einde van de prehistorie). In dit lange tijdvak staan twee culturen centraal die enorm veel invloed hebben gehad op Europa: **Grieken** en **Romeinen**.\n\n**De Grieken** (~800 – 146 v.Chr.)\n• **Stadstaten**: Athene, Sparta, Korinthe.\n• Athene: eerste **democratie** (~500 v.Chr.) — burgers stemden zelf.\n• Filosofie: **Socrates, Plato, Aristoteles**.\n• Olympische Spelen, theater, wiskunde (Pythagoras!).\n\n**De Romeinen** (~750 v.Chr. – 476 n.Chr.)\n• Begonnen als stad → werd een **enorm rijk** rond de Middellandse Zee.\n• **Latijn**: hun taal, basis van Frans/Spaans/Italiaans en veel Nederlandse leenwoorden.\n• Rechtssysteem, wegen, aquaducten, beton.\n• Romeinen in Nederland: **limes** (grens) langs de Rijn, forten bij Nijmegen en Utrecht.\n• 476 n.Chr.: **Val van het West-Romeinse Rijk** — einde tijdvak 2.\n\n**Onthoud**: schrift, democratie (Grieken), wegen + recht (Romeinen).",
+    explanation: "Met de uitvinding van het **schrift** begint de **echte geschiedenis** (vandaar het einde van de prehistorie). In dit lange tijdvak staan twee culturen centraal die enorm veel invloed hebben gehad op Europa: **Grieken** en **Romeinen**.\n\n**De Grieken** (~800 – 146 v.Chr.)\n• **Stadstaten**: Athene, Sparta, Korinthe.\n• Athene: eerste **democratie** (~500 v.Chr.) — burgers stemden zelf.\n• Filosofie: **Socrates, Plato, Aristoteles**.\n• Olympische Spelen, theater, wiskunde (Pythagoras!).\n\n**De Romeinen** (~750 v.Chr. – 476 n.Chr.)\n• Begonnen als stad → werd een **enorm rijk** rond de Middellandse Zee.\n• **Latijn**: hun taal, basis van Frans/Spaans/Italiaans en veel Nederlandse leenwoorden.\n• Rechtssysteem, wegen, aquaducten, beton.\n• Romeinen in Nederland: **limes** (grens) langs de Rijn, forten bij Nijmegen en Utrecht.\n• 476 n.Chr.: **Val van het West-Romeinse Rijk** — rond 500 eindigt tijdvak 2.\n\n**Onthoud**: schrift, democratie (Grieken), wegen + recht (Romeinen).",
     svg: tijdlijnSvg(1),
     checks: [
       {
@@ -154,16 +154,16 @@ const steps = [
       },
       {
         q: "Wanneer eindigt tijdvak 2?",
-        options: ["476 — einde West-Romeinse Rijk", "1492 — Columbus ontdekt Amerika", "1789 — begin Franse Revolutie", "1945 — einde Tweede Wereldoorlog"],
+        options: ["Rond 500, na de val van Rome", "Rond 0, bij de geboorte van Jezus", "Rond 800, met keizer Karel de Grote", "Rond 1000, als de steden groeien"],
         answer: 0,
-        wrongHints: [null, "In 1492 bereikte Columbus Amerika. Toen was het West-Romeinse Rijk al bijna duizend jaar verdwenen.", "In 1789 begon de Franse Revolutie, veel later.", "In 1945 eindigde de Tweede Wereldoorlog, bijna 1500 jaar na de Romeinen."],
+        wrongHints: [null, "Het jaar 0 is het begin van onze jaartelling, maar de Romeinen bleven daarna nog eeuwen de baas: denk aan de limes langs de Rijn.", "Karel de Grote werd in 800 tot keizer gekroond, maar hij hoort bij de monniken en ridders van het volgende tijdvak.", "Rond 1000 begint juist tijdvak 4, als de steden groeien. Tijdvak 2 was toen al lang voorbij."],
         uitlegPad: {
-          stappen: [{ titel: "Val Rome 476", tekst: "Tijdvak 2 eindigt in 476 met val van het West-Romeinse Rijk. Germaanse stam onder Odoaker zette laatste keizer Romulus Augustulus af. Begin Middeleeuwen (tijdvak 3)." }],
+          stappen: [{ titel: "Rond 500: val van West-Rome", tekst: "Tijdvak 2 eindigt rond 500. Het ijkpunt is 476: de val van het West-Romeinse Rijk. Een Germaanse stam onder Odoaker zette de laatste keizer Romulus Augustulus af. Daarna begint de middeleeuwen (tijdvak 3)." }],
           woorden: [{ woord: "Val van Rome", uitleg: "Einde West-Romeinse Rijk in 476. Oost-Romeinse Rijk (Byzantium) leefde nog 1000 jr door." }, { woord: "Romulus Augustulus", uitleg: "Laatste keizer van West-Rome. Afgezet 4 sept 476." }],
-          theorie: "Belangrijke jaartallen om te onthouden: 3000 v.Chr. (begin tijdvak 2), 476 (einde 2 / begin 3), 1500 (begin 5), 1789 (Franse Revolutie tijdvak 7), 1900 (begin 9), 1945 (einde 9).",
+          theorie: "Belangrijke jaartallen om te onthouden: 3000 v.Chr. (begin tijdvak 2), rond 500 (einde 2 / begin 3; val West-Rome in 476), 1500 (begin 5), 1789 (Franse Revolutie tijdvak 7), 1900 (begin 9), 1945 (einde 9).",
           voorbeelden: [{ type: "tijdlijn", tekst: "476 = scharnierpunt. Daarvoor: Romeinen domineren Europa. Daarna: chaos, Germaanse koninkrijken, opkomst Kerk." }],
-          basiskennis: [{ onderwerp: "Andere jaartallen", uitleg: "1492 = ontdekking Amerika. 1789 = Franse Revolutie. 1945 = einde WO2. Allemaal veel later." }],
-          niveaus: { basis: "476 Val Rome.", simpeler: "Tijdvak 2 (Grieken+Romeinen) eindigt in 476 met val West-Romeinse Rijk.", nogSimpeler: "476" },
+          basiskennis: [{ onderwerp: "Andere jaartallen", uitleg: "Jaar 0 = begin van de jaartelling, midden in tijdvak 2. 800 = Karel de Grote keizer (tijdvak 3). 1000 = begin tijdvak 4." }],
+          niveaus: { basis: "Rond 500 (val Rome 476).", simpeler: "Tijdvak 2 (Grieken+Romeinen) eindigt rond 500, met de val van het West-Romeinse Rijk (476).", nogSimpeler: "Rond 500" },
         },
       },
     ],
@@ -226,9 +226,9 @@ const steps = [
       },
       {
         q: "Wat veranderde de **boekdrukkunst** (~1450)?",
-        options: ["Boeken werden goedkoper, kennis ging sneller rond", "De meeste mensen leerden toen lezen en schrijven", "Monniken schreven meer boeken over met de hand", "De Kerk kreeg meer controle over alle boeken"],
+        options: ["Boeken werden goedkoper, kennis ging sneller rond", "Kinderen moesten naar school om te leren lezen", "Boeken kregen mooiere, gekleurde plaatjes", "De Kerk kreeg meer grip op wat mensen lazen"],
         answer: 0,
-        wrongHints: [null, "Lezen leerden nog lang niet alle mensen. Wat veranderde er wel aan de boeken zelf?", "Overschrijven met de hand deden monniken al eeuwen vóór de drukpers.", "Juist andersom: denk aan Luther, wiens ideeën ineens overal te lezen waren."],
+        wrongHints: [null, "Een leerplicht kwam er in Nederland pas in 1901. Wat veranderde er rond 1450 aan de boeken zelf?", "Prachtig versierde handschriften maakten monniken al eeuwen. Wat kon een drukpers wat een monnik niet kon?", "Juist andersom: denk aan Luther, wiens ideeën ineens overal te lezen waren."],
         uitlegPad: {
           stappen: [{ titel: "Massa-kopie van kennis", tekst: "Tot 1450 moesten monniken boeken HAND-KOPIËREN — maanden werk, peperduur. Gutenbergs drukpers (~1450) kon honderden kopieën maken. Boeken werden veel goedkoper, kennis breed beschikbaar." }],
           woorden: [{ woord: "boekdrukkunst", uitleg: "Mechanische druk met losse letters. Gutenberg ~1450 in Mainz." }, { woord: "Gutenberg-bijbel", uitleg: "Eerste grote boek in Europa gedrukt met losse letters (~1455). Symbool van revolutie." }],
@@ -356,9 +356,9 @@ const steps = [
     checks: [
       {
         q: "Wat veranderde door de **stoommachine**?",
-        options: ["Er kwamen fabrieken, treinen en massaproductie", "Er kwamen elektrische lampen en auto's", "Schepen konden voor het eerst naar Azië", "Mensen gingen meer op het platteland wonen"],
+        options: ["Er kwamen fabrieken, treinen en massaproductie", "Er kwamen elektriciteit, auto's en vliegtuigen", "Er kwamen windmolens, zaagmolens en grachten", "Er kwamen meer boerderijen, dorpen en akkers"],
         answer: 0,
-        wrongHints: [null, "Elektriciteit en auto's kwamen pas later, rond 1900.", "Zeilschepen voeren al in de 17e eeuw naar Azië.", "Waar was opeens veel werk te vinden: in de dorpen of in de steden?"],
+        wrongHints: [null, "Elektriciteit, auto's en vliegtuigen kwamen pas rond 1900, ná de stoommachine.", "Windmolens en zaagmolens draaiden al in de Gouden Eeuw, op windkracht. Wat kon er met stoom?", "Waar was opeens veel werk te vinden: in de dorpen of in de steden?"],
         uitlegPad: {
           stappen: [{ titel: "Industriële revolutie", tekst: "Stoommachine (verbeterd door James Watt 1769) gaf MASSALE krachtbron. Fabrieken konden produceren zonder mens-kracht. Trein verving paard. Stoomschepen vervangen zeilboten. Massale verstedelijking + arbeidersklasse." }],
           woorden: [{ woord: "stoommachine", uitleg: "Apparaat dat warmte (kolen → stoom) omzet in beweging. Basis industriële revolutie." }, { woord: "industriële revolutie", uitleg: "Overgang van hand-arbeid naar mechanische productie, ~1750-1900. Begin in Engeland." }],
@@ -471,9 +471,9 @@ const steps = [
       },
       {
         q: "In welk tijdvak hoort **Columbus' ontdekking van Amerika** (1492)?",
-        options: ["Tijdvak 5", "Tijdvak 6", "Tijdvak 3", "Tijdvak 7"],
+        options: ["Tijdvak 5", "Tijdvak 6", "Tijdvak 4", "Tijdvak 7"],
         answer: 0,
-        wrongHints: [null, "Tijdvak 6 begint pas in 1600 — 1492 valt daar buiten.", "Tijdvak 3 = vroege middeleeuwen (500-1000). Welk tijdvak heeft 'ontdekkingsreizen' als kenmerk?", "Tijdvak 7 gaat over de Verlichting en revoluties — dat past niet bij Columbus."],
+        wrongHints: [null, "Tijdvak 6 begint pas in 1600 — 1492 valt daar buiten.", "Tijdvak 4 loopt tot 1500, dus het jaartal valt er net in. Maar bij tijdvakken telt het kenmerk: hoort Columbus' reis bij steden en staten, of bij iets nieuws?", "Tijdvak 7 gaat over de Verlichting en revoluties — dat past niet bij Columbus."],
         uitlegPad: {
           stappen: [{ titel: "1492 → kenmerk tijdvak 5", tekst: "1492 ligt op de grens tussen tijdvak 4 (Steden+staten, 1000-1500) en tijdvak 5 (Ontdekkers+hervormers, 1500-1600). Maar 'ontdekkingsreizen' is het BELANGRIJKSTE kenmerk van tijdvak 5. Dus Columbus = tijdvak 5." }],
           woorden: [{ woord: "Columbus", uitleg: "Christoffel Columbus. Italiaans-Spaans zeevaarder. Landde 12 oktober 1492 op de Bahama's." }, { woord: "ontdekkingsreizen", uitleg: "Europese zeevaarders zochten zee-route naar Azië, vonden Amerika + omzeilden Afrika. ~1490-1600." }],

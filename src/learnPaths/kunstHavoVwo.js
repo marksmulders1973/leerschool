@@ -185,7 +185,7 @@ const steps = [
         wrongHints: [null, "Kubisten braken dingen op in blokjes, maar je herkent nog een gitaar of een gezicht. Is dat helemaal abstract?", "Futuristen schilderden auto's en treinen in volle vaart. Is dat abstract en strak geometrisch?", "Expressionisten zoals Munch vervormden figuren om gevoel te tonen. Zie je daar strakke lijnen en vlakken?"],
         uitlegPad: {
           stappen: [{ titel: "20e eeuw breekt vorm op", tekst: "**De Stijl** (Mondriaan 1917+) en **Suprematisme** (Malevich 1915) gingen volledig geometrisch abstract; het **Kubisme** (Picasso/Braque 1907+) was de opmaat, maar bleef herkenbare objecten tonen. Mondriaan: alleen rechthoeken + primaire kleuren. Kubisme: objecten ontleed in vlakken vanuit meerdere perspectieven tegelijk. Tegenstelling met figuratief realisme van eerdere eeuwen." }],
-          niveaus: { basis: "De Stijl.", simpeler: "Geom abstract = 20e eeuw", nogSimpeler: "De Stijl." },
+          niveaus: { basis: "De Stijl.", simpeler: "Volledig geometrisch abstract: alleen lijnen en vlakken", nogSimpeler: "De Stijl." },
         },
       },
       {

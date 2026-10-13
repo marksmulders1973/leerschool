@@ -90,9 +90,9 @@ const steps = [
     checks: [
       {
         q: "Wie was de **machtigste** in middeleeuwen?",
-        options: ["Koning, adel en Kerk", "Rijke kooplieden en gilden", "Ridders en hun soldaten", "Boeren, die het voedsel maakten"],
+        options: ["De koning, de adel en de Kerk", "Rijke kooplieden en de gilden", "De ridders en de stadsburgers", "De keizer en de Romeinse senaat"],
         answer: 0,
-        wrongHints: [null, "Steden en kooplieden werden pas later machtig, vanaf ongeveer 1100.", "Ridders waren de laagste adel. Wie stonden er boven hen?", "Boeren waren met velen, maar het land was niet van hen. Van wie dan wel?"],
+        wrongHints: [null, "Steden en kooplieden werden pas later machtig, vanaf ongeveer 1100.", "Ridders waren de laagste adel, en stadsburgers kregen pas vanaf 1100 meer rechten. Wie stonden er boven de ridders?", "De Romeinse senaat verdween met het West-Romeinse Rijk in 476. Wie hadden in de middeleeuwen het land in bezit?"],
       },
       {
         q: "Wat is een **vazal**?",
@@ -108,9 +108,9 @@ const steps = [
       },
       {
         q: "Wat deden **monniken** in kloosters?",
-        options: ["Kopieerden boeken en bewaarden kennis", "Bestuurden de steden als burgemeester", "Bouwden kastelen voor de adel", "Reisden als handelaren naar Azië"],
+        options: ["Kopieerden boeken en bewaarden kennis", "Leidden de mis in de dorpskerken", "Kozen in Rome de nieuwe paus", "Spraken recht over de stadsburgers"],
         answer: 0,
-        wrongHints: [null, "Steden werden bestuurd door rijke burgers. Monniken leefden afgezonderd in hun klooster.", "Kastelen lieten edelen bouwen. Wat deden monniken binnen de kloostermuren?", "Monniken bleven meestal hun hele leven in hetzelfde klooster."],
+        wrongHints: [null, "De mis in het dorp leidde de pastoor. Monniken leefden afgezonderd achter de kloostermuren. Waar waren zij daar mee bezig?", "De paus werd gekozen door kardinalen, de hoogste geestelijken. Monniken bleven meestal hun hele leven in hetzelfde klooster.", "Recht spreken in de stad deed de schepenbank. Monniken leefden juist afgezonderd, buiten het stadsbestuur."],
       },
     ],
   },
@@ -123,21 +123,21 @@ const steps = [
     checks: [
       {
         q: "Wat hadden ridders **als wapens**?",
-        options: ["Zwaard en lans", "Musket en kanon", "Speer en stenen bijl", "Pijl en boog"],
+        options: ["Een lang zwaard en een lans", "Een werpspeer en een kort zwaard", "Een bijl en een rond schild", "Een kruisboog en een piek"],
         answer: 0,
-        wrongHints: [null, "Vuurwapens als het musket kwamen pas na de middeleeuwen echt in gebruik.", "Stenen bijlen horen bij de prehistorie. Ridders hadden wapens van ijzer.", "Met pijl en boog vochten boogschutters, meestal gewone soldaten. Een ridder te paard had andere wapens."],
+        wrongHints: [null, "Een werpspeer en een kort zwaard waren de wapens van Romeinse legioensoldaten, eeuwen vóór de ridders.", "Een bijl en een rond schild horen bij de Vikingen, die rond 800-1000 Europa plunderden. Ridders vochten anders.", "Met kruisboog en piek vochten gewone voetsoldaten. Zij vochten vaak juist tegen ridders."],
       },
       {
         q: "Waarom waren er **kruistochten**?",
-        options: ["Religie, macht en land", "Vluchten voor de pest", "Zeeroute naar Indië zoeken", "Vikingen tot christen maken"],
+        options: ["Religie, macht en nieuw land", "Vluchten voor pest en honger", "Goud, kolonies en een zeeroute", "Het Romeinse Rijk herstellen"],
         answer: 0,
-        wrongHints: [null, "De pest kwam pas in 1347, lang na de eerste kruistocht (1096).", "Dat was de reden voor de ontdekkingsreizen, eeuwen later.", "De Vikingen werden in hun eigen land christen. De kruisvaarders trokken naar een heel ander gebied."],
+        wrongHints: [null, "De pest kwam pas in 1347, lang na de eerste kruistocht (1096).", "Goud, kolonies en een zeeroute naar Indië zochten de ontdekkingsreizigers, rond 1500.", "Karel de Grote wilde rond 800 iets van het oude Romeinse Rijk terug. De kruisvaarders trokken om andere redenen naar het oosten."],
       },
       {
         q: "Waar gingen de kruisvaarders **heen**?",
-        options: ["Het Heilige Land", "Rome in Italië", "Mekka in Arabië", "Santiago in Spanje"],
+        options: ["Jeruzalem, waar Jezus stierf", "Rome, waar de paus woonde", "Mekka, waar Mohammed leefde", "Santiago, waar Jakobus ligt"],
         answer: 0,
-        wrongHints: [null, "Naar Rome gingen pelgrims voor de paus, maar kruisvaarders wilden een andere stad veroveren.", "Mekka is de heilige stad van de islam. Daar trokken kruisvaarders niet heen. Waar ligt Jeruzalem?", "Naar Santiago de Compostela liepen pelgrims, maar kruisvaarders trokken met een leger naar een andere heilige plek."],
+        wrongHints: [null, "Naar Rome gingen pelgrims om de paus te zien, maar kruisvaarders trokken met een leger naar een stad die ze wilden veroveren.", "Mekka is de heilige stad van de islam: daar wilden christelijke ridders niet heen. Welke stad wilde paus Urbanus II in 1095 'bevrijden'?", "Naar het graf van de apostel Jakobus in Santiago liepen pelgrims, maar kruisvaarders trokken met een leger naar een andere heilige plek."],
       },
       {
         q: "Wie won uiteindelijk **Jeruzalem terug** voor de moslims in 1187?",

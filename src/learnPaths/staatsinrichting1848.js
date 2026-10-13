@@ -45,9 +45,9 @@ const steps = [
       },
       {
         q: "Wat is een **absolute monarchie**?",
-        options: ["Koning heeft zelf alle macht","Koning is alleen ceremonieel","Koning en parlement delen macht","Adel kiest wie er koning wordt"],
+        options: ["De koning heeft zelf alle macht","Het parlement heeft alle macht","Koning en parlement delen de macht","Koning en adel delen alle macht"],
         answer: 0,
-        wrongHints: [null, "Zo is het nu in Nederland. Hoe was het vóór er grondwetten waren die de koning beperkten?", "Dan is het een constitutionele monarchie: de grondwet en het parlement beperken de koning.", "Een gekozen koning bestond wel, bijvoorbeeld in Polen. Maar 'absoluut' zegt iets over zijn macht, niet over hoe hij koning werd."],
+        wrongHints: [null, "Dan is de koning alleen nog ceremonieel, zoals nu in Nederland. Hoe was het vóór er grondwetten waren die de koning beperkten?", "Dan is het een constitutionele monarchie: de grondwet en het parlement beperken de koning.", "In de middeleeuwen had een koning de steun van zijn edelen nodig. Lodewijk XIV haalde de adel juist naar zijn hof om hun macht te breken. Wat zegt dat over de macht van de adel?"],
         uitlegPad: {
           stappen: [{ titel: "Absolute = onbeperkte macht", tekst: "Absoluut = onbeperkt. De koning beslist over wetten, ministers, leger, recht. Voorbeeld: Frankrijk vóór 1789 (Lodewijk XIV — 'L'État, c'est moi'). NL 1815-1848 was een gematigde versie." }],
           woorden: [{ woord: "absoluut", uitleg: "Volledig, onbeperkt." }, { woord: "monarch", uitleg: "Koning of koningin als staatshoofd." }],
@@ -115,9 +115,9 @@ const steps = [
       },
       {
         q: "Wat betekent: *'De koning is **onschendbaar**, de ministers zijn **verantwoordelijk**'*?",
-        options: ["Ministers zijn aanspreekbaar, de koning niet", "Koning mag ministers zomaar ontslaan", "Koning en ministers maken zelf de wetten", "Koning beslist, ministers voeren uit"],
+        options: ["Ministers zijn aanspreekbaar, de koning niet", "Koning en ministers zijn allebei aanspreekbaar", "De koning staat boven de grondwet", "Koning beslist, ministers voeren uit"],
         answer: 0,
-        wrongHints: [null, "Mag wel formeel, maar in praktijk nooit: ministers zijn de echte bestuurders.", "Wetten maken regering en parlement samen.", "Na 1848 beslist de koning juist niet meer zelf. Wie moet zich verantwoorden in de Kamer?"],
+        wrongHints: [null, "Lees de twee woorden in de zin apart. Betekenen 'onschendbaar' en 'verantwoordelijk' hetzelfde?", "Na 1848 is de koning juist aan de grondwet gebonden. 'Onschendbaar' gaat over iets anders: wie wordt er ter verantwoording geroepen als het misgaat?", "Na 1848 beslist de koning juist niet meer zelf. Wie moet zich verantwoorden in de Kamer?"],
         uitlegPad: {
           stappen: [{ titel: "Twee kanten van de medaille", tekst: "**Onschendbaar** = de koning kan persoonlijk niet voor de rechter gedaagd worden voor staatszaken. **Verantwoordelijk** = de minister tekent mee, dus die is wél aansprakelijk. Bij misser → minister af, koning blijft." }],
           woorden: [{ woord: "onschendbaar", uitleg: "Kan niet juridisch vervolgd worden." }, { woord: "verantwoordelijk", uitleg: "Aansprakelijk voor wat er gebeurt." }],
@@ -128,9 +128,9 @@ const steps = [
       },
       {
         q: "**Direct kiesrecht** voor de Tweede Kamer betekent:",
-        options: ["Burgers kiezen zelf de Kamerleden","De koning benoemt de Kamerleden","Provincies kiezen de Kamerleden","Partijen wijzen de Kamerleden aan"],
+        options: ["Burgers kiezen zelf de Kamerleden","De koning benoemt de Kamerleden","Provincies kiezen de Kamerleden","Alle volwassenen mogen stemmen"],
         answer: 0,
-        wrongHints: [null, "Vóór 1848 benoemde de koning de leden van de Eerste Kamer. Voor de Tweede Kamer veranderde in 1848 iets anders.", "Zo ging het vóór 1848: dat heet indirect kiesrecht.", "Partijen zetten wel kandidaten op een lijst, maar wie beslist er uiteindelijk wie er in de Kamer komt?"],
+        wrongHints: [null, "Vóór 1848 benoemde de koning de leden van de Eerste Kamer. Voor de Tweede Kamer veranderde in 1848 iets anders.", "Zo ging het vóór 1848: dat heet indirect kiesrecht.", "Dat is algemeen kiesrecht, en dat kwam pas in 1917 en 1919. 'Direct' gaat over iets anders."],
         uitlegPad: {
           stappen: [{ titel: "Direct ≠ indirect", tekst: "Direct kiesrecht: burger → kandidaat (vandaag: lijst-partij). Indirect: burger → tussenpersoon → kandidaat. 1848 = direct voor Tweede Kamer. Eerste Kamer = nog indirect (door provinciale staten gekozen)." }],
           woorden: [{ woord: "direct kiesrecht", uitleg: "Burger kiest zelf z'n vertegenwoordiger." }],
@@ -140,9 +140,9 @@ const steps = [
       },
       {
         q: "**Motie van wantrouwen** door de Tweede Kamer: wat is gevolg?",
-        options: ["De minister moet aftreden", "De Tweede Kamer wordt ontbonden", "De wet wordt opnieuw besproken", "De rechter onderzoekt de minister"],
+        options: ["De minister moet aftreden", "De Tweede Kamer wordt ontbonden", "De minister krijgt een waarschuwing", "De rechter onderzoekt de minister"],
         answer: 0,
-        wrongHints: [null, "Niet automatisch: pas als het kabinet valt, kunnen er nieuwe verkiezingen komen.", "Een motie van wantrouwen gaat niet over een wet, maar over vertrouwen.", "Een motie is een politiek middel, geen rechtszaak. Kan een minister zonder steun van de Kamer verder?"],
+        wrongHints: [null, "Niet automatisch: pas als het kabinet valt, kunnen er nieuwe verkiezingen komen.", "Een motie van wantrouwen is het zwaarste middel van de Kamer, veel zwaarder dan een berisping. Wat volgt er dan?", "Een motie is een politiek middel, geen rechtszaak. Het gaat over vertrouwen, niet over een misdrijf."],
         uitlegPad: {
           stappen: [{ titel: "Vertrouwens-regel sinds 1848", tekst: "Ministers hebben vertrouwen van Tweede Kamer nodig om aan te blijven. Bij **motie van wantrouwen** (= meerderheid Kamer zegt 'wij vertrouwen u niet') → minister treedt af. Soms hele kabinet → nieuwe verkiezingen." }],
           woorden: [{ woord: "motie van wantrouwen", uitleg: "Verklaring van Tweede Kamer dat minister niet meer mag aanblijven." }],
@@ -156,7 +156,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Een wetboek bundelt losse wetten, zoals het Wetboek van Strafrecht. Welk document staat daarboven?", "Een verdrag is een afspraak tussen landen, niet de basis van één staat.", "Een convenant is een afspraak tussen partijen, vaak zonder harde regels."],
         uitlegPad: {
-          stappen: [{ titel: "Grondwet = fundament", tekst: "**Grondwet** (constitutie) = hoogste wet. Alle andere wetten moeten daarmee in lijn zijn. Bevat staatsinrichting + grondrechten." }],
+          stappen: [{ titel: "Grondwet = fundament", tekst: "**Grondwet** (constitutie) = hoogste wet. Alle andere wetten moeten daarmee in lijn zijn. Bevat staatsinrichting + grondrechten. Let op: niet élke regel staat erin, wel de basisregels waar alle andere wetten aan moeten voldoen." }],
           woorden: [{ woord: "constitutie", uitleg: "Synoniem voor grondwet." }],
           theorie: "NL-grondwet is uit 1814/1815 (oudste basis) maar werd zwaar herzien in 1848 (Thorbecke) en 1983 (laatste grote herziening met o.a. discriminatie-verbod).",
           niveaus: { basis: "Grondwet.", simpeler: "Hoogste wet = grondwet.", nogSimpeler: "Grondwet" },
@@ -185,9 +185,9 @@ const steps = [
       },
       {
         q: "**Wie maakt een wet** in Nederland?",
-        options: ["Regering en beide Kamers samen", "De koning, met zijn handtekening", "De minister die de wet bedenkt", "De rechters van de Hoge Raad"],
+        options: ["Regering en beide Kamers samen", "De koning en de minister samen", "De ministers in de ministerraad", "De Tweede Kamer en de Hoge Raad"],
         answer: 0,
-        wrongHints: [null, "De koning tekent wel, maar bedenkt en kiest de wet niet zelf.", "De minister dient een wetsvoorstel in, maar daarna moeten de Kamers stemmen.", "Niet: de rechter past de wet toe, maakt hem niet."],
+        wrongHints: [null, "Koning en minister zetten hun handtekening pas aan het eind. Wat moet er daarvóór gebeuren?", "In de ministerraad bespreekt het kabinet een wetsvoorstel, maar dan is het nog geen wet. Wat gebeurt er daarna?", "De Hoge Raad hoort bij de rechterlijke macht: die past de wet toe, maar maakt hem niet."],
         uitlegPad: {
           stappen: [{ titel: "Wet-traject", tekst: "1) Regering dient **wet-voorstel** in. 2) Tweede Kamer debatteert + stemt (meerderheid nodig). 3) Eerste Kamer toetst + stemt. 4) Koning + verantwoordelijke minister tekenen. 5) Publicatie in Staatsblad → wet is geldig." }],
           theorie: "Voorbeeld: nieuwe verkeerswet — minister van Infrastructuur dient in, beide Kamers nemen het aan, koning + minister tekenen.",
@@ -196,9 +196,9 @@ const steps = [
       },
       {
         q: "**Rechters** worden benoemd voor:",
-        options: ["Het leven","4 jaar","Tot 65 jaar precies","Tot de regering ze ontslaat"],
+        options: ["Het leven (tot hun 70e)","Vier jaar, net als de Kamer","Tien jaar, dan herbenoeming","Zolang de regering dat wil"],
         answer: 0,
-        wrongHints: [null, "Vier jaar is de termijn van de Tweede Kamer. Waarom zou een rechter niet steeds opnieuw benoemd willen worden?", "Ze gaan rond hun 70e met pensioen, niet op 65. Hoe lang geldt hun benoeming volgens de grondwet?", "Niet: dat zou hun onafhankelijkheid breken."],
+        wrongHints: [null, "Bij de Kamer komen er na vier jaar verkiezingen. Wat zou het voor een rechter betekenen als hij steeds opnieuw benoemd moest worden?", "Bij een herbenoeming beslist iemand anders of je mag blijven. Wat doet dat met de onafhankelijkheid van een rechter?", "Dan kan de regering een rechter wegsturen die tegen haar oordeelt. Wat betekent dat voor zijn onafhankelijkheid?"],
         uitlegPad: {
           stappen: [{ titel: "Levenslange benoeming = onafhankelijkheid", tekst: "Rechters benoemd **voor het leven** (in praktijk tot pensioen ~70). Reden: een rechter mag GEEN angst hebben dat regering hem ontslaat als hij ongunstig oordeelt. Dat beschermt **onafhankelijkheid van de rechterlijke macht**." }],
           woorden: [{ woord: "onafhankelijkheid", uitleg: "Niet afhankelijk van een andere instantie voor je baan/oordeel." }],
@@ -208,9 +208,9 @@ const steps = [
       },
       {
         q: "Welk **grondrecht** uit 1983 art. 1 verbiedt **discriminatie**?",
-        options: ["Gelijke behandeling","Vrijheid van godsdienst","Onderwijsvrijheid","Vrijheid van pers"],
+        options: ["Gelijke behandeling","Vrijheid van godsdienst","Gelijke beloning","Vrijheid van pers"],
         answer: 0,
-        wrongHints: [null, "Vrijheid van godsdienst is een grondrecht uit 1848, maar het gaat over je eigen geloof. Welk artikel uit 1983 gaat over discriminatie?", "Onderwijsvrijheid staat in artikel 23 en komt al uit 1848. Het discriminatieverbod staat ergens anders.", "Persvrijheid staat in artikel 7 en gaat over je mening drukken. Het discriminatieverbod staat ergens anders."],
+        wrongHints: [null, "Vrijheid van godsdienst is een grondrecht uit 1848, maar het gaat over je eigen geloof. Welk artikel uit 1983 gaat over discriminatie?", "Gelijk loon voor mannen en vrouwen regelt een gewone wet uit 1975, geen artikel van de grondwet.", "Persvrijheid staat in artikel 7 en gaat over je mening drukken. Het discriminatieverbod staat ergens anders."],
         uitlegPad: {
           stappen: [{ titel: "Art. 1 grondwet (1983)", tekst: "*'Allen die zich in Nederland bevinden, worden in gelijke gevallen gelijk behandeld. Discriminatie wegens godsdienst, levensovertuiging, politieke gezindheid, ras, geslacht of op welke grond dan ook, is niet toegestaan.'* Toegevoegd in 1983-grondwetsherziening." }],
           woorden: [{ woord: "discriminatie", uitleg: "Ongelijke behandeling op basis van een persoonlijk kenmerk." }],
@@ -220,9 +220,9 @@ const steps = [
       },
       {
         q: "Een gemeente weigert iemand een baan vanwege **religie**. Welke wet is overtreden?",
-        options: ["Grondwet artikel 1", "Grondwet artikel 7", "Grondwet artikel 23", "Grondwet artikel 6"],
+        options: ["Grondwet artikel 1", "Grondwet artikel 7", "Grondwet artikel 23", "Grondwet artikel 10"],
         answer: 0,
-        wrongHints: [null, "Artikel 7 gaat over vrijheid van meningsuiting. Welk artikel verbiedt discriminatie?", "Artikel 23 gaat over de vrijheid van onderwijs.", "Artikel 6 gaat over vrijheid van godsdienst: je mag je geloof belijden. Maar hier wordt iemand anders behandeld vanwege zijn geloof."],
+        wrongHints: [null, "Artikel 7 gaat over vrijheid van meningsuiting. Wordt hier iemand beperkt in wat hij zegt of schrijft?", "Artikel 23 gaat over de vrijheid van onderwijs. Gaat het hier over een school?", "Artikel 10 gaat over privacy, je persoonlijke levenssfeer. Gaat het hier om iemands privégegevens?"],
         uitlegPad: {
           stappen: [{ titel: "Religie + baan = art. 1", tekst: "Discriminatie op godsdienst bij werk = directe overtreding van **grondwet art. 1**. Slachtoffer kan klagen bij **College voor de Rechten van de Mens** of naar de rechter." }],
           theorie: "Discriminatie-gronden in art. 1: godsdienst / levensovertuiging / politieke gezindheid / ras / geslacht / handicap / seksuele gerichtheid / 'of welke grond dan ook' (open lijst).",
@@ -326,9 +326,9 @@ const steps = [
       },
       {
         q: "*'De koning is onschendbaar, de ministers zijn verantwoordelijk.'* — sinds welk jaar?",
-        options: ["1848","1814","1917","1983"],
+        options: ["1848","1814","1868","1983"],
         answer: 0,
-        wrongHints: [null, "Eerste grondwet, nog geen ministeriële verantwoordelijkheid.", "Algemeen kiesrecht, niet hier.", "Discriminatie-artikel, niet ministeriële verantwoordelijkheid."],
+        wrongHints: [null, "In de grondwet van 1814 legden de ministers nog alleen verantwoording af aan de koning.", "Rond 1866-1868 werd vast dat een minister het vertrouwen van de Kamer nodig heeft. Deze zin over de koning stond al eerder in de grondwet.", "In 1983 kwam het discriminatieverbod in de grondwet. Deze zin is veel ouder."],
         uitlegPad: {
           stappen: [{ titel: "1848-kernregel", tekst: "Deze regel is dé hoeksteen van Thorbecke's 1848-grondwet — moment waarop NL van absolute naar constitutionele monarchie ging." }],
           niveaus: { basis: "1848.", simpeler: "Regel komt uit grondwet 1848", nogSimpeler: "1848" },
@@ -336,9 +336,9 @@ const steps = [
       },
       {
         q: "Welke macht is **rechterlijk**?",
-        options: ["Rechtbanken en de Hoge Raad", "Tweede Kamer en Eerste Kamer", "Regering en ambtenaren", "Gemeenteraad en Provinciale Staten"],
+        options: ["Rechtbanken en de Hoge Raad", "Tweede Kamer en Eerste Kamer", "Gemeenteraad en Provinciale Staten", "Minister van Justitie en de politie"],
         answer: 0,
-        wrongHints: [null, "De Kamers maken samen met de regering de wetten: dat is de wetgevende macht.", "Regering en ambtenaren voeren de wetten uit: dat is de uitvoerende macht.", "Dat zijn de volksvertegenwoordigers van gemeente en provincie. Zij spreken geen recht."],
+        wrongHints: [null, "De Kamers maken samen met de regering de wetten: dat is de wetgevende macht.", "Dat zijn de volksvertegenwoordigers van gemeente en provincie. Zij spreken geen recht.", "De minister van Justitie en de politie zorgen dat wetten worden uitgevoerd en gehandhaafd: dat is de uitvoerende macht."],
         uitlegPad: {
           stappen: [{ titel: "Rechterlijke macht = onafhankelijke rechters", tekst: "Wetgevend = Kamers + regering. Uitvoerend = regering + ambtenaren. Rechterlijk = onafhankelijke rechters (rechtbank → gerechtshof → Hoge Raad)." }],
           niveaus: { basis: "Rechtbanken + Hoge Raad.", simpeler: "Rechterlijk = rechters", nogSimpeler: "Rechters" },

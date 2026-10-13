@@ -107,9 +107,9 @@ const steps = [
     checks: [
       {
         q: "Welke **aanhef** voor vriend?",
-        options: ["Hi Tom,", "Cheers, Tom", "Hi Mr Thompson,", "Love, Tom"],
+        options: ["Hi Tom,", "Cheers, Tom", "Hi Mr Tom,", "Love, Tom"],
         answer: 0,
-        wrongHints: [null, "'Cheers' is informeel, maar waar in de mail staat het: bovenaan of onderaan?", "'Hi' is informeel, maar 'Mr' + achternaam is afstandelijk. Hoe spreek je een vriend aan?", "'Love' is informeel, maar is het een begroeting of een groet waarmee je afsluit?"],
+        wrongHints: [null, "'Cheers' is informeel, maar waar in de mail staat het: bovenaan of onderaan?", "'Hi' is informeel, maar 'Mr' maakt het afstandelijk (en hoort vóór een achternaam). Hoe spreek je een vriend aan?", "'Love' is informeel, maar is het een begroeting of een groet waarmee je afsluit?"],
       },
       {
         q: "Welke **sign-off** voor vriend?",
@@ -203,9 +203,9 @@ const steps = [
       },
       {
         q: "Welk woord = **mijn mening geven**?",
-        options: ["As far as I'm concerned", "As far as I know", "Generally speaking", "Furthermore"],
+        options: ["As far as I'm concerned", "As far as I know", "Generally speaking", "On the other hand"],
         answer: 0,
-        wrongHints: [null, "'As far as I know' betekent 'voor zover ik weet'. Geef je daarmee een mening of een feit waar je niet zeker van bent?", "'Generally speaking' betekent 'over het algemeen'. Gaat dat over wat jij vindt of over wat meestal geldt?", "'Furthermore' voegt een extra punt toe ('bovendien'). Welke uitdrukking kondigt je eigen mening aan?"],
+        wrongHints: [null, "'As far as I know' betekent 'voor zover ik weet'. Geef je daarmee een mening of een feit waar je niet zeker van bent?", "'Generally speaking' betekent 'over het algemeen'. Gaat dat over wat jij vindt of over wat meestal geldt?", "'On the other hand' zet een andere kant naast wat je net zei. Kondig je daarmee je eigen mening aan?"],
       },
       {
         q: "Welk signaalwoord = **conclusie**?",
@@ -221,7 +221,7 @@ const steps = [
       },
       {
         q: "Welke structuur past bij **5-paragraaf essay**?",
-        options: ["Intro + 3 argumenten + conclusie", "Intro + 4 argumenten", "Intro + stelling + 2 argumenten + slot", "Hook + intro + 2 argumenten + slot"],
+        options: ["Intro + 3 argumenten + conclusie", "Intro + 4 korte argument-alinea's", "Intro + stelling + 2 argumenten + slot", "Hook + intro + 2 argumenten + slot"],
         answer: 0,
         wrongHints: [null, "Tel de onderdelen: vijf alinea's. Maar hoe sluit je het essay dan af?", "De stelling staat aan het eind van de intro, niet in een eigen alinea. Hoeveel argumenten passen er dan?", "De hook is de openingszin van de intro, geen eigen alinea. Hoeveel argumenten passen er dan?"],
       },

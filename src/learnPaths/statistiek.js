@@ -326,9 +326,9 @@ const steps = [
     checks: [
       {
         q: "Twee klassen met zelfde gemiddelde maar verschillend bereik. Wat zegt dat?",
-        options: ["Gemiddeld presteren ze even goed, maar de cijfers zijn anders verdeeld","De klas met het grootste bereik presteert gemiddeld beter","De klassen zijn in alles gelijk, want het gemiddelde is gelijk","De klas met het kleinste bereik heeft de meeste voldoendes"],
+        options: ["In de klas met het grootste bereik verschillen de cijfers meer","In de klas met het grootste bereik zitten meer leerlingen","In de klas met het kleinste bereik is de mediaan hoger","In de klas met het grootste bereik zijn meer onvoldoendes"],
         answer: 0,
-        wrongHints: [null, "Het bereik zegt hoe ver de hoogste en de laagste uit elkaar liggen, niet hoe goed de klas gemiddeld is. Wat was er gelijk?", "Hetzelfde gemiddelde kan uit heel verschillende cijfers komen. Wat vertelt het verschil in bereik?", "Een klein bereik betekent dat de cijfers dicht bij elkaar liggen, maar dat kan ook rond een 5 zijn. Wat zegt het bereik wél?"],
+        wrongHints: [null, "Een klas van 10 en een klas van 30 leerlingen kunnen precies hetzelfde bereik hebben. Wat meet het bereik dan wél?", "De mediaan is een middelste waarde, het bereik niet. Kun je uit het bereik iets over de mediaan zeggen?", "Het bereik zegt niet hoeveel cijfers onder de 5,5 liggen. Waar gaat het bereik dan wél over?"],
         uitlegPad: {
           stappen: [{ titel: "Gemiddelde + spreiding samen", tekst: "Gemiddelde gelijk = gemiddelde prestatie zelfde. Maar bereik verschilt = SPREIDING verschilt. Klein bereik: leerlingen presteren ongeveer gelijk. Groot bereik: grote verschillen tussen leerlingen. Beide kunnen 'beter' zijn afhankelijk van wat je wilt." }],
           woorden: [{ woord: "spreiding", uitleg: "Hoe verspreid de data is. Bereik is simpelste spreidingsmaat." }],

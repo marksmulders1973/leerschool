@@ -267,3 +267,52 @@ Alle 217 meerkeuze-checks in de 9 bestanden opnieuw opgelost (alle gemarkeerde a
 - **zuren-basen-havo-vwo** (zurenBasenHavoVwo.js) stap 5 vraag 3 · hint 2: "Tegenovergesteld." → "Bij hyperventileren adem je veel CO₂ uit. Wordt je bloed dan zuurder of minder zuur?" · hint 3: "Wel — CO₂ minder." → "CO₂ vormt in je bloed koolzuur. Heeft minder CO₂ dan echt geen effect?" · hint 4: "Wel duidelijke richting." → "Volg de keten vanaf het CO₂ dat je uitademt. Is de richting echt onvoorspelbaar?"
 - **zuren-basen-havo-vwo** (zurenBasenHavoVwo.js) stap 5 vraag 4 · hint 2: "Azijnzuur is een zwak zuur. Wat doet het natriumacetaat er dan bij?" → "Wat doet het natriumacetaat in dit mengsel als je er een beetje zuur bij doet?"
 - **zuren-basen-havo-vwo** (zurenBasenHavoVwo.js) stap 5 vraag 5 · hint 2: "Niet — verergert schade." → "Direct na zuur is het glazuur zacht. Wat doet hard poetsen dan met dat zachte laagje?" · hint 4: "Niet primair (suikers zijn ander mechanisme)." → "Hier gaat het om het zuur in cola, niet om de suiker. Helpt een middel tegen suiker dan tegen zuur?"
+
+## Ronde 3 (na blinde detectie)
+
+**Tellingen:** 64 gemarkeerd · 29 hersteld (opties) · 7 vals alarm maar hints verbeterd · 26 vals alarm (lesstof, ongewijzigd) · 2 alleen twijfel. Antwoord-index, volgorde en `q` nergens gewijzigd; `vergelijk-met-main`: 0 afwijkingen.
+
+**Vals alarm (ongewijzigd):** naam van het begrip in het antwoord (buffer, chromatografie, polyetheen, pentaan, humanisme, site-specific, behoud van massa, derderegel, vlam-symbool) of algemene kennis met afleiders uit dezelfde tijd/categorie (Mona Lisa, Nachtwacht, Van Gogh, Banksy, surrealisme, H₂O, CO₂, CO, broeikaseffect, primaire kleuren, 3 fasen, filtreren/indampen, symmetrie, marmer, benzine, bleek+ammoniak).
+
+### Twijfel voor Mark
+- **kunstHavoVwo s1 v3 (Brunelleschi):** "Perspectief in schilderkunst uitgevonden door" — Brunelleschi (architect) ontdekte rond 1420 het lijnperspectief; Masaccio paste het als eerste toe in een schilderij, Alberti schreef de regels op. Voorstel: q → "Wie ontdekte rond 1420 de regels van het lijnperspectief?" (antwoord blijft Brunelleschi; Masaccio dan níét als afleider).
+- **molStoichiometrieHavoVwo s5 v1 (H₂ vs H₂O):** het antwoord klopt met de huidige q: het is een strikvraag (bij verbranding ontstaat geen H₂, dus "0 mol"; uitlegPad zegt dat ook). De M=16 lokt wel een rekensom uit, dus het voelt als een instinker. Hints zijn nu denkprikkels. Voorstel als je liever een rekensom wilt: q → "mol **H₂O**", met antwoord "1 mol" (index 2); dan moet het antwoord worden aangepast.
+- **kunstHavoVwo s3 v1 (De Stijl → Nederland):** de Nederlandse naam verraadt het antwoord. Dat is alleen op te lossen door q te wijzigen (bv. "Mondriaan en Van Doesburg richtten een beweging op in…").
+- **molStoichiometrieHavoVwo s2 v3:** q "Wat behoudt massa + aantal atomen in een reactie?" is krom. Voorstel: "Waardoor blijven massa en aantal atomen bij een reactie gelijk?"
+
+### Hersteld (oud → nieuw)
+- atoombouw s1 v2 · hint "De kern zit op één plek." → Thomson/Rutherford-denkprikkel (vals alarm)
+- atoombouw s6 v1 · "Heeft een doffe kleur" / "Geleidt geen warmte" → "Vormt negatieve ionen" / "Bestaat uit losse moleculen"
+- atoombouw s6 v2 · IJzer/Koper/Goud → Natrium (Na)/Calcium (Ca)/Kwik (Hg)
+- atoombouw s7 v2 · Goud/Chloor → Neon/Nikkel (ook N-symbolen)
+- atoombouw s9 v1 · "Atomen verdwijnen als gas…" / "Atomen veranderen in andere soorten" → "Het aantal stoffen links en rechts is gelijk" / "Atomen blijven in dezelfde moleculen zitten"
+- atoombouw s10 v5 · goed "Het midden van het atoom" → "Het kleine midden met protonen en neutronen"; afleiders → "Het midden met protonen en elektronen" / "De schillen waarin de elektronen draaien" / "Een groepje aan elkaar gebonden atomen"
+- atoombouw s10 v9 · hints "Waar komt de naam neutron vandaan?" (verraadt neutraal) → proton/elektron-ladingen (vals alarm)
+- beeldhouwkunst s1 v1 · alle opties parallel: "Beelden zijn ruimtelijk, schilderijen plat" vs "…kleurloos, …kleurig" / "…figuratief, …abstract" / "…duurzaam, …vergankelijk"
+- beeldhouwkunst s1 v3 · "Je ziet het beeld net als een schilderij van voren" → "Het beeld is gemaakt voor één vaste kijkhoek" (reliëf/nis)
+- beeldhouwkunst s3 v1 (contrapost) · afleiders even concreet: "…precies spiegelen" / "…recht van voren, armen langs het lijf" / "Het gewicht op beide benen, met de heupen recht"
+- beeldhouwkunst s3 v3 · "Drama — … in marmer" verlengd; hint met dubbele vraag herschreven (Bernini)
+- beeldhouwkunst s4 v3 · "Ze staan vaak in de weg op pleinen" → "Ze passen vaak niet bij nieuwe gebouwen"
+- chemische reacties s4 v2 (g) · Goud/Gewicht/Gewone temperatuur → Gesmolten/Gram/Geconcentreerd
+- chemische reacties s5 v2 · "Eerst H en O kloppend maken" → "H- en O-atomen kloppend maken"
+- chemische reacties s7 v1 · hints "Verdringing … geen ontleding" / "Verbranding is reageren met O₂" → denkprikkels (vals alarm)
+- chemische reacties s7 v2 · afleiders met vuur-kenmerken: "Ontleding door hitte, vaak met licht en rook" / "Reactie met stikstof uit de lucht, met warmte" / "Stof lost op in water en geeft warmte af"
+- chemische reacties s9 v9 · "Zout" → "Waterstofperoxide"
+- chemische reacties s9 v15 · "Van zuur naar base" → "Van elementen naar verbindingen"; "Niet —"-hints → denkprikkels
+- kleur s1 v2 · goed "…tegenover elkaar staan en elkaar versterken" → "…tegenover elkaar liggen in de kleurencirkel"; afleiders verlengd ("warme of koele sfeer", "Lichte en donkere tinten…")
+- kleur s1 v4 · "De betekenis hangt af van de verfsoort" → "Elke kunstenaar kiest zelf wat een kleur betekent"
+- kleur s2 v2 · hint "Wat betekenen de Franse woorden clair en obscur?" (verraadt) → sfumato-hint (vals alarm)
+- kleur s3 v3 · titel/donkere zaal → "Door alle figuren even groot te maken" / "Door de horizon in het midden te zetten"
+- kunst s3 v4 · Romantiek/Realisme/Renaissance → Kubisme/Futurisme/Expressionisme; uitlegPad simpeler aangepast
+- kunst s4 v5 · "Lage resolutie van de beelden" → "Een verbod op het veilen van AI-kunst"
+- kunst s5 v1 · Mona Lisa/Sterrennacht → Victory Boogie Woogie/Guernica
+- mol s2 v3 · "Atomen blijven behouden" → "Atomen worden alleen anders gegroepeerd"; "Moleculen blijven behouden" → "Atomen blijven in hun eigen molecuul"; overige gelijk getrokken
+- mol s5 v1 · "Niet —"-hints → denkprikkels (zie twijfel)
+- organisch s1 v4 · Zout/Zuurstofgas → Kalk (CaCO₃)/Koolstofdioxide (CO₂) (uitzonderingen uit de theorie)
+- organisch s1 v5 · alle opties drieledig: "Enkele, dubbele, ionbindingen" / "Enkele, drievoudige, viervoudige"
+- organisch s3 v4 / s4 v5 · kale "Niet —"-hints → denkprikkels (vals alarm)
+- stoffen s1 v2 · "Soep" → "Kraanwater"
+- stoffen s1 v3 · Suiker/Zuurstof/Koper → Keukenzout/Zuiver water/Koolzuurgas (verbinding versus mengsel)
+- stoffen s5 v3 · "Kort spoelen en dan droogdeppen" → "1 minuut spoelen en dan droogdeppen"
+- zuren-basen s4 v1 · goed "…gelijkwaardig zijn" → "Het punt waar al het zuur precies is omgezet"; "begin titratie" → "Het punt waar de helft van het zuur is omgezet"
+- zuren-basen s5 v5 · afleiders verstandig klinkend: "Direct na de cola je tanden goed poetsen" / "Cola in kleine slokjes over de dag drinken" / "Een spoelmiddel tegen suikers gebruiken"

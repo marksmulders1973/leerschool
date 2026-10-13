@@ -237,9 +237,9 @@ const steps = [
       },
       {
         q: "*'IJsverkoop en verdrinkingen correleren positief'* — wat is meest waarschijnlijk?",
-        options: ["Een derde factor: warm weer","IJs eten veroorzaakt verdrinking","Verdrinking zorgt voor ijsverkoop","Toeval: het verband is er per ongeluk"],
+        options: ["Een derde factor: warm weer laat beide stijgen","Oorzaak: met een volle maag zwemmen is riskant","Toeval: met meer metingen verdwijnt het verband","Oorzaak: suiker in ijs maakt zwemmers sneller moe"],
         answer: 0,
-        wrongHints: [null, "Een correlatie laat niet zien wat oorzaak en wat gevolg is. Is er een logische reden waarom ijs eten verdrinking veroorzaakt?", "Oorzaak en gevolg zijn omgedraaid. Waarom zouden verdrinkingen mensen ijs laten kopen?", "Onwaarschijnlijk — het verband keert elke zomer terug."],
+        wrongHints: [null, "Een correlatie bewijst geen oorzaak-gevolg. Welke andere verklaringen voor een correlatie ken je?", "Dit verband komt elke zomer terug, en in veel landen. Past dat bij toeval?", "Ook dit is een oorzaak-gevolg-verklaring die niet uit de cijfers volgt. In welke maanden stijgen beide cijfers?"],
         uitlegPad: {
           stappen: [{ titel: "Correlatie ≠ oorzaak", tekst: "Beide stijgen in zomer. **Warmte** is de gemeenschappelijke oorzaak. **Schijncorrelatie** — leerlingen moeten dit herkennen." }],
           woorden: [{ woord: "schijncorrelatie", uitleg: "Correlatie zonder oorzakelijk verband — door gemeenschappelijke factor." }],

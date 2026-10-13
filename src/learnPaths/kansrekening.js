@@ -623,17 +623,17 @@ const steps = [
       {
         q: "*\"Een doos: 5 chocolade en 3 noten-bonbons. Pak willekeurig 2 zonder terugleggen. Kans dat beide chocolade zijn?\"*",
         options: [
-          "5/8 · 4/7 = 20/56 = 5/14",
+          "5/8 · 4/7 = 5/14",
           "5/8 · 5/8 = 25/64",
-          "5/8 + 4/7 = 67/56",
-          "Niet te bepalen",
+          "5/8 · 4/8 = 5/16",
+          "5/8 · 3/7 = 15/56",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Dat zou kloppen mét terugleggen. Maar 'zonder terugleggen': hoeveel chocolade-bonbons en hoeveel bonbons in totaal zijn er nog over na de eerste keer pakken?",
-          "Optellen in plaats van vermenigvuldigen — dit is een én-kans (eerste én tweede). Welke bewerking hoort daarbij?",
-          "Wel goed te bepalen — bekijk de eerste en de tweede trekking apart en let op wat er na de eerste trekking overblijft.",
+          "Er is één bonbon uit de doos gepakt. Zitten er dan nog steeds 8 bonbons in totaal in?",
+          "3 is het aantal noten-bonbons. Hoeveel chocolade-bonbons zijn er na de eerste keer pakken nog over?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Zonder terugleggen", tekst: "Eerste: 5/8. Daarna: 4/7. Product: 5/8 × 4/7 = 20/56 = 5/14." }],
@@ -732,16 +732,16 @@ const steps = [
         q: "*\"Een klas heeft 30 leerlingen. P(jongen) = 12/30. Wat is P(meisje)?\"*",
         options: [
           "18/30 = 3/5",
-          "12/30 = 2/5",
+          "18/12 = 3/2",
           "12/18 = 2/3",
-          "1/18",
+          "11/30 ≈ 0,37",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Dat is P(jongen) zelf. Welk deel van de klas is géén jongen?",
-          "Dat is een ratio — kans = gunstig/totaal. Tel meisjes en deel door totaal.",
-          "1/18 is de kans om één bepaald meisje te kiezen uit alleen de meisjes. Door welk totaal deel je bij deze kans?",
+          "Je deelde meisjes door jongens. Bij een kans deel je het aantal gunstige door het totaal: wat is hier het totaal?",
+          "Dat is jongens gedeeld door meisjes: een verhouding, geen kans. Door welk totaal deel je bij een kans?",
+          "Je rekende 1 − 12 = 11. Schrijf 1 eerst als breuk met noemer 30. Wat krijg je dan bij 1 − 12/30?",
         ],
         uitlegPad: {
           stappen: [{ titel: "1 − P(jongen)", tekst: "P(meisje) = 1 − 12/30 = 18/30 = 3/5." }],

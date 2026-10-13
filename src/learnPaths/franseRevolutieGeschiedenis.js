@@ -60,9 +60,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **absolute monarchie**?",
-        options: ["Koning heeft zelf alle macht", "Koning en parlement delen macht", "Koning heeft een ceremoniële rol", "Adel kiest wie er koning wordt"],
+        options: ["De koning heeft zelf alle macht", "Koning en parlement delen de macht", "Het parlement heeft alle macht", "Koning en adel delen alle macht"],
         answer: 0,
-        wrongHints: [null, "Dan is het een constitutionele monarchie: een grondwet en een parlement beperken de koning. Wat betekent 'absoluut'?", "Zo is het nu in Nederland. Had Lodewijk XVI in Versailles zo weinig te zeggen?", "Een gekozen koning bestond wel, bijvoorbeeld in Polen. Maar 'absoluut' zegt iets over zijn macht, niet over hoe hij koning werd."],
+        wrongHints: [null, "Dan is het een constitutionele monarchie: een grondwet en een parlement beperken de koning. Wat betekent 'absoluut'?", "Dan is de koning alleen nog ceremonieel, zoals nu in Nederland. Had Lodewijk XVI in Versailles zo weinig te zeggen?", "In de middeleeuwen had een koning de steun van zijn edelen nodig. Lodewijk XIV haalde de adel juist naar Versailles om hun macht te breken. Wat zegt dat over de macht van de adel?"],
       },
       {
         q: "Wie was **koning van Frankrijk** in 1789?",

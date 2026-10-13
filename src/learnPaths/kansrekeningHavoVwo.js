@@ -62,9 +62,9 @@ const steps = [
       },
       {
         q: "Bij **afhankelijke** gebeurtenissen: kans 2e gebeurtenis hangt af van:",
-        options: ["De uitkomst van de 1e gebeurtenis","Hoe vaak je het experiment herhaalt","De volgorde waarin je de kansen noteert","Het moment waarop je de 2e doet"],
+        options: ["Welke uitkomst de 1e gebeurtenis had","Hoe groot de kans op de 1e gebeurtenis was","Hoeveel uitkomsten de 1e kon hebben","Hoe vaak je het hele experiment herhaalt"],
         answer: 0,
-        wrongHints: [null, "Het aantal herhalingen zegt hoe vaak iets gebeurt, niet wat de kans per keer is. Waar hangt die bij afhankelijke gebeurtenissen van af?", "Hoe je de kansen opschrijft, verandert de kansen niet. Wat verandert er wél na de eerste trekking zonder terugleggen?", "Of je de tweede trekking nu of later doet, maakt niet uit. Wat is er na de eerste trekking veranderd?"],
+        wrongHints: [null, "Twee trekkingen met dezelfde beginkans kunnen toch een andere 2e kans geven. Wat zit er na de 1e trekking nog in de doos?", "Hoeveel uitkomsten er mogelijk zijn, ligt vóór de 1e trekking al vast. Waardoor verandert de doos voor de 2e trekking?", "Het aantal herhalingen zegt hoe vaak iets gebeurt, niet hoe groot de kans per keer is. Wat verandert er bij trekken zonder terugleggen?"],
         uitlegPad: {
           stappen: [{ titel: "Afhankelijk = beïnvloed", tekst: "Voorbeeld: 2 kaarten trekken **zonder terugleggen**. Eerste kaart harten → 12 harten over van 51 kaarten. Eerste kaart geen harten → 13 harten van 51. **Kans tweede hangt af van eerste**." }],
           theorie: "Wel terugleggen = onafhankelijk. Niet terugleggen = afhankelijk.",
