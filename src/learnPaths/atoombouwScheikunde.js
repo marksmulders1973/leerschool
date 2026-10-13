@@ -52,7 +52,7 @@ const steps = [
         q: "Waar zit de kern van een atoom?",
         options: ["In het midden", "Aan de buitenkant", "Verspreid door het atoom", "Tussen twee elektronenschillen"],
         answer: 0,
-        wrongHints: [null, "Aan de buitenkant zitten de elektronen.", "De kern zit op één plek.", "Tussen de schillen bewegen alleen elektronen. Waar draaien al die schillen omheen?"],
+        wrongHints: [null, "Aan de buitenkant zitten de elektronen.", "Thomson dacht dat de lading verspreid zat, als rozijnen in een pudding. Wat liet Rutherford met zijn goudfolie zien?", "Tussen de schillen bewegen alleen elektronen. Waar draaien al die schillen omheen?"],
         uitlegPad: {
           stappen: [{ titel: "Kern = in het midden", tekst: "Protonen + neutronen zitten samen in de kern, midden in het atoom." }],
           woorden: [{ woord: "kern", uitleg: "midden van atoom, klein maar zwaar" }],
@@ -305,11 +305,11 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         options: [
           "Geleidt elektriciteit",
           "Is bros en breekt makkelijk",
-          "Heeft een doffe kleur",
-          "Geleidt geen warmte",
+          "Vormt negatieve ionen",
+          "Bestaat uit losse moleculen",
         ],
         answer: 0,
-        wrongHints: [null, "Bros en breekbaar past bij zwavel of koolstof. Kun je een metaal juist buigen of pletten?", "Een dof uiterlijk is typisch voor niet-metalen. Hoe ziet een opgepoetst stuk metaal eruit?", "Waarom wordt de metalen steel van een pan op het fornuis zo snel heet?"],
+        wrongHints: [null, "Bros en breekbaar past bij zwavel of koolstof. Kun je een metaal juist buigen of pletten?", "Metaalatomen staan juist elektronen af. Wordt een atoom dan positief of negatief?", "Losse moleculen zoals O₂ en H₂O horen bij niet-metalen. Hoe zitten metaalatomen aan elkaar?"],
         uitlegPad: {
           stappen: [{ titel: "Metaal = geleider", tekst: "Metalen geleiden elektriciteit en warmte goed (vrije elektronen)." }],
           woorden: [{ woord: "metaal", uitleg: "glanzend, geleidend, vast (meestal)" }],
@@ -321,9 +321,9 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
       },
       {
         q: "Welk element is een **niet-metaal**?",
-        options: ["Zuurstof (O)", "IJzer (Fe)", "Koper (Cu)", "Goud (Au)"],
+        options: ["Zuurstof (O)", "Natrium (Na)", "Calcium (Ca)", "Kwik (Hg)"],
         answer: 0,
-        wrongHints: [null, "IJzer is hard, glanst en geleidt stroom — hoort zoiets bij de metalen of bij de niet-metalen?", "Koper zit in stroomdraden juist omdat het elektriciteit goed geleidt — is dat typisch voor een niet-metaal?", "Goud is glimmend, buigzaam en geleidt stroom — die eigenschappen horen bij welke groep?"],
+        wrongHints: [null, "Natrium is zacht, maar glanst en vormt Na⁺-ionen door elektronen af te staan. Bij welke groep hoort dat?", "Calcium staat links in het periodiek systeem, in groep 2. Welke soort elementen staat daar?", "Kwik is vloeibaar, maar glanst en geleidt stroom. Bij welke groep horen die eigenschappen?"],
         uitlegPad: {
           stappen: [{ titel: "O = niet-metaal", tekst: "Zuurstof is gas, geen metaal." }],
           woorden: [{ woord: "niet-metaal", uitleg: "rechts in tabel, vaak gas" }],
@@ -372,9 +372,9 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
       },
       {
         q: "Welk element vormt het ion Na⁺?",
-        options: ["Natrium", "Goud", "Chloor", "Stikstof"],
+        options: ["Natrium", "Neon", "Nikkel", "Stikstof"],
         answer: 0,
-        wrongHints: [null, "Goud heeft het symbool Au. Welk element hoort bij het symbool Na?", "Chloor is een niet-metaal en neemt juist een elektron op. Krijgt het dan een + of een −?", "Stikstof heeft het symbool N. Welk element hoort bij Na?"],
+        wrongHints: [null, "Neon heeft het symbool Ne en is een edelgas. Vormen edelgassen makkelijk ionen?", "Nikkel heeft het symbool Ni. Welk element hoort bij Na?", "Stikstof heeft het symbool N. Welk element hoort bij Na?"],
         uitlegPad: {
           stappen: [{ titel: "Na → Na⁺", tekst: "Natrium geeft 1 e- af → vormt Na⁺ (positief ion)." }],
           woorden: [{ woord: "Na+", uitleg: "natriumion in keukenzout" }],
@@ -450,12 +450,12 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         q: "Wat zegt de **wet van behoud van atomen**?",
         options: [
           "Aantal atomen links en rechts is gelijk",
-          "Atomen verdwijnen als gas tijdens een reactie",
+          "Het aantal stoffen links en rechts is gelijk",
           "Het aantal moleculen links en rechts is gelijk",
-          "Atomen veranderen in andere soorten atomen",
+          "Atomen blijven in dezelfde moleculen zitten",
         ],
         answer: 0,
-        wrongHints: [null, "Ook gas dat ontsnapt bestaat uit atomen. Zijn die atomen dan echt weg?", "Kijk naar 2 H₂ + O₂ → 2 H₂O: links 3 moleculen, rechts 2. Wat blijft er dan wél gelijk?", "Niet — bij een chemische reactie verandert het soort atoom niet."],
+        wrongHints: [null, "Bij 2 H₂ + O₂ → 2 H₂O staan links twee stoffen en rechts één. Klopt de wet dan nog?", "Kijk naar 2 H₂ + O₂ → 2 H₂O: links 3 moleculen, rechts 2. Wat blijft er dan wél gelijk?", "Bij een reactie ontstaan nieuwe stoffen. Kan dat als de atomen niet van plek wisselen?"],
         uitlegPad: {
           stappen: [{ titel: "Atomen tellen", tekst: "Links en rechts dezelfde atomen — alleen in andere combinaties." }],
           woorden: [{ woord: "wet van behoud", uitleg: "Lavoisier, ~1789" }],
@@ -563,9 +563,9 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
       },
       {
         q: "Wat is een **atoomkern**?",
-        options: ["Het midden van het atoom","De buitenste laag van het atoom","De elektronenwolk van het atoom","Een groepje gebonden atomen"],
+        options: ["Het kleine midden met protonen en neutronen","Het midden met protonen en elektronen","De schillen waarin de elektronen draaien","Een groepje aan elkaar gebonden atomen"],
         answer: 0,
-        wrongHints: [null, "In de buitenste laag zitten elektronen. Ligt de kern aan de buitenkant van het atoom?", "Elektronen bewegen in schillen om iets heen. Waar draaien ze omheen?", "Niet — een groep gebonden atomen is een molecuul."],
+        wrongHints: [null, "Elektronen bewegen in schillen rond de kern. Horen ze dan bij de kern zelf?", "Elektronen bewegen in schillen om iets heen. Waar draaien ze omheen?", "Aan elkaar gebonden atomen vormen een molecuul. Is de kern een deel van één atoom of een groep atomen?"],
         uitlegPad: {
           stappen: [
             { titel: "Atoom-structuur", tekst: "Een atoom bestaat uit **3 onderdelen**:\n• **Proton** (+) — in kern, positief geladen\n• **Neutron** (0) — in kern, geen lading\n• **Elektron** (−) — buiten kern, negatief geladen\n\n**Kern** = centrum waarin protonen + neutronen zitten. Heel klein (1/10.000 van atoom-doorsnee) maar **99,9% van massa**." },
@@ -635,7 +635,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         },
       },
       { q: "Wat is de **lading** van een **proton**?", options: ["+1","-1","0","+2"], answer: 0, wrongHints: [null, "Een proton zit in de kern en trekt de elektronen aan. Kan dat als het dezelfde lading heeft als zij?", "Als het proton geen lading had, wat zou de elektronen dan bij de kern houden?", "Een waterstofatoom heeft 1 proton en 1 elektron en is neutraal. Past een proton van +2 daarbij?"] },
-      { q: "Wat is de **lading** van een **neutron**?", options: ["0","+1","-1","+2"], answer: 0, wrongHints: [null, "Waar zou de naam neutron vandaan komen?", "Een neutron zit in de kern, niet in de schillen. Aan welk woord doet de naam neutron denken?", "Eén los deeltje met +2 komt in een atoom niet voor. Welke ladingen hebben de drie deeltjes?"] },
+      { q: "Wat is de **lading** van een **neutron**?", options: ["0","+1","-1","+2"], answer: 0, wrongHints: [null, "+1 is de lading van een proton. Zijn proton en neutron hetzelfde deeltje?", "−1 is de lading van een elektron. Zit een neutron in de schillen of in de kern?", "Eén los deeltje met +2 komt in een atoom niet voor. Welke ladingen hebben de drie deeltjes?"] },
       { q: "Wat is de **lading** van een **elektron**?", options: ["-1","+1","0","+2"], answer: 0, wrongHints: [null, "De kern is positief. Zou een elektron met dezelfde lading dan rond de kern blijven of weggeduwd worden?", "Een elektron blijft rond de kern hangen. Kan dat als het geen lading heeft?", "Zou een elektron met +2 door de positieve kern worden aangetrokken?"] },
       { q: "Welke deeltjes bevinden zich in de **kern** van het atoom?", options: ["Proton + neutron","Elektron + neutron","Proton + elektron","Proton, neutron en elektron"], answer: 0, wrongHints: [null, "Elektronen bewegen in schillen. Welke deeltjes geven de kern dan haar massa?", "Zitten elektronen in de kern of in de schillen eromheen?", "Waar bevinden elektronen zich: in de kern of in de schillen?"] },
       { q: "Het **atoomnummer** = aantal ___?", options: ["protonen","neutronen","elektronen","schillen"], answer: 0, wrongHints: [null, "Isotopen van één element verschillen in hun aantal neutronen. Kan het atoomnummer dan over neutronen gaan?", "Niet — het aantal elektronen kan veranderen (bij ionen), het atoomnummer niet.", "Het aantal schillen lees je af aan de periode, de rij. Waarop is het periodiek systeem geordend?"] },

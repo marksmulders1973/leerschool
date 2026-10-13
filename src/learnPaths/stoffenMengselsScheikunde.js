@@ -75,15 +75,15 @@ const steps = [
       },
       {
         q: "Welke is een **pure stof**?",
-        options: ["Gedestilleerd water", "Soep", "Lucht", "Brons"],
+        options: ["Gedestilleerd water", "Kraanwater", "Lucht", "Brons"],
         answer: 0,
-        wrongHints: [null, "In soep zitten groente, zout en water. Is dat één soort deeltje?", "Lucht bestaat uit stikstof, zuurstof en nog meer gassen. Is dat één stof?", "Brons bevat koperatomen en tinatomen door elkaar. Is dat één soort deeltje?"],
+        wrongHints: [null, "In kraanwater zitten opgeloste kalk en zouten. Is dat één soort deeltje?", "Lucht bestaat uit stikstof, zuurstof en nog meer gassen. Is dat één stof?", "Brons bevat koperatomen en tinatomen door elkaar. Is dat één soort deeltje?"],
       },
       {
         q: "Welke is een **mengsel**?",
-        options: ["Zoutwater", "Suiker", "Zuurstof", "Koper"],
+        options: ["Zoutwater", "Keukenzout", "Zuiver water", "Koolzuurgas"],
         answer: 0,
-        wrongHints: [null, "Suiker uit een pak bestaat uit één soort molecuul. Is dat een mengsel?", "Zuurstofgas bestaat uit één soort molecuul, O₂. Is dat een mengsel?", "Koper is een element: één soort atoom. Is dat een mengsel?"],
+        wrongHints: [null, "In keukenzout zitten natrium en chloor vast aan elkaar in één stof. Is dat een mengsel?", "Zuiver water bevat alleen H₂O-moleculen. Is dat een mengsel?", "Koolzuurgas is CO₂: één soort molecuul. Is dat een mengsel?"],
       },
       {
         q: "Verschil **element** en **verbinding**?",
@@ -228,9 +228,9 @@ const steps = [
       },
       {
         q: "Wat doe je als er een **chemische stof in je oog** spat?",
-        options: ["15 minuten spoelen met water", "Kort spoelen en dan droogdeppen", "Spoelen met melk om te neutraliseren", "Oogdruppels erin en goed knipperen"],
+        options: ["15 minuten spoelen met water", "1 minuut spoelen en dan droogdeppen", "Spoelen met melk om te neutraliseren", "Oogdruppels erin en goed knipperen"],
         answer: 0,
-        wrongHints: [null, "Na een paar seconden spoelen blijft er nog stof in je oog achter. Hoe lang moet je spoelen?", "Melk is niet steriel en neutraliseert niet betrouwbaar. Waarmee spoel je bij de oogdouche op school?", "Een paar druppels verdunnen de stof nauwelijks. Hoeveel vloeistof is nodig om alles weg te spoelen?"],
+        wrongHints: [null, "Na een minuut spoelen zit er nog stof in je oog. Hoe lang moet je spoelen?", "Melk is niet steriel en neutraliseert niet betrouwbaar. Waarmee spoel je bij de oogdouche op school?", "Een paar druppels verdunnen de stof nauwelijks. Hoeveel vloeistof is nodig om alles weg te spoelen?"],
       },
       {
         q: "Mag je **bleekmiddel + ammoniak** mengen?",

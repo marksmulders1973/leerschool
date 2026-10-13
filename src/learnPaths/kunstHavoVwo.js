@@ -180,9 +180,9 @@ const steps = [
       },
       {
         q: "Welke beweging is **abstract** + **geometrisch**?",
-        options: ["De Stijl","Romantiek","Realisme","Renaissance"],
+        options: ["De Stijl","Kubisme","Futurisme","Expressionisme"],
         answer: 0,
-        wrongHints: [null, "De romantiek schilderde woeste natuur en sterke gevoelens. Is dat abstract en strak?", "Het realisme schilderde het dagelijks leven zoals het is. Is dat abstract?", "De Renaissance schilderde mensen zo echt mogelijk, met perspectief. Is dat abstract?"],
+        wrongHints: [null, "Kubisten braken dingen op in blokjes, maar je herkent nog een gitaar of een gezicht. Is dat helemaal abstract?", "Futuristen schilderden auto's en treinen in volle vaart. Is dat abstract en strak geometrisch?", "Expressionisten zoals Munch vervormden figuren om gevoel te tonen. Zie je daar strakke lijnen en vlakken?"],
         uitlegPad: {
           stappen: [{ titel: "20e eeuw breekt vorm op", tekst: "**De Stijl** (Mondriaan 1917+) en **Suprematisme** (Malevich 1915) gingen volledig geometrisch abstract; het **Kubisme** (Picasso/Braque 1907+) was de opmaat, maar bleef herkenbare objecten tonen. Mondriaan: alleen rechthoeken + primaire kleuren. Kubisme: objecten ontleed in vlakken vanuit meerdere perspectieven tegelijk. Tegenstelling met figuratief realisme van eerdere eeuwen." }],
           niveaus: { basis: "De Stijl.", simpeler: "Geom abstract = 20e eeuw", nogSimpeler: "De Stijl." },
@@ -249,9 +249,9 @@ const steps = [
       },
       {
         q: "**AI-generated art** (DALL-E, Midjourney) controverse over:",
-        options: ["Auteursrecht op de trainingsdata","Lage resolutie van de beelden","Te weinig stijlen om uit te kiezen","Hoge prijs van de abonnementen"],
+        options: ["Auteursrecht op de trainingsdata","Een verbod op het veilen van AI-kunst","Te weinig stijlen om uit te kiezen","Hoge prijs van de abonnementen"],
         answer: 0,
-        wrongHints: [null, "De beeldkwaliteit is al hoog. Waarover klagen veel kunstenaars dan?", "AI kan juist elke stijl nadoen. Waar komt die kennis van stijlen vandaan?", "Een prijs is geen kunstdebat. Wiens werk zit er in de AI verwerkt?"],
+        wrongHints: [null, "In 2018 werd bij Christie's al AI-kunst geveild. Bestaat zo'n verbod dan? Waarover klagen kunstenaars wel?", "AI kan juist elke stijl nadoen. Waar komt die kennis van stijlen vandaan?", "Een prijs is geen kunstdebat. Wiens werk zit er in de AI verwerkt?"],
         uitlegPad: {
           stappen: [{ titel: "Wie wordt vergoed?", tekst: "**AI-art-controverses 2020s**:\n• Modellen getraind op miljoenen kunstwerken **zonder toestemming** kunstenaars. Rechtszaken (Getty vs Stability AI, Sarah Andersen et al vs Stable Diffusion).\n• **Auteursrecht uitkomst-werk**: VS Copyright Office besloot 2023 dat puur AI-gegenereerd werk **niet auteursrecht-beschermd** is (alleen werken met menselijke creativiteit).\n• **Vermindering werk** voor illustrators + concept-artiesten.\n• **Identiteit-vragen**: is AI-gemanipuleerde 'kunst' gelijkwaardig aan menselijk werk?\n\nEvolutie + jurisprudentie nog onderweg." }],
           niveaus: { basis: "Auteursrecht.", simpeler: "AI-art = auteursrecht", nogSimpeler: "Auteursrecht." },
@@ -268,9 +268,9 @@ const steps = [
     checks: [
       {
         q: "Welk werk is **Pop Art**?",
-        options: ["Campbell's Soup Cans","Mona Lisa","De Schreeuw","Sterrennacht"],
+        options: ["Campbell's Soup Cans","Victory Boogie Woogie","De Schreeuw","Guernica"],
         answer: 0,
-        wrongHints: [null, "De Mona Lisa is van Leonardo da Vinci, uit de Renaissance. Pop Art komt uit de jaren 60.", "De Schreeuw van Munch is expressionisme: angst en emotie, geen beeld uit reclame of strips.", "De Sterrennacht van Van Gogh is post-impressionisme, rond 1889. Pop Art is veel later."],
+        wrongHints: [null, "Dit is het laatste werk van Mondriaan (De Stijl): vlakjes en lijnen. Zie je daar beelden uit reclame of de supermarkt?", "De Schreeuw van Munch is expressionisme: angst en emotie, geen beeld uit reclame of strips.", "Picasso schilderde Guernica in 1937 als aanklacht tegen de oorlog. Komt dat uit reclame of strips?"],
         uitlegPad: {
           stappen: [{ titel: "1962 Warhol", tekst: "**Campbell's Soup Cans** (Andy Warhol, 1962): 32 schilderijen, één per soep-variant. **Pop Art**-icoon. Massaproductie-cultuur als kunst. Tegenwoordig: MoMA New York." }],
           niveaus: { basis: "Soup Cans.", simpeler: "Pop = Soup Cans", nogSimpeler: "Soup Cans." },

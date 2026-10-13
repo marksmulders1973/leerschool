@@ -20,7 +20,7 @@ const steps = [
     checks: [
       {
         q: "Wat is het kenmerkende verschil tussen beeldhouwkunst en schilderkunst?",
-        options: ["Beeldhouwkunst is 3D, schilderkunst 2D", "Beelden zijn meestal kleurloos", "Schilderkunst is figuratief, beelden abstract", "Beelden zijn duurzamer dan schilderijen"],
+        options: ["Beelden zijn ruimtelijk, schilderijen plat", "Beelden zijn kleurloos, schilderijen kleurig", "Schilderijen zijn figuratief, beelden abstract", "Beelden zijn duurzaam, schilderijen vergankelijk"],
         answer: 0,
         wrongHints: [null, "Griekse beelden waren vroeger beschilderd en er bestaan felgekleurde moderne beelden. Is kleur dan het echte verschil?", "Er bestaan abstracte schilderijen en heel realistische beelden. Waar zit het echte verschil?", "Er zijn ook beelden van ijs, zand of klei. Denk aan hoe je elk kunstwerk bekijkt."],
         uitlegPad: {
@@ -40,9 +40,9 @@ const steps = [
       },
       {
         q: "Waarom speelt het **standpunt** een grote rol bij een vrijstaand beeld?",
-        options: ["Het beeld verandert terwijl je eromheen loopt", "De maker bepaalt waar je moet gaan staan", "Je ziet het beeld net als een schilderij van voren", "Van dichtbij zie je meer details van het materiaal"],
+        options: ["Het beeld verandert terwijl je eromheen loopt", "De maker bepaalt waar je moet gaan staan", "Het beeld is gemaakt voor één vaste kijkhoek", "Van dichtbij zie je meer details van het materiaal"],
         answer: 0,
-        wrongHints: [null, "In een museum loop je vrij rond. Wat zie je als je om een beeld heen loopt?", "Is er bij een vrijstaand beeld echt maar één voorkant?", "Dat geldt voor elk kunstwerk, ook voor een schilderij. Wat is bijzonder aan een beeld waar je omheen kunt lopen?"],
+        wrongHints: [null, "In een museum loop je vrij rond. Wat zie je als je om een beeld heen loopt?", "Dat geldt voor een reliëf of een beeld in een nis. Hoe is dat bij een beeld dat los in de ruimte staat?", "Dat geldt voor elk kunstwerk, ook voor een schilderij. Wat is bijzonder aan een beeld waar je omheen kunt lopen?"],
         uitlegPad: {
           stappen: [{ titel: "Geen 'voorkant'", tekst: "Bij een **vrijstaand beeld** is er niet één 'juiste' kant: het **verandert** terwijl je eromheen loopt. Daarom denkt een beeldhouwer in alle aanzichten tegelijk — en doet ook de **negatieve ruimte** (gaten, openingen) mee in het ontwerp." }],
           niveaus: { basis: "Verandert al lopend.", simpeler: "Eromheen = ander beeld", nogSimpeler: "A." },
@@ -98,7 +98,7 @@ const steps = [
     checks: [
       {
         q: "Wat is **contrapost** in een (Grieks) beeld?",
-        options: ["Het gewicht op één been, met een licht gedraaid lichaam", "Twee figuren die elkaars houding spiegelen", "Een stijve houding, recht van voren gezien", "Het gewicht gelijk verdeeld over beide benen"],
+        options: ["Het gewicht op één been, met een licht gedraaid lichaam", "Twee figuren die elkaars houding precies spiegelen", "Een stijve houding, recht van voren, armen langs het lijf", "Het gewicht op beide benen, met de heupen recht"],
         answer: 0,
         wrongHints: [null, "Kijk naar één staand Grieks beeld. Gaat contrapost over twee figuren of over de houding van één?", "Dat past bij oudere, strakke beelden zoals de kouros. Wat veranderden de Grieken juist?", "Staat een figuur dan ontspannen of stijf? Kijk naar de heupen bij een Grieks beeld."],
         uitlegPad: {
@@ -118,9 +118,9 @@ const steps = [
       },
       {
         q: "Wat is kenmerkend voor veel **20e-eeuwse** beeldhouwkunst (Moore, Brancusi)?",
-        options: ["Abstractie — het hoeft niet realistisch iets voor te stellen", "Realisme — een perfect, natuurgetrouw ideaalbeeld", "Religie — beelden vooral voor kerken en kapellen", "Drama — beweging en heftige emotie in marmer"],
+        options: ["Abstractie — het hoeft niet realistisch iets voor te stellen", "Realisme — een perfect, natuurgetrouw ideaalbeeld", "Religie — beelden vooral voor kerken en kapellen", "Drama — beweging en heftige emotie, vastgelegd in marmer"],
         answer: 0,
-        wrongHints: [null, "Een vogel van Brancusi is een gladde, glanzende vorm. Lijkt die natuurgetrouw op een echte vogel?", "Kerkbeelden waren vooral belangrijk in de middeleeuwen en de barok. Wat deden Moore en Brancusi anders?", "Kijk naar een beeld van Brancusi: zie je heftige emotie, of rustige vormen? Lijken de gladde vormen van Brancusi daarop?"],
+        wrongHints: [null, "Een vogel van Brancusi is een gladde, glanzende vorm. Lijkt die natuurgetrouw op een echte vogel?", "Kerkbeelden waren vooral belangrijk in de middeleeuwen en de barok. Wat deden Moore en Brancusi anders?", "Heftige emotie in marmer past bij de barok van Bernini. Passen de gladde, rustige vormen van Brancusi daarbij?"],
         uitlegPad: {
           stappen: [{ titel: "Vorm boven gelijkenis", tekst: "In de **20e eeuw** wordt beeldhouwkunst vaak **abstract**: het hoeft niet meer realistisch 'iets' voor te stellen. **Brancusi** vereenvoudigt tot de essentie, **Moore** maakt organische figuren met **gaten** (negatieve ruimte), **Calder** maakt bewegende **mobiles**." }],
           niveaus: { basis: "Abstractie.", simpeler: "20e eeuw = abstract", nogSimpeler: "A." },
@@ -157,9 +157,9 @@ const steps = [
       },
       {
         q: "Waarom zijn sommige **standbeelden** onderwerp van discussie?",
-        options: ["Ze kunnen omstreden personen eren", "Ze kosten de gemeente veel onderhoud", "Ze staan vaak in de weg op pleinen", "Ze zijn vaak niet realistisch gemaakt"],
+        options: ["Ze kunnen omstreden personen eren", "Ze kosten de gemeente veel onderhoud", "Ze passen vaak niet bij nieuwe gebouwen", "Ze zijn vaak niet realistisch gemaakt"],
         answer: 0,
-        wrongHints: [null, "Kosten zijn zelden het twistpunt. Waar gaat het debat over een beeld van J.P. Coen over?", "Een beeld kun je verplaatsen. Zou het debat dan voorbij zijn?", "De stijl is zelden het twistpunt. Wie of wat eert zo'n beeld?"],
+        wrongHints: [null, "Kosten zijn zelden het twistpunt. Waar gaat het debat over een beeld van J.P. Coen over?", "Een beeld kun je verplaatsen. Zou het debat over een beeld van J.P. Coen dan voorbij zijn?", "De stijl is zelden het twistpunt. Wie of wat eert zo'n beeld?"],
         uitlegPad: {
           stappen: [{ titel: "Kunst + maatschappij", tekst: "Standbeelden in de **openbare ruimte** herdenken iemand of iets — en dat roept vragen op: **wie verdient een standbeeld**, en wat doen we met beelden van bv. **koloniale** of omstreden figuren? Zo raakt openbare kunst aan maatschappelijke en historische debatten." }],
           niveaus: { basis: "Wie verdient het / koloniaal.", simpeler: "Standbeeld = maatschappelijk debat", nogSimpeler: "A." },

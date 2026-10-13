@@ -252,3 +252,56 @@ Controle: `node --check` groen op alle 8 bestanden; `vergelijk-met-main.mjs --al
 - **wereldoorlog2-geschiedenis** (wereldoorlog2Geschiedenis.js) stap 10 vraag 2 · optie 2: "Een oorlog op de Noordpool" → "Een oorlog tussen de VS en Japan" · optie 3: "De oorlog van Napoleon tegen Rusland" → "De Duitse aanval op de Sovjet-Unie" · hint 2: "'Koud' is figuurlijk — niet de temperatuur." → "Die oorlog hoorde bij WO2 en eindigde in 1945; de Koude Oorlog kwam erna." · hint 3: "Napoleon = ~1812, ander tijdperk." → "Die aanval in 1941 hoort bij WO2 zelf. Wie stonden er na 1945 tegenover elkaar?" · basiskennis in uitlegPad bijgewerkt
 - **wereldoorlog2-geschiedenis** (wereldoorlog2Geschiedenis.js) stap 11 vraag 1 · hint 3: "Beurscrash — 10 jaar te vroeg." → "In 1929 crashte de beurs: een oorzaak, maar nog geen oorlog."
 - **wereldoorlog2-geschiedenis** (wereldoorlog2Geschiedenis.js) stap 11 vraag 3 · optie 2: "Nederland werd onderdeel van Duitsland" → "Nederland verloor Suriname" · optie 4: "Nederland kreeg een keizer" → "Nederland werd een republiek" · hint 2: "Het tegendeel — NL was juist bevrijd, niet ingelijfd." → "Suriname werd pas in 1975 onafhankelijk, dertig jaar na de oorlog." · hint 4: "NL is sinds 1815 een koninkrijk, geen keizerrijk." → "Koningin Wilhelmina kwam in 1945 gewoon terug; Nederland bleef een koninkrijk." · basiskennis in uitlegPad bijgewerkt
+
+## Ronde 3 (na blinde detectie)
+
+**Tellingen:** 63 markeringen = 62 unieke vragen · 41 hersteld · 17 vals alarm (het woord in de vraag ís de lesstof: Driehoekshandel, fabriekssysteem, Spinning Jenny, Kinderwetje, Romulus, Republiek, Pax, Constantinopel, aquaducten, Romaans, 'No taxation…', nationalisme, loopgraaf 2×, 11/11 om 11u, Stalingrad, Neurenberg-processen) · 4 alleen twijfel. Antwoorden, aantal/volgorde opties en q ongewijzigd; `vergelijk-met-main` 0 afwijkingen.
+
+### Twijfel voor Mark
+- **q-taal (q mag niet wijzigen):** goudenEeuw S2V3 "Wat handelde VOC vooral?" → "Waarin handelde de VOC vooral?"; industrieleRevolutie S1V2 "Inclosure Acts" → "Enclosure Acts" (hint noemt nu beide spellingen); verlichting S1V4/S2V1/S3V2/S4V2 telegramstijl ("Wanneer Onafhankelijkheidsverklaring VS?").
+- **goudenEeuw S5V4** "Wanneer werd Indonesië onafhankelijk?" antwoord 1945 (uitgeroepen); erkenning door NL was 27-12-1949. Hint bij 1962 vraagt nu naar het uitroepen; q zou "uitgeroepen" moeten noemen.
+- **kolonie S3V4** capitulatie Japan 15 aug (aankondiging); formele ondertekening 2 sept 1945 staat al in het uitlegPad. Geen 2 sept-optie, dus geen twee-goed.
+- **kolonie S1V4** "officiële naam" — de volgende q noemt "Nederlands-Indië" letterlijk (lek via q, niet te dichten zonder q-wijziging).
+- **kolonie S4V5** excuses 2020 "staatshoofd" — in 2020 was alleen Willem-Alexander staatshoofd; inherent aan de q.
+
+### Hersteld (oud → nieuw)
+- goudenEeuw S2V1 + S6V1 VOC: "Verenigde Oranje Compagnie" → "Vrije Oostzee Compagnie" (Verenigde/Vrije en Oostindische/Oostzee nu elk 2×, geen meerderheidspatroon)
+- goudenEeuw S2V3: Indonesië/Suriname/Noord-Amerika → "Specerijen uit de Molukken / Suiker uit Nederlands-Brazilië / Bont uit Nieuw-Nederland / Graan uit het Oostzeegebied" (geen lek "Oostindisch → Indonesië")
+- goudenEeuw S3V4: "Bevel van de koning" → "Brede huizen zakten in het veen"
+- goudenEeuw S4V4: "Banda-eilanden" → "Banda" (enkelvoud past bij "op welk eiland")
+- goudenEeuw S5V4: hint 1962 → vraagt naar wanneer Soekarno uitriep
+- industrieleRevolutie S1V1: niet-landbouwafleiders → "Drie gewassen tegelijk op één akker / Elk jaar drie keer oogsten van één akker / Grond verdeeld over 3 boerenfamilies"; goede optie "Akker in 3 delen, elk jaar 1 deel braak"
+- industrieleRevolutie S1V2: hint "kijk naar 'inclosure'" → "Enclosure Acts, ook wel 'Inclosure' gespeld"
+- industrieleRevolutie S1V4: absolute koning / slavenarbeid / beste onderwijs → drie even positieve opsommingen ("Een sterke koning, zilver en lage lonen" / "Slavenarbeid, houtskool en veel bossen" / "Veel inwoners, goed onderwijs en graan")
+- industrieleRevolutie S1V5: "Fabriek" → "Huisnijverheid"
+- industrieleRevolutie S3V3: "Vrije markt + minimale staats-rol" → "Vrije markt met een kleine overheid"
+- industrieleRevolutie S5V5: kale hints "Niet — dat is 1e/2e/3e" → denkprikkels met periode
+- kolonie S1V5: "Jakarta" → "Soerabaja"; kale hints bij Singapore/Manilla → denkprikkels
+- kolonie S2V4 Ethische politiek: afleiders → "Onderwijs + Spoorwegen + Zending / Irrigatie + Zending + Gezondheidszorg / Emigratie + Spoorwegen + Gezondheidszorg" (elke term 2×)
+- kolonie S3V2: "Wilhelmina + Drees" → "Diponegoro + Kartini"
+- kolonie S3V5: kale opties → vier opties met reden ("Sterk verzwakt: Nederland bleek te verslaan" / "Versterkt: Japan bleek een hardere baas" / "Bleef gelijk: Nederland kwam in 1945 terug" / "Verdween: Nederland gaf de kolonie meteen op")
+- kolonie S5V1: absurde volgordes → VOC→Ethisch→Cultuur→Onafh / Cultuur→VOC→Ethisch→Onafh / Ethisch→VOC→Cultuur→Onafh (geen positie met meerderheid voor het goede)
+- romeinen S3V3: "Volk rustig houden met eten en spelen" → "Het volk tevreden houden met graan en vermaak"; "Een dagprogramma…" → "Een vast dagprogramma in het Colosseum"
+- romeinen S5V2: afleiders aangevuld tot vier volken ("…, Egyptenaren" / "…, Galliërs" / "…, Turken")
+- romeinen S5V4: "Het Westromeinse Rijk" → "Het Romeinse Gallië" (lek met vorige vraag weg)
+- tachtigjarige S6V2: "Onafhankelijkheidsverklaring tegen Filips II" + drie benoemde documenten → vier omschrijvingen zonder namen ("Een verklaring dat Filips II werd afgezworen" / "Een belasting van Alva op elke verkoop" / "Een vredesverdrag dat de oorlog beëindigde" / "Een wet van Karel V tegen ketters")
+- tachtigjarige S7V2: "De paus en de bisschoppen" / "Filips II en zijn landvoogd" → "De vroedschap van Amsterdam" / "De Raad van State en een landvoogd" (basiskennis bijgewerkt)
+- tachtigjarige S8V2: Versailles / UVRM / Magna Carta → Belgische (1830) / Indonesische (1945) / Mexicaanse (1810) onafhankelijkheidsverklaring (basiskennis bijgewerkt)
+- tachtigjarige S11V3: Alva / Willem van Oranje / Maurits → Karel V / Filips III / Hendrik III (allemaal koningen; uitlegPad herschreven)
+- verlichting S3V4: Bijbel / absolutisme / Romeins recht → "Code Napoléon + Romeins recht" / "Renaissance + Italiaanse stadstaten" / "Absolutisme + Lodewijk XIV"
+- verlichting S4V4: enkelvoudige afleiders → dubbele ("Verraad van generaals + te weinig soldaten" / "Britse vloot + Pruisische tegenaanval" / "Opstand in Parijs + gebrek aan geld"); goede → "Strenge winter + verschroeide aarde"
+- WO1 S3V2: "Pistool" / "Kanon" → "Prikkeldraad" / "Handgranaat"
+- WO1 S4V1: "Nee — neutraal" + 3× "Ja — met …" → "Nee, het bleef neutraal" / "Ja, aan Duitse kant" / "Ja, aan Engelse kant" / "Nee, maar het werd bezet"
+- WO1 S5V3: "Het leger uitbreiden" / "Elzas-Lotharingen krijgen" → "Dienstplicht invoeren" / "In vier zones worden verdeeld"
+- WO1 S6V1 MAIN: afleiders → "Militarisme + Antisemitisme + Industrialisatie + Neutraliteit" / "Monarchie + Allianties + Industrialisatie + Neutraliteit" / "Monarchie + Antisemitisme + Imperialisme + Nationalisme" (elke term 2×)
+- WO2 S1V1: voordelen → "Dienstplicht invoeren" / "In vier zones worden verdeeld" / "De industrie ontmantelen" (basiskennis bijgewerkt)
+- WO2 S1V2: "Als een eerlijke oplossing" / "Als een milde straf" → "Als een verdiende straf" / "Als een mild compromis"
+- WO2 S2V2: "Duitsland werd binnengevallen door Frankrijk" → "De hyperinflatie van 1923 duurde voort"
+- WO2 S3V3: "Atoombom + Koude Oorlog + Marshallplan" → "Russische Revolutie + Volkenbond + Spaanse griep"
+- WO2 S4V2: hints "'Blitz' betekent bliksem" (gaf antwoord weg) → denkprikkels
+- WO2 S5V3: 5 weken / 5 maanden / 5 jaar → 1 dag / 10 dagen / 18 dagen (België)
+- WO2 S6V3: "Samenwerken met de vijand (bezetter)" → "Samenwerken met de bezetter"
+- WO2 S7V3: Duitsland / Java → "Hongersnood in heel Nederland in 1940-45" / "Hongersnood in Oost-Nederland in 1944-45"
+- WO2 S9V3: 5 mei / 4 mei (NL-dagen) → "8 mei (einde oorlog in Europa, 1945)" / "10 december (Rechten van de Mens, 1948)"
+- WO2 S11V3: "Nederland werd communistisch" / "…een republiek" → "Vrouwen kregen kiesrecht" / "Nederland verloor Nieuw-Guinea"
+- WO2 S11V4: Holocaust-… / VN + EU + Marshallplan → "Moord op Frans Ferdinand + allianties + wapenwedloop" / "Russische Revolutie + Spaanse griep + Volkenbond"

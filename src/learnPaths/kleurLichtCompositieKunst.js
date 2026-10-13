@@ -30,9 +30,9 @@ const steps = [
       },
       {
         q: "Wat zijn **complementaire kleuren**?",
-        options: ["Kleuren die tegenover elkaar staan en elkaar versterken", "Kleuren die naast elkaar liggen in de kleurencirkel", "Kleuren die samen een warme sfeer geven", "Licht en donker van één kleur naast elkaar"],
+        options: ["Kleuren die tegenover elkaar liggen in de kleurencirkel", "Kleuren die naast elkaar liggen in de kleurencirkel", "Kleuren die samen een warme of koele sfeer geven", "Lichte en donkere tinten van één kleur naast elkaar"],
         answer: 0,
-        wrongHints: [null, "Buren in de kleurencirkel heten verwante kleuren. Versterken die elkaar of vloeien ze in elkaar over?", "Het gaat om paren, niet om warm of koud.", "Dat is licht-donkercontrast, niet complementair."],
+        wrongHints: [null, "Buren in de kleurencirkel heten verwante kleuren. Versterken die elkaar of vloeien ze in elkaar over?", "Warm en koud is een eigen soort contrast. Waar staan complementaire kleuren in de kleurencirkel?", "Dat heet licht-donkercontrast. Gaat complementair over één kleur of over een paar kleuren?"],
         uitlegPad: {
           stappen: [{ titel: "Tegenover = fel contrast", tekst: "**Complementaire kleuren** staan **tegenover** elkaar in de kleurencirkel (rood↔groen, blauw↔oranje, geel↔paars). Naast elkaar geven ze een fel **contrast** dat opvalt; gemengd worden ze grauw. Kunstenaars gebruiken ze om iets te laten knallen." }],
           niveaus: { basis: "Tegenover elkaar.", simpeler: "Complementair = tegenover", nogSimpeler: "Tegenover elkaar." },
@@ -50,9 +50,9 @@ const steps = [
       },
       {
         q: "Waarom kan dezelfde kleur **verschillende betekenissen** hebben?",
-        options: ["Kleursymboliek verschilt per cultuur en tijd", "Elk mens ziet kleuren net iets anders", "Kleur verandert door het licht in de ruimte", "De betekenis hangt af van de verfsoort"],
+        options: ["Kleursymboliek verschilt per cultuur en tijd", "Elk mens ziet kleuren net iets anders", "Kleur verandert door het licht in de ruimte", "Elke kunstenaar kiest zelf wat een kleur betekent"],
         answer: 0,
-        wrongHints: [null, "Ook mensen die precies hetzelfde zien, geven wit soms een andere betekenis. Waar komt dat verschil vandaan?", "Licht verandert hoe een kleur eruitziet. Verandert het ook wat rood betekent?", "Olieverf of acryl: maakt dat rood ineens tot liefde of gevaar?"],
+        wrongHints: [null, "Ook mensen die precies hetzelfde zien, geven wit soms een andere betekenis. Waar komt dat verschil vandaan?", "Licht verandert hoe een kleur eruitziet. Verandert het ook wat rood betekent?", "Als iedere kunstenaar dat zelf koos, kon wit dan in een hele cultuur rouw betekenen? Waar komt zo'n gedeelde betekenis vandaan?"],
         uitlegPad: {
           stappen: [{ titel: "Cultureel bepaald", tekst: "**Kleursymboliek is cultureel en tijdgebonden**: wit staat westers voor zuiverheid maar in delen van Azië voor rouw; rood kan liefde óf gevaar zijn. Bij het 'lezen' van een kunstwerk hoort dus altijd de context." }],
           niveaus: { basis: "Cultuur + tijd.", simpeler: "Betekenis verschilt per cultuur", nogSimpeler: "Hangt af van cultuur." },
@@ -81,7 +81,7 @@ const steps = [
         q: "Wat is **clair-obscur** (chiaroscuro)?",
         options: ["Sterk contrast tussen licht en donker", "Sterk contrast tussen warm en koud", "Zacht vervagen van contouren", "Schilderen in grijs, zwart en wit"],
         answer: 0,
-        wrongHints: [null, "Warm en koud is een kleurcontrast. Wat valt het meest op in een schilderij van Caravaggio?", "Zacht vervagen van randen heeft een eigen naam. Wat betekenen de Franse woorden clair en obscur?", "Dat heet grisaille. Bij Caravaggio zie je juist volle kleur. Waar zit dan het effect?"],
+        wrongHints: [null, "Warm en koud is een kleurcontrast. Wat valt het meest op in een schilderij van Caravaggio?", "Zacht vervagen van randen heet sfumato, zoals bij de Mona Lisa. Wat valt het meest op bij Caravaggio?", "Dat heet grisaille. Bij Caravaggio zie je juist volle kleur. Waar zit dan het effect?"],
         uitlegPad: {
           stappen: [{ titel: "Drama door licht", tekst: "**Clair-obscur / chiaroscuro** is een sterk **licht-donkercontrast**, vaak met één lichtbron, dat **drama** geeft en de aandacht richt op het belangrijkste. Kenmerkend voor de **barok** — denk aan **Caravaggio** en **Rembrandt**." }],
           niveaus: { basis: "Licht-donkercontrast.", simpeler: "Clair-obscur = licht/donker", nogSimpeler: "Licht tegen donker." },
@@ -128,9 +128,9 @@ const steps = [
       },
       {
         q: "Hoe stuurt een kunstenaar **waar je oog naartoe gaat**?",
-        options: ["Met leidende lijnen en blikrichting", "Door alles even scherp te schilderen", "Door een titel onder het werk te zetten", "Door het werk in een donkere zaal te hangen"],
+        options: ["Met leidende lijnen en blikrichting", "Door alles even scherp te schilderen", "Door alle figuren even groot te maken", "Door de horizon in het midden te zetten"],
         answer: 0,
-        wrongHints: [null, "Als alles even scherp is, waar kijk je dan eerst?", "Een titel lees je pas na het kijken. Wat in het beeld zelf trekt je oog mee?", "Dat gaat over de plek in het museum. Wat binnen het beeld leidt je oog?"],
+        wrongHints: [null, "Als alles even scherp is, waar kijk je dan eerst?", "Als alle figuren even groot zijn, springt er dan één uit? Wat in het beeld wijst je de weg?", "Een horizon in het midden verdeelt het beeld in twee gelijke helften. Wijst dat je naar één punt?"],
         uitlegPad: {
           stappen: [{ titel: "Lijnen en blikken leiden je", tekst: "Met **leidende lijnen** (een weg, een arm, de rand van een tafel) en de **blikrichting** van figuren stuurt de kunstenaar je oog naar het belangrijkste. Compositie is **bewuste ordening** — niets staat er toevallig." }],
           niveaus: { basis: "Leidende lijnen + blik.", simpeler: "Lijnen sturen je oog", nogSimpeler: "Lijnen wijzen de weg." },

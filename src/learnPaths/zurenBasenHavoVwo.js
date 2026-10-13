@@ -215,9 +215,9 @@ const steps = [
     checks: [
       {
         q: "Wat is het **equivalentiepunt** in een titratie?",
-        options: ["Punt waar zuur en base gelijkwaardig zijn","Het moment waarop de titratie begint","Het punt waar de pH precies 7 is","Het punt waar de indicator omslaat"],
+        options: ["Het punt waar al het zuur precies is omgezet","Het punt waar de helft van het zuur is omgezet","Het punt waar de pH precies 7 is","Het punt waar de indicator omslaat"],
         answer: 0,
-        wrongHints: [null, "Niet — aan het begin is er nog niets toegevoegd.", "Bij azijnzuur met natronloog ligt het equivalentiepunt boven pH 7. Is het dan altijd 7?", "Het omslagpunt van de indicator heet het eindpunt. Valt dat altijd precies samen met wat er chemisch gebeurt?"],
+        wrongHints: [null, "Dat is het halve-equivalentiepunt, waar pH = pKa. Is al het zuur dan op?", "Bij azijnzuur met natronloog ligt het equivalentiepunt boven pH 7. Is het dan altijd 7?", "Het omslagpunt van de indicator heet het eindpunt. Valt dat altijd precies samen met wat er chemisch gebeurt?"],
         uitlegPad: {
           stappen: [{ titel: "Stoïchiometrisch", tekst: "**Equivalentiepunt** = exact moment waarop toegevoegde stof stoichiometrisch gelijk is aan beginstof. Bij sterk zuur + sterke base = pH 7. Bij zwak/sterk-combinaties anders." }],
           niveaus: { basis: "Stoichiometrisch evenwicht.", simpeler: "Equivalentie = even-veel", nogSimpeler: "Even" },
@@ -316,9 +316,9 @@ const steps = [
       },
       {
         q: "Cola heeft pH ≈ 2,5 (door koolzuur + fosforzuur). Tandglazuur lost op bij pH < 5,5. Wat te doen?",
-        options: ["Minder vaak drinken en water spoelen","Direct na cola heel hard poetsen","Cola zo langzaam mogelijk drinken","Suikers blokkeren met spoelmiddel"],
+        options: ["Minder vaak drinken en daarna met water spoelen","Direct na de cola je tanden goed poetsen","Cola in kleine slokjes over de dag drinken","Een spoelmiddel tegen suikers gebruiken"],
         answer: 0,
-        wrongHints: [null, "Direct na zuur is het glazuur zacht. Wat doet hard poetsen dan met dat zachte laagje?", "Niet — hoe lang staan je tanden dan in het zuur?", "Hier gaat het om het zuur in cola, niet om de suiker. Helpt een middel tegen suiker dan tegen zuur?"],
+        wrongHints: [null, "Direct na zuur is het glazuur zacht. Wat doet poetsen dan met dat zachte laagje?", "Elke slok laat de pH in je mond weer dalen. Hoe lang staan je tanden dan in het zuur?", "Hier gaat het om het zuur in cola, niet om de suiker. Helpt een middel tegen suiker dan tegen zuur?"],
         uitlegPad: {
           stappen: [{ titel: "Glazuur kwetsbaar", tekst: "Cola pH 2,5 → veel onder 5,5 → glazuur lost op. Tips: minder drinken, **water spoelen** na om pH te verhogen, **niet direct poetsen** (glazuur is verzacht — poetsen schuurt het weg). Wacht 30 min." }],
           theorie: "Toets-toepassing: zuur-base-chemie in dagelijks leven. Tandarts-advies = direct uit chemie.",

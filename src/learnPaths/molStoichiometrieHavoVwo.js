@@ -109,13 +109,13 @@ const steps = [
       {
         q: "Wat behoudt **massa** + **aantal atomen** in een reactie?",
         options: [
-          "Atomen blijven behouden",
-          "Moleculen blijven behouden",
-          "Het volume blijft behouden",
-          "Het aantal mol blijft behouden"
+          "Atomen worden alleen anders gegroepeerd",
+          "Atomen blijven in hun eigen molecuul",
+          "Het volume van de stoffen blijft gelijk",
+          "Het aantal mol stoffen blijft gelijk"
         ],
         answer: 0,
-        wrongHints: [null, "Bij een reactie ontstaan nieuwe stoffen. Blijven de moleculen dan dezelfde?", "Bij gassen kan het volume veranderen. Wat telt er mee in de massa?", "Kijk naar 2 H₂ + O₂ → 2 H₂O: links 3 mol, rechts 2 mol. Wat blijft er dan gelijk?"],
+        wrongHints: [null, "Bij een reactie ontstaan nieuwe stoffen. Kan dat als elk atoom in zijn eigen molecuul blijft?", "Bij gassen kan het volume veranderen. Wat telt er mee in de massa?", "Kijk naar 2 H₂ + O₂ → 2 H₂O: links 3 mol, rechts 2 mol. Wat blijft er dan gelijk?"],
         uitlegPad: {
           stappen: [{ titel: "Wet Lavoisier", tekst: "Atomen blijven hetzelfde; ze schuiven alleen naar nieuwe combinaties. Daarom telt links = rechts per element. Massa-behoud is gevolg." }],
           niveaus: { basis: "Atomen behouden.", simpeler: "Aantal atomen elk element gelijk.", nogSimpeler: "Atomen" },
@@ -312,7 +312,7 @@ const steps = [
           "0,25 mol"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — welke producten ontstaan er bij verbranding?", "Niet — schrijf eerst de reactievergelijking op.", "Niet — kijk goed welke stoffen rechts van de pijl staan."],
+        wrongHints: [null, "0,5 mol is de hoeveelheid methaan zelf. Welke producten ontstaan er bij verbranding?", "1 mol klopt voor H₂O. Vraagt de vraag naar H₂O of naar H₂?", "Schrijf eerst de reactievergelijking op. Welke stoffen staan rechts van de pijl?"],
         uitlegPad: {
           stappen: [{ titel: "Trick-vraag", tekst: "CH₄ + 2 O₂ → CO₂ + 2 H₂O. Producten zijn CO₂ + H₂O. Geen H₂-gas. Stoichiometrie-vraag vereist eerst kijken: bestaat dat product? Hier: nee." }],
           niveaus: { basis: "Geen H₂.", simpeler: "Verbranding geeft water, niet H₂.", nogSimpeler: "0" },

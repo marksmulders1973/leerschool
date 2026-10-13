@@ -66,9 +66,9 @@ const steps = [
       },
       {
         q: "Welke verbinding is **organisch**?",
-        options: ["Glucose (C₆H₁₂O₆)","Water (H₂O)","Zout (NaCl)","Zuurstofgas (O₂)"],
+        options: ["Glucose (C₆H₁₂O₆)","Water (H₂O)","Kalk (CaCO₃)","Koolstofdioxide (CO₂)"],
         answer: 0,
-        wrongHints: [null, "Welke atomen zitten er in H₂O? Zit daar koolstof bij?", "Welke atomen zitten er in NaCl? Zit daar koolstof bij?", "Zuurstofgas bevat maar één soort atoom. Is dat koolstof?"],
+        wrongHints: [null, "Welke atomen zitten er in H₂O? Zit daar koolstof bij?", "Kalk bevat wel koolstof, maar geen C–H-bindingen. Rekenen we carbonaten tot de organische stoffen?", "CO₂ bevat koolstof, maar valt onder de uitzonderingen. Welke stof heeft C–H-bindingen?"],
         uitlegPad: {
           stappen: [{ titel: "Organisch = koolstof-verbinding", tekst: "**Organisch** = bevat koolstof (en meestal waterstof). Glucose = C₆H₁₂O₆ = klassiek organisch. Water, zout, zuurstofgas = anorganisch (geen C of geen typische C-H-binding)." }],
           theorie: "Uitzonderingen: CO₂, CO, carbonaten (zoals kalk CaCO₃) zijn koolstof-bevattend maar anorganisch.",
@@ -77,9 +77,9 @@ const steps = [
       },
       {
         q: "Welke binding-soorten kan koolstof vormen?",
-        options: ["Enkele, dubbele, drievoudige","Enkele en dubbele","Enkele, dubbele, viervoudige","Enkele en drievoudige"],
+        options: ["Enkele, dubbele, drievoudige","Enkele, dubbele, ionbindingen","Enkele, dubbele, viervoudige","Enkele, drievoudige, viervoudige"],
         answer: 0,
-        wrongHints: [null, "Denk aan ethyn (C₂H₂). Hoeveel bindingen zitten er tussen de twee C-atomen?", "Kan koolstof vier elektronenparen met één ander atoom delen? Kijk naar de ruimtelijke bouw.", "Denk aan etheen (C₂H₄). Welke binding zit daar tussen de C-atomen?"],
+        wrongHints: [null, "Koolstof deelt elektronen en vormt geen ionen. Denk aan ethyn (C₂H₂): hoeveel bindingen zitten er tussen de twee C-atomen?", "Kan koolstof vier elektronenparen met één ander atoom delen? Kijk naar de ruimtelijke bouw.", "Denk aan etheen (C₂H₄): welke binding zit daar tussen de C-atomen? En kan C vier paren met één atoom delen?"],
         uitlegPad: {
           stappen: [{ titel: "Enkele/dubbele/drievoudige", tekst: "Koolstof kan delen: **1 paar** (enkele, C-C), **2 paren** (dubbele, C=C), **3 paren** (drievoudige, C≡C). Voorbeeld: ethaan (enkel), etheen (dubbel), ethyn (drievoudig)." }],
           niveaus: { basis: "Drie soorten.", simpeler: "1, 2 of 3 paren", nogSimpeler: "1-2-3" },
@@ -196,7 +196,7 @@ const steps = [
         q: "**Aceton** (CH₃COCH₃) is een:",
         options: ["Keton","Aldehyde","Alcohol","Amine"],
         answer: 0,
-        wrongHints: [null, "Bij een aldehyde zit de C=O aan het eind van de keten. Waar zit hij in CH₃COCH₃?", "Niet — geen -OH.", "Niet — geen N."],
+        wrongHints: [null, "Bij een aldehyde zit de C=O aan het eind van de keten. Waar zit hij in CH₃COCH₃?", "Een alcohol heeft een -OH-groep. Zie je in CH₃COCH₃ een O met een H eraan?", "Een amine bevat stikstof. Zit er een N in CH₃COCH₃?"],
         uitlegPad: {
           stappen: [{ titel: "Keton vs aldehyde", tekst: "**Keton**: C=O groep **in midden** van keten (R-CO-R'). **Aldehyde**: C=O groep **aan einde** (R-CHO). Aceton (CH₃COCH₃) = midden → keton. Naamgeving -on-uitgang." }],
           theorie: "Toepassing aceton: nagellak-verwijderaar, plastic-oplosmiddel.",
@@ -272,7 +272,7 @@ const steps = [
         q: "Verbranding van koolstof-verbindingen is **schadelijk voor klimaat** omdat:",
         options: ["CO₂ versterkt broeikaseffect","O₂ in de lucht raakt op","De ozonlaag wordt dunner","Er ontstaat veel methaan"],
         answer: 0,
-        wrongHints: [null, "Er is heel veel O₂ in de lucht; het niveau blijft hoog. Welk gas neemt wel toe?", "De ozonlaag wordt aangetast door cfk's. Welk verbrandingsproduct houdt warmte vast?", "Niet — methaan = uitgangsstof bij verbranding."],
+        wrongHints: [null, "Er is heel veel O₂ in de lucht; het niveau blijft hoog. Welk gas neemt wel toe?", "De ozonlaag wordt aangetast door cfk's. Welk verbrandingsproduct houdt warmte vast?", "Methaan is in aardgas juist de brandstof. Ontstaat het dan bij verbranding?"],
         uitlegPad: {
           stappen: [{ titel: "CO₂ = broeikasgas", tekst: "Bij verbranding van fossiele brandstof komt **CO₂** vrij. CO₂ houdt warmte vast in atmosfeer → **versterkt broeikaseffect** → klimaatopwarming. Sinds 1850: CO₂ van 280 ppm → 420 ppm (2024)." }],
           theorie: "Toets-actueel: de Nederlandse Klimaatwet wil 55% minder broeikasgas in 2030 t.o.v. 1990.",
