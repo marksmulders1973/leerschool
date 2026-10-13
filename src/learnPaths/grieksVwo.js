@@ -129,9 +129,9 @@ const steps = [
       },
       {
         q: "Welke **geslachten** heeft Grieks?",
-        options: ["Mannelijk, vrouwelijk, onzijdig","Mannelijk en vrouwelijk","Mannelijk en onzijdig","Vrouwelijk en onzijdig"],
+        options: ["Mannelijk, vrouwelijk, onzijdig","Mannelijk, vrouwelijk, gemeenslachtig","Mannelijk, onzijdig, dualis","Vrouwelijk, onzijdig, vocatief"],
         answer: 0,
-        wrongHints: [null, "Denk aan τό, het lidwoord van ergon (werk). Welk geslacht is dat?", "Denk aan ἡ, het lidwoord van 'de vrouw'. Welk geslacht is dat?", "Denk aan ὁ, het lidwoord van logos. Welk geslacht is dat?"],
+        wrongHints: [null, "'Gemeenslachtig' is een term uit het Nederlands (de-woorden). Welk geslacht heeft τό, het lidwoord van ergon (werk)?", "De dualis is een getal (tweevoud), geen geslacht. Welk geslacht heeft ἡ, het lidwoord van 'de vrouw'?", "De vocatief is een naamval, geen geslacht. Welk geslacht heeft ὁ, het lidwoord van logos?"],
         uitlegPad: {
           stappen: [{ titel: "3 genera", tekst: "**Grieks heeft 3 grammaticale geslachten** (zoals Duits + Latijn): **mannelijk (ὁ), vrouwelijk (ἡ), onzijdig (τό)**. Geslacht is grammaticaal, niet altijd biologisch (ἡ νῆσος = het eiland is vrouwelijk). Belangrijk: lidwoord + bijvoeglijk naamwoord + voornaamwoord stemmen overeen." }],
           niveaus: { basis: "3 geslachten.", simpeler: "3 genera", nogSimpeler: "3" },
@@ -217,9 +217,9 @@ const steps = [
       },
       {
         q: "Wanneer **eerste Olympische Spelen**?",
-        options: ["776 v.Chr.","1896","490 v.Chr.","753 v.Chr."],
+        options: ["776 v.Chr.","399 v.Chr.","490 v.Chr.","753 v.Chr."],
         answer: 0,
-        wrongHints: [null, "1896 is het begin van de moderne Spelen. Wanneer waren de eerste Spelen in Olympia?", "490 v.Chr. is het jaar van de Slag bij Marathon. Waren de eerste Spelen in die tijd?", "753 v.Chr. is het jaar van de stichting van Rome. Welk jaartal hoort bij Olympia?"],
+        wrongHints: [null, "In 399 v.Chr. werd Sokrates terechtgesteld. Bestonden de Spelen in Olympia toen al lang?", "490 v.Chr. is het jaar van de Slag bij Marathon. Waren de eerste Spelen in die tijd?", "753 v.Chr. is het jaar van de stichting van Rome. Welk jaartal hoort bij Olympia?"],
         uitlegPad: {
           stappen: [{ titel: "Olympia Peloponnesos", tekst: "**776 v.Chr.**: eerste Olympische Spelen in **Olympia** (Peloponnesos), te ere van Zeus. Tot 393 n.Chr. (verboden door christelijke keizer Theodosius). **Moderne herstart 1896** door Pierre de Coubertin in Athene." }],
           niveaus: { basis: "776 v.Chr.", simpeler: "Olympia = 776 vC", nogSimpeler: "776" },

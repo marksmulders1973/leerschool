@@ -63,9 +63,9 @@ const steps = [
       },
       {
         q: "Welke 2 **delen** heeft een conditional?",
-        options: ["If-clause + main clause", "If-clause + relative clause", "Main clause + question tag", "Two main clauses with 'and'"],
+        options: ["If-clause + main clause", "If-clause + unless-clause", "Time clause + main clause", "Main clause + result clause"],
         answer: 0,
-        wrongHints: [null, "Een betrekkelijke bijzin (met who of which) zegt iets over een woord. Waar zit dan het deel met het gevolg?", "Een question tag (…, isn't it?) maakt van een zin een vraag. Waar zit dan de voorwaarde?", "Twee hoofdzinnen met 'and' staan los naast elkaar. Waar is dan de 'als…dan'-verhouding?"],
+        wrongHints: [null, "'Unless' (tenzij) leidt zelf ook een voorwaarde in. Heb je twee voorwaarden nodig, of een voorwaarde en nog iets anders?", "Een time clause met 'when' zegt wannéér iets gebeurt. Is 'wanneer' hetzelfde als 'als, op voorwaarde dat'?", "De main clause ís al het gevolg. Welk deel mis je dan nog?"],
       },
       {
         q: "**'If I had a car, I would drive.'** Welk type?",
@@ -237,9 +237,9 @@ const steps = [
       },
       {
         q: "**'Take an umbrella ___ it rains.'** — welk woord betekent 'voor het geval dat'?",
-        options: ["in case", "if", "unless", "when"],
+        options: ["in case", "in any case", "unless", "in that case"],
         answer: 0,
-        wrongHints: [null, "'If' = als (een voorwaarde); hier gaat het om een voorzorg.", "'Unless' betekent 'tenzij'. Klopt 'neem een paraplu, tenzij het regent'?", "'When' betekent 'wanneer': dan pak je de paraplu pas als het al regent. Is dat een voorzorg?"],
+        wrongHints: [null, "'In any case' betekent 'hoe dan ook' en staat los in de zin. Kan het een bijzin als 'it rains' inleiden?", "'Unless' betekent 'tenzij'. Klopt 'neem een paraplu, tenzij het regent'?", "'In that case' betekent 'in dat geval' en verwijst terug naar iets wat al gezegd is. Kan het een nieuwe bijzin inleiden?"],
       },
     ],
   },

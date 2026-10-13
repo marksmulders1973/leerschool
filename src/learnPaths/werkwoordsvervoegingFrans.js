@@ -63,9 +63,9 @@ const steps = [
     checks: [
       {
         q: "Welk werkwoord is **groep 1 (-er)**?",
-        options: ["parler (spreken)", "finir (afmaken)", "vendre (verkopen)", "aller (gaan)"],
+        options: ["parler (spreken)", "finir (afmaken)", "vendre (verkopen)", "voir (zien)"],
         answer: 0,
-        wrongHints: [null, "Finir eindigt op -ir: dat is groep 2. Welke uitgang hoort bij groep 1?", "Vendre eindigt op -re: dat is groep 3. Welke uitgang hoort bij groep 1?", "Aller eindigt wel op -er, maar is onregelmatig (je vais, tu vas). Hoort het dan bij groep 1?"],
+        wrongHints: [null, "Finir eindigt op -ir: dat is groep 2. Welke uitgang hoort bij groep 1?", "Vendre eindigt op -re: dat is groep 3. Welke uitgang hoort bij groep 1?", "Voir eindigt op -oir: dat hoort bij groep 3. Welke uitgang hoort bij groep 1?"],
       },
       {
         q: "Wat betekent **'tu'**?",
@@ -81,9 +81,9 @@ const steps = [
       },
       {
         q: "Waarom **'j'aime'** en niet **'je aime'**?",
-        options: ["Voor een klinker wordt je → j'", "Omdat aimer onregelmatig is", "Omdat 'aime' vrouwelijk is", "Omdat het in spreektaal mag"],
+        options: ["Voor een klinker wordt je → j'", "Voor een -er-werkwoord wordt je → j'", "Voor een medeklinker wordt je → j'", "In spreektaal wordt je → j'"],
         answer: 0,
-        wrongHints: [null, "aimer is een gewoon -er-werkwoord.", "Werkwoorden hebben geen geslacht.", "Ook in nette schrijftaal schrijf je j'aime. Het is een algemene regel."],
+        wrongHints: [null, "Parler is ook een -er-werkwoord, en toch schrijf je 'je parle'. Waar ligt het dan aan?", "Vergelijk 'je parle' en 'j'aime'. Met wat voor letter begint aime, en met wat voor letter parle?", "Ook in nette schrijftaal schrijf je j'aime. Het is een vaste regel. Waar hangt die van af?"],
       },
     ],
   },

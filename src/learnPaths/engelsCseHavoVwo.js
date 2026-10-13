@@ -65,9 +65,9 @@ const steps = [
       },
       {
         q: "Hoeveel tijd per vraag heb je gemiddeld op HAVO/VWO Engels (150 min / ~42 vragen)?",
-        options: ["~3,5 minuut","~6 minuten","~1 minuut","~10 minuten"],
+        options: ["~3,5 minuut","~2,5 minuut","~4,5 minuut","~5 minuten"],
         answer: 0,
-        wrongHints: [null, "Te ruim — kom je niet door.", "Te krap — leesvaardigheid heeft tijd nodig.", "Reken na: 42 vragen × 10 minuten. Hoeveel minuten is dat?"],
+        wrongHints: [null, "Reken na: 42 × 2,5 minuut. Gebruik je dan de hele 150 minuten?", "Reken na: 42 × 4,5 minuut. Past dat in 150 minuten?", "Reken na: 42 × 5 minuten. Past dat in 150 minuten?"],
         uitlegPad: {
           stappen: [{ titel: "150/42 ≈ 3,5", tekst: "**150 min / ~42 vragen ≈ 3,5 min/vraag** gemiddeld. Realistisch: korter voor scan-vragen (1 min), langer voor inhouds-vragen (4-5 min)." }],
           theorie: "Trek 10-15 min eind-check af → effectief ~3,2 min/vraag. Houd timer per pagina.",
@@ -76,9 +76,9 @@ const steps = [
       },
       {
         q: "Welke tekstsoort heeft vooral **subjectieve mening** + provocatie?",
-        options: ["Opinion column","News report","Scientific summary","Interview"],
+        options: ["Opinion column","News report","Scientific summary","Opinion poll report"],
         answer: 0,
-        wrongHints: [null, "Een news report brengt feiten zo neutraal mogelijk. In welke tekstsoort staat de mening van de schrijver centraal?", "Een scientific summary geeft onderzoek weer. Probeert die de lezer te prikkelen?", "Bevat meningen maar van geïnterviewde, niet auteur."],
+        wrongHints: [null, "Een news report brengt feiten zo neutraal mogelijk. In welke tekstsoort staat de mening van de schrijver centraal?", "Een scientific summary geeft onderzoek weer. Probeert die de lezer te prikkelen?", "Een opinion poll report geeft de uitslag van een peiling: de meningen van ándere mensen, zakelijk gebracht. Wiens mening staat in de gezochte tekst centraal?"],
         uitlegPad: {
           stappen: [{ titel: "Opinion = mening", tekst: "**Opinion column** (vaak in The Guardian, NY Times etc.) = persoonlijke mening van schrijver, vaak controversieel. CSE-favoriet voor intentie- en toon-vragen." }],
           theorie: "Toets-tip: in opinion column zit auteur-mening duidelijk; in nieuws-artikel pas op met 'mening van schrijver vs van geïnterviewde'.",
@@ -96,9 +96,9 @@ const steps = [
     checks: [
       {
         q: "*'What is the author's purpose in the final paragraph?'* — welke vraag-type?",
-        options: ["Intentie","Detail","Verwijzing","Register"],
+        options: ["Intentie","Hoofdgedachte","Verwijzing","Toon"],
         answer: 0,
-        wrongHints: [null, "Een detailvraag gaat over één feit uit de tekst. Waar vraagt 'purpose' naar?", "Een verwijzingsvraag gaat over een woord als 'this' of 'they'. Vraagt 'purpose' daarnaar?", "Niet — register gaat over hoe formeel de taal is, niet over het doel."],
+        wrongHints: [null, "Bij de hoofdgedachte gaat het om de kern van de hele tekst. Gaat deze vraag over de hele tekst of over één alinea?", "Een verwijzingsvraag gaat over een woord als 'this' of 'they'. Vraagt 'purpose' daarnaar?", "Toon gaat over de houding van de schrijver (sarcastisch, kritisch). Vraagt 'purpose' naar een houding of naar een doel?"],
         uitlegPad: {
           stappen: [{ titel: "Purpose = intentie/doel", tekst: "**Purpose** = WAAROM schrijver dit deel schreef. Niet 'wat staat er' (detail) of 'hoe formeel is 't' (register), maar 'wat wil schrijver bereiken'. Vaak: conclude / persuade / warn / criticise." }],
           theorie: "Toets-strategie: lees laatste alinea zorgvuldig + kijk naar zinnen die actie/conclusie suggereren.",
@@ -107,9 +107,9 @@ const steps = [
       },
       {
         q: "Een artikel gebruikt veel woorden als 'consequently', 'notwithstanding', 'whereupon'. Wat is het **register**?",
-        options: ["Formal/academic","Informal/chatty","Slang/street talk","Mixed/neutral"],
+        options: ["Formal/academic","Informal/journalistic","Literary/poetic","Neutral/news-style"],
         answer: 0,
-        wrongHints: [null, "Kijk naar de lengte en deftigheid van deze woorden.", "Niet — slang gebruikt korte woorden.", "Zie je ook spreektaal-woorden tussen deze woorden?"],
+        wrongHints: [null, "Informele taal heeft korte woorden en spreektaal. Passen 'notwithstanding' en 'whereupon' daarbij?", "Literaire taal draait om beelden en gevoel. Zijn dit beeldende woorden of Latijnse verbindingswoorden?", "Neutraal Engels gebruikt gewone woorden als 'so' en 'but'. Wat gebruikt dit artikel in plaats daarvan?"],
         uitlegPad: {
           stappen: [{ titel: "Lange Latin-words = academisch", tekst: "**Consequently** (vs 'so'), **notwithstanding** (vs 'despite'), **whereupon** (vs 'then'). Allemaal lange, deftige woorden (consequently komt uit het Latijn-Frans; notwithstanding en whereupon zijn ouderwets-plechtig) = formeel/academic register. Tegenovergesteld: 'cuz', 'gonna' = informeel/slang." }],
           woorden: [{ woord: "register", uitleg: "Formaliteit-niveau van taal (formal / neutral / informal)." }],
@@ -141,9 +141,9 @@ const steps = [
       },
       {
         q: "*'What is the FUNCTION of paragraph 3?'* — wat moet je doen?",
-        options: ["Bepalen wat de alinea toevoegt","De alinea in het Nederlands vertalen","De inhoud van de alinea samenvatten","Moeilijke woorden opzoeken"],
+        options: ["Bepalen welke rol de alinea speelt","Bepalen wat de hoofdgedachte is","De inhoud van de alinea samenvatten","Bepalen wat de schrijver ervan vindt"],
         answer: 0,
-        wrongHints: [null, "Een vertaling zegt wát er staat. Vraagt 'function' daarnaar?", "Een samenvatting geeft de inhoud. Vraagt 'function' naar de inhoud of naar iets anders?", "Woorden opzoeken helpt bij het lezen, maar beantwoordt het deze vraag?"],
+        wrongHints: [null, "De hoofdgedachte gaat over de hele tekst. Gaat deze vraag over de hele tekst of over één alinea?", "Een samenvatting geeft de inhoud. Vraagt 'function' naar de inhoud of naar iets anders?", "Wat de schrijver vindt, is zijn mening. Vraagt 'function' daarnaar, of naar wat de alinea doet?"],
         uitlegPad: {
           stappen: [{ titel: "Function = rol binnen tekst", tekst: "**Function** = welke ROL deze alinea heeft in de tekst-structuur. Opties: introduceren / illustreren / nuanceren / weerleggen / contrasteren / concluderen. Kijk naar **inhoudelijke relatie** met omringende alinea's." }],
           niveaus: { basis: "Wat alinea toevoegt.", simpeler: "Function = rol in tekst", nogSimpeler: "Rol" },
@@ -160,9 +160,9 @@ const steps = [
     checks: [
       {
         q: "Wat doe je het EERST bij een lange tekst?",
-        options: ["Titel + eerste/laatste alinea lezen","De hele tekst woord voor woord lezen","Meteen bij vraag 1 beginnen","Onbekende woorden opzoeken"],
+        options: ["Titel + eerste/laatste alinea lezen","Alle vragen bij de tekst lezen","Eerste + laatste zin per alinea","Alinea-thema's in de kantlijn"],
         answer: 0,
-        wrongHints: [null, "Dat kost veel tijd. Hoe krijg je snel een eerste overzicht?", "Zonder overzicht zoek je lang naar het antwoord. Wat helpt je eerst?", "Woorden opzoeken kost tijd en is vaak niet nodig. Waar begin je?"],
+        wrongHints: [null, "Dat is een goede stap, maar komt die eerst? Wat geeft je in 30 seconden een overzicht?", "Dat is skim-lezen. Welke stappen komen daarvóór?", "Alinea-thema's noteer je tijdens het skimmen. Wat doe je nog eerder?"],
         uitlegPad: {
           stappen: [{ titel: "Pre-read = oriëntatie", tekst: "**Pre-read** = snel overzicht krijgen. Titel + 1e/laatste alinea = wat is hoofdpunt. Daarna pas details bekijken. Bespaart tijd + voorkomt verdwalen." }],
           niveaus: { basis: "Pre-read.", simpeler: "Eerst overzicht = pre-read", nogSimpeler: "Pre-read" },
@@ -170,9 +170,9 @@ const steps = [
       },
       {
         q: "Wanneer is **markeren** (vragen overslaan) handig?",
-        options: ["Bij een twijfelvraag die tijd kost","Bij vragen die je zeker weet","Bij vragen over lange alinea's","Bij de open vragen aan het eind"],
+        options: ["Bij een twijfelvraag die tijd kost","Bij een trefwoord uit de vraag","Bij een signaalwoord in de tekst","Bij een vraag over de hoofdgedachte"],
         answer: 0,
-        wrongHints: [null, "Die kun je meteen afmaken. Waarom zou je ze bewaren?", "De lengte van de alinea zegt niet hoe moeilijk de vraag is. Wanneer loop je vast?", "Kun je ook bij een meerkeuzevraag vastlopen?"],
+        wrongHints: [null, "Een trefwoord onderstreep je in de tekst om het terug te vinden. Sla je daarmee een vraag over?", "Een signaalwoord omcirkel je in de tekst. Sla je daarmee een vraag over?", "Een vraag over de hoofdgedachte is niet vanzelf lastig. Wanneer markeer je een vraag om later terug te komen?"],
         uitlegPad: {
           stappen: [{ titel: "Markeer + door", tekst: "Bij **twijfel/onzeker** vraag: markeer met **\\*** of cirkel rond vraag-nummer + ga **door** naar volgende. Aan eind terug. Voorkomt tijd-verlies + frisse blik op tweede beurt." }],
           theorie: "Toets-strategie: max 2-3 min per vraag. Daarna markeren + door. Niet 8 min op 1 vraag besteden.",
@@ -192,9 +192,9 @@ const steps = [
       },
       {
         q: "Wat doe je als je een **onbekend woord** tegenkomt in lange tekst?",
-        options: ["Eerst de zinnen eromheen lezen","Meteen het woordenboek pakken","De hele tekst opnieuw lezen","De vraag erover overslaan"],
+        options: ["Eerst de zinnen eromheen lezen","Eerst het woordenboek erbij pakken","Eerst de vraag erover overslaan","Eerst de hele tekst opnieuw lezen"],
         answer: 0,
-        wrongHints: [null, "Dat kost veel tijd. Kun je de betekenis misschien ook raden?", "Niet — dat kost veel te veel tijd.", "Eén onbekend woord is geen reden om op te geven. Wat kan je helpen het woord te begrijpen?"],
+        wrongHints: [null, "Het woordenboek gebruik je spaarzaam, want het kost veel tijd. Wat kun je eerst proberen?", "Eén onbekend woord is geen reden om de vraag op te geven. Wat kan je helpen het woord te begrijpen?", "Dat kost veel tijd. Welk stukje tekst heb je nodig om het woord te raden?"],
         uitlegPad: {
           stappen: [{ titel: "Context > woordenboek", tekst: "**Eerst context lezen** (zin met onbekend woord + 1-2 ervoor/erna). Vaak kun je betekenis raden uit context. Pas als context niet helpt: woordenboek (30-60 sec verlies). Direct woordenboek = tijd-verlies." }],
           theorie: "Toets-tip: ~80% van onbekende woorden is uit context te raden bij HAVO/VWO-leerlingen.",
@@ -203,9 +203,9 @@ const steps = [
       },
       {
         q: "Welke **valstrik** is het meest schadelijk bij HAVO/VWO lang examen?",
-        options: ["Haasten aan het eind","Eerste indruk volgen","Twijfelvragen overslaan","Vaak op de klok kijken"],
+        options: ["Haasten aan het eind","Foute opties meteen schrappen","Twijfelvragen overslaan","Vaak op de klok kijken"],
         answer: 0,
-        wrongHints: [null, "Bij de anti-valstrikken staat juist: vertrouw vaak je eerste indruk, want eindeloos twijfelen kost tijd. Welke val kost je de meeste punten?", "Een twijfelvraag markeren en er later op terugkomen is juist een strategie. Wat gebeurt er als je de tijd uit het oog verliest?", "Elke twee vragen op de klok kijken voorkomt juist problemen. Welke val wil je daarmee voorkomen?"],
+        wrongHints: [null, "Opties schrappen die zeker fout zijn, staat bij de anti-valstrikken: zo hou je minder over. Welke val kost je juist punten?", "Een twijfelvraag markeren en er later op terugkomen is juist een strategie. Wat gebeurt er als je de tijd uit het oog verliest?", "Elke twee vragen op de klok kijken voorkomt juist problemen. Welke val wil je daarmee voorkomen?"],
         uitlegPad: {
           stappen: [{ titel: "Eind-haasten = punten missen", tekst: "Klassieke val: leerling besteedt te veel tijd aan begin → laatste 10-15 vragen in 10 min → veel punten missen. **Voorkom door tijd-check elke 2 vragen** + markeren bij twijfel + door." }],
           theorie: "Toets-strategie: berekening hoeveel tijd je hebt per pagina/tekst → blijf daaronder.",
@@ -234,9 +234,9 @@ const steps = [
       },
       {
         q: "Een **unreliable narrator** is een verteller die:",
-        options: ["De lezer een vertekend beeld geeft","Altijd in de ik-vorm vertelt","Alles weet over alle personages","Wetenschappelijke uitleg geeft"],
+        options: ["Informatie verdraait of achterhoudt","Alleen weet wat de hoofdpersoon weet","Een andere toon heeft dan de auteur","De lezer aanspreekt met 'you'"],
         answer: 0,
-        wrongHints: [null, "Veel ik-vertellers zijn gewoon betrouwbaar. Waar slaat 'unreliable' op?", "Dat is een alwetende verteller. Wat betekent 'unreliable'?", "Wat betekent 'reliable'? En wat doet 'un-' ervoor?"],
+        wrongHints: [null, "Dat is een third-person limited verteller. Is die daarom onbetrouwbaar?", "Een verteller kan een andere toon hebben dan de auteur en toch eerlijk vertellen. Wat betekent 'unreliable'?", "Dat is een second-person verteller. Waar slaat 'unreliable' op?"],
         uitlegPad: {
           stappen: [{ titel: "Unreliable = lezer moet doorzien", tekst: "**Unreliable narrator** = verteller die liegt / details vergeet / overdrijft / cognitief beperkt is. Lezer moet **tussen de regels** lezen om het 'echte' verhaal te vinden. Klassieke voorbeelden: Catcher in the Rye (Holden), Lolita (Humbert), Gone Girl." }],
           theorie: "VWO-examen-strategie: bij first-person-vertelling — denk altijd 'is dit echt zo of liegt verteller?'.",
@@ -245,9 +245,9 @@ const steps = [
       },
       {
         q: "Wat is **foreshadowing**?",
-        options: ["Hint vooraf op latere gebeurtenis","Terugblik op eerdere gebeurtenis","Vergelijking zonder 'zoals'","Beschrijving van een personage"],
+        options: ["Hint vooraf op latere gebeurtenis","Samenvatting vooraf van het verhaal","Terugblik op een eerdere gebeurtenis","Sombere sfeer die de lezer voelt"],
         answer: 0,
-        wrongHints: [null, "Dat is een flashback. Kijk naar 'fore-' in het woord.", "Dat is een metaphor. Waar slaat 'shadowing' op?", "Dat heet characterisation. Waar wijst 'fore-' naar?"],
+        wrongHints: [null, "Een samenvatting vertelt de hele inhoud al. Doet foreshadowing dat, of laat het iets doorschemeren?", "Dat is een flashback. Kijkt foreshadowing terug of vooruit?", "De sfeer die de lezer voelt, heet mood. Waar wijst 'fore-' naar?"],
         uitlegPad: {
           stappen: [{ titel: "Voorspel-hint", tekst: "**Foreshadowing** = auteur geeft subtiel **hint over toekomstige gebeurtenis** in verhaal. Vroeg in verhaal: kraai vliegt over → later: dood van personage. Lezer voelt achteraf 'ik had het kunnen zien'." }],
           theorie: "Klassiek voorbeeld: Harry Potter — Trelawney-voorspelling die later uitkomt.",
@@ -267,9 +267,9 @@ const steps = [
       },
       {
         q: "Een **first-person narrator** gebruikt:",
-        options: ["'I' en 'we'","'He' en 'she'","'You' en 'your'","'They' en 'them'"],
+        options: ["'I' en 'we'","'I' en 'you'","'You' en 'your'","'We' en 'they'"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is third-person.", "Niet — dat is second-person.", "'They' en 'them' horen bij third-person (meervoud). Wie is de 'first person'?"],
+        wrongHints: [null, "'You' spreekt de lezer aan: dat is second-person. Welke voornaamwoorden horen samen bij de eerste persoon?", "Niet — dat is second-person.", "'They' hoort bij third-person. Welke voornaamwoorden horen samen bij de eerste persoon?"],
         uitlegPad: {
           stappen: [{ titel: "First-person = ik", tekst: "**First-person**: 'I went to the store.' Verteller = personage. **Subjectief** — beperkt tot wat dit personage weet. Catcher in the Rye, To Kill a Mockingbird etc." }],
           theorie: "VWO-CSE-vraag: 'From whose POV is this fragment told?' Antwoord: kijk naar voornaamwoorden + bewustzijn.",
@@ -308,9 +308,9 @@ const steps = [
       },
       {
         q: "Welke vraag is **typisch literair-fragment**-vraag (VWO)?",
-        options: ["'What does the silence at the dinner table reveal?'","'When was the law on school dinners passed?'","'What was the average GDP in Europe in 2020?'","'How many guests sat at the dinner table?'"],
+        options: ["'What does the silence at the dinner table reveal?'","'What does the survey on family dinners reveal?'","'Which argument does the writer use against fast food?'","'How many guests sat at the dinner table?'"],
         answer: 0,
-        wrongHints: [null, "Dat is een feitvraag. Wat vraagt een literair fragment meestal?", "Dat is een feitvraag over cijfers. Komt die uit een roman of verhaal?", "Dat kun je gewoon tellen. Moet je bij een literaire vraag iets afleiden?"],
+        wrongHints: [null, "Een enquête komt uit een krantenartikel of onderzoek. Hoort die bij een literair fragment?", "Argumenten zoeken hoort bij een betoog of column. Wat vraagt een literair fragment meestal?", "Dat kun je gewoon tellen. Moet je bij een literaire vraag iets afleiden?"],
         uitlegPad: {
           stappen: [{ titel: "Sub-text + character", tekst: "**Literair-fragment-vragen** gaan om **sub-tekst**, character-emoties, symbolisme. 'What does silence reveal?' = wat zegt deze stilte over personages/relatie? Klassieke literatuurvraag." }],
           niveaus: { basis: "Eerste.", simpeler: "Sub-text-vraag = literair", nogSimpeler: "Eerste" },

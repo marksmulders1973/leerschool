@@ -31,9 +31,9 @@ const steps = [
     checks: [
       {
         q: "Wat is past simple van **play**?",
-        options: ["played", "plaied", "playd", "playyed"],
+        options: ["played", "plays", "has played", "playing"],
         answer: 0,
-        wrongHints: [null, "Klinker + y — verandert de y dan wel?", "Alleen werkwoorden die al op -e eindigen, krijgen alleen een -d (like → liked). Eindigt play op een -e?", "Verdubbelen doe je bij een korte klank + één medeklinker, zoals stop → stopped. Verdubbelt een y?"],
+        wrongHints: [null, "'Plays' is present simple (he plays). Welke vorm is verleden tijd?", "'Has played' is present perfect, met een hulpwerkwoord. Hoe ziet past simple eruit?", "'Playing' is de -ing-vorm. Welke vorm gebruik je voor een afgeronde handeling in het verleden?"],
         uitlegPad: {
           stappen: [{ titel: "play → played", tekst: "Klinker + y: gewoon +ed → played." }],
           woorden: [{ woord: "regelmatig", uitleg: "basis + -ed" }],
@@ -73,9 +73,9 @@ const steps = [
     checks: [
       {
         q: "Welke is **goed**?",
-        options: ["Did you see the film?", "Did you saw the film?", "Do you see the film?", "Did you sees the film?"],
+        options: ["Did you see the film?", "Did you saw the film?", "Saw you the film?", "Did you sees the film?"],
         answer: 0,
-        wrongHints: [null, "Na did → basisvorm.", "Do is voor present, niet past.", "Geen -s na did."],
+        wrongHints: [null, "Na did komt de basisvorm, niet de verleden tijd. Welke vorm is dat?", "Zo vraag je het in het Nederlands ('Zag jij…?'). Welk hulpwerkwoord heb je in het Engels nodig?", "Na did komt de basisvorm, zonder -s. Welke vorm is dat?"],
         uitlegPad: {
           stappen: [{ titel: "Did + basisvorm", tekst: "Did you see ...? — niet 'saw'." }],
           woorden: [{ woord: "did", uitleg: "verleden tijd zit hierin" }],
@@ -257,9 +257,9 @@ const steps = [
     checks: [
       {
         q: "Welke is goed? — *I ___ him yesterday.* (see)",
-        options: ["saw", "have seen", "see", "did see"],
+        options: ["saw", "have seen", "see", "seen"],
         answer: 0,
-        wrongHints: [null, "Perfect past niet bij 'yesterday'.", "'See' is present simple. Wanneer zag je hem?", "'Did see' gebruik je alleen voor nadruk ('ik héb hem wél gezien'); de gewone vorm is V2."],
+        wrongHints: [null, "Present perfect past niet bij een afgesloten tijd als 'yesterday'. Welke tijd wel?", "'See' is present simple. Wanneer zag je hem?", "'Seen' is de 3e vorm; die gebruik je alleen na have, has of had. Welke vorm gebruik je zonder hulpwerkwoord?"],
         uitlegPad: {
           stappen: [{ titel: "Yesterday = simple", tekst: "I saw him yesterday. Vast tijdstip → simple, V2." }],
           woorden: [{ woord: "yesterday", uitleg: "vast verleden tijdstip" }],
@@ -497,7 +497,7 @@ const steps = [
       },
       { q: "I _____ in London since 2020.", options: ["have lived","lived","live","am living"], answer: 0, wrongHints: [null,"Niet — 'since' triggert present perfect.","Niet — link met nu (woont er nog).","Niet — present continuous past niet bij 'since'."] },
       { q: "Welk signaalwoord hoort bij past simple, niet present perfect?", options: ["yesterday","ever","just","already"], answer: 0, wrongHints: [null, "Ever past bij present perfect.", "Just past bij present perfect.", "Already past bij present perfect."] },
-      { q: "**Past simple** van 'play'?", options: ["played","plaid","plays","playing"], answer: 0, wrongHints: [null,"Bij klinker + y blijft de y staan, behalve bij uitzonderingen als say → said. Hoort play daarbij?","'Plays' is present simple (he plays). Welke vorm is verleden tijd?","'Playing' is de -ing-vorm. Welke vorm gebruik je voor een afgeronde handeling in het verleden?"] },
+      { q: "**Past simple** van 'play'?", options: ["played","had played","plays","was playing"], answer: 0, wrongHints: [null,"'Had played' is past perfect: verleden vóór verleden. Welke vorm is de gewone verleden tijd?","'Plays' is present simple (he plays). Welke vorm is verleden tijd?","'Was playing' is past continuous: bezig zijn in het verleden. Welke vorm gebruik je voor een afgeronde handeling?"] },
       { q: "**Past continuous** vorm?", options: ["was/were + V-ing","had + V3","V2 alleen","will + V"], answer: 0, wrongHints: [null,"Zie je in deze vorm een -ing? Hoe laat je zien dat iets bezig was?","Alleen V2 geeft een gewone, afgeronde handeling. Hoe laat je zien dat iets aan de gang was?","'Will' wijst naar de toekomst. Wat heb je nodig voor 'was bezig'?"] },
       { q: "**Past perfect** vorm?", options: ["had + V3","was + V-ing","V2","will have V3"], answer: 0, wrongHints: [null,"Een -ing-vorm laat zien dat iets bezig was. Is dat de betekenis van de past perfect?","Alleen V2 geeft een gewone, afgeronde handeling. Hoe laat je zien dat iets nóg eerder gebeurde?","'Will have' wijst naar de toekomst. Welk hulpwerkwoord heeft de past perfect?"] },
       { q: "*'I ___ TV when the phone rang.'* — past continuous?", options: ["was watching","watched","have watched","will watch"], answer: 0, wrongHints: [null,"'Watched' is past simple: een afgeronde handeling. Was je klaar met tv-kijken toen de telefoon ging?","'Have watched' verbindt het verleden met nu. Gaat dit verhaal over nu?","'Will watch' gaat over de toekomst. Wanneer ging de telefoon?"] },
