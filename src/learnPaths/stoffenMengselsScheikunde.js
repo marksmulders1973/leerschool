@@ -191,13 +191,13 @@ const steps = [
         q: "Dichtheid water = ?",
         options: ["1 g/cm³", "7,9 g/cm³", "0,5 g/cm³", "10 g/cm³"],
         answer: 0,
-        wrongHints: [null, "IJzer.", "Nog lichter dan olie.", "Te veel."],
+        wrongHints: [null, "7,9 g/cm³ hoort bij ijzer. Is water net zo zwaar als ijzer?", "Olie heeft ongeveer 0,9 g/cm³ en drijft op water. Kan water dan lichter zijn dan olie?", "10 g/cm³ is zwaarder dan ijzer. Hoeveel weegt een liter (1000 cm³) water ongeveer?"],
       },
       {
         q: "Olie drijft op water omdat ... ?",
-        options: ["Olie lagere dichtheid heeft", "Olie warmer is", "Olie helderder is", "Toeval"],
+        options: ["Olie een lagere dichtheid heeft", "Olie dikker en stroperiger is", "Olie meer luchtbelletjes bevat", "Olie een hoger kookpunt heeft"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet primair.", "Geen toeval — natuurwet."],
+        wrongHints: [null, "Stroop is ook dik, maar zakt naar de bodem. Gaat het om dikte?", "Ook olie zonder belletjes drijft. Vergelijk eens wat 1 cm³ olie en 1 cm³ water wegen.", "Het kookpunt zegt iets over verwarmen. Wat zegt het over drijven of zinken?"],
       },
       {
         q: "Welke is een **chemische** eigenschap?",
@@ -228,9 +228,9 @@ const steps = [
       },
       {
         q: "Wat doe je als er een **chemische stof in je oog** spat?",
-        options: ["15 minuten spoelen met water", "Drogen", "Afvegen", "Wachten"],
+        options: ["15 minuten spoelen met water", "Kort spoelen en dan droogdeppen", "Spoelen met melk om te neutraliseren", "Oogdruppels erin en goed knipperen"],
         answer: 0,
-        wrongHints: [null, "Maakt erger.", "Maakt erger.", "Wachten gevaarlijk."],
+        wrongHints: [null, "Na een paar seconden spoelen blijft er nog stof in je oog achter. Hoe lang moet je spoelen?", "Melk is niet steriel en neutraliseert niet betrouwbaar. Waarmee spoel je bij de oogdouche op school?", "Een paar druppels verdunnen de stof nauwelijks. Hoeveel vloeistof is nodig om alles weg te spoelen?"],
       },
       {
         q: "Mag je **bleekmiddel + ammoniak** mengen?",
@@ -269,7 +269,7 @@ const steps = [
         q: "Dichtheid water?",
         options: ["1 g/cm³", "7,9 g/cm³", "0,1 g/cm³", "10 g/cm³"],
         answer: 0,
-        wrongHints: [null, "IJzer.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "7,9 g/cm³ hoort bij ijzer. Is water net zo zwaar als ijzer?", "Dat is lichter dan hout en kurk. Drijft hout op water of zinkt het?", "10 g/cm³ is zwaarder dan ijzer. Hoeveel weegt een liter (1000 cm³) water ongeveer?"],
       },
       {
         q: "Welk gevaarssymbool voor **benzine**?",
@@ -281,7 +281,7 @@ const steps = [
         q: "Hoeveel **elementen** in periodiek systeem?",
         options: ["~118", "~50", "~10", "~1000"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "Het periodiek systeem heeft 7 rijen en 18 kolommen. Past ~50 daarbij?", "Noem eens tien elementen uit je hoofd. Is het periodiek systeem echt zo klein?", "Er bestaan duizenden stoffen, maar hoeveel vakjes telt het periodiek systeem ongeveer?"],
       },
     ],
   },

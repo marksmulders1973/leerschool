@@ -70,9 +70,9 @@ const steps = [
       },
       {
         q: "Bij welke groep ben je **privé aansprakelijk** voor de schulden?",
-        options: ["Eenmanszaak en VOF (geen rechtspersoon)", "BV en NV (wel een rechtspersoon)", "Alleen de NV (grote bedrijven)", "Geen enkele: privé is altijd beschermd"],
+        options: ["Eenmanszaak en VOF (geen rechtspersoon)", "BV en NV (wel een rechtspersoon)", "Alleen de NV (grote bedrijven)", "Alleen de VOF (meerdere eigenaren)"],
         answer: 0,
-        wrongHints: [null, "Bij een rechtspersoon ben je juist beperkt aansprakelijk.", "De NV beschermt je privé-vermogen juist.", "Er zijn wél rechtsvormen waarbij je privé risico loopt."],
+        wrongHints: [null, "Bij een rechtspersoon ben je juist beperkt aansprakelijk.", "De NV beschermt je privé-vermogen juist.", "Bij een VOF klopt het — maar hoe zit het met iemand die in z'n eentje een zaak heeft?"],
         uitlegPad: {
           stappen: [{ titel: "Geen rechtspersoon = privé risico", tekst: "Bij een eenmanszaak en VOF ben jij juridisch hetzelfde als het bedrijf. Schuldeisers kunnen daarom aan je privé-vermogen komen." }],
           woorden: [{ woord: "privé aansprakelijk", uitleg: "Met je eigen huis, auto en spaargeld verantwoordelijk voor de bedrijfsschulden." }, { woord: "rechtspersoon", uitleg: "Een bedrijf dat juridisch los staat van de eigenaar (BV, NV). Beschermt je privé-vermogen." }],
@@ -84,9 +84,9 @@ const steps = [
       },
       {
         q: "Welke belasting betaalt een **rechtspersoon** (BV of NV) over de winst?",
-        options: ["Vennootschapsbelasting (VPB)", "Inkomstenbelasting (IB)", "Alleen BTW over de omzet", "Geen, BV en NV zijn vrijgesteld"],
+        options: ["Vennootschapsbelasting (VPB)", "Inkomstenbelasting (IB)", "Alleen BTW over de omzet", "Dividendbelasting over de winst"],
         answer: 0,
-        wrongHints: [null, "IB hoort bij eenmanszaak en VOF.", "BTW betalen alle ondernemingen — dat is geen winstbelasting.", "Een rechtspersoon betaalt juist zelf belasting."],
+        wrongHints: [null, "IB hoort bij eenmanszaak en VOF.", "BTW betalen alle ondernemingen — dat is geen winstbelasting.", "Dividendbelasting gaat over winst die aan de aandeelhouders wordt uitgekeerd. Welke belasting betaalt de BV of NV zelf?"],
         uitlegPad: {
           stappen: [{ titel: "Aparte persoon, eigen belasting", tekst: "Omdat een BV/NV een aparte 'persoon' is, betaalt het bedrijf zelf belasting over de winst: vennootschapsbelasting (VPB)." }],
           woorden: [{ woord: "VPB", uitleg: "Vennootschapsbelasting — winstbelasting voor rechtspersonen (BV, NV)." }, { woord: "IB", uitleg: "Inkomstenbelasting — winstbelasting voor natuurlijke personen (eenmanszaak, VOF-vennoot)." }],
@@ -151,9 +151,9 @@ const steps = [
       },
       {
         q: "Waarom kiezen veel **zzp'ers** voor een eenmanszaak?",
-        options: ["Snel en goedkoop op te richten, met belastingvoordelen", "Omdat het hun privé-vermogen het best beschermt", "Omdat ze dan aandelen op de beurs kunnen verkopen", "Omdat een eenmanszaak geen belasting betaalt"],
+        options: ["Omdat het snel, goedkoop en met belastingvoordeel kan", "Omdat het hun privé-vermogen het best beschermt", "Omdat ze dan geen administratie hoeven bij te houden", "Omdat ze dan vennootschapsbelasting betalen"],
         answer: 0,
-        wrongHints: [null, "Een eenmanszaak beschermt je privé-vermogen juist niet.", "Naar de beurs kan alleen een NV.", "Een eenmanszaak betaalt wél belasting (IB)."],
+        wrongHints: [null, "Een eenmanszaak beschermt je privé-vermogen juist niet.", "Ook een eenmanszaak moet een boekhouding bijhouden en btw-aangifte doen. Waar zit het voordeel dan wel?", "Een eenmanszaak betaalt inkomstenbelasting, geen vennootschapsbelasting. Waar zit het voordeel dan wel?"],
         uitlegPad: {
           stappen: [{ titel: "Lage drempel", tekst: "Een eenmanszaak richt je snel en goedkoop op: alleen inschrijven bij de KvK, geen notaris, geen startkapitaal. Plus belastingvoordelen voor starters." }],
           woorden: [{ woord: "zzp'er", uitleg: "Zelfstandige zonder personeel — werkt vaak via een eenmanszaak." }, { woord: "zelfstandigenaftrek", uitleg: "Belastingvoordeel voor ondernemers: een deel van de winst is onbelast." }],

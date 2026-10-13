@@ -166,15 +166,15 @@ const steps = [
         options: [
           "De uitgangsstoffen (links van de pijl)",
           "De eindstoffen (rechts van de pijl)",
-          "Stoffen die niet reageren",
-          "De pijl zelf",
+          "Stoffen die overblijven na de reactie",
+          "De katalysator (boven de pijl)",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Dat zijn juist de producten.",
-          "Reactanten reageren wél — ze worden iets nieuws.",
-          "De pijl is een symbool, geen stof.",
+          "Reactanten worden juist verbruikt. Wat blijft er over als een stof in overmaat aanwezig is?",
+          "Een katalysator versnelt de reactie maar wordt niet verbruikt. Reageert hij dan zelf mee?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Reactanten = startstoffen", tekst: "Reactanten staan links van de pijl, producten rechts." }],
@@ -189,16 +189,16 @@ const steps = [
         q: "Welk verschijnsel is **geen** chemische reactie?",
         options: [
           "Suiker oplossen in koffie",
-          "Hout verbranden",
-          "IJzer roesten",
-          "Magnesiumlint branden",
+          "Hout verbranden in de kachel",
+          "Een ijzeren fiets die roest",
+          "Magnesiumlint laten branden",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Verbranding is een reactie.",
+          "Na het branden blijft as over. Is dat nog hout?",
           "Roesten is reactie van ijzer met zuurstof.",
-          "Verbranden is reactie.",
+          "Na het branden blijft een wit poeder over dat er eerst niet was. Is dat een nieuwe stof?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Oplossen = geen reactie", tekst: "Suiker oplossen in koffie = fysisch proces. Het is nog suiker, alleen verdeeld." }],
@@ -220,16 +220,16 @@ const steps = [
         q: "Wat zegt de Wet van Behoud van Massa?",
         options: [
           "Massa van producten = massa van reactanten",
-          "Massa neemt altijd toe",
-          "Massa verdwijnt bij verbranding",
-          "Alleen gassen hebben massa",
+          "Massa van producten > massa van reactanten",
+          "Massa van producten < massa van reactanten",
+          "Volume van producten = volume van reactanten",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Niet — komen er bij een reactie atomen bij?",
-          "Niet — waar zouden de atomen dan heen gaan?",
-          "Niet — alle stoffen hebben massa; wat gebeurt er met het totaal?",
+          "Roest weegt meer dan het ijzer ervoor. Heb je de zuurstof die erbij kwam ook meegeteld?",
+          "Na een verbranding lijkt er minder over. Waar zijn de gassen gebleven die ontsnapten?",
+          "Een gas neemt veel meer ruimte in dan een vaste stof. Gaat deze wet over ruimte of over gewicht?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Massa blijft", tekst: "Atomen verdwijnen niet — totale massa blijft gelijk." }],
@@ -243,10 +243,10 @@ const steps = [
       {
         q: "Welk getal mag je **nooit** veranderen bij balanceren?",
         options: [
-          "De index (klein cijfertje achter element, zoals de 2 in H₂)",
-          "De coëfficiënt (groot getal vóór molecuul)",
-          "Allebei",
-          "Geen van beide",
+          "De index (de kleine 2 in H₂O)",
+          "De coëfficiënt (de 2 in 2 H₂O)",
+          "Allebei: index en coëfficiënt",
+          "Geen van beide getallen",
         ],
         answer: 0,
         wrongHints: [
@@ -416,8 +416,8 @@ const steps = [
         q: "Bij balanceren: wat doe je **eerst**?",
         options: [
           "Tellen van atomen aan beide kanten",
-          "H en O balanceren",
-          "Indices veranderen",
+          "Eerst H en O kloppend maken",
+          "Indices aanpassen waar nodig",
           "Alle coëfficiënten op 1 zetten",
         ],
         answer: 0,
@@ -470,17 +470,17 @@ const steps = [
       {
         q: "Wat betekent het Haber-proces?",
         options: [
-          "Industrieel maken van ammoniak voor kunstmest",
-          "Een reactie van koolstof",
-          "Een methode om water te ontleden",
-          "Een soort katalysator",
+          "Industrieel ammoniak maken voor kunstmest",
+          "Industrieel zwavelzuur maken uit zwavel",
+          "Water ontleden met stroom tot waterstof",
+          "Ruwe olie scheiden door destillatie",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Niet over koolstof — over stikstof + waterstof.",
-          "Niet water-ontleding.",
-          "Niet een katalysator zelf, wel een proces.",
+          "Bij het Haber-proces reageren stikstof en waterstof. Zit daar zwavel in?",
+          "Dat is elektrolyse van water. Bij Haber reageren twee gassen juist mét elkaar.",
+          "Dat gebeurt in een raffinaderij. Is het Haber-proces een scheiding of een reactie?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Haber-proces", tekst: "N₂ + 3 H₂ → 2 NH₃. Maakt ammoniak (NH₃) voor kunstmest. Bedacht door Fritz Haber rond 1909." }],
@@ -527,16 +527,16 @@ const steps = [
       {
         q: "Wat is een verbrandingsreactie?",
         options: [
-          "Reactie met O₂, vaak met warmte/licht",
-          "Een ontleding zonder O₂",
-          "Stof oplossen",
-          "Twee stoffen wisselen partner",
+          "Reactie met O₂, vaak met warmte en licht",
+          "Ontleding door verhitting, zonder O₂",
+          "Stof lost op en geeft warmte af",
+          "Twee stoffen wisselen van partner",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Verbranding heeft O₂ nodig.",
-          "Oplossen is geen reactie.",
+          "Oplossen is geen reactie, ook al wordt het warm. Met welke stof reageert iets dat brandt?",
           "Dat is dubbele verdringing.",
         ],
         uitlegPad: {
@@ -705,9 +705,9 @@ const steps = [
       },
       {
         q: "Wat is een **chemische reactie**?",
-        options: ["Stoffen veranderen in andere stoffen","Stoffen worden warm","Stoffen verkleuren","Volume verandert"],
+        options: ["Stoffen veranderen in andere stoffen","Stoffen veranderen van fase, zoals smelten","Stoffen mengen zich tot één geheel","Stoffen worden warm of veranderen van kleur"],
         answer: 0,
-        wrongHints: [null, "Niet primair — soms wel maar niet definitie.", "Niet primair — gevolg, geen definitie.", "Niet primair — natuurkunde, geen chemie."],
+        wrongHints: [null, "Smeltend ijs is nog steeds water. Is er een nieuwe stof ontstaan?", "Een mengsel kun je weer scheiden in de oude stoffen. Is er dan iets nieuws gevormd?", "Warmte en kleur zijn signalen die vaak meekomen. Maar wat moet er met de stof zelf gebeuren?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is chemische reactie?", tekst: "**Chemische reactie** = proces waarbij **stoffen veranderen in andere stoffen** met nieuwe eigenschappen. Atomen blijven hetzelfde, maar hun rangschikking verandert.\n\nVoorbeelden:\n• IJzer + zuurstof → roest\n• Hout + zuurstof → as + CO₂ + water (verbranding)\n• Magnesium + zuurstof → magnesiumoxide (felle witte flits)\n• Maagzuur + voedsel → vertering" },
@@ -754,9 +754,9 @@ const steps = [
       },
       {
         q: "Wat is een **molecuul**?",
-        options: ["Groep atomen samen verbonden","Klein metaal","Een type cel","Atoomkern"],
+        options: ["Groep atomen samen verbonden","Het kleinste ondeelbare deeltje","Eén atoom met een lading","Kern van protonen en neutronen"],
         answer: 0,
-        wrongHints: [null, "Niet — molecuul kan elk type atoom bevatten.", "Niet — cellen zijn biologisch, moleculen scheikundig.", "Niet — kern = onderdeel atoom, niet molecuul."],
+        wrongHints: [null, "Dat is een atoom. Kun je een molecuul nog verder opsplitsen?", "Een geladen atoom heet een ion. Uit hoeveel atomen bestaat een molecuul?", "Dat is een atoomkern, een onderdeel van één atoom. Is een molecuul groter of kleiner dan een atoom?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een molecuul?", tekst: "Een **molecuul** is een **groep atomen** die **chemisch verbonden** zijn (via elektronen). Het is de kleinste eenheid van een moleculaire stof.\n\nVoorbeelden moleculen:\n• **H₂O** = water (2 H + 1 O)\n• **CO₂** = koolstofdioxide (1 C + 2 O)\n• **O₂** = zuurstof-gas (2 O)\n• **CH₄** = methaan (1 C + 4 H)\n• **NH₃** = ammoniak (1 N + 3 H)" },
@@ -778,9 +778,9 @@ const steps = [
       },
       {
         q: "Wat is een **pH-waarde**?",
-        options: ["Mate van zuurgraad","Temperatuur","Gewicht","Druk"],
+        options: ["Mate van zuurgraad","Mate van waterhardheid","Hoeveelheid opgelost zout","Mate van giftigheid"],
         answer: 0,
-        wrongHints: [null, "Niet — temperatuur is Celsius.", "Niet — gewicht is gram/kg.", "Niet — druk is Pascal/bar."],
+        wrongHints: [null, "Waterhardheid gaat over kalk in water. Waar gaat de schaal van 0 tot 14 over?", "Zout water kan gewoon pH 7 hebben. Wat meet je met lakmoes of rodekoolsap?", "Ook een stof met pH 7 kan giftig zijn. Wat zegt de pH over citroensap en zeep?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is pH?", tekst: "**pH** = maat voor **zuur of base** van een oplossing. Schaal:\n• **0-6** = zuur (lager = zuurder)\n• **7** = neutraal (zuiver water)\n• **8-14** = base (hoger = basischer)\n\nLogaritmisch: elke stap = 10× verschil. pH 5 is 10× zuurder dan pH 6." },
@@ -803,10 +803,10 @@ const steps = [
       },
       { q: "**H₂O** is de formule voor?", options: ["Water","Waterstofgas","Zuurstofgas","Zout"], answer: 0, wrongHints: [null,"Dat is H₂.","Dat is O₂.","Dat is NaCl."] },
       { q: "**O₂** is de formule voor?", options: ["Zuurstofgas","Water","Waterstof","Ozon"], answer: 0, wrongHints: [null,"H₂O.","H₂.","O₃."] },
-      { q: "**CO₂** is?", options: ["Koolstofdioxide","Koolstofmonoxide","Calcium","Waterstof"], answer: 0, wrongHints: [null,"Dat is CO.","Symbool Ca.","Niet."] },
+      { q: "**CO₂** is?", options: ["Koolstofdioxide","Koolstofmonoxide","Dikoolstofoxide","Koolwaterstof"], answer: 0, wrongHints: [null,"Mono betekent één. Hoeveel O-atomen zie je in CO₂?","Het voorvoegsel di- hoort bij het element waar de 2 achter staat. Welk element is dat?","Koolwaterstoffen bevatten C en H. Zit er H in CO₂?"] },
       { q: "**NaCl** is?", options: ["Keukenzout","Suiker","Water","Zoutzuur"], answer: 0, wrongHints: [null,"Dat is C₁₂H₂₂O₁₁.","Dat is H₂O.","Dat is HCl."] },
-      { q: "Bij **verbranding** komt iets vrij — wat?", options: ["Warmte + licht","Alleen kou","Alleen geluid","Niets"], answer: 0, wrongHints: [null,"Tegenovergesteld.","Niet primair.","Wel iets."] },
-      { q: "Wat is een **chemische reactie**?", options: ["Stoffen veranderen in nieuwe stoffen","Stoffen blijven gelijk","Alleen smelten","Alleen koken"], answer: 0, wrongHints: [null,"Geen reactie.","Faseovergang.","Faseovergang."] },
+      { q: "Bij **verbranding** komt iets vrij — wat?", options: ["Warmte + licht","Zuurstof + warmte","Stikstof + warmte","Waterstof + licht"], answer: 0, wrongHints: [null,"Zuurstof is nodig om te kunnen branden. Komt het vrij of wordt het verbruikt?","Stikstof uit de lucht doet bij verbranding nauwelijks mee. Wat merk je bij een kampvuur?","Waterstof kan zelf branden. Komt het vrij als een kaars brandt?"] },
+      { q: "Wat is een **chemische reactie**?", options: ["Stoffen veranderen in nieuwe stoffen","Stoffen lossen op in een vloeistof","Stoffen smelten, koken of stollen","Stoffen worden fijngemalen tot poeder"], answer: 0, wrongHints: [null,"Opgeloste suiker krijg je terug door het water te verdampen. Is het dan een nieuwe stof?","Dat is een faseovergang: de stof blijft dezelfde. Wat moet er bij een reactie ontstaan?","Gemalen suiker is nog steeds suiker. Is er iets nieuws gevormd?"] },
       { q: "**Reactie-pijl** (→) wijst van...?", options: ["Reactanten naar producten","Producten naar reactanten","Heen en terug tegelijk","Van zuur naar base"], answer: 0, wrongHints: [null,"Tegenovergesteld.","Niet — daarvoor gebruik je een dubbele pijl (⇌).","Niet — de pijl geldt voor elke soort reactie."] },
       { q: "Welke is een **base**?", options: ["NaOH","HCl","H₂SO₄","Citroensap"], answer: 0, wrongHints: [null,"HCl (zoutzuur) staat in water H⁺-ionen af — hoort dat bij een base of juist bij een zuur?","H₂SO₄ heet zwavelzúur en geeft ook H⁺-ionen af — het woorddeel '-zuur' verklapt het al. Is dat een base?","Citroensap smaakt scherp en heeft een pH onder de 7 — past dat bij een base?"] },
       { q: "**Open vraag**: noem 1 voorbeeld van een verbrandingsreactie.", kind: "open", acceptedAnswers: ["hout branden", "gas branden", "kaars", "kaars branden", "vuur", "houtvuur", "kaars-vlam", "auto-motor", "verbrandingsmotor"], explanation: "Verbrandingsreactie: stof + zuurstof → CO₂ + H₂O + energie. Voorbeelden: kaars, hout, benzine in motor." },
