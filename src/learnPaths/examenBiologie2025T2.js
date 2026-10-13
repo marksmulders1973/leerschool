@@ -45,7 +45,7 @@ const steps = [
           theorie: "Toets-truc: voor kans-statistiek-vragen — onthoud Nederlandse gemiddelden. Meerling ≈ 1 à 2% van de bevallingen (rond de 1,6%); van de opties ligt 1% het dichtst bij. IVF verhoogt de kans flink.",
           voorbeelden: [{ type: "feit", tekst: "Wereldwijd: meerling-kans verschilt per land. Westerse landen ~1%. Afrika hoogste (Benin ~3%). Door IVF stijgt het in westerse landen langzaam." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "1% (1 op 100) past bij iets wat zelden voorkomt, zoals een meerling. Kijk bij een kans-vraag altijd: hoe vaak zie je het om je heen?" }],
-          niveaus: { basis: "1%.", simpeler: "Meerling-kans in NL = ~1%.", nogSimpeler: "1%" },
+          niveaus: { basis: "1%.", simpeler: "Een meerling is zeldzaam: in NL 1 à 2% van de bevallingen. Van de opties past 1% het best.", nogSimpeler: "1%" },
         },
       },
     ],

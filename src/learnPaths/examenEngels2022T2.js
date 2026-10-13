@@ -130,7 +130,7 @@ const steps = [
         "Schools should be more focused on allowing talented children to get enough sleep.",
       ],
       answer: 1,
-      wrongHints: ["Tekst gaat over egg-and-spoon en three-legged race — KORT, niet long-distance. Niet het punt.", null, "Geen vermelding van age-appropriate tasks. Lees nog eens wat de schrijver over haar dochter en de klasgenoten zegt.", "Geen sleep-onderwerp. Verkeerde tekst-vermenging."],
+      wrongHints: ["Tekst gaat over egg-and-spoon en three-legged race — KORT, niet long-distance. Niet het punt.", null, "Geen vermelding van age-appropriate tasks. Lees nog eens wat de schrijver over haar dochter en de klasgenoten zegt.", "Komt slaap ergens voor in alinea 1 en 2? Lees nog eens wat de schrijver over haar dochter zegt."],
       explanation: "Schrijver maakt dit punt in alinea 2: 'it won't have occurred to her for a millisecond that she shouldn't be racing alongside 50% of her classmates' + 'Most children probably aren't even aware of this resistance to mixed competition.' = kinderen WETEN niet eens van het debat.",
       examenBron: BRON_LABEL(5),
       bronLink: BRON_LINK,

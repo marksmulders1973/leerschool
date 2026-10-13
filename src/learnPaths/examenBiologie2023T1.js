@@ -181,8 +181,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Ilse heeft het mis: mutaties ontstaan in ELKE cel, niet alleen geslachtscellen (UV op huid → huidkanker bv.).",
-          "Ilse heeft het mis — mutaties zijn er overal in het lichaam, niet alleen in geslachtscellen.",
+          "Bekijk de uitspraak van Ilse apart: zit er alleen DNA in zaad- en eicellen, of ook in andere cellen? En wat zei Finn over straling?",
+          "Bekijk elke uitspraak apart. Kan straling het DNA veranderen? En kan DNA alleen in geslachtscellen veranderen, of ook in bijvoorbeeld een huidcel?",
           "Bekijk Finn apart: kan straling het DNA in een cel beschadigen?",
         ],
         explanation: "Finn: KLOPT. Straling (UV, röntgen, radioactief) is een bekende oorzaak van DNA-mutaties. Ook chemicaliën + virussen + toeval. Ilse: KLOPT NIET. Mutaties ontstaan in ELKE cel waar DNA inzit (lichaamscellen + geslachtscellen). Alleen mutaties in GESLACHTSCELLEN worden doorgegeven aan kinderen. Mutaties in andere cellen blijven in dat individu (bv. huidkanker uit zonneschade).",

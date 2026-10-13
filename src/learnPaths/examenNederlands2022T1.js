@@ -215,7 +215,7 @@ const steps = [
       answer: 2,
       wrongHints: [
         "Te smal — de website bekijken is een middel; het echte doel zit erachter.",
-        "Informeren = iets laten weten. Een advertentie wil juist dat je iets DOET.",
+        "Informeren = iets laten weten. Is dat wat deze advertentie vooral wil? Lees de laatste zin nog eens.",
         null,
         "Wil de advertentie vooral dat je iets gaat dénken, of dat je iets gaat dóen? Lees de laatste zin nog eens.",
       ],

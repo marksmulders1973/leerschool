@@ -157,7 +157,7 @@ const steps = [
         "de hoofdstraffen en de maatregelen",
       ],
       answer: 0,
-      wrongHints: [null, "Een maatregel (bv. TBS) is bedoeld voor bescherming of herstel. Is 3 maanden cel zo'n maatregel?", "Een maatregel (bv. TBS) is bedoeld voor bescherming of herstel. Is een rijontzegging een maatregel, of een extra straf?"],
+      wrongHints: [null, "Bekijk beide sancties apart. Een maatregel (bv. TBS) is bedoeld voor bescherming of herstel. Bij welke soort hoort de gevangenisstraf, en bij welke de rijontzegging?", "Bekijk beide sancties apart. Welke van de twee is de belangrijkste straf, en welke komt erbij? Past het woord 'maatregel' bij een van beide?"],
       explanation: "**3 categorieën sancties**: 1) HOOFDSTRAFFEN (gevangenisstraf / hechtenis / taakstraf / geldboete), 2) BIJKOMENDE STRAFFEN (ontzegging rijbevoegdheid / ontzetting uit ambt / verbeurdverklaring), 3) MAATREGELEN (TBS / schadevergoeding / onttrekking aan het verkeer). Gevangenisstraf = hoofdstraf, rijontzegging = bijkomend.",
       examenBron: BRON_LABEL(26),
       bronLink: BRON_LINK,

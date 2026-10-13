@@ -105,7 +105,7 @@ const steps = [
       answer: 3,
       wrongHints: [
         "Dit is een bijkomende uitkomst, maar niet het 'tot nu onbekende' hoofdresultaat.",
-        "Ook een bijvinding — niet het nieuwe kerngegeven van dit onderzoek.",
+        "Staat er in de tekst iets over hoe deze jongens met andere kinderen omgaan? Lees alinea 1 nog eens.",
         "Let op: dit wás al bekend. De vraag vraagt naar wat NIEUW is.",
         null,
       ],
