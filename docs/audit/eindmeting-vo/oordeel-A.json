@@ -1,0 +1,352 @@
+[
+ {
+  "nr": 1,
+  "waar": "algebra-vergelijkingen-havo-vwo stap 2 vraag 5",
+  "eigenKeuze": "x = 7",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 2,
+  "waar": "atmosfeer-klimaat-havo-vwo stap 2 vraag 1",
+  "eigenKeuze": "~1013 hPa",
+  "oordeel": "fout",
+  "reden": "Spelfout in de vraag: 'zee-niveau' moet 'zeeniveau' zijn (de wrongHint schrijft zelf 'zeeniveau'; ook in uitlegPad)."
+ },
+ {
+  "nr": 3,
+  "waar": "atoombouw-scheikunde stap 3 vraag 1",
+  "eigenKeuze": "8",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 4,
+  "waar": "atoombouw-scheikunde stap 8 vraag 1",
+  "eigenKeuze": "3",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 5,
+  "waar": "basis-grammatica-engels-po stap 5 vraag 1",
+  "eigenKeuze": "read",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 6,
+  "waar": "bbp-conjunctuur-economie stap 3 vraag 4",
+  "eigenKeuze": "Extreem hoge inflatie",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 7,
+  "waar": "bedrijfseconomie-havo-vwo stap 5 vraag 1",
+  "eigenKeuze": "Voorraad",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 8,
+  "waar": "begrijpend-lezen-strategie stap 4 vraag 3",
+  "eigenKeuze": "Lees eerste + laatste zin van elke alinea",
+  "oordeel": "twijfel",
+  "reden": "Goede optie is de enige die 'lezen' inhoudt; afleiders zwak ('Sla alle alinea's over' onzinnig, 'alleen' alleen in afleiders) — grens van raadbaar."
+ },
+ {
+  "nr": 9,
+  "waar": "bekende-boeken-literatuur-po stap 2 vraag 3",
+  "eigenKeuze": "Oktober",
+  "oordeel": "fout",
+  "reden": "wrongHint bij 'Geen vaste tijd' luidt 'Wel.' (bedoeld: er is wél een vaste tijd), wat leest als bevestiging van die foute optie; ook de vraag 'Wanneer Kinderboekenweek?' mist werkwoord en lidwoord."
+ },
+ {
+  "nr": 10,
+  "waar": "bekende-nederlanders-po stap 2 vraag 4",
+  "eigenKeuze": "Ireen Wüst",
+  "oordeel": "fout",
+  "reden": "Vraag 'Meeste medailles NL ooit?' is geen goede zin en zegt niet dat het om Olympische medailles gaat; tel je WK-medailles mee, dan is Sven Kramer verdedigbaar. Hints 'Niet.'/'Iets minder.' helpen niet."
+ },
+ {
+  "nr": 11,
+  "waar": "bekende-wetenschappers-po stap 2 vraag 1",
+  "eigenKeuze": "Newton",
+  "oordeel": "twijfel",
+  "reden": "'Ontdekte zwaartekracht' is losjes; Galileo (valwetten) is verdedigbaar en zijn hint 'Astronomie.' weerlegt dat niet echt."
+ },
+ {
+  "nr": 12,
+  "waar": "betrouwbaarheid-bronnen-po stap 4 vraag 8",
+  "eigenKeuze": "een encyclopedie over het heelal",
+  "oordeel": "twijfel",
+  "reden": "Afleider 'een verzonnen film over Mars' geeft het oordeel zelf al ('verzonnen'); zwakke afleider."
+ },
+ {
+  "nr": 13,
+  "waar": "bevolking-migratie-aardrijkskunde stap 3 vraag 3",
+  "eigenKeuze": "Binnen één land verhuizen",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 14,
+  "waar": "bewegingen-snelheid-natuurkunde stap 5 vraag 3",
+  "eigenKeuze": "300.000 km/s",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 15,
+  "waar": "brief-email-lezen-po stap 1 vraag 6",
+  "eigenKeuze": "Een e-mail heeft bovenaan vaste regels zoals 'Van:' en 'Aan:'",
+  "oordeel": "fout",
+  "reden": "Goede optie herkenbaar zonder kennis: alle drie afleiders bevatten het absolute 'nooit', alleen de goede optie is een positieve, specifieke bewering met voorbeeld."
+ },
+ {
+  "nr": 16,
+  "waar": "cel-biologie stap 11 vraag 1",
+  "eigenKeuze": "Bacterie",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 17,
+  "waar": "chemische-reacties-scheikunde stap 5 vraag 2",
+  "eigenKeuze": "Tellen van atomen aan beide kanten",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 18,
+  "waar": "chemische-reacties-scheikunde stap 9 vraag 12",
+  "eigenKeuze": "Keukenzout",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 19,
+  "waar": "cijferend-rekenen stap 7 vraag 11",
+  "eigenKeuze": "6,2",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 20,
+  "waar": "cito-strategieen-groep8 stap 6 vraag 8",
+  "eigenKeuze": "1,25 uur",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 21,
+  "waar": "comparatives-engels stap 6 vraag 14",
+  "eigenKeuze": "happier",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 22,
+  "waar": "cse-leesvaardigheid-engels stap 6 vraag 4",
+  "eigenKeuze": "Klimaatverandering bedreigt ijsberen",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 23,
+  "waar": "cse-schrijfvaardigheid-engels stap 2 vraag 1",
+  "eigenKeuze": "Hi Tom,",
+  "oordeel": "fout",
+  "reden": "Taalfout in de vraag: 'Welke aanhef voor vriend?' mist het lidwoord ('voor een vriend')."
+ },
+ {
+  "nr": 24,
+  "waar": "cse-wiskunde-strategie-vmbo stap 2 vraag 5",
+  "eigenKeuze": "Wat tussen de haakjes staat",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 25,
+  "waar": "cse-wiskunde-strategie-vmbo stap 2 vraag 6",
+  "eigenKeuze": "14",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 26,
+  "waar": "databases-sql-informatica stap 3 vraag 3",
+  "eigenKeuze": "SELECT * FROM Leerlingen WHERE groep = 7;",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 27,
+  "waar": "deelsommen-met-rest-po stap 1 vraag 6",
+  "eigenKeuze": "6 rest 2",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 28,
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 17",
+  "eigenKeuze": "Een regel in een gedicht",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 29,
+  "waar": "dienstregeling-roosters-po stap 1 vraag 7",
+  "eigenKeuze": "28 minuten",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 30,
+  "waar": "digitale-geletterdheid-po stap 3 vraag 4",
+  "eigenKeuze": "~2 uur entertainment per dag",
+  "oordeel": "fout",
+  "reden": "Goede optie herkenbaar zonder kennis: enige gematigde optie tegenover extremen ('Helemaal geen', 'Zeker 8 uur of meer', 'Onbeperkt'); vraag is bovendien telegrafisch met anglicisme 'Screen-tijd advies kind' (schermtijd)."
+ },
+ {
+  "nr": 31,
+  "waar": "digitale-geletterdheid-po stap 4 vraag 1",
+  "eigenKeuze": "Beveiligde verbinding",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 32,
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 28",
+  "eigenKeuze": "1",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 33,
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 39",
+  "eigenKeuze": "7/8",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 34,
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 23",
+  "eigenKeuze": "8",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 35,
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 16",
+  "eigenKeuze": "125 cm³",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 36,
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 22",
+  "eigenKeuze": "25%",
+  "oordeel": "twijfel",
+  "reden": "wrongHint 'Geen relevant getal.' bij 80% klopt niet helemaal: 80 is het maartgetal (80/100 is een gangbare denkfout)."
+ },
+ {
+  "nr": 37,
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 23",
+  "eigenKeuze": "14:35",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 38,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 5",
+  "eigenKeuze": "Kolom C, rij 3",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 39,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 9",
+  "eigenKeuze": "10 km",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 40,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 30",
+  "eigenKeuze": "Temperatuur en neerslag per gebied",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 41,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 33",
+  "eigenKeuze": "1 cm op de kaart = 2.000 cm (20 m) in het echt",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 42,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 1",
+  "eigenKeuze": "donderdag",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 43,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 5",
+  "eigenKeuze": "Snel een hoofdstuk vinden",
+  "oordeel": "twijfel",
+  "reden": "Optie 'Een specifiek woord' is een onvolledige zin; hints 'Niet inhoudsopgave.' en 'Niet doel.' zijn nauwelijks begrijpelijk."
+ },
+ {
+  "nr": 44,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 18",
+  "eigenKeuze": "Pasta op borstel",
+  "oordeel": "fout",
+  "reden": "Antwoord staat letterlijk als eerste in de vraag ('pasta op borstel → ...'), en afleider 'Slapen' is onzinnig; zonder vakkennis te beantwoorden."
+ },
+ {
+  "nr": 45,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 11",
+  "eigenKeuze": "Afrika",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 46,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 31",
+  "eigenKeuze": "9:30",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 47,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 10",
+  "eigenKeuze": "B → A → C → D",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 48,
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 24",
+  "eigenKeuze": "Naar de eerste letter bladeren",
+  "oordeel": "twijfel",
+  "reden": "Afleider 'Het woordenboek heen en weer schudden' is onzinnig; de andere twee zijn wel plausibel."
+ },
+ {
+  "nr": 49,
+  "waar": "emoties-sociaal-po stap 4 vraag 11",
+  "eigenKeuze": "Meningsverschil tussen mensen",
+  "oordeel": "twijfel",
+  "reden": "Afleiders onzinnig ('besmettelijke ziekte', 'land ver weg in Afrika'), al vraagt het nog steeds woordkennis."
+ },
+ {
+  "nr": 50,
+  "waar": "energie-hulpbronnen-havo-vwo stap 2 vraag 3",
+  "eigenKeuze": "Zon en wind zijn niet altijd beschikbaar",
+  "oordeel": "goed",
+  "reden": ""
+ }
+]

@@ -1,0 +1,352 @@
+[
+ {
+  "nr": 101,
+  "waar": "meetkunde-bouwsels stap 5 vraag 5",
+  "eigenKeuze": "100 m³",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 102,
+  "waar": "meetkunde-bouwsels stap 6 vraag 5",
+  "eigenKeuze": "2500 mL",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 103,
+  "waar": "meten-gewicht-inhoud-tijd-po stap 1 vraag 7",
+  "eigenKeuze": "1000 g",
+  "oordeel": "twijfel",
+  "reden": "wrongHint bij '500 g' ('Dat is 1 pond, maar je hebt 2 pond') geeft pond = 500 g en daarmee het antwoord vrijwel direct; corrigerend bedoeld."
+ },
+ {
+  "nr": 104,
+  "waar": "meten-gewicht-inhoud-tijd-po stap 4 vraag 1",
+  "eigenKeuze": "750 ml",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 105,
+  "waar": "mol-stoichiometrie-havo-vwo stap 3 vraag 4",
+  "eigenKeuze": "H₂",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 106,
+  "waar": "mol-stoichiometrie-havo-vwo stap 4 vraag 4",
+  "eigenKeuze": "Geoxideerd",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 107,
+  "waar": "naamvallen-duits stap 3 vraag 2",
+  "eigenKeuze": "kein Kind",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 108,
+  "waar": "naamvallen-duits stap 9 vraag 5",
+  "eigenKeuze": "der → den",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 109,
+  "waar": "nederland-water-vo stap 4 vraag 1",
+  "eigenKeuze": "0,3 tot 1,2 meter",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 110,
+  "waar": "nederlands-cse-havo-vwo stap 3 vraag 2",
+  "eigenKeuze": "Als X, dan onvermijdelijk Y en daarna ramp Z",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 111,
+  "waar": "nederlands-cse-havo-vwo stap 5 vraag 1",
+  "eigenKeuze": "Ad populum",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 112,
+  "waar": "nederlandse-kunstenaars-po stap 2 vraag 3",
+  "eigenKeuze": "Zonnebloemen",
+  "oordeel": "twijfel",
+  "reden": "Hint 'Niet.' bij 'Watermolen' is feitelijk wankel: Van Gogh schilderde wel watermolens (Watermolen te Kollen/Gennep, 1884); geen beroemd werk, dus antwoord blijft eenduidig."
+ },
+ {
+  "nr": 113,
+  "waar": "nederlandse-staat-maatschappijleer stap 11 vraag 10",
+  "eigenKeuze": "3",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 114,
+  "waar": "negatieve-getallen stap 10 vraag 1",
+  "eigenKeuze": "7",
+  "oordeel": "twijfel",
+  "reden": "wrongHint bij '−7' ('teken van de keer-som onjuist bepaald') past niet goed: met verkeerd teken krijg je −17, niet −7 (−7 = −12 + 5)."
+ },
+ {
+  "nr": 115,
+  "waar": "negatieve-getallen-po stap 5 vraag 24",
+  "eigenKeuze": "6",
+  "oordeel": "fout",
+  "reden": "wrongHint 'Verkeerd teken.' bij optie '5' past niet bij die optie: 5 heeft het goede teken maar het verkeerde getal (en 'Niet.' bij −5 zegt niets)."
+ },
+ {
+  "nr": 116,
+  "waar": "netwerken-internet-informatica stap 2 vraag 2",
+  "eigenKeuze": "Vertaalt een domeinnaam naar een IP-adres",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 117,
+  "waar": "nieuwsbericht-lezen-po stap 4 vraag 7",
+  "eigenKeuze": "De kop overdrijft: veel mensen hielpen, maar niet letterlijk iedereen",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 118,
+  "waar": "olympische-spelen-po stap 4 vraag 5",
+  "eigenKeuze": "1e plaats",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 119,
+  "waar": "ontdekkingsreizen-po stap 4 vraag 7",
+  "eigenKeuze": "Nieuwe handelsroutes + grondstoffen vinden",
+  "oordeel": "twijfel",
+  "reden": "Afleiders zwak/kinderlijk ('vakantieplekken + stranden', 'zeilwedstrijden + records', 'Alleen ...' met absoluut woord alleen in afleider); goede optie redelijk te raden."
+ },
+ {
+  "nr": 120,
+  "waar": "optica-havo-vwo stap 1 vraag 3",
+  "eigenKeuze": "~1,24·10⁸ m/s",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 121,
+  "waar": "optica-havo-vwo stap 1 vraag 4",
+  "eigenKeuze": "Invalshoek = reflectiehoek, t.o.v. de normaal",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 122,
+  "waar": "optica-havo-vwo stap 5 vraag 3",
+  "eigenKeuze": "Chemische samenstelling + temperatuur + snelheid",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 123,
+  "waar": "parabolen stap 7 vraag 1",
+  "eigenKeuze": "Ja",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 124,
+  "waar": "passe-compose-frans stap 2 vraag 1",
+  "eigenKeuze": "mangé",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 125,
+  "waar": "periodiek stap 13 vraag 3",
+  "eigenKeuze": "y = 2·sin(x)",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 126,
+  "waar": "pincode-belasting stap 6 vraag 3",
+  "eigenKeuze": "Mogelijk zwart werk zonder belasting",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 127,
+  "waar": "pincode-buitenland-eu stap 4 vraag 1",
+  "eigenKeuze": "€200",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 128,
+  "waar": "pincode-geld-sparen-lenen stap 4 vraag 2",
+  "eigenKeuze": "Sparen is veilig met lage rente; beleggen kan meer opleveren maar ook verlies",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 129,
+  "waar": "pincode-ondernemen stap 1 vraag 3",
+  "eigenKeuze": "Kamer van Koophandel",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 130,
+  "waar": "pincode-overheid stap 4 vraag 4",
+  "eigenKeuze": "€5 miljard",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 131,
+  "waar": "pincode-werk-arbeidsmarkt stap 6 vraag 3",
+  "eigenKeuze": "Lagere kosten per product of hogere lonen",
+  "oordeel": "twijfel",
+  "reden": "'Kan leiden tot' maakt 'meer werkloosheid' deels verdedigbaar (de hint erkent zelf dat werk door machines verdwijnt); 'en lagere lonen' maakt de optie wel fout."
+ },
+ {
+  "nr": 132,
+  "waar": "platentektoniek-aardrijkskunde stap 4 vraag 1",
+  "eigenKeuze": "Onderzeese bergketen waar nieuwe korst ontstaat",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 133,
+  "waar": "plattegrond-legenda-po stap 1 vraag 6",
+  "eigenKeuze": "een foto recht van bovenaf",
+  "oordeel": "twijfel",
+  "reden": "Goede optie is de enige specifieke ('recht van bovenaf'); selfie/filmpje/portret zijn zwakke afleiders, maar voor een basisbegrip PO deels onvermijdelijk."
+ },
+ {
+  "nr": 134,
+  "waar": "plattegrond-legenda-po stap 3 vraag 3",
+  "eigenKeuze": "rechtdoor",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 135,
+  "waar": "recyclen-afval-po stap 4 vraag 17",
+  "eigenKeuze": "Spullen steeds opnieuw gebruiken",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 136,
+  "waar": "recyclen-afval-po stap 4 vraag 19",
+  "eigenKeuze": "Plastic uit zee halen",
+  "oordeel": "twijfel",
+  "reden": "wrongHint 'Sport, geen milieu-werk.' noemt het domein van het antwoord; er is maar één milieu-optie, dus per uitsluiting duidelijk."
+ },
+ {
+  "nr": 137,
+  "waar": "redactiesommen-pad stap 1 vraag 4",
+  "eigenKeuze": "Een rekensom in een verhaal",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 138,
+  "waar": "redactiesommen-pad stap 5 vraag 3",
+  "eigenKeuze": "1632 kg",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 139,
+  "waar": "redactiesommen-pad stap 5 vraag 24",
+  "eigenKeuze": "Optellen",
+  "oordeel": "twijfel",
+  "reden": "Vuistregel 'samen = optellen' is te stellig: bij 'samen' in een redactiesom kan ook vermenigvuldigen horen (4 zakjes van 6, hoeveel samen?)."
+ },
+ {
+  "nr": 140,
+  "waar": "rekenen-tot-100-nieuwkomers stap 3 vraag 4",
+  "eigenKeuze": "70",
+  "oordeel": "twijfel",
+  "reden": "Elke wrongHint ('één te weinig', 'tien te weinig', 'tien te veel') geeft 70 direct prijs; bewust corrigerende nieuwkomers-feedback."
+ },
+ {
+  "nr": 141,
+  "waar": "rekenen-tot-20-nieuwkomers stap 4 vraag 3",
+  "eigenKeuze": "15",
+  "oordeel": "twijfel",
+  "reden": "Elke wrongHint ('tien te weinig', 'één te veel/te weinig') geeft 15 direct prijs; bewust corrigerende nieuwkomers-feedback."
+ },
+ {
+  "nr": 142,
+  "waar": "rekenverhaaltjes-nieuwkomers stap 4 vraag 2",
+  "eigenKeuze": "5",
+  "oordeel": "twijfel",
+  "reden": "wrongHint bij 4 ('één te weinig') geeft 5 direct prijs; standaardstaart 'Is het twee keer zoveel, of de helft? Of steeds hetzelfde getal?' is wat onhandig."
+ },
+ {
+  "nr": 143,
+  "waar": "rijmen-letters-kleuters-po stap 3 vraag 7",
+  "eigenKeuze": "boot ⛵",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 144,
+  "waar": "samenstellingen-tussenletters-po stap 2 vraag 8",
+  "eigenKeuze": "tandenborstel",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 145,
+  "waar": "samenstellingen-tussenletters-po stap 3 vraag 8",
+  "eigenKeuze": "oorlogschip",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 146,
+  "waar": "samenstellingen-tussenletters-po stap 4 vraag 5",
+  "eigenKeuze": "schoenenwinkel",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 147,
+  "waar": "samenvatten-hoofdgedachte-po stap 2 vraag 4",
+  "eigenKeuze": "Slapen is belangrijk",
+  "oordeel": "twijfel",
+  "reden": "Antwoord 'Slapen is belangrijk' staat letterlijk in de titel en afleiders ('Een bed is duur', 'Slapen is saai') zijn zwak; wel precies de geoefende vaardigheid (titel → hoofdgedachte)."
+ },
+ {
+  "nr": 148,
+  "waar": "samenvatten-hoofdgedachte-po stap 4 vraag 7",
+  "eigenKeuze": "Ze gebruikt geen eigen woorden",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 149,
+  "waar": "samenvatten-hoofdgedachte-po stap 5 vraag 8",
+  "eigenKeuze": "Mobielverbod op school is positief",
+  "oordeel": "goed",
+  "reden": ""
+ },
+ {
+  "nr": 150,
+  "waar": "schaal-kaart-rekenen-po stap 3 vraag 8",
+  "eigenKeuze": "15 cm",
+  "oordeel": "goed",
+  "reden": ""
+ }
+]
