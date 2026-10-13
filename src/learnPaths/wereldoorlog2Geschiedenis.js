@@ -254,15 +254,15 @@ const steps = [
     checks: [
       {
         q: "Wat was de **Anschluss** (1938)?",
-        options: ["Duitsland nam Oostenrijk in zonder oorlog", "Een verdrag tussen Duitsland en de Sovjet-Unie", "Een kamp voor politieke gevangenen", "Een nieuwe Duitse wapenuitvinding"],
+        options: ["Duitsland nam Oostenrijk in zonder oorlog", "Een verdrag tussen Duitsland en de Sovjet-Unie", "Een kamp voor politieke gevangenen", "Hitler kreeg het Sudetenland in München"],
         answer: 0,
-        wrongHints: [null, "Verdrag met USSR komt pas in 1939 (Molotov-Ribbentrop).", "Kamp = concentratiekamp, ander begrip.", "Anschluss is een politieke gebeurtenis, geen uitvinding."],
+        wrongHints: [null, "Verdrag met USSR komt pas in 1939 (Molotov-Ribbentrop).", "Kamp = concentratiekamp, ander begrip.", "Het Sudetenland (Tsjecho-Slowakije) kreeg Hitler pas in september 1938. Welk buurland nam hij al in maart in?"],
         uitlegPad: {
           stappen: [{ titel: "Maart 1938 — Oostenrijk ingelijfd", tekst: "12 maart 1938: Duits leger marcheerde Oostenrijk binnen. Geen schot gelost — werd ontvangen door juichende menigte (veel Oostenrijkers wilden dit). Hitler (zelf geboren in Oostenrijk) sprak in Wenen. Oostenrijk hield op te bestaan als land, werd Duitse provincie 'Ostmark'." }],
           woorden: [{ woord: "Anschluss", uitleg: "Duits voor 'aansluiting'. Inlijving van Oostenrijk bij Duitsland in 1938." }, { woord: "annexatie", uitleg: "Een gebied opslokken zonder formele oorlog." }],
           theorie: "Anschluss was eerste grote stap Hitler buiten Duitse grenzen. Schond Versailles-verdrag dat Anschluss verbood. Europa keek toe, deed niets — appeasement-politiek. Voer voor Hitler om volgende stap (Sudetenland september 1938) te zetten.",
           voorbeelden: [{ type: "tijdlijn", tekst: "1935: leger uitgebreid → 1936: Rijnland bezet → 1938 maart: Anschluss → 1938 september: München-conferentie + Sudetenland → 1939 maart: rest Tsjechoslowakije → 1939 september: Polen → WO2." }],
-          basiskennis: [{ onderwerp: "Niet andere zaken", uitleg: "Molotov-Ribbentrop-pact (USSR-verdrag) = augustus 1939. Concentratiekamp = ander begrip. Anschluss = politieke gebeurtenis." }],
+          basiskennis: [{ onderwerp: "Niet andere zaken", uitleg: "Molotov-Ribbentrop-pact (USSR-verdrag) = augustus 1939. Concentratiekamp = ander begrip. Sudetenland = september 1938 (München), een ander gebied." }],
           niveaus: { basis: "Oostenrijk ingenomen.", simpeler: "Anschluss 1938 = Duitsland lijfde Oostenrijk in zonder oorlog.", nogSimpeler: "Oostenrijk = Duitsland" },
         },
       },

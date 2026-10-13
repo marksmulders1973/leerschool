@@ -207,7 +207,7 @@ const steps = [
           theorie: "WTO maakt handelsverdragen + regelt klachten (bv. EU klaagt China aan voor dumping).",
           voorbeelden: [{ type: "feit", tekst: "WTO 1995 opgericht (opvolger GATT). Bepaalt wat wel/niet mag bij invoerheffingen." }],
           basiskennis: [{ onderwerp: "Niet hetzelfde als VN", uitleg: "VN = vredesorganisatie. WTO = handelsspecifiek." }],
-          niveaus: { basis: "WTO.", simpeler: "World Trade Organization (WTO) regelt globale handel. EU is regionaal, ECB is over euro.", nogSimpeler: "WTO" },
+          niveaus: { basis: "WTO.", simpeler: "World Trade Organization (WTO) regelt globale handel. EU is regionaal, het IMF leent geld aan landen.", nogSimpeler: "WTO" },
         },
       },
       {
@@ -592,10 +592,10 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Shell = oorsprong NL", tekst: "Shell ontstond in NL (Den Haag). Wereldwijde olie/energie-multinational." }],
           woorden: [{ woord: "Shell", uitleg: "Royal Dutch Shell. Sinds 1907. Olie/energie. Hoofdkantoor verhuisde 2022 naar UK." }],
-          theorie: "NL multinationals: Shell, ASML, Heineken, Unilever, Philips, ING. Apple/Toyota/McD = niet NL.",
-          voorbeelden: [{ type: "lijst", tekst: "Apple = US (Cupertino). Toyota = Japan. McDonald's = US. Shell = NL/UK." }],
+          theorie: "NL multinationals: Shell, ASML, Heineken, Unilever, Philips, ING. Siemens/Nestlé/Volvo = niet NL.",
+          voorbeelden: [{ type: "lijst", tekst: "Siemens = Duitsland. Nestlé = Zwitserland. Volvo = Zweden. Shell = NL/UK." }],
           basiskennis: [{ onderwerp: "Hoofdkantoor wisselt", uitleg: "Shell verplaatste 2022 hoofdkantoor naar UK voor fiscale redenen." }],
-          niveaus: { basis: "Shell.", simpeler: "Shell = NL multinational (olie/energie). Apple/Toyota/McDonald's = niet NL.", nogSimpeler: "Shell" },
+          niveaus: { basis: "Shell.", simpeler: "Shell = NL multinational (olie/energie). Siemens/Nestlé/Volvo = niet NL.", nogSimpeler: "Shell" },
         },
       },
       {
