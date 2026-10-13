@@ -80,7 +80,7 @@ const steps = [
           null,
           "Gekeken is een werkwoord, maar niet vervoegd naar 'wij' — dat is een werkwoordelijk restdeel. Welk werkwoord is wel vervoegd?",
           "'Wij' zegt wie het doet. Verandert 'wij' als je de zin in de verleden tijd zet?",
-          "Kun je 'film' vervoegen, zoals ik film, hij filmt? En betekent dat in deze zin hetzelfde?",
+          "'Film' is iets wat je bekijkt. Verandert dat woord als je de zin in de tegenwoordige tijd zet?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Hebben = pv, gekeken = restdeel", tekst: "Hebben is vervoegd naar 'wij'. Gekeken is voltooid deelwoord." }],
@@ -135,7 +135,7 @@ const steps = [
           null,
           "'Vandaag' zegt wanneer het regent. Stel de vraag: wie of wat regent?",
           "Regent is de persoonsvorm. Vraag: 'wat regent?' — antwoord = onderwerp.",
-          "'De hele dag' zegt hoe lang het regent. Verandert de persoonsvorm als je 'de hele dag' meervoud maakt?",
+          "'De hele dag' zegt hoe lang het regent. Stel de vraag: wie of wat regent?",
         ],
         uitlegPad: {
           stappen: [{ titel: "'Het' = loos onderwerp", tekst: "Bij weer: 'het regent' — 'het' is grammaticaal verplicht onderwerp." }],
@@ -613,7 +613,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "'Vandaag' zegt wanneer. Verandert de persoonsvorm als je 'vandaag' vervangt door iets in het meervoud?",
+          "'Vandaag' zegt wanneer. Stel de vraag: wie of wat heeft het feest georganiseerd?",
           "Stel de vraag: wat heeft mijn moeder georganiseerd? Is dat ook wie het organiseerde?",
           "'Voor ons' zegt voor wie het feest is. Heeft 'ons' het feest georganiseerd?",
         ],
