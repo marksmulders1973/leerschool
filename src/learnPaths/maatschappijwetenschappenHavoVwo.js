@@ -176,7 +176,7 @@ const steps = [
         wrongHints: [null, "Kennis en diploma's noemt Bourdieu cultureel kapitaal. Habitus is iets anders: wat?", "Een netwerk is sociaal kapitaal. Wat bedoelt Bourdieu met habitus?", "Geld en bezit noemt Bourdieu economisch kapitaal — verwant, maar een ander begrip."],
         uitlegPad: {
           stappen: [{ titel: "Onbewuste smaak", tekst: "**Habitus** (Bourdieu): aangeleerde + grotendeels onbewuste manier van denken/voelen/handelen. Gevormd door omgeving (klasse, gezin). Bepaalt smaak (klassieke muziek vs hardcore, krant vs tv), praat, manieren. **Reproductie**: kinderen erven habitus → klasse blijft gereproduceerd ondanks formele gelijkheid." }],
-          theorie: "Toets-patroon: 'leg uit waarom onderwijssucces deels afhangt van gezinscultuur' → Bourdieu's habitus + cultureel kapitaal.",
+          theorie: "Toets-patroon: 'leg uit waarom onderwijssucces deels afhangt van gezinscultuur' → Bourdieus habitus + cultureel kapitaal.",
           niveaus: { basis: "Aangeleerd.", simpeler: "Habitus = aangeleerde stijl", nogSimpeler: "Aangeleerd" },
         },
       },

@@ -232,7 +232,7 @@ const steps = [
         q: "**'Je wordt niet vrouw geboren, je wordt het'** is van:",
         options: ["Simone de Beauvoir", "Jean-Paul Sartre", "Hannah Arendt", "Mary Wollstonecraft"],
         answer: 0,
-        wrongHints: [null, "Sartre was haar partner en dacht mee, maar het citaat komt uit haar eigen boek.", "Arendt schreef over totalitarisme en de 'banaliteit van het kwaad'.", "Wollstonecraft pleitte in 1792 al voor vrouwenrechten, maar dit citaat komt uit een Frans boek uit 1949."],
+        wrongHints: [null, "Sartre was haar partner en dacht mee, maar het citaat komt uit haar eigen boek.", "Arendt schreef vooral over totalitarisme en het proces tegen Eichmann.", "Wollstonecraft pleitte in 1792 al voor vrouwenrechten, maar dit citaat komt uit een Frans boek uit 1949."],
         uitlegPad: {
           stappen: [
             { titel: "'Le deuxième sexe' 1949", tekst: "De Beauvoir: 'vrouwelijkheid' is sociale constructie, niet biologisch lot. Vrouwen leren op te treden als 'het andere' van mannen. Klassieker tweede-feministische-golf, basis voor moderne genderstudies. Schreef ook 'De grijze leeftijd' over ouder-worden." },

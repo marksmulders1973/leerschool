@@ -78,7 +78,7 @@ const steps = [
       {
         q: "Welke is GEEN UDHR-recht?",
         options: [
-          "Recht op een schoon milieu",
+          "Recht op schoon milieu",
           "Recht op leven",
           "Vrijheid van meningsuiting",
           "Recht op onderwijs"
@@ -86,8 +86,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Bescherming van je leven is het meest fundamentele recht. Zou dat ontbreken?", "Vrije meningsuiting is een klassiek recht dat de UDHR beschermt (artikel 19).", "De UDHR noemt onderwijs voor iedereen als recht (artikel 26). Welke optie hoort niet in dit rijtje?"],
         uitlegPad: {
-          stappen: [{ titel: "UDHR = fundament", tekst: "30 artikelen behandelen leven, vrijheid, gelijkheid, onderwijs, werk, religie, etc. — geen luxe-goederen. Recht op privé-eigendom WEL (art 17), maar een recht op (gratis) internet staat er niet in — dat bestond in 1948 nog niet." }],
-          niveaus: { basis: "Internet niet.", simpeler: "Geen recht op gratis internet.", nogSimpeler: "Internet" },
+          stappen: [{ titel: "UDHR = fundament", tekst: "30 artikelen behandelen leven, vrijheid, gelijkheid, onderwijs, werk, religie, etc. — geen luxe-goederen. Recht op privé-eigendom WEL (art 17), maar een recht op een schoon milieu staat er niet in — milieu werd pas later een mensenrechtenthema (3e generatie; de VN erkende het recht op een gezond milieu in 2022)." }],
+          niveaus: { basis: "Milieu niet.", simpeler: "Geen recht op een schoon milieu.", nogSimpeler: "Milieu" },
         },
       },
     ],

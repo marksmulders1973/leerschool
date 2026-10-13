@@ -97,7 +97,7 @@ const steps = [
       },
       {
         q: "**Universeel** betekent ... ?",
-        options: ["Geldt voor alle mensen", "Geldt voor alle burgers van een land", "Geldt voor alle volwassenen", "Geldt in alle landen die tekenden"],
+        options: ["Geldt voor alle mensen op aarde", "Geldt voor alle burgers van een land", "Geldt voor alle volwassenen", "Geldt in alle landen die tekenden"],
         answer: 0,
         wrongHints: [null, "'Universeel' komt van 'universum'. Past dat bij één land?", "Hebben kinderen dan geen mensenrechten?", "Dat gaat over verdragen. Hangt een mensenrecht af van de handtekening van je land?"],
       },
