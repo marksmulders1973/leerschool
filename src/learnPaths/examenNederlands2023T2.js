@@ -7,13 +7,13 @@
 const tekst1 = {
   titel: "T1 — Zo kom je van je uitstelgedrag af",
   body:
-    "**(1)** Vervelende taken uitstellen heeft met luieren niets te maken — integendeel, het is vaak een grote bron van stress. Waarom stellen we dan toch zo veel uit? En wat kunnen we ertegen doen?\n\n**(4)** Volgens onderwijskundige Joost van der Horst werkt het maken van een planning vaak averechts. De planning is namelijk niet het probleem — bijna iedereen kan een mooie planning maken. Het probleem zit in de uitvoering: het daadwerkelijk gaan dóen. Mensen denken: als ik een goeie planning heb, komt het wel goed. Maar planning en uitvoering zijn twee verschillende dingen.\n\n**(14)** Wat blijkt nu uit alle adviezen samen? Uitstelgedrag los je niet op met betere planningen, maar door eerlijk te zijn over WAAROM je iets uitstelt — angst, perfectionisme, of de taak is gewoon té vaag. Pas als je dat onder ogen ziet, kun je een stapje zetten. *(slot-alinea als conclusie van het hele stuk)*",
+    "**(1)** Vervelende taken uitstellen heeft met luieren niets te maken — integendeel, het is vaak een grote bron van stress. Waarom stellen we dan toch zo veel uit? En wat kunnen we ertegen doen?\n\n**(4)** Volgens onderwijskundige Joost van der Horst werkt het maken van een planning vaak averechts. De planning is namelijk niet het probleem — bijna iedereen kan een mooie planning maken. Het probleem zit in de uitvoering: het daadwerkelijk gaan dóen. Mensen denken: als ik een goeie planning heb, komt het wel goed. Maar planning en uitvoering zijn twee verschillende dingen.\n\n**(14)** Wat blijkt nu uit alle adviezen samen? Uitstelgedrag los je niet op met betere planningen, maar door eerlijk te zijn over WAAROM je iets uitstelt — angst, perfectionisme, of de taak is gewoon té vaag. Pas als je dat onder ogen ziet, kun je een stapje zetten.",
 };
 
 const tekst2 = {
   titel: "T2 — Kunstlicht is een killer voor insecten",
   body:
-    "**(1)** Nederland, Duitsland, Engeland, Scandinavië, maar ook Puerto Rico en zelfs Costa Rica. Vanuit alle uithoeken van de wereld komen berichten over een dramatische achteruitgang in het aantal insecten. De lijst met mogelijke verklaringen is op al die plekken even lang: pesticiden, monoculturen, klimaatverandering, verlies van leefgebied. Maar onderzoekers publiceerden vorige week in het wetenschappelijke tijdschrift 'Biological Conservation' nu hun conclusie: **ook kunstlicht is een belangrijke oorzaak van de insectensterfte.**\n\n**(8)** Wat kunnen we doen? Volgens de onderzoekers helpt vooral: warmer licht (oranje/rood ipv blauw/wit), licht uit als het kan, en lampen die alleen verlichten waar het echt nodig is. Lampen die naar boven schijnen lokken duizenden insecten per nacht uit hun habitat — die overleven het niet. *(De tekst gaat in op het mechanisme + welke insecten kwetsbaar zijn + wat steden en burgers kunnen doen.)*",
+    "**(1)** Nederland, Duitsland, Engeland, Scandinavië, maar ook Puerto Rico en zelfs Costa Rica. Vanuit alle uithoeken van de wereld komen berichten over een dramatische achteruitgang in het aantal insecten. De lijst met mogelijke verklaringen is op al die plekken even lang: pesticiden, monoculturen, klimaatverandering, verlies van leefgebied. Maar onderzoekers publiceerden vorige week in het wetenschappelijke tijdschrift 'Biological Conservation' nu hun conclusie: ook kunstlicht is een belangrijke oorzaak van de insectensterfte.\n\n**(8)** Wat kunnen we doen? Volgens de onderzoekers helpt vooral: warmer licht (oranje/rood ipv blauw/wit), licht uit als het kan, en lampen die alleen verlichten waar het echt nodig is. Lampen die naar boven schijnen lokken duizenden insecten per nacht uit hun habitat — die overleven het niet. *(De tekst gaat in op het mechanisme + welke insecten kwetsbaar zijn + wat steden en burgers kunnen doen.)*",
 };
 
 const tekst3 = {
@@ -25,7 +25,7 @@ const tekst3 = {
 const tekst4 = {
   titel: "T4 — McDonald's wil weten waarom u frietbakjes op straat gooit",
   body:
-    "**(1)** Hamburgerketen McDonald's wil af van zwerfafval. Per 2022 moet álle verpakkingsmateriaal van de 250 restaurants in Nederland ook weer worden ingezameld. Megaklus. Hoe? De firma wil schone klanten gaan belonen en vraagt psychologen om uit te zoeken waarom mensen hun rommel weggooien terwijl er gewoon afvalbakken staan.\n\n**(5)** In de hele afvalketen van McDonald's is zwerfafval een van de meest hardnekkige en meest zichtbare vormen van afval. Troep rond je restaurant kun je nog opruimen en je kunt zorgen voor voldoende afvalbakken. Je kunt zelfs afspraken maken met de gemeente over straatreiniging in de buurt. Maar zodra klanten de verpakking meenemen naar buiten, ligt het buiten je directe invloed.\n\n*(De tekst beschrijft McDonald's-acties, een psychologisch onderzoek naar weggooi-gedrag, en mogelijke oplossingen — vooral informerend over hoe McDonald's met afval omgaat.)*",
+    "**(1)** Hamburgerketen McDonald's wil af van zwerfafval. Per 2022 moet álle verpakkingsmateriaal van de 250 restaurants in Nederland ook weer worden ingezameld. Megaklus. Hoe? De firma wil schone klanten gaan belonen en vraagt psychologen om uit te zoeken waarom mensen hun rommel weggooien terwijl er gewoon afvalbakken staan.\n\n**(5)** In de hele afvalketen van McDonald's is zwerfafval een van de meest hardnekkige en meest zichtbare vormen van afval. Troep rond je restaurant kun je nog opruimen en je kunt zorgen voor voldoende afvalbakken. Je kunt zelfs afspraken maken met de gemeente over straatreiniging in de buurt. Maar zodra klanten de verpakking meenemen naar buiten, ligt het buiten je directe invloed.\n\n*(De tekst beschrijft McDonald's-acties, een psychologisch onderzoek naar weggooi-gedrag, en mogelijke oplossingen.)*",
 };
 
 const BRON_LABEL = (n) => `🎓 Echt examen VMBO-GL/TL Nederlands 2023 tijdvak 2, vraag ${n}`;
@@ -105,7 +105,7 @@ const steps = [
         null,
         "Persoonlijke noot = MENING/ANEKDOTE van de schrijver zelf. Vertelt de schrijver in alinea 14 iets over zichzelf?",
         "Toekomstverwachting = wat ER GAAT gebeuren. Alinea 14 spreekt over hoe je het NU aanpakt.",
-        "Geen nieuwe info — alinea 14 vat samen wat eerder werd gezegd.",
+        "Komt er in alinea 14 iets nieuws, of bouwt de schrijver voort op wat al eerder in de tekst stond?",
       ],
       explanation: "Alinea 14 zegt: 'Wat blijkt nu uit alle adviezen samen?' — dat is een afsluitende redenering met EINDOORDEEL (uitstelgedrag los je niet op met planning maar met eerlijkheid over WAAROM). Klassieke conclusie.",
       examenBron: BRON_LABEL(7),

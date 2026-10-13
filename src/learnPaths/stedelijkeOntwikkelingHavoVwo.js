@@ -33,13 +33,13 @@ const steps = [
       {
         q: "**Suburbanisatie** is:",
         options: [
-          "Trek van stadscentrum naar voorsteden / rand",
-          "Migratie van platteland naar centrum",
-          "Vertrek uit het hele stedelijke gebied naar het platteland",
-          "Verdichting binnenstad"
+          "Verhuizen van de stad naar de voorsteden",
+          "Verhuizen van het platteland naar de stad",
+          "Verhuizen van de stad naar het platteland",
+          "Terugkeer van de voorsteden naar de binnenstad"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is urbanisatie.", "Niet — disurbanisatie.", "Niet — re-urbanisatie."],
+        wrongHints: [null, "Van het platteland naar de stad heet urbanisatie. Wat betekent 'sub' (rond, aan de rand) bij suburbanisatie?", "Het stedelijk gebied helemaal uit, naar het platteland, heet desurbanisatie. Waar verhuizen mensen bij suburbanisatie naartoe?", "Terug naar het centrum heet re-urbanisatie. Welke kant op gaan mensen bij suburbanisatie?"],
         uitlegPad: {
           stappen: [
             { titel: "Tuin + auto", tekst: "Naoorlogse trend in westen: gezinnen kopen huis met tuin in voorstad + pendelen met auto. NL: Almere (1976-) speciaal als suburbanisatie-stad gebouwd. Zoetermeer, Houten, Hoofddorp idem. Stadcentrum 'leegt' (donut-effect)." },
@@ -203,7 +203,7 @@ const steps = [
         q: "**Megacity** is een stad met:",
         options: [">10 miljoen inwoners", ">1 miljoen inwoners", ">100 miljoen inwoners", ">1 miljard inwoners"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dat is 'grote stad'.", "Dat is meer dan heel Duitsland. Bestaat er zo'n stad?", "Zoveel mensen wonen er in heel Europa niet eens. Kan één stad dat hebben?"],
+        wrongHints: [null, "Een stad met een miljoen inwoners is groot, maar is dat al 'mega'? Denk aan Tokio of Lagos.", "Dat is meer dan heel Duitsland. Bestaat er zo'n stad?", "Zoveel mensen wonen er in heel Europa niet eens. Kan één stad dat hebben?"],
         uitlegPad: {
           stappen: [{ titel: "VN-definitie", tekst: ">10 mln in stedelijk gebied (incl. voorsteden, niet alleen stadsgrens). 1950: alleen NYC + Tokyo. 2024: ~35 stuks. Vrijwel alle nieuwe in globale-zuid (Lagos, Dhaka, Karachi)." }],
           niveaus: { basis: ">10 mln.", simpeler: "10 miljoen+.", nogSimpeler: "10M" },
@@ -230,7 +230,7 @@ const steps = [
         q: "Welke is **grootste metropolitan area** ter wereld?",
         options: ["Tokyo-Yokohama", "Mumbai", "New York", "Londen"],
         answer: 0,
-        wrongHints: [null, "Niet — kleiner.", "Veel kleiner.", "Veel kleiner."],
+        wrongHints: [null, "In de regio Mumbai wonen zo'n 25 miljoen mensen. Is er een stedelijk gebied met nog veel meer inwoners?", "De regio New York telt ongeveer 20 miljoen inwoners. Welke Aziatische regio is bijna twee keer zo groot?", "Groot-Londen heeft zo'n 10 miljoen inwoners. Waar in Azië wonen er bijna vier keer zoveel in één stedelijk gebied?"],
         uitlegPad: {
           stappen: [{ titel: "Stedelijk gigant", tekst: "Tokyo-Yokohama-Kawasaki: ~37 mln. Op één plek 2x NL-bevolking. Goed georganiseerd: een van 's werelds beste openbaarvervoernetten (Yamanote-lijn elke 3 min). Maar bevolking krimpt (Japan-veroudering)." }],
           niveaus: { basis: "Tokyo.", simpeler: "Tokyo metropool.", nogSimpeler: "Tokyo" },
@@ -240,12 +240,12 @@ const steps = [
         q: "**Lagos** (Nigeria) is bijzonder door:",
         options: [
           "Een van de snelst groeiende megacities ter wereld",
-          "Een van de oudste steden ter wereld",
-          "Het hoogste inkomen per inwoner van Afrika",
-          "Het beste openbaar vervoer van Afrika"
+          "De hoofdstad en regeringszetel van Nigeria",
+          "Een geplande stad met een strak stratenplan",
+          "Een stad die door bevolkingskrimp leegloopt"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — er zijn veel oudere steden.", "Niet — laag BBP/capita.", "Niet — files zijn extreem."],
+        wrongHints: [null, "Sinds 1991 is Abuja de hoofdstad van Nigeria. Waardoor valt Lagos dan zo op?", "Geplande steden zijn bijvoorbeeld Abuja en Brasília. Hoe zijn de wijken van Lagos ontstaan?", "Kijk naar het geboortecijfer in Nigeria en naar alle mensen die van het platteland komen. Past krimp daarbij?"],
         uitlegPad: {
           stappen: [
             { titel: "Van 200k naar 21 mln in 70 jaar", tekst: "1950: 200 000 inwoners. 2024: ~21 mln. Prognose 2050: 35 mln (in 2100 mss 100 mln). Een van de snelst groeiende steden ter wereld. Mix van miljardairs en grootste krottenwijken. Olie + nieuwe industrie + Nigeriaanse film (Nollywood) trekken instroom." },
@@ -257,12 +257,12 @@ const steps = [
         q: "**Smart City** gebruikt:",
         options: [
           "Data en sensoren voor slimmer beheer",
-          "Alleen ouderwetse planning op papier",
-          "Zo min mogelijk technologie in de stad",
+          "Zoveel mogelijk groen en parken in de wijk",
+          "Een slim ontworpen stratenplan op papier",
           "Een verbod op auto's in het centrum"
         ],
         answer: 0,
-        wrongHints: [null, "Wat zegt het woord 'smart' over de hulpmiddelen die een stad gebruikt?", "Een slimme stad zonder technologie: klopt dat?", "Een autoverbod kan, maar is dat wat een stad 'smart' maakt?"],
+        wrongHints: [null, "Groen maakt een stad gezond, maar is dat wat een stad 'smart' maakt? Waar slaat 'slim' hier op?", "Een goed plan op papier is mooi, maar 'smart' slaat op digitale hulpmiddelen. Welke?", "Een autoverbod kan, maar is dat wat een stad 'smart' maakt?"],
         uitlegPad: {
           stappen: [
             { titel: "Data-gedreven beheer", tekst: "Singapore-voorbeeld: sensoren in straten (verkeer, lucht, vuilnis), apps voor parkeren, gemeentelijke data open beschikbaar. Songdo (KR) gepland als smart city-totaal. Barcelona, Amsterdam (Smart-City-tag) experimenteren met sensor-netwerken." },
@@ -285,10 +285,10 @@ const steps = [
           "Stad warmer dan platteland",
           "Stad kouder dan platteland",
           "Stad vochtiger dan platteland",
-          "Alleen 's nachts warmer"
+          "Stad winderiger dan platteland"
         ],
         answer: 0,
-        wrongHints: [null, "Steen en asfalt slaan zonnewarmte op. Wordt de stad daar kouder van?", "'Heat' betekent hitte. Gaat het dan om vocht?", "Het effect is 's nachts het sterkst, maar is het overdag dan weg?"],
+        wrongHints: [null, "Steen en asfalt slaan zonnewarmte op. Wordt de stad daar kouder van?", "'Heat' betekent hitte. Gaat het dan om vocht?", "Gebouwen remmen de wind in de stad juist af. Waar gaat 'heat' over?"],
         uitlegPad: {
           stappen: [
             { titel: "Beton + asfalt + auto's", tekst: "Beton absorbeert + houdt warmte vast. Minder bomen + parken voor verkoeling. Auto's + airconditioning produceren warmte. Resultaat: stadscentrum 2-5°C warmer dan omliggend platteland. Versterkt door klimaatverandering → hittegolven extra gevaarlijk in stad (ouderen-sterfte)." },
@@ -344,12 +344,12 @@ const steps = [
         q: "Een **BRT** (Bus Rapid Transit) systeem zoals Curitiba (Brazilië):",
         options: [
           "Bussen op eigen baan met metro-achtige stations",
-          "Privé-taxi's die je via een app bestelt",
-          "Kleine vliegtuigjes tussen stadsdelen",
+          "Bussen die alleen op afroep via een app rijden",
+          "Trams op rails die gewoon met het verkeer meerijden",
           "Treinen op een eigen spoor met stations"
         ],
         answer: 0,
-        wrongHints: [null, "Waar staat de B in BRT voor?", "Is een vliegtuig openbaar vervoer binnen een stad?", "Lees de afkorting nog eens: welk voertuig zit erin?"],
+        wrongHints: [null, "Een belbus rijdt op afroep. Rijdt een BRT-bus op vaste lijnen met eigen haltes?", "Een tram rijdt op rails. Waar staat de B in BRT voor?", "Lees de afkorting nog eens: welk voertuig zit erin?"],
         uitlegPad: {
           stappen: [
             { titel: "Goedkoper alternatief voor metro", tekst: "Curitiba 1974 pionier. Eigen bus-baan in midden weg, vooruitbetaling bij station (snelle inscheping), grote gelede bussen (ruim 200 mensen). Veel goedkoper dan metro maar bijna zelfde capaciteit. Wereldwijd gekopieerd: Bogotá, Mexico City, Istanbul, Johannesburg." },
@@ -368,9 +368,9 @@ const steps = [
     checks: [
       {
         q: "Welke stad had als doel **CO₂-neutraal in 2025**?",
-        options: ["Kopenhagen", "New York", "Lagos", "Sydney"],
+        options: ["Kopenhagen", "New York", "Amsterdam", "Sydney"],
         answer: 0,
-        wrongHints: [null, "Niet zo ambitieus.", "Niet — meer overleven.", "Pas later."],
+        wrongHints: [null, "New York mikt op 2050. Welke stad wilde al in 2025 CO₂-neutraal zijn?", "Amsterdam mikt op 2050. Welke stad legde de lat veel eerder?", "Sydney koos een later jaar. Welke stad legde de lat het hoogst?"],
         uitlegPad: {
           stappen: [
             { titel: "Eerste wereldstad CO₂-neutraal", tekst: "Kopenhagen werkte ~10 jaar aan dit doel: 50% verplaatsingen fiets, windkracht + biomassa, gemeentelijke gebouwen verduurzaamd. Doel in 2025 niet gehaald, maar wel veel verder dan andere wereldsteden." },

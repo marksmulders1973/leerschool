@@ -34,7 +34,7 @@ const steps = [
         q: "Welke tekstsoort heeft als doel **lezer overtuigen** van eigen standpunt?",
         options: ["Betoog","Beschouwing","Uiteenzetting","Verhaal"],
         answer: 0,
-        wrongHints: [null, "Niet — die weegt af.", "Niet — die informeert.", "Niet — die vermaakt."],
+        wrongHints: [null, "Een beschouwing zet verschillende kanten naast elkaar en weegt ze af. Probeert die de lezer van één standpunt te overtuigen?", "Een uiteenzetting legt neutraal uit hoe iets zit. Kiest die schrijver een kant?", "Een verhaal wil vooral boeien of vermaken. Welke tekstsoort draait om een eigen standpunt?"],
         uitlegPad: {
           stappen: [{ titel: "Betoog = overtuigen", tekst: "**Betoog** = persuasieve tekst met **duidelijke mening** van schrijver + argumenten om lezer over te halen. 'Ik vind dat...' is signaal." }],
           theorie: "Tekst-doelen-cluster: betoog/beschouwing/uiteenzetting + soms beschrijving (literatuur) + activering (reclame).",
@@ -43,9 +43,9 @@ const steps = [
       },
       {
         q: "Een **beschouwing** kenmerkt zich door:",
-        options: ["Voor- en tegenargumenten afwegen","Eén duidelijke mening verdedigen","Alleen feiten neutraal uitleggen","Een spanningsboog met ontknoping"],
+        options: ["Voor- en tegenargumenten afwegen","Eén duidelijke mening verdedigen","Feiten neutraal op een rij zetten","Een spanningsboog met ontknoping"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is betoog.", "Niet — dat is uiteenzetting.", "Niet — dat is verhaal."],
+        wrongHints: [null, "Eén mening verdedigen doe je in een betoog. Wat doet een beschouwing met de verschillende standpunten?", "Feiten neutraal uitleggen doe je in een uiteenzetting. Wat komt er in een beschouwing bij?", "Een spanningsboog met ontknoping hoort bij een verhaal. Waar draait een beschouwing om?"],
         uitlegPad: {
           stappen: [{ titel: "Beschouwing = nuance", tekst: "**Beschouwing** belicht **verschillende kanten** van kwestie. Schrijver kan **lichte voorkeur** uitspreken maar geen definitieve conclusie. Voorbeeld: NRC-opinie over migratie met meerdere perspectieven." }],
           theorie: "Toets-patroon: signaalwoorden 'aan de ene kant... aan de andere kant' wijzen bijna altijd op beschouwing.",
@@ -56,7 +56,7 @@ const steps = [
         q: "Welke tekst is een **uiteenzetting**?",
         options: ["Wikipedia-artikel over fotosynthese","Opinie-stuk over euthanasie","Toespraak van een partijleider","Romanfragment over een zomer"],
         answer: 0,
-        wrongHints: [null, "Niet — een opiniestuk geeft een mening of een afweging.", "Niet — dat is betoog.", "Niet — dat is verhaal/literatuur."],
+        wrongHints: [null, "Een opiniestuk geeft een mening of een afweging. Welke tekst legt uit hoe iets werkt, zonder mening?", "Een partijleider wil kiezers overtuigen. Welke tekst geeft neutrale informatie?", "Een romanfragment vertelt een verhaal. Welke tekst legt iets uit zonder mening?"],
         uitlegPad: {
           stappen: [{ titel: "Wikipedia = informeren", tekst: "**Uiteenzetting** = informatieve tekst zonder mening. Wikipedia-artikelen, schoolboek-paragrafen, instructies horen hier. Doel: **kennis overdragen**." }],
           theorie: "Toets-truc: titel 'Wat is X?' of 'Hoe werkt Y?' → uiteenzetting.",
@@ -67,7 +67,7 @@ const steps = [
         q: "Welk **signaalwoord** wijst typisch op een betoog?",
         options: ["Ik vind dat","Aan de ene kant","Ten eerste","Bovendien"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is beschouwing.", "Niet — opsommen doe je in alle drie.", "Niet — kan alle drie."],
+        wrongHints: [null, "'Aan de ene kant' gebruik je als je verschillende kanten afweegt, zoals in een beschouwing. Welk signaal laat een eigen mening zien?", "Met 'ten eerste' som je op; dat doe je in elke tekstsoort. Welk signaal is typisch voor een betoog?", "'Bovendien' voegt iets toe; dat kan in elke tekstsoort. Welk signaal laat zien dat de schrijver een standpunt inneemt?"],
         uitlegPad: {
           stappen: [{ titel: "'Ik vind' = mening = betoog", tekst: "**'Ik vind dat'**, 'het is duidelijk dat', 'zonder twijfel', 'daarom moet' = signalen dat schrijver een **stellige mening** heeft. Betoog-kenmerk." }],
           theorie: "Vergelijk met 'aan de ene kant' (beschouwing) of 'ten eerste/vervolgens' (uiteenzetting).",
@@ -78,7 +78,7 @@ const steps = [
         q: "In welk soort tekst is schrijver **het meest neutraal**?",
         options: ["Uiteenzetting","Beschouwing","Betoog","Reclame"],
         answer: 0,
-        wrongHints: [null, "Niet — heeft nuance.", "Niet — duidelijke mening.", "Niet — wil overtuigen."],
+        wrongHints: [null, "In een beschouwing weegt de schrijver af en mag hij een lichte voorkeur laten merken. Welke tekstsoort legt alleen uit?", "In een betoog verdedigt de schrijver een duidelijke mening. Is dat neutraal?", "Reclame wil dat je iets koopt of doet. Is de maker dan neutraal?"],
         uitlegPad: {
           stappen: [{ titel: "Uiteenzetting = neutraal", tekst: "**Uiteenzetting** = puur informatief. Geen mening. Vergelijk: encyclopedie, wetenschappelijk rapport (objectiviteit-norm). Schrijver presenteert feiten, lezer beslist zelf." }],
           niveaus: { basis: "Uiteenzetting.", simpeler: "Neutraal = uiteenzetting", nogSimpeler: "Neutraal" },
@@ -97,7 +97,7 @@ const steps = [
         q: "Wat hoort in de **inleiding** van een betoog?",
         options: ["Aanleiding + stelling","Conclusie + actie","Voorbeelden","Tegenargumenten"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is slot.", "Niet — die komen in midden.", "Niet — die horen in midden + weerlegging."],
+        wrongHints: [null, "Een conclusie en een oproep tot actie horen aan het eind, in het slot. Wat vertel je de lezer eerst?", "Voorbeelden ondersteunen je argumenten in het middenstuk. Wat moet de lezer weten vóórdat de argumenten komen?", "Tegenargumenten bespreek en weerleg je in het middenstuk. Waarmee open je een betoog?"],
         uitlegPad: {
           stappen: [{ titel: "Inleiding = openen", tekst: "**Inleiding**: trekt aandacht (aanleiding) + plaatst stelling. Lezer moet na de **eerste alinea** weten waar het over gaat én wat schrijver vindt." }],
           theorie: "Toets-tip: kijk altijd naar EERSTE ALINEA om stelling te vinden. Vaak letterlijk geformuleerd.",

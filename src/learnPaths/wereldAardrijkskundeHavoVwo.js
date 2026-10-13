@@ -31,9 +31,9 @@ const steps = [
     checks: [
       {
         q: "**WTO** = ?",
-        options: ["World Trade Organization","Western Travel Office","World Tourism Organization","World Transport Organization"],
+        options: ["World Trade Organization","World Treaty Organization","World Tourism Organization","World Transport Organization"],
         answer: 0,
-        wrongHints: [null, "Bestaat er een wereldorganisatie die alleen over reizen in het westen gaat?", "Die bestaat wel, maar heet afgekort UNWTO. Waarover sluiten landen bij de WTO afspraken?", "Bestaat er zo'n wereldtransportorganisatie? Waar ken je de WTO van uit de les?"],
+        wrongHints: [null, "Bij de WTO sluiten landen wel verdragen, maar waarover? Denk aan in- en uitvoer van goederen.", "Die bestaat wel, maar heet afgekort UNWTO. Waarover sluiten landen bij de WTO afspraken?", "Vervoer is nodig voor handel, maar de WTO regelt geen schepen of vrachtwagens. Waar gaan de afspraken dan over?"],
         uitlegPad: {
           stappen: [{ titel: "1995 Genève", tekst: "**WTO** = World Trade Organization, opgericht 1995 (opvolger GATT). Genève. Doel: wereldhandel reguleren via regels + geschillen-oplossing. 166 leden. **China-toetreding 2001** = mega-stap voor globalisering. Sinds 2018 onder druk door VS-China-tarieven." }],
           niveaus: { basis: "World Trade Org.", simpeler: "WTO = handel", nogSimpeler: "Handelsorganisatie." },
@@ -41,9 +41,9 @@ const steps = [
       },
       {
         q: "Welke gebeurtenis **versnelde globalisering** vooral?",
-        options: ["China-WTO-toetreding 2001","Val van het Romeinse Rijk","WW2","Brexit"],
+        options: ["Toetreding van China tot de WTO in 2001","Oprichting van de Verenigde Naties in 1945","Uitbreken van de oliecrisis in 1973","Vertrek van het VK uit de EU in 2016"],
         answer: 0,
-        wrongHints: [null, "Veel eerder.", "Wel impact maar andere.", "Tegenovergesteld — anti-globalisering."],
+        wrongHints: [null, "De VN gaat vooral over vrede en samenwerking tussen landen. Welke gebeurtenis bracht een enorme fabriekseconomie op de wereldmarkt?", "De oliecrisis maakte transport juist duur en remde de handel. Wat zette de wereldhandel rond 2000 vol in gang?", "Met Brexit trok het VK zich juist terug uit de Europese markt. Versnelt of remt dat de globalisering?"],
         uitlegPad: {
           stappen: [{ titel: "1,3 mld nieuwe arbeiders", tekst: "**China-WTO-toetreding 11 dec 2001**: bracht 1,3 mld Chinezen in wereldhandelssysteem. Massa-productie tegen lage prijs → goedkope producten in westen, miljoenen Chinezen uit armoede, deindustrialisatie westen. Grootste wereldhandel-event sinds containerisatie 1960s." }],
           niveaus: { basis: "China 2001.", simpeler: "China-WTO 2001", nogSimpeler: "2001" },
@@ -51,9 +51,9 @@ const steps = [
       },
       {
         q: "Wat is **glokalisering**?",
-        options: ["Globaal product met lokale aanpassing","Wereldwijd één product, overal precies gelijk","Alleen lokaal produceren en verkopen","Lokaal product dat onveranderd wereldwijd wordt verkocht"],
+        options: ["Globaal product met lokale aanpassing","Wereldwijd één product, overal precies gelijk","Lokale bedrijven die wereldwijd fabrieken openen","Lokaal product dat onveranderd wereldwijd wordt verkocht"],
         answer: 0,
-        wrongHints: [null, "Dat is gewone globalisering. Wat voegt het stukje 'lokaal' in glokalisering toe?", "Dan blijft alles in één regio. Waar zit het wereldwijde deel?", "Waar zit dan de lokale aanpassing?"],
+        wrongHints: [null, "Dat is gewone globalisering. Wat voegt het stukje 'lokaal' in glokalisering toe?", "Dat is gewoon een multinational worden. Waar zit de aanpassing aan de lokale smaak?", "Dan blijft het product overal hetzelfde. Waar zit dan de lokale aanpassing?"],
         uitlegPad: {
           stappen: [{ titel: "Global + local", tekst: "**Glokalisering** = globalisatie met lokale aanpassing. **Voorbeelden**:\n• McDonald's: Big Mac wereldwijd, maar McKroket NL, Maharaja Mac India (geen rund vanwege hindoeïsme), Teriyaki Burger Japan.\n• Netflix: globaal platform, lokale producties (NL-series, K-drama).\n• Wereld-merken passen verpakking, smaak, marketing aan." }],
           niveaus: { basis: "Globaal + lokaal.", simpeler: "Glokal = G+L", nogSimpeler: "Wereldmerk, lokaal aangepast." },
@@ -61,9 +61,9 @@ const steps = [
       },
       {
         q: "Wat zorgt voor **transport-revolutie** in globalisering?",
-        options: ["Containerschepen","Trein","Helikopters","Boten in oude tijd"],
+        options: ["Containerschepen","Stoomtreinen","Vrachtvliegtuigen","Pijpleidingen"],
         answer: 0,
-        wrongHints: [null, "Wel rol — eerder.", "Niet voor grote goederen.", "Lange tijd duur."],
+        wrongHints: [null, "De stoomtrein versnelde in de 19e eeuw het vervoer over land. Welk vervoer over zee maakte de wereldhandel na 1960 spotgoedkoop?", "Vliegvracht is snel maar duur, voor kleine en dure spullen. Hoe gaan de meeste goederen de wereld over?", "Pijpleidingen vervoeren olie en gas, maar geen schoenen of telefoons. Hoe gaan die over zee?"],
         uitlegPad: {
           stappen: [{ titel: "Standaard-container 20ft/40ft", tekst: "**Containerisatie** (Malcom McLean, 1956): standaard-container 20 voet (TEU) of 40 voet (FEU) → snelle overslag schip-trein-truck zonder herverpakken. Daalde transport-kostprijs **90%**. Maakte wereldhandel mogelijk in massa. Rotterdam + Shanghai super-havens." }],
           niveaus: { basis: "Container.", simpeler: "1956 container", nogSimpeler: "De container." },
@@ -71,9 +71,9 @@ const steps = [
       },
       {
         q: "Welk **antiglobalisering**-fenomeen?",
-        options: ["Re-shoring","Containerschepen","Internet","Vliegreis"],
+        options: ["Re-shoring","Off-shoring","Outsourcing","Vrijhandelsakkoorden"],
         answer: 0,
-        wrongHints: [null, "Containerschepen brengen juist goedkope goederen de hele wereld over — versterkt dat globalisering of remt het die?", "Het internet verbindt de wereld en maakt handel over grenzen makkelijker — past dat bij ánti-globalisering?", "Vliegreizen brengen landen en mensen dichter bij elkaar — wijst dat op méér of minder globalisering?"],
+        wrongHints: [null, "Off-shoring verplaatst productie naar lagelonenlanden. Versterkt dat globalisering of remt het die?", "Werk uitbesteden aan bedrijven in andere landen verbindt de wereld juist meer. Past dat bij ánti-globalisering?", "Vrijhandelsakkoorden halen handelsdrempels weg. Wijst dat op méér of minder globalisering?"],
         uitlegPad: {
           stappen: [{ titel: "Tegenbeweging", tekst: "**Re-shoring** = productie terugbrengen naar thuisland. Reden: COVID-19 + Suezkanaal-blokkade 2021 + VS-China-spanningen + chip-tekorten. Voorbeelden: **TSMC**-chipfabrieken in Arizona (VS) en Dresden (DE). Trend van deglobalisering / 'friend-shoring' (alleen bij vrienden). Voorbeeld trade war: Trump 2018-tarieven + Biden's CHIPS Act 2022." }],
           niveaus: { basis: "Re-shoring.", simpeler: "Re-shoring = anti-glob", nogSimpeler: "Productie terug naar huis." },
@@ -100,9 +100,9 @@ const steps = [
       },
       {
         q: "**BRICS**-landen zijn:",
-        options: ["Brazilië, Rusland, India, China, Zuid-Afrika","Vijf snelgroeiende landen uit Azië","Vijf rijke westerse industrielanden","Brazilië, Republiek Congo, Israël, China, Spanje"],
+        options: ["Brazilië, Rusland, India, China, Zuid-Afrika","Vijf snelgroeiende landen uit Azië","Vijf rijke westerse industrielanden","Brazilië, Roemenië, Ierland, Canada, Spanje"],
         answer: 0,
-        wrongHints: [null, "Kijk naar de letters: staat de B voor een Aziatisch land?", "BRICS-landen groeien snel, maar zijn ze al zo rijk als de VS of Duitsland?", "De letters kloppen, maar zijn Israël en Spanje grote opkomende economieën?"],
+        wrongHints: [null, "Kijk naar de letters: staat de B voor een Aziatisch land?", "BRICS-landen groeien snel, maar zijn ze al zo rijk als de VS of Duitsland?", "De letters kloppen, maar zijn Roemenië, Ierland, Canada en Spanje grote opkomende economieën?"],
         uitlegPad: {
           stappen: [{ titel: "5 opkomende reuzen", tekst: "**BRICS** = Brazilië, Rusland, India, China, Zuid-Afrika. Opkomende grote economieën. Recent uitbreiding (2024): Iran, Egypte, Verenigde Arabische Emiraten, Ethiopië, Saudi-Arabië (genodigd), Indonesië (2025) → BRICS+. Doel: tegenwicht G7 + dollar." }],
           niveaus: { basis: "B/R/I/C/ZA.", simpeler: "BRICS = 5 reuzen", nogSimpeler: "Opkomende reuzen." },
@@ -110,9 +110,9 @@ const steps = [
       },
       {
         q: "**Gini = 0** betekent:",
-        options: ["Perfecte gelijkheid","Maximale ongelijkheid","Er is niets gemeten","Een krimpende economie"],
+        options: ["Perfecte gelijkheid","Maximale ongelijkheid","Er is geen armoede in het land","Een krimpende economie"],
         answer: 0,
-        wrongHints: [null, "Bij Gini = 1 heeft één persoon al het inkomen. Wat betekent dan het andere uiterste?", "0 is ook een uitkomst van een meting. Wat zegt die uitkomst?", "De Gini-coëfficiënt gaat over verdeling, niet over groei. Hoe is het inkomen bij 0 verdeeld?"],
+        wrongHints: [null, "Bij Gini = 1 heeft één persoon al het inkomen. Wat betekent dan het andere uiterste?", "Gini meet hoe het inkomen verdeeld is, niet of mensen arm zijn. Ook als iedereen even arm is: hoe is het inkomen dan verdeeld?", "De Gini-coëfficiënt gaat over verdeling, niet over groei. Hoe is het inkomen bij 0 verdeeld?"],
         uitlegPad: {
           stappen: [{ titel: "0-1 schaal", tekst: "**Gini-coëfficiënt**: 0 = volledig gelijke verdeling (iedereen evenveel), 1 = volledige ongelijkheid (1 persoon heeft alles). NL ~0,28 (gelijk). VS ~0,40. ZA ~0,63 (zeer ongelijk). Sociaal-democratische landen lager." }],
           niveaus: { basis: "Gelijk.", simpeler: "Gini 0 = gelijk", nogSimpeler: "Iedereen evenveel." },
@@ -120,9 +120,9 @@ const steps = [
       },
       {
         q: "Welke verklaring komt van **Acemoglu + Robinson**?",
-        options: ["Instellingen bepalen welvaart","Klimaat bepaalt welvaart","Grondstoffen bepalen welvaart","Toeval bepaalt welvaart"],
+        options: ["Instellingen bepalen welvaart","Klimaat bepaalt welvaart","Grondstoffen bepalen welvaart","Cultuur bepaalt welvaart"],
         answer: 0,
-        wrongHints: [null, "Die klimaat-verklaring hoort bij Jared Diamond. Wat zeggen Acemoglu en Robinson?", "Er zijn landen vol olie die toch arm blijven. Wat maakt dan het verschil?", "Acemoglu en Robinson zien juist vaste patronen, bijvoorbeeld tussen Noord- en Zuid-Korea. Wat verschilt daar?"],
+        wrongHints: [null, "Die klimaat-verklaring hoort bij Jared Diamond. Wat zeggen Acemoglu en Robinson?", "Er zijn landen vol olie die toch arm blijven. Wat maakt dan het verschil?", "De culturele verklaring is een andere theorie. Noord- en Zuid-Korea hebben dezelfde cultuur: wat verschilt er dan?"],
         uitlegPad: {
           stappen: [{ titel: "Why Nations Fail 2012", tekst: "**Daron Acemoglu + James Robinson**: *Why Nations Fail* (2012). **Instellingen** (rule of law, eigendomsrechten, democratie, gelijke kansen) verklaren waarom landen welvarend worden of falen. **Inclusief vs extractief**: inclusieve instellingen verspreiden voordelen, extractieve concentreren ze. **Nobelprijs Economie 2024**." }],
           theorie: "Voorbeeld: Noord-Korea (extractief, arm) vs Zuid-Korea (inclusief, welvarend) — dezelfde bevolking + cultuur, verschillende instellingen.",
@@ -131,9 +131,9 @@ const steps = [
       },
       {
         q: "Wereld-armoede (<$2,15/dag) is sinds 1990:",
-        options: ["Sterk afgenomen","Verdubbeld","Stabiel","Verviervoudigd"],
+        options: ["Sterk afgenomen","Licht afgenomen","Stabiel gebleven","Licht gestegen"],
         answer: 0,
-        wrongHints: [null, "In 1990 leefden bijna 2 miljard mensen in extreme armoede. Zouden dat er nu 4 miljard zijn?", "Niet stabiel — denk aan wat de groei van China en India sinds 1990 deed.", "Dan zouden er nu bijna 8 miljard extreem arme mensen zijn — de hele wereld. Kan dat?"],
+        wrongHints: [null, "Denk aan China: honderden miljoenen mensen kwamen sinds 1990 uit extreme armoede. Is dat een kleine daling?", "Niet stabiel: denk aan wat de groei van China en India sinds 1990 deed.", "De wereldbevolking groeide flink. Groeide het aantal extreem armen mee? Denk aan China en India."],
         uitlegPad: {
           stappen: [{ titel: "China-effect vooral", tekst: "**Wereld-extreme armoede** (Wereldbank-definitie < $2,15/dag): 1990 ~1,9 mld → 2020 ~700 mln. **Sterke daling**. Vooral door China (sinds 1980 800+ mln uit armoede) + India + andere groeilanden. Maar absolute aantal nog hoog + Sub-Sahara stagneert. **SDG-doel 'nul armoede 2030'** lijkt onhaalbaar." }],
           niveaus: { basis: "Afgenomen.", simpeler: "Armoede ↓", nogSimpeler: "↓" },
@@ -160,9 +160,9 @@ const steps = [
       },
       {
         q: "**Resource curse** (grondstoffen-paradox):",
-        options: ["Grondstofrijke landen blijven vaak arm","Grondstoffen maken landen altijd rijk","Geen verband tussen grondstoffen en welvaart","Grondstoffen raken overal snel op"],
+        options: ["Grondstofrijke landen blijven vaak arm","Grondstofarme landen blijven vaak arm","Rijke landen kopen grondstoffen te goedkoop op","Grondstoffen raken in die landen snel op"],
         answer: 0,
-        wrongHints: [null, "Kijk naar Nigeria of Venezuela: veel olie. Zijn die landen rijk geworden?", "Waarom zou het dan een 'vloek' heten?", "Gaat de 'vloek' over opraken, of over wat grondstoffen met een land doen?"],
+        wrongHints: [null, "Japan en Zuid-Korea hebben weinig grondstoffen en zijn toch rijk. Over welke landen gaat de 'vloek' dan?", "Dat is een andere verklaring voor armoede (afhankelijkheid). Wat gaat er volgens de 'vloek' mis in het land zelf?", "Nigeria pompt al zestig jaar olie op en heeft nog steeds veel. Gaat de 'vloek' over opraken, of over wat grondstoffen met een land doen?"],
         uitlegPad: {
           stappen: [{ titel: "Paradox", tekst: "**Resource curse / paradox of plenty**: landen met veel natuurlijke grondstoffen blijken vaak slechter te presteren dan landen zonder. Reden: corruptie (elite pakt grondstofgeld), gebrek aan diversificatie, conflicten over hulpbronnen, 'Dutch disease' (sterke munt door olie-export beschadigt andere industrie). Voorbeeld: Nigeria (olie) vs Botswana (diamant, beter management)." }],
           niveaus: { basis: "Grondstoffen-paradox.", simpeler: "Resource curse = paradox", nogSimpeler: "Rijk aan grondstoffen, toch arm." },
@@ -182,7 +182,7 @@ const steps = [
         q: "**Belt + Road Initiative (BRI)** is van:",
         options: ["China","VS","EU","Rusland"],
         answer: 0,
-        wrongHints: [null, "De VS zien dit project juist als concurrent. Langs welke oude handelsroute loopt het?", "EU heeft 'Global Gateway' als reactie.", "Rusland doet wel mee, maar is het ook het land dat de leningen geeft en de havens bouwt?"],
+        wrongHints: [null, "De VS zien dit project juist als concurrent. Langs welke oude handelsroute loopt het?", "De EU begon 'Global Gateway' juist als antwoord op dit project. Wie bouwt havens en spoorlijnen langs de oude Zijderoute?", "Rusland doet wel mee, maar is het ook het land dat de leningen geeft en de havens bouwt?"],
         uitlegPad: {
           stappen: [{ titel: "Chinese mega-investering", tekst: "**Belt + Road Initiative (BRI)** = Chinese infrastructuur-programma sinds 2013 (Xi Jinping). $1+ biljoen geïnvesteerd in havens, spoorlijnen, wegen wereldwijd, vooral Azië + Afrika. **China grootste handelspartner Afrika** sinds 2009. Controverse: schulden-val + arbeids-omstandigheden. **EU's reactie**: Global Gateway €300 mld (2021)." }],
           niveaus: { basis: "China.", simpeler: "BRI = China", nogSimpeler: "China." },
@@ -190,9 +190,9 @@ const steps = [
       },
       {
         q: "Welke is **success-story Sub-Sahara** sinds 1994?",
-        options: ["Rwanda (post-genocide wederopbouw)","Sudan (oorlog)","DRC (instabiel)","Centraal-Afrikaanse Republiek (conflict)"],
+        options: ["Rwanda","Zimbabwe","Soedan","Congo (DRC)"],
         answer: 0,
-        wrongHints: [null, "Een land dat in oorlog verkeert, is lastig een succesverhaal te noemen — past 'oorlog' bij wederopbouw en groei?", "'Instabiel' betekent onrust en wisselende macht — kan zo'n land een voorbeeld van geslaagd herstel zijn?", "De Centraal-Afrikaanse Republiek kampt zelf met conflict en armoede — staat dat land bekend om succesvolle wederopbouw?"],
+        wrongHints: [null, "Zimbabwe kreeg rond 2008 te maken met hyperinflatie en grote armoede. Is dat een succesverhaal?", "Soedan kampt al jaren met burgeroorlog. Kan zo'n land een voorbeeld van herstel zijn?", "Het oosten van Congo is al tientallen jaren onrustig door gewapende groepen. Past dat bij een succesverhaal?"],
         uitlegPad: {
           stappen: [{ titel: "Kigali = Singapore Afrika", tekst: "**Rwanda**: na 1994-genocide (~800.000 Tutsi's vermoord in 100 dagen) snelle wederopbouw onder Kagame. Tech-hub Kigali, bekend als zeer schone stad, relatief weinig corruptie. Schaduw: autoritair regime + persvrijheid beperkt. Toets-favoriet succes-voorbeeld in 'ontwikkelingslanden'." }],
           theorie: "Andere succes: Botswana (diamant + stabiele democratie), Ghana (democratie), Mauritius (toerisme + diensten).",
@@ -212,7 +212,7 @@ const steps = [
         q: "Wanneer **China-WTO-toetreding**?",
         options: ["2001","1949","1978","1989"],
         answer: 0,
-        wrongHints: [null, "Niet — VR China oprichting.", "Niet — Deng-hervorming start.", "Niet — Tiananmen."],
+        wrongHints: [null, "In 1949 werd de Volksrepubliek China opgericht, toen nog een gesloten land. Was China toen klaar voor de wereldhandel?", "In 1978 begon Deng met hervormingen. Werd China meteen lid van de WTO, of duurde dat nog lang?", "In 1989 was het protest op het Tiananmenplein. De WTO zelf bestaat pas sinds 1995. Wanneer kwam China erbij?"],
         uitlegPad: {
           stappen: [{ titel: "Sleutel-event globalisering", tekst: "**11 dec 2001**: China lid WTO. **Sleutel-event** wereldgeschiedenis 21e eeuw — 1,3 mld Chinezen in wereldhandelssysteem. Versnelde productie-verschuiving naar China + leverde het Westen 'goedkope spullen'." }],
           niveaus: { basis: "2001.", simpeler: "China-WTO = 2001", nogSimpeler: "2001" },
@@ -222,7 +222,7 @@ const steps = [
         q: "Wie startte **Chinese economische hervormingen** 1978?",
         options: ["Deng Xiaoping","Mao Zedong","Xi Jinping","Sun Yat-sen"],
         answer: 0,
-        wrongHints: [null, "Mao stierf 1976.", "Niet — later.", "Veel eerder."],
+        wrongHints: [null, "Mao stierf in 1976. Wie nam daarna de macht over?", "Xi Jinping is pas sinds 2012 de leider. Wie leidde China rond 1978?", "Sun Yat-sen stichtte in 1912 de Chinese republiek en stierf in 1925. Wie leidde China in 1978?"],
         uitlegPad: {
           stappen: [{ titel: "Reform + Opening 1978", tekst: "**Deng Xiaoping** (1904-1997) startte **gaige kaifang** (hervorming + opening) 1978 na Mao's dood. 'Socialisme met Chinese karakteristieken' — toestaan kapitalisme onder partij-controle. 'Kat-theorie': maakt niet uit of kat zwart of wit is, zolang ze muizen vangt." }],
           niveaus: { basis: "Deng.", simpeler: "1978 = Deng", nogSimpeler: "Deng." },
@@ -232,7 +232,7 @@ const steps = [
         q: "Welk land **overhaalde China qua bevolking** in 2023?",
         options: ["India","Indonesië","Pakistan","Nigeria"],
         answer: 0,
-        wrongHints: [null, "Indonesië heeft zo'n 280 miljoen inwoners. Hoeveel heeft China?", "Pakistan heeft rond 240 miljoen inwoners. Is dat genoeg om 1,4 miljard in te halen?", "Sterk groeiend, maar nog veel kleiner."],
+        wrongHints: [null, "Indonesië heeft zo'n 280 miljoen inwoners. Hoeveel heeft China?", "Pakistan heeft rond 240 miljoen inwoners. Is dat genoeg om 1,4 miljard in te halen?", "Nigeria groeit snel, maar heeft 'pas' zo'n 230 miljoen inwoners. Welk land heeft er ook ruim 1,4 miljard?"],
         uitlegPad: {
           stappen: [{ titel: "1,44 mld 2023", tekst: "**India** werd grootste bevolking 2023 (1,44 mld) door snelle groei + China bevolkingsdaling (1-kind-beleid 1979-2015 nawerking + vergrijzing). India veel **jonger** (mediaan 28 vs China 39). Implicatie: India waarschijnlijk economische opkomst voor jaren." }],
           niveaus: { basis: "India.", simpeler: "2023 = India boven China", nogSimpeler: "India." },
@@ -251,9 +251,9 @@ const steps = [
       },
       {
         q: "**Hong Kong**-statuut sinds 1997:",
-        options: ["'One country, two systems'","Gewone Chinese provincie zonder eigen regels","Onafhankelijk","Brits"],
+        options: ["'One country, two systems'","Gewone Chinese provincie","Onafhankelijke stadstaat","Britse kolonie met zelfbestuur"],
         answer: 0,
-        wrongHints: [null, "In de praktijk bijna, formeel niet.", "Niet — al lang in China.", "Niet — 1997 overgedragen."],
+        wrongHints: [null, "Hongkong kreeg in 1997 juist eigen regels, geld en rechtspraak beloofd, voor 50 jaar. Hoe heet die regeling?", "Singapore is wel onafhankelijk, maar Hongkong werd in 1997 aan een land teruggegeven. Aan welk land?", "In 1997 droeg het VK Hongkong over. Bleef het daarna nog Brits?"],
         uitlegPad: {
           stappen: [{ titel: "1997-2047 belofte", tekst: "**Hong Kong**: tot 1997 Brits, **overgedragen aan China**. Beloofd 'one country two systems' tot 2047 — semi-autonomie + vrijheden. **Sinds 2020 National Security Law**: persvrijheid + protest beperkt, oppositie opgesloten of in ballingschap. In de praktijk 'one system'. Afschrikwekkend precedent voor Taiwan." }],
           niveaus: { basis: "One country two systems.", simpeler: "HK = 2 systemen erodeert", nogSimpeler: "Twee systemen." },
@@ -270,9 +270,9 @@ const steps = [
     checks: [
       {
         q: "Wereldhandel groeit sinds 1950:",
-        options: ["Sneller dan het wereld-BBP","Trager dan het wereld-BBP","Even snel als het wereld-BBP","Alleen tussen rijke landen"],
+        options: ["Sneller dan het wereld-BBP","Trager dan het wereld-BBP","Even snel als het wereld-BBP","Steeds minder sinds 1950"],
         answer: 0,
-        wrongHints: [null, "Exporteert een land nu een kleiner of een groter deel van wat het maakt dan in 1950?", "Niet gelijk — vergelijk de groei van containervervoer met de groei van de economie.", "Ook China, India en Brazilië handelen steeds meer. Klopt 'alleen rijke landen' dan?"],
+        wrongHints: [null, "Exporteert een land nu een kleiner of een groter deel van wat het maakt dan in 1950?", "Vergelijk de groei van het containervervoer met de groei van de economie. Gingen die gelijk op?", "Containerschepen, de WTO en de toetreding van China: wijst dat op minder handel?"],
         uitlegPad: {
           stappen: [{ titel: "Globalisering-effect", tekst: "**Wereldhandel groeit sneller dan BBP** sinds 1950, vooral 1990-2008 (Chinese opkomst + WTO). Tijdelijk afgevlakt door 2008-crisis + Trump-tarieven 2018+. Recent (post-COVID + Russisch-Oekraïens) iets meer re-shoring → mogelijk einde 'hyperglobalisatie'." }],
           niveaus: { basis: "Sneller dan BBP.", simpeler: "Handel > BBP-groei", nogSimpeler: "Sneller." },
@@ -280,9 +280,9 @@ const steps = [
       },
       {
         q: "Welk land heeft de **hoogste Gini** ter wereld (~0,63)?",
-        options: ["Zuid-Afrika","Nederland","Zweden","Japan"],
+        options: ["Zuid-Afrika","Namibië","Brazilië","Verenigde Staten"],
         answer: 0,
-        wrongHints: [null, "0,28 — laag.", "0,29 — laag.", "0,33 — matig."],
+        wrongHints: [null, "Namibië is na zijn buurland het meest ongelijke land (ongeveer 0,59). Welk buurland met een apartheidsverleden scoort nog hoger?", "Brazilië is erg ongelijk (ongeveer 0,52), maar een land in zuidelijk Afrika scoort nog hoger. Welk land met een apartheidsverleden?", "De VS is het meest ongelijke rijke westerse land (ongeveer 0,40). Is dat ook het hoogste ter wereld?"],
         uitlegPad: {
           stappen: [{ titel: "Apartheid-erfenis", tekst: "**Zuid-Afrika** heeft Gini ~0,63 = **hoogste wereld**. Erfenis apartheid (1948-94): zwarte meerderheid economisch achtergesteld, witte minderheid bezit groot deel land + bedrijven. Ondanks ANC-regering sinds 1994 niet wezenlijk verbeterd." }],
           niveaus: { basis: "ZA.", simpeler: "Hoogste Gini = ZA", nogSimpeler: "Zuid-Afrika." },
@@ -290,9 +290,9 @@ const steps = [
       },
       {
         q: "**Nigeria** is rijk aan grondstoffen maar:",
-        options: ["Veel armoede en corruptie","Iedereen is er welvarend","Stabiele democratie","Leider in de industrie van Afrika"],
+        options: ["Veel armoede en corruptie","Te weinig olie om te exporteren","Een tekort aan arbeidskrachten","Leider in de industrie van Afrika"],
         answer: 0,
-        wrongHints: [null, "Het woord 'maar' in de vraag wijst op een tegenstelling. Past 'welvarend' daarbij?", "Niet stabiel.", "Nigeria verdient vooral aan één grondstof. Is er dan veel fabrieksindustrie?"],
+        wrongHints: [null, "Nigeria is juist een van de grootste olieproducenten van Afrika. Wat gaat er mis met al dat geld?", "Nigeria heeft een snelgroeiende, jonge bevolking van ruim 200 miljoen. Is een tekort aan werkkrachten het probleem?", "Nigeria verdient vooral aan één grondstof. Is er dan veel fabrieksindustrie?"],
         uitlegPad: {
           stappen: [{ titel: "Olie-paradox", tekst: "**Nigeria** = grootste olie-producent Afrika + grootste Afrikaanse bevolking (~220 mln). **Resource curse**: olie-rijkdom heeft niet welvaart breed verspreid. Corruptie, geweld in Niger-Delta, jihadisme noord (Boko Haram), economische ongelijkheid. Klassiek voorbeeld 'paradox of plenty'." }],
           niveaus: { basis: "Resource curse.", simpeler: "Nigeria = olie-paradox", nogSimpeler: "Olie-paradox." },
@@ -300,9 +300,9 @@ const steps = [
       },
       {
         q: "Welk land is **grootste handelspartner Afrika** sinds 2009?",
-        options: ["China","VS","Frankrijk","NL"],
+        options: ["China","VS","Frankrijk","India"],
         answer: 0,
-        wrongHints: [null, "Niet meer.", "Was, niet meer.", "Wel groot maar niet grootste."],
+        wrongHints: [null, "De VS was lang een grote partner, maar werd ingehaald. Door welk land, in 2009?", "Frankrijk was als oude koloniale macht lang belangrijk. Welk Aziatisch land haalde het in?", "India handelt steeds meer met Afrika, maar is (nog) kleiner. Welk land bouwt met de Nieuwe Zijderoute havens en spoorlijnen in Afrika?"],
         uitlegPad: {
           stappen: [{ titel: "China-Afrika handel", tekst: "**China is grootste handelspartner Afrika sinds 2009**. Via Belt + Road Initiative: havens, spoor, wegen. Chinese bedrijven actief in mijnbouw, olie, infrastructuur. NL/EU/FR/VS gedeeltelijk verdrongen. Geopolitieke spanning: VS + EU starten eigen Afrika-strategieën om China terug te drukken." }],
           niveaus: { basis: "China.", simpeler: "Afrika = China-partner", nogSimpeler: "China." },

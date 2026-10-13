@@ -7,25 +7,25 @@
 const tekst1 = {
   titel: "T1 — Ook lichte gehoorschade leidt tot lagere schoolresultaten",
   body:
-    "**(1)** Uit onderzoek onder ~4.500 Rotterdamse kinderen (Generation R, Erasmus MC) blijkt dat zelfs heel licht gehoorverlies (15-20 decibel) al leidt tot één à twee punten lagere Toets-scores. Jongens hebben daarnaast vaker concentratieproblemen.\n\n**(2)** *Opzet:* twee jaar eerder kregen de 9-11-jarigen een gehoortest; één op de vijf bleek licht gehoorverlies te hebben. De onderzoekers bekeken de Toets-scores en lieten ouders vragenlijsten invullen.\n\n**(3)** *Resultaten:* ook bij heel lichte gehoorschade scoren kinderen lager. Dat matig/slecht gehoor slechter doet presteren wás al bekend — nieuw is dat zélfs heel lichte schade dat effect heeft.\n\n**(4-7)** Waaróm is niet onderzocht; vermoedelijk kost luisteren meer energie. Leraren kunnen rekening houden (kind vooraan zetten). Een vervolgtest volgt op 13-16-jarige leeftijd.",
+    "**(1)** Uit onderzoek onder ~4.500 Rotterdamse kinderen (Generation R, Erasmus MC) blijkt dat zelfs heel licht gehoorverlies (15-20 decibel) al leidt tot één à twee punten lagere Toets-scores. Jongens hebben daarnaast vaker concentratieproblemen.\n\n**(2)** Twee jaar eerder kregen de 9-11-jarigen een gehoortest; één op de vijf bleek licht gehoorverlies te hebben. De onderzoekers bekeken de Toets-scores en lieten ouders vragenlijsten invullen.\n\n**(3)** Ook bij heel lichte gehoorschade scoren kinderen lager. Dat matig/slecht gehoor slechter doet presteren wás al bekend — nieuw is dat zélfs heel lichte schade dat effect heeft.\n\n**(4-7)** Waaróm is niet onderzocht; vermoedelijk kost luisteren meer energie. Leraren kunnen rekening houden (kind vooraan zetten). Een vervolgtest volgt op 13-16-jarige leeftijd.",
 };
 
 const tekst2 = {
   titel: "T2 — Geen herinnering aan (geheugen voor gesprekken)",
   body:
-    "**(1)** Mensen onthouden weinig van gesprekken — belangrijk om te weten (rechtbank, slechtnieuwsgesprek, diplomatie).\n\n**(2-3)** Cognitief psycholoog Sarah Brown-Schmidt onderzoekt wat mensen zich van gesprekken herinneren. Kort na een gesprek nog <20% van de informatie, na een paar dagen nog maar ~6% — alleen de **kern**.\n\n**(4-6)** We onthouden concrete en opvallende dingen beter, en vooral wat we zélf zeiden. We hebben zelfs 'valse' herinneringen (verwachte antwoorden) en vergeten vaak wíe iets zei — ideaal voor nepnieuws.\n\n**(7-11)** Psycholinguïst Eirini Zormpa toont met experimenten het 'generation effect', 'production effect' en 'focus effect': zelf bedenken/hardop zeggen → beter onthouden; antwoorden beter dan vragen.\n\n**(12-14, slot)** Conclusie: we onthouden van nature de **kern** van wat is gezegd, maar bronnen slecht. *(Doel: informeren over onderzoeken naar het onthouden van informatie in gesprekken.)*",
+    "**(1)** Mensen onthouden weinig van gesprekken — belangrijk om te weten (rechtbank, slechtnieuwsgesprek, diplomatie).\n\n**(2-3)** Cognitief psycholoog Sarah Brown-Schmidt onderzoekt wat mensen zich van gesprekken herinneren. Kort na een gesprek nog <20% van de informatie, na een paar dagen nog maar ~6% — alleen de kern.\n\n**(4-6)** We onthouden concrete en opvallende dingen beter, en vooral wat we zélf zeiden. We hebben zelfs 'valse' herinneringen (verwachte antwoorden) en vergeten vaak wíe iets zei — ideaal voor nepnieuws.\n\n**(7-11)** Psycholinguïst Eirini Zormpa toont met experimenten het 'generation effect', 'production effect' en 'focus effect': zelf bedenken/hardop zeggen → beter onthouden; antwoorden beter dan vragen.\n\n**(12-14, slot)** We onthouden van nature de kern van wat is gezegd, maar bronnen slecht.",
 };
 
 const tekst3 = {
   titel: "T3 — NK Tegelwippen (flyer)",
   body:
-    "Een flyer voor het *NK Tegelwippen 2024*: van 21 maart t/m 31 oktober strijden gemeenten om de Gouden Tegel en Gouden Schep door tegels te vervangen door groen.\n\n*'Iedereen kan meedoen door tegels in z'n voor-, achter- of geveltuin te vervangen door groen. Zorg ervoor dat jij en je buren klaarstaan, want er is werk aan de winkel!'* Je meldt je gewipte tegels aan via de website.\n\n*(Tekstsoort: flyer/advertentie, met illustraties die de inhoud ondersteunen.)*",
+    "Een flyer voor het *NK Tegelwippen 2024*: van 21 maart t/m 31 oktober strijden gemeenten om de Gouden Tegel en Gouden Schep door tegels te vervangen door groen.\n\n*'Iedereen kan meedoen door tegels in z'n voor-, achter- of geveltuin te vervangen door groen. Zorg ervoor dat jij en je buren klaarstaan, want er is werk aan de winkel!'* Je meldt je gewipte tegels aan via de website.",
 };
 
 const tekst4 = {
   titel: "T4 — Green Friday in plaats van Black Friday, slaat dat aan?",
   body:
-    "**(1-2)** Tegenover het koopjesfestijn Black Friday staan initiatieven als *Green Friday*: winkels (Dille & Kamille, Ikea, Bever) sluiten of bieden reparatie/inruil. Black Friday levert wel veel omzet op, maar is velen een doorn in het oog gezien het klimaat.\n\n**(3-5)** Dille & Kamille bedacht met Trees for All Green Friday. Maar als bedrijven tóch korting blijven geven, hoe geloofwaardig is dat? Trees for All scherpte de eisen aan (geen korting) — met ~100 aanmeldingen minder. Sommige bedrijven geven Black Friday een duurzame draai.\n\n**(6-10, slot)** Pablo Druijts (Black Friday Nederland) en milieuactivisten zetten vraagtekens: gaat het om duurzaamheid of om *greenwashing*? De koopgekte lijkt er niet onder te lijden. *(Centrale vraag: zijn deze 'groene' initiatieven écht duurzaam, of doen bedrijven maar alsof?)*",
+    "**(1-2)** Tegenover het koopjesfestijn Black Friday staan initiatieven als *Green Friday*: winkels (Dille & Kamille, Ikea, Bever) sluiten of bieden reparatie/inruil. Black Friday levert wel veel omzet op, maar is velen een doorn in het oog gezien het klimaat.\n\n**(3-5)** Dille & Kamille bedacht met Trees for All Green Friday. Maar als bedrijven tóch korting blijven geven, hoe geloofwaardig is dat? Trees for All scherpte de eisen aan (geen korting) — met ~100 aanmeldingen minder. Sommige bedrijven geven Black Friday een duurzame draai.\n\n**(6-10, slot)** Pablo Druijts (Black Friday Nederland) en milieuactivisten zetten vraagtekens: gaat het om duurzaamheid of om *greenwashing*? De koopgekte lijkt er niet onder te lijden.",
 };
 
 const BRON_LABEL = (n) => `🎓 Echt examen VMBO-GL/TL Nederlands 2025 tijdvak 1, vraag ${n}`;
@@ -69,7 +69,7 @@ const steps = [
         "Te smal — de deelnemers worden genoemd, maar dat is niet waar het blok om draait.",
         "Te smal — de onderzoekers zijn een detail, niet de inhoud van beide alinea's samen.",
         null,
-        "Dekt alleen alinea 2 (de opzet); alinea 3 gaat juist over wat eruit kwam.",
+        "Past dit kopje bij alinea 2 én bij alinea 3? Lees alinea 3 nog eens.",
       ],
       explanation: "Alinea 2 beschrijft de opzet (gehoortest, Toets-scores, vragenlijsten), alinea 3 de uitkomsten ('Uit de resultaten bleek dat...'). Samen draait het blok vooral om wat het onderzoek heeft opgeleverd: de resultaten.",
       examenBron: BRON_LABEL(1),
@@ -180,8 +180,8 @@ const steps = [
       ],
       answer: 3,
       wrongHints: [
-        "Adviseren = tips geven. De tekst legt vooral onderzoek uit, ze is geen advies-tekst.",
-        "Ook 'adviseren' is hier niet de kern — de tekst beschrijft onderzoek, ze raadt niet aan.",
+        "Adviseren = tips geven. Staan er in de tekst vooral tips, of iets anders?",
+        "Kun je eigenlijk 'adviseren over onderzoeken'? Raadt de tekst de lezer ergens iets aan?",
         "Te smal/onjuist — juist het 'woordelijk' onthouden lukt níet; het gaat om de kern, niet om gespreksvoering.",
         null,
       ],

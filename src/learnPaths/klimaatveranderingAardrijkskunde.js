@@ -146,7 +146,7 @@ const steps = [
         q: "Hoeveel **CO₂ per jaar** stoot gemiddelde Nederlander uit?",
         options: ["~10 ton", "~100 kg", "~100 ton", "~1 ton"],
         answer: 0,
-        wrongHints: [null, "Eén autorit van 500 km stoot al zo'n 60 kg CO₂ uit. Hoeveel kom je dan in een heel jaar?", "Nederland stoot in totaal zo'n 150 miljoen ton per jaar uit. Klopt 100 ton per persoon dan bij 18 miljoen inwoners?", "1 ton per jaar is wat iemand in een arm land als Kenia uitstoot. Rijdt, stookt en vliegt een Nederlander meer of minder?"],
+        wrongHints: [null, "Eén autorit van 500 km stoot al zo'n 60 kg CO₂ uit. Hoeveel kom je dan in een heel jaar?", "Nederland stoot in totaal zo'n 150 miljoen ton per jaar uit. Klopt 100 ton per persoon dan bij 18 miljoen inwoners?", "Rond 1 ton of minder stoot iemand in arme landen als Kenia of Nigeria uit. Rijdt, stookt en vliegt een Nederlander meer of minder?"],
       },
       {
         q: "Welk gas houdt **per kilo** veel méér warmte vast dan CO₂?",

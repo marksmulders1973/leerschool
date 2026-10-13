@@ -210,7 +210,7 @@ const steps = [
         q: "Wat is de **kans op overstroming** voor de Randstad in NL-veiligheidsnorm?",
         options: ["1× per 10.000 jaar","1× per 100 jaar","1× per 1.000 jaar","1× per miljoen jaar"],
         answer: 0,
-        wrongHints: [null, "Eens per 100 jaar zou betekenen dat je grootouders het al hebben meegemaakt. Vindt Nederland dat genoeg voor de Randstad?", "Eens per 1.000 jaar gold voor sommige minder dichtbevolkte gebieden. Is de norm voor de Randstad strenger of soepeler?", "Zo'n strenge norm vraagt onbetaalbaar hoge dijken. Welke kans koos de Deltacommissie voor Holland?"],
+        wrongHints: [null, "Eens per 100 jaar zou betekenen dat je grootouders het al hebben meegemaakt. Vindt Nederland dat genoeg voor de Randstad?", "Voor minder dichtbevolkte gebieden langs de rivieren gold vroeger een soepelere norm. Is de norm voor de Randstad strenger of soepeler?", "Zo'n strenge norm vraagt onbetaalbaar hoge dijken. Welke kans koos de Deltacommissie voor Holland?"],
         uitlegPad: {
           stappen: [{ titel: "Hoogste norm ter wereld", tekst: "**Randstad-norm**: 1 keer per **10.000 jaar** mag dijk falen. Zeeland-norm: 1× per **4.000 jaar**. Rivierdijken NL: 1× per **1.250 jaar**. Veel andere landen hebben veel lagere normen." }],
           woorden: [{ woord: "overstromingsnorm", uitleg: "Acceptabele kans dat een dijk faalt per jaar." }],
@@ -341,7 +341,7 @@ const steps = [
         q: "Welk **jaartal** koppel je aan de **Watersnoodramp**?",
         options: ["1953","1932","1986","1997"],
         answer: 0,
-        wrongHints: [null, "1932 is het jaar van de Afsluitdijk, bij de Zuiderzee. Welke ramp was er twintig jaar later in Zeeland?", "In 1986 kwam de Oosterscheldekering klaar, het sluitstuk van een plan dat ná de ramp kwam. Wanneer was de ramp zelf?", "In 1997 kwam de Maeslantkering klaar, het laatste Deltawerk. Hoe lang daarvoor was de ramp die alles in gang zette?"],
+        wrongHints: [null, "1932 is het jaar van de Afsluitdijk, bij de Zuiderzee. Welke ramp trof ruim twintig jaar later Zeeland?", "In 1986 kwam de Oosterscheldekering klaar, het sluitstuk van een plan dat ná de ramp kwam. Wanneer was de ramp zelf?", "In 1997 kwam de Maeslantkering klaar, het laatste Deltawerk. Hoe lang daarvoor was de ramp die alles in gang zette?"],
         uitlegPad: {
           stappen: [{ titel: "Vier kerndata water-NL", tekst: "**1932** Afsluitdijk. **1953** Watersnood. **1986** Provincie Flevoland + Oosterscheldekering. **1997** Maeslantkering. Onthoud deze 4 — kernkennis VMBO-AK." }],
           niveaus: { basis: "1953.", simpeler: "Watersnoodramp = 1953", nogSimpeler: "1953" },

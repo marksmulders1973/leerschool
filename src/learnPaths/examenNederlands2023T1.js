@@ -230,7 +230,7 @@ const steps = [
       answer: 0,
       wrongHints: [
         null,
-        "Oorzaak-gevolg = 'A gebeurde, DUS B'. Is het investeren hier iets wat vanzelf gebeurt door het veiligstellen?",
+        "Oorzaak-gevolg = 'A gebeurde, DUS B'. Is er in deze zin iets gebeurd waar het investeren vanzelf uit volgt? Kijk naar het signaalwoord aan het begin.",
         "Probleem-oplossing = 'er IS een probleem (X), dus we doen Y'. In déze zin wordt geen probleem GENOEMD.",
         "Voorwaarde = 'ALS A, DAN B'. Hier geen 'als-dan' constructie.",
       ],
@@ -286,7 +286,7 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "oorzaak-gevolg in opeenvolgende zinnen — kern" },
       ],
       uitlegPad: compact(
-        "Gevolg-signaalwoorden: ZO, DAARDOOR, DUS, DAAROM, BIJGEVOLG. Hier: 'Jongeren missen ZO een goed voorbeeld' — 'zo' = 'op die manier'. Dus zin 2 = gevolg van zin 1. = B. (Truc: bij gevolg kan je 'dus' invullen tussen de zinnen — werkt het? Dan is het gevolg.)",
+        "Gevolg-signaalwoorden: ZO, DAARDOOR, DUS, DAAROM, BIJGEVOLG. Hier: 'Jongeren missen ZO een goed voorbeeld' — 'zo' = 'op die manier'. Dus zin 2 = gevolg van zin 1. (Truc: bij gevolg kan je 'dus' invullen tussen de zinnen — werkt het? Dan is het gevolg.)",
         {
           basis: "'Zo' = daardoor = gevolg-signaal.",
           simpeler: "Ouders lezen niet → dus kinderen leren het niet → gevolg.",

@@ -64,7 +64,7 @@ const steps = [
         q: "Wat is een **burgerinitiatief**?",
         options: ["Met handtekeningen een onderwerp op de Kamer-agenda zetten","Verplicht stemmen bij een landelijk referendum","Een wet die burgers extra rechten op inspraak geeft","Een referendum dat burgers zelf over een wet aanvragen"],
         answer: 0,
-        wrongHints: [null, "Niet — NL niet verplicht.", "Wie neemt bij een burgerinitiatief het initiatief: de wetgever of de burger?", "Bij een referendum stemmen burgers zelf over een wet. Is dat hetzelfde als iets op de agenda zetten?"],
+        wrongHints: [null, "Is stemmen in Nederland ergens verplicht? En gaat een burgerinitiatief over stemmen?", "Wie neemt bij een burgerinitiatief het initiatief: de wetgever of de burger?", "Bij een referendum stemmen burgers zelf over een wet. Is dat hetzelfde als iets op de agenda zetten?"],
         uitlegPad: {
           stappen: [{ titel: "Onderwerp agenderen", tekst: "**Burgerinitiatief**: burgers kunnen onderwerp op agenda Tweede Kamer zetten met **40.000 handtekeningen + steun voor behandeling**. Geen referendum — alleen agendering. Resultaat niet bindend. Voorbeeld: campagne *Stop Particulier Vuurwerk* (2017)." }],
           niveaus: { basis: "40k → parlement.", simpeler: "Burgerinit. = 40k handt.", nogSimpeler: "40k → parlement" },
@@ -72,9 +72,9 @@ const steps = [
       },
       {
         q: "**Coalitie-Schoof** (juli 2024) bestond uit:",
-        options: ["PVV + VVD + NSC + BBB","VVD + D66 + CDA + CU","PvdA + GL + SP","CDA alleen"],
+        options: ["PVV + VVD + NSC + BBB","VVD + D66 + CDA + CU","PVV + VVD + CDA + JA21","PVV + NSC + BBB + CDA"],
         answer: 0,
-        wrongHints: [null, "Vorige Rutte-IV.", "Nooit zo.", "Niet — coalitie."],
+        wrongHints: [null, "Dat was het kabinet-Rutte IV (2022). Wie wonnen de verkiezingen van november 2023?", "CDA en JA21 zaten niet in dit kabinet. Welke nieuwe partijen wonnen in 2023 veel zetels?", "Het CDA had in 2023 maar 5 zetels. Welke grote partij van Yeşilgöz deed wel mee?"],
         uitlegPad: {
           stappen: [{ titel: "Schoof-kabinet", tekst: "**Kabinet-Schoof** vanaf 2 juli 2024: vierpartij-coalitie **PVV + VVD + NSC + BBB**. Eerste keer PVV in regering. Dick Schoof als minister-president (extra-parlementair, geen partij). Discussie over uitvoeringskracht + standpunten migratie. In juni 2025 stapte de PVV eruit." }],
           niveaus: { basis: "PVV/VVD/NSC/BBB.", simpeler: "Schoof = 4 partijen", nogSimpeler: "PVV/VVD/NSC/BBB" },
@@ -93,7 +93,7 @@ const steps = [
         q: "Welk type binding is **gemeenschappelijke taal + religie + waarden**?",
         options: ["Cognitief","Affectief","Functioneel","Politiek-juridisch"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is gevoel.", "Niet — dat is taakverdeling.", "Niet — wetten."],
+        wrongHints: [null, "Affectieve binding gaat over gevoelens, zoals trots op je land. Gaat het hier om gevoel?", "Functionele binding ontstaat doordat mensen elkaar nodig hebben. Is dat hier zo?", "Politiek-juridische binding loopt via wetten en burgerschap. Zijn taal en waarden wetten?"],
         uitlegPad: {
           stappen: [{ titel: "Kennis + waarden samen", tekst: "**Cognitieve binding** = gedeelde normen, waarden, cultuur, taal, kennis. Mensen weten + geloven hetzelfde → voelen verbondenheid. Voorbeeld: Nederlandse taal bindt NL'ers (zelfs in buitenland)." }],
           niveaus: { basis: "Cognitief.", simpeler: "Cult/taal = cognitief", nogSimpeler: "Cognitief" },
@@ -103,7 +103,7 @@ const steps = [
         q: "**Primaire socialisatie** vindt vooral plaats in:",
         options: ["Familie / gezin","School / klas","Werk / bijbaan","Online / sociale media"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is secundair.", "Niet — dat komt later.", "Niet — dat komt later."],
+        wrongHints: [null, "School is belangrijk, maar je bent dan al een paar jaar oud. Waar leer je als peuter de eerste normen?", "Een bijbaan komt pas in je tienerjaren. Waar begint socialisatie?", "Sociale media komen pas later in je leven. Wie leert een baby de eerste normen?"],
         uitlegPad: {
           stappen: [{ titel: "Eerste jaren = familie", tekst: "**Primaire socialisatie** = in de eerste levensjaren (0-6 jaar): vooral in **familie**. Daar leren kinderen basis-taal, basis-waarden, gehechtheid. **Secundair** (school, peergroep) breidt uit. **Tertiair** (werk, eigen gezin) gaat door volwassen leven." }],
           niveaus: { basis: "Familie.", simpeler: "Primair = gezin", nogSimpeler: "Gezin" },
@@ -113,7 +113,7 @@ const steps = [
         q: "**Affectieve polarisatie** is:",
         options: ["Emotionele afkeer van de andere groep","Geweld tussen twee vijandige groepen","Groeiend verschil in politieke standpunten","Stemmen verspreid over veel kleine partijen"],
         answer: 0,
-        wrongHints: [null, "Kan gevolg zijn — niet hetzelfde.", "Dat heet ideologische polarisatie. Waar verwijst het woord 'affectief' naar?", "Dat heet versplintering. Waar verwijst het woord 'affectief' naar?"],
+        wrongHints: [null, "Geweld kan een gevolg zijn, maar 'affectief' verwijst naar iets innerlijks. Naar wat?", "Dat heet ideologische polarisatie. Waar verwijst het woord 'affectief' naar?", "Dat heet versplintering. Waar verwijst het woord 'affectief' naar?"],
         uitlegPad: {
           stappen: [{ titel: "Emotioneel verschil", tekst: "**Affectieve polarisatie**: niet op inhoud maar **emotioneel**. Ik kan ander politiek standpunt verdragen, maar **vind aanhanger niet aardig + wantrouw die**. Onderzoek toont stijging laatste 10 jaar. Filterbubbels online versterken." }],
           theorie: "Toets-actueel: COVID-maatregelen, klimaat, migratie, Israël-Palestina-debat hebben affectieve polarisatie versterkt.",
@@ -124,7 +124,7 @@ const steps = [
         q: "**Durkheim's** verschil traditioneel vs modern:",
         options: ["Mechanische → organische solidariteit","Religieuze → seculiere samenleving","Agrarische → industriële economie","Gelijke → ongelijke verdeling van welvaart"],
         answer: 0,
-        wrongHints: [null, "Soms gevolg, niet kern.", "Dat is een economische verschuiving. Waar ging het Durkheim als socioloog om?", "Durkheim schreef niet vooral over ongelijkheid; dat deed vooral Marx."],
+        wrongHints: [null, "Secularisatie speelt mee, maar Durkheim keek naar wat een samenleving bij elkaar houdt. Hoe noemde hij dat?", "Dat is een economische verschuiving. Waar ging het Durkheim als socioloog om?", "Durkheim schreef niet vooral over ongelijkheid; dat deed vooral Marx."],
         uitlegPad: {
           stappen: [{ titel: "Solidariteit-vormen", tekst: "**Durkheim**:\n• **Mechanische solidariteit** (traditioneel kleine gemeenschap): mensen **lijken** op elkaar → samenhang.\n• **Organische solidariteit** (modern complexe maatschappij): mensen **verschillen** in rol → afhankelijk van elkaar → samenhang.\n\nVoorbeeld: dorp van 100 boeren = mechanisch. Stad van 1 mln verschillende beroepen = organisch." }],
           niveaus: { basis: "Mech → org.", simpeler: "Durkheim 2 soorten", nogSimpeler: "Mech → org" },
@@ -214,7 +214,7 @@ const steps = [
         q: "Welk recht is een **klassiek grondrecht**?",
         options: ["Vrijheid van meningsuiting","Recht op betaald werk","Recht op gezondheidszorg","Recht op sociale zekerheid"],
         answer: 0,
-        wrongHints: [null, "Niet — sociaal recht.", "Niet — sociaal recht.", "Moet de overheid hier iets regelen, of juist van je afblijven?"],
+        wrongHints: [null, "Moet de overheid hier actief iets voor je regelen? Dan gaat het om een ander soort grondrecht.", "Zorg moet de overheid actief organiseren. Is dat klassiek of sociaal?", "Moet de overheid hier iets regelen, of juist van je afblijven?"],
         uitlegPad: {
           stappen: [{ titel: "Vrijheidsrechten vs zorgplicht", tekst: "**Klassieke grondrechten** beschermen burger TEGEN staat (vrijheid van meningsuiting, godsdienst, privacy). **Sociale grondrechten** verplichten staat tot zorg voor burgers (werkgelegenheid, milieu, gezondheid, onderwijs). Verschil: klassiek = 'laat met rust', sociaal = 'doe iets voor'." }],
           niveaus: { basis: "Mening.", simpeler: "Klassiek = vrijheid", nogSimpeler: "Mening" },
@@ -224,7 +224,7 @@ const steps = [
         q: "**EVRM** verschilt van **UVRM** doordat:",
         options: ["EVRM is juridisch bindend","UVRM is juridisch bindend","Ze zijn juridisch precies gelijk","UVRM geldt alleen in Europa"],
         answer: 0,
-        wrongHints: [null, "Niet — UVRM moreel, niet bindend.", "Kun je met de UVRM net zo naar een rechter stappen als met het EVRM?", "Niet — UVRM is wereldwijd."],
+        wrongHints: [null, "Is een 'verklaring' even bindend als een 'verdrag'?", "Kun je met de UVRM net zo naar een rechter stappen als met het EVRM?", "Niet — UVRM is wereldwijd."],
         uitlegPad: {
           stappen: [{ titel: "VN moreel, Europa bindend", tekst: "**UVRM** (Universele Verklaring 1948, VN): moreel + politiek krachtig, **niet juridisch bindend** voor staten. **EVRM** (Europees Verdrag 1950): **juridisch bindend** voor lidstaten Raad van Europa. Burger kan na het doorlopen van de nationale rechtspraak naar het Europees Hof voor de Rechten van de Mens in **Straatsburg** stappen met een klacht tegen de eigen staat." }],
           theorie: "Toets-actueel: in de Urgenda-klimaatzaak gebruikte de Nederlandse rechter het EVRM om de overheid tot actie te dwingen.",
@@ -243,9 +243,9 @@ const steps = [
       },
       {
         q: "De **Toeslagenaffaire** illustreert vooral falen van:",
-        options: ["Rechtsstaat","Verkiezingen","NAVO","EU"],
+        options: ["Rechtsstaat","Verkiezingen","Marktwerking","Vrije pers"],
         answer: 0,
-        wrongHints: [null, "Niet — vond plaats binnen normale verkiezingen.", "De NAVO is een militair bondgenootschap — speelde dat hier een rol?", "Speelde de affaire bij Europese instellingen, of bij de Nederlandse overheid?"],
+        wrongHints: [null, "De affaire ging over hoe de overheid burgers behandelde. Ging er iets mis bij het stemmen?", "Werd de fout gemaakt door bedrijven op een markt, of door een overheidsdienst?", "Juist journalisten brachten de affaire aan het licht. Wie faalde er dan?"],
         uitlegPad: {
           stappen: [{ titel: "Rechtsstaat-crisis", tekst: "**Toeslagenaffaire**: belastingdienst beschuldigde duizenden ouders **zonder grondige check** van fraude. Hoge boetes, schuld, gezinsdrama's. **Rechtsstaat** faalde: geen eerlijke procedure, ouders niet gehoord, discriminatie op herkomst. Rapport-Donner + Parlementaire Enquête lieten zien dat ambtenaren-cultuur + politieke druk samenwerkten." }],
           theorie: "Toets-patroon: 'leg uit waarom Toeslagenaffaire schadelijk voor rechtsstaat'. Antwoord: schending grondrechten + onafhankelijke rechter omzeild.",
@@ -254,9 +254,9 @@ const steps = [
       },
       {
         q: "Welke is een **doel van straf**?",
-        options: ["Resocialisatie","Geld verdienen","Politieke macht","Tijdverlies"],
+        options: ["Resocialisatie","Persoonlijke wraak","Bekentenis afdwingen","Openbare vernedering"],
         answer: 0,
-        wrongHints: [null, "Niet — geen doel.", "Niet — anti-rechtsstaat.", "Niet — geen doel."],
+        wrongHints: [null, "Eigenrichting wil de rechtsstaat juist voorkomen. De staat straft, niet het slachtoffer.", "Een bekentenis hoort bij het onderzoek, niet bij de straf. Wat moet een straf bereiken?", "De schandpaal is al eeuwen afgeschaft. Welke doelen van straf noemt het strafrecht wel?"],
         uitlegPad: {
           stappen: [{ titel: "Vier doelen", tekst: "Strafdoelen: **vergelding** (verdiende straf), **preventie** (speciaal: afschrikken dader; generaal: afschrikken anderen), **resocialisatie** (heropvoeden, terug in maatschappij), **beveiliging** (gevaarlijke daders weg).\n\nHet Nederlandse strafrecht legt nadruk op resocialisatie (TBS-systeem, kortere straffen dan VS)." }],
           niveaus: { basis: "Resocialisatie.", simpeler: "Doel = resocial.", nogSimpeler: "Resocialisatie" },
@@ -273,9 +273,9 @@ const steps = [
     checks: [
       {
         q: "Welk concept gaat over **gedeelde waarden + cultuur**?",
-        options: ["Cognitieve binding","Politieke verhouding","Economische verhouding","Juridische verhouding"],
+        options: ["Cognitieve binding","Affectieve binding","Functionele binding","Juridische binding"],
         answer: 0,
-        wrongHints: [null, "Politieke verhoudingen gaan over macht. Gaat deze vraag daarover?", "Economische verhoudingen gaan over geld en afhankelijkheid. Zijn dat waarden?", "Juridische verhoudingen gaan over regels en wetten. Is dat hetzelfde als gedeelde waarden?"],
+        wrongHints: [null, "Affectieve binding gaat over gevoelens van verbondenheid. Is een gevoel hetzelfde als een gedeelde waarde?", "Functionele binding ontstaat doordat mensen elkaar nodig hebben. Gaat het hier om afhankelijkheid?", "Juridische binding loopt via regels en wetten. Is dat hetzelfde als gedeelde waarden?"],
         uitlegPad: {
           stappen: [{ titel: "Cognitief = kennis", tekst: "Gedeelde **waarden, normen, cultuur** = cognitieve binding. Naast affectieve (gevoel), functionele (taakverdeling), politiek-juridische (wetten)." }],
           niveaus: { basis: "Cognitief.", simpeler: "Waarden = cognitief", nogSimpeler: "Cognitief" },
@@ -285,7 +285,7 @@ const steps = [
         q: "Welke partij in NL is **liberaal-rechts**?",
         options: ["VVD","PvdA","CU","SP"],
         answer: 0,
-        wrongHints: [null, "Sociaal-dem.", "Christen-dem.", "Socialistisch."],
+        wrongHints: [null, "De PvdA is sociaaldemocratisch: links van het midden.", "De ChristenUnie is christelijk en op economisch gebied eerder sociaal.", "De SP is socialistisch en staat juist links."],
         uitlegPad: {
           stappen: [{ titel: "VVD-positie", tekst: "**VVD** = Volkspartij voor Vrijheid en Democratie: liberaal-rechts. Klassiek liberalisme + economische vrijheid + beperkte overheid. D66: progressief-liberaal (sociaal liberaal). Beide in de liberale traditie maar verschillende accenten." }],
           niveaus: { basis: "VVD.", simpeler: "Liberaal-rechts = VVD", nogSimpeler: "VVD" },
@@ -293,9 +293,9 @@ const steps = [
       },
       {
         q: "**Anomie** (Durkheim) is:",
-        options: ["Normloosheid","Een tropische ziekte","Een woord-grap","Belastingvorm"],
+        options: ["Normloosheid","Groepsdwang","Vervreemding","Eenzaamheid"],
         answer: 0,
-        wrongHints: [null, "Geen ziekte — al voelt het wel als een 'kwaal' van de samenleving. Wat valt er weg?", "Durkheim was bloedserieus — 'a-nomie' = zonder 'nomos' (wet/norm). Wat betekent dat?", "Niets met geld — het gaat over regels en houvast die verdwijnen."],
+        wrongHints: [null, "Bij groepsdwang zijn normen juist heel sterk. Hoe zit het bij anomie?", "Vervreemding is een begrip van Marx: de arbeider staat los van zijn werk. Durkheim bedoelde iets anders.", "Eenzaamheid kan een gevolg zijn, maar anomie gaat over regels. Wat valt er weg?"],
         uitlegPad: {
           stappen: [{ titel: "Ontworteling", tekst: "**Anomie** (Durkheim): gebrek aan duidelijke normen + waarden, vaak bij snelle maatschappelijke verandering (industrialisatie, oorlog, COVID). Mensen voelen zich ontworteld → angst + zelfdoding-risico (Durkheim toonde aan met zelfdoding-statistieken)." }],
           niveaus: { basis: "Normloosheid.", simpeler: "Anomie = normloos", nogSimpeler: "Normloosheid" },
@@ -303,9 +303,9 @@ const steps = [
       },
       {
         q: "**Scheiding der machten** voorkomt:",
-        options: ["Tirannie","Belastingontduiking","Klimaatverandering","Migratie"],
+        options: ["Tirannie","Anarchie","Volksopstand","Polarisatie"],
         answer: 0,
-        wrongHints: [null, "Niet — apart probleem.", "Heeft dit probleem iets te maken met hoe de staatsmacht verdeeld is?", "Gaat machtsscheiding over grenzen en mensen, of over wie de macht heeft?"],
+        wrongHints: [null, "Anarchie is de afwezigheid van gezag. Was Montesquieu bang voor te weinig of te veel macht?", "Montesquieu wilde de burger beschermen tegen de machthebber, niet andersom.", "Polarisatie gaat over tegenstellingen tussen burgers. Montesquieu keek naar wie de macht heeft."],
         uitlegPad: {
           stappen: [{ titel: "Macht in evenwicht", tekst: "**Trias politica** (Montesquieu): wetgevende, uitvoerende, rechterlijke macht gescheiden → geen enkele tak kan absoluut worden → **tirannie voorkomen**. Onafhankelijke rechters cruciaal: zonder hen kan regering wetten misbruiken." }],
           niveaus: { basis: "Tirannie.", simpeler: "Trias = anti-tirannie", nogSimpeler: "Tirannie" },

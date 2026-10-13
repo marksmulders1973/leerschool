@@ -34,7 +34,7 @@ const steps = [
         q: "Hoeveel leden heeft de **Tweede Kamer**?",
         options: ["150","75","100","225"],
         answer: 0,
-        wrongHints: [null, "Eerste Kamer.", "Zoveel waren het vroeger. Is dat aantal later veranderd?", "Te veel."],
+        wrongHints: [null, "75 zetels heeft de Eerste Kamer. Is de Tweede Kamer groter of kleiner?", "Zoveel waren het vroeger. Is dat aantal later veranderd?", "225 is het aantal zetels van Eerste en Tweede Kamer samen. Hoeveel heeft de Tweede Kamer alleen?"],
         uitlegPad: {
           stappen: [{ titel: "Vast aantal", tekst: "**Tweede Kamer: 150 leden** (sinds 1956). Direct gekozen door volk elke 4 jaar via evenredige vertegenwoordiging. **Eerste Kamer: 75 leden** (indirect via Provinciale Staten). Daarvoor: TK had 100 leden — uitgebreid om de gegroeide bevolking en het toegenomen werk beter aan te kunnen." }],
           niveaus: { basis: "150.", simpeler: "TK = 150", nogSimpeler: "150" },
@@ -54,7 +54,7 @@ const steps = [
         q: "Wat is een **kabinet**?",
         options: ["Ministers + staatssecretarissen samen","Koning + alle ministers samen","Alle leden van de Tweede Kamer","De grootste politieke partij"],
         answer: 0,
-        wrongHints: [null, "Dat is regering.", "Dat is het parlement — en dat controleert juist.", "Een partij kan meeregeren, maar is zelf geen kabinet."],
+        wrongHints: [null, "Koning en ministers samen heten 'de regering'. Hoort de koning ook bij het kabinet?", "Dat is het parlement — en dat controleert juist.", "Een partij kan meeregeren, maar is zelf geen kabinet."],
         uitlegPad: {
           stappen: [{ titel: "Regering vs kabinet", tekst: "**Regering** = koning + ministers + staatssecretarissen. **Kabinet** = alleen ministers + staatssecretarissen (zonder koning). Hoofd: **minister-president** (premier). De ministerraad (alleen de ministers) vergadert op vrijdag in de Trêveszaal (Den Haag). Beslissingen bij meerderheid + collegiale verantwoordelijkheid." }],
           niveaus: { basis: "Ministers + staatssecretarissen.", simpeler: "Kabinet = ministers + staatssecretarissen", nogSimpeler: "Ministers + staatssecretarissen" },
@@ -72,9 +72,9 @@ const steps = [
       },
       {
         q: "**Coalitie Schoof** (juli 2024) bestond uit:",
-        options: ["PVV + VVD + NSC + BBB","CDA + PvdA","D66 + VVD","Eén partij meerderheid"],
+        options: ["PVV + VVD + NSC + BBB","PVV + VVD + CDA + JA21","VVD + D66 + CDA + CU","PVV + NSC + BBB + CDA"],
         answer: 0,
-        wrongHints: [null, "Niet deze coalitie.", "Niet deze coalitie.", "Komt in NL vrijwel nooit voor."],
+        wrongHints: [null, "CDA en JA21 zaten niet in dit kabinet. Welke nieuwe partijen wonnen in 2023 veel zetels?", "Dat was het kabinet-Rutte IV (2022). Wie wonnen de verkiezingen van november 2023?", "Het CDA had in 2023 maar 5 zetels. Welke grote partij van Yeşilgöz deed wel mee?"],
         uitlegPad: {
           stappen: [{ titel: "Eerste PVV-deelname", tekst: "**Kabinet-Schoof** vanaf 2 juli 2024: 4-partij-coalitie **PVV + VVD + NSC + BBB**. **Premier**: Dick Schoof (extra-parlementair, geen partij). Eerste keer PVV in regering. Compromis-akkoord 'Hoofdlijnenakkoord'. Omstreden + spanningen rond migratie + EU-positie. In juni 2025 stapte de PVV eruit." }],
           niveaus: { basis: "4 partijen.", simpeler: "Schoof = PVV/VVD/NSC/BBB", nogSimpeler: "PVV/VVD/NSC/BBB" },
@@ -91,9 +91,9 @@ const steps = [
     checks: [
       {
         q: "Welk **integratie-model** behoudt eigen cultuur?",
-        options: ["Multiculturalisme","Assimilatie","Segregatie","Discriminatie"],
+        options: ["Multiculturalisme","Assimilatie","Segregatie","Smeltkroes"],
         answer: 0,
-        wrongHints: [null, "Niet — aanpassen.", "Niet — apart.", "Niet integratie."],
+        wrongHints: [null, "Bij assimilatie pas je je volledig aan de nieuwe cultuur aan. Blijft je eigen cultuur dan bestaan?", "Bij segregatie leven groepen langs elkaar heen. Is dat nog integratie?", "In een smeltkroes versmelten culturen tot iets nieuws. Blijft de eigen cultuur dan herkenbaar?"],
         uitlegPad: {
           stappen: [{ titel: "Salad bowl", tekst: "**Multiculturalisme**: migranten behouden eigen culturele identiteit naast nieuwe samenleving ('salad bowl'). **Assimilatie**: volledig aanpassen aan dominante cultuur ('melting pot' VS-traditioneel). NL heeft historisch geneigd richting multiculturalisme, sinds 2002 (Fortuyn-moord) meer assimilatie-eis." }],
           niveaus: { basis: "Multiculturalisme.", simpeler: "Behoud cultuur = multi", nogSimpeler: "Multiculturalisme" },
@@ -101,9 +101,9 @@ const steps = [
       },
       {
         q: "Welk percentage NL-bevolking heeft **niet-westerse migratie-achtergrond** (2024)?",
-        options: ["~15%","~5%","~50%","~1%"],
+        options: ["~15%","~5%","~26%","~40%"],
         answer: 0,
-        wrongHints: [null, "Te laag.", "Te hoog.", "Veel te laag."],
+        wrongHints: [null, "Alleen al mensen met een Turkse, Marokkaanse of Surinaamse achtergrond zijn samen meer dan 5%.", "Zo'n kwart heeft een migratieachtergrond als je westers en niet-westers optelt. Hoeveel is alleen niet-westers?", "Mensen schatten dit vaak te hoog in. Wat zeggen de CBS-cijfers?"],
         uitlegPad: {
           stappen: [{ titel: "CBS-cijfers", tekst: "NL-bevolking 2024 (~18 mln):\n• **Autochtoon**: ~75% (NL-geboren met NL-geboren ouders).\n• **Westers** (EU/VS/etc.): ~10%.\n• **Niet-westers**: **~15%** (Turks, Marokkaans, Surinaams, Antilliaans, Syrisch, Iraans, etc.).\n\nGroei van migratie-achtergrond: 1972 ~9%, 2024 ~25%. CBS-definities veranderd 2022 — nu meer focus op herkomst-land." }],
           niveaus: { basis: "15%.", simpeler: "Niet-westers ~15%", nogSimpeler: "15" },
@@ -121,9 +121,9 @@ const steps = [
       },
       {
         q: "Hoeveel % NL is **geen religie** (2023)?",
-        options: ["~55%","~10%","~80%","~30%"],
+        options: ["~55%","~40%","~80%","~30%"],
         answer: 0,
-        wrongHints: [null, "Te laag.", "Te hoog.", "Christelijk."],
+        wrongHints: [null, "Het aandeel zonder religie groeit al tientallen jaren. Is 40% de stand van nu of van vroeger?", "Nog een flink deel van Nederland noemt zich christen of moslim. Blijft er dan 80% over?", "Rond de 30% noemt zich christelijk. Hoeveel mensen noemen zich niets?"],
         uitlegPad: {
           stappen: [{ titel: "Sterke secularisatie", tekst: "**NL 2023**: ~55% geen religie / atheïst / agnost. Christendom ~30% (RK 20%, protestants 10%). Islam ~5%. Andere <1%.\n\n**Trend secularisatie**: 1960 ~80% kerkelijk → 2023 ~30%. Eén van snelst-seculierende landen wereld. Verzuiling (1900-1960) afgebroken." }],
           niveaus: { basis: "55%.", simpeler: "Geen religie = 55%", nogSimpeler: "55" },
@@ -171,9 +171,9 @@ const steps = [
       },
       {
         q: "Hoogste **rechter** in NL is:",
-        options: ["Hoge Raad","Gerechtshof","Rechtbank","Koning"],
+        options: ["Hoge Raad","Gerechtshof","Rechtbank","Constitutioneel Hof"],
         answer: 0,
-        wrongHints: [null, "Niet — hoger beroep, maar nog niet hoogste.", "Eerste aanleg.", "Geen rechter."],
+        wrongHints: [null, "Niet — hoger beroep, maar nog niet hoogste.", "Bij de rechtbank begint een zaak (eerste aanleg). Waar kun je daarna nog heen?", "Veel landen hebben een grondwettelijk hof, maar Nederland niet. Welk college staat hier bovenaan?"],
         uitlegPad: {
           stappen: [{ titel: "Cassatie", tekst: "**Hoge Raad** (Den Haag) = hoogste rechter NL. **Cassatie**: niet over feiten, maar of wet correct is toegepast door lagere rechter. Boven Hoge Raad alleen internationale instanties (EHRM voor mensenrechten, HvJ EU voor EU-recht). HR kan **niet** wetten toetsen aan grondwet (art 120 — uniek NL-element)." }],
           niveaus: { basis: "Hoge Raad.", simpeler: "Hoogste = HR", nogSimpeler: "HR" },
@@ -183,7 +183,7 @@ const steps = [
         q: "Welk **strafdoel** gaat over terugkeer in de maatschappij?",
         options: ["Resocialisatie","Vergelding","Preventie","Beveiliging"],
         answer: 0,
-        wrongHints: [null, "Verdiende straf.", "Afschrikken.", "Apart houden."],
+        wrongHints: [null, "Bij vergelding krijgt de dader wat hij verdient. Gaat dat over terugkeer?", "Preventie wil daders en anderen afschrikken. Is dat hetzelfde als terugkeren?", "Beveiliging houdt gevaarlijke daders juist apart van de samenleving."],
         uitlegPad: {
           stappen: [{ titel: "Heropvoeden", tekst: "**Resocialisatie**: dader heropvoeden + voorbereiden op terugkeer in maatschappij. Bv. via onderwijs in gevangenis, werk-projecten, reclassering, schuldhulp. NL-strafrecht legt **veel nadruk** op resocialisatie (kortere straffen dan VS). Tegenargument: te lichte straffen geven een slecht signaal. Andere doelen: vergelding, preventie, beveiliging." }],
           niveaus: { basis: "Resocialisatie.", simpeler: "Terug in maatschappij", nogSimpeler: "Resocialisatie" },
@@ -193,7 +193,7 @@ const steps = [
         q: "Welk recht **geldt tussen burgers onderling**?",
         options: ["Privaatrecht","Strafrecht","Bestuursrecht","Staatsrecht"],
         answer: 0,
-        wrongHints: [null, "Staat vervolgt.", "Overheid neemt besluiten.", "Grondwet + instituties."],
+        wrongHints: [null, "Bij strafrecht vervolgt de staat een verdachte. Staan daar twee burgers tegenover elkaar?", "Bestuursrecht gaat over besluiten van de overheid, zoals een vergunning.", "Staatsrecht regelt de Grondwet en de inrichting van de staat."],
         uitlegPad: {
           stappen: [{ titel: "Civiel recht", tekst: "**Privaatrecht (civiel)** regelt verhoudingen tussen burgers/organisaties: contracten, eigendom, huwelijk, schade, erfrecht, arbeidsrecht. Conflict → civiele rechter. **Publiek recht** (staat ↔ burger): strafrecht, bestuursrecht, staatsrecht, belastingrecht." }],
           niveaus: { basis: "Privaat.", simpeler: "Burger-burger = privaat", nogSimpeler: "Privaatrecht" },
@@ -222,7 +222,7 @@ const steps = [
         q: "**Aangifte**-bereidheid bij politie:",
         options: ["Sterk gedaald sinds 2002","Sterk gestegen sinds 2002","Stabiel gebleven sinds 2002","Onbekend, want niet gemeten"],
         answer: 0,
-        wrongHints: [null, "Wat laat de Veiligheidsmonitor zien over hoe vaak slachtoffers nog naar de politie stappen?", "Niet — wel veranderd.", "Het CBS meet dit al jaren in de Veiligheidsmonitor."],
+        wrongHints: [null, "Wat laat de Veiligheidsmonitor zien over hoe vaak slachtoffers nog naar de politie stappen?", "Laat de Veiligheidsmonitor een vlakke lijn zien?", "Het CBS meet dit al jaren in de Veiligheidsmonitor."],
         uitlegPad: {
           stappen: [{ titel: "Dark figure groter", tekst: "**Aangifte-bereidheid** is **sterk gedaald** sinds 2002. Redenen: 'politie doet er toch niets mee', lange wachttijden, online opmaken te omslachtig, lichte feiten niet meer aangegeven. Daardoor: officiële cijfers lager → maar werkelijke criminaliteit niet noodzakelijk lager. **Dark figure** (niet-geregistreerde criminaliteit) groot." }],
           niveaus: { basis: "Gedaald.", simpeler: "Aangifte ↓", nogSimpeler: "Gedaald" },
@@ -240,9 +240,9 @@ const steps = [
       },
       {
         q: "Welke is **georganiseerde criminaliteit** NL?",
-        options: ["Drugshandel via havens","Verkeersovertredingen","Belasting-ontduiking","Diefstal fiets"],
+        options: ["Drugshandel via havens","Vandalisme na een voetbalduel","Fraude door een directeur","Winkeldiefstal door tieners"],
         answer: 0,
-        wrongHints: [null, "Niet primair georg.", "Witteboorden.", "Veelvoorkomend, niet georg."],
+        wrongHints: [null, "Dat is impulsief geweld van losse groepjes. Zit er een vaste organisatie met winstdoel achter?", "Fraude binnen een gewoon bedrijf heet witteboordencriminaliteit.", "Een losse diefstal is veelvoorkomende criminaliteit. Zit er een netwerk achter?"],
         uitlegPad: {
           stappen: [{ titel: "Cocaïne + heroïne via havens", tekst: "**Georganiseerde criminaliteit NL**: vooral **drugshandel** via Rotterdam + Antwerpen-havens. NL = belangrijk doorvoerland EU. Bij smokkel via containers: enorme bedragen + geweld. Liquidaties (Marengo-zaak Ridouan Taghi). **Peter R. de Vries vermoord 2021** door criminele organisatie. Discussie 'narcostaat'. Aanpak via 'ondermijningsfonds' + politie + justitie." }],
           niveaus: { basis: "Drugs.", simpeler: "Georg = drugs", nogSimpeler: "Drugshandel" },
@@ -250,9 +250,9 @@ const steps = [
       },
       {
         q: "**Subjectieve veiligheid** is:",
-        options: ["Hoe veilig je je voelt","Aantal misdrijven","Politie-cijfers","Cameratoezicht"],
+        options: ["Hoe veilig je je voelt","Aantal misdrijven","Je eigen inbraakpreventie","Politietoezicht op straat"],
         answer: 0,
-        wrongHints: [null, "Telt dit wat er gebeurt, of wat mensen ervaren?", "Zijn politiecijfers een gevoel of een meting?", "Camera's kunnen invloed hebben, maar wordt hier een maatregel gevraagd of een beleving?"],
+        wrongHints: [null, "Telt dit wat er gebeurt, of wat mensen ervaren?", "Een goed slot is een maatregel die je zelf neemt. Wordt hier gevraagd naar een maatregel of een beleving?", "Meer blauw op straat kan helpen, maar is dat zelf een gevoel?"],
         uitlegPad: {
           stappen: [{ titel: "Gevoel vs cijfers", tekst: "**Subjectieve veiligheid** = gevoel + perceptie van veiligheid. Kan **afwijken** van objectieve criminaliteit. Voorbeeld: criminaliteit NL daalt sinds 2002, maar **gevoel onveiligheid stijgt** door media-aandacht voor incidenten + polarisatie. **Moral panic**: overdreven angst over specifieke groep (jongeren, migranten, etc.). Belangrijk voor politiek beleid." }],
           niveaus: { basis: "Gevoel.", simpeler: "Subj = gevoel", nogSimpeler: "Gevoel" },
@@ -279,9 +279,9 @@ const steps = [
       },
       {
         q: "Hoe wordt **NPO** gefinancierd?",
-        options: ["Belasting","Alleen reclame","Donaties","Aandeelhouders"],
+        options: ["Belastinggeld","Kijkgeld per tv","Abonnementen","Aandeelhouders"],
         answer: 0,
-        wrongHints: [null, "Niet — beperkte reclame.", "Niet — institutioneel.", "Niet — geen aandelen."],
+        wrongHints: [null, "Kijk- en luistergeld bestond tot 2000. Hoe gaat het sindsdien?", "NPO Plus bestaat, maar betalen de meeste kijkers een abonnement? Wie betaalt dan?", "De NPO is geen bedrijf op de beurs. Wie betaalt dan de programma's?"],
         uitlegPad: {
           stappen: [{ titel: "Publieke omroep", tekst: "**NPO** (Nederlandse Publieke Omroep) wordt vooral **gefinancierd via belasting** (rijksmediabijdrage, honderden miljoenen per jaar). Beperkte reclame toegestaan (Ster). Onafhankelijk van regering — eigen bestuur. Bedoeld voor pluriforme + kwalitatieve programmering. Tegenovergesteld: SBS/RTL = commercieel, gefinancierd door reclame + abonnementen." }],
           niveaus: { basis: "Belasting.", simpeler: "NPO = belasting", nogSimpeler: "Belasting" },
@@ -311,7 +311,7 @@ const steps = [
         q: "Onderzoeker **Jonathan Haidt** waarschuwt voor:",
         options: ["Mentale gezondheid jongeren door sociale media","Klimaatangst bij jongeren door het nieuws","Stijgende inflatie door de coronacrisis","Spanningen door migratie naar Europa"],
         answer: 0,
-        wrongHints: [null, "Haidt is sociaal-psycholoog — welke grote verandering zag hij rond 2012 in het leven van jongeren?", "Economen-onderwerp — waar kijkt een psycholoog naar?", "Politiek thema — denk aan zijn boek over 'de angstige generatie': welke groep en welk probleem?"],
+        wrongHints: [null, "Haidt is sociaal-psycholoog — welke grote verandering zag hij rond 2012 in het leven van jongeren?", "Inflatie is een onderwerp voor economen. Waar kijkt een psycholoog naar?", "Migratie is een politiek thema. Denk aan zijn boek over 'de angstige generatie': welke groep en welk probleem?"],
         uitlegPad: {
           stappen: [{ titel: "The Anxious Generation 2024", tekst: "**Jonathan Haidt** (NYU psycholoog) — *The Anxious Generation* (2024): stelt dat **smartphones + sociale media** sinds ~2010 mentale gezondheid jongeren beschadigen (depressie + angst + zelfdoding gestegen). Aanbevelingen: **geen smartphone vóór 14**, **geen sociale media vóór 16**, **smartphone-vrije scholen**. Internationaal debat — diverse landen overwegen wetgeving (Australië verbiedt sociale media <16 jaar 2025)." }],
           niveaus: { basis: "Mentale gezondheid jongeren.", simpeler: "Haidt = mentale gezondheid", nogSimpeler: "Jongeren + sociale media" },

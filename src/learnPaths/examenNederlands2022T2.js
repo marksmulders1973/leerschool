@@ -13,13 +13,13 @@ const tekst1 = {
 const tekst2 = {
   titel: "T2 — Waarom is gapen zo aanstekelijk?",
   body:
-    "**(1-2)** We zien gapen als teken van vermoeidheid en verveling. Toch doen alle mensen (en veel dieren) het, 6 tot 23 keer per dag — en het werkt aanstekelijk. Waarom, en wat is de functie?\n\n**(3-5)** Wetenschappers (o.a. bioloog Jorg Massen) lanceerden door de jaren heen veel verklaringen: sociale spanning verminderen, ziekteverwekkers verwijderen, extra zuurstof voor het brein (al 30 jaar geleden ontkracht). We gapen vooral bij overgangsfases (rust → inspanning).\n\n**(6-7)** Nieuw inzicht uit metingen: een gaap koelt de hersenen af richting de optimale temperatuur. De aanstekelijkheid werd lang verklaard via empathie.\n\n**(8-10, slot)** Massen denkt anders: 'nagapen' helpt een groep zich klaar te maken (pinguïns voor een gevaarlijke oversteek). Conclusie: gapen is geen teken van verveling, maar een manier om alert te blijven.",
+    "**(1-2)** We zien gapen als teken van vermoeidheid en verveling. Toch doen alle mensen (en veel dieren) het, 6 tot 23 keer per dag — en het werkt aanstekelijk. Waarom, en wat is de functie?\n\n**(3-5)** Wetenschappers (o.a. bioloog Jorg Massen) kwamen door de jaren heen met veel ideeën: sociale spanning verminderen, ziekteverwekkers verwijderen, extra zuurstof voor het brein (al 30 jaar geleden ontkracht). We gapen vooral bij overgangsfases (rust → inspanning).\n\n**(6-7)** Nieuw inzicht uit metingen: een gaap koelt de hersenen af richting de optimale temperatuur. De aanstekelijkheid werd lang verklaard via empathie.\n\n**(8-10, slot)** Massen denkt anders: 'nagapen' helpt een groep zich klaar te maken (pinguïns voor een gevaarlijke oversteek). Conclusie: gapen is geen teken van verveling, maar een manier om alert te blijven.",
 };
 
 const tekst3 = {
   titel: "T3 — Advertentie: Kontakt Mediapartners, 'een andere kijk op bereik'",
   body:
-    "Een advertentie van mediabedrijf Kontakt Mediapartners, gericht op ondernemers uit de regio (Goudriaan/Alblasserwaard). Het bedrijf wil ondernemers helpen hun bereik te vergroten.\n\nDe slogan: *'Opvallen in de kudde, maar ook met beide laarzen in de Hollandse klei blijven staan.'* — Kontakt presenteert zich als tegelijk **onderscheidend** ('opvallen in de kudde') én **nuchter/down-to-earth** ('beide laarzen in de Hollandse klei').\n\n*(Tekstsoort: advertentie, met een afbeelding van een boer die op een hek leunt.)*",
+    "Een advertentie van mediabedrijf Kontakt Mediapartners, gericht op ondernemers uit de regio (Goudriaan/Alblasserwaard). Het bedrijf wil ondernemers helpen hun bereik te vergroten.\n\nDe slogan: *'Opvallen in de kudde, maar ook met beide laarzen in de Hollandse klei blijven staan.'*\n\n*(Tekstsoort: advertentie, met een afbeelding van een boer die op een hek leunt.)*",
 };
 
 const tekst4 = {
@@ -251,7 +251,7 @@ const steps = [
       ],
       answer: 1,
       wrongHints: [
-        "'Beide laarzen in de klei' betekent niet ambitieus, maar juist met beide benen op de grond.",
+        "Wat voor iemand blijft 'met beide laarzen in de Hollandse klei' staan? Is dat iemand die vooral hogerop wil?",
         null,
         "'Opvallen in de kudde' — gaat dat over mode en trends, of over iets anders?",
         "Past 'met beide laarzen in de klei blijven staan' bij iemand die vooral ambitieus is?",

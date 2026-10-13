@@ -67,19 +67,19 @@ const steps = [
         q: "Hoeveel mensen op aarde **nu** (2024)?",
         options: ["~8 miljard", "~1 miljard", "~80 miljard", "~100 miljoen"],
         answer: 0,
-        wrongHints: [null, "Was in 1800.", "Veel te veel.", "Veel te weinig."],
+        wrongHints: [null, "Rond 1800 waren er ongeveer zoveel mensen. Is de wereldbevolking sindsdien gegroeid?", "Waar zou het voedsel voor zoveel mensen vandaan moeten komen? Hoe groot is de wereldbevolking echt?", "Nederland heeft al bijna 18 miljoen inwoners. Kan de hele wereld er dan maar 100 miljoen hebben?"],
       },
       {
         q: "Welk **continent** heeft de meeste mensen?",
         options: ["Azië", "Afrika", "Europa", "Amerika"],
         answer: 0,
-        wrongHints: [null, "Tweede.", "Veel minder.", "Veel minder."],
+        wrongHints: [null, "Afrika groeit het snelst, maar in welk werelddeel liggen de twee landen met de meeste inwoners?", "Europa heeft zo'n 750 miljoen inwoners. Is dat veel vergeleken met de grootste landen ter wereld?", "Noord- en Zuid-Amerika hebben samen ruim 1 miljard inwoners. In welk werelddeel liggen de twee grootste landen?"],
       },
       {
         q: "Welk **land** heeft sinds 2023 de meeste mensen?",
         options: ["India", "China", "VS", "Indonesië"],
         answer: 0,
-        wrongHints: [null, "Was tot 2023 grootst.", "Veel kleiner.", "4e plaats."],
+        wrongHints: [null, "China was tot 2023 nummer 1, maar daar daalt het aantal inwoners nu. Welk land is China voorbijgegaan?", "De VS heeft zo'n 340 miljoen inwoners en staat op plek 3. Welke twee landen hebben er elk meer dan een miljard?", "Indonesië heeft zo'n 280 miljoen inwoners en staat op plek 4. Welke twee landen hebben er elk meer dan een miljard?"],
       },
       {
         q: "Wat is **vergrijzing**?",
@@ -110,15 +110,15 @@ const steps = [
     checks: [
       {
         q: "Wat is **bevolkingsdichtheid**?",
-        options: ["Mensen per km²", "Aantal kinderen", "Aantal landen", "Aantal steden"],
+        options: ["Aantal inwoners per km²", "Totaal aantal inwoners", "Geboorten per 1000 inwoners", "Oppervlakte van een land in km²"],
         answer: 0,
-        wrongHints: [null, "Aantal kinderen = geboortecijfer, ander begrip.", "Aantal landen heeft niets met dichtheid te maken.", "Aantal steden is geen dichtheid-maat."],
+        wrongHints: [null, "China heeft veel inwoners, maar ook heel veel ruimte. Zegt het totaal dan hoe dicht mensen op elkaar wonen?", "Geboorten per 1000 inwoners is het geboortecijfer. Gaat 'dicht' over geboren worden of over ruimte?", "Alleen de oppervlakte zegt niets over hoeveel mensen er wonen. Wat moet je er nog bij nemen?"],
       },
       {
         q: "Waar wonen weinig mensen?",
-        options: ["Woestijnen", "Kustgebieden", "Rivierdalen", "Vlaktes"],
+        options: ["Droge woestijngebieden", "Hellingen van vulkanen", "Rivierdelta's die overstromen", "Kusten waar orkanen komen"],
         answer: 0,
-        wrongHints: [null, "Aan de kust wonen juist veel mensen — water + handel.", "Rivierdalen zijn vruchtbaar, dus dichtbevolkt.", "Vlaktes zijn handig voor steden en landbouw."],
+        wrongHints: [null, "Vulkanische grond is erg vruchtbaar: op Java wonen miljoenen mensen vlak bij vulkanen. Is dat weinig?", "In de delta's van Bangladesh en Egypte wonen juist heel veel mensen, ondanks het water. Waarom zou dat zijn?", "Langs kusten als die van Florida en Bangladesh wonen veel mensen, ondanks de orkanen. Wat heb je elke dag nodig dat in sommige gebieden bijna ontbreekt?"],
       },
       {
         q: "**10 miljoen inwoners** op **100.000 km²**. Dichtheid?",
@@ -143,9 +143,9 @@ const steps = [
       },
       {
         q: "Wat is de **Randstad**?",
-        options: ["De vier grote steden in het westen", "Alle steden langs de grens", "Alleen Amsterdam en omgeving", "De provincies in het noorden"],
+        options: ["De vier grote steden in het westen", "De steden langs de grote rivieren", "Amsterdam met de steden eromheen", "De vier grootste steden van Brabant"],
         answer: 0,
-        wrongHints: [null, "Kijk naar het westen van het land, niet naar de grens.", "Amsterdam hoort erbij, maar welke grote steden liggen er nog meer in een ring?", "Kijk naar het westen, niet naar het noorden."],
+        wrongHints: [null, "Langs de grote rivieren liggen Nijmegen en Arnhem. Liggen die in het westen van het land?", "Amsterdam hoort erbij, maar welke andere grote steden liggen er nog meer in een ring?", "Eindhoven en Tilburg liggen in het zuiden. In welk deel van het land ligt de Randstad?"],
       },
       {
         q: "**Verstedelijking** (urbanisatie) = ?",
@@ -170,9 +170,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **emigratie**?",
-        options: ["Eigen land verlaten", "Ander land binnenkomen", "Binnen eigen stad", "Naar het buitenland reizen"],
+        options: ["Je land verlaten om elders te wonen", "Een nieuw land binnenkomen om te wonen", "Binnen je eigen land verhuizen", "Een tijdje naar het buitenland reizen"],
         answer: 0,
-        wrongHints: [null, "Dat is immigratie.", "Niet emigratie.", "Reizen is geen verhuizen."],
+        wrongHints: [null, "Een land binnenkomen heet immigratie (met de i van 'in'). Waar staat de e van emigratie voor?", "Verhuizen binnen je land heet interne migratie. Steek je bij emigratie een grens over?", "Na een reis kom je weer thuis. Ga je bij emigratie ook weer terug?"],
       },
       {
         q: "Wat is een **vluchteling**?",
@@ -203,9 +203,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **push-factor**?",
-        options: ["Reden om weg te gaan", "Reden om aan te komen", "Reden om te blijven", "Reden om te bezoeken"],
+        options: ["Reden om weg te gaan", "Reden om aan te komen", "Reden om te blijven", "Reden om terug te keren"],
         answer: 0,
-        wrongHints: [null, "Dat is pull.", "Tegengesteld.", "Niet specifiek migratie."],
+        wrongHints: [null, "Wat een land aantrekkelijk maakt, trekt je aan: dat is pull. Wat doet een push met je?", "Push betekent duwen. Blijf je staan als je geduwd wordt?", "Terugkeren naar je geboorteland heet remigratie. Waar duwt een push-factor je vandaan?"],
       },
       {
         q: "Welke is een **pull-factor**?",
@@ -221,9 +221,9 @@ const steps = [
       },
       {
         q: "Wat is de **belangrijkste push-factor** voor Syrische vluchtelingen?",
-        options: ["Oorlog", "Klimaat", "Werkloosheid", "Onderwijs"],
+        options: ["Oorlog", "Droogte", "Werkloosheid", "Aardbeving"],
         answer: 0,
-        wrongHints: [null, "Droogte speelde wel mee, maar was dat de reden dat miljoenen mensen in korte tijd moesten vluchten?", "Speelt mee.", "Niet hoofd-push."],
+        wrongHints: [null, "Droogte speelde vóór 2011 wel mee, maar was dat de reden dat miljoenen mensen in korte tijd moesten vluchten?", "Weinig werk speelt mee, maar daarvoor vlucht je niet halsoverkop met je hele gezin. Wat gebeurde er vanaf 2011 in Syrië?", "De zware aardbeving was pas in 2023, toen al miljoenen Syriërs gevlucht waren. Wat begon er in 2011?"],
       },
     ],
   },
@@ -236,9 +236,9 @@ const steps = [
     checks: [
       {
         q: "Wanneer kwamen de eerste **gastarbeiders**?",
-        options: ["1950-'60", "1900-'20", "1850-'70", "2000+"],
+        options: ["1950-'60", "1900-'20", "1975-'85", "1990-'00"],
         answer: 0,
-        wrongHints: [null, "Te vroeg.", "Te vroeg.", "Veel later."],
+        wrongHints: [null, "Rond 1900 vertrokken juist veel Nederlanders naar het buitenland. Wanneer was er na de Tweede Wereldoorlog een tekort aan arbeiders?", "Rond 1975 kwamen vooral Surinamers en de gezinnen van gastarbeiders. Wanneer kwamen de arbeiders zelf?", "Rond 1990 woonden de eerste gastarbeiders al lang in Nederland. Wanneer haalden fabrieken ze voor het eerst?"],
       },
       {
         q: "Hoeveel % NL'ers heeft **migratie-achtergrond** (2024)?",
@@ -248,15 +248,15 @@ const steps = [
       },
       {
         q: "Wat is een **AZC**?",
-        options: ["Asielzoekerscentrum", "Algemeen Ziekenhuis", "Amsterdamse Zorg", "Antwerps Centrum"],
+        options: ["Asielzoekerscentrum", "Algemeen zorgcentrum", "Arbeidsmigrantencentrum", "Vertrekcentrum asielzoekers"],
         answer: 0,
-        wrongHints: [null, "Niet AZC.", "Niet AZC.", "Niet NL."],
+        wrongHints: [null, "Bij een zorgcentrum denk je aan ouderen of zieken. Voor wie is een AZC bedoeld?", "Arbeidsmigranten komen voor werk en regelen zelf hun woning. Wie wacht er in een AZC op een besluit?", "In een vertrekcentrum wonen mensen bij wie het besluit al 'nee' is. Waar wacht je óp dat besluit?"],
       },
       {
         q: "Welke **nieuwe groep** kwam vanaf **2022** in grote aantallen naar Nederland?",
-        options: ["Oekraïners", "Marokkanen", "Surinamers", "Hugenoten"],
+        options: ["Oekraïners", "Syriërs", "Polen", "Surinamers"],
         answer: 0,
-        wrongHints: [null, "Eerder gastarbeiders.", "1975+.", "Veel eerder — rond 1685."],
+        wrongHints: [null, "Veel Syriërs kwamen rond 2015, op de vlucht voor de burgeroorlog. Welke oorlog begon in februari 2022?", "Polen kwamen vooral na 2004, toen ze in de EU vrij mochten werken. Wie moest er vanaf 2022 vluchten?", "Veel Surinamers kwamen rond de onafhankelijkheid in 1975. Welk land werd in 2022 binnengevallen?"],
       },
     ],
   },
@@ -275,9 +275,9 @@ const steps = [
       },
       {
         q: "Wat is **bevolkingsdichtheid**?",
-        options: ["Mensen per km²", "Aantal kinderen", "Aantal landen", "Aantal geboortes"],
+        options: ["Aantal inwoners per km²", "Totaal aantal inwoners", "Oppervlakte van een land in km²", "Geboorten per 1000 inwoners"],
         answer: 0,
-        wrongHints: [null, "Niet dichtheid.", "Niet dichtheid.", "Geboortecijfer."],
+        wrongHints: [null, "China heeft veel inwoners, maar ook heel veel ruimte. Zegt het totaal dan hoe dicht mensen op elkaar wonen?", "Alleen de oppervlakte zegt niets over hoeveel mensen er wonen. Wat moet je er nog bij nemen?", "Geboorten per 1000 inwoners is het geboortecijfer. Gaat 'dicht' over geboren worden of over ruimte?"],
       },
       {
         q: "Welke is een **push-factor**?",
@@ -289,13 +289,13 @@ const steps = [
         q: "Welk **land** heeft sinds 2023 de meeste mensen?",
         options: ["India", "China", "VS", "Rusland"],
         answer: 0,
-        wrongHints: [null, "Was nummer 1 tot 2023.", "Veel kleiner.", "Veel kleiner."],
+        wrongHints: [null, "China was tot 2023 nummer 1, maar daar daalt het aantal inwoners nu. Welk land is China voorbijgegaan?", "De VS heeft zo'n 340 miljoen inwoners en staat op plek 3. Welke twee landen hebben er elk meer dan een miljard?", "Rusland is het grootste land van de wereld, maar heeft maar zo'n 145 miljoen inwoners. Welke twee landen hebben er meer dan een miljard?"],
       },
       {
         q: "Welke 4 steden vormen samen de **Randstad**?",
-        options: ["Amsterdam + Rotterdam + Den Haag + Utrecht", "Amsterdam + Rotterdam + Den Haag + Eindhoven", "Amsterdam + Eindhoven + Tilburg + Groningen", "Den Haag + Maastricht + Leeuwarden + Zwolle"],
+        options: ["Amsterdam + Rotterdam + Den Haag + Utrecht", "Amsterdam + Rotterdam + Den Haag + Eindhoven", "Amsterdam + Rotterdam + Utrecht + Haarlem", "Rotterdam + Den Haag + Utrecht + Almere"],
         answer: 0,
-        wrongHints: [null, "Bijna — maar Eindhoven ligt niet in de Randstad.", "Niet de Randstad.", "Niet de Randstad."],
+        wrongHints: [null, "Eindhoven is groot, maar ligt in Brabant. Ligt dat in het westen van het land?", "Haarlem ligt wel in de Randstad, maar is geen van de vier grote steden. Welke stad met de regering ontbreekt?", "Almere is snel gegroeid, maar hoort niet bij de vier grote steden. Welke grootste stad van het land ontbreekt?"],
       },
       {
         q: "Wat is een **megastad**?",
@@ -305,9 +305,9 @@ const steps = [
       },
       {
         q: "**Push-factoren** zorgen ervoor dat mensen ___?",
-        options: ["Weggaan uit hun land", "Naar een land komen", "In hun land blijven", "Op vakantie gaan"],
+        options: ["Weggaan uit hun land", "Naar een land komen", "In hun land blijven", "Terugkeren naar hun land"],
         answer: 0,
-        wrongHints: [null, "Dat zijn pull-factoren.", "Push betekent duwen — blijf je dan?", "Vakantie is tijdelijk, geen migratie."],
+        wrongHints: [null, "Wat je naar een land toe trekt, heet een pull-factor. Wat doet een push-factor?", "Push betekent duwen. Blijf je staan als je geduwd wordt?", "Terugkeren naar je geboorteland heet remigratie. Waar duwt een push-factor je vandaan?"],
       },
       {
         q: "Welke is een **pull-factor** voor migratie?",

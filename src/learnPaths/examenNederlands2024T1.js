@@ -7,13 +7,13 @@
 const tekst1 = {
   titel: "T1 — Klimaatverandering: het Britse dorp dat wordt opgeslokt door de zee",
   body:
-    "**(1)** Het Engelse kustplaatsje Happisburgh heeft een 14e-eeuwse kerk, een beroemde rood-wit gestreepte vuurtoren en zo'n zeshonderd woningen. Maar dat aantal huizen wordt elk jaar minder.\n\n**(2-4)** Door erosie van de Engelse kust worden steeds meer huizen meegezogen door de zee. Bewoner Kerby wijst naar het strand waar 'eerst een weiland met paarden' lag — nu staat er een 'road closed'-bord zodat mensen niet per ongeluk in de afgrond lopen.\n\n**(5)** De Britse regering trekt zich grotendeels terug uit kustverdediging — anders dan Nederland, dat actief zand opspuit. Wat moet je beschermen? Een dorp? Een vuurtoren? Of laat je de natuur z'n gang gaan?\n\n*(De tekst beschrijft erosie als een eeuwen-oud maar versnellend proces. Slot-alinea: er moet nagedacht worden over WAT bescherming verdient.)*",
+    "**(1)** Het Engelse kustplaatsje Happisburgh heeft een 14e-eeuwse kerk, een beroemde rood-wit gestreepte vuurtoren en zo'n zeshonderd woningen. Maar dat aantal huizen wordt elk jaar minder.\n\n**(2-4)** Door erosie van de Engelse kust worden steeds meer huizen meegezogen door de zee. Bewoner Kerby wijst naar het strand waar 'eerst een weiland met paarden' lag — nu staat er een 'road closed'-bord zodat mensen niet per ongeluk in de afgrond lopen.\n\n**(5)** De Britse regering trekt zich grotendeels terug uit kustverdediging — anders dan Nederland, dat actief zand opspuit. Wat moet je beschermen? Een dorp? Een vuurtoren? Of laat je de natuur z'n gang gaan?",
 };
 
 const tekst2 = {
   titel: "T2 — Maal meer (over kauwen en spijsvertering)",
   body:
-    "**(1)** Het fijnkauwen van je maaltijd is de eerste stap in het verteringsproces. Maar hoe grondig moet dat? Krijg je meer vitamines binnen als je een hap helemaal tot moes maalt?\n\n**(3-5)** Wetenschappers zeggen: het ouderwetse advies '20× kauwen per hap' is niet per se nodig. Maar bij plantaardig voedsel worden voedingsstoffen wél beter opgenomen als je goed fijnmaalt — vooral bij groente en noten.\n\n**(9)** *Slot-alinea*: 'Kauwen helpt vooral bij vegetarisch eten — bij vlees maakt het weinig uit. Wie meer plantaardig eet, doet er goed aan langer te kauwen.' *(De tekst trekt zo een eindconclusie uit alle onderzoeken samen.)*",
+    "**(1)** Het fijnkauwen van je maaltijd is de eerste stap in het verteringsproces. Maar hoe grondig moet dat? Krijg je meer vitamines binnen als je een hap helemaal tot moes maalt?\n\n**(3-5)** Wetenschappers zeggen: het ouderwetse advies '20× kauwen per hap' is niet per se nodig. Maar bij plantaardig voedsel worden voedingsstoffen wél beter opgenomen als je goed fijnmaalt — vooral bij groente en noten.\n\n**(9)** *Slot-alinea*: 'Kauwen helpt vooral bij vegetarisch eten — bij vlees maakt het weinig uit. Wie meer plantaardig eet, doet er goed aan langer te kauwen.'",
 };
 
 const tekst3 = {
@@ -25,7 +25,7 @@ const tekst3 = {
 const tekst4 = {
   titel: "T4 — Uit gewoonte naar Instagram",
   body:
-    "**(1)** De storing bij Facebook weerhield mensen er maandagavond niet van om tegen beter weten in toch steeds Instagram, WhatsApp en Facebook te openen. Duimen van gebruikers leken er als vanzelf naartoe te gaan. *'Het is volstrekt onbewust geworden'*, zegt **mediapsycholoog Tom de Leeuw** van de Universiteit Twente.\n\n**(3-4)** De Leeuw legt uit waarom sociale media-apps zo verslavend zijn: random beloning (de TIMELINE laat steeds iets anders zien), variabele feedback (likes), en designtrucs (oneindig scrollen). Daardoor blijft je brein geprikkeld en blijf je scrollen.\n\n**(5-6)** Uit het *Nationale Social Media Onderzoek 2021* blijkt: 7,5 miljoen Nederlanders gebruiken Facebook, 3,7 miljoen Instagram. Nederlanders besteden gemiddeld 97 minuten per dag aan sociale media — jongeren 15-19 jaar zelfs veel meer.\n\n*(Slot van de tekst gaat over verslavings-mechanismen, normalisatie ('iedereen doet het'), en hoe moeilijk afkicken is. Rode draad: verslaving aan sociale media.)*",
+    "**(1)** De storing bij Facebook weerhield mensen er maandagavond niet van om tegen beter weten in toch steeds Instagram, WhatsApp en Facebook te openen. Duimen van gebruikers leken er als vanzelf naartoe te gaan. *'Het is volstrekt onbewust geworden'*, zegt mediapsycholoog Tom de Leeuw van de Universiteit Twente.\n\n**(3-4)** De Leeuw legt uit waarom sociale media-apps zo verslavend zijn: random beloning (de TIMELINE laat steeds iets anders zien), variabele feedback (likes), en designtrucs (oneindig scrollen). Daardoor blijft je brein geprikkeld en blijf je scrollen.\n\n**(5-6)** Uit het *Nationale Social Media Onderzoek 2021* blijkt: 7,5 miljoen Nederlanders gebruiken Facebook, 3,7 miljoen Instagram. Nederlanders besteden gemiddeld 97 minuten per dag aan sociale media — jongeren 15-19 jaar zelfs veel meer.",
 };
 
 const BRON_LABEL = (n) => `🎓 Echt examen VMBO-GL/TL Nederlands 2024 tijdvak 1, vraag ${n}`;
@@ -64,7 +64,7 @@ const steps = [
         "Te breed — klimaatverandering komt pas later in beeld; alinea 1-5 gaan over WAT er gebeurt aan de kust.",
         "Te smal — alinea 1-5 noemen geen aparte risico-analyse, maar BESCHRIJVEN de verdwijning.",
         null,
-        "Te smal — Happisburgh is 1 voorbeeld. Alinea 1-5 zoomen ook uit naar Britse kust algemeen.",
+        "Te smal — Happisburgh is één voorbeeld. Gaan alinea 1-5 alleen over dit dorp?",
       ],
       explanation: "Alinea 1-5 vertellen: kust trekt terug, dorpen verdwijnen, paden + huizen verdwijnen, Britse overheid grijpt niet in zoals Nederland. Rode draad door dit blok = TERUGTREKKEN van Engelse kust.",
       examenBron: BRON_LABEL(4),
@@ -108,7 +108,7 @@ const steps = [
         "Te smal — Britse-vs-Nederlandse vergelijking is 1 detail, niet de kerngedachte.",
         null,
       ],
-      explanation: "De hoofdgedachte is de boodschap die de hele tekst draagt. Hier: erosie is niet nieuw, gaat sneller door klimaat, en het echte vraagstuk is — wat beschermen we, wat laten we los? Antwoord D dekt precies dat. Antwoord C en B hebben actie-toon die de tekst NIET aanneemt.",
+      explanation: "De hoofdgedachte is de boodschap die de hele tekst draagt. Hier: erosie is niet nieuw, gaat sneller door klimaat, en het echte vraagstuk is — wat beschermen we, wat laten we los? De zin 'Erosie is een eeuwenoud proces dat sneller gaat — er moet nagedacht worden over wat beschermd moet worden' dekt precies dat. De zinnen over 'maatregelen treffen' en 'de Britse regering neemt geen maatregelen' hebben een actie-toon die de tekst NIET aanneemt.",
       examenBron: BRON_LABEL(9),
       bronLink: BRON_LINK,
       bronTekst: tekst1,
@@ -146,7 +146,7 @@ const steps = [
       wrongHints: [
         "Advies = 'doe X'. Er staat een tip in het slot, maar is dat de belangrijkste functie van de hele alinea?",
         null,
-        "Samenvatting = ALLES kort herhalen. Slot trekt 1 conclusie, niet een lijstje.",
+        "Samenvatting = ALLE punten kort herhalen. Herhaalt alinea 9 alle eerdere punten?",
         "Toekomstverwachting = wat ER GAAT gebeuren. Slot zegt wat NU geldt.",
       ],
       explanation: "Slot-alinea (9): 'Kauwen helpt vooral bij vegetarisch eten — wie meer plantaardig eet, doet er goed aan langer te kauwen.' Dat is een EINDOORDEEL uit alle onderzoeken samen = conclusie. (Tip-element is bijproduct; de KERN is de redenering die wordt afgesloten.)",
@@ -228,7 +228,7 @@ const steps = [
       wrongHints: [
         "Anekdote = klein verhaaltje over een persoon. Alinea 1 vertelt geen verhaaltje, alleen wat MENSEN deden bij de storing.",
         null,
-        "Geen anekdote (geen verhaal); geen conclusie (staat aan begin, niet na redenering).",
+        "Een conclusie volgt meestal ná een redenering. Kan die al in alinea 1 staan?",
         "Geen conclusie aan het BEGIN — die hoort aan het EIND.",
       ],
       explanation: "Alinea 1: 'De storing bij Facebook weerhield mensen er niet van...' = aanleiding (1: de storing is dé reden om dit NU te schrijven). + 'zegt mediapsycholoog Tom de Leeuw' = deskundige introductie (4). Beide tegelijk.",

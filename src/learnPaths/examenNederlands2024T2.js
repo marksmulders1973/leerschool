@@ -7,7 +7,7 @@
 const tekst1 = {
   titel: "T1 — Flitsmeister: 'We bedienen vooral mensen die nét een paar km/u te hard rijden'",
   body:
-    "**(1)** Net als op een scherm in een luchtverkeerstoren bewegen tienduizenden blauwe stipjes zich langzaam over de kaart van West-Europa. Ze worden getoond op het kantoor van Flitsmeister in Veenendaal.\n\n**(2)** Wat begon als een simpel lijstje van flitspalen op iemands route is uitgegroeid tot een app met miljoenen gebruikers. Maar Flitsmeister doet inmiddels veel meer dan flitsers melden: filewaarschuwingen, parkeerbetaling, verzekeringskoppeling. *(De tekst introduceert het bedrijf + de app.)*\n\n**(5+)** De app werd ooit gratis omdat de oprichter meer gebruikers wilde — schaal boven directe omzet. Later kwamen betaalde extra's. Het bedrijf is bewust een 'hobbyproject uit de hand gelopen'.\n\n*(De tekst is een interview met de oprichter over de evolutie van Flitsmeister — verandering door de tijd, niet een mening.)*",
+    "**(1)** Net als op een scherm in een luchtverkeerstoren bewegen tienduizenden blauwe stipjes zich langzaam over de kaart van West-Europa. Ze worden getoond op het kantoor van Flitsmeister in Veenendaal.\n\n**(2)** Wat begon als een simpel lijstje van flitspalen op iemands route is uitgegroeid tot een app met miljoenen gebruikers. Maar Flitsmeister doet inmiddels veel meer dan flitsers melden: filewaarschuwingen, parkeerbetaling, verzekeringskoppeling.\n\n**(5+)** De app werd ooit gratis omdat de oprichter meer gebruikers wilde — schaal boven directe omzet. Later kwamen betaalde extra's. Het bedrijf is bewust een 'hobbyproject uit de hand gelopen'.\n\n*(De tekst is een interview met de oprichter.)*",
 };
 
 const tekst2 = {
@@ -25,7 +25,7 @@ const tekst3 = {
 const tekst4 = {
   titel: "T4 — Vegan leer: diervriendelijk en duurzaam, of synoniem voor plastic?",
   body:
-    "**(1)** Vegan leer heeft vaak een negatief imago en wordt beschouwd als 'nepleer'. Maar Abigail Bakker (36), eigenaar van de duurzame Geitenwollenwinkel, is het daar niet mee eens. Veel vegan-leer voldoet aan kwaliteitseisen — zeker bij intensief gebruikte werktassen.\n\n**(3-7)** Vegan leer kan gemaakt zijn van plastic (PU, PVC) — niet diervriendelijk EN niet duurzaam. Maar er zijn ook biobased alternatieven: van appelschillen, ananasbladeren, cactus, druivenpitten. Onderzoeker Stillman: 'Op het vlak van milieu valt nog winst te behalen.' Mensen vergeten vaak dat 'vegan' niet automatisch 'duurzaam' betekent.\n\n**(8-11)** De industrie werkt aan kwaliteit + biobased ontwikkeling. Het beeld 'vegan = altijd plastic' klopt steeds minder. Slot: er zijn drie generaties vegan leer — van plastic naar plant-gebaseerd. *(De tekst is informerend over de ontwikkeling, niet overtuigend.)*",
+    "**(1)** Vegan leer heeft vaak een negatief imago en wordt beschouwd als 'nepleer'. Maar Abigail Bakker (36), eigenaar van de duurzame Geitenwollenwinkel, is het daar niet mee eens. Veel vegan-leer voldoet aan kwaliteitseisen — zeker bij intensief gebruikte werktassen.\n\n**(3-7)** Vegan leer kan gemaakt zijn van plastic (PU, PVC) — niet diervriendelijk EN niet duurzaam. Maar er zijn ook biobased alternatieven: van appelschillen, ananasbladeren, cactus, druivenpitten. Onderzoeker Stillman: 'Op het vlak van milieu valt nog winst te behalen.' Mensen vergeten vaak dat 'vegan' niet automatisch 'duurzaam' betekent.\n\n**(8-11)** De industrie werkt aan kwaliteit + biobased ontwikkeling. Het beeld 'vegan = altijd plastic' klopt steeds minder. Slot: er zijn drie generaties vegan leer — van plastic naar plant-gebaseerd.",
 };
 
 const BRON_LABEL = (n) => `🎓 Echt examen VMBO-GL/TL Nederlands 2024 tijdvak 2, vraag ${n}`;
@@ -185,7 +185,7 @@ const steps = [
       answer: 2,
       wrongHints: [
         "Kinderen sluiten geen zorgverzekering af — ze worden niet ZELF aangesproken.",
-        "Te breed — advertentie noemt specifiek BEUGELS/BITJES voor kinderen. Geen algemene verzekerings-tekst.",
+        "Te breed? Kijk naar de afbeelding en naar 'jouw kind': over welke zorg en voor wie gaat deze advertentie precies?",
         null,
         "Zorgverzekeraars zijn de CONCURRENTEN/leveranciers, niet de doelgroep van een vergelijkings-advertentie.",
       ],
