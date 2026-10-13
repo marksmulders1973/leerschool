@@ -242,7 +242,7 @@ const steps = [
       },
       {
         q: "Napoleon verloor **Russische veldtocht 1812** vooral door:",
-        options: ["Winter + 'verschroeide aarde' tactiek", "Verraad van generaals + te weinig soldaten", "Britse vloot + Pruisische tegenaanval", "Opstand in Parijs + gebrek aan geld"],
+        options: ["Strenge winter + verschroeide aarde", "Verraad van generaals + te weinig soldaten", "Britse vloot + Pruisische tegenaanval", "Opstand in Parijs + gebrek aan geld"],
         answer: 0,
         wrongHints: [null, "Napoleon trok met ruim 600.000 man op en zijn generaals bleven trouw. Waardoor kwamen er zo weinig soldaten terug?", "De Britse vloot kwam niet diep in Rusland, en Pruisen vocht in 1812 nog mee aan Napoleons kant. Wat hield hem op het land tegen?", "In Parijs mislukte een staatsgreep, en geld was niet het probleem. Wat ging er in Rusland zelf mis?"],
         uitlegPad: {

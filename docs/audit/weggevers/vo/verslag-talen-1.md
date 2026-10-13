@@ -296,3 +296,49 @@ Controle: `node --check` groen voor alle 11 bestanden; `vergelijk-met-main.mjs -
 - **woordenschat-engels** (woordenschatEngels.js) stap 6 vraag 3 · hint 2: "Niet -s." → "Mouse is onregelmatig, net als foot – feet. Krijgt het dan een -s?" · hint 3: "Niet -s." → "Mice is al meervoud. Moet daar dan nog een -s achter?" · hint 4: "Verschilt enkelvoud/mv." → "Mouse is het enkelvoud. Blijft het in het meervoud hetzelfde, zoals sheep?"
 - **woordenschat-engels** (woordenschatEngels.js) stap 8 vraag 2 · hint 3: "Spelfout." → "Mounday heeft een letter te veel. Hoe schrijf je het eerste stukje van het woord?" · hint 4: "Geen Engels." → "Mondag lijkt op het Nederlands en het Duits. Op welke letters eindigen alle Engelse dagen?"
 - **woordenschat-engels** (woordenschatEngels.js) stap 10 vraag 2 · hint 2: "Wear ≠ buy." → "Kopen is buy. Welk werkwoord staat er in de zin?" · hint 3: "Wearing ≠ I am." → "'Ik ben' is I am. Maar wat doet 'wearing' achter I'm?" · hint 4: "Wearing ≠ want." → "Willen is want. Staat dat in de zin?"
+
+## Ronde 3 (na blinde detectie)
+
+**Tellingen:** 41 gemarkeerd (42 meldingen, DACH dubbel) · 31 hersteld · 1 vals alarm · 9 twijfel. Controle: `node --check` 8 bestanden groen, `vergelijk-met-main` 0 afwijkingen (answer/q/aantal opties ongewijzigd).
+
+**Vals alarm:** cseLeesvaardigheidEngels stap 3 vraag 6 (*jubilant*): de vraag zegt zelf "uit context"; raden uit de context ís de geoefende vaardigheid.
+
+**Twijfel voor Mark**
+- cseLeesvaardigheidEngels stap 2 vraag 3 ('Buy now! 50% off!') en stap 2 vraag 5 ('In my opinion…'): het signaalwoord staat bewust in de geciteerde zin; het ligt erg voor de hand, maar een extra afleider zoals "review" zou twee goede antwoorden geven.
+- cseLeesvaardigheidEngels stap 5 vraag 1/5/6 en stap 6 vraag 5 (he/she/it/they): het antwoord staat in de zin uit `q` en er wordt maar één persoon of ding genoemd. Dit is een basisoefening; zonder `q` aan te passen valt dit niet echt te herstellen.
+- cseStrategieEngelsVmbo stap 1 vraag 3 (120 min / 40 vragen) en fransCseHavoVwo stap 1 vraag 5 (2,5 u / 10 teksten): het antwoord is een rekensom met de getallen uit `q`.
+- duitsCseHavoVwo stap 5 vraag 3: "verbinding-woord" staat in `q` (moet zijn: "verbindingswoord"). Niet aangepast, want `q` mag niet veranderen.
+- duitsCseHavoVwo stap 5 vraag 4: in `q` staat "huidige … (2025)", dat is dubbelzinnig (Scholz tot mei 2025). Beter is "sinds mei 2025". Alleen de hints zijn aangepast.
+
+**Hersteld (oud → nieuw)**
+- comparativesEngels s1 v1 · opties "Comparative (-er + than) / Superlative (the -est) / Stellend (gewoon) / Stellend + very (heel)" → "-er + than (bigger than) / the + -est (the biggest) / stellende trap (big) / very + grondvorm (very big)" (geen "comparative ≈ vergelijking"-weggever meer)
+- cseLeesvaardigheidEngels s2 v2 · goed "…van een mening" → "…van een standpunt"; optie 3 "Lezer vermaken met een verhaal" → "Lezer meerdere meningen laten zien"; hints 2-3 zeggen niet meer "wat betekent opinion"
+- cseLeesvaardigheidEngels s2 v6 · optie 4 "Story / verhaal" → "Recipe / recept" (ook stappen) + hint
+- cseLeesvaardigheidEngels s4 v3 · afleiders "Optie met precies dezelfde woorden / Wat volgens eigen kennis waar is / Wat de lezer zelf het meest logisch vindt" → "De optie met dezelfde woorden als de tekst / Wat er in de inleiding van de tekst staat / De optie die het meest volledig klinkt" + hints
+- cseLeesvaardigheidEngels s4 v5 · "De hoofdgedachte van de tekst / De eerste zin / Het eerste voorbeeld / Het doel van de schrijver" → "…van de hele tekst / De kernzin van de eerste alinea / Het belangrijkste voorbeeld in de tekst / Het doel dat de schrijver wil bereiken" + hints
+- cseLeesvaardigheidEngels s5 v4 · "Moeilijk examen én korte tijd / Dat de leerlingen zakten / Alleen het tijd-element / Alleen het moeilijk-element" → "Het moeilijke examen en de korte tijd / Het zakken van de leerlingen zelf / De zin vlak vóór 'this' (korte tijd) / De eerste zin (het moeilijke examen)" + hints zonder "twee dingen"
+- cseLeesvaardigheidEngels s5 v7 · goed "De studenten die studeerden" → "De studenten die slaagden" (geen letterlijke herhaling van `q` meer)
+- cseStrategieEngelsVmbo s1 v5 · "Blijven puzzelen… / Meteen gokken en niet meer terugkijken" → "Rustig doorwerken tot je het antwoord hebt / Elk onbekend woord opzoeken in het woordenboek" + hint
+- cseStrategieEngelsVmbo s2 v5 · "Context: zinnen ervoor en erna lezen / Direct het woordenboek pakken / … / De zin met het woord vertalen" → "De zinnen ervoor en erna goed lezen / Het woord opzoeken in het woordenboek / … / De zin met het woord letterlijk vertalen"; hint 1 noemt niet meer "context"
+- duitsCseHavoVwo s3 v4 · "Informele jongerentaal / Formele bestuurstaal / Wetenschappelijke vaktaal / Standaardtaal (Hochdeutsch)" → "Informele taal van jongeren onderling / Formele taal van jeugdinstanties / Eenvoudige taal voor jonge kinderen / Nette standaardtaal (Hochdeutsch)" + hints ("Jugend = jeugd" weg)
+- duitsCseHavoVwo s4 v1 · goed "Duitsland + Österreich + Schweiz" → "Duitsland + Oostenrijk + Zwitserland" (alle opties nu in het Nederlands)
+- duitsCseHavoVwo s5 v4 · kale hints "Was tot mei 2025. / Tot 2021. / Van 1982 tot 1998." → denkprikkels
+- engelsLiteratuurHavoVwo s2 v4 · "Rijmend AABB" → "5 regels met jamben"; hint 1 "Penta- betekent vijf…" → alexandrijn-denkprikkel
+- engelsLiteratuurHavoVwo s5 v2 · "Alles betekent precies wat er staat / Uitgebreide beschrijving zonder doel" → "Een ding krijgt menselijke eigenschappen / Twee dingen vergelijken met 'like' of 'as'" + hints
+- engelsLiteratuurHavoVwo s5 v3 · afleiders "netjes op volgorde / Alleen korte zinnen / alleen dialogen" → "Een verteller die in ieders hoofd kijkt / Een personage dat de lezer direct aanspreekt / Gebeurtenissen vloeiend op volgorde vertellen"; goed "…opschrijven…" → "…weergeven…"
+- engelsLiteratuurHavoVwo s5 v4 · "Een onverwachte wending aan het eind / Een personage voor het eerst voorstellen" → "De afloop vooraf al letterlijk verklappen / Een inleiding (proloog) vóór het verhaal" + hints
+- engelsLiteratuurHavoVwo s5 v5 · goed "'To be or not to be…'" (stond al in eerdere vraag) → "'Something is rotten in the state of Denmark.'"; afleiders zijn nu Shakespeare-citaten (Macbeth/Romeo and Juliet/The Tempest) in plaats van Moby Dick/Dickens/Bijbel; kale hints → denkprikkels; uitlegPad aangepast
+- fransCseHavoVwo s3 v1 · twee goede antwoorden: "Zonder enige twijfel" → "Zeker niet" + hint
+- passeComposeFrans s5 v2 · "As tu vu le film?" (met koppelteken een correcte zin) → "Tu as voir le film?"; hint 4 noemt avoir niet meer
+- woordenschatEngels s1 v1 · "Alle woorden op één avond stampen / Lange lijsten op alfabet leren" → "De avond voor de toets alles leren / Elke dag een nieuwe woordenlijst leren"; goed → "Per thema leren en een week herhalen"
+- woordenschatEngels s2 v1 bread · "boter/vlees/kaas" → "breed/bord/baard"
+- woordenschatEngels s2 v3 fish · "vlees/fruit/ei" → "vies/fiets/vers"
+- woordenschatEngels s4 v2 broer · "sister/uncle/cousin" → "bother/broth/border"
+- woordenschatEngels s4 v3 mouth · "neus/oor/kin" → "maand/mouw/mot"
+- woordenschatEngels s5 v1 homework · "klas/leraar/boek" → "huishouden/werkplaats/thuisbasis"
+- woordenschatEngels s6 v1 kitchen · "badkamer/slaapkamer/tuin" → "kip/kussen/kerk"
+- woordenschatEngels s7 v2 werken · "play/watch" → "word/wake"
+- woordenschatEngels s9 v1 How are you · "My name is Sara. / I'm from Amsterdam." → "I'm at home now. / I'm a student." (alle opties beginnen met I'm) + hints
+- woordenschatEngels s10 v1 · "window, mother" → "teacher, aunt" (afwijker is nu ook een persoon) + uitlegPad
+- woordenschatEngels s10 v3 · afleiders verschillen nu elk in één element (werkt / groot / opa)
+- woordenschatEngels s10 v4 · "bread/milk/egg" → "meat/cheese/juice" + uitlegPad
