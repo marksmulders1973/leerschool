@@ -455,7 +455,7 @@ const steps = [
           "Werk uitbesteden aan een ander bedrijf"
         ],
         answer: 0,
-        wrongHints: [null, "Dichterbij produceren, zoals in Polen in plaats van China, heet near-shoring. Waar gaat de fabriek bij re-shoring heen?", "Naar een lagelonenland verhuizen heet off-shoring. Re-shoring is de omkering daarvan: waar gaat de fabriek dan heen?", "Uitbesteden aan een ander bedrijf heet outsourcing. Re-shoring gaat over de plek van de productie: welke plek?"],
+        wrongHints: [null, "Dichterbij produceren, zoals in Polen in plaats van China, heet near-shoring. Waar gaat de fabriek bij re-shoring heen?", "Naar een lagelonenland verhuizen heet off-shoring. Welke kant ging het na corona juist op met chipfabrieken?", "Uitbesteden aan een ander bedrijf heet outsourcing. Re-shoring gaat over de plek van de productie: welke plek?"],
         uitlegPad: {
           stappen: [
             { titel: "Strategie-omkering", tekst: "Na decennia productie naar China → COVID-disrupties + politiek risico (Taiwan, sancties) → bedrijven herzien. Voorbeelden: chipfabrieken terug naar VS/EU (Chips Acts), auto-industrie meer in VS/Mexico; Apple spreidt productie naar India + Vietnam (minder afhankelijk van China). Trend versterkt sinds 2020." },
