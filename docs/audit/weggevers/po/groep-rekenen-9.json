@@ -568,13 +568,13 @@
    "file": "./doorstroomtoetsStudievaardighedenG8.js",
    "stap": 3,
    "vraag": 17,
-   "soort": "L2K",
-   "q": "Stappenplan tandenpoetsen: pasta op borstel → poetsen → spoelen. Wat is stap 1?",
+   "soort": "L2",
+   "q": "In een stappenplan voor tandenpoetsen staan de stappen door elkaar: spoelen – uitspugen – poetsen – pasta op borstel. Wat is stap 1?",
    "opties": [
     "Pasta op borstel",
     "Poetsen",
     "Spoelen",
-    "Slapen"
+    "Uitspugen"
    ],
    "answer": 0,
    "lijst": "extra"

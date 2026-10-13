@@ -46,22 +46,6 @@
    "pad": "bekende-boeken-literatuur-po",
    "file": "./bekendeBoekenLiteratuurPo.js",
    "stap": 1,
-   "vraag": 2,
-   "soort": "K",
-   "q": "Wanneer Kinderboekenweek?",
-   "opties": [
-    "Oktober",
-    "Februari",
-    "Mei",
-    "Geen vaste tijd"
-   ],
-   "answer": 0,
-   "lijst": "extra"
-  },
-  {
-   "pad": "bekende-boeken-literatuur-po",
-   "file": "./bekendeBoekenLiteratuurPo.js",
-   "stap": 1,
    "vraag": 3,
    "soort": "K",
    "q": "Hoeveel Harry Potter-boeken?",

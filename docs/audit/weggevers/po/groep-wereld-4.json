@@ -478,22 +478,6 @@
    "pad": "kaartlezen-po",
    "file": "./kaartlezenPo.js",
    "stap": 4,
-   "vraag": 18,
-   "soort": "K",
-   "q": "Op kaart 1 cm bij schaal 1:25.000 = ?",
-   "opties": [
-    "250 m",
-    "2,5 km",
-    "25 m",
-    "2.500 m"
-   ],
-   "answer": 0,
-   "lijst": "extra"
-  },
-  {
-   "pad": "kaartlezen-po",
-   "file": "./kaartlezenPo.js",
-   "stap": 4,
    "vraag": 19,
    "soort": "K",
    "q": "Welke richting wijst de rode kant van een kompasnaald?",

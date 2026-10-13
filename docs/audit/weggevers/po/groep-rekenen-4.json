@@ -202,22 +202,6 @@
    "pad": "negatieve-getallen-po",
    "file": "./negatieveGetallenPo.js",
    "stap": 4,
-   "vraag": 23,
-   "soort": "K",
-   "q": "−2 × −3 = ?",
-   "opties": [
-    "6",
-    "−6",
-    "−5",
-    "5"
-   ],
-   "answer": 0,
-   "lijst": "extra"
-  },
-  {
-   "pad": "negatieve-getallen-po",
-   "file": "./negatieveGetallenPo.js",
-   "stap": 4,
    "vraag": 24,
    "soort": "K",
    "q": "Welk getal ligt 2 onder −5?",
