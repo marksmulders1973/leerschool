@@ -198,9 +198,9 @@ const steps = [
       },
       {
         q: "Een aandeelhouder van een BV wil zijn aandelen verkopen. Wat geldt meestal?",
-        options: ["Hij moet ze eerst aan de mede-aandeelhouders aanbieden", "Hij verkoopt ze direct op de beurs", "Hij mag ze aan een willekeurige vreemde verkopen zonder regels", "Hij mag ze nooit verkopen"],
+        options: ["Hij moet ze eerst aan de mede-aandeelhouders aanbieden", "Hij biedt ze direct te koop aan op de effectenbeurs", "Hij mag ze aan iedereen verkopen, net als bij een NV", "Hij moet ze terugverkopen aan de Kamer van Koophandel"],
         answer: 0,
-        wrongHints: [null, "Een BV staat niet op de beurs.", "Bij een BV zijn aandelen juist niet vrij verhandelbaar.", "Verkopen mag wel — maar met regels."],
+        wrongHints: [null, "Een BV staat niet op de beurs.", "Bij een NV zijn aandelen vrij verhandelbaar. Geldt dat ook voor een bésloten vennootschap?", "De KvK schrijft bedrijven in, maar koopt geen aandelen. Wie heeft er belang bij wie er nieuw bij komt?"],
         uitlegPad: {
           stappen: [{ titel: "Eerst intern aanbieden", tekst: "Bij een BV zijn de aandelen niet vrij verhandelbaar. Vaak geldt een blokkeringsregeling: je biedt je aandelen eerst aan de mede-aandeelhouders aan." }],
           woorden: [{ woord: "blokkeringsregeling", uitleg: "Afspraak dat je aandelen eerst aan de andere aandeelhouders moet aanbieden voor je ze aan een ander verkoopt." }, { woord: "vrij verhandelbaar", uitleg: "Zomaar kunnen kopen en verkopen aan iedereen — dat is bij een BV juist NIET zo." }],
@@ -212,9 +212,9 @@ const steps = [
       },
       {
         q: "Hoeveel **minimumkapitaal** heb je nodig om een BV op te richten?",
-        options: ["Geen minimum — het mag met €0,01", "Minimaal €45.000 op de bankrekening", "Minimaal €100.000 bij de notaris", "Minimaal €1 miljoen aan aandelen"],
+        options: ["Geen minimum — het mag met €0,01", "Minimaal €45.000 op de bankrekening", "Minimaal €100.000 bij de notaris", "Minimaal €18.000 bij de oprichting"],
         answer: 0,
-        wrongHints: [null, "Dat bedrag hoort bij een ándere rechtspersoon.", "Zo'n hoog bedrag is sinds 2012 niet meer nodig voor een BV.", "Veel te hoog voor een BV."],
+        wrongHints: [null, "Dat bedrag hoort bij een ándere rechtspersoon.", "Zo'n hoog bedrag is voor een BV nooit verplicht geweest.", "€18.000 was het minimum voor een BV tot 2012. Geldt dat nu nog?"],
         uitlegPad: {
           stappen: [{ titel: "Geen minimum sinds 2012", tekst: "Sinds de invoering van de 'flex-BV' in 2012 is er geen minimumkapitaal meer. Een BV mag starten met één eurocent." }],
           woorden: [{ woord: "minimumkapitaal", uitleg: "Het bedrag dat je verplicht moet inbrengen bij de oprichting." }, { woord: "flex-BV", uitleg: "Versoepelde BV-regels sinds 2012, onder andere: geen minimumkapitaal meer." }],
@@ -250,9 +250,9 @@ const steps = [
     checks: [
       {
         q: "Waarom heet een NV een **Naamloze** Vennootschap?",
-        options: ["De naam van de aandeelhouder hoeft niet vast te liggen", "Het bedrijf hoeft geen officiële naam te hebben", "Er werkt niemand met een naam", "De eigenaar blijft altijd geheim voor de Belastingdienst"],
+        options: ["De naam van de aandeelhouder hoeft niet vast te liggen", "Het bedrijf hoeft geen officiële naam te hebben", "De aandelen staan op naam van de directeur", "De eigenaar blijft altijd geheim voor de Belastingdienst"],
         answer: 0,
-        wrongHints: [null, "Een NV heeft natuurlijk gewoon een bedrijfsnaam (Heineken NV).", "Het gaat om de aandelen, niet om het personeel.", "Het slaat op de verhandelbaarheid van aandelen, niet op belasting ontwijken."],
+        wrongHints: [null, "Een NV heeft natuurlijk gewoon een bedrijfsnaam (Heineken NV).", "Juist bij een BV staan de aandelen op naam. Wat zou 'naamloos' dan zeggen over de aandeelhouders?", "Het slaat op de verhandelbaarheid van aandelen, niet op belasting ontwijken."],
         uitlegPad: {
           stappen: [{ titel: "Naam van de aandeelhouder", tekst: "'Naamloos' slaat op de aandelen: ze kunnen aan toonder zijn. Wie het aandeel heeft, is de eigenaar — de naam hoeft niet vast te liggen." }],
           woorden: [{ woord: "aandeel aan toonder", uitleg: "Een aandeel waarbij de bezitter de eigenaar is; de naam van de eigenaar staat niet geregistreerd." }, { woord: "naamloos", uitleg: "Slaat op de aandelen: de naam van de aandeelhouder hoeft niet bekend te zijn." }],

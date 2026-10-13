@@ -20,9 +20,9 @@ const steps = [
     checks: [
       {
         q: "Wat is het kenmerkende verschil tussen beeldhouwkunst en schilderkunst?",
-        options: ["Beeldhouwkunst is 3D, schilderkunst 2D", "Beeldhouwkunst gebruikt geen kleur", "Schilderkunst is altijd groter", "Er is geen verschil"],
+        options: ["Beeldhouwkunst is 3D, schilderkunst 2D", "Beeldhouwkunst gebruikt geen kleur", "Schilderkunst is figuratief, beelden abstract", "Beelden zijn duurzamer dan schilderijen"],
         answer: 0,
-        wrongHints: [null, "Beelden kunnen wél kleur hebben (bv. beschilderd).", "Formaat is niet het onderscheid.", "Er is wel een verschil — denk aan hoe je elk kunstwerk bekijkt."],
+        wrongHints: [null, "Beelden kunnen wél kleur hebben (bv. beschilderd).", "Er bestaan abstracte schilderijen en heel realistische beelden. Waar zit het echte verschil?", "Er zijn ook beelden van ijs, zand of klei. Denk aan hoe je elk kunstwerk bekijkt."],
         uitlegPad: {
           stappen: [{ titel: "Eromheen lopen", tekst: "**Beeldhouwkunst** is **driedimensionaal (3D)** — je kunt er **omheen** lopen. Een **schilderij** is tweedimensionaal (2D, plat). Daardoor spelen bij sculptuur massa, volume en standpunt een rol die een schilderij niet heeft." }],
           niveaus: { basis: "3D vs 2D.", simpeler: "Beeld = 3D", nogSimpeler: "A." },
@@ -30,9 +30,9 @@ const steps = [
       },
       {
         q: "Wat is een **reliëf**?",
-        options: ["Beeld dat uit een achtergrond steekt, voor aanzicht van voren", "Een vrijstaand beeld waar je omheen loopt", "Een soort verf", "Een schildersezel"],
+        options: ["Beeld dat uit een vlakke achtergrond steekt", "Een vrijstaand beeld waar je omheen loopt", "Een schildering met diepte door perspectief", "Een beeld dat uit één blok steen is gehakt"],
         answer: 0,
-        wrongHints: [null, "Dat is juist een vrijstaand beeld (in het rond).", "Het is geen materiaal.", "Geen gereedschap — een beeldvorm."],
+        wrongHints: [null, "Dat is juist een vrijstaand beeld (in het rond).", "Bij perspectief lijkt iets alleen diep. Is een reliëf plat of echt ruimtelijk?", "Dat zegt iets over de techniek; ook een vrijstaand beeld kan uit één blok komen. Waar gaat reliëf over?"],
         uitlegPad: {
           stappen: [{ titel: "Half uit de muur", tekst: "Een **reliëf** steekt (deels) uit een **achtergrond** en is bedoeld om van **voren** te bekijken — bv. op een muur of munt. **Bas-reliëf** is ondiep, **hoog-reliëf** steekt ver uit. Een **vrijstaand** beeld kun je daarentegen van alle kanten bekijken." }],
           niveaus: { basis: "Steekt uit een achtergrond.", simpeler: "Reliëf = uit de muur", nogSimpeler: "A." },
@@ -40,9 +40,9 @@ const steps = [
       },
       {
         q: "Waarom speelt het **standpunt** een grote rol bij een vrijstaand beeld?",
-        options: ["Het beeld verandert terwijl je eromheen loopt", "Beelden mag je niet bekijken", "Er is altijd maar één juiste kant", "Standpunt heeft geen invloed"],
+        options: ["Het beeld verandert terwijl je eromheen loopt", "De maker bepaalt waar je moet gaan staan", "Je ziet het beeld net als een schilderij van voren", "Van dichtbij zie je meer details van het materiaal"],
         answer: 0,
-        wrongHints: [null, "Beelden zijn juist bedoeld om te bekijken.", "Is er bij een vrijstaand beeld echt maar één voorkant?", "Het heeft veel invloed."],
+        wrongHints: [null, "In een museum loop je vrij rond. Wat zie je als je om een beeld heen loopt?", "Is er bij een vrijstaand beeld echt maar één voorkant?", "Dat geldt voor elk kunstwerk, ook voor een schilderij. Wat is bijzonder aan een beeld waar je omheen kunt lopen?"],
         uitlegPad: {
           stappen: [{ titel: "Geen 'voorkant'", tekst: "Bij een **vrijstaand beeld** is er niet één 'juiste' kant: het **verandert** terwijl je eromheen loopt. Daarom denkt een beeldhouwer in alle aanzichten tegelijk — en doet ook de **negatieve ruimte** (gaten, openingen) mee in het ontwerp." }],
           niveaus: { basis: "Verandert al lopend.", simpeler: "Eromheen = ander beeld", nogSimpeler: "A." },
@@ -69,9 +69,9 @@ const steps = [
       },
       {
         q: "Wat is een voordeel van **brons gieten**?",
-        options: ["Je kunt meerdere exemplaren maken + dunne uitstekende delen", "Het kan maar één keer en breekt snel", "Het hoeft niet in een mal", "Het is altijd goedkoper dan klei"],
+        options: ["Je kunt er meerdere exemplaren van maken", "Je hakt het direct uit één blok metaal", "Je hoeft geen model of mal te maken", "Het is goedkoper dan werken in klei"],
         answer: 0,
-        wrongHints: [null, "Brons is juist sterk; steen zou eerder breken.", "Gieten gebeurt juist in een mal.", "Prijs is hier niet het punt."],
+        wrongHints: [null, "Hakken hoort bij steen. Hoe krijgt vloeibaar brons zijn vorm?", "Gieten gebeurt juist in een mal. Waar komt de vorm van die mal vandaan?", "Brons is duur en gieten kost veel werk. Waar zit het voordeel dan wel?"],
         uitlegPad: {
           stappen: [{ titel: "Sterk + herhaalbaar", tekst: "Bij **bronsgieten** maak je een mal en giet je vloeibaar brons. Voordelen: je kunt **meerdere exemplaren** (een oplage) maken, en brons is **sterk** genoeg voor **dunne, uitstekende delen** (een vooruitgestoken arm) die in steen zouden afbreken." }],
           niveaus: { basis: "Meerdere + sterk.", simpeler: "Brons = oplage + sterk", nogSimpeler: "A." },
@@ -79,9 +79,9 @@ const steps = [
       },
       {
         q: "Wat is een **readymade**?",
-        options: ["Een bestaand voorwerp tot kunst verklaard", "Een marmeren beeld", "Een schildertechniek", "Een soort lijm"],
+        options: ["Een bestaand voorwerp tot kunst verklaard", "Een kopie van een bekend kunstwerk", "Een schets die meteen af is", "Een beeld dat ter plekke ontstaat"],
         answer: 0,
-        wrongHints: [null, "Een readymade is juist géén zelf-gehakt beeld.", "Het is geen schildertechniek.", "Geen materiaal — een idee/concept."],
+        wrongHints: [null, "Een kopie maak je zelf na. Heeft de kunstenaar bij een readymade iets gemaakt?", "Ready-made klinkt als snel klaar, maar het gaat niet om een schets. Wat koos Duchamp voor zijn Fontein?", "Dat lijkt meer op site-specific kunst of performance. Maakte Duchamp zelf iets?"],
         uitlegPad: {
           stappen: [{ titel: "Kunst = de keuze", tekst: "Een **readymade** is een **bestaand, alledaags voorwerp** dat de kunstenaar tot **kunst verklaart** — beroemd: **Duchamp's** urinoir *Fountain* (1917). Het idee: niet het maken, maar de **keuze en context** maken het kunst. Een mijlpaal in de moderne kunst." }],
           niveaus: { basis: "Voorwerp tot kunst.", simpeler: "Readymade = bestaand voorwerp", nogSimpeler: "A." },
@@ -98,9 +98,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **contrapost** in een (Grieks) beeld?",
-        options: ["Het gewicht op één been, met een licht gedraaid lichaam", "Twee beelden naast elkaar", "Een beeld zonder armen", "Een beeld van brons"],
+        options: ["Het gewicht op één been, met een licht gedraaid lichaam", "Twee figuren die elkaars houding spiegelen", "Een stijve houding, recht van voren gezien", "Het gewicht gelijk verdeeld over beide benen"],
         answer: 0,
-        wrongHints: [null, "Het gaat om de houding van één figuur.", "Niet over ontbrekende armen.", "Niet over het materiaal."],
+        wrongHints: [null, "Het gaat om de houding van één figuur.", "Dat past bij oudere, strakke beelden zoals de kouros. Wat veranderden de Grieken juist?", "Staat een figuur dan ontspannen of stijf? Kijk naar de heupen bij een Grieks beeld."],
         uitlegPad: {
           stappen: [{ titel: "Levendige houding", tekst: "**Contrapost**: de figuur zet het gewicht op **één been**, waardoor heupen en schouders licht kantelen en het lichaam natuurlijk 'leeft' in plaats van stijf rechtop staat. Een Griekse vinding (Polykleitos) die de Renaissance weer oppakte (Michelangelo's David)." }],
           niveaus: { basis: "Gewicht op één been.", simpeler: "Contrapost = één been belast", nogSimpeler: "A." },
@@ -108,9 +108,9 @@ const steps = [
       },
       {
         q: "Waardoor valt **barok** beeldhouwwerk (Bernini) op?",
-        options: ["Drama en beweging — een bevroren emotioneel moment", "Volstrekte rust en strakheid", "Het ontbreken van details", "Alleen abstracte vormen"],
+        options: ["Drama en beweging — een bevroren emotioneel moment", "Rust en evenwicht — een ideaal, tijdloos lichaam", "Eenvoud — gladde vormen zonder versiering", "Abstractie — vormen die niets herkenbaars tonen"],
         answer: 0,
-        wrongHints: [null, "Rust/strakheid past juist bij klassiek/neoclassicisme.", "Barok zit juist vól detail.", "Barok is figuratief, niet abstract."],
+        wrongHints: [null, "Rust/strakheid past juist bij klassiek/neoclassicisme.", "Kijk naar de plooien en haren in een beeld van Bernini. Zijn die eenvoudig?", "Barok is figuratief, niet abstract."],
         uitlegPad: {
           stappen: [{ titel: "Marmer dat beweegt", tekst: "**Barok** (Bernini) draait om **drama en beweging**: een bevroren moment vol emotie en dynamiek, met wapperende stof en draaiende lichamen. *Apollo en Daphne* laat marmer bijna 'bewegen' — heel anders dan de strakke klassieke rust." }],
           niveaus: { basis: "Drama + beweging.", simpeler: "Barok = drama", nogSimpeler: "A." },
@@ -118,9 +118,9 @@ const steps = [
       },
       {
         q: "Wat is kenmerkend voor veel **20e-eeuwse** beeldhouwkunst (Moore, Brancusi)?",
-        options: ["Abstractie — het hoeft niet realistisch iets voor te stellen", "Steeds realistischer ideaalbeelden", "Alleen religieuze beelden", "Geen nieuwe materialen"],
+        options: ["Abstractie — het hoeft niet realistisch iets voor te stellen", "Realisme — een perfect, natuurgetrouw ideaalbeeld", "Religie — beelden vooral voor kerken en kapellen", "Drama — beweging en heftige emotie in marmer"],
         answer: 0,
-        wrongHints: [null, "Realisme was juist het oude ideaal; de 20e eeuw breekt ermee.", "Niet vooral religieus.", "Juist veel nieuwe materialen/technieken."],
+        wrongHints: [null, "Realisme was juist het oude ideaal; de 20e eeuw breekt ermee.", "Kerkbeelden waren vooral belangrijk in de middeleeuwen en de barok. Wat deden Moore en Brancusi anders?", "Dat past bij de barok van Bernini. Lijken de gladde vormen van Brancusi daarop?"],
         uitlegPad: {
           stappen: [{ titel: "Vorm boven gelijkenis", tekst: "In de **20e eeuw** wordt beeldhouwkunst vaak **abstract**: het hoeft niet meer realistisch 'iets' voor te stellen. **Brancusi** vereenvoudigt tot de essentie, **Moore** maakt organische figuren met **gaten** (negatieve ruimte), **Calder** maakt bewegende **mobiles**." }],
           niveaus: { basis: "Abstractie.", simpeler: "20e eeuw = abstract", nogSimpeler: "A." },
@@ -137,9 +137,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **installatiekunst**?",
-        options: ["Een werk dat een hele ruimte vult en waar je in stapt", "Een klein beeld op een sokkel", "Een schilderij aan de muur", "Een soort verf"],
+        options: ["Een werk dat een hele ruimte vult en waar je in stapt", "Een groot beeld op een sokkel midden in de zaal", "Een reeks schilderijen die samen één verhaal vertellen", "Een kunstwerk dat op een scherm wordt vertoond"],
         answer: 0,
-        wrongHints: [null, "Juist groter dan één los beeldje.", "Een schilderij is plat aan de muur — geen installatie.", "Geen materiaal — een kunstvorm."],
+        wrongHints: [null, "Een beeld op een sokkel bekijk je van buitenaf. Sta je er ook in?", "Een reeks schilderijen hangt nog steeds plat aan de muur. Wat doet een installatie met de ruimte?", "Video kan een onderdeel zijn van een installatie, maar is het dat vanzelf? Waar sta jij als kijker?"],
         uitlegPad: {
           stappen: [{ titel: "Erin stappen", tekst: "**Installatiekunst** vult en ordent een **hele ruimte**; de **bezoeker stapt erín** en ervaart het van binnenuit (objecten, licht, geluid samen). Het kunstwerk is de hele **ervaring**, niet één object." }],
           niveaus: { basis: "Hele ruimte, je stapt erin.", simpeler: "Installatie = ruimte in", nogSimpeler: "A." },
@@ -147,9 +147,9 @@ const steps = [
       },
       {
         q: "Wat betekent **site-specific**?",
-        options: ["Gemaakt voor één bepaalde plek; verplaatsen verandert de betekenis", "Gemaakt om overal te kunnen staan", "Gemaakt van steen", "Gemaakt door één kunstenaar"],
+        options: ["Gemaakt voor één plek, en hoort alleen daar", "Gemaakt om in elk museum te kunnen staan", "Gemaakt voor buiten, in weer en wind", "Gemaakt in opdracht van één klant"],
         answer: 0,
-        wrongHints: [null, "Juist niet overal — het hoort bij één plek.", "Het zegt niets over het materiaal.", "Het gaat om de plek, niet om het aantal makers."],
+        wrongHints: [null, "Wat gebeurt er met zo'n werk als je het naar een ander museum brengt?", "Een buitenbeeld kun je soms gewoon verplaatsen. Verandert er dan iets aan het werk?", "Een opdracht zegt iets over wie betaalt. Waarover zegt de term site-specific iets?"],
         uitlegPad: {
           stappen: [{ titel: "Hoort bij de plek", tekst: "**Site-specific** werk is gemaakt **voor één bepaalde plek**: de locatie hoort bij de betekenis, dus **verplaatsen** verandert of vernietigt het werk. **Land art** (zoals *Spiral Jetty* in een meer) is daar een vorm van." }],
           niveaus: { basis: "Voor één plek.", simpeler: "Site-specific = vaste plek", nogSimpeler: "A." },
@@ -157,9 +157,9 @@ const steps = [
       },
       {
         q: "Waarom zijn sommige **standbeelden** onderwerp van discussie?",
-        options: ["Ze kunnen omstreden personen eren", "Omdat ze van brons zijn", "Omdat ze in een museum staan", "Standbeelden geven nooit discussie"],
+        options: ["Ze kunnen omstreden personen eren", "Ze kosten de gemeente veel onderhoud", "Ze staan vaak in de weg op pleinen", "Ze zijn vaak niet realistisch gemaakt"],
         answer: 0,
-        wrongHints: [null, "Het materiaal is niet het twistpunt.", "Standbeelden staan juist vaak buiten.", "Er is wel degelijk discussie."],
+        wrongHints: [null, "Kosten zijn zelden het twistpunt. Waar gaat het debat over een beeld van J.P. Coen over?", "Een beeld kun je verplaatsen. Zou het debat dan voorbij zijn?", "De stijl is zelden het twistpunt. Wie of wat eert zo'n beeld?"],
         uitlegPad: {
           stappen: [{ titel: "Kunst + maatschappij", tekst: "Standbeelden in de **openbare ruimte** herdenken iemand of iets — en dat roept vragen op: **wie verdient een standbeeld**, en wat doen we met beelden van bv. **koloniale** of omstreden figuren? Zo raakt openbare kunst aan maatschappelijke en historische debatten." }],
           niveaus: { basis: "Wie verdient het / koloniaal.", simpeler: "Standbeeld = maatschappelijk debat", nogSimpeler: "A." },

@@ -30,9 +30,9 @@ const steps = [
       },
       {
         q: "Wat zijn **complementaire kleuren**?",
-        options: ["Kleuren die tegenover elkaar staan en elkaar versterken", "Kleuren die naast elkaar liggen", "Alleen warme kleuren", "Zwart en wit"],
+        options: ["Kleuren die tegenover elkaar staan en elkaar versterken", "Kleuren die naast elkaar liggen in de kleurencirkel", "Kleuren die samen een warme sfeer geven", "Licht en donker van één kleur naast elkaar"],
         answer: 0,
-        wrongHints: [null, "Juist tegenover elkaar, niet naast elkaar.", "Het gaat om paren, niet alleen warme tinten.", "Dat is licht-donkercontrast, niet complementair."],
+        wrongHints: [null, "Buren in de kleurencirkel heten verwante kleuren. Versterken die elkaar of vloeien ze in elkaar over?", "Het gaat om paren, niet om warm of koud.", "Dat is licht-donkercontrast, niet complementair."],
         uitlegPad: {
           stappen: [{ titel: "Tegenover = fel contrast", tekst: "**Complementaire kleuren** staan **tegenover** elkaar in de kleurencirkel (rood↔groen, blauw↔oranje, geel↔paars). Naast elkaar geven ze een fel **contrast** dat opvalt; gemengd worden ze grauw. Kunstenaars gebruiken ze om iets te laten knallen." }],
           niveaus: { basis: "Tegenover elkaar.", simpeler: "Complementair = tegenover", nogSimpeler: "Tegenover elkaar." },
@@ -40,9 +40,9 @@ const steps = [
       },
       {
         q: "Welke kleuren lijken naar **voren** te komen (en suggereren nabijheid)?",
-        options: ["Warme kleuren (rood, oranje, geel)", "Koude kleuren (blauw, groen)", "Alleen zwart", "Alleen pastelkleuren"],
+        options: ["Warme kleuren (rood, oranje, geel)", "Koude kleuren (blauw, groen)", "Donkere kleuren (zwart, bruin)", "Pastelkleuren (lichtroze, lichtblauw)"],
         answer: 0,
-        wrongHints: [null, "Koude kleuren wijken juist naar achteren.", "Zwart heeft hier niet die rol.", "Pastel is een verzadiging, geen warm/koud-effect op zich."],
+        wrongHints: [null, "Koude kleuren wijken juist naar achteren.", "Donker maakt iets zwaar, maar komt het daardoor dichterbij? Denk aan warm tegenover koud.", "Pastel is een verzadiging, geen warm/koud-effect op zich."],
         uitlegPad: {
           stappen: [{ titel: "Warm komt, koud wijkt", tekst: "**Warme kleuren** (rood/oranje/geel) lijken naar **voren** te komen (nabijheid, energie); **koude kleuren** (blauw/groen/paars) wijken naar **achteren** (afstand, rust). Zo kun je met kleur diepte suggereren in een plat beeld." }],
           niveaus: { basis: "Warme kleuren.", simpeler: "Warm = naar voren", nogSimpeler: "Warm komt naar voren." },
@@ -50,9 +50,9 @@ const steps = [
       },
       {
         q: "Waarom kan dezelfde kleur **verschillende betekenissen** hebben?",
-        options: ["Kleursymboliek verschilt per cultuur en tijd", "Kleuren betekenen overal precies hetzelfde", "Alleen kunstenaars zien kleur", "Betekenis hangt af van de prijs"],
+        options: ["Kleursymboliek verschilt per cultuur en tijd", "Elk mens ziet kleuren net iets anders", "Kleur verandert door het licht in de ruimte", "De betekenis hangt af van de verfsoort"],
         answer: 0,
-        wrongHints: [null, "Juist niet overal hetzelfde.", "Iedereen ziet kleur (op kleurenblindheid na).", "Prijs heeft er niets mee te maken."],
+        wrongHints: [null, "Ook mensen die precies hetzelfde zien, geven wit soms een andere betekenis. Waar komt dat verschil vandaan?", "Licht verandert hoe een kleur eruitziet. Verandert het ook wat rood betekent?", "Olieverf of acryl: maakt dat rood ineens tot liefde of gevaar?"],
         uitlegPad: {
           stappen: [{ titel: "Cultureel bepaald", tekst: "**Kleursymboliek is cultureel en tijdgebonden**: wit staat westers voor zuiverheid maar in delen van Azië voor rouw; rood kan liefde óf gevaar zijn. Bij het 'lezen' van een kunstwerk hoort dus altijd de context." }],
           niveaus: { basis: "Cultuur + tijd.", simpeler: "Betekenis verschilt per cultuur", nogSimpeler: "Hangt af van cultuur." },
@@ -69,9 +69,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **toonwaarde** (valeur)?",
-        options: ["De mate van licht of donker, los van de kleur", "De prijs van een schilderij", "Hoe duur de verf is", "De grootte van het doek"],
+        options: ["De mate van licht of donker, los van de kleur", "De verzadiging: hoe fel of dof een kleur is", "De kleurtoon zelf: rood, blauw of geel", "De warmte of koelte van een kleur"],
         answer: 0,
-        wrongHints: [null, "Het gaat om licht/donker, niet om geld.", "Niet de verfprijs.", "Niet het formaat."],
+        wrongHints: [null, "Fel of dof heet verzadiging. Wat zie je nog als je een foto zwart-wit maakt?", "Dat heet de kleurtoon. Wat blijft er over als je de kleur weghaalt?", "Warm en koud is een ander kleurcontrast. Wat blijft over in een zwart-witfoto?"],
         uitlegPad: {
           stappen: [{ titel: "Licht-donker, los van kleur", tekst: "**Toonwaarde** is hoe **licht of donker** een partij is — van wit via grijzen naar zwart, los van wélke kleur. Met **toonverloop** (licht naar donker) suggereer je **volume**: een bol lijkt rond door een lichte kant en een schaduwkant." }],
           niveaus: { basis: "Licht/donker.", simpeler: "Toonwaarde = licht-donker", nogSimpeler: "Licht of donker." },
@@ -79,9 +79,9 @@ const steps = [
       },
       {
         q: "Wat is **clair-obscur** (chiaroscuro)?",
-        options: ["Sterk contrast tussen licht en donker", "Veel felle kleuren", "Buiten schilderen", "Een soort lijst"],
+        options: ["Sterk contrast tussen licht en donker", "Sterk contrast tussen warm en koud", "Zacht vervagen van contouren", "Schilderen in grijs, zwart en wit"],
         answer: 0,
-        wrongHints: [null, "Het gaat om licht-donker, niet primair om kleur.", "Buiten schilderen hoort bij impressionisme.", "Geen lijst — een licht-effect."],
+        wrongHints: [null, "Het gaat om licht-donker, niet primair om kleur.", "Dat is sfumato, zoals bij de Mona Lisa. Wat betekenen de woorden clair en obscur?", "Dat heet grisaille. Bij Caravaggio zie je juist volle kleur. Waar zit dan het effect?"],
         uitlegPad: {
           stappen: [{ titel: "Drama door licht", tekst: "**Clair-obscur / chiaroscuro** is een sterk **licht-donkercontrast**, vaak met één lichtbron, dat **drama** geeft en de aandacht richt op het belangrijkste. Kenmerkend voor de **barok** — denk aan **Caravaggio** en **Rembrandt**." }],
           niveaus: { basis: "Licht-donkercontrast.", simpeler: "Clair-obscur = licht/donker", nogSimpeler: "Licht tegen donker." },
@@ -89,9 +89,9 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen **eigen schaduw** en **slagschaduw**?",
-        options: ["Eigen schaduw zit op het voorwerp; slagschaduw werpt het voorwerp", "Ze zijn hetzelfde", "Slagschaduw zit op het voorwerp", "Eigen schaduw is altijd zwart"],
+        options: ["Eigen schaduw op het voorwerp, slagschaduw ernaast", "Eigen schaduw is donkerder dan slagschaduw", "Slagschaduw op het voorwerp, eigen schaduw ernaast", "Eigen schaduw door daglicht, slagschaduw door lamplicht"],
         answer: 0,
-        wrongHints: [null, "Er is wel degelijk verschil.", "Andersom: de slagschaduw valt náást/achter het voorwerp.", "Kleur is hier niet het onderscheid."],
+        wrongHints: [null, "Welke schaduw donkerder is, hangt van het licht af. Waar bevindt elke schaduw zich?", "Een bal in de zon werpt een schaduw op de grond. Welke van de twee is dat?", "Beide soorten ontstaan bij elk licht. Waar zie je elke schaduw?"],
         uitlegPad: {
           stappen: [{ titel: "Op het ding vs geworpen", tekst: "De **eigen schaduw** zit op het voorwerp zelf (de van het licht afgewende kant). De **slagschaduw** is de schaduw die het voorwerp **wérpt** op de ondergrond of muur. Samen maken ze het beeld ruimtelijk en geloofwaardig." }],
           niveaus: { basis: "Op vs geworpen.", simpeler: "Eigen = op voorwerp", nogSimpeler: "Op het ding of geworpen." },
@@ -108,9 +108,9 @@ const steps = [
     checks: [
       {
         q: "Wat doet een **symmetrische** compositie meestal met de sfeer?",
-        options: ["Rust en evenwicht", "Chaos en snelheid", "Het maakt het beeld donker", "Het verandert de kleuren"],
+        options: ["Rust en evenwicht", "Chaos en snelheid", "Diepte en ruimte", "Verrassing en speelsheid"],
         answer: 0,
-        wrongHints: [null, "Dat past juist bij asymmetrie/dynamiek.", "Symmetrie zegt niets over licht.", "Het gaat om ordening, niet om kleur."],
+        wrongHints: [null, "Dat past juist bij asymmetrie/dynamiek.", "Diepte maak je met overlapping en perspectief. Heeft een spiegelbeeld daar iets mee te maken?", "Verrassing komt vaak van iets dat uit balans is. Wat gebeurt er als links en rechts gelijk zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Spiegelen = rust", tekst: "Bij **symmetrie** spiegelen de helften → het voelt **rustig, plechtig, in evenwicht** (denk aan een kerk-interieur). **Asymmetrie** is juist dynamischer en spannender." }],
           niveaus: { basis: "Rust/evenwicht.", simpeler: "Symmetrie = rust", nogSimpeler: "Spiegelen = rust." },
@@ -118,9 +118,9 @@ const steps = [
       },
       {
         q: "Wat is de **derderegel / gulden snede** in compositie?",
-        options: ["Belangrijke elementen op ongeveer ⅓ plaatsen, niet in het midden", "Alles precies in het midden", "Het beeld in drie kleuren maken", "Drie figuren afbeelden"],
+        options: ["Belangrijke dingen op ongeveer ⅓ van het beeld zetten", "Het belangrijkste precies in het midden zetten", "Het beeld opbouwen uit drie hoofdkleuren", "Voorgrond, middengrond en achtergrond tonen"],
         answer: 0,
-        wrongHints: [null, "Oogt alles pal in het midden levendig, of juist een beetje saai?", "Het gaat over plaatsing, niet over kleuren.", "Niet over het aantal figuren."],
+        wrongHints: [null, "Oogt alles pal in het midden levendig, of juist een beetje saai?", "Drie kleuren gaan over kleurgebruik. Waar op het doek zet je volgens deze regel iets belangrijks?", "Dat gaat over diepte. Zegt de derderegel iets over diepte of over plaatsing?"],
         uitlegPad: {
           stappen: [{ titel: "Niet saai in het midden", tekst: "De **derderegel/gulden snede**: plaats belangrijke elementen op ongeveer **een derde** van het beeld (op de snijpunten van denkbeeldige derde-lijnen). Dat oogt vaak levendiger en prettiger dan alles pal in het midden." }],
           niveaus: { basis: "Op ⅓.", simpeler: "Belangrijkste ding op ⅓", nogSimpeler: "Niet in het midden." },
@@ -128,9 +128,9 @@ const steps = [
       },
       {
         q: "Hoe stuurt een kunstenaar **waar je oog naartoe gaat**?",
-        options: ["Met leidende lijnen en blikrichting", "Door het doek groter te maken", "Door duurdere verf te gebruiken", "Dat kan een kunstenaar niet sturen"],
+        options: ["Met leidende lijnen en blikrichting", "Door alles even scherp te schilderen", "Door een titel onder het werk te zetten", "Door het werk in een donkere zaal te hangen"],
         answer: 0,
-        wrongHints: [null, "Formaat stuurt de blik binnen het beeld niet.", "Verfprijs doet er niet toe.", "Juist wél — compositie stuurt de blik bewust."],
+        wrongHints: [null, "Als alles even scherp is, waar kijk je dan eerst?", "Een titel lees je pas na het kijken. Wat in het beeld zelf trekt je oog mee?", "Dat gaat over de plek in het museum. Wat binnen het beeld leidt je oog?"],
         uitlegPad: {
           stappen: [{ titel: "Lijnen en blikken leiden je", tekst: "Met **leidende lijnen** (een weg, een arm, de rand van een tafel) en de **blikrichting** van figuren stuurt de kunstenaar je oog naar het belangrijkste. Compositie is **bewuste ordening** — niets staat er toevallig." }],
           niveaus: { basis: "Leidende lijnen + blik.", simpeler: "Lijnen sturen je oog", nogSimpeler: "Lijnen wijzen de weg." },
@@ -147,9 +147,9 @@ const steps = [
     checks: [
       {
         q: "Welke techniek suggereert **diepte** in een plat schilderij?",
-        options: ["Overlapping", "Alles even groot maken", "Alleen één kleur gebruiken", "Het doek kantelen"],
+        options: ["Overlapping", "Symmetrie", "Herhaling", "Egale kleurvlakken"],
         answer: 0,
-        wrongHints: [null, "Even groot maakt het juist vlakker.", "Eén kleur helpt diepte niet.", "Het ophangen verandert de diepte-illusie niet."],
+        wrongHints: [null, "Symmetrie geeft evenwicht en rust. Zie je er ook diepte door?", "Herhaling geeft ritme. Hoe laat je zien dat het ene ding achter het andere staat?", "Een egaal vlak zonder schaduw oogt juist plat. Hoe laat je zien wat vóór en wat achter staat?"],
         uitlegPad: {
           stappen: [{ titel: "Manieren om diepte te maken", tekst: "**Overlapping** (een voorwerp dat een ander deels bedekt, lijkt dichterbij) suggereert diepte. Andere manieren: **lineair perspectief** (lijnen naar een verdwijnpunt), **afnemende grootte**, en **lucht-/kleurperspectief** (ver weg = vager/blauwer/lichter)." }],
           niveaus: { basis: "Overlapping.", simpeler: "Diepte = overlapping", nogSimpeler: "Ervoor = dichterbij." },
@@ -157,9 +157,9 @@ const steps = [
       },
       {
         q: "Welke vormen/lijnen geven vaak een gevoel van **spanning en beweging**?",
-        options: ["Hoekige vormen en diagonale lijnen", "Ronde vormen en horizontale lijnen", "Alleen de kleur wit", "Een vierkante lijst"],
+        options: ["Hoekige vormen en diagonale lijnen", "Ronde vormen en horizontale lijnen", "Ronde vormen en verticale lijnen", "Rechthoekige vlakken en horizontale lijnen"],
         answer: 0,
-        wrongHints: [null, "Rond + horizontaal geeft juist rust.", "Kleur is hier niet het punt.", "De lijst doet niet mee."],
+        wrongHints: [null, "Rond + horizontaal geeft juist rust.", "Verticale lijnen staan stevig, zoals een boom of een toren. Voelt dat als beweging?", "Horizontaal ligt stil, zoals een horizon. Geeft dat spanning?"],
         uitlegPad: {
           stappen: [{ titel: "Diagonaal = dynamiek", tekst: "**Hoekige vormen** en **diagonale lijnen** geven **spanning en beweging**. **Ronde, vloeiende** vormen en **horizontale** lijnen geven juist **rust** en vriendelijkheid. Zo stuurt de kunstenaar het gevoel van de kijker." }],
           niveaus: { basis: "Hoekig + diagonaal.", simpeler: "Diagonaal = beweging", nogSimpeler: "Schuin = beweging." },
@@ -167,9 +167,9 @@ const steps = [
       },
       {
         q: "Hoe analyseer je een kunstwerk met beeldaspecten?",
-        options: ["Benoem wat je ziet en koppel het aan het effect", "Alleen zeggen of je het mooi vindt", "Raden wat het kostte", "Tellen hoeveel kleuren er zijn"],
+        options: ["Benoem wat je ziet en koppel het aan het effect", "Vertellen wat je ervan vindt en waarom", "Uitzoeken wie het maakte en wanneer", "Alle beeldaspecten één voor één opsommen"],
         answer: 0,
-        wrongHints: [null, "'Mooi/niet mooi' is een mening, geen analyse.", "De prijs hoort niet bij beeldanalyse.", "Tellen alleen zegt niets over de werking."],
+        wrongHints: [null, "Dat is je mening of oordeel. Komt een analyse vóór of na het oordeel?", "Dat is achtergrondinformatie. Wat doen de beeldaspecten zelf, zoals lijn, kleur en vorm?", "Opsommen is een begin. Is een lijstje al een analyse?"],
         uitlegPad: {
           stappen: [{ titel: "Wat zie ik → welk effect", tekst: "Analyseren = eerst **benoemen wat je ziet** (kleur, licht/toon, vorm, compositie…) en dat koppelen aan het **effect/de betekenis** (welke sfeer roept het op, waar gaat je oog heen, en waarom). De kunstenaar kiest beeldaspecten **doelbewust** om iets over te brengen." }],
           niveaus: { basis: "Zien → effect benoemen.", simpeler: "Analyse = wat + effect", nogSimpeler: "Zien en uitleggen." },
