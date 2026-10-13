@@ -220,11 +220,11 @@ const steps = [
       },
       {
         q: "Wat is **psychologische prijs**?",
-        options: ["€9,99 voelt veel lager dan €10","Geheime prijs","Tijdelijke prijs","Prijs voor psychologen"],
+        options: ["Een prijs net onder een rond getal (€9,99 i.p.v. €10)","Een prijs die je pas aan de kassa te horen krijgt","Een prijs die maar kort geldt (deze week €8 i.p.v. €10)","Een prijs die per klant verschilt (vaste klant betaalt meer)"],
         answer: 0,
-        wrongHints: [null, "Het gaat niet om geheimhouding — het gaat om hoe de prijs op de klant óverkomt.", "Een tijdelijke prijs is een aanbieding — hier verandert niet de prijs maar de beleving.", null],
+        wrongHints: [null, "Het gaat niet om geheimhouding — het gaat om hoe de prijs op de klant óverkomt.", "Een prijs die kort geldt is een aanbieding. Bij deze prijs verandert niet de periode, maar hoe het bedrag in je hoofd binnenkomt.", "Dat heet een dynamische prijs. Hier betaalt iedereen hetzelfde — wat doet het bedrag zelf met je gevoel?"],
         uitlegPad: {
-          stappen: [{ titel: "Linksomafronding", tekst: "**Psychologische prijs**: ronding net onder een rond getal (€9,99 ipv €10). Hersenen lezen vooral eerste cijfer ('9') → voelt veel lager. Uit onderzoek blijkt dat dit vaak beter verkoopt dan €10. Ook €99 vs €100, €499 vs €500." }],
+          stappen: [{ titel: "Net onder een rond getal", tekst: "**Psychologische prijs**: ronding net onder een rond getal (€9,99 ipv €10). Hersenen lezen vooral eerste cijfer ('9') → voelt veel lager. Uit onderzoek blijkt dat dit vaak beter verkoopt dan €10. Ook €99 vs €100, €499 vs €500." }],
           niveaus: { basis: "9,99 voelt lager.", simpeler: "Psy prijs", nogSimpeler: "9,99" },
         },
       },

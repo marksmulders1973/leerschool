@@ -226,9 +226,9 @@ const steps = [
       },
       {
         q: "Voor- en nadeel protectionisme:",
-        options: ["VOORDEEL: eigen banen beschermd. NADEEL: duurder voor consument", "Alleen voordelen, geen nadelen", "Alleen nadelen, geen voordelen", "Geen effect op banen of prijzen"],
+        options: ["VOORDEEL: eigen banen beschermd. NADEEL: duurder voor consument", "VOORDEEL: goedkoper voor consument. NADEEL: minder eigen banen", "VOORDEEL: meer keus in de winkel. NADEEL: eigen banen verdwijnen", "VOORDEEL: meer export. NADEEL: meer concurrentie voor eigen bedrijven"],
         answer: 0,
-        wrongHints: [null, "Beide kanten zijn er.", "Beide kanten zijn er.", "Wel groot effect."],
+        wrongHints: [null, "Dat zijn juist de gevolgen van vrijhandel. Wat gebeurt er met prijzen als buitenlandse spullen extra belasting krijgen?", "Protectionisme houdt buitenlandse producten tegen. Krijg je dan meer of minder keus?", "Protectionisme houdt buitenlandse concurrenten juist buiten. Krijgen eigen bedrijven dan meer of minder concurrentie?"],
         uitlegPad: {
           stappen: [{ titel: "Trade-off", tekst: "Protectionisme = eigen banen beschermen MAAR consument betaalt meer voor producten." }],
           woorden: [{ woord: "trade-off", uitleg: "Voordeel kost iets — niet alleen plus." }],
@@ -642,14 +642,14 @@ const steps = [
       },
       {
         q: "Internationaal **toezicht** op multinationals via:",
-        options: ["EU + OESO + ESG-criteria", "Niemand", "Alleen vakbonden", "Alleen consumenten"],
+        options: ["EU-boetes + OESO-afspraken + ESG-eisen van beleggers", "Een wereldpolitie van de VN die bedrijven controleert", "Alleen het land waar het hoofdkantoor staat", "Alleen vakbonden en consumenten samen"],
         answer: 0,
-        wrongHints: [null, "Wel toezicht.", "Vakbonden zijn 1 partij.", "Consumenten zijn 1 partij."],
+        wrongHints: [null, "Bestaat er een wereldpolitie voor bedrijven? Denk aan wie echt boetes kan geven of regels kan maken.", "Een multinational werkt in veel landen tegelijk. Kan één land dan alles regelen?", "Vakbonden en consumenten kunnen druk zetten, maar kunnen zij boetes geven of belastingregels maken?"],
         uitlegPad: {
-          stappen: [{ titel: "Drie lagen", tekst: "Toezicht via: EU (mededinging, boetes), OESO (belastingafspraken), ESG (duurzaamheidscriteria)." }],
+          stappen: [{ titel: "Drie lagen", tekst: "Toezicht en regels via drie lagen: de EU houdt toezicht op eerlijke concurrentie en geeft boetes. In de OESO maken landen samen afspraken, bijvoorbeeld over belasting (de OESO is zelf geen toezichthouder). ESG is ook geen toezichthouder: het zijn eisen van beleggers en banken dat bedrijven duurzaam en eerlijk werken." }],
           woorden: [{ woord: "ESG", uitleg: "Environmental, Social, Governance — duurzaamheidscriteria voor bedrijven." }, { woord: "OESO", uitleg: "Organisatie voor Economische Samenwerking en Ontwikkeling. 38 rijke landen." }],
           theorie: "EU = boetes (Google €2,4 mrd 2017 voor mededingingsovertredingen). OESO = belastingafspraken (BEPS). ESG = beleggers eisen duurzaamheid.",
-          voorbeelden: [{ type: "feit", tekst: "OESO BEPS 2023: minimum 15% vennootschapsbelasting wereldwijd voor multinationals." }],
+          voorbeelden: [{ type: "feit", tekst: "OESO-afspraak (2021, in de EU ingegaan in 2024): grote multinationals betalen minimaal 15% winstbelasting." }],
           basiskennis: [{ onderwerp: "Niet 1 partij", uitleg: "Internationaal toezicht is samenwerking, niet enkele organisatie." }],
           niveaus: { basis: "EU + OESO + ESG.", simpeler: "Toezicht via 3 lagen: EU (boetes), OESO (belasting-afspraken), ESG (duurzaamheid).", nogSimpeler: "Drie" },
         },
@@ -749,9 +749,9 @@ const steps = [
       },
       {
         q: "Waarom is de ECB **onafhankelijk** van politici?",
-        options: ["Politici willen rente vaak verlagen voor verkiezingen, ten koste van inflatie", "Omdat de ECB dat zelf zo wil", "Dat is gewoon toeval", "Omdat politici te veel weten"],
+        options: ["Politici willen rente vaak verlagen voor verkiezingen, ten koste van inflatie", "De ECB heeft dat zelf besloten, zodat ze meer winst kan maken", "De grote banken bezitten de ECB, dus beslissen de banken zelf", "Zo hoeft de ECB aan niemand uitleg te geven over haar keuzes"],
         answer: 0,
-        wrongHints: [null, "Wel een reden.", "Geen toeval.", "Onzin."],
+        wrongHints: [null, "Mag een centrale bank haar eigen regels kiezen? En draait de ECB om winst maken?", "Wie heeft de ECB opgericht: de banken, of de EU-landen samen?", "Klopt dat? De ECB-baas moet wél uitleg geven aan het Europees Parlement. Waarom mogen politici dan toch niet over de rente beslissen?"],
         uitlegPad: {
           stappen: [{ titel: "Politiek-belang ≠ economisch", tekst: "Politici willen herkozen worden → liever lage rente (mensen voelen zich rijker). Maar lage rente = inflatie. Dus ECB onafhankelijk." }],
           woorden: [{ woord: "onafhankelijkheid", uitleg: "Centrale bank niet door politici aangestuurd. Beslist zelf." }],

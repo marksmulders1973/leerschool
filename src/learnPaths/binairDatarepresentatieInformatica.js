@@ -192,7 +192,7 @@ const steps = [
         wrongHints: [null, "PNG is juist verliesvrij.", "ZIP geeft de data exact terug — verliesvrij.", "Platte tekst wordt niet 'lossy' opgeslagen."],
         uitlegPad: {
           stappen: [{ titel: "JPG gooit details weg", tekst: "**JPG** (foto's) en MP3 (muziek) zijn **lossy**: ze gooien details weg die je nauwelijks merkt → veel kleiner bestand, maar je krijgt het origineel **niet exact** terug. **PNG** en **ZIP** zijn **lossless**: exact terug, maar minder klein." }],
-          niveaus: { basis: "JPG = lossy.", simpeler: "Lossy = JPG", nogSimpeler: "A." },
+          niveaus: { basis: "JPG = lossy.", simpeler: "Lossy = JPG", nogSimpeler: "JPG gooit details weg." },
         },
       },
       {

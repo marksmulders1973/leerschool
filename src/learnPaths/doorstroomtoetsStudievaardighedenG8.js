@@ -529,7 +529,7 @@ const steps = [
       },
       {
         q: "Welke **richting** ligt **tegenover west**?",
-        options: ["Oost", "Zuid", "Noord", "Zuid-west"],
+        options: ["Oost", "Zuid", "Noord", "Zuidwest"],
         answer: 0,
         wrongHints: [null, "90° draaiing.", "90° draaiing.", "Zuidwest ligt juist vlak naast west."],
       },

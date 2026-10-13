@@ -178,7 +178,7 @@ const steps = [
       { q: "Wat is een **hormoon**?", options: ['Stof die signaal geeft in lichaam', 'Spier die je kunt aanspannen', 'Voedingsstof uit je avondeten', 'Bot dat langer groeit in je been'], answer: 0, wrongHints: [null, "Een spier kun je aanspannen — een hormoon reist door je bloed. Wat doet het daar?", "Het komt niet van je bord — je lichaam maakt het zelf. Waarvoor?", "Geen hard lichaamsdeel — het is een stof die door je bloed reist. Met welk doel?"] },
       { q: "Hoeveel **slaap** in puberteit?", options: ["9-10 uur", "4 uur", "12+ uur", "Geen"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Wel."] },
       { q: "Hoe vaak **menstruatie**?", options: ["~Elke 28 dagen", "Elke dag", "1 keer per jaar", "Niet"], answer: 0, wrongHints: [null, "Niet.", "Te zelden.", "Wel."] },
-      { q: "Welk nummer **Kindertelefoon**?", options: ["0800-0432", "112", "0900", "06"], answer: 0, wrongHints: [null, "Spoed.", "Niet.", "Niet."] },
+      { q: "Welk nummer **Kindertelefoon**?", options: ["0800-0432", "112", "0900-8844", "0800-2000"], answer: 0, wrongHints: [null, "112 bel je alleen bij spoed: als er direct gevaar is.", "Dat is de politie als het géén spoed is. De Kindertelefoon is gratis — met welke cijfers beginnen gratis nummers?", "Dat is Veilig Thuis — ook goed om te kennen, maar het is een ander nummer dan de Kindertelefoon."] },
       { q: "Tot welke leeftijd **brein ontwikkelt**?", options: ["~25 jr", "12 jr", "8 jr", "60 jr"], answer: 0, wrongHints: [null, "Te jong.", "Te jong.", "Te oud."] },
       {
         q: "Wat is een **groeispurt**?",

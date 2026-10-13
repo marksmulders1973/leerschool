@@ -99,9 +99,9 @@ const steps = [
       },
       {
         q: "Wat betekent **'garbage in, garbage out'** bij machine learning?",
-        options: ["Slechte/eenzijdige data → slechte voorspellingen", "Computers maken vuilnis", "Je moet je bestanden weggooien", "AI werkt altijd perfect"],
+        options: ["Slechte/eenzijdige data → slechte voorspellingen", "Slim algoritme → maakt slechte data vanzelf goed", "Volle harde schijf → het model rekent trager", "Heel veel data → altijd perfecte voorspellingen"],
         answer: 0,
-        wrongHints: [null, "Het is een uitdrukking over data-kwaliteit, niet letterlijk afval.", "Het gaat niet over bestanden wissen.", "Juist niet — slechte data geeft slechte resultaten."],
+        wrongHints: [null, "Kan een model iets goeds leren uit voorbeelden die fout of scheef zijn? Het leert alleen wat erin zit.", "Gaat de uitdrukking over opslagruimte, of over de kwaliteit van wat je het model laat leren?", "Helpt heel veel data ook als die data fout of eenzijdig is?"],
         uitlegPad: {
           stappen: [{ titel: "Data bepaalt de kwaliteit", tekst: "**'Garbage in, garbage out'**: leert een model van **slechte of eenzijdige** voorbeelden, dan worden de voorspellingen ook slecht of scheef. **Meer en betere data → beter model.** De data is dus minstens zo belangrijk als het algoritme." }],
           niveaus: { basis: "Slechte data = slecht model.", simpeler: "Slechte data → slecht", nogSimpeler: "Slechte data = slecht model." },

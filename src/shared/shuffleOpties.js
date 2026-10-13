@@ -8,13 +8,36 @@
 // Veiligheden:
 // - Opties met vaste positie ("geen van beide", "allebei", "A en B", ...)
 //   worden niet geschud — hun betekenis hangt aan de plek.
-// - uitlegPad-niveaus eindigen soms op een letter-shorthand ("… A.") die na
-//   schudden niet meer klopt — die strippen we runtime weg (data blijft heel).
+// - uitleg verwijst soms naar een optieletter ("A.", "Dat is A.", "(=A)") die na
+//   schudden niet meer klopt — die vervangen we runtime door de optietekst (data blijft heel).
 
 const POSITIE_VAST = /\b(beide|allebei|geen van|alle (twee|drie|vier)|bovenstaande|onderstaande|[abcd] en [abcd])\b/i;
 
-function stripLetterShorthand(s) {
-  return typeof s === "string" ? s.replace(/\s[A-D]\.?$/, "") : s;
+// 13 okt 2026 (eindmeting: 3 van 200 vragen): de oude regel haalde alleen " A." aan het eind weg.
+// Een losse "A.", "Dat is A.", "(=A)" of "antwoord A" bleef staan en wees na het schudden naar een
+// andere optie; en "zoek bij de C." (letter als inhoud) werd juist kapotgemaakt. Nu vervangen we de
+// letter door de tekst van de optie waar hij (in de oorspronkelijke volgorde) naar wees.
+// Zijn de opties zelf letters (alfabet, scheikunde-symbolen), dan blijft de tekst ongemoeid.
+export function vervangLetterVerwijzingen(s, opties) {
+  if (typeof s !== "string" || !Array.isArray(opties)) return s;
+  if (opties.some((o) => typeof o === "string" && /^\s*[A-D]\s*$/.test(o))) return s;
+  // Staat de letter zelf in een optie ("Koolstof (C)", "0,12 A", "x³/3 + C", "Trein A"), dan is het
+  // inhoud (symbool, eenheid, naam) en geen verwijzing naar een optie: dan niets vervangen.
+  const isInhoud = (l) => opties.some((o) => typeof o === "string" && new RegExp(`(^|[^\\p{L}])${l}([^\\p{L}]|$)`, "u").test(o));
+  const tekst = (l) => {
+    if (isInhoud(l)) return null;
+    const o = opties["ABCD".indexOf(l)];
+    return typeof o === "string" ? `'${o.replace(/\*\*/g, "").trim()}'` : null;
+  };
+  const vervang = (m, l, voor = "", na = "") => { const o = tekst(l); return o ? `${voor}${o}${na}` : m; };
+  return s
+    .replace(/^\s*([A-D])\.?\s*$/, (m, l) => vervang(m, l, "", "."))
+    .replace(/\(\s*=\s*([A-D])\s*\)/g, (m, l) => vervang(m, l, "(= ", ")"))
+    .replace(/\b(antwoord|optie)\s+([A-D])\b/g, (m, w, l) => vervang(m, l, `${w} `))
+    .replace(/\b(Antwoord|Optie)\s+([A-D])\b/g, (m, w, l) => vervang(m, l, `${w} `))
+    .replace(/\b(Dat is|dat is|Het is|het is)\s+([A-D])\.?\s*$/, (m, w, l) => vervang(m, l, `${w} `, "."))
+    .replace(/\bKies\s+([A-D])\.?\s*$/, (m, l) => vervang(m, l, "Kies ", "."))
+    .replace(/→\s*([A-D])\.?\s*$/, (m, l) => vervang(m, l, "→ ", "."));
 }
 
 // Deterministische variant: zelfde vraag-id → zelfde volgorde, voor iedereen
@@ -56,18 +79,20 @@ export function shuffleOpties(q, rng = Math.random) {
       ? volgorde.map((i) => q.wrongHints[i])
       : q.wrongHints;
 
+  const v = (s) => vervangLetterVerwijzingen(s, q.options);
   let uitlegPad = q.uitlegPad;
   if (uitlegPad && uitlegPad.niveaus) {
     uitlegPad = {
       ...uitlegPad,
       niveaus: {
         ...uitlegPad.niveaus,
-        basis: stripLetterShorthand(uitlegPad.niveaus.basis),
-        simpeler: stripLetterShorthand(uitlegPad.niveaus.simpeler),
-        nogSimpeler: stripLetterShorthand(uitlegPad.niveaus.nogSimpeler),
+        basis: v(uitlegPad.niveaus.basis),
+        simpeler: v(uitlegPad.niveaus.simpeler),
+        nogSimpeler: v(uitlegPad.niveaus.nogSimpeler),
       },
     };
   }
+  const explanation = v(q.explanation);
 
-  return { ...q, options, answer, wrongHints, ...(uitlegPad !== q.uitlegPad ? { uitlegPad } : {}) };
+  return { ...q, options, answer, wrongHints, ...(uitlegPad !== q.uitlegPad ? { uitlegPad } : {}), ...(explanation !== q.explanation ? { explanation } : {}) };
 }

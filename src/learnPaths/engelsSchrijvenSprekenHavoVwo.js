@@ -46,7 +46,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Verleden met heden-relevantie", tekst: "**Present perfect**: have/has + past participle. Geeft handeling die **begon in verleden + nog relevant of doorgaand** is. 'I **have lived** here for 10 years' = ik woon hier (nog steeds) sinds 10 jaar geleden. Verschil met past simple: 'I lived here for 10 years' = verleden, niet meer." }],
           theorie: "Toets-val: 'How long have you...' altijd present perfect, niet past simple.",
-          niveaus: { basis: "Have+lived.", simpeler: "Pres perf = have+pp", nogSimpeler: "A." },
+          niveaus: { basis: "Have+lived.", simpeler: "Pres perf = have+pp", nogSimpeler: "have + voltooid deelwoord: I have lived" },
         },
       },
       {

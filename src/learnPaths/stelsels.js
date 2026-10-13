@@ -613,7 +613,7 @@ const steps = [
       { q: "Een **stelsel** heeft hoeveel onbekenden?", options: ["2 of meer","1","0","Oneindig"], answer: 0, wrongHints: [null, "Dat is gewone vergelijking.", "Niet.", "Niet algemeen."] },
       { q: "Welke methode lost stelsel op door optellen/aftrekken?", options: ["Eliminatie","Substitutie","Factorisatie","Grafiek"], answer: 0, wrongHints: [null, "Andere methode (één vervangen).", "Niet relevant.", "Niet specifiek."] },
       { q: "Stelsel x+y=5 en x−y=1. Wat is x?", options: ["3","2","4","1"], answer: 0, wrongHints: [null, "Dat is de andere onbekende, niet x. Tel de vergelijkingen eens op.", "Niet.", "Niet."] },
-      { q: "Grafisch: snijpunt twee lijnen = ?", options: ["Oplossing van stelsel","Niets","Y-as","X-as"], answer: 0, wrongHints: [null, "Wel iets.", "Niet relevant.", "Niet relevant."] },
+      { q: "Grafisch: snijpunt twee lijnen = ?", options: ["Oplossing van het stelsel","Startgetal van beide lijnen","Hellingsgetal van beide lijnen","Nulpunt van beide lijnen"], answer: 0, wrongHints: [null, "Het startgetal lees je af waar een lijn de y-as snijdt. Hier snijden de lijnen elkaar — wat geldt daar voor x en y?", "Het hellingsgetal zegt hoe steil een lijn is; dat is geen punt. Wat is bijzonder aan een punt dat op beide lijnen ligt?", "Een nulpunt ligt altijd op de x-as, maar het snijpunt kan overal liggen. Wat geldt daar voor beide vergelijkingen?"] },
       { q: "Stelsel y=2x en y=x+1. Snijpunt y= ?", options: ["2","1","0","3"], answer: 0, wrongHints: [null, "Niet — dat is wat y wordt als x nul is, niet op het snijpunt.", "Niet.", "Niet."] },
     ],
   },

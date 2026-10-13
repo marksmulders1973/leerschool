@@ -1023,10 +1023,10 @@ const steps = [
     explanation: "Bij de Doorstroomtoets krijg je vaak een **schema/diagram met tekst en pijlen** en moet je een **vraag beantwoorden**.\n\n**Aanpak**:\n1. **Lees titel** — waar gaat het over?\n2. **Lees legenda** — wat betekenen de symbolen/kleuren?\n3. **Scan het schema** globaal.\n4. **Lees pas dan de vraag**.\n5. **Vind het juiste vakje** of pad.\n6. **Antwoord**.\n\n**Voorbeeld — voedselketen**:\n```\nGras → Konijn → Vos\n```\n• Gras wordt door konijn gegeten.\n• Konijn wordt door vos gegeten.\n• Pijl = 'wordt gegeten door'.\n\n**Vragen**:\n• 'Wat eet vos?' → konijn.\n• 'Wat eet konijn?' → gras.\n• 'Wat gebeurt als alle vossen weg zijn?' → konijnen worden niet meer gegeten → meer konijnen → minder gras.\n\n**Soorten schema's bij de Doorstroomtoets**:\n• **Stamboom** *(familie)*: opa-oma → vader → kind.\n• **Voedselketen** *(natuur)*: planten → planteneter → vleeseter.\n• **Productie-keten** *(spullen)*: katoen → garen → kleren.\n• **Tijdslijn**: jaartal-overzicht.\n\n**Toets-tip**:\nVeel schema-vragen vereisen logisch nadenken: 'wat als X wegvalt?'. Volg de pijlen na om het effect te bepalen.",
     checks: [
       {
-        q: "Voedselketen: gras → konijn → vos.\n\n**Wat eet vos**?",
-        options: ["konijn","gras","vlinder","vos"],
+        q: "Voedselketen: gras → konijn → vos.\n\n**Wat eet de vos**?",
+        options: ["konijn","gras","vlinder","niets"],
         answer: 0,
-        wrongHints: [null,"Kijk welk dier direct vóór de vos in de keten staat.","Niet in dit schema.","Vos eet zichzelf niet."],
+        wrongHints: [null,"Kijk welk dier direct vóór de vos in de keten staat.","Niet in dit schema.","Aan het eind staan betekent: niemand eet de vos. Maar wat eet de vos zelf? Volg de pijl naar de vos."],
       },
       {
         q: "Voedselketen: zaad → muis → uil.\n\n**Wat als muizen verdwijnen**?",

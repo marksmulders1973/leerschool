@@ -107,7 +107,7 @@ const steps = [
           ],
           theorie: "**Letterlijke vragen: zoek-strategie**\n\n1. Wat is het KERNWOORD in de vraag? Hier: 'eerste fiets uitgevonden'\n2. Zoek dat woord (of synoniem) in de tekst.\n3. Het antwoord staat in DEZELFDE zin of erbij.\n\nLet op valstrikken: er staan 4 jaartallen in de tekst, maar slechts 1 hoort bij DE EERSTE uitvinding. De andere zijn latere stappen.",
           voorbeelden: [
-            { type: "vinden", tekst: "Zin 2 zegt: 'De eerste fiets werd in 1817 uitgevonden door Karl von Drais.' Antwoord = 1817 (=A)." },
+            { type: "vinden", tekst: "Zin 2 zegt: 'De eerste fiets werd in 1817 uitgevonden door Karl von Drais.' Antwoord = 1817." },
             { type: "valstrik", tekst: "1860 = pedalen, 1885 = ketting, 1900 = Nederland populair. Allemaal andere momenten in fietsgeschiedenis, NIET de eerste uitvinding." },
           ],
           basiskennis: [
@@ -194,7 +194,7 @@ const steps = [
             { woord: "omwenteling", uitleg: "Eén volledige draai of rondje." },
             { woord: "samengesteld woord", uitleg: "Een lang woord gemaakt van 2 of meer kortere woorden geplakt. Bv. fiets+wiel, school+plein." },
           ],
-          theorie: "**Woordbetekenis-vragen — 3 strategieën:**\n\n1. **Splits**: lang woord? Splits in delen. Elk deel ken je vaak.\n2. **Context**: lees de zin ERVOOR en ERNA. Wat zou logisch zijn?\n3. **Eliminatie**: kruis af welke opties NIET kunnen (geen ban-deel = geen band).\n\nLet op: de toets kiest vaak 4 opties die WEL bestaan, maar maar 1 past bij de TEKST.",
+          theorie: "**Woordbetekenis-vragen — 3 strategieën:**\n\n1. **Splits**: lang woord? Splits in delen. Elk deel ken je vaak.\n2. **Context**: lees de zin ERVOOR en ERNA. Wat zou logisch zijn?\n3. **Eliminatie**: kruis af welke opties NIET kunnen (staat er niets over een band in de tekst? Dan is het geen fietsband).\n\nLet op: de toets kiest vaak 4 opties die WEL bestaan, maar maar 1 past bij de TEKST.",
           voorbeelden: [
             { type: "splits", tekst: "Pedaal + omwenteling = trappen + 1x rond = pedaal-trapje. Als je elk deel kent, ken je het hele woord." },
             { type: "context", tekst: "Tekst: '1 pedaalomwenteling met meer afstand'. Wat klopt: '1 keer trappen met de pedalen' (gaat over afstand met fietsen). De andere opties (band, automerk, rem) passen niet bij die zin." },
@@ -204,7 +204,7 @@ const steps = [
           ],
           niveaus: {
             basis: "Pedaal + omwenteling = 1x trappen rond.",
-            simpeler: "Lang woord? Splits 'm op. Pedaal = waar je trapt. Omwenteling = 1x rond. Samen: 1x rond trappen met de pedalen. Dat is A.",
+            simpeler: "Lang woord? Splits 'm op. Pedaal = waar je trapt. Omwenteling = 1x rond. Samen: 1x rond trappen met de pedalen. Dat is: één keer rond met de pedalen trappen.",
             nogSimpeler: "Pedaal + rondje = trappen",
           },
         },

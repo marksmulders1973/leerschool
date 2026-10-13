@@ -248,9 +248,9 @@ const steps = [
       },
       {
         q: "**f(x) = x³** op x = 0. f'(0) = 0. Is dit top/dal/anders?",
-        options: ["Buigpunt — niet top/dal", "Top", "Dal", "Niet bepaald"],
+        options: ["Buigpunt", "Top", "Dal", "Niet bepaald"],
         answer: 0,
-        wrongHints: [null, "Niet — geen omkering.", "Niet — geen omkering.", "Wel bepaald via 1e-afgeleidetoets."],
+        wrongHints: [null, "Bij een top gaat f' van + naar −. Bekijk f'(x) = 3x² net links en net rechts van 0: welk teken heeft het?", "Bij een dal gaat f' van − naar +. Is f'(x) = 3x² links van 0 echt negatief?", "Je kunt het wél bepalen: kijk naar het teken van f' vlak links en rechts van x = 0."],
         uitlegPad: {
           stappen: [
             { titel: "1e-afgeleidetoets", tekst: "f'(x) = 3x² ≥ 0 voor alle x → f' wisselt niet van teken bij x=0. Geen top of dal. Functie stijgt monotoon, met horizontale raaklijn precies op x=0 = **buigpunt**." },

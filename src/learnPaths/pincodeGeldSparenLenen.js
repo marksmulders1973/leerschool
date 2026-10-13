@@ -941,7 +941,7 @@ const steps = [
         q: "Wat is **onderpand** bij een hypotheek?",
         options: ["Het huis zelf", "Een spaarrekening", "Een verzekering", "Een toeslag"],
         answer: 0,
-        wrongHints: [null, "Spaarrekening is iets anders.", "Verzekering kan helpen, maar onderpand = het huis zelf.", "Toeslagen hebben hier niets mee te maken."],
+        wrongHints: [null, "Spaarrekening is iets anders.", "Een verzekering betaalt uit bij pech, maar de bank kan hem niet verkopen. Welk bezit kan de bank wél verkopen als jij niet betaalt?", "Toeslagen hebben hier niets mee te maken."],
         uitlegPad: {
           stappen: [{ titel: "Bezit als zekerheid", tekst: "Onderpand = bezit dat bank kan OPEISEN als jij niet betaalt. Bij hypotheek is het huis zelf het onderpand. Bij wanbetaling: huis wordt openbaar verkocht, opbrengst gaat naar de bank." }],
           woorden: [{ woord: "onderpand", uitleg: "Goed waarvan bank eigendom kan claimen bij wanbetaling." }, { woord: "executieverkoop", uitleg: "Verplichte verkoop van onderpand door bank/notaris om schuld te dekken." }],

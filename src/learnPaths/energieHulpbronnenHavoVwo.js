@@ -380,12 +380,12 @@ const steps = [
         q: "**NL Klimaatakkoord 2019** doel 2030:",
         options: [
           "49% CO₂-reductie vs 1990",
-          "Geen doel",
-          "100% reductie",
-          "10% reductie"
+          "20% CO₂-reductie vs 1990",
+          "100% CO₂-reductie vs 1990",
+          "10% CO₂-reductie vs 1990"
         ],
         answer: 0,
-        wrongHints: [null, "Wel doel.", "Niet realistisch 2030.", "Te weinig."],
+        wrongHints: [null, "20% was het EU-doel voor 2020. Voor 2030 ligt de lat een stuk hoger.", "Helemaal geen uitstoot meer (klimaatneutraal) is het doel voor 2050, niet voor 2030.", "Veel te weinig voor een ambitieus akkoord — Nederland zat in 2024 al op ruim 35% minder."],
         uitlegPad: {
           stappen: [
             { titel: "Stevig + bindend", tekst: "Ambitieus doel: bijna halveren in 11 jaar. Gerelateerd aan EU-Green-Deal-55%-doel. Vereist grootschalige actie alle sectoren. NL zat in 2024 op ruim 35% reductie sinds 1990 → versnelling nodig." },

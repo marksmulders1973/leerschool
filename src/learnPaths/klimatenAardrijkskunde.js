@@ -140,9 +140,9 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen regenwoud en savanne?",
-        options: ["Savanne heeft een droge en natte tijd, regenwoud is altijd nat","Savanne is kouder","Regenwoud heeft sneeuw","Savanne ligt bij de polen"],
+        options: ["Savanne heeft een droge en natte tijd, regenwoud is altijd nat","Regenwoud heeft een droge en natte tijd, savanne is altijd nat","Savanne is het hele jaar koel, regenwoud is het hele jaar heet","Savanne ligt dicht bij de polen, regenwoud bij de evenaar"],
         answer: 0,
-        wrongHints: [null, "Beide zijn warm.", "Sneeuw kan bijna nooit in tropisch klimaat.", "Beide liggen rond de evenaar."],
+        wrongHints: [null, "Kijk welk landschap een dicht, altijd groen bos heeft. Kan zo'n bos maandenlang zonder regen?", "Allebei liggen ze in de tropen. Hoe warm is het daar het hele jaar?", "Waar leven leeuwen, zebra's en olifanten? Is dat ver in het noorden, of rond de evenaar?"],
         uitlegPad: {
           stappen: [{ titel: "Droog vs nat seizoen", tekst: "Regenwoud (Af) = hele jaar nat + warm. Savanne (Aw) = warm met TWEE seizoenen: droog + nat. Verschil = regenpatroon, niet temperatuur. Beide tropisch (warm)." }],
           woorden: [{ woord: "savanne", uitleg: "Tropisch grasland met losse bomen (acacia's). Wisselend droog/nat." }, { woord: "regenwoud", uitleg: "Dicht bos, altijd vochtig + warm." }],

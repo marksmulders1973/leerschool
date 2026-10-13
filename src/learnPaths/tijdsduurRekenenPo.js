@@ -534,7 +534,7 @@ const steps = [
         q: "Van **11:50** tot **12:10** is hoe lang?",
         options: ["20 min", "1 uur 40 min", "40 min", "10 min"],
         answer: 0,
-        wrongHints: [null, "Niet 1u40 — het is kort over de 12 heen.", "Te veel — het is minder dan een uur.", "Te weinig — reken vóór 12 + ná 12 samen op."],
+        wrongHints: [null, "Niet 1u40 — het is kort over de 12 heen.", "Te veel — 40 min verder dan 11:50 is al 12:30. Je moet maar tot 12:10.", "Te weinig — reken vóór 12 + ná 12 samen op."],
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {

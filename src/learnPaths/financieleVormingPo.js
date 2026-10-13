@@ -834,7 +834,7 @@ const steps = [
         q: "**€100** met **2% rente** per jaar — na 1 jaar?",
         options: ["€102", "€2", "€20", "€200"],
         answer: 0,
-        wrongHints: [null, "Alleen rente, niet totaal.", "Te veel.", "Te veel."],
+        wrongHints: [null, "Alleen rente, niet totaal.", "Dan heb je minder dan je erin stopte! Rente komt erbij, niet eraf. Hoeveel is 2% van €100?", "Te veel."],
         uitlegPad: {
           stappen: [
             { titel: "Rente berekenen: 2 stappen", tekst: "1) Reken de **rente** uit: 2% van €100.\n2) **Tel die rente op** bij het oorspronkelijke bedrag." },

@@ -28,7 +28,7 @@ const steps = [
         q: "Hoeveel landen zitten er in de Europese Unie (in 2025)?",
         options: ["25 landen", "27 landen", "28 landen", "30 landen"],
         answer: 1,
-        wrongHints: ["Tussen 2007 en 2013 was het 27, daarna 28. Maar sinds Brexit?", null, "Tot 2020 was het 28 — toen vertrok het Verenigd Koninkrijk. Hoeveel nu?", "Hoger dan dit — geen 30. Lager."],
+        wrongHints: ["Zo groot was de EU in 2004. Sindsdien zijn er landen bijgekomen én is er een land vertrokken.", null, "Dat aantal hoort bij een eerdere periode. Is er sindsdien iets veranderd in wie er lid is?", "Te hoog — sinds 2013 is er geen nieuw land meer bij de EU gekomen."],
         explanation: "**27 lidstaten** sinds 2020 (Brexit = vertrek VK). Daarvoor was het 28. Geen ander land vertrok daarna; geen nieuw land kwam erbij (Turkije/Oekraïne staan op wachtlijst).",
         uitlegPad: compact(
           "27 EU-lidstaten sinds 2020 (Brexit). Was 28 met VK erbij. Geen recente toetreding sindsdien.",

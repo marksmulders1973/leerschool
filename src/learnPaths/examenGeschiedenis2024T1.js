@@ -209,7 +209,7 @@ const steps = [
           "De Blokkade van Berlijn speelde zich al in de jaren veertig af — was de hotline er toen al?",
           null,
           "De Praagse Lente vond later plaats dan de aanleg van de hotline — denk aan de volgorde.",
-          "De DDR werd gesticht nog vóór de Cubacrisis — pas op de tijdlijn.",
+          "De DDR werd al in 1949 gesticht, lang vóór 1963. Welke gebeurtenis lag vlak vóór de aanleg van de hotline?",
         ],
         explanation: "Tijdens de **Cubacrisis** (oktober 1962) waren VS en USSR ongeveer 13 dagen lang op de rand van een kernoorlog. Het gebrek aan directe communicatie maakte misverstanden gevaarlijk. Daarom werd in 1963 de 'hotline' (eerst een teletype-verbinding) opgezet — direct contact tussen Kremlin en Witte Huis.",
         examenBron: BRON(38),

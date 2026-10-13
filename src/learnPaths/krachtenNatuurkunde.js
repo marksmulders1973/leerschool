@@ -448,12 +448,12 @@ const steps = [
         q: "Een schaatser duwt de muur weg. Wat gebeurt er?",
         options: [
           "Muur duwt schaatser even hard terug, schaatser glijdt weg",
-          "Niets gebeurt",
-          "Muur valt om",
-          "Schaatser blijft staan",
+          "Muur duwt niet terug, er gebeurt helemaal niets",
+          "Muur valt om door de duw, schaatser blijft staan",
+          "Muur duwt zachter terug, schaatser blijft staan",
         ],
         answer: 0,
-        wrongHints: [null, "Wel: actie-reactie werkt altijd.", "Muur is veel zwaarder, blijft staan.", "Volgens Newton 3 wordt schaatser teruggeduwd."],
+        wrongHints: [null, "Voel maar wat je handen merken als je hard tegen een muur duwt. Duwt de muur echt niet terug?", "Een muur is veel zwaarder en zit vast aan de grond. Kan één duw van een schaatser hem omgooien?", "Hoe groot is de tegenkracht vergeleken met jouw duw? En wat houdt iemand op glad ijs op zijn plek?"],
         uitlegPad: {
           stappen: [{ titel: "Muur duwt schaatser terug", tekst: "Schaatser duwt op muur (actie). Muur duwt schaatser met EVEN grote kracht terug (reactie). Muur staat vast (zwaar), schaatser glijdt weg." }],
           woorden: [{ woord: "tegenkracht", uitleg: "kracht in tegengestelde richting" }],

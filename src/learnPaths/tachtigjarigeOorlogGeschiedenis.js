@@ -358,9 +358,9 @@ const steps = [
       },
       {
         q: "Wat is het **Plakkaat van Verlatinghe** (1581)?",
-        options: ["Onafhankelijkheidsverklaring tegen Filips II","Een belastingwet","Een vredesakkoord","Een godsdienstwet"],
+        options: ["Onafhankelijkheidsverklaring tegen Filips II","Belastingwet van Alva: de Tiende Penning","Vredesakkoord met Spanje: de Vrede van Münster","Godsdienstwet van Karel V tegen ketters"],
         answer: 0,
-        wrongHints: [null, "Geen belasting — een politieke verklaring.", "Geen vredesakkoord — juist tegenovergesteld.", "Niet specifiek over godsdienst."],
+        wrongHints: [null, "De Tiende Penning was een belasting van Alva uit 1569. Het Plakkaat van 1581 ging niet over geld — waarover dan wel?", "De Vrede van Münster kwam pas in 1648, aan het eind van de oorlog. In 1581 was de oorlog nog volop bezig.", "De strenge plakkaten tegen ketters kwamen van Karel V, al vóór 1555. Dit plakkaat kwam van de Staten-Generaal zelf. Wat wilden zij?"],
         uitlegPad: {
           stappen: [{ titel: "26 juli 1581 — koning afgezworen", tekst: "Staten-Generaal tekenden 26 juli 1581 Plakkaat van Verlatinghe. Verklaarden dat ze Filips II niet langer als koning erkenden. Argument: 'koning die volk onderdrukt is tiran, volk mag hem afzweren'. Eerste keer wereldgeschiedenis met juridische redenering. Wordt vaak genoemd als inspiratie voor de Amerikaanse Onafhankelijkheidsverklaring 1776." }],
           woorden: [{ woord: "Plakkaat van Verlatinghe", uitleg: "1581 NL-onafhankelijkheidsverklaring. 'Verlatinghe' = afzweren." }, { woord: "tirannie", uitleg: "Heerschappij waarbij koning eigen belang boven volk stelt. Argument om hem af te zweren." }],
