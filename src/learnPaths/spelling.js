@@ -705,13 +705,13 @@ const steps = [
     checks: [
       {
         q: "*Wat is het verkleinwoord van 'boom'?*",
-        options: ["boompje", "boomtje", "boompetje", "boomje"],
+        options: ["boompje", "boomtje", "bompje", "boomje"],
         answer: 0,
         wrongHints: [
           null,
           "Na een m past -tje niet. Welke letter glijdt er bij het uitspreken vanzelf tussen m en -je?",
-          "-petje bestaat niet als achtervoegsel.",
-          "-je past niet na -m. Spreek uit: 'boom-je' klinkt onnatuurlijk.",
+          "Klinkt de o in 'boom' lang of kort? Blijft die klank lang als je er -pje achter zet?",
+          "Zeg 'boomje' en 'boompje' hardop. Welke klank glijdt er vanzelf tussen de m en -je?",
         ],
         uitlegPad: {
           stappen: [
@@ -781,8 +781,8 @@ const steps = [
         wrongHints: [
           null,
           "Zonder extra teken zou je 'autos' lezen alsof de o kort is. Hoe voorkom je dat?",
-          "De extra o is overbodig — Nederlands kent geen 'oo' aan het eind van een woord op deze manier.",
-          "Een koppelteken hoort niet bij meervoudsvorming.",
+          "Met een dubbele o probeer je de lange klank te bewaren. Welk teken gebruik je daar bij woorden op een klinker, zoals 'foto'?",
+          "Een streepje gebruik je in samenstellingen als zee-egel. Is 'autos' een samenstelling?",
         ],
         uitlegPad: {
           stappen: [
@@ -815,13 +815,13 @@ const steps = [
     checks: [
       {
         q: "*Welke spelling is correct?*",
-        options: ["paddenstoel", "padestoel", "padde stoel", "pad-stoel"],
+        options: ["paddenstoel", "padestoel", "padde stoel", "paddestoel"],
         answer: 0,
         wrongHints: [
           null,
           "Eén d en geen tussen-n? Kijk naar het meervoud van 'pad' (het dier).",
-          "Samenstellingen schrijf je aaneen, geen spatie.",
-          "Geen koppelteken — geen klinker-botsing.",
+          "Is 'padde' een los woord? Hoe schrijf je een samenstelling zoals 'boekenkast': met of zonder spatie?",
+          "Zo schreef je het vóór 2005. Wat is het meervoud van 'pad' (het dier), en wat betekent dat nu voor de tussen-n?",
         ],
         uitlegPad: {
           stappen: [
@@ -846,7 +846,7 @@ const steps = [
           null,
           "Dat is meervoud van 'maan' (lange aa). Maar de vraag gaat over 'man' — korte a.",
           "Een meervoud op -s krijgen vooral woorden op -el, -er of -en, zoals 'tafels'. Eindigt 'man' daarop?",
-          "Het Nederlandse meervoud eindigt op -en, niet -e.",
+          "In de spreektaal hoor je soms 'manne'. Laat je de n aan het eind van een meervoud op -en in geschreven taal weg?",
         ],
         uitlegPad: {
           stappen: [
@@ -906,7 +906,7 @@ const steps = [
         wrongHints: [
           null,
           "Zonder extra teken lees je 'fotos' met een korte o. Hoe voorkom je dat?",
-          "Geen extra o nodig vóór de apostrof.",
+          "Je zet al een apostrof om de o lang te laten klinken. Heb je dan ook nog een tweede o nodig?",
           "Met een dubbele o probeer je de lange klank te bewaren. Hoe doe je dat bij meervouden van woorden die op een klinker eindigen?",
         ],
         uitlegPad: {
@@ -974,8 +974,8 @@ const steps = [
         wrongHints: [
           null,
           "Zonder extra teken kan de klank van de y veranderen. Wat zet je ertussen?",
-          "Babies is Engelse spelling — Nederlands schrijft het anders.",
-          "Een koppelteken hoort niet bij meervoudsvorming.",
+          "Zo schrijf je het meervoud in het Engels. Volgt het Nederlands die regel, of doe je hetzelfde als bij 'auto'?",
+          "Een streepje gebruik je in samenstellingen als zee-egel. Welk teken gebruik je bij een meervoud als 'auto's'?",
         ],
         uitlegPad: {
           stappen: [

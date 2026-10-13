@@ -511,7 +511,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Andersom — synthese is samenvoegen.",
+          "Synthese is juist het omgekeerde: dan worden stoffen samengevoegd tot één stof.",
           "Bij verdringing ruilen stoffen van partner. Valt er dan één stof uiteen?",
           "Bij verbranding reageert een stof met zuurstof. Heb je dan maar één beginstof?",
         ],

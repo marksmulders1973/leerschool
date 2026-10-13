@@ -310,7 +310,7 @@ const steps = [
         q: "Jodium-131 halveringstijd 8 dagen. Na **24 dagen** is welk % over?",
         options: ["12,5%","50%","25%","6,25%"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is 8 dagen.", "Niet — dat is 16 dagen.", "Niet — dat is 32 dagen."],
+        wrongHints: [null, "50% is over na één halveringstijd: 8 dagen. Hoeveel halveringstijden passen in 24 dagen?", "25% is over na twee halveringstijden: 16 dagen. Hoeveel halveringstijden passen in 24 dagen?", "6,25% is over na vier halveringstijden: 32 dagen. Hoeveel halveringstijden passen in 24 dagen?"],
         uitlegPad: {
           stappen: [
             { titel: "Hoeveel halveringen?", tekst: "24 / 8 = 3 halveringen." },

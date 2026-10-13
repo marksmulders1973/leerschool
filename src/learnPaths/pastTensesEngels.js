@@ -89,7 +89,7 @@ const steps = [
         q: "Welke is **goed**?",
         options: ["She didn't go to school.", "She didn't went to school.", "She not go to school.", "She didn't goes to school."],
         answer: 0,
-        wrongHints: [null, "Na didn't komt de basisvorm — is 'went' dat?", "Niet alleen 'not' — je hebt didn't nodig.", "Geen -s na didn't."],
+        wrongHints: [null, "Na didn't komt de basisvorm — is 'went' dat?", "Niet alleen 'not' — je hebt didn't nodig.", "Na didn't komt geen -s. Klopt 'goes' dan?"],
         uitlegPad: {
           stappen: [{ titel: "Didn't + basisvorm", tekst: "She didn't go — niet 'didn't went'." }],
           woorden: [{ woord: "didn't", uitleg: "= did not" }],

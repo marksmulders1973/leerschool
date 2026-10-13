@@ -170,7 +170,7 @@ const steps = [
         q: "Wat doet **`ORDER BY cijfer DESC`** in een query?",
         options: ["Sorteert op cijfer, hoogste bovenaan", "Verwijdert de laagste cijfers uit de lijst", "Telt hoeveel cijfers er zijn", "Sorteert op cijfer, laagste bovenaan"],
         answer: 0,
-        wrongHints: [null, "ORDER BY wijzigt/verwijdert niets.", "Tellen doet COUNT.", "DESC betekent aflopend — welke kant begint dan bovenaan?"],
+        wrongHints: [null, "ORDER BY wijzigt/verwijdert niets.", "Tellen doe je met COUNT. ORDER BY doet iets anders met de rijen.", "DESC betekent aflopend — welke kant begint dan bovenaan?"],
         uitlegPad: {
           stappen: [{ titel: "Sorteren, aflopend", tekst: "**ORDER BY** sorteert de resultaten. **DESC** = aflopend (hoogste bovenaan), **ASC** = oplopend. `ORDER BY cijfer DESC` zet dus de hoogste cijfers vooraan. Het verandert de data niet, alleen de volgorde van het resultaat." }],
           niveaus: { basis: "Sorteren, hoogste eerst.", simpeler: "ORDER BY = sorteren", nogSimpeler: "Sorteert op cijfer, hoogste bovenaan." },
@@ -229,7 +229,7 @@ const steps = [
         q: "Welk SQL-commando **voegt een nieuw record toe**?",
         options: ["INSERT", "DELETE", "SELECT", "UPDATE"],
         answer: 0,
-        wrongHints: [null, "DELETE verwijdert juist.", "SELECT haalt alleen op.", "UPDATE wijzigt een bestaand record."],
+        wrongHints: [null, "DELETE verwijdert juist records in plaats van ze toe te voegen.", "SELECT haalt alleen op.", "UPDATE wijzigt een bestaand record."],
         uitlegPad: {
           stappen: [{ titel: "INSERT = toevoegen", tekst: "**INSERT** voegt een nieuw record toe: `INSERT INTO Leerlingen (naam, groep) VALUES ('Lina', 7);`. SELECT haalt op, UPDATE wijzigt, DELETE verwijdert — INSERT maakt er eentje bij." }],
           niveaus: { basis: "INSERT.", simpeler: "Toevoegen = INSERT", nogSimpeler: "A." },

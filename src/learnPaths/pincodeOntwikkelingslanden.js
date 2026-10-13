@@ -377,7 +377,7 @@ const steps = [
         q: "**Multilaterale hulp** is:",
         options: ["Hulp via internationale organisaties", "Hulp rechtstreeks van Nederland aan Mali", "Hulp van particulieren via een NGO", "Hulp van één land aan meerdere landen"],
         answer: 0,
-        wrongHints: [null, "Dat is bilateraal.", "Particuliere hulp loopt via NGO's. Waar staat 'multi' in multilateraal voor?", "Let op wie de hulp verdeelt. Is dat één land?"],
+        wrongHints: [null, "Hulp rechtstreeks van het ene land aan het andere heet bilaterale hulp.", "Particuliere hulp loopt via NGO's. Waar staat 'multi' in multilateraal voor?", "Let op wie de hulp verdeelt. Is dat één land?"],
         uitlegPad: {
           stappen: [{ titel: "Multi = meerdere landen samen", tekst: "Multilaterale hulp = via internationale organisaties waar veel landen geld in stoppen. Bv. VN, EU, Wereldbank, IMF, UNICEF. Ontvanger weet niet welk land precies betaalde. Voordeel: minder politieke beïnvloeding. Nadeel: meer overhead + bureaucratie. Tegenpool: bilateraal = NL → Mali direct." }],
           woorden: [{ woord: "multilateraal", uitleg: "'Veel-zijdig'. Meerdere landen samen via organisatie." }, { woord: "bilateraal", uitleg: "'Twee-zijdig'. Land A geeft direct aan land B." }, { woord: "UNICEF", uitleg: "VN-organisatie voor kinderen. Wereldwijd actief. Multilateraal." }],

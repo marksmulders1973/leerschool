@@ -35,7 +35,7 @@ const steps = [
         q: "**Hitler werd Rijkskanselier** op:",
         options: ["30 januari 1933", "1 sept 1939", "9 nov 1923", "1 mei 1945"],
         answer: 0,
-        wrongHints: [null, "Niet — start WO2.", "Niet — München-putsch (mislukt).", "Niet — toen was Hitler al dood (30 april 1945)."],
+        wrongHints: [null, "Op 1 september 1939 viel Duitsland Polen binnen: het begin van WO2. Hitler was toen al jaren aan de macht.", "In november 1923 probeerde Hitler in München de macht te grijpen, maar die putsch mislukte. Hij kwam pas later via een benoeming aan de macht.", "Niet — toen was Hitler al dood (30 april 1945)."],
         uitlegPad: {
           stappen: [{ titel: "Wettelijk aan macht", tekst: "Hitler kwam legaal aan de macht (NSDAP grootste partij na 1932-verkiezingen). Hindenburg benoemde hem Rijkskanselier 30 jan 1933. Binnen maanden: brand Rijksdag, machtigingswet, eenpartij-staat. Geen gewelddadige greep, maar legaal aan de macht komen en dan het systeem afbreken." }],
           niveaus: { basis: "30-1-1933.", simpeler: "Begin 1933.", nogSimpeler: "1933" },
@@ -114,7 +114,7 @@ const steps = [
         q: "**D-Day** (6 juni 1944):",
         options: ["Landing in Normandië", "Pearl Harbor", "Bevrijding Auschwitz", "Hiroshima"],
         answer: 0,
-        wrongHints: [null, "Niet — dec 1941.", "Niet — jan 1945.", "De atoombom op Hiroshima viel meer dan een jaar later."],
+        wrongHints: [null, "De aanval op Pearl Harbor was in december 1941, ruim twee jaar eerder.", "Auschwitz werd pas in januari 1945 bevrijd, ruim een half jaar na D-Day.", "De atoombom op Hiroshima viel meer dan een jaar later."],
         uitlegPad: {
           stappen: [
             { titel: "Operation Overlord", tekst: "Grootste amfibische operatie ooit. Eisenhower-commando. 5 stranden (Utah, Omaha, Gold, Juno, Sword) op Normandische kust. Omaha het bloedigst (~2400 Amerikaanse slachtoffers). Doorbraak naar Parijs (bevrijd aug 1944) en oprukken naar Duitsland. Begin van eind in West." },
@@ -138,7 +138,7 @@ const steps = [
         q: "**V-E Day** (Victory Europe) is:",
         options: ["8 mei 1945", "5 mei 1945", "6 juni 1944", "15 augustus 1945"],
         answer: 0,
-        wrongHints: [null, "Op 5 mei vieren we in Nederland de bevrijding. Wanneer gaf Duitsland zich in heel Europa over?", "Niet — D-Day.", "Niet — V-J Day (Japan)."],
+        wrongHints: [null, "Op 5 mei vieren we in Nederland de bevrijding. Wanneer gaf Duitsland zich in heel Europa over?", "6 juni 1944 is D-Day, de landing in Normandië. Daarna duurde de oorlog in Europa nog bijna een jaar.", "Op 15 augustus 1945 gaf Japan zich over (V-J Day). Duitsland had zich toen al eerder overgegeven."],
         uitlegPad: {
           stappen: [
             { titel: "Officiële DE-capitulatie", tekst: "7 mei: DE tekent capitulatie in Reims. 8 mei: ratificatie Berlijn. Sovjet-tijdzone: 9 mei (Victory Day in Rusland). NL viert 5 mei (bevrijdingsdag) want dat was effectieve bevrijding voor NL-bevolking — DE-troepen in NL gaven zich over." },
@@ -233,7 +233,7 @@ const steps = [
         q: "**Pearl Harbor** = aanval van:",
         options: ["Japan op de VS", "Duitsland op de USSR", "VS op Japan", "China op Japan"],
         answer: 0,
-        wrongHints: [null, "Niet — Barbarossa.", "Pearl Harbor ligt op Hawaï. Van wie was die marinebasis?", "China vocht in die jaren in eigen land en had geen vloot om ver over zee aan te vallen."],
+        wrongHints: [null, "De Duitse aanval op de Sovjet-Unie heette operatie Barbarossa (juni 1941). Pearl Harbor ligt op Hawaï, ver van Europa.", "Pearl Harbor ligt op Hawaï. Van wie was die marinebasis?", "China vocht in die jaren in eigen land en had geen vloot om ver over zee aan te vallen."],
         uitlegPad: {
           stappen: [
             { titel: "Verrassings-aanval", tekst: "Zondagochtend 7 dec 1941, geen oorlogsverklaring vooraf. Japanse vliegtuigen bombardeerden Amerikaanse vloot in Pearl Harbor (Hawaii). 2400 doden. VS verklaart oorlog aan Japan + komt zo in WO2 (ook in Europa)." },
@@ -245,7 +245,7 @@ const steps = [
         q: "**Atoombom Hiroshima** datum?",
         options: ["6 augustus 1945", "6 juni 1944", "8 mei 1945", "15 augustus 1945"],
         answer: 0,
-        wrongHints: [null, "Niet — D-Day.", "Niet — V-E.", "Niet — V-J Day (capitulatie)."],
+        wrongHints: [null, "6 juni 1944 is D-Day, de landing in Normandië. De atoombom viel in de laatste fase van de oorlog tegen Japan.", "8 mei 1945 is V-E Day: de oorlog in Europa was voorbij, maar tegen Japan werd nog gevochten.", "Op 15 augustus 1945 capituleerde Japan. Dat was een gevolg van de atoombom, niet de dag van de bom zelf."],
         uitlegPad: {
           stappen: [
             { titel: "'Little Boy'", tekst: "8:15 ochtend. Enola Gay-bommenwerper. 13 kt TNT-equivalent (klein vs huidige H-bommen). 80 000 direct dood, stad weggevaagd. 9 aug Nagasaki. 15 aug Japan capituleert. Eerste + enige militair-gebruikte atoomwapens." },
@@ -269,7 +269,7 @@ const steps = [
         q: "**Indonesië-onafhankelijkheid** uitgeroepen op:",
         options: ["17 aug 1945", "15 aug 1945", "8 mei 1945", "27 dec 1949"],
         answer: 0,
-        wrongHints: [null, "Niet — Japan capituleert die dag.", "Niet — V-E day Europe.", "Niet — NL-erkenning."],
+        wrongHints: [null, "Op 15 augustus 1945 capituleerde Japan. Dat is iets anders dan het uitroepen van de onafhankelijkheid.", "8 mei 1945 is V-E Day in Europa. Indonesië was toen nog door Japan bezet.", "Op 27 december 1949 erkende Nederland de onafhankelijkheid. Indonesië had die zelf al eerder uitgeroepen."],
         uitlegPad: {
           stappen: [
             { titel: "Tijdens machtsvacuüm", tekst: "Soekarno + Hatta riepen onafhankelijkheid uit 2 dagen na Japan-capitulatie. NL erkende niet → 4 jaar conflict ('politionele acties'). Onder internationale druk (VN, VS) tekende NL 27 dec 1949 erkenning. Bersiap-tijd 1945-46: lokale jongeren vermoorden duizenden NL/Indo-Europeanen." },
@@ -336,7 +336,7 @@ const steps = [
         q: "**Israël** werd onafhankelijk in:",
         options: ["1948", "1939", "1945", "1967"],
         answer: 0,
-        wrongHints: [null, "Niet — start WO2.", "Niet — einde WO2.", "Niet — Zesdaagse Oorlog."],
+        wrongHints: [null, "In 1939 begon WO2; de staat Israël bestond toen nog niet.", "In 1945 eindigde WO2. Werd Israël meteen bij het einde van de oorlog onafhankelijk?", "In 1967 was de Zesdaagse Oorlog. Israël bestond toen al en vocht tegen zijn buurlanden."],
         uitlegPad: {
           stappen: [
             { titel: "VN-verdeelplan + Britse mandaat-einde", tekst: "VN-resolutie 181 (nov 1947) verdeelde mandaat-Palestina in joodse + Arabische staat. 14 mei 1948: David Ben-Gurion roept Israël uit. Direct oorlog met Egypte+Jordanië+Syrië+Libanon+Irak. Israël wint, vergroot grondgebied. Begin van conflict tot vandaag." },

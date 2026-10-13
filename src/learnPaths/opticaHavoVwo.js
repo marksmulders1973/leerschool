@@ -145,7 +145,7 @@ const steps = [
           "Lichtemissie door gloeidraad"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — een lens focust licht, maar geleidt het niet over grote afstand door.", "Niet — geen metaal in glasvezel.", "Niet — vezel zelf geeft geen licht."],
+        wrongHints: [null, "Niet — een lens focust licht, maar geleidt het niet over grote afstand door.", "In glasvezel zit geen metaal: het is een heel dunne draad van glas.", "Niet — vezel zelf geeft geen licht."],
         uitlegPad: {
           stappen: [{ titel: "Licht ketst, geen verlies", tekst: "Glasvezel-kern heeft hoger n dan de mantel. Licht in de kern raakt mantel onder hoek >θ_g → totale reflectie → ketst verder. Bij de reflectie gaat geen licht verloren, en het glas absorbeert heel weinig. Daarom km-bereik mogelijk + extreem hoge bandbreedte." }],
           niveaus: { basis: "Totale reflectie binnen vezel.", simpeler: "Licht ketst binnen kern zonder uit te komen.", nogSimpeler: "Totale refl." },

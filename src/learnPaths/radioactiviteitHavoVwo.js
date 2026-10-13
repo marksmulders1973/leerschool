@@ -24,7 +24,7 @@ const steps = [
         q: "Uranium-238 ⁽²³⁸_₉₂⁾U bevat hoeveel **neutronen**?",
         options: ["146", "92", "238", "330"],
         answer: 0,
-        wrongHints: [null, "Niet — dat zijn protonen.", "Niet — dat is massagetal A.", "Niet — A+Z is geen fysische grootheid."],
+        wrongHints: [null, "92 is het atoomnummer Z: het aantal protonen. Hoe vind je het aantal neutronen?", "238 is het massagetal A: protonen en neutronen samen. Hoeveel daarvan zijn neutronen?", "Niet — A+Z is geen fysische grootheid."],
         uitlegPad: {
           stappen: [{ titel: "n = A − Z", tekst: "Massagetal A = 238, atoomnummer Z = 92. Aantal neutronen = A − Z = 238 − 92 = **146**." }],
           niveaus: { basis: "238−92=146.", simpeler: "A − Z = neutronen.", nogSimpeler: "146" },
@@ -64,7 +64,7 @@ const steps = [
           "Neutronen schermen de kern af tegen straling van buiten"
         ],
         answer: 0,
-        wrongHints: [null, "Neutronen zijn juist iets zwaarder dan protonen.", "Niet — neutronen zijn ongeladen.", "Neutronen zitten ín de kern, niet eromheen als schild. Wat is in een grote kern het lastigst bij elkaar te houden?"],
+        wrongHints: [null, "Neutronen zijn juist iets zwaarder dan protonen.", "Neutronen hebben geen elektrische lading, dus ze zijn niet positief geladen.", "Neutronen zitten ín de kern, niet eromheen als schild. Wat is in een grote kern het lastigst bij elkaar te houden?"],
         uitlegPad: {
           stappen: [
             { titel: "Sterke kernkracht + Coulomb-afstoting", tekst: "Protonen stoten elkaar af (Coulomb). De sterke kernkracht trekt p-p, p-n, n-n aan — maar werkt alleen op zeer korte afstand. Bij grote kernen wordt afstoting overheersend, tenzij extra neutronen zorgen voor genoeg aantrekkende kracht zonder extra afstoting." },
@@ -128,7 +128,7 @@ const steps = [
           "Deeltjes — een stroom van snelle neutronen"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is α.", "Niet — dat is β⁻.", "Niet — neutronen-straling bestaat wel maar is geen γ."],
+        wrongHints: [null, "Een heliumkern uit 2 protonen en 2 neutronen is α-straling.", "Een snel elektron uit de kern is β⁻-straling.", "Niet — neutronen-straling bestaat wel maar is geen γ."],
         uitlegPad: {
           stappen: [{ titel: "γ = foton, geen materie", tekst: "γ-straling is gewoon elektromagnetische straling (zoals licht, maar veel hogere frequentie en energie). Geen massa, geen lading. Beweegt met c. Komt vaak vrij na α- of β-verval als de kern naar lagere E-toestand 'valt'." }],
           niveaus: { basis: "γ = EM-foton.", simpeler: "Gamma is hoog-energetisch licht.", nogSimpeler: "Foton" },
@@ -171,7 +171,7 @@ const steps = [
         q: "¹³¹I heeft t½ = 8 dagen. Na **24 dagen** is welk percentage over?",
         options: ["12,5%", "25%", "50%", "33%"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is na 2 halveringen.", "Niet — dat is na 1 halvering.", "Niet — verval is exponentieel, niet lineair."],
+        wrongHints: [null, "25% is er na 2 halveringen (16 dagen). Hoeveel halveringstijden passen in 24 dagen?", "50% is er na 1 halvering (8 dagen). Hoe vaak halveert de hoeveelheid in 24 dagen?", "Niet — verval is exponentieel, niet lineair."],
         uitlegPad: {
           stappen: [
             { titel: "24/8 = 3 halveringen", tekst: "3× t½ → (½)³ = 1/8 = **12,5%** over. Tabel: 100% → 50% → 25% → 12,5%." },
@@ -265,7 +265,7 @@ const steps = [
         q: "Welke kern heeft de **hoogste bindingsenergie per nucleon**?",
         options: ["Fe-56", "H-1", "U-235", "He-4"],
         answer: 0,
-        wrongHints: [null, "Niet — proton alleen heeft 0 E_b.", "Uranium staat ver rechts in de grafiek, voorbij de piek. Hoe hoog is E_b per nucleon daar vergeleken met de top?", "He-4 heeft een opvallend hoge waarde, maar is het de hoogste piek in de grafiek?"],
+        wrongHints: [null, "H-1 is één los proton: er is niets om aan te binden, dus de bindingsenergie is 0.", "Uranium staat ver rechts in de grafiek, voorbij de piek. Hoe hoog is E_b per nucleon daar vergeleken met de top?", "He-4 heeft een opvallend hoge waarde, maar is het de hoogste piek in de grafiek?"],
         uitlegPad: {
           stappen: [{ titel: "Fe-piek ≈ 8,8 MeV/nucleon", tekst: "IJzer-56 zit op de top van de bindingsenergie-kromme. Daarom is fusie naar Fe in sterren (na koolstof, zuurstof) een 'doodlopende straat': zwaarder fuseren KOST energie. Daarom ontploft een zware ster in een supernova zodra de Fe-kern te groot wordt." }],
           theorie: "Alle elementen zwaarder dan Fe (goud, uranium) ontstaan vooral bij supernova-explosies en botsende neutronensterren — niet in 'gewone' kernfusie.",

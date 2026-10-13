@@ -107,7 +107,7 @@ const steps = [
         q: "Wie veroverde **Gallië** *(huidige Frankrijk)*?",
         options: ["Julius Caesar", "Augustus", "Hannibal", "Cleopatra"],
         answer: 0,
-        wrongHints: [null, "Augustus kwam erna.", "Hannibal was tegenstander uit Carthago.", "Cleopatra was Egyptische koningin."],
+        wrongHints: [null, "Augustus werd pas later keizer. Wie voerde de oorlog in Gallië?", "Hannibal was tegenstander uit Carthago.", "Cleopatra was Egyptische koningin."],
       },
       {
         q: "Wat gebeurde met **Julius Caesar** in **44 v.Chr.**?",

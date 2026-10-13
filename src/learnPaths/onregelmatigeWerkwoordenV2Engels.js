@@ -317,7 +317,7 @@ const steps = [
         wrongHints: [
           null,
           "Dat is V2 (yesterday I ate).",
-          "Dat is V1.",
+          "Eat is V1, de basisvorm. Welke vorm zet je na 'I have'?",
           "Eat is onregelmatig. Past een -ed-uitgang dan?",
         ],
         uitlegPad: {
@@ -388,7 +388,7 @@ const steps = [
         wrongHints: [
           null,
           "Onregelmatig — geen -ed.",
-          "Dat is V1.",
+          "Hear is V1, de basisvorm. Welke vorm zet je na 'I have'?",
           "Dat is -ing vorm.",
         ],
         uitlegPad: {
@@ -413,7 +413,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Geen -ed — onregelmatig.",
+          "Teach is onregelmatig, dus geen -ed. Hoe klinkt de verleden tijd?",
           "Thought hoort bij think. Welke vorm hoort bij teach?",
           "Dat is -ing vorm.",
         ],
@@ -508,7 +508,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dat is V2.",
+          "Wrote is V2 (I wrote). Welke vorm zet je na 'I have'?",
           "Onregelmatig — geen -ed.",
           "Dat is geen V3 — en de -ing-vorm schrijf je met één t.",
         ],
@@ -626,7 +626,7 @@ const steps = [
         },
       },
       { q: "Yesterday I _____ (run) to school.", options: ["ran","runned","run","running"], answer: 0, wrongHints: [null,"Niet — 'run' is onregelmatig, geen +ed.","Dat is V1 — verleden tijd nodig.","-ing gebruik je bij continuous."] },
-      { q: "She has _____ (eat) all the cookies.", options: ["eaten","ate","eated","eating"], answer: 0, wrongHints: [null,"Dat is V2 — na 'has' gebruik je V3.","Onregelmatig — geen +ed.","-ing is continuous."] },
+      { q: "She has _____ (eat) all the cookies.", options: ["eaten","ate","eated","eating"], answer: 0, wrongHints: [null,"Dat is V2 — na 'has' gebruik je V3.","Onregelmatig — geen +ed.","Eating gebruik je in de continuous (she is eating). Na 'has' hoort een andere vorm."] },
       { q: "**V2 van 'go'** =?", options: ["went","goed","gone","goes"], answer: 0, wrongHints: [null,"Go is onregelmatig. Past -ed er dan achter?","Gone is V3 en komt na have/has. Welke vorm gebruik je zonder have?","Goes is tegenwoordige tijd (he goes). Welke vorm hoort bij gisteren?"] },
       { q: "**V2 van 'see'** =?", options: ["saw","seed","seen","sees"], answer: 0, wrongHints: [null,"See is onregelmatig. Past -ed er dan achter?","Seen is V3 (I have seen). Welke vorm gebruik je zonder have?","Sees is tegenwoordige tijd (she sees). Welke vorm hoort bij gisteren?"] },
       { q: "**V2 van 'take'** =?", options: ["took","taked","taken","takes"], answer: 0, wrongHints: [null,"Take is onregelmatig. Past -ed er dan achter?","Taken is V3 (I have taken). Welke vorm gebruik je zonder have?","Takes is tegenwoordige tijd (he takes). Welke vorm hoort bij gisteren?"] },

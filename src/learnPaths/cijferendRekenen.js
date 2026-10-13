@@ -2375,7 +2375,7 @@ const steps = [
       "Klaar als je ze **allemaal** in één keer goed hebt. Genoeg geoefend? Stoppen mag altijd.",
     interactiveComponent: makeRekenOefenRonde({ soort: ["optellen", "aftrekken"], aantal: 12, totMax: 100, emoji: "➕", meervoud: "plus- en minsommen" }),
     checks: [
-      { q: "36 + 47 = ?", options: ["83","73","84","93"], answer: 0, wrongHints: [null, "Kijk naar de tientallen: heb je het onthoudje van 6 + 7 meegeteld?", "Bijna — tel de eenheden nog eens.", "Te veel — controleer de tientallen."] },
+      { q: "36 + 47 = ?", options: ["83","73","84","93"], answer: 0, wrongHints: [null, "Kijk naar de tientallen: heb je het onthoudje van 6 + 7 meegeteld?", "Bijna — tel de eenheden nog eens.", "Te veel. Tel de tientallen opnieuw: heb je het onthoudje misschien twee keer meegeteld?"] },
     ],
   },
 ];

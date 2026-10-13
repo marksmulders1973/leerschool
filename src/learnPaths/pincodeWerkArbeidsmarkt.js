@@ -686,7 +686,7 @@ const steps = [
         q: "Bij welke uitkering geldt: **alleen voor werknemers, betaald uit premies**?",
         options: ["WW", "AOW", "Bijstand", "Kinderbijslag"],
         answer: 0,
-        wrongHints: [null, "AOW = volksverzekering.", "Bijstand = vangnet, geen verzekering.", "Kinderbijslag = volksverzekering."],
+        wrongHints: [null, "AOW is een volksverzekering: iedereen in Nederland bouwt die op, niet alleen werknemers.", "Bijstand = vangnet, geen verzekering.", "Kinderbijslag is een volksverzekering: bijna elk gezin met kinderen krijgt het, niet alleen werknemers."],
         uitlegPad: {
           stappen: [{ titel: "Werknemersverzekering", tekst: "WW = werknemersverzekering. Werkgever betaalt premie tijdens dienstverband. Bij ontslag: recht op uitkering uit dat premiefonds." }],
           woorden: [{ woord: "werknemersverzekering", uitleg: "Verzekering voor werknemers — premie via loon, uitkering bij ontslag/ziekte/arbeidsongeschiktheid." }, { woord: "volksverzekering", uitleg: "Voor iedereen in NL — gefinancierd via premies volksverzekeringen + belasting." }],

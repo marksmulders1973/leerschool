@@ -328,7 +328,7 @@ const steps = [
         q: "Een bedrijf heeft omzet €50.000 en totale kosten €38.000. Wat is de winst?",
         options: ["€12.000", "€88.000", "€38.000", "€50.000"],
         answer: 0,
-        wrongHints: [null, "Optellen i.p.v. aftrekken.", "Dat zijn de kosten.", "Dat is de omzet."],
+        wrongHints: [null, "Je hebt omzet en kosten bij elkaar opgeteld. Winst is wat er van de omzet overblijft na de kosten.", "Dat zijn de kosten.", "Dat is de omzet."],
         uitlegPad: {
           stappen: [{ titel: "50.000 − 38.000 = 12.000", tekst: "Omzet (50k) min kosten (38k) = winst 12k." }],
           woorden: [{ woord: "omzet", uitleg: "totale opbrengst uit verkopen" }],
@@ -408,7 +408,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
         q: "Machine kost €20.000, geen restwaarde, gaat 4 jaar mee. Afschrijving per jaar?",
         options: ["€5.000", "€20.000", "€4.000", "€80.000"],
         answer: 0,
-        wrongHints: [null, "Dat is de totale waarde — je moet die spreiden over de gebruiksduur.", "Verkeerd — deel de aanschafwaarde (minus restwaarde) door het aantal jaren.", "Vermenigvuldigd i.p.v. gedeeld."],
+        wrongHints: [null, "Dat is de totale waarde — je moet die spreiden over de gebruiksduur.", "Verkeerd — deel de aanschafwaarde (minus restwaarde) door het aantal jaren.", "Je hebt vermenigvuldigd. Bij afschrijven verdeel je de aanschafwaarde over de jaren."],
         uitlegPad: {
           stappen: [{ titel: "Afschrijving = (aanschaf − rest) / jaren", tekst: "Lineaire afschrijving: (20.000 − 0) / 4 = €5.000 per jaar. Verspreid de kosten over de gebruiksduur." }],
           woorden: [{ woord: "lineair", uitleg: "elk jaar zelfde bedrag" }],
@@ -460,7 +460,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
         q: "Een schoen kost €40 inkoop en gaat €100 over de toonbank. Brutowinst?",
         options: ["€60", "€140", "€40", "€100"],
         answer: 0,
-        wrongHints: [null, "Optellen i.p.v. aftrekken.", "Dat is de kostprijs.", "Dat is de verkoopprijs."],
+        wrongHints: [null, "Je hebt inkoopprijs en verkoopprijs opgeteld. Brutowinst is wat je overhoudt na aftrek van de inkoop.", "Dat is de kostprijs.", "Dat is de verkoopprijs."],
         uitlegPad: {
           stappen: [{ titel: "Brutowinst = Verkoopprijs − Kostprijs", tekst: "100 − 40 = 60 euro brutowinst per schoen. Daarvan moeten dan nog vaste kosten betaald — pas dan blijft 'echte' winst over." }],
           woorden: [{ woord: "brutomarge", uitleg: "brutowinst / verkoopprijs × 100%" }],
@@ -521,7 +521,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
         q: "Wat hoort op de **debetzijde**?",
         options: ["Voorraad", "Hypotheek", "Eigen vermogen", "Crediteuren"],
         answer: 0,
-        wrongHints: [null, "Hypotheek = vreemd vermogen = credit.", "EV = credit.", "Crediteuren = credit."],
+        wrongHints: [null, "Hypotheek = vreemd vermogen = credit.", "Eigen vermogen is een bron van geld en staat aan de creditzijde.", "Crediteuren zijn schulden aan leveranciers en staan aan de creditzijde."],
         uitlegPad: {
           stappen: [{ titel: "Voorraad = bezit = debet", tekst: "Voorraad (spullen die nog niet verkocht zijn) is een bezit van het bedrijf → vlottende activa → debetzijde van de balans." }],
           woorden: [{ woord: "voorraad", uitleg: "ingekochte goederen niet verkocht" }],
@@ -535,7 +535,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
         q: "Welke is een **constante kost**?",
         options: ["Maandhuur winkel", "Inkoop kleding", "Vrachtkosten", "Energie per machine"],
         answer: 0,
-        wrongHints: [null, "Inkoop = variabel.", "Vracht varieert met aantal zendingen.", "Energie per machine ook variabel."],
+        wrongHints: [null, "Hoe meer kleding je verkoopt, hoe meer je inkoopt. Zijn die kosten dan elke maand gelijk?", "Vracht varieert met aantal zendingen.", "Energie per machine ook variabel."],
         uitlegPad: {
           stappen: [{ titel: "Maandhuur = constant", tekst: "Huur betaal je elke maand hetzelfde — ongeacht hoeveel je verkoopt. Constante kost. Andere voorbeelden in de vraag (inkoop, vracht, energie per machine) zijn variabel." }],
           woorden: [{ woord: "constant vs variabel", uitleg: "wel/niet schalend met productie" }],
@@ -553,7 +553,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
         q: "Omzet €100.000, kosten €70.000. Resultaat?",
         options: ["Winst €30.000", "Verlies €30.000", "Winst €170.000", "Winst €70.000"],
         answer: 0,
-        wrongHints: [null, "Zijn de kosten hoger of lager dan de omzet? Wat betekent dat voor het resultaat?", "Optellen i.p.v. aftrekken.", "€70.000 zijn de kosten. Wat houd je over van de omzet als je die kosten betaalt?"],
+        wrongHints: [null, "Zijn de kosten hoger of lager dan de omzet? Wat betekent dat voor het resultaat?", "Je hebt omzet en kosten opgeteld. Het resultaat is omzet min kosten.", "€70.000 zijn de kosten. Wat houd je over van de omzet als je die kosten betaalt?"],
         uitlegPad: {
           stappen: [{ titel: "100k − 70k = 30k winst", tekst: "Omzet hoger dan kosten = winst. 100.000 − 70.000 = 30.000 winst." }],
           woorden: [{ woord: "resultaat", uitleg: "winst of verlies" }],

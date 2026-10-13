@@ -175,7 +175,7 @@ const steps = [
         q: "IQ heeft N(100, 15). Hoeveel % heeft IQ **tussen 85 en 115**?",
         options: ["68%","95%","50%","99,7%"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is binnen 2σ (70-130).", "50% is de helft onder het gemiddelde. Hier gaat het om 1σ aan beide kanten van 100.", "Te veel — dat is binnen 3σ."],
+        wrongHints: [null, "95% hoort bij 2σ rond het gemiddelde: van 70 tot 130. Hoe ver liggen 85 en 115 van 100?", "50% is de helft onder het gemiddelde. Hier gaat het om 1σ aan beide kanten van 100.", "Te veel: 99,7% hoort bij 3σ, van 55 tot 145. Dat is veel breder dan 85 tot 115."],
         uitlegPad: {
           stappen: [{ titel: "Binnen 1σ", tekst: "μ = 100, σ = 15. Bereik 85-115 = μ ± σ. Volgens 68%-regel: **68%** ligt hier." }],
           theorie: "Toets-voorbeeldpatroon: IQ-vragen met N(100,15). Ook lengte N(170,8) of cijfers N(6,1).",

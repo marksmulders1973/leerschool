@@ -69,7 +69,7 @@ const steps = [
         q: "Wat is **giraal geld**?",
         options: ["Geld op je bankrekening", "Munten en biljetten", "Cryptomunten zoals bitcoin", "Een lening van de bank"],
         answer: 0,
-        wrongHints: [null, "Dat is chartaal.", "Bitcoin is digitaal, maar het is geen geld van een bank. Welk geld kun je overmaken met je bankpas?", "Een lening is een afspraak om geld terug te betalen, geen soort geld. Waar staat giraal geld?"],
+        wrongHints: [null, "Munten en biljetten heten chartaal geld, niet giraal.", "Bitcoin is digitaal, maar het is geen geld van een bank. Welk geld kun je overmaken met je bankpas?", "Een lening is een afspraak om geld terug te betalen, geen soort geld. Waar staat giraal geld?"],
         uitlegPad: {
           stappen: [{ titel: "Giraal = digitaal", tekst: "Giraal geld zit op een REKENING — je ziet alleen een getal in je bank-app. Tegenover chartaal (munten + biljetten die je vasthoudt)." }],
           woorden: [{ woord: "giraal geld", uitleg: "Tegoed op een bankrekening. Digitaal, niet vast te pakken." }, { woord: "chartaal geld", uitleg: "Munten en bankbiljetten. Tastbaar." }],
@@ -250,7 +250,7 @@ const steps = [
         q: "Je zet **€500** op een spaarrekening met **3% rente** per jaar. Hoeveel staat er na 1 jaar?",
         options: ["€515", "€503", "€530", "€553"],
         answer: 0,
-        wrongHints: [null, "3% van €500 = €15, niet €3.", "Dat zou 6% rente zijn.", "Te veel — controleer 3% × €500."],
+        wrongHints: [null, "3% van €500 = €15, niet €3.", "Dat zou 6% rente zijn.", "Te veel: dan krijg je €53 rente. Reken eerst uit hoeveel 1% van €500 is."],
         uitlegPad: {
           stappen: [{ titel: "3% × €500 = €15", tekst: "Rente = % × startbedrag = 3% × €500 = €15. Op je rekening na 1 jaar: €500 + €15 = €515." }],
           woorden: [{ woord: "rente", uitleg: "Beloning die bank betaalt voor je gespaarde geld. Uitgedrukt als percentage per jaar." }, { woord: "spaarrente", uitleg: "Specifieke rente voor spaarrekeningen, vaak laag (1-3% in 2024)." }],

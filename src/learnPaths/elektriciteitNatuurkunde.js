@@ -392,8 +392,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Volt is spanning.",
-          "Watt is vermogen.",
+          "Volt is de eenheid van spanning, niet van weerstand.",
+          "Watt is de eenheid van vermogen, niet van weerstand.",
           "Newton is voor kracht (mechanica).",
         ],
         uitlegPad: {
@@ -529,7 +529,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Stroomsterkte splitst juist.",
+          "In een parallelschakeling verdeelt de stroom zich over de takken. Is die dan overal gelijk?",
           "Weerstand kan per tak verschillen.",
           "Vermogen is P = U × I. Is de stroom door elke tak gelijk als de takken verschillende weerstanden hebben?",
         ],
@@ -796,7 +796,7 @@ const steps = [
         wrongHints: [
           null,
           "Klopt — Wet van Ohm.",
-          "Klopt — vermogen-formule.",
+          "P = U × I klopt: zo reken je vermogen uit. Zoek de formule die niet klopt.",
           "Klopt — in een serieschakeling tel je de weerstanden op.",
         ],
         uitlegPad: {

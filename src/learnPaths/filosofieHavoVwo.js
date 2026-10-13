@@ -94,7 +94,7 @@ const steps = [
         q: "**Descartes'** beroemde uitspraak:",
         options: ["'Ik denk, dus ik ben'", "'God is dood'", "'Alles stroomt'", "'Ik weet dat ik niets weet'"],
         answer: 0,
-        wrongHints: [null, "Niet — Nietzsche.", "Niet — Heraclitus.", "Niet — Socrates."],
+        wrongHints: [null, "'God is dood' is van Nietzsche, niet van Descartes.", "'Alles stroomt' (panta rhei) is van Heraclitus, niet van Descartes.", "'Ik weet dat ik niets weet' wordt aan Socrates toegeschreven, niet aan Descartes."],
         uitlegPad: {
           stappen: [
             { titel: "Onbetwijfelbaar startpunt", tekst: "Descartes begon met alles te twijfelen (kan ik mijn zintuigen vertrouwen? mijn gedachten? misschien is alles droom of demon-bedrog?). Maar als hij denkt, MOET hij bestaan om te denken. 'Ik denk dus ik ben' = onwrikbaar fundament voor verdere kennis." },
@@ -130,7 +130,7 @@ const steps = [
         q: "**Verlichting**-motto van Kant:",
         options: ["'Sapere aude' — durf te denken", "'Cogito ergo sum' — ik denk, dus ik ben", "'Panta rhei' — alles stroomt", "'God is dood' — oude waarden verdwijnen"],
         answer: 0,
-        wrongHints: [null, "Niet — Descartes.", "Niet — Heraclitus.", "Niet — Nietzsche."],
+        wrongHints: [null, "'Cogito ergo sum' is van Descartes, niet van Kant.", "'Panta rhei' komt van Heraclitus, een Griek die lang vóór de Verlichting leefde.", "'God is dood' is van Nietzsche, die pas een eeuw na Kant schreef."],
         uitlegPad: {
           stappen: [
             { titel: "1784 'Was ist Aufklärung?'", tekst: "Kant: Verlichting = uitgaan uit zelf-veroorzaakte onmondigheid. Niet anderen (priester, autoriteit) laten denken voor jou. SAPERE AUDE = durf te weten. Kernidee Verlichting + zelfontwikkeling tot vandaag." },
@@ -187,7 +187,7 @@ const steps = [
         q: "**'God is dood'** is uitspraak van:",
         options: ["Nietzsche", "Kant", "Marx", "Spinoza"],
         answer: 0,
-        wrongHints: [null, "Niet — Kant schreef over plicht en rede.", "Marx noemde religie 'opium van het volk', maar deze zin komt van een andere denker.", "Niet — God = Natuur."],
+        wrongHints: [null, "Niet — Kant schreef over plicht en rede.", "Marx noemde religie 'opium van het volk', maar deze zin komt van een andere denker.", "Spinoza zag God juist overal: God is de natuur. Zou hij God dan dood verklaren?"],
         uitlegPad: {
           stappen: [
             { titel: "Diagnose, niet juich-kreet", tekst: "Nietzsche bedoelde: christelijke God + traditionele waarden verliezen autoriteit door wetenschap + secularisatie. Niemand gelooft echt meer. Probleem: hoe nu morele basis? Antwoord: Übermensch creëert eigen waarden. Veel-misbegrepen als atheïsme-overwinning; meer als crisis-vaststelling." },
@@ -199,7 +199,7 @@ const steps = [
         q: "**Utilitarisme** (Bentham/Mill):",
         options: ["Grootste geluk voor het grootste aantal", "Plicht gaat boven de gevolgen", "Vrijheid van het individu komt op één", "Leef volgens deugden, zoals moed"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is Kant.", "Dat lijkt op het liberalisme. Waar kijken Bentham en Mill naar bij een keuze?", "Niet — dat is deugdethiek."],
+        wrongHints: [null, "Plicht boven gevolgen is het idee van Kant, niet van Bentham en Mill.", "Dat lijkt op het liberalisme. Waar kijken Bentham en Mill naar bij een keuze?", "Leven volgens deugden is deugdethiek (Aristoteles), niet utilitarisme."],
         uitlegPad: {
           stappen: [
             { titel: "Gevolgen-ethiek", tekst: "Bentham (1789): meet geluk + pijn voor alle betrokkenen, kies actie met meeste netto-geluk. Mill verfijnde: kwalitatieve verschillen (Socrates ontevreden > varken tevreden). Praktisch: veel beleid (kosten-baten-analyse) impliciet utilitaristisch. Kritiek: kan minderheden offeren voor meerderheid." },
@@ -256,7 +256,7 @@ const steps = [
         q: "**Foucault** stelde dat:",
         options: ["Macht zit overal, ook in kennis", "Macht ligt vooral bij de staat en de wet", "Macht verdwijnt in een democratie", "Macht berust vooral op geweld en dwang"],
         answer: 0,
-        wrongHints: [null, "Foucault keek verder dan de regering. Zag hij ook macht op school of in een ziekenhuis?", "Niet — ook daar ziet hij macht.", "Werkt de macht van een school of een ziekenhuis via geweld?"],
+        wrongHints: [null, "Foucault keek verder dan de regering. Zag hij ook macht op school of in een ziekenhuis?", "Verdwijnt de macht van een leraar of een arts als je in een democratie woont?", "Werkt de macht van een school of een ziekenhuis via geweld?"],
         uitlegPad: {
           stappen: [
             { titel: "Power/knowledge", tekst: "Foucault: scholen, ziekenhuizen, gevangenissen, psychiatrie disciplineren mensen subtieler dan direct geweld. Wetenschap (seksualiteit, criminaliteit) zelf creëert categorieën die mensen beheersen. Panopticon (Bentham-design): cel-ontwerp waar bewaker iedereen kan zien zonder zelf gezien te worden → mensen disciplineren zichzelf." },
@@ -280,7 +280,7 @@ const steps = [
         q: "**Peter Singer** is bekend om:",
         options: ["Opkomen voor dierenrechten", "De sluier van onwetendheid", "Kritiek op macht en discipline", "Plichtethiek zoals Kant"],
         answer: 0,
-        wrongHints: [null, "Dat is het gedachte-experiment van Rawls. Waar schreef Singer zijn bekendste boek over?", "Dat is Foucault. Singer is utilitarist: bij welke kwestie is hij wereldberoemd?", "Niet — hij is utilitarist."],
+        wrongHints: [null, "Dat is het gedachte-experiment van Rawls. Waar schreef Singer zijn bekendste boek over?", "Dat is Foucault. Singer is utilitarist: bij welke kwestie is hij wereldberoemd?", "Singer is utilitarist, geen plichtethicus zoals Kant. Voor welke groep komt hij op?"],
         uitlegPad: {
           stappen: [
             { titel: "'Animal Liberation' 1975", tekst: "Singer: morele cirkel uitbreiden naar dieren (ze voelen pijn). 'Speciesisme' (zoals racisme of seksisme) is onhoudbaar. Argumenteert tegen vee-industrie. Effectief altruïsme: geef aan organisaties die meeste levens redden per euro. Controversieel: ook standpunt over zwaar-gehandicapte baby's." },
@@ -301,7 +301,7 @@ const steps = [
         q: "**Trolley-probleem**: wissel omzetten dood 1, anders sterven 5. Wat zegt utilitarist?",
         options: ["Doe het — 5 redden levert meer welzijn op", "Niet doen — actief doden is verboden", "Doe het alleen als die ene persoon instemt", "Laat het lot beslissen"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is deontoloog.", "Instemming is niet waar de utilitarist naar kijkt — wat telt?", "Niet — de utilitarist kiest bewust."],
+        wrongHints: [null, "Dat actief doden altijd verboden is, is een plicht-argument (deontologie). Waar kijkt een utilitarist naar?", "Instemming is niet waar de utilitarist naar kijkt — wat telt?", "Niet — de utilitarist kiest bewust."],
         uitlegPad: {
           stappen: [
             { titel: "Reken-ethiek", tekst: "Utilitarist telt geluk + ellende. 5 levens > 1 leven → schakelen is moreel verplicht (volgens deze school). Maar bij 'dikke man van brug duwen': intuïtief verzet — directere actie voelt slechter. Filosofen blijven discussiëren of dit consistent is." },
@@ -313,7 +313,7 @@ const steps = [
         q: "**Deontologie** (Kant) zou bij trolley-probleem zeggen:",
         options: ["Niet doen — actief een onschuldige doden mag niet", "Doen — vijf levens wegen zwaarder dan één leven", "Doen — als de meerderheid van de omstanders dat wil", "Zelf kiezen — moraal is een persoonlijke keuze"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is utilitarist.", "Niet — een meerderheid is geen plicht-argument.", "Laat Kant het oordeel over aan ieders eigen smaak?"],
+        wrongHints: [null, "Vijf levens tegen één afwegen is wat een utilitarist doet. Kijkt Kant naar de uitkomst of naar de plicht?", "Niet — een meerderheid is geen plicht-argument.", "Laat Kant het oordeel over aan ieders eigen smaak?"],
         uitlegPad: {
           stappen: [
             { titel: "Geen middel-doel-rechtvaardiging", tekst: "Kant: behandel mensen nooit ALLEEN als middel. Kant-aanhangers redeneren vaak: actief een onschuldige doden mag niet, ook niet om er 5 te redden (bij de 'dikke man van de brug' gebruik je iemand zelfs letterlijk als middel). Verschil tussen: laten sterven (5 niet redden) en actief doden (1 doodrijden). Veel mensen voelen dit verschil intuïtief." },

@@ -592,9 +592,9 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
         answer: 0,
         wrongHints: [
           null,
-          "Stevigheid = celwand.",
-          "Fotosynthese = chloroplasten.",
-          "DNA = celkern.",
+          "Stevigheid geeft de celwand, niet de mitochondriën.",
+          "Fotosynthese gebeurt in de chloroplasten, niet in de mitochondriën.",
+          "DNA bewaren doet de celkern, niet de mitochondriën.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Mitochondrium = energie", tekst: "Mitochondriën verbranden suiker met zuurstof voor energie. Andere organellen hebben andere taken (kern=DNA, chloroplast=fotosynthese)." }],

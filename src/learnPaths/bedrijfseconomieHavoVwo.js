@@ -44,7 +44,7 @@ const steps = [
         q: "**Solvabiliteit** berekenen:",
         options: ["EV / totaal vermogen × 100%", "VV / eigen vermogen × 100%", "Omzet / totale kosten × 100%", "Nettowinst / omzet × 100%"],
         answer: 0,
-        wrongHints: [null, "Dat is de verhouding vreemd tegenover eigen vermogen (debt-equity-ratio), niet de solvabiliteit.", "Niet — dat zegt niets over hoe het bedrijf gefinancierd is.", "Niet — dat is de winstmarge."],
+        wrongHints: [null, "Dat is de verhouding vreemd tegenover eigen vermogen (debt-equity-ratio), niet de solvabiliteit.", "Niet — dat zegt niets over hoe het bedrijf gefinancierd is.", "Nettowinst gedeeld door omzet is de winstmarge. Solvabiliteit gaat over hoe het bedrijf gefinancierd is."],
         uitlegPad: {
           stappen: [{ titel: "Eigen vermogen-aandeel", tekst: "**Solvabiliteit** = **EV / Totaal vermogen × 100%**. Toont in welke mate bedrijf zijn schulden kan betalen bij faillissement. Vuistregel ≥25-30%. Banken eisen vaak 40%+ voor lening." }],
           niveaus: { basis: "EV/TV ×100.", simpeler: "Solv = EV/TV", nogSimpeler: "EV/TV ×100." },

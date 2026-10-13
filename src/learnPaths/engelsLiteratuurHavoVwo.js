@@ -205,7 +205,7 @@ const steps = [
         q: "**'Jane Eyre'** is geschreven door:",
         options: ["Charlotte Brontë", "Emily Brontë", "Jane Austen", "Mary Shelley"],
         answer: 0,
-        wrongHints: [null, "Niet — die schreef Wuthering Heights.", "De titel heeft wel de voornaam Jane, maar Austen overleed al in 1817. Jane Eyre verscheen in 1847.", "Niet — Frankenstein."],
+        wrongHints: [null, "Niet — die schreef Wuthering Heights.", "De titel heeft wel de voornaam Jane, maar Austen overleed al in 1817. Jane Eyre verscheen in 1847.", "Mary Shelley schreef Frankenstein (1818), een gruwelroman. Jane Eyre is van een andere schrijfster."],
         uitlegPad: {
           stappen: [
             { titel: "Drie Brontë-zussen", tekst: "**Charlotte**: Jane Eyre (1847).\n**Emily**: Wuthering Heights (1847).\n**Anne**: Tenant of Wildfell Hall.\nAlle drie schreven onder MANNELIJK pseudoniem (Currer, Ellis, Acton Bell) wegens vrouwen-vooroordeel. Alle drie stierven jong." },
@@ -217,7 +217,7 @@ const steps = [
         q: "**Ulysses** (1922) is het hoofdwerk van:",
         options: ["James Joyce", "George Orwell", "Charles Dickens", "Virginia Woolf"],
         answer: 0,
-        wrongHints: [null, "Niet — politieke fictie.", "Niet — Victoriaans.", "Niet — wel modernist, ander werk."],
+        wrongHints: [null, "Orwell schreef politieke romans zoals Animal Farm en 1984, pas later in de twintigste eeuw.", "Dickens schreef in de Victoriaanse tijd en overleed al in 1870, lang vóór 1922.", "Woolf was wel een modernist uit dezelfde tijd, maar haar bekende werken zijn Mrs Dalloway en To the Lighthouse."],
         uitlegPad: {
           stappen: [
             { titel: "Notoir moeilijk maar bewonderd", tekst: "Joyce, Iers schrijver. Ulysses speelt op één dag (16 juni 1904) in Dublin. Volgt Leopold Bloom door 18 hoofdstukken, elk in andere literaire stijl. Parallel met Homerus' Odyssee (Bloom = Odysseus). Stream of consciousness pionierde hier. Lang gecensureerd in VS + UK door taal." },
@@ -235,7 +235,7 @@ const steps = [
           "Frankenstein"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — Conan Doyle.", "Niet — Stoker.", "Niet — Shelley."],
+        wrongHints: [null, "Sherlock Holmes is de detective van Arthur Conan Doyle, geen figuur uit een kerstverhaal.", "Dracula is de vampier uit de roman van Bram Stoker, geen kerstverhaal.", "Frankenstein komt uit de gruwelroman van Mary Shelley, geen kerstverhaal."],
         uitlegPad: {
           stappen: [
             { titel: "Bekendste vrek wereld", tekst: "Dickens, 1843. Scrooge wordt bezocht door 3 geesten (verleden, heden, toekomst) → bekeert zich van gierigaard tot vrijgevig mens. Naam 'scrooge' is sindsdien een synoniem voor 'vrek'. Bah humbug! Klassiek Kerst-verhaal." },
@@ -268,7 +268,7 @@ const steps = [
         q: "Wie schreef **'Moby Dick'**?",
         options: ["Herman Melville", "Nathaniel Hawthorne", "Edgar Allan Poe", "Walt Whitman"],
         answer: 0,
-        wrongHints: [null, "Niet — Scarlet Letter.", "Poe schreef vooral korte horror- en detectiveverhalen, geen lange zeeroman.", "Whitman was dichter (Leaves of Grass), geen romanschrijver."],
+        wrongHints: [null, "Hawthorne schreef The Scarlet Letter, over schuld in een puriteinse gemeenschap, niet over walvisjacht.", "Poe schreef vooral korte horror- en detectiveverhalen, geen lange zeeroman.", "Whitman was dichter (Leaves of Grass), geen romanschrijver."],
         uitlegPad: {
           stappen: [
             { titel: "1851, walvis-obsessie", tekst: "Kapitein Ahab jaagt op witte walvis Moby Dick die zijn been afnam. Symbolisch verhaal over obsessie, hubris, mens vs natuur. Verteld door Ishmael ('Call me Ishmael' — beroemde openingszin). Bij verschijning flop; pas in 20e eeuw als meesterwerk erkend." },
@@ -335,7 +335,7 @@ const steps = [
         q: "Wie schreef **'The Handmaid's Tale'**?",
         options: ["Margaret Atwood", "Toni Morrison", "Zadie Smith", "Donna Tartt"],
         answer: 0,
-        wrongHints: [null, "Niet — Beloved.", "Niet — White Teeth.", "Niet — Goldfinch."],
+        wrongHints: [null, "Toni Morrison schreef Beloved, een roman over slavernij in Amerika.", "Zadie Smith schreef White Teeth, over families in Londen.", "Donna Tartt schreef The Goldfinch en The Secret History."],
         uitlegPad: {
           stappen: [
             { titel: "Atwood, 1985 (TV 2017)", tekst: "Dystopie waarin VS overgenomen door religieus regime; vruchtbare vrouwen ('handmaids') gedwongen tot baren voor elites. Vandaag herontdekt door politieke ontwikkelingen (Trump-tijdperk, anti-abortuswetten). TV-serie werd een hit in 2017. Vervolg 'The Testaments' (2019, Booker)." },

@@ -158,7 +158,7 @@ const steps = [
         q: "Hoeveel **provincies** heeft Nederland?",
         options: ["12", "10", "21", "340"],
         answer: 0,
-        wrongHints: [null, "Was vroeger lager, nu 12.", "21 = waterschappen.", "340 = gemeenten."],
+        wrongHints: [null, "Tel ze eens op de kaart, van Groningen tot Zeeland. Kom je op 10?", "Nederland heeft 21 waterschappen. Zijn dat ook de provincies?", "Rond de 340 is het aantal gemeenten. Een provincie is veel groter dan een gemeente."],
         uitlegPad: {
           stappen: [{ titel: "12 provincies", tekst: "NL heeft 12 provincies: Groningen, Friesland, Drenthe, Overijssel, Gelderland, Utrecht, Noord-Holland, Zuid-Holland, Zeeland, Noord-Brabant, Limburg, Flevoland." }],
           woorden: [{ woord: "provincie", uitleg: "Tweede overheidslaag (na Rijk). 12 stuks in NL. Eigen verkiezingen, Provinciale Staten." }],
@@ -186,7 +186,7 @@ const steps = [
         q: "Wat is **OZB**?",
         options: ["Een gemeentebelasting op je huis", "Een Rijksbelasting op je inkomen", "Een provinciale belasting op je auto", "Een belasting op benzine en diesel"],
         answer: 0,
-        wrongHints: [null, "Inkomen belast het Rijk. Gaat OZB over je inkomen?", "Gaat OZB over auto's?", "Brandstof = accijns."],
+        wrongHints: [null, "Inkomen belast het Rijk. Gaat OZB over je inkomen?", "Gaat OZB over auto's?", "Belasting op brandstof heet accijns. Gaat OZB over benzine?"],
         uitlegPad: {
           stappen: [{ titel: "OZB = gemeente + huis", tekst: "Onroerendezaakbelasting = belasting op het BEZIT van een huis of bedrijfspand. Geheven door de GEMEENTE. Berekend op basis van WOZ-waarde." }],
           woorden: [{ woord: "OZB", uitleg: "Onroerendezaakbelasting. Gemeentebelasting voor eigenaren van onroerend goed." }, { woord: "WOZ-waarde", uitleg: "Geschatte marktwaarde van je woning per 1 januari, vastgesteld door gemeente." }],
@@ -298,7 +298,7 @@ const steps = [
         q: "Wat is de **Miljoenennota**?",
         options: ["Document met de plannen voor de Rijksbegroting", "Een toespraak van de koning op Prinsjesdag", "Het jaarverslag over vorig jaar", "Een Europese richtlijn over overheidsgeld"],
         answer: 0,
-        wrongHints: [null, "Troonrede is de toespraak.", "Terugkijken gebeurt later, op Verantwoordingsdag in mei.", "Puur Nederlands document."],
+        wrongHints: [null, "Troonrede is de toespraak.", "Terugkijken gebeurt later, op Verantwoordingsdag in mei.", "De Miljoenennota komt van het Nederlandse kabinet, niet uit Europa."],
         uitlegPad: {
           stappen: [{ titel: "Plan-document", tekst: "Miljoenennota = financieel plan-document van het Kabinet. Bevat de uitgangspunten + verwachte inkomsten/uitgaven voor het komend jaar. Wordt op Prinsjesdag aangeboden door minister van Financiën." }],
           woorden: [{ woord: "Miljoenennota", uitleg: "Hoofdstuk van de Rijksbegroting met financiële plannen en economische verwachtingen." }, { woord: "Troonrede", uitleg: "Toespraak van de koning op Prinsjesdag waarin regering hoofdlijnen aankondigt." }],
@@ -312,7 +312,7 @@ const steps = [
         q: "Wat is de **grootste uitgavenpost** van de Rijksoverheid?",
         options: ["Sociale zekerheid", "Defensie en veiligheid", "Onderwijs en wetenschap", "Infrastructuur en verkeer"],
         answer: 0,
-        wrongHints: [null, "Defensie is veel kleiner (~3-5%).", "Onderwijs ~10%.", "Wegen en spoor kosten veel, maar het is maar een paar procent van de begroting. Welke post is veel groter?"],
+        wrongHints: [null, "Defensie is veel kleiner (~3-5%).", "Onderwijs is een grote post (zo'n 10%), maar er is een post die veel groter is.", "Wegen en spoor kosten veel, maar het is maar een paar procent van de begroting. Welke post is veel groter?"],
         uitlegPad: {
           stappen: [{ titel: "Sociale zekerheid #1", tekst: "AOW + WW + bijstand + WIA + toeslagen + kinderbijslag samen ~30% van Rijksuitgaven. Veruit grootste post." }],
           woorden: [{ woord: "sociale zekerheid", uitleg: "Stelsel van uitkeringen + toeslagen om iedereen een basisinkomen + sociale bescherming te garanderen." }],
@@ -415,7 +415,7 @@ const steps = [
         q: "Bij **1% rentestijging op €500 mrd schuld** = ... extra rente per jaar?",
         options: ["€5 miljard", "€500 miljoen", "€500 miljard", "€50 miljoen"],
         answer: 0,
-        wrongHints: [null, "Te weinig — controleer je nullen.", "Veel te veel — dat is de hele schuld.", "Reken uit: 1% van 500 miljard. Hoeveel nullen houd je over?"],
+        wrongHints: [null, "€500 miljoen is 0,1% van €500 miljard. Hoeveel is 1%?", "Veel te veel — dat is de hele schuld.", "Reken uit: 1% van 500 miljard. Hoeveel nullen houd je over?"],
         uitlegPad: {
           stappen: [{ titel: "1% van €500 mrd", tekst: "1% × €500.000.000.000 = €5.000.000.000 = €5 miljard. Per jaar EXTRA rente over de hele schuld." }],
           woorden: [{ woord: "rentegevoeligheid", uitleg: "Mate waarin overheidsuitgaven veranderen bij rentewijziging." }],
@@ -612,7 +612,7 @@ const steps = [
         q: "Hoeveel garantie heb je op een product (in NL)?",
         options: ["Minimaal 2 jaar", "Minimaal 1 maand", "Minimaal 6 maanden", "Minimaal 5 jaar"],
         answer: 0,
-        wrongHints: [null, "Een maand is wel erg kort voor een wasmachine. Welke minimumtermijn noemde de les?", "Dat is korter dan de wettelijke termijn.", "Niet de wettelijke standaard."],
+        wrongHints: [null, "Een maand is wel erg kort voor een wasmachine. Welke minimumtermijn noemde de les?", "Dat is korter dan de wettelijke termijn.", "Sommige merken geven 5 jaar extra garantie. Is dat ook wat de wet minimaal eist?"],
         uitlegPad: {
           stappen: [{ titel: "Wettelijke 2 jaar", tekst: "Bij consumentenkoop (van bedrijf aan particulier) geldt WETTELIJKE garantie van 2 jaar. Sommige producten langer (witgoed → conformiteitseis afhankelijk van verwachte levensduur)." }],
           woorden: [{ woord: "consumentenkoop", uitleg: "Verkoop van product door bedrijf aan particulier. Bijzondere bescherming." }, { woord: "conformiteit", uitleg: "Product moet voldoen aan wat je redelijkerwijs mocht verwachten — bij defect: recht op gratis reparatie/vervanging." }],
@@ -640,7 +640,7 @@ const steps = [
         q: "Welke organisatie controleert **voedselveiligheid**?",
         options: ["NVWA", "ACM", "DNB", "DUO"],
         answer: 0,
-        wrongHints: [null, "ACM = consument + concurrentie.", "DNB = banken.", "DUO = studie."],
+        wrongHints: [null, "ACM = consument + concurrentie.", "DNB (De Nederlandsche Bank) houdt toezicht op banken, niet op voedsel.", "DUO (Dienst Uitvoering Onderwijs) regelt studiefinanciering, niet voedsel."],
         uitlegPad: {
           stappen: [{ titel: "Voedsel + waren", tekst: "NVWA = Nederlandse Voedsel- en Warenautoriteit. Controleert restaurants, supermarkten, fabrieken op hygiëne, dierwelzijn, productveiligheid." }],
           woorden: [{ woord: "NVWA", uitleg: "Nederlandse Voedsel- en Warenautoriteit. Valt onder het landbouwministerie. Controleert hygiëne + veiligheid + dierwelzijn." }],
@@ -719,7 +719,7 @@ const steps = [
         q: "Wie kiest de **Tweede Kamer**?",
         options: ["Het volk, direct", "Provinciale Staten", "De koning", "De regering"],
         answer: 0,
-        wrongHints: [null, "Provinciale Staten kiezen Eerste Kamer.", "Koning is ceremonieel.", "Regering komt voort uit verkiezingen, niet andersom."],
+        wrongHints: [null, "Provinciale Staten kiezen Eerste Kamer.", "De koning heeft vooral een ceremoniële rol en kiest geen Kamerleden.", "Regering komt voort uit verkiezingen, niet andersom."],
         uitlegPad: {
           stappen: [{ titel: "Direct gekozen", tekst: "Het VOLK kiest de Tweede Kamer DIRECT. Iedere Nederlander 18+ mag stemmen. Geen tussenlaag, geen partijbestuur dat beslist." }],
           woorden: [{ woord: "directe verkiezingen", uitleg: "Burgers stemmen rechtstreeks op kandidaten/partijen voor de zetels." }, { woord: "indirecte verkiezingen", uitleg: "Burgers kiezen een ander orgaan dat vervolgens de zetels invult — zoals bij Eerste Kamer." }],
@@ -733,7 +733,7 @@ const steps = [
         q: "Wat doet de **regering**?",
         options: ["Voert wetten uit en bepaalt beleid", "Maakt wetten helemaal zelfstandig", "Spreekt recht in rechtszaken", "Controleert het werk van het parlement"],
         answer: 0,
-        wrongHints: [null, "Wetten maken doet ze samen met parlement.", "Rechtspraak is gescheiden.", "Het is andersom: het parlement controleert de regering."],
+        wrongHints: [null, "Wetten maken doet ze samen met parlement.", "Rechtspreken doen onafhankelijke rechters, los van de regering (scheiding der machten).", "Het is andersom: het parlement controleert de regering."],
         uitlegPad: {
           stappen: [{ titel: "Uitvoerende macht", tekst: "Regering = premier + ministers + staatssecretarissen. Voert wetten UIT, dient wetsvoorstellen in, bepaalt dagelijks beleid. Steunt op een meerderheid in de Tweede Kamer." }],
           woorden: [{ woord: "regering", uitleg: "Uitvoerend orgaan van Nederland: koning + ministers. Praktisch: kabinet (premier + ministers)." }, { woord: "kabinet", uitleg: "Premier + ministers + staatssecretarissen. Beleidsmakend gezelschap." }],
@@ -761,7 +761,7 @@ const steps = [
         q: "Vanaf welke leeftijd mag je **stemmen** in NL?",
         options: ["18 jaar", "16 jaar", "21 jaar", "25 jaar"],
         answer: 0,
-        wrongHints: [null, "In sommige andere landen is dat zo, in NL niet.", "Was vroeger zo.", "Je mag al veel eerder stemmen. Vanaf welke leeftijd ben je meerderjarig?"],
+        wrongHints: [null, "In sommige andere landen is dat zo, in NL niet.", "Vroeger moest je 21 zijn om te mogen stemmen. Geldt dat nu nog?", "Je mag al veel eerder stemmen. Vanaf welke leeftijd ben je meerderjarig?"],
         uitlegPad: {
           stappen: [{ titel: "Vanaf 18", tekst: "Actief kiesrecht (mogen stemmen) in NL = vanaf 18 jaar. Passief kiesrecht (gekozen worden) ook 18+. Geldt voor alle verkiezingen: Tweede Kamer, gemeenteraad, provincie, EU." }],
           woorden: [{ woord: "actief kiesrecht", uitleg: "Recht om zelf te stemmen. NL: 18+." }, { woord: "passief kiesrecht", uitleg: "Recht om gekozen te worden. NL: ook 18+." }],

@@ -77,7 +77,7 @@ const steps = [
         q: "Welke is **geen** media?",
         options: ["Een rekenmachine", "Een krant", "De app TikTok", "De radio"],
         answer: 0,
-        wrongHints: [null, "Drukmedium — letters op papier.", "Sociale-media-app met video's.", "Audiomedium — uitzendingen via lucht."],
+        wrongHints: [null, "Drukmedium — letters op papier.", "TikTok is een sociale-media-app: een medium waarmee je video's deelt.", "Audiomedium — uitzendingen via lucht."],
       },
     ],
   },

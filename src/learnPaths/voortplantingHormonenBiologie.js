@@ -840,7 +840,7 @@ const steps = [
         wrongHints: [
           null,
           "Insuline gaat over bloedsuiker, niet stress.",
-          "Oestrogeen is voortplantings-hormoon.",
+          "Oestrogeen is een geslachtshormoon voor de voortplanting, niet voor stress.",
           "Melatonine gaat over slaap.",
         ],
         uitlegPad: {
@@ -858,9 +858,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dat is insuline.",
+          "Bloedsuiker verlagen is de taak van insuline.",
           "Zaadcellen worden gemaakt onder invloed van testosteron.",
-          "Dat is melatonine.",
+          "Het slaap-waakritme wordt geregeld door melatonine.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Progesteron = slijmvlies-bescherming", tekst: "Progesteron (uit lege follikel na eisprong) houdt het baarmoederslijmvlies dik en klaar voor innesteling. Daalt het → slijmvlies komt los → menstruatie." }],

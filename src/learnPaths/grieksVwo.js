@@ -32,7 +32,7 @@ const steps = [
         q: "Hoeveel letters heeft **Grieks alfabet**?",
         options: ["24","26","30","21"],
         answer: 0,
-        wrongHints: [null, "Niet — modern Engels.", "Niet — te veel.", "Niet — te weinig."],
+        wrongHints: [null, "26 letters heeft ons alfabet. Het Grieks heeft een eigen alfabet.", "Tel de letters van alfa tot en met omega eens. Kom je op 30?", "Tel de letters van alfa tot en met omega eens. Kom je op 21?"],
         uitlegPad: {
           stappen: [{ titel: "Α t/m Ω", tekst: "**Grieks alfabet: 24 letters** van **Alfa (Α)** tot **Omega (Ω)**. Engelse 'from alpha to omega' = van begin tot eind. Letters die het Engels niet heeft: theta (θ), xi (ξ), psi (ψ), phi (φ), chi (χ), omega (ω). Wetenschap leent veel: π (pi), δ (delta), Σ (sigma) etc." }],
           niveaus: { basis: "24.", simpeler: "Grieks = 24 letters", nogSimpeler: "24" },
@@ -42,7 +42,7 @@ const steps = [
         q: "Welke is **omega**?",
         options: ["Ω (lange o)","Ο (korte o)","θ (th)","ψ (ps)"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is omicron.", "θ is de theta, uitgesproken als 'th'. Welke letter is de lange o?", "ψ is de psi, uitgesproken als 'ps'. Zoek de letter voor de lange o."],
+        wrongHints: [null, "Ο is de omicron, de 'kleine o' (korte o). Welke letter is de 'grote o'?", "θ is de theta, uitgesproken als 'th'. Welke letter is de lange o?", "ψ is de psi, uitgesproken als 'ps'. Zoek de letter voor de lange o."],
         uitlegPad: {
           stappen: [{ titel: "Lange vs korte o", tekst: "**Omega Ω/ω** = lange o (oh). **Omicron Ο/ο** = korte o. Grieks onderscheidt klinker-lengtes — belangrijk voor klemtoon + metrum poëzie. Vergelijkbaar: Eta (Η/η) = lange e vs Epsilon (Ε/ε) = korte e." }],
           niveaus: { basis: "Ω.", simpeler: "Omega = Ω lange o", nogSimpeler: "Ω" },

@@ -199,7 +199,7 @@ const steps = [
         q: "Een spoel heeft N = 100 windingen. Flux verandert met dΦ/dt = 0,020 Wb/s. U_ind?",
         options: ["2,0 V", "0,2 V", "20 V", "200 V"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet N niet.", "U = N · dΦ/dt = 100 × 0,020. Heb je de komma goed gezet?", "Rekende je met 2,0 Wb/s? Kijk nog eens naar 0,020 Wb/s."],
+        wrongHints: [null, "Vermenigvuldig dΦ/dt met het aantal windingen N. Rekende je met 100?", "U = N · dΦ/dt = 100 × 0,020. Heb je de komma goed gezet?", "Rekende je met 2,0 Wb/s? Kijk nog eens naar 0,020 Wb/s."],
         uitlegPad: {
           stappen: [{ titel: "U = N · dΦ/dt", tekst: "U = 100 · 0,020 = **2,0 V** (in absolute waarde — het minteken geeft de richting aan via Lenz)." }],
           niveaus: { basis: "100 × 0,02 = 2 V.", simpeler: "Aantal windingen × snelheid van flux-verandering.", nogSimpeler: "2,0 V" },

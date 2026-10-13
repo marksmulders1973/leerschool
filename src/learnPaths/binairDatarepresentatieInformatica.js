@@ -71,7 +71,7 @@ const steps = [
         q: "Welke waarde heeft het hex-teken **A**?",
         options: ["10", "15", "11", "16"],
         answer: 0,
-        wrongHints: [null, "15 hoort bij F, het laatste hex-teken. Waar staat A in de rij?", "Dat is B.", "16 is het grondtal; A zelf is kleiner."],
+        wrongHints: [null, "15 hoort bij F, het laatste hex-teken. Waar staat A in de rij?", "11 hoort bij het hex-teken B, niet bij A.", "16 is het grondtal; A zelf is kleiner."],
         uitlegPad: {
           stappen: [{ titel: "Na de 9 komen letters", tekst: "Hexadecimaal heeft 16 cijfers. Na 0-9 ga je verder met letters: **A = 10**, B = 11, C = 12, D = 13, E = 14, F = 15. Zo passen er 16 waarden in één teken." }],
           niveaus: { basis: "A = 10.", simpeler: "Hex A = 10", nogSimpeler: "A." },

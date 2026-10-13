@@ -54,7 +54,7 @@ const steps = [
         q: "Welke partij past bij **sociaal-democratie**?",
         options: ["PvdA-GL","VVD","CU","FvD"],
         answer: 0,
-        wrongHints: [null, "Niet — liberalisme.", "Niet — christen-democratie.", "Niet — conservatief populisme."],
+        wrongHints: [null, "De VVD is een liberale partij: vrijheid en een kleine overheid staan centraal.", "De ChristenUnie is een christelijke partij; haar ideeën komen uit de Bijbel, niet uit het socialisme.", "FvD is een rechts-conservatieve, populistische partij."],
         uitlegPad: {
           stappen: [{ titel: "PvdA-GL combinatie", tekst: "**Sociaal-democratie** combineert markteconomie met sterke sociale zekerheid + herverdeling. **PvdA-GL** (samengaan PvdA + GroenLinks bij 2023-verkiezingen) is de centraal-linkse partij in NL." }],
           niveaus: { basis: "PvdA-GL.", simpeler: "Soc-dem = PvdA-GL", nogSimpeler: "PvdA-GL" },
@@ -134,7 +134,7 @@ const steps = [
         q: "**Bridging capital** (Putnam) is:",
         options: ["Verbinding tussen verschillende groepen","Verbinding binnen de eigen groep","Vertrouwen in instituties zoals de overheid","Bezit dat je inzet om geld te verdienen"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is bonding.", "Dat gaat over vertrouwen in instanties, niet over contacten tussen groepen.", "Dat is economisch kapitaal. Putnam gaat over sociaal kapitaal."],
+        wrongHints: [null, "Verbinding binnen je eigen groep heet bonding capital. Bridging gaat over iets anders.", "Dat gaat over vertrouwen in instanties, niet over contacten tussen groepen.", "Dat is economisch kapitaal. Putnam gaat over sociaal kapitaal."],
         uitlegPad: {
           stappen: [{ titel: "Bruggen slaan", tekst: "**Bridging social capital** (Putnam): netwerken die **verschillende groepen** verbinden (etnisch, religieus, klasse). Versus **bonding capital**: binnen eigen groep (familie, kerk). Beide nodig — bridging vooral voor diverse maatschappij." }],
           niveaus: { basis: "Tussen groepen.", simpeler: "Bridging = brug tussen", nogSimpeler: "Tussen groepen" },
@@ -224,7 +224,7 @@ const steps = [
         q: "**EVRM** verschilt van **UVRM** doordat:",
         options: ["EVRM is juridisch bindend","UVRM is juridisch bindend","Ze zijn juridisch precies gelijk","UVRM geldt alleen in Europa"],
         answer: 0,
-        wrongHints: [null, "Is een 'verklaring' even bindend als een 'verdrag'?", "Kun je met de UVRM net zo naar een rechter stappen als met het EVRM?", "Niet — UVRM is wereldwijd."],
+        wrongHints: [null, "Is een 'verklaring' even bindend als een 'verdrag'?", "Kun je met de UVRM net zo naar een rechter stappen als met het EVRM?", "De UVRM is een verklaring van de VN die wereldwijd geldt, niet alleen in Europa."],
         uitlegPad: {
           stappen: [{ titel: "VN moreel, Europa bindend", tekst: "**UVRM** (Universele Verklaring 1948, VN): moreel + politiek krachtig, **niet juridisch bindend** voor staten. **EVRM** (Europees Verdrag 1950): **juridisch bindend** voor lidstaten Raad van Europa. Burger kan na het doorlopen van de nationale rechtspraak naar het Europees Hof voor de Rechten van de Mens in **Straatsburg** stappen met een klacht tegen de eigen staat." }],
           theorie: "Toets-actueel: in de Urgenda-klimaatzaak gebruikte de Nederlandse rechter het EVRM om de overheid tot actie te dwingen.",

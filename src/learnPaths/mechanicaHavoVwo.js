@@ -239,7 +239,7 @@ const steps = [
         q: "Kar 4 kg, 6 m/s raakt stilstaande 2 kg, plakken samen. Snelheid na?",
         options: ["4 m/s","6 m/s","2 m/s","12 m/s"],
         answer: 0,
-        wrongHints: [null, "Te groot — massa nam toe.", "Je trok de snelheden van elkaar af. Reken de totale impuls vóór uit en deel die door de totale massa erna.", "Je deelde de impuls door 2 kg. Welke massa beweegt er na het plakken?"],
+        wrongHints: [null, "6 m/s is de snelheid van alleen de eerste kar. Na het plakken beweegt er meer massa; wat doet dat met de snelheid?", "Je trok de snelheden van elkaar af. Reken de totale impuls vóór uit en deel die door de totale massa erna.", "Je deelde de impuls door 2 kg. Welke massa beweegt er na het plakken?"],
         uitlegPad: {
           stappen: [
             { titel: "Impulsbehoud", tekst: "Voor: p = 4·6 + 2·0 = 24 kg·m/s. Na: p = (4+2)·v = 6v." },

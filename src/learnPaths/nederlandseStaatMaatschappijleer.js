@@ -494,7 +494,7 @@ const steps = [
         q: "Wanneer werd de **Verenigde Naties** opgericht?",
         options: ["1945", "1919", "1957", "2002"],
         answer: 0,
-        wrongHints: [null, "1919 = Volkenbond (voorganger).", "1957 = EEG.", "2002 = euro-invoering."],
+        wrongHints: [null, "1919 = Volkenbond (voorganger).", "In 1957 werd de EEG opgericht, een voorloper van de Europese Unie.", "In 2002 kwam de euro als munt in onze portemonnee. De VN is veel ouder."],
         uitlegPad: {
           stappen: [{ titel: "VN — na WO2, 1945", tekst: "VN (Verenigde Naties) opgericht 24 oktober 1945, vlak na einde WO2 (15 aug 1945). Doel: 'om de gesel van de oorlog te voorkomen'. Hoofdkantoor New York. Begon met 51 landen, nu 193. Voorganger: Volkenbond (1919-1946) — mislukte, kon WO2 niet voorkomen." }],
           woorden: [{ woord: "VN", uitleg: "Verenigde Naties. Engels: United Nations (UN)." }, { woord: "Volkenbond", uitleg: "Voorganger VN, 1919-1946. Opgericht na WO1, faalde." }, { woord: "Veiligheidsraad", uitleg: "Belangrijkste VN-orgaan. 15 leden, 5 permanent (VS+UK+FR+Rusland+China)." }],

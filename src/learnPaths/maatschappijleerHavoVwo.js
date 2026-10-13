@@ -44,7 +44,7 @@ const steps = [
         q: "**Trias politica** is bedacht door:",
         options: ["Montesquieu","Karl Marx","John Locke","Rousseau"],
         answer: 0,
-        wrongHints: [null, "Niet — Marx kwam later.", "Locke schreef wel over het begrenzen van macht, maar wie werkte de drie machten uit?", "Rousseau schreef vooral over het maatschappelijk verdrag en de volkswil."],
+        wrongHints: [null, "Marx leefde in de 19e eeuw en schreef over klassenstrijd. De trias politica is ouder.", "Locke schreef wel over het begrenzen van macht, maar wie werkte de drie machten uit?", "Rousseau schreef vooral over het maatschappelijk verdrag en de volkswil."],
         uitlegPad: {
           stappen: [{ titel: "De l'esprit des lois", tekst: "**Montesquieu** in *De geest van de wetten* (1748): **trias politica** = scheiding van wetgevende, uitvoerende, rechterlijke macht voorkomt tirannie. Geïnspireerd door Engels parlementair systeem. Invloed: Amerikaanse Grondwet 1787, Franse 1791, NL 1815." }],
           niveaus: { basis: "Montesquieu.", simpeler: "Trias = Montesq.", nogSimpeler: "Montesquieu" },

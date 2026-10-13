@@ -62,7 +62,7 @@ const steps = [
           "Het de lading van het elektron vastlegt"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — c is een aparte constante.", "Bij zwaartekracht hoort de gravitatieconstante G. Waar komt h voor, bijvoorbeeld in E = h·f?", "De lading van het elektron is een eigen constante, e. Waar komt h voor, bijvoorbeeld in E = h·f?"],
+        wrongHints: [null, "De lichtsnelheid c is een eigen constante, los van h. Waar komt h voor, bijvoorbeeld in E = h·f?", "Bij zwaartekracht hoort de gravitatieconstante G. Waar komt h voor, bijvoorbeeld in E = h·f?", "De lading van het elektron is een eigen constante, e. Waar komt h voor, bijvoorbeeld in E = h·f?"],
         uitlegPad: {
           stappen: [{ titel: "h = 6,626·10⁻³⁴ J·s — heel klein", tekst: "Omdat h zo klein is, zien wij op dagelijkse schaal geen quantum-effecten. Een tennisbal heeft de Broglie-golf van ~10⁻³⁴ m → onmeetbaar. Een elektron heeft λ ~10⁻¹⁰ m → wel meetbaar." }],
           niveaus: { basis: "h is schaal van quantum.", simpeler: "Hele kleine constante = quantum-wereld.", nogSimpeler: "h" },
@@ -72,7 +72,7 @@ const steps = [
         q: "Een gele lamp zendt fotonen van **2,1 eV** uit. Welk type licht is dat?",
         options: ["Zichtbaar (geel)", "Ultraviolet", "Röntgen", "Infrarood"],
         answer: 0,
-        wrongHints: [null, "Niet — UV is >3 eV.", "Niet — keV-bereik.", "Niet — IR is <1,5 eV."],
+        wrongHints: [null, "Ultraviolette fotonen hebben meer dan ongeveer 3 eV. Is 2,1 eV zoveel?", "Röntgenfotonen hebben energieën van duizenden eV (keV). 2,1 eV is veel minder.", "Infraroodfotonen hebben minder dan ongeveer 1,5 eV. Is 2,1 eV zo weinig?"],
         uitlegPad: {
           stappen: [{ titel: "Zichtbaar = 1,8-3,1 eV", tekst: "Zichtbaar bereik per foton: rood ~1,8 eV → violet ~3,1 eV. Geel ligt rond 2,1 eV. UV begint vanaf 3,1 eV; röntgen vanaf ~100 eV." }],
           niveaus: { basis: "2,1 eV = zichtbaar geel.", simpeler: "In zichtbaar bereik.", nogSimpeler: "Geel" },
@@ -383,7 +383,7 @@ const steps = [
         q: "Bij **emissie van een rood foton** (λ≈656 nm, Hα-lijn) door waterstof: welke sprong?",
         options: ["n=3 → n=2", "n=2 → n=1", "n=4 → n=3", "n=3 → n=1"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is UV (Lyman).", "Niet — dat is IR (Paschen).", "Niet — UV (Lyman)."],
+        wrongHints: [null, "Sprongen naar n=1 (Lymanreeks) geven ultraviolet licht, geen rood licht.", "Sprongen naar n=3 (Paschenreeks) geven infrarood licht, geen rood licht.", "Ook deze sprong eindigt op n=1 (Lymanreeks) en geeft dus ultraviolet licht."],
         uitlegPad: {
           stappen: [
             { titel: "Balmer-serie naar n=2", tekst: "ΔE = E_3 − E_2 = (−1,51) − (−3,4) = +1,89 eV → λ = 1240/1,89 ≈ 656 nm (rood). Klassieke Hα-lijn, zichtbaar in waterstof-spectrum en in zon (één van de prominentste Fraunhofer-lijnen)." },

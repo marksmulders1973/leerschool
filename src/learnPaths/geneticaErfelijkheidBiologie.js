@@ -254,7 +254,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Andersom — dat is heterozygoot.",
+          "Twee verschillende allelen voor een gen heet heterozygoot. Dat is een ander begrip.",
           "Je krijgt van elke ouder één allel. Hoeveel heb je er dan per gen?",
           "Dominant zegt welk allel 'wint'. Gaat homozygoot daarover, of over hoe de twee allelen eruitzien?",
         ],

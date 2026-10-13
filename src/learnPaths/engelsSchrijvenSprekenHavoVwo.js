@@ -299,7 +299,7 @@ const steps = [
         q: "**'My CV is ___ (attach)'** — welke vorm?",
         options: ["attached","attaching","to attach","attach"],
         answer: 0,
-        wrongHints: [null, "Niet — het CV doet zelf niets.", "'To attach' betekent 'om bij te voegen', een doel. Is het CV al bijgevoegd?", "Niet — na 'is' hoort hier een andere vorm."],
+        wrongHints: [null, "Met 'attaching' zou het CV zelf iets bijvoegen. Voegt het CV iets toe, of wordt het bijgevoegd?", "'To attach' betekent 'om bij te voegen', een doel. Is het CV al bijgevoegd?", "Niet — na 'is' hoort hier een andere vorm."],
         uitlegPad: {
           stappen: [{ titel: "Passief past participle", tekst: "**'My CV is attached'** = passief: CV wordt **bijgevoegd** (door iemand/iets). Past participle (3e vorm) = 'attached'. Volledig: 'My CV is attached to this email'. Of formeler: 'Please find my CV attached'." }],
           niveaus: { basis: "Attached.", simpeler: "Is attached", nogSimpeler: "A." },

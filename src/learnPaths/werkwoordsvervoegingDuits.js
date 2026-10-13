@@ -177,13 +177,13 @@ const steps = [
         q: "Präteritum van **'sein' (ich)** = ?",
         options: ["war", "bin", "habe", "ging"],
         answer: 0,
-        wrongHints: [null, "Bin is 'ben', de tegenwoordige tijd. Hoe zeg je 'ik was'?", "Van haben.", "Van gehen."],
+        wrongHints: [null, "Bin is 'ben', de tegenwoordige tijd. Hoe zeg je 'ik was'?", "Habe is 'ik heb' en hoort bij haben, niet bij sein.", "Ging is de verleden tijd van gehen, niet van sein."],
       },
       {
         q: "Präteritum van **'haben' (er)** = ?",
         options: ["hatte", "hat", "habe", "hattet"],
         answer: 0,
-        wrongHints: [null, "Hat is 'heeft', de tegenwoordige tijd. Welke vorm betekent 'had'?", "Voor ich.", "Voor ihr."],
+        wrongHints: [null, "Hat is 'heeft', de tegenwoordige tijd. Welke vorm betekent 'had'?", "Habe is 'ik heb': de tegenwoordige tijd, en dan nog voor ich. Welke vorm betekent 'hij had'?", "Voor ihr."],
       },
       {
         q: "Präteritum van **'gehen' (wir)** = ?",

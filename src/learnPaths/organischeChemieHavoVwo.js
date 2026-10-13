@@ -46,7 +46,7 @@ const steps = [
         q: "Wat is de **molecuulformule** van methaan?",
         options: ["CH₄","CH₃","C₂H₆","CO₂"],
         answer: 0,
-        wrongHints: [null, "Niet — tel hoeveel bindingen koolstof moet maken.", "Niet — dat is ethaan.", "Niet — dat is koolstofdioxide (geen koolstof-waterstof)."],
+        wrongHints: [null, "Niet — tel hoeveel bindingen koolstof moet maken.", "C₂H₆ heeft twee C-atomen: dat is ethaan. Hoeveel C-atomen heeft methaan?", "Niet — dat is koolstofdioxide (geen koolstof-waterstof)."],
         uitlegPad: {
           stappen: [{ titel: "1 C + 4 H = methaan", tekst: "**Methaan** = simpelste alkaan. 1 koolstof + 4 waterstof = CH₄. Structuur: tetraëdrisch (4 H rond C, hoeken 109,5°)." }],
           theorie: "Aardgas = grotendeels methaan. Geur (rotte eieren) is toegevoegd voor veiligheid — methaan zelf reukloos.",
@@ -131,7 +131,7 @@ const steps = [
         q: "Hoeveel **isomeren** heeft butaan C₄H₁₀?",
         options: ["2","1","3","4"],
         answer: 0,
-        wrongHints: [null, "Niet — denk ook aan een vertakte keten.", "Niet — 3 isomeren heeft C₅H₁₂.", "Teken de mogelijke ketens met 4 C-atomen: recht of met een tak. Hoeveel echt verschillende vormen vind je?"],
+        wrongHints: [null, "Niet — denk ook aan een vertakte keten.", "Drie isomeren heeft pentaan (C₅H₁₂). Butaan heeft één C-atoom minder.", "Teken de mogelijke ketens met 4 C-atomen: recht of met een tak. Hoeveel echt verschillende vormen vind je?"],
         uitlegPad: {
           stappen: [{ titel: "Twee isomeren C₄H₁₀", tekst: "1) **n-Butaan**: rechte keten CH₃-CH₂-CH₂-CH₃. 2) **2-Methylpropaan** (iso-butaan): vertakt. Zelfde formule, andere structuur." }],
           woorden: [{ woord: "isomeer", uitleg: "Verbinding met dezelfde molecuulformule maar verschillende structuur." }],
@@ -143,7 +143,7 @@ const steps = [
         q: "Welke alkaan zit in een **aansteker**?",
         options: ["Butaan","Methaan","Decaan","Benzeen"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is aardgas (geen vloeistof).", "Niet — diesel, niet aansteker.", "Benzeen is geen alkaan maar een ringvormige, aromatische stof. Welk gas wordt onder druk vloeibaar in een aansteker?"],
+        wrongHints: [null, "Niet — dat is aardgas (geen vloeistof).", "Decaan is een vloeistof uit diesel. In een aansteker zit een gas dat onder druk vloeibaar wordt.", "Benzeen is geen alkaan maar een ringvormige, aromatische stof. Welk gas wordt onder druk vloeibaar in een aansteker?"],
         uitlegPad: {
           stappen: [{ titel: "Butaan = vloeibaar bij druk", tekst: "**Butaan** (C₄H₁₀) is gas bij kamertemperatuur maar wordt **vloeibaar onder druk** in aansteker. Bij openen vervliegt + ontbrandt. Propaan (C₃H₈) zit in barbecue-tanks." }],
           theorie: "Toets-patroon: butaan vs propaan = vergelijkbaar maar butaan vloeibaar bij lagere druk.",
@@ -207,7 +207,7 @@ const steps = [
         q: "Een **amine** is basisch omdat:",
         options: ["Het N-atoom een H⁺ kan opnemen","Het N-atoom een H⁺ kan afstaan","Het een OH⁻-ion kan afstaan","Het O-atoom een H⁺ kan opnemen"],
         answer: 0,
-        wrongHints: [null, "Niet — dat doet juist een zuur.", "Een amine heeft geen OH-groep. Wat kan het vrije elektronenpaar van N doen?", "Een amine heeft geen O-atoom. Kijk naar de groep die een amine kenmerkt."],
+        wrongHints: [null, "Een H⁺ afstaan is wat een zuur doet. Is een amine een zuur?", "Een amine heeft geen OH-groep. Wat kan het vrije elektronenpaar van N doen?", "Een amine heeft geen O-atoom. Kijk naar de groep die een amine kenmerkt."],
         uitlegPad: {
           stappen: [{ titel: "Amine = ammoniak-derivaat", tekst: "**Amines** (-NH₂) zijn afgeleid van ammoniak (NH₃). N heeft 1 vrij elektronenpaar — kan H⁺ opnemen → basisch. pH > 7 in water." }],
           theorie: "Toets-patroon: amines kleuren rood lakmoes BLAUW (basisch), carbonzuren omgekeerd.",
@@ -227,7 +227,7 @@ const steps = [
         q: "Bij **volledige verbranding** van methaan ontstaat:",
         options: ["CO₂ + H₂O","CO + H₂O","CH₂O","C + H₂O"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is onvolledig.", "Methanal kan ontstaan bij oxidatie, maar is geen eindproduct van verbranding. Wat wordt er uiteindelijk van C en H?", "Roet ontstaat bij onvolledige verbranding. Wat gebeurt er met C als er genoeg zuurstof is?"],
+        wrongHints: [null, "CO ontstaat bij onvolledige verbranding, als er te weinig zuurstof is.", "Methanal kan ontstaan bij oxidatie, maar is geen eindproduct van verbranding. Wat wordt er uiteindelijk van C en H?", "Roet ontstaat bij onvolledige verbranding. Wat gebeurt er met C als er genoeg zuurstof is?"],
         uitlegPad: {
           stappen: [{ titel: "CH₄ + 2 O₂ → CO₂ + 2 H₂O", tekst: "Volledige verbranding methaan: **CH₄ + 2 O₂ → CO₂ + 2 H₂O**. Balanceer: 1 C, 4 H, 4 O links + rechts. Kloppen ✓." }],
           theorie: "Onvolledige verbranding (te weinig O₂): CH₄ + minder O₂ → CO (giftig) + H₂O + roet.",
@@ -312,7 +312,7 @@ const steps = [
         q: "Wat zijn **isomeren**?",
         options: ["Zelfde formule, andere structuur","Andere formule, zelfde structuur","Atomen met een ander aantal neutronen","Lange keten van gelijke eenheden"],
         answer: 0,
-        wrongHints: [null, "Met een andere molecuulformule heb je gewoon een andere stof. Wat is er bij isomeren gelijk?", "Niet — dat zijn isotopen.", "Dat is een polymeer. Waarin lijken butaan en methylpropaan op elkaar?"],
+        wrongHints: [null, "Met een andere molecuulformule heb je gewoon een andere stof. Wat is er bij isomeren gelijk?", "Atomen met een ander aantal neutronen heten isotopen. Over welke deeltjes gaat isomerie?", "Dat is een polymeer. Waarin lijken butaan en methylpropaan op elkaar?"],
         uitlegPad: {
           stappen: [{ titel: "Iso = gelijk, meros = deel", tekst: "**Isomeren** = verbindingen met dezelfde **molecuulformule** maar verschillende **structuur**. Voorbeeld: butaan (rechte keten) en 2-methylpropaan (vertakt) = beide C₄H₁₀." }],
           niveaus: { basis: "Zelfde formule.", simpeler: "Iso = zelfde formule, andere bouw", nogSimpeler: "Iso" },

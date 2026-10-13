@@ -32,7 +32,7 @@ const steps = [
         q: "Hoeveel letters had het **klassieke Latijnse alfabet**?",
         options: ["23","26","20","30"],
         answer: 0,
-        wrongHints: [null, "26 letters heeft ons alfabet. Welke letters (zoals J, U en W) kende het Latijn nog niet?", "Te weinig.", "Te veel."],
+        wrongHints: [null, "26 letters heeft ons alfabet. Welke letters (zoals J, U en W) kende het Latijn nog niet?", "Kun je met maar 20 letters alle Latijnse woorden schrijven? Vergelijk met ons alfabet.", "Ons alfabet heeft 26 letters en het Latijn kende er nog niet alle. Kan het dan 30 zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Geen J/U/W", tekst: "**Klassiek Latijn = 23 letters**: A B C D E F G H I K L M N O P Q R S T V X Y Z. **Geen J, U of W**. J = I (Iulius = Yulius), U = V (vita = wita). Moderne edities voegen J+U toe voor leesbaarheid." }],
           niveaus: { basis: "23.", simpeler: "23 letters", nogSimpeler: "23" },
@@ -91,7 +91,7 @@ const steps = [
         q: "Hoeveel **naamvallen** heeft het Latijn?",
         options: ["6","4","8","2"],
         answer: 0,
-        wrongHints: [null, "Vier naamvallen heeft het Duits. Heeft het Latijn er evenveel?", "Te veel.", "Te weinig."],
+        wrongHints: [null, "Vier naamvallen heeft het Duits. Heeft het Latijn er evenveel?", "Probeer de naamvallen uit de les op te noemen. Kom je echt op acht?", "Kun je in het Latijn met maar twee vormen per woord alles zeggen? Noem de naamvallen uit de les eens op."],
         uitlegPad: {
           stappen: [{ titel: "Nom/Gen/Dat/Acc/Abl/Voc", tekst: "**Latijn: 6 naamvallen** — Nominatief (onderwerp), Genitief (bezit), Datief (mee.vw), Accusatief (lijd.vw), Ablatief (omstandigheden), Vocatief (aanspreken). Duits heeft 4 (geen Abl + Voc). NL geen naamvallen meer in moderne taal." }],
           niveaus: { basis: "6.", simpeler: "Latijn = 6 nv", nogSimpeler: "6" },
@@ -151,7 +151,7 @@ const steps = [
         q: "**Amat** is welke vorm?",
         options: ["3e persoon enkelvoud","2e persoon enkelvoud","1e persoon meervoud","Imperatief enkelvoud"],
         answer: 0,
-        wrongHints: [null, "Dat zou amas zijn.", "Dat is amamus.", "Dat is ama!"],
+        wrongHints: [null, "Dat zou amas zijn.", "De 1e persoon meervoud is amamus. Eindigt amat op -mus?", "De imperatief enkelvoud is ama! Heeft amat die vorm?"],
         uitlegPad: {
           stappen: [{ titel: "Amat = hij/zij heeft lief", tekst: "**Amat**: persoonsuitgang **-t** = 3e persoon enkelvoud. Praesens-stam ama- + t = 'hij/zij heeft lief'. Onderdeel paradigma: amo, amas, amat, amamus, amatis, amant." }],
           niveaus: { basis: "3 ev presens.", simpeler: "amat = hij heeft lief", nogSimpeler: "3 ev presens." },
@@ -161,7 +161,7 @@ const steps = [
         q: "Welke tijd is **amabat**?",
         options: ["Imperfectum","Praesens","Futurum","Perfectum"],
         answer: 0,
-        wrongHints: [null, "Praesens = amat.", "Futurum = amabit.", "Perf = amavit."],
+        wrongHints: [null, "Het praesens is amat. Wat betekent het tussenstukje -ba- in amabat?", "Het futurum is amabit, met -bi-. Amabat heeft -ba-.", "Het perfectum is amavit, met een -v-. Zie je die in amabat?"],
         uitlegPad: {
           stappen: [{ titel: "-ba-marker", tekst: "**Imperfectum**: stam + **-bā-** + uitgang. amat → ama-ba-t = **amabat** = hij was aan het liefhebben / hij had lief (continue actie in verleden). Verschilt van perfectum (amavit = hij heeft liefgehad, voltooid).\n\n**-bi-** voor futurum: amabit = hij zal liefhebben." }],
           niveaus: { basis: "Imperfectum.", simpeler: "amaBAt = imperf", nogSimpeler: "Imperf" },
@@ -220,7 +220,7 @@ const steps = [
         q: "Wanneer werd **Rome gesticht** volgens de legende?",
         options: ["753 v.Chr.","27 v.Chr.","476 n.Chr.","1492"],
         answer: 0,
-        wrongHints: [null, "In 27 v.Chr. begon de keizertijd. Bestond Rome toen al lang?", "Einde West-Rome.", "1492 is het jaar van Columbus — veel te laat voor Rome."],
+        wrongHints: [null, "In 27 v.Chr. begon de keizertijd. Bestond Rome toen al lang?", "In 476 n.Chr. viel het West-Romeinse Rijk. Rome bestond toen dus al eeuwen.", "1492 is het jaar van Columbus — veel te laat voor Rome."],
         uitlegPad: {
           stappen: [{ titel: "Romulus + Remus", tekst: "**753 v.Chr.**: legendarische stichting Rome door Romulus (broer Remus, die hij doodde). Tweelingen werden volgens mythe gevoed door wolvin. Historisch: bewoning Tiber-heuvels al eerder, maar 753 = officiële Romeinse jaartelling (Ab Urbe Condita)." }],
           niveaus: { basis: "753 v.Chr.", simpeler: "753 = stichting", nogSimpeler: "753" },

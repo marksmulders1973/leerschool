@@ -253,7 +253,7 @@ const steps = [
         q: "Wie kiezen de leden van de **Eerste Kamer**?",
         options: ["Provinciale Staten","Burgers direct","Koning","Tweede Kamer"],
         answer: 0,
-        wrongHints: [null, "Niet — directe verkiezing alleen voor Tweede Kamer.", "Niet — sinds 1848 niet meer.", "Niet — Kamers kiezen elkaar niet."],
+        wrongHints: [null, "Niet — directe verkiezing alleen voor Tweede Kamer.", "Sinds 1848 benoemt de koning geen Kamerleden meer.", "De Tweede Kamer kiest de Eerste Kamer niet. Wie kiest de Eerste Kamer dan wel?"],
         uitlegPad: {
           stappen: [{ titel: "Indirect via provincies", tekst: "Burgers stemmen op **provinciale staten** (provinciale verkiezingen). Provinciale staten kiezen vervolgens de **Eerste Kamer** (75 leden). Dus indirect kiesrecht voor de Eerste Kamer — zoals sinds 1848 geregeld." }],
           woorden: [{ woord: "indirect kiesrecht", uitleg: "Burger kiest een tussenpersoon die op zijn beurt de uiteindelijke vertegenwoordiger kiest." }],
@@ -307,7 +307,7 @@ const steps = [
         q: "Welk **politiek systeem** heeft Nederland sinds 1848?",
         options: ["Constitutionele monarchie", "Absolute monarchie", "Republiek met een president", "Verlicht despotisme"],
         answer: 0,
-        wrongHints: [null, "Niet: die was vóór 1848.", "Niet: Nederland heeft nog een koning.", "Dan regeert een vorst alleen, maar 'verlicht'. Na 1848 mocht de koning juist niet meer alleen beslissen."],
+        wrongHints: [null, "Vóór 1848 had de koning bijna alle macht. Wat veranderde de grondwet van 1848 daaraan?", "Niet: Nederland heeft nog een koning.", "Dan regeert een vorst alleen, maar 'verlicht'. Na 1848 mocht de koning juist niet meer alleen beslissen."],
         uitlegPad: {
           stappen: [{ titel: "Twee labels samen", tekst: "**Constitutionele monarchie** = koning gebonden aan grondwet. **Parlementaire democratie** = parlement = baas, ministers verantwoordelijk aan parlement. NL is beide tegelijk sinds 1848." }],
           niveaus: { basis: "Constitutionele monarchie + parlementaire democratie.", simpeler: "Koning + grondwet + parlement", nogSimpeler: "Constitutionele monarchie" },
@@ -348,7 +348,7 @@ const steps = [
         q: "Welke 4 partijen vormden in 2024 samen het **kabinet Schoof**?",
         options: ["PVV + VVD + NSC + BBB","PvdA + GL + D66 + CDA","SP + ChristenUnie + SGP + DENK","FvD + JA21 + BVNL + 50Plus"],
         answer: 0,
-        wrongHints: [null, "Oppositie-partijen 2024, geen coalitie.", "Kleinere/oppositie-partijen 2024.", "Rechts-conservatieve oppositie, geen coalitie."],
+        wrongHints: [null, "Oppositie-partijen 2024, geen coalitie.", "SP, ChristenUnie, SGP en DENK zaten in 2024 in de oppositie, niet in het kabinet.", "Rechts-conservatieve oppositie, geen coalitie."],
         uitlegPad: {
           stappen: [{ titel: "Coalitie 2024", tekst: "Na Tweede Kamer-verkiezingen 22 november 2023 (PVV grootste): formatie leidde tot **PVV + VVD + NSC + BBB**. Premier: Dick Schoof (technocraat, niet partij-gebonden). Beëdigd 2 juli 2024." }],
           theorie: "Onthoud-truc: 'P-V-N-B' (PVV-VVD-NSC-BBB).",

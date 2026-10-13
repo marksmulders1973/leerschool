@@ -34,7 +34,7 @@ const steps = [
         q: "Hoe lang duurt het **VWO Engels CSE**?",
         options: ["150 minuten","90 minuten","180 minuten","120 minuten"],
         answer: 0,
-        wrongHints: [null, "Veel te kort.", "Te lang.", "Niet — dat is de duur van het VMBO-examen."],
+        wrongHints: [null, "90 minuten is veel te kort voor een volledig examen met leesteksten.", "Drie uur is langer dan het examen Engels duurt.", "Niet — dat is de duur van het VMBO-examen."],
         uitlegPad: {
           stappen: [{ titel: "150 minuten", tekst: "Zowel HAVO als VWO: **150 min** (2,5 uur). ~40-45 vragen over ~10-14 teksten." }],
           theorie: "Examenblad.nl-info: officiële regelgeving per jaar. Check altijd actuele duur per examenjaar.",

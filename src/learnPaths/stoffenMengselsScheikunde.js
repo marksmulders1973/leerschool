@@ -89,7 +89,7 @@ const steps = [
         q: "Verschil **element** en **verbinding**?",
         options: ["Element kun je niet ontleden, verbinding wel", "Element is een mengsel, verbinding niet", "Element is vloeibaar, verbinding vast", "Element is groter dan een verbinding"],
         answer: 0,
-        wrongHints: [null, "Niet — beide zijn pure stoffen.", "Niet — het gaat niet om vast of vloeibaar.", "Een goudklompje kan groot of klein zijn. Zegt grootte iets over wat voor stof het is?"],
+        wrongHints: [null, "Elementen en verbindingen zijn allebei zuivere stoffen. Een mengsel bestaat uit meerdere stoffen.", "Niet — het gaat niet om vast of vloeibaar.", "Een goudklompje kan groot of klein zijn. Zegt grootte iets over wat voor stof het is?"],
       },
     ],
   },

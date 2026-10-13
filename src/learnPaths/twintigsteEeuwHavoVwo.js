@@ -55,7 +55,7 @@ const steps = [
         q: "Wie was **Stalins voorganger** in de Sovjet-Unie?",
         options: ["Lenin","Trotski","Tsaar Nicolaas","Chroesjtsjov"],
         answer: 0,
-        wrongHints: [null, "Niet — Stalins rivaal.", "Tsaar afgezet 1917.", "Veel later."],
+        wrongHints: [null, "Trotski was Stalins rivaal, niet de leider vóór hem.", "Tsaar Nicolaas werd in 1917 afgezet. Was hij ooit leider van de Sovjet-Unie?", "Chroesjtsjov kwam pas na Stalins dood (1953) aan de macht."],
         uitlegPad: {
           stappen: [{ titel: "Lenin 1917-24", tekst: "**Lenin** (Vladimir Iljitsj) leidde bolsjewieken 1917-coup + Sovjet-Unie 1922. Sterft 1924. Machtsstrijd met **Trotski**. **Stalin** wint (1928), Trotski verbannen + later vermoord (Mexico 1940)." }],
           niveaus: { basis: "Lenin.", simpeler: "Vóór Stalin = Lenin", nogSimpeler: "Lenin" },
@@ -65,7 +65,7 @@ const steps = [
         q: "Hitler werd **rijkskanselier** op:",
         options: ["30 januari 1933","9 november 1923","1 september 1939","8 mei 1945"],
         answer: 0,
-        wrongHints: [null, "Niet — Mislukte München-putsch.", "Niet — inval Polen (WO2-start).", "Niet — einde WO2."],
+        wrongHints: [null, "Op 9 november 1923 mislukte Hitlers putsch in München; hij belandde toen juist in de gevangenis.", "Op 1 september 1939 viel Duitsland Polen binnen. Was Hitler toen al aan de macht?", "Op 8 mei 1945 eindigde de oorlog in Europa; Hitler was toen al dood."],
         uitlegPad: {
           stappen: [{ titel: "Machtsovername", tekst: "**30 januari 1933**: president **Hindenburg** benoemt Hitler tot **rijkskanselier**. Binnen weken: Rijksdagbrand (feb) → Noodverordening → eind democratie → Dachau-kamp (maart). Snelle Gleichschaltung." }],
           niveaus: { basis: "30 jan 1933.", simpeler: "1933 Hitler", nogSimpeler: "1933" },
@@ -175,7 +175,7 @@ const steps = [
         q: "**Cuba-crisis** vond plaats in:",
         options: ["1962","1957","1989","1979"],
         answer: 0,
-        wrongHints: [null, "Niet — Spoetnik.", "In 1989 liep de Koude Oorlog al ten einde.", "Niet — Afghanistan."],
+        wrongHints: [null, "In 1957 lanceerde de Sovjet-Unie de Spoetnik. Dat was een ander moment uit de Koude Oorlog.", "In 1989 liep de Koude Oorlog al ten einde.", "In 1979 viel de Sovjet-Unie Afghanistan binnen. Ging de Cuba-crisis over Afghanistan?"],
         uitlegPad: {
           stappen: [{ titel: "13 dagen oktober 1962", tekst: "**Oktober 1962, Cuba-crisis**: USSR plaatst kernraketten Cuba (90 mijl van VS-kust). Kennedy zee-blokkade. **Dichtst dat wereld ooit bij kernoorlog kwam**. Chroesjtsjov trekt terug, VS belooft geen invasie + verwijdert geheim raketten Turkije." }],
           niveaus: { basis: "1962.", simpeler: "Cuba = 1962", nogSimpeler: "1962" },
@@ -234,7 +234,7 @@ const steps = [
         q: "Wat is **Glasnost** (Gorbatsjov)?",
         options: ["Openheid", "Herstructurering", "Ontspanning", "Wapenbeheersing"],
         answer: 0,
-        wrongHints: [null, "Niet: dat is perestrojka.", "Ontspanning tussen Oost en West heet détente, uit de jaren '70.", "Afspraken over minder kernwapens heten wapenbeheersing. Glasnost ging over het binnenland."],
+        wrongHints: [null, "Herstructurering heet perestrojka, de andere hervorming van Gorbatsjov.", "Ontspanning tussen Oost en West heet détente, uit de jaren '70.", "Afspraken over minder kernwapens heten wapenbeheersing. Glasnost ging over het binnenland."],
         uitlegPad: {
           stappen: [{ titel: "Russisch 'openheid'", tekst: "**Glasnost** (гла́сность) = openheid in Russisch. Gorbatsjovs beleid 1985+: meer persvrijheid, dissidenten vrij, kritiek toegestaan, geschiedenis-her-onderzoek (Stalin-misdaden). Bedoeld om systeem te herstellen, eindigde in afbraak. Naast **perestrojka** (перестро́йка) = herstructurering (economisch)." }],
           niveaus: { basis: "Openheid.", simpeler: "Glasnost = openheid", nogSimpeler: "Openheid" },

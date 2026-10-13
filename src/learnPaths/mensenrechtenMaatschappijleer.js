@@ -270,7 +270,7 @@ const steps = [
         q: "In welk jaar werd **VN opgericht**?",
         options: ["1945", "1989", "1919", "1948"],
         answer: 0,
-        wrongHints: [null, "Te laat — val Berlijnse Muur.", "In 1919 kwam de Volkenbond, de voorganger. Wanneer kwam de VN?", "1948 is het jaar van de UVRM. Werd de VN in hetzelfde jaar opgericht?"],
+        wrongHints: [null, "Te laat: in 1989 viel de Berlijnse Muur, aan het einde van de Koude Oorlog. De VN bestond toen al lang.", "In 1919 kwam de Volkenbond, de voorganger. Wanneer kwam de VN?", "1948 is het jaar van de UVRM. Werd de VN in hetzelfde jaar opgericht?"],
       },
       {
         q: "Welke 5 landen hebben **veto-recht** in VN-Veiligheidsraad?",

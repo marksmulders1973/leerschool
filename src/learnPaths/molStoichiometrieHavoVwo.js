@@ -25,7 +25,7 @@ const steps = [
         q: "Molaire massa van **CO₂**? (C: 12, O: 16)",
         options: ["44 g/mol", "28 g/mol", "32 g/mol", "60 g/mol"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet de twee O's niet.", "Niet — dat is O₂.", "Niet — tel het aantal O-atomen nog eens."],
+        wrongHints: [null, "12 + 16 = 28 telt maar één O. Hoeveel O-atomen zitten er in CO₂?", "32 g/mol is alleen O₂. Waar is het C-atoom gebleven?", "Niet — tel het aantal O-atomen nog eens."],
         uitlegPad: {
           stappen: [{ titel: "Som atoommassa's", tekst: "M(CO₂) = M(C) + 2·M(O) = 12 + 2·16 = **44 g/mol**." }],
           niveaus: { basis: "12+32=44 g/mol.", simpeler: "C + 2 O = 12+32 = 44.", nogSimpeler: "44" },
@@ -56,7 +56,7 @@ const steps = [
         q: "Hoeveel **moleculen** in 0,50 mol glucose?",
         options: ["3,01·10²³", "6,02·10²³", "1,5·10²⁴", "0,5"],
         answer: 0,
-        wrongHints: [null, "Dat is het aantal deeltjes in 1 mol. Heb je hier meer of minder dan 1 mol?", "Je hebt minder dan 1 mol. Kan het aantal moleculen dan groter zijn dan in 1 mol?", "Niet — dat is mol, geen deeltjes."],
+        wrongHints: [null, "Dat is het aantal deeltjes in 1 mol. Heb je hier meer of minder dan 1 mol?", "Je hebt minder dan 1 mol. Kan het aantal moleculen dan groter zijn dan in 1 mol?", "0,5 is de hoeveelheid in mol. De vraag is hoeveel losse moleculen dat zijn."],
         uitlegPad: {
           stappen: [{ titel: "N = n · N_A", tekst: "N = 0,50 · 6,022·10²³ = **3,01·10²³** moleculen. Avogadro-getal is constant — onafhankelijk van stof." }],
           niveaus: { basis: "0,5·6·10²³ = 3·10²³.", simpeler: "Half van Avogadro = 3·10²³.", nogSimpeler: "3·10²³" },
@@ -170,7 +170,7 @@ const steps = [
         q: "Hoeveel **g CaCO₃** nodig om door zoutzuur **44 g CO₂** te maken? (CaCO₃ + 2 HCl → CaCl₂ + CO₂ + H₂O, M_CaCO₃=100, M_CO₂=44)",
         options: ["100 g", "200 g", "44 g", "50 g"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer de molverhouding CaCO₃ : CO₂.", "Niet — dat is massa CO₂.", "Halveerde je ergens? Kijk nog eens naar de verhouding CaCO₃ : CO₂ in de vergelijking."],
+        wrongHints: [null, "Niet — controleer de molverhouding CaCO₃ : CO₂.", "44 g is de massa CO₂ die ontstaat. De vraag gaat over de massa CaCO₃.", "Halveerde je ergens? Kijk nog eens naar de verhouding CaCO₃ : CO₂ in de vergelijking."],
         uitlegPad: {
           stappen: [
             { titel: "1:1 CaCO₃:CO₂", tekst: "n(CO₂) = 44/44 = 1 mol. Verhouding 1:1 → 1 mol CaCO₃ → m = 1·100 = **100 g**." },
@@ -356,7 +356,7 @@ const steps = [
         q: "Concentratie-eenheid M (molair) is gelijk aan:",
         options: ["mol/L", "g/L", "mol/kg", "deeltjes/L"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is massaconcentratie.", "Niet — dat is molaliteit.", "Een mol is een vast pakket van 6,02·10²³ deeltjes. Telt M losse deeltjes of mol?"],
+        wrongHints: [null, "g/L is een massaconcentratie. Bij molair reken je niet in gram.", "mol/kg heet molaliteit en rekent per kilo oplosmiddel. Is dat wat M betekent?", "Een mol is een vast pakket van 6,02·10²³ deeltjes. Telt M losse deeltjes of mol?"],
         uitlegPad: {
           stappen: [{ titel: "M = molair = mol/L", tekst: "Bv. 1 M HCl = 1 mol opgelost in 1 L oplossing. Veel gebruikt in lab + medische context." }],
           niveaus: { basis: "M = mol/L.", simpeler: "Molair = mol per liter.", nogSimpeler: "mol/L" },

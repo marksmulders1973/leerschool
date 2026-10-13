@@ -91,7 +91,7 @@ const steps = [
         q: "Een **populatie** is?",
         options: ["Alle organismen van 1 soort in 1 gebied", "Alle organismen van 1 soort op de hele aarde", "Alle dieren van alle soorten in 1 gebied", "Eén organisme van 1 soort in 1 gebied"],
         answer: 0,
-        wrongHints: [null, "Een populatie hoort bij één gebied — niet bij de hele aarde.", "Te ruim — dat zijn meerdere soorten.", "Te specifiek — één organisme is een individu."],
+        wrongHints: [null, "Een populatie hoort bij één gebied — niet bij de hele aarde.", "Een populatie bestaat uit één soort. Alle soorten in een gebied samen heten een levensgemeenschap.", "Te specifiek — één organisme is een individu."],
       },
       {
         q: "Een **levensgemeenschap** is?",

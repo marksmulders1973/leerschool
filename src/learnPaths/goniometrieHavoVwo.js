@@ -86,7 +86,7 @@ const steps = [
         q: "Wat is **45°** in radialen?",
         options: ["π/4", "π/2", "π/6", "π"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is 90°.", "Niet — dat is 30°.", "Niet — dat is 180°."],
+        wrongHints: [null, "π/2 rad hoort bij 90°, niet bij 45°.", "π/6 rad hoort bij 30°, niet bij 45°.", "π rad is een halve cirkel: 180°. Dat is veel meer dan 45°."],
         uitlegPad: {
           stappen: [{ titel: "Formule rad = ° · π/180", tekst: "45 · π/180 = **π/4** rad ≈ 0,785 rad. Octant van volle cirkel." }],
           niveaus: { basis: "π/4.", simpeler: "45° = π/4 rad.", nogSimpeler: "π/4" },
@@ -96,7 +96,7 @@ const steps = [
         q: "In welk **kwadrant** ligt hoek 120°?",
         options: ["Q2 (sin+, cos−)", "Q1 (alles+)", "Q3 (tan+)", "Q4 (cos+)"],
         answer: 0,
-        wrongHints: [null, "Niet — Q1 is 0-90°.", "Niet — Q3 is 180-270°.", "Niet — Q4 is 270-360°."],
+        wrongHints: [null, "Kwadrant 1 loopt van 0° tot 90°. Ligt 120° daarbinnen?", "Kwadrant 3 loopt van 180° tot 270°. Ligt 120° daarbinnen?", "Kwadrant 4 loopt van 270° tot 360°. Ligt 120° daarbinnen?"],
         uitlegPad: {
           stappen: [{ titel: "Tussen 90° en 180° = Q2", tekst: "120° ligt in Q2. Daar: sin positief (y>0), cos negatief (x<0). Specifiek: sin 120° = √3/2, cos 120° = −0,5." }],
           niveaus: { basis: "Q2.", simpeler: "120° = tussen 90° en 180° = Q2.", nogSimpeler: "Q2" },
@@ -126,7 +126,7 @@ const steps = [
         q: "Hoek **3π/2 rad** = ?",
         options: ["270°", "180°", "360°", "90°"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is π.", "Niet — dat is 2π.", "Niet — dat is π/2."],
+        wrongHints: [null, "180° hoort bij π rad. Is 3π/2 hetzelfde als π?", "360° is een hele cirkel, dat is 2π rad. Is 3π/2 een hele cirkel?", "90° is π/2 rad. Reken 3π/2 om door te vermenigvuldigen met 180°/π."],
         uitlegPad: {
           stappen: [{ titel: "rad · 180/π = °", tekst: "3π/2 · 180/π = 3·180/2 = **270°**. Driekwart-rondje, onderkant cirkel. sin 270° = −1, cos 270° = 0." }],
           niveaus: { basis: "270°.", simpeler: "3/4 van 360° = 270°.", nogSimpeler: "270" },
@@ -212,7 +212,7 @@ const steps = [
         q: "**Periode** van y = sin x is:",
         options: ["2π", "π", "π/2", "4π"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is tan-periode.", "π/2 is een kwart golf. Na hoeveel radialen herhaalt sin x zich helemaal?", "Na 4π heb je twee hele golven gehad. Wanneer begint de eerste herhaling al?"],
+        wrongHints: [null, "π is de periode van tan x. Herhaalt sin x zich ook al na een halve golf?", "π/2 is een kwart golf. Na hoeveel radialen herhaalt sin x zich helemaal?", "Na 4π heb je twee hele golven gehad. Wanneer begint de eerste herhaling al?"],
         uitlegPad: {
           stappen: [{ titel: "360° herhaalt", tekst: "sin x = sin(x + 2π) voor alle x. Volledig patroon herhaalt na 2π radialen = 360°." }],
           niveaus: { basis: "2π.", simpeler: "Sin herhaalt elke 360° = 2π.", nogSimpeler: "2π" },
@@ -222,7 +222,7 @@ const steps = [
         q: "**Maximum** van y = 3 sin x?",
         options: ["3", "1", "0", "−3"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is voor sin x.", "Niet — dat is nulpunt.", "Niet — dat is minimum."],
+        wrongHints: [null, "1 is het maximum van sin x zelf. Wat doet de factor 3 ervoor met de grafiek?", "Bij 0 snijdt de grafiek de x-as. Is dat het hoogste punt?", "−3 is het laagste punt van de grafiek. Wat is het hoogste?"],
         uitlegPad: {
           stappen: [{ titel: "Amplitude × max sin", tekst: "Max sin x = 1, dus max van 3 sin x = 3·1 = **3**. Schommelt tussen −3 en +3." }],
           niveaus: { basis: "3.", simpeler: "Amplitude 3 = max 3.", nogSimpeler: "3" },
@@ -256,7 +256,7 @@ const steps = [
         q: "Welke functie heeft **periode π**?",
         options: ["y = sin(2x)", "y = sin x", "y = cos x", "y = sin(x/2)"],
         answer: 0,
-        wrongHints: [null, "Niet — periode 2π.", "Niet — periode 2π.", "Niet — periode 4π."],
+        wrongHints: [null, "sin x herhaalt zich pas na 2π. Welk getal bij x verandert de periode?", "cos x heeft net als sin x periode 2π, niet π.", "Door x/2 wordt de grafiek juist uitgerekt: de periode wordt 4π."],
         uitlegPad: {
           stappen: [{ titel: "Periode = 2π/b", tekst: "Voor sin(bx): periode = 2π/b. Bij b=2: periode = 2π/2 = **π**. Twee keer zo veel oscillaties per 2π." }],
           niveaus: { basis: "sin(2x) → π.", simpeler: "b=2 verdubbelt frequentie → halve periode.", nogSimpeler: "sin(2x)" },
@@ -297,7 +297,7 @@ const steps = [
         q: "**Afgeleide** van y = sin x?",
         options: ["cos x", "−cos x", "sin x", "−sin x"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is voor −sin.", "Niet — dat is de functie zelf.", "Niet — dat is afgeleide van cos."],
+        wrongHints: [null, "−cos x is de afgeleide van −sin x. Wat krijg je bij sin x zelf?", "sin x is de functie zelf. Bij differentiëren verandert er iets.", "−sin x is de afgeleide van cos x, niet van sin x."],
         uitlegPad: {
           stappen: [{ titel: "Basisformule", tekst: "d/dx (sin x) = **cos x**. Bewijs via verschilformule + limiet. Werkt alleen wanneer x in radialen!" }],
           theorie: "Volgorde sin → cos → −sin → −cos → sin (terug). Elke afleiding draait de cirkel met π/2.",
@@ -308,7 +308,7 @@ const steps = [
         q: "Een trilling: u(t) = 5 sin(2π · 3 · t). Frequentie?",
         options: ["3 Hz", "6 Hz", "2π Hz", "5 Hz"],
         answer: 0,
-        wrongHints: [null, "6 = 2 · 3. Welk getal staat in de vorm sin(2π · f · t) op de plek van f?", "2π hoort bij elke trilling in deze vorm. Welk getal staat er nog tussen 2π en t?", "Niet — dat is amplitude."],
+        wrongHints: [null, "6 = 2 · 3. Welk getal staat in de vorm sin(2π · f · t) op de plek van f?", "2π hoort bij elke trilling in deze vorm. Welk getal staat er nog tussen 2π en t?", "5 is de amplitude: de grootste uitwijking. De frequentie staat binnen de sinus."],
         uitlegPad: {
           stappen: [
             { titel: "u(t) = A sin(2π f t)", tekst: "Standaardvorm voor trilling: u(t) = A·sin(2π·f·t). Vergelijk: A = 5, **f = 3 Hz**, T = 1/3 s." },
