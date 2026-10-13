@@ -608,8 +608,8 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "25 cm², 24 cm², 20 cm² en 24 cm². 5 × 5 is het grootst.",
-            simpeler: "Reken uit: 5 × 5, 8 × 3, 10 × 2 en 12 × 2. Welke is het meest?",
+            basis: "25 cm², 24 cm², 20 cm² en 22 cm². 5 × 5 is het grootst.",
+            simpeler: "Reken uit: 5 × 5, 8 × 3, 10 × 2 en 11 × 2. Welke is het meest?",
             nogSimpeler: "Hoeveel is 5 keer 5? Is dat meer dan 8 keer 3?",
           },
         },
