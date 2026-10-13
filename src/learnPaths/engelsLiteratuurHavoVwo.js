@@ -133,11 +133,11 @@ const steps = [
         options: [
           "5 jamben per regel",
           "6 jamben per regel",
-          "Rijmend AABB",
+          "5 regels met jamben",
           "5 trocheeën per regel"
         ],
         answer: 0,
-        wrongHints: [null, "Penta- betekent vijf, zoals in pentagon. Hoeveel versvoeten staan er dan in een regel?", "Rijm staat los van het metrum. Gaat 'pentameter' over rijm of over ritme?", "Een trochee is beklemtoond-onbeklemtoond (DA-da), een jambe andersom. Welke voet zit in 'iambic'?"],
+        wrongHints: [null, "Een regel met zes jamben heet een alexandrijn. Wat betekent het voorvoegsel penta-, zoals in pentagon?", "Een metrum beschrijft het ritme binnen één regel. Telt 'pentameter' regels, of versvoeten?", "Een trochee is beklemtoond-onbeklemtoond (DA-da), een jambe andersom. Welke voet zit in 'iambic'?"],
         uitlegPad: {
           stappen: [
             { titel: "Standaard Engelse poëzie", tekst: "Pent = 5, jambe = ta-DAH. Voorbeeld: 'shall-I · com-PARE · thee-TO · a-SUM · mer's-DAY' (5 maal ta-DAH; klemtoon op I, PARE, TO, SUM, DAY). Natuurlijk Engels accentpatroon → klinkt vloeiend. Shakespeare's dialogen meestal in blank verse (iambic pentameter zonder rijm)." },
@@ -347,12 +347,12 @@ const steps = [
         q: "**Symbolism** in literatuur betekent:",
         options: [
           "Een object staat voor een groter idee",
-          "Alles betekent precies wat er staat",
-          "Uitgebreide beschrijving zonder doel",
+          "Een ding krijgt menselijke eigenschappen",
+          "Twee dingen vergelijken met 'like' of 'as'",
           "Woorden die met dezelfde klank beginnen"
         ],
         answer: 0,
-        wrongHints: [null, "Dat is de letterlijke betekenis. Zoekt symboliek iets achter de woorden?", "Een symbool heeft juist een bedoeling. Wat kan een duif of een roos 'betekenen'?", "Dat heet alliteratie en gaat over klank. Waar gaat symboliek over?"],
+        wrongHints: [null, "Dat heet personificatie ('the wind whispered'). Wat kan een duif of een roos 'betekenen'?", "Dat is een vergelijking (simile): het verband staat er letterlijk bij. Hoe werkt een symbool?", "Dat heet alliteratie en gaat over klank. Waar gaat symboliek over?"],
         uitlegPad: {
           stappen: [
             { titel: "Verhaal binnen verhaal", tekst: "Voorbeeld: in 'Great Gatsby' is 'green light' aan overkant van baai → symbool voor Gatsby's hoop + onbereikbare droom. Veel groter dan letterlijk lichtje. Auteur gebruikt vaak terugkerende objecten/kleuren als anker." },
@@ -363,13 +363,13 @@ const steps = [
       {
         q: "**Stream of consciousness** is een techniek van:",
         options: [
-          "Gedachten opschrijven zoals ze opkomen",
-          "Gebeurtenissen netjes op volgorde vertellen",
-          "Alleen korte, simpele zinnen gebruiken",
-          "Het verhaal vertellen via alleen dialogen"
+          "Gedachten weergeven zoals ze opkomen",
+          "Een verteller die in ieders hoofd kijkt",
+          "Een personage dat de lezer direct aanspreekt",
+          "Gebeurtenissen vloeiend op volgorde vertellen"
         ],
         answer: 0,
-        wrongHints: [null, "Volgen de gedachten in je hoofd altijd een nette tijdlijn?", "Denk aan 'stream' (stroom). Zijn gedachten altijd kort en simpel?", "Bij dialogen hoor je wat mensen zeggen. Waar gaat 'consciousness' (bewustzijn) over?"],
+        wrongHints: [null, "Dat is een alwetende verteller: die kent alle gedachten, maar vertelt ze geordend. Is dat de techniek die hier bedoeld is?", "Een personage dat de lezer aanspreekt, doorbreekt de 'vierde wand'. Gaat consciousness (bewustzijn) daarover?", "'Stream' klinkt als vloeiend, maar volgen gedachten in je hoofd een nette tijdlijn?"],
         uitlegPad: {
           stappen: [
             { titel: "Joyce + Woolf + Faulkner", tekst: "Pogen INTERN bewustzijn van personage weer te geven: associatieve sprongen, herinneringen, halverwege zinnen onderbroken, geen interpunctie soms. Voorbeeld Molly Bloom's monoloog (Ulysses): 40 pagina's met bijna geen leestekens." },
@@ -382,11 +382,11 @@ const steps = [
         options: [
           "Vooraf hints geven over wat er later gebeurt",
           "Terugblikken op wat er eerder gebeurde",
-          "Een onverwachte wending aan het eind",
-          "Een personage voor het eerst voorstellen"
+          "De afloop vooraf al letterlijk verklappen",
+          "Een inleiding (proloog) vóór het verhaal"
         ],
         answer: 0,
-        wrongHints: [null, "Dat heet een flashback. Wat betekent 'fore' in foreshadowing?", "Een twist verrast de lezer juist. Waar draait foreshadowing om?", "Dat is een introductie. Denk aan 'shadow': wat werpt een schaduw vooruit?"],
+        wrongHints: [null, "Dat heet een flashback. Wat betekent 'fore' in foreshadowing?", "Dan is de afloop geen geheim meer: dat is een flash-forward. Werkt foreshadowing zo openlijk?", "Een proloog is een los stuk tekst vooraf. Gaat foreshadowing over zo'n apart stuk, of over iets ín het verhaal?"],
         uitlegPad: {
           stappen: [{ titel: "Vooruitwijzen", tekst: "Auteur plaatst kleine signalen — woord, gebeurtenis, beschrijving — die later betekenis krijgen. Bv. een geweer wordt vroeg getoond in scène (Chekhov's gun): moet later afgaan. Beloont aandachtige lezers." }],
           niveaus: { basis: "Hints geven.", simpeler: "Vooruit-signaal.", nogSimpeler: "Voorspel" },
@@ -395,16 +395,16 @@ const steps = [
       {
         q: "Welk **citaat** is uit Hamlet?",
         options: [
-          "'To be or not to be, that is the question.'",
-          "'Call me Ishmael.'",
-          "'It was the best of times, it was the worst of times.'",
-          "'In the beginning was the Word.'"
+          "'Something is rotten in the state of Denmark.'",
+          "'Is this a dagger which I see before me?'",
+          "'O Romeo, Romeo, wherefore art thou Romeo?'",
+          "'We are such stuff as dreams are made on.'"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — Moby Dick.", "Niet — A Tale of Two Cities.", "Niet — Bijbel."],
+        wrongHints: [null, "Iemand ziet een dolk voor zich, vlak voor een moord. Bij welk stuk over een Schotse edelman past dat?", "Hier roept iemand naar Romeo. In welk stuk speelt die verboden liefde?", "Dromen en magie: welk stuk speelt op een magisch eiland met Prospero?"],
         uitlegPad: {
-          stappen: [{ titel: "Beroemdste openingsregel monoloog", tekst: "Hamlet, Act 3, Scene 1. Filosofische overpeinzing over leven, dood, betekenis. Wordt vaak geparodieerd, gebruikt in films + reclame. Onmiddellijk herkenbaar — toets je geletterdheid via dit citaat." }],
-          niveaus: { basis: "Hamlet.", simpeler: "To be or not to be = Hamlet.", nogSimpeler: "Hamlet" },
+          stappen: [{ titel: "Let op het land", tekst: "Hamlet, Act 1, Scene 4: de wachter Marcellus zegt dit nadat de geest van Hamlets vader is verschenen. 'Denmark' is de sleutel: Hamlet is de Deense prins. Bekendste andere Hamlet-regel: 'To be or not to be' (Act 3, Scene 1). De andere citaten komen uit Macbeth, Romeo and Juliet en The Tempest." }],
+          niveaus: { basis: "Hamlet.", simpeler: "Denmark = Hamlet, de Deense prins.", nogSimpeler: "Hamlet" },
         },
       },
     ],

@@ -154,9 +154,9 @@ const steps = [
     checks: [
       {
         q: "*Sans doute* betekent:",
-        options: ["Waarschijnlijk", "Zonder enige twijfel", "Misschien", "Twijfelend"],
+        options: ["Waarschijnlijk", "Zeker niet", "Misschien", "Twijfelend"],
         answer: 0,
-        wrongHints: [null, "Letterlijk staat er 'zonder twijfel', maar Fransen bedoelen het zwakker. Voor 'absoluut zeker' zeg je sans aucun doute.", "Misschien is peut-être. Is sans doute zwakker of sterker dan dat?", "Twijfelend is een bijvoeglijk naamwoord (hésitant). Sans doute zegt hoe zeker iets is."],
+        wrongHints: [null, "Sans betekent 'zonder', niet 'niet'. Drukt sans doute een ontkenning uit, of juist een vrij grote kans?", "Misschien is peut-être. Is sans doute zwakker of sterker dan dat?", "Twijfelend is een bijvoeglijk naamwoord (hésitant). Sans doute zegt hoe zeker iets is."],
         uitlegPad: {
           stappen: [{ titel: "Faux ami val", tekst: "**Sans doute** = waarschijnlijk (~80% kans). Klinkt als 'zonder twijfel' maar betekent juist **niet** absoluut zeker. Voor 'zeker' gebruik je *sans aucun doute*. Toets-favoriete val." }],
           niveaus: { basis: "Waarschijnlijk.", simpeler: "Sans doute = wschnl.", nogSimpeler: "Wschnl" },

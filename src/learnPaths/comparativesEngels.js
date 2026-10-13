@@ -64,7 +64,7 @@ const steps = [
     checks: [
       {
         q: "Welke trap voor **vergelijking van 2 dingen**?",
-        options: ["Comparative (-er + than)", "Superlative (the -est)", "Stellend (gewoon)", "Stellend + very (heel)"],
+        options: ["-er + than (bigger than)", "the + -est (the biggest)", "stellende trap (big)", "very + grondvorm (very big)"],
         answer: 0,
         wrongHints: [null, "Met the + -est kies je er één uit een hele groep. Hoeveel dingen staan hier tegenover elkaar?", "De grondvorm beschrijft één ding zonder vergelijking. Vergelijk je hier wel iets?", "Very maakt een woord sterker: very big is 'heel groot'. Vergelijk je daarmee twee dingen?"],
       },

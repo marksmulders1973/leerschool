@@ -239,9 +239,9 @@ const steps = [
       },
       {
         q: "\"Heb jij de film gezien?\" (informeel)",
-        options: ["Tu as vu le film?", "Tu vu le film?", "As tu vu le film?", "Tu es vu le film?"],
+        options: ["Tu as vu le film?", "Tu vu le film?", "Tu as voir le film?", "Tu es vu le film?"],
         answer: 0,
-        wrongHints: [null, "Vu kan niet alleen staan. Wat moet er tussen tu en vu?", "Inversie heeft een streepje: As-tu.", "Voir gaat met avoir, niet être."],
+        wrongHints: [null, "Vu kan niet alleen staan. Wat moet er tussen tu en vu?", "Na het hulpwerkwoord komt het voltooid deelwoord, niet het hele werkwoord. Hoe luidt dat van voir?", "Voir hoort niet bij het rijtje werkwoorden met être. Welk hulpwerkwoord krijgt het dan?"],
         uitlegPad: {
           stappen: [{ titel: "Vraagteken aan eind", tekst: "Informele vraag: Tu as vu le film? — gewone volgorde + ?" }],
           woorden: [{ woord: "informeel", uitleg: "spreektaal — geen inversie" }],

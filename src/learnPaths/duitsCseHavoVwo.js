@@ -185,9 +185,9 @@ const steps = [
       },
       {
         q: "Welk register is **Jugendsprache**?",
-        options: ["Informele jongerentaal", "Formele bestuurstaal", "Wetenschappelijke vaktaal", "Standaardtaal (Hochdeutsch)"],
+        options: ["Informele taal van jongeren onderling", "Formele taal van jeugdinstanties", "Eenvoudige taal voor jonge kinderen", "Nette standaardtaal (Hochdeutsch)"],
         answer: 0,
-        wrongHints: [null, "'Jugend' betekent jeugd. Praten jongeren onderling in bestuurstaal?", "Vaktaal is voor onderzoekers. Wie spreken Jugendsprache?", "Standaardtaal is de nette norm. Klinkt Jugendsprache zo?"],
+        wrongHints: [null, "Instanties schrijven netjes óver jongeren. Is Jugendsprache de taal van zulke officiële stukken?", "Taal die volwassenen tegen kleine kinderen spreken, is iets anders. Wie gebruikt Jugendsprache zelf?", "Standaardtaal is de nette norm. Klinkt Jugendsprache zo?"],
         uitlegPad: {
           stappen: [{ titel: "Slang", tekst: "**Jugendsprache** = jongerentaal Duits. Voorbeelden: *krass* (heftig/cool), *geil* (super), *cringe* (gênant), *abhängen* (chillen), *Bock haben* (zin hebben). Komt op CSE alleen in zeer informele context (sociale media, jongeren-interviews)." }],
           niveaus: { basis: "Jongerentaal.", simpeler: "Jugendsprache = jong slang", nogSimpeler: "Taal van jongeren." },
@@ -214,7 +214,7 @@ const steps = [
     checks: [
       {
         q: "Wat staat **DACH** voor?",
-        options: ["Duitsland + Österreich + Schweiz","Duitsland + Oostenrijk + Tsjechië","Denemarken + Oostenrijk + Zwitserland","Duitsland + Andorra + Zwitserland"],
+        options: ["Duitsland + Oostenrijk + Zwitserland","Duitsland + Oostenrijk + Tsjechië","Denemarken + Oostenrijk + Zwitserland","Duitsland + Andorra + Zwitserland"],
         answer: 0,
         wrongHints: [null, "Waar staat de landcode CH voor — is dat Tsjechië?", "Het gaat om Duitstalige landen — spreekt men in Denemarken Duits?", "Is Andorra een Duitstalig land?"],
         uitlegPad: {
@@ -308,7 +308,7 @@ const steps = [
         q: "Wie is huidige **Bundeskanzler** (2025)?",
         options: ["Friedrich Merz","Olaf Scholz","Angela Merkel","Helmut Kohl"],
         answer: 0,
-        wrongHints: [null, "Was tot mei 2025.", "Tot 2021.", "Van 1982 tot 1998."],
+        wrongHints: [null, "Scholz regeerde tot mei 2025. Wie nam het daarna over na de verkiezingen van februari 2025?", "Merkel stopte in 2021. Wie kwamen er na haar?", "Kohl was kanselier van 1982 tot 1998. Kan hij dan de huidige kanselier zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Sinds mei 2025", tekst: "**Friedrich Merz** (CDU) is Bondskanselier sinds **mei 2025**, na regering-Scholz (SPD-Grüne-FDP-coalitie 2021-2025) viel. Coalitie: CDU/CSU + SPD ('Große Koalition')." }],
           theorie: "Merkel was kanselier 2005-2021 (16 jaar, langste na Kohl 16 jaar). Scholz 2021-2025.",

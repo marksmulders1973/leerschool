@@ -153,7 +153,7 @@ const steps = [
       },
       {
         q: "Wat is **'brood en spelen'**?",
-        options: ["Volk rustig houden met eten en spelen", "Soldaten belonen met eten en vrije dagen", "Een dagprogramma in het Colosseum", "Een religieus feest voor de oogstgod"],
+        options: ["Het volk tevreden houden met graan en vermaak", "Soldaten belonen met eten en vrije dagen", "Een vast dagprogramma in het Colosseum", "Een religieus feest voor de oogstgod"],
         answer: 0,
         wrongHints: [null, "Voor wie waren het gratis graan en de spelen bedoeld?", "Het is geen dagprogramma, maar een politiek begrip.", "Het is geen godsdienstig feest, maar een politiek begrip."],
       },
@@ -213,9 +213,9 @@ const steps = [
       },
       {
         q: "Welke **volken** vielen het Westromeinse Rijk binnen?",
-        options: ["Goten, Vandalen, Hunnen, Franken", "Egyptenaren, Perzen, Arabieren", "Grieken, Macedoniërs, Thraciërs", "Vikingen, Magyaren, Mongolen"],
+        options: ["Goten, Vandalen, Hunnen, Franken", "Perzen, Parthen, Arabieren, Egyptenaren", "Grieken, Macedoniërs, Thraciërs, Galliërs", "Vikingen, Magyaren, Mongolen, Turken"],
         answer: 0,
-        wrongHints: [null, "Die dreigden vooral in het oosten, en de Arabieren kwamen pas eeuwen later.", "Die woonden al binnen het rijk.", "Die vielen pas eeuwen later Europa binnen."],
+        wrongHints: [null, "Perzen en Parthen dreigden vooral in het oosten, Egypte hoorde bij het rijk en de Arabieren kwamen pas eeuwen later.", "Die volken woonden al binnen het rijk. Wie kwamen er van buiten de grenzen?", "Die vielen pas eeuwen later Europa binnen, ná de val van Rome."],
       },
       {
         q: "Wie was de leider van de **Hunnen** (~450 n.Chr.)?",
@@ -225,9 +225,9 @@ const steps = [
       },
       {
         q: "Welk **deel van Rome** bleef nog 1000 jaar bestaan?",
-        options: ["Het Oostromeinse Rijk", "Het Westromeinse Rijk", "Het Romeinse Brittannië", "Het Romeinse Egypte"],
+        options: ["Het Oostromeinse Rijk", "Het Romeinse Gallië", "Het Romeinse Brittannië", "Het Romeinse Egypte"],
         answer: 0,
-        wrongHints: [null, "Het westen ging juist als eerste ten onder.", "De Romeinen verlieten Brittannië al rond 410.", "Egypte werd in de 7e eeuw door de Arabieren veroverd."],
+        wrongHints: [null, "Gallië werd rond 486 veroverd door de Franken. Welk deel hield het langer vol?", "De Romeinen verlieten Brittannië al rond 410.", "Egypte werd in de 7e eeuw door de Arabieren veroverd."],
       },
     ],
   },

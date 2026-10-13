@@ -134,9 +134,9 @@ const steps = [
       },
       {
         q: "Wat is het doel van een **opinion piece**?",
-        options: ["Lezer overtuigen van een mening", "Lezer iets laten kopen", "Lezer vermaken met een verhaal", "Lezer neutraal feiten geven"],
+        options: ["Lezer overtuigen van een standpunt", "Lezer iets laten kopen", "Lezer meerdere meningen laten zien", "Lezer neutraal feiten geven"],
         answer: 0,
-        wrongHints: [null, "Een tekst die iets wil verkopen is reclame. Waar verwijst 'opinion' naar?", "Een verhaal om te vermaken is fictie. Wat betekent 'opinion'?", "Neutraal feiten geven doet een nieuwsbericht. Is een opinion piece neutraal?"],
+        wrongHints: [null, "Een tekst die iets wil verkopen is reclame. Wil een opinion piece je een product aansmeren?", "Zet de schrijver van een opinion piece eerlijk alle kanten naast elkaar, of kiest hij partij?", "Neutraal feiten geven doet een nieuwsbericht. Is een opinion piece neutraal?"],
       },
       {
         q: "*'Buy now! 50% off!'* Welk soort tekst?",
@@ -158,9 +158,9 @@ const steps = [
       },
       {
         q: "*'Step 1: turn on the device. Step 2: press the button.'* Welk soort?",
-        options: ["Manual / handleiding", "News / nieuwsbericht", "Opinion / mening", "Story / verhaal"],
+        options: ["Manual / handleiding", "News / nieuwsbericht", "Opinion / mening", "Recipe / recept"],
         answer: 0,
-        wrongHints: [null, "Een nieuwsbericht meldt wat er gebeurd is. Wat doet 'Step 1, Step 2'?", "Zie je iemands mening, zoals 'I think'?", "Een verhaal heeft personages. Wie is hier de hoofdpersoon?"],
+        wrongHints: [null, "Een nieuwsbericht meldt wat er gebeurd is. Wat doet 'Step 1, Step 2'?", "Zie je iemands mening, zoals 'I think'?", "Een recept heeft ook stappen. Maar wordt hier iets gekookt, of iets bediend?"],
       },
     ],
   },
@@ -230,9 +230,9 @@ const steps = [
       },
       {
         q: "*'What is true according to the text?'* Welke aanpak?",
-        options: ["Wat de tekst zegt, ook in andere woorden", "Optie met precies dezelfde woorden", "Wat volgens eigen kennis waar is", "Wat de lezer zelf het meest logisch vindt"],
+        options: ["Wat de tekst zegt, ook in andere woorden", "De optie met dezelfde woorden als de tekst", "Wat er in de inleiding van de tekst staat", "De optie die het meest volledig klinkt"],
         answer: 0,
-        wrongHints: [null, "Examenmakers zetten vaak woorden uit de tekst in een fout antwoord. Klopt de betekenis ook?", "Je eigen kennis kan kloppen, maar zegt déze tekst het ook?", "De vraag zegt 'according to the text'. Gaat het om wat jij vindt?"],
+        wrongHints: [null, "Examenmakers zetten vaak woorden uit de tekst in een fout antwoord. Klopt de betekenis ook?", "De inleiding is maar een deel van de tekst. Kan het antwoord ook verderop staan?", "Examenmakers maken foute opties soms lang en volledig. Zegt de lengte iets over wat de tekst beweert?"],
       },
       {
         q: "Tekst: *'Bees are vital. They pollinate 90% of crops. Without bees, food would disappear.'* Wat is **hoofdgedachte**?",
@@ -242,9 +242,9 @@ const steps = [
       },
       {
         q: "Bij **examen-vraag 'What is the main point?'** zoek je naar?",
-        options: ["De hoofdgedachte van de tekst", "De eerste zin van de tekst", "Het eerste voorbeeld in de tekst", "Het doel van de schrijver"],
+        options: ["De hoofdgedachte van de hele tekst", "De kernzin van de eerste alinea", "Het belangrijkste voorbeeld in de tekst", "Het doel dat de schrijver wil bereiken"],
         answer: 0,
-        wrongHints: [null, "De eerste zin is soms een inleiding of een vraag. Is dat altijd het belangrijkste?", "Een voorbeeld ondersteunt iets. Wat ondersteunt het?", "Het doel is wat de schrijver wil bereiken (overtuigen, informeren). Vraagt 'main point' daarnaar?"],
+        wrongHints: [null, "Een kernzin vat één alinea samen. Waar slaat 'main point' op?", "Een voorbeeld maakt iets duidelijk. Is het voorbeeld zelf het punt dat de schrijver wil maken?", "Het doel is wat de schrijver wil bereiken (overtuigen, informeren). Vraagt 'main point' daarnaar?"],
       },
       {
         q: "*'Skimming'* is een leestechniek waarbij je...?",
@@ -281,9 +281,9 @@ const steps = [
       },
       {
         q: "*'The exam was hard. The time was short. **This** is why students failed.'* Wat is **this**?",
-        options: ["Moeilijk examen én korte tijd", "Dat de leerlingen zakten", "Alleen het tijd-element", "Alleen het moeilijk-element"],
+        options: ["Het moeilijke examen en de korte tijd", "Het zakken van de leerlingen zelf", "De zin vlak vóór 'this' (korte tijd)", "De eerste zin (het moeilijke examen)"],
         answer: 0,
-        wrongHints: [null, "'This is why students failed' — kan 'this' dan het zakken zelf zijn?", "Er worden twee dingen genoemd vóór 'this'. Slaat 'this' op maar één?", "Er worden twee dingen genoemd vóór 'this'. Slaat 'this' op maar één?"],
+        wrongHints: [null, "'This is why students failed' — kan 'this' dan het zakken zelf zijn?", "Verwijst 'this' altijd naar de zin die er vlak voor staat? Lees ook verder terug.", "Staat er na de eerste zin nog iets dat het zakken verklaart?"],
         uitlegPad: {
           stappen: [
             { titel: "'This' kijkt terug", tekst: "Het verwijswoord 'this' verwijst naar wat erVOOR is gezegd. Hier 2 dingen: hard exam + short time. 'This' = beide samen." },
@@ -313,7 +313,7 @@ const steps = [
       },
       {
         q: "*'The students who studied passed. **They** worked hard.'* Waar verwijst **'they'** naar?",
-        options: ["De studenten die studeerden", "Alle studenten van de klas", "De studenten die zakten", "De docenten die lesgaven"],
+        options: ["De studenten die slaagden", "Alle studenten van de klas", "De studenten die zakten", "De docenten die lesgaven"],
         answer: 0,
         wrongHints: [null, "'The students who studied' — gaat het over alle studenten, of over een bepaalde groep?", "Worden zakkers in de tekst genoemd? Kijk welke groep er wél staat.", "Worden er docenten genoemd in de tekst?"],
       },

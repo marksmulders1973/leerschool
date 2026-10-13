@@ -147,9 +147,9 @@ const steps = [
       },
       {
         q: "Welk **nieuw wapen** werd in WO1 voor het eerst gebruikt?",
-        options: ["Tank", "Pistool", "Kanon", "Machinegeweer"],
+        options: ["Tank", "Prikkeldraad", "Handgranaat", "Machinegeweer"],
         answer: 0,
-        wrongHints: [null, "Pistolen bestonden al eeuwen — wat was er in 1916 splinternieuw?", "Kanonnen stonden er al in de tijd van Napoleon — welk wapen moest de loopgraven-impasse breken?", "Het machinegeweer bestond al vóór 1914 en maakte aanvallen juist zo dodelijk. Welk wapen moest dat doorbreken?"],
+        wrongHints: [null, "Prikkeldraad bestond al vóór 1900 en lag in WO1 vóór de loopgraven. Wat was er in 1916 splinternieuw?", "Handgranaten gooiden soldaten al in de 17e eeuw. Welk wapen zag in 1916 voor het eerst het slagveld?", "Het machinegeweer bestond al vóór 1914 en maakte aanvallen juist zo dodelijk. Welk wapen moest dat doorbreken?"],
       },
       {
         q: "Welk **gif** werd eerst gebruikt **bij Ieper (1915)**?",
@@ -174,9 +174,9 @@ const steps = [
     checks: [
       {
         q: "Was **Nederland in oorlog** in WO1?",
-        options: ["Nee — neutraal", "Ja — met Duitsland", "Ja — met Engeland", "Ja — met Frankrijk"],
+        options: ["Nee, het bleef neutraal", "Ja, aan Duitse kant", "Ja, aan Engelse kant", "Nee, maar het werd bezet"],
         answer: 0,
-        wrongHints: [null, "Nederland vocht niet tegen Duitsland — denk aan het verschil met België.", "Er vochten geen Nederlandse soldaten aan Engelse kant. Wat was Nederland dan?", "Er vochten geen Nederlandse soldaten aan het westfront."],
+        wrongHints: [null, "Er vochten geen Nederlandse soldaten mee in het Duitse leger. Wat deed Nederland dan wel?", "Er vochten geen Nederlandse soldaten aan Engelse kant. Wat was Nederland dan?", "Bezet werd Nederland pas in 1940, in de Tweede Wereldoorlog. België werd in 1914 wél bezet — en Nederland?"],
       },
       {
         q: "Hoeveel **Belgische vluchtelingen** kwamen naar NL?",
@@ -219,9 +219,9 @@ const steps = [
       },
       {
         q: "Wat moest Duitsland in **Verdrag van Versailles**?",
-        options: ["Herstelbetalingen doen", "Lid worden van de Volkenbond", "Het leger uitbreiden", "Elzas-Lotharingen krijgen"],
+        options: ["Herstelbetalingen doen", "Lid worden van de Volkenbond", "Dienstplicht invoeren", "In vier zones worden verdeeld"],
         answer: 0,
-        wrongHints: [null, "Duitsland mocht juist eerst níet bij de Volkenbond; dat kon pas in 1926.", "Het Duitse leger werd juist beperkt tot 100.000 man.", "Elzas-Lotharingen ging juist terug naar Frankrijk."],
+        wrongHints: [null, "Duitsland mocht juist eerst níet bij de Volkenbond; dat kon pas in 1926.", "Dienstplicht werd juist verboden: Duitsland mocht maar 100.000 beroepssoldaten hebben.", "De verdeling in vier bezettingszones kwam pas na de Tweede Wereldoorlog, in 1945."],
       },
       {
         q: "Welke **rijken vielen uiteen** na WO1?",
@@ -240,9 +240,9 @@ const steps = [
     checks: [
       {
         q: "Welke 4 letters van **MAIN-oorzaken**?",
-        options: ["Militarisme + Allianties + Imperialisme + Nationalisme", "Militarisme + Antisemitisme + Imperialisme + Nationalisme", "Monarchie + Allianties + Industrialisatie + Nationalisme", "Militarisme + Allianties + Inflatie + Neutraliteit"],
+        options: ["Militarisme + Allianties + Imperialisme + Nationalisme", "Militarisme + Antisemitisme + Industrialisatie + Neutraliteit", "Monarchie + Allianties + Industrialisatie + Neutraliteit", "Monarchie + Antisemitisme + Imperialisme + Nationalisme"],
         answer: 0,
-        wrongHints: [null, "Antisemitisme was geen hoofdoorzaak van WO1 — welke A dan wel?", "Monarchie en industrialisatie zijn niet de M en de I van MAIN.", "Inflatie en neutraliteit veroorzaakten geen oorlog."],
+        wrongHints: [null, "Neutraliteit houdt landen juist buiten een oorlog. Welke woorden passen dan op de A, I en N?", "Monarchie en neutraliteit veroorzaakten geen wereldoorlog. Welke M en N dan wel?", "Antisemitisme hoort vooral bij het verhaal van WO2. Welke M en A passen bij 1914?"],
       },
       {
         q: "Wie werd vermoord op **28 juni 1914**?",

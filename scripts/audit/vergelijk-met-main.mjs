@@ -6,13 +6,15 @@ import { execSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { register } from "node:module";
+register(new URL("./jsx-hook.mjs", import.meta.url).href);
 
 const args = process.argv.slice(2);
 const alleenIdx = args.indexOf("--alleen");
 const alleen = alleenIdx >= 0 ? args.splice(alleenIdx, 2)[1].split(",").map((x) => path.basename(x)) : null;
 const basis = args[0] || "origin/main";
 const gewijzigd = execSync(`git diff --name-only ${basis} -- src/learnPaths`, { encoding: "utf8" })
-  .split("\n").filter((f) => /\.js$/.test(f) && !/\.test\.js$/.test(f) && fs.existsSync(f) && (!alleen || alleen.includes(path.basename(f))));
+  .split("\n").filter((f) => /\.jsx?$/.test(f) && !/\.test\.jsx?$/.test(f) && fs.existsSync(f) && (!alleen || alleen.includes(path.basename(f))));
 let afwijkingen = 0, checksAnders = 0;
 for (const f of gewijzigd) {
   const tmp = path.join(path.dirname(f), `.__basis_${path.basename(f)}`);

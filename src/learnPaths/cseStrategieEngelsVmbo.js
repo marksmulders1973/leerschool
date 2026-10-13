@@ -76,9 +76,9 @@ const steps = [
       },
       {
         q: "Wat doe je met een **moeilijke vraag** waar je vastloopt?",
-        options: ["Overslaan en er later naar terugkeren","Blijven puzzelen tot je het antwoord hebt","Meteen gokken en niet meer terugkijken","De hele tekst opnieuw grondig doorlezen"],
+        options: ["Overslaan en er later naar terugkeren","Rustig doorwerken tot je het antwoord hebt","Elk onbekend woord opzoeken in het woordenboek","De hele tekst opnieuw grondig doorlezen"],
         answer: 0,
-        wrongHints: [null, "Zo raak je tijd kwijt die je voor andere vragen nodig hebt. Wat levert meer punten op?", "Gokken kan aan het eind nog. Heb je later misschien tijd om het opnieuw te proberen?", "Een hele tekst opnieuw lezen kost veel tijd. Hoe zorg je dat je eerst de makkelijke punten binnenhaalt?"],
+        wrongHints: [null, "Zo raak je tijd kwijt die je voor andere vragen nodig hebt. Wat levert meer punten op?", "Een woordenboek mag, maar elk woord opzoeken kost veel tijd. Wat levert in dezelfde tijd meer punten op?", "Een hele tekst opnieuw lezen kost veel tijd. Hoe zorg je dat je eerst de makkelijke punten binnenhaalt?"],
         uitlegPad: {
           stappen: [{ titel: "Tijd-budget bewaken", tekst: "Per moeilijke vraag **maximaal 2,5 min** investeren. Daarna **overslaan + door**. Aan het einde terug met **frisse blik** — vaak los je hem dan op. Anders: op het laatst gokken (~25% kans bij 4 opties)." }],
           theorie: "Toets-tip: zet een markering (sterretje) bij overgeslagen vragen op je antwoord-blad.",
@@ -142,9 +142,9 @@ const steps = [
       },
       {
         q: "Voor een **woord-betekenis-vraag** wat kun je het beste doen?",
-        options: ["Context: zinnen ervoor en erna lezen", "Direct het woordenboek pakken", "Het woord vertalen naar wat erop lijkt", "De zin met het woord vertalen"],
+        options: ["De zinnen ervoor en erna goed lezen", "Het woord opzoeken in het woordenboek", "Het woord vertalen naar wat erop lijkt", "De zin met het woord letterlijk vertalen"],
         answer: 0,
-        wrongHints: [null, "Een woordenboek mag op het CSE, maar opzoeken kost veel tijd — probeer eerst de context.", "Een woord dat op een Nederlands woord lijkt, kan een false friend zijn. Hoe controleer je de betekenis?", "Eén zin geeft soms te weinig houvast. Waar staat vaak extra uitleg?"],
+        wrongHints: [null, "Een woordenboek mag op het CSE, maar opzoeken kost veel tijd. Kun je de betekenis ook uit de tekst zelf halen?", "Een woord dat op een Nederlands woord lijkt, kan een false friend zijn. Hoe controleer je de betekenis?", "Eén zin geeft soms te weinig houvast. Waar staat vaak extra uitleg?"],
         uitlegPad: {
           stappen: [{ titel: "Context-strategie", tekst: "Lees zin met onbekend woord. Kijk **1-2 zinnen ervoor + erna**. Wat past logisch? Soms staat **synoniem** in andere zin, of **voorbeeld** ('such as...') dat woord verheldert." }],
           theorie: "Tip: kijk naar **woord-onderdelen** — prefix (un-/re-/dis-) + root + suffix (-tion/-able/-ly). 'Unbelievable' = un + believe + able = 'niet te geloven'.",

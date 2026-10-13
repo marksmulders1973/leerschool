@@ -79,9 +79,9 @@ const steps = [
       },
       {
         q: "Wat was de **hoofdstad** van Nederlands-Indië?",
-        options: ["Batavia","Jakarta","Singapore","Manilla"],
+        options: ["Batavia", "Soerabaja", "Singapore", "Manilla"],
         answer: 0,
-        wrongHints: [null, "Bijna — zelfde plek, maar die naam hoort bij de tijd na de Nederlanders.", "Britse kolonie, nu eigen staat.", "Filipijns — geen Nederlandse kolonie."],
+        wrongHints: [null, "Soerabaja was een grote havenstad op Oost-Java, maar het bestuur van de kolonie zat elders. Welke stad stichtte Coen in 1619?", "Singapore was een Britse handelspost, geen Nederlandse. Waar zat het Nederlandse bestuur?", "Manilla was de hoofdstad van de Spaanse Filipijnen. Welke stad bouwde de VOC uit tot bestuurscentrum?"],
         uitlegPad: {
           stappen: [{ titel: "Batavia = oud, Jakarta = nieuw", tekst: "1619: J.P. Coen sticht **Batavia** op locatie van Jakarta-stad. Naam blijft tot 1942 (Japanse bezetting). 1949: officiële naam **Jakarta** voor onafhankelijke hoofdstad Indonesië." }],
           theorie: "Toets-truc: zelfde plek, twee namen. Batavia = NL-tijd. Jakarta = onafhankelijk Indonesië.",
@@ -135,9 +135,9 @@ const steps = [
       },
       {
         q: "**Ethische politiek** (1901) had drie speerpunten. Welke?",
-        options: ["Onderwijs + Irrigatie + Emigratie", "Onderwijs + Irrigatie + Spoorwegen", "Zending + Gezondheidszorg + Onderwijs", "Onderwijs + Emigratie + Zelfbestuur"],
+        options: ["Onderwijs + Irrigatie + Emigratie", "Onderwijs + Spoorwegen + Zending", "Irrigatie + Zending + Gezondheidszorg", "Emigratie + Spoorwegen + Gezondheidszorg"],
         answer: 0,
-        wrongHints: [null, "Twee van de drie kloppen. Welke past niet bij de officiële speerpunten?", "Zending (het christelijk geloof verspreiden) was geen officieel speerpunt.", "Zelfbestuur was geen doel van de ethici: Nederland bleef de baas. Wat was het derde speerpunt?"],
+        wrongHints: [null, "Spoorwegen dienden vooral de export, en zending (het christelijk geloof verspreiden) was geen officieel speerpunt.", "Zending en gezondheidszorg waren geen officiële speerpunten. Welke drie werden in 1901 wél genoemd?", "Spoorwegen en gezondheidszorg waren geen officiële speerpunten. Welke drie dan wel?"],
         uitlegPad: {
           stappen: [{ titel: "OIE — onthoud O-I-E", tekst: "Speerpunten ethische politiek (uitgewerkt door o.a. C.Th. van Deventer; de koers begon met de troonrede van **koningin Wilhelmina**, 1901):\n• **O**nderwijs: scholen voor inheemse bevolking\n• **I**rrigatie: betere waterwerken voor landbouw\n• **E**migratie: Javaanse boeren overplaatsen naar minder-bevolkte eilanden (Sumatra, Sulawesi)" }],
           woorden: [{ woord: "ethische politiek", uitleg: "Nieuwe koloniale koers 1901: NL als 'voogd' die welvaart in Indië moet bevorderen." }],
@@ -178,9 +178,9 @@ const steps = [
       },
       {
         q: "Wie waren de **leiders** van de Indonesische onafhankelijkheidsbeweging?",
-        options: ["Soekarno + Hatta", "Multatuli + Coen", "Wilhelmina + Drees", "Gandhi + Nehru"],
+        options: ["Soekarno + Hatta", "Multatuli + Coen", "Diponegoro + Kartini", "Gandhi + Nehru"],
         answer: 0,
-        wrongHints: [null, "Een criticus en een stichter van het koloniale bewind — allebei uit een veel eerdere tijd.", "NL-koningin + premier — geen onafhankelijkheidsleiders.", "Indiase onafhankelijkheid (1947) — andere kolonie."],
+        wrongHints: [null, "Een criticus en een stichter van het koloniale bewind — allebei uit een veel eerdere tijd.", "Diponegoro vocht in 1825-1830 tegen de Nederlanders en Kartini schreef rond 1900 over onderwijs voor meisjes. Wie leidden de beweging in de jaren 1920-1945?", "Gandhi en Nehru leidden de onafhankelijkheid van India (1947), een Britse kolonie."],
         uitlegPad: {
           stappen: [{ titel: "Duo: Soekarno + Hatta", tekst: "**Ir. Soekarno** (1901-1970) = charismatische voorman, civiel ingenieur, oprichter PNI 1927. **Mohammad Hatta** (1902-1980) = econoom, mede-strijder. Tegenovergestelde karakters maar een effectief duo. Beide werden door NL meermaals verbannen." }],
           woorden: [{ woord: "Soekarno", uitleg: "Eerste president van onafhankelijk Indonesië (1945-1967)." }, { woord: "Hatta", uitleg: "Eerste vicepresident van Indonesië (1945-1956)." }],
@@ -212,9 +212,9 @@ const steps = [
       },
       {
         q: "Welk effect had Japanse bezetting op **NL-koloniale prestige**?",
-        options: ["Sterk verzwakt","Versterkt","Bleef gelijk","Verdwenen volledig"],
+        options: ["Sterk verzwakt: Nederland bleek te verslaan", "Versterkt: Japan bleek een hardere baas", "Bleef gelijk: Nederland kwam in 1945 terug", "Verdween: Nederland gaf de kolonie meteen op"],
         answer: 0,
-        wrongHints: [null, "Niet — Japanse overmacht was juist een schok.", "Juist niet — de snelle nederlaag in 1942 maakte veel indruk.", "Te sterk — Nederland probeerde na 1945 zelfs nog terug te keren."],
+        wrongHints: [null, "Japan was inderdaad hard. Maar wat zagen Indonesiërs in 1942 gebeuren met hun Nederlandse bestuurders?", "Nederland kwam terug, maar werd het na de snelle nederlaag van 1942 nog net zo vanzelfsprekend als de baas gezien?", "Nederland gaf niets meteen op: het stuurde na 1945 nog soldaten om de kolonie terug te krijgen."],
         uitlegPad: {
           stappen: [{ titel: "Mythe van witte overmacht", tekst: "Vóór 1942: koloniale ideologie dat 'witte mensen' van nature heersers zijn. **Japans snelle overwinning** doorbrak die mythe — Aziaten konden Europeanen verslaan. Dit gaf nationalistische bewegingen overal in Azië (Indonesië, Vietnam, Maleisië, Birma) extra kracht na 1945." }],
           theorie: "Toets-link: deze 'doorbroken mythe' verklaart waarom dekolonisatie in heel Azië versnelde na 1945.",
@@ -298,9 +298,9 @@ const steps = [
     checks: [
       {
         q: "Wat is de **juiste tijdsvolgorde**?",
-        options: ["VOC → Cultuurstelsel → Ethische politiek → Onafhankelijkheid","Onafhankelijkheid → VOC → Ethische politiek → Cultuurstelsel","Ethische politiek → VOC → Cultuurstelsel → Onafhankelijkheid","VOC → Onafhankelijkheid → Ethische politiek → Cultuurstelsel"],
+        options: ["VOC → Cultuurstelsel → Ethische politiek → Onafhankelijkheid", "VOC → Ethische politiek → Cultuurstelsel → Onafhankelijkheid", "Cultuurstelsel → VOC → Ethische politiek → Onafhankelijkheid", "Ethische politiek → VOC → Cultuurstelsel → Onafhankelijkheid"],
         answer: 0,
-        wrongHints: [null, "Niet — VOC is veel ouder dan onafhankelijkheid (~350 jaar verschil).", "Niet — VOC eerst (1602), dan cultuurstelsel.", "Niet — onafhankelijkheid is laatste in lijn."],
+        wrongHints: [null, "Kijk naar de jaartallen: wanneer begon het cultuurstelsel, en wanneer de ethische politiek?", "Het cultuurstelsel werd ingevoerd door de Nederlandse staat. Bestond de VOC toen nog, of was die al failliet (1799)?", "De ethische politiek begon in 1901. Bestond de VOC (opgericht 1602) toen nog?"],
         uitlegPad: {
           stappen: [{ titel: "Volgorde 1602-1949", tekst: "1) VOC **1602-1799** (handelscompagnie)\n2) Cultuurstelsel **1830-1870** (dwangcultuur)\n3) Ethische politiek **1901-1942** (welvaarts-koloniale ideologie)\n4) Onafhankelijkheid **1945** (Soekarno-proclamatie)" }],
           niveaus: { basis: "1) VOC 2) Cultuurstelsel 3) Ethisch 4) Onafhankelijkheid.", simpeler: "Tijdsvolgorde", nogSimpeler: "VOC eerst, onafhankelijkheid laatst." },

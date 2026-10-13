@@ -22,9 +22,9 @@ const steps = [
     checks: [
       {
         q: "Wat was het **drieslagstelsel**?",
-        options: ["Akkerbouw met 3 delen, 1 deel braak", "Belasting verdeeld over 3 standen", "Verdeling van de macht in 3 delen", "Veeteelt met 3 soorten dieren"],
+        options: ["Akker in 3 delen, elk jaar 1 deel braak", "Drie gewassen tegelijk op één akker", "Elk jaar drie keer oogsten van één akker", "Grond verdeeld over 3 boerenfamilies"],
         answer: 0,
-        wrongHints: [null, "Drie standen horen bij het ancien régime — 'slag' gaat over iets anders.", "Drie machten is de trias politica van Montesquieu — iets anders.", "Het ging niet om vee, maar om het gebruik van grond."],
+        wrongHints: [null, "Dat heet mengteelt. Bij het drieslagstelsel wisselde per jaar wat er op een stuk grond gebeurde. Waarom deed men dat?", "Drie oogsten per jaar lukt in ons klimaat niet. Waar slaat de 'drie' dan op?", "Het ging niet om eigendom, maar om wat er elk jaar met de grond gebeurde. Welke afwisseling hoort daarbij?"],
         uitlegPad: {
           stappen: [{ titel: "Wintergraan/zomergraan/braak", tekst: "Driehoeks-vruchtwisseling: 1) wintergraan (rogge/tarwe). 2) zomergraan (haver/gerst). 3) braak (rust voor bodem). 1/3 grond produceerde dus NIETS. Vruchtwisseling met klaver verving braak → klaver bindt N → bodem rijker zonder rust." }],
           niveaus: { basis: "Driedeling akkers.", simpeler: "Een derde liet je rusten.", nogSimpeler: "Drieslag" },
@@ -39,7 +39,7 @@ const steps = [
           "Wetten die de armenzorg per parochie regelden"
         ],
         answer: 0,
-        wrongHints: [null, "Zulke fabriekswetten kwamen pas in de 19e eeuw.", "Dat waren de Corn Laws (graanwetten) uit 1815 — iets anders.", "Dat waren de armenwetten (Poor Laws) — kijk naar het woord 'inclosure'."],
+        wrongHints: [null, "Zulke fabriekswetten kwamen pas in de 19e eeuw.", "Dat waren de Corn Laws (graanwetten) uit 1815 — iets anders.", "Dat waren de armenwetten (Poor Laws). Kijk naar het woord 'enclosure' (Enclosure Acts, ook wel 'Inclosure' gespeld)."],
         uitlegPad: {
           stappen: [
             { titel: "Privé-grond + arbeidsoverschot", tekst: "Common land werd toegewezen aan grote landeigenaren. Kleine boeren + 'commoners' verloren toegang tot weide/brandhout. Moesten gaan werken als loonarbeider of trekken naar stad → leverde fabrieks-arbeiders." },
@@ -61,9 +61,9 @@ const steps = [
       },
       {
         q: "Waarom begon de industriële revolutie in **Engeland** en niet bv. in Frankrijk?",
-        options: ["Kolen, koloniën en politieke rust", "Een absolute koning die fabrieken stichtte", "Lage lonen door veel slavenarbeid", "Veel inwoners en het beste onderwijs"],
+        options: ["Kolen, koloniën en politieke rust", "Een sterke koning, zilver en lage lonen", "Slavenarbeid, houtskool en veel bossen", "Veel inwoners, goed onderwijs en graan"],
         answer: 0,
-        wrongHints: [null, "Engeland had sinds 1688 juist een koning met beperkte macht. Wie bouwden de fabrieken dan?", "In Engelse fabrieken werkten vrije arbeiders voor loon. Wat zat er wél in de Engelse grond?", "Frankrijk had juist meer inwoners, en gewone Engelsen kregen niet meer les dan mensen elders."],
+        wrongHints: [null, "Engeland had sinds 1688 juist een koning met beperkte macht, en zilver kwam vooral uit Spaans Amerika. Wat zat er wél in de Engelse grond?", "In Engelse fabrieken werkten vrije arbeiders voor loon, en de bossen waren juist grotendeels gekapt. Welke brandstof zat er in de Engelse grond?", "Frankrijk had juist meer inwoners, gewone Engelsen kregen niet meer les dan elders, en graan groeide overal. Wat had Engeland wél extra?"],
         uitlegPad: {
           stappen: [
             { titel: "Meerdere factoren", tekst: "Steenkool-rijkdom + grote afzetmarkt (Brits Rijk) + politieke stabiliteit sinds 1688 (Glorious Revolution) + sterke maritieme handel + Inclosure-arbeidsoverschot + Verlichtings-cultuur. Frankrijk had revolutie 1789 + napoleontische oorlogen → industrialisatie pas vanaf 1830." },
@@ -73,9 +73,9 @@ const steps = [
       },
       {
         q: "Vóór 1750 werkte ~**80%** van bevolking in:",
-        options: ["Landbouw", "Fabriek", "Mijnen", "Handel"],
+        options: ["Landbouw", "Huisnijverheid", "Mijnen", "Handel"],
         answer: 0,
-        wrongHints: [null, "Fabrieken kwamen pas ná 1750 op. Waar werkten de meeste mensen daarvoor?", "Mijnen waren er wel, maar klein. Wat moest bijna iedereen doen om aan eten te komen?", "Kooplieden zaten in de steden, maar de meeste mensen woonden op het platteland."],
+        wrongHints: [null, "Thuis spinnen en weven deden veel gezinnen erbij, als bijverdienste naast hun hoofdwerk. Wat was dat hoofdwerk?", "Mijnen waren er wel, maar klein. Wat moest bijna iedereen doen om aan eten te komen?", "Kooplieden zaten in de steden, maar de meeste mensen woonden op het platteland."],
         uitlegPad: {
           stappen: [{ titel: "Agrarische samenleving", tekst: "Tot industriële revolutie domineerde landbouw. Per 1850 (UK): nog ~30% in landbouw. Per 1900: <20%. Vandaag (NL): <3%. Reusachtige verschuiving van werk-aard binnen ~150 jaar." }],
           niveaus: { basis: "Landbouw.", simpeler: "Bijna iedereen boer.", nogSimpeler: "80% boer" },
@@ -178,7 +178,7 @@ const steps = [
       },
       {
         q: "Liberalisme volgens Adam Smith:",
-        options: ["Vrije markt + minimale staats-rol", "Sterke staat met centrale planning", "Productiemiddelen in gemeenschap", "Handelsoverschot via staatssteun"],
+        options: ["Vrije markt met een kleine overheid", "Sterke staat met centrale planning", "Productiemiddelen in gemeenschap", "Handelsoverschot via staatssteun"],
         answer: 0,
         wrongHints: [null, "Centrale planning hoort bij het communisme. Wilde Smith dat de staat alles regelde?", "Gemeenschappelijk bezit is het idee van socialisten zoals Marx.", "Dat is het mercantilisme, waar Smith zich juist tegen afzette."],
         uitlegPad: {
@@ -344,7 +344,7 @@ const steps = [
           "Computers + internet + elektronica"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is 1e.", "Niet — dat is 2e.", "Niet — dat is 3e."],
+        wrongHints: [null, "Stoommachine en textiel horen bij de start rond 1750, de eerste revolutie. Wat is er sinds ~2010 nieuw?", "Elektriciteit en de verbrandingsmotor horen bij de tweede revolutie, rond 1870-1900. Wat kwam er veel later?", "Computers en internet horen bij de derde revolutie, vanaf ~1970. Wat bouwt daar sinds ~2010 op voort?"],
         uitlegPad: {
           stappen: [
             { titel: "Cyber-fysieke systemen", tekst: "Term geïntroduceerd in 2016 (Klaus Schwab, World Economic Forum). Kenmerk: niet alleen handarbeid wordt geautomatiseerd, maar ook kenniswerk (boekhouden, juridische analyse, code schrijven, vertalen). Brengt grote vragen over werkgelegenheid, ongelijkheid, ethiek." },

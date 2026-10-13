@@ -182,9 +182,9 @@ const steps = [
       },
       {
         q: "**Verklaring Rechten Mens** (aug 1789) afkomstig uit invloed van:",
-        options: ["Verlichting + Amerikaans voorbeeld","De Bijbel en de katholieke kerk","Het absolutisme van Lodewijk XIV","Het Romeinse recht van de keizers"],
+        options: ["Verlichting + Amerikaans voorbeeld", "Code Napoléon + Romeins recht", "Renaissance + Italiaanse stadstaten", "Absolutisme + Lodewijk XIV"],
         answer: 0,
-        wrongHints: [null, "De revolutionairen waren juist kritisch op de kerk.", "Tegen dat absolutisme kwam de revolutie juist in verzet.", "Romeins recht gaf geen gelijke rechten aan alle mensen."],
+        wrongHints: [null, "De Code Napoléon kwam pas in 1804, vijftien jaar later. Welke ideeën lagen er in 1789 al klaar?", "De renaissance lag eeuwen eerder en ging vooral over kunst en de oudheid. Welke 18e-eeuwse denkers schreven over rechten van de mens?", "Tegen het absolutisme kwam de revolutie juist in verzet. Waar haalden de revolutionairen hun ideeën dan vandaan?"],
         uitlegPad: {
           stappen: [{ titel: "Locke/Montesquieu/Jefferson", tekst: "Verklaring Rechten Mens (aug 1789) is duidelijk **product van Verlichting** (Locke's natuurrechten, Montesquieu's machtsscheiding, Rousseau's volonté générale) + **Amerikaans voorbeeld** (1776 + Amerikaanse staatsgrondwetten). Universele mensenrechten — Olympe de Gouges schreef tegelijk versie voor vrouwen 1791." }],
           niveaus: { basis: "Verlichting + VS.", simpeler: "Verlichting+VS", nogSimpeler: "Verlichting." },
@@ -242,9 +242,9 @@ const steps = [
       },
       {
         q: "Napoleon verloor **Russische veldtocht 1812** vooral door:",
-        options: ["Winter + 'verschroeide aarde' tactiek", "Verraad door zijn eigen generaals", "Aanvallen van de Britse vloot", "Een opstand in Frankrijk zelf"],
+        options: ["Winter + 'verschroeide aarde' tactiek", "Verraad van generaals + te weinig soldaten", "Britse vloot + Pruisische tegenaanval", "Opstand in Parijs + gebrek aan geld"],
         answer: 0,
-        wrongHints: [null, "Zijn generaals bleven trouw; het probleem lag elders.", "De Britse vloot kon niet tot diep in Rusland komen — wat hield Napoleon op het land tegen?", "In Parijs mislukte een staatsgreep, maar die besliste de veldtocht niet."],
+        wrongHints: [null, "Napoleon trok met ruim 600.000 man op en zijn generaals bleven trouw. Waardoor kwamen er zo weinig soldaten terug?", "De Britse vloot kwam niet diep in Rusland, en Pruisen vocht in 1812 nog mee aan Napoleons kant. Wat hield hem op het land tegen?", "In Parijs mislukte een staatsgreep, en geld was niet het probleem. Wat ging er in Rusland zelf mis?"],
         uitlegPad: {
           stappen: [{ titel: "Russische strategie + winter", tekst: "**1812**: Napoleon valt Rusland binnen met 600.000 man. Russen ontwijken slag, branden eigen oogst + dorpen ('verschroeide aarde') zodat Frans leger geen voedsel kan vinden. Moskou bereikt maar in vlammen. Terugtocht in winter: vrieskou + honger + Russen-aanvallen. **Slechts ~30.000 keren terug**. Catastrofe." }],
           theorie: "Lessen herhaald: Hitler-invasie RU 1941-43 = vergelijkbaar mislukt om vergelijkbare redenen.",
