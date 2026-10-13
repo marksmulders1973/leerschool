@@ -559,9 +559,9 @@ const steps = [
       },
       {
         q: "**Snel** hoort bij de haas. Welk woord hoort bij de slak?",
-        options: ["langzaam", "vlug", "rap", "druk"],
+        options: ["langzaam", "vlug", "haastig", "druk"],
         answer: 0,
-        wrongHints: [null, "Dat betekent juist snel.", "Dat betekent ook snel.", "Dat gaat over veel te doen hebben."],
+        wrongHints: [null, "Dat betekent juist snel.", "Haastig betekent dat je haast hebt. Gaat een slak zo?", "Dat gaat over veel te doen hebben."],
         uitlegPad: {
           stappen: [{ titel: "Andersom denken", tekst: "snel ↔ **langzaam**. Een haas rent snel, een slak kruipt langzaam." }],
           niveaus: { basis: "Snel en langzaam zijn tegenstellingen.", simpeler: "Een slak is niet snel maar…", nogSimpeler: "langzaam" },
@@ -694,9 +694,9 @@ const steps = [
       },
       {
         q: "Wat hoort er aan het eind van deze zin? **Hoe heet jouw juf of meester**",
-        options: ["een vraagteken (?)", "een punt (.)", "niets", "een komma (,)"],
+        options: ["een vraagteken (?)", "een punt (.)", "een uitroepteken (!)", "een komma (,)"],
         answer: 0,
-        wrongHints: [null, "Dit is niet zomaar een zin — er wordt iets gevraagd.", "Elke zin eindigt met een teken.", "Een komma is voor een rustje midden in de zin."],
+        wrongHints: [null, "Dit is niet zomaar een zin — er wordt iets gevraagd.", "Een uitroepteken zet je als iemand roept. Wordt hier geroepen of gevraagd?", "Een komma is voor een rustje midden in de zin."],
         uitlegPad: {
           stappen: [{ titel: "Vraag of niet?", tekst: "De zin begint met **Hoe** — er wordt iets gevraagd. Een vraag eindigt met een **vraagteken (?)**." }],
           voorbeelden: [{ type: "voorbeeld", tekst: "Waar woon jij? Hoe oud ben je? Wat eet je het liefst?" }],

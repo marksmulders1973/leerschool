@@ -504,9 +504,9 @@ const steps = [
     checks: [
       {
         q: "Welk woord is een samenstelling?",
-        options: ["speelgoedwinkel", "kabouter", "chocolade", "televisie"],
+        options: ["speelgoedwinkel", "verschrikkelijk", "temperatuur", "bibliotheek"],
         answer: 0,
-        wrongHints: [null, "Kun je 'kabouter' knippen in twee echte woorden?", "Is 'choco' of 'lade' hier een los woord dat samen 'chocolade' betekent?", "Kun je 'televisie' knippen in twee echte woorden?"],
+        wrongHints: [null, "Kun je 'verschrikkelijk' knippen in twee echte woorden?", "Kun je 'temperatuur' knippen in twee echte woorden?", "Kun je 'bibliotheek' knippen in twee echte woorden?"],
         uitlegPad: {
           stappen: [{ titel: "speelgoed + winkel", tekst: "Speelgoedwinkel = speelgoed + winkel, dus een samenstelling." }],
           niveaus: {

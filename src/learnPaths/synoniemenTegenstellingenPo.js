@@ -110,14 +110,14 @@ const steps = [
       },
       {
         q: "Welk woord betekent hetzelfde als **'enorm'**?",
-        options: ["Reusachtig", "Klein", "Zwaar", "Breed"],
+        options: ["Reusachtig", "Minuscuul", "Gewichtig", "Langgerekt"],
         answer: 0,
-        wrongHints: [null, "Klein is juist het omgekeerde van enorm.", "Een enorme ballon is niet zwaar. Betekent zwaar dan hetzelfde?", "Breed gaat alleen over hoe wijd iets is. Enorm gaat over meer."],
+        wrongHints: [null, "Minuscuul betekent piepklein. Is dat hetzelfde als enorm?", "Gewichtig gaat over zwaar of belangrijk zijn. Betekent het hetzelfde als enorm?", "Langgerekt is lang en smal. Is dat hetzelfde als enorm?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent 'enorm'?", tekst: "**Enorm** = heel erg groot. *'Een enorme taart'* = een heel grote taart. Het is een sterker woord dan gewoon 'groot'." },
             { titel: "Welk woord lijkt erop?", tekst: "**Reusachtig** komt van het woord *reus* (een heel grote figuur uit sprookjes). Een reusachtige taart = even groot als wat een reus zou eten. Dus reusachtig = enorm = heel groot." },
-            { titel: "Andere synoniemen van 'enorm'", tekst: "Gigantisch, kolossaal, immens, geweldig groot. Allemaal woorden voor 'heel erg groot'. **Klein** = tegenstelling, geen synoniem. **Zwaar** en **breed** = over gewicht en wijdte, niet over hoe groot iets is." },
+            { titel: "Andere synoniemen van 'enorm'", tekst: "Gigantisch, kolossaal, immens, geweldig groot. Allemaal woorden voor 'heel erg groot'. **Minuscuul** (piepklein) = tegenstelling, geen synoniem. **Gewichtig** en **langgerekt** = over gewicht en vorm, niet over hoe groot iets is." },
           ],
           woorden: [
             { woord: "enorm", uitleg: "Heel erg groot." },
@@ -442,9 +442,9 @@ const steps = [
       },
       {
         q: "Welk woord is een synoniem van **'aardig'**?",
-        options: ["Vriendelijk", "Boos", "Grappig", "Eerlijk"],
+        options: ["Vriendelijk", "Nieuwsgierig", "Grappig", "Eerlijk"],
         answer: 0,
-        wrongHints: [null, "Boos = tegenovergesteld gevoel.", "Grappig is iemand die je laat lachen. Is dat hetzelfde als aardig?", "Eerlijk is iemand die de waarheid zegt. Betekent dat aardig?"],
+        wrongHints: [null, "Nieuwsgierig ben je als je alles wilt weten. Is dat hetzelfde als aardig?", "Grappig is iemand die je laat lachen. Is dat hetzelfde als aardig?", "Eerlijk is iemand die de waarheid zegt. Betekent dat aardig?"],
         uitlegPad: {
           stappen: [
             { titel: "Aardig betekent...", tekst: "**Aardig** = lief, vriendelijk, helpend. Een aardige juf, een aardige buurman. Positief karakter-woord." },
@@ -518,9 +518,9 @@ const steps = [
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "Welk woord is een synoniem van **'traag'**?",
-        options: ["Langzaam", "Snel", "Laat", "Moe"],
+        options: ["Langzaam", "Snel", "Laat", "Vermoeid"],
         answer: 0,
-        wrongHints: [null, "Dat is juist het omgekeerde.", "Laat gaat over de tijd op de klok. Traag gaat over hoe snel iets gaat.", "Als je moe bent, ga je misschien traag. Betekent moe hetzelfde?"],
+        wrongHints: [null, "Dat is juist het omgekeerde.", "Laat gaat over de tijd op de klok. Traag gaat over hoe snel iets gaat.", "Als je vermoeid bent, ga je misschien traag. Betekent vermoeid hetzelfde?"],
         uitlegPad: {
           stappen: [
             {
@@ -733,9 +733,9 @@ const steps = [
       },
       {
         q: "Wat is het **tegenovergestelde** van **'snel'**?",
-        options: ["Langzaam", "Vlug", "Rap", "Gauw"],
+        options: ["Langzaam", "Vlug", "Haastig", "Gauw"],
         answer: 0,
-        wrongHints: [null, "Vlug betekent ook snel. Wat is het omgekeerde?", "Rap betekent ook snel. Wat is het omgekeerde?", "Gauw betekent ook snel. Wat is het omgekeerde?"],
+        wrongHints: [null, "Vlug betekent ook snel. Wat is het omgekeerde?", "Haastig betekent dat je haast hebt, dus snel. Wat is het omgekeerde?", "Gauw betekent ook snel. Wat is het omgekeerde?"],
       },
       {
         q: "Wat is het tegenovergestelde van **'mogelijk'**?",

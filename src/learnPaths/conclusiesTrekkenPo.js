@@ -65,7 +65,7 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
           "Het regent buiten",
           "Bram is in de sloot gevallen",
           "Iemand heeft een emmer water over Bram gegooid",
-          "Bram heeft met zijn jas aan gedoucht",
+          "Bram heeft net gezwommen",
         ],
         answer: 0,
         evidence: "Kletsnatte jas + druppels die tegen het glas tikken.",
@@ -73,7 +73,7 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
           null,
           "Zou kunnen — maar verklaart een sloot óók de druppels op het raam? Combineer beide aanwijzingen.",
           "Welke aanwijzing zou dan de natte ruit verklaren?",
-          null,
+          "Zwem je met je jas aan? En verklaart dat ook de druppels op het raam?",
         ],
         uitlegPad: {
           stappen: [
@@ -114,7 +114,7 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
           null,
           "Een slot-zin kán een conclusie bevatten, maar dat is niet wat conclusie trekken bij lezen betekent. Wat doe jíj als lezer?",
           "Een mening is wat iemand vindt. Wat doe jij met aanwijzingen in de tekst?",
-          null,
+          "Een opsomming herhaalt wat er al staat. Bedenk je dan zelf iets nieuws?",
         ],
         uitlegPad: {
           stappen: [
@@ -156,7 +156,7 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
           null,
           "Van gapen alléén zou je dat kunnen denken — maar welke aanwijzing over gisteravond vergeet je dan?",
           "Bij welke aanwijzing zou verkoudheid passen? Niezen of hoesten staat er niet.",
-          null,
+          "Wijzen gapen en in je ogen wrijven op honger? Wat gebeurde er gisteravond?",
         ],
         uitlegPad: {
           stappen: [
@@ -185,10 +185,10 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
       {
         q: "Lisa pakt haar paraplu, trekt haar regenjas aan en kijkt bezorgd naar buiten. Welke conclusie kun je trekken?",
         options: [
-          "Het regent of Lisa verwacht regen",
+          "Lisa houdt rekening met regen",
           "Lisa gaat naar het zwembad",
           "Lisa heeft het koud in huis",
-          "Lisa oefent met een toneelstuk",
+          "Lisa oefent voor een toneelstuk",
         ],
         answer: 0,
         evidence: "Paraplu + regenjas + bezorgd naar buiten kijken.",
@@ -196,7 +196,7 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
           null,
           "Bij een zwembad heb je geen paraplu nodig — of juist wél? En wat doet een regenjas bij een zwembad?",
           "Welke aanwijzing wijst op kou binnenshuis? Kijk naar wáár ze naartoe kijkt.",
-          null,
+          "Staat er iets over toneel? En waarom kijkt ze dan bezorgd naar buiten?",
         ],
         uitlegPad: {
           stappen: [
@@ -214,10 +214,10 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
       {
         q: "Aanwijzing 1: de hond staat kwispelend bij de voordeur. Aanwijzing 2: hij heeft zijn riem in zijn bek. Wat is de beste conclusie?",
         options: [
-          "De hond wil naar buiten voor een wandeling",
+          "De hond wil gaan wandelen",
           "De hond heeft honger",
           "De hond is bang voor de deur",
-          "De hond wil de riem kapotbijten",
+          "De hond wil met de riem spelen",
         ],
         answer: 0,
         evidence: "Kwispelend bij de voordeur + riem in zijn bek.",
@@ -225,7 +225,7 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
           null,
           "Waar zou een hongerige hond gaan staan — bij de deur of ergens anders? En waarom dan die riem?",
           "Wat vertelt kwispelen over hoe de hond zich voelt?",
-          null,
+          "Waarom staat hij dan bij de voordeur? Combineer beide aanwijzingen.",
         ],
         uitlegPad: {
           stappen: [
@@ -259,7 +259,7 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
           null,
           "In de lente komen er juist nieuwe blaadjes aan de bomen. Past dat bij bladeren op de stoep?",
           "Zou je midden in de zomer een sjaal omdoen?",
-          null,
+          "Koningsdag is in april. Vallen er dan kastanjes en gele bladeren?",
         ],
         uitlegPad: {
           stappen: [
@@ -323,8 +323,8 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
         options: [
           "Verdrietig, omdat ze afscheid moet nemen",
           "Blij, omdat ze een grotere kamer krijgt",
-          "Boos op haar vader",
-          "Bang voor het nieuwe huis",
+          "Boos, omdat papa niet naar haar luistert",
+          "Bang, omdat het nieuwe huis zo groot is",
         ],
         answer: 0,
         evidence: "Ze slikte een paar keer en streek met haar hand over de vensterbank.",
@@ -332,7 +332,7 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
           null,
           "Dat zegt papa — maar let op wat Noor dóét. Reageert ze blij op zijn woorden?",
           "Ze geeft geen antwoord, dat klopt. Maar past slikken en over de vensterbank strijken bij boosheid?",
-          null,
+          "Zegt Noor iets over het nieuwe huis? Kijk wat ze doet met de vensterbank en het steentje.",
         ],
         uitlegPad: {
           stappen: [
@@ -362,10 +362,10 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
       {
         q: "Waarom stopt Noor het kiezelsteentje waarschijnlijk in haar jaszak?",
         options: [
-          "Ze wil een herinnering aan haar oude huis en haar vriendin meenemen",
+          "Ze wil een herinnering aan Sara meenemen",
           "Ze spaart bijzondere stenen",
-          "Ze wil het steentje aan het nieuwe meisje geven",
-          "Papa had gevraagd of ze de vensterbank leeg wilde maken",
+          "Ze wil het aan het nieuwe meisje geven",
+          "Papa wilde de vensterbank leeg hebben",
         ],
         answer: 0,
         evidence: "Dat had ze ooit samen met haar beste vriendin Sara in de tuin gevonden — en stopte het diep in haar jaszak.",
@@ -373,7 +373,7 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
           null,
           "Klinkt logisch — maar staat er ergens iets over sparen? Kijk wat de tekst wél over het steentje vertelt.",
           "Het nieuwe meisje komt pas later in het verhaal. Wat wist Noor op dit moment al?",
-          null,
+          "Vroeg papa dat? Lees wat papa roept, en wat er over het steentje staat.",
         ],
         uitlegPad: {
           stappen: [
@@ -412,7 +412,7 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
         wrongHints: [
           null,
           "Zou kunnen — maar staat daar iets over in de tekst? Let op de woorden 'dan anders' en op wat papa eerder al deed.",
-          null,
+          "Klinkt hard meezingen boos? Wat deed papa eerder al toen hij naar boven riep?",
           "Noor zegt juist helemaal niets in de auto. Wat probeert papa met al die vrolijkheid?",
         ],
         uitlegPad: {
@@ -454,7 +454,7 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
           null,
           "Gaat het om de maat van de zak — of om wat Noor met het steentje wil?",
           "Staat er iets over het gewicht van het steentje? Zoek een aanwijzing over haar gevoel voor het steentje.",
-          null,
+          "Zegt 'diep' iets over wat papa wilde, of over wat Noor met het steentje wil?",
         ],
         uitlegPad: {
           stappen: [
@@ -478,7 +478,7 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
           null,
           "Ze stond erbij toen papa riep — maar ze zei niets terug. Wat betekent stilzwijgen hier?",
           "Past boosheid bij slikken en over de vensterbank strijken? Kijk naar alle aanwijzingen samen.",
-          null,
+          "Papa zegt dat de nieuwe kamer twee keer zo groot is. Kan hij dan te klein zijn?",
         ],
         uitlegPad: {
           stappen: [
@@ -496,16 +496,16 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
       {
         q: "Noor aarzelt, zwaait dan terug naar het meisje, en haar wangen worden 'een klein beetje warm'. Wat kun je hieruit afleiden over hoe ze zich op dat moment voelt?",
         options: [
-          "Ze is verlegen, maar er is ook een sprankje hoop",
-          "Ze is woedend dat er iemand bij het hek staat",
-          "Het interesseert haar helemaal niets",
-          "Ze is nog precies even verdrietig als in haar oude kamer",
+          "Een beetje verlegen, maar ook wat hoopvol",
+          "Een beetje boos, want ze wil alleen zijn",
+          "Het maakt haar niets uit, ze voelt niets",
+          "Nog net zo verdrietig als in haar oude kamer",
         ],
         answer: 0,
         evidence: "Noor aarzelde even. Toen zwaaide ze terug, en ze merkte dat haar wangen daarbij een klein beetje warm werden.",
         wrongHints: [
           null,
-          null,
+          "Zwaai je terug naar iemand als je boos bent? Wat betekenen warme wangen?",
           "Iemand die nergens om geeft, zwaait niet terug. Wat betekent het dat ze het wél doet?",
           "Vergelijk het begin en het einde: is er iets veranderd? Let op het terugzwaaien.",
         ],
@@ -547,7 +547,7 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
           null,
           "Neem je op vakantie al je posters mee en stop je al je spullen in dozen?",
           "Waarom rijden ze dan met de auto weg uit haar oude straat?",
-          null,
+          "Pak je al je spullen in dozen als je gaat logeren? Papa praat over 'het nieuwe huis'.",
         ],
         uitlegPad: {
           stappen: [
@@ -593,7 +593,7 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
       {
         q: "In de auto kijkt Noor naar haar oude straat *'tot die achter de bocht verdween'*. Wat kun je daaruit afleiden?",
         options: [
-          "Ze vindt het moeilijk om haar oude buurt achter te laten",
+          "Ze vindt het moeilijk om weg te gaan",
           "Ze wil de weg naar het nieuwe huis onthouden",
           "Ze wordt misselijk van het autorijden",
           "Ze telt de huizen in haar straat",
@@ -603,7 +603,7 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
           null,
           "Ligt het nieuwe huis vóór haar of achter haar? Waar kijkt ze naar?",
           "Staat er iets over misselijk zijn? Zoek een aanwijzing in de tekst.",
-          null,
+          "Staat er iets over tellen? Waarom kijk je zo lang naar iets dat je achterlaat?",
         ],
         uitlegPad: {
           stappen: [
@@ -679,7 +679,7 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
         wrongHints: [
           null,
           "Verklaart dat ook de takken die overal liggen? Waar komen takken vandaan?",
-          null,
+          "Staat er iets over de conciërge? Welke aanwijzing verklaart de takken en de scheve vlag?",
           "Welke aanwijzing wijst op een feest? Zoek bewijs voordat je kiest.",
         ],
         uitlegPad: {
@@ -720,7 +720,7 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
           null,
           "Dat is nou precies de valkuil van de toets. Wat heeft een conclusie nodig behálve logisch klinken?",
           "Ook al denkt iedereen het — waar moet het bewijs vandaan komen?",
-          null,
+          "Een korte conclusie kan nog steeds verzonnen zijn. Waar moet het bewijs vandaan komen?",
         ],
         uitlegPad: {
           stappen: [
@@ -760,7 +760,7 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
         wrongHints: [
           null,
           "Dat ze oefent en kijkt zegt iets over wat ze graag wíl — maar staat er ergens hoe goed ze is?",
-          null,
+          "Staat er iets over Mila's ouders? Zoek bewijs in de tekst voordat je kiest.",
           "Ze brengt haar pauze juist door met iets waar ze naar kijkt. Past 'saai vinden' daarbij?",
         ],
         uitlegPad: {
@@ -800,7 +800,7 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
           null,
           "Klopt dit juist wél met de tekst? Let op: de vraag zoekt de conclusie die te vér gaat.",
           "Lees de vraag nog eens goed: je zoekt de conclusie die méér beweert dan de tekst.",
-          null,
+          "Past 'waarschijnlijk een wondje' bij een pleister? Je zoekt de conclusie die te vér gaat.",
         ],
         uitlegPad: {
           stappen: [
@@ -836,7 +836,7 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
           null,
           "Zie je ergens het woord 'boos' of een aanwijzing voor boosheid? Kijk wat er letterlijk staat.",
           "Staat er in de zin iets over een kwijtgeraakte telefoon? Of ga je dan te ver?",
-          null,
+          "Staat er iets over een storing? Of verzin je dat erbij?",
         ],
         uitlegPad: {
           stappen: [
@@ -855,17 +855,17 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
         q: "Jayden kijkt tijdens de uitleg steeds op de klok. Hij trommelt met zijn vingers op tafel en zucht diep. Wat kun je hieruit afleiden?",
         options: [
           "Jayden wil dat de uitleg snel voorbij is",
-          "Jayden oefent voor drumles",
-          "Jayden vindt klokken interessant",
+          "Jayden heeft honger en wil gaan eten",
+          "Jayden vindt de uitleg heel spannend",
           "Jayden heeft het koud",
         ],
         answer: 0,
         evidence: "Steeds op de klok kijken + trommelen met zijn vingers + diep zuchten.",
         wrongHints: [
           null,
-          "Grappig bedacht — maar past dat ook bij het klok-kijken en het zuchten? Eén aanwijzing is niet genoeg.",
-          "Waarom kijk jíj op de klok tijdens iets langdradigs?",
-          null,
+          "Staat er iets over eten? Verklaart honger ook het zuchten en trommelen?",
+          "Kijk je steeds op de klok als iets spannend is? Wat zegt diep zuchten?",
+          "Trommel je met je vingers als je het koud hebt? Kijk naar alle aanwijzingen samen.",
         ],
         uitlegPad: {
           stappen: [
@@ -906,7 +906,7 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
           null,
           "Staat er iets over hoe het eten smaakt? Of verzin je dat erbij?",
           "De tekst gaat over één avond. Weet je dan ook iets over de andere avonden?",
-          null,
+          "Staat er iets over de prijs? Of verzin je dat erbij?",
         ],
         uitlegPad: {
           stappen: [
@@ -960,10 +960,10 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
       {
         q: "Waarom zijn er in Zonnehof waarschijnlijk zo weinig mussen?",
         options: [
-          "Mussen vinden er nauwelijks schuilplekken, nestplekken en voedsel",
-          "In Zonnehof wonen veel minder mensen dan in de oude wijk",
-          "De tellers hebben in Zonnehof minder goed gezocht",
-          "Mussen houden niet van nieuwe huizen omdat die te fel geverfd zijn",
+          "Er zijn weinig heggen en nestplekken voor mussen",
+          "Er wonen veel minder mensen dan in de oude wijk",
+          "De tellers hebben er minder goed gezocht",
+          "Er wonen meer katten dan in de oude wijk",
         ],
         answer: 0,
         evidence: "Heggen en rommelige struiken ... zijn er nauwelijks. De moderne daken zitten potdicht: nergens een kier waar een mus haar nest in kan bouwen. (En: in de oude wijk strooien bewoners vaker oud brood.)",
@@ -971,7 +971,7 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
           null,
           "Lees de eerste alinea nog eens: wat staat daar over het aantal huizen in beide wijken?",
           "Staat er ergens iets over hóé de tellers werkten? Zoek bewijs.",
-          null,
+          "Staat er dat er meer katten zijn? Lees wat er over de tuinen en daken staat.",
         ],
         uitlegPad: {
           stappen: [
@@ -1001,7 +1001,7 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
         q: "Wat kun je uit de tekst afleiden over katten en sperwers?",
         options: [
           "Het zijn dieren die op mussen jagen",
-          "Ze komen alleen in nieuwbouwwijken voor",
+          "Ze komen vooral in nieuwbouwwijken voor",
           "Ze eten vooral oud brood uit tuinen",
           "Ze bouwen hun nest in heggen",
         ],
@@ -1010,7 +1010,7 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
         wrongHints: [
           null,
           "Staat er iets over wáár katten en sperwers wonen? Kijk waarvoor de mussen wegduiken.",
-          null,
+          "Wie strooit er oud brood, en voor wie? Lees de zin over de oude wijk.",
           "Wie duikt er weg in de heg — de mus, of de sperwer? Lees de zin nog eens precies.",
         ],
         uitlegPad: {
@@ -1050,8 +1050,8 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
         wrongHints: [
           null,
           "Evenveel huizen zegt niets over de leeftijd — de ene wijk heet juist nieuwbouwwijk. Waarom zou je wijken van gelijke grootte vergelijken?",
-          null,
-          null,
+          "Hoeveel mussen per huis staat nergens. Waarom vergelijk je juist wijken van dezelfde grootte?",
+          "Staat er waar de tellers allemaal waren? Waarom vergelijk je juist wijken van dezelfde grootte?",
         ],
         uitlegPad: {
           stappen: [
@@ -1080,10 +1080,10 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
       {
         q: "Hoe kijkt teller Ruud Blom naar de toekomst van de mussen in Zonnehof?",
         options: [
-          "Bezorgd, maar met hoop als de bewoners meehelpen",
-          "Volledig gerust — het komt vanzelf goed",
-          "Onverschillig — het maakt hem weinig uit",
-          "Woedend op de bouwers van de wijk",
+          "Bezorgd, maar met wat hoop",
+          "Gerust, het komt vanzelf goed",
+          "Onverschillig, het maakt hem niet uit",
+          "Boos, hij geeft de bouwers de schuld",
         ],
         answer: 0,
         evidence: "\"We hopen dat de bewoners meedoen. Anders vrees ik dat we hier over vijf jaar helemaal geen mussen meer tellen.\"",
@@ -1091,7 +1091,7 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
           null,
           "Let op het woord 'vrees' in zijn laatste zin — past dat bij gerust zijn?",
           "Zou iemand die het niets uitmaakt gratis nestkasten uitdelen?",
-          null,
+          "Noemt Ruud Blom de bouwers? Lees wat hij zegt en wat hij hoopt.",
         ],
         uitlegPad: {
           stappen: [
@@ -1123,14 +1123,14 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
           "Omdat mussen daar zelf nergens een nestplek kunnen vinden",
           "Omdat de bewoners van Zonnehof erom gevraagd hebben",
           "Omdat de oude wijk geen nestkasten wil ophangen",
-          "Omdat nestkasten alleen aan nieuwe huizen passen",
+          "Omdat nestkasten beter aan nieuwe huizen passen",
         ],
         answer: 0,
         evidence: "De moderne daken zitten bovendien potdicht: nergens een kier waar een mus haar nest in kan bouwen. — De vogelwerkgroep deelt daarom gratis nestkasten uit in Zonnehof.",
         wrongHints: [
           null,
           "Zoek in de tekst: wie nam het initiatief — de bewoners of de vogelwerkgroep?",
-          null,
+          "Staat er iets over de oude wijk en nestkasten? Wat mist Zonnehof volgens de tekst?",
           "Staat er iets over aan welke huizen een nestkast past? Doe de wijs-test.",
         ],
         uitlegPad: {
@@ -1160,9 +1160,9 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
       {
         q: "Teller Ruud Blom deelt gratis nestkasten uit én geeft tips voor groenere tuinen. Wat kun je hieruit concluderen?",
         options: [
-          "Ruud Blom gelooft dat bewoners kunnen helpen de mus te redden",
-          "Ruud Blom wil nestkasten verkopen voor zijn werk",
-          "Ruud Blom denkt dat de mus al uitgestorven is",
+          "Ruud Blom denkt dat bewoners de mus kunnen helpen",
+          "Ruud Blom wil later nestkasten gaan verkopen",
+          "Ruud Blom denkt dat de mus al verdwenen is",
           "Ruud Blom vindt Zonnehof een lelijke wijk",
         ],
         answer: 0,
@@ -1171,7 +1171,7 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
           null,
           "De nestkasten zijn gratis — wat zegt dat over een handelsmotief? Zoek de aanwijzing voor wát hij hoopt.",
           "Hij zegt 'we hopen dat de bewoners meedoen'. Zeg je dat als je denkt dat het al te laat is?",
-          null,
+          "Zegt hij iets over hoe mooi de wijk is? Waarom geeft hij tips voor tuinen?",
         ],
         uitlegPad: {
           stappen: [
@@ -1189,10 +1189,10 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
       {
         q: "In de tekst staat dat de tellers 'dit voorjaar' drie mussen telden in Zonnehof. Welke conclusie is ONDERBOUWD?",
         options: [
-          "Op het moment van tellen waren er drie mussen in Zonnehof",
-          "Er zullen nooit meer mussen in Zonnehof komen",
+          "In Zonnehof leven nu maar weinig mussen",
+          "Over vijf jaar zijn de mussen daar verdwenen",
           "De tellers hebben slecht geteld",
-          "Alle mussen zijn vorig jaar gestorven",
+          "Vorig jaar waren er nog veel meer mussen",
         ],
         answer: 0,
         evidence: "Tellers van een vogelwerkgroep noteerden dit voorjaar in de nieuwbouwwijk Zonnehof maar drie mussen.",
@@ -1200,13 +1200,13 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
           null,
           "De tekst beschrijft één voorjaar — weet je dan wat er ná dat moment gaat gebeuren? Kijk hoe ver je concludeert.",
           "Staat er iets in de tekst over hoe nauwkeurig de tellers werkten? Zoek een aanwijzing.",
-          null,
+          "Staat er iets over vorig jaar? De tekst noemt alleen 'dit voorjaar'.",
         ],
         uitlegPad: {
           stappen: [
             { titel: "Wat staat er letterlijk?", tekst: "Dit voorjaar = op dit ene moment. Drie mussen geteld = drie werden er gezien. Dat zijn de feiten." },
-            { titel: "Doe de te-ver-test", tekst: "'Nooit meer mussen' — dat gaat over de toekomst. De tekst gaat over één meting in het heden. Toekomst-claims gaan altijd te ver als je alleen een momentopname hebt." },
-            { titel: "Kies de voorzichtige conclusie", tekst: "Op dit moment, op die dag, telden ze er drie. Dat is alles wat je zeker weet. Voorzichtige conclusie wint." },
+            { titel: "Doe de te-ver-test", tekst: "'Over vijf jaar verdwenen' — dat gaat over de toekomst. De tekst gaat over één meting in het heden. Toekomst-claims gaan altijd te ver als je alleen een momentopname hebt." },
+            { titel: "Kies de voorzichtige conclusie", tekst: "Op dit moment, op die dag, telden ze er maar drie: nu leven er weinig mussen. Dat is alles wat je zeker weet. Voorzichtige conclusie wint." },
           ],
           niveaus: {
             basis: "De tellers deden één meting in één voorjaar. Wat weet je zeker — en wat weet je niet?",

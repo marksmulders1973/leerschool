@@ -281,7 +281,7 @@ Heb je een getal nodig? Lijst! Wil je weten wat er mag of geldt? Tekst! Probeer 
         evidence: "Vrijdag: 13.00 – 20.00 uur",
         wrongHints: [
           null,
-          "Woensdag is ook lang open — maar is het even lang als vrijdag? Bereken het voor beide.",
+          "Woensdag is lang open, maar reken het ook uit voor de andere dagen. Welke dag komt het hoogst uit?",
           "Reken uit: van 13.00 tot 17.00 uur, hoeveel uur is dat? Vergelijk het met de andere dagen.",
           "Reken uit hoeveel uur de bibliotheek op zaterdag open is. Is dat veel of weinig vergeleken met de rest?",
         ],
