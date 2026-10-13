@@ -184,10 +184,10 @@ const steps = [
       ],
       answer: 1,
       wrongHints: [
-        "Te sterk — tekst zegt 'BELANGRIJKE oorzaak', niet 'HOOFDoorzaak'. Pesticiden + klimaat zijn ook genoemd.",
+        "Lees de laatste zin van alinea 1 nog eens precies. Noemen de onderzoekers kunstlicht 'de hoofdoorzaak'? En welke andere oorzaken staan er in die alinea?",
         null,
-        "Overtuigen vraagt MENING/OPROEP. Tekst noemt resultaten — geen oproep tot meer onderzoek.",
-        "Overtuigen tot uitzetten = oproep. Tekst doet aanbevelingen maar drukt niet op de knop 'doe dit nu'.",
+        "Roept de tekst ergens op tot meer onderzoek naar kunstlicht? Zoek naar zo'n oproep.",
+        "Alinea 8 geeft tips. Maar draait de héle tekst om de oproep om alle onnodige lampen uit te doen?",
       ],
       explanation: "Doel = informeren (feiten + onderzoeksresultaten zonder eigen mening). Specifiek over een NIEUWE oorzaak — kunstlicht — die naast de bekende oorzaken (pesticiden, klimaat) komt. NIET 'de hoofdoorzaak' want de tekst zegt 'een belangrijke oorzaak'.",
       examenBron: BRON_LABEL(18),
@@ -202,7 +202,7 @@ const steps = [
         "4 doelen: INFORMEREN, OVERTUIGEN, AMUSEREN, ACTIVEREN. Hier: feiten + onderzoek + geen mening = informeren. PAS OP nuance: 'HOOFDoorzaak' (de allerbelangrijkste oorzaak) ≠ 'EEN belangrijke oorzaak' (licht is één van de oorzaken). Tekst zegt het laatste.",
         {
           basis: "Informeren + EEN oorzaak (niet DE).",
-          simpeler: "B is voorzichtig geformuleerd: 'nieuwe, waarschijnlijk belangrijke'. Dat matcht de tekst.",
+          simpeler: "Het juiste antwoord is voorzichtig geformuleerd: 'nieuwe, waarschijnlijk belangrijke'. Dat matcht de tekst.",
           nogSimpeler: "Informeren-EEN",
         },
         [
@@ -268,7 +268,7 @@ const steps = [
       wrongHints: [
         "Te smal — de tekst noemt geen cijfers over de hoeveelheid zwerfafval.",
         null,
-        "Overtuigen = mening. Tekst beschrijft + nuanceert (zelfs psychologen ingeschakeld), neemt geen stelling 'McDonald's is goed'.",
+        "Zegt de schrijver ergens zelf dat McDonald's goed bezig is met recyclen? Zoek naar een zin met een mening.",
         "Overtuigen lezer = aansporing voor de LEZER. Spoort de tekst jou aan om zelf iets te doen?",
       ],
       explanation: "Tekst beschrijft: McDonald's wil zwerfafval aanpakken, gebruikt psychologen, beloont schone klanten, neemt verpakkingen terug. Allemaal AANPAK-info zonder mening. = informeren over hoe ze omgaan met afval.",

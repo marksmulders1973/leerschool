@@ -59,9 +59,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Koffie is een ding, geen werkwoord.",
+          "'Koffie' is iets wat je drinkt. Kun je het vervoegen, zoals ik koffie, hij kofft?",
           "Heerlijk zegt hoe iets is. Kun je het vervoegen, zoals ik heerlijk, hij heerlijkt?",
-          "Vandaag is een tijdsaanduiding, geen werkwoord.",
+          "'Vandaag' zegt wanneer. Verandert het als je de zin in een andere tijd zet: 'De koffie smaakte gisteren heerlijk'?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Pv = vervoegd werkwoord", tekst: "Smaakt is vervoegd naar 'koffie' (3e persoon enkv)." }],
@@ -79,8 +79,8 @@ const steps = [
         wrongHints: [
           null,
           "Gekeken is een werkwoord, maar niet vervoegd naar 'wij' — dat is een werkwoordelijk restdeel. Welk werkwoord is wel vervoegd?",
-          "Wij is een persoonlijk voornaamwoord, geen werkwoord.",
-          "Film is een zelfstandig naamwoord. Geen werkwoord.",
+          "'Wij' zegt wie het doet. Verandert 'wij' als je de zin in de verleden tijd zet?",
+          "Kun je 'film' vervoegen, zoals ik film, hij filmt? En betekent dat in deze zin hetzelfde?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Hebben = pv, gekeken = restdeel", tekst: "Hebben is vervoegd naar 'wij'. Gekeken is voltooid deelwoord." }],
@@ -114,9 +114,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "'Speelt' is de persoonsvorm, niet het onderwerp.",
-          "Telefoon is wat hij gebruikt, niet wie de actie uitvoert.",
-          "'Op zijn telefoon' is een bepaling (waarop?). Niet wie de actie uitvoert.",
+          "'Speelt' zegt wat er gebeurt. Stel de vraag: wie of wat speelt? Is 'speelt' daar het antwoord op?",
+          "Stel de vraag: wie of wat speelt? Is het antwoord 'telefoon'?",
+          "'Op zijn telefoon' zegt waarop er gespeeld wordt. Is dat ook wie er speelt?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Wie speelt?", tekst: "Vraag bij pv 'speelt' → wie speelt? → mijn broertje." }],
@@ -133,9 +133,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Vandaag is een tijdsaanduiding (bepaling), geen onderwerp.",
+          "'Vandaag' zegt wanneer het regent. Stel de vraag: wie of wat regent?",
           "Regent is de persoonsvorm. Vraag: 'wat regent?' — antwoord = onderwerp.",
-          "'De hele dag' is een tijdsbepaling, geen onderwerp.",
+          "'De hele dag' zegt hoe lang het regent. Verandert de persoonsvorm als je 'de hele dag' meervoud maakt?",
         ],
         uitlegPad: {
           stappen: [{ titel: "'Het' = loos onderwerp", tekst: "Bij weer: 'het regent' — 'het' is grammaticaal verplicht onderwerp." }],
@@ -259,9 +259,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Brandt is een actie-werkwoord — werkwoordelijk gezegde.",
-          "Schijnt = actie. Dat is werkwoordelijk gezegde.",
-          "Zakt = actie. Werkwoordelijk gezegde.",
+          "Kun je 'brandt' vervangen door 'is' of 'wordt'? Of doet de zon hier echt iets?",
+          "'Schijnen' kan soms een koppelwerkwoord zijn ('hij schijnt ziek'). Maar wat doet de zon hier: is hij iets, of schijnt hij ergens door?",
+          "Kun je 'zakt' vervangen door 'is' of 'wordt'? Of beschrijft het wat de zon doet?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Wordt + bnw = naamwoordelijk", tekst: "De zon wordt rood: wordt (koppelww) + rood (bnw) = naamwoordelijk." }],
@@ -305,9 +305,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Hier is 'is' een koppelwerkwoord en 'timmerman' het naamwoordelijke deel — naamwoordelijk gezegde.",
-          "Wordt = koppelww, koud = bijv. naamw. → naamwoordelijk gezegde.",
-          "Lijkt = koppelww, boos = bijv. naamw. → naamwoordelijk gezegde.",
+          "Is 'is' hier een koppelwerkwoord? Doet de vader iets, of zegt de zin wat hij is?",
+          "Kun je 'wordt' vervangen door 'is'? Doet de koffie iets, of zegt de zin hoe de koffie wordt?",
+          "Kun je 'lijkt' vervangen door 'is'? Doet zij iets, of zegt de zin hoe zij is?",
         ],
         uitlegPad: {
           stappen: [{ titel: "'Zijn' = hulpww in volt. tijd", tekst: "Wij zijn gegaan: zijn + gegaan (voltooid deelw) = werkwoordelijk gezegde." }],
@@ -349,9 +349,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Mijn vader = onderwerp (wie bakt?), niet lv.",
-          "Elke zondag = bepaling van tijd, geen lv.",
-          "Bakt = persoonsvorm. Lv = wat wordt gebakken?",
+          "Stel de vraag: wie of wat bakt? Is het antwoord ook wat er gebakken wordt?",
+          "'Elke zondag' zegt wanneer. Wordt 'elke zondag' gebakken?",
+          "'Bakt' is het werkwoord zelf. Stel de vraag: wat bakt mijn vader?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Lv = wat ondergaat?", tekst: "Wat bakt mijn vader? pannenkoeken = lv." }],
@@ -373,9 +373,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Sara leest een boek → 'een boek' is het lv.",
-          "Mijn vader bakt pannenkoeken → 'pannenkoeken' is het lv.",
-          "De hond bijt de postbode → 'de postbode' is het lv.",
+          "Stel de vraag: wat leest Sara? Krijg je een antwoord? Dan is er wél een lijdend voorwerp.",
+          "Stel de vraag: wat bakt mijn vader? Krijg je een antwoord? Dan is er wél een lijdend voorwerp.",
+          "Stel de vraag: wie bijt de hond? Krijg je een antwoord? Dan is er wél een lijdend voorwerp.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Rennen = onovergankelijk", tekst: "Rennen heeft geen lv. 'De jongen rent door het bos' — geen wat-vraag." }],
@@ -415,9 +415,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Een brief = lv (wat werd er geschreven). Mv = aan wie werd het geschreven.",
-          "Mijn opa = onderwerp (wie schreef?).",
-          "Schreef = persoonsvorm.",
+          "Stel de vraag: wat schreef opa? Is dat hetzelfde als aan wie hij schreef?",
+          "Stel de vraag: wie schreef? Is dat ook degene die de brief krijgt?",
+          "'Schreef' is het werkwoord zelf. Kan een werkwoord iets krijgen?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Mv = aan/voor wie?", tekst: "Aan wie schreef opa? mij = mv." }],
@@ -457,9 +457,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Zijn vriend = mv (aan wie). Lv = wat wordt gegeven.",
-          "Tom = onderwerp (wie geeft?).",
-          "Geeft = persoonsvorm.",
+          "Stel de vraag: wat geeft Tom? Is het antwoord 'zijn vriend'?",
+          "Stel de vraag: wie geeft? Wordt Tom ook gegeven?",
+          "'Geeft' is het werkwoord zelf. Stel de vraag: wat geeft Tom?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Lv = wat?", tekst: "Wat geeft Tom? een nieuw boek = lv." }],
@@ -481,9 +481,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Een nieuw boek = lv (wat). Mv = aan/voor wie.",
-          "Tom = onderwerp.",
-          "Geeft = pv.",
+          "Stel de vraag: aan wie geeft Tom iets? Is het antwoord 'een nieuw boek'?",
+          "Stel de vraag: wie geeft? Krijgt Tom ook iets?",
+          "'Geeft' is het werkwoord zelf. Stel de vraag: aan wie geeft Tom iets?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Mv = aan wie?", tekst: "Aan wie geeft Tom? zijn vriend = mv." }],
@@ -529,9 +529,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "'Met Tom' = bepaling van gezelschap (met wie?).",
-          "'Naar het strand' = bepaling van plaats (waarheen?).",
-          "'Ga' = persoonsvorm. Vraag bij tijd: 'wanneer?' → antwoord = bep. van tijd.",
+          "'Met Tom' zegt met wie. Geeft het antwoord op de vraag 'wanneer?'",
+          "'Naar het strand' zegt waarheen. Geeft het antwoord op de vraag 'wanneer?'",
+          "'Ga' is het werkwoord zelf. Welk zinsdeel zegt wanneer ik ga?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Wanneer? = tijd", tekst: "Vraag 'wanneer?' → morgen = bep. van tijd." }],
@@ -575,9 +575,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Snelle staat bij 'auto' (zelfst. naamw.) — dat is een bnw.",
-          "Snelle staat bij 'hardloper' (zelfst. naamw.) — bnw.",
-          "Snelle staat bij 'reactie' (zelfst. naamw.) — bnw.",
+          "Zegt 'snelle' hier iets over de auto (een ding) of over hoe iemand iets doet?",
+          "Zegt 'snelle' hier iets over de hardloper (een persoon) of over hoe iemand iets doet?",
+          "Zegt 'snelle' hier iets over de reactie (een ding) of over hoe iemand iets doet?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Bw bij werkwoord", tekst: "'Snel' bij 'loopt' (ww) = bijwoord." }],
@@ -613,9 +613,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Vandaag = bepaling van tijd (wanneer?).",
-          "Een feest = lv (wat werd er georganiseerd?).",
-          "(Voor) ons zegt voor wie het feest is — niet wie het organiseerde.",
+          "'Vandaag' zegt wanneer. Verandert de persoonsvorm als je 'vandaag' vervangt door iets in het meervoud?",
+          "Stel de vraag: wat heeft mijn moeder georganiseerd? Is dat ook wie het organiseerde?",
+          "'Voor ons' zegt voor wie het feest is. Heeft 'ons' het feest georganiseerd?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Wie heeft georganiseerd?", tekst: "Wie heeft georganiseerd? mijn moeder = onderwerp." }],
@@ -637,9 +637,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Werkt = actie-werkwoord → werkwoordelijk gezegde.",
-          "Heeft = werkwoord met betekenis (bezit), geen koppelww in deze context. Werkwoordelijk gezegde.",
-          "Bouwt = actie → werkwoordelijk gezegde.",
+          "Kun je 'werkt' vervangen door 'is'? Of doet de vader hier iets?",
+          "Kun je 'heeft' vervangen door 'is'? Of zegt 'heeft' hier wat de vader bezit?",
+          "Kun je 'bouwt' vervangen door 'is'? Of doet de vader hier iets?",
         ],
         uitlegPad: {
           stappen: [{ titel: "'Is' + naamw. deel", tekst: "Mijn vader is timmerman: is (koppelww) + timmerman (zelfst.naamw.) = naamwoordelijk." }],
@@ -661,9 +661,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Naar huis = bepaling van plaats (waarheen?).",
-          "Omdat hij honger had = bepaling van reden (waarom?).",
-          "Rende = persoonsvorm. Wijze = HOE? — antwoord = bep. van wijze.",
+          "'Naar huis' zegt waarheen. Geeft het antwoord op de vraag 'hoe?'",
+          "'Omdat hij honger had' zegt waarom. Geeft het antwoord op de vraag 'hoe?'",
+          "'Rende' is het werkwoord zelf. Welk zinsdeel zegt hoe de jongen rende?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Hoe? = wijze", tekst: "Hoe rende hij? snel = bep. van wijze." }],
@@ -685,9 +685,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "De leerlingen = mv (aan wie werd iets gegeven?).",
-          "De juf = onderwerp (wie gaf?).",
-          "Na de les = bep. van tijd.",
+          "Stel de vraag: wat gaf de juf? Is het antwoord 'de leerlingen'?",
+          "Stel de vraag: wie gaf? Wordt de juf ook gegeven?",
+          "'Na de les' zegt wanneer. Stel de vraag: wat gaf de juf?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Wat werd gegeven?", tekst: "Wat gaf de juf? hun eerste rapport = lv." }],
@@ -769,8 +769,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Binnen = bep. van plaats (waar?), niet van reden.",
-          "We = onderwerp.",
+          "'Binnen' zegt waar we blijven. Geeft het antwoord op de vraag 'waarom?'",
+          "'We' zegt wie er binnen blijft. Geeft het antwoord op de vraag 'waarom?'",
           "Blijven = persoonsvorm. Welk zinsdeel geeft antwoord op de vraag 'waarom?'",
         ],
         uitlegPad: {
@@ -806,8 +806,8 @@ const steps = [
         wrongHints: [
           null,
           "Verhuizen is een werkwoord, maar is het vervoegd? Zet de zin in het enkelvoud ('mijn vader …'): welk werkwoord verandert dan mee?",
-          "Ouders = onderwerp.",
-          "Spanje = bep. van plaats.",
+          "'Ouders' zegt wie er verhuist. Is het een werkwoord dat je kunt vervoegen?",
+          "'Spanje' zegt waarheen. Verandert dat woord als je de zin in de verleden tijd zet?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Zullen = pv", tekst: "Verhuizen is niet vervoegd. Zullen wel: zullen (mv) past bij 'mijn ouders'." }],
@@ -853,9 +853,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "'Voor haar collega's' zegt voor wie, niet wanneer.",
-          "'Een grote taart' = lv (wat wordt gebakken?).",
-          "'Mijn moeder' = onderwerp.",
+          "'Voor haar collega's' zegt voor wie. Geeft het antwoord op de vraag 'wanneer?'",
+          "Stel de vraag: wanneer bakt moeder? Is het antwoord 'een grote taart'?",
+          "'Mijn moeder' zegt wie bakt. Geeft het antwoord op de vraag 'wanneer?'",
         ],
         uitlegPad: {
           stappen: [{ titel: "Wanneer bakt ze?", tekst: "Vraag 'wanneer?' → morgen = bep. van tijd." }],
@@ -877,9 +877,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Atleet = zelfstandig naamwoord (zaak/persoon).",
-          "Finish = zelfstandig naamwoord.",
-          "Naar = voorzetsel.",
+          "Kun je 'de' voor 'atleet' zetten? Wat voor woord is het dan?",
+          "Kun je 'de' voor 'finish' zetten? Wat voor woord is het dan?",
+          "'Naar' staat vóór 'de finish'. Zegt het iets over hoe snel de atleet liep?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Bw versterkt ander bw", tekst: "'Ongelooflijk' bij 'snel' (ook bw) = bijwoord." }],

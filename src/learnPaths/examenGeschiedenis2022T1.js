@@ -82,7 +82,7 @@ const steps = [
         "terreur + strafkampen",
       ],
       answer: 3,
-      wrongHints: ["Showprocessen = USSR-Stalin (1936-1938 grote zuiveringen), niet Nazi-Duitsland.", "Bekijk beide begrippen apart: past elk van de twee bij hoe het Nazi-regime met tegenstanders omging?", "Showprocessen = Stalin, niet Hitler.", null],
+      wrongHints: ["Bekijk beide begrippen apart. Wat is een showproces, en bij welk regime hoorden showprocessen vooral?", "Bekijk beide begrippen apart: wat betekent elk begrip precies?", "Bekijk beide begrippen apart. Wat betekent terreur, wat is een showproces, en bij welk regime hoort elk begrip?", null],
       explanation: "Nazi-regime-kenmerken: **terreur** (Gestapo arresteerde willekeurig, Kristallnacht-pogroms), **strafkampen** (Dachau 1933, Auschwitz 1940 — concentratie- + vernietigingskampen). Showprocessen zijn juist Sovjet-Unie onder Stalin (geënsceneerde rechtszaken).",
       examenBron: BRON_LABEL(17),
       bronLink: BRON_LINK,

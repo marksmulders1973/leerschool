@@ -140,7 +140,7 @@ const steps = [
         q: "Wat hoort NIET in het **slot** van een betoog?",
         options: ["Nieuwe argumenten","Stelling herhalen","Oproep tot actie","Conclusie"],
         answer: 0,
-        wrongHints: [null, "Het slot herhaalt de stelling vaak, krachtiger dan eerst. Wat hoort er juist níét in?", "Een oproep als 'Teken daarom de petitie!' is een gebruikelijk slot. Hoort die dus wel of niet in het slot?", "Het slot is de plek voor de conclusie. Wat hoort al eerder in de tekst te staan?"],
+        wrongHints: [null, "Het slot herhaalt de stelling vaak, krachtiger dan eerst. Wat hoort er juist níét in?", "Een oproep als 'Teken daarom de petitie!' is een gebruikelijk slot. Hoort die dus wel of niet in het slot?", "De conclusie is waar het slot om draait. Is dat dan wat er níét in hoort?"],
         uitlegPad: {
           stappen: [{ titel: "Slot = afsluiten, niet openen", tekst: "Slot **sluit af**. Geen nieuwe argumenten — die horen in middenstuk. Slot herhaalt stelling (krachtiger) + eventueel oproep. Nieuw materiaal in slot = zwak betoog (lezer kan niet meer reageren)." }],
           theorie: "Toets-tip: in slot 'Concluderend...' / 'Daarom blijft...' / 'Het moet duidelijk zijn dat...' zijn signaalwoorden.",
@@ -181,7 +181,7 @@ const steps = [
         q: "*'Mijn tegenstander wil het leger volledig afschaffen!'* (terwijl hij alleen bezuinigen voorstelde) — drogreden:",
         options: ["Stroman","Hellend vlak","Generalisatie","Cirkelredenering"],
         answer: 0,
-        wrongHints: [null, "Bij een hellend vlak voorspel je een keten van gevolgen: als A, dan B, dan C. Zie je hier zo'n keten?", "Bij een generalisatie doe je een uitspraak over een hele groep. Gaat deze zin over een groep?", "Bij een cirkelredenering bewijst de conclusie zichzelf. Vergelijk wat de tegenstander zei met wat hier staat."],
+        wrongHints: [null, "Bij een hellend vlak voorspel je een keten van gevolgen: als A, dan B, dan C. Zie je hier zo'n keten?", "Bij een generalisatie doe je een uitspraak over een hele groep. Gaat deze zin over een groep?", "Bij een cirkelredenering bewijst de conclusie zichzelf. Welke reden wordt hier eigenlijk gegeven?"],
         uitlegPad: {
           stappen: [{ titel: "Stroman = verdraaid tegenstandpunt", tekst: "**Stroman-drogreden**: argument tegenstander **verdraaien tot extreme versie** die makkelijker te verslaan is. Bezuinigen ≠ afschaffen. Vechten tegen iets dat tegenstander niet zei." }],
           theorie: "Strawman (Engels) — je schiet een stropop neer in plaats van het echte argument.",
@@ -223,7 +223,7 @@ const steps = [
         q: "*'Wie wil er nou niet gezond leven?'* — welk stijlmiddel?",
         options: ["Retorische vraag","Contrast","Metafoor","Hyperbool"],
         answer: 0,
-        wrongHints: [null, "Bij contrast zet je twee tegengestelde dingen naast elkaar. Zie je hier een tegenstelling?", "Een metafoor noemt iets met een beeld. Welk beeld zie je hier?", "Een hyperbool overdrijft. Wordt hier iets overdreven? Kijk ook naar het leesteken aan het eind."],
+        wrongHints: [null, "Bij contrast zet je twee tegengestelde dingen naast elkaar. Zie je hier een tegenstelling?", "Een metafoor noemt iets met een beeld. Welk beeld zie je hier?", "Een hyperbool overdrijft, zoals 'ik heb het duizend keer gezegd'. Welk woord in deze zin is overdreven?"],
         uitlegPad: {
           stappen: [{ titel: "Vraag waarvan antwoord duidelijk", tekst: "**Retorische vraag**: vraag NIET om info maar om effect. Antwoord ligt vast ('niemand wil ongezond leven'). Doel: lezer impliciet doen instemmen." }],
           theorie: "Toets-patroon: retorische vragen vaak in opiniestukken + speeches.",
@@ -245,7 +245,7 @@ const steps = [
         q: "Wat is een **understatement**?",
         options: ["Bewust afzwakken","Bewust overdrijven","Vraag stellen","Beeldspraak"],
         answer: 0,
-        wrongHints: [null, "Bewust overdrijven heet een hyperbool. Zou een ander stijlmiddel dan precies hetzelfde doen?", "Een vraag waarop je geen antwoord verwacht, heet een retorische vraag. Waar gaat een understatement over?", "Beeldspraak is een metafoor of vergelijking. Wat betekent 'under' in understatement?"],
+        wrongHints: [null, "Bewust overdrijven heet een hyperbool. Zou een ander stijlmiddel dan precies hetzelfde doen?", "Een vraag waarop je geen antwoord verwacht, heet een retorische vraag. Waar gaat een understatement over?", "Beeldspraak is een metafoor of vergelijking. Zit er in een understatement een beeld?"],
         uitlegPad: {
           stappen: [{ titel: "Understatement = onderbenadrukking", tekst: "**Understatement** = bewust afzwakken. 'Niet onaardig' = heel aardig. 'Het regent een beetje' (terwijl 't plenst). Engels: 'It's a bit chilly' (bij −20°C). Vaak ironisch effect." }],
           theorie: "Britse humor-favoriet. Tegenovergesteld van hyperbool.",
@@ -287,7 +287,7 @@ const steps = [
         q: "*'Alle moderne muziek is vreselijk, want dat zegt mijn opa.'* — drogreden:",
         options: ["Autoriteits-misbruik + generalisatie","Vals dilemma + persoonlijke aanval","Hellend vlak + cirkelredenering","Geldig autoriteitsargument"],
         answer: 0,
-        wrongHints: [null, "Bij een vals dilemma krijg je twee keuzes en bij een persoonlijke aanval wordt iemand afgekraakt. Gebeurt een van die twee hier?", "Er volgt geen kettingreactie en de conclusie herhaalt zichzelf niet. Kijk naar het woord 'alle' en naar de bron.", "Is een opa deskundig op het gebied van moderne muziek? Wanneer is een beroep op iemand terecht?"],
+        wrongHints: [null, "Bij een vals dilemma krijg je twee keuzes en bij een persoonlijke aanval wordt iemand afgekraakt. Gebeurt een van die twee hier?", "Bij een hellend vlak volgt een kettingreactie en bij een cirkelredenering herhaalt de conclusie zichzelf. Zie je een van die twee hier?", "Is een opa deskundig op het gebied van moderne muziek? Wanneer is een beroep op iemand terecht?"],
         uitlegPad: {
           stappen: [{ titel: "Dubbel: opa + alle", tekst: "**Twee drogredenen**: (1) opa is geen muziek-expert → autoriteits-misbruik. (2) 'Alle moderne muziek' → generalisatie. Combinatie maakt argument extra zwak." }],
           niveaus: { basis: "Autoriteit + generalisatie.", simpeler: "Opa + alle = twee drogredenen", nogSimpeler: "Drogreden" },

@@ -120,8 +120,8 @@ const steps = [
         wrongHints: [
           null,
           "De Renaissance begon rond 1500. Ken je een periode die nog eerder was?",
-          "Romantiek is veel later (~1800).",
-          "Modernisme is 20e-eeuw — bijna het einde van het overzicht.",
+          "De Romantiek is van rond 1800. Ken je een periode die nog veel eerder was?",
+          "Het Modernisme is van de 20e eeuw. Welke periode op het rijtje ligt het verst in het verleden?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Middeleeuwen eerst", tekst: "Chronologie: Middeleeuwen (500-1500) → Renaissance → Verlichting → Romantiek..." }],
@@ -622,8 +622,8 @@ const steps = [
         wrongHints: [
           null,
           "Er staat geen \"ik\" in de zin. Het gaat over \"hij\".",
-          "Personaal beperkt zich tot wat één personage weet. Hier weet de verteller iets dat het personage juist NIET weet.",
-          "Wisselend perspectief vereist twee verschillende focus-personages. Hier is één scène met overstijgende kennis.",
+          "Personaal beperkt zich tot wat één personage weet. Weet de man zelf dat zijn vrouw haar koffers pakt?",
+          "Bij wisselend perspectief kijk je om de beurt met verschillende personages mee. Met wie kijk je hier mee, en wie weet wat?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Auctorieel = alwetend", tekst: "Verteller weet meer dan personage (vrouw pakt koffers, hij weet 't niet) = alwetende verteller." }],
@@ -664,9 +664,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Een vergelijking gebruikt \"als\" of \"zoals\". Hier staat een directe gelijkstelling zonder die woorden.",
-          "Personificatie geeft een levenloos ding menselijke eigenschappen. Hier wordt iets aan iets anders gelijkgesteld.",
-          "Hyperbool is overdrijving. Hier wordt een beeld gebruikt, geen overdrijving.",
+          "Een vergelijking gebruikt \"als\" of \"zoals\". Staat een van die woorden in deze zin?",
+          "Personificatie geeft een levenloos ding menselijke eigenschappen. Is het hart hier het levenloze ding dat iets menselijks doet?",
+          "Een hyperbool overdrijft, zoals \"ik heb het duizend keer gezegd\". Is deze zin een overdrijving of een beeld?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Metafoor = zonder 'als'", tekst: "'Hart is een gevangenis' — gelijkstelling zonder 'als' → metafoor." }],
@@ -688,8 +688,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Een metafoor stelt iets gelijk aan iets anders. Hier krijgt de wind menselijk gedrag (fluisteren) toegekend.",
-          "Hyperbool = overdrijving. Hier wordt iets niet overdreven, maar bezield.",
+          "Een metafoor stelt iets gelijk aan iets anders: \"de wind is een …\". Gebeurt dat hier, of doet de wind iets?",
+          "Een hyperbool overdrijft. Kan wind echt fluisteren, en is dat een overdrijving of iets anders?",
           "Litotes = onderdrijving (\"niet onaardig\"). Hier is geen ontkenning.",
         ],
         uitlegPad: {
@@ -772,9 +772,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Auctorieel zou ook de gedachten van andere personages of toekomstige gebeurtenissen kennen. Hier blijven we bij één man, één moment.",
+          "Auctorieel zou ook de gedachten van andere personages of toekomstige gebeurtenissen kennen. Zie je die hier?",
           "Er staat geen \"ik\" in de zin. Hij = derde persoon.",
-          "Wisselend vereist meerdere focus-personages. Hier is er één.",
+          "Bij wisselend perspectief kijk je om de beurt met verschillende personages mee. Hoeveel personages komen hier voor?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Personaal = één hoofd", tekst: "Verteller kruipt in 1 personage (hij dacht...). Geen alwetendheid." }],
@@ -796,8 +796,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Hyperbool = juist overdrijving. Hier wordt bewust afgezwakt (\"niet onaardig\" = aardig zonder enthousiast over te komen).",
-          "Een metafoor zou iets gelijkstellen aan iets anders. Hier wordt een eigenschap afgezwakt uitgedrukt.",
+          "Een hyperbool overdrijft, zoals \"ik heb het duizend keer gezegd\". Klinkt \"niet onaardig\" als een overdrijving?",
+          "Een metafoor stelt iets gelijk aan iets anders. Wordt \"wat ze zei\" hier met iets anders gelijkgesteld?",
           "Personificatie geeft menselijke eigenschappen aan iets levenloos. Hier is geen levenloos object aan het werk.",
         ],
         uitlegPad: {
@@ -809,13 +809,13 @@ const steps = [
           niveaus: { basis: "Litotes.", simpeler: "Onderdrijving.", nogSimpeler: "Litotes." },
         },
       },
-      { q: "*Max Havelaar* (Multatuli) protesteerde tegen?", options: ["Koloniale uitbuiting in Indië","De macht van het koningshuis","Kinderarbeid in de fabrieken","De macht van de kerk"], answer: 0, wrongHints: [null, "Niet het onderwerp van het boek. Waar speelt het verhaal van Havelaar zich af?", "Kinderarbeid in fabrieken was een thema in andere 19e-eeuwse boeken. Waar en tegen wie richtte Havelaar zich?", "Over de kerk gaat het boek niet. In welk land speelt het grootste deel van het verhaal?"] },
+      { q: "*Max Havelaar* (Multatuli) protesteerde tegen?", options: ["Koloniale uitbuiting in Indië","De macht van het koningshuis","Kinderarbeid in de fabrieken","De macht van de kerk"], answer: 0, wrongHints: [null, "Het koningshuis speelt in het boek geen hoofdrol. Waar speelt het verhaal van Havelaar zich af?", "Kinderarbeid in fabrieken was een thema in andere 19e-eeuwse boeken. Waar en tegen wie richtte Havelaar zich?", "Over de kerk gaat het boek niet. In welk land speelt het grootste deel van het verhaal?"] },
       { q: "Tot welke stroming hoort Joost van den Vondel?", options: ["Renaissance","Romantiek","Modernisme","Postmodernisme"], answer: 0, wrongHints: [null, "De Romantiek is van rond 1800. Wanneer schreef Vondel zijn Gysbreght (1637)?", "Het Modernisme is van de 20e eeuw. In welke eeuw leefde Vondel?", "Het Postmodernisme begint pas na 1965. In welke eeuw leefde Vondel?"] },
-      { q: "De **Tachtigers** stonden bekend om?", options: ["L'art pour l'art / individualisme","Realisme en maatschappijkritiek","Vaste klassieke regels en vormen","Religieuze en stichtelijke poëzie"], answer: 0, wrongHints: [null, "Dat geldt vooral voor het proza uit die tijd.", "De Tachtigers zetten zich juist af tegen oude regels en vormen. Wat vonden zij dan het belangrijkst in kunst?", "Stichtelijke dominee-poëzie was juist waar de Tachtigers zich tegen afzetten. Wat stelden zij ervoor in de plaats?"] },
+      { q: "De **Tachtigers** stonden bekend om?", options: ["L'art pour l'art / individualisme","Realisme en maatschappijkritiek","Vaste klassieke regels en vormen","Religieuze en stichtelijke poëzie"], answer: 0, wrongHints: [null, "Realisme en maatschappijkritiek horen vooral bij de romanschrijvers van die tijd. Waar ging het de Tachtigers als dichters om?", "De Tachtigers zetten zich juist af tegen oude regels en vormen. Wat vonden zij dan het belangrijkst in kunst?", "Stichtelijke dominee-poëzie was juist waar de Tachtigers zich tegen afzetten. Wat stelden zij ervoor in de plaats?"] },
       { q: "Welk verschil is er tussen **'ik-perspectief'** en **'auctorieel'**?", options: ["Ik = 1e persoon binnenuit; auctorieel = alwetend","Ik = 1e persoon; auctorieel = 2e persoon (jij)","Ik is onbetrouwbaar; auctorieel is betrouwbaar","Auctorieel = 1e persoon; ik = alwetende verteller"], answer: 0, wrongHints: [null, "Een auctoriële verteller spreekt de lezer niet aan met 'jij'. Wat weet die verteller allemaal?", "Is een ik-verteller per definitie onbetrouwbaar?", "Draai het eens om: welke verteller spreekt in de eerste persoon, en welke weet alles?"] },
       { q: "Een **stijlfiguur** zoals 'zo wit als sneeuw' heet?", options: ["Vergelijking","Metafoor","Personificatie","Ironie"], answer: 0, wrongHints: [null,"Een metafoor laat 'als' of 'zoals' weg. Staat dat woord hier wel?","Bij personificatie krijgt een ding menselijke eigenschappen. Gebeurt dat met de sneeuw?","Bij ironie bedoel je het tegenovergestelde. Is 'zo wit als sneeuw' anders bedoeld dan er staat?"] },
       { q: "**Metafoor**: 'Hij is een leeuw' — wat is dat?", options: ["Vergelijking ZONDER 'als/zoals'","Vergelijking MET 'als/zoals'","Tegenstelling tussen twee dingen","Overdrijving om indruk te maken"], answer: 0, wrongHints: [null,"Dan is het een gewone vergelijking. Staat er 'als' of 'zoals' in de zin?","Worden hier twee dingen tegenover elkaar gezet?","Is 'hij is een leeuw' vooral een overdrijving, of wordt hij met iets vergeleken?"] },
-      { q: "Wat is **personificatie**?", options: ["Ding krijgt een menselijke eigenschap","Mens wordt als een ding beschreven","Vergelijking met als/zoals","Overdrijving voor effect"], answer: 0, wrongHints: [null,"Dat is precies het omgekeerde. Wat betekent het woorddeel 'persoon' in personificatie?","Dat is een vergelijking — geen menselijke eigenschap.","Overdrijving voor effect heet een hyperbool. Wat betekent het woorddeel 'persoon' in personificatie?"] },
+      { q: "Wat is **personificatie**?", options: ["Ding krijgt een menselijke eigenschap","Mens wordt als een ding beschreven","Vergelijking met als/zoals","Overdrijving voor effect"], answer: 0, wrongHints: [null,"Dat is precies het omgekeerde. Wat betekent het woorddeel 'persoon' in personificatie?","Een vergelijking met als of zoals is een ander stijlmiddel. Wat betekent het woorddeel 'persoon' in personificatie?","Overdrijving voor effect heet een hyperbool. Wat betekent het woorddeel 'persoon' in personificatie?"] },
       { q: "Wie schreef **'Het Achterhuis'** (het dagboek uit de onderduik in de Tweede Wereldoorlog)?", options: ["Anne Frank","Etty Hillesum","Harry Mulisch","Marga Minco"], answer: 0, wrongHints: [null,"Etty Hillesum hield in de oorlog ook een dagboek bij, maar zat niet ondergedoken; haar dagboeken heten 'Het verstoorde leven'. Wie schreef in het Achterhuis?","Mulisch schreef ná de oorlog over de oorlog, bijvoorbeeld 'De aanslag'. Wie hield tijdens de onderduik zelf een dagboek bij?","Marga Minco schreef 'Het bittere kruid' over haar Joodse familie in de oorlog, maar als verhaal achteraf. Wie hield tijdens de onderduik een dagboek bij?"] },
       { q: "Een **roman** is meestal hoeveel pagina's?", options: ["100-500","5-20","1000+","40-90"], answer: 0, wrongHints: [null,"5 tot 20 pagina's is de lengte van een kort verhaal. Hoe lang is een roman meestal?","Romans van meer dan duizend pagina's bestaan, maar zijn uitzonderingen. Wat is meestal de lengte?","40 tot 90 pagina's past eerder bij een novelle. Hoe verschilt een roman in lengte van een novelle?"] },
       { q: "Welke is een **literaire stroming** uit de 19e eeuw?", options: ["Romantiek","Modernisme","Postmodernisme","Vijftigers"], answer: 0, wrongHints: [null, "Het Modernisme is van de 20e eeuw (ongeveer 1900-1945). Welke stroming is ouder?", "Het Postmodernisme begint pas rond 1965. Welke stroming hoort bij de jaren 1800-1900?", "De Vijftigers schreven rond 1950, in de 20e eeuw. Welke stroming is van vóór 1900?"] },

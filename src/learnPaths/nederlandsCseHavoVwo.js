@@ -290,7 +290,7 @@ const steps = [
         q: "**Alinea-functie** 'voorbeeld geven':",
         options: ["Illustratie van een eerder argument", "De hoofdgedachte van de tekst geven", "Een tegenargument noemen en weerleggen", "De tekst samenvatten en afronden"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is de kern van de tekst, geen voorbeeld.", "Niet — dat is een weerlegging.", "Niet — dat doet het slot."],
+        wrongHints: [null, "De hoofdgedachte is de kern van de hele tekst. Doet een alinea met een voorbeeld dat?", "Een tegenargument noemen en weerleggen heet een weerlegging. Wat doet een voorbeeld met een argument dat al genoemd is?", "Samenvatten en afronden doet het slot. Wat doet een alinea met een voorbeeld dan?"],
         uitlegPad: {
           stappen: [{ titel: "Concretiseren", tekst: "**Voorbeeld-alinea** geeft **concreet geval** dat eerder gestelde argument illustreert. Signaalwoorden: bijvoorbeeld, zo, neem, denk aan, ter illustratie. Niet hetzelfde als zelfstandig argument — ondersteunt iets dat al gesteld is." }],
           niveaus: { basis: "Illustratie.", simpeler: "Voorbeeld = illustreert", nogSimpeler: "Illustratie" },

@@ -213,7 +213,7 @@ const steps = [
         "verlies aan vertrouwen in politiek en overheid",
       ],
       answer: 1,
-      wrongHints: ["Eigenrichting = mensen nemen zelf het recht in handen (wraak). Jeroen wil reactie, geen wraak.", null, "Normvervaging = mensen wennen aan crimineel gedrag. Tegenovergesteld van Jeroens hoop.", "Vertrouwens-verlies = mensen vertrouwen overheid niet meer. Past niet direct bij 'waar is de ophef'."],
+      wrongHints: ["Eigenrichting = mensen nemen zelf het recht in handen (wraak). Is dat waar Jeroen op wachtte?", null, "Normvervaging = mensen wennen aan crimineel gedrag. Had Jeroen dát verwacht?", "Vertrouwens-verlies = mensen vertrouwen overheid niet meer. Past niet direct bij 'waar is de ophef'."],
       explanation: "**Morele verontwaardiging** = maatschappelijke woede/afschuw na een misdrijf — mensen die zeggen 'dit kan niet'. Jeroen verwachtte dat de samenleving collectief boos zou worden over geweld tegen hulpverleners ('waar is de ophef'). 4 immateriële gevolgen van criminaliteit: morele verontwaardiging, normvervaging, verlies vertrouwen, eigenrichting.",
       examenBron: BRON_LABEL(33),
       bronLink: BRON_LINK,
