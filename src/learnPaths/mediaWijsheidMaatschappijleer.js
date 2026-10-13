@@ -244,9 +244,9 @@ const steps = [
       },
       {
         q: "Bij **sextortion** — wat doen?",
-        options: ["Niet betalen, melden bij politie", "Betalen", "Negeren", "Foto sturen"],
+        options: ["Niet betalen, melden bij politie", "Betalen, want dan stopt het meestal", "Zelf contact zoeken om het uit te praten", "Alles verwijderen en het geheimhouden"],
         answer: 0,
-        wrongHints: [null, "Niet doen.", "Wel actie.", "Maakt erger."],
+        wrongHints: [null, "Betalen leidt bijna altijd tot nieuwe eisen.", "Praten geeft de afperser juist meer kans om druk te zetten.", "Wie kan je dan helpen, en waar is je bewijs gebleven?"],
       },
     ],
   },

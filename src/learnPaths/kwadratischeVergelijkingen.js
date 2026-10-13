@@ -245,7 +245,7 @@ const steps = [
     checks: [
       {
         q: "Los op: x · (x − 7) = 0.",
-        options: ["x = 0 of x = 7", "x = 7", "x = 0", "x = −7"],
+        options: ["x = 0 of x = 7", "x = 7", "x = 0", "x = 0 of x = −7"],
         answer: 0,
         wrongHints: [null, "Dat is maar één oplossing — kijk ook naar de eerste factor. Wanneer is die gelijk aan nul?", "Dat is maar één oplossing — kijk ook naar de tweede factor. Wanneer is x − 7 gelijk aan nul?", "Let op het teken in de tweede factor: staat er plus of min? Welk teken heeft x dan?"],
         uitlegPad: {
@@ -381,9 +381,9 @@ const steps = [
     checks: [
       {
         q: "Los op: x² − 8x = 0.",
-        options: ["x = 0 of x = 8","x = 8","x = 0","x = ±8"],
+        options: ["x = 0 of x = 8","x = 8","x = 0","x = 8 of x = −8"],
         answer: 0,
-        wrongHints: [null, "Dat is maar één oplossing — kijk ook naar de eerste factor. Wanneer is die gelijk aan nul?", "Dat is maar één oplossing — kijk ook naar de tweede factor. Wanneer is x − 8 gelijk aan nul?", "x² = c regel is alleen voor vergelijkingen zonder x-term. Hier is wel een x-term — gebruik factoriseren."],
+        wrongHints: [null, "Dat is maar één oplossing — kijk ook naar de eerste factor. Wanneer is die gelijk aan nul?", "Dat is maar één oplossing — kijk ook naar de tweede factor. Wanneer is x − 8 gelijk aan nul?", "Dat geldt voor x² = 64, zonder x-term. Hier staat wel een x-term: ontbind in factoren."],
         uitlegPad: {
           stappen: [
             { titel: "Factoriseer", tekst: "x² − 8x = x(x − 8) = 0." },
@@ -502,21 +502,21 @@ const steps = [
           niveaus: { basis: "20 m.", simpeler: "Top bij t=2. h(2) = 20m maximum.", nogSimpeler: "20m" },
         },
       },
-      { q: "Los op: x² = 16", options: ["x = 4 of x = −4","x = 4","x = 8","x = 256"], answer: 0, wrongHints: [null, "Niet — vergeet niet de negatieve.", "Te hoog.", "x² niet kwadrateren."] },
-      { q: "Los op: x² = 25", options: ["x = ±5","x = 5","x = 25","x = ±25"], answer: 0, wrongHints: [null, "Niet — vergeet negatieve.", "Niet — kwadraat al weg.", "Niet."] },
+      { q: "Los op: x² = 16", options: ["x = 4 of x = −4","x = 4","x = 8 of x = −8","x = 256"], answer: 0, wrongHints: [null, "Welk ander getal geeft in het kwadraat ook 16? Denk aan negatieve getallen.", "Worteltrekken is iets anders dan delen door 2. Wat is 8²?", "Je hebt 16 gekwadrateerd. Welke bewerking haalt het kwadraat juist weg?"] },
+      { q: "Los op: x² = 25", options: ["x = ±5","x = 5","x = 25","x = ±25"], answer: 0, wrongHints: [null, "Welk ander getal geeft in het kwadraat ook 25?", "Het kwadraat staat er nog. Welk getal keer zichzelf is 25?", "Wat is 25²? Je moet de wortel uit 25 nemen, niet 25 zelf gebruiken."] },
       { q: "Wat is **factoriseren**?", options: ["Een uitdrukking schrijven als een product","Haakjes wegwerken door uit te vermenigvuldigen","Alle termen naar één kant brengen","Gelijksoortige termen bij elkaar optellen"], answer: 0, wrongHints: [null, "Dat is juist het omgekeerde: uitwerken. Kijk naar x² + 4x = x(x + 4) — welke kant op ga je bij factoriseren?", "Dat doe je om de standaardvorm te krijgen. Wat verandert er aan de vorm bij x² + 4x = x(x + 4)?", "Dat heet herleiden. Wat verandert er aan de vorm bij x² + 4x = x(x + 4)?"] },
       { q: "Haal x buiten haakjes in x² + 5x:", options: ["x(x+5)","x·5","x² · 5","x+5"], answer: 0, wrongHints: [null, "Niet — kwadraat klopt niet.", "Andere bewerking.", "Niet — x weg."] },
       { q: "Los op: x(x − 3) = 0", options: ["x=0 of x=3","x=3","x=0","x=−3"], answer: 0, wrongHints: [null, "Niet — beide.", "Niet — beide.", "Niet — andersom teken."] },
-      { q: "**Discriminant** = ?", options: ["b² − 4ac","b² + 4ac","4ac","b · ac"], answer: 0, wrongHints: [null, "Niet — min.", "Niet.", "Niet."] },
+      { q: "**Discriminant** = ?", options: ["b² − 4ac","b² + 4ac","4ac","b · ac"], answer: 0, wrongHints: [null, "Bijna. Kijk goed naar het rekenteken tussen de twee delen van de formule.", "4ac is maar een deel van de formule. Welk deel mis je?", "In de discriminant staat b in het kwadraat. Zie je dat hier?"] },
       { q: "Discriminant D > 0 betekent?", options: ["2 oplossingen","1 oplossing","Geen oplossingen","Oneindig"], answer: 0, wrongHints: [null, "Bij D=0.", "Bij D<0.", "Niet bij kwadratisch."] },
-      { q: "**abc-formule** lost op?", options: ["ax² + bx + c = 0","ax + b","Alleen x² = 0","2x + 1"], answer: 0, wrongHints: [null, "Lineair.", "Niet algemeen.", "Lineair."] },
-      { q: "Discriminant van x² − 5x + 6 = ?", options: ["1","49","25","6"], answer: 0, wrongHints: [null, "Niet — het is b² mín 4ac, niet plus.", "Alleen b².", "Niet."] },
+      { q: "**abc-formule** lost op?", options: ["ax² + bx + c = 0","ax + b = 0","ax³ + bx² + c = 0","2x + 1 = 0"], answer: 0, wrongHints: [null, "Dat is een lineaire vergelijking; die los je op door te balanceren. Waar is de abc-formule voor?", "De abc-formule werkt tot en met x². Wat is de hoogste macht in deze vergelijking?", "Zo'n lineaire vergelijking los je zonder formule op. Welke vorm hoort bij de abc-formule?"] },
+      { q: "Discriminant van x² − 5x + 6 = ?", options: ["1","49","25","6"], answer: 0, wrongHints: [null, "Niet — het is b² mín 4ac, niet plus.", "Alleen b².", "6 is de waarde van c. Wat moet je met b en 4ac doen?"] },
       { q: "x² + 6x + 9 kun je schrijven als (x + 3)². Hoe heet zo'n vorm?", options: ["Volkomen kwadraat","Standaardvorm","Verschil van twee kwadraten","Lineaire vorm"], answer: 0, wrongHints: [null, "De standaardvorm is ax² + bx + c. Hoe heet de vorm (x + 3)²?", "Een verschil van twee kwadraten ziet eruit als a² − b². Staat hier een min?", "Lineair betekent: geen kwadraat. Hier staat wel een kwadraat."] },
       { q: "**Discriminant D = 0** betekent?", options: ["1 oplossing","2 oplossingen","Geen oplossingen","Oneindig"], answer: 0, wrongHints: [null,"Bij D>0.","Bij D<0.","Niet bij kwadratisch."] },
-      { q: "**D < 0** betekent (reëel)?", options: ["Geen reële oplossingen","2 oplossingen","1 oplossing","Oneindig"], answer: 0, wrongHints: [null,"Bij D>0.","Bij D=0.","Niet."] },
-      { q: "**Top** van parabool y = (x − 2)² is op?", options: ["x=2","x=−2","x=0","x=4"], answer: 0, wrongHints: [null,"Andere kant.","Bij standaardvorm zonder shift.","Niet."] },
-      { q: "Snijpunt parabool **y = x² − 4** met **x-as**?", options: ["x = 2 en x = −2","x = 0","x = 4","x = ±4"], answer: 0, wrongHints: [null,"Op y-as.","Verwarring met c-term.","Wortel mist."] },
-      { q: "**Parabool opent omhoog** als a in ax²+bx+c is?", options: ["Positief","Negatief","Nul","Niet relevant"], answer: 0, wrongHints: [null,"Opent omlaag.","Geen parabool.","Wel relevant."] },
+      { q: "**D < 0** betekent (reëel)?", options: ["Geen reële oplossingen","Twee reële oplossingen","Eén reële oplossing","Oneindig veel oplossingen"], answer: 0, wrongHints: [null,"Twee oplossingen krijg je als D positief is. Wat gebeurt er met √D als D negatief is?","Eén oplossing krijg je als D precies 0 is. Wat gebeurt er met √D als D negatief is?","Een kwadratische vergelijking heeft nooit oneindig veel oplossingen. Kun je de wortel uit een negatief getal trekken?"] },
+      { q: "**Top** van parabool y = (x − 2)² is op?", options: ["x=2","x=−2","x=0","x=4"], answer: 0, wrongHints: [null,"Vul x = −2 in: (−2 − 2)² = 16. Is dat de laagste waarde?","Bij y = x² ligt de top bij x = 0. Wat doet de − 2 tussen de haakjes met de grafiek?","Vul x = 4 in: (4 − 2)² = 4. Is dat het laagste punt?"] },
+      { q: "Snijpunt parabool **y = x² − 4** met **x-as**?", options: ["x = 2 en x = −2","x = 0 en x = 4","x = 4","x = 4 en x = −4"], answer: 0, wrongHints: [null,"Vul x = 0 in: 0² − 4 = −4. Is y dan 0?","Vul x = 4 in: 4² − 4 = 12. Is y dan 0?","x² − 4 = 0 geeft x² = 4. Moet je dan nog de wortel trekken?"] },
+      { q: "**Parabool opent omhoog** als a in ax²+bx+c is?", options: ["Positief","Negatief","Nul","Groter dan c"], answer: 0, wrongHints: [null,"Bij een negatieve a krijg je een bergparabool. Opent die omhoog?","Bij a = 0 valt de x²-term weg. Is het dan nog wel een parabool?","c bepaalt waar de grafiek de y-as snijdt. Welk getal bepaalt of de parabool een dal of een berg is?"] },
       { q: "**Open vraag**: bereken de discriminant van x² − 5x + 6. Typ alleen getal.", kind: "open", acceptedAnswers: ["1"], numericTolerance: 0, explanation: "D = b² − 4ac = 25 − 24 = 1." },
       { q: "**Open vraag**: los op: x² = 49. Typ beide x-waarden gescheiden door spatie (bv '7 -7').", kind: "open", acceptedAnswers: ["7 -7", "-7 7", "7 en -7", "±7", "7, -7", "-7, 7"], explanation: "x² = 49 → x = ±7. Twee oplossingen: 7 en −7." },
     ],

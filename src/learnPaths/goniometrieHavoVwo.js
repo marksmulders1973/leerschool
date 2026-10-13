@@ -55,7 +55,7 @@ const steps = [
         q: "**sin² 30° + cos² 30°** = ?",
         options: ["1", "0,5", "√2", "1,5"],
         answer: 0,
-        wrongHints: [null, "Niet — net niet.", "Onmogelijk.", "Te groot."],
+        wrongHints: [null, "0,5 is sin 30° zelf. Heb je die gekwadrateerd, en cos² 30° erbij opgeteld?", "Kwadraten optellen geeft hier geen wortel. Reken sin² 30° en cos² 30° apart uit.", "Reken beide kwadraten apart uit: sin² 30° = 0,25. Wat is cos² 30°?"],
         uitlegPad: {
           stappen: [{ titel: "Identiteit sin²+cos²=1", tekst: "Voor **elke** hoek geldt sin² α + cos² α = 1. Volgt uit Pythagoras op eenheidscirkel. Check: (0,5)² + (√3/2)² = 0,25 + 0,75 = 1. ✓" }],
           niveaus: { basis: "Identiteit = 1.", simpeler: "Altijd 1 — vaste regel.", nogSimpeler: "1" },
@@ -156,7 +156,7 @@ const steps = [
         q: "Sinusregel-toepassing: a=8, sin A = 0,5, sin B = 0,6. b?",
         options: ["9,6", "6,67", "8", "12"],
         answer: 0,
-        wrongHints: [null, "Niet — verwisseling.", "Niet — gelijk aan a.", "Te groot."],
+        wrongHints: [null, "Heb je sin A en sin B omgewisseld? Zet a/sin A = b/sin B netjes op.", "b is alleen gelijk aan a als de hoeken A en B even groot zijn. Is sin B gelijk aan sin A?", "12 = 8 · 1,5. Met welke verhouding van de sinussen moet je 8 vermenigvuldigen?"],
         uitlegPad: {
           stappen: [
             { titel: "b = a · sin B / sin A", tekst: "b = 8 · 0,6 / 0,5 = 8 · 1,2 = **9,6**. Hoek B groter dan A (sin B > sin A) → b groter dan a." },
@@ -168,7 +168,7 @@ const steps = [
         q: "Oppervlakte driehoek a=6, b=4, ingesloten hoek C=30°?",
         options: ["6", "12", "24", "3"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet halve niet.", "Niet — vergeet sin niet.", "Te klein."],
+        wrongHints: [null, "Je hebt 6 · 4 · sin 30° gedaan. Welke factor hoort er in de formule nog bij?", "Je hebt alleen a · b gedaan. Welke twee factoren horen er nog bij?", "Heb je misschien twee keer door 2 gedeeld? Reken ½ · 6 · 4 · sin 30° na."],
         uitlegPad: {
           stappen: [
             { titel: "O = ½ a·b·sin C", tekst: "O = ½ · 6 · 4 · sin 30° = ½ · 24 · 0,5 = **6**. Korte formule wanneer 2 zijden + ingesloten hoek bekend." },
@@ -283,9 +283,9 @@ const steps = [
       },
       {
         q: "Oplos: **cos x = 0** voor 0 ≤ x ≤ 2π. Antwoorden?",
-        options: ["x = π/2 of 3π/2", "x = 0 of π", "Alleen x = π/2", "Alleen x = 0"],
+        options: ["x = π/2 of 3π/2", "x = 0 of π", "x = π/2 of −π/2", "x = π/4 of 3π/4"],
         answer: 0,
-        wrongHints: [null, "Niet — daar is cos ±1.", "Te beperkt.", "Onvolledig."],
+        wrongHints: [null, "Niet — daar is cos ±1.", "−π/2 ligt niet tussen 0 en 2π. Welke hoek in dat interval geeft ook cos x = 0?", "cos(π/4) = ½√2, niet 0. Waar snijdt de cosinusgrafiek de x-as?"],
         uitlegPad: {
           stappen: [
             { titel: "cos = 0 op π/2 + kπ", tekst: "In [0, 2π] zijn dat: π/2 en 3π/2. Dat zijn de top en onderkant van de eenheidscirkel (cos = x-coord = 0)." },
