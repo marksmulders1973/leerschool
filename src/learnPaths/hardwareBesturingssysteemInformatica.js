@@ -20,9 +20,9 @@ const steps = [
     checks: [
       {
         q: "Welk onderdeel is het 'brein' dat instructies uitvoert?",
-        options: ["De CPU", "Het RAM", "De voeding", "Het scherm"],
+        options: ["De CPU", "Het RAM", "Het moederbord", "De GPU"],
         answer: 0,
-        wrongHints: [null, "RAM is werkgeheugen, het rekent niet.", "De voeding levert alleen stroom.", "Het scherm is output."],
+        wrongHints: [null, "RAM is werkgeheugen, het rekent niet.", "Het moederbord verbindt alles, maar voert zelf geen instructies uit.", "De GPU is sterk in beeld, maar is niet het onderdeel dat alle instructies uitvoert."],
         uitlegPad: {
           stappen: [{ titel: "De processor rekent", tekst: "De **CPU** (Central Processing Unit, processor) is het 'brein': hij voert de instructies van programma's uit en rekent. Snelheid meet je in **GHz** (miljarden klokcycli per seconde), en moderne CPU's hebben meerdere **cores** die parallel werken." }],
           niveaus: { basis: "De CPU.", simpeler: "Brein = CPU", nogSimpeler: "De CPU" },
@@ -79,9 +79,9 @@ const steps = [
     checks: [
       {
         q: "Welke cyclus herhaalt de CPU razendsnel?",
-        options: ["Fetch – decode – execute", "Knippen – plakken – opslaan", "Upload – download – delen", "Start – pauze – stop"],
+        options: ["Fetch – decode – execute", "Input – verwerking – output", "Decode – fetch – execute", "Opstarten – draaien – afsluiten"],
         answer: 0,
-        wrongHints: [null, "Dat zijn bewerkingen in een tekstprogramma.", "Dat hoort bij internet/bestanden delen.", "Dat is geen CPU-cyclus."],
+        wrongHints: [null, "Dat is het model van de hele computer (invoer, verwerking, uitvoer). Welke drie stappen doet de CPU per instructie?", "Kan de CPU een instructie ontcijferen voordat hij hem heeft opgehaald?", "Dat beschrijft hoe je een programma gebruikt, niet wat de CPU per instructie doet."],
         uitlegPad: {
           stappen: [{ titel: "Ophalen, ontcijferen, uitvoeren", tekst: "De CPU herhaalt de **fetch-decode-execute-cyclus**: instructie ophalen (fetch), ontcijferen (decode), uitvoeren (execute) — miljarden keren per seconde. Zo werkt hij een programma stap voor stap af." }],
           niveaus: { basis: "Fetch-decode-execute.", simpeler: "Ophalen-ontcijferen-uitvoeren", nogSimpeler: "Fetch-decode-execute" },
@@ -109,9 +109,9 @@ const steps = [
       },
       {
         q: "Wat betekent de **kloksnelheid** (in GHz) van een CPU?",
-        options: ["Hoeveel cycli hij per seconde doorloopt", "Hoeveel bestanden er tegelijk op passen", "Hoeveel pixels het scherm heeft", "Hoeveel stroom de processor verbruikt"],
+        options: ["Hoeveel cycli hij per seconde doorloopt", "Hoeveel bestanden er tegelijk op passen", "Hoeveel cores de processor heeft", "Hoeveel stroom de processor verbruikt"],
         answer: 0,
-        wrongHints: [null, "Opslagruimte is iets anders.", "Schermgrootte staat los van de CPU.", "Stroomverbruik meet je in watt, niet in GHz."],
+        wrongHints: [null, "Opslagruimte is iets anders.", "Cores tel je los van GHz. Waar staat 'Hz' (per seconde) voor?", "Stroomverbruik meet je in watt, niet in GHz."],
         uitlegPad: {
           stappen: [{ titel: "Cycli per seconde", tekst: "De **kloksnelheid** (GHz = miljarden per seconde) zegt hoeveel **cycli** de CPU per seconde doorloopt — dus hoe vaak hij de fetch-decode-execute-cyclus herhaalt. Hoger betekent (grofweg) sneller, al telt het aantal **cores** ook mee." }],
           niveaus: { basis: "Cycli per seconde.", simpeler: "GHz = snelheid", nogSimpeler: "Cycli per seconde" },
@@ -119,9 +119,9 @@ const steps = [
       },
       {
         q: "Wat is het voordeel van meerdere **cores** in een CPU?",
-        options: ["Meerdere instructies tegelijk uitvoeren", "Meer ruimte om bestanden op te slaan", "Een scherpere afbeelding op je scherm", "Gegarandeerd minder stroomverbruik"],
+        options: ["Meerdere instructies tegelijk uitvoeren", "Meer ruimte om bestanden op te slaan", "Meer werkgeheugen voor programma's", "Gegarandeerd minder stroomverbruik"],
         answer: 0,
-        wrongHints: [null, "Cores gaan over rekenen, niet over opslag.", "De scherpte van het beeld hangt niet van de cores af.", "Meer cores kunnen juist méér verbruiken."],
+        wrongHints: [null, "Cores gaan over rekenen, niet over opslag.", "Werkgeheugen is RAM; dat zit niet in de cores.", "Meer cores kunnen juist méér verbruiken."],
         uitlegPad: {
           stappen: [{ titel: "Meer handen", tekst: "Elke **core** is als een aparte rekenkern. Met meerdere cores kan de CPU **meerdere instructies tegelijk (parallel)** uitvoeren — handig als je veel programma's tegelijk draait of zware taken splitst. Meer cores ≈ meer werk tegelijk." }],
           niveaus: { basis: "Meer tegelijk rekenen.", simpeler: "Cores = parallel", nogSimpeler: "Meer tegelijk rekenen" },
@@ -138,9 +138,9 @@ const steps = [
     checks: [
       {
         q: "Wat is de hoofdtaak van een **besturingssysteem (OS)**?",
-        options: ["De hardware beheren en programma's laten draaien", "Foto's en video's bewerken en opslaan", "Websites bouwen en op internet zetten", "Alleen spelletjes snel laten draaien"],
+        options: ["De hardware beheren en programma's laten draaien", "Foto's en video's bewerken en opslaan", "Websites bouwen en op internet zetten", "Programma's tegen virussen beschermen"],
         answer: 0,
-        wrongHints: [null, "Fotobewerken doe je met een programma óp het OS.", "Websites maak je met programma's óp het OS.", "Het OS doet veel meer dan games."],
+        wrongHints: [null, "Fotobewerken doe je met een programma óp het OS.", "Websites maak je met programma's óp het OS.", "Een virusscanner is een programma óp het OS. Wat is de hoofdtaak van het OS zelf?"],
         uitlegPad: {
           stappen: [{ titel: "De brug hardware ↔ software", tekst: "Het **OS** (Windows, macOS, Linux, Android…) is de **brug** tussen hardware en jouw programma's: het beheert hardware (via drivers), verdeelt CPU-tijd en geheugen over processen, regelt bestanden, de interface en beveiliging. Zonder OS kun je de computer niet gebruiken." }],
           niveaus: { basis: "Hardware + programma's beheren.", simpeler: "OS = beheert alles", nogSimpeler: "Hardware + programma's beheren" },
@@ -148,9 +148,9 @@ const steps = [
       },
       {
         q: "Dat meerdere programma's 'tegelijk' lijken te draaien, regelt het OS met…",
-        options: ["Multitasking", "Een snellere internetverbinding", "Meer schermen", "Een grotere SSD"],
+        options: ["Multitasking", "Meer RAM-geheugen", "Een hogere kloksnelheid", "Een grotere SSD"],
         answer: 0,
-        wrongHints: [null, "Internet heeft er niets mee te maken.", "Schermen doen niet mee.", "Een grotere schijf bewaart meer, maar verdeelt geen rekentijd."],
+        wrongHints: [null, "Meer RAM helpt, maar verdeelt geen rekentijd. Wat doet het OS met de tijd van de CPU?", "Ook een snelle CPU doet per core één ding tegelijk. Hoe lijkt het dan alsof alles tegelijk gaat?", "Een grotere schijf bewaart meer, maar verdeelt geen rekentijd."],
         uitlegPad: {
           stappen: [{ titel: "CPU-tijd verdelen", tekst: "Het OS doet aan **multitasking**: het verdeelt de **CPU-tijd** razendsnel over alle lopende **processen**, zodat het lijkt alsof alles tegelijk draait. In werkelijkheid wisselt de CPU continu tussen taken." }],
           niveaus: { basis: "Multitasking.", simpeler: "Tegelijk = multitasking", nogSimpeler: "Multitasking" },
@@ -158,9 +158,9 @@ const steps = [
       },
       {
         q: "Welk besturingssysteem is **open source** (broncode openbaar)?",
-        options: ["Linux", "Windows", "macOS", "Geen enkel OS"],
+        options: ["Linux", "Windows", "macOS", "iOS"],
         answer: 0,
-        wrongHints: [null, "Windows is gesloten (closed source).", "macOS is grotendeels gesloten.", "Er bestaan wél open-source-besturingssystemen — welke draait vaak gratis op servers?"],
+        wrongHints: [null, "Windows is gesloten (closed source).", "macOS is grotendeels gesloten.", "iOS van Apple is gesloten. Welk OS draait vaak gratis op servers?"],
         uitlegPad: {
           stappen: [{ titel: "Code openbaar", tekst: "**Linux** (en Android, dat erop bouwt) is **open source**: de broncode is openbaar, iedereen mag meekijken/aanpassen, vaak gratis. **Windows** en **macOS** zijn **gesloten** — de code is eigendom van het bedrijf." }],
           niveaus: { basis: "Linux.", simpeler: "Open source = Linux", nogSimpeler: "Linux" },
@@ -168,9 +168,9 @@ const steps = [
       },
       {
         q: "Wat is een **driver**?",
-        options: ["Software waarmee het OS een apparaat aanstuurt", "Een persoon die de computer bedient", "Software die virussen op je pc opspoort", "Het werkgeheugen van de computer zelf"],
+        options: ["Software waarmee het OS een apparaat aanstuurt", "Een programma dat je zelf opent, zoals Word", "Software die virussen op je pc opspoort", "Het programma dat de computer opstart"],
         answer: 0,
-        wrongHints: [null, "Het is software, geen persoon.", "Dat is een virusscanner — die beschermt, maar laat geen apparaat werken.", "RAM is iets heel anders."],
+        wrongHints: [null, "Een driver open je niet zelf; hij werkt op de achtergrond. Tussen welke twee dingen?", "Dat is een virusscanner — die beschermt, maar laat geen apparaat werken.", "Het opstartprogramma (BIOS/UEFI) is iets anders. Wat moet er gebeuren als je een nieuwe printer aansluit?"],
         uitlegPad: {
           stappen: [{ titel: "Vertaler naar hardware", tekst: "Een **driver** is een stukje software dat het **OS leert praten met een specifiek apparaat** (printer, grafische kaart, webcam). Zonder de juiste driver herkent of gebruikt het besturingssysteem het apparaat niet goed." }],
           niveaus: { basis: "Software voor een apparaat.", simpeler: "Driver = hardware-vertaler", nogSimpeler: "Software voor een apparaat" },
@@ -178,9 +178,9 @@ const steps = [
       },
       {
         q: "Windows en macOS zijn **gesloten (closed source)**. Dat betekent:",
-        options: ["De broncode is van het bedrijf en geheim", "Ze werken niet zonder internet", "Ze mogen altijd gratis gebruikt worden", "Iedereen mag de code vrij aanpassen"],
+        options: ["De broncode is van het bedrijf en geheim", "Je mag ze niet op je eigen pc installeren", "Ze mogen altijd gratis gebruikt worden", "Iedereen mag de code vrij aanpassen"],
         answer: 0,
-        wrongHints: [null, "Internet staat los van open/closed source.", "Ze zijn meestal juist betaald.", "Vrij aanpassen is juist open source."],
+        wrongHints: [null, "Installeren mag juist wél (met een licentie). Waar slaat 'source' op?", "Ze zijn meestal juist betaald.", "Vrij aanpassen is juist open source."],
         uitlegPad: {
           stappen: [{ titel: "Code niet openbaar", tekst: "Bij **closed source** houdt het bedrijf de **broncode geheim** — je mag hem niet inzien of aanpassen (Windows, macOS). Bij **open source** (Linux, Android) is de code juist **openbaar** en mag iedereen meekijken en verbeteren." }],
           niveaus: { basis: "Code is van het bedrijf.", simpeler: "Closed = code geheim", nogSimpeler: "Code is van het bedrijf" },
@@ -207,9 +207,9 @@ const steps = [
       },
       {
         q: "Wat is een voordeel van bestanden in de **cloud** opslaan?",
-        options: ["Overal bereikbaar + automatische back-up", "Je kunt er altijd zonder internet bij", "Niemand anders kan het ooit zien", "Het neemt nergens opslagruimte in"],
+        options: ["Overal bereikbaar + automatische back-up", "Bestanden openen sneller dan van je SSD", "Bereikbaar, ook als je offline bent", "Het bedrijf kan je bestanden niet inzien"],
         answer: 0,
-        wrongHints: [null, "Cloud heeft juist internet nodig.", "Je vertrouwt je data aan een bedrijf toe — let op privacy.", "Het kost wel degelijk (cloud)opslag."],
+        wrongHints: [null, "Ophalen via internet is meestal trager dan van je eigen schijf. Wat is dan wél het voordeel?", "Om bij de cloud te komen heb je internet nodig.", "Je bestanden staan op servers van een bedrijf; let dus op privacy."],
         uitlegPad: {
           stappen: [{ titel: "Overal + back-up", tekst: "**Cloudopslag** (Drive, iCloud, Dropbox) staat op servers via internet: **overal bereikbaar**, automatische **back-up** en makkelijk **samenwerken**. Nadelen: je hebt **internet** nodig en je vertrouwt je gegevens toe aan een bedrijf (privacy/AVG)." }],
           niveaus: { basis: "Overal + back-up.", simpeler: "Cloud = overal bereikbaar", nogSimpeler: "Overal + back-up" },
@@ -217,9 +217,9 @@ const steps = [
       },
       {
         q: "Hoe beschrijf je waar een bestand staat in de mappenstructuur?",
-        options: ["Met een pad", "Met de bestandsgrootte", "Met de extensie alleen", "Met het IP-adres"],
+        options: ["Met een pad", "Met de bestandsnaam", "Met de extensie alleen", "Met het IP-adres"],
         answer: 0,
-        wrongHints: [null, "Grootte zegt niets over de locatie.", "De extensie zegt het type, niet de plek.", "Een IP-adres hoort bij netwerken."],
+        wrongHints: [null, "Dezelfde naam kan in veel mappen voorkomen. Hoe geef je de route naar de juiste map aan?", "De extensie zegt het type, niet de plek.", "Een IP-adres hoort bij netwerken."],
         uitlegPad: {
           stappen: [{ titel: "Een pad door de boom", tekst: "Een **pad** beschrijft de route door de **boomstructuur** van mappen naar het bestand, bv. `Documenten/School/verslag.docx`. Mappen kunnen in mappen zitten; het pad zegt precies waar het bestand staat." }],
           niveaus: { basis: "Een pad.", simpeler: "Locatie = pad", nogSimpeler: "Een pad" },
@@ -227,9 +227,9 @@ const steps = [
       },
       {
         q: "Je hernoemt `foto.jpg` naar `foto.txt`. Wat gebeurt er met de inhoud?",
-        options: ["De inhoud blijft gewoon hetzelfde", "Het wordt automatisch een tekstbestand", "Het bestand wordt gewist", "Het wordt kleiner"],
+        options: ["De inhoud blijft gewoon hetzelfde", "Het wordt automatisch een tekstbestand", "Het bestand raakt beschadigd", "Het wordt omgezet naar tekens"],
         answer: 0,
-        wrongHints: [null, "Is een extensie een deel van de naam, of van de data zelf?", "Hernoemen wist niets.", "De grootte blijft gelijk."],
+        wrongHints: [null, "Is een extensie een deel van de naam, of van de data zelf?", "Hernoemen raakt alleen de naam. Kan de data dan kapotgaan?", "Wie zou dat omzetten moeten doen? Bij hernoemen draait er geen omzetprogramma."],
         uitlegPad: {
           stappen: [{ titel: "Naam ≠ inhoud", tekst: "De **extensie** is maar een **label**. Hernoem je `foto.jpg` naar `foto.txt`, dan blijven de bytes exact hetzelfde — het is nog steeds een afbeelding. Alleen opent je computer het nu met het verkeerde programma, waardoor het als 'onzin' oogt." }],
           niveaus: { basis: "Inhoud blijft gelijk.", simpeler: "Naam wijzigen ≠ inhoud", nogSimpeler: "Inhoud blijft gelijk" },
@@ -237,9 +237,9 @@ const steps = [
       },
       {
         q: "Wat is een goede **back-up-regel**?",
-        options: ["Belangrijke bestanden op meerdere plekken bewaren", "Eén kopie op dezelfde schijf is genoeg", "Pas een kopie maken als er iets kapot is", "Alles alleen in het werkgeheugen bewaren"],
+        options: ["Belangrijke bestanden op meerdere plekken bewaren", "Een kopie in een tweede map op dezelfde schijf", "Eén keer per jaar een kopie op een usb-stick", "Alles in de cloud, dan is een kopie niet nodig"],
         answer: 0,
-        wrongHints: [null, "Ook die ene kopie kun je kwijtraken.", "Als er al iets kapot is, ben je te laat.", "RAM is vluchtig — daar ben je het meteen kwijt."],
+        wrongHints: [null, "Gaat die schijf kapot, dan ben je beide kwijt.", "Wat ben je kwijt van alles wat je dat jaar maakte?", "Ook een cloudaccount kun je kwijtraken (gehackt, per ongeluk gewist). Wat als dat de enige plek is?"],
         uitlegPad: {
           stappen: [{ titel: "Eén kopie is geen kopie", tekst: "Bewaar belangrijke bestanden op **meer dan één plek** (bv. lokaal + cloud). Raakt de ene plek beschadigd (crash, ransomware, diefstal), dan heb je nog de andere. 'Eén kopie is geen kopie' — echte veiligheid begint bij twee." }],
           niveaus: { basis: "Meerdere plekken.", simpeler: "Back-up = meer plekken", nogSimpeler: "Meerdere plekken" },

@@ -77,9 +77,9 @@ const steps = [
       },
       {
         q: "Welke binding-soorten kan koolstof vormen?",
-        options: ["Enkele, dubbele, drievoudige","Alleen enkele","Alleen dubbele","Onbeperkt veel"],
+        options: ["Enkele, dubbele, drievoudige","Enkele en dubbele","Enkele, dubbele, viervoudige","Enkele en drievoudige"],
         answer: 0,
-        wrongHints: [null, "Niet — denk aan etheen en ethyn.", "Niet — denk aan ethaan.", "Niet — koolstof kan maar een beperkt aantal elektronenparen met één atoom delen."],
+        wrongHints: [null, "Denk aan ethyn (C₂H₂). Hoeveel bindingen zitten er tussen de twee C-atomen?", "Kan koolstof vier elektronenparen met één ander atoom delen? Kijk naar de ruimtelijke bouw.", "Denk aan etheen (C₂H₄). Welke binding zit daar tussen de C-atomen?"],
         uitlegPad: {
           stappen: [{ titel: "Enkele/dubbele/drievoudige", tekst: "Koolstof kan delen: **1 paar** (enkele, C-C), **2 paren** (dubbele, C=C), **3 paren** (drievoudige, C≡C). Voorbeeld: ethaan (enkel), etheen (dubbel), ethyn (drievoudig)." }],
           niveaus: { basis: "Drie soorten.", simpeler: "1, 2 of 3 paren", nogSimpeler: "1-2-3" },
@@ -98,7 +98,7 @@ const steps = [
         q: "Wat is de **algemene formule** van een alkaan?",
         options: ["CₙH₂ₙ₊₂","CₙH₂ₙ","CₙHₙ","CₙH₂ₙ₋₂"],
         answer: 0,
-        wrongHints: [null, "Niet — dat zijn alkenen (dubbele binding) of cyclo-alkanen.", "Niet.", "Niet — dat zijn alkynen (drievoudig)."],
+        wrongHints: [null, "Niet — dat zijn alkenen (dubbele binding) of cyclo-alkanen.", "Controleer met methaan, CH₄. Klopt CₙHₙ dan?", "Niet — dat zijn alkynen (drievoudig)."],
         uitlegPad: {
           stappen: [{ titel: "Verzadigd = max H", tekst: "Alkanen = alleen enkele bindingen = max waterstof. Formule **CₙH₂ₙ₊₂**. Bv. n=3: C₃H₈ (propaan)." }],
           theorie: "Onthoud verschil: alkaan CₙH₂ₙ₊₂, alkeen CₙH₂ₙ (1 dubbel), alkyn CₙH₂ₙ₋₂ (1 drievoudig), cyclo-alkaan CₙH₂ₙ.",
@@ -205,9 +205,9 @@ const steps = [
       },
       {
         q: "Een **amine** is basisch omdat:",
-        options: ["Het N-atoom een H⁺ kan opnemen","Het H⁺-ionen afstaat","Het een -OH-groep bevat","Het een C=O-groep heeft"],
+        options: ["Het N-atoom een H⁺ kan opnemen","Het N-atoom een H⁺ kan afstaan","Het een OH⁻-ion kan afstaan","Het O-atoom een H⁺ kan opnemen"],
         answer: 0,
-        wrongHints: [null, "Niet — dat doet juist een zuur.", "Niet — een amine heeft geen -OH-groep.", "Niet — kijk naar de groep die een amine kenmerkt."],
+        wrongHints: [null, "Niet — dat doet juist een zuur.", "Een amine heeft geen OH-groep. Wat kan het vrije elektronenpaar van N doen?", "Een amine heeft geen O-atoom. Kijk naar de groep die een amine kenmerkt."],
         uitlegPad: {
           stappen: [{ titel: "Amine = ammoniak-derivaat", tekst: "**Amines** (-NH₂) zijn afgeleid van ammoniak (NH₃). N heeft 1 vrij elektronenpaar — kan H⁺ opnemen → basisch. pH > 7 in water." }],
           theorie: "Toets-patroon: amines kleuren rood lakmoes BLAUW (basisch), carbonzuren omgekeerd.",
@@ -225,9 +225,9 @@ const steps = [
     checks: [
       {
         q: "Bij **volledige verbranding** van methaan ontstaat:",
-        options: ["CO₂ + H₂O","CO + H₂O","CH₂O","Alleen O₂"],
+        options: ["CO₂ + H₂O","CO + H₂O","CH₂O","C + H₂O"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is onvolledig.", "Niet — geen reactieproduct.", "Niet — O₂ wordt verbruikt."],
+        wrongHints: [null, "Niet — dat is onvolledig.", "Methanal kan ontstaan bij oxidatie, maar is geen eindproduct van verbranding. Wat wordt er uiteindelijk van C en H?", "Roet ontstaat bij onvolledige verbranding. Wat gebeurt er met C als er genoeg zuurstof is?"],
         uitlegPad: {
           stappen: [{ titel: "CH₄ + 2 O₂ → CO₂ + 2 H₂O", tekst: "Volledige verbranding methaan: **CH₄ + 2 O₂ → CO₂ + 2 H₂O**. Balanceer: 1 C, 4 H, 4 O links + rechts. Kloppen ✓." }],
           theorie: "Onvolledige verbranding (te weinig O₂): CH₄ + minder O₂ → CO (giftig) + H₂O + roet.",
@@ -258,9 +258,9 @@ const steps = [
       },
       {
         q: "Wat is **polyetheen (PE)**?",
-        options: ["Polymeer van etheen-monomeren","Eén molecuul etheen","Mengsel etheen + alcohol","Aluminium"],
+        options: ["Polymeer van etheen-monomeren","Eén enkel etheen-molecuul","Polymeer van ethanol-monomeren","Natuurlijk polymeer uit planten"],
         answer: 0,
-        wrongHints: [null, "Niet — heel veel etheen-eenheden.", "Niet — geen alcohol.", "Niet — geen metaal."],
+        wrongHints: [null, "Niet — heel veel etheen-eenheden.", "Ethanol heeft geen dubbele binding. Kan het dan via additie een polymeer vormen?", "Polyetheen maak je in een fabriek uit aardolie. Welk monomeer zit in de naam?"],
         uitlegPad: {
           stappen: [{ titel: "Plastic-keten", tekst: "**Polyetheen (PE)** = duizenden etheen-moleculen aan elkaar gekoppeld via polymerisatie. C₂H₄ → (-CH₂-CH₂-)ₙ. Toepassing: plastic-zakken, flessen." }],
           woorden: [{ woord: "polymerisatie", uitleg: "Reactie waarbij vele kleine moleculen (monomeren) één lange keten (polymeer) vormen." }],
@@ -270,9 +270,9 @@ const steps = [
       },
       {
         q: "Verbranding van koolstof-verbindingen is **schadelijk voor klimaat** omdat:",
-        options: ["CO₂ versterkt broeikaseffect","O₂ verdwijnt","Te veel water ontstaat","Methaan ontstaat"],
+        options: ["CO₂ versterkt broeikaseffect","O₂ in de lucht raakt op","De ozonlaag wordt dunner","Er ontstaat veel methaan"],
         answer: 0,
-        wrongHints: [null, "Niet — O₂-niveau blijft hoog.", "Niet relevant.", "Niet — methaan = uitgangsstof bij verbranding."],
+        wrongHints: [null, "Er is heel veel O₂ in de lucht; het niveau blijft hoog. Welk gas neemt wel toe?", "De ozonlaag wordt aangetast door cfk's. Welk verbrandingsproduct houdt warmte vast?", "Niet — methaan = uitgangsstof bij verbranding."],
         uitlegPad: {
           stappen: [{ titel: "CO₂ = broeikasgas", tekst: "Bij verbranding van fossiele brandstof komt **CO₂** vrij. CO₂ houdt warmte vast in atmosfeer → **versterkt broeikaseffect** → klimaatopwarming. Sinds 1850: CO₂ van 280 ppm → 420 ppm (2024)." }],
           theorie: "Toets-actueel: de Nederlandse Klimaatwet wil 55% minder broeikasgas in 2030 t.o.v. 1990.",
@@ -310,9 +310,9 @@ const steps = [
       },
       {
         q: "Wat zijn **isomeren**?",
-        options: ["Zelfde formule, andere structuur","Verschillende formule","Atomen met een ander aantal neutronen","Polymeer"],
+        options: ["Zelfde formule, andere structuur","Andere formule, zelfde structuur","Atomen met een ander aantal neutronen","Lange keten van gelijke eenheden"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet — dat zijn isotopen.", "Niet relevant."],
+        wrongHints: [null, "Met een andere molecuulformule heb je gewoon een andere stof. Wat is er bij isomeren gelijk?", "Niet — dat zijn isotopen.", "Dat is een polymeer. Waarin lijken butaan en methylpropaan op elkaar?"],
         uitlegPad: {
           stappen: [{ titel: "Iso = gelijk, meros = deel", tekst: "**Isomeren** = verbindingen met dezelfde **molecuulformule** maar verschillende **structuur**. Voorbeeld: butaan (rechte keten) en 2-methylpropaan (vertakt) = beide C₄H₁₀." }],
           niveaus: { basis: "Zelfde formule.", simpeler: "Iso = zelfde formule, andere bouw", nogSimpeler: "Iso" },

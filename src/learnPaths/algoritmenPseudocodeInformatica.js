@@ -30,19 +30,19 @@ const steps = [
       },
       {
         q: "Welke eis hoort NIET bij een goed algoritme?",
-        options: ["Het mag eindeloos doorgaan", "Elke stap is eenduidig", "Het is eindig", "Elke stap is uitvoerbaar"],
+        options: ["Het staat in een programmeertaal", "Elke stap is eenduidig", "Het is eindig", "Elke stap is uitvoerbaar"],
         answer: 0,
         wrongHints: [null, "Als een stap voor tweeërlei uitleg vatbaar is, kan de computer 'm dan goed uitvoeren?", "Wat gebeurt er als een algoritme nooit stopt — is dat handig?", "Als een stap niet uit te voeren is, heb je dan iets aan het algoritme?"],
         uitlegPad: {
-          stappen: [{ titel: "Een algoritme moet stoppen", tekst: "Een goed algoritme is **eindig** (het stopt een keer), **eenduidig**, **uitvoerbaar** en **correct**. 'Eindeloos doorgaan' hoort er dus juist NIET bij — een algoritme dat nooit stopt, is fout (een 'oneindige lus')." }],
-          niveaus: { basis: "Eindeloos = fout.", simpeler: "Mag niet eindeloos", nogSimpeler: "Eindeloos = fout." },
+          stappen: [{ titel: "Plan, geen code", tekst: "Een goed algoritme is **eindig** (het stopt een keer), **eenduidig**, **uitvoerbaar** en **correct**. Dat het in een **programmeertaal** staat, is géén eis: een algoritme is het *plan*, en dat kun je ook op papier of in gewone taal opschrijven. Pas het **programma** is dat plan in code." }],
+          niveaus: { basis: "Programmeertaal is geen eis.", simpeler: "Algoritme mag ook op papier", nogSimpeler: "Code is geen eis." },
         },
       },
       {
         q: "Wat is het verschil tussen een **algoritme** en een **programma**?",
-        options: ["Algoritme = het plan; programma = dat plan in code", "Ze zijn precies hetzelfde", "Een programma is korter", "Een algoritme draait op de computer, een programma niet"],
+        options: ["Algoritme = het plan; programma = dat plan in code", "Programma = het plan; algoritme = dat plan in code", "Algoritme = het plan; programma = de computer zelf", "Algoritme = losse code; programma = alle code samen"],
         answer: 0,
-        wrongHints: [null, "Er is wel degelijk verschil tussen plan en uitvoering.", "Lengte is niet het verschil.", "Andersom: het programma is wat de computer draait."],
+        wrongHints: [null, "Kijk goed: welke van de twee kun je op papier bedenken, en welke voert de computer uit?", "Een programma is software, geen apparaat. Wat staat er in een programma?", "Een algoritme hoeft nog helemaal geen code te zijn; je kunt het ook in gewone taal opschrijven."],
         uitlegPad: {
           stappen: [{ titel: "Idee → code", tekst: "Het **algoritme** is het *idee/stappenplan* (taal-onafhankelijk). Een **programma** is datzelfde plan **opgeschreven in een programmeertaal** (Python, Java…) zodat de computer het kan uitvoeren. Eerst bedenken, dan coderen." }],
           niveaus: { basis: "Plan vs code.", simpeler: "Algoritme = plan, programma = code", nogSimpeler: "Plan vs code." },
@@ -50,11 +50,11 @@ const steps = [
       },
       {
         q: "Welke van deze is een **algoritme** uit het dagelijks leven?",
-        options: ["Een recept om thee te zetten", "Een willekeurige stapel papier", "De kleur van een kopje", "Een leeg vel"],
+        options: ["Een recept om thee te zetten", "Een lijst met ingrediënten voor thee", "Een foto van een kopje thee", "Een prijslijst van een theewinkel"],
         answer: 0,
-        wrongHints: [null, "Zonder volgorde/stappen is het geen algoritme.", "Een eigenschap is geen stappenplan.", "Zonder stappen valt er niets uit te voeren."],
+        wrongHints: [null, "Een lijst met spullen zegt nog niet wát je in welke volgorde doet.", "Een foto toont het resultaat, maar geen stappen om daar te komen.", "Prijzen zijn gegevens. Kun je een prijslijst stap voor stap uitvoeren?"],
         uitlegPad: {
-          stappen: [{ titel: "Stappen in volgorde", tekst: "Een **recept** is een algoritme: duidelijke **stappen in volgorde** die altijd tot hetzelfde resultaat leiden. Een stapel papier of een kleur is dat niet — daar zit geen uitvoerbaar stappenplan in." }],
+          stappen: [{ titel: "Stappen in volgorde", tekst: "Een **recept** is een algoritme: duidelijke **stappen in volgorde** die altijd tot hetzelfde resultaat leiden. Een ingrediëntenlijst, een foto of een prijslijst is dat niet — daar zit geen uitvoerbaar stappenplan in." }],
           niveaus: { basis: "Recept = algoritme.", simpeler: "Stappenplan = algoritme", nogSimpeler: "Recept = algoritme." },
         },
       },
@@ -89,9 +89,9 @@ const steps = [
       },
       {
         q: "**HERHAAL 10 keer: …** is een voorbeeld van:",
-        options: ["Herhaling", "Selectie", "Sequentie", "Een foutmelding"],
+        options: ["Herhaling", "Selectie", "Sequentie", "Een variabele"],
         answer: 0,
-        wrongHints: [null, "Selectie is een keuze tussen wegen — wordt hier iets gekozen?", "Sequentie doet elke stap één keer.", "Het is normale code, geen fout."],
+        wrongHints: [null, "Selectie is een keuze tussen wegen — wordt hier iets gekozen?", "Sequentie doet elke stap één keer.", "Een variabele bewaart een waarde. Wat gebeurt er hier steeds opnieuw?"],
         uitlegPad: {
           stappen: [{ titel: "Iets meerdere keren doen", tekst: "**Herhaling** (loop) voert stappen meerdere keren uit. 'HERHAAL 10 keer' is een **vaste** herhaling (je weet hoe vaak). 'ZOLANG …' is **voorwaardelijk** (herhaalt tot de voorwaarde verandert)." }],
           niveaus: { basis: "Herhaling.", simpeler: "HERHAAL = loop", nogSimpeler: "Herhaling." },
@@ -99,9 +99,9 @@ const steps = [
       },
       {
         q: "Met hoeveel bouwstenen kun je in principe élk algoritme bouwen?",
-        options: ["3", "1", "10", "Oneindig veel"],
+        options: ["3", "2", "10", "4"],
         answer: 0,
-        wrongHints: [null, "Met alleen volgorde kun je geen keuzes of herhaling maken.", "Het zijn er minder — tel de bouwstenen uit deze stap.", "Juist niet — een klein, vast aantal bouwstenen is genoeg."],
+        wrongHints: [null, "Met alleen volgorde en keuze: hoe laat je dan iets vaker gebeuren?", "Het zijn er minder — tel de bouwstenen uit deze stap.", "Een variabele is handig, maar geen aparte bouwsteen. Hoeveel blijven er dan over?"],
         uitlegPad: {
           stappen: [{ titel: "Drie is genoeg", tekst: "Met **sequentie** (volgorde), **selectie** (keuze) en **herhaling** (loop) kun je elk algoritme opbouwen. Dit heet 'gestructureerd programmeren'. Functies/variabelen maken het overzichtelijker, maar de basis blijft deze drie." }],
           niveaus: { basis: "3 bouwstenen.", simpeler: "Sequentie/selectie/herhaling = 3", nogSimpeler: "3 bouwstenen." },
@@ -109,9 +109,9 @@ const steps = [
       },
       {
         q: "Stappen die gewoon **na elkaar** worden uitgevoerd, heten:",
-        options: ["Sequentie", "Selectie", "Herhaling", "Een beslissing"],
+        options: ["Sequentie", "Selectie", "Herhaling", "Een variabele"],
         answer: 0,
-        wrongHints: [null, "Selectie is een keuze (ALS/ANDERS).", "Herhaling doet iets meerdere keren.", "Een beslissing is juist een keuze."],
+        wrongHints: [null, "Selectie is een keuze (ALS/ANDERS).", "Herhaling doet iets meerdere keren.", "Een variabele bewaart een waarde; hier gaat het om de volgorde van stappen."],
         uitlegPad: {
           stappen: [{ titel: "Gewoon op volgorde", tekst: "**Sequentie** is de simpelste bouwsteen: stappen die **van boven naar beneden**, één voor één, worden uitgevoerd — zonder keuze of herhaling. Zet water op → wacht → giet in." }],
           niveaus: { basis: "Na elkaar = sequentie.", simpeler: "Volgorde = sequentie", nogSimpeler: "Na elkaar = sequentie." },
@@ -197,9 +197,9 @@ const steps = [
     checks: [
       {
         q: "Bij **lineair zoeken** in een lijst van n items: hoeveel stappen in het slechtste geval?",
-        options: ["Ongeveer n", "Altijd 1", "Ongeveer n × n", "0"],
+        options: ["Ongeveer n", "Ongeveer n/2", "Ongeveer log₂ n", "Ongeveer n × n"],
         answer: 0,
-        wrongHints: [null, "Alleen als het toevallig vooraan staat.", "Dat is veel meer dan lineair zoeken kost.", "Je moet wél kijken — niet 0."],
+        wrongHints: [null, "Dat heb je gemiddeld nodig. Waar staat het item in het slechtste geval?", "Dat hoort bij binair zoeken, dat steeds halveert. Doet lineair zoeken dat ook?", "Dat is veel meer dan lineair zoeken kost: je bekijkt elk item hooguit één keer."],
         uitlegPad: {
           stappen: [{ titel: "Eén voor één aflopen", tekst: "**Lineair zoeken** loopt de lijst van voor naar achter af. Staat het gezochte item achteraan (of zit het er niet in), dan kijk je naar **alle n items** → ~n stappen. Sneller kan met **binair zoeken**, maar dat vereist een gesorteerde lijst." }],
           niveaus: { basis: "~n stappen.", simpeler: "Slechtste geval = n", nogSimpeler: "~n stappen." },
@@ -207,9 +207,9 @@ const steps = [
       },
       {
         q: "Wat is de voorwaarde om **binair zoeken** te kunnen gebruiken?",
-        options: ["De lijst moet gesorteerd zijn", "De lijst moet kort zijn", "Er mogen geen getallen in staan", "De lijst moet leeg zijn"],
+        options: ["De lijst moet gesorteerd zijn", "De lijst moet kort zijn", "De lijst moet een even lengte hebben", "De lijst mag alleen getallen bevatten"],
         answer: 0,
-        wrongHints: [null, "Lengte maakt niet uit voor de methode.", "Binair zoeken werkt juist prima met getallen.", "In een lege lijst valt niets te zoeken."],
+        wrongHints: [null, "Lengte maakt niet uit voor de methode.", "Bij een oneven aantal pak je gewoon het middelste item; de lengte is geen probleem.", "Ook woorden kun je binair doorzoeken. Wat moet er dan wél gelden voor de lijst?"],
         uitlegPad: {
           stappen: [{ titel: "Eerst sorteren", tekst: "**Binair zoeken** kijkt steeds in het midden en gooit de helft weg — dat kan alleen als de lijst **gesorteerd** is (anders weet je niet welke helft je mag weggooien). Zo zoek je een naam in een telefoonboek: midden openen, links of rechts verder." }],
           niveaus: { basis: "Gesorteerd.", simpeler: "Binair zoeken = gesorteerd nodig", nogSimpeler: "Gesorteerd." },
@@ -217,9 +217,9 @@ const steps = [
       },
       {
         q: "Waarom is de **efficiëntie** van een algoritme belangrijk?",
-        options: ["Bij veel data scheelt het enorm veel tijd", "De code wordt er korter en netter van", "Het is alleen belangrijk voor kleine lijstjes", "Een efficiënter algoritme geeft betere antwoorden"],
+        options: ["Bij veel data scheelt het enorm veel tijd", "De code wordt er korter en netter van", "Zo kan het algoritme op elke computer draaien", "Een efficiënter algoritme geeft betere antwoorden"],
         answer: 0,
-        wrongHints: [null, "Het gaat om snelheid/tijd, niet om uiterlijk.", "Juist bij grote data telt het zwaar.", "Een efficiënter algoritme geeft hetzelfde antwoord, alleen sneller."],
+        wrongHints: [null, "Het gaat om snelheid/tijd, niet om uiterlijk.", "Ook een traag algoritme draait op elke computer; het duurt dan alleen langer. Wanneer merk je dat?", "Een efficiënter algoritme geeft hetzelfde antwoord, alleen sneller."],
         uitlegPad: {
           stappen: [{ titel: "n maakt het verschil", tekst: "Bij een paar items maakt het niet uit, maar bij **miljoenen** items is het verschil tussen een slim en een traag algoritme enorm (seconden vs uren). Daarom tellen informatici het aantal **stappen** in verhouding tot de grootte n. Hetzelfde resultaat, maar veel sneller bereikt." }],
           niveaus: { basis: "Veel data = tijd telt.", simpeler: "Grote data → efficiëntie telt", nogSimpeler: "Veel data = tijd telt." },
@@ -227,9 +227,9 @@ const steps = [
       },
       {
         q: "Bij **bubble sort** gebeurt wat?",
-        options: ["Buren worden vergeleken en verwisseld", "De lijst wordt steeds in het midden gedeeld", "Alles wordt gewist", "Er wordt niets gesorteerd"],
+        options: ["Buren worden vergeleken en verwisseld", "De lijst wordt steeds in het midden gedeeld", "Het kleinste item wordt gezocht en vooraan gezet", "Elk item wordt één voor één met het gezochte vergeleken"],
         answer: 0,
-        wrongHints: [null, "In het midden delen hoort bij binair zoeken.", "Sorteren wist niets.", "Bubble sort sorteert juist wél."],
+        wrongHints: [null, "In het midden delen hoort bij binair zoeken.", "Dat is selection sort. Welke items vergelijkt bubble sort steeds met elkaar?", "Dat is lineair zoeken. Bubble sort zoekt niets, het sorteert."],
         uitlegPad: {
           stappen: [{ titel: "Grootste borrelt naar achteren", tekst: "**Bubble sort** vergelijkt telkens twee **buren**; staat de grootste links, dan verwisselt hij ze. Zo 'borrelt' het grootste getal naar het einde. Herhaal tot er niets meer verwisseld wordt — dan is de lijst gesorteerd. Simpel, maar traag bij grote lijsten." }],
           niveaus: { basis: "Buren verwisselen.", simpeler: "Bubble sort = buren ruilen", nogSimpeler: "Buren verwisselen." },
@@ -237,9 +237,9 @@ const steps = [
       },
       {
         q: "Waarom is **binair zoeken** sneller dan lineair zoeken?",
-        options: ["Het halveert bij elke stap het zoekgebied", "Het bekijkt elk item één keer heel snel", "Het gebruikt meer geheugen om te zoeken", "Het werkt zonder de lijst te bekijken"],
+        options: ["Het halveert bij elke stap het zoekgebied", "Het bekijkt elk item één keer heel snel", "Het gebruikt meer geheugen om te zoeken", "Het begint altijd vooraan in de lijst"],
         answer: 0,
-        wrongHints: [null, "Elk item apart bekijken is juist lineair (traag).", "Snelheid komt niet door meer geheugen.", "Het kijkt wel, maar slim: halveren."],
+        wrongHints: [null, "Elk item apart bekijken is juist lineair (traag).", "Snelheid komt niet door meer geheugen.", "Waar kijkt binair zoeken als eerste: vooraan, of ergens anders?"],
         uitlegPad: {
           stappen: [{ titel: "Halveren = supersnel", tekst: "**Binair zoeken** kijkt in het midden en **gooit de helft weg** die het niet kan zijn — steeds opnieuw. Daardoor kost het maar ~log₂(n) stappen i.p.v. n. Zo vind je een naam in een telefoonboek zonder elke pagina te lezen. (Voorwaarde: de lijst is gesorteerd.)" }],
           niveaus: { basis: "Steeds halveren.", simpeler: "Binair = halveren", nogSimpeler: "Steeds halveren." },

@@ -20,9 +20,9 @@ const steps = [
     checks: [
       {
         q: "Wat geldt voor **alle AI die nu bestaat**?",
-        options: ["Het is 'smalle' AI", "Het is bewust zoals een mens", "Het kan alles wat een mens kan", "Het werkt zonder data"],
+        options: ["Het is 'smalle' AI", "Het is 'algemene' AI", "Het kan alles wat een mens kan", "Het volgt vaste als-dan-regels"],
         answer: 0,
-        wrongHints: [null, "AI is niet bewust — het rekent met patronen.", "Dat zou algemene AI (AGI) zijn — bestaat nog niet.", "AI leunt juist zwaar op data."],
+        wrongHints: [null, "Algemene AI (AGI) zou álles kunnen leren wat een mens kan. Bestaat dat al?", "Dat zou algemene AI (AGI) zijn — bestaat nog niet.", "Veel AI leert juist uit data in plaats van uit getypte regels. Geldt dit dan voor álle AI?"],
         uitlegPad: {
           stappen: [{ titel: "Smal = één taak", tekst: "Alle huidige AI is **smalle AI** (narrow): heel goed in **één** taak (schaken, spamfilter, chatten, gezichtsherkenning). **Algemene AI** (AGI), die net als een mens álles kan leren, bestaat (nog) niet. AI is bovendien **niet bewust**." }],
           niveaus: { basis: "Smalle AI.", simpeler: "Nu = smalle AI", nogSimpeler: "Smalle AI." },
@@ -30,9 +30,9 @@ const steps = [
       },
       {
         q: "Hoe komt AI tot een antwoord?",
-        options: ["Door patronen in data te gebruiken", "Door echt te 'begrijpen' zoals een mens", "Door magie", "Door willekeurig te gokken"],
+        options: ["Door patronen in data te gebruiken", "Door echt te 'begrijpen' zoals een mens", "Door antwoorden op te zoeken in een vaste lijst", "Door voorbeelden letterlijk uit het hoofd te leren"],
         answer: 0,
-        wrongHints: [null, "AI begrijpt niet zoals een mens — het rekent.", "Geen magie — wiskunde en data.", "Niet willekeurig — gebaseerd op geleerde patronen."],
+        wrongHints: [null, "AI begrijpt niet zoals een mens — het rekent.", "Een vaste lijst kan alleen vragen aan die er al in staan. Hoe kan AI dan iets nieuws herkennen?", "Letterlijk onthouden helpt niet bij een voorbeeld dat AI nog nooit zag. Wat haalt AI uit al die voorbeelden?"],
         uitlegPad: {
           stappen: [{ titel: "Rekenen met patronen", tekst: "AI **herkent en gebruikt patronen** uit grote hoeveelheden data om te voorspellen of te genereren. Het 'begrijpt' niet bewust zoals een mens. Daarom kan AI zelfverzekerd klinken en er tóch naast zitten ('hallucineren') — blijf kritisch." }],
           niveaus: { basis: "Patronen in data.", simpeler: "AI = patronen uit data", nogSimpeler: "Patronen in data." },
@@ -40,9 +40,9 @@ const steps = [
       },
       {
         q: "Welke van deze is een voorbeeld van AI in het dagelijks leven?",
-        options: ["Aanbevelingen op YouTube/Netflix", "Een gewone rekenmachine-app", "Een digitale wekker met alarm", "Een tijdschakelaar voor lampen"],
+        options: ["Aanbevelingen op YouTube/Netflix", "Een gewone rekenmachine-app", "Een digitale wekker met alarm", "Een spellingscontrole met een vaste woordenlijst"],
         answer: 0,
-        wrongHints: [null, "Een rekenmachine volgt vaste regels, leert niets.", "Een wekker volgt de vaste tijd die jij instelt — hij leert niets.", "Die schakelt op een vaste tijd — er wordt niets geleerd uit data."],
+        wrongHints: [null, "Een rekenmachine volgt vaste regels, leert niets.", "Een wekker volgt de vaste tijd die jij instelt — hij leert niets.", "Die vergelijkt alleen met een vaste lijst. Leert hij iets uit jouw gedrag of uit data?"],
         uitlegPad: {
           stappen: [{ titel: "Aanbevelingssystemen", tekst: "**Aanbevelingen** (YouTube, Netflix, Spotify) gebruiken AI: ze leren uit jouw (en andermans) kijk-/luistergedrag welke patronen erin zitten en voorspellen wat je leuk vindt. Een rekenmachine of schakelaar volgt vaste regels en **leert** niet." }],
           niveaus: { basis: "Aanbevelingen.", simpeler: "YouTube-tips = AI", nogSimpeler: "Aanbevelingen." },
@@ -50,9 +50,9 @@ const steps = [
       },
       {
         q: "**Algemene AI (AGI)** — die net als een mens álles zou kunnen leren —…",
-        options: ["bestaat op dit moment nog niet", "zit in elke smartphone", "is hetzelfde als een rekenmachine", "is bij wet verboden"],
+        options: ["bestaat op dit moment nog niet", "zit in elke smartphone", "zit in chatbots zoals ChatGPT", "is bij wet verboden"],
         answer: 0,
-        wrongHints: [null, "In je telefoon zit smalle AI, geen AGI.", "Een rekenmachine leert helemaal niets.", "Het gaat niet om een verbod, maar of het al bestaat."],
+        wrongHints: [null, "In je telefoon zit smalle AI, geen AGI.", "Een chatbot is heel goed in taal, maar kan hij ook leren fietsen of koken? Dan is het smalle AI.", "Het gaat niet om een verbod, maar of het al bestaat."],
         uitlegPad: {
           stappen: [{ titel: "Nog science fiction", tekst: "**Algemene AI (AGI)** zou, net als een mens, om het even welke taak kunnen leren. Die bestaat **nog niet** — alle AI van nu is **smal** (goed in één taak). AGI is voorlopig science fiction." }],
           niveaus: { basis: "Bestaat nog niet.", simpeler: "AGI = bestaat nog niet", nogSimpeler: "Bestaat nog niet." },
@@ -60,9 +60,9 @@ const steps = [
       },
       {
         q: "Wat betekent het als een AI **'hallucineert'**?",
-        options: ["Het verzint een fout antwoord", "De computer wordt te warm", "Het beeldscherm flikkert", "De AI valt in slaap"],
+        options: ["Het verzint een fout antwoord", "Het weigert een vraag te beantwoorden", "Het neemt tekst letterlijk van internet over", "Het reageert veel trager dan normaal"],
         answer: 0,
-        wrongHints: [null, "Het gaat over foute antwoorden, niet over warmte.", "Niet het scherm — het antwoord klopt niet.", "AI 'slaapt' niet."],
+        wrongHints: [null, "Bij hallucineren krijg je wél een antwoord. Wat is er dan mis mee?", "Kopiëren uit een bron heet anders. Waar haalt een hallucinerende AI zijn 'feiten' vandaan?", "Het gaat niet om de snelheid, maar om de inhoud van het antwoord."],
         uitlegPad: {
           stappen: [{ titel: "Zeker klinken, toch fout", tekst: "**Hallucineren** betekent dat AI een antwoord **verzint** dat vloeiend en zeker klinkt, maar feitelijk **niet klopt**. Omdat het model woord-voor-woord het waarschijnlijkste vervolg kiest, kan het overtuigend naast de waarheid zitten. Controleer belangrijke feiten dus zelf." }],
           niveaus: { basis: "Zelfverzekerd fout.", simpeler: "Hallucineren = verzinnen", nogSimpeler: "Zelfverzekerd fout." },
@@ -119,9 +119,9 @@ const steps = [
       },
       {
         q: "Een kat-herkenner is getraind op duizenden foto's. Wat kan hij daarna?",
-        options: ["Katten herkennen op nieuwe foto's", "Alleen exact dezelfde foto's herkennen", "Zelf een echte kat verzorgen", "Niets nieuws"],
+        options: ["Katten herkennen op nieuwe foto's", "Alleen exact dezelfde foto's herkennen", "Ook honden en vogels benoemen", "Katten tekenen die nooit bestonden"],
         answer: 0,
-        wrongHints: [null, "Dan zou hij niets geleerd hebben — het gaat om nieuwe foto's.", "Een model doet geen fysieke taken.", "Juist wél iets nieuws: generaliseren."],
+        wrongHints: [null, "Dan zou hij niets geleerd hebben — het gaat om nieuwe foto's.", "Hij heeft alleen geleerd hoe een kat eruitziet. Weet hij dan ook wat een hond is?", "Herkennen is iets anders dan nieuwe plaatjes maken; dat doet generatieve AI."],
         uitlegPad: {
           stappen: [{ titel: "Generaliseren", tekst: "Een goed getraind model leert de **kenmerken** van een kat, niet de exacte foto's. Daardoor herkent het katten op **nieuwe** beelden die het nog nooit zag. Dat 'toepassen op onbekende gevallen' heet **generaliseren** — precies waar het om draait." }],
           niveaus: { basis: "Nieuwe foto's herkennen.", simpeler: "Model = generaliseert", nogSimpeler: "Nieuwe foto's herkennen." },
@@ -158,9 +158,9 @@ const steps = [
       },
       {
         q: "Wat is **generatieve AI**?",
-        options: ["AI die nieuwe content maakt", "AI die alleen bestaande bestanden sorteert", "Een soort virus", "Een back-upsysteem"],
+        options: ["AI die nieuwe content maakt", "AI die spam uit je mailbox filtert", "AI die gegevens in groepen indeelt", "AI die leert door beloning en straf"],
         answer: 0,
-        wrongHints: [null, "Het maakt juist nieuwe dingen, niet alleen sorteren.", "Het heeft niets met malware te maken.", "Een back-up is iets anders."],
+        wrongHints: [null, "Een spamfilter kiest alleen tussen 'spam' en 'geen spam'. Maakt hij daarbij iets?", "Indelen in groepen ordent wat er al is. Waar verwijst het woord 'generatief' naar?", "Dat heet reinforcement learning. Wat betekent 'genereren'?"],
         uitlegPad: {
           stappen: [{ titel: "Nieuwe content maken", tekst: "**Generatieve AI** **maakt nieuwe** content: tekst (chatbots/LLM's), beeld (uit een 'prompt'), muziek, code. Het is een krachtig **hulpmiddel**, maar geen orakel — het kan fouten en verzinsels bevatten." }],
           niveaus: { basis: "Maakt nieuwe content.", simpeler: "Generatief = maakt nieuw", nogSimpeler: "Maakt nieuwe content." },
@@ -168,9 +168,9 @@ const steps = [
       },
       {
         q: "Bij **reinforcement learning** (versterkend leren) leert een AI door…",
-        options: ["Belonen en straffen", "Een boek uit het hoofd te leren", "Gelabelde foto's te bekijken", "Helemaal niets te doen"],
+        options: ["Beloning en straf te krijgen", "Data in groepen te verdelen", "Gelabelde foto's te bekijken", "Vaste regels te volgen"],
         answer: 0,
-        wrongHints: [null, "Uit het hoofd leren is het niet.", "Gelabelde data → dat is supervised.", "Het leert juist actief door te proberen."],
+        wrongHints: [null, "Dat is unsupervised learning: daar krijgt de AI geen feedback op wat hij doet.", "Gelabelde data → dat is supervised.", "Getypte regels volgen is klassiek programmeren. Hoe leert een AI die een spel steeds opnieuw speelt?"],
         uitlegPad: {
           stappen: [{ titel: "Leren met beloning", tekst: "**Reinforcement learning** leert door **proberen** en **beloning/straf**: goede acties leveren punten op, foute niet. Zo leert een AI bijvoorbeeld zelf een game spelen — steeds een beetje beter. **Supervised** leert van labels, **unsupervised** zoekt zelf groepen." }],
           niveaus: { basis: "Belonen en straffen.", simpeler: "Reinforcement = belonen", nogSimpeler: "Belonen en straffen." },
@@ -207,9 +207,9 @@ const steps = [
       },
       {
         q: "Wat is een **deepfake**?",
-        options: ["Een met AI gemaakte nepvideo", "Een heel diep bestand", "Een sterk wachtwoord", "Een snelle internetverbinding"],
+        options: ["Een met AI gemaakte nepvideo", "Een virus verstopt in een video", "Een filmpje met studio-effecten", "Een nepaccount op sociale media"],
         answer: 0,
-        wrongHints: [null, "Het gaat om nep-media, niet om 'diepte' van een bestand.", "Het heeft niets met wachtwoorden te maken.", "Niet met snelheid."],
+        wrongHints: [null, "Dat is malware. Een deepfake gaat over wat je ziet en hoort.", "Filmeffecten maakt een team met de hand. Wie of wat maakt een deepfake?", "Een nepaccount is een vals profiel. Een deepfake laat een échte persoon iets doen of zeggen wat nooit gebeurde."],
         uitlegPad: {
           stappen: [{ titel: "AI-vervalsing", tekst: "Een **deepfake** is een met AI gemaakte **nepvideo of nep-stem** die echt lijkt. Dat kan worden misbruikt voor **desinformatie** of oplichting. Daarom: wees kritisch op wat je online ziet/hoort — niet alles is echt." }],
           niveaus: { basis: "AI-nepvideo.", simpeler: "Deepfake = AI-nep", nogSimpeler: "AI-nepvideo." },
@@ -217,9 +217,9 @@ const steps = [
       },
       {
         q: "Wat is de juiste houding bij het gebruik van (generatieve) AI?",
-        options: ["Als hulpmiddel gebruiken en de uitkomst controleren", "Alles overnemen, want AI weet het altijd beter", "Het nooit gebruiken, want het is altijd fout", "Er gerust al je persoonsgegevens in invoeren"],
+        options: ["Als hulpmiddel gebruiken en de uitkomst controleren", "Vooral gebruiken om feiten op te zoeken, daar is AI sterk", "Overnemen als het antwoord zelfverzekerd klinkt", "Gebruiken met echte namen erin, dan wordt het persoonlijker"],
         answer: 0,
-        wrongHints: [null, "AI kan fouten/verzinsels bevatten — niet blind vertrouwen.", "Het is niet altijd fout — het is juist nuttig, mits kritisch gebruikt.", "Wees voorzichtig met persoonsgegevens (privacy/AVG)."],
+        wrongHints: [null, "Juist bij feiten kan AI zelfverzekerd iets verzinnen. Is het dan een betrouwbare bron?", "Zelfverzekerd klinken zegt niets over kloppen. Weet je nog wat hallucineren is?", "Denk aan privacy (AVG): wat gebeurt er met gegevens die je in een AI-dienst stopt?"],
         uitlegPad: {
           stappen: [{ titel: "Hulpmiddel, geen orakel", tekst: "Gebruik AI als **hulpmiddel**, maar blijf **kritisch**: het kan zelfverzekerd klinken en er tóch naast zitten. **Controleer** belangrijke feiten zelf, en let op **privacy** (deel niet zomaar persoonsgegevens) en **eerlijkheid** (bias)." }],
           niveaus: { basis: "Hulpmiddel + kritisch controleren.", simpeler: "AI = hulpmiddel, blijf kritisch", nogSimpeler: "Hulpmiddel + kritisch controleren." },
@@ -227,9 +227,9 @@ const steps = [
       },
       {
         q: "Wat betekent het dat een complex AI-model een **'black box'** is?",
-        options: ["Je ziet niet waarom het iets beslist", "Het staat letterlijk in een zwarte doos", "Het werkt alleen 's nachts", "Het is een soort computervirus"],
+        options: ["Je ziet niet waarom het iets beslist", "Het slaat stiekem je gegevens op", "Het werkt zonder trainingsdata", "Het beslist steeds willekeurig"],
         answer: 0,
-        wrongHints: [null, "Het gaat om onduidelijkheid, niet om een echte doos.", "Tijd van de dag speelt geen rol.", "Het heeft niets met malware te maken."],
+        wrongHints: [null, "Dat is een privacyzorg. Waar gaat 'black box' (een doos waar je niet in kunt kijken) over?", "Ook complexe modellen leren uit data. Waar slaat 'black box' dan op?", "De beslissingen volgen uit geleerde patronen. Maar kun je die patronen zelf aflezen?"],
         uitlegPad: {
           stappen: [{ titel: "Uitkomst zonder uitleg", tekst: "Bij een **black box** zie je wel de **uitkomst**, maar is onduidelijk **waaróm** het model die koos. Dat is een probleem bij belangrijke beslissingen — bv. een afgewezen lening of sollicitatie: je kunt de reden niet goed controleren of aanvechten." }],
           niveaus: { basis: "Onduidelijk waarom.", simpeler: "Black box = geen uitleg", nogSimpeler: "Onduidelijk waarom." },

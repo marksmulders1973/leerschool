@@ -20,9 +20,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **database**?",
-        options: ["Een geordende verzameling gegevens", "Eén los bestand met een foto", "Een taal om websites mee te bouwen", "Een kabel die computers verbindt"],
+        options: ["Een geordende verzameling gegevens", "Een programma dat gegevens beheert", "Een taal om gegevens op te vragen", "Eén groot tekstbestand met gegevens"],
         answer: 0,
-        wrongHints: [null, "Een database bevat juist heel veel gegevens, geordend.", "Een taal is iets anders (bv. SQL ondervraagt een database).", "Dat is hardware."],
+        wrongHints: [null, "Dat is een DBMS, het beheerprogramma. Wat beheert dat programma?", "Dat is SQL. Waaruit vraag je met SQL gegevens op?", "Een tekstbestand heeft geen vaste indeling in tabellen. Wat maakt een database anders?"],
         uitlegPad: {
           stappen: [{ titel: "Geordend opslaan", tekst: "Een **database** is een **gestructureerde verzameling gegevens** die je snel kunt opslaan, zoeken en bijwerken — opgeslagen in **tabellen**. Bijna elke app gebruikt er een. Een DBMS (zoals MySQL of PostgreSQL) beheert de database." }],
           niveaus: { basis: "Geordende gegevens.", simpeler: "Database = geordende gegevens", nogSimpeler: "Een geordende verzameling gegevens." },
@@ -30,9 +30,9 @@ const steps = [
       },
       {
         q: "In een tabel: wat is een **record**?",
-        options: ["Eén rij: één exemplaar", "Eén kolom: één eigenschap", "De naam van de tabel", "Een foutmelding"],
+        options: ["Eén rij: één exemplaar", "Eén kolom: één eigenschap", "De naam van de tabel", "Eén vakje: één waarde"],
         answer: 0,
-        wrongHints: [null, "Dat is juist een veld (kolom).", "De tabelnaam is iets anders.", "Een record is gewoon data, geen fout."],
+        wrongHints: [null, "Dat is juist een veld (kolom).", "De tabelnaam is iets anders.", "Eén vakje is waar een rij en een kolom elkaar kruisen. Een record is groter."],
         uitlegPad: {
           stappen: [{ titel: "Rij = record, kolom = veld", tekst: "Een **record** is één **rij** in de tabel = één exemplaar (bv. de leerling 'Sara'). Een **veld** is één **kolom** = één eigenschap (bv. naam of groep). De tabel `Leerlingen` bevat dus meerdere records, elk met dezelfde velden." }],
           niveaus: { basis: "Een rij.", simpeler: "Record = rij", nogSimpeler: "A." },
@@ -40,9 +40,9 @@ const steps = [
       },
       {
         q: "Waarom een database in plaats van één groot tekstbestand?",
-        options: ["Snel zoeken/filteren/combineren, ook bij veel data", "Gegevens zien er in een database mooier uit", "Tekstbestanden worden niet meer ondersteund", "Een database neemt geen opslagruimte in"],
+        options: ["Snel zoeken/filteren/combineren, ook bij veel data", "Gegevens zien er in een database mooier uit", "Een database kan geen typefouten bevatten", "Een database neemt minder opslagruimte in"],
         answer: 0,
-        wrongHints: [null, "Het gaat om snelheid en structuur, niet om uiterlijk.", "Tekstbestanden bestaan natuurlijk gewoon nog.", "Een database kost wel degelijk opslag."],
+        wrongHints: [null, "Het gaat om snelheid en structuur, niet om uiterlijk.", "Ook in een database kun je verkeerde gegevens typen. Wat kan een database wél beter?", "Een database kost vaak juist méér ruimte (bijvoorbeeld voor indexen). Waar is hij dan goed in?"],
         uitlegPad: {
           stappen: [{ titel: "Structuur = snelheid", tekst: "In een database staan gegevens **gestructureerd** in tabellen, zodat je razendsnel kunt **zoeken, filteren en combineren** — ook bij miljoenen records. In een los tekstbestand zou je alles regel voor regel moeten doorzoeken; dat wordt onwerkbaar." }],
           niveaus: { basis: "Snel zoeken bij veel data.", simpeler: "Database = snel zoeken", nogSimpeler: "Snel zoeken/filteren/combineren, ook bij veel data." },
@@ -60,9 +60,9 @@ const steps = [
       },
       {
         q: "Wat is een **DBMS** (zoals MySQL of PostgreSQL)?",
-        options: ["Een programma dat databases beheert", "Een programmeertaal voor games", "Een database met alleen getallen", "Een kabel tussen twee servers"],
+        options: ["Een programma dat databases beheert", "Een taal om databases te bevragen", "Eén tabel met alle gegevens erin", "Een server die websites host"],
         answer: 0,
-        wrongHints: [null, "Het beheert data; het is geen game-taal.", "Een DBMS bevat niet alleen getallen — en is het wel de data zelf?", "Dat is hardware."],
+        wrongHints: [null, "Dat is SQL, de taal die je naar een DBMS stuurt. Wat is het DBMS zelf?", "Een tabel bevat de data. Wat doen MySQL en PostgreSQL met al die tabellen?", "Een webserver levert webpagina's. Waar zijn MySQL en PostgreSQL voor?"],
         uitlegPad: {
           stappen: [{ titel: "De databasebeheerder", tekst: "Een **DBMS** (DataBase Management System) is de **software die de database beheert**: opslaan, opvragen, beveiligen, back-uppen. Bekende voorbeelden: MySQL, PostgreSQL, SQLite. Jij praat ermee via **SQL**." }],
           niveaus: { basis: "Databasebeheer-software.", simpeler: "DBMS = beheert database", nogSimpeler: "Een programma dat databases beheert." },
@@ -79,9 +79,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **primaire sleutel** (primary key)?",
-        options: ["Een uniek kenmerk dat elk record aanwijst", "Een wachtwoord voor de database", "De kolom met de langste teksten", "Een lege tabel die je later vult"],
+        options: ["Een uniek kenmerk dat elk record aanwijst", "Een wachtwoord voor de database", "Een veld dat naar een andere tabel verwijst", "De eerste kolom, wat er ook in staat"],
         answer: 0,
-        wrongHints: [null, "Het is geen wachtwoord, maar een identificatie.", "Grootte heeft er niets mee te maken.", "Een sleutel is een veld, geen lege tabel."],
+        wrongHints: [null, "Het is geen wachtwoord, maar een identificatie.", "Dat is een foreign key (verwijssleutel).", "De plek maakt niet uit. Waar moet je op letten bij de waarden in een sleutelkolom?"],
         uitlegPad: {
           stappen: [{ titel: "Uniek per record", tekst: "Een **primaire sleutel** (vaak `id`) is een **uniek** kenmerk: geen twee records hebben dezelfde. Daarmee kun je elk record precies aanwijzen — ook als twee mensen dezelfde naam hebben. Het is de 'identiteitskaart' van een rij." }],
           niveaus: { basis: "Uniek kenmerk per record.", simpeler: "Primaire sleutel = uniek id", nogSimpeler: "Een uniek kenmerk dat elk record aanwijst." },
@@ -89,9 +89,9 @@ const steps = [
       },
       {
         q: "Een **foreign key** (verwijssleutel) wordt gebruikt om…",
-        options: ["Tabellen aan elkaar te koppelen", "De database te beveiligen", "Een back-up van de tabel te maken", "Tekst in de tabel te versleutelen"],
+        options: ["Tabellen aan elkaar te koppelen", "Elk record uniek aan te wijzen", "Een back-up van de tabel te maken", "Records op volgorde te zetten"],
         answer: 0,
-        wrongHints: [null, "Beveiliging is een andere zaak.", "Een back-up is iets anders.", "Versleuteling hoort bij beveiliging, niet bij sleutels-relaties."],
+        wrongHints: [null, "Dat doet de primaire sleutel. Waar wijst een verwijssleutel naar?", "Een back-up is iets anders.", "Sorteren doet ORDER BY. Wat zegt 'verwijs' in verwijssleutel?"],
         uitlegPad: {
           stappen: [{ titel: "Verwijzen naar een primaire sleutel", tekst: "Een **foreign key** is een veld in de ene tabel dat **verwijst naar de primaire sleutel** van een andere tabel. Zo koppel je records: `leerling_id` in Toetsen verwijst naar `id` in Leerlingen, zodat je weet welke toets bij welke leerling hoort." }],
           niveaus: { basis: "Tabellen koppelen.", simpeler: "Foreign key = koppeling", nogSimpeler: "Tabellen aan elkaar te koppelen." },
@@ -99,9 +99,9 @@ const steps = [
       },
       {
         q: "Waarom splits je gegevens op in meerdere gekoppelde tabellen?",
-        options: ["Om dubbele gegevens te voorkomen", "Om de database trager te maken", "Omdat één tabel niet mag", "Om meer wachtwoorden te hebben"],
+        options: ["Om dubbele gegevens te voorkomen", "Om de database sneller te laten zoeken", "Omdat één tabel maar tien kolommen mag hebben", "Om de gegevens beter te beveiligen"],
         answer: 0,
-        wrongHints: [null, "Het maakt het juist beter, niet trager.", "Eén tabel mag prima — opsplitsen is een bewuste keuze. Welk probleem los je ermee op?", "Wachtwoorden hebben er niets mee te maken."],
+        wrongHints: [null, "Opsplitsen gaat niet vooral om snelheid; koppelen kost juist wat extra werk. Welk probleem los je dan op?", "Er is geen grens van tien kolommen. Waarom splits je dan toch?", "Beveiliging regel je met rechten en wachtwoorden. Wat gaat er mis als alles in één tabel staat?"],
         uitlegPad: {
           stappen: [{ titel: "Eén keer opschrijven", tekst: "Door op te splitsen (normaliseren) schrijf je elk gegeven **maar één keer** op (de naam 'Sara' staat alleen in Leerlingen). Verandert er iets? Eén plek aanpassen. Dat voorkomt **dubbele gegevens** en fouten." }],
           niveaus: { basis: "Geen dubbele data.", simpeler: "Opsplitsen = geen dubbel", nogSimpeler: "A." },
@@ -119,9 +119,9 @@ const steps = [
       },
       {
         q: "Twee leerlingen heten allebei 'Sara'. Hoe houdt de database ze uit elkaar?",
-        options: ["Via hun unieke primaire sleutel", "Dat kan de database niet", "Via de volgorde waarin ze staan", "Via hun achternaam in de tabel"],
+        options: ["Via hun unieke primaire sleutel", "Via hun geboortedatum", "Via de volgorde waarin ze staan", "Via hun achternaam in de tabel"],
         answer: 0,
-        wrongHints: [null, "Dat kan wél — denk aan het veld dat in elke tabel voor ieder record anders is.", "De volgorde van rijen kan veranderen — dat is geen vast kenmerk.", "Ook achternamen kunnen dubbel voorkomen."],
+        wrongHints: [null, "Ook twee Sara's kunnen op dezelfde dag jarig zijn.", "De volgorde van rijen kan veranderen — dat is geen vast kenmerk.", "Ook achternamen kunnen dubbel voorkomen."],
         uitlegPad: {
           stappen: [{ titel: "Dezelfde naam, ander id", tekst: "Namen kunnen dubbel voorkomen, maar de **primaire sleutel (id)** is **uniek**. Sara #1 en Sara #2 hebben een verschillend id, dus de database (en foreign keys) verwijzen altijd naar precies de juiste leerling." }],
           niveaus: { basis: "Uniek id.", simpeler: "Id houdt ze uit elkaar", nogSimpeler: "Via hun unieke primaire sleutel." },
@@ -217,9 +217,9 @@ const steps = [
       },
       {
         q: "Welke SQL-functie geeft het **aantal** records?",
-        options: ["COUNT", "AVG", "DELETE", "ORDER BY"],
+        options: ["COUNT", "AVG", "SUM", "MAX"],
         answer: 0,
-        wrongHints: [null, "AVG geeft het gemiddelde, niet het aantal.", "DELETE verwijdert.", "ORDER BY sorteert."],
+        wrongHints: [null, "AVG geeft het gemiddelde, niet het aantal.", "SUM telt de waarden bij elkaar op; het telt geen records.", "MAX geeft de hoogste waarde, niet het aantal."],
         uitlegPad: {
           stappen: [{ titel: "Aggregatie", tekst: "**COUNT(*)** telt het aantal records: `SELECT COUNT(*) FROM Leerlingen;`. Andere samenvat-functies: **AVG** (gemiddelde), **SUM** (totaal), **MAX/MIN** (hoogste/laagste). Handig om snel iets over een hele tabel te weten." }],
           niveaus: { basis: "COUNT(*).", simpeler: "Aantal tellen = COUNT", nogSimpeler: "A." },
@@ -237,9 +237,9 @@ const steps = [
       },
       {
         q: "Welke functie geeft het **gemiddelde** cijfer van een tabel?",
-        options: ["AVG", "COUNT(*)", "MAX", "DELETE"],
+        options: ["AVG", "COUNT(*)", "MAX", "SUM"],
         answer: 0,
-        wrongHints: [null, "COUNT telt het aantal, niet het gemiddelde.", "MAX geeft het hoogste, niet het gemiddelde.", "DELETE verwijdert."],
+        wrongHints: [null, "COUNT telt het aantal, niet het gemiddelde.", "MAX geeft het hoogste, niet het gemiddelde.", "SUM telt alles bij elkaar op. Wat moet je daarna nog doen voor een gemiddelde?"],
         uitlegPad: {
           stappen: [{ titel: "AVG = gemiddelde", tekst: "**AVG** berekent het **gemiddelde**: `SELECT AVG(cijfer) FROM Toetsen;`. Verwante samenvat-functies: **COUNT** (aantal), **SUM** (totaal), **MAX/MIN** (hoogste/laagste). Zo krijg je in één query een overzicht van een hele tabel." }],
           niveaus: { basis: "AVG.", simpeler: "Gemiddelde = AVG", nogSimpeler: "A." },

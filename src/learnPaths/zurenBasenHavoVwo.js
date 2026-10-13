@@ -44,7 +44,7 @@ const steps = [
         q: "Welke is de **geconjugeerde base** van HCl?",
         options: ["Cl⁻","H₂O","H₃O⁺","NaOH"],
         answer: 0,
-        wrongHints: [null, "Niet — H₂O is base in deze reactie.", "Niet — geconj. zuur.", "Niet relevant."],
+        wrongHints: [null, "Niet — H₂O is base in deze reactie.", "H₃O⁺ ontstaat als water een H⁺ opneemt. Is het dan een zuur of een base?", "Een geconjugeerde base ontstaat uit het zuur zelf. Komt NaOH voort uit HCl?"],
         uitlegPad: {
           stappen: [{ titel: "Zuur min proton = geconj. base", tekst: "**HCl → H⁺ + Cl⁻**. Zonder proton heet de zuurrest **Cl⁻**: geconjugeerde base van HCl. Geconjugeerd = ontstaan uit." }],
           theorie: "Patroon: HX (zuur) ⇌ X⁻ (geconj.base) + H⁺.",
@@ -53,9 +53,9 @@ const steps = [
       },
       {
         q: "Water is **amfoteer**. Welke betekenis?",
-        options: ["Kan zuur én base zijn","Onveranderbaar","Altijd zuur","Smaakloos"],
+        options: ["Kan zowel zuur als base zijn","Neutraal: geen zuur, geen base","Lost zouten én zuren op","Kan vast, vloeibaar en gas zijn"],
         answer: 0,
-        wrongHints: [null, "Niet wat amfoteer betekent.", "Wel kan, maar niet altijd.", "Niet relevant."],
+        wrongHints: [null, "Neutraal betekent pH 7. Maar wat doet water met HCl, en wat met NH₃?", "Dat zegt iets over water als oplosmiddel. Waar gaat het bij zuren en basen om?", "Dat zijn fasen. Waar gaat het bij zuren en basen om?"],
         uitlegPad: {
           stappen: [{ titel: "Amfoteer = beide", tekst: "**Amfoteer**: kan zowel als zuur als als base functioneren. **Water**: met HCl is het base (neemt H⁺ op). Met NH₃ is het zuur (geeft H⁺ af). Water kan een H⁺ opnemen (→ H₃O⁺) én een H⁺ afstaan (→ OH⁻)." }],
           niveaus: { basis: "Beide.", simpeler: "Amfoteer = zuur+base", nogSimpeler: "Beide" },
@@ -74,9 +74,9 @@ const steps = [
       },
       {
         q: "Zuur + base (bv. HCl + NaOH) → ?",
-        options: ["Zout + water","Niets","Gas","Vlam"],
+        options: ["Zout + water","Zout + waterstofgas","Een buffer","Zout + CO₂ + water"],
         answer: 0,
-        wrongHints: [null, "Wel reactie.", "Soms (bv. CO₂), niet altijd.", "Niet algemeen."],
+        wrongHints: [null, "Waterstofgas ontstaat als een zuur met een metaal reageert. Waar blijven de OH⁻-ionen van de base?", "Een buffer maak je met een zwak zuur en zijn geconjugeerde base. Is HCl een zwak zuur?", "Dat gebeurt als de base een carbonaat is. Zit er C in NaOH?"],
         uitlegPad: {
           stappen: [{ titel: "Neutralisatie", tekst: "**Neutralisatie**: zuur + base → zout + water. Voorbeelden:\n• HCl + NaOH → NaCl + H₂O\n• H₂SO₄ + 2 KOH → K₂SO₄ + 2 H₂O\nBij sterk zuur + sterke base in gelijke hoeveelheden wordt de pH neutraal (7)." }],
           niveaus: { basis: "Zout + water.", simpeler: "Z+B → zout+water", nogSimpeler: "Zout+water" },
@@ -155,9 +155,9 @@ const steps = [
     checks: [
       {
         q: "**Zwak zuur** dissocieert:",
-        options: ["Gedeeltelijk","Volledig","Niet","Alleen bij hitte"],
+        options: ["Gedeeltelijk","Volledig","Niet","Volledig, maar langzaam"],
         answer: 0,
-        wrongHints: [null, "Dat is sterk zuur.", "Wel — een beetje.", "Niet temperatuur-cruciaal hier."],
+        wrongHints: [null, "Dat is sterk zuur.", "Azijn is zuur en geleidt een beetje stroom. Kan dat als er helemaal geen ionen zijn?", "Sterk of zwak gaat niet over snelheid. Welk deel van de moleculen staat een H⁺ af?"],
         uitlegPad: {
           stappen: [{ titel: "Evenwicht ⇌", tekst: "**Zwak zuur**: dissocieert **gedeeltelijk** → evenwicht tussen HA, A⁻ en H⁺. Bv. azijnzuur: ~1% gedissocieerd bij 0,1 M. Sterk zuur dissocieert volledig (~100%)." }],
           niveaus: { basis: "Gedeeltelijk.", simpeler: "Zwak = gedeeltelijk", nogSimpeler: "Deels" },
@@ -165,9 +165,9 @@ const steps = [
       },
       {
         q: "Lage Ka betekent:",
-        options: ["Zwakker zuur","Sterker zuur","Geen zuur","Sterke base"],
+        options: ["Zwakker zuur","Sterker zuur","Geen zuur","Geconcentreerder zuur"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel zuur.", "Niet relevant."],
+        wrongHints: [null, "Ka is de evenwichtsconstante van de zuurreactie. Ligt het evenwicht bij een lage Ka links of rechts?", "Ook azijnzuur heeft een lage Ka. Is azijnzuur geen zuur?", "Ka hangt niet af van hoeveel zuur je oplost. Waarover zegt Ka dan iets?"],
         uitlegPad: {
           stappen: [{ titel: "Ka = mate dissociatie", tekst: "**Ka** = evenwichts-constante zuur-dissociatie. **Hoge Ka** = veel gedissocieerd = sterk zuur. **Lage Ka** = weinig gedissocieerd = zwak zuur. pKa = −log(Ka) → lage pKa = sterk." }],
           niveaus: { basis: "Zwakker.", simpeler: "Lage Ka = zwak", nogSimpeler: "Zwak" },
@@ -175,9 +175,9 @@ const steps = [
       },
       {
         q: "Wat is een **buffer**?",
-        options: ["Mengsel zwak zuur + geconjugeerde base","Mengsel sterk zuur + sterke base","Volledig neutraal water","Mengsel van twee sterke zuren"],
+        options: ["Mengsel zwak zuur + geconjugeerde base","Mengsel sterk zuur + sterke base","Mengsel sterk zuur + zijn zout","Mengsel van twee sterke zuren"],
         answer: 0,
-        wrongHints: [null, "Niet — die neutraliseren elkaar gewoon.", "Niet — geen weerstand.", "Niet — een sterk zuur kan geen H⁺ opvangen."],
+        wrongHints: [null, "Niet — die neutraliseren elkaar gewoon.", "Cl⁻ uit HCl neemt geen H⁺ op. Kan zo'n mengsel dan toegevoegd zuur opvangen?", "Niet — een sterk zuur kan geen H⁺ opvangen."],
         uitlegPad: {
           stappen: [{ titel: "Zwak-zuur-paar = buffer", tekst: "**Buffer** = oplossing met **zwak zuur + zijn geconjugeerde base** (of zwakke base + geconj. zuur). Weerstaat pH-verandering bij toevoegen klein beetje zuur/base. Voorbeeld: azijnzuur + acetaat-zout." }],
           niveaus: { basis: "Zwak zuur + geconj.base.", simpeler: "Buffer = zwak-paar", nogSimpeler: "Zwak zuur + base" },
@@ -185,9 +185,9 @@ const steps = [
       },
       {
         q: "Bij **toevoegen klein beetje HCl** aan een acetaat-buffer:",
-        options: ["pH blijft ongeveer gelijk","pH daalt heel sterk","Buffer verdampt","Geen reactie"],
+        options: ["pH blijft ongeveer gelijk","pH daalt evenveel als in water","pH stijgt doordat acetaat reageert","HCl reageert niet met de buffer"],
         answer: 0,
-        wrongHints: [null, "Niet — daar is buffer voor.", "Niet — bufferreactie.", "Wel reactie."],
+        wrongHints: [null, "In zuiver water zakt de pH flink. Wat doet een buffer anders?", "Acetaat neemt H⁺ op, maar er komt zuur bij. Kan de pH dan stijgen?", "Wat doet een acetaation met een H⁺ uit HCl?"],
         uitlegPad: {
           stappen: [{ titel: "Base-component vangt H⁺", tekst: "Acetaat-buffer: CH₃COO⁻ + H⁺ → CH₃COOH. H⁺ wordt opgenomen, pH blijft (bijna) gelijk. **Buffercapaciteit** is wel begrensd — bij grote hoeveelheid zuur loopt buffer 'op' en pH zakt alsnog snel." }],
           niveaus: { basis: "Blijft gelijk.", simpeler: "Buffer = pH stabiel", nogSimpeler: "Stabiel" },
@@ -195,9 +195,9 @@ const steps = [
       },
       {
         q: "Welke buffer is **cruciaal** voor bloed?",
-        options: ["Bicarbonaat","Azijnzuur","Zoutzuur","Geen — bloed is gewoon water"],
+        options: ["Bicarbonaat","Azijnzuur","Zoutzuur","Ammoniak"],
         answer: 0,
-        wrongHints: [null, "Niet — niet in bloed.", "Niet — sterk zuur, geen buffer.", "Niet — bloed-pH zeer nauw gereguleerd."],
+        wrongHints: [null, "Niet — niet in bloed.", "Niet — sterk zuur, geen buffer.", "Ammoniak is giftig en zit nauwelijks in bloed. Welk buffersysteem hoort bij het CO₂ in je bloed?"],
         uitlegPad: {
           stappen: [{ titel: "Bicarbonaat = bloed-pH", tekst: "**Bicarbonaat-buffer** H₂CO₃ ⇌ HCO₃⁻ + H⁺ houdt bloed-pH op 7,35-7,45. Cruciaal — een grote afwijking is levensbedreigend. CO₂ uit ademhaling + nier-reabsorptie HCO₃⁻ samen reguleren." }],
           theorie: "Toets-actueel: hyperventilatie verhoogt pH (alkalose), longontsteking kan pH verlagen (acidose).",
@@ -245,9 +245,9 @@ const steps = [
       },
       {
         q: "Een **buret** wordt gebruikt voor:",
-        options: ["Variabel volume toevoegen","Vast volume meten","Verhitten","Mengen"],
+        options: ["Variabel volume toevoegen","Vast volume afmeten","Gas opvangen en meten","Neerslag affiltreren"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is pipet.", "Niet — geen verhitter.", "Niet primair."],
+        wrongHints: [null, "Een vast volume neem je met een pipet. Wat doe je bij een titratie druppel voor druppel?", "Gas vang je op in een gasmeetbuis. Waarvoor zit er bij een buret een kraantje onderaan?", "Filtreren doe je met een trechter en filtreerpapier. Wat druppel je bij een titratie toe?"],
         uitlegPad: {
           stappen: [{ titel: "Buret = lange schaal-cilinder", tekst: "**Buret** = lange glazen cilinder met kraan + schaalverdeling (vaak 50 mL met 0,1 mL nauwkeurig). Voor druppelsgewijs toevoegen + nauwkeurig volume aflezen tijdens titratie. **Pipet** = vast volume (10 mL, 25 mL)." }],
           niveaus: { basis: "Variabel + aflezen.", simpeler: "Buret = druppelen+meten", nogSimpeler: "Buret" },
@@ -285,9 +285,9 @@ const steps = [
       },
       {
         q: "Welke is **geconjugeerd zuur** van NH₃?",
-        options: ["NH₄⁺","NH₂⁻","N₂","Geen"],
+        options: ["NH₄⁺","NH₂⁻","HNO₃","NH₄OH"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is geconj. base.", "Niet relevant.", "Niet — NH₃ is een base; wat ontstaat er als een base een H⁺ opneemt?"],
+        wrongHints: [null, "NH₂⁻ ontstaat als NH₃ een H⁺ afstaat. Wat gebeurt er bij opnemen?", "Salpeterzuur is wel een zuur, maar ontstaat het als NH₃ één H⁺ opneemt?", "NH₄OH is een oude schrijfwijze voor ammonia. Welk deeltje ontstaat precies als NH₃ één H⁺ opneemt?"],
         uitlegPad: {
           stappen: [{ titel: "Base + H⁺ = geconj. zuur", tekst: "NH₃ + H⁺ → NH₄⁺ (ammonium-ion). Dus **NH₄⁺** = geconjugeerd zuur van NH₃. (Geconjugeerde base zou NH₂⁻ zijn — NH₃ als zuur, ongebruikelijk in water.)" }],
           niveaus: { basis: "NH₄⁺.", simpeler: "NH₃ + H⁺ = NH₄⁺", nogSimpeler: "NH₄⁺" },
@@ -308,7 +308,7 @@ const steps = [
         q: "Mengsel **CH₃COOH + CH₃COONa** = ?",
         options: ["Buffer","Sterk zuur","Sterke base","Geen reactie"],
         answer: 0,
-        wrongHints: [null, "Niet — beide zwak.", "Niet primair.", "Wel werking."],
+        wrongHints: [null, "Azijnzuur is een zwak zuur. Wat doet het natriumacetaat er dan bij?", "Acetaat is maar een zwakke base. Wat doet het samen met azijnzuur?", "Het mengsel reageert pas als je er zuur of base bij doet. Hoe heet zo'n mengsel?"],
         uitlegPad: {
           stappen: [{ titel: "Klassieker", tekst: "**Azijnzuur + natriumacetaat** = zwak zuur + zijn geconjugeerde base = **buffer**. pH-bereik rond pKa azijnzuur (4,75)." }],
           niveaus: { basis: "Buffer.", simpeler: "Mengsel = buffer", nogSimpeler: "Buffer" },

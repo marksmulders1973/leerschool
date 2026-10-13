@@ -86,9 +86,9 @@ const steps = [
       },
       {
         q: "Welke instantie schrijft je in als nieuwe ondernemer?",
-        options: ["Kamer van Koophandel", "De gemeente waar je woont", "Dienst Uitvoering Onderwijs", "De Belastingdienst"],
+        options: ["Kamer van Koophandel", "De gemeente waar je woont", "Het UWV (werk en uitkeringen)", "De Belastingdienst"],
         answer: 0,
-        wrongHints: [null, "Gemeente regelt soms vergunningen, geen inschrijving.", "DUO (Dienst Uitvoering Onderwijs) is voor studie.", "De Belastingdienst krijgt je gegevens wél door, maar schrijft je niet zelf in."],
+        wrongHints: [null, "De gemeente regelt soms vergunningen, maar houdt geen register van alle bedrijven bij.", "Het UWV regelt uitkeringen als je werkloos of ziek bent. Wie houdt het register van alle bedrijven bij?", "De Belastingdienst krijgt je gegevens wél door, maar schrijft je niet zelf in."],
         uitlegPad: {
           stappen: [{ titel: "Officieel ondernemer worden", tekst: "Voor je mag verkopen + factureren moet je in het Handelsregister staan. Dat regelt de Kamer van Koophandel (KvK)." }],
           woorden: [{ woord: "KvK", uitleg: "Kamer van Koophandel. Onafhankelijk register van alle ondernemingen in NL." }, { woord: "Handelsregister", uitleg: "Officiële lijst van alle bedrijven, beheerd door KvK." }],

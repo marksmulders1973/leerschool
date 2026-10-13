@@ -328,9 +328,9 @@ const steps = [
       },
       {
         q: "Voordeel **euro voor toerist**:",
-        options: ["Geen wisselkosten binnen de eurozone", "Hogere prijzen in andere eurolanden", "Lagere belasting op je vakantie", "Gratis hotelkamers in eurolanden"],
+        options: ["Geen wisselkosten binnen de eurozone", "Overal in Europa dezelfde prijzen", "Geen btw op aankopen in andere eurolanden", "Een vaste koers met de Amerikaanse dollar"],
         answer: 0,
-        wrongHints: [null, "Niet door euro.", "Niet door munteenheid.", "Vakantie kost geld."],
+        wrongHints: [null, "Een kop koffie kost in Italië nog steeds iets anders dan in Nederland. Wat scheelt de euro je dan wel?", "In elk euroland betaal je gewoon btw. Wat hoef je dankzij de euro niet meer te doen?", "De koers van de euro tegenover de dollar schommelt gewoon. Wat merk je binnen de eurozone?"],
         uitlegPad: {
           stappen: [{ titel: "Geen wissel = geen kosten", tekst: "Met euro hoef je in 21 landen niets te wisselen — geen kosten, geen koersrisico." }],
           woorden: [{ woord: "wisselkosten", uitleg: "Bank/wisselkantoor neemt commissie + slechtere koers." }],
@@ -376,9 +376,9 @@ const steps = [
       },
       {
         q: "De euro is **sterk** geworden. Effect voor NL-exporteur?",
-        options: ["Exporteren naar VS wordt duurder voor Amerikanen", "Exporteren naar VS wordt goedkoper voor Amerikanen", "Geen effect op de export", "De fabriek moet meteen sluiten"],
+        options: ["Exporteren naar VS wordt duurder voor Amerikanen", "Exporteren naar VS wordt goedkoper voor Amerikanen", "De dollarprijs voor Amerikanen blijft gelijk", "Importeren uit de VS wordt duurder voor NL"],
         answer: 0,
-        wrongHints: [null, "Moeten Amerikanen voor één euro nu méér of minder dollars betalen?", "De prijs in dollars verandert — merken Amerikaanse klanten dat niet?", "Te extreme conclusie."],
+        wrongHints: [null, "Moeten Amerikanen voor één euro nu méér of minder dollars betalen?", "Een sterke euro kost meer dollars. Merken Amerikaanse klanten dat niet?", "Met een sterke euro krijg je meer dollars voor je geld. Wordt importeren dan duurder of goedkoper?"],
         uitlegPad: {
           stappen: [{ titel: "Sterke euro = duurder export", tekst: "Sterke euro = $1 koopt minder euro = Amerikaan moet meer dollars geven voor NL-product." }],
           woorden: [{ woord: "sterke valuta", uitleg: "Valuta is meer waard t.o.v. andere. Bv. €1 = $1,30 i.p.v. $1,10." }],
@@ -390,9 +390,9 @@ const steps = [
       },
       {
         q: "Wat veroorzaakt **wisselkoers-verandering**?",
-        options: ["Vraag/aanbod, rente, politiek, inflatie", "De overheid stelt hem elke dag vast", "Alleen de verkiezingen in een land", "Alleen het aantal toeristen in een land"],
+        options: ["Vraag en aanbod, rente en inflatie", "De overheid stelt hem elke dag vast", "Het aantal inwoners en de oppervlakte", "De goudvoorraad in de schatkist"],
         answer: 0,
-        wrongHints: [null, "Bij een vrij zwevende koers doet de overheid dat niet. Wie bepaalt hem dan?", "Verkiezingen kunnen invloed hebben — maar zijn ze de enige oorzaak?", "Toeristen wisselen geld, maar zijn zij de enigen die vreemde valuta nodig hebben?"],
+        wrongHints: [null, "Bij een vrij zwevende koers doet de overheid dat niet. Wie bepaalt hem dan?", "Een groot land heeft niet vanzelf een sterke munt. Waardoor verandert de prijs van een munt, net als bij andere producten?", "Vroeger was geld gekoppeld aan goud, nu niet meer. Wat bepaalt de koers nu?"],
         uitlegPad: {
           stappen: [{ titel: "4 hoofdfactoren", tekst: "Wisselkoers verandert door: vraag/aanbod, renteverschil, politiek, inflatie." }],
           woorden: [{ woord: "valutamarkt", uitleg: "Wereldwijde markt waar valuta verhandeld worden. 24/7." }],
@@ -406,7 +406,7 @@ const steps = [
         q: "Wat is een **'safe haven'-valuta**?",
         options: ["Valuta die als veilig geldt bij een crisis", "De goedkoopste valuta van de hele wereld", "De jongste munt die pas is ingevoerd", "Een cryptovaluta zoals bitcoin of ether"],
         answer: 0,
-        wrongHints: [null, "Niet over prijs.", "Niet over leeftijd.", "Crypto is iets anders."],
+        wrongHints: [null, "Een safe haven gaat niet over hoe goedkoop een munt is. Wat zoeken beleggers als het onrustig is?", "Een nieuwe munt heeft nog geen vertrouwen opgebouwd. Wat zoeken beleggers in onrustige tijden?", "Bitcoin schommelt juist enorm in waarde. Is dat veilig in een crisis?"],
         uitlegPad: {
           stappen: [{ titel: "Veilige haven", tekst: "Safe haven = veilige plek bij storm. Bij economische crisis/oorlog vluchten beleggers naar stabiele valuta." }],
           woorden: [{ woord: "safe haven", uitleg: "Engels voor veilige haven. Asset waar mensen naar vluchten bij onzekerheid." }],
@@ -420,7 +420,7 @@ const steps = [
         q: "Voor een **toerist**: waar wisselen meestal slechtste koers?",
         options: ["Bij een wisselkantoor op de luchthaven", "Door ter plaatse te pinnen met je pas", "Bij je eigen bank, vooraf in NL", "Online via de app van je bank"],
         answer: 0,
-        wrongHints: [null, "Pinnen geeft betere koers.", "Eigen bank ook redelijk.", "Online vaak goed."],
+        wrongHints: [null, "Pinnen ter plaatse is meestal juist goedkoop. Waar betaal je extra voor het gemak?", "Je eigen bank rekent meestal een redelijke koers. Waar is het duurst, omdat je daar weinig keus hebt?", "Via de app vergelijk je makkelijk en is het vaak gunstig. Waar betaal je het meest voor gemak?"],
         uitlegPad: {
           stappen: [{ titel: "Vliegveld = duur", tekst: "Wisselkantoor luchthaven heeft hoge commissie + slechtere koers (gevangen klanten)." }],
           woorden: [{ woord: "commissie", uitleg: "Bedrag dat wisselkantoor inhoudt voor de service." }],
@@ -469,7 +469,7 @@ const steps = [
         q: "Wat is **globalisering**?",
         options: ["De wereld raakt steeds meer met elkaar verbonden", "Een handelsverdrag tussen twee buurlanden", "Een belasting die in elk land hetzelfde is", "Eén regering die de hele wereld bestuurt"],
         answer: 0,
-        wrongHints: [null, "Specifieker dan dat.", "Niet specifiek belasting.", "Niet 1 regering."],
+        wrongHints: [null, "Een verdrag tussen twee landen is te klein. Globalisering gaat over de hele wereld — wat gebeurt er?", "Er bestaat geen belasting die overal gelijk is. Wat verandert er wel in handel, reizen en internet?", "Er is geen wereldregering; landen blijven zelfstandig. Wat groeit er dan wel naar elkaar toe?"],
         uitlegPad: {
           stappen: [{ titel: "Globe = wereld", tekst: "Globalisering = wereld wordt steeds meer verbonden door handel, communicatie, reizen, internet." }],
           woorden: [{ woord: "globalisering", uitleg: "Proces waarbij de wereld dichterbij elkaar komt economisch + cultureel." }],
@@ -481,9 +481,9 @@ const steps = [
       },
       {
         q: "Een Nederlandse **multinational** is bv:",
-        options: ["Shell, ASML, Heineken, Unilever", "Een webwinkel die alleen in NL verkoopt", "Bakker bij jou op de hoek", "Provinciale overheid"],
+        options: ["Shell, ASML, Heineken, Unilever", "Een webwinkel die alleen in NL verkoopt", "Toyota, Samsung, Apple, Google", "Een NL webwinkel die ook naar België verstuurt"],
         answer: 0,
-        wrongHints: [null, "Niet internationaal — alleen in NL.", "Niet internationaal.", "Geen bedrijf."],
+        wrongHints: [null, "Deze winkel werkt alleen in Nederland. Waar werkt een multinational?", "Dat zijn wel multinationals, maar komen ze uit Nederland?", "Spullen naar het buitenland sturen is export. Wat heeft een multinational nog meer in andere landen?"],
         uitlegPad: {
           stappen: [{ titel: "Vestigingen wereldwijd", tekst: "NL multinationals: Shell (energie), ASML (chips), Heineken (bier), Unilever (voedsel/huishouden)." }],
           woorden: [{ woord: "multinational", uitleg: "Bedrijf met vestigingen in meerdere landen." }],
@@ -509,9 +509,9 @@ const steps = [
       },
       {
         q: "**Reshoring** is:",
-        options: ["Fabrieken terug naar eigen land halen", "Meer fabrieken in het buitenland bouwen", "Meer toeristen naar je land trekken", "Een extra heffing op importproducten"],
+        options: ["Fabrieken terug naar eigen land halen", "Meer fabrieken in het buitenland bouwen", "Productie uitbesteden aan een ander bedrijf", "Een extra heffing op importproducten"],
         answer: 0,
-        wrongHints: [null, "Dat is juist wat bedrijven de afgelopen decennia deden. Wat betekent 're-' in reshoring?", "Niet toerisme.", "Een heffing is een belasting. Is reshoring een belasting?"],
+        wrongHints: [null, "Dat is juist wat bedrijven de afgelopen decennia deden. Wat betekent 're-' in reshoring?", "Uitbesteden heet outsourcing. Waar gaat de productie bij reshoring naartoe?", "Een heffing is een belasting. Is reshoring een belasting?"],
         uitlegPad: {
           stappen: [{ titel: "Re- = terug", tekst: "Reshoring = productie terughalen naar eigen continent. Tegenovergesteld van offshoring." }],
           woorden: [{ woord: "reshoring", uitleg: "Productie terug naar eigen land/EU. Reactie op afhankelijkheid + supply chain risico." }],
@@ -523,9 +523,9 @@ const steps = [
       },
       {
         q: "**Containers** waren cruciaal voor globalisering omdat:",
-        options: ["Standaardmaat: snel en goedkoop overladen", "Ze zien er mooi en kleurrijk uit in de haven", "Ze zijn klein en licht genoeg om te tillen", "Ze werden in veel havens juist verboden"],
+        options: ["Standaardmaat: snel en goedkoop overladen", "Schepen konden er sneller mee varen", "Ze maakten invoerheffingen overbodig", "Elk land kon zijn eigen formaat kiezen"],
         answer: 0,
-        wrongHints: [null, "Uiterlijk maakt voor transport niets uit.", "Containers zijn juist groot en zwaar — waar zit het voordeel dan?", "Zou iets wat verboden is de wereldhandel juist laten groeien?"],
+        wrongHints: [null, "Een schip vaart niet harder door containers. Waar won je dan tijd: op zee of in de haven?", "Containers veranderden het vervoer, niet de belastingregels. Wat ging er sneller en goedkoper?", "Zou een eigen maat per land het overladen makkelijker of juist moeilijker maken?"],
         uitlegPad: {
           stappen: [{ titel: "Standaard maat", tekst: "Container = standaard maat (20ft/40ft). Past op schip, trein, vrachtwagen — geen overpakken nodig." }],
           woorden: [{ woord: "containerisatie", uitleg: "Gebruik van gestandaardiseerde containers voor transport. Begin: 1956." }],
@@ -537,9 +537,9 @@ const steps = [
       },
       {
         q: "Klimaat en globalisering:",
-        options: ["Meer CO2-uitstoot door al het transport", "Globalisering heeft geen effect op het klimaat", "Globalisering helpt het klimaat altijd", "Klimaat speelt bij handel geen enkele rol"],
+        options: ["Meer CO2-uitstoot door al het transport", "Minder uitstoot, want productie is efficiënter", "Minder uitstoot, want er reizen minder mensen", "Vooral meer afval door verpakkingen"],
         answer: 0,
-        wrongHints: [null, "Wel groot effect.", "Vaak negatief.", "Wel issue."],
+        wrongHints: [null, "Productie kan efficiënter worden, maar al die schepen en vliegtuigen stoten ook uit. Wat weegt zwaarder?", "Door globalisering reizen juist méér mensen en spullen. Wat doet dat met de uitstoot?", "Verpakkingen zijn een probleem, maar wat zorgt bij globalisering voor de meeste uitstoot?"],
         uitlegPad: {
           stappen: [{ titel: "Twee CO2-problemen", tekst: "1) Transport (containerschepen, vliegen) = veel CO2. 2) Productie naar landen met lakse milieuregels = meer vervuiling totaal." }],
           woorden: [{ woord: "carbon leakage", uitleg: "Vervuiling die 'lekt' naar landen met lakse regels — totale vervuiling stijgt." }],
@@ -574,7 +574,7 @@ const steps = [
         q: "Wat is een **multinational**?",
         options: ["Bedrijf dat in meerdere landen werkt", "Een belasting op internationale handel", "Een land met inwoners van veel nationaliteiten", "Een internationale vakbond voor werknemers"],
         answer: 0,
-        wrongHints: [null, "Het gaat niet om belasting.", "Een land met veel nationaliteiten noem je multicultureel. Waar gaat dít woord over?", "Een vakbond komt op voor werknemers. Is een multinational een belangenclub?"],
+        wrongHints: [null, "Een belasting op handel heet een heffing. 'Multi-national' betekent: in meerdere… wat?", "Een land met veel nationaliteiten noem je multicultureel. Waar gaat dít woord over?", "Een vakbond komt op voor werknemers. Is een multinational een belangenclub?"],
         uitlegPad: {
           stappen: [{ titel: "Multi + nationaal", tekst: "Multi = meerdere, nationaal = land. Multinational = bedrijf in meerdere landen tegelijk." }],
           woorden: [{ woord: "multinational", uitleg: "Bedrijf met vestigingen in 10+ landen." }],
@@ -588,7 +588,7 @@ const steps = [
         q: "Welke is een **Nederlandse multinational**?",
         options: ["Shell", "Apple", "Toyota", "McDonald's"],
         answer: 0,
-        wrongHints: [null, "Amerikaans.", "Japans.", "Amerikaans."],
+        wrongHints: [null, "Apple heeft zijn hoofdkantoor in Californië, in de Verenigde Staten.", "Toyota is een Japans automerk.", "McDonald's is een hamburgerketen uit de Verenigde Staten."],
         uitlegPad: {
           stappen: [{ titel: "Shell = oorsprong NL", tekst: "Shell ontstond in NL (Den Haag). Wereldwijde olie/energie-multinational." }],
           woorden: [{ woord: "Shell", uitleg: "Royal Dutch Shell. Sinds 1907. Olie/energie. Hoofdkantoor verhuisde 2022 naar UK." }],
@@ -600,9 +600,9 @@ const steps = [
       },
       {
         q: "Een **voordeel** van multinationals voor NL:",
-        options: ["Banen + belastingopbrengst + innovatie", "Lagere lonen voor Nederlandse werknemers", "Alleen voordeel voor rijke aandeelhouders", "Minder concurrentie voor Nederlandse bedrijven"],
+        options: ["Banen, belastinggeld en nieuwe kennis", "Lagere prijzen doordat ze geen winst maken", "Ze hoeven in NL geen belasting te betalen", "Minder concurrentie voor Nederlandse bedrijven"],
         answer: 0,
-        wrongHints: [null, "Is een lager loon een voordeel voor werknemers?", "Profiteren alleen de eigenaren, of ook anderen in Nederland?", "Komen er door grote buitenlandse bedrijven meer of minder concurrenten bij?"],
+        wrongHints: [null, "Multinationals willen juist wel winst maken. Wat brengen ze dan naar Nederland?", "Multinationals betalen gewoon belasting — en zonder belasting zou NL er niets aan hebben. Wat levert hun komst op?", "Komen er door grote buitenlandse bedrijven meer of minder concurrenten bij?"],
         uitlegPad: {
           stappen: [{ titel: "Drie voordelen", tekst: "1) Banen (Shell ~10.000 in NL). 2) Belasting (vennootschapsbelasting). 3) Innovatie (R&D-investeringen)." }],
           woorden: [{ woord: "vennootschapsbelasting", uitleg: "Belasting die bedrijven betalen over winst." }],
@@ -614,9 +614,9 @@ const steps = [
       },
       {
         q: "Een **nadeel** van multinationals:",
-        options: ["Ze ontwijken belasting via andere landen", "Ze zorgen voor meer banen in Nederland", "Ze investeren veel in nieuwe technieken", "Ze betalen hogere lonen dan kleine bedrijven"],
+        options: ["Ze ontwijken belasting via andere landen", "Ze werken vooral met personeel uit het buitenland", "Ze mogen geen winst naar het buitenland sturen", "Ze betalen hogere lonen dan kleine bedrijven"],
         answer: 0,
-        wrongHints: [null, "Is werk erbij een nadeel?", "Is vernieuwing voor een land een nadeel?", "Hogere lonen zijn fijn voor werknemers — is dat een nadeel voor Nederland?"],
+        wrongHints: [null, "Multinationals hebben veel Nederlandse werknemers in dienst. Welk nadeel speelt er wél bij grote internationale bedrijven?", "Dat mogen ze juist vaak wel. Wat betekent het voor de Nederlandse schatkist als winst naar een ander land verschuift?", "Hogere lonen zijn fijn voor werknemers — is dat een nadeel voor Nederland?"],
         uitlegPad: {
           stappen: [{ titel: "Belasting ontwijken", tekst: "Multinationals verschuiven winst naar landen met lage belasting. NL betaalt minder." }],
           woorden: [{ woord: "belastingontwijking", uitleg: "Legaal minder belasting betalen via slimme structuren. NB: ontwijking ≠ ontduiking (illegaal)." }],
@@ -630,7 +630,7 @@ const steps = [
         q: "**ASML** is bekend om:",
         options: ["Chipmachines", "Auto's", "Bier", "Voedsel"],
         answer: 0,
-        wrongHints: [null, "Niet auto's.", "Heineken = bier.", "Unilever = voedsel."],
+        wrongHints: [null, "Auto's maakt ASML niet. ASML levert machines aan fabrieken die iets heel kleins maken.", "Bier is van Heineken, niet van ASML.", "Voedsel is meer iets voor Unilever, niet voor ASML."],
         uitlegPad: {
           stappen: [{ titel: "Chip-machines", tekst: "ASML maakt machines om chips mee te maken. ENIGE bedrijf wereldwijd dat EUV-techniek heeft." }],
           woorden: [{ woord: "ASML", uitleg: "Advanced Semiconductor Materials Lithography. NL chipmachine-fabrikant in Veldhoven." }],
@@ -642,7 +642,7 @@ const steps = [
       },
       {
         q: "Internationaal **toezicht** op multinationals via:",
-        options: ["EU-boetes + OESO-afspraken + ESG-eisen van beleggers", "Een wereldpolitie van de VN die bedrijven controleert", "Alleen het land waar het hoofdkantoor staat", "Alleen vakbonden en consumenten samen"],
+        options: ["EU-boetes, afspraken tussen landen en beleggers", "Een wereldpolitie van de VN die bedrijven controleert", "Het land waar het hoofdkantoor staat", "Vakbonden en consumentenorganisaties"],
         answer: 0,
         wrongHints: [null, "Bestaat er een wereldpolitie voor bedrijven? Denk aan wie echt boetes kan geven of regels kan maken.", "Een multinational werkt in veel landen tegelijk. Kan één land dan alles regelen?", "Vakbonden en consumenten kunnen druk zetten, maar kunnen zij boetes geven of belastingregels maken?"],
         uitlegPad: {
@@ -681,7 +681,7 @@ const steps = [
         q: "Wat doet de **ECB**?",
         options: ["Beheert de euro: rente en inflatie", "Belasting innen in de eurolanden", "Wetten maken voor alle EU-landen", "Ontwikkelingshulp geven aan arme landen"],
         answer: 0,
-        wrongHints: [null, "Belastingdienst.", "Parlement.", "Andere organisaties."],
+        wrongHints: [null, "Belasting innen doet in elk land de eigen belastingdienst. Waar gaat een centrale bank over?", "Wetten maken het Europees Parlement en de EU-landen samen. Waar gaat een bank over?", "Dat doen andere organisaties, zoals de Wereldbank. Waar gaat de Europese Centrale Bank over?"],
         uitlegPad: {
           stappen: [{ titel: "Centrale bank", tekst: "ECB = Europese Centrale Bank. Beheert euro: bepaalt rente, regelt geldhoeveelheid, bewaakt inflatie." }],
           woorden: [{ woord: "ECB", uitleg: "European Central Bank. Frankfurt. Sinds 1998. Voorzitter Christine Lagarde (2024)." }],
@@ -693,9 +693,9 @@ const steps = [
       },
       {
         q: "Wat is het **inflatiedoel** van de ECB?",
-        options: ["2%", "0%", "5%", "10%"],
+        options: ["2%", "0%", "5%", "1%"],
         answer: 0,
-        wrongHints: [null, "Te krap.", "Te hoog.", "Hyperinflatie-niveau."],
+        wrongHints: [null, "Bij 0% is de kans op dalende prijzen (deflatie) te groot. De ECB wil een klein beetje inflatie — hoeveel?", "Bij 5% wordt je geld te snel minder waard. De ECB mikt lager.", "De ECB mikt iets hoger, zodat er meer ruimte blijft boven nul."],
         uitlegPad: {
           stappen: [{ titel: "2% = stabiel", tekst: "ECB streeft naar inflatie van ongeveer 2% per jaar — stabiele groei zonder ontsporen." }],
           woorden: [{ woord: "inflatie", uitleg: "Stijging van prijzen — geld wordt minder waard." }],
@@ -707,9 +707,9 @@ const steps = [
       },
       {
         q: "ECB **verhoogt rente**. Wat is meestal de reden?",
-        options: ["Hoge inflatie bestrijden", "Een recessie bestrijden", "Toerisme bevorderen", "Verkiezingen winnen"],
+        options: ["Hoge inflatie bestrijden", "Een recessie bestrijden", "Export goedkoper maken", "Lenen voor een huis stimuleren"],
         answer: 0,
-        wrongHints: [null, "Tegendeel — bij recessie verlaagt.", "Niets met toerisme.", "ECB is onafhankelijk van verkiezingen."],
+        wrongHints: [null, "Bij een recessie wil je juist dat mensen méér lenen en uitgeven. Helpt een hogere rente daarbij?", "Een hogere rente maakt de euro aantrekkelijker en dus duurder. Wat wil de ECB met een hogere rente afremmen?", "Een hogere rente maakt lenen juist duurder. Wat wil de ECB dan afremmen?"],
         uitlegPad: {
           stappen: [{ titel: "Rente ↑ remt economie", tekst: "Hoge rente = lenen duurder = minder uitgeven = vraag daalt = prijzen dalen = inflatie omlaag." }],
           woorden: [{ woord: "monetair beleid", uitleg: "Beleid van centrale bank rond rente + geldhoeveelheid." }],
@@ -721,9 +721,9 @@ const steps = [
       },
       {
         q: "Wat is **QE (Quantitative Easing)**?",
-        options: ["Extra geld bijdrukken voor de economie", "Belastingen in één keer flink verhogen", "Zwakke banken dwingen om te sluiten", "Spaargeld van burgers in beslag nemen"],
+        options: ["Extra geld bijdrukken voor de economie", "De rente flink verhogen tegen inflatie", "Leningen aan arme landen kwijtschelden", "Een nieuwe munt invoeren naast de euro"],
         answer: 0,
-        wrongHints: [null, "Geen belasting.", "Tegendeel.", "Niet wat het is."],
+        wrongHints: [null, "'Easing' betekent verruimen: geld makkelijker beschikbaar maken. Doet een hogere rente dat?", "Schulden kwijtschelden doen regeringen, niet de ECB. Wat doet een centrale bank met de hoeveelheid geld?", "Bij QE blijft de euro gewoon de munt. Wat verandert er dan wel?"],
         uitlegPad: {
           stappen: [{ titel: "Geld bij maken", tekst: "QE = ECB koopt staatsobligaties + maakt digitaal geld bij. Pompt economie op." }],
           woorden: [{ woord: "QE", uitleg: "Quantitative Easing — kwantitatieve verruiming. Centrale-bank-instrument om geldhoeveelheid te vergroten." }],
@@ -735,9 +735,9 @@ const steps = [
       },
       {
         q: "Effect ECB-rente OMHOOG voor jouw **spaarrekening**:",
-        options: ["Bank betaalt jou meestal meer rente", "Bank betaalt jou meestal minder rente", "Geen effect op je spaarrente", "Je spaargeld verdwijnt"],
+        options: ["Bank betaalt jou meestal meer rente", "Bank betaalt jou meestal minder rente", "Geen effect op je spaarrente", "Je spaargeld wordt automatisch belegd"],
         answer: 0,
-        wrongHints: [null, "Tegendeel.", "Wel effect.", "Niet 'weg'."],
+        wrongHints: [null, "Als lenen bij de ECB duurder wordt, wordt jouw spaargeld voor de bank meer of minder waard?", "Banken lenen zelf geld bij de ECB. Als dat duurder wordt, wat doen ze dan met de spaarrente?", "Je bank belegt je spaargeld niet zomaar. Wat verandert er aan de rente op je spaarrekening?"],
         uitlegPad: {
           stappen: [{ titel: "Doorgegeven aan klant", tekst: "ECB-rente hoog → banken betalen meer aan ECB → vragen meer rente van leners → bieden meer rente aan spaarders." }],
           woorden: [{ woord: "spaarrente", uitleg: "Rente die bank jou betaalt over spaargeld." }],

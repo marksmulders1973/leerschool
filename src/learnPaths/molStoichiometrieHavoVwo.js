@@ -110,12 +110,12 @@ const steps = [
         q: "Wat behoudt **massa** + **aantal atomen** in een reactie?",
         options: [
           "Atomen blijven behouden",
-          "Moleculen behouden",
-          "Alleen energie blijft behouden",
-          "Geen behoud"
+          "Moleculen blijven behouden",
+          "Het volume blijft behouden",
+          "Het aantal mol blijft behouden"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — moleculen veranderen wel.", "Niet — energie blijft behouden, maar is dat het enige?", "Onjuist — wel behoud."],
+        wrongHints: [null, "Niet — moleculen veranderen wel.", "Bij gassen kan het volume veranderen. Wat telt er mee in de massa?", "Kijk naar 2 H₂ + O₂ → 2 H₂O: links 3 mol, rechts 2 mol. Wat blijft er dan gelijk?"],
         uitlegPad: {
           stappen: [{ titel: "Wet Lavoisier", tekst: "Atomen blijven hetzelfde; ze schuiven alleen naar nieuwe combinaties. Daarom telt links = rechts per element. Massa-behoud is gevolg." }],
           niveaus: { basis: "Atomen behouden.", simpeler: "Aantal atomen elk element gelijk.", nogSimpeler: "Atomen" },
@@ -170,7 +170,7 @@ const steps = [
         q: "Hoeveel **g CaCO₃** nodig om door zoutzuur **44 g CO₂** te maken? (CaCO₃ + 2 HCl → CaCl₂ + CO₂ + H₂O, M_CaCO₃=100, M_CO₂=44)",
         options: ["100 g", "200 g", "44 g", "50 g"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer de molverhouding CaCO₃ : CO₂.", "Niet — dat is massa CO₂.", "Te weinig."],
+        wrongHints: [null, "Niet — controleer de molverhouding CaCO₃ : CO₂.", "Niet — dat is massa CO₂.", "Halveerde je ergens? Kijk nog eens naar de verhouding CaCO₃ : CO₂ in de vergelijking."],
         uitlegPad: {
           stappen: [
             { titel: "1:1 CaCO₃:CO₂", tekst: "n(CO₂) = 44/44 = 1 mol. Verhouding 1:1 → 1 mol CaCO₃ → m = 1·100 = **100 g**." },
@@ -340,12 +340,12 @@ const steps = [
         q: "Een katalysator:",
         options: [
           "Versnelt reactie zonder evenwicht te verschuiven",
-          "Verschuift evenwicht naar producten",
-          "Werkt alleen bij hoge T",
-          "Wordt verbruikt in reactie"
+          "Versnelt reactie en verschuift evenwicht naar rechts",
+          "Verhoogt de activeringsenergie van de reactie",
+          "Versnelt reactie, maar wordt zelf verbruikt"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — evenwicht onveranderd.", "Niet — onafhankelijk van T.", "Niet — wordt teruggevormd."],
+        wrongHints: [null, "Een katalysator versnelt de heengaande en teruggaande reactie even veel. Wat betekent dat voor de ligging?", "Een hogere drempel maakt een reactie juist trager. Wat doet een katalysator met die drempel?", "Kijk naar het reactiemechanisme: komt de katalysator aan het eind terug?"],
         uitlegPad: {
           stappen: [{ titel: "Verlaagt activeringsenergie", tekst: "Katalysator biedt alternatief reactie-pad met lagere Ea → reactie verloopt sneller. Geldt voor zowel heen- als terug-reactie → evenwichtspositie verandert NIET. Hoeveelheid katalysator blijft zelfde na reactie." }],
           theorie: "Voorbeelden: enzymen in cellen, platina in auto-katalysator (uitlaatgassen-zuivering), Fe in Haber-Bosch.",
