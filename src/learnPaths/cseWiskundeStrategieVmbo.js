@@ -72,7 +72,7 @@ const steps = [
         q: "Waarom **schat** je voor je rekent?",
         options: ["Om je uitkomst er straks mee te vergelijken", "Om sneller klaar te zijn met rekenen", "Om een antwoord klaar te hebben bij tijdnood", "Om te weten welke formule je moet kiezen"],
         answer: 0,
-        wrongHints: [null, "Schatten is juist een extra stap. Wat win je ermee, als het geen tijd is?", "Na het schatten reken je de som toch nog precies uit. Waar gebruik je die schatting daarna voor?", "De formule kies je door de vraag goed te lezen. Wat doe je na het rekenen met je schatting?"],
+        wrongHints: [null, "Schatten is juist een extra stap. Wat win je ermee, als het geen tijd is?", "Na het schatten reken je de som toch nog precies uit. Waar gebruik je die schatting daarna voor?", "De formule kies je door de vraag goed te lezen. Waar helpt een schatting dan wél bij?"],
       },
       {
         q: "Vraag vraagt **oppervlak in cm²** — wat schrijf je?",
@@ -264,9 +264,9 @@ const steps = [
       },
       {
         q: "Wat doe je in de laatste **5 minuten**?",
-        options: ["Al je antwoorden nog eens nalopen", "Een gemarkeerde lastige vraag afmaken", "Je kladwerk netjes overschrijven", "Inleveren en alvast vertrekken"],
+        options: ["Al je antwoorden nog eens nalopen", "Een gemarkeerde lastige vraag afmaken", "Je kladwerk netjes overschrijven", "Nog een nieuwe opgave beginnen"],
         answer: 0,
-        wrongHints: [null, "Een lastige vraag kost vaak meer dan 5 minuten. Wat levert in die laatste minuten zeker iets op?", "Netjes schrijven levert geen extra punten op. Waarmee voorkom je nog puntenverlies?", "Je hebt nog 5 minuten. Waarmee kun je nog fouten uit je examen halen?"],
+        wrongHints: [null, "Een lastige vraag kost vaak meer dan 5 minuten. Wat levert in die laatste minuten zeker iets op?", "Netjes schrijven levert geen extra punten op. Waarmee voorkom je nog puntenverlies?", "Lukt een hele nieuwe opgave in 5 minuten? Wat levert in die tijd meer op?"],
       },
       {
         q: "Een vraag is van **3 punten** en je hebt **120 min voor 60 punten** — gem **per punt**?",

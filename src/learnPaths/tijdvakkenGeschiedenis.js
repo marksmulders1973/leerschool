@@ -471,9 +471,9 @@ const steps = [
       },
       {
         q: "In welk tijdvak hoort **Columbus' ontdekking van Amerika** (1492)?",
-        options: ["Tijdvak 5", "Tijdvak 6", "Tijdvak 4", "Tijdvak 7"],
+        options: ["Tijdvak 5", "Tijdvak 6", "Tijdvak 3", "Tijdvak 7"],
         answer: 0,
-        wrongHints: [null, "Tijdvak 6 begint pas in 1600 — 1492 valt daar buiten.", "Tijdvak 4 loopt tot 1500, dus het jaartal valt er net in. Maar bij tijdvakken telt het kenmerk: hoort Columbus' reis bij steden en staten, of bij iets nieuws?", "Tijdvak 7 gaat over de Verlichting en revoluties — dat past niet bij Columbus."],
+        wrongHints: [null, "Tijdvak 6 begint pas in 1600 — 1492 valt daar buiten.", "Tijdvak 3 is de tijd van monniken en ridders (500-1000). Ligt 1492 daar niet ver na?", "Tijdvak 7 gaat over de Verlichting en revoluties — dat past niet bij Columbus."],
         uitlegPad: {
           stappen: [{ titel: "1492 → kenmerk tijdvak 5", tekst: "1492 ligt op de grens tussen tijdvak 4 (Steden+staten, 1000-1500) en tijdvak 5 (Ontdekkers+hervormers, 1500-1600). Maar 'ontdekkingsreizen' is het BELANGRIJKSTE kenmerk van tijdvak 5. Dus Columbus = tijdvak 5." }],
           woorden: [{ woord: "Columbus", uitleg: "Christoffel Columbus. Italiaans-Spaans zeevaarder. Landde 12 oktober 1492 op de Bahama's." }, { woord: "ontdekkingsreizen", uitleg: "Europese zeevaarders zochten zee-route naar Azië, vonden Amerika + omzeilden Afrika. ~1490-1600." }],
