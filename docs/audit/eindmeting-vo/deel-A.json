@@ -1,0 +1,984 @@
+[
+ {
+  "nr": 1,
+  "bron": "leerpaden",
+  "waar": "algebra-vergelijkingen-havo-vwo stap 2 vraag 5",
+  "q": "Los op: **(x + 3)/2 = 5**.",
+  "options": [
+   "x = 7",
+   "x = 10",
+   "x = 8",
+   "x = 5"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je hebt met 2 vermenigvuldigd: x + 3 = 10. Wat moet er nog gebeuren met die + 3?",
+   "Vul x = 8 in: (8 + 3)/2 = 5,5. Heb je 3 opgeteld in plaats van afgetrokken?",
+   "Vul x = 5 in: (5 + 3)/2 = 4. Is dat 5?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 2,
+  "bron": "leerpaden",
+  "waar": "atmosfeer-klimaat-havo-vwo stap 2 vraag 1",
+  "q": "**Luchtdruk op zee-niveau** is standaard:",
+  "options": [
+   "~1013 hPa",
+   "~500 hPa",
+   "~2000 hPa",
+   "~760 hPa"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "500 hPa meet je pas op zo'n 5,5 km hoogte. Hoe zit het op zeeniveau?",
+   "Zelfs een sterk hogedrukgebied komt zelden boven de 1050 hPa. Kan het gemiddelde dan 2000 zijn?",
+   "760 is de luchtdruk in millimeter kwik, niet in hectopascal. Hoeveel hPa hoort daarbij?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 3,
+  "bron": "leerpaden",
+  "waar": "atoombouw-scheikunde stap 3 vraag 1",
+  "q": "Een atoom heeft Z = 8 en A = 16. Hoeveel neutronen?",
+  "options": [
+   "8",
+   "16",
+   "24",
+   "0"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is het massagetal A — maar je zoekt het aantal neutronen, niet A zelf.",
+   "Je hebt opgeteld in plaats van afgetrokken — welke twee grootheden staan in de formule?",
+   "Niet nul — gebruik de formule die massagetal, protonen en neutronen verbindt."
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 4,
+  "bron": "leerpaden",
+  "waar": "atoombouw-scheikunde stap 8 vraag 1",
+  "q": "Hoeveel atomen heeft het molecuul **CO₂**?",
+  "options": [
+   "3",
+   "2",
+   "1",
+   "5"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Vergeet de C niet.",
+   "Een molecuul bestaat uit meerdere atomen. Welke letters staan er in CO₂, en hoe vaak?",
+   "Je telt te veel. Bij welk symbool hoort het kleine getal ₂, en hoeveel C staat er?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 5,
+  "bron": "leerpaden",
+  "waar": "basis-grammatica-engels-po stap 5 vraag 1",
+  "q": "Vul in: 'I __ books.' (read)",
+  "options": [
+   "read",
+   "reads",
+   "reading",
+   "readed"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — alleen bij he/she/it.",
+   "Continuous — niet hier.",
+   "Bestaat niet."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 6,
+  "bron": "leerpaden",
+  "waar": "bbp-conjunctuur-economie stap 3 vraag 4",
+  "q": "Wat is **hyperinflatie**?",
+  "options": [
+   "Extreem hoge inflatie",
+   "Een klein beetje inflatie",
+   "Prijzen die dalen",
+   "Prijzen die gelijk blijven"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een paar procent prijsstijging per jaar is heel gewoon. Zou dat een aparte, zware naam krijgen?",
+   "Dalende prijzen heet deflatie. Wat betekent 'hyper'?",
+   "Als prijzen gelijk blijven, is er helemaal geen inflatie. Kan dat dan een soort inflatie heten?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 7,
+  "bron": "leerpaden",
+  "waar": "bedrijfseconomie-havo-vwo stap 5 vraag 1",
+  "q": "Welke is **vlottend actief**?",
+  "options": [
+   "Voorraad",
+   "Gebouw",
+   "Machine",
+   "Aandelenkapitaal"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een gebouw gebruik je tientallen jaren. Is het dan vlottend of vast?",
+   "Een machine gaat jaren mee, dus het is een vast actief. Wat ben je binnen een jaar weer kwijt?",
+   "Aandelenkapitaal staat rechts op de balans, bij het eigen vermogen. Is het dan wel een actief?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 8,
+  "bron": "leerpaden",
+  "waar": "begrijpend-lezen-strategie stap 4 vraag 3",
+  "q": "Hoe vind je snel de hoofdgedachte?",
+  "options": [
+   "Lees eerste + laatste zin van elke alinea",
+   "Lees alleen de moeilijkste woorden",
+   "Sla alle alinea's over",
+   "Kijk alleen naar de titel"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Snap je een tekst als je alleen de moeilijke woorden bekijkt?",
+   "Kun je de boodschap vinden zonder de tekst te bekijken?",
+   "Is een titel altijd genoeg, of moet je ook in de tekst kijken?"
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 9,
+  "bron": "leerpaden",
+  "waar": "bekende-boeken-literatuur-po stap 2 vraag 3",
+  "q": "Wanneer **Kinderboekenweek**?",
+  "options": [
+   "Oktober",
+   "Februari",
+   "Mei",
+   "Geen vaste tijd"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet.",
+   "Niet.",
+   "Wel."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 10,
+  "bron": "leerpaden",
+  "waar": "bekende-nederlanders-po stap 2 vraag 4",
+  "q": "**Meeste medailles** NL ooit?",
+  "options": [
+   "Ireen Wüst",
+   "Verstappen",
+   "Cruijff",
+   "Sven Kramer"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "F1 wel maar geen OS-medaille.",
+   "Niet.",
+   "Iets minder."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 11,
+  "bron": "leerpaden",
+  "waar": "bekende-wetenschappers-po stap 2 vraag 1",
+  "q": "Wie ontdekte **zwaartekracht**?",
+  "options": [
+   "Newton",
+   "Galileo",
+   "Einstein",
+   "Darwin"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Astronomie.",
+   "Relativiteit.",
+   "Evolutie."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 12,
+  "bron": "leerpaden",
+  "waar": "betrouwbaarheid-bronnen-po stap 4 vraag 8",
+  "q": "Je spreekbeurt gaat over de planeet Mars. Welke bron kies je?",
+  "options": [
+   "een encyclopedie over het heelal",
+   "een verzonnen film over Mars",
+   "een advertentie voor een telescoop",
+   "een reactie onder een filmpje"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Is een verzonnen film bedoeld om feiten te geven?",
+   null,
+   null
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 13,
+  "bron": "leerpaden",
+  "waar": "bevolking-migratie-aardrijkskunde stap 3 vraag 3",
+  "q": "Wat is **interne migratie**?",
+  "options": [
+   "Binnen één land verhuizen",
+   "Naar een ander land verhuizen",
+   "In een ander land gaan werken",
+   "Uit het buitenland hier komen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is emigratie, of internationale migratie. Wat is dan het verschil met interne migratie?",
+   "Over de grens gaan werken heet arbeidsmigratie. Wat is dan het verschil met interne migratie?",
+   "Vanuit het buitenland komen heet immigratie. Wat is dan het verschil met interne migratie?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 14,
+  "bron": "leerpaden",
+  "waar": "bewegingen-snelheid-natuurkunde stap 5 vraag 3",
+  "q": "**Lichtsnelheid**?",
+  "options": [
+   "300.000 km/s",
+   "300 km/s",
+   "30.000 km/s",
+   "Oneindig"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Licht van de maan (384.000 km ver) is in ruim 1 seconde hier. Past 300 km/s daarbij?",
+   "Licht van de maan (384.000 km ver) is in ruim 1 seconde hier. Past 30.000 km/s daarbij?",
+   "Licht van de zon doet er ruim 8 minuten over om de aarde te bereiken. Kan het dan oneindig snel zijn?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 15,
+  "bron": "leerpaden",
+  "waar": "brief-email-lezen-po stap 1 vraag 6",
+  "q": "Wat is een verschil tussen een e-mail en een papieren brief?",
+  "options": [
+   "Een e-mail heeft bovenaan vaste regels zoals 'Van:' en 'Aan:'",
+   "Een e-mail begint nooit met een aanhef zoals 'Beste'",
+   "Een papieren brief heeft nooit een datum erop",
+   "Een e-mail eindigt nooit met de naam van de schrijver"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een e-mail begint ook gewoon met 'Beste...'. Kijk eens naar de structuur boven de aanhef.",
+   "Een papieren brief heeft een datum helemaal bovenaan, naast de plaatsnaam. Welk verschil is er dan wél?",
+   null
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 16,
+  "bron": "leerpaden",
+  "waar": "cel-biologie stap 11 vraag 1",
+  "q": "Een cel zonder kern, met een celwand van peptidoglycaan. Wat is het?",
+  "options": [
+   "Bacterie",
+   "Plantcel",
+   "Dierlijke cel",
+   "Schimmel"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Plantcellen hebben wél een kern, en hun celwand is van cellulose, niet peptidoglycaan.",
+   "Dierlijke cellen hebben helemaal geen celwand.",
+   "Schimmels zijn eukaryoot — ze hebben een kern."
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 17,
+  "bron": "leerpaden",
+  "waar": "chemische-reacties-scheikunde stap 5 vraag 2",
+  "q": "Bij balanceren: wat doe je **eerst**?",
+  "options": [
+   "Tellen van atomen aan beide kanten",
+   "H- en O-atomen kloppend maken",
+   "Indices aanpassen waar nodig",
+   "Alle coëfficiënten op 1 zetten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "H en O pak je juist als laatste aan. Hoe weet je wat er niet klopt voordat je iets aanpast?",
+   "Verander je de kleine getallen in een formule, dan krijg je een andere stof. Is dat de bedoeling?",
+   "Als er geen getal voor een formule staat, is de coëfficiënt al 1. Weet je dan al wat je moet aanpassen?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 18,
+  "bron": "leerpaden",
+  "waar": "chemische-reacties-scheikunde stap 9 vraag 12",
+  "q": "**NaCl** is?",
+  "options": [
+   "Keukenzout",
+   "Suiker",
+   "Water",
+   "Zoutzuur"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Suiker bevat koolstof, waterstof en zuurstof. Zie je C, H of O in NaCl?",
+   "Water bestaat uit waterstof en zuurstof. Zie je H of O in NaCl?",
+   "Zoutzuur is een zuur en bevat waterstof. Zie je een H in NaCl?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 19,
+  "bron": "leerpaden",
+  "waar": "cijferend-rekenen stap 7 vraag 11",
+  "q": "**3,5 + 2,7** = ?",
+  "options": [
+   "6,2",
+   "5,2",
+   "6,12",
+   "5,12"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tel de tienden apart op: 5 tienden plus 7 tienden. Gaat er een hele bij?",
+   "12 tienden passen niet achter de komma. Hoeveel hele en hoeveel tienden is dat?",
+   "Zet de komma's onder elkaar. Heb je de 10 tienden als 1 hele bij de helen opgeteld?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 20,
+  "bron": "leerpaden",
+  "waar": "cito-strategieen-groep8 stap 6 vraag 8",
+  "q": "Een fietstocht duurt **1 uur en 15 minuten**. Hoeveel uur is dat als kommagetal?",
+  "options": [
+   "1,25 uur",
+   "1,15 uur",
+   "1,5 uur",
+   "1,75 uur"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Welk deel van een uur is 15 minuten?",
+   null,
+   null
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 21,
+  "bron": "leerpaden",
+  "waar": "comparatives-engels stap 6 vraag 14",
+  "q": "**Open vraag**: maak de comparative van 'happy'.",
+  "explanation": "Korte woorden eindigend op -y: vervang y door i + er → happier.",
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 22,
+  "bron": "leerpaden",
+  "waar": "cse-leesvaardigheid-engels stap 6 vraag 4",
+  "q": "Hoofdgedachte van: *'Climate change threatens the polar bears. Their ice habitat is melting.'*",
+  "options": [
+   "Klimaatverandering bedreigt ijsberen",
+   "IJsberen leven op het poolijs",
+   "Het klimaat op aarde verandert",
+   "Het ijs op de Noordpool smelt"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat klopt, maar het is een detail. Waarom wordt dat ijs genoemd?",
+   "Dat klopt, maar het is te algemeen. Over wie gaat de tekst vooral?",
+   "Dat is de oorzaak in zin 2. Wat is het gevolg, en voor wie?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 23,
+  "bron": "leerpaden",
+  "waar": "cse-schrijfvaardigheid-engels stap 2 vraag 1",
+  "q": "Welke **aanhef** voor vriend?",
+  "options": [
+   "Hi Tom,",
+   "Cheers, Tom",
+   "Hi Mr Tom,",
+   "Love, Tom"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Cheers' is informeel, maar waar in de mail staat het: bovenaan of onderaan?",
+   "'Hi' is informeel, maar 'Mr' maakt het afstandelijk (en hoort vóór een achternaam). Hoe spreek je een vriend aan?",
+   "'Love' is informeel, maar is het een begroeting of een groet waarmee je afsluit?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 24,
+  "bron": "leerpaden",
+  "waar": "cse-wiskunde-strategie-vmbo stap 2 vraag 5",
+  "q": "Bij **rekensom met haakjes**: wat doe je **eerst**?",
+  "options": [
+   "Wat tussen de haakjes staat",
+   "Eerst alle vermenigvuldigingen",
+   "Eerst alle delingen",
+   "Gewoon van links naar rechts"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Vermenigvuldigen gaat vóór optellen — maar krijgt iets anders in de som niet áltijd de allerhoogste voorrang?",
+   "Delen doe je tegelijk met vermenigvuldigen — maar er is iets dat nog eerder aan de beurt is. Wat springt eruit?",
+   "Van links naar rechts werk je bij bewerkingen die even sterk zijn. Is er iets in de som dat voorrang krijgt?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 25,
+  "bron": "leerpaden",
+  "waar": "cse-wiskunde-strategie-vmbo stap 2 vraag 6",
+  "q": "**Open vraag**: hoeveel is **(3 + 4) × 2**? Typ alleen het getal.",
+  "explanation": "Eerst haakjes: 3+4 = 7. Dan 7 × 2 = 14.",
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 26,
+  "bron": "leerpaden",
+  "waar": "databases-sql-informatica stap 3 vraag 3",
+  "q": "Je wilt **alle kolommen** van álle leerlingen in groep 7. Welke query?",
+  "options": [
+   "SELECT * FROM Leerlingen WHERE groep = 7;",
+   "DELETE FROM Leerlingen WHERE groep = 7;",
+   "SELECT * FROM groep WHERE Leerlingen = 7;",
+   "SELECT naam FROM Leerlingen WHERE groep = 7;"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "DELETE verwijdert juist gegevens — gevaarlijk hier.",
+   "De volgorde/namen kloppen niet (groep is een kolom, geen tabel).",
+   "Zo krijg je alleen de namen — de vraag wil álle kolommen."
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 27,
+  "bron": "leerpaden",
+  "waar": "deelsommen-met-rest-po stap 1 vraag 6",
+  "q": "Hoeveel is 50 ÷ 8?",
+  "options": [
+   "6 rest 2",
+   "7 rest 1",
+   "5 rest 10",
+   "6 rest 8"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat getal keer de deler gaat over 50 heen.",
+   "De rest mag nooit groter zijn dan de deler.",
+   "De rest kan niet gelijk zijn aan de deler."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 28,
+  "bron": "leerpaden",
+  "waar": "dichten-poezie-rijmen-po stap 5 vraag 17",
+  "q": "Wat is een **vers**?",
+  "options": [
+   "Een regel in een gedicht",
+   "Een boek vol gedichten",
+   "Een verhaal in hoofdstukken",
+   "Een tekening bij een gedicht"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een boek vol gedichten heet een bundel. Een vers is veel kleiner.",
+   "Een verhaal loopt door in zinnen.",
+   "Een tekening is geen tekst. Een vers bestaat uit woorden."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 29,
+  "bron": "leerpaden",
+  "waar": "dienstregeling-roosters-po stap 1 vraag 7",
+  "q": "Busdienstregeling lijn 12 — Dorp: 7:50, 8:20, 8:50 · Markt: 8:05, 8:35, 9:05 · Station: 8:18, 8:48, 9:18. De eerste bus vertrekt om 7:50 uit Dorp. Hoe lang duurt de rit naar het Station?",
+  "options": [
+   "28 minuten",
+   "18 minuten",
+   "32 minuten",
+   "38 minuten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tel eerst van 7:50 tot 8:00 en daarna verder tot 8:18.",
+   null,
+   null
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 30,
+  "bron": "leerpaden",
+  "waar": "digitale-geletterdheid-po stap 3 vraag 4",
+  "q": "**Screen-tijd advies** kind 6-12 jaar?",
+  "options": [
+   "~2 uur entertainment per dag",
+   "Helemaal geen schermtijd",
+   "Zeker 8 uur of meer per dag",
+   "Onbeperkt, zoveel als je wilt"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een beetje scherm mag best.",
+   "Dat is langer dan een hele schooldag.",
+   "Zonder grens wordt het snel te veel."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 31,
+  "bron": "leerpaden",
+  "waar": "digitale-geletterdheid-po stap 4 vraag 1",
+  "q": "**HTTPS** = ?",
+  "options": [
+   "Beveiligde verbinding",
+   "Een soort browser",
+   "Een computer waar websites op staan",
+   "Een soort bestand"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een browser is een programma, zoals Chrome.",
+   "Dat is een server.",
+   "Bestanden hebben namen als .pdf of .jpg."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 32,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 28",
+  "q": "**1/4 + 1/2 + 1/4** is?",
+  "options": [
+   "1",
+   "1/8",
+   "3/4",
+   "1/2"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Veel te klein.",
+   "Eén van de kwarten vergeten op te tellen.",
+   "De 1/2 in het midden vergeten."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 33,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-rekenen-g8 stap 1 vraag 39",
+  "q": "**3/4 + 1/8** = ?",
+  "options": [
+   "7/8",
+   "4/12",
+   "4/8",
+   "1/2"
+  ],
+  "answer": 0,
+  "explanation": "Gelijknamig maken: 3/4 = 6/8. Dan 6/8 + 1/8 = **7/8**.",
+  "wrongHints": [
+   null,
+   "Tellers en noemers zomaar optellen mag niet — maak ze eerst gelijknamig.",
+   "Hoeveel achtsten is 3/4? Dan pas optellen.",
+   "Dat is mínder dan waar je mee begon — kan dat bij optellen?"
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 34,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-rekenen-g8 stap 2 vraag 23",
+  "q": "**Verhouding** appels : peren = **3 : 2**. Bij **12 appels**: hoeveel **peren**?",
+  "options": [
+   "8",
+   "6",
+   "4",
+   "10"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "12 ÷ 2 — let op verhouding 3:2.",
+   "Dat is het aantal sets van 3 appels — maar hoeveel peren horen bij elke set?",
+   "Niet."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 35,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-rekenen-g8 stap 3 vraag 16",
+  "q": "Een **kubus** met zijde **5 cm** — volume?",
+  "options": [
+   "125 cm³",
+   "25 cm³",
+   "15 cm³",
+   "75 cm³"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is opp 1 zijde.",
+   "Optelsom — niet.",
+   "Verkeerd berekend."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 36,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-rekenen-g8 stap 4 vraag 22",
+  "q": "Een **fietsenwinkel** verkocht in **maart 80 fietsen**, in **april 100**. Stijging in **procenten**?",
+  "options": [
+   "25%",
+   "20%",
+   "80%",
+   "100%"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bijna — let op: (nieuw − oud) / OUD × 100.",
+   "Geen relevant getal.",
+   "Geen relevant getal."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 37,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-rekenen-g8 stap 6 vraag 23",
+  "q": "Een vliegtuig vertrekt om **11:40** en de vlucht duurt **2 uur en 55 minuten**. Hoe laat landt het (zelfde tijdzone)?",
+  "options": [
+   "14:35",
+   "13:95",
+   "14:45",
+   "13:35"
+  ],
+  "answer": 0,
+  "explanation": "11:40 + 2 uur = 13:40. Dan + 55 min: 13:40 + 20 = 14:00, + 35 = **14:35**.",
+  "wrongHints": [
+   null,
+   "Meer dan 60 minuten past niet achter de dubbele punt — wissel om naar een uur.",
+   "Tien minuten te veel — check 40 + 55.",
+   "Er mist een uur — het is bijna 3 uur vliegen."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 38,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 5",
+  "q": "In welk **kaartvak** ligt een stad? *'Vak C3'* betekent ...",
+  "options": [
+   "Kolom C, rij 3",
+   "Bladzijde 3, hoofdstuk C",
+   "3 cm vanaf C",
+   "3e plaats vanaf C"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een kaartvak gaat niet over bladzijden of hoofdstukken.",
+   "Niet over afstand.",
+   "Niet over volgorde."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 39,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 9",
+  "q": "Schaal **1:200.000**. Op kaart **5 cm**. Werkelijkheid in **km**?",
+  "options": [
+   "10 km",
+   "1 km",
+   "100 km",
+   "5 km"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Veel te weinig.",
+   "Veel te veel.",
+   "Verkeerde berekening."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 40,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 30",
+  "q": "Een **klimaatkaart** toont vooral?",
+  "options": [
+   "Temperatuur en neerslag per gebied",
+   "Wegen en snelwegen per gebied",
+   "Aantal inwoners per gebied",
+   "Inkomen van mensen per gebied"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Daarvoor heb je een wegenkaart.",
+   "Daarvoor heb je een bevolkingskaart.",
+   "Geld of inkomen zie je op een andere themakaart."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 41,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 1 vraag 33",
+  "q": "Op een plattegrond staat **'schaal 1 : 2.000'**. Wat betekent dat?",
+  "options": [
+   "1 cm op de kaart = 2.000 cm (20 m) in het echt",
+   "De kaart is 2.000 cm groot",
+   "Er passen 2.000 huizen op",
+   "1 km op de kaart = 2.000 km in het echt"
+  ],
+  "answer": 0,
+  "explanation": "Schaal 1 : 2.000 = alles in het echt is 2.000 keer zo groot. 1 cm op de kaart = 2.000 cm = **20 m** in het echt.",
+  "wrongHints": [
+   null,
+   "Schaal zegt niets over de grootte van het papier.",
+   "Schaal gaat over afstanden, niet over aantallen.",
+   "De verhouding klopt, maar denk kleiner: op een kaart meet je in centimeters."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 42,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 2 vraag 1",
+  "q": "Tabel: ma 10, di 12, wo 15, do 8, vr 20 kinderen. **Op welke dag minst**?",
+  "options": [
+   "donderdag",
+   "maandag",
+   "vrijdag",
+   "woensdag"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "10 is meer dan 8.",
+   "20 is meest, niet minst.",
+   "15 is niet laagst."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 43,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 3 vraag 5",
+  "q": "Waarvoor gebruik je de **inhoudsopgave**?",
+  "options": [
+   "Snel een hoofdstuk vinden",
+   "Een specifiek woord",
+   "Plaatjes ordenen",
+   "Korter lezen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Daarvoor: index.",
+   "Niet inhoudsopgave.",
+   "Niet doel."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 44,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 4 vraag 18",
+  "q": "Stappenplan **tandenpoetsen**: pasta op borstel → poetsen → spoelen. Wat is **stap 1**?",
+  "options": [
+   "Pasta op borstel",
+   "Poetsen",
+   "Spoelen",
+   "Slapen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Daarvoor moet pasta erop.",
+   "Komt na poetsen.",
+   "Niet relevant."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 45,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 11",
+  "q": "**Atlas**-vraag: in welk **werelddeel** ligt Egypte?",
+  "options": [
+   "Afrika",
+   "Azië",
+   "Europa",
+   "Amerika"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Alleen het Sinaï-schiereiland ligt in Azië — de rest van Egypte niet.",
+   "Te ver naar het noorden.",
+   "Verkeerd continent — andere kant van de wereld."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 46,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 5 vraag 31",
+  "q": "Je moet om **10:00 op school** zijn voor de toets. De fietstocht duurt 20 minuten en je wilt 10 minuten reserve. Hoe laat vertrek je uiterlijk?",
+  "options": [
+   "9:30",
+   "9:40",
+   "9:50",
+   "9:20"
+  ],
+  "answer": 0,
+  "explanation": "10:00 − 20 min fietsen − 10 min reserve = **9:30**.",
+  "wrongHints": [
+   null,
+   "Dan heb je géén reserve meer — alleen de fietstijd.",
+   "Dan kom je precies om 10:10 aan.",
+   "Eerder mag altijd, maar de vraag is 'uiterlijk'."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 47,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 9 vraag 10",
+  "q": "**Stappenplan werkstuk:** A) informatie zoeken, B) onderwerp kiezen, C) werkstuk schrijven, D) tekst nakijken. Wat is de juiste **volgorde**?",
+  "options": [
+   "B → A → C → D",
+   "A → B → C → D",
+   "C → B → A → D",
+   "B → C → A → D"
+  ],
+  "answer": 0,
+  "explanation": "Eerst kiezen waar het over gaat (B), dan informatie zoeken (A), dan schrijven (C) en nakijken (D).",
+  "wrongHints": [
+   null,
+   "Kun je al informatie zoeken als je nog geen onderwerp hebt?",
+   "Schrijven zonder informatie wordt lastig.",
+   "Informatie zoeken nádat je alles al schreef — welke stap zit daar verkeerd?"
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 48,
+  "bron": "leerpaden",
+  "waar": "doorstroomtoets-studievaardigheden-g8 stap 10 vraag 24",
+  "q": "Wat doe je **EERST** als je een woord in het woordenboek wilt opzoeken?",
+  "options": [
+   "Naar de eerste letter bladeren",
+   "Bij de a beginnen en alles doorlezen",
+   "Het woordenboek heen en weer schudden",
+   "De laatste bladzijde bekijken"
+  ],
+  "answer": 0,
+  "explanation": "Blader eerst grofweg naar de **eerste letter**, verfijn daarna met de tweede en derde letter en gebruik de gidswoorden.",
+  "wrongHints": [
+   null,
+   "Alles doorlezen vanaf de a duurt uren — het kan veel sneller.",
+   "Schudden helpt een boek niet.",
+   "Achterin staan de laatste letters van het alfabet — begint jouw woord daarmee?"
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 49,
+  "bron": "leerpaden",
+  "waar": "emoties-sociaal-po stap 4 vraag 11",
+  "q": "Wat is een **conflict**?",
+  "options": [
+   "Meningsverschil tussen mensen",
+   "Een fijne activiteit met vrienden",
+   "Een besmettelijke ziekte",
+   "Een land ver weg in Afrika"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Tegenovergesteld.",
+   "Geen ziekte.",
+   "Een conflict vind je niet op de kaart."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 50,
+  "bron": "leerpaden",
+  "waar": "energie-hulpbronnen-havo-vwo stap 2 vraag 3",
+  "q": "**Intermittentie** = ?",
+  "options": [
+   "Zon en wind zijn niet altijd beschikbaar",
+   "Stroom opslaan in accu's voor later",
+   "Centrales die af en toe stilstaan voor onderhoud",
+   "Het verlies van stroom in lange kabels"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Opslag in accu's is juist een oplossing voor dit probleem. Wat is het probleem zelf?",
+   "Onderhoud plan je zelf in. Waar ligt bij intermittentie de oorzaak?",
+   "Verlies in lange kabels heet transportverlies. Over welk probleem gaat intermittentie dan?"
+  ],
+  "niveau": "middelbaar"
+ }
+]
