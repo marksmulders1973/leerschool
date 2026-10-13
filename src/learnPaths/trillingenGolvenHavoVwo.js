@@ -199,11 +199,11 @@ const steps = [
         options: [
           "Lucht-deeltjes bewegen heen en weer in de voortplantingsrichting",
           "Lucht-deeltjes bewegen loodrecht op de voortplanting",
-          "Geluid heeft geen golfeigenschappen",
-          "Geluid kan zonder medium reizen",
+          "Lucht-deeltjes reizen zelf mee van bron naar oor",
+          "Lucht-deeltjes draaien rondjes op hun eigen plek",
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat zou transversaal zijn (zoals touw).", "Onjuist — geluid is WEL een golf.", "Onjuist — geluid heeft medium nodig (geen geluid in vacuüm)."],
+        wrongHints: [null, "Niet — dat zou transversaal zijn (zoals touw).", "Komt de lucht uit je mond echt bij het oor van een ander aan? Wat reist er dan wel?", "Rondjes draaien zie je bij watergolven. Hoe bewegen luchtdeeltjes ten opzichte van de richting van het geluid?"],
         uitlegPad: {
           stappen: [
             { titel: "Compressie + verdunning = langsbeweging", tekst: "Een luidspreker duwt lucht-deeltjes vooruit (compressie) en trekt ze terug (verdunning). De deeltjes bewegen **langs** de richting waarin het geluid reist → longitudinaal. Daarom kan geluid niet door vacuüm (geen deeltjes om te duwen)." },
@@ -262,7 +262,7 @@ const steps = [
         q: "Geluid reist het **snelst** in:",
         options: ["Staal", "Water", "Lucht (20°C)", "Vacuüm"],
         answer: 0,
-        wrongHints: [null, "Niet — water is sneller dan lucht, maar staal nog sneller.", "Niet — lucht is juist het traagst van deze drie.", "Vacuüm = geen geluid (geen medium)."],
+        wrongHints: [null, "Water geleidt geluid sneller dan lucht. Maar hoe zit het met een vaste stof?", "Niet — lucht is juist het traagst van deze drie.", "Vacuüm = geen geluid (geen medium)."],
         uitlegPad: {
           stappen: [
             { titel: "Stijver medium = sneller", tekst: "Geluid plant zich voort door deeltjes tegen elkaar te duwen. In staal zitten atomen heel dicht + sterk gebonden → snelle overdracht. Volgorde: staal (~5100 m/s) > water (~1480) > lucht (~343) > vacuüm (0)." },
@@ -471,7 +471,7 @@ const steps = [
         q: "Een geluid van 70 dB naast een ander van 70 dB. Samen (twee losse, onafhankelijke bronnen):",
         options: ["~73 dB", "~140 dB", "~70 dB", "~77 dB"],
         answer: 0,
-        wrongHints: [null, "Niet — dB is logaritmisch, je telt NIET op tot 140.", "Niet — bij twee bronnen is intensiteit wel groter.", "Te veel."],
+        wrongHints: [null, "Niet — dB is logaritmisch, je telt NIET op tot 140.", "Niet — bij twee bronnen is intensiteit wel groter.", "Twee gelijke bronnen geven twee keer zoveel intensiteit. Hoeveel dB komt erbij: 10·log(2)?"],
         uitlegPad: {
           stappen: [
             { titel: "2× intens = +3 dB", tekst: "Twee identieke bronnen geven 2× de intensiteit. Op dB-schaal: 10·log(2) ≈ **+3 dB**. Dus 70 + 70 dB ≈ 73 dB, niet 140 dB. Veel-gemaakte examen-fout!" },

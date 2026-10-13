@@ -430,7 +430,7 @@ const steps = [
         options: [
           "Hij stoot gas naar beneden, gas duwt raket omhoog",
           "Hij duwt zich met het gas af tegen de lucht",
-          "Zijn vleugels geven opwaartse kracht, net als bij een vliegtuig",
+          "Vleugels geven hem opwaartse kracht, zoals een vliegtuig",
           "De motor maakt de raket lichter dan de lucht",
         ],
         answer: 0,

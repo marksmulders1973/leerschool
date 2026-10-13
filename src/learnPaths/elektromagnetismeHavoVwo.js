@@ -96,9 +96,9 @@ const steps = [
         q: "Een **elektron** beweegt loodrecht door een B-veld. De Lorentzkracht is:",
         options: [
           "Maximaal en loodrecht op zowel v als B",
-          "Maximaal en parallel aan v",
-          "Nul (elektron is negatief)",
-          "Parallel aan B"
+          "Maximaal en gericht in de richting van v",
+          "Nul, omdat een elektron negatief geladen is",
+          "Maximaal en parallel aan de veldlijnen van B"
         ],
         answer: 0,
         wrongHints: [null, "Niet — kracht is altijd loodrecht op v.", "Niet — negatief draait richting om, maar grootte blijft.", "Niet — F staat loodrecht op B."],
@@ -123,7 +123,7 @@ const steps = [
         q: "Een draad van 0,40 m draagt I = 3,0 A loodrecht door B = 0,20 T. F op draad?",
         options: ["0,24 N", "2,4 N", "0,024 N", "1,5 N"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer eenheden.", "Te klein.", "Niet — vermenigvuldig B, I en L; niet delen."],
+        wrongHints: [null, "Niet — controleer eenheden.", "Reken F = B·I·L na: 0,20 × 3,0 × 0,40. Waar ging een factor 10 verloren?", "Niet — vermenigvuldig B, I en L; niet delen."],
         uitlegPad: {
           stappen: [{ titel: "F = B·I·L", tekst: "F = 0,20 · 3,0 · 0,40 = **0,24 N**. Vergeet sin(α) niet wanneer hoek niet 90° is — hier wel." }],
           theorie: "Elektromotor-rotorprincipe: spoel in B-veld, F op zijden geven koppel. Sterk veld + dikke draad (hoge I) + veel windingen = krachtige motor.",
@@ -134,12 +134,12 @@ const steps = [
         q: "In een **cyclotron** beweegt een deeltje in een cirkel. De straal hangt af van:",
         options: [
           "Massa, snelheid, lading én B-sterkte",
-          "Alleen de B-sterkte",
-          "Alleen lading + snelheid",
-          "Alleen massa"
+          "Lading, snelheid én B-sterkte",
+          "Massa, lading én B-sterkte",
+          "Massa, snelheid én B-sterkte"
         ],
         answer: 0,
-        wrongHints: [null, "Onvolledig.", "Onvolledig.", "Onvolledig — ook andere grootheden tellen mee."],
+        wrongHints: [null, "Stel de Lorentzkracht gelijk aan de middelpuntzoekende kracht en los r op. Welke grootheid ontbreekt hier?", "Stel de Lorentzkracht gelijk aan de middelpuntzoekende kracht en los r op. Welke grootheid ontbreekt hier?", "Stel de Lorentzkracht gelijk aan de middelpuntzoekende kracht en los r op. Welke grootheid ontbreekt hier?"],
         uitlegPad: {
           stappen: [{ titel: "r = mv/(qB)", tekst: "Lorentzkracht = centripetaal: qvB = mv²/r → **r = mv/(qB)**. Zwaarder of sneller → grotere cirkel; sterker veld of meer lading → kleinere cirkel. Massa-spectrometer scheidt isotopen via verschillende r." }],
           niveaus: { basis: "r = mv/(qB).", simpeler: "Vier grootheden bepalen r.", nogSimpeler: "Alle 4" },
@@ -199,7 +199,7 @@ const steps = [
         q: "Een spoel heeft N = 100 windingen. Flux verandert met dΦ/dt = 0,020 Wb/s. U_ind?",
         options: ["2,0 V", "0,2 V", "20 V", "200 V"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet N niet.", "Niet — controleer rekensom.", "Te groot."],
+        wrongHints: [null, "Niet — vergeet N niet.", "U = N · dΦ/dt = 100 × 0,020. Heb je de komma goed gezet?", "Rekende je met 2,0 Wb/s? Kijk nog eens naar 0,020 Wb/s."],
         uitlegPad: {
           stappen: [{ titel: "U = N · dΦ/dt", tekst: "U = 100 · 0,020 = **2,0 V** (in absolute waarde — het minteken geeft de richting aan via Lenz)." }],
           niveaus: { basis: "100 × 0,02 = 2 V.", simpeler: "Aantal windingen × snelheid van flux-verandering.", nogSimpeler: "2,0 V" },
@@ -209,12 +209,12 @@ const steps = [
         q: "De fiets-dynamo werkt op:",
         options: [
           "Inductie — wielmagneet draait langs spoel",
-          "Lorentzkracht zonder verandering",
-          "Statische elektriciteit",
-          "Batterij in dynamo"
+          "Lorentzkracht — stroom laat een magneet draaien",
+          "Wrijving — de band wrijft lading op het wiel",
+          "Batterij — er zit een accu in de dynamo"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — Lorentz vereist beweging, maar inductie is het mechanisme voor spanning.", "Niet — geen wrijving-vonken.", "Niet — dynamo's hebben geen batterij."],
+        wrongHints: [null, "Stroom erin, beweging eruit: dat is een elektromotor. Wat doet een dynamo?", "Een dynamo levert een nette wisselspanning zonder vonken. Past dat bij statische lading?", "Niet — dynamo's hebben geen batterij."],
         uitlegPad: {
           stappen: [{ titel: "Dynamo = mini-generator", tekst: "Het wiel draait een magneet (of spoel) langs een vaste spoel (of magneet). Flux verandert continu → inductie-spanning → wisselstroom → lampje brandt. Sneller fietsen → meer flux-verandering per seconde → hogere spanning → fellere lamp." }],
           niveaus: { basis: "Inductie via bewegende magneet.", simpeler: "Wiel draait magneet, spoel voelt flux-verandering.", nogSimpeler: "Inductie" },
@@ -224,7 +224,7 @@ const steps = [
         q: "Een rechthoekige spoel (100 windingen, A = 0,020 m²) in B = 0,50 T draait met ω = 100 rad/s. U_max?",
         options: ["100 V", "1,0 V", "0,10 V", "1000 V"],
         answer: 0,
-        wrongHints: [null, "Niet — alle factoren meenemen.", "Te klein.", "Te groot — herreken."],
+        wrongHints: [null, "Niet — alle factoren meenemen.", "U_max = N·B·A·ω. Heb je alle vier de factoren vermenigvuldigd, ook N = 100?", "Reken N·B·A·ω stap voor stap na: 100 × 0,50 × 0,020 × 100."],
         uitlegPad: {
           stappen: [
             { titel: "U_max = N·B·A·ω", tekst: "U_max = 100 · 0,50 · 0,020 · 100 = **100 V**. Dat is de piek van de wisselspanning; effectieve waarde U_eff = U_max/√2 ≈ 71 V." },
@@ -267,12 +267,12 @@ const steps = [
         q: "Waarom transport elektriciteit op **hoogspanning** (150-400 kV)?",
         options: [
           "Lage stroom → minder warmteverlies in draden",
-          "Hogere spanning is veiliger",
-          "Hogere spanning gaat sneller",
-          "Apparaten werken alleen op hoogspanning"
+          "Hoge spanning is veiliger voor mensen langs de lijn",
+          "Hoge spanning laat stroom sneller door de draad gaan",
+          "Zodat apparaten thuis meer vermogen krijgen"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — hoog is gevaarlijker.", "Niet — elektriciteit reist altijd ~lichtsnelheid.", "Niet — apparaten gebruiken 230 V of lager."],
+        wrongHints: [null, "Tegenovergesteld — hoog is gevaarlijker.", "Niet — de snelheid van het signaal hangt niet af van de spanning.", "Thuis komt er gewoon 230 V uit het stopcontact. Waar gaat het om bij het transport zelf?"],
         uitlegPad: {
           stappen: [{ titel: "P_verlies = I²·R", tekst: "Bij vast vermogen P=U·I: hoger U → lagere I. Verlies in draad ~ I² → verdubbel U + halveer I → verlies wordt 4× kleiner. Daarom transporteren we op honderdduizenden volt." }],
           theorie: "Vóór wissel-stroom + transformatoren (Edison vs Tesla, jaren 1880) was gelijkstroom standaard — maar GS kan NIET getransformeerd worden, dus centrales dicht bij de gebruikers nodig. Tesla's AC-systeem won.",
@@ -328,7 +328,7 @@ const steps = [
         q: "Een spoel met L = 0,10 H. Stroom verandert met dI/dt = 5,0 A/s. Zelfinductie-spanning?",
         options: ["0,50 V", "5,0 V", "0,050 V", "50 V"],
         answer: 0,
-        wrongHints: [null, "Niet — dI/dt × L = ...", "Niet — controleer eenheden.", "Te groot."],
+        wrongHints: [null, "Je vergat L. Vermenigvuldig dI/dt met de zelfinductie L.", "Niet — controleer eenheden.", "Je deelde dI/dt door L. Moet je delen of vermenigvuldigen in U = L · dI/dt?"],
         uitlegPad: {
           stappen: [{ titel: "U = L · dI/dt", tekst: "U = 0,10 · 5,0 = **0,50 V**. (Met minteken volgens Lenz — werkt de stroomverandering tegen.)" }],
           theorie: "Bij snel uitschakelen kan dI/dt heel groot worden → enorme spanning → vonk over schakelaar. Daarom soms 'flyback-diode' over spoelen.",
@@ -352,12 +352,12 @@ const steps = [
         q: "Wat horen tot **elektromagnetische golven**?",
         options: [
           "Radio, microgolf, zichtbaar licht en röntgen",
-          "Alleen zichtbaar licht",
-          "Alleen radio + microgolven",
-          "Radio, licht, röntgen én geluid"
+          "Zichtbaar licht, infrarood, UV en ultrageluid",
+          "Radio, microgolf, röntgen en seismische golven",
+          "Radio, zichtbaar licht, röntgen én geluid"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — radio is ook EM.", "Niet — röntgen + UV ook.", "Niet — geluid is GEEN EM (drukgolf in lucht)."],
+        wrongHints: [null, "Ultrageluid is geluid met een hoge frequentie. Is geluid een elektromagnetische golf?", "Seismische golven zijn trillingen van de aardbodem. Hebben die een stof nodig om door te reizen?", "Niet — geluid is GEEN EM (drukgolf in lucht)."],
         uitlegPad: {
           stappen: [{ titel: "Maxwell — alles is EM-spectrum", tekst: "Radio (~kHz-GHz), microgolf (GHz), infrarood (THz), zichtbaar licht (~500 THz), UV, röntgen, gamma — alles dezelfde fysica, verschillende frequenties. Allemaal reizen ze met c = 3·10⁸ m/s in vacuüm." }],
           basiskennis: [{ onderwerp: "Niet-EM", uitleg: "Geluid = drukgolf in materie (lucht/water/staal). Heeft medium nodig — kan niet door vacuüm. Heel anders dan EM." }],

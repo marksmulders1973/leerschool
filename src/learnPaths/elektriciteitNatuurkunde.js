@@ -545,7 +545,7 @@ const steps = [
       {
         q: "Bij een **serieschakeling**: als 1 lamp stukgaat, wat gebeurt er met de rest?",
         options: [
-          "Alle andere lampen gaan ook uit",
+          "Alle lampen gaan uit",
           "De rest blijft gewoon branden",
           "De lampen erna gaan uit, ervoor niet",
           "De andere lampen branden feller",

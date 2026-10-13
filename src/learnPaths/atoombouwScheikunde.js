@@ -253,12 +253,12 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         q: "Wat hebben elementen in dezelfde **groep** gemeen?",
         options: [
           "Aantal buitenste elektronen",
-          "Aantal protonen",
-          "Massa",
-          "Aantal schillen",
+          "Aantal protonen in de kern",
+          "Ongeveer dezelfde atoommassa",
+          "Aantal elektronenschillen",
         ],
         answer: 0,
-        wrongHints: [null, "Elementen hebben juist een verschillend aantal protonen.", "Massa verschilt zeker.", "Aantal schillen = periode (rij), niet groep."],
+        wrongHints: [null, "Elk element heeft zijn eigen aantal protonen. Kunnen twee elementen in één kolom dan hetzelfde aantal hebben?", "Vergelijk lithium en kalium uit groep 1. Zijn die ongeveer even zwaar?", "Het aantal schillen hoort bij de periode, de rij. Is een groep een rij of een kolom?"],
         uitlegPad: {
           stappen: [{ titel: "Groep = kolom = buitenste e-", tekst: "Elementen in dezelfde groep hebben hetzelfde aantal buitenste elektronen → vergelijkbaar gedrag." }],
           woorden: [{ woord: "groep", uitleg: "kolom in periodiek systeem" }],
@@ -272,7 +272,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         q: "Welke groep zijn de **edelgassen**?",
         options: ["Groep 18", "Groep 1", "Groep 7", "Groep 17"],
         answer: 0,
-        wrongHints: [null, "Groep 1 = alkalimetalen.", "In de oude indeling was groep 7 (VII A) de groep van de halogenen; edelgassen stonden in groep 8 (VIII A), nu groep 18.", "Groep 17 = halogenen."],
+        wrongHints: [null, "Groep 1 zijn de alkalimetalen, met één buitenste elektron. Zijn die reactief of juist niet?", "In de oude indeling (VII A) was groep 7 de groep van de halogenen. Zijn halogenen reactief of juist niet?", "Groep 17 zijn de halogenen, met 7 buitenste elektronen. Is hun buitenste schil al vol?"],
         uitlegPad: {
           stappen: [{ titel: "Edelgassen = groep 18", tekst: "Laatste kolom rechts: He, Ne, Ar, Kr, Xe, Rn." }],
           woorden: [{ woord: "groep 18", uitleg: "edelgassen, niet-reactief" }],
@@ -408,7 +408,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         q: "Hoeveel atomen heeft het molecuul **CO₂**?",
         options: ["3", "2", "1", "5"],
         answer: 0,
-        wrongHints: [null, "Vergeet de C niet.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "Vergeet de C niet.", "Een molecuul bestaat uit meerdere atomen. Welke letters staan er in CO₂, en hoe vaak?", "Je telt te veel. Bij welk symbool hoort het kleine getal ₂, en hoeveel C staat er?"],
         uitlegPad: {
           stappen: [{ titel: "CO₂ = 1+2 = 3 atomen", tekst: "1 koolstof + 2 zuurstof = 3 atomen totaal." }],
           woorden: [{ woord: "molecuul-formule", uitleg: "klein getal = aantal atomen" }],
@@ -450,12 +450,12 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         q: "Wat zegt de **wet van behoud van atomen**?",
         options: [
           "Aantal atomen links en rechts is gelijk",
-          "Atomen verdwijnen tijdens reactie",
-          "Massa wordt gemaakt",
-          "Er ontstaan nieuwe soorten atomen",
+          "Atomen verdwijnen als gas tijdens een reactie",
+          "Het aantal moleculen links en rechts is gelijk",
+          "Atomen veranderen in andere soorten atomen",
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — atomen verdwijnen niet.", "Massa wordt niet gemaakt.", "Niet — bij een chemische reactie verandert het soort atoom niet."],
+        wrongHints: [null, "Ook gas dat ontsnapt bestaat uit atomen. Zijn die atomen dan echt weg?", "Kijk naar 2 H₂ + O₂ → 2 H₂O: links 3 moleculen, rechts 2. Wat blijft er dan wél gelijk?", "Niet — bij een chemische reactie verandert het soort atoom niet."],
         uitlegPad: {
           stappen: [{ titel: "Atomen tellen", tekst: "Links en rechts dezelfde atomen — alleen in andere combinaties." }],
           woorden: [{ woord: "wet van behoud", uitleg: "Lavoisier, ~1789" }],
@@ -469,12 +469,12 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         q: "Wat ontstaat bij verbranding van methaan?",
         options: [
           "CO₂ en water + warmte",
-          "Alleen rook",
-          "Waterstof en koolstof",
-          "Niets",
+          "CO₂ en waterstof + warmte",
+          "Koolstof en waterstofgas",
+          "Zuurstof en water + warmte",
         ],
         answer: 0,
-        wrongHints: [null, "Niet — bij volledige verbranding ontstaat geen rook; welke atomen zitten in methaan en zuurstof?", "Niet — methaan reageert met zuurstof; waar blijven de zuurstofatomen?", "Er gebeurt zeker iets — verbranding."],
+        wrongHints: [null, "Bij verbranding reageert waterstof ook met zuurstof. Welke stof ontstaat er dan uit H en O?", "Methaan reageert met zuurstof. Waar blijven de zuurstofatomen dan?", "Zuurstof is een beginstof die wordt verbruikt. En waar blijven de koolstofatomen van methaan?"],
         uitlegPad: {
           stappen: [{ titel: "Verbranding methaan", tekst: "CH₄ + 2 O₂ → CO₂ + 2 H₂O + warmte." }],
           woorden: [{ woord: "verbranding", uitleg: "stof + O₂ + warmte" }],
@@ -563,9 +563,9 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
       },
       {
         q: "Wat is een **atoomkern**?",
-        options: ["Het midden van het atoom","Buitenste laag","Elektron-wolk","Een groep atomen"],
+        options: ["Het midden van het atoom","De buitenste laag van het atoom","De elektronenwolk van het atoom","Een groepje gebonden atomen"],
         answer: 0,
-        wrongHints: [null, "Niet — buitenste laag = elektronen-wolk.", "Niet — elektronen zitten BUITEN de kern.", "Niet — een groep gebonden atomen is een molecuul."],
+        wrongHints: [null, "In de buitenste laag zitten elektronen. Ligt de kern aan de buitenkant van het atoom?", "Elektronen bewegen in schillen om iets heen. Waar draaien ze omheen?", "Niet — een groep gebonden atomen is een molecuul."],
         uitlegPad: {
           stappen: [
             { titel: "Atoom-structuur", tekst: "Een atoom bestaat uit **3 onderdelen**:\n• **Proton** (+) — in kern, positief geladen\n• **Neutron** (0) — in kern, geen lading\n• **Elektron** (−) — buiten kern, negatief geladen\n\n**Kern** = centrum waarin protonen + neutronen zitten. Heel klein (1/10.000 van atoom-doorsnee) maar **99,9% van massa**." },
@@ -612,7 +612,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
       },
       {
         q: "Wat is een **isotoop**?",
-        options: ["Zelfde element, ander aantal neutronen","Atoom met extra elektronen","Atoom met ander aantal protonen","Twee atomen aan elkaar"],
+        options: ["Zelfde element, ander aantal neutronen","Zelfde element, ander aantal elektronen","Zelfde massa, ander aantal protonen","Twee gebonden atomen van één element"],
         answer: 0,
         wrongHints: [null, "Niet — dan heb je een ion.", "Niet — dan is het een ander element.", "Niet — dat is een molecuul."],
         uitlegPad: {
@@ -634,12 +634,12 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
           niveaus: { basis: "Zelfde protonen, andere neutronen.", simpeler: "Isotoop = atoom met zelfde aantal protonen maar verschillend aantal neutronen. Bv C-12 + C-14. C-14 radioactief voor datering.", nogSimpeler: "Ander neutron-aantal" },
         },
       },
-      { q: "Wat is de **lading** van een **proton**?", options: ["+1","-1","0","+2"], answer: 0, wrongHints: [null, "Elektron.", "Neutron.", "Niet."] },
-      { q: "Wat is de **lading** van een **neutron**?", options: ["0","+1","-1","+2"], answer: 0, wrongHints: [null, "Proton.", "Elektron.", "Niet."] },
-      { q: "Wat is de **lading** van een **elektron**?", options: ["-1","+1","0","+2"], answer: 0, wrongHints: [null, "Proton.", "Neutron.", "Niet."] },
-      { q: "Welke deeltjes bevinden zich in de **kern** van het atoom?", options: ["Proton + neutron","Alleen elektron","Alleen proton","Alle drie"], answer: 0, wrongHints: [null, "Elektronen zijn in schillen.", "Onvolledig.", "Onjuist."] },
-      { q: "Het **atoomnummer** = aantal ___?", options: ["protonen","neutronen","elektronen","atomen"], answer: 0, wrongHints: [null, "Massagetal − atoomnummer.", "Niet — het aantal elektronen kan veranderen (bij ionen), het atoomnummer niet.", "Niet."] },
-      { q: "Het **massagetal** = ?", options: ["protonen + neutronen","alleen protonen","alleen elektronen","protonen × neutronen"], answer: 0, wrongHints: [null, "Atoomnummer.", "Niet.", "Niet — je telt op, je vermenigvuldigt niet."] },
+      { q: "Wat is de **lading** van een **proton**?", options: ["+1","-1","0","+2"], answer: 0, wrongHints: [null, "Dat is de lading van het deeltje in de schillen. Zit het proton daar?", "Er is een kerndeeltje zonder lading. Is dat het proton of het andere kerndeeltje?", "Dat is de lading van een heliumkern. Uit hoeveel protonen bestaat die?"] },
+      { q: "Wat is de **lading** van een **neutron**?", options: ["0","+1","-1","+2"], answer: 0, wrongHints: [null, "Dat is de lading van het proton. Waar komt de naam neutron vandaan?", "Dat is de lading van het elektron. Zit een neutron in de schillen of in de kern?", "Eén los deeltje met +2 komt in een atoom niet voor. Welke ladingen hebben de drie deeltjes?"] },
+      { q: "Wat is de **lading** van een **elektron**?", options: ["-1","+1","0","+2"], answer: 0, wrongHints: [null, "Dat is de lading van het proton. Trekken proton en elektron elkaar aan of stoten ze af?", "Dat is de lading van het neutron. Waarom blijft een elektron dan rond de kern?", "Zou een elektron met +2 door de positieve kern worden aangetrokken?"] },
+      { q: "Welke deeltjes bevinden zich in de **kern** van het atoom?", options: ["Proton + neutron","Elektron + neutron","Proton + elektron","Proton, neutron en elektron"], answer: 0, wrongHints: [null, "Elektronen bewegen in schillen. Welke deeltjes geven de kern dan haar massa?", "Zitten elektronen in de kern of in de schillen eromheen?", "Waar bevinden elektronen zich: in de kern of in de schillen?"] },
+      { q: "Het **atoomnummer** = aantal ___?", options: ["protonen","neutronen","elektronen","schillen"], answer: 0, wrongHints: [null, "Het aantal neutronen reken je uit als massagetal min atoomnummer. Wat telt het atoomnummer dan zelf?", "Niet — het aantal elektronen kan veranderen (bij ionen), het atoomnummer niet.", "Het aantal schillen lees je af aan de periode, de rij. Waarop is het periodiek systeem geordend?"] },
+      { q: "Het **massagetal** = ?", options: ["protonen + neutronen","aantal protonen","protonen + elektronen","protonen × neutronen"], answer: 0, wrongHints: [null, "Het aantal protonen is het atoomnummer. Welk ander kerndeeltje heeft ook massa?", "Een elektron is bijna 2000 keer lichter dan een proton. Telt het mee in het massagetal?", "Niet — je telt op, je vermenigvuldigt niet."] },
       { q: "Hoeveel **elektronen** passen in de **eerste schil** (K)?", options: ["2","8","18","32"], answer: 0, wrongHints: [null, "Tweede schil.", "Derde schil.", "Vierde schil."] },
       { q: "Hoeveel **elektronen** passen in de **tweede schil** (L)?", options: ["8","2","18","32"], answer: 0, wrongHints: [null, "Eerste.", "Derde.", "Vierde."] },
       { q: "**Open vraag**: hoeveel protonen heeft koolstof (C)?", kind: "open", acceptedAnswers: ["6"], numericTolerance: 0, explanation: "Koolstof = C = atoomnummer 6 = 6 protonen." },
