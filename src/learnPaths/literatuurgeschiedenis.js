@@ -55,10 +55,10 @@ const steps = [
       {
         q: "*Wat is op havo 4 NIET vereist bij literatuurgeschiedenis?*",
         options: [
-          "Letterlijke jaartallen van geboorte/sterfte van elke schrijver kennen",
+          "Geboorte- en sterftejaar van elke schrijver kennen",
           "Een gelezen werk in een stroming kunnen plaatsen",
-          "Kenmerken van stromingen kunnen noemen",
-          "Top-schrijvers per stroming herkennen",
+          "Kenmerken van elke stroming kunnen noemen",
+          "Bekende schrijvers per stroming herkennen",
         ],
         answer: 0,
         wrongHints: [
@@ -119,7 +119,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Renaissance kwam ná de Middeleeuwen, vanaf ~1500.",
+          "De Renaissance begon rond 1500. Ken je een periode die nog eerder was?",
           "Romantiek is veel later (~1800).",
           "Modernisme is 20e-eeuw — bijna het einde van het overzicht.",
         ],
@@ -349,10 +349,10 @@ const steps = [
       {
         q: "*Wat is een centraal idee van het Naturalisme?*",
         options: [
-          "De mens is product van erfelijkheid en milieu — geen vrije wil",
-          "Het gevoel staat boven het verstand",
-          "De rede leidt tot een betere wereld",
-          "Vorm-experiment is belangrijker dan inhoud",
+          "De mens wordt bepaald door erfelijkheid en milieu",
+          "Het gevoel staat altijd boven het verstand",
+          "De rede leidt tot een betere wereld voor iedereen",
+          "Vorm-experiment is belangrijker dan de inhoud",
         ],
         answer: 0,
         wrongHints: [
@@ -525,10 +525,10 @@ const steps = [
       {
         q: "*Wat is een typisch kenmerk van postmoderne literatuur?*",
         options: [
-          "Ironie en intertekstualiteit (verwijzingen naar andere werken)",
-          "Vaste klassieke versmaten",
-          "Mondelinge overlevering",
-          "Religieuze mystiek",
+          "Ironie en verwijzingen naar andere werken",
+          "Vaste klassieke versmaten zoals het sonnet",
+          "Mondelinge overlevering van ridderverhalen",
+          "Religieuze mystiek en liefde voor God",
         ],
         answer: 0,
         wrongHints: [
@@ -614,9 +614,9 @@ const steps = [
         q: "*\"Hij liep over straat. Wat hij niet wist, was dat zijn vrouw thuis al haar koffers aan het pakken was.\"* — Welk perspectief?",
         options: [
           "Auctorieel (alwetende verteller)",
-          "Ik-perspectief",
+          "Ik-perspectief (eerste persoon)",
           "Personaal (één personage)",
-          "Wisselend",
+          "Wisselend (meerdere personages)",
         ],
         answer: 0,
         wrongHints: [
@@ -764,10 +764,10 @@ const steps = [
       {
         q: "*\"Hij liep over straat. Hij dacht: vandaag wordt geen goede dag.\"* — Welk vertelperspectief?",
         options: [
-          "Personaal (= we zien het door één personage)",
-          "Auctorieel (alwetend)",
-          "Ik-perspectief",
-          "Wisselend",
+          "Personaal (door één personage)",
+          "Auctorieel (alwetende verteller)",
+          "Ik-perspectief (eerste persoon)",
+          "Wisselend (meerdere personages)",
         ],
         answer: 0,
         wrongHints: [
@@ -809,13 +809,13 @@ const steps = [
           niveaus: { basis: "Litotes.", simpeler: "Onderdrijving.", nogSimpeler: "Litotes." },
         },
       },
-      { q: "*Max Havelaar* (Multatuli) protesteerde tegen?", options: ["Koloniale uitbuiting in Indië","Koningshuis","Industrialisatie","Religie"], answer: 0, wrongHints: [null, "Niet onderwerp.", "Niet kernthema boek.", "Niet kernthema."] },
+      { q: "*Max Havelaar* (Multatuli) protesteerde tegen?", options: ["Koloniale uitbuiting in Indië","De macht van het koningshuis","Kinderarbeid in de fabrieken","De macht van de kerk"], answer: 0, wrongHints: [null, "Niet het onderwerp van het boek. Waar speelt het verhaal van Havelaar zich af?", "Niet het kernthema van het boek.", "Niet het kernthema van het boek."] },
       { q: "Tot welke stroming hoort Joost van den Vondel?", options: ["Gouden Eeuw","Romantiek","Modernisme","Postmodernisme"], answer: 0, wrongHints: [null, "19e eeuw, te laat.", "20e eeuw, te laat.", "Heel recent."] },
-      { q: "De **Tachtigers** stonden bekend om?", options: ["L'art pour l'art / individualisme","Realisme","Klassieke regels","Religieuze poëzie"], answer: 0, wrongHints: [null, "Dat geldt vooral voor het proza uit die tijd.", "Niet — juist breken met regels.", "Niet kernthema."] },
-      { q: "Welk verschil is er tussen **'ik-perspectief'** en **'auctorieel'**?", options: ["Ik = 1e persoon binnenuit; auctorieel = alwetende verteller","Geen verschil","Ik is altijd onbetrouwbaar","Auctorieel = 1e persoon"], answer: 0, wrongHints: [null, "Wel verschil — eigen blik vs goden-blik.", "Niet altijd.", "Andersom."] },
+      { q: "De **Tachtigers** stonden bekend om?", options: ["L'art pour l'art / individualisme","Realisme en maatschappijkritiek","Vaste klassieke regels en vormen","Religieuze en stichtelijke poëzie"], answer: 0, wrongHints: [null, "Dat geldt vooral voor het proza uit die tijd.", "Niet — juist breken met regels.", "Niet het kernthema van de Tachtigers."] },
+      { q: "Welk verschil is er tussen **'ik-perspectief'** en **'auctorieel'**?", options: ["Ik = 1e persoon binnenuit; auctorieel = alwetend","Geen verschil: beide vertellen in de 1e persoon","Ik is altijd onbetrouwbaar; auctorieel nooit","Auctorieel = 1e persoon; ik = alwetende verteller"], answer: 0, wrongHints: [null, "Wel verschil — eigen blik vs goden-blik.", "Is een ik-verteller per definitie onbetrouwbaar?", "Andersom."] },
       { q: "Een **stijlfiguur** zoals 'zo wit als sneeuw' heet?", options: ["Vergelijking","Metafoor","Personificatie","Ironie"], answer: 0, wrongHints: [null,"Zonder 'als' / 'zoals'.","Niet — geen menselijke eigenschap.","Niet ironisch."] },
-      { q: "**Metafoor**: 'Hij is een leeuw' — wat is dat?", options: ["Vergelijking ZONDER 'als/zoals'","Met 'als/zoals'","Tegenstelling","Niets"], answer: 0, wrongHints: [null,"Dan is het vergelijking.","Niet.","Wel iets."] },
-      { q: "Wat is **personificatie**?", options: ["Niet-levend ding krijgt menselijke eigenschap","Mens wordt object","Vergelijking met als/zoals","Overdrijving voor effect"], answer: 0, wrongHints: [null,"Tegenovergesteld.","Dat is een vergelijking — geen menselijke eigenschap.","Dat is een hyperbool."] },
+      { q: "**Metafoor**: 'Hij is een leeuw' — wat is dat?", options: ["Vergelijking ZONDER 'als/zoals'","Vergelijking MET 'als/zoals'","Tegenstelling tussen twee dingen","Overdrijving om indruk te maken"], answer: 0, wrongHints: [null,"Dan is het een gewone vergelijking. Staat er 'als' of 'zoals' in de zin?","Worden hier twee dingen tegenover elkaar gezet?","Is 'hij is een leeuw' vooral een overdrijving, of wordt hij met iets vergeleken?"] },
+      { q: "Wat is **personificatie**?", options: ["Ding krijgt een menselijke eigenschap","Mens wordt als een ding beschreven","Vergelijking met als/zoals","Overdrijving voor effect"], answer: 0, wrongHints: [null,"Tegenovergesteld.","Dat is een vergelijking — geen menselijke eigenschap.","Dat is een hyperbool."] },
       { q: "Wie schreef **'Het Achterhuis'** (het dagboek uit de onderduik in de Tweede Wereldoorlog)?", options: ["Anne Frank","Multatuli","Vondel","Annie M.G. Schmidt"], answer: 0, wrongHints: [null,"19e eeuw.","17e eeuw.","Kinder-auteur 20e eeuw."] },
       { q: "Een **roman** is meestal hoeveel pagina's?", options: ["100-500","1-10","1000+","20-40"], answer: 0, wrongHints: [null,"Te kort — dat is hooguit een kort verhaal.","Heel zeldzaam.","Dat is eerder een lang verhaal of novelle."] },
       { q: "Welke is een **literaire stroming** uit de 19e eeuw?", options: ["Romantiek","Modernisme","Postmodernisme","Vijftigers"], answer: 0, wrongHints: [null, "20e eeuw.", "Eind 20e/begin 21e.", "Rond 1950 — 20e eeuw."] },

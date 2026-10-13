@@ -60,7 +60,7 @@ const steps = [
         wrongHints: [
           null,
           "Koffie is een ding, geen werkwoord.",
-          "Heerlijk zegt hoe de koffie smaakt — het is geen werkwoord.",
+          "Heerlijk zegt hoe iets is. Kun je het vervoegen, zoals ik heerlijk, hij heerlijkt?",
           "Vandaag is een tijdsaanduiding, geen werkwoord.",
         ],
         uitlegPad: {
@@ -771,7 +771,7 @@ const steps = [
           null,
           "Binnen = bep. van plaats (waar?), niet van reden.",
           "We = onderwerp.",
-          "Blijven = persoonsvorm. Reden = WAAROM? → bijzin met 'omdat'.",
+          "Blijven = persoonsvorm. Welk zinsdeel geeft antwoord op de vraag 'waarom?'",
         ],
         uitlegPad: {
           stappen: [{ titel: "Waarom? = reden", tekst: "Waarom blijven we binnen? omdat het regent = bep. van reden." }],
@@ -805,7 +805,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Verhuizen is een werkwoord, maar niet vervoegd. 'Zullen' is wel vervoegd: meervoud, passend bij 'mijn ouders'.",
+          "Verhuizen is een werkwoord, maar is het vervoegd? Zet de zin in het enkelvoud ('mijn vader …'): welk werkwoord verandert dan mee?",
           "Ouders = onderwerp.",
           "Spanje = bep. van plaats.",
         ],

@@ -174,17 +174,17 @@ const steps = [
       {
         q: "*\"Jongeren bewegen te weinig. Mijn buurjongen zit elke avond achter zijn PlayStation.\"* — Is de tweede zin een argument?",
         options: [
-          "Nee, het is een voorbeeld dat een argument zou kunnen illustreren.",
+          "Nee, het is een voorbeeld bij een argument.",
           "Ja, want het bewijst dat jongeren niet bewegen.",
-          "Ja, het is een hoofdargument.",
-          "Nee, het is een drogreden.",
+          "Ja, het is een hoofdargument voor de stelling.",
+          "Nee, het is een drogreden, geen argument.",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Eén buurjongen bewijst niets over alle jongeren. Wat is het verschil tussen een algemene uitspraak en een individueel voorbeeld?",
           "Een hoofdargument is een algemene reden. Hier wordt één concreet geval genoemd.",
-          "Een drogreden is een onjuist *type* argument. Maar dit is gewoon een voorbeeld, geen argument.",
+          "Een drogreden is een redenering die niet deugt. Wordt hier eigenlijk wel een redenering gegeven, of alleen één geval genoemd?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Voorbeeld ≠ argument", tekst: "Eén concreet geval (buurjongen) = voorbeeld, geen algemene reden." }],
@@ -552,14 +552,14 @@ const steps = [
         options: [
           "Bij een drogreden deugt de redenering zelf niet.",
           "Een drogreden is altijd een leugen.",
-          "Er is geen verschil.",
+          "Een zwak argument is altijd een drogreden.",
           "Een drogreden komt alleen voor in reclames.",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Een drogreden hoeft geen leugen te zijn — soms gelooft de spreker het zelf. Het gaat om de logica.",
-          "Het verschil is wel degelijk relevant. Lees de uitleg: zwak vs onlogisch.",
+          "Is elk argument dat weinig bewijst meteen onlogisch? Lees de uitleg: zwak vs onlogisch.",
           "Drogredenen komen overal voor: politiek, sociale media, kranten, schoolopstellen.",
         ],
         uitlegPad: {
@@ -736,7 +736,7 @@ const steps = [
           null,
           "Er wordt geen vergelijking met iets anders gemaakt. Wel wordt een specifieke bron aangehaald.",
           "Oorzaak-gevolg verbindt twee dingen direct. Hier wordt een onderzoeksuitspraak aangehaald — wat is dat?",
-          "De bron is specifiek (Nederlandse Vereniging voor Slaap-Waakonderzoek) en deskundig op het onderwerp. Dat maakt het een geldig autoriteitsargument, geen drogreden.",
+          "Is de bron hier vaag of onbekend, of juist specifiek (Nederlandse Vereniging voor Slaap-Waakonderzoek) en deskundig op dit onderwerp? Wanneer is een beroep op een deskundige terecht?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Echte autoriteit", tekst: "Specifieke deskundige organisatie = geldig autoriteitsargument." }],
@@ -824,9 +824,9 @@ const steps = [
       { q: "Welk woord signaleert een **argument**?", options: ["want","maar","echter","ondanks"], answer: 0, wrongHints: [null, "Tegenstellings-woord.", "Tegenstelling.", "Tegenstelling."] },
       { q: "*'Iedereen doet het, dus jij moet het ook doen.'* Welke drogreden?", options: ["Beroep op meerderheid","Cirkelredenering","Ad hominem","Vals dilemma"], answer: 0, wrongHints: [null, "Geen herhaling.", "Geen aanval op persoon.", "Geen 2 opties."] },
       { q: "*'Professor X zegt het, dus het is waar.'* = ?", options: ["Beroep op autoriteit","Cirkelredenering","Vals dilemma","Vergelijking"], answer: 0, wrongHints: [null, "Niet herhaling.", "Niet 2 opties.", "Niet vergelijking."] },
-      { q: "Wat is een **standpunt**?", options: ["Mening die je verdedigt","Een vraag","Een feit","Een citaat"], answer: 0, wrongHints: [null, "Geen mening.", "Een feit kun je controleren — daar valt niet over te discussiëren.", "Niet eigen mening."] },
-      { q: "Een **subargument** ondersteunt?", options: ["Een ander argument","Het standpunt direct","Niets","Een tegenargument"], answer: 0, wrongHints: [null, "Dat is hoofdargument.", "Wel iets.", "Een subargument ondersteunt iets, het gaat er niet tegenin."] },
-      { q: "Een **tegenargument** is?", options: ["Argument tegen je standpunt","Argument voor je standpunt","Geen argument","Een vraag"], answer: 0, wrongHints: [null, "Pro-argument.", "Wel argument.", "Geen vraag."] },
+      { q: "Wat is een **standpunt**?", options: ["Mening die je verdedigt","Vraag die je onderzoekt","Feit dat je controleert","Citaat dat je aanhaalt"], answer: 0, wrongHints: [null, "Met een vraag stel je iets aan de orde. Neem je daarmee al zelf positie in?", "Een feit kun je controleren — daar valt niet over te discussiëren.", "Een citaat zijn de woorden van een ander. Neem jij daarmee zelf ergens positie in?"] },
+      { q: "Een **subargument** ondersteunt?", options: ["Een ander argument","Het standpunt direct","De inleiding van de tekst","Een tegenargument"], answer: 0, wrongHints: [null, "Dat is hoofdargument.", "Een subargument hoort bij de argumentatie, niet bij de opbouw van de tekst. Wat ondersteunt het dan?", "Een subargument ondersteunt iets, het gaat er niet tegenin."] },
+      { q: "Een **tegenargument** is?", options: ["Argument tegen je standpunt","Argument voor je standpunt","Herhaling van je standpunt","Samenvatting van je betoog"], answer: 0, wrongHints: [null, "Pro-argument.", "Een herhaling voegt geen nieuwe reden toe. Waar wijst het woorddeel 'tegen-' op?", "Een samenvatting komt aan het eind en voegt geen nieuwe redenen toe."] },
       { q: "*'De fiets is rood want de fiets is rood.'* Welke drogreden?", options: ["Cirkelredenering","Ad hominem","Vals dilemma","Vergelijking"], answer: 0, wrongHints: [null, "Geen persoon.", "Geen 2 opties.", "Geen vergelijking."] },
       { q: "Welk signaalwoord wijst op een **conclusie**?", options: ["dus","want","omdat","ondanks"], answer: 0, wrongHints: [null, "Reden.", "Reden.", "Tegenstelling."] },
       { q: "**Open vraag**: noem 1 typisch signaalwoord voor een argument (reden).", kind: "open", acceptedAnswers: ["want", "omdat", "doordat", "aangezien", "namelijk"], explanation: "Reden-signalen: want, omdat, doordat, aangezien, namelijk." },

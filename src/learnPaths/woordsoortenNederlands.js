@@ -140,7 +140,7 @@ const steps = [
         q: "Welke vorm is goed? — *een ___ kind* (klein)",
         options: ["klein", "kleine", "kleins", "kleinen"],
         answer: 0,
-        wrongHints: [null, "Bij 'een' + het-woord (kind = het) → geen -e.", "Kleins gebruik je alleen na 'iets' (iets kleins), niet vóór een zelfstandig naamwoord.", "Geen vorm."],
+        wrongHints: [null, "Kind is een het-woord. Wat gebeurt er na 'een' bij een het-woord met de -e van het bijvoeglijk naamwoord?", "Kleins gebruik je alleen na 'iets' (iets kleins), niet vóór een zelfstandig naamwoord.", "Kleinen bestaat niet als vorm vóór een zelfstandig naamwoord."],
         uitlegPad: {
           stappen: [{ titel: "Een + het-woord = geen -e", tekst: "Kind = het-woord. Met 'een' ervoor: een klein kind (geen -e)." }],
           woorden: [{ woord: "verbuiging bn", uitleg: "regel met -e" }],
@@ -472,7 +472,7 @@ const steps = [
     checks: [
       {
         q: "Welke woordsoort is **mooie** in: *een mooie dag*?",
-        options: ["bijvoeglijk naamwoord", "zelfstandig nw", "bijwoord", "voornaamwoord"],
+        options: ["bijvoeglijk naamwoord", "zelfstandig naamwoord", "bijwoord", "voornaamwoord"],
         answer: 0,
         wrongHints: [null, "Mooie is geen ding/persoon, dus geen zn.", "Een bijwoord beschrijft een ww/bn, niet een zn.", "Een vnw vervangt iets — mooie vervangt niets."],
         uitlegPad: {

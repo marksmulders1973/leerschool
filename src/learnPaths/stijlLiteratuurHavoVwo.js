@@ -231,10 +231,10 @@ const steps = [
       {
         q: "Wat is het **thema** van een verhaal?",
         options: [
-          "De centrale gedachte of het hoofdidee",
-          "De plotsamenvatting",
-          "De hoofdpersoon",
-          "De plaats van handeling"
+          "De centrale gedachte van het verhaal",
+          "Een korte samenvatting van het plot",
+          "De belangrijkste hoofdpersoon",
+          "De plaats en tijd van handeling"
         ],
         answer: 0,
         wrongHints: [null, "Niet — dat is plot.", "Niet — dat is personage.", "Niet — dat is setting."],
@@ -262,9 +262,9 @@ const steps = [
         q: "**Vertelde tijd** is:",
         options: [
           "Hoeveel tijd er in het verhaal verloopt",
-          "Hoeveel pagina's er zijn",
+          "Hoeveel pagina's het verhaal beslaat",
           "Wanneer het boek geschreven is",
-          "Hoe lang lezer over boek doet"
+          "Hoe lang de lezer over het boek doet"
         ],
         answer: 0,
         wrongHints: [null, "Niet — dat is vertel-tijd.", "Niet — publicatie-jaar.", "Niet — lees-tijd."],
@@ -280,8 +280,8 @@ const steps = [
         options: [
           "Complex en ontwikkelt zich",
           "Eén dominante eigenschap",
-          "Bijfiguur",
-          "Antagonist"
+          "Bijfiguur die weinig voorkomt",
+          "Tegenstander van de hoofdpersoon"
         ],
         answer: 0,
         wrongHints: [null, "Niet — dat is plat.", "Niet — los van karakterisering.", "Niet — rol, niet karakter-diepte."],
@@ -318,7 +318,7 @@ const steps = [
     checks: [
       {
         q: "**'De avond is ongemak'** (Marieke Lucas Rijneveld) won welke prijs?",
-        options: ["International Booker Prize", "Nobelprijs", "Pulitzer", "Hugo-prijs"],
+        options: ["International Booker Prize", "Nobelprijs voor de Literatuur", "Pulitzer Prize for Fiction", "Hugo Award for Best Novel"],
         answer: 0,
         wrongHints: [null, "Niet — die is voor een heel oeuvre, niet één roman.", "Niet — Amerikaans.", "Niet — SF/fantasy."],
         uitlegPad: {
@@ -348,12 +348,12 @@ const steps = [
         q: "Een **personaal verteller** kan:",
         options: [
           "Alleen gedachten/gevoel van één personage weten",
-          "Alle gedachten van iedereen",
-          "Niet vertellen",
-          "Alleen feiten"
+          "Alle gedachten van alle personages weten",
+          "Alleen dialogen weergeven, zonder verteller",
+          "Alleen uiterlijke feiten, geen gevoelens"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is auctoriaal.", "Wel verteller.", "Wel emoties."],
+        wrongHints: [null, "Niet — dat is auctoriaal.", "Niet — er is wel een verteller.", "Een personale verteller kijkt mee met iemand. Ziet die alleen de buitenkant?"],
         uitlegPad: {
           stappen: [{ titel: "Beperkt 3e-persoon", tekst: "Personaal: alles wordt verteld VANUIT het gezichtspunt van één personage. Wat andere personages denken/voelen: ALLEEN via wat hoofdpersonage observeert of vermoedt. Geeft intimiteit + onbetrouwbaarheid (hoofdpersonage kan zich vergissen)." }],
           niveaus: { basis: "Eén hoofd.", simpeler: "Beperkt tot één personage.", nogSimpeler: "Eén" },
@@ -374,11 +374,11 @@ const steps = [
         options: [
           "Slot dat de lezer zelf invult",
           "Slot dat alles oplost",
-          "Geen slot",
-          "Twist"
+          "Slot dat terugspringt naar het begin",
+          "Slot met een onverwachte wending"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is gesloten.", "Wel slot, maar onafgewerkt.", "Twist is anders."],
+        wrongHints: [null, "Niet — dat is gesloten.", "Niet — dat is een cirkelstructuur.", "Niet — dat is een twist."],
         uitlegPad: {
           stappen: [
             { titel: "Lezer-werk", tekst: "Auteur kiest bewust onvoltooidheid: lezer moet zelf nadenken over uitkomst. Voorbeeld: 'No Country for Old Men' (McCarthy), 'De avonden' (Reve). Versterkt thema 'onbeantwoordbare vragen van leven'." },

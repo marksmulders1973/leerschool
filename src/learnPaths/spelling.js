@@ -99,7 +99,7 @@ const steps = [
       },
       {
         q: "*In het woord 'kammen' (= het meervoud van kam): is de eerste lettergreep 'kam' open of gesloten?*",
-        options: ["Gesloten (eindigt op m)", "Open (eindigt op a)", "Halfopen", "Geen van beide"],
+        options: ["Gesloten", "Open", "Halfopen", "Geen van beide"],
         answer: 0,
         wrongHints: [
           null,
@@ -869,17 +869,17 @@ const steps = [
       {
         q: "*Hoofdletters: \"In de zomer ga ik op vakantie naar frankrijk in Augustus.\" — Welke fouten?*",
         options: [
-          "frankrijk moet Frankrijk (hoofdletter, eigennaam) en augustus klein (geen hoofdletter)",
-          "Zomer moet Zomer en Vakantie moet Vakantie",
-          "Alleen Augustus is fout — moet augustus",
-          "Alleen Frankrijk is fout — moet frankrijk",
+          "frankrijk → Frankrijk en Augustus → augustus",
+          "zomer → Zomer en vakantie → Vakantie",
+          "Alleen Augustus → augustus, de rest klopt",
+          "Alleen frankrijk → Frankrijk, de rest klopt",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Zomer (seizoen) en vakantie (algemeen woord) krijgen GEEN hoofdletter in NL.",
           "Kijk ook eens goed naar de landnaam in de zin.",
-          "Andersom: krijgt een landnaam een hoofdletter of niet? En kijk ook naar de maandnaam.",
+          "Klopt de rest echt? Loop alle woorden met (of juist zonder) hoofdletter nog eens langs.",
         ],
         uitlegPad: {
           stappen: [

@@ -43,7 +43,7 @@ const steps = [
       },
       {
         q: "Een **beschouwing** kenmerkt zich door:",
-        options: ["Voor- en tegenargumenten afwegen","Eén duidelijke mening","Alleen feiten","Spanning/spanningsboog"],
+        options: ["Voor- en tegenargumenten afwegen","Eén duidelijke mening verdedigen","Alleen feiten neutraal uitleggen","Een spanningsboog met ontknoping"],
         answer: 0,
         wrongHints: [null, "Niet — dat is betoog.", "Niet — dat is uiteenzetting.", "Niet — dat is verhaal."],
         uitlegPad: {
@@ -54,7 +54,7 @@ const steps = [
       },
       {
         q: "Welke tekst is een **uiteenzetting**?",
-        options: ["Wikipedia-artikel over fotosynthese","Opinie-stuk over euthanasie","Verkiezings-toespraak","Roman-fragment"],
+        options: ["Wikipedia-artikel over fotosynthese","Opinie-stuk over euthanasie","Toespraak van een partijleider","Romanfragment over een zomer"],
         answer: 0,
         wrongHints: [null, "Niet — een opiniestuk geeft een mening of een afweging.", "Niet — dat is betoog.", "Niet — dat is verhaal/literatuur."],
         uitlegPad: {
@@ -106,7 +106,7 @@ const steps = [
       },
       {
         q: "Welke is de **sterkste stelling** voor een betoog?",
-        options: ["'Vanaf groep 8 moet schooladvies door de leerling zelf gegeven worden'","'School is voor iedereen heel erg belangrijk'","'Het is vandaag in het klaslokaal erg warm'","'Misschien moeten kinderen op school meer dingen leren'"],
+        options: ["'Leerlingen moeten hun schooladvies zelf bepalen'","'School is voor iedereen heel erg belangrijk'","'Het is vandaag in het klaslokaal erg warm'","'Misschien moeten kinderen op school meer dingen leren'"],
         answer: 0,
         wrongHints: [null, "Niet — niet discussieerbaar.", "Niet — geen meningsstelling.", "Niet — te vaag."],
         uitlegPad: {
@@ -201,7 +201,7 @@ const steps = [
       },
       {
         q: "Welk argument is het **sterkst** voor 'sport is goed'?",
-        options: ["WHO-onderzoek toont 30% minder hart- en vaatziekten bij actieve mensen","Iedereen weet toch allang dat sporten goed is","Mijn vader zegt het en die sport elke dag","Sport is gewoon heel erg leuk om te doen"],
+        options: ["WHO-onderzoek toont 30% minder hart- en vaatziekten bij actieve mensen","Iedereen weet toch allang dat sporten goed is voor je hart en je hoofd","Mijn vader zegt het, en hij sport al dertig jaar elke dag","Sport is gewoon heel erg leuk en je maakt er veel vrienden bij"],
         answer: 0,
         wrongHints: [null, "Niet — generalisatie zonder bewijs.", "Niet — autoriteit zonder relevantie.", "Te vaag + alleen emotie."],
         uitlegPad: {
@@ -285,9 +285,9 @@ const steps = [
     checks: [
       {
         q: "*'Alle moderne muziek is vreselijk, want dat zegt mijn opa.'* — drogreden:",
-        options: ["Autoriteits-misbruik + generalisatie","Vals dilemma","Stroman","Goed argument"],
+        options: ["Autoriteits-misbruik + generalisatie","Vals dilemma + stroman","Hellend vlak + cirkelredenering","Geldig autoriteitsargument"],
         answer: 0,
-        wrongHints: [null, "Niet — geen of-of-keuze.", "Niet — geen verdraaiing.", "Niet — zou jij dit als bewijs accepteren?"],
+        wrongHints: [null, "Niet — er is geen of-of-keuze en er wordt niets verdraaid.", "Niet — er volgt geen kettingreactie en de conclusie herhaalt zichzelf niet.", "Niet — zou jij dit als bewijs accepteren?"],
         uitlegPad: {
           stappen: [{ titel: "Dubbel: opa + alle", tekst: "**Twee drogredenen**: (1) opa is geen muziek-expert → autoriteits-misbruik. (2) 'Alle moderne muziek' → generalisatie. Combinatie maakt argument extra zwak." }],
           niveaus: { basis: "Autoriteit + generalisatie.", simpeler: "Opa + alle = twee drogredenen", nogSimpeler: "Drogreden" },
@@ -305,7 +305,7 @@ const steps = [
       },
       {
         q: "Wat is een **anafoor**?",
-        options: ["Herhaling aan begin van zinnen","Vraag-zonder-antwoord","Tegenstelling","Beeldspraak"],
+        options: ["Herhaling aan begin van zinnen","Vraag waarop geen antwoord komt","Tegenstelling tussen twee zinnen","Beeldspraak zonder het woord 'als'"],
         answer: 0,
         wrongHints: [null, "Niet — dat is retorische vraag.", "Niet — dat is antithese/contrast.", "Niet — dat is metafoor."],
         uitlegPad: {
