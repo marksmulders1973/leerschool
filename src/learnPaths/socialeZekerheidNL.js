@@ -43,9 +43,9 @@ const steps = [
       },
       {
         q: "Wat regelde het **Kinderwetje van Van Houten** in 1874?",
-        options: ["Kinderen onder 12 mogen niet in fabrieken","Recht op schoolonderwijs","Kinderbijslag","Gratis ziekenhuis"],
+        options: ["Geen kinderen onder 12 in fabrieken", "Alle kinderen moeten naar school", "Ouders krijgen geld per kind", "Kinderen mogen niet op het land werken"],
         answer: 0,
-        wrongHints: [null, "Leerplicht kwam pas 1900.", "Veel later (pas in de 20e eeuw).", "Niet — gratis zorg regelde de staat in 1874 niet."],
+        wrongHints: [null, "De leerplicht kwam pas in 1900.", "Kinderbijslag kwam pas veel later, in de 20e eeuw.", "Juist op het land en thuis mochten kinderen gewoon blijven werken. Waar ging de wet dan over?"],
         uitlegPad: {
           stappen: [{ titel: "1874 = einde kinderarbeid (deels)", tekst: "**Kinderwetje** (officiële naam: 'Wet houdende maatregelen tot het tegengaan van overmatigen arbeid en verwaarloozing van kinderen') van **Samuel van Houten** (liberaal). Verbood loonarbeid voor kinderen onder 12, maar landwerk + huishouden bleven toegestaan. Handhaving was zwak — dwong wel het debat." }],
           woorden: [{ woord: "kinderarbeid", uitleg: "Werken in loondienst onder een bepaalde leeftijd (vroeger soms vanaf 6)." }],
@@ -56,9 +56,9 @@ const steps = [
       },
       {
         q: "Wat gebeurde tijdens de **crisisjaren '30** in NL?",
-        options: ["Massa-werkloosheid","Massa-immigratie","Verplichte vakantie","Algemene vredetijd zonder problemen"],
+        options: ["Massale werkloosheid en armoede", "Massale immigratie naar Nederland", "Hoge inflatie, waardeloos geld", "Snelle groei van de fabrieken"],
         answer: 0,
-        wrongHints: [null, "Niet — er kwamen juist weinig mensen naar NL.", "Niet relevant.", "Niet — economisch zwaarste decennium 20e eeuw."],
+        wrongHints: [null, "Er kwamen juist weinig mensen naar Nederland.", "Dat was in Duitsland rond 1923. In Nederland daalden de prijzen in de jaren '30 juist.", "Bedrijven gingen failliet en sloten. Wat betekende dat voor de arbeiders?"],
         uitlegPad: {
           stappen: [{ titel: "Grote Depressie", tekst: "**1929 Wall Street-crash** = wereldwijde economische crisis. NL-werkloosheid piekt op ~25-30%. **Geen werkloosheidsuitkering** — alleen vernederende 'steun'. Premier **Colijn** voerde zware **bezuinigingen** door, wat de crisis volgens critici verlengde." }],
           woorden: [{ woord: "Grote Depressie", uitleg: "Wereldwijde economische crisis 1929-1939." }, { woord: "Colijn", uitleg: "ARP-premier 1933-1939, koos voor bezuinigingen." }],
@@ -68,9 +68,9 @@ const steps = [
       },
       {
         q: "Vóór 1945 was hulp bij armoede vooral een zaak van:",
-        options: ["Familie + kerk + liefdadigheid","De overheid","Werkgevers","Niemand"],
+        options: ["Familie, kerk en liefdadigheid", "De overheid via uitkeringen", "Werkgevers via een verplicht fonds", "Ziekenhuizen en artsen"],
         answer: 0,
-        wrongHints: [null, "Niet — overheid bemoeide zich nauwelijks.", "Soms wel, maar geen verplichting.", "Wel — er waren wel mensen en groepen die hielpen. Welke?"],
+        wrongHints: [null, "Niet: de overheid bemoeide zich er nauwelijks mee.", "Soms hielpen werkgevers wel, maar dat was geen verplichting.", "Artsen hielpen zieken, maar wie gaf arme gezinnen eten en geld?"],
         uitlegPad: {
           stappen: [{ titel: "Particuliere zorg = traditie", tekst: "Vóór WO2 sterk **verzuild**: katholieken hielpen katholieken (parochiale armenzorg), protestanten via **diaconie**, joden via joodse gemeente. Plus rijke filantropen + werkhuizen. Overheid bemoeide zich amper — armoede zag men als 'individueel falen'." }],
           woorden: [{ woord: "verzuiling", uitleg: "NL-systeem waarbij katholieken/protestanten/socialisten/liberalen in aparte 'zuilen' leefden — eigen scholen/kranten/sportclubs/ziekenhuizen." }],
@@ -111,9 +111,9 @@ const steps = [
       },
       {
         q: "Wat betekent **'volksverzekering'**?",
-        options: ["Voor iedereen verplicht","Alleen werknemers","Vrijwillig","Alleen rijken"],
+        options: ["Voor iedereen verplicht", "Verplicht voor alle werknemers", "Vrijwillige verzekering", "Voor mensen met een laag inkomen"],
         answer: 0,
-        wrongHints: [null, "Dat is werknemersverzekering (WW etc.).", "Niet — verplicht.", "Niet — voor iedereen."],
+        wrongHints: [null, "Dat is een werknemersverzekering, zoals de WW.", "Dan kies je zelf of je meedoet. Is dat zo bij de AOW?", "Dat gold vroeger voor het ziekenfonds. Wie krijgt er later allemaal AOW?"],
         uitlegPad: {
           stappen: [{ titel: "Volks- vs werknemers-verzekering", tekst: "**Volksverzekering** (AOW, AKW kinderbijslag, AWBZ/Wlz langdurige zorg): iedereen verplicht verzekerd, ook huisvrouwen + zelfstandigen + studenten. **Werknemersverzekering** (WW, WIA, ZW): alleen voor wie loon krijgt." }],
           woorden: [{ woord: "volksverzekering", uitleg: "Verzekering voor heel NL-volk, ongeacht beroep." }, { woord: "werknemersverzekering", uitleg: "Alleen voor mensen met loondienst." }],
@@ -123,9 +123,9 @@ const steps = [
       },
       {
         q: "Wat regelt de **Algemene Bijstandswet** (1965)?",
-        options: ["Uitkering voor wie geen ander inkomen heeft","Pensioen vanaf 65","Werkloosheidsuitkering","Kinderbijslag"],
+        options: ["Geld voor wie geen ander inkomen heeft", "Pensioen voor iedereen vanaf 65 jaar", "Uitkering als je je baan verliest", "Extra geld voor gezinnen met kinderen"],
         answer: 0,
-        wrongHints: [null, "Dat is AOW.", "Dat is WW.", "Dat is AKW/Kinderbijslag."],
+        wrongHints: [null, "Dat regelde de AOW al in 1957.", "Dat is de werkloosheidsuitkering (WW).", "Dat is de kinderbijslag."],
         uitlegPad: {
           stappen: [{ titel: "Bijstand = laatste vangnet", tekst: "**Algemene Bijstandswet** (ABW, sinds 2004: WWB → 2015: Participatiewet) = uitkering voor mensen die **geen recht op andere uitkering** hebben en **geen inkomen** kunnen verwerven. Voorbeeld: jongeren zonder werkverleden, ZZP'ers zonder klanten." }],
           woorden: [{ woord: "bijstand", uitleg: "Minimumuitkering van gemeente voor mensen zonder ander inkomen." }],
@@ -192,9 +192,9 @@ const steps = [
       },
       {
         q: "Wat is **Slochteren** (1959)?",
-        options: ["Aardgasveld in Groningen","Stad in Limburg","Politieke partij","Sociale wet"],
+        options: ["Aardgasveld in Groningen", "Kolenmijn in Limburg", "Olieveld in de Noordzee", "Akkoord over de lonen"],
         answer: 0,
-        wrongHints: [null, "Niet — Slochteren ligt niet in Limburg.", "Niet — geen partij.", "Niet — geen wet."],
+        wrongHints: [null, "Kolenmijnen lagen in Limburg en gingen juist rond 1970 dicht. Slochteren ligt in het noorden.", "Boringen in de Noordzee kwamen later, in de jaren '70. Slochteren ligt op het vaste land.", "Zo'n akkoord kreeg de naam van een andere plaats (Wassenaar, 1982)."],
         uitlegPad: {
           stappen: [{ titel: "Slochteren = aardgas-bonanza", tekst: "**1959**: NAM ontdekt **grootste aardgasveld van Europa** bij Slochteren (Groningen). Leverde NL honderden miljarden euro's op. Maar: ook aardbevingen sinds '80 → gaswinning gestopt (2023-2024). Schadefonds voor Groningers blijft heet politiek thema." }],
           woorden: [{ woord: "Slochteren", uitleg: "Dorp in Groningen, naamgever van het grote aardgasveld." }],
@@ -204,9 +204,9 @@ const steps = [
       },
       {
         q: "Wat is het **poldermodel**?",
-        options: ["Compromis tussen werkgevers + werknemers + regering","Type irrigatiesysteem","Politiek systeem zonder oppositie","Belastingsysteem"],
+        options: ["Overleg van werkgevers, vakbonden en kabinet", "Systeem om polders droog te houden", "Regering die zonder oppositie bestuurt", "Belastingstelsel voor bedrijven en burgers"],
         answer: 0,
-        wrongHints: [null, "De naam komt van de polder, maar het gaat hier niet om water.", "Niet — NL heeft wel oppositie.", "Niet relevant."],
+        wrongHints: [null, "De naam komt van de polder, maar het gaat hier niet om water.", "In de Tweede Kamer zit gewoon oppositie. Wie overleggen er bij het poldermodel?", "Belasting heeft er weinig mee te maken. Waarom zou het naar een polder heten, waar iedereen samen de dijk moest bewaken?"],
         uitlegPad: {
           stappen: [{ titel: "Polderen = overleggen tot consensus", tekst: "**Poldermodel** = NL-overleg-cultuur waarbij werkgevers (VNO-NCW), vakbonden (FNV/CNV) en regering samen polderen voor compromis. Belangrijke instelling: **SER (Sociaal-Economische Raad)** sinds 1950. Toonbeeld: **Akkoord van Wassenaar 1982** = loonmatiging + werktijdverkorting." }],
           woorden: [{ woord: "poldermodel", uitleg: "NL-overleg- en compromis-cultuur in sociaal-economisch beleid." }, { woord: "SER", uitleg: "Sociaal-Economische Raad, adviesorgaan regering." }],
@@ -249,9 +249,9 @@ const steps = [
       },
       {
         q: "Het **Akkoord van Wassenaar (1982)** regelde:",
-        options: ["Loonmatiging + werktijdverkorting","Nieuwe grondwet","Privatisering NS","Eurolancering"],
+        options: ["Loonmatiging en werktijdverkorting", "Hogere lonen voor alle werknemers", "Verkoop van de NS aan bedrijven", "Hogere uitkeringen voor werklozen"],
         answer: 0,
-        wrongHints: [null, "Niet — grondwet 1983 was apart.", "Niet — dat speelde later en apart.", "Veel later (1999/2002)."],
+        wrongHints: [null, "In 1982 was er een zware crisis. Konden bedrijven toen hogere lonen betalen?", "Niet: dat speelde later en apart.", "De overheid moest juist bezuinigen. Wat beloofden werkgevers en vakbonden elkaar?"],
         uitlegPad: {
           stappen: [{ titel: "Werkgever + vakbond + Lubbers", tekst: "**24 november 1982**: werkgevers (VNO) + vakbonden (FNV) sluiten in Wassenaar een akkoord, onder druk van kabinet-Lubbers. **Werkgevers**: minder loonstijging. **Werknemers**: 40-uurs naar **38-uurs werkweek**. **Regering**: minder werkloosheid + economisch herstel. **Wassenaar** = klassiek voorbeeld poldermodel." }],
           theorie: "Toets-feit: na Wassenaar groeide NL-economie hard in jaren '80 + '90. Internationaal geprezen als 'Polder-wonder'.",
@@ -333,9 +333,9 @@ const steps = [
       },
       {
         q: "Vergrijzing betekent:",
-        options: ["Meer ouderen, minder jongeren in bevolking","Meer jongeren, minder ouderen in bevolking","Klimaatverandering","Inflatie"],
+        options: ["Meer ouderen, minder jongeren in bevolking", "Meer jongeren, minder ouderen in bevolking", "Het aantal inwoners van NL daalt", "Gezinnen krijgen minder kinderen"],
         answer: 0,
-        wrongHints: [null, "Andersom — kijk naar wat er met de leeftijd van de bevolking gebeurt.", "Niet relevant — andere term.", "Niet relevant."],
+        wrongHints: [null, "Andersom: kijk naar wat er met de leeftijd van de bevolking gebeurt.", "Dat heet bevolkingskrimp. Vergrijzing gaat over de leeftijd van de bevolking.", "Dat heet ontgroening. Het is wel een oorzaak, maar wat betekent vergrijzing zelf?"],
         uitlegPad: {
           stappen: [{ titel: "Demografische vergrijzing", tekst: "Vergrijzing = **demografie**: aandeel 65+ groeit, aandeel jongeren krimpt. NL: 1900 ~5% boven 65, 2025 ~20%, 2050 verwacht ~25%. Gevolgen: meer AOW + zorg, minder werkenden per gepensioneerde." }],
           niveaus: { basis: "Meer ouderen.", simpeler: "Vergrijzing = meer 65+", nogSimpeler: "Meer ouderen" },

@@ -32,9 +32,9 @@ const steps = [
     checks: [
       {
         q: "**Verdrag van Versailles 1919**: wat bepaalde 'oorlogsschuld-clausule' (art 231)?",
-        options: ["Duitsland is alleen schuldig aan WO1","Frankrijk schuldig","Geen oorlog meer","Schadevergoeding voor VS"],
+        options: ["Duitsland is alleen schuldig aan WO1", "Duitsland moet zijn leger opheffen", "Alle landen zijn even schuldig aan WO1", "Frankrijk en Rusland zijn schuldig aan WO1"],
         answer: 0,
-        wrongHints: [null, "Niet — niet bedoeling.", "Niet relevant.", "Niet primair."],
+        wrongHints: [null, "Duitsland mocht een klein leger houden (100.000 man). En dit artikel ging over schuld.", "Dat vonden de Duitsers zelf, maar de winnaars schreven iets anders.", "Frankrijk hoorde bij de winnaars die het verdrag schreven."],
         uitlegPad: {
           stappen: [{ titel: "Allein-schuld DE", tekst: "**Artikel 231 Versailles**: 'Duitsland is alleen verantwoordelijk voor WO1 + alle schade'. Basis voor schadevergoeding (132 mld). Voor Duitsers vernederend + economisch verlammend. Voedde nationalistische haat en speelde Hitler in de kaart." }],
           theorie: "Toets-favoriet: leg uit waarom Versailles bijdroeg aan WO2. Antwoord: vernedering + economische ellende → Hitler-aanhang.",
@@ -73,9 +73,9 @@ const steps = [
       },
       {
         q: "**Stalin-Hitler-pact (Molotov-Ribbentrop)** 1939 betekende:",
-        options: ["Niet-aanvalsverdrag met geheime deal", "Militair bondgenootschap", "Oorlog tegen elkaar", "Handelsboycot"],
+        options: ["Niet-aanvalsverdrag met geheime deal", "Militair bondgenootschap tegen het Westen", "Verdrag om Polen samen te beschermen", "Handelsboycot tegen elkaars landen"],
         answer: 0,
-        wrongHints: [null, "Niet — beperkter.", "Tegenovergesteld.", "Niet — ze gingen juist zaken met elkaar doen."],
+        wrongHints: [null, "Ze beloofden elkaar niet samen te vechten. Wat beloofden ze dan wél?", "Wat gebeurde er een week later met Polen?", "Niet: ze gingen juist zaken met elkaar doen."],
         uitlegPad: {
           stappen: [{ titel: "23 augustus 1939", tekst: "**Molotov-Ribbentrop-pact** (23 aug 1939): niet-aanvalsverdrag DE + USSR. **Geheime bijlage**: verdeling Polen + Baltische staten in invloedssferen. 1 sept DE valt PL binnen, RU 17 sept ook → WO2. In 1941 valt Hitler USSR aan ondanks pact." }],
           niveaus: { basis: "Niet-aanval + verdeel.", simpeler: "M-R = niet-aanval+verdelen", nogSimpeler: "Pact + Polen verdelen" },
@@ -123,9 +123,9 @@ const steps = [
       },
       {
         q: "Wat besloot de **Wannsee-Conferentie** (jan 1942)?",
-        options: ["Systematische uitroeiing Joden", "Inval Sovjet-Unie", "Capitulatie", "Vrede"],
+        options: ["Systematische uitroeiing van de Joden", "Plan voor de inval in de Sovjet-Unie", "Deportatie van Joden naar Madagaskar", "Oprichting van de eerste concentratiekampen"],
         answer: 0,
-        wrongHints: [null, "Was al 1941.", "Niet relevant.", "Niet — opbouw oorlog."],
+        wrongHints: [null, "Die inval was al in juni 1941.", "Dat Madagaskar-plan was in 1940 al opgegeven.", "De eerste kampen, zoals Dachau, bestonden al sinds 1933."],
         uitlegPad: {
           stappen: [{ titel: "Industrieel moorden", tekst: "**Wannsee-Conferentie** 20 jan 1942 (villa in Berlijn): 15 nazi-functionarissen onder Reinhard Heydrich beslissen over **'Endlösung der Judenfrage'** = systematische vernietiging van Joden in heel Europa. Operationeel via vernietigingskampen (Auschwitz-Birkenau, Treblinka, Sobibor). 11 mln Joden in Europa, doel: alle vermoord. ~6 mln daadwerkelijk vermoord." }],
           niveaus: { basis: "Endlösung.", simpeler: "Wannsee = uitroeiing", nogSimpeler: "Plan: alle Joden vermoorden" },
@@ -153,9 +153,9 @@ const steps = [
     checks: [
       {
         q: "Wat is het **'IJzeren Gordijn'** (Churchill 1946)?",
-        options: ["Symbolische scheiding tussen West + Oost-Europa","Echte muur Berlijn","Wapen","Beleid"],
+        options: ["Scheiding tussen West- en Oost-Europa", "De muur die Berlijn in tweeën deelde", "Afsluiting van West-Berlijn in 1948", "Beleid van de VS tegen het communisme"],
         answer: 0,
-        wrongHints: [null, "Specifiek — IJG is bredere term.", "Niet relevant.", "Geen beleid — Churchill beschreef iets anders."],
+        wrongHints: [null, "De Berlijnse Muur kwam pas in 1961. Churchill sprak in 1946 over iets veel groters.", "Dat was de Berlijnse blokkade. Churchill sprak al in 1946 over iets veel groters.", "Dat Amerikaanse beleid heet de Trumandoctrine. Churchill beschreef met dit beeld iets anders."],
         uitlegPad: {
           stappen: [{ titel: "Fulton-rede 1946", tekst: "**Winston Churchill** in Fulton, Missouri (5 maart 1946): 'From Stettin in the Baltic to Trieste in the Adriatic, an iron curtain has descended across the continent.' Beschreef ideologische scheiding tussen door USSR gedomineerd Oost-Europa + vrije West-Europa. **Berlijnse Muur 1961** later fysieke manifestatie." }],
           niveaus: { basis: "Symbolische scheiding.", simpeler: "IJG = Oost-West scheiding", nogSimpeler: "Grens Oost-West" },
@@ -183,9 +183,9 @@ const steps = [
       },
       {
         q: "**Marshall-Plan** was:",
-        options: ["VS economische hulp West-Europa","Sovjet-plan","Oorlogsplan","NAVO-document"],
+        options: ["Economische hulp van de VS aan Europa", "Amerikaans plan om Duitsland te verzwakken", "Militaire steun van de VS aan de NAVO", "Sovjet-hulp voor Oost-Europa"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet primair.", "Niet — apart programma."],
+        wrongHints: [null, "Dat was het Morgenthau-plan, dat juist niet werd uitgevoerd.", "De NAVO kwam apart, in 1949. Het Marshall-plan was geen militaire hulp.", "Dat was het Comecon, het Oost-Europese antwoord op dit plan."],
         uitlegPad: {
           stappen: [{ titel: "$13 mld 1948-52", tekst: "**Marshall-Plan** (officieel European Recovery Program, naar VS-minister George Marshall): VS gaf $13 mld economische hulp aan West-Europa 1948-52 voor wederopbouw na WO2. Tegelijk: tegenwicht tegen communisme. NL ontving ~$1 mld. Oost-Europa mocht niet meedoen van Stalin." }],
           niveaus: { basis: "VS hulp WEU.", simpeler: "Marshall = VS-hulp", nogSimpeler: "Geld voor wederopbouw" },
@@ -232,9 +232,9 @@ const steps = [
       },
       {
         q: "Wat is **Glasnost** (Gorbatsjov)?",
-        options: ["Openheid","Herstructurering","Kernwapen","Communisme"],
+        options: ["Openheid", "Herstructurering", "Ontspanning", "Wapenbeheersing"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is perestrojka.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Niet: dat is perestrojka.", "Ontspanning tussen Oost en West heet détente, uit de jaren '70.", "Afspraken over minder kernwapens heten wapenbeheersing. Glasnost ging over het binnenland."],
         uitlegPad: {
           stappen: [{ titel: "Russisch 'openheid'", tekst: "**Glasnost** (гла́сность) = openheid in Russisch. Gorbatsjovs beleid 1985+: meer persvrijheid, dissidenten vrij, kritiek toegestaan, geschiedenis-her-onderzoek (Stalin-misdaden). Bedoeld om systeem te herstellen, eindigde in afbraak. Naast **perestrojka** (перестро́йка) = herstructurering (economisch)." }],
           niveaus: { basis: "Openheid.", simpeler: "Glasnost = openheid", nogSimpeler: "Openheid" },
@@ -242,9 +242,9 @@ const steps = [
       },
       {
         q: "**Srebrenica 1995** is NL-trauma omdat:",
-        options: ["Dutchbat kon de moslimmannen niet beschermen", "NL-soldaten pleegden de moord", "NL won een veldslag", "Er waren geen Nederlanders bij"],
+        options: ["Dutchbat kon de moslimmannen niet beschermen", "Nederlandse soldaten pleegden de moorden", "Veel Nederlandse soldaten sneuvelden er", "Nederland weigerde soldaten te sturen"],
         answer: 0,
-        wrongHints: [null, "Niet — geen actieve dader.", "Niet relevant.", "Wel — er waren wel Nederlanders bij betrokken."],
+        wrongHints: [null, "Niet: de moorden werden gepleegd door Bosnisch-Servische troepen.", "Er sneuvelde één Nederlandse soldaat. Het trauma gaat over wat er met anderen gebeurde.", "Lees de vraag nog eens: waarom zou het dan een Nederlands trauma zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Falen 'safe area'", tekst: "**Srebrenica juli 1995**: Bosnische enclave was 'VN safe area' onder bescherming van **Nederlands bataljon (Dutchbat)** (~600 lichtbewapend). Servische troepen onder generaal **Mladić** drongen door, Dutchbat kon niet stoppen → **8.372 moslim-mannen + jongens vermoord** in dagen. Grootste massamoord Europa na WO2. NIOD-rapport 2002 → kabinet-Kok treedt af. Mladić in 2017 levenslang ICTY. Trauma + schaamte NL." }],
           theorie: "Toets-favoriet: 'leg uit waarom Srebrenica NL-trauma'. Antwoord: NL faalde mensen te beschermen, hoewel mandaat te zwak was.",
@@ -253,9 +253,9 @@ const steps = [
       },
       {
         q: "**11 september 2001** begon:",
-        options: ["War on Terror + Afghanistan-oorlog","Koude Oorlog","WO2","Vietnam-oorlog"],
+        options: ["War on Terror en Afghanistan-oorlog", "Golfoorlog om de olie van Koeweit", "Arabische Lente in Noord-Afrika", "Oorlog in voormalig Joegoslavië"],
         answer: 0,
-        wrongHints: [null, "Niet — die begon al rond 1945.", "Niet — 1939.", "Niet — 1955."],
+        wrongHints: [null, "De Golfoorlog was al in 1990-1991.", "Die opstanden begonnen pas in 2010-2011.", "De oorlogen in Joegoslavië waren in de jaren '90."],
         uitlegPad: {
           stappen: [{ titel: "9/11", tekst: "**11 september 2001**: Al Qaeda kaapt 4 vliegtuigen → 2 in Twin Towers New York + 1 in Pentagon + 1 neergestort in Pennsylvania (verzet passagiers). ~3000 doden. President Bush jr. lanceerde **War on Terror**. **Afghanistan-oorlog** start okt 2001 (Taliban + Al Qaeda). **Irak-oorlog** 2003. Afghanistan werd de langste oorlog in de VS-geschiedenis." }],
           niveaus: { basis: "War on Terror.", simpeler: "9/11 → War on Terror", nogSimpeler: "Begin War on Terror" },
@@ -274,7 +274,7 @@ const steps = [
         q: "Welke gebeurtenis wordt **vaakst aangewezen als directe oorzaak WO2**?",
         options: ["Inval Polen door DE (1 sept 1939)","Beurskrach 1929","Verdrag Versailles 1919","Pearl Harbor"],
         answer: 0,
-        wrongHints: [null, "Verre oorzaak.", "Verre oorzaak.", "Bracht VS erin, niet oorzaak."],
+        wrongHints: [null, "De crisis hielp Hitler aan de macht, maar dat is een oorzaak op lange termijn. Welke gebeurtenis liet de oorlog echt uitbreken?", "Versailles zorgde voor wrok in Duitsland: een oorzaak op lange termijn. Welke gebeurtenis liet de oorlog echt uitbreken?", "Pearl Harbor bracht de VS in de oorlog, maar toen woedde die in Europa al ruim twee jaar."],
         uitlegPad: {
           stappen: [{ titel: "1 sept 1939", tekst: "**1 september 1939**: Hitler valt Polen binnen. UK + FR verklaren 3 sept oorlog → **WO2 begint officieel**. Verre oorzaken: Versailles + economische crisis + Hitlers macht. Directe trigger: inval Polen." }],
           niveaus: { basis: "Polen-inval.", simpeler: "1939 Polen", nogSimpeler: "1939" },
@@ -282,9 +282,9 @@ const steps = [
       },
       {
         q: "Wat is de **NAVO** (NATO)?",
-        options: ["Westers militair bondgenootschap", "Communistisch blok", "VN-onderdeel", "Kerncentrale-organisatie"],
+        options: ["Westers militair bondgenootschap", "Bondgenootschap van communistische landen", "Onderdeel van de Verenigde Naties", "Economische samenwerking in Europa"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet primair.", "Niet relevant."],
+        wrongHints: [null, "Dat was het Warschaupact. De NAVO hoorde bij de andere kant.", "De NAVO is een eigen organisatie, los van de VN. Waarvoor werd ze in 1949 opgericht?", "Dat deden de EGKS en later de EEG. De NAVO draait om iets anders."],
         uitlegPad: {
           stappen: [{ titel: "1949 oprichting", tekst: "**NAVO / NATO** (North Atlantic Treaty Organization): militaire alliantie opgericht 1949 door VS, Canada + 10 West-Europese landen (waaronder NL). Doel: **collectieve verdediging tegen USSR-dreiging**. Artikel 5: aanval op één = aanval op allen. In 2024: 32 leden (Finland 2023 en Zweden 2024 traden toe na de Russische inval in Oekraïne)." }],
           niveaus: { basis: "Militaire alliantie.", simpeler: "NAVO = West-alliantie", nogSimpeler: "West-alliantie" },
@@ -292,9 +292,9 @@ const steps = [
       },
       {
         q: "**Korea-oorlog** (1950-53) was tussen:",
-        options: ["Noord-Korea + Zuid-Korea", "DDR + BRD", "VS + Vietnam", "NL + Indonesië"],
+        options: ["Noord-Korea en Zuid-Korea", "Oost- en West-Duitsland", "De VS en Noord-Vietnam", "Japan en de Verenigde Staten"],
         answer: 0,
-        wrongHints: [null, "Niet — ander conflict.", "Niet — andere.", "Niet — eerder."],
+        wrongHints: [null, "Duitsland was verdeeld, maar daar werd geen oorlog gevoerd.", "Dat was de Vietnam-oorlog, later.", "Japan en de VS vochten in de Tweede Wereldoorlog, tot 1945."],
         uitlegPad: {
           stappen: [{ titel: "Eerste Koude-Oorlog-proxy", tekst: "**Korea-oorlog 1950-53**: communistisch **Noord-Korea** (Kim Il-sung, gesteund door China + USSR) viel pro-westers **Zuid-Korea** (gesteund door VS + VN) aan. VS-generaal MacArthur. China stuurde massaal 'vrijwilligers'. Eindigde met **wapenstilstand 1953 — geen vrede**. Demilitarized Zone (DMZ) bestaat nog. NL stuurde ook troepen." }],
           niveaus: { basis: "Noord vs Zuid Korea.", simpeler: "Korea = N-Z", nogSimpeler: "Noord tegen Zuid" },
@@ -302,9 +302,9 @@ const steps = [
       },
       {
         q: "Wanneer **NL erkende Indonesische onafhankelijkheid**?",
-        options: ["27 december 1949","17 augustus 1945","5 mei 1945","1965"],
+        options: ["27 december 1949", "17 augustus 1945", "5 mei 1945", "15 augustus 1962"],
         answer: 0,
-        wrongHints: [null, "Niet — uitroeping door Soekarno.", "Niet — NL-bevrijding.", "Niet relevant."],
+        wrongHints: [null, "Niet: dat is de uitroeping door Soekarno.", "Op 5 mei 1945 werd Nederland zelf bevrijd. Indonesië was toen nog bezet door Japan.", "In 1962 ging het om Nieuw-Guinea, niet om Indonesië als geheel."],
         uitlegPad: {
           stappen: [{ titel: "Vier-jarig conflict", tekst: "**17 aug 1945**: Soekarno + Hatta riepen Republiek Indonesia uit (twee dagen na Japanse capitulatie). NL probeerde koloniaal gezag te herstellen via **politionele acties** 1947 + 1948 (eufemisme voor oorlog). Internationale druk (VS dreigde Marshall-Plan stop) → **27 dec 1949**: NL erkent Indonesische onafhankelijkheid. NL sprak in 2005 (Bot) spijt uit en bood in 2022 (Rutte) excuses aan voor het geweld." }],
           niveaus: { basis: "27-12-1949.", simpeler: "1949 = NL erkent", nogSimpeler: "1949" },

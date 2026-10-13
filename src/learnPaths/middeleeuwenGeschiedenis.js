@@ -75,9 +75,9 @@ const steps = [
       },
       {
         q: "Wie was **Karel de Grote**?",
-        options: ["Koning Frankenrijk + keizer rond 800", "Pestslachtoffer", "Ridder", "Kunstenaar"],
+        options: ["Koning van de Franken, keizer rond 800", "Ridder die Jeruzalem veroverde", "Eerste koning van Nederland", "Romeinse keizer rond het jaar 300"],
         answer: 0,
-        wrongHints: [null, "Niet — de grote pest kwam pas eeuwen later.", "Was meer dan ridder.", "Geen kunstenaar."],
+        wrongHints: [null, "De kruistochten begonnen pas rond 1100, lang na Karel.", "Nederland kreeg pas in 1815 een koning. Karel leefde eeuwen eerder.", "Rond 300 regeerden Romeinse keizers als Constantijn. Karel leefde vijf eeuwen later."],
       },
     ],
   },
@@ -90,27 +90,27 @@ const steps = [
     checks: [
       {
         q: "Wie was de **machtigste** in middeleeuwen?",
-        options: ["Koning, adel en Kerk", "Boeren", "Ridders", "Burgers in steden"],
+        options: ["Koning, adel en Kerk", "Rijke kooplieden en gilden", "Ridders en hun soldaten", "Boeren, die het voedsel maakten"],
         answer: 0,
-        wrongHints: [null, "Hadden weinig macht.", "Ridders waren de laagste adel — wie stonden er boven hen?", "Steden kwamen pas later op."],
+        wrongHints: [null, "Steden en kooplieden werden pas later machtig, vanaf ongeveer 1100.", "Ridders waren de laagste adel. Wie stonden er boven hen?", "Boeren waren met velen, maar het land was niet van hen. Van wie dan wel?"],
       },
       {
         q: "Wat is een **vazal**?",
-        options: ["Iemand die land in leen krijgt", "Boer", "Koning", "Monnik"],
+        options: ["Iemand die land in leen krijgt", "Boer die aan het land gebonden is", "Heer die land in leen uitgeeft", "Soldaat die loon krijgt voor vechten"],
         answer: 0,
-        wrongHints: [null, "Geen vazal.", "Geeft juist leen uit.", "Niet feodaal."],
+        wrongHints: [null, "Dat is een horige. Een vazal stond hoger op de ladder.", "Dat is de leenheer, de baas in deze afspraak. Wie stond aan de andere kant?", "Dat is een huurling. Wat kreeg een vazal van zijn heer in plaats van loon?"],
       },
       {
         q: "Wat zijn **tienden**?",
-        options: ["10% inkomen aan Kerk", "10% korting", "10e zoon", "Tien jaar straf"],
+        options: ["10% van je inkomen aan de Kerk", "10% belasting aan de koning", "Tien dagen werken voor de heer", "10% rente op een lening"],
         answer: 0,
-        wrongHints: [null, "Geen korting.", "Geen familieding.", "Geen straf."],
+        wrongHints: [null, "Tienden gingen niet naar de koning. Welke machtige instelling kreeg ze?", "Werken voor je heer heette herendienst. Tienden waren iets anders.", "Lenen tegen rente verbood de Kerk juist. Tienden moest bijna iedereen elk jaar betalen."],
       },
       {
         q: "Wat deden **monniken** in kloosters?",
-        options: ["Kopieerden boeken + bewaarden kennis", "Reisden de wereld", "Vochten oorlog", "Werkten op markt"],
+        options: ["Kopieerden boeken en bewaarden kennis", "Bestuurden de steden als burgemeester", "Bouwden kastelen voor de adel", "Reisden als handelaren naar Azië"],
         answer: 0,
-        wrongHints: [null, "Reisden niet veel.", "Geen vechten.", "Niet markt."],
+        wrongHints: [null, "Steden werden bestuurd door rijke burgers. Monniken leefden afgezonderd in hun klooster.", "Kastelen lieten edelen bouwen. Wat deden monniken binnen de kloostermuren?", "Monniken bleven meestal hun hele leven in hetzelfde klooster."],
       },
     ],
   },
@@ -123,27 +123,27 @@ const steps = [
     checks: [
       {
         q: "Wat hadden ridders **als wapens**?",
-        options: ["Zwaard en lans", "Pistool en geweer", "Tank en vliegtuig", "Alleen hun vuisten"],
+        options: ["Zwaard en lans", "Musket en kanon", "Speer en stenen bijl", "Pijl en boog"],
         answer: 0,
-        wrongHints: [null, "Vuurwapens kwamen pas later.", "Die bestonden nog lang niet.", "Ridders waren juist zwaar bewapend."],
+        wrongHints: [null, "Vuurwapens als het musket kwamen pas na de middeleeuwen echt in gebruik.", "Stenen bijlen horen bij de prehistorie. Ridders hadden wapens van ijzer.", "Met pijl en boog vochten boogschutters, meestal gewone soldaten. Een ridder te paard had andere wapens."],
       },
       {
         q: "Waarom waren er **kruistochten**?",
-        options: ["Religie + macht + land", "Olie", "Ontdekken van Amerika", "Klimaat"],
+        options: ["Religie, macht en land", "Vluchten voor de pest", "Zeeroute naar Indië zoeken", "Vikingen tot christen maken"],
         answer: 0,
-        wrongHints: [null, "Geen olie destijds.", "Amerika kwam pas in 1492 in beeld.", "Geen klimaat."],
+        wrongHints: [null, "De pest kwam pas in 1347, lang na de eerste kruistocht (1096).", "Dat was de reden voor de ontdekkingsreizen, eeuwen later.", "De Vikingen werden in hun eigen land christen. De kruisvaarders trokken naar een heel ander gebied."],
       },
       {
         q: "Waar gingen de kruisvaarders **heen**?",
-        options: ["Het Heilige Land", "Amerika", "China", "Engeland"],
+        options: ["Het Heilige Land", "Rome in Italië", "Mekka in Arabië", "Londen in Engeland"],
         answer: 0,
-        wrongHints: [null, "Nog niet ontdekt.", "Niet kruistochten.", "Niet — daar kwamen juist veel kruisvaarders vandaan."],
+        wrongHints: [null, "Naar Rome gingen pelgrims voor de paus, maar kruisvaarders wilden een andere stad veroveren.", "Mekka is de heilige stad van de islam. Daar trokken kruisvaarders niet heen. Waar ligt Jeruzalem?", "Uit Engeland kwamen juist veel kruisvaarders, zoals Richard Leeuwenhart."],
       },
       {
         q: "Wie won uiteindelijk **Jeruzalem terug** voor de moslims in 1187?",
         options: ["Saladin", "Karel de Grote", "Richard Leeuwenhart", "Mohammed"],
         answer: 0,
-        wrongHints: [null, "Eerdere periode.", "Tegenstander van Saladin, maar kwam pas later.", "Mohammed was 500 jaar eerder."],
+        wrongHints: [null, "Karel de Grote leefde rond 800, eeuwen vóór de kruistochten.", "Richard Leeuwenhart kwam pas met de Derde Kruistocht (1189), na de verovering. Wie voerde de moslims in 1187 aan?", "Mohammed was 500 jaar eerder."],
         uitlegPad: {
           stappen: [
             { titel: "Saladin", tekst: "Saladin (1138-1193) was een sultan van Egypte/Syrië die de kruisvaarder-staten versloeg en Jeruzalem heroverde in 1187." },
@@ -170,15 +170,15 @@ const steps = [
     checks: [
       {
         q: "Wie waren **horigen**?",
-        options: ["Niet-vrije boeren, gebonden aan land", "Slaven", "Ridders", "Burgers in stad"],
+        options: ["Niet-vrije boeren, gebonden aan het land", "Slaven die verkocht konden worden", "Edelen die land in leen kregen", "Knechten die werkten voor een gilde"],
         answer: 0,
-        wrongHints: [null, "Iets anders.", "Geen ridder.", "Stadsburgers waren vrij."],
+        wrongHints: [null, "Horigen mochten niet weg, maar je kon ze niet als bezit verkopen.", "Dat zijn vazallen. Horigen stonden veel lager.", "Gildeknechten woonden in de stad, en wie in de stad woonde, was vrij."],
       },
       {
         q: "Wat is een **gilde**?",
-        options: ["Beroepsvereniging in stad", "Soort slot", "Soort munt", "Soort eten"],
+        options: ["Beroepsvereniging in de stad", "Gouden munt uit de middeleeuwen", "Belasting voor kooplieden", "Rechtbank van de stadsheer"],
         answer: 0,
-        wrongHints: [null, "Niet slot.", "Niet munt.", "Niet eten."],
+        wrongHints: [null, "Je denkt misschien aan de gulden: dat is een munt. Een gilde is iets anders.", "Kooplieden betaalden tol, maar een gilde was geen belasting.", "Recht spreken deed de schepenbank. Een gilde was iets anders."],
       },
       {
         q: "Hoe word je **meester** in een gilde?",
@@ -188,9 +188,9 @@ const steps = [
       },
       {
         q: "Wat betekent 'stadslucht maakt **vrij**'?",
-        options: ["Jaar+dag in stad = vrij van horigheid", "Lucht in stad gezond", "Stadsmensen rijk", "Gratis brood"],
+        options: ["Na een jaar en een dag geen horige meer", "Stadsbewoners mogen hun eigen heer kiezen", "In de stad is het gezonder dan op het land", "In de stad mag iedereen zijn geloof kiezen"],
         answer: 0,
-        wrongHints: [null, "Eigenlijk vies door drukte.", "Niet allemaal.", "Niet bedoeld."],
+        wrongHints: [null, "Een heer kies je niet. Wat gebeurde er met een horige die lang genoeg in de stad woonde?", "Middeleeuwse steden stonken juist door afval en drukte. Het gaat om een ander soort vrijheid.", "Geloofsvrijheid kwam pas veel later. Over welke andere vrijheid gaat dit?"],
       },
     ],
   },
@@ -215,9 +215,9 @@ const steps = [
       },
       {
         q: "Wat **droeg** de pest over op mensen?",
-        options: ["Vlooien op ratten", "Vogels", "Wind", "Eten"],
+        options: ["Vlooien die op ratten leefden", "Muggen bij stilstaand water", "Zwerfhonden in de stad", "Bedorven eten en water"],
         answer: 0,
-        wrongHints: [null, "De pest kwam niet uit de lucht gevlogen — denk aan kleine beestjes die op knaagdieren in de vieze steden zaten.", "Wind verspreidt geen builenpest — er zat een klein diertje tussen dat de zieke bacterie meedroeg en mensen beet.", "Bedorven eten geeft buikpijn, maar de builenpest kreeg je door een beet, niet via je maaltijd."],
+        wrongHints: [null, "Muggen verspreiden malaria, maar de pest ging anders. Welke dieren leefden massaal in vieze steden en op schepen?", "Honden waren niet de schuldigen. Denk aan dieren die massaal in vieze steden en op schepen leefden.", "Daar krijg je andere ziekten van. De builenpest kwam door een beet."],
       },
       {
         q: "Wie vond de **boekdrukkunst** uit?",

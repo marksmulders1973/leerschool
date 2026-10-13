@@ -181,7 +181,7 @@ const steps = [
         q: "*Stelsel: y = 3x − 1 én x + y = 7. Wat doe je in stap 2 (substitutie)?*",
         options: ["Vul 3x − 1 in voor y in x + y = 7","Vul x = 7 − y in beide vergelijkingen","Tel beide vergelijkingen bij elkaar op","Vermenigvuldig beide kanten met 3"],
         answer: 0,
-        wrongHints: [null, "Te veel werk — y is al netjes geïsoleerd. Pak die uitdrukking en vul in waar y staat.", "Dat is optellen-methode, niet substitutie.", "Vermenigvuldigen is geen onderdeel van de basis-substitutie-stap."],
+        wrongHints: [null, "Met x = 7 − y moet je eerst omschrijven en in twee vergelijkingen invullen. Kijk naar de eerste vergelijking: welke variabele staat daar al alleen?", "Dat is optellen-methode, niet substitutie.", "Vermenigvuldigen is geen onderdeel van de basis-substitutie-stap."],
         uitlegPad: {
           stappen: [{ titel: "Y al klaar, invullen", tekst: "y = 3x−1 is al geïsoleerd. Vul (3x−1) in voor y in 2e vergelijking: x + (3x−1) = 7." }],
           woorden: [{ woord: "substitutie", uitleg: "Vervangen. Hier: y vervangen door uitdrukking met x." }],

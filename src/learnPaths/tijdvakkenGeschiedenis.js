@@ -70,7 +70,7 @@ const steps = [
         q: "Hoeveel tijdvakken zijn er?",
         options: ["10", "5", "12", "8"],
         answer: 0,
-        wrongHints: [null, "Te weinig — de Commissie De Rooy heeft er meer vastgesteld.", "Te veel.", "Te weinig."],
+        wrongHints: [null, "Te weinig: de Commissie De Rooy heeft er meer vastgesteld.", "Te veel. Elk tijdvak heeft een eigen naam, van 'jagers en boeren' tot 'televisie en computer'.", "Na de tijd van burgers en stoommachines komen er nog tijdvakken."],
         uitlegPad: {
           stappen: [{ titel: "10 tijdvakken (NL-canon)", tekst: "Commissie De Rooy heeft de geschiedenis in 10 tijdvakken verdeeld. Elk tijdvak heeft een NAAM die typisch is voor die periode (jagers, monniken, ontdekkers, etc)." }],
           woorden: [{ woord: "tijdvak", uitleg: "Periode in de geschiedenis met een eigen naam en kenmerken." }, { woord: "Commissie De Rooy", uitleg: "Werkgroep die in 2001 de 10 tijdvakken vastlegde voor het onderwijs." }],
@@ -105,9 +105,9 @@ const steps = [
     checks: [
       {
         q: "Wat veranderde tijdens de **landbouwrevolutie**?",
-        options: ["Mensen gingen op één plek wonen en akkers bewerken", "Mensen ontdekten elektriciteit", "Romeinen veroverden Nederland", "De boekdrukkunst werd uitgevonden"],
+        options: ["Mensen gingen boeren op één vaste plek", "Machines namen het werk op het land over", "Mensen leerden vuur maken en jagen", "Romeinen brachten nieuwe gewassen mee"],
         answer: 0,
-        wrongHints: [null, "Elektriciteit is veel later — pas in tijdvak 8.", "Romeinen kwamen in tijdvak 2.", "Boekdrukkunst = ~1450, dat is tijdvak 4."],
+        wrongHints: [null, "Machines op het land kwamen pas veel later, in tijdvak 8-10.", "Jagen en vuur gebruiken deden mensen al lang vóór de landbouw.", "Romeinen kwamen pas in tijdvak 2."],
         uitlegPad: {
           stappen: [{ titel: "Rondtrekkend → vast", tekst: "Landbouwrevolutie (~10.000 v.Chr.) = mensen stoppen met rondtrekken en gaan VAST WONEN. Ze verbouwen graan + houden vee. Eerste dorpen ontstaan." }],
           woorden: [{ woord: "landbouwrevolutie", uitleg: "Overgang van jacht-verzameling naar landbouw + veeteelt." }, { woord: "neolithicum", uitleg: "Jonge steentijd — periode van landbouwrevolutie." }],
@@ -119,9 +119,9 @@ const steps = [
       },
       {
         q: "Wat zijn **hunebedden**?",
-        options: ["Stenen graven uit ~3000 v.Chr. in Drenthe", "Romeinse forten", "Middeleeuwse kastelen", "Boerderijen uit de Gouden Eeuw"],
+        options: ["Stenen graven uit ~3000 v.Chr.", "Romeinse forten langs de Rijn", "Vikinggraven uit ongeveer 800 n.Chr.", "Stenen huizen van de eerste boeren"],
         answer: 0,
-        wrongHints: [null, "Romeinen kwamen pas in tijdvak 2.", "Kastelen zijn middeleeuws — tijdvak 3-4.", "Gouden Eeuw is tijdvak 6."],
+        wrongHints: [null, "Romeinen kwamen pas in tijdvak 2.", "De Vikingen kwamen pas in tijdvak 3, duizenden jaren later.", "De eerste boeren woonden in houten boerderijen. Wat vonden archeologen ónder de stenen?"],
         uitlegPad: {
           stappen: [{ titel: "Oudste monumenten NL", tekst: "Hunebedden = grote stenen graven uit ~3000 v.Chr. Gebouwd door de Trechterbekercultuur (TRB). Vooral in Drenthe (52 van de 54 in NL). Per hunebed: enorme stenen (10-25 ton) bovenop kleinere." }],
           woorden: [{ woord: "hunebed", uitleg: "Megalitisch graf van zwerfkeien. Oudste monument NL (~5000 jaar oud)." }, { woord: "Trechterbekercultuur", uitleg: "Neolithische cultuur in Noord-NL/Duitsland (~3400-2800 v.Chr.). Genoemd naar trechter-vormige potten." }],
@@ -140,7 +140,7 @@ const steps = [
     checks: [
       {
         q: "Waar werd **democratie** voor het eerst ingevoerd?",
-        options: ["Athene (Griekenland)", "Rome", "Sparta", "Egypte"],
+        options: ["Athene", "Rome", "Sparta", "Egypte"],
         answer: 0,
         wrongHints: [null, "Rome was eerst een republiek, pas later een keizerrijk — geen democratie zoals Athene.", "Sparta had juist een militaire koningsregering, geen democratie.", "Egypte had farao's — absolute monarchen."],
         uitlegPad: {
@@ -154,7 +154,7 @@ const steps = [
       },
       {
         q: "Wanneer eindigt tijdvak 2?",
-        options: ["476 — val van het West-Romeinse Rijk", "1492 — ontdekking Amerika", "1789 — Franse Revolutie", "1945 — einde WO2"],
+        options: ["476 — einde West-Romeinse Rijk", "1492 — Columbus ontdekt Amerika", "1789 — begin Franse Revolutie", "1945 — einde Tweede Wereldoorlog"],
         answer: 0,
         wrongHints: [null, "Dat is in tijdvak 5 — Ontdekkers en hervormers.", "Dat is tijdvak 7.", "Dat is tijdvak 9."],
         uitlegPad: {
@@ -177,9 +177,9 @@ const steps = [
     checks: [
       {
         q: "Wat is het **feodale stelsel**?",
-        options: ["Koning geeft land aan ridders, die hem in ruil daarvoor beschermen", "Iedereen mag stemmen voor de koning", "Het systeem van Romeinse legerkampen", "Een soort handelsroute"],
+        options: ["Koning geeft land, ridders beloven trouw", "Burgers kiezen wie hun koning wordt", "Boeren werken samen op gedeelde grond", "Handel tussen steden via gilden"],
         answer: 0,
-        wrongHints: [null, "Stemmen speelde hier geen rol — dat kwam pas met de moderne democratie (tijdvak 8+).", "Romeinse legerkampen = tijdvak 2.", "Een handelsroute is iets anders."],
+        wrongHints: [null, "Stemmen speelde hier geen rol: dat kwam pas met de moderne democratie (tijdvak 8+).", "Gedeelde grond (de meent) bestond wel, maar daar gaat het feodale stelsel niet over.", "Gilden en handel horen bij de steden. Het feodale stelsel speelde vooral op het platteland."],
         uitlegPad: {
           stappen: [{ titel: "Land voor bescherming", tekst: "Feodaal stelsel = piramide. Koning bovenaan → geeft LEEN (stuk land) aan ridder/leenheer → die ridder belooft trouw + leveren van soldaten in oorlog. Boeren onderaan werken op het land in ruil voor bescherming." }],
           woorden: [{ woord: "feodaal stelsel", uitleg: "Middeleeuws systeem van wederzijdse verplichtingen: land tegen trouw + bescherming." }, { woord: "leenheer", uitleg: "Persoon die land in leen GEEFT (boven in piramide)." }, { woord: "leenman", uitleg: "Persoon die land in leen ONTVANGT en trouw belooft." }, { woord: "horige", uitleg: "Boer aan het land gebonden — niet vrij om weg te gaan." }],
@@ -212,9 +212,9 @@ const steps = [
     checks: [
       {
         q: "Wat zijn **gilden**?",
-        options: ["Organisaties van ambachtslieden in steden", "Soort kerkgebouwen", "Romeinse soldaten", "Vikinglegers"],
+        options: ["Organisaties van ambachtslieden in steden", "Bondgenootschap van handelssteden", "Groepen monniken in een klooster", "Groepen ridders die samen vochten"],
         answer: 0,
-        wrongHints: [null, "Kerken zijn iets anders — die hadden monniken.", "Romeinen waren tijdvak 2.", "Vikingen waren tijdvak 3."],
+        wrongHints: [null, "Dat is de Hanze. Een gilde was kleiner.", "Dat is een kloosterorde. Gilden bestonden niet uit monniken.", "Dat is een ridderorde, zoals de Tempeliers."],
         uitlegPad: {
           stappen: [{ titel: "Beroepsverenigingen", tekst: "Gilden = middeleeuwse organisaties van vakgenoten in steden: bakkersgilde, smedengilde, weversgilde. Regelden prijzen, kwaliteit, opleiding (leerling→gezel→meester). Soort 'vakbond'." }],
           woorden: [{ woord: "gilde", uitleg: "Beroepsorganisatie van ambachtslieden, vooral 13e-17e eeuw." }, { woord: "meesterproef", uitleg: "Test om van gezel meester te worden — toelating tot gilde." }],
@@ -226,9 +226,9 @@ const steps = [
       },
       {
         q: "Wat veranderde de **boekdrukkunst** (~1450)?",
-        options: ["Boeken werden veel goedkoper en kennis verspreidde sneller", "De Romeinen vonden Nederland", "Kastelen werden gebouwd", "Het christendom werd verboden"],
+        options: ["Boeken werden goedkoper, kennis ging sneller rond", "De meeste mensen leerden toen lezen en schrijven", "Monniken schreven meer boeken over met de hand", "De Kerk kreeg meer controle over alle boeken"],
         answer: 0,
-        wrongHints: [null, "Romeinen kwamen veel eerder — tijdvak 2.", "Kastelen werden vooral in tijdvak 3-4 gebouwd, los van de drukpers.", "Christendom bleef heel sterk."],
+        wrongHints: [null, "Lezen leerden nog lang niet alle mensen. Wat veranderde er wel aan de boeken zelf?", "Overschrijven met de hand deden monniken al eeuwen vóór de drukpers.", "Juist andersom: denk aan Luther, wiens ideeën ineens overal te lezen waren."],
         uitlegPad: {
           stappen: [{ titel: "Massa-kopie van kennis", tekst: "Tot 1450 moesten monniken boeken HAND-KOPIËREN — maanden werk, peperduur. Gutenbergs drukpers (~1450) kon honderden kopieën maken. Boeken werden veel goedkoper, kennis breed beschikbaar." }],
           woorden: [{ woord: "boekdrukkunst", uitleg: "Mechanische druk met losse letters. Gutenberg ~1450 in Mainz." }, { woord: "Gutenberg-bijbel", uitleg: "Eerste grote boek in Europa gedrukt met losse letters (~1455). Symbool van revolutie." }],
@@ -249,9 +249,9 @@ const steps = [
     checks: [
       {
         q: "Wat deed **Maarten Luther** in 1517?",
-        options: ["Plakte 95 stellingen op de kerkdeur als protest", "Ontdekte Amerika", "Werd koning van Nederland", "Vond de boekdrukkunst uit"],
+        options: ["Hing 95 stellingen op als protest", "Werd tot paus gekozen in Rome", "Vertaalde de bijbel in het Nederlands", "Begon de opstand tegen Spanje"],
         answer: 0,
-        wrongHints: [null, "Dat was Columbus, in 1492.", "Nederland had toen nog geen eigen koning — het hoorde bij het rijk van keizer Karel V.", "Boekdrukkunst was eerder, ~1450 (Gutenberg)."],
+        wrongHints: [null, "Luther werd door de paus juist uit de Kerk gezet.", "Luther vertaalde de bijbel in het Duits. De Nederlandse Statenbijbel kwam pas in 1637.", "Dat was Willem van Oranje, vanaf 1568."],
         uitlegPad: {
           stappen: [{ titel: "95 stellingen Wittenberg", tekst: "31 oktober 1517: Maarten Luther (Duits monnik) plakt 95 stellingen op de slotkerkdeur in Wittenberg. Protest tegen aflaten-handel + corruptie katholieke kerk. Begin van REFORMATIE." }],
           woorden: [{ woord: "95 stellingen", uitleg: "Luthers lijst van bezwaren tegen katholieke praktijken. Schriftelijk protest." }, { woord: "aflaten", uitleg: "Pauselijke 'vergevingsbriefjes' tegen betaling — Luther vond dit corrupt." }, { woord: "Reformatie", uitleg: "Kerk-hervormingsbeweging 16e eeuw. Splitsing katholiek vs protestants." }],
@@ -284,9 +284,9 @@ const steps = [
     checks: [
       {
         q: "Wat was de **VOC**?",
-        options: ["Een handelsbedrijf dat handel dreef in Azië", "Een politieke partij in Nederland", "Het Romeinse leger", "Een protestantse kerk"],
+        options: ["Handelsbedrijf met schepen naar Azië", "Handelsbedrijf met schepen naar Amerika", "De oorlogsvloot van de Republiek", "Een grote bank in Amsterdam"],
         answer: 0,
-        wrongHints: [null, "Politieke partijen zoals nu kwamen pas in de 19e eeuw — tijdvak 8.", "Romeinen = tijdvak 2.", "VOC was een handelsbedrijf, geen kerk."],
+        wrongHints: [null, "Dat was de WIC (West-Indische Compagnie). De VOC voer de andere kant op.", "De VOC had wel kanonnen aan boord, maar was geen marine.", "Dat was de Amsterdamse Wisselbank. De VOC deed iets anders."],
         uitlegPad: {
           stappen: [{ titel: "Eerste multinational ter wereld", tekst: "VOC = Vereenigde Oost-Indische Compagnie, opgericht 1602. Handel in specerijen uit Indonesië. Had eigen leger + vloot + recht om oorlog te voeren. Verdiende fortuin in Gouden Eeuw — basis Nederlandse welvaart." }],
           woorden: [{ woord: "VOC", uitleg: "1602-1799. Specerijen-handelsbedrijf met staats-rechten." }, { woord: "WIC", uitleg: "West-Indische Compagnie. Handel + kolonisatie Amerika + Afrika (ook slavenhandel)." }, { woord: "aandeel", uitleg: "Stukje eigendom van de VOC. Daarin werd in Amsterdam gehandeld — een van de eerste beurzen." }],
@@ -298,9 +298,9 @@ const steps = [
       },
       {
         q: "Wie was **Lodewijk XIV**?",
-        options: ["Absolute koning van Frankrijk ('Zonnekoning')", "Engelse koning", "Nederlandse stadhouder", "Spaanse keizer"],
+        options: ["Absolute koning van Frankrijk", "Koning van Engeland en Schotland", "Stadhouder van de Republiek", "Koning tijdens de Franse Revolutie"],
         answer: 0,
-        wrongHints: [null, "Engelse koningen heetten in deze tijd vaak Charles of James.", "Stadhouders waren Oranjes (Willem III bv.).", "Spanje had koningen, geen keizers — en Lodewijk regeerde niet in Spanje."],
+        wrongHints: [null, "Engelse koningen heetten in deze tijd vaak Charles of James.", "Stadhouders waren Oranjes (Willem III bijvoorbeeld).", "Dat was Lodewijk XVI, ruim honderd jaar later."],
         uitlegPad: {
           stappen: [{ titel: "Zonnekoning Frankrijk", tekst: "Lodewijk XIV (1638-1715) = absolute koning van Frankrijk, 72 jaar geregeerd. Symbool: zon. Quote: \"L'État, c'est moi\" (de staat, dat ben ik). Bouwde paleis Versailles als statussymbool." }],
           woorden: [{ woord: "Lodewijk XIV", uitleg: "Franse koning 1643-1715. Symbool van absolute monarchie." }, { woord: "absolute monarchie", uitleg: "Koning heeft ALLE macht, geen parlement, geen beperkingen." }, { woord: "Versailles", uitleg: "Reusachtig paleis bij Parijs. Symbool van Lodewijks macht + adel onder controle." }],
@@ -319,9 +319,9 @@ const steps = [
     checks: [
       {
         q: "Wat is de **trias politica**?",
-        options: ["Scheiding tussen wetgevende, uitvoerende en rechtsprekende macht", "Drie soorten kerken", "Drie keizers in Rome", "Een drie-eenheid in het christendom"],
+        options: ["Macht verdeeld over wetgeven, besturen en rechtspreken", "Indeling van de bevolking in drie standen", "Bestuur door gemeente, provincie en het Rijk", "Drie mannen die samen het Romeinse Rijk bestuurden"],
         answer: 0,
-        wrongHints: [null, "Niets met kerk — het gaat over politieke macht.", "Romeinse keizers zijn een ander thema.", "Drie-eenheid is een godsdienstig idee, geen politiek systeem."],
+        wrongHints: [null, "Dat zijn de drie standen (geestelijkheid, adel, volk). De trias politica gaat over iets anders.", "Dat zijn bestuurslagen. Montesquieu bedoelde iets anders.", "Dat heet een triumviraat. De trias politica is een idee uit de 18e eeuw."],
         uitlegPad: {
           stappen: [{ titel: "Macht in 3 delen", tekst: "Trias politica = bedacht door Montesquieu (1748). Drie machten gescheiden: WETGEVEND (parlement maakt wetten), UITVOEREND (regering voert uit), RECHTSPREKEND (rechters oordelen). Doel: voorkomen dat 1 persoon alles kan." }],
           woorden: [{ woord: "trias politica", uitleg: "Latijn: 'drie machten'. Filosofisch principe achter moderne rechtsstaten." }, { woord: "Montesquieu", uitleg: "Frans Verlichtingsdenker. Boek 'De l'esprit des lois' (1748)." }],
@@ -356,9 +356,9 @@ const steps = [
     checks: [
       {
         q: "Wat veranderde door de **stoommachine**?",
-        options: ["Fabrieken, treinen en massaproductie kwamen op", "Iedereen kreeg een computer", "Romeinen werden machtig", "De middeleeuwen begonnen"],
+        options: ["Er kwamen fabrieken, treinen en massaproductie", "Er kwamen elektrische lampen en auto's", "Schepen konden voor het eerst naar Azië", "Mensen gingen meer op het platteland wonen"],
         answer: 0,
-        wrongHints: [null, "Computers = tijdvak 10.", "Romeinen = tijdvak 2.", "Middeleeuwen begonnen in tijdvak 3."],
+        wrongHints: [null, "Elektriciteit en auto's kwamen pas later, rond 1900.", "Zeilschepen voeren al in de 17e eeuw naar Azië.", "Waar was opeens veel werk te vinden: in de dorpen of in de steden?"],
         uitlegPad: {
           stappen: [{ titel: "Industriële revolutie", tekst: "Stoommachine (verbeterd door James Watt 1769) gaf MASSALE krachtbron. Fabrieken konden produceren zonder mens-kracht. Trein verving paard. Stoomschepen vervangen zeilboten. Massale verstedelijking + arbeidersklasse." }],
           woorden: [{ woord: "stoommachine", uitleg: "Apparaat dat warmte (kolen → stoom) omzet in beweging. Basis industriële revolutie." }, { woord: "industriële revolutie", uitleg: "Overgang van hand-arbeid naar mechanische productie, ~1750-1900. Begin in Engeland." }],
@@ -434,9 +434,9 @@ const steps = [
       },
       {
         q: "Wat is de **Koude Oorlog**?",
-        options: ["Spanning tussen VS en Sovjet-Unie zonder open oorlog", "Een oorlog in Antarctica", "Een oorlog uit de middeleeuwen", "De Tachtigjarige Oorlog"],
+        options: ["Spanning tussen VS en Sovjet-Unie", "Oorlog tussen Noord- en Zuid-Korea", "Duitse aanval op Rusland in de winter", "Vlootwedloop van Duitsland en Engeland"],
         answer: 0,
-        wrongHints: [null, "Niet letterlijk koud qua temperatuur — figuurlijk.", "Middeleeuwen = tijdvak 3-4.", "Tachtigjarige Oorlog = tijdvak 5-6."],
+        wrongHints: [null, "Dat was de Korea-oorlog, een 'hete' oorlog binnen de Koude Oorlog.", "'Koud' is hier figuurlijk, niet het weer.", "Die wedloop was vóór de Eerste Wereldoorlog."],
         uitlegPad: {
           stappen: [{ titel: "1945-1989 — twee blokken", tekst: "Na WO2 stonden 2 supermachten tegenover elkaar: VS (kapitalisme/democratie) en Sovjet-Unie (communisme/dictatuur). Géén directe oorlog tussen hen (vandaar 'koud'), maar wel wapenwedloop, ruimterace, kernwapens, spionage, en proxy-oorlogen (Korea, Vietnam, Afghanistan)." }],
           woorden: [{ woord: "Koude Oorlog", uitleg: "1945-1989. Spanning tussen VS en USSR zonder open militair conflict tussen hen direct." }, { woord: "wapenwedloop", uitleg: "Beide kanten bouwden steeds meer en grotere kernwapens. Op piek: 70.000 kernkoppen." }, { woord: "proxy-oorlog", uitleg: "Conflict in derde land waar beide machten zich mee bemoeien (Korea, Vietnam, Afghanistan)." }],

@@ -22,9 +22,9 @@ const steps = [
     checks: [
       {
         q: "**UDHR** werd aangenomen op:",
-        options: ["10 december 1948", "10 december 1945", "1 januari 2000", "Geen vaste datum"],
+        options: ["10 december 1948", "24 oktober 1945", "4 november 1950", "20 november 1989"],
         answer: 0,
-        wrongHints: [null, "Niet — VN-stichting wel 24 okt 1945.", "Veel later.", "Wel."],
+        wrongHints: [null, "Dat is de oprichting van de VN. Kwam de verklaring meteen daarna?", "Dat is de datum van het EVRM (Rome), het Europese verdrag.", "Dat is de datum van het Kinderrechtenverdrag."],
         uitlegPad: {
           stappen: [{ titel: "Mensenrechten-dag", tekst: "10 december = Internationale Dag van de Mensenrechten, jaarlijks gevierd. Eleanor Roosevelt-commissie. Niet juridisch bindend maar morele standaard wereldwijd." }],
           niveaus: { basis: "10-12-1948.", simpeler: "Dec 1948.", nogSimpeler: "1948" },
@@ -34,12 +34,12 @@ const steps = [
         q: "**1e generatie mensenrechten** zijn:",
         options: [
           "Burger- en politieke rechten",
-          "Economische rechten",
-          "Collectieve rechten",
-          "Geen onderscheid"
+          "Sociaal-economische rechten",
+          "Collectieve solidariteitsrechten",
+          "Digitale en privacyrechten"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — 2e generatie.", "3e generatie.", "Wel."],
+        wrongHints: [null, "Niet — 2e generatie.", "Dat is de 3e generatie (vrede, milieu).", "Die bestonden nog niet toen de eerste rechten werden vastgelegd, rond 1789."],
         uitlegPad: {
           stappen: [{ titel: "Klassieke vrijheidsrechten", tekst: "1e generatie beschermt INDIVIDU tegen MACHT van staat. Vrijheid van meningsuiting, godsdienst, vereniging. Geen willekeurige arrestatie. Eerlijk proces. Stamt uit Verlichting-revoluties (Amerikaans 1776, Frans 1789)." }],
           niveaus: { basis: "Burger + politiek.", simpeler: "Vrijheden tegen overheid.", nogSimpeler: "1e gen" },
@@ -49,12 +49,12 @@ const steps = [
         q: "**EVRM** (Europees Verdrag) wordt afgedwongen door:",
         options: [
           "Europees Hof voor de Rechten van de Mens",
-          "VN-Veiligheidsraad",
-          "Internationaal Strafhof Den Haag",
-          "Geen rechtbank"
+          "VN-Mensenrechtenraad in Genève",
+          "Internationaal Strafhof in Den Haag",
+          "Hof van Justitie van de EU in Luxemburg"
         ],
         answer: 0,
-        wrongHints: [null, "Globaal, niet EVRM.", "Apart — oorlogsmisdaden.", "Wel rechtbank."],
+        wrongHints: [null, "De Mensenrechtenraad is een VN-orgaan zonder rechters. Het EVRM is Europees.", "Apart — oorlogsmisdaden.", "Dat hof hoort bij de EU, terwijl het EVRM bij de Raad van Europa hoort."],
         uitlegPad: {
           stappen: [{ titel: "Sinds 1959", tekst: "Bij een EVRM-schending kan elk individu in een lidstaat een klacht indienen, na het uitputten van de nationale rechtsmiddelen. Hof oordeelt + lidstaat moet uitspraak volgen (politieke + reputationele druk). 46 lidstaten Raad van Europa. Rusland 2022 verwijderd na Oekraïne-invasie." }],
           niveaus: { basis: "Straatsburg.", simpeler: "Europees mensenrechtenhof.", nogSimpeler: "Straatsburg" },
@@ -64,12 +64,12 @@ const steps = [
         q: "**Convention on the Rights of the Child** (CRC):",
         options: [
           "Kinderrechtenverdrag uit 1989",
-          "Volwassenen-verdrag",
-          "Bestaat niet",
-          "Alleen Europees"
+          "Kinderrechtenverdrag uit 1948",
+          "ILO-verdrag tegen kinderarbeid",
+          "EU-richtlijn over kinderopvang"
         ],
         answer: 0,
-        wrongHints: [null, "Specifiek kinderen.", "Wel.", "Wereldwijd."],
+        wrongHints: [null, "In 1948 kwam de Universele Verklaring. Kwam het kinderverdrag tegelijk?", "De ILO maakte aparte verdragen over arbeid. Gaat de CRC alleen over werk?", "Het is een VN-verdrag. Geldt het dan alleen in de EU?"],
         uitlegPad: {
           stappen: [{ titel: "Meest geratificeerde verdrag ooit", tekst: "196 staten lid (alle behalve VS — wel ondertekend). Rechten kind onder 18: bescherming, onderwijs, gezin, participatie. Comité Kinderrechten in Genève monitort. NL: Defence for Children + Kinderombudsman volgen op." }],
           niveaus: { basis: "Kinderrechten 1989.", simpeler: "Verdrag voor kinderen.", nogSimpeler: "CRC" },
@@ -103,12 +103,12 @@ const steps = [
         q: "Welke landen hebben **vetorecht** in VN-Veiligheidsraad?",
         options: [
           "VS, UK, Frankrijk, Rusland, China",
-          "Alle 193 lidstaten",
-          "Geen — niet meer",
-          "Alleen VS"
+          "Alle 15 leden van de Veiligheidsraad",
+          "VS, UK, Frankrijk, Duitsland, Japan",
+          "VS, Rusland, China, India, Brazilië"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — alleen 5.", "Wel.", "Wel meerdere."],
+        wrongHints: [null, "Alle leden stemmen mee, maar hebben de 10 tijdelijke leden ook een veto?", "Duitsland en Japan verloren WO2 — kregen zij in 1945 een vaste zetel?", "India en Brazilië willen graag een vaste zetel, maar hebben ze die?"],
         uitlegPad: {
           stappen: [
             { titel: "WO2-overwinnaars", tekst: "Vijf zegevierende grote machten WO2: VS, UK, FR (Westen) + USSR (nu Rusland) + China (vanaf 1971 Volksrepubliek ipv Taiwan). Elk heeft vetorecht in UNSC = kan elke bindende resolutie blokkeren. Reden voor verlamming bij conflicten Oekraïne, Syrië, Israel-Palestina." },
@@ -118,9 +118,9 @@ const steps = [
       },
       {
         q: "Hoeveel **lidstaten** heeft de VN?",
-        options: ["193", "100", "50", "Onbeperkt"],
+        options: ["193", "100", "50", "211"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Stichters waren 51.", "Wel begrensd."],
+        wrongHints: [null, "Bij de oprichting waren het er 51. Na de dekolonisatie kwamen er veel landen bij — meer of minder dan dit?", "Stichters waren 51.", "211 is het aantal landen bij de FIFA. Telt de VN er net zoveel?"],
         uitlegPad: {
           stappen: [{ titel: "Bijna alle landen", tekst: "Stichting 1945: 51 landen. Vandaag 193. Niet-leden: Vaticaan (waarnemer), Taiwan (China-blokkeert), Kosovo (niet door alle landen erkend), Palestina (waarnemer-status). Zuid-Soedan was laatste toelating (2011)." }],
           niveaus: { basis: "193.", simpeler: "193 landen.", nogSimpeler: "193" },
@@ -148,9 +148,9 @@ const steps = [
       },
       {
         q: "VN **vredesoperatie-troepen** worden genoemd:",
-        options: ["Blauwhelmen", "Marines", "Brigade Anti-Terreur", "Groene baretten"],
+        options: ["Blauwhelmen", "Marines", "Witte Helmen", "Groene baretten"],
         answer: 0,
-        wrongHints: [null, "Niet — VS-soldaten.", "Onzin.", "Groene baretten zijn Nederlandse commando's, geen VN-troepen."],
+        wrongHints: [null, "Niet — VS-soldaten.", "De Witte Helmen zijn Syrische reddingswerkers, geen VN-soldaten.", "Groene baretten zijn Nederlandse commando's, geen VN-troepen."],
         uitlegPad: {
           stappen: [{ titel: "Blauwe helm + baret", tekst: "VN-troepen uit lidstaten dragen blauwe helmen voor herkenbaarheid + neutraliteit. Tienduizenden wereldwijd in ruim 10 missies. Beperkt mandaat: alleen zelfverdediging + bescherming burgers. Niet-aanvallende rol." }],
           niveaus: { basis: "Blauwhelmen.", simpeler: "Blauwe helm-troepen.", nogSimpeler: "Blauw" },

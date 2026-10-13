@@ -31,9 +31,9 @@ const steps = [
     checks: [
       {
         q: "Welke koning regeerde NL in **1848** toen de grondwet werd herzien?",
-        options: ["Willem II","Willem I","Willem-Alexander","Beatrix"],
+        options: ["Willem II", "Willem I", "Willem III", "Lodewijk Napoleon"],
         answer: 0,
-        wrongHints: [null, "Willem I trad af in 1840 — zoon Willem II nam over.", "Veel te recent — huidige koning sinds 2013.", "Veel te recent — koningin 1980-2013."],
+        wrongHints: [null, "Willem I trad al in 1840 af.", "Willem III werd pas in 1849 koning, een jaar na de nieuwe grondwet.", "Lodewijk Napoleon was koning van 1806 tot 1810, veel eerder."],
         uitlegPad: {
           stappen: [{ titel: "Willem II + Thorbecke", tekst: "Willem I (1815-1840) → Willem II (1840-1849). In 1848 dwingt de Europese revolutie-dreiging Willem II om de grondwet te laten herzien door Thorbecke." }],
           woorden: [{ woord: "monarchie", uitleg: "Staat met een koning of koningin als staatshoofd." }],
@@ -81,9 +81,9 @@ const steps = [
       },
       {
         q: "Welke **liberale denker** schreef de grondwet van 1848?",
-        options: ["Johan Rudolph Thorbecke","Pim Fortuyn","Willem Drees","Mark Rutte"],
+        options: ["Johan Rudolph Thorbecke", "Guillaume Groen van Prinsterer", "Gijsbert Karel van Hogendorp", "Abraham Kuyper"],
         answer: 0,
-        wrongHints: [null, "21e eeuw — politiek, geen grondwet.", "20e eeuw — premier 1948-1958, geen grondwet.", "21e eeuw — premier, geen grondwet."],
+        wrongHints: [null, "Groen van Prinsterer was juist geen liberaal, maar een christelijke politicus.", "Van Hogendorp schreef de grondwet van 1814, niet die van 1848.", "Kuyper werd pas later bekend en was geen liberaal."],
         uitlegPad: {
           stappen: [{ titel: "Thorbecke = grondlegger", tekst: "Johan Rudolph Thorbecke (1798-1872), liberaal hoogleraar in Leiden. Op verzoek van Willem II schreef hij (met een commissie) in 1848 de nieuwe grondwet. Wordt gezien als **vader van de moderne Nederlandse democratie**." }],
           woorden: [{ woord: "liberaal", uitleg: "Politieke stroming: nadruk op individuele vrijheid + beperkte staatsmacht." }],
@@ -115,9 +115,9 @@ const steps = [
       },
       {
         q: "Wat betekent: *'De koning is **onschendbaar**, de ministers zijn **verantwoordelijk**'*?",
-        options: ["Koning kan niet vervolgd, ministers stappen op bij fout","Koning kan ministers ontslaan","Beide kunnen zelf wetten maken","Niemand is verantwoordelijk"],
+        options: ["Ministers zijn aanspreekbaar, de koning niet", "Koning mag ministers zomaar ontslaan", "Koning en ministers maken zelf de wetten", "Koning beslist, ministers voeren uit"],
         answer: 0,
-        wrongHints: [null, "Mag wel formeel, maar in praktijk nooit — ministers zijn de echte bestuurders.", "Niet — wetten maken regering en parlement samen.", "Wel — ministers ZIJN verantwoordelijk."],
+        wrongHints: [null, "Mag wel formeel, maar in praktijk nooit: ministers zijn de echte bestuurders.", "Wetten maken regering en parlement samen.", "Na 1848 beslist de koning juist niet meer zelf. Wie moet zich verantwoorden in de Kamer?"],
         uitlegPad: {
           stappen: [{ titel: "Twee kanten van de medaille", tekst: "**Onschendbaar** = de koning kan persoonlijk niet voor de rechter gedaagd worden voor staatszaken. **Verantwoordelijk** = de minister tekent mee, dus die is wél aansprakelijk. Bij misser → minister af, koning blijft." }],
           woorden: [{ woord: "onschendbaar", uitleg: "Kan niet juridisch vervolgd worden." }, { woord: "verantwoordelijk", uitleg: "Aansprakelijk voor wat er gebeurt." }],
@@ -140,9 +140,9 @@ const steps = [
       },
       {
         q: "**Motie van wantrouwen** door de Tweede Kamer: wat is gevolg?",
-        options: ["Minister moet aftreden","Koning treedt af","Verkiezingen direct","Niks"],
+        options: ["De minister moet aftreden", "De Tweede Kamer wordt ontbonden", "De wet wordt opnieuw besproken", "De rechter onderzoekt de minister"],
         answer: 0,
-        wrongHints: [null, "Niet — koning is onschendbaar.", "Niet automatisch — pas bij val van kabinet kunnen verkiezingen.", "Wel — politiek gevolg is groot."],
+        wrongHints: [null, "Niet automatisch: pas als het kabinet valt, kunnen er nieuwe verkiezingen komen.", "Een motie van wantrouwen gaat niet over een wet, maar over vertrouwen.", "Een motie is een politiek middel, geen rechtszaak. Kan een minister zonder steun van de Kamer verder?"],
         uitlegPad: {
           stappen: [{ titel: "Vertrouwens-regel sinds 1848", tekst: "Ministers hebben vertrouwen van Tweede Kamer nodig om aan te blijven. Bij **motie van wantrouwen** (= meerderheid Kamer zegt 'wij vertrouwen u niet') → minister treedt af. Soms hele kabinet → nieuwe verkiezingen." }],
           woorden: [{ woord: "motie van wantrouwen", uitleg: "Verklaring van Tweede Kamer dat minister niet meer mag aanblijven." }],
@@ -173,9 +173,9 @@ const steps = [
     checks: [
       {
         q: "Welke **3 machten** scheidt Montesquieu's trias politica?",
-        options: ["Wetgevend / uitvoerend / rechterlijk","Leger / politie / belasting","Koning / ministers / volk","Kerk / staat / school"],
+        options: ["Wetgevend / uitvoerend / rechterlijk", "Leger / politie / belasting", "Koning / ministers / volk", "Gemeente / provincie / Rijk"],
         answer: 0,
-        wrongHints: [null, "Niet — die zijn allemaal onderdeel van uitvoerende macht.", "Niet — dat is staatshiërarchie, geen scheiding van macht-functies.", "Niet — wel een scheiding maar niet de trias politica."],
+        wrongHints: [null, "Niet: die zijn allemaal onderdeel van de uitvoerende macht.", "Niet: dat is een rangorde van personen, geen scheiding van taken.", "Dat zijn de drie bestuurslagen, geen machten."],
         uitlegPad: {
           stappen: [{ titel: "W-U-R: wetgevend, uitvoerend, rechterlijk", tekst: "Trias = drie. Politica = staats-. Drie machten: wetten MAKEN (wetgevend), wetten UITVOEREN (uitvoerend), wetten BEOORDELEN/STRAFFEN (rechterlijk). Allemaal apart, zodat geen één alles bepaalt." }],
           woorden: [{ woord: "trias politica", uitleg: "Scheiding van de drie staatsmachten: wetgevend + uitvoerend + rechterlijk." }, { woord: "Montesquieu", uitleg: "Franse filosoof (1689-1755), Verlichting, schreef 'De l'esprit des lois' (1748)." }],
@@ -185,9 +185,9 @@ const steps = [
       },
       {
         q: "**Wie maakt een wet** in Nederland?",
-        options: ["Regering + Tweede Kamer + Eerste Kamer samen","Alleen de koning","Alleen de minister","De rechter"],
+        options: ["Regering en beide Kamers samen", "De koning, met zijn handtekening", "De minister die de wet bedenkt", "De rechters van de Hoge Raad"],
         answer: 0,
-        wrongHints: [null, "Niet alleen — koning tekent, maar wet komt uit Kamer-besluit.", "Minister dient in, maar Kamers stemmen.", "Niet — rechter past wet toe, maakt 'm niet."],
+        wrongHints: [null, "De koning tekent wel, maar bedenkt en kiest de wet niet zelf.", "De minister dient een wetsvoorstel in, maar daarna moeten de Kamers stemmen.", "Niet: de rechter past de wet toe, maakt hem niet."],
         uitlegPad: {
           stappen: [{ titel: "Wet-traject", tekst: "1) Regering dient **wet-voorstel** in. 2) Tweede Kamer debatteert + stemt (meerderheid nodig). 3) Eerste Kamer toetst + stemt. 4) Koning + verantwoordelijke minister tekenen. 5) Publicatie in Staatsblad → wet is geldig." }],
           theorie: "Voorbeeld: nieuwe verkeerswet — minister van Infrastructuur dient in, beide Kamers nemen het aan, koning + minister tekenen.",
@@ -198,7 +198,7 @@ const steps = [
         q: "**Rechters** worden benoemd voor:",
         options: ["Het leven","4 jaar","Tot 65 jaar precies","Tot regering ze ontslaat"],
         answer: 0,
-        wrongHints: [null, "Niet — rechters niet aan termijn gebonden.", "Niet precies — ze gaan rond hun 70e met pensioen, maar zijn formeel voor het leven benoemd.", "Niet — dat zou onafhankelijkheid breken."],
+        wrongHints: [null, "Vier jaar is de termijn van de Tweede Kamer. Waarom zou een rechter niet steeds opnieuw benoemd willen worden?", "Ze gaan rond hun 70e met pensioen, niet op 65. Hoe lang geldt hun benoeming volgens de grondwet?", "Niet: dat zou hun onafhankelijkheid breken."],
         uitlegPad: {
           stappen: [{ titel: "Levenslange benoeming = onafhankelijkheid", tekst: "Rechters benoemd **voor het leven** (in praktijk tot pensioen ~70). Reden: een rechter mag GEEN angst hebben dat regering hem ontslaat als hij ongunstig oordeelt. Dat beschermt **onafhankelijkheid van de rechterlijke macht**." }],
           woorden: [{ woord: "onafhankelijkheid", uitleg: "Niet afhankelijk van een andere instantie voor je baan/oordeel." }],
@@ -220,9 +220,9 @@ const steps = [
       },
       {
         q: "Een gemeente weigert iemand een baan vanwege **religie**. Welke wet is overtreden?",
-        options: ["Grondwet artikel 1","Privacy-wet AVG","Verkeerswet","Belastingwet"],
+        options: ["Grondwet artikel 1", "Grondwet artikel 7", "Privacywet (AVG)", "Arbeidstijdenwet"],
         answer: 0,
-        wrongHints: [null, "AVG = privacy, niet discriminatie.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Artikel 7 gaat over vrijheid van meningsuiting. Welk artikel verbiedt discriminatie?", "De AVG gaat over privacy en persoonsgegevens, niet over discriminatie.", "Die wet gaat over hoe lang je mag werken."],
         uitlegPad: {
           stappen: [{ titel: "Religie + baan = art. 1", tekst: "Discriminatie op godsdienst bij werk = directe overtreding van **grondwet art. 1**. Slachtoffer kan klagen bij **College voor de Rechten van de Mens** of naar de rechter." }],
           theorie: "Discriminatie-gronden in art. 1: godsdienst / levensovertuiging / politieke gezindheid / ras / geslacht / handicap / seksuele gerichtheid / 'of welke grond dan ook' (open lijst).",
@@ -273,9 +273,9 @@ const steps = [
       },
       {
         q: "Wie is **voorzitter** van de regering (= minister-president)?",
-        options: ["Politicus gekozen door coalitie-partijen","Koning","Voorzitter Tweede Kamer","Voorzitter Eerste Kamer"],
+        options: ["Politicus namens de coalitiepartijen", "De koning, als hoofd van de staat", "Voorzitter van de Tweede Kamer", "Politicus gekozen door alle kiezers"],
         answer: 0,
-        wrongHints: [null, "Niet — koning is staatshoofd, niet premier.", "Niet — Kamervoorzitter leidt Kamer-debatten.", "Idem — andere functie."],
+        wrongHints: [null, "Niet: de koning is staatshoofd, geen premier.", "Niet: de Kamervoorzitter leidt de debatten in de Kamer.", "In Nederland kiezen we geen premier rechtstreeks: we kiezen de Tweede Kamer."],
         uitlegPad: {
           stappen: [{ titel: "Premier = politiek, koning = staatshoofd", tekst: "**Minister-president** (premier) leidt het kabinet. Hij/zij wordt na verkiezingen voorgedragen door de partij die de coalitie vormt. Koning benoemt formeel, maar de keuze is politiek. Premier = woordvoerder kabinet + voorzitter ministerraad." }],
           theorie: "Onderscheid: koning = staatshoofd (ceremonieel). Premier = regeringsleider (politiek). Beide bestaan naast elkaar.",
@@ -305,9 +305,9 @@ const steps = [
     checks: [
       {
         q: "Welk **politiek systeem** heeft Nederland sinds 1848?",
-        options: ["Constitutionele monarchie","Absolute monarchie","Republiek","Dictatuur"],
+        options: ["Constitutionele monarchie", "Absolute monarchie", "Republiek met een president", "Verlicht despotisme"],
         answer: 0,
-        wrongHints: [null, "Niet — die was vóór 1848.", "Niet — Nederland heeft nog een koning.", "Zeker niet."],
+        wrongHints: [null, "Niet: die was vóór 1848.", "Niet: Nederland heeft nog een koning.", "Dan regeert een vorst alleen, maar 'verlicht'. Na 1848 mocht de koning juist niet meer alleen beslissen."],
         uitlegPad: {
           stappen: [{ titel: "Twee labels samen", tekst: "**Constitutionele monarchie** = koning gebonden aan grondwet. **Parlementaire democratie** = parlement = baas, ministers verantwoordelijk aan parlement. NL is beide tegelijk sinds 1848." }],
           niveaus: { basis: "Constitutionele monarchie + parlementaire democratie.", simpeler: "Koning + grondwet + parlement", nogSimpeler: "Constitutionele monarchie" },
@@ -336,7 +336,7 @@ const steps = [
       },
       {
         q: "Welke macht is **rechterlijk**?",
-        options: ["Onafhankelijke rechtbanken + Hoge Raad","Tweede Kamer + Eerste Kamer","Regering + ambtenaren","Koning + ministerraad"],
+        options: ["Rechtbanken en de Hoge Raad", "Tweede Kamer en Eerste Kamer", "Regering + ambtenaren", "Koning + ministerraad"],
         answer: 0,
         wrongHints: [null, "Wetgevende macht.", "Uitvoerende macht.", "Uitvoerende macht (regering)."],
         uitlegPad: {

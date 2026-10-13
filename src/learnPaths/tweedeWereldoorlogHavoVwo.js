@@ -43,9 +43,9 @@ const steps = [
       },
       {
         q: "**Lebensraum** = ?",
-        options: ["Leefruimte in Oost-Europa", "Vrije markt", "Religieuze tolerantie", "Koloniën in Afrika"],
+        options: ["Leefruimte in Oost-Europa", "Herstel van de grenzen van 1914", "Eén rijk voor alle Duitstaligen", "Koloniën in Afrika"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Niet — Hitler zocht land dichter bij Duitsland."],
+        wrongHints: [null, "Hitler wilde veel meer dan de oude grenzen terug. Waar zag hij nieuw land voor Duitsers?", "Dat idee heet 'Heim ins Reich'. Lebensraum ging over land voor boeren en grondstoffen.", "Niet: Hitler zocht land dichter bij Duitsland."],
         uitlegPad: {
           stappen: [
             { titel: "Rechtvaardiging invasie", tekst: "Hitler: DE bevolking groeit, heeft meer ruimte nodig. Oost-Europa (Polen, Oekraïne, Rusland) zou herkoloniseerd worden als DE leefruimte. Slaven 'inferieur' → onderdrukken of uitroeien. Argument voor invasie 1941 USSR (Operatie Barbarossa)." },
@@ -100,9 +100,9 @@ const steps = [
       },
       {
         q: "**Stalingrad** (1942-43):",
-        options: ["Duitse nederlaag, keerpunt in het oosten", "Duitse overwinning", "Slag zonder militair belang", "Stad die zonder strijd viel"],
+        options: ["Duitse nederlaag, keerpunt in het oosten", "Duitse overwinning, Rusland gaf zich over", "Slag die de oorlog in Afrika besliste", "Begin van de Duitse aanval op Rusland"],
         answer: 0,
-        wrongHints: [null, "Kijk naar wie aan het eind van de slag nog stond — en wie zich moest overgeven.", "Een slag met ~2 miljoen slachtoffers was allesbehalve onbelangrijk — waarom noemen historici dit een keerpunt?", "Er werd juist maandenlang huis-voor-huis gevochten in de stad — 'zonder strijd' klopt hier zeker niet."],
+        wrongHints: [null, "Kijk naar wie aan het eind van de slag nog stond, en wie zich moest overgeven.", "Dat was El Alamein (1942). Stalingrad ligt in Rusland.", "Die aanval begon al in juni 1941."],
         uitlegPad: {
           stappen: [
             { titel: "Hitler-megalomanie", tekst: "Hitler wilde Stalingrad (naar Stalin genoemd) ten koste van alles. Sovjets vochten om elke straat. Winter 1942-43: 6e Leger DE omsingeld, geen ontsnapping toegestaan. Februari 1943 capitulatie. ~800 000 DE verliezen + ~1,2 mln Sovjet. Daarna USSR op offensief. Keerpunt aan oostfront." },
@@ -124,9 +124,9 @@ const steps = [
       },
       {
         q: "**Hongerwinter** (1944-45):",
-        options: ["Hongersnood in bezet West-NL", "Korte, zachte winter", "Italiaanse hongersnood", "Hongersnood in Rusland"],
+        options: ["Hongersnood in bezet West-NL", "Hongersnood in bevrijd Zuid-NL", "Hongersnood in Engeland", "Hongersnood in Rusland"],
         answer: 0,
-        wrongHints: [null, "Niet — wel ernstig.", "Niet.", "Die grote Russische hongersnood was al rond 1921."],
+        wrongHints: [null, "Het zuiden was in de herfst van 1944 al bevrijd en had veel minder honger.", "Engeland werd niet bezet en kreeg voedsel over zee.", "Die grote Russische hongersnood was al rond 1921."],
         uitlegPad: {
           stappen: [
             { titel: "Wraak voor spoorwegstaking", tekst: "Sept 1944: NL-spoorwegen staakten om geallieerde-bevrijding te steunen. DE blokkeerde voedsel-toelevering aan WEST-NL (Randstad). Strenge winter + bezetting → mensen aten tulpenbollen + suikerbieten + brandnetels. ~20 000 doden, vooral ouderen. Foto's hongerige kinderen wereldwijd bekend." },
@@ -174,9 +174,9 @@ const steps = [
       },
       {
         q: "**Wannsee-conferentie** (jan 1942):",
-        options: ["Nazi-plan om alle Europese joden te doden", "Vredesakkoord", "Plan voor Olympische Spelen", "Overleg over oorlogseconomie"],
+        options: ["Nazi-plan om alle Europese joden te doden", "Plan om joden naar Madagaskar te sturen", "Plan voor de inval in de Sovjet-Unie", "Overleg over de Duitse oorlogseconomie"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — de Spelen in Berlijn waren al in 1936.", "Niet — het ging over iets veel gruwelijkers."],
+        wrongHints: [null, "Dat Madagaskar-plan was in 1940 al opgegeven. In 1942 besloten de nazi's tot iets veel ergers.", "Die inval begon al in juni 1941.", "Niet: het ging over iets veel gruwelijkers."],
         uitlegPad: {
           stappen: [
             { titel: "Bureaucratie van moord", tekst: "Heydrich + 14 hoge nazi-ambtenaren bij Wannsee-meer Berlijn. Lijst 11 mln joden + organisatorische uitvoering. Bewijst: Holocaust was PLAN, niet impuls. Wannsee-villa nu Gedenkstätte. Notities (Eichmann) ontdekt na oorlog — onmiskenbaar bewijs." },
@@ -198,9 +198,9 @@ const steps = [
       },
       {
         q: "**Februaristaking** (25-26 feb 1941):",
-        options: ["Protest tegen jodenvervolging", "Voor hogere lonen", "Voor de koningin", "Tegen voedseltekort"],
+        options: ["Protest tegen jodenvervolging", "Staking voor hogere lonen", "Steun voor de koningin in Londen", "Protest tegen voedseltekort"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet hoofdreden.", "Niet."],
+        wrongHints: [null, "Onvrede over werk speelde mee, maar was niet de directe aanleiding. Wat gebeurde er vlak daarvoor in Amsterdam?", "De staking ging niet over het Koningshuis. Wat gebeurde er vlak daarvoor in Amsterdam?", "Echte honger kwam pas later, in de Hongerwinter van 1944-45."],
         uitlegPad: {
           stappen: [
             { titel: "Eerste massa-protest joden-vervolging", tekst: "Na razzia's in de Jodenbuurt: trambestuurders staakten, kantoor + winkel-personeel volgde. Massaal-uniek voor bezet West-Europa. DE-bezetters reageerden hard: arrestaties, executies. Toch belangrijke morele actie. Standbeeld 'De Dokwerker' op Jonas Daniël Meijerplein Amsterdam herinnert." },
@@ -210,9 +210,9 @@ const steps = [
       },
       {
         q: "**Oskar Schindler** redde:",
-        options: ["~1100 joden", "Niemand", "Hele dorpen", "Alleen zijn eigen familie"],
+        options: ["~1100 joden", "~100 joden", "~10.000 joden", "~6 miljoen joden"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Te veel.", "Niet — hij redde vooral vreemden."],
+        wrongHints: [null, "Meer: zijn lijst met fabrieksarbeiders was veel langer.", "Minder: zijn lijst telde de arbeiders van zijn fabriek.", "Zoveel joden werden er in de Holocaust vermoord. Schindler redde de mensen op zijn lijst."],
         uitlegPad: {
           stappen: [
             { titel: "Film 'Schindler's List' 1993", tekst: "DE-zakenman + NSDAP-lid. Maakte aanvankelijk winst met joodse dwangarbeiders. Geleidelijk veranderde mening → kostte fortuin om hen veilig te houden. Met zijn 'lijst' redde hij ~1100 mensen van de dood. Stierf arm 1974, begraven op de Sionsberg in Jeruzalem. Film Spielberg won 7 Oscars." },
@@ -305,9 +305,9 @@ const steps = [
     checks: [
       {
         q: "**Marshall-plan** was:",
-        options: ["Amerikaanse hulp voor wederopbouw", "Militair plan", "Energie-plan", "Russische ontwikkelingshulp"],
+        options: ["Amerikaanse hulp voor wederopbouw", "Amerikaans plan om Duitsland te verzwakken", "Plan voor een Europees leger", "Sovjet-hulp voor Oost-Europa"],
         answer: 0,
-        wrongHints: [null, "Niet militair.", "Niet specifiek.", "Tegenovergesteld."],
+        wrongHints: [null, "Dat was het Morgenthau-plan, dat juist niet werd uitgevoerd.", "Een Europees leger kwam er niet. Het Marshall-plan ging niet over soldaten.", "De Sovjet-Unie weigerde juist mee te doen. Waar kwam het geld vandaan?"],
         uitlegPad: {
           stappen: [
             { titel: "Genereus + strategisch", tekst: "Genoemd naar George Marshall (VS-minister van Buitenlandse Zaken). Hulp voor wederopbouw + voorkomen communisme-uitbreiding. Sleutel naoorlogs welvaart Europa. Sovjet-zone weigerde → kloof West-Oost diep. NL ontving ~$1 mld." },
@@ -318,13 +318,13 @@ const steps = [
       {
         q: "**Neurenberg-principe**:",
         options: [
-          "'Orders volgen' is geen verdediging voor oorlogsmisdaden",
-          "Geen straf voor leiders",
-          "Alleen militair berecht",
-          "Geen rechtszitting"
+          "'Bevelen opvolgen' is geen excuus voor misdaden",
+          "Leiders van een staat zijn niet te berechten",
+          "Soldaten zijn schuldig, hun leiders niet",
+          "Een land betaalt voor de misdaden van zijn leiders"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Onjuist.", "Er waren juist grote rechtszaken in Neurenberg."],
+        wrongHints: [null, "Göring en andere nazi-kopstukken werden in Neurenberg gewoon berecht.", "Juist de leiders stonden in Neurenberg terecht.", "Het ging in Neurenberg om de schuld van personen, niet van een land."],
         uitlegPad: {
           stappen: [
             { titel: "Individuele verantwoordelijkheid", tekst: "Klassiek beginsel: ook ambtenaren + soldaten zijn verantwoordelijk voor hun handelingen. Eichmann probeerde dit verweer ('ich war nur ein kleines Rädchen') — werd verworpen. Vandaag basis voor het Internationaal Strafhof in Den Haag (ICC) waar oorlogsmisdaden berecht worden." },
@@ -346,9 +346,9 @@ const steps = [
       },
       {
         q: "**Europese integratie** (EGKS → EU) had als hoofddoel:",
-        options: ["Vrede door economische samenwerking", "Eén Europees leger vormen", "Engels verspreiden", "Eén godsdienst voor Europa"],
+        options: ["Vrede door economische samenwerking", "Eén Europees leger vormen", "Eén munt voor heel Europa", "Samen sterk staan tegen de VS"],
         answer: 0,
-        wrongHints: [null, "Dat Europese leger kwam er juist níét — waarom deelden landen hun kolen en staal?", "Niet de bedoeling.", "Niet."],
+        wrongHints: [null, "Dat Europese leger kwam er juist níét. Waarom deelden landen hun kolen en staal?", "De euro kwam pas in 1999/2002. Waarom begonnen landen in 1951 samen te werken?", "De VS steunden de Europese samenwerking juist."],
         uitlegPad: {
           stappen: [
             { titel: "Schuman + Monnet", tekst: "1951: kolen + staal-industrie (oorlogsbasis) onder gemeenschappelijk bestuur Schumanplan. Idee: landen die handel + economie delen, gaan geen oorlog meer voeren. Werkt: geen oorlog meer tussen EU-leden sinds 1945. Nobelvredesprijs 2012 voor EU." },

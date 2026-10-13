@@ -74,7 +74,7 @@ const steps = [
         q: "Hoeveel **standen** waren er?",
         options: ["3", "2", "5", "10"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Niet zo veel.", "Te veel."],
+        wrongHints: [null, "Denk aan wie er bad, wie er vocht en wie er werkte. Hoeveel groepen zijn dat?", "Zoveel groepen waren er niet. Tel: wie bad, wie vocht en wie werkte?", "Veel minder. De samenleving was verdeeld in een paar grote groepen. Welke?"],
       },
       {
         q: "Wie betaalde **bijna alle belasting**?",
@@ -93,9 +93,9 @@ const steps = [
     checks: [
       {
         q: "Wat is de **Verlichting**?",
-        options: ["Een denkstroming over rede en vrijheid", "Een religieuze beweging", "Een oorlog", "Een schilderstijl"],
+        options: ["Een denkstroming over rede en vrijheid", "Een beweging om de Kerk te hervormen", "Een opstand van boeren tegen de adel", "Een schilderstijl met veel licht en kleur"],
         answer: 0,
-        wrongHints: [null, "Juist tegenkracht voor traditionele religie.", "Geen oorlog.", "Geen kunststijl."],
+        wrongHints: [null, "Dat was de Reformatie, in de 16e eeuw. De Verlichting kwam later en zette juist vraagtekens bij oude tradities.", "Opstanden waren er wel, maar de Verlichting was geen gevecht. Waren Voltaire en Montesquieu soldaten of schrijvers?", "Het 'licht' in de naam is figuurlijk bedoeld. Waar wilden Voltaire en Montesquieu licht op laten schijnen?"],
       },
       {
         q: "Wie pleitte voor **scheiding der machten**?",
@@ -111,9 +111,9 @@ const steps = [
       },
       {
         q: "Wat maakte de **winter 1788-1789** moeilijk?",
-        options: ["Slechte oogst + brood-tekort", "Pestpandemie", "Aardbeving", "Buitenlandse aanval"],
+        options: ["Mislukte oogst en duur brood", "Hoge belasting voor de adel", "Een uitbraak van de pest", "Een Engelse blokkade van de havens"],
         answer: 0,
-        wrongHints: [null, "Pest was eerder.", "Geen aardbeving.", "Geen aanval."],
+        wrongHints: [null, "De adel betaalde juist bijna geen belasting. Waar hadden gewone Fransen die winter last van?", "De grote pestgolven lagen toen al eeuwen achter Frankrijk. Waar hadden gewone Fransen die winter vooral last van?", "Frankrijk werd toen niet geblokkeerd. Kijk naar het weer van 1788: wat ging er mis op het land?"],
       },
     ],
   },
@@ -138,15 +138,15 @@ const steps = [
       },
       {
         q: "Wat is de **slogan** van de Franse Revolutie?",
-        options: ["Vrijheid, Gelijkheid, Broederschap", "Een voor allen, allen voor een", "God, vaderland, koning", "Brood en vrede"],
+        options: ["Vrijheid, Gelijkheid, Broederschap", "Eenheid, Recht en Vrijheid", "Geen belasting zonder inspraak", "Werkers van alle landen, verenigt u"],
         answer: 0,
-        wrongHints: [null, "Drie Musketiers.", "Tegenovergesteld.", "Andere revolutie."],
+        wrongHints: [null, "Dat is een regel uit het Duitse volkslied, niet de leus van Parijs in 1789.", "Zo klonk de Amerikaanse Revolutie, een paar jaar eerder.", "Die oproep komt uit het Communistisch Manifest van 1848, veel later."],
       },
       {
         q: "Wat gebeurde met **Lodewijk XVI** in 1793?",
-        options: ["Onthoofd met guillotine", "Verbannen", "Gevlucht", "Bleef koning"],
+        options: ["Onthoofd met de guillotine", "Gevlucht naar Oostenrijk", "Verbannen naar een eiland", "Bleef koning, maar zonder macht"],
         answer: 0,
-        wrongHints: [null, "Niet verbannen.", "Probeerde maar werd gepakt.", "Republiek afgekondigd."],
+        wrongHints: [null, "Hij probeerde in 1791 te vluchten, maar werd bij Varennes gepakt. Wat gebeurde er daarna met hem?", "Verbanning naar een eiland overkwam later Napoleon. Wat deden de revolutionairen met de koning?", "Dat was hij in 1791-1792. In september 1792 werd Frankrijk een republiek. Wat betekende dat voor Lodewijk?"],
         uitlegPad: {
           stappen: [
             { titel: "Proces tegen de koning", tekst: "Nadat de monarchie was afgeschaft (1792) werd Lodewijk XVI berecht door de Nationale Conventie. Hij werd schuldig bevonden aan landverraad en op 21 januari 1793 onthoofd op de Place de la Révolution." },
@@ -181,7 +181,7 @@ const steps = [
         q: "Hoeveel mensen werden ongeveer **geguillotineerd** tijdens de Terreur (in heel Frankrijk)?",
         options: ["~17.000", "~100", "~1 miljoen", "~500"],
         answer: 0,
-        wrongHints: [null, "Veel meer.", "Te veel.", "Te weinig."],
+        wrongHints: [null, "Alleen al in Parijs gingen er veel meer mensen onder het mes.", "Zoveel inwoners had Parijs toen ongeveer. Zo veel slachtoffers maakte de guillotine niet.", "Veel meer: de Terreur duurde ongeveer een jaar en er vielen bijna elke dag slachtoffers."],
       },
       {
         q: "Wat gebeurde uiteindelijk met **Robespierre**?",
@@ -206,9 +206,9 @@ const steps = [
     checks: [
       {
         q: "Wie was **Napoleon Bonaparte**?",
-        options: ["Keizer van Frankrijk", "Russische tsaar", "Koning Engeland", "Paus"],
+        options: ["Keizer van Frankrijk", "Leider van de Terreur", "Koning vóór de revolutie", "Generaal die Waterloo won"],
         answer: 0,
-        wrongHints: [null, "Niet Russisch.", "Niet Engels.", "Niet paus."],
+        wrongHints: [null, "Dat was Robespierre. Napoleon kwam pas na de Terreur aan de macht.", "Dat was Lodewijk XVI. Napoleon kwam pas ná de revolutie aan de macht.", "Bij Waterloo (1815) verloor Napoleon juist zijn laatste slag."],
       },
       {
         q: "Wanneer werd Napoleon **keizer**?",
@@ -260,9 +260,9 @@ const steps = [
       },
       {
         q: "Wat is de **slogan** van de revolutie?",
-        options: ["Vrijheid, Gelijkheid, Broederschap", "God, vaderland, koning", "Brood + vrede", "Werk maakt vrij"],
+        options: ["Vrijheid, Gelijkheid, Broederschap", "Eenheid, Recht en Vrijheid", "Geen belasting zonder inspraak", "Werkers van alle landen, verenigt u"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Russische revolutie.", "Tekst bij de poort van nazi-concentratiekampen."],
+        wrongHints: [null, "Dat is een regel uit het Duitse volkslied, niet de leus van Parijs in 1789.", "Zo klonk de Amerikaanse Revolutie, een paar jaar eerder.", "Die oproep komt uit het Communistisch Manifest van 1848, veel later."],
       },
       {
         q: "Wie was de leider van de **Terreur** (1793-1794)?",
@@ -284,9 +284,9 @@ const steps = [
       },
       {
         q: "Wat zijn **3 standen** in pre-revolutie Frankrijk?",
-        options: ["Geestelijkheid, adel, gewone volk", "Rijk, gemiddeld, arm", "Koning, generaal, paus", "Mannen, vrouwen, kinderen"],
+        options: ["Geestelijkheid, adel, gewone volk", "Koning, adel en het gewone volk", "Adel, rijke burgers en boeren", "Rijken, middenklasse en armen"],
         answer: 0,
-        wrongHints: [null, "Te eenvoudig.", "Niet zo verdeeld.", "Niet de indeling."],
+        wrongHints: [null, "De koning hoorde bij geen enkele stand: hij stond erboven. Welke groep mis je dan?", "Rijke burgers en boeren hoorden samen bij één stand. Welke machtige groep ontbreekt?", "Dat is een indeling naar geld. Rijke burgers hoorden toch bij de derde stand. Hoe was de indeling dan?"],
       },
     ],
   },

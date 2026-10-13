@@ -78,9 +78,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **frequentie**?",
-        options: ["Aantal trillingen per seconde (Hz)", "Hardheid van geluid", "Snelheid van geluid", "Aantal personen"],
+        options: ["Aantal trillingen per seconde (Hz)", "Hoe hard een geluid is (dB)", "Snelheid van het geluid (m/s)", "Lengte van één golf (m)"],
         answer: 0,
-        wrongHints: [null, "Dat is amplitude.", "Anders ding.", "Niet relevant."],
+        wrongHints: [null, "Hoe hard een geluid is, meet je in decibel. Dat hangt af van de amplitude.", "Snelheid gaat over meters per seconde. Gaat frequentie over afstand?", "De lengte van één golf heet de golflengte. Waar gaat frequentie dan over?"],
       },
       {
         q: "Welke **frequentie-range** kan een mens horen?",
@@ -117,9 +117,9 @@ const steps = [
       },
       {
         q: "Hoe gaat licht **door lucht**?",
-        options: ["In een rechte lijn", "In een cirkel", "In zigzag", "Krom"],
+        options: ["In een rechte lijn", "In een grote boog", "In een golvende lijn", "In een zigzaglijn"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet in gewone lucht — denk aan hoe een schaduw ontstaat."],
+        wrongHints: [null, "Niet in gewone lucht — denk aan hoe een schaduw ontstaat.", "Licht is wel een golf, maar slingert een zonnestraal door een kier in een stoffige kamer heen en weer?", "Hoe ziet een zonnestraal door een kier eruit in een stoffige kamer?"],
       },
       {
         q: "Wat is een **echte lichtbron**?",
@@ -129,9 +129,9 @@ const steps = [
       },
       {
         q: "Wat is een **lichtjaar**?",
-        options: ["Afstand die licht in 1 jaar aflegt", "Een jaar met veel zon", "Een tijdseenheid", "Een sterrenstelsel"],
+        options: ["Afstand die licht in 1 jaar aflegt", "Tijd die licht nodig heeft voor 1 km", "Afstand die geluid in 1 jaar aflegt", "Hoe lang een ster licht blijft geven"],
         answer: 0,
-        wrongHints: [null, "Het heeft niets met zonnig weer te maken.", "Geen tijdseenheid (al klinkt het zo).", "Niet."],
+        wrongHints: [null, "Geen tijdseenheid (al klinkt het zo).", "Geluid gaat bijna een miljoen keer langzamer dan licht. Waarom zou het dan lichtjaar heten?", "Een lichtjaar zegt niets over hoe lang een ster brandt. Is het eigenlijk een tijd of iets anders?"],
       },
     ],
   },
@@ -144,15 +144,15 @@ const steps = [
     checks: [
       {
         q: "Wat is een **bolle lens**?",
-        options: ["Lens dikker in midden, vergroot", "Lens dunner in midden", "Spiegel", "Doorzichtige plaat"],
+        options: ["Lens dikker in midden, vergroot", "Lens dunner in midden, verkleint", "Gebogen spiegel, vergroot", "Vlakke glazen plaat, vergroot"],
         answer: 0,
-        wrongHints: [null, "Dat is holle lens.", "Niet lens.", "Geen lens."],
+        wrongHints: [null, "Dat is een holle lens. Welke vorm past bij het woord bol?", "Een lens laat licht door, een spiegel kaatst het terug.", "Een vlakke plaat is overal even dik. Buigt die het licht samen?"],
       },
       {
         q: "**Wet van reflectie**?",
-        options: ["Hoek van inval = hoek van weerkaatsing", "Licht weg, geluid terug", "Spiegel maakt 2× licht", "Alleen voor sterren"],
+        options: ["Hoek van inval = hoek van weerkaatsing", "Hoek van inval = 2 × hoek van weerkaatsing", "Hoek van inval + weerkaatsing = 180°", "Hoek van weerkaatsing is altijd 90°"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Geldt overal."],
+        wrongHints: [null, "Teken een straal op een spiegel: gaat de teruggekaatste straal twee keer zo schuin weg?", "Kies een invalshoek van 30°: zou de straal dan onder 150° teruggaan, bijna dezelfde kant op?", "Kaatst een bal altijd recht omhoog terug, hoe schuin je hem ook tegen de grond gooit?"],
       },
       {
         q: "Welke lens voor **bijziend** (ver wazig)?",
@@ -195,13 +195,13 @@ const steps = [
         q: "Hoeveel **kleuren** in de regenboog?",
         options: ["7", "3", "10", "5"],
         answer: 0,
-        wrongHints: [null, "Dat zijn primaire kleuren.", "Te veel.", "Te weinig."],
+        wrongHints: [null, "Dat zijn primaire kleuren.", "Noem de kleuren eens op, van rood tot violet. Kom je op 10?", "Noem de kleuren op van rood tot violet. Vergeet je er geen tussen blauw en violet?"],
       },
       {
         q: "Waarom is een **rode appel rood**?",
-        options: ["Weerkaatst rood, absorbeert rest", "Heeft eigen rood licht", "Reflecteert geluid", "Niemand weet"],
+        options: ["Weerkaatst rood, absorbeert rest", "Absorbeert rood, weerkaatst rest", "Geeft zelf rood licht af", "Laat rood licht door, als glas"],
         answer: 0,
-        wrongHints: [null, "Geen lichtbron.", "Niet geluid.", "Wel bekend."],
+        wrongHints: [null, "Als het rode licht wordt opgeslokt, kan rood dan nog je oog bereiken?", "Een appel is geen lamp: in het donker zie je hem niet. Waar komt het rode licht dan vandaan?", "Kun je door een appel heen kijken? Waar komt het rode licht dan vandaan?"],
       },
       {
         q: "Primaire kleuren bij **licht (RGB)**?",
@@ -211,7 +211,7 @@ const steps = [
       },
       {
         q: "Wat is **UV-straling**?",
-        options: ["Onzichtbaar licht voorbij violet", "Onzichtbaar licht onder rood", "Zichtbaar paars licht", "Geluid boven 20.000 Hz"],
+        options: ["Onzichtbaar licht voorbij violet", "Onzichtbaar licht onder rood", "Heel fel zichtbaar paars licht", "Geluid met trillingen boven 20.000 Hz"],
         answer: 0,
         wrongHints: [null, "Onder rood zit een ander soort straling — welke?", "Paars kun je zien. Kun je UV ook zien?", "Geluid boven 20.000 Hz heet ultrasoon — dat is geen licht."],
       },
@@ -259,9 +259,9 @@ const steps = [
     checks: [
       {
         q: "Hoe verspreidt **geluid** zich?",
-        options: ["Trillingen door materie", "Stralen door vacuüm", "Met licht", "Met magneten"],
+        options: ["Als trillingen door een stof", "Als stralen door vacuüm", "Als lucht die naar je oor stroomt", "Als elektrisch signaal door de lucht"],
         answer: 0,
-        wrongHints: [null, "Dat is licht.", "Geen verband.", "Geen verband."],
+        wrongHints: [null, "Dat is licht.", "Waait het als iemand tegen je praat? Wat beweegt er dan wel?", "Elektrische signalen gaan door draden. Wat gebeurt er met de lucht als een trommel klinkt?"],
       },
       {
         q: "Lichtsnelheid?",
@@ -271,9 +271,9 @@ const steps = [
       },
       {
         q: "**Reflectie-wet**: hoek van inval = ... ?",
-        options: ["Hoek van weerkaatsing", "0°", "90°", "Onbekend"],
+        options: ["Hoek van weerkaatsing", "Hoek van breking", "Hoek met de spiegel", "90° min weerkaatsing"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Wel bekend."],
+        wrongHints: [null, "Breking gaat over licht dat een andere stof ingaat, niet over terugkaatsen.", "Meet je de hoeken vanaf de spiegel of vanaf de normaal?", "Kies 30° inval: kaatst de straal dan terug onder 60°?"],
       },
       {
         q: "Welke kleur weerkaatst een **gele citroen**?",
@@ -283,7 +283,7 @@ const steps = [
       },
       {
         q: "Wat is **UV-licht**?",
-        options: ["Onzichtbaar licht voorbij violet", "Onzichtbaar licht onder rood", "Een soort geluid", "Een felle tint paars"],
+        options: ["Onzichtbaar licht voorbij violet", "Onzichtbaar licht onder rood", "Een soort geluid dat je niet hoort", "Een heel felle tint paars"],
         answer: 0,
         wrongHints: [null, "Onder rood heet die straling anders.", "UV is straling, geen trilling van lucht.", "Een tint paars kun je zien — UV ook?"],
       },
@@ -291,7 +291,7 @@ const steps = [
         q: "Mens hoort **frequenties** tot ... ?",
         options: ["20.000 Hz", "100 Hz", "1 miljoen Hz", "1.000.000.000 Hz"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Onmogelijk.", "Belachelijk veel."],
+        wrongHints: [null, "100 Hz is een heel lage brom. Hoor je ook een hoge fluittoon?", "Veel te hoog: zulke tonen hoort zelfs een vleermuis niet meer.", "Veel te hoog: zo snel kan je trommelvlies lang niet trillen."],
       },
     ],
   },
