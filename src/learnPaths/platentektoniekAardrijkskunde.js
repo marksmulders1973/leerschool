@@ -337,16 +337,16 @@ const steps = [
       {
         q: "Hoe is de **Himalaya** ontstaan?",
         options: [
-          "Indische en Euraziatische Plaat botsen",
-          "Door een grote vulkaanuitbarsting",
-          "Door erosie van een hoogvlakte",
+          "Doordat twee platen daar op elkaar botsen",
+          "Doordat platen daar langs elkaar schuiven",
+          "Doordat rivieren diepe dalen uitsleten",
           "Doordat de korst daar uit elkaar scheurde",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Zijn er in de Himalaya vulkanen? Hoe kan een berg zonder vulkaan zo hoog worden?",
-          "Erosie slijt bergen juist af. Hoe kan een gebergte dan steeds hoger worden?",
+          "Langs elkaar schuiven gebeurt bij een transformgrens, zoals de San Andreas-breuk. Ontstaat daar een gebergte van bijna 9 km hoog?",
+          "Rivieren slijten dalen uit, maar daardoor worden de toppen niet hoger. Hoe kan een gebergte steeds hoger worden?",
           "Bij uit elkaar scheuren ontstaat een slenk of een oceaan, zoals in Oost-Afrika. Hoe ontstaan juist hoge bergen?",
         ],
       },
@@ -417,7 +417,7 @@ const steps = [
   // ─── D. Aardbevingen ───────────────
   {
     title: "Aardbevingen — hoe ze ontstaan en gemeten worden",
-    explanation: "Een **aardbeving** is een plotselinge schok in de aardkorst, veroorzaakt door **opgehoopte spanning** die in één keer vrijkomt.\n\n**Hoe werkt het?**\n1. Twee platen drukken/schuiven tegen elkaar maar de **wrijving** houdt ze vast.\n2. Spanning bouwt zich op (jaren tot eeuwen).\n3. De spanning wordt te groot → de platen **schieten los** met een ruk → schok.\n\n**Belangrijke begrippen**:\n• **Hypocentrum** (focus) = punt onder de grond waar de schok ontstaat.\n• **Epicentrum** = het punt aan het oppervlak **recht boven** het hypocentrum. Daar is de schok het sterkst voelbaar.\n• **Schokgolven** verspreiden zich vandaaruit door alle richtingen.\n\n**Hoe sterk?** — De Schaal van Richter\nVan **1 (niet voelbaar)** tot boven de **9 (catastrofaal)** — de schaal heeft geen bovengrens; de zwaarste ooit gemeten was 9,5 (Chili, 1960):\n• 1-3: niet of nauwelijks voelbaar (alleen seismografen)\n• 4: voelbaar, geen schade\n• 5: lichte schade aan oude gebouwen\n• 6: gebouwen kunnen instorten\n• 7+: zware schade over grote gebieden\n• 9+: catastrofale beving (zeldzaam)\n\nElk punt op de schaal is **10× sterker** dan de vorige! Een 7 is dus geen 'iets meer' dan een 6, maar **10× sterker**.\n\n**Aardbevingen in Nederland**\n• Door plaatbeweging vrijwel nooit (wij zitten in het rustige midden van de Euraziatische Plaat).\n• Wél **kunstmatige bevingen in Groningen** door **gaswinning** sinds de jaren '80. Daardoor schade aan tienduizenden huizen.\n• De gaswinning is daarom afgebouwd en grotendeels gestopt in 2024.\n\n**Tsunami's**\nAls een onderzeese aardbeving plaatsvindt, kan die enorme **vloedgolven** veroorzaken — tsunami's. Bij Japan-2011 (magnitude 9,1) ontstond een tsunami van wel 40 m hoog → kerncentrale Fukushima beschadigd.",
+    explanation: "Een **aardbeving** is een plotselinge schok in de aardkorst, veroorzaakt door **opgehoopte spanning** die in één keer vrijkomt.\n\n**Hoe werkt het?**\n1. Twee platen drukken/schuiven tegen elkaar maar de **wrijving** houdt ze vast.\n2. Spanning bouwt zich op (jaren tot eeuwen).\n3. De spanning wordt te groot → de platen **schieten los** met een ruk → schok.\n\n**Belangrijke begrippen**:\n• **Hypocentrum** (focus) = punt onder de grond waar de schok ontstaat.\n• **Epicentrum** = het punt aan het oppervlak **recht boven** het hypocentrum. Daar is de schok het sterkst voelbaar.\n• **Schokgolven** verspreiden zich vandaaruit door alle richtingen.\n\n**Hoe sterk?** — De Schaal van Richter\nVan **1 (niet voelbaar)** tot boven de **9 (catastrofaal)** — de schaal heeft geen bovengrens; de zwaarste ooit gemeten was 9,5 (Chili, 1960):\n• 1-3: niet of nauwelijks voelbaar (alleen seismografen)\n• 4: voelbaar, geen schade\n• 5: lichte schade aan oude gebouwen\n• 6: gebouwen kunnen instorten\n• 7+: zware schade over grote gebieden\n• 9+: catastrofale beving (zeldzaam)\n\nElk punt op de schaal betekent een **10× zo grote uitslag** (amplitude) op de seismograaf! Er komt zelfs zo'n 32× zoveel energie vrij. Een 7 is dus geen 'iets meer' dan een 6, maar veel zwaarder.\n\n**Aardbevingen in Nederland**\n• Door plaatbeweging vrijwel nooit (wij zitten in het rustige midden van de Euraziatische Plaat).\n• Wél **kunstmatige bevingen in Groningen** door **gaswinning** sinds de jaren '80. Daardoor schade aan tienduizenden huizen.\n• De gaswinning is daarom afgebouwd en grotendeels gestopt in 2024.\n\n**Tsunami's**\nAls een onderzeese aardbeving plaatsvindt, kan die enorme **vloedgolven** veroorzaken — tsunami's. Bij Japan-2011 (magnitude 9,1) ontstond een tsunami van wel 40 m hoog → kerncentrale Fukushima beschadigd.",
     svg: plaatgrenzenSvg(),
     checks: [
       {
@@ -438,7 +438,7 @@ const steps = [
       },
       {
         q: "Hoeveel sterker is een 7,0 op de Schaal van Richter dan een 6,0?",
-        options: ["10×", "1000×", "100×", "2×"],
+        options: ["10× zo grote uitslag", "1000× zo grote uitslag", "100× zo grote uitslag", "2× zo grote uitslag"],
         answer: 0,
         wrongHints: [
           null,
@@ -574,14 +574,14 @@ const steps = [
         options: [
           "Direct landinwaarts naar hoger gebied vluchten",
           "Wachten op een officiële waarschuwing via de radio",
-          "Snel je spullen van het strand pakken en dan gaan",
+          "Met de auto over de kustweg wegrijden",
           "Langs het strand naar de dichtstbijzijnde haven lopen",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Een terugtrekkende zee ís de waarschuwing; een sirene kan te laat komen. Wat doe je dan meteen?",
-          "Een tsunami kan binnen enkele minuten na het terugtrekken komen. Is er tijd voor spullen?",
+          "Een kustweg loopt laag langs het water en raakt snel verstopt. Welke richting is veilig?",
           "Langs de kust blijf je laag en vlak bij het water. Welke richting is veilig?",
         ],
       },
@@ -597,32 +597,32 @@ const steps = [
       {
         q: "Bij welke plaatbeweging hoort de **Himalaya**?",
         options: [
-          "Convergent (platen botsen)",
-          "Divergent (uit elkaar)",
-          "Transform (langs elkaar)",
-          "Geen plaatgrens (erosie)",
+          "Een convergente plaatgrens",
+          "Een divergente plaatgrens",
+          "Een transformgrens",
+          "Een hotspot midden op een plaat",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Bij divergent ontstaan oceanen, niet bergen.",
-          "Transform geeft aardbevingen, geen bergen.",
-          "Erosie maakt bergen kleiner — Himalaya wordt nog hoger.",
+          "Bij een divergente grens gaan platen uit elkaar en ontstaat een rug of een slenk. Groeit daar een gebergte van bijna 9 km hoog?",
+          "Bij een transformgrens schuiven platen langs elkaar, zoals bij San Andreas. Geeft dat hoge bergen?",
+          "Een hotspot geeft vulkanen, zoals op Hawaï. Zijn de bergen van de Himalaya vulkanen?",
         ],
       },
       {
         q: "Bij welke plaatgrens hoort **IJsland** met z'n vulkanen?",
         options: [
-          "Divergent — Mid-Atlantische Rug",
-          "Convergent — subductiezone",
-          "Transform — schuif",
-          "Hotspot — midden op één plaat",
+          "Een divergente plaatgrens",
+          "Een convergente plaatgrens",
+          "Een transformgrens",
+          "Een hotspot midden op een plaat",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Bij subductie duikt een plaat weg in een diepe trog. Zie je zo'n trog bij IJsland?",
-          "Bij een schuifgrens ontstaan vooral aardbevingen, geen vulkanen op een rug.",
+          "Bij een convergente grens duikt vaak een plaat weg in een diepe trog. Zie je zo'n trog bij IJsland?",
+          "Bij een transformgrens schuiven platen langs elkaar en ontstaan vooral aardbevingen. Verklaart dat de vele vulkanen op IJsland?",
           "IJsland heeft wel een hotspot, maar ligt het midden op één plaat? Waar loopt de grens tussen Amerika en Europa?",
         ],
       },
@@ -646,15 +646,15 @@ const steps = [
         q: "Welke ramp in 2004 was een gevolg van een onderzeese aardbeving?",
         options: [
           "Tsunami in de Indische Oceaan",
-          "Vulkaanuitbarsting Eyjafjallajökull",
-          "Aardbeving Christchurch",
+          "Tsunami bij Fukushima in Japan",
+          "Aardbeving in Christchurch",
           "Orkaan Katrina in New Orleans",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Eyjafjallajökull was 2010 + IJsland (vulkanisch, niet tsunami).",
-          "Christchurch was een land-aardbeving in 2010-11.",
+          "De tsunami bij Fukushima kwam ook door een zeebeving, maar die was in 2011. Welke ramp was in 2004?",
+          "Christchurch (Nieuw-Zeeland, 2010-2011) werd getroffen door bevingen onder land, niet onder zee. Welke ramp in 2004 begon onder de zeebodem?",
           "Katrina (2005) was een orkaan: wind en stormvloed, geen aardbeving. Welke ramp kwam door een beving onder de zeebodem?",
         ],
       },
