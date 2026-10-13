@@ -1,0 +1,631 @@
+{
+ "bestanden": [
+  "./doorstroomtoetsTaalG8.js"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 3,
+   "vraag": 42,
+   "soort": "L",
+   "q": "Wat is het onderwerp in: *'De kinderen van groep 8 oefenen elke dag.'*?",
+   "opties": [
+    "De kinderen van groep 8",
+    "oefenen",
+    "elke dag",
+    "groep 8"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 0,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "*'Het verlamde dier kon niet meer lopen.'* Wat betekent verlamd?",
+   "opties": [
+    "Niet kunnen bewegen",
+    "Heel snel",
+    "Erg blij",
+    "Heel klein"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 0,
+   "vraag": 12,
+   "soort": "K",
+   "q": "Welk woord is een tegenstelling van 'verlies'?",
+   "opties": [
+    "Winst",
+    "Resultaat",
+    "Spel",
+    "Cijfer"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 0,
+   "vraag": 14,
+   "soort": "K",
+   "q": "Welk woord is een synoniem voor 'beginnen'?",
+   "opties": [
+    "Starten",
+    "Eindigen",
+    "Stoppen",
+    "Wachten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 0,
+   "vraag": 15,
+   "soort": "K",
+   "q": "*'Het was een uitzonderlijke prestatie.'* Wat betekent uitzonderlijk?",
+   "opties": [
+    "Bijzonder",
+    "Slecht",
+    "Snel",
+    "Saai"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 0,
+   "vraag": 16,
+   "soort": "K",
+   "q": "Welk woord betekent hetzelfde als 'mooi'?",
+   "opties": [
+    "Prachtig",
+    "Lelijk",
+    "Snel",
+    "Klein"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 0,
+   "vraag": 18,
+   "soort": "K",
+   "q": "Tegenstelling van 'voorzichtig'?",
+   "opties": [
+    "Roekeloos",
+    "Snel",
+    "Klein",
+    "Stom"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 0,
+   "vraag": 19,
+   "soort": "L2",
+   "q": "*'Ze verzon een leugen.'* Wat betekent leugen?",
+   "opties": [
+    "Niet-waar verhaal",
+    "Geheim",
+    "Grap",
+    "Verhaal"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 0,
+   "vraag": 27,
+   "soort": "K",
+   "q": "*'Hij keek schuw om zich heen.'* Wat betekent schuw?",
+   "opties": [
+    "Verlegen",
+    "Boos",
+    "Trots",
+    "Hongerig"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 0,
+   "vraag": 32,
+   "soort": "L2",
+   "q": "*'Een kostbare vaas'* — wat betekent kostbaar?",
+   "opties": [
+    "Duur / veel waard",
+    "Goedkoop",
+    "Klein",
+    "Lelijk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 0,
+   "vraag": 33,
+   "soort": "K",
+   "q": "Welk bijvoeglijk naamwoord betekent hetzelfde als 'snel'?",
+   "opties": [
+    "rap",
+    "lang",
+    "veel",
+    "ver"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 0,
+   "vraag": 41,
+   "soort": "S",
+   "q": "Welk woord is het antoniem (tegenovergestelde) van 'zelden'?",
+   "opties": [
+    "Vaak",
+    "Nooit",
+    "Soms",
+    "Misschien"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 0,
+   "vraag": 44,
+   "soort": "L2",
+   "q": "*'De wandelaars zochten beschutting tegen de hagel.'* Wat is beschutting?",
+   "opties": [
+    "Een plek die je beschermt",
+    "Een soort regenjas",
+    "Een warme drank",
+    "Een wandelroute"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 0,
+   "vraag": 45,
+   "soort": "L2",
+   "q": "*'Het oude kasteel werd gerestaureerd.'* Wat gebeurde er met het kasteel?",
+   "opties": [
+    "Het werd hersteld in oude staat",
+    "Het werd afgebroken",
+    "Het werd verkocht",
+    "Het werd een restaurant"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 0,
+   "vraag": 46,
+   "soort": "L2",
+   "q": "Wat betekent de uitdrukking *'met de deur in huis vallen'*?",
+   "opties": [
+    "Meteen zeggen waar het om gaat",
+    "Per ongeluk iets omstoten",
+    "Onuitgenodigd binnenkomen",
+    "Hard wegrennen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 0,
+   "vraag": 51,
+   "soort": "S",
+   "q": "*'Het medicijn had een gunstig effect.'* Wat betekent gunstig?",
+   "opties": [
+    "Goed, voordelig",
+    "Gevaarlijk",
+    "Onbekend",
+    "Tijdelijk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 0,
+   "vraag": 52,
+   "soort": "L2",
+   "q": "Wat betekent de uitdrukking *'oude koeien uit de sloot halen'*?",
+   "opties": [
+    "Over vervelende dingen van vroeger beginnen",
+    "De boerderij opruimen",
+    "Iets onmogelijks proberen",
+    "Herinneringen ophalen aan leuke tijden"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 1,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Welke antwoorden zijn op de toets vaak fout?",
+   "opties": [
+    "Met 'altijd' of 'nooit'",
+    "Met cijfers",
+    "Met namen",
+    "Korte antwoorden"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 1,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Een tekst gaat over hoe honden helpen bij brand. Hoofdgedachte?",
+   "opties": [
+    "Honden zijn nuttig bij brand",
+    "Honden eten brood",
+    "Brand is gevaarlijk",
+    "Iedereen wil een hond"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 1,
+   "vraag": 17,
+   "soort": "L2SK",
+   "q": "*Tekst: 'Veel kinderen sporten weinig. Toch is sporten heel gezond.'* Wat is de conclusie van de schrijver?",
+   "opties": [
+    "Kinderen moeten meer sporten",
+    "Kinderen sporten genoeg",
+    "Kinderen mogen niet sporten",
+    "Onbekend"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 1,
+   "vraag": 18,
+   "soort": "L2K",
+   "q": "Wat is een detail-vraag bij de Doorstroomtoets?",
+   "opties": [
+    "'Wat staat er in alinea 2?'",
+    "'Wat vind jij?'",
+    "'Wat is de mening?'",
+    "'Welk plaatje?'"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 1,
+   "vraag": 21,
+   "soort": "L2",
+   "q": "Een schrijver gebruikt het woord 'echter' om aan te geven dat...",
+   "opties": [
+    "er een tegenstelling komt",
+    "er een gevolg komt",
+    "hij iets gaat herhalen",
+    "hij ophoudt"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 1,
+   "vraag": 22,
+   "soort": "L2",
+   "q": "*'De hoofdgedachte van een tekst is...'*",
+   "opties": [
+    "De belangrijkste boodschap",
+    "De eerste zin",
+    "Het langste stuk",
+    "De namen van personen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 1,
+   "vraag": 24,
+   "soort": "L2",
+   "q": "*Wat is het verschil tussen* 'feit' *en* 'mening'?",
+   "opties": [
+    "Feit kun je controleren, mening is wat iemand vindt",
+    "Feit is positief, mening is negatief",
+    "Geen verschil, ze betekenen hetzelfde",
+    "Feit staat in inleiding, mening in slot"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 1,
+   "vraag": 25,
+   "soort": "L2",
+   "q": "Welk woord wijst op een voorbeeld?",
+   "opties": [
+    "Bijvoorbeeld",
+    "Omdat",
+    "Maar",
+    "Dus"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 1,
+   "vraag": 29,
+   "soort": "L2K",
+   "q": "Bij kritisch lezen vraag je je vooral af...",
+   "opties": [
+    "Klopt dit en hoe weet de schrijver dat?",
+    "Hoeveel alinea's heeft de tekst?",
+    "Wat is het lettertype?",
+    "Hoe lang is de tekst?"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 1,
+   "vraag": 34,
+   "soort": "K",
+   "q": "Een tekst voor kinderen versus tekst voor wetenschappers verschilt vooral in...",
+   "opties": [
+    "Moeilijkheidsgraad van woorden",
+    "Aantal pagina's van het boek",
+    "Kleur van het papier en de kaft",
+    "Land waar de tekst gedrukt is"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 1,
+   "vraag": 35,
+   "soort": "L2K",
+   "q": "Het doel van een reclame-tekst is...",
+   "opties": [
+    "Kopers overtuigen iets te kopen",
+    "Informeren neutraal",
+    "Entertainen met verhaal",
+    "Wetenschap uitleggen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 1,
+   "vraag": 37,
+   "soort": "L2",
+   "q": "Een samenvatting van een tekst...",
+   "opties": [
+    "Geeft de hoofdpunten kort weer",
+    "Is langer dan de tekst",
+    "Bevat alleen citaten",
+    "Bevat alleen vragen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 1,
+   "vraag": 38,
+   "soort": "L2",
+   "q": "*'Egels houden een winterslaap. In de herfst eten ze extra veel om vet op te slaan. Van november tot maart slapen ze in een nest van bladeren.'* Waarom eten ege",
+   "opties": [
+    "Om vet op te slaan voor de winterslaap",
+    "Omdat er in de herfst meer eten is",
+    "Omdat ze dan jongen krijgen",
+    "Omdat bladeren lekker zijn"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 1,
+   "vraag": 50,
+   "soort": "L2",
+   "q": "*'In de bieb is het stil. Mensen lezen of werken er. Toch hoor je soms gefluister bij de balie.'* Wat doet het woord toch in deze tekst?",
+   "opties": [
+    "Het geeft een uitzondering op de stilte aan",
+    "Het somt een extra voordeel op",
+    "Het geeft de oorzaak van de stilte",
+    "Het sluit de tekst af"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 2,
+   "vraag": 22,
+   "soort": "S",
+   "q": "Welk woord is goed gespeld: 'eiland' of 'ijland'?",
+   "opties": [
+    "eiland",
+    "ijland",
+    "Beide",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 2,
+   "vraag": 27,
+   "soort": "S",
+   "q": "Welk woord is goed gespeld: 'station' of 'stasion'?",
+   "opties": [
+    "station",
+    "stasion",
+    "Beide",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 2,
+   "vraag": 33,
+   "soort": "S",
+   "q": "Welk verkleinwoord is goed: 'huisje' of 'huisie'?",
+   "opties": [
+    "huisje",
+    "huisie",
+    "Beide",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Wat zijn aanhalingstekens voor?",
+   "opties": [
+    "Om aan te geven wat iemand zegt",
+    "Om sommen te tellen",
+    "Om hoofdletters te maken",
+    "Om alinea's te scheiden"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 3,
+   "vraag": 13,
+   "soort": "S",
+   "q": "Wat is het werkwoord in 'Lisa rent hard'?",
+   "opties": [
+    "rent",
+    "Lisa",
+    "hard",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 3,
+   "vraag": 14,
+   "soort": "S",
+   "q": "Wat is het lijdend voorwerp in 'Ik eet een appel'?",
+   "opties": [
+    "een appel",
+    "Ik",
+    "eet",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 3,
+   "vraag": 42,
+   "soort": "L2",
+   "q": "Wat is het onderwerp in: *'De kinderen van groep 8 oefenen elke dag.'*?",
+   "opties": [
+    "De kinderen van groep 8",
+    "oefenen",
+    "elke dag",
+    "groep 8"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-taal-g8",
+   "file": "./doorstroomtoetsTaalG8.js",
+   "stap": 3,
+   "vraag": 46,
+   "soort": "L2",
+   "q": "Welke zin staat in de lijdende vorm (passief)?",
+   "opties": [
+    "De taart wordt door oma gebakken.",
+    "Oma bakt een taart.",
+    "Oma gaat een taart bakken.",
+    "De taart van oma is lekker."
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}

@@ -1,0 +1,539 @@
+{
+ "bestanden": [
+  "./samenvattenHoofdgedachtePo.js",
+  "./korteTekstenSnappenG4.js",
+  "./tekstverbandenOorzaakGevolgPo.js",
+  "./woordbetekenisContextPo.js",
+  "./tekstdoelSchrijversdoelPo.js"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "korte-teksten-snappen-g4",
+   "file": "./korteTekstenSnappenG4.js",
+   "stap": 3,
+   "vraag": 7,
+   "soort": "L2",
+   "q": "*Het begon te sneeuwen. Toen maakten Ali en Noa een sneeuwpop. Daarna gaven ze hem een wortel als neus.* Wat gebeurde er na het maken van de sneeuwpop?",
+   "opties": [
+    "de sneeuwpop kreeg een wortel als neus",
+    "het begon te sneeuwen",
+    "Ali en Noa gingen sleeën",
+    "Ali en Noa gingen naar binnen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "samenvatten-hoofdgedachte-po",
+   "file": "./samenvattenHoofdgedachtePo.js",
+   "stap": 0,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Tekst: 'Honden zijn loyaal. Ze beschermen je. Ze spelen graag.' Hoofdgedachte?",
+   "opties": [
+    "Honden zijn fijne huisdieren",
+    "Honden bijten soms",
+    "Katten zijn beter",
+    "Honden eten veel"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "samenvatten-hoofdgedachte-po",
+   "file": "./samenvattenHoofdgedachtePo.js",
+   "stap": 0,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Tekst: 'Een konijn heeft elke dag vers hooi en water nodig. Zijn hok moet je vaak schoonmaken. En hij wil graag buiten zijn hok rondhuppelen.' Hoofdgedachte?",
+   "opties": [
+    "Een konijn heeft veel zorg nodig",
+    "Een konijn eet hooi",
+    "Konijnen zijn bang voor honden",
+    "Alle dieren zijn leuk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "samenvatten-hoofdgedachte-po",
+   "file": "./samenvattenHoofdgedachtePo.js",
+   "stap": 0,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Tekst: 'Bomen zijn nuttig. Ze geven schaduw als het warm is. Vogels bouwen er hun nest in. En van hout maken we tafels en stoelen.' Hoofdgedachte?",
+   "opties": [
+    "Bomen zijn op veel manieren nuttig",
+    "Vogels bouwen nesten in bomen",
+    "Hout is heel zwaar",
+    "De natuur is groot"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "samenvatten-hoofdgedachte-po",
+   "file": "./samenvattenHoofdgedachtePo.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Tekst: 'Mensen drinken water voor gezondheid. Water spoelt afvalstoffen weg. Water zorgt voor hydratatie. Mijn opa drinkt 2 liter per dag.' Wat staat NIET in ee",
+   "opties": [
+    "Mijn opa's 2 liter per dag",
+    "Mensen drinken water",
+    "Water spoelt afval",
+    "Hydratatie"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "samenvatten-hoofdgedachte-po",
+   "file": "./samenvattenHoofdgedachtePo.js",
+   "stap": 4,
+   "vraag": 2,
+   "soort": "S",
+   "q": "Wat is NIET een goede samenvattingsstrategie?",
+   "opties": [
+    "Letterlijk kopiëren van zinnen",
+    "Schrijven in je eigen woorden",
+    "Alleen de hoofdpunten kiezen",
+    "Het kort en duidelijk houden"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "samenvatten-hoofdgedachte-po",
+   "file": "./samenvattenHoofdgedachtePo.js",
+   "stap": 4,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Hoofdgedachte staat vaak in:",
+   "opties": [
+    "Titel of eerste zin",
+    "Voetnoten",
+    "Plaatjes",
+    "Bibliografie"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "samenvatten-hoofdgedachte-po",
+   "file": "./samenvattenHoofdgedachtePo.js",
+   "stap": 4,
+   "vraag": 7,
+   "soort": "L2",
+   "q": "Tekst: 'Veel scholen verbieden mobieltjes in de klas. Studies tonen dat kinderen zich daardoor beter concentreren. Dus is dit verbod een goede zaak.' — Wat is d",
+   "opties": [
+    "Mobielverbod op school is positief",
+    "Mobieltjes zijn duur",
+    "Scholen zijn streng",
+    "Kinderen vinden het oneerlijk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "samenvatten-hoofdgedachte-po",
+   "file": "./samenvattenHoofdgedachtePo.js",
+   "stap": 4,
+   "vraag": 12,
+   "soort": "L2",
+   "q": "Welke vraag stel je om de hoofdgedachte te vinden?",
+   "opties": [
+    "Waar gaat de tekst PRECIES over?",
+    "Welke kleur is het mooist?",
+    "Hoeveel woorden zijn er?",
+    "Wie schreef het?"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "samenvatten-hoofdgedachte-po",
+   "file": "./samenvattenHoofdgedachtePo.js",
+   "stap": 4,
+   "vraag": 14,
+   "soort": "L2K",
+   "q": "Welk verschil zit tussen hoofdzaak en bijzaak?",
+   "opties": [
+    "Hoofdzaak = nodig om kern te snappen; bijzaak = extra detail",
+    "Hoofdzaak staat altijd achteraan in de tekst",
+    "Bijzaak is altijd de langste zin",
+    "Er is geen verschil, ze betekenen hetzelfde"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "samenvatten-hoofdgedachte-po",
+   "file": "./samenvattenHoofdgedachtePo.js",
+   "stap": 4,
+   "vraag": 16,
+   "soort": "K",
+   "q": "Een goede samenvatting is geschreven in?",
+   "opties": [
+    "Eigen woorden",
+    "Letterlijk overgenomen zinnen",
+    "Engels",
+    "Steekwoorden zonder zinnen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "samenvatten-hoofdgedachte-po",
+   "file": "./samenvattenHoofdgedachtePo.js",
+   "stap": 4,
+   "vraag": 17,
+   "soort": "L2",
+   "q": "Welke informatie laat je WEG in een samenvatting?",
+   "opties": [
+    "Voorbeelden + details",
+    "Hoofdpunten",
+    "Conclusie",
+    "Onderwerp"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "samenvatten-hoofdgedachte-po",
+   "file": "./samenvattenHoofdgedachtePo.js",
+   "stap": 4,
+   "vraag": 21,
+   "soort": "L2",
+   "q": "Een goede samenvatting lees je als?",
+   "opties": [
+    "Compactere versie die je het origineel laat overslaan",
+    "Een gewone tekst die even lang is als het origineel",
+    "Een rijtje vragen over de tekst",
+    "Een lijst losse woorden zonder zinnen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "samenvatten-hoofdgedachte-po",
+   "file": "./samenvattenHoofdgedachtePo.js",
+   "stap": 4,
+   "vraag": 24,
+   "soort": "K",
+   "q": "Bij de Doorstroomtoets vragen ze vaak: 'Wat is de hoofdgedachte?'. Welk type vraag is dat?",
+   "opties": [
+    "Inferentie",
+    "Spelling",
+    "Tellen",
+    "Mening"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "samenvatten-hoofdgedachte-po",
+   "file": "./samenvattenHoofdgedachtePo.js",
+   "stap": 4,
+   "vraag": 26,
+   "soort": "L2",
+   "q": "Wat doe je als de eerste zin géén kernzin is?",
+   "opties": [
+    "Verder zoeken in de alinea",
+    "Stoppen",
+    "Zomaar een zin kiezen",
+    "Niet samenvatten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tekstdoel-schrijversdoel-po",
+   "file": "./tekstdoelSchrijversdoelPo.js",
+   "stap": 0,
+   "vraag": 6,
+   "soort": "L2",
+   "q": "Op de Doorstroomtoets staat: *\"Waarom heeft de schrijver deze tekst geschreven?\"* Waar let je dan het BEST op?",
+   "opties": [
+    "Op wat de schrijver bij de lezer wil bereiken",
+    "Op hoeveel alinea's de tekst heeft",
+    "Op hoe moeilijk de woorden zijn",
+    "Op wie de tekst heeft geschreven"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tekstdoel-schrijversdoel-po",
+   "file": "./tekstdoelSchrijversdoelPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "S",
+   "q": "*\"Morgen begint droog, maar in de middag trekken er buien over het land. De temperatuur ligt rond de achttien graden. Neem voor de zekerheid een jas mee.\"* — Vo",
+   "opties": [
+    "Voor iedereen",
+    "Alleen kinderen",
+    "Alleen boeren",
+    "Alleen piloten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tekstdoel-schrijversdoel-po",
+   "file": "./tekstdoelSchrijversdoelPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Waarom is de zin 'Ochtendkracht bevat zes verschillende granen' in een reclame-folder opgenomen?",
+   "opties": [
+    "Om de folder betrouwbaarder te laten klinken zodat je het product eerder koopt",
+    "Omdat de schrijver kinderen iets over granen wil leren",
+    "Omdat de wet verplicht dit op verpakkingen te zetten",
+    "Omdat de schrijver per ongeluk te veel informatie gaf"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tekstdoel-schrijversdoel-po",
+   "file": "./tekstdoelSchrijversdoelPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Aan welke aanwijzing zie je het DUIDELIJKST dat deze tekst niet voor volwassenen is geschreven?",
+   "opties": [
+    "De schrijver spreekt de lezer steeds aan met 'jij'",
+    "De tekst gaat over een dier",
+    "De tekst heeft vier alinea's",
+    "De tekst heeft een titel met een streepje"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tekstdoel-schrijversdoel-po",
+   "file": "./tekstdoelSchrijversdoelPo.js",
+   "stap": 3,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Stel: de egel-tekst eindigt zo: *'Wil je meer lezen over egels? Kijk op egelbeschermers.nl!'* Verandert dat het hoofddoel van de tekst?",
+   "opties": [
+    "Nee — drie alinea's informeren blijven het zwaarste deel",
+    "Ja — de tekst wordt nu een reclametekst",
+    "Ja — het doel wordt instrueren",
+    "Nee — dan is er helemaal geen doel meer"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tekstverbanden-oorzaak-gevolg-po",
+   "file": "./tekstverbandenOorzaakGevolgPo.js",
+   "stap": 0,
+   "vraag": 6,
+   "soort": "L2",
+   "q": "Wat is een oorzaak?",
+   "opties": [
+    "Waardoor iets komt — de oorzaak gebeurt eerst",
+    "Wat er helemaal op het laatst gebeurt",
+    "De mening van de schrijver",
+    "Een moeilijk woord in de tekst"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tekstverbanden-oorzaak-gevolg-po",
+   "file": "./tekstverbandenOorzaakGevolgPo.js",
+   "stap": 2,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "*\"Het vroor de hele nacht. De vijver lag 's ochtends vol ijs.\"* — Er staat geen signaalwoord. Wat is hier waar?",
+   "opties": [
+    "Er is tóch oorzaak en gevolg: het ijs kwam door het vriezen",
+    "Zonder signaalwoord kan er geen verband zijn",
+    "Het ijs is de oorzaak van het vriezen",
+    "De twee zinnen hebben niets met elkaar te maken"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tekstverbanden-oorzaak-gevolg-po",
+   "file": "./tekstverbandenOorzaakGevolgPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "*\"Jesse at een boterham. Daarna ging hij buiten voetballen.\"* — Is dit oorzaak en gevolg?",
+   "opties": [
+    "Nee — het gebeurt alleen ná elkaar, niet dóór elkaar",
+    "Ja — de boterham is de oorzaak van het voetballen",
+    "Ja — het voetballen is de oorzaak van de boterham",
+    "Dat kun je nooit weten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tekstverbanden-oorzaak-gevolg-po",
+   "file": "./tekstverbandenOorzaakGevolgPo.js",
+   "stap": 2,
+   "vraag": 6,
+   "soort": "L2",
+   "q": "*\"Bram vergat zijn zwemtas. Hij mocht niet meedoen met de zwemles.\"* — Wat is hier waar?",
+   "opties": [
+    "Er is oorzaak en gevolg, ook al staat er geen signaalwoord",
+    "Er is geen verband: het gebeurde toevallig na elkaar",
+    "De zwemles is de oorzaak",
+    "Bram vergat zijn tas doordat hij niet mocht meedoen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tekstverbanden-oorzaak-gevolg-po",
+   "file": "./tekstverbandenOorzaakGevolgPo.js",
+   "stap": 3,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Waardoor kwam het dat de oude kastanjeboom omviel?",
+   "opties": [
+    "Het hout was zacht en de storm was te zwaar",
+    "De conciërge zaagde de stam in schijven",
+    "Het fietsenhok stond in de weg",
+    "Buurman Ties is timmerman"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tekstverbanden-oorzaak-gevolg-po",
+   "file": "./tekstverbandenOorzaakGevolgPo.js",
+   "stap": 3,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Waardoor gaf de storm, die eerst alleen maar schade gaf, uiteindelijk toch iets nieuws op het schoolplein?",
+   "opties": [
+    "Doordat de stam van de omgevallen boom in schijven werd gezaagd voor zitjes",
+    "Doordat de gemeente een nieuw speeltoestel plaatste",
+    "Doordat de school geld ontving voor de schade",
+    "Doordat Ties een nieuwe boom plantte op het plein"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tekstverbanden-oorzaak-gevolg-po",
+   "file": "./tekstverbandenOorzaakGevolgPo.js",
+   "stap": 3,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Waardoor stond er binnen drie dagen een steviger fietsenhok dan ooit?",
+   "opties": [
+    "Buurman Ties en een paar vaders repareerden het samen",
+    "De storm was gaan liggen",
+    "Groep zeven maakte zitjes van de boomstam",
+    "De school stuurde alle ouders een bericht"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "tekstverbanden-oorzaak-gevolg-po",
+   "file": "./tekstverbandenOorzaakGevolgPo.js",
+   "stap": 3,
+   "vraag": 6,
+   "soort": "L2",
+   "q": "Welke keten van oorzaak en gevolg klopt volgens de tekst?",
+   "opties": [
+    "Zieke stam en storm → boom valt om → fietsenhok beschadigd",
+    "Fietsenhok beschadigd → boom valt om → storm",
+    "Boom valt om → storm → zieke stam",
+    "Zitjes gemaakt → boom valt om → fietsenhok beschadigd"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordbetekenis-context-po",
+   "file": "./woordbetekenisContextPo.js",
+   "stap": 0,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Lees: *\"Roos had al weken geoefend, maar liep toch op het podium te trillen van de zenuwen.\"* — Wat betekent 'zenuwen' hier?",
+   "opties": [
+    "Spanning en angst voor wat er kan misgaan",
+    "Pijn in de benen van het oefenen",
+    "Woede op het publiek",
+    "Vermoeidheid van het wachten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordbetekenis-context-po",
+   "file": "./woordbetekenisContextPo.js",
+   "stap": 1,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Wat betekent *'bioluminescentie'* in deze tekst?",
+   "opties": [
+    "Een dier geeft zelf licht met zijn lichaam",
+    "Een dier kan in het donker zien",
+    "Een dier verandert van kleur",
+    "Een dier leeft zonder zonlicht"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordbetekenis-context-po",
+   "file": "./woordbetekenisContextPo.js",
+   "stap": 1,
+   "vraag": 8,
+   "soort": "L2",
+   "q": "*\"Toch voelen sommige dieren zich er juist thuis. Hun lichaam is perfect aangepast aan deze omstandigheden.\"* — Wat betekent 'aangepast' hier?",
+   "opties": [
+    "Zo gebouwd dat ze er goed kunnen leven",
+    "Ingepakt in een speciale duikboot",
+    "Ziek geworden door de kou",
+    "Verhuisd naar ondiep water"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordbetekenis-context-po",
+   "file": "./woordbetekenisContextPo.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Lees: *\"Papa zet elke maand een deel van zijn geld op de bank, zodat het veilig bewaard blijft.\"* — Wat betekent 'bank' in deze zin?",
+   "opties": [
+    "Een bedrijf waar je geld kunt bewaren",
+    "Een meubel waar je op zit",
+    "Een ondiepe plek in zee",
+    "Een lange tafel in een werkplaats"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordbetekenis-context-po",
+   "file": "./woordbetekenisContextPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Wat betekent *'bedolven worden'* in deze tekst?",
+   "opties": [
+    "Helemaal bedekt raken onder een dikke laag",
+    "Ontruimd worden door hulpdiensten",
+    "Langzaam wegzakken in de grond",
+    "Verlaten worden door de bewoners"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}

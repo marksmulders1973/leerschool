@@ -1,0 +1,714 @@
+{
+ "bestanden": [
+  "./volgordeBewerkingen.js",
+  "./brugklasOrientatie.js",
+  "./gemiddeldenStatistiekPo.js",
+  "./omzettenBreukProcentKommaPo.js"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "omzetten-breuk-procent-komma-po",
+   "file": "./omzettenBreukProcentKommaPo.js",
+   "stap": 3,
+   "vraag": 4,
+   "soort": "H",
+   "q": "Is 0,3 groter of kleiner dan ¼?",
+   "opties": [
+    "groter",
+    "kleiner",
+    "even groot",
+    "dat kun je niet vergelijken"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel docenten op middelbare school klas 1 ongeveer?",
+   "opties": [
+    "10-15",
+    "1-2",
+    "5",
+    "30"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 0,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Hoeveel rapporten per jaar op middelbare school?",
+   "opties": [
+    "3-4",
+    "1",
+    "10",
+    "0"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 0,
+   "vraag": 7,
+   "soort": "L2",
+   "q": "Wat is een brugklaskamp?",
+   "opties": [
+    "Een uitje om je klas en school te leren kennen",
+    "Een toets aan het eind van het jaar",
+    "Een vak dat op je rooster staat",
+    "Een week zonder school in de zomer"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Wat is achterwaarts plannen?",
+   "opties": [
+    "Vanaf deadline terugtellen",
+    "Voorwaarts vanaf vandaag",
+    "Geen planning",
+    "Last-minute"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Pomodoro-techniek = ?",
+   "opties": [
+    "25 min werk + 5 min pauze",
+    "1 uur werk",
+    "Doorwerken zonder pauze",
+    "Geen techniek"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Beste slaap voor toets?",
+   "opties": [
+    "8 uur",
+    "All-nighter",
+    "3 uur",
+    "0 uur"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 2,
+   "vraag": 4,
+   "soort": "S",
+   "q": "Wat hoort bij goed samenvatten?",
+   "opties": [
+    "In eigen woorden opschrijven",
+    "De hele tekst overschrijven",
+    "Alleen de plaatjes overtrekken",
+    "Niets opschrijven"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 2,
+   "vraag": 7,
+   "soort": "S",
+   "q": "Wat werkt beter dan een tekst vijf keer overlezen?",
+   "opties": [
+    "Lezen en jezelf vragen stellen",
+    "De tekst nog vaker lezen",
+    "Alleen de titel lezen",
+    "De tekst snel doorbladeren"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 2,
+   "vraag": 9,
+   "soort": "S",
+   "q": "Wat helpt om nieuwe stof beter te onthouden?",
+   "opties": [
+    "Koppelen aan iets wat je al kent",
+    "Alleen snel doorbladeren",
+    "Steeds iets anders tegelijk doen",
+    "Pas op de toetsdag beginnen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Hoe leer je woordjes vreemde talen het best?",
+   "opties": [
+    "Klein per dag (15 min)",
+    "1 uur per week",
+    "All-nighter",
+    "Niet doen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Is het normaal als de brugklas in het begin druk en spannend voelt?",
+   "opties": [
+    "Ja, dat hebben veel brugklassers — het went",
+    "Nee, dat heeft bijna niemand",
+    "Alleen als je slecht bent op school",
+    "Dat gaat nooit meer over"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 3,
+   "vraag": 5,
+   "soort": "S",
+   "q": "Hoe leer je het best voor wiskunde?",
+   "opties": [
+    "Veel opgaven maken",
+    "Alleen de uitleg lezen",
+    "Alles op de laatste avond doen",
+    "Woordjes stampen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 3,
+   "vraag": 6,
+   "soort": "S",
+   "q": "Wat helpt je goed bij geschiedenis?",
+   "opties": [
+    "Een tijdlijn maken",
+    "Alleen sommen oefenen",
+    "Je gymspullen inpakken",
+    "Het boek dicht laten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 3,
+   "vraag": 7,
+   "soort": "S",
+   "q": "De ene docent is streng, de andere is grappig. Wat doe je?",
+   "opties": [
+    "Je houding per les aanpassen",
+    "Brutaal zijn bij de strenge docent",
+    "Alleen opletten bij de grappige",
+    "Bij iedereen over de docenten klagen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 4,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel slaap voor brugklas-leeftijd?",
+   "opties": [
+    "8-10 uur",
+    "4-5 uur",
+    "12+ uur",
+    "Geen vast aantal"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 4,
+   "vraag": 3,
+   "soort": "S",
+   "q": "Wat is Kindertelefoon-nummer?",
+   "opties": [
+    "0800-0432",
+    "112",
+    "0900-9292",
+    "Onbekend"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 5,
+   "vraag": 0,
+   "soort": "SK",
+   "q": "Wanneer Magister checken?",
+   "opties": [
+    "Dagelijks",
+    "Eens per week",
+    "Aan eind maand",
+    "Nooit"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 5,
+   "vraag": 4,
+   "soort": "K",
+   "q": "Hoeveel docenten ongeveer in klas 1 middelbare school?",
+   "opties": [
+    "10-15",
+    "1",
+    "5",
+    "30"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 5,
+   "vraag": 6,
+   "soort": "K",
+   "q": "Op de middelbare school heb je meestal hoeveel docenten per dag?",
+   "opties": [
+    "5-7",
+    "1",
+    "2",
+    "20"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 5,
+   "vraag": 8,
+   "soort": "K",
+   "q": "Cijfers op middelbare school zijn meestal?",
+   "opties": [
+    "1 tot 10",
+    "A tot F",
+    "Goed/voldoende/onvoldoende",
+    "Sterren"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 5,
+   "vraag": 9,
+   "soort": "L2",
+   "q": "Welk cijfer is een voldoende?",
+   "opties": [
+    "5,5 of hoger",
+    "4",
+    "3",
+    "5,0"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 5,
+   "vraag": 11,
+   "soort": "S",
+   "q": "Bij spaced repetition doe je?",
+   "opties": [
+    "Kort herhalen, verspreid over dagen",
+    "Alles op één avond lang stampen",
+    "Eén keer goed lezen, dat is genoeg",
+    "Alleen leren in de les op school"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 5,
+   "vraag": 12,
+   "soort": "S",
+   "q": "Wat is interleaving?",
+   "opties": [
+    "Onderwerpen door elkaar oefenen",
+    "Eén vak per dag, niets anders",
+    "Eerst slapen, daarna leren",
+    "Alleen het makkelijkste oefenen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brugklas-orientatie",
+   "file": "./brugklasOrientatie.js",
+   "stap": 5,
+   "vraag": 19,
+   "soort": "L2S",
+   "q": "Bij 'leren leren' wat is de belangrijkste tip?",
+   "opties": [
+    "Begrijp eerst, dan onthouden",
+    "Stampen zonder begrip",
+    "Alleen samenvattingen",
+    "Plaatjes kijken"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gemiddelden-statistiek-po",
+   "file": "./gemiddeldenStatistiekPo.js",
+   "stap": 0,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Welke zin klopt over een gemiddelde?",
+   "opties": [
+    "Het is een berekening, geen 'echt' cijfer",
+    "Het is altijd een rond getal",
+    "Het is altijd hetzelfde als de modus",
+    "Het is altijd het hoogste"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gemiddelden-statistiek-po",
+   "file": "./gemiddeldenStatistiekPo.js",
+   "stap": 0,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Welk zinnetje gaat over een gemiddelde?",
+   "opties": [
+    "In juli was het hier per dag ongeveer 22 graden",
+    "Op maandag was het 25 graden",
+    "De warmste dag van juli was 31 graden",
+    "In juli kwam 20 graden het vaakst voor"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gemiddelden-statistiek-po",
+   "file": "./gemiddeldenStatistiekPo.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Mediaan van: 12, 5, 8, 3, 10, 7, 9 (7 getallen)?",
+   "opties": [
+    "8",
+    "7",
+    "9",
+    "5"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gemiddelden-statistiek-po",
+   "file": "./gemiddeldenStatistiekPo.js",
+   "stap": 5,
+   "vraag": 5,
+   "soort": "S",
+   "q": "Kan een gemiddelde een kommagetal zijn (dus geen heel getal)?",
+   "opties": [
+    "Ja, bijvoorbeeld bij 6 en 7",
+    "Nooit",
+    "Alleen bij negatieve getallen",
+    "Alleen bij heel veel getallen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gemiddelden-statistiek-po",
+   "file": "./gemiddeldenStatistiekPo.js",
+   "stap": 5,
+   "vraag": 8,
+   "soort": "K",
+   "q": "Mediaan van 5, 2, 8, 1, 4?",
+   "opties": [
+    "4",
+    "2",
+    "8",
+    "5"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gemiddelden-statistiek-po",
+   "file": "./gemiddeldenStatistiekPo.js",
+   "stap": 5,
+   "vraag": 9,
+   "soort": "K",
+   "q": "Mediaan van 4, 6, 8, 10?",
+   "opties": [
+    "7",
+    "6",
+    "8",
+    "9"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gemiddelden-statistiek-po",
+   "file": "./gemiddeldenStatistiekPo.js",
+   "stap": 5,
+   "vraag": 11,
+   "soort": "K",
+   "q": "5 toetsen, gemiddelde 7. Som?",
+   "opties": [
+    "35",
+    "12",
+    "7",
+    "75"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gemiddelden-statistiek-po",
+   "file": "./gemiddeldenStatistiekPo.js",
+   "stap": 5,
+   "vraag": 12,
+   "soort": "K",
+   "q": "Bereik (grootste min kleinste getal) van 12, 5, 18, 9, 3?",
+   "opties": [
+    "15",
+    "18",
+    "12",
+    "3"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gemiddelden-statistiek-po",
+   "file": "./gemiddeldenStatistiekPo.js",
+   "stap": 5,
+   "vraag": 13,
+   "soort": "L2K",
+   "q": "Modus van 1,2,3,4,5 (alle 1×)?",
+   "opties": [
+    "Geen modus",
+    "1",
+    "5",
+    "3"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gemiddelden-statistiek-po",
+   "file": "./gemiddeldenStatistiekPo.js",
+   "stap": 5,
+   "vraag": 15,
+   "soort": "SK",
+   "q": "Wanneer is mediaan zinvoller dan gemiddelde?",
+   "opties": [
+    "Bij uitschieters",
+    "Bij weinig getallen",
+    "Nooit",
+    "Altijd"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gemiddelden-statistiek-po",
+   "file": "./gemiddeldenStatistiekPo.js",
+   "stap": 5,
+   "vraag": 17,
+   "soort": "S",
+   "q": "Welke maat verandert het meest als je 1 grote uitschieter toevoegt?",
+   "opties": [
+    "Gemiddelde",
+    "Mediaan",
+    "Modus",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gemiddelden-statistiek-po",
+   "file": "./gemiddeldenStatistiekPo.js",
+   "stap": 5,
+   "vraag": 19,
+   "soort": "K",
+   "q": "Gem van 4 en 8?",
+   "opties": [
+    "6",
+    "12",
+    "4",
+    "2"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "gemiddelden-statistiek-po",
+   "file": "./gemiddeldenStatistiekPo.js",
+   "stap": 5,
+   "vraag": 20,
+   "soort": "SK",
+   "q": "Gemiddelde 5, modus 5 én mediaan 5 — kan dat?",
+   "opties": [
+    "Ja, dat kan",
+    "Nooit",
+    "Alleen bij 1 getal",
+    "Alleen bij 2 getallen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "omzetten-breuk-procent-komma-po",
+   "file": "./omzettenBreukProcentKommaPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Wat is 1/5 in procent?",
+   "opties": [
+    "20%",
+    "15%",
+    "5%",
+    "50%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "volgorde-bewerkingen",
+   "file": "./volgordeBewerkingen.js",
+   "stap": 0,
+   "vraag": 1,
+   "soort": "S",
+   "q": "Wat doe je eerst als er + en × in een som staan?",
+   "opties": [
+    "Vermenigvuldigen",
+    "Optellen",
+    "Maakt niet uit",
+    "Van links naar rechts"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "volgorde-bewerkingen",
+   "file": "./volgordeBewerkingen.js",
+   "stap": 6,
+   "vraag": 13,
+   "soort": "K",
+   "q": "Bereken: 8 + 4 ÷ 2 = ?",
+   "opties": [
+    "10",
+    "6",
+    "12",
+    "16"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "volgorde-bewerkingen",
+   "file": "./volgordeBewerkingen.js",
+   "stap": 6,
+   "vraag": 18,
+   "soort": "K",
+   "q": "Bereken: 5 + (8 − 3) × 2 = ?",
+   "opties": [
+    "15",
+    "16",
+    "26",
+    "13"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "volgorde-bewerkingen",
+   "file": "./volgordeBewerkingen.js",
+   "stap": 6,
+   "vraag": 19,
+   "soort": "K",
+   "q": "Bereken: 20 ÷ 4 × 2 = ?",
+   "opties": [
+    "10",
+    "2,5",
+    "160",
+    "5"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "volgorde-bewerkingen",
+   "file": "./volgordeBewerkingen.js",
+   "stap": 6,
+   "vraag": 21,
+   "soort": "S",
+   "q": "Welke is gelijkwaardig: × en ÷ of + en −?",
+   "opties": [
+    "Beide paren onderling gelijk",
+    "Geen van beide paren gelijk",
+    "Alleen × en ÷ zijn gelijk",
+    "Alleen + en − zijn gelijk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}

@@ -1,0 +1,426 @@
+{
+ "bestanden": [
+  "./procentenPo.js",
+  "./negatieveGetallenPo.js",
+  "./tafelsPo.js",
+  "./metenGewichtInhoudTijdPo.js"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "negatieve-getallen-po",
+   "file": "./negatieveGetallenPo.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "K",
+   "q": "4 − 6 = ?",
+   "opties": [
+    "−2",
+    "2",
+    "10",
+    "−10"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "negatieve-getallen-po",
+   "file": "./negatieveGetallenPo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Verschil tussen +12 °C en −5 °C?",
+   "opties": [
+    "17",
+    "7",
+    "−17",
+    "−7"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "negatieve-getallen-po",
+   "file": "./negatieveGetallenPo.js",
+   "stap": 4,
+   "vraag": 8,
+   "soort": "K",
+   "q": "(−5) × 3 = ?",
+   "opties": [
+    "−15",
+    "+15",
+    "−8",
+    "+8"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "negatieve-getallen-po",
+   "file": "./negatieveGetallenPo.js",
+   "stap": 4,
+   "vraag": 13,
+   "soort": "K",
+   "q": "5 − 8 = ?",
+   "opties": [
+    "−3",
+    "3",
+    "−13",
+    "13"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "negatieve-getallen-po",
+   "file": "./negatieveGetallenPo.js",
+   "stap": 4,
+   "vraag": 14,
+   "soort": "K",
+   "q": "Welke is grootst?",
+   "opties": [
+    "3",
+    "0",
+    "−1",
+    "−5"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "negatieve-getallen-po",
+   "file": "./negatieveGetallenPo.js",
+   "stap": 4,
+   "vraag": 15,
+   "soort": "K",
+   "q": "Van −10 naar −3, hoeveel opgewarmd?",
+   "opties": [
+    "7°",
+    "−7°",
+    "13°",
+    "3°"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "negatieve-getallen-po",
+   "file": "./negatieveGetallenPo.js",
+   "stap": 4,
+   "vraag": 17,
+   "soort": "K",
+   "q": "Wat is tegengestelde van −7?",
+   "opties": [
+    "7",
+    "−7",
+    "0",
+    "14"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "negatieve-getallen-po",
+   "file": "./negatieveGetallenPo.js",
+   "stap": 4,
+   "vraag": 18,
+   "soort": "K",
+   "q": "Hoogte mens: 1,5 m boven zee. Duiker −3 m. Verschil?",
+   "opties": [
+    "4,5 m",
+    "1,5 m",
+    "−4,5 m",
+    "−1,5 m"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "negatieve-getallen-po",
+   "file": "./negatieveGetallenPo.js",
+   "stap": 4,
+   "vraag": 19,
+   "soort": "K",
+   "q": "Welke getallenrij is kleinst → grootst?",
+   "opties": [
+    "−5, −2, 0, 3",
+    "3, 0, −2, −5",
+    "0, −2, −5, 3",
+    "−2, −5, 0, 3"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "negatieve-getallen-po",
+   "file": "./negatieveGetallenPo.js",
+   "stap": 4,
+   "vraag": 20,
+   "soort": "SK",
+   "q": "Een hoogte onder zeeniveau is…",
+   "opties": [
+    "Negatief",
+    "Positief",
+    "Nul",
+    "Niet relevant"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "negatieve-getallen-po",
+   "file": "./negatieveGetallenPo.js",
+   "stap": 4,
+   "vraag": 21,
+   "soort": "K",
+   "q": "−7 + 7 = ?",
+   "opties": [
+    "0",
+    "−14",
+    "14",
+    "7"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "negatieve-getallen-po",
+   "file": "./negatieveGetallenPo.js",
+   "stap": 4,
+   "vraag": 22,
+   "soort": "K",
+   "q": "−3 × 2 = ?",
+   "opties": [
+    "−6",
+    "6",
+    "−1",
+    "−5"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "negatieve-getallen-po",
+   "file": "./negatieveGetallenPo.js",
+   "stap": 4,
+   "vraag": 23,
+   "soort": "K",
+   "q": "−2 × −3 = ?",
+   "opties": [
+    "6",
+    "−6",
+    "−5",
+    "5"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "negatieve-getallen-po",
+   "file": "./negatieveGetallenPo.js",
+   "stap": 4,
+   "vraag": 24,
+   "soort": "K",
+   "q": "Welk getal ligt 2 onder −5?",
+   "opties": [
+    "−7",
+    "−3",
+    "2",
+    "7"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "negatieve-getallen-po",
+   "file": "./negatieveGetallenPo.js",
+   "stap": 4,
+   "vraag": 25,
+   "soort": "K",
+   "q": "Verschil tussen −4 en 6?",
+   "opties": [
+    "10",
+    "2",
+    "−10",
+    "−2"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "negatieve-getallen-po",
+   "file": "./negatieveGetallenPo.js",
+   "stap": 4,
+   "vraag": 27,
+   "soort": "K",
+   "q": "−1 − (−4) = ?",
+   "opties": [
+    "3",
+    "−5",
+    "5",
+    "−3"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "procenten-po",
+   "file": "./procentenPo.js",
+   "stap": 6,
+   "vraag": 6,
+   "soort": "K",
+   "q": "10% van 50 = ?",
+   "opties": [
+    "5",
+    "10",
+    "50",
+    "0,5"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "procenten-po",
+   "file": "./procentenPo.js",
+   "stap": 6,
+   "vraag": 7,
+   "soort": "K",
+   "q": "25% van 80 = ?",
+   "opties": [
+    "20",
+    "25",
+    "40",
+    "2"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "procenten-po",
+   "file": "./procentenPo.js",
+   "stap": 6,
+   "vraag": 9,
+   "soort": "K",
+   "q": "Welk percentage is 0,5?",
+   "opties": [
+    "50%",
+    "5%",
+    "½%",
+    "500%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "procenten-po",
+   "file": "./procentenPo.js",
+   "stap": 6,
+   "vraag": 10,
+   "soort": "K",
+   "q": "5% van 200 = ?",
+   "opties": [
+    "10",
+    "5",
+    "20",
+    "100"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "procenten-po",
+   "file": "./procentenPo.js",
+   "stap": 6,
+   "vraag": 11,
+   "soort": "K",
+   "q": "Stijging 50 → 75 is welk percentage?",
+   "opties": [
+    "50%",
+    "25%",
+    "20%",
+    "75%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "procenten-po",
+   "file": "./procentenPo.js",
+   "stap": 6,
+   "vraag": 12,
+   "soort": "K",
+   "q": "Welk percentage is ¼?",
+   "opties": [
+    "25%",
+    "20%",
+    "½%",
+    "75%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "procenten-po",
+   "file": "./procentenPo.js",
+   "stap": 6,
+   "vraag": 14,
+   "soort": "K",
+   "q": "30% van 200 = ?",
+   "opties": [
+    "60",
+    "30",
+    "20",
+    "6"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "procenten-po",
+   "file": "./procentenPo.js",
+   "stap": 6,
+   "vraag": 16,
+   "soort": "K",
+   "q": "Een fles van €5 wordt 10% goedkoper. Nieuwe prijs?",
+   "opties": [
+    "€4,50",
+    "€4,00",
+    "€5,50",
+    "€10"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "procenten-po",
+   "file": "./procentenPo.js",
+   "stap": 6,
+   "vraag": 17,
+   "soort": "K",
+   "q": "Hoeveel % is 1 op 10?",
+   "opties": [
+    "10%",
+    "1%",
+    "100%",
+    "0,1%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "procenten-po",
+   "file": "./procentenPo.js",
+   "stap": 6,
+   "vraag": 18,
+   "soort": "K",
+   "q": "Hoeveel % is 50 op 200?",
+   "opties": [
+    "25%",
+    "50%",
+    "100%",
+    "75%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}

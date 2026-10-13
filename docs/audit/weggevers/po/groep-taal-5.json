@@ -1,0 +1,523 @@
+{
+ "bestanden": [
+  "./spellingEiIjAuOu.js",
+  "./spreekwoordenUitdrukkingenPo.js",
+  "./schrijvenTekstenPo.js",
+  "./soortenTekstenPo.js",
+  "./signaalwoordenVerbandenPo.js"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "schrijven-teksten-po",
+   "file": "./schrijvenTekstenPo.js",
+   "stap": 0,
+   "vraag": 8,
+   "soort": "L2",
+   "q": "Volgens de toets-truc: waar vind je het tekstdoel meestal?",
+   "opties": [
+    "In de eerste en de laatste zin",
+    "In de langste zin",
+    "Midden in de tekst",
+    "In de kleinste letters"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schrijven-teksten-po",
+   "file": "./schrijvenTekstenPo.js",
+   "stap": 1,
+   "vraag": 6,
+   "soort": "L2",
+   "q": "Welke afsluiting past bij een formele brief aan een bedrijf?",
+   "opties": [
+    "Met vriendelijke groet, Noor Bakker",
+    "Groetjes en tot snel, Noor",
+    "Liefs en een knuffel, Noor",
+    "Doei doei, je Noor"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schrijven-teksten-po",
+   "file": "./schrijvenTekstenPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Wat hoort NIET in een samenvatting?",
+   "opties": [
+    "Voorbeelden uit de tekst",
+    "De hoofdgedachte",
+    "Kern-zinnen per alinea",
+    "Conclusie"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schrijven-teksten-po",
+   "file": "./schrijvenTekstenPo.js",
+   "stap": 2,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "*'Honden zijn fijne huisdieren. Ze zijn trouw en spelen graag. Mijn hond Bobby haalt bijvoorbeeld de krant. Ook passen ze goed op het huis.'* Welke zin laat je ",
+   "opties": [
+    "Mijn hond Bobby haalt bijvoorbeeld de krant.",
+    "Honden zijn fijne huisdieren.",
+    "Ze zijn trouw en spelen graag.",
+    "Ook passen ze goed op het huis."
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schrijven-teksten-po",
+   "file": "./schrijvenTekstenPo.js",
+   "stap": 4,
+   "vraag": 0,
+   "soort": "L2S",
+   "q": "Welke opbouw past bij een goed opiniestuk?",
+   "opties": [
+    "Mening → argumenten → tegenargument-weerleggen → slot",
+    "Inleiding → midden → einde zonder mening",
+    "Alleen feiten zonder mening",
+    "Stappen 1-2-3 zoals een handleiding"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schrijven-teksten-po",
+   "file": "./schrijvenTekstenPo.js",
+   "stap": 4,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Je schrijft een brief aan meneer Smit van de bibliotheek, die je niet kent. Welke aanhef past?",
+   "opties": [
+    "Beste meneer Smit,",
+    "Hoi Smit,",
+    "Hé meneer,",
+    "Lieve Smit,"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "signaalwoorden-verbanden-po",
+   "file": "./signaalwoordenVerbandenPo.js",
+   "stap": 2,
+   "vraag": 6,
+   "soort": "L2",
+   "q": "*Papa kookte het eten. Intussen dekte ik de tafel.* Wat betekent 'intussen' hier?",
+   "opties": [
+    "op hetzelfde moment",
+    "daarvoor",
+    "als laatste",
+    "daardoor"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "soorten-teksten-po",
+   "file": "./soortenTekstenPo.js",
+   "stap": 0,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Welke van deze is een informatieve tekst?",
+   "opties": [
+    "een nieuwsbericht over het weer van morgen",
+    "een recept voor pannenkoeken",
+    "een sprookje over een draak",
+    "een advertentie voor sportschoenen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "soorten-teksten-po",
+   "file": "./soortenTekstenPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Welke is een instructieve tekst?",
+   "opties": [
+    "Zo maak je een vlieger: pak een vel papier en vouw het dubbel...",
+    "Er was eens een vlieger die kon praten...",
+    "Vliegers werden vroeger in China uitgevonden.",
+    "De mooiste vlieger die ik ooit zag, was rood."
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "soorten-teksten-po",
+   "file": "./soortenTekstenPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Welke is een betogende tekst?",
+   "opties": [
+    "Iedereen zou moeten recyclen, want plastic vervuilt de zee.",
+    "Recyclen is het hergebruiken van afval.",
+    "Zo scheid je je afval: doe glas in de glasbak...",
+    "Er was eens een dorp zonder afval."
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "soorten-teksten-po",
+   "file": "./soortenTekstenPo.js",
+   "stap": 2,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Wat is het kenmerk van een betogende tekst?",
+   "opties": [
+    "een mening met argumenten ('want', 'daarom')",
+    "stappen die je moet uitvoeren",
+    "personages in een verzonnen verhaal",
+    "feiten over de wereld"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "soorten-teksten-po",
+   "file": "./soortenTekstenPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Hoe weet je dat een tekst instructief is?",
+   "opties": [
+    "hij vertelt stap voor stap wat je moet doen",
+    "hij geeft de mening van de schrijver",
+    "hij vertelt een verzonnen verhaal",
+    "hij geeft het laatste nieuws"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spelling-ei-ij-au-ou",
+   "file": "./spellingEiIjAuOu.js",
+   "stap": 8,
+   "vraag": 7,
+   "soort": "K",
+   "q": "Schrijf juist: 'Een ___ in de pan.'",
+   "opties": [
+    "ei",
+    "ij",
+    "ey",
+    "ai"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spelling-ei-ij-au-ou",
+   "file": "./spellingEiIjAuOu.js",
+   "stap": 8,
+   "vraag": 11,
+   "soort": "K",
+   "q": "Schrijf juist: 'Wat een bl___we lucht!'",
+   "opties": [
+    "au",
+    "ou",
+    "auw",
+    "ouw"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spelling-ei-ij-au-ou",
+   "file": "./spellingEiIjAuOu.js",
+   "stap": 8,
+   "vraag": 13,
+   "soort": "K",
+   "q": "Schrijf juist: 'De p___s woont in Rome.'",
+   "opties": [
+    "au",
+    "ou",
+    "aw",
+    "ow"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spreekwoorden-uitdrukkingen-po",
+   "file": "./spreekwoordenUitdrukkingenPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "*'De koe bij de horens vatten'* — wat?",
+   "opties": [
+    "Een probleem direct aanpakken",
+    "Een probleem uit de weg gaan",
+    "Heel sterk zijn",
+    "Een dier vastpakken"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spreekwoorden-uitdrukkingen-po",
+   "file": "./spreekwoordenUitdrukkingenPo.js",
+   "stap": 1,
+   "vraag": 6,
+   "soort": "L2",
+   "q": "*'Met de mond vol tanden staan'* — wat betekent dit?",
+   "opties": [
+    "Niet weten wat je moet zeggen",
+    "Heel veel praten",
+    "Een nieuwe tand krijgen",
+    "Met volle mond eten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spreekwoorden-uitdrukkingen-po",
+   "file": "./spreekwoordenUitdrukkingenPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "*'Hoge bomen vangen veel wind'* — wat betekent?",
+   "opties": [
+    "Bekende mensen krijgen veel kritiek",
+    "Grote bomen waaien snel om",
+    "Bekende mensen krijgen veel hulp",
+    "Wie groot is, is sterk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spreekwoorden-uitdrukkingen-po",
+   "file": "./spreekwoordenUitdrukkingenPo.js",
+   "stap": 2,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "*'Haastige spoed is zelden goed'* — wat is de les?",
+   "opties": [
+    "Als je te snel werkt, maak je fouten",
+    "Wie snel werkt, is eerder klaar",
+    "Je moet altijd op tijd komen",
+    "Langzaam werken is saai"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spreekwoorden-uitdrukkingen-po",
+   "file": "./spreekwoordenUitdrukkingenPo.js",
+   "stap": 2,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "*'In nood leert men zijn vrienden kennen'* — wat is de les?",
+   "opties": [
+    "Echte vrienden helpen je als het moeilijk is",
+    "Op een feest maak je nieuwe vrienden",
+    "Vrienden moet je niet om hulp vragen",
+    "Hoe meer vrienden, hoe beter"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spreekwoorden-uitdrukkingen-po",
+   "file": "./spreekwoordenUitdrukkingenPo.js",
+   "stap": 4,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Hoe werkt letterlijk uitsluiten bij de Doorstroomtoets?",
+   "opties": [
+    "Je streept de letterlijke betekenis weg",
+    "Je kiest juist de letterlijke betekenis",
+    "Je streept de figuurlijke betekenis weg",
+    "Je kiest het langste antwoord"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spreekwoorden-uitdrukkingen-po",
+   "file": "./spreekwoordenUitdrukkingenPo.js",
+   "stap": 4,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "*'Komt tijd, komt raad'* — wat betekent dit?",
+   "opties": [
+    "Wacht maar af, er komt vanzelf een oplossing",
+    "Je moet altijd op tijd komen",
+    "Vraag meteen iemand om advies",
+    "Tijd is het belangrijkste wat er is"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spreekwoorden-uitdrukkingen-po",
+   "file": "./spreekwoordenUitdrukkingenPo.js",
+   "stap": 5,
+   "vraag": 3,
+   "soort": "K",
+   "q": "*'Op rozen zitten'* — wat?",
+   "opties": [
+    "Het heel goed hebben",
+    "Het heel moeilijk hebben",
+    "Op een stekelige plek zitten",
+    "Van bloemen houden"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spreekwoorden-uitdrukkingen-po",
+   "file": "./spreekwoordenUitdrukkingenPo.js",
+   "stap": 5,
+   "vraag": 6,
+   "soort": "L2K",
+   "q": "*'De kogel is door de kerk.'* Wat betekent dit?",
+   "opties": [
+    "Er is definitief een besluit genomen",
+    "Er is iets kapotgeschoten",
+    "De kerkdienst is begonnen",
+    "Het besluit is nog niet genomen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spreekwoorden-uitdrukkingen-po",
+   "file": "./spreekwoordenUitdrukkingenPo.js",
+   "stap": 5,
+   "vraag": 7,
+   "soort": "SK",
+   "q": "*'Vele handen maken licht werk.'* — betekenis?",
+   "opties": [
+    "Samen gaat het makkelijker",
+    "Veel handen wegen samen weinig",
+    "Met veel lampen zie je beter",
+    "Alleen werken gaat het snelst"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spreekwoorden-uitdrukkingen-po",
+   "file": "./spreekwoordenUitdrukkingenPo.js",
+   "stap": 5,
+   "vraag": 8,
+   "soort": "K",
+   "q": "*'Aan zijn lot overlaten.'* — betekenis?",
+   "opties": [
+    "Iemand niet helpen",
+    "Een lot uit de loterij kopen",
+    "Iemand goed verzorgen",
+    "Iemand laten winnen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spreekwoorden-uitdrukkingen-po",
+   "file": "./spreekwoordenUitdrukkingenPo.js",
+   "stap": 5,
+   "vraag": 9,
+   "soort": "L2",
+   "q": "Wat is een figuurlijke uitdrukking?",
+   "opties": [
+    "Een zin die je niet letterlijk moet nemen",
+    "Een zin die je precies zo moet nemen",
+    "Een rekenformule met woorden",
+    "Een tekening bij een tekst"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spreekwoorden-uitdrukkingen-po",
+   "file": "./spreekwoordenUitdrukkingenPo.js",
+   "stap": 5,
+   "vraag": 11,
+   "soort": "K",
+   "q": "*'Op één lijn zitten.'* — betekenis?",
+   "opties": [
+    "Eens zijn",
+    "Wachten in een rij",
+    "Ruzie hebben",
+    "Naast elkaar in de bus zitten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spreekwoorden-uitdrukkingen-po",
+   "file": "./spreekwoordenUitdrukkingenPo.js",
+   "stap": 5,
+   "vraag": 14,
+   "soort": "K",
+   "q": "*'Een appeltje voor de dorst.'* — betekenis?",
+   "opties": [
+    "Geld bewaren voor later",
+    "Een appel voor als je dorst hebt",
+    "Iets lekkers voor tussendoor",
+    "Al je geld meteen uitgeven"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spreekwoorden-uitdrukkingen-po",
+   "file": "./spreekwoordenUitdrukkingenPo.js",
+   "stap": 5,
+   "vraag": 17,
+   "soort": "L2K",
+   "q": "*'Een open deur intrappen.'* — betekenis?",
+   "opties": [
+    "Iets zeggen dat iedereen al weet",
+    "Inbreken in een huis",
+    "Ergens boos binnenkomen",
+    "Iets heel nieuws vertellen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spreekwoorden-uitdrukkingen-po",
+   "file": "./spreekwoordenUitdrukkingenPo.js",
+   "stap": 5,
+   "vraag": 18,
+   "soort": "K",
+   "q": "*'Met twee maten meten.'* — betekenis?",
+   "opties": [
+    "Iets oneerlijk beoordelen",
+    "Iets twee keer nameten",
+    "Iedereen precies gelijk behandelen",
+    "Twee dingen tegelijk doen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "spreekwoorden-uitdrukkingen-po",
+   "file": "./spreekwoordenUitdrukkingenPo.js",
+   "stap": 5,
+   "vraag": 19,
+   "soort": "K",
+   "q": "*'Knollen voor citroenen verkopen.'* — betekenis?",
+   "opties": [
+    "Mensen bedriegen",
+    "Groente verkopen op de markt",
+    "Eerlijk zaken doen",
+    "Heel goedkoop verkopen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}

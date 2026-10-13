@@ -1,0 +1,1533 @@
+{
+ "bestanden": [
+  "./bekendeWetenschappersPo.js",
+  "./energiebronnenPo.js",
+  "./evolutieMensPo.js",
+  "./recyclenAfvalPo.js",
+  "./sterrenPlaneten.js",
+  "./weersvoorspellingPo.js",
+  "./pubertijdGroeiPo.js"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "bekende-wetenschappers-po",
+   "file": "./bekendeWetenschappersPo.js",
+   "stap": 0,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Wat is een heliocentrisch model?",
+   "opties": [
+    "Zon in middelpunt",
+    "Aarde in middelpunt",
+    "Maan in middelpunt",
+    "Melkweg in middelpunt"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-wetenschappers-po",
+   "file": "./bekendeWetenschappersPo.js",
+   "stap": 2,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Welk schip nam Darwin?",
+   "opties": [
+    "HMS Beagle",
+    "Titanic",
+    "Eendracht",
+    "Santa Maria"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-wetenschappers-po",
+   "file": "./bekendeWetenschappersPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Wie is vader van genetica?",
+   "opties": [
+    "Gregor Mendel",
+    "Darwin",
+    "Newton",
+    "Curie"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-wetenschappers-po",
+   "file": "./bekendeWetenschappersPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "L2K",
+   "q": "Wie ontdekte penicilline?",
+   "opties": [
+    "Alexander Fleming",
+    "Pasteur",
+    "Darwin",
+    "Curie"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-wetenschappers-po",
+   "file": "./bekendeWetenschappersPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "L2K",
+   "q": "Wie ontdekten DNA-structuur?",
+   "opties": [
+    "Watson + Crick",
+    "Darwin",
+    "Mendel",
+    "Curie"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-wetenschappers-po",
+   "file": "./bekendeWetenschappersPo.js",
+   "stap": 4,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Heliocentrisch model = ?",
+   "opties": [
+    "Zon in midden",
+    "Aarde in midden",
+    "Maan in midden",
+    "Melkweg in midden"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-wetenschappers-po",
+   "file": "./bekendeWetenschappersPo.js",
+   "stap": 4,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Hoeveel wetten van Newton?",
+   "opties": [
+    "3",
+    "1",
+    "5",
+    "10"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-wetenschappers-po",
+   "file": "./bekendeWetenschappersPo.js",
+   "stap": 4,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Wie schreef 'Over het ontstaan van soorten'?",
+   "opties": [
+    "Darwin",
+    "Mendel",
+    "Newton",
+    "Pasteur"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-wetenschappers-po",
+   "file": "./bekendeWetenschappersPo.js",
+   "stap": 4,
+   "vraag": 5,
+   "soort": "K",
+   "q": "Wie kreeg 2 Nobelprijzen?",
+   "opties": [
+    "Marie Curie",
+    "Einstein",
+    "Newton",
+    "Darwin"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-wetenschappers-po",
+   "file": "./bekendeWetenschappersPo.js",
+   "stap": 4,
+   "vraag": 10,
+   "soort": "L2",
+   "q": "Wie bedacht de relativiteitstheorie?",
+   "opties": [
+    "Albert Einstein",
+    "Newton",
+    "Curie",
+    "Darwin"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-wetenschappers-po",
+   "file": "./bekendeWetenschappersPo.js",
+   "stap": 4,
+   "vraag": 11,
+   "soort": "K",
+   "q": "Wie was eerste programmeur?",
+   "opties": [
+    "Ada Lovelace",
+    "Charles Babbage",
+    "Newton",
+    "Einstein"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-wetenschappers-po",
+   "file": "./bekendeWetenschappersPo.js",
+   "stap": 4,
+   "vraag": 12,
+   "soort": "K",
+   "q": "Wie ontwierp de gloeilamp?",
+   "opties": [
+    "Thomas Edison",
+    "Tesla",
+    "Newton",
+    "Einstein"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-wetenschappers-po",
+   "file": "./bekendeWetenschappersPo.js",
+   "stap": 4,
+   "vraag": 13,
+   "soort": "K",
+   "q": "Wie ontwikkelde wisselstroom (AC)?",
+   "opties": [
+    "Nikola Tesla",
+    "Edison",
+    "Curie",
+    "Bell"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-wetenschappers-po",
+   "file": "./bekendeWetenschappersPo.js",
+   "stap": 4,
+   "vraag": 14,
+   "soort": "K",
+   "q": "Wie ontdekten de DNA-structuur (samen)?",
+   "opties": [
+    "Watson + Crick",
+    "Einstein",
+    "Newton",
+    "Galileo"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-wetenschappers-po",
+   "file": "./bekendeWetenschappersPo.js",
+   "stap": 4,
+   "vraag": 15,
+   "soort": "K",
+   "q": "Wie was bekend van chimpansee-onderzoek?",
+   "opties": [
+    "Jane Goodall",
+    "Curie",
+    "Newton",
+    "Einstein"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-wetenschappers-po",
+   "file": "./bekendeWetenschappersPo.js",
+   "stap": 4,
+   "vraag": 18,
+   "soort": "K",
+   "q": "Wie was de eerste mens op de maan?",
+   "opties": [
+    "Neil Armstrong",
+    "Yuri Gagarin",
+    "Buzz Aldrin",
+    "Curie"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "bekende-wetenschappers-po",
+   "file": "./bekendeWetenschappersPo.js",
+   "stap": 4,
+   "vraag": 22,
+   "soort": "L2",
+   "q": "Wie ontwierp de slingerklok?",
+   "opties": [
+    "Christiaan Huygens",
+    "Newton",
+    "Leeuwenhoek",
+    "Erasmus"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "energiebronnen-po",
+   "file": "./energiebronnenPo.js",
+   "stap": 0,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Waarom heten ze fossiele brandstoffen?",
+   "opties": [
+    "Komen uit dode planten/dieren van lang geleden",
+    "Ze worden gemaakt van stenen en zand",
+    "Ze zijn pas kort geleden uitgevonden",
+    "Niemand weet waar ze vandaan komen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "energiebronnen-po",
+   "file": "./energiebronnenPo.js",
+   "stap": 0,
+   "vraag": 3,
+   "soort": "S",
+   "q": "Kun je energie maken?",
+   "opties": [
+    "Nee, alleen omzetten",
+    "Ja, uit niets",
+    "Soms",
+    "Alleen door wetenschapper"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "energiebronnen-po",
+   "file": "./energiebronnenPo.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "SK",
+   "q": "Welke fossiele brandstof is vloeibaar?",
+   "opties": [
+    "Aardolie",
+    "Aardgas",
+    "Steenkool",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "energiebronnen-po",
+   "file": "./energiebronnenPo.js",
+   "stap": 1,
+   "vraag": 1,
+   "soort": "S",
+   "q": "Groningen-gasveld stopt wanneer?",
+   "opties": [
+    "2024",
+    "Nooit",
+    "1959",
+    "2050"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "energiebronnen-po",
+   "file": "./energiebronnenPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "SK",
+   "q": "Wat veroorzaakte aardbevingen in Groningen?",
+   "opties": [
+    "Gasboring",
+    "Vulkaan",
+    "Auto's",
+    "Niets"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "energiebronnen-po",
+   "file": "./energiebronnenPo.js",
+   "stap": 1,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Hoeveel jaar aardolie nog?",
+   "opties": [
+    "~50 jaar",
+    "~100 jaar",
+    "~1000 jaar",
+    "Oneindig"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "energiebronnen-po",
+   "file": "./energiebronnenPo.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "SK",
+   "q": "Wat is duurzame energie?",
+   "opties": [
+    "Energie die niet opraakt",
+    "Goedkope energie",
+    "Energie uit olie",
+    "Alleen elektriciteit"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "energiebronnen-po",
+   "file": "./energiebronnenPo.js",
+   "stap": 2,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Waterkracht in NL?",
+   "opties": [
+    "Weinig",
+    "Veel",
+    "Hoofdbron",
+    "Niet bekend"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "energiebronnen-po",
+   "file": "./energiebronnenPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Wat is offshore windpark?",
+   "opties": [
+    "Op zee",
+    "Op berg",
+    "In stad",
+    "In land"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "energiebronnen-po",
+   "file": "./energiebronnenPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Probleem zonne-energie?",
+   "opties": [
+    "'s Nachts geen stroom",
+    "Maakt veel lawaai",
+    "Bestaat niet",
+    "Werkt nooit"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "energiebronnen-po",
+   "file": "./energiebronnenPo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "SK",
+   "q": "NL kerncentrale?",
+   "opties": [
+    "Borssele",
+    "Amsterdam",
+    "Schiphol",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "energiebronnen-po",
+   "file": "./energiebronnenPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Probleem kernenergie?",
+   "opties": [
+    "Radioactief afval",
+    "Geen probleem",
+    "Te goedkoop",
+    "Te veel CO₂"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "energiebronnen-po",
+   "file": "./energiebronnenPo.js",
+   "stap": 4,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Grootste post in NL energiemix?",
+   "opties": [
+    "Aardgas en aardolie",
+    "Zon en wind",
+    "Kernenergie",
+    "Steenkool"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "energiebronnen-po",
+   "file": "./energiebronnenPo.js",
+   "stap": 4,
+   "vraag": 1,
+   "soort": "SK",
+   "q": "Sinds welk jaar geen gasaansluiting in nieuwbouw NL?",
+   "opties": [
+    "2018",
+    "2024",
+    "1990",
+    "Nooit"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "energiebronnen-po",
+   "file": "./energiebronnenPo.js",
+   "stap": 5,
+   "vraag": 2,
+   "soort": "SK",
+   "q": "Wat is uranium voor?",
+   "opties": [
+    "Kernenergie",
+    "Olie",
+    "Gas",
+    "Niets"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "energiebronnen-po",
+   "file": "./energiebronnenPo.js",
+   "stap": 5,
+   "vraag": 11,
+   "soort": "K",
+   "q": "Wat doet een batterij?",
+   "opties": [
+    "Slaat energie op",
+    "Maakt elektriciteit uit niets",
+    "Verwarmt",
+    "Maakt licht"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "energiebronnen-po",
+   "file": "./energiebronnenPo.js",
+   "stap": 5,
+   "vraag": 14,
+   "soort": "K",
+   "q": "Welke energie heeft stromend water (rivier)?",
+   "opties": [
+    "Bewegingsenergie",
+    "Warmte",
+    "Licht",
+    "Elektrische energie"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "energiebronnen-po",
+   "file": "./energiebronnenPo.js",
+   "stap": 5,
+   "vraag": 17,
+   "soort": "K",
+   "q": "Welk percentage NL-stroom uit duurzaam (2024+)?",
+   "opties": [
+    "~50%+",
+    "5%",
+    "100%",
+    "20%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "energiebronnen-po",
+   "file": "./energiebronnenPo.js",
+   "stap": 5,
+   "vraag": 19,
+   "soort": "K",
+   "q": "Welke energievorm zit in voedsel?",
+   "opties": [
+    "Chemische energie",
+    "Elektrisch",
+    "Magnetisch",
+    "Geluidsenergie"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "evolutie-mens-po",
+   "file": "./evolutieMensPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Wie stierf uit ~40.000 jr geleden?",
+   "opties": [
+    "Neanderthaler",
+    "Homo sapiens",
+    "Lucy",
+    "Apen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "evolutie-mens-po",
+   "file": "./evolutieMensPo.js",
+   "stap": 1,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Hoeveel DNA-overeenkomst mens-chimpansee?",
+   "opties": [
+    "~98,8%",
+    "10%",
+    "50%",
+    "100%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "evolutie-mens-po",
+   "file": "./evolutieMensPo.js",
+   "stap": 2,
+   "vraag": 1,
+   "soort": "L2K",
+   "q": "Hoe oud is aarde?",
+   "opties": [
+    "~4,5 miljard jaar",
+    "6000 jaar",
+    "1 miljoen",
+    "Eeuwig"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "evolutie-mens-po",
+   "file": "./evolutieMensPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Hoeveel DNA-overeenkomst mens-muis?",
+   "opties": [
+    "~85%",
+    "10%",
+    "100%",
+    "Niet"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "evolutie-mens-po",
+   "file": "./evolutieMensPo.js",
+   "stap": 3,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Wie schreef evolutietheorie boek?",
+   "opties": [
+    "Darwin",
+    "Newton",
+    "Mendel",
+    "Einstein"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "evolutie-mens-po",
+   "file": "./evolutieMensPo.js",
+   "stap": 3,
+   "vraag": 5,
+   "soort": "K",
+   "q": "Hoeveel mens-chimpansee DNA overeenkomst?",
+   "opties": [
+    "~98,8%",
+    "10%",
+    "0%",
+    "50%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "evolutie-mens-po",
+   "file": "./evolutieMensPo.js",
+   "stap": 3,
+   "vraag": 12,
+   "soort": "K",
+   "q": "Wie was Lucy?",
+   "opties": [
+    "Een heel oud skelet",
+    "Een schilder",
+    "Een wetenschapper",
+    "Een schip"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "evolutie-mens-po",
+   "file": "./evolutieMensPo.js",
+   "stap": 3,
+   "vraag": 16,
+   "soort": "K",
+   "q": "Wat is uitsterven?",
+   "opties": [
+    "Laatste van een soort sterft",
+    "Slapen",
+    "Verhuizen naar een ander land",
+    "Vermeerderen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "evolutie-mens-po",
+   "file": "./evolutieMensPo.js",
+   "stap": 3,
+   "vraag": 17,
+   "soort": "S",
+   "q": "Wat veroorzaakte uitsterven dinosaurussen vermoedelijk?",
+   "opties": [
+    "Meteoriet-inslag",
+    "Mens",
+    "Klimaatverandering puur",
+    "Niets"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "evolutie-mens-po",
+   "file": "./evolutieMensPo.js",
+   "stap": 3,
+   "vraag": 18,
+   "soort": "L2",
+   "q": "Hoeveel jaar oud is de aarde ongeveer?",
+   "opties": [
+    "4,5 miljard jaar",
+    "100 mln",
+    "10.000",
+    "100.000"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "evolutie-mens-po",
+   "file": "./evolutieMensPo.js",
+   "stap": 3,
+   "vraag": 22,
+   "soort": "L2",
+   "q": "Wat zijn restorganen als bewijs voor evolutie?",
+   "opties": [
+    "Organen die hun functie verloren",
+    "Pijnlijke organen",
+    "Organen die nooit bestonden",
+    "Belangrijke organen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "evolutie-mens-po",
+   "file": "./evolutieMensPo.js",
+   "stap": 3,
+   "vraag": 24,
+   "soort": "K",
+   "q": "Mutaties zijn?",
+   "opties": [
+    "Veranderingen in DNA",
+    "Trucs",
+    "Nieuwe soorten voedsel",
+    "Politiek"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "evolutie-mens-po",
+   "file": "./evolutieMensPo.js",
+   "stap": 3,
+   "vraag": 26,
+   "soort": "L2",
+   "q": "Welke groep is directe voorouder van mens?",
+   "opties": [
+    "Vroege mensachtigen",
+    "Apen tegenwoordig",
+    "Reptielen",
+    "Vogels"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "evolutie-mens-po",
+   "file": "./evolutieMensPo.js",
+   "stap": 3,
+   "vraag": 27,
+   "soort": "K",
+   "q": "Hoeveel mensen leven nu op aarde?",
+   "opties": [
+    "~8 miljard",
+    "1 miljard",
+    "100 miljoen",
+    "30 miljard"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "pubertijd-groei-po",
+   "file": "./pubertijdGroeiPo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Wanneer begint puberteit bij meisjes (gemiddeld)?",
+   "opties": [
+    "~11 jaar",
+    "5 jaar",
+    "16 jaar",
+    "Niet bij meisjes"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "pubertijd-groei-po",
+   "file": "./pubertijdGroeiPo.js",
+   "stap": 0,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Hoeveel kun je per jaar groeien in piek?",
+   "opties": [
+    "10-12 cm",
+    "1 mm",
+    "1 meter",
+    "Niet"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "pubertijd-groei-po",
+   "file": "./pubertijdGroeiPo.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Tot welke leeftijd ontwikkelt het brein zich?",
+   "opties": [
+    "~25 jaar",
+    "12 jaar",
+    "60 jaar",
+    "Niet"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "pubertijd-groei-po",
+   "file": "./pubertijdGroeiPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Welk nummer Kindertelefoon?",
+   "opties": [
+    "0800-0432",
+    "112",
+    "0900",
+    "06"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "pubertijd-groei-po",
+   "file": "./pubertijdGroeiPo.js",
+   "stap": 3,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Puberteit begint bij meisjes gem.?",
+   "opties": [
+    "~11 jaar",
+    "5",
+    "18",
+    "Niet bij meisjes"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "pubertijd-groei-po",
+   "file": "./pubertijdGroeiPo.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "SK",
+   "q": "Hoeveel slaap in puberteit?",
+   "opties": [
+    "9-10 uur",
+    "4 uur",
+    "12+ uur",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "pubertijd-groei-po",
+   "file": "./pubertijdGroeiPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Hoe vaak menstruatie?",
+   "opties": [
+    "~Elke 28 dagen",
+    "Elke dag",
+    "1 keer per jaar",
+    "Niet"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "pubertijd-groei-po",
+   "file": "./pubertijdGroeiPo.js",
+   "stap": 3,
+   "vraag": 9,
+   "soort": "K",
+   "q": "Hoeveel uur slaap heeft een tiener ongeveer nodig per nacht?",
+   "opties": [
+    "8-10 uur",
+    "4-5 uur",
+    "12-14 uur",
+    "Zo min mogelijk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "pubertijd-groei-po",
+   "file": "./pubertijdGroeiPo.js",
+   "stap": 3,
+   "vraag": 11,
+   "soort": "L2",
+   "q": "Wat is acne (jeugdpuistjes)?",
+   "opties": [
+    "Ontstoken talgklieren in de huid",
+    "Een ziekte van de longen",
+    "Schade aan tanden",
+    "Een verkleuring van de ogen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "recyclen-afval-po",
+   "file": "./recyclenAfvalPo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel afval maakt gemiddelde Nederlander per jaar?",
+   "opties": [
+    "~480 kg",
+    "10 kg",
+    "10.000 kg",
+    "100 kg"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "recyclen-afval-po",
+   "file": "./recyclenAfvalPo.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Wat is beste optie in Ladder van Lansink?",
+   "opties": [
+    "Voorkomen",
+    "Recyclen",
+    "Verbranden",
+    "Storten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "recyclen-afval-po",
+   "file": "./recyclenAfvalPo.js",
+   "stap": 1,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Welk deel van al het voedsel in de wereld wordt weggegooid?",
+   "opties": [
+    "~30%",
+    "1%",
+    "90%",
+    "Niet"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "recyclen-afval-po",
+   "file": "./recyclenAfvalPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Waar ligt het grootste plastic-eiland?",
+   "opties": [
+    "Grote Oceaan",
+    "Atlantische Oceaan",
+    "Indische Oceaan",
+    "NL kust"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "recyclen-afval-po",
+   "file": "./recyclenAfvalPo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Wat is statiegeld op een grote plastic fles (meer dan 1 liter)?",
+   "opties": [
+    "€0,25",
+    "Niks",
+    "€10",
+    "€1"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "recyclen-afval-po",
+   "file": "./recyclenAfvalPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Plastic fles vergaat in?",
+   "opties": [
+    "~450 jr",
+    "1 maand",
+    "10 dagen",
+    "~50 jr"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "recyclen-afval-po",
+   "file": "./recyclenAfvalPo.js",
+   "stap": 3,
+   "vraag": 5,
+   "soort": "L2K",
+   "q": "Wat is circulaire economie?",
+   "opties": [
+    "Alles steeds opnieuw gebruiken",
+    "Een autobedrijf",
+    "Een rond geldstuk",
+    "Alles na één keer weggooien"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "recyclen-afval-po",
+   "file": "./recyclenAfvalPo.js",
+   "stap": 3,
+   "vraag": 9,
+   "soort": "K",
+   "q": "Waar gooi je een bananenschil in?",
+   "opties": [
+    "GFT",
+    "Restafval",
+    "Plastic",
+    "Papier"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "recyclen-afval-po",
+   "file": "./recyclenAfvalPo.js",
+   "stap": 3,
+   "vraag": 11,
+   "soort": "K",
+   "q": "In welke bak hoort een glazen fles?",
+   "opties": [
+    "Glasbak",
+    "GFT",
+    "Plastic",
+    "Papier"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "recyclen-afval-po",
+   "file": "./recyclenAfvalPo.js",
+   "stap": 3,
+   "vraag": 20,
+   "soort": "L2K",
+   "q": "Welk symbool zie je op recyclebare verpakkingen?",
+   "opties": [
+    "3 pijlen-driehoek",
+    "Smiley",
+    "Dollar",
+    "Niet"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "recyclen-afval-po",
+   "file": "./recyclenAfvalPo.js",
+   "stap": 3,
+   "vraag": 23,
+   "soort": "K",
+   "q": "Welk percentage van NL-afval wordt gerecycled (ongeveer)?",
+   "opties": [
+    "~60%+",
+    "20%",
+    "100%",
+    "5%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "recyclen-afval-po",
+   "file": "./recyclenAfvalPo.js",
+   "stap": 3,
+   "vraag": 25,
+   "soort": "L2",
+   "q": "Welke afvalsoort wordt niet vaak gerecycled?",
+   "opties": [
+    "Vies/gemengd afval",
+    "Glas",
+    "Papier",
+    "Plastic flessen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "recyclen-afval-po",
+   "file": "./recyclenAfvalPo.js",
+   "stap": 3,
+   "vraag": 27,
+   "soort": "L2",
+   "q": "Welke soort plastic is beter voor milieu?",
+   "opties": [
+    "Herbruikbaar plastic",
+    "Plastic zakje",
+    "Wegwerp",
+    "Folie"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "sterren-planeten",
+   "file": "./sterrenPlaneten.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel planeten heeft ons zonnestelsel?",
+   "opties": [
+    "8",
+    "9",
+    "7",
+    "12"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "sterren-planeten",
+   "file": "./sterrenPlaneten.js",
+   "stap": 5,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Wat is bijzonder aan Saturnus?",
+   "opties": [
+    "Mooie ringen van ijs + steen",
+    "Heeft de Grote Rode Vlek",
+    "Is vierkant",
+    "Heeft geen manen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "sterren-planeten",
+   "file": "./sterrenPlaneten.js",
+   "stap": 8,
+   "vraag": 5,
+   "soort": "K",
+   "q": "Hoeveel planeten in ons zonnestelsel?",
+   "opties": [
+    "8",
+    "9",
+    "7",
+    "12"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "sterren-planeten",
+   "file": "./sterrenPlaneten.js",
+   "stap": 8,
+   "vraag": 9,
+   "soort": "K",
+   "q": "Maan van de aarde — hoeveel?",
+   "opties": [
+    "1",
+    "2",
+    "0",
+    "5"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "sterren-planeten",
+   "file": "./sterrenPlaneten.js",
+   "stap": 8,
+   "vraag": 11,
+   "soort": "K",
+   "q": "Hoeveel dagen duurt een jaar op aarde?",
+   "opties": [
+    "365",
+    "100",
+    "30",
+    "1000"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "sterren-planeten",
+   "file": "./sterrenPlaneten.js",
+   "stap": 8,
+   "vraag": 12,
+   "soort": "K",
+   "q": "Hoe lang duurt 1 dag op aarde?",
+   "opties": [
+    "24 uur",
+    "12 uur",
+    "365 dagen",
+    "1 jaar"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "sterren-planeten",
+   "file": "./sterrenPlaneten.js",
+   "stap": 8,
+   "vraag": 13,
+   "soort": "K",
+   "q": "Wat veroorzaakt dag en nacht?",
+   "opties": [
+    "Aarde draait om as",
+    "Zon beweegt",
+    "Wolken",
+    "Maan schuift voor de zon"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "weersvoorspelling-po",
+   "file": "./weersvoorspellingPo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "L2SK",
+   "q": "Wat is weer (vs klimaat)?",
+   "opties": [
+    "Wat NU in atmosfeer gebeurt",
+    "Gemiddelde van jaren",
+    "Niet bestaand",
+    "Geen verschil"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "weersvoorspelling-po",
+   "file": "./weersvoorspellingPo.js",
+   "stap": 0,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Eenheid neerslag?",
+   "opties": [
+    "mm",
+    "kg",
+    "km/u",
+    "meter"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "weersvoorspelling-po",
+   "file": "./weersvoorspellingPo.js",
+   "stap": 0,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Wat is gemiddelde regen NL per jaar?",
+   "opties": [
+    "~850 mm",
+    "100 mm",
+    "5000 mm",
+    "0 mm"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "weersvoorspelling-po",
+   "file": "./weersvoorspellingPo.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Waaruit komt wind?",
+   "opties": [
+    "Drukverschil + opwarming",
+    "Bewegende bomen",
+    "Draaiende windmolens",
+    "Golven op zee"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "weersvoorspelling-po",
+   "file": "./weersvoorspellingPo.js",
+   "stap": 1,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Meest voorkomende windrichting NL?",
+   "opties": [
+    "Zuidwesten",
+    "Noorden",
+    "Oosten",
+    "Zuiden"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "weersvoorspelling-po",
+   "file": "./weersvoorspellingPo.js",
+   "stap": 1,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Hoge druk (H) = ?",
+   "opties": [
+    "Goed weer",
+    "Regen",
+    "Wind",
+    "Onweer"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "weersvoorspelling-po",
+   "file": "./weersvoorspellingPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Hoe betrouwbaar weersvoorspelling 1-3 dagen?",
+   "opties": [
+    "~90%",
+    "10%",
+    "Onmogelijk",
+    "100%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "weersvoorspelling-po",
+   "file": "./weersvoorspellingPo.js",
+   "stap": 3,
+   "vraag": 0,
+   "soort": "SK",
+   "q": "Weer vs klimaat: weer = ?",
+   "opties": [
+    "Nu / vandaag",
+    "Gemiddelde jaren",
+    "Geen verschil",
+    "Niet bekend"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "weersvoorspelling-po",
+   "file": "./weersvoorspellingPo.js",
+   "stap": 3,
+   "vraag": 4,
+   "soort": "K",
+   "q": "Eenheid neerslag?",
+   "opties": [
+    "mm",
+    "kg",
+    "graden",
+    "m³"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "weersvoorspelling-po",
+   "file": "./weersvoorspellingPo.js",
+   "stap": 3,
+   "vraag": 5,
+   "soort": "K",
+   "q": "Hoe ver vooruit kun je redelijk voorspellen?",
+   "opties": [
+    "Ongeveer een week",
+    "1 maand exact",
+    "1 jaar",
+    "Niet mogelijk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "weersvoorspelling-po",
+   "file": "./weersvoorspellingPo.js",
+   "stap": 3,
+   "vraag": 7,
+   "soort": "L2",
+   "q": "Welke 4 windrichtingen zijn er?",
+   "opties": [
+    "Noord, Oost, Zuid, West (NOZW)",
+    "Boven, Onder, Links, Rechts",
+    "Plus, Min, Ster, Vierkant",
+    "Niet bestaand"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "weersvoorspelling-po",
+   "file": "./weersvoorspellingPo.js",
+   "stap": 3,
+   "vraag": 12,
+   "soort": "L2K",
+   "q": "Welk weersymbool betekent regenbui?",
+   "opties": [
+    "Wolk met druppels",
+    "Zon",
+    "Sneeuwvlok",
+    "Streep"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "weersvoorspelling-po",
+   "file": "./weersvoorspellingPo.js",
+   "stap": 3,
+   "vraag": 15,
+   "soort": "K",
+   "q": "Welke windrichting waait meestal in NL?",
+   "opties": [
+    "Zuidwest",
+    "Noord",
+    "Oost",
+    "Zuid"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "weersvoorspelling-po",
+   "file": "./weersvoorspellingPo.js",
+   "stap": 3,
+   "vraag": 22,
+   "soort": "L2SK",
+   "q": "Code rood bij KNMI betekent?",
+   "opties": [
+    "Extreem gevaarlijk weer",
+    "Mooi weer",
+    "Een dag wachten",
+    "Niet relevant"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "weersvoorspelling-po",
+   "file": "./weersvoorspellingPo.js",
+   "stap": 3,
+   "vraag": 24,
+   "soort": "K",
+   "q": "Welk weer geeft een lage druk vaak?",
+   "opties": [
+    "Bewolkt/regen",
+    "Mooi weer",
+    "Sneeuw",
+    "Niet bestaand"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "weersvoorspelling-po",
+   "file": "./weersvoorspellingPo.js",
+   "stap": 3,
+   "vraag": 26,
+   "soort": "K",
+   "q": "Welke afkortingen gebruik je voor windrichtingen?",
+   "opties": [
+    "N, O, Z, W",
+    "A, B, C, D",
+    "L, R, V, A",
+    "Niet bestaand"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}

@@ -1,0 +1,731 @@
+{
+ "bestanden": [
+  "./werkwoordsspellingDT.js",
+  "./woordenschatPo.js",
+  "./spellingEersteWoordenG3.js",
+  "./feitMeningPo.js",
+  "./zinsontledingOnderwerpPersoonsvormPo.js"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "feit-mening-po",
+   "file": "./feitMeningPo.js",
+   "stap": 0,
+   "vraag": 3,
+   "soort": "H",
+   "q": "Feit of mening? *Een jaar heeft twaalf maanden.*",
+   "opties": [
+    "feit",
+    "mening",
+    "geen van beide",
+    "allebei"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "feit-mening-po",
+   "file": "./feitMeningPo.js",
+   "stap": 0,
+   "vraag": 5,
+   "soort": "H",
+   "q": "Feit of mening? *De fiets is uitgevonden in de negentiende eeuw.*",
+   "opties": [
+    "feit",
+    "mening",
+    "geen van beide",
+    "allebei"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "feit-mening-po",
+   "file": "./feitMeningPo.js",
+   "stap": 1,
+   "vraag": 3,
+   "soort": "H",
+   "q": "Feit of mening? *Honden zijn liever dan katten.*",
+   "opties": [
+    "mening",
+    "feit",
+    "geen van beide",
+    "allebei"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "feit-mening-po",
+   "file": "./feitMeningPo.js",
+   "stap": 3,
+   "vraag": 0,
+   "soort": "H",
+   "q": "Feit of mening? *De Eiffeltoren staat in Parijs.*",
+   "opties": [
+    "feit",
+    "mening",
+    "geen van beide",
+    "allebei"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "feit-mening-po",
+   "file": "./feitMeningPo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "H",
+   "q": "Feit of mening? *De Eiffeltoren is het mooiste bouwwerk ter wereld.*",
+   "opties": [
+    "mening",
+    "feit",
+    "geen van beide",
+    "allebei"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "feit-mening-po",
+   "file": "./feitMeningPo.js",
+   "stap": 3,
+   "vraag": 5,
+   "soort": "H",
+   "q": "Feit of mening? *De Tweede Wereldoorlog eindigde in 1945.*",
+   "opties": [
+    "feit",
+    "mening",
+    "geen van beide",
+    "allebei"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "feit-mening-po",
+   "file": "./feitMeningPo.js",
+   "stap": 3,
+   "vraag": 6,
+   "soort": "H",
+   "q": "Feit of mening? *Dit boek is veel te moeilijk voor groep 7.*",
+   "opties": [
+    "mening",
+    "feit",
+    "geen van beide",
+    "allebei"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "werkwoordsspelling-dt",
+   "file": "./werkwoordsspellingDT.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "H",
+   "q": "Wat is de stam van werken?",
+   "opties": [
+    "werk",
+    "werken",
+    "wer",
+    "wert"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "feit-mening-po",
+   "file": "./feitMeningPo.js",
+   "stap": 0,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Wat kun je met een feit doen?",
+   "opties": [
+    "het controleren of nakijken",
+    "het nooit bewijzen",
+    "het alleen voelen",
+    "het zelf verzinnen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "feit-mening-po",
+   "file": "./feitMeningPo.js",
+   "stap": 0,
+   "vraag": 8,
+   "soort": "L2",
+   "q": "Welke manier hoort niet bij het controleren van een feit?",
+   "opties": [
+    "vragen wat je vriend ervan vindt",
+    "het opzoeken in een boek",
+    "het meten met een liniaal",
+    "het natellen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "feit-mening-po",
+   "file": "./feitMeningPo.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Welke zin is een mening?",
+   "opties": [
+    "Pizza is het lekkerste eten dat er is.",
+    "Pizza komt oorspronkelijk uit Italië.",
+    "Een pizza is rond.",
+    "Op een pizza zit vaak kaas."
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "feit-mening-po",
+   "file": "./feitMeningPo.js",
+   "stap": 1,
+   "vraag": 7,
+   "soort": "L2",
+   "q": "Welke zin over de dierentuin is een mening?",
+   "opties": [
+    "Een dagje dierentuin is het fijnste uitje.",
+    "In een dierentuin wonen dieren.",
+    "Een giraf heeft een lange nek.",
+    "Een olifant heeft een slurf."
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "feit-mening-po",
+   "file": "./feitMeningPo.js",
+   "stap": 2,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Welk woord in de zin *'Wiskunde is een supermoeilijk vak'* verraadt dat het een mening is?",
+   "opties": [
+    "supermoeilijk",
+    "wiskunde",
+    "een",
+    "vak"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "feit-mening-po",
+   "file": "./feitMeningPo.js",
+   "stap": 2,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Waarschijnlijk wordt het morgen droog. — Welk woord wijst op een mening?",
+   "opties": [
+    "Waarschijnlijk",
+    "morgen",
+    "droog",
+    "het"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "feit-mening-po",
+   "file": "./feitMeningPo.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "In een tekst staat: *Ons dorp heeft 4.000 inwoners. Het is het gezelligste dorp van de streek.* Welk deel is een mening?",
+   "opties": [
+    "Het is het gezelligste dorp van de streek.",
+    "Ons dorp heeft 4.000 inwoners.",
+    "Allebei de zinnen zijn een mening.",
+    "Allebei de zinnen zijn een feit."
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "feit-mening-po",
+   "file": "./feitMeningPo.js",
+   "stap": 3,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "In een tekst staat: *'Nederland heeft 18 miljoen inwoners. Het is het fijnste land van Europa.'* Welk deel is een feit?",
+   "opties": [
+    "Nederland heeft 18 miljoen inwoners.",
+    "Het is het fijnste land van Europa.",
+    "Allebei zijn feiten.",
+    "Allebei zijn meningen."
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "feit-mening-po",
+   "file": "./feitMeningPo.js",
+   "stap": 3,
+   "vraag": 8,
+   "soort": "L2",
+   "q": "In een tekst staat: *Onze school heeft acht groepen. De les begint om half negen. Het schoolplein is het leukste van de stad. Op het plein staan twee bankjes.* ",
+   "opties": [
+    "Het schoolplein is het leukste van de stad.",
+    "Onze school heeft acht groepen.",
+    "De les begint om half negen.",
+    "Op het plein staan twee bankjes."
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "werkwoordsspelling-dt",
+   "file": "./werkwoordsspellingDT.js",
+   "stap": 7,
+   "vraag": 7,
+   "soort": "K",
+   "q": "Vul in: 'Ik ___ je morgen.' (zien)",
+   "opties": [
+    "zie",
+    "ziet",
+    "ziende",
+    "gezien"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "werkwoordsspelling-dt",
+   "file": "./werkwoordsspellingDT.js",
+   "stap": 7,
+   "vraag": 10,
+   "soort": "K",
+   "q": "Verleden tijd: 'Wij ___ vrolijk.' (spelen)",
+   "opties": [
+    "speelden",
+    "speelde",
+    "speelten",
+    "spelen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "werkwoordsspelling-dt",
+   "file": "./werkwoordsspellingDT.js",
+   "stap": 7,
+   "vraag": 11,
+   "soort": "K",
+   "q": "Voltooid deelwoord van 'werken'?",
+   "opties": [
+    "gewerkt",
+    "gewerkd",
+    "werkte",
+    "werkten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "werkwoordsspelling-dt",
+   "file": "./werkwoordsspellingDT.js",
+   "stap": 7,
+   "vraag": 14,
+   "soort": "K",
+   "q": "Vul: 'Ik ___ dat ik gelijk heb.' (vinden)",
+   "opties": [
+    "vind",
+    "vindt",
+    "vindde",
+    "vinden"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "werkwoordsspelling-dt",
+   "file": "./werkwoordsspellingDT.js",
+   "stap": 7,
+   "vraag": 16,
+   "soort": "K",
+   "q": "Voltooid deelwoord van 'spelen'?",
+   "opties": [
+    "gespeeld",
+    "gespelt",
+    "speelde",
+    "gespeelde"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "werkwoordsspelling-dt",
+   "file": "./werkwoordsspellingDT.js",
+   "stap": 7,
+   "vraag": 18,
+   "soort": "K",
+   "q": "Vul in: 'Wij ___ het verhaal.' (horen)",
+   "opties": [
+    "horen",
+    "hoort",
+    "horede",
+    "horeden"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "werkwoordsspelling-dt",
+   "file": "./werkwoordsspellingDT.js",
+   "stap": 7,
+   "vraag": 20,
+   "soort": "K",
+   "q": "Voltooid deelwoord van 'gaan'?",
+   "opties": [
+    "gegaan",
+    "gegaand",
+    "gegan",
+    "gaan"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-po",
+   "file": "./woordenschatPo.js",
+   "stap": 0,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Je leest een woord dat je niet kent. Welke tip helpt je om de betekenis te raden?",
+   "opties": [
+    "Kijk naar de zin rondom het woord",
+    "Tel de letters van het woord",
+    "Spel het woord hardop",
+    "Sla de hele bladzijde over"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-po",
+   "file": "./woordenschatPo.js",
+   "stap": 0,
+   "vraag": 5,
+   "soort": "S",
+   "q": "Wat helpt je om je woordenschat groter te maken?",
+   "opties": [
+    "Veel lezen",
+    "Moeilijke woorden altijd overslaan",
+    "Alleen korte woorden gebruiken",
+    "Nooit vragen wat een woord betekent"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-po",
+   "file": "./woordenschatPo.js",
+   "stap": 1,
+   "vraag": 3,
+   "soort": "K",
+   "q": "'Hij was bezorgd over de toets' — synoniem voor 'bezorgd':",
+   "opties": [
+    "ongerust",
+    "blij",
+    "slim",
+    "moe"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-po",
+   "file": "./woordenschatPo.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "K",
+   "q": "*'Hij was uitgeput na de marathon.'* — 'uitgeput' betekent:",
+   "opties": [
+    "heel moe",
+    "blij",
+    "sterk",
+    "zwak"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-po",
+   "file": "./woordenschatPo.js",
+   "stap": 3,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "*'De bakker verdubbelde het recept: in plaats van één taart maakte hij er twee.'* Wat betekent 'verdubbelen'?",
+   "opties": [
+    "twee keer zo veel maken",
+    "de helft maken",
+    "opnieuw proberen",
+    "weggooien"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-po",
+   "file": "./woordenschatPo.js",
+   "stap": 3,
+   "vraag": 6,
+   "soort": "S",
+   "q": "*'Het was zo donker dat ik nauwelijks iets kon zien.'* Wat betekent 'nauwelijks'?",
+   "opties": [
+    "bijna niet",
+    "heel goed",
+    "meteen",
+    "altijd"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-po",
+   "file": "./woordenschatPo.js",
+   "stap": 4,
+   "vraag": 2,
+   "soort": "K",
+   "q": "*'Mike was in zijn schik met het cadeau.'* — 'in zijn schik' betekent:",
+   "opties": [
+    "blij",
+    "verdrietig",
+    "boos",
+    "verbaasd"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-po",
+   "file": "./woordenschatPo.js",
+   "stap": 4,
+   "vraag": 4,
+   "soort": "K",
+   "q": "*'De juf gaf een uiterst nuttige tip.'* — 'uiterst' betekent:",
+   "opties": [
+    "heel",
+    "een beetje",
+    "slechts",
+    "niet"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-po",
+   "file": "./woordenschatPo.js",
+   "stap": 4,
+   "vraag": 10,
+   "soort": "L2",
+   "q": "Wat betekent 'pessimistisch'?",
+   "opties": [
+    "Verwacht het slechtste",
+    "Verwacht het beste",
+    "Lacht veel",
+    "Eet veel"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-po",
+   "file": "./woordenschatPo.js",
+   "stap": 4,
+   "vraag": 11,
+   "soort": "K",
+   "q": "Wat is een synoniem?",
+   "opties": [
+    "Woord met dezelfde betekenis",
+    "Woord met tegengestelde betekenis",
+    "Woord met veel letters",
+    "Woord uit een andere taal"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-po",
+   "file": "./woordenschatPo.js",
+   "stap": 4,
+   "vraag": 12,
+   "soort": "L2K",
+   "q": "Wat is een antoniem?",
+   "opties": [
+    "Tegengestelde betekenis",
+    "Zelfde betekenis",
+    "Lang woord",
+    "Spreekwoord"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-po",
+   "file": "./woordenschatPo.js",
+   "stap": 4,
+   "vraag": 14,
+   "soort": "K",
+   "q": "Antoniem van licht (gewicht)?",
+   "opties": [
+    "zwaar",
+    "donker",
+    "helder",
+    "klein"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-po",
+   "file": "./woordenschatPo.js",
+   "stap": 4,
+   "vraag": 15,
+   "soort": "K",
+   "q": "Antoniem van vol?",
+   "opties": [
+    "leeg",
+    "gevuld",
+    "groot",
+    "klein"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-po",
+   "file": "./woordenschatPo.js",
+   "stap": 4,
+   "vraag": 16,
+   "soort": "L2K",
+   "q": "Wat betekent enthousiast?",
+   "opties": [
+    "Vol energie en blij",
+    "Boos",
+    "Verdrietig",
+    "Verveeld"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-po",
+   "file": "./woordenschatPo.js",
+   "stap": 4,
+   "vraag": 18,
+   "soort": "K",
+   "q": "Synoniem van mooi?",
+   "opties": [
+    "prachtig",
+    "lelijk",
+    "slim",
+    "groot"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-po",
+   "file": "./woordenschatPo.js",
+   "stap": 4,
+   "vraag": 19,
+   "soort": "K",
+   "q": "*Context*: 'Hij is een fanatiek voetballer.' Fanatiek =?",
+   "opties": [
+    "Heel toegewijd",
+    "Lui",
+    "Onverschillig",
+    "Bang"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-po",
+   "file": "./woordenschatPo.js",
+   "stap": 4,
+   "vraag": 21,
+   "soort": "K",
+   "q": "Antoniem van vroeg?",
+   "opties": [
+    "laat",
+    "snel",
+    "wakker",
+    "nu"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-po",
+   "file": "./woordenschatPo.js",
+   "stap": 4,
+   "vraag": 22,
+   "soort": "K",
+   "q": "Verbazing lijkt op?",
+   "opties": [
+    "verrassing",
+    "boosheid",
+    "verveling",
+    "angst"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-po",
+   "file": "./woordenschatPo.js",
+   "stap": 4,
+   "vraag": 23,
+   "soort": "K",
+   "q": "*Context*: 'Het was een schitterend feest.' Schitterend = ?",
+   "opties": [
+    "geweldig",
+    "saai",
+    "kort",
+    "duur"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-po",
+   "file": "./woordenschatPo.js",
+   "stap": 4,
+   "vraag": 24,
+   "soort": "L2K",
+   "q": "Wat betekent respect voor iemand hebben?",
+   "opties": [
+    "Waardering / achting",
+    "Boosheid",
+    "Onverschilligheid",
+    "Angst"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "woordenschat-po",
+   "file": "./woordenschatPo.js",
+   "stap": 4,
+   "vraag": 25,
+   "soort": "L2K",
+   "q": "Wat betekent nieuwsgierig?",
+   "opties": [
+    "Veel willen weten",
+    "Verveeld",
+    "Bang",
+    "Boos"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}

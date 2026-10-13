@@ -1,0 +1,839 @@
+{
+ "bestanden": [
+  "./doorstroomtoetsRekenenG8.js"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 0,
+   "vraag": 29,
+   "soort": "L",
+   "q": "3/8 vereenvoudig je tot ___?",
+   "opties": [
+    "Niet te vereenvoudigen",
+    "1/2",
+    "3/4",
+    "1/8"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 0,
+   "vraag": 6,
+   "soort": "K",
+   "q": "Wat is 0,5 + 1/4?",
+   "opties": [
+    "0,75",
+    "0,55",
+    "1,5",
+    "1/8"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 0,
+   "vraag": 10,
+   "soort": "K",
+   "q": "Wat is 2/5 + 1/10?",
+   "opties": [
+    "1/2",
+    "3/15",
+    "3/10",
+    "1/7"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 0,
+   "vraag": 13,
+   "soort": "K",
+   "q": "Welk getal is kleiner: 0,25 of 1/3?",
+   "opties": [
+    "0,25",
+    "1/3",
+    "Even groot",
+    "Niet te bepalen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 0,
+   "vraag": 16,
+   "soort": "K",
+   "q": "Wat is 5/6 − 1/2?",
+   "opties": [
+    "1/3",
+    "4/4",
+    "1/6",
+    "2/3"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 0,
+   "vraag": 19,
+   "soort": "K",
+   "q": "Wat is 3/4 + 1/4?",
+   "opties": [
+    "1",
+    "4/8",
+    "3/8",
+    "1/2"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 0,
+   "vraag": 24,
+   "soort": "K",
+   "q": "1/2 + 1/3 is?",
+   "opties": [
+    "5/6",
+    "2/5",
+    "1/5",
+    "2/3"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 0,
+   "vraag": 26,
+   "soort": "K",
+   "q": "Wat is 0,25 × 4?",
+   "opties": [
+    "1",
+    "100",
+    "0,1",
+    "0,01"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 0,
+   "vraag": 29,
+   "soort": "L2",
+   "q": "3/8 vereenvoudig je tot ___?",
+   "opties": [
+    "Niet te vereenvoudigen",
+    "1/2",
+    "3/4",
+    "1/8"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 0,
+   "vraag": 30,
+   "soort": "K",
+   "q": "0,1 × 0,1 is?",
+   "opties": [
+    "0,01",
+    "0,1",
+    "1",
+    "0,2"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 1,
+   "vraag": 6,
+   "soort": "K",
+   "q": "40% van 200 is?",
+   "opties": [
+    "80",
+    "60",
+    "100",
+    "240"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 1,
+   "vraag": 8,
+   "soort": "K",
+   "q": "Een schoen van €60 wordt verhoogd met 10%. Nieuwe prijs?",
+   "opties": [
+    "€66",
+    "€70",
+    "€54",
+    "€600"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 1,
+   "vraag": 13,
+   "soort": "K",
+   "q": "80% van 50 is?",
+   "opties": [
+    "40",
+    "30",
+    "20",
+    "100"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 1,
+   "vraag": 14,
+   "soort": "K",
+   "q": "150% van 20 is?",
+   "opties": [
+    "30",
+    "20",
+    "15",
+    "150"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 1,
+   "vraag": 16,
+   "soort": "K",
+   "q": "Een product was €50, nu €30. % korting?",
+   "opties": [
+    "40%",
+    "20%",
+    "60%",
+    "30%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 1,
+   "vraag": 22,
+   "soort": "K",
+   "q": "Verhouding appels : peren = 3 : 2. Bij 12 appels: hoeveel peren?",
+   "opties": [
+    "8",
+    "6",
+    "4",
+    "10"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 1,
+   "vraag": 24,
+   "soort": "K",
+   "q": "Een fiets van €200 wordt 15% duurder. Wat is de nieuwe prijs?",
+   "opties": [
+    "€230",
+    "€215",
+    "€185",
+    "€300"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 1,
+   "vraag": 25,
+   "soort": "K",
+   "q": "Verhouding suiker : meel = 1 : 4. Bij 500 g meel: hoeveel suiker?",
+   "opties": [
+    "125 g",
+    "100 g",
+    "250 g",
+    "500 g"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 1,
+   "vraag": 29,
+   "soort": "K",
+   "q": "Wat is 80% van 50?",
+   "opties": [
+    "40",
+    "50",
+    "10",
+    "30"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 1,
+   "vraag": 30,
+   "soort": "K",
+   "q": "Hoeveel is 1% van €500?",
+   "opties": [
+    "€5",
+    "€50",
+    "€10",
+    "€0,50"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 1,
+   "vraag": 32,
+   "soort": "K",
+   "q": "Verhouding 5:3 appels:peren. Bij 40 stuks totaal: hoeveel appels?",
+   "opties": [
+    "25",
+    "15",
+    "20",
+    "10"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 1,
+   "vraag": 33,
+   "soort": "K",
+   "q": "3% rente op €1000 per jaar. Hoeveel rente?",
+   "opties": [
+    "€30",
+    "€3",
+    "€300",
+    "€100"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 1,
+   "vraag": 34,
+   "soort": "K",
+   "q": "Recept voor 4 personen: 200 g pasta. Voor 6 personen?",
+   "opties": [
+    "300 g",
+    "250 g",
+    "400 g",
+    "150 g"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 1,
+   "vraag": 36,
+   "soort": "K",
+   "q": "Hoeveel is 75% van 200?",
+   "opties": [
+    "150",
+    "125",
+    "75",
+    "100"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 1,
+   "vraag": 37,
+   "soort": "K",
+   "q": "Een prijs ging van €40 naar €50. Hoeveel procent stijging?",
+   "opties": [
+    "25%",
+    "10%",
+    "20%",
+    "50%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 2,
+   "vraag": 6,
+   "soort": "K",
+   "q": "Een doos is 10 cm × 10 cm × 10 cm. Inhoud (volume)?",
+   "opties": [
+    "1000 cm³",
+    "100 cm³",
+    "30 cm³",
+    "300 cm³"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 2,
+   "vraag": 7,
+   "soort": "K",
+   "q": "Een tuin is 5 m × 8 m. Hoeveel meter hek is nodig (omtrek)?",
+   "opties": [
+    "26 m",
+    "40 m",
+    "13 m",
+    "20 m"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 2,
+   "vraag": 8,
+   "soort": "K",
+   "q": "3,5 kg in gram?",
+   "opties": [
+    "3500 g",
+    "350 g",
+    "35 g",
+    "35.000 g"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 2,
+   "vraag": 9,
+   "soort": "K",
+   "q": "Schaal 1:1.000.000 (atlas). 3 cm op kaart = ?",
+   "opties": [
+    "30 km",
+    "3 km",
+    "300 m",
+    "300 km"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 2,
+   "vraag": 11,
+   "soort": "K",
+   "q": "Hoeveel mL in een halve liter?",
+   "opties": [
+    "500 mL",
+    "50 mL",
+    "5 mL",
+    "5000 mL"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 2,
+   "vraag": 12,
+   "soort": "K",
+   "q": "Een vierkant heeft omtrek 24 cm. Wat is zijde?",
+   "opties": [
+    "6 cm",
+    "12 cm",
+    "24 cm",
+    "4 cm"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 2,
+   "vraag": 13,
+   "soort": "K",
+   "q": "0,5 ton in kg?",
+   "opties": [
+    "500 kg",
+    "50 kg",
+    "5000 kg",
+    "5 kg"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 2,
+   "vraag": 14,
+   "soort": "K",
+   "q": "1500 mm in m?",
+   "opties": [
+    "1,5 m",
+    "15 m",
+    "0,15 m",
+    "150 m"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 2,
+   "vraag": 16,
+   "soort": "K",
+   "q": "Omtrek cirkel met diameter 10 cm? *(π ≈ 3,14)*",
+   "opties": [
+    "31,4 cm",
+    "78,5 cm",
+    "10 cm",
+    "100 cm"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 2,
+   "vraag": 18,
+   "soort": "K",
+   "q": "Op een kaart 1:50.000 is iets 2 cm. Werkelijk?",
+   "opties": [
+    "1 km",
+    "100 m",
+    "5 km",
+    "20 km"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 2,
+   "vraag": 19,
+   "soort": "K",
+   "q": "Een rechthoek is 8 cm lang en 5 cm breed. Oppervlakte?",
+   "opties": [
+    "40 cm²",
+    "13 cm²",
+    "26 cm²",
+    "45 cm²"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 2,
+   "vraag": 24,
+   "soort": "K",
+   "q": "Een kamer is 5 m × 4 m. Wat is de oppervlakte?",
+   "opties": [
+    "20 m²",
+    "9 m²",
+    "18 m²",
+    "45 m²"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 2,
+   "vraag": 29,
+   "soort": "K",
+   "q": "1 minuut is hoeveel seconden?",
+   "opties": [
+    "60",
+    "100",
+    "10",
+    "1"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 2,
+   "vraag": 30,
+   "soort": "K",
+   "q": "Een driehoek heeft hoeken die samen ___ graden zijn.",
+   "opties": [
+    "180°",
+    "90°",
+    "360°",
+    "270°"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 2,
+   "vraag": 32,
+   "soort": "K",
+   "q": "Vierkant met oppervlakte 64 cm². Zijde?",
+   "opties": [
+    "8 cm",
+    "16 cm",
+    "4 cm",
+    "64 cm"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 3,
+   "vraag": 12,
+   "soort": "K",
+   "q": "Een fles 1,5 L. Glas houdt 250 mL. Hoeveel glazen?",
+   "opties": [
+    "6",
+    "4",
+    "5",
+    "10"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 3,
+   "vraag": 14,
+   "soort": "K",
+   "q": "3 boeken kosten €36 samen. Per boek?",
+   "opties": [
+    "€12",
+    "€18",
+    "€9",
+    "€11"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 3,
+   "vraag": 17,
+   "soort": "K",
+   "q": "3 vrienden delen €27 eerlijk. Hoeveel per persoon?",
+   "opties": [
+    "€9",
+    "€3",
+    "€10",
+    "€24"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 3,
+   "vraag": 19,
+   "soort": "K",
+   "q": "Cijferlijst: 7, 8, 6, 9. Wat is het gemiddelde?",
+   "opties": [
+    "7,5",
+    "30",
+    "8",
+    "6,5"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 3,
+   "vraag": 20,
+   "soort": "K",
+   "q": "Een fles bevat 1,5 L sap. Glazen van 250 mL. Hoeveel glazen vol?",
+   "opties": [
+    "6",
+    "5",
+    "4",
+    "7"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 3,
+   "vraag": 23,
+   "soort": "K",
+   "q": "De auto verbruikt 6 L op 100 km. Hoeveel liter op 250 km?",
+   "opties": [
+    "15 L",
+    "12 L",
+    "20 L",
+    "10 L"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 3,
+   "vraag": 24,
+   "soort": "K",
+   "q": "Klas heeft 30 leerlingen. 2/3 doet mee met gym. Hoeveel leerlingen?",
+   "opties": [
+    "20",
+    "10",
+    "15",
+    "25"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 3,
+   "vraag": 25,
+   "soort": "K",
+   "q": "Een rechthoek heeft oppervlakte 24 m² en breedte 4 m. Wat is de lengte?",
+   "opties": [
+    "6 m",
+    "20 m",
+    "12 m",
+    "8 m"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 3,
+   "vraag": 28,
+   "soort": "K",
+   "q": "Een kraan staat 5 minuten open. Er stroomt 0,5 L per minuut uit. Hoeveel water totaal?",
+   "opties": [
+    "2,5 L",
+    "5 L",
+    "0,5 L",
+    "10 L"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 3,
+   "vraag": 29,
+   "soort": "K",
+   "q": "Boekjes kosten €3 per stuk. Tom koopt 8 stuks. Korting bij 5+ stuks: €5 korting totaal. Wat betaalt hij?",
+   "opties": [
+    "€19",
+    "€24",
+    "€15",
+    "€20"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 3,
+   "vraag": 33,
+   "soort": "K",
+   "q": "Je leent €25 en betaalt €30 terug (dus €5 rente). Hoeveel procent rente is dat?",
+   "opties": [
+    "20%",
+    "5%",
+    "30%",
+    "25%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-rekenen-g8",
+   "file": "./doorstroomtoetsRekenenG8.js",
+   "stap": 3,
+   "vraag": 35,
+   "soort": "K",
+   "q": "Een rondje om het schoolplein is 150 m. Wandel je 8 rondjes, hoeveel meter?",
+   "opties": [
+    "1200 m",
+    "1500 m",
+    "800 m",
+    "150 m"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}

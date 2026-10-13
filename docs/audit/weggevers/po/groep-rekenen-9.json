@@ -1,0 +1,1255 @@
+{
+ "bestanden": [
+  "./doorstroomtoetsStudievaardighedenG8.js"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 5,
+   "vraag": 13,
+   "soort": "H",
+   "q": "Twee kinderen beschrijven de route naar het park. Anna: 'neem de eerste straat rechts en loop rechtdoor'. Bo: 'sla bij de bakker rechtsaf en loop rechtdoor'. De",
+   "opties": [
+    "Allebei",
+    "Alleen Anna",
+    "Alleen Bo",
+    "Geen van beiden"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 0,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Schaal 1:50.000. Op kaart 4 cm. In het echt?",
+   "opties": [
+    "2 km",
+    "200 m",
+    "200 km",
+    "0,2 km"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 0,
+   "vraag": 7,
+   "soort": "L2",
+   "q": "Op een kaart staat een bruine vlek. Wat betekent dat meestal?",
+   "opties": [
+    "Berg of heuvel",
+    "Rivier",
+    "Bos",
+    "Stad"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 0,
+   "vraag": 16,
+   "soort": "K",
+   "q": "Schaal 1:2.500 stadsplattegrond. Op kaart 2 cm. Werkelijk?",
+   "opties": [
+    "50 m",
+    "500 m",
+    "2,5 km",
+    "50 cm"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 0,
+   "vraag": 22,
+   "soort": "S",
+   "q": "Een plattegrond is een kaart van...",
+   "opties": [
+    "Een klein gebied, van bovenaf",
+    "De hele wereld op één blad",
+    "Een gebied zoals het vroeger was",
+    "Alleen de zeeën en oceanen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 0,
+   "vraag": 23,
+   "soort": "K",
+   "q": "Wat staat in een kaart-titel?",
+   "opties": [
+    "Waar de kaart over gaat",
+    "De prijs",
+    "Het land van herkomst",
+    "De datum van vandaag"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 0,
+   "vraag": 32,
+   "soort": "L2",
+   "q": "Op een plattegrond staat 'schaal 1 : 2.000'. Wat betekent dat?",
+   "opties": [
+    "1 cm op de kaart = 2.000 cm (20 m) in het echt",
+    "De kaart is 2.000 cm groot",
+    "Er passen 2.000 huizen op",
+    "1 km op de kaart = 2.000 km in het echt"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 0,
+   "vraag": 33,
+   "soort": "L2",
+   "q": "De legenda van een kaart laat zien...",
+   "opties": [
+    "Wat de symbolen en kleuren betekenen",
+    "Wie de kaart heeft gemaakt",
+    "Hoe oud de kaart is",
+    "Welke route je moet nemen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 1,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Tabel: ma 12, di 8, wo 18, do 22, vr 30. Totaal?",
+   "opties": [
+    "90",
+    "70",
+    "100",
+    "60"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Cirkeldiagram: voetbal 50%, hockey 25%, zwemmen 15%, rest = ?",
+   "opties": [
+    "10%",
+    "20%",
+    "5%",
+    "25%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 1,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Lijngrafiek temperatuur: 18, 22, 25, 23, 19 °C *(over 5 dagen)*. Wat is het patroon?",
+   "opties": [
+    "Eerst stijgen, dan dalen",
+    "Steeds stijgen",
+    "Steeds dalen",
+    "Geen patroon"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 1,
+   "vraag": 5,
+   "soort": "K",
+   "q": "Tabel: ma 12, di 8, wo 18, do 22, vr 30. Gemiddeld per dag?",
+   "opties": [
+    "18",
+    "20",
+    "15",
+    "90"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 1,
+   "vraag": 8,
+   "soort": "K",
+   "q": "Cirkeldiagram: blauw 35%, rood 25%, groen 25%. Rest?",
+   "opties": [
+    "15%",
+    "20%",
+    "10%",
+    "25%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 1,
+   "vraag": 10,
+   "soort": "S",
+   "q": "Welk type grafiek voor verandering door tijd (bv. temperatuur over week)?",
+   "opties": [
+    "Lijngrafiek",
+    "Staafdiagram",
+    "Cirkeldiagram",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 1,
+   "vraag": 12,
+   "soort": "K",
+   "q": "Cirkeldiagram: blauw 25%, geel 25%, rest = ?",
+   "opties": [
+    "50%",
+    "25%",
+    "100%",
+    "75%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 1,
+   "vraag": 13,
+   "soort": "S",
+   "q": "Staafdiagram: hoogste staaf = ?",
+   "opties": [
+    "Grootste waarde",
+    "Kleinste waarde",
+    "Niets",
+    "Gemiddelde"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 1,
+   "vraag": 15,
+   "soort": "K",
+   "q": "Tabel: bedrag €10/€20/€30/€40/€50. Som?",
+   "opties": [
+    "€150",
+    "€100",
+    "€50",
+    "€30"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 1,
+   "vraag": 22,
+   "soort": "S",
+   "q": "In een tabel 'Leerlingen per klas' staat elke klas op een eigen rij. Wat staat er in één rij?",
+   "opties": [
+    "De gegevens van één klas",
+    "De gegevens van alle klassen samen",
+    "Alleen de titel van de tabel",
+    "Alleen de kolomkoppen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 1,
+   "vraag": 26,
+   "soort": "S",
+   "q": "Welke as is meestal horizontaal in een grafiek?",
+   "opties": [
+    "x-as",
+    "y-as",
+    "z-as",
+    "geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 1,
+   "vraag": 27,
+   "soort": "K",
+   "q": "Een grafiek-as loopt van 10 t/m 20 in stappen van 1. Hoeveel getallen staan er op de as?",
+   "opties": [
+    "11",
+    "10",
+    "20",
+    "21"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 2,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Waarvoor gebruik je de inhoudsopgave?",
+   "opties": [
+    "Snel een hoofdstuk vinden",
+    "Een specifiek woord",
+    "Plaatjes ordenen",
+    "Korter lezen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 2,
+   "vraag": 11,
+   "soort": "K",
+   "q": "Welk woord staat eerder: 'rood' of 'paars'?",
+   "opties": [
+    "paars",
+    "rood",
+    "Beide gelijk",
+    "Niet alfabetisch"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 2,
+   "vraag": 14,
+   "soort": "S",
+   "q": "Welk woord staat eerder in het woordenboek: kabel of kaak?",
+   "opties": [
+    "kaak",
+    "kabel",
+    "Beide gelijk",
+    "Geen idee"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 2,
+   "vraag": 15,
+   "soort": "K",
+   "q": "In een atlas-index staat: 'Madrid ... 22 C4'. Wat betekent C4?",
+   "opties": [
+    "Vak op de kaart",
+    "Bladzijde 4",
+    "Hoofdstuk",
+    "Schaal"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 2,
+   "vraag": 20,
+   "soort": "L2",
+   "q": "In een bibliotheek-catalogus zoek je als je wilt weten...",
+   "opties": [
+    "Of een boek aanwezig is en waar",
+    "Hoe het verhaal afloopt",
+    "Hoeveel het kost",
+    "Wie het gelezen heeft"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 2,
+   "vraag": 21,
+   "soort": "S",
+   "q": "Welk woord komt eerst in het woordenboek: 'water' of 'wijn'?",
+   "opties": [
+    "water",
+    "wijn",
+    "Beide",
+    "Geen idee"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 2,
+   "vraag": 31,
+   "soort": "L2",
+   "q": "Je zoekt informatie over vulkanen in een studieboek van 200 bladzijden. Wat is de snelste route?",
+   "opties": [
+    "Zoek 'vulkaan' in de index achterin",
+    "Lees het boek van voor naar achter",
+    "Blader willekeurig",
+    "Bekijk alleen de plaatjes"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 2,
+   "vraag": 35,
+   "soort": "L2",
+   "q": "Het woord 'bank' heeft in het woordenboek twee nummers: bank¹ (meubel) en bank² (geldzaken). Waarom?",
+   "opties": [
+    "Het woord heeft twee verschillende betekenissen",
+    "Het woord is twee keer fout gedrukt",
+    "Je mag kiezen welke spelling je gebruikt",
+    "Het tweede woord is ouderwets"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 3,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Wat is een stroomdiagram?",
+   "opties": [
+    "Stappen met pijlen",
+    "Een tabel",
+    "Een kaart",
+    "Een grafiek"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "S",
+   "q": "Wat staat in een vergelijkings-tabel?",
+   "opties": [
+    "Overeenkomsten én verschillen",
+    "Alleen de overeenkomsten",
+    "Alleen de verschillen",
+    "Alleen plaatjes van de dingen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 3,
+   "vraag": 10,
+   "soort": "L2K",
+   "q": "In stroomdiagram: welke vorm voor start of einde?",
+   "opties": [
+    "Cirkel of ovaal",
+    "Ruit",
+    "Rechthoek",
+    "Driehoek"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 3,
+   "vraag": 11,
+   "soort": "L2K",
+   "q": "Wat is het voordeel van schema's?",
+   "opties": [
+    "Veel informatie kort + duidelijk",
+    "Mooi om naar te kijken",
+    "Meer tekst dan een verhaal",
+    "Verplicht door school"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 3,
+   "vraag": 13,
+   "soort": "SK",
+   "q": "Schema 'A → ja → B / A → nee → C'. Wat is A?",
+   "opties": [
+    "Keuze-vraag",
+    "Eindpunt",
+    "Gewone stap",
+    "Niets"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 3,
+   "vraag": 14,
+   "soort": "L2",
+   "q": "Stappenplan voor brand in huis. Wat eerst?",
+   "opties": [
+    "Vluchten + 112 bellen",
+    "Spullen pakken",
+    "Foto's maken",
+    "Niet bewegen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 3,
+   "vraag": 15,
+   "soort": "K",
+   "q": "Boomdiagram: 'Sport → Voetbal / Tennis / Hockey'. Hoeveel takken?",
+   "opties": [
+    "3",
+    "1",
+    "4",
+    "0"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 3,
+   "vraag": 17,
+   "soort": "L2K",
+   "q": "Stappenplan tandenpoetsen: pasta op borstel → poetsen → spoelen. Wat is stap 1?",
+   "opties": [
+    "Pasta op borstel",
+    "Poetsen",
+    "Spoelen",
+    "Slapen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 3,
+   "vraag": 18,
+   "soort": "L2K",
+   "q": "In een stappenplan-schema wijzen de pijlen...",
+   "opties": [
+    "De volgorde van stappen",
+    "Het kleinste deel",
+    "De prijs",
+    "Het materiaal"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 3,
+   "vraag": 19,
+   "soort": "S",
+   "q": "Een vergelijkingstabel *(fiets vs auto)* laat zien...",
+   "opties": [
+    "Wat gelijk en wat verschillend is",
+    "Alleen de prijs van de benzine",
+    "Wie de eigenaar van elk ding is",
+    "Hoe je een fiets moet repareren"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 3,
+   "vraag": 21,
+   "soort": "S",
+   "q": "Bij 'als-dan'-schema: 'als regen, dan paraplu'. Wat is de conclusie?",
+   "opties": [
+    "Paraplu",
+    "Regen",
+    "Beide",
+    "Niets"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 3,
+   "vraag": 22,
+   "soort": "L2",
+   "q": "Schema 'voor → na' laat zien wat veranderd is. Goed voor?",
+   "opties": [
+    "Effect van iets bekijken",
+    "Recept maken",
+    "Verhaal vertellen",
+    "Aardrijkskunde"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 3,
+   "vraag": 26,
+   "soort": "S",
+   "q": "Schema 'oorzaak → gevolg': brand → schade. Wat is oorzaak?",
+   "opties": [
+    "Brand",
+    "Schade",
+    "Beide",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 3,
+   "vraag": 28,
+   "soort": "L2",
+   "q": "Bij 'eerst → daarna → vervolgens' spreek je over ___?",
+   "opties": [
+    "Stappenplan / volgorde",
+    "Tegenstelling",
+    "Vergelijking",
+    "Oorzaak en gevolg"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 3,
+   "vraag": 29,
+   "soort": "L2K",
+   "q": "Een planningsschema voor een week toont meestal...",
+   "opties": [
+    "Wat je elke dag moet doen",
+    "Wat je vroeger deed",
+    "Wat je niet doet",
+    "Niets relevants"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 3,
+   "vraag": 31,
+   "soort": "L2",
+   "q": "In een boomdiagram van het dierenrijk staat 'zoogdieren' onder 'gewervelden'. Wat betekent dat?",
+   "opties": [
+    "Zoogdieren zijn een groep binnen de gewervelden",
+    "Zoogdieren zijn belangrijker",
+    "Gewervelden zijn een soort zoogdier",
+    "Ze hebben niets met elkaar te maken"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 3,
+   "vraag": 33,
+   "soort": "S",
+   "q": "Welk hulpmiddel kies je om overzicht te krijgen van een hoofdstuk vol feiten voor een toets?",
+   "opties": [
+    "Een mindmap of schema maken",
+    "Het hoofdstuk 10 keer overlezen",
+    "Alleen de plaatjes bekijken",
+    "De toets overslaan"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 3,
+   "vraag": 36,
+   "soort": "S",
+   "q": "Schema 'wie doet wat': Sam dekt de tafel op ma/wo/vr, Noa op di/do, in het weekend samen. Wie dekt de tafel op donderdag?",
+   "opties": [
+    "Noa",
+    "Sam",
+    "Allebei",
+    "Niemand"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 4,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Schaal 1:25.000. Op kaart 8 cm. Werkelijkheid?",
+   "opties": [
+    "2 km",
+    "200 m",
+    "20 m",
+    "200 km"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 4,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Cirkeldiagram: rood 40%, blauw 30%, geel 20%. Rest = ?",
+   "opties": [
+    "10%",
+    "5%",
+    "15%",
+    "25%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 4,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Waar zoek je uitleg over een onderwerp in een non-fictie boek?",
+   "opties": [
+    "In de index",
+    "Op de kaft",
+    "Bij plaatjes",
+    "Op de titelpagina"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 4,
+   "vraag": 4,
+   "soort": "K",
+   "q": "Tabel-totaal: 5+8+12+15+10 = ?",
+   "opties": [
+    "50",
+    "45",
+    "55",
+    "40"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 4,
+   "vraag": 5,
+   "soort": "S",
+   "q": "Schema: 'start → A → ja → B → klaar'. Wat is B?",
+   "opties": [
+    "Een vervolg-stap",
+    "Het einde",
+    "Een keuze",
+    "Onbekend"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 4,
+   "vraag": 11,
+   "soort": "K",
+   "q": "Schaal 1:75.000. Op kaart 4 cm. In het echt (in km)?",
+   "opties": [
+    "3 km",
+    "300 m",
+    "30 km",
+    "0,3 km"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 4,
+   "vraag": 12,
+   "soort": "L2SK",
+   "q": "Welk werelddeel: Rusland?",
+   "opties": [
+    "Europa + Azië (beide)",
+    "Alleen Azië",
+    "Alleen Europa",
+    "Amerika"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 4,
+   "vraag": 13,
+   "soort": "K",
+   "q": "Inhoudsopgave staat voorin of achterin boek?",
+   "opties": [
+    "Voorin",
+    "Achterin",
+    "Midden",
+    "Beide"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 4,
+   "vraag": 14,
+   "soort": "K",
+   "q": "Schaal 1:500.000. Op kaart 6 cm. Werkelijk?",
+   "opties": [
+    "30 km",
+    "300 m",
+    "3 km",
+    "30 m"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 4,
+   "vraag": 24,
+   "soort": "K",
+   "q": "Atlas-index zoek je op Berlijn. Je krijgt 'Berlijn 14 B3'. Wat is 14?",
+   "opties": [
+    "Paginanummer",
+    "Inwoners ×1000",
+    "Vak in raster",
+    "Hoeveelheid kaarten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 4,
+   "vraag": 26,
+   "soort": "K",
+   "q": "Bij tabel sorteren op alfabet: welk woord komt eerst?",
+   "opties": [
+    "aap",
+    "boom",
+    "kat",
+    "muis"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 4,
+   "vraag": 27,
+   "soort": "K",
+   "q": "Stappenplan brandweer: 1) sirene 2) rijden 3) blussen. Stap na rijden?",
+   "opties": [
+    "Blussen",
+    "Sirene",
+    "Naar huis",
+    "Slapen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 4,
+   "vraag": 29,
+   "soort": "L2K",
+   "q": "Een kaart van de wereld is geprojecteerd op een platte vorm. Welke vertekening zie je vaak?",
+   "opties": [
+    "Groenland lijkt veel te groot",
+    "Amsterdam is verdwenen",
+    "Oceanen zijn paars",
+    "Alles is even groot"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 4,
+   "vraag": 36,
+   "soort": "L2",
+   "q": "Je leest in twee bronnen iets tegenstrijdigs over hoeveel poten een duizendpoot heeft. Wat doe je?",
+   "opties": [
+    "Een derde betrouwbare bron checken",
+    "De leukste kiezen",
+    "Allebei opschrijven als waar",
+    "Het onderwerp schrappen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 4,
+   "vraag": 38,
+   "soort": "L2",
+   "q": "Voor je spreekbeurt mag je 5 minuten praten. Je oefenversie duurt 8 minuten. Wat is de beste aanpak?",
+   "opties": [
+    "Bijzaken schrappen en hoofdpunten houden",
+    "Twee keer zo snel praten",
+    "De helft van de hoofdpunten weglaten",
+    "Gewoon 8 minuten praten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 5,
+   "vraag": 10,
+   "soort": "L2",
+   "q": "Plattegrond zwembad in woorden: de ingang zit aan de zuidkant. Direct achter de ingang ligt het buitenbad, en daar weer achter, helemaal aan de noordkant, het b",
+   "opties": [
+    "Het verst van de ingang vandaan",
+    "Direct naast de ingang",
+    "Aan de zuidkant",
+    "Buiten het zwembad-terrein"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 5,
+   "vraag": 13,
+   "soort": "S",
+   "q": "Twee kinderen beschrijven de route naar het park. Anna: 'neem de eerste straat rechts en loop rechtdoor'. Bo: 'sla bij de bakker rechtsaf en loop rechtdoor'. De",
+   "opties": [
+    "Allebei",
+    "Alleen Anna",
+    "Alleen Bo",
+    "Geen van beiden"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 6,
+   "vraag": 7,
+   "soort": "S",
+   "q": "Bibliotheek: ma gesloten, di-vr 10:00-18:00, za 10:00-16:00. Jij kunt alleen om 16:30 na school (dinsdag) of zaterdag om 15:00. Op welke momenten kun je terecht",
+   "opties": [
+    "Op allebei de momenten",
+    "Alleen om 16:30 na school",
+    "Alleen op zaterdag om 15:00",
+    "Op geen van beide momenten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 6,
+   "vraag": 8,
+   "soort": "S",
+   "q": "Menukaart snackbar: friet € 2,50 — snack € 2,00 — combideal friet + snack € 4,00. Hoeveel bespaar je met de combideal?",
+   "opties": [
+    "€ 0,50",
+    "€ 4,50",
+    "€ 1,00",
+    "Niets"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 6,
+   "vraag": 16,
+   "soort": "L2",
+   "q": "In de treintabel staat bij zaterdag een sterretje (*). Onderaan de tabel staat: '* rijdt niet in schoolvakanties'. Het is zomervakantie en zaterdag. Rijdt deze ",
+   "opties": [
+    "Nee, want in schoolvakanties rijdt deze trein niet",
+    "Ja, het sterretje betekent extra snel",
+    "Ja, sterretjes gelden alleen op zondag",
+    "Dat kun je niet weten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 6,
+   "vraag": 19,
+   "soort": "L2",
+   "q": "Waarom staat er in een dienstregeling vaak 'ma-vr' boven een kolom?",
+   "opties": [
+    "Die tijden gelden alleen op maandag tot en met vrijdag",
+    "De bus rijdt alleen in de maand maart",
+    "Dat is de naam van de buslijn",
+    "Die kolom is alleen voor volwassenen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 7,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Voor je werkstuk over dolfijnen vind je vier bronnen. Welke is het betrouwbaarst?",
+   "opties": [
+    "De website van een zeeaquarium met echte dolfijnen-verzorgers",
+    "Een grappig dolfijnen-filmpje op social media",
+    "Een verhaaltje uit een stripboek",
+    "Een oud forum-bericht van 'dolfijnfan123'"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 7,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Onderaan een website over medicijnen staat: 'Deze site is gemaakt door de fabrikant van pil X.' Waarom is dat belangrijk om te weten?",
+   "opties": [
+    "De maker verdient aan pil X en is dus niet neutraal",
+    "Fabrikanten weten altijd alles het best",
+    "Het maakt nooit uit wie iets schrijft",
+    "Websites van bedrijven zijn altijd fout"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 7,
+   "vraag": 10,
+   "soort": "L2",
+   "q": "Je zoekt met de woorden 'jaguar snelheid' en krijgt vooral auto-sites. Wat is de beste aanpassing van je zoekopdracht?",
+   "opties": [
+    "Zoek op 'jaguar dier snelheid'",
+    "Zoek alleen nog op 'snelheid'",
+    "Zoek op 'auto'",
+    "Stop maar met zoeken"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 7,
+   "vraag": 13,
+   "soort": "L2",
+   "q": "Je wilt controleren of een spannend nieuwsbericht echt waar is. Wat is de beste check?",
+   "opties": [
+    "Kijken of andere betrouwbare sites hetzelfde melden",
+    "Tellen hoeveel likes het bericht heeft",
+    "Kijken of er een mooi plaatje bij staat",
+    "Het bericht meteen doorsturen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 7,
+   "vraag": 15,
+   "soort": "S",
+   "q": "Zelfde inhoudsopgave: hoofdstuk 'Aardbevingen' begint op blz. 12 en het volgende hoofdstuk op blz. 20. Op welke bladzijden kun je over aardbevingen lezen?",
+   "opties": [
+    "Blz. 12 tot en met 19",
+    "Blz. 12 tot en met 20",
+    "Alleen blz. 12",
+    "Blz. 20 en verder"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 8,
+   "vraag": 8,
+   "soort": "S",
+   "q": "Wat hoort wél in een goede samenvatting van een tekst?",
+   "opties": [
+    "De hoofdzaken, in je eigen woorden",
+    "Elke zin van de tekst, letterlijk",
+    "Alleen de grapjes uit de tekst",
+    "De naam van de drukker van het boek"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 8,
+   "vraag": 16,
+   "soort": "L2",
+   "q": "Welke zin is de hoofdzaak van deze alinea: 'Amira traint elke dag. Ze doet oefeningen voor haar benen. Ze eet extra gezond. Zo bereidt ze zich voor op de marath",
+   "opties": [
+    "Amira bereidt zich voor op de marathon",
+    "Amira doet beenoefeningen",
+    "Amira eet extra gezond",
+    "Amira heeft nieuwe sportschoenen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 8,
+   "vraag": 17,
+   "soort": "L2",
+   "q": "Wat doe je EERST bij het maken van een woordweb over een tekst?",
+   "opties": [
+    "Het onderwerp in het midden schrijven",
+    "Alle moeilijke woorden opzoeken",
+    "De blaadjes vast inkleuren",
+    "De tekst uit je hoofd leren"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 8,
+   "vraag": 19,
+   "soort": "L2",
+   "q": "Waarom zet een schrijver kopjes boven de stukken van een tekst?",
+   "opties": [
+    "Zodat je snel ziet waar elk stuk over gaat",
+    "Om de tekst moeilijker te maken",
+    "Omdat het verplicht is bij wet",
+    "Om lezers woordjes te laten oefenen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 8,
+   "vraag": 22,
+   "soort": "S",
+   "q": "Je moet een lange tekst leren voor een toets. Wat is de slimste eerste stap?",
+   "opties": [
+    "De tekst eerst globaal doorkijken",
+    "De hele tekst meteen overschrijven",
+    "Beginnen bij de laatste bladzijde",
+    "Alleen de plaatjes bekijken"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "doorstroomtoets-studievaardigheden-g8",
+   "file": "./doorstroomtoetsStudievaardighedenG8.js",
+   "stap": 9,
+   "vraag": 8,
+   "soort": "S",
+   "q": "In het register van je aardrijkskundeboek staat: 'dijk 14, 27 — duin 8 — eb 31'. Op welke bladzijden lees je over dijken?",
+   "opties": [
+    "Bladzijde 14 en 27",
+    "Alleen bladzijde 14",
+    "Bladzijde 8",
+    "Bladzijde 31"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}

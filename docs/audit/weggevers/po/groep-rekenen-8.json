@@ -1,0 +1,811 @@
+{
+ "bestanden": [
+  "./financieleVormingPo.js",
+  "./kommagetallenPo.js",
+  "./geldRekenen.js",
+  "./belastingPo.js",
+  "./deelsommenMetRestPo.js"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "belasting-po",
+   "file": "./belastingPo.js",
+   "stap": 1,
+   "vraag": 7,
+   "soort": "H",
+   "q": "Hoeveel is 20% belasting van een brutoloon van €500?",
+   "opties": [
+    "€100",
+    "€20",
+    "€400",
+    "€480"
+   ],
+   "answer": 0,
+   "lijst": "scan"
+  },
+  {
+   "pad": "belasting-po",
+   "file": "./belastingPo.js",
+   "stap": 0,
+   "vraag": 8,
+   "soort": "L2",
+   "q": "Welke twee soorten belasting kom jij nu al tegen?",
+   "opties": [
+    "Belasting op loon en btw",
+    "Btw en zakgeld",
+    "Korting en rente",
+    "Loon en spaargeld"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "belasting-po",
+   "file": "./belastingPo.js",
+   "stap": 1,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Wie haalt de belasting van je loon af?",
+   "opties": [
+    "Je werkgever, vóórdat je het loon krijgt",
+    "Jij zelf, aan het eind van het jaar",
+    "De supermarkt bij de kassa",
+    "Niemand — loon is altijd netto"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "belasting-po",
+   "file": "./belastingPo.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Wat is btw?",
+   "opties": [
+    "Belasting die al in de winkelprijs zit",
+    "Korting bij de kassa",
+    "Geld dat je terugkrijgt bij sparen",
+    "Een soort spaarpot"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "belasting-po",
+   "file": "./belastingPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Welk btw-tarief geldt voor de meeste spullen (speelgoed, kleding)?",
+   "opties": [
+    "21% (hoog tarief)",
+    "9% (laag tarief)",
+    "0%",
+    "100%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "belasting-po",
+   "file": "./belastingPo.js",
+   "stap": 3,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Welke dienst van de overheid zorgt dat de belasting binnenkomt?",
+   "opties": [
+    "De Belastingdienst",
+    "De juf",
+    "De winkel",
+    "De spaarpot"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "belasting-po",
+   "file": "./belastingPo.js",
+   "stap": 3,
+   "vraag": 7,
+   "soort": "S",
+   "q": "Btw zit in de prijs — dus bij de kassa betaal je?",
+   "opties": [
+    "Precies de prijs van het kaartje",
+    "Altijd nog extra btw erbovenop",
+    "Iets minder dan op het kaartje staat",
+    "Alleen de btw, niet de prijs"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "deelsommen-met-rest-po",
+   "file": "./deelsommenMetRestPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "K",
+   "q": "In een lift passen 5 personen. Er staan 12 mensen te wachten. Hoe vaak moet de lift minstens omhoog?",
+   "opties": [
+    "3 keer",
+    "2 keer",
+    "4 keer",
+    "2 rest 2"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "deelsommen-met-rest-po",
+   "file": "./deelsommenMetRestPo.js",
+   "stap": 1,
+   "vraag": 5,
+   "soort": "K",
+   "q": "Dozen met 6 boeken. Je wilt 45 boeken verzenden. Hoeveel dozen heb je nodig?",
+   "opties": [
+    "8 dozen",
+    "7 dozen",
+    "7 rest 3",
+    "9 dozen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "deelsommen-met-rest-po",
+   "file": "./deelsommenMetRestPo.js",
+   "stap": 2,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Je hebt 26 eieren. In een doos passen er 6. Hoeveel volle dozen kun je maken?",
+   "opties": [
+    "4",
+    "5",
+    "6",
+    "4 rest 2"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "deelsommen-met-rest-po",
+   "file": "./deelsommenMetRestPo.js",
+   "stap": 3,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Een klas heeft 45 leerlingen. Ze maken groepjes van 4. Hoeveel volledige groepjes van 4 zijn er?",
+   "opties": [
+    "11",
+    "12",
+    "11 rest 1",
+    "9"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "deelsommen-met-rest-po",
+   "file": "./deelsommenMetRestPo.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Voor 50 appels heb je dozen nodig. In een doos passen 12 appels. Hoeveel dozen heb je nodig?",
+   "opties": [
+    "5",
+    "4",
+    "4 rest 2",
+    "6"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "deelsommen-met-rest-po",
+   "file": "./deelsommenMetRestPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Welke vraag vraagt om naar BENEDEN afronden?",
+   "opties": [
+    "Hoeveel volle kratten van 6 flessen maak je van 20 flessen?",
+    "Hoeveel kratten heb je nodig voor 20 flessen?",
+    "Hoeveel bussen zijn er nodig voor 20 kinderen?",
+    "Na hoeveel weken sparen heb je genoeg?"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "financiele-vorming-po",
+   "file": "./financieleVormingPo.js",
+   "stap": 0,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Hoeveel landen gebruiken de euro?",
+   "opties": [
+    "21 (eurozone)",
+    "5",
+    "27 (alle EU = Europese Unie)",
+    "50"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "financiele-vorming-po",
+   "file": "./financieleVormingPo.js",
+   "stap": 0,
+   "vraag": 8,
+   "soort": "L2",
+   "q": "Waarom wordt er in Nederland bij contant betalen vaak afgerond op 5 cent?",
+   "opties": [
+    "Munten van 1 en 2 cent worden bijna niet gebruikt",
+    "Biljetten van €5 zijn te groot voor de kassa",
+    "De winkel verdient zo altijd meer",
+    "Munten van 5 cent zijn bijna op"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "financiele-vorming-po",
+   "file": "./financieleVormingPo.js",
+   "stap": 1,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Wat kun je leren van zakgeld krijgen?",
+   "opties": [
+    "Zelf kiezen waar je je geld aan uitgeeft",
+    "Hoe je een lening afsluit",
+    "Hoe je belasting moet betalen",
+    "Hoe je rente betaalt aan de bank"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "financiele-vorming-po",
+   "file": "./financieleVormingPo.js",
+   "stap": 1,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Wat is een nadeel als je voor élk klusje thuis geld krijgt?",
+   "opties": [
+    "Gewoon thuis helpen lijkt dan op betaald werk",
+    "Je leert er helemaal niet van werken",
+    "Je mag dan geen spaarpot meer hebben",
+    "Je moet dan statiegeld betalen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "financiele-vorming-po",
+   "file": "./financieleVormingPo.js",
+   "stap": 2,
+   "vraag": 1,
+   "soort": "K",
+   "q": "€100 met 2% rente per jaar — na 1 jaar?",
+   "opties": [
+    "€102",
+    "€2",
+    "€20",
+    "€200"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "financiele-vorming-po",
+   "file": "./financieleVormingPo.js",
+   "stap": 3,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Wat is 50/30/20-regel?",
+   "opties": [
+    "50% nodig, 30% leuk, 20% sparen",
+    "50% sparen, 30% leuk, 20% nodig",
+    "Geen regel",
+    "50% leuk, 30% sparen, 20% nodig"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "financiele-vorming-po",
+   "file": "./financieleVormingPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Wat hoort in 'NODIG'-categorie?",
+   "opties": [
+    "Eten + schoolspullen",
+    "Snoep + bioscoop",
+    "Spaargeld",
+    "Games"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "financiele-vorming-po",
+   "file": "./financieleVormingPo.js",
+   "stap": 4,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Waarom kost lenen geld?",
+   "opties": [
+    "Je betaalt rente over wat je leent",
+    "Je krijgt rente van de bank",
+    "De bank geeft je korting",
+    "Je moet statiegeld betalen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "financiele-vorming-po",
+   "file": "./financieleVormingPo.js",
+   "stap": 4,
+   "vraag": 7,
+   "soort": "L2",
+   "q": "Een winkel roept: 'Mis dit aanbod niet!' Wat wil de winkel daarmee?",
+   "opties": [
+    "Dat je snel koopt uit angst iets te missen",
+    "Dat je eerst rustig gaat sparen",
+    "Dat je prijzen gaat vergelijken",
+    "Dat je een week wacht met kopen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "financiele-vorming-po",
+   "file": "./financieleVormingPo.js",
+   "stap": 4,
+   "vraag": 8,
+   "soort": "L2S",
+   "q": "Je krijgt een mail: 'Speciaal voor jou!' Wat is meestal waar?",
+   "opties": [
+    "Heel veel mensen krijgen dezelfde mail",
+    "Alleen jij krijgt deze mail",
+    "De winkel kent jou persoonlijk",
+    "Je krijgt het product gratis"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "financiele-vorming-po",
+   "file": "./financieleVormingPo.js",
+   "stap": 5,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel landen gebruiken de euro?",
+   "opties": [
+    "21",
+    "5",
+    "27",
+    "10"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "financiele-vorming-po",
+   "file": "./financieleVormingPo.js",
+   "stap": 5,
+   "vraag": 1,
+   "soort": "K",
+   "q": "€200 met 5% rente na 1 jaar?",
+   "opties": [
+    "€210",
+    "€205",
+    "€220",
+    "€250"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "financiele-vorming-po",
+   "file": "./financieleVormingPo.js",
+   "stap": 5,
+   "vraag": 8,
+   "soort": "K",
+   "q": "€10 zakgeld × 4 weken = totaal in 1 maand?",
+   "opties": [
+    "€40",
+    "€14",
+    "€10",
+    "€100"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "financiele-vorming-po",
+   "file": "./financieleVormingPo.js",
+   "stap": 5,
+   "vraag": 9,
+   "soort": "K",
+   "q": "Spaar €5/week. Hoeveel na 10 weken?",
+   "opties": [
+    "€50",
+    "€5",
+    "€15",
+    "€100"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "financiele-vorming-po",
+   "file": "./financieleVormingPo.js",
+   "stap": 5,
+   "vraag": 10,
+   "soort": "SK",
+   "q": "Wat wil reclame vooral dat je doet?",
+   "opties": [
+    "Iets kopen",
+    "Niets",
+    "Spelen",
+    "Spreken"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "financiele-vorming-po",
+   "file": "./financieleVormingPo.js",
+   "stap": 5,
+   "vraag": 12,
+   "soort": "K",
+   "q": "BNPL (Buy Now Pay Later) is?",
+   "opties": [
+    "Vorm van lenen",
+    "Spaarrekening",
+    "Reclame-truc",
+    "Statiegeld"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "financiele-vorming-po",
+   "file": "./financieleVormingPo.js",
+   "stap": 5,
+   "vraag": 16,
+   "soort": "S",
+   "q": "Als geld op spaarrekening blijft, krijg je vaak?",
+   "opties": [
+    "Rente",
+    "Niets",
+    "Korting",
+    "Bonus"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "financiele-vorming-po",
+   "file": "./financieleVormingPo.js",
+   "stap": 5,
+   "vraag": 19,
+   "soort": "L2K",
+   "q": "Welk product heeft statiegeld in NL?",
+   "opties": [
+    "Plastic flessen",
+    "Boeken",
+    "Stickers",
+    "Bananen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "geld-rekenen",
+   "file": "./geldRekenen.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "K",
+   "q": "€ 3,40 + € 1,75 = ?",
+   "opties": [
+    "€ 5,15",
+    "€ 5,05",
+    "€ 4,95",
+    "€ 5,25"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "geld-rekenen",
+   "file": "./geldRekenen.js",
+   "stap": 4,
+   "vraag": 0,
+   "soort": "K",
+   "q": "€ 4,75 + € 2,80 = ?",
+   "opties": [
+    "€ 7,55",
+    "€ 7,45",
+    "€ 6,55",
+    "€ 7,65"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "geld-rekenen",
+   "file": "./geldRekenen.js",
+   "stap": 4,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Een tas van € 35, 15% korting. Wat betaal je?",
+   "opties": [
+    "€ 29,75",
+    "€ 30",
+    "€ 5,25",
+    "€ 31,75"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "geld-rekenen",
+   "file": "./geldRekenen.js",
+   "stap": 4,
+   "vraag": 4,
+   "soort": "K",
+   "q": "12 stickers van € 0,15 — totaal?",
+   "opties": [
+    "€ 1,80",
+    "€ 1,50",
+    "€ 1,20",
+    "€ 2,00"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "geld-rekenen",
+   "file": "./geldRekenen.js",
+   "stap": 4,
+   "vraag": 9,
+   "soort": "K",
+   "q": "Je krijgt €5 zakgeld + €2 verjaardag. Totaal?",
+   "opties": [
+    "€7",
+    "€3",
+    "€10",
+    "€5"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "geld-rekenen",
+   "file": "./geldRekenen.js",
+   "stap": 4,
+   "vraag": 12,
+   "soort": "K",
+   "q": "€10 − €3,45 = ?",
+   "opties": [
+    "€6,55",
+    "€7,55",
+    "€6,45",
+    "€7"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "geld-rekenen",
+   "file": "./geldRekenen.js",
+   "stap": 4,
+   "vraag": 13,
+   "soort": "L2",
+   "q": "Je wilt 3 pakken sap. Los kost een pak €4, een voordeelpak met 3 pakken kost €11. Wat is voordeliger?",
+   "opties": [
+    "het voordeelpak van €11",
+    "3 losse pakken",
+    "even duur",
+    "niet te zeggen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "geld-rekenen",
+   "file": "./geldRekenen.js",
+   "stap": 4,
+   "vraag": 17,
+   "soort": "K",
+   "q": "€25 ÷ 5 = ?",
+   "opties": [
+    "€5",
+    "€20",
+    "€30",
+    "€125"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "geld-rekenen",
+   "file": "./geldRekenen.js",
+   "stap": 4,
+   "vraag": 18,
+   "soort": "K",
+   "q": "Je hebt €100. Koopt boek €18 + spel €25. Over?",
+   "opties": [
+    "€57",
+    "€43",
+    "€73",
+    "€67"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "geld-rekenen",
+   "file": "./geldRekenen.js",
+   "stap": 4,
+   "vraag": 19,
+   "soort": "K",
+   "q": "Verjaardagsfeest €120 voor 8 gasten. Per gast?",
+   "opties": [
+    "€15",
+    "€120",
+    "€8",
+    "€12"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "geld-rekenen",
+   "file": "./geldRekenen.js",
+   "stap": 4,
+   "vraag": 23,
+   "soort": "K",
+   "q": "Je verdient €2,50/uur als oppas. 4 uur = ?",
+   "opties": [
+    "€10",
+    "€8",
+    "€12",
+    "€2,50"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kommagetallen-po",
+   "file": "./kommagetallenPo.js",
+   "stap": 5,
+   "vraag": 6,
+   "soort": "K",
+   "q": "0,3 + 0,4 = ?",
+   "opties": [
+    "0,7",
+    "0,07",
+    "7",
+    "0,1"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kommagetallen-po",
+   "file": "./kommagetallenPo.js",
+   "stap": 5,
+   "vraag": 7,
+   "soort": "K",
+   "q": "1,5 + 2,7 = ?",
+   "opties": [
+    "4,2",
+    "3,2",
+    "4,12",
+    "42"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kommagetallen-po",
+   "file": "./kommagetallenPo.js",
+   "stap": 5,
+   "vraag": 8,
+   "soort": "K",
+   "q": "5 − 0,3 = ?",
+   "opties": [
+    "4,7",
+    "4,3",
+    "5,3",
+    "53"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kommagetallen-po",
+   "file": "./kommagetallenPo.js",
+   "stap": 5,
+   "vraag": 9,
+   "soort": "K",
+   "q": "0,2 × 5 = ?",
+   "opties": [
+    "1",
+    "10",
+    "0,1",
+    "0,7"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kommagetallen-po",
+   "file": "./kommagetallenPo.js",
+   "stap": 5,
+   "vraag": 10,
+   "soort": "K",
+   "q": "Welke is groter: 0,5 of 0,15?",
+   "opties": [
+    "0,5",
+    "0,15",
+    "Gelijk",
+    "Niet te zeggen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kommagetallen-po",
+   "file": "./kommagetallenPo.js",
+   "stap": 5,
+   "vraag": 12,
+   "soort": "K",
+   "q": "€ 1,25 + € 0,75 = ?",
+   "opties": [
+    "€ 2,00",
+    "€ 1,50",
+    "€ 2,25",
+    "€ 20,00"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kommagetallen-po",
+   "file": "./kommagetallenPo.js",
+   "stap": 5,
+   "vraag": 14,
+   "soort": "K",
+   "q": "0,8 × 10 = ?",
+   "opties": [
+    "8",
+    "80",
+    "0,08",
+    "0,8"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "kommagetallen-po",
+   "file": "./kommagetallenPo.js",
+   "stap": 5,
+   "vraag": 17,
+   "soort": "K",
+   "q": "10,5 ÷ 5 = ?",
+   "opties": [
+    "2,1",
+    "2,5",
+    "21",
+    "5,5"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}

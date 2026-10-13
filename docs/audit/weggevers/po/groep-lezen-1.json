@@ -1,0 +1,620 @@
+{
+ "bestanden": [
+  "./begrijpendLezenTekstenPo.js",
+  "./schemaTekstCombiPo.js",
+  "./briefEmailLezenPo.js",
+  "./verhaalDiepteLezenPo.js",
+  "./feitenDetailsOpzoekenPo.js",
+  "./conclusiesTrekkenPo.js"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "begrijpend-lezen-teksten-po",
+   "file": "./begrijpendLezenTekstenPo.js",
+   "stap": 0,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Wat betekent 'pedaalomwenteling' in deze tekst?",
+   "opties": [
+    "Eén keer rond met de pedalen trappen",
+    "Een speciaal soort fietsband",
+    "Een bekend Frans automerk",
+    "Een onderdeel van de remmen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-teksten-po",
+   "file": "./begrijpendLezenTekstenPo.js",
+   "stap": 1,
+   "vraag": 7,
+   "soort": "S",
+   "q": "Waar steek je het touw doorheen om de sluiting te maken?",
+   "opties": [
+    "Door de eerste én de laatste paperclip",
+    "Alleen door de middelste paperclip",
+    "Door elke paperclip van de keten",
+    "Alleen door de laatste paperclip"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-teksten-po",
+   "file": "./begrijpendLezenTekstenPo.js",
+   "stap": 2,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Welk argument noemt de schrijver NIET?",
+   "opties": [
+    "Telefoons zijn te duur voor basisschoolkinderen",
+    "Telefoons leiden af tijdens de les",
+    "Schermtijd schaadt het sociale leven",
+    "Thuis kunnen ouders begeleiding geven"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-teksten-po",
+   "file": "./begrijpendLezenTekstenPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Hoe gaat de schrijver om met het tegenargument 'kinderen moeten leren omgaan met technologie'?",
+   "opties": [
+    "De schrijver erkent het, maar zegt dat dat thuis kan — niet op school",
+    "De schrijver negeert dit argument volledig",
+    "De schrijver zegt dat technologie altijd slecht is",
+    "De schrijver beweert dat kinderen het al kunnen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-teksten-po",
+   "file": "./begrijpendLezenTekstenPo.js",
+   "stap": 2,
+   "vraag": 9,
+   "soort": "L2",
+   "q": "Wat bedoelt de schrijver met 'tegenstanders'?",
+   "opties": [
+    "Mensen die het niet met de schrijver eens zijn",
+    "Kinderen die in de pauze ruzie maken",
+    "Scholen die telefoons al verbieden",
+    "Leerlingen die geen telefoon hebben"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-teksten-po",
+   "file": "./begrijpendLezenTekstenPo.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Waarom maakt Tom er geen punt van toen hij Sara helpt?",
+   "opties": [
+    "Hij wil dat Sara zich niet ongemakkelijk voelt",
+    "Hij heeft eigenlijk geen honger",
+    "Hij is bang voor Sara",
+    "Hij weet niet wat hij anders moet zeggen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-teksten-po",
+   "file": "./begrijpendLezenTekstenPo.js",
+   "stap": 4,
+   "vraag": 0,
+   "soort": "S",
+   "q": "Stelling: 'In Nederland zijn er meer fietsen dan inwoners.' Wat zegt de eerste tekst hierover?",
+   "opties": [
+    "Dat klopt — het is een uniek Nederlands kenmerk",
+    "Dat klopt voor heel Europa, niet alleen Nederland",
+    "De tekst zegt hier niets over",
+    "Alleen in Amsterdam is dat zo"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-teksten-po",
+   "file": "./begrijpendLezenTekstenPo.js",
+   "stap": 4,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Welke van de vier teksten in dit pad is BETOGEND?",
+   "opties": [
+    "Telefoons horen niet thuis op de basisschool",
+    "De geschiedenis van de fiets",
+    "Hoe maak je een paperclip-armband?",
+    "De vergeten lunchtrommel"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-teksten-po",
+   "file": "./begrijpendLezenTekstenPo.js",
+   "stap": 4,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Wat doe je als je een woord in een tekst niet kent?",
+   "opties": [
+    "De woorden eromheen lezen om het te raden via context",
+    "De vraag overslaan",
+    "Een woordenboek pakken en het woord opzoeken",
+    "Nooit antwoord invullen — die vraag laat je leeg"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-teksten-po",
+   "file": "./begrijpendLezenTekstenPo.js",
+   "stap": 4,
+   "vraag": 9,
+   "soort": "K",
+   "q": "Welke vraag stel je het eerst bij een tekst om de structuur te zien?",
+   "opties": [
+    "Waar gaat elke alinea over?",
+    "Hoe lang is de tekst?",
+    "Wat is de kleur van het papier?",
+    "Wie heeft de tekst gedrukt?"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-teksten-po",
+   "file": "./begrijpendLezenTekstenPo.js",
+   "stap": 4,
+   "vraag": 12,
+   "soort": "S",
+   "q": "Welke alinea geeft meestal de conclusie?",
+   "opties": [
+    "De laatste",
+    "De eerste",
+    "De middelste",
+    "Geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-teksten-po",
+   "file": "./begrijpendLezenTekstenPo.js",
+   "stap": 4,
+   "vraag": 16,
+   "soort": "K",
+   "q": "Bij woordbetekenis-vragen kijk je naar?",
+   "opties": [
+    "De zinnen rondom het woord",
+    "Hoeveel letters het woord heeft",
+    "Hoe het klinkt",
+    "Of het woord vetgedrukt is"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "begrijpend-lezen-teksten-po",
+   "file": "./begrijpendLezenTekstenPo.js",
+   "stap": 4,
+   "vraag": 23,
+   "soort": "L2",
+   "q": "*'Verbazingwekkend!'* — wat zegt het woord over de toon?",
+   "opties": [
+    "Verrassing/emotie",
+    "Neutraal",
+    "Verveling",
+    "Boosheid"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brief-email-lezen-po",
+   "file": "./briefEmailLezenPo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "L2S",
+   "q": "Je krijgt een brief en wilt weten wie hem geschreven heeft. Waar kijk je het eerst?",
+   "opties": [
+    "Onderaan de brief, bij de naam onder de groet",
+    "Precies in het midden van de brief",
+    "Alleen naar de datum bovenaan",
+    "Naar de eerste letter van elke zin"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brief-email-lezen-po",
+   "file": "./briefEmailLezenPo.js",
+   "stap": 1,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Wat is het doel van deze brief?",
+   "opties": [
+    "De ouders informeren over de sportdag én om hulp vragen",
+    "Klagen over het weer op de sportdag",
+    "De ouders bedanken voor hun hulp van vorig jaar",
+    "Uitleggen hoe je een spelletje speelt"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brief-email-lezen-po",
+   "file": "./briefEmailLezenPo.js",
+   "stap": 2,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "*\"Geachte heer Pot, vorige week kocht ik in uw winkel een voetbal. Na twee dagen was hij al lek. Ik wil graag mijn geld terug.\"* — Wat is het doel van deze brie",
+   "opties": [
+    "Klagen over de kapotte bal en geld terugvragen",
+    "Vertellen dat voetballen leuk is",
+    "De winkel bedanken voor de mooie bal",
+    "Vragen hoe je een bal oppompt"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brief-email-lezen-po",
+   "file": "./briefEmailLezenPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Je schrijft een brief aan de burgemeester, die je niet kent. Welke aanhef past het best?",
+   "opties": [
+    "Geachte mevrouw Van Dam,",
+    "Hoi burgemeester!",
+    "Yo!",
+    "Lieve mevrouw Van Dam,"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brief-email-lezen-po",
+   "file": "./briefEmailLezenPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Iemand schrijft: *\"Beste buren, helaas moeten wij mededelen dat onze kat Poes is weggelopen. Wij zijn al drie dagen aan het zoeken. Wilt u ons bellen als u haar",
+   "opties": [
+    "Informeren over de situatie én hulp vragen",
+    "Klagen over de kat",
+    "Bedanken voor eerdere hulp bij het zoeken",
+    "Uitnodigen voor een zoekactie"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brief-email-lezen-po",
+   "file": "./briefEmailLezenPo.js",
+   "stap": 2,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Een brief begint met *\"Geachte directeur Patel,\"*. Wat verraadt dit over de schrijver en de directeur?",
+   "opties": [
+    "Ze kennen elkaar niet goed; de schrijver gebruikt een formele toon",
+    "Ze zijn goede vrienden; de schrijver schrijft deftig voor de lol",
+    "De directeur is de afzender van de brief",
+    "De brief is voor alle leerlingen van de school"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "brief-email-lezen-po",
+   "file": "./briefEmailLezenPo.js",
+   "stap": 3,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Waar betaal je de € 3,50 voor de Zwemvierdaagse?",
+   "opties": [
+    "Op de eerste avond bij de kassa van het zwembad",
+    "Nu al, door geld over te maken",
+    "Bij de balie van de zwemclub",
+    "Via de website bij het aanmelden"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "conclusies-trekken-po",
+   "file": "./conclusiesTrekkenPo.js",
+   "stap": 0,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Aanwijzing 1: de hond staat kwispelend bij de voordeur. Aanwijzing 2: hij heeft zijn riem in zijn bek. Wat is de beste conclusie?",
+   "opties": [
+    "De hond wil naar buiten voor een wandeling",
+    "De hond heeft honger",
+    "De hond is bang voor de deur",
+    "De hond wil de riem kapotbijten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "conclusies-trekken-po",
+   "file": "./conclusiesTrekkenPo.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Hoe voelt Noor zich als ze in haar lege kamer staat?",
+   "opties": [
+    "Verdrietig, omdat ze afscheid moet nemen",
+    "Blij, omdat ze een grotere kamer krijgt",
+    "Boos op haar vader",
+    "Bang voor het nieuwe huis"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "conclusies-trekken-po",
+   "file": "./conclusiesTrekkenPo.js",
+   "stap": 1,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Waarom stopt Noor het kiezelsteentje waarschijnlijk in haar jaszak?",
+   "opties": [
+    "Ze wil een herinnering aan haar oude huis en haar vriendin meenemen",
+    "Ze spaart bijzondere stenen",
+    "Ze wil het steentje aan het nieuwe meisje geven",
+    "Papa had gevraagd of ze de vensterbank leeg wilde maken"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "conclusies-trekken-po",
+   "file": "./conclusiesTrekkenPo.js",
+   "stap": 1,
+   "vraag": 7,
+   "soort": "L2",
+   "q": "In de auto kijkt Noor naar haar oude straat *'tot die achter de bocht verdween'*. Wat kun je daaruit afleiden?",
+   "opties": [
+    "Ze vindt het moeilijk om haar oude buurt achter te laten",
+    "Ze wil de weg naar het nieuwe huis onthouden",
+    "Ze wordt misselijk van het autorijden",
+    "Ze telt de huizen in haar straat"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "conclusies-trekken-po",
+   "file": "./conclusiesTrekkenPo.js",
+   "stap": 2,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Jayden kijkt tijdens de uitleg steeds op de klok. Hij trommelt met zijn vingers op tafel en zucht diep. Wat kun je hieruit afleiden?",
+   "opties": [
+    "Jayden wil dat de uitleg snel voorbij is",
+    "Jayden oefent voor drumles",
+    "Jayden vindt klokken interessant",
+    "Jayden heeft het koud"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "conclusies-trekken-po",
+   "file": "./conclusiesTrekkenPo.js",
+   "stap": 3,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Teller Ruud Blom deelt gratis nestkasten uit én geeft tips voor groenere tuinen. Wat kun je hieruit concluderen?",
+   "opties": [
+    "Ruud Blom gelooft dat bewoners kunnen helpen de mus te redden",
+    "Ruud Blom wil nestkasten verkopen voor zijn werk",
+    "Ruud Blom denkt dat de mus al uitgestorven is",
+    "Ruud Blom vindt Zonnehof een lelijke wijk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "conclusies-trekken-po",
+   "file": "./conclusiesTrekkenPo.js",
+   "stap": 3,
+   "vraag": 6,
+   "soort": "L2",
+   "q": "In de tekst staat dat de tellers 'dit voorjaar' drie mussen telden in Zonnehof. Welke conclusie is ONDERBOUWD?",
+   "opties": [
+    "Op het moment van tellen waren er drie mussen in Zonnehof",
+    "Er zullen nooit meer mussen in Zonnehof komen",
+    "De tellers hebben slecht geteld",
+    "Alle mussen zijn vorig jaar gestorven"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "feiten-details-opzoeken-po",
+   "file": "./feitenDetailsOpzoekenPo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Je krijgt de vraag: *\"Hoeveel eieren legt een kip per week?\"* Wat doe je volgens de zoekstrategie als EERSTE?",
+   "opties": [
+    "De vraag goed lezen en het zoekwoord onderstrepen",
+    "De hele tekst van begin tot eind lezen",
+    "Meteen een antwoord gokken",
+    "Het eerste getal uit de tekst overnemen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "feiten-details-opzoeken-po",
+   "file": "./feitenDetailsOpzoekenPo.js",
+   "stap": 0,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Je wilt snel een antwoord opzoeken in een lange tekst. Wat is de SLIMSTE eerste actie?",
+   "opties": [
+    "De vraag lezen en het zoekwoord bepalen vóórdat je naar de tekst kijkt",
+    "De tekst van begin tot eind lezen en daarna de vraag lezen",
+    "Gokken op basis van de kop van de tekst",
+    "Alle getallen in de tekst opschrijven en daarna de vraag lezen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "feiten-details-opzoeken-po",
+   "file": "./feitenDetailsOpzoekenPo.js",
+   "stap": 0,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Je hebt je zoekwoord gevonden in de tekst. Wat is de VOLGENDE stap in de zoekstrategie?",
+   "opties": [
+    "De zin met het zoekwoord — en de zin ervoor en erna — precies lezen",
+    "De rest van de tekst ook helemaal lezen",
+    "Meteen het antwoord opschrijven zonder verder te lezen",
+    "Een nieuw zoekwoord kiezen en opnieuw beginnen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "feiten-details-opzoeken-po",
+   "file": "./feitenDetailsOpzoekenPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Wat kocht de school van het geld van de honingverkoop?",
+   "opties": [
+    "Nieuwe planten voor de bloemenstrook",
+    "Een derde bijenkast",
+    "Nieuwe potten voor de honing",
+    "Cadeautjes voor groep zeven"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "feiten-details-opzoeken-po",
+   "file": "./feitenDetailsOpzoekenPo.js",
+   "stap": 1,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Wat staat er op het bord aan de rand van het schoolplein?",
+   "opties": [
+    "Informatie over het bijenproject",
+    "De regels van het schoolplein",
+    "Een foto van de bijen",
+    "De naam van de school"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "feiten-details-opzoeken-po",
+   "file": "./feitenDetailsOpzoekenPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "L2",
+   "q": "Je zoekwoord uit de vraag staat nérgens letterlijk in de tekst. Wat doe je dan?",
+   "opties": [
+    "Zoeken naar een synoniem: een ander woord dat hetzelfde betekent",
+    "Antwoorden dat het niet in de tekst staat",
+    "De vraag overslaan en nooit meer terugkomen",
+    "Zelf een antwoord verzinnen dat goed klinkt"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "feiten-details-opzoeken-po",
+   "file": "./feitenDetailsOpzoekenPo.js",
+   "stap": 3,
+   "vraag": 4,
+   "soort": "L2",
+   "q": "Wat vind je op de begane grond van het Uilenfort?",
+   "opties": [
+    "Hoe het fort vroeger werd verdedigd",
+    "De uilenzaal met opgezette uilen",
+    "Het Ontdeklab op zolder",
+    "De schatkist in de kelder"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schema-tekst-combi-po",
+   "file": "./schemaTekstCombiPo.js",
+   "stap": 0,
+   "vraag": 7,
+   "soort": "L2",
+   "q": "Wat is de slimme volgorde bij het zoeken in een tabel (kruispunt-lezen)?",
+   "opties": [
+    "Eerst de goede rij zoeken, dan het goede gegeven, dan kijken waar ze samenkomen",
+    "De hele tabel uit je hoofd leren en dan pas de vraag lezen",
+    "Altijd het eerste getal van de tabel overnemen",
+    "De tabel overslaan en het antwoord in de tekst zoeken"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schema-tekst-combi-po",
+   "file": "./schemaTekstCombiPo.js",
+   "stap": 1,
+   "vraag": 8,
+   "soort": "L2",
+   "q": "Noor is 7 jaar en heeft nog geen zwemdiploma. Wat moet zij volgens de tekst doen in het zwembad?",
+   "opties": [
+    "Een oranje bandje dragen en in het ondiepe bad blijven",
+    "Een tienbadenkaart kopen bij de kassa",
+    "Altijd op woensdagmiddag komen zwemmen",
+    "Samen met een volwassene in het diepe bad zwemmen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "schema-tekst-combi-po",
+   "file": "./schemaTekstCombiPo.js",
+   "stap": 3,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Wil je meedoen aan de ballonnenwedstrijd? Wat moet je meenemen?",
+   "opties": [
+    "Een naamkaartje aan het touwtje van je ballon",
+    "Geld voor extra muntjes",
+    "Een opgaveformulier van meneer Baris",
+    "Een eigen ballon van thuis"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "verhaal-diepte-lezen-po",
+   "file": "./verhaalDiepteLezenPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Waarom zegt juf Karin dat ze 'tweeëndertig cadeautjes in plaats van één' krijgt?",
+   "opties": [
+    "Ze wil Ties troosten en laten merken dat het niet erg is",
+    "Ze wil tweeëndertig nieuwe vazen bestellen",
+    "Ze vindt scherven echt mooier dan een hele vaas",
+    "Ze is boos en zegt het spottend"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}

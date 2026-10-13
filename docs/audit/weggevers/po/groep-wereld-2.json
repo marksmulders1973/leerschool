@@ -1,0 +1,958 @@
+{
+ "bestanden": [
+  "./waterErfgoedNederlandPo.js",
+  "./continentenWereldPo.js",
+  "./bekendeNederlandersPo.js",
+  "./ontdekkingsreizenPo.js",
+  "./eetcultuurNederlandPo.js",
+  "./nederlandseKunstenaarsPo.js",
+  "./olympischeSpelenPo.js",
+  "./topografieEuropaPo.jsx"
+ ],
+ "hulpKandidaten": [
+  {
+   "pad": "eetcultuur-nederland-po",
+   "file": "./eetcultuurNederlandPo.js",
+   "stap": 0,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Hoeveel kaas per persoon NL per jaar?",
+   "opties": [
+    "~14 kg",
+    "1 kg",
+    "100 kg",
+    "50 kg"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "eetcultuur-nederland-po",
+   "file": "./eetcultuurNederlandPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Wat eten Surinamers vaak?",
+   "opties": [
+    "Roti",
+    "Stamppot",
+    "Sushi",
+    "Pizza"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "eetcultuur-nederland-po",
+   "file": "./eetcultuurNederlandPo.js",
+   "stap": 3,
+   "vraag": 0,
+   "soort": "L2",
+   "q": "Welke is typisch Hollands?",
+   "opties": [
+    "Stamppot + haring",
+    "Sushi",
+    "Pizza",
+    "Tajine"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "eetcultuur-nederland-po",
+   "file": "./eetcultuurNederlandPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Goudse kaas komt uit?",
+   "opties": [
+    "Gouda",
+    "Italië",
+    "Frankrijk",
+    "België"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "eetcultuur-nederland-po",
+   "file": "./eetcultuurNederlandPo.js",
+   "stap": 3,
+   "vraag": 4,
+   "soort": "SK",
+   "q": "Vis aanbevolen aantal per week?",
+   "opties": [
+    "1 keer",
+    "Dagelijks",
+    "Nooit",
+    "Maandelijks"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "eetcultuur-nederland-po",
+   "file": "./eetcultuurNederlandPo.js",
+   "stap": 3,
+   "vraag": 7,
+   "soort": "K",
+   "q": "Boerenkool wordt vaak gemengd met aardappel tot ___?",
+   "opties": [
+    "Stamppot",
+    "Soep",
+    "Salade",
+    "Brood"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "eetcultuur-nederland-po",
+   "file": "./eetcultuurNederlandPo.js",
+   "stap": 3,
+   "vraag": 10,
+   "soort": "K",
+   "q": "Hoeveel maaltijden per dag eet gemiddelde NL'er?",
+   "opties": [
+    "3",
+    "1",
+    "6",
+    "10"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "eetcultuur-nederland-po",
+   "file": "./eetcultuurNederlandPo.js",
+   "stap": 3,
+   "vraag": 12,
+   "soort": "L2K",
+   "q": "Drop is een typische NL-snoep met smaak van ___?",
+   "opties": [
+    "Zoethout-extract",
+    "Chocolade",
+    "Fruit",
+    "Karamel"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "nederlandse-kunstenaars-po",
+   "file": "./nederlandseKunstenaarsPo.js",
+   "stap": 0,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Waar staat de Nachtwacht?",
+   "opties": [
+    "Rijksmuseum Amsterdam",
+    "Mauritshuis",
+    "Van Gogh Museum",
+    "Louvre"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "nederlandse-kunstenaars-po",
+   "file": "./nederlandseKunstenaarsPo.js",
+   "stap": 0,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Wat is clair-obscur?",
+   "opties": [
+    "Licht-donker contrast",
+    "Soort kleur",
+    "Naam schilder",
+    "Penseel"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "nederlandse-kunstenaars-po",
+   "file": "./nederlandseKunstenaarsPo.js",
+   "stap": 1,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Hoeveel schilderijen verkocht hij tijdens leven?",
+   "opties": [
+    "1 schilderij",
+    "Honderden",
+    "Nul",
+    "Duizend"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "nederlandse-kunstenaars-po",
+   "file": "./nederlandseKunstenaarsPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Welk beroemd schilderij is van Van Gogh?",
+   "opties": [
+    "Zonnebloemen",
+    "Nachtwacht",
+    "Meisje met Parel",
+    "Watermolen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "nederlandse-kunstenaars-po",
+   "file": "./nederlandseKunstenaarsPo.js",
+   "stap": 2,
+   "vraag": 1,
+   "soort": "SK",
+   "q": "Welke primaire kleuren gebruikte Mondriaan?",
+   "opties": [
+    "Rood + geel + blauw",
+    "Groen + paars + oranje",
+    "Alle kleuren",
+    "Alleen zwart-wit"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "nederlandse-kunstenaars-po",
+   "file": "./nederlandseKunstenaarsPo.js",
+   "stap": 2,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Wat is De Stijl?",
+   "opties": [
+    "Kunstbeweging",
+    "Schilderij",
+    "Kleur",
+    "Museum"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "nederlandse-kunstenaars-po",
+   "file": "./nederlandseKunstenaarsPo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Waar staat Het Meisje met de Parel?",
+   "opties": [
+    "Mauritshuis Den Haag",
+    "Rijksmuseum",
+    "Louvre",
+    "Stedelijk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "nederlandse-kunstenaars-po",
+   "file": "./nederlandseKunstenaarsPo.js",
+   "stap": 3,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Wie ontwierp het Sprookjesbos van de Efteling?",
+   "opties": [
+    "Anton Pieck",
+    "Bruna",
+    "Mondriaan",
+    "Hals"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "nederlandse-kunstenaars-po",
+   "file": "./nederlandseKunstenaarsPo.js",
+   "stap": 4,
+   "vraag": 4,
+   "soort": "K",
+   "q": "Wie bedacht Nijntje?",
+   "opties": [
+    "Dick Bruna",
+    "Pieck",
+    "Mondriaan",
+    "Hals"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "nederlandse-kunstenaars-po",
+   "file": "./nederlandseKunstenaarsPo.js",
+   "stap": 4,
+   "vraag": 5,
+   "soort": "L2",
+   "q": "Grootste museum NL?",
+   "opties": [
+    "Rijksmuseum Amsterdam",
+    "Mauritshuis",
+    "Bonnefanten",
+    "Eftelingmuseum"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "nederlandse-kunstenaars-po",
+   "file": "./nederlandseKunstenaarsPo.js",
+   "stap": 4,
+   "vraag": 6,
+   "soort": "L2",
+   "q": "Wie schreef de boeken 'Pluk van de Petteflet' en 'Jip en Janneke'?",
+   "opties": [
+    "Annie M.G. Schmidt",
+    "Dick Bruna",
+    "Anton Pieck",
+    "Rembrandt"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "nederlandse-kunstenaars-po",
+   "file": "./nederlandseKunstenaarsPo.js",
+   "stap": 4,
+   "vraag": 7,
+   "soort": "L2K",
+   "q": "Van Gogh werd pas na zijn dood beroemd. Hoe verkocht hij zijn schilderijen toen hij leefde?",
+   "opties": [
+    "Bijna niet — slechts één in zijn leven",
+    "Heel veel, aan rijke kopers",
+    "Hij gaf ze allemaal gratis weg",
+    "Hij maakte er helemaal geen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "nederlandse-kunstenaars-po",
+   "file": "./nederlandseKunstenaarsPo.js",
+   "stap": 4,
+   "vraag": 8,
+   "soort": "K",
+   "q": "Bij welke kunststroming hoort Mondriaan?",
+   "opties": [
+    "De Stijl",
+    "Impressionisme",
+    "Realisme",
+    "Romantiek"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "olympische-spelen-po",
+   "file": "./olympischeSpelenPo.js",
+   "stap": 0,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Hoeveel olympische ringen?",
+   "opties": [
+    "5",
+    "4",
+    "6",
+    "7"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "olympische-spelen-po",
+   "file": "./olympischeSpelenPo.js",
+   "stap": 0,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Wat is olympisch motto?",
+   "opties": [
+    "Citius, Altius, Fortius",
+    "Veni, vidi, vici",
+    "Carpe diem",
+    "Olympic Glory"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "olympische-spelen-po",
+   "file": "./olympischeSpelenPo.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel sporten op zomer-OS 2024?",
+   "opties": [
+    "~32",
+    "5",
+    "100",
+    "10"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "olympische-spelen-po",
+   "file": "./olympischeSpelenPo.js",
+   "stap": 1,
+   "vraag": 3,
+   "soort": "K",
+   "q": "Meeste medailles ooit door?",
+   "opties": [
+    "Michael Phelps",
+    "Tom Daley",
+    "Latynina",
+    "Sven Kramer"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "olympische-spelen-po",
+   "file": "./olympischeSpelenPo.js",
+   "stap": 2,
+   "vraag": 1,
+   "soort": "K",
+   "q": "NL is top in welke wintersport?",
+   "opties": [
+    "Schaatsen",
+    "IJshockey",
+    "Skeleton",
+    "Curling"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "olympische-spelen-po",
+   "file": "./olympischeSpelenPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "L2K",
+   "q": "Oranje komt van?",
+   "opties": [
+    "Oranje-Nassau koninklijke familie",
+    "De kleur van sinaasappels",
+    "De kleur van de vlag",
+    "Een olympische afspraak"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "olympische-spelen-po",
+   "file": "./olympischeSpelenPo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Hoeveel olympische ringen?",
+   "opties": [
+    "5",
+    "4",
+    "6",
+    "7"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "olympische-spelen-po",
+   "file": "./olympischeSpelenPo.js",
+   "stap": 3,
+   "vraag": 5,
+   "soort": "L2K",
+   "q": "Wat is WADA?",
+   "opties": [
+    "Anti-Doping-Agency",
+    "Sportbond",
+    "NL-team",
+    "Stadion"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "olympische-spelen-po",
+   "file": "./olympischeSpelenPo.js",
+   "stap": 3,
+   "vraag": 8,
+   "soort": "L2",
+   "q": "Welke NL-sporter wint vaak op de schaats?",
+   "opties": [
+    "Ireen Wüst, Sven Kramer",
+    "Lionel Messi",
+    "Usain Bolt",
+    "Michael Phelps"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "olympische-spelen-po",
+   "file": "./olympischeSpelenPo.js",
+   "stap": 3,
+   "vraag": 9,
+   "soort": "L2SK",
+   "q": "Paralympische Spelen zijn voor ___?",
+   "opties": [
+    "Sporters met een handicap",
+    "Alleen kinderen",
+    "Alleen oud-olympiërs",
+    "Alleen NL"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ontdekkingsreizen-po",
+   "file": "./ontdekkingsreizenPo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Waarom wilden Europeanen naar Azië?",
+   "opties": [
+    "Specerijen + goud + handel",
+    "Toerisme",
+    "Om er als boer te gaan wonen",
+    "Om oorlog te voeren met China"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ontdekkingsreizen-po",
+   "file": "./ontdekkingsreizenPo.js",
+   "stap": 0,
+   "vraag": 1,
+   "soort": "L2",
+   "q": "Wat is een astrolabium?",
+   "opties": [
+    "Apparaat voor breedtegraad via sterren",
+    "Snel zeilschip uit Portugal",
+    "Oude kaart van de zeeën",
+    "Hard brood voor aan boord"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ontdekkingsreizen-po",
+   "file": "./ontdekkingsreizenPo.js",
+   "stap": 1,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Wie zeilde als eerste rond de aarde?",
+   "opties": [
+    "Magellan-expeditie",
+    "Columbus-expeditie",
+    "Cabot-expeditie",
+    "Dias-expeditie"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ontdekkingsreizen-po",
+   "file": "./ontdekkingsreizenPo.js",
+   "stap": 2,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Welke Europeaan ontdekte Nieuw-Zeeland?",
+   "opties": [
+    "Abel Tasman",
+    "Columbus",
+    "Magellan",
+    "Cook"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ontdekkingsreizen-po",
+   "file": "./ontdekkingsreizenPo.js",
+   "stap": 2,
+   "vraag": 3,
+   "soort": "L2",
+   "q": "Paaseiland ontdekt door?",
+   "opties": [
+    "Jacob Roggeveen",
+    "Tasman",
+    "Hudson",
+    "Columbus"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ontdekkingsreizen-po",
+   "file": "./ontdekkingsreizenPo.js",
+   "stap": 3,
+   "vraag": 1,
+   "soort": "K",
+   "q": "Wie zeilde als eerste rond de aarde?",
+   "opties": [
+    "Magellan-expeditie",
+    "Columbus-expeditie",
+    "Cook-expeditie",
+    "Hudson-expeditie"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ontdekkingsreizen-po",
+   "file": "./ontdekkingsreizenPo.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "L2K",
+   "q": "VOC stond voor?",
+   "opties": [
+    "Verenigde Oostindische Compagnie",
+    "Vereniging Oude Cargo",
+    "Veiligheidsdienst",
+    "Verbond van Oude Christenen"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ontdekkingsreizen-po",
+   "file": "./ontdekkingsreizenPo.js",
+   "stap": 3,
+   "vraag": 5,
+   "soort": "S",
+   "q": "Slavernij in NL afgeschaft?",
+   "opties": [
+    "1863",
+    "1492",
+    "2024",
+    "Nooit"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ontdekkingsreizen-po",
+   "file": "./ontdekkingsreizenPo.js",
+   "stap": 3,
+   "vraag": 8,
+   "soort": "L2",
+   "q": "Welke gevolgen had de ontdekking van Amerika voor inheemse volkeren?",
+   "opties": [
+    "Massale sterfte door Europese ziektes + onderdrukking",
+    "Alleen positief — handel + welvaart",
+    "Niets — Europeanen lieten hen met rust",
+    "Inheemse volken werden rijker"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ontdekkingsreizen-po",
+   "file": "./ontdekkingsreizenPo.js",
+   "stap": 3,
+   "vraag": 10,
+   "soort": "K",
+   "q": "Wat is de VOC?",
+   "opties": [
+    "Verenigde Oost-Indische Compagnie",
+    "Vereniging van Oude Cartografen",
+    "Verbond van Oranje-Commandanten",
+    "Vrije Oceaan-Compagnie"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ontdekkingsreizen-po",
+   "file": "./ontdekkingsreizenPo.js",
+   "stap": 3,
+   "vraag": 13,
+   "soort": "L2",
+   "q": "Wie maakte de eerste wereldreis (1519-1522)?",
+   "opties": [
+    "Magellan's expeditie",
+    "Columbus",
+    "Vasco da Gama",
+    "Tasman"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ontdekkingsreizen-po",
+   "file": "./ontdekkingsreizenPo.js",
+   "stap": 3,
+   "vraag": 16,
+   "soort": "K",
+   "q": "Welke Spanjaard veroverde Inca-rijk (Peru)?",
+   "opties": [
+    "Pizarro",
+    "Cortés",
+    "Columbus",
+    "Magellan"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ontdekkingsreizen-po",
+   "file": "./ontdekkingsreizenPo.js",
+   "stap": 3,
+   "vraag": 17,
+   "soort": "K",
+   "q": "Wat is de WIC?",
+   "opties": [
+    "West-Indische Compagnie",
+    "Wereld-Import-Centrale",
+    "Westerse Indianen-Club",
+    "Waterschap In Curaçao"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ontdekkingsreizen-po",
+   "file": "./ontdekkingsreizenPo.js",
+   "stap": 3,
+   "vraag": 18,
+   "soort": "L2K",
+   "q": "Welk eiland in het Caribisch gebied hoort bij het Koninkrijk der Nederlanden?",
+   "opties": [
+    "Curaçao / Aruba",
+    "Hawaii",
+    "Sicilië",
+    "Cuba"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ontdekkingsreizen-po",
+   "file": "./ontdekkingsreizenPo.js",
+   "stap": 3,
+   "vraag": 23,
+   "soort": "L2K",
+   "q": "Keti Koti is wat?",
+   "opties": [
+    "Herdenking afschaffing slavernij",
+    "Surinaams nieuwjaarsfeest",
+    "Een Surinaams gerecht",
+    "Een voetbaltoernooi"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "ontdekkingsreizen-po",
+   "file": "./ontdekkingsreizenPo.js",
+   "stap": 3,
+   "vraag": 27,
+   "soort": "K",
+   "q": "Wat is een compagnie (zoals VOC)?",
+   "opties": [
+    "Handelsorganisatie",
+    "Politieke partij",
+    "Soort schip",
+    "Leger van de koning"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "water-erfgoed-nederland-po",
+   "file": "./waterErfgoedNederlandPo.js",
+   "stap": 0,
+   "vraag": 0,
+   "soort": "K",
+   "q": "Hoeveel procent van Nederland ligt onder zeeniveau?",
+   "opties": [
+    "~25%",
+    "~5%",
+    "~75%",
+    "~100%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "water-erfgoed-nederland-po",
+   "file": "./waterErfgoedNederlandPo.js",
+   "stap": 0,
+   "vraag": 7,
+   "soort": "L2",
+   "q": "Wat bedoelen mensen met: *'God maakte de wereld, maar de Nederlanders maakten Holland'*?",
+   "opties": [
+    "Nederlanders hebben veel land zelf op het water gewonnen",
+    "Nederlanders hebben de hele wereld ontdekt",
+    "Holland is het oudste land van de wereld",
+    "In Holland wonen de meeste mensen van de wereld"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "water-erfgoed-nederland-po",
+   "file": "./waterErfgoedNederlandPo.js",
+   "stap": 1,
+   "vraag": 0,
+   "soort": "SK",
+   "q": "Wat is het verschil tussen een dijk en een duin?",
+   "opties": [
+    "Dijk door mensen, duin door natuur",
+    "Dijk hoger dan duin altijd",
+    "Duin door mensen, dijk door natuur",
+    "Geen verschil"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "water-erfgoed-nederland-po",
+   "file": "./waterErfgoedNederlandPo.js",
+   "stap": 3,
+   "vraag": 2,
+   "soort": "K",
+   "q": "Hoeveel doden waren er ongeveer?",
+   "opties": [
+    "~1.836",
+    "~100",
+    "~10.000",
+    "~500"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "water-erfgoed-nederland-po",
+   "file": "./waterErfgoedNederlandPo.js",
+   "stap": 5,
+   "vraag": 7,
+   "soort": "L2K",
+   "q": "Een polder is?",
+   "opties": [
+    "Drooggemaakt land",
+    "Een rivier",
+    "Een stad",
+    "Een dijk"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "water-erfgoed-nederland-po",
+   "file": "./waterErfgoedNederlandPo.js",
+   "stap": 5,
+   "vraag": 8,
+   "soort": "K",
+   "q": "Wat is de Afsluitdijk?",
+   "opties": [
+    "Een lange dijk",
+    "Een molen",
+    "Een gemaal",
+    "Een spoorbrug"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "water-erfgoed-nederland-po",
+   "file": "./waterErfgoedNederlandPo.js",
+   "stap": 5,
+   "vraag": 9,
+   "soort": "L2K",
+   "q": "Welk percentage van NL ligt onder zee-niveau?",
+   "opties": [
+    "Ongeveer 25%",
+    "60%",
+    "5%",
+    "90%"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "water-erfgoed-nederland-po",
+   "file": "./waterErfgoedNederlandPo.js",
+   "stap": 5,
+   "vraag": 11,
+   "soort": "L2",
+   "q": "Welk werelderfgoed in NL beschermt water-cultuur?",
+   "opties": [
+    "Kinderdijk-molens",
+    "Piramides",
+    "Acropolis",
+    "Colosseum"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "water-erfgoed-nederland-po",
+   "file": "./waterErfgoedNederlandPo.js",
+   "stap": 5,
+   "vraag": 13,
+   "soort": "L2K",
+   "q": "Wat is windmolen versus windturbine?",
+   "opties": [
+    "Molen = graan malen of water pompen; turbine = stroom maken",
+    "Hetzelfde ding met een andere naam",
+    "Molen = stroom maken; turbine = graan malen",
+    "Molen staat op land; turbine staat altijd op zee"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "water-erfgoed-nederland-po",
+   "file": "./waterErfgoedNederlandPo.js",
+   "stap": 5,
+   "vraag": 14,
+   "soort": "K",
+   "q": "Beemster ligt in welke provincie?",
+   "opties": [
+    "Noord-Holland",
+    "Zeeland",
+    "Friesland",
+    "Limburg"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "water-erfgoed-nederland-po",
+   "file": "./waterErfgoedNederlandPo.js",
+   "stap": 5,
+   "vraag": 15,
+   "soort": "K",
+   "q": "Wat doet een stuw in een rivier?",
+   "opties": [
+    "Waterhoogte regelen",
+    "Water weghalen",
+    "Vissen vangen",
+    "Verkeer doorlaten"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  },
+  {
+   "pad": "water-erfgoed-nederland-po",
+   "file": "./waterErfgoedNederlandPo.js",
+   "stap": 5,
+   "vraag": 18,
+   "soort": "K",
+   "q": "Beroemd deltagebied in NL?",
+   "opties": [
+    "Zeeland",
+    "Friesland",
+    "Drenthe",
+    "Limburg"
+   ],
+   "answer": 0,
+   "lijst": "extra"
+  }
+ ]
+}
