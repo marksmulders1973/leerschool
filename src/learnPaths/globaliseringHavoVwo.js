@@ -416,12 +416,12 @@ const steps = [
         q: "**Carbon Border Adjustment** (EU 2026):",
         options: [
           "Een heffing op import van CO₂-intensieve goederen",
-          "Een subsidie voor groene fabrieken in de EU",
-          "Een maximum voor de CO₂-uitstoot van auto's",
+          "Een subsidie op export van groene producten",
+          "Een verbod op export van afval buiten de EU",
           "Handel in uitstootrechten voor EU-bedrijven"
         ],
         answer: 0,
-        wrongHints: [null, "Een subsidie geeft geld, maar 'Border' wijst op de grens. Wat gebeurt er met producten aan de grens?", "Uitstootnormen voor auto's gelden voor alles wat in de EU wordt verkocht. Waar slaat 'Border' op?", "Dat is het emissiehandelssysteem (ETS) voor bedrijven binnen de EU. Wat doet de CBAM met producten van buiten?"],
+        wrongHints: [null, "Een subsidie geeft geld aan eigen bedrijven. De CBAM legt juist een prijs op CO₂: op welke producten?", "Voor afvalexport gelden aparte regels. De CBAM gaat over de CO₂ in producten als staal en cement: welke kant gaan die op?", "Dat is het emissiehandelssysteem (ETS). De CBAM is een aanvulling daarop: voor welke producten?"],
         uitlegPad: {
           stappen: [
             { titel: "Voorkomt 'carbon leakage'", tekst: "EU-bedrijven hebben CO₂-prijs (ETS). Buiten EU vaak niet → bedrijven verhuizen → CO₂-uitstoot verplaatst (leakage). CBAM: importbelasting gelijk aan EU-CO₂-prijs voor staal, cement, aluminium etc. Druk op China/India om eigen klimaatbeleid → druk op globale klimaat-actie." },
@@ -449,13 +449,13 @@ const steps = [
       {
         q: "**Re-shoring** is:",
         options: [
-          "Productie terughalen naar het thuisland",
-          "Productie klimaatneutraal maken",
-          "Arbeiders uit lagelonenlanden halen",
-          "Productie naar nog meer landen verplaatsen"
+          "Productie verplaatsen naar het eigen land",
+          "Productie verplaatsen naar een land dichtbij",
+          "Productie verplaatsen naar een lagelonenland",
+          "Werk uitbesteden aan een ander bedrijf"
         ],
         answer: 0,
-        wrongHints: [null, "Re-shoring gaat over wáár je produceert, niet over hoe schoon. Wat betekent 're-'?", "Dan verhuizen de mensen, niet de fabriek. Wat gebeurt er met de productie?", "Dat is off-shoring uitbreiden. Wat betekent het voorvoegsel 're-'?"],
+        wrongHints: [null, "Dichterbij produceren, zoals in Polen in plaats van China, heet near-shoring. Waar gaat de fabriek bij re-shoring heen?", "Naar een lagelonenland verhuizen heet off-shoring. Re-shoring is de omkering daarvan: waar gaat de fabriek dan heen?", "Uitbesteden aan een ander bedrijf heet outsourcing. Re-shoring gaat over de plek van de productie: welke plek?"],
         uitlegPad: {
           stappen: [
             { titel: "Strategie-omkering", tekst: "Na decennia productie naar China → COVID-disrupties + politiek risico (Taiwan, sancties) → bedrijven herzien. Voorbeelden: chipfabrieken terug naar VS/EU (Chips Acts), auto-industrie meer in VS/Mexico; Apple spreidt productie naar India + Vietnam (minder afhankelijk van China). Trend versterkt sinds 2020." },

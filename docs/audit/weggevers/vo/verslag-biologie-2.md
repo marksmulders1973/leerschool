@@ -255,3 +255,48 @@ Controle: `node --check` op alle 6 bestanden in orde · `vergelijk-met-main.mjs 
 - **hart-bloed-ademhaling-havo-vwo** (hartBloedAdemhalingHavoVwo.js) stap 5 vraag 2 · optie 3: "Veel suiker voor snelle energie" → "Veel wit brood en pasta als energie" · hint 3: "Veel suiker verhoogt juist het risico op hart- en vaatziekten." → "Wit brood en pasta geven snelle suikers. Wat staat er in de mediterrane keuken vooral op tafel?"
 - **hart-bloed-ademhaling-havo-vwo** (hartBloedAdemhalingHavoVwo.js) stap 5 vraag 3 · optie 4: "Niet, de schade blijft altijd" → "Nauwelijks, de schade is blijvend" · hint 2: "Niet — geleidelijk." → "Bloedvaten herstellen niet in één dag. Kan het risico dan meteen helemaal verdwijnen?"
 - **hart-bloed-ademhaling-havo-vwo** (hartBloedAdemhalingHavoVwo.js) stap 5 vraag 5 · optie 3: "30 min/maand matig of 15 min intensief" → "150 min/dag matig of 75 min intensief" · optie 4: "300 min/dag matig of 150 min intensief" → "75 min/week matig of 150 min intensief" · hint 3: "Eens per maand sporten is veel te weinig voor je hart." → "Tweeënhalf uur per dag is heel veel. Gaat het advies over een dag of over een week?" · hint 4: "Vijf uur per dag? Dat haalt bijna niemand. Het advies gaat over minuten per week." → "Intensief sporten telt zwaarder dan matig. Heb je daar dan meer of minder minuten van nodig?"
+
+## Ronde 3 (na blinde detectie)
+
+Tellingen: **35 gemarkeerd** · **30 hersteld** · **1 vals alarm** · **4 twijfel**.
+Vals alarm: hartBloedAdemhaling 4/4 (COPD → roken): lesstof die toevallig algemeen bekend is; afleiders (allergie/genen/virus) zijn echte verwarringen.
+Ook gecorrigeerd: tussen-bestandslek evolutie 3/3 ↔ ecosystemen 4/3 (die vraag noemt letterlijk "flessenhals" bij cheetah's) door het goede antwoord te omschrijven i.p.v. te benoemen; uitlegPad Natura 2000 verwees naar oude opties (plastic/klimaat) → consistent gemaakt.
+
+### Twijfel voor Mark
+- celBiologie 10/1 ("hoeveel cellen na één celdeling" → 2): het antwoord volgt uit het woord "deling"; zonder q te wijzigen niet te verhelpen.
+- fotosyntheseBiologie 3/2 (chlorofyl weerkaatst groen): ieder kind ziet groene bladeren; onvermijdelijk.
+- ecosystemenHavoVwo 5/2: taalfout zit in `q` ("Een dier-pop." → "Een dierpopulatie"); q niet gewijzigd.
+- ecosystemenHavoVwo 1/5: taalfout zit in `q` ("zit aan top van piramide" → "aan de top van de piramide"); q niet gewijzigd.
+- Restrisico na herstel: celBiologie 5/2 (hartspiercel blijft met gezond verstand te kiezen, "hart werkt altijd"), fotosynthese 6/3 (chloro-fyl/chloro-plasten; Chromoplasten als afleider toegevoegd), hart 2/3 (120/80 algemeen bekend), hart 5/4 (woord "Defibrillator" bekend).
+
+### Herstelde vragen (oud → nieuw)
+- celBiologie 1/1: afleiders virus/orgaan/molecuul → weefsel ("groepje gelijke bouwstenen") / atoom / gen; goede optie "De kleinste bouwsteen die zelf leeft".
+- celBiologie 2/2: "alles zelf"/"leven los" (zelfde idee) → "eigen, andere erfelijke informatie" / "werken samen en zijn gelijk van vorm en bouw"; hints mee.
+- celBiologie 5/2: "Bacterie" (absurd) → "Rode bloedcel" (vervoert zuurstof, heeft geen mitochondriën).
+- celBiologie 7/2: goede optie zonder "water" ("De vacuoles zijn sterk gekrompen"); "gestopt met delen" → "te veel water opgenomen".
+- celBiologie 11/4: "alleen plantaardig"/"ander woord voor celkern" → "in dierlijke, niet in plantencellen" / "maken suiker met zonlicht" / "bevatten het DNA dat de cel bestuurt"; "plant- én dierlijke" → "plantencellen en in dierlijke cellen"; hints geven antwoord niet meer.
+- ecosystemen 1/1: afleiders krijgen ook "maken/omzetten" (herbivoor → vlees, reducent → mineralen, carnivoor); "Mens die voedsel produceert" weg.
+- ecosystemen 2/1: goede optie zonder "dragen": "Grootste populatie die een gebied op lange termijn aankan".
+- ecosystemen 2/2: alleen-gunstig-antwoord → afleiders "draagkracht K net bereikt" / "volop voedsel maar veel vijanden" / "eeuwen in evenwicht".
+- ecosystemen 2/4: "lichaamsbouw"/"samensmelten" → "verschillende niches kunnen niet samenleven" / "roofdier verdringt prooisoort"; goede "verdringt de ene soort de andere".
+- ecosystemen 4/2: "proces dat de mens schaadt"/"vlooien" → "werk van boswachters" / "voordeel twee soorten (symbiose)".
+- ecosystemen 4/3: vachtkleur/minder mannetjes/langzamer → meer mutaties / eigenschappen slechter doorgeven / lichaam past zich minder aan; goede "Eén nieuwe ziekte kan bijna de hele populatie treffen".
+- ecosystemen 4/5: "Beschermde Natura 2000-gebieden" → "Een gebied aanwijzen als Natura 2000-gebied"; afleiders klinken nu nuttig (exotische waterplanten, productiebos, extra bemesten).
+- evolutie 1/5: Darwin-cliché + absurde ouders → "gunstige erfelijke eigenschappen" vs toeval / Lamarck (sterker door vechten) / samen minder eten.
+- evolutie 2/3: "te grote variatie"/"niet meer"/"helemaal stil" → selectie sterker dan drift / meer mutaties per dier / meer heterozygoten door inteelt.
+- evolutie 3/1 (taal): "Bij sterke selectie"/"Bij hoge mutatie-snelheid" → alle vier "Populaties met weinig/veel dieren / onder sterke selectie / met veel mutaties"; kale hint herschreven.
+- evolutie 3/3: "Een flessenhals in het verleden" → "Een sterke inkrimping van de populatie, lang geleden" (lek met ecosystemen 4/3); kale stichtereffect-hint herschreven.
+- evolutie 4/5: jaarringen/radioactief/fossielen → C-14 in botten / chromosoomaantal / aantal genen; goede "aantal DNA-verschillen tussen soorten".
+- evolutie 5/2: "dragers zijn beschermd" (herhaalt q) → vier mechanismen: heterozygoot/homozygoot voordeel, drift, mutatiedruk.
+- evolutie 5/3: "wet altijd en overal"/"tegenovergestelde van feit" → "beschrijving van wat er gebeurt" (wet) / "idee dat nog getest moet worden" (hypothese).
+- fotosynthese 1/1: insecten/zuurstof → "groeien naar het licht toe" / "verbranden suiker voor energie".
+- fotosynthese 2/4: "Suiker van buitenaf" naast zonlicht/water/CO₂ → vier "opgenomen door de wortels/op de bladeren" (suiker, water, mineralen, zonlicht).
+- fotosynthese 6/3: "Celkern" → "Chromoplasten".
+- genetica 2/3: "Alleen rood/wit" → "Allemaal rood" / "Rood-wit gevlekt" (codominantie).
+- genetica 4/4: "heel chromosoom verloren" → "stuk chromosoom verschuift naar ander chromosoom" (translocatie); goede "Een invoeging of deletie…".
+- hart 2/3: 200/150 en 60/40 → 160/100 en 80/120 (omgedraaid).
+- hart 4/5: saturatie/ademfrequentie → ademvolume / totale longinhoud / max per minuut; goede "Hoeveel lucht je maximaal uitademt na diep inademen".
+- hart 5/1: verzonnen rijtjes → beroerte-achtige varianten (Face/Ache/Sight/Talk, Fall/Arm/Speech/Temperature, Fever/Arm/Sight/Time).
+- hart 5/2: "gezonde vetten" weggever → "Veel groente, peulvruchten en olijfolie" vs mager vlees/low-carb, magere zuivel, vetarm.
+- hart 5/3: absolute afleiders → "pas na tien jaar" / "binnen een maand als niet-roker" / "hooguit een tiende"; goede "Na een jaar al met ongeveer de helft".
+- hart 5/4: verzonnen afkortingen → Automatische Elektronische Drukmeter / Externe Drukmassage / Externe Doseerpomp.
