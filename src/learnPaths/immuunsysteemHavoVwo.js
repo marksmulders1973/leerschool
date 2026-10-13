@@ -24,12 +24,12 @@ const steps = [
         q: "Welke is **aspecifieke** afweer?",
         options: [
           "Huid",
-          "Antilichamen tegen specifiek virus",
-          "T-cellen herkennen specifieke antigenen",
-          "Immuun-geheugen"
+          "Antilichamen",
+          "T-killercellen",
+          "Geheugencellen"
         ],
         answer: 0,
-        wrongHints: [null, "Wel specifiek (gericht op virus).", "Specifieke afweer.", "Specifiek."],
+        wrongHints: [null, "Een antilichaam past op één bepaald antigeen. Werkt het dan tegen elke indringer?", "Een T-killercel herkent één bepaald antigeen. Werkt die tegen elke indringer?", "Geheugencellen onthouden één bepaalde ziekteverwekker. Is dat afweer tegen alles tegelijk?"],
         uitlegPad: {
           stappen: [{ titel: "Niet-gericht", tekst: "Huid blokkeert ALLES: virussen, bacteriën, parasieten — geen onderscheid. Aspecifiek = aangeboren + algemeen. Specifiek = doelgericht (B/T-cellen + antilichamen)." }],
           niveaus: { basis: "Huid.", simpeler: "Huid = barrière voor alles.", nogSimpeler: "Huid" },
@@ -66,7 +66,7 @@ const steps = [
           "Allergie"
         ],
         answer: 0,
-        wrongHints: [null, "Geen direct antilichaam-effect.", "T-cellen op andere plek.", "Geen allergeen."],
+        wrongHints: [null, "Antilichamen zijn er pas na een paar dagen. Wordt een wondje ook al direct rood en warm?", "T-cellen horen bij de specifieke afweer. Komen deze verschijnselen al vóórdat die op gang komt?", "Bij een allergie reageert het lichaam op een onschuldige stof. Gaat het hier om een onschuldige stof of om een infectie?"],
         uitlegPad: {
           stappen: [
             { titel: "5 tekenen ontsteking", tekst: "Rubor (rood), calor (warm), tumor (zwelling), dolor (pijn), functio laesa (functieverlies). Veroorzaakt door histamine + andere cytokinen. Bloedvaten verwijden + doorlatender → meer immuunwerk ter plekke." },
@@ -100,9 +100,9 @@ const steps = [
     checks: [
       {
         q: "**B-cellen** produceren:",
-        options: ["Antilichamen", "Insuline", "Hemoglobine", "Stresshormonen"],
+        options: ["Antilichamen", "Antigenen", "Histamine", "Bloedplaatjes"],
         answer: 0,
-        wrongHints: [null, "Niet — pancreas-cellen.", "Niet — rode bloedcellen.", "Niet — bijnieren."],
+        wrongHints: [null, "Antigenen zitten op de ziekteverwekker zelf. Wat maakt een B-cel om daaraan te binden?", "Histamine komt bij een allergie vrij uit mestcellen. Wat maken B-cellen?", "Bloedplaatjes helpen bij de bloedstolling. Hebben die met de afweer van B-cellen te maken?"],
         uitlegPad: {
           stappen: [{ titel: "Plasmacel-fabriek", tekst: "Een actieve B-cel (plasmacel) maakt tot 2000 antilichaam-moleculen per seconde. Antilichamen circuleren in bloed + lymfe → binden aan antigeen op pathogeen → markeren voor opruiming." }],
           niveaus: { basis: "Antilichamen.", simpeler: "B = antilichaam-maker.", nogSimpeler: "Antilichamen" },
@@ -169,7 +169,7 @@ const steps = [
         q: "**Actieve immuniteit** krijg je via:",
         options: ["Een ziekte doormaken of een vaccinatie", "Een injectie met kant-en-klare antilichamen", "Antilichamen uit de moedermelk krijgen", "Afweer die je erft van je ouders"],
         answer: 0,
-        wrongHints: [null, "Passieve immuniteit.", "Passief (via moedermelk).", "Geen erfelijke immuniteit."],
+        wrongHints: [null, "Dan krijg je kant-en-klare antilichamen. Maakt je eigen lichaam ze dan zelf?", "Die antilichamen heeft de moeder gemaakt. Is de baby dan zelf actief?", "Afweer tegen een ziekte bouw je pas op na contact ermee. Kun je die van je ouders erven?"],
         uitlegPad: {
           stappen: [{ titel: "Eigen aanmaak", tekst: "Lichaam maakt zelf antilichamen + geheugen-cellen. Duurzaam (jaren-levenslang). Vaccinatie geeft hetzelfde effect zonder ziekte. Passief = kant-en-klare antilichamen ontvangen (geen geheugen, tijdelijk)." }],
           niveaus: { basis: "Ziekte of vaccin.", simpeler: "Eigen aanmaak.", nogSimpeler: "Eigen" },
@@ -177,9 +177,9 @@ const steps = [
       },
       {
         q: "**Groepsimmuniteit** beschermt vooral:",
-        options: ["Niet-vaccineerbare mensen", "Mensen die al gevaccineerd zijn", "Alleen kinderen onder de vier", "Vooral oudere, gezonde mensen"],
+        options: ["Niet-vaccineerbare mensen", "Mensen die al gevaccineerd zijn", "Mensen die de ziekte al hadden", "Vooral oudere, gezonde mensen"],
         answer: 0,
-        wrongHints: [null, "Die zijn al beschermd.", "Groepsimmuniteit beschermt niet op leeftijd. Wie heeft het écht nodig?", "Gezonde ouderen kunnen zich meestal zelf laten vaccineren. Wie kan dat niet?"],
+        wrongHints: [null, "Gevaccineerden zijn zelf al beschermd. Wie heeft de groep dan het hardst nodig?", "Die hebben zelf al afweer opgebouwd. Wie heeft de bescherming van de groep écht nodig?", "Gezonde ouderen kunnen zich meestal zelf laten vaccineren. Wie kan dat niet?"],
         uitlegPad: {
           stappen: [
             { titel: "Indirecte bescherming", tekst: "Bij hoge vaccinatie-graad: pathogeen kan niet circuleren. Zelfs niet-immune individu (baby <14 mnd voor BMR, chemo-patiënt, allergische voor vaccin) wordt beschermd want niemand om hem heen kan ziek worden. **Solidariteits-aspect** van vaccinatie." },
@@ -205,12 +205,12 @@ const steps = [
         q: "**Pokken** zijn:",
         options: [
           "Wereldwijd uitgeroeid",
-          "Nog wijdverbreid",
-          "Onbestrijdbaar",
-          "Niet besmettelijk"
+          "Nog veel in Afrika en Azië",
+          "Te genezen met antibiotica",
+          "Een ziekte zonder vaccin"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel via vaccin uitgeroeid.", "Onjuist."],
+        wrongHints: [null, "Het laatste natuurlijke geval van pokken was in 1977. Komen ze nog veel voor?", "Pokken worden veroorzaakt door een virus. Werken antibiotica tegen virussen?", "Het allereerste vaccin ooit (1796) was juist tegen pokken. Wat heeft dat opgeleverd?"],
         uitlegPad: {
           stappen: [
             { titel: "Eerste mensziekte uitgeroeid", tekst: "WHO-campagne 1967-1980 met massavaccinatie + isolatie → laatste natuurlijk geval Somalië 1977. WHO verklaarde 1980 uitroeiing. **Enige menselijke pathogeen ooit uitgeroeid** (rinderpest 2011 voor dier). Polio bijna ook — Afghanistan + Pakistan nog endemisch." },
@@ -224,10 +224,10 @@ const steps = [
           "Placenta en moedermelk",
           "Eigen aanmaak vanaf dag 1",
           "Vaccinaties bij geboorte",
-          "Niets — alleen via vaccins"
+          "Hun eigen geheugencellen"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — eigen pas later op gang.", "Een vaccin laat de baby zélf antilichamen maken — is dat passief?", "Wel passieve van moeder."],
+        wrongHints: [null, "Het afweersysteem van een baby moet nog op gang komen. Maakt hij zelf al genoeg antilichamen?", "Een vaccin laat de baby zélf antilichamen maken — is dat passief?", "Geheugencellen ontstaan pas na contact met een ziekteverwekker. Heeft een pasgeborene die al?"],
         uitlegPad: {
           stappen: [
             { titel: "Moeder-bescherming eerste maanden", tekst: "Tijdens zwangerschap passeren IgG-antilichamen placenta → baby beschermd tegen wat moeder immuun voor is. Eerste maanden moedermelk geeft extra IgA. Dat verdwijnt na ~6-12 mnd → daarom vaccinaties dan starten." },
@@ -270,9 +270,9 @@ const steps = [
       },
       {
         q: "**Hygiëne-hypothese** suggereert:",
-        options: ["Te schoon opgroeien geeft meer allergie", "Veel hygiëne beschermt kinderen tegen allergie", "Goed schoonmaken voorkomt alle infecties", "Allergie hangt alleen van je genen af"],
+        options: ["Te schoon opgroeien geeft meer allergie", "Veel hygiëne beschermt kinderen tegen allergie", "Schoonmaken maakt je afweer juist sterker", "Allergie wordt vooral door je genen bepaald"],
         answer: 0,
-        wrongHints: [null, "Waarom hebben boerderijkinderen dan juist minder allergie?", "Gaat de hypothese over infecties of over allergie?", "Waarom zou allergie dan in korte tijd zo sterk stijgen?"],
+        wrongHints: [null, "Waarom hebben boerderijkinderen dan juist minder allergie?", "Krijgt je afweer volgens de hypothese meer of minder te oefenen als alles schoon is?", "Waarom zou allergie dan in korte tijd zo sterk stijgen?"],
         uitlegPad: {
           stappen: [
             { titel: "'Immuun-training'", tekst: "Sinds 1950 stijgen allergie + auto-immuun in westerse landen. Theorie: te schoon → immuunsysteem 'verveelt' → reageert op stuifmeel, eten. Boerderijkinderen hebben minder allergie (vroeg contact met dieren)." },
@@ -302,7 +302,7 @@ const steps = [
           "Stuifmeel"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — lactose-intolerantie is enzym-probleem, geen auto-immuun.", "Niet — pinda-allergie is IgE.", "Niet — stuifmeel = hooikoorts."],
+        wrongHints: [null, "Bij lactose-intolerantie mis je een enzym. Valt je afweer dan je eigen darm aan?", "Pinda-allergie is een gewone allergie (IgE). Bij coeliakie raakt de darmwand beschadigd. Door welke stof?", "Stuifmeel geeft hooikoorts via neus en ogen. Coeliakie speelt zich af in de darm. Welke stof uit voedsel past daarbij?"],
         uitlegPad: {
           stappen: [
             { titel: "Gluten-trigger", tekst: "Bij coeliakie triggert gluten (eiwit in tarwe) een auto-immuunreactie tegen darm-villi → afbraak villi → opname-stoornis (gewichtsverlies, bloedarmoede). Behandeling: GLUTENVRIJ dieet voor altijd. ~1 op 100 mensen wereldwijd." },
@@ -326,10 +326,10 @@ const steps = [
           "Groeit exponentieel",
           "Sterft uit",
           "Stabiel aantal besmettingen",
-          "Heeft geen invloed"
+          "Groeit lineair (steeds +2)"
         ],
         answer: 0,
-        wrongHints: [null, "Bij R₀ = 2 steekt iedereen gemiddeld twee mensen aan. Kan het virus dan uitsterven?", "Stabiel hoort bij R = 1. Hier is R groter.", "Elke besmette persoon steekt twee anderen aan. Wat doet dat met het aantal zieken?"],
+        wrongHints: [null, "Bij R₀ = 2 steekt iedereen gemiddeld twee mensen aan. Kan het virus dan uitsterven?", "Stabiel hoort bij R = 1. Hier is R groter.", "Elke zieke steekt er twee aan, en die steken weer elk twee aan. Komen er dan steeds even veel bij?"],
         uitlegPad: {
           stappen: [{ titel: "Elke besmetting verdubbelt", tekst: "R₀ = 2: elke besmette geeft 2 nieuwe. Generatie 1: 1 → 2 → 4 → 8 → ... Exponentieel. Daarom maatregelen zoeken om R<1 te krijgen. COVID-Omicron R₀ tot ~10. Mazelen R₀ 12-18 (extreem besmettelijk)." }],
           niveaus: { basis: "Exponentieel.", simpeler: "Verdubbelt per generatie.", nogSimpeler: "Groei" },
@@ -337,9 +337,9 @@ const steps = [
       },
       {
         q: "**Antibiotica werken NIET tegen**:",
-        options: ["Virussen", "Bacteriën", "Bacteriële longontsteking", "MRSA-bacterie"],
+        options: ["Virussen", "Bacteriën", "Tuberculose", "Blaasontsteking"],
         answer: 0,
-        wrongHints: [null, "Wel — basis-doel.", "Wel — die wordt door bacteriën veroorzaakt.", "Wel maar moeilijk."],
+        wrongHints: [null, "Antibiotica tasten de celwand en ribosomen van bacteriën aan. Werken ze dan tegen bacteriën?", "Tbc wordt veroorzaakt door een bacterie en behandeld met een lange antibioticakuur.", "Een blaasontsteking komt meestal door darmbacteriën. Wat schrijft de huisarts dan voor?"],
         uitlegPad: {
           stappen: [
             { titel: "Virussen ≠ bacteriën", tekst: "Antibiotica richten zich op bacterie-specifieke structuren (celwand, ribosomen). Virussen hebben dat niet → werken niet. Voor virussen: antivirale middelen (oseltamivir voor griep, paxlovid voor COVID) of vaccinatie. Antibiotica tegen griep zijn NUTTELOOS + dragen bij aan resistentie." },
@@ -361,9 +361,9 @@ const steps = [
       },
       {
         q: "Bij **orgaantransplantatie**: waarom HLA-matching?",
-        options: ["Om afstoting van het orgaan te voorkomen", "Omdat HLA hetzelfde is als bloedgroep", "Om het orgaan sneller te laten groeien", "Zodat het orgaan er mooier uitziet"],
+        options: ["Om afstoting van het orgaan te voorkomen", "Omdat HLA hetzelfde is als bloedgroep", "Om infecties na de operatie te voorkomen", "Om bloedstolling in het orgaan te voorkomen"],
         answer: 0,
-        wrongHints: [null, "Niet — HLA is een apart systeem naast de bloedgroep.", "Een donororgaan is al volgroeid. Waar gaat het om bij een 'match'?", "Een orgaan zit binnenin. Waarom zou het afweersysteem iets met HLA doen?"],
+        wrongHints: [null, "Niet — HLA is een apart systeem naast de bloedgroep.", "Tegen infecties krijg je antibiotica. Waar zijn HLA-eiwitten herkenningstekens voor?", "Bloedstolling regelen bloedplaatjes. Wie 'leest' de HLA-eiwitten op een cel: bloedplaatjes of het afweersysteem?"],
         uitlegPad: {
           stappen: [
             { titel: "Major Histocompatibility Complex", tekst: "HLA = MHC bij mensen. Eiwitten op celoppervlak die immuunsysteem 'eigen' vs 'vreemd' onderscheiden. Bij transplantatie: hoe meer HLA-match donor/ontvanger, hoe minder afstotingsrisico. Plus levenslange immuunsuppressiva." },
@@ -374,9 +374,9 @@ const steps = [
       },
       {
         q: "**CAR-T-therapie** voor kanker:",
-        options: ["Eigen T-cellen die kanker leren herkennen", "Tumor bestralen met radioactieve straling", "Tumor operatief weghalen uit het lichaam", "Antibiotica die kankercellen doden"],
+        options: ["Eigen T-cellen die kanker leren herkennen", "Vaccin dat kanker bij gezonde mensen voorkomt", "Tumor operatief weghalen uit het lichaam", "Antibiotica die kankercellen doden"],
         answer: 0,
-        wrongHints: [null, "Dat is bestraling, een aparte behandeling.", "Dat is chirurgie, een aparte behandeling.", "Antibiotica werken tegen bacteriën, niet tegen kankercellen."],
+        wrongHints: [null, "CAR-T krijg je pas als je al kanker hebt. Wat wordt er dan met je eigen cellen gedaan?", "Dat is chirurgie, een aparte behandeling.", "Antibiotica werken tegen bacteriën, niet tegen kankercellen."],
         uitlegPad: {
           stappen: [
             { titel: "Eigen leger van de patiënt uitrusten", tekst: "T-cellen uit patiënt → laboratorium genetisch wijzigen met **Chimeric Antigen Receptor (CAR)** die kanker-antigeen herkent → terug ingespoten → vermenigvuldigen + vernietigen kanker. Eerst voor bloedkankers (leukemie, lymfoom). Spectaculaire resultaten, maar duur (€300-500k) + bijwerkingen mogelijk." },
