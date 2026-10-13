@@ -24,7 +24,7 @@ const steps = [
         q: "Wie schreef **'Pride and Prejudice'**?",
         options: ["Jane Austen", "Charles Dickens", "George Orwell", "Virginia Woolf"],
         answer: 0,
-        wrongHints: [null, "Niet — andere periode.", "Niet — 20e eeuw.", "Niet — modernist."],
+        wrongHints: [null, "Dickens schreef later, in de Victoriaanse tijd, over armoede in Londen. Pride and Prejudice verscheen al in 1813.", "Orwell schreef in de 20e eeuw over dictaturen. Pride and Prejudice verscheen al in 1813.", "Woolf was een modernist uit de 20e eeuw. Pride and Prejudice verscheen al in 1813."],
         uitlegPad: {
           stappen: [{ titel: "Austen, 1813", tekst: "Jane Austen (1775-1817): meesterwerk over Elizabeth Bennet + Mr Darcy. Onderzoekt sociale klasse, huwelijksmarkt, vrouwelijke autonomie. Subtiele ironie. Boek tot vandaag gelezen + meer dan 10× verfilmd." }],
           niveaus: { basis: "Austen.", simpeler: "Pride+Prejudice = Austen.", nogSimpeler: "Austen" },
@@ -34,7 +34,7 @@ const steps = [
         q: "**Beowulf** is uit welke periode?",
         options: ["Old English", "Middle English", "Renaissance", "Modern"],
         answer: 0,
-        wrongHints: [null, "Niet — eerder.", "Veel later.", "Veel later."],
+        wrongHints: [null, "Middle English is de taal van Chaucer, rond 1400. Is Beowulf ouder of jonger?", "De Renaissance (Shakespeare) kwam eeuwen later. Beowulf is een van de oudste Engelse teksten.", "Modern English begint rond 1500. Uit welke vroegste periode komt Beowulf?"],
         uitlegPad: {
           stappen: [{ titel: "Angelsaksisch epos", tekst: "Geschreven in Old English (Angelsaksisch) — totaal andere taal dan modern Engels. Held Beowulf verslaat monster Grendel + draak. Mondelinge traditie, opgeschreven ~10e eeuw." }],
           niveaus: { basis: "Old English.", simpeler: "Heel oud (~700).", nogSimpeler: "OE" },
@@ -45,11 +45,11 @@ const steps = [
         options: [
           "Science-fiction roman",
           "Detectiveroman",
-          "Western",
+          "Historische roman",
           "Romantische poëziebundel"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — kwam later.", "Niet — Amerikaans subgenre.", "Niet — proza."],
+        wrongHints: [null, "De detectiveroman kwam pas later op, met Poe en Conan Doyle. Wat bouwt Victor Frankenstein in zijn laboratorium?", "De eerste historische roman wordt vaak bij Walter Scott gelegd. Wat bouwt Victor Frankenstein in zijn laboratorium?", "Frankenstein is een verhaal in proza, geen bundel gedichten. Waar draait het verhaal om?"],
         uitlegPad: {
           stappen: [
             { titel: "Mary Shelley, 1818", tekst: "Mary Shelley begon op 18-jarige leeftijd aan Frankenstein. Wetenschapper Victor Frankenstein creëert monster uit dode lichaamsdelen + reanimeert via elektriciteit. Pionier sci-fi door wetenschap als plot-driver, niet magie." },
@@ -102,7 +102,7 @@ const steps = [
         q: "**'To be or not to be'** komt uit welk werk?",
         options: ["Hamlet", "Macbeth", "Romeo and Juliet", "King Lear"],
         answer: 0,
-        wrongHints: [null, "Niet — andere monoloog.", "Niet — andere monoloog.", "Lear is een oude koning met drie dochters. Wie twijfelt in deze monoloog over leven en dood?"],
+        wrongHints: [null, "In Macbeth is 'Tomorrow, and tomorrow' de bekende monoloog. Welke prins twijfelt over leven en dood?", "Romeo and Juliet kent de balkonscène ('Wherefore art thou Romeo?'). Welke prins twijfelt over leven en dood?", "Lear is een oude koning met drie dochters. Wie twijfelt in deze monoloog over leven en dood?"],
         uitlegPad: {
           stappen: [{ titel: "Beroemdste monoloog", tekst: "Hamlet's soliloquy uit Act 3 Scene 1. Filosofische vraag over leven of dood, zelfmoord, betekenis. Wereldberoemd, eindeloos geïnterpreteerd." }],
           niveaus: { basis: "Hamlet.", simpeler: "Hamlet's monoloog.", nogSimpeler: "Hamlet" },
@@ -112,7 +112,7 @@ const steps = [
         q: "Hoeveel **sonnetten** schreef Shakespeare?",
         options: ["154", "14", "37", "200"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is regels per sonnet.", "Niet — dat is aantal toneelstukken.", "Niet — minder."],
+        wrongHints: [null, "14 is het aantal regels in één sonnet. Hoeveel sonnetten schreef hij in totaal?", "37 is ongeveer het aantal toneelstukken. Hoeveel sonnetten waren er?", "Het zijn er minder dan 200. Welk aantal ken je uit de bundel van 1609?"],
         uitlegPad: {
           stappen: [{ titel: "154 stuks", tekst: "Uitgegeven 1609 in één bundel. Eerste 126: aan de 'Fair Youth' (een mooie jonge man). 127-154: aan de 'Dark Lady'. Vrijwel allemaal 14 regels in ABAB CDCD EFEF GG = 'Shakespearean sonnet'." }],
           niveaus: { basis: "154.", simpeler: "154 sonnetten.", nogSimpeler: "154" },
@@ -120,9 +120,9 @@ const steps = [
       },
       {
         q: "**Macbeth** is een:",
-        options: ["Tragedy", "Comedy", "History", "Sonnet"],
+        options: ["Tragedy", "Comedy", "History", "Romance"],
         answer: 0,
-        wrongHints: [null, "Niet — eindigt slecht.", "Er komt een Schotse koning in voor — maar kijk hoe het afloopt voor de hoofdpersoon.", "Niet — toneelstuk."],
+        wrongHints: [null, "Een comedy eindigt goed, vaak met een huwelijk. Hoe loopt het af met Macbeth?", "Er komt een Schotse koning in voor — maar kijk hoe het afloopt voor de hoofdpersoon.", "Een romance, zoals The Tempest, eindigt met verzoening. Hoe loopt het af met Macbeth?"],
         uitlegPad: {
           stappen: [{ titel: "Schots koningschap door moord", tekst: "Macbeth + Lady Macbeth manipuleren elkaar tot moord op koning Duncan. Resultaat: schuldgevoel, waanzin, ondergang van beiden. Klassieke tragedy: ambitie + hubris → val. Geïnspireerd door echte Schotse historie (deels)." }],
           niveaus: { basis: "Tragedy.", simpeler: "Tragedie.", nogSimpeler: "Tragedy" },
@@ -132,12 +132,12 @@ const steps = [
         q: "**Iambic pentameter** is:",
         options: [
           "5 jamben per regel",
-          "Geen metrum",
+          "6 jamben per regel",
           "Rijmend AABB",
-          "Vrij vers"
+          "5 trocheeën per regel"
         ],
         answer: 0,
-        wrongHints: [null, "Wel metrum.", "Niet — geen vast rijm-vereiste.", "Niet — wel structuur."],
+        wrongHints: [null, "Penta- betekent vijf, zoals in pentagon. Hoeveel versvoeten staan er dan in een regel?", "Rijm staat los van het metrum. Gaat 'pentameter' over rijm of over ritme?", "Een trochee is beklemtoond-onbeklemtoond (DA-da), een jambe andersom. Welke voet zit in 'iambic'?"],
         uitlegPad: {
           stappen: [
             { titel: "Standaard Engelse poëzie", tekst: "Pent = 5, jambe = ta-DAH. Voorbeeld: 'shall-I · com-PARE · thee-TO · a-SUM · mer's-DAY' (5 maal ta-DAH; klemtoon op I, PARE, TO, SUM, DAY). Natuurlijk Engels accentpatroon → klinkt vloeiend. Shakespeare's dialogen meestal in blank verse (iambic pentameter zonder rijm)." },
@@ -175,7 +175,7 @@ const steps = [
         q: "Wie schreef **'1984'**?",
         options: ["George Orwell", "Aldous Huxley", "Ray Bradbury", "Margaret Atwood"],
         answer: 0,
-        wrongHints: [null, "Niet — schreef 'Brave New World'.", "Niet — 'Fahrenheit 451'.", "Niet — Handmaid's Tale."],
+        wrongHints: [null, "Huxley schreef ook een dystopie, maar die heet Brave New World. Wie schreef over Big Brother?", "Bradbury schreef Fahrenheit 451, over verboden boeken. Wie schreef over Big Brother?", "Atwood is een Canadese schrijfster die pas na 1960 bekend werd. '1984' verscheen al in 1949."],
         uitlegPad: {
           stappen: [
             { titel: "Dystopie uit 1949", tekst: "Orwell schreef '1984' over totalitaire toekomst-staat: Big Brother kijkt mee, taal wordt vereenvoudigd ('Newspeak') om denken te beperken, geschiedenis wordt herschreven. Begrippen: 'doublethink', 'thoughtcrime', 'Room 101' — alledaags geworden. Sterk politiek-engagement (Orwell was tegen Stalinisme + nazisme)." },
@@ -186,13 +186,13 @@ const steps = [
       {
         q: "**Charles Dickens'** romans verschenen vaak als:",
         options: [
-          "Losse afleveringen",
-          "Eén dik boek tegelijk",
-          "Korte verhalen alleen",
-          "Toneelstukken"
+          "Afleveringen in tijdschriften",
+          "Eén dik boek in één keer",
+          "Bundels met korte verhalen",
+          "Toneelstukken voor het theater"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — werd zo populair.", "Wel verhalen ook.", "Niet — vooral proza."],
+        wrongHints: [null, "Boeken waren duur in die tijd. Hoe kon een gewone lezer Dickens dan toch volgen?", "Dickens schreef wel korte verhalen, maar hoe kwamen zijn grote romans bij de lezers?", "Dickens schreef vooral proza. Hoe verschenen zijn romans voor het eerst?"],
         uitlegPad: {
           stappen: [
             { titel: "Victoriaanse 'tv-series'", tekst: "Dickens publiceerde in tijdschriften en losse delen, steeds een nieuw stuk per week of per maand. Mensen wachtten in spanning op volgende. Bv. 'The Old Curiosity Shop': Amerikaanse lezers wachtten in de haven op Engelse boten met de laatste aflevering om te weten of Little Nell stierf." },
@@ -205,7 +205,7 @@ const steps = [
         q: "**'Jane Eyre'** is geschreven door:",
         options: ["Charlotte Brontë", "Emily Brontë", "Jane Austen", "Mary Shelley"],
         answer: 0,
-        wrongHints: [null, "Niet — die schreef Wuthering Heights.", "Niet — andere stijl + tijdperk.", "Niet — Frankenstein."],
+        wrongHints: [null, "Niet — die schreef Wuthering Heights.", "De titel heeft wel de voornaam Jane, maar Austen overleed al in 1817. Jane Eyre verscheen in 1847.", "Niet — Frankenstein."],
         uitlegPad: {
           stappen: [
             { titel: "Drie Brontë-zussen", tekst: "**Charlotte**: Jane Eyre (1847).\n**Emily**: Wuthering Heights (1847).\n**Anne**: Tenant of Wildfell Hall.\nAlle drie schreven onder MANNELIJK pseudoniem (Currer, Ellis, Acton Bell) wegens vrouwen-vooroordeel. Alle drie stierven jong." },
@@ -256,7 +256,7 @@ const steps = [
         q: "**'The Great Gatsby'** is geschreven door:",
         options: ["F. Scott Fitzgerald", "Ernest Hemingway", "John Steinbeck", "Mark Twain"],
         answer: 0,
-        wrongHints: [null, "Niet — Hemingway andere stijl.", "Niet — Grapes of Wrath etc.", "Niet — 19e eeuw."],
+        wrongHints: [null, "Hemingway schreef The Old Man and the Sea, in korte, kale zinnen. Wie beschreef de glitter van de Roaring Twenties?", "Steinbeck schreef The Grapes of Wrath, over de crisis van de jaren '30. Gatsby speelt in de feestelijke jaren '20.", "Mark Twain leefde in de 19e eeuw. Gatsby speelt in de jaren '20 van de 20e eeuw."],
         uitlegPad: {
           stappen: [
             { titel: "Jazz Age, 1925", tekst: "Fitzgerald (1896-1940) schreef over rijkdom + decadentie van jaren 1920. Jay Gatsby probeert oude liefde terug te krijgen via aanzien + geld → tragedy. Klassiek beeld van American Dream + zijn schaduwzijde. Eindigt met 'So we beat on, boats against the current, borne back ceaselessly into the past.'" },
@@ -268,7 +268,7 @@ const steps = [
         q: "Wie schreef **'Moby Dick'**?",
         options: ["Herman Melville", "Nathaniel Hawthorne", "Edgar Allan Poe", "Walt Whitman"],
         answer: 0,
-        wrongHints: [null, "Niet — Scarlet Letter.", "Niet — horror + detective.", "Niet — poëzie."],
+        wrongHints: [null, "Niet — Scarlet Letter.", "Poe schreef vooral korte horror- en detectiveverhalen, geen lange zeeroman.", "Whitman was dichter (Leaves of Grass), geen romanschrijver."],
         uitlegPad: {
           stappen: [
             { titel: "1851, walvis-obsessie", tekst: "Kapitein Ahab jaagt op witte walvis Moby Dick die zijn been afnam. Symbolisch verhaal over obsessie, hubris, mens vs natuur. Verteld door Ishmael ('Call me Ishmael' — beroemde openingszin). Bij verschijning flop; pas in 20e eeuw als meesterwerk erkend." },
@@ -278,9 +278,9 @@ const steps = [
       },
       {
         q: "**Toni Morrison** won Nobel Literature in:",
-        options: ["1993", "1900", "2020", "Heeft nooit gewonnen"],
+        options: ["1993", "1976", "2020", "2016"],
         answer: 0,
-        wrongHints: [null, "Te vroeg.", "Te recent.", "Wel gewonnen."],
+        wrongHints: [null, "In 1976 won Saul Bellow. Morrison kreeg de prijs na haar bekendste roman, Beloved (1987).", "In 2020 won de dichteres Louise Glück. Morrison overleed al in 2019.", "In 2016 won Bob Dylan, als songschrijver. Morrison kreeg de prijs na Beloved (1987), maar wanneer?"],
         uitlegPad: {
           stappen: [
             { titel: "Eerste zwarte vrouw Nobel", tekst: "Morrison (1931-2019): meest gevierde Afro-Amerikaanse schrijver. 'Beloved' (1987, Pulitzer + basis Nobel-citation) over een voormalige slavin wier dode dochter terugkeert als geest. Trauma-roman. Anderen: 'Song of Solomon', 'Sula'." },

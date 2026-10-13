@@ -901,13 +901,13 @@ const steps = [
       },
       {
         q: "*Welke spelling is correct?*",
-        options: ["foto's", "fotos", "fotoo's", "fotos's"],
+        options: ["foto's", "fotos", "fotoo's", "fotoos"],
         answer: 0,
         wrongHints: [
           null,
           "Zonder extra teken lees je 'fotos' met een korte o. Hoe voorkom je dat?",
           "Geen extra o nodig vóór de apostrof.",
-          "Twee keer een s is niet nodig.",
+          "Met een dubbele o probeer je de lange klank te bewaren. Hoe doe je dat bij meervouden van woorden die op een klinker eindigen?",
         ],
         uitlegPad: {
           stappen: [
@@ -948,7 +948,7 @@ const steps = [
         wrongHints: [
           null,
           "Koud = ou (niet au — kaud bestaat niet). Bomen = lange klank in open lettergreep, één o (niet boomen).",
-          "Audi is een merk, oud is een woord. 'Aud' bestaat in dit verband niet.",
+          "'Oud' en 'koud' hebben dezelfde klank. Schrijf je die klank in beide woorden hetzelfde?",
           "Wind = met d (niet wint). Verleng: winden — d klinkt.",
         ],
         uitlegPad: {
@@ -1020,12 +1020,12 @@ const steps = [
       },
       {
         q: "*Hoe spel je het woord voor de ruimte boven je hoofd, waar de wolken drijven?*",
-        options: ["lucht", "luct", "lucgt", "lugt"],
+        options: ["lucht", "luct", "lught", "lugt"],
         answer: 0,
         wrongHints: [
           null,
           "Er mist een letter in de ch-klank.",
-          "cgt bestaat niet als combinatie in het Nederlands.",
+          "Twee letters vormen samen de ch-klank. Is 'gh' zo'n combinatie in het Nederlands?",
           "gt zie je vooral bij werkwoorden zoals 'zegt'. Dit woord is geen werkwoord.",
         ],
         uitlegPad: {
@@ -1033,7 +1033,7 @@ const steps = [
             { titel: "Cht-regel", tekst: "Hoor je 'g/ch'-klank gevolgd door t? Schrijf (bijna) altijd 'cht'. Lucht = lu + cht." },
           ],
           woorden: [{ woord: "cht-combinatie", uitleg: "Vaste NL-spelling voor g/ch-klank + t-klank." }],
-          theorie: "Ct en cgt bestaan niet voor deze klank. Gt zie je alleen bij werkwoorden (hij zegt, ligt).",
+          theorie: "Ct en ght bestaan niet voor deze klank. Gt zie je alleen bij werkwoorden (hij zegt, ligt).",
           voorbeelden: [{ type: "cht", tekst: "lucht, slecht, recht, vrucht, dochter, lichten — allemaal cht." }],
           basiskennis: [{ onderwerp: "Vast", uitleg: "G/ch + t-klank = cht. Uitzondering: werkwoorden met g in de stam (zeggen → zegt)." }],
           niveaus: {

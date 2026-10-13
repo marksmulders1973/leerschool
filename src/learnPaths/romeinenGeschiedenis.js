@@ -60,27 +60,27 @@ const steps = [
     checks: [
       {
         q: "In welk jaar werd Rome volgens de **legende** gesticht?",
-        options: ["753 v.Chr.", "27 v.Chr.", "476 n.Chr.", "1000 n.Chr."],
+        options: ["753 v.Chr.", "27 v.Chr.", "509 v.Chr.", "1000 v.Chr."],
         answer: 0,
-        wrongHints: [null, "Begin keizerrijk.", "Val West-Rome.", "Te laat — middeleeuwen."],
+        wrongHints: [null, "In 27 v.Chr. begon het keizerrijk. Was Rome toen pas net gesticht?", "In 509 v.Chr. verjoegen de Romeinen hun laatste koning. Bestond de stad toen dus al?", "Rond 1000 v.Chr. stonden er alleen kleine dorpjes op de heuvels. Wanneer stichtte Romulus volgens het verhaal de stad?"],
       },
       {
         q: "Wie waren de **twee tweelingen** in de stichtingslegende?",
-        options: ["Romulus en Remus", "Caesar en Augustus", "Cicero en Brutus", "Romeo en Julia"],
+        options: ["Romulus en Remus", "Castor en Pollux", "Cicero en Brutus", "Aeneas en Ascanius"],
         answer: 0,
-        wrongHints: [null, "Latere keizers.", "Andere Romeinen.", "Shakespeare-stuk, niet Rome."],
+        wrongHints: [null, "Castor en Pollux waren een tweeling uit de Griekse mythen, maar zij stichtten geen stad.", "Cicero en Brutus leefden pas in de tijd van Caesar, eeuwen na de stichting.", "Aeneas was in de legende een Trojaanse voorvader van de Romeinen, en Ascanius was zijn zoon, geen tweelingbroer."],
       },
       {
         q: "Wat **redde** de tweelingen volgens de legende?",
         options: ["Een wolvin", "Een adelaar", "Een vissersboot", "Een beer"],
         answer: 0,
-        wrongHints: [null, "Geen adelaar.", "Niet direct.", "Geen beer — het dier staat nog steeds als beeld in Rome."],
+        wrongHints: [null, "De adelaar werd later het teken van het Romeinse leger. Welk dier gaf de baby's melk?", "In het verhaal spoelde hun mandje vanzelf aan land. Wie zorgde daarna voor ze?", "Een beer komt in deze legende niet voor. Welk dier staat met de tweeling als beeld in Rome?"],
       },
       {
         q: "Welk volk woonde **vóór de Romeinen** in Midden-Italië?",
         options: ["Etrusken", "Grieken", "Germanen", "Galliërs"],
         answer: 0,
-        wrongHints: [null, "Wonen in Griekenland.", "Wonen in Duitsland.", "Wonen in Frankrijk."],
+        wrongHints: [null, "Grieken stichtten steden in Zuid-Italië. Wie woonde er in Midden-Italië, net ten noorden van Rome?", "Germanen woonden ver ten noorden van de Alpen.", "Galliërs woonden vooral in het huidige Frankrijk en Noord-Italië en vielen Rome pas later aan."],
       },
     ],
   },
@@ -93,15 +93,15 @@ const steps = [
     checks: [
       {
         q: "Wat was de **Romeinse Republiek**?",
-        options: ["Staat zonder koning", "Koninkrijk", "Stadstaat met dictator", "Provincie van Egypte"],
+        options: ["Staat zonder koning", "Koninkrijk", "Stadstaat met dictator", "Rijk met een keizer"],
         answer: 0,
-        wrongHints: [null, "Niet meer — verdreven 509 v.Chr.", "Soms dictator (tijdelijk), maar normaal niet.", "Andere richting — Rome veroverde Egypte."],
+        wrongHints: [null, "De laatste koning werd in 509 v.Chr. verjaagd. Wat kwam ervoor in de plaats?", "Soms dictator (tijdelijk), maar normaal niet.", "Keizers kwamen pas ná de Republiek, vanaf 27 v.Chr."],
       },
       {
         q: "Wie waren de **2 consuls** in de Republiek?",
-        options: ["Hoogste leiders", "Lijfwachten", "Slaven", "Boeren"],
+        options: ["Hoogste leiders", "Lijfwachten", "Senatoren", "Belastinginners"],
         answer: 0,
-        wrongHints: [null, "Lijfwachten bewaakten iemand — maar wat deden de consuls?", "Slaven hadden in Rome geen enkele macht.", "Boeren bewerkten het land — wat deden de consuls?"],
+        wrongHints: [null, "Lijfwachten bewaakten iemand — maar wat deden de consuls?", "Senatoren waren er met honderden en gaven vooral advies. Wie voerden het bestuur?", "Belasting innen deden pachters en ambtenaren. Wat deden de consuls?"],
       },
       {
         q: "Wie veroverde **Gallië** *(huidige Frankrijk)*?",
@@ -113,7 +113,7 @@ const steps = [
         q: "Wat gebeurde met **Julius Caesar** in **44 v.Chr.**?",
         options: ["Vermoord in de Senaat", "Werd koning", "Vluchtte naar Egypte", "Stierf in oorlog"],
         answer: 0,
-        wrongHints: [null, "Hij werd geen koning — wat gebeurde er op 15 maart?", "Niet gevlucht.", "Niet in oorlog."],
+        wrongHints: [null, "Hij werd geen koning — wat gebeurde er op 15 maart?", "In Egypte was hij eerder, bij Cleopatra. Wat gebeurde er in Rome op 15 maart?", "Caesar won zijn oorlogen. Wie keerden zich in Rome tegen hem?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat gebeurde", tekst: "Op 15 maart 44 v.Chr. (de 'Ides van Maart') werd Julius Caesar in de Senaat doodgestoken door een groep samenzweerders, waaronder zijn vriend Brutus." },
@@ -143,7 +143,7 @@ const steps = [
         q: "Wie was de **eerste Romeinse keizer**?",
         options: ["Augustus", "Julius Caesar", "Nero", "Constantijn"],
         answer: 0,
-        wrongHints: [null, "Caesar werd vermoord vóór keizerrijk begon.", "Veel later.", "Veel later."],
+        wrongHints: [null, "Caesar werd vermoord vóór keizerrijk begon.", "Nero regeerde ruim een halve eeuw later en is bekend van de brand van Rome.", "Constantijn leefde rond 300 n.Chr., drie eeuwen na het begin van het keizerrijk."],
       },
       {
         q: "Wat was **Pax Romana**?",
@@ -161,7 +161,7 @@ const steps = [
         q: "Waarheen verplaatste Constantijn de hoofdstad?",
         options: ["Naar Constantinopel", "Naar Athene", "Naar Carthago", "Bleef Rome"],
         answer: 0,
-        wrongHints: [null, "Niet Athene.", "Niet Carthago.", "Wel verplaatst."],
+        wrongHints: [null, "Athene was een beroemde Griekse stad, maar werd nooit hoofdstad van het rijk.", "Carthago was de oude vijand van Rome in Noord-Afrika.", "Rome bleef belangrijk, maar zocht Constantijn niet een stad dichter bij de oostgrens?"],
       },
     ],
   },
@@ -186,9 +186,9 @@ const steps = [
       },
       {
         q: "Welke Nederlandse stad is **gesticht door Romeinen** rond 19 v.Chr.?",
-        options: ["Nijmegen", "Amsterdam", "Den Haag", "Eindhoven"],
+        options: ["Nijmegen", "Amsterdam", "Den Haag", "Utrecht"],
         answer: 0,
-        wrongHints: [null, "Amsterdam pas in 13e eeuw.", "Den Haag is later.", "Eindhoven middeleeuws."],
+        wrongHints: [null, "Amsterdam ontstond pas in de 13e eeuw bij een dam in de Amstel.", "Den Haag groeide in de middeleeuwen rond het hof van de graven van Holland.", "Utrecht begon ook als Romeins fort, maar pas rond 47 n.Chr. Welke stad was ouder?"],
       },
       {
         q: "Wat zijn **aquaducten**?",
@@ -207,9 +207,9 @@ const steps = [
     checks: [
       {
         q: "In welk jaar viel het **Westromeinse Rijk**?",
-        options: ["476 n.Chr.", "27 v.Chr.", "1453 n.Chr.", "1000 n.Chr."],
+        options: ["476 n.Chr.", "27 v.Chr.", "1453 n.Chr.", "410 n.Chr."],
         answer: 0,
-        wrongHints: [null, "Begin keizerrijk.", "Val Constantinopel.", "Te laat."],
+        wrongHints: [null, "In 27 v.Chr. begon het keizerrijk pas.", "In 1453 viel een ándere hoofdstad. Welk jaar hoort bij het westen?", "In 410 plunderden de Goten Rome, maar in het westen regeerde daarna nog een tijd een keizer."],
       },
       {
         q: "Welke **volken** vielen het Westromeinse Rijk binnen?",
@@ -219,15 +219,15 @@ const steps = [
       },
       {
         q: "Wie was de leider van de **Hunnen** (~450 n.Chr.)?",
-        options: ["Attila", "Alarik", "Odoaker", "Constantijn"],
+        options: ["Attila", "Alarik", "Odoaker", "Geiserik"],
         answer: 0,
-        wrongHints: [null, "Was Got, niet Hun.", "Was Germaan in Italië.", "Was Romeinse keizer."],
+        wrongHints: [null, "Alarik was koning van de Goten en plunderde Rome in 410.", "Odoaker was een Germaanse aanvoerder in Italië, geen Hun.", "Geiserik was koning van de Vandalen in Noord-Afrika."],
       },
       {
         q: "Welk **deel van Rome** bleef nog 1000 jaar bestaan?",
         options: ["Het Oostromeinse Rijk", "Het Westromeinse Rijk", "Het Romeinse Brittannië", "Het Romeinse Egypte"],
         answer: 0,
-        wrongHints: [null, "Viel in 476.", "De Romeinen verlieten Brittannië al rond 410.", "Egypte werd in de 7e eeuw door de Arabieren veroverd."],
+        wrongHints: [null, "Het westen ging juist als eerste ten onder.", "De Romeinen verlieten Brittannië al rond 410.", "Egypte werd in de 7e eeuw door de Arabieren veroverd."],
       },
     ],
   },
@@ -246,9 +246,9 @@ const steps = [
       },
       {
         q: "Welk **gebouw** is een Romeinse arena in Rome?",
-        options: ["Colosseum", "Pantheon", "Acropolis", "Eiffeltoren"],
+        options: ["Colosseum", "Pantheon", "Acropolis", "Forum Romanum"],
         answer: 0,
-        wrongHints: [null, "Tempel, geen arena.", "Acropolis in Athene.", "Veel later."],
+        wrongHints: [null, "Het Pantheon was een tempel voor alle goden, geen arena.", "De Acropolis ligt in Athene, niet in Rome.", "Het Forum was het marktplein en bestuurscentrum, geen arena."],
       },
       {
         q: "Wat is **MMXXVI** in Romeinse cijfers?",
@@ -275,19 +275,19 @@ const steps = [
         q: "Wie zei *'Veni, vidi, vici'*?",
         options: ["Julius Caesar", "Augustus", "Nero", "Cicero"],
         answer: 0,
-        wrongHints: [null, "Een andere, jongere Caesar.", "Andere keizer.", "Politicus, niet uitspraak."],
+        wrongHints: [null, "Augustus regeerde vooral vanuit Rome. Welke veldheer meldde na een snelle overwinning 'Ik kwam, zag en overwon'?", "Nero was keizer en vooral bekend van muziek en de brand van Rome, niet van veldslagen.", "Cicero was een redenaar en politicus, geen veldheer."],
       },
       {
         q: "Welke **Nederlandse stad** is van Romeinse oorsprong?",
-        options: ["Nijmegen", "Den Haag", "Almere", "Lelystad"],
+        options: ["Nijmegen", "Den Haag", "Haarlem", "Amsterdam"],
         answer: 0,
-        wrongHints: [null, "Den Haag van middeleeuwen.", "20e eeuw.", "20e eeuw."],
+        wrongHints: [null, "Den Haag groeide in de middeleeuwen rond het hof van de graven van Holland.", "Haarlem ontstond in de middeleeuwen op een strandwal.", "Amsterdam ontstond pas in de 13e eeuw bij een dam in de Amstel."],
       },
       {
         q: "Wat is **Latijn** vandaag de dag?",
-        options: ["Een dode taal", "Spaanse spreektaal", "Een Italiaans dialect", "Een geheimtaal"],
+        options: ["Een dode taal", "De taal van Italië", "Een Italiaans dialect", "Een kunsttaal"],
         answer: 0,
-        wrongHints: [null, "Spaans is afgeleide.", "Geen dialect.", "Geen geheimtaal — wetenschappers en de kerk gebruiken het nog."],
+        wrongHints: [null, "In Italië spreekt men Italiaans, een taal die uit het Latijn is gegroeid.", "Latijn is geen dialect: Italiaans is er juist uit voortgekomen.", "Latijn is niet bedacht zoals Esperanto, maar werd echt gesproken door de Romeinen."],
       },
     ],
   },

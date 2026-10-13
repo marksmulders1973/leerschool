@@ -22,9 +22,9 @@ const steps = [
     checks: [
       {
         q: "Welke kleur foton heeft **meer energie**?",
-        options: ["Violet (λ≈400 nm)", "Rood (λ≈700 nm)", "Beide gelijk", "Geel (λ≈580 nm)"],
+        options: ["Violet (λ≈400 nm)", "Rood (λ≈700 nm)", "Groen (λ≈530 nm)", "Geel (λ≈580 nm)"],
         answer: 0,
-        wrongHints: [null, "Niet — langere λ = lagere f = minder E.", "Niet — E hangt af van f.", "Niet — zit tussen rood en violet in."],
+        wrongHints: [null, "Rood heeft de langste golflengte van deze kleuren. Hoort daar een hoge of een lage frequentie bij?", "Groen zit midden in het spectrum. Welke kleur heeft de kortste golflengte?", "Geel heeft een kortere golflengte dan rood, maar is er een kleur met een nog kortere?"],
         uitlegPad: {
           stappen: [{ titel: "E = h·c/λ → korte λ = hoge E", tekst: "Violet: E ≈ 4,97·10⁻¹⁹ J ≈ 3,1 eV. Rood: ~1,77 eV. Violet ~1,8× zoveel energie per foton." }],
           theorie: "Daarom is UV/röntgen gevaarlijk voor cellen: hoogenergetische fotonen kunnen DNA breken. Rood licht (lager E) niet.",
@@ -35,7 +35,7 @@ const steps = [
         q: "Een foton heeft λ=500 nm. E in J? (h=6,626·10⁻³⁴, c=3·10⁸)",
         options: ["~4,0·10⁻¹⁹ J", "~4,0·10⁻²³ J", "~1,3·10⁻²⁷ J", "~4·10¹⁹ J"],
         answer: 0,
-        wrongHints: [null, "Niet — te klein.", "Niet — verkeerde formule.", "Onmogelijk — te groot."],
+        wrongHints: [null, "Reken h·c nog eens: 6,626·10⁻³⁴ × 3·10⁸. Welke macht van 10 krijg je?", "Je rekende h/λ. Vergat je de lichtsnelheid c in E = h·c/λ?", "10¹⁹ J is meer energie dan een kerncentrale in een jaar levert. Klopt die macht van 10 voor één foton?"],
         uitlegPad: {
           stappen: [
             { titel: "E = hc/λ", tekst: "E = (6,626·10⁻³⁴ · 3·10⁸) / 500·10⁻⁹ = 1,988·10⁻²⁵ / 5·10⁻⁷ = **3,98·10⁻¹⁹ J** ≈ 2,48 eV. Groen licht, midden zichtbaar spectrum." },
@@ -45,9 +45,9 @@ const steps = [
       },
       {
         q: "Voor 1 eV energie heeft elektron welke spanning doorlopen?",
-        options: ["1 V", "1 J", "1 kV", "1 mV"],
+        options: ["1 V", "1,6·10⁻¹⁹ V", "1 kV", "1 mV"],
         answer: 0,
-        wrongHints: [null, "Niet — J is energie-eenheid.", "Reken E = q·U met q = e: hoeveel eV krijgt een elektron bij 1000 V?", "Reken E = q·U met q = e: hoeveel eV krijgt een elektron bij 0,001 V?"],
+        wrongHints: [null, "1,6·10⁻¹⁹ is de lading van het elektron in coulomb. Welke spanning geeft via E = q·U precies 1 eV?", "Reken E = q·U met q = e: hoeveel eV krijgt een elektron bij 1000 V?", "Reken E = q·U met q = e: hoeveel eV krijgt een elektron bij 0,001 V?"],
         uitlegPad: {
           stappen: [{ titel: "1 eV = 1 V × e", tekst: "Definitie: 1 eV = arbeid die elektron krijgt door 1 V potentiaalverschil. 1 eV = e·1V = 1,6·10⁻¹⁹ J. Praktisch in atomaire fysica omdat getallen in J anders erg klein zijn." }],
           niveaus: { basis: "1 V.", simpeler: "e × 1V = 1 eV per definitie.", nogSimpeler: "1 V" },
@@ -108,10 +108,10 @@ const steps = [
           "~5,1·10¹⁴ Hz",
           "~5,1·10⁸ Hz",
           "~5,1·10¹⁶ Hz",
-          "Bestaat niet"
+          "~3,4·10⁻¹⁹ Hz"
         ],
         answer: 0,
-        wrongHints: [null, "Te laag — radiogolven.", "Te hoog — röntgen.", "Bestaat wel."],
+        wrongHints: [null, "10⁸ Hz hoort bij radiogolven. Maken radiogolven elektronen los uit een metaal?", "10¹⁶ Hz hoort bij röntgen. Is 2,1 eV zo'n grote energie?", "3,4·10⁻¹⁹ is de uittree-energie in joule. Welke formule verbindt energie en frequentie?"],
         uitlegPad: {
           stappen: [
             { titel: "f_d = W/h", tekst: "W = 2,1 eV = 2,1 · 1,6·10⁻¹⁹ = 3,36·10⁻¹⁹ J. f_d = W/h = 3,36·10⁻¹⁹ / 6,626·10⁻³⁴ ≈ **5,07·10¹⁴ Hz** (oranje-geel licht). Dat is waarom cesium handig is: zelfs gewoon zichtbaar licht slaat elektronen los." },
@@ -217,7 +217,7 @@ const steps = [
           "Atomen botsen en kaatsen tegen elkaar op"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is absorptie-spectrum.", "Niet — banen zelf geven geen straling.", "Niet — botsing energie-overdracht, niet foton."],
+        wrongHints: [null, "Licht opnemen en omhoog springen geeft donkere lijnen. Hoe ontstaan heldere lijnen?", "Zolang een elektron in zijn baan blijft, straalt het niet. Wat moet er gebeuren om licht uit te zenden?", "Botsingen geven energie door, maar zenden zelf geen foton met een vaste kleur uit. Waar komen losse lijnen vandaan?"],
         uitlegPad: {
           stappen: [{ titel: "Sprong omlaag = foton uit", tekst: "Stof verhit (vlam, vonk, gasontlading) → elektronen aangeslagen naar hoger niveau → vallen terug → fotonen vrij met ΔE = hf. Elk element heeft uniek patroon: natrium = geel (D-lijn), neon = rood-oranje, etc." }],
           theorie: "Vuurwerk-kleuren komen ook hieruit: koper-zouten = groen, strontium = rood, natrium = geel, etc.",
@@ -252,9 +252,9 @@ const steps = [
     checks: [
       {
         q: "Een **neon-buis** geeft welk type spectrum?",
-        options: ["Lijn-emissie", "Continu", "Lijn-absorptie", "Geen spectrum"],
+        options: ["Lijn-emissie", "Continu", "Lijn-absorptie", "Eén rode kleurband"],
         answer: 0,
-        wrongHints: [null, "Niet — alleen vaste/dichte stof geeft continu.", "Niet — geen kouder gas vóór.", "Wel een spectrum (rode kleur)."],
+        wrongHints: [null, "Een continu spectrum komt van een gloeiende vaste stof of een dicht gas. Is een neonbuis dat?", "Donkere lijnen ontstaan als er koud gas vóór een lichtbron zit. Is dat bij een neonbuis zo?", "Neon ziet er rood uit, maar door een spectroscoop zie je meer. Zie je één band of losse lijnen?"],
         uitlegPad: {
           stappen: [{ titel: "Heet + dun gas", tekst: "Neon-gas onder elektrische ontlading: aangeslagen → emissielijnen, vooral in rood-oranje (650 nm). Discreet patroon, niet 'wit'. Daarom monochrome neon-borden." }],
           niveaus: { basis: "Lijn-emissie.", simpeler: "Heet dun gas → emissielijnen.", nogSimpeler: "Emissielijnen" },
@@ -280,9 +280,9 @@ const steps = [
       },
       {
         q: "Een ster met spectrum **rood-verschoven** beweegt:",
-        options: ["Van ons af", "Naar ons toe", "Stilstand", "Hangt af van ster-grootte"],
+        options: ["Van ons af", "Naar ons toe", "Staat stil ten opzichte van ons", "Hangt af van ster-grootte"],
         answer: 0,
-        wrongHints: [null, "Niet — dat zou blauw-verschoven zijn.", "Niet — Doppler.", "Niet — de verschuiving hangt af van de beweging, niet van de grootte."],
+        wrongHints: [null, "Een ster die naar ons toe komt, drukt de golven in elkaar. Worden ze dan langer of korter?", "Bij stilstand liggen de lijnen op dezelfde plek als in het lab. Is er dan een verschuiving?", "Niet — de verschuiving hangt af van de beweging, niet van de grootte."],
         uitlegPad: {
           stappen: [{ titel: "Doppler-effect licht", tekst: "Bron beweegt weg → golven uitgerekt → langere λ → naar rood verschoven. Mate van verschuiving (z) → snelheid weg. Hubble's wet: z evenredig met afstand → heelal-uitdijing." }],
           niveaus: { basis: "Weg van ons.", simpeler: "Rood = wegbewegen.", nogSimpeler: "Weg" },
@@ -294,10 +294,10 @@ const steps = [
           "Heet + blauw",
           "Koel + rood",
           "Geel als zon",
-          "Wit-dwerg"
+          "Heet + rood"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is M-ster.", "Niet — dat is G-ster.", "Niet — eind-fase, andere klasse."],
+        wrongHints: [null, "Koel en rood horen bij de M-sterren. Staat O aan het hete of aan het koele eind van de rij OBAFGKM?", "Geel zoals de zon hoort bij klasse G. Staat O aan het hete of aan het koele eind van OBAFGKM?", "Hoe verandert de kleur van gloeiend ijzer als het steeds heter wordt?"],
         uitlegPad: {
           stappen: [{ titel: "OBAFGKM van heet naar koel", tekst: "O-sterren zijn zeldzame, jonge, heel zware sterren (>16 zonsmassa's). Heet → blauw spectrum. Branden snel op (paar miljoen jaar) en eindigen als supernova." }],
           theorie: "Zon = G2-ster (~5800 K, geel). Sirius = A1 (~9900 K, witblauw). Betelgeuse = M2 (~3500 K, rood).",
@@ -332,7 +332,7 @@ const steps = [
         q: "Een UV-foton (λ = 200 nm). E in eV?",
         options: ["~6,2 eV", "~62 eV", "~620 eV", "~0,62 eV"],
         answer: 0,
-        wrongHints: [null, "Niet — te groot.", "Niet — röntgen-bereik.", "Niet — IR-bereik."],
+        wrongHints: [null, "Controleer de macht van 10: zet λ = 200 nm om naar meter en reken E = h·c/λ opnieuw uit.", "620 eV hoort al bij röntgenstraling. Zou UV-licht van 200 nm zoveel energie hebben?", "0,62 eV hoort bij infrarood. Heeft UV meer of minder energie dan infrarood?"],
         uitlegPad: {
           stappen: [
             { titel: "E = hc/λ → eV", tekst: "E = 1240 eV·nm / 200 nm = **6,2 eV** (handige formule: hc = 1240 eV·nm). UV-bereik, kan DNA-bindingen breken." },
@@ -343,9 +343,9 @@ const steps = [
       },
       {
         q: "De Broglie-golflengte van elektron bij v = 1·10⁶ m/s. (m_e = 9,11·10⁻³¹ kg)",
-        options: ["~7,3·10⁻¹⁰ m", "~7,3·10⁻⁷ m", "~7,3·10⁻¹⁵ m", "Niet meetbaar"],
+        options: ["~7,3·10⁻¹⁰ m", "~7,3·10⁻⁷ m", "~7,3·10⁻¹⁵ m", "~1,4·10⁹ m"],
         answer: 0,
-        wrongHints: [null, "Niet — te groot voor elektron.", "Niet — verkeerde machten.", "Is wel meetbaar (elektronenmicroscoop)."],
+        wrongHints: [null, "10⁻⁷ m is de golflengte van licht. Is de golflengte van dit elektron zo groot? Controleer de machten.", "Controleer de machten van 10: 10⁻³⁴ gedeeld door (10⁻³¹ × 10⁶) geeft welke macht?", "Je deelde m·v door h. Is het λ = h/(m·v) of andersom?"],
         uitlegPad: {
           stappen: [
             { titel: "λ = h/(mv)", tekst: "λ = 6,626·10⁻³⁴ / (9,11·10⁻³¹ · 1·10⁶) = 6,626·10⁻³⁴ / 9,11·10⁻²⁵ ≈ **7,3·10⁻¹⁰ m** (sub-nanometer). Vergelijkbaar met atoom-grootte → elektron-microscoop ziet detail op die schaal." },
@@ -355,9 +355,9 @@ const steps = [
       },
       {
         q: "Welk type spectrum geeft een **gloeiende wolfraam-draad** (gloeilamp)?",
-        options: ["Continu", "Lijn-emissie", "Lijn-absorptie", "Geen spectrum"],
+        options: ["Continu", "Lijn-emissie", "Lijn-absorptie", "Continu met heldere lijnen"],
         answer: 0,
-        wrongHints: [null, "Niet — alleen dun heet gas.", "Niet — geen koud gas voor.", "Niet — geeft wel licht."],
+        wrongHints: [null, "Een lijnspectrum krijg je van losse atomen in een dun gas. Is de gloeidraad een gas of een vaste stof?", "Donkere lijnen ontstaan als er koud gas vóór de lichtbron zit. Is dat bij een gloeilamp zo?", "Heldere lijnen komen van een dun, heet gas. Zit dat in een gloeilamp, of alleen een gloeiende draad?"],
         uitlegPad: {
           stappen: [{ titel: "Vaste stof = continu", tekst: "Hete vaste stof (wolfraam-draad, ~2500 K) zendt continu spectrum uit — alle golflengten vertegenwoordigd, met piek volgens Wien (rood-geel-warm-licht). Daarom zijn gloeilampen energieverspilling: <5% in zichtbaar, 95%+ in IR (warmte)." }],
           niveaus: { basis: "Continu.", simpeler: "Vaste stof straalt continu.", nogSimpeler: "Continu" },

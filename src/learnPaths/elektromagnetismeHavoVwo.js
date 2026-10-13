@@ -293,10 +293,10 @@ const steps = [
       {
         q: "Werkt een trafo op **gelijkstroom**?",
         options: [
-          "Nee, alleen op wisselstroom",
-          "Ja, net zo goed als op wisselstroom",
-          "Ja, maar met een lager rendement",
-          "Ja, maar alleen bij hoge spanning"
+          "Alleen op wisselstroom",
+          "Net zo goed op gelijk- als op wisselstroom",
+          "Op gelijkstroom, maar met een lager rendement",
+          "Op gelijkstroom, maar alleen bij hoge spanning"
         ],
         answer: 0,
         wrongHints: [null, "Inductie in de secundaire spoel ontstaat door een veranderende flux. Verandert de flux bij een constante stroom?", "Het gaat niet om wat minder rendement. Wordt er bij constante stroom in de secundaire spoel wel spanning opgewekt?", "Ook een hoge gelijkspanning geeft een constante stroom. Verandert de flux in de kern dan?"],

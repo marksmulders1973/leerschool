@@ -39,7 +39,7 @@ const steps = [
           "¹H en ⁴He"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — N en C zijn verschillende elementen (ander atoomnummer), geen isotopen.", "Niet — als Z verschilt, zijn het andere elementen, geen isotopen.", "Niet — totaal andere elementen."],
+        wrongHints: [null, "Niet — N en C zijn verschillende elementen (ander atoomnummer), geen isotopen.", "Niet — als Z verschilt, zijn het andere elementen, geen isotopen.", "¹H en ⁴He hebben een ander atoomnummer. Zijn het dan isotopen van hetzelfde element?"],
         uitlegPad: {
           stappen: [{ titel: "Isotopen = zelfde Z", tekst: "¹²C en ¹⁴C hebben beide Z = 6 (zelfde element koolstof), maar verschillende A (12 vs 14). Andere stof heeft andere Z dus is een ander element." }],
           niveaus: { basis: "Zelfde Z = isotopen.", simpeler: "Beide koolstof (Z=6), ander massagetal.", nogSimpeler: "C-12 + C-14" },
@@ -49,7 +49,7 @@ const steps = [
         q: "Een atoomkern van **calcium-40** heeft welke samenstelling? (Ca: Z = 20)",
         options: ["20 p + 20 n", "40 p + 20 n", "20 p + 40 n", "40 p + 40 n"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is meer dan een Ca-atoom heeft.", "Niet — A telt p + n samen.", "Niet — onmogelijk."],
+        wrongHints: [null, "Calcium heeft Z = 20. Hoeveel protonen heeft elk calciumatoom dan?", "A = 40 is het aantal protonen en neutronen samen. Klopt 20 + 40 dan?", "Hoeveel protonen heeft calcium volgens Z? En hoeveel deeltjes samen zitten er volgens A = 40 in de kern?"],
         uitlegPad: {
           stappen: [{ titel: "Z = 20, A = 40", tekst: "Ca-40: Z=20 (atoomnummer), A=40 (massagetal). Protonen=Z=20. Neutronen=A−Z=20. Stabiel (lichte kern, p≈n)." }],
           niveaus: { basis: "20 p + 20 n.", simpeler: "Z protonen + A−Z neutronen = 20 + 20.", nogSimpeler: "20+20" },
@@ -81,7 +81,7 @@ const steps = [
           "Kunstmatig — alleen in laboratoria gemaakt"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — zware kernen worden instabiel.", "Niet — duidelijke grens bij bismut.", "Uranium en thorium vind je gewoon in de aardkorst. Zijn ze dan allemaal kunstmatig?"],
+        wrongHints: [null, "Noem een paar elementen boven bismut, zoals polonium, radium en uranium. Zijn die stabiel?", "Ken je een element boven bismut dat geen straling uitzendt? Denk aan polonium, radon, radium en uranium.", "Uranium en thorium vind je gewoon in de aardkorst. Zijn ze dan allemaal kunstmatig?"],
         uitlegPad: {
           stappen: [{ titel: "Bismut = laatste stabiele", tekst: "Z=83 (bismut) is het zwaarste element met (vrijwel) stabiele isotopen. Z≥84: polonium → uranium → transuranen (lab-gemaakt) → allemaal radioactief vervallen vroeg of laat naar lichter element." }],
           niveaus: { basis: "Z>83 = radioactief.", simpeler: "Alle elementen voorbij bismut zijn instabiel.", nogSimpeler: "Allemaal radioactief" },
@@ -110,7 +110,7 @@ const steps = [
         q: "¹⁴C (Z=6) verval β⁻ naar:",
         options: ["¹⁴N (Z=7)", "¹⁴B (Z=5)", "¹⁰Be + α", "¹³C"],
         answer: 0,
-        wrongHints: [null, "Niet — β⁻ verhoogt Z, niet verlaagt.", "Niet — dat zou α zijn.", "Niet — A verandert niet bij β."],
+        wrongHints: [null, "Niet — β⁻ verhoogt Z, niet verlaagt.", "Niet — dat zou α zijn.", "Bij β⁻-verval wordt een neutron een proton. Verandert het massagetal daarbij?"],
         uitlegPad: {
           stappen: [
             { titel: "β⁻: Z+1, A blijft", tekst: "Bij β⁻ wordt een neutron een proton + elektron + antineutrino. C-14 (Z=6) → N-14 (Z=7). A blijft 14 (elektron is bijna massaloos). Dit is de basis van koolstof-14-datering!" },
@@ -136,9 +136,9 @@ const steps = [
       },
       {
         q: "Welke straling wordt gestopt door **een vel papier**?",
-        options: ["α", "β⁻", "γ", "Geen — alle gaan erdoorheen"],
+        options: ["α", "β⁻", "γ", "α en β⁻ allebei"],
         answer: 0,
-        wrongHints: [null, "Niet — β gaat door papier, vereist dun aluminium.", "Niet — γ vereist dik lood/beton.", "Niet — één soort straling heeft zo weinig doordringvermogen dat papier genoeg is."],
+        wrongHints: [null, "β-deeltjes zijn kleine, snelle elektronen. Houdt een vel papier die tegen, of heb je aluminium nodig?", "γ-straling gaat door papier heen en zelfs door een flinke laag beton. Welke straling is het minst doordringend?", "β-deeltjes gaan door papier heen; daarvoor heb je een plaatje aluminium nodig. Welke straling blijft dan over?"],
         uitlegPad: {
           stappen: [{ titel: "α heeft lage doordringkracht", tekst: "α-deeltjes zijn relatief zwaar (He-kern) + dubbel geladen → veel botsingen met materie → snel afgeremd. Papier of paar cm lucht stopt α. β gaat door tot dunne metaalplaat; γ door dikke loodlaag." }],
           basiskennis: [{ onderwerp: "Maar gevaarlijk in lichaam", uitleg: "α buiten lichaam = onschuldig. INGEADEMD of GEGETEN (zoals radon-gas) = zeer gevaarlijk: alle energie afgeleverd in klein volume weefsel." }],
@@ -196,7 +196,7 @@ const steps = [
         q: "Een houtmonster bevat **25%** van het oorspronkelijke C-14 (t½ = 5730 j). Hoe **oud**?",
         options: ["~11 460 j", "~5 730 j", "~22 920 j", "~2 865 j"],
         answer: 0,
-        wrongHints: [null, "Niet — dan zou er nog 50% over zijn.", "Niet — te oud.", "Niet — te jong."],
+        wrongHints: [null, "Niet — dan zou er nog 50% over zijn.", "22 920 jaar is vier halveringstijden. Hoeveel procent is er dan nog over?", "2 865 jaar is een halve halveringstijd. Zou er dan al 75% weg zijn?"],
         uitlegPad: {
           stappen: [
             { titel: "25% = 2 halveringen", tekst: "100% → 50% (na 1× t½) → 25% (na 2× t½). Dus 2 × 5730 = **11 460 jaar**. Toepassing op archeologische vondsten (bv. veen-lijken, mummies)." },
@@ -208,7 +208,7 @@ const steps = [
         q: "Een radio-tracer in een patiënt moet **snel uit het lichaam**. Welke t½ is geschikt?",
         options: ["Uren", "Decennia", "Miljoenen jaren", "Seconden"],
         answer: 0,
-        wrongHints: [null, "Niet — patiënt blijft jarenlang stralen.", "Idem maar erger.", "Niet — te kort om beeld te maken."],
+        wrongHints: [null, "Bij een halveringstijd van tientallen jaren blijft de patiënt jarenlang stralen. Past dat bij 'snel uit het lichaam'?", "Bij miljoenen jaren straalt de stof zwak, maar blijft hij praktisch voor altijd aanwezig. Past dat bij 'snel uit het lichaam'?", "Bij seconden is de stof al vervallen voordat hij bij het orgaan is. Kun je dan nog een scan maken?"],
         uitlegPad: {
           stappen: [
             { titel: "Trade-off tijd vs stralingsdosis", tekst: "Te lang (jaren): patiënt blijft stralen. Te kort (sec): is weg vóór de scan. **Uren** is ideaal: voldoende tijd voor beeldvorming, daarna snel afgevallen. Tc-99m (6 uur) is favoriete medische tracer." },
@@ -226,7 +226,7 @@ const steps = [
           "Temperatuur van het monster"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — alleen het radioactieve deel telt.", "Niet — volume irrelevant.", "Niet — radioactief verval is ONAFHANKELIJK van temperatuur (uniek!)."],
+        wrongHints: [null, "Een monster bevat ook stabiele atomen die niet vervallen. Tellen die mee voor de activiteit?", "Twee monsters met hetzelfde volume kunnen heel verschillend stralen. Waar hangt het dan wel van af?", "Verval gaat even snel in een koude als in een hete stof. Waar hangt de activiteit dan wel van af?"],
         uitlegPad: {
           stappen: [
             { titel: "A = λ·N", tekst: "Hoe meer radioactieve kernen aanwezig, hoe meer per seconde vervallen → grotere A. Vervalconstante λ = ln(2)/t½ is een eigenschap van de isotoop." },
@@ -265,7 +265,7 @@ const steps = [
         q: "Welke kern heeft de **hoogste bindingsenergie per nucleon**?",
         options: ["Fe-56", "H-1", "U-235", "He-4"],
         answer: 0,
-        wrongHints: [null, "Niet — proton alleen heeft 0 E_b.", "Niet — U zit weg van piek (hoog A).", "Niet — He heeft hoge E_b, maar Fe meer."],
+        wrongHints: [null, "Niet — proton alleen heeft 0 E_b.", "Uranium staat ver rechts in de grafiek, voorbij de piek. Hoe hoog is E_b per nucleon daar vergeleken met de top?", "He-4 heeft een opvallend hoge waarde, maar is het de hoogste piek in de grafiek?"],
         uitlegPad: {
           stappen: [{ titel: "Fe-piek ≈ 8,8 MeV/nucleon", tekst: "IJzer-56 zit op de top van de bindingsenergie-kromme. Daarom is fusie naar Fe in sterren (na koolstof, zuurstof) een 'doodlopende straat': zwaarder fuseren KOST energie. Daarom ontploft een zware ster in een supernova zodra de Fe-kern te groot wordt." }],
           theorie: "Alle elementen zwaarder dan Fe (goud, uranium) ontstaan vooral bij supernova-explosies en botsende neutronensterren — niet in 'gewone' kernfusie.",
@@ -289,10 +289,10 @@ const steps = [
           "Brandstof overvloedig + bijna geen langlevend radioactief afval",
           "Werkt bij kamertemperatuur + eenvoudige, goedkope reactor",
           "Geen plasma nodig + reactie is makkelijk te regelen",
-          "Geen opstartenergie nodig + reactie houdt zichzelf in stand"
+          "Meer energie per reactie dan één uraniumsplijting"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — vereist 10⁷ K plasma.", "Niet — vereist juist plasma-toestand.", "Onjuist — er is altijd opstart-energie."],
+        wrongHints: [null, "Fusie vraagt temperaturen van miljoenen graden. Kan dat bij kamertemperatuur?", "Bij fusie zijn de deeltjes zo heet dat er plasma ontstaat. Kan het dan zonder plasma?", "Eén fusie van waterstofkernen levert zo'n 18 MeV, één uraniumsplijting zo'n 200 MeV. Waar zit het voordeel van fusie dan wel?"],
         uitlegPad: {
           stappen: [{ titel: "Deuterium uit zeewater + schoner", tekst: "Deuterium (²H) is in 1 op 6000 waterstof-atomen aanwezig — wereldzeeën leveren 'oneindig' brandstof. Fusie produceert vooral helium (niet-radioactief) + neutronen die kortlevend afval geven (jaren, niet duizenden jaren). Geen kettingreactie-risico." }],
           niveaus: { basis: "Brandstof overvloedig, weinig afval.", simpeler: "Zeewater geeft brandstof + nauwelijks afval.", nogSimpeler: "Schoner" },
@@ -307,7 +307,7 @@ const steps = [
           "Radioactief afval te zuiveren → minder straling"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — warmte gaat naar stoom-systeem.", "Niet — dat is generator/turbine.", "Regelstaven zitten tijdens bedrijf midden in de reactorkern. Wat doen ze daar met de deeltjes die de kettingreactie gaande houden?"],
+        wrongHints: [null, "Regelstaven worden in of uit de kern geschoven om het aantal splijtingen te sturen. Slaan ze daarvoor warmte op?", "Stroom wordt opgewekt door de turbine en de generator. Wat doen de staven in de kern zelf?", "Regelstaven zitten tijdens bedrijf midden in de reactorkern. Wat doen ze daar met de deeltjes die de kettingreactie gaande houden?"],
         uitlegPad: {
           stappen: [
             { titel: "Neutronen-absorbers", tekst: "Cadmium + borium hebben enorm grote neutron-absorptie-doorsnede. Staven in reactor inschuiven → meer absorptie → minder neutronen voor splijting → reactie zwakt af. Uitschuiven → meer neutronen → harder. **Volledig inschuiven = noodstop** (SCRAM)." },
@@ -339,7 +339,7 @@ const steps = [
         q: "Verdubbeling van afstand tot bron geeft welke dosis-verandering?",
         options: ["4× lager", "2× lager", "Onveranderd", "4× hoger"],
         answer: 0,
-        wrongHints: [null, "Niet — bij punt-bron is het 1/r²-wet.", "Niet — meer afstand = minder dosis.", "Niet — tegenovergesteld."],
+        wrongHints: [null, "Bij een puntbron verspreidt de straling zich over een boloppervlak. Hoe groeit dat oppervlak als r verdubbelt?", "Een lamp lijkt zwakker als je verder weg gaat staan. Geldt dat ook voor straling?", "Kom je dichter bij de bron of verder weg als de afstand verdubbelt?"],
         uitlegPad: {
           stappen: [{ titel: "1/r²-wet", tekst: "Net als geluid en licht: straling vanaf punt-bron verdeelt zich over bol-oppervlak 4πr². Verdubbel r → oppervlak 4×, intensiteit ÷4." }],
           theorie: "Daarom werkt afstand-bewaking goed: 5 m van bron = 25× minder dan 1 m.",
@@ -350,7 +350,7 @@ const steps = [
         q: "Welke isotoop heeft halveringstijd **van miljarden jaren** + wordt gebruikt voor leeftijds-bepaling rotsen?",
         options: ["U-238", "C-14", "I-131", "Tc-99m"],
         answer: 0,
-        wrongHints: [null, "C-14 gebruik je voor veel jongere vondsten (tot zo'n 50 000 jaar).", "Medische isotoop, niet voor rotsen.", "Medische isotoop, niet voor rotsen."],
+        wrongHints: [null, "C-14 gebruik je voor veel jongere vondsten (tot zo'n 50 000 jaar).", "I-131 heeft een halveringstijd van 8 dagen en wordt gebruikt bij schildklieronderzoek. Is dat bruikbaar voor rotsen van miljarden jaren?", "Tc-99m heeft een halveringstijd van 6 uur en wordt in ziekenhuizen gebruikt. Past dat bij rotsen van miljarden jaren?"],
         uitlegPad: {
           stappen: [{ titel: "U-238 → Pb-206, t½=4,5 mld j", tekst: "Uranium-238 vervalt naar lood-206 met halveringstijd ~4,5 miljard jaar — ongeveer leeftijd aarde. Verhouding U/Pb in een rots → ouderdom. Klassieke methode voor de oudste aardse mineralen (4,4 mld j!)." }],
           niveaus: { basis: "U-238 voor rotsdatering.", simpeler: "Lange halveringstijd → miljard-jaren bereik.", nogSimpeler: "U-238" },
@@ -360,7 +360,7 @@ const steps = [
         q: "Een patiënt krijgt CT-scan van 10 mSv. Achtergrond is 2 mSv/j. Equivalent aan hoeveel achtergrond?",
         options: ["5 jaar", "5 dagen", "5 maanden", "5 weken"],
         answer: 0,
-        wrongHints: [null, "Niet — 5 dagen achtergrond zou ~27 μSv zijn.", "Niet — controleer rekening.", "Niet — te kort."],
+        wrongHints: [null, "Niet — 5 dagen achtergrond zou ~27 μSv zijn.", "5 maanden is minder dan een half jaar. Hoeveel mSv achtergrond krijg je in 5 maanden?", "5 weken achtergrond is maar ongeveer 0,2 mSv. Hoeveel tijd achtergrond heb je nodig voor 10 mSv?"],
         uitlegPad: {
           stappen: [{ titel: "10 mSv / (2 mSv/j) = 5 jaar", tekst: "Een CT-scan = ~5 jaar natuurlijke achtergrond in één keer. Daarom alleen CT als medisch geïndiceerd, niet 'voor de zekerheid'." }],
           niveaus: { basis: "10/2=5 jaar.", simpeler: "CT-scan = 5 jaar achtergrond.", nogSimpeler: "5 j" },
@@ -375,7 +375,7 @@ const steps = [
           "Alle drie gelijk — alleen de dosis in Gy telt"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — γ buiten lichaam is gevaarlijker, maar binnen verspreidt energie meer.", "Welk soort straling geeft al zijn energie af op een heel kort stukje weefsel?", "Telt de soort straling mee in de equivalente dosis? Denk aan de weegfactor Q."],
+        wrongHints: [null, "γ-straling dringt ver door en geeft haar energie verspreid af. Is dat binnen het lichaam het meest schadelijk?", "Welk soort straling geeft al zijn energie af op een heel kort stukje weefsel?", "Telt de soort straling mee in de equivalente dosis? Denk aan de weegfactor Q."],
         uitlegPad: {
           stappen: [
             { titel: "α binnen = lokaal vernietigend", tekst: "α-deeltje deponeert ALLE energie in 50 μm weefsel → cel-DNA in nabij gebied wordt verwoest. Buiten lichaam stopt α door huid. Maar **ingeademd radon** of **gegeten polonium** → α-bron in long/maag-cellen → kankerrisico hoog. Q-factor 20 weerspiegelt deze schade." },

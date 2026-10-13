@@ -540,7 +540,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
         wrongHints: [
           null,
           "Bij **ik** komt er nooit een -t. Doe de truc: \"ik loop\"... met t of zonder?",
-          "Niet bestaand woord. Toets: bij ik = stam zonder uitgang.",
+          "'Wort' klinkt hetzelfde, maar met welke letter eindigt de stam van 'worden'?",
           "Hele werkwoord. Bij \"ik\" gebruik je de stam.",
         ],
         uitlegPad: {
@@ -560,7 +560,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
           null,
           "Bij **hij** komt er een -t bij de stam. Welke letter mist?",
           "Dat is meervoud. Hier gaat het om één persoon (hij).",
-          "Bestaat niet. Stam = word (met d), dan + t.",
+          "'Wort' klinkt goed, maar wat is de stam van 'worden'? Begin bij die stam en kijk wat er bij 'hij' achter komt.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Hij wordt — met t!", tekst: "Lopen-test: hij loopt → hij wordt. Stam + t." }],

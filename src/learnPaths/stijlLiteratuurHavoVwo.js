@@ -24,7 +24,7 @@ const steps = [
         q: "'De wind FLUISTERDE door de bomen.' Welke stijlfiguur?",
         options: ["Personificatie", "Metafoor", "Hyperbool", "Alliteratie"],
         answer: 0,
-        wrongHints: [null, "Niet — geen beeld-vervanging.", "Niet — niet overdreven.", "Niet — geen herhaling beginklank."],
+        wrongHints: [null, "Een metafoor vervangt iets door een beeld. Wordt de wind hier ergens door vervangen?", "Een hyperbool overdrijft. Wordt er hier iets groter gemaakt dan het is?", "Bij alliteratie beginnen woorden met dezelfde klank. Is dat hier zo?"],
         uitlegPad: {
           stappen: [{ titel: "Levenloos = menselijk", tekst: "De wind kan niet écht fluisteren (alleen levende wezens kunnen dat). Levenloos voorwerp (wind) krijgt menselijke eigenschap (fluisteren) → **personificatie**. Onderscheid van metafoor: bij metafoor zou wind iets ANDERS zijn, niet menselijk doen." }],
           niveaus: { basis: "Personificatie.", simpeler: "Wind doet menselijk = personificatie.", nogSimpeler: "Personificatie" },
@@ -34,7 +34,7 @@ const steps = [
         q: "'Haar tanden zijn parels' is een:",
         options: ["Metafoor", "Vergelijking", "Hyperbool", "Personificatie"],
         answer: 0,
-        wrongHints: [null, "Niet — geen 'als'.", "Wordt hier vooral iets overdreven, of wordt de ene zaak door een beeld vervangen?", "Niet — tanden niet menselijk gemaakt."],
+        wrongHints: [null, "Een vergelijking gebruikt 'als' of 'zoals': 'tanden als parels'. Staat dat woord hier?", "Wordt hier vooral iets overdreven, of wordt de ene zaak door een beeld vervangen?", "Bij personificatie krijgt een ding menselijke eigenschappen. Doen de tanden hier iets menselijks?"],
         uitlegPad: {
           stappen: [{ titel: "Geen signaalwoord = metafoor", tekst: "Bij **vergelijking**: 'haar tanden zijn ALS parels' (met als/gelijk/zoals). Bij **metafoor**: 'haar tanden ZIJN parels' (zonder signaalwoord — beeld vervangt zaak direct). Sterk beeld + compact." }],
           niveaus: { basis: "Metafoor.", simpeler: "Geen 'als' = metafoor.", nogSimpeler: "Metafoor" },
@@ -44,7 +44,7 @@ const steps = [
         q: "'Oorverdovende stilte' is een:",
         options: ["Oxymoron", "Pleonasme", "Tautologie", "Ironie"],
         answer: 0,
-        wrongHints: [null, "Niet — geen overbodige versterker.", "Niet — geen dubbel.", "Niet — geen tegenovergestelde bedoeling."],
+        wrongHints: [null, "Een pleonasme herhaalt overbodig wat al in een woord zit, zoals 'witte sneeuw'. Gebeurt dat hier?", "Een tautologie zegt twee keer hetzelfde met andere woorden, zoals 'enkel en alleen'. Is dat hier zo?", "Bij ironie bedoel je het tegenovergestelde van wat je zegt. Bedoelt de schrijver dat het eigenlijk lawaaiig is?"],
         uitlegPad: {
           stappen: [{ titel: "Tegenstrijdige termen samen", tekst: "Oorverdovend = heel hard geluid. Stilte = afwezigheid geluid. **Twee tegenstrijdige woorden** = oxymoron. Effect: paradoxale ervaring (bv. heel intense stilte voelt 'oorverdovend')." }],
           theorie: "Andere voorbeelden: 'bittere zoetheid', 'levende doden', 'gecontroleerde chaos'.",
@@ -55,7 +55,7 @@ const steps = [
         q: "'Het Witte Huis besluit tot sancties.' Stijlfiguur?",
         options: ["Metonymia", "Synecdoche", "Personificatie", "Hyperbool"],
         answer: 0,
-        wrongHints: [null, "Verwante vorm maar specifieker — synecdoche is deel/geheel.", "Niet primair — gebouw niet 'menselijk' bedoeld.", "Niet — geen overdrijving."],
+        wrongHints: [null, "Verwante vorm maar specifieker — synecdoche is deel/geheel.", "Bij personificatie krijgt een ding menselijke trekjes. Gaat het hier om het gebouw zelf, of om iets wat ermee samenhangt?", "Een hyperbool overdrijft. Wordt hier iets overdreven?"],
         uitlegPad: {
           stappen: [{ titel: "Verwant begrip", tekst: "Het Witte Huis is GEBOUW, kan zelf niet besluiten. Bedoeld: de **president/regering** die daar zit. Vervanging door VERWANT begrip = metonymia. Soms genoemd 'metonymie' in school-NL." }],
           theorie: "Andere voorbeelden: 'Den Haag besluit' (=overheid), 'glas drinken' (=inhoud), 'een Picasso' (=schilderij van Picasso).",
@@ -66,7 +66,7 @@ const steps = [
         q: "'Lekker rustig' (terwijl het stikvol is) — welke?",
         options: ["Ironie", "Metafoor", "Antithese", "Eufemisme"],
         answer: 0,
-        wrongHints: [null, "Niet — geen beeld.", "Niet — geen contrast in zin.", "Niet — geen verzachting."],
+        wrongHints: [null, "Een metafoor gebruikt een beeld. Welk beeld zie je in 'lekker rustig'?", "Een antithese zet twee tegengestelde dingen in de zin zelf naast elkaar. Staan die hier allebei in de zin?", "Een eufemisme verzacht iets onaangenaams, zoals 'heengaan' voor 'sterven'. Wordt hier iets verzacht?"],
         uitlegPad: {
           stappen: [{ titel: "Bedoeld tegendeel", tekst: "Spreker zegt 'rustig' maar betekent **DRUK**. Tegengestelde van wat letterlijk staat = ironie. Op papier soms moeilijk; in spreektaal: toon doet het werk. Ook agressief: sarcasme." }],
           niveaus: { basis: "Ironie.", simpeler: "Bedoeld tegengesteld.", nogSimpeler: "Ironie" },
@@ -85,7 +85,7 @@ const steps = [
         q: "**Van den Vos Reynaerde** komt uit welke periode?",
         options: ["Middeleeuwen", "Renaissance", "Romantiek", "20e eeuw"],
         answer: 0,
-        wrongHints: [null, "Niet — al ver vóór.", "Veel later.", "Veel later."],
+        wrongHints: [null, "De Renaissance begint rond 1500. Is de Reynaerde ouder of jonger dan dat?", "De Romantiek is van rond 1800. De Reynaerde is in het Middelnederlands geschreven — hoe oud is die taal?", "De 20e eeuw is veel te recent. De Reynaerde is in het Middelnederlands geschreven — uit welke periode komt die taal?"],
         uitlegPad: {
           stappen: [{ titel: "Middelnederlands dierenepos", tekst: "Geschreven rond 1260 door Willem (achternaam onbekend). Satire op feodale samenleving via dieren-personages. Reynaert (vos) bedriegt iedereen. Klassieker uit het Middelnederlands. Net als de Karel-romans uit dezelfde periode." }],
           niveaus: { basis: "Middeleeuwen.", simpeler: "13e eeuw = ME.", nogSimpeler: "ME" },
@@ -95,7 +95,7 @@ const steps = [
         q: "**Max Havelaar** is geschreven door:",
         options: ["Multatuli", "Vondel", "Mulisch", "Reve"],
         answer: 0,
-        wrongHints: [null, "Niet — eerder.", "Niet — naoorlogs.", "Niet — naoorlogs."],
+        wrongHints: [null, "Vondel leefde in de 17e eeuw, twee eeuwen vóór Max Havelaar (1860). Wie schreef onder een schuilnaam over Nederlands-Indië?", "Mulisch schreef na de Tweede Wereldoorlog. Max Havelaar is van 1860 — wie schreef toen?", "Reve schreef na de Tweede Wereldoorlog. Max Havelaar is van 1860 — wie schreef toen?"],
         uitlegPad: {
           stappen: [
             { titel: "1860, koloniale aanklacht", tekst: "Eduard Douwes Dekker (pseudoniem **Multatuli** = 'ik heb veel geleden' in Latijn). Was ambtenaar in Indië, zag misbruik. Schreef Max Havelaar als wake-up call. Groot politiek effect — droeg bij aan het debat over koloniaal beleid." },
@@ -110,10 +110,10 @@ const steps = [
           "Kunst om de kunst",
           "Politieke pamfletten",
           "Religieuze poëzie",
-          "Wetenschap"
+          "Lerende verhalen"
         ],
         answer: 0,
-        wrongHints: [null, "Niet primair — wel later impact.", "Niet — afgewezen.", "Niet — kunst."],
+        wrongHints: [null, "Pamfletten willen iets bereiken in de politiek. Vonden de Tachtigers dat kunst een doel buiten zichzelf moest hebben?", "Brave, stichtelijke poëzie was juist waar de Tachtigers zich tegen afzetten. Waar ging het hun om?", "Verhalen die de lezer iets willen leren, passen bij de Verlichting. Wilden de Tachtigers dat kunst nuttig was?"],
         uitlegPad: {
           stappen: [
             { titel: "Esthetisch programma", tekst: "Reactie op brave, moralistische 19e-eeuwse NL-literatuur. Willem Kloos: kunst draait om schoonheid, niet om moraal. Tijdschrift 'De Nieuwe Gids' 1885. Belangrijke vernieuwers: Kloos (sonnetten), Van Eeden ('De kleine Johannes'), Gorter ('Mei')." },
@@ -130,7 +130,7 @@ const steps = [
           "Multatuli, Couperus, Nescio"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — Renaissance.", "Niet — dat zijn Vijftigers (poëzie).", "Niet — eerder."],
+        wrongHints: [null, "Vondel, Bredero en Hooft zijn schrijvers uit de Renaissance (17e eeuw). Wie schreven er proza na 1945?", "Niet — dat zijn Vijftigers (poëzie).", "Multatuli, Couperus en Nescio schreven vóór de Tweede Wereldoorlog. Wie schreven er proza na 1945?"],
         uitlegPad: {
           stappen: [
             { titel: "Naoorlogs proza-klassieken", tekst: "**W.F. Hermans** (1921-1995): 'De donkere kamer van Damocles', 'Nooit meer slapen'.\n**Gerard Reve** (1923-2006): 'De avonden', 'Op weg naar het einde'.\n**Harry Mulisch** (1927-2010): 'De aanslag', 'De ontdekking van de hemel'.\nZe domineerden het NL-proza tussen 1947 en 2000." },
@@ -142,7 +142,7 @@ const steps = [
         q: "**Gysbreght van Aemstel** is van:",
         options: ["Vondel", "Bredero", "Hooft", "Bilderdijk"],
         answer: 0,
-        wrongHints: [null, "Niet — Bredero meer komedie.", "Niet — Hooft sonnetten + historiografie.", "Niet — later."],
+        wrongHints: [null, "Bredero schreef vooral kluchten en blijspelen. De Gysbreght is een treurspel — van wie?", "Hooft schreef sonnetten en geschiedwerken. Wie schreef het treurspel dat jarenlang op nieuwjaarsdag werd opgevoerd?", "Bilderdijk leefde rond 1800, veel later dan de Gysbreght (1637). Wie schreef in de Gouden Eeuw toneel?"],
         uitlegPad: {
           stappen: [
             { titel: "Amsterdam-mythe", tekst: "Treurspel over verovering Amsterdam in 1304. Voor 200+ jaar elk Nieuwjaar opgevoerd in Schouwburg. Vondel: belangrijkste NL-toneelschrijver Renaissance. Ook 'Lucifer', 'Adam in ballingschap'." },
@@ -163,7 +163,7 @@ const steps = [
         q: "Een **sonnet** heeft hoeveel regels?",
         options: ["14", "10", "16", "Variabel"],
         answer: 0,
-        wrongHints: [null, "Te kort.", "Te lang.", "Vast getal."],
+        wrongHints: [null, "Tien regels is te weinig. Uit welke twee delen bestaat een sonnet, en hoeveel regels heeft elk deel?", "Zestien regels is te veel. Uit welke twee delen bestaat een sonnet, en hoeveel regels heeft elk deel?", "Een sonnet is juist een vaste dichtvorm. Hoeveel regels hoort daarbij?"],
         uitlegPad: {
           stappen: [{ titel: "Vaste vorm sinds Petrarca", tekst: "14 regels, twee hoofdmodellen:\n- **Italiaans/Petrarca**: 8 (octaaf) + 6 (sextet).\n- **Engels/Shakespeare**: 3 × 4 + 1 × 2 (couplet)." }],
           niveaus: { basis: "14.", simpeler: "Sonnet = 14 regels.", nogSimpeler: "14" },
@@ -178,7 +178,7 @@ const steps = [
           "Geen verteller, alleen dialoog"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is ik-perspectief.", "Niet — dat is auctoriaal.", "Niet — er is wel verteller."],
+        wrongHints: [null, "Een ik-verteller vertelt in de eerste persoon. Vertelt een personale verteller in de ik-vorm of in de hij/zij-vorm?", "Een hij/zij-verteller die alles weet, heet auctoriaal. Wat weet een personale verteller?", "Ook bij een personaal perspectief is er een verteller. Door wiens ogen kijkt die mee?"],
         uitlegPad: {
           stappen: [{ titel: "'Hij/zij' maar beperkt zicht", tekst: "Verteller in 3e persoon ('hij liep') maar kent ALLEEN gedachten/gevoel van één personage. Effect: meer afstand dan ik-perspectief maar meer intimiteit dan alwetend. Veel gebruikt in moderne literatuur." }],
           niveaus: { basis: "3e persoon, één hoofd.", simpeler: "Hij/zij + één gezichtspunt.", nogSimpeler: "Personaal" },
@@ -188,7 +188,7 @@ const steps = [
         q: "Welke is een **drama-vorm**?",
         options: ["Tragedie", "Roman", "Sonnet", "Novelle"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is epiek.", "Niet — dat is lyriek.", "Niet — epiek."],
+        wrongHints: [null, "Een roman is een verhalende tekst (epiek). Welke vorm is bedoeld om op het toneel te spelen?", "Een sonnet is een gedicht (lyriek). Welke vorm is bedoeld om op het toneel te spelen?", "Een novelle is een verhalende tekst (epiek). Welke vorm is bedoeld om op het toneel te spelen?"],
         uitlegPad: {
           stappen: [{ titel: "Toneel-categorie", tekst: "Tragedie = drama-subvorm waarin hoofdpersoon ten onder gaat (hubris → val). Oedipus, Hamlet, Othello. Komedie = andere drama-subvorm met happy end. Roman/Novelle/Sonnet zijn epiek/lyriek." }],
           niveaus: { basis: "Tragedie.", simpeler: "Tragedie = toneel.", nogSimpeler: "Tragedie" },
@@ -199,11 +199,11 @@ const steps = [
         options: [
           "Geen vast rijm of metrum",
           "Verplicht ABBA-rijm",
-          "Altijd 14 regels",
-          "Geen onderwerp"
+          "Veertien regels lang",
+          "Strofen van vier regels"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is sonnet.", "Niet — geen vaste lengte.", "Wel onderwerp."],
+        wrongHints: [null, "ABBA-rijm hoort bij een vaste vorm zoals het sonnet. Zijn vrije verzen aan zo'n rijmschema gebonden?", "Veertien regels is de vaste lengte van een sonnet. Hebben vrije verzen een vaste lengte?", "Strofen van vier regels zijn een vaste vorm (kwatrijnen). Is een vrij vers aan zo'n vorm gebonden?"],
         uitlegPad: {
           stappen: [{ titel: "Vrijheid in vorm", tekst: "Moderne poëzie sinds de 19e eeuw: niet langer gebonden aan klassieke metriek. Whitman ('Leaves of Grass' 1855) pionier. Ritme komt uit zin-bouw + adempauze, niet uit voorgeschreven jamben." }],
           niveaus: { basis: "Geen vaste vorm.", simpeler: "Geen rijm-regel.", nogSimpeler: "Vrij" },
@@ -213,7 +213,7 @@ const steps = [
         q: "Welke versvoet is **jambe**?",
         options: ["Kort-Lang", "Lang-Kort", "Kort-Kort-Lang", "Lang-Lang"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is trochee.", "Niet — dat is anapest.", "Niet — meestal niet 'lang-lang'."],
+        wrongHints: [null, "Lang-Kort heet een trochee. Staat bij een jambe de klemtoon vooraan of achteraan?", "Kort-Kort-Lang heet een anapest; die heeft drie lettergrepen. Hoeveel lettergrepen heeft een jambe?", "Lang-Lang komt in het Nederlands bijna niet voor als versvoet. Begint een jambe met een lange of een korte lettergreep?"],
         uitlegPad: {
           stappen: [{ titel: "Meest voorkomend in NL", tekst: "ta-DAH-ta-DAH-ta-DAH. Voorbeeld: 'De NACHT was KOEL en STIL'. Klassieke 'jambische pentameter' = 5 jamben per regel (Shakespeare-standaard)." }],
           niveaus: { basis: "Kort-Lang.", simpeler: "ta-DAH.", nogSimpeler: "Jambe" },
@@ -237,7 +237,7 @@ const steps = [
           "De plaats en tijd van handeling"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is plot.", "Niet — dat is personage.", "Niet — dat is setting."],
+        wrongHints: [null, "Een samenvatting van wat er gebeurt, is de plot. Waar gaat het verhaal in de kern óver?", "De hoofdpersoon is een personage. Wat is de gedachte achter het verhaal?", "Plaats en tijd vormen de setting. Waar gaat het verhaal in de kern óver?"],
         uitlegPad: {
           stappen: [{ titel: "Onderwerp vs thema", tekst: "**Onderwerp** = concreet (WO2, eerste liefde, verhuizing).\n**Thema** = universele gedachte (mens-onmenselijkheid, identiteit-vorming, vergankelijkheid). Eén onderwerp kan vele thema's hebben." }],
           niveaus: { basis: "Universele gedachte.", simpeler: "Hoofdidee.", nogSimpeler: "Hoofdidee" },
@@ -249,10 +249,10 @@ const steps = [
           "Via daden/dialoog laten zien wat personage is",
           "Verteller zegt direct wat personage is",
           "Een samenvatting van wat het personage meemaakt",
-          "Lezer bedenkt"
+          "Het personage vertelt in de ik-vorm"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is direct.", "Niet — dat is de plot, geen karakterisering.", "Niet — auteur geeft signalen."],
+        wrongHints: [null, "Als de verteller zegt hoe iemand is, heet dat directe karakterisering. Hoe leer je een personage kennen zonder dat het gezegd wordt?", "Wat iemand meemaakt, is de plot. Gaat karakterisering over gebeurtenissen of over hoe iemand is?", "De ik-vorm zegt iets over het vertelperspectief. Gaat karakterisering over wie vertelt, of over hoe je een personage leert kennen?"],
         uitlegPad: {
           stappen: [{ titel: "'Show don't tell'", tekst: "Krachtiger dan direct: lezer trekt zelf conclusie uit handelingen. 'Jan pakt het laatste stuk taart zonder vragen' → wij snappen: egoïstisch. Meer literair dan: 'Jan was een egoïst'." }],
           niveaus: { basis: "Via daden.", simpeler: "Tonen, niet zeggen.", nogSimpeler: "Tonen" },
@@ -267,7 +267,7 @@ const steps = [
           "Hoe lang de lezer over het boek doet"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is vertel-tijd.", "Niet — publicatie-jaar.", "Niet — lees-tijd."],
+        wrongHints: [null, "Het aantal pagina's hoort bij de verteltijd: hoe lang het vertellen duurt. Wat is dan de vertelde tijd?", "Het jaar waarin een boek verscheen, is het publicatiejaar. Over welke tijd gaat 'vertelde tijd'?", "Hoe lang jij over het lezen doet, is je leestijd. Over welke tijd gaat 'vertelde tijd'?"],
         uitlegPad: {
           stappen: [
             { titel: "Tijd in verhaal", tekst: "Bv. 'Ulysses' (Joyce): vertelde tijd 1 dag. Vertel-tijd: 700 pagina's. Verhouding 1:700 → traag tempo, gedetailleerd. 'Oorlog en vrede': 7 jaar in 1200p → matig tempo. **Tempo** = vertel/vertelde-verhouding." },
@@ -284,7 +284,7 @@ const steps = [
           "Tegenstander van de hoofdpersoon"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is plat.", "Niet — los van karakterisering.", "Niet — rol, niet karakter-diepte."],
+        wrongHints: [null, "Eén dominante eigenschap past bij een vlak personage. Wat maakt een personage 'rond'?", "Hoe vaak een figuur voorkomt, zegt niets over hoe diep die is uitgewerkt. Waar gaat 'rond' over?", "Tegenstander zijn is een rol in het verhaal. Zegt dat iets over hoe diep een personage is uitgewerkt?"],
         uitlegPad: {
           stappen: [{ titel: "E.M. Forster's onderscheid", tekst: "Plat = stereotype (de gemene baas, dom blondje) — voorspelbaar.\nRond = complex + soms tegenstrijdig + ontwikkelt door verhaal — realistisch. Hoofdpersonages moderne romans meestal rond." }],
           niveaus: { basis: "Complex + ontwikkelend.", simpeler: "Meerlagig + verandert.", nogSimpeler: "Complex" },
@@ -299,7 +299,7 @@ const steps = [
           "Verhaal met flashback"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is setting.", "Niet specifiek.", "Wel mogelijk maar geen definitie."],
+        wrongHints: [null, "Waar een verhaal speelt, heet de setting. Wat zegt het woord 'raam' over de vorm van het verhaal?", "Een verhaal zonder einde heeft een open einde. Wat zegt het woord 'raam' over de vorm?", "Een flashback springt terug in de tijd binnen één verhaal. Hoeveel verhalen zitten er bij een raamvertelling in elkaar?"],
         uitlegPad: {
           stappen: [
             { titel: "Buiten- + binnen-verhaal", tekst: "Klassiek: '1001 Nacht' — Sheherazade vertelt elke nacht een verhaal om executie uit te stellen. Het 'vertel-vertellen' is het raam, de individuele verhalen zijn binnen-verhalen. Ook: Boccaccio's Decamerone, Conrad's 'Heart of Darkness'." },
@@ -320,7 +320,7 @@ const steps = [
         q: "**'De avond is ongemak'** (Marieke Lucas Rijneveld) won welke prijs?",
         options: ["International Booker Prize", "Nobelprijs voor de Literatuur", "Pulitzer Prize for Fiction", "Hugo Award for Best Novel"],
         answer: 0,
-        wrongHints: [null, "Niet — die is voor een heel oeuvre, niet één roman.", "Niet — Amerikaans.", "Niet — SF/fantasy."],
+        wrongHints: [null, "Niet — die is voor een heel oeuvre, niet één roman.", "De Pulitzer Prize gaat naar Amerikaanse auteurs. Welke prijs bekroont vertaalde romans?", "De Hugo Award is voor sciencefiction en fantasy. Welke prijs bekroont vertaalde romans?"],
         uitlegPad: {
           stappen: [{ titel: "Internationaal doorgebroken", tekst: "Eerste Nederlandstalige auteur ooit met Booker International Prize. Roman over jong meisje na verlies broer in streng-gereformeerd boeren-milieu. Rijneveld was toen 29 — jongste laureaat ooit." }],
           niveaus: { basis: "Booker International.", simpeler: "Booker 2020.", nogSimpeler: "Booker" },
@@ -335,7 +335,7 @@ const steps = [
           "Twee vrouwen"
         ],
         answer: 0,
-        wrongHints: [null, "Wel Mulisch.", "Wel Mulisch.", "Ook Mulisch."],
+        wrongHints: [null, "De aanslag (1982) is wel van Mulisch. Welke titel hoort bij een ander lid van de Grote Drie?", "De ontdekking van de hemel (1992) is wel van Mulisch. Welke titel hoort bij een ander lid van de Grote Drie?", "Twee vrouwen (1975) is ook van Mulisch. Welke titel hoort bij een ander lid van de Grote Drie?"],
         uitlegPad: {
           stappen: [
             { titel: "Reve schreef 'De avonden'", tekst: "**'De avonden'** is van **Gerard Reve** (1947, debuutroman, baanbrekend). Mulisch-romans: 'De aanslag' (1982), 'De ontdekking van de hemel' (1992), 'Twee vrouwen', 'Het stenen bruidsbed'." },
@@ -353,7 +353,7 @@ const steps = [
           "Alleen uiterlijke feiten, geen gevoelens"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is auctoriaal.", "Niet — er is wel een verteller.", "Een personale verteller kijkt mee met iemand. Ziet die alleen de buitenkant?"],
+        wrongHints: [null, "Alle gedachten van alle personages kent de auctoriale verteller. Met hoeveel personages kijkt een personale verteller mee?", "Ook bij een personaal perspectief is er een verteller. Wat weet die verteller?", "Een personale verteller kijkt mee met iemand. Ziet die alleen de buitenkant?"],
         uitlegPad: {
           stappen: [{ titel: "Beperkt 3e-persoon", tekst: "Personaal: alles wordt verteld VANUIT het gezichtspunt van één personage. Wat andere personages denken/voelen: ALLEEN via wat hoofdpersonage observeert of vermoedt. Geeft intimiteit + onbetrouwbaarheid (hoofdpersonage kan zich vergissen)." }],
           niveaus: { basis: "Eén hoofd.", simpeler: "Beperkt tot één personage.", nogSimpeler: "Eén" },
@@ -363,7 +363,7 @@ const steps = [
         q: "'Het regende katten en honden' is een:",
         options: ["Hyperbool", "Personificatie", "Oxymoron", "Litotes"],
         answer: 0,
-        wrongHints: [null, "Niet — geen menselijking.", "Staan er twee tegenstrijdige woorden naast elkaar?", "Tegenovergesteld."],
+        wrongHints: [null, "Bij personificatie krijgt een ding menselijke eigenschappen. Doet de regen hier iets menselijks?", "Staan er twee tegenstrijdige woorden naast elkaar?", "Litotes is juist afzwakken met een ontkenning, zoals 'niet slecht'. Wordt de regen hier afgezwakt?"],
         uitlegPad: {
           stappen: [{ titel: "Sterke overdrijving", tekst: "Het regent niet ECHT katten + honden — overdrijving voor 'het regent enorm hard'. Engelse uitdrukking ('it's raining cats and dogs'), in NL minder gebruikelijk. Primair: hyperbool. Een uitdrukking als deze noem je 'idioom' of 'cliché' als vaste taalvorm." }],
           niveaus: { basis: "Hyperbool.", simpeler: "Overdrijving.", nogSimpeler: "Hyperbool" },
@@ -378,7 +378,7 @@ const steps = [
           "Slot met een onverwachte wending"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is gesloten.", "Niet — dat is een cirkelstructuur.", "Niet — dat is een twist."],
+        wrongHints: [null, "Een slot dat alles oplost, heet een gesloten einde. Wat moet de lezer bij een open einde zelf doen?", "Een slot dat terugspringt naar het begin, heet een cirkelstructuur. Wat is er 'open' aan een open einde?", "Een onverwachte wending heet een twist. Wat is er 'open' aan een open einde?"],
         uitlegPad: {
           stappen: [
             { titel: "Lezer-werk", tekst: "Auteur kiest bewust onvoltooidheid: lezer moet zelf nadenken over uitkomst. Voorbeeld: 'No Country for Old Men' (McCarthy), 'De avonden' (Reve). Versterkt thema 'onbeantwoordbare vragen van leven'." },
