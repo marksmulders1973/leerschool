@@ -302,7 +302,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Onbekend woord? Kijk context", tekst: "Bij de Doorstroomtoets krijg je soms onbekende woorden. Geen paniek — lees de zin eromheen voor hints." },
-            { titel: "Wat past bij 'liep'?", tekst: "De zin is over LOPEN. 'Vrolijk lopen' en 'boos lopen' gaan over gevoelens, geen manier van lopen. 'Snel' en 'mank' beschrijven HOE iemand loopt." },
+            { titel: "Wat past bij 'liep'?", tekst: "De zin is over LOPEN. 'Sloom' zegt iets over je tempo, 'krom' over je houding en 'stoer' over hoe je je voordoet. 'Mank' zegt dat je niet goed kunt lopen." },
             { titel: "Kreupel = mank", tekst: "'Kreupel' betekent: niet goed kunnen lopen, vaak door pijn of een wond aan voet/been. Synoniem: mankend." },
           ],
           woorden: [
@@ -331,7 +331,7 @@ const steps = [
           stappen: [
             { titel: "Wat is een synoniem?", tekst: "Een synoniem is een woord met (bijna) dezelfde betekenis. 'Beginnen' en 'starten' betekenen hetzelfde." },
             { titel: "Test: vervang het woord", tekst: "Kun je het ene woord vervangen door het andere zonder dat de zin een andere betekenis krijgt? Dan zijn het synoniemen." },
-            { titel: "Tegenstellingen elimineren", tekst: "Eindigen en stoppen zijn TEGENSTELLINGEN van beginnen — die kun je dus uitsluiten." },
+            { titel: "Tegenstellingen elimineren", tekst: "Eindigen is een TEGENSTELLING van beginnen — die kun je dus uitsluiten. Proberen en doorgaan gaan niet over het allereerste moment." },
           ],
           woorden: [
             { woord: "synoniem", uitleg: "Hetzelfde betekenend. (groot = enorm)." },
@@ -386,7 +386,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Hetzelfde betekenen = synoniem", tekst: "'Hetzelfde als mooi' = een woord dat ook MOOI betekent. Niet iets anders, niet het omgekeerde." },
-            { titel: "Vergelijk de opties", tekst: "Prachtig = heel mooi → ja, synoniem. Lelijk = niet mooi → tegenstelling. Snel/klein → andere onderwerpen." },
+            { titel: "Vergelijk de opties", tekst: "Prachtig = heel mooi → ja, synoniem. Lelijk = niet mooi → tegenstelling. Lief/gezellig → gaan over gedrag en sfeer, niet over hoe iets eruitziet." },
             { titel: "Synoniemen van mooi (rijtje)", tekst: "prachtig, schitterend, fantastisch, fraai, geweldig — allemaal positieve waardering, vergelijkbaar met mooi." },
           ],
           woorden: [
@@ -398,7 +398,7 @@ const steps = [
             { type: "stap", tekst: "mooi = prachtig = schitterend = fraai." },
             { type: "stap", tekst: "groot = enorm = reusachtig. Klein = piepklein = mini." },
           ],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Schrap eerst de tegenstellingen (lelijk) en woorden uit andere categorieën (snel = snelheid)." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Schrap eerst de tegenstellingen (lelijk) en woorden uit andere categorieën (gezellig = sfeer)." }],
           niveaus: {
             basis: "Mooi = prachtig (synoniem).",
             simpeler: "Beide betekenen ongeveer hetzelfde: iets positiefs.",
@@ -442,7 +442,7 @@ const steps = [
             { woord: "voorzichtig", uitleg: "Met aandacht, om risico te vermijden." },
             { woord: "roekeloos", uitleg: "Zonder nadenken, zonder oppassen." },
           ],
-          theorie: "Toets-tip bij tegenstellingen: zoek het MEEST tegengestelde. 'Snel' is wel tegenovergesteld aan 'langzaam' maar voorzichtig betekent meer dan alleen langzaam.",
+          theorie: "Toets-tip bij tegenstellingen: zoek het MEEST tegengestelde. 'Langzaam' past juist bij voorzichtig, en 'behoedzaam' betekent hetzelfde. Geen van beide is het omgekeerde.",
           voorbeelden: [
             { type: "stap", tekst: "Voorzichtig auto rijden vs roekeloos auto rijden." },
             { type: "stap", tekst: "Andere tegenstellingen: vrolijk ↔ verdrietig, snel ↔ langzaam, vroeg ↔ laat." },
@@ -472,7 +472,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Hij vertelde een leugen over zijn rapport' = hij gaf bewust een verkeerd cijfer door." }],
           basiskennis: [{ onderwerp: "Onderscheid", uitleg: "Leugen = bewust niet-waar. Vergissing = niet-waar maar niet bewust. Geheim = waar maar achtergehouden." }],
           niveaus: {
-            basis: "Niet-waar verhaal.",
+            basis: "Iets wat niet waar is.",
             simpeler: "Verzon = bedacht. Leugen = niet waar.",
             nogSimpeler: "Niet-waar",
           },
@@ -643,7 +643,7 @@ const steps = [
             { titel: "Synoniem-pairs", tekst: "'Snel' en 'rap' betekenen hetzelfde. De toets vraagt vaak synoniemen tussen bijvoeglijke naamwoorden." },
           ],
           woorden: [{ woord: "rap", uitleg: "Snel, vlot, vlug." }],
-          theorie: "Toets-truc: kijk eerst welk antwoord LIJKT op 'snel' qua gevoel. Snel = beweging-eigenschap. Lang/veel/ver zijn andere dingen.",
+          theorie: "Toets-truc: kijk eerst welk antwoord LIJKT op 'snel' qua gevoel. Snel = beweging-eigenschap. Traag is het omgekeerde; vroeg en ver gaan over tijdstip en afstand.",
           voorbeelden: [{ type: "stap", tekst: "Snel = vlug = rap = vlot." }],
           basiskennis: [{ onderwerp: "Andere synoniemen voor snel", uitleg: "vlug, vlot, gauw." }],
           niveaus: {
@@ -892,7 +892,7 @@ const steps = [
           stappen: [
             { titel: "Wat is een hoofdgedachte?", tekst: "De hoofdgedachte is in ÉÉN zin: waar gaat de hele tekst over? Niet één klein detail, maar de centrale boodschap." },
             { titel: "Toets-truc: combineer onderwerp + boodschap", tekst: "Onderwerp = honden. Boodschap = zij helpen bij brand. Hoofdgedachte = 'Honden zijn nuttig bij brand'. Past beide samen." },
-            { titel: "Schrap te smal/breed", tekst: "'Honden eten brood' = staat niet in tekst. 'Brand is gevaarlijk' = te breed (niet over honden). 'Iedereen wil hond' = niet de boodschap." },
+            { titel: "Schrap te smal/breed", tekst: "'Honden zijn goede huisdieren' = staat niet in de tekst. 'Brand is heel gevaarlijk' = te breed (niet over honden). 'Brandweerlieden werken hard' = niet de boodschap." },
           ],
           woorden: [
             { woord: "hoofdgedachte", uitleg: "Centrale boodschap van de hele tekst, in 1 zin." },
@@ -998,7 +998,7 @@ const steps = [
       {
         q: "Wat kondigt het signaalwoord **'bijvoorbeeld'** aan?",
         ref: "1F",
-        options: ["Een voorbeeld", "Tegenstelling", "Gevolg", "Conclusie"],
+        options: ["Een voorbeeld", "Een tegenstelling", "Een gevolg", "Een conclusie"],
         answer: 0,
         wrongHints: [null, "Zet 'bijvoorbeeld' twee dingen tegenover elkaar? Probeer: 'Ik hou van fruit, bijvoorbeeld appels.'", "Vertelt het woord wat er dóór iets gebeurt? Probeer: 'Ik hou van fruit, bijvoorbeeld appels.'", "Een conclusie vat alles samen aan het eind. Doet 'bijvoorbeeld' dat?"],
       },
@@ -1292,9 +1292,9 @@ const steps = [
       {
         q: "Welke **tekstsoort** is bedoeld om te **informeren**?",
         ref: "1F",
-        options: ["Krantenartikel", "Sprookje", "Reclame", "Gedicht"],
+        options: ["Krantenartikel", "Sprookjesboek", "Reclamefolder", "Gedichtenbundel"],
         answer: 0,
-        wrongHints: [null, "Verhaal, niet info.", "Wil overtuigen, niet informeren.", "Kunst, niet primair info."],
+        wrongHints: [null, "Een sprookje is een verzonnen verhaal, geen informatie.", "Een reclamefolder noemt wel dingen, maar wil hij jou vooral iets laten wéten?", "Gedichten zijn kunst; ze zijn niet vooral bedoeld om te informeren."],
       },
       {
         q: "*'Allereerst... Vervolgens... Ten slotte...'* Welke **structuur** heeft deze tekst?",
@@ -1510,9 +1510,9 @@ const steps = [
       {
         q: "*'Wist je dat een slak wel 25.000 tandjes heeft? Ze zitten op zijn tong, de radula. Daarmee raspt hij stukjes van bladeren.'*\n\nWat is de **radula**?",
         ref: "1F",
-        options: ["De tong van de slak", "Een soort blad", "Het huisje van de slak", "Een tandarts voor dieren"],
+        options: ["De tong van de slak", "Een soort blad", "Het huisje van de slak", "De tandjes van de slak"],
         answer: 0,
-        wrongHints: [null, "Lees terug: waar zitten de tandjes op? Het woord erna legt het uit.", "Het huisje wordt nergens genoemd.", "Denk niet te ver — het antwoord staat gewoon in de tekst."],
+        wrongHints: [null, "Lees terug: waar zitten de tandjes op? Het woord erna legt het uit.", "Het huisje wordt nergens genoemd.", "De tandjes zitten óp de radula. Wat is de radula dan zelf?"],
         explanation: "Na een komma legt de tekst het woord uit: 'op zijn tong, de radula' — de radula ís dus die tong. Uitleg-tussen-komma's is een veelgebruikte Toets-truc.",
       },
       {
@@ -1669,14 +1669,14 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Wat is een samenstelling?", tekst: "Een samenstelling is een nieuw woord dat je maakt door 2 woorden AAN ELKAAR te schrijven." },
-            { titel: "Aan elkaar, geen spatie", tekst: "'zonnebloem' = zon + bloem aan elkaar. NIET met spatie. NIET met streepje. NIET met 'en'." },
+            { titel: "Aan elkaar, geen spatie", tekst: "'zonnebloem' = zon + bloem aan elkaar. NIET met spatie, en hier ook zonder tussen-n." },
             { titel: "Voorbeelden", tekst: "tandenborstel, schooltas, fietsstuur, brandweerwagen — allemaal 2+ woorden vastgeplakt." },
           ],
           woorden: [
             { woord: "samenstelling", uitleg: "Twee woorden samen één nieuw woord." },
-            { woord: "tussen-n", uitleg: "Vaak -en tussen: pannenkoek, boekenkast, rozenstruik." },
+            { woord: "tussen-n", uitleg: "Vaak -en tussen: rozenstruik, kippensoep, ruggengraat." },
           ],
-          theorie: "Toets-regel: bij samenstellingen NOOIT spatie. 'pannen koek' = fout. 'pannenkoek' = goed. Engels gebruikt vaak spaties (ice cream), Nederlands plakt vast.",
+          theorie: "Toets-regel: bij samenstellingen NOOIT spatie. 'tanden borstel' = fout. 'tandenborstel' = goed. Engels gebruikt vaak spaties (ice cream), Nederlands plakt vast.",
           voorbeelden: [
             { type: "stap", tekst: "huis + deur → huisdeur (1 woord)." },
             { type: "stap", tekst: "school + tas → schooltas (1 woord)." },
@@ -1855,7 +1855,7 @@ const steps = [
         q: "*'Het kind **was** ziek.'* Welke **tijd**?",
         options: ["Verleden tijd", "Tegenwoordige tijd", "Toekomstige tijd", "Voltooide tijd"],
         answer: 0,
-        wrongHints: [null, "'was' = al gebeurd.", "Niet — 'was' wijst niet op toekomst.", "Voltooide = 'is geweest'."],
+        wrongHints: [null, "Is het kind nú ziek? Kijk goed naar het woord 'was'.", "Niet — 'was' wijst niet op toekomst.", "Voltooide = 'is geweest'."],
       },
       {
         q: "Welk woord is **goed gespeld**?",
@@ -1864,11 +1864,11 @@ const steps = [
         wrongHints: [null, "Niet — hoe je 't uitspreekt is anders dan hoe je het schrijft.", "Je hoort 'sjon', maar zo schrijf je het niet. Hoe schrijf je het einde van 'informatie'?", "Je hoort 'sjon', maar in dit woord staat geen j."],
         uitlegPad: {
           stappen: [
-            { titel: "ti vs si", tekst: "In veel Nederlandse woorden klinkt 'ti' als 'si': station, politie, vakantie. Maar je schrijft 'ti'." },
+            { titel: "ti vs si", tekst: "In veel Nederlandse woorden klinkt 'ti' als 'si': station, informatie, vakantie. Maar je schrijft 'ti'." },
           ],
           woorden: [{ woord: "uitspraak vs spelling", uitleg: "Een woord kan anders klinken dan je het schrijft." }],
-          theorie: "Toets-truc: bij woorden die op '-sie' klinken, zoals vakantie en politie, schrijf je meestal 'ti'. Let op uitzonderingen zoals 'pensioen' en 'televisie' (met s).",
-          voorbeelden: [{ type: "stap", tekst: "vakantie (vak-an-sie), informatie, politie, adoptie — allemaal 'ti'." }],
+          theorie: "Toets-truc: bij woorden die op '-sie' klinken, zoals vakantie en informatie, schrijf je meestal 'ti'. Let op uitzonderingen zoals 'pensioen' en 'televisie' (met s).",
+          voorbeelden: [{ type: "stap", tekst: "vakantie (vak-an-sie), informatie, adoptie — allemaal 'ti'." }],
           basiskennis: [{ onderwerp: "Geheugen", uitleg: "Bijna alle '-sie'-klinkende achtervoegsels schrijf je '-tie'." }],
           niveaus: {
             basis: "station.",
@@ -1916,16 +1916,16 @@ const steps = [
           stappen: [
             { titel: "-je / -tje / -etje", tekst: "Verkleinwoorden eindigen op -je, -tje, -etje of -pje. NOOIT op -ie (dat is spreektaal)." },
           ],
-          woorden: [{ woord: "verkleinwoord", uitleg: "Klein gemaakt woord: huis → huisje, bal → balletje." }],
+          woorden: [{ woord: "verkleinwoord", uitleg: "Klein gemaakt woord: muis → muisje, bal → balletje." }],
           theorie: "Toets-truc verkleinwoord: kies tussen -je / -tje / -etje / -pje afhankelijk van laatste klanken. Regels uit je hoofd leren of voelen wat klinkt.",
           voorbeelden: [
-            { type: "stap", tekst: "huis → huisje. boom → boompje. man → mannetje. raam → raampje." },
+            { type: "stap", tekst: "muis → muisje. boom → boompje. man → mannetje. raam → raampje." },
           ],
-          basiskennis: [{ onderwerp: "Schrijftaal", uitleg: "'-ie' (huizie, autie) is spreektaal — de toets wil schrijftaal." }],
+          basiskennis: [{ onderwerp: "Schrijftaal", uitleg: "'-ie' (muisie, autie) is spreektaal — de toets wil schrijftaal." }],
           niveaus: {
-            basis: "huisje.",
+            basis: "muisje.",
             simpeler: "Verkleinwoord NL = -je.",
-            nogSimpeler: "huisje",
+            nogSimpeler: "muisje",
           },
         },
       },

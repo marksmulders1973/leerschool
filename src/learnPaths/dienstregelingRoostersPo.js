@@ -58,9 +58,9 @@ const steps = [
       },
       {
         q: "Je moet uiterlijk 10:15 in Zwolle zijn. Trein A komt om 10:00 aan, trein B om 10:30. Welke trein neem je?",
-        options: ["Trein A", "Trein B", "Allebei kan", "Geen van beide"],
+        options: ["Trein A", "Trein B", "Ze kunnen allebei", "Geen van beide"],
         answer: 0,
-        wrongHints: [null, "10:30 is ná 10:15 — dan ben je te laat.", "Maar één van de twee komt op tijd aan, niet allebei.", "Eén trein komt wél vóór 10:15 aan — dus dit klopt niet."],
+        wrongHints: [null, "Komt trein B vóór of ná 10:15 aan?", "Kijk naar beide aankomsttijden: komen ze allebei vóór 10:15 aan?", "Vergelijk elke aankomsttijd met 10:15. Is er echt geen enkele trein op tijd?"],
         uitlegPad: {
           stappen: [{ titel: "Welke komt nog op tijd aan?", tekst: "Je moet vóór 10:15 er zijn. Trein A (10:00) is op tijd, trein B (10:30) is te laat. Dus trein A." }],
           niveaus: {
@@ -409,7 +409,7 @@ const steps = [
         q: "Op woensdag is de bieb open van 10:00 tot 17:00. Hoe lang is dat?",
         options: ["7 uur", "5 uur", "6 uur", "4 uur"],
         answer: 0,
-        wrongHints: [null, "Reken nog eens: 10:00 tot 17:00.", "Net niet — tel de uren nog eens.", "Te weinig."],
+        wrongHints: [null, "Reken nog eens: 10:00 tot 17:00.", "Net niet — tel de uren nog eens.", "Tel de uren van 10 tot 17 nog eens één voor één."],
         uitlegPad: {
           stappen: [{ titel: "Sluiting − opening", tekst: "Van 10:00 tot 17:00 = 17 − 10 = 7 uur." }],
           niveaus: {
@@ -420,10 +420,10 @@ const steps = [
         },
       },
       {
-        q: "De bieb is op maandag gesloten. Je kunt alléén op maandag. Kun je naar de bieb?",
-        options: ["Nee, maandag is gesloten", "Ja, van 10:00 tot 17:00", "Ja, maar alleen 's avonds", "Ja, de hele dag"],
+        q: "De bieb is open: ma gesloten · di 13:00–17:00 · wo 10:00–17:00. Je kunt alléén op maandag. Kun je naar de bieb?",
+        options: ["Nee, dan is de bieb dicht", "Ja, van 10:00 tot 17:00", "Ja, van 13:00 tot 17:00", "Ja, maar alleen 's avonds"],
         answer: 0,
-        wrongHints: [null, "Maandag staat als 'gesloten' — dan zijn er geen tijden.", "Op maandag is er geen avond-opening.", "Gesloten betekent dicht."],
+        wrongHints: [null, "Bij welke dag staan die tijden? Kijk wat er bij maandag staat.", "Bij welke dag staan die tijden? Kijk wat er bij maandag staat.", "Staat er bij maandag een avondopening?"],
         uitlegPad: {
           stappen: [{ titel: "Gesloten = dicht", tekst: "Maandag staat op 'gesloten'. Dan kun je er niet terecht, op geen enkel tijdstip." }],
           niveaus: {
@@ -435,9 +435,9 @@ const steps = [
       },
       {
         q: "Op zaterdag is de bieb open van 10:00 tot 13:00. Je wilt om 14:00 langs. Lukt dat?",
-        options: ["Nee, om 14:00 is het al dicht", "Ja, het is dan open", "Ja, maar je moet snel zijn", "Alleen met een afspraak"],
+        options: ["Nee, dan is het dicht", "Ja, dan is het open", "Ja, er is nog een uur", "Alleen met een afspraak"],
         answer: 0,
-        wrongHints: [null, "De bieb sluit op zaterdag al om 13:00.", "Om 14:00 is het na sluitingstijd.", "Dat staat er niet — het is gewoon dicht."],
+        wrongHints: [null, "De bieb sluit op zaterdag al om 13:00.", "Hoe laat sluit de bieb op zaterdag precies?", "Dat staat er niet — het is gewoon dicht."],
         uitlegPad: {
           stappen: [{ titel: "Valt jouw tijd binnen de openingstijden?", tekst: "Zaterdag sluit om 13:00. 14:00 is daarna, dus de bieb is dicht." }],
           niveaus: {

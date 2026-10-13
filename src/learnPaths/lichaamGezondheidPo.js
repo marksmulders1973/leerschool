@@ -90,9 +90,9 @@ const steps = [
     checks: [
       {
         q: "Hoeveel botten heeft een **volwassen mens** ongeveer?",
-        options: ["Meer dan 200", "Ongeveer 50", "Ongeveer 1000", "Precies 100"],
+        options: ["Meer dan 200", "Ongeveer 50", "Meer dan 1000", "Ongeveer 100"],
         answer: 0,
-        wrongHints: [null, "Veel te weinig.", "Veel te veel.", "Niet precies dat aantal."],
+        wrongHints: [null, "Alleen je twee handen hebben samen al meer dan 50 botjes.", "Zoveel botten passen er niet in je lijf. Het getal is een stuk lager.", "Alleen je handen en voeten hebben samen al meer dan 100 botjes."],
         uitlegPad: {
           stappen: [
             { titel: "206 botten — een geheugen-getal", tekst: "Een volwassen mens heeft **206 botten**. Onthoud dit getal — het komt vaak op toetsvragen voor. **'Meer dan 200'** is het juiste antwoord-bereik." },
@@ -170,9 +170,9 @@ const steps = [
       },
       {
         q: "Wat is een **gewricht**?",
-        options: ["Plek waar 2 botten elkaar ontmoeten", "Spier die aan een bot trekt", "Een stevig bot in je arm of been", "Orgaan dat je bloed schoonmaakt"],
+        options: ["Plek waar 2 botten elkaar ontmoeten", "Spier die aan een bot trekt", "Een stevig bot in je arm of been", "Pees die een spier aan een bot vastmaakt"],
         answer: 0,
-        wrongHints: [null, "Een spier trekt aan een bot. Maar waar kán dat bot dan buigen?", "Een bot zelf buigt niet. Waar kun je je arm wél buigen?", "Geen orgaan — gewrichten zijn structurele onderdelen van je skelet."],
+        wrongHints: [null, "Een spier trekt aan een bot. Maar waar kán dat bot dan buigen?", "Een bot zelf buigt niet. Waar kun je je arm wél buigen?", "Een pees verbindt een spier met een bot. Waar kunnen twee botten samen bewegen?"],
         uitlegPad: {
           stappen: [
             { titel: "Gewricht = ontmoetingsplek", tekst: "Een **gewricht** is de plek waar **2 botten elkaar ontmoeten en kunnen bewegen** ten opzichte van elkaar. Voorbeelden: knie (dijbeen + scheenbeen), elleboog (opperarmbot + spaakbeen)." },
@@ -208,9 +208,9 @@ const steps = [
     checks: [
       {
         q: "Hoeveel spieren heeft een mens ongeveer?",
-        options: ["Meer dan 600", "Ongeveer 100", "Precies 200", "Ongeveer 50"],
+        options: ["Meer dan 600", "Ongeveer 100", "Ongeveer 300", "Meer dan 2000"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te weinig.", "Veel te weinig."],
+        wrongHints: [null, "Alleen al in je gezicht zitten zo'n 40 spieren. Het totaal is veel groter.", "Het zijn er meer — denk aan alle kleine spiertjes in je handen, gezicht en rug.", "Zoveel zijn het er niet. Het getal ligt een stuk lager."],
       },
       {
         q: "Wat doet je **hart**?",
@@ -242,10 +242,10 @@ const steps = [
         },
       },
       {
-        q: "**Rode bloedcellen** vervoeren ... ?",
-        options: ["Zuurstof", "Ziektekiemen", "Voedsel", "Niets"],
+        q: "Wat vervoeren **rode bloedcellen**?",
+        options: ["Zuurstof", "Ziektekiemen", "Voedsel", "Hormonen"],
         answer: 0,
-        wrongHints: [null, "Ziektekiemen opruimen doen de witte bloedcellen.", "Plasma vervoert voedingsstoffen — niet de bloedcellen zelf.", "Rode bloedcellen hebben wel degelijk een vervoerstaak."],
+        wrongHints: [null, "Ziektekiemen bestrijden doet een andere soort bloedcel.", "Plasma vervoert voedingsstoffen — niet de bloedcellen zelf.", "Hormonen drijven mee in het bloedvocht (plasma), niet in de rode bloedcellen."],
       },
       {
         q: "Welke spier is de **sterkste in verhouding tot grootte**?",
@@ -277,9 +277,9 @@ const steps = [
       },
       {
         q: "Hoeveel **nieren** heb je?",
-        options: ["2", "1", "4", "0"],
+        options: ["2", "1", "4", "3"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te veel.", "Wel nodig om te leven."],
+        wrongHints: [null, "Je kunt met één nier leven, maar hoeveel heeft een mens normaal?", "Vier nieren heeft een mens niet. Hoeveel zitten er in je onderrug?", "Kijk naar je onderrug in de les: hoeveel nieren zitten daar?"],
       },
       {
         q: "Welk **zintuig** hoort bij je **huid**?",
@@ -300,7 +300,7 @@ const steps = [
         q: "Hoeveel vakken heeft de **Schijf van Vijf**?",
         options: ["5", "3", "7", "10"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te veel.", "Veel te veel."],
+        wrongHints: [null, "Het zijn er meer dan drie. Kijk naar de naam van de schijf.", "Het zijn er minder dan zeven. Kijk naar de naam van de schijf.", "Het zijn er veel minder. Kijk naar de naam van de schijf."],
         uitlegPad: {
           stappen: [
             { titel: "De naam zegt het al — 'Vijf'", tekst: "De **Schijf van Vijf** heet zo omdat hij **5 vakken** heeft. Vandaar 'Vijf' in de naam. Elke dag eet je iets uit alle 5 vakken om gezond te blijven." },
@@ -325,22 +325,22 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel **stuks fruit** per dag?",
-        options: ["2 stuks", "5 stuks", "1 stuk", "10 stuks"],
+        q: "Hoeveel **stuks fruit** moet je per dag eten?",
+        options: ["2 stuks", "4 stuks", "1 stuk", "6 stuks"],
         answer: 0,
-        wrongHints: [null, "Te veel.", "Te weinig.", "Veel te veel."],
+        wrongHints: [null, "Vier stuks is meer dan het advies van de Schijf van Vijf.", "Eén stuk is minder dan het advies van de Schijf van Vijf.", "Zes stuks per dag is veel meer dan het advies."],
       },
       {
-        q: "Wat is NIET in de Schijf van Vijf?",
-        options: ["Snoep", "Brood", "Melk", "Sla"],
+        q: "Wat staat **niet** in de Schijf van Vijf?",
+        options: ["Snoep", "Pindakaas", "Halvarine", "Aardappelen"],
         answer: 0,
-        wrongHints: [null, "Brood zit in het brood/graan-vak.", "Melk zit in het zuivel-vak.", "Sla zit in het groente/fruit-vak."],
+        wrongHints: [null, "Pindakaas van 100% pinda's staat in het vak met noten, vis en vlees.", "Halvarine hoort in het vak smeer- en kookvetten.", "Aardappelen staan in het vak met brood en graan."],
       },
       {
         q: "Hoeveel **water** moet je drinken per dag?",
         options: ["~1,5 liter", "~3 liter", "~0,5 liter", "~5 liter"],
         answer: 0,
-        wrongHints: [null, "Te veel.", "Te weinig.", "Veel te veel."],
+        wrongHints: [null, "Drie liter is 12 glazen — meer dan een kind nodig heeft.", "Een halve liter is maar 2 glazen. Je verliest elke dag meer vocht.", "Vijf liter is 20 glazen — veel meer dan je nodig hebt."],
       },
     ],
   },
@@ -353,27 +353,27 @@ const steps = [
     checks: [
       {
         q: "Hoe lang moet je je handen **minstens** wassen (met zeep)?",
-        options: ["~20 seconden", "5 seconden", "1 minuut", "Zo kort mogelijk"],
+        options: ["~20 seconden", "5 seconden", "1 minuut", "10 seconden"],
         answer: 0,
-        wrongHints: [null, "Te kort.", "Mag, maar het advies noemt een kortere minimumtijd.", "Niet zo kort — er is een minimum."],
+        wrongHints: [null, "Vijf seconden is maar even onder de kraan. Dat is te kort.", "Mag, maar het advies noemt een kortere minimumtijd.", "In tien seconden spoel je lang niet alle bacteriën weg."],
       },
       {
         q: "Hoeveel **uur slaap** heeft een kind van **10** ongeveer nodig?",
-        options: ["9-11 uur", "5-6 uur", "12-15 uur", "3-4 uur"],
+        options: ["9-11 uur", "5-6 uur", "12-15 uur", "7-8 uur"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te veel.", "Veel te weinig."],
+        wrongHints: [null, "Zo kort slapen sommige volwassenen, maar een kind heeft veel meer nodig.", "Zoveel slaapt een baby of peuter. Een kind van 10 iets minder.", "Dat is het advies voor volwassenen. Een groeiend kind heeft meer nodig."],
       },
       {
-        q: "Hoe vaak **tanden poetsen**?",
-        options: ["2× per dag", "1× per week", "5× per dag", "Alleen als ze pijn doen"],
+        q: "Hoe vaak moet je je **tanden poetsen**?",
+        options: ["2× per dag", "Om de dag", "4× per dag", "1× per dag"],
         answer: 0,
-        wrongHints: [null, "Veel te weinig.", "Te vaak (geen kwaad maar overdreven).", "Te laat — voorkomen is beter."],
+        wrongHints: [null, "Tandplak groeit elke dag aan. Om de dag is te weinig.", "Vier keer per dag is vaker dan de tandarts adviseert.", "Eén keer per dag is minder dan de tandarts adviseert."],
       },
       {
-        q: "Hoe lang moet een kind **bewegen** per dag (minimaal)?",
-        options: ["~1 uur", "10 minuten", "3 uur", "Heel de dag"],
+        q: "Hoe lang moet een kind per dag minstens **bewegen**?",
+        options: ["~1 uur", "10 minuten", "3 uur", "30 minuten"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te veel als verplichting.", "Niet realistisch."],
+        wrongHints: [null, "Tien minuten is maar kort. De norm vraagt meer.", "Drie uur is veel meer dan de norm vraagt.", "Een halfuur is het advies voor volwassenen. Kinderen hebben meer nodig."],
       },
     ],
   },
@@ -397,16 +397,16 @@ const steps = [
         wrongHints: [null, "Hart pompt.", "Lever filtert.", "Maag verteert."],
       },
       {
-        q: "Welke is NIET in de Schijf van Vijf?",
-        options: ["Chips", "Volkorenbrood", "Appel", "Kaas"],
+        q: "Wat hoort **niet** in de Schijf van Vijf?",
+        options: ["Chips", "Zilvervliesrijst", "Pindakaas", "Olijfolie"],
         answer: 0,
-        wrongHints: [null, "Brood = brood/graan-vak.", "Appel = groente/fruit-vak.", "Kaas = zuivel-vak."],
+        wrongHints: [null, "Zilvervliesrijst is volkoren en staat in het vak met brood en graan.", "Pindakaas van 100% pinda's staat in het vak met noten, vis en vlees.", "Olijfolie hoort in het vak smeer- en kookvetten."],
       },
       {
         q: "Hoeveel belangrijke **soorten bloedcellen** zijn er?",
-        options: ["3", "1", "5", "10"],
+        options: ["3", "2", "4", "5"],
         answer: 0,
-        wrongHints: [null, "Te weinig — bloed is meer dan alleen rode cellen.", "Te veel.", "Veel te veel."],
+        wrongHints: [null, "Bloed is meer dan alleen rode en witte bloedcellen.", "Zoveel hoofdsoorten zijn het niet. Noem op wat je weet.", "Zoveel hoofdsoorten zijn het niet. Noem op wat je weet."],
         uitlegPad: {
           stappen: [
             { titel: "3 hoofdsoorten", tekst: "Rood: zuurstof vervoeren. Wit: bacteriën doden (afweer). Plaatjes: stolling bij wondjes (korst maken)." },
@@ -423,10 +423,10 @@ const steps = [
         },
       },
       {
-        q: "**Tanden poetsen** doe je hoe vaak?",
-        options: ["2× per dag", "1× per dag", "1× per week", "Na elke maaltijd"],
+        q: "Hoe vaak adviseert de tandarts om je **tanden te poetsen**?",
+        options: ["2× per dag", "1× per dag", "Om de dag", "Na elke maaltijd"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Veel te weinig.", "Overdreven."],
+        wrongHints: [null, "Eén keer per dag is minder dan de tandarts adviseert.", "Tandplak groeit elke dag aan. Om de dag is te weinig.", "Na elke maaltijd is vaker dan de tandarts adviseert."],
       },
       {
         q: "Wat is het **grootste 'orgaan'** van je lichaam?",
@@ -436,18 +436,18 @@ const steps = [
       },
       { q: "Wat doet je **hart**?", options: ["Pompt bloed door je lichaam", "Maakt voedsel klein in je buik", "Filtert de lucht die je inademt", "Denkt na en stuurt je lichaam"], answer: 0, wrongHints: [null, "Dat doet je maag.", "Dat doen je longen.", "Dat doen je hersenen."] },
       { q: "Wat doen je **longen**?", options: ["Lucht inademen + zuurstof opnemen", "Bloed pompen door je hele lichaam", "Voedsel verteren + klein maken", "Denken + je lichaam besturen"], answer: 0, wrongHints: [null, "Dat doet je hart.", "Dat doet je maag.", "Dat doen je hersenen."] },
-      { q: "Welk **lichaamsdeel** is voor zien?", options: ["Ogen","Oren","Neus","Mond"], answer: 0, wrongHints: [null, "Horen.", "Ruiken.", "Proeven."] },
-      { q: "Hoeveel **botten** heeft een volwassen mens ongeveer?", options: ["206","100","500","1.000"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Veel te veel."] },
-      { q: "Welke voeding is goed voor **botten**?", options: ["Melk en kaas", "Snoep", "Cola", "Chips"], answer: 0, wrongHints: [null, "Niet voor botten.", "Niet.", "Niet."] },
-      { q: "Hoeveel **uur slaap** heeft een 10-jarige nodig?", options: ["9-11 uur","4-5 uur","12-14 uur","6 uur"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel (baby).", "Te weinig."] },
-      { q: "Hoe heet **diabetes** in gewone woorden?", options: ["Suikerziekte","Hartziekte","Botbreuk","Verkoudheid"], answer: 0, wrongHints: [null, "Hartziekte heeft eigen naam (bv. infarct).", "Botbreuk = fractuur, geen ziekte.", "Verkoudheid komt door een virus, geen suikerprobleem."] },
-      { q: "Hoeveel **zintuigen** noemen we meestal?", options: ["5", "2", "3", "10"], answer: 0, wrongHints: [null, "Te weinig.", "Te weinig.", "Te veel."] },
-      { q: "Welke spier in je lichaam **werkt continu**?", options: ["Hartspier","Beenspier","Armspier","Geen enkele spier"], answer: 0, wrongHints: [null, "Beenspier rust 's nachts als je slaapt.", "Armspier rust 's nachts als je slaapt.", "Eén spier rust nooit — denk: wat moet 24/7 doorgaan?"] },
-      { q: "Waarvoor dient **zweten** (transpireren)?", options: ["Lichaam koelen", "Warm worden", "Vet verbranden", "Spieren bouwen"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Zweten verbrandt geen vet.", "Zweten bouwt geen spieren."] },
-      { q: "Wat doe je bij een **wond** met bloeding?", options: ["Schoonspoelen + verband", "Negeren + doorspelen", "Likken + laten opdrogen", "Erop blazen + laten zitten"], answer: 0, wrongHints: [null, "Een wond kan gaan ontsteken als je niets doet.", "In je mond zitten veel bacteriën.", "Blazen maakt een wond niet schoon."] },
-      { q: "Welke **vitamine** krijg je van de zon?", options: ["D","C","A","B"], answer: 0, wrongHints: [null, "Fruit.", "Wortels.", "Volkoren."] },
-      { q: "Wat doen **witte bloedcellen**?", options: ["Afweer tegen ziekte", "Zuurstof transporteren", "Stollen", "Voedsel verteren"], answer: 0, wrongHints: [null, "Dat zijn rode.", "Plaatjes.", "Dat doen maag en darmen."] },
-      { q: "Hoeveel **liter water** moet een 10-jarige drinken per dag?", options: ["~1,5 liter","5 liter","0,5 liter","10 liter"], answer: 0, wrongHints: [null, "Te veel.", "Te weinig.", "Veel te veel."] },
+      { q: "Met welk **lichaamsdeel** zie je?", options: ["Ogen","Oren","Neus","Mond"], answer: 0, wrongHints: [null, "Met je oren hoor je.", "Met je neus ruik je.", "Met je mond proef je."] },
+      { q: "Hoeveel **botten** heeft een volwassen mens ongeveer?", options: ["206","100","500","300"], answer: 0, wrongHints: [null, "Alleen je handen en voeten hebben samen al ruim 100 botjes.", "Zoveel botten heeft een mens niet.", "Ongeveer 300 botjes heeft een baby. Bij het groeien groeien er botjes aan elkaar vast."] },
+      { q: "Welke voeding is goed voor **botten**?", options: ["Melk en kaas", "Appels en bananen", "Witbrood en rijst", "Thee en limonade"], answer: 0, wrongHints: [null, "Fruit geeft vitamines, maar weinig calcium.", "Brood en rijst geven vooral energie.", "Thee en limonade geven vocht, maar geen calcium."] },
+      { q: "Hoeveel **uur slaap** heeft een 10-jarige nodig?", options: ["9-11 uur","4-5 uur","12-14 uur","7-8 uur"], answer: 0, wrongHints: [null, "Zo weinig slaap is voor niemand genoeg.", "Zoveel slaapt een baby of peuter.", "Dat is het advies voor volwassenen. Een kind heeft meer nodig."] },
+      { q: "Hoe heet **diabetes** in gewone woorden?", options: ["Suikerziekte","Hartziekte","Bloedarmoede","Botontkalking"], answer: 0, wrongHints: [null, "Hartziekte heeft eigen naam (bv. infarct).", "Bloedarmoede heet ook anemie: te weinig rode bloedcellen.", "Botontkalking heet ook osteoporose: zwakke botten."] },
+      { q: "Hoeveel **zintuigen** noemen we meestal?", options: ["5", "3", "4", "7"], answer: 0, wrongHints: [null, "Zien, horen, ruiken... je kunt met je lichaam nog meer merken.", "Tel ze nog eens: welk lichaamsdeel vergeet je? Denk aan je hele lijf.", "Zoveel noemen we er meestal niet. Tel de lichaamsdelen waarmee je iets merkt."] },
+      { q: "Welke spier in je lichaam **werkt continu**?", options: ["Hartspier","Beenspier","Armspier","Kaakspier"], answer: 0, wrongHints: [null, "Beenspier rust 's nachts als je slaapt.", "Armspier rust 's nachts als je slaapt.", "Je kaakspier rust als je niet eet of praat."] },
+      { q: "Waarvoor dient **zweten** (transpireren)?", options: ["Lichaam koelen", "Warm worden", "Vet verbranden", "Spieren bouwen"], answer: 0, wrongHints: [null, "Zweten maakt je niet warmer. Hoe voelt natte huid in de wind?", "Zweten verbrandt geen vet.", "Zweten bouwt geen spieren."] },
+      { q: "Wat doe je bij een **wond** met bloeding?", options: ["Schoonspoelen + verband erom", "Pleister erop + niet spoelen", "Laten bloeden tot het stopt", "IJs erop + laten zitten"], answer: 0, wrongHints: [null, "Zit er nog vuil in, dan sluit je dat in onder de pleister.", "Bij een flinke bloeding druk je juist met een schone doek, en de wond moet schoon.", "IJs helpt bij een bult, niet bij een open wond."] },
+      { q: "Welke **vitamine** krijg je van de zon?", options: ["D","C","A","B"], answer: 0, wrongHints: [null, "Vitamine C haal je vooral uit fruit.", "Vitamine A zit veel in wortels.", "Vitamine B zit veel in volkorenbrood."] },
+      { q: "Wat doen **witte bloedcellen**?", options: ["Afweer tegen ziekte", "Zuurstof vervoeren", "Bloed laten stollen", "Voedsel verteren"], answer: 0, wrongHints: [null, "Zuurstof vervoeren doet een andere soort bloedcel.", "Stollen bij een wondje doen de bloedplaatjes.", "Dat doen maag en darmen."] },
+      { q: "Hoeveel **liter water** moet een 10-jarige drinken per dag?", options: ["~1,5 liter","~5 liter","~0,5 liter","~3 liter"], answer: 0, wrongHints: [null, "Vijf liter is 20 glazen — veel meer dan je nodig hebt.", "Een halve liter is maar 2 glazen. Je verliest elke dag meer vocht.", "Drie liter is 12 glazen — meer dan een kind nodig heeft."] },
     ],
   },
 ];

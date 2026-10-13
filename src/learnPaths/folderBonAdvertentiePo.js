@@ -73,7 +73,7 @@ const steps = [
         q: "Wat is het 'totaalbedrag' onderaan een bon?",
         options: ["alles bij elkaar opgeteld", "het duurste artikel", "het goedkoopste artikel", "alleen de BTW"],
         answer: 0,
-        wrongHints: [null, "Het is meer dan één artikel.", "Ook niet — het is de som van alles.", "BTW is maar een klein deel."],
+        wrongHints: [null, "Wat betekent het woord 'totaal'?", "Betaal je dan alleen voor het goedkoopste ding?", "BTW is maar een klein deel."],
         uitlegPad: {
           stappen: [{ titel: "Totaal = de som", tekst: "Het totaalbedrag is alle artikelen bij elkaar opgeteld — dat betaal je samen." }],
           niveaus: {
@@ -225,9 +225,9 @@ const steps = [
       },
       {
         q: "Bij een aanbieding staat 'op = op'. Wat betekent dat?",
-        options: ['alleen zolang de voorraad strekt', 'geldig voor altijd, elke dag weer', 'alleen op zondag in deze winkel', 'twee keer zo duur als normaal'],
+        options: ['alleen zolang de voorraad strekt', "je mag er maar één per persoon kopen", "alleen geldig op de dag van de folder", "de prijs gaat steeds verder omlaag"],
         answer: 0,
-        wrongHints: [null, "Juist niet — het kan snel uitverkocht zijn.", "Het gaat niet over een dag.", "Het zegt niets over de prijs."],
+        wrongHints: [null, "Staat er iets over een maximum per klant? Wat is er 'op'?", "Gaat 'op = op' over een datum, of over iets anders?", "Zegt 'op = op' iets over de prijs?"],
         uitlegPad: {
           stappen: [{ titel: "Op = uitverkocht", tekst: "'Op = op' betekent: als het product op is, is de aanbieding voorbij. Dus zolang de voorraad strekt." }],
           niveaus: {
@@ -315,9 +315,9 @@ const steps = [
     checks: [
       {
         q: "Een advertentie roept: 'De allerbeste tandpasta ter wereld!' Is dat een feit of een mening?",
-        options: ["een mening", "een bewezen feit", "een korting", "een voorwaarde"],
+        options: ["een mening, ook al klinkt het als een feit", "een feit, want de maker kent zijn product", "een feit, want het staat in de reclame", "een feit, als veel mensen hem kopen"],
         answer: 0,
-        wrongHints: [null, "'Allerbeste' kun je niet nameten — het is wat de verkoper beweert.", "Het is geen prijsverlaging.", "Het is geen kleine-lettertjes-regel."],
+        wrongHints: [null, "'Allerbeste ter wereld' — kan de maker dat echt bewijzen?", "Is alles wat in een reclame staat ook waar?", "Bewijst het dat iets de allerbeste is als veel mensen het kopen?"],
         uitlegPad: {
           stappen: [{ titel: "'Allerbeste' = mening", tekst: "Of het de allerbeste is, kun je niet bewijzen. De verkoper zegt dat om je te laten kopen — een mening." }],
           niveaus: {
@@ -329,9 +329,9 @@ const steps = [
       },
       {
         q: "Wat wil een advertentie vooral bereiken?",
-        options: ["dat je iets koopt", "dat je iets leert", "dat je iets weggeeft", "dat je gaat sparen"],
+        options: ["dat je iets koopt", "dat je iets leert", "dat je je mening geeft", "dat je gaat sparen"],
         answer: 0,
-        wrongHints: [null, "Informeren is niet het hoofddoel van reclame.", "Daar is reclame niet voor.", "Reclame wil juist dat je geld uitgeeft."],
+        wrongHints: [null, "Informeren is niet het hoofddoel van reclame.", "Vraagt reclame jou om je mening, of wil het iets anders van je?", "Waarom betaalt een bedrijf voor een advertentie?"],
         uitlegPad: {
           stappen: [{ titel: "Reclame = verkopen", tekst: "Het doel van een advertentie is dat jij het product koopt. Daarom klinkt alles zo positief." }],
           niveaus: {
@@ -343,9 +343,9 @@ const steps = [
       },
       {
         q: "Onder een advertentie staan kleine lettertjes. Wat staat daar vaak in?",
-        options: ["de voorwaarden", "het grootste nieuws", "de leukste foto's", "niets belangrijks"],
+        options: ["de regels van de aanbieding", "de naam van de winkel", "de prijs van de aanbieding", "niets wat belangrijk is"],
         answer: 0,
-        wrongHints: [null, "Het belangrijke nieuws staat juist groot.", "Foto's staan niet in de kleine lettertjes.", "Juist wél belangrijk — lees ze."],
+        wrongHints: [null, "Wil een winkel zijn naam juist klein of groot laten zien?", "Zet een winkel de prijs klein, of juist groot in beeld?", "Waarom zou een winkel iets klein opschrijven? Is het dan onbelangrijk?"],
         uitlegPad: {
           stappen: [{ titel: "Kleine lettertjes = voorwaarden", tekst: "In de kleine lettertjes staan de voorwaarden, bijvoorbeeld 'alleen deze week' of 'zolang de voorraad strekt'." }],
           niveaus: {
@@ -357,9 +357,9 @@ const steps = [
       },
       {
         q: "Bij een product staat: 'Nu met gratis sticker!' Waarom zetten ze dat erbij?",
-        options: ["om je te verleiden het te kopen", "omdat stickers verplicht zijn", "om het duurder te maken", "omdat de sticker stuk is"],
+        options: ["om je over te halen het te kopen", "omdat ze nog stickers over hadden", "om te laten zien dat het beter is", "om kinderen zomaar blij te maken"],
         answer: 0,
-        wrongHints: [null, "Een extraatje maakt kopen aantrekkelijker.", "Stickers zijn niet verplicht.", "'Gratis' maakt het juist aantrekkelijker, niet duurder."],
+        wrongHints: [null, "Zou een winkel dat op de verpakking zetten om stickers kwijt te raken?", "Wordt een product beter door een sticker erbij?", "Geeft een bedrijf zomaar iets weg, of willen ze er iets voor terug?"],
         uitlegPad: {
           stappen: [{ titel: "Gratis extraatje = lokkertje", tekst: "Een 'gratis' extraatje is bedoeld om je over te halen het product te kopen." }],
           niveaus: {
@@ -372,7 +372,7 @@ const steps = [
       {
         q: "Welke zin uit een advertentie is reclame-taal (geen feit)?",
         options: [
-          "Onze schoenen zijn fantastisch en uniek!",
+          "Onze schoenen zijn fantastisch en uniek.",
           "De schoenen zijn van leer.",
           "De schoenen zijn er in maat 38.",
           "De schoenen kosten €50.",
@@ -382,7 +382,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Overdreven = mening", tekst: "'Fantastisch en uniek' is niet te bewijzen en bedoeld om je te verleiden — reclame-taal. De rest zijn controleerbare feiten." }],
           niveaus: {
-            basis: "'Fantastisch en uniek!' is reclame-taal, geen feit.",
+            basis: "'Fantastisch en uniek' is reclame-taal, geen feit.",
             simpeler: "Welke zin kun je niet nameten of controleren?",
             nogSimpeler: "Is 'fantastisch en uniek' een feit of reclame?",
           },
@@ -392,12 +392,12 @@ const steps = [
         q: "Een advertentie laat alleen maar blije, lachende mensen zien. Waarom doen ze dat?",
         options: [
           "om het product aantrekkelijk te maken",
-          "omdat dat wettelijk verplicht is",
-          "om je te waarschuwen voor nadelen",
-          "om ruimte op te vullen",
+          "om te laten zien wie het product maakt",
+          "om te vertellen wat het product kost",
+          "om te bewijzen dat het product goed werkt",
         ],
         answer: 0,
-        wrongHints: [null, "Blije modellen zijn niet verplicht.", "Reclame toont juist géén nadelen.", "Het is met opzet gekozen, niet zomaar opvulling."],
+        wrongHints: [null, "Zijn die lachende mensen de makers, of modellen?", "Zie je de prijs aan een lachend gezicht?", "Bewijst een lachende foto dat iets goed werkt?"],
         uitlegPad: {
           stappen: [{ titel: "Goed gevoel = kopen", tekst: "Blije mensen geven jou een goed gevoel bij het product, zodat je het eerder koopt. Reclame laat alleen de mooie kant zien." }],
           niveaus: {
@@ -414,10 +414,10 @@ const steps = [
           "nee, daarvoor moet je 2 flessen kopen",
           "ja, want bij elke fles hoort een pet",
           "ja, als je bij de kassa om een pet vraagt",
-          "nee, want petten zijn nooit gratis",
+          "nee, want de petten zijn al op",
         ],
         answer: 0,
-        wrongHints: [null, "Waar verwijst het sterretje naar?", null, null],
+        wrongHints: [null, "Waar verwijst het sterretje naar?", null, "Weet je of de voorraad al op is? Lees de kleine lettertjes nog eens."],
         uitlegPad: {
           stappen: [
             {

@@ -1548,9 +1548,9 @@ const steps = [
       },
       {
         q: "Op welke datum is **Bevrijdingsdag**?",
-        options: ["5 mei", "4 mei", "27 april", "1 januari"],
+        options: ["5 mei", "4 mei", "27 april", "8 mei"],
         answer: 0,
-        wrongHints: [null, "Dat is Dodenherdenking.", "Dat is Koningsdag.", "Dat is Nieuwjaar."],
+        wrongHints: [null, "Dat is Dodenherdenking.", "Dat is Koningsdag.", "Op 8 mei vieren andere Europese landen de bevrijding. Nederland heeft een eigen datum."],
       },
       {
         q: "Anna en Tim zijn in **hetzelfde jaar geboren**. Anna in januari, Tim in december. Wie is **ouder**?",
@@ -1566,7 +1566,7 @@ const steps = [
       { q: "Welke dag komt direct **na vrijdag**?", options: ["Zaterdag","Donderdag","Zondag","Maandag"], answer: 0, wrongHints: [null, "Donderdag komt vóór vrijdag.", "Zondag is 2 dagen na vrijdag.", "Maandag komt na het weekend. Ligt er niets tussen vrijdag en maandag?"] },
       { q: "Je bent geboren in 2014. Hoe oud ben je in 2026, na je verjaardag?", options: ["12","11","13","10"], answer: 0, wrongHints: [null, "Je bent dit jaar al jarig geweest. Moet je dan nog een jaar aftrekken?", "Dan zou je in 2013 geboren zijn.", "Dan zou je in 2016 geboren zijn."] },
       { q: "Op welke datum is **Koningsdag**?", options: ["27 april","30 april","5 mei","30 maart"], answer: 0, wrongHints: [null, "Dat was vroeger Koninginnedag.", "Dat is Bevrijdingsdag.", "Dan is het nog maart. Koningsdag valt later in het voorjaar."] },
-      { q: "Op welke datum is **Bevrijdingsdag**?", options: ["5 mei","4 mei","27 april","31 december"], answer: 0, wrongHints: [null, "Dat is Dodenherdenking.", "Dat is Koningsdag.", "Dat is Oudejaarsdag."] },
+      { q: "Op welke datum is **Bevrijdingsdag**?", options: ["5 mei","4 mei","27 april","15 augustus"], answer: 0, wrongHints: [null, "Dat is Dodenherdenking.", "Dat is Koningsdag.", "Op 15 augustus herdenken we het einde van de oorlog in Azië (in het toenmalige Nederlands-Indië)."] },
       { q: "Op welke datum is de **Dodenherdenking**?", options: ["4 mei","5 mei","11 nov","2 nov"], answer: 0, wrongHints: [null, "Op 5 mei is het Bevrijdingsdag.", "11 november is Sint-Maarten.", "2 november is Allerzielen, een kerkelijke gedenkdag. Dat is niet de Nationale Dodenherdenking."] },
       { q: "Hoeveel **dagen** heeft een week?", options: ["7","5","10","6"], answer: 0, wrongHints: [null, "Dat zijn alleen de schooldagen.", "Noem de dagen op, van maandag tot en met zondag. Hoeveel zijn het er?", "Ben je er één vergeten? Tel maandag tot en met zondag."] },
       { q: "Een **kwartaal** heeft hoeveel maanden?", options: ["3","4","6","12"], answer: 0, wrongHints: [null, "Een kwartaal is een kwart jaar. Is 4 maanden een kwart van 12?", "Dat is een half jaar.", "Dat is een heel jaar."] },
