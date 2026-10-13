@@ -142,7 +142,7 @@ const steps = [
         q: "Waar werd **democratie** voor het eerst ingevoerd?",
         options: ["Athene", "Rome", "Sparta", "Egypte"],
         answer: 0,
-        wrongHints: [null, "Rome was eerst een republiek, pas later een keizerrijk — geen democratie zoals Athene.", "Sparta had juist een militaire koningsregering, geen democratie.", "Egypte had farao's — absolute monarchen."],
+        wrongHints: [null, "In Rome had de senaat van rijke families het meeste te zeggen, en later keizers. Waar ontstond voor het eerst een volksvergadering van gewone burgers?", "Sparta had juist een militaire koningsregering, geen democratie.", "Egypte had farao's — absolute monarchen."],
         uitlegPad: {
           stappen: [{ titel: "Athene ~500 v.Chr.", tekst: "Eerste democratie in Athene (~508 v.Chr., onder Cleisthenes). Volwassen mannelijke burgers stemden in volksvergadering over wetten en oorlog. Niet voor vrouwen, slaven, vreemdelingen — eerste vorm, niet perfect." }],
           woorden: [{ woord: "democratie", uitleg: "Volk-bestuur. Athene 5e eeuw v.Chr. = eerste gedocumenteerde vorm." }, { woord: "demos", uitleg: "Grieks voor 'volk'. 'Kratos' = macht. Democratie = volksmacht." }],

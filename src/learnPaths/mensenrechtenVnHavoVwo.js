@@ -169,12 +169,12 @@ const steps = [
         q: "Wat doet **ICC** (International Criminal Court)?",
         options: [
           "Berecht personen voor oorlogsmisdaden",
-          "Beslecht staten-conflicten",
-          "Maakt VN-wetten",
-          "Bewaakt grenzen"
+          "Beslecht conflicten tussen staten",
+          "Maakt verdragen voor de VN-lidstaten",
+          "Stuurt vredesmissies naar conflictgebieden"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is ICJ.", "Niet — VN AV.", "Onzin."],
+        wrongHints: [null, "Niet — dat is ICJ.", "Niet — verdragen sluiten staten zelf, vaak via de Algemene Vergadering.", "Dat doet de Veiligheidsraad met blauwhelmen. Wat doet een 'court'?"],
         uitlegPad: {
           stappen: [{ titel: "Permanente strafrechtbank", tekst: "Sinds 2002 (Rome-Statuut 1998). Tussen Neurenberg-processen (ad-hoc) + ICTY/ICTR (per conflict) → behoefte permanente rechtbank. ICC handelt VOOR (preventie via afschrikking) + NA (berechting). 124 leden, maar grootmachten ontbreken." }],
           niveaus: { basis: "Berecht individuen.", simpeler: "ICC = strafhof persoonlijk.", nogSimpeler: "ICC" },
@@ -184,12 +184,12 @@ const steps = [
         q: "**Neurenberg-principe**:",
         options: [
           "'Orders volgen' geen verdediging voor oorlogsmisdaden",
-          "Soldaten altijd vrij",
-          "Alleen leiders berecht",
-          "Geen straf mogelijk"
+          "Soldaten zijn niet strafbaar als ze orders volgden",
+          "Staten worden gestraft, geen individuele personen",
+          "Wie een oorlog wint, mag de verliezers berechten"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Onjuist.", "Wel mogelijk."],
+        wrongHints: [null, "Wat gebeurde er in Neurenberg met Duitsers die zich op bevelen beriepen?", "In Neurenberg stonden personen terecht. Wat zegt dat?", "Critici noemden Neurenberg 'overwinnaarsrecht', maar is dat het principe dat eruit voortkwam?"],
         uitlegPad: {
           stappen: [
             { titel: "Individuele verantwoordelijkheid", tekst: "Vóór WO2: militairen volgden orders, niet persoonlijk verantwoordelijk. Neurenberg 1945-46 verwierp dit. Eichmann ('ich war nur ein Rädchen') opnieuw gepoogd 1961 — verworpen. Vandaag basis voor ICC. Plicht om duidelijk misdadige bevelen NIET uit te voeren." },
@@ -216,12 +216,12 @@ const steps = [
         q: "**Genocide-definitie** vereist:",
         options: [
           "Opzet om een etnische of religieuze groep te vernietigen",
-          "Veel doden",
-          "Etnisch geweld",
-          "Politieke conflicten"
+          "Een zeer groot aantal burgerdoden in korte tijd",
+          "Geweld tussen twee etnische groepen in een land",
+          "Doden van politieke tegenstanders door een regime"
         ],
         answer: 0,
-        wrongHints: [null, "Niet voldoende — opzet ontbreekt.", "Te ruim.", "Niet specifiek."],
+        wrongHints: [null, "Niet voldoende — opzet ontbreekt.", "Geweld alleen is niet genoeg. Wat moet de dader van plan zijn?", "Politieke groepen staan niet in het Genocideverdrag van 1948."],
         uitlegPad: {
           stappen: [
             { titel: "Dolus specialis", tekst: "1948-Genocideverdrag: doel = vernietigen 'in whole or in part' van groep wegens nationale/etnische/raciale/religieuze identiteit. Niet alleen daad maar BEDOELING telt. Daarom moeilijk te bewijzen. Rwanda + Srebrenica + Holocaust formeel erkend. Of de deportatie van Oekraïense kinderen genocide is: nog discussie." },
@@ -233,12 +233,12 @@ const steps = [
         q: "**Universele jurisdictie**:",
         options: [
           "Sommige misdrijven zo erg dat elke staat ze mag berechten",
-          "Alleen eigen burger",
-          "Bestaat niet",
-          "VN beslist altijd"
+          "Een staat berecht misdrijven op eigen grondgebied",
+          "Mensenrechten gelden overal, dus overal hetzelfde strafrecht",
+          "De Veiligheidsraad beslist welk land iemand berecht"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel.", "Onafhankelijk."],
+        wrongHints: [null, "Dat is het territorialiteitsbeginsel. Wat is er dan 'universeel' aan?", "Dat is de universaliteit van mensenrechten. Jurisdictie gaat over wie mag rechtspreken.", "Moeten landen eerst toestemming van de Veiligheidsraad vragen?"],
         uitlegPad: {
           stappen: [
             { titel: "Voor genocide + marteling", tekst: "Concept: bepaalde misdrijven (jus cogens) zo ernstig dat ALLE staten ze mogen berechten ongeacht plek of slachtoffer. Voorbeeld: Pinochet-arrestatie Spanje 1998 voor Chileense martelingen. NL berecht Syrische ex-officieren in Den Haag. Mogelijk preventief effect: nergens veilig." },
@@ -259,12 +259,12 @@ const steps = [
         q: "**Oeigoeren** (China-Xinjiang) volgens westerse bronnen:",
         options: [
           "Meer dan 1 miljoen vastgehouden in kampen",
-          "Vrijheid",
-          "Normale werkomstandigheden",
-          "Geen probleem"
+          "Vrijwillige beroepsopleiding tegen extremisme",
+          "Ongeveer 10.000 vastgehouden in gevangenissen",
+          "Vooral economische achterstand, geen kampen"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Wel."],
+        wrongHints: [null, "Dat is de uitleg van China zelf. Wat zeggen westerse bronnen?", "Gelekte documenten en satellietfoto's wijzen op een veel grotere schaal.", "Gelekte documenten en satellietfoto's tonen meer dan alleen armoede."],
         uitlegPad: {
           stappen: [
             { titel: "Bekend sinds 2018", tekst: "Eerst bestreden, maar gelekte documenten 2019 + satellietfoto's tonen massale kampen. China noemt 'beroepsopleiding'. Westerse landen + ngo's spreken van massa-detentie, dwang-arbeid (katoen!), dwangsterilisatie. VS + UK + Canada noemen genocide. Reputatie China geschaad." },
@@ -276,12 +276,12 @@ const steps = [
         q: "**ICC-arrestatiebevel Poetin** (maart 2023) voor:",
         options: [
           "Deportatie van Oekraïense kinderen",
-          "Cyberaanvallen",
-          "Sancties",
-          "Verkiezingen"
+          "Executies van burgers in Boetsja",
+          "Het beginnen van de oorlog (agressie)",
+          "Cyberaanvallen op Oekraïense banken"
         ],
         answer: 0,
-        wrongHints: [null, "Apart.", "Wel sancties maar geen ICC-criterium.", "Niet."],
+        wrongHints: [null, "Boetsja wordt wel onderzocht, maar was dat de grond voor dit bevel?", "Het ICC kan Rusland niet voor agressie vervolgen, want Rusland is geen lid. Waar ging het dan om?", "Cyberaanvallen vallen buiten dit bevel. Welke groep slachtoffers stond centraal?"],
         uitlegPad: {
           stappen: [
             { titel: "Oorlogsmisdaad gedocumenteerd", tekst: "Tijdens Oekraïne-oorlog: Russische troepen brachten Oekraïense kinderen naar Rusland → 'heropvoeding' tot Russen. Het ICC noemt dit de oorlogsmisdaad 'onrechtmatige deportatie'; of het ook genocide is, is nog discussie. Poetin kan niet meer zonder risico reizen naar ICC-leden." },
@@ -293,12 +293,12 @@ const steps = [
         q: "**Mahsa Amini-protesten** Iran (2022):",
         options: [
           "Protest tegen de verplichte hoofddoek en het regime",
-          "Protest tegen klimaatverandering",
-          "Protest tegen hoge prijzen",
-          "Protest tegen een oorlog met een buurland"
+          "Protest tegen het tekort aan water en stroom",
+          "Protest tegen de hoge prijzen en inflatie",
+          "Protest tegen verkiezingsfraude bij de president"
         ],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet primair.", "Niet — het begon na de dood van een jonge vrouw die door de zedenpolitie was opgepakt."],
+        wrongHints: [null, "Er waren ook waterprotesten (2021), maar deze begonnen na de dood van een jonge vrouw. Waarom was zij opgepakt?", "Economische onvrede speelde mee, maar waarmee begon het?", "Dat was de Groene Beweging van 2009."],
         uitlegPad: {
           stappen: [
             { titel: "'Vrouw, leven, vrijheid'", tekst: "Mahsa Amini stierf 22 j oud na arrestatie zedenpolitie wegens 'verkeerd' dragen hijab. Wekenlang massa-protesten in Iran-steden. Slogan Zan-Zendegi-Azadi (Vrouw-Leven-Vrijheid) wereldwijd bekend. Honderden doden, duizenden gevangen. Internationale solidariteit." },
@@ -318,9 +318,9 @@ const steps = [
       },
       {
         q: "Hoeveel landen criminaliseren **homoseksualiteit** nog (2024)?",
-        options: ["~64 landen", "Geen", "Alle behalve EU", "200+"],
+        options: ["~64 landen", "~12 landen", "~130 landen", "~30 landen"],
         answer: 0,
-        wrongHints: [null, "Helaas wel.", "Niet alleen EU.", "Te veel."],
+        wrongHints: [null, "Helaas meer: denk aan grote delen van Afrika en het Midden-Oosten.", "Er zijn zo'n 195 landen. Zou het in twee derde daarvan strafbaar zijn?", "Helaas meer: denk aan grote delen van Afrika, het Midden-Oosten en het Caribisch gebied."],
         uitlegPad: {
           stappen: [
             { titel: "Vooral Afrika + Midden-Oosten + Caribisch", tekst: "Oeganda + Saudi-Arabië + Iran + Mauretanië dreigen met doodstraf. Veel anderen gevangenisstraf. Tegelijkertijd: ~35 landen erkennen het homohuwelijk (Argentinië, Australië, Nieuw-Zeeland, NL eerste in 2001). Verschillen wereldwijd enorm." },
@@ -341,12 +341,12 @@ const steps = [
         q: "**Art. 1 Nederlandse Grondwet** verbiedt:",
         options: [
           "Discriminatie op welke grond dan ook",
-          "Alleen rassendiscriminatie",
-          "Niets",
-          "Vrijheid"
+          "Discriminatie op grond van ras en geloof",
+          "Het beledigen van de Koning en de regering",
+          "Haatzaaien en bedreigen via internet"
         ],
         answer: 0,
-        wrongHints: [null, "Veel breder.", "Wel verbiedt.", "Beschermt juist."],
+        wrongHints: [null, "Staan er in artikel 1 maar twee gronden?", "Dat regelt het Wetboek van Strafrecht, niet artikel 1.", "Dat regelt het strafrecht. Waar gaat artikel 1 over?"],
         uitlegPad: {
           stappen: [
             { titel: "Brede tekst", tekst: "Letterlijk: '...of op welke grond dan ook'. Dus naast genoemde categorieën (geslacht, ras, religie, etc.) ook open voor toekomstige interpretatie. Beschermt onder andere ook LGBTQ+ (formeel pas 2023 expliciet toegevoegd via grondwetwijziging: 'seksuele gerichtheid + handicap')." },
@@ -358,12 +358,12 @@ const steps = [
         q: "**Toeslagenaffaire** is voorbeeld van:",
         options: [
           "Discriminatie en onterechte fraudebeschuldigingen",
-          "Slecht weer",
-          "Goed beleid",
-          "Geen issue"
+          "Grootschalige fraude door ouders met toeslagen",
+          "Een computerstoring bij de Belastingdienst",
+          "Te hoge toeslagen door een rekenfout"
         ],
         answer: 0,
-        wrongHints: [null, "Onzin.", "Tegenovergesteld.", "Wel issue."],
+        wrongHints: [null, "Hadden de meeste ouders echt gefraudeerd?", "Er speelde een algoritme mee, maar was het een storing of een bewuste werkwijze?", "Ging het om te veel uitbetalen, of om wat de Belastingdienst ouders aandeed?"],
         uitlegPad: {
           stappen: [
             { titel: "26 000 families schade", tekst: "Belastingdienst werkte met algoritme dat 'risico' voorspelde — bias tegen mensen met dubbele nationaliteit/migratie-achtergrond. Bij mensen werd ten onrechte toeslag teruggevorderd (soms €30k+), met schulden en kinderen uit huis als gevolg. Kabinet viel jan 2021. Het compensatieproces loopt nog steeds. Schendt Art 1 (discriminatie) + EVRM (eerlijk proces). Diepe vertrouwens-crisis." },
@@ -375,12 +375,12 @@ const steps = [
         q: "**Urgenda-zaak** (2019):",
         options: [
           "Rechter dwong de staat tot meer CO₂-reductie",
-          "Verloor",
-          "Geen klimaat-zaak",
+          "Rechter wees de eis van Urgenda af",
+          "Rechter verbood nieuwe kolencentrales",
           "Shell moest van de rechter minder uitstoten"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel.", "Dat was een andere zaak (Milieudefensie tegen Shell). Wie was hier de gedaagde?"],
+        wrongHints: [null, "Waarom wordt deze zaak dan wereldwijd als voorbeeld gezien?", "Ging de uitspraak over één soort centrale, of over de totale uitstoot van Nederland?", "Dat was een andere zaak (Milieudefensie tegen Shell). Wie was hier de gedaagde?"],
         uitlegPad: {
           stappen: [
             { titel: "Mensenrechten + klimaat", tekst: "Urgenda Foundation klaagde staat aan: klimaatbeleid te zwak schendt zorgplicht onder EVRM (recht op leven + familie-leven, gezondheid). Rechter gaf Urgenda gelijk → NL MOET 25% CO₂-reductie 2020. Eerste wereldwijde precedent klimaat-rechtszaak tegen staat. Inspiratie voor Duitsland, Frankrijk, Pakistan, etc." },
@@ -392,12 +392,12 @@ const steps = [
         q: "**College voor de Rechten van de Mens** (NL):",
         options: [
           "Instituut dat discriminatieklachten beoordeelt",
-          "Politie",
-          "Rechter",
-          "Geen functie"
+          "Rechtbank die discriminatie bestraft",
+          "Ombudsman voor klachten over de overheid",
+          "Toezichthouder op privacy en de AVG"
         ],
         answer: 0,
-        wrongHints: [null, "Apart.", "Apart.", "Wel functie."],
+        wrongHints: [null, "Het College legt geen straffen op. Zijn de uitspraken bindend?", "Dat doet de Nationale Ombudsman.", "Dat doet de Autoriteit Persoonsgegevens."],
         uitlegPad: {
           stappen: [{ titel: "Sinds 2012", tekst: "Onafhankelijk van regering. Behandelt klachten (kosteloos) over discriminatie + adviseert. Uitspraken niet juridisch bindend, maar morele autoriteit. Volgt VN-mensenrechten-systeem. Plus rapporteert jaarlijks over mensenrechten-situatie NL." }],
           niveaus: { basis: "Discriminatie-klachten.", simpeler: "Rechten-instituut.", nogSimpeler: "CRM" },
@@ -407,12 +407,12 @@ const steps = [
         q: "Wat is **effectiefste persoonlijke actie** voor mensenrechten?",
         options: [
           "Combinatie: stemmen + ngo-lid + bewust kopen + onderwijs",
-          "Niets doen",
-          "Alleen klagen",
-          "Alleen geld geven"
+          "Combinatie: petities tekenen + posts delen + liken",
+          "Vooral geld doneren aan één grote ngo",
+          "Vooral demonstreren bij ambassades"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Te beperkt.", "Niet enige manier."],
+        wrongHints: [null, "Online steun helpt een beetje, maar blijf je zo niet in je eigen bubbel? Wat heeft meer invloed?", "Doneren helpt, maar de lesstof noemt meer manieren. Welke?", "Demonstreren kan, maar is één middel genoeg?"],
         uitlegPad: {
           stappen: [
             { titel: "Veel kleine acties tellen op", tekst: "Geen één 'wonder-actie' — maar veel kleine acties opgeteld maken verschil. Wereld is veranderd door massa-bewegingen: vrouwenkiesrecht, burgerrechten VS, anti-apartheid Zuid-Afrika, gay marriage. Begint vaak met paar mensen die niet stoppen." },

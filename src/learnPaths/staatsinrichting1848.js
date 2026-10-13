@@ -33,7 +33,7 @@ const steps = [
         q: "Welke koning regeerde NL in **1848** toen de grondwet werd herzien?",
         options: ["Willem II", "Willem I", "Willem III", "Lodewijk Napoleon"],
         answer: 0,
-        wrongHints: [null, "Willem I trad al in 1840 af.", "Willem III werd pas in 1849 koning, een jaar na de nieuwe grondwet.", "Lodewijk Napoleon was koning van 1806 tot 1810, veel eerder."],
+        wrongHints: [null, "Willem I trad al in 1840 af.", "Deze koning begon pas in 1849, een jaar na de nieuwe grondwet.", "Lodewijk Napoleon was koning van 1806 tot 1810, veel eerder."],
         uitlegPad: {
           stappen: [{ titel: "Willem II + Thorbecke", tekst: "Willem I (1815-1840) → Willem II (1840-1849). In 1848 dwingt de Europese revolutie-dreiging Willem II om de grondwet te laten herzien door Thorbecke." }],
           woorden: [{ woord: "monarchie", uitleg: "Staat met een koning of koningin als staatshoofd." }],
@@ -336,7 +336,7 @@ const steps = [
       },
       {
         q: "Welke macht is **rechterlijk**?",
-        options: ["Rechtbanken en de Hoge Raad", "Tweede Kamer en Eerste Kamer", "Regering + ambtenaren", "Koning + ministerraad"],
+        options: ["Rechtbanken en de Hoge Raad", "Tweede Kamer en Eerste Kamer", "Regering en ambtenaren", "Koning en ministerraad"],
         answer: 0,
         wrongHints: [null, "Wetgevende macht.", "Uitvoerende macht.", "Uitvoerende macht (regering)."],
         uitlegPad: {

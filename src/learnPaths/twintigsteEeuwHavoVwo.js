@@ -272,7 +272,7 @@ const steps = [
     checks: [
       {
         q: "Welke gebeurtenis wordt **vaakst aangewezen als directe oorzaak WO2**?",
-        options: ["Inval Polen door DE (1 sept 1939)","Beurskrach 1929","Verdrag Versailles 1919","Pearl Harbor"],
+        options: ["Duitse inval in Polen (1 september 1939)","Beurskrach in New York (oktober 1929)","Verdrag van Versailles (juni 1919)","Aanval op Pearl Harbor (december 1941)"],
         answer: 0,
         wrongHints: [null, "De crisis hielp Hitler aan de macht, maar dat is een oorzaak op lange termijn. Welke gebeurtenis liet de oorlog echt uitbreken?", "Versailles zorgde voor wrok in Duitsland: een oorzaak op lange termijn. Welke gebeurtenis liet de oorlog echt uitbreken?", "Pearl Harbor bracht de VS in de oorlog, maar toen woedde die in Europa al ruim twee jaar."],
         uitlegPad: {

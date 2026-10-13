@@ -265,11 +265,11 @@ const steps = [
         options: [
           "Donkere absorptielijnen door koudere zon-atmosfeer",
           "Heldere emissielijnen van neon in de zonneatmosfeer",
-          "Donkere lijnen door weerkaatsing in onze atmosfeer",
+          "Donkere lijnen van stof tussen de zon en de aarde",
           "Krassen of stof op de lens van de spectroscoop"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — zijn de lijnen licht of donker?", "Kaatst onze atmosfeer bepaalde kleuren weg? De lijnen zie je ook vanuit een ruimtetelescoop.", "Elke spectroscoop ter wereld ziet dezelfde lijnen op dezelfde plek. Kan dat stof zijn?"],
+        wrongHints: [null, "Niet — zijn de lijnen licht of donker?", "Elke ster heeft haar eigen patroon van lijnen, passend bij haar samenstelling. Ligt de oorzaak dan onderweg, of bij de ster zelf?", "Elke spectroscoop ter wereld ziet dezelfde lijnen op dezelfde plek. Kan dat stof zijn?"],
         uitlegPad: {
           stappen: [
             { titel: "Continu + koudere absorptie", tekst: "Zon-bol (~6000 K, dicht) zendt continu spectrum uit. Daar bovenop ligt een koudere buitenste gaslaag (~4500 K, dunner gas) die specifieke λ absorbeert. Resultaat: continu met donkere strepen — Fraunhofer-lijnen, ~25 000 stuks (waterstof, helium, ijzer, calcium, etc.)." },

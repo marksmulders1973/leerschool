@@ -59,12 +59,12 @@ const steps = [
         q: "Waarom hebben **zware kernen** méér neutronen dan protonen?",
         options: [
           "Neutronen verdunnen de elektrische afstoting tussen protonen",
-          "Neutronen zijn lichter",
-          "Neutronen zijn elektrisch positief en versterken",
-          "Toeval"
+          "Neutronen zijn lichter en maken de kern zo stabieler",
+          "Neutronen zijn positief geladen en versterken de kernkracht",
+          "Neutronen schermen de kern af tegen straling van buiten"
         ],
         answer: 0,
-        wrongHints: [null, "Neutronen zijn juist iets zwaarder dan protonen.", "Niet — neutronen zijn ongeladen.", "Niet — er is een fysische reden."],
+        wrongHints: [null, "Neutronen zijn juist iets zwaarder dan protonen.", "Niet — neutronen zijn ongeladen.", "Neutronen zitten ín de kern, niet eromheen als schild. Wat is in een grote kern het lastigst bij elkaar te houden?"],
         uitlegPad: {
           stappen: [
             { titel: "Sterke kernkracht + Coulomb-afstoting", tekst: "Protonen stoten elkaar af (Coulomb). De sterke kernkracht trekt p-p, p-n, n-n aan — maar werkt alleen op zeer korte afstand. Bij grote kernen wordt afstoting overheersend, tenzij extra neutronen zorgen voor genoeg aantrekkende kracht zonder extra afstoting." },
@@ -76,12 +76,12 @@ const steps = [
         q: "Elementen **boven Z = 83** (bismut) zijn:",
         options: [
           "Allemaal radioactief — geen stabiele isotoop",
-          "Allemaal stabiel",
-          "Half stabiel, half radioactief",
-          "Bestaan niet"
+          "Allemaal stabiel — geen radioactieve isotoop",
+          "Gemengd — ongeveer de helft is stabiel",
+          "Kunstmatig — alleen in laboratoria gemaakt"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — zware kernen worden instabiel.", "Niet — duidelijke grens bij bismut.", "Niet — bestaan wel (uranium, plutonium, etc.)."],
+        wrongHints: [null, "Niet — zware kernen worden instabiel.", "Niet — duidelijke grens bij bismut.", "Uranium en thorium vind je gewoon in de aardkorst. Zijn ze dan allemaal kunstmatig?"],
         uitlegPad: {
           stappen: [{ titel: "Bismut = laatste stabiele", tekst: "Z=83 (bismut) is het zwaarste element met (vrijwel) stabiele isotopen. Z≥84: polonium → uranium → transuranen (lab-gemaakt) → allemaal radioactief vervallen vroeg of laat naar lichter element." }],
           niveaus: { basis: "Z>83 = radioactief.", simpeler: "Alle elementen voorbij bismut zijn instabiel.", nogSimpeler: "Allemaal radioactief" },
@@ -123,9 +123,9 @@ const steps = [
         q: "**γ-straling** is:",
         options: [
           "Elektromagnetische golf — foton met hoge energie",
-          "Heliumkern",
-          "Elektron uit de kern",
-          "Stroom van neutronen"
+          "Deeltje — heliumkern uit 2 protonen en 2 neutronen",
+          "Deeltje — snel elektron dat uit de kern komt",
+          "Deeltjes — een stroom van snelle neutronen"
         ],
         answer: 0,
         wrongHints: [null, "Niet — dat is α.", "Niet — dat is β⁻.", "Niet — neutronen-straling bestaat wel maar is geen γ."],
@@ -223,7 +223,7 @@ const steps = [
           "Aantal radioactieve kernen N",
           "Massa van het hele monster",
           "Volume van het monster",
-          "Temperatuur"
+          "Temperatuur van het monster"
         ],
         answer: 0,
         wrongHints: [null, "Niet — alleen het radioactieve deel telt.", "Niet — volume irrelevant.", "Niet — radioactief verval is ONAFHANKELIJK van temperatuur (uniek!)."],
@@ -248,12 +248,12 @@ const steps = [
         q: "Bij **fissie** komt energie vrij omdat:",
         options: [
           "Eindproducten dichter bij Fe-piek liggen → hogere E_b/nucleon",
-          "Er extra protonen ontstaan",
-          "De temperatuur stijgt",
-          "Er meer neutronen zijn dan in de uitgangsstof"
+          "Eindproducten verder van Fe-piek liggen → lagere E_b/nucleon",
+          "De massa van de kernen neemt toe → E = mc² komt vrij",
+          "De temperatuur stijgt → kernen geven bewegingsenergie af"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — protonen worden niet extra gemaakt.", "Niet — T-stijging is gevolg, niet oorzaak.", "Niet — neutronen-overschot is bijproduct."],
+        wrongHints: [null, "Uranium ligt ver van ijzer af. Liggen de brokstukken dan dichter bij ijzer of verder ervan?", "Bij E = mc² komt energie vrij als er massa verdwijnt. Wordt de totale massa groter of kleiner?", "Niet — T-stijging is gevolg, niet oorzaak."],
         uitlegPad: {
           stappen: [
             { titel: "E_b/A-piek = Fe", tekst: "Bij U-235 (zware kern, lager E_b/A) → splijten naar middelzware kernen (hoger E_b/A). Massadefect groter → energie vrij volgens E=mc². Per splijting ~200 MeV — tientallen miljoenen keren zoveel als bij een chemische reactie." },
@@ -274,9 +274,9 @@ const steps = [
       },
       {
         q: "Wat is de **brandstof** van fusie in de zon?",
-        options: ["Waterstof → helium", "Uranium", "Koolstof", "Zuurstof"],
+        options: ["Waterstof → helium", "Uranium → barium", "Koolstof → zuurstof", "Helium → koolstof"],
         answer: 0,
-        wrongHints: [null, "Niet — uranium = fissie op aarde.", "Niet — koolstof is in zwaardere sterren.", "Niet — zuurstof is fusie-product, niet brandstof."],
+        wrongHints: [null, "Niet — uranium splitsen is fissie, zoals in een kerncentrale op aarde.", "Niet — koolstof fuseert pas in zwaardere sterren.", "Helium fuseert pas als een ster veel heter is, later in haar leven. Wat fuseert de zon nu?"],
         uitlegPad: {
           stappen: [{ titel: "p-p-keten", tekst: "4 ¹H → ⁴He + 2 e⁺ + 2 ν + ~26 MeV. Zon zet elke seconde ~6·10¹¹ kg waterstof in helium om (en verliest daarbij ~4·10⁹ kg massa als energie). Voldoende voor nog 5 miljard jaar." }],
           theorie: "In zwaardere sterren (rode reuzen) lopen ook koolstof- en zuurstof-fusies → produceren zwaardere elementen tot Fe.",
@@ -287,9 +287,9 @@ const steps = [
         q: "Voordeel **fusie** boven fissie?",
         options: [
           "Brandstof overvloedig + bijna geen langlevend radioactief afval",
-          "Werkt bij kamertemperatuur",
-          "Geen plasma nodig",
-          "Geen netto energie nodig"
+          "Werkt bij kamertemperatuur + eenvoudige, goedkope reactor",
+          "Geen plasma nodig + reactie is makkelijk te regelen",
+          "Geen opstartenergie nodig + reactie houdt zichzelf in stand"
         ],
         answer: 0,
         wrongHints: [null, "Niet — vereist 10⁷ K plasma.", "Niet — vereist juist plasma-toestand.", "Onjuist — er is altijd opstart-energie."],
@@ -302,12 +302,12 @@ const steps = [
         q: "Een fissie-reactor gebruikt **regelstaven** (cadmium/borium) om:",
         options: [
           "Neutronen te absorberen → kettingreactie regelen",
-          "Warmte op te slaan",
-          "Elektriciteit op te wekken",
-          "Radioactief afval te zuiveren"
+          "Warmte op te slaan → temperatuur kern regelen",
+          "Elektriciteit op te wekken → stroom naar het net",
+          "Radioactief afval te zuiveren → minder straling"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — warmte gaat naar stoom-systeem.", "Niet — dat is generator/turbine.", "Niet — niet de functie."],
+        wrongHints: [null, "Niet — warmte gaat naar stoom-systeem.", "Niet — dat is generator/turbine.", "Regelstaven zitten tijdens bedrijf midden in de reactorkern. Wat doen ze daar met de deeltjes die de kettingreactie gaande houden?"],
         uitlegPad: {
           stappen: [
             { titel: "Neutronen-absorbers", tekst: "Cadmium + borium hebben enorm grote neutron-absorptie-doorsnede. Staven in reactor inschuiven → meer absorptie → minder neutronen voor splijting → reactie zwakt af. Uitschuiven → meer neutronen → harder. **Volledig inschuiven = noodstop** (SCRAM)." },
@@ -327,9 +327,9 @@ const steps = [
     checks: [
       {
         q: "**Equivalente dosis** H = ?",
-        options: ["Q · D", "D / Q", "Q + D", "Alleen D"],
+        options: ["Q · D", "D / Q", "Q + D", "Q / D"],
         answer: 0,
-        wrongHints: [null, "Niet — Q komt MAAL D.", "Niet — geen optelling.", "Niet — Q-factor wel meenemen."],
+        wrongHints: [null, "Wordt de equivalente dosis kleiner als de straling gevaarlijker is (hogere Q)?", "Niet — geen optelling: Q heeft geen eenheid en D wel.", "Wordt de equivalente dosis kleiner als je meer energie per kilogram opneemt?"],
         uitlegPad: {
           stappen: [{ titel: "H = Q·D in sievert", tekst: "α heeft Q=20: dezelfde D (in Gy) geeft 20× zoveel schade als β of γ. Eenheid: J/kg, maar genoemd Sv om biologisch belang te markeren." }],
           niveaus: { basis: "H=Q·D.", simpeler: "Vermenigvuldigen voor schade-dosis.", nogSimpeler: "Q·D" },
@@ -370,12 +370,12 @@ const steps = [
         q: "Welk stralingstype is **biologisch het gevaarlijkst** binnen het lichaam (ingeademd/gegeten)?",
         options: [
           "α — alle energie in klein volume + Q=20",
-          "γ — gaat door alles heen",
-          "β — gemiddeld doordringend",
-          "Allemaal gelijk gevaarlijk"
+          "γ — dringt ver door en raakt veel organen",
+          "β — middelmatig doordringend, raakt meer cellen",
+          "Alle drie gelijk — alleen de dosis in Gy telt"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — γ buiten lichaam is gevaarlijker, maar binnen verspreidt energie meer.", "Niet — minder gevaarlijk dan α binnen lijf.", "Niet — α heeft veel hogere Q-factor."],
+        wrongHints: [null, "Niet — γ buiten lichaam is gevaarlijker, maar binnen verspreidt energie meer.", "Welk soort straling geeft al zijn energie af op een heel kort stukje weefsel?", "Telt de soort straling mee in de equivalente dosis? Denk aan de weegfactor Q."],
         uitlegPad: {
           stappen: [
             { titel: "α binnen = lokaal vernietigend", tekst: "α-deeltje deponeert ALLE energie in 50 μm weefsel → cel-DNA in nabij gebied wordt verwoest. Buiten lichaam stopt α door huid. Maar **ingeademd radon** of **gegeten polonium** → α-bron in long/maag-cellen → kankerrisico hoog. Q-factor 20 weerspiegelt deze schade." },
