@@ -62,9 +62,9 @@ const steps = [
     checks: [
       {
         q: "Welke **aanhef** is formeel? *(naam onbekend)*",
-        options: ["Dear Sir or Madam,", "Hey!", "Hi Tom,", "Yo!"],
+        options: ["Dear Sir or Madam,", "Dear Mr Smith,", "Hello Sir or Madam,", "Dear friend,"],
         answer: 0,
-        wrongHints: [null, "Informeel.", "Informeel + naam bekend.", "Slang."],
+        wrongHints: [null, "Die aanhef gebruik je als je de naam wél kent. Wat schrijf je als je geen naam hebt?", "'Hello' is te los voor een formele brief. Welk woord opent een formele aanhef?", "Je kent deze persoon niet. Past 'friend' dan in een formele brief?"],
       },
       {
         q: "Welke **sign-off** bij 'Dear Mr Smith'?",
@@ -86,15 +86,15 @@ const steps = [
       },
       {
         q: "*'Yours sincerely'* gebruik je in een formele brief als je ___?",
-        options: ["De naam van de ontvanger kent", "Niemand kent", "Boos bent", "Het over een vriend hebt"],
+        options: ["De naam van de ontvanger kent", "De naam van de ontvanger niet kent", "Een klacht wilt indienen", "Aan een goede vriend schrijft"],
         answer: 0,
-        wrongHints: [null, "Dan: 'Yours faithfully'.", "Niet relevant.", "Te informeel."],
+        wrongHints: [null, "Dan: 'Yours faithfully'.", "Ook een klacht kun je met 'Yours faithfully' afsluiten. Waar hangt de keuze dan van af?", "Aan een vriend schrijf je geen formele brief. Waar hangt de keuze tussen de formele afsluitingen van af?"],
       },
       {
         q: "Welke aanhef is **formeel**?",
-        options: ["Dear Sir or Madam,", "Hi there!", "Yo!", "Hey"],
+        options: ["Dear Sir or Madam,", "Hey Sir or Madam,", "Hi there, Mr Smith,", "Hello my dear friend,"],
         answer: 0,
-        wrongHints: [null, "Informeel.", "Slang.", "Informeel."],
+        wrongHints: [null, "'Hey' is spreektaal. Past dat bij een formele brief, ook met 'Sir or Madam' erachter?", "'Hi there' blijft informeel, ook met een achternaam erachter.", "'Hello' en 'my dear friend' schrijf je aan bekenden. Past dat in een formele brief?"],
       },
     ],
   },
@@ -121,7 +121,7 @@ const steps = [
         q: "Mag je **samentrekkingen** (I'm, don't) in informele e-mail?",
         options: ["Ja", "Nee", "Soms", "Alleen in formele"],
         answer: 0,
-        wrongHints: [null, "Wel.", "Vrijwel altijd.", "Tegenovergesteld."],
+        wrongHints: [null, "Denk aan een mailtje aan een vriend. Schrijf je dan 'I am not' of 'I'm not'?", "Is er in een informele mail een reden om ze te vermijden?", "In welk soort tekst vermijd je samentrekkingen juist?"],
       },
       {
         q: "Prompt: *'Reply to your friend's email.'* Welke toon?",
@@ -164,27 +164,27 @@ const steps = [
       },
       {
         q: "Wat **WEL meenemen** in samenvatting?",
-        options: ["Hoofdgedachte + 2-3 kernpunten", "Alle details", "Voorbeelden", "Anekdotes"],
+        options: ["Hoofdgedachte + 2-3 kernpunten", "Hoofdgedachte + alle voorbeelden", "Kernpunten + je eigen mening", "Inleiding + slot van de tekst"],
         answer: 0,
-        wrongHints: [null, "Te veel.", "Geen kernpunt.", "Geen kernpunt."],
+        wrongHints: [null, "Voorbeelden lichten een punt toe. Horen ze allemaal in een samenvatting?", "Met je mening voeg je iets toe aan de tekst. Doet een samenvatting dat?", "Begin en eind zijn niet altijd de kern. Wat moet de lezer na jouw samenvatting weten?"],
       },
       {
         q: "Hoe vermijd je **plagiaat**?",
-        options: ["Eigen woorden + zinsbouw", "Letterlijk overnemen", "Wijzig 1 woord", "Alleen latere alinea's overnemen"],
+        options: ["Eigen woorden + zinsbouw", "Een paar woorden vervangen", "Zinnen in andere volgorde", "Elk woord door een synoniem"],
         answer: 0,
-        wrongHints: [null, "Dat is juist plagiaat.", "Nog steeds plagiaat.", "Overnemen blijft overnemen, welke alinea ook."],
+        wrongHints: [null, "De zin blijft dan grotendeels van een ander. Is het dan jouw tekst?", "De zinnen zelf zijn nog steeds van een ander. Is dat genoeg?", "Het blijft dan dezelfde zin, alleen met andere woorden. Is het dan echt jouw tekst?"],
       },
       {
         q: "Een **samenvatting** is meestal hoeveel **korter** dan het origineel?",
-        options: ["1/3 tot 1/4 van origineel", "Even lang", "10× zo lang", "1 zin altijd"],
+        options: ["1/3 tot 1/4 van origineel", "3/4 tot 9/10 van origineel", "1/10 tot 1/20 van origineel", "2/3 tot 3/4 van origineel"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Soms wel, niet altijd."],
+        wrongHints: [null, "Dan haal je bijna niets weg. Wat laat je in een samenvatting juist weg?", "Zo kort kun je de kernpunten vaak niet meer noemen. Hoeveel kernpunten wil je kwijt?", "Dan is je samenvatting nog bijna zo lang als de tekst. Wat laat je weg?"],
       },
       {
         q: "In een Engelse opsomming gebruik je **bullet points** met...?",
-        options: ["• of - per item", "Geen tekens", "Alleen getallen", "Lange uitleg"],
+        options: ["Een • of - vóór elk item", "Een cijfer per item (1, 2, 3)", "Een komma na elk item", "Een volledige alinea per item"],
         answer: 0,
-        wrongHints: [null, "Wel tekens.", "Dat is voor een genummerde lijst.", "Geen lange uitleg per item."],
+        wrongHints: [null, "Cijfers gebruik je bij een genummerde lijst. Hoe ziet een opsomming met bullets eruit?", "Komma's horen bij een opsomming binnen een lopende zin. Hoe ziet een lijst onder elkaar eruit?", "Bullet points zijn juist kort. Hoeveel tekst hoort er bij één punt?"],
       },
     ],
   },
@@ -197,9 +197,9 @@ const steps = [
     checks: [
       {
         q: "Wat is in een essay de **conclusion**?",
-        options: ["Slot-alinea + samenvatting", "Eerste alinea", "Een voorbeeld", "Lijstje"],
+        options: ["Slot-alinea + samenvatting", "Eerste alinea + stelling", "Middenalinea + voorbeeld", "Bronnenlijst + verwijzingen"],
         answer: 0,
-        wrongHints: [null, "Dat is introduction.", "Geen alinea-type.", "Niet de structuur."],
+        wrongHints: [null, "Dat is de introduction. Waar in het essay staat de conclusion?", "Een middenalinea werkt een argument uit. Is dat de afsluiting?", "De bronnen staan helemaal achteraan, maar ze zijn geen alinea van je betoog."],
       },
       {
         q: "Welk woord = **mijn mening geven**?",
@@ -221,15 +221,15 @@ const steps = [
       },
       {
         q: "Welke structuur past bij **5-paragraaf essay**?",
-        options: ["Intro + 3 argumenten + conclusie", "1 lange alinea", "Alleen voor-argumenten", "Eind eerst"],
+        options: ["Intro + 3 argumenten + conclusie", "Intro + 4 argumenten, geen slot", "Intro + 2 voor- en 2 tegenargumenten", "Samenvatting + 3 argumenten + slot"],
         answer: 0,
-        wrongHints: [null, "Onleesbaar.", "Eenzijdig.", "Tegenovergesteld."],
+        wrongHints: [null, "Tel de onderdelen. Hoe sluit je een essay netjes af?", "Dat zijn ook vijf alinea's. Maar waar rond je het essay dan af?", "Een essay begint niet met een samenvatting. Waarmee open je?"],
       },
       {
         q: "In je **conclusie** doe je wat?",
-        options: ["Hoofdpunten samenvatten + slot-zin", "Nieuwe argumenten introduceren", "Niets schrijven", "Citaten herhalen"],
+        options: ["Hoofdpunten samenvatten + slot-zin", "Nieuwe argumenten introduceren", "Een nieuw voorbeeld uitwerken", "Je inleiding letterlijk herhalen"],
         answer: 0,
-        wrongHints: [null, "Niet in conclusie.", "Wel iets.", "Zwak."],
+        wrongHints: [null, "Een nieuw argument heeft uitleg nodig. Is daar aan het eind nog ruimte voor?", "Een voorbeeld hoort bij een argument in het middendeel. Wat doe je aan het eind?", "Letterlijk herhalen voegt niets toe. Wat moet de lezer aan het eind onthouden?"],
       },
     ],
   },
@@ -244,13 +244,13 @@ const steps = [
         q: "Wat is **'eventual'** in Engels?",
         options: ["Uiteindelijk", "Eventueel (Nederlandse betekenis)", "Snel", "Soms"],
         answer: 0,
-        wrongHints: [null, "Dat is 'possible'.", "Niet.", "Niet."],
+        wrongHints: [null, "Dat is 'possible'.", "Snel is in het Engels 'quick'. Lijkt 'eventual' daarop?", "Soms is in het Engels 'sometimes'. Lijkt 'eventual' daarop?"],
       },
       {
         q: "**It's** vs **Its** — verschil?",
-        options: ["It's = it is, Its = van het", "Geen verschil", "Beide samentrekking", "Beide bezittelijk"],
+        options: ["It's = it is, Its = van het", "It's = van het, Its = it is", "Beide = it is, alleen spelling", "Beide = van het, alleen spelling"],
         answer: 0,
-        wrongHints: [null, "Wel verschil.", "Niet beide.", "Niet beide."],
+        wrongHints: [null, "Waar staat de apostrof in 'it's' voor: een weggelaten letter of bezit?", "Kun je 'its' altijd vervangen door 'it is'? Probeer: 'The dog wags it is tail.'", "Kun je 'it's raining' lezen als 'van het raining'?"],
       },
       {
         q: "Welk voorzetsel? *'I am good ___ swimming.'*",
@@ -275,9 +275,9 @@ const steps = [
     checks: [
       {
         q: "Aanhef voor **formele brief** (naam onbekend)?",
-        options: ["Dear Sir or Madam,", "Hi!", "Dear friend,", "Hello!"],
+        options: ["Dear Sir or Madam,", "Hi Sir or Madam,", "Dear unknown friend,", "Hello, dear reader,"],
         answer: 0,
-        wrongHints: [null, "'Hi!' schrijf je aan een vriend — hoe begin je een brief aan een onbekende instantie?", "'Dear friend' klinkt vriendelijk, maar je ként deze persoon niet — wat is de vaste formule dan?", "'Hello!' is spreektaal — welke aanhef is de standaard als je geen naam weet?"],
+        wrongHints: [null, "'Hi' schrijf je aan een vriend, ook met 'Sir or Madam' erachter. Hoe begin je een brief aan een onbekende instantie?", "'Friend' klinkt vriendelijk, maar je kent deze persoon niet. Wat is de vaste formule dan?", "'Hello' is spreektaal. Welke aanhef is de standaard als je geen naam weet?"],
       },
       {
         q: "Sign-off bij **'Dear Mrs Brown'**?",
@@ -305,9 +305,9 @@ const steps = [
       },
       {
         q: "Een **samenvatting** is ... ?",
-        options: ["Korte versie in eigen woorden", "Letterlijke kopie", "Mening over de tekst", "Lijst voorbeelden"],
+        options: ["Korte versie in eigen woorden", "Kopie van de belangrijkste zinnen", "Korte versie met je eigen mening", "Uitgebreide uitleg van de tekst"],
         answer: 0,
-        wrongHints: [null, "Plagiat.", "Niet samenvatting.", "Niet samenvatting."],
+        wrongHints: [null, "Letterlijk overnemen is plagiaat, ook als het om de kern gaat. Wiens woorden gebruik je dan?", "Een mening hoort in een recensie. Voegt een samenvatting iets toe aan de tekst?", "Een uitleg maakt de tekst vaak langer. Wat doet een samenvatting met de lengte?"],
       },
       {
         q: "Welke is **goed gespeld**: 'definately' of 'definitely'?",

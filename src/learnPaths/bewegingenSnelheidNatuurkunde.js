@@ -80,7 +80,7 @@ const steps = [
         q: "Fietser rijdt **30 min** met **20 km/u**. **Afstand**?",
         options: ["10 km", "20 km", "600 km", "5 km"],
         answer: 0,
-        wrongHints: [null, "Vergeet het halve uur niet.", "Veel te veel.", "Te weinig."],
+        wrongHints: [null, "Vergeet het halve uur niet.", "Je rekende met 30 alsof het 30 uur was. Hoeveel uur is 30 minuten?", "Hoeveel km rijdt de fietser in een heel uur? En in een half uur dan?"],
         uitlegPad: {
           stappen: [
             { titel: "Tijd in uren", tekst: "30 min = 0,5 uur. Bij snelheid in km/u moet tijd ook in uren." },
@@ -134,7 +134,7 @@ const steps = [
         q: "**100 km/u** ≈ ... m/s?",
         options: ["~28", "~10", "~360", "~1000"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Kan een auto die 100 km/u rijdt elke seconde 360 meter afleggen? Moet het getal groter of kleiner worden?", "Veel te veel."],
+        wrongHints: [null, "10 m/s is 36 km/u. Rijdt een auto die 100 km/u gaat zo langzaam?", "Kan een auto die 100 km/u rijdt elke seconde 360 meter afleggen? Moet het getal groter of kleiner worden?", "1000 m/s is bijna drie keer zo snel als het geluid. Rijdt een auto zo hard?"],
       },
       {
         q: "Bij **wetenschap** gebruik je meestal welke eenheid?",
@@ -179,13 +179,13 @@ const steps = [
         q: "**Zwaartekrachtversnelling** (valversnelling) op aarde ongeveer?",
         options: ["~10 m/s²", "~1 m/s²", "~100 m/s²", "0 m/s²"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te veel.", "Wel zwaartekracht."],
+        wrongHints: [null, "Een steen die je 1 seconde laat vallen, gaat al ongeveer zo hard als een brommer. Past daar 1 m/s² bij?", "Zou een vallende steen na 1 seconde al 100 m/s (360 km/u) gaan?", "Bij 0 m/s² zou een losgelaten bal blijven hangen. Gebeurt dat op aarde?"],
       },
       {
         q: "Welke factor maakt **remweg** veel langer?",
-        options: ["Snelheid", "Lengte van de auto", "Weersomstandigheden alleen", "Gewicht van de bestuurder"],
+        options: ["Snelheid van de auto", "Reactietijd van de bestuurder", "Afstand tot je voorligger", "Vermogen van de motor"],
         answer: 0,
-        wrongHints: [null, "Remt een lange auto slechter dan een korte? De remmen doen hetzelfde werk.", "Speelt mee maar niet kwadratisch.", "Een paar kilo meer of minder in de auto maakt bijna geen verschil. Wat wel?"],
+        wrongHints: [null, "De reactietijd hoort bij de afstand vóórdat je gaat remmen. Wat bepaalt hoe lang het remmen zelf duurt?", "Je volgafstand bepaalt of je op tijd stilstaat, maar verandert die hoe lang het remmen zelf duurt?", "Een sterke motor helpt bij optrekken, niet bij remmen. Wat telt tijdens het remmen?"],
       },
     ],
   },
@@ -210,9 +210,9 @@ const steps = [
       },
       {
         q: "Hoe bereken je **snelheid** uit een afstand-tijd-grafiek?",
-        options: ["De helling van de lijn", "De lengte van de lijn", "De waarde op de y-as", "De waarde op de x-as"],
+        options: ["De helling van de lijn", "De oppervlakte onder de lijn", "De waarde op de y-as", "De waarde op de x-as"],
         answer: 0,
-        wrongHints: [null, "Zegt hoe lang een getekende lijn is iets over hoe snel je gaat?", "Dat is afstand.", "Dat is tijd."],
+        wrongHints: [null, "De oppervlakte onder de lijn gebruik je bij een snelheid-tijd-grafiek. Wat lees je af bij een afstand-tijd-grafiek?", "Dat is afstand.", "Dat is tijd."],
       },
       {
         q: "In een **snelheid-tijd-grafiek**: oppervlakte onder lijn = ?",
@@ -231,21 +231,21 @@ const steps = [
     checks: [
       {
         q: "**100 km/u** op snelweg in NL — wanneer?",
-        options: ["Overdag", "'s Nachts", "Alleen in het weekend", "Alleen bij regen"],
+        options: ["Overdag, van 6 tot 19 uur", "'s Nachts, van 19 tot 6 uur", "In de winter, van november tot maart", "In het weekend, op zaterdag en zondag"],
         answer: 0,
-        wrongHints: [null, "Is het 's nachts druk of rustig op de snelweg? Wanneer is een lagere snelheid dan het meest nodig?", "De regel hangt af van het tijdstip, niet van de dag van de week.", "De regel hangt af van het tijdstip, niet van het weer."],
+        wrongHints: [null, "Is het 's nachts druk of rustig op de snelweg? Wanneer is een lagere snelheid dan het meest nodig?", "De regel hangt af van het tijdstip op de dag, niet van het seizoen.", "De regel hangt af van het tijdstip op de dag, niet van de dag van de week."],
       },
       {
         q: "Snelheid **geluid in lucht**?",
         options: ["~343 m/s", "~100 m/s", "~1.000 m/s", "~10.000 m/s"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te veel.", "Veel te veel."],
+        wrongHints: [null, "Bij onweer op 1 km afstand hoor je de donder na ongeveer 3 seconden. Hoeveel meter per seconde is dat?", "Bij onweer op 1 km afstand hoor je de donder na ongeveer 3 seconden, niet na 1 seconde. Wat betekent dat voor de snelheid?", "Zo snel gaat geluid zelfs niet door staal. Door lucht gaat het veel langzamer."],
       },
       {
         q: "**Lichtsnelheid**?",
         options: ["300.000 km/s", "300 km/s", "30.000 km/s", "Oneindig"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te weinig.", "Niet oneindig."],
+        wrongHints: [null, "Licht van de maan (384.000 km ver) is in ruim 1 seconde hier. Past 300 km/s daarbij?", "Licht van de maan (384.000 km ver) is in ruim 1 seconde hier. Past 30.000 km/s daarbij?", "Licht van de zon doet er ruim 8 minuten over om de aarde te bereiken. Kan het dan oneindig snel zijn?"],
       },
       {
         q: "ISS *(ruimtestation)* draait in **~90 min** rond aarde — snelheid?",
@@ -272,13 +272,13 @@ const steps = [
         q: "**60 km in 30 min**. Snelheid?",
         options: ["120 km/u", "30 km/u", "60 km/u", "2 km/u"],
         answer: 0,
-        wrongHints: [null, "Niet — 30 minuten is geen 30 uur. Hoeveel uur is 30 min?", "Niet — de 60 km is niet in een heel uur gereden.", "Te weinig."],
+        wrongHints: [null, "Niet — 30 minuten is geen 30 uur. Hoeveel uur is 30 min?", "Niet — de 60 km is niet in een heel uur gereden.", "Je deelde 60 door 30. Maar km/u gaat over kilometers per uur, niet per minuut."],
       },
       {
         q: "**5 m/s** in km/u?",
         options: ["18 km/u", "5 km/u", "50 km/u", "1,4 km/u"],
         answer: 0,
-        wrongHints: [null, "Geen omrekening.", "Te veel.", "Wordt het getal in km/u groter of kleiner dan in m/s?"],
+        wrongHints: [null, "Geen omrekening.", "Je vermenigvuldigde met 10. Met welk getal reken je m/s om naar km/u?", "Wordt het getal in km/u groter of kleiner dan in m/s?"],
       },
       {
         q: "**Versnelling-eenheid**?",
@@ -296,7 +296,7 @@ const steps = [
         q: "**Zwaartekracht** versnelling aarde?",
         options: ["~10 m/s²", "~5 m/s²", "~100 m/s²", "0 m/s²"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te veel.", "Wel zwaartekracht."],
+        wrongHints: [null, "Een steen die je 1 seconde laat vallen, gaat al ongeveer zo hard als een brommer (36 km/u). Hoeveel m/s is dat?", "Zou een vallende steen na 1 seconde al 100 m/s (360 km/u) gaan?", "Bij 0 m/s² zou een losgelaten bal blijven hangen. Gebeurt dat op aarde?"],
       },
       {
         q: "**Versnelling 0** betekent?",
@@ -308,7 +308,7 @@ const steps = [
         q: "Formule **afstand = ?** (bij constante snelheid)",
         options: ["snelheid × tijd", "snelheid + tijd", "snelheid / tijd", "tijd / snelheid"],
         answer: 0,
-        wrongHints: [null, "Optellen werkt niet.", "Tegenovergesteld.", "Reken het na: 20 km/u gedurende 2 uur. Kom je dan op 0,1 km?"],
+        wrongHints: [null, "Kun je km/u en uren zomaar optellen? Welke eenheid krijg je dan?", "Reken het na: 20 km/u gedurende 2 uur. Kom je dan op 10 km?", "Reken het na: 20 km/u gedurende 2 uur. Kom je dan op 0,1 km?"],
       },
       {
         q: "**Open vraag**: bereken **afstand** bij 30 km/u en 2 uur rijden. Typ alleen getal in km.",

@@ -147,15 +147,15 @@ const steps = [
       },
       {
         q: "Wat was **Pax Romana**?",
-        options: ["Een lange periode van vrede", "Een Romeinse wet", "Een Romeinse straf", "Een Romeinse god"],
+        options: ["Een lange periode van vrede", "Het Romeinse burgerrecht", "Een strenge Romeinse wet", "Een Romeins legeronderdeel"],
         answer: 0,
-        wrongHints: [null, "Geen wet.", "Geen straf.", "Geen god."],
+        wrongHints: [null, "Burgerrecht heette civitas. Wat betekent het Latijnse woord 'pax'?", "Het is geen wet. Wat betekent het Latijnse woord 'pax'?", "Een legeronderdeel heette legioen. Wat betekent 'pax'?"],
       },
       {
         q: "Wat is **'brood en spelen'**?",
-        options: ["Volk rustig houden met eten en spelen", "Een Romeins gerecht", "Een kinderspel", "Een religieus feest"],
+        options: ["Volk rustig houden met eten en spelen", "Soldaten belonen met eten en vrije dagen", "Een dagprogramma in het Colosseum", "Een religieus feest voor de oogstgod"],
         answer: 0,
-        wrongHints: [null, "Niet één gerecht — het is een politiek begrip.", "Niet alleen spel.", "Niet alleen feest."],
+        wrongHints: [null, "Voor wie waren het gratis graan en de spelen bedoeld?", "Het is geen dagprogramma, maar een politiek begrip.", "Het is geen godsdienstig feest, maar een politiek begrip."],
       },
       {
         q: "Waarheen verplaatste Constantijn de hoofdstad?",
@@ -174,15 +174,15 @@ const steps = [
     checks: [
       {
         q: "Wat is de **Limes**?",
-        options: ["Grens van het Romeinse Rijk", "Een Romeins fort", "Een wapen", "Een god"],
+        options: ["Grens van het Romeinse Rijk", "Een Romeins fort aan de Rijn", "Een Romeinse werpspeer", "Een Romeinse waterleiding"],
         answer: 0,
-        wrongHints: [null, "Castellum = fort.", "Geen wapen.", "Geen god."],
+        wrongHints: [null, "Een fort heette castellum — de Limes is meer dan één fort.", "Een werpspeer heette pilum.", "Een waterleiding heette aquaduct."],
       },
       {
         q: "Welk volk leefde in **Nederland in Romeinse tijd**?",
-        options: ["Bataven en Friezen", "Vikingen", "Spanjaarden", "Mongolen"],
+        options: ["Bataven en Friezen", "Vikingen en Noormannen", "Hunnen en Goten", "Grieken en Etrusken"],
         answer: 0,
-        wrongHints: [null, "Vikingen kwamen veel later.", "Niet in Romeinse tijd.", "Verkeerd continent."],
+        wrongHints: [null, "Vikingen kwamen veel later (vanaf ongeveer 800).", "Die trokken door Oost- en Zuid-Europa, niet door Nederland.", "Die woonden rond de Middellandse Zee."],
       },
       {
         q: "Welke Nederlandse stad is **gesticht door Romeinen** rond 19 v.Chr.?",
@@ -192,9 +192,9 @@ const steps = [
       },
       {
         q: "Wat zijn **aquaducten**?",
-        options: ["Romeinse waterleidingen", "Romeinse schepen", "Soort wapens", "Tempels"],
+        options: ["Romeinse waterleidingen", "Romeinse badhuizen", "Romeinse rioleringen", "Romeinse bruggen voor wegen"],
         answer: 0,
-        wrongHints: [null, "Schepen heten anders.", "Geen wapens.", "Tempels zijn aparte gebouwen."],
+        wrongHints: [null, "Badhuizen heetten thermen.", "Een riool voert vuil water af; dat heette cloaca.", "Ze lijken op bruggen, maar wat ging er bovenover?"],
       },
     ],
   },
@@ -213,9 +213,9 @@ const steps = [
       },
       {
         q: "Welke **volken** vielen het Westromeinse Rijk binnen?",
-        options: ["Goten, Vandalen, Hunnen, Franken", "Egyptenaren", "Grieken", "Maya's"],
+        options: ["Goten, Vandalen, Hunnen, Franken", "Egyptenaren, Perzen, Arabieren", "Grieken, Macedoniërs, Thraciërs", "Vikingen, Magyaren, Mongolen"],
         answer: 0,
-        wrongHints: [null, "Romeinen veroverden Egypte juist eerder.", "Grieken al deel rijk.", "Andere continent."],
+        wrongHints: [null, "Die dreigden vooral in het oosten, en de Arabieren kwamen pas eeuwen later.", "Die woonden al binnen het rijk.", "Die vielen pas eeuwen later Europa binnen."],
       },
       {
         q: "Wie was de leider van de **Hunnen** (~450 n.Chr.)?",
@@ -225,9 +225,9 @@ const steps = [
       },
       {
         q: "Welk **deel van Rome** bleef nog 1000 jaar bestaan?",
-        options: ["Oostromeinse / Byzantijnse Rijk", "West-Rome", "Geen", "Egypte"],
+        options: ["Het Oostromeinse Rijk", "Het Westromeinse Rijk", "Het Romeinse Brittannië", "Het Romeinse Egypte"],
         answer: 0,
-        wrongHints: [null, "Viel in 476.", "Wel — kijk naar de splitsing van 395.", "Geen Romeinse deelstaat meer."],
+        wrongHints: [null, "Viel in 476.", "De Romeinen verlieten Brittannië al rond 410.", "Egypte werd in de 7e eeuw door de Arabieren veroverd."],
       },
     ],
   },
@@ -240,9 +240,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **Romaanse taal**?",
-        options: ["Taal die van het Latijn afstamt", "Romaanse architectuur", "Een Roman", "Romeinse stijl"],
+        options: ["Taal die van het Latijn afstamt", "Taal die van het Grieks afstamt", "Taal die van het Germaans afstamt", "Taal die van het Keltisch afstamt"],
         answer: 0,
-        wrongHints: [null, "Stijl, geen taal.", "Boek-soort, niet taal.", "Stijl, niet taal."],
+        wrongHints: [null, "Welke taal spraken de Romeinen?", "Germaanse talen zijn bijvoorbeeld Nederlands en Duits.", "Keltische talen zijn bijvoorbeeld Iers en Welsh."],
       },
       {
         q: "Welk **gebouw** is een Romeinse arena in Rome?",
@@ -254,7 +254,7 @@ const steps = [
         q: "Wat is **MMXXVI** in Romeinse cijfers?",
         options: ["2026", "1926", "2126", "2226"],
         answer: 0,
-        wrongHints: [null, "Kijk goed naar de M's en X's — welk jaar representeren ze samen?", "Te veel.", "Te veel."],
+        wrongHints: [null, "Kijk goed naar de M's en X's — welk jaar representeren ze samen?", "Zie je een C (100) in MMXXVI?", "Zie je CC (200) in MMXXVI?"],
         uitlegPad: {
           stappen: [
             { titel: "Splits in delen", tekst: "MM = 1000 + 1000 = 2000. XX = 10 + 10 = 20. VI = 5 + 1 = 6." },

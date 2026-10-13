@@ -58,9 +58,9 @@ const steps = [
     checks: [
       {
         q: "Wat doe je **eerst** bij een wiskunde-vraag?",
-        options: ["Rustig lezen + onderstrepen", "Direct rekenen", "Rekenmachine pakken", "Antwoord gokken"],
+        options: ["De vraag rustig lezen en onderstrepen", "Een schatting van het antwoord maken", "De formule op het formuleblad opzoeken", "Meteen de berekening opschrijven"],
         answer: 0,
-        wrongHints: [null, "Zonder lezen = fouten.", "Eerst snappen wat vraag is.", "Geen strategie."],
+        wrongHints: [null, "Schatten is slim, maar wat moet je weten voordat je iets kunt schatten?", "Hoe weet je welke formule je nodig hebt als je de vraag nog niet goed kent?", "Wat ga je uitrekenen als je nog niet precies weet wat er gevraagd wordt?"],
       },
       {
         q: "Vraag: *'Wat betaalt hij na **30% korting** op €50?'* Wat reken je?",
@@ -70,9 +70,9 @@ const steps = [
       },
       {
         q: "Waarom **schat** je voor je rekent?",
-        options: ["Om te checken of je antwoord redelijk is", "Om sneller te zijn", "Om vragen over te slaan", "Niet nodig"],
+        options: ["Om te checken of je antwoord redelijk is", "Om sneller klaar te zijn met rekenen", "Om de rekenmachine niet te hoeven gebruiken", "Om te weten welke formule je moet kiezen"],
         answer: 0,
-        wrongHints: [null, "Niet primair doel.", "Niet.", "Wel nuttig."],
+        wrongHints: [null, "Schatten is juist een extra stap. Wat win je ermee, als het geen tijd is?", "Na het schatten reken je toch nog precies uit, vaak met de rekenmachine. Waar gebruik je de schatting dan voor?", "De formule kies je door de vraag goed te lezen. Wat doe je na het rekenen met je schatting?"],
       },
       {
         q: "Vraag vraagt **oppervlak in cm²** — wat schrijf je?",
@@ -82,15 +82,15 @@ const steps = [
       },
       {
         q: "Wat onderstreep je in een examenvraag **als eerste**?",
-        options: ["De gegeven getallen + wat gevraagd wordt", "Alle woorden", "Niets", "Alleen het vraagteken"],
+        options: ["De gegeven getallen + wat gevraagd wordt", "De moeilijke woorden die je niet kent", "De eerste zin van elke alinea", "Alle woorden die vetgedrukt staan"],
         answer: 0,
-        wrongHints: [null, "Te veel — focus.", "Markeren is juist belangrijk.", "Te beperkt."],
+        wrongHints: [null, "Moeilijke woorden zijn lastig, maar heb je die nodig om te kunnen rekenen?", "Dat is een truc voor leesteksten. Wat heb je bij een rekenvraag nodig om te kunnen beginnen?", "Vetgedrukte woorden vallen al op. Wat moet jij zelf nog terugvinden tijdens het rekenen?"],
       },
       {
         q: "*'Geef je antwoord in 1 decimaal'* — wat betekent **1 decimaal**?",
-        options: ["1 cijfer na de komma", "1 cijfer voor de komma", "Alleen 1 getal", "Geen komma"],
+        options: ["1 cijfer na de komma", "1 cijfer voor de komma", "Afronden op een heel getal", "Afronden op tientallen"],
         answer: 0,
-        wrongHints: [null, "Decimalen staan juist ná de komma.", "Onvolledig.", "Wel met komma."],
+        wrongHints: [null, "Decimalen staan juist ná de komma.", "Bij een heel getal staat er niets achter de komma. Hoeveel cijfers vraagt de opgave daar?", "Tientallen staan vóór de komma. Waar staan decimalen?"],
       },
     ],
   },
@@ -105,13 +105,13 @@ const steps = [
         q: "**3 + 4 × 5** = ?",
         options: ["23", "35", "27", "20"],
         answer: 0,
-        wrongHints: [null, "Met haakjes (3+4)×5.", "Niet.", "Alleen 4×5."],
+        wrongHints: [null, "Je rekende eerst 3 + 4. Wat gaat in de rekenvolgorde vóór optellen?", "Reken stap voor stap: welk deel van de som doe je als eerste?", "4 × 5 = 20 klopt. Ben je de 3 niet vergeten?"],
       },
       {
         q: "**(3 + 4) × 5** = ?",
         options: ["35", "23", "27", "20"],
         answer: 0,
-        wrongHints: [null, "Zonder haakjes.", "Niet.", "Alleen 4×5."],
+        wrongHints: [null, "Je rekende eerst 4 × 5. Wat zeggen de haakjes over de volgorde?", "Wat staat er tussen de haakjes, en wat doe je daarna met de 5?", "4 × 5 = 20, maar de 3 hoort ook bij de haakjes. Wat doe je daarmee?"],
       },
       {
         q: "**5 − (−3)** = ?",
@@ -127,9 +127,9 @@ const steps = [
       },
       {
         q: "Bij **rekensom met haakjes**: wat doe je **eerst**?",
-        options: ["Wat tussen de haakjes staat", "Vermenigvuldigen", "Delen", "Optellen"],
+        options: ["Wat tussen de haakjes staat", "Eerst alle vermenigvuldigingen", "Eerst alle delingen", "Gewoon van links naar rechts"],
         answer: 0,
-        wrongHints: [null, "Vermenigvuldigen gaat vóór optellen — maar krijgt iets anders in de som niet áltijd de allerhoogste voorrang?", "Delen doe je tegelijk met vermenigvuldigen — maar er is iets dat nog eerder aan de beurt is. Wat springt eruit?", "Optellen komt juist als laatste in de rekenvolgorde — is dat echt het éérste wat je doet?"],
+        wrongHints: [null, "Vermenigvuldigen gaat vóór optellen — maar krijgt iets anders in de som niet áltijd de allerhoogste voorrang?", "Delen doe je tegelijk met vermenigvuldigen — maar er is iets dat nog eerder aan de beurt is. Wat springt eruit?", "Van links naar rechts werk je bij bewerkingen die even sterk zijn. Is er iets in de som dat voorrang krijgt?"],
       },
       {
         q: "**Open vraag**: hoeveel is **(3 + 4) × 2**? Typ alleen het getal.",
@@ -149,9 +149,9 @@ const steps = [
     checks: [
       {
         q: "Wanneer is **rekenmachine NIET nodig**?",
-        options: ["Eenvoudige tafel zoals 7×8", "Lange getallen", "Wortels", "Goniometrie"],
+        options: ["Eenvoudige tafel zoals 7×8", "Rekenen met lange getallen", "Een wortel zoals √17 uitrekenen", "Sinus of cosinus van een hoek"],
         answer: 0,
-        wrongHints: [null, "Getallen met veel cijfers zijn lastig uit het hoofd — helpt een rekenmachine daar juist niet bij?", "Een wortel zoals √324 krijg je bijna niet uit je hoofd — heb je daar geen rekenmachine voor nodig?", "Sinus, cosinus en tangens reken je niet zomaar in je hoofd uit — komt de rekenmachine daar juist niet van pas?"],
+        wrongHints: [null, "Getallen met veel cijfers zijn lastig uit het hoofd — helpt een rekenmachine daar juist niet bij?", "Een wortel zoals √17 kun je niet uit je hoofd uitrekenen. Heb je daar geen rekenmachine voor nodig?", "Sinus, cosinus en tangens reken je niet zomaar in je hoofd uit — komt de rekenmachine daar juist niet van pas?"],
       },
       {
         q: "Veiligste manier om **25% van X** te rekenen?",
@@ -167,21 +167,21 @@ const steps = [
       },
       {
         q: "Wat doe je met **tussenstappen** in lange berekening?",
-        options: ["Op papier opschrijven", "Alleen in rekenmachine", "Vergeten", "Niet doen"],
+        options: ["Meteen op papier opschrijven", "In je rekenmachine laten staan", "Onthouden en meteen doorrekenen", "Pas aan het eind netjes noteren"],
         answer: 0,
-        wrongHints: [null, "Niet zichtbaar later.", "Slecht idee.", "Wel doen."],
+        wrongHints: [null, "Kan de nakijker zien wat er in je rekenmachine stond? En jij nog, na de volgende som?", "Bij een lange som raak je makkelijk een getal kwijt. Waar staat het veilig?", "Weet je aan het eind nog precies welke getallen je onderweg had?"],
       },
       {
         q: "De **DEL**-knop (wissen) op een rekenmachine wist ___?",
-        options: ["Laatst ingevoerde teken", "Hele som", "Geheugen", "Niets"],
+        options: ["Het laatst ingevoerde teken", "De hele som op het scherm", "Het opgeslagen geheugen", "Het laatste antwoord (Ans)"],
         answer: 0,
-        wrongHints: [null, "Daarvoor 'AC'/'C'.", "Daarvoor 'M-clear'.", "Wel iets."],
+        wrongHints: [null, "Daarvoor gebruik je de knop AC of C. DEL werkt kleiner.", "Daarvoor is een aparte geheugenknop, zoals M-clear.", "Het vorige antwoord blijft bewaard onder Ans. Wat verdwijnt er bij DEL van je scherm?"],
       },
       {
         q: "Bij **wortel-berekening** op de calculator: druk je eerst √ of getal?",
-        options: ["Dat hangt af van je model — probeer het vooraf uit", "Doet er niet toe, elk model rekent het goed", "Alleen getal", "Alleen √"],
+        options: ["Verschilt per model: vooraf uitproberen", "Maakt niet uit, het antwoord is gelijk", "Eerst het getal, daarna de wortelknop", "Eerst de wortelknop, daarna het getal"],
         answer: 0,
-        wrongHints: [null, "Doet er WEL toe.", "Mist de wortel-handeling.", "Mist het getal."],
+        wrongHints: [null, "Een verkeerde volgorde geeft een foutmelding of een ander getal. Hoe voorkom je dat?", "Werkt elke rekenmachine op dezelfde manier? Hoe weet je wat jouw model wil?", "Werkt elke rekenmachine op dezelfde manier? Hoe weet je wat jouw model wil?"],
       },
     ],
   },
@@ -196,7 +196,7 @@ const steps = [
         q: "**Pythagoras** geldt voor welke driehoek?",
         options: ["Rechthoekige", "Gelijkzijdige", "Stompe", "Elke driehoek"],
         answer: 0,
-        wrongHints: [null, "Voor gelijkzijdige andere regels.", "Niet hier.", "Niet — alleen rechthoekige."],
+        wrongHints: [null, "Bij een gelijkzijdige driehoek zijn alle zijden even lang. Klopt a² + b² = c² dan?", "Bij een stompe hoek is de langste zijde te lang voor a² + b² = c². Welke hoek moet er in de driehoek zitten?", "Probeer een gelijkzijdige driehoek met zijden 1: is 1² + 1² gelijk aan 1²?"],
       },
       {
         q: "Formule oppervlakte **driehoek**?",
@@ -252,9 +252,9 @@ const steps = [
       },
       {
         q: "Wat doe je bij **5+ min op 1 vraag vastlopen**?",
-        options: ["Markeer + verder, later terug", "Blijf zitten tot opgelost", "Sla helemaal over", "Gok meteen"],
+        options: ["Markeer + verder, later terug", "Nog 5 minuten extra doorzetten", "De surveillant om een tip vragen", "Overslaan en niet meer terugkomen"],
         answer: 0,
-        wrongHints: [null, "Verspilt te veel tijd.", "Wel later terugkomen.", "Eerst even nadenken."],
+        wrongHints: [null, "Er wachten nog veel andere vragen. Wat kun je in die 5 minuten ook doen?", "De surveillant mag alleen helpen bij iets onduidelijks, zoals een typfout, niet bij de som zelf.", "Misschien heb je aan het eind nog tijd. Laat je die punten dan zomaar liggen?"],
       },
       {
         q: "Bij **meerkeuze** en niet zeker — wat doe je?",
@@ -264,9 +264,9 @@ const steps = [
       },
       {
         q: "Wat doe je in de laatste **5 minuten**?",
-        options: ["Antwoorden controleren", "Nieuwe vraag starten", "Stoppen", "Speed-typen"],
+        options: ["Je antwoorden nog eens controleren", "Nog een nieuwe opgave beginnen", "Je kladpapier netjes overschrijven", "Inleveren en alvast vertrekken"],
         answer: 0,
-        wrongHints: [null, "Te krap.", "Niet als er tijd is.", "Niet typen — schrijven."],
+        wrongHints: [null, "Lukt een hele nieuwe opgave in 5 minuten? Wat levert in die tijd meer op?", "Netjes schrijven levert geen extra punten op. Waarmee voorkom je nog puntenverlies?", "Je hebt nog 5 minuten. Waarmee kun je nog fouten uit je examen halen?"],
       },
       {
         q: "Een vraag is van **3 punten** en je hebt **120 min voor 60 punten** — gem **per punt**?",
@@ -276,9 +276,9 @@ const steps = [
       },
       {
         q: "**Halverwege examen** moet je ongeveer ___ van vragen klaar hebben?",
-        options: ["Helft", "Kwart", "Driekwart", "Alles"],
+        options: ["Helft", "Kwart", "Driekwart", "Een derde"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te ruim.", "Onmogelijk."],
+        wrongHints: [null, "Met een kwart halverwege heb je straks te weinig tijd over. Hoe verdeel je de tijd eerlijk?", "Driekwart halverwege is erg snel. Werk je dan nog zorgvuldig?", "Met een derde halverwege loop je achter. Hoeveel blijft er dan over voor de tweede helft?"],
       },
     ],
   },

@@ -35,9 +35,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **mediawijsheid**?",
-        options: ["Kritisch omgaan met alle media", "Heel veel media kijken", "Tegen media zijn", "Telefoon weg"],
+        options: ["Kritisch omgaan met alle media", "Zo min mogelijk media gebruiken", "Snel en handig met apps werken", "Vooral nieuws van bekende kranten lezen"],
         answer: 0,
-        wrongHints: [null, "Niet doel.", "Te negatief.", "Niet de oplossing."],
+        wrongHints: [null, "Minder kijken kan verstandig zijn, maar ben je dan ook wijs met wat je wél ziet?", "Handig zijn met apps is een digitale vaardigheid. Snap je daardoor ook wat je ziet?", "Ook bekende kranten maken fouten. Is één soort bron genoeg?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is mediawijsheid?", tekst: "**Mediawijsheid** = bewust + kritisch omgaan met **alle media** (TV, internet, social media, krant, radio). Je weet hoe ze werken, wat ze doen, en hoe je ze veilig gebruikt." },
@@ -63,19 +63,19 @@ const steps = [
       },
       {
         q: "Wat is **satire**?",
-        options: ["Grappige nep — niet serieus bedoeld", "Echt nieuws", "Reclame", "Mening"],
+        options: ["Grappige nep — niet serieus bedoeld", "Nepnieuws — bedoeld om te misleiden", "Reclame — verkopen met een grap", "Column — iemands eigen mening"],
         answer: 0,
-        wrongHints: [null, "Feiten worden grappig overdreven — niet bedoeld als feit.", "Geen verkoopdoel — een lach.", "Een columnstuk is iets anders dan een grap-stuk."],
+        wrongHints: [null, "Satire is ook niet echt, maar wil het dat je het gelooft?", "Geen verkoopdoel — een lach.", "Een columnstuk is iets anders dan een grap-stuk."],
       },
       {
         q: "Hoeveel uur per dag zitten kinderen en tieners gemiddeld op een scherm?",
         options: ["4-7 uur", "1 uur", "30 min", "12+ uur"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "Tel school, telefoon, gamen en tv eens bij elkaar op — kom je dan op maar 1 uur?", "Alleen al je telefoon gebruik je waarschijnlijk langer dan dat.", "Dan blijft er bijna geen tijd over voor school en slapen."],
       },
       {
         q: "Welke is **geen** media?",
-        options: ["Een glas water", "Krant", "TikTok", "Radio"],
+        options: ["Een glas water", "Een krant", "De app TikTok", "De radio"],
         answer: 0,
         wrongHints: [null, "Drukmedium — letters op papier.", "Sociale-media-app met video's.", "Audiomedium — uitzendingen via lucht."],
       },
@@ -88,9 +88,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **desinformatie**?",
-        options: ["Opzettelijk onjuiste info om te misleiden", "Per ongeluk onjuist", "Mening", "Reclame"],
+        options: ["Opzettelijk onjuiste info om te misleiden", "Onjuiste info die per ongeluk gedeeld wordt", "Een eerlijke mening in een column of vlog", "Betaalde info om een product te verkopen"],
         answer: 0,
-        wrongHints: [null, "Dat is mis-informatie.", "Niet desinformatie.", "Aparte categorie."],
+        wrongHints: [null, "Dat is mis-informatie.", "Een mening mag, ook als je het er niet mee eens bent. Is dat misleiden?", "Reclame wil je iets verkopen — is dat de kern van desinformatie?"],
         uitlegPad: {
           stappen: [
             { titel: "Verschil mis- en desinformatie", tekst: "**Mis-informatie** = per ONGELUK onjuist (je dacht dat het klopte, maar nee). **Des-informatie** = met **OPZET** onjuiste info, om mensen bewust te MISLEIDEN." },
@@ -117,9 +117,9 @@ const steps = [
       },
       {
         q: "Hoe **check** je een nieuwsbericht?",
-        options: ["Meerdere bronnen vergelijken", "Eerst delen", "1 keer lezen", "Alleen kop kijken"],
+        options: ["Meerdere bronnen vergelijken", "Kijken hoeveel likes het heeft", "Kijken of de kop betrouwbaar klinkt", "Vragen of je vrienden het geloven"],
         answer: 0,
-        wrongHints: [null, "Eerst checken.", "Niet zomaar geloven.", "Vaak misleidend."],
+        wrongHints: [null, "Veel likes betekent veel aandacht — maar is het daarom waar?", "Een kop kan heel betrouwbaar klinken en toch misleiden.", "Je vrienden kunnen hetzelfde nepbericht gezien hebben. Wat zegt hun mening dan?"],
       },
       {
         q: "Welke is **betrouwbaar** in NL?",
@@ -129,9 +129,9 @@ const steps = [
       },
       {
         q: "Wat is **clickbait**?",
-        options: ["Misleidende kop voor clicks", "Echt nieuws", "Saaie kop", "Reclame"],
+        options: ["Een misleidende kop om je te laten klikken", "Een virus dat je via een link binnenhaalt", "Een advertentie tussen andere berichten", "Een kop die het hele verhaal samenvat"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Tegenovergesteld.", "Soms wel, primair clickbait."],
+        wrongHints: [null, "Dat is malware. Bij clickbait gaat het om de tekst die je ziet — wat doet die met je?", "Er zit vaak reclame achter, maar waar gaat het woord 'bait' (lokaas) over?", "Hoef je dan nog te klikken?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is clickbait?", tekst: "**Clickbait** (Engels voor 'klik-aas') is een **misleidende kop** die je verleidt om te klikken — maar het artikel zelf is teleurstellend, saai, of niet over de belofte." },
@@ -170,21 +170,21 @@ const steps = [
       },
       {
         q: "Wat is een **filterbubbel**?",
-        options: ["Zelfde meningen + content steeds zien", "Reclame-blok", "Filter op camera", "Privacy-instellingen"],
+        options: ["Zelfde meningen + content steeds zien", "Een filter dat nepnieuws tegenhoudt", "Een fotofilter dat je gezicht verandert", "Instellingen die je privacy beschermen"],
         answer: 0,
-        wrongHints: [null, "Niet bubbel.", "Niet.", "Niet hetzelfde."],
+        wrongHints: [null, "Een filterbubbel kies je niet zelf en hij houdt geen nep tegen. Wat doet hij wel?", "Het woord 'filter' klopt, maar het gaat niet om foto's.", "Privacy gaat over wat anderen van jou zien. Waar gaat een filterbubbel over?"],
       },
       {
         q: "Hoe **schermtijd** verminderen?",
-        options: ["App-limieten + notificaties uit", "Meer apps installeren", "Vaker checken", "Niets doen"],
+        options: ["App-limieten instellen en meldingen uitzetten", "Elke melding meteen afhandelen, dan is hij weg", "Je telefoon als wekker naast je bed leggen", "Je telefoon op stil zetten maar in je hand houden"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Maakt erger.", "Niet aanbevolen."],
+        wrongHints: [null, "Elke melding trekt je weer naar je scherm. Wordt het dan minder?", "Wat doe je als eerste als je 's ochtends je wekker uitzet?", "Stil is goed, maar kijk je minder als hij in je hand ligt?"],
       },
       {
         q: "Wat doen **influencers** met merken?",
-        options: ["Betaald aanprijzen", "Gratis aanbevelen", "Negatief beoordelen", "Niets"],
+        options: ["Betaald aanprijzen", "Gratis aanbevelen", "Kritisch beoordelen", "Onafhankelijk testen"],
         answer: 0,
-        wrongHints: [null, "Vaak betaald.", "Niet primair.", "Wel iets."],
+        wrongHints: [null, "Doen ze het meestal uit zichzelf, of zit er een deal achter?", "Geef je veel kritiek op een merk dat jou betaalt?", "Een onafhankelijke tester krijgt geen geld van het merk. Hoe zit dat bij influencers?"],
       },
     ],
   },
@@ -201,9 +201,9 @@ const steps = [
       },
       {
         q: "**Tracking cookies** — wat doen ze?",
-        options: ["Volgen jou van site naar site", "Maken site sneller", "Verwijderen reclame", "Beveiligen wachtwoord"],
+        options: ["Volgen jou van site naar site", "Een website sneller laten laden", "Reclame op websites blokkeren", "Je inlog op één site onthouden"],
         answer: 0,
-        wrongHints: [null, "Soms gevolg, niet doel.", "Tegenovergesteld.", "Niet hun doel."],
+        wrongHints: [null, "Soms gevolg, niet doel.", "Juist niet — waar gebruiken adverteerders jouw surfgedrag voor?", "Dat doen functionele cookies. Wat doet een tracking-cookie?"],
       },
       {
         q: "Wat is **2FA**?",
@@ -254,11 +254,11 @@ const steps = [
     title: "Eind-opdracht — mediawijsheid mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl. Door elkaar: nepnieuws, algoritmes, privacy, veiligheid.\n\nVeel succes!",
     checks: [
-      { q: "**Mediawijsheid** is?", options: ["Kritisch met media omgaan", "Tegen media", "Geen media", "Veel media"], answer: 0, wrongHints: [null, "Te negatief.", "Niet doel.", "Niet doel."] },
-      { q: "**Desinformatie** = ?", options: ["Opzettelijk onjuist", "Per ongeluk", "Mening", "Reclame"], answer: 0, wrongHints: [null, "Misinformatie.", "Niet specifiek.", "Aparte categorie."] },
-      { q: "Wat doen **algoritmes**?", options: ["Kiezen wat jij ziet", "Verbergen reclame", "Beveiligen", "Doen niets"], answer: 0, wrongHints: [null, "Niet doel.", "Niet primair.", "Doen veel."] },
-      { q: "**AVG** = ?", options: ["EU-privacy-wet", "Auto-club", "App", "Belasting"], answer: 0, wrongHints: [null, "Verwarring met ANWB? Andere club.", "Geen software — een wet.", "Geen heffing — een regel."] },
-      { q: "**2FA** = ?", options: ["Twee-staps-verificatie", "Twee accounts", "2x foto", "Tweede e-mailadres"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Geen extra adres."] },
+      { q: "**Mediawijsheid** is?", options: ["Kritisch met media omgaan", "Zo min mogelijk media gebruiken", "Handig zijn met apps en sites", "Vooral nieuws van bekende kranten lezen"], answer: 0, wrongHints: [null, "Minder kijken kan verstandig zijn, maar ben je dan ook wijs met wat je wél ziet?", "Handig zijn met apps is een digitale vaardigheid. Snap je daardoor ook wat je ziet?", "Ook bekende kranten maken fouten. Is één soort bron genoeg?"] },
+      { q: "**Desinformatie** = ?", options: ["Opzettelijk onjuist", "Per ongeluk onjuist", "Een eerlijke mening", "Betaalde reclame"], answer: 0, wrongHints: [null, "Misinformatie.", "Een mening mag. Is die bedoeld om te misleiden?", "Reclame wil je iets verkopen — is dat de kern van desinformatie?"] },
+      { q: "Wat doen **algoritmes**?", options: ["Kiezen wat jij ziet", "Reclame van je scherm weghalen", "Je account beveiligen tegen hackers", "Berichten sorteren op tijd"], answer: 0, wrongHints: [null, "Halen algoritmes reclame weg, of laten ze je juist gerichte reclame zien?", "Dat doen wachtwoorden en 2FA. Wat doet een algoritme op TikTok?", "Dan zou iedereen hetzelfde zien. Is jouw tijdlijn gelijk aan die van een vriend?"] },
+      { q: "**AVG** = ?", options: ["EU-privacywet", "EU-wet tegen nepnieuws", "Wet op het auteursrecht", "Leeftijdsgrens voor sociale media"], answer: 0, wrongHints: [null, "Dat gaat over de inhoud van berichten. Waar staat de 'G' van AVG voor?", "Auteursrecht gaat over wie een foto of tekst mag gebruiken. Waar staat de 'G' van AVG voor?", "Er staat in de AVG wel iets over leeftijd, maar wat beschermt de wet in het algemeen?"] },
+      { q: "**2FA** = ?", options: ["Twee-staps-verificatie", "Twee accounts op dezelfde app", "Wachtwoord twee keer intypen", "Een tweede e-mailadres als reserve"], answer: 0, wrongHints: [null, "Meer accounts maken je niet veiliger. Waar slaat de 'F' van factor op?", "Twee keer hetzelfde intypen is nog steeds één ding dat je weet. Is dat extra veilig?", "Een reserve-adres helpt bij herstel, maar is het een extra controle bij het inloggen?"] },
       { q: "Wat NOOIT delen online?", options: ["Wachtwoord", "Boekrecensie", "Vakantie-foto", "Vriendelijk bericht"], answer: 0, wrongHints: [null, "OK.", "OK (eventueel zonder locatie).", "OK."] },
     ],
   },

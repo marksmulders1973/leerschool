@@ -90,9 +90,9 @@ const steps = [
     checks: [
       {
         q: "Wat betekent **VOC**?",
-        options: ["Verenigde Oostindische Compagnie", "Verenigde Oostzee Compagnie", "Vrije Oranjes Compagnie", "Vlaamse Oost Coalitie"],
+        options: ["Verenigde Oostindische Compagnie", "Verenigde Oostzee Compagnie", "Verenigde Oranje Compagnie", "Vrije Oostindische Compagnie"],
         answer: 0,
-        wrongHints: [null, "De VOC voer niet naar de Oostzee, maar veel verder weg.", "Niet bestaande organisatie.", "Vlaanderen had geen aparte compagnie in de Gouden Eeuw."],
+        wrongHints: [null, "De VOC voer niet naar de Oostzee, maar veel verder weg.", "De naam verwijst niet naar de Oranjes, maar naar het gebied waar gehandeld werd.", "Waar staat de V voor? Denk aan wat er in 1602 met de losse compagnieën gebeurde."],
       },
       {
         q: "Wanneer werd de **VOC opgericht**?",
@@ -135,15 +135,15 @@ const steps = [
       },
       {
         q: "Wie ontdekte **micro-organismen** met microscoop?",
-        options: ["Antoni van Leeuwenhoek", "Christiaan Huygens", "Newton", "Galilei"],
+        options: ["Antoni van Leeuwenhoek", "Christiaan Huygens", "Isaac Newton", "Galileo Galilei"],
         answer: 0,
-        wrongHints: [null, "Astronomie + slingerklok.", "Engelsman, niet Nederlands.", "Italiaan, vooral bekend van de telescoop."],
+        wrongHints: [null, "Astronomie + slingerklok.", "Newton was een Engelsman en werkte aan zwaartekracht en licht.", "Galilei was een Italiaan, vooral bekend van de telescoop."],
       },
       {
         q: "**Waarom** waren Amsterdamse huizen **smal en hoog**?",
-        options: ["Belasting was op breedte", "Bevel van de koning", "Modetrend", "Beter tegen wind"],
+        options: ["Belasting was op breedte", "Bevel van de koning", "Smalle gevels waren mode", "Minder last van wind"],
         answer: 0,
-        wrongHints: [null, "Had de Republiek wel een koning?", "Geen mode-reden.", "Geen wind-reden."],
+        wrongHints: [null, "Had de Republiek wel een koning?", "Mode verklaart niet waarom bijna alle grachtenhuizen zo smal werden gebouwd.", "Hadden huizen op het winderige platteland dan ook smalle gevels?"],
         uitlegPad: {
           stappen: [
             { titel: "Belasting-truc", tekst: "De gemeente belastte huizen op de breedte van de gevel. Daarom bouwden rijke kooplieden hun huizen smal maar wel hoog (en diep, want diepte werd niet belast). Spaarde geld." },
@@ -209,9 +209,9 @@ const steps = [
       },
       {
         q: "Welke landen vielen Nederland aan in 1672?",
-        options: ["Frankrijk + Engeland + 2 bisdommen", "Duitsland + Italië", "Spanje + Portugal", "Belgisch koninkrijk"],
+        options: ["Frankrijk + Engeland + 2 bisdommen", "Spanje + Oostenrijk + Brandenburg", "Spanje + Zweden + 2 bisdommen", "Frankrijk + Spanje + Portugal"],
         answer: 0,
-        wrongHints: [null, "Duitsland bestond als land nog niet.", "Wel ooit (80-jarige oorlog) maar niet in 1672.", "Bestond niet."],
+        wrongHints: [null, "Deze landen kwamen de Republiek in 1672-1673 juist te hulp.", "Spanje was sinds 1648 geen vijand meer, en Zweden viel de Republiek niet aan.", "Spanje en Portugal vielen in 1672 niet aan — wie viel er over zee aan?"],
       },
       {
         q: "Hoe **redde** Nederland zich in 1672?",
@@ -236,9 +236,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **VOC**?",
-        options: ["Verenigde Oostindische Compagnie", "Vrije Oranje-Coalitie", "Verenigde Oranje Compagnie", "Vereniging Olie-Centra"],
+        options: ["Verenigde Oostindische Compagnie", "Verenigde Oostzee Compagnie", "Verenigde Oranje Compagnie", "Vrije Oostindische Compagnie"],
         answer: 0,
-        wrongHints: [null, "Geen politieke coalitie, maar een handelsbedrijf.", "De naam verwijst niet naar de Oranjes, maar naar het gebied waar gehandeld werd.", "Olie was geen Gouden Eeuw-handelsproduct."],
+        wrongHints: [null, "De handel op de Oostzee (graan en hout) liep niet via de VOC.", "De naam verwijst niet naar de Oranjes, maar naar het gebied waar gehandeld werd.", "Waar staat de V voor? Denk aan wat er in 1602 met de losse compagnieën gebeurde."],
       },
       {
         q: "Wie schilderde **De Nachtwacht**?",
@@ -266,9 +266,9 @@ const steps = [
       },
       {
         q: "Wat was **uniek aan VOC** in 1602?",
-        options: ["Eerste bedrijf met aandelen ter wereld", "Eerste bank", "Eerste museum", "Eerste universiteit"],
+        options: ["Eerste bedrijf met aandelen ter wereld", "Eerste Europese handelsbedrijf in Azië", "Eerste bedrijf met een eigen handelsvloot", "Eerste bedrijf met personeel in loondienst"],
         answer: 0,
-        wrongHints: [null, "Niet bank.", "Niet museum.", "Niet universiteit."],
+        wrongHints: [null, "De Portugezen handelden al eerder in Azië.", "Kooplieden hadden al eeuwenlang eigen schepen.", "Werkplaatsen met betaald personeel bestonden al lang vóór 1602."],
       },
     ],
   },

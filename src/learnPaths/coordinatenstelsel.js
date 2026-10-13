@@ -505,9 +505,9 @@ const steps = [
     checks: [
       {
         q: "*In een spreadsheet (zoals Excel) heet een cel \"B5\". Welke richting geeft de letter B aan?*",
-        options: ["Horizontaal (zoals de x-as)","Verticaal (zoals de y-as)","De diepte","De kleur"],
+        options: ["Horizontaal (zoals de x-as)","Verticaal (zoals de y-as)","De diepte (zoals een z-as)","Het werkblad (het tabblad)"],
         answer: 0,
-        wrongHints: [null, "Kijk naar de bovenkant van een spreadsheet: daar staan de letters A, B, C … Staan die naast elkaar of onder elkaar?", "Een spreadsheet is plat (2D) — er is geen diepte.", "De letter geeft een plek aan, geen kleur."],
+        wrongHints: [null, "Kijk naar de bovenkant van een spreadsheet: daar staan de letters A, B, C … Staan die naast elkaar of onder elkaar?", "Een spreadsheet is plat (2D) — er is geen diepte.", "Het tabblad zie je onderaan, met een eigen naam. Waar staan de letters A, B, C?"],
         uitlegPad: {
           stappen: [{ titel: "Letter = kolom = x-richting", tekst: "In een spreadsheet staan de letters A, B, C … naast elkaar bovenaan (kolommen, horizontaal — zoals de x-as). De cijfers 1, 2, 3 … staan onder elkaar aan de zijkant (rijen, verticaal — zoals de y-as). 'B5' = kolom B, rij 5." }],
           woorden: [{ woord: "kolom", uitleg: "Verticale strook cellen. De letter zegt hoe ver naar rechts je gaat." }],
@@ -531,9 +531,9 @@ const steps = [
     checks: [
       {
         q: "*Wat zijn de coördinaten van de oorsprong?*",
-        options: ["(0, 0)", "(1, 0)", "(0, 1)", "Geen"],
+        options: ["(0, 0)", "(1, 0)", "(0, 1)", "(1, 1)"],
         answer: 0,
-        wrongHints: [null, "(1, 0) ligt 1 stap rechts op de x-as.", "(0, 1) ligt 1 stap omhoog op de y-as.", "De oorsprong heeft wel coördinaten — beide assen op 0."],
+        wrongHints: [null, "(1, 0) ligt 1 stap rechts op de x-as.", "(0, 1) ligt 1 stap omhoog op de y-as.", "(1, 1) ligt 1 stap rechts en 1 stap omhoog. Waar kruisen de assen elkaar?"],
         uitlegPad: {
           stappen: [{ titel: "Oorsprong = (0,0)", tekst: "Kruispunt assen, allebei op 0. Vaste notatie: (0, 0)." }],
           woorden: [{ woord: "oorsprong", uitleg: "(0,0). Centraal punt." }],

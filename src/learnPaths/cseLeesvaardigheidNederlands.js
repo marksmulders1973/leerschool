@@ -69,9 +69,9 @@ const steps = [
     checks: [
       {
         q: "Wat is de **eerste stap** bij een CSE-tekst?",
-        options: ["Skimmen: titel, eerste alinea en plaatjes", "Direct de vragen beantwoorden, zonder tekst", "De hele tekst woord voor woord lezen", "Eerst het slot van de tekst lezen"],
+        options: ["Skimmen: titel, eerste alinea en plaatjes", "Meteen beginnen bij vraag 1", "De hele tekst woord voor woord lezen", "Eerst het slot van de tekst lezen"],
         answer: 0,
-        wrongHints: [null, "Zonder context = fouten.", "Te traag.", "Niet als eerste."],
+        wrongHints: [null, "Zonder dat je weet waar de tekst over gaat, maak je snel fouten. Hoe krijg je eerst overzicht?", "Woord voor woord kost veel tijd. Hoe krijg je eerst snel overzicht?", "Het slot is belangrijk, maar dan mis je het begin en de opbouw. Hoe krijg je overzicht over de hele tekst?"],
       },
       {
         q: "Welk signaalwoord = **tegenstelling**?",
@@ -87,9 +87,9 @@ const steps = [
       },
       {
         q: "Wat doe je met **een lastige vraag** op CSE?",
-        options: ["Overslaan + later terugkomen", "Blijven piekeren tot je het weet", "Gokken zonder de tekst te lezen", "Overslaan en niet meer terugkomen"],
+        options: ["Overslaan + later terugkomen", "Doorwerken tot je hem toch snapt", "Meteen het meest logische antwoord gokken", "Overslaan en de vraag laten zitten"],
         answer: 0,
-        wrongHints: [null, "Verspilt tijd.", "Niet zonder lezen.", "Wel later proberen."],
+        wrongHints: [null, "Zo verlies je kostbare tijd voor de andere vragen. Wat kun je beter doen?", "Gokken kan aan het eind nog. Wat levert het op om eerst verder te gaan?", "Overslaan is slim, maar een open vraag levert nul punten op. Wat doe je aan het eind?"],
       },
     ],
   },
@@ -104,7 +104,7 @@ const steps = [
         q: "Waar staat de **hoofdgedachte** meestal?",
         options: ["Eerste of laatste alinea", "In het midden van de tekst", "In de zin onder de kop", "Bij een plaatje of foto"],
         answer: 0,
-        wrongHints: [null, "Niet typisch.", "Soms maar niet primair.", "Geen typische plek."],
+        wrongHints: [null, "In het midden staan meestal de uitwerking en voorbeelden.", "Onder de kop staat vaak een inleidend zinnetje, niet altijd de kern.", "Een bijschrift hoort bij de foto, niet bij de hele tekst."],
       },
       {
         q: "*'Volgens de tekst, ___'* Wat doe je?",
@@ -217,13 +217,13 @@ const steps = [
         q: "Wat is de **bedoeling** van een **reclame**?",
         options: ["Activeren", "Informeren", "Amuseren", "Beschouwen"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Soms maar niet primair.", "Beschouwen = verschillende kanten afwegen. Doet een reclame dat?"],
+        wrongHints: [null, "Een reclame geeft wel informatie, maar wat wil de maker uiteindelijk dat jij doet?", "Een grappige reclame amuseert, maar waarom betaalt een bedrijf ervoor?", "Beschouwen = verschillende kanten afwegen. Doet een reclame dat?"],
       },
       {
         q: "Wat is de **bedoeling** van een **schoolboek-tekst**?",
         options: ["Informeren", "Activeren", "Amuseren", "Verkopen"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet primair.", "Probeert een schoolboek je echt iets te verkopen?"],
+        wrongHints: [null, "Roept een schoolboek-tekst je op om iets te kopen of te gaan doen?", "Een schoolboek mag leuk zijn, maar waarvoor gebruik je het in de les?", "Probeert een schoolboek je echt iets te verkopen?"],
       },
       {
         q: "Een **column** met humor + mening — bedoeling?",
@@ -262,7 +262,7 @@ const steps = [
         q: "Wat is **hoofdgedachte** typisch?",
         options: ["Algemene boodschap van hele tekst", "Een specifiek getal uit de tekst", "Eén zin uit de tweede alinea", "Het bijschrift bij een foto"],
         answer: 0,
-        wrongHints: [null, "Detail.", "Detail.", "Niet primair."],
+        wrongHints: [null, "Een getal is een detail. Gaat de hoofdgedachte over één detail?", "Eén zin uit het midden is meestal een detail. Wat zegt de hele tekst?", "Een bijschrift hoort bij de foto. Gaat dat over de hele tekst?"],
       },
       {
         q: "Schrijver gebruikt **'Volgens hoogleraar Jansen van de TU Delft ...'**. Welk argument-type?",
@@ -272,9 +272,9 @@ const steps = [
       },
       {
         q: "Welke bedoeling heeft een **advertentie**?",
-        options: ["Activeren", "Informeren neutraal", "Amuseren", "Wetenschappelijk"],
+        options: ["Activeren", "Informeren", "Amuseren", "Beschouwen"],
         answer: 0,
-        wrongHints: [null, "Niet neutraal.", "Niet primair.", "Wetenschappelijk is geen tekstdoel. Waarom betaalt een bedrijf voor een advertentie?"],
+        wrongHints: [null, "Een advertentie geeft wel informatie, maar is die neutraal? Waarom betaalt een bedrijf ervoor?", "Een grappige advertentie amuseert, maar wat is het uiteindelijke doel van de adverteerder?", "Beschouwen = kanten afwegen. Noemt een advertentie ook de nadelen van het product?"],
       },
       {
         q: "*'Anna kocht een fiets. **Deze** was duur.'* Wat is **deze**?",

@@ -30,9 +30,9 @@ const steps = [
     checks: [
       {
         q: "**3e persoon enkelvoud present simple** krijgt:",
-        options: ["-s aan einde werkwoord","Geen verandering","-ed","-ing"],
+        options: ["-s aan einde werkwoord","Geen uitgang, stam blijft","-ed aan einde werkwoord","-ing aan einde werkwoord"],
         answer: 0,
-        wrongHints: [null, "Klassieke NL-fout.", "Past simple.", "Continuous."],
+        wrongHints: [null, "Dit is een klassieke fout. Klopt 'he play football' volgens jou?", "-ed hoort bij past simple. Gaat het hier over het verleden?", "-ing hoort bij de continuous. Is dat de present simple?"],
         uitlegPad: {
           stappen: [{ titel: "He works", tekst: "**Present simple**: 3e persoon enkelvoud (he/she/it) krijgt **-s**. I work, you work, **he works**, we work, they work. Spelling: -es bij sis/sj-klanken (he watches, she misses). **NL-leerlingen vergeten 's' vaak**: 'He work' is fout, moet 'He works' zijn. Kost punten." }],
           niveaus: { basis: "-s.", simpeler: "3e p ev = -s", nogSimpeler: "-s" },
@@ -40,7 +40,7 @@ const steps = [
       },
       {
         q: "Welke is **present perfect**?",
-        options: ["I have lived here for 10 years","I lived here 10 years ago","I am living here","I will live here"],
+        options: ["I have lived here for 10 years","I lived here 10 years ago","I am living here this year","I will live here for 10 years"],
         answer: 0,
         wrongHints: [null, "Past simple.", "Present continuous.", "Future."],
         uitlegPad: {
@@ -51,7 +51,7 @@ const steps = [
       },
       {
         q: "**'If I had money, I would travel'** is conditional type:",
-        options: ["Type 2 (onwaarschijnlijk)","Type 1 (mogelijk)","Type 3 (verleden)","Type 0"],
+        options: ["Type 2 (denkbeeldig)","Type 1 (mogelijk)","Type 3 (verleden)","Type 0 (algemeen geldig)"],
         answer: 0,
         wrongHints: [null, "Type 1 = if + present + will.", "Type 3 = if + past perfect + would have.", "Type 0 = algemene waarheid."],
         uitlegPad: {
@@ -71,9 +71,9 @@ const steps = [
       },
       {
         q: "**An apple** — waarom 'an' ipv 'a'?",
-        options: ["Apple begint met klinker-klank","Apple is meervoud","Apple is mannelijk","Geen regel"],
+        options: ["Apple begint met klinker-klank","Apple heeft meer dan één lettergreep","Apple is een vrouwelijk woord","Apple is een uitzondering"],
         answer: 0,
-        wrongHints: [null, "Niet — enkelvoud.", "Engels heeft geen geslachten.", "Wel regel."],
+        wrongHints: [null, "Ook 'a banana' heeft meer lettergrepen. Waar let je dan op?", "Engels heeft geen geslachten.", "Zeg 'an egg' en 'an orange'. Zie je een patroon?"],
         uitlegPad: {
           stappen: [{ titel: "Klinker-klank → an", tekst: "**A vs an**: 'an' voor woord beginnend met **klinker-klank** (uitspraak, niet spelling!).\n• An apple, an hour (silent h), an MP.\n• A book, a university (yu-klank, geen klinker-klank), a one (wun).\n\nLet op: uitspraak telt, niet de letter." }],
           niveaus: { basis: "Klinker-klank.", simpeler: "an = klinker", nogSimpeler: "A." },
@@ -100,9 +100,9 @@ const steps = [
       },
       {
         q: "Welk **subject line** is best?",
-        options: ["Application for Marketing Internship Summer 2026","Hi","Question","Help please"],
+        options: ["Application: Marketing Internship","Question about your company","Hello from a motivated student","Re: your internship vacancy"],
         answer: 0,
-        wrongHints: [null, "Te vaag.", "Te vaag.", "Niet zakelijk."],
+        wrongHints: [null, "Te vaag — welke vraag, en waarover?", "Vriendelijk, maar waar gaat de mail over?", "'Re:' betekent dat je antwoordt op een eerdere mail. Is dat hier zo?"],
         uitlegPad: {
           stappen: [{ titel: "Concreet + duidelijk", tekst: "Goede subject line: **concreet onderwerp + waarom je schrijft**. 'Application for Marketing Internship Summer 2026' geeft direct duidelijkheid. Slechte: 'Hi', 'Question', 'Important' — lezer weet niet waarover het gaat. Lange subject lines (>10 woorden) ook slecht: cruciaal eerste 6 woorden moeten alles overbrengen." }],
           niveaus: { basis: "Application.", simpeler: "Subject = concreet", nogSimpeler: "A." },
@@ -110,9 +110,9 @@ const steps = [
       },
       {
         q: "**'Please find my CV attached'** is:",
-        options: ["Standaard formele zin in sollicitatie","Te informeel","Verkeerd Engels","Te direct"],
+        options: ["Een standaard formele zin","Te informeel voor een brief","Grammaticaal fout Engels","Te direct en onbeleefd"],
         answer: 0,
-        wrongHints: [null, "Niet — gepast.", "Wel correct.", "Niet — gepast direct."],
+        wrongHints: [null, "Zou 'please find … attached' in een appje aan een vriend passen?", "Kijk naar 'find … attached'. Welk deel zou fout zijn?", "Er staat 'please' in. Is dat onbeleefd?"],
         uitlegPad: {
           stappen: [{ titel: "Standaard-zin", tekst: "**'Please find my CV attached'** = klassieke formele zin sollicitatie. Anders: 'I have attached my CV' (iets minder formeel). Recente trend: 'I've attached my CV for your review' (modern + helder).\n\nVermijden: 'I attach my CV' (oud), 'Here is my CV' (te informeel)." }],
           niveaus: { basis: "Standaard.", simpeler: "Find CV attached = standaard", nogSimpeler: "A." },
@@ -149,9 +149,9 @@ const steps = [
     checks: [
       {
         q: "Goede **thesis-statement** is:",
-        options: ["Specifiek + omstreden + onderbouwbaar","Algemeen + neutraal","Lang + ingewikkeld","Vraag aan lezer"],
+        options: ["Specifiek + omstreden + onderbouwbaar","Neutraal + feitelijk + objectief","Kort + pakkend + verrassend","Breed + algemeen + herkenbaar"],
         answer: 0,
-        wrongHints: [null, "Zwak.", "Niet primair.", "Niet primair."],
+        wrongHints: [null, "Over een feit valt niet te discussiëren. Wat moet een thesis juist doen?", "Dat zijn kenmerken van een hook (de openingszin). Wat moet een thesis bevatten?", "Hoe breder de stelling, hoe moeilijker je die in één essay bewijst."],
         uitlegPad: {
           stappen: [{ titel: "Drie criteria", tekst: "**Sterke thesis**:\n• **Specifiek**: niet 'social media is bad' maar 'Instagram increases anxiety in teen girls due to algorithmic body-comparison'.\n• **Omstreden**: mensen zouden een andere mening kunnen hebben (anders is het feit, geen essay).\n• **Onderbouwbaar**: jij hebt bewijs/argumenten.\n\n**Plaatsing**: einde inleiding-alinea. Vaak 1 zin." }],
           niveaus: { basis: "3 criteria.", simpeler: "Thesis = specifiek+omstreden", nogSimpeler: "A." },
@@ -169,7 +169,7 @@ const steps = [
       },
       {
         q: "Wat moet je **vermijden** in formele essay?",
-        options: ["Contractions (don't, I'm)","Topic sentences","Connector-zinnen","Voorbeelden"],
+        options: ["Contractions (don't, I'm)","Topic sentences (per alinea)","Connectors (however, thus)","Voorbeelden (for instance)"],
         answer: 0,
         wrongHints: [null, "Die wil je juist wél: elke alinea één kernzin. Wat is te informeel?", "Verbindingswoorden maken een essay juist sterker — wat hoort bij spreektaal?", "Voorbeelden onderbouwen je punt juist — welke optie past niet bij formeel schrijven?"],
         uitlegPad: {
@@ -179,9 +179,9 @@ const steps = [
       },
       {
         q: "**Active voice** is beter dan passive omdat:",
-        options: ["Directer + sterker","Formeler","Engelser","Geen verschil"],
+        options: ["Directer + sterker","Formeler + deftiger","Beleefder + voorzichtiger","Langer + uitgebreider"],
         answer: 0,
-        wrongHints: [null, "Niet — passive klinkt vaak juist formeler.", "Niet — beide bestaan.", "Wel verschil."],
+        wrongHints: [null, "Passive klinkt vaak juist formeler. Waarom kiezen schrijvers dan toch voor active?", "Passive klinkt vaak juist voorzichtiger. Wat doet active met de zin?", "Active zinnen zijn meestal juist korter. Waarom is dat een voordeel?"],
         uitlegPad: {
           stappen: [{ titel: "Voorbeeld", tekst: "**Active** (sterk): 'Researchers found that social media affects mental health.'\n**Passive** (zwakker): 'It was found by researchers that mental health is affected by social media.'\n\nActive is **directer + korter + duidelijker** wie doet wat. Passive heeft plaats (bv. wetenschappelijk gerelateerd, of als doel = focus) maar **niet als default**. Engelse stijlgidsen (Strunk + White) verdedigen active." }],
           niveaus: { basis: "Direct.", simpeler: "Active = direct", nogSimpeler: "A." },
@@ -238,7 +238,7 @@ const steps = [
       },
       {
         q: "Wat moet je **vermijden** in spreek-examen?",
-        options: ["Uit hoofd leren tekst","Speech-fillers","Vragen stellen","Voorbeelden"],
+        options: ["Uit hoofd leren tekst","Af en toe speech-fillers","Vragen terugstellen","Voorbeelden noemen"],
         answer: 0,
         wrongHints: [null, "Een natuurlijk 'well…' of 'let me think' mag juist — wat maakt je verhaal robotachtig?", "Interactie met de examinator is juist goed — wat klinkt opgedreund?", "Voorbeelden maken je antwoord sterker — wat moet je juist níét met je tekst doen?"],
         uitlegPad: {
@@ -248,9 +248,9 @@ const steps = [
       },
       {
         q: "Welke is **beleefde manier** om oneens te zijn?",
-        options: ["'I see your point, but I think...'","'You're wrong'","'That's stupid'","'No'"],
+        options: ["'I see your point, but I think...'","'Sorry, but you're just wrong.'","'No. I disagree. Next question.'","'With respect, that's nonsense.'"],
         answer: 0,
-        wrongHints: [null, "Onbeleefd.", "Onbeleefd.", "Te kort + onbeleefd."],
+        wrongHints: [null, "Een 'sorry' maakt 'you're wrong' niet beleefd. Hoe laat je merken dat je de ander gehoord hebt?", "Kort en afgekapt. Hoe klinkt dat voor je gesprekspartner?", "'Nonsense' blijft een sneer, ook met 'with respect' ervoor."],
         uitlegPad: {
           stappen: [{ titel: "Diplomatisch oneens", tekst: "**Beleefde oneens-zinnen**:\n• 'I see your point, but I think...'\n• 'That's an interesting perspective, however...'\n• 'I understand what you mean, although...'\n• 'I'm not entirely sure I agree...'\n• 'There might be another way to look at it...'\n\nDirecte ('You're wrong') komt hard over — toont onvolwassenheid. **Diplomatie** = goed Engels-vaardigheidsteken bij examen. Erkenning andere standpunt versterkt eigen positie." }],
           niveaus: { basis: "I see your point.", simpeler: "Beleefd oneens", nogSimpeler: "A." },
@@ -287,9 +287,9 @@ const steps = [
       },
       {
         q: "**'It's important TO ___'** — wat volgt?",
-        options: ["Infinitief (study, work, etc.)","Gerund (-ing)","Past simple","Past participle"],
+        options: ["Infinitief (study, work)","Gerund (studying, working)","Past simple (studied, worked)","Past participle (done, gone)"],
         answer: 0,
-        wrongHints: [null, "Niet — kijk welke rol 'to' hier heeft: voorzetsel of deel van het werkwoord?", "Niet.", "Niet."],
+        wrongHints: [null, "Niet — kijk welke rol 'to' hier heeft: voorzetsel of deel van het werkwoord?", "Na dit 'to' komt geen verleden tijd. Welke vorm dan wel?", "'To done' bestaat niet. Welke vorm komt na het 'to' van een werkwoord?"],
         uitlegPad: {
           stappen: [{ titel: "TO + infinitief", tekst: "**'It's important TO study'** — 'to' als infinitief-marker wordt gevolgd door **bare infinitive** (eerste vorm werkwoord). Verschil met 'TO + gerund' (waar 'to' voorzetsel is): 'I look forward TO studying' (hier gerund). Truc: kun je na 'to' 'this' of een zelfstandig naamwoord zetten ('I look forward to this')? Dan is 'to' een voorzetsel → gerund. Anders → infinitief." }],
           niveaus: { basis: "Infinitief.", simpeler: "Important to + inf", nogSimpeler: "A." },
@@ -307,9 +307,9 @@ const steps = [
       },
       {
         q: "Bij **spreekexamen** beoordeling kijkt examinator naar:",
-        options: ["Inhoud + taal + uitspraak + interactie","Alleen woordenaantal","Alleen accent","Alleen grammatica"],
+        options: ["Inhoud + taal + uitspraak + interactie","Woordenaantal + spreektijd + accent","Accent + spreeksnelheid + houding","Grammatica + spelling + woordkeus"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet primair.", "Wel maar onvolledig."],
+        wrongHints: [null, "Lang praten is niet hetzelfde als goed praten. Wat telt er bij een gesprek?", "Een Brits of Amerikaans accent is niet nodig. Wat telt dan wel?", "Spelling zie je niet als je spreekt. Wat hoort er bij een gesprek nog meer?"],
         uitlegPad: {
           stappen: [{ titel: "Vier hoofd-criteria", tekst: "**Spreekexamen** beoordeling:\n• **Inhoud**: relevantie, diepgang, voorbeelden, structuur.\n• **Taalbeheersing**: woordkeus, grammatica, vloeiendheid.\n• **Uitspraak**: helderheid, intonatie (niet perfect accent).\n• **Interactie**: bij dialoog — reageren, vragen, dialoog opbouwen.\n\nAparte score per criterium. Goede balans belangrijker dan exceleren op één punt." }],
           niveaus: { basis: "4 criteria.", simpeler: "Inhoud+taal+uitspr+inter", nogSimpeler: "A." },

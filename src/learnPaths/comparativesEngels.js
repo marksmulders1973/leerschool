@@ -70,9 +70,9 @@ const steps = [
       },
       {
         q: "Welke trap voor **'allerhoogste'**?",
-        options: ["Superlative met 'the'", "Comparative", "Stellend", "Wisselt"],
+        options: ["Superlative met 'the'", "Comparative met 'than'", "Positive, de grondvorm", "Superlative met 'a'"],
         answer: 0,
-        wrongHints: [null, "Vergrotend bij 2.", "Geen vergelijking.", "Wel vaste regel."],
+        wrongHints: [null, "Met than vergelijk je twee dingen: hoger dan. Is 'allerhoogste' een vergelijking tussen twee?", "De grondvorm is gewoon 'hoog'. Zegt 'allerhoogste' meer dan dat?", "Van 'het allerhoogste' is er maar één. Welk lidwoord hoort bij iets unieks?"],
       },
       {
         q: "**'My bag is ___ than yours.'** Welk woord?",
@@ -268,8 +268,8 @@ const steps = [
       { q: "**'This is the ___ day of my life.'** (good — overtreffend)", options: ["best","goodest","most good","more best"], answer: 0, wrongHints: [null,"Bestaat niet.", "Onregelmatig.", "Dubbel."] },
       { q: "**'It's getting ___ and ___.'** (warm)", options: ["warmer / warmer","more warm / more warm","warm / warmest","warmest / warmest"], answer: 0, wrongHints: [null,"Korte woorden -er.", "Verkeerde vorm.", "Geen overtreffende trap — het wordt steeds warmer."] },
       { q: "**'Nothing is ___ than freedom.'** (precious)", options: ["more precious","preciouser","most precious","more preciouser"], answer: 0, wrongHints: [null,"Precious krijgt geen -er — hoe vergelijk je woorden als famous?", "Overtreffend.", "Dubbel."] },
-      { q: "Een **comparative** (vergrotende trap) gebruik je als je ___ vergelijkt?", options: ["2 dingen","3 of meer dingen","Geen dingen","Niet relevant"], answer: 0, wrongHints: [null,"Dat is superlative.", "Wel relevant.", "Wel."] },
-      { q: "Een **superlative** (overtreffende trap) gebruik je bij ___?", options: ["3 of meer dingen, of 'meeste/best'","2 dingen","1 ding","Geen"], answer: 0, wrongHints: [null,"Dat is comparative.", "Geen vergelijking nodig.", "Wel."] },
+      { q: "Een **comparative** (vergrotende trap) gebruik je als je ___ vergelijkt?", options: ["2 dingen","3 of meer dingen","1 ding","Elk aantal"], answer: 0, wrongHints: [null, "Bij drie of meer zeg je 'the biggest'. Welke trap is dat?", "Met één ding valt er niets te vergelijken. Hoeveel heb je minstens nodig?", "Bij drie of meer gebruik je een andere trap. Werkt de comparative dan bij elk aantal?"] },
+      { q: "Een **superlative** (overtreffende trap) gebruik je bij ___?", options: ["3 of meer dingen","Precies 2 dingen","Maar 1 ding","2 even grote dingen"], answer: 0, wrongHints: [null, "Bij twee zeg je 'bigger than'. Welke trap is dat?", "Met één ding vergelijk je niets. Hoeveel dingen vergelijk je bij 'the biggest'?", "Bij even groot zeg je 'as big as'. Is dat de overtreffende trap?"] },
       { q: "**Open vraag**: maak de comparative van 'happy'.", kind: "open", acceptedAnswers: ["happier"], explanation: "Korte woorden eindigend op -y: vervang y door i + er → happier." },
       { q: "**Open vraag**: maak de superlative van 'fast'.", kind: "open", acceptedAnswers: ["fastest", "the fastest"], explanation: "Kort woord: +est → fastest." },
     ],

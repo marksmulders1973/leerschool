@@ -219,7 +219,7 @@ const steps = [
     checks: [
       {
         q: "Wat gebeurde er in **oktober 1929**?",
-        options: ["De beurs in New York crashte", "Hitler werd Duits leider", "WO2 begon", "Nederland werd bezet"],
+        options: ["De beurs in New York crashte", "Hitler werd leider van Duitsland", "De Tweede Wereldoorlog begon", "Nederland werd door Duitsland bezet"],
         answer: 0,
         wrongHints: [null, "Hitler werd later kanselier (1933).", "WO2 begon in 1939.", "Bezetting NL was 1940."],
         uitlegPad: {
@@ -233,9 +233,9 @@ const steps = [
       },
       {
         q: "Waarom groeide de NSDAP zo snel tussen 1928 en 1932?",
-        options: ["Door werkloosheid + armoede zochten mensen extreme oplossingen", "De regering verbood alle andere partijen", "Duitsland werd binnengevallen door Frankrijk", "De koning steunde Hitler"],
+        options: ["Werkloosheid en armoede dreven kiezers naar extremen", "De regering verbood alle andere partijen", "Duitsland werd binnengevallen door Frankrijk", "De Duitse keizer steunde Hitler openlijk"],
         answer: 0,
-        wrongHints: [null, "In 1932 waren er nog gewoon vrije verkiezingen.", "Frankrijk viel Duitsland niet binnen in deze periode.", "Duitsland was sinds 1918 een republiek — geen koning meer."],
+        wrongHints: [null, "In 1932 waren er nog gewoon vrije verkiezingen.", "Frankrijk viel Duitsland niet binnen in deze periode.", "Duitsland was sinds 1918 een republiek — de keizer was gevlucht."],
         uitlegPad: {
           stappen: [{ titel: "Crisis → extreme keuzes", tekst: "1928: NSDAP slechts 2,6% van stemmen (kleine partij). 1932: 37% (grootste partij). De crisis maakte mensen wanhopig — 6 miljoen werklozen, honger, verloren spaargeld. Hitler beloofde werk, trots, sterke leider. Wanhopige mensen stemden voor extremen." }],
           woorden: [{ woord: "NSDAP", uitleg: "Nationaal-Socialistische Duitse Arbeiderspartij. Hitlers partij. Combineerde extreem-nationalisme + antisemitisme + sociaal beloven." }, { woord: "extreme oplossingen", uitleg: "Drastische beloftes (sterke leider, 1 partij, vijandbeeld) die mensen aantrekken in crisistijd." }],
@@ -254,7 +254,7 @@ const steps = [
     checks: [
       {
         q: "Wat was de **Anschluss** (1938)?",
-        options: ["Duitsland nam Oostenrijk in zonder oorlog", "Een verdrag met de Sovjet-Unie", "Een kamp voor politieke gevangenen", "Een Duitse uitvinding"],
+        options: ["Duitsland nam Oostenrijk in zonder oorlog", "Een verdrag tussen Duitsland en de Sovjet-Unie", "Een kamp voor politieke gevangenen", "Een nieuwe Duitse wapenuitvinding"],
         answer: 0,
         wrongHints: [null, "Verdrag met USSR komt pas in 1939 (Molotov-Ribbentrop).", "Kamp = concentratiekamp, ander begrip.", "Anschluss is een politieke gebeurtenis, geen uitvinding."],
         uitlegPad: {
@@ -268,9 +268,9 @@ const steps = [
       },
       {
         q: "Wat was **appeasement-politiek**?",
-        options: ["Hitler toegevingen doen om oorlog te voorkomen", "Hitler aanvallen voordat hij groter werd", "Een Duits sportfeest", "Het verbieden van de NSDAP"],
+        options: ["Hitler toegevingen doen om oorlog te voorkomen", "Hitler aanvallen voordat hij groter werd", "Het herbewapenen van het Duitse leger", "Het verbieden van de NSDAP in Duitsland"],
         answer: 0,
-        wrongHints: [null, "Andersom — Engeland/Frankrijk durfden juist niet te confronteren.", "Geen sport, maar diplomatie.", "NSDAP werd niet verboden — werd juist de enige partij."],
+        wrongHints: [null, "Andersom — Engeland/Frankrijk durfden juist niet te confronteren.", "Herbewapening deed Duitsland zelf. Was appeasement iets van Duitsland, of van andere landen?", "NSDAP werd niet verboden — werd juist de enige partij."],
         uitlegPad: {
           stappen: [{ titel: "München 1938 — toegeven om vrede", tekst: "Brits PM Chamberlain + Frans PM Daladier gingen naar München (september 1938). Stonden Hitler het Sudetenland toe (Duits-sprekend deel Tsjechoslowakije). In ruil: belofte van Hitler 'geen verdere eisen'. Chamberlain riep bij thuiskomst: 'Peace for our time!' — 1 jaar later begon WO2." }],
           woorden: [{ woord: "appeasement", uitleg: "Engels voor 'tot bedaren brengen'. Politiek van toegeven aan agressor om grotere oorlog te voorkomen." }, { woord: "Chamberlain", uitleg: "Brits premier 1937-1940. Symbool van appeasement. In 1940 opgevolgd door Churchill." }, { woord: "München-conferentie", uitleg: "29-30 september 1938. Engeland + Frankrijk + Duitsland + Italië. Tsjechoslowakije niet uitgenodigd, kreeg het op te slikken." }],
@@ -282,9 +282,9 @@ const steps = [
       },
       {
         q: "Welke 3 oorzaken samen leidden tot WO2?",
-        options: ["Versailles + crisis '29 + Hitler aan de macht", "Atoombom + televisie + EU", "Pest + kruistochten + Romeinen", "Boekdrukkunst + VOC + Napoleon"],
+        options: ["Versailles + crisis '29 + Hitler aan de macht", "Atoombom + Koude Oorlog + Marshallplan", "Moord op Frans Ferdinand + allianties + loopgraven", "Pearl Harbor + Stalingrad + D-Day"],
         answer: 0,
-        wrongHints: [null, "Dat zijn allemaal dingen van ná WO2 of niet-relevant.", "Veel te oud — middeleeuwen en oudheid.", "16e-19e eeuw — eerdere tijdvakken."],
+        wrongHints: [null, "Dat zijn dingen van ná WO2.", "Dat hoort bij de Eerste Wereldoorlog.", "Dat zijn gebeurtenissen tíjdens WO2, geen oorzaken."],
         uitlegPad: {
           stappen: [{ titel: "3 oorzaken combineren", tekst: "WO2 had niet 1 oorzaak — 3 dingen werkten SAMEN. (1) Versailles (1919): Duitse boosheid + armoede. (2) Crisis 1929: armoede explodeerde → mensen wanhopig. (3) Hitler/NSDAP: extreme leider beloofde wraak + werk. Zonder een van de 3 was WO2 misschien niet gebeurd." }],
           woorden: [{ woord: "oorzaak-keten", uitleg: "Volgorde van gebeurtenissen die samen tot iets leiden. Zonder schakel A geen B." }, { woord: "structurele oorzaak", uitleg: "Diepe oorzaak (Versailles + crisis = systeem). Tegenover: aanleiding (direct triggerpunt)." }],
@@ -419,7 +419,7 @@ const steps = [
       },
       {
         q: "Wat betekent **collaboratie** in deze context?",
-        options: ["Samenwerken met de vijand (bezetter)", "Verzet plegen", "Onderduiken", "Bevrijden"],
+        options: ["Samenwerken met de vijand (bezetter)", "Verzet plegen tegen de bezetter", "Onderduiken voor de bezetter", "Bevrijden van het bezette land"],
         answer: 0,
         wrongHints: [null, "Het tegenovergestelde — verzet was juist vechten tegen.", "Dat is niet hetzelfde — onderduikers waren slachtoffer/verzet, geen collaborateurs.", "Bevrijding kwam pas in 1944-45 door geallieerden."],
         uitlegPad: {
@@ -442,9 +442,9 @@ const steps = [
     checks: [
       {
         q: "Wat was **D-Day** (6 juni 1944)?",
-        options: ["Geallieerde landing in Normandië, Frankrijk", "Het einde van WO2", "Het bombardement op Rotterdam", "Hitlers verjaardag"],
+        options: ["Geallieerde landing in Normandië", "Het einde van de oorlog in Europa", "Het bombardement op Rotterdam", "Duitse aanval op de Sovjet-Unie"],
         answer: 0,
-        wrongHints: [null, "Einde was 5/8 mei 1945 — bijna een jaar later.", "Rotterdam-bombardement was 14 mei 1940.", "Verkeerd onderwerp — D-Day is een militaire operatie."],
+        wrongHints: [null, "Einde was 5/8 mei 1945 — bijna een jaar later.", "Rotterdam-bombardement was 14 mei 1940.", "Die aanval (Operatie Barbarossa) begon op 22 juni 1941."],
         uitlegPad: {
           stappen: [{ titel: "6 juni 1944 — grootste landing ooit", tekst: "D-Day = legerterm voor 'de dag X' van een operatie. 6 juni 1944: ~156.000 geallieerde soldaten (VS, UK, Canada) landden op 5 stranden in Normandië, Frankrijk. Operatienaam: Overlord. Doel: tweede front openen tegen Duitsland naast oostelijke USSR-front. Gelukt — vanaf hier rolden geallieerden door Frankrijk + België → Duitsland." }],
           woorden: [{ woord: "D-Day", uitleg: "6 juni 1944. Geallieerde landing Normandië. Begin einde Duitse bezetting West-Europa." }, { woord: "Operation Overlord", uitleg: "Codenaam voor totale geallieerde operatie waar D-Day onderdeel van was." }, { woord: "tweede front", uitleg: "Nieuw oorlogsfront naast bestaande. Sovjet-Unie smeekte hierom omdat zij alléén tegen Duitsers vochten in oosten." }],
@@ -456,7 +456,7 @@ const steps = [
       },
       {
         q: "Waar ging de slag bij **Stalingrad** over?",
-        options: ["Een Duitse aanval in de Sovjet-Unie", "Een aanval op Engeland", "Een poging Nederland te bevrijden", "Een atoombomtest"],
+        options: ["Een Duitse aanval in de Sovjet-Unie", "Een Duitse luchtaanval op Engeland", "Een poging Nederland te bevrijden", "Een Amerikaanse atoombomtest"],
         answer: 0,
         wrongHints: [null, "Stalingrad ligt in Rusland, ver van Engeland.", "Bevrijding NL was D-Day en Market Garden.", "Atoombommen kwamen pas in 1945, in Japan."],
         uitlegPad: {
@@ -470,9 +470,9 @@ const steps = [
       },
       {
         q: "Wat was de **Hongerwinter** in NL?",
-        options: ["Een tijd van grote honger in Nederland", "Een Duitse hongerstaking", "Een feestdag op 5 mei", "Een militair plan"],
+        options: ["Hongersnood in West-Nederland in 1944-45", "Hongersnood in Duitsland na de oorlog", "Hongersnood op Java onder de Japanners", "Strenge winter in heel Nederland in 1947"],
         answer: 0,
-        wrongHints: [null, "Niet de Duitsers leden honger — de bezette NL bevolking.", "5 mei is bevrijdingsdag, geen hongerwinter.", "Het was een gevolg van blokkades, geen militair plan op zich."],
+        wrongHints: [null, "Ook in Duitsland was later honger, maar die periode heette anders.", "Ook daar was honger, maar de Hongerwinter speelde zich in Europa af.", "In 1947 was het streng koud, maar was er toen ook hongersnood?"],
         uitlegPad: {
           stappen: [{ titel: "Winter 1944-1945 — uithongering west-NL", tekst: "September 1944: spoorwegstaking in bezet NL (op verzoek regering in Londen) om Duitsers te dwarsbomen. Duitsers wraak: blokkeerden voedsel- en brandstoftransport naar West-NL (Amsterdam, Den Haag, Rotterdam, Utrecht). Resultaat: ~20.000 doden door honger + kou tot bevrijding mei 1945." }],
           woorden: [{ woord: "Hongerwinter", uitleg: "Winter 1944-1945 in bezet noord/west NL. Honger, kou, hongertochten op platteland." }, { woord: "hongertocht", uitleg: "Stedelingen liepen/fietsten naar boeren op platteland om eten te ruilen (lakens, tapijten voor aardappelen)." }, { woord: "Operation Manna", uitleg: "April-mei 1945: Britse + Amerikaanse vliegtuigen dropten ~11.000 ton voedsel op West-NL. Duitsers stonden dit toe (oorlog bijna afgelopen)." }],
@@ -505,9 +505,9 @@ const steps = [
       },
       {
         q: "Waarom herdenkt NL ook **15 augustus**?",
-        options: ["Einde van de oorlog in Nederlands-Indië", "Hitler pleegt zelfmoord", "D-Day vindt plaats", "Begin van WO2"],
+        options: ["Einde van de oorlog in Nederlands-Indië", "Hitler pleegt zelfmoord in Berlijn", "D-Day vindt plaats in Normandië", "Duitsland valt Nederland binnen"],
         answer: 0,
-        wrongHints: [null, "Hitler stierf 30 april 1945 — niet 15 augustus.", "D-Day was 6 juni 1944.", "WO2 begon op 1 september 1939."],
+        wrongHints: [null, "Hitler stierf 30 april 1945 — niet 15 augustus.", "D-Day was 6 juni 1944.", "Dat was op 10 mei 1940."],
         uitlegPad: {
           stappen: [{ titel: "15 augustus 1945 — Japan capituleert", tekst: "Na atoombommen Hiroshima (6 aug) + Nagasaki (9 aug) maakte Japan op 15 augustus 1945 bekend zich over te geven (de capitulatie werd op 2 september getekend). Dit beëindigde WO2 in heel Azië. Ook Nederlands-Indië (huidig Indonesië) werd weer 'NL', maar Indonesische nationalisten riepen 2 dagen later (17 aug 1945) onafhankelijkheid uit. Voor NL-veteranen + nabestaanden Indië: pas DAN was oorlog écht voorbij." }],
           woorden: [{ woord: "Nederlands-Indië", uitleg: "NL-kolonie in Azië (VOC vanaf 1602, kolonie 1816-1949). Nu Indonesië. Was bezet door Japan 1942-1945." }, { woord: "Indiëgangers", uitleg: "NL'ers (vooral militairen) die in Indië gewerkt/gevochten hebben. Hun verhaal anders dan Europese oorlog." }, { woord: "Jappenkampen", uitleg: "Japanse interneringskampen voor NL'ers in Indië. Zware omstandigheden, veel doden." }],
@@ -542,7 +542,7 @@ const steps = [
     checks: [
       {
         q: "Wat is de **Holocaust**?",
-        options: ["Stelselmatige moord op ~6 miljoen joden door nazi-Duitsland", "Een militair plan voor de invasie van Engeland", "Een Duitse propagandafilm", "Een naoorlogs herdenkingsmonument"],
+        options: ["Stelselmatige moord op joden door nazi-Duitsland", "Een militair plan voor de invasie van Engeland", "Een Duitse propagandafilm over de oorlog", "Een herdenkingsmonument van na de oorlog"],
         answer: 0,
         wrongHints: [null, "Plan voor invasie Engeland heette *Operatie Seelöwe* — niet uitgevoerd.", "Niet één film maar een georganiseerde misdaad.", "Een herdenking kwam pas ná de oorlog — Holocaust is de gebeurtenis zelf."],
         uitlegPad: {
@@ -570,7 +570,7 @@ const steps = [
       },
       {
         q: "Wanneer is de **internationale Holocaust-herdenkingsdag**?",
-        options: ["27 januari (bevrijding Auschwitz, 1945)", "5 mei (bevrijding NL)", "4 mei (NL Dodenherdenking)", "11 november (einde WO1)"],
+        options: ["27 januari (bevrijding Auschwitz, 1945)", "5 mei (bevrijding Nederland, 1945)", "4 mei (Dodenherdenking in Nederland)", "11 november (wapenstilstand WO1, 1918)"],
         answer: 0,
         wrongHints: [null, "Dat is Bevrijdingsdag NL, niet Holocaust-herdenking specifiek.", "Dichtbij — Dodenherdenking herdenkt álle slachtoffers van WO2 + latere conflicten, niet specifiek de Holocaust.", "Dat is einde WO1, andere oorlog."],
         uitlegPad: {
@@ -658,9 +658,9 @@ const steps = [
       },
       {
         q: "Wat was er **eerst**: Anne Frank in onderduik óf D-Day?",
-        options: ["Anne Frank in onderduik eerst — D-Day kwam later", "D-Day eerst — Anne Frank dook later onder", "Tegelijk in 1944", "Beide kort na de oorlog"],
+        options: ["Anne Frank in onderduik eerst — D-Day kwam later", "D-Day eerst — Anne Frank dook later onder", "Tegelijk — allebei begonnen in 1944", "Allebei pas na de oorlog — niet tijdens WO2"],
         answer: 0,
-        wrongHints: [null, "Zoek beide jaartallen op: wanneer dook Anne onder, en wanneer was D-Day?", "Begon de onderduik echt pas in 1944? Zoek het startjaar op.", "Beide tijdens de oorlog, niet erna."],
+        wrongHints: [null, "Zoek beide jaartallen op: wanneer dook Anne onder, en wanneer was D-Day?", "Begon de onderduik echt pas in 1944? Zoek het startjaar op.", "Waren ze echt na de oorlog? Zoek de jaartallen op."],
         uitlegPad: {
           stappen: [{ titel: "Volgorde: Anne 1942 → D-Day 1944", tekst: "Anne Frank dook 6 juli 1942 onder in het Achterhuis Prinsengracht 263 Amsterdam. D-Day was 6 juni 1944. Verschil: bijna 2 jaar. Anne werd 4 augustus 1944 ontdekt — toen liepen geallieerden net Frankrijk in na D-Day. Te laat voor haar." }],
           woorden: [{ woord: "Achterhuis", uitleg: "Verborgen ruimte achter Otto Franks kantoor. Anne + 7 anderen woonden er 25 maanden." }, { woord: "tijdsverband", uitleg: "Volgorde van gebeurtenissen vaststellen. Standaard-examen-vaardigheid geschiedenis." }],
@@ -686,9 +686,9 @@ const steps = [
       },
       {
         q: "Welke **drie hoofdoorzaken** zorgden samen voor WO2?",
-        options: ["Versailles-verdrag + crisis 1929 + Hitler/NSDAP", "Atoombom + Pearl Harbor + Stalingrad", "Holocaust + Anne Frank + Hongerwinter", "VN + EU + NAVO"],
+        options: ["Versailles-verdrag + crisis 1929 + Hitler/NSDAP", "Atoombom + Pearl Harbor + slag bij Stalingrad", "Holocaust + onderduik Anne Frank + Hongerwinter", "Verenigde Naties + Europese Unie + Marshallplan"],
         answer: 0,
-        wrongHints: [null, "Dat zijn juist gebeurtenissen *tijdens* WO2, geen oorzaken.", "Dat zijn gevolgen + onderdelen van WO2, geen oorzaken vooraf.", "Dat zijn allemaal organisaties van *na* WO2."],
+        wrongHints: [null, "Dat zijn juist gebeurtenissen *tijdens* WO2, geen oorzaken.", "Dat zijn gevolgen + onderdelen van WO2, geen oorzaken vooraf.", "Dat zijn allemaal dingen van *na* WO2."],
         uitlegPad: {
           stappen: [{ titel: "Versailles + Crisis + Hitler", tekst: "Klassieke examen-3-vragen. (1) Versailles (1919): Duitse boosheid + armoede. (2) Crisis 1929: armoede explodeerde → wanhoop. (3) Hitler/NSDAP: extreme leider beloofde wraak. Zonder een van de 3 was WO2 misschien niet gebeurd. Onthoud: 1919 → 1929 → 1933 → 1939." }],
           woorden: [{ woord: "structurele oorzaken", uitleg: "Lange-termijn factoren die situatie mogelijk maakten (Versailles, crisis)." }, { woord: "directe oorzaak", uitleg: "Persoon/gebeurtenis die het in beweging zette (Hitler/NSDAP)." }, { woord: "aanleiding", uitleg: "Trigger-moment (Polen-inval 1 sept 1939). Niet hetzelfde als oorzaak!" }],

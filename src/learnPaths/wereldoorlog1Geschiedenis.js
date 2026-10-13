@@ -72,9 +72,9 @@ const steps = [
       },
       {
         q: "Wat is **nationalisme**?",
-        options: ["Sterke trots in eigen volk/land", "Vredesbeweging", "Internationaal samenwerken", "Religie"],
+        options: ["Sterke trots in eigen volk/land", "Streven naar vrede tussen landen", "Samenwerken met andere landen", "Sterk geloof in één godsdienst"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Geen religie."],
+        wrongHints: [null, "Dat heet pacifisme — iets anders.", "Dat heet internationalisme — iets anders.", "Dit gaat over geloof, niet over land of volk."],
       },
       {
         q: "Welke regio heette **'Balkan-kruidvat'**?",
@@ -141,9 +141,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **loopgraaf**?",
-        options: ["Sloot in de grond waar soldaten schuilden", "Wapen", "Voertuig", "Vredesplek"],
+        options: ["Sloot in de grond waar soldaten schuilden", "Kanon dat granaten over de linies schoot", "Pantserwagen die door modder kon rijden", "Strook land tussen de twee legers"],
         answer: 0,
-        wrongHints: [null, "Geen wapen.", "Geen voertuig.", "Geen vrede — middenin oorlog."],
+        wrongHints: [null, "Een kanon is een wapen; een loopgraaf niet.", "Dat is een tank — iets anders.", "Dat heet niemandsland."],
       },
       {
         q: "Welk **nieuw wapen** werd in WO1 voor het eerst gebruikt?",
@@ -174,9 +174,9 @@ const steps = [
     checks: [
       {
         q: "Was **Nederland in oorlog** in WO1?",
-        options: ["Nee — neutraal", "Ja — met Duitsland", "Ja — met Engeland", "Onbekend"],
+        options: ["Nee — neutraal", "Ja — met Duitsland", "Ja — met Engeland", "Ja — met Frankrijk"],
         answer: 0,
-        wrongHints: [null, "Nederland vocht niet tegen Duitsland — denk aan het verschil met België.", "Nederland koos geen kant — wat deed koningin Wilhelmina?", "Dat is wel bekend — kijk naar wat Wilhelmina wilde."],
+        wrongHints: [null, "Nederland vocht niet tegen Duitsland — denk aan het verschil met België.", "Nederland koos geen kant — wat deed koningin Wilhelmina?", "Er vochten geen Nederlandse soldaten aan het westfront."],
       },
       {
         q: "Hoeveel **Belgische vluchtelingen** kwamen naar NL?",
@@ -186,15 +186,15 @@ const steps = [
       },
       {
         q: "Welk **oproer** brak uit in juli 1917?",
-        options: ["Aardappeloproer Amsterdam", "Bietoproer", "Broodoproer Rotterdam", "Kolenoproer Den Haag"],
+        options: ["Aardappeloproer Amsterdam", "Bietenoproer Groningen", "Broodoproer Rotterdam", "Kolenoproer Den Haag"],
         answer: 0,
         wrongHints: [null, "Denk aan hét dagelijkse volksvoedsel van arme gezinnen — wat lag er elke dag op tafel?", "Het draaide om een ander basisvoedsel, en niet in de havenstad.", "Geen brandstof maar voedsel — en in een andere stad."],
       },
       {
         q: "Wie vluchtte na verlies oorlog naar **Doorn (NL)**?",
-        options: ["Duitse keizer Wilhelm II", "Lenin", "Frans Ferdinand", "Hitler"],
+        options: ["Duitse keizer Wilhelm II", "Russische leider Lenin", "Aartshertog Frans Ferdinand", "Oostenrijkse keizer Karel"],
         answer: 0,
-        wrongHints: [null, "Was in Rusland.", "Was al doodgeschoten.", "Veel later — WO2."],
+        wrongHints: [null, "Lenin bleef in Rusland en kwam er juist aan de macht.", "Die was al in 1914 doodgeschoten.", "Keizer Karel ging in ballingschap naar Zwitserland en later Madeira."],
       },
     ],
   },
@@ -215,7 +215,7 @@ const steps = [
         q: "Hoeveel **doden** ongeveer in WO1?",
         options: ["~17 miljoen", "~1 miljoen", "~50 miljoen", "~100.000"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Dat past meer bij WO2.", "Te weinig."],
+        wrongHints: [null, "Alleen al in de slag aan de Somme vielen meer dan een miljoen doden en gewonden.", "Dat past meer bij WO2.", "Bij één grote slag, zoals Verdun, vielen al meer doden dan dit."],
       },
       {
         q: "Wat moest Duitsland in **Verdrag van Versailles**?",
@@ -225,9 +225,9 @@ const steps = [
       },
       {
         q: "Welke **rijken vielen uiteen** na WO1?",
-        options: ["Oostenrijk-Hongarije en Ottomaanse Rijk", "Alleen het Russische Rijk", "Alleen het Britse Rijk", "Geen enkel rijk"],
+        options: ["Oostenrijk-Hongarije en Ottomaanse Rijk", "Het Britse en het Franse Rijk", "Het Japanse en het Italiaanse Rijk", "Het Spaanse en het Nederlandse rijk"],
         answer: 0,
-        wrongHints: [null, "Viel het Russische Rijk als enige uiteen?", "Het Britse Rijk bleef na WO1 bestaan en werd zelfs groter.", "Kijk naar de nieuwe landen die na 1918 op de kaart kwamen."],
+        wrongHints: [null, "Die bleven na WO1 bestaan en werden zelfs groter.", "Japan en Italië hoorden bij de winnaars.", "Spanje en Nederland waren neutraal en hielden hun koloniën."],
       },
     ],
   },
@@ -240,21 +240,21 @@ const steps = [
     checks: [
       {
         q: "Welke 4 letters van **MAIN-oorzaken**?",
-        options: ["Militarisme + Allianties + Imperialisme + Nationalisme", "Macht + Antisemitisme + Inflatie + Naties", "Marine + Atlas + Industrie + Noord-Europa", "Marshall + Arabieren + Italië + Nederland"],
+        options: ["Militarisme + Allianties + Imperialisme + Nationalisme", "Militarisme + Antisemitisme + Imperialisme + Nationalisme", "Monarchie + Allianties + Industrialisatie + Nationalisme", "Militarisme + Allianties + Inflatie + Neutraliteit"],
         answer: 0,
-        wrongHints: [null, "Niet MAIN-letters.", "Niet de 4.", "Niet."],
+        wrongHints: [null, "Antisemitisme was geen hoofdoorzaak van WO1 — welke A dan wel?", "Monarchie en industrialisatie zijn niet de M en de I van MAIN.", "Inflatie en neutraliteit veroorzaakten geen oorlog."],
       },
       {
         q: "Wie werd vermoord op **28 juni 1914**?",
-        options: ["Aartshertog Frans Ferdinand", "Keizer Wilhelm II", "Tsaar Nicolaas", "Hitler"],
+        options: ["Aartshertog Frans Ferdinand", "Duitse keizer Wilhelm II", "Tsaar Nicolaas II van Rusland", "Koning Albert I van België"],
         answer: 0,
-        wrongHints: [null, "Vluchtte naar NL na oorlog.", "Werd later vermoord.", "Veel later."],
+        wrongHints: [null, "Die vluchtte na de oorlog naar Nederland.", "De tsaar werd pas in 1918 vermoord.", "Albert I leidde België de hele oorlog door."],
       },
       {
         q: "Wat is een **loopgraaf**?",
-        options: ["Sloot in grond voor soldaten", "Wapen", "Voertuig", "Vredesplek"],
+        options: ["Sloot in grond voor soldaten", "Kanon voor lange afstanden", "Pantserwagen voor modder", "Strook land tussen de legers"],
         answer: 0,
-        wrongHints: [null, "Geen wapen.", "Geen voertuig.", "Geen vrede."],
+        wrongHints: [null, "Een kanon is een wapen; een loopgraaf niet.", "Dat is een tank — iets anders.", "Dat heet niemandsland."],
       },
       {
         q: "Welk **gas** werd eerst gebruikt in **Ieper 1915**?",

@@ -32,9 +32,9 @@ const steps = [
     checks: [
       {
         q: "Max Weber's **drie soorten gezag** zijn:",
-        options: ["Traditioneel / charismatisch / rationeel-legaal","Goed / slecht / neutraal","Wettelijk / illegaal","Mannelijk / vrouwelijk / divers"],
+        options: ["Traditioneel / charismatisch / rationeel-legaal","Wetgevend / uitvoerend / rechterlijk gezag","Politiek / economisch / militair gezag","Religieus / wereldlijk / militair gezag"],
         answer: 0,
-        wrongHints: [null, "Weber oordeelt niet over goed of slecht — hij vraagt: waaróm accepteren mensen gezag?", "Dat is maar één as (wet) — Weber onderscheidt ook gewoonte en persoonlijke uitstraling.", "Gaat niet over gender — denk aan: erfelijke koning, meeslepende leider, gekozen bestuurder."],
+        wrongHints: [null, "Dat is de trias politica van Montesquieu. Weber vraagt: waaróm accepteren mensen gezag?", "Dat zijn terreinen waar macht speelt. Weber vraagt iets anders: waarom gehoorzamen mensen?", "Dat zegt waar het gezag zit, niet waarom mensen het accepteren."],
         uitlegPad: {
           stappen: [{ titel: "Weber 1922", tekst: "**Max Weber**: drie types gezag.\n• **Traditioneel** (koning erft).\n• **Charismatisch** (uitstraling).\n• **Rationeel-legaal** (regels).\n\nModerne staat = vooral rationeel-legaal." }],
           niveaus: { basis: "Trad/char/rat.", simpeler: "Weber-3", nogSimpeler: "Trad/char/rat" },
@@ -42,9 +42,9 @@ const steps = [
       },
       {
         q: "NL is een **constitutionele monarchie + parlementaire democratie**. Wat houdt 'constitutionele' in?",
-        options: ["Koning gebonden aan grondwet, niet absoluut","Koning kiest minister","Volledig democratisch","Geen regering"],
+        options: ["Koning gebonden aan grondwet, niet absoluut","Koning kiest zelf alle ministers uit","Het volk kiest zelf het staatshoofd","Koning mag de grondwet zelf veranderen"],
         answer: 0,
-        wrongHints: [null, "Niet — formaliteit alleen.", "Wel democratisch — ander deel.", "Wel regering."],
+        wrongHints: [null, "Wie bepaalt na verkiezingen welke ministers er komen: de koning of de formatie?", "Kiest het volk in Nederland de koning?", "Wie mag de Grondwet wijzigen: één persoon, of het parlement?"],
         uitlegPad: {
           stappen: [{ titel: "Grondwet > koning", tekst: "**Constitutionele monarchie**: monarch (koning) onderworpen aan **grondwet**. Niet absoluut zoals Lodewijk XIV ('l'État c'est moi'). Koning heeft een ceremoniële rol. NL sinds 1815 (Willem I) constitutioneel; ministersverantwoordelijkheid sinds 1848 (Thorbecke)." }],
           niveaus: { basis: "Koning gebonden aan grondwet.", simpeler: "Const. = grondwet boven koning", nogSimpeler: "Koning gebonden aan grondwet" },
@@ -62,9 +62,9 @@ const steps = [
       },
       {
         q: "Wat is een **burgerinitiatief**?",
-        options: ["Met handtekeningen een onderwerp op de Kamer-agenda zetten","Verplicht stemmen","Een wet over burgers","Belasting initiatief"],
+        options: ["Met handtekeningen een onderwerp op de Kamer-agenda zetten","Verplicht stemmen bij een landelijk referendum","Een wet die burgers extra rechten op inspraak geeft","Een referendum dat burgers zelf over een wet aanvragen"],
         answer: 0,
-        wrongHints: [null, "Niet — NL niet verplicht.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Niet — NL niet verplicht.", "Wie neemt bij een burgerinitiatief het initiatief: de wetgever of de burger?", "Bij een referendum stemmen burgers zelf over een wet. Is dat hetzelfde als iets op de agenda zetten?"],
         uitlegPad: {
           stappen: [{ titel: "Onderwerp agenderen", tekst: "**Burgerinitiatief**: burgers kunnen onderwerp op agenda Tweede Kamer zetten met **40.000 handtekeningen + steun voor behandeling**. Geen referendum — alleen agendering. Resultaat niet bindend. Voorbeeld: campagne *Stop Particulier Vuurwerk* (2017)." }],
           niveaus: { basis: "40k → parlement.", simpeler: "Burgerinit. = 40k handt.", nogSimpeler: "40k → parlement" },
@@ -101,7 +101,7 @@ const steps = [
       },
       {
         q: "**Primaire socialisatie** vindt vooral plaats in:",
-        options: ["Familie / gezin","School","Werk","Online"],
+        options: ["Familie / gezin","School / klas","Werk / bijbaan","Online / sociale media"],
         answer: 0,
         wrongHints: [null, "Niet — dat is secundair.", "Niet — dat komt later.", "Niet — dat komt later."],
         uitlegPad: {
@@ -111,9 +111,9 @@ const steps = [
       },
       {
         q: "**Affectieve polarisatie** is:",
-        options: ["Emotionele afkeer van de andere groep","Geweld","Verkiezingen","Migratie"],
+        options: ["Emotionele afkeer van de andere groep","Geweld tussen twee vijandige groepen","Groeiend verschil in politieke standpunten","Stemmen verspreid over veel kleine partijen"],
         answer: 0,
-        wrongHints: [null, "Kan gevolg zijn — niet hetzelfde.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Kan gevolg zijn — niet hetzelfde.", "Dat heet ideologische polarisatie. Waar verwijst het woord 'affectief' naar?", "Dat heet versplintering. Waar verwijst het woord 'affectief' naar?"],
         uitlegPad: {
           stappen: [{ titel: "Emotioneel verschil", tekst: "**Affectieve polarisatie**: niet op inhoud maar **emotioneel**. Ik kan ander politiek standpunt verdragen, maar **vind aanhanger niet aardig + wantrouw die**. Onderzoek toont stijging laatste 10 jaar. Filterbubbels online versterken." }],
           theorie: "Toets-actueel: COVID-maatregelen, klimaat, migratie, Israël-Palestina-debat hebben affectieve polarisatie versterkt.",
@@ -122,9 +122,9 @@ const steps = [
       },
       {
         q: "**Durkheim's** verschil traditioneel vs modern:",
-        options: ["Mechanische → organische solidariteit","Religieus → atheïstisch","Boer → arbeider","Rijk → arm"],
+        options: ["Mechanische → organische solidariteit","Religieuze → seculiere samenleving","Agrarische → industriële economie","Gelijke → ongelijke verdeling van welvaart"],
         answer: 0,
-        wrongHints: [null, "Soms gevolg, niet kern.", "Te eng.", "Niet de focus."],
+        wrongHints: [null, "Soms gevolg, niet kern.", "Dat is een economische verschuiving. Waar ging het Durkheim als socioloog om?", "Durkheim schreef niet vooral over ongelijkheid; dat deed vooral Marx."],
         uitlegPad: {
           stappen: [{ titel: "Solidariteit-vormen", tekst: "**Durkheim**:\n• **Mechanische solidariteit** (traditioneel kleine gemeenschap): mensen **lijken** op elkaar → samenhang.\n• **Organische solidariteit** (modern complexe maatschappij): mensen **verschillen** in rol → afhankelijk van elkaar → samenhang.\n\nVoorbeeld: dorp van 100 boeren = mechanisch. Stad van 1 mln verschillende beroepen = organisch." }],
           niveaus: { basis: "Mech → org.", simpeler: "Durkheim 2 soorten", nogSimpeler: "Mech → org" },
@@ -132,9 +132,9 @@ const steps = [
       },
       {
         q: "**Bridging capital** (Putnam) is:",
-        options: ["Verbinding tussen verschillende groepen","Binnen eigen groep","Internetkabel","Geld lenen"],
+        options: ["Verbinding tussen verschillende groepen","Verbinding binnen de eigen groep","Vertrouwen in instituties zoals de overheid","Bezit dat je inzet om geld te verdienen"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is bonding.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Niet — dat is bonding.", "Dat gaat over vertrouwen in instanties, niet over contacten tussen groepen.", "Dat is economisch kapitaal. Putnam gaat over sociaal kapitaal."],
         uitlegPad: {
           stappen: [{ titel: "Bruggen slaan", tekst: "**Bridging social capital** (Putnam): netwerken die **verschillende groepen** verbinden (etnisch, religieus, klasse). Versus **bonding capital**: binnen eigen groep (familie, kerk). Beide nodig — bridging vooral voor diverse maatschappij." }],
           niveaus: { basis: "Tussen groepen.", simpeler: "Bridging = brug tussen", nogSimpeler: "Tussen groepen" },
@@ -151,9 +151,9 @@ const steps = [
     checks: [
       {
         q: "**Secularisatie** betekent:",
-        options: ["Religie verliest maatschappelijke invloed","Mensen worden religieuzer","Meer kerken bouwen","Religieus onderwijs"],
+        options: ["Religie verliest maatschappelijke invloed","Mensen worden steeds religieuzer","Scheiding van kerk en staat in de wet","Mensen stappen over naar een ander geloof"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet relevant.", "Niet."],
+        wrongHints: [null, "Gaan er in Nederland nu meer of minder mensen naar de kerk dan in 1950?", "Dat is een regel over de staat. Secularisatie is een proces in de hele samenleving.", "Dan blijft religie even belangrijk. Wat gebeurt er bij secularisatie met de rol van religie?"],
         uitlegPad: {
           stappen: [{ titel: "Religie naar privé", tekst: "**Secularisatie**: religie verliest publieke invloed; wordt privé-zaak. NL: 1960 ~80% kerkelijk → 2024 ruim de helft onkerkelijk (~55%). Verzuiling (1900-1960) afgebroken. Vroeger eigen scholen, omroep, kranten per zuil." }],
           niveaus: { basis: "Religie kwijnt.", simpeler: "Secul = religie minder", nogSimpeler: "Religie kwijnt" },
@@ -161,9 +161,9 @@ const steps = [
       },
       {
         q: "**Weber** verbond opkomst kapitalisme met:",
-        options: ["Calvinistische werkethiek","Boeddhisme","Communisme","Tovenarij"],
+        options: ["Calvinistische werkethiek","Renaissance-humanisme","Uitvinding van de stoommachine","Katholieke kloostertraditie"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet — Marx-context.", "Niet relevant."],
+        wrongHints: [null, "Weber zocht de oorzaak in een religieuze houding, niet in kunst en cultuur.", "Dat is een technische verklaring. Weber zocht naar een culturele oorzaak.", "Weber vergeleek katholieke en protestantse streken. Waar groeide het kapitalisme het snelst?"],
         uitlegPad: {
           stappen: [{ titel: "Werkethiek + uitverkiezing", tekst: "**Weber** in *Protestantse ethiek* (1905): **calvinisme** (NL, Schotland, deel DE, VS-New England) leerde: hard werken + zuinig leven kunnen tekenen van uitverkiezing zijn. Dat creëerde mindset voor kapitalisme: arbeid + spaarzaamheid = goed. Dat past bij de opkomst van NL als handelsmacht in de 17e eeuw." }],
           niveaus: { basis: "Calvinistisch.", simpeler: "Weber = calvinisme + kap", nogSimpeler: "Calvinistisch" },
@@ -171,9 +171,9 @@ const steps = [
       },
       {
         q: "**Bourdieu's** habitus is:",
-        options: ["Aangeleerde manier van denken en doen","Geld","Klederdracht","Habitat (woonomgeving)"],
+        options: ["Aangeleerde manier van denken en doen","Het geld en bezit dat je erft","Kleding waarmee je laat zien wie je bent","De wijk of omgeving waarin je woont"],
         answer: 0,
-        wrongHints: [null, "Niet — wel verwante concepten.", "Niet — slechts uitdrukking.", "Klinkt zo maar nee."],
+        wrongHints: [null, "Geld is bij Bourdieu economisch kapitaal — verwant, maar een ander begrip.", "Kleding kan je habitus laten zien, maar is het niet zelf.", "Habitus lijkt op 'habitat', maar gaat het over een plek?"],
         uitlegPad: {
           stappen: [{ titel: "Onbewuste smaak", tekst: "**Habitus** (Bourdieu): aangeleerde + grotendeels onbewuste manier van denken/voelen/handelen. Gevormd door omgeving (klasse, gezin). Bepaalt smaak (klassieke muziek vs hardcore, krant vs tv), praat, manieren. **Reproductie**: kinderen erven habitus → klasse blijft gereproduceerd ondanks formele gelijkheid." }],
           theorie: "Toets-patroon: 'leg uit waarom onderwijssucces deels afhangt van gezinscultuur' → Bourdieu's habitus + cultureel kapitaal.",
@@ -182,9 +182,9 @@ const steps = [
       },
       {
         q: "**Beck's risikogesellschaft** zegt dat moderne maatschappij:",
-        options: ["Zelf nieuwe risico's produceert","Geen risico's heeft","Alleen oude risico's","Veilig is"],
+        options: ["Zelf nieuwe risico's produceert","Risico's goed onder controle heeft","Vooral bedreigd wordt door natuurrampen","Vooral lijdt onder armoede en schaarste"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — beide.", "Niet."],
+        wrongHints: [null, "Klinkt 'risicomaatschappij' als een geruststellende naam?", "Waar komen risico's als kernrampen en klimaatverandering vandaan?", "Dat was het hoofdprobleem van de oude klassenmaatschappij. Wat is volgens Beck nieuw?"],
         uitlegPad: {
           stappen: [{ titel: "Door techniek nieuwe gevaren", tekst: "**Beck**: moderne samenleving produceert door techniek + economische ontwikkeling **nieuwe risico's** die zij niet meer goed kan beheersen. Voorbeelden: klimaatverandering, kernrampen (Tsjernobyl/Fukushima), pandemieën, financiële crises (2008), AI-risico's. Klassieke risico's (oorlog, ziekte) niet weg, modern erbij." }],
           niveaus: { basis: "Eigen risico's.", simpeler: "Beck = nieuwe risico's", nogSimpeler: "Eigen risico's" },
@@ -192,7 +192,7 @@ const steps = [
       },
       {
         q: "Welk **generatie-kenmerk** past bij **Gen Z**?",
-        options: ["Smartphone-natives + klimaat-angst","WO2-trauma","Wederopbouw-optimisme","No future jaren '80"],
+        options: ["Smartphone-natives + klimaat-angst","Oorlogstrauma + zuinig leven","Wederopbouw-optimisme + groot gezin","No future + punk in de jaren '80"],
         answer: 0,
         wrongHints: [null, "Niet — stille generatie.", "Niet — boomers.", "Niet — Gen X."],
         uitlegPad: {
@@ -212,9 +212,9 @@ const steps = [
     checks: [
       {
         q: "Welk recht is een **klassiek grondrecht**?",
-        options: ["Vrijheid van meningsuiting","Recht op werk","Recht op zorg","Recht op vakantie"],
+        options: ["Vrijheid van meningsuiting","Recht op betaald werk","Recht op gezondheidszorg","Recht op sociale zekerheid"],
         answer: 0,
-        wrongHints: [null, "Niet — sociaal recht.", "Niet — sociaal recht.", "Niet primair grondrecht."],
+        wrongHints: [null, "Niet — sociaal recht.", "Niet — sociaal recht.", "Moet de overheid hier iets regelen, of juist van je afblijven?"],
         uitlegPad: {
           stappen: [{ titel: "Vrijheidsrechten vs zorgplicht", tekst: "**Klassieke grondrechten** beschermen burger TEGEN staat (vrijheid van meningsuiting, godsdienst, privacy). **Sociale grondrechten** verplichten staat tot zorg voor burgers (werkgelegenheid, milieu, gezondheid, onderwijs). Verschil: klassiek = 'laat met rust', sociaal = 'doe iets voor'." }],
           niveaus: { basis: "Mening.", simpeler: "Klassiek = vrijheid", nogSimpeler: "Mening" },
@@ -222,9 +222,9 @@ const steps = [
       },
       {
         q: "**EVRM** verschilt van **UVRM** doordat:",
-        options: ["EVRM is juridisch bindend","UVRM is bindend","Geen verschil","UVRM is Europees"],
+        options: ["EVRM is juridisch bindend","UVRM is juridisch bindend","Ze zijn juridisch precies gelijk","UVRM geldt alleen in Europa"],
         answer: 0,
-        wrongHints: [null, "Niet — UVRM moreel, niet bindend.", "Wel verschil.", "Niet — UVRM is wereldwijd."],
+        wrongHints: [null, "Niet — UVRM moreel, niet bindend.", "Kun je met de UVRM net zo naar een rechter stappen als met het EVRM?", "Niet — UVRM is wereldwijd."],
         uitlegPad: {
           stappen: [{ titel: "VN moreel, Europa bindend", tekst: "**UVRM** (Universele Verklaring 1948, VN): moreel + politiek krachtig, **niet juridisch bindend** voor staten. **EVRM** (Europees Verdrag 1950): **juridisch bindend** voor lidstaten Raad van Europa. Burger kan na het doorlopen van de nationale rechtspraak naar het Europees Hof voor de Rechten van de Mens in **Straatsburg** stappen met een klacht tegen de eigen staat." }],
           theorie: "Toets-actueel: in de Urgenda-klimaatzaak gebruikte de Nederlandse rechter het EVRM om de overheid tot actie te dwingen.",
@@ -233,7 +233,7 @@ const steps = [
       },
       {
         q: "Welk recht is **privaat recht**?",
-        options: ["Koopcontract tussen burgers","Strafrecht","Belastingrecht","Vreemdelingenrecht"],
+        options: ["Koopcontract tussen burgers","Rechtszaak tegen een inbreker","Aanslag van de Belastingdienst","Verblijfsvergunning van de IND"],
         answer: 0,
         wrongHints: [null, "Bij strafrecht staat de stáát tegenover de verdachte — waar staan burgers tegenover elkáár?", "Belasting betaal je aan de overheid — dat is publiek. Waar is geen overheid bij betrokken?", "De IND is een overheidsdienst — zoek de relatie tussen twee gewone burgers."],
         uitlegPad: {
@@ -245,7 +245,7 @@ const steps = [
         q: "De **Toeslagenaffaire** illustreert vooral falen van:",
         options: ["Rechtsstaat","Verkiezingen","NAVO","EU"],
         answer: 0,
-        wrongHints: [null, "Niet — vond plaats binnen normale verkiezingen.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Niet — vond plaats binnen normale verkiezingen.", "De NAVO is een militair bondgenootschap — speelde dat hier een rol?", "Speelde de affaire bij Europese instellingen, of bij de Nederlandse overheid?"],
         uitlegPad: {
           stappen: [{ titel: "Rechtsstaat-crisis", tekst: "**Toeslagenaffaire**: belastingdienst beschuldigde duizenden ouders **zonder grondige check** van fraude. Hoge boetes, schuld, gezinsdrama's. **Rechtsstaat** faalde: geen eerlijke procedure, ouders niet gehoord, discriminatie op herkomst. Rapport-Donner + Parlementaire Enquête lieten zien dat ambtenaren-cultuur + politieke druk samenwerkten." }],
           theorie: "Toets-patroon: 'leg uit waarom Toeslagenaffaire schadelijk voor rechtsstaat'. Antwoord: schending grondrechten + onafhankelijke rechter omzeild.",
@@ -273,9 +273,9 @@ const steps = [
     checks: [
       {
         q: "Welk concept gaat over **gedeelde waarden + cultuur**?",
-        options: ["Cognitieve binding","Politiek","Macht","Privaat recht"],
+        options: ["Cognitieve binding","Politieke verhouding","Economische verhouding","Juridische verhouding"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet primair.", "Niet relevant."],
+        wrongHints: [null, "Politieke verhoudingen gaan over macht. Gaat deze vraag daarover?", "Economische verhoudingen gaan over geld en afhankelijkheid. Zijn dat waarden?", "Juridische verhoudingen gaan over regels en wetten. Is dat hetzelfde als gedeelde waarden?"],
         uitlegPad: {
           stappen: [{ titel: "Cognitief = kennis", tekst: "Gedeelde **waarden, normen, cultuur** = cognitieve binding. Naast affectieve (gevoel), functionele (taakverdeling), politiek-juridische (wetten)." }],
           niveaus: { basis: "Cognitief.", simpeler: "Waarden = cognitief", nogSimpeler: "Cognitief" },
@@ -305,7 +305,7 @@ const steps = [
         q: "**Scheiding der machten** voorkomt:",
         options: ["Tirannie","Belastingontduiking","Klimaatverandering","Migratie"],
         answer: 0,
-        wrongHints: [null, "Niet — apart probleem.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Niet — apart probleem.", "Heeft dit probleem iets te maken met hoe de staatsmacht verdeeld is?", "Gaat machtsscheiding over grenzen en mensen, of over wie de macht heeft?"],
         uitlegPad: {
           stappen: [{ titel: "Macht in evenwicht", tekst: "**Trias politica** (Montesquieu): wetgevende, uitvoerende, rechterlijke macht gescheiden → geen enkele tak kan absoluut worden → **tirannie voorkomen**. Onafhankelijke rechters cruciaal: zonder hen kan regering wetten misbruiken." }],
           niveaus: { basis: "Tirannie.", simpeler: "Trias = anti-tirannie", nogSimpeler: "Tirannie" },
@@ -315,7 +315,7 @@ const steps = [
         q: "Wat is **populisme** als ideologie?",
         options: ["Volk tegenover elite","Religieus extremisme","Communisme","Liberalisme"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet relevant.", "Niet."],
+        wrongHints: [null, "Populisme kan religieus gekleurd zijn, maar wat is de kern van het idee?", "Communisme draait om klassenstrijd en gemeenschappelijk bezit. Is dat de kern van populisme?", "Liberalisme draait om individuele vrijheid. Is dat de kern van populisme?"],
         uitlegPad: {
           stappen: [{ titel: "Anti-elite politiek", tekst: "**Populisme**: politieke stijl die ' **zuivere volk** ' contrasteert met ' **corrupte elite** '. Kan links (Chavez, La France Insoumise) of rechts (PVV, FvD, Trump) zijn. Vaak charismatische leider, simpele oplossingen voor complexe problemen, weerstand tegen mainstream-media + experts." }],
           theorie: "Toets-trend: opkomst populisme in westen sinds 2008-crisis + 2016 (Brexit, Trump).",

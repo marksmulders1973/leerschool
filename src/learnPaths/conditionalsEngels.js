@@ -63,9 +63,9 @@ const steps = [
       },
       {
         q: "Welke 2 **delen** heeft een conditional?",
-        options: ["If-clause + main clause", "Subject + object", "Verb + adverb", "Adjective + noun"],
+        options: ["If-clause + main clause", "If-clause + relative clause", "Main clause + question tag", "Two main clauses with 'and'"],
         answer: 0,
-        wrongHints: [null, "Subject en object zitten in bijna élke zin — maar een conditional draait juist om een vóórwaarde. Welk woordje verwacht je dan?", "Werkwoord en bijwoord zeggen iets over de actie — maar een conditional gaat over een 'áls...dan'-situatie. Welk deel hoort daarbij?", "Bijvoeglijk + zelfstandig naamwoord vormen een omschrijving, zoals 'a big house' — heeft dat met een voorwaarde te maken?"],
+        wrongHints: [null, "Een betrekkelijke bijzin (met who of which) zegt iets over een woord. Waar zit dan het deel met het gevolg?", "Een question tag (…, isn't it?) maakt van een zin een vraag. Waar zit dan de voorwaarde?", "Twee hoofdzinnen met 'and' staan los naast elkaar. Waar is dan de 'als…dan'-verhouding?"],
       },
       {
         q: "**'If I had a car, I would drive.'** Welk type?",
@@ -219,9 +219,9 @@ const steps = [
     checks: [
       {
         q: "**'If I had studied medicine, I ___ a doctor now.'** Welk type?",
-        options: ["Mixed (Type 3 + 2)", "Type 1", "Type 2", "Type 3"],
+        options: ["Mixed (Type 3 + 2)", "Type 1 (if + present)", "Type 2 (if + past)", "Type 3 (if + past perfect)"],
         answer: 0,
-        wrongHints: [null, "Reëel toekomst.", "Alleen Type 2.", "Alleen Type 3."],
+        wrongHints: [null, "Type 1 gaat over een reële kans in de toekomst. Staat er in de if-zin een present?", "Kijk naar de if-zin: 'had studied'. Is dat de vorm van Type 2?", "De if-zin lijkt op Type 3, maar kijk naar 'now' aan het eind. Over welke tijd gaat het tweede deel?"],
       },
       {
         q: "**'Unless you hurry, you ___ the train.'**",
@@ -266,7 +266,7 @@ const steps = [
         q: "**'If she had known, she ___ have helped.'**",
         options: ["would", "will", "had", "would be"],
         answer: 0,
-        wrongHints: [null, "Type 1.", "Mist 'would'.", "Mixed met 'be'."],
+        wrongHints: [null, "'Will' hoort bij Type 1. Gaat deze zin over de toekomst of over het verleden?", "'She had have helped' kan niet. Welk hulpwerkwoord staat in Type 3 vóór 'have'?", "Er staat al 'have helped'. Past er dan nog 'be' tussen?"],
       },
       {
         q: "**'___ you study harder, you will pass.'**",
@@ -286,13 +286,13 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Type 2.", "Niet conditional.", "Niet matchend."],
       },
-      { q: "**Zero conditional** wordt gebruikt voor?", options: ["Algemene waarheden","Hypotheses","Verleden","Toekomst"], answer: 0, wrongHints: [null,"Type 2.","Type 3.","Type 1."] },
+      { q: "**Zero conditional** wordt gebruikt voor?", options: ["Algemene waarheden","Denkbeeldige situaties","Spijt over het verleden","Mogelijke toekomst"], answer: 0, wrongHints: [null,"Denkbeeldige situaties horen bij Type 2 (would). Welke tijden staan er in een zero conditional?","Spijt over het verleden hoort bij Type 3 (would have). Waar gaat de zero conditional over?","Een mogelijke toekomst hoort bij Type 1 (will). Gebruikt de zero conditional 'will'?"] },
       { q: "**'If it ___, I will stay home.'** (rain) — Type 1?", options: ["rains","rained","had rained","would rain"], answer: 0, wrongHints: [null,"Type 2.","Type 3.","Niet matchend."] },
       { q: "**'If I ___ rich, I would travel.'** Type 2?", options: ["were","will be","am","had been"], answer: 0, wrongHints: [null,"Geen 'will' in de if-clause.","Type 1.","Type 3."] },
-      { q: "**'If she ___ harder, she would have passed.'** Type 3?", options: ["had studied","studied","would study","studies"], answer: 0, wrongHints: [null,"Type 2.","Niet.","Type 1."] },
+      { q: "**'If she ___ harder, she would have passed.'** Type 3?", options: ["had studied","studied","would study","studies"], answer: 0, wrongHints: [null,"'Studied' in de if-zin hoort bij Type 2. Het hoofddeel heeft 'would have'. Welke if-vorm hoort daarbij?","'Would' staat in het hoofddeel, niet na 'if'. Welke tijd staat in de if-zin van Type 3?","'Studies' is present simple en hoort bij Type 1. Gaat deze zin over het verleden?"] },
       { q: "**'If I won the lottery, I ___ a house.'**", options: ["would buy","will buy","bought","buy"], answer: 0, wrongHints: [null,"Type 1.","Verleden.","Type 0."] },
       { q: "**Type 1** wordt gebruikt voor?", options: ["Reëel toekomstig","Hypothetisch","Verleden","Wetenschap"], answer: 0, wrongHints: [null,"Type 2.","Type 3.","Type 0."] },
-      { q: "**Type 2** beschrijft?", options: ["Onwaarschijnlijk / hypothetisch heden","Reëel heden","Verleden","Toekomst zeker"], answer: 0, wrongHints: [null,"Type 1.","Type 3.","Type 1."] },
+      { q: "**Type 2** beschrijft?", options: ["Hypothetisch heden","Algemene waarheid","Gemist verleden","Reële toekomst"], answer: 0, wrongHints: [null,"Algemene waarheden horen bij de zero conditional. Wat beschrijft 'If I were rich, I would…'?","Iets wat in het verleden niet gebeurd is, hoort bij Type 3 (would have). Wat beschrijft Type 2?","Een reële kans in de toekomst hoort bij Type 1 (will). Hoe waarschijnlijk is een Type 2-situatie?"] },
       { q: "**Open vraag**: complete the sentence — 'If I __ you, I would apologise.' (typ 1 woord)", kind: "open", acceptedAnswers: ["were", "was"], explanation: "Type 2: 'If I were you' (formeel) of 'If I was you' (spreektaal)." },
       { q: "**Open vraag**: what tense is used in the if-clause of Type 3 conditional?", kind: "open", acceptedAnswers: ["past perfect", "voltooid verleden tijd", "past-perfect"], explanation: "Type 3: 'If + past perfect, would have + V3.'" },
     ],

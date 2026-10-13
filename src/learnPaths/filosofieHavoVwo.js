@@ -61,9 +61,9 @@ const steps = [
       },
       {
         q: "**Stoïcisme** leert:",
-        options: ["Aanvaard wat je niet kunt veranderen", "Probeer al je gevoelens te onderdrukken", "Zoek in alles zoveel mogelijk genot", "Streef naar zoveel mogelijk bezit"],
+        options: ["Aanvaard wat je niet kunt veranderen", "Twijfel aan alles wat je zeker denkt te weten", "Geluk is zoveel mogelijk plezier beleven", "Kom in actie tegen alles wat je dwarszit"],
         answer: 0,
-        wrongHints: [null, "Niet vermijden — beheersen.", "Niet — dat lijkt meer op hedonisme.", "Bezit ligt buiten je macht, zeggen de stoïcijnen."],
+        wrongHints: [null, "Dat is de houding van de sceptici. Waar draaide het de stoïcijnen om?", "Niet — dat lijkt meer op hedonisme.", "Is boosheid over tegenslag volgens de stoïcijnen zinvol?"],
         uitlegPad: {
           stappen: [
             { titel: "Stoa-school Athene", tekst: "Marcus Aurelius (Romeinse keizer): 'Meditaties' — dagboek met stoïsche reflecties. Epictetus: 'Wat in onze macht ligt: oordeel, neiging. Buiten onze macht: lichaam, bezit, reputatie.' Vandaag heropleving als 'modern stoicism' + self-help (Tim Ferriss e.a.)." },
@@ -161,9 +161,9 @@ const steps = [
     checks: [
       {
         q: "Kants **categorische imperatief**:",
-        options: ["Handel zo dat je regel een algemene wet kan worden", "Handel zo dat jij er zelf het meeste voordeel van hebt", "Handel zoals God het in de heilige boeken voorschrijft", "Handel zo dat de uitkomst het meeste plezier oplevert"],
+        options: ["Handel zo dat je regel een algemene wet kan worden", "Handel zoals een deugdzaam mens zou handelen", "Handel zoals God het in de heilige boeken voorschrijft", "Handel zo dat de uitkomst het meeste plezier oplevert"],
         answer: 0,
-        wrongHints: [null, "Is eigenbelang voor Kant een goede grond voor plicht?", "Niet — Kant baseert de plicht op de rede, niet op geloof.", "Niet — kijken naar de uitkomst is utilitarisme."],
+        wrongHints: [null, "Dat is deugdethiek (Aristoteles): wat zou een goed mens doen?", "Niet — Kant baseert de plicht op de rede, niet op geloof.", "Niet — kijken naar de uitkomst is utilitarisme."],
         uitlegPad: {
           stappen: [
             { titel: "Universaliseren", tekst: "Voorbeeld liegen: als IEDEREEN zou liegen, werkt taal niet → tegenstrijdig → liegen verboden. Niet liegen omdat je gepakt wordt, maar omdat het logisch onmogelijk algemeen kan worden. Strenge plichtethiek." },
@@ -197,9 +197,9 @@ const steps = [
       },
       {
         q: "**Utilitarisme** (Bentham/Mill):",
-        options: ["Grootste geluk voor het grootste aantal", "Plicht gaat altijd boven de gevolgen", "Het individu gaat altijd boven de groep", "Leef volgens deugden, zoals moed"],
+        options: ["Grootste geluk voor het grootste aantal", "Plicht gaat boven de gevolgen", "Vrijheid van het individu komt op één", "Leef volgens deugden, zoals moed"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is Kant.", "Telt bij Bentham en Mill één persoon zwaarder dan de rest?", "Niet — dat is deugdethiek."],
+        wrongHints: [null, "Niet — dat is Kant.", "Dat lijkt op het liberalisme. Waar kijken Bentham en Mill naar bij een keuze?", "Niet — dat is deugdethiek."],
         uitlegPad: {
           stappen: [
             { titel: "Gevolgen-ethiek", tekst: "Bentham (1789): meet geluk + pijn voor alle betrokkenen, kies actie met meeste netto-geluk. Mill verfijnde: kwalitatieve verschillen (Socrates ontevreden > varken tevreden). Praktisch: veel beleid (kosten-baten-analyse) impliciet utilitaristisch. Kritiek: kan minderheden offeren voor meerderheid." },
@@ -209,9 +209,9 @@ const steps = [
       },
       {
         q: "Hegels **dialectiek**:",
-        options: ["These → antithese → synthese", "Argumenten draaien in een cirkel", "Twijfel aan alles tot iets zeker is", "Waarheid via wiskundig bewijs"],
+        options: ["These → antithese → synthese", "Waarheid via waarnemen en meten", "Twijfel aan alles tot iets zeker is", "Waarheid via wiskundig bewijs"],
         answer: 0,
-        wrongHints: [null, "Komt een discussie bij Hegel steeds op hetzelfde punt uit, of ontstaat er iets nieuws?", "Niet — dat is Descartes' methode.", "Dat past bij Spinoza's 'meetkundige' methode, niet bij Hegel."],
+        wrongHints: [null, "Dat is het empirisme van Locke en Hume.", "Niet — dat is Descartes' methode.", "Dat past bij Spinoza's 'meetkundige' methode, niet bij Hegel."],
         uitlegPad: {
           stappen: [
             { titel: "Drie-staps-beweging", tekst: "Een idee (these) roept tegenoverstelling op (antithese). Conflict resulteert in nieuwe synthese die deels beide bevat. Synthese wordt nieuwe these → cyclus herhaalt. Marx draaide om: niet ideeën maar economische klassen drijven dialectiek." },
@@ -242,9 +242,9 @@ const steps = [
       },
       {
         q: "**Rawls'** 'veil of ignorance' vraagt:",
-        options: ["Kies regels zonder je eigen positie te kennen", "Sluit je ogen voor onrecht in de samenleving", "Negeer de geschiedenis bij het maken van regels", "Kies regels die jou het meeste opleveren"],
+        options: ["Kies regels zonder je eigen positie te kennen", "Kies regels waar de meerderheid voor stemt", "Kies regels die het totale geluk het grootst maken", "Kies regels die jou het meeste opleveren"],
         answer: 0,
-        wrongHints: [null, "Rawls zoekt een rechtvaardige samenleving — past wegkijken daarbij?", "Gaat het Rawls om het verleden, of om eerlijke spelregels?", "Zou de uitkomst dan eerlijk zijn voor wie het slechtst af is?"],
+        wrongHints: [null, "Is een meerderheidsbesluit vanzelf eerlijk voor de minderheid?", "Dat is utilitarisme — Rawls zocht juist een alternatief daarvoor.", "Zou de uitkomst dan eerlijk zijn voor wie het slechtst af is?"],
         uitlegPad: {
           stappen: [
             { titel: "Hypothetische start-positie", tekst: "Stel: je gaat samenleving ontwerpen + weet niet of je rijk/arm, man/vrouw, wit/zwart, gezond/ziek, hoog/laag-opgeleid wordt. Welke regels kies je? Rawls: je zou dan een vangnet, gezondheidszorg en onderwijs voor de zwaksten zekerstellen (je zou tot 'onderkant' kunnen behoren). Beroemd liberaal-progressief argument." },
@@ -266,9 +266,9 @@ const steps = [
       },
       {
         q: "**Hannah Arendts** 'banaliteit van het kwaad':",
-        options: ["Gewone mensen kunnen groot kwaad doen", "Groot kwaad komt altijd voort uit haat", "Alleen monsters plegen groot kwaad", "Kwaad bestaat eigenlijk niet echt"],
+        options: ["Gewone mensen kunnen groot kwaad doen", "Groot kwaad komt voort uit diepe haat", "Groot kwaad wordt gepleegd door monsters", "Kwaad komt door een slechte opvoeding"],
         answer: 0,
-        wrongHints: [null, "Zag Arendt bij Eichmann vooral haat, of iets anders?", "Wat bedoelt Arendt met het woord 'banaal'?", "Niet — ze nam het kwaad juist serieus."],
+        wrongHints: [null, "Zag Arendt bij Eichmann vooral haat, of iets anders?", "Wat bedoelt Arendt met het woord 'banaal'?", "Arendt zocht de oorzaak niet in iemands jeugd. Wat zag zij bij Eichmann?"],
         uitlegPad: {
           stappen: [
             { titel: "'Eichmann in Jerusalem' 1963", tekst: "Arendt volgde proces tegen Eichmann (Holocaust-bureaucraat). Zag geen demonisch monster maar bureaucratische middelmaat die orders volgde zonder na te denken. Kwaad ontstaat door gedachtenloosheid + conformisme, niet alleen door bewust kwaad. Controversieel: critici vonden dat ze Eichmann te zacht beoordeelde." },
@@ -323,9 +323,9 @@ const steps = [
       },
       {
         q: "**Drogreden 'hellend vlak'** is:",
-        options: ["Onbewezen kettingredenering van A naar Z", "Een logisch sluitende redenering", "Een redenering met een wiskundig bewijs", "Een mening op basis van persoonlijke smaak"],
+        options: ["Onbewezen kettingredenering van A naar Z", "De persoon aanvallen in plaats van het argument", "Het standpunt van de ander verdraaid weergeven", "Iets goed noemen omdat het 'natuurlijk' is"],
         answer: 0,
-        wrongHints: [null, "Kan een drogreden logisch sluitend zijn?", "Hoort echt bewijs bij een drogreden?", "Een drogreden gaat over hoe je redeneert, niet over smaak."],
+        wrongHints: [null, "Dat is de drogreden 'ad hominem'.", "Dat is de drogreden 'stropop'.", "Dat is het 'beroep op de natuur'."],
         uitlegPad: {
           stappen: [
             { titel: "Veel-gebruikt + vaak fout", tekst: "Voorbeeld: 'Als euthanasie wettelijk wordt, eindigen we bij ongewenste ouderen actief vermoorden.' Maar: geen bewijs dat A → B → Z onvermijdelijk. Sommige hellende-vlakken kloppen wel (waakzaamheid nodig), andere zijn bangmakerij. Onderscheid: zijn er buffers + checks in proces?" },
@@ -335,9 +335,9 @@ const steps = [
       },
       {
         q: "**NL euthanasie-wet** vereist:",
-        options: ["Uitzichtloos lijden + toetsing door artsen", "Alleen een verzoek van de patiënt", "Euthanasie is in Nederland verboden", "Iedereen die het wil kan euthanasie krijgen"],
+        options: ["Uitzichtloos lijden + toetsing door artsen", "Een schriftelijk verzoek van de patiënt", "Terminale ziekte + toestemming van de familie", "Ondraaglijk lijden + toestemming van een rechter"],
         answer: 0,
-        wrongHints: [null, "Onvolledig.", "Niet — toegestaan.", "Zijn er echt geen voorwaarden aan verbonden?"],
+        wrongHints: [null, "Een verzoek is nodig, maar is het genoeg?", "Moet je terminaal ziek zijn, en beslist de familie mee?", "Wie toetst volgens de wet: een rechter vooraf, of iemand anders?"],
         uitlegPad: {
           stappen: [
             { titel: "Wet van 2002", tekst: "NL eerste land met legalisering (2002; daarvoor sinds 1994 een meldingsregeling). Vereist: ondraaglijk + uitzichtloos lijden, vrijwillig + weloverwogen verzoek, geen alternatief, second opinion onafhankelijk arts. Toetsings-commissie controleert achteraf. Ruim 9.000 gemelde gevallen per jaar (2023). Internationaal blijft NL voorloper." },
@@ -349,12 +349,12 @@ const steps = [
         q: "Welk rijtje wordt vaak genoemd als **hoofdwaarden** van de westerse ethiek?",
         options: [
           "Vrijheid, gelijkheid, solidariteit, verantwoordelijkheid",
-          "Macht, rijkdom, zelfbehoud, persoonlijk genot",
+          "Rust, orde, welvaart, veiligheid",
           "Geloof, koningshuis, vaderland, gehoorzaamheid",
           "Eer, gehoorzaamheid, standsbesef, traditionele orde"
         ],
         answer: 0,
-        wrongHints: [null, "Verplichten deze waarden je tegenover anderen, of draaien ze om eigenbelang?", "Dat is een oude, conservatieve leus — van vóór of na de Verlichting?", "Dat past eerder bij de oude standensamenleving."],
+        wrongHints: [null, "Belangrijk voor een samenleving, maar is dit het rijtje dat teruggaat op de Franse Revolutie?", "Dat is een oude, conservatieve leus — van vóór of na de Verlichting?", "Dat past eerder bij de oude standensamenleving."],
         uitlegPad: {
           stappen: [
             { titel: "Frankrijk-trio uitgebreid", tekst: "Franse Revolutie: 'Liberté, égalité, fraternité' (vrijheid, gelijkheid, broederschap = solidariteit). Plus moderne toevoeging 'verantwoordelijkheid'. Politiek liberaal: focus op vrijheid. Sociaal-democratisch: gelijkheid. Conservatief: verantwoordelijkheid. Communautair: solidariteit. Geen recept maar balans." },

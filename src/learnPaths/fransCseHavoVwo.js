@@ -33,7 +33,7 @@ const steps = [
         q: "Het **CSE Frans** test:",
         options: ["Alleen leesvaardigheid","Lees + luister + spreek","Alleen luistervaardigheid","Alleen schrijfvaardigheid"],
         answer: 0,
-        wrongHints: [null, "Andere staan op SE.", "Niet — luistervaardigheid hoort bij het schoolexamen.", "Niet."],
+        wrongHints: [null, "Andere staan op SE.", "Niet — luistervaardigheid hoort bij het schoolexamen.", "Schrijven toets je op school. Wat doe je op het centraal examen vooral met Franse teksten?"],
         uitlegPad: {
           stappen: [{ titel: "Lezen op CSE, rest op SE", tekst: "**CSE Frans** = alleen leesvaardigheid. Luistervaardigheid, spreekvaardigheid, schrijfvaardigheid worden in **SE (schoolexamen)** getest tijdens jaar." }],
           niveaus: { basis: "Lezen.", simpeler: "CSE = lezen", nogSimpeler: "Lezen" },
@@ -41,9 +41,9 @@ const steps = [
       },
       {
         q: "Welk woordenboek is **toegestaan** bij CSE Frans?",
-        options: ["Tweetalig Frans-Nederlands / Nederlands-Frans","Alleen een eentalig Frans woordenboek","Eentalig én tweetalig tegelijk","Geen enkel woordenboek"],
+        options: ["Tweetalig: Frans-Nederlands en omgekeerd", "Alleen een eentalig Frans woordenboek", "Eentalig én tweetalig tegelijk", "Een grammaticaoverzicht van het Frans"],
         answer: 0,
-        wrongHints: [null, "Niet — een eentalig woordenboek mag bij Frans niet.", "Niet — dat is meer dan is toegestaan.", "Niet — er mag wél een hulpmiddel."],
+        wrongHints: [null, "Niet — een eentalig woordenboek mag bij Frans niet.", "Niet — dat is meer dan is toegestaan.", "Een grammaticaoverzicht mag niet mee. Welk hulpmiddel wel?"],
         uitlegPad: {
           stappen: [{ titel: "Woordenboek naar en van de doeltaal", tekst: "Bij het CSE Frans mag je een **tweetalig woordenboek** gebruiken: Frans-Nederlands en Nederlands-Frans (papier). Een eentalig Frans woordenboek is niet toegestaan (alleen bij Engels mag op verzoek een Engels-Engels woordenboek)." }],
           theorie: "Tip: oefen al in de 4e/5e klas met hetzelfde woordenboek, dan zoek je op het examen sneller.",
@@ -92,9 +92,9 @@ const steps = [
     checks: [
       {
         q: "Bij 'Wat is de **hoofdgedachte** van de tekst?' — beste tactiek?",
-        options: ["Lees eerste + laatste alinea aandachtig","Scan op kernwoord","Lees alle alinea's woord-voor-woord","Tel woorden"],
+        options: ["Lees eerste + laatste alinea aandachtig", "Scan de tekst op één kernwoord", "Lees alle alinea's woord-voor-woord", "Vertaal de eerste alinea zin voor zin"],
         answer: 0,
-        wrongHints: [null, "Goed voor detail-vraag.", "Te traag.", "Niet relevant."],
+        wrongHints: [null, "Goed voor detail-vraag.", "Te traag.", "Vertalen kost veel tijd, en één alinea is soms alleen de inleiding. Waar staat vaak een samenvatting?"],
         uitlegPad: {
           stappen: [{ titel: "Top + bottom = hoofd", tekst: "**Hoofdgedachte** staat meestal in **eerste of laatste alinea** (thesis-zin of conclusie). Daar gericht lezen. Detail-vragen vergen scanning op kernwoord." }],
           niveaus: { basis: "Eerst + laatst.", simpeler: "Hoofdgedachte = top+bottom", nogSimpeler: "Eerste + laatste" },
@@ -104,7 +104,7 @@ const steps = [
         q: "*Librairie* betekent in het Frans:",
         options: ["Boekwinkel","Bibliotheek","Wijnhandel","Apotheek"],
         answer: 0,
-        wrongHints: [null, "Klassieke faux ami! Bibliotheek = *bibliothèque*.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Klassieke faux ami! Bibliotheek = *bibliothèque*.", "Zie je iets van 'vin' (wijn) in librairie?", "Een apotheek is 'pharmacie'. Lijkt dat op librairie?"],
         uitlegPad: {
           stappen: [{ titel: "Faux ami #1", tekst: "**Librairie** = boekwinkel (waar je boeken **koopt**). Bibliotheek (waar je boeken **leent**) = **bibliothèque**. Toets-klassieker — leerlingen verwarren dit constant." }],
           theorie: "Memo: 'librairie' is de winkel van een 'libraire' (boekverkoper).",
@@ -124,7 +124,7 @@ const steps = [
       },
       {
         q: "Connector *cependant* betekent:",
-        options: ["Echter / maar","Dus","Omdat","Daarna"],
+        options: ["Echter / maar", "Dus / daarom", "Omdat / want", "Daarna / dan"],
         answer: 0,
         wrongHints: [null, "Niet — dat is donc.", "Niet — dat is parce que.", "Niet — dat is ensuite/puis."],
         uitlegPad: {
@@ -134,9 +134,9 @@ const steps = [
       },
       {
         q: "Bij 'Waarnaar verwijst *cela* in regel 24?' — kijk je:",
-        options: ["In de zinnen er vlak vóór","Aan het eind van tekst","In titel","In voetnoot"],
+        options: ["In de zinnen er vlak vóór", "Aan het eind van tekst", "In de titel van de tekst", "In de voetnoot onderaan"],
         answer: 0,
-        wrongHints: [null, "Niet — referentie meestal terug.", "Niet primair.", "Zelden in CSE."],
+        wrongHints: [null, "Niet — referentie meestal terug.", "Cela verwijst meestal naar iets dichtbij. Is de titel dichtbij regel 24?", "Voetnoten leggen losse woorden uit. Zoek je bij cela een woorduitleg of iets uit de tekst?"],
         uitlegPad: {
           stappen: [{ titel: "Verwijswoord wijst terug", tekst: "**Cela / ce / ça** verwijst meestal naar iets dat **vóór** is genoemd in de tekst (anafoor). Lees 1-3 zinnen terug, zoek concept/idee dat past." }],
           theorie: "Idem voor: *il, elle, ils, elles, lui, leur, en, y* — eerst kijken waar verwezen wordt.",
@@ -166,7 +166,7 @@ const steps = [
         q: "*Bouquin* is **argot** voor:",
         options: ["Boek","Bouquet (bloemen)","Bouwer","Buurt"],
         answer: 0,
-        wrongHints: [null, "Klinkt zo maar nee.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Klinkt zo maar nee.", "Een bouwer is in het Frans 'constructeur'. Denk aan wat een bouquiniste langs de Seine verkoopt.", "Buurt is in het Frans 'quartier'. Ken je de bouquinistes langs de Seine?"],
         uitlegPad: {
           stappen: [{ titel: "Slang voor livre", tekst: "**Bouquin** = boek (informeel, slang/argot). Komt in moderne teksten + interviews voor. Andere argot: *boulot* (werk), *fric* (geld), *flic* (politie). Verlan: *meuf* (femme), *keuf* (flic)." }],
           niveaus: { basis: "Boek.", simpeler: "Bouquin = boek", nogSimpeler: "Boek" },
@@ -184,7 +184,7 @@ const steps = [
       },
       {
         q: "*Imparfait* (bv. *je mangeais*) gebruik je voor:",
-        options: ["Doorlopende of gewoonte-actie in verleden","Voltooide actie","Toekomst","Wens"],
+        options: ["Doorlopende of gewoonte-actie in verleden", "Afgeronde, eenmalige actie in verleden", "Plannen voor later, in de toekomst", "Wens of beleefd verzoek in het heden"],
         answer: 0,
         wrongHints: [null, "Niet — passé composé.", "Niet — futur.", "Niet — conditionnel."],
         uitlegPad: {
@@ -195,9 +195,9 @@ const steps = [
       },
       {
         q: "Een alinea midden in een betoog begint met *certes, il est vrai que...* Welke functie heeft die alinea waarschijnlijk?",
-        options: ["Tegenargument erkennen", "Inleiding", "Conclusie", "Voorbeeld"],
+        options: ["Tegenargument erkennen", "Onderwerp inleiden", "De conclusie trekken", "Een voorbeeld geven"],
         answer: 0,
-        wrongHints: [null, "Niet — die staat aan het begin.", "Niet — die staat aan het eind.", "Niet — *certes* geeft geen voorbeeld maar een toegeving."],
+        wrongHints: [null, "Niet — die staat aan het begin.", "Niet — die staat aan het eind.", "Een voorbeeld begint vaak met 'par exemple'. Wat betekent 'il est vrai que'?"],
         uitlegPad: {
           stappen: [{ titel: "Concession-alinea", tekst: "In argumentatieve teksten komt vaak een **tegenargument-alinea** (concession): 'sommigen zeggen X, maar...'. Auteur erkent kritisch geluid, weerlegt het, versterkt eigen positie. Signaal-woorden: *certes, il est vrai que, on pourrait dire que*." }],
           niveaus: { basis: "Tegenargument.", simpeler: "Certes... = concession", nogSimpeler: "Toegeving" },
@@ -216,7 +216,7 @@ const steps = [
         q: "Wat is **laïcité**?",
         options: ["Staats-secularisme", "Liefde voor Frankrijk", "Onderwijssysteem", "Belasting"],
         answer: 0,
-        wrongHints: [null, "Dat zou 'amour de la France' zijn.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Dat zou 'amour de la France' zijn.", "Laïcité geldt niet alleen op school. Wat betekent het woord 'laïque'?", "Belasting is 'impôt'. Lijkt dat op laïcité?"],
         uitlegPad: {
           stappen: [{ titel: "1905-wet", tekst: "**Laïcité** = Frans staats-secularisme: openbare ruimte (school, stadhuis, ziekenhuis) is religieus-neutraal. Wet 1905 scheidt kerk en staat. Daarom: geen hoofddoek op openbare scholen, geen religieuze symbolen in ambtenaren-ruimten. Vaak fel debat." }],
           theorie: "Toets-favoriet: hoofddoekenwet 2004, burqa-verbod 2010, debat over politieagenten met religieuze symbolen.",
@@ -225,9 +225,9 @@ const steps = [
       },
       {
         q: "**Le Monde** is welke krant?",
-        options: ["Kwaliteits-krant, links-liberaal","Rechts-extreem","Sport-krant","Tabloid"],
+        options: ["Kwaliteitskrant, links-liberaal", "Kwaliteitskrant, rechts-conservatief", "Sportkrant, landelijk verspreid", "Sensatiekrant, rechts-populistisch"],
         answer: 0,
-        wrongHints: [null, "Niet — Le Monde staat eerder links van het midden.", "Niet — algemeen nieuws.", "Niet — Le Monde is geen sensatiekrant."],
+        wrongHints: [null, "Dat past bij Le Figaro. Welke politieke kleur heeft Le Monde?", "De bekende Franse sportkrant heet L'Équipe. Waar schrijft Le Monde over?", "Staan er in Le Monde vooral roddels en schreeuwende koppen?"],
         uitlegPad: {
           stappen: [{ titel: "Krant van referentie", tekst: "**Le Monde** = belangrijkste kwaliteits-krant Frankrijk. Centrum-links, oprichting 1944. Internationale invloed. CSE-bron-favoriet. Tegenstellingen: Le Figaro (rechts), Libération (links)." }],
           niveaus: { basis: "Kwaliteits-krant.", simpeler: "Le Monde = kwaliteitskrant", nogSimpeler: "Kwaliteitskrant" },
@@ -245,9 +245,9 @@ const steps = [
       },
       {
         q: "*Banlieue* heeft vaak welke connotatie?",
-        options: ["Sociaal-kwetsbare voorstad","Luxe-wijk","Centrum","Platteland"],
+        options: ["Sociaal-kwetsbare voorstad", "Rijke villawijk aan de rand", "Historisch centrum van de stad", "Rustig dorp op het platteland"],
         answer: 0,
-        wrongHints: [null, "Niet — dat zou *quartier chic* zijn.", "Niet — banlieue is rand.", "Niet — buiten stad maar urbaan."],
+        wrongHints: [null, "Er bestaan rijke voorsteden, maar welk beeld hoort in het nieuws vaak bij 'les banlieues'?", "'Banlieue' ligt buiten de stad. Is dat het centrum?", "Niet — buiten de stad, maar wel stedelijk."],
         uitlegPad: {
           stappen: [{ titel: "Banlieue = sociale kwestie", tekst: "**Banlieue** = letterlijk 'voorstad'. In Franse context vaak **sociaal kwetsbare wijk** rond grote steden (Parijs, Lyon, Marseille). Veel woningbouw uit jaren '60-70, hoge werkloosheid, soms etnische spanning. Onderwerp van politieke debatten + rellen (2005, 2023)." }],
           niveaus: { basis: "Sociaal-kwetsbaar.", simpeler: "Banlieue = arme voorstad", nogSimpeler: "Kwetsbare voorstad" },
@@ -305,7 +305,7 @@ const steps = [
       },
       {
         q: "Tijdens **CSE** mag je:",
-        options: ["Een tweetalig woordenboek", "Telefoon", "Vertaal-app", "Internet"],
+        options: ["Een tweetalig woordenboek", "Je eigen telefoon, op stil", "Een vertaal-app op de laptop", "Internet op een schoolcomputer"],
         answer: 0,
         wrongHints: [null, "Een telefoon kan online en foto's opslaan — zou dat eerlijk zijn bij een examen dat jóuw kennis toetst?", "Een vertaal-app doet het denkwerk voor je — mag zoiets dan bij een táálexamen?", "Met internet kun je alles opzoeken — blijft een examen dan nog een eerlijke test?"],
         uitlegPad: {
@@ -315,9 +315,9 @@ const steps = [
       },
       {
         q: "Bij **lange tekst** verdeel je tijd voor:",
-        options: ["Globaal lezen + vragen + check","Alleen vragen lezen","Alleen tekst lezen","Woorden tellen"],
+        options: ["Globaal lezen, vragen maken, nakijken", "De tekst vertalen, dan de vragen", "Vraag per vraag de hele tekst lezen", "Elk onbekend woord eerst opzoeken"],
         answer: 0,
-        wrongHints: [null, "Onvoldoende.", "Onvoldoende.", "Niet — dat helpt je niet de tekst te begrijpen."],
+        wrongHints: [null, "Vertalen kost veel tijd. Heb je elk woord nodig voor de vragen?", "Voor elke vraag de hele tekst opnieuw lezen kost veel tijd. Hoe krijg je eerst overzicht?", "Elk woord opzoeken kost veel tijd. Heb je ze allemaal nodig?"],
         uitlegPad: {
           stappen: [{ titel: "Drie-fasen-strategie", tekst: "**Strategie**: (1) 5 min globaal lezen voor structuur. (2) 8 min vragen + scanning. (3) 2 min antwoorden checken. Bij lange teksten ietsje meer voor stap 1. Bij twijfel-vraag: ga door, kom terug." }],
           niveaus: { basis: "3 fasen.", simpeler: "Lezen+vragen+check", nogSimpeler: "3" },

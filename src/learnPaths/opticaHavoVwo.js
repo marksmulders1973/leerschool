@@ -23,9 +23,9 @@ const steps = [
     checks: [
       {
         q: "Een lichtstraal valt **loodrecht** op een glasplaat. Wat gebeurt er met de richting?",
-        options: ["Recht doorlopen — geen breking", "30° breken naar normaal", "Totaal weerkaatsen", "Splitsen in kleuren"],
+        options: ["Rechtdoor, zonder te breken", "Breken naar de normaal toe", "Breken van de normaal af", "Volledig terugkaatsen"],
         answer: 0,
-        wrongHints: [null, "Niet — wat is de invalshoek als de straal loodrecht valt? Wat zegt de brekingswet dan?", "Niet — geen totale reflectie loodrecht.", "Niet — geen dispersie zonder schuine invalshoek."],
+        wrongHints: [null, "Niet — wat is de invalshoek als de straal loodrecht valt? Wat zegt de brekingswet dan?", "Van de normaal af breken gebeurt bij een schuine straal die naar een minder dichte stof gaat. Wat is de invalshoek hier?", "Totale reflectie kan alleen van een dichtere naar een minder dichte stof en boven de grenshoek. Geldt dat hier?"],
         uitlegPad: {
           stappen: [{ titel: "sin(0)=0 → geen breking", tekst: "Bij loodrechte inval: invalshoek θ₁=0°. Snellius: 1·sin(0) = n₂·sin(θ₂) → sin(θ₂)=0 → θ₂=0. Geen knik. Licht loopt door, alleen langzamer in glas." }],
           niveaus: { basis: "Loodrecht = geen breking.", simpeler: "Recht in = recht door.", nogSimpeler: "Doorlopen" },
@@ -59,12 +59,12 @@ const steps = [
         q: "Reflectiewet zegt:",
         options: [
           "Invalshoek = reflectiehoek, t.o.v. de normaal",
-          "Invalshoek = brekingshoek",
-          "Reflectiehoek is altijd 90°",
-          "Reflectie hangt af van kleur"
+          "Invalshoek = brekingshoek, t.o.v. de normaal",
+          "Invalshoek + reflectiehoek = 90°, t.o.v. de normaal",
+          "Reflectiehoek = 2 × invalshoek, t.o.v. de normaal"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is breking, niet reflectie.", "Onjuist — slechts speciaal geval.", "Niet — voor gewone spiegel niet."],
+        wrongHints: [null, "Niet — dat is breking, niet reflectie.", "Kies een invalshoek van 30°: kaatst de straal dan onder 60° terug?", "Teken een straal op een spiegel: gaat de teruggekaatste straal twee keer zo schuin weg?"],
         uitlegPad: {
           stappen: [{ titel: "Hoeken t.o.v. normaal (loodrecht)", tekst: "De normaal is een denkbeeldige lijn loodrecht op het oppervlak op het invalspunt. Invalshoek wordt vanaf de normaal gemeten — NIET vanaf het oppervlak (een veelgemaakte fout!)." }],
           niveaus: { basis: "Invalshoek = reflectiehoek.", simpeler: "Gelijke hoek bij weerkaatsing.", nogSimpeler: "Gelijk" },
@@ -92,13 +92,13 @@ const steps = [
       {
         q: "Een lichtstraal in water (n=1,33) bereikt het oppervlak met **50°**. Wat gebeurt?",
         options: [
-          "Totale interne reflectie — niets komt uit het water",
-          "Breekt en komt uit, hoek ~37°",
-          "Breekt en komt uit, hoek ~90°",
-          "Reflecteert volledig én breekt"
+          "Totale reflectie: alles kaatst terug in het water",
+          "Breking: de straal komt eruit onder ongeveer 35°",
+          "Breking: de straal scheert langs het oppervlak",
+          "Deels terugkaatsen, deels breken naar buiten"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — boven grenshoek geen breking.", "Niet — boven θ_g blijft alles binnen.", "Niet — bij totale reflectie geen breking."],
+        wrongHints: [null, "Bereken eerst de grenshoek van water met sin θ_g = 1/n. Ligt 50° daarboven of daaronder?", "Langs het oppervlak scheren gebeurt alleen precies bij de grenshoek. Is 50° de grenshoek van water?", "Bij welke invalshoeken komt er nog licht uit het water? Hoort 50° daarbij? Reken de grenshoek uit."],
         uitlegPad: {
           stappen: [
             { titel: "θ_g berekenen + vergelijken", tekst: "sin(θ_g) = n_lucht/n_water = 1/1,33 = 0,752 → θ_g ≈ 48,8°. 50° > 48,8° → boven grens → totale interne reflectie. Niets komt uit." },
@@ -111,7 +111,7 @@ const steps = [
         q: "Welke kleur licht heeft de **kleinste brekingsindex** in glas?",
         options: ["Rood", "Geel", "Blauw", "Violet"],
         answer: 0,
-        wrongHints: [null, "Niet — geel zit in midden.", "Niet — blauw breekt meer dan rood.", "Niet — violet breekt het meest."],
+        wrongHints: [null, "Denk aan een prisma: welke kleur wordt het minst afgebogen? Is dat geel?", "Welke kleuren buigen in een prisma het sterkst af? Hoort blauw daarbij?", "Staat violet in een prisma aan de kant die het minst of het meest afbuigt?"],
         uitlegPad: {
           stappen: [{ titel: "Lange λ → kleinste n", tekst: "In een gewoon dispersie-medium (glas, water): lange golflengten (rood) breken minder dan korte (violet). Daarom komt rood **bovenaan** uit een prisma, violet **onderaan**." }],
           theorie: "Cijfers: rood n≈1,51; violet n≈1,53 in standaard glas.",
@@ -122,12 +122,12 @@ const steps = [
         q: "Hoe ontstaat een **regenboog**?",
         options: [
           "Breking en weerkaatsing in regendruppels",
-          "Reflectie tegen wolken",
-          "Diffractie achter wolk-rand",
-          "Dispersie door luchtdruppels"
+          "Weerkaatsing van zonlicht tegen de wolken",
+          "Buiging van licht langs de rand van wolken",
+          "Breking in ijskristallen hoog in de lucht"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — reflectie tegen wolken splitst licht niet in kleuren.", "Niet — diffractie geeft andere patronen.", "Niet — geen 'lucht-druppels'."],
+        wrongHints: [null, "Niet — weerkaatsing tegen wolken splitst licht niet in kleuren.", "Buiging langs een rand geeft andere patronen, geen boog met een vaste kleurvolgorde.", "Breking in ijskristallen geeft een kring (halo) rond de zon. Zie je een regenboog bij ijs of bij regen?"],
         uitlegPad: {
           stappen: [
             { titel: "Drie stappen per druppel", tekst: "1. Zonlicht treedt druppel binnen → breekt (dispersie: kleuren splitsen).\n2. Reflecteert intern aan achterkant druppel.\n3. Breekt opnieuw bij uittreden.\nVerschillende kleuren komen onder iets verschillende hoek uit → boogvorm met rood buitenaan, violet binnenaan." },
@@ -155,7 +155,7 @@ const steps = [
         q: "Grenshoek voor glas (n=1,5) naar lucht?",
         options: ["~41,8°", "~30°", "~45°", "~60°"],
         answer: 0,
-        wrongHints: [null, "Te klein.", "Niet — hoewel handig getal.", "Te groot."],
+        wrongHints: [null, "Bij 30° is de sinus 0,5. Is 1/n hier 0,5?", "Bij 45° is de sinus 0,71. Is 1/1,5 gelijk aan 0,71?", "Bij 60° is de sinus 0,87. Is 1/1,5 zo groot?"],
         uitlegPad: {
           stappen: [{ titel: "sin(θ_g) = 1/n", tekst: "sin(θ_g) = 1/1,5 = 0,667 → θ_g = arcsin(0,667) ≈ **41,8°**." }],
           niveaus: { basis: "arcsin(1/1,5)≈41,8°.", simpeler: "1/1,5=0,667, arcsin daarvan = 42°.", nogSimpeler: "42°" },
@@ -276,12 +276,12 @@ const steps = [
         q: "Waarom is de **lucht overdag blauw**?",
         options: [
           "Rayleigh-verstrooiing — blauw wordt meer verstrooid dan rood",
-          "Atmosfeer is blauw geverfd",
-          "Zeeën reflecteren blauw omhoog",
-          "Onze ogen zijn blauw-gevoelig"
+          "Absorptie — de lucht slokt rood op en laat blauw door",
+          "Weerkaatsing — de zeeën kaatsen blauw licht omhoog",
+          "Gevoeligheid — onze ogen zien vooral blauw licht"
         ],
         answer: 0,
-        wrongHints: [null, "Niet letterlijk geverfd.", "Niet — ook boven Sahara blauw.", "Niet — ogen zien alle kleuren."],
+        wrongHints: [null, "De zon zelf ziet er overdag wit-geel uit, niet blauw. Slokt de lucht dan veel licht op?", "Niet — ook boven de Sahara is de lucht blauw.", "Niet — onze ogen zien alle kleuren, en 's avonds kleurt de lucht rood."],
         uitlegPad: {
           stappen: [
             { titel: "1/λ⁴-wet", tekst: "Korte golflengte (blauw) → veel meer verstrooid door lucht-moleculen dan lange (rood). Vandaar: zon-licht via verstrooiing → vooral blauw bereikt onze ogen uit alle richtingen → blauwe lucht. Bij zonsondergang reist licht lang door atmosfeer → al het blauw weggestrooid → rest = rood/oranje." },
@@ -330,7 +330,7 @@ const steps = [
         q: "Een dubbelspleet (d = 0,10 mm) belicht met λ = 600 nm. Hoek 1e maximum?",
         options: ["~0,34°", "~3°", "~0,06°", "~6°"],
         answer: 0,
-        wrongHints: [null, "Te groot.", "Te klein.", "Niet — controleer rekening."],
+        wrongHints: [null, "Te groot: kijk of je d goed omrekent. 0,10 mm = 1,0·10⁻⁴ m.", "Gebruik sin θ = λ/d. Staan λ en d allebei in meter?", "Reken d om naar meter: 0,10 mm = 1,0·10⁻⁴ m. Klopt jouw macht van 10?"],
         uitlegPad: {
           stappen: [
             { titel: "d·sin(θ)=n·λ → θ klein", tekst: "n=1: sin(θ) = λ/d = 600·10⁻⁹ / 10⁻⁴ = 6·10⁻³ → θ ≈ 0,344°. Bij kleine hoeken: sin(θ)≈θ in radialen ≈ 0,006 rad." },
@@ -342,12 +342,12 @@ const steps = [
         q: "Wat onthult **spectraal-analyse** van een ster?",
         options: [
           "Chemische samenstelling + temperatuur + snelheid",
-          "Alleen kleur",
-          "Alleen afstand",
-          "Niets — licht reist te ver"
+          "Afstand tot de aarde + leeftijd + grootte",
+          "Kleur + helderheid + afstand tot de aarde",
+          "Massa + leeftijd + aantal planeten eromheen"
         ],
         answer: 0,
-        wrongHints: [null, "Veel meer dan kleur.", "Onvolledig.", "Niet — sterren-licht draagt informatie mee."],
+        wrongHints: [null, "Een spectrum toont lijnen bij vaste golflengtes. Welke eigenschappen lees je direct af uit welke lijnen er zijn en hoe ver ze verschoven zijn?", "Kleur en helderheid zie je ook zonder spectrum. Wat vertellen de losse lijnen in het spectrum je extra?", "Massa en leeftijd lees je niet direct af uit spectraallijnen. Wat vertellen de lijnen en hun verschuiving wel?"],
         uitlegPad: {
           stappen: [
             { titel: "Absorptie-lijnen", tekst: "Donkere lijnen in spectrum = wat de ster-atmosfeer absorbeert. Elke chemische stof heeft unieke absorptie → vingerafdruk. Kleurverdeling van het spectrum (wet van Wien) → temperatuur. Doppler-verschuiving lijnen → snelheid (rood/blauwverschuiving)." },
@@ -360,12 +360,12 @@ const steps = [
         q: "Een **microscoop** vergroot met:",
         options: [
           "Twee lenzen: objectief en oculair",
-          "Eén grote lens",
-          "Spiegel + lens",
-          "Alleen virtuele beelden"
+          "Eén lens: een sterk vergrootglas",
+          "Een holle spiegel en een oculair",
+          "Twee spiegels: een holle en een bolle"
         ],
         answer: 0,
-        wrongHints: [null, "Onvoldoende vergroting.", "Niet — telescoop wel, microscoop niet.", "Een deel is virtueel, een deel reëel."],
+        wrongHints: [null, "Een vergrootglas haalt hooguit zo'n 10×. Hoe haalt een microscoop dan 400×?", "Niet — telescoop wel, microscoop niet.", "Het spiegeltje onder een schoolmicroscoop geeft alleen licht. Wat zit er in de buis om te vergroten?"],
         uitlegPad: {
           stappen: [
             { titel: "Twee-traps-systeem", tekst: "Objectief (klein f, dicht bij preparaat) maakt vergroot reëel beeld. Oculair fungeert als loep en vergroot dat reële beeld nog eens virtueel. Totale vergroting = N_objectief × N_oculair (bv. 40 × 10 = 400×)." },
@@ -377,12 +377,12 @@ const steps = [
         q: "Waarom gebruiken **moderne telescopen** spiegels in plaats van lenzen?",
         options: [
           "Geen dispersie + groter te maken zonder vervorming",
-          "Spiegels zijn goedkoper per cm",
-          "Lenzen verbreken licht",
-          "Spiegels schitteren mooier"
+          "Spiegels zijn goedkoper en gaan langer mee",
+          "Een spiegel vergroot sterker dan een lens",
+          "Spiegels vangen meer licht omdat ze glanzen"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — kostenargument is bijzaak.", "Niet — lenzen breken licht, ze 'verbreken' het niet.", "Niet — schitteren is bijwerking."],
+        wrongHints: [null, "Niet — kosten zijn bijzaak. Welk probleem hebben grote lenzen met kleuren en gewicht?", "De vergroting hangt af van brandpuntsafstanden, niet van spiegel of lens.", "Hoeveel licht je vangt, hangt af van de doorsnede, niet van glans. Welk probleem hebben grote lenzen?"],
         uitlegPad: {
           stappen: [
             { titel: "Geen kleur-fout", tekst: "Lenzen hebben **chromatische aberratie**: verschillende kleuren breken anders → onscherp beeld met kleur-rand. Spiegels reflecteren alle kleuren gelijk → geen kleur-fout. Plus: grote lenzen vervormen onder eigen gewicht (Yerkes 1,02 m is grens). Spiegels kunnen veel groter (10+ m, ESO VLT)." },

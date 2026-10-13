@@ -43,9 +43,9 @@ const steps = [
       },
       {
         q: "Welk hulpmiddel is **toegestaan** op CSE Engels HAVO/VWO?",
-        options: ["Papieren woordenboek Engels-NL","Google Translate","Smartphone","Elektronisch woordenboek"],
+        options: ["Papieren woordenboek Engels-NL","Papieren grammaticaboek Engels","Elektronisch woordenboek EN-NL","Eigen woordenlijst op papier"],
         answer: 0,
-        wrongHints: [null, "Niet — geen elektronische apparaten.", "Niet — niet op CSE.", "Niet — wel verboden."],
+        wrongHints: [null, "Een grammaticaboek bevat uitleg en regels. Is dat het hulpmiddel dat bij het leesexamen mag?", "Ook een elektronisch woordenboek is een apparaat. Mag je apparaten gebruiken op het CSE?", "Eigen aantekeningen mogen nooit mee naar een examen. Welk naslagwerk wel?"],
         uitlegPad: {
           stappen: [{ titel: "Papier wel, elektronisch niet", tekst: "**Alleen papieren woordenboek** Engels-NL (of Engels-Engels). Geen elektronische woordenboeken, geen vertaal-apps, geen telefoon. Niet alle scholen leveren woordenboeken — vraag tijdig of zelf meenemen." }],
           theorie: "Tip: gebruik woordenboek spaarzaam. Per opzoek 30-60 sec verloren. Beter eerst raden uit context.",
@@ -107,7 +107,7 @@ const steps = [
       },
       {
         q: "Een artikel gebruikt veel woorden als 'consequently', 'notwithstanding', 'whereupon'. Wat is het **register**?",
-        options: ["Formal/academic","Informal","Slang","Mixed"],
+        options: ["Formal/academic","Informal/chatty","Slang/street talk","Mixed/neutral"],
         answer: 0,
         wrongHints: [null, "Kijk naar de lengte en deftigheid van deze woorden.", "Niet — slang gebruikt korte woorden.", "Zie je ook spreektaal-woorden tussen deze woorden?"],
         uitlegPad: {
@@ -130,9 +130,9 @@ const steps = [
       },
       {
         q: "Welke toon past bij: *'Oh great, another rainy day. Just what I needed.'*?",
-        options: ["Sarcastisch/ironisch","Enthousiast","Neutraal","Wetenschappelijk"],
+        options: ["Sarcastisch/ironisch","Enthousiast/blij","Neutraal/feitelijk","Wetenschappelijk"],
         answer: 0,
-        wrongHints: [null, "Niet — bedoeld tegenovergestelde.", "Niet — emotie.", "Niet — niet zakelijk."],
+        wrongHints: [null, "Is een zoveelste regendag echt iets om blij van te worden?", "Hoor je emotie in 'Just what I needed'?", "Is dit een zakelijke tekst met feiten en bronnen?"],
         uitlegPad: {
           stappen: [{ titel: "Sarcasme = positief woord, negatieve bedoeling", tekst: "**Sarcastisch**: 'great' + 'just what I needed' in regen-context = duidelijk tegenovergestelde bedoeling. Cynisme/sarcasme in tekst herkennen aan **mismatch** tussen woordkeuze + context." }],
           theorie: "Toets-truc: bij toon-vragen — past de letterlijke betekenis bij wat schrijver écht bedoelt? Mismatch = irony of sarcasme.",
@@ -141,9 +141,9 @@ const steps = [
       },
       {
         q: "*'What is the FUNCTION of paragraph 3?'* — wat moet je doen?",
-        options: ["Bepalen wat deze alinea toevoegt aan tekst","Vertaling geven","Tellen aantal woorden","Spelling controleren"],
+        options: ["Bepalen wat de alinea toevoegt","De alinea in het Nederlands vertalen","De inhoud van de alinea samenvatten","Moeilijke woorden opzoeken"],
         answer: 0,
-        wrongHints: [null, "Niet — geen vertaling.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Een vertaling zegt wát er staat. Vraagt 'function' daarnaar?", "Een samenvatting geeft de inhoud. Vraagt 'function' naar de inhoud of naar iets anders?", "Woorden opzoeken helpt bij het lezen, maar beantwoordt het deze vraag?"],
         uitlegPad: {
           stappen: [{ titel: "Function = rol binnen tekst", tekst: "**Function** = welke ROL deze alinea heeft in de tekst-structuur. Opties: introduceren / illustreren / nuanceren / weerleggen / contrasteren / concluderen. Kijk naar **inhoudelijke relatie** met omringende alinea's." }],
           niveaus: { basis: "Wat alinea toevoegt.", simpeler: "Function = rol in tekst", nogSimpeler: "Rol" },
@@ -160,9 +160,9 @@ const steps = [
     checks: [
       {
         q: "Wat doe je het EERST bij een lange tekst?",
-        options: ["Titel + eerste/laatste alinea lezen","Hele tekst lezen","Vragen invullen","Woordenboek pakken"],
+        options: ["Titel + eerste/laatste alinea lezen","De hele tekst woord voor woord lezen","Meteen bij vraag 1 beginnen","Onbekende woorden opzoeken"],
         answer: 0,
-        wrongHints: [null, "Te langzaam.", "Niet — eerst overzicht.", "Niet — eerst lezen."],
+        wrongHints: [null, "Dat kost veel tijd. Hoe krijg je snel een eerste overzicht?", "Zonder overzicht zoek je lang naar het antwoord. Wat helpt je eerst?", "Woorden opzoeken kost tijd en is vaak niet nodig. Waar begin je?"],
         uitlegPad: {
           stappen: [{ titel: "Pre-read = oriëntatie", tekst: "**Pre-read** = snel overzicht krijgen. Titel + 1e/laatste alinea = wat is hoofdpunt. Daarna pas details bekijken. Bespaart tijd + voorkomt verdwalen." }],
           niveaus: { basis: "Pre-read.", simpeler: "Eerst overzicht = pre-read", nogSimpeler: "Pre-read" },
@@ -170,9 +170,9 @@ const steps = [
       },
       {
         q: "Wanneer is **markeren** (vragen overslaan) handig?",
-        options: ["Bij twijfel-vraag waar je langer over zou denken","Bij elke vraag","Nooit","Alleen open vragen"],
+        options: ["Bij een twijfelvraag die tijd kost","Bij vragen die je zeker weet","Bij vragen over lange alinea's","Bij de open vragen aan het eind"],
         answer: 0,
-        wrongHints: [null, "Niet — alleen voor moeilijke.", "Wel handig bij specifieke vragen.", "Werkt voor zowel mc als open."],
+        wrongHints: [null, "Die kun je meteen afmaken. Waarom zou je ze bewaren?", "De lengte van de alinea zegt niet hoe moeilijk de vraag is. Wanneer loop je vast?", "Kun je ook bij een meerkeuzevraag vastlopen?"],
         uitlegPad: {
           stappen: [{ titel: "Markeer + door", tekst: "Bij **twijfel/onzeker** vraag: markeer met **\\*** of cirkel rond vraag-nummer + ga **door** naar volgende. Aan eind terug. Voorkomt tijd-verlies + frisse blik op tweede beurt." }],
           theorie: "Toets-strategie: max 2-3 min per vraag. Daarna markeren + door. Niet 8 min op 1 vraag besteden.",
@@ -181,9 +181,9 @@ const steps = [
       },
       {
         q: "Hoe schrijf je een **open vraag-antwoord** op HAVO/VWO?",
-        options: ["NL zin met bewijs uit de tekst","Engels woord-voor-woord","Alleen trefwoord","Lang essay"],
+        options: ["NL zin met bewijs uit de tekst","Engelse zin met bewijs uit de tekst","Een NL trefwoord, zonder zin","NL samenvatting van de alinea"],
         answer: 0,
-        wrongHints: [null, "Niet — open vragen meestal in NL.", "Te kort — geen volledig antwoord.", "Te lang — overbodig."],
+        wrongHints: [null, "In welke taal staan de open vragen meestal? In welke taal antwoord je dan?", "Te kort — de corrector wil zien dat je het begrijpt.", "Een samenvatting is te lang en mist vaak het precieze antwoord. Wat vraagt de vraag?"],
         uitlegPad: {
           stappen: [{ titel: "NL + bewijs uit tekst", tekst: "Open vragen: **Nederlands volledige zin** + **2-3 bewijspunten** uit tekst. 'De schrijver vindt X omdat (1) ... en (2) ...'. Punten per bewijspunt." }],
           theorie: "Toets-scoring: 1 bewijs = 1 punt, 2 = 2 punten. Geen extra punten voor lang antwoord.",
@@ -192,9 +192,9 @@ const steps = [
       },
       {
         q: "Wat doe je als je een **onbekend woord** tegenkomt in lange tekst?",
-        options: ["Eerst context + 1-2 zinnen rond lezen","Direct woordenboek","Hele tekst opnieuw lezen","Vraag overslaan"],
+        options: ["Eerst de zinnen eromheen lezen","Meteen het woordenboek pakken","De hele tekst opnieuw lezen","De vraag erover overslaan"],
         answer: 0,
-        wrongHints: [null, "Niet — kost veel tijd.", "Niet — dat kost veel te veel tijd.", "Niet voor de vraag overslaan."],
+        wrongHints: [null, "Dat kost veel tijd. Kun je de betekenis misschien ook raden?", "Niet — dat kost veel te veel tijd.", "Eén onbekend woord is geen reden om op te geven. Wat kan je helpen het woord te begrijpen?"],
         uitlegPad: {
           stappen: [{ titel: "Context > woordenboek", tekst: "**Eerst context lezen** (zin met onbekend woord + 1-2 ervoor/erna). Vaak kun je betekenis raden uit context. Pas als context niet helpt: woordenboek (30-60 sec verlies). Direct woordenboek = tijd-verlies." }],
           theorie: "Toets-tip: ~80% van onbekende woorden is uit context te raden bij HAVO/VWO-leerlingen.",
@@ -223,9 +223,9 @@ const steps = [
     checks: [
       {
         q: "Wat is het verschil tussen **mood** en **tone**?",
-        options: ["Mood = sfeer voor lezer; tone = houding auteur","Hetzelfde","Mood = personage; tone = verteller","Mood = goede toon; tone = slechte"],
+        options: ["Mood = sfeer; tone = houding schrijver","Mood en tone zijn hetzelfde begrip","Mood = personage; tone = verteller","Mood = positief; tone = negatief"],
         answer: 0,
-        wrongHints: [null, "Niet — verschillen.", "Niet relevant.", "Niet — geen kwaliteit-oordeel."],
+        wrongHints: [null, "Waarom zou het Engels dan twee woorden hebben? Zoek het verschil.", "Het gaat niet om wie er in het verhaal zit of praat. Waar gaan mood en tone dan over?", "Mood en tone kunnen allebei positief of negatief zijn. Waar zit het verschil dan?"],
         uitlegPad: {
           stappen: [{ titel: "Mood ≠ tone", tekst: "**Mood** = sfeer/atmosfeer die LEZER voelt (gloomy / hopeful / tense). **Tone** = houding van AUTEUR/verteller (sarcastic / earnest / detached). Kan verschillen: somber mood + ironic tone tegelijk." }],
           theorie: "VWO-examen-favoriet om dit verschil te testen. Onthouden: mood = atmosfeer, tone = attitude.",
@@ -234,9 +234,9 @@ const steps = [
       },
       {
         q: "Een **unreliable narrator** is een verteller die:",
-        options: ["De lezer misleidt of belangrijke info mist","Altijd betrouwbaar is","Niet bestaat","Wetenschappelijke uitleg geeft"],
+        options: ["De lezer een vertekend beeld geeft","Altijd in de ik-vorm vertelt","Alles weet over alle personages","Wetenschappelijke uitleg geeft"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — dat is reliable.", "Wel — komt vaak voor in moderne literatuur.", "Niet relevant."],
+        wrongHints: [null, "Veel ik-vertellers zijn gewoon betrouwbaar. Waar slaat 'unreliable' op?", "Dat is een alwetende verteller. Wat betekent 'unreliable'?", "Wat betekent 'reliable'? En wat doet 'un-' ervoor?"],
         uitlegPad: {
           stappen: [{ titel: "Unreliable = lezer moet doorzien", tekst: "**Unreliable narrator** = verteller die liegt / details vergeet / overdrijft / cognitief beperkt is. Lezer moet **tussen de regels** lezen om het 'echte' verhaal te vinden. Klassieke voorbeelden: Catcher in the Rye (Holden), Lolita (Humbert), Gone Girl." }],
           theorie: "VWO-examen-strategie: bij first-person-vertelling — denk altijd 'is dit echt zo of liegt verteller?'.",
@@ -245,9 +245,9 @@ const steps = [
       },
       {
         q: "Wat is **foreshadowing**?",
-        options: ["Hint vooraf op latere gebeurtenis","Terugblik","Beeldspraak","Karakter-beschrijving"],
+        options: ["Hint vooraf op latere gebeurtenis","Terugblik op eerdere gebeurtenis","Vergelijking zonder 'zoals'","Beschrijving van een personage"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is flashback.", "Niet — dat is metaphor.", "Niet relevant."],
+        wrongHints: [null, "Dat is een flashback. Kijk naar 'fore-' in het woord.", "Dat is een metaphor. Waar slaat 'shadowing' op?", "Dat heet characterisation. Waar wijst 'fore-' naar?"],
         uitlegPad: {
           stappen: [{ titel: "Voorspel-hint", tekst: "**Foreshadowing** = auteur geeft subtiel **hint over toekomstige gebeurtenis** in verhaal. Vroeg in verhaal: kraai vliegt over → later: dood van personage. Lezer voelt achteraf 'ik had het kunnen zien'." }],
           theorie: "Klassiek voorbeeld: Harry Potter — Trelawney-voorspelling die later uitkomt.",
@@ -256,7 +256,7 @@ const steps = [
       },
       {
         q: "*'She walked into the empty house, her footsteps echoing in the silence.'* Welke mood?",
-        options: ["Eenzaam/spookachtig","Vrolijk","Zakelijk","Romantisch"],
+        options: ["Eenzaam/spookachtig","Vrolijk/opgewekt","Zakelijk/neutraal","Romantisch/warm"],
         answer: 0,
         wrongHints: [null, "Niet — woordkeuze is somber.", "Niet — geen feiten-toon.", "Niet — geen romance."],
         uitlegPad: {
@@ -287,9 +287,9 @@ const steps = [
     checks: [
       {
         q: "*'Notwithstanding the criticism, the experiment yielded valuable results.'* Wat doet 'notwithstanding'?",
-        options: ["Concessie/contrast","Versterking","Reden","Voorbeeld"],
+        options: ["Concessie/contrast","Versterking/opsomming","Reden/oorzaak","Voorbeeld/illustratie"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet — geen oorzaak.", "Niet."],
+        wrongHints: [null, "Vervang het woord door 'moreover'. Klopt de zin dan nog?", "Niet — geen oorzaak.", "Vervang het woord door 'for example'. Klopt de zin dan nog?"],
         uitlegPad: {
           stappen: [{ titel: "Notwithstanding = ondanks", tekst: "**Notwithstanding** = 'in spite of' = 'ondanks'. Formal concessie-signaalwoord. Synoniemen: despite, in spite of, notwithstanding the fact that." }],
           theorie: "Formal vocabulary CSE-favoriet: notwithstanding, albeit, henceforth, nonetheless.",
@@ -298,9 +298,9 @@ const steps = [
       },
       {
         q: "Een **opinion column** met sarcastische toon test typisch:",
-        options: ["Intentie + ironie herkennen","Spelling","Datums onthouden","Statistiek"],
+        options: ["Intentie + ironie herkennen","Moeilijke woorden vertalen","Feitelijke details terugvinden","Spelling en zinsbouw beoordelen"],
         answer: 0,
-        wrongHints: [null, "Niet relevant op leesvaardigheid.", "Niet primair.", "Niet primair."],
+        wrongHints: [null, "Vertalen helpt, maar sarcasme zie je niet aan één woord. Wat test een sarcastische toon dan vooral?", "In een column gaat het minder om feiten. Waarom schrijft de columnist sarcastisch?", "Bij leesvaardigheid beoordeel je niet de spelling. Wat wil de schrijver bereiken?"],
         uitlegPad: {
           stappen: [{ titel: "Opinion + sarcasme = tone-vraag", tekst: "Bij **opinion column met sarcasme** test de toets: kan leerling de **echte mening** achter sarcastisch oppervlak herkennen? Vraag-soort: tone / intentie / implication." }],
           niveaus: { basis: "Intentie + ironie.", simpeler: "Sarcasme = ironie-vraag", nogSimpeler: "Ironie" },
@@ -308,9 +308,9 @@ const steps = [
       },
       {
         q: "Welke vraag is **typisch literair-fragment**-vraag (VWO)?",
-        options: ["'What does the silence at the dinner table reveal?'","'When was the law passed?'","'What is the GDP in 2020?'","'Define 'mitochondria'.'"],
+        options: ["'What does the silence at the dinner table reveal?'","'When was the law on school dinners passed?'","'What was the average GDP in Europe in 2020?'","'How many guests sat at the dinner table?'"],
         answer: 0,
-        wrongHints: [null, "Niet — feit-vraag.", "Niet — feit-vraag.", "Niet — definitie."],
+        wrongHints: [null, "Dat is een feitvraag. Wat vraagt een literair fragment meestal?", "Dat is een feitvraag over cijfers. Komt die uit een roman of verhaal?", "Dat kun je gewoon tellen. Moet je bij een literaire vraag iets afleiden?"],
         uitlegPad: {
           stappen: [{ titel: "Sub-text + character", tekst: "**Literair-fragment-vragen** gaan om **sub-tekst**, character-emoties, symbolisme. 'What does silence reveal?' = wat zegt deze stilte over personages/relatie? Klassieke literatuurvraag." }],
           niveaus: { basis: "Eerste.", simpeler: "Sub-text-vraag = literair", nogSimpeler: "Eerste" },
@@ -318,9 +318,9 @@ const steps = [
       },
       {
         q: "Voor een open vraag schrijf je antwoord het beste in:",
-        options: ["Nederlandse volle zin met bewijs uit tekst","Engelse korte zin","Steekwoorden","Lang essay"],
+        options: ["Nederlandse zin met bewijs","Engelse zin met bewijs","Nederlandse steekwoorden","Samenvatting van de alinea"],
         answer: 0,
-        wrongHints: [null, "Niet — meestal NL.", "Te kort.", "Te lang."],
+        wrongHints: [null, "In welke taal staan de open vragen meestal?", "Te kort — laat zien dat je het snapt.", "Een samenvatting is te lang en mist vaak het precieze antwoord."],
         uitlegPad: {
           stappen: [{ titel: "NL + bewijs = goed", tekst: "Open vragen: **NL volledige zin** + 2-3 bewijspunten uit tekst. 'De schrijver vindt X omdat (1)...(2)...'. Punten per bewijspunt." }],
           niveaus: { basis: "NL volle zin.", simpeler: "Open = NL + bewijs", nogSimpeler: "NL + bewijs" },
@@ -328,9 +328,9 @@ const steps = [
       },
       {
         q: "Een tekst zegt: *'The findings, while preliminary, suggest a new direction.'* Wat zegt dit over de bevindingen?",
-        options: ["Voorlopig + suggestief, niet definitief","Definitief bewezen","Verkeerd","Compleet onaf"],
+        options: ["Voorlopig, nog niet definitief","Definitief bewezen en afgerond","Al door anderen bevestigd","Tegenstrijdig en onduidelijk"],
         answer: 0,
-        wrongHints: [null, "Niet — 'preliminary' is voorlopig.", "Niet — wel suggestief.", "Niet — wel zinvol."],
+        wrongHints: [null, "Kijk naar 'while preliminary'. Past 'definitief' daarbij?", "Staat er iets over andere onderzoekers? Kijk naar 'preliminary'.", "Staat er dat de resultaten elkaar tegenspreken? Wat zegt 'suggest a new direction'?"],
         uitlegPad: {
           stappen: [{ titel: "Preliminary + suggest = voorzichtig", tekst: "**'While preliminary, suggest'** = voorzichtig + voorlopig. Niet definitief, maar wijst wel in richting. Wetenschappelijke voorzichtigheid-toon." }],
           theorie: "Toets-vocab: 'preliminary' (voorlopig), 'tentative' (aarzelend), 'inconclusive' (geen conclusie mogelijk) = vaak in onderzoek-teksten.",

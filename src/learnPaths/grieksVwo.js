@@ -91,7 +91,7 @@ const steps = [
         q: "Hoeveel **naamvallen** heeft Grieks?",
         options: ["5","6","4","3"],
         answer: 0,
-        wrongHints: [null, "Latijn.", "Duits.", "Te weinig."],
+        wrongHints: [null, "Dat aantal heeft het Latijn. Heeft het Grieks ook een ablatief?", "Noem de Griekse naamvallen eens op: nominatief, genitief, … Hoeveel kom je er?", "Noem ze eens op: nominatief, genitief, datief, … Ben je dan al klaar?"],
         uitlegPad: {
           stappen: [{ titel: "Geen ablatief", tekst: "**Grieks: 5 naamvallen** — Nom/Gen/Dat/Acc/Voc. **Geen ablatief** (functies daarvan zitten in datief + genitief + voorzetsels). **Latijn** 6, **Duits** 4. Voor Grieks-leerlingen die ook Latijn doen: 'minder werk dan Latijn' (alleen 1 minder)." }],
           niveaus: { basis: "5.", simpeler: "Grieks = 5 nv", nogSimpeler: "5" },
@@ -109,9 +109,9 @@ const steps = [
       },
       {
         q: "**Logos** (λόγος) hoort bij welke declinatie?",
-        options: ["2e (mannelijk -ος)","1e (vrouwelijk -α)","3e (divers)","Geen"],
+        options: ["2e (mannelijk -ος)","1e (vrouwelijk -α)","3e (medeklinkerstam)","Onverbuigbaar woord"],
         answer: 0,
-        wrongHints: [null, "Niet — eindigt op os.", "Niet — patroon duidelijk.", "Wel."],
+        wrongHints: [null, "Niet — eindigt op os.", "De 3e declinatie heeft stammen op een medeklinker. Eindigt logos zo?", "Logos krijgt wel andere uitgangen: logou, logoi… Welke declinatie heeft zulke vormen?"],
         uitlegPad: {
           stappen: [{ titel: "2e decl -ος", tekst: "**Logos** (λόγος) = mannelijk, eindigt op **-ος** = **2e declinatie**. Gen: λόγου, Dat: λόγῳ, Acc: λόγον, Voc: λόγε.\n\nOnzijdig 2e decl eindigt op -ον: δῶρον (doron, geschenk)." }],
           niveaus: { basis: "2e.", simpeler: "-ος = 2e decl", nogSimpeler: "2e" },
@@ -129,9 +129,9 @@ const steps = [
       },
       {
         q: "Welke **geslachten** heeft Grieks?",
-        options: ["Mannelijk + vrouwelijk + onzijdig","Mannelijk + vrouwelijk","Mannelijk + niet-mannelijk","Geen"],
+        options: ["Mannelijk, vrouwelijk, onzijdig","Mannelijk en vrouwelijk","Mannelijk en onzijdig","Vrouwelijk en onzijdig"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Niet zo.", "Wel."],
+        wrongHints: [null, "Denk aan τό, het lidwoord van ergon (werk). Welk geslacht is dat?", "Denk aan ἡ, het lidwoord van 'de vrouw'. Welk geslacht is dat?", "Denk aan ὁ, het lidwoord van logos. Welk geslacht is dat?"],
         uitlegPad: {
           stappen: [{ titel: "3 genera", tekst: "**Grieks heeft 3 grammaticale geslachten** (zoals Duits + Latijn): **mannelijk (ὁ), vrouwelijk (ἡ), onzijdig (τό)**. Geslacht is grammaticaal, niet altijd biologisch (ἡ νῆσος = het eiland is vrouwelijk). Belangrijk: lidwoord + bijvoeglijk naamwoord + voornaamwoord stemmen overeen." }],
           niveaus: { basis: "3 geslachten.", simpeler: "3 genera", nogSimpeler: "3" },
@@ -148,9 +148,9 @@ const steps = [
     checks: [
       {
         q: "**Grieks aspect-onderscheid** is uniek t.o.v. Latijn:",
-        options: ["Imperfectief vs aoristisch vs perfectief","Twee tijden","Alleen verleden","Geen verschil"],
+        options: ["Imperfectief vs aoristisch vs perfectief","Verleden vs heden vs toekomst","Actieve vs mediale vs passieve vorm","Indicatief vs conjunctief vs optatief"],
         answer: 0,
-        wrongHints: [null, "Niet — drievoudig.", "Niet — meer.", "Wel verschil."],
+        wrongHints: [null, "Dat is tijd, niet aspect. Aspect gaat over hoe je een handeling bekijkt.", "Dat zijn de vormen actief, medium en passief. Aspect gaat over iets anders: hoe bekijk je de handeling?", "Dat zijn wijzen. Aspect gaat over de manier waarop je een handeling bekijkt."],
         uitlegPad: {
           stappen: [{ titel: "Aspect = manier van handelen", tekst: "Grieks heeft **3 aspecten**:\n• **Imperfectief** (praesens, imperfectum): doorlopend / herhalend.\n• **Aoristisch** (aoristus): eenmalig / geheel.\n• **Perfectief** (perfectum): voltooid met doorlopend resultaat.\n\nLatijn heeft hoofdzakelijk tijden-onderscheid (verleden/heden/toekomst), Grieks combineert tijd + aspect." }],
           niveaus: { basis: "Imperfectief/aoristisch/perfectief.", simpeler: "3 aspecten", nogSimpeler: "3 aspecten" },
@@ -188,9 +188,9 @@ const steps = [
       },
       {
         q: "Hoeveel **wijzen** heeft Grieks?",
-        options: ["4","2","6","Geen"],
+        options: ["4","2","6","3"],
         answer: 0,
-        wrongHints: [null, "Niet — meer.", "Niet — minder.", "Wel."],
+        wrongHints: [null, "Noem de wijzen eens op die je kent. Hoeveel kom je er?", "Noem ze eens op: indicatief, conjunctief, … Kom je echt aan zes?", "Drie heeft het Latijn. Heeft het Grieks er evenveel?"],
         uitlegPad: {
           stappen: [{ titel: "+ Optatief", tekst: "**Grieks: 4 wijzen** — indicatief (mededelend), conjunctief (aanvoegend), **optatief** (wens/mogelijkheid), imperatief (gebiedend). Latijn heeft 3 (geen optatief — gebruikt conjunctief breder). **Optatief**: 'mocht het zijn', 'ware het zo'." }],
           niveaus: { basis: "4.", simpeler: "Grieks = 4 wijzen", nogSimpeler: "4" },
@@ -229,7 +229,7 @@ const steps = [
         q: "**Grotgelijkenis** komt van:",
         options: ["Plato","Aristoteles","Sokrates","Homerus"],
         answer: 0,
-        wrongHints: [null, "Niet — andere theorieën.", "Niet — zelf niets geschreven.", "Niet relevant."],
+        wrongHints: [null, "Aristoteles haalde kennis juist uit waarneming. Past een grot vol schaduwen daarbij?", "Niet — zelf niets geschreven.", "Homerus schreef epen zoals de Ilias, geen filosofie."],
         uitlegPad: {
           stappen: [{ titel: "Politeia VII", tekst: "**Plato's grotgelijkenis** (*Politeia* VII): mensen vastgeketend in grot zien alleen schaduwen, denken dat realiteit is. Eén ontsnapt → ziet zonlicht (werkelijkheid van Ideeën) → keert terug om anderen te bevrijden (filosoof). Metafoor voor: onwetendheid vs ware kennis, fysieke wereld vs Ideeën-wereld." }],
           niveaus: { basis: "Plato.", simpeler: "Grot = Plato", nogSimpeler: "Plato" },
@@ -249,7 +249,7 @@ const steps = [
         q: "**Slag bij Marathon (490 v.Chr.)** was tussen:",
         options: ["Atheners + Perzen","Atheners + Spartanen","Romeinen + Galliërs","Egyptenaren + Hettieten"],
         answer: 0,
-        wrongHints: [null, "Niet — Peloponnesische oorlog.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Niet — Peloponnesische oorlog.", "Marathon ligt in Griekenland. Vochten daar Romeinen?", "Die slag (bij Kadesj) was bijna duizend jaar eerder, in Syrië."],
         uitlegPad: {
           stappen: [{ titel: "Atheners winnen", tekst: "**490 v.Chr.**: Atheners onder Miltiades verslaan Perzen op vlakte van **Marathon** (~40 km van Athene). Boodschapper Phidippides liep terug naar Athene om overwinning te melden, viel dood neer (volgens legende) → de **moderne marathon** (42,2 km) is ernaar vernoemd. Onderdeel **Perzische Oorlogen** 499-449 v.Chr." }],
           theorie: "10 jaar later: 480 v.Chr. Xerxes komt terug — Slag bij Salamis (Atheense zee-overwinning) + Thermopylae (300 Spartanen).",
@@ -267,9 +267,9 @@ const steps = [
     checks: [
       {
         q: "*Panta rhei* (πάντα ῥεῖ) van Heraclitus betekent:",
-        options: ["Alles stroomt","Alles is één","Alles is verboden","Wijsheid is liefde"],
+        options: ["Alles stroomt","Alles is één","Alles is vuur","Wijsheid is liefde"],
         answer: 0,
-        wrongHints: [null, "Niet — Parmenides.", "Niet relevant.", "Wel etymologie 'filosofie' maar andere zin."],
+        wrongHints: [null, "'Alles is één' past bij Parmenides. Wat betekent 'rhei'?", "Heraclitus zag vuur als oerstof, maar dat zegt deze uitspraak niet. Wat betekent 'rhei'?", "Wel etymologie 'filosofie' maar andere zin."],
         uitlegPad: {
           stappen: [{ titel: "Heraclitus' beweging", tekst: "**Panta rhei** (πάντα ῥεῖ) = 'alles stroomt'. **Heraclitus** (~500 v.Chr.): werkelijkheid is voortdurend in verandering, zoals rivier waar je nooit twee keer in zelfde water staat. Tegenstelling: **Parmenides** — alles is één + onveranderlijk." }],
           niveaus: { basis: "Alles stroomt.", simpeler: "Panta rhei = stroomt", nogSimpeler: "Alles stroomt" },
@@ -279,7 +279,7 @@ const steps = [
         q: "Welke filosoof zei **'Ik weet dat ik niets weet'**?",
         options: ["Sokrates","Plato","Aristoteles","Heraclitus"],
         answer: 0,
-        wrongHints: [null, "Niet — Sokrates' student.", "Niet — andere ideeën.", "Niet relevant."],
+        wrongHints: [null, "Plato schreef veel op, maar deze uitspraak komt van een ander.", "Niet — andere ideeën.", "Heraclitus is bekend van 'alles stroomt'."],
         uitlegPad: {
           stappen: [{ titel: "Socratische bescheidenheid", tekst: "**Sokrates**: 'Ik weet dat ik niets weet.' (overgeleverd via Plato). Vroeg vragen tot tegenstanders zelf zagen dat ze niets wisten. Paradox: hij wist meer dan anderen juist door zijn besef van onwetendheid. Let op: letterlijk staat de zin zo niet bij Plato; in de *Apologie* zegt Sokrates dat hij niet dénkt te weten wat hij niet weet." }],
           niveaus: { basis: "Sokrates.", simpeler: "Niets weten = Sokrates", nogSimpeler: "Sokrates" },

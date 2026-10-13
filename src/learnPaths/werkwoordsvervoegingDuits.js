@@ -73,9 +73,9 @@ const steps = [
       },
       {
         q: "Welk verschil tussen **'sie'** en **'Sie'**?",
-        options: ["sie = zij, Sie = u", "Geen verschil", "Verkeerd gespeld", "sie = man, Sie = vrouw"],
+        options: ["sie = zij, Sie = u", "sie = u, Sie = zij", "sie = zij, Sie = jullie", "sie = man, Sie = vrouw"],
         answer: 0,
-        wrongHints: [null, "Wel verschil.", "Beide correct.", "Niet."],
+        wrongHints: [null, "Welke vorm schrijf je in het Duits met een hoofdletter, net als 'U' in een nette brief?", "Jullie is in het Duits 'ihr'. Wat betekent Sie met hoofdletter?", "Sie of sie zegt niets over man of vrouw. Waar wijst de hoofdletter op?"],
       },
       {
         q: "Wat krijgt in Duits **altijd hoofdletter**?",

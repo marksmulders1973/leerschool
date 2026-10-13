@@ -54,7 +54,7 @@ const steps = [
         q: "Vrije val vanaf **5 m hoog** (v₀=0, g=10). Eindsnelheid bij grond?",
         options: ["10 m/s","5 m/s","20 m/s","2 m/s"],
         answer: 0,
-        wrongHints: [null, "Niet — wel groter.", "Te groot.", "Niet correct."],
+        wrongHints: [null, "Je nam de snelheid gelijk aan de hoogte. Welke formule koppelt valhoogte aan snelheid?", "Vergat je de wortel? Controleer: v² = 2·g·h, dus v = √(2·g·h).", "Hoe lang duurt de val? Gebruik h = ½·g·t² en daarna v = g·t."],
         uitlegPad: {
           stappen: [{ titel: "Tijd-loze formule", tekst: "v² = v₀² + 2g·h = 0 + 2·10·5 = 100. **v = √100 = 10 m/s** bij grond." }],
           theorie: "Of via tijd: h=½gt² → 5=5t² → t=1s → v=gt=10 m/s.",
@@ -115,7 +115,7 @@ const steps = [
         q: "Object **10 kg** op aarde. Zwaartekracht (gebruik g=10)?",
         options: ["100 N","10 N","1 N","9,81 kg"],
         answer: 0,
-        wrongHints: [null, "Niet — vermenigvuldig met g.", "Te klein.", "Niet kg — N."],
+        wrongHints: [null, "Niet — vermenigvuldig met g.", "Je deelde de massa door g. Moet je in F_z = m·g delen of vermenigvuldigen?", "Niet kg — N."],
         uitlegPad: {
           stappen: [{ titel: "F_z = mg", tekst: "**F_z = m × g = 10 × 10 = 100 N**. Massa blijft 10 kg (overal). Op maan: 10 × 1,62 ≈ 16 N." }],
           niveaus: { basis: "100 N.", simpeler: "10·10 = 100 N", nogSimpeler: "100" },
@@ -123,9 +123,9 @@ const steps = [
       },
       {
         q: "Je springt van een trampoline. Welke wet beschrijft dat trampoline jou omhoog duwt?",
-        options: ["Derde Newton","Eerste Newton","Tweede Newton alleen","Pythagoras"],
+        options: ["Derde Newton","Eerste Newton","Tweede Newton","Gravitatiewet"],
         answer: 0,
-        wrongHints: [null, "Niet — die gaat over evenwicht.", "Niet primair — wel meegerekend.", "Niet relevant."],
+        wrongHints: [null, "Niet — die gaat over evenwicht.", "De tweede wet rekent uit hoe snel je versnelt. Maar waarom duwt de trampoline terug als jij erop drukt?", "De gravitatiewet beschrijft de aantrekking door de aarde. Trekt die jou omhoog?"],
         uitlegPad: {
           stappen: [{ titel: "Actie = reactie", tekst: "Je duwt trampoline naar beneden (actie). Trampoline duwt jou met gelijke kracht omhoog (reactie). **Derde Newton-wet**. Beide krachten gelijk in grootte, tegengesteld, op verschillende objecten." }],
           niveaus: { basis: "Derde.", simpeler: "Actie+reactie = 3e Newton", nogSimpeler: "3e" },
@@ -165,7 +165,7 @@ const steps = [
         q: "**Kinetische energie** auto 1000 kg op 20 m/s?",
         options: ["200.000 J","20.000 J","20 J","1.000.000 J"],
         answer: 0,
-        wrongHints: [null, "Mist factor.", "Mist veel.", "Te groot."],
+        wrongHints: [null, "Je rekende m·v. Waar blijven de ½ en het kwadraat uit E_k = ½·m·v²?", "Je liet de massa weg. Komt m voor in E_k = ½·m·v²?", "Reken na: ½ × 1000 × 20². Hoeveel is 20² precies?"],
         uitlegPad: {
           stappen: [{ titel: "E_k = ½mv²", tekst: "E_k = ½ × m × v² = ½ × 1000 × 20² = ½ × 1000 × 400 = **200.000 J = 200 kJ**." }],
           theorie: "Bij verdubbelen v wordt E_k 4×. Toets-favoriet: 'auto van 50 → 100 km/h hoeveel x energie meer?' → 4×.",
@@ -176,7 +176,7 @@ const steps = [
         q: "Bal 2 kg valt van 5 m hoog. **Welke snelheid bij grond** (g=10, geen luchtweerstand)?",
         options: ["10 m/s","5 m/s","20 m/s","2 m/s"],
         answer: 0,
-        wrongHints: [null, "Te klein.", "Te groot.", "Niet correct."],
+        wrongHints: [null, "Je nam de snelheid gelijk aan de hoogte. Welke formule koppelt valhoogte aan snelheid?", "Vergat je de wortel? Controleer: v² = 2·g·h, dus v = √(2·g·h).", "Hoe lang duurt de val? Gebruik h = ½·g·t² en daarna v = g·t. De massa doet er niet toe."],
         uitlegPad: {
           stappen: [
             { titel: "Energie-behoud", tekst: "E_p_boven = E_k_beneden → mgh = ½mv² → v² = 2gh = 2·10·5 = 100 → **v = 10 m/s**." },
@@ -227,9 +227,9 @@ const steps = [
       },
       {
         q: "Twee karren botsen + plakken samen. Welke behoudswet **altijd**?",
-        options: ["Impuls","Kinetische energie","Beide","Geen"],
+        options: ["Impuls","Kinetische energie","Beide","Snelheid"],
         answer: 0,
-        wrongHints: [null, "Niet — bij plakken gaat er bewegingsenergie verloren aan warmte en vervorming.", "Niet — één van de twee gaat bij plastisch botsen juist verloren.", "Niet — er is wél een grootheid die bij elke botsing zonder externe kracht behouden blijft."],
+        wrongHints: [null, "Niet — bij plakken gaat er bewegingsenergie verloren aan warmte en vervorming.", "Niet — één van de twee gaat bij plastisch botsen juist verloren.", "De karren rijden na het plakken samen langzamer verder dan de botsende kar. Blijft de snelheid dan gelijk?"],
         uitlegPad: {
           stappen: [{ titel: "Impulsbehoud universeel", tekst: "**Impulsbehoud** geldt in **elke** botsing (zonder externe kracht). Kinetische energie-behoud alleen bij **elastische** botsing. Plastische (plakken) verliest E_k aan warmte + vervorming." }],
           niveaus: { basis: "Impuls.", simpeler: "Botsing = impulsbehoud", nogSimpeler: "Impuls" },
@@ -239,7 +239,7 @@ const steps = [
         q: "Kar 4 kg, 6 m/s raakt stilstaande 2 kg, plakken samen. Snelheid na?",
         options: ["4 m/s","6 m/s","2 m/s","12 m/s"],
         answer: 0,
-        wrongHints: [null, "Te groot — massa nam toe.", "Te klein.", "Te groot."],
+        wrongHints: [null, "Te groot — massa nam toe.", "Je trok de snelheden van elkaar af. Reken de totale impuls vóór uit en deel die door de totale massa erna.", "Je deelde de impuls door 2 kg. Welke massa beweegt er na het plakken?"],
         uitlegPad: {
           stappen: [
             { titel: "Impulsbehoud", tekst: "Voor: p = 4·6 + 2·0 = 24 kg·m/s. Na: p = (4+2)·v = 6v." },
@@ -250,9 +250,9 @@ const steps = [
       },
       {
         q: "**Airbag** in auto vermindert letsel door:",
-        options: ["Botstijd verlengen → kracht verlagen","Je massa verkleinen","Snelheid stoppen","Geen invloed"],
+        options: ["Botstijd verlengen → kracht verlagen","Massa verkleinen → kracht verlagen","Botstijd verkorten → kracht verlagen","Impuls verkleinen → kracht verlagen"],
         answer: 0,
-        wrongHints: [null, "Niet — je massa blijft gewoon gelijk.", "Niet — de snelheid wordt hoe dan ook nul; het gaat om hoe snel.", "Wel veel invloed."],
+        wrongHints: [null, "Niet — je massa blijft gewoon gelijk.", "Als je sneller tot stilstand komt, wordt de kracht op je lichaam dan kleiner of groter?", "Je snelheid gaat hoe dan ook van v naar 0. Verandert de impulsverandering dan door een airbag?"],
         uitlegPad: {
           stappen: [{ titel: "F = Δp/Δt", tekst: "**Airbag** rekt botstijd Δt op (van milliseconden naar 0,1-0,5 s). Bij vaste Δp (snelheidsverandering): grotere Δt → **kleinere F** op lichaam. Voorkomt levensgevaarlijke krachten op hoofd/borst." }],
           theorie: "Zelfde principe: kreukel-zone, helm, door je knieën zakken bij het landen na een sprong.",
@@ -261,9 +261,9 @@ const steps = [
       },
       {
         q: "Bal A 5 m/s raakt **gelijke** bal B in rust, elastisch. Na botsing:",
-        options: ["A staat stil, B 5 m/s","Beide 2,5 m/s","A 5 m/s, B 0","Beide stil"],
+        options: ["A staat stil, B 5 m/s","A en B elk 2,5 m/s","A 5 m/s terug, B blijft stil","A en B allebei stil"],
         answer: 0,
-        wrongHints: [null, "Klopt impuls maar niet energie.", "Niet — A botst wel.", "Niet — dan verdwijnt alle impuls."],
+        wrongHints: [null, "Klopt impuls maar niet energie.", "Zo kaatst een bal terug van een muur. Kan een even zware bal B blijven liggen als hij geraakt wordt?", "Niet — dan verdwijnt alle impuls."],
         uitlegPad: {
           stappen: [
             { titel: "Klassieke biljart-uitkomst", tekst: "Bij **elastische botsing van 2 gelijke massa's** met 1 in rust: bewegende stopt, stilstaande neemt alle snelheid over. Impuls + E_k beide behouden." },
@@ -323,9 +323,9 @@ const steps = [
       },
       {
         q: "Raket lanceert door gas naar beneden te stoten. Welke Newton-wet **primair**?",
-        options: ["Derde (actie-reactie)","Eerste (traagheid)","Pythagoras","Geen Newton"],
+        options: ["Derde (actie-reactie)","Eerste (traagheid)","Tweede (F = m × a)","Gravitatiewet (aantrekking)"],
         answer: 0,
-        wrongHints: [null, "Niet — traagheid speelt geen rol bij lancering.", "Niet relevant.", "Wel Newton."],
+        wrongHints: [null, "Niet — traagheid speelt geen rol bij lancering.", "De tweede wet rekent uit hoe snel de raket versnelt. Maar waar komt de duwkracht op de raket vandaan?", "De gravitatiewet beschrijft de aantrekking door de aarde. Trekt die de raket omhoog?"],
         uitlegPad: {
           stappen: [{ titel: "Raket = actie-reactie", tekst: "Raket duwt gas omlaag (actie) → gas duwt raket omhoog met gelijke kracht (reactie). **Derde Newton + impulsbehoud** zorgen samen voor stuwkracht. Hoe meer gasmassa × gas-snelheid eruit, hoe meer raketsnelheid omhoog." }],
           niveaus: { basis: "Derde.", simpeler: "Raket = 3e Newton", nogSimpeler: "3e" },

@@ -43,7 +43,7 @@ const steps = [
         q: "Hoeveel teksten ongeveer op CSE Duits?",
         options: ["~10","~3","~25","~50"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Veel te veel.", "Absurd."],
+        wrongHints: [null, "Drie teksten is weinig voor een examen van meer dan twee uur. Hoeveel teksten lees je per half uur?", "25 teksten lees je niet in de beschikbare tijd. Hoeveel minuten heb je dan per tekst?", "Vijftig teksten in één examen: hoeveel minuten heb je dan per tekst?"],
         uitlegPad: {
           stappen: [{ titel: "9-12 stuks", tekst: "Op CSE Duits HAVO: **9-12 teksten**, totaal ~3500-4500 woorden. VWO iets meer + complexer. Sommige kort (1 alinea), sommige lang (~1000 woorden)." }],
           niveaus: { basis: "~10.", simpeler: "~10 teksten", nogSimpeler: "10" },
@@ -90,9 +90,9 @@ const steps = [
     checks: [
       {
         q: "*Ich gehe in **die** Schule* — welke naamval?",
-        options: ["Akkusativ (beweging-richting)","Dativ (plaats)","Nominativ","Genitiv"],
+        options: ["Akkusativ (richting: waarheen)", "Dativ (plaats: waar iets is)", "Nominativ (onderwerp: wie)", "Genitiv (bezit: van wie)"],
         answer: 0,
-        wrongHints: [null, "Niet — bij plaats: *in der Schule*.", "Niet — onderwerp.", "Niet — geen bezit."],
+        wrongHints: [null, "Niet — bij plaats: *in der Schule*.", "Is 'die Schule' hier het onderwerp van de zin?", "Zegt de zin iets over van wie de school is?"],
         uitlegPad: {
           stappen: [{ titel: "Wechselpräposition + Akk = beweging", tekst: "**In** is een Wechselpräposition. Bij **beweging richting plek** → Akkusativ (*die* voor v). Bij **statisch in/op plek** → Dativ (*der*).\n\n*Ich gehe in **die** Schule* (akk — ik ga ergens **naar toe**).\n*Ich bin in **der** Schule* (dat — ik ben er **al**)." }],
           theorie: "Memo: Akk = beweging IN, Dat = al binnen. Toets-favoriet om naamval te testen.",
@@ -185,9 +185,9 @@ const steps = [
       },
       {
         q: "Welk register is **Jugendsprache**?",
-        options: ["Informeel jongerentaal","Formele bestuurstaal","Wetenschappelijk","Standaard"],
+        options: ["Informele jongerentaal", "Formele bestuurstaal", "Wetenschappelijke vaktaal", "Standaardtaal (Hochdeutsch)"],
         answer: 0,
-        wrongHints: [null, "Niet — heel informeel.", "Niet relevant.", "Niet — afwijkend."],
+        wrongHints: [null, "'Jugend' betekent jeugd. Praten jongeren onderling in bestuurstaal?", "Vaktaal is voor onderzoekers. Wie spreken Jugendsprache?", "Standaardtaal is de nette norm. Klinkt Jugendsprache zo?"],
         uitlegPad: {
           stappen: [{ titel: "Slang", tekst: "**Jugendsprache** = jongerentaal Duits. Voorbeelden: *krass* (heftig/cool), *geil* (super), *cringe* (gênant), *abhängen* (chillen), *Bock haben* (zin hebben). Komt op CSE alleen in zeer informele context (sociale media, jongeren-interviews)." }],
           niveaus: { basis: "Jongerentaal.", simpeler: "Jugendsprache = jong slang", nogSimpeler: "Taal van jongeren." },
@@ -195,9 +195,9 @@ const steps = [
       },
       {
         q: "*Während* kan in tekst betekenen:",
-        options: ["Tijd 'terwijl' óf tegenstelling 'daarentegen'","Alleen tijd","Alleen tegenstelling","Daarom"],
+        options: ["Tijd 'terwijl' óf tegenstelling 'daarentegen'", "Alleen tijd: 'terwijl', nooit iets anders", "Alleen tegenstelling: 'daarentegen'", "Gevolg 'daarom' óf reden 'omdat'"],
         answer: 0,
-        wrongHints: [null, "Niet — twee betekenissen.", "Niet — twee betekenissen.", "Niet relevant."],
+        wrongHints: [null, "Lees 'Er ist reich, während sie arm ist.' Gaat dat over tijd?", "Lees 'Er schläft, während sie arbeitet.' Is dat een tegenstelling of iets anders?", "Een gevolg of reden geef je met 'deshalb' of 'weil'. Waar gaat 'während' over?"],
         uitlegPad: {
           stappen: [{ titel: "Dubbele betekenis", tekst: "**Während** heeft 2 betekenissen:\n• **Tijd**: *Während ich aß, klingelte das Telefon* = Terwijl ik at, ging de telefoon.\n• **Tegenstelling**: *Während die Eltern arbeiten, spielen die Kinder* = De ouders werken, **terwijl/daarentegen** de kinderen spelen.\n\nContext beslist. Toets-favoriet om beide betekenissen te testen." }],
           niveaus: { basis: "Beide.", simpeler: "Während = tijd of contrast", nogSimpeler: "Beide" },
@@ -256,9 +256,9 @@ const steps = [
       },
       {
         q: "**Energiewende** verwijst naar:",
-        options: ["Overgang van fossiel/kern naar hernieuwbare energie","Stoom-revolutie 19e eeuw","Oost-uitbreiding EU","Vrouwen-emancipatie"],
+        options: ["Overstap van fossiel en kernenergie naar duurzaam", "Overstap van kolen naar meer kernenergie", "Bouw van de eerste stoommachines in Duitsland", "Privatisering van de Duitse energiebedrijven"],
         answer: 0,
-        wrongHints: [null, "Energiewende is een actueel beleid, geen historische omwenteling — past de stoommachine van 200 jaar terug daarbij?", "Dit gaat over landsgrenzen en de EU — heeft het woorddeel 'Energie' daar iets mee te maken?", "Emancipatie draait om mensen en rechten — waar wijst 'Energie' juist naartoe?"],
+        wrongHints: [null, "Duitsland heeft zijn kerncentrales juist gesloten. Past dat bij méér kernenergie?", "Energiewende is actueel beleid, geen gebeurtenis van 200 jaar geleden. Waar gaat het nu om?", "Het gaat niet om wie de bedrijven bezit. 'Wende' betekent ommekeer: waarvan naar wat?"],
         uitlegPad: {
           stappen: [{ titel: "Energie-omslag", tekst: "**Energiewende** = Duits beleid sinds 2000: overstap van fossiel + kernenergie naar **hernieuwbaar** (zon, wind, biomassa). Versneld na Fukushima 2011. **Kernuitstap 2023** voltooid: laatste 3 kerncentrales gesloten. Hot topic: kost veel, leverde nog niet alles op." }],
           theorie: "Vergelijking: FR zet juist op kern (~70%), DE op hernieuwbaar. Politiek omstreden in DACH.",
@@ -278,7 +278,7 @@ const steps = [
         q: "*Eventuell* in Duits betekent:",
         options: ["Mogelijk","Beslist","Vroeger","Hier"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Tegenovergesteld.", "Vroeger is 'früher'. Lijkt 'eventuell' daarop?", "Hier is in het Duits gewoon 'hier'. Denk aan het Nederlandse woord dat op 'eventuell' lijkt."],
         uitlegPad: {
           stappen: [{ titel: "Twijfel uitdrukken", tekst: "**Eventuell** = mogelijk, misschien (~50% kans). NL'ers verwarren soms met 'eventueel' (= 'als het zo uitkomt') — andere nuance. Voor 'definitief' gebruik *bestimmt, sicher, definitiv*." }],
           niveaus: { basis: "Mogelijk.", simpeler: "Eventuell = mogelijk", nogSimpeler: "Misschien." },
@@ -319,7 +319,7 @@ const steps = [
         q: "Bij **Wechselpräposition** (an/auf/in/etc) bij beweging naar plek: welke naamval?",
         options: ["Akkusativ","Dativ","Nominativ","Genitiv"],
         answer: 0,
-        wrongHints: [null, "Niet — Dat bij plaats.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Niet — Dat bij plaats.", "Een Wechselpräposition wisselt tussen twee naamvallen. Is de Nominativ daar één van?", "Een Wechselpräposition wisselt tussen twee naamvallen. Is de Genitiv daar één van?"],
         uitlegPad: {
           stappen: [{ titel: "Beweging = Akk", tekst: "Bij Wechselpräpositionen: **Akkusativ** bij beweging-richting (waar naartoe), **Dativ** bij plaats (waar). *Ich gehe **in die** Stadt* (Akk, naar toe). *Ich bin **in der** Stadt* (Dat, ben er)." }],
           niveaus: { basis: "Akkusativ.", simpeler: "Beweging = Akk", nogSimpeler: "Akk" },

@@ -167,7 +167,7 @@ const steps = [
         q: "Wie was de Spaanse koning toen de Tachtigjarige Oorlog uitbrak?",
         options: ["Filips II", "Karel V", "Lodewijk XIV", "Filips III"],
         answer: 0,
-        wrongHints: [null, "Karel V was zijn vader — die had in 1555 troonsafstand gedaan.", "Lodewijk XIV was Frans, en pas later (~1640+).", "Dat was Filips II's zoon, hij komt later."],
+        wrongHints: [null, "Karel V had in 1555 al afstand gedaan van de troon; de oorlog begon in 1568.", "Lodewijk XIV was Frans, en pas later (~1640+).", "Filips III werd pas in 1598 koning — de oorlog begon in 1568."],
         uitlegPad: {
           stappen: [{ titel: "Filips II — strenge katholiek", tekst: "Filips II (1527-1598) werd in 1555 koning van Spanje EN de 17 Provinciën, na troonsafstand vader Karel V. Streng katholiek. Wilde alle macht centraal vanuit Madrid. Sprak geen Nederlands. Beleid van vervolging protestanten + hoge belastingen veroorzaakte opstand 1568." }],
           woorden: [{ woord: "Filips II", uitleg: "Koning Spanje 1555-1598. Habsburgse dynastie." }, { woord: "Karel V", uitleg: "Vader Filips II. Geboren Gent 1500. Trad af 1555." }],
@@ -202,9 +202,9 @@ const steps = [
     checks: [
       {
         q: "Wat gebeurde er bij de **Beeldenstorm** (1566)?",
-        options: ["Calvinisten vernielden heiligenbeelden in katholieke kerken","Een aardbeving verwoestte kerken","Spaanse soldaten plunderden steden","Een grote stormvloed"],
+        options: ["Calvinisten vernielden beelden in kerken","Katholieken vernielden protestantse kerken","Spaanse soldaten plunderden kerken en steden","Filips II liet de beelden uit kerken halen"],
         answer: 0,
-        wrongHints: [null, "Geen natuurramp — een opstand.", "Andersom — de Spanjaarden kwamen pas daarná wraak nemen.", "Geen weer — denk aan wat er in de kerken gebeurde."],
+        wrongHints: [null, "Wie vond beelden in een kerk verkeerd: katholieken of protestanten?", "Andersom — de Spanjaarden kwamen pas daarná wraak nemen.", "Filips II was katholiek en wilde de beelden juist houden."],
         uitlegPad: {
           stappen: [{ titel: "Augustus 1566 — kerkvernielingen", tekst: "10 augustus 1566 begon Beeldenstorm in Steenvoorde (Vlaanderen). Calvinisten zagen heiligenbeelden + schilderijen als 'afgoderij' (verboden in protestantisme). Vernielden honderden kerken in weken: Antwerpen, Gent, Amsterdam, Utrecht. Plus uiting woede over vervolging + belastingen." }],
           woorden: [{ woord: "Beeldenstorm", uitleg: "Protestantse vernieling van katholieke kerkinrichting 1566." }, { woord: "afgoderij", uitleg: "Verering van beelden ipv God zelf. Calvinisten zagen heiligen als afgoderij." }],
@@ -323,7 +323,7 @@ const steps = [
       },
       {
         q: "Wat krijgen Leidenaars elk jaar op **3 oktober** te eten?",
-        options: ["Haring + wittebrood", "Snert", "Pannenkoeken", "Worst"],
+        options: ["Haring en wittebrood", "Snert en roggebrood", "Pannenkoeken met stroop", "Worst en zuurkool"],
         answer: 0,
         wrongHints: [null, "Lekker, maar geen 3-oktober-traditie.", "Geen Leidens Ontzet-traditie.", "Geen 3-oktober-gerecht."],
         uitlegPad: {
@@ -397,7 +397,7 @@ const steps = [
         q: "Hoeveel provincies had de Republiek?",
         options: ["7", "12", "3", "17"],
         answer: 0,
-        wrongHints: [null, "Te veel — dat is het aantal provincies van nu.", "Te weinig.", "Dat waren de 17 Provinciën onder Filips II — voordat het splitste."],
+        wrongHints: [null, "Te veel — dat is het aantal provincies van nu.", "Holland en Zeeland waren er al twee — tel ze allemaal.", "Dat waren de 17 Provinciën onder Filips II — voordat het splitste."],
         uitlegPad: {
           stappen: [{ titel: "7 verenigde provincies", tekst: "Republiek der ZEVEN Verenigde Nederlanden, sinds Unie van Utrecht 1579: Holland, Zeeland, Utrecht, Gelderland, Friesland, Groningen, Overijssel. Plus Drenthe (eigen bestuur, geen stem) en 'Generaliteitslanden' (deel Brabant + Limburg): geen eigen stem, wel onder bestuur." }],
           woorden: [{ woord: "Republiek", uitleg: "Officieel: 'Republiek der Zeven Verenigde Nederlanden'. Bestond 1581-1795." }, { woord: "Generaliteitslanden", uitleg: "Gebieden onder bestuur Republiek maar zonder eigen Staten. Staats-Brabant, deel Limburg, Zeeuws-Vlaanderen." }],
@@ -409,9 +409,9 @@ const steps = [
       },
       {
         q: "Wie regeerde de Republiek?",
-        options: ["Staten-Generaal en stadhouder","Een gekozen president","De paus","Filips II"],
+        options: ["Staten-Generaal en stadhouder","Een koning uit het huis Oranje","De paus en de bisschoppen","Filips II en zijn landvoogd"],
         answer: 0,
-        wrongHints: [null, "Presidenten kwamen veel later (vooral VS, Frankrijk).", "De paus regeerde Rome — niet Nederland.", "Filips II was juist afgezworen in 1581."],
+        wrongHints: [null, "Koningen uit het huis Oranje kwamen pas in 1815.", "De paus regeerde Rome — niet Nederland.", "Filips II was juist afgezworen in 1581."],
         uitlegPad: {
           stappen: [{ titel: "Geen koning — uniek experiment", tekst: "Na 1581 had Republiek GEEN koning meer. Bestuur: (1) Staten-Generaal in Den Haag (alle 7 provincies vertegenwoordigd), (2) stadhouder (militair leider, eerst Maurits, later Frederik Hendrik), (3) Raadpensionaris (politieke topambtenaar, bv. Johan van Oldenbarnevelt). Macht gespreid." }],
           woorden: [{ woord: "Staten-Generaal", uitleg: "Centraal parlement Republiek. Vergaderden Den Haag. Alle 7 provincies." }, { woord: "stadhouder", uitleg: "Provinciaal hoofd, militair-leider. Vaak uit Oranje-Nassau familie." }, { woord: "Raadpensionaris", uitleg: "Topambtenaar provincie Holland. Politiek invloedrijkst (Oldenbarnevelt, Johan de Witt)." }],
@@ -430,9 +430,9 @@ const steps = [
     checks: [
       {
         q: "Welk principe staat in het Plakkaat van Verlatinghe?",
-        options: ["Bij tirannie mag het volk de koning afzweren","Belasting moet eerlijk zijn","Iedereen krijgt gratis brood","Spanjaarden moeten weg"],
+        options: ["Bij tirannie mag het volk de koning afzweren","Belastingen moeten eerlijk verdeeld worden","Iedereen mag vrij zijn eigen geloof kiezen","Alle Spaanse soldaten moeten het land uit"],
         answer: 0,
-        wrongHints: [null, "Wel een grief, maar niet het hoofdprincipe.", "Geen sociale wet uit deze tijd.", "Wel een gevolg, maar niet het juridisch principe."],
+        wrongHints: [null, "Wel een grief, maar niet het hoofdprincipe.", "Gewetensvrijheid stond in de Unie van Utrecht (1579), niet in het Plakkaat.", "Wel een gevolg, maar niet het juridisch principe."],
         uitlegPad: {
           stappen: [{ titel: "Volkssoevereiniteit", tekst: "Plakkaat-kernidee: koning is HERDER van volk, niet eigenaar. Als koning verandert in TIRAN (onderdrukt volk), dan mag volk hem afzweren. Eerste keer in juridisch document zo geformuleerd. Idee: volk heeft RECHTEN tegenover koning, niet alleen plichten." }],
           woorden: [{ woord: "tirannie", uitleg: "Heerschappij waarbij heerser eigen belang boven volk stelt. Antiek-Grieks begrip." }, { woord: "volkssoevereiniteit", uitleg: "Idee dat macht uiteindelijk bij volk ligt. Modern democratisch principe." }],
@@ -516,9 +516,9 @@ const steps = [
       },
       {
         q: "Wat gebeurde er met de **Schelde** door de Vrede van Münster?",
-        options: ["Werd gesloten voor scheepvaart","Werd internationale rivier","Werd in tweeën gedeeld","Werd drooggelegd"],
+        options: ["Werd gesloten voor scheepvaart","Werd een vrije internationale rivier","Werd verdeeld tussen twee landen","Werd uitgediept voor grotere schepen"],
         answer: 0,
-        wrongHints: [null, "Andersom — denk aan wat de Republiek wilde met Antwerpen.", "Geen splitsing — wat had Amsterdam liever voor Antwerpen?", "Niet drooggelegd — de rivier bleef, maar wat veranderde voor schepen?"],
+        wrongHints: [null, "Andersom — denk aan wat de Republiek wilde met Antwerpen.", "Geen splitsing — wat had Amsterdam liever voor Antwerpen?", "Er werd niets gegraven — wat wilde Amsterdam met de haven van Antwerpen?"],
         uitlegPad: {
           stappen: [{ titel: "Schelde dicht — Amsterdam wint", tekst: "Vrede van Münster bepaalde: Schelde-rivier (stroomt langs Antwerpen) wordt GESLOTEN voor scheepvaart. Antwerpen onbereikbaar voor zeeschepen. Republiek (Zeeland controleerde monding) blokkeerde. Gevolg: Amsterdam werd grootste handelshaven (geen Antwerpse concurrentie). Antwerpen 200 jaar verarmd." }],
           woorden: [{ woord: "Schelde", uitleg: "Rivier door België, mondt uit in Zeeuwse wateren (Westerschelde)." }, { woord: "Antwerpen", uitleg: "Vlaamse havenstad. Vóór 1585 grootste handelsstad Lage Landen, daarna 200 jaar verarmd." }],
@@ -530,9 +530,9 @@ const steps = [
       },
       {
         q: "Welk beroemd schilderij toont de Eed bij de Vrede van Münster?",
-        options: ["Een schilderij van Gerard ter Borch","De Nachtwacht door Rembrandt","Het Melkmeisje door Vermeer","Geen specifiek schilderij"],
+        options: ["Een doek door Gerard ter Borch","De Nachtwacht door Rembrandt","Het Melkmeisje door Vermeer","Een doek door Frans Hals"],
         answer: 0,
-        wrongHints: [null, "Nachtwacht is van Rembrandt, ander onderwerp (schutterij).", "Melkmeisje is van Vermeer, dagelijks leven.", "Wel degelijk — er was zelfs een schilder bij aanwezig."],
+        wrongHints: [null, "Nachtwacht is van Rembrandt, ander onderwerp (schutterij).", "Melkmeisje is van Vermeer, dagelijks leven.", "Frans Hals schilderde vooral portretten en schutters in Haarlem — hij was niet in Münster."],
         uitlegPad: {
           stappen: [{ titel: "Ter Borch — vredeseed 1648", tekst: "Gerard ter Borch (1617-1681) schilderde 'De Eed van de Vrede van Münster' (1648). Toont het historische moment: NL+Spaanse diplomaten leggen vredeseed af. Klein schilderij (45×58 cm), nu in Rijksmuseum Amsterdam. Belangrijk Gouden Eeuw-werk, historisch document." }],
           woorden: [{ woord: "Gerard ter Borch", uitleg: "NL Gouden Eeuw-schilder. Geboren Zwolle. Was zelf in Münster bij vredestekening." }, { woord: "Rijksmuseum", uitleg: "Nationaal museum NL, Amsterdam. Heeft Nachtwacht + Melkmeisje + Eed van Münster." }],

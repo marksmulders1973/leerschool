@@ -52,7 +52,7 @@ const steps = [
         q: "**MMXXV** in arabische cijfers:",
         options: ["2025","2055","2520","1925"],
         answer: 0,
-        wrongHints: [null, "Niet correct.", "Niet relevant.", "Niet correct."],
+        wrongHints: [null, "Hoeveel is XX? En hoeveel is de V aan het eind?", "Komt er een D (500) in het getal voor?", "Hoeveel M's staan er vooraan? En hoeveel is één M?"],
         uitlegPad: {
           stappen: [{ titel: "Romeinse cijfers", tekst: "MM = 1000+1000 = **2000**. XX = 10+10 = **20**. V = **5**. Samen = **2025**." }],
           niveaus: { basis: "2025.", simpeler: "MM=2000, XX=20, V=5 → 2025", nogSimpeler: "2025." },
@@ -99,7 +99,7 @@ const steps = [
       },
       {
         q: "**Caesarem** (acc) past bij welke functie?",
-        options: ["Lijdend voorwerp","Onderwerp","Bezit","Aanspreken"],
+        options: ["Lijdend voorwerp","Onderwerp van de zin","Bezitter (van Caesar)","Aanspreken (o Caesar!)"],
         answer: 0,
         wrongHints: [null, "Nominatief.", "Genitief.", "Vocatief."],
         uitlegPad: {
@@ -149,7 +149,7 @@ const steps = [
     checks: [
       {
         q: "**Amat** is welke vorm?",
-        options: ["3e persoon enkelvoud","2e persoon","1e meervoud","Imperatief"],
+        options: ["3e persoon enkelvoud","2e persoon enkelvoud","1e persoon meervoud","Imperatief enkelvoud"],
         answer: 0,
         wrongHints: [null, "Dat zou amas zijn.", "Dat is amamus.", "Dat is ama!"],
         uitlegPad: {
@@ -220,7 +220,7 @@ const steps = [
         q: "Wanneer werd **Rome gesticht** volgens de legende?",
         options: ["753 v.Chr.","27 v.Chr.","476 n.Chr.","1492"],
         answer: 0,
-        wrongHints: [null, "Niet — Augustus-troon.", "Einde West-Rome.", "Niet relevant."],
+        wrongHints: [null, "Niet — Augustus-troon.", "Einde West-Rome.", "1492 is het jaar van Columbus — veel te laat voor Rome."],
         uitlegPad: {
           stappen: [{ titel: "Romulus + Remus", tekst: "**753 v.Chr.**: legendarische stichting Rome door Romulus (broer Remus, die hij doodde). Tweelingen werden volgens mythe gevoed door wolvin. Historisch: bewoning Tiber-heuvels al eerder, maar 753 = officiële Romeinse jaartelling (Ab Urbe Condita)." }],
           niveaus: { basis: "753 v.Chr.", simpeler: "753 = stichting", nogSimpeler: "753" },
@@ -267,9 +267,9 @@ const steps = [
     checks: [
       {
         q: "Welke betekenis heeft **'carpe diem'**?",
-        options: ["Pluk de dag","Met de dag","Lange dag","Donder dag"],
+        options: ["Pluk de dag","Met de dag","Lange dag","Tel de dagen"],
         answer: 0,
-        wrongHints: [null, "Niet — ander voorzetsel.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Niet — ander voorzetsel.", "Carpe is geen bijvoeglijk naamwoord maar een werkwoord. Wat doe je met de dag?", "'Carpe' is een gebiedende wijs. Wat betekent het werkwoord carpere?"],
         uitlegPad: {
           stappen: [{ titel: "Horatius Oden 1.11", tekst: "**Carpe diem** = letterlijk 'pluk de dag' (carpe = imperatief 'pluk', diem = accusatief 'dag'). Uit **Horatius** Oden 1.11 (23 v.Chr.). Boodschap: leef in het nu, want toekomst onzeker. Veel later beroemd door Robin Williams in film *Dead Poets Society* (1989)." }],
           niveaus: { basis: "Pluk de dag.", simpeler: "Carpe diem = leef nu", nogSimpeler: "Pluk de dag." },
@@ -287,9 +287,9 @@ const steps = [
       },
       {
         q: "Wat is **Pax Romana**?",
-        options: ["Periode van relatieve vrede","Vredesakkoord","Tempel","Sport"],
+        options: ["Periode van relatieve vrede","Vredesverdrag met de Germanen","Het vredesaltaar van Augustus","Romeinse godin van de vrede"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Pax Romana is geen los verdrag. Hoe lang duurde het?", "Dat is de Ara Pacis. Pax Romana is geen gebouw.", "Pax was ook een godin, maar 'Pax Romana' slaat op iets anders."],
         uitlegPad: {
           stappen: [{ titel: "200 jaar relatieve vrede", tekst: "**Pax Romana** ('Romeinse vrede') = ruim 200 jaar relatieve interne vrede + welvaart in Romeinse Rijk: **27 v.Chr.-180 n.Chr.** (Augustus tot Marcus Aurelius). Niet zonder oorlog (grens-conflicten Germanen, Britten, Parten), maar binnen Rijk relatief stabiel. Handel + cultuur bloeiden. Begrip vergelijkbaar met 'Pax Americana' (post-WO2 westen)." }],
           niveaus: { basis: "Vrede 27 v-180 n.", simpeler: "Pax Romana = vrede-tijd", nogSimpeler: "Vrede 27 v-180 n." },

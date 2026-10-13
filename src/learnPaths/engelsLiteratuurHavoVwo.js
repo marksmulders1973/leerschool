@@ -60,13 +60,13 @@ const steps = [
       {
         q: "**Booker Prize** wordt uitgereikt voor:",
         options: [
-          "Beste roman geschreven in het Engels",
-          "Beste Amerikaanse boek",
-          "Beste poëzie",
-          "Beste filmscript"
+          "Beste Engelstalige roman van het jaar",
+          "Beste Amerikaanse roman van het jaar",
+          "Beste Engelstalige dichtbundel van het jaar",
+          "Beste Britse filmscript van het jaar"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — niet alleen US.", "Niet — alleen roman.", "Niet — het gaat om boeken."],
+        wrongHints: [null, "Ook Britse, Ierse en Indiase schrijvers winnen hem. Gaat het dan om één land?", "Voor poëzie bestaan andere prijzen, zoals de T.S. Eliot Prize. Om welke vorm gaat het bij de Booker?", "Films hebben hun eigen prijzen, zoals de Oscars. Waar gaat deze literatuurprijs over?"],
         uitlegPad: {
           stappen: [{ titel: "Sinds 1969", tekst: "Prestigieuze prijs voor roman in Engels. Sinds 2014 ook van Amerikaanse auteurs. Daarnaast: **Booker International** voor vertaalde werken (Marieke Lucas Rijneveld won die 2020 met 'De avond is ongemak')." }],
           niveaus: { basis: "Roman in Engels.", simpeler: "Beste Engelstalige roman.", nogSimpeler: "Booker" },
@@ -75,13 +75,13 @@ const steps = [
       {
         q: "**Modernism** (1900-1945) kenmerken:",
         options: [
-          "Experimenteel, gebroken vorm, stream-of-consciousness",
-          "Realistisch + chronologisch",
-          "Religieus dominant",
-          "Strakke klassieke vormregels"
+          "Experimenteel, stream of consciousness",
+          "Realistisch, chronologisch, alwetende verteller",
+          "Religieus, moraliserend, met vaste moraal",
+          "Strak, klassiek, met vast rijm en metrum"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — wel diverse thema's.", "Denk aan wat WO1 deed met het vertrouwen in traditie."],
+        wrongHints: [null, "Dat past bij de 19e-eeuwse roman (denk aan Dickens). Wat deden schrijvers na 1900 met die vorm?", "Moraliserende verhalen kennen we vooral uit de Victoriaanse tijd. Wat zochten modernisten?", "Denk aan wat WO1 deed met het vertrouwen in traditie."],
         uitlegPad: {
           stappen: [
             { titel: "Breken met traditie", tekst: "WO1 schokte vertrouwen in 'vooruitgang' → schrijvers experimenteren. Stream of consciousness = gedachten direct op papier (Joyce 'Ulysses', Woolf 'Mrs Dalloway'). Tijd-sprong, meerdere vertellers, ambiguïteit. T.S. Eliot 'The Waste Land' (1922) = hoogtepunt." },
@@ -102,7 +102,7 @@ const steps = [
         q: "**'To be or not to be'** komt uit welk werk?",
         options: ["Hamlet", "Macbeth", "Romeo and Juliet", "King Lear"],
         answer: 0,
-        wrongHints: [null, "Niet — andere monoloog.", "Niet — andere monoloog.", "Niet."],
+        wrongHints: [null, "Niet — andere monoloog.", "Niet — andere monoloog.", "Lear is een oude koning met drie dochters. Wie twijfelt in deze monoloog over leven en dood?"],
         uitlegPad: {
           stappen: [{ titel: "Beroemdste monoloog", tekst: "Hamlet's soliloquy uit Act 3 Scene 1. Filosofische vraag over leven of dood, zelfmoord, betekenis. Wereldberoemd, eindeloos geïnterpreteerd." }],
           niveaus: { basis: "Hamlet.", simpeler: "Hamlet's monoloog.", nogSimpeler: "Hamlet" },
@@ -148,13 +148,13 @@ const steps = [
       {
         q: "**Globe Theatre** in Shakespeare's tijd:",
         options: [
-          "Open-air, 3000 toeschouwers, alle rollen door mannen",
-          "Modern theater met stoelen",
-          "Privé voor koning",
-          "Bestond niet"
+          "Open dak, veel publiek, alleen mannelijke acteurs",
+          "Overdekt, alleen zitplaatsen, ook actrices",
+          "Privétheater voor de koning en zijn hof",
+          "Open dak, alleen voor adel, vrouwen speelden mee"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — anachronisme.", "Niet — publiek.", "Bestaat wel + replica vandaag."],
+        wrongHints: [null, "Denk aan de 'groundlings' die voor een penny stonden. Waren er dan alleen zitplaatsen?", "Het Globe was een publiek theater: iedereen met een paar pennies kon erin. Was het dan privé?", "Ook gewone mensen kwamen kijken. En mochten vrouwen in Shakespeares tijd al toneelspelen?"],
         uitlegPad: {
           stappen: [
             { titel: "Originele was 1599-1644", tekst: "Open-air rond theater aan de Theems. 'Groundlings' (lagere klasse) stonden op vloer voor 1 penny. Galerijen rondom voor rijken. Vrouwenrollen door jonge mannen gespeeld (acteursvak verboden voor vrouwen tot 1660+). Replica gebouwd 1997 in Londen — bezoekbaar." },
@@ -291,13 +291,13 @@ const steps = [
       {
         q: "**Beat Generation** schrijvers (1950s) reageerden op:",
         options: [
-          "Conformisme + materialisme van naoorlogs Amerika",
-          "Eerste Wereldoorlog",
-          "Slavernij",
-          "Vietnam-oorlog"
+          "Conformisme en materialisme na 1945",
+          "De verwoesting van de Eerste Wereldoorlog",
+          "Slavernij in het Amerikaanse zuiden",
+          "De Vietnamoorlog en de dienstplicht"
         ],
         answer: 0,
-        wrongHints: [null, "Eerder generatie.", "Eerder eeuw.", "Latere generatie."],
+        wrongHints: [null, "Op WO1 reageerde de 'Lost Generation' rond 1920. Wat speelde er in de jaren '50?", "Slavernij was al in 1865 afgeschaft. Wat zagen jongeren in het Amerika van de jaren '50 om zich heen?", "De Vietnamoorlog escaleerde pas in de jaren '60. Waar zetten de Beats zich in de jaren '50 tegen af?"],
         uitlegPad: {
           stappen: [
             { titel: "On the road, jazz, drugs, oosterse filosofie", tekst: "Kerouac, Ginsberg, Burroughs reageerden op '50s-rust met spontane improvisatie, reizen, drugs-experimenten, oosters denken. 'On the Road' (1957): Kerouac's road-trip met Neal Cassady → manifest van vrijheid + zoektocht. Voorloper van hippiecultuur." },
@@ -308,13 +308,13 @@ const steps = [
       {
         q: "**Mark Twain's** Huckleberry Finn (1884) is bijzonder door:",
         options: [
-          "Amerikaanse spreektaal + kritiek op slavernij",
-          "Engelse koloniale stijl",
-          "Vol Shakespeare-citaten",
-          "Geen plot"
+          "Amerikaanse spreektaal en kritiek op slavernij",
+          "Deftige Britse stijl en kritiek op de adel",
+          "Amerikaanse spreektaal en lof voor het zuiden",
+          "Eerste roman over de Amerikaanse Burgeroorlog"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — anti-Brits.", "Wel plot."],
+        wrongHints: [null, "Huck vertelt zelf, in de taal van een jongen uit Missouri. Klinkt dat deftig Brits?", "Het boek speelt in het zuiden. Laat Twain dat zuiden met zijn slavernij er goed vanaf komen?", "Het boek speelt vóór de Burgeroorlog. Waar richt Twain zijn kritiek dan op?"],
         uitlegPad: {
           stappen: [
             { titel: "Echte Amerikaanse stem", tekst: "Voor Twain: Amerikaanse schrijvers imiteerden Brits Engels. Huck Finn (arme jongen) spreekt + denkt in DIALECT-Engels van Zuid-VS. Plus: hij sluit vriendschap met de weggelopen slaaf Jim → ontmaskert hypocrisie van 'fatsoenlijke' samenleving die slavernij steunde. Hemingway: 'All modern American literature comes from one book... Huckleberry Finn.'" },
@@ -346,13 +346,13 @@ const steps = [
       {
         q: "**Symbolism** in literatuur betekent:",
         options: [
-          "Object/figuur staat voor groter idee",
-          "Letterlijke betekenis",
-          "Beschrijving zonder doel",
-          "Random toeval"
+          "Een object staat voor een groter idee",
+          "Alles betekent precies wat er staat",
+          "Uitgebreide beschrijving zonder doel",
+          "Woorden die met dezelfde klank beginnen"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel betekenis.", "Niet bedoeld."],
+        wrongHints: [null, "Dat is de letterlijke betekenis. Zoekt symboliek iets achter de woorden?", "Een symbool heeft juist een bedoeling. Wat kan een duif of een roos 'betekenen'?", "Dat heet alliteratie en gaat over klank. Waar gaat symboliek over?"],
         uitlegPad: {
           stappen: [
             { titel: "Verhaal binnen verhaal", tekst: "Voorbeeld: in 'Great Gatsby' is 'green light' aan overkant van baai → symbool voor Gatsby's hoop + onbereikbare droom. Veel groter dan letterlijk lichtje. Auteur gebruikt vaak terugkerende objecten/kleuren als anker." },
@@ -363,13 +363,13 @@ const steps = [
       {
         q: "**Stream of consciousness** is een techniek van:",
         options: [
-          "Gedachten zoals ze opkomen, ongefilterd op papier",
-          "Plot in chronologische volgorde",
-          "Korte simpele zinnen",
-          "Geen verteller"
+          "Gedachten opschrijven zoals ze opkomen",
+          "Gebeurtenissen netjes op volgorde vertellen",
+          "Alleen korte, simpele zinnen gebruiken",
+          "Het verhaal vertellen via alleen dialogen"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Wel verteller."],
+        wrongHints: [null, "Volgen de gedachten in je hoofd altijd een nette tijdlijn?", "Denk aan 'stream' (stroom). Zijn gedachten altijd kort en simpel?", "Bij dialogen hoor je wat mensen zeggen. Waar gaat 'consciousness' (bewustzijn) over?"],
         uitlegPad: {
           stappen: [
             { titel: "Joyce + Woolf + Faulkner", tekst: "Pogen INTERN bewustzijn van personage weer te geven: associatieve sprongen, herinneringen, halverwege zinnen onderbroken, geen interpunctie soms. Voorbeeld Molly Bloom's monoloog (Ulysses): 40 pagina's met bijna geen leestekens." },
@@ -380,13 +380,13 @@ const steps = [
       {
         q: "**'Foreshadowing'** is:",
         options: [
-          "Hints geven over wat later in verhaal gaat gebeuren",
-          "Terugblik",
-          "Plot-twist",
-          "Personage-introductie"
+          "Vooraf hints geven over wat er later gebeurt",
+          "Terugblikken op wat er eerder gebeurde",
+          "Een onverwachte wending aan het eind",
+          "Een personage voor het eerst voorstellen"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — flashback.", "Niet — twist verrast juist.", "Niet specifiek."],
+        wrongHints: [null, "Dat heet een flashback. Wat betekent 'fore' in foreshadowing?", "Een twist verrast de lezer juist. Waar draait foreshadowing om?", "Dat is een introductie. Denk aan 'shadow': wat werpt een schaduw vooruit?"],
         uitlegPad: {
           stappen: [{ titel: "Vooruitwijzen", tekst: "Auteur plaatst kleine signalen — woord, gebeurtenis, beschrijving — die later betekenis krijgen. Bv. een geweer wordt vroeg getoond in scène (Chekhov's gun): moet later afgaan. Beloont aandachtige lezers." }],
           niveaus: { basis: "Hints geven.", simpeler: "Vooruit-signaal.", nogSimpeler: "Voorspel" },

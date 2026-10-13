@@ -287,9 +287,9 @@ const steps = [
       },
       {
         q: "**Foucault** stelt: macht is:",
-        options: ["Overal aanwezig + relationeel", "Alleen aanwezig bij de staat", "Alleen onderdrukkend en negatief", "Een verzinsel dat niet bestaat"],
+        options: ["Overal aanwezig + relationeel", "Vooral geconcentreerd bij de staat", "Vooral onderdrukkend en verbiedend", "Bezit van één persoon of groep"],
         answer: 0,
-        wrongHints: [null, "Zit macht volgens Foucault alleen in het parlement en de regering?", "Niet — macht is volgens hem ook normerend en productief.", "Waarom zou Foucault dan zoveel over macht schrijven?"],
+        wrongHints: [null, "Zit macht volgens Foucault vooral in het parlement en de regering?", "Niet — macht is volgens hem ook normerend en productief.", "Ziet Foucault macht als een ding dat iemand kan bezitten?"],
         uitlegPad: {
           stappen: [{ titel: "Macht-relaties overal", tekst: "**Michel Foucault** stelt dat **macht overal aanwezig** is — niet alleen bij staat, ook in school, ziekenhuis, gevangenis, familie. Macht produceert kennis ('discours'). Niet alleen onderdrukkend maar ook normerend." }],
           niveaus: { basis: "Overal.", simpeler: "Foucault = overal macht", nogSimpeler: "Overal" },
@@ -317,9 +317,9 @@ const steps = [
       },
       {
         q: "**Nietzsches** beroemde uitspraak 'God is dood' betekent:",
-        options: ["Het geloof in God verliest zijn gezag", "God is letterlijk gestorven", "God bestaat niet en heeft nooit bestaan", "Iedereen moet voortaan atheïst worden"],
+        options: ["Het geloof in God verliest zijn gezag", "God is letterlijk gestorven", "God bestaat niet en heeft nooit bestaan", "De wetenschap heeft God weerlegd"],
         answer: 0,
-        wrongHints: [null, "Niet — metaforisch.", "Niet — Nietzsche beschrijft wat er met het geloof in onze cultuur gebeurt.", "Niet — culturele observatie."],
+        wrongHints: [null, "Niet — metaforisch.", "Niet — Nietzsche beschrijft wat er met het geloof in onze cultuur gebeurt.", "Nietzsche beschrijft een verandering in de cultuur, geen wetenschappelijk bewijs."],
         uitlegPad: {
           stappen: [{ titel: "Cultureel feit", tekst: "**Nietzsche** in *Die fröhliche Wissenschaft* (1882): 'Gott ist tot'. Geen feitelijke claim — **cultuurdiagnose**: na Verlichting + wetenschap geloven westerse mensen niet meer in God. Probleem: traditionele moraal hing aan God. Wat nu? Nietzsche zelf: schep eigen waarden (Übermensch).\n\nMisbruikt door Nazi's; Nietzsche zelf was tegen antisemitisme + nationalisme." }],
           niveaus: { basis: "Einde moraal.", simpeler: "God dood = einde moraal", nogSimpeler: "Zelf waarden scheppen" },

@@ -99,9 +99,9 @@ const steps = [
     checks: [
       {
         q: "Wie bedacht het **Cultuurstelsel** in 1830?",
-        options: ["Johannes van den Bosch","Multatuli","Soekarno","Willem I"],
+        options: ["Van den Bosch","Multatuli","Daendels","Willem I"],
         answer: 0,
-        wrongHints: [null, "Niet — hij was juist KRITISCH op het systeem.", "Indonesische leider — kwam veel later.", "Koning, maar gouverneur Van den Bosch bedacht het."],
+        wrongHints: [null, "Niet — hij was juist KRITISCH op het systeem.", "Daendels was eerder gouverneur-generaal (1808-1811) en liet de Grote Postweg aanleggen.", "Willem I steunde het plan als koning, maar wie bedacht het als gouverneur-generaal?"],
         uitlegPad: {
           stappen: [{ titel: "Van den Bosch = bedenker", tekst: "**Johannes van den Bosch** = gouverneur-generaal Nederlands-Indië 1830-1834. Bedacht Cultuurstelsel om de **NL-staatsschuld** (door Belgische opstand) terug te betalen. Werd er rijk van — kreeg adellijke titel ('graaf Van den Bosch')." }],
           woorden: [{ woord: "Cultuurstelsel", uitleg: "Systeem waarbij Indonesische boeren gedwongen werden export-gewassen te verbouwen voor de NL-staat." }],
@@ -110,9 +110,9 @@ const steps = [
       },
       {
         q: "Wat is het **batig slot**?",
-        options: ["Winst voor de Nederlandse staat","Cultuurstelsel-handboek","Indonesische muziek-stijl","Belasting-categorie"],
+        options: ["Winst voor de Nederlandse staat","Het einde van het cultuurstelsel","Tekort op de koloniale begroting","Belasting die Javaanse boeren betaalden"],
         answer: 0,
-        wrongHints: [null, "Niet — geen handboek.", "Niet — geen muziek.", "Niet — het is geen soort belasting, maar een uitkomst van de koloniale boekhouding."],
+        wrongHints: [null, "'Slot' betekent hier niet 'einde' — het is een woord uit de boekhouding.", "Wat betekent het woord 'batig'?", "Niet — het is geen soort belasting, maar een uitkomst van de koloniale boekhouding."],
         uitlegPad: {
           stappen: [{ titel: "Batig slot = winst", tekst: "**Batig slot** = boekhoud-term voor 'wat overblijft' (overschot) na aftrek van kosten. In NL-koloniale context: het Indonesische geld dat overbleef nadat de kolonie-overheid haar kosten betaald had — ging naar Den Haag." }],
           woorden: [{ woord: "batig slot", uitleg: "Overschot in een begroting/kassa — positief saldo." }],
@@ -135,9 +135,9 @@ const steps = [
       },
       {
         q: "**Ethische politiek** (1901) had drie speerpunten. Welke?",
-        options: ["Onderwijs + Irrigatie + Emigratie","Geloof + Werk + Familie","Leger + Politie + Belasting","Suiker + Koffie + Thee"],
+        options: ["Onderwijs + Irrigatie + Emigratie","Onderwijs + Irrigatie + Spoorwegen","Zending + Gezondheidszorg + Onderwijs","Suiker + Koffie + Thee"],
         answer: 0,
-        wrongHints: [null, "Geen speerpunten ethische politiek.", "Niet — ethische politiek wilde juist niet meer geweld.", "Cultuurstelsel-producten, niet ethische politiek."],
+        wrongHints: [null, "Twee van de drie kloppen. Welke past niet bij de officiële speerpunten?", "Zending (het christelijk geloof verspreiden) was geen officieel speerpunt.", "Cultuurstelsel-producten, niet ethische politiek."],
         uitlegPad: {
           stappen: [{ titel: "OIE — onthoud O-I-E", tekst: "Speerpunten ethische politiek (uitgewerkt door o.a. C.Th. van Deventer; de koers begon met de troonrede van **koningin Wilhelmina**, 1901):\n• **O**nderwijs: scholen voor inheemse bevolking\n• **I**rrigatie: betere waterwerken voor landbouw\n• **E**migratie: Javaanse boeren overplaatsen naar minder-bevolkte eilanden (Sumatra, Sulawesi)" }],
           woorden: [{ woord: "ethische politiek", uitleg: "Nieuwe koloniale koers 1901: NL als 'voogd' die welvaart in Indië moet bevorderen." }],
@@ -147,9 +147,9 @@ const steps = [
       },
       {
         q: "Welke organisatie startte de **Indonesische nationalistische beweging** in 1908?",
-        options: ["Boedi Oetomo","PNI","VOC","KNIL"],
+        options: ["Boedi Oetomo","PNI","Sarekat Islam","KNIL"],
         answer: 0,
-        wrongHints: [null, "PNI werd pas later opgericht — dit is niet de allereerste beweging.", "VOC was de handelscompagnie van de Nederlanders — die was er al lang niet meer in 1908.", "KNIL = Koninklijk Nederlands-Indisch Leger — onderdrukker, geen nationalisten."],
+        wrongHints: [null, "PNI werd pas later opgericht — dit is niet de allereerste beweging.", "Sarekat Islam werd pas in 1911-1912 opgericht — welke organisatie was er al in 1908?", "KNIL = Koninklijk Nederlands-Indisch Leger — onderdrukker, geen nationalisten."],
         uitlegPad: {
           stappen: [{ titel: "Boedi Oetomo 1908", tekst: "**Boedi Oetomo** ('Verheven Streven') = eerste moderne Indonesische nationalistische beweging, opgericht 20 mei 1908 door studenten. Vredig, gericht op zelfontplooiing. Datum 20 mei = **Hari Kebangkitan Nasional** (Dag van het Nationaal Ontwaken)." }],
           theorie: "Volgorde: Boedi Oetomo 1908 → Sarekat Islam 1912 → PNI 1927 (Soekarno) → Onafhankelijkheid 1945.",
@@ -189,9 +189,9 @@ const steps = [
       },
       {
         q: "Wat zijn **romusha** in de Japanse bezetting?",
-        options: ["Gedwongen Indonesische dwangarbeiders","Japanse soldaten","Indonesische ambtenaren","NL-krijgsgevangenen"],
+        options: ["Indonesische dwangarbeiders","Japanse bewakers en soldaten","Indonesische ambtenaren","Nederlandse krijgsgevangenen"],
         answer: 0,
-        wrongHints: [null, "Niet — de uitbuiters.", "Niet — ambtenaren werden grotendeels behouden.", "Niet — krijgsgevangenen zaten in aparte kampen en heetten geen 'romusha'."],
+        wrongHints: [null, "Dit waren de bezetters zelf, niet de mensen die zo genoemd werden.", "Niet — ambtenaren werden grotendeels behouden.", "Niet — krijgsgevangenen zaten in aparte kampen en heetten geen 'romusha'."],
         uitlegPad: {
           stappen: [{ titel: "Romusha = dwangarbeider", tekst: "**Romusha** = Japans voor 'arbeider'. Tijdens Japanse bezetting werden ~4 miljoen Indonesiërs gedwongen voor de Japanners te werken (oa Birma-spoorweg, kustverdediging). ~2 miljoen kwamen om. Een vaak **vergeten** deel van de NL-geschiedenisles." }],
           woorden: [{ woord: "romusha", uitleg: "Indonesische dwangarbeider tijdens Japanse bezetting WO2." }],
@@ -212,9 +212,9 @@ const steps = [
       },
       {
         q: "Welk effect had Japanse bezetting op **NL-koloniale prestige**?",
-        options: ["Sterk verzwakt","Versterkt","Geen","Verdwenen volledig"],
+        options: ["Sterk verzwakt","Versterkt","Bleef gelijk","Verdwenen volledig"],
         answer: 0,
-        wrongHints: [null, "Niet — Japanse overmacht was juist een schok.", "Veel effect — psychologische omslag.", "Te sterk — Nederland probeerde na 1945 zelfs nog terug te keren."],
+        wrongHints: [null, "Niet — Japanse overmacht was juist een schok.", "Juist niet — de snelle nederlaag in 1942 maakte veel indruk.", "Te sterk — Nederland probeerde na 1945 zelfs nog terug te keren."],
         uitlegPad: {
           stappen: [{ titel: "Mythe van witte overmacht", tekst: "Vóór 1942: koloniale ideologie dat 'witte mensen' van nature heersers zijn. **Japans snelle overwinning** doorbrak die mythe — Aziaten konden Europeanen verslaan. Dit gaf nationalistische bewegingen overal in Azië (Indonesië, Vietnam, Maleisië, Birma) extra kracht na 1945." }],
           theorie: "Toets-link: deze 'doorbroken mythe' verklaart waarom dekolonisatie in heel Azië versnelde na 1945.",
@@ -257,7 +257,7 @@ const steps = [
         q: "Wanneer erkende Nederland **officieel de soevereiniteit** van Indonesië?",
         options: ["27 december 1949","17 augustus 1945","15 augustus 2005","20 mei 1908"],
         answer: 0,
-        wrongHints: [null, "Onafhankelijkheidsverklaring zelf — NL erkende nog niet.", "In 2005 aanvaardde Nederland 17 augustus 1945 alleen politiek en moreel — wanneer was de officiële overdracht?", "Niet relevant."],
+        wrongHints: [null, "Onafhankelijkheidsverklaring zelf — NL erkende nog niet.", "In 2005 aanvaardde Nederland 17 augustus 1945 alleen politiek en moreel — wanneer was de officiële overdracht?", "In 1908 begon pas de nationalistische beweging — de onafhankelijkheid kwam veel later."],
         uitlegPad: {
           stappen: [{ titel: "Soevereiniteitsoverdracht Amsterdam", tekst: "**27 december 1949**: in **Paleis op de Dam, Amsterdam**, tekent **koningin Juliana** de overdracht. Sindsdien is Indonesië in NL-ogen officieel onafhankelijk. Indonesië zelf: officiële datum blijft 17-8-1945. **2005**: minister Ben Bot erkent symbolisch 17 augustus 1945 als juiste datum." }],
           theorie: "Spanning: NL viert 27-12-1949, Indonesië 17-8-1945. Verschil ~4 jaar van oorlog daartussen.",
@@ -266,9 +266,9 @@ const steps = [
       },
       {
         q: "Welk land legde **internationale druk** op NL om te stoppen?",
-        options: ["Verenigde Staten","Engeland","Frankrijk","België"],
+        options: ["Verenigde Staten","Groot-Brittannië","Frankrijk","België"],
         answer: 0,
-        wrongHints: [null, "Groot-Brittannië steunde deels, maar zette niet de meeste druk.", "Niet — Frankrijk voerde zelf een koloniale oorlog in Indochina.", "Niet relevant."],
+        wrongHints: [null, "Groot-Brittannië steunde deels, maar zette niet de meeste druk.", "Niet — Frankrijk voerde zelf een koloniale oorlog in Indochina.", "Had België na 1945 genoeg macht om Nederland onder druk te zetten?"],
         uitlegPad: {
           stappen: [{ titel: "VS + VN = breekijzer", tekst: "**Verenigde Staten** dreigde **Marshall-hulp** (Europese wederopbouw na WO2) in te trekken als NL doorging. Voor NL was Marshall-geld essentieel voor wederopbouw. Plus: VN-Veiligheidsraad keurde NL-acties af (resolutie 1947). NL moest plooien." }],
           woorden: [{ woord: "Marshall-hulp", uitleg: "Amerikaans steunprogramma voor wederopbouw Europa na WO2 (1948-1952)." }],
@@ -338,9 +338,9 @@ const steps = [
       },
       {
         q: "Welke beweging begon het **moderne Indonesische nationalisme** in 1908?",
-        options: ["Boedi Oetomo","PNI","KNIL","VOC"],
+        options: ["Boedi Oetomo","PNI","KNIL","Sarekat Islam"],
         answer: 0,
-        wrongHints: [null, "PNI werd pas later opgericht door Soekarno — welke beweging was er eerder?", "KNIL was het Nederlandse koloniale leger — eerder onderdrukker dan nationalisten.", "De VOC was al meer dan een eeuw geleden opgeheven."],
+        wrongHints: [null, "PNI werd pas later opgericht door Soekarno — welke beweging was er eerder?", "KNIL was het Nederlandse koloniale leger — eerder onderdrukker dan nationalisten.", "Sarekat Islam werd pas in 1911-1912 opgericht — welke organisatie was er al in 1908?"],
         uitlegPad: {
           stappen: [{ titel: "1908 = start nationalisme", tekst: "**Boedi Oetomo** opgericht 20 mei 1908 — eerste vreedzame nationalistische beweging. Vanuit medische studenten. Inspireerde latere bewegingen tot Soekarno's PNI in 1927." }],
           niveaus: { basis: "Boedi Oetomo.", simpeler: "1908 nationalisme = Boedi Oetomo", nogSimpeler: "Boedi Oetomo" },

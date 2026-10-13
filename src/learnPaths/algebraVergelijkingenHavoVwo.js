@@ -91,7 +91,7 @@ const steps = [
         q: "Los op: **2x + 7 = 19**.",
         options: ["x = 6", "x = 12", "x = 13", "x = 5"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet delen door 2.", "Niet — controleer aftrekken.", "Niet."],
+        wrongHints: [null, "Je hebt 7 afgetrokken: 2x = 12. Ben je dan al klaar, of staat er nog iets vóór de x?", "Vul x = 13 eens in: 2 · 13 + 7 = 33. Moet je 7 erbij optellen of eraf halen?", "Vul x = 5 eens in: 2 · 5 + 7 = 17. Is dat 19?"],
         uitlegPad: {
           stappen: [
             { titel: "Constante eerst", tekst: "2x + 7 = 19. Trek 7 af van beide kanten: 2x = 12. Deel door 2: **x = 6**. Check: 2·6 + 7 = 19 ✓." },
@@ -140,7 +140,7 @@ const steps = [
         q: "Los op: **(x + 3)/2 = 5**.",
         options: ["x = 7", "x = 10", "x = 8", "x = 5"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet −3.", "Niet — eerst vermenigvuldig 2.", "Niet."],
+        wrongHints: [null, "Je hebt met 2 vermenigvuldigd: x + 3 = 10. Wat moet er nog gebeuren met die + 3?", "Vul x = 8 in: (8 + 3)/2 = 5,5. Heb je 3 opgeteld in plaats van afgetrokken?", "Vul x = 5 in: (5 + 3)/2 = 4. Is dat 5?"],
         uitlegPad: {
           stappen: [
             { titel: "Breuk weg, dan oplossen", tekst: "Vermenigvuldig beide kanten met 2: x + 3 = 10. Trek 3 af: **x = 7**. Check: (7+3)/2 = 5 ✓." },
@@ -185,7 +185,7 @@ const steps = [
         q: "Wat is de discriminant van **x² − 2x + 5 = 0**?",
         options: ["−16", "4", "16", "−4"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer −4ac.", "Niet — controleer tekens.", "Niet."],
+        wrongHints: [null, "Je hebt alleen b² uitgerekend. Wat moet je daar nog van aftrekken?", "Kijk goed naar de volgorde: b² − 4ac. Wat is b² en wat is 4ac, en welke haal je van welke af?", "Reken 4ac opnieuw uit met a = 1 en c = 5. Wat is 4 · 1 · 5?"],
         uitlegPad: {
           stappen: [
             { titel: "D = b² − 4ac", tekst: "a=1, b=−2, c=5. D = (−2)² − 4·1·5 = 4 − 20 = **−16**. **D<0 → geen reële oplossingen** (de parabool snijdt x-as niet)." },
@@ -196,9 +196,9 @@ const steps = [
       },
       {
         q: "Los op: **x² = 49**.",
-        options: ["x = 7 of x = −7", "x = 7", "x = −7", "x = 24,5"],
+        options: ["x = 7 of x = −7", "x = 7", "x = −7", "x = 24,5 of x = −24,5"],
         answer: 0,
-        wrongHints: [null, "Niet — ook negatieve oplossing.", "Niet — ook positieve.", "Niet — half is fout."],
+        wrongHints: [null, "Hoeveel getallen geven in het kwadraat 49? Denk ook aan negatieve getallen.", "Hoeveel getallen geven in het kwadraat 49? Denk ook aan positieve getallen.", "Worteltrekken is iets anders dan delen door 2. Wat is 24,5²?"],
         uitlegPad: {
           stappen: [
             { titel: "Wortel-extractie", tekst: "x² = 49 → x = ±√49 = **±7**. Beide oplossingen want zowel 7² als (−7)² = 49." },
@@ -248,7 +248,7 @@ const steps = [
         q: "Twee kogels: 3 kogels A + 2 kogels B = €11. 1 kogel A + 4 kogels B = €12. Kogel A = ?",
         options: ["€2", "€3", "€4", "€1"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer.", "Niet.", "Niet."],
+        wrongHints: [null, "Vul A = €3 in de eerste vergelijking in. Welke prijs voor B krijg je dan, en klopt de tweede vergelijking ook?", "Bij A = €4 kosten 3 kogels A al €12. Kan dat als het totaal €11 is?", "Bij A = €1 is B = €4. Klopt 1 + 4 × 4 = 12 dan?"],
         uitlegPad: {
           stappen: [
             { titel: "Stelsel oplossen", tekst: "3a + 2b = 11\na + 4b = 12\n×6 tweede: 6a + 24b = 72. ×2 eerste: 6a + 4b = 22. Aftrekken: 20b = 50 → b = 2,5. a = 12 − 4·2,5 = **€2**.\nCheck: 3·2 + 2·2,5 = 6+5 = 11 ✓." },
@@ -341,7 +341,7 @@ const steps = [
           "Max 100"
         ],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Niet — controleer.", "Niet."],
+        wrongHints: [null, "€30 is wat er overblijft na het vaste bedrag. Hoeveel gesprekken van €0,15 passen daarin?", "Heb je €50 + €20 gedaan? Het vaste bedrag gaat juist van je budget af.", "100 gesprekken kosten 100 × €0,15 = €15. Hoeveel geld houd je dan nog over?"],
         uitlegPad: {
           stappen: [
             { titel: "Ongelijkheid opstellen", tekst: "20 + 0,15g ≤ 50.\n0,15g ≤ 30.\ng ≤ 30 / 0,15 = **200**. Max 200 gesprekken." },
@@ -358,7 +358,7 @@ const steps = [
           "Geen oplossing"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — daar is x²<4.", "Niet — niet wortel direct.", "Wel."],
+        wrongHints: [null, "Niet — daar is x²<4.", "Je moet de wortel uit 4 nemen, niet 4 zelf. Probeer ook x = 3 en x = −3: is x² − 4 dan positief?", "Probeer x = 3: is 3² − 4 groter dan 0?"],
         uitlegPad: {
           stappen: [
             { titel: "Parabool-analyse", tekst: "x² − 4 = 0 → x = ±2. Parabool y = x² − 4 opent omhoog. BOVEN x-as wanneer x kleiner dan −2 OF groter dan 2. Onder x-as tussen −2 en 2. Dus x²−4 > 0 → **x < −2 of x > 2**." },

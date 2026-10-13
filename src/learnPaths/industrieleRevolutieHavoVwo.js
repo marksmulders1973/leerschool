@@ -22,9 +22,9 @@ const steps = [
     checks: [
       {
         q: "Wat was het **drieslagstelsel**?",
-        options: ["Akkerbouw met 3 delen, 1 deel braak", "Belasting van 3 standen", "Verdeling in 3 machten", "Veeteelt met 3 soorten dieren"],
+        options: ["Akkerbouw met 3 delen, 1 deel braak", "Belasting verdeeld over 3 standen", "Verdeling van de macht in 3 delen", "Veeteelt met 3 soorten dieren"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is politiek/belasting.", "Niet — dat is bestuur.", "Het ging niet om vee, maar om het gebruik van grond."],
+        wrongHints: [null, "Drie standen horen bij het ancien régime — 'slag' gaat over iets anders.", "Drie machten is de trias politica van Montesquieu — iets anders.", "Het ging niet om vee, maar om het gebruik van grond."],
         uitlegPad: {
           stappen: [{ titel: "Wintergraan/zomergraan/braak", tekst: "Driehoeks-vruchtwisseling: 1) wintergraan (rogge/tarwe). 2) zomergraan (haver/gerst). 3) braak (rust voor bodem). 1/3 grond produceerde dus NIETS. Vruchtwisseling met klaver verving braak → klaver bindt N → bodem rijker zonder rust." }],
           niveaus: { basis: "Driedeling akkers.", simpeler: "Een derde liet je rusten.", nogSimpeler: "Drieslag" },
@@ -34,12 +34,12 @@ const steps = [
         q: "Wat waren **Inclosure Acts** in Engeland?",
         options: [
           "Wetten die gemeenschappelijke gronden privatiseerden",
-          "Wetten tegen kinderarbeid",
-          "Belasting op import",
-          "Wetten voor onderwijs"
+          "Wetten die kinderarbeid in fabrieken beperkten",
+          "Wetten die de invoer van graan belastten",
+          "Wetten die de armenzorg per parochie regelden"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — pas later.", "Niet — economisch beleid.", "Niet — kwam later."],
+        wrongHints: [null, "Zulke fabriekswetten kwamen pas in de 19e eeuw.", "Dat waren de Corn Laws (graanwetten) uit 1815 — iets anders.", "Dat waren de armenwetten (Poor Laws) — kijk naar het woord 'inclosure'."],
         uitlegPad: {
           stappen: [
             { titel: "Privé-grond + arbeidsoverschot", tekst: "Common land werd toegewezen aan grote landeigenaren. Kleine boeren + 'commoners' verloren toegang tot weide/brandhout. Moesten gaan werken als loonarbeider of trekken naar stad → leverde fabrieks-arbeiders." },
@@ -50,9 +50,9 @@ const steps = [
       },
       {
         q: "**Mercantilisme** was:",
-        options: ["Handelsoverschot opbouwen voor goud", "Vrije markt-theorie", "Communisme", "Religieus economisch systeem"],
+        options: ["Handelsoverschot opbouwen voor goud", "Vrije handel zonder bemoeienis van staat", "Staat bezit alle bedrijven en grond", "Veel importeren tegen lage prijzen"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — kwam later.", "Niet — kwam pas 19e eeuw.", "Niet — mercantilisme had niets met geloof te maken."],
+        wrongHints: [null, "Dat is juist het tegenovergestelde — dat idee (Adam Smith) kwam later.", "Dat lijkt op communisme, een idee uit de 19e eeuw.", "Zou een land zo meer goud en zilver in kas krijgen?"],
         uitlegPad: {
           stappen: [{ titel: "Goud = welvaart", tekst: "Pre-1776 dominant: zoveel mogelijk export, zo weinig mogelijk import = handelsbalans positief → goud-instroom. Staat reguleert handel + ondersteunt monopolies (VOC, WIC)." }],
           theorie: "Adam Smith's 'Wealth of Nations' (1776) bekritiseerde mercantilisme: vrije ruil → meer welvaart voor alle landen.",
@@ -61,9 +61,9 @@ const steps = [
       },
       {
         q: "Waarom begon de industriële revolutie in **Engeland** en niet bv. in Frankrijk?",
-        options: ["Samenloop van kolen, kolonies en stabiele politiek", "Engelsen werkten harder dan anderen", "Engeland had meer inwoners", "Frans onderwijs was slechter"],
+        options: ["Samenloop van kolen, kolonies en stabiele politiek", "Engelse uitvinders waren slimmer dan anderen", "Engeland had veel meer inwoners dan Frankrijk", "Engeland had het beste onderwijs van Europa"],
         answer: 0,
-        wrongHints: [null, "Niet — stereotype, niet feit.", "Frankrijk had juist veel meer inwoners dan Engeland.", "Niet relevant."],
+        wrongHints: [null, "Ook in Frankrijk werd veel uitgevonden — waarom kwam het in Engeland wél van de grond?", "Frankrijk had juist veel meer inwoners dan Engeland.", "Gewone Engelsen kregen niet meer onderwijs dan mensen elders."],
         uitlegPad: {
           stappen: [
             { titel: "Meerdere factoren", tekst: "Steenkool-rijkdom + grote afzetmarkt (Brits Rijk) + politieke stabiliteit sinds 1688 (Glorious Revolution) + sterke maritieme handel + Inclosure-arbeidsoverschot + Verlichtings-cultuur. Frankrijk had revolutie 1789 + napoleontische oorlogen → industrialisatie pas vanaf 1830." },
@@ -105,9 +105,9 @@ const steps = [
       },
       {
         q: "Engelse stad Manchester groeide tussen 1750-1850:",
-        options: ["Werd zo'n 18× zo groot", "Bleef gelijk", "Halveerde", "Verdubbelde"],
+        options: ["Werd zo'n 18× zo groot", "Werd zo'n 2× zo groot", "Werd zo'n 5× zo groot", "Werd zo'n 100× zo groot"],
         answer: 0,
-        wrongHints: [null, "Niet — explosief gegroeid.", "Onjuist.", "Te weinig."],
+        wrongHints: [null, "Zo groeide een gewone stad — Manchester groeide explosief.", "Nog te weinig: zoek de inwonertallen van 1750 en 1850 op.", "Te veel: Manchester had in 1850 nog geen 2 miljoen inwoners."],
         uitlegPad: {
           stappen: [{ titel: "Cottonopolis", tekst: "Manchester werd centrum van textiel-industrie ('Cottonopolis'). Migratie uit platteland (Inclosure-slachtoffers) + Ierse immigranten (na hongersnood 1845). Sterke verstedelijking, slechte huisvesting + sanitair." }],
           niveaus: { basis: "~17k → 300k.", simpeler: "Bijna 20× zo groot in 100 jaar.", nogSimpeler: "18×" },
@@ -115,9 +115,9 @@ const steps = [
       },
       {
         q: "Wat is het **fabriekssysteem**?",
-        options: ["Productie met machines in één gebouw", "Werkdag van 8 uur", "Ambachtswerk thuis", "Slavernij in fabrieken"],
+        options: ["Productie met machines in één groot gebouw", "Productie in gilden door ambachtsmeesters", "Thuis werken in opdracht van een koopman", "Slavenarbeid op plantages in de koloniën"],
         answer: 0,
-        wrongHints: [null, "Niet — kwam pas in de 20e eeuw.", "Tegenovergesteld.", "Niet — vrije loonarbeid, niet slavernij."],
+        wrongHints: [null, "Gilden horen bij de middeleeuwen: ambachtslieden werkten met de hand.", "Dat is huisnijverheid, het systeem van vóór de fabriek.", "In fabrieken werkten vrije arbeiders voor loon, geen slaven."],
         uitlegPad: {
           stappen: [{ titel: "Discipline + machines", tekst: "Vorm: arbeiders verzamelen in groot gebouw, werken aan machines onder opzichter. Vereist klok-discipline, gestandaardiseerde taken, hiërarchie. Vervangt 'putting-out'-systeem waarin koopman ruwe grondstof aan thuiswerkers gaf." }],
           niveaus: { basis: "Geconcentreerde productie.", simpeler: "Iedereen samen in één gebouw werken.", nogSimpeler: "Fabriek" },
@@ -155,9 +155,9 @@ const steps = [
     checks: [
       {
         q: "Wat regelde **'Kinderwetje van Van Houten' (1874)**?",
-        options: ["Verbod op kinderarbeid", "Leerplicht", "Kinderbijslag", "Adoptie-regels"],
+        options: ["Verbod op kinderarbeid in fabrieken", "Invoering van de leerplicht", "Invoering van de kinderbijslag", "Wettelijke regels voor adoptie"],
         answer: 0,
-        wrongHints: [null, "Niet — leerplicht kwam 1900.", "Veel later (1939).", "Niet — adoptie werd pas in 1956 wettelijk geregeld."],
+        wrongHints: [null, "De leerplicht kwam pas later, in 1900.", "Kinderbijslag kwam veel later (1939).", "Adoptie werd pas in 1956 wettelijk geregeld."],
         uitlegPad: {
           stappen: [
             { titel: "Beperkt maar mijlpaal", tekst: "Eerste NL sociale wet. Verbood kinderarbeid in fabrieken — maar NIET in landbouw + huishouden. Handhaving zwak (geen inspectie). Toch begin van 'sociale wetgeving' in NL. Samuel van Houten was liberaal Tweede Kamerlid." },
@@ -198,9 +198,9 @@ const steps = [
       },
       {
         q: "**Vakbond** is een organisatie die:",
-        options: ["Arbeiders verenigt voor betere lonen", "Werkgevers verenigt", "Gelovigen verenigt", "Politieke partijen verenigt"],
+        options: ["Arbeiders verenigt voor betere lonen", "Werkgevers verenigt voor lagere kosten", "Fabrieken controleert namens de staat", "Arbeiders een stem geeft in de Kamer"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is werkgeversorganisatie.", "Niet — niet religieus.", "Niet — vakbond ≠ partij (al gelieerd)."],
+        wrongHints: [null, "Dat doet een werkgeversorganisatie.", "Dat doet de Arbeidsinspectie, een dienst van de overheid.", "Dat doet een politieke partij — al werkten vakbonden er vaak mee samen."],
         uitlegPad: {
           stappen: [{ titel: "Collectief gewicht > individu", tekst: "Eén arbeider kan tegen kapitalist geen onderhandelingspositie hebben. 100 arbeiders die SAMEN dreigen te staken = krachtigere stem. Sociaal recht in NL grotendeels via vakbond-druk + akkoord met werkgevers + overheid (poldermodel)." }],
           niveaus: { basis: "Collectieve actie arbeiders.", simpeler: "Arbeiders samen sterker.", nogSimpeler: "Vakbond" },
@@ -238,9 +238,9 @@ const steps = [
       },
       {
         q: "**Meiji-restauratie** (1868) in Japan:",
-        options: ["Snelle modernisering van Japan", "Boeren-revolutie in Japan", "Religieuze hervorming", "Oorlog tegen China"],
+        options: ["Snelle modernisering van Japan", "Machtsgreep van de shogun in Japan", "Japan sloot zich af voor buitenlanders", "Oorlog van Japan tegen China"],
         answer: 0,
-        wrongHints: [null, "Niet — keizer-restauratie.", "Niet — niet religieus.", "Niet — kwam later (1894)."],
+        wrongHints: [null, "Juist andersom: de shogun verloor de macht aan de keizer.", "Die afsluiting was juist de periode ervóór — in 1868 ging Japan open.", "Die oorlog kwam later (1894)."],
         uitlegPad: {
           stappen: [
             { titel: "Westerse technologie + Japans bestuur", tekst: "Na 250 jaar isolement (Tokugawa) opende Japan onder druk van Amerikaanse oorlogsschepen (Perry 1853). Meiji-keizer hervormde: stuur studenten naar Europa/VS, importeer machines, bouw fabrieken + leger naar westers model. In 50 jaar van feodaal tot wereldmacht (versloeg Rusland 1905)." },
@@ -253,12 +253,12 @@ const steps = [
         q: "**Berlijn-Conferentie** (1884-85):",
         options: [
           "Europese landen verdelen Afrika onderling",
-          "Vredesakkoord WO1",
-          "Internationale wetenschapsconferentie",
-          "Olympische Spelen-overleg"
+          "Vredesakkoord na de Eerste Wereldoorlog",
+          "Vrede tussen Duitsland en Frankrijk na 1871",
+          "Europese landen verdelen het Midden-Oosten"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — die was 1919.", "Niet — het ging om macht en grondgebied.", "Niet — de moderne Olympische Spelen begonnen pas in 1896."],
+        wrongHints: [null, "Die vrede werd pas in 1919 gesloten.", "Die vrede (Frankfurt, 1871) werd eerder en elders gesloten.", "Het Midden-Oosten werd pas tijdens en na WO1 verdeeld."],
         uitlegPad: {
           stappen: [{ titel: "'Scramble for Africa'", tekst: "Bismarck bracht 14 landen (vooral Europese) samen om koloniaal Afrika-verdeling te formaliseren. Lijnen op kaart getrokken zonder rekening met inheemse etnische groepen. Veel huidige conflicten hebben hier wortels (Rwanda, Soedan, etc.)." }],
           theorie: "1914: 90% Afrika in Europese handen (uitzondering: Liberia + Ethiopië).",
@@ -288,9 +288,9 @@ const steps = [
     checks: [
       {
         q: "Marx voorspelde dat de arbeiders-revolutie zou plaatsvinden in:",
-        options: ["Geïndustrialiseerde landen zoals Engeland", "Agrarisch Rusland", "China", "Latijns-Amerika"],
+        options: ["Geïndustrialiseerde landen zoals Engeland", "Agrarische landen zoals Rusland", "Koloniën in Azië, zoals Brits-Indië", "Latijns-Amerikaanse landen zoals Mexico"],
         answer: 0,
-        wrongHints: [null, "Niet — Marx zag Rusland niet als rijp (te agrarisch).", "Wel 1949, na Marx.", "Niet — daar waren in Marx' tijd nauwelijks fabrieken."],
+        wrongHints: [null, "Niet — Marx zag Rusland niet als rijp (te agrarisch).", "Marx verwachtte de revolutie niet in koloniën — waar woonden de fabrieksarbeiders?", "Niet — daar waren in Marx' tijd nauwelijks fabrieken."],
         uitlegPad: {
           stappen: [
             { titel: "Marx had het mis", tekst: "Marx zag socialisme als logisch eindstadium van kapitalisme → revolutie zou eerst in industrieel-meest-ontwikkelde landen komen (UK, Duitsland). In praktijk: 1917 Rusland (vooral agrarisch), 1949 China (idem). UK + DE losten kwesties op via vakbond + welvaartsstaat. Voorspelling: fout. Analyse-werktuig: nog steeds gebruikt in sociologie." },
@@ -300,9 +300,9 @@ const steps = [
       },
       {
         q: "Wat is **meerwaarde** volgens Marx?",
-        options: ["Waarde van het werk min het loon", "Belasting op loon", "Betaling voor overuren", "Rente op kapitaal"],
+        options: ["Waarde van het werk min het loon", "Prijsstijging door schaarste", "Extra betaling voor overuren", "Rente op geleend kapitaal"],
         answer: 0,
-        wrongHints: [null, "Niet — staats-element.", "Niet — bonus op uren.", "Verwant maar niet identiek."],
+        wrongHints: [null, "Dat is vraag en aanbod op de markt — Marx keek naar de productie zelf.", "Overuren werden lang niet altijd betaald; meerwaarde is iets anders.", "Rente gaat over geleend geld, niet over wat een arbeider maakt."],
         uitlegPad: {
           stappen: [
             { titel: "Bron van winst (Marx)", tekst: "Arbeider werkt 8 uur → produceert waarde van 16 € (zeg). Krijgt 8 € loon. Verschil 8 € = meerwaarde → winst van kapitalist. Marx zag dit als systematische uitbuiting; verdedigers van kapitalisme: arbeider verkoopt vrijwillig arbeid + winst beloont risico van investering." },
@@ -338,10 +338,10 @@ const steps = [
       {
         q: "**4e industriële revolutie** (sinds ~2010) wordt gekenmerkt door:",
         options: [
-          "AI + robotica + biotechnologie + automatisering kenniswerk",
-          "Stoom-machine + textiel",
+          "AI + robotica + biotechnologie",
+          "Stoommachine + textielindustrie",
           "Elektriciteit + verbrandingsmotor",
-          "Internet + PC"
+          "Computers + internet + elektronica"
         ],
         answer: 0,
         wrongHints: [null, "Niet — dat is 1e.", "Niet — dat is 2e.", "Niet — dat is 3e."],

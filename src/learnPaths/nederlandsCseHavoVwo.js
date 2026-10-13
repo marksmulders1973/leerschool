@@ -31,9 +31,9 @@ const steps = [
     checks: [
       {
         q: "Wat test CSE Nederlands?",
-        options: ["Leesvaardigheid","Alleen spreken","Alleen schrijven","Alleen luisteren"],
+        options: ["Leesvaardigheid", "Spreken en presenteren", "Een betoog schrijven", "Luistervaardigheid"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is SE.", "Niet — SE.", "Niet — SE."],
+        wrongHints: [null, "Spreken en presenteren toets je in het schoolexamen (SE), niet in het centraal examen.", "Schrijven wordt bij Nederlands in het schoolexamen (SE) getoetst. Wat doe je op het centraal examen met teksten?", "Luisteren hoort bij het schoolexamen (SE). Wat doe je op het centraal examen met teksten?"],
         uitlegPad: {
           stappen: [{ titel: "Lezen + samenvatten", tekst: "**CSE Nederlands** = leesvaardigheid, inclusief **samenvattingsvragen** (HAVO + VWO). Schrijfvaardigheid (essay/betoog), spreken, luisteren, literatuur = SE." }],
           niveaus: { basis: "Lezen + samenvatten.", simpeler: "CSE NL = lezen+samenv", nogSimpeler: "Lezen" },
@@ -61,9 +61,9 @@ const steps = [
       },
       {
         q: "Welk hulpmiddel mag je gebruiken bij het **CSE Nederlands**?",
-        options: ["Een papieren woordenboek Nederlands","Je telefoon","Je eigen aantekeningen","Een vertaalapp"],
+        options: ["Een papieren woordenboek Nederlands", "Een samenvatting van de lesstof", "Een lijst met signaalwoorden", "Een woordenboek-app op je tablet"],
         answer: 0,
-        wrongHints: [null, "Digitale apparaten zijn niet toegestaan.", "Eigen aantekeningen mogen niet mee de examenzaal in.", "Digitale hulpmiddelen zijn niet toegestaan."],
+        wrongHints: [null, "Eigen samenvattingen mogen niet mee de examenzaal in.", "Eigen lijsten en aantekeningen mogen niet mee de examenzaal in.", "Digitale apparaten zijn niet toegestaan, ook niet voor een woordenboek."],
         uitlegPad: {
           stappen: [{ titel: "Papieren hulpmiddelen", tekst: "**CSE Nederlands**: een papieren woordenboek Nederlands is toegestaan (leerlingen met een andere moedertaal mogen ook een woordenboek Nederlands–eigen taal gebruiken). **Niet**: digitaal, vertaalapp, telefoon, eigen aantekeningen." }],
           niveaus: { basis: "Papieren woordenboek.", simpeler: "Woordenboek NL = mag", nogSimpeler: "Woordenboek" },
@@ -111,9 +111,9 @@ const steps = [
       },
       {
         q: "Een tekst schetst eerst een misstand, bespreekt daarna mogelijke maatregelen en beveelt er één aan. Welk **tekststructuur-patroon**?",
-        options: ["Probleem-oplossing-structuur","Chronologisch","Vergelijkend","Voor-en-tegen"],
+        options: ["Probleem-oplossing-structuur", "Chronologische structuur", "Vergelijkende structuur", "Voor-en-tegen-structuur"],
         answer: 0,
-        wrongHints: [null, "Niet hier.", "Niet primair.", "Anders gericht."],
+        wrongHints: [null, "Chronologisch = volgorde in de tijd. Gaat deze tekst stap voor stap door de tijd?", "Vergelijkend = twee dingen naast elkaar zetten. Is dat de kern hier?", "Voor-en-tegen weegt argumenten over één standpunt af. Waar begint deze tekst mee, en waar eindigt hij?"],
         uitlegPad: {
           stappen: [{ titel: "P-O-patroon", tekst: "**Probleem-oplossing-structuur**: inleiding (probleem schetsen) → middendeel (mogelijke oplossingen analyseren) → slot (beste oplossing aanbevelen of vooruitblik). Veel gebruikt in beleids-artikelen, opinies. **Toetsvraag-patroon**: 'Welk structuur-type heeft deze tekst?'" }],
           niveaus: { basis: "Probleem-oplossing.", simpeler: "PO-structuur", nogSimpeler: "Probleem → oplossing" },
@@ -121,9 +121,9 @@ const steps = [
       },
       {
         q: "Verwijswoord *dit* verwijst meestal:",
-        options: ["Terug naar iets eerder genoemd","Vooruit","Naar titel","Naar voetnoot"],
+        options: ["Terug naar iets eerder genoemd", "Vooruit naar iets wat nog komt", "Naar de titel van de tekst", "Naar de lezer van de tekst"],
         answer: 0,
-        wrongHints: [null, "Zelden cataforisch.", "Niet primair.", "Niet primair."],
+        wrongHints: [null, "Dat kan, maar het komt weinig voor. Waar staat het woord meestal naar te wijzen?", "De titel staat boven de tekst. Verwijst 'dit' midden in een zin daar meestal naar?", "'Dit' verwijst naar iets in de tekst, niet naar een persoon die leest."],
         uitlegPad: {
           stappen: [{ titel: "Anafoor", tekst: "**Dit / dat / deze / die / hij / zij / het** = anaforische verwijzing: terug naar iets eerder genoemd in tekst. toetsvraag: 'Waar verwijst *dit* in regel 23 naar?' → kijk eerdere zin/concept. Zelden cataforisch (vooruit): *Dit kun je niet ontkennen: feit X.*" }],
           niveaus: { basis: "Terug.", simpeler: "Dit = anafoor", nogSimpeler: "Terug" },
@@ -131,9 +131,9 @@ const steps = [
       },
       {
         q: "Welke signaalwoord-groep markeert **opsomming**?",
-        options: ["Ten eerste, ten tweede, bovendien","Maar, echter","Daarom, dus","Omdat, doordat"],
+        options: ["Ten eerste, ten tweede, bovendien", "Maar, echter, daarentegen", "Daarom, dus, kortom", "Omdat, doordat, want"],
         answer: 0,
-        wrongHints: [null, "Tegenstelling.", "Conclusie.", "Oorzaak."],
+        wrongHints: [null, "Dat zijn signaalwoorden voor een tegenstelling.", "Dat zijn signaalwoorden voor een gevolg of conclusie.", "Dat zijn signaalwoorden voor een oorzaak of reden."],
         uitlegPad: {
           stappen: [{ titel: "Opsomming-markers", tekst: "**Opsomming**: ten eerste/ten tweede/ten derde, vervolgens, daarnaast, bovendien, ook, eveneens. Markeert: auteur somt argumenten/voorbeelden/feiten op. Stel mentaal lijst op om structuur te volgen." }],
           niveaus: { basis: "Ten eerste etc.", simpeler: "Opsomming-markers", nogSimpeler: "Ten eerste" },
@@ -150,9 +150,9 @@ const steps = [
     checks: [
       {
         q: "**Ad hominem** is:",
-        options: ["Persoonlijke aanval ipv argument","Vergelijking","Voorbeeld","Statistiek"],
+        options: ["Aanval op de persoon, niet het argument", "Vergelijking met een andere situatie", "Voorbeeld uit eigen ervaring", "Beroep op cijfers en statistiek"],
         answer: 0,
-        wrongHints: [null, "Een vergelijking is een gewoon redeneermiddel — 'ad hominem' = Latijn voor 'op de mens'. Wat gebeurt er dan?", "Een voorbeeld onderbouwt juist — bij ad hominem speel je niet op de bál maar op de…?", "Cijfers zijn een onderbouwing — ad hominem richt zich niet op het argument maar op wíé het zegt."],
+        wrongHints: [null, "Een vergelijking is een gewoon redeneermiddel — 'ad hominem' = Latijn voor 'op de mens'. Wat gebeurt er dan?", "Een voorbeeld onderbouwt juist — bij ad hominem speel je niet op de bál maar op de…?", "Cijfers zijn een onderbouwing van een argument. Waar richt 'ad hominem' (= 'op de mens') zich op?"],
         uitlegPad: {
           stappen: [{ titel: "Aanval op persoon", tekst: "**Ad hominem** (Latijn 'aan de persoon'): aanval op tegenstander zelf ipv op zijn argument. **Drogreden**. Voorbeeld: 'Hij is een rechtse zelot, dus argument is fout.' De eigenschappen van de persoon zeggen niets over kracht van argument." }],
           niveaus: { basis: "Persoonlijke aanval.", simpeler: "Ad hominem = persoon", nogSimpeler: "Persoon" },
@@ -160,9 +160,9 @@ const steps = [
       },
       {
         q: "Welke is een **hellend-vlak-drogreden**?",
-        options: ["Als X, dan onvermijdelijk Y en daarna ramp Z","Iedereen doet het","Stel persoon ter discussie","Vergelijking"],
+        options: ["Als X, dan onvermijdelijk Y en daarna ramp Z", "Iedereen doet X, dus X is goed", "Jij bent dom, dus jouw idee over X klopt niet", "X lijkt op Y, dus wat voor Y geldt, geldt voor X"],
         answer: 0,
-        wrongHints: [null, "Ad populum.", "Ad hominem.", "Een vergelijking is geen kettingredenering."],
+        wrongHints: [null, "Dat is een beroep op de meerderheid (ad populum).", "Dat is een persoonlijke aanval (ad hominem).", "Een vergelijking is geen kettingredenering."],
         uitlegPad: {
           stappen: [{ titel: "Slippery slope", tekst: "**Hellend vlak**: 'A leidt tot B, B tot C, C tot ramp Z'. Vaak onbewezen kettingsequentie. Voorbeeld: 'Marihuana legaliseren → iedereen heroïne → samenleving instort'. Slecht onderbouwd. Drogreden." }],
           niveaus: { basis: "Slippery slope.", simpeler: "Hellend vlak", nogSimpeler: "Kettingramp" },
@@ -170,9 +170,9 @@ const steps = [
       },
       {
         q: "**Stroman** is:",
-        options: ["Vertekenen van tegenstanders standpunt","Echte persoon","Type argument","Conclusie"],
+        options: ["Het standpunt van de ander verdraaien", "De persoon van de ander aanvallen", "Doen alsof er maar twee keuzes zijn", "Iets beweren omdat iedereen het vindt"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet — drogreden.", "Niet relevant."],
+        wrongHints: [null, "Dat is ad hominem: een aanval op de persoon.", "Dat is een vals dilemma.", "Dat is een beroep op de meerderheid."],
         uitlegPad: {
           stappen: [{ titel: "Strawman fallacy", tekst: "**Stroman**: het standpunt van de tegenstander **vertekenen** tot iets makkelijker te weerleggen. Voorbeeld: 'Tegenstander wil dat we **iedereen** dwingen vegan te zijn' (terwijl die alleen vlees-belasting wil). Bestrijden van die overdreven versie = 'gemakkelijker schieten op stroman ipv echte persoon'." }],
           niveaus: { basis: "Vertekenen.", simpeler: "Stroman = vertekenen", nogSimpeler: "Vertekenen" },
@@ -190,9 +190,9 @@ const steps = [
       },
       {
         q: "**Cirkelredenering**:",
-        options: ["Conclusie als argument gebruiken","Vergelijking","Generalisatie","Vals dilemma"],
+        options: ["Conclusie als argument gebruiken", "Twee ongelijke situaties vergelijken", "Van één geval naar iedereen redeneren", "Doen alsof er maar twee opties zijn"],
         answer: 0,
-        wrongHints: [null, "Een vergelijking hoeft geen drogreden te zijn — bij een církel eindig je waar je begon. Hoe klinkt dat in een redenering?", "Generaliseren = van één geval naar 'iedereen' — hier draait de redenering juist in een rondje.", "Een vals dilemma doet alsof er maar 2 opties zijn — een cirkelredenering bewijst zichzelf mét zichzelf."],
+        wrongHints: [null, "Een scheve vergelijking is een andere drogreden. Bij een církel eindig je waar je begon — hoe klinkt dat in een redenering?", "Generaliseren = van één geval naar 'iedereen' — hier draait de redenering juist in een rondje.", "Een vals dilemma doet alsof er maar 2 opties zijn. Waar begint en eindigt een cirkel?"],
         uitlegPad: {
           stappen: [{ titel: "Begging the question", tekst: "**Cirkelredenering**: conclusie als argument gebruiken — verwijst naar zichzelf. **Voorbeeld**: 'God bestaat omdat de Bijbel zegt dat God bestaat. De Bijbel is waar omdat God dat zegt.' Geen externe basis — een cirkel. Subtiel: vaak verkapt in lange teksten." }],
           niveaus: { basis: "Conclusie = argument.", simpeler: "Cirkel = circulair", nogSimpeler: "Rondje" },
@@ -219,9 +219,9 @@ const steps = [
       },
       {
         q: "Mag je **citaten** gebruiken in samenvatting?",
-        options: ["Nee — eigen woorden","Ja altijd","Alleen titels","Alleen voor één zin"],
+        options: ["Nee, gebruik je eigen woorden", "Ja, citaten maken het betrouwbaar", "Ja, als je de bron erbij noemt", "Ja, voor de kernzin van de tekst"],
         answer: 0,
-        wrongHints: [null, "Niet — punten kwijt.", "Niet relevant.", "Niet."],
+        wrongHints: [null, "In een samenvatting laat je zien dat je de tekst snapt. Lukt dat met letterlijke stukken?", "Bronvermelding hoort bij een werkstuk. Wat vraagt een samenvatting van jou?", "Juist bij de kern laat je zien dat je de tekst begrijpt. Lukt dat met een citaat?"],
         uitlegPad: {
           stappen: [{ titel: "Eigen verwoording", tekst: "**Samenvatting**: gebruik **eigen woorden**. Geen citaten of zinnen letterlijk overschrijven. Dit toont begrip + taalvaardigheid. Letterlijk overnemen kost punten." }],
           niveaus: { basis: "Eigen woorden.", simpeler: "Geen citaten", nogSimpeler: "Eigen woorden" },
@@ -229,7 +229,7 @@ const steps = [
       },
       {
         q: "Wat hoort **niet** in samenvatting?",
-        options: ["Eigen mening over standpunt auteur","Hoofdgedachte","Hoofdargumenten","Conclusie tekst"],
+        options: ["Je eigen mening over de tekst", "De hoofdgedachte van de tekst", "De belangrijkste argumenten", "De conclusie van de schrijver"],
         answer: 0,
         wrongHints: [null, "De hoofdgedachte is juist de kérn van elke samenvatting — wat hoort er níét in?", "De hoofdargumenten geef je juist weer — wat voeg je NIET zelf toe?", "De conclusie van de auteur hoort erbij — maar wiens oordeel laat je wég?"],
         uitlegPad: {
@@ -239,9 +239,9 @@ const steps = [
       },
       {
         q: "Welke is **prioriteit** in samenvatting?",
-        options: ["Hoofdpunten over details","Aantal woorden over inhoud","Mooie taal","Citaten"],
+        options: ["Hoofdpunten boven details", "Woordenaantal boven inhoud", "Mooie taal boven inhoud", "Citaten boven eigen woorden"],
         answer: 0,
-        wrongHints: [null, "Niet — inhoud eerst.", "Wel taal maar niet primair.", "Niet."],
+        wrongHints: [null, "Een woordenmaximum is een grens, geen doel. Waar draait een samenvatting om?", "Goede taal telt, maar wat weegt zwaarder: hoe het klinkt of wat erin staat?", "Een samenvatting laat zien dat jij de tekst snapt. Lukt dat met citaten?"],
         uitlegPad: {
           stappen: [{ titel: "Inhoud > vorm", tekst: "**Inhoud** eerst: de punten krijg je voor de juiste hoofdpunten. Eerst zorgen dat alle hoofdpunten erin staan, daarna verbeteren van zinsbouw + woordkeus. Details + voorbeelden weg, tenzij essentieel voor begrip hoofdpunt." }],
           niveaus: { basis: "Hoofdpunten.", simpeler: "Inhoud > vorm", nogSimpeler: "Hoofdpunten" },
@@ -249,9 +249,9 @@ const steps = [
       },
       {
         q: "Je hebt **45 minuten** voor een oefen-samenvatting van een hele tekst. Goede tijdsverdeling?",
-        options: ["15 min lezen+schema, 25 min schrijven, 5 min check","Alle 45 min schrijven","Direct schrijven","30 min lezen, 15 schrijven"],
+        options: ["15 min lezen + schema, 25 min schrijven, 5 min check", "5 min lezen, 30 min schrijven, 10 min check", "30 min lezen + schema, 10 min schrijven, 5 min check", "10 min lezen, 20 min schrijven, 15 min check"],
         answer: 0,
-        wrongHints: [null, "Niet — eerst denken.", "Niet — eerst lezen.", "Niet — te weinig tijd voor schrijven."],
+        wrongHints: [null, "Vijf minuten is te kort om de tekst echt te snappen en een schema te maken.", "Tien minuten is te weinig om de samenvatting goed uit te schrijven.", "Een kwartier controleren is veel; die tijd mis je bij het lezen of schrijven."],
         uitlegPad: {
           stappen: [{ titel: "Plan tijd", tekst: "**45 min**:\n• 15 min: grondig lezen + structuur + schema maken.\n• 25 min: schrijven (~250 woorden).\n• 5 min: nakijken + tellen.\n\nVooraf goed denken = beter resultaat dan direct schrijven. Schema voorkomt dat je hoofdpunt mist." }],
           niveaus: { basis: "15/25/5.", simpeler: "Tijdverdeling", nogSimpeler: "15/25/5" },
@@ -278,9 +278,9 @@ const steps = [
       },
       {
         q: "Welk signaalwoord markeert **conclusie**?",
-        options: ["Kortom / samenvattend","Bijvoorbeeld","Echter","Omdat"],
+        options: ["Kortom / samenvattend", "Bijvoorbeeld / zoals", "Echter / daarentegen", "Omdat / doordat"],
         answer: 0,
-        wrongHints: [null, "Voorbeeld.", "Tegenstelling.", "Oorzaak."],
+        wrongHints: [null, "Dat zijn signaalwoorden voor een voorbeeld.", "Dat zijn signaalwoorden voor een tegenstelling.", "Dat zijn signaalwoorden voor een oorzaak."],
         uitlegPad: {
           stappen: [{ titel: "Slotmarkers", tekst: "**Conclusie-signalen**: kortom, samenvattend, concluderend, alles bij elkaar genomen, dus, daarmee, tot slot. Auteur trekt samenvattende conclusie van eerder besproken argumenten." }],
           niveaus: { basis: "Kortom.", simpeler: "Conclusie = kortom", nogSimpeler: "Kortom" },
@@ -288,9 +288,9 @@ const steps = [
       },
       {
         q: "**Alinea-functie** 'voorbeeld geven':",
-        options: ["Illustratie van eerder argument","Hoofdgedachte","Tegenargument","Conclusie"],
+        options: ["Illustratie van een eerder argument", "De hoofdgedachte van de tekst geven", "Een tegenargument noemen en weerleggen", "De tekst samenvatten en afronden"],
         answer: 0,
-        wrongHints: [null, "Niet — thesis.", "Niet — concessio.", "Niet — slot."],
+        wrongHints: [null, "Niet — dat is de kern van de tekst, geen voorbeeld.", "Niet — dat is een weerlegging.", "Niet — dat doet het slot."],
         uitlegPad: {
           stappen: [{ titel: "Concretiseren", tekst: "**Voorbeeld-alinea** geeft **concreet geval** dat eerder gestelde argument illustreert. Signaalwoorden: bijvoorbeeld, zo, neem, denk aan, ter illustratie. Niet hetzelfde als zelfstandig argument — ondersteunt iets dat al gesteld is." }],
           niveaus: { basis: "Illustratie.", simpeler: "Voorbeeld = illustreert", nogSimpeler: "Illustratie" },
@@ -298,9 +298,9 @@ const steps = [
       },
       {
         q: "**Hoofdgedachte tekst** vind je vaak in:",
-        options: ["Eerste of laatste alinea","Voetnoot","Bron-vermelding","Titel alleen"],
+        options: ["Eerste of laatste alinea", "In de middelste alinea's", "In de tussenkopjes", "In de bronvermelding"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet relevant.", "Soms aanwijzing maar te kort."],
+        wrongHints: [null, "In het midden staat meestal de uitwerking met argumenten en voorbeelden.", "Tussenkopjes geven het onderwerp van één deel, niet de boodschap van de hele tekst.", "De bronvermelding zegt waar informatie vandaan komt, niet wat de schrijver vindt."],
         uitlegPad: {
           stappen: [{ titel: "Begin of eind", tekst: "**Hoofdgedachte** staat meestal in **inleiding** (thesis-zin, vaak alinea 1-2) of in **slot** (conclusie-alinea als bevestiging). Soms beide (introductie + bevestiging). Middendeel werkt argumenten uit. Toets-patroon: 'Wat is de hoofdgedachte?' — kijk eerst eerste + laatste alinea." }],
           niveaus: { basis: "Begin/eind.", simpeler: "Hoofdgedachte = top/eind", nogSimpeler: "Begin/eind" },
@@ -308,9 +308,9 @@ const steps = [
       },
       {
         q: "Je antwoord op een samenvattingsvraag is **langer dan het maximum** aantal woorden. Wat gebeurt er?",
-        options: ["Het deel na het maximum wordt niet beoordeeld","Je krijgt extra punten","Het hele antwoord telt dubbel","Niets, lengte maakt niet uit"],
+        options: ["Het deel na het maximum telt niet mee", "Je krijgt voor de hele vraag 0 punten", "Er gaat per extra woord een punt af", "De corrector kiest welk deel telt"],
         answer: 0,
-        wrongHints: [null, "Langer is niet beter — waarom zou er anders een grens staan?", "Waarom zou er een grens staan als langer beter is?", "Er staat niet voor niets een maximum bij."],
+        wrongHints: [null, "Zo streng is het niet: een deel van je antwoord telt nog wel mee. Welk deel?", "Er wordt niet per woord afgetrokken. Wat gebeurt er met de tekst boven de grens?", "De corrector kiest niet zelf; er is een vaste regel. Welke regel zou eerlijk en duidelijk zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Boven de grens telt niet", tekst: "Bij samenvattingsvragen staat een **maximum aantal woorden**. Het deel van je antwoord dat daarboven valt, wordt **niet beoordeeld** — ook niet als daar een hoofdpunt in staat. Dus: hoofdpunten eerst, kort formuleren, tellen." }],
           niveaus: { basis: "Telt niet mee.", simpeler: "Boven de grens = niet beoordeeld", nogSimpeler: "Telt niet" },

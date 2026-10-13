@@ -81,9 +81,9 @@ const steps = [
       },
       {
         q: "Waarom **'j'aime'** en niet **'je aime'**?",
-        options: ["Voor een klinker wordt je → j'", "Omdat aimer onregelmatig is", "Omdat 'aime' vrouwelijk is", "Alleen in gedichten"],
+        options: ["Voor een klinker wordt je → j'", "Omdat aimer onregelmatig is", "Omdat 'aime' vrouwelijk is", "Omdat het in spreektaal mag"],
         answer: 0,
-        wrongHints: [null, "aimer is een gewoon -er-werkwoord.", "Werkwoorden hebben geen geslacht.", "Het is een algemene regel."],
+        wrongHints: [null, "aimer is een gewoon -er-werkwoord.", "Werkwoorden hebben geen geslacht.", "Ook in nette schrijftaal schrijf je j'aime. Het is een algemene regel."],
       },
     ],
   },
@@ -189,9 +189,9 @@ const steps = [
       },
       {
         q: "Wanneer gebruik je **Imparfait**?",
-        options: ["Beschrijven hoe het was of een gewoonte", "Een eenmalige, afgeronde actie", "Iets wat nog moet gebeuren", "Iets wat nu gebeurt"],
+        options: ["Beschrijven hoe het was of een gewoonte", "Een eenmalige, afgeronde actie", "Iets wat later nog moet gebeuren", "Iets wat nu op dit moment gebeurt"],
         answer: 0,
-        wrongHints: [null, "Dat is Passé composé.", "Niet verleden.", "Présent."],
+        wrongHints: [null, "Dat is Passé composé.", "Dat is geen verleden tijd. Welke tijd gebruik je voor de toekomst?", "Dat is de Présent."],
       },
       {
         q: "Imparfait van **'avoir' (nous)** = ?",

@@ -111,9 +111,9 @@ const steps = [
       },
       {
         q: "Wat zijn **push-factoren** bij migratie?",
-        options: ["Redenen om thuisland te verlaten","Redenen om juist naar een land te gaan","Redenen waarom een land rijker wordt","Redenen waarom politici migratie willen"],
+        options: ["Redenen om thuisland te verlaten","Redenen om juist naar een land te gaan","Regels die migratie naar een land beperken","Gevolgen van migratie voor het nieuwe land"],
         answer: 0,
-        wrongHints: [null, "Dat zijn pull-factoren.", "Push betekent 'duwen'. Gaat dit over mensen die ergens weg geduwd worden?", "Het gaat om de beweegredenen van de migrant zelf, niet van politici."],
+        wrongHints: [null, "Dat zijn pull-factoren.", "Dat zijn belemmeringen onderweg. Push betekent 'duwen' — wat duwt iemand weg?", "Gaat het om gevolgen achteraf, of om redenen vooraf?"],
         uitlegPad: {
           stappen: [{ titel: "Push vs Pull", tekst: "**Push-factoren**: redenen om **weg** te gaan uit thuisland — oorlog, vervolging, armoede, klimaat. **Pull-factoren**: redenen om naar **nieuw** land te gaan — werk, kansen, familie, veiligheid. Migratie-beslissing meestal combinatie van beide. Vluchteling: push dominant. Expat: pull dominant." }],
           niveaus: { basis: "Weg-redenen.", simpeler: "Push = weg", nogSimpeler: "Weg-redenen" },
@@ -131,9 +131,9 @@ const steps = [
       },
       {
         q: "**Toeslagenaffaire** illustreert:",
-        options: ["Discriminatie door de overheid","Goede uitvoering belastingen","Een te streng migratiebeleid","Een te ruim sociaal vangnet"],
+        options: ["Discriminatie door de overheid","Fraude door veel ouders met toeslagen","Een te streng migratiebeleid","Een te ruim sociaal vangnet"],
         answer: 0,
-        wrongHints: [null, "Ging het bij de Toeslagenaffaire goed of fout?", "Ging deze affaire over wie Nederland in mocht?", "Was het probleem dat de regels te soepel waren?"],
+        wrongHints: [null, "Was er bij de meeste ouders echt sprake van fraude?", "Ging deze affaire over wie Nederland in mocht?", "Was het probleem dat de regels te soepel waren?"],
         uitlegPad: {
           stappen: [{ titel: "Etnisch profileren", tekst: "**Toeslagenaffaire (2005-2019)**: belastingdienst beschuldigde ~26.000 ouders van fraude met kinderopvang-toeslag. Ouders met migratie-achtergrond (vooral Surinaams + Turks-Marokkaans) **disproportioneel** geraakt door discriminatie via algoritme dat 'risico-profielen' creëerde. Hoge boetes + schuld → financiële drama's. Kabinet-Rutte III viel 2021. Symbool van rechtsstaat-falen + structurele discriminatie." }],
           niveaus: { basis: "Discriminatie.", simpeler: "Toeslagen = discr", nogSimpeler: "Discriminatie" },
@@ -150,9 +150,9 @@ const steps = [
     checks: [
       {
         q: "**Klassieke grondrechten** beschermen burger:",
-        options: ["Tegen de overheid","De overheid tegen burgers","Tegen andere burgers alleen","Tegen de Europese Unie"],
+        options: ["Tegen de overheid","Tegen werkgevers en bedrijven","Tegen andere burgers","Tegen de Europese Unie"],
         answer: 0,
-        wrongHints: [null, "Wie heeft de meeste macht, en wie moet je daarom begrenzen?", "Gaan grondrechten vooral over ruzies tussen burgers onderling?", "Grondrechten bestonden al lang vóór de EU — tegen wie waren ze toen bedoeld?"],
+        wrongHints: [null, "Bedrijven moeten zich ook aan wetten houden, maar tegen wie waren klassieke grondrechten oorspronkelijk bedoeld?", "Gaan grondrechten vooral over ruzies tussen burgers onderling?", "Grondrechten bestonden al lang vóór de EU — tegen wie waren ze toen bedoeld?"],
         uitlegPad: {
           stappen: [{ titel: "Vrijheidsrechten", tekst: "**Klassieke grondrechten**: burger TEGEN overheid (vrijheidsrechten). Overheid moet 'met rust laten' (negatief recht). Bv. meningsuiting, godsdienst, privacy, vereniging. **Sociale grondrechten**: overheid moet 'iets doen' (positief recht) — werkgelegenheid, milieu, gezondheid, onderwijs." }],
           niveaus: { basis: "Tegen overheid.", simpeler: "Klassiek = vrijheid vs staat", nogSimpeler: "Tegen overheid" },
@@ -269,9 +269,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **filterbubbel**?",
-        options: ["Online omgeving waar je alleen eigen mening tegenkomt","Een filter dat nepnieuws van je tijdlijn weert","Een app die je schermtijd automatisch beperkt","Een beveiliging die je computer tegen virussen beschermt"],
+        options: ["Online omgeving waar je alleen eigen mening tegenkomt","Een filter dat nepnieuws van je tijdlijn weert","Privacy-instelling die bepaalt wie jouw berichten ziet","Leeftijdsfilter dat volwassen inhoud voor kinderen verbergt"],
         answer: 0,
-        wrongHints: [null, "Ontstaat een filterbubbel bewust door jou of een app, of ongemerkt door algoritmes?", "Het is beeldspraak — gaat het over hoeveel tijd je online bent, of over wát je te zien krijgt?", "Geen techniek-term — het gaat over wat algoritmes je wél en níét laten zien."],
+        wrongHints: [null, "Haalt een filterbubbel bewust iets weg, of ontstaat hij ongemerkt door algoritmes?", "Gaat het om wie jóúw berichten ziet, of om wat jíj te zien krijgt?", "Dat filter stel je bewust in. Ontstaat een filterbubbel bewust?"],
         uitlegPad: {
           stappen: [{ titel: "Eli Pariser 2011", tekst: "**Filterbubbel**: algoritmes (Facebook, YouTube, etc.) tonen je vooral content die je waarschijnlijk leuk vindt → je komt alleen eigen mening tegen → polarisatie versterkt. **Echokamer**: vergelijkbaar maar specifieker over gemeenschap (vrienden) die dezelfde opvattingen versterkt. Term door Eli Pariser (*The Filter Bubble*, 2011).\n\nOplossing: actief diverse bronnen zoeken, niet alleen aanbevolen content." }],
           niveaus: { basis: "Eigen mening.", simpeler: "Filter = eigen mening", nogSimpeler: "Eigen mening" },

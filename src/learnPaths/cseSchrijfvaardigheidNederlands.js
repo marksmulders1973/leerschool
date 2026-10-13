@@ -73,21 +73,21 @@ const steps = [
       },
       {
         q: "Wat hoort in **aanleiding** *(eerste alinea)*?",
-        options: ["Waarom je schrijft", "Slot-verzoek", "Adres", "Aanhef"],
+        options: ["Waarom je schrijft", "Je adres en de datum", "De aanhef met de naam", "Wat je van de lezer vraagt"],
         answer: 0,
-        wrongHints: [null, "Komt in slot.", "Boven.", "Vóór aanleiding."],
+        wrongHints: [null, "Je verzoek aan de lezer komt pas in het slot. Wat vertel je eerst?", "Je adres en de datum staan boven de brief, nog vóór de aanhef.", "De aanhef staat vóór de eerste alinea. Wat vertel je in die alinea?"],
       },
       {
         q: "Welke aanhef is **formeel** in het Nederlands?",
-        options: ["Geachte heer / mevrouw", "Hoi", "Hallo daar", "Yo"],
+        options: ["Geachte heer / mevrouw", "Hoi meneer / mevrouw", "Hallo allemaal", "Beste vriend / vriendin"],
         answer: 0,
-        wrongHints: [null, "Informeel.", "Informeel.", "Slang."],
+        wrongHints: [null, "'Hoi' blijft informeel, ook met 'meneer' erachter. Zou je zo een bedrijf aanschrijven?", "'Hallo allemaal' klinkt als een groepsappje. Past dat in een nette brief?", "'Vriend' en 'vriendin' schrijf je aan iemand die je goed kent. Is dat bij een formele brief zo?"],
       },
       {
         q: "Welke afsluiting hoort bij een **formele brief**?",
-        options: ["Met vriendelijke groet,", "Doei", "X", "Tot snel"],
+        options: ["Met vriendelijke groet,", "Met hartelijke groetjes,", "Liefs en tot snel,", "Doei en tot ziens,"],
         answer: 0,
-        wrongHints: [null, "Informeel.", "Geen afsluiting.", "Informeel."],
+        wrongHints: [null, "'Groetjes' is een verkleinwoord dat je onder een kaartje aan familie zet. Past dat bij een bedrijf?", "'Liefs' schrijf je aan iemand die je goed kent. Is dat bij een formele brief zo?", "'Doei' is spreektaal. Zou je zo een sollicitatiebrief afsluiten?"],
       },
     ],
   },
@@ -112,9 +112,9 @@ const steps = [
       },
       {
         q: "Verschil **betogend** en **beschouwend**?",
-        options: ["Betogend kiest 1 kant; beschouwend weegt pro+contra", "Geen verschil", "Betogend is langer", "Beschouwend is feitelijk"],
+        options: ["Betogend kiest één kant; beschouwend weegt af", "Beschouwend kiest één kant; betogend weegt af", "Betogend geeft feiten; beschouwend geeft een mening", "Betogend is zakelijk; beschouwend is persoonlijk"],
         answer: 0,
-        wrongHints: [null, "Wel verschil.", "Niet primair.", "Niet primair."],
+        wrongHints: [null, "Andersom: welke tekstsoort wil de lezer overtuigen van één standpunt?", "Ook een betoog bevat een mening. Wat doet een betoog met die mening?", "Beide zijn zakelijke teksten. Waar zit het verschil dan wel?"],
       },
       {
         q: "Welk signaalwoord = **gevolg**?",
@@ -124,9 +124,9 @@ const steps = [
       },
       {
         q: "In een **betoog** wil je de lezer ___?",
-        options: ["Overtuigen van je standpunt", "Informeren neutraal", "Vermaken", "Niets"],
+        options: ["Overtuigen van je standpunt", "Informeren over de feiten", "Vermaken met een verhaal", "Een afweging laten zien"],
         answer: 0,
-        wrongHints: [null, "Dat is verslag.", "Dat is verhaal.", "Wel iets."],
+        wrongHints: [null, "Feiten uitleggen zonder mening is het doel van een uiteenzetting. Wat wil een betoog nog meer?", "Vermaken is het doel van een verhaal of column. Wat wil een betoog?", "Een afweging zonder keuze maak je in een beschouwing. Kiest een betoog wel of niet?"],
       },
       {
         q: "Welk **signaalwoord** wijst op een **tegenargument**?",
@@ -136,9 +136,9 @@ const steps = [
       },
       {
         q: "Een goede **argumentstructuur** is?",
-        options: ["Standpunt + argument + voorbeeld", "Alleen mening", "Alleen feiten", "Vragen stellen"],
+        options: ["Standpunt + argument + voorbeeld", "Feit + feit + samenvatting", "Standpunt + voorbeeld + herhaling", "Vraag + antwoord + samenvatting"],
         answer: 0,
-        wrongHints: [null, "Onvolledig.", "Onvolledig.", "Geen betoog."],
+        wrongHints: [null, "Zo ziet een uiteenzetting eruit. Waar is het standpunt?", "Een voorbeeld laat iets zien, maar waar is de reden waarom je standpunt klopt?", "Zo werkt een interview. Welke delen heeft een betoog nodig?"],
       },
     ],
   },
@@ -151,15 +151,15 @@ const steps = [
     checks: [
       {
         q: "Verschil **verslag** en **betoog**?",
-        options: ["Verslag = wat is gebeurd; betoog = standpunt verdedigen", "Geen verschil", "Verslag is langer", "Betoog is fictie"],
+        options: ["Verslag = wat gebeurd is; betoog = mening verdedigen", "Verslag = mening verdedigen; betoog = wat gebeurd is", "Verslag = verzonnen verhaal; betoog = echte mening", "Verslag = afweging maken; betoog = feiten uitleggen"],
         answer: 0,
-        wrongHints: [null, "Wel verschil.", "Niet primair.", "Niet — een betoog is geen fictie, maar een echte mening met argumenten."],
+        wrongHints: [null, "Andersom: in welke tekstsoort beschrijf je bijvoorbeeld een schoolreis?", "Een verslag gaat over iets wat echt gebeurd is, zoals een practicum. Is dat verzonnen?", "Afwegen doe je in een beschouwing, feiten uitleggen in een uiteenzetting. Wat doet een betoog?"],
       },
       {
         q: "*'Ik liep door de straat'* = welk perspectief?",
-        options: ["Ik-perspectief", "Hij/zij-perspectief", "Alwetend", "Geen"],
+        options: ["Ik-perspectief", "Hij/zij-perspectief", "Alwetend", "Personaal perspectief"],
         answer: 0,
-        wrongHints: [null, "Niet — gebruikt ik.", "Niet — alleen 1 persoon.", "Wel iets — ik-vorm."],
+        wrongHints: [null, "Staat er 'hij' of 'zij' in de zin? Kijk naar het eerste woord.", "Een alwetende verteller weet wat iedereen denkt. Over hoeveel personen gaat deze zin?", "Een personale verteller vertelt in de hij-vorm en kijkt mee met één personage. Staat er 'hij'?"],
       },
       {
         q: "Welke tijd vooral bij **verslagen**?",
@@ -169,21 +169,21 @@ const steps = [
       },
       {
         q: "Wat is **'show, don't tell'**?",
-        options: ["Beschrijf wat personage doet/voelt i.p.v. zeggen", "Niet vertellen", "Plaatjes gebruiken", "Alleen dialoog gebruiken"],
+        options: ["Laat zien wat een personage doet en voelt", "Vertel precies hoe een personage zich voelt", "Gebruik plaatjes bij je verhaal", "Gebruik vooral dialoog in je verhaal"],
         answer: 0,
-        wrongHints: [null, "Andere betekenis.", "Niet alleen plaatjes.", "Dialoog kan helpen, maar daar gaat het niet om."],
+        wrongHints: [null, "Dat is juist 'tell': je noemt het gevoel. Wat betekent 'show' dan?", "'Show' gaat hier niet over plaatjes, maar over hoe je schrijft.", "Dialoog kan helpen, maar daar gaat het niet om."],
       },
       {
         q: "Een **verhaal** heeft meestal welke 3 delen?",
-        options: ["Begin + midden + eind", "Alleen midden", "Alleen begin", "Eind eerst"],
+        options: ["Begin + midden + eind", "Titel + verhaal + moraal", "Personage + plaats + tijd", "Aanleiding + argumenten + conclusie"],
         answer: 0,
-        wrongHints: [null, "Onvolledig.", "Onvolledig.", "Achterstevoren."],
+        wrongHints: [null, "Een titel is geen deel van het verhaal, en niet elk verhaal heeft een moraal. Hoe is een verhaal in de tijd opgebouwd?", "Dat zijn onderdelen die in een verhaal voorkomen, geen delen van de opbouw.", "Dat is de opbouw van een betoog. Hoe ziet de opbouw van een verhaal eruit?"],
       },
       {
         q: "Een **goed personage** heeft ___?",
-        options: ["Karaktereigenschappen + doelen + obstakels", "Geen naam", "Alleen kleren", "Alleen leeftijd"],
+        options: ["Eigenschappen + doelen + obstakels", "Naam + leeftijd + uiterlijk", "Goede eigenschappen + een fijn leven", "Veel vrienden + veel dialoog"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Te oppervlakkig.", "Te oppervlakkig."],
+        wrongHints: [null, "Dat zegt hoe iemand eruitziet, niet wie hij is. Wat maakt een personage levensecht?", "Zonder problemen gebeurt er weinig. Wat maakt een personage spannend om te volgen?", "Dat gaat over de omgeving en de vorm. Wat heeft het personage zelf nodig?"],
       },
     ],
   },
@@ -208,9 +208,9 @@ const steps = [
       },
       {
         q: "Wat is **plagiaat** bij samenvatting?",
-        options: ["Letterlijk overnemen uit tekst", "Eigen woorden", "Synoniemen gebruiken", "Korter maken"],
+        options: ["Letterlijk overnemen uit de tekst", "Een citaat met bronvermelding", "Synoniemen gebruiken voor woorden", "De tekst in eigen woorden inkorten"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — wat moet.", "Goed — synoniemen helpen.", "Goed — samenvatten."],
+        wrongHints: [null, "Met een bronvermelding geef je juist aan van wie de woorden zijn. Is dat stelen?", "Synoniemen gebruiken mag juist. Neem je dan iets letterlijk over?", "Eigen woorden is precies wat een samenvatting vraagt."],
       },
       {
         q: "Een samenvatting moet **neutraal** zijn — wat betekent dit?",
@@ -253,9 +253,9 @@ const steps = [
       },
       {
         q: "Verschil **liggen** en **leggen**?",
-        options: ["Liggen = positie, leggen = actie", "Geen verschil", "Beide goed", "Liggen voor mensen"],
+        options: ["Liggen = positie, leggen = actie", "Liggen = actie, leggen = positie", "Liggen voor mensen, leggen voor dingen", "Liggen = verleden, leggen = nu"],
         answer: 0,
-        wrongHints: [null, "Wel verschil.", "Niet uitwisselbaar.", "Niet."],
+        wrongHints: [null, "Andersom: wat doe jij met een boek, en wat doet het boek daarna op tafel?", "Ook een boek kan liggen. Gaat het verschil over mensen en dingen?", "Beide hebben alle tijden: ik lag, ik legde. Waar zit het verschil dan?"],
       },
       {
         q: "*'Ik heb hem ___ 2020 niet meer gezien.'* — **sinds** of **vanaf**?",
@@ -292,9 +292,9 @@ const steps = [
       },
       {
         q: "**Plagiaat** in samenvatting = wat?",
-        options: ["Letterlijk overnemen", "Eigen woorden", "Korter maken", "Synoniemen"],
+        options: ["Letterlijk overnemen", "Citeren met bron", "Synoniemen gebruiken", "Eigen woorden gebruiken"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel doel.", "Goed — synoniemen."],
+        wrongHints: [null, "Met een bron geef je juist aan van wie de woorden zijn. Is dat stelen?", "Synoniemen gebruiken mag juist. Neem je dan iets letterlijk over?", "Eigen woorden is precies wat een samenvatting vraagt."],
       },
       {
         q: "**Ik fietste** of **ik fietsde**?",
@@ -304,9 +304,9 @@ const steps = [
       },
       {
         q: "Welk **perspectief** is *'Tom liep door de straat. Hij was moe.'*?",
-        options: ["Hij/zij-perspectief", "Ik-perspectief", "Alwetend", "Geen"],
+        options: ["Hij/zij-perspectief", "Ik-perspectief", "Alwetend", "Jij-perspectief"],
         answer: 0,
-        wrongHints: [null, "Niet 'ik'.", "Geen meerdere personages-inzicht.", "Wel iets."],
+        wrongHints: [null, "Staat er 'ik' in de zin? Over wie gaat het?", "Een alwetende verteller weet wat meerdere personages denken. Gebeurt dat hier?", "Er staat geen 'jij' in de zin. Over wie gaat het?"],
       },
     ],
   },

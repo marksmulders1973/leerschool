@@ -551,16 +551,16 @@ const steps = [
         q: "Wat is het verschil tussen een drogreden en een zwak argument?",
         options: [
           "Bij een drogreden deugt de redenering zelf niet.",
-          "Een drogreden is altijd een leugen.",
-          "Een zwak argument is altijd een drogreden.",
-          "Een drogreden komt alleen voor in reclames.",
+          "Een drogreden is een bewuste leugen.",
+          "Een zwak argument is hetzelfde als een drogreden.",
+          "Bij een drogreden ontbreekt een bron of cijfer.",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Een drogreden hoeft geen leugen te zijn — soms gelooft de spreker het zelf. Het gaat om de logica.",
           "Is elk argument dat weinig bewijst meteen onlogisch? Lees de uitleg: zwak vs onlogisch.",
-          "Drogredenen komen overal voor: politiek, sociale media, kranten, schoolopstellen.",
+          "Een ontbrekende bron maakt een argument zwak. Maar is de redenering dan ook onlogisch?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Drogreden ≠ zwak", tekst: "Zwak = wel argument maar minder overtuigend. Drogreden = redenering deugt niet." }],

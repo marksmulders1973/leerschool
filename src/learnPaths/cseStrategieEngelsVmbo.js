@@ -31,9 +31,9 @@ const steps = [
     checks: [
       {
         q: "Welke lees-strategie gebruik je om **1 jaartal** te vinden in een lange tekst?",
-        options: ["Scannen","Skim","Detail-lezen","Mediteren"],
+        options: ["Scannen", "Skim", "Detail-lezen", "Vertalen"],
         answer: 0,
-        wrongHints: [null, "Skim = overzicht, niet specifiek zoeken.", "Te langzaam — alleen voor relevante alinea.", "Niet relevant."],
+        wrongHints: [null, "Skim = overzicht, niet specifiek zoeken.", "Te langzaam — alleen voor relevante alinea.", "Vertalen kost veel tijd. Hoe vind je snel één jaartal in een lange tekst?"],
         uitlegPad: {
           stappen: [{ titel: "Scan = specifiek zoeken", tekst: "**Scannen** = oogspotlight zoekt **1 specifiek element**: getal, naam, jaar, datum. Je leest NIET alle woorden — alleen typografisch opvallende elementen. Voor jaartal: zoek 4-cijferige getallen (1900-2030)." }],
           woorden: [{ woord: "scannen", uitleg: "Snel doorzoeken van tekst naar specifieke informatie." }, { woord: "skim", uitleg: "Globaal lezen voor algemene indruk." }],
@@ -43,9 +43,9 @@ const steps = [
       },
       {
         q: "Hoe begin je een **leesvaardigheid-CSE-vraag**?",
-        options: ["Lees eerst de vragen, dan skim de tekst","Lees hele tekst zorgvuldig vooraf","Vermijd de tekst","Schrijf direct antwoord op"],
+        options: ["Lees eerst de vragen, dan skim de tekst", "Lees de hele tekst zorgvuldig vooraf", "Vertaal de tekst eerst woord voor woord", "Zoek eerst alle moeilijke woorden op"],
         answer: 0,
-        wrongHints: [null, "Te langzaam — kost te veel tijd.", "Niet — je hebt de tekst wel nodig.", "Niet — niet te raden."],
+        wrongHints: [null, "Dat kost veel tijd. Weet je dan al waar je op moet letten?", "Vertalen kost heel veel tijd. Heb je elk woord echt nodig?", "Opzoeken kost veel tijd, en veel woorden heb je niet nodig. Wat moet je eerst weten?"],
         uitlegPad: {
           stappen: [{ titel: "Vraag eerst = focused lezen", tekst: "Door **eerst de vragen** te lezen weet je wélke informatie te zoeken in de tekst. Skim daarna voor overzicht (1 min). Dan per vraag terug. Bespaart 30-50% tijd vs hele tekst eerst doorlezen." }],
           theorie: "Werkt vooral bij **mc-vragen** (examenstijl). Bij open vragen ook OK, maar dan minder evident.",
@@ -66,9 +66,9 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen **scannen** en **skim**?",
-        options: ["Scannen zoekt specifiek; skim geeft overzicht","Scannen langzamer dan skim","Geen verschil","Skim alleen voor poëzie"],
+        options: ["Scannen zoekt specifiek; skim geeft overzicht", "Scannen geeft overzicht; skim zoekt specifiek", "Scannen is voor Engels; skim voor Nederlands", "Scannen is langzamer; skim is grondiger"],
         answer: 0,
-        wrongHints: [null, "Niet — scannen is sneller dan skim.", "Verschil bestaat — andere doelen.", "Niet — skim werkt voor elke tekst."],
+        wrongHints: [null, "Welke van de twee gebruik je om één jaartal te vinden? Klopt dat met deze optie?", "Beide technieken werken in elke taal. Waar zit het verschil dan wel in?", "Allebei zijn snelle leestechnieken. Waar gebruik je ze voor?"],
         uitlegPad: {
           stappen: [{ titel: "Doel verschilt", tekst: "**Scan**: 1 specifiek element vinden (jaar, naam, getal). **Skim**: globaal idee wat tekst zegt. Beide zijn snel maar verschillende vragen — scan = 'wie won?' (1 antwoord); skim = 'waar gaat 't over?' (overzicht)." }],
           niveaus: { basis: "Specifiek vs overzicht.", simpeler: "Scan = 1 ding, skim = overzicht", nogSimpeler: "Specifiek vs algemeen" },
@@ -142,9 +142,9 @@ const steps = [
       },
       {
         q: "Voor een **woord-betekenis-vraag** wat kun je het beste doen?",
-        options: ["Context + voor/achter woord lezen","Direct het woordenboek pakken","Het woord overslaan","Raden willekeurig"],
+        options: ["Context: zinnen ervoor en erna lezen", "Direct het woordenboek pakken", "Het woord vertalen naar wat erop lijkt", "De zin met het woord vertalen"],
         answer: 0,
-        wrongHints: [null, "Een woordenboek mag op het CSE, maar opzoeken kost veel tijd — probeer eerst de context.", "Niet — punten misgelopen.", "Niet — kans 25% is te laag."],
+        wrongHints: [null, "Een woordenboek mag op het CSE, maar opzoeken kost veel tijd — probeer eerst de context.", "Een woord dat op een Nederlands woord lijkt, kan een false friend zijn. Hoe controleer je de betekenis?", "Eén zin geeft soms te weinig houvast. Waar staat vaak extra uitleg?"],
         uitlegPad: {
           stappen: [{ titel: "Context-strategie", tekst: "Lees zin met onbekend woord. Kijk **1-2 zinnen ervoor + erna**. Wat past logisch? Soms staat **synoniem** in andere zin, of **voorbeeld** ('such as...') dat woord verheldert." }],
           theorie: "Tip: kijk naar **woord-onderdelen** — prefix (un-/re-/dis-) + root + suffix (-tion/-able/-ly). 'Unbelievable' = un + believe + able = 'niet te geloven'.",
@@ -184,9 +184,9 @@ const steps = [
       },
       {
         q: "Wat is een **'false friend'** in talen?",
-        options: ["Woord dat lijkt op een NL-woord maar iets anders betekent","Vriend die je niet kunt vertrouwen","Woord dat in geen enkele taal bestaat","Woord dat in beide talen hetzelfde betekent"],
+        options: ["Woord dat Nederlands lijkt, maar anders betekent", "Woord dat je makkelijk verkeerd uitspreekt", "Woord dat uit het Nederlands is geleend", "Woord dat in beide talen hetzelfde betekent"],
         answer: 0,
-        wrongHints: [null, "Letterlijk wel, maar in taal-context anders.", "Niet — het gaat om echte woorden.", "Dan is het juist geen valstrik."],
+        wrongHints: [null, "Uitspraak is een ander probleem. Gaat het bij een false friend om klank of om betekenis?", "Een leenwoord betekent in beide talen meestal hetzelfde. Is dat een valstrik?", "Dan is het juist geen valstrik."],
         uitlegPad: {
           stappen: [{ titel: "False friend = valstrik", tekst: "**False friend** = Engels woord dat LIJKT op NL maar iets ANDERS betekent. Voorbeelden:\n• 'Eventually' (Engels) = 'uiteindelijk', NIET 'eventueel'\n• 'Sympathetic' (Engels) = 'meelevend', NIET 'sympathiek' (= nice)\n• 'Actually' (Engels) = 'eigenlijk', NIET 'actueel' (= current)" }],
           woorden: [{ woord: "false friend", uitleg: "Tweetalig vergelijkbaar woord met andere betekenis." }],
@@ -228,9 +228,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **'distractor'** in CSE-meerkeuze?",
-        options: ["Fout antwoord dat plausibel lijkt","Lange tekst","Tijdsdruk","Onbekend woord"],
+        options: ["Fout antwoord dat goed lijkt", "Lange inleiding boven de vraag", "Moeilijk woord in de vraag", "Vraag met twee goede antwoorden"],
         answer: 0,
-        wrongHints: [null, "Niet — distractor is specifieker.", "Niet relevant.", "Niet — woordenschat-issue."],
+        wrongHints: [null, "Een inleiding hoort bij de tekst, niet bij de antwoorden. Wat betekent 'distract'?", "Een moeilijk woord is een woordenschatprobleem. Waar in een meerkeuzevraag zit de distractor?", "Op het CSE heeft een meerkeuzevraag één goed antwoord. Wat betekent 'distract' (afleiden)?"],
         uitlegPad: {
           stappen: [{ titel: "Distractor = misleider", tekst: "**Distractor** (afleider) = fout antwoord-optie die EXPRES plausibel klinkt. Doel: testen of leerling écht goed leest. Vaak gebruikt: woorden uit tekst maar uit verkeerde context." }],
           woorden: [{ woord: "distractor", uitleg: "Misleidende antwoord-optie in een multiple-choice vraag." }],
@@ -240,9 +240,9 @@ const steps = [
       },
       {
         q: "Bij vraag *'Which is **NOT** correct?'* wat doe je?",
-        options: ["Onderstreep 'NOT' + zoek welke optie niet klopt","Negeer 'NOT'","Geef altijd eerste optie","Skip vraag"],
+        options: ["Onderstreep 'NOT' en zoek de foute optie", "Zoek de optie die wél klopt met de tekst", "Zoek de optie waarin ook 'not' staat", "Zoek de optie die het best samenvat"],
         answer: 0,
-        wrongHints: [null, "Niet — verandert betekenis volledig.", "Niet — willekeurig.", "Niet — eerst proberen."],
+        wrongHints: [null, "Lees de vraag nog eens: wat verandert het woordje NOT?", "Of er 'not' in een optie staat, zegt niets over goed of fout. Wat vraagt de vraag?", "Een samenvatting past bij 'main point'. Wat vraagt 'Which is NOT correct'?"],
         uitlegPad: {
           stappen: [{ titel: "NOT = omgekeerd zoeken", tekst: "Bij 'NOT'/'EXCEPT'-vragen MOET je het **omgekeerde** doen: zoek welke optie **NIET** in tekst staat. 3 zullen kloppen, 1 niet. **Onderstreep 'NOT'** of zet eromheen — voorkom missen." }],
           theorie: "CSE-valstrik: ~5% van vragen heeft 'NOT'. Veel leerlingen missen 't en geven juiste optie ipv onjuiste.",
@@ -262,9 +262,9 @@ const steps = [
       },
       {
         q: "Wat doe je in de **laatste 10 minuten** van het examen?",
-        options: ["Terug naar overgeslagen + onzekere vragen","Stoppen + naar buiten","Hele tekst opnieuw lezen","Naar antwoorden-blad kopiëren"],
+        options: ["Terug naar overgeslagen en twijfelvragen", "De eerste tekst helemaal opnieuw lezen", "Vragen nalezen die je zeker goed hebt", "Een samenvatting van elke tekst maken"],
         answer: 0,
-        wrongHints: [null, "Niet — tijd benutten.", "Te langzaam — al klaar.", "Doe direct tijdens vraag."],
+        wrongHints: [null, "Een hele tekst opnieuw lezen kost meer dan 10 minuten. Waar valt nog het meest te winnen?", "Wat je zeker weet, levert geen extra punten op. Welke vragen wel?", "Een samenvatting levert geen punten op. Waar kun je in 10 minuten nog punten halen?"],
         uitlegPad: {
           stappen: [{ titel: "Eind-check = goud", tekst: "10 min eind-check kan **3-5 punten** schelen. **Eerst**: vul de overgeslagen vragen in. **Daarna**: check 2-3 onzekere antwoorden — kun je nu beter? Antwoord pas wijzigen als je redelijk zeker bent — vaak is je eerste keuze de juiste." }],
           niveaus: { basis: "Eind-check.", simpeler: "Laatste 10 min = check + skip-vragen", nogSimpeler: "Check" },
@@ -272,9 +272,9 @@ const steps = [
       },
       {
         q: "Bij een **open vraag** (niet multiple choice) hoe schrijf je antwoord?",
-        options: ["Kort in het Nederlands, met tekstbewijs","Engels antwoord, woord-voor-woord","Trefwoord alleen","Lange uitleg in Engels"],
+        options: ["Kort in het Nederlands, met tekstbewijs", "Een Engels citaat uit de tekst overnemen", "Eén Nederlands trefwoord als antwoord", "Lang in het Engels, met eigen mening"],
         answer: 0,
-        wrongHints: [null, "Niet — open vragen meestal in NL.", "Te kort — geen volledig antwoord.", "Te lang + verkeerde taal."],
+        wrongHints: [null, "Bij open vragen vraagt het examen meestal een antwoord in het Nederlands. Is een los citaat dan genoeg?", "Eén woord is vaak te weinig voor de punten. Hoe onderbouw je je antwoord?", "Een eigen mening wordt niet gevraagd. In welke taal en hoe lang antwoord je?"],
         uitlegPad: {
           stappen: [{ titel: "Open antwoord = NL + bewijs", tekst: "Open vragen meestal **in Nederlands** beantwoord (tenzij anders aangegeven). **Volledige zin** met **2-3 bewijspunten** uit tekst. Voorbeeld: 'De schrijver vindt sport belangrijk omdat (1) het je gezond houdt en (2) je leert samenwerken.'" }],
           theorie: "Toets-correctie: open vragen scoren punten per bewijspunt. 1 bewijs = 1 punt, 2 bewijs = 2 punten.",
@@ -292,9 +292,9 @@ const steps = [
     checks: [
       {
         q: "Welke lees-strategie gebruik je om **overzicht van een tekst** te krijgen?",
-        options: ["Skim — eerste/laatste zin alinea","Scan — zoek 1 woord","Detail-lezen — woord-voor-woord","Negeer tekst"],
+        options: ["Skim — eerste/laatste zin alinea", "Scan — zoek één bepaald woord", "Detail-lezen — woord-voor-woord", "Vertalen — zin voor zin omzetten"],
         answer: 0,
-        wrongHints: [null, "Scan = specifiek, niet overzicht.", "Te langzaam.", "Niet."],
+        wrongHints: [null, "Scan = specifiek, niet overzicht.", "Woord voor woord lezen kost veel tijd. Krijg je zo snel een overzicht?", "Vertalen kost veel tijd en geeft vooral losse zinnen. Hoe krijg je snel overzicht?"],
         uitlegPad: {
           stappen: [{ titel: "Skim = globaal", tekst: "**Skim**: lees titel + eerste/laatste zin elke alinea + grafiek-onderschriften. Geeft 80% overzicht in 20% tijd." }],
           niveaus: { basis: "Skim.", simpeler: "Overzicht = skim", nogSimpeler: "Skim" },
@@ -304,7 +304,7 @@ const steps = [
         q: "Wat betekent **'eventually'** in het Engels?",
         options: ["Uiteindelijk","Eventueel / misschien","Snel","Vroeger"],
         answer: 0,
-        wrongHints: [null, "False friend — lijkt op NL maar betekent anders.", "Niet relevant.", "Niet — 'eventually' gaat over later, niet over vroeger."],
+        wrongHints: [null, "False friend — lijkt op NL maar betekent anders.", "Eventually zegt iets over wánneer iets gebeurt, niet hoe snel. Na korte of na lange tijd?", "Niet — 'eventually' gaat over later, niet over vroeger."],
         uitlegPad: {
           stappen: [{ titel: "False friend — let op!", tekst: "**Eventually** (Engels) = 'uiteindelijk / na verloop van tijd'. **NIET** 'eventueel' (NL). 'Eventueel' = perhaps / possibly. Toets-favoriete valstrik." }],
           theorie: "Memo: 'eventueel' (NL) ≠ 'eventually' (Engels). Twee aparte concepten.",
@@ -315,7 +315,7 @@ const steps = [
         q: "Wat is **synoniem** voor 'difficult'?",
         options: ["Hard","Easy","Big","Slow"],
         answer: 0,
-        wrongHints: [null, "Tegenstelling.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Tegenstelling.", "Big gaat over grootte. Gaat 'difficult' over grootte?", "Slow gaat over snelheid. Waar gaat 'difficult' over?"],
         uitlegPad: {
           stappen: [{ titel: "Difficult = hard = tough", tekst: "Synoniemen voor moeilijk: **difficult / hard / tough / challenging / complicated / tricky**." }],
           niveaus: { basis: "Hard.", simpeler: "Difficult = hard", nogSimpeler: "Hard" },
@@ -323,7 +323,7 @@ const steps = [
       },
       {
         q: "**'However'** signaleert:",
-        options: ["Tegenstelling / contrast","Reden","Tijd","Voorbeeld"],
+        options: ["Tegenstelling / contrast", "Reden / verklaring", "Tijd / tijdsvolgorde", "Voorbeeld / illustratie"],
         answer: 0,
         wrongHints: [null, "Reden = because.", "Tijd = when / before.", "Voorbeeld = for instance."],
         uitlegPad: {
@@ -333,9 +333,9 @@ const steps = [
       },
       {
         q: "Bij **'What does 'it' refer to in line 5?'** kijk je:",
-        options: ["In 1-2 zinnen vóór regel 5","Aan einde tekst","In titel","In voetnoten"],
+        options: ["In de zinnen vóór regel 5", "In de zinnen aan het eind", "In de titel van de tekst", "In de voetnoten onderaan"],
         answer: 0,
-        wrongHints: [null, "Te ver weg — verwijswoord is lokaal.", "Niet — niet daar.", "Niet — voetnoten zeldzaam in CSE."],
+        wrongHints: [null, "Te ver weg — verwijswoord is lokaal.", "Een verwijswoord wijst meestal naar iets dichtbij. Is de titel dichtbij regel 5?", "Niet — voetnoten zeldzaam in CSE."],
         uitlegPad: {
           stappen: [{ titel: "Verwijswoord = lokale referentie", tekst: "**'It / they / this / that'** verwijst altijd naar iets dat **kort daarvoor** is genoemd. Lees 1-2 zinnen voor regel 5 en zoek het zelfstandig naamwoord." }],
           niveaus: { basis: "Vorige zinnen.", simpeler: "It verwijst kort terug = vorige zin", nogSimpeler: "Vorige" },

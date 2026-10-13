@@ -130,13 +130,13 @@ const steps = [
     checks: [
       {
         q: "Welke vorm gebruik je na **have / has / had**?",
-        options: ["V3 (past participle)", "V1 (infinitive)", "V2 (past simple)", "Maakt niet uit"],
+        options: ["V3 (past participle)", "V1 (infinitive)", "V2 (past simple)", "-ing-vorm (gerund)"],
         answer: 0,
         wrongHints: [
           null,
           "V1 komt na to/will/can. Niet na have.",
           "V2 staat los, zonder hulpwerkwoord. Welke vorm hoort *bij* have?",
-          "Het maakt zeker wel uit — anders zijn de drie vormen overbodig.",
+          "De -ing-vorm komt na be (am/is/are). Welke vorm hoort bij have?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Na have/has/had = V3", tekst: "V3 = past participle, gebruikt in de voltooide tijden (perfect tenses)." }],
@@ -613,7 +613,7 @@ ${["be / am-is-are", "have / has", "do / does", "go / goes"].map((v, i) => `
         answer: 0,
         wrongHints: [
           null,
-          "Hear is onregelmatig — V2 is heard, geen -ed-spelling.",
+          "Hear is onregelmatig: de V2 krijgt geen -ed. Welke vorm ken je uit het rijtje hear – … – …?",
           "V1 — past niet bij 'last night'.",
           "Let op: dit is een ander woord (= hart), geen vorm van 'hear'.",
         ],
