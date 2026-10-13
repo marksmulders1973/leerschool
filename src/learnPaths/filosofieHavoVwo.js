@@ -37,9 +37,9 @@ const steps = [
       },
       {
         q: "**Plato's grot-allegorie** symboliseert:",
-        options: ["Wat we zien is maar een schaduw van de ideeën", "Je moet je terugtrekken uit de samenleving", "Onze zintuigen tonen de ware werkelijkheid", "Kennis groeit vanzelf naarmate je ouder wordt"],
+        options: ["Wat we zien is maar een schaduw van de ideeën", "De bevrijde mens moet niet terug de grot in", "De schaduwen op de muur zijn de echte wereld", "Je leert de ideeën kennen door schaduwen te meten"],
         answer: 0,
-        wrongHints: [null, "De grot is een beeld, geen advies om je terug te trekken.", "Zien de vastgebonden gevangenen de echte dingen, of iets anders?", "De gevangenen worden in de grot ook ouder. Zien ze daardoor meer?"],
+        wrongHints: [null, "Volgens Plato gaat de bevrijde gevangene juist terug naar de anderen. Waarom zou hij dat doen?", "Zien de vastgebonden gevangenen de echte dingen, of iets anders?", "Kun je volgens Plato bij de ideeën komen door goed naar de schaduwen te kijken?"],
         uitlegPad: {
           stappen: [
             { titel: "'Politeia' boek 7", tekst: "Vastgebonden mensen in grot zien alleen schaduwen op muur (= zintuiglijke wereld). Filosoof bevrijdt zichzelf, ziet zon (= waarheid/Goed). Teruggekeerd worden ze niet geloofd. Plato's punt: filosofische waarheid is verborgen + ongemakkelijk." },
@@ -73,9 +73,9 @@ const steps = [
       },
       {
         q: "Wat is **metafysica**?",
-        options: ["Filosofie over wat er IS", "Filosofie over taal", "Filosofie over kunst", "Filosofie over goed handelen"],
+        options: ["Filosofie over de aard van de werkelijkheid", "Filosofie over hoe we iets kunnen weten", "Filosofie over schoonheid en kunst", "Filosofie over goed en kwaad handelen"],
         answer: 0,
-        wrongHints: [null, "Niet — taalfilosofie.", "Niet — esthetiek.", "Niet — dat is ethiek."],
+        wrongHints: [null, "Dat heet kennisleer (epistemologie). Welk vakgebied zit er 'na de fysica'?", "Dat heet esthetiek. Welk vakgebied zit er 'na de fysica'?", "Dat heet ethiek. Welk vakgebied zit er 'na de fysica'?"],
         uitlegPad: {
           stappen: [{ titel: "Naar fysica + verder", tekst: "Aristoteles' boek 'na de fysica' = metafysica. Onderzoekt fundamentele aard werkelijkheid: bestaat God? Wat is ziel? Vrije wil? Wat is 'zijn'? Klassiek filosofisch onderwerp." }],
           niveaus: { basis: "Wat is.", simpeler: "Werkelijkheid + God-vragen.", nogSimpeler: "Meta" },
@@ -104,9 +104,9 @@ const steps = [
       },
       {
         q: "**Tabula rasa** (Locke) betekent:",
-        options: ["Mens wordt geboren als 'lege lei'", "Alle mensen zijn van nature goed", "Aangeboren kennis bestaat", "Kennis komt uit de rede, niet uit ervaring"],
+        options: ["Bij de geboorte is de geest nog onbeschreven", "Bij de geboorte is de mens van nature goed", "Bij de geboorte heeft de geest al ideeën", "Echte kennis komt uit de rede, niet uit ervaring"],
         answer: 0,
-        wrongHints: [null, "Dat is een ander idee (denk aan Rousseau).", "Locke was empirist. Kan een 'lege' lei al kennis bevatten?", "Dat is het rationalisme van Descartes. Was Locke rationalist of empirist?"],
+        wrongHints: [null, "Dat is een ander idee (denk aan Rousseau).", "Locke was empirist. Waar komt volgens empiristen alle kennis vandaan?", "Dat is het rationalisme van Descartes. Was Locke rationalist of empirist?"],
         uitlegPad: {
           stappen: [
             { titel: "Empirisme-fundament", tekst: "Locke: bij geboorte kent baby NIETS. Alle kennis komt uit zintuiglijke ervaring. Tegen-Plato's aangeboren ideeën. Implicatie: onderwijs cruciaal, mensen vormbaar. Inspireerde Amerikaanse + Franse Revolutie (gelijke kansen vanaf geboorte)." },
@@ -209,9 +209,9 @@ const steps = [
       },
       {
         q: "Hegels **dialectiek**:",
-        options: ["These → antithese → synthese", "Waarheid via waarnemen en meten", "Twijfel aan alles tot iets zeker is", "Waarheid via wiskundig bewijs"],
+        options: ["Ideeën botsen en vormen samen een synthese", "Ideeën worden getoetst door waarnemen en meten", "Ideeën worden betwijfeld tot er één zeker is", "Ideeën worden afgeleid via wiskundig bewijs"],
         answer: 0,
-        wrongHints: [null, "Dat is het empirisme van Locke en Hume.", "Niet — dat is Descartes' methode.", "Dat past bij Spinoza's 'meetkundige' methode, niet bij Hegel."],
+        wrongHints: [null, "Dat is het empirisme van Locke en Hume.", "Dat is de methode van Descartes: twijfelen tot er iets zeker is.", "Dat past bij Spinoza's 'meetkundige' methode, niet bij Hegel."],
         uitlegPad: {
           stappen: [
             { titel: "Drie-staps-beweging", tekst: "Een idee (these) roept tegenoverstelling op (antithese). Conflict resulteert in nieuwe synthese die deels beide bevat. Synthese wordt nieuwe these → cyclus herhaalt. Marx draaide om: niet ideeën maar economische klassen drijven dialectiek." },
@@ -230,9 +230,9 @@ const steps = [
     checks: [
       {
         q: "**'Je wordt niet vrouw geboren, je wordt het'** is van:",
-        options: ["Simone de Beauvoir", "Jean-Paul Sartre", "Albert Camus", "Michel Foucault"],
+        options: ["Simone de Beauvoir", "Jean-Paul Sartre", "Hannah Arendt", "Mary Wollstonecraft"],
         answer: 0,
-        wrongHints: [null, "Niet — wel haar partner.", "Camus schreef vooral over het absurde in het bestaan.", "Foucault schreef vooral over macht en discipline."],
+        wrongHints: [null, "Sartre was haar partner en dacht mee, maar het citaat komt uit haar eigen boek.", "Arendt schreef over totalitarisme en de 'banaliteit van het kwaad'.", "Wollstonecraft pleitte in 1792 al voor vrouwenrechten, maar dit citaat komt uit een Frans boek uit 1949."],
         uitlegPad: {
           stappen: [
             { titel: "'Le deuxième sexe' 1949", tekst: "De Beauvoir: 'vrouwelijkheid' is sociale constructie, niet biologisch lot. Vrouwen leren op te treden als 'het andere' van mannen. Klassieker tweede-feministische-golf, basis voor moderne genderstudies. Schreef ook 'De grijze leeftijd' over ouder-worden." },
@@ -242,9 +242,9 @@ const steps = [
       },
       {
         q: "**Rawls'** 'veil of ignorance' vraagt:",
-        options: ["Kies regels zonder je eigen positie te kennen", "Kies regels waar de meerderheid voor stemt", "Kies regels die het totale geluk het grootst maken", "Kies regels die jou het meeste opleveren"],
+        options: ["Kies regels zonder je eigen positie te kennen", "Kies regels zonder te weten wat de meerderheid wil", "Kies regels die het totale geluk het grootst maken", "Kies regels zonder op de gevolgen te letten"],
         answer: 0,
-        wrongHints: [null, "Is een meerderheidsbesluit vanzelf eerlijk voor de minderheid?", "Dat is utilitarisme — Rawls zocht juist een alternatief daarvoor.", "Zou de uitkomst dan eerlijk zijn voor wie het slechtst af is?"],
+        wrongHints: [null, "Gaat Rawls' sluier over de mening van anderen, of over iets wat je van jezelf niet weet?", "Dat is utilitarisme — Rawls zocht juist een alternatief daarvoor.", "Rawls let juist op de gevolgen voor wie het slechtst af is. Wat verbergt de sluier?"],
         uitlegPad: {
           stappen: [
             { titel: "Hypothetische start-positie", tekst: "Stel: je gaat samenleving ontwerpen + weet niet of je rijk/arm, man/vrouw, wit/zwart, gezond/ziek, hoog/laag-opgeleid wordt. Welke regels kies je? Rawls: je zou dan een vangnet, gezondheidszorg en onderwijs voor de zwaksten zekerstellen (je zou tot 'onderkant' kunnen behoren). Beroemd liberaal-progressief argument." },
@@ -266,9 +266,9 @@ const steps = [
       },
       {
         q: "**Hannah Arendts** 'banaliteit van het kwaad':",
-        options: ["Gewone mensen kunnen groot kwaad doen", "Groot kwaad komt voort uit diepe haat", "Groot kwaad wordt gepleegd door monsters", "Kwaad komt door een slechte opvoeding"],
+        options: ["Kwaad ontstaat vaak door gedachteloos bevelen volgen", "Kwaad ontstaat vaak door diepe haat tegen anderen", "Kwaad ontstaat vaak door een gestoorde persoonlijkheid", "Kwaad ontstaat vaak door een slechte opvoeding"],
         answer: 0,
-        wrongHints: [null, "Zag Arendt bij Eichmann vooral haat, of iets anders?", "Wat bedoelt Arendt met het woord 'banaal'?", "Arendt zocht de oorzaak niet in iemands jeugd. Wat zag zij bij Eichmann?"],
+        wrongHints: [null, "Zag Arendt bij Eichmann vooral haat, of iets anders?", "Zag Arendt in Eichmann een gestoord monster, of iets anders?", "Arendt zocht de oorzaak niet in iemands jeugd. Wat zag zij bij Eichmann?"],
         uitlegPad: {
           stappen: [
             { titel: "'Eichmann in Jerusalem' 1963", tekst: "Arendt volgde proces tegen Eichmann (Holocaust-bureaucraat). Zag geen demonisch monster maar bureaucratische middelmaat die orders volgde zonder na te denken. Kwaad ontstaat door gedachtenloosheid + conformisme, niet alleen door bewust kwaad. Controversieel: critici vonden dat ze Eichmann te zacht beoordeelde." },
@@ -323,9 +323,9 @@ const steps = [
       },
       {
         q: "**Drogreden 'hellend vlak'** is:",
-        options: ["Onbewezen kettingredenering van A naar Z", "De persoon aanvallen in plaats van het argument", "Het standpunt van de ander verdraaid weergeven", "Iets goed noemen omdat het 'natuurlijk' is"],
+        options: ["Zonder bewijs stellen dat één stap tot een ramp leidt", "Iets als oorzaak zien omdat het eraan voorafging", "Je conclusie al gebruiken als bewijs voor die conclusie", "Het standpunt van de ander verdraaid weergeven"],
         answer: 0,
-        wrongHints: [null, "Dat is de drogreden 'ad hominem'.", "Dat is de drogreden 'stropop'.", "Dat is het 'beroep op de natuur'."],
+        wrongHints: [null, "Dat is de drogreden 'post hoc': erna, dus erdoor.", "Dat is een cirkelredenering.", "Dat is de drogreden 'stropop'."],
         uitlegPad: {
           stappen: [
             { titel: "Veel-gebruikt + vaak fout", tekst: "Voorbeeld: 'Als euthanasie wettelijk wordt, eindigen we bij ongewenste ouderen actief vermoorden.' Maar: geen bewijs dat A → B → Z onvermijdelijk. Sommige hellende-vlakken kloppen wel (waakzaamheid nodig), andere zijn bangmakerij. Onderscheid: zijn er buffers + checks in proces?" },

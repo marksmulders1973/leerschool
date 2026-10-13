@@ -42,9 +42,9 @@ const steps = [
       },
       {
         q: "**Empirist** John Locke gebruikt term *tabula rasa* voor:",
-        options: ["Geest als leeg schrijfblok bij geboorte", "Aangeboren ideeën die je al hebt", "Kennis die alleen uit de rede komt", "Een geest die niets kan leren"],
+        options: ["Geest die bij de geboorte nog niets weet", "Geest met aangeboren ideeën bij de geboorte", "Geest die kennis alleen uit de rede haalt", "Geest die bij de geboorte al goed is"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — dat zeggen rationalisten.", "Dat is rationalisme, niet empirisme.", "Leeg betekent niet onleerbaar — wat wordt er volgens Locke later 'ingevuld'?"],
+        wrongHints: [null, "Tegenovergesteld — dat zeggen rationalisten.", "Kennis uit de rede: dat zeggen rationalisten, niet empiristen.", "Dat de mens van nature goed is, zei Rousseau. Waar gaat tabula rasa over: goedheid of kennis?"],
         uitlegPad: {
           stappen: [{ titel: "Tabula rasa = leeg blad", tekst: "**Locke** stelde: bij geboorte is geest een **tabula rasa** (leeg schrijfblok). Alle kennis ontstaat via ervaring (zintuigen + reflectie). Tegen rationalisten die zeiden dat we aangeboren kennis hebben (Plato: anamnese, Descartes: ideeën van God)." }],
           niveaus: { basis: "Leeg blad.", simpeler: "Tabula rasa = leeg", nogSimpeler: "Leeg" },
@@ -107,7 +107,7 @@ const steps = [
         q: "Bij **dualisme** (Descartes) zijn er hoeveel substanties?",
         options: ["Twee", "Eén", "Drie", "Oneindig"],
         answer: 0,
-        wrongHints: [null, "Niet — monisme.", "Welk getal zit er verstopt in het woord 'dualisme'?", "Oneindig veel substanties past eerder bij de 'monaden' van Leibniz."],
+        wrongHints: [null, "Eén substantie is monisme, zoals bij Spinoza. Dacht Descartes ook zo?", "Descartes onderscheidde lichaam en geest. Komt daar nog iets bij?", "Oneindig veel substanties past eerder bij de 'monaden' van Leibniz."],
         uitlegPad: {
           stappen: [{ titel: "Lichaam vs geest", tekst: "**Cartesiaans dualisme**: twee fundamenteel verschillende substanties: **res extensa** (uitgebreid ding = materie) en **res cogitans** (denkend ding = geest). Hoe interacteren ze? Probleem 'mind-body'." }],
           niveaus: { basis: "Twee.", simpeler: "Dualisme = 2", nogSimpeler: "2" },
@@ -117,7 +117,7 @@ const steps = [
         q: "Welk standpunt verzoent **vrije wil + determinisme**?",
         options: ["Compatibilisme","Libertarisme","Hard determinisme","Idealisme"],
         answer: 0,
-        wrongHints: [null, "Niet — verwerpt determinisme.", "Niet — verwerpt vrije wil.", "Idealisme gaat over wat de werkelijkheid is (geest), niet over vrije wil."],
+        wrongHints: [null, "Libertariërs kiezen voor de vrije wil en wijzen het determinisme af. Verzoent dat beide?", "Hard deterministen zeggen dat alles vastligt en vrije wil een illusie is. Verzoent dat beide?", "Idealisme gaat over wat de werkelijkheid is (geest), niet over vrije wil."],
         uitlegPad: {
           stappen: [{ titel: "Hume + Dennett", tekst: "**Compatibilisme**: vrije wil + determinisme **zijn niet in conflict**. 'Vrij' = handelen volgens eigen wensen + redenering (zonder externe dwang), zelfs als die wensen zelf oorzakelijk bepaald zijn. Verschillend van Cartesiaans-libertarisch 'absoluut vrije wil'." }],
           theorie: "Toets-patroon: 'past dit bij compatibilisme of libertarisme?' Beoordeel definitie.",
