@@ -26,7 +26,7 @@ const steps = [
     explanation: "Twee woord-eindes die vaak fout gaan: **-isch** en **-lijk**.\n\n**Regel -isch**:\nAls een woord eindigt op een **'ies'-klank** *(zoals in 'tropisch')* schrijf je **-isch** (met -ch).\n• tropisch (niet 'tropies')\n• logisch\n• elektrisch\n• fantastisch\n• komisch\n\n**Truc**: zet er '-e' achter. Hoor je 'iese'? Dan -isch.\n• tropisch → tropische ✓\n• logisch → logische ✓\n\n**Let op**: woorden als 'fris' en 'kennis' zijn géén -isch-woorden.\n\n**Regel -lijk**:\nWoorden die eindigen op een **'-uk'-klank** schrijf je met **-lijk**.\n• vrolijk\n• mogelijk\n• waarschijnlijk\n• gemakkelijk\n• gevaarlijk\n\n**Truc**: zet er '-e' achter. Hoor je '-luk-e'? Dan -lijk.\n• vrolijk → vrolijke ✓\n\n**Toets-tip**:\n• Hoor je 'iese' op het eind → schrijf -isch.\n• Hoor je '-uk' op het eind → schrijf -lijk.",
     checks: [
       {
-        q: "**'tropisch'** of **'tropies'**?",
+        q: "*In het regenwoud is het ___ warm.* Welk woord is **goed** gespeld?",
         options: ["tropisch","tropies","tropich","tropiesch"],
         answer: 0,
         wrongHints: [null,"Truc: zet er -e achter. Hoe schrijf je dan de uitgang?","Bijna — tel de letters van de uitgang nog eens.","Bijna — klopt de klinker vóór de uitgang?"],
@@ -47,10 +47,10 @@ const steps = [
         },
       },
       {
-        q: "**'mogelijk'** of **'mogelik'**?",
+        q: "*Is het ___ dat je morgen komt?* Welk woord is **goed** gespeld?",
         options: ["mogelijk","mogelik","mogeluk","mogelijck"],
         answer: 0,
-        wrongHints: [null,"Bijna — je hoort 'uk', maar hoe schrijf je die uitgang?","Bijna — je hoort 'uk', maar hoe schrijf je die uitgang?","Geen -ck."],
+        wrongHints: [null, "Bijna — je hoort 'uk', maar hoe schrijf je die uitgang?", "Bijna — je hoort 'uk', maar hoe schrijf je die uitgang?", "Schrijf je in deze uitgang een c én een k?"],
         uitlegPad: {
           stappen: [
             { titel: "-lijk herkennen", tekst: "'Uk'-klank op het eind = altijd -lijk geschreven (met ij)." },
@@ -88,10 +88,10 @@ const steps = [
         },
       },
       {
-        q: "**'gevaarlijk'** of **'gevaarlik'**?",
+        q: "*Pas op, de weg is glad en ___!* Welk woord is **goed** gespeld?",
         options: ["gevaarlijk","gevaarlik","gevaarluk","gevarelijk"],
         answer: 0,
-        wrongHints: [null,"Niet -lik.","Niet -luk.","Niet 'gevarelijk' — er staat een 'a-a'."],
+        wrongHints: [null, "Je hoort 'uk' aan het eind. Met welke letters schrijf je die klank?", "Je hoort 'uk', maar schrijf je die klank ook echt met een u?", "Niet 'gevarelijk' — er staat een 'a-a'."],
         uitlegPad: {
           stappen: [
             { titel: "Uk-klank → -lijk", tekst: "Gevaarlijk eindigt op 'uk-klank' → schrijf -lijk." },
@@ -349,7 +349,7 @@ const steps = [
         q: "Welke zin staat **fout**?",
         options: ["Ik kocht appels peren en bananen.","Ik kocht appels, peren en bananen.","Ik ging naar huis.","Ben je oké?"],
         answer: 0,
-        wrongHints: [null,"Goed — komma's in opsomming.","Goed gespeld.","Goed gespeld."],
+        wrongHints: [null, "Hier staan de komma's in het rijtje goed. Welke zin mist ze?", "Hoofdletter en punt staan hier goed.", "Hoofdletter en vraagteken staan hier goed."],
         uitlegPad: {
           stappen: [
             { titel: "Welke is fout?", tekst: "'Ik kocht appels peren en bananen' mist komma. Bij opsomming zet je komma tussen items." },
@@ -360,7 +360,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Komma = pauze", uitleg: "Komma = kleine pauze in lezen. Bij opsomming pauzeer je tussen items." }],
           niveaus: {
             basis: "Opsomming zonder komma's = fout.",
-            simpeler: "Lees A hardop: 'Ik kocht appels peren en bananen' — voelt vreemd, geen pauze tussen appels en peren. Komma nodig. Dus die zin is fout.",
+            simpeler: "Lees die zin hardop: 'Ik kocht appels peren en bananen' — voelt vreemd, geen pauze tussen appels en peren. Komma nodig. Dus die zin is fout.",
             nogSimpeler: "Geen komma's = fout",
           },
         },
@@ -566,10 +566,10 @@ const steps = [
         },
       },
       {
-        q: "**'boekenkast'** — waarom -en- ertussen?",
-        options: ["Boek heeft als meervoud boeken","Het spreekt makkelijker uit","Er zit geen regel achter","Samenstellingen krijgen altijd -en-"],
+        q: "Waarom staat er **-en-** in het woord **boekenkast**?",
+        options: ["Het meervoud van boek is boeken", "Zo spreek je het makkelijker uit", "Het eerste woord eindigt op een k", "Het tweede woord begint met een k"],
         answer: 0,
-        wrongHints: [null,"Er is een spellingregel.","Wel een regel.","Niet altijd — denk aan tandarts."],
+        wrongHints: [null, "Er is een echte spellingregel voor. Hoe zeg je het als er meer boeken zijn?", "Is het de letter k die het doet, of iets anders aan het woord boek?", "In 'boekenrek' begint het tweede woord met een r, en toch staat er -en-."],
         uitlegPad: {
           stappen: [
             { titel: "Tussen-n-regel", tekst: "Boek heeft meervoud op -en (boeken). Daarom tussen-n in samenstellingen: boekenkast." },
@@ -829,10 +829,10 @@ const steps = [
         },
       },
       {
-        q: "Welk woord schrijf je met **hoofdletter**?",
-        options: ["Nederland","maandag","januari","kerstboom"],
+        q: "Welk woord moet je met een **hoofdletter** schrijven?",
+        options: ["nederland", "maandag", "januari", "kerstboom"],
         answer: 0,
-        wrongHints: [null,"Klein (tenzij begin zin).","Klein.","Klein."],
+        wrongHints: [null, "Een dag van de week schrijf je klein, tenzij hij vooraan in de zin staat.", "Een maand schrijf je klein, tenzij hij vooraan in de zin staat.", "Is 'kerstboom' een naam of een gewoon ding?"],
         uitlegPad: {
           stappen: [
             { titel: "Welke is eigennaam?", tekst: "Nederland = land = eigennaam = hoofdletter. Maandag/januari/kerstboom = klein." },
@@ -849,7 +849,7 @@ const steps = [
         },
       },
       {
-        q: "*'Hij spreekt vloeiend ___ans en ___ngels.'* — welk?",
+        q: "*Hij spreekt vloeiend frans en engels.* Hoe schrijf je de twee talen goed?",
         options: ["Frans, Engels","frans, engels","FRANS, ENGELS","Frans, engels"],
         answer: 0,
         wrongHints: [null,"Bijna — hoe schrijf je de naam van een taal?","Geen reden voor hoofdletters overal.","Bijna — kijk nog eens naar het tweede woord."],
@@ -1014,7 +1014,7 @@ const steps = [
         q: "Welke is **goed** gespeld?",
         options: ["fantastisch","fantasties","fantastiesch","fantastich"],
         answer: 0,
-        wrongHints: [null,"Bijna — denk aan de truc: zet er -e achter.","Té veel.","Bijna — tel de letters van de uitgang nog eens."],
+        wrongHints: [null, "Bijna — denk aan de truc: zet er -e achter.", "Tel de letters: staan er een ie én een sch in de uitgang?", "Bijna — tel de letters van de uitgang nog eens."],
         uitlegPad: {
           stappen: [
             { titel: "-isch-regel", tekst: "Iese-klank op eind = -isch (3 letters: s-c-h)." },
@@ -1071,10 +1071,10 @@ const steps = [
         },
       },
       {
-        q: "Welk woord schrijf je met **hoofdletter**?",
-        options: ["België","dinsdag","mei","kerstboom"],
+        q: "Welk woord moet je met een **hoofdletter** schrijven?",
+        options: ["belgië", "dinsdag", "mei", "kerstboom"],
         answer: 0,
-        wrongHints: [null,"Klein (tenzij begin zin).","Klein.","Klein."],
+        wrongHints: [null, "Een dag van de week schrijf je klein, tenzij hij vooraan in de zin staat.", "Een maand schrijf je klein, tenzij hij vooraan in de zin staat.", "Is 'kerstboom' een naam of een gewoon ding?"],
         uitlegPad: {
           stappen: [
             { titel: "Land = hoofdletter", tekst: "België = land = eigennaam = hoofdletter. Dinsdag/mei/kerstboom = klein in NL." },
@@ -1091,10 +1091,10 @@ const steps = [
         },
       },
       {
-        q: "**'gemakkelijk'** of **'gemaklijk'**?",
+        q: "*Deze som is heel ___.* Welk woord is **goed** gespeld?",
         options: ["gemakkelijk","gemaklijk","gemakelik","gemakelijck"],
         answer: 0,
-        wrongHints: [null,"Bijna — zeg het langzaam: ge-mak-ke-lijk. Klopt elke klank?","-lik niet.","Geen -ck."],
+        wrongHints: [null, "Bijna — zeg het langzaam: ge-mak-ke-lijk. Klopt elke klank?", "Je hoort 'uk' aan het eind. Hoe schrijf je die klank?", "Schrijf je in deze uitgang een c én een k?"],
         uitlegPad: {
           stappen: [
             { titel: "Dubbele k + -lijk", tekst: "Gemak (korte a) → verdubbel k. Plus uk-klank op eind = -lijk. Gemakkelijk." },
@@ -1171,7 +1171,7 @@ const steps = [
         q: "Welk woord is **goed** gespeld?",
         options: ["fantastisch","fantastiesch","fantastik","fantasties"],
         answer: 0,
-        wrongHints: [null, "Niet — extra letters niet nodig.", "Niet — geen 'k' aan einde.", "Niet — '-ies' bestaat niet."],
+        wrongHints: [null, "Tel de letters: staan er een ie én een sch in de uitgang?", "Hoor je aan het eind een k-klank of een s-klank?", "Zet er -e achter: fantastische. Hoe schrijf je de uitgang dan?"],
         uitlegPad: {
           stappen: [
             { titel: "'-isch'-uitgang", tekst: "Veel NL bijvoeglijke naamwoorden eindigen op **'-isch'**:\n• fantastisch\n• elektrisch\n• logisch\n• magisch\n• klassiek (verwarrend! Zonder -h: 'klassiek')\n\nDe -h is stil — je hoort 'fantasties' maar SCHRIJFT '-isch'." },
@@ -1191,7 +1191,7 @@ const steps = [
         q: "Welk woord is **goed** gespeld?",
         options: ["vriendelijk","vriendelik","vriendelijc","vriendlijk"],
         answer: 0,
-        wrongHints: [null, "Niet — geen 'k' zonder 'j'.", "Niet — geen 'c'.", "Niet — 'e' tussen 'vriend' + 'lijk' nodig."],
+        wrongHints: [null, "Je hoort 'uk' aan het eind. Met welke letters schrijf je die klank?", "Eindigt het woord op een c of op een k?", "Zeg het langzaam: vrien-de-lijk. Hoor je alle klanken?"],
         uitlegPad: {
           stappen: [
             { titel: "'-lijk'-uitgang", tekst: "Veel NL bijvoeglijke naamwoorden eindigen op **'-lijk'**:\n• vriendelijk\n• menselijk\n• kinderlijk\n• Let op, géén -lijk: gelukkig (-ig), plotseling (-ling)\n\nUitgang -lijk = vaste schrijfwijze, niet '-lik' of '-lijc'." },
@@ -1206,21 +1206,21 @@ const steps = [
           niveaus: { basis: "vriendelijk.", simpeler: "NL-uitgang -lijk wordt altijd met j-k geschreven (niet -lik of -lijc). Vriendelijk = standaard.", nogSimpeler: "-lijk" },
         },
       },
-      { q: "Hoe schrijf je: 'natuurlijk' / 'natuurlik' / 'natuurlic'?", options: ["natuurlijk","natuurlik","natuurlic","naturalijk"], answer: 0, wrongHints: [null, "Niet — j-k blijft.", "Niet — geen c.", "Niet — verkeerd grond-woord."] },
-      { q: "Hoe schrijf je: 'kritisch' / 'kritich' / 'kritis'?", options: ["kritisch","kritich","kritiec","kritis"], answer: 0, wrongHints: [null, "Niet — de s ontbreekt.", "Niet.", "Niet."] },
-      { q: "Welke is goed: 'voetbalveld' of 'voetbal-veld'?", options: ["voetbalveld","voetbal-veld","voet-bal-veld","voet balveld"], answer: 0, wrongHints: [null, "Geen streepje nodig.", "Niet.", "Niet."] },
-      { q: "Hoofdletter: 'Mijn moeder komt uit ___.'", options: ["Nederland","nederland","Neder land","NEDERLAND"], answer: 0, wrongHints: [null, "Niet — land krijgt hoofdletter.", "Niet — een landnaam schrijf je aan elkaar.", "Niet — niet alles hoofdletter."] },
-      { q: "Hoofdletter: 'We zien elkaar op ___.'", options: ["maandag","Maandag","MAANDAG","maan dag"], answer: 0, wrongHints: [null, "Niet — dagen in NL klein.", "Niet.", "Niet."] },
+      { q: "Welk woord is **goed** gespeld?", options: ["natuurlijk","natuurlik","natuurlic","naturalijk"], answer: 0, wrongHints: [null, "Je hoort 'uk' aan het eind. Met welke letters schrijf je die klank?", "Eindigt het woord op een c of op een k?", "Het woord komt van 'natuur'. Zie je dat woord terug?"] },
+      { q: "Welk woord is **goed** gespeld?", options: ["kritisch","kritich","kritiec","kritis"], answer: 0, wrongHints: [null, "Bijna — welke letter mist er in de uitgang?", "Hoor je aan het eind een k-klank of een s-klank?", "Zet er -e achter: kritische. Hoe schrijf je de uitgang dan?"] },
+      { q: "Hoe schrijf je het veld waarop je voetbalt?", options: ["voetbalveld","voetbal-veld","voet-bal-veld","voet balveld"], answer: 0, wrongHints: [null, "Hoort er een streepje in een gewone samenstelling?", "Hak je een samenstelling in stukjes met streepjes?", "Mag er een spatie midden in één woord staan?"] },
+      { q: "Vul in: *'Mijn moeder komt uit ___.'*", options: ["Nederland","nederland","Neder land","NEDERLAND"], answer: 0, wrongHints: [null, "Niet — land krijgt hoofdletter.", "Niet — een landnaam schrijf je aan elkaar.", "Niet — niet alles hoofdletter."] },
+      { q: "Vul in: *'We zien elkaar op ___.'*", options: ["maandag","Maandag","MAANDAG","maan dag"], answer: 0, wrongHints: [null, "Niet — dagen in NL klein.", "Schrijf je een dag van de week in hoofdletters?", "Is maandag één woord of twee?"] },
       { q: "Welke zin heeft de **juiste hoofdletter** voor namen?", options: ["Mijn vriend Tim komt morgen.","mijn vriend tim komt morgen.","Mijn Vriend Tim komt morgen.","mijn vriend tim Komt morgen."], answer: 0, wrongHints: [null, "Geen hoofdletter aan begin zin.", "Vriend ≠ naam.", "Komt ≠ naam."] },
-      { q: "Welk woord is goed: 'mogelik' / 'mogelijk' / 'moglijk'?", options: ["mogelijk","mogelik","moglijk","mogeleijk"], answer: 0, wrongHints: [null, "Niet — j-k samen.", "Verkeerde klinker.", "Niet."] },
-      { q: "Welke is goed: 'huisdier' of 'huis dier' of 'huis-dier'?", options: ["huisdier","huis dier","huis-dier","huisdir"], answer: 0, wrongHints: [null, "Niet — uit elkaar.", "Niet — geen streepje.", "Niet."] },
-      { q: "**Het meervoud** van 'huis' is?", options: ["huizen","huisen","huises","huis'en"], answer: 0, wrongHints: [null, "Niet — verandering nodig.", "Engels.", "Niet."] },
-      { q: "Het meervoud van 'kind' is?", options: ["kinderen","kinden","kindes","kinds"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Engels."] },
-      { q: "Het meervoud van 'auto' is?", options: ["auto's","autos","autoes","auto"], answer: 0, wrongHints: [null, "Niet — apostrof nodig.", "Engels.", "Niet — meervoud nodig."] },
+      { q: "Welk woord is **goed** gespeld?", options: ["mogelijk","mogelik","moglijk","mogeleijk"], answer: 0, wrongHints: [null, "Je hoort 'uk' aan het eind. Met welke letters schrijf je die klank?", "Zeg het langzaam: mo-ge-lijk. Hoor je alle klanken?", "Staat er in -lijk een e te veel?"] },
+      { q: "Hoe schrijf je een dier dat bij je in huis woont?", options: ["huisdier","huis dier","huis-dier","huisdir"], answer: 0, wrongHints: [null, "Mag er een spatie midden in één woord staan?", "Hoort er een streepje in een gewone samenstelling?", "Kijk naar 'dier': welke klank hoor je in het midden?"] },
+      { q: "Wat is het meervoud van **huis**?", options: ["huizen","huisen","huises","huis'en"], answer: 0, wrongHints: [null, "Zeg het meervoud hardop: hoor je een s-klank of een z-klank?", "Een meervoud op -es is Engels. Hoe maak je het in het Nederlands?", "Een apostrof zet je bij woorden als 'auto's'. Hoort die hier?"] },
+      { q: "Wat is het meervoud van **kind**?", options: ["kinderen","kinden","kindes","kinds"], answer: 0, wrongHints: [null, "Het meervoud van kind is onregelmatig. Hoe zeg je 'twee …'?", "Een meervoud op -es is geen Nederlands. Hoe zeg je 'drie …'?", "Zeg 'twee kinds' eens hardop. Klinkt dat goed?"] },
+      { q: "Wat is het meervoud van **auto**?", options: ["auto's","autos","autoes","auto"], answer: 0, wrongHints: [null, "Niet — apostrof nodig.", "Klopt '-oes' achter auto? Zeg het eens hardop.", "Dit is nog maar één auto."] },
       { q: "Wat is het meervoud van 'idee'?", options: ["ideeën","ideeen","idee's","ideën"], answer: 0, wrongHints: [null, "Niet — zonder trema lees je het verkeerd.", "Geen apostrof.", "Je mist een e."] },
-      { q: "Welke is goed: 'in tussen' of 'intussen'?", options: ["intussen","in tussen","in-tussen","intussent"], answer: 0, wrongHints: [null, "Niet — geen 2 woorden.", "Geen streepje.", "Niet."] },
-      { q: "Welke is goed: 's morgens' of 'smorgens' of 's-morgens'?", options: ["'s morgens","s morgens","smorgens","'smorgens"], answer: 0, wrongHints: [null, "Apostrof mist.", "Aan elkaar fout.", "Spatie ontbreekt."] },
-      { q: "De goedheiligman zelf (de persoon): 'sinterklaas' of 'Sinterklaas'?", options: ["Sinterklaas","sinterklaas","sint-erklaas","Sint Erklaas"], answer: 0, wrongHints: [null,"Gaat het hier om het feest of om de persoon? Hoe begin je de naam van een persoon?","Niet — geen streepje.","Niet."] },
+      { q: "*Mama kookte en ___ dekte ik de tafel.* Welk woord is goed geschreven?", options: ["intussen","in tussen","in-tussen","intussent"], answer: 0, wrongHints: [null, "Mag er een spatie midden in dit woord staan?", "Geen streepje.", "Hoor je aan het eind een t?"] },
+      { q: "*Ik ontbijt ___ om zeven uur.* Welke schrijfwijze is goed?", options: ["'s morgens","s morgens","smorgens","'smorgens"], answer: 0, wrongHints: [null, "Apostrof mist.", "Aan elkaar fout.", "Spatie ontbreekt."] },
+      { q: "*Op 5 december komt ___ met zijn paard.* Hoe schrijf je de naam van de goedheiligman?", options: ["Sinterklaas","sinterklaas","sint-erklaas","Sint Erklaas"], answer: 0, wrongHints: [null, "Gaat het hier om het feest of om de persoon? Hoe begin je de naam van een persoon?", "Hoort er een streepje midden in deze naam?", "Is Sinterklaas één woord of twee?"] },
     ],
   },
 ];

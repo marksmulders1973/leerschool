@@ -65,15 +65,15 @@ const steps = [
     checks: [
       {
         q: "Wat is **interpunctie**?",
-        options: ["Leestekens en hoofdletters", "Alleen leestekens", "Alleen hoofdletters", "Alle woorden"],
+        options: ["Leestekens en hoofdletters", "Spelling en leestekens", "Hoofdletters en spelling", "Zinnen en alinea's"],
         answer: 0,
-        wrongHints: [null, "Te beperkt — ook hoofdletters horen erbij.", "Te beperkt — ook leestekens.", "Nee, woorden zijn iets anders."],
+        wrongHints: [null, "Hoe je een woord spelt (d of dt, ei of ij) — valt dat onder interpunctie?", "Gaat spelling over tekens in een zin, of over de letters in een woord?", "Een alinea is een stuk tekst. Gaat interpunctie over hoe je een tekst in stukken verdeelt?"],
       },
       {
         q: "**Waarom** gebruiken we leestekens?",
-        options: ["Voor goed lezen", "Voor mooi maken", "Geen reden", "Om woorden te tellen"],
+        options: ["Zodat je weet hoe je de zin moet lezen", "Zodat je ziet hoe je de woorden spelt", "Zodat je ziet welke woorden belangrijk zijn", "Zodat een tekst er netjes uitziet"],
         answer: 0,
-        wrongHints: [null, "Mooi maken is niet hun functie.", "Wél een reden — duidelijk lezen.", "Woorden tellen doen leestekens niet."],
+        wrongHints: [null, "Spelling gaat over de letters in een woord. Wat doen tekens als . en ? met een zin?", "Een belangrijk woord maak je vet of dik. Wat doet een punt of een vraagteken?", "Netjes is fijn, maar wat gebeurt er als je een tekst zonder punten voorleest?"],
       },
       {
         q: "Welk leesteken hoort bij een **vraag**?",
@@ -346,16 +346,16 @@ const steps = [
         wrongHints: [null, "Begin zin mist hoofdletter.", "Plaatsnaam mist hoofdletter.", "Een heel woord in hoofdletters hoeft niet. Kijk ook naar de plaatsnaam."],
       },
       {
-        q: "Welke krijgt **wél een hoofdletter** in een zin?",
-        options: ["Een naam (Anna, Tom)", "Een dag (maandag)", "Een maand (januari)", "Een seizoen (zomer)"],
+        q: "Welk woord krijgt **wél een hoofdletter** in een zin?",
+        options: ["De naam van een persoon", "Een dag van de week", "Een maand van het jaar", "Een seizoen van het jaar"],
         answer: 0,
-        wrongHints: [null, "Dagen niet — kleine letter.", "Maanden niet — kleine letter.", "Seizoenen niet — kleine letter."],
+        wrongHints: [null, "Hoe schrijf je 'maandag' in 'Ik kom op maandag'?", "Hoe schrijf je 'januari' in 'Ik ben in januari jarig'?", "Is 'zomer' een naam of een gewoon woord?"],
       },
       {
-        q: "Welke schrijf je **MET hoofdletter** in een zin?",
-        options: ["Frans (als taal)", "maandag", "december", "voorjaar"],
+        q: "Welk woord schrijf je **ook midden in een zin** met een hoofdletter?",
+        options: ["Frans", "Maandag", "December", "Voorjaar"],
         answer: 0,
-        wrongHints: [null, "Dagen niet — kleine letter.", "Maanden niet.", "Seizoenen niet."],
+        wrongHints: [null, "Een dag van de week schrijf je midden in een zin met een kleine letter.", "Hoe schrijf je een maand midden in een zin?", "Een seizoen is een gewoon woord, geen naam."],
         uitlegPad: {
           stappen: [
             { titel: "Talen krijgen hoofdletter", tekst: "In het Nederlands: talen krijgen hoofdletter, dagen/maanden/seizoenen niet. Dus 'Frans' wel, 'maandag' niet." },
@@ -380,14 +380,9 @@ const steps = [
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "Welke woorden krijgen een hoofdletter in: *'wij wonen in de kerkstraat'*?",
-        options: ["Wij en Kerkstraat", "Alleen Wij", "Alleen Kerkstraat", "Wij, Wonen en Kerkstraat"],
+        options: ["Wij en Kerkstraat", "Wij en Wonen", "Wij, De en Kerkstraat", "Wonen en Kerkstraat"],
         answer: 0,
-        wrongHints: [
-          null,
-          "Is de naam van een straat ook een naam?",
-          "Kijk ook naar het eerste woord van de zin.",
-          null,
-        ],
+        wrongHints: [null, "'Wonen' is een werkwoord. Krijgt dat midden in een zin een hoofdletter?", "Hoort 'de' bij de naam van de straat, of staat het ervoor?", "Met welk woord begint de zin?"],
         uitlegPad: {
           stappen: [
             {
@@ -604,14 +599,9 @@ const steps = [
       },
       {
         q: "Waaraan zie je dat *'Gaat de bus om acht uur'* een **vraag** is?",
-        options: [
-          "Het werkwoord staat vooraan",
-          "Er staat een getal in",
-          "De zin is kort",
-          "Het gaat over een bus",
-        ],
+        options: ["Het werkwoord staat vooraan", "Er staat een tijd in de zin", "Er staat geen punt achter", "Het eerste woord heeft een hoofdletter"],
         answer: 0,
-        wrongHints: [null, null, "Zou de zin anders zijn als hij lang was?", null],
+        wrongHints: [null, "Ook 'De bus gaat om acht uur.' heeft een tijd. Is dat een vraag?", "Er staat ook geen ander teken achter. Waar moet je dan op letten?", "Elke zin begint met een hoofdletter. Maakt dat er een vraag van?"],
         uitlegPad: {
           stappen: [
             {
@@ -684,10 +674,10 @@ const steps = [
         },
       },
       {
-        q: "*'Ik ga tóch naar buiten ___ het regent'.* Welke komma + woord?",
-        options: [", maar", ", omdat", "en", "—"],
+        q: "*'Ik ga tóch naar buiten ___ het regent.'* Welke komma met welk woord past op de lege plek?",
+        options: [", maar", ", omdat", ", en", ", dus"],
         answer: 0,
-        wrongHints: [null, "'Omdat' geeft reden — dan ga je juist NIET naar buiten.", "'En' opsommend — geen tegenstelling.", "Streepje is voor heel andere reden."],
+        wrongHints: [null, "'Omdat' geeft een reden. Ga je naar buiten omdát het regent?", "'En' zet twee dingen gewoon naast elkaar. Klopt dat hier?", "'Dus' geeft een gevolg. Ga je naar buiten doordat het regent?"],
         uitlegPad: {
           stappen: [
             { titel: "Tegenstelling = maar", tekst: "Je gaat ondanks de regen naar buiten. 'Maar' geeft tegenstelling. Komma altijd vóór 'maar'." },
@@ -705,15 +695,15 @@ const steps = [
       },
       {
         q: "Welke zin heeft **GEEN komma nodig**?",
-        options: ["Anna en Tom gaan naar school.", "Anna gaat naar school, maar Tom blijft thuis.", "Anna, die ziek is, blijft thuis.", "Toen het regende, gingen we naar binnen."],
+        options: ["Anna en Tom gaan naar school.", "Anna gaat naar school maar Tom blijft thuis.", "Anna die ziek is blijft thuis.", "Toen het regende gingen we naar binnen."],
         answer: 0,
-        wrongHints: [null, "Klopt qua komma — tegenstelling.", "Klopt qua komma's — bijzin.", "Klopt qua komma — bijzin vooraan."],
+        wrongHints: [null, "Twee zinnen met 'maar' ertussen: hoor je daar een pauze?", "'die ziek is' is extra informatie over Anna. Hoe zet je die apart?", "Waar stopt het eerste deel van de zin? Hoor je daar een pauze?"],
       },
       {
-        q: "*'Lisa zei ___ ik kom morgen.'* Welk leesteken op de plek?",
+        q: "*'Lisa zei ___ ik kom morgen.'* Welk leesteken hoort op de lege plek?",
         options: [": (dubbele punt)", ", (komma)", ". (punt)", "geen leesteken"],
         answer: 0,
-        wrongHints: [null, "Een komma is een pauze in de zin — welk teken kondigt aan wat iemand gaat zeggen?", "Punt sluit zin te vroeg af.", "Wel leesteken nodig."],
+        wrongHints: [null, "Een komma is een pauze in de zin — welk teken kondigt aan wat iemand gaat zeggen?", "Punt sluit zin te vroeg af.", "Lees de zin hardop: wat zegt Lisa precies, en hoe laat je zien dat dat begint?"],
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -903,10 +893,10 @@ const steps = [
         wrongHints: [null, "Mist aanhalingstekens, dubbele punt, hoofdletters.", "Mist hoofdletter aan begin zin + dubbele punt.", "Mist dubbele punt na 'zei'."],
       },
       {
-        q: "Waar staat het **uitroepteken** bij: *'Tom roept: \"Pas op!\"'*?",
-        options: ["Binnen aanhalingstekens", "Buiten aanhalingstekens", "Vóór 'roept'", "Niet nodig"],
+        q: "Waar zet je het **uitroepteken** in: *Tom roept: \"Pas op\"*?",
+        options: ["Binnen de aanhalingstekens", "Buiten de aanhalingstekens", "Na het woord 'roept'", "Na het woord 'Pas'"],
         answer: 0,
-        wrongHints: [null, "Niet juist — leesteken bij wat gezegd wordt.", "Niet vóór.", "Wél nodig — bij uitroep altijd !."],
+        wrongHints: [null, "Hoort het uitroepteken bij wat Tom roept, of bij de zin eromheen?", "Roept Tom het woord 'roept'? Waar hoort het teken bij?", "Lees 'Pas op' hardop: waar eindigt de uitroep?"],
       },
       {
         q: "*'mama zei kom maar mee'* — hoe schrijf je dit netjes?",
@@ -931,14 +921,9 @@ const steps = [
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "Wat is er **fout** in: *Sem riep: \"Kijk eens!*",
-        options: [
-          "Het aanhalingsteken aan het eind mist",
-          "De dubbele punt mist",
-          "Er staat geen hoofdletter bij 'Kijk'",
-          "Het uitroepteken mist",
-        ],
+        options: ["Het aanhalingsteken na 'eens' mist", "De dubbele punt na 'riep' mist", "De hoofdletter van 'Kijk' mist", "Het uitroepteken na 'eens' mist"],
         answer: 0,
-        wrongHints: [null, "Kijk goed achter 'riep'.", null, null],
+        wrongHints: [null, "Kijk goed achter 'riep'.", "Kijk naar de eerste letter van 'Kijk'.", "Kijk wat er direct achter 'eens' staat."],
         uitlegPad: {
           stappen: [
             {
@@ -966,7 +951,7 @@ const steps = [
             },
           ],
           niveaus: {
-            basis: "Het aanhalingsteken aan het eind mist.",
+            basis: "Het aanhalingsteken na 'eens' mist.",
             simpeler: "Er is er één geopend vóór 'Kijk', maar na het uitroepteken is hij niet gesloten.",
             nogSimpeler: "Sluit-teken mist.",
           },
@@ -1064,19 +1049,14 @@ const steps = [
       },
       {
         q: "In welke zin horen **aanhalingstekens**?",
-        options: [
-          "Bram zegt: ik heb dorst.",
-          "Bram heeft dorst.",
-          "Bram drinkt een glas water.",
-          "Bram heeft een fles bij zich.",
-        ],
+        options: ["Bram zegt: ik heb dorst.", "Bram zegt dat hij dorst heeft.", "Bram heeft na het rennen dorst.", "Bram vraagt om een glas water."],
         answer: 0,
-        wrongHints: [null, "Praat er iemand in deze zin?", null, null],
+        wrongHints: [null, "Staan hier de woorden precies zoals Bram ze zelf zegt?", "Praat er iemand in deze zin?", "Staan Brams eigen woorden in de zin, of vertelt iemand wat hij doet?"],
         uitlegPad: {
           stappen: [
             {
               titel: "Iemand praat",
-              tekst: "Alleen in 'Bram zegt: ...' praat iemand. Wat Bram zegt, zet je tussen aanhalingstekens: Bram zegt: \"Ik heb dorst.\"",
+              tekst: "Alleen in 'Bram zegt: ...' staan Brams eigen woorden precies zoals hij ze zegt. In 'Bram zegt dat hij dorst heeft' vertel je het na: daar horen geen aanhalingstekens. Wat Bram zelf zegt, zet je tussen aanhalingstekens: Bram zegt: \"Ik heb dorst.\"",
             },
           ],
           woorden: [
@@ -1100,7 +1080,7 @@ const steps = [
           ],
           niveaus: {
             basis: "Bram zegt: ik heb dorst.",
-            simpeler: "Daar zegt Bram iets. Dat moet tussen aanhalingstekens: Bram zegt: \"Ik heb dorst.\"",
+            simpeler: "Daar staan Brams eigen woorden. Die moeten tussen aanhalingstekens: Bram zegt: \"Ik heb dorst.\"",
             nogSimpeler: "Bram zegt: \"...\"",
           },
         },
@@ -1127,10 +1107,10 @@ const steps = [
         wrongHints: [null, "Punt past niet bij vraag.", "Niet boos genoeg.", "Komma sluit niet af."],
       },
       {
-        q: "*'Ik kocht appels ___ peren ___ druiven ___ bananen.'* Welke komma's?",
+        q: "*'Ik kocht appels ___ peren ___ druiven ___ bananen.'* Wat hoort er op de drie lege plekken?",
         options: [", , en", "en en en", ", en ,", ", , ,"],
         answer: 0,
-        wrongHints: [null, "Te veel 'en'.", "Verkeerde plek.", "Geen komma vóór laatste — daar 'en'."],
+        wrongHints: [null, "Drie keer 'en' achter elkaar: klinkt dat goed als je het hardop leest?", "Waar staat 'en' in een opsomming meestal?", "Wat zet je tussen de laatste twee dingen van een opsomming?"],
       },
       {
         q: "*'pas op er rijdt een auto'* — netjes geschreven?",
@@ -1140,32 +1120,32 @@ const steps = [
       },
       {
         q: "Welke woorden krijgen een **hoofdletter** in een zin?",
-        options: ["Namen + landen + begin zin", "Alle werkwoorden", "Alle zelfstandige naamwoorden", "Maanden + dagen"],
+        options: ["Namen, landen en het eerste woord", "Namen, dagen en het eerste woord", "Namen, landen en maanden", "Landen, seizoenen en het eerste woord"],
         answer: 0,
-        wrongHints: [null, "Werkwoorden niet zonder reden.", "Niet alle — alleen namen.", "Maanden/dagen krijgen GEEN hoofdletter in NL."],
+        wrongHints: [null, "Schrijf je 'maandag' midden in een zin met een hoofdletter?", "Hoe schrijf je 'januari' midden in een zin?", "Schrijf je 'zomer' midden in een zin met een hoofdletter?"],
       },
       {
-        q: "*'tom zei: ___ ___ ___'* met inhoud 'ik kom morgen'. Wat staat tussen?",
+        q: "*Tom zei: ___* Hoe schrijf je **ik kom morgen** goed achter de dubbele punt?",
         options: ["\"Ik kom morgen.\"", "Ik kom morgen.", "\"ik kom morgen\"", "'Ik kom morgen'"],
         answer: 0,
         wrongHints: [null, "Mist aanhalingstekens.", "Mist hoofdletter + punt binnen aanhalingstekens.", "Kijk naar het einde: waar is het leesteken van de zin gebleven?"],
       },
-      { q: "Welke zin heeft de **juiste komma**?", options: ["Ik kocht brood, kaas en melk.","Ik kocht brood kaas en melk.","Ik kocht, brood kaas en melk.","Ik kocht brood, kaas en, melk."], answer: 0, wrongHints: [null, "Komma's ontbreken.", "Verkeerde positie.", "Kijk goed naar het woordje 'en': hoort daar een komma bij in een opsomming?"] },
-      { q: "Welk **leesteken** sluit een vraag af?", options: ["Vraagteken (?)","Punt (.)","Komma (,)","Uitroepteken (!)"], answer: 0, wrongHints: [null, "Niet vraag.", "Niet einde.", "Uitroep."] },
-      { q: "Welk **leesteken** voor een uitroep?", options: ["!","?",".",","], answer: 0, wrongHints: [null, "Vraag.", "Mededeling.", "Niet einde."] },
-      { q: "Wanneer **hoofdletter** in midden van zin?", options: ["Bij namen", "Altijd", "Nooit", "Alleen na komma"], answer: 0, wrongHints: [null, "Niet altijd.", "Wel soms.", "Niet alleen daar."] },
+      { q: "Welke zin heeft de **juiste komma**?", options: ["Ik kocht brood, kaas en melk.","Ik kocht brood kaas en melk.","Ik kocht, brood kaas en melk.","Ik kocht brood, kaas en, melk."], answer: 0, wrongHints: [null, "Komma's ontbreken.", "Pauzeer je direct na 'kocht'?", "Kijk goed naar het woordje 'en': hoort daar een komma bij in een opsomming?"] },
+      { q: "Welk **leesteken** sluit een vraag af?", options: ["Vraagteken (?)","Punt (.)","Komma (,)","Uitroepteken (!)"], answer: 0, wrongHints: [null, "Een punt zet je achter een gewone zin die iets vertelt.", "Een komma staat midden in een zin, niet aan het eind.", "Dit teken zet je achter een zin met veel gevoel."] },
+      { q: "Welk **leesteken** zet je achter een uitroep?", options: ["!","?",".",","], answer: 0, wrongHints: [null, "Dit teken zet je achter een vraag.", "Dit teken zet je achter een gewone zin die iets vertelt.", "Een komma staat midden in een zin, niet aan het eind."] },
+      { q: "Wanneer krijgt een woord **midden in een zin** een hoofdletter?", options: ["Als het een naam is", "Als het een dag of maand is", "Als het een belangrijk woord is", "Als er een komma vóór staat"], answer: 0, wrongHints: [null, "Hoe schrijf je 'maandag' in 'Ik kom op maandag'?", "Krijgt 'fiets' een hoofdletter als het het belangrijkste woord is?", "Kijk naar 'Ja, dat klopt.' Krijgt 'dat' een hoofdletter?"] },
       { q: "Welke zin is **fout**?", options: ["mijn naam is anna.","Mijn naam is Anna.","Hoe heet jij?","Hallo!"], answer: 0, wrongHints: [null, "Deze klopt qua hoofdletters. Welke zin mist een hoofdletter aan het begin?", "Hoofdletter én vraagteken zitten goed. Zoek de zin zónder hoofdletter.", "Deze is goed. Welke zin begint niet met een hoofdletter?"] },
-      { q: "Een **dubbele punt (:)** zet je vóór?", options: ["Een opsomming of citaat", "Een vraag of een uitroep", "Het einde van een zin", "Elke komma in de zin"], answer: 0, wrongHints: [null, "Daar horen een vraagteken of uitroepteken bij.", "Daar hoort een punt bij.", "Een dubbele punt hoort niet bij komma's."] },
-      { q: "Een **puntkomma (;)** verbindt?", options: ["Twee verwante zinnen","Een opsomming","Niets","Vraag en antwoord"], answer: 0, wrongHints: [null, "Komma's doen dat.", "Wel functie.", "Niet."] },
-      { q: "Welke zin heeft **goede aanhalingstekens**?", options: ["Hij zei: \"Kom!\"","Hij zei: Kom!","\"Hij zei kom!\"","Hij zei \"kom!"], answer: 0, wrongHints: [null, "Aanhalingstekens missen.", "Aanhalingstekens fout.", "Niet gesloten."] },
-      { q: "Welke zin is goed?", options: ["Ik ga naar Amsterdam.","ik ga naar amsterdam.","ik ga naar Amsterdam.","Ik ga naar amsterdam."], answer: 0, wrongHints: [null, "Geen hoofdletters.", "Begin mist.", "Plaats mist."] },
-      { q: "Een **lange streep (—)** kun je gebruiken voor?", options: ["Onderbreking of toelichting", "Een minsom of aftrekking", "Niets — het is geen leesteken", "Een vraag of een uitroep"], answer: 0, wrongHints: [null, "Dat is rekenen, geen taal.", "Wel leesteken.", "Daar zijn vraag- en uitroeptekens voor."] },
+      { q: "Waar zet je een **dubbele punt (:)** vóór?", options: ["Een opsomming of wat iemand zegt", "Een vraag of een uitroep", "Het einde van een gewone zin", "Een reden, zoals met 'omdat'"], answer: 0, wrongHints: [null, "Daar horen een vraagteken of uitroepteken bij.", "Daar hoort een punt bij.", "Vóór 'omdat' zet je soms een komma, geen dubbele punt."] },
+      { q: "Wat verbindt een **puntkomma (;)**?", options: ["Twee zinnen die bij elkaar horen", "Twee woorden tot één woord", "Een naam en de rest van de zin", "Een vraag en het antwoord erop"], answer: 0, wrongHints: [null, "Twee woorden aan elkaar plakken doe je zonder teken, of soms met een streepje.", "Als je iemand aanspreekt, gebruik je een komma: 'Kom je, Lisa?'", "Een vraag en het antwoord schrijf je meestal als losse zinnen, elk met een eigen eindteken."] },
+      { q: "Welke zin heeft **goede aanhalingstekens**?", options: ["Hij zei: \"Kom!\"","Hij zei: Kom!","\"Hij zei kom!\"","Hij zei \"kom!"], answer: 0, wrongHints: [null, "Aanhalingstekens missen.", "Zei hij 'Hij zei kom', of alleen het woord 'Kom'?", "Niet gesloten."] },
+      { q: "Welke zin is goed?", options: ["Ik ga naar Amsterdam.","ik ga naar amsterdam.","ik ga naar Amsterdam.","Ik ga naar amsterdam."], answer: 0, wrongHints: [null, "Kijk naar het eerste woord én naar de plaatsnaam.", "Met wat voor letter begint een zin?", "Amsterdam is een naam. Hoe schrijf je die?"] },
+      { q: "Waarvoor kun je een **lange streep (—)** gebruiken?", options: ["Een extra stukje uitleg in de zin", "Twee delen van één woord", "Het einde van een zin", "Een vraag of een uitroep"], answer: 0, wrongHints: [null, "Dat doet het korte streepje, zoals in 'zee-egel'. De lange streep is iets anders.", "Een zin sluit je af met een punt, vraagteken of uitroepteken.", "Daar zijn vraag- en uitroeptekens voor."] },
       { q: "Welke zin heeft een **fout vraagteken**?", options: ["Ik ga slapen?","Ga je mee?","Hoe heet je?","Waar is mijn boek?"], answer: 0, wrongHints: [null, "Dit is een échte vraag — het vraagteken klopt. Welke zin vraagt eigenlijk niets?", "Een echte vraag; vraagteken hoort hier. Zoek de zin die een mededeling is.", "Dit is een vraag. Welke zin vraagt niets maar eindigt tóch met een vraagteken?"] },
       { q: "Welke **hoofdletter** is fout?", options: ["Ik Eet brood","Ik eet brood","Ik eet brood.","Eet jij brood?"], answer: 0, wrongHints: [null, "Hier staan de hoofdletters goed. Zoek de zin met een hoofdletter midden in de zin.", "Deze klopt. Welke zin heeft een hoofdletter waar dat niet hoort?", "Hoofdletter aan het begin is goed. Zoek de verkeerd geplaatste hoofdletter."] },
-      { q: "Wat staat tussen **haakjes ()**?", options: ["Extra info / verduidelijking", "Een vraag aan de lezer", "Altijd een naam / titel", "Het belangrijkste van de zin"], answer: 0, wrongHints: [null, "Daar is het vraagteken voor.", "Er kán een naam tussen staan, maar daar zijn haakjes niet voor bedoeld.", "Wat tussen haakjes staat, mag je ook overslaan. Is het dan het belangrijkste?"] },
+      { q: "Wat staat tussen **haakjes ()**?", options: ["Extra uitleg bij de zin", "Een vraag aan de lezer", "De naam van de schrijver", "Het belangrijkste van de zin"], answer: 0, wrongHints: [null, "Daar is het vraagteken voor.", "Er kán een naam tussen staan, maar daar zijn haakjes niet voor bedoeld.", "Zou je het belangrijkste deel van een zin tussen haakjes wegstoppen?"] },
       { q: "Welke zin heeft de **juiste komma's** rond de extra informatie?", options: ["Mijn opa, die 80 is, fietst nog elke dag.","Mijn opa die 80 is, fietst nog elke dag.","Mijn opa die 80 is fietst nog elke dag.","Mijn opa, die 80 is fietst nog elke dag."], answer: 0, wrongHints: [null, "Mist de komma vóór de extra informatie.", "Hier staan helemaal geen komma's. Welke woorden vertellen iets extra's over opa?", "Mist de komma ná de extra informatie."] },
-      { q: "Welke afkorting krijgt **geen** hoofdletter?", options: ["bv.","NL","EU","VS"], answer: 0, wrongHints: [null, "Land = hoofdletter.", "Land/instituut.", "Land."] },
-      { q: "Welke zin heeft de **juiste interpunctie**?", options: ["Wat een mooie dag!","Wat een mooie dag.","wat een mooie dag!","Wat een mooie dag?"], answer: 0, wrongHints: [null, "Niet emotie.", "Begin-hoofdletter mist.", "Geen vraag."] },
+      { q: "Welke afkorting krijgt **geen** hoofdletter?", options: ["bv.","NL","EU","VS"], answer: 0, wrongHints: [null, "NL is de afkorting van Nederland. Hoe schrijf je een landnaam?", "EU staat voor Europese Unie. Is dat een naam?", "VS staat voor Verenigde Staten. Is dat een naam?"] },
+      { q: "Welke zin heeft de **juiste interpunctie**?", options: ["Wat een mooie dag!","Wat een mooie dag.","wat een mooie dag!","Wat een mooie dag?"], answer: 0, wrongHints: [null, "Klinkt 'Wat een mooie dag' rustig, of vol gevoel?", "Begin-hoofdletter mist.", "Geen vraag."] },
     ],
   },
 ];

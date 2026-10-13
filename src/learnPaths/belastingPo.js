@@ -90,27 +90,27 @@ const steps = [
       },
       {
         q: "Waarvan betalen we onder andere **belasting**?",
-        options: ["Wegen, scholen en ziekenhuizen", "Snoep en speelgoed van jezelf", "Je eigen verjaardagscadeau", "De vakantie van de buurman"],
+        options: ["Wegen, scholen en ziekenhuizen", "Supermarkten, bakkers en kappers", "Bioscopen, pretparken en snackbars", "Telefoons, tablets en games"],
         answer: 0,
-        wrongHints: [null, "Dat koop je zelf met je eigen geld — is dat 'samen'?", "Een cadeau is voor één persoon. Belasting is voor iedereen samen.", "Belasting is voor dingen die we állemaal gebruiken."],
+        wrongHints: [null, "Die winkels verdienen hun geld met wat jij bij ze koopt. Betaalt de overheid ze?", "Daar betaal je zelf een kaartje of een patatje. Is dat samen betalen?", "Die koop je voor jezelf. Gebruikt iedereen jouw telefoon?"],
       },
       {
         q: "Wie **int** de belasting in Nederland?",
-        options: ["De Belastingdienst", "De supermarkt", "De school", "De spaarpot"],
+        options: ["De Belastingdienst", "De Tweede Kamer", "De Nederlandsche Bank", "De koning"],
         answer: 0,
-        wrongHints: [null, "Daar koop je boodschappen — int die belasting voor het hele land?", "Een school gebruikt belasting juist; int hij het ook?", "Daar bewaar je je eigen geld in."],
+        wrongHints: [null, "Daar zitten politici die vergaderen. Sturen zij iedereen een rekening?", "Die bank let op het geld in Nederland. Haalt hij bij iedereen belasting op?", "Komt de koning bij jou langs om geld op te halen?"],
       },
       {
         q: "Wie betaalt **meestal méér** belasting?",
-        options: ["Wie meer geld verdient", "Wie het jongst is", "Wie het verst weg woont", "Wie het langst is"],
+        options: ["Wie meer geld verdient", "Wie meer kinderen heeft", "Wie in een grote stad woont", "Wie vaker met de bus reist"],
         answer: 0,
-        wrongHints: [null, "Leeftijd bepaalt niet hoeveel je verdient.", "Waar je woont verandert je loon niet.", "Lengte heeft niets met geld te maken."],
+        wrongHints: [null, "Krijg je meer loon als je meer kinderen hebt? Waar hangt belasting op loon van af?", "Verdien je meer als je in de stad woont? Waar hangt belasting op loon van af?", "Een buskaartje betaal je zelf. Waar hangt belasting op loon van af?"],
       },
       {
         q: "Welke van deze dingen wordt **niet** van belasting betaald?",
         options: ["Je eigen ijsje", "De brandweer", "Wegen en fietspaden", "Scholen"],
         answer: 0,
-        wrongHints: [null, "De brandweer wordt juist wél van belasting betaald.", "Wegen worden wél van belasting betaald.", "Scholen worden wél van belasting betaald."],
+        wrongHints: [null, "Krijg jij een rekening als de brandweer bij jou komt blussen?", "Betaal jij zelf voor de stoep waar je op loopt?", "Betaalt jouw gezin de juf elke maand zelf?"],
         uitlegPad: {
           stappen: [
             { titel: "Belasting = samen betalen", tekst: "Belasting gaat naar dingen die iedereen gebruikt: scholen, wegen, ziekenhuizen, brandweer. Een ijsje koop je voor jezelf — dat betaal je uit eigen zak." },
@@ -124,9 +124,9 @@ const steps = [
       },
       {
         q: "Betaal je belasting **alleen** als je werkt?",
-        options: ["Nee, ook als je iets koopt (btw)", "Ja, alleen wie werkt betaalt belasting", "Nee, belasting bestaat niet in Nederland", "Ja, maar alleen voor volwassenen"],
+        options: ["Nee, ook als je iets koopt in de winkel", "Ja, alleen wie werkt betaalt belasting", "Nee, alleen wie een huis of auto heeft", "Ja, en pas vanaf je achttiende"],
         answer: 0,
-        wrongHints: [null, "Denk aan de prijs in de winkel — zit daar ook belasting in?", "Belasting bestaat wel degelijk — van wegen tot scholen.", "Kinderen betalen btw mee als ze iets kopen in de winkel."],
+        wrongHints: [null, "Denk aan de prijs in de winkel — zit daar ook belasting in?", "Heb je alleen met belasting te maken als je een huis hebt? Denk aan de winkel.", "Betaal jij nog niets als je een ijsje koopt? Kijk eens naar de prijs."],
         uitlegPad: {
           stappen: [
             { titel: "Twee soorten", tekst: "Loonbelasting betaal je als je werkt. Btw betaal je als je iets koopt — al van jongs af aan." },
@@ -151,7 +151,7 @@ const steps = [
         wrongHints: [
           null,
           "Die dienst zorgt dat het geld binnenkomt. Beslist hij ook waar het heen gaat?",
-          null,
+          "Winkels geven de btw door. Mogen zij ook kiezen wat ermee gebeurt?",
           "Een werkgever haalt belasting van het loon. Beslist hij waar het geld heen gaat?",
         ],
         uitlegPad: {
@@ -215,7 +215,7 @@ const steps = [
         wrongHints: [
           null,
           "Wie betaalt de winkel dan voor zijn spullen?",
-          null,
+          "Waar zou de overheid dat zakgeld van moeten betalen?",
           "Waarvan worden ziekenhuizen eigenlijk betaald?",
         ],
         uitlegPad: {
@@ -269,13 +269,13 @@ const steps = [
       },
       {
         q: "Welke **twee soorten** belasting kom jij nu al tegen?",
-        options: ["Belasting op loon en btw", "Btw en zakgeld", "Korting en rente", "Loon en spaargeld"],
+        options: ["Belasting op loon en btw", "Btw en statiegeld", "Rente en belasting op loon", "Statiegeld en rente"],
         answer: 0,
         wrongHints: [
           null,
-          "Zakgeld krijg je. Is dat belasting?",
-          null,
-          "Loon verdien je en spaargeld bewaar je. Gaat dat naar de overheid?",
+          "Statiegeld krijg je terug als je de fles inlevert. Houdt de overheid dat?",
+          "Rente krijg je van de bank over je spaargeld. Gaat dat naar de overheid?",
+          "Wie krijgt statiegeld en rente: jij of de overheid?",
         ],
         uitlegPad: {
           stappen: [
@@ -302,7 +302,7 @@ const steps = [
               uitleg: "Belasting die in de prijs zit van wat je koopt.",
             },
           ],
-          theorie: "Toets-kern: twee soorten belasting zijn belasting op loon (als je werkt) en btw (als je iets koopt). Korting, rente, zakgeld en spaargeld zijn geen belasting.",
+          theorie: "Toets-kern: twee soorten belasting zijn belasting op loon (als je werkt) en btw (als je iets koopt). Statiegeld, rente, korting en zakgeld zijn geen belasting.",
           voorbeelden: [
             {
               type: "stap",
@@ -340,7 +340,7 @@ const steps = [
         q: "Wat betekent **nettoloon**?",
         options: ["Wat je overhoudt nadat de belasting eraf is", "Je hele loon, nog vóór de belasting eraf gaat", "Het geld dat je aan belasting moet betalen", "Een extra bonus die bovenop je loon komt"],
         answer: 0,
-        wrongHints: [null, "Dat is juist het bruto — vóór er iets af gaat.", "Netto is wat je houdt, niet wat je betaalt.", "Netto komt er niet bij, er gaat juist iets áf."],
+        wrongHints: [null, "Er is dan nog niets van af gegaan. Is dat wat je overhoudt?", "Netto is wat je houdt, niet wat je betaalt.", "Netto komt er niet bij, er gaat juist iets áf."],
         uitlegPad: {
           stappen: [
             { titel: "Drie woorden op een rij", tekst: "**Bruto** = je hele loon. **Belasting** = wat eraf gaat. **Netto** = wat je overhoudt." },
@@ -420,9 +420,9 @@ const steps = [
       },
       {
         q: "Wie haalt de **belasting van je loon** af?",
-        options: ["Je werkgever, vóórdat je het loon krijgt", "Jij zelf, aan het eind van het jaar", "De supermarkt bij de kassa", "Niemand — loon is altijd netto"],
+        options: ["Je werkgever, vóórdat je het loon krijgt", "Jij zelf, aan het eind van het jaar", "De bank, als het loon binnenkomt", "De gemeente, één keer per maand"],
         answer: 0,
-        wrongHints: [null, "Handig toch, dat het al voor je geregeld is?", "Bij de kassa betaal je btw, niet de belasting over je loon.", "Er gaat juist wél iets af voor je het krijgt."],
+        wrongHints: [null, "Moet je zelf iets uitrekenen voordat je je loon krijgt? Wie maakt je loon over?", "De bank zet het loon alleen op je rekening. Wie rekent je loon uit?", "Wie betaalt jou je loon uit? Die weet hoeveel je verdient."],
       },
       {
         q: "Brutoloon **€200**, belasting **€50**. Hoeveel is het **nettoloon**?",
@@ -465,7 +465,7 @@ const steps = [
           null,
           "Komt de belasting erbij, of gaat hij eraf?",
           "Reken nog eens rustig: €400 − €90.",
-          null,
+          "Bij bruto is er nog niets afgehaald.",
         ],
         uitlegPad: {
           stappen: [
@@ -524,7 +524,7 @@ const steps = [
           null,
           "Dat zou 20% van €100 zijn. Is het loon hier groter?",
           "Dat is wat je overhoudt, niet de belasting.",
-          null,
+          "Heb je €20 afgetrokken? Is 20% van €500 echt €20?",
         ],
         uitlegPad: {
           stappen: [
@@ -645,9 +645,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **btw**?",
-        options: ["Belasting die al in de winkelprijs zit", "Korting bij de kassa", "Geld dat je terugkrijgt bij sparen", "Een soort spaarpot"],
+        options: ["Belasting die al in de winkelprijs zit", "Belasting die je bij de kassa nog bijbetaalt", "Korting die je krijgt als je veel koopt", "Geld dat je terugkrijgt voor lege flessen"],
         answer: 0,
-        wrongHints: [null, "Korting maakt iets goedkoper; btw is juist belasting.", "Dat is rente — dat krijg je, btw betaal je.", "In een spaarpot bewaar je je eigen geld."],
+        wrongHints: [null, "Kijk naar het prijskaartje. Betaal je bij de kassa meer dan wat erop staat?", "Korting maakt iets goedkoper. Is btw korting of belasting?", "Dat is statiegeld. Btw krijg je niet terug."],
         uitlegPad: {
           stappen: [
             { titel: "Btw zit in de prijs", tekst: "Btw is belasting die je betaalt als je iets koopt. Het zit al **in de prijs** verstopt — je ziet het niet apart op het prijskaartje." },
@@ -673,9 +673,9 @@ const steps = [
       },
       {
         q: "Welk **btw-tarief** geldt voor **eten en drinken**?",
-        options: ["9% (laag tarief)", "21% (hoog tarief)", "50%", "100%"],
+        options: ["9%", "21%", "6%", "0%"],
         answer: 0,
-        wrongHints: [null, "Dat hoge tarief is voor de meeste andere spullen.", "Zoveel belasting zou eten wel heel duur maken.", "Dan zou alles dubbel zo duur zijn — te veel."],
+        wrongHints: [null, "Dat is het hoge tarief. Hoort eten daarbij?", "Zo hoog was het lage tarief vroeger, tot 2019. Hoeveel is het nu?", "Zit er op eten echt helemaal geen btw?"],
       },
       {
         q: "Een knuffel kost **€10**. Daarvan is **€1,74** btw. Hoeveel is voor de **knuffel zelf**?",
@@ -705,16 +705,16 @@ const steps = [
         },
       },
       {
-        q: "In de prijs van bijna **alles wat je koopt** zit?",
-        options: ["Een beetje btw", "Helemaal geen belasting", "Korting", "Rente"],
+        q: "Wat zit er in de prijs van bijna **alles wat je koopt**?",
+        options: ["Btw", "Statiegeld", "Rente", "Korting"],
         answer: 0,
-        wrongHints: [null, "Toch wel — bij bijna elke aankoop betaal je btw mee.", "Korting is een prijs die lager wordt, geen belasting.", "Rente krijg je bij sparen, niet bij kopen."],
+        wrongHints: [null, "Statiegeld zit alleen op flessen en blikjes. Zit het in bijna alles?", "Rente hoort bij sparen en lenen, niet bij kopen.", "Korting krijg je soms. Zit het in bijna elke prijs?"],
       },
       {
         q: "Welk **btw-tarief** geldt voor een **stuk fruit** van €1,50?",
-        options: ["Laag tarief van 9% — op eten", "Hoog tarief van 21% — op alles", "Geen btw — eten is vrijgesteld", "21% — speciaal tarief voor groente en fruit"],
+        options: ["9%, het lage tarief voor eten", "21%, het hoge tarief voor spullen", "0%, want fruit is gezond eten", "6%, een apart tarief voor fruit"],
         answer: 0,
-        wrongHints: [null, "21% is het hoge tarief voor de meeste andere spullen, niet voor eten.", "Er zit wél btw op eten.", "Bestaat er wel een apart tarief voor fruit? Denk aan de twee tarieven."],
+        wrongHints: [null, "Is fruit een 'spul' zoals speelgoed, of is het eten?", "Er zit wél btw op eten, ook op gezond eten.", "Er zijn maar twee tarieven. Bestaat er een apart tarief voor fruit?"],
         uitlegPad: {
           stappen: [
             { titel: "Twee btw-tarieven", tekst: "9% (laag) op eten, drinken en boeken. 21% (hoog) op bijna al het andere." },
@@ -751,8 +751,8 @@ const steps = [
         wrongHints: [
           null,
           "Brood is eten. Welk tarief hoort bij eten?",
-          null,
-          "Voor boeken geldt hetzelfde tarief als voor eten.",
+          "Melk is drinken. Welk tarief hoort bij eten en drinken?",
+          "Is een boek een gewoon 'spul' zoals speelgoed, of geldt daar een uitzondering voor?",
         ],
         uitlegPad: {
           stappen: [
@@ -805,13 +805,13 @@ const steps = [
       },
       {
         q: "Je koopt een **leesboek**. Welk btw-tarief zit in de prijs?",
-        options: ["9%", "21%", "0%", "50%"],
+        options: ["9%", "21%", "0%", "6%"],
         answer: 0,
         wrongHints: [
           null,
           "Dat hoge tarief is voor de meeste andere spullen. Hoort een boek daarbij?",
-          null,
-          "Dan zou de helft van de prijs belasting zijn. Klopt dat?",
+          "Er zit op bijna alles btw, ook op boeken.",
+          "Zo hoog was het lage tarief vroeger, tot 2019. Hoeveel is het nu?",
         ],
         uitlegPad: {
           stappen: [
@@ -870,7 +870,7 @@ const steps = [
           null,
           "De btw zit er al in — tel je hem er dan nog eens bij?",
           "Dat is alleen de btw, niet het sap.",
-          null,
+          "Daar zit de btw nog in; haal die er eerst af.",
         ],
         uitlegPad: {
           stappen: [
@@ -928,7 +928,7 @@ const steps = [
         wrongHints: [
           null,
           "Moet jij na het boodschappen doen nog iets opsturen?",
-          null,
+          "De bank verwerkt alleen je betaling. Wie heeft de btw van jou gekregen?",
           "Waar heb je de btw eigenlijk betaald?",
         ],
         uitlegPad: {
@@ -990,13 +990,13 @@ const steps = [
       "Mix-toets in Doorstroomtoets-stijl. Door elkaar: wat is belasting, loon (bruto → netto) en btw in de prijs. Reken rustig en kijk goed of je moet **optellen of aftrekken**.\n\nVeel succes!",
     checks: [
       {
-        q: "Belasting gebruiken we om **samen** te betalen voor?",
-        options: ["Wegen, scholen en ziekenhuizen", "Jouw eigen snoep en speelgoed", "Een cadeau voor één kind", "Je eigen fiets en kleren"],
+        q: "Waarvoor betalen we **samen** met belastinggeld?",
+        options: ["Wegen, scholen en ziekenhuizen", "Kleding, fietsen en speelgoed", "Winkels, cafés en restaurants", "Vakanties, uitjes en feestjes"],
         answer: 0,
-        wrongHints: [null, "Dat koop je zelf — niet 'samen'.", "Een cadeau is voor één persoon.", "Koop je dat samen met iedereen, of koop je dat zelf?"],
+        wrongHints: [null, "Die koop je zelf, voor jezelf. Is dat samen betalen?", "Daar betaal je zelf als je er iets koopt. Betaalt de overheid ze?", "Een uitje betaal je zelf. Gebruikt iedereen het samen?"],
       },
       {
-        q: "Brutoloon **€50**, belasting **€10**. **Netto**?",
+        q: "Brutoloon **€50**, belasting **€10**. Hoeveel is het **nettoloon**?",
         options: ["€40", "€60", "€10", "€50"],
         answer: 0,
         wrongHints: [null, "De belasting gaat eráf, niet erbij.", "Dat is alleen de belasting.", "Bij bruto is nog niets afgehaald."],
@@ -1009,40 +1009,40 @@ const steps = [
       },
       {
         q: "Welk **btw-tarief** geldt voor de meeste spullen (speelgoed, kleding)?",
-        options: ["21% (hoog tarief)", "9% (laag tarief)", "0%", "100%"],
+        options: ["21%", "9%", "0%", "6%"],
         answer: 0,
-        wrongHints: [null, "Dat lage tarief is juist voor eten en drinken.", "Er zit wél btw op, dus niet 0.", "Dat zou alles dubbel zo duur maken."],
+        wrongHints: [null, "Dat lage tarief geldt voor eten en drinken. Is speelgoed eten?", "Er zit wél btw op, dus niet 0.", "Zo laag is het tarief op speelgoed niet. Er is een laag en een hoog tarief."],
       },
       {
-        q: "Een bal kost **€20**, daarvan is **€3,47** btw. De bal **zelf**?",
+        q: "Een bal kost **€20**, daarvan is **€3,47** btw. Hoeveel kost de bal **zelf**?",
         options: ["€16,53", "€23,47", "€3,47", "€20"],
         answer: 0,
         wrongHints: [null, "De btw zit er al in — niet nog eens optellen.", "Dat is alleen de btw.", "Daar zit de btw nog in."],
       },
       {
         q: "Welke **dienst van de overheid** zorgt dat de belasting binnenkomt?",
-        options: ["De Belastingdienst", "De juf", "De winkel", "De spaarpot"],
+        options: ["De Belastingdienst", "De politie", "De Nederlandsche Bank", "Het ministerie van Onderwijs"],
         answer: 0,
-        wrongHints: [null, "Een juf wordt juist van belasting betaald.", "De winkel geeft btw door, maar is geen dienst van de overheid.", "Daar bewaar je je eigen geld."],
+        wrongHints: [null, "De politie zorgt voor veiligheid. Haalt zij ook belasting op?", "Die bank let op het geld in Nederland. Stuurt hij iedereen een belastingbrief?", "Dat ministerie geeft geld uit aan scholen. Haalt het ook geld op?"],
       },
       {
         q: "Wat is **bruto**?",
         options: ["Je hele loon, vóór de belasting eraf gaat", "Wat je overhoudt als de belasting eraf is", "Het deel van je loon dat naar belasting gaat", "Een bonus die je bovenop je loon krijgt"],
         answer: 0,
-        wrongHints: [null, "Dat is netto — wat overblijft.", "Bruto is het geheel, niet alleen het afgehaalde stuk.", "Er gaat juist iets af, het komt er niet bij."],
+        wrongHints: [null, "Dan is de belasting er al af. Is dat het hele loon?", "Bruto is het geheel, niet alleen het afgehaalde stuk.", "Er gaat juist iets af, het komt er niet bij."],
       },
       {
-        q: "Btw zit **in de prijs** — dus bij de kassa betaal je?",
-        options: ["Precies de prijs van het kaartje", "Altijd nog extra btw erbovenop", "Iets minder dan op het kaartje staat", "Alleen de btw, niet de prijs"],
+        q: "Op het prijskaartje van een spel staat **€20**. Hoeveel betaal je bij de kassa?",
+        options: ["€20, want dat staat op het kaartje", "€24,20, want er komt 21% btw bij", "€15,80, want de btw gaat er nog af", "€21,80, want er komt 9% btw bij"],
         answer: 0,
-        wrongHints: [null, "De btw zit er al in, dus er komt niets bij.", "Het kaartje is de prijs die je betaalt, niet minder.", "De btw is maar een klein deel van de prijs. Betaal je alleen dat stukje?"],
+        wrongHints: [null, "Staat de btw al in de prijs op het kaartje, of komt hij er nog bij?", "Haalt de winkel de btw van jouw prijs af? Wie betaalt de btw dan?", "Telt de kassa nog iets op bij de prijs op het kaartje?"],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "Brutoloon **€300**, belasting **€45**. Hoeveel is het **nettoloon**?",
         options: ["€255", "€345", "€45", "€265"],
         answer: 0,
-        wrongHints: [null, "Gaat de belasting erbij of eraf?", "Dat is alleen de belasting.", null],
+        wrongHints: [null, "Gaat de belasting erbij of eraf?", "Dat is alleen de belasting.", "Reken nog eens rustig: €300 − €45."],
       },
       {
         q: "Hoeveel is **20%** van **€400**?",
@@ -1051,7 +1051,7 @@ const steps = [
         wrongHints: [
           null,
           "Dat is 2% — kijk nog eens naar het getal.",
-          null,
+          "Dat hou je over als 20% eraf gaat. Hoeveel is die 20% zelf?",
           "Dat is 10%. Hoeveel keer zoveel is 20%?",
         ],
       },

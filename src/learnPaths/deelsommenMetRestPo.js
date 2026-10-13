@@ -150,9 +150,9 @@ const steps = [
       },
       {
         q: "Mag de rest bij 19 ÷ 4 gelijk zijn aan 4?",
-        options: ["Nee", "Ja, dat mag", "Alleen bij grote getallen", "Dat hangt af van de som"],
+        options: ["Nee, dan past de 4 er nog een keer in", "Ja, de rest mag zo groot zijn als de deler", "Ja, maar alleen bij grote getallen", "Nee, want 19 is een oneven getal"],
         answer: 0,
-        wrongHints: [null, "Kijk eens: als er nog 4 overblijven, kun je nog één keer verdelen.", "Ook bij grote getallen geldt: is de rest even groot als de deler, dan kun je nog een keer verdelen.", "De rest is altijd kleiner dan de deler."],
+        wrongHints: [null, "Als er nog 4 over zijn, kun je die dan niet nog een keer verdelen?", "Maakt de grootte van het getal uit? Kijk naar de rest en de deler.", "Of 19 even of oneven is, maakt niet uit. Kijk naar de rest en de deler."],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent 'gelijk aan de deler'?", tekst: "Als er nog precies zo veel over is als de deler zelf, kun je daarmee eigenlijk nog een keer een groep vormen." },
@@ -178,7 +178,7 @@ const steps = [
           null,
           "Reken terug: 4 × 9 en dan de rest erbij. Kom je dan op 38?",
           "Dat getal keer de deler gaat over 38 heen.",
-          null,
+          "Reken terug: 3 × 9 + 8. Kom je dan op 38?",
         ],
         uitlegPad: {
           stappen: [
@@ -221,7 +221,7 @@ const steps = [
         q: "Welke deelsom komt precies uit (rest 0)?",
         options: ["42 ÷ 7", "43 ÷ 6", "26 ÷ 4", "33 ÷ 5"],
         answer: 0,
-        wrongHints: [null, "Zit 43 in de tafel van 6?", null, "Zit 33 in de tafel van 5?"],
+        wrongHints: [null, "Zit 43 in de tafel van 6?", "Zit 26 in de tafel van 4?", "Zit 33 in de tafel van 5?"],
         uitlegPad: {
           stappen: [
             {
@@ -266,7 +266,7 @@ const steps = [
         wrongHints: [
           null,
           "Dat is hoe vaak 8 erin past, niet wat overblijft.",
-          null,
+          "Reken terug: hoeveel is 7 × 8? Wat blijft er dan over van 62?",
           "De rest moet kleiner zijn dan de deler.",
         ],
         uitlegPad: {
@@ -321,7 +321,7 @@ const steps = [
         q: "Er gaan 50 kinderen op excursie. In een bus passen 8 kinderen. Hoeveel bussen zijn er nodig?",
         options: ["7", "6", "8", "6 rest 2"],
         answer: 0,
-        wrongHints: [null, "Dan blijven er 2 kinderen staan — die moeten ook mee.", "Te veel — reken nog eens.", "Een aantal bussen is een heel getal."],
+        wrongHints: [null, "Dan blijven er 2 kinderen staan — die moeten ook mee.", "Hoeveel kinderen passen er in 8 bussen? Heb je die allemaal nodig?", "Een aantal bussen is een heel getal."],
         uitlegPad: {
           stappen: [
             { titel: "Hoeveel bussen zijn helemaal vol?", tekst: "Reken 50 ÷ 8 uit met rest. Dat vertelt je hoeveel bussen je helemaal kunt vullen, en hoeveel kinderen daarna nog wachten." },
@@ -364,7 +364,7 @@ const steps = [
         q: "In een lift passen 5 personen. Er staan 12 mensen te wachten. Hoe vaak moet de lift minstens omhoog?",
         options: ["3 keer", "2 keer", "4 keer", "2 rest 2"],
         answer: 0,
-        wrongHints: [null, "Dan blijven er 2 mensen staan.", "Te veel.", "Een aantal keer is een heel getal."],
+        wrongHints: [null, "Dan blijven er 2 mensen staan.", "Hoeveel mensen passen er in 4 ritten? Zijn er zoveel?", "Een aantal keer is een heel getal."],
         uitlegPad: {
           stappen: [
             { titel: "Hoeveel volle ritten kan de lift maken?", tekst: "12 ÷ 5 vertelt je hoeveel keer de lift helemaal vol kan, en hoeveel mensen daarna nog wachten." },
@@ -385,7 +385,7 @@ const steps = [
         q: "Je spaart €5 per week. Een spel kost €38. Na hoeveel weken heb je genoeg gespaard?",
         options: ["8 weken", "7 weken", "6 weken", "7,6 weken"],
         answer: 0,
-        wrongHints: [null, "Na 7 weken heb je €35 — net niet genoeg.", "Veel te weinig.", "Een aantal weken is een heel getal."],
+        wrongHints: [null, "Na 7 weken heb je €35 — net niet genoeg.", "Na 6 weken heb je €30. Is dat genoeg?", "Een aantal weken is een heel getal."],
         uitlegPad: {
           stappen: [
             { titel: "Reken uit hoeveel volle weken je spaart", tekst: "38 ÷ 5 vertelt je hoeveel hele weken van €5 je al gespaard hebt, en hoeveel euro je dan nog mist." },
@@ -424,10 +424,10 @@ const steps = [
         },
       },
       {
-        q: "Dozen met 6 boeken. Je wilt 45 boeken verzenden. Hoeveel dozen heb je nodig?",
+        q: "In een doos passen 6 boeken. Je wilt 45 boeken verzenden. Hoeveel dozen heb je nodig?",
         options: ["8 dozen", "7 dozen", "7 rest 3", "9 dozen"],
         answer: 0,
-        wrongHints: [null, "In 7 dozen passen maar 42 boeken — 3 blijven over.", "Een aantal dozen is een heel getal.", "Te veel."],
+        wrongHints: [null, "In 7 dozen passen maar 42 boeken — 3 blijven over.", "Een aantal dozen is een heel getal.", "Passen 45 boeken al in minder dozen? Reken 8 × 6."],
         uitlegPad: {
           stappen: [
             { titel: "Hoeveel volle dozen kun je vullen?", tekst: "45 ÷ 6 vertelt je hoeveel dozen je helemaal kunt vullen, en hoeveel boeken daarna nog over zijn." },
@@ -452,7 +452,7 @@ const steps = [
         wrongHints: [
           null,
           "Dan hebben 3 kinderen geen slaapplek.",
-          null,
+          "Passen 31 kinderen al in minder tenten? Reken 8 × 4.",
           "Een aantal tenten is een heel getal.",
         ],
         uitlegPad: {
@@ -547,7 +547,7 @@ const steps = [
           null,
           "Dan moeten 4 gasten blijven staan.",
           "Is dat het kleinste aantal dat genoeg is?",
-          null,
+          "Een aantal tafels is een heel getal.",
         ],
         uitlegPad: {
           stappen: [
@@ -593,7 +593,7 @@ const steps = [
         wrongHints: [
           null,
           "Dan krijgen niet alle leerlingen een krentenbol.",
-          null,
+          "Hoeveel krentenbollen heb je met 5 zakken? Is dat al genoeg?",
           "Je koopt een heel aantal zakken.",
         ],
         uitlegPad: {
@@ -648,7 +648,7 @@ const steps = [
         q: "Je hebt 26 eieren. In een doos passen er 6. Hoeveel volle dozen kun je maken?",
         options: ["4", "5", "6", "4 rest 2"],
         answer: 0,
-        wrongHints: [null, "De 5e doos zou niet vol zijn (maar 2 eieren).", "Te veel.", "Een aantal dozen is een heel getal."],
+        wrongHints: [null, "De 5e doos zou niet vol zijn (maar 2 eieren).", "In 6 dozen passen 36 eieren. Heb je er zoveel?", "Een aantal dozen is een heel getal."],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent 'vol'?", tekst: "Een doos van 6 is pas vol als er precies 6 eieren in zitten — niet meer en niet minder." },
@@ -711,7 +711,7 @@ const steps = [
         q: "In een verhaaltje staat: 'Hoeveel hele weken zitten er in 45 dagen?' (1 week = 7 dagen)",
         options: ["6 weken", "7 weken", "6 rest 3", "45"],
         answer: 0,
-        wrongHints: [null, "Reken na: hoeveel dagen zijn 7 hele weken? Heb je die?", "Dat is de rest, geen aantal weken.", "Dat is het aantal dagen, niet weken."],
+        wrongHints: [null, "Reken na: hoeveel dagen zijn 7 hele weken? Heb je die?", "De vraag is hoeveel hele weken. Wat doe je met wat overblijft?", "Dat is het aantal dagen, niet weken."],
         uitlegPad: {
           stappen: [
             { titel: "Hoeveel hele weken zitten er in de dagen?", tekst: "Eén week heeft 7 dagen. Reken uit hoe vaak 7 dagen helemaal past in 45 dagen." },
@@ -732,7 +732,7 @@ const steps = [
         q: "Je hebt 58 kleurpotloden. In een bakje passen 10. Hoeveel volle bakjes kun je vullen?",
         options: ["5", "6", "5 rest 8", "10"],
         answer: 0,
-        wrongHints: [null, "Een 6e bakje heeft maar 8 potloden — niet vol.", "Dat is de rest, geen aantal bakjes.", "Dat is het aantal per bakje."],
+        wrongHints: [null, "Een 6e bakje heeft maar 8 potloden — niet vol.", "De vraag is hoeveel vólle bakjes. Wat doe je met wat overblijft?", "Dat is het aantal per bakje."],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent een 'vol' bakje?", tekst: "Een bakje van tien is pas vol als er precies tien potloden in zitten." },
@@ -753,7 +753,7 @@ const steps = [
         q: "Je hebt 38 foto's. Per pagina passen er 4. Hoeveel volle pagina's heb je?",
         options: ["9", "10", "9 rest 2", "4"],
         answer: 0,
-        wrongHints: [null, "De 10e pagina zou maar 2 foto's hebben — niet vol.", "Dat is de rest, geen aantal pagina's.", "Dat is het aantal per pagina."],
+        wrongHints: [null, "De 10e pagina zou maar 2 foto's hebben — niet vol.", "De vraag is hoeveel vólle pagina's. Wat doe je met wat overblijft?", "Dat is het aantal per pagina."],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent een 'volle' pagina?", tekst: "Een pagina is pas vol als er precies vier foto's op staan." },
@@ -786,7 +786,7 @@ const steps = [
         q: "Een klas heeft 45 leerlingen. Ze maken groepjes van 4. Hoeveel volledige groepjes van 4 zijn er?",
         options: ["11", "12", "11 rest 1", "9"],
         answer: 0,
-        wrongHints: [null, "Het 12e groepje zou maar 1 leerling hebben — niet vol.", "Dat is de rest, geen aantal groepjes.", "Te weinig."],
+        wrongHints: [null, "Het 12e groepje zou maar 1 leerling hebben — niet vol.", "De vraag is hoeveel volledige groepjes. Wat doe je met wat overblijft?", "Hoeveel leerlingen zitten er in 9 groepjes? Kunnen er meer groepjes bij?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent een 'volledig' groepje?", tekst: "Een groepje van vier is pas volledig als er precies vier leerlingen in zitten." },
@@ -828,7 +828,7 @@ const steps = [
         q: "Voor 50 appels heb je dozen nodig. In een doos passen 12 appels. Hoeveel dozen heb je nodig?",
         options: ["5", "4", "4 rest 2", "6"],
         answer: 0,
-        wrongHints: [null, "In 4 dozen passen maar 48 appels — 2 blijven over.", "Dat is de rest, geen aantal dozen.", "Te veel."],
+        wrongHints: [null, "In 4 dozen passen maar 48 appels — 2 blijven over.", "Een aantal dozen is een heel getal. Moeten de 2 appels die overblijven ook mee?", "Hoeveel appels passen in 6 dozen? Heb je die allemaal nodig?"],
         uitlegPad: {
           stappen: [
             { titel: "Hoeveel dozen zijn helemaal vol?", tekst: "Reken uit hoe vaak twaalf appels helemaal in vijftig appels passen." },
@@ -849,9 +849,9 @@ const steps = [
         q: "Welke vraag vraagt om naar BENEDEN afronden?",
         options: [
           "Hoeveel volle kratten van 6 flessen maak je van 20 flessen?",
-          "Hoeveel kratten heb je nodig voor 20 flessen?",
-          "Hoeveel bussen zijn er nodig voor 20 kinderen?",
-          "Na hoeveel weken sparen heb je genoeg?",
+          "Hoeveel kratten van 6 heb je nodig voor 20 flessen?",
+          "Hoeveel bussen van 8 plaatsen zijn nodig voor 20 kinderen?",
+          "Na hoeveel weken sparen heb je genoeg voor een spel van €20?",
         ],
         answer: 0,
         wrongHints: [null, "'Nodig' betekent dat de rest ook mee moet → naar boven.", "'Nodig' → naar boven.", "'Genoeg' → naar boven."],
@@ -917,7 +917,7 @@ const steps = [
         q: "Bij een wedstrijd mogen teams van 3 meedoen. Er zijn 22 spelers. Hoeveel volledige teams zijn er?",
         options: ["7", "8", "7 rest 1", "6"],
         answer: 0,
-        wrongHints: [null, "Een 8e team zou maar 1 speler hebben — niet vol.", "Dat is de rest, geen aantal teams.", "Reken 22 ÷ 3 nog eens."],
+        wrongHints: [null, "Een 8e team zou maar 1 speler hebben — niet vol.", "De vraag is hoeveel volledige teams. Wat doe je met wat overblijft?", "Reken 22 ÷ 3 nog eens."],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent een 'volledig' team?", tekst: "Een team van drie spelers is pas volledig als er precies drie spelers in zitten." },
@@ -939,7 +939,7 @@ const steps = [
         q: "Bij de musical komen 60 ouders of verzorgers kijken. In een rij passen 9 stoelen. Hoeveel rijen zijn er minstens nodig zodat iedereen zit?",
         options: ["7", "6", "8", "6 rest 6"],
         answer: 0,
-        wrongHints: [null, "Dan moeten er 6 mensen blijven staan.", null, "Een aantal rijen is een heel getal."],
+        wrongHints: [null, "Dan moeten er 6 mensen blijven staan.", "Passen 60 mensen al in minder rijen? Reken 7 × 9.", "Een aantal rijen is een heel getal."],
         uitlegPad: {
           stappen: [
             {

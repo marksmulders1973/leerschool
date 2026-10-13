@@ -1112,15 +1112,15 @@ const steps = [
       },
       {
         q: "**Welke as** is meestal **horizontaal** in een grafiek?",
-        options: ["x-as", "y-as", "z-as", "geen"],
+        options: ["x-as", "y-as", "z-as", "symmetrie-as"],
         answer: 0,
-        wrongHints: [null, "Verticaal.", "3D — niet meestal.", "Wel een as."],
+        wrongHints: [null, "Loopt de y-as plat of rechtop? Kijk eens naar een grafiek in je boek.", "Een z-as gebruik je alleen bij een 3D-tekening. Welke as ligt in een gewone grafiek plat?", "Een symmetrie-as hoort bij spiegelen, niet bij een grafiek."],
       },
       {
         q: "Een grafiek-as loopt van **10 t/m 20** in stappen van 1. Hoeveel **getallen** staan er op de as?",
         options: ["11", "10", "20", "21"],
         answer: 0,
-        wrongHints: [null, "'t/m' betekent dat zowel het begin als het einde meetellen — tel eens op je vingers van 10 tot en met 20.", "Niet de begin/eind.", "Niet."],
+        wrongHints: [null, "'t/m' betekent dat zowel het begin als het einde meetellen — tel eens op je vingers van 10 tot en met 20.", "20 is het laatste getal op de as, niet het aantal getallen. Tel ze eens.", "21? Tel nog eens precies: 10, 11, 12 ... 20. Hoeveel getallen zijn dat?"],
         uitlegPad: {
           stappen: [
             { titel: "Tellen 'tot en met'", tekst: "Bij '10 t/m 20' zijn beide grenzen INCLUSIEF. Tel: 10, 11, 12, ..., 20 → dat zijn 11 getallen." },
@@ -1141,13 +1141,13 @@ const steps = [
         q: "De percentages in een **cirkeldiagram** zijn samen ___ %?",
         options: ["100", "50", "75", "200"],
         answer: 0,
-        wrongHints: [null, "Tekort.", "Tekort.", "Te veel — de hele cirkel is alles samen."],
+        wrongHints: [null, "50% is een halve cirkel. Hoeveel is de hele cirkel?", "75% is driekwart cirkel. Dan mist er nog een stuk.", "Te veel — de hele cirkel is alles samen."],
       },
       {
         q: "Een **histogram** is een ___?",
         options: ['Staafdiagram met staven tegen elkaar', 'Lijngrafiek die punten verbindt', 'Cirkeldiagram in gekleurde stukken', 'Tabel met getallen in rijen en kolommen'],
         answer: 0,
-        wrongHints: [null, 'Een histogram bestaat wel uit staven.', 'Een cirkeldiagram gebruik je voor delen van een geheel.', 'Een histogram is een soort diagram, geen tabel.'],
+        wrongHints: [null, 'Een histogram verbindt geen punten met een lijn. Hoe ziet het er dan uit?', 'Een cirkeldiagram gebruik je voor delen van een geheel.', 'Een histogram is een soort diagram, geen tabel.'],
       },
       {
         q: "Tabel temperatuur: 8:00 12 °C, 9:00 14 °C, 10:00 19 °C, 11:00 20 °C. Tussen welke 2 uren is de **grootste stijging**?",
@@ -1159,7 +1159,7 @@ const steps = [
         q: "**Lesrooster:** ma t/m vr begint school om 8:30, behalve op woensdag (9:15). Welke dag begin je **later**?",
         options: ["Woensdag", "Maandag", "Vrijdag", "Elke dag even laat"],
         answer: 0,
-        wrongHints: [null, "Maandag staat op de gewone tijd.", "Vrijdag ook.", "Lees het rooster nog eens — er is één uitzondering."],
+        wrongHints: [null, "Maandag staat op de gewone tijd.", "Lees het rooster: geldt voor vrijdag de gewone tijd of de uitzondering?", "Lees het rooster nog eens — er is één uitzondering."],
         explanation: "Het woord 'behalve' wijst de uitzondering aan: **woensdag** begint om 9:15 — 45 minuten later.",
       },
       {
@@ -1213,9 +1213,9 @@ const steps = [
       },
       {
         q: "Wat is het **verschil** tussen een tabel en een grafiek?",
-        options: ["Een tabel toont precieze getallen, een grafiek toont het verloop in één oogopslag", "Een grafiek toont precieze getallen, een tabel toont het verloop in één oogopslag", "Een tabel is altijd groter en bevat daardoor altijd meer informatie", "Er is geen verschil: ze laten altijd precies hetzelfde zien"],
+        options: ["Een tabel toont precieze getallen, een grafiek toont het verloop in één oogopslag", "Een grafiek toont precieze getallen, een tabel toont het verloop in één oogopslag", "Een tabel bevat meer informatie, een grafiek bevat minder informatie", "Een tabel gebruik je voor tekst, een grafiek gebruik je voor getallen"],
         answer: 0,
-        wrongHints: [null, "Draai het eens om: waar lees je een exact getal makkelijker af?", "Grootte zegt niets over het verschil.", "Probeer uit een grafiek eens een exact getal af te lezen — lukt dat net zo makkelijk?"],
+        wrongHints: [null, "Draai het eens om: waar lees je een exact getal makkelijker af?", "Dezelfde getallen kun je in een tabel én in een grafiek zetten. Wat is dan het verschil?", "In een tabel staan ook vaak getallen. Waar lees je een exact getal het makkelijkst af?"],
         explanation: "**Tabel** = exacte getallen opzoeken. **Grafiek** = patroon/verloop zien (stijgt het? daalt het?). Allebei nuttig, voor verschillende vragen.",
       },
       {
@@ -1263,10 +1263,10 @@ const steps = [
       "De toets test of je weet hoe je **dingen opzoekt** in een boek of atlas.\n\n**Woordenboek**:\nAlle woorden staan **op alfabet** *(A → Z)*.\n• Eerst kijken naar **eerste letter**.\n• Bij gelijke eerste letter → **tweede letter** vergelijken.\n• Etc.\n\n**Voorbeeld — welk woord staat eerder?**\n• **'beest'** staat vóór **'beker'** *(b-e-e- staat vóór b-e-k-)*.\n• **'kat'** staat vóór **'kater'** *(kortere komt eerst als begin gelijk)*.\n• **'tafel'** staat na **'paard'** *(p staat voor t)*.\n\n**Truc** — gebruik **hoofdwoord** boven aan de pagina:\nLinker pagina-hoofdwoord = **eerste** woord op die pagina.\nRechter pagina-hoofdwoord = **laatste** woord op die pagina.\nZit je gezochte woord daartussen? → op deze 2 pagina's.\n\n**Atlas**:\nEen atlas heeft:\n• **Inhoudsopgave** voorin — waar staat welke kaart?\n• **Index** achterin — waar staat welke stad/rivier?\n\n**Voorbeeld — index gebruiken**:\n*'Waar staat Rotterdam?'*\nIndex: \"Rotterdam ... 14 B3\"\n→ Ga naar **bladzijde 14**, vak **B3**.\n\n**Bibliotheek-systeem**:\n• Boeken op alfabet op auteur achternaam.\n• Of op onderwerp-nummer (Dewey, bv. 500 = natuurwetenschappen).\n\n**Inhoudsopgave gebruiken**:\nVoorin een boek/atlas staat een lijst van **hoofdstukken + bladzijde-nummers**:\n• Hoofdstuk 1 — Klimaat — blz 5\n• Hoofdstuk 2 — Bevolking — blz 12\n• etc.\n\n**Index gebruiken**:\nAchterin een boek staat een lijst van **onderwerpen op alfabet** met paginanummers:\n• atoom ... 23, 45\n• bacterie ... 67\n• cel ... 12, 34, 89\n\nZo zoek je snel een onderwerp.\n\n**toetsvragen**:\n*'Wat doet de index van een atlas?'*\n→ Geeft je het bladzijde-nummer + kaart-vak voor een plaatsnaam.\n\n*'Wat staat in de inhoudsopgave?'*\n→ Een lijst van hoofdstukken met bladzijde-nummers.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".",
     checks: [
       {
-        q: "Welk woord staat **eerder** in het woordenboek: 'appel' of 'auto'?",
-        options: ["appel", "auto", "Beide gelijk", "Niet te zeggen"],
+        q: "Welk woord staat het **eerst** in het woordenboek?",
+        options: ["appel", "auto", "arm", "avond"],
         answer: 0,
-        wrongHints: [null, "Beide beginnen met een a — kijk naar de 2e letter: p of u, welke komt eerder in het alfabet?", "Verschillende woorden.", "Wel — alfabetisch."],
+        wrongHints: [null, "Alle woorden beginnen met een a. Vergelijk daarom de tweede letter.", "Kijk naar de tweede letter van elk woord. Welke komt het eerst in het alfabet?", "De v staat ver achter in het alfabet. Vergelijk de tweede letters."],
         uitlegPad: {
           stappen: [
             { titel: "Vergelijk letter voor letter", tekst: "Beide woorden beginnen met 'a'. Dan: 'appel' = a-p, 'auto' = a-u. In alfabet: p (16e letter) komt vóór u (21e letter)." },
@@ -1285,15 +1285,15 @@ const steps = [
       },
       {
         q: "Waar zoek je een **plaatsnaam** in een atlas?",
-        options: ["In de index", "In hoofdstuk 1", "Op de eerste kaart", "Bij plaatjes"],
+        options: ["In de index", "In de inhoudsopgave", "Op de eerste kaart", "In de legenda"],
         answer: 0,
-        wrongHints: [null, "Niet zeker waar plaats staat.", "Op de eerste kaart hoeft je plaats niet te staan.", "Niet bij plaatjes."],
+        wrongHints: [null, "De inhoudsopgave noemt alleen de kaarten, niet elke plaats. Waar staan álle plaatsnamen?", "Op de eerste kaart hoeft je plaats niet te staan.", "De legenda legt symbolen uit, geen plaatsnamen."],
       },
       {
         q: "Wat staat **voorin** een boek?",
-        options: ["Inhoudsopgave", "Index", "Register van auteurs", "Woordenlijst"],
+        options: ["Inhoudsopgave", "Index", "Nawoord", "Woordenlijst"],
         answer: 0,
-        wrongHints: [null, "Index staat achterin.", "Soms maar niet standaard.", "Een woordenlijst staat meestal achterin."],
+        wrongHints: [null, "Index staat achterin.", "Een nawoord staat juist aan het eind van een boek.", "Een woordenlijst staat meestal achterin."],
         uitlegPad: {
           stappen: [
             { titel: "Boek-structuur: 2 hulpmiddelen", tekst: "In een goed boek zitten 2 hulpmiddelen om iets snel te vinden:" },
@@ -1318,10 +1318,10 @@ const steps = [
         },
       },
       {
-        q: "Welk woord staat **eerder** in het woordenboek: 'kat' of 'kater'?",
-        options: ["kat", "kater", "Beide gelijk", "Geen van beide"],
+        q: "Welk woord staat het **eerst** in het woordenboek?",
+        options: ["kat", "kater", "katoen", "kauw"],
         answer: 0,
-        wrongHints: [null, "De eerste drie letters zijn gelijk — welke regel geldt dan voor het kortere woord?", "Niet gelijk.", "Wel — een staat eerst."],
+        wrongHints: [null, "De eerste drie letters zijn gelijk — welke regel geldt dan voor het kortere woord?", "Ook 'katoen' begint met k-a-t. Welk woord houdt daarna al op?", "Vergelijk de derde letter van elk woord. Welke komt het eerst in het alfabet?"],
         uitlegPad: {
           stappen: [
             { titel: "Vergelijk letter voor letter", tekst: "k-a-t en k-a-t-e-r. Eerste 3 letters gelijk. Bij 'kat' stopt het woord, bij 'kater' komt nog 'er'." },
@@ -1340,15 +1340,15 @@ const steps = [
       },
       {
         q: "Waarvoor gebruik je de **inhoudsopgave**?",
-        options: ["Snel een hoofdstuk vinden", "Een specifiek woord", "Plaatjes ordenen", "Korter lezen"],
+        options: ["Snel een hoofdstuk vinden", "Eén bepaald woord opzoeken", "De betekenis van woorden", "Weten wie het boek schreef"],
         answer: 0,
-        wrongHints: [null, "Daarvoor: index.", "Niet inhoudsopgave.", "Niet doel."],
+        wrongHints: [null, "Voor één los woord gebruik je een lijst achterin het boek.", "Betekenissen van woorden staan in een woordenboek of woordenlijst.", "De schrijver staat op de kaft."],
       },
       {
         q: "In een **atlas** zoek je 'Amsterdam' in de **index**: 'Amsterdam ... 22 D5'. Waar kijk je?",
         options: ["Bladzijde 22, vak D5", "Bladzijde 5, vak D22", "Vak 22 op pagina D5", "Vak A22 op pagina D"],
         answer: 0,
-        wrongHints: [null, "Andere volgorde.", "Andere volgorde.", "Andere combinatie."],
+        wrongHints: [null, "Welk deel van '22 D5' ziet eruit als een vak: een letter met een cijfer?", "Welk deel van '22 D5' is een gewoon getal, zoals een bladzijdenummer?", "Er staat geen A in '22 D5'. Lees de code nog eens precies."],
         uitlegPad: {
           stappen: [
             { titel: "Lees de index", tekst: "Atlas-index toont: '[plaatsnaam] [paginanummer] [vakcode]'. Vakcode = letter (kolom) + cijfer (rij)." },
@@ -1369,10 +1369,10 @@ const steps = [
         },
       },
       {
-        q: "Welk woord staat **eerder** in woordenboek: 'piano' of 'plant'?",
-        options: ["piano", "plant", "Beide gelijk", "Niet te zeggen"],
+        q: "Welk woord staat het **eerst** in het woordenboek?",
+        options: ["piano", "plant", "pinda", "pizza"],
         answer: 0,
-        wrongHints: [null, "p-l komt later.", "Verschillende woorden.", "Wel te zeggen — alfabetisch."],
+        wrongHints: [null, "Vergelijk de tweede letter van elk woord.", "Tot 'pi' zijn ze gelijk. Vergelijk de derde letter.", "Tot 'pi' zijn ze gelijk. Welke derde letter komt het eerst in het alfabet?"],
         uitlegPad: {
           stappen: [
             { titel: "Woordenboek = alfabetisch", tekst: "Alle woorden in een woordenboek staan op alfabetische volgorde: van A naar Z." },
@@ -1402,13 +1402,13 @@ const steps = [
         wrongHints: [null, 'Dat is de inhoudsopgave, en die staat voorin.', 'Auteurs staan op de kaft of titelpagina.', 'Plaatjes staan in het boek zelf. Waar zoek je een onderwerp mee op?'],
       },
       {
-        q: "Welk woord staat **eerder** in woordenboek: 'school' of 'sport'?",
-        options: ["school", "sport", "Beide gelijk", "Niet te zeggen"],
+        q: "Welk woord staat het **eerst** in het woordenboek?",
+        options: ["school", "sport", "schuur", "slang"],
         answer: 0,
-        wrongHints: [null, "s-p komt later.", "Niet gelijk.", "Wel — alfabetisch."],
+        wrongHints: [null, "Vergelijk de tweede letter van elk woord.", "Tot 'sch' zijn ze gelijk. Vergelijk de vierde letter.", "Vergelijk de tweede letter: welke komt het eerst in het alfabet?"],
       },
       {
-        q: "**Hoofdwoorden** op pagina-bovenkant van woordenboek — wat zijn ze?",
+        q: "Wat zijn de **gidswoorden** bovenaan een bladzijde van het woordenboek?",
         options: ['Eerste + laatste woord op die pagina', 'Alle woorden die op die pagina staan', 'De titel van het hele woordenboek', 'De moeilijkste woorden op die pagina'],
         answer: 0,
         wrongHints: [null, 'Bovenaan is maar weinig ruimte. Hoeveel woorden passen daar?', 'De titel staat op de kaft.', 'Moeilijk of makkelijk maakt niet uit. Hoe helpen die woorden je zoeken?'],
@@ -1436,16 +1436,16 @@ const steps = [
         },
       },
       {
-        q: "Welke is de **eerste letter** in alfabet?",
-        options: ["A", "B", "Z", "Geen volgorde"],
+        q: "Wat is de **eerste letter** van het alfabet?",
+        options: ["A", "B", "Z", "O"],
         answer: 0,
-        wrongHints: [null, "Tweede.", "Laatste.", "Wel volgorde."],
+        wrongHints: [null, "B is de tweede letter.", "Z is de laatste letter.", "Zeg het alfabet eens hardop: komt de O vooraan?"],
       },
       {
-        q: "Welk woord staat **eerder**: 'rood' of 'paars'?",
-        options: ["paars", "rood", "Beide gelijk", "Niet alfabetisch"],
+        q: "Welk woord staat het **eerst** in het woordenboek?",
+        options: ["paars", "rood", "pen", "pop"],
         answer: 0,
-        wrongHints: [null, "Niet — r komt later.", "Niet gelijk.", "Wel."],
+        wrongHints: [null, "De r komt in het alfabet na de p.", "Beginnen woorden met dezelfde letter? Kijk dan naar de tweede letter.", "Vergelijk de tweede letter van de woorden met een p."],
         uitlegPad: {
           stappen: [
             { titel: "Vergelijk eerste letter", tekst: "'paars' begint met p (16e letter). 'rood' begint met r (18e letter)." },
@@ -1469,22 +1469,22 @@ const steps = [
         wrongHints: [null, 'Geschiedenis staat in een geschiedenisboek of encyclopedie.', 'Kaarten vind je in een atlas.', 'Recepten staan in een kookboek.'],
       },
       {
-        q: "Bij **Van Dale** vind je info over Nederlandse woorden. Dat is een?",
+        q: "Wat voor boek is de **Van Dale**?",
         options: ["Woordenboek", "Atlas", "Encyclopedie", "Roman"],
         answer: 0,
-        wrongHints: [null, "Kaarten.", "Algemene kennis.", "Verhaal."],
+        wrongHints: [null, "Een atlas staat vol kaarten. Zoek je in de Van Dale naar kaarten?", "Een encyclopedie vertelt uitgebreid over onderwerpen. Is dat waar de Van Dale om bekend staat?", "Een roman is een verzonnen verhaal."],
       },
       {
-        q: "Welk woord staat **eerder** in het woordenboek: **kabel** of **kaak**?",
-        options: ["kaak", "kabel", "Beide gelijk", "Geen idee"],
+        q: "Welk woord staat het **eerst** in het woordenboek?",
+        options: ["kaak", "kabel", "kaas", "kachel"],
         answer: 0,
-        wrongHints: [null, "Tot en met 'ka' zijn ze gelijk — vergelijk de derde letter.", "Geen — verschillende woorden.", "Wel — alfabetisch."],
+        wrongHints: [null, "Tot en met 'ka' zijn ze gelijk — vergelijk de derde letter.", "Tot en met 'kaa' zijn ze gelijk. Vergelijk de vierde letter.", "Tot 'ka' gelijk. Welke derde letter komt het eerst in het alfabet?"],
       },
       {
         q: "In een **atlas-index** staat: 'Madrid ... 22 C4'. Wat betekent **C4**?",
-        options: ["Vak op de kaart", "Bladzijde 4", "Hoofdstuk", "Schaal"],
+        options: ["Vak op de kaart", "Bladzijde 4", "Hoofdstuk C, deel 4", "De schaal van de kaart"],
         answer: 0,
-        wrongHints: [null, "Dat is 22, niet C4.", "Geen.", "Geen."],
+        wrongHints: [null, "Dat is 22, niet C4.", "Een atlas-index verwijst niet naar hoofdstukken. Wat staat er langs de rand van een kaart?", "Een schaal ziet eruit als 1:100.000. Lijkt C4 daarop?"],
         uitlegPad: {
           stappen: [
             { titel: "Index = vindplaats", tekst: "In een atlas-index volgen achter een naam altijd 2 dingen: een paginanummer + een vak-code (letter + cijfer)." },
@@ -1505,19 +1505,19 @@ const steps = [
         q: "Welk soort boek bevat **uitgebreide info per onderwerp** (zoals 'olifant', 'Einstein')?",
         options: ["Encyclopedie", "Woordenboek", "Roman", "Atlas"],
         answer: 0,
-        wrongHints: [null, "Alleen woord-betekenis, niet uitgebreid.", "Verhaal.", "Kaarten."],
+        wrongHints: [null, "Alleen woord-betekenis, niet uitgebreid.", "Een roman vertelt een verzonnen verhaal.", "Een atlas bevat vooral kaarten."],
       },
       {
         q: "Bij een **uitgebreide index** achterin een boek staat **'water 12, 45, 89'**. Wat betekent dit?",
-        options: ["Water staat op pagina's 12, 45 en 89", "Water heeft 12+45+89 = 146 betekenissen", "Eerste hoofdstuk over water op blz 12", "Water = 12,45 en 89 graden"],
+        options: ["Water staat op de bladzijden 12, 45 en 89", "Water staat in de hoofdstukken 12, 45 en 89", "Water staat op bladzijde 12 tot en met 89", "Het woord water komt 146 keer voor"],
         answer: 0,
-        wrongHints: [null, "Niet — losse paginanummers.", "Niet — meerdere pagina's waar het besproken wordt.", "Geen relevant verband."],
+        wrongHints: [null, "Een boek heeft zelden 89 hoofdstukken. Waar verwijst een index naar?", "Er staan losse getallen met komma's, geen 'tot en met'.", "Een index telt niet hoe vaak een woord voorkomt. Wat betekenen de losse getallen?"],
       },
       {
-        q: "Je zoekt **'Spanje'** in een atlas. Waar **eerst** kijken?",
-        options: ["Index", "Woordenboek", "Eerste kaart", "Boekenkast"],
+        q: "Je zoekt **'Spanje'** in een atlas. Waar kijk je het **eerst**?",
+        options: ["Index", "Schaalbalk", "Eerste kaart", "Legenda"],
         answer: 0,
-        wrongHints: [null, "Een woordenboek geeft betekenissen van woorden, geen kaarten.", "Op de eerste kaart hoeft Spanje niet te staan.", "Je zoekt ín de atlas, niet in de kast."],
+        wrongHints: [null, "Met de schaalbalk meet je afstanden. Waar zoek je een naam op?", "Op de eerste kaart hoeft Spanje niet te staan.", "De legenda legt kleuren en tekens uit, geen landen."],
         uitlegPad: {
           stappen: [
             { titel: "Index = snelste zoek", tekst: "Voor een specifieke plaatsnaam: ga altijd naar de index. Daar staan namen op alfabet, met paginanummer." },
@@ -1538,19 +1538,19 @@ const steps = [
         q: "Welk boek is **op alfabet** geordend?",
         options: ["Woordenboek", "Roman", "Kookboek", "Stripboek"],
         answer: 0,
-        wrongHints: [null, "Verhaal volgorde — niet alfabet.", "Een kookboek is meestal per soort gerecht ingedeeld.", "Niet alfabetisch."],
+        wrongHints: [null, "Een roman lees je als verhaal van begin tot eind.", "Een kookboek is meestal per soort gerecht ingedeeld.", "Een stripboek vertelt een verhaal in plaatjes, van begin tot eind."],
       },
       {
         q: "In een **bibliotheek-catalogus** zoek je als je wilt weten...",
         options: ["Of een boek aanwezig is en waar", "Hoe het verhaal afloopt", "Hoeveel het kost", "Wie het gelezen heeft"],
         answer: 0,
-        wrongHints: [null, "Het einde van een verhaal staat niet in de catalogus.", "Niet — bib heeft geen prijs.", "Niet — privacy."],
+        wrongHints: [null, "Het einde van een verhaal staat niet in de catalogus.", "Een bibliotheek verkoopt geen boeken. Wat wil je weten als je een boek wilt lenen?", "Wie een boek gelezen heeft, staat niet in de catalogus. Wat zoek je er wel?"],
       },
       {
-        q: "Welk woord komt **eerst** in het woordenboek: **'water'** of **'wijn'**?",
-        options: ["water", "wijn", "Beide", "Geen idee"],
+        q: "Welk woord komt het **eerst** in het woordenboek?",
+        options: ["water", "wijn", "wolk", "worm"],
         answer: 0,
-        wrongHints: [null, "Beide beginnen met w — vergelijk de tweede letter.", "Geen — alfabetisch.", "Wel — alfabetisch."],
+        wrongHints: [null, "Alle woorden beginnen met w — vergelijk de tweede letter.", "Vergelijk de tweede letter van elk woord. Welke komt het eerst in het alfabet?", "Tot 'wo' gelijk aan 'wolk', maar vergelijk ook met de andere woorden: welke tweede letter komt het eerst?"],
       },
       {
         q: "**Wikipedia** is een ___?",
@@ -1560,9 +1560,9 @@ const steps = [
       },
       {
         q: "Op een **woordenboekpagina** zie je een **hoofdwoord** ('jachthond'). De **uitleg** staat...",
-        options: ["Achter het woord", "Erboven", "Op andere pagina", "Nergens"],
+        options: ["Achter het woord", "Boven het woord", "Achter in het woordenboek", "Bovenaan de bladzijde"],
         answer: 0,
-        wrongHints: [null, "Niet — eerst woord, dan uitleg.", "Niet — alles bij elkaar.", "Wel — bij het woord."],
+        wrongHints: [null, "Je zoekt eerst het woord op. Waar lees je daarna verder?", "Een woordenboek heeft geen aparte uitlegbladzijden achterin.", "Bovenaan staan de gidswoorden, geen uitleg."],
       },
       {
         q: "Bij **digitaal zoeken** in een PDF gebruik je vaak **Ctrl+F**. Dat doet ___?",
@@ -1586,15 +1586,15 @@ const steps = [
       },
       {
         q: "Welk **boek** raadpleeg je voor **'wat is de hoofdstad van Frankrijk?'**?",
-        options: ['Atlas of encyclopedie', 'Roman of verhalenboek', 'Kookboek of receptenboek', 'Stripboek of moppenboek'],
+        options: ["Atlas of encyclopedie", "Roman of verhalenboek", "Woordenboek of spellinggids", "Rekenboek of tafelboek"],
         answer: 0,
-        wrongHints: [null, "Verhaal — geen feiten.", "Een kookboek gaat over eten, niet over landen.", "Een stripboek vertelt een verhaal, geen feiten."],
+        wrongHints: [null, "Een roman is een verzonnen verhaal. Zoek je daar feiten over landen?", "Een woordenboek legt uit wat woorden betekenen. Vind je daar welke stad een hoofdstad is?", "In een rekenboek staan sommen, geen landen."],
       },
       {
         q: "Een **inhoudsopgave** staat ___ in een boek?",
         options: ["Voorin", "Achterin", "In het midden", "Op elke pagina"],
         answer: 0,
-        wrongHints: [null, "Dat is de index (lijst van onderwerpen alfabetisch).", "Denk: vóór je begint met lezen wil je weten wat er komt.", "Inhoudsopgave komt 1 keer voor in een boek."],
+        wrongHints: [null, "Dat is de index (lijst van onderwerpen alfabetisch).", "Het midden van een boek is voor de tekst zelf. Waar staat het overzicht van alle hoofdstukken?", "Inhoudsopgave komt 1 keer voor in een boek."],
       },
       {
         q: "Welk woord staat in het woordenboek **het eerst**?",
@@ -1640,9 +1640,9 @@ const steps = [
       },
       {
         q: "Je zoekt informatie over **vulkanen** in een studieboek van 200 bladzijden. Wat is de **snelste** route?",
-        options: ["Zoek 'vulkaan' in de index achterin", "Lees het boek van voor naar achter", "Blader willekeurig", "Bekijk alleen de plaatjes"],
+        options: ["Zoek 'vulkaan' in de index achterin", "Lees het boek van voor naar achter", "Lees de tekst op de achterkant", "Blader door alle plaatjes heen"],
         answer: 0,
-        wrongHints: [null, "Dat werkt, maar kost uren — er is een sneller hulpmiddel.", "Willekeurig bladeren kan lang duren én je mist dingen.", "Plaatjes zonder tekst geven halve informatie."],
+        wrongHints: [null, "Dat werkt, maar kost uren — er is een sneller hulpmiddel.", "De achterkant geeft een korte samenvatting, geen bladzijden per onderwerp.", "Langs 200 bladzijden bladeren kost veel tijd. Is er een sneller hulpmiddel?"],
         explanation: "De **index** (register) achterin is alfabetisch: 'vulkaan → blz. 87, 134'. Eén opzoekactie in plaats van 200 bladzijden.",
       },
       {
@@ -1661,16 +1661,16 @@ const steps = [
       },
       {
         q: "Welke bron gebruik je om te checken **hoe je 'cadeau' spelt**?",
-        options: ["Een woordenboek", "Een atlas", "Een telefoongids", "Een spoorboekje"],
+        options: ["Een woordenboek", "Een atlas", "Een telefoongids", "Een encyclopedie"],
         answer: 0,
-        wrongHints: [null, "Een atlas gaat over plaatsen, niet over spelling.", "Daar staan nummers in, geen spelling.", "Daar staan vertrektijden in."],
+        wrongHints: [null, "Een atlas gaat over plaatsen, niet over spelling.", "Daar staan nummers in, geen spelling.", "Een encyclopedie vertelt over onderwerpen. Waar check je snel de spelling van een woord?"],
         explanation: "Spelling en betekenis check je in het **woordenboek** (of de digitale variant).",
       },
       {
         q: "Het woord **'bank'** heeft in het woordenboek twee nummers: bank¹ (meubel) en bank² (geldzaken). Waarom?",
-        options: ["Het woord heeft twee verschillende betekenissen", "Het woord is twee keer fout gedrukt", "Je mag kiezen welke spelling je gebruikt", "Het tweede woord is ouderwets"],
+        options: ["Het woord heeft twee verschillende betekenissen", "Het woord heeft twee verschillende uitspraken", "Je mag kiezen welke spelling je gebruikt", "Het tweede woord is ouderwets"],
         answer: 0,
-        wrongHints: [null, "Een drukfout zou geen nummering met betekenissen krijgen.", "De spelling is bij beide gelijk — wat verschilt is iets anders.", "Beide betekenissen zijn springlevend."],
+        wrongHints: [null, "Bank¹ en bank² spreek je hetzelfde uit. Kijk naar wat erachter staat: meubel en geldzaken.", "De spelling is bij beide gelijk — wat verschilt is iets anders.", "Beide betekenissen zijn springlevend."],
         explanation: "Bank¹ en bank² zijn **homoniemen**: zelfde woord, totaal verschillende betekenis. Het woordenboek nummert ze apart.",
       },
       {
@@ -1704,9 +1704,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **stroomdiagram**?",
-        options: ["Stappen met pijlen", "Een tabel", "Een kaart", "Een grafiek"],
+        options: ["Een schema met stappen en pijlen", "Een tabel met rijen en kolommen", "Een kaart met rivieren en stromen", "Een grafiek met een stijgende lijn"],
         answer: 0,
-        wrongHints: [null, "Geen stappen-volgorde.", "Geen kaart.", "Niet schema."],
+        wrongHints: [null, "Een tabel heeft geen volgorde van stappen. Wat volg je in een stroomdiagram?", "'Stroom' gaat hier niet over water. Wat volg je in een stroomdiagram?", "Een lijngrafiek toont getallen. Wat volg je in een stroomdiagram?"],
         uitlegPad: {
           stappen: [
             { titel: "Stroomdiagram visueel", tekst: "Een stroomdiagram (flowchart) toont een proces met blokken (stappen) en pijlen (volgorde). Bv. start → 'water koken' → 'thee zetten' → klaar." },
@@ -1727,9 +1727,9 @@ const steps = [
       },
       {
         q: "Bij **'taart bakken'** — wat doe je **eerst**?",
-        options: ["Recept lezen", "Bakken", "Mengen", "Eten"],
+        options: ["Recept lezen", "Beslag mengen", "Taart in de oven zetten", "Ingrediënten afwegen"],
         answer: 0,
-        wrongHints: [null, "Pas later.", "Pas na ingrediënten.", "Helemaal aan het einde."],
+        wrongHints: [null, "Hoe weet je wat je moet mengen, en hoeveel?", "Er moet eerst iets ín de oven. Wat gaat daaraan vooraf?", "Hoe weet je hoeveel je van alles moet afwegen?"],
         uitlegPad: {
           stappen: [
             { titel: "Stappenplan-logica", tekst: "Voor elk stappenplan: vraag jezelf 'wat moet ik weten/hebben voor ik kan beginnen?'." },
@@ -1750,25 +1750,25 @@ const steps = [
         q: "Schema: 'A → B → C → D'. Welke stap komt **na B**?",
         options: ["C", "A", "D", "B"],
         answer: 0,
-        wrongHints: [null, "Komt vóór B.", "Komt later.", "Is zelf."],
+        wrongHints: [null, "A staat vóór B. Volg de pijl de andere kant op.", "Volg de pijl vanaf B: waar wijst die als éérste naar?", "B is de stap zelf. Waar wijst de pijl vanaf B naartoe?"],
       },
       {
-        q: "Wat staat in een **vergelijkings-tabel**?",
-        options: ['Overeenkomsten én verschillen', 'Alleen de overeenkomsten', 'Alleen de verschillen', 'Alleen plaatjes van de dingen'],
+        q: "Wat zet je in een **vergelijkingstabel**?",
+        options: ["Wat hetzelfde en wat anders is", "Welke van de twee het beste is", "Hoe je de dingen moet gebruiken", "Plaatjes van de dingen naast elkaar"],
         answer: 0,
-        wrongHints: [null, 'Is dat alles wat je wilt weten als je twee dingen vergelijkt?', 'Is dat alles wat je wilt weten als je twee dingen vergelijkt?', 'Een tabel bestaat uit vakjes met woorden of getallen.'],
+        wrongHints: [null, "Een vergelijkingstabel zet dingen naast elkaar; wat het beste is, beslis je zelf.", "Dat staat in een handleiding of stappenplan.", "Een tabel bestaat uit vakjes met woorden of getallen."],
       },
       {
         q: "In een **boomdiagram** met 'Dieren → Zoogdieren / Vogels' — wat is **Hond**?",
-        options: ["Onder Zoogdieren", "Onder Vogels", "Geen plaats", "Bovenaan"],
+        options: ["Onder Zoogdieren", "Onder Vogels", "Onder allebei", "Bovenaan"],
         answer: 0,
-        wrongHints: [null, "Hond is geen vogel.", "Wel plaats.", "Bovenaan staat 'Dieren'."],
+        wrongHints: [null, "Heeft een hond veren en legt hij eieren?", "Elk dier hoort bij één tak. Is een hond een vogel?", "Bovenaan staat 'Dieren'."],
       },
       {
-        q: "In een **ja/nee-schema** staat **ruit** — wat betekent dat?",
-        options: ["Keuze-vraag", "Stap zonder keuze", "Eindpunt", "Pijl"],
+        q: "In een ja/nee-schema staat een **ruit**. Wat betekent die vorm?",
+        options: ["Keuze-vraag", "Stap zonder keuze", "Eindpunt", "Beginpunt"],
         answer: 0,
-        wrongHints: [null, "Stap zonder keuze = kader.", "Eindpunt = afgeronde vorm.", "Pijl = pijl, niet ruit."],
+        wrongHints: [null, "Wat gebeurt er bij een ruit: gaat er één pijl uit of gaan er twee uit?", "Bij een eindpunt houdt het schema op. Gaan er uit een ruit nog pijlen verder?", "Bij het begin is er nog niets te kiezen. Hoeveel pijlen gaan er uit een ruit?"],
       },
       {
         q: "Stappenplan: 1. Ingrediënten 2. Recept 3. Mengen 4. Bakken. **Welke stap is fout**?",
@@ -1800,10 +1800,10 @@ const steps = [
         },
       },
       {
-        q: "In boomdiagram 'Vervoer → Auto / Trein / Fiets' — wat **mist**?",
-        options: ["Bus", "Auto's-merken", "Wegen", "Benzine"],
+        q: "Een boomdiagram heeft 'Vervoer → Auto / Trein / Fiets'. Wat past er nog **naast** Auto, Trein en Fiets?",
+        options: ["Bus", "Volvo", "Weg", "Benzine"],
         answer: 0,
-        wrongHints: [null, "Subcategorie van auto.", "Niet vervoersmiddel.", "Benzine is brandstof, geen vervoermiddel."],
+        wrongHints: [null, "Volvo is een automerk. Hoort dat naast Auto of eronder?", "Over een weg rijd je, maar een weg is geen vervoermiddel.", "Benzine is brandstof, geen vervoermiddel."],
       },
       {
         q: "Wat is het **doel** van een stappenplan?",

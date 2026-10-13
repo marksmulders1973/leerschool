@@ -66,9 +66,9 @@ const steps = [
       },
       {
         q: "De **stellende** trap is...",
-        options: ["de gewone vorm", "de vorm met -er", "de vorm met -st", "altijd onregelmatig"],
+        options: ["de gewone vorm", "de vorm met -er", "de vorm met -st", "de vorm met 'het' ervoor"],
         answer: 0,
-        wrongHints: [null, "Dat is de vergrotende trap.", "Dat is de overtreffende trap.", "De meeste woorden zijn juist regelmatig."],
+        wrongHints: [null, "Dat is de vergrotende trap.", "Dat is de overtreffende trap.", "Zoals 'het snelst'? Welke trap is dat?"],
         uitlegPad: {
           stappen: [{ titel: "Stellend = gewoon", tekst: "De stellende trap is de gewone vorm, zonder -er of -st: snel, groot, mooi." }],
           niveaus: {
@@ -347,14 +347,9 @@ const steps = [
       },
       {
         q: "Wanneer gebruik je de **vergrotende** trap?",
-        options: [
-          "als je twee dingen met elkaar vergelijkt",
-          "als iets het meest is van allemaal",
-          "als je niets vergelijkt",
-          "alleen bij onregelmatige woorden",
-        ],
+        options: ["als je twee dingen met elkaar vergelijkt", "als iets het meest is van allemaal", "als je zegt hoe iets is, zonder te vergelijken", "als je iets sterker maakt met 'heel'"],
         answer: 0,
-        wrongHints: [null, "Dan gebruik je de overtreffende trap.", null, null],
+        wrongHints: [null, "Dan gebruik je de overtreffende trap.", "Dan gebruik je de stellende trap, zoals in 'Tom is lang'.", "'Heel groot' is geen trap: je vergelijkt niets met iets anders."],
         uitlegPad: {
           stappen: [
             {
