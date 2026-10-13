@@ -78,7 +78,7 @@ const steps = [
           null,
           "Een betoog kiest één standpunt en verdedigt dat. Hier wordt afgewogen zonder positie.",
           "Een uiteenzetting legt iets uit zonder mening. Hier worden wel meningen vergeleken.",
-          "Argumentatie is een onderdeel binnen een betoog of beschouwing — niet een aparte tekstsoort op het examen.",
+          "Argumentatie kom je in veel teksten tegen, maar het is geen aparte tekstsoort op het examen. Welke tekstsoort weegt standpunten af zonder te kiezen?",
         ],
       },
     ],
@@ -199,16 +199,16 @@ const steps = [
       {
         q: "*Welke zin past het best als topic sentence van een alinea over jongeren en slaaptekort?*",
         options: [
-          "Veel jongeren krijgen structureel te weinig slaap, met merkbare gevolgen voor hun schoolprestaties.",
-          "Mijn neefje gaat altijd om half twee naar bed.",
-          "Slapen is leuk.",
-          "Hoeveel uur slaap heb je eigenlijk nodig?",
+          "Veel jongeren slapen te weinig, met merkbare gevolgen voor hun schoolprestaties.",
+          "Mijn neefje gaat altijd om half twee naar bed en zit dan nog uren op zijn telefoon.",
+          "Slapen is iets wat iedereen elke nacht doet, de een wat langer dan de ander.",
+          "Hoeveel uur slaap heb je als jongere eigenlijk nodig om goed te kunnen leren?",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Een persoonlijke anekdote werkt als voorbeeld in de uitwerking, maar niet als topic sentence. Wat is de kern-claim?",
-          "Te kort en te vrijblijvend — geen claim die de lezer houvast geeft in het alinea-thema.",
+          "Wel waar, maar vrijblijvend — geen claim die de lezer houvast geeft over jongeren en slaaptekort.",
           "Een vraag kan een aandachtstrekker zijn maar geen topic sentence. Welke optie geeft de hoofdgedachte van de alinea?",
         ],
       },
@@ -233,10 +233,10 @@ const steps = [
       {
         q: "Welke fout zit in dit slot? — *\"Concluderend: er is veel te zeggen voor lagere snelheden. Daarnaast is uit recent onderzoek gebleken dat 80 km/u nog veiliger zou zijn dan 100 km/u, wat de maatregel verder rechtvaardigt.\"*",
         options: [
-          "Er wordt een nieuw argument geïntroduceerd dat in het middenstuk hoort.",
-          "Het slot is te kort.",
-          "Er staat geen conclusie in.",
-          "De toon is te informeel.",
+          "Er komt een nieuw argument bij dat in het middenstuk hoort.",
+          "Het slot is te kort om de tekst goed af te ronden.",
+          "Er staat geen echte conclusie in het slot.",
+          "De toon is te informeel voor een zakelijke tekst.",
         ],
         answer: 0,
         wrongHints: [
@@ -311,9 +311,9 @@ const steps = [
       {
         q: "*Een leerling schrijft een beschouwing over werken-tot-67. Welke openingszin van een alinea past het best?*",
         options: [
-          "Wie kijkt naar het standpunt van vakbonden, ziet dat zij vooral wijzen op de fysieke belasting van zware beroepen.",
+          "Vakbonden wijzen vooral op de fysieke belasting van zware beroepen.",
           "Werken tot 67 is gewoon belachelijk en moet onmiddellijk worden afgeschaft.",
-          "Daarom is werken tot 67 de enige juiste oplossing.",
+          "Daarom is werken tot 67 de enige juiste oplossing voor de vergrijzing.",
           "Het is duidelijk dat alleen aso's nog tegen deze maatregel zijn.",
         ],
         answer: 0,
@@ -346,10 +346,10 @@ const steps = [
       {
         q: "*In een uiteenzetting over hoe vaccinatie werkt, staat: \"Vaccinaties zijn echt geweldig en iedereen zou er een moeten halen.\" — Wat is de fout?*",
         options: [
-          "Een uiteenzetting hoort neutraal te zijn — geen mening of oproep.",
-          "De zin is grammaticaal incorrect.",
-          "De zin is te kort.",
-          "Er ontbreekt een vakterm.",
+          "Er staat een mening en een oproep in de zin.",
+          "De zin is grammaticaal incorrect geformuleerd.",
+          "De zin is te kort voor een uiteenzetting.",
+          "Er ontbreekt een medische vakterm in de zin.",
         ],
         answer: 0,
         wrongHints: [
@@ -435,10 +435,10 @@ const steps = [
       {
         q: "*Welke formulering is het sterkst voor een betoog?*",
         options: [
-          "Volgens het RIVM sterven in Nederland jaarlijks duizenden mensen vroegtijdig door luchtvervuiling.",
-          "Heel erg veel mensen sterven super vroeg door slechte lucht.",
-          "Er zijn dingen die wijzen op gezondheidsschade door lucht.",
-          "Mensen kunnen ziek worden van vieze lucht, dat weet iedereen.",
+          "Volgens het RIVM sterven jaarlijks duizenden mensen vroegtijdig door luchtvervuiling.",
+          "Heel erg veel mensen in Nederland sterven echt super vroeg door die slechte lucht.",
+          "Er zijn best wel dingen die wijzen op gezondheidsschade door vieze lucht in steden.",
+          "Mensen kunnen echt ziek worden van vieze lucht in de stad, dat weet iedereen.",
         ],
         answer: 0,
         wrongHints: [
@@ -515,10 +515,10 @@ const steps = [
       {
         q: "*Welke alinea-volgorde is het sterkst voor een betoog vóór gratis kinderopvang?*",
         options: [
-          "Redelijk sterk eerst, ondersteunend in het midden, sterkste als laatste",
-          "Argument: sterkste eerst, dan zwakste",
-          "Tegenargumenten eerst, eigen argumenten daarna",
-          "Willekeurig — volgorde maakt geen verschil",
+          "Redelijk sterk eerst, ondersteunend in het midden, sterkste laatst",
+          "Sterkste argument eerst, daarna steeds zwakkere argumenten",
+          "Tegenargumenten eerst uitgebreid, eigen argumenten pas daarna",
+          "Willekeurig, want de volgorde maakt voor de lezer geen verschil",
         ],
         answer: 0,
         wrongHints: [
@@ -547,10 +547,10 @@ const steps = [
       {
         q: "*Een leerling schrijft in een uiteenzetting: \"Persoonlijk vind ik dat gemeenten meer geld zouden moeten krijgen voor jeugdzorg.\" Wat klopt er niet?*",
         options: [
-          "Een uiteenzetting hoort neutraal te zijn — geen \"ik vind\".",
-          "De zin is grammaticaal incorrect.",
-          "De zin is te lang.",
-          "Er ontbreekt een cijfer.",
+          "Een mening als \"ik vind\" hoort niet in een uiteenzetting.",
+          "De zin is grammaticaal incorrect opgebouwd.",
+          "De zin is te lang voor een uiteenzetting.",
+          "Er ontbreekt een cijfer om het te onderbouwen.",
         ],
         answer: 0,
         wrongHints: [
@@ -562,11 +562,11 @@ const steps = [
       },
       { q: "Wat is doel van een **betoog**?", options: ["Lezer overtuigen","Lezer informeren","Lezer aan het denken zetten","Lezer laten lachen"], answer: 0, wrongHints: [null, "Dat is uiteenzetting.", "Dat is beschouwing.", "Niet examen-tekstsoort."] },
       { q: "Een **uiteenzetting** heeft welk doel?", options: ["Informeren","Overtuigen","Tegenargumenten geven","Mening kiezen"], answer: 0, wrongHints: [null, "Dat is betoog.", "Dat is beschouwing.", "Geen mening — neutraal."] },
-      { q: "Een **beschouwing** geeft?", options: ["Verschillende kanten zonder definitieve keuze","Eén mening","Alleen feiten","Alleen voorbeelden"], answer: 0, wrongHints: [null, "Dat is betoog.", "Dat is uiteenzetting.", "Niet structuur."] },
+      { q: "Een **beschouwing** geeft?", options: ["Verschillende kanten, zonder keuze","Eén mening met sterke argumenten","Alleen feiten en neutrale uitleg","Alleen voorbeelden uit de praktijk"], answer: 0, wrongHints: [null, "Dat is betoog.", "Dat is uiteenzetting.", "Niet structuur."] },
       { q: "Welk **verbindingswoord** geeft een tegenstelling aan?", options: ["echter","want","bijvoorbeeld","ten eerste"], answer: 0, wrongHints: [null, "Reden, geen tegenstelling.", "Voorbeeld.", "Volgorde."] },
-      { q: "Wat moet **in de inleiding** van een tekst?", options: ["Onderwerp + aanleiding + opbouw","De conclusie","Alle voorbeelden","De bronnen"], answer: 0, wrongHints: [null, "Dat is slot.", "Voorbeelden in kern.", "Bronnen achteraan."] },
-      { q: "Wat is een **topic sentence**?", options: ["De kernzin van een alinea","De titel","De laatste zin","De inleiding"], answer: 0, wrongHints: [null, "Niet specifiek genoeg.", "De kernzin staat meestal juist vooraan in de alinea.", "Te groot."] },
-      { q: "Welke stap doe je bij **reviseren** als laatste?", options: ["Spelling + interpunctie checken","De argumenten bedenken","Structuur veranderen","Tekst schrijven"], answer: 0, wrongHints: [null, "Dat is begin.", "Eerder.", "Eerder."] },
+      { q: "Wat moet **in de inleiding** van een tekst?", options: ["Onderwerp + aanleiding + opbouw","Conclusie + samenvatting + advies","Alle voorbeelden + argumenten","Bronnenlijst + verantwoording"], answer: 0, wrongHints: [null, "Dat hoort in het slot.", "Voorbeelden en argumenten horen in de kern.", "Bronnen komen achteraan."] },
+      { q: "Wat is een **topic sentence**?", options: ["De kernzin van een alinea","De titel boven de tekst","De laatste zin van een alinea","De inleiding van de tekst"], answer: 0, wrongHints: [null, "Een titel hoort bij de hele tekst. Waar gaat een topic sentence over?", "De kernzin staat meestal juist vooraan in de alinea.", "Een inleiding is een heel tekstdeel, geen losse zin."] },
+      { q: "Welke stap doe je bij **reviseren** als laatste?", options: ["Spelling + interpunctie checken","De argumenten bedenken","Structuur en volgorde veranderen","De hele tekst opnieuw schrijven"], answer: 0, wrongHints: [null, "Dat is begin.", "Eerder.", "Eerder."] },
     ],
   },
 ];

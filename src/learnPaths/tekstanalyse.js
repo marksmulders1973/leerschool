@@ -111,9 +111,9 @@ const steps = [
       {
         q: "*Een tekst gebruikt veel medische vakjargon (\"contra-indicatie\", \"comorbiditeit\") zonder uitleg.* — Wie is waarschijnlijk de doelgroep?",
         options: [
-          "Medisch geschoolde lezers (artsen, verpleegkundigen)",
-          "Basisschoolleerlingen",
-          "Algemeen publiek",
+          "Medisch geschoolde lezers (zoals artsen)",
+          "Basisschoolleerlingen (groep 7 en 8)",
+          "Algemeen publiek (krantenlezers)",
           "Patiënten zonder medische achtergrond",
         ],
         answer: 0,
@@ -153,17 +153,17 @@ const steps = [
       {
         q: "*Een tekst gaat over schermtijd bij jongeren. Welke optie is de hoofdgedachte (niet alleen het onderwerp)?*",
         options: [
-          "Te veel schermtijd schaadt de schoolprestaties van jongeren en moet daarom worden beperkt.",
-          "Schermtijd bij jongeren.",
-          "Smartphones.",
-          "Onderzoek naar jongeren.",
+          "Te veel schermtijd schaadt de schoolprestaties en moet worden beperkt.",
+          "Schermtijd bij jongeren en hoe vaak ze hun telefoon gebruiken.",
+          "Smartphones, tablets en spelcomputers in het leven van jongeren.",
+          "Onderzoek naar jongeren en de tijd die ze achter een scherm zitten.",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Dat is alleen het onderwerp (waar de tekst over gaat). De hoofdgedachte bevat een claim of conclusie.",
-          "Te kort en geen claim. Hoofdgedachte = volzin met wat de schrijver vindt.",
-          "Te vaag. Welke optie geeft de boodschap van de schrijver?",
+          "Geen claim: dit noemt alleen dingen. Hoofdgedachte = volzin met wat de schrijver vindt.",
+          "Dit beschrijft waar de tekst over gaat. Welke optie geeft de boodschap van de schrijver?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Hoofdgedachte = volzin", tekst: "Niet alleen onderwerp (1 woord), maar volzin met claim." }],
@@ -523,10 +523,10 @@ const steps = [
       {
         q: "*Een betoog over zorgkosten haalt alleen artsen aan en geen patiënten of verzekeraars. Welk soort kritiek is hier passend?*",
         options: [
-          "De schrijver gebruikt selectieve bronnen — alleen één perspectief.",
-          "De schrijver gebruikt geen bronnen.",
-          "De bronnen zijn ondeskundig.",
-          "Er ontbreekt een conclusie.",
+          "De schrijver laat maar één perspectief aan het woord.",
+          "De schrijver gebruikt helemaal geen bronnen.",
+          "De aangehaalde bronnen zijn niet deskundig.",
+          "Er ontbreekt een duidelijke conclusie in de tekst.",
         ],
         answer: 0,
         wrongHints: [
@@ -567,10 +567,10 @@ const steps = [
       {
         q: "*\"Het is werkelijk schandalig hoe de regering met dit dossier omgaat.\"* — Welk kenmerk maakt deze zin subjectief?",
         options: [
-          "Het waardeoordeel \"schandalig\" + de versterker \"werkelijk\"",
-          "De zin is te kort",
+          "Het oordeel \"schandalig\" + de versterker \"werkelijk\"",
+          "De zin is te kort om objectief te zijn",
           "Er wordt een controleerbaar feit genoemd",
-          "Er ontbreekt een bron",
+          "Er ontbreekt een bron voor deze bewering",
         ],
         answer: 0,
         wrongHints: [
@@ -637,9 +637,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "\"Concluderend\" wijst juist op een afsluiting, niet op een opening van de tekst.",
-          "Tegenstellend zou \"echter\" of \"daarentegen\" als signaal hebben. Hier staat een conclusie-signaal.",
-          "Voorbeelden gevend zou \"bijvoorbeeld\" of \"zo\" als signaal hebben. Conclusie ≠ voorbeeld.",
+          "Een inleidende alinea opent de tekst. Hoort het signaalwoord waarmee deze alinea begint bij een opening?",
+          "Tegenstellend zou \"echter\" of \"daarentegen\" als signaal hebben. Welk signaalwoord staat hier?",
+          "Voorbeelden gevend zou \"bijvoorbeeld\" of \"zo\" als signaal hebben. Welk signaalwoord staat hier?",
         ],
         uitlegPad: {
           stappen: [{ titel: "'Concluderend' = slot/concluderend", tekst: "'Concluderend' = afsluiting + samenvatting." }],
@@ -653,15 +653,15 @@ const steps = [
       {
         q: "*Welke optie is de hoofdgedachte (geen onderwerp, geen deelvraag) van een tekst?*",
         options: [
-          "Een hogere belasting op suiker zou de volksgezondheid aantoonbaar verbeteren.",
-          "Suiker.",
-          "Hoeveel suiker eet een Nederlander gemiddeld?",
-          "Suikerbelasting in Nederland.",
+          "Een suikerbelasting zou de volksgezondheid aantoonbaar verbeteren.",
+          "Suiker in het eten en drinken van Nederlanders.",
+          "Hoeveel suiker eet een Nederlander gemiddeld per dag?",
+          "Suikerbelasting in Nederland en de gevolgen daarvan.",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Eén woord is geen hoofdgedachte — alleen het onderwerp. Welke optie is een volzin met claim?",
+          "Dat is alleen het onderwerp. Welke optie is een volzin met claim?",
           "Een vraag is geen hoofdgedachte. Een hoofdgedachte is een uitspraak met een standpunt of conclusie.",
           "Dat is alleen een thema-formulering. Een hoofdgedachte bevat wat de schrijver erover *stelt*.",
         ],
@@ -698,13 +698,13 @@ const steps = [
           niveaus: { basis: "Mening.", simpeler: "Vermomd als feit.", nogSimpeler: "Mening." },
         },
       },
-      { q: "*'De zonneschijn voelt heerlijk warm.'* — Welke uitspraak?", options: ["Mening","Feit","Hypothese","Wet"], answer: 0, wrongHints: [null, "Geen meetbaar feit.", "Niet specifiek getoetst.", "Niet."] },
+      { q: "*'De zonneschijn voelt heerlijk warm.'* — Welke uitspraak?", options: ["Mening","Feit","Hypothese","Wet"], answer: 0, wrongHints: [null, "Geen meetbaar feit.", "Niet specifiek getoetst.", "Een wet is een regel of een natuurwet. Is deze zin dat?"] },
       { q: "*'Nederland heeft meer dan 17 miljoen inwoners.'* — Welke uitspraak?", options: ["Feit","Mening","Hypothese","Suggestie"], answer: 0, wrongHints: [null, "Geen waardering.", "Geen veronderstelling.", "Geen advies."] },
       { q: "Een **uiteenzettende tekst** heeft welk doel?", options: ["Informeren","Overtuigen","Vermaken","Aansporen tot actie"], answer: 0, wrongHints: [null, "Dat is betogend.", "Dat is amuserend.", "Dat is appellerend."] },
-      { q: "Wat is een **tekstdoel**?", options: ["Waarom de schrijver de tekst schreef","De titel","Het aantal woorden","De zinslengte"], answer: 0, wrongHints: [null, "Titel ≠ doel.", "Telling.", "Stijl."] },
+      { q: "Wat is een **tekstdoel**?", options: ["Waarom de schrijver de tekst schreef","De titel die boven de tekst staat","Het aantal woorden in de tekst","Hoe lang de zinnen gemiddeld zijn"], answer: 0, wrongHints: [null, "Titel ≠ doel.", "Dat is een telling, geen doel.", "Dat zegt iets over stijl, niet over het doel."] },
       { q: "Welk signaalwoord geeft een **conclusie** aan?", options: ["dus","want","bijvoorbeeld","echter"], answer: 0, wrongHints: [null, "Reden.", "Voorbeeld.", "Tegenstelling."] },
       { q: "Wat is de **doelgroep** van een tekst?", options: ["Voor wie de tekst is bedoeld","Hoe lang de tekst is","Wat het tekstdoel is","Wie de tekst schreef"], answer: 0, wrongHints: [null, "Lengte.", "Dat is tekstdoel.", "Auteur."] },
-      { q: "Welke vraag stel je om de **hoofdvraag** te vinden?", options: ["Wat is de centrale vraag die de tekst beantwoordt?","Hoeveel alinea's heeft de tekst?","Wat staat in de eerste zin?","Wie heeft de tekst geschreven?"], answer: 0, wrongHints: [null, "Telling.", "Te oppervlakkig.", "Dat gaat over de auteur, niet over de centrale vraag."] },
+      { q: "Welke vraag stel je om de **hoofdvraag** te vinden?", options: ["Welke vraag beantwoordt de tekst als geheel?","Hoeveel alinea's heeft de tekst?","Wat staat er in de eerste zin?","Wie heeft de tekst geschreven?"], answer: 0, wrongHints: [null, "Een telling zegt niets over de inhoud.", "Te oppervlakkig.", "Dat gaat over de auteur, niet over de centrale vraag."] },
     ],
   },
 ];

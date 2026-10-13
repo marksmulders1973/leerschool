@@ -72,9 +72,9 @@ const steps = [
       },
       {
         q: "**s = v × t** — voor wat?",
-        options: ["Afstand uitrekenen", "Snelheid", "Tijd", "Gewicht"],
+        options: ["Afstand uitrekenen", "Snelheid uitrekenen", "Tijd uitrekenen", "Gewicht uitrekenen"],
         answer: 0,
-        wrongHints: [null, "Andere formule.", "Andere formule.", "Geen formule."],
+        wrongHints: [null, "Welke grootheid staat in de formule alleen aan de linkerkant van het =-teken?", "Welke grootheid staat in de formule alleen aan de linkerkant van het =-teken?", "Komt massa of gewicht ergens in deze formule voor?"],
       },
       {
         q: "Fietser rijdt **30 min** met **20 km/u**. **Afstand**?",
@@ -122,7 +122,7 @@ const steps = [
         q: "Hoe **reken je m/s om naar km/u**?",
         options: ["× 3,6", "÷ 3,6", "× 60", "÷ 60"],
         answer: 0,
-        wrongHints: [null, "Andersom.", "Niet — denk aan 1000 m in een km en 3600 s in een uur.", "Niet — 60 hoort bij minuten; hier gaat het om meters én uren samen."],
+        wrongHints: [null, "Wordt het getal in km/u groter of kleiner dan in m/s? Hoeveel meter leg je in een uur af bij 1 m/s?", "Niet — denk aan 1000 m in een km en 3600 s in een uur.", "Niet — 60 hoort bij minuten; hier gaat het om meters én uren samen."],
       },
       {
         q: "**20 m/s** = ... km/u?",
@@ -134,7 +134,7 @@ const steps = [
         q: "**100 km/u** ≈ ... m/s?",
         options: ["~28", "~10", "~360", "~1000"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Vermenigvuldigd.", "Veel te veel."],
+        wrongHints: [null, "Te weinig.", "Kan een auto die 100 km/u rijdt elke seconde 360 meter afleggen? Moet het getal groter of kleiner worden?", "Veel te veel."],
       },
       {
         q: "Bij **wetenschap** gebruik je meestal welke eenheid?",
@@ -146,13 +146,13 @@ const steps = [
         q: "Hoe **verander je km/u naar m/s**?",
         options: ["Deel door 3,6", "Vermenigvuldig met 3,6", "Deel door 60", "Vermenigvuldig met 1000"],
         answer: 0,
-        wrongHints: [null, "Tegenovergestelde richting.", "Niet — dat is min naar sec.", "Niet primair."],
+        wrongHints: [null, "Is 1 meter per seconde meer of minder dan 1 km per uur? Moet het getal dus groter of kleiner worden?", "Niet — dat is min naar sec.", "Je rekent zo kilometers om naar meters, maar wat gebeurt er met de uren?"],
       },
       {
         q: "Hoe **verander je m/s naar km/u**?",
         options: ["Vermenigvuldig met 3,6", "Deel door 3,6", "Vermenigvuldig met 60", "Deel door 1000"],
         answer: 0,
-        wrongHints: [null, "Tegenovergestelde richting.", "Niet — dat is sec naar min.", "Niet primair."],
+        wrongHints: [null, "Is 1 meter per seconde meer of minder dan 1 km per uur? Moet het getal dus groter of kleiner worden?", "Niet — dat is sec naar min.", "Je rekent zo meters om naar kilometers, maar wat gebeurt er met de seconden?"],
       },
     ],
   },
@@ -165,9 +165,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **versnelling**?",
-        options: ["Verandering snelheid per tijd", "Hoge snelheid", "Hoeveelheid afstand", "Constant snel"],
+        options: ["Verandering snelheid per tijd", "Hoge snelheid op één moment", "Afgelegde afstand per tijd", "Steeds even snel blijven gaan"],
         answer: 0,
-        wrongHints: [null, "Dat is snelheid zelf.", "Geen verandering.", "Geen verandering."],
+        wrongHints: [null, "Dat is snelheid zelf.", "Afstand per tijd is de snelheid, niet de versnelling.", "Verandert je snelheid dan? Gaat versnelling over iets dat gelijk blijft of iets dat verandert?"],
       },
       {
         q: "Auto: 0 → 30 m/s in **10 sec**. Versnelling?",
@@ -183,9 +183,9 @@ const steps = [
       },
       {
         q: "Welke factor maakt **remweg** veel langer?",
-        options: ["Snelheid", "Kleur auto", "Weersomstandigheden alleen", "Bestuurders gewicht"],
+        options: ["Snelheid", "Lengte van de auto", "Weersomstandigheden alleen", "Gewicht van de bestuurder"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Speelt mee maar niet kwadratisch.", "Niet hoofdfactor."],
+        wrongHints: [null, "Remt een lange auto slechter dan een korte? De remmen doen hetzelfde werk.", "Speelt mee maar niet kwadratisch.", "Een paar kilo meer of minder in de auto maakt bijna geen verschil. Wat wel?"],
       },
     ],
   },
@@ -204,15 +204,15 @@ const steps = [
       },
       {
         q: "Wat geeft een **steile rechte lijn** aan?",
-        options: ["Hoge constante snelheid", "Stilstaan", "Versnellen", "Pauze"],
+        options: ["Hoge constante snelheid", "Stilstaan op één plek", "Gelijkmatig versnellen", "Lage constante snelheid"],
         answer: 0,
-        wrongHints: [null, "Vlakke lijn.", "Curve, niet recht.", "Vlakke lijn."],
+        wrongHints: [null, "Bij stilstaan verandert de afstand niet. Hoe ziet de lijn er dan uit?", "Bij versnellen wordt de lijn steeds steiler. Is hij dan nog recht?", "Bij een lage snelheid loopt de lijn bijna plat. Is dat steil?"],
       },
       {
         q: "Hoe bereken je **snelheid** uit een afstand-tijd-grafiek?",
-        options: ["De helling van de lijn", "Lengte van lijn", "Y-waarde", "X-waarde"],
+        options: ["De helling van de lijn", "De lengte van de lijn", "De waarde op de y-as", "De waarde op de x-as"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Dat is afstand.", "Dat is tijd."],
+        wrongHints: [null, "Zegt hoe lang een getekende lijn is iets over hoe snel je gaat?", "Dat is afstand.", "Dat is tijd."],
       },
       {
         q: "In een **snelheid-tijd-grafiek**: oppervlakte onder lijn = ?",
@@ -231,9 +231,9 @@ const steps = [
     checks: [
       {
         q: "**100 km/u** op snelweg in NL — wanneer?",
-        options: ["Overdag", "Alleen 's nachts", "Nooit", "Altijd"],
+        options: ["Overdag", "'s Nachts", "Alleen in het weekend", "Alleen bij regen"],
         answer: 0,
-        wrongHints: [null, "Nachts mag 130.", "Wel toegestaan.", "Niet altijd — nachts 130."],
+        wrongHints: [null, "Is het 's nachts druk of rustig op de snelweg? Wanneer is een lagere snelheid dan het meest nodig?", "De regel hangt af van het tijdstip, niet van de dag van de week.", "De regel hangt af van het tijdstip, niet van het weer."],
       },
       {
         q: "Snelheid **geluid in lucht**?",
@@ -278,7 +278,7 @@ const steps = [
         q: "**5 m/s** in km/u?",
         options: ["18 km/u", "5 km/u", "50 km/u", "1,4 km/u"],
         answer: 0,
-        wrongHints: [null, "Geen omrekening.", "Te veel.", "Andersom."],
+        wrongHints: [null, "Geen omrekening.", "Te veel.", "Wordt het getal in km/u groter of kleiner dan in m/s?"],
       },
       {
         q: "**Versnelling-eenheid**?",
@@ -300,15 +300,15 @@ const steps = [
       },
       {
         q: "**Versnelling 0** betekent?",
-        options: ["Constante snelheid (of stilstand)", "Stoppen", "Heel snel", "Steeds sneller gaan"],
+        options: ["Snelheid blijft gelijk", "Afremmen tot stilstand", "Heel hoge snelheid", "Steeds sneller gaan"],
         answer: 0,
         wrongHints: [null, "Stoppen is afremmen: dan verandert je snelheid.", "Niet noodzakelijk — snelheid en versnelling zijn verschillende dingen.", "Dan is er juist wél versnelling."],
       },
       {
         q: "Formule **afstand = ?** (bij constante snelheid)",
-        options: ["snelheid × tijd", "snelheid + tijd", "snelheid / tijd", "alleen tijd"],
+        options: ["snelheid × tijd", "snelheid + tijd", "snelheid / tijd", "tijd / snelheid"],
         answer: 0,
-        wrongHints: [null, "Optellen werkt niet.", "Tegenovergesteld.", "Onvolledig."],
+        wrongHints: [null, "Optellen werkt niet.", "Tegenovergesteld.", "Reken het na: 20 km/u gedurende 2 uur. Kom je dan op 0,1 km?"],
       },
       {
         q: "**Open vraag**: bereken **afstand** bij 30 km/u en 2 uur rijden. Typ alleen getal in km.",

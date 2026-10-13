@@ -69,7 +69,7 @@ const steps = [
     checks: [
       {
         q: "Wat is de **eerste stap** bij een CSE-tekst?",
-        options: ["Skimmen — titel + eerste alinea + plaatjes", "Direct vragen beantwoorden", "Alles letter voor letter lezen", "Slot lezen"],
+        options: ["Skimmen: titel, eerste alinea en plaatjes", "Direct de vragen beantwoorden, zonder tekst", "De hele tekst woord voor woord lezen", "Eerst het slot van de tekst lezen"],
         answer: 0,
         wrongHints: [null, "Zonder context = fouten.", "Te traag.", "Niet als eerste."],
       },
@@ -87,7 +87,7 @@ const steps = [
       },
       {
         q: "Wat doe je met **een lastige vraag** op CSE?",
-        options: ["Overslaan + later terugkomen", "Lang piekeren", "Gokken zonder lezen", "Skip helemaal"],
+        options: ["Overslaan + later terugkomen", "Blijven piekeren tot je het weet", "Gokken zonder de tekst te lezen", "Overslaan en niet meer terugkomen"],
         answer: 0,
         wrongHints: [null, "Verspilt tijd.", "Niet zonder lezen.", "Wel later proberen."],
       },
@@ -102,25 +102,25 @@ const steps = [
     checks: [
       {
         q: "Waar staat de **hoofdgedachte** meestal?",
-        options: ["Eerste of laatste alinea", "Midden", "Onder de kop", "Bij een plaatje"],
+        options: ["Eerste of laatste alinea", "In het midden van de tekst", "In de zin onder de kop", "Bij een plaatje of foto"],
         answer: 0,
         wrongHints: [null, "Niet typisch.", "Soms maar niet primair.", "Geen typische plek."],
       },
       {
         q: "*'Volgens de tekst, ___'* Wat doe je?",
-        options: ["Zoek letterlijk in tekst", "Geef eigen mening", "Gok beste antwoord", "Sla over"],
+        options: ["Zoek letterlijk in tekst", "Geef eigen mening", "Gok beste antwoord", "Sla de vraag over"],
         answer: 0,
         wrongHints: [null, "Niet — alleen tekst.", "Niet zonder lezen.", "Wel beantwoorden."],
       },
       {
         q: "Tekst over bijen: 'Bijen zijn vitaal. Ze bestuiven 90%. We moeten ze beschermen.' Hoofdgedachte?",
-        options: ["Bijen zijn belangrijk en moeten worden beschermd", "Bijen bestuiven 90% gewassen", "Bijen sterven uit", "Pesticide is slecht"],
+        options: ["Bijen zijn vitaal en moeten worden beschermd", "Bijen bestuiven 90% van de gewassen", "Bijen sterven in hoog tempo uit", "Pesticiden zijn slecht voor bijen"],
         answer: 0,
         wrongHints: [null, "Detail.", "Niet expliciet in deze samenvatting.", "Niet de hoofdgedachte."],
       },
       {
         q: "Welk antwoord is **te specifiek** voor 'hoofdgedachte'?",
-        options: ["Specifiek getal of voorbeeld", "Algemene boodschap", "Wat in titel staat", "Conclusie aan eind"],
+        options: ["Een getal of los voorbeeld", "Algemene boodschap", "Wat in titel staat", "Conclusie aan eind"],
         answer: 0,
         wrongHints: [null, "Goed voor hoofdgedachte.", "Vaak goed.", "Vaak goed."],
       },
@@ -161,15 +161,15 @@ const steps = [
       },
       {
         q: "Verschil tussen **'deze'** en **'die'**?",
-        options: ["Deze = dichtbij, die = verder weg", "Geen verschil", "Deze = man, die = vrouw", "Deze = enkelvoud, die = meervoud"],
+        options: ["Deze = dichtbij, die = verder weg", "Deze = formeel, die = informeel", "Deze = man, die = vrouw", "Deze = enkelvoud, die = meervoud"],
         answer: 0,
-        wrongHints: [null, "Wel verschil.", "Niet over geslacht.", "Beide kunnen ev + mv."],
+        wrongHints: [null, "Niet over hoe deftig je praat.", "Niet over geslacht.", "Beide kunnen ev + mv."],
       },
       {
         q: "*'Anna en Lisa kochten boeken. **Zij** las graag.'* Wie is **zij**?",
-        options: ["Niet duidelijk — kan beide", "Anna sowieso", "Lisa sowieso", "Niemand"],
+        options: ["Niet duidelijk: het kan allebei zijn", "Anna, want zij wordt eerst genoemd", "Lisa, want zij staat het dichtst bij", "Niemand, het gaat over iemand anders"],
         answer: 0,
-        wrongHints: [null, "Mogelijk maar niet eenduidig.", "Mogelijk maar niet eenduidig.", "Wel iemand."],
+        wrongHints: [null, "Mogelijk maar niet eenduidig.", "Mogelijk maar niet eenduidig.", "Wie worden er in de eerste zin genoemd?"],
       },
     ],
   },
@@ -182,9 +182,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **stelling**?",
-        options: ["De mening / het standpunt", "Een reden", "Een feit", "Een voorbeeld"],
+        options: ["Het standpunt van de schrijver", "Een reden voor een mening", "Een feit dat je kunt controleren", "Een voorbeeld uit de praktijk"],
         answer: 0,
-        wrongHints: [null, "Dat is argument.", "Een stelling is een mening, geen vaststaand feit.", "Niet stelling."],
+        wrongHints: [null, "Dat is argument.", "Valt er over een controleerbaar feit te discussiëren?", "Een voorbeeld illustreert iets. Is dat wat de schrijver vindt?"],
       },
       {
         q: "*'Volgens het CBS rookt 20% van de Nederlanders.'* Welk soort argument?",
@@ -200,9 +200,9 @@ const steps = [
       },
       {
         q: "Wat is een **tegenwerping**?",
-        options: ["Argument tegen de stelling", "Argument voor", "Een feit", "Een vraag"],
+        options: ["Argument tegen de stelling", "Argument voor de stelling", "Herhaling van de stelling", "Samenvatting van de tekst"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet specifiek argument-type.", "Geen tegenwerping."],
+        wrongHints: [null, "Tegenovergesteld.", "Een herhaling voegt geen nieuwe reden toe. Waar wijst 'tegen-' in tegenwerping op?", "Een samenvatting voegt geen nieuwe reden toe."],
       },
     ],
   },
@@ -217,19 +217,19 @@ const steps = [
         q: "Wat is de **bedoeling** van een **reclame**?",
         options: ["Activeren", "Informeren", "Amuseren", "Beschouwen"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Soms maar niet primair.", "Niet."],
+        wrongHints: [null, "Niet primair.", "Soms maar niet primair.", "Beschouwen = verschillende kanten afwegen. Doet een reclame dat?"],
       },
       {
         q: "Wat is de **bedoeling** van een **schoolboek-tekst**?",
         options: ["Informeren", "Activeren", "Amuseren", "Verkopen"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet primair.", "Niet."],
+        wrongHints: [null, "Niet primair.", "Niet primair.", "Probeert een schoolboek je echt iets te verkopen?"],
       },
       {
         q: "Een **column** met humor + mening — bedoeling?",
-        options: ["Amuseren + overtuigen", "Alleen informeren", "Alleen activeren", "Alleen beschrijven"],
+        options: ["Amuseren + overtuigen", "Informeren + beschrijven", "Activeren + informeren", "Amuseren + beschrijven"],
         answer: 0,
-        wrongHints: [null, "Alleen informeren = puur feiten geven. Maar deze schrijver laat óók zijn mening horen en maakt het grappig — is 'alleen' dan genoeg?", "Activeren = de lezer tot actie aanzetten. Roept een humoristische mening-column je echt op om iets te dóén?", "Beschrijven = neutraal weergeven zonder oordeel. Past dat bij een tekst vol humor én een eigen mening?"],
+        wrongHints: [null, "Informeren en beschrijven = neutraal feiten geven. Maar deze schrijver laat óók zijn mening horen en maakt het grappig.", "Activeren = de lezer tot actie aanzetten. Roept een humoristische mening-column je echt op om iets te dóén?", "Beschrijven = neutraal weergeven zonder oordeel. Past dat bij een tekst met een eigen mening?"],
       },
       {
         q: "*'Iedereen zou vegetariër moeten worden, omdat ...'* Welke bedoeling?",
@@ -260,7 +260,7 @@ const steps = [
       },
       {
         q: "Wat is **hoofdgedachte** typisch?",
-        options: ["Algemene boodschap van hele tekst", "Specifiek getal", "1 zin uit alinea 2", "Bijschrift bij foto"],
+        options: ["Algemene boodschap van hele tekst", "Een specifiek getal uit de tekst", "Eén zin uit de tweede alinea", "Het bijschrift bij een foto"],
         answer: 0,
         wrongHints: [null, "Detail.", "Detail.", "Niet primair."],
       },
@@ -268,13 +268,13 @@ const steps = [
         q: "Schrijver gebruikt **'Volgens hoogleraar Jansen van de TU Delft ...'**. Welk argument-type?",
         options: ["Autoriteit", "Emotioneel", "Praktisch", "Voorbeeld"],
         answer: 0,
-        wrongHints: [null, "Geen emotie.", "Niet praktisch.", "Wel bron, maar specifiek autoriteit."],
+        wrongHints: [null, "Geen emotie.", "Niet praktisch.", "Wordt hier een concreet geval beschreven, of wordt iemand aangehaald?"],
       },
       {
         q: "Welke bedoeling heeft een **advertentie**?",
         options: ["Activeren", "Informeren neutraal", "Amuseren", "Wetenschappelijk"],
         answer: 0,
-        wrongHints: [null, "Niet neutraal.", "Niet primair.", "Niet."],
+        wrongHints: [null, "Niet neutraal.", "Niet primair.", "Wetenschappelijk is geen tekstdoel. Waarom betaalt een bedrijf voor een advertentie?"],
       },
       {
         q: "*'Anna kocht een fiets. **Deze** was duur.'* Wat is **deze**?",

@@ -52,7 +52,7 @@ const steps = [
       },
       {
         q: "Welke kennis is **analytisch**?",
-        options: ["Alle vrijgezellen zijn ongehuwd","Water kookt bij 100°C","Aarde is rond","Sokrates was leraar"],
+        options: ["Alle vrijgezellen zijn ongehuwd","Water kookt op zeeniveau bij 100°C","De aarde draait in een jaar om de zon","Sokrates was de leraar van Plato"],
         answer: 0,
         wrongHints: [null, "Empirisch, niet analytisch.", "Empirisch.", "Historisch (empirisch)."],
         uitlegPad: {
@@ -94,9 +94,9 @@ const steps = [
     checks: [
       {
         q: "Wie zegt: 'esse est **percipi**' (zijn = waargenomen worden)?",
-        options: ["George Berkeley","Plato","Aristoteles","Hume"],
+        options: ["George Berkeley","Plato","Aristoteles","David Hume"],
         answer: 0,
-        wrongHints: [null, "Niet — ander concept.", "Niet — vier oorzaken.", "Niet — anders."],
+        wrongHints: [null, "Plato vond de ideeënwereld juist echter dan alles wat je waarneemt.", "Niet — vier oorzaken.", "Hume was wel empirist, maar bekend om zijn twijfel aan oorzaak en gevolg."],
         uitlegPad: {
           stappen: [{ titel: "Idealistische empirist", tekst: "**George Berkeley** (1685-1753): 'esse est percipi' = bestaan = waargenomen worden. Voorbeeld: tafel bestaat zolang iemand hem ziet. God ziet altijd alles → alles blijft bestaan. Empirist-idealist." }],
           theorie: "Limerick Knox: 'There was once a young man who said \"God / Must think it exceedingly odd / If he finds that this tree / Continues to be / When there's no one about in the quad...\"'",
@@ -105,9 +105,9 @@ const steps = [
       },
       {
         q: "Bij **dualisme** (Descartes) zijn er hoeveel substanties?",
-        options: ["Twee", "Een", "Drie", "Oneindig"],
+        options: ["Twee", "Eén", "Drie", "Oneindig"],
         answer: 0,
-        wrongHints: [null, "Niet — monisme.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Niet — monisme.", "Welk getal zit er verstopt in het woord 'dualisme'?", "Oneindig veel substanties past eerder bij de 'monaden' van Leibniz."],
         uitlegPad: {
           stappen: [{ titel: "Lichaam vs geest", tekst: "**Cartesiaans dualisme**: twee fundamenteel verschillende substanties: **res extensa** (uitgebreid ding = materie) en **res cogitans** (denkend ding = geest). Hoe interacteren ze? Probleem 'mind-body'." }],
           niveaus: { basis: "Twee.", simpeler: "Dualisme = 2", nogSimpeler: "2" },
@@ -117,7 +117,7 @@ const steps = [
         q: "Welk standpunt verzoent **vrije wil + determinisme**?",
         options: ["Compatibilisme","Libertarisme","Hard determinisme","Idealisme"],
         answer: 0,
-        wrongHints: [null, "Niet — verwerpt determinisme.", "Niet — verwerpt vrije wil.", "Niet relevant."],
+        wrongHints: [null, "Niet — verwerpt determinisme.", "Niet — verwerpt vrije wil.", "Idealisme gaat over wat de werkelijkheid is (geest), niet over vrije wil."],
         uitlegPad: {
           stappen: [{ titel: "Hume + Dennett", tekst: "**Compatibilisme**: vrije wil + determinisme **zijn niet in conflict**. 'Vrij' = handelen volgens eigen wensen + redenering (zonder externe dwang), zelfs als die wensen zelf oorzakelijk bepaald zijn. Verschillend van Cartesiaans-libertarisch 'absoluut vrije wil'." }],
           theorie: "Toets-patroon: 'past dit bij compatibilisme of libertarisme?' Beoordeel definitie.",
@@ -126,9 +126,9 @@ const steps = [
       },
       {
         q: "Wat is het **probleem van het kwaad**?",
-        options: ["Hoe kan God almachtig + goed zijn bij veel lijden?","Wat is moreel kwaad?","Hoe stop je oorlog?","Wat is zonde?"],
+        options: ["Hoe kan God almachtig + goed zijn bij veel lijden?","Wat maakt een daad moreel goed of juist kwaad?","Hoe kunnen landen oorlog voorgoed voorkomen?","Wat telt volgens de Bijbel precies als zonde?"],
         answer: 0,
-        wrongHints: [null, "Andere vraag (ethiek).", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Andere vraag (ethiek).", "Dat is een politieke vraag, geen vraag uit de godsdienstfilosofie.", "Dat vraagt naar een regel binnen een geloof. Waarom heet het een 'probleem'?"],
         uitlegPad: {
           stappen: [{ titel: "Theodicee", tekst: "**Probleem van het kwaad**: als God **almachtig + alwetend + goed** is, waarom is er lijden? Drie eigenschappen lijken onverenigbaar met realiteit van lijden. Klassiek atheïstisch argument. Theologen verdedigen met 'theodicee': vrije wil (Plantinga), zielsvorming, mysterie." }],
           niveaus: { basis: "God + lijden onverenigbaar.", simpeler: "Prob kwaad = God+lijden", nogSimpeler: "God + lijden" },
@@ -136,9 +136,9 @@ const steps = [
       },
       {
         q: "Volgens **Spinoza** is alles:",
-        options: ["Uitdrukking van één substantie", "Twee aparte werelden", "Toeval", "Illusie"],
+        options: ["Uitdrukking van één substantie", "Twee aparte werelden: geest en lichaam", "Puur toeval zonder oorzaak", "Een illusie van onze zintuigen"],
         answer: 0,
-        wrongHints: [null, "Niet — monist.", "Niet relevant.", "Niet — niet idealist."],
+        wrongHints: [null, "Niet — monist.", "Spinoza zag alles als noodzakelijk — is er dan plaats voor toeval?", "Niet — niet idealist."],
         uitlegPad: {
           stappen: [{ titel: "Deus sive Natura", tekst: "**Spinoza** (1632-1677, Amsterdam): één substantie = **God = Natuur** (pantheïsme). Alle dingen = uitdrukkingen ('modi') van deze ene substantie. Geen aparte 'God' tegenover wereld. **Joods-Portugese** filosoof, uitgesloten uit synagoge voor zijn ideeën." }],
           theorie: "Einstein: 'Ik geloof in de God van Spinoza' (de wetmatigheden van natuur, niet persoonlijke God).",
@@ -176,7 +176,7 @@ const steps = [
       },
       {
         q: "Aristotelische **eudaimonia** betekent:",
-        options: ["Goed leven / menselijke bloei","Geluksgevoel (kort)","Roem","Rijkdom"],
+        options: ["Goed leven / menselijke bloei","Kortstondig geluksgevoel / plezier","Roem / bewondering van anderen","Rijkdom / veel bezittingen"],
         answer: 0,
         wrongHints: [null, "Te eng — eudaimonia is dieper.", "Niet — extern goed.", "Niet — extern."],
         uitlegPad: {
@@ -216,9 +216,9 @@ const steps = [
     checks: [
       {
         q: "**Hobbes' natuurtoestand** wordt beschreven als:",
-        options: ["Oorlog van allen tegen allen","Paradijs","Communistisch","Vrij + vredig"],
+        options: ["Oorlog van allen tegen allen","Een paradijs zonder gebrek","Gemeenschap zonder eigendom","Vrij en vredig samenleven"],
         answer: 0,
-        wrongHints: [null, "Niet — Rousseau-achtig.", "Niet relevant.", "Niet — dat is Locke/Rousseau."],
+        wrongHints: [null, "Niet — Rousseau-achtig.", "Dat lijkt meer op Marx dan op Hobbes.", "Niet — dat is Locke/Rousseau."],
         uitlegPad: {
           stappen: [{ titel: "Bellum omnium...", tekst: "**Hobbes** in *Leviathan*: zonder staat = 'oorlog van allen tegen allen' (bellum omnium contra omnes). Leven 'solitary, poor, nasty, brutish, and short'. Daarom geven mensen macht af aan absolute soeverein voor veiligheid." }],
           niveaus: { basis: "Oorlog allen tegen allen.", simpeler: "Hobbes natuur = oorlog", nogSimpeler: "Oorlog" },
@@ -228,7 +228,7 @@ const steps = [
         q: "**Rawls' sluier van onwetendheid** test:",
         options: ["Welke principes je kiest als je niet weet wie je wordt", "Welke principes jou persoonlijk het meest opleveren", "Welke principes de meerderheid nu al aanhangt", "Of mensen eerlijk zijn als niemand kijkt"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — je weet juist niet wie je bent.", "Niet — het gaat om onpartijdig kiezen.", "Niet relevant."],
+        wrongHints: [null, "Zou zo'n keuze eerlijk uitpakken voor wie het slechtst af is?", "Niet — het gaat om onpartijdig kiezen.", "Dat gaat over iemands karakter, niet over regels voor de samenleving."],
         uitlegPad: {
           stappen: [{ titel: "Onpartijdig kiezen", tekst: "**Rawls' veil of ignorance**: stel je zou principes voor maatschappij kiezen zonder te weten of je rijk/arm, man/vrouw, gezond/ziek wordt. Dan kies je principes die meest kwetsbaren beschermen (omdat je dat zelf zou kunnen zijn). Resultaat: redelijk egalitaire samenleving." }],
           niveaus: { basis: "Welke principes.", simpeler: "Sluier = onbevooroordeeld kiezen", nogSimpeler: "Onwetend kiezen" },
@@ -247,9 +247,9 @@ const steps = [
       },
       {
         q: "**Montesquieus** scheiding der machten:",
-        options: ["Wetgevend / uitvoerend / rechterlijk","Staat / kerk","Rijk / arm","Stad / platteland"],
+        options: ["Wetgevend / uitvoerend / rechterlijk","Koning / adel / geestelijkheid","Gemeente / provincie / Rijk","Kerk / staat / universiteit"],
         answer: 0,
-        wrongHints: [null, "Niet — andere scheiding.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Dat zijn de standen uit de oude standenmaatschappij, geen soorten macht.", "Dat zijn bestuurslagen, geen soorten macht.", "Scheiding van kerk en staat is een ander idee."],
         uitlegPad: {
           stappen: [{ titel: "Trias politica", tekst: "**Montesquieu** in *De l'esprit des lois* (1748): **trias politica** = drie machten gescheiden:\n• **Wetgevend** (parlement maakt wet).\n• **Uitvoerend** (regering past toe).\n• **Rechterlijk** (rechters beoordelen).\n\nOm tirannie te voorkomen. Basis moderne rechtsstaten." }],
           niveaus: { basis: "Wetg/uitv/rechtsp.", simpeler: "Trias = 3 machten", nogSimpeler: "3" },
@@ -277,9 +277,9 @@ const steps = [
     checks: [
       {
         q: "**Aristoteles' deugd** ligt volgens hem:",
-        options: ["Tussen twee uitersten", "Aan extreme kant", "Bij meerderheid", "Bij God"],
+        options: ["Tussen twee uitersten", "Aan één van de uitersten", "Bij wat de meerderheid vindt", "Bij wat God voorschrijft"],
         answer: 0,
-        wrongHints: [null, "Niet — juist de uitersten zag Aristoteles als ondeugd.", "Niet — niet democratisch.", "Niet — humanistisch."],
+        wrongHints: [null, "Is roekeloosheid volgens Aristoteles een deugd of een ondeugd?", "Niet — niet democratisch.", "Niet — Aristoteles redeneert vanuit de mens, niet vanuit God."],
         uitlegPad: {
           stappen: [{ titel: "Gulden middenweg", tekst: "**Aristoteles**: deugd = **mediocritas / golden mean** tussen twee uitersten. Moed = tussen lafheid (te weinig) en roekeloosheid (te veel). Vrijgevigheid = tussen gierigheid en verkwisting. Niet voor elke handeling — sommige daden (zoals moord of diefstal) hebben geen 'midden' en zijn altijd fout." }],
           niveaus: { basis: "Midden.", simpeler: "Aristoteles = midden", nogSimpeler: "Midden" },
@@ -287,9 +287,9 @@ const steps = [
       },
       {
         q: "**Foucault** stelt: macht is:",
-        options: ["Overal aanwezig + relationeel", "Alleen bij staat", "Alleen onderdrukkend", "Niet bestaand"],
+        options: ["Overal aanwezig + relationeel", "Alleen aanwezig bij de staat", "Alleen onderdrukkend en negatief", "Een verzinsel dat niet bestaat"],
         answer: 0,
-        wrongHints: [null, "Juist niet — volgens Foucault zit macht niet alleen bij de staat.", "Niet — macht is volgens hem ook normerend en productief.", "Bestaat wel."],
+        wrongHints: [null, "Zit macht volgens Foucault alleen in het parlement en de regering?", "Niet — macht is volgens hem ook normerend en productief.", "Waarom zou Foucault dan zoveel over macht schrijven?"],
         uitlegPad: {
           stappen: [{ titel: "Macht-relaties overal", tekst: "**Michel Foucault** stelt dat **macht overal aanwezig** is — niet alleen bij staat, ook in school, ziekenhuis, gevangenis, familie. Macht produceert kennis ('discours'). Niet alleen onderdrukkend maar ook normerend." }],
           niveaus: { basis: "Overal.", simpeler: "Foucault = overal macht", nogSimpeler: "Overal" },
@@ -317,7 +317,7 @@ const steps = [
       },
       {
         q: "**Nietzsches** beroemde uitspraak 'God is dood' betekent:",
-        options: ["Het geloof in God verliest zijn gezag", "God is letterlijk gestorven", "God bestaat niet", "Atheïsme verplicht"],
+        options: ["Het geloof in God verliest zijn gezag", "God is letterlijk gestorven", "God bestaat niet en heeft nooit bestaan", "Iedereen moet voortaan atheïst worden"],
         answer: 0,
         wrongHints: [null, "Niet — metaforisch.", "Niet — Nietzsche beschrijft wat er met het geloof in onze cultuur gebeurt.", "Niet — culturele observatie."],
         uitlegPad: {
