@@ -94,7 +94,7 @@ const steps = [
     checks: [
       {
         q: "Wat is de **rustpotentiaal** van een axon?",
-        options: ["~−70 mV","+40 mV","0 mV","+70 mV"],
+        options: ["−70 mV","+40 mV","0 mV","+70 mV"],
         answer: 0,
         wrongHints: [null, "+40 mV bereikt de cel op de top van een actiepotentiaal. Is dat in rust?", "Ook in rust is er een spanningsverschil over het membraan. Is de binnenkant positief of negatief?", "Is de binnenkant van een axon in rust positief of negatief geladen ten opzichte van buiten?"],
         uitlegPad: {
@@ -104,7 +104,7 @@ const steps = [
       },
       {
         q: "Wat gebeurt tijdens **depolarisatie**?",
-        options: ["Na⁺ stroomt cel in, spanning naar +", "K⁺ stroomt cel uit, spanning naar −", "Na⁺ stroomt cel uit, spanning naar −", "Cel rust, spanning blijft op −70 mV"],
+        options: ["Na⁺ stroomt cel in, spanning naar +", "K⁺ stroomt cel uit, spanning naar −", "Na⁺ stroomt cel uit, spanning naar −", "Cel rust, spanning blijft gelijk"],
         answer: 0,
         wrongHints: [null, "Dat gebeurt bij repolarisatie.", "Is er meer Na⁺ binnen of buiten de cel? Welke kant stroomt het dan op?", "Dat is de rustpotentiaal. Bij depolarisatie verandert de spanning."],
         uitlegPad: {
@@ -115,9 +115,9 @@ const steps = [
       },
       {
         q: "Welke stof draagt prikkel **van neuron naar neuron** via synaps?",
-        options: ["Neurotransmitter","Hormoon","Na⁺-ionen","Een elektrische stroom"],
+        options: ["Neurotransmitter","Neurohormoon","Na⁺-ionen","Een elektrische stroom"],
         answer: 0,
-        wrongHints: [null, "Een hormoon reist via het bloed door het hele lichaam. Is dat nodig voor die kleine spleet?", "Na⁺ zorgt voor de actiepotentiaal langs het axon. Kan het de spleet tussen twee cellen overbruggen?", "De synapsspleet is een kleine ruimte tussen twee cellen. Kan een stroom daar zomaar overheen springen?"],
+        wrongHints: [null, "Een neurohormoon wordt door zenuwcellen in het bloed afgegeven, zoals ADH. Is dat nodig voor die kleine spleet?", "Na⁺ zorgt voor de actiepotentiaal langs het axon. Kan het de spleet tussen twee cellen overbruggen?", "De synapsspleet is een kleine ruimte tussen twee cellen. Kan een stroom daar zomaar overheen springen?"],
         uitlegPad: {
           stappen: [{ titel: "Chemische brug", tekst: "**Neurotransmitter** = chemische stof in synaptische blaasjes. Bij actiepotentiaal vrijgegeven, diffundeert door synapsspleet, bindt receptor op volgende cel. Voorbeelden: acetylcholine, dopamine, serotonine, GABA, glutamaat." }],
           theorie: "Drugs werken vaak via neurotransmitters: SSRI blokkeert serotonine-heropname (anti-depressivum), nicotine bindt acetylcholine-receptor.",
@@ -249,7 +249,7 @@ const steps = [
       },
       {
         q: "Hoe reageert lichaam bij **lage bloedsuiker**?",
-        options: ["Glucagon", "Insuline", "ADH", "Melatonine"],
+        options: ["De alvleesklier maakt glucagon", "De alvleesklier maakt insuline", "De hypofyse geeft ADH af", "De pijnappelklier maakt melatonine"],
         answer: 0,
         wrongHints: [null, "Insuline verlaagt de suiker juist. Is dat nodig als hij al laag is?", "ADH regelt de waterbalans in de nieren, niet de bloedsuiker.", "Melatonine regelt slaap, niet je bloedsuiker."],
         uitlegPad: {
@@ -289,9 +289,9 @@ const steps = [
       },
       {
         q: "Een prikkel gaat **30 m/s** door een zenuw. Heeft die zenuw waarschijnlijk **myeline**?",
-        options: ["Ja — zonder myeline veel trager", "Nee — myeline vertraagt de geleiding", "Nee — snelheid hangt af van de prikkel", "Niet te zeggen — snelheid zegt niets"],
+        options: ["Ja — zonder myeline veel trager", "Ja — myeline maakt de prikkel sterker", "Nee — snelheid hangt af van de prikkel", "Nee — 30 m/s haalt ook een zenuw zonder myeline"],
         answer: 0,
-        wrongHints: [null, "Wat doet een isolatielaag met de snelheid van het signaal?", "Hoe sterk een prikkel ook is, de geleidingssnelheid verandert daar niet door.", "Vergelijk met zenuwen zonder myeline (rond 1 m/s). Wat valt op?"],
+        wrongHints: [null, "Een actiepotentiaal is altijd even sterk (alles-of-niets). Wat verandert myeline dan wel?", "Hoe sterk een prikkel ook is, de geleidingssnelheid verandert daar niet door.", "Zenuwen zonder myeline geleiden rond 1 m/s. Is 30 m/s dan haalbaar zonder?"],
         uitlegPad: {
           stappen: [{ titel: "Myeline = sprong-geleiding", tekst: "Zonder myeline: 1-5 m/s. Met myeline: tot 120 m/s via sprong-geleiding tussen knopen van Ranvier. **30 m/s** is duidelijk gemyeliniseerd." }],
           niveaus: { basis: "Ja.", simpeler: "30 m/s = met myeline", nogSimpeler: "Ja" },

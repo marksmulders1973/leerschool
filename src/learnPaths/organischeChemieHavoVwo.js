@@ -32,9 +32,9 @@ const steps = [
     checks: [
       {
         q: "Hoeveel **bindingen** maakt koolstof normaal?",
-        options: ["4","1","2","Wisselt sterk"],
+        options: ["4","1","2","Hangt af van de stof"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is waterstof.", "Niet — dat is zuurstof.", "Niet — koolstof maakt steeds hetzelfde vaste aantal bindingen."],
+        wrongHints: [null, "Met één binding kan een atoom alleen aan het eind van een keten zitten. Kan koolstof dan lange ketens bouwen?", "Met twee bindingen maak je wel een keten, maar geen vertakking. Kunnen koolstofketens vertakt zijn?", "Of het nu methaan, ethanol of glucose is: koolstof maakt steeds hetzelfde vaste aantal bindingen. Hoeveel?"],
         uitlegPad: {
           stappen: [{ titel: "4 valentie-elektronen", tekst: "Koolstof heeft **4 elektronen** in buitenste schil. Wil naar 8 (octet) → deelt 4 met andere atomen → **4 covalente bindingen**. Altijd. Stabiel." }],
           woorden: [{ woord: "valentie-elektron", uitleg: "Elektron in buitenste schil — bepaalt binding-gedrag." }, { woord: "covalente binding", uitleg: "Gedeelde elektronenparen tussen atomen." }],
@@ -57,7 +57,7 @@ const steps = [
         q: "Welk atoom heeft **1 binding** in organische verbindingen?",
         options: ["H (waterstof)","C (koolstof)","O (zuurstof)","N (stikstof)"],
         answer: 0,
-        wrongHints: [null, "Niet — 4 bindingen.", "Niet — 2 bindingen.", "Niet — 3 bindingen."],
+        wrongHints: [null, "Koolstof vormt het geraamte van lange, vertakte ketens. Kan dat met maar één binding?", "Zuurstof zit in water tussen twee H-atomen in. Hoeveel bindingen maakt O dan?", "In ammoniak (NH₃) zitten drie H-atomen aan één N. Hoeveel bindingen maakt N dan?"],
         uitlegPad: {
           stappen: [{ titel: "H = 1 elektron = 1 binding", tekst: "Waterstof heeft maar **1 elektron** → maar 1 binding. Vandaar dat H altijd 'eindpunt' is in een organisch molecuul." }],
           theorie: "Onthoud: C=4, H=1, O=2, N=3, halogenen=1.",
@@ -68,7 +68,7 @@ const steps = [
         q: "Welke verbinding is **organisch**?",
         options: ["Glucose (C₆H₁₂O₆)","Water (H₂O)","Zout (NaCl)","Zuurstofgas (O₂)"],
         answer: 0,
-        wrongHints: [null, "Niet — geen koolstof.", "Niet — anorganisch.", "Niet — geen koolstof."],
+        wrongHints: [null, "Welke atomen zitten er in H₂O? Zit daar koolstof bij?", "Welke atomen zitten er in NaCl? Zit daar koolstof bij?", "Zuurstofgas bevat maar één soort atoom. Is dat koolstof?"],
         uitlegPad: {
           stappen: [{ titel: "Organisch = koolstof-verbinding", tekst: "**Organisch** = bevat koolstof (en meestal waterstof). Glucose = C₆H₁₂O₆ = klassiek organisch. Water, zout, zuurstofgas = anorganisch (geen C of geen typische C-H-binding)." }],
           theorie: "Uitzonderingen: CO₂, CO, carbonaten (zoals kalk CaCO₃) zijn koolstof-bevattend maar anorganisch.",
@@ -109,7 +109,7 @@ const steps = [
         q: "Hoeveel **koolstofatomen** heeft pentaan?",
         options: ["5","3","6","10"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is propaan.", "Niet — dat is hexaan.", "Niet — dat is decaan."],
+        wrongHints: [null, "Tel de rij af: meth- (1), eth- (2), en zo verder. Op welke plek komt pent-?", "Bij 6 koolstofatomen hoort het voorvoegsel hex-. Is dat pent-?", "Tien koolstofatomen heet dec-, zoals in decimaal. Is dat pent-?"],
         uitlegPad: {
           stappen: [{ titel: "Penta = 5", tekst: "Penta-prefix (Grieks: vijf). **Pentaan = C₅H₁₂**. Veel-gebruikt: pentagon (vijfhoek), pentagram (5-puntige ster), pentathlon (5 sporten)." }],
           theorie: "Memo: meth=1, eth=2, prop=3, but=4, pent=5, hex=6, hept=7, oct=8, non=9, dec=10.",
@@ -120,7 +120,7 @@ const steps = [
         q: "**Octaangetal** in benzine verwijst naar:",
         options: ["Klopvastheid van de benzine","Aantal octaan-moleculen","Aantal C-atomen per molecuul","Energie-inhoud per liter"],
         answer: 0,
-        wrongHints: [null, "Niet — geen rechtstreeks aantal.", "Niet — benzine is een mengsel van moleculen met verschillende lengtes.", "Niet — benzine 98 bevat niet merkbaar meer energie dan benzine 95."],
+        wrongHints: [null, "Benzine 95 bevat niet letterlijk 95 octaanmoleculen. Waar zegt het getal dan iets over?", "Niet — benzine is een mengsel van moleculen met verschillende lengtes.", "Niet — benzine 98 bevat niet merkbaar meer energie dan benzine 95."],
         uitlegPad: {
           stappen: [{ titel: "Octaangetal = brandeigenschap", tekst: "**Octaangetal** geeft hoe **goed brandstof presteert** in motor. Schaal: iso-octaan (zeer goed) = 100, heptaan (slecht, klopt) = 0. Benzine 95 = vergelijkbaar met mix van 95% iso-octaan + 5% heptaan." }],
           theorie: "Toets-actueel: Euro 95 / 98 verwijst naar octaangetal. Hoger octaangetal = duurder + nodig voor motoren met hoge compressie.",
@@ -129,9 +129,9 @@ const steps = [
       },
       {
         q: "Hoeveel **isomeren** heeft butaan C₄H₁₀?",
-        options: ["2","1","3","Onbeperkt"],
+        options: ["2","1","3","4"],
         answer: 0,
-        wrongHints: [null, "Niet — denk ook aan een vertakte keten.", "Niet — 3 isomeren heeft C₅H₁₂.", "Niet — beperkt."],
+        wrongHints: [null, "Niet — denk ook aan een vertakte keten.", "Niet — 3 isomeren heeft C₅H₁₂.", "Teken de mogelijke ketens met 4 C-atomen: recht of met een tak. Hoeveel echt verschillende vormen vind je?"],
         uitlegPad: {
           stappen: [{ titel: "Twee isomeren C₄H₁₀", tekst: "1) **n-Butaan**: rechte keten CH₃-CH₂-CH₂-CH₃. 2) **2-Methylpropaan** (iso-butaan): vertakt. Zelfde formule, andere structuur." }],
           woorden: [{ woord: "isomeer", uitleg: "Verbinding met dezelfde molecuulformule maar verschillende structuur." }],
@@ -143,7 +143,7 @@ const steps = [
         q: "Welke alkaan zit in een **aansteker**?",
         options: ["Butaan","Methaan","Decaan","Benzeen"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is aardgas (geen vloeistof).", "Niet — diesel, niet aansteker.", "Niet — benzeen is anders (aromatisch)."],
+        wrongHints: [null, "Niet — dat is aardgas (geen vloeistof).", "Niet — diesel, niet aansteker.", "Benzeen is geen alkaan maar een ringvormige, aromatische stof. Welk gas wordt onder druk vloeibaar in een aansteker?"],
         uitlegPad: {
           stappen: [{ titel: "Butaan = vloeibaar bij druk", tekst: "**Butaan** (C₄H₁₀) is gas bij kamertemperatuur maar wordt **vloeibaar onder druk** in aansteker. Bij openen vervliegt + ontbrandt. Propaan (C₃H₈) zit in barbecue-tanks." }],
           theorie: "Toets-patroon: butaan vs propaan = vergelijkbaar maar butaan vloeibaar bij lagere druk.",
@@ -161,9 +161,9 @@ const steps = [
     checks: [
       {
         q: "Welke **functionele groep** heeft ethanol?",
-        options: ["-OH (alcohol)","-COOH (zuur)","-CHO (aldehyde)","-NH₂ (amine)"],
+        options: ["-OH","-COOH","-CHO","-NH₂"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is azijnzuur etc.", "Niet — dat is aldehyde.", "Niet — dat is amine."],
+        wrongHints: [null, "Deze groep zit in azijnzuur. Eindigt de naam ethanol op -zuur?", "Deze groep zit aan het eind van een stof als ethanal. Eindigt ethanol op -al of op -ol?", "Deze groep bevat stikstof. Zit er stikstof in ethanol?"],
         uitlegPad: {
           stappen: [{ titel: "-OL = alcohol = -OH", tekst: "**Ethanol** (drank-alcohol) C₂H₅OH heeft een **hydroxylgroep** (-OH) → het IS een alcohol. -ol uitgang in naam." }],
           woorden: [{ woord: "hydroxylgroep", uitleg: "-OH groep, kenmerk van alcohol." }],
@@ -172,9 +172,9 @@ const steps = [
       },
       {
         q: "Welk **carbonzuur** zit in azijn?",
-        options: ["Ethaanzuur (CH₃COOH)","Methaanzuur (HCOOH)","Salicylzuur","Zwavelzuur"],
+        options: ["Ethaanzuur (CH₃COOH)","Methaanzuur (HCOOH)","Salicylzuur (C₇H₆O₃)","Zwavelzuur (H₂SO₄)"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is mierenzuur.", "Niet — dat zit in aspirine.", "Niet — dat is anorganisch."],
+        wrongHints: [null, "Methaanzuur heet ook mierenzuur. Hoeveel C-atomen heeft azijnzuur?", "Salicylzuur is de grondstof voor aspirine. Ruikt azijn naar medicijnen?", "Zwavelzuur bevat geen koolstof en is dus geen carbonzuur. Welk zuur heeft de -COOH-groep?"],
         uitlegPad: {
           stappen: [{ titel: "Azijn = 5% ethaanzuur", tekst: "Azijn = waterige oplossing van **5% ethaanzuur** (= azijnzuur, CH₃COOH). Smaak zuur door H⁺ vrijgave in water." }],
           theorie: "Andere namen: 'azijnzuur' is dezelfde stof als 'ethaanzuur' (= IUPAC).",
@@ -185,7 +185,7 @@ const steps = [
         q: "Welk soort verbinding ontstaat bij **alcohol + zuur**?",
         options: ["Ester","Aldehyde","Keton","Amine"],
         answer: 0,
-        wrongHints: [null, "Niet — andere reactie nodig.", "Niet — keton uit alcohol-oxidatie.", "Niet — uit ammoniak-derivaten."],
+        wrongHints: [null, "Een aldehyde ontstaat als je een alcohol oxideert. Oxideer je hier, of laat je twee stoffen samen reageren?", "Een keton ontstaat ook door oxidatie van een alcohol. Wat ontstaat er als een alcohol met een zuur reageert en er water afsplitst?", "Een amine bevat stikstof. Zit er N in een alcohol of in een zuur?"],
         uitlegPad: {
           stappen: [{ titel: "Verestering", tekst: "**Alcohol + carbonzuur → ester + water** (omkeerbare reactie). Voorbeeld: ethanol + azijnzuur → ethylacetaat + water. Esters geuren prettig (fruit, parfum)." }],
           theorie: "Toets-favoriet: ester-vorming als reactie-vraag. Vergeet 'water' niet als bijproduct.",
@@ -196,7 +196,7 @@ const steps = [
         q: "**Aceton** (CH₃COCH₃) is een:",
         options: ["Keton","Aldehyde","Alcohol","Amine"],
         answer: 0,
-        wrongHints: [null, "Niet — C=O zit in midden, niet aan einde.", "Niet — geen -OH.", "Niet — geen N."],
+        wrongHints: [null, "Bij een aldehyde zit de C=O aan het eind van de keten. Waar zit hij in CH₃COCH₃?", "Niet — geen -OH.", "Niet — geen N."],
         uitlegPad: {
           stappen: [{ titel: "Keton vs aldehyde", tekst: "**Keton**: C=O groep **in midden** van keten (R-CO-R'). **Aldehyde**: C=O groep **aan einde** (R-CHO). Aceton (CH₃COCH₃) = midden → keton. Naamgeving -on-uitgang." }],
           theorie: "Toepassing aceton: nagellak-verwijderaar, plastic-oplosmiddel.",
@@ -236,9 +236,9 @@ const steps = [
       },
       {
         q: "**Koolmonoxide (CO)** is gevaarlijk omdat:",
-        options: ["Het is reukloos + dodelijk","Het ruikt slecht","Het maakt veel rook","Het tast de ozonlaag aan"],
+        options: ["Het is reukloos en giftig","Het prikt in je ogen en keel","Het is zwaarder dan lucht","Het tast de ozonlaag aan"],
         answer: 0,
-        wrongHints: [null, "Niet — zou je CO dan op tijd opmerken?", "Niet — onzichtbaar.", "Niet — het gevaar zit in wat CO in je lichaam doet."],
+        wrongHints: [null, "Als CO prikte, zou je het dan op tijd opmerken en weglopen?", "CO is juist iets lichter dan lucht en mengt goed. Wat doet CO in je bloed?", "Niet — het gevaar zit in wat CO in je lichaam doet."],
         uitlegPad: {
           stappen: [{ titel: "CO bindt aan hemoglobine", tekst: "**CO** bindt 200× sterker aan hemoglobine dan zuurstof. Hemoglobine kan geen O₂ meer vervoeren → verstikking. **Reukloos + smaakloos** → slachtoffer merkt niets, valt in slaap, sterft. Slecht geventileerde geisers = klassieke oorzaak." }],
           theorie: "Toets-actueel: een CO-melder wordt sterk aangeraden in elke woning met een gasapparaat. In NL overlijden elk jaar mensen aan CO-vergiftiging.",
@@ -247,9 +247,9 @@ const steps = [
       },
       {
         q: "Etheen (C₂H₄) + waterstof (H₂) → ?",
-        options: ["Ethaan (C₂H₆)","Ethanol","Etheen","Methaan"],
+        options: ["Ethaan (C₂H₆)","Ethanol (C₂H₅OH)","Ethyn (C₂H₂)","Methaan (CH₄)"],
         answer: 0,
-        wrongHints: [null, "Niet — dat heeft -OH erbij.", "Niet — zelfde uitgangsstof.", "Niet — minder koolstof."],
+        wrongHints: [null, "Voor ethanol heb je water (H₂O) nodig, niet waterstof. Zit er O in H₂?", "Ethyn heeft minder H dan etheen. Komen er bij deze reactie H-atomen bij of gaan ze eraf?", "Bij additie blijft de koolstofketen heel. Hoeveel C-atomen houd je dan?"],
         uitlegPad: {
           stappen: [{ titel: "Additie aan dubbele binding", tekst: "**Additie**: C=C neemt H₂ op → C-C (enkele binding). C₂H₄ (etheen, onverzadigd) + H₂ → **C₂H₆** (ethaan, verzadigd)." }],
           theorie: "Toets-patroon: onverzadigde verbindingen (C=C of C≡C) kunnen ADDITIE ondergaan. Verzadigde alleen substitutie.",
@@ -260,7 +260,7 @@ const steps = [
         q: "Wat is **polyetheen (PE)**?",
         options: ["Polymeer van etheen-monomeren","Eén enkel etheen-molecuul","Polymeer van ethanol-monomeren","Natuurlijk polymeer uit planten"],
         answer: 0,
-        wrongHints: [null, "Niet — heel veel etheen-eenheden.", "Ethanol heeft geen dubbele binding. Kan het dan via additie een polymeer vormen?", "Polyetheen maak je in een fabriek uit aardolie. Welk monomeer zit in de naam?"],
+        wrongHints: [null, "Poly- betekent 'veel'. Is PE dan één los molecuul?", "Ethanol heeft geen dubbele binding. Kan het dan via additie een polymeer vormen?", "Polyetheen maak je in een fabriek uit aardolie. Welk monomeer zit in de naam?"],
         uitlegPad: {
           stappen: [{ titel: "Plastic-keten", tekst: "**Polyetheen (PE)** = duizenden etheen-moleculen aan elkaar gekoppeld via polymerisatie. C₂H₄ → (-CH₂-CH₂-)ₙ. Toepassing: plastic-zakken, flessen." }],
           woorden: [{ woord: "polymerisatie", uitleg: "Reactie waarbij vele kleine moleculen (monomeren) één lange keten (polymeer) vormen." }],
@@ -292,7 +292,7 @@ const steps = [
         q: "Wat is **propaan**?",
         options: ["C₃H₈","C₂H₆","C₄H₁₀","CH₄"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is ethaan.", "Niet — dat is butaan.", "Niet — dat is methaan."],
+        wrongHints: [null, "Gebruik CₙH₂ₙ₊₂ en het voorvoegsel prop-. Hoeveel C-atomen heeft C₂H₆?", "Gebruik CₙH₂ₙ₊₂ en het voorvoegsel prop-. Hoeveel C-atomen heeft C₄H₁₀?", "Gebruik CₙH₂ₙ₊₂ en het voorvoegsel prop-. Hoeveel C-atomen heeft CH₄?"],
         uitlegPad: {
           stappen: [{ titel: "Prop = 3", tekst: "**Propaan** = 3 C-atomen alkaan = C₃H₈ (volgens 2n+2 → 8H)." }],
           niveaus: { basis: "C₃H₈.", simpeler: "Propaan = C₃H₈", nogSimpeler: "C₃H₈" },
@@ -302,7 +302,7 @@ const steps = [
         q: "Welke functionele groep is **-COOH**?",
         options: ["Carbonzuur","Alcohol","Aldehyde","Ester"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is -OH.", "Niet — dat is -CHO.", "Niet — dat is -COO-."],
+        wrongHints: [null, "Een alcohol heeft maar één O-atoom in zijn groep. Hoeveel O zie je in -COOH?", "Een aldehyde heeft een C=O aan het eind, maar geen extra OH. Zie je hier een OH?", "In een ester zit een O tussen twee koolstofketens, zonder H erachter. Eindigt -COOH op een H?"],
         uitlegPad: {
           stappen: [{ titel: "-COOH = zuur", tekst: "**-COOH** = carbonzuur-groep. C=O + O-H. Geeft H⁺ vrij in water → zuur. Naamgeving: -zuur." }],
           niveaus: { basis: "Carbonzuur.", simpeler: "-COOH = zuur", nogSimpeler: "Zuur" },
@@ -320,9 +320,9 @@ const steps = [
       },
       {
         q: "Welk product ontstaat bij **ethanol + azijnzuur**?",
-        options: ["Een ester en water","Methaan en koolstofdioxide","Een aldehyde en water","Een alcohol en zuurstof"],
+        options: ["Een ester en water","Een ether en water","Een aldehyde en water","Een zout en water"],
         answer: 0,
-        wrongHints: [null, "Niet — er wordt hier niets verbrand.", "Niet — geen oxidatie hier.", "Niet — de alcohol is juist een uitgangsstof."],
+        wrongHints: [null, "Een ether ontstaat uit twee alcoholen. Hier reageert een alcohol met een zuur. Welke stofklasse ontstaat dan?", "Een aldehyde ontstaat bij oxidatie van een alcohol. Wordt ethanol hier geoxideerd, of reageert het met een zuur?", "Zout en water ontstaan als een zuur met een base reageert. Is ethanol een base?"],
         uitlegPad: {
           stappen: [{ titel: "Verestering", tekst: "**Alcohol + zuur → ester + water**. Ethanol (C₂H₅OH) + azijnzuur (CH₃COOH) → **ethylacetaat (CH₃COOC₂H₅) + H₂O**." }],
           niveaus: { basis: "Ester.", simpeler: "Alc + zuur = ester (+water)", nogSimpeler: "Ester" },
@@ -330,9 +330,9 @@ const steps = [
       },
       {
         q: "Wat is **bio-ethanol**?",
-        options: ["Ethanol uit planten","Synthetische alcohol","Ethanol die niet kan branden","Methaan-derivaat"],
+        options: ["Ethanol uit planten","Ethanol die biologisch afbreekt","Ethanol uit aardolie","Biogas uit mest"],
         answer: 0,
-        wrongHints: [null, "Niet — waar wijst het voorvoegsel 'bio' op?", "Niet — bio-ethanol wordt juist als brandstof gebruikt.", "Niet — bio-ethanol wordt niet uit aardgas gemaakt."],
+        wrongHints: [null, "Ook gewone ethanol breekt af. Zegt 'bio' hier iets over de afbraak of over de grondstof?", "Aardolie is een fossiele grondstof. Waarom zou ethanol daaruit 'bio' heten?", "Biogas uit mest is vooral methaan, geen ethanol. Waar maak je bio-ethanol van?"],
         uitlegPad: {
           stappen: [{ titel: "Bio = uit levende organismen", tekst: "**Bio-ethanol** = ethanol gemaakt door **fermentatie** van suikers (uit maïs, suikerriet, etc.) door gist. Hernieuwbaar maar nadeel: concurreert met voedsel-landbouw. Gebruikt als brandstof-bijmenging (E10, E85)." }],
           niveaus: { basis: "Uit planten.", simpeler: "Bio-ethanol = uit plant-suiker", nogSimpeler: "Plant" },

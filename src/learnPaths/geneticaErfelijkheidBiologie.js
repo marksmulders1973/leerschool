@@ -120,13 +120,13 @@ const steps = [
     checks: [
       {
         q: "Wat is **erfelijkheid**?",
-        options: ["Doorgeven van eigenschappen via genen aan kinderen", "Een ziekte die in sommige families vaker voorkomt", "De kleur van je haar en de kleur van je ogen", "Hoe lang je leeft en hoe gezond je blijft"],
+        options: ["Doorgeven van eigenschappen via genen aan kinderen", "Doorgeven van gewoontes via opvoeding aan kinderen", "Veranderen van genen door invloeden uit je omgeving", "Overdragen van ziektes van ouder op kind door besmetting"],
         answer: 0,
         wrongHints: [
           null,
-          "Sommige ziektes zijn erfelijk maar erfelijkheid zelf is geen ziekte.",
-          "Haarkleur is een gevolg van erfelijkheid.",
-          "Levensduur is deels erfelijk, maar beschrijft dat wat erfelijkheid zelf is?",
+          "Gewoontes leer je thuis. Gaan die ook via je DNA naar je kinderen?",
+          "Dat is een mutatie. Is dat hetzelfde als iets van ouders aan kinderen doorgeven?",
+          "Griep kun je van je moeder krijgen, maar via besmetting. Gaat dat via genen?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Erfelijkheid = via genen", tekst: "Eigenschappen gaan van ouders naar kinderen via DNA. Bij bevruchting komen eicel + zaadcel samen — kind krijgt 50% DNA van mama, 50% van papa." }],
@@ -192,7 +192,7 @@ const steps = [
           null,
           "Een cel bevat al het DNA met duizenden genen. Is één gen dan zo groot?",
           "Op één chromosoom liggen heel veel genen. Is een gen dan een heel chromosoompaar?",
-          "Genen coderen voor eiwitten, maar zijn zelf DNA-stukjes.",
+          "Een eiwit wordt gemaakt volgens een recept. Is het eiwit zelf dan het recept?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Gen = stukje DNA", tekst: "Een gen is een specifiek stukje DNA met de instructies voor één eigenschap (bv. oogkleur). De volledige DNA-streng heeft duizenden genen achter elkaar." }],
@@ -230,7 +230,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "B is dominant — die bepaalt het fenotype.",
+          "Welke van de twee allelen is dominant, en heeft deze persoon dat allel?",
           "Groen komt in dit voorbeeld niet voor — er zijn alleen de allelen B en b.",
           "Bij dominant en recessief mengen de kleuren niet — welk allel wint?",
         ],
@@ -478,12 +478,12 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen **erfelijk** en **aangeboren**?",
-        options: ["Erfelijk = via DNA van ouders; aangeboren = al vanaf de geboorte", "Geen verschil — beide betekenen dat je het via DNA kreeg", "Erfelijk = door een ongeluk; aangeboren = via DNA van ouders", "Erfelijk = komt pas later; aangeboren = bij de geboorte"],
+        options: ["Erfelijk = via DNA van ouders; aangeboren = al vanaf de geboorte", "Geen verschil — beide betekenen dat je het via DNA kreeg", "Erfelijk = al vanaf de geboorte; aangeboren = via DNA van ouders", "Erfelijk = komt pas later; aangeboren = bij de geboorte"],
         answer: 0,
         wrongHints: [
           null,
           "Een baby kan tijdens de zwangerschap iets oplopen. Komt dat dan uit het DNA van de ouders?",
-          "Precies omgedraaid — waar komt een erfelijke eigenschap vandaan?",
+          "Precies omgedraaid. Kan een baby iets aangeborens ook tijdens de zwangerschap hebben opgelopen?",
           "Een erfelijke eigenschap als oogkleur heb je al bij je geboorte. Gaat erfelijk dan over het moment?",
         ],
         uitlegPad: {
@@ -630,8 +630,8 @@ const steps = [
       { q: "Twee heterozygote ouders (Aa × Aa). Kans dominant fenotype kind?", options: ["75%","50%","25%","100%"], answer: 0, wrongHints: [null,"Niet — maak een Punnett-vierkant en tel hoeveel uitkomsten dominant fenotype geven.","Te laag — hoeveel van de vier Punnett-vakjes tonen een recessief fenotype?","Niet — kan er bij Aa × Aa ook een kind met twee recessieve allelen ontstaan?"] },
       { q: "**Cystische fibrose** is een recessieve aandoening. Beide ouders Aa. Kans op ziek kind?", options: ["25%","50%","75%","100%"], answer: 0, wrongHints: [null,"Te hoog — maak een Punnett-vierkant: welke combinatie is ziek, en in hoeveel vakjes staat die?","Te hoog — dragers (Aa) zijn niet ziek.","Krijgen alle kinderen van twee Aa-ouders aa? Teken het Punnett-vierkant."] },
       { q: "Wat is het verschil tussen **genotype** en **fenotype**?", options: ["Genotype = DNA-code; fenotype = zichtbaar kenmerk","Genotype = zichtbaar kenmerk; fenotype = DNA-code","Genotype en fenotype betekenen hetzelfde","Genotype = van moeder; fenotype = van vader"], answer: 0, wrongHints: [null,"Precies omgedraaid — geno hoort bij genen, feno bij wat je ziet.","Een Bb-persoon en een BB-persoon hebben allebei bruine ogen. Hebben ze dan ook hetzelfde DNA?","Je krijgt van beide ouders allelen. Gaan geno en feno over wie het doorgeeft?"] },
-      { q: "**Dominante allel** wordt geschreven als?", options: ["Hoofdletter (A)", "Kleine letter (a)", "Cijfer (1)", "Griekse letter (α)"], answer: 0, wrongHints: [null, "Welk soort allel krijgt de kleine letter: het sterke of het zwakke?", "In een kruisingsschema zie je letters, geen cijfers. Welke soort letter?", "Biologen gebruiken gewone letters uit ons alfabet. Groot of klein?"] },
-      { q: "**Recessief allel** wordt geschreven als?", options: ["Kleine letter (a)", "Hoofdletter (A)", "Cijfer (1)", "Griekse letter (α)"], answer: 0, wrongHints: [null, "Welk soort allel krijgt de hoofdletter: het sterke of het zwakke?", "In een kruisingsschema zie je letters, geen cijfers. Welke soort letter?", "Biologen gebruiken gewone letters uit ons alfabet. Groot of klein?"] },
+      { q: "**Dominante allel** wordt geschreven als?", options: ["Hoofdletter (A)", "Kleine letter (a)", "Twee hoofdletters (AA)", "Hoofd- en kleine letter (Aa)"], answer: 0, wrongHints: [null, "Welk soort allel krijgt de kleine letter: het sterke of het zwakke?", "AA is een genotype met twee allelen. Hoe schrijf je één dominant allel?", "Aa is een genotype met twee verschillende allelen. Hoe schrijf je er één?"] },
+      { q: "**Recessief allel** wordt geschreven als?", options: ["Kleine letter (a)", "Hoofdletter (A)", "Twee kleine letters (aa)", "Hoofd- en kleine letter (Aa)"], answer: 0, wrongHints: [null, "Welk soort allel krijgt de hoofdletter: het sterke of het zwakke?", "aa is een genotype met twee allelen. Hoe schrijf je één recessief allel?", "Aa is een genotype met twee verschillende allelen. Hoe schrijf je er één?"] },
       { q: "**Homozygoot** betekent?", options: ["Beide allelen gelijk","Beide allelen verschillend","Slechts één allel per gen","Eén allel is dominant"], answer: 0, wrongHints: [null,"Dat is heterozygoot. Wat betekent 'homo'?","Je krijgt van elke ouder één allel. Hoeveel heb je er dan per gen?","Dominant zegt welk allel 'wint'. Gaat homozygoot daarover, of over hoe de twee allelen eruitzien?"] },
       { q: "**Heterozygoot** = ?", options: ["Aa","AA","aa","A"], answer: 0, wrongHints: [null,"Zijn de twee allelen bij AA gelijk of verschillend? Wat betekent 'hetero'?","Zijn de twee allelen bij aa gelijk of verschillend? Past dat bij 'hetero'?","Je hebt van elk gen twee allelen. Hoeveel letters horen er dan in een genotype?"] },
       { q: "Aantal chromosomen in **mensenlichaamscel** (geen geslachtscel)?", options: ["46","23","48","100"], answer: 0, wrongHints: [null, "Zo veel zit er in een eicel of zaadcel. Hoeveel heeft een gewone lichaamscel?", "Zo veel heeft een chimpansee. Hoeveel heeft een mens?", "Zo veel heeft een mens er niet. Hoeveel paren zijn het, en hoeveel chromosomen zitten er in één paar?"] },

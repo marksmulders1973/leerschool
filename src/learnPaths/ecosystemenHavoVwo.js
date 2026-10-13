@@ -23,13 +23,13 @@ const steps = [
       {
         q: "Wat is een **producent** in een ecosysteem?",
         options: [
-          "Plant of alg die zelf voedsel maakt",
-          "Carnivoor die andere dieren eet",
-          "Bacterie die dode stof afbreekt",
-          "Mens die voedsel produceert"
+          "Plant of alg die zelf zijn voedsel aanmaakt",
+          "Herbivoor die plantenstof omzet in vlees",
+          "Bacterie die dode resten omzet in mineralen",
+          "Carnivoor die andere dieren eet"
         ],
         answer: 0,
-        wrongHints: [null, "Een carnivoor eet andere dieren. Maakt hij dan zelf zijn voedsel?", "Afbreken van dode resten is werk aan het eind van de kringloop. Wie maakt het voedsel aan het begin?", "Producent is hier een ecologische term, geen beroep. Waar begint de energie in een voedselketen?"],
+        wrongHints: [null, "Een herbivoor zet voedsel om, maar heeft hij dat voedsel zelf gemaakt? Waar haalt hij het vandaan?", "Dat is een reducent: die werkt aan het eind van de kringloop. Wie staat er aan het begin van een voedselketen?", "Een carnivoor eet andere dieren. Maakt hij dan zelf zijn voedsel?"],
         uitlegPad: {
           stappen: [{ titel: "P = autotroof", tekst: "Producenten (autotrofen) gebruiken zonlicht/anorganische stoffen om organisch materiaal te maken. Vooral planten + algen + cyanobacteriën. Begin van alle voedselketens." }],
           niveaus: { basis: "Plant via fotosynthese.", simpeler: "Maakt zelf voedsel uit zon.", nogSimpeler: "Plant" },
@@ -106,7 +106,7 @@ const steps = [
       {
         q: "Wat is **draagkracht K** van een ecosysteem?",
         options: [
-          "Maximale populatie die het milieu blijvend kan dragen",
+          "Grootste populatie die een gebied op lange termijn aankan",
           "De snelheid waarmee een populatie maximaal groeit",
           "De totale biomassa van alle organismen in het gebied",
           "Het aantal verschillende soorten in het ecosysteem"
@@ -121,13 +121,13 @@ const steps = [
       {
         q: "**Exponentiële groei** (J-curve) gebeurt typisch:",
         options: [
-          "Bij invasieve soorten zonder predatoren en met veel voedsel",
-          "Bij een populatie in stabiel evenwicht met haar omgeving",
-          "Bij hoge densiteit en veel concurrentie om voedsel",
-          "Bij oude populaties die al eeuwen in een gebied leven"
+          "Bij een nieuwe soort in een gebied zonder natuurlijke vijanden",
+          "Bij een populatie die haar draagkracht K net heeft bereikt",
+          "Bij een soort met volop voedsel maar veel natuurlijke vijanden",
+          "Bij een populatie die al eeuwen in evenwicht met haar omgeving leeft"
         ],
         answer: 0,
-        wrongHints: [null, "In evenwicht blijft een populatie ongeveer even groot. Is dat een steil stijgende J-curve?", "Veel concurrentie om voedsel: remt dat de groei af of jaagt het die aan?", "Een gevestigde populatie zit meestal al dicht bij K. Kan die nog explosief groeien?"],
+        wrongHints: [null, "Rond K vlakt de groeicurve af. Is dat een steil stijgende J?", "Wat doen veel natuurlijke vijanden met het aantal jongen dat volwassen wordt?", "In evenwicht blijft een populatie ongeveer even groot. Past daar een steil stijgende J-curve bij?"],
         uitlegPad: {
           stappen: [{ titel: "Geen rem = explosie", tekst: "Klassiek voorbeeld: bacteriën in vers medium verdubbelen elke 20 minuten — zou in 3 dagen massa-aarde overschrijden ZONDER beperking. In praktijk lopen ze tegen K aan." }],
           theorie: "Daarom zijn invasieve soorten zo'n probleem: nieuwe omgeving zonder co-geëvolueerde predatoren → exponentieel.",
@@ -155,13 +155,13 @@ const steps = [
       {
         q: "**Concurrentie-uitsluitings-principe** (Gause):",
         options: [
-          "Twee soorten met dezelfde niche kunnen niet blijvend samenleven",
-          "Soorten met de grootste lichaamsbouw winnen het voedsel",
-          "Soorten met dezelfde niche verdelen het voedsel netjes",
-          "Twee soorten met dezelfde niche smelten samen tot één soort"
+          "Bij dezelfde niche verdringt de ene soort op den duur de andere",
+          "Soorten met verschillende niches kunnen niet samenleven",
+          "Bij dezelfde niche verdelen twee soorten het voedsel eerlijk",
+          "Een roofdier verdringt op den duur zijn prooisoort uit het gebied"
         ],
         answer: 0,
-        wrongHints: [null, "Een kleine soort die sneller voedsel vindt, kan ook winnen. Gaat het principe over grootte?", "Als twee soorten precies hetzelfde nodig hebben, blijft het dan bij eerlijk delen?", "Kunnen twee aparte soorten zomaar samensmelten? Wat gebeurt er dan wél als ze precies hetzelfde voedsel nodig hebben?"],
+        wrongHints: [null, "Een vos en een konijn hebben een heel andere niche en leven toch samen in hetzelfde bos. Klopt deze bewering dan?", "Als twee soorten precies hetzelfde nodig hebben, blijft het dan bij eerlijk delen?", "Een roofdier en zijn prooi zijn geen concurrenten van elkaar. Om wie gaat het bij concurrentie?"],
         uitlegPad: {
           stappen: [{ titel: "Niche-uitsplitsing", tekst: "Bij identieke niche: een soort verdrijft de andere. Vandaar dat in natuur soorten **niche-uitsplitsen** (eten andere insecten, op andere tijden actief, andere hoogtes in boom). Co-existentie vereist ecologisch verschil." }],
           niveaus: { basis: "Identieke niche kan niet.", simpeler: "Soorten moeten verschillen in niche om samen te leven.", nogSimpeler: "Verschil nodig" },
@@ -286,12 +286,12 @@ const steps = [
         q: "Een **ecosysteemdienst** is:",
         options: [
           "Natuurlijke functie waarvan de mens profiteert",
-          "Natuurlijk proces dat de mens juist schaadt",
-          "Hulp die dieren elkaar geven, zoals vlooien",
+          "Werk dat boswachters doen om de natuur te onderhouden",
+          "Voordeel dat twee soorten elkaar geven, zoals bij symbiose",
           "Geld dat mensen betalen om natuur te beschermen"
         ],
         answer: 0,
-        wrongHints: [null, "Een dienst is iets waar je iets aan hebt. Past een plaag of een overstroming daarbij?", "Bij een dienst gaat het om wat de natuur de mens oplevert. Wie heeft er hier voordeel van?", "Dat doen mensen voor de natuur. Wat doet de natuur juist voor ons, zoals schoon water?"],
+        wrongHints: [null, "Een boswachter is een mens. Is een ecosysteemdienst werk dat mensen doen?", "Dat heet mutualisme: twee soorten helpen elkaar. Gaat een ecosysteemdienst over een relatie tussen twee diersoorten?", "Dat is geld van mensen. Is een ecosysteemdienst iets wat mensen betalen, of iets wat de natuur zelf doet?"],
         uitlegPad: {
           stappen: [
             { titel: "Vier categorieën (Millennium Ecosystem Assessment)", tekst: "1. **Productie**: voedsel, hout, water.\n2. **Regulering**: klimaat, water-zuivering, bestuiving.\n3. **Culturele**: recreatie, spiritualiteit.\n4. **Ondersteunend**: bodemvorming, nutriënten-kringloop." },
@@ -303,13 +303,13 @@ const steps = [
       {
         q: "Cheetah's hebben **lage genetische diversiteit** door een **flessenhals**. Waarom is dat een probleem?",
         options: [
-          "Minder weerstand tegen ziekten en veranderingen",
-          "Cheetah's worden door inteelt steeds langzamer",
-          "Alle cheetah's krijgen dezelfde vachtkleur en vlekken",
-          "Er worden steeds minder mannetjes geboren"
+          "Eén nieuwe ziekte kan bijna de hele populatie treffen",
+          "Er ontstaan per generatie veel meer schadelijke mutaties",
+          "De dieren geven hun eigenschappen slechter door aan hun jongen",
+          "Hun lichaam past zich minder snel aan tijdens hun leven"
         ],
         answer: 0,
-        wrongHints: [null, "Hun snelheid is niet afgenomen. Welk risico loopt een populatie waarin bijna iedereen hetzelfde DNA heeft?", "Gelijke vlekken zijn op zich geen gevaar. Waarom zou weinig variatie wél gevaarlijk zijn?", "Of een jong een mannetje of vrouwtje wordt, hangt af van de geslachtschromosomen. Wat is dan wél het gevaar van weinig variatie?"],
+        wrongHints: [null, "Mutaties zijn toevallige kopieerfouten. Hangt hun aantal af van hoeveel variatie er al is?", "Erfelijkheid werkt bij elk dier hetzelfde. Gaat het probleem over het doorgeven zelf, of over wát er door te geven valt?", "Evolutie gebeurt in een populatie over generaties, niet in één lichaam. Wat is dan het risico voor de hele groep?"],
         uitlegPad: {
           stappen: [{ titel: "Variatie = adaptatie-potentieel", tekst: "Met weinig genetische variatie zijn er weinig 'opties' bij nieuwe selectie-druk (nieuwe ziekte, klimaatwijziging). Bij identieke genen kan één virus de hele populatie wegvagen. Aardappel-Ierland 1845: monocultuur → Phytophthora → ramp." }],
           niveaus: { basis: "Minder adaptatie.", simpeler: "Genetisch arm → kwetsbaar.", nogSimpeler: "Kwetsbaar" },
@@ -333,15 +333,15 @@ const steps = [
       {
         q: "Welke is GEEN bedreiging voor biodiversiteit?",
         options: [
-          "Beschermde Natura 2000-gebieden",
-          "Exotische vissen uitzetten in een sloot",
-          "Ontbossing voor palmolieplantages",
-          "Extra kunstmest strooien op graslanden"
+          "Een gebied aanwijzen als Natura 2000-gebied",
+          "Exotische waterplanten in vijvers zetten",
+          "Oerbos vervangen door één soort productiebos",
+          "Graslanden extra bemesten voor meer opbrengst"
         ],
         answer: 0,
-        wrongHints: [null, "Wat gebeurt er als een nieuwe soort hier geen natuurlijke vijanden heeft?", "Wat gebeurt er met de dieren die in dat bos leefden?", "Denk aan stikstof: welke planten profiteren van extra voeding, en welke verdwijnen dan?"],
+        wrongHints: [null, "Wat gebeurt er als zo'n plant in de sloot belandt en hier geen natuurlijke vijanden heeft?", "Hoeveel soorten vinden een plek in een bos met maar één soort boom?", "Denk aan stikstof: welke planten profiteren van extra voeding, en welke verdwijnen dan?"],
         uitlegPad: {
-          stappen: [{ titel: "Natura 2000 = bescherming", tekst: "Natura 2000 = EU-netwerk van beschermde natuurgebieden. Andere opties zijn allemaal bedreigingen: plastic verstrengelt + giftig, palmolie-ontbossing = habitatverlies, klimaat verschuift habitats sneller dan soorten kunnen volgen." }],
+          stappen: [{ titel: "Natura 2000 = bescherming", tekst: "Natura 2000 = EU-netwerk van beschermde natuurgebieden. De andere opties zijn bedreigingen: exoten zonder natuurlijke vijanden verdringen inheemse soorten, één soort productiebos = habitatverlies, extra mest (stikstof) laat een paar snelle soorten winnen ten koste van de rest." }],
           niveaus: { basis: "Natura 2000 = oplossing.", simpeler: "Beschermd gebied is goed.", nogSimpeler: "Natura" },
         },
       },

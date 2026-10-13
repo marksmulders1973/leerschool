@@ -59,17 +59,17 @@ ${[0, 1, 2].map(r => [0, 1, 2].map(c => `<ellipse cx="${175 + c * 22}" cy="${85 
       {
         q: "Wat is een cel?",
         options: [
-          "De kleinste levende bouwsteen",
-          "Een heel klein soort virus",
-          "Een klein orgaan van het lichaam",
-          "Een los molecuul met DNA",
+          "De kleinste bouwsteen die zelf leeft",
+          "Een groepje gelijke bouwstenen met één taak",
+          "Het kleinste deeltje waaruit alle stof bestaat",
+          "Het stukje DNA dat één eigenschap bepaalt",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Een virus is veel kleiner én wordt niet als 'levend' gezien (heeft een gastcel nodig). Cellen leven zélf.",
-          "Een orgaan bestaat uit veel cellen samen. Eén cel is veel kleiner.",
-          "Een cel bevat DNA (in de kern), maar is meer dan alleen DNA.",
+          "Zo'n groepje heet een weefsel en bestaat uit veel cellen. Kan één cel dan zelf zo'n groepje zijn?",
+          "Dat is een atoom. Eén cel bestaat uit ontelbaar veel atomen. Kan hij dan zelf het kleinste deeltje zijn?",
+          "Dat is een gen. Een gen ligt in de celkern, dus ín de cel. Is het dan de cel zelf?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Cel = bouwsteen", tekst: "Een cel is de kleinste eenheid die *zelf* leeft (eet, groeit, deelt). Alle levende wezens bestaan uit cellen." }],
@@ -141,15 +141,15 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
         q: "Wat klopt over een meercellig organisme?",
         options: [
           "Cellen specialiseren zich in verschillende functies",
-          "Elke cel doet alles zelf, net als bij eencelligen",
-          "De cellen leven los van elkaar, zonder elkaar nodig te hebben",
+          "Elke cel heeft zijn eigen, andere erfelijke informatie",
+          "De cellen werken samen en zijn gelijk van vorm en bouw",
           "Het groeit vooral doordat elke cel steeds groter wordt",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Doet een spiercel in jouw lichaam hetzelfde werk als een zenuwcel?",
-          "Kan een hartcel blijven leven zonder bloedcellen die zuurstof aanvoeren?",
+          "Al je cellen komen uit één bevruchte eicel. Krijgt elke cel dan ander DNA mee?",
+          "Vergelijk een zenuwcel met een rode bloedcel. Zien die er hetzelfde uit?",
           "Een volwassene heeft veel méér cellen dan een baby. Hoe komen die extra cellen erbij?",
         ],
         uitlegPad: {
@@ -359,13 +359,13 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
       },
       {
         q: "Welke cel heeft de **meeste** mitochondriën?",
-        options: ["Hartspiercel", "Huidcel", "Vetcel", "Bacterie"],
+        options: ["Hartspiercel", "Huidcel", "Vetcel", "Rode bloedcel"],
         answer: 0,
         wrongHints: [
           null,
           "Een huidcel heeft niet veel energie nodig — beschermt vooral.",
           "Vetcellen slaan energie op, maar verbruiken weinig.",
-          "Bacteriën hebben helemaal geen mitochondriën.",
+          "Een rode bloedcel vervoert zuurstof, maar verbruikt die zelf niet. Heeft hij dan veel energiecentrales nodig?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Veel energie nodig → veel mitochondriën", tekst: "De hartspier werkt 24/7 zonder pauze. Daarom heeft een hartspiercel duizenden mitochondriën — meer dan bijna elke andere cel." }],
@@ -519,17 +519,17 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
       {
         q: "Een plant verwelkt. Wat is er gebeurd?",
         options: [
-          "De vacuoles hebben water verloren",
+          "De vacuoles zijn sterk gekrompen",
           "De bladgroenkorrels zijn afgebroken",
           "De celwanden zijn zacht geworden",
-          "De cellen zijn gestopt met delen",
+          "De cellen hebben te veel water opgenomen",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Dan kleurt een blad geel, zoals in de herfst. Wordt een plant daar ook slap van?",
           "De celwand blijft even stevig. Wat duwt er van binnenuit normaal tegen die wand aan?",
-          "Zonder deling groeit een plant niet verder. Maar wordt hij daardoor binnen een middag slap?",
+          "Te veel water zou de cellen juist strak opblazen. Ziet een verwelkte plant er opgeblazen uit?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Vacuole leeg = verwelken", tekst: "De grote vacuole drukt het cytoplasma tegen de celwand → plant staat stevig. Bij watergebrek loopt de vacuole leeg → plant verwelkt. Water geven → herstelt." }],
@@ -808,17 +808,17 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
       {
         q: "Welke bewering klopt over **mitochondriën**?",
         options: [
-          "Ze zitten in plant- én dierlijke cellen",
-          "Ze zitten alleen in plantaardige cellen",
-          "Ze maken zuurstof uit zonlicht en water",
-          "Ze zijn een ander woord voor de celkern",
+          "Ze zitten in plantencellen en in dierlijke cellen",
+          "Ze zitten in dierlijke cellen, niet in plantencellen",
+          "Ze maken suiker met behulp van zonlicht",
+          "Ze bevatten het DNA dat de hele cel bestuurt",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Mitochondriën zitten in beide. Chloroplasten zijn alleen in planten.",
-          "Mitochondriën *gebruiken* juist zuurstof. Chloroplasten *maken* zuurstof.",
-          "Kern en mitochondrium zijn verschillende organellen.",
+          "Een plant maakt suiker in zijn chloroplasten. Maar waar wordt die suiker daarna verbrand voor energie?",
+          "Suiker maken met zonlicht doen de chloroplasten. Doen mitochondriën hetzelfde, of verbranden ze juist suiker?",
+          "Het DNA dat de cel bestuurt, ligt in de celkern. Is een mitochondrium hetzelfde als de kern?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Mitochondrium = energie in plant + dier", tekst: "Mitochondriën zitten in BEIDE plantcellen en dierlijke cellen — alle eukaryote cellen hebben ze. Functie altijd: energie maken." }],

@@ -24,12 +24,12 @@ const steps = [
         q: "**Globalisering** heeft welke 4 dimensies?",
         options: [
           "Economisch, cultureel, politiek, technologisch",
-          "Lokaal, regionaal, nationaal, mondiaal",
-          "Landbouw, industrie, diensten, handel",
-          "Sport, kunst, toerisme, werkgelegenheid"
+          "Economisch, sociaal, ecologisch, demografisch",
+          "Politiek, militair, sociaal, religieus",
+          "Technologisch, ecologisch, militair, demografisch"
         ],
         answer: 0,
-        wrongHints: [null, "Dat zijn schaalniveaus, geen dimensies van globalisering.", "Dat zijn economische sectoren — maar globalisering is meer dan economie alleen.", "Dat zijn losse voorbeelden, geen hoofdcategorieën."],
+        wrongHints: [null, "Sociaal, ecologisch en economisch zijn de drie pijlers van duurzaamheid. Welke vier dimensies noemde de les bij globalisering? Denk aan Hollywood en K-pop.", "Legers en religie verbinden landen soms, maar de les noemde ze niet als dimensie. Onder welke dimensie vallen internet en containerschepen?", "Bevolking en milieu veranderen door globalisering, maar het zijn geen dimensies uit de les. Onder welke dimensie vallen vrije handel en multinationals?"],
         uitlegPad: {
           stappen: [{ titel: "Holistische analyse", tekst: "Globalisering is breed verschijnsel met economische (handel, MNCs), culturele (Hollywood, taal), politieke (VN, EU) en technologische (internet, containers) facetten. Niet één daarvan verklaart alles." }],
           niveaus: { basis: "Eco/cult/pol/tech.", simpeler: "4 hoofdgebieden.", nogSimpeler: "4 dim" },
@@ -90,11 +90,11 @@ const steps = [
         options: [
           "De-globalisering",
           "Hyperglobalisering",
-          "Politieke integratie",
-          "Meer vrije handel"
+          "Re-shoring",
+          "Near-shoring"
         ],
         answer: 0,
-        wrongHints: [null, "Hyperglobalisering betekent grenzen nóg verder openstellen — deed het VK dat met Brexit, of juist het omgekeerde?", "Politieke integratie betekent dichter naar elkaar toe groeien — stapte het VK naar de EU toe, of eruit?", "Vrije handel maakt grenzen juist makkelijker — leverde het verlaten van de EU minder of méér handelsdrempels op?"],
+        wrongHints: [null, "Hyperglobalisering betekent grenzen nóg verder openstellen — deed het VK dat met Brexit, of juist het omgekeerde?", "Re-shoring is een keuze van bedrijven om fabrieken terug te halen. Brexit was een politiek besluit van een heel land: bij welke bredere trend past dat?", "Near-shoring is een bedrijf dat dichterbij gaat produceren. Was Brexit een besluit van een bedrijf of van een land?"],
         uitlegPad: {
           stappen: [
             { titel: "Terug naar nationaal", tekst: "VK verliet EU → terug naar zelfstandige handel/regels. Symbolisch voor wereldwijde anti-globalisering-beweging: Trump (VS), Brexit (UK), Le Pen (FR), Modi-protectionisme (India). Reactie op verliezers van globalisering + verlies nationale identiteit." },
@@ -132,12 +132,12 @@ const steps = [
         q: "**WTO** = World Trade Organization. Doel?",
         options: [
           "Vrije handel en handelsgeschillen beslechten",
-          "Klimaatafspraken maken en uitstoot beperken",
-          "Mensenrechten beschermen en schendingen bestraffen",
-          "Militair samenwerken en elkaar verdedigen"
+          "Eén gezamenlijke munt voor de handel tussen leden",
+          "Leningen geven aan landen met een handelstekort",
+          "Wereldprijzen voor grondstoffen zoals olie vaststellen"
         ],
         answer: 0,
-        wrongHints: [null, "Klimaatafspraken maken landen op de klimaattoppen van de VN. Waar staat 'Trade' voor?", "Daarvoor heeft de VN de Mensenrechtenraad. Waar gaat de WTO over?", "Militair samenwerken doen landen in de NAVO. Waar gaat de WTO over?"],
+        wrongHints: [null, "Eén munt en één markt horen bij de EU (de euro). De WTO heeft 166 leden met elk hun eigen munt: wat regelt ze dan?", "Leningen aan landen in geldnood geeft het IMF. Wat regelt de WTO dan tussen haar leden?", "Olieprijzen proberen de olielanden van de OPEC te sturen. Welke afspraken maken de WTO-leden met elkaar?"],
         uitlegPad: {
           stappen: [{ titel: "Sinds 1995", tekst: "WTO is supranationaal handelsforum. 166 leden onderhandelen tariefverlagingen + lossen geschillen op via rechtbank-systeem. Voorbeeld: geschil Boeing vs Airbus over subsidies (jarenlange WTO-zaak)." }],
           niveaus: { basis: "Handel + geschillen.", simpeler: "Vrije handel regelen.", nogSimpeler: "WTO = handel." },
@@ -163,13 +163,13 @@ const steps = [
       {
         q: "**G20-akkoord 2021** introduceerde:",
         options: [
-          "Globale minimum-vennootschapsbelasting 15%",
-          "Een wereldwijd klimaatakkoord met CO₂-doelen",
-          "Wereldwijde quota voor migratie per land",
-          "Een handelsverbod op producten uit China"
+          "Een wereldwijde minimumwinstbelasting van 15%",
+          "Een wereldwijde maximale invoerheffing van 15%",
+          "Een wereldwijde CO₂-heffing van 15% op vliegtickets",
+          "Een wereldwijd minimumtarief voor btw van 15%"
         ],
         answer: 0,
-        wrongHints: [null, "Klimaatdoelen met CO₂ werden al in Parijs (2015) afgesproken. Welk probleem met multinationals en belastingparadijzen pakte de G20 in 2021 aan?", "Een wereldwijd verdrag met migratiequota bestaat niet. Waar ging de G20 in 2021 over als het om multinationals ging?", "De VS legden zelf heffingen op Chinese producten; dat was geen G20-afspraak. Welk probleem met multinationals speelde er?"],
+        wrongHints: [null, "Afspraken over invoerheffingen maken landen via de WTO. Welk probleem met multinationals en belastingparadijzen pakte de G20 in 2021 aan?", "Over vliegtaks maakte de G20 geen wereldafspraak. Waar verschoven multinationals hun geld naartoe, en wat deed de G20 daartegen?", "Een minimum van 15% btw is een EU-regel voor belasting op wat consumenten kopen. Welke belasting ontweken multinationals via Ierland en Bermuda?"],
         uitlegPad: {
           stappen: [
             { titel: "Eind 'race to the bottom'", tekst: "Voor 2021 verschoven MNCs winst naar belasting-paradijzen (Ierland 12,5%, Bermuda 0%). G20: 'minimum 15% wereldwijd → geen ontwijking-voordeel'. Implementatie 2024-2026 wereldwijd. Apple, Google, etc. raken voordeel kwijt." },
@@ -259,12 +259,12 @@ const steps = [
         q: "**Microfinanciering** (Yunus, Nobel 2006):",
         options: [
           "Kleine leningen aan armen voor een eigen bedrijf",
-          "Grote leningen aan regeringen van arme landen",
+          "Kleine giften aan armen voor dagelijkse boodschappen",
           "Belastingverlaging voor kleine ondernemers",
-          "Gratis voedselpakketten voor arme gezinnen"
+          "Kleine subsidies van de overheid voor arme boeren"
         ],
         answer: 0,
-        wrongHints: [null, "'Micro' betekent heel klein. Past dat bij leningen aan hele regeringen?", "Yunus richtte een bank op. Wat doet een bank met geld?", "Dat is noodhulp, een gift. Moet geld bij microfinanciering terugbetaald worden?"],
+        wrongHints: [null, "Een gift is noodhulp. Yunus richtte een bank op: wat doet een bank met geld?", "Belasting verlagen kan alleen de overheid. Yunus richtte een bank op: wat doet een bank met geld?", "Subsidie komt van de overheid. Yunus richtte een bank op: hoe werkt geld van een bank anders?"],
         uitlegPad: {
           stappen: [
             { titel: "Grameen Bank in Bangladesh", tekst: "Yunus ontdekte: armen kunnen geen bankleningen krijgen (geen onderpand). Microfinanciering: $50-500 leningen, vooral aan vrouwen, voor naaimachine/koe/winkel. Terugbetalings-tarief 95%+ (onderling-druk werkt). Yunus kreeg (samen met Grameen Bank) de Nobelprijs voor de Vrede 2006. Wereldwijd nu uitgerold." },
@@ -275,7 +275,7 @@ const steps = [
       {
         q: "**Volgens institutionele theorie** (Acemoglu) ligt verschil rijk/arm in:",
         options: [
-          "De kwaliteit van instituties zoals rechtspraak",
+          "De kwaliteit van rechtspraak en bestuur",
           "Het klimaat en de ligging van een land",
           "De cultuur en religie van de bevolking",
           "De hoeveelheid grondstoffen in de bodem"
@@ -341,7 +341,7 @@ const steps = [
           "Laagopgeleiden die naar rijke landen trekken"
         ],
         answer: 0,
-        wrongHints: [null, "Terugkeren heet brain gain. Wat betekent 'drain' (wegstromen)?", "Geld naar huis sturen heet remittances. Wat stroomt er bij brain drain weg?", "Wat betekent 'brain'? Gaat het om iedereen die vertrekt, of om een bepaalde groep?"],
+        wrongHints: [null, "Terugkeren met nieuwe kennis hoort bij brain gain. Is brain drain hetzelfde, of juist het omgekeerde?", "Geld naar huis sturen heet remittances. Gaat brain drain over geld of over mensen?", "Laagopgeleide arbeidsmigratie bestaat ook. Over welke groep migranten gaat het bij brain drain? Denk aan het voorbeeld uit de les."],
         uitlegPad: {
           stappen: [
             { titel: "Talent-emigratie", tekst: "Klassiek voorbeeld: Filipijnse verpleegkundigen + dokters trekken naar VS/UK voor 5× zo hoog salaris → Filipijnen verliest gezondheidszorg-personeel. India: software-ingenieurs naar Silicon Valley. Tegenwicht: remittances + soms terugkeer met expertise (return-migrants)." },
@@ -367,10 +367,10 @@ const steps = [
           "Oorlog of armoede in herkomstland",
           "Goedbetaald werk in het doelland",
           "Familie die al in het doelland woont",
-          "Goede scholen in het herkomstland"
+          "Strenge grenscontroles onderweg"
         ],
         answer: 0,
-        wrongHints: [null, "Goed werk elders trekt je naar een land toe. Is dat duwen of trekken?", "Trekt familie je naar een land toe, of duwt het je weg?", "Goede scholen thuis zijn een reden om te blijven. Duwt dat je weg?"],
+        wrongHints: [null, "Goed werk elders trekt je naar een land toe. Is dat duwen of trekken?", "Trekt familie je naar een land toe, of duwt het je weg?", "Grenscontroles zijn een obstakel onderweg: ze remmen migratie juist af. Waar ligt een push-factor: thuis, onderweg of in het doelland?"],
         uitlegPad: {
           stappen: [{ titel: "Push = wegduwen", tekst: "Push = redenen om TE VERTREKKEN uit herkomstland (oorlog, armoede, vervolging, klimaat). Pull = redenen NAAR doelland te komen (werk, veiligheid, familie). Migratie wordt vaak gedreven door combinatie." }],
           niveaus: { basis: "Push = wegduwen.", simpeler: "Push = nadeel thuis.", nogSimpeler: "Push" },
@@ -398,13 +398,13 @@ const steps = [
       {
         q: "**SDGs** vervangen welke oudere doelen?",
         options: [
-          "Millennium Development Goals",
-          "Olympische idealen van de Spelen",
-          "Richtlijnen van de Europese Unie",
-          "Afspraken na de Tweede Wereldoorlog"
+          "De Millenniumdoelen uit 2000",
+          "Agenda 21 van de Rio-top (1992)",
+          "De Kyoto-doelen uit 1997",
+          "Het Brundtland-rapport uit 1987"
         ],
         answer: 0,
-        wrongHints: [null, "De SDG's gaan over armoede, klimaat en gezondheid — hebben Olympische idealen over sport daar iets mee te maken?", "De SDG's zijn wereldwijd afgesproken door alle VN-landen — passen richtlijnen van alléén de EU daarbij?", "WO2-akkoorden dateren van rond 1945 — de doelen die de SDG's vervingen liepen juist rond 2000-2015. Klopt die tijd?"],
+        wrongHints: [null, "Agenda 21 was een actieplan voor duurzaamheid zonder vaste einddatum. De SDG's volgden op doelen die in 2015 afliepen: welke?", "Het Kyotoprotocol ging alleen over de uitstoot van broeikasgassen. De SDG's gaan ook over armoede en onderwijs: welke doelen gingen daaraan vooraf?", "Het Brundtland-rapport gaf de bekende definitie van duurzame ontwikkeling, maar stelde geen doelen met een einddatum. Welke doelen liepen tot 2015?"],
         uitlegPad: {
           stappen: [
             { titel: "MDG → SDG", tekst: "MDGs (2000-2015): 8 doelen, vooral armoede + gezondheid in arme landen. Resultaten gemengd (sommige gehaald, andere niet). Vervangen 2015 door 17 SDGs: breder + voor ALLE landen (ook rijke moeten klimaat + ongelijkheid aanpakken)." },

@@ -127,9 +127,9 @@ const steps = [
       },
       {
         q: "**Normale bloeddruk** bij volwassene:",
-        options: ["120/80 mmHg", "200/150 mmHg", "60/40 mmHg", "100/100 mmHg"],
+        options: ["120/80 mmHg", "160/100 mmHg", "80/120 mmHg", "100/100 mmHg"],
         answer: 0,
-        wrongHints: [null, "Zo'n hoge druk heet hypertensie en is gevaarlijk. Wat meet de dokter bij een gezonde volwassene?", "Bij zo'n lage druk word je duizelig of val je flauw. Wat is normaal?", "Het eerste getal is de druk als het hart samenknijpt, het tweede als het ontspant. Kunnen die even hoog zijn?"],
+        wrongHints: [null, "Vanaf ongeveer 140/90 spreek je van hoge bloeddruk. Is 160/100 dan normaal?", "Het eerste getal is de druk als het hart samenknijpt. Kan die lager zijn dan de druk als het hart ontspant?", "Het eerste getal is de druk als het hart samenknijpt, het tweede als het ontspant. Kunnen die even hoog zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Systolisch/diastolisch", tekst: "120 = piek (linkerkamer pompt). 80 = rust tussen slagen. Hypertensie >140/90, behandeling met medicatie + leefstijl-aanpassing. Te laag (<90/60) = duizeligheid bij opstaan." }],
           niveaus: { basis: "120/80.", simpeler: "120 boven / 80 onder.", nogSimpeler: "120/80" },
@@ -315,13 +315,13 @@ const steps = [
       {
         q: "Wat is **vitale capaciteit**?",
         options: [
-          "Maximum dat je in en uit kunt ademen",
-          "Het ademvolume bij rustig ademen",
-          "Het zuurstofgehalte van het bloed",
-          "Het aantal ademhalingen per minuut"
+          "Hoeveel lucht je maximaal uitademt na diep inademen",
+          "Hoeveel lucht je bij rustig ademen per keer verplaatst",
+          "De maximale hoeveelheid lucht die in je longen past",
+          "Hoeveel lucht je maximaal per minuut kunt verversen"
         ],
         answer: 0,
-        wrongHints: [null, "Bij rustig ademen gebruik je maar een klein deel van je longen. Gaat vitale capaciteit over rustig of over zo diep mogelijk ademen?", "Dat heet de saturatie. Gaat vitale capaciteit over het bloed of over de longen?", "Dat is de ademfrequentie. Gaat vitale capaciteit over hoe vaak of over hoeveel?"],
+        wrongHints: [null, "Bij rustig ademen gebruik je maar een klein deel van je longen. Gaat vitale capaciteit over rustig of over zo diep mogelijk ademen?", "Ook na de diepste uitademing blijft er lucht in je longen achter. Kun je die lucht ook uitblazen?", "Dat is het maximale ademminuutvolume. Gaat vitale capaciteit over één ademteug of over een hele minuut?"],
         uitlegPad: {
           stappen: [{ titel: "~4-5 L", tekst: "Maximum diep inademen + helemaal uitademen. Wordt gemeten met spirometer in ziekenhuis. Topsporters hoger (5-6 L). Bij COPD/longziekte daalt. Restvolume ~1,5 L blijft altijd (voorkomt alveolus-collaps)." }],
           niveaus: { basis: "Max ademen.", simpeler: "Diepste in/uit-ademing.", nogSimpeler: "Max" },
@@ -340,12 +340,12 @@ const steps = [
         q: "**FAST-acroniem** voor beroerte:",
         options: [
           "Face / Arm / Speech / Time",
-          "Fast / Aspirin / Sport / Talk",
-          "Food / Air / Stand / Talk",
-          "Fever / Ache / Sweat / Tired"
+          "Face / Ache / Sight / Talk",
+          "Fall / Arm / Speech / Temperature",
+          "Fever / Arm / Sight / Time"
         ],
         answer: 0,
-        wrongHints: [null, "Aspirine en sport kun je niet zien aan iemand. FAST helpt je een beroerte te herkennen.", "Eten en lucht zeggen niets over een beroerte. Waar kijk je naar bij iemand die getroffen is?", "Koorts en zweten passen bij griep. Wat zie je bij iemand met een beroerte?"],
+        wrongHints: [null, "Pijn en slecht zien kun je bij iemand anders moeilijk vaststellen. FAST zijn vier dingen die je als omstander snel checkt of doet. Klopt elke letter hier?", "Temperatuur meten helpt niet bij een beroerte. Wat moet je na het checken van de klachten zo snel mogelijk doen?", "Koorts past bij een infectie, niet bij een beroerte. Waar kijk je als eerste naar bij iemand die mogelijk getroffen is?"],
         uitlegPad: {
           stappen: [
             { titel: "Herken beroerte", tekst: "**F**ace: hangt mondhoek af bij glimlachen? **A**rm: kan beide armen omhoog houden? **S**peech: spraak onduidelijk? **T**ime: bel 112 ONMIDDELLIJK. Tijd is hersenweefsel - hoe sneller behandeling, hoe meer behoud. Behandeling werkt alleen binnen ~4,5 uur na begin." },
@@ -356,13 +356,13 @@ const steps = [
       {
         q: "Het **mediterrane dieet** is goed omdat:",
         options: [
-          "Veel plantaardig en gezonde vetten",
-          "Veel rood vlees en volle zuivel",
-          "Veel wit brood en pasta als energie",
-          "Weinig vet en vrijwel geen olie"
+          "Veel groente, peulvruchten en olijfolie",
+          "Veel mager vlees en weinig koolhydraten",
+          "Veel magere zuivel en weinig brood",
+          "Weinig vet en zo min mogelijk olie"
         ],
         answer: 0,
-        wrongHints: [null, "Rood vlees en volle zuivel bevatten veel verzadigd vet. Is dat goed voor je bloedvaten?", "Wit brood en pasta geven snelle suikers. Wat staat er in de mediterrane keuken vooral op tafel?", "In Italië en Griekenland kookt men veel met olijfolie. Wat zegt dat over dit dieet?"],
+        wrongHints: [null, "Mager vlees is niet ongezond, maar is vlees de basis van de mediterrane keuken?", "Zuivel speelt rond de Middellandse Zee maar een kleine rol. Wat ligt daar vooral op het bord?", "Denk aan de keuken rond de Middellandse Zee: wordt daar vetarm gekookt?"],
         uitlegPad: {
           stappen: [
             { titel: "Bewezen door PREDIMED-studie 2013", tekst: "Spaanse studie 7000 mensen, 5 jaar. Het mediterrane dieet verlaagde hart-vaatziekte ~30% vergeleken met laagvet-dieet. Olijfolie + noten gunstige vetten. Vis omega-3. Veel plantaardig. Minder rood vlees + zout. Eenvoudig + lekker." },
@@ -373,13 +373,13 @@ const steps = [
       {
         q: "**Roken stoppen**: risico hart-vaatziekte daalt:",
         options: [
-          "Flink, al binnen een jaar",
-          "Meteen helemaal naar nul",
-          "Pas na een jaar of dertig",
-          "Nauwelijks, de schade is blijvend"
+          "Na een jaar al met ongeveer de helft",
+          "Pas na een jaar of tien merkbaar",
+          "Binnen een maand tot dat van een niet-roker",
+          "Na een jaar met hooguit een tiende"
         ],
         answer: 0,
-        wrongHints: [null, "Bloedvaten herstellen niet in één dag. Kan het risico dan meteen helemaal verdwijnen?", "Dertig jaar wachten? Hoe snel herstellen bloedvaten als de rook wegvalt?", "Bloedvaten en longen herstellen deels. Blijft het risico dan echt gelijk?"],
+        wrongHints: [null, "Bloedvaten beginnen al kort na de laatste sigaret te herstellen. Moet je dan echt tien jaar wachten?", "Bloedvaten herstellen niet in een paar weken. Kan het risico zo snel helemaal bijtrekken?", "Is een tiende minder risico na een vol rookvrij jaar niet erg weinig? Bloedvaten herstellen sneller dan je denkt."],
         uitlegPad: {
           stappen: [
             { titel: "Het loont altijd te stoppen", tekst: "Bekend feit van campagnes. 1 jaar stop: ~50% minder hart-aanval-risico. 5 jaar: beroerte-risico bijna gelijk nooit-roker. 10 jaar: longkanker-risico halveert. 15 jaar: bijna alle risico's gelijk. Daarom: stoppen loont, wat je leeftijd ook is." },
@@ -392,12 +392,12 @@ const steps = [
         q: "Een **AED** is:",
         options: [
           "Automatische Externe Defibrillator",
-          "Ademhalings-Eerstehulp-Dienst",
-          "Allergie-Eerstehulp-Dosis",
-          "Acute Epilepsie-Detector"
+          "Automatische Elektronische Drukmeter",
+          "Automatische Externe Drukmassage",
+          "Automatische Externe Doseerpomp"
         ],
         answer: 0,
-        wrongHints: [null, "Een AED gebruik je als iemands hárt stilstaat — draait de afkorting dan echt om ademhaling?", "Denk aan waarvoor zo'n kastje aan de muur hangt: een stilstaand hart. Heeft dat met allergie te maken?", "Een AED is er voor spoedgevallen met het hart — past epilepsie bij dat doel?"],
+        wrongHints: [null, "Een drukmeter meet de bloeddruk. Helpt meten als iemands hart stilstaat?", "Hartmassage doe je zelf met je handen. Wat doet het apparaat dan wat jij niet kunt?", "Een doseerpomp geeft medicijnen. Krijgt iemand met een hartstilstand medicijnen uit een AED-kastje?"],
         uitlegPad: {
           stappen: [
             { titel: "Levens-redder", tekst: "Bij hartstilstand: hart fibrilleert (chaotische beweging, geen pomp). AED detecteert + geeft elektrische schok om ritme te herstellen. ~80 000 AEDs in NL openbaar beschikbaar (HartslagNu.nl-app toont nabij). Gebruik vereist geen medisch diploma. Combineer met reanimatie." },

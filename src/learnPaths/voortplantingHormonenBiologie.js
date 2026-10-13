@@ -403,9 +403,9 @@ const steps = [
       },
       {
         q: "Wat gebeurt er bij de **menopauze**?",
-        options: ["De eierstokken stoppen geleidelijk met werken", "De baarmoeder wordt langzaam afgebroken", "De eierstokken maken juist extra eicellen", "De menstruatie wordt juist vaker en heviger"],
+        options: ["De eierstokken stoppen geleidelijk met werken", "De baarmoeder wordt langzaam afgebroken", "De hypofyse stopt met het maken van FSH", "De eileiders groeien langzaam dicht"],
         answer: 0,
-        wrongHints: [null, "De baarmoeder blijft, maar functioneert niet meer voor zwangerschap.", "Andersom — eicellen raken juist op.", "Komt er na de menopauze meer of minder menstruatie?"],
+        wrongHints: [null, "De baarmoeder blijft, maar functioneert niet meer voor zwangerschap.", "Na de menopauze zit er juist veel FSH in het bloed. Stopt de hypofyse dan echt?", "De eileiders blijven gewoon open. Waarom komt er dan toch geen eicel meer doorheen?"],
         uitlegPad: {
           stappen: [{ titel: "Menopauze = eierstokken stoppen", tekst: "Rond 45-55 jaar stoppen de eierstokken geleidelijk: geen rijpe eicellen meer, geen menstruatie. Hormonen oestrogeen + progesteron dalen sterk." }],
           woorden: [{ woord: "menopauze", uitleg: "einde van vruchtbare periode" }],
@@ -424,9 +424,9 @@ const steps = [
     checks: [
       {
         q: "Waarom hangen de teelballen **buiten** het lichaam in de balzak?",
-        options: ["Zaadcellen hebben het iets koeler nodig dan 37 °C", "Zaadcellen hebben het warmer nodig dan 37 °C", "Zo is er meer ruimte over in de buikholte", "Zo zakken zaadcellen makkelijker naar beneden"],
+        options: ["Zaadcellen hebben het iets koeler nodig dan 37 °C", "Zo krijgen de zaadcellen meer bloed en zuurstof", "Zo is er meer ruimte over in de buikholte", "Zo zakken zaadcellen makkelijker naar beneden"],
         answer: 0,
-        wrongHints: [null, "Hangt de balzak buiten om het warmer of koeler te hebben dan in je buik?", "Is ruimte het probleem, of iets wat zaadcellen nodig hebben om goed te rijpen?", "Zaadcellen worden door spieren weggeduwd, niet door de zwaartekracht."],
+        wrongHints: [null, "De bloedtoevoer is in de buik net zo goed. Wat is buiten de buik anders dan erbinnen?", "Is ruimte het probleem, of iets wat zaadcellen nodig hebben om goed te rijpen?", "Zaadcellen worden door spieren weggeduwd, niet door de zwaartekracht."],
         uitlegPad: {
           stappen: [{ titel: "Zaadcellen willen koeler", tekst: "Zaadcellen ontwikkelen zich het best bij ~35°C (2°C lager dan lichaamstemperatuur). Daarom hangen de teelballen buiten het lichaam in de balzak." }],
           woorden: [{ woord: "balzak (scrotum)", uitleg: "huidzak buiten het lichaam" }],
@@ -501,16 +501,16 @@ const steps = [
         q: "Wat gebeurt er als er **geen** bevruchting plaatsvindt?",
         options: [
           "Progesteron daalt en het slijmvlies komt los",
-          "Er gebeurt niets meer: de cyclus stopt",
-          "De eicel wordt de volgende cyclus opnieuw gebruikt",
-          "Het lichaam slaat de eicel op voor later",
+          "Oestrogeen stijgt en het slijmvlies wordt dikker",
+          "Progesteron stijgt en het slijmvlies blijft zitten",
+          "De eicel nestelt zich toch in het slijmvlies",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "De cyclus begint juist opnieuw.",
-          "Eicellen worden niet hergebruikt — ze sterven af.",
-          "Eicellen worden niet opgeslagen — komen elke cyclus opnieuw uit eierstok.",
+          "Een dikker slijmvlies hoort bij de voorbereiding op een zwangerschap. Wat gebeurt er als die niet komt?",
+          "Progesteron blijft alleen hoog zolang het gele lichaam bestaat. Blijft dat bestaan zonder bevruchting?",
+          "Een eicel kan zich alleen innestelen als hij bevrucht is. Wat gebeurt er dan met het slijmvlies?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Geen bevruchting → menstruatie", tekst: "Zonder bevruchting daalt het progesteron-niveau. Slijmvlies in baarmoeder houdt zich niet meer in stand → komt los → bloedt af via vagina = menstruatie." }],
@@ -531,16 +531,16 @@ const steps = [
       {
         q: "Hoeveel zaadcellen kunnen een eicel **bevruchten**?",
         options: [
-          "Slechts 1 — daarna sluit de eicel zich af",
-          "Allemaal die binnen weten te komen",
-          "Minimaal 100 voor een succesvolle bevruchting",
-          "Twee, bij een eeneiige tweeling",
+          "Eén: daarna sluit de eicel zich af",
+          "Een paar: de snelste drie of vier",
+          "Minimaal 100: samen breken ze de wand open",
+          "Twee: dan ontstaat een eeneiige tweeling",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Niet allemaal — eicel sluit na de eerste die binnenkomt.",
-          "Veel te veel — denk aan wat de eicel doet zodra er een zaadcel binnen is.",
+          "Bevruchten betekent: de kern van de zaadcel versmelt met die van de eicel. Hoeveel zaadcelkernen passen daarbij?",
+          "Veel zaadcellen helpen wel om bij de eicel te komen. Maar hoeveel komen er echt binnen?",
           "Een eeneiige tweeling ontstaat uit één bevruchte eicel die zich later splitst. Hoeveel zaadcellen waren daarvoor nodig?",
         ],
         uitlegPad: {
@@ -724,16 +724,16 @@ const steps = [
         q: "Wat is de **fight-or-flight**-response?",
         options: [
           "Lichaam maakt zich klaar voor actie via adrenaline",
-          "Het lichaam komt tot rust na een drukke dag",
-          "De alvleesklier maakt insuline na het eten",
-          "Het lichaam verteert het eten extra snel",
+          "Lichaam komt tot rust via het parasympathische zenuwstelsel",
+          "Lichaam maakt zich klaar voor actie via insuline",
+          "Lichaam maakt zich klaar voor actie via melatonine",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Andersom — fight-or-flight is juist actie, geen rust.",
-          "Insuline na het eten gaat over bloedsuiker. Wat gebeurt er in je lichaam bij gevaar?",
-          "Spijsvertering wordt juist tijdens fight-or-flight onderdrukt.",
+          "Het parasympathische zenuwstelsel zorgt voor rust en vertering. Is dat wat je nodig hebt bij gevaar?",
+          "Insuline haalt suiker uit het bloed en slaat het op. Heb je bij gevaar juist meer of minder suiker in je bloed nodig?",
+          "Melatonine maakt je slaperig. Past dat bij vechten of vluchten?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Vechten of vluchten", tekst: "Bij gevaar maakt bijnier in seconden adrenaline → hart sneller, bloeddruk omhoog, pupillen wijd, spieren krijgen meer bloed → lichaam klaar om te vechten of vluchten." }],
@@ -788,13 +788,13 @@ const steps = [
       },
       {
         q: "Wat is **PCOS**?",
-        options: ["Een syndroom met hormonale onbalans bij vrouwen", "Een besmettelijke ziekte door een virus", "Een huidziekte met veel uitslag en jeuk", "Een tekort aan vitamines bij jonge vrouwen"],
+        options: ["Een syndroom met hormonale onbalans bij vrouwen", "Een syndroom waarbij de schildklier te traag werkt", "Een syndroom waarbij de huid te veel talg maakt", "Een syndroom met een tekort aan vitamine D"],
         answer: 0,
         wrongHints: [
           null,
-          "PCOS ontstaat in je eigen lichaam. Kun je het van iemand anders krijgen?",
+          "Een trage schildklier is een andere aandoening. Waar staan de letters PCO (polycysteuze ovaria) voor?",
           "Puistjes kunnen bij PCOS horen. Maar is de huid de oorzaak, of een gevolg van iets anders?",
-          "De letters PCO staan voor polycysteuze ovaria (eierstokken). Wat heeft dat met vitamines te maken?",
+          "Een vitaminetekort komt door voeding of te weinig zon. Waar staan de letters PCO (polycysteuze ovaria) voor?",
         ],
         uitlegPad: {
           stappen: [{ titel: "PCOS — hormonaal syndroom", tekst: "Polycysteus Ovarium Syndroom: vrouwen met hormonale onbalans (te veel mannelijke hormonen). Onregelmatige cyclus, soms vruchtbaarheidsproblemen, vaak meerdere kleine cysten op eierstokken." }],

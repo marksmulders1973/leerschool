@@ -64,15 +64,15 @@ const steps = [
       },
       {
         q: "Welke functie wordt geregeld door de hersenstam?",
-        options: ["Ademhaling + hartslag", "Bewust nadenken", "Fijne motoriek", "Spier-reflex"],
+        options: ["Ademhaling en hartslag", "Denken en onthouden", "Evenwicht en coördinatie", "Lichaamstemperatuur en dorst"],
         answer: 0,
         wrongHints: [
           null,
-          "Bewust nadenken gebeurt in de grote hersenen. Wat regelt de hersenstam vanzelf, zonder dat je erover nadenkt?",
-          "Fijne motoriek regelen de grote en kleine hersenen, niet de hersenstam.",
-          "Een reflex zoals de kniepeesreflex loopt via het ruggenmerg. Welke functies houden je in leven zonder dat je eraan denkt?",
+          "Denken en onthouden gebeurt in de grote hersenen. Wat regelt de hersenstam vanzelf, zonder dat je erover nadenkt?",
+          "Evenwicht en coördinatie regelen de kleine hersenen. Welk deel ligt vlak boven het ruggenmerg?",
+          "Temperatuur en dorst regelt de hypothalamus in de tussenhersenen. Welke functies gaan door, ook als je slaapt?",
         ],
-        explanation: "De hersenstam regelt automatische vitale functies: ademen, hartslag, slikken, lichaamstemperatuur.",
+        explanation: "De hersenstam regelt automatische vitale functies: ademen, hartslag, slikken en bloeddruk. Lichaamstemperatuur en dorst regelt de hypothalamus (tussenhersenen).",
       },
       {
         q: "Bij clicker-training leert de hond click = beloning. Welk type leergedrag is dit?",
@@ -260,13 +260,13 @@ const steps = [
       },
       {
         q: "Waar zitten de zenuwen in een tand?",
-        options: ["alleen in de tandholte", "alleen in het tandbeen", "in beide", "in geen van beide"],
+        options: ["in de tandholte", "in het tandbeen", "in het glazuur", "in het tandcement"],
         answer: 0,
         wrongHints: [
           null,
           "Tandbeen is hard en heeft geen zenuwen — alleen kanaaltjes.",
-          "Tandbeen is hard en heeft alleen dunne kanaaltjes. Zitten de zenuwen zelf daar ook in?",
-          "Wel — anders zou de tandarts geen verdoving nodig hebben bij diepe gaatjes.",
+          "Glazuur is het hardste deel van je lichaam en bevat geen levende cellen. Kunnen daar zenuwen in zitten?",
+          "Tandcement zet de wortel vast in de kaak. Is dat het zachte deel waar ook bloedvaten lopen?",
         ],
         explanation: "Tandzenuwen + bloedvaten zitten samen in de tandholte (pulpa), het zachte centrum. Glazuur + tandbeen eromheen zijn hard en zonder zenuwen.",
       },
@@ -377,8 +377,8 @@ const steps = [
         wrongHints: [
           null,
           "Lever breekt alcohol af, maar via stofwisseling — niet via uitademen.",
-          "Nieren filteren bloed, maar geen gas.",
-          "Huid scheidt zweet uit, geen alcoholdamp.",
+          "Nieren voeren afvalstoffen af met de urine. Komt daar iets van in je adem terecht?",
+          "Via de huid verlies je zweet. Meet een blaastest wat er uit je huid komt?",
         ],
         explanation: "Vluchtige stoffen (gas-vorm) kunnen via gaswisseling in longblaasjes terug naar uitgeademde lucht. Vandaar de blaastest bij alcohol.",
       },

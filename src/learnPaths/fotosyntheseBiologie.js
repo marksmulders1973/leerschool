@@ -118,9 +118,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **fotosynthese**?",
-        options: ["Planten maken voedsel met zonlicht", "Planten eten kleine insecten op", "Planten nemen zuurstof op om te leven", "Planten halen voedsel uit de grond"],
+        options: ["Planten maken voedsel met zonlicht", "Planten groeien naar het licht toe", "Planten verbranden suiker voor energie", "Planten halen voedsel uit de grond"],
         answer: 0,
-        wrongHints: [null, "Een paar planten vangen insecten, maar 'foto' betekent licht. Wat doet een plant met licht?", "Dat is ademhaling, en dat doet een plant dag en nacht. Wat gebeurt er alleen als er licht is?", "Uit de grond komen water en mineralen. Maar waar komt de suiker van een plant vandaan?"],
+        wrongHints: [null, "Naar het licht toe buigen is een groeibeweging. Maakt een plant daarbij ook iets?", "Suiker verbranden heet ademhaling en gebeurt dag en nacht. Maakt een plant daarbij voedsel, of verbruikt hij het?", "Uit de grond komen water en mineralen. Maar waar komt de suiker van een plant vandaan?"],
       },
       {
         q: "Welke **3 dingen** heeft een plant nodig voor fotosynthese?",
@@ -169,9 +169,9 @@ const steps = [
       },
       {
         q: "Wat heeft een plant **NIET nodig**?",
-        options: ["Suiker van buitenaf", "Zonlicht op de bladeren", "Water uit de bodem", "CO₂ uit de lucht"],
+        options: ["Suiker opgenomen door de wortels", "Zonlicht dat op de bladeren valt", "Water opgenomen door de wortels", "Mineralen opgenomen door de wortels"],
         answer: 0,
-        wrongHints: [null, "Een plant vangt met zijn bladeren zonlicht om zijn eigen eten te maken. Zou hij zonder licht dan wel kunnen groeien?", "Denk aan wat je een plant elke week geeft zodat hij niet verwelkt. Kan hij dat missen?", "Planten nemen dit gas uit de lucht op om suiker van te maken. De vraag is wat een plant NIET nodig heeft — hoort dit daarbij?"],
+        wrongHints: [null, "Een plant vangt met zijn bladeren zonlicht om zijn eigen eten te maken. Zou hij zonder licht dan wel kunnen groeien?", "Denk aan wat je een plant elke week geeft zodat hij niet verwelkt. Kan hij dat missen?", "Zonder stikstof en andere mineralen kan een plant geen eiwitten maken. Kan hij die missen?"],
         uitlegPad: {
           stappen: [
             { titel: "Plant = producent", tekst: "Planten maken hun eigen voedsel uit zonlicht + water + CO₂. Geen externe voedingsbron nodig." },
@@ -309,9 +309,9 @@ const steps = [
       },
       {
         q: "**Chlorofyl** zit in:",
-        options: ["Chloroplasten", "Mitochondriën", "Celkern", "Vacuole"],
+        options: ["Chloroplasten", "Mitochondriën", "Chromoplasten", "Vacuole"],
         answer: 0,
-        wrongHints: [null, "Mitochondriën verbranden suiker. Vangen ze ook licht op?", "In de kern zit het DNA. Is de kern het groene deel?", "De vacuole is gevuld met celvocht. Is dat de groene kleurstof?"],
+        wrongHints: [null, "Mitochondriën verbranden suiker. Vangen ze ook licht op?", "Chromoplasten geven bloemen en vruchten hun gele of rode kleur. Zit daar het groene pigment in?", "De vacuole is gevuld met celvocht. Is dat de groene kleurstof?"],
       },
       {
         q: "Een **kikker** eet vliegen. Kikker is dan een ...?",

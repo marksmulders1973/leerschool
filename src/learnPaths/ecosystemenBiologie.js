@@ -116,9 +116,9 @@ const steps = [
       },
       {
         q: "Wat doet een **afbreker**?",
-        options: ["Breekt dood materiaal af tot voedingsstoffen", "Eet levende planten op voor energie", "Jaagt op andere dieren en eet ze op", "Maakt zelf suiker met behulp van zonlicht"],
+        options: ["Zet dode resten om in voedingsstoffen", "Eet levende planten op voor energie", "Eet dode dieren op, zoals een gier", "Maakt zelf suiker met behulp van zonlicht"],
         answer: 0,
-        wrongHints: [null, "Dat doet een planteneter (herbivoor).", "Dat doet een vleeseter (carnivoor).", "Dat doet een producent."],
+        wrongHints: [null, "Dat doet een planteneter (herbivoor).", "Een gier is een aaseter: een consument die vlees eet. Maakt hij daar ook voedingsstoffen voor planten van?", "Suiker maken met zonlicht kan alleen met bladgroen. Hebben schimmels en bacteriën bladgroen?"],
       },
       {
         q: "Een **leeuw** eet zebra's. Wat is een leeuw?",
@@ -175,9 +175,9 @@ const steps = [
       },
       {
         q: "Wat gebeurt als **wolven verdwijnen** uit Yellowstone-park?",
-        options: ["Herten worden te talrijk, het ecosysteem raakt verstoord", "Er verandert weinig, het ecosysteem blijft gelijk", "Het aantal herten daalt, het bos groeit harder", "Ook de andere roofdieren verdwijnen uit het park"],
+        options: ["Herten worden talrijker en eten jonge bomen kaal", "Meer herten, maar planten en bomen merken er niets van", "Bevers en vogels krijgen meer ruimte en nemen toe", "Coyotes nemen de rol over, alles blijft in balans"],
         answer: 0,
-        wrongHints: [null, "Wolven eten herten. Wat gebeurt er met de herten als hun jager weg is?", "Daalt het aantal prooidieren als hun jager verdwijnt?", "Eten andere roofdieren wolven? Of krijgen ze juist meer ruimte als de wolf weg is?"],
+        wrongHints: [null, "Herten eten jonge boompjes en twijgen. Kan het bos dan hetzelfde blijven?", "Bevers hebben wilgen langs de rivier nodig. Wie eet die wilgen op als er veel meer herten zijn?", "Coyotes werden inderdaad talrijker, maar zijn te klein voor volwassen herten. Wie houdt de herten dan nog in toom?"],
       },
       {
         q: "In een voedselketen **plant → konijn → vos** — wat is een **producent**?",
@@ -187,15 +187,15 @@ const steps = [
       },
       {
         q: "Een **consument** is een organisme dat?",
-        options: ["Andere organismen als voedsel eet", "Zelf voedsel maakt met zonlicht", "Mineralen opneemt via wortels", "Zuurstof maakt bij fotosynthese"],
+        options: ["Andere organismen als voedsel eet", "Zelf voedsel maakt met zonlicht", "Dode resten afbreekt tot mineralen", "Bovenaan in de voedselketen staat"],
         answer: 0,
-        wrongHints: [null, "Zelf voedsel maken met zonlicht — is dat een producent of een consument?", "Dat doet een plant. Haalt die zijn energie uit mineralen, of uit zonlicht?", "Bij fotosynthese komt zuurstof vrij. Welke groep organismen doet aan fotosynthese?"],
+        wrongHints: [null, "Zelf voedsel maken met zonlicht — is dat een producent of een consument?", "Dat doet een reducent (afbreker). Is dat dezelfde groep als de consumenten?", "Dat is een toproofdier. Is een konijn, dat zelf gegeten wordt, dan geen consument?"],
       },
       {
         q: "**Reducenten** (afbrekers) doen wat?",
-        options: ["Dode resten afbreken tot voedingsstoffen", "Levende planten opeten voor hun energie", "Zonlicht met bladgroen omzetten in suiker", "Op andere dieren jagen en ze opeten"],
+        options: ["Dode resten omzetten in mineralen", "Levende planten opeten voor hun energie", "Zonlicht met bladgroen omzetten in suiker", "Dode dieren opeten, zoals een gier"],
         answer: 0,
-        wrongHints: [null, "Dat doen consumenten (planteneters).", "Dat doen producenten.", "Dat doen roofdieren (carnivoren)."],
+        wrongHints: [null, "Dat doen consumenten (planteneters).", "Suiker maken met bladgroen: hoort dat bij planten of bij schimmels en bacteriën?", "Een gier is een aaseter: een consument die vlees eet. Maakt hij daar ook mineralen voor planten van?"],
       },
     ],
   },
@@ -208,9 +208,9 @@ const steps = [
     checks: [
       {
         q: "Wat is de **koolstofkringloop**?",
-        options: ["CO₂ → plant → dier → afbreker → CO₂", "Water → waterdamp → wolk → regen → zee", "N₂ → bacterie → nitraat → plant → dier", "Zon → plant → dier → warmte → ruimte"],
+        options: ["CO₂ → plant → dier → afbreker → CO₂", "CO₂ → dier → plant → afbreker → CO₂", "O₂ → plant → dier → afbreker → O₂", "CO₂ → afbreker → plant → dier → CO₂"],
         answer: 0,
-        wrongHints: [null, "Dat is de waterkringloop.", "Dat is de stikstofkringloop.", "Dat is een energiestroom (geen kringloop)."],
+        wrongHints: [null, "Wie haalt CO₂ uit de lucht om er suiker van te maken: een dier of een plant?", "Planten geven bij fotosynthese zuurstof af. Welk gas nemen ze juist op?", "Afbrekers ruimen dode resten op. Staan die aan het begin of aan het eind van de rij?"],
       },
       {
         q: "Waarom stijgt **CO₂ in lucht** sinds 19e eeuw?",
@@ -256,7 +256,7 @@ const steps = [
     checks: [
       {
         q: "Wat is **biodiversiteit**?",
-        options: ["Rijkdom aan verschillende soorten", "Totaal aantal organismen in een gebied", "Aantal individuen binnen één soort", "Hoeveelheid planten in een ecosysteem"],
+        options: ["Het aantal soorten in een gebied", "Totaal aantal organismen in een gebied", "Aantal individuen binnen één soort", "Hoeveelheid planten in een ecosysteem"],
         answer: 0,
         wrongHints: [null, "Duizend muizen van één soort zijn veel organismen. Is dat ook veel variatie?", "Dat zegt iets over de grootte van een populatie. Gaat diversiteit over één soort?", "Een groot maisveld heeft heel veel planten. Is dat ook rijk aan soorten?"],
       },
@@ -268,9 +268,9 @@ const steps = [
       },
       {
         q: "Wat is een **invasieve soort**?",
-        options: ["Nieuwe soort die andere verdringt", "Inheemse soort die bijna uitsterft", "Soort die heel groot wordt en veel eet", "Soort die heel veel jongen krijgt"],
+        options: ["Uitheemse soort die inheemse soorten verdringt", "Inheemse soort die zich snel uitbreidt", "Uitheemse soort die hier weinig opvalt", "Soort die van nature in één gebied leeft"],
         answer: 0,
-        wrongHints: [null, "Invasieve soorten zijn juist heel sterk. Past 'bijna uitsterven' daarbij?", "Gaat het bij invasief om grootte, of om wat de soort met andere soorten doet?", "Veel jongen kan helpen, maar wat betekent 'invasief' letterlijk?"],
+        wrongHints: [null, "Een inheemse soort hoort hier van nature thuis. Kan die hier dan 'binnenvallen'?", "Niet elke soort van elders is een probleem. Wanneer noem je zo'n soort pas invasief?", "Dat heet endemisch. Gaat invasief over een vaste plek, of over binnendringen?"],
       },
       {
         q: "Wat is **endemisch**?",
@@ -295,9 +295,9 @@ const steps = [
       },
       {
         q: "Welk dier zit **bovenaan** een energiepiramide?",
-        options: ["Toproofdier", "Plant", "Konijn", "Insect"],
+        options: ["Een havik (roofvogel)", "Een regenworm (afbreker)", "Een konijn (planteneter)", "Een merel (insecteneter)"],
         answer: 0,
-        wrongHints: [null, "Planten maken voedsel met zonlicht. Horen ze bij de basis of bij de top van de piramide?", "Een konijn eet planten en wordt zelf gegeten door een vos. Is het dan de top?", "Insecten worden gegeten door vogels en kikkers. Kunnen ze dan bovenaan staan?"],
+        wrongHints: [null, "Afbrekers ruimen resten op van alle lagen, maar staan niet bovenaan de piramide. Welk dier wordt door niemand meer gegeten?", "Een konijn eet planten en wordt zelf gegeten door een vos. Is het dan de top?", "Een merel eet insecten, maar wordt zelf gegeten door een kat of roofvogel. Staat hij dan bovenaan?"],
       },
       {
         q: "Energie gaat **per niveau** ongeveer hoeveel door?",
@@ -313,7 +313,7 @@ const steps = [
       },
       {
         q: "Welke is een **invasieve soort** in NL?",
-        options: ["Amerikaanse rivierkreeft", "Alpenwatersalamander", "Noordse woelmuis", "Europese bever"],
+        options: ["Muskusrat", "Alpenwatersalamander", "Noordse woelmuis", "Bever"],
         answer: 0,
         wrongHints: [null, "Klinkt als een bergdier, maar leeft van nature in Oost-Nederland. Is het dan een indringer?", "Klinkt uitheems, maar leeft al sinds de ijstijd in Nederland. Is het dan een indringer?", "De bever leefde hier vroeger al en is teruggezet. Is dat een soort van elders?"],
       },

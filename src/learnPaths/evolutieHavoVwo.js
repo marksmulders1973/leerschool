@@ -88,13 +88,13 @@ const steps = [
       {
         q: "Een vogelpaar krijgt 8 jongen, maar er is maar voedsel voor 2. Wat gebeurt er volgens Darwin?",
         options: [
-          "De best aangepaste jongen overleven het vaakst",
-          "Willekeurige jongen overleven, eigenschappen tellen niet",
-          "De jongen passen zich aan door minder te eten",
-          "De ouders kiezen bewust welke jongen overleven"
+          "Jongen met gunstige erfelijke eigenschappen overleven vaker",
+          "Puur het toeval bepaalt welke jongen overleven",
+          "Jongen die sterker worden door te vechten, geven dat door",
+          "De jongen passen zich samen aan en eten elk wat minder"
         ],
         answer: 0,
-        wrongHints: [null, "Heeft een jong dat sneller of slimmer voedsel vindt geen betere kans?", "Kan een jong zijn lichaam zomaar aanpassen aan minder eten, en geeft het dat door?", "Is selectie een bewuste keuze?"],
+        wrongHints: [null, "Heeft een jong dat sneller of slimmer voedsel vindt geen betere kans?", "Kracht die je tijdens je leven opbouwt: zit die in je DNA? Kan een jong dat dan erven?", "Kan een jong met een kwart van het voedsel volwassen worden? En wordt zuinig eten erfelijk?"],
         uitlegPad: {
           stappen: [{ titel: "Voorwaarde 3: overproductie", tekst: "Darwin's inzicht (geïnspireerd door Malthus): organismen produceren altijd meer nakomelingen dan omgeving aankan. Daardoor: concurrentie + selectie. Niet alle nakomelingen overleven → die met betere variatie hebben hogere kans → evolutie." }],
           niveaus: { basis: "Selectie door overschot.", simpeler: "Te veel baby's → niet alle overleven.", nogSimpeler: "Selectie" },
@@ -145,12 +145,12 @@ const steps = [
         q: "Een **kleine populatie** loopt risico op:",
         options: [
           "Verlies van genetische variatie",
-          "Een te grote genetische variatie",
-          "Mutaties die niet meer kunnen optreden",
-          "Evolutie die helemaal stilvalt"
+          "Selectie die sterker werkt dan drift",
+          "Meer mutaties per dier per generatie",
+          "Meer heterozygote dieren door inteelt"
         ],
         answer: 0,
-        wrongHints: [null, "Hoeveel verschillende allelen passen er in een handvol dieren?", "Mutaties zijn toevallige kopieerfouten. Stoppen die omdat er minder dieren zijn?", "Drift maakt evolutie juist sneller."],
+        wrongHints: [null, "In een kleine groep kan toeval grote verschuivingen geven. Wie heeft daar de overhand: selectie of drift?", "Mutaties zijn toevallige kopieerfouten. Worden dat er per dier meer omdat de groep klein is?", "Bij inteelt krijgt een jong vaak van beide ouders hetzelfde allel. Wordt het dan heterozygoot of homozygoot?"],
         uitlegPad: {
           stappen: [
             { titel: "Flessenhals + inteelt", tekst: "Kleine populatie: variatie smal, gevoelig voor verlies door drift + inteelt. Voorbeeld cheetah's: bottleneck ~10 000 jaar geleden → vandaag bijna geen genetische verschillen → vatbaar voor virussen. Beschermingsprogramma's mengen populaties om diversiteit te behouden." },
@@ -197,13 +197,13 @@ const steps = [
       {
         q: "**Genetische drift** werkt sterker in:",
         options: [
-          "Kleine populaties",
-          "Grote populaties",
-          "Bij sterke selectie",
-          "Bij hoge mutatie-snelheid"
+          "Populaties met weinig dieren",
+          "Populaties met veel dieren",
+          "Populaties onder sterke selectie",
+          "Populaties met veel mutaties"
         ],
         answer: 0,
-        wrongHints: [null, "Gooi 10 keer een munt of 1000 keer. Waar wijkt de uitkomst het makkelijkst af van half om half?", "Drift is toeval en selectie is juist niet toevallig. Wordt toeval sterker als selectie sterk is?", "Mutaties leveren variatie, niet drift."],
+        wrongHints: [null, "Gooi 10 keer een munt of 1000 keer. Waar wijkt de uitkomst het makkelijkst af van half om half?", "Drift is toeval en selectie is juist niet toevallig. Wordt toeval sterker als selectie sterk is?", "Mutaties leveren nieuwe allelen, maar drift gaat over toeval bij het doorgeven. Waar heeft toeval de meeste invloed?"],
         uitlegPad: {
           stappen: [{ titel: "Wet van grote aantallen", tekst: "Statistisch: bij weinig waarnemingen veel ruis. In klein dorp van 50 mensen: 1 ongeluk verandert ratios sterk. In stad van 1 mln: amper effect. Drift = ruis." }],
           niveaus: { basis: "Klein = sterke drift.", simpeler: "Toeval domineert in kleine groep.", nogSimpeler: "Klein" },
@@ -227,13 +227,13 @@ const steps = [
       {
         q: "**Cheetah's** hebben weinig genetische variatie. Oorzaak?",
         options: [
-          "Een flessenhals in het verleden",
-          "Inteelt door menselijke ingreep",
-          "Stichtereffect in een nieuw gebied",
-          "Sympatrische soortvorming"
+          "Een sterke inkrimping van de populatie, lang geleden",
+          "Inteelt door fokprogramma's in dierentuinen",
+          "Een kleine groep die een nieuw gebied koloniseerde",
+          "Het ontstaan van een nieuwe soort in hetzelfde gebied"
         ],
         answer: 0,
-        wrongHints: [null, "De lage variatie is duizenden jaren oud, veel ouder dan menselijke ingrepen. Welke gebeurtenis laat zo'n oud spoor achter?", "Nee — er heeft geen kleine groep een nieuw gebied gekoloniseerd.", "Soortvorming maakt nieuwe soorten. Verklaart dat waarom er binnen één soort zo weinig variatie is?"],
+        wrongHints: [null, "De lage variatie is duizenden jaren oud, veel ouder dan dierentuinen. Welke gebeurtenis laat zo'n oud spoor achter?", "Dat heet het stichtereffect. Is er bekend dat cheetah's vanuit een klein groepje een nieuw gebied zijn binnengetrokken?", "Soortvorming maakt nieuwe soorten. Verklaart dat waarom er binnen één soort zo weinig variatie is?"],
         uitlegPad: {
           stappen: [
             { titel: "Klassiek voorbeeld", tekst: "DNA-analyse toont dat de cheetah-populatie ~10 000 j geleden heel klein was (mss ~7 individuen). Reden onbekend (mss ijstijd-einde + grote zoogdier-uitsterving). Vandaag: alle cheetah's bijna identiek genetisch → gevoelig voor virussen + lage vruchtbaarheid." },
@@ -349,13 +349,13 @@ const steps = [
       {
         q: "Een **moleculaire klok** gebruikt:",
         options: [
-          "Het vaste tempo van DNA-mutaties om te schatten wanneer soorten uit elkaar gingen",
-          "Het aantal jaarringen in fossiel hout om aardlagen te dateren",
-          "Het verval van radioactieve stoffen om de leeftijd van gesteente te bepalen",
-          "Het aantal fossielen in aardlagen om te bepalen wanneer soorten ontstonden"
+          "Het aantal DNA-verschillen tussen soorten om te schatten wanneer ze uit elkaar gingen",
+          "Het verval van koolstof-14 in botten om te bepalen hoe oud een fossiel is",
+          "Het aantal chromosomen per soort om te bepalen welke soorten verwant zijn",
+          "Het aantal genen in het DNA om te bepalen hoe ingewikkeld een soort is"
         ],
         answer: 0,
-        wrongHints: [null, "Jaarringen tellen is een andere dateringsmethode. Een moleculaire klok kijkt naar moleculen in cellen.", "Radioactief verval dateert gesteente, niet de verwantschap tussen soorten. Welk molecuul verandert langzaam per generatie?", "Fossielen tellen doe je met stenen, niet met moleculen. Welk molecuul geef je door aan je nakomelingen?"],
+        wrongHints: [null, "Koolstof-14 zegt hoe oud één bot is. Zegt het ook wanneer twee soorten uit elkaar gingen?", "Verwante soorten kunnen een heel ander aantal chromosomen hebben. Verandert dat aantal stap voor stap, zoals een klok tikt?", "Meer genen betekent niet ingewikkelder of ouder. Waarmee meet een klok eigenlijk tijd?"],
         uitlegPad: {
           stappen: [
             { titel: "Mutatie-snelheid ~ constant", tekst: "Bepaalde DNA-sequenties muteren in voorspelbaar tempo (bv. mitochondriaal DNA 1 mutatie per 6500 jaar). Door verschillen tussen soorten te tellen → datering van splitsing. Mens + chimp splitsing ~6-7 mln j geleden volgens deze methode." },
@@ -390,13 +390,13 @@ const steps = [
       {
         q: "**Sikkel-cel-anemie**: HbS-allel beschermt tegen malaria. Wat verklaart hoge frequentie in Afrika?",
         options: [
-          "Heterozygoot voordeel: dragers zijn beschermd",
-          "Genetische drift: puur toeval in kleine groepen",
-          "Mensen kozen partners zonder anemie",
-          "Selectie die het allel snel laat verdwijnen"
+          "Heterozygoot voordeel: wie één HbS-allel heeft, overleeft vaker",
+          "Genetische drift: het allel is door toeval vaak geworden",
+          "Homozygoot voordeel: wie twee HbS-allelen heeft, overleeft vaker",
+          "Mutatiedruk: malaria laat het allel steeds opnieuw ontstaan"
         ],
         answer: 0,
-        wrongHints: [null, "Het allel is juist vaak waar malaria heerst. Past dat bij puur toeval?", "Partnerkeuze op een onzichtbaar allel? En zou het allel dan niet juist zeldzamer worden?", "Als het allel verdwijnt, waarom komt het dan juist zo vaak voor?"],
+        wrongHints: [null, "Het allel is juist vaak waar malaria heerst. Past dat bij puur toeval?", "Wie twee HbS-allelen heeft, krijgt de ernstige bloedziekte. Heeft die persoon dan de beste overlevingskans?", "Een ziekte als malaria verandert je DNA niet. Hoe kan een allel dan toch vaak worden?"],
         uitlegPad: {
           stappen: [
             { titel: "Balanced polymorphism", tekst: "HbS heterozygoot (HbS/HbA): mild + malaria-beschermd → hoge fitness in malaria-gebied. Homozygoot HbS/HbS: sikkel-cel-anemie → lage fitness. Selectie houdt de allel-frequentie in evenwicht (in delen van Afrika is tot ~30% van de mensen drager). Buiten malaria-gebied: allel verdwijnt." },
@@ -408,13 +408,13 @@ const steps = [
       {
         q: "Een **theorie** in wetenschap (zoals evolutie-theorie) betekent:",
         options: [
-          "Een goed onderbouwde verklaring",
-          "Een slimme gok of speculatie",
-          "Een wet die altijd en overal geldt",
-          "Het tegenovergestelde van een feit"
+          "Een verklaring gesteund door veel bewijs",
+          "Een vermoeden zonder veel bewijs erachter",
+          "Een beschrijving van wat er steeds gebeurt",
+          "Een idee dat nog getest moet worden"
         ],
         answer: 0,
-        wrongHints: [null, "In het dagelijks leven is een theorie een gok. Betekent het woord in de wetenschap hetzelfde?", "Een wet beschrijft wát er gebeurt, een theorie verklaart waaróm. Zijn dat dezelfde dingen?", "Een theorie verklaart juist feiten. Zijn ze dan elkaars tegendeel?"],
+        wrongHints: [null, "In het dagelijks leven is een theorie een gok. Betekent het woord in de wetenschap hetzelfde?", "Zo'n beschrijving van wát er gebeurt heet in de wetenschap een wet. Is een theorie hetzelfde als een wet?", "Een idee dat je nog gaat testen heet een hypothese. Is de evolutietheorie nog ongetest?"],
         uitlegPad: {
           stappen: [
             { titel: "Wetenschappelijke 'theorie'", tekst: "In wetenschap is theorie de HOOGSTE status: verklaart vele waargenomen feiten + maakt voorspellingen die kloppen + getest door velen. Zoals zwaartekrachts-theorie, atoomtheorie, evolutie-theorie. Dagelijks 'theorie = gok' is verwarrend — 'hypothese' is dichter bij dat in wetenschap." },

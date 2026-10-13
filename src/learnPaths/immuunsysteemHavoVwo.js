@@ -23,7 +23,7 @@ const steps = [
       {
         q: "Welke is **aspecifieke** afweer?",
         options: [
-          "Huid",
+          "Fagocyten",
           "Antilichamen",
           "T-killercellen",
           "Geheugencellen"
@@ -31,8 +31,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Een antilichaam past op één bepaald antigeen. Werkt het dan tegen elke indringer?", "Een T-killercel herkent één bepaald antigeen. Werkt die tegen elke indringer?", "Geheugencellen onthouden één bepaalde ziekteverwekker. Is dat afweer tegen alles tegelijk?"],
         uitlegPad: {
-          stappen: [{ titel: "Niet-gericht", tekst: "Huid blokkeert ALLES: virussen, bacteriën, parasieten — geen onderscheid. Aspecifiek = aangeboren + algemeen. Specifiek = doelgericht (B/T-cellen + antilichamen)." }],
-          niveaus: { basis: "Huid.", simpeler: "Huid = barrière voor alles.", nogSimpeler: "Huid" },
+          stappen: [{ titel: "Niet-gericht", tekst: "Fagocyten (eetcellen) eten ALLES op wat vreemd is: virussen, bacteriën, parasieten — geen onderscheid. Aspecifiek = aangeboren + algemeen. Specifiek = doelgericht (B/T-cellen + antilichamen)." }],
+          niveaus: { basis: "Fagocyten.", simpeler: "Fagocyten = eetcellen tegen alles.", nogSimpeler: "Fagocyten" },
         },
       },
       {
@@ -47,9 +47,9 @@ const steps = [
       },
       {
         q: "**Koorts** is een immuunmechanisme dat:",
-        options: ["Ziekteverwekkers remt en de afweer versnelt", "Virussen direct doodkookt door de hitte", "Zelf antilichamen tegen de ziekteverwekker aanmaakt", "Een bijwerking is zonder nut voor de afweer"],
+        options: ["Ziekteverwekkers remt en de afweer versnelt", "Virussen direct doodkookt door de hitte", "De ziekteverwekkers via het zweet afvoert", "Het bloed verdunt zodat afweercellen sneller stromen"],
         answer: 0,
-        wrongHints: [null, "Niet — 39 °C doodt een virus niet direct; het effect is indirect.", "Niet — antilichamen worden door B-cellen gemaakt.", "Waarom zou het lichaam via de hypothalamus de temperatuur actief omhoog zetten?"],
+        wrongHints: [null, "Bij 39 °C gaat een virus niet meteen dood. Kan koorts het op een andere manier lastiger maken?", "Zweten koelt je af, maar spoelt geen ziekteverwekkers weg. Wat doet een hogere temperatuur met hun vermenigvuldiging?", "Warmte maakt je bloed niet dunner. Wat doet een hogere temperatuur met ziekteverwekkers?"],
         uitlegPad: {
           stappen: [
             { titel: "T-stijging als wapen", tekst: "Bij infectie maakt lichaam **pyrogenen** (interleukine-1) die hypothalamus opdragen T omhoog te zetten. Pathogenen + virus-replicatie worden geremd bij hogere T. Immuuncel-werking versnelt. Bij T>40°C wel risico — paracetamol-grens." },
@@ -78,12 +78,12 @@ const steps = [
         q: "Welke is GEEN externe barrière?",
         options: [
           "T-lymfocyten",
-          "Huid",
+          "Trilhaarcellen",
           "Slijmvlies",
           "Maagsap"
         ],
         answer: 0,
-        wrongHints: [null, "De huid is de eerste fysieke muur die indringers aan de buitenkant tegenhoudt — is dat een externe barrière of niet?", "Slijmvliezen in neus en keel vangen ziekteverwekkers af aan de buitengrens van het lichaam — hoort dat bij de externe of de interne afweer?", "Maagzuur doodt bacteriën in het spijsverteringskanaal nog vóór ze het weefsel bereiken — telt dat als eerste-lijns barrière?"],
+        wrongHints: [null, "Trilhaarcellen in de luchtpijp vegen slijm met indringers naar buiten. Is dat een externe barrière of niet?", "Slijmvliezen in neus en keel vangen ziekteverwekkers af aan de buitengrens van het lichaam — hoort dat bij de externe of de interne afweer?", "Maagzuur doodt bacteriën in het spijsverteringskanaal nog vóór ze het weefsel bereiken — telt dat als eerste-lijns barrière?"],
         uitlegPad: {
           stappen: [{ titel: "T-cellen zijn intern", tekst: "T-lymfocyten zijn witte bloedcellen → SPECIFIEKE INTERNE afweer (lymfeknopen, bloed). Huid/slijmvliezen/maagsap/traanvocht zijn externe barrières (eerste-lijn aspecifiek)." }],
           niveaus: { basis: "T-cellen niet extern.", simpeler: "T-cel = intern specifiek.", nogSimpeler: "T" },
@@ -110,9 +110,9 @@ const steps = [
       },
       {
         q: "**T-helper-cellen** (CD4+) zijn cruciaal omdat ze:",
-        options: ["B-cellen en andere T-cellen activeren", "Ziekteverwekkers zelf opeten en afbreken", "Zelf antilichamen in het bloed afgeven", "De bloedstolling bij een wond regelen"],
+        options: ["B-cellen en andere T-cellen activeren", "Ziekteverwekkers zelf opeten en afbreken", "Zelf antilichamen in het bloed afgeven", "Geïnfecteerde lichaamscellen zelf doden"],
         answer: 0,
-        wrongHints: [null, "Niet — dat doen fagocyten.", "Niet — dat doen plasmacellen (uit B-cellen).", "Bloedstolling regelen bloedplaatjes, geen T-cellen."],
+        wrongHints: [null, "Dat doen fagocyten (eetcellen). Eet een T-cel zelf ziekteverwekkers op?", "Dat doen plasmacellen, die uit B-cellen ontstaan. Maakt een T-cel zelf antilichamen?", "Dat doen T-killercellen (CD8+). Doet een T-helpercel het werk zelf?"],
         uitlegPad: {
           stappen: [
             { titel: "HIV vernietigt deze cellen", tekst: "T-helper coördineert hele immuunrespons. HIV-virus richt zich specifiek op T-helpers → bij AIDS vermindering tot <200 cellen/mm³ → immuunsysteem instort → opportunistische infecties. Daarom werkt HIV-therapie via T-helper-bescherming." },
@@ -136,7 +136,7 @@ const steps = [
         q: "Wat is **secundaire immuunrespons**?",
         options: ["Snellere, sterkere reactie bij hercontact", "Eerste reactie bij het eerste contact", "Overdreven reactie op onschuldige stoffen", "Afweerreactie tegen eigen lichaamscellen"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is de primaire respons.", "Dat is een allergie — een apart proces.", "Dat is auto-immuniteit — een fout-reactie."],
+        wrongHints: [null, "Dat is de primaire respons. Wat betekent 'secundair'?", "Dat is een allergie — een apart proces.", "Dat is auto-immuniteit — een fout-reactie."],
         uitlegPad: {
           stappen: [
             { titel: "Sneller via geheugen", tekst: "Primair: 1-2 weken voor antilichaam-productie. Secundair: 1-3 dagen, met 10-100× meer antilichamen. Verklaart waarom mazelen na één keer nooit meer terugkomt + waarom vaccinaties werken." },
@@ -246,9 +246,9 @@ const steps = [
     checks: [
       {
         q: "**Type-1 diabetes** is auto-immuun omdat:",
-        options: ["Immuunsysteem vernietigt insuline-cellen in pancreas", "De alvleesklier maakt juist te veel insuline", "Lichaamscellen reageren slecht op insuline", "Door te veel suiker raakt de pancreas uitgeput"],
+        options: ["Het afweersysteem vernietigt de insulinecellen", "De alvleesklier maakt juist te veel insuline", "Lichaamscellen reageren slecht op insuline", "Afweercellen reageren te sterk op suiker uit eten"],
         answer: 0,
-        wrongHints: [null, "Zou te veel insuline de bloedsuiker laten stijgen of dalen?", "Dat past bij type 2. Wat maakt type 1 auto-immuun?", "Dat is een fabel. Wat betekent 'auto-immuun' precies?"],
+        wrongHints: [null, "Zou te veel insuline de bloedsuiker laten stijgen of dalen?", "Dat past bij type 2. Wat maakt type 1 auto-immuun?", "Suiker is een voedingsstof, geen indringer. Waar richt de aanval zich op bij een auto-immuunziekte?"],
         uitlegPad: {
           stappen: [
             { titel: "β-cellen weg", tekst: "T-cellen herkennen β-cel-antigenen als 'vreemd' → vernietigen. Geen insuline-productie → bloedsuiker stijgt. Patiënt moet levenslang insuline inspuiten. Verschilt van type-2 (insuline-resistentie, leefstijl-gerelateerd)." },
@@ -349,9 +349,9 @@ const steps = [
       },
       {
         q: "**Microbioom** = ?",
-        options: ["Alle bacteriën in en op ons lichaam", "Een heel klein virus in de darmen", "Een soort kanker in de darmwand", "Een vaccin met levende bacteriën"],
+        options: ["De bacteriën die in en op ons lichaam leven", "De afweercellen in onze darmwand", "Het slijmlaagje dat onze darmen beschermt", "De ziekteverwekkers in ons lichaam"],
         answer: 0,
-        wrongHints: [null, "Micro = klein, bioom = leefgemeenschap. Is één virus een leefgemeenschap?", "Het microbioom hoort gewoon bij een gezond lichaam. Is kanker dat?", "Een vaccin krijg je ingespoten. Het microbioom heb je altijd bij je."],
+        wrongHints: [null, "Afweercellen zijn je eigen lichaamscellen. Bestaat het microbioom uit eigen cellen of uit iets anders?", "Slijm is een stof die je lichaam zelf maakt. Leeft het microbioom?", "De meeste bacteriën in je darmen maken je juist niet ziek. Zijn het dan allemaal ziekteverwekkers?"],
         uitlegPad: {
           stappen: [
             { titel: "Wij = 50% niet-menselijk", tekst: "~38 biljoen bacteriële cellen vs ~30 biljoen menselijke cellen. Vooral in darmen. Helpen vertering, vitamine-aanmaak, immuun-training. Verstoring (slecht dieet, te veel antibiotica) → diverse ziektes. Nieuw veld: probiotica + faeces-transplantatie." },
@@ -361,9 +361,9 @@ const steps = [
       },
       {
         q: "Bij **orgaantransplantatie**: waarom HLA-matching?",
-        options: ["Om afstoting van het orgaan te voorkomen", "Omdat HLA hetzelfde is als bloedgroep", "Om infecties na de operatie te voorkomen", "Om bloedstolling in het orgaan te voorkomen"],
+        options: ["Om afstoting van het orgaan te voorkomen", "Zodat je daarna geen afweerremmers meer nodig hebt", "Om infecties na de operatie te voorkomen", "Om bloedstolling in het orgaan te voorkomen"],
         answer: 0,
-        wrongHints: [null, "Niet — HLA is een apart systeem naast de bloedgroep.", "Tegen infecties krijg je antibiotica. Waar zijn HLA-eiwitten herkenningstekens voor?", "Bloedstolling regelen bloedplaatjes. Wie 'leest' de HLA-eiwitten op een cel: bloedplaatjes of het afweersysteem?"],
+        wrongHints: [null, "Ook met een goede match slik je meestal levenslang afweerremmers. Wat probeert de match dan te beperken?", "Tegen infecties krijg je antibiotica. Waar zijn HLA-eiwitten herkenningstekens voor?", "Bloedstolling regelen bloedplaatjes. Wie 'leest' de HLA-eiwitten op een cel: bloedplaatjes of het afweersysteem?"],
         uitlegPad: {
           stappen: [
             { titel: "Major Histocompatibility Complex", tekst: "HLA = MHC bij mensen. Eiwitten op celoppervlak die immuunsysteem 'eigen' vs 'vreemd' onderscheiden. Bij transplantatie: hoe meer HLA-match donor/ontvanger, hoe minder afstotingsrisico. Plus levenslange immuunsuppressiva." },
@@ -374,9 +374,9 @@ const steps = [
       },
       {
         q: "**CAR-T-therapie** voor kanker:",
-        options: ["Eigen T-cellen die kanker leren herkennen", "Vaccin dat kanker bij gezonde mensen voorkomt", "Tumor operatief weghalen uit het lichaam", "Antibiotica die kankercellen doden"],
+        options: ["Eigen T-cellen die kanker leren herkennen", "Vaccin dat kanker bij gezonde mensen voorkomt", "Tumor operatief weghalen uit het lichaam", "T-cellen van een donor die je afweer vervangen"],
         answer: 0,
-        wrongHints: [null, "CAR-T krijg je pas als je al kanker hebt. Wat wordt er dan met je eigen cellen gedaan?", "Dat is chirurgie, een aparte behandeling.", "Antibiotica werken tegen bacteriën, niet tegen kankercellen."],
+        wrongHints: [null, "CAR-T krijg je pas als je al kanker hebt. Wat wordt er dan met je eigen cellen gedaan?", "Dat is chirurgie, een aparte behandeling.", "Een donor is bij CAR-T niet nodig. Waar zou je de T-cellen dan vandaan kunnen halen?"],
         uitlegPad: {
           stappen: [
             { titel: "Eigen leger van de patiënt uitrusten", tekst: "T-cellen uit patiënt → laboratorium genetisch wijzigen met **Chimeric Antigen Receptor (CAR)** die kanker-antigeen herkent → terug ingespoten → vermenigvuldigen + vernietigen kanker. Eerst voor bloedkankers (leukemie, lymfoom). Spectaculaire resultaten, maar duur (€300-500k) + bijwerkingen mogelijk." },

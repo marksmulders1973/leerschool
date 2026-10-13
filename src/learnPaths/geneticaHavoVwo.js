@@ -121,9 +121,9 @@ const steps = [
       },
       {
         q: "Bij **onvolledige dominantie** rood (RR) × wit (rr) → F1:",
-        options: ["Allemaal roze","Helft rood, helft wit","Alleen rood","Alleen wit"],
+        options: ["Allemaal roze","Helft rood, helft wit","Allemaal rood","Rood-wit gevlekt"],
         answer: 0,
-        wrongHints: [null, "Elke F1-plant krijgt een R van de ene en een r van de andere ouder. Kan er dan een rr-plant uitkomen?", "Alleen rood zou betekenen dat R volledig dominant is. Is dat bij onvolledige dominantie zo?", "Elke F1-plant krijgt van de rode ouder een R. Kan de bloem dan helemaal wit zijn?"],
+        wrongHints: [null, "Elke F1-plant krijgt een R van de ene en een r van de andere ouder. Kan er dan een rr-plant uitkomen?", "Allemaal rood zou betekenen dat R volledig dominant is. Is dat bij onvolledige dominantie zo?", "Beide kleuren apart naast elkaar zien heet codominantie. Is dat hetzelfde als onvolledige dominantie?"],
         uitlegPad: {
           stappen: [{ titel: "Tussenvorm bij onvolledig", tekst: "Bij **onvolledige dominantie** is heterozygoot een **tussenvorm**. RR × rr → 100% Rr **roze**. F2 (Rr × Rr): 25% rood, 50% roze, 25% wit (= 1:2:1)." }],
           woorden: [{ woord: "onvolledige dominantie", uitleg: "Heterozygoot vertoont tussenvorm-fenotype." }],
@@ -263,9 +263,9 @@ const steps = [
       },
       {
         q: "Wat is een **frameshift-mutatie**?",
-        options: ["Invoeging of deletie verschuift het leeskader","Eén base wordt vervangen door een andere","Een heel chromosoom gaat verloren","Mutatie zonder enig effect op het eiwit"],
+        options: ["Een invoeging of deletie verschuift het leeskader","Eén base wordt vervangen door een andere","Een stuk chromosoom verschuift naar een ander chromosoom","Een base verandert zonder effect op het eiwit"],
         answer: 0,
-        wrongHints: [null, "Dat heet een puntmutatie. Verschuift daarbij de rest van de code?", "Een heel chromosoom kwijt is een chromosoommutatie. Gaat het bij een frameshift om zoiets groots?", "Een mutatie zonder effect heet stil. Heeft een frameshift meestal weinig of juist veel gevolgen?"],
+        wrongHints: [null, "Dat heet een puntmutatie. Verschuift daarbij de rest van de code?", "Een stuk chromosoom dat verhuist heet een translocatie. Gaat het bij een frameshift om zo'n groot stuk, of om losse basen?", "Een mutatie zonder effect heet stil. Heeft een frameshift meestal weinig of juist veel gevolgen?"],
         uitlegPad: {
           stappen: [{ titel: "Insertie/deletie = leeskader-shift", tekst: "**Frameshift** = invoeging (insertie) of weglaten (deletie) van basen — niet 3 of 6 etc. Hele **leeskader** verschuift → alle aminozuren erna fout → eiwit functioneert niet. Meestal ernstig." }],
           theorie: "Toets-patroon: leeskader = codons van 3 basen. Invoeging/deletie van 1 of 2 basen = ramp. Van 3 basen = 1 codon weg/erbij = minder ernstig.",
