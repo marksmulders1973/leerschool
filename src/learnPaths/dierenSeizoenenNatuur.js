@@ -52,16 +52,16 @@ const steps = [
       },
       {
         q: "Wat doen alle levende wezens?",
-        options: ["Ze ademen", "Ze hebben een hart", "Ze maken geluid", "Ze lopen rond"],
+        options: ["Ze halen adem", "Ze hebben bloed", "Ze maken geluid", "Ze lopen rond"],
         answer: 0,
-        wrongHints: [null, "Een boom of een paddenstoel heeft geen hart — en die leven toch.", "Hoor je een boom of een slak ooit geluid maken? Die leven toch.", "Een boom staat altijd op dezelfde plek — en leeft toch."],
+        wrongHints: [null, "Een boom of een paddenstoel heeft geen bloed — en die leven toch.", "Hoor je een boom of een slak ooit geluid maken? Die leven toch.", "Een boom staat altijd op dezelfde plek — en leeft toch."],
         uitlegPad: {
           stappen: [{ titel: "Ademen = universeel", tekst: "Dieren en planten hebben allemaal zuurstof nodig — ook een plant ademt." }],
           woorden: [{ woord: "ademen", uitleg: "Zuurstof opnemen, kooldioxide afgeven." }],
           theorie: "6 levenskenmerken die ALLE wezens delen: eten, ademen, groeien, bewegen, reageren, voortplanten.",
           voorbeelden: [{ type: "lijst", tekst: "Mens ademt met longen. Vis met kieuwen. Plant via blaadjes." }],
-          basiskennis: [{ onderwerp: "Niet hart/geluid/rondlopen", uitleg: "Een hart hebben, geluid maken of rondlopen geldt niet voor planten en paddenstoelen." }],
-          niveaus: { basis: "Ademen.", simpeler: "ALLE levende wezens ademen (zuurstof). Een hart, geluid of rondlopen niet: planten hebben dat niet.", nogSimpeler: "Ademen" },
+          basiskennis: [{ onderwerp: "Niet bloed/geluid/rondlopen", uitleg: "Bloed hebben, geluid maken of rondlopen geldt niet voor planten en paddenstoelen." }],
+          niveaus: { basis: "Ademen.", simpeler: "ALLE levende wezens ademen (zuurstof). Bloed, geluid of rondlopen niet: planten hebben dat niet.", nogSimpeler: "Ademen" },
         },
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.

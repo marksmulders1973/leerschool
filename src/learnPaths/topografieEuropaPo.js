@@ -40,7 +40,7 @@ const steps = [
         q: "Hoeveel werelddelen (continenten) telt de aarde?",
         options: ["5", "6", "7", "9"],
         answer: 2,
-        wrongHints: ["Te weinig — er zijn er meer.", "Bijna — eentje meer.", null, "Te veel."],
+        wrongHints: ["Tel ze op de kaart: tel Noord- en Zuid-Amerika apart en vergeet de Zuidpool niet.", "Tel ze op de kaart: tel Noord- en Zuid-Amerika apart en vergeet de Zuidpool niet.", null, "Tel ze op de kaart: zoveel grote stukken land zijn er niet."],
         explanation: "**7 werelddelen**: Europa, Azië, Afrika, Noord-Amerika, Zuid-Amerika, Oceanië, Antarctica. Sommige tellingen combineren Noord+Zuid-Amerika tot 'Amerika' (dan 6), of laten Antarctica weg (dan 6). Standaard NL-onderwijs: 7.",
         uitlegPad: compact(
           "7 werelddelen: Europa, Azië, Afrika, Noord-Amerika, Zuid-Amerika, Oceanië, Antarctica. Geheugentruc: 'EAANZOA'.",
@@ -49,10 +49,10 @@ const steps = [
         ),
       },
       {
-        q: "Welk land ligt deels in Europa én deels in Azië?",
-        options: ["Turkije", "Rusland", "Turkije én Rusland", "Frankrijk"],
+        q: "Welke landen liggen deels in Europa én deels in Azië?",
+        options: ["Turkije én Griekenland", "Rusland én Polen", "Turkije én Rusland", "Frankrijk én Spanje"],
         answer: 2,
-        wrongHints: ["Turkije ligt voor het grootste deel in Azië, maar Istanbul is deels Europees. Is Turkije het enige land dat op twee werelddelen ligt?", "Rusland ligt deels in Europa (westkant tot Oeral) en deels in Azië (oostkant tot de Grote Oceaan). Is Rusland het enige land dat op twee werelddelen ligt?", null, "Frankrijk ligt volledig in Europa (op overzeese gebieden na)."],
+        wrongHints: ["Ligt Griekenland ook deels in Azië? Kijk op de kaart.", "Ligt Polen ook deels in Azië? Kijk op de kaart.", null, "Frankrijk en Spanje liggen allebei helemaal in Europa."],
         explanation: "**Zowel Rusland als Turkije** liggen op 2 werelddelen. Rusland: Europa (Moskou + Sint-Petersburg) + Azië (Vladivostok + Siberië). Turkije: Europa (Istanbul-Europees deel) + Azië (Ankara + rest).",
         uitlegPad: compact(
           "Bekende landen op 2 continenten: Rusland (Europa-Azië via Oeral) + Turkije (Europa-Azië via Bosporus in Istanbul). Egypte ligt in Afrika, maar Sinaï-schiereiland telt soms als Azië.",
@@ -71,7 +71,7 @@ const steps = [
         q: "Wat is de hoofdstad van **Duitsland**?",
         options: ["München", "Bonn", "Berlijn", "Frankfurt"],
         answer: 2,
-        wrongHints: ["München = grote stad in Beieren (zuiden), niet hoofdstad.", "Bonn was hoofdstad van WEST-Duitsland (1949-1990). Niet meer.", null, "Frankfurt = financieel centrum (ECB!) — geen hoofdstad."],
+        wrongHints: ["München = grote stad in Beieren (zuiden), niet hoofdstad.", "Bonn was hoofdstad van WEST-Duitsland (1949-1990). Niet meer.", null, "Frankfurt is een grote stad met veel banken — maar geen hoofdstad."],
         explanation: "**Berlijn** is hoofdstad van Duitsland sinds 1990 (na Duitse hereniging). Tijdens deling (1949-1990) was West-Berlijn enclave + Bonn = hoofdstad West-Duitsland, Oost-Berlijn = hoofdstad DDR.",
         uitlegPad: compact(
           "Berlijn = hoofdstad Duitsland (sinds 1990). Voor val muur: Bonn was hoofdstad West-Duitsland. Sinds hereniging: Berlijn weer.",
@@ -83,7 +83,7 @@ const steps = [
         q: "Wat is de hoofdstad van het Verenigd Koninkrijk?",
         options: ["Edinburgh", "Dublin", "Londen", "Cardiff"],
         answer: 2,
-        wrongHints: ["Edinburgh = hoofdstad Schotland (deel van UK).", "Dublin = hoofdstad Ierland (apart land, geen UK).", null, "Cardiff = hoofdstad Wales (deel van UK)."],
+        wrongHints: ["Edinburgh is de hoofdstad van Schotland, één deel van het rijk.", "Dublin is de hoofdstad van Ierland, een apart land.", null, "Cardiff is de hoofdstad van Wales, één deel van het rijk."],
         explanation: "**Londen** = hoofdstad Verenigd Koninkrijk. UK bestaat uit 4 delen (Engeland + Schotland + Wales + Noord-Ierland) met elk eigen 'hoofdstad' (Londen + Edinburgh + Cardiff + Belfast), maar Londen is de hoofdstad van het hele rijk.",
         uitlegPad: compact(
           "Londen = UK-hoofdstad. UK = 4 delen (Engeland + Schotland + Wales + N-Ierland). Niet meer EU-lid sinds Brexit 2020.",
@@ -217,7 +217,7 @@ const steps = [
           "Berlijn, Wenen, Boedapest, Sofia",
         ],
         answer: 2,
-        wrongHints: ["Praag ligt aan de Moldau (zijrivier van de Elbe), niet Donau. Berlijn aan Spree.", "Praag ligt NIET aan Donau.", null, "Berlijn ligt aan Spree, Sofia niet aan Donau."],
+        wrongHints: ["Berlijn ligt aan de Spree — kijk ook naar de andere steden.", "Eén van deze steden ligt aan de Moldau.", null, "Twee van deze steden liggen niet aan de Donau."],
         explanation: "**Donau** stroomt door Wenen (Oostenrijk), Bratislava (Slowakije), Boedapest (Hongarije), Belgrado (Servië). 2e langste rivier Europa (na Wolga).",
         uitlegPad: compact(
           "Donau = 2e langste rivier Europa. Door 10 landen. 4 hoofdsteden eraan: Wenen, Bratislava, Boedapest, Belgrado. (Praag aan Moldau, niet Donau.)",
@@ -272,7 +272,7 @@ const steps = [
         q: "Welke zee ligt tussen **Spanje, Italië en Griekenland**?",
         options: ["Noordzee", "Oostzee", "Middellandse Zee", "Zwarte Zee"],
         answer: 2,
-        wrongHints: ["Noordzee = tussen NL, UK, DK, NO.", "Oostzee = tussen Scandinavië en Polen.", null, "Zwarte Zee = oosten (Roemenië, Bulgarije, Oekraïne, Turkije)."],
+        wrongHints: ["De Noordzee ligt tussen Nederland, Engeland, Denemarken en Noorwegen.", "Oostzee = tussen Scandinavië en Polen.", null, "Zwarte Zee = oosten (Roemenië, Bulgarije, Oekraïne, Turkije)."],
         explanation: "**Middellandse Zee** = grote binnenzee tussen Zuid-Europa, Noord-Afrika en het Midden-Oosten. Verbonden met Atlantische Oceaan via Straat van Gibraltar.",
         uitlegPad: compact(
           "Middellandse Zee tussen Zuid-Europa + Noord-Afrika + Midden-Oosten. Spanje/Italië/Griekenland liggen eraan. Gibraltar = poort naar Atlantische Oceaan.",

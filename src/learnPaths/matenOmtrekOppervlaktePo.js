@@ -24,7 +24,7 @@ const steps = [
         q: "**3,5 km** is hoeveel meter?",
         options: ["3500 m", "350 m", "35 m", "35 000 m"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer decimaal.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "Je deed keer 100. Hoeveel meter gaan er in één kilometer?", "Je deed keer 10. Hoeveel meter is 1 km?", "Je deed keer 10 000. Hoeveel meter is 1 km precies?"],
         uitlegPad: {
           stappen: [
             { titel: "Van kilometer naar meter", tekst: "Een kilometer is een grotere eenheid dan een meter. Ga je van een grote naar een kleinere eenheid, dan vermenigvuldig je." },
@@ -41,7 +41,7 @@ const steps = [
         q: "**450 cm** is hoeveel m?",
         options: ["4,5 m", "45 m", "0,45 m", "4500 m"],
         answer: 0,
-        wrongHints: [null, "Te veel — verwarring met mm.", "Te weinig.", "Onmogelijk."],
+        wrongHints: [null, "Je deelde door 10. Hoeveel centimeter gaan er in één meter?", "Je deelde door 1000. Hoeveel cm is 1 meter?", "Ga je naar een grotere maat? Dan wordt het getal kleiner, niet groter."],
         uitlegPad: {
           stappen: [
             { titel: "Van centimeter naar meter", tekst: "Centimeter is een kleinere eenheid dan meter. Ga je van klein naar groot, dan deel je." },
@@ -58,7 +58,7 @@ const steps = [
         q: "**75 mm** is hoeveel cm?",
         options: ["7,5 cm", "750 cm", "0,75 cm", "0,075 cm"],
         answer: 0,
-        wrongHints: [null, "Niet — je moet delen, niet vermenigvuldigen.", "Te klein.", "Veel te klein."],
+        wrongHints: [null, "Niet — je moet delen, niet vermenigvuldigen.", "Je deelde door 100. Hoeveel millimeter gaan er in één centimeter?", "Je deelde door 1000. Hoeveel mm is 1 cm?"],
         uitlegPad: {
           stappen: [
             { titel: "Millimeter naar centimeter", tekst: "Millimeter is nog kleiner dan centimeter. Ga je naar een grotere eenheid, dan deel je." },
@@ -72,10 +72,10 @@ const steps = [
         },
       },
       {
-        q: "Optellen: **1 km + 250 m + 50 cm** in m?",
-        options: ["1250,5 m", "1300 m", "1255 m", "1305 m"],
+        q: "Hoeveel meter is **1 km + 250 m + 50 cm** samen?",
+        options: ["1250,5 m", "1300 m", "1255 m", "1250,05 m"],
         answer: 0,
-        wrongHints: [null, "Niet — cm wordt klein bedrag.", "Niet — geen 5 m.", "Idem."],
+        wrongHints: [null, "Heb je 50 cm als 50 m geteld? Hoeveel meter is 50 cm?", "Is 50 cm echt 5 meter? Hoeveel cm gaan er in 1 m?", "Je deelde 50 door 1000. Hoeveel cm gaan er in 1 m?"],
         uitlegPad: {
           stappen: [
             { titel: "Alles naar dezelfde eenheid", tekst: "Voor je kunt optellen, moeten alle maten in dezelfde eenheid staan. Reken de kilometer en de centimeter allebei om naar meter." },
@@ -89,10 +89,10 @@ const steps = [
         },
       },
       {
-        q: "Op een kaart van **schaal 1:50 000** is afstand 4 cm. Hoeveel km echt?",
+        q: "Op een kaart met **schaal 1:50 000** is een afstand 4 cm. Hoeveel km is dat in het echt?",
         options: ["2 km", "200 m", "4 km", "20 km"],
         answer: 0,
-        wrongHints: [null, "Niet — × schaal.", "Niet — controleer.", "Te ver."],
+        wrongHints: [null, "Reken 4 × 50 000 cm uit. Hoeveel cm gaan er in 1 km?", "Is 1 cm op deze kaart echt 1 km? Reken eerst 4 × 50 000 cm uit.", "Hoeveel cm gaan er in 1 km? Deel 4 × 50 000 cm daardoor."],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent de schaal?", tekst: "Bij schaal 1:50 000 betekent elke centimeter op de kaart 50 000 centimeter in het echt." },
@@ -346,10 +346,10 @@ const steps = [
       "**Omtrek** = lengte van alle zijden samen (de lijn rondom).\n**Oppervlakte** = hoeveel ruimte het figuur bedekt (binnen-vlak).\n\n**Rechthoek** (lengte L, breedte B):\n• Omtrek = **2·L + 2·B = 2(L+B)**.\n• Oppervlakte = **L × B**.\n\n**Vierkant** (zijde z):\n• Omtrek = **4 × z**.\n• Oppervlakte = **z × z = z²**.\n\n**Oppervlakte-eenheden**:\n• **mm²** (vierkante millimeter).\n• **cm²** = 100 mm² (10×10).\n• **dm²** = 100 cm² (10×10).\n• **m²** = 100 dm² = **10 000 cm²** (100×100).\n• **dam² (are, a)** = 100 m². Klein park.\n• **hm² (hectare, ha)** = 100 are = 10 000 m². Voetbalveld ~0,7 ha.\n• **km²** = 100 ha = 1 000 000 m². Stad.\n\n**Toets-valkuil**: tussen elke eenheid is factor **100** (niet 10 zoals bij lengte!) want oppervlakte is 2D.\n\n**Voorbeeld**: rechthoek 5 m × 3 m.\n• Omtrek = 2(5+3) = 16 m.\n• Oppervlakte = 5 × 3 = 15 m².\n\n**Omkering van eenheid**:\n• 15 m² → cm²? × 10 000 → 150 000 cm².\n• 5000 mm² → cm²? ÷ 100 → 50 cm².\n\n**Praktisch — kamer-tegels**:\nKamer 4 m × 5 m = 20 m². Tegels van 30 cm × 30 cm = 0,3 × 0,3 = 0,09 m². Aantal tegels = 20 / 0,09 ≈ 223. Plus 10% reserve.\n\n**Toets-valkuil**:\n• Verwar oppervlakte (cm²) NIET met lengte (cm) — eenheden checken.\n• Bij niet-rechthoekige figuren: opdelen in rechthoeken.",
     checks: [
       {
-        q: "Rechthoek 6 m × 4 m. **Omtrek**?",
+        q: "Een rechthoek is 6 m lang en 4 m breed. Wat is de **omtrek**?",
         options: ["20 m", "10 m", "24 m", "16 m"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet niet × 2.", "Niet — dat is oppervlakte (m²).", "Niet — controleer."],
+        wrongHints: [null, "Je telde lengte en breedte één keer op. Hoeveel zijden heeft een rechthoek?", "Je deed 6 × 4. Is dat de rand of het vlak binnenin?", "Loop eens alle vier de zijden langs. Heb je ze allemaal meegeteld?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is omtrek?", tekst: "Omtrek is de afstand als je helemaal om de rechthoek heen loopt — alle vier de zijden samen." },
@@ -363,10 +363,10 @@ const steps = [
         },
       },
       {
-        q: "Vierkant met zijde 7 cm. **Oppervlakte**?",
+        q: "Een vierkant heeft zijden van 7 cm. Wat is de **oppervlakte**?",
         options: ["49 cm²", "28 cm²", "14 cm²", "49 cm"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is omtrek.", "Niet — niet 2×.", "Niet — eenheid moet cm²."],
+        wrongHints: [null, "Je telde de vier zijden op. Wordt er naar de rand of naar het vlak gevraagd?", "Je deed 7 × 2. Moet de zijde keer 2, of keer zichzelf?", "Welke eenheid hoort bij een oppervlakte?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is oppervlakte?", tekst: "Oppervlakte is hoeveel ruimte er binnen het figuur past — niet de rand, maar het vlak zelf." },
@@ -380,10 +380,10 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel **cm²** in 2,5 m²?",
+        q: "Hoeveel **cm²** is 2,5 m²?",
         options: ["25 000 cm²", "250 cm²", "2500 cm²", "250 000 cm²"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "Je deed keer 100. Een vierkante meter is 100 cm bij 100 cm. Hoeveel cm² is dat?", "Je deed keer 1000. Hoeveel cm² past er in 1 m²? Reken 100 × 100.", "Je deed keer 100 000. Reken eerst uit hoeveel cm² er in 1 m² gaan."],
         uitlegPad: {
           stappen: [
             { titel: "Oppervlakte werkt anders dan lengte", tekst: "Bij oppervlakte-eenheden is de stap tussen buur-eenheden keer honderd, niet keer tien zoals bij lengte." },
@@ -397,10 +397,10 @@ const steps = [
         },
       },
       {
-        q: "Een L-vormige tuin: rechthoek 10×6 m met een hoekje van 3×2 m eruit. Oppervlakte?",
+        q: "Een tuin is een rechthoek van 10 m bij 6 m, maar er is een hoekje van 3 m bij 2 m uit. Wat is de oppervlakte van de tuin?",
         options: ["54 m²", "60 m²", "48 m²", "66 m²"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet hoekje.", "Niet — te veel afgetrokken.", "Niet — niet bijvoegen."],
+        wrongHints: [null, "Is het hoekje er al afgehaald?", "Je haalde 12 eraf. Hoe groot is het hoekje van 3 bij 2?", "Je telde het hoekje erbij op. Hoort het hoekje bij de tuin?"],
         uitlegPad: {
           stappen: [
             { titel: "Denk in twee stukken", tekst: "Bereken eerst de oppervlakte van de hele rechthoek, alsof het hoekje er nog in zit." },
@@ -414,10 +414,10 @@ const steps = [
         },
       },
       {
-        q: "Een park van **2 hectare** is in m²?",
+        q: "Een park is **2 hectare** groot. Hoeveel m² is dat?",
         options: ["20 000 m²", "200 m²", "2000 m²", "2 000 000 m²"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "Een hectare is een veld van 100 m bij 100 m. Hoeveel m² is dat?", "Je deed keer 1000. Hoeveel m² is een veld van 100 m bij 100 m?", "Dat is 2 km². Is een hectare zo groot als een vierkante kilometer?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een hectare?", tekst: "Een hectare is een oppervlakte-eenheid die je vaak ziet bij velden, parken en boerderijen." },
@@ -574,7 +574,7 @@ const steps = [
       },
       {
         q: "Welke rechthoek heeft de **grootste oppervlakte**?",
-        options: ["5 cm × 5 cm", "8 cm × 3 cm", "10 cm × 2 cm", "12 cm × 2 cm"],
+        options: ["5 cm × 5 cm", "8 cm × 3 cm", "10 cm × 2 cm", "11 cm × 2 cm"],
         answer: 0,
         wrongHints: [null, "Reken bij elke rechthoek lengte keer breedte uit.", null, null],
         uitlegPad: {
@@ -624,10 +624,10 @@ const steps = [
       "**Driehoek**:\n• Oppervlakte = **½ × basis × hoogte**.\n• Omtrek = som van alle 3 zijden (gewoon optellen).\n• **Hoogte** = loodrecht op basis, niet schuine zijde!\n\nVoorbeeld: basis 8 cm, hoogte 5 cm. Opp = ½ × 8 × 5 = 20 cm².\n\n**Cirkel** (straal r, diameter d = 2r):\n• Omtrek (= 'cirkelomtrek' of 'omtrek') = **2 × π × r = π × d**.\n• Oppervlakte = **π × r²**.\n• π (pi) ≈ 3,14 (De toets gebruikt vaak 3,14).\n\nVoorbeeld: cirkel met straal 5 cm.\n• Omtrek = 2 × 3,14 × 5 = 31,4 cm.\n• Oppervlakte = 3,14 × 5² = 3,14 × 25 = 78,5 cm².\n\n**Trapezium** (alleen VWO/HAVO maar handig):\n• Opp = ½ × (a + b) × hoogte (a, b zijn de twee parallelle zijden).\n\n**Combinaties + samengestelde figuren**:\n• Halve cirkel = ½ × π × r² (oppervlakte).\n• Rechthoek + halve cirkel erop = beide oppervlakten optellen.\n\n**Toets-truc bij cirkel-vragen**:\n• De toets vraagt meestal: 'gebruik π = 3,14'. NIET 22/7 of andere benadering.\n• Antwoord moet correct afgerond worden (meestal op 1 decimaal).\n\n**Veelgemaakte fout**:\n• Bij driehoek: 'schuine zijde × basis' → fout. Hoogte is **loodrecht** op basis.\n• Bij cirkel: oppervlakte vs omtrek verwarren — formules altijd checken: opp = π·r², omtrek = 2·π·r.\n• Eenheid: oppervlakte ALTIJD vierkant (cm² etc.).",
     checks: [
       {
-        q: "Driehoek met **basis 10 cm + hoogte 6 cm**. Oppervlakte?",
+        q: "Een driehoek heeft een **basis van 10 cm** en een **hoogte van 6 cm**. Wat is de oppervlakte?",
         options: ["30 cm²", "60 cm²", "16 cm²", "60 cm"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet ½ niet.", "Niet — geen omtrek.", "Niet — eenheid cm² nodig."],
+        wrongHints: [null, "Je deed basis × hoogte. Is een driehoek zo groot als de hele rechthoek?", "Je telde 10 en 6 op. Moet je optellen of vermenigvuldigen?", "Je deed basis × hoogte. En welke eenheid hoort bij een oppervlakte?"],
         uitlegPad: {
           stappen: [
             { titel: "Formule driehoek", tekst: "De oppervlakte van een driehoek is de helft van basis keer hoogte." },
@@ -641,10 +641,10 @@ const steps = [
         },
       },
       {
-        q: "Cirkel met **diameter 14 cm**. Omtrek? (π = 3,14)",
+        q: "Een cirkel heeft een **diameter van 14 cm**. Wat is de omtrek? (π = 3,14)",
         options: ["43,96 cm", "21,98 cm", "87,92 cm", "153,86 cm"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet diameter (× 2 straal).", "Te groot.", "Niet — dat is oppervlakte-orde."],
+        wrongHints: [null, "Je deed 3,14 × 7. Is 7 de diameter of de straal?", "Je deed 3,14 × 28. Moet de diameter nog eens keer 2?", "Je deed 3,14 × 7 × 7. Is dat de omtrek of de oppervlakte?"],
         uitlegPad: {
           stappen: [
             { titel: "Omtrek-formule cirkel", tekst: "De omtrek van een cirkel bereken je met π keer de diameter." },
@@ -658,10 +658,10 @@ const steps = [
         },
       },
       {
-        q: "Cirkel met **straal 10 m**. Oppervlakte? (π = 3,14)",
+        q: "Een cirkel heeft een **straal van 10 m**. Wat is de oppervlakte? (π = 3,14)",
         options: ["314 m²", "31,4 m²", "62,8 m²", "100 m²"],
         answer: 0,
-        wrongHints: [null, "Te klein.", "Niet — dat is omtrek-formule.", "Niet — vergeet π."],
+        wrongHints: [null, "Je deed 3,14 × 10. Moet de straal niet keer zichzelf?", "Je deed 2 × 3,14 × 10. Is dat de formule voor de rand of voor het vlak?", "Je deed 10 × 10. Wat moet je daarna nog met π doen?"],
         uitlegPad: {
           stappen: [
             { titel: "Oppervlakte-formule cirkel", tekst: "De oppervlakte van een cirkel bereken je met π keer de straal in het kwadraat." },
@@ -675,10 +675,10 @@ const steps = [
         },
       },
       {
-        q: "Een driehoek met **schuine zijde 5** + basis 4 + hoogte 3 (rechthoekige driehoek). Opp?",
-        options: ["6", "10", "12", "60"],
+        q: "Een rechthoekige driehoek heeft **basis 4**, **hoogte 3** en **schuine zijde 5**. Wat is de oppervlakte?",
+        options: ["6", "10", "12", "7,5"],
         answer: 0,
-        wrongHints: [null, "Niet — de schuine zijde hoort niet in de formule.", "Niet — vergeet ½ niet.", "Niet — onmogelijk groot."],
+        wrongHints: [null, "Welke twee zijden staan loodrecht op elkaar? Die heb je nodig.", "Je deed 4 × 3. Een driehoek is maar een deel van die rechthoek.", "Is 5 de basis of de hoogte? Of is het de schuine zijde?"],
         uitlegPad: {
           stappen: [
             { titel: "Welke maten heb je nodig?", tekst: "Voor de oppervlakte van een driehoek gebruik je alleen de basis en de hoogte — de schuine zijde is hier niet nodig." },
@@ -692,10 +692,10 @@ const steps = [
         },
       },
       {
-        q: "Een **halve cirkel** met straal 4 cm. Oppervlakte? (π = 3,14)",
+        q: "Een **halve cirkel** heeft een straal van 4 cm. Wat is de oppervlakte? (π = 3,14)",
         options: ["25,12 cm²", "50,24 cm²", "12,56 cm²", "8 cm²"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is hele cirkel.", "Te klein.", "Te klein, vergeet π."],
+        wrongHints: [null, "Je rekende de hele cirkel uit. Hoeveel van de cirkel heb je hier?", "Je deed 3,14 × 4. Moet de straal niet keer zichzelf?", "Je deed 4 × 4 en nam de helft. Waar is π gebleven?"],
         uitlegPad: {
           stappen: [
             { titel: "Eerst de hele cirkel", tekst: "Bereken eerst de oppervlakte van de hele cirkel met π keer straal in het kwadraat." },
@@ -718,10 +718,10 @@ const steps = [
       "**Inhoud** = hoeveel ruimte een 3D-figuur inneemt (binnen-volume).\n\n**Kubus** (alle zijden gelijk, zijde z):\n• Inhoud = **z × z × z = z³**.\n• Voorbeeld: zijde 4 cm → inhoud = 64 cm³.\n\n**Balk** (lengte L, breedte B, hoogte H):\n• Inhoud = **L × B × H**.\n• Voorbeeld: 5 × 3 × 2 = 30 cm³.\n\n**Cilinder** (straal r grondvlak, hoogte h):\n• Inhoud = **π × r² × h** (= grondvlak × hoogte).\n• Voorbeeld: r=3, h=10 → π × 9 × 10 = 282,6 cm³.\n\n**Inhoud-eenheden**:\n• **mm³** (kubieke millimeter).\n• **cm³** = 1000 mm³.\n• **dm³** = 1000 cm³.\n• **m³** = 1000 dm³ = 1 000 000 cm³.\n\n**Toets-tip**: tussen elke inhoud-eenheid is factor **1000** (niet 10 zoals lengte, niet 100 zoals oppervlakte). 3D = 10³.\n\n**Liter-relatie**:\n• **1 L = 1 dm³ = 1000 cm³ = 1000 mL**.\n• 1 m³ = 1000 L.\n• 1 cm³ = 1 mL.\n• Heel handig in praktijk: emmer 10 L = 10 dm³ = 10 000 cm³.\n\n**Voorbeelden CSE-stijl**:\n• Pak melk 1 L = 1 dm³. Hoeveel ml in 0,25 L? 250 ml.\n• Aquarium 50 cm × 30 cm × 25 cm. Inhoud? 37 500 cm³ = 37,5 L.\n• Cilinder-pot d=6 cm, h=10 cm. Inhoud? π × 3² × 10 = 282,6 cm³ ≈ 283 mL.\n\n**Veelgemaakte fouten**:\n• Inhoud-eenheden niet ÷ 100 of × 10, MAAR factor 1000.\n• Bij cilinder: r ipv d gebruiken voor formule.\n• Vergeet dat hoogte loodrecht op grondvlak staat.\n\n**Combinaties**:\n• Halve cilinder = ½ × π × r² × h.\n• L-vormige tank: opdelen in balken.",
     checks: [
       {
-        q: "Kubus met **zijde 5 cm**. Inhoud?",
+        q: "Een kubus heeft zijden van **5 cm**. Wat is de inhoud?",
         options: ["125 cm³", "25 cm³", "15 cm³", "75 cm³"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is opp van één vlak.", "Niet — dat is 3 × z.", "Onjuist."],
+        wrongHints: [null, "Je deed 5 × 5. Dat is één vlak. Hoe vaak moet je met 5 vermenigvuldigen voor de inhoud?", "Je deed 3 × 5. Moet je de zijden optellen of vermenigvuldigen?", "Waarom keer 3? Welke maten van de kubus vermenigvuldig je met elkaar?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is inhoud?", tekst: "Inhoud is hoeveel ruimte een 3D-figuur inneemt, zoals hoeveel water er in past." },
@@ -735,10 +735,10 @@ const steps = [
         },
       },
       {
-        q: "Balk 8 × 4 × 3 cm. Inhoud?",
+        q: "Een balk is 8 cm lang, 4 cm breed en 3 cm hoog. Wat is de inhoud?",
         options: ["96 cm³", "24 cm³", "15 cm³", "108 cm³"],
         answer: 0,
-        wrongHints: [null, "Niet — vermenigvuldigen alle drie.", "Niet.", "Niet."],
+        wrongHints: [null, "Je vermenigvuldigde maar twee maten. Welke maat ben je vergeten?", "Je telde 8, 4 en 3 op. Moet je optellen of vermenigvuldigen?", "Reken 8 × 4 eerst uit, en doe dat dan keer 3. Kom je op 108?"],
         uitlegPad: {
           stappen: [
             { titel: "Formule balk", tekst: "Bij een balk vermenigvuldig je lengte, breedte en hoogte met elkaar." },
@@ -752,10 +752,10 @@ const steps = [
         },
       },
       {
-        q: "Aquarium 60 cm × 30 cm × 25 cm. Inhoud in **liter**?",
-        options: ["45 L", "4,5 L", "450 L", "45 cm³"],
+        q: "Een aquarium is 60 cm lang, 30 cm breed en 25 cm hoog. Hoeveel **liter** water past erin?",
+        options: ["45 L", "4,5 L", "450 L", "4500 L"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te veel.", "Niet — eenheid L gevraagd."],
+        wrongHints: [null, "Je deelde door 10 000. Hoeveel cm³ gaan er in één liter?", "Je deelde door 100. Hoeveel cm³ is 1 liter?", "Je deelde door 10. Hoeveel cm³ past er in een liter?"],
         uitlegPad: {
           stappen: [
             { titel: "Eerst de inhoud in cm³", tekst: "Bereken eerst de inhoud van het aquarium in kubieke centimeter, zoals bij elke balk." },
@@ -769,10 +769,10 @@ const steps = [
         },
       },
       {
-        q: "Cilinder: straal 5 cm, hoogte 10 cm. Inhoud? (π=3,14)",
+        q: "Een cilinder heeft een straal van 5 cm en een hoogte van 10 cm. Wat is de inhoud? (π = 3,14)",
         options: ["785 cm³", "157 cm³", "78,5 cm³", "31,4 cm³"],
         answer: 0,
-        wrongHints: [null, "Te klein — vergeet r² niet.", "Niet — controleer.", "Niet — alleen omtrek."],
+        wrongHints: [null, "Je deed 3,14 × 5 × 10. Moet de straal niet keer zichzelf?", "Je rekende alleen de grondcirkel uit. Wat doe je nog met de hoogte?", "Je rekende de omtrek van de cirkel uit. Is dat de rand of het vlak?"],
         uitlegPad: {
           stappen: [
             { titel: "Formule cilinder", tekst: "De inhoud van een cilinder is de oppervlakte van het ronde grondvlak, vermenigvuldigd met de hoogte." },
@@ -786,10 +786,10 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel **m³** in 2500 L?",
+        q: "Hoeveel **m³** is 2500 liter?",
         options: ["2,5 m³", "25 m³", "0,25 m³", "250 m³"],
         answer: 0,
-        wrongHints: [null, "Te veel.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "Je deelde door 100. Hoeveel liter gaan er in 1 m³?", "Je deelde door 10 000. Hoeveel liter past er in een kubus van 1 m bij 1 m bij 1 m?", "Je deelde door 10. Hoeveel liter is 1 m³?"],
         uitlegPad: {
           stappen: [
             { titel: "Ken de omrekening", tekst: "Er geldt een vaste regel tussen liter en kubieke meter." },
@@ -944,10 +944,10 @@ const steps = [
       "**Toets-meetkunde** is altijd PRAKTIJK-gericht:\n• Tuin-oppervlakte voor gras.\n• Tegels berekenen.\n• Verfblik voor muur.\n• Aquarium-inhoud.\n• Schaal op kaart.\n\n**Werkwijze elke som**:\n1. **Lees** rustig.\n2. **Maak tekening** als geen plaatje gegeven.\n3. **Label** alle gegeven maten.\n4. **Identificeer**: vraag naar omtrek, oppervlakte, inhoud?\n5. **Formule** kiezen + invullen.\n6. **Controleer eenheid** (cm? cm²? cm³? L?).\n7. **Antwoord** rond af zoals gevraagd.\n\n**Eenheid-tips**:\n• Lengte: cm, m, km.\n• Oppervlakte: cm², m², ha.\n• Inhoud: cm³, m³, L.\n• Tip: 'twee dimensies maken vierkant', '3D maakt kubiek'.\n\n**Voorbeeld-som**:\nEen rechthoekige tuin is 12 m × 8 m. Eromheen leg je een pad van 1 m breed.\n• Buitenmaten met pad: (12+2) × (8+2) = 14 × 10 = 140 m².\n• Tuin zelf: 96 m².\n• Pad-oppervlakte: 140 − 96 = 44 m².\n\n**Tuintegel-som**:\nKamer 5 × 4 m, tegels 25 × 25 cm. Hoeveel?\n• Kamer = 20 m² = 200 000 cm².\n• Tegel = 25 × 25 = 625 cm².\n• Aantal = 200 000 / 625 = 320 tegels.\n• + 10% reserve → 352 tegels.\n\n**Verfblik-som**:\nMuur 4 × 3 m. Eén blik dekt 8 m².\n• Muur = 12 m².\n• Blikken nodig: 12 / 8 = 1,5 → ALTIJD afronden naar boven → 2 blikken.\n\n**Aquarium-som**:\nKubus-aquarium zijde 50 cm. Vullen tot 80%.\n• Inhoud totaal: 50³ = 125 000 cm³ = 125 L.\n• 80% = 100 L.",
     checks: [
       {
-        q: "Een vierkante tuin met **omtrek 32 m**. Oppervlakte?",
+        q: "Een vierkante tuin heeft een **omtrek van 32 m**. Wat is de oppervlakte?",
         options: ["64 m²", "32 m²", "128 m²", "16 m²"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is omtrek.", "Te veel.", "Te weinig."],
+        wrongHints: [null, "32 is de omtrek. Hoe lang is dan één zijde van het vierkant?", "Je deed 32 × 4. Moet je de omtrek keer 4 doen of door 4 delen?", "Hoe lang is één zijde als de vier zijden samen 32 m zijn?"],
         uitlegPad: {
           stappen: [
             { titel: "Van omtrek naar zijde", tekst: "Een vierkant heeft vier gelijke zijden. Deel de omtrek door vier om de lengte van één zijde te vinden." },
@@ -961,10 +961,10 @@ const steps = [
         },
       },
       {
-        q: "Een muur is **3 m hoog en 5 m breed**. Eén verfblik dekt **6 m²**. Hoeveel blikken?",
+        q: "Een muur is **3 m hoog en 5 m breed**. Eén blik verf is genoeg voor **6 m²**. Hoeveel blikken heb je nodig?",
         options: ["3 blikken", "2 blikken", "1 blik", "15 blikken"],
         answer: 0,
-        wrongHints: [null, "Niet — bereken de oppervlakte van de muur, deel door wat een blik dekt, en denk aan afronden.", "Te weinig.", "Niet — onmogelijk."],
+        wrongHints: [null, "Twee blikken zijn genoeg voor 12 m². Is dat genoeg voor de hele muur?", "Eén blik is genoeg voor 6 m². Hoe groot is de muur?", "15 is de oppervlakte van de muur in m². Hoeveel m² doe je met één blik?"],
         uitlegPad: {
           stappen: [
             { titel: "Bereken eerst de oppervlakte", tekst: "Vermenigvuldig hoogte en breedte van de muur om de oppervlakte te vinden." },
@@ -981,7 +981,7 @@ const steps = [
         q: "Een rechthoekig zwembad is **5 m × 3 m × 1 m**. Hoeveel **liter** water past erin?",
         options: ["15 000 L", "1500 L", "150 L", "150 000 L"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "Je deed keer 100. Hoeveel liter gaan er in 1 m³?", "Je deed keer 10. Hoeveel liter is 1 m³?", "Je deed keer 10 000. Hoeveel liter past er in 1 m³?"],
         uitlegPad: {
           stappen: [
             { titel: "Bereken eerst de inhoud in m³", tekst: "Vermenigvuldig de drie afmetingen van het zwembad met elkaar." },
@@ -995,10 +995,10 @@ const steps = [
         },
       },
       {
-        q: "Een cirkelvormige vijver met **straal 4 m**. Oppervlakte? (π=3,14)",
+        q: "Een ronde vijver heeft een **straal van 4 m**. Wat is de oppervlakte? (π = 3,14)",
         options: ["50,24 m²", "25,12 m²", "12,56 m²", "100,48 m²"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is omtrek.", "Niet — verwarring formule.", "Te veel."],
+        wrongHints: [null, "Je deed 2 × 3,14 × 4. Is dat de rand of het vlak?", "Je deed 3,14 × 4. Moet de straal niet keer zichzelf?", "Je deed 3,14 × 8 × 4. Is 8 de straal?"],
         uitlegPad: {
           stappen: [
             { titel: "Formule cirkel-oppervlakte", tekst: "Gebruik dezelfde formule als bij elke cirkel: π keer de straal in het kwadraat." },
@@ -1012,11 +1012,11 @@ const steps = [
         },
       },
       {
-        q: "Een **kaart-schaal 1:10 000**. Op kaart is een veld 5 cm × 4 cm. Werkelijke oppervlakte in m²?",
+        q: "Een kaart heeft **schaal 1:10 000**. Een veld is op de kaart 5 cm bij 4 cm. Hoe groot is het veld in het echt, in m²?",
         // 5 sep 2026: antwoord was een factor 10 te klein (5 cm × 10 000 = 500 m; 4 cm = 400 m; 500 × 400 = 200 000 m²).
         options: ["200 000 m²", "20 000 m²", "2 000 m²", "200 m²"],
         answer: 0,
-        wrongHints: [null, "Factor 10 te weinig — reken eerst élke zijde om naar meters (5 cm op de kaart = 500 m).", "Nee — 5 cm op de kaart is in het echt 500 m, niet 50 m.", "Veel te weinig — de schaal telt in beide richtingen mee."],
+        wrongHints: [null, "Reken elke zijde apart om naar meters. Hoeveel meter is 5 cm op deze kaart?", "Hoeveel cm is 5 × 10 000? En hoeveel meter is dat?", "Heb je beide zijden met de schaal vermenigvuldigd?"],
         uitlegPad: {
           stappen: [
             { titel: "Reken eerst de echte lengtes uit", tekst: "Vermenigvuldig beide kaart-lengtes met de schaalfactor om de werkelijke lengte en breedte in centimeter te krijgen, en zet die om naar meter." },

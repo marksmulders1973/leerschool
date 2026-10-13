@@ -327,7 +327,7 @@ const steps = [
         },
       },
       { q: "Wat is **verdamping**?", options: ["Water wordt waterdamp", "Water wordt ijs", "Water valt naar beneden", "IJs wordt water"], answer: 0, wrongHints: [null, "Dat is bevriezen.", "Dat is neerslag.", "Dat is smelten."] },
-      { q: "Wat is **condensatie**?", options: ["Waterdamp wordt water", "IJs wordt water", "Water wordt gas", "Water wordt ijs"], answer: 0, wrongHints: [null, "Dat is smelten.", "Dat is verdamping.", "Dat is bevriezen."] },
+      { q: "Wat is **condensatie**?", options: ["Damp wordt water", "IJs wordt water", "Water wordt gas", "Water wordt ijs"], answer: 0, wrongHints: [null, "Dat is smelten.", "Dat is verdamping.", "Dat is bevriezen."] },
       { q: "Welk soort wolken brengt onweer?", options: ["Cumulonimbus","Cirrus","Cumulus","Stratus"], answer: 0, wrongHints: [null, "IJskristallen, geen onweer.", "Mooi weer.", "Grijze grond-laag."] },
       { q: "In welk jaar was de **Watersnoodramp**?", options: ["1953","1916","1995","1963"], answer: 0, wrongHints: [null, "In 1916 was er een zware storm bij de Zuiderzee, niet in Zeeland.", "In 1995 moesten mensen weg voor de hoge rivieren, niet in Zeeland.", "In 1963 was er een strenge winter, geen overstroming."] },
       { q: "Hoeveel % van de aarde is **bedekt met water**?", options: ["~71%","~30%","~90%","~50%"], answer: 0, wrongHints: [null, "Ongeveer 30% is juist land.", "Er is nog best veel land: denk aan alle werelddelen.", "Het is meer dan de helft. Kijk eens naar een wereldbol."] },

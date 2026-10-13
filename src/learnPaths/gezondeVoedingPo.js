@@ -75,9 +75,9 @@ const steps = [
       },
       {
         q: "Waar zitten veel **vezels** in?",
-        options: ["Volkorenbrood en groente", "Kaas en eieren", "Vlees en vis", "Melk en yoghurt"],
+        options: ["Volkoren en groente", "Kaas en eieren", "Kipfilet en vis", "Melk en yoghurt"],
         answer: 0,
-        wrongHints: [null, "Kaas en eieren geven vooral eiwit. Vezels komen uit planten.", "Vlees en vis komen van dieren — daar zitten geen vezels in.", "Melk en yoghurt geven vooral calcium. Waar zitten de 'draadjes' van planten in?"],
+        wrongHints: [null, "Kaas en eieren geven vooral eiwit. Vezels komen uit planten.", "Kip en vis komen van dieren — daar zitten geen vezels in.", "Melk en yoghurt geven vooral calcium. Waar zitten de 'draadjes' van planten in?"],
       },
       {
         q: "Welke vitamine maakt je lichaam vooral met hulp van de **zon**?",
@@ -198,7 +198,7 @@ const steps = [
       },
       {
         q: "Hoeveel **alcohol** mag een kind van 12 drinken?",
-        options: ["Niets", "1 glas per week", "Alleen op feestjes", "Alleen bier"],
+        options: ["Helemaal niets", "1 glas per week", "Alleen op feestjes", "Alleen bier"],
         answer: 0,
         wrongHints: [null, "Ook één glas is schadelijk voor hersenen die nog groeien.", "Ook op een feestje geldt dezelfde wet.", "Vroeger mocht bier vanaf 16. Nu is de grens hoger, voor alle soorten alcohol."],
       },
@@ -339,7 +339,7 @@ const steps = [
       { q: "Wat is **gezond ontbijt**?", options: ["Volkoren + fruit + zuivel", "Witbrood + chocopasta + sap", "Cornflakes + suiker + chocomelk", "Croissant + jam + limonade"], answer: 0, wrongHints: [null, "Witbrood en chocopasta geven snel suiker en weinig vezels.", "Suiker en chocomelk geven een korte energiepiek, en daarna een dip.", "Een croissant is vooral vet en wit meel, en jam is vooral suiker."] },
       { q: "Wat doet **water drinken**?", options: ["Vult je vocht aan + lest dorst", "Geeft je energie + vitamines", "Maakt je botten sterk + groot", "Verbrandt vet + maakt je slank"], answer: 0, wrongHints: [null, "Water heeft geen calorieën en geeft dus geen energie.", "Sterke botten krijg je vooral van calcium, uit melk en kaas.", "Water verbrandt geen vet."] },
       { q: "Wat is **vezel**?", options: ["Onverteerbaar plantendeel", "Zoete stof uit snoep", "Vettige stof uit boter", "Bouwstof uit vlees en eieren"], answer: 0, wrongHints: [null, "Dat is suiker.", "Dat is vet.", "Dat is eiwit."] },
-      { q: "Welke voeding heeft veel **vezels**?", options: ["Volkorenbrood + groente","Witbrood + kaas","Melk + yoghurt","Vis + eieren"], answer: 0, wrongHints: [null, "Bij witbrood is de vezelrijke schil van het graan eraf. En kaas heeft geen vezels.", "Melk en yoghurt komen van de koe — daar zitten geen vezels in.", "Vis en eieren komen van dieren. Vezels zitten in planten."] },
+      { q: "Welke voeding heeft veel **vezels**?", options: ["Volkoren + groente","Witbrood + kaas","Melk + yoghurt","Vis + gekookt ei"], answer: 0, wrongHints: [null, "Bij witbrood is de vezelrijke schil van het graan eraf. En kaas heeft geen vezels.", "Melk en yoghurt komen van de koe — daar zitten geen vezels in.", "Vis en ei komen van dieren. Vezels zitten in planten."] },
       { q: "Hoeveel moet een kind per dag minstens **bewegen**?", options: ["~1 uur","~10 minuten","~30 minuten","~4 uur"], answer: 0, wrongHints: [null, "Tien minuten is maar heel kort. Kinderen hebben veel meer beweging nodig.", "Een halfuur is het advies voor volwassenen. Kinderen hebben meer nodig.", "Vier uur is veel meer dan de norm vraagt."] },
       { q: "Wat klopt meestal over **bewerkt voedsel**?", options: ["Meer toegevoegd zout/suiker", "Gezonder dan vers eten", "Minder zout dan zelf gekookt", "Rijker aan vitamines en vezels"], answer: 0, wrongHints: [null, "Is een kant-en-klaarmaaltijd gezonder dan zelf koken met verse groente?", "Juist in kant-en-klaar eten zit vaak veel zout.", "Bij bewerken gaan juist vaak vitamines verloren."] },
     ],

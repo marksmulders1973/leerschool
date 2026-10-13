@@ -31,7 +31,7 @@ const steps = [
         q: "Wat is ½ als kommagetal?",
         options: ["0,5", "0,2", "1,2", "0,12"],
         answer: 0,
-        wrongHints: [null, "Dat is 1/5, niet de helft.", "Dat is meer dan 1 — een halve is minder.", "Dat is veel te klein."],
+        wrongHints: [null, "Dat is 1/5, niet de helft.", "Dat is meer dan 1 — een halve is minder.", "Je zette 1 en 2 achter de komma. Hoeveel is 1 ÷ 2?"],
         uitlegPad: {
           stappen: [
             { titel: "Een breuk is een deling", tekst: "Een breuk zoals ½ betekent: de teller (1) gedeeld door de noemer (2). Reken dus 1 ÷ 2." },
@@ -73,7 +73,7 @@ const steps = [
         q: "Wat is ¾ als kommagetal?",
         options: ["0,75", "0,34", "0,43", "0,7"],
         answer: 0,
-        wrongHints: [null, "Reken: 3 ÷ 4.", "Dat zijn niet de juiste cijfers.", "Bijna — maar ¾ is iets meer dan 0,7."],
+        wrongHints: [null, "Je zette 3 en 4 achter de komma. Hoeveel is 3 ÷ 4?", "Je draaide 4 en 3 om. ¾ is bijna een heel: klopt 0,43 dan?", "Bijna — maar ¾ is iets meer dan 0,7."],
         uitlegPad: {
           stappen: [
             { titel: "Teller ÷ noemer", tekst: "¾ betekent 3 gedeeld door 4. Reken de deling 3 ÷ 4 uit." },
@@ -360,7 +360,7 @@ const steps = [
         q: "Wat is 0,5 in procent?",
         options: ["50%", "5%", "0,5%", "500%"],
         answer: 0,
-        wrongHints: [null, "Te weinig — schuif de komma 2 plaatsen, niet 1.", "Veel te klein.", "Dat is meer dan het geheel."],
+        wrongHints: [null, "Te weinig — schuif de komma 2 plaatsen, niet 1.", "Heb je de komma wel verschoven? Hoeveel plaatsen moet hij naar rechts?", "Dat is meer dan het geheel."],
         uitlegPad: {
           stappen: [
             { titel: "Kommagetal naar procent", tekst: "Om van een kommagetal naar procent te gaan, vermenigvuldig je met 100." },
@@ -402,7 +402,7 @@ const steps = [
         q: "Wat is 0,1 in procent?",
         options: ["10%", "1%", "0,1%", "100%"],
         answer: 0,
-        wrongHints: [null, "Te weinig — schuif 2 plaatsen.", "Veel te klein.", "Dat is het hele getal (1,0)."],
+        wrongHints: [null, "Te weinig — schuif 2 plaatsen.", "Heb je de komma wel verschoven? Hoeveel plaatsen moet hij naar rechts?", "Dat is het hele getal (1,0)."],
         uitlegPad: {
           stappen: [
             { titel: "× 100", tekst: "Om van kommagetal naar procent te gaan vermenigvuldig je met 100 — de komma schuift twee plaatsen naar rechts." },
@@ -444,7 +444,7 @@ const steps = [
         q: "Wat is 0,07 in procent?",
         options: ["7%", "70%", "0,7%", "700%"],
         answer: 0,
-        wrongHints: [null, "Schuif de komma twee plaatsen naar rechts en let goed op de nul.", "Veel te klein.", "Dat is meer dan het geheel."],
+        wrongHints: [null, "Schuif de komma twee plaatsen naar rechts en let goed op de nul.", "Je schoof de komma maar 1 plaats. Hoeveel plaatsen moet het zijn?", "Dat is meer dan het geheel."],
         uitlegPad: {
           stappen: [
             { titel: "× 100", tekst: "Vermenigvuldig 0,07 met 100 — de komma schuift twee plaatsen naar rechts." },
@@ -639,7 +639,7 @@ const steps = [
         q: "Wat is ¼ in procent?",
         options: ["25%", "14%", "40%", "4%"],
         answer: 0,
-        wrongHints: [null, "Dat zijn de cijfers door elkaar.", "Dat is 2/5.", "Veel te klein."],
+        wrongHints: [null, "Je zette de cijfers 1 en 4 naast elkaar. Hoeveel is ¼ van 100?", "Dat is 2/5.", "Heb je alleen de 4 overgenomen? Hoeveel is ¼ van 100?"],
         uitlegPad: {
           stappen: [
             { titel: "Ga via het delen van honderd", tekst: "Een breuk met teller 1 zet je om naar procent door 100 te delen door de noemer." },
@@ -660,7 +660,7 @@ const steps = [
         q: "Wat is 50% als breuk?",
         options: ["½", "1/5", "5", "1/50"],
         answer: 0,
-        wrongHints: [null, "Dat is 20%.", "Dat is een heel getal.", "Veel te klein."],
+        wrongHints: [null, "Dat is 20%.", "Dat is een heel getal.", "1/50 is maar 2%. Welk deel van 100 is 50?"],
         uitlegPad: {
           stappen: [
             { titel: "50 van de 100", tekst: "50% betekent 50 van de 100 delen. Schrijf dat eerst als breuk: 50/100." },
@@ -681,7 +681,7 @@ const steps = [
         q: "Wat is ¾ in procent?",
         options: ["75%", "34%", "43%", "7%"],
         answer: 0,
-        wrongHints: [null, "Dat zijn de cijfers door elkaar.", "Niet de juiste cijfers.", "Veel te klein."],
+        wrongHints: [null, "Je zette de cijfers 3 en 4 naast elkaar. Hoeveel is ¾ van 100?", "Je draaide 4 en 3 om. ¾ is bijna alles: klopt 43% dan?", "Heb je alleen de 7 van 0,75 genomen? Schuif de komma 2 plaatsen."],
         uitlegPad: {
           stappen: [
             { titel: "Bouw op uit kwarten", tekst: "Je weet al hoeveel procent één kwart is. ¾ bestaat uit drie van die kwarten." },
@@ -702,7 +702,7 @@ const steps = [
         q: "Wat is 1/5 in procent?",
         options: ["20%", "15%", "5%", "50%"],
         answer: 0,
-        wrongHints: [null, "Dat zijn de cijfers door elkaar.", "Te klein.", "Dat is ½."],
+        wrongHints: [null, "Je zette de cijfers 1 en 5 naast elkaar. Hoeveel is 100 ÷ 5?", "Heb je alleen de 5 overgenomen? Hoeveel is 100 ÷ 5?", "Dat is ½."],
         uitlegPad: {
           stappen: [
             { titel: "Deel 100 door de noemer", tekst: "Om een eenheidsbreuk (teller 1) om te zetten naar procent, deel je 100 door de noemer." },
@@ -766,7 +766,7 @@ const steps = [
         q: "Wat is 9/10 in procent?",
         options: ["90%", "9%", "19%", "0,9%"],
         answer: 0,
-        wrongHints: [null, "Dat is 9 van de 100, niet 9 van de 10.", null, "Veel te klein."],
+        wrongHints: [null, "Dat is 9 van de 100, niet 9 van de 10.", null, "0,9% is nog geen 1 van de 100. Hoeveel van de 100 is 9/10?"],
         uitlegPad: {
           stappen: [
             {
@@ -909,7 +909,7 @@ const steps = [
         q: "Wat is groter: ½ of 0,4?",
         options: ["½", "0,4", "ze zijn gelijk", "dat kun je niet vergelijken"],
         answer: 0,
-        wrongHints: [null, "Reken ½ om naar een kommagetal en vergelijk.", "0,5 en 0,4 zijn niet gelijk.", "Het kan juist wél: maak ze dezelfde soort."],
+        wrongHints: [null, "Reken ½ om naar een kommagetal en vergelijk.", "Reken ½ om naar een kommagetal. Is dat echt 0,4?", "Het kan juist wél: maak ze dezelfde soort."],
         uitlegPad: {
           stappen: [
             { titel: "Maak ze dezelfde soort getal", tekst: "Om deze twee getallen te vergelijken, schrijf je de breuk uit de vraag om naar een kommagetal — dat ken je vast uit het tabelletje." },
