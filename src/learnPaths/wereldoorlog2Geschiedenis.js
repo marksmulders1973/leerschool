@@ -184,9 +184,9 @@ const steps = [
     checks: [
       {
         q: "Wat eiste het **Verdrag van Versailles** van Duitsland?",
-        options: ["Herstelbetalingen doen", "Sovjet-Unie binnenvallen", "Een muur bouwen door Berlijn", "Atoomwapens ontwikkelen"],
+        options: ["Herstelbetalingen doen", "Het leger uitbreiden", "Elzas-Lotharingen krijgen", "Nieuwe koloniën krijgen"],
         answer: 0,
-        wrongHints: [null, "Andersom — pas in 1941 viel Duitsland de Sovjet-Unie binnen.", "De muur werd pas in 1961 gebouwd — veel later.", "Atoomwapens kwamen pas later (door de VS, 1945)."],
+        wrongHints: [null, "Het Duitse leger werd juist beperkt tot 100.000 man.", "Elzas-Lotharingen ging juist terug naar Frankrijk.", "Duitsland raakte juist al zijn koloniën kwijt."],
         uitlegPad: {
           stappen: [{ titel: "Versailles — 3 zware eisen", tekst: "Verdrag van Versailles (28 juni 1919) was de vredesregeling NA WO1. Duitsland MOEST: (1) schuld bekennen voor de hele oorlog, (2) enorme herstelbetalingen doen aan Frankrijk + België, (3) leger inkrimpen tot 100.000 man, geen tanks/luchtmacht. Plus gebied inleveren." }],
           woorden: [{ woord: "Verdrag van Versailles", uitleg: "Vredesverdrag 1919 dat WO1 officieel beëindigde. Bekend om harde eisen voor Duitsland." }, { woord: "herstelbetalingen", uitleg: "Geld dat verliezer aan winnaars moet betalen voor oorlogsschade. Voor Duitsland: 132 miljard goudmark." }],
@@ -198,9 +198,9 @@ const steps = [
       },
       {
         q: "Hoe ervoeren veel Duitsers het Verdrag van Versailles?",
-        options: ["Als een vernedering", "Als een eerlijke oplossing", "Als bevrijding", "Als overwinning"],
+        options: ["Als een vernedering", "Als een eerlijke oplossing", "Als een milde straf", "Als een opluchting"],
         answer: 0,
-        wrongHints: [null, "De voorwaarden waren bewust hard — niet bedoeld als compromis.", "Duitsland verloor juist gebied en moest betalen.", "Duitsland had de oorlog verloren, niet gewonnen."],
+        wrongHints: [null, "De voorwaarden waren bewust hard — niet bedoeld als compromis.", "De voorwaarden waren juist zwaar: gebied kwijt, een klein leger en veel betalen.", "De oorlog was voorbij, maar het verdrag werd Duitsland zonder onderhandelen opgelegd. Hoe voelt dat?"],
         uitlegPad: {
           stappen: [{ titel: "'Diktat' — gedwongen verdrag", tekst: "Duitsers noemden Versailles een 'Diktat' (= gedicteerde tekst). Ze mochten niet meeonderhandelen, alleen tekenen. Schuld-clausule was vooral pijnlijk: alléén Duitsland kreeg de schuld voor heel WO1. Gevoel van vernedering + onrecht bleef 20 jaar broeden." }],
           woorden: [{ woord: "vernedering", uitleg: "Gevoel publiek klein gemaakt te worden. Hier: gedwongen tekenen + alleen schuld krijgen." }, { woord: "Diktat", uitleg: "Duitse term voor Versailles-verdrag — wordt opgelegd, niet onderhandeld." }, { woord: "Dolkstootlegende", uitleg: "Mythe dat Duits leger niet verloren had op slagveld, maar door verraad thuis. Voer voor extreemrechts." }],
@@ -221,7 +221,7 @@ const steps = [
         q: "Wat gebeurde er in **oktober 1929**?",
         options: ["De beurs in New York crashte", "Hitler werd leider van Duitsland", "De Tweede Wereldoorlog begon", "Nederland werd door Duitsland bezet"],
         answer: 0,
-        wrongHints: [null, "Hitler werd later kanselier (1933).", "WO2 begon in 1939.", "Bezetting NL was 1940."],
+        wrongHints: [null, "Hitler kwam pas een paar jaar later aan de macht.", "In 1929 was het nog vrede in Europa. Wat ging er mis in Amerika?", "Nederland was in 1929 nog vrij; de bezetting kwam veel later."],
         uitlegPad: {
           stappen: [{ titel: "Black Thursday — 24 oktober 1929", tekst: "Beurs van New York (Wall Street) crashte op 24 oktober 1929 (Zwarte Donderdag). Aandelen kelderden in waarde. Banken gingen failliet. Bedrijven sloten. Wereldwijde economische crisis volgde — bekend als 'Grote Depressie' (1929-1939)." }],
           woorden: [{ woord: "beurs", uitleg: "Plek waar aandelen verhandeld worden. Aandelenprijzen weerspiegelen verwachte waarde bedrijf." }, { woord: "Grote Depressie", uitleg: "Wereldwijde economische crisis 1929-1939. Veel werkloosheid, armoede, deflatie." }, { woord: "Wall Street", uitleg: "Straat in New York met grootste effectenbeurs ter wereld." }],
@@ -233,9 +233,9 @@ const steps = [
       },
       {
         q: "Waarom groeide de NSDAP zo snel tussen 1928 en 1932?",
-        options: ["Werkloosheid en armoede dreven kiezers naar extremen", "De regering verbood alle andere partijen", "Duitsland werd binnengevallen door Frankrijk", "De Duitse keizer steunde Hitler openlijk"],
+        options: ["Werkloosheid en armoede door de crisis", "Hitlers staatsgreep van 1923 was gelukt", "Duitsland werd binnengevallen door Frankrijk", "De Weimar-regering steunde de NSDAP"],
         answer: 0,
-        wrongHints: [null, "In 1932 waren er nog gewoon vrije verkiezingen.", "Frankrijk viel Duitsland niet binnen in deze periode.", "Duitsland was sinds 1918 een republiek — de keizer was gevlucht."],
+        wrongHints: [null, "De staatsgreep van 1923 mislukte juist; daarna koos Hitler voor verkiezingen. Waarom stemden mensen op hem?", "Frankrijk viel Duitsland niet binnen in deze periode.", "De regering stond juist tegenover de nazi's. Waarom stemden gewone Duitsers dan op hen?"],
         uitlegPad: {
           stappen: [{ titel: "Crisis → extreme keuzes", tekst: "1928: NSDAP slechts 2,6% van stemmen (kleine partij). 1932: 37% (grootste partij). De crisis maakte mensen wanhopig — 6 miljoen werklozen, honger, verloren spaargeld. Hitler beloofde werk, trots, sterke leider. Wanhopige mensen stemden voor extremen." }],
           woorden: [{ woord: "NSDAP", uitleg: "Nationaal-Socialistische Duitse Arbeiderspartij. Hitlers partij. Combineerde extreem-nationalisme + antisemitisme + sociaal beloven." }, { woord: "extreme oplossingen", uitleg: "Drastische beloftes (sterke leider, 1 partij, vijandbeeld) die mensen aantrekken in crisistijd." }],
@@ -307,7 +307,7 @@ const steps = [
         q: "Welk land viel Duitsland op **1 september 1939** binnen?",
         options: ["Polen", "Frankrijk", "Nederland", "Sovjet-Unie"],
         answer: 0,
-        wrongHints: [null, "Frankrijk werd pas in mei 1940 aangevallen.", "NL werd 8 maanden later bezet (mei 1940).", "USSR pas in juni 1941 (Operatie Barbarossa)."],
+        wrongHints: [null, "Frankrijk werd pas in mei 1940 aangevallen.", "Nederland werd pas later aangevallen, in het voorjaar daarna.", "USSR pas in juni 1941 (Operatie Barbarossa)."],
         uitlegPad: {
           stappen: [{ titel: "1 september 1939 — WO2 begint", tekst: "Bij dageraad 1 september 1939 vielen Duitse troepen Polen binnen — onverwacht, zonder oorlogsverklaring. 2 dagen later verklaarden Engeland + Frankrijk Duitsland de oorlog. Officieel BEGIN van WO2. Vlak ervoor (23 augustus) sloot Hitler heimelijk pact met Sovjet-Unie om Polen samen te verdelen." }],
           woorden: [{ woord: "Molotov-Ribbentrop-pact", uitleg: "Geheim niet-aanvalsverdrag Duitsland + USSR (augustus 1939). Verdeelden Polen in geheime bijlage." }, { woord: "casus belli", uitleg: "Reden om oorlog te verklaren. Hier: Engeland/Frankrijk hadden Polen garanties gegeven." }],
@@ -319,9 +319,9 @@ const steps = [
       },
       {
         q: "Wat is **Blitzkrieg**?",
-        options: ["Een snelle aanvalsoorlog", "Een soort schuilkelder", "Het Duitse leger op de fiets", "Een vredesverdrag"],
+        options: ["Een snelle aanvalsoorlog", "Een Duitse luchtaanval op Londen", "Een oorlog vanuit loopgraven", "Een duikbotenoorlog op zee"],
         answer: 0,
-        wrongHints: [null, "'Blitz' = bliksem (snelheid), niet schuilen.", "Tanks en motorvoertuigen, niet fietsen.", "Het tegendeel — geen vrede."],
+        wrongHints: [null, "De bombardementen op Londen heetten 'the Blitz', naar dit woord. Maar wat betekent Blitzkrieg als manier van oorlog voeren?", "Loopgraven horen bij WO1: langzaam en vastgelopen. 'Blitz' betekent bliksem.", "Onderzeeërs waren een ander wapen. Wat betekent 'Blitz'?"],
         uitlegPad: {
           stappen: [{ titel: "Bliksemoorlog — nieuwe tactiek", tekst: "Blitzkrieg = letterlijk 'bliksemoorlog'. Duitse uitvinding voor WO2. Combineerde 3 zaken: (1) tanks reden snel door — geen loopgravenoorlog meer. (2) Luchtmacht (Luftwaffe) bombardeerde steden + wegen VOOR tanks aankwamen. (3) Razendsnel — vijand kon zich niet verdedigen." }],
           woorden: [{ woord: "Blitzkrieg", uitleg: "Duits: 'bliksem-oorlog'. Snelle gecoördineerde aanval met tanks + luchtmacht." }, { woord: "panzer", uitleg: "Duitse term voor tank/pantservoertuig." }, { woord: "Luftwaffe", uitleg: "Duitse luchtmacht. Belangrijk wapen in Blitzkrieg." }],
@@ -340,9 +340,9 @@ const steps = [
     checks: [
       {
         q: "Wanneer werd **Rotterdam** gebombardeerd?",
-        options: ["14 mei 1940", "1 september 1939", "5 mei 1945", "6 juni 1944"],
+        options: ["14 mei 1940", "7 september 1940", "10 mei 1940", "6 juni 1944"],
         answer: 0,
-        wrongHints: [null, "Dat is het begin van WO2 in Polen — nog geen NL.", "Dat is juist de bevrijding van NL.", "Dat is D-Day in Normandië — niet NL."],
+        wrongHints: [null, "Op 7 september 1940 begon de Duitse bombardementscampagne op Londen.", "Op 10 mei 1940 viel Duitsland Nederland binnen. Gebeurde het bombardement meteen op de eerste dag?", "Op 6 juni 1944 landden de geallieerden in Normandië."],
         uitlegPad: {
           stappen: [{ titel: "14 mei 1940 — centrum platgebombardeerd", tekst: "14 mei 1940, 13:30: Duitse Heinkel-bommenwerpers wierpen ~100 ton bommen op Rotterdam-centrum. Doel: Nederland forceren tot capitulatie. Resultaat: centrum brandde volledig af, ~900 doden, ~25.000 huizen verwoest. Hitler dreigde: óf NL geeft op, óf Utrecht is volgende. 15 mei: NL capituleerde." }],
           woorden: [{ woord: "bombardement", uitleg: "Aanval uit de lucht met bommen. WO2 standaard-tactiek tegen steden." }, { woord: "capitulatie", uitleg: "Overgave — leger geeft zich officieel over aan vijand." }],
@@ -354,9 +354,9 @@ const steps = [
       },
       {
         q: "Wie sprak via **Radio Oranje** vanuit Londen?",
-        options: ["Koningin Wilhelmina", "Willem van Oranje", "Anne Frank", "Adolf Hitler"],
+        options: ["Koningin Wilhelmina", "Prinses Juliana", "Anne Frank", "Winston Churchill"],
         answer: 0,
-        wrongHints: [null, "Hij leefde in de 16e eeuw — Tachtigjarige Oorlog.", "Anne Frank was een joods meisje in onderduik, geen omroepster.", "Hitler was juist de tegenstander."],
+        wrongHints: [null, "Juliana zat met haar dochters veilig in Canada.", "Anne Frank luisterde misschien, maar zat ondergedoken in Amsterdam.", "Churchill was de Britse premier en sprak via de BBC zijn eigen volk toe, in het Engels."],
         uitlegPad: {
           stappen: [{ titel: "Radio Oranje — stem vanuit Londen", tekst: "Koningin Wilhelmina vluchtte 13 mei 1940 met regering naar Londen (Engeland was nog vrij). Vanaf juli 1940 sprak ze via 'Radio Oranje' van de BBC tot bezet Nederland. Toespraken werden in het geheim beluisterd (Duitsers verboden het, namen radio's in beslag). Belangrijke morele steun." }],
           woorden: [{ woord: "Radio Oranje", uitleg: "BBC-zender in Londen die Nederlandstalige uitzendingen verzorgde voor bezet NL." }, { woord: "Koningin Wilhelmina", uitleg: "Koningin der Nederlanden 1898-1948. Werd symbool van verzet vanuit ballingschap." }, { woord: "regering in ballingschap", uitleg: "NL-regering werkte vanuit Londen 1940-1945. Hielden NL officieel als zelfstandig land in stand." }],
@@ -370,7 +370,7 @@ const steps = [
         q: "Hoeveel dagen duurde het gevecht in mei 1940 in Nederland?",
         options: ["5 dagen", "5 weken", "5 maanden", "5 jaar"],
         answer: 0,
-        wrongHints: [null, "Te lang — capitulatie was al op 15 mei.", "Veel te lang.", "Dat is de hele bezettingsduur, niet het gevecht zelf."],
+        wrongHints: [null, "Zo lang hield het Nederlandse leger het niet vol. Wat gebeurde er na het bombardement op Rotterdam?", "Het leger gaf zich al in mei over. Hoe lang had het toen gevochten?", "Dat is de hele bezettingsduur, niet het gevecht zelf."],
         uitlegPad: {
           stappen: [{ titel: "10-15 mei 1940 — vijf dagen", tekst: "10 mei 1940: Duitsers vielen onverwacht NL binnen, samen met BE/LU/FR. NL had klein, slecht uitgerust leger (NL was 'neutraal' sinds 1830). Toch fel verzet (Grebbeberg). 14 mei: Rotterdam gebombardeerd + dreiging Utrecht. 15 mei: NL capituleerde. Totaal: 5 dagen. Vergelijk: Polen 5 weken, Frankrijk 6 weken, België 18 dagen." }],
           woorden: [{ woord: "Grebbeberg", uitleg: "Hoogte bij Wageningen waar NL leger fel verzet bood 11-13 mei 1940. ~400 NL-doden." }, { woord: "neutraliteit", uitleg: "Niet kiezen tussen oorlogvoerende partijen. NL deed dit ook in WO1 (lukte toen). In WO2 lukte het niet." }],
@@ -391,9 +391,9 @@ const steps = [
     checks: [
       {
         q: "Wat was de **NSB**?",
-        options: ["Een pro-Duitse partij", "Een Nederlands verzetsblad", "Naam van een concentratiekamp", "Een Engels leger"],
+        options: ["Een pro-Duitse partij", "Een Nederlands verzetsblad", "Naam van een concentratiekamp", "Een Nederlandse vakbond"],
         answer: 0,
-        wrongHints: [null, "Verzetsbladen waren *Het Parool*, *Trouw*, *Vrij Nederland*.", "Nederlandse kampen heetten Westerbork, Vught.", "Een leger was het niet — let op de 'B' van Beweging."],
+        wrongHints: [null, "Verzetsbladen waren *Het Parool*, *Trouw*, *Vrij Nederland*.", "Nederlandse kampen heetten Westerbork, Vught.", "Een vakbond komt op voor arbeiders. De NSB was een politieke beweging, maar aan welke kant stond ze?"],
         uitlegPad: {
           stappen: [{ titel: "NSB — Nederlandse nazi-partij", tekst: "NSB = Nationaal-Socialistische Beweging. Opgericht 1931 door Anton Mussert. Geïnspireerd op Duitse NSDAP (Hitler). Voor de bezetting: kleine partij (~50.000 leden). Tijdens bezetting: groeide tot ~100.000 leden, werd ENIGE toegestane partij in bezet NL. Werkten openlijk samen met Duitsers." }],
           woorden: [{ woord: "NSB", uitleg: "Nationaal-Socialistische Beweging. NL nazi-partij 1931-1945. Leider: Anton Mussert." }, { woord: "Mussert", uitleg: "Anton Mussert (1894-1946). NSB-leider. Na oorlog berecht en geëxecuteerd 1946." }, { woord: "collaborateur", uitleg: "Iemand die met bezetter samenwerkte. NSB-leden golden als collaborateurs." }],
@@ -405,9 +405,9 @@ const steps = [
       },
       {
         q: "Wat was bijzonder aan de **Februaristaking** (1941)?",
-        options: ["Het was een staking tegen de jodenvervolging", "Het was de eerste vakbondsstaking in NL", "Het lukte de Duitsers volledig te verdrijven", "Het was een staking in Duitsland zelf"],
+        options: ["Het was een staking tegen de jodenvervolging", "Het was de eerste vakbondsstaking in NL", "Het was een staking tegen de Arbeitseinsatz", "Het was een staking in Duitsland zelf"],
         answer: 0,
-        wrongHints: [null, "Vakbondsstakingen waren er al lang vóór WO2.", "Helaas niet — Duitsers bleven nog 4 jaar.", "Ging om Amsterdam, niet Duitsland."],
+        wrongHints: [null, "Vakbondsstakingen waren er al lang vóór WO2.", "Tegen het wegvoeren van mannen naar Duitsland werd later gestaakt, in 1943. Waartegen protesteerden de Amsterdammers in februari 1941?", "Ging om Amsterdam, niet Duitsland."],
         uitlegPad: {
           stappen: [{ titel: "25-26 februari 1941", tekst: "Na razzia's tegen 425 joodse mannen in Amsterdam (22 februari, opgepakt + naar Mauthausen) riepen NL-communisten op tot massastaking. 25 februari: tram-personeel staakte, havenarbeiders sloten aan, fabrieken legden werk neer. Duizenden Amsterdammers de straat op uit solidariteit met joden. UNIEK in heel bezet Europa." }],
           woorden: [{ woord: "Februaristaking", uitleg: "Massastaking Amsterdam 25-26 februari 1941 tegen jodenvervolging. Hard neergeslagen." }, { woord: "razzia", uitleg: "Plotselinge politie-operatie om groep mensen op te pakken. Duitsers gebruikten dit voor joden, verzet, werklozen." }, { woord: "solidariteit", uitleg: "Gevoel/actie van saamhorigheid met groep in nood. Hier: niet-joden voor joden." }],
@@ -444,7 +444,7 @@ const steps = [
         q: "Wat was **D-Day** (6 juni 1944)?",
         options: ["Geallieerde landing in Normandië", "Het einde van de oorlog in Europa", "Het bombardement op Rotterdam", "Duitse aanval op de Sovjet-Unie"],
         answer: 0,
-        wrongHints: [null, "Einde was 5/8 mei 1945 — bijna een jaar later.", "Rotterdam-bombardement was 14 mei 1940.", "Die aanval (Operatie Barbarossa) begon op 22 juni 1941."],
+        wrongHints: [null, "Het einde van de oorlog in Europa kwam bijna een jaar later.", "Rotterdam werd al vier jaar eerder gebombardeerd.", "Die aanval (Operatie Barbarossa) begon op 22 juni 1941."],
         uitlegPad: {
           stappen: [{ titel: "6 juni 1944 — grootste landing ooit", tekst: "D-Day = legerterm voor 'de dag X' van een operatie. 6 juni 1944: ~156.000 geallieerde soldaten (VS, UK, Canada) landden op 5 stranden in Normandië, Frankrijk. Operatienaam: Overlord. Doel: tweede front openen tegen Duitsland naast oostelijke USSR-front. Gelukt — vanaf hier rolden geallieerden door Frankrijk + België → Duitsland." }],
           woorden: [{ woord: "D-Day", uitleg: "6 juni 1944. Geallieerde landing Normandië. Begin einde Duitse bezetting West-Europa." }, { woord: "Operation Overlord", uitleg: "Codenaam voor totale geallieerde operatie waar D-Day onderdeel van was." }, { woord: "tweede front", uitleg: "Nieuw oorlogsfront naast bestaande. Sovjet-Unie smeekte hierom omdat zij alléén tegen Duitsers vochten in oosten." }],
@@ -456,9 +456,9 @@ const steps = [
       },
       {
         q: "Waar ging de slag bij **Stalingrad** over?",
-        options: ["Een Duitse aanval in de Sovjet-Unie", "Een Duitse luchtaanval op Engeland", "Een poging Nederland te bevrijden", "Een Amerikaanse atoombomtest"],
+        options: ["Een Duitse aanval in de Sovjet-Unie", "Een Duitse luchtaanval op Engeland", "Een Japanse aanval in China", "Een geallieerde landing in Italië"],
         answer: 0,
-        wrongHints: [null, "Stalingrad ligt in Rusland, ver van Engeland.", "Bevrijding NL was D-Day en Market Garden.", "Atoombommen kwamen pas in 1945, in Japan."],
+        wrongHints: [null, "Stalingrad ligt in Rusland, ver van Engeland.", "Stalingrad ligt aan de Wolga in Rusland, niet in China.", "De landing in Italië (1943) was elders. Wie vochten er aan het oostfront?"],
         uitlegPad: {
           stappen: [{ titel: "Augustus 1942 - februari 1943", tekst: "Stalingrad (Russische industriestad aan Wolga, nu Volgograd). Duitsers wilden olie in Kaukasus, moesten Stalingrad nemen onderweg. Half jaar bloedig stadgevecht. Duitsers omsingeld door Sovjet-tegenaanval (november 1942). Brandstof + voedsel op, vechten in -30°C. 2 februari 1943: 90.000 Duitsers gaven zich over." }],
           woorden: [{ woord: "Stalingrad", uitleg: "Russische stad. Slag aug 1942 - feb 1943. ~2 miljoen slachtoffers totaal. Een van de bloedigste slagen ooit." }, { woord: "Operatie Barbarossa", uitleg: "Duitse inval Sovjet-Unie juni 1941. Brak Molotov-Ribbentrop-pact. Leidde tot oostfront." }, { woord: "oostfront", uitleg: "Oorlogsfront Duitsland vs Sovjet-Unie 1941-1945. ~80% Duitse verliezen WO2 op dit front." }],
@@ -493,7 +493,7 @@ const steps = [
         q: "Wanneer werd **Nederland bevrijd**?",
         options: ["5 mei 1945", "8 mei 1945", "15 augustus 1945", "6 juni 1944"],
         answer: 0,
-        wrongHints: [null, "Dat is officiële Duitse capitulatie in heel Europa, 3 dagen na NL.", "Dat is einde oorlog in Azië (Japan).", "Dat is D-Day in Normandië."],
+        wrongHints: [null, "Dat is officiële Duitse capitulatie in heel Europa, 3 dagen na NL.", "Op 15 augustus 1945 was Nederland al maanden vrij.", "Dat is D-Day in Normandië."],
         uitlegPad: {
           stappen: [{ titel: "5 mei 1945 — Wageningen", tekst: "5 mei 1945 in Hotel De Wereld in Wageningen: Duitse generaal Blaskowitz tekende capitulatie tegenover Canadese generaal Foulkes. Vanaf dat moment was Nederland VRIJ. Bevrijding gebeurde geleidelijk: zuid-NL al september 1944 (Market Garden), noord-NL pas mei 1945 na Hongerwinter. Wereldoorlog ging in Azië nog tot 15 augustus 1945." }],
           woorden: [{ woord: "Bevrijdingsdag", uitleg: "5 mei — Nederlandse nationale feestdag van de vrijheid. Elke 5 jaar nationale viering, anders provinciaal/regionaal." }, { woord: "Hotel De Wereld", uitleg: "Hotel in Wageningen waar Duitse capitulatie in NL werd getekend." }, { woord: "Canadese bevrijders", uitleg: "Vooral Canadese troepen bevrijdden noord-NL. Daarom 'Canada' nog steeds bijzonder in NL." }],
@@ -556,9 +556,9 @@ const steps = [
       },
       {
         q: "Wat was **Westerbork**?",
-        options: ["Een doorgangskamp", "Een verzetsorganisatie", "Een Duits eindkamp", "Een Engels vliegveld"],
+        options: ["Een doorgangskamp", "Een verzetsorganisatie", "Een Duits eindkamp", "Een onderduikadres in Drenthe"],
         answer: 0,
-        wrongHints: [null, "Westerbork was een gevangenkamp, geen verzetsgroep.", "Bijna — maar vermoord werd vooral in kampen in bezet Polen. Welke rol had dit kamp in Drenthe dan?", "Westerbork lag in Drenthe (NL), geen Engels vliegveld."],
+        wrongHints: [null, "Westerbork was een gevangenkamp, geen verzetsgroep.", "Bijna — maar vermoord werd vooral in kampen in bezet Polen. Welke rol had dit kamp in Drenthe dan?", "Onderduikers zaten verstopt bij gewone mensen. Westerbork was juist een kamp van de bezetter."],
         uitlegPad: {
           stappen: [{ titel: "Westerbork — laatste halte NL-joden", tekst: "Kamp Westerbork lag in Drenthe (NL). Oorspronkelijk gebouwd 1939 voor Duits-joodse vluchtelingen. Vanaf juli 1942: Duitsers maakten het 'Polizeiliches Durchgangslager' = doorgangskamp. Elke dinsdag vertrok trein vol joden + Sinti naar Auschwitz of Sobibor. Totaal: ~107.000 NL-joden via Westerbork gedeporteerd, ~5.000 overleefden." }],
           woorden: [{ woord: "Westerbork", uitleg: "Doorgangskamp Drenthe 1942-1945. Anne Frank verbleef hier bijna 4 weken voordat ze naar Auschwitz ging." }, { woord: "doorgangskamp", uitleg: "Tijdelijk kamp voor transport naar elders. Niet zelf 'eindkamp' — moord vond elders plaats." }, { woord: "deportatie", uitleg: "Gedwongen wegvoeren van mensen, vaak per trein." }],
@@ -593,9 +593,9 @@ const steps = [
     checks: [
       {
         q: "Wat waren de **Neurenberg-processen**?",
-        options: ["Rechtszaken tegen top-nazi's na de oorlog", "De rassenwetten van Hitler", "Een Duits sportevenement", "De toespraken van Hitler op partijbijeenkomsten"],
+        options: ["Rechtszaken tegen top-nazi's na de oorlog", "De rassenwetten van Hitler", "De Duitse capitulatie in 1945", "De toespraken van Hitler op partijbijeenkomsten"],
         answer: 0,
-        wrongHints: [null, "Dat zijn de **Neurenberg-wetten** (1935), let op het verschil met de **Neurenberg-processen** (1945-46).", "Wel een sportevenement in Neurenberg geweest, maar daar gaat deze vraag niet over.", "De partijbijeenkomsten waren propaganda — geen rechtszaken."],
+        wrongHints: [null, "Dat zijn de **Neurenberg-wetten** (1935), let op het verschil met de **Neurenberg-processen** (1945-46).", "De capitulatie werd in Reims en Berlijn getekend. Wat gebeurde er daarna in Neurenberg?", "De partijbijeenkomsten waren propaganda — geen rechtszaken."],
         uitlegPad: {
           stappen: [{ titel: "1945-1946 — top-nazi's berecht", tekst: "Internationaal tribunaal in Neurenberg (Duitsland) berechtte 22 top-nazi's. Rechters: VS, UK, USSR, Frankrijk. Aanklachten: (1) misdaden tegen vrede (= oorlog beginnen), (2) oorlogsmisdaden, (3) MISDADEN TEGEN MENSELIJKHEID (= nieuw begrip!). Resultaat: 12 doodstraffen, 7 gevangenisstraffen, 3 vrijspraken." }],
           woorden: [{ woord: "Neurenberg-processen", uitleg: "Rechtszaken 1945-46 tegen top-nazi's. Eerste internationale strafrecht-tribunaal." }, { woord: "misdaden tegen menselijkheid", uitleg: "Nieuw begrip Neurenberg: stelselmatige wreedheid tegen burgers (genocide, marteling, slavernij). Basis modern internationaal strafrecht." }, { woord: "Internationaal Strafhof (ICC)", uitleg: "Den Haag, sinds 2002. Zet het Neurenberg-idee voort. Berecht hedendaagse oorlogsmisdadigers." }],
@@ -607,9 +607,9 @@ const steps = [
       },
       {
         q: "Wat is de **Koude Oorlog**?",
-        options: ["Spanning tussen de VS en de Sovjet-Unie", "Een oorlog op de Noordpool", "De oorlog van Napoleon tegen Rusland", "Een oorlog tussen Nederland en Duitsland"],
+        options: ["Spanning tussen de VS en de Sovjet-Unie", "Een oorlog tussen de VS en Japan", "De Duitse aanval op de Sovjet-Unie", "Een oorlog tussen Nederland en Duitsland"],
         answer: 0,
-        wrongHints: [null, "'Koud' is figuurlijk — niet de temperatuur.", "Napoleon = ~1812, ander tijdperk.", "NL en Duitsland waren juist samen onderdeel van het Westen (NAVO)."],
+        wrongHints: [null, "Die oorlog hoorde bij WO2 en eindigde in 1945; de Koude Oorlog kwam erna.", "Die aanval in 1941 hoort bij WO2 zelf. Wie stonden er na 1945 tegenover elkaar?", "NL en Duitsland waren juist samen onderdeel van het Westen (NAVO)."],
         uitlegPad: {
           stappen: [{ titel: "1945-1989 — twee blokken", tekst: "Na WO2 stonden 2 supermachten tegenover elkaar: VS (kapitalisme/democratie) en Sovjet-Unie (communisme/dictatuur). Géén directe oorlog tussen hen (vandaar 'koud'), maar wel wapenwedloop, kernwapens, spionage, ruimterace, proxy-oorlogen (Korea, Vietnam, Afghanistan). Europa verdeeld door 'IJzeren Gordijn'." }],
           woorden: [{ woord: "Koude Oorlog", uitleg: "1945-1989. Spanning VS↔USSR zonder open militair conflict tussen hen direct." }, { woord: "IJzeren Gordijn", uitleg: "Term Churchill 1946. Scheidslijn democratisch West-Europa vs communistisch Oost-Europa." }, { woord: "NAVO", uitleg: "1949. Militair bondgenootschap West (incl. NL). Reactie op communistische dreiging." }, { woord: "Warschaupact", uitleg: "1955. Sovjet-militair pact Oost-Europa. Reactie op NAVO." }],
@@ -646,7 +646,7 @@ const steps = [
         q: "Welk jaar wordt vaak gezien als **direct begin** van WO2?",
         options: ["1939", "1933", "1929", "1945"],
         answer: 0,
-        wrongHints: [null, "Hitler werd toen Duits leider — wel een oorzaak, maar nog geen oorlog.", "Beurscrash — 10 jaar te vroeg.", "Dat is juist het einde."],
+        wrongHints: [null, "Hitler werd toen Duits leider — wel een oorzaak, maar nog geen oorlog.", "In 1929 crashte de beurs: een oorzaak, maar nog geen oorlog.", "Dat is juist het einde."],
         uitlegPad: {
           stappen: [{ titel: "1 september 1939 = officieel begin", tekst: "WO2 begon op 1 september 1939 toen Duitsland Polen binnenviel. 3 september: Engeland + Frankrijk verklaarden Duitsland oorlog. Dat maakte het 'wereldoorlog' — grote mogendheden betrokken. Eerdere jaartallen waren oorzaken (1933 Hitler, 1929 crisis) of einde (1945), niet begin." }],
           woorden: [{ woord: "oorzaak vs aanleiding", uitleg: "Oorzaak = lange-termijn (Versailles, crisis, Hitler). Aanleiding = directe trigger (Polen-inval)." }, { woord: "casus belli", uitleg: "Reden om oorlog te verklaren. Hier: Polen-belofte UK+FR." }],
@@ -672,9 +672,9 @@ const steps = [
       },
       {
         q: "Wat is een **direct gevolg** van WO2 voor Nederland?",
-        options: ["Indonesië werd onafhankelijk", "Nederland werd onderdeel van Duitsland", "Nederland werd communistisch", "Nederland kreeg een keizer"],
+        options: ["Indonesië werd onafhankelijk", "Nederland verloor Suriname", "Nederland werd communistisch", "Nederland werd een republiek"],
         answer: 0,
-        wrongHints: [null, "Het tegendeel — NL was juist bevrijd, niet ingelijfd.", "NL kwam aan westelijke kant van het IJzeren Gordijn.", "NL is sinds 1815 een koninkrijk, geen keizerrijk."],
+        wrongHints: [null, "Suriname werd pas in 1975 onafhankelijk, dertig jaar na de oorlog.", "NL kwam aan westelijke kant van het IJzeren Gordijn.", "Koningin Wilhelmina kwam in 1945 gewoon terug; Nederland bleef een koninkrijk."],
         uitlegPad: {
           stappen: [{ titel: "Verlies kolonie = grootste NL-gevolg", tekst: "Belangrijkste WO2-gevolgen NL: (1) verlies Nederlands-Indië → Indonesië onafhankelijk 1949. (2) Wederopbouw (1945-1955), schade Rotterdam + Hongerwinter. (3) NL koos kant West (NAVO 1949). (4) EU-pionier (EEG 1957). (5) Marshall-hulp (1948-1952): VS-geld voor wederopbouw." }],
           woorden: [{ woord: "wederopbouw", uitleg: "Periode 1945-1955: herstel van WO2-schade. Sober leven, hard werken, woningnood." }, { woord: "Marshall-hulp", uitleg: "Amerikaans geld voor herstel West-Europa 1948-1952. NL kreeg ~1,1 miljard dollar." }],
