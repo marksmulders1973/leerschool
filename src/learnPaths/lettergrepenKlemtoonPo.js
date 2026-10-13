@@ -113,7 +113,7 @@ const steps = [
         wrongHints: [
           null,
           "Klap dit woord eens mee — kom je echt tot vier?",
-          null,
+          "Klap mee: pot-lood. Hoeveel klappen zijn dat?",
           "Tel de klappen nog eens: dat zijn er minder.",
         ],
         uitlegPad: {
@@ -138,7 +138,7 @@ const steps = [
           null,
           "Klap mee: hoor je daar niet meer dan twee klappen?",
           "Hoeveel klappen hoor je bij dit korte woord?",
-          null,
+          "Klap mee: li-mo-... Kom je dan op twee uit?",
         ],
         uitlegPad: {
           stappen: [
@@ -199,9 +199,9 @@ const steps = [
       },
       {
         q: "Eén medeklinker tussen twee klinkers gaat bij het verdelen meestal naar...",
-        options: ["de volgende lettergreep", "de vorige lettergreep", "allebei", "geen van beide"],
+        options: ["de volgende lettergreep", "de vorige lettergreep", "allebei, hij wordt dan dubbel", "de lettergreep met de klemtoon"],
         answer: 0,
-        wrongHints: [null, "Niet ervoor — denk aan ta-fel (f naar achteren).", "Hij hoort bij één lettergreep, niet bij twee.", "Hij hoort er wel degelijk bij."],
+        wrongHints: [null, "Denk aan ta-fel: bij welk stukje hoort de f?", "Schrijf je 'taf-fel'? Er staat maar één f in 'tafel'.", "Bij 'ta-fel' ligt de nadruk op 'ta'. Bij welk stukje staat de f?"],
         uitlegPad: {
           stappen: [{ titel: "Mee naar achteren", tekst: "Bij ta-fel, be-ker, mu-ziek gaat de losse medeklinker naar de volgende lettergreep." }],
           niveaus: {
@@ -243,7 +243,7 @@ const steps = [
         q: "Verdeel 'muziek' in lettergrepen.",
         options: ["mu-ziek", "muz-iek", "m-uziek", "muzi-ek"],
         answer: 0,
-        wrongHints: [null, "Eén medeklinker (z) gaat naar de volgende lettergreep.", "Een losse m is geen lettergreep.", "Dat knipt midden in de klank 'iek'."],
+        wrongHints: [null, "Er staat één medeklinker (z) tussen twee klinkers. Waar gaat die heen?", "Een losse m is geen lettergreep.", "Dat knipt midden in de klank 'iek'."],
         uitlegPad: {
           stappen: [{ titel: "mu-ziek", tekst: "Eén medeklinker (z) tussen twee klinkers gaat naar de volgende lettergreep: mu-ziek." }],
           niveaus: {
@@ -261,7 +261,7 @@ const steps = [
         wrongHints: [
           null,
           "Er staat één medeklinker (n) tussen twee klinkers. Waar gaat die heen?",
-          null,
+          "Kun je een losse k uitspreken als klap?",
           "Kun je 'ng' los uitspreken als klap?",
         ],
         uitlegPad: {
@@ -285,7 +285,7 @@ const steps = [
         wrongHints: [
           null,
           "Bij één medeklinker tussen twee klinkers: gaat die naar voren of naar achteren?",
-          null,
+          "Kun je een losse l uitspreken als klap?",
           "Kun je een losse l uitspreken als klap?",
         ],
         uitlegPad: {
@@ -309,7 +309,7 @@ const steps = [
         wrongHints: [
           null,
           "Er staan twee medeklinkers (kk) tussen de klinkers. Waar splits je dan?",
-          null,
+          "Twee k's naast elkaar: blijven die allebei bij het eerste stukje?",
           "Kun je een losse b uitspreken als klap?",
         ],
         uitlegPad: {
@@ -333,7 +333,7 @@ const steps = [
         wrongHints: [
           null,
           "Twee medeklinkers (nn) tussen klinkers: waar splits je dan?",
-          null,
+          "Twee n's naast elkaar: blijven die allebei bij het eerste stukje?",
           "Kun je 'nkoek' als één klap uitspreken?",
         ],
         uitlegPad: {
@@ -366,9 +366,9 @@ const steps = [
     checks: [
       {
         q: "Tussen welke stukken mag je een woord afbreken aan het eind van een regel?",
-        options: ["tussen twee lettergrepen", "midden in een lettergreep", "na elke letter", "dat mag nooit"],
+        options: ["tussen twee lettergrepen", "midden in een lettergreep", "na de eerste klinker", "vóór de laatste letter"],
         answer: 0,
-        wrongHints: [null, "Midden in een lettergreep mag juist niet.", "Niet zomaar na elke letter.", "Afbreken mag wél, tussen lettergrepen."],
+        wrongHints: [null, "Midden in een lettergreep mag juist niet.", "Probeer het met 'zon': mag je 'zo-n' schrijven?", "Probeer het met 'aap': mag je 'aa-p' schrijven?"],
         uitlegPad: {
           stappen: [{ titel: "Tussen lettergrepen", tekst: "Je breekt af op de grens tussen twee lettergrepen: ta-fel." }],
           niveaus: {
@@ -394,9 +394,9 @@ const steps = [
       },
       {
         q: "Mag je het woord 'aap' afbreken aan het eind van een regel?",
-        options: ["nee, het is maar één lettergreep","ja, als a-ap, tussen de twee a's","ja, als aa-p, voor de laatste letter","ja, je mag overal afbreken"],
+        options: ["nee, het is maar één lettergreep","ja, als a-ap, tussen de twee a's","ja, als aa-p, voor de laatste letter","nee, je breekt alleen samenstellingen af"],
         answer: 0,
-        wrongHints: [null, "Eén lettergreep splits je niet.", "Ook niet — er is geen tweede lettergreep.", "Afbreken kan alleen tussen lettergrepen."],
+        wrongHints: [null, "Eén lettergreep splits je niet.", "Ook niet — er is geen tweede lettergreep.", "Ook 'ta-fel' mag je afbreken, en dat is geen samenstelling. Waarom mag 'aap' dan niet?"],
         uitlegPad: {
           stappen: [{ titel: "Eén lettergreep = niet afbreken", tekst: "'Aap' is één klap (1 lettergreep), dus je kunt het niet afbreken." }],
           niveaus: {
@@ -422,9 +422,9 @@ const steps = [
       },
       {
         q: "Mag je het woord 'zon' afbreken aan het eind van een regel?",
-        options: ["nee, het is maar één lettergreep","ja, als zo-n, na de klinker","ja, als z-on, na de eerste letter","ja, je mag overal afbreken"],
+        options: ["nee, het is maar één lettergreep","ja, als zo-n, na de klinker","ja, als z-on, na de eerste letter","nee, want het eindigt op een medeklinker"],
         answer: 0,
-        wrongHints: [null, "Eén lettergreep splits je niet — er is geen tweede stukje.", "Ook hier is geen tweede lettergreep om op af te breken.", "Afbreken kan alleen tussen lettergrepen."],
+        wrongHints: [null, "Eén lettergreep splits je niet — er is geen tweede stukje.", "Ook hier is geen tweede lettergreep om op af te breken.", "'Tafel' eindigt ook op een medeklinker, en ta-fel mag wel. Wat is het echte verschil?"],
         uitlegPad: {
           stappen: [{ titel: "Eén lettergreep = niet afbreken", tekst: "'Zon' is één klap (1 lettergreep). Je kunt het niet afbreken." }],
           niveaus: {
@@ -436,9 +436,9 @@ const steps = [
       },
       {
         q: "Welke afbreking van 'bibliotheek' is goed?",
-        options: ["bi-bliotheek", "bib-liothek", "biblio-teek", "bibliothe-ek"],
+        options: ["bi-bliotheek", "bib-liotheek", "bibliot-heek", "bibliothe-ek"],
         answer: 0,
-        wrongHints: [null, "Dat knipt midden in de tweede lettergreep ('bli').", "Let op de spelling: het is 'theek', met th.", "Dat knipt midden in de klank 'theek'."],
+        wrongHints: [null, "Dat knipt midden in de tweede lettergreep ('bli').", "Dat knipt de th uit elkaar. Zeg je 't' en 'heek' apart?", "Dat knipt midden in de klank 'theek'."],
         uitlegPad: {
           stappen: [{ titel: "bi-bliotheek", tekst: "Bibliotheek = bi-bli-o-theek. Je mag afbreken na de eerste lettergreep: bi-bliotheek." }],
           niveaus: {
@@ -456,7 +456,7 @@ const steps = [
         wrongHints: [
           null,
           "Klap dit woord mee: hoeveel lettergrepen heeft het?",
-          null,
+          "Klap mee: wor-tel. Kun je dit woord in twee stukjes knippen?",
           "Tel de klappen: kun je dit woord in twee stukjes knippen?",
         ],
         uitlegPad: {
@@ -477,7 +477,7 @@ const steps = [
         q: "Hoe breek je 'kikker' goed af aan het eind van een regel?",
         options: ["kik-ker", "ki-kker", "kikk-er", "k-ikker"],
         answer: 0,
-        wrongHints: [null, "Dat knipt midden in een lettergreep.", null, "Een losse k mag niet."],
+        wrongHints: [null, "Dat knipt midden in een lettergreep.", "Twee k's naast elkaar: blijven die allebei bij het eerste stukje?", "Een losse k mag niet."],
         uitlegPad: {
           stappen: [
             {
@@ -499,7 +499,7 @@ const steps = [
         wrongHints: [
           null,
           "Kun je 'lsap' als één klap uitspreken?",
-          null,
+          "Uit welke twee woorden bestaat 'appelsap'? Knip je hier op die grens?",
           "Dat knipt midden in de eerste lettergreep.",
         ],
         uitlegPad: {
@@ -531,9 +531,9 @@ const steps = [
     checks: [
       {
         q: "Wat is de klemtoon in een woord?",
-        options: ["de lettergreep die je het hardst zegt","de eerste letter van het woord","altijd de laatste lettergreep","een leesteken achter het woord"],
+        options: ["de lettergreep die je het hardst zegt","de eerste letter van het woord","de laatste lettergreep van het woord","het streepje tussen twee lettergrepen"],
         answer: 0,
-        wrongHints: [null, "Het gaat om een hele lettergreep, niet één letter.", "Niet altijd de laatste — het verschilt per woord.", "De klemtoon hoor je, het is geen teken."],
+        wrongHints: [null, "Het gaat om een hele lettergreep, niet één letter.", "Zeg 'lepel' hardop: klinkt 'pel' het hardst?", "Dat streepje gebruik je bij afbreken. De klemtoon hoor je als je praat."],
         uitlegPad: {
           stappen: [{ titel: "De nadruk", tekst: "De klemtoon is de lettergreep die je harder en langer uitspreekt: ba-NAAN." }],
           niveaus: {
@@ -547,7 +547,7 @@ const steps = [
         q: "Waar ligt de klemtoon in 'banaan' (ba-naan)?",
         options: ["op 'naan' (de tweede)", "op 'ba' (de eerste)", "op allebei evenveel", "er is geen klemtoon"],
         answer: 0,
-        wrongHints: [null, "Zeg het woord hardop: welk stukje klinkt harder en langer?", "Luister goed — de ene klap klinkt sterker.", "Elk meerlettergrepig woord heeft een klemtoon."],
+        wrongHints: [null, "Zeg het woord hardop: welk stukje klinkt harder en langer?", "Luister goed — de ene klap klinkt sterker.", "Elk woord met meer lettergrepen heeft een klemtoon."],
         uitlegPad: {
           stappen: [{ titel: "ba-NAAN", tekst: "Je zegt 'baNAAN', met de nadruk op 'naan'. Daar ligt de klemtoon." }],
           niveaus: {
@@ -577,10 +577,10 @@ const steps = [
           "die lettergreep klinkt harder en langer",
           "die lettergreep heeft een hoofdletter",
           "die lettergreep staat vooraan",
-          "dat kun je niet horen",
+          "die lettergreep heeft de meeste letters",
         ],
         answer: 0,
-        wrongHints: [null, "Schrijven verandert er niets aan; je hóórt het.", "Niet altijd vooraan — het verschilt.", "Je kunt het juist goed horen."],
+        wrongHints: [null, "Schrijven verandert er niets aan; je hóórt het.", "Niet altijd vooraan — het verschilt.", "Zeg 'lepel' hardop: 'pel' heeft meer letters. Klinkt dat stukje ook harder?"],
         uitlegPad: {
           stappen: [{ titel: "Harder en langer", tekst: "De lettergreep met de klemtoon spreek je harder en langer uit — die springt eruit." }],
           niveaus: {
@@ -683,7 +683,7 @@ const steps = [
         wrongHints: [
           null,
           "Zeg het hardop: klinkt 'ko' harder dan 'nijn'?",
-          null,
+          "Zeg het hardop: klinkt 'gi' harder dan 'raf'?",
           "Zeg het hardop: welk stukje springt eruit, 'ka', 'bou' of 'ter'?",
         ],
         uitlegPad: {

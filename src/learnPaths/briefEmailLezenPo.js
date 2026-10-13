@@ -80,10 +80,10 @@ Handig ezelsbruggetje: **de randen van de brief vertellen wie, wanneer en waarov
       {
         q: "Je krijgt een brief en wilt weten wie hem geschreven heeft. Waar kijk je het eerst?",
         options: [
-          "Onderaan de brief, bij de naam onder de groet",
-          "Precies in het midden van de brief",
-          "Alleen naar de datum bovenaan",
-          "Naar de eerste letter van elke zin",
+          "Onderaan, bij de naam onder de groet",
+          "In het midden, waar het verhaal staat",
+          "Bovenaan, bij de plaats en de datum",
+          "Bovenaan, bij de aanhef met 'Beste'",
         ],
         answer: 0,
         evidence: "De ondertekening onderaan vertelt wie de brief heeft geschreven.",
@@ -91,7 +91,7 @@ Handig ezelsbruggetje: **de randen van de brief vertellen wie, wanneer en waarov
           null,
           "In het midden staat het verhaal zelf. Denk eens aan hoe jij een brief afsluit — wat zet je daar neer?",
           "Een datum vertelt wannéér iets is. Kan een datum ook vertellen wíé er schreef?",
-          null,
+          "In de aanhef begroet de schrijver de lezer. Staat daar de naam van de schrijver?",
         ],
         uitlegPad: {
           stappen: [
@@ -126,7 +126,7 @@ Handig ezelsbruggetje: **de randen van de brief vertellen wie, wanneer en waarov
         wrongHints: [
           null,
           "Dat onderdeel staat aan het éinde van een brief en bevat een naam. Waar staat dit regeltje?",
-          null,
+          "Een onderwerpregel begint met 'Onderwerp:'. Staat dat hier?",
           "De kern is het lange middenstuk met het echte verhaal. Is dit korte regeltje een heel verhaal?",
         ],
         uitlegPad: {
@@ -160,7 +160,7 @@ Handig ezelsbruggetje: **de randen van de brief vertellen wie, wanneer en waarov
           "In het kort waar de e-mail over gaat",
           "Wie de e-mail heeft geschreven",
           "Op welke dag de e-mail is verstuurd",
-          "Hoe lang de e-mail is",
+          "Voor wie de e-mail bedoeld is",
         ],
         answer: 0,
         evidence: "Onderwerp: Schoolreisje groep 7",
@@ -168,7 +168,7 @@ Handig ezelsbruggetje: **de randen van de brief vertellen wie, wanneer en waarov
           null,
           "De schrijver vind je in de regel 'Van:' of onderaan. Staat hiér een naam, of iets anders?",
           "Een verstuur-dag herken je aan een datum. Zie je in deze regel een datum staan?",
-          null,
+          "Voor wie de e-mail is, staat in de regel 'Aan:'. Wat staat er achter 'Onderwerp:'?",
         ],
         uitlegPad: {
           stappen: [
@@ -205,7 +205,7 @@ Handig ezelsbruggetje: **de randen van de brief vertellen wie, wanneer en waarov
         wrongHints: [
           null,
           "Een brief begint niet met de naam van de schrijver. Wat staat er helemaal bovenaan?",
-          null,
+          "Begint een brief meteen met het verhaal? Wat staat er helemaal bovenaan?",
           "De datum staat bovenaan, vóór de aanhef. Staat de datum hier op de juiste plek?",
         ],
         uitlegPad: {
@@ -234,7 +234,7 @@ Handig ezelsbruggetje: **de randen van de brief vertellen wie, wanneer en waarov
           null,
           "De ondertekening vertelt wíé de brief schreef. Zoek het onderdeel dat de lezer begroet.",
           "De datum vertelt wannéér de brief geschreven is. Welk onderdeel begroet de ontvanger?",
-          null,
+          "De kern is het middenstuk met het verhaal. Welk onderdeel begroet de lezer?",
         ],
         uitlegPad: {
           stappen: [
@@ -252,10 +252,10 @@ Handig ezelsbruggetje: **de randen van de brief vertellen wie, wanneer en waarov
       {
         q: "Wat is een verschil tussen een e-mail en een papieren brief?",
         options: [
-          "Een e-mail heeft bovenaan vaste regels zoals 'Van:' en 'Aan:'",
-          "Een e-mail heeft geen aanhef zoals 'Beste', je begint meteen met de kern",
-          "Een papieren brief heeft geen datum, die staat alleen bij een e-mail",
-          "Alleen een papieren brief eindigt met een groet zoals 'Met vriendelijke groet'",
+          "Een e-mail heeft bovenaan regels zoals 'Van:' en 'Aan:'",
+          "Een e-mail begint zonder aanhef, meteen met de kern",
+          "Een e-mail heeft een datum, een brief meestal niet",
+          "Een brief eindigt met een groet, een e-mail meestal niet",
         ],
         answer: 0,
         wrongHints: [
@@ -285,7 +285,7 @@ Handig ezelsbruggetje: **de randen van de brief vertellen wie, wanneer en waarov
         wrongHints: [
           null,
           "Dat onderdeel staat aan het begín van de brief en begint vaak met 'Beste'. Waar in de brief vind je dit regeltje?",
-          null,
+          "Een onderwerpregel staat bovenaan een e-mail, achter 'Onderwerp:'. Waar staat dit regeltje?",
           "Zie je hier een dag, een maand of een jaartal staan?",
         ],
         uitlegPad: {
@@ -320,8 +320,8 @@ Handig ezelsbruggetje: **de randen van de brief vertellen wie, wanneer en waarov
         wrongHints: [
           null,
           "Dat onderdeel staat aan het begín van een brief, met 'Beste' of 'Geachte'. Waar staat deze naam?",
-          null,
-          null,
+          "De kern is het lange middenstuk. Staat 'Meester Ahmed' daar, of direct onder de groet?",
+          "Een onderwerpregel staat bovenaan een e-mail. Waar staat deze naam?",
         ],
         uitlegPad: {
           stappen: [
@@ -375,7 +375,7 @@ Handig ezelsbruggetje: **de randen van de brief vertellen wie, wanneer en waarov
         wrongHints: [
           null,
           "Dat is de korte begroeting aan het begin, zoals 'Beste ouders en verzorgers,'. Past daar een heel verhaal in?",
-          null,
+          "Dat is alleen de naam van de schrijver onderaan. Past daar een heel verhaal in?",
           "Dat is alleen de groet aan het einde. Waar staat het lange stuk tekst?",
         ],
         uitlegPad: {
@@ -444,7 +444,7 @@ Beantwoord nu de vier vragen over de brief hierboven. Zoek het antwoord altijd �
           null,
           "Kijk naar de aanhef: aan wie is de brief gerícht? Is dat dezelfde als degene die hem schreef?",
           "Kan een sportpark een brief schrijven? Kijk eens onder de groet, helemaal onderaan.",
-          null,
+          "De kinderen doen mee aan de sportdag. Wiens naam staat er onder de groet?",
         ],
         uitlegPad: {
           stappen: [
@@ -473,18 +473,18 @@ Beantwoord nu de vier vragen over de brief hierboven. Zoek het antwoord altijd �
       {
         q: "Wat is het doel van deze brief?",
         options: [
-          "De ouders informeren over de sportdag én om hulp vragen",
-          "Klagen over het weer op de sportdag",
-          "De ouders bedanken voor hun hulp van vorig jaar",
-          "Uitleggen hoe je een spelletje speelt",
+          "Vertellen over de sportdag en om hulp vragen",
+          "Vertellen over de sportdag en om geld vragen",
+          "Ouders bedanken voor hun hulp bij de sportdag",
+          "Uitleggen welke spelletjes er gespeeld worden",
         ],
         answer: 0,
         evidence: "Daarop kunt u aangeven of u kunt helpen bij een spelletje.",
         wrongHints: [
           null,
-          "Lees je ergens dat de schrijver boos of ontevreden is? Wat dóét de brief vooral: mopperen of vertellen?",
-          null,
-          "Staat er ergens uitgelegd hóé een spel werkt — of vooral wat er wanneer gaat gebeuren?",
+          "Wordt er in de brief om geld gevraagd? Lees wat er op het strookje staat.",
+          "Is de sportdag al geweest? Kijk naar de datums in de brief.",
+          "Staat er ergens uitgelegd welke spelletjes er zijn — of vooral wat er wanneer gaat gebeuren?",
         ],
         uitlegPad: {
           stappen: [
@@ -520,7 +520,7 @@ Beantwoord nu de vier vragen over de brief hierboven. Zoek het antwoord altijd �
           null,
           "Op 22 mei gebeurt er iets heel anders. Zoek de zin die met 'Wilt u...' begint — daar staat de opdracht.",
           "Wordt er ergens in de brief om geld gevraagd? Lees de brief er nog eens op na.",
-          null,
+          "Staat er dat ouders spelletjes moeten bedenken? Lees wat er op het strookje staat.",
         ],
         uitlegPad: {
           stappen: [
@@ -553,7 +553,7 @@ Beantwoord nu de vier vragen over de brief hierboven. Zoek het antwoord altijd �
         wrongHints: [
           null,
           "14 uur is de tijd van de prijs-uitreiking, niet de start. Zoek de zin met het woord 'beginnen'.",
-          null,
+          "12 uur staat nergens in de brief. Zoek de zin met het woord 'beginnen'.",
           "Staat 10 uur ergens in de brief? Scan op het woord 'beginnen'.",
         ],
         uitlegPad: {
@@ -582,7 +582,7 @@ Beantwoord nu de vier vragen over de brief hierboven. Zoek het antwoord altijd �
           null,
           "Over geld staat niets in de brief. Wat zegt de brief over de gevolgen als er geen hulpouders zijn?",
           "Het strookje is geen toegangskaart — alle kinderen van de groepen doen al mee. Wat vraagt de school aan de ouders?",
-          null,
+          "Alle kinderen van groep 6, 7 en 8 doen al mee. Over wie gaat het strookje?",
         ],
         uitlegPad: {
           stappen: [
@@ -606,7 +606,7 @@ Beantwoord nu de vier vragen over de brief hierboven. Zoek het antwoord altijd �
           null,
           "Op die dag moet het stróókje binnen zijn. Zoek de zin waarin de sportdag zelf genoemd wordt.",
           "Die datum staat helemaal bovenaan, naast de plaatsnaam. Wat betekent een datum op díé plek?",
-          null,
+          "Lees de eerste zin na de aanhef nog eens. Welke dag staat daar?",
         ],
         uitlegPad: {
           stappen: [
@@ -645,7 +645,7 @@ Beantwoord nu de vier vragen over de brief hierboven. Zoek het antwoord altijd �
           null,
           "Die naam staat onderaan, bij de ondertekening. Is dat de schrijver of de lezer?",
           "De kinderen doen mee aan de sportdag. Maar wie wordt er begroet aan het begin van de brief?",
-          null,
+          "Op het sportpark is de sportdag. Wie wordt er begroet aan het begin van de brief?",
         ],
         uitlegPad: {
           stappen: [
@@ -704,7 +704,7 @@ Beantwoord nu de vier vragen over de brief hierboven. Zoek het antwoord altijd �
         wrongHints: [
           null,
           "Het sportpark is de plek van de sportdag. Zoek de zin met het woord 'inleveren'.",
-          null,
+          "Wordt de conciërge in de brief genoemd? Zoek de zin met het woord 'inleveren'.",
           "Het strookje moet al vóór de sportdag binnen zijn. Lees de zin met 'uiterlijk woensdag 13 mei' nog eens.",
         ],
         uitlegPad: {
@@ -781,7 +781,7 @@ Oefen deze drie gevallen hieronder met korte stukjes brief.`,
         wrongHints: [
           null,
           "Zou een plan voor een feestelijke dag helemaal bovenaan staan, naast een plaatsnaam? Waar in een brief staan zulke plannen?",
-          null,
+          "Een inleverdatum staat in de kern, bij de opdracht. Wat zet een schrijver bovenaan, naast de plaatsnaam?",
           "Zet iemand zijn verjaardag bovenaan een brief? Denk aan wat een schrijver opschrijft op het moment van schrijven.",
         ],
         uitlegPad: {
@@ -810,18 +810,18 @@ Oefen deze drie gevallen hieronder met korte stukjes brief.`,
       {
         q: "*\"Geachte heer Pot, vorige week kocht ik in uw winkel een voetbal. Na twee dagen was hij al lek. Ik wil graag mijn geld terug.\"* — Wat is het doel van deze brief?",
         options: [
-          "Klagen over de kapotte bal en geld terugvragen",
-          "Vertellen dat voetballen leuk is",
-          "De winkel bedanken voor de mooie bal",
-          "Vragen hoe je een bal oppompt",
+          "Klagen over de bal en geld terugvragen",
+          "Een nieuwe bal bij de winkel bestellen",
+          "De winkel bedanken voor de snelle hulp",
+          "Vragen of de winkel de bal wil plakken",
         ],
         answer: 0,
         evidence: "Ik wil graag mijn geld terug.",
         wrongHints: [
           null,
-          "Staat er iets over hoe leuk voetballen is — of over iets dat mís is met de bal?",
-          "Zou je een winkel bedanken voor iets dat na twee dagen al kapot was?",
-          null,
+          "Wil de schrijver nóg een bal, of iets anders terug? Lees de laatste zin.",
+          "Zou je een winkel bedanken voor een bal die na twee dagen al lek was?",
+          "Vraagt de schrijver om reparatie? Lees de laatste zin nog eens.",
         ],
         uitlegPad: {
           stappen: [
@@ -852,7 +852,7 @@ Oefen deze drie gevallen hieronder met korte stukjes brief.`,
         options: [
           "Geachte mevrouw Van Dam,",
           "Hoi burgemeester!",
-          "Yo!",
+          "Beste Anna,",
           "Lieve mevrouw Van Dam,",
         ],
         answer: 0,
@@ -860,7 +860,7 @@ Oefen deze drie gevallen hieronder met korte stukjes brief.`,
         wrongHints: [
           null,
           "Zo begroet je een vriend op het schoolplein. Past dat bij iemand belangrijks die je nog nooit ontmoet hebt?",
-          null,
+          "Je kent de burgemeester niet. Spreek je haar dan aan met haar voornaam?",
           "'Lieve' schrijf je aan mensen van wie je houdt, zoals oma. Ken jij de burgemeester zo goed?",
         ],
         uitlegPad: {
@@ -891,17 +891,17 @@ Oefen deze drie gevallen hieronder met korte stukjes brief.`,
       {
         q: "Iemand schrijft: *\"Beste buren, helaas moeten wij mededelen dat onze kat Poes is weggelopen. Wij zijn al drie dagen aan het zoeken. Wilt u ons bellen als u haar ergens ziet?\"* — Wat is het doel van dit briefje?",
         options: [
-          "Informeren over de situatie én hulp vragen",
-          "Klagen over de kat",
+          "Vertellen dat Poes weg is en om hulp vragen",
+          "Klagen dat de buren niet helpen zoeken",
           "Bedanken voor eerdere hulp bij het zoeken",
-          "Uitnodigen voor een zoekactie",
+          "Uitnodigen om samen te komen zoeken",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Is de schrijver boos? Of wil hij de buren laten weten wat er is en wat ze kunnen doen?",
-          "Staat er ergens 'dank u' of 'bedankt'? Lees de brief nog eens.",
-          null,
+          "Is de schrijver boos op de buren? Lees de toon van het briefje nog eens.",
+          "Staat er ergens 'dank u' of 'bedankt'? Lees het briefje nog eens.",
+          "Staat er een dag of tijd om samen te zoeken? Wat vraagt de schrijver precies?",
         ],
         uitlegPad: {
           stappen: [
@@ -921,15 +921,15 @@ Oefen deze drie gevallen hieronder met korte stukjes brief.`,
         options: [
           "Ze kennen elkaar niet goed; de schrijver gebruikt een formele toon",
           "Ze zijn goede vrienden; de schrijver schrijft deftig voor de lol",
-          "De directeur is de afzender van de brief",
-          "De brief is voor alle leerlingen van de school",
+          "Ze zijn familie; de schrijver wil beleefd overkomen",
+          "Ze hebben ruzie; de schrijver is boos op de directeur",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Zou je 'Geachte' aan een goede vriend schrijven? Wat kies je dan normaal?",
-          null,
-          "'Geachte directeur Patel' is de begroeting van één persoon. Lees de aanhef nog eens: wie staat er?",
+          "Schrijf je 'Geachte' aan je oom of tante? Wat kies je dan meestal?",
+          "Zegt 'Geachte' iets over boos zijn, of over hoe goed je iemand kent?",
         ],
         uitlegPad: {
           stappen: [
@@ -956,7 +956,7 @@ Oefen deze drie gevallen hieronder met korte stukjes brief.`,
         evidence: "Duizend keer dank!",
         wrongHints: [
           null,
-          null,
+          "Staat er dat het cadeau kapot is? Lees: 'Ik speel er elke dag mee.'",
           "Staat er ergens een uitnodiging met een dag en een tijd erbij?",
           "Gaat dit briefje over school — of over iets dat de schrijver heeft gekregen?",
         ],
@@ -992,7 +992,7 @@ Oefen deze drie gevallen hieronder met korte stukjes brief.`,
           null,
           "Op die dag is de opruimdag zelf. Zoek de zin met 'Geef je'.",
           "Die datum staat bovenaan, naast de plaatsnaam. Wat betekent een datum op die plek?",
-          null,
+          "Lees de laatste zin nog eens. Welke datum staat bij 'Geef je op'?",
         ],
         uitlegPad: {
           stappen: [
@@ -1045,14 +1045,14 @@ Oefen deze drie gevallen hieronder met korte stukjes brief.`,
           "Mira uitnodigen voor het feestje",
           "Mira vertellen hoe oud Lotte wordt",
           "Mira bedanken voor een cadeau",
-          "Mira vragen waar ze woont",
+          "Mira vertellen waar Lotte woont",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Dat staat er wel in, maar het is één feitje. Wat wil Lotte met het héle briefje bereiken?",
-          null,
-          null,
+          "Staat er dat Mira een cadeau gaf? Lees de vraag die Lotte stelt.",
+          "Staat Lottes adres in het briefje? Wat vraagt Lotte aan Mira?",
         ],
         uitlegPad: {
           stappen: [
@@ -1124,7 +1124,7 @@ Pak je vaste stappenplan erbij: kijk eerst naar de **randen** (Van, Aan, Datum, 
         wrongHints: [
           null,
           "Lees de laatste zin eens: staat daar het thema van de e-mail, of een wens van de schrijver?",
-          null,
+          "De aanhef zegt wie er begroet wordt. Zegt die ook waaróver de e-mail gaat?",
           "Aan een e-mailadres zie je wíé er mailt. Welke regel vertelt waaróver het gaat?",
         ],
         uitlegPad: {
@@ -1158,7 +1158,7 @@ Pak je vaste stappenplan erbij: kijk eerst naar de **randen** (Van, Aan, Datum, 
         wrongHints: [
           null,
           "Het zwembad is de plék waar gezwommen wordt. Kijk bij 'Van:' en onder de groet: wie stuurt de uitnodiging?",
-          null,
+          "De ouders worden begroet in de aanhef. Wie staat er onder 'Met sportieve groet,'?",
           "Die naam hoort bij een héél andere brief. Kijk wie er onder 'Met sportieve groet,' staat.",
         ],
         uitlegPad: {
@@ -1189,7 +1189,7 @@ Pak je vaste stappenplan erbij: kijk eerst naar de **randen** (Van, Aan, Datum, 
         options: ['Uitnodigen en vragen je aan te melden', 'Klagen over het drukke zwembad', 'Bedanken voor de medailles van vorig jaar', 'Informeren en vragen geld over te maken'],
         answer: 0,
         evidence: "Wil je meedoen? Meld je dan aan vóór vrijdag 12 juni.",
-        wrongHints: [null, 'Lees je ergens dat de schrijver boos of ontevreden is? Wat voor toon heeft de e-mail?', null, 'Lees de alinea over de kosten nog eens. Moet je nu al iets overmaken?'],
+        wrongHints: [null, "=", "Wordt er bedankt voor vorig jaar? Lees de eerste alinea nog eens.", "="],
         uitlegPad: {
           stappen: [
             { titel: "Wat kondigt de e-mail aan?", tekst: "Een evenement: de Zwemvierdaagse, vier avonden zwemmen met een medaille als beloning. De club hoopt op veel deelnemers — dit is een uitnodiging." },
@@ -1228,7 +1228,7 @@ Pak je vaste stappenplan erbij: kijk eerst naar de **randen** (Van, Aan, Datum, 
           null,
           "Lees de zin over het geld nog eens: wanneer en wáár betaal je? Moet je nu al iets overmaken?",
           "Wat gebeurt er volgens de e-mail met wie zich te láát aanmeldt?",
-          null,
+          "Wanneer krijg je een medaille? Moet je daarvoor iets doen vóórdat het zwemmen begint?",
         ],
         uitlegPad: {
           stappen: [
@@ -1262,7 +1262,7 @@ Pak je vaste stappenplan erbij: kijk eerst naar de **randen** (Van, Aan, Datum, 
           null,
           "Op die dag begint het zwemmen zelf. Zoek de zin met het woord 'aanmelden' en let op de deadline.",
           "Die datum staat bij 'Datum:' bovenaan — dat is de verstuurdag van de e-mail. Zoek de aanmeld-deadline.",
-          null,
+          "Op die dag eindigt de Zwemvierdaagse. Zoek de zin met 'Meld je dan aan'.",
         ],
         uitlegPad: {
           stappen: [
@@ -1280,17 +1280,17 @@ Pak je vaste stappenplan erbij: kijk eerst naar de **randen** (Van, Aan, Datum, 
       {
         q: "Waar betaal je de € 3,50 voor de Zwemvierdaagse?",
         options: [
-          "Op de eerste avond bij de kassa van het zwembad",
+          "Bij de kassa, op de eerste avond",
           "Nu al, door geld over te maken",
-          "Bij de balie van de zwemclub",
-          "Via de website bij het aanmelden",
+          "Bij de balie, bij het aanmelden",
+          "Bij de kassa, op de laatste avond",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Lees de zin over het geld nog eens: staat er 'nu niets overmaken' of juist wel?",
           "De balie is de plek voor het aanmeldformulier, niet voor de betaling. Zoek de zin over de kassa.",
-          null,
+          "Lees de zin over het geld nog eens: op welke avond betaal je?",
         ],
         uitlegPad: {
           stappen: [
@@ -1314,7 +1314,7 @@ Pak je vaste stappenplan erbij: kijk eerst naar de **randen** (Van, Aan, Datum, 
           null,
           "Vóór die dag moet je je áánmelden. Zoek de zin die vertelt van wanneer tot wanneer het zwemmen zelf duurt.",
           "Die datum staat bovenaan bij 'Datum:' — wat betekent een datum op die plek?",
-          null,
+          "Op die dag krijg je de medaille. Is dat de eerste of de laatste avond?",
         ],
         uitlegPad: {
           stappen: [
@@ -1348,7 +1348,7 @@ Pak je vaste stappenplan erbij: kijk eerst naar de **randen** (Van, Aan, Datum, 
           null,
           "Lees de zin over het geld nog eens. Staat daar iets over teruggeven?",
           "Dat diploma moet je juist al hebben om mee te mogen doen. Zoek de zin met 'alle vier de avonden'.",
-          null,
+          "Staat er iets over zwemles? Zoek de zin met 'alle vier de avonden'.",
         ],
         uitlegPad: {
           stappen: [
@@ -1398,8 +1398,8 @@ Pak je vaste stappenplan erbij: kijk eerst naar de **randen** (Van, Aan, Datum, 
         wrongHints: [
           null,
           "Van 18.00 tot 19.30 uur is de tijd waarin je kunt zwemmen. Moet je die hele tijd in het water? Lees de zin met 'elke avond' precies.",
-          null,
-          null,
+          "Lees de zin met 'elke avond' precies. Staat daar 'een uur'?",
+          "Van 18.00 tot 19.30 uur is korter dan twee uur. Hoe lang zwem je echt? Lees de zin met 'elke avond'.",
         ],
         uitlegPad: {
           stappen: [

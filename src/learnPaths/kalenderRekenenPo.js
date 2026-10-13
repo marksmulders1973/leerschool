@@ -76,14 +76,14 @@ const steps = [
     svg: kalenderSvg(),
     checks: [
       {
-        q: "Hoeveel **dagen** in een **gewoon jaar**?",
+        q: "Hoeveel **dagen** heeft een **gewoon jaar**?",
         options: ["365 dagen", "360 dagen", "366 dagen", "364 dagen"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Dat is een schrikkeljaar.", "Te weinig."],
+        wrongHints: [null, "Dat zijn 12 maanden van 30 dagen. Hebben alle maanden 30 dagen?", "Dat is een schrikkeljaar.", "Dat is precies 52 weken. Is een jaar precies 52 weken lang?"],
         uitlegPad: {
           stappen: [
             { titel: "365 dagen per jaar", tekst: "Een **gewoon jaar** heeft **365 dagen**. Een **schrikkeljaar** heeft 366 dagen (1 extra in februari). Onthoud die twee getallen." },
-            { titel: "Waarom 365?", tekst: "De aarde draait in **365 dagen + 6 uur** rond de zon. Omdat dat geen rond getal is, hebben we elke 4 jaar een **schrikkeljaar** (366 dagen) om die extra uurtjes goed te maken." },
+            { titel: "Waarom 365?", tekst: "De aarde draait in **365 dagen en bijna 6 uur** rond de zon. Omdat dat geen rond getal is, hebben we elke 4 jaar een **schrikkeljaar** (366 dagen) om die extra uurtjes goed te maken." },
             { titel: "Optellen check", tekst: "Tel de maanden:\n• 31 dagen: jan + mrt + mei + jul + aug + okt + dec = **7 × 31 = 217**\n• 30 dagen: apr + jun + sep + nov = **4 × 30 = 120**\n• Februari: **28**\nTotaal: 217 + 120 + 28 = **365** ✓" },
           ],
           woorden: [
@@ -104,10 +104,10 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel dagen in **februari** in een **schrikkeljaar**?",
+        q: "Hoeveel dagen heeft **februari** in een **schrikkeljaar**?",
         options: ["29 dagen", "28 dagen", "30 dagen", "31 dagen"],
         answer: 0,
-        wrongHints: [null, "Dat is een gewoon jaar.", "Te veel.", "Te veel."],
+        wrongHints: [null, "Dat is een gewoon jaar.", "Heeft februari ooit 30 dagen? Februari is de kortste maand.", "Zoveel dagen hebben januari en maart. Is februari langer of korter?"],
       },
       {
         q: "Welke maand heeft **30 dagen**?",
@@ -116,10 +116,10 @@ const steps = [
         wrongHints: [null, "Januari heeft 31.", "Maart heeft 31.", "December heeft 31."],
       },
       {
-        q: "In welk seizoen zit **augustus** (Nederland)?",
+        q: "In welk seizoen valt **augustus** (in Nederland)?",
         options: ["Zomer", "Herfst", "Lente", "Winter"],
         answer: 0,
-        wrongHints: [null, "Herfst = sep/okt/nov.", "Lente = maart/april/mei.", "Winter = dec/jan/feb."],
+        wrongHints: [null, "De herfst begint pas in september. Is augustus al zo ver?", "In de lente gaan de bloemen open. Komt augustus voor of na de lente?", "Is het in augustus meestal koud en donker?"],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -361,16 +361,16 @@ const steps = [
       "De toets vraagt vaak: *'Wat is de dag X dagen na DATUM?'* of *'X dagen geleden was DATUM'*.\n\n**Stappenplan — vooruit tellen (na)**:\n1. Schrijf de start-datum op.\n2. Tel zo veel mogelijk **hele weken** (7 dagen) — verschuif de datum gewoon, dag-naam blijft hetzelfde.\n3. Tel de resterende dagen één voor één.\n\n**Voorbeeld**: 'Wat is 10 dagen na **donderdag 5 maart**?'\n• 10 dagen = **7 + 3 dagen**.\n• Donderdag 5 maart + 1 week = donderdag 12 maart.\n• 12 maart + 3 dagen = vr 13, za 14, **zo 15 maart**.\n• Antwoord: **zondag 15 maart**.\n\n**Stappenplan — achteruit tellen (geleden)**:\nZelfde, maar terug in plaats van vooruit.\n\n**Voorbeeld**: 'Vandaag is woensdag 3 juni. Welke datum was het **14 dagen geleden**?'\n• 14 dagen = 2 weken.\n• Datum − 14 = 20 mei. Dag-naam blijft **woensdag** *(want hele weken)*.\n• Antwoord: woensdag 20 mei.\n\n**Toets-truc — dag-naam berekenen**:\n• **+7 dagen = zelfde dag-naam** (dezelfde dag van de week).\n• **+1 dag** = volgende dag.\n• **+14 dagen** = ook zelfde dag.\n• **+21 dagen** = zelfde dag.\n\nElk veelvoud van 7 → dezelfde dag-naam.\n\n**Veel-voorkomende fout**:\n• Vergeten dat een maand niet altijd 30 of 31 heeft.\n• Vergeten dat februari 28 of 29 dagen heeft.\n• Verwarring tussen 'na' en 'geleden'.",
     checks: [
       {
-        q: "**7 dagen na maandag** is welke dag?",
+        q: "Welke dag is het **7 dagen na maandag**?",
         options: ["Maandag", "Dinsdag", "Zondag", "Zaterdag"],
         answer: 0,
         wrongHints: [null, "Dat is dag erna.", "Dat is 1 dag ervoor.", "Dat is 2 dagen ervoor."],
       },
       {
-        q: "**10 dagen na dinsdag** is welke dag?",
+        q: "Welke dag is het **10 dagen na dinsdag**?",
         options: ["Vrijdag", "Donderdag", "Zaterdag", "Dinsdag"],
         answer: 0,
-        wrongHints: [null, "Te weinig — di+9 dagen, niet 10.", "Te veel.", "Dat is +7 of +14, niet +10."],
+        wrongHints: [null, "Te weinig — di+9 dagen, niet 10.", "Dat is 11 dagen verder. Tel eerst een hele week door: welke dag is het dan?", "Dat is +7 of +14, niet +10."],
         uitlegPad: {
           stappen: [
             { titel: "10 = 7 + 3", tekst: "10 dagen = 1 hele week (7) + 3 dagen extra. Dinsdag + 7 = dinsdag. + 3 = vrijdag." },
@@ -387,16 +387,16 @@ const steps = [
         },
       },
       {
-        q: "**Vandaag = 10 maart**. Welke datum is **5 dagen later**?",
+        q: "**Vandaag is het 10 maart**. Welke datum is het **5 dagen later**?",
         options: ["15 maart", "5 maart", "14 maart", "20 maart"],
         answer: 0,
-        wrongHints: [null, "Dat is vandaag.", "Te weinig — controleer.", "Te veel."],
+        wrongHints: [null, "Dat is 5 dagen eerder. Moet je vooruit of terug tellen?", "Tel je 10 maart zelf als eerste dag? Begin te tellen bij 11 maart.", "Dat is 10 dagen later. Hoeveel dagen moest je verder?"],
       },
       {
-        q: "**Vandaag = 28 februari (gewoon jaar)**. Welke datum is **3 dagen later**?",
+        q: "**Vandaag is het 28 februari (gewoon jaar)**. Welke datum is het **3 dagen later**?",
         options: ["3 maart", "31 februari", "1 maart", "5 maart"],
         answer: 0,
-        wrongHints: [null, "31 februari bestaat niet.", "Te weinig — dat is +1.", "Te veel."],
+        wrongHints: [null, "31 februari bestaat niet.", "Te weinig — dat is +1.", "Dat is 5 dagen later. Hoeveel dagen heeft februari in een gewoon jaar?"],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -681,9 +681,9 @@ const steps = [
     checks: [
       {
         q: "Is **2024** een schrikkeljaar?",
-        options: ["Ja", "Nee", "Hangt af", "Weet niet"],
+        options: ["Ja, 2024 is deelbaar door 4", "Nee, 2024 is niet deelbaar door 4", "Nee, alleen jaartallen op een 0", "Nee, het vorige was in 2022"],
         answer: 0,
-        wrongHints: [null, "Reken nogmaals.", "Het is eenduidig — gebruik de deel-door-4-truc.", "Je kunt het uitrekenen: is 2024 deelbaar door 4?"],
+        wrongHints: [null, "Reken het uit: blijft er iets over als je 24 door 4 deelt?", "2016 eindigt niet op een 0. Had februari 2016 29 dagen of niet?", "Was 2022 wel een schrikkeljaar? Is 22 deelbaar door 4?"],
         uitlegPad: {
           stappen: [
             { titel: "De 'deel door 4'-truc", tekst: "**Vuistregel**: een jaar is een **schrikkeljaar** als het deelbaar is door **4**. Test 2024: 2024 ÷ 4 = 506 (rond getal, geen rest) → **schrikkeljaar**." },
@@ -712,13 +712,13 @@ const steps = [
         q: "Welk jaar is een **schrikkeljaar**?",
         options: ["2028", "2025", "2026", "2027"],
         answer: 0,
-        wrongHints: [null, "2025 niet deelbaar door 4.", "2026 niet deelbaar door 4.", "2027 niet deelbaar door 4."],
+        wrongHints: [null, "Deel de laatste twee cijfers door 4: gaat 25 ÷ 4 precies op?", "Staat 26 in de tafel van 4?", "Is 27 een even getal? Een schrikkeljaar is altijd even."],
       },
       {
         q: "Op welke datum is **Koningsdag**?",
-        options: ["27 april", "30 april", "5 mei", "1 januari"],
+        options: ["27 april", "30 april", "5 mei", "30 maart"],
         answer: 0,
-        wrongHints: [null, "Oude Koninginnedag — niet meer.", "Dat is Bevrijdingsdag.", "Dat is Nieuwjaar."],
+        wrongHints: [null, "Oude Koninginnedag — niet meer.", "Dat is Bevrijdingsdag.", "Dan is het nog maart. Koningsdag valt later in het voorjaar."],
       },
       {
         q: "Hoeveel dagen in **februari 2027** *(gewoon jaar)*?",
@@ -910,21 +910,21 @@ const steps = [
     checks: [
       {
         q: "Hoe **bereken** je iemands leeftijd?",
-        options: ["Huidig jaar − geboortejaar", "Geboortejaar − huidig jaar", "Huidig jaar + geboortejaar", "Geboortejaar × leeftijd"],
+        options: ["Huidig jaar − geboortejaar", "Geboortejaar − huidig jaar", "Huidig jaar + geboortejaar", "Huidig jaar − leeftijd"],
         answer: 0,
-        wrongHints: [null, "Andersom is negatief — fout.", "Optellen geeft een onmogelijk getal.", "Vermenigvuldigen geeft onmogelijk getal."],
+        wrongHints: [null, "Dan krijg je een getal onder nul. Welk jaartal moet vooraan staan?", "Dan kom je rond de 4000 uit. Kan iemand zo oud zijn?", "Dan reken je het geboortejaar uit. Maar de leeftijd weet je nog niet."],
       },
       {
-        q: "Anna geboren in **2010**, vandaag is **2026** *(ze is al jarig dit jaar)*. Leeftijd?",
+        q: "Anna is geboren in **2010**. Het is nu **2026** en ze is dit jaar **al jarig geweest**. Hoe oud is ze?",
         options: ["16 jaar", "15 jaar", "14 jaar", "17 jaar"],
         answer: 0,
-        wrongHints: [null, "Te weinig — al jarig betekent geen aftrek.", "Te weinig — controleer 2026-2010.", "Te veel."],
+        wrongHints: [null, "Te weinig — al jarig betekent geen aftrek.", "Reken 2026 − 2010 rustig uit: eerst van 2010 naar 2020, dan naar 2026.", "Telde je er een jaar bij? Ze is al jarig geweest: dan is het jaartal-verschil precies haar leeftijd."],
       },
       {
-        q: "Tom geboren **20 oktober 2013**. Vandaag is **5 maart 2026** *(NOG niet jarig dit jaar)*. Leeftijd?",
+        q: "Tom is geboren op **20 oktober 2013**. Vandaag is het **5 maart 2026**. Hij is dit jaar **nog niet jarig** geweest. Hoe oud is Tom?",
         options: ["12 jaar", "13 jaar", "14 jaar", "11 jaar"],
         answer: 0,
-        wrongHints: [null, "Te veel — hij is nog niet jarig.", "Te veel.", "Te weinig."],
+        wrongHints: [null, "Te veel — hij is nog niet jarig.", "Reken eerst 2026 − 2013 uit. Kom je dan op 14?", "Omdat hij nog niet jarig is, trek je 1 jaar af. Niet 2."],
         uitlegPad: {
           stappen: [
             { titel: "Verschil jaartallen", tekst: "2026 - 2013 = 13." },
@@ -943,10 +943,10 @@ const steps = [
         },
       },
       {
-        q: "Lisa wordt **8 jaar**, ze is geboren in **2018**. Welk jaar wordt ze 8?",
+        q: "Lisa is geboren in **2018**. In welk jaar wordt ze **8**?",
         options: ["2026", "2025", "2027", "2024"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te veel.", "Te weinig."],
+        wrongHints: [null, "Hoe oud wordt Lisa in 2025? Tel vanaf 2018.", "Hoe oud wordt Lisa in 2027? Is dat 8?", "Reken 2018 + 8 nog eens: van 2018 naar 2020 is 2 jaar. Hoeveel jaar moet er dan nog bij?"],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -1231,25 +1231,25 @@ const steps = [
         q: "Hoeveel **dagen** is een **week**?",
         options: ["7", "5", "10", "14"],
         answer: 0,
-        wrongHints: [null, "Werkdagen, niet hele week.", "Te veel.", "Te veel — dat zou 2 weken zijn."],
+        wrongHints: [null, "Werkdagen, niet hele week.", "Noem de dagen op, van maandag tot en met zondag. Hoeveel zijn het er?", "Te veel — dat zou 2 weken zijn."],
       },
       {
-        q: "Vakantie van **20 juli** t/m **3 augustus**. **Aantal dagen** *(beide meetellen)*?",
+        q: "Een vakantie duurt van **20 juli** tot en met **3 augustus**. Hoeveel **dagen** is dat, als je de eerste en de laatste dag allebei meetelt?",
         options: ["15 dagen", "14 dagen", "16 dagen", "13 dagen"],
         answer: 0,
-        wrongHints: [null, "Te weinig — vergeet niet zowel begin als eind mee te tellen.", "Te veel — controleer.", "Te weinig."],
+        wrongHints: [null, "Te weinig — vergeet niet zowel begin als eind mee te tellen.", "Juli heeft 31 dagen. Tel nog eens: 20 t/m 31 juli, en dan 1 t/m 3 augustus.", "Je bent er twee kwijt. Telde je juli als een maand van 30 dagen?"],
       },
       {
-        q: "Joost geboren in **2014**. Lisa is **3 jaar ouder**. Lisa geboren in?",
+        q: "Joost is geboren in **2014**. Lisa is **3 jaar ouder**. In welk jaar is Lisa geboren?",
         options: ["2011", "2017", "2014", "2016"],
         answer: 0,
-        wrongHints: [null, "Verkeerde richting — 3 jaar ouder = eerder geboren.", "Zelfde jaar — dan zijn ze even oud.", "Verkeerde richting."],
+        wrongHints: [null, "Verkeerde richting — 3 jaar ouder = eerder geboren.", "Zelfde jaar — dan zijn ze even oud.", "Ouder betekent eerder geboren. Is 2016 eerder of later dan 2014?"],
       },
       {
-        q: "**Tante** wordt **40** op **15 mei 2026**. Geboortejaar?",
-        options: ["1986", "2026", "1976", "1996"],
+        q: "**Tante** wordt **40** op **15 mei 2026**. In welk jaar is ze geboren?",
+        options: ["1986", "1985", "1976", "1996"],
         answer: 0,
-        wrongHints: [null, "Dat is dit jaar.", "Te ver terug.", "Te recent."],
+        wrongHints: [null, "Dan wordt ze op 15 mei 2026 al 41.", "Dan wordt ze in 2026 al 50.", "Dan wordt ze in 2026 pas 30."],
         uitlegPad: {
           stappen: [
             { titel: "Leeftijd aftrekken", tekst: "Huidig jaar 2026 - leeftijd 40 = 1986. Tante is geboren in 1986." },
@@ -1499,28 +1499,28 @@ const steps = [
       "Mix-toets in Doorstroomtoets-stijl. Door elkaar: data tellen, schrikkeljaar, leeftijden, praktijksommen.\n\nVeel succes!",
     checks: [
       {
-        q: "Hoeveel **dagen** in een **schrikkeljaar**?",
+        q: "Hoeveel **dagen** heeft een **schrikkeljaar**?",
         options: ["366", "365", "364", "367"],
         answer: 0,
-        wrongHints: [null, "Gewoon jaar.", "Te weinig.", "Bestaat niet."],
+        wrongHints: [null, "Gewoon jaar.", "Een gewoon jaar heeft al meer dan 364 dagen. Komt er in een schrikkeljaar een dag bij of af?", "Hoeveel extra dagen heeft een schrikkeljaar: één of twee?"],
       },
       {
-        q: "**Vandaag is dinsdag**. Wat is **3 weken later**?",
+        q: "**Vandaag is het dinsdag**. Welke dag is het **3 weken later**?",
         options: ["Dinsdag", "Vrijdag", "Zaterdag", "Maandag"],
         answer: 0,
-        wrongHints: [null, "Dat is 3 dagen later, niet 3 weken.", "Niet zoveel later.", "1 dag eerder."],
+        wrongHints: [null, "Dat is 3 dagen later, niet 3 weken.", "Wat gebeurt er met de dagnaam als je precies 1 week verder gaat?", "1 dag eerder."],
       },
       {
-        q: "**Mark wordt 12 op 5 augustus 2026**. Wanneer geboren?",
-        options: ["5 augustus 2014", "5 augustus 2012", "5 augustus 2026", "5 augustus 2008"],
+        q: "**Mark wordt 12 op 5 augustus 2026**. Wanneer is hij geboren?",
+        options: ["5 augustus 2014", "5 augustus 2012", "5 augustus 2013", "5 augustus 2008"],
         answer: 0,
-        wrongHints: [null, "Te ver terug.", "Dat is dit jaar.", "Veel te ver terug."],
+        wrongHints: [null, "Dan wordt hij in 2026 al 14.", "Dan wordt hij in 2026 al 13.", "Dan wordt hij in 2026 al 18."],
       },
       {
-        q: "Van **10 juni** tot **10 juli** is hoeveel **dagen** *(niet beide meetellen)*?",
+        q: "Hoeveel **dagen** zijn het van **10 juni** tot **10 juli** *(niet beide meetellen)*?",
         options: ["30 dagen", "31 dagen", "28 dagen", "29 dagen"],
         answer: 0,
-        wrongHints: [null, "Te veel.", "Te weinig.", "Te weinig."],
+        wrongHints: [null, "Hoeveel dagen heeft juni: 30 of 31?", "Rekende je alsof juni net zo kort is als februari?", "Van 10 juni tot 10 juli is precies één maand. Hoeveel dagen heeft juni?"],
         uitlegPad: {
           stappen: [
             { titel: "Let op de vraag — 'tot' vs 't/m'", tekst: "Belangrijk verschil in toetsvragen:\n• **'tot'** = einddag NIET meetellen\n• **'t/m' (tot en met)** = einddag WEL meetellen\nHier staat 'tot' → 10 juli zelf telt niet mee." },
@@ -1554,24 +1554,24 @@ const steps = [
       },
       {
         q: "Anna en Tim zijn in **hetzelfde jaar geboren**. Anna in januari, Tim in december. Wie is **ouder**?",
-        options: ["Anna", "Tim", "Even oud", "Niet uit te leggen"],
+        options: ["Anna", "Tim", "Even oud", "Dat hangt af van de dag"],
         answer: 0,
-        wrongHints: [null, "Tim is later geboren.", "Niet helemaal — eerder geboren = ouder.", "Wel uit te leggen — wie eerder geboren is, is ouder."],
+        wrongHints: [null, "Tim is later geboren.", "Ze zijn in hetzelfde jaar geboren, maar niet in dezelfde maand. Wie was als eerste jarig?", "Zelfs 31 januari komt vóór 1 december. Maakt de dag dan nog uit?"],
       },
-      { q: "Hoeveel **dagen** heeft februari in een **schrikkeljaar**?", options: ["29","28","30","31"], answer: 0, wrongHints: [null, "Niet — gewoon jaar.", "Niet — geen 30.", "Niet — geen 31."] },
-      { q: "Hoeveel **maanden** in 1 jaar?", options: ["12","10","11","13"], answer: 0, wrongHints: [null, "Te weinig.", "Te weinig.", "Te veel."] },
-      { q: "Welke maand heeft **31 dagen**?", options: ["Januari","Februari","April","September"], answer: 0, wrongHints: [null, "Niet — 28/29.", "Niet — 30.", "Niet — 30."] },
-      { q: "**Schrikkeljaar** komt elke?", options: ["4 jaar","2 jaar","10 jaar","100 jaar"], answer: 0, wrongHints: [null, "Te vaak.", "Te zelden.", "Niet primair."] },
-      { q: "Hoeveel **weken** in 1 jaar (ongeveer)?", options: ["52","12","100","30"], answer: 0, wrongHints: [null, "Dat is maanden.", "Niet.", "Niet."] },
-      { q: "Welke dag komt **na vrijdag**?", options: ["Zaterdag","Donderdag","Zondag","Maandag"], answer: 0, wrongHints: [null, "Niet — daarvóór.", "Niet — dat is 2 dagen erna.", "Niet."] },
-      { q: "Geboren 2014, hoe oud in 2026 (na de verjaardag)?", options: ["12","11","13","10"], answer: 0, wrongHints: [null, "Niet — verjaardag al gehad.", "Te oud.", "Te jong."] },
-      { q: "**Koningsdag** is op?", options: ["27 april","30 april","5 mei","30 maart"], answer: 0, wrongHints: [null, "Vroegere Koninginnedag.", "Bevrijdingsdag.", "Niet."] },
-      { q: "**Bevrijdingsdag** is op?", options: ["5 mei","4 mei","27 april","31 december"], answer: 0, wrongHints: [null, "Dodenherdenking.", "Koningsdag.", "Oudejaarsdag."] },
-      { q: "**Dodenherdenking** is op?", options: ["4 mei","5 mei","11 nov","2 nov"], answer: 0, wrongHints: [null, "Bevrijding.", "Wapenstilstand WO1.", "Niet."] },
-      { q: "Hoeveel **dagen** in een week?", options: ["7","5","10","6"], answer: 0, wrongHints: [null, "Werkweek.", "Niet.", "Niet."] },
-      { q: "Een **kwartaal** heeft hoeveel maanden?", options: ["3","4","6","12"], answer: 0, wrongHints: [null, "Niet.", "Half jaar.", "Heel jaar."] },
-      { q: "Eeuw heeft hoeveel **jaar**?", options: ["100","10","1000","50"], answer: 0, wrongHints: [null, "Decennium.", "Millennium.", "Halve eeuw."] },
-      { q: "Hoeveel dagen in **3 weken**?", options: ["21","20","14","30"], answer: 0, wrongHints: [null, "Niet.", "Dat is 2 weken.", "Niet."] },
+      { q: "Hoeveel **dagen** heeft februari in een **schrikkeljaar**?", options: ["29","28","30","31"], answer: 0, wrongHints: [null, "Dat is februari in een gewoon jaar.", "Heeft februari ooit 30 dagen?", "Februari is de kortste maand. Kan hij dan 31 dagen hebben?"] },
+      { q: "Hoeveel **maanden** heeft een jaar?", options: ["12","10","11","13"], answer: 0, wrongHints: [null, "Tel de maanden: januari, februari, … tot en met december.", "Ben je er één vergeten? Tel van januari tot en met december.", "Telde je januari van het volgende jaar mee?"] },
+      { q: "Welke maand heeft **31 dagen**?", options: ["Januari","Februari","April","September"], answer: 0, wrongHints: [null, "Februari heeft 28 of 29 dagen.", "April heeft 30 dagen.", "September heeft 30 dagen."] },
+      { q: "Om de hoeveel jaar is er een **schrikkeljaar**?", options: ["4 jaar","2 jaar","10 jaar","100 jaar"], answer: 0, wrongHints: [null, "Dan zou 2026 ook een schrikkeljaar zijn. Had februari 2026 29 dagen?", "Dan zou er in je hele basisschooltijd maar één schrikkeljaar zijn. Klopt dat?", "Om de 100 jaar is er juist een uitzondering. Hoe vaak komt een gewoon schrikkeljaar?"] },
+      { q: "Hoeveel **weken** heeft een jaar ongeveer?", options: ["52","12","48","365"], answer: 0, wrongHints: [null, "Dat is het aantal maanden.", "Dat is 12 × 4. Maar de meeste maanden duren iets langer dan 4 weken.", "Dat is het aantal dagen. Hoeveel dagen zitten er in één week?"] },
+      { q: "Welke dag komt direct **na vrijdag**?", options: ["Zaterdag","Donderdag","Zondag","Maandag"], answer: 0, wrongHints: [null, "Donderdag komt vóór vrijdag.", "Zondag is 2 dagen na vrijdag.", "Maandag komt na het weekend. Ligt er niets tussen vrijdag en maandag?"] },
+      { q: "Je bent geboren in 2014. Hoe oud ben je in 2026, na je verjaardag?", options: ["12","11","13","10"], answer: 0, wrongHints: [null, "Je bent dit jaar al jarig geweest. Moet je dan nog een jaar aftrekken?", "Dan zou je in 2013 geboren zijn.", "Dan zou je in 2016 geboren zijn."] },
+      { q: "Op welke datum is **Koningsdag**?", options: ["27 april","30 april","5 mei","30 maart"], answer: 0, wrongHints: [null, "Dat was vroeger Koninginnedag.", "Dat is Bevrijdingsdag.", "Dan is het nog maart. Koningsdag valt later in het voorjaar."] },
+      { q: "Op welke datum is **Bevrijdingsdag**?", options: ["5 mei","4 mei","27 april","31 december"], answer: 0, wrongHints: [null, "Dat is Dodenherdenking.", "Dat is Koningsdag.", "Dat is Oudejaarsdag."] },
+      { q: "Op welke datum is de **Dodenherdenking**?", options: ["4 mei","5 mei","11 nov","2 nov"], answer: 0, wrongHints: [null, "Op 5 mei is het Bevrijdingsdag.", "11 november is Sint-Maarten.", "2 november is Allerzielen, een kerkelijke gedenkdag. Dat is niet de Nationale Dodenherdenking."] },
+      { q: "Hoeveel **dagen** heeft een week?", options: ["7","5","10","6"], answer: 0, wrongHints: [null, "Dat zijn alleen de schooldagen.", "Noem de dagen op, van maandag tot en met zondag. Hoeveel zijn het er?", "Ben je er één vergeten? Tel maandag tot en met zondag."] },
+      { q: "Een **kwartaal** heeft hoeveel maanden?", options: ["3","4","6","12"], answer: 0, wrongHints: [null, "Een kwartaal is een kwart jaar. Is 4 maanden een kwart van 12?", "Dat is een half jaar.", "Dat is een heel jaar."] },
+      { q: "Hoeveel **jaar** duurt een eeuw?", options: ["100","10","1000","50"], answer: 0, wrongHints: [null, "Dat is een decennium.", "Dat is een millennium.", "Dat is een halve eeuw."] },
+      { q: "Hoeveel dagen zitten er in **3 weken**?", options: ["21","20","14","30"], answer: 0, wrongHints: [null, "Reken 3 × 7 nog eens.", "Dat is 2 weken.", "Dat is ongeveer een maand. Hoeveel dagen zijn 3 weken van 7?"] },
     ],
   },
 ];

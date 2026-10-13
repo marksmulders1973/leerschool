@@ -40,9 +40,9 @@ const steps = [
       },
       {
         q: "Wat is het **hele werkwoord** van *'lopend'*?",
-        options: ["lopen","loopt","liep","lopend"],
+        options: ["lopen","loopt","liep","gelopen"],
         answer: 0,
-        wrongHints: [null,"Dat is de hij-vorm tegenwoordige tijd.","Dat is verleden tijd.","Dat is een vorm, niet het hele werkwoord."],
+        wrongHints: [null,"Dat is de hij-vorm tegenwoordige tijd.","Dat is verleden tijd.","Dat is het voltooid deelwoord (ik heb gelopen). Welke vorm staat in het woordenboek?"],
         uitlegPad: {
           stappen: [{ titel: "Hele = -en-vorm", tekst: "Lopend = -end-vorm. Hele werkwoord = lopen (eindigt op -en)." }],
           woorden: [{ woord: "lopend", uitleg: "Tegenwoordig deelwoord van lopen (-end vorm)." }],
@@ -54,9 +54,9 @@ const steps = [
       },
       {
         q: "Welke zin heeft **geen werkwoord**?",
-        options: ["De auto rood en groot","De auto rijdt rood","Ik fiets snel","Lisa loopt"],
+        options: ["De auto rood en groot","De rode auto rijdt","Ik fiets snel","Lisa loopt"],
         answer: 0,
-        wrongHints: [null, "Bevat 'rijdt' = werkwoord.", "Bevat 'fiets' (als ww) of 'snel'.", "Bevat 'loopt' = werkwoord."],
+        wrongHints: [null, "Wat doet de auto? Dat woord is een werkwoord.", "Wat doe ik? Ik fiets. Dan is 'fiets' hier een werkwoord.", "Wat doet Lisa? Dat woord is een werkwoord."],
         uitlegPad: {
           stappen: [{ titel: "Welke zin is incompleet", tekst: "'De auto rood en groot' = geen werkwoord = geen echte zin." }],
           woorden: [{ woord: "geen werkwoord", uitleg: "Zin zonder werkwoord = onvolledig (geen actie of toestand-ww)." }],
@@ -88,10 +88,10 @@ const steps = [
         },
       },
       {
-        q: "Welke is **goed**: 'praten' voor 'hij'?",
+        q: "Welke vorm is **goed**: 'praten' bij 'hij'?",
         options: ["praat","praatt","praats","praaten"],
         answer: 0,
-        wrongHints: [null,"Stam eindigt op t — geen tweede t erbij.","Geen 's' in tegenwoordige tijd.","Niet meervoud."],
+        wrongHints: [null,"Stam eindigt op t — geen tweede t erbij.","Bij 'hij' komt er geen s achter de stam. Wat dan wel?","Het meervoud is 'praten' met één a. Is 'hij' meervoud?"],
         uitlegPad: {
           stappen: [{ titel: "Stam eindigt op t", tekst: "Praten → stam = praat. Stam eindigt al op t — niet nog een t erbij." }],
           woorden: [{ woord: "praat", uitleg: "Stam van praten. Eindigt al op t." }],
@@ -102,7 +102,7 @@ const steps = [
         },
       },
       {
-        q: "**'Vinden'** voor **'hij'**:",
+        q: "Hoe schrijf je **'vinden'** bij **'hij'**?",
         options: ["vindt","vind","vint","vinden"],
         answer: 0,
         wrongHints: [null,"Dat is de ik-vorm.","Wat is de stam van 'vinden'? Laat je een letter van de stam weg?","Dat is meervoud."],
@@ -123,10 +123,10 @@ const steps = [
     explanation: "Werkwoorden zijn **zwak** of **sterk**. **Zwakke** zijn makkelijk: ze krijgen **-de** of **-te** in de verleden tijd.\n\n**Voor 1 persoon**:\n• stam + **-de** of **-te** *(volgens de 'kofschip-regel')*.\n\n**'t Kofschip-regel**: als de stam eindigt op een letter uit **t-k-f-s-ch-p**, dan is het **-te**. Anders **-de**.\n\n**Voorbeelden — -te (kofschip)**:\n• werken → werk-te → ik **werkte** *('k' in kofschip)*\n• kloppen → klop-te → ik **klopte** *('p')*\n• vissen → vis-te → ik **viste** *('s')*\n• rusten → rust-te → ik **rustte** *(stam eindigt op t — wél tweemaal t)*\n\n**Voorbeelden — -de (NIET in kofschip)**:\n• horen → hoor-de → ik **hoorde**\n• spelen → speel-de → ik **speelde**\n• leren → leer-de → ik **leerde**\n• landen → land-de → ik **landde** *(stam eindigt op d — wel dubbel d)*\n\n**Voor meerdere personen** (wij/jullie/zij):\n• stam + **-den** of **-ten**.\n\nVoorbeelden:\n• Wij **werkten** *(meervoud van werkte)*\n• Zij **hoorden** *(meervoud van hoorde)*\n\n**toetsvraag-vorm**:\n*'Welke is correct in verleden tijd? \"Hij... gisteren hard.\" werkte / werkde'*\n• 'Werken' → stam 'werk' → eindigt op k → kofschip → **werkte**.",
     checks: [
       {
-        q: "**'Hij stopte de auto'** of **'Hij stopde de auto'**?",
+        q: "Welke zin is goed: **'Hij stopte de auto'** of **'Hij stopde de auto'**?",
         options: ["stopte","stopde","beide goed","stopt"],
         answer: 0,
-        wrongHints: [null,"Op welke letter eindigt de stam? Zit die in 't kofschip?","Wel een verschil — kofschip-regel.","Dat is tegenwoordige tijd."],
+        wrongHints: [null,"Op welke letter eindigt de stam? Zit die in 't kofschip?","Er is maar één goede vorm. Op welke letter eindigt de stam 'stop'?","Dat is tegenwoordige tijd."],
         uitlegPad: {
           stappen: [{ titel: "Kofschip-regel: P → -te", tekst: "Stoppen → stam stop → eindigt op P (in 'kofschip') → -te. → stopte." }],
           woorden: [{ woord: "kofschip", uitleg: "Letters t-k-f-s-ch-p. Stam eindigt op één daarvan → -te in verleden tijd." }],
@@ -154,7 +154,7 @@ const steps = [
         q: "**'Lisa ____ haar fiets'** met 'fixen' in verleden tijd:",
         options: ["fixte","fixde","fixen","fixt"],
         answer: 0,
-        wrongHints: [null,"Op welke klank eindigt de stam? Een x klinkt als k+s — zit die in 't kofschip?","Niet hele werkwoord.","Dat is tegenwoordige tijd."],
+        wrongHints: [null,"Op welke klank eindigt de stam? Een x klinkt als k+s — zit die in 't kofschip?","Dat is het hele werkwoord. Lisa deed het al: welke vorm hoort daarbij?","Dat is tegenwoordige tijd."],
         uitlegPad: {
           stappen: [{ titel: "X = k+s = kofschip", tekst: "Fixen → stam fix → X (eigenlijk k+s) → kofschip → -te → fixte." }],
           woorden: [{ woord: "fixte", uitleg: "Verleden tijd van fixen (Engels-NL leenwoord)." }],
@@ -175,7 +175,7 @@ const steps = [
         q: "Verleden tijd van **'lopen'** voor 'ik':",
         options: ["liep","loopte","loopde","lopde"],
         answer: 0,
-        wrongHints: [null,"Niet — 'lopen' is sterk, geen kofschip-regel.","Geen kofschip — sterk werkwoord.","Geen sterke vervoeging."],
+        wrongHints: [null,"Zeg je 'ik loopte'? Bij 'lopen' werkt de -te-regel niet.","Zeg je 'ik loopde'? Luister hoe het echt klinkt.","Hier verdwijnt een o, en ook de -de klopt niet. Hoe zeg je het?"],
         uitlegPad: {
           stappen: [{ titel: "Sterk = klinker verandert", tekst: "Lopen is sterk: oo → ie → ik liep (geen -de/-te)." }],
           woorden: [{ woord: "sterk werkwoord", uitleg: "Werkwoord waarbij klinker verandert in verleden tijd." }],
@@ -238,7 +238,7 @@ const steps = [
         q: "**'Wij ____ samen'** ('praten', verleden tijd):",
         options: ["praatten","praatte","praaten","pratten"],
         answer: 0,
-        wrongHints: [null,"Dat is enkelvoud.","Dit lijkt op het hele werkwoord. Waar is de uitgang van de verleden tijd?","Niet correct gespeld."],
+        wrongHints: [null,"Dat is enkelvoud.","Dit lijkt op het hele werkwoord. Waar is de uitgang van de verleden tijd?","Hoeveel a's heeft de stam 'praat'? Die klank moet lang blijven."],
         uitlegPad: {
           stappen: [{ titel: "Stam op t + ten", tekst: "Praten → stam praat (eindigt op t = kofschip) → -te. Wij = -ten. Stam praat + -ten = praatten (dubbele t!)." }],
           woorden: [{ woord: "praatten", uitleg: "Meervoud verleden tijd van praten. Dubbele t (stam praat + ten)." }],
@@ -266,7 +266,7 @@ const steps = [
         q: "**'Hij ____ in zijn boek'** ('lezen', tegenwoordige tijd):",
         options: ["leest","las","leeste","lees"],
         answer: 0,
-        wrongHints: [null,"Dat is verleden tijd.","Niet correct.","Dat is de ik-vorm."],
+        wrongHints: [null,"Dat is verleden tijd.","Bij 'hij' is het stam + t. Komt er dan nog een e achter?","Dat is de ik-vorm."],
         uitlegPad: {
           stappen: [{ titel: "Stam + t", tekst: "Lezen → stam lees. Hij + stam + t = leest." }],
           woorden: [{ woord: "leest", uitleg: "3e persoon TT van lezen. Stam (lees) + t." }],
@@ -280,7 +280,7 @@ const steps = [
         q: "**'Mark ____ snel naar school'** ('rennen', verleden tijd):",
         options: ["rende","rent","rennen","rentde"],
         answer: 0,
-        wrongHints: [null,"Dat is tegenwoordige tijd.","Hele werkwoord.","Niet correct gespeld."],
+        wrongHints: [null,"Dat is tegenwoordige tijd.","Dat is het hele werkwoord.","De stam van 'rennen' is 'ren'. Hoort daar een t in?"],
         uitlegPad: {
           stappen: [{ titel: "Rennen → rende", tekst: "Rennen → stam ren. N geen kofschip → -de → rende." }],
           woorden: [{ woord: "rende", uitleg: "Verleden tijd enkelvoud van rennen. Zwak werkwoord met -de." }],
@@ -318,7 +318,7 @@ const steps = [
         q: "**'Wij ____ vroeger naar het strand'** ('gaan', verleden tijd):",
         options: ["gingen","ging","gaan","ginge"],
         answer: 0,
-        wrongHints: [null, "Dat is enkelvoud (ik/hij ging).", "Dat is tegenwoordige tijd.", "Geen correcte vorm in Nederlands."],
+        wrongHints: [null, "Dat is enkelvoud (ik/hij ging).", "'Gaan' is tegenwoordige tijd. 'Vroeger' vraagt om verleden tijd.", "Die vorm bestaat niet. Hoe zeg je 'wij ... vroeger'?"],
         uitlegPad: {
           stappen: [
             { titel: "Sterk werkwoord: gaan", tekst: "**Gaan** is een sterk (onregelmatig) werkwoord. Verleden tijd verandert klinker: ga → ging. Geen -te/-de, geen 't-kofschip." },
@@ -342,7 +342,7 @@ const steps = [
         q: "Welke vorm is de **voltooid tegenwoordige tijd** van 'lezen' bij *'Lisa'*?",
         options: ["heeft gelezen","las","leest","heeft geleest"],
         answer: 0,
-        wrongHints: [null, "Dat is verleden tijd (VT), niet voltooid (VTT).", "Dat is tegenwoordige tijd.", "Niet correct — 'gelezen' is voltooid deelwoord (sterk ww), niet 'geleest'."],
+        wrongHints: [null, "Dat is de verleden tijd. Bij de voltooide tijd hoort een hulpwerkwoord.", "Dat is tegenwoordige tijd.", "'Lezen' is een sterk werkwoord. Eindigt het voltooid deelwoord dan op -t?"],
         uitlegPad: {
           stappen: [
             { titel: "Welke tijd is gevraagd?", tekst: "Voltooid tegenwoordige tijd (VTT) = **hebben/zijn + voltooid deelwoord**. Bij 'lezen': heeft + gelezen." },
@@ -387,25 +387,25 @@ const steps = [
           niveaus: { basis: "vangt.", simpeler: "Vangen → stam 'vang'. Hij-vorm TT = stam + t = vangt.", nogSimpeler: "Vangt" },
         },
       },
-      { q: "Werken — verleden tijd: 'hij ____'?", options: ["werkte","werkde","werk","werkten"], answer: 0, wrongHints: [null, "Op welke letter eindigt de stam? Zit die in 't kofschip?", "Geen verleden vorm.", "Meervoud."] },
-      { q: "Spelen — verleden tijd: 'wij ____'?", options: ["speelden","speelde","speelten","spelen"], answer: 0, wrongHints: [null, "Dat is enkelvoud.", "Niet — l zit niet in kofschip.", "Tegenwoordige tijd."] },
-      { q: "Welke letters zijn de 't kofschip'-letters?", options: ["t-k-f-s-ch-p","t-k-h-s-d","a-e-i-o-u","b-d-g-w"], answer: 0, wrongHints: [null, "Niet — h en d horen er niet bij.", "Dat zijn klinkers.", "Andere letters."] },
-      { q: "Ik **bak** brood. Stam = ?", options: ["bak","ba","bakk","bakken"], answer: 0, wrongHints: [null, "Te kort.", "Verdubbeling klopt niet hier.", "Hele werkwoord."] },
+      { q: "Wat is de verleden tijd van 'werken' bij 'hij'?", options: ["werkte","werkde","werk","werkten"], answer: 0, wrongHints: [null, "Op welke letter eindigt de stam? Zit die in 't kofschip?", "'Werk' is de ik-vorm in de tegenwoordige tijd.", "'Werkten' is meervoud (wij werkten). Hoe is het bij 'hij'?"] },
+      { q: "Wat is de verleden tijd van 'spelen' bij 'wij'?", options: ["speelden","speelde","speelten","spelen"], answer: 0, wrongHints: [null, "'Speelde' is enkelvoud (ik speelde). Hoe is het bij 'wij'?", "Zit de l in 't kofschip? Kies dan -de of -te.", "'Spelen' is de tegenwoordige tijd (wij spelen nu)."] },
+      { q: "Welke letters zijn de 't kofschip'-letters?", options: ["t-k-f-s-ch-p","t-k-h-s-d","t-k-f-s-g-p","t-k-f-z-ch-p"], answer: 0, wrongHints: [null, "Zit er in 't kofschip een h of een d? Spreek het langzaam uit.", "De g lijkt op ch, maar welke klank hoor je in 't kofschip?", "Hoor je een z in 't kofschip? Spreek het langzaam uit."] },
+      { q: "Ik **bak** brood. Wat is de stam van 'bakken'?", options: ["bak","bakt","bakk","bakken"], answer: 0, wrongHints: [null, "Dat is de hij-vorm: stam + t.", "Hoor je twee k's aan het eind? De stam is de ik-vorm.", "Dat is het hele werkwoord. De stam is korter."] },
       { q: "Vul de goede vorm in (tegenwoordige tijd): 'Wij ___ blij.'", options: ["zijn","is","bent","waren"], answer: 0, wrongHints: [null, "'Is' hoort bij hij, zij of het. Welke vorm hoort bij wij?", "'Bent' hoort bij jij of u. Welke vorm hoort bij wij?", "'Waren' is verleden tijd. Hoe zeg je het nu, in de tegenwoordige tijd?"] },
-      { q: "Vul in: 'Jij ___ mooi.' (zijn)", options: ["bent","is","zijn","waren"], answer: 0, wrongHints: [null, "Hij/zij/het.", "Wij/jullie/zij.", "Verleden."] },
-      { q: "Vul in: 'Ik ___ een boek.' (lezen, tegenwoordige tijd)", options: ["lees","leest","lezen","las"], answer: 0, wrongHints: [null, "Hij/zij/het.", "Hele/meervoud.", "Verleden."] },
-      { q: "Verleden tijd 'fietsen' (ik)?", options: ["fietste","fietsde","fiets","fietsten"], answer: 0, wrongHints: [null, "Op welke letter eindigt de stam? Zit die in 't kofschip?", "Tegenwoordige tijd.", "Meervoud."] },
-      { q: "Verleden tijd 'lopen' (ik) — sterk werkwoord", options: ["liep","loopte","loopde","loopen"], answer: 0, wrongHints: [null, "Niet — klinker verandert.", "Niet.", "Zo schrijf je het hele werkwoord niet — en het is ook geen verleden tijd."] },
-      { q: "Voltooid deelwoord 'fietsen'?", options: ["gefietst","gefietsd","fietste","fietsen"], answer: 0, wrongHints: [null, "Op welke letter eindigt de stam? Zit die in 't kofschip?", "Verleden tijd.", "Hele."] },
-      { q: "Voltooid deelwoord 'lopen'?", options: ["gelopen","gelopt","liepte","lopen"], answer: 0, wrongHints: [null, "Niet sterk.", "Verleden tijd.", "Hele."] },
-      { q: "Welke **hulpwerkwoorden** gebruik je in de **voltooide tijd**?", options: ["hebben of zijn","worden","kunnen","willen"], answer: 0, wrongHints: [null, "Worden hoort bij de lijdende vorm, niet bij de voltooide tijd.", "Modaal.", "Modaal."] },
-      { q: "Vul in: 'Ik ___ gisteren naar school.' (gaan)", options: ["ging","ga","gaat","gegaan"], answer: 0, wrongHints: [null, "Tegenwoordige tijd.", "Hij/zij.", "Voltooid (mist hulp)."] },
-      { q: "Vul: 'Hij ___ veel boeken.' (lezen, tt)", options: ["leest","lees","lezen","las"], answer: 0, wrongHints: [null, "Ik.", "Hele.", "Verleden."] },
-      { q: "Wat is een **regelmatig** werkwoord?", options: ["Volgt vaste regels: stam + te of de","Een werkwoord waarvan de klinker verandert","Een werkwoord als kunnen of moeten","Een werkwoord dat alleen helpt"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet relevant.", "Niet."] },
-      { q: "Wat is een **onregelmatig** werkwoord?", options: ["Klinker verandert in de verleden tijd","Volgt de vaste regels met -te of -de","Krijgt altijd een s achter de stam","Is altijd een hulpwerkwoord"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Niet."] },
-      { q: "**Wij waren** komt van welk werkwoord?", options: ["zijn","worden","weten","varen"], answer: 0, wrongHints: [null, "Andere.", "Andere.", "Varen is iets anders: met een boot."] },
-      { q: "Tegenwoordige tijd-meervoud 'kopen'?", options: ["kopen","koopt","koop","kocht"], answer: 0, wrongHints: [null, "Hij.", "Ik.", "Verleden."] },
-      { q: "Verleden tijd 'hopen' (ik)?", options: ["hoopte","hoopde","hoop","hoopten"], answer: 0, wrongHints: [null, "Op welke letter eindigt de stam? Zit die in 't kofschip?", "Tegenwoordige tijd.", "Meervoud."] },
+      { q: "Vul in: 'Jij ___ mooi.' (zijn, tegenwoordige tijd)", options: ["bent","is","zijn","waren"], answer: 0, wrongHints: [null, "'Is' hoort bij hij, zij of het.", "'Zijn' hoort bij wij, jullie of zij.", "'Waren' is verleden tijd."] },
+      { q: "Vul in: 'Ik ___ een boek.' (lezen, tegenwoordige tijd)", options: ["lees","leest","lezen","las"], answer: 0, wrongHints: [null, "'Leest' hoort bij hij of zij. Wat hoort bij ik?", "Dat is het hele werkwoord (en het meervoud: wij lezen).", "'Las' is verleden tijd."] },
+      { q: "Wat is de verleden tijd van 'fietsen' bij 'ik'?", options: ["fietste","fietsde","fiets","fietsten"], answer: 0, wrongHints: [null, "Op welke letter eindigt de stam? Zit die in 't kofschip?", "'Fiets' is de tegenwoordige tijd (ik fiets nu).", "'Fietsten' is meervoud (wij fietsten)."] },
+      { q: "Wat is de verleden tijd van 'lopen' bij 'ik'?", options: ["liep","loopte","loopde","loopen"], answer: 0, wrongHints: [null, "Zeg je 'ik loopte'? Luister of dat goed klinkt.", "Bij 'lopen' werkt de -te/-de-regel niet. Hoe zeg je het echt?", "Zo schrijf je het hele werkwoord niet — en het is ook geen verleden tijd."] },
+      { q: "Wat is het voltooid deelwoord van 'fietsen'?", options: ["gefietst","gefietsd","fietste","fietsen"], answer: 0, wrongHints: [null, "Op welke letter eindigt de stam? Zit die in 't kofschip?", "'Fietste' is verleden tijd. Hoe zeg je 'ik heb ...'?", "Dat is het hele werkwoord. Hoe zeg je 'ik heb ...'?"] },
+      { q: "Wat is het voltooid deelwoord van 'lopen'?", options: ["gelopen","gelopt","geloopt","lopen"], answer: 0, wrongHints: [null, "Hier mist een o en de uitgang klopt niet. Hoe zeg je 'ik heb ...'?", "Zeg je 'ik heb geloopt'? Bij een sterk werkwoord eindigt het niet op -t.", "Dat is het hele werkwoord. Hoe zeg je 'ik heb ...'?"] },
+      { q: "Welke **hulpwerkwoorden** gebruik je in de **voltooide tijd**?", options: ["hebben of zijn","worden of blijven","kunnen of willen","gaan of komen"], answer: 0, wrongHints: [null, "'Worden' hoort bij de lijdende vorm (het huis wordt gebouwd).", "'Kunnen' en 'willen' zeggen wat iemand kan of wil, niet dat iets al klaar is.", "Zeg je 'ik ga gefietst'? Welk woord staat vóór 'gefietst'?"] },
+      { q: "Vul in: 'Ik ___ gisteren naar school.' (gaan)", options: ["ging","ga","gaat","gegaan"], answer: 0, wrongHints: [null, "'Ga' is tegenwoordige tijd. 'Gisteren' vraagt om verleden tijd.", "'Gaat' hoort bij hij of zij, en is tegenwoordige tijd.", "'Gegaan' heeft een hulpwerkwoord nodig (ik ben gegaan)."] },
+      { q: "Vul in: 'Hij ___ veel boeken.' (lezen, tegenwoordige tijd)", options: ["leest","lees","lezen","las"], answer: 0, wrongHints: [null, "'Lees' hoort bij ik. Wat komt erbij bij hij?", "Dat is het hele werkwoord.", "'Las' is verleden tijd."] },
+      { q: "Wat is een **regelmatig** werkwoord?", options: ["Het krijgt in de verleden tijd stam + te of stam + de","De klinker verandert in de verleden tijd","Het is een werkwoord dat je heel vaak gebruikt","Het helpt een ander werkwoord, zoals 'kunnen'"], answer: 0, wrongHints: [null, "Bij 'werken → werkte' verandert de klinker niet. Is 'werken' regelmatig?", "'Regelmatig' betekent hier niet 'vaak'. Het gaat om hoe je de verleden tijd maakt.", "Een hulpwerkwoord kan regelmatig of onregelmatig zijn. Waar let je dan op?"] },
+      { q: "Wat is een **onregelmatig** werkwoord?", options: ["De klinker verandert in de verleden tijd, zoals lopen → liep","Het krijgt stam + te of stam + de, zoals werken → werkte","Je gebruikt het maar af en toe, zoals 'kwaken' of 'zweven'","Het helpt een ander werkwoord, zoals 'kunnen' of 'moeten'"], answer: 0, wrongHints: [null, "Werken → werkte volgt de vaste regel. Is dat onregelmatig?", "Onregelmatig betekent hier niet 'af en toe'. Kijk naar de verleden tijd.", "Ook 'kunnen' heeft een verleden tijd (kon). Waar gaat onregelmatig over?"] },
+      { q: "Van welk werkwoord komt **'wij waren'**?", options: ["zijn","worden","weten","varen"], answer: 0, wrongHints: [null, "'Worden' wordt in de verleden tijd 'werden'.", "'Weten' wordt in de verleden tijd 'wisten'.", "Varen is iets anders: met een boot."] },
+      { q: "Wat is de tegenwoordige tijd van 'kopen' bij 'wij'?", options: ["kopen","koopt","koop","kocht"], answer: 0, wrongHints: [null, "'Koopt' hoort bij hij of zij.", "'Koop' hoort bij ik.", "'Kocht' is verleden tijd."] },
+      { q: "Wat is de verleden tijd van 'hopen' bij 'ik'?", options: ["hoopte","hoopde","hoop","hoopten"], answer: 0, wrongHints: [null, "Op welke letter eindigt de stam? Zit die in 't kofschip?", "'Hoop' is tegenwoordige tijd (ik hoop nu).", "'Hoopten' is meervoud (wij hoopten)."] },
     ],
   },
 ];

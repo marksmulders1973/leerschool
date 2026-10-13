@@ -46,10 +46,10 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel **water** per dag drinken?",
-        options: ["1,5-2 liter", "Geen", "5 liter", "100 ml"],
+        q: "Hoeveel **water** moet je per dag drinken?",
+        options: ["1,5-2 liter", "0,5-1 liter", "3-4 liter", "5-6 liter"],
         answer: 0,
-        wrongHints: [null, "Wel nodig.", "Te veel.", "Te weinig."],
+        wrongHints: [null, "0,5-1 liter is maar 2 tot 4 glazen. Je verliest elke dag meer vocht door plassen, zweten en ademen.", "3-4 liter is 12 tot 16 glazen. Zoveel heeft een kind niet nodig.", "5-6 liter is meer dan 20 glazen. Zoveel heeft niemand nodig."],
         uitlegPad: {
           stappen: [
             { titel: "Waarom water belangrijk is", tekst: "Je lichaam bestaat voor **60% uit water**. Elke dag verlies je water (plassen, zweten, ademen). Dat moet je aanvullen — anders krijg je dorst, hoofdpijn en moeheid." },
@@ -74,16 +74,16 @@ const steps = [
         },
       },
       {
-        q: "Wat heeft **vezels**?",
-        options: ["Volkoren + groente", "Snoep", "Frisdrank", "Boter"],
+        q: "Waar zitten veel **vezels** in?",
+        options: ["Volkorenbrood en groente", "Kaas en eieren", "Vlees en vis", "Melk en yoghurt"],
         answer: 0,
-        wrongHints: [null, "Snoep is vooral suiker — vezels zitten in dingen die uit planten komen.", "Frisdrank is water met suiker — waar zitten de 'draadjes' van de plant in?", "Boter is vet — vezels komen uit graan en planten. Welke optie past?"],
+        wrongHints: [null, "Kaas en eieren geven vooral eiwit. Vezels komen uit planten.", "Vlees en vis komen van dieren — daar zitten geen vezels in.", "Melk en yoghurt geven vooral calcium. Waar zitten de 'draadjes' van planten in?"],
       },
       {
-        q: "Welke vitamine vooral uit **zon**?",
+        q: "Welke vitamine maakt je lichaam vooral met hulp van de **zon**?",
         options: ["D", "C", "A", "K"],
         answer: 0,
-        wrongHints: [null, "Sinaasappel.", "Wortel.", "Groene bladgroente."],
+        wrongHints: [null, "Vitamine C haal je vooral uit sinaasappel en paprika.", "Vitamine A zit veel in wortels.", "Vitamine K zit vooral in groene bladgroente."],
         uitlegPad: {
           stappen: [
             { titel: "Vitamines = mini-helpers", tekst: "Vitamines zijn kleine stoffen die je lichaam nodig heeft om goed te werken. Elke vitamine heeft een eigen taak." },
@@ -116,10 +116,10 @@ const steps = [
       "**Schijf van Vijf** = NL-richtlijn voor gezond eten. Door **Voedingscentrum**.\n\nVerdeeld in **5 vakken**:\n\n**Vak 1: Groente + fruit** 🥕🍎\n• **250 gram groente** per dag *(2 stukken)*.\n• **2 stuks fruit** per dag *(1 stuk = ongeveer 100 g).*\n• Liefst **variatie** in kleuren *(kleurrijke borden = veel vitamines)*.\n• Vers en diepvries zijn allebei prima. Uit blik of pot mag ook — let dan op zout en suiker.\n\n**Vak 2: Brood + graanproducten + aardappelen** *(ook rijst, pasta, ontbijtgranen)* 🍞🥔\n• Liefst **volkoren** *(meer vezels)*.\n• Aantal: ~4-6 sneetjes brood + 1 keer warm met aardappel/pasta/rijst per dag.\n\n**Vak 3: Zuivel, noten, vis, ei, vlees + peulvruchten** — zuivel + noten 🥛🥜\n• Melk, yoghurt, kwark, kaas.\n• 2-3 porties per dag.\n• Bevat calcium + eiwit + B12.\n\n**Vak 3 (vervolg): vlees, vis, ei + plantaardige eiwitten** 🐟🥚\n• 1-2 keer per dag.\n• 1 x **vis per week** *(omega-3)*.\n• Plantaardige alternatieven *(peulvruchten, tofu)*.\n• Limiet vlees: max 500 g per week *(daarvan max 300 g rood vlees)*.\n\n**Vak 4: Smeer- en kookvetten** 🌻\n• Liefst **plantaardige** olie *(olijfolie, zonnebloemolie)*.\n• Liever zachte margarine of halvarine dan roomboter.\n• Beperkt — kleinste vak.\n\n**Vak 5: Dranken** 💧\n• Water, thee, koffie *(zonder suiker)*.\n• 1,5-2 liter per dag.\n\n**Buiten de schijf**:\n• Snoep, frisdrank, koek, frituur, chips.\n• Af en toe een beetje kan, maar ze bevatten weinig goede stoffen.\n• Alcohol staat er ook buiten — en is voor kinderen helemaal niet.\n\n**Visuele tips**:\n• **Helft bord** = groente + fruit.\n• **Kwart bord** = volkoren-koolhydraten.\n• **Kwart bord** = eiwit *(vis/vlees/peul)*.\n• Beetje **gezond vet**.\n\n**3 maaltijden + tussendoortjes**:\n\n**Ontbijt** 🍳:\n• Volkoren brood + kaas + tomaat.\n• Of: havermout met fruit + yoghurt.\n• **Belangrijkste maaltijd** *(energie voor school)*.\n• Niet overslaan!\n\n**Lunch** 🥪:\n• Volkoren brood + beleg *(vis, kaas, vlees, hummus)*.\n• + 1 stuk fruit.\n• + glas melk/water.\n\n**Avondeten** 🍝:\n• Aardappel/rijst/pasta + groente + vis/vlees/peulvrucht.\n• Variatie in kleuren.\n• Eet langzaam = beter verzadigd.\n\n**Tussendoortjes** 🍎:\n• Fruit *(altijd goed)*.\n• Handvol noten.\n• Glas melk.\n• Volkoren-koek af en toe.\n• **Niet**: zak chips, snoep, frisdrank.\n\n**Veganistisch / vegetarisch**:\n• **Vegetarisch** = geen vlees + vis, wel zuivel + ei.\n• **Veganistisch** = geen dierlijke producten.\n• Kan gezond als gevarieerd.\n• Let op: B12, ijzer, calcium *(soms supplement)*.\n\n**Toets-feitje**:\n**Vegetarisch eten** bespaart **veel CO₂** + water. Een kilo rundvlees produceren kost ongeveer **15.000 liter water** + **20-50 kg CO₂**. Een kilo bonen kost ~4.000 liter water + 1-2 kg CO₂. Vandaar 'minder vlees' = klimaattip.",
     checks: [
       {
-        q: "Hoeveel **groente** per dag?",
-        options: ["250 gram", "1 kilo", "10 gram", "Geen aanbeveling"],
+        q: "Hoeveel **groente** moet je per dag eten?",
+        options: ["250 gram", "1 kilo", "50 gram", "100 gram"],
         answer: 0,
-        wrongHints: [null, "Te veel.", "Te weinig.", "Wel."],
+        wrongHints: [null, "Een kilo groente per dag is veel meer dan het advies.", "50 gram is maar een paar reepjes wortel. Het advies is meer.", "100 gram is ongeveer één tomaat. Het advies is meer dan dat."],
         uitlegPad: {
           stappen: [
             { titel: "Schijf van Vijf-advies", tekst: "Het Voedingscentrum (Nederlandse instantie) geeft per dag aanbevelingen. Voor groente: **250 gram per dag**." },
@@ -144,10 +144,10 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel **vis per week**?",
-        options: ["1 keer", "Elke dag", "Nooit", "Maandelijks"],
+        q: "Hoe vaak is het gezond om **vis** te eten?",
+        options: ["1 keer per week", "Elke dag", "3 keer per week", "1 keer per maand"],
         answer: 0,
-        wrongHints: [null, "Te veel.", "Wel goed.", "Te weinig."],
+        wrongHints: [null, "Vis is gezond, maar het advies is niet elke dag.", "Drie keer per week is meer dan het advies van de Schijf van Vijf.", "Eens per maand is minder dan het advies van de Schijf van Vijf."],
       },
       {
         q: "Welke maaltijd moet je niet overslaan, omdat hij je **energie voor de ochtend op school** geeft?",
@@ -157,9 +157,9 @@ const steps = [
       },
       {
         q: "Wat is **vegetarisch**?",
-        options: ["Geen vlees en geen vis", "Geen enkel dierlijk product", "Alleen brood en groente", "Alleen vis, geen vlees"],
+        options: ["Geen vlees en geen vis", "Geen enkel dierlijk product", "Geen melk en geen eieren", "Geen vlees, wel vis"],
         answer: 0,
-        wrongHints: [null, "Dat is veganistisch.", "Een vegetariër eet veel meer dan dat.", "Vis eet een vegetariër ook niet."],
+        wrongHints: [null, "Dat is veganistisch.", "Melk en eieren mag een vegetariër wel eten.", "Vis eet een vegetariër ook niet."],
       },
     ],
   },
@@ -169,10 +169,10 @@ const steps = [
       "Sommige dingen lekker, maar **te veel = niet gezond**.\n\n**SUIKER** 🍬:\n• **Maximaal 25 g** suiker per dag *(WHO-advies kind)*.\n• 1 glas frisdrank = ~30 g suiker = al boven.\n• 1 Mars-reep = ~30 g.\n• 1 ijsje = ~20 g.\n• Snel **op** maar daarna **moe** *('sugar crash')*.\n• Veroorzaakt: **gaatjes** in tanden, **overgewicht**, **diabetes-risico**.\n• Verborgen suikers: ketchup, brood, zuivel met smaak, ontbijtgranen.\n• Lees **etiket** — 'koolhydraten waarvan suikers'.\n\n**ZOUT** 🧂:\n• **Maximaal 5 g** zout per dag *(kind 6-12: 4 g)*.\n• 1 zakje chips kan al 1-2 g hebben.\n• Te veel = **hoge bloeddruk** + hart-vat-ziektes.\n• Verborgen zout: kant-en-klaar maaltijden, kaas, soep, brood.\n\n**TRANSVET / VERZADIGD VET** 🍔:\n• In frituur, koek, chips, gefrituurde snacks.\n• Verhoogt slecht cholesterol.\n• Veroorzaakt hart-vatziektes.\n• Vervangen door **olijfolie + noten** = beter.\n\n**ALCOHOL** 🍷:\n• Onder 18 jaar: **0,0** *(verboden)*.\n• Volwassenen: max 1 glas per dag.\n• Geen-alcohol-aanbeveling is beter *(WHO 2023)*.\n• Schadelijk voor lever + hersenen.\n• Bij kinderen kan al 1 glas hersenen beschadigen.\n\n**FRISDRANK + ENERGIEDRANKEN** 🥤:\n• Veel suiker + soms cafeïne.\n• 1 blikje cola = 7 suikerklontjes.\n• Energiedrankjes: cafeïne + suiker — niet voor kinderen onder 18.\n\n**KANT-EN-KLAAR EN FAST FOOD** 🍕:\n• Vaak veel zout + vet + suiker.\n• Conserveermiddelen + smaakversterkers (E-nummers).\n• Niet 'fout' maar liever beperkt.\n\n**Wat te eten als je trek hebt?**\n• In plaats van chips → handvol noten.\n• In plaats van frisdrank → water + citroen.\n• In plaats van snoep → fruit.\n• In plaats van koek → volkoren-cracker met hummus.\n\n**Eten + emoties**:\n• Eten bij stress = vaak ongezond.\n• Eet **bewust** — wat heb je echt nodig?\n• Eten is sociaal *(samen eten met familie)* — niet alleen.\n\n**Overgewicht** *(NL kids)*:\n• ~14% van NL-kinderen *(2024)* heeft overgewicht.\n• Risico's: diabetes, hartziekte, depressie.\n• Belangrijk: **gezond eten + bewegen** *(beweegnorm 1 uur per dag)*.\n\n**Hulp nodig?**\n• Praat met je ouder of verzorger, schoolarts, huisarts.\n• Niet je vergelijken met sociale media-influencers — die laten 'ideaal' zien dat vaak nep is.\n\n**Toets-feitje**:\n**Ultraprocessed food** *(zwaar bewerkt voedsel — koek, chips, zoete ontbijtgranen, kant-en-klaar)*: meer dan de helft van wat NL-kinderen eten. Onderzoekers waarschuwen — minder = beter. Vers + zelf koken = altijd beter.",
     checks: [
       {
-        q: "Hoeveel **suiker** max per dag (WHO kind)?",
-        options: ["25 g", "100 g", "0 g", "1 kilo"],
+        q: "Hoeveel toegevoegde **suiker** mag een kind volgens de WHO hooguit per dag?",
+        options: ["25 gram", "100 gram", "5 gram", "75 gram"],
         answer: 0,
-        wrongHints: [null, "Te veel.", "Te streng.", "Onmogelijk."],
+        wrongHints: [null, "100 gram is 25 suikerklontjes — veel te veel.", "5 gram is maar ongeveer één klontje. Het advies is ruimer.", "75 gram is bijna 19 klontjes — ver boven het advies."],
         uitlegPad: {
           stappen: [
             { titel: "WHO-advies: 25 gram suiker per dag", tekst: "De **WHO** (Wereldgezondheidsorganisatie) adviseert voor kinderen maximaal **25 gram toegevoegde suiker** per dag. Dat is ongeveer **6 suikerklontjes**." },
@@ -197,22 +197,22 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel **alcohol** onder 18?",
-        options: ["Niets", "1 glas", "Veel", "Geen regel"],
+        q: "Hoeveel **alcohol** mag een kind van 12 drinken?",
+        options: ["Niets", "1 glas per week", "Alleen op feestjes", "Alleen bier"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Wel."],
+        wrongHints: [null, "Ook één glas is schadelijk voor hersenen die nog groeien.", "Ook op een feestje geldt dezelfde wet.", "Vroeger mocht bier vanaf 16. Nu is de grens hoger, voor alle soorten alcohol."],
       },
       {
-        q: "1 glas frisdrank = **hoeveel suikerklontjes**?",
-        options: ["~7", "1", "0", "100"],
+        q: "Hoeveel **suikerklontjes** zitten er in 1 glas frisdrank?",
+        options: ["~7", "~2", "~15", "~25"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Wel suiker.", "Te veel."],
+        wrongHints: [null, "Twee klontjes is maar 8 gram suiker. In een glas cola zit veel meer.", "Een klontje is ongeveer 4 gram. Zoveel klontjes is meer dan in één glas zit.", "Dat is 100 gram suiker — zoveel zit in een grote fles, niet in één glas."],
       },
       {
-        q: "**Beweegnorm** kind per dag?",
-        options: ["1 uur bewegen", "Niets", "8 uur", "5 minuten"],
+        q: "Hoelang moet een kind volgens de **beweegnorm** per dag bewegen?",
+        options: ["1 uur", "30 minuten", "3 uur", "10 minuten"],
         answer: 0,
-        wrongHints: [null, "Slecht.", "Te veel.", "Te weinig."],
+        wrongHints: [null, "Een halfuur is het advies voor volwassenen. Kinderen hebben meer nodig.", "Drie uur per dag is veel meer dan de norm vraagt.", "Tien minuten is maar een rondje over het schoolplein. De norm vraagt meer."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is de beweegnorm?", tekst: "De **Gezondheidsraad** in NL stelt: kinderen moeten **minstens 1 uur per dag matig tot intensief bewegen**. Dat geldt voor 4-18 jarigen." },
@@ -244,16 +244,16 @@ const steps = [
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
       { q: "Waar zit **vitamine C** vooral?", options: ["Sinaasappel + paprika", "Biefstuk + kipfilet", "Boter + olijfolie", "Suiker + witbrood"], answer: 0, wrongHints: [null, "Vlees geeft vooral eiwit en ijzer.", "Boter en olie zijn vooral vet.", "Suiker en witbrood geven vooral energie, weinig vitamines."] },
-      { q: "Hoeveel **water** per dag?", options: ["1,5-2 liter", "Geen", "5 L", "100 ml"], answer: 0, wrongHints: [null, "Wel.", "Te veel.", "Te weinig."] },
-      { q: "Wat in **Schijf van Vijf** moet het meest?", options: ["Groente + fruit", "Vet", "Snoep", "Frisdrank"], answer: 0, wrongHints: [null, "Klein.", "Buiten schijf.", "Buiten schijf."] },
-      { q: "**Veganistisch** = ?", options: ["Geen dierlijke producten", "Geen vlees alleen", "Alleen vlees", "Alleen geen melk"], answer: 0, wrongHints: [null, "Vegetariër.", "Tegenovergesteld.", "Een veganist laat meer weg dan alleen melk."] },
-      { q: "Wat is **goed vet**?", options: ["Olijfolie", "Frituurvet", "Boter", "Geen vet"], answer: 0, wrongHints: [null, "Frituren maakt vet ongezonder.", "Vooral verzadigd vet — liever beperken.", "Je lichaam heeft wel vet nodig."] },
-      { q: "**Eiwitten** vooral voor?", options: ["Groei + spieren", "Snelle energie", "Water", "Vitamine"], answer: 0, wrongHints: [null, "Koolhydraat.", "Niet.", "Niet."] },
+      { q: "Hoeveel **water** heb je per dag nodig?", options: ["1,5-2 liter", "2 glazen", "3-4 liter", "5 liter"], answer: 0, wrongHints: [null, "Twee glazen is maar een half liter. Je verliest elke dag meer vocht.", "3-4 liter is 12 tot 16 glazen. Zoveel heeft een kind niet nodig.", "Vijf liter is 20 glazen — veel meer dan je nodig hebt."] },
+      { q: "Waarvan moet je volgens de **Schijf van Vijf** het meest eten?", options: ["Groente en fruit", "Smeer- en kookvet", "Vlees, vis en ei", "Melk en kaas"], answer: 0, wrongHints: [null, "Van smeer- en kookvet heb je maar een klein beetje nodig.", "Vlees, vis en ei zijn goed, maar je hebt er minder van nodig dan je denkt.", "Melk en kaas zijn goed voor je botten, maar het grootste deel van je eten is iets anders."] },
+      { q: "Wat betekent **veganistisch**?", options: ["Geen dierlijke producten", "Geen vlees en geen vis", "Alleen biologisch eten", "Geen melk, wel vlees"], answer: 0, wrongHints: [null, "Dat is vegetarisch. Een veganist laat nog meer weg.", "Biologisch gaat over hoe iets gekweekt is, niet over dieren.", "Een veganist laat meer weg dan alleen melk."] },
+      { q: "Wat is **goed vet**?", options: ["Olijfolie", "Frituurvet", "Boter", "Slagroom"], answer: 0, wrongHints: [null, "Frituren maakt vet ongezonder.", "Vooral verzadigd vet — liever beperken.", "Slagroom zit vol verzadigd vet — lekker, maar niet de gezonde soort."] },
+      { q: "Waarvoor heeft je lichaam vooral **eiwitten** nodig?", options: ["Groei en spieren", "Snelle energie", "Sterke botten", "Warm blijven"], answer: 0, wrongHints: [null, "Snelle energie komt vooral uit koolhydraten.", "Voor sterke botten zorgt vooral calcium.", "Een laagje vet houdt je warm. Eiwit doet iets anders."] },
       {
         q: "Wat is een **gezond ontbijt** voor een kind in groep 7-8?",
-        options: ["Volkorenbrood, kaas en fruit", "Frietjes, mayonaise en frisdrank", "Niks — ontbijt overslaan", "Koek, snoep en een pakje sap"],
+        options: ["Volkorenbrood, kaas en fruit", "Witte boterham met hagelslag", "Alleen een glas vruchtensap", "Cornflakes met een schep suiker"],
         answer: 0,
-        wrongHints: [null, "Geen ontbijt-voedsel — energie te kort + suiker-piek.", "Onderzoek toont: ontbijt overslaan = minder concentratie op school.", "Te eenzijdig — vooral suiker, geen eiwit of vezels."],
+        wrongHints: [null, "Witbrood met hagelslag geeft snel suiker en weinig vezels. Hoe lang hou je dat vol?", "Alleen sap geeft wat vitamines, maar geen eiwit en weinig vezels. Hoe lang hou je dat vol?", "Veel suiker geeft een korte piek en daarna een dip. Wat geeft langzame energie?"],
         uitlegPad: {
           stappen: [
             { titel: "Goed ontbijt = balans", tekst: "**Koolhydraten** (energie) + **eiwit** (verzadiging) + **vitaminen** (fruit) + **vocht** (melk/water) = goed ontbijt. Geeft langzame energie tot pauze." },
@@ -300,9 +300,9 @@ const steps = [
       },
       {
         q: "Waardoor wordt de kans op **diabetes type 2** kleiner?",
-        options: ["Gezond eten + bewegen + niet roken", "Veel suiker en snoep eten als kind", "Alleen stoppen met vlees eten", "Niets, want het is altijd erfelijk"],
+        options: ["Gezond eten en genoeg bewegen", "Elke dag vitaminepillen slikken", "Voortaan vegetarisch gaan eten", "Een keer per jaar naar de dokter"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — veel suiker verhoogt risico.", "Niet — alleen geen vlees eten voorkomt het niet.", "Erfelijkheid speelt mee, maar je leefstijl maakt veel uit."],
+        wrongHints: [null, "Vitaminepillen helpen niet tegen diabetes type 2. Het gaat om hoe je elke dag leeft.", "Ook vegetariërs kunnen diabetes type 2 krijgen, bijvoorbeeld door veel suiker.", "Een controle bij de dokter is goed, maar voorkomt de ziekte niet. Wat doe je zelf elke dag?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is diabetes type 2?", tekst: "**Diabetes type 2** = lichaam reageert niet goed meer op **insuline** (hormoon dat suiker uit bloed haalt). Bloedsuiker te hoog → schade aan ogen, nieren, hart. **Komt vaak voor bij volwassenen** maar steeds vaker bij kinderen (overgewicht-gerelateerd)." },
@@ -323,25 +323,25 @@ const steps = [
           niveaus: { basis: "Leefstijl.", simpeler: "Gezond eten + bewegen + niet roken maakt de kans op type-2-diabetes veel kleiner.", nogSimpeler: "Leefstijl" },
         },
       },
-      { q: "Hoeveel **groente** per dag is aanbevolen (Schijf van Vijf)?", options: ["250 gram","50 gram","1 kilo","Geen norm"], answer: 0, wrongHints: [null, "Veel te weinig.", "Veel te veel.", "Wel — Voedingscentrum norm."] },
+      { q: "Hoeveel **groente** per dag is aanbevolen (Schijf van Vijf)?", options: ["250 gram","50 gram","1 kilo","100 gram"], answer: 0, wrongHints: [null, "50 gram is maar een paar reepjes wortel. Het advies is veel meer.", "Een kilo is veel meer dan het advies van het Voedingscentrum.", "100 gram is ongeveer één tomaat. Het advies is meer."] },
       { q: "Welke voedingsstof geeft je **energie** voor het dagelijks bewegen?", options: ["Koolhydraten","Vitamine C","Calcium","IJzer"], answer: 0, wrongHints: [null, "Niet primair energie.", "Bouwstof voor botten.", "Bloed-bouwstof."] },
-      { q: "Voor wie geldt **0,0 alcohol** wettelijk?", options: ["Iedereen onder 18 jaar", "Iedereen onder 21", "Alleen kinderen onder 12", "Bestuurders"], answer: 0, wrongHints: [null, "Niet in NL.", "Ook oudere tieners horen erbij.", "Voor bestuurders geldt een lage grens, geen 0,0 — voor welke groep geldt 0,0 wél?"] },
-      { q: "Hoeveel **suiker** per dag is max-norm (WHO)?", options: ["~25 gram", "100 gram", "250 gram", "Geen norm"], answer: 0, wrongHints: [null, "Te veel — krijg je snel binnen.", "Veel te veel.", "Wel — WHO norm."] },
-      { q: "Hoeveel **maaltijden** per dag is gezond?", options: ["3 hoofdmaaltijden + 2-3 tussendoor", "1 grote maaltijd + niets tussendoor", "10 kleine maaltijden + veel snacks", "Zoveel als je wilt, er is geen norm"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Er is wel een advies."] },
-      { q: "Welke **kleur** zou een gezond bord moeten zijn?", options: ["Veel kleuren", "Bruin alleen", "Wit alleen", "Alles geel"], answer: 0, wrongHints: [null, "Alleen bruin = weinig afwisseling.", "Alleen wit = weinig afwisseling.", "Alleen geel = weinig afwisseling."] },
+      { q: "Voor wie geldt **0,0 alcohol** wettelijk?", options: ["Iedereen onder 18 jaar", "Iedereen onder 21", "Iedereen onder 16 jaar", "Bestuurders"], answer: 0, wrongHints: [null, "Niet in NL.", "Tot 2014 mocht je vanaf 16 bier drinken. Nu is de grens hoger.", "Voor bestuurders geldt een lage grens, geen 0,0 — voor welke groep geldt 0,0 wél?"] },
+      { q: "Hoeveel toegevoegde **suiker** per dag is volgens de WHO het maximum voor kinderen?", options: ["~25 gram", "100 gram", "250 gram", "10 gram"], answer: 0, wrongHints: [null, "100 gram is 25 klontjes. Het advies is veel lager.", "250 gram is een heel pak suiker van een kwart kilo — veel te veel.", "10 gram is nog geen 3 klontjes. Het advies is iets ruimer."] },
+      { q: "Hoeveel **maaltijden** per dag is gezond?", options: ["3 hoofdmaaltijden + 2-3 tussendoor", "2 hoofdmaaltijden, niets tussendoor", "5 hoofdmaaltijden + 1 tussendoortje", "1 grote maaltijd + 4 tussendoortjes"], answer: 0, wrongHints: [null, "Met twee maaltijden sla je er één over. Welke maaltijd ontbreekt er dan?", "Vijf grote maaltijden is te veel. Hoe vaak eet je echt aan tafel?", "Eén maaltijd en veel tussendoortjes: dan eet je vooral snacks."] },
+      { q: "Welke **kleur** zou een gezond bord moeten zijn?", options: ["Veel kleuren", "Vooral bruin", "Vooral wit", "Vooral geel"], answer: 0, wrongHints: [null, "Bruin is vaak vlees, jus en friet. Wat mis je dan?", "Wit is vaak rijst, pasta of aardappel. Wat mis je dan?", "Geel is vaak friet, kaas of mais. Wat mis je dan?"] },
       { q: "Welk type **vet** is gezond?", options: ["Onverzadigd (vis, noten, olijfolie)", "Verzadigd (chips, koek, roomboter)", "Geen enkel vet (alles vetvrij eten)", "Frituurvet (friet, kroket, snacks)"], answer: 0, wrongHints: [null, "Verzadigd vet kun je beter weinig eten.", "Je lichaam heeft wel wat vet nodig.", "Frituurvet is niet de gezonde soort."] },
       { q: "Wat is **eiwit** vooral voor?", options: ["Spieren/cellen bouwen", "Snel energie geven", "Bloed laten stollen", "Beter kunnen zien"], answer: 0, wrongHints: [null, "Snelle energie komt vooral uit koolhydraten.", "Daar zorgen bloedplaatjes voor.", "Daar helpt vitamine A bij."] },
-      { q: "Welke voeding heeft veel **calcium**?", options: ["Melk + zuivel","Chips","Cola","Snoep"], answer: 0, wrongHints: [null, "Chips is vooral zout en vet — calcium is voor je bótten. Wat drink je daarvoor?", "Cola bevat suiker en zuur, geen bouwstof voor botten.", "Snoep is suiker — welk voedsel maakt je botten sterk?"] },
+      { q: "Welke voeding heeft veel **calcium**?", options: ["Melk en kaas","Appels en peren","Rijst en pasta","Kip en vis"], answer: 0, wrongHints: [null, "Appels en peren geven vitamines en vezels, maar weinig calcium.", "Rijst en pasta geven vooral energie (koolhydraten).", "Kip en vis geven vooral eiwit."] },
       { q: "Welke voeding heeft **vitamine C**?", options: ["Sinaasappel/paprika", "Brood/beschuit", "Patat/frikandel", "Vlees/kipfilet"], answer: 0, wrongHints: [null, "Brood geeft vooral koolhydraten.", "Patat en snacks geven vooral vet.", "Vlees geeft vooral eiwit."] },
-      { q: "Hoeveel **fruit** per dag (Schijf van Vijf)?", options: ["2 stuks","1 stuk","5 stuks","10 stuks"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Veel te veel."] },
-      { q: "**Vegetarisch** eten betekent?", options: ["Geen vlees + vis","Geen suiker","Niets","Alleen plantaardig"], answer: 0, wrongHints: [null, "Niet specifiek.", "Wel iets.", "Veganistisch."] },
+      { q: "Hoeveel stuks **fruit** per dag adviseert de Schijf van Vijf?", options: ["2 stuks","1 stuk","4 stuks","6 stuks"], answer: 0, wrongHints: [null, "Eén stuk is minder dan het advies van de Schijf van Vijf.", "Vier stuks is meer dan het advies.", "Zes stuks per dag is veel meer dan het advies."] },
+      { q: "Wat betekent **vegetarisch** eten?", options: ["Geen vlees en geen vis","Geen vlees, wel vis","Geen fastfood eten","Alleen plantaardig eten"], answer: 0, wrongHints: [null, "Een vegetariër eet ook geen vis.", "Fastfood laten staan is gezond, maar heeft niets met vegetarisch te maken.", "Alleen plantaardig is veganistisch: dan ook geen melk en eieren."] },
       { q: "**Veganistisch** eten?", options: ["Geen dierlijke producten", "Geen vis en geen schaaldieren", "Geen vlees, wel melk en eieren", "Geen suiker en geen snoep"], answer: 0, wrongHints: [null, "Niet alleen vis.", "Dat is vegetarisch.", "Dat heeft niets met dieren te maken."] },
-      { q: "Wat is **gezond ontbijt**?", options: ["Volkoren + fruit + zuivel", "Snoep + koek + limonade", "Niets eten + snel naar school", "Alleen een glas sap drinken"], answer: 0, wrongHints: [null, "Vooral suiker — daar hou je het niet lang mee vol.", "Zonder ontbijt kun je je slechter concentreren.", "Te weinig om de ochtend mee door te komen."] },
-      { q: "Wat doet **water drinken**?", options: ["Hydrateert + dorst stillen", "Niets — je plast het meteen uit", "Maakt je dik + geeft energie", "Schaadt je tanden + maag"], answer: 0, wrongHints: [null, "Je lichaam gebruikt water wel.", "Water heeft geen calorieën.", "Water is juist goed voor je tanden."] },
+      { q: "Wat is **gezond ontbijt**?", options: ["Volkoren + fruit + zuivel", "Witbrood + chocopasta + sap", "Cornflakes + suiker + chocomelk", "Croissant + jam + limonade"], answer: 0, wrongHints: [null, "Witbrood en chocopasta geven snel suiker en weinig vezels.", "Suiker en chocomelk geven een korte energiepiek, en daarna een dip.", "Een croissant is vooral vet en wit meel, en jam is vooral suiker."] },
+      { q: "Wat doet **water drinken**?", options: ["Vult je vocht aan + lest dorst", "Geeft je energie + vitamines", "Maakt je botten sterk + groot", "Verbrandt vet + maakt je slank"], answer: 0, wrongHints: [null, "Water heeft geen calorieën en geeft dus geen energie.", "Sterke botten krijg je vooral van calcium, uit melk en kaas.", "Water verbrandt geen vet."] },
       { q: "Wat is **vezel**?", options: ["Onverteerbaar plantendeel", "Zoete stof uit snoep", "Vettige stof uit boter", "Bouwstof uit vlees en eieren"], answer: 0, wrongHints: [null, "Dat is suiker.", "Dat is vet.", "Dat is eiwit."] },
-      { q: "Welke voeding heeft veel **vezels**?", options: ["Volkoren + groenten","Wit brood","Snoep","Frisdrank"], answer: 0, wrongHints: [null, "Vezelarm.", "Geen vezels.", "Geen."] },
-      { q: "Hoeveel **lichaamsbeweging** per dag?", options: ["~1 uur","5 min","Geen","8 uur"], answer: 0, wrongHints: [null, "Te weinig.", "Niet gezond.", "Te veel."] },
-      { q: "**Bewerkt voedsel** is meestal?", options: ["Meer toegevoegd zout/suiker", "Gezonder dan vers eten", "Altijd vers en net geplukt", "Rijker aan vitamines en vezels"], answer: 0, wrongHints: [null, "Is een kant-en-klaarmaaltijd gezonder dan zelf koken met verse groente?", "Bewerkt is juist niet vers.", "Bij bewerken gaan juist vaak vitamines verloren."] },
+      { q: "Welke voeding heeft veel **vezels**?", options: ["Volkorenbrood + groente","Witbrood + kaas","Melk + yoghurt","Vis + eieren"], answer: 0, wrongHints: [null, "Bij witbrood is de vezelrijke schil van het graan eraf. En kaas heeft geen vezels.", "Melk en yoghurt komen van de koe — daar zitten geen vezels in.", "Vis en eieren komen van dieren. Vezels zitten in planten."] },
+      { q: "Hoeveel moet een kind per dag minstens **bewegen**?", options: ["~1 uur","~10 minuten","~30 minuten","~4 uur"], answer: 0, wrongHints: [null, "Tien minuten is maar heel kort. Kinderen hebben veel meer beweging nodig.", "Een halfuur is het advies voor volwassenen. Kinderen hebben meer nodig.", "Vier uur is veel meer dan de norm vraagt."] },
+      { q: "Wat klopt meestal over **bewerkt voedsel**?", options: ["Meer toegevoegd zout/suiker", "Gezonder dan vers eten", "Minder zout dan zelf gekookt", "Rijker aan vitamines en vezels"], answer: 0, wrongHints: [null, "Is een kant-en-klaarmaaltijd gezonder dan zelf koken met verse groente?", "Juist in kant-en-klaar eten zit vaak veel zout.", "Bij bewerken gaan juist vaak vitamines verloren."] },
     ],
   },
 ];

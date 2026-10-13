@@ -20,7 +20,7 @@ const steps = [
         q: "Wie schreef **Jip en Janneke**?",
         options: ["Annie M.G. Schmidt", "Roald Dahl", "Tonke Dragt", "Multatuli"],
         answer: 0,
-        wrongHints: [null, "Brits.", "Andere.", "Volwassen."],
+        wrongHints: [null, "Roald Dahl schreef in het Engels — Jip en Janneke is een Nederlands boek.", "Tonke Dragt schreef dikke avonturenboeken, geen korte verhaaltjes voor kleuters.", "Multatuli schreef lang geleden boeken voor volwassenen."],
         uitlegPad: {
           stappen: [
             { titel: "Wie was Annie M.G. Schmidt?", tekst: "**Annie M.G. Schmidt** (1911-1995) was de **beroemdste Nederlandse kinderboekenschrijfster** aller tijden. Ze schreef gedichten, verhalen, liedjes en musicals." },
@@ -45,10 +45,10 @@ const steps = [
         },
       },
       {
-        q: "Wie maakte **tekeningen** bij Schmidt?",
-        options: ["Fiep Westendorp", "Dick Bruna", "Anton Pieck", "Rembrandt"],
+        q: "Wie maakte de **tekeningen** bij de boeken van Annie M.G. Schmidt?",
+        options: ["Fiep Westendorp", "Dick Bruna", "Anton Pieck", "Marten Toonder"],
         answer: 0,
-        wrongHints: [null, "Nijntje.", "Efteling.", "Veel ouder."],
+        wrongHints: [null, "Dick Bruna tekende vooral bij zijn eigen boeken.", "Anton Pieck tekende ouderwetse, sprookjesachtige platen, zoals voor de Efteling.", "Marten Toonder tekende strips, zoals Tom Poes."],
         uitlegPad: {
           stappen: [
             { titel: "Fiep Westendorp (1916-2004)", tekst: "**Fiep Westendorp** was de **tekenares** die de plaatjes maakte bij Annie M.G. Schmidt's boeken. Beroemd duo: zij tekende, Schmidt schreef." },
@@ -74,8 +74,8 @@ const steps = [
         },
       },
       {
-        q: "**Pluk van de Petteflet** — wat is dat?",
-        options: ["Jongetje in flat met kraanwagentje", "Poes die in een mens verandert", "Meisje dat dieren kan verstaan", "Kabouter die mensen klein tovert"],
+        q: "Waar gaat **Pluk van de Petteflet** over?",
+        options: ["Een jongetje met een kraanwagen in een flat", "Een poes die in een mens verandert", "Een meisje dat dieren kan verstaan", "Een mannetje dat mensen klein tovert"],
         answer: 0,
         wrongHints: [null, "Dat is Minoes — ook van Annie M.G. Schmidt.", "Dat is Otje — ook van Annie M.G. Schmidt.", "Dat is Wiplala — ook van Annie M.G. Schmidt."],
         uitlegPad: {
@@ -102,10 +102,10 @@ const steps = [
         },
       },
       {
-        q: "**Hoogste internationale kinderboek-prijs** die Schmidt won?",
-        options: ["Hans Christian Andersen Prijs", "Nobelprijs voor de Literatuur", "Astrid Lindgren Herdenkingsprijs", "Oscar voor de beste film"],
+        q: "Welke **hoogste internationale prijs voor kinderboeken** won Annie M.G. Schmidt?",
+        options: ["Hans Christian Andersen Prijs", "Nobelprijs voor de Literatuur", "Astrid Lindgren Herdenkingsprijs", "Carnegie Medal"],
         answer: 0,
-        wrongHints: [null, "De Nobelprijs is geen prijs speciaal voor kinderboeken.", "Die prijs bestaat pas sinds 2002 — Schmidt overleed in 1995.", "Een Oscar is een prijs voor films, niet voor boeken."],
+        wrongHints: [null, "De Nobelprijs is geen prijs speciaal voor kinderboeken.", "Die prijs bestaat pas sinds 2002 — Schmidt overleed in 1995.", "Die Engelse prijs is alleen voor boeken in het Engels."],
       },
     ],
   },
@@ -115,14 +115,14 @@ const steps = [
       "Naast klassiek zijn er **moderne series** populair bij groep 6-8.\n\n**Carry Slee** *(1949+)*:\n• Realistische jeugdboeken voor 10+.\n• Onderwerpen: pesten, scheiding, drugs, vriendschap.\n• Boeken: 'Spijt!' *(over pesten + zelfmoord)*, 'Razend', 'Afblijven'.\n• Verkocht miljoenen.\n• Eerst zelf uitgegeven.\n\n**Francine Oomen** *(1958+)*:\n• 'Hoe overleef ik...'-serie *(13+ boeken)*.\n• Over Rosa en haar leven *(school, jongens, ouders)*.\n• Voor meiden 10-14.\n\n**Mirjam Mous** *(1963+)*:\n• Spannende boeken voor 12+.\n• 'Boy 7', 'Vigil 9'.\n\n**Jacques Vriens** *(1946+)*:\n• Realistische verhalen, vaak groep 8.\n• 'Achtste-groepers Huilen Niet' *(over groep 8-eindgevoel)* — beroemd verfilmd 2012.\n• 'Meester Jaap' *(serie)*.\n\n**Internationale series voor PO**:\n\n**Harry Potter** *(J.K. Rowling, 1997-2007)*:\n• 7 delen over jonge tovenaar.\n• Verkocht 600+ miljoen exemplaren.\n• 8 films.\n• Themaparken Orlando + Hollywood + Japan.\n\n**Hunger Games, Percy Jackson, Geronimo Stilton** etc.\n\n**Dolfje Weerwolfje** *(Paul van Loon)*:\n• Jongetje wordt 's nachts weerwolf.\n• 25+ delen.\n• Verfilmd.\n\n**Sammie + de Mannen** *(Dirk Nielandt)*.\n\n**Strips + comics**:\n• **Suske en Wiske** *(Willy Vandersteen, sinds 1945)*.\n• **Asterix** *(René Goscinny + Albert Uderzo, Frans)*.\n• **Tintin / Kuifje** *(Hergé, Belgisch)*.\n• **Donald Duck-weekblad** *(Disney)* — 200.000 NL-abonnees.\n• **Manga** *(Japans)* steeds populairder.\n\n**Bibliotheek**:\n• In NL ~700 bibliotheken.\n• **Gratis** voor jongeren onder 18 *(soms abonnement nodig)*.\n• Lenen 5-15 boeken tegelijk *(3-4 weken)*.\n• Niet teruggeven = boete *(€0,15-0,30 per dag)*.\n\n**E-readers + audio-boeken**:\n• Apps: de online Bibliotheek, Yindo.\n• Audio: Storytel, Audible.\n\n**Lezen + brein**:\n• Lezen verbetert **woordenschat** + **concentratie** + **empathie**.\n• Studies: kinderen die thuis **dagelijks worden voorgelezen**, scoren beter op school.\n• Belangrijk: lees wat je leuk vindt — niet alleen 'echte boeken'.\n\n**Top-tips voor de toets**:\nLees veel verschillende dingen:\n• Tijdschrift, krant, strip, roman, gedicht.\n• Versterkt **leesvaardigheid + woordenschat** = goed voor de Doorstroomtoets.\n\n**Kinderboekenweek** 📚:\n• Jaarlijks in **oktober** *(2 weken)*.\n• Thema verschilt per jaar.\n• **Kinderboekenweek-geschenk**: gratis boek bij €15 boeken.\n• **Penseel** + **Griffel**-prijzen uitgereikt.\n• Sinds 1955.\n\n**Toets-feitje**:\nDe **'Kinderboekenweek 2024'** had als thema **'Lekker eigenwijs!'**.",
     checks: [
       {
-        q: "Welke schrijfster: **'Hoe overleef ik...'-serie**?",
+        q: "Welke schrijfster schreef de serie **'Hoe overleef ik...'**?",
         options: ["Francine Oomen", "Annie M.G. Schmidt", "Carry Slee", "Mirjam Mous"],
         answer: 0,
-        wrongHints: [null, "Klassiek.", "Pesten.", "Spanning."],
+        wrongHints: [null, "Annie M.G. Schmidt schreef klassiekers voor jonge kinderen, lang vóór deze serie.", "Carry Slee is bekend van Spijt! en Afblijven.", "Mirjam Mous schrijft vooral spannende boeken, zoals Boy 7."],
       },
       {
-        q: "**Achtste-groepers Huilen Niet** door?",
-        options: ["Jacques Vriens", "Schmidt", "Carry Slee", "Roald Dahl"],
+        q: "Wie schreef **Achtste-groepers huilen niet**?",
+        options: ["Jacques Vriens", "Annie M.G. Schmidt", "Carry Slee", "Roald Dahl"],
         answer: 0,
         wrongHints: [null, "Zij schreef klassiekers als Jip en Janneke — dit boek gaat over groep 8.", "Zij schrijft over pesten en scheiding (Spijt!), niet over het afscheid van groep 8.", "Brits — dit is een oer-Nederlands schoolverhaal."],
       },
@@ -156,10 +156,10 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel **Harry Potter-boeken**?",
-        options: ["7", "1", "100", "3"],
+        q: "Uit hoeveel boeken bestaat de **Harry Potter**-serie?",
+        options: ["7", "5", "6", "9"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te veel.", "Te weinig."],
+        wrongHints: [null, "Elk boek is één schooljaar op Zweinstein — hoeveel jaar zit Harry daar?", "Elk boek is één schooljaar op Zweinstein — hoeveel jaar zit Harry daar?", "Elk boek is één schooljaar op Zweinstein — hoeveel jaar zit Harry daar?"],
       },
     ],
   },
@@ -169,10 +169,10 @@ const steps = [
       "**Anne Frank** *(1929-1945)* = beroemdste NL-jonge schrijfster.\n\n**Wie was Anne?**\n• Geboren in Frankfurt, Duitsland *(joods gezin)*.\n• Vluchtte met familie naar **Amsterdam** *(1933)* — wegens **nazi's**.\n• Vader **Otto Frank** runde bedrijf 'Opekta'.\n• Toen Duitsers NL bezetten *(1940)* → joden vervolgd.\n\n**Onderduiken** *(1942-1944)*:\n• Familie verstopt in **achterhuis** *(Prinsengracht 263, Amsterdam)*.\n• Anne was **13 jaar**.\n• Met haar familie: ouders + zus **Margot** + 4 anderen *(familie Van Pels + tandarts Pfeffer)*.\n• 25 maanden in stilte + angst.\n\n**Dagboek**:\n• Anne kreeg **dagboek voor 13e verjaardag** *(juni 1942)*.\n• Schreef erin over haar leven + emoties + dromen.\n• Wilde **schrijfster of journalist** worden.\n• 'Lieve Kitty' — schreef alsof aan vriendin.\n\n**Verraden + gepakt**:\n• Augustus 1944: nazi's vonden hen na **verraad** *(door wie? — onbekend tot vandaag)*.\n• Naar **kampen** in Duitsland + Polen.\n• Anne + Margot stierven in **Bergen-Belsen** in **februari/maart 1945** *(precieze datum onbekend — vlak voor bevrijding kamp in april)* aan **tyfus**.\n• Alleen **vader Otto** overleefde.\n\n**Dagboek gepubliceerd**:\n• Otto vond dagboek na oorlog.\n• Eerste editie 1947 *(NL)*.\n• Vertaald in **70+ talen**.\n• Verkocht **35+ miljoen** exemplaren.\n• Een van meest gelezen boeken ooit.\n\n**Anne Frank Huis** *(museum)*:\n• Amsterdam, Prinsengracht 263.\n• Originele achterhuis te bezichtigen.\n• Boekenkast voor verborgen ingang nog te zien.\n• 1,3 miljoen bezoekers per jaar *(2024)*.\n• Reserveer het best ruim van tevoren.\n\n**Anne's beroemde citaat**:\n*'Ondanks alles geloof ik nog steeds dat de mensen werkelijk goed zijn van hart.'*\n\nDe **Anne Frank Stichting** geeft nu onderwijs aan jongeren over discriminatie + tolerantie.\n\n**Grote Nederlandse schrijvers** *(volwassen)*:\n\n**Multatuli** *(1820-1887)*:\n• Pseudoniem van **Eduard Douwes Dekker**.\n• Schreef **'Max Havelaar'** *(1860)*.\n• Beroemde aanklacht tegen NL-koloniaal beleid in **Nederlands-Indië**.\n• Geld + macht voor Europeanen, leed voor Javanen *(koffieboeren)*.\n• Boek leidde tot debat → langzaam beter beleid.\n• Multatuli = 'ik heb veel geleden' *(Latijn)*.\n• 'Max Havelaar' = nu ook **fair-trade** keurmerk voor eerlijke handel.\n\n**Harry Mulisch** *(1927-2010)*:\n• 'De Aanslag' *(WO2-trauma)* — verfilmd, Oscar.\n• 'De Ontdekking van de Hemel' *(filosofisch)*.\n\n**Cees Nooteboom** *(1933+)*:\n• Reisverhalen + romans.\n• 'Het volgende verhaal'.\n\n**Hella Haasse** *(1918-2011)*:\n• Historische romans.\n• 'Oeroeg' *(Indonesië)*.\n\n**Gerard Reve** *(1923-2006)*:\n• 'De Avonden' *(1947)* — naoorlogs gevoel.\n• Ook brievenboeken; religieuze + erotische thema's.\n\n**Hendrik Marsman, Martinus Nijhoff, Lucebert** — dichters.\n\n**Internationaal**:\n• **Etty Hillesum** *(joods, dagboek voor + tijdens WO2)*.\n• **Anne Frank**.\n• **Theo van Gogh** *(filmmaker, vermoord 2004)*.\n\n**Toets-feitje**:\n**Anne Frank's verjaardag** *(12 juni)* wordt soms herdacht. UNESCO heeft haar dagboek opgenomen in **Memory of the World Register** *(2009)* — een van de belangrijkste documenten ooit.",
     checks: [
       {
-        q: "Wanneer **gestorven** Anne Frank?",
-        options: ["1945", "1944", "1950", "Overleefd"],
+        q: "In welk jaar **stierf** Anne Frank?",
+        options: ["1945", "1944", "1950", "1942"],
         answer: 0,
-        wrongHints: [null, "Te vroeg.", "Te laat.", "Helaas niet."],
+        wrongHints: [null, "In 1944 werd ze opgepakt — daarna leefde ze nog een paar maanden.", "In 1947 gaf haar vader het dagboek al uit.", "In 1942 ging ze juist onderduiken."],
         uitlegPad: {
           stappen: [
             { titel: "Anne's verhaal kort", tekst: "**Anne Frank** (geb. 1929 Frankfurt) zat met haar familie ondergedoken in het achterhuis (Amsterdam) **1942-1944**. In augustus 1944 werden ze **verraden** + opgepakt door de nazi's." },
@@ -199,9 +199,9 @@ const steps = [
       },
       {
         q: "Wie schreef **Max Havelaar** (1860)?",
-        options: ["Multatuli", "Mulisch", "Schmidt", "Anne Frank"],
+        options: ["Multatuli", "Harry Mulisch", "Annie M.G. Schmidt", "Hildebrand"],
         answer: 0,
-        wrongHints: [null, "Veel later.", "Kinderboek.", "Dagboek."],
+        wrongHints: [null, "Harry Mulisch leefde in de 20e eeuw — dit boek is van 1860.", "Annie M.G. Schmidt schreef in de 20e eeuw voor kinderen.", "Hildebrand schreef de Camera Obscura, een ander boek uit die tijd."],
         uitlegPad: {
           stappen: [
             { titel: "Wie was Multatuli?", tekst: "**Multatuli** is een pseudoniem (schuilnaam) van **Eduard Douwes Dekker** (1820-1887). 'Multatuli' is Latijn voor: 'ik heb veel geleden'. Hij koos die naam toen hij schrijver werd." },
@@ -227,16 +227,16 @@ const steps = [
         },
       },
       {
-        q: "Waar is **Anne Frank Huis**?",
+        q: "In welke stad staat het **Anne Frank Huis**?",
         options: ["Amsterdam", "Bergen-Belsen", "Den Haag", "Rotterdam"],
         answer: 0,
-        wrongHints: [null, "Daar overleed ze.", "Niet.", "Niet."],
+        wrongHints: [null, "Daar overleed ze, in een kamp in Duitsland.", "Den Haag is de stad van de regering — dook de familie Frank daar onder?", "Rotterdam is de havenstad — zat Anne daar ondergedoken?"],
       },
       {
-        q: "Hoeveel **talen** Anne Frank dagboek?",
-        options: ["70+", "1", "5", "200"],
+        q: "In hoeveel **talen** is het dagboek van Anne Frank vertaald?",
+        options: ["ongeveer 70", "ongeveer 10", "ongeveer 30", "ongeveer 300"],
         answer: 0,
-        wrongHints: [null, "Niet alleen in het Nederlands.", "Veel meer.", "Te veel."],
+        wrongHints: [null, "Het dagboek wordt over de hele wereld gelezen — kijk in de les hoeveel talen.", "Het is een van de bekendste boeken ter wereld — kijk in de les hoeveel talen.", "Kijk in de les: zoveel talen zijn het niet."],
       },
     ],
   },
@@ -244,17 +244,17 @@ const steps = [
     title: "Eind-toets — boeken mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
-      { q: "Wie schreef **Jip en Janneke**?", options: ["Annie M.G. Schmidt", "Roald Dahl", "Vriens", "Slee"], answer: 0, wrongHints: [null, "Brits.", "Modern.", "Realistisch."] },
-      { q: "Wie tekende **bij Schmidt**?", options: ["Fiep Westendorp", "Bruna", "Pieck", "Rembrandt"], answer: 0, wrongHints: [null, "Nijntje.", "Efteling.", "Veel ouder."] },
-      { q: "**Anne Frank** zat ondergedoken in?", options: ["Amsterdam", "Den Haag", "Rotterdam", "Frankfurt"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Vluchtte daaruit."] },
-      { q: "Wie schreef **Max Havelaar**?", options: ["Multatuli", "Mulisch", "Vriens", "Schmidt"], answer: 0, wrongHints: [null, "Andere.", "Niet.", "Niet."] },
-      { q: "**Kinderboekenweek** = welke maand?", options: ["Oktober", "Januari", "Mei", "Geen"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel vast."] },
-      { q: "**Harry Potter** = aantal delen?", options: ["7", "1", "100", "3"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Te weinig."] },
+      { q: "Wie schreef **Jip en Janneke**?", options: ["Annie M.G. Schmidt", "Roald Dahl", "Jacques Vriens", "Carry Slee"], answer: 0, wrongHints: [null, "Roald Dahl schreef in het Engels — Jip en Janneke is een Nederlands boek.", "Jacques Vriens schreef boeken voor oudere kinderen, veel later.", "Carry Slee schrijft voor tieners, over moeilijke onderwerpen."] },
+      { q: "Wie tekende de plaatjes bij de boeken van **Annie M.G. Schmidt**?", options: ["Fiep Westendorp", "Dick Bruna", "Anton Pieck", "Marten Toonder"], answer: 0, wrongHints: [null, "Dick Bruna tekende vooral bij zijn eigen boeken.", "Anton Pieck tekende ouderwetse, sprookjesachtige platen.", "Marten Toonder tekende strips, zoals Tom Poes."] },
+      { q: "In welke stad zat **Anne Frank** ondergedoken?", options: ["Amsterdam", "Den Haag", "Rotterdam", "Frankfurt"], answer: 0, wrongHints: [null, "Den Haag is de stad van de regering — zat het Achterhuis daar?", "Rotterdam is de havenstad — zat het Achterhuis daar?", "Daar werd Anne geboren — het gezin vluchtte er juist weg."] },
+      { q: "Wie schreef **Max Havelaar**?", options: ["Multatuli", "Harry Mulisch", "Hildebrand", "Annie M.G. Schmidt"], answer: 0, wrongHints: [null, "Harry Mulisch leefde in de 20e eeuw — Max Havelaar is van 1860.", "Hildebrand schreef de Camera Obscura.", "Annie M.G. Schmidt schreef boeken voor kinderen."] },
+      { q: "In welke maand is de **Kinderboekenweek**?", options: ["Oktober", "Januari", "Mei", "December"], answer: 0, wrongHints: [null, "In januari zijn de Nationale Voorleesdagen — dat is iets anders.", "In mei is het lente — de Kinderboekenweek is in de herfst.", "In december vieren we Sinterklaas en Kerstmis."] },
+      { q: "Hoeveel delen heeft de **Harry Potter**-serie?", options: ["7", "5", "6", "9"], answer: 0, wrongHints: [null, "Elk deel is één schooljaar op Zweinstein — hoeveel jaar zit Harry daar?", "Elk deel is één schooljaar op Zweinstein — hoeveel jaar zit Harry daar?", "Elk deel is één schooljaar op Zweinstein — hoeveel jaar zit Harry daar?"] },
       {
-        q: "**Kruistocht in Spijkerbroek** (Thea Beckman) — wat is het thema?",
-        options: ["Tijdreis terug naar de Middeleeuwen", "Een voetbalteam op wereldreis", "Een soldaat in de Eerste Wereldoorlog", "Een prinses in een sprookjesland"],
+        q: "Waar gaat **Kruistocht in Spijkerbroek** van Thea Beckman over?",
+        options: ["Een jongen reist terug naar de middeleeuwen", "Een ridder brengt een geheime brief weg", "Een soldaat vecht in de Eerste Wereldoorlog", "Een meisje duikt onder in de oorlog"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Andere tijd.", "Het speelt in een échte periode uit de geschiedenis."],
+        wrongHints: [null, "Dat is De brief voor de koning, van een andere schrijfster.", "Kijk naar het woord kruistocht — welke tijd hoort daarbij?", "Dat lijkt op het verhaal van Anne Frank — dat is geen boek van Thea Beckman."],
         uitlegPad: {
           stappen: [
             { titel: "Wie was Thea Beckman?", tekst: "**Thea Beckman** *(1923-2004)* was een **Nederlandse kinderboekenschrijfster**. Schreef vooral **historische romans** voor 10+ kinderen. Won meerdere Kinderboeken-prijzen." },
@@ -277,7 +277,7 @@ const steps = [
         q: "Wie schreef **'De brief voor de koning'** (1962, ook verfilmd op Netflix)?",
         options: ["Tonke Dragt", "Annie M.G. Schmidt", "Thea Beckman", "Roald Dahl"],
         answer: 0,
-        wrongHints: [null, "Niet — Schmidt schreef kortere boeken (Jip+Janneke).", "Niet — Beckman schreef Spijkerbroek.", "Niet — Dahl was Brits."],
+        wrongHints: [null, "Annie M.G. Schmidt schreef kortere boeken, zoals Jip en Janneke.", "Thea Beckman schreef Kruistocht in Spijkerbroek.", "Roald Dahl schreef in het Engels."],
         uitlegPad: {
           stappen: [
             { titel: "Wie was Tonke Dragt?", tekst: "**Tonke Dragt** *(1930-2024)* was een Nederlandse schrijfster van avontuurlijke fantasy-romans voor jeugd. Geboren in Nederlands-Indië (Jakarta), kwam naar NL na WO2. Schreef vooral over **ridders, kastelen, geheime missies**." },
@@ -299,10 +299,10 @@ const steps = [
         },
       },
       {
-        q: "**Bibliotheek** = waar?",
-        options: ["Plek waar je boeken kunt lenen", "Boekenwinkel waar je koopt", "School-bibliotheek alleen", "Online video-platform"],
+        q: "Wat is een **bibliotheek**?",
+        options: ["Plek waar je boeken kunt lenen", "Winkel waar je boeken kunt kopen", "Fabriek waar boeken gedrukt worden", "Kantoor waar schrijvers boeken maken"],
         answer: 0,
-        wrongHints: [null, "Niet kopen — LENEN.", "Niet alleen school — ook publieke bibliotheek in dorp/stad.", "Niet video — boeken."],
+        wrongHints: [null, "In een bibliotheek betaal je niet per boek — je neemt het mee en brengt het terug.", "Boeken worden gedrukt in een drukkerij.", "Schrijvers werken meestal thuis — wat doe jij in de bibliotheek?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een bibliotheek?", tekst: "Een **bibliotheek** (of 'biep') is een plek waar je **boeken kunt lenen** voor een paar weken. **Voor kinderen onder 18: GRATIS** in heel Nederland (sinds 2015 wettelijk geregeld). Volwassenen betalen ~€50/jaar." },
@@ -323,25 +323,25 @@ const steps = [
           niveaus: { basis: "Boeken lenen gratis kind.", simpeler: "Bibliotheek = plek om boeken gratis te lenen. Voor kinderen <18 is lidmaatschap gratis in heel NL.", nogSimpeler: "Gratis lenen" },
         },
       },
-      { q: "Wie schreef **Jip en Janneke**?", options: ["Annie M.G. Schmidt","Roald Dahl","Tonke Dragt","Anne Frank"], answer: 0, wrongHints: [null, "Engelse schrijver.", "Andere kinderboeken (De brief voor de koning).", "Schreef dagboek, geen kinderboeken."] },
-      { q: "Wie tekende de illustraties bij **Jip en Janneke**?", options: ["Fiep Westendorp","Vincent van Gogh","Rembrandt","Dick Bruna"], answer: 0, wrongHints: [null, "Schilder, geen illustrator.", "Schilder Gouden Eeuw.", "Tekende Nijntje."] },
-      { q: "**Anne Frank** schreef tijdens?", options: ["Tweede Wereldoorlog","Eerste Wereldoorlog","Middeleeuwen","Gouden Eeuw"], answer: 0, wrongHints: [null, "Niet — andere periode.", "Veel eerder.", "Veel eerder."] },
-      { q: "Wat wordt elk jaar in oktober **gevierd** in scholen?", options: ["Kinderboekenweek","Koningsdag","Boekenmarkt","Schrijfdag"], answer: 0, wrongHints: [null, "Dat is in april.", "Niet jaarlijks zelfde week.", "Geen schoolfeest."] },
-      { q: "Wie schreef *Harry Potter*?", options: ["J.K. Rowling","Roald Dahl","Annie M.G. Schmidt","Tonke Dragt"], answer: 0, wrongHints: [null, "Andere kinderboeken.", "NL.", "NL."] },
-      { q: "Wie schreef *Pluk van de Petteflet*?", options: ["Annie M.G. Schmidt","Tonke Dragt","Jacques Vriens","Carry Slee"], answer: 0, wrongHints: [null, "Andere boeken.", "Andere.", "Andere."] },
-      { q: "*De brief voor de koning* is van?", options: ["Tonke Dragt","Annie M.G. Schmidt","Roald Dahl","J.K. Rowling"], answer: 0, wrongHints: [null, "Schmidt schreef vooral korte, grappige boeken (Jip en Janneke) — dit is een dik ridderavontuur.", "Dahl was Brits — dit ridderboek is oer-Nederlands (en op Netflix verfilmd).", "Rowling schreef Harry Potter — zoek een Néderlandse schrijfster."] },
-      { q: "Wie schreef *Sjakie en de Chocoladefabriek*?", options: ["Roald Dahl","Annie M.G. Schmidt","Tonke Dragt","Anne Frank"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet kinderboek."] },
-      { q: "Wat is **proza**?", options: ["Gewone tekst, zoals een verhaal","Tekst op rijm in versregels","Tekst om op toneel te spelen","Een woord dat niet bestaat"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Wel."] },
-      { q: "**Multatuli** schreef beroemd boek over?", options: ["Koloniale uitbuiting", "Een verboden liefde", "De Hollandse zeevaart", "Het leven op een boerderij"], answer: 0, wrongHints: [null, "Max Havelaar speelt in Nederlands-Indië. Wat ging daar mis?", "Max Havelaar speelt in Nederlands-Indië. Wat ging daar mis?", "Max Havelaar speelt in Nederlands-Indië. Wat ging daar mis?"] },
-      { q: "Wie tekende **Nijntje**?", options: ["Dick Bruna","Fiep Westendorp","Annie M.G. Schmidt","Roald Dahl"], answer: 0, wrongHints: [null, "Andere.", "Schrijver.", "Niet."] },
-      { q: "Wie schreef *Het Achterhuis*?", options: ["Anne Frank","Multatuli","Tonke Dragt","Annie M.G. Schmidt"], answer: 0, wrongHints: [null, "Andere periode.", "Niet.", "Niet."] },
-      { q: "**Gouden Griffel** is prijs voor?", options: ["Beste NL-kinderboek","Beste film","Beste spel","Beste recept"], answer: 0, wrongHints: [null, "Films winnen een Oscar of Kalf — waarmee schríjf je met een griffel?", "Voor spellen bestaan andere prijzen — een griffel is oud schrijfgerei. Wat maak je daarmee?", "Geen kookprijs — denk aan schrijven en lezen."] },
-      { q: "Wie is **Carry Slee**?", options: ["NL-jeugdboek-schrijfster", "Bekende tv-presentatrice", "Nederlandse zangeres", "Illustratrice van strips"], answer: 0, wrongHints: [null, "Niet op tv — denk aan Spijt! en Afblijven.", "Ze zingt niet — denk aan de boekenplank op school.", "Ze tekent niet — denk aan Spijt! en Afblijven."] },
-      { q: "Wat is een **strip**?", options: ["Verhaal met tekeningen + tekstballonnen", "Dik boek met alleen tekst, zonder plaatjes", "Gedicht op rijm met korte regels", "Fotoboek met een zin onder elke foto"], answer: 0, wrongHints: [null, "Wat heeft een strip juist wél?", "Rijmen de figuren in een strip, of praten ze?", "Waar staat in een strip wat de figuren zeggen?"] },
-      { q: "Wie schreef **fantasy** *De Hobbit*?", options: ["J.R.R. Tolkien","Roald Dahl","C.S. Lewis","Tonke Dragt"], answer: 0, wrongHints: [null, "Andere boeken.", "Narnia.", "Niet."] },
-      { q: "Wat is een **leesclub**?", options: ["Groep mensen die samen lezen + bespreken", "Bedrijf dat boeken maakt en uitgeeft", "Winkel waar je boeken kunt kopen", "School waar je leert boeken schrijven"], answer: 0, wrongHints: [null, "Een club is een groep mensen. Wat doen die samen?", "Een club is een groep mensen. Wat doen die samen?", "Het gaat om lezen, niet om schrijven leren."] },
-      { q: "Wat doet een **bibliothecaris**?", options: ["Bibliotheek beheren + lezers helpen", "Boeken schrijven en laten uitgeven", "Boeken drukken in een drukkerij", "Boeken verkopen in een boekwinkel"], answer: 0, wrongHints: [null, "Waar werkt een bibliothecaris? Wat gebeurt daar?", "Waar werkt een bibliothecaris? Wat gebeurt daar?", "In een bibliotheek koop je niets."] },
-      { q: "Welke 2 belangrijke NL-jeugdboeken-prijzen zijn er?", options: ["Gouden + Zilveren Griffel","Pulitzer + Booker","Oscar + Gouden Kalf","Nobelprijs + Edison"], answer: 0, wrongHints: [null, "Andere taal.", "Dat zijn filmprijzen.", "Dat zijn geen jeugdboekenprijzen."] },
+      { q: "Wie schreef **Jip en Janneke**?", options: ["Annie M.G. Schmidt","Roald Dahl","Tonke Dragt","Anne Frank"], answer: 0, wrongHints: [null, "Roald Dahl schreef in het Engels — Jip en Janneke is een Nederlands boek.", "Tonke Dragt schreef dikke avonturenboeken.", "Anne Frank schreef geen verhalen voor kleuters."] },
+      { q: "Wie tekende de illustraties bij **Jip en Janneke**?", options: ["Fiep Westendorp","Anton Pieck","Marten Toonder","Dick Bruna"], answer: 0, wrongHints: [null, "Anton Pieck tekende ouderwetse, sprookjesachtige platen.", "Marten Toonder tekende strips, zoals Tom Poes.", "Dick Bruna tekende vooral bij zijn eigen boeken."] },
+      { q: "In welke tijd schreef **Anne Frank** haar dagboek?", options: ["Tweede Wereldoorlog","Eerste Wereldoorlog","Middeleeuwen","Gouden Eeuw"], answer: 0, wrongHints: [null, "In de Eerste Wereldoorlog was Anne nog niet geboren.", "In de middeleeuwen leefden de ridders — Anne leefde veel later.", "De Gouden Eeuw was in de 17e eeuw — Anne leefde veel later."] },
+      { q: "Welk boekenfeest vieren **scholen** elk jaar, met steeds een nieuw thema?", options: ["Kinderboekenweek","Boekenweek","Poëzieweek","Koningsspelen"], answer: 0, wrongHints: [null, "De Boekenweek is vooral voor volwassenen, in de boekwinkel.", "De Poëzieweek gaat alleen over gedichten.", "De Koningsspelen zijn een sportdag, geen boekenfeest."] },
+      { q: "Wie schreef *Harry Potter*?", options: ["J.K. Rowling","Roald Dahl","Annie M.G. Schmidt","C.S. Lewis"], answer: 0, wrongHints: [null, "Roald Dahl overleed al in 1990 — Harry Potter kwam later.", "Annie M.G. Schmidt schreef in het Nederlands.", "C.S. Lewis schreef Narnia, lang vóór Harry Potter."] },
+      { q: "Wie schreef *Pluk van de Petteflet*?", options: ["Annie M.G. Schmidt","Tonke Dragt","Jacques Vriens","Carry Slee"], answer: 0, wrongHints: [null, "Tonke Dragt schreef dikke avonturenboeken.", "Jacques Vriens schreef vooral over oudere schoolkinderen.", "Carry Slee schrijft voor tieners."] },
+      { q: "*De brief voor de koning* is van?", options: ["Tonke Dragt","Annie M.G. Schmidt","Roald Dahl","J.K. Rowling"], answer: 0, wrongHints: [null, "Schmidt schreef vooral korte, grappige boeken (Jip en Janneke) — dit is een dik ridderavontuur.", "Dahl was Brits — dit ridderboek is oer-Nederlands (en op Netflix verfilmd).", "Rowling schreef Harry Potter — dit boek is ouder en Nederlands."] },
+      { q: "Wie schreef *Sjakie en de Chocoladefabriek*?", options: ["Roald Dahl","Annie M.G. Schmidt","Tonke Dragt","Astrid Lindgren"], answer: 0, wrongHints: [null, "Annie M.G. Schmidt schreef in het Nederlands — dit boek is vertaald uit het Engels.", "Tonke Dragt is een Nederlandse schrijfster — dit boek komt uit Engeland.", "Astrid Lindgren kwam uit Zweden en schreef Pippi Langkous."] },
+      { q: "Wat is **proza**?", options: ["Gewone tekst, zoals een verhaal","Tekst op rijm in versregels","Tekst om op toneel te spelen","Een tekst met alleen plaatjes"], answer: 0, wrongHints: [null, "Tekst op rijm in versregels heet poëzie.", "Tekst om te spelen heet een toneelstuk.", "Proza bestaat juist uit woorden."] },
+      { q: "Waar gaat **Max Havelaar** van Multatuli over?", options: ["Oneerlijke behandeling van mensen op Java", "Een verboden liefde in Amsterdam", "De reizen van de VOC-schepen", "Het zware leven van boeren in Drenthe"], answer: 0, wrongHints: [null, "Kijk in de les: waar speelt Max Havelaar?", "De VOC bestond in 1860 al lang niet meer.", "Max Havelaar speelt niet in Nederland zelf."] },
+      { q: "Wie tekende **Nijntje**?", options: ["Dick Bruna","Fiep Westendorp","Annie M.G. Schmidt","Anton Pieck"], answer: 0, wrongHints: [null, "Fiep Westendorp tekende voor de boeken van een schrijfster.", "Annie M.G. Schmidt schreef de verhalen — zij tekende niet zelf.", "Anton Pieck tekende ouderwetse, sprookjesachtige platen."] },
+      { q: "Wie schreef *Het Achterhuis*?", options: ["Anne Frank","Multatuli","Tonke Dragt","Annie M.G. Schmidt"], answer: 0, wrongHints: [null, "Multatuli leefde in de 19e eeuw.", "Tonke Dragt schreef verzonnen avonturen, geen dagboek.", "Annie M.G. Schmidt schreef vrolijke kinderboeken en versjes."] },
+      { q: "Waarvoor is de prijs **Gouden Griffel**?", options: ["Het best geschreven kinderboek","De mooiste tekeningen in een boek","De beste kinderfilm van het jaar","Het meest verkochte kinderboek"], answer: 0, wrongHints: [null, "Voor tekeningen bestaat het Gouden Penseel — een griffel is iets om mee te schrijven.", "Films winnen een Gouden Kalf.", "Het gaat niet om hoeveel er verkocht is — een jury kiest."] },
+      { q: "Wie is **Carry Slee**?", options: ["Schrijfster van jeugdboeken", "Bekende tv-presentatrice", "Nederlandse zangeres", "Tekenaar van strips"], answer: 0, wrongHints: [null, "Zie je haar op tv? Kijk in de les in welk rijtje haar naam staat.", "Zingt ze liedjes? Kijk in de les in welk rijtje haar naam staat.", "Tekent ze strips? Kijk in de les wat zij maakt."] },
+      { q: "Wat is een **strip**?", options: ["Verhaal met tekeningen en tekstballonnen", "Dik boek met alleen tekst, zonder plaatjes", "Gedicht op rijm met korte regels", "Fotoboek met een zin onder elke foto"], answer: 0, wrongHints: [null, "Wat heeft een strip juist wél?", "Rijmen de figuren in een strip, of praten ze?", "Waar staat in een strip wat de figuren zeggen?"] },
+      { q: "Wie schreef het fantasyboek *De Hobbit*?", options: ["J.R.R. Tolkien","Roald Dahl","C.S. Lewis","Tonke Dragt"], answer: 0, wrongHints: [null, "Roald Dahl schreef grappige boeken, niet over Midden-aarde.", "C.S. Lewis schreef de verhalen over Narnia.", "Tonke Dragt schreef in het Nederlands — De Hobbit is vertaald uit het Engels."] },
+      { q: "Wat is een **leesclub**?", options: ["Groep mensen die samen lezen en bespreken", "Groep schrijvers die samen een boek maken", "Winkel waar je boeken kunt kopen", "School waar je leert boeken schrijven"], answer: 0, wrongHints: [null, "Zit in het woord leesclub iets over schrijven?", "Een club is geen winkel — wat doen de leden samen?", "Het gaat om lezen, niet om schrijven leren."] },
+      { q: "Wat doet een **bibliothecaris**?", options: ["De bibliotheek bijhouden en lezers helpen", "Boeken schrijven en laten uitgeven", "Boeken drukken in een drukkerij", "Boeken verkopen in een boekwinkel"], answer: 0, wrongHints: [null, "Wie boeken schrijft, heet een schrijver.", "Boeken drukken doet een drukker.", "Een bibliothecaris werkt niet in een winkel — waar dan?"] },
+      { q: "Welke twee bekende prijzen zijn er voor Nederlandse kinderboeken?", options: ["Gouden en Zilveren Griffel","Pulitzer en Booker","Oscar en Gouden Kalf","Nobelprijs en Edison"], answer: 0, wrongHints: [null, "Dat zijn prijzen voor Engelse boeken voor volwassenen.", "Dat zijn filmprijzen.", "Dat zijn geen jeugdboekenprijzen."] },
     ],
   },
 ];

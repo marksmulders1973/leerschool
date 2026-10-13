@@ -64,7 +64,7 @@ const steps = [
         q: "Wat is **12 ÷ 4**?",
         options: ["3", "8", "16", "48"],
         answer: 0,
-        wrongHints: [null, "Aftrekking — maar de opgave vraagt om delen, niet aftrekken.", "Optelling — maar de opgave vraagt om delen, niet optellen.", "Vermenigvuldiging."],
+        wrongHints: [null, "Aftrekking — maar de opgave vraagt om delen, niet aftrekken.", "Optelling — maar de opgave vraagt om delen, niet optellen.", "Dat is 12 × 4. Bij delen wordt het getal kleiner, niet groter."],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent 12 ÷ 4?", tekst: "**12 ÷ 4** = '**12 verdelen over 4**'. Bijvoorbeeld: je hebt 12 snoepjes en 4 vriendjes. Elk vriendje krijgt evenveel. Hoeveel per vriendje?" },
@@ -92,19 +92,19 @@ const steps = [
         q: "Wat is **20 ÷ 5**?",
         options: ["4", "15", "25", "100"],
         answer: 0,
-        wrongHints: [null, "Aftrekking.", "Optelling.", "Vermenigvuldiging."],
+        wrongHints: [null, "Dat is 20 − 5. Welk getal keer 5 geeft 20?", "Dat is 20 + 5. Komt er bij delen iets bij?", "Dat is 20 × 5. Bij delen wordt het getal kleiner, niet groter."],
       },
       {
         q: "Wat is **9 ÷ 1**?",
         options: ["9", "1", "0", "10"],
         answer: 0,
-        wrongHints: [null, "9 ÷ 9, niet 9 ÷ 1.", "Niet nul.", "Optelling."],
+        wrongHints: [null, "9 ÷ 9, niet 9 ÷ 1.", "Als je 9 dingen aan 1 persoon geeft, krijgt die persoon dan niets?", "Dat is 9 + 1. Komt er bij delen iets bij?"],
       },
       {
         q: "Wat is **8 ÷ 8**?",
         options: ["1", "0", "8", "16"],
         answer: 0,
-        wrongHints: [null, "Niet nul — pas op.", "Elk getal gedeeld door zichzelf: hoeveel keer past het getal in zichzelf?", "Vermenigvuldiging."],
+        wrongHints: [null, "Je verdeelt 8 dingen over 8 kinderen. Krijgt elk kind dan niets?", "Elk getal gedeeld door zichzelf: hoeveel keer past het getal in zichzelf?", "Dat is 8 + 8. Wordt het meer als je verdeelt?"],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -457,7 +457,7 @@ const steps = [
         q: "**100 ÷ 10** = ?",
         options: ["10", "1", "1000", "110"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Vermenigvuldiging.", "Optelling."],
+        wrongHints: [null, "Dat is 10 ÷ 10. Hoeveel tientallen zitten er in 100?", "Dat is 100 × 10. Bij ÷ 10 wordt het getal kleiner.", "Dat is 100 + 10. Bij ÷ 10 wordt het getal kleiner."],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -790,7 +790,7 @@ const steps = [
         q: "**24 ÷ 3** = ?",
         options: ["8", "27", "21", "72"],
         answer: 0,
-        wrongHints: [null, "Optelling.", "Aftrekking.", "Vermenigvuldiging."],
+        wrongHints: [null, "Dat is 24 + 3. Komt er bij delen iets bij?", "Dat is 24 − 3. Welk getal keer 3 geeft 24?", "Dat is 24 × 3. Bij delen wordt het getal kleiner, niet groter."],
         uitlegPad: {
           stappen: [
             { titel: "Tafel van 3 opzeggen", tekst: "Zeg de tafel van 3 op tot je 24 hoort: **3, 6, 9, 12, 15, 18, 21, 24**. Welke stap? Tel mee: 1-2-3-4-5-6-7-**8**. De **8e stap** levert 24. Dus 24 ÷ 3 = **8**." },
@@ -817,13 +817,13 @@ const steps = [
         q: "**56 ÷ 7** = ?",
         options: ["8", "49", "63", "9"],
         answer: 0,
-        wrongHints: [null, "Aftrekking.", "Optelling.", "Net niet — controleer."],
+        wrongHints: [null, "Dat is 56 − 7. Welk getal keer 7 geeft 56?", "Dat is 56 + 7. Komt er bij delen iets bij?", "Reken na: 9 × 7 = 63. Is dat 56?"],
       },
       {
         q: "**63 ÷ 9** = ?",
         options: ["7", "54", "72", "8"],
         answer: 0,
-        wrongHints: [null, "Aftrekking.", "Optelling.", "Net niet."],
+        wrongHints: [null, "Dat is 63 − 9. Welk getal keer 9 geeft 63?", "Dat is 63 + 9. Komt er bij delen iets bij?", "Reken na: 8 × 9 = 72. Is dat 63?"],
         uitlegPad: {
           stappen: [
             { titel: "Tafel terug", tekst: "Denk: 9 × ? = 63. Tafel-9: 9, 18, 27, 36, 45, 54, 63. 63 is de 7e. Dus 63 ÷ 9 = 7." },
@@ -843,14 +843,14 @@ const steps = [
         q: "**48 ÷ 6** = ?",
         options: ["8", "42", "54", "9"],
         answer: 0,
-        wrongHints: [null, "Aftrekking.", "Optelling.", "Net niet."],
+        wrongHints: [null, "Dat is 48 − 6. Welk getal keer 6 geeft 48?", "Dat is 48 + 6. Komt er bij delen iets bij?", "Reken na: 9 × 6 = 54. Is dat 48?"],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "**28 ÷ 7** = ?",
         options: ["4", "21", "35", "5"],
         answer: 0,
-        wrongHints: [null, "Aftrekking.", "Optelling.", null],
+        wrongHints: [null, "Dat is 28 − 7. Welk getal keer 7 geeft 28?", "Dat is 28 + 7. Komt er bij delen iets bij?", null],
         uitlegPad: {
           stappen: [
             {
@@ -896,7 +896,7 @@ const steps = [
         q: "**32 ÷ 4** = ?",
         options: ["8", "28", "36", "7"],
         answer: 0,
-        wrongHints: [null, "Aftrekking.", "Optelling.", "Net niet — controleer."],
+        wrongHints: [null, "Dat is 32 − 4. Welk getal keer 4 geeft 32?", "Dat is 32 + 4. Komt er bij delen iets bij?", "Reken na: 7 × 4 = 28. Is dat 32?"],
         uitlegPad: {
           stappen: [
             {
@@ -942,7 +942,7 @@ const steps = [
         q: "**54 ÷ 6** = ?",
         options: ["9", "48", "60", "8"],
         answer: 0,
-        wrongHints: [null, "Aftrekking.", "Optelling.", "Net niet."],
+        wrongHints: [null, "Dat is 54 − 6. Welk getal keer 6 geeft 54?", "Dat is 54 + 6. Komt er bij delen iets bij?", "Reken na: 8 × 6 = 48. Is dat 54?"],
         uitlegPad: {
           stappen: [
             {
@@ -992,7 +992,7 @@ const steps = [
         q: "**27 ÷ 3** = ?",
         options: ["9", "24", "30", "8"],
         answer: 0,
-        wrongHints: [null, "Aftrekking.", "Optelling.", null],
+        wrongHints: [null, "Dat is 27 − 3. Welk getal keer 3 geeft 27?", "Dat is 27 + 3. Komt er bij delen iets bij?", null],
         uitlegPad: {
           stappen: [
             {
@@ -1038,7 +1038,7 @@ const steps = [
         q: "**42 ÷ 6** = ?",
         options: ["7", "36", "48", "6"],
         answer: 0,
-        wrongHints: [null, "Aftrekking.", "Optelling.", "Net niet — controleer."],
+        wrongHints: [null, "Dat is 42 − 6. Welk getal keer 6 geeft 42?", "Dat is 42 + 6. Komt er bij delen iets bij?", "Reken na: 6 × 6 = 36. Is dat 42?"],
         uitlegPad: {
           stappen: [
             {
@@ -1091,18 +1091,18 @@ const steps = [
     checks: [
       {
         q: "**11 ÷ 3** = ?",
-        options: ["3 rest 2", "4 rest 1", "3 rest 1", "Onmogelijk"],
+        options: ["3 rest 2", "4 rest 1", "3 rest 1", "2 rest 5"],
         answer: 0,
-        wrongHints: [null, "Dat is te veel — hoeveel maal 3 past nét niet meer in 11?", "Reken na: hoeveel is 3 groepjes van 3, en hoeveel scheelt dat met 11?", "Wel mogelijk."],
+        wrongHints: [null, "Dat is te veel — hoeveel maal 3 past nét niet meer in 11?", "Reken na: hoeveel is 3 groepjes van 3, en hoeveel scheelt dat met 11?", "Kijk naar de rest: past 3 nog een keer in 5?"],
       },
       {
         q: "**17 ÷ 5** = ?",
         options: ["3 rest 2", "4 rest 0", "2 rest 7", "5 rest 0"],
         answer: 0,
-        wrongHints: [null, "Te veel — dat keer 5 is al groter dan 17.", "Hoeveel blijft er over? Is die rest kleiner dan de deler?", "Onmogelijk — hoeveel keer past 5 in 17?"],
+        wrongHints: [null, "Te veel — dat keer 5 is al groter dan 17.", "Hoeveel blijft er over? Is die rest kleiner dan de deler?", "Reken na: 5 × 5 = 25. Past dat in 17?"],
       },
       {
-        q: "Een kind krijgt **20 snoepjes**. Hij verdeelt over **3 vriendjes**. Hoeveel per vriendje, hoeveel rest?",
+        q: "Sem heeft **20 snoepjes**. Hij verdeelt ze eerlijk over **3 vriendjes**. Hoeveel krijgt elk vriendje, en hoeveel blijven er over?",
         options: ["6 rest 2", "7 rest 0", "5 rest 5", "6 rest 1"],
         answer: 0,
         wrongHints: [null, "Dat keer 3 is al meer dan 20 — zoek het getal nét eronder.", "Hoeveel blijft er over? Is die rest kleiner dan 3?", "Net niet — hoeveel blijft er over als je dit keer 3 doet?"],
@@ -1111,7 +1111,7 @@ const steps = [
         q: "In 1 doos passen **6 eieren**. Je hebt **20 eieren**. Hoeveel dozen heb je nodig?",
         options: ["4 dozen", "3 dozen", "20 dozen", "6 dozen"],
         answer: 0,
-        wrongHints: [null, "Te weinig — hoeveel eieren passen in drie dozen, en hoeveel blijven er dan over?", "Veel te veel.", "Te veel — hoeveel dozen heb je werkelijk nodig?"],
+        wrongHints: [null, "Te weinig — hoeveel eieren passen in drie dozen, en hoeveel blijven er dan over?", "Dan krijgt elk ei een eigen doos. Hoeveel eieren passen er in één doos?", "Dat is het aantal eieren in één doos. Hoeveel dozen van 6 heb je nodig voor 20 eieren?"],
         uitlegPad: {
           stappen: [
             { titel: "Verdeel + rest", tekst: "20 ÷ 6 = 3 rest 2. In 3 dozen passen 18 eieren. 2 eieren blijven over." },
@@ -1395,7 +1395,7 @@ const steps = [
       "Toets-praktijksommen draaien vaak om **eerlijk verdelen** of **prijs per stuk**.\n\n**Voorbeeld 1 — verdelen**:\n*'Een zak van 24 dropjes verdeel je over 4 kinderen. Hoeveel krijgen ze elk?'*\n• 24 ÷ 4 = **6 dropjes per kind**.\n\n**Voorbeeld 2 — prijs per stuk**:\n*'5 boeken kosten samen €25. Hoe duur is 1 boek?'*\n• €25 ÷ 5 = **€5 per boek**.\n\n**Voorbeeld 3 — hoeveel passen erin?**:\n*'In 1 bus passen 50 mensen. Voor schoolreis zijn er 200 kinderen. Hoeveel bussen?'*\n• 200 ÷ 50 = **4 bussen**.\n\n**Voorbeeld 4 — met rest (afronden naar boven)**:\n*'In 1 doos passen 8 ballen. Hoeveel dozen voor 50 ballen?'*\n• 50 ÷ 8 = 6 rest 2.\n• Dus **7 dozen** nodig (rest moet ook ergens heen).\n\n**Voorbeeld 5 — geld delen**:\n*'4 kinderen verdelen €36 gelijk. Hoeveel per kind?'*\n• €36 ÷ 4 = **€9 per kind**.\n\n**Voorbeeld 6 — tafels in actie**:\n*'Een leerkracht maakt groepjes van 4. De klas heeft 28 kinderen. Hoeveel groepjes?'*\n• 28 ÷ 4 = **7 groepjes**.\n\n**Toets-tip**:\n• 'Hoeveel **per** stuk?' → delen.\n• 'Hoeveel **groepjes** van X?' → delen.\n• 'Hoeveel **dozen/zakjes** nodig?' → delen + naar boven afronden.\n• 'Hoeveel **passen erin**?' → delen + naar **beneden** afronden *(want te veel past niet)*.",
     checks: [
       {
-        q: "**32 koekjes** over **8 kinderen** eerlijk. **Per kind**?",
+        q: "**32 koekjes** worden eerlijk verdeeld over **8 kinderen**. Hoeveel koekjes krijgt **elk kind**?",
         options: ["4 koekjes", "3 koekjes", "5 koekjes", "8 koekjes"],
         answer: 0,
         wrongHints: [null, "Te weinig — hoeveel koekjes zou dat totaal geven voor alle kinderen?", "Te veel — hoeveel koekjes zou dat totaal geven voor alle kinderen?", "Te veel — dan zou één kind alle koekjes krijgen."],
@@ -1409,12 +1409,12 @@ const steps = [
             { woord: "eerlijk verdelen", uitleg: "Iedereen krijgt evenveel = delen." },
             { woord: "per kind", uitleg: "Signaalwoord 'per' = delen." },
           ],
-          theorie: "Toets-truc redactiesommen — signaalwoorden:\n• **'per'** / **'elk'** / **'iedere'** / **'eerlijk verdelen'** → DELEN\n• **'totaal'** / **'samen'** → meestal × of +\n• **'over X groepen'** → delen door X.",
+          theorie: "Toets-truc redactiesommen — signaalwoorden:\n• **'eerlijk verdelen'** / **'hoeveel per kind'** / **'in groepjes van'** → DELEN\n• **'elk'** / **'iedere'** (zoals '4 kinderen krijgen elk 3') → meestal ×\n• **'totaal'** / **'samen'** → meestal × of +\n• **'over X groepen'** → delen door X.",
           voorbeelden: [
             { type: "stap", tekst: "**'48 appels in dozen van 6'** → 48 ÷ 6 = 8 dozen." },
             { type: "stap", tekst: "**'€60 over 5 kinderen'** → 60 ÷ 5 = €12 per kind." },
           ],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "'PER' = deel-teken. Schrijf elke redactiesom om naar een gewone som met getallen + ÷." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "'Hoeveel per kind?' = deel-teken. Schrijf elke redactiesom om naar een gewone som met getallen + ÷." }],
           niveaus: {
             basis: "32 ÷ 8 = 4 koekjes per kind.",
             simpeler: "32 koekjes verdelen over 8 kinderen = 32 ÷ 8 = 4.",
@@ -1423,22 +1423,22 @@ const steps = [
         },
       },
       {
-        q: "**5 appels** voor **€2,50** totaal. Prijs **per appel**?",
+        q: "**5 appels** kosten samen **€2,50**. Hoeveel kost **1 appel**?",
         options: ["€0,50", "€2,50", "€5,00", "€1,25"],
         answer: 0,
-        wrongHints: [null, "Dat is alles samen.", "Te veel.", "Net niet."],
+        wrongHints: [null, "Dat is alles samen.", "Dan kosten 5 appels samen € 25. Is dat € 2,50?", "Dat is € 2,50 ÷ 2. Over hoeveel appels verdeel je het bedrag?"],
       },
       {
-        q: "**56 kinderen** in **groepjes van 7**. Hoeveel **groepjes**?",
+        q: "**56 kinderen** worden verdeeld in **groepjes van 7**. Hoeveel **groepjes** zijn er?",
         options: ["8 groepjes", "7 groepjes", "9 groepjes", "56 groepjes"],
         answer: 0,
-        wrongHints: [null, "Niet — hoeveel maal 7 geeft 56?", "Te veel.", "Te veel — dat is iedereen apart."],
+        wrongHints: [null, "Reken na: 7 × 7 = 49. Is dat 56?", "Reken na: 9 × 7 = 63. Is dat 56?", "Te veel — dat is iedereen apart."],
       },
       {
-        q: "Een doos heeft **6 chocolaatjes**. Hoeveel **dozen** voor **40 chocolaatjes**?",
+        q: "In een doos passen **6 chocolaatjes**. Hoeveel **dozen** heb je nodig voor **40 chocolaatjes**?",
         options: ["7 dozen", "6 dozen", "5 dozen", "8 dozen"],
         answer: 0,
-        wrongHints: [null, "Te weinig — hoeveel chocolaatjes passen daarin, en hoeveel blijven er dan over?", "Te weinig.", "Te veel — hoeveel dozen heb je werkelijk nodig?"],
+        wrongHints: [null, "Te weinig — hoeveel chocolaatjes passen daarin, en hoeveel blijven er dan over?", "In 5 dozen passen maar 30 chocolaatjes. Waar laat je de rest?", "In 8 dozen passen 48 chocolaatjes. Heb je die allemaal nodig voor 40?"],
       },
       // Q12a (8 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
@@ -1724,52 +1724,52 @@ const steps = [
         q: "**45 ÷ 9** = ?",
         options: ["5", "36", "54", "9"],
         answer: 0,
-        wrongHints: [null, "Aftrekking.", "Optelling.", "Net niet."],
+        wrongHints: [null, "Dat is 45 − 9. Welk getal keer 9 geeft 45?", "Dat is 45 + 9. Komt er bij delen iets bij?", "Reken na: 9 × 9 = 81. Is dat 45?"],
       },
       {
         q: "**72 ÷ 8** = ?",
         options: ["9", "64", "80", "8"],
         answer: 0,
-        wrongHints: [null, "Aftrekking.", "Optelling.", "Net niet."],
+        wrongHints: [null, "Dat is 72 − 8. Welk getal keer 8 geeft 72?", "Dat is 72 + 8. Komt er bij delen iets bij?", "Reken na: 8 × 8 = 64. Is dat 72?"],
       },
       {
         q: "**25 ÷ 4** = ?",
         options: ["6 rest 1", "7 rest 0", "5 rest 5", "6 rest 0"],
         answer: 0,
-        wrongHints: [null, "Te veel — dat keer 4 is al meer dan 25.", "Geen rest groter dan de deler.", "Hoeveel blijft er over als je dit keer 4 doet? Is de rest nul?"],
+        wrongHints: [null, "Te veel — dat keer 4 is al meer dan 25.", "De rest is 5. Past 4 daar nog een keer in?", "Hoeveel blijft er over als je dit keer 4 doet? Is de rest nul?"],
       },
       {
-        q: "**8 kinderen** verdelen **€40** eerlijk. **Per kind**?",
+        q: "**8 kinderen** verdelen **€40** eerlijk. Hoeveel krijgt **elk kind**?",
         options: ["€5", "€40", "€8", "€48"],
         answer: 0,
-        wrongHints: [null, "Alles samen.", "Niet zo veel per kind.", "Optelling."],
+        wrongHints: [null, "Dat is al het geld samen. Hoeveel krijgt één kind?", "Reken na: 8 × € 8 = € 64. Is dat € 40?", "Dat is 40 + 8. Wordt het meer als je verdeelt?"],
       },
       {
         q: "**63 ÷ 7** = ?",
         options: ["9", "56", "70", "8"],
         answer: 0,
-        wrongHints: [null, "Aftrekking.", "Optelling.", "Net niet."],
+        wrongHints: [null, "Dat is 63 − 7. Welk getal keer 7 geeft 63?", "Dat is 63 + 7. Komt er bij delen iets bij?", "Reken na: 8 × 7 = 56. Is dat 63?"],
       },
       {
-        q: "**1 box per 6 boeken**. **50 boeken** in totaal. Hoeveel **boxen**?",
+        q: "In 1 box passen **6 boeken**. Je hebt **50 boeken**. Hoeveel **boxen** heb je nodig?",
         options: ["9 boxen", "8 boxen", "10 boxen", "6 boxen"],
         answer: 0,
-        wrongHints: [null, "Te weinig — hoeveel boeken passen daarin, en hoeveel blijven er dan over?", "Te veel.", "Veel te weinig."],
+        wrongHints: [null, "Te weinig — hoeveel boeken passen daarin, en hoeveel blijven er dan over?", "In 10 boxen passen 60 boeken. Heb je zoveel plek nodig voor 50?", "In 6 boxen passen maar 36 boeken. Waar laat je de rest?"],
       },
-      { q: "20 ÷ 4 = ?", options: ["5","4","6","20"], answer: 0, wrongHints: [null, "Deler.", "Niet.", "Niet."] },
-      { q: "36 ÷ 9 = ?", options: ["4","5","6","9"], answer: 0, wrongHints: [null, "Niet.", "Niet — 9×6=54.", "Deler."] },
-      { q: "72 ÷ 8 = ?", options: ["9","8","7","6"], answer: 0, wrongHints: [null, "Niet.", "Niet — 8×7=56.", "Niet."] },
-      { q: "100 ÷ 10 = ?", options: ["10","100","1","11"], answer: 0, wrongHints: [null, "Geen verandering.", "Niet.", "Niet."] },
-      { q: "**56 ÷ 7** = ?", options: ["8","7","6","9"], answer: 0, wrongHints: [null, "Deler.", "Niet.", "Te hoog."] },
-      { q: "**Rest** bij 23 ÷ 5 = ?", options: ["3","2","4","0"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet — wel rest."] },
-      { q: "**Rest** bij 30 ÷ 4 = ?", options: ["2","1","4","0"], answer: 0, wrongHints: [null, "Niet.", "Te veel.", "Niet — wel rest."] },
-      { q: "Welke is **deeltafel** van 10: 10/10 = ?", options: ["1","10","100","0"], answer: 0, wrongHints: [null, "Hoe vaak past 10 in 10? Dat is niet 10 keer.", "Delen maakt kleiner, niet groter.", "Een getal door zichzelf delen is niet 0 — er past wél iets in."] },
-      { q: "**24 ÷ 6** = ?", options: ["4","6","8","3"], answer: 0, wrongHints: [null, "Deler.", "Niet.", "Niet."] },
-      { q: "Je verdeelt **48** in **8 gelijke groepjes**. Hoeveel zitten er in elk groepje?", options: ["6","8","4","12"], answer: 0, wrongHints: [null, "Aantal groepen.", "Niet.", "Niet."] },
-      { q: "100 ÷ 25 = ?", options: ["4","25","5","10"], answer: 0, wrongHints: [null, "Deler.", "Niet.", "Niet."] },
-      { q: "Wat is **omgekeerde** van delen?", options: ["Vermenigvuldigen","Aftrekken","Optellen","Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
-      { q: "**Halveren** is delen door?", options: ["2","½","4","10"], answer: 0, wrongHints: [null, "Vermenigvuldigen met.", "Kwarten.", "Niet."] },
-      { q: "**Eerlijk verdelen** 18 koeken over 6 kinderen?", options: ["3","12","6","18"], answer: 0, wrongHints: [null, "Dat is 18 − 6, geen deling.", "Aantal kinderen.", "Dat is het totaal."] },
+      { q: "20 ÷ 4 = ?", options: ["5","4","6","20"], answer: 0, wrongHints: [null, "Dat is het getal waardoor je deelt. Hoe vaak past 4 in 20?", "Reken na: 6 × 4 = 24. Is dat 20?", "Dat is het getal waarmee je begint. Wordt het bij delen niet kleiner?"] },
+      { q: "36 ÷ 9 = ?", options: ["4","5","6","9"], answer: 0, wrongHints: [null, "Reken na: 5 × 9 = 45. Is dat 36?", "Niet — 9×6=54.", "Dat is het getal waardoor je deelt. Hoe vaak past 9 in 36?"] },
+      { q: "72 ÷ 8 = ?", options: ["9","8","7","6"], answer: 0, wrongHints: [null, "Reken na: 8 × 8 = 64. Is dat 72?", "Niet — 8×7=56.", "Reken na: 6 × 8 = 48. Is dat 72?"] },
+      { q: "100 ÷ 10 = ?", options: ["10","100","1","11"], answer: 0, wrongHints: [null, "Dat is het getal waarmee je begint. Wat gebeurt er met een getal als je het door 10 deelt?", "Dat is 10 ÷ 10. Hoeveel tientallen zitten er in 100?", "Reken na: 11 × 10 = 110. Is dat 100?"] },
+      { q: "**56 ÷ 7** = ?", options: ["8","7","6","9"], answer: 0, wrongHints: [null, "Dat is het getal waardoor je deelt. Hoe vaak past 7 in 56?", "Reken na: 6 × 7 = 42. Is dat 56?", "Reken na: 9 × 7 = 63. Is dat 56?"] },
+      { q: "Wat is de **rest** bij 23 ÷ 5?", options: ["3","2","4","0"], answer: 0, wrongHints: [null, "Hoe vaak past 5 in 23? Reken dan uit hoeveel er over is.", "Dat is hoe vaak 5 in 23 past. Wat blijft er over?", "Past 5 precies in 23? Kijk in de tafel van 5."] },
+      { q: "Wat is de **rest** bij 30 ÷ 4?", options: ["2","1","4","0"], answer: 0, wrongHints: [null, "Zoek het grootste getal uit de tafel van 4 dat onder 30 blijft. Hoeveel scheelt dat met 30?", "Een rest van 4 kan niet: dan past 4 er nog een keer in.", "Staat 30 in de tafel van 4?"] },
+      { q: "Wat is **10 ÷ 10**?", options: ["1","10","100","0"], answer: 0, wrongHints: [null, "Hoe vaak past 10 in 10? Dat is niet 10 keer.", "Delen maakt kleiner, niet groter.", "Een getal door zichzelf delen is niet 0 — er past wél iets in."] },
+      { q: "**24 ÷ 6** = ?", options: ["4","6","8","3"], answer: 0, wrongHints: [null, "Dat is het getal waardoor je deelt. Hoe vaak past 6 in 24?", "Dat is 24 ÷ 3. Je deelt door 6.", "Reken na: 3 × 6 = 18. Is dat 24?"] },
+      { q: "Je verdeelt **48** in **8 gelijke groepjes**. Hoeveel zitten er in elk groepje?", options: ["6","8","4","12"], answer: 0, wrongHints: [null, "Dat is het aantal groepjes. Hoeveel zitten er in elk groepje?", "Reken na: 4 × 8 = 32. Is dat 48?", "Dat is 48 ÷ 4. Je maakt 8 groepjes."] },
+      { q: "100 ÷ 25 = ?", options: ["4","25","5","10"], answer: 0, wrongHints: [null, "Dat is het getal waardoor je deelt. Hoe vaak past 25 in 100?", "Reken na: 5 × 25 = 125. Is dat 100?", "Dat is 100 ÷ 10. Je deelt door 25."] },
+      { q: "Wat is het **omgekeerde** van delen?", options: ["Vermenigvuldigen","Aftrekken","Optellen","Verdelen"], answer: 0, wrongHints: [null, "Aftrekken is het omgekeerde van optellen. Welke bewerking hoort bij delen?", "Welke som gebruik je om 12 ÷ 3 = 4 te controleren?", "Verdelen is een ander woord voor delen. Wat is het omgekeerde?"] },
+      { q: "**Halveren** is hetzelfde als delen door …", options: ["2","½","4","10"], answer: 0, wrongHints: [null, "Delen door ½ maakt een getal juist twee keer zo groot. Wordt het bij halveren groter?", "Delen door 4 geeft vier gelijke stukken. Hoeveel stukken krijg je bij halveren?", "Dan krijg je tien gelijke stukken. Hoeveel helften zitten er in een geheel?"] },
+      { q: "Je verdeelt **18 koeken** eerlijk over **6 kinderen**. Hoeveel koeken krijgt elk kind?", options: ["3","12","6","18"], answer: 0, wrongHints: [null, "Dat is 18 − 6, geen deling.", "Dat is het aantal kinderen. Hoeveel koeken krijgt ieder?", "Dat zijn alle koeken samen. Krijgt één kind ze allemaal?"] },
     ],
   },
   // G. Oefenronde (11 aug 2026, zelfde didactiek als topografie "Ken ze alle 12"):

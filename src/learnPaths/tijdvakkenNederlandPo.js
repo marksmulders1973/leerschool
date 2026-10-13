@@ -30,7 +30,7 @@ const steps = [
         q: "Waar zijn de **hunebedden** te vinden?",
         options: ["Drenthe", "Limburg", "Friesland", "Zeeland"],
         answer: 0,
-        wrongHints: [null, "Niet in het zuiden — zoek in het noorden van ons land.", "Friesland ligt wel in het noorden, maar daar zijn ze niet. Kijk meer naar het oosten.", "Geen hunebedden daar."],
+        wrongHints: [null, "Niet in het zuiden — zoek in het noorden van ons land.", "Friesland ligt wel in het noorden, maar daar zijn ze niet. Kijk meer naar het oosten.", "In Zeeland is veel klei en zee — de grote zwerfkeien liggen ergens anders."],
         uitlegPad: {
           stappen: [{ titel: "Drenthe = noordoost", tekst: "Hunebedden liggen in Drenthe (noordoost-NL). Stenen graven uit ~3000 v.Chr." }],
           woorden: [{ woord: "hunebed", uitleg: "Stenen graf uit Trechterbeker-cultuur (~3000 v.Chr.)." }],
@@ -44,7 +44,7 @@ const steps = [
         q: "Welke rivier vormde de **Romeinse grens**?",
         options: ["Rijn", "Maas", "Schelde", "IJssel"],
         answer: 0,
-        wrongHints: [null, "Loopt zuidelijker — niet de Romeinse Limes.", "Te ver naar het zuiden.", "Een binnenrivier; was geen rijksgrens."],
+        wrongHints: [null, "De Maas loopt zuidelijker — de grens lag verder naar het noorden.", "Te ver naar het zuiden.", "Een binnenrivier; was geen rijksgrens."],
         uitlegPad: {
           stappen: [{ titel: "Rijn = Limes", tekst: "Romeinse rijksgrens heette Limes. Volgde de Rijn door Nederland." }],
           woorden: [{ woord: "Limes", uitleg: "Latijn voor 'grens'. Officiële rijksgrens van Romeinse Rijk." }],
@@ -73,7 +73,7 @@ const steps = [
         q: "Wie kwamen na de Romeinen in Nederland wonen?",
         options: ["Friezen, Saksen en Franken", "Vikingen, Denen en Noren", "Spanjaarden en Portugezen", "Britten, Schotten en Ieren"],
         answer: 0,
-        wrongHints: [null, "Vikingen kwamen later (~800 n.Chr.) en bleven niet.", "Veel later in de geschiedenis.", "Niet in dit tijdvak."],
+        wrongHints: [null, "Vikingen kwamen later (~800 n.Chr.) en bleven niet.", "Veel later in de geschiedenis.", "Die volken bleven aan de overkant van de Noordzee wonen."],
         uitlegPad: {
           stappen: [{ titel: "Volksverhuizingen ±400", tekst: "Na val Rome trokken Friezen (noord), Saksen (oost) en Franken (zuid) Nederland in." }],
           woorden: [{ woord: "Volksverhuizingen", uitleg: "Periode ~400-700 n.Chr. waarin Germaanse stammen door Europa trokken." }],
@@ -210,9 +210,9 @@ const steps = [
       },
       {
         q: "Wat brachten de **Romeinen** naar ons land?",
-        options: ["wegen en baden", "de stoommachine", "de euro", "de VOC-schepen"],
+        options: ["wegen en baden", "de stoommachine", "de hunebedden", "kastelen met ridders"],
         answer: 0,
-        wrongHints: [null, "Die kwam pas veel later, in de tijd van de fabrieken.", null, null],
+        wrongHints: [null, "Die kwam pas veel later, in de tijd van de fabrieken.", "Die stonden hier al duizenden jaren vóór de Romeinen.", "Ridders en kastelen horen bij een latere tijd."],
         uitlegPad: {
           stappen: [
             {
@@ -289,11 +289,11 @@ const steps = [
         options: [
           "in het rivierengebied",
           "op de Waddeneilanden",
-          "in de Alpen",
+          "in de duinen van Holland",
           "op de heide bij de hunebedden",
         ],
         answer: 0,
-        wrongHints: [null, null, "Dat is ver buiten Nederland.", null],
+        wrongHints: [null, null, "Daar woonde een buurvolk, de Cananefaten.", null],
         uitlegPad: {
           stappen: [
             {
@@ -353,12 +353,12 @@ const steps = [
         q: "Wat is het **feodaal stelsel**?",
         options: [
           "Koning gaf grond als leen aan ridders en graven",
-          "Boeren regeerden zelf hun land",
-          "Steden hadden de macht over het platteland",
-          "Iedereen was even rijk",
+          "Boeren kochten grond van de koning met geld",
+          "Steden kregen grond in ruil voor belasting",
+          "Ridders verdeelden het land samen onder elkaar",
         ],
         answer: 0,
-        wrongHints: [null, "Andersom — boeren werkten juist voor de heer.", "Niet in de middeleeuwen — kwam pas later.", "Middeleeuwen waren juist heel ongelijk."],
+        wrongHints: [null, "Boeren hadden daar geen geld voor — zij werkten juist voor hun heer.", "Steden kregen wel rechten, maar dat heet stadsrechten — geen leen.", "Wie stond er bovenaan de piramide en deelde de grond uit?"],
         uitlegPad: {
           stappen: [{ titel: "Leenstelsel = piramide", tekst: "Koning → leen aan hertogen/graven/ridders → die regeerden over boeren. Iedereen had eigen plek in piramide." }],
           woorden: [{ woord: "leen", uitleg: "Stuk grond dat ridder/graaf 'kreeg' van koning, in ruil voor loyaliteit en militaire dienst." }],
@@ -386,7 +386,7 @@ const steps = [
         q: "Wat was de **Hanze**?",
         options: ["Een handelsverbond van steden", "Een leger van ridders en soldaten", "Een godsdienst uit het noorden", "Een groot kasteel aan de kust"],
         answer: 0,
-        wrongHints: [null, "Geen militaire organisatie.", "Geen geloof — waarvoor werkten de steden samen?", "Geen gebouw."],
+        wrongHints: [null, "Steden werkten samen, maar niet om te vechten.", "Geen geloof — waarvoor werkten de steden samen?", "Het was geen bouwwerk — wat deden de steden samen?"],
         uitlegPad: {
           stappen: [{ titel: "Hanze = handel", tekst: "Hanze = verbond van handelssteden in Noord-Europa. Samenwerken = veiligere handel." }],
           woorden: [{ woord: "Hanze", uitleg: "Middeleeuws handelsverbond. NL Hanzesteden: Deventer, Zwolle, Kampen, Zutphen." }],
@@ -399,9 +399,9 @@ const steps = [
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "Wat moest een ridder doen in ruil voor zijn **leen**?",
-        options: ["trouw zijn en meevechten", "een kerk bouwen", "met de VOC varen", "de stad besturen"],
+        options: ["trouw zijn en meevechten", "een kerk bouwen", "elk jaar geld betalen", "de stad besturen"],
         answer: 0,
-        wrongHints: [null, null, "Die handelsreizen kwamen pas eeuwen later.", null],
+        wrongHints: [null, null, "Een ridder betaalde niet met geld — wat had de koning vooral nodig in een oorlog?", null],
         uitlegPad: {
           stappen: [
             {
@@ -559,11 +559,11 @@ const steps = [
         options: [
           "Hij stichtte een groot rijk",
           "Hij richtte de VOC op",
-          "Hij bouwde de hunebedden",
-          "Hij schreef een dagboek",
+          "Hij werd de eerste koning van Nederland",
+          "Hij bracht het schrift naar ons land",
         ],
         answer: 0,
-        wrongHints: [null, "De VOC kwam pas rond 1600.", null, null],
+        wrongHints: [null, "De VOC kwam pas rond 1600.", "Nederland kreeg pas in 1815 een koning.", "Het schrift kwam al eerder, met de Romeinen."],
         uitlegPad: {
           stappen: [
             {
@@ -599,9 +599,9 @@ const steps = [
       },
       {
         q: "Hoe lang duurden de **middeleeuwen** ongeveer?",
-        options: ["duizend jaar", "honderd jaar", "tachtig jaar", "tien jaar"],
+        options: ["duizend jaar", "honderd jaar", "tachtig jaar", "vijfhonderd jaar"],
         answer: 0,
-        wrongHints: [null, null, "Tachtig jaar duurde een oorlog uit een latere tijd.", null],
+        wrongHints: [null, null, "Tachtig jaar duurde een oorlog uit een latere tijd.", "Reken het uit: van ongeveer 500 tot 1500 — hoeveel jaar is dat?"],
         uitlegPad: {
           stappen: [
             {
@@ -673,9 +673,9 @@ const steps = [
       },
       {
         q: "Wanneer werd de **Republiek officieel onafhankelijk**?",
-        options: ["1648 (Vrede van Münster)", "1581 (Plakkaat)", "1568 (begin oorlog)", "1701"],
+        options: ["1648 (Vrede van Münster)", "1581 (Plakkaat)", "1568 (begin oorlog)", "1795 (Franse tijd)"],
         answer: 0,
-        wrongHints: [null, "Plakkaat verklaarde wel onafhankelijkheid, maar vrede met Spanje pas in 1648.", "Dat was het BEGIN.", "Veel later — niet juist."],
+        wrongHints: [null, "Plakkaat verklaarde wel onafhankelijkheid, maar vrede met Spanje pas in 1648.", "Dat was het BEGIN.", "In 1795 veroverden de Fransen de Republiek juist."],
         uitlegPad: {
           stappen: [{ titel: "1648 = officiële vrede", tekst: "Vrede van Münster (1648) = einde Tachtigjarige Oorlog + officiële erkenning Republiek." }],
           woorden: [{ woord: "Vrede van Münster", uitleg: "1648 vredesverdrag tussen Spanje en Republiek. Onderdeel Vrede van Westfalen." }],
@@ -691,10 +691,10 @@ const steps = [
           "Een handelsbedrijf",
           "Een universiteit",
           "Een kerk",
-          "Een familienaam",
+          "Een oorlogsvloot van de koning",
         ],
         answer: 0,
-        wrongHints: [null, "Geen school — waar voeren de VOC-schepen heen, en waarom?", "Niet religieus.", "Geen familienaam."],
+        wrongHints: [null, "Geen school — waar voeren de VOC-schepen heen, en waarom?", "De VOC ging niet over geloof — waarmee verdienden ze geld?", "De Republiek had geen koning, en de schepen voeren vooral voor de handel."],
         uitlegPad: {
           stappen: [{ titel: "VOC = handel Azië", tekst: "Verenigde Oost-Indische Compagnie (1602). Eerste multinational ter wereld voor handel met Azië." }],
           woorden: [{ woord: "VOC", uitleg: "Verenigde Oost-Indische Compagnie. Handel in specerijen, thee, zijde." }],
@@ -745,9 +745,9 @@ const steps = [
       },
       {
         q: "Wie was een beroemde **schilder** uit de Gouden Eeuw?",
-        options: ["Vermeer", "Floris V", "Filips II", "Karel de Grote"],
+        options: ["Vermeer", "Christiaan Huygens", "Michiel de Ruyter", "Joost van den Vondel"],
         answer: 0,
-        wrongHints: [null, "Hij was een graaf van Holland, in de middeleeuwen.", null, null],
+        wrongHints: [null, "Hij was een geleerde, geen kunstenaar.", "Hij was een beroemde admiraal op zee.", "Hij schreef gedichten en toneelstukken."],
         uitlegPad: {
           stappen: [
             {
@@ -859,9 +859,9 @@ const steps = [
       },
       {
         q: "Wat was **één** van de redenen voor de opstand tegen Filips II?",
-        options: ["te hoge belasting", "te weinig kastelen", "de komst van de trein", "ruzie over de euro"],
+        options: ["te hoge belasting", "het opheffen van de VOC", "te weinig werk in fabrieken", "een oorlog met Engeland"],
         answer: 0,
-        wrongHints: [null, null, "Treinen reden pas in de tijd van de stoommachine.", null],
+        wrongHints: [null, "De VOC bestond nog niet toen de opstand in 1568 begon.", "Fabrieken kwamen pas zo'n tweehonderd jaar later.", "Engeland hielp de opstandelingen juist tegen Spanje."],
         uitlegPad: {
           stappen: [
             {
@@ -899,12 +899,12 @@ const steps = [
         q: "Wat was een **donkere kant** van de Gouden Eeuw?",
         options: [
           "de slavenhandel door de WIC",
-          "de schilderijen van Rembrandt",
-          "de slingerklok van Huygens",
-          "de microscoop",
+          "de pest die half Europa doodde",
+          "de Hongerwinter in het westen",
+          "de kinderarbeid in fabrieken",
         ],
         answer: 0,
-        wrongHints: [null, "Kunst maakte de Gouden Eeuw juist beroemd.", null, null],
+        wrongHints: [null, "Die grote pestgolf was al in de middeleeuwen, rond 1350.", "Die honger was in 1944-1945, in de Tweede Wereldoorlog.", "Kinderarbeid in fabrieken hoort vooral bij de 19e eeuw."],
         uitlegPad: {
           stappen: [
             {
@@ -946,7 +946,7 @@ const steps = [
     explanation: "**Bataafse Republiek** *(1795-1806)* en **Koninkrijk** *(1815)*:\n• 1795: Fransen veroveren Republiek → Bataafse Republiek.\n• Napoleon maakt zijn broer **Lodewijk Napoleon** koning *(1806)*.\n• 1813: Napoleon weg → **Willem I** wordt eerste koning van Nederland *(1815)*.\n\n**Industriële Revolutie** *(±1800-1900)*:\n• **Stoommachines**, fabrieken, treinen, telegraaf.\n• Mensen verhuizen van platteland naar stad *('verstedelijking')*.\n• Zware kinderarbeid — pas in **1874** verboden voor kinderen onder 12 *(Wet van Houten)*.\n\n**Eerste Wereldoorlog** *(1914-1918)*:\n• Nederland was **neutraal**, maar economisch zwaar geraakt.\n\n**Tweede Wereldoorlog** *(1940-1945)*:\n• Mei 1940: Duitsland valt Nederland binnen — Rotterdam gebombardeerd.\n• Bezetting 5 jaar.\n• **Holocaust**: ±104.000 Nederlandse Joden vermoord.\n• **Anne Frank** schreef haar dagboek in onderduik in Amsterdam.\n• Mei 1945: bevrijding.\n\n**Na 1945**:\n• Wederopbouw, **Marshall-hulp** uit VS.\n• 1957: **Europese Economische Gemeenschap** *(later EU)*.\n• 1999: **euro** ingevoerd *(briefjes en munten in 2002)*.\n• 2024: Doorstroomtoets vervangt de eindtoets *(jouw eigen tijd!)*\n\n**Toets-tip**: jaartal-anker = 1900 = grens tussen 'oude' en 'moderne' tijd.",
     checks: [
       {
-        q: "Wie was **eerste koning van Nederland** *(1815)*?",
+        q: "Wie was de **eerste koning van Nederland**?",
         options: ["Willem I", "Lodewijk Napoleon", "Willem van Oranje", "Beatrix"],
         answer: 0,
         evidence: "1813: Napoleon weg → Willem I wordt eerste koning van Nederland (1815).",
@@ -962,10 +962,10 @@ const steps = [
       },
       {
         q: "Was Nederland **neutraal** in WO1?",
-        options: ["Ja", "Nee, vocht aan kant Geallieerden", "Nee, vocht aan kant Duitsland", "Bestond niet"],
+        options: ["Ja, het vocht niet mee", "Nee, het vocht met Engeland mee", "Nee, het vocht met Duitsland mee", "Nee, het werd bezet door Duitsland"],
         answer: 0,
         evidence: "Nederland was neutraal, maar economisch zwaar geraakt.",
-        wrongHints: [null, "Kijk nog eens naar het verschil tussen WO1 en WO2 — in welke oorlog werd Nederland wél bezet?", "Kijk nog eens naar het verschil tussen WO1 en WO2 — in welke oorlog werd Nederland wél bezet?", "Bestond wel — al sinds 1815 als koninkrijk."],
+        wrongHints: [null, "Engeland vocht wel in WO1 — maar stuurde Nederland ook soldaten naar het front?", "Vochten Nederlandse soldaten in WO1 echt tegen Engeland en Frankrijk? Kijk in de les.", "Kijk nog eens naar het verschil tussen WO1 en WO2 — in welke oorlog werd Nederland bezet?"],
         uitlegPad: {
           stappen: [{ titel: "WO1 = neutraal", tekst: "Nederland deed NIET mee aan WO1 (1914-1918). Wel zwaar economisch geraakt." }],
           woorden: [{ woord: "neutraal", uitleg: "Geen partij kiezen. Niet vechten." }],
@@ -979,7 +979,7 @@ const steps = [
         q: "Wanneer werd Nederland **bevrijd in WO2**?",
         options: ["Mei 1945", "Mei 1940", "Augustus 1945", "1948"],
         answer: 0,
-        wrongHints: [null, "Toen begon de bezetting juist.", "Augustus = einde wereldoorlog (Japan), maar Nederland werd in mei bevrijd.", "Te laat."],
+        wrongHints: [null, "Toen begon de bezetting juist.", "Augustus = einde wereldoorlog (Japan), maar Nederland werd in mei bevrijd.", "In 1948 was de oorlog al drie jaar voorbij."],
         uitlegPad: {
           stappen: [{ titel: "5 mei 1945", tekst: "5 mei 1945 = bevrijdingsdag NL. Duitsland gaf zich over." }],
           woorden: [{ woord: "Bevrijdingsdag", uitleg: "5 mei (jaarlijkse herdenking)." }],
@@ -993,7 +993,7 @@ const steps = [
         q: "Wanneer werd de **euro** ingevoerd als briefje en munt?",
         options: ["2002", "1999", "2010", "1985"],
         answer: 0,
-        wrongHints: [null, "Toen werd de euro alleen administratief — niet als briefje.", "Te laat.", "Veel te vroeg — gulden was er nog."],
+        wrongHints: [null, "Toen werd de euro alleen administratief — niet als briefje.", "In 2010 betaalde iedereen al jaren met euro's.", "Veel te vroeg — gulden was er nog."],
         uitlegPad: {
           stappen: [{ titel: "1 januari 2002", tekst: "Euro-briefjes en munten kwamen 1-1-2002. Vanaf dat moment einde gulden." }],
           woorden: [{ woord: "Eurozone", uitleg: "Landen die euro gebruiken sinds 2002 (NL, België, Duitsland, etc.)." }],
@@ -1049,9 +1049,9 @@ const steps = [
       },
       {
         q: "Welke uitvinding hoort bij de **Industriële Revolutie**?",
-        options: ["de stoommachine", "het hunebed", "de microscoop", "de slingerklok"],
+        options: ["de stoommachine", "de boekdrukkunst", "de microscoop", "de slingerklok"],
         answer: 0,
-        wrongHints: [null, null, "Die hoort bij een geleerde uit de Gouden Eeuw.", null],
+        wrongHints: [null, "Die is al rond 1450 uitgevonden, aan het eind van de middeleeuwen.", "Die hoort bij een geleerde uit de Gouden Eeuw.", null],
         uitlegPad: {
           stappen: [
             {
@@ -1091,10 +1091,10 @@ const steps = [
           "de Fransen veroverden de Republiek",
           "de VOC werd opgericht",
           "Willem van Oranje werd vermoord",
-          "de euro werd ingevoerd",
+          "Napoleon werd keizer",
         ],
         answer: 0,
-        wrongHints: [null, "Dat was al in 1602.", null, null],
+        wrongHints: [null, "Dat was al in 1602.", null, "Napoleon werd pas in 1804 keizer."],
         uitlegPad: {
           stappen: [
             {
@@ -1175,7 +1175,7 @@ const steps = [
     checks: [
       {
         q: "Welke gebeurtenis was **als eerste**?",
-        options: ["Romeinen in Nederland", "Karel de Grote keizer", "Willem van Oranje vermoord", "Napoleon"],
+        options: ["Romeinen in Nederland", "Karel de Grote keizer", "Willem van Oranje vermoord", "Napoleon aan de macht"],
         answer: 0,
         wrongHints: [null, "Was 800 — Romeinen waren al weg.", "Was 1584.", "Was rond 1800."],
         uitlegPad: {
@@ -1230,7 +1230,7 @@ const steps = [
         },
       },
       {
-        q: "**Snelle volgorde-check**: 1648 = ?",
+        q: "Wat gebeurde er in **1648**?",
         options: ["Vrede van Münster", "Begin Gouden Eeuw", "Begin WO1", "Bataafse Republiek"],
         answer: 0,
         wrongHints: [null, "Gouden Eeuw begon eerder (rond 1600).", "WO1 was 1914.", "Bataafse Republiek was 1795."],
@@ -1244,7 +1244,7 @@ const steps = [
         },
       },
       {
-        q: "Welk jaartal hoort bij **'eerste koning Nederland'**?",
+        q: "In welk jaar kreeg Nederland zijn **eerste koning**?",
         options: ["1815", "1648", "1568", "1945"],
         answer: 0,
         wrongHints: [null, "Was Vrede van Münster — Republiek, geen koning.", "Begin Tachtigjarige Oorlog.", "Bevrijding WO2 — toen was er al lang een koning."],
@@ -1259,9 +1259,9 @@ const steps = [
       },
       {
         q: "Wat was de **Patatkar-school** in de Nederlandse geschiedenis?",
-        options: ["Geen — niet bestaand","Vroege NL-democratie","Modern onderwijs","Historisch museum"],
+        options: ["Geen: dat woord is verzonnen","Een school uit de Gouden Eeuw","Een schoolwet uit de Franse tijd","Een school voor fabriekskinderen"],
         answer: 0,
-        wrongHints: [null, "Niet — geen historisch concept.", "Niet — geen onderwijs-systeem.", "Niet — geen museum."],
+        wrongHints: [null, "Zoek het woord in de les over de Gouden Eeuw — staat het daar?", "Kwam je dit woord tegen bij de Franse tijd? Kijk goed.", "Staat dit woord in de les over de fabrieken? Klinkt echt is nog niet echt."],
         uitlegPad: {
           stappen: [{ titel: "Niet alles wat klinkt is echt", tekst: "Soms klinkt een begrip echt, maar is het verzonnen. 'Patatkar-school' = bedacht. Echt: Tachtigjarige Oorlog, Gouden Eeuw, etc." }],
           woorden: [{ woord: "kritisch denken", uitleg: "Niet automatisch geloven dat naam = echt." }],
@@ -1273,9 +1273,9 @@ const steps = [
       },
       {
         q: "Wanneer was de **Tweede Wereldoorlog** in Nederland?",
-        options: ["1940-1945","1914-1918","1815","1648"],
+        options: ["1940-1945","1914-1918","1795-1813","1568-1648"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is WO1, NL was neutraal toen.", "Begin Koninkrijk.", "Vrede van Münster."],
+        wrongHints: [null, "Niet — dat is WO1, NL was neutraal toen.", "1795-1813 is de Franse tijd.", "1568-1648 is de Tachtigjarige Oorlog."],
         uitlegPad: {
           stappen: [
             { titel: "WO2 in NL — sleuteldatums", tekst: "• **10 mei 1940**: Duitsland valt NL binnen, Rotterdam gebombardeerd\n• **15 mei 1940**: NL capituleert\n• **1940-1945**: Duitse bezetting\n• **Joden-vervolging** intensiveert vanaf 1941 (~104.000 NL-joden vermoord)\n• **5 september 1944 'Dolle Dinsdag'**: valse geruchten over bevrijding; daarna wordt het zuiden bevrijd\n• **Hongerwinter 1944-1945**: west-NL lijdt honger\n• **5 mei 1945**: bevrijding hele NL — Bevrijdingsdag" },
@@ -1318,20 +1318,20 @@ const steps = [
           niveaus: { basis: "1850-1900.", simpeler: "NL-industriële revolutie kwam laat: pas ~1850-1900. Daarvoor handel + landbouw. Philips (1891) iconisch.", nogSimpeler: "Eind 1800" },
         },
       },
-      { q: "**Tweede Wereldoorlog** duurde welke jaren in NL?", options: ["1940-1945","1914-1918","1939-1945","1945-1950"], answer: 0, wrongHints: [null, "WO1.", "Wereld-WO2 begin sept 1939.", "Wederopbouw."] },
+      { q: "**Tweede Wereldoorlog** duurde welke jaren in NL?", options: ["1940-1945","1914-1918","1939-1945","1945-1950"], answer: 0, wrongHints: [null, "1914-1918 is de Eerste Wereldoorlog.", "In september 1939 begon de oorlog in Europa — maar wanneer viel Duitsland Nederland binnen?", "Na de bevrijding begon de wederopbouw."] },
       { q: "**Anne Frank** zat in onderduik in?", options: ["Amsterdam","Den Haag","Rotterdam","Utrecht"], answer: 0, wrongHints: [null, "Niet de regeringsstad — denk aan het Achterhuis aan een gracht.", "Niet de havenstad — het Achterhuis staat er nog als museum.", "Niet Utrecht — Anne hield haar dagboek bij in het Achterhuis."] },
-      { q: "**Tachtigjarige Oorlog** begon in welk jaar?", options: ["1568","1648","1500","1600"], answer: 0, wrongHints: [null, "Eind.", "Te vroeg.", "Te laat."] },
-      { q: "**Gouden Eeuw** is welke eeuw?", options: ["17e eeuw","16e","18e","19e"], answer: 0, wrongHints: [null, "80jr oorlog.", "Te laat.", "Industrieel."] },
-      { q: "Welke **kolonie** had NL het langst?", options: ["Indonesië","Brazilië","Australië","Vietnam"], answer: 0, wrongHints: [null, "Kort, zo'n 25 jaar.", "Nederlanders ontdekten er wel kusten, maar maakten er geen kolonie.", "Niet NL."] },
-      { q: "Wie was de **eerste koning** van NL?", options: ["Willem I","Willem-Alexander","Beatrix","Juliana"], answer: 0, wrongHints: [null, "Huidige.", "Vorige.", "Eerder."] },
-      { q: "**Bevrijdingsdag NL** = welke datum?", options: ["5 mei","4 mei","27 april","11 nov"], answer: 0, wrongHints: [null, "Dodenherdenking.", "Koningsdag.", "WO1 wapenstilstand."] },
-      { q: "**Romeinen** in NL — wat lag op de Rijn?", options: ["De Limes","De Hanze","Hunebedden","De Afsluitdijk"], answer: 0, wrongHints: [null, "De Hanze was een handelsverbond uit de middeleeuwen.", "Die liggen in Drenthe en zijn veel ouder.", "Die is pas in de 20e eeuw gebouwd."] },
-      { q: "Wanneer was de **Franse tijd** in NL?", options: ["1795-1813","1815-1830","1900-1918","1940-1945"], answer: 0, wrongHints: [null, "Daarna.", "Veel later.", "WO2."] },
+      { q: "**Tachtigjarige Oorlog** begon in welk jaar?", options: ["1568","1648","1500","1600"], answer: 0, wrongHints: [null, "In 1648 was de oorlog juist voorbij: de Vrede van Münster.", "Reken terug vanaf het einde: 1648 min tachtig jaar.", "In 1600 werd er al jaren gevochten."] },
+      { q: "Welke eeuw noemen we de **Gouden Eeuw**?", options: ["17e eeuw","16e eeuw","18e eeuw","19e eeuw"], answer: 0, wrongHints: [null, "In de 16e eeuw begon de Tachtigjarige Oorlog pas.", "De 18e eeuw heet de pruikentijd.", "In de 19e eeuw kwamen de fabrieken."] },
+      { q: "Welke **kolonie** had NL het langst?", options: ["Indonesië","Brazilië","Australië","Vietnam"], answer: 0, wrongHints: [null, "Kort, zo'n 25 jaar.", "Nederlanders ontdekten er wel kusten, maar maakten er geen kolonie.", "Vietnam was een kolonie van Frankrijk."] },
+      { q: "Wie was de **eerste koning** van NL?", options: ["Willem I","Willem-Alexander","Beatrix","Juliana"], answer: 0, wrongHints: [null, "Willem-Alexander is de koning van nu.", "Beatrix was koningin vóór Willem-Alexander.", "Juliana was koningin in de 20e eeuw."] },
+      { q: "**Bevrijdingsdag NL** = welke datum?", options: ["5 mei","4 mei","27 april","11 november"], answer: 0, wrongHints: [null, "Dodenherdenking.", "Koningsdag.", "WO1 wapenstilstand."] },
+      { q: "Hoe heette de **Romeinse grens** in Nederland?", options: ["De Limes","De Waterlinie","De Muur van Hadrianus","De Afsluitdijk"], answer: 0, wrongHints: [null, "De Hollandse Waterlinie werd pas in de 17e eeuw aangelegd.", "Die Romeinse muur ligt in Engeland, niet bij ons.", "Die is pas in de 20e eeuw gebouwd."] },
+      { q: "Wanneer was de **Franse tijd** in NL?", options: ["1795-1813","1815-1830","1900-1918","1940-1945"], answer: 0, wrongHints: [null, "In 1815 kreeg Nederland juist een eigen koning.", "Rond 1900 was Nederland al lang vrij van Frankrijk.", "1940-1945 is de Duitse bezetting."] },
       { q: "Wat is de **Vrede van Münster** (1648)?", options: ["Einde Tachtigjarige Oorlog", "Begin Eerste Wereldoorlog", "Oprichting van de VOC", "Begin van de Gouden Eeuw"], answer: 0, wrongHints: [null, "WO1 begon pas in 1914.", "De VOC werd in 1602 opgericht.", "De Gouden Eeuw begon al rond 1600."] },
-      { q: "**Eerste WO** in NL — was NL?", options: ["Neutraal","Bezet","Aanvaller","Bondgenoot"], answer: 0, wrongHints: [null, "WO2.", "Niet.", "Niet."] },
-      { q: "Sinds welk jaar is NL lid van de **EEG** (Europese Economische Gemeenschap, nu EU)?", options: ["1957","1900","1973","2010"], answer: 0, wrongHints: [null, "Te vroeg.", "In 1973 kwamen o.a. Engeland en Denemarken erbij — NL was er al eerder bij.", "Veel later."] },
-      { q: "Wie waren de **eerste bewoners** van NL?", options: ["Jagers-verzamelaars","Romeinen","Vikingen","Spanjaarden"], answer: 0, wrongHints: [null, "Veel later.", "Wel geweest.", "Niet eerste."] },
-      { q: "Welke koningin **regeerde lang** in NL (bijna 58 jaar)?", options: ["Wilhelmina","Juliana","Beatrix","Máxima"], answer: 0, wrongHints: [null, "Korter.", "Korter.", "Wel koningin, maar regeert niet zelf."] },
+      { q: "Wat was Nederland in de **Eerste Wereldoorlog**?", options: ["Neutraal","Bezet","Bondgenoot van Duitsland","Bondgenoot van Engeland"], answer: 0, wrongHints: [null, "Bezet werd Nederland pas in de Tweede Wereldoorlog.", "Vochten Nederlandse soldaten echt mee met Duitsland? Kijk in de les.", "Engeland vocht wel — maar vocht Nederland mee?"] },
+      { q: "Sinds welk jaar is NL lid van de **EEG** (Europese Economische Gemeenschap, nu EU)?", options: ["1957","1945","1973","1992"], answer: 0, wrongHints: [null, "In 1945 was de oorlog net voorbij — de samenwerking begon iets later.", "In 1973 kwamen o.a. Engeland en Denemarken erbij — NL was er al eerder bij.", "In 1992 werd in Maastricht de EU afgesproken — NL zat toen al lang bij de EEG."] },
+      { q: "Wie waren de **eerste bewoners** van NL?", options: ["Jagers-verzamelaars","Romeinen","Hunebedbouwers","Bataven"], answer: 0, wrongHints: [null, "De Romeinen kwamen pas rond het jaar 0.", "Die boeren kwamen rond 3000 v.Chr. — wie leefde hier daarvóór al?", "De Bataven leefden hier in de Romeinse tijd."] },
+      { q: "Welke koningin was **bijna 58 jaar** koningin van Nederland?", options: ["Wilhelmina","Juliana","Beatrix","Emma"], answer: 0, wrongHints: [null, "Juliana was 32 jaar koningin.", "Beatrix was 33 jaar koningin.", "Emma regeerde maar acht jaar, als regentes voor een kind."] },
       { q: "**Watersnoodramp** Zeeland = welk jaar?", options: ["1953","1900","1945","1980"], answer: 0, wrongHints: [null, "Te vroeg — het was ná de Tweede Wereldoorlog.", "1945 is het eind van de oorlog; de ramp kwam een paar jaar later.", "Te laat — het was in de jaren '50."] },
     ],
   },

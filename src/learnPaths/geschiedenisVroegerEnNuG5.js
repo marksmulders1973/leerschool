@@ -23,9 +23,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **geschiedenis**?",
-        options: ["alles wat vroeger is gebeurd", "alles wat morgen gebeurt", "alleen verhaaltjes die verzonnen zijn", "alleen wat in de krant staat"],
+        options: ["wat er vroeger is gebeurd", "wat er morgen gaat gebeuren", "verhalen die iemand heeft verzonnen", "hoe planten en dieren groeien"],
         answer: 0,
-        wrongHints: [null, "Morgen moet nog komen — is dat vroeger?", "Geschiedenis gaat over dingen die écht gebeurd zijn.", "De krant is maar één van de plekken waar je iets terugvindt."],
+        wrongHints: [null, "Morgen moet nog komen — is dat vroeger?", "Geschiedenis gaat over dingen die écht gebeurd zijn.", "Dat leer je bij natuur — waar gaat geschiedenis over?"],
         uitlegPad: {
           stappen: [{ titel: "Vroeger", tekst: "Geschiedenis = alles wat **vroeger echt gebeurd is**. Van gisteren tot duizenden jaren geleden." }],
           niveaus: { basis: "Geschiedenis gaat over vroeger.", simpeler: "Vroeger gebeurd = geschiedenis.", nogSimpeler: "vroeger" },
@@ -33,9 +33,9 @@ const steps = [
       },
       {
         q: "Hoe kunnen we weten hoe mensen **honderd jaar geleden** leefden?",
-        options: ["door oude foto's, spullen en verhalen", "dat kan niemand weten", "door heel hard na te denken", "door naar de toekomst te kijken"],
+        options: ["door oude foto's, spullen en verhalen", "door te kijken hoe mensen nu leven", "door te raden hoe het geweest is", "door een sprookjesboek te lezen"],
         answer: 0,
-        wrongHints: [null, "Jawel — er zijn dingen uit die tijd bewaard gebleven.", "Alleen denken is niet genoeg — je hebt bewijs nodig.", "De toekomst vertelt niets over vroeger."],
+        wrongHints: [null, "Nu is anders dan toen — wat is er van toen bewaard gebleven?", "Raden is geen bewijs — wat kun je echt bekijken?", "Sprookjes zijn verzonnen — zijn die echt gebeurd?"],
         uitlegPad: {
           stappen: [{ titel: "Sporen uit het verleden", tekst: "Oude **foto's**, **spullen**, **gebouwen** en **verhalen** vertellen ons hoe het vroeger was. Dat zijn sporen uit het verleden." }],
           woorden: [{ woord: "verleden", uitleg: "Een ander woord voor vroeger — de tijd die voorbij is." }],
@@ -54,9 +54,9 @@ const steps = [
       },
       {
         q: "Welk ding is een **spoor uit het verleden**?",
-        options: ["een oude foto van je overgrootmoeder", "een boodschappenlijstje voor morgen", "een droom over later", "het weerbericht van volgende week"],
+        options: ["een oude foto van je overgrootmoeder", "een nieuw boek over de ridders", "een film over dinosaurussen van nu", "een speelgoedridder uit de winkel"],
         answer: 0,
-        wrongHints: [null, "Morgen is nog niet gebeurd.", "Een droom over later gaat over de toekomst.", "Volgende week moet nog komen."],
+        wrongHints: [null, "Dat boek is nu geschreven — komt het zelf uit vroeger?", "Die film is net gemaakt — is hij zelf oud?", "Dat speelgoed is nieuw gemaakt, al lijkt het op vroeger."],
         uitlegPad: {
           stappen: [{ titel: "Uit het verleden", tekst: "Een **oude foto** komt uit vroeger tijd — een echt spoor uit het verleden. De rest gaat over de toekomst." }],
           niveaus: { basis: "Een oude foto komt uit het verleden.", simpeler: "Wat is er al lang geleden gemaakt?", nogSimpeler: "de oude foto" },
@@ -72,7 +72,7 @@ const steps = [
           "een verzonnen sprookje",
         ],
         answer: 0,
-        wrongHints: [null, "Is morgen al gebeurd?", null, "Is dat echt gebeurd?"],
+        wrongHints: [null, "Is morgen al gebeurd?", "Is volgende week al voorbij?", "Is dat echt gebeurd?"],
         uitlegPad: {
           stappen: [
             {
@@ -98,11 +98,11 @@ const steps = [
         options: [
           "een oud kasteel",
           "een huis dat nog gebouwd moet worden",
-          "een tekening van een huis op de maan",
-          "een bouwplan voor volgend jaar",
+          "een nieuw huis in een nieuwe wijk",
+          "een poppenhuis uit de speelgoedwinkel",
         ],
         answer: 0,
-        wrongHints: [null, "Staat dat huis er al?", null, null],
+        wrongHints: [null, "Staat dat huis er al?", "Dat huis is net gebouwd — wat zegt het over vroeger?", "Dat is nieuw speelgoed — hoe oud is het?"],
         uitlegPad: {
           stappen: [
             {
@@ -128,11 +128,11 @@ const steps = [
         options: [
           "speurneus in de tijd",
           "waarzegger die de toekomst ziet",
-          "kok in de keuken",
-          "piloot in een vliegtuig",
+          "uitvinder van nieuwe dingen",
+          "verteller die verhalen verzint",
         ],
         answer: 0,
-        wrongHints: [null, "Geschiedenis gaat over vroeger, niet over later.", null, null],
+        wrongHints: [null, "Geschiedenis gaat over vroeger, niet over later.", "Een uitvinder maakt iets nieuws — geschiedenis gaat over wat al was.", "Verzinnen? Geschiedenis gaat over wat écht gebeurd is."],
         uitlegPad: {
           stappen: [
             {
@@ -159,10 +159,10 @@ const steps = [
           "een spoor uit het verleden",
           "een droom over later",
           "een verzonnen sprookje",
-          "een weerbericht",
+          "een nieuwsbericht van vandaag",
         ],
         answer: 0,
-        wrongHints: [null, null, "Oma heeft het echt meegemaakt.", null],
+        wrongHints: [null, "Gaat oma's verhaal over later, of over toen?", "Oma heeft het echt meegemaakt.", "Oma vertelt over toen ze klein was — is dat van vandaag?"],
         uitlegPad: {
           stappen: [
             {
@@ -340,11 +340,11 @@ const steps = [
         options: [
           "je ziet wat eerst kwam en wat later",
           "je ziet hoe laat het nu is",
-          "je ziet wat voor weer het wordt",
-          "je ziet hoe lang je bent",
+          "je ziet welke dag het vandaag is",
+          "je ziet waar iets is gebeurd",
         ],
         answer: 0,
-        wrongHints: [null, "Daarvoor kijk je op een klok.", null, null],
+        wrongHints: [null, "Daarvoor kijk je op een klok.", "Daarvoor kijk je op een kalender.", "Waar iets gebeurde, zie je op een kaart."],
         uitlegPad: {
           stappen: [
             {
@@ -401,9 +401,9 @@ const steps = [
     checks: [
       {
         q: "Waarop schreven kinderen ongeveer honderd jaar geleden op school?",
-        options: ["op een lei met een griffel", "op een tablet", "op een laptop", "op een whiteboard met stift"],
+        options: ["op een lei met een griffel", "op een tablet", "in een schrift met een balpen", "op een whiteboard met stift"],
         answer: 0,
-        wrongHints: [null, "Bestond er toen al een tablet?", "Bestond er toen al een laptop?", "Whiteboards kwamen veel later."],
+        wrongHints: [null, "Bestond er toen al een tablet?", "De balpen kwam pas veel later — waarop schreven ze toen?", "Whiteboards kwamen veel later."],
         uitlegPad: {
           stappen: [{ titel: "Lei en griffel", tekst: "Een **lei** is een zwart plankje, een **griffel** een schrijfstokje. Schrijven, uitvegen, opnieuw — een soort ouderwetse tablet zonder stroom!" }],
           niveaus: { basis: "Vroeger schreef je op een lei met een griffel.", simpeler: "Een zwart plankje + schrijfstokje.", nogSimpeler: "lei en griffel" },
@@ -411,9 +411,9 @@ const steps = [
       },
       {
         q: "Wat hadden veel huizen honderd jaar geleden **niet**?",
-        options: ["elektriciteit", "een dak", "ramen", "een deur"],
+        options: ["elektriciteit", "een kachel", "een schoorsteen", "ramen"],
         answer: 0,
-        wrongHints: [null, "Zonder dak word je nat — dat had elk huis.", "Ramen bestaan al heel lang.", "Deuren bestaan al heel lang."],
+        wrongHints: [null, "Hoe werd het huis anders warm? Een kachel was er juist bijna altijd.", "Waar moest de rook van de kachel heen?", "Ramen bestaan al heel lang."],
         uitlegPad: {
           stappen: [{ titel: "Zonder stroom", tekst: "Veel huizen hadden **geen elektriciteit**. Dus: geen lampen aan de muur, geen koelkast, geen televisie. 's Avonds brandde een olielamp of kaars." }],
           niveaus: { basis: "Vroeger was er vaak geen elektriciteit.", simpeler: "Geen stroom = geen lampje aanknippen.", nogSimpeler: "elektriciteit" },
@@ -421,9 +421,9 @@ const steps = [
       },
       {
         q: "Hoe kwamen veel mensen vroeger aan **water**?",
-        options: ["uit een pomp op straat of op het erf", "uit flesjes van de winkel", "uit de regenpijp drinken", "water bestond nog niet"],
+        options: ["uit een pomp op straat of op het erf", "uit flesjes van de winkel", "uit de kraan in de badkamer", "uit flessen van de melkboer"],
         answer: 0,
-        wrongHints: [null, "Flesjes water in de winkel zijn juist heel nieuw.", "Regenwater dronk je niet zomaar.", "Water bestaat natuurlijk al altijd!"],
+        wrongHints: [null, "Flesjes water in de winkel zijn juist heel nieuw.", "Een badkamer met een kraan hadden veel huizen toen nog niet.", "De melkboer bracht melk, geen water."],
         uitlegPad: {
           stappen: [{ titel: "De pomp", tekst: "Zonder kraan haalde je water bij een **pomp** — op het erf of midden in de straat. Emmer mee, pompen maar!" }],
           niveaus: { basis: "Water haalde je bij de pomp.", simpeler: "Niet uit de kraan, maar uit de pomp.", nogSimpeler: "uit een pomp" },
@@ -431,9 +431,9 @@ const steps = [
       },
       {
         q: "Wat deden veel kinderen vroeger **na school**?",
-        options: ["thuis of op het land meehelpen", "games spelen op de computer", "naar tv-programma's kijken", "met de bus naar zwemles gaan"],
+        options: ["thuis of op het land meehelpen", "games spelen op de computer", "naar de opvang na school gaan", "met de bus naar zwemles gaan"],
         answer: 0,
-        wrongHints: [null, "Bestonden er toen al games?", "Bestond er toen al tv?", "Denk aan wat een gezin toen nodig had."],
+        wrongHints: [null, "Bestonden er toen al games?", "Opvang na school is iets van nu.", "Denk aan wat een gezin toen nodig had."],
         uitlegPad: {
           stappen: [{ titel: "Meehelpen", tekst: "Veel gezinnen hadden de hulp van kinderen nodig: **op het land**, in de winkel of in huis. Spelen kwam daarna pas." }],
           niveaus: { basis: "Kinderen hielpen veel mee.", simpeler: "Na school: eerst helpen, dan spelen.", nogSimpeler: "meehelpen" },
@@ -442,9 +442,9 @@ const steps = [
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "Hoe werden **kleren** honderd jaar geleden vaak gewassen?",
-        options: ["met de hand", "met een wasmachine", "met een vaatwasser", "met een robot"],
+        options: ["met de hand", "met een wasmachine", "in een wasserette", "bij de stomerij"],
         answer: 0,
-        wrongHints: [null, null, "Een vaatwasser is voor borden, niet voor kleren.", null],
+        wrongHints: [null, "Een wasmachine werkt op stroom — hadden de meeste mensen die al?", "Wasserettes met machines kwamen pas veel later.", "Naar de stomerij ging bijna niemand — de meeste mensen deden het zelf."],
         uitlegPad: {
           stappen: [
             {
@@ -480,9 +480,9 @@ const steps = [
       },
       {
         q: "Hoe waren de **klassen** op school honderd jaar geleden vaak?",
-        options: ["groot", "klein", "er waren geen klassen", "alleen online"],
+        options: ["groot", "klein", "net zo groot als nu", "er waren geen klassen"],
         answer: 0,
-        wrongHints: [null, null, null, "Bestond internet toen al?"],
+        wrongHints: [null, "Kijk naar oude schoolfoto's: hoeveel kinderen zie je in één klas?", "Waren er toen meer of minder meesters voor alle kinderen?", "Kinderen zaten toen ook in klassen, met een meester of juf."],
         uitlegPad: {
           stappen: [
             {
@@ -499,9 +499,9 @@ const steps = [
       },
       {
         q: "Welk ding vond je honderd jaar geleden in **veel** huizen?",
-        options: ["een kaars", "een koelkast", "een televisie", "een computer"],
+        options: ["een kaars", "een koelkast", "een radio", "een telefoon"],
         answer: 0,
-        wrongHints: [null, "Een koelkast werkt op stroom.", null, null],
+        wrongHints: [null, "Een koelkast werkt op stroom.", "Er waren wel radio's, maar de meeste mensen hadden er nog geen.", "Een telefoon in huis was toen nog heel zeldzaam."],
         uitlegPad: {
           stappen: [
             {
@@ -557,20 +557,20 @@ const steps = [
       },
       {
         q: "Waarop reed een ridder?",
-        options: ["op een paard", "op een fiets", "in een auto", "op een olifant"],
+        options: ["op een paard", "op een ezel", "op een os", "in een koets"],
         answer: 0,
-        wrongHints: [null, "Bestond de fiets al in de middeleeuwen?", "Bestond de auto al in de middeleeuwen?", "Die leefden hier niet."],
+        wrongHints: [null, "Een ezel droeg spullen — een ridder had een sneller en sterker dier nodig.", "Een os trok de ploeg op het land — veel te langzaam voor de strijd.", "In een koets kun je niet vechten — waar zat een ridder in de strijd op?"],
         uitlegPad: {
-          stappen: [{ titel: "Ridder te paard", tekst: "Ridders reden op een **paard** — sterk genoeg om een man in harnas te dragen. Fietsen en auto's werden pas eeuwen later uitgevonden." }],
+          stappen: [{ titel: "Ridder te paard", tekst: "Ridders reden op een **paard** — sterk genoeg om een man in harnas te dragen. Een ezel of os was te langzaam, en in een koets kun je niet vechten." }],
           niveaus: { basis: "Een ridder reed op een paard.", simpeler: "Klip klop — een paard!", nogSimpeler: "paard" },
         },
       },
       // Q12a (9 okt 2026): extra vragen, elk door twee nakijkers goedgekeurd.
       {
         q: "Welk ding hoort bij een **ridder**?",
-        options: ["een lans", "een fiets", "een helikopter", "een skateboard"],
+        options: ["een lans", "een geweer", "een hooivork", "een herdersstaf"],
         answer: 0,
-        wrongHints: [null, "Bestond de fiets al in de middeleeuwen?", null, null],
+        wrongHints: [null, "Geweren kwamen pas later, toen er buskruit was.", "Die hoort bij een boer op het land.", "Die hoort bij een herder met schapen."],
         uitlegPad: {
           stappen: [
             {
@@ -587,9 +587,9 @@ const steps = [
       },
       {
         q: "Waarvan werden kastelen **gebouwd**?",
-        options: ["van steen", "van stro", "van karton", "van plastic"],
+        options: ["van steen", "van stro", "van glas", "van ijzer"],
         answer: 0,
-        wrongHints: [null, "Zou dat een vijand tegenhouden?", null, null],
+        wrongHints: [null, "Zou dat een vijand tegenhouden?", "Glas breekt snel — houdt dat een vijand buiten?", "IJzer was veel te duur om er een heel kasteel van te bouwen."],
         uitlegPad: {
           stappen: [
             {
@@ -606,9 +606,9 @@ const steps = [
       },
       {
         q: "Wat had een kasteel met een gracht er vaak bij?",
-        options: ["een ophaalbrug", "een parkeergarage", "een treinstation", "een glijbaan"],
+        options: ["een ophaalbrug", "een vuurtoren", "een windmolen", "een sluis"],
         answer: 0,
-        wrongHints: [null, null, "Treinen bestonden in de middeleeuwen nog niet.", null],
+        wrongHints: [null, "Een vuurtoren staat aan zee, voor de schepen.", "Hoe kwam je over het water van de gracht naar binnen?", "Een sluis is voor boten — hoe kwam een ridder te paard naar binnen?"],
         uitlegPad: {
           stappen: [
             {
@@ -652,11 +652,11 @@ const steps = [
         options: [
           "in de middeleeuwen",
           "toen opa en oma klein waren",
-          "nu, in deze tijd",
+          "in de tijd van de dinosaurussen",
           "honderd jaar geleden",
         ],
         answer: 0,
-        wrongHints: [null, "Opa en oma zijn niet zó oud.", null, null],
+        wrongHints: [null, "Opa en oma zijn niet zó oud.", "Toen waren er nog helemaal geen mensen.", "Honderd jaar geleden schreven kinderen op een lei — ridders zijn veel ouder."],
         uitlegPad: {
           stappen: [
             {
@@ -682,19 +682,19 @@ const steps = [
     checks: [
       {
         q: "Wat hoort bij de **middeleeuwen**?",
-        options: ["ridders en kastelen", "vliegtuigen", "computers", "treinen"],
+        options: ["ridders en kastelen", "lei en griffel", "stoomtreinen en fabrieken", "mammoeten en grotten"],
         answer: 0,
-        wrongHints: [null, "Die vlogen pas honderden jaren later.", "Die kwamen nog veel later.", "Die reden pas eeuwen na de ridders."],
+        wrongHints: [null, "Die horen bij school van ongeveer honderd jaar geleden.", "Die kwamen pas eeuwen na de ridders.", "Die horen bij de prehistorie, nog veel eerder."],
         uitlegPad: {
-          stappen: [{ titel: "Terugdenken", tekst: "De middeleeuwen = de tijd van **ridders en kastelen**. Vliegtuigen, computers en treinen bestonden toen nog lang niet." }],
+          stappen: [{ titel: "Terugdenken", tekst: "De middeleeuwen = de tijd van **ridders en kastelen**. Mammoeten leefden veel eerder; stoomtreinen, fabrieken en de lei kwamen pas eeuwen later." }],
           niveaus: { basis: "Middeleeuwen = ridders en kastelen.", simpeler: "Denk aan harnassen en ophaalbruggen.", nogSimpeler: "ridders" },
         },
       },
       {
         q: "Van 1925 tot 2025 is precies…",
-        options: ["één eeuw", "tien jaar", "duizend jaar", "een maand"],
+        options: ["één eeuw", "tien jaar", "duizend jaar", "vijftig jaar"],
         answer: 0,
-        wrongHints: [null, "Reken maar: 2025 min 1925.", "Reken maar: 2025 min 1925.", "Dat is véél te kort."],
+        wrongHints: [null, "Tien jaar is een decennium — reken: 2025 min 1925.", "Duizend jaar is veel langer — reken nog eens.", "Vijftig jaar is een halve eeuw — reken: 2025 min 1925."],
         uitlegPad: {
           stappen: [{ titel: "Rekenen met jaren", tekst: "2025 − 1925 = **100 jaar** = één **eeuw**." }],
           niveaus: { basis: "100 jaar = een eeuw.", simpeler: "2025 min 1925 = 100.", nogSimpeler: "een eeuw" },
@@ -702,9 +702,9 @@ const steps = [
       },
       {
         q: "Welke bron vertelt het **meest** over hoe jouw overgrootouders leefden?",
-        options: ["oude foto's en verhalen van de familie", "een striptekening over de toekomst", "het journaal van vandaag", "een spelletjes-app"],
+        options: ["oude foto's en verhalen van de familie", "een tekenfilm die over vroeger gaat", "het journaal van vandaag", "een schoolboek over de Romeinen"],
         answer: 0,
-        wrongHints: [null, "De toekomst zegt niets over vroeger.", "Vandaag is niet de tijd van je overgrootouders.", "Wat kan een spelletje jou over vroeger vertellen?"],
+        wrongHints: [null, "Een tekenfilm is verzonnen — gaat die over jouw overgrootouders?", "Vandaag is niet de tijd van je overgrootouders.", "De Romeinen leefden veel eerder dan je overgrootouders."],
         uitlegPad: {
           stappen: [{ titel: "Bronnen", tekst: "**Oude foto's** en **familieverhalen** komen echt uit die tijd — dat zijn de beste sporen uit het verleden." }],
           woorden: [{ woord: "bron", uitleg: "Iets waaruit je informatie haalt: een foto, brief, verhaal of voorwerp." }],
@@ -751,7 +751,7 @@ const steps = [
         q: "Op een tijdbalk staan: de ridders, school met lei en griffel, en nu. Wat staat **in het midden**?",
         options: ["school met lei en griffel", "de ridders", "nu", "dat kan overal staan"],
         answer: 0,
-        wrongHints: [null, null, "Nu staat altijd helemaal rechts.", null],
+        wrongHints: [null, null, "Nu staat altijd helemaal rechts.", "Op een tijdbalk ligt de volgorde vast: van oud naar nieuw."],
         uitlegPad: {
           stappen: [
             {
