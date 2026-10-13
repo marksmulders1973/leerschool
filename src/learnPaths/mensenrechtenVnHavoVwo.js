@@ -54,7 +54,7 @@ const steps = [
           "Hof van Justitie van de EU in Luxemburg"
         ],
         answer: 0,
-        wrongHints: [null, "De Mensenrechtenraad is een VN-orgaan zonder rechters. Het EVRM is Europees.", "Apart — oorlogsmisdaden.", "Dat hof hoort bij de EU, terwijl het EVRM bij de Raad van Europa hoort."],
+        wrongHints: [null, "De Mensenrechtenraad is een VN-orgaan zonder rechters. Het EVRM is Europees.", "Het Strafhof berecht personen voor oorlogsmisdaden. Wie toetst of een staat zich aan het EVRM houdt?", "Dat hof hoort bij de EU, terwijl het EVRM bij de Raad van Europa hoort."],
         uitlegPad: {
           stappen: [{ titel: "Sinds 1959", tekst: "Bij een EVRM-schending kan elk individu in een lidstaat een klacht indienen, na het uitputten van de nationale rechtsmiddelen. Hof oordeelt + lidstaat moet uitspraak volgen (politieke + reputationele druk). 46 lidstaten Raad van Europa. Rusland 2022 verwijderd na Oekraïne-invasie." }],
           niveaus: { basis: "Straatsburg.", simpeler: "Europees mensenrechtenhof.", nogSimpeler: "Straatsburg" },
@@ -78,16 +78,16 @@ const steps = [
       {
         q: "Welke is GEEN UDHR-recht?",
         options: [
-          "Recht op auto",
+          "Recht op gratis internet",
           "Recht op leven",
           "Vrijheid van meningsuiting",
           "Recht op onderwijs"
         ],
         answer: 0,
-        wrongHints: [null, "Bescherming van je leven is juist het meest fundamentele mensenrecht — zou dát nou net níét in de UDHR staan?", "Mag jij vrij je mening uiten? Dat is een klassiek grondrecht dat de UDHR uitdrukkelijk beschermt — dit is dus geen uitzondering.", "De verklaring noemt onderwijs voor iedereen expliciet als recht — welke optie hoort dan niet in dit rijtje thuis?"],
+        wrongHints: [null, "Bescherming van je leven is het meest fundamentele recht. Zou dat ontbreken?", "Vrije meningsuiting is een klassiek recht dat de UDHR beschermt (artikel 19).", "De UDHR noemt onderwijs voor iedereen als recht (artikel 26). Welke optie hoort niet in dit rijtje?"],
         uitlegPad: {
-          stappen: [{ titel: "UDHR = fundament", tekst: "30 artikelen behandelen leven, vrijheid, gelijkheid, onderwijs, werk, religie, etc. — geen luxe-goederen. Recht op privé-eigendom WEL (art 17), maar specifiek 'auto' niet." }],
-          niveaus: { basis: "Auto niet.", simpeler: "Geen recht op auto.", nogSimpeler: "Auto" },
+          stappen: [{ titel: "UDHR = fundament", tekst: "30 artikelen behandelen leven, vrijheid, gelijkheid, onderwijs, werk, religie, etc. — geen luxe-goederen. Recht op privé-eigendom WEL (art 17), maar een recht op (gratis) internet staat er niet in — dat bestond in 1948 nog niet." }],
+          niveaus: { basis: "Internet niet.", simpeler: "Geen recht op gratis internet.", nogSimpeler: "Internet" },
         },
       },
     ],
@@ -118,9 +118,9 @@ const steps = [
       },
       {
         q: "Hoeveel **lidstaten** heeft de VN?",
-        options: ["193", "100", "50", "211"],
+        options: ["193", "100", "51", "211"],
         answer: 0,
-        wrongHints: [null, "Bij de oprichting waren het er 51. Na de dekolonisatie kwamen er veel landen bij — meer of minder dan dit?", "Stichters waren 51.", "211 is het aantal landen bij de FIFA. Telt de VN er net zoveel?"],
+        wrongHints: [null, "Bij de oprichting waren het er 51. Na de dekolonisatie kwamen er veel landen bij — meer of minder dan dit?", "Zoveel landen richtten de VN op in 1945. Bleef het daarbij?", "211 is het aantal landen bij de FIFA. Telt de VN er net zoveel?"],
         uitlegPad: {
           stappen: [{ titel: "Bijna alle landen", tekst: "Stichting 1945: 51 landen. Vandaag 193. Niet-leden: Vaticaan (waarnemer), Taiwan (China-blokkeert), Kosovo (niet door alle landen erkend), Palestina (waarnemer-status). Zuid-Soedan was laatste toelating (2011)." }],
           niveaus: { basis: "193.", simpeler: "193 landen.", nogSimpeler: "193" },
@@ -130,7 +130,7 @@ const steps = [
         q: "**ICJ** (International Court of Justice) zit in:",
         options: ["Den Haag", "New York", "Genève", "Straatsburg"],
         answer: 0,
-        wrongHints: [null, "VN HQ.", "WHO HQ.", "EVRM-hof."],
+        wrongHints: [null, "In New York staat het hoofdkantoor van de VN, maar het hof zit in een andere stad.", "In Genève zitten de Mensenrechtenraad en de WHO, maar niet dit hof.", "In Straatsburg zit het Europees Hof voor de Rechten van de Mens. Waar zit het VN-hof?"],
         uitlegPad: {
           stappen: [{ titel: "Vredespaleis", tekst: "ICJ in Vredespaleis Den Haag (sinds 1946). Beslecht juridische geschillen tussen STATEN. ICC (apart) ook Den Haag — voor individuele oorlogsmisdadigers. NL = 'juridische hoofdstad van de wereld' door beide + Joegoslavië-tribunaal." }],
           niveaus: { basis: "Den Haag.", simpeler: "NL Den Haag.", nogSimpeler: "DH" },
@@ -138,9 +138,9 @@ const steps = [
       },
       {
         q: "Huidige **VN-Secretaris-Generaal**:",
-        options: ["António Guterres", "Ban Ki-moon", "Kofi Annan", "Kanselier Merkel"],
+        options: ["António Guterres", "Ban Ki-moon", "Kofi Annan", "Jens Stoltenberg"],
         answer: 0,
-        wrongHints: [null, "Vorige (2007-16).", "Vorige (1997-06).", "Niet VN."],
+        wrongHints: [null, "Ban Ki-moon was de vorige, van 2007 tot 2016.", "Kofi Annan was secretaris-generaal van 1997 tot 2006.", "Stoltenberg leidde de NAVO, niet de VN."],
         uitlegPad: {
           stappen: [{ titel: "Vluchtelingen-achtergrond", tekst: "Voor VN was hij hoge commissaris voor vluchtelingen (UNHCR). Portugees. Klimaatactivist. Werkt aan VN-hervorming. Tweede termijn loopt tot 2026." }],
           niveaus: { basis: "Guterres.", simpeler: "Guterres = SG.", nogSimpeler: "Guterres" },
@@ -148,9 +148,9 @@ const steps = [
       },
       {
         q: "VN **vredesoperatie-troepen** worden genoemd:",
-        options: ["Blauwhelmen", "Marines", "Witte Helmen", "Groene baretten"],
+        options: ["Blauwhelmen", "Mariniers", "Witte Helmen", "Groene baretten"],
         answer: 0,
-        wrongHints: [null, "Niet — VS-soldaten.", "De Witte Helmen zijn Syrische reddingswerkers, geen VN-soldaten.", "Groene baretten zijn Nederlandse commando's, geen VN-troepen."],
+        wrongHints: [null, "Mariniers horen bij het leger van één land. Hoe herken je VN-soldaten aan hun hoofddeksel?", "De Witte Helmen zijn Syrische reddingswerkers, geen VN-soldaten.", "Groene baretten zijn Nederlandse commando's, geen VN-troepen."],
         uitlegPad: {
           stappen: [{ titel: "Blauwe helm + baret", tekst: "VN-troepen uit lidstaten dragen blauwe helmen voor herkenbaarheid + neutraliteit. Tienduizenden wereldwijd in ruim 10 missies. Beperkt mandaat: alleen zelfverdediging + bescherming burgers. Niet-aanvallende rol." }],
           niveaus: { basis: "Blauwhelmen.", simpeler: "Blauwe helm-troepen.", nogSimpeler: "Blauw" },
@@ -200,13 +200,13 @@ const steps = [
       {
         q: "**Geneefse Conventies** (1949) regelen:",
         options: [
-          "Oorlogsrecht",
-          "Handel",
-          "Klimaat",
+          "Bescherming in oorlogstijd",
+          "Rechten van vluchtelingen",
+          "Verbod op kernwapens",
           "Mensenrechten algemeen"
         ],
         answer: 0,
-        wrongHints: [null, "Apart.", "Veel later.", "UDHR apart."],
+        wrongHints: [null, "Het Vluchtelingenverdrag kwam in 1951, ook uit Genève. Waar gaan de Conventies van 1949 over?", "Kernwapens regelen latere verdragen, zoals het Non-proliferatieverdrag (1968).", "Dat doet de UVRM. De Conventies gaan over een bijzondere situatie: welke?"],
         uitlegPad: {
           stappen: [{ titel: "Vier verdragen", tekst: "I: gewonden land. II: gewonden zee. III: krijgsgevangenen. IV: burgers in oorlog. Plus aanvullende protocollen (1977). Schending = oorlogsmisdaad. Universeel geratificeerd (alle 196 landen) — uniek voor internationaal verdrag." }],
           niveaus: { basis: "Oorlogsrecht.", simpeler: "Oorlogs-regels.", nogSimpeler: "Genève" },
@@ -221,7 +221,7 @@ const steps = [
           "Doden van politieke tegenstanders door een regime"
         ],
         answer: 0,
-        wrongHints: [null, "Niet voldoende — opzet ontbreekt.", "Geweld alleen is niet genoeg. Wat moet de dader van plan zijn?", "Politieke groepen staan niet in het Genocideverdrag van 1948."],
+        wrongHints: [null, "Ook heel veel slachtoffers maken het juridisch nog geen genocide. Wat is het doel van de dader?", "Geweld alleen is niet genoeg. Wat moet de dader van plan zijn?", "Politieke groepen staan niet in het Genocideverdrag van 1948."],
         uitlegPad: {
           stappen: [
             { titel: "Dolus specialis", tekst: "1948-Genocideverdrag: doel = vernietigen 'in whole or in part' van groep wegens nationale/etnische/raciale/religieuze identiteit. Niet alleen daad maar BEDOELING telt. Daarom moeilijk te bewijzen. Rwanda + Srebrenica + Holocaust formeel erkend. Of de deportatie van Oekraïense kinderen genocide is: nog discussie." },
@@ -308,9 +308,9 @@ const steps = [
       },
       {
         q: "**Amnesty International** opgericht in:",
-        options: ["1961", "1945", "2000", "1900"],
+        options: ["1961", "1945", "1977", "1948"],
         answer: 0,
-        wrongHints: [null, "Niet — VN.", "Veel later.", "Te vroeg."],
+        wrongHints: [null, "1945 is het jaar van de VN. Is Amnesty een VN-organisatie?", "In 1977 kreeg Amnesty de Nobelprijs voor de Vrede. Was het toen net opgericht?", "1948 is het jaar van de UVRM. Werd Amnesty in datzelfde jaar opgericht?"],
         uitlegPad: {
           stappen: [{ titel: "Peter Benenson", tekst: "Britse jurist begon na bericht Portugese studenten gevangen voor 'vrijheid'-toost. Letter-schrijven aan dictators. Vandaag 10 mln leden, Nobelvredesprijs 1977. Rapporten over politieke gevangenen, doodstraf, marteling. Onafhankelijk van staten + bedrijven (alleen lid-bijdragen)." }],
           niveaus: { basis: "1961.", simpeler: "Begin '60.", nogSimpeler: "1961" },

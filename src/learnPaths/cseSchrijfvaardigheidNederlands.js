@@ -130,9 +130,9 @@ const steps = [
       },
       {
         q: "Welk **signaalwoord** wijst op een **tegenargument**?",
-        options: ["echter / maar", "dus", "omdat", "bovendien"],
+        options: ["echter", "dus", "omdat", "bovendien"],
         answer: 0,
-        wrongHints: [null, "Gevolg.", "Reden.", "Toevoeging — geen tegen."],
+        wrongHints: [null, "'Dus' leidt een gevolg of conclusie in. Welk woord gaat in tegen wat ervoor staat?", "'Omdat' geeft een reden vóór iets. Welk woord brengt juist een andere kant in?", "'Bovendien' voegt iets toe in dezelfde richting. Welk woord draait de richting om?"],
       },
       {
         q: "Een goede **argumentstructuur** is?",
@@ -163,9 +163,9 @@ const steps = [
       },
       {
         q: "Welke tijd vooral bij **verslagen**?",
-        options: ["Verleden tijd", "Tegenwoordige", "Toekomst", "Voorwaardelijk"],
+        options: ["Verleden tijd", "Tegenwoordige tijd", "Toekomende tijd", "Voorwaardelijk"],
         answer: 0,
-        wrongHints: [null, "Soms, voor levendigheid.", "Bijna nooit.", "Die vorm (zou ...) gebruik je voor iets wat niet echt gebeurd is."],
+        wrongHints: [null, "Een enkele keer gebruik je die voor levendigheid. Wanneer vond plaats wat je in een verslag beschrijft?", "Schrijf je in een verslag over wat nog gaat komen, of over iets anders?", "Die vorm (zou ...) gebruik je voor iets wat niet echt gebeurd is."],
       },
       {
         q: "Wat is **'show, don't tell'**?",
@@ -196,15 +196,15 @@ const steps = [
     checks: [
       {
         q: "Wat doe je met **voorbeelden** in samenvatting?",
-        options: ["Weglaten", "Allemaal meenemen", "Letterlijk overnemen", "Eigen mening toevoegen"],
+        options: ["Ze weglaten", "Alle houden", "Ze citeren", "Eén per alinea"],
         answer: 0,
-        wrongHints: [null, "Te lang.", "Plagiaat.", "Niet neutraal."],
+        wrongHints: [null, "Met alle voorbeelden wordt je samenvatting bijna zo lang als de tekst. Wat is het doel van samenvatten?", "Citeren is letterlijk overnemen. En is een voorbeeld eigenlijk wel een kernpunt?", "Is een voorbeeld een kernpunt, of een toelichting bij een kernpunt?"],
       },
       {
         q: "Hoeveel kernpunten ongeveer in samenvatting?",
         options: ["3-5", "10+", "1", "Alle alinea's"],
         answer: 0,
-        wrongHints: [null, "Te veel.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "Met meer dan tien punten neem je ook details mee. Is dat nog een samenvatting?", "Met één punt mis je de opbouw van de tekst. Hoeveel hoofdpunten heeft een gewone tekst?", "Niet elke alinea bevat een nieuw kernpunt; sommige geven alleen voorbeelden. Hoeveel blijven er dan over?"],
       },
       {
         q: "Wat is **plagiaat** bij samenvatting?",
@@ -214,9 +214,9 @@ const steps = [
       },
       {
         q: "Een samenvatting moet **neutraal** zijn — wat betekent dit?",
-        options: ["Geen eigen mening", "Geen woorden", "Geen feiten", "Geen lengte"],
+        options: ["Geen eigen mening", "Geen moeilijke woorden", "Geen voorbeelden", "Geen citaten"],
         answer: 0,
-        wrongHints: [null, "Wel woorden.", "Wel feiten.", "Wel lengte (woordaantal)."],
+        wrongHints: [null, "Moeilijke woorden vermijden gaat over leesbaarheid. Waar gaat 'neutraal' over?", "Voorbeelden laat je meestal weg, maar dat heeft met de lengte te maken. Wat betekent 'neutraal'?", "Citaten laat je weg omdat je in eigen woorden schrijft. Wat betekent 'neutraal' dan?"],
       },
       {
         q: "*'**Open vraag**: noem 1 signaalwoord voor reden in het Nederlands.'*",
@@ -243,13 +243,13 @@ const steps = [
         q: "**Hij wordt** of **hij word**?",
         options: ["Hij wordt", "Hij word", "Beide goed", "Hij worden"],
         answer: 0,
-        wrongHints: [null, "Mist t.", "Wel verschil.", "Meervoudsvorm — past niet bij 'hij'."],
+        wrongHints: [null, "Wat is de stam van 'worden'? Komt er bij 'hij' nog iets achter die stam?", "Er is maar één vorm goed. Wat zet je bij 'hij' achter de stam?", "Meervoudsvorm — past niet bij 'hij'."],
       },
       {
         q: "**Groter dan ik** of **groter als ik**?",
         options: ["Groter dan ik", "Groter als ik", "Beide goed", "Geen van beide"],
         answer: 0,
-        wrongHints: [null, "Informeel/fout.", "Standaard taal: 'dan'.", "Wel — 'dan'."],
+        wrongHints: [null, "In spreektaal hoor je dit vaak. Welk woord hoort in nette schrijftaal na een vergelijkende trap, zoals 'groter'?", "In spreektaal hoor je ze allebei. Is dat ook in nette schrijftaal zo?", "Een van de twee is in nette schrijftaal juist goed. Welke past na 'groter'?"],
       },
       {
         q: "Verschil **liggen** en **leggen**?",
@@ -261,7 +261,7 @@ const steps = [
         q: "*'Ik heb hem ___ 2020 niet meer gezien.'* — **sinds** of **vanaf**?",
         options: ["Sinds", "Vanaf", "Beide", "Geen verschil"],
         answer: 0,
-        wrongHints: [null, "'Vanaf' gebruik je vooral voor een startmoment zonder 'tot nu toe', zoals 'vanaf morgen'.", "Hier past maar één van de twee.", "Wel verschil."],
+        wrongHints: [null, "'Vanaf' gebruik je vooral voor een startmoment zonder 'tot nu toe', zoals 'vanaf morgen'.", "Hier past maar één van de twee.", "Sinds en vanaf lijken op elkaar, maar ze worden anders gebruikt. Loopt 'niet meer gezien' door tot nu?"],
       },
     ],
   },
@@ -276,7 +276,7 @@ const steps = [
         q: "**Formele aanhef** (naam onbekend)?",
         options: ["Geachte heer/mevrouw,", "Hoi!", "Lieve familie,", "Beste vriend,"],
         answer: 0,
-        wrongHints: [null, "Informeel.", "Persoonlijk.", "Informeel."],
+        wrongHints: [null, "'Hoi' zeg je tegen bekenden. Past dat bij iemand die je niet kent, in een formele brief?", "'Lieve' gebruik je voor mensen die dicht bij je staan. Ken je de lezer van een formele brief zo goed?", "'Vriend' schrijf je aan iemand die je goed kent. Hoe spreek je iemand aan van wie je de naam niet weet?"],
       },
       {
         q: "**Hoogachtend** — hoe formeel?",
