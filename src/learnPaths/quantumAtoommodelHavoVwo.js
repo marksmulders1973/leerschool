@@ -45,9 +45,9 @@ const steps = [
       },
       {
         q: "Voor 1 eV energie heeft elektron welke spanning doorlopen?",
-        options: ["1 V", "1 J", "1 kV", "Geen verband"],
+        options: ["1 V", "1 J", "1 kV", "1 mV"],
         answer: 0,
-        wrongHints: [null, "Niet — J is energie-eenheid.", "Te groot.", "Wel verband."],
+        wrongHints: [null, "Niet — J is energie-eenheid.", "Reken E = q·U met q = e: hoeveel eV krijgt een elektron bij 1000 V?", "Reken E = q·U met q = e: hoeveel eV krijgt een elektron bij 0,001 V?"],
         uitlegPad: {
           stappen: [{ titel: "1 eV = 1 V × e", tekst: "Definitie: 1 eV = arbeid die elektron krijgt door 1 V potentiaalverschil. 1 eV = e·1V = 1,6·10⁻¹⁹ J. Praktisch in atomaire fysica omdat getallen in J anders erg klein zijn." }],
           niveaus: { basis: "1 V.", simpeler: "e × 1V = 1 eV per definitie.", nogSimpeler: "1 V" },
@@ -57,12 +57,12 @@ const steps = [
         q: "Constante van Planck (h) is fundamenteel omdat:",
         options: [
           "Het de schaal van quantum-effecten bepaalt",
-          "Het de lichtsnelheid bepaalt",
-          "Het de gravitatie verklaart",
-          "Het magnetische velden levert"
+          "Het de grootte van de lichtsnelheid bepaalt",
+          "Het de sterkte van de zwaartekracht bepaalt",
+          "Het de lading van het elektron vastlegt"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — c is een aparte constante.", "Onzin in dit kader.", "Onzin."],
+        wrongHints: [null, "Niet — c is een aparte constante.", "Bij zwaartekracht hoort de gravitatieconstante G. Waar komt h voor, bijvoorbeeld in E = h·f?", "De lading van het elektron is een eigen constante, e. Waar komt h voor, bijvoorbeeld in E = h·f?"],
         uitlegPad: {
           stappen: [{ titel: "h = 6,626·10⁻³⁴ J·s — heel klein", tekst: "Omdat h zo klein is, zien wij op dagelijkse schaal geen quantum-effecten. Een tennisbal heeft de Broglie-golf van ~10⁻³⁴ m → onmeetbaar. Een elektron heeft λ ~10⁻¹⁰ m → wel meetbaar." }],
           niveaus: { basis: "h is schaal van quantum.", simpeler: "Hele kleine constante = quantum-wereld.", nogSimpeler: "h" },
@@ -91,12 +91,12 @@ const steps = [
         q: "Bij **hogere intensiteit** licht boven drempel, wat verandert?",
         options: [
           "Aantal elektronen per seconde stijgt, energie per elektron blijft",
-          "Energie per elektron stijgt",
-          "Beide stijgen",
-          "Niets — alles van frequentie"
+          "Energie per elektron stijgt, aantal elektronen per seconde blijft",
+          "Aantal elektronen per seconde én energie per elektron stijgen",
+          "Niets: aantal en energie per elektron hangen alleen van f af"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat zou klassieke verwachting zijn.", "Niet — alleen aantal verandert.", "Niet — intensiteit doet wel iets."],
+        wrongHints: [null, "Niet — dat zou klassieke verwachting zijn.", "Verandert de energie van één foton als de lamp feller wordt? Kijk naar E = h·f.", "Niet — intensiteit doet wel iets. Wat betekent een fellere lamp voor het aantal fotonen per seconde?"],
         uitlegPad: {
           stappen: [{ titel: "Intensiteit = aantal fotonen/s", tekst: "Meer licht = meer fotonen per seconde = meer elektron-uitslagen per seconde. Maar elk foton heeft dezelfde E (hf) → elektron krijgt dezelfde energie. Dit was de cruciale Einstein-vondst: energie per elektron hangt af van FREQUENTIE, niet INTENSITEIT." }],
           niveaus: { basis: "Aantal stijgt, E blijft.", simpeler: "Meer fotonen = meer elektronen, maar zelfde energie elk.", nogSimpeler: "Aantal" },
@@ -122,13 +122,13 @@ const steps = [
       {
         q: "Een metaal met W=4 eV. Foton 3 eV. Wat gebeurt?",
         options: [
-          "Geen elektron — onder drempel",
-          "Elektron met 3 eV",
-          "Elektron met 7 eV",
+          "Er komt geen elektron los",
+          "Er komt een elektron los met 3 eV",
+          "Er komt een elektron los met 7 eV",
           "Er komen twee elektronen los"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — niet genoeg E.", "Niet — totaal foute formule.", "Niet — onder de drempel komt er geen enkel elektron los."],
+        wrongHints: [null, "Een elektron moet eerst W = 4 eV kwijt om los te komen. Hoeveel houdt het dan over van 3 eV?", "Je telde W en de fotonenergie op. Moet de uittree-energie erbij of eraf?", "Eén foton maakt hooguit één elektron los. Is dit foton daar wel sterk genoeg voor?"],
         uitlegPad: {
           stappen: [{ titel: "hf < W → geen elektron los", tekst: "Foton-energie (3 eV) is te klein om elektron over uittree-arbeid (4 eV) te tillen. Foton wordt geabsorbeerd (verwarmt metaal) maar geen losgeslagen elektron. **Hogere intensiteit helpt niet** — méér zwakke fotonen blijven zwak." }],
           niveaus: { basis: "hf<W → niets.", simpeler: "Foton te zwak → elektron blijft.", nogSimpeler: "Niets" },
@@ -136,9 +136,9 @@ const steps = [
       },
       {
         q: "Een **zonnecel** zet licht direct om in elektriciteit via:",
-        options: ["Foto-elektrisch effect in halfgeleider", "Reflectie", "Inductie", "Statische lading"],
+        options: ["Foto-elektrisch effect in halfgeleider", "Thermo-elektrisch effect door opwarming", "Elektromagnetische inductie in een spoel", "Chemische reactie zoals in een batterij"],
         answer: 0,
-        wrongHints: [null, "Niet — reflectie wekt geen stroom op.", "Niet — geen bewegend veld.", "Niet — geen wrijving."],
+        wrongHints: [null, "Een zonnecel werkt het best als hij koel blijft. Gaat het dan om warmte of om iets anders?", "Niet — in een zonnecel beweegt of draait niets, dus er is geen veranderend magnetisch veld.", "Een zonnecel raakt niet op en verbruikt geen stoffen. Wat gebeurt er dan wel als licht erop valt?"],
         uitlegPad: {
           stappen: [{ titel: "Foton → elektron-gat-paar", tekst: "In silicium-zonnecel: foton met E ≥ bandkloof-energie tilt elektron uit valentieband naar geleidingsband. Achtergebleven 'gat' + vrij elektron → stroom door interne diode-structuur. Rendement 15-25% (commercieel)." }],
           theorie: "Hogere zonintensiteit → meer fotonen → meer stroom. Daarom werkt zonnecel beter bij heldere zon dan bewolkt.",
@@ -195,13 +195,13 @@ const steps = [
       {
         q: "Een atoom kan **alleen** fotonen absorberen met:",
         options: [
-          "Energie die exact past op een sprong tussen niveaus",
-          "Elke energie",
-          "Alleen rode fotonen",
-          "Alleen UV-fotonen"
+          "Energie die past op een sprong tussen niveaus",
+          "Elke energie, het atoom neemt alles op",
+          "Een energie die een veelvoud van 1 eV is",
+          "Een golflengte uit het zichtbare deel"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — gequantiseerd.", "Niet — kleur-onafhankelijk principe.", "Niet — niveau-afhankelijk."],
+        wrongHints: [null, "Waarom ziet een absorptiespectrum er dan uit als losse donkere lijnen?", "Energieniveaus liggen niet op hele eV's. Wat bepaalt dan welke fotonen passen?", "Waterstof absorbeert ook ultraviolet licht. Wat bepaalt dan welke fotonen passen?"],
         uitlegPad: {
           stappen: [{ titel: "Discreet spectrum", tekst: "Daarom zien we voor elk atoom een **uniek spectrum** van absorptielijnen (en emissielijnen). Identificatie van sterren-samenstelling werkt zo: spectrum vergelijken met lab-spectra van elementen." }],
           theorie: "Helium werd in 1868 ontdekt in zon-spectrum (gele lijn die geen aards element matchte). Pas in 1895 op aarde gevonden.",
@@ -212,9 +212,9 @@ const steps = [
         q: "Een **emissie-spectrum** ontstaat doordat:",
         options: [
           "Atomen vallen terug naar een lager niveau",
-          "Atomen absorberen licht",
-          "Elektronen bewegen langs banen",
-          "Atomen botsen"
+          "Atomen nemen licht op en springen omhoog",
+          "Elektronen draaien rond in vaste banen",
+          "Atomen botsen en kaatsen tegen elkaar op"
         ],
         answer: 0,
         wrongHints: [null, "Niet — dat is absorptie-spectrum.", "Niet — banen zelf geven geen straling.", "Niet — botsing energie-overdracht, niet foton."],
@@ -228,12 +228,12 @@ const steps = [
         q: "Waarom faalt het **Bohr-model** voor atomen met meer dan één elektron?",
         options: [
           "Elektronen stoten elkaar af; dat kan het model niet aan",
-          "Bohr-model is helemaal fout",
-          "Zwaardere atomen volgen klassieke fysica",
-          "Geen fotonen mogelijk"
+          "Het Bohr-model is helemaal fout, ook voor waterstof",
+          "Zwaardere atomen volgen gewoon de klassieke natuurkunde",
+          "Atomen met meer elektronen zenden geen fotonen uit"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — Bohr is goede 1e benadering.", "Tegenovergesteld.", "Onzin."],
+        wrongHints: [null, "Niet — voor waterstof voorspelt Bohr de spectraallijnen juist goed.", "Gelden quantumregels opeens niet meer zodra een atoom zwaarder wordt?", "Helium en neon geven toch ook spectraallijnen? Dus fotonen zijn er wel."],
         uitlegPad: {
           stappen: [
             { titel: "Eén-elektron-model", tekst: "Bohr nam aan: 1 elektron in vaste cirkelbaan rondom kern. Werkt voor H + He⁺ (één elektron rond kern). Zodra er meer elektronen zijn (al bij helium) stoten ze elkaar af en speelt het Pauli-principe mee → klassieke banen werken niet meer. Moderne quantummechanica gebruikt **orbitalen** (waarschijnlijkheids-wolken s, p, d, f)." },
@@ -264,12 +264,12 @@ const steps = [
         q: "**Fraunhofer-lijnen** in zonlicht zijn:",
         options: [
           "Donkere absorptielijnen door koudere zon-atmosfeer",
-          "Heldere lijnen van neon in atmosfeer",
-          "Reflectie tegen aarde-atmosfeer",
-          "Verzonnen — bestaan niet"
+          "Heldere emissielijnen van neon in de zonneatmosfeer",
+          "Donkere lijnen door weerkaatsing in onze atmosfeer",
+          "Krassen of stof op de lens van de spectroscoop"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — zijn de lijnen licht of donker?", "Niet — atmosfeer-rol klein.", "Bestaan wel."],
+        wrongHints: [null, "Niet — zijn de lijnen licht of donker?", "Kaatst onze atmosfeer bepaalde kleuren weg? De lijnen zie je ook vanuit een ruimtetelescoop.", "Elke spectroscoop ter wereld ziet dezelfde lijnen op dezelfde plek. Kan dat stof zijn?"],
         uitlegPad: {
           stappen: [
             { titel: "Continu + koudere absorptie", tekst: "Zon-bol (~6000 K, dicht) zendt continu spectrum uit. Daar bovenop ligt een koudere buitenste gaslaag (~4500 K, dunner gas) die specifieke λ absorbeert. Resultaat: continu met donkere strepen — Fraunhofer-lijnen, ~25 000 stuks (waterstof, helium, ijzer, calcium, etc.)." },
@@ -309,11 +309,11 @@ const steps = [
         options: [
           "Kortere golflengte-piek (richting blauw/UV)",
           "Langere golflengte-piek (richting rood/IR)",
-          "Geen verandering",
-          "Splitsen in twee pieken"
+          "Piek blijft op dezelfde golflengte",
+          "Piek splitst in twee aparte pieken"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — andersom.", "Niet — verschuift wel.", "Niet — gewoon één piek."],
+        wrongHints: [null, "Welke kleur heeft een gloeiend stuk ijzer eerst, en welke als het nog heter wordt?", "Niet — de wet zegt juist dat de piek verschuift met T.", "Niet — een zwarte straler heeft één piek."],
         uitlegPad: {
           stappen: [{ titel: "λ_max · T = 2,9·10⁻³ m·K", tekst: "Hogere T → kortere piek-λ. Voorbeelden:\n- Kamer (300 K): piek ~10 μm (infrarood).\n- Gloeidraad (3000 K): ~1 μm (nabij IR + rood).\n- Zon (5800 K): ~500 nm (geel-groen).\n- O-ster (30 000 K): ~100 nm (UV)." }],
           niveaus: { basis: "Kortere λ bij hogere T.", simpeler: "Hete sterren stralen blauwer.", nogSimpeler: "λ↓" },
@@ -367,12 +367,12 @@ const steps = [
         q: "Heisenberg: ΔX · Δp ≥ ℏ/2 betekent:",
         options: [
           "Plek en impuls zijn nooit tegelijk exact bekend",
-          "Meetinstrument is gewoon te slecht",
-          "Geldt alleen voor lichte deeltjes",
-          "Alleen op kwantumcomputers"
+          "Het meetinstrument is niet nauwkeurig genoeg",
+          "Het geldt alleen voor lichte deeltjes zoals elektronen",
+          "Het geldt alleen binnen een kwantumcomputer"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — geen beter instrument helpt.", "Niet — geldt voor alles, maar pas merkbaar bij klein.", "Onzin."],
+        wrongHints: [null, "Niet — geen beter instrument helpt.", "Niet — geldt voor alles, maar pas merkbaar bij klein.", "Heisenberg gaat over alle deeltjes, ook buiten een computer. Wat beperkt hij eigenlijk?"],
         uitlegPad: {
           stappen: [{ titel: "Fundamenteel, niet meetfout", tekst: "Geen experimenteel tekort maar natuurwet. Een deeltje HEEFT geen scherp gedefinieerde plek + impuls tegelijk; het is een waarschijnlijkheidsverdeling. Bij macroscopische objecten verwaarloosbaar (ℏ is heel klein); bij elektron significant." }],
           theorie: "Daarom bestaat 'baan' van elektron in atoom niet — alleen orbitalen (waarschijnlijkheidswolken).",
