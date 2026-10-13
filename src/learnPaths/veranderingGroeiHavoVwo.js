@@ -170,9 +170,9 @@ const steps = [
       },
       {
         q: "Spaargeld €1000 bij 5%/jaar. **Na hoeveel jaar €2000**?",
-        options: ["~14,2 jaar","~10 jaar","~20 jaar","~40 jaar"],
+        options: ["~14,2 jaar","~20,0 jaar","~6,0 jaar","~155,8 jaar"],
         answer: 0,
-        wrongHints: [null, "Met 5% per jaar heb je na 10 jaar ongeveer 1,63 keer zoveel. Is dat al het dubbele?", "Na 20 jaar heb je ongeveer 2,65 keer zoveel. Ben je dan niet al voorbij €2000?", "Na 40 jaar heb je ruim 7 keer zoveel (1,05⁴⁰ ≈ 7). Wanneer was je bij het dubbele?"],
+        wrongHints: [null, "Bij 20 jaar tel je elk jaar €50 op. Krijg je in latere jaren ook rente over de rente?", "6,0 krijg je met log(2) / 0,05. Is de groeifactor bij 5% per jaar 0,05?", "155,8 krijg je met log(2000) / log(1,05). Waar is de beginwaarde van €1000 gebleven?"],
         uitlegPad: {
           stappen: [
             { titel: "Vergelijking", tekst: "2000 = 1000 · 1,05^t → 2 = 1,05^t." },
@@ -194,9 +194,9 @@ const steps = [
       },
       {
         q: "Houtskool van fossiel heeft **25% C-14** vergeleken levend. T_h C-14 = 5730 jaar. **Leeftijd**?",
-        options: ["~11.460 jaar","5730 jaar","2865 jaar","23.000 jaar"],
+        options: ["~11.460 jaar","~8.595 jaar","~22.920 jaar","~17.190 jaar"],
         answer: 0,
-        wrongHints: [null, "5730 jaar is één halveringstijd. Hoeveel procent is er dan nog over: 50% of 25%?", "2865 jaar is een halve halveringstijd. Is er dan al minder dan de helft over?", "23.000 jaar is ongeveer 4 halveringstijden. Hoeveel procent is er dan nog over?"],
+        wrongHints: [null, "8.595 krijg je als er elke 5730 jaar 50% van het begin verdwijnt. Wat halveert er: het begin, of wat er nog over is?", "22.920 is 4 × 5730: je deelde 100% door 4. Hoe vaak moet je 100% écht halveren om bij 25% te komen?", "17.190 is 3 × 5730. Tel opnieuw: hoe vaak halveer je van 100% tot 25%?"],
         uitlegPad: {
           stappen: [
             { titel: "Tellen halveringen", tekst: "Levend: 100%. Na 1 halvering: 50%. Na 2 halveringen: 25%. → **2 halveringstijden** voorbij." },
@@ -257,9 +257,9 @@ const steps = [
       },
       {
         q: "Virus-uitbraak: aantal besmettingen verloopt typisch:",
-        options: ["Logistisch","Lineair","Periodiek alleen","Exponentieel"],
+        options: ["Logistisch: eerst snel, dan afvlakkend","Lineair: elke dag evenveel erbij","Periodiek: steeds op en neer","Exponentieel: steeds sneller omhoog"],
         answer: 0,
-        wrongHints: [null, "Komen er elke dag precies evenveel besmettingen bij, ook als bijna iedereen het al heeft gehad?", "Een virus kan in golven komen. Maar hoe verloopt één uitbraak: groeit die naar een grens toe?", "In het begin lijkt het exponentieel. Maar wat gebeurt er als bijna iedereen al besmet is geweest?"],
+        wrongHints: [null, "Komen er elke dag precies evenveel besmettingen bij, ook als bijna iedereen het al heeft gehad?", "Een virus kan in golven komen. Maar gaat één uitbraak steeds op en neer?", "In het begin lijkt het zo. Maar wat gebeurt er als bijna iedereen al besmet is geweest?"],
         uitlegPad: {
           stappen: [{ titel: "Logistisch met R0", tekst: "Beginfase virus: weinig immuniteit → besmettingen groeien exp. Naarmate meer mensen besmet (of beschermd door maatregelen/immuniteit): R-getal daalt → groei vlakt af → **logistische curve**.\n\nMeerdere golven mogelijk (nieuwe varianten) → opvolgende S-curves." }],
           theorie: "COVID-19-grafiekpatroon: meerdere logistische golven achter elkaar.",

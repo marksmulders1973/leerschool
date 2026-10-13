@@ -218,3 +218,63 @@ Controle: `node --check` op alle 7 bestanden in orde; `vergelijk-met-main.mjs --
 - **twintigste-eeuw-havo-vwo** (twintigsteEeuwHavoVwo.js) stap 3 vraag 5 · optie 3: "1989" → "1968" · hint 3: "Niet — Muur valt." → "In 1968 was het Tet-offensief; de oorlog duurde daarna nog jaren."
 - **twintigste-eeuw-havo-vwo** (twintigsteEeuwHavoVwo.js) stap 4 vraag 1 · hint 3: "Veel later." → "Poetin werd pas in 2000 president van Rusland, toen de Sovjet-Unie al niet meer bestond." · optie 4: "Joseph Stalin" → "Leonid Brezjnev" · hint 4: "Veel eerder." → "Brezjnev leidde de Sovjet-Unie tot 1982; daarna kwamen er nog anderen."
 - **twintigste-eeuw-havo-vwo** (twintigsteEeuwHavoVwo.js) stap 5 vraag 5 · optie 1 (goed): "~1945-1991" → "1945-1991" · optie 2: "1939-1945" → "1918-1939" · hint 2: "Niet — WO2." → "Dat is het interbellum, de tijd tussen de twee wereldoorlogen." · optie 3: "1914-1918" → "1950-1953" · hint 3: "Niet — WO1." → "Dat is de Korea-oorlog, één 'hete' oorlog binnen de Koude Oorlog." · optie 4: "2001-2021" → "1962-1975" · hint 4: "Niet — Afghanistan." → "Van de Cuba-crisis tot het einde van de Vietnam-oorlog: belangrijke jaren, maar de spanning begon eerder en duurde langer."
+
+## Ronde 3 (na blinde detectie)
+
+Bron: `blind/detectie-geschiedenis-2.json` (44 gemarkeerd). Werkwijze: afleiders vervangen door echte verwisselingen uit de lesstof in dezelfde vorm als het goede antwoord (ook opsommingen, ook "samen"-opties, ook opties met het woord uit de vraag), kale hints herschreven tot denkprikkels, hints die het antwoord omschreven aangepast. `answer`, `q` en aantal/volgorde opties ongewijzigd. Controle: `node --check` op alle 7 bestanden in orde; `vergelijk-met-main.mjs --alleen …` → 0 afwijkingen; `weggever-scan.mjs` vindt in deze groep geen kandidaten.
+
+| | aantal |
+|---|---|
+| Gemarkeerd | 44 |
+| Hersteld | 34 |
+| Vals alarm | 2 |
+| Twijfel voor Mark | 8 (bij 5 daarvan zijn de hints of de uitleg wel verbeterd) |
+
+### Twijfel voor Mark (alleen op te lossen door `q` te wijzigen)
+1. **franseRevolutieGeschiedenis** stap 3 vraag 1: "officiële begindatum" is betwistbaar (5 mei 1789 wordt ook genoemd). Voorstel q: "Welke datum geldt meestal als begin van de Franse Revolutie?" Niet gewijzigd.
+2. **middeleeuwenGeschiedenis** stap 1 vraag 3: q "Wat is **gemeen aan** 90% van middeleeuwers" is geen goed Nederlands. Voorstel: "Wat deden de meeste mensen (90%) in de middeleeuwen?" Dat het antwoord "boer" is, is de lesstof zelf.
+3. **middeleeuwenGeschiedenis** stap 6 vraag 3: "in stad" in de q sluit boeren, ridders en monniken uit. Voorstel q: "Welke groep leerde een vak in drie fasen: leerjongen, gezel, meester?" (of de fasen weglaten).
+4. **staatsinrichting1848** stap 2 vraag 5: "alle rechten en regels" klopt niet. In de uitleg staat nu dat de Grondwet de basisregels bevat en niet elke regel. Voorstel q: "Het document met de **basisregels** en grondrechten van een staat heet:".
+5. **tweedeWereldoorlogHavoVwo** stap 1 vraag 5 ("met DE-invasie van") en stap 2 vraag 1 ("door DE bezet"): "DE" moet "Duitsland"/"Duitse inval" worden. De kale hints zijn al herschreven.
+6. **twintigsteEeuwHavoVwo** stap 1 vraag 2, stap 2 vraag 1-2, stap 3 vraag 2, stap 4 vraag 2 en stap 5 vraag 4: q's in telegramstijl ("Wanneer Beurskrach Wall Street?", "Wanneer NL erkende …"). De kale hints ("Niet — WO1.", "Niet — bouw." enz.) zijn nu volledige zinnen.
+7. **twintigsteEeuwHavoVwo** stap 5 vraag 1: q zegt "directe oorzaak" maar bedoelt "aanleiding". De hints maken het onderscheid tussen een oorzaak op lange termijn en een aanleiding al. Voorstel: "aanleiding" in de q.
+
+### Vals alarm
+- **staatsinrichting1848** stap 1 vraag 3 (1848 als revolutiejaar): dat het jaar 1848 is, is precies de lesstof van dit pad. De afleider "1789 — Franse Revolutie" bevat ook een revolutie.
+- **tijdvakkenGeschiedenis** stap 1 vraag 2 (eerste tijdvak = Jagers en boeren): de namen van de tijdvakken zijn bewust een geheugensteun. Wie weet dat jagers het oudst zijn, kent de stof.
+
+### Herstelde vragen (oud → nieuw)
+- franseRevolutie 1.1: afleiders "Koning heeft een ceremoniële rol" / "Adel kiest wie er koning wordt" → "Het parlement heeft alle macht" / "Koning en adel delen alle macht" (nu staat "alle macht" ook in afleiders), antwoord → "De koning heeft zelf alle macht".
+- staatsinrichting 1.2: idem ("Koning is alleen ceremonieel" / "Adel kiest …" → "Het parlement heeft alle macht" / "Koning en adel delen alle macht").
+- staatsinrichting 2.2: "Koning mag ministers zomaar ontslaan" / "Koning en ministers maken zelf de wetten" → "Koning en ministers zijn allebei aanspreekbaar" / "De koning staat boven de grondwet".
+- staatsinrichting 2.3: "Partijen wijzen de Kamerleden aan" → "Alle volwassenen mogen stemmen" (verwisseling direct ↔ algemeen kiesrecht).
+- staatsinrichting 2.4: "De wet wordt opnieuw besproken" → "De minister krijgt een waarschuwing"; de hint "Kan een minister zonder steun … verder?" (die het antwoord omschreef) is weg.
+- staatsinrichting 3.2: "De koning, met zijn handtekening" / "De minister die de wet bedenkt" / "De rechters van de Hoge Raad" → "De koning en de minister samen" / "De ministers in de ministerraad" / "De Tweede Kamer en de Hoge Raad" (nu meerdere "samen"-opties).
+- staatsinrichting 3.3: "Het leven / 4 jaar / Tot 65 jaar precies / Tot de regering ze ontslaat" → "Het leven (tot hun 70e) / Vier jaar, net als de Kamer / Tien jaar, dan herbenoeming / Zolang de regering dat wil" (dit lost ook de twijfel over de leeftijd van 70 op).
+- staatsinrichting 3.4: "Onderwijsvrijheid" → "Gelijke beloning" (afleider met "gelijk").
+- staatsinrichting 3.5: "Grondwet artikel 6" (kon ook goed lijken) → "Grondwet artikel 10" (privacy); de hints noemen niet meer "het artikel dat discriminatie verbiedt".
+- staatsinrichting 5.3: "1917" → "1868" (vertrouwensregel 1866-1868); kale hints → volledige zinnen.
+- staatsinrichting 5.4: "Regering en ambtenaren" → "Minister van Justitie en de politie" (afleider met een recht-woord).
+- middeleeuwen 2.1: "Koning, adel en Kerk / Rijke kooplieden en gilden / Ridders en hun soldaten / Boeren, die het voedsel maakten" → "De koning, de adel en de Kerk / Rijke kooplieden en de gilden / De ridders en de stadsburgers / De keizer en de Romeinse senaat".
+- middeleeuwen 2.4: "burgemeester / kastelen bouwen / handel naar Azië" → "Leidden de mis in de dorpskerken / Kozen in Rome de nieuwe paus / Spraken recht over de stadsburgers".
+- middeleeuwen 3.1: "Zwaard en lans / Musket en kanon / Speer en stenen bijl / Pijl en boog" → "Een lang zwaard en een lans / Een werpspeer en een kort zwaard (Romeinen) / Een bijl en een rond schild (Vikingen) / Een kruisboog en een piek (voetvolk)".
+- middeleeuwen 3.2: "Religie, macht en land / Vluchten voor de pest / Zeeroute naar Indië zoeken / Vikingen tot christen maken" → "Religie, macht en nieuw land / Vluchten voor pest en honger / Goud, kolonies en een zeeroute / Het Romeinse Rijk herstellen".
+- middeleeuwen 3.3: "Het Heilige Land / Rome in Italië / Mekka in Arabië / Santiago in Spanje" → "Jeruzalem, waar Jezus stierf / Rome, waar de paus woonde / Mekka, waar Mohammed leefde / Santiago, waar Jakobus ligt"; de hint "Waar ligt Jeruzalem?" is weg.
+- socialeZekerheid 1.4: "De overheid via uitkeringen / Werkgevers via een verplicht fonds / Ziekenhuizen en artsen" → "De staat, via AOW en bijstand / Werkgevers, via een verplicht fonds / De SER, met werkgevers en bonden".
+- socialeZekerheid 2.2: "Voor iedereen verplicht / … / Vrijwillige verzekering / Voor mensen met een laag inkomen" → "Verplicht voor alle inwoners / Verplicht voor alle werknemers / Vrijwillig voor alle inwoners / Verplicht voor alle lage inkomens".
+- socialeZekerheid 3.1: "ABW / AKW" → "WIA / AWBZ" (ook afkortingen met arbeids- en zorgletters); de hint "In welke afkorting zit 'arbeidsongeschiktheid'?" is weg.
+- socialeZekerheid 3.5: "Pensioen vanaf 65 / Bijstand / Werkloosheid" → "Toeslag voor kinderopvang / Uitkering voor weduwen en wezen / Zorg voor gehandicapte kinderen" (de K past nu bij alle opties).
+- socialeZekerheid 5.4: "Meer ouderen, minder jongeren in bevolking" / spiegelbeeld → "Groter aandeel ouderen in de bevolking" / "Ouderen gaan later met pensioen".
+- tijdvakken 3.2: "476 — einde West-Romeinse Rijk / 1492 / 1789 / 1945" → "Rond 500, na de val van Rome / Rond 0, bij de geboorte van Jezus / Rond 800, met keizer Karel de Grote / Rond 1000, als de steden groeien". Dit lost 476 ↔ 500 op; uitlegPad en de uitleg van de stap zijn aangepast ("rond 500; val in 476").
+- tijdvakken 5.2: "De meeste mensen leerden lezen / Monniken schreven meer over / De Kerk kreeg meer controle over alle boeken" → "Kinderen moesten naar school om te leren lezen / Boeken kregen mooiere, gekleurde plaatjes / De Kerk kreeg meer grip op wat mensen lazen".
+- tijdvakken 9.1: "elektrische lampen en auto's / Schepen naar Azië / platteland" → "elektriciteit, auto's en vliegtuigen / windmolens, zaagmolens en grachten / meer boerderijen, dorpen en akkers" (nu allemaal opsommingen).
+- tijdvakken 12.2: "Tijdvak 3" → "Tijdvak 4", met een hint over de kenmerk-regel (de grens bij 1500 wordt nu echt getoetst).
+- WO2 1.1: "vier bezettingszones / vereniging met Oostenrijk / zetel in de Volkenbond" → "Bezetting, vier zones en ontwapening / Een vrede zonder winnaars of verliezers (Wilson) / Steun en leningen via het Marshallplan".
+- WO2 1.3: "Koloniën in Afrika" → "Leefruimte in koloniën overzee" ("leefruimte" staat nu ook in een afleider).
+- WO2 3.3: "Bergen-Belsen / Auschwitz / …" → "In Bergen-Belsen / In Auschwitz / In Westerbork / In Amsterdam" (de zin is nu grammaticaal).
+- WO2 4.5: "Grote Chinese overwinning / Vredesverdrag" → "Massamoord door Chinese troepen op Japanners / Opstand van Chinese boeren tegen hun regering".
+- WO2 5.2: "Leiders zijn niet te berechten / Soldaten schuldig, leiders niet" → "Wie het bevel geeft is schuldig, de uitvoerder niet / Een staat berecht zelf zijn eigen oorlogsmisdadigers".
+- WO2 5.4: "Eén Europees leger vormen / Eén munt voor heel Europa / Samen sterk tegen de VS" → "Eén Europees leger tegen de Sovjet-Unie / Eén munt om de handel makkelijker te maken / Concurreren met de economie van de VS".
+- twintigsteEeuw 1.1: "Duitsland is alleen schuldig aan WO1" → "Duitsland en zijn bondgenoten zijn schuldig" (art. 231 letterlijk); uitlegPad is daarop aangepast.
+- twintigsteEeuw 4.4: "Nederlandse soldaten pleegden de moorden / Veel Nederlandse soldaten sneuvelden / Nederland weigerde soldaten te sturen" → "Dutchbat-soldaten pleegden zelf de moorden / Veel Dutchbat-soldaten sneuvelden er / Dutchbat bombardeerde de stad per vergissing".
+- twintigsteEeuw 5.3: "Japan en de Verenigde Staten" → "Zuid-Korea en de Sovjet-Unie" ("Korea" staat nu ook in een afleider).

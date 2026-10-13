@@ -285,7 +285,7 @@ const steps = [
         q: "Oplos: **cos x = 0** voor 0 ≤ x ≤ 2π. Antwoorden?",
         options: ["x = π/2 of 3π/2", "x = 0 of π", "x = π/2 of −π/2", "x = π/4 of 3π/4"],
         answer: 0,
-        wrongHints: [null, "Niet — daar is cos ±1.", "−π/2 ligt niet tussen 0 en 2π. Welke hoek in dat interval geeft ook cos x = 0?", "cos(π/4) = ½√2, niet 0. Waar snijdt de cosinusgrafiek de x-as?"],
+        wrongHints: [null, "Bereken cos(0) en cos(π). Komt daar 0 uit?", "−π/2 ligt niet tussen 0 en 2π. Welke hoek in dat interval geeft ook cos x = 0?", "cos(π/4) = ½√2, niet 0. Waar snijdt de cosinusgrafiek de x-as?"],
         uitlegPad: {
           stappen: [
             { titel: "cos = 0 op π/2 + kπ", tekst: "In [0, 2π] zijn dat: π/2 en 3π/2. Dat zijn de top en onderkant van de eenheidscirkel (cos = x-coord = 0)." },

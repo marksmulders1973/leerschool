@@ -289,7 +289,7 @@ const steps = [
       {
         q: "Welke is **GEEN** methode voor stelsels?",
         options: [
-          "Pythagoras-formule",
+          "ABC-formule",
           "Substitutie",
           "Eliminatie",
           "Grafisch (lijnen tekenen)"
@@ -297,8 +297,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Bij substitutie vul je de ene vergelijking in de andere in — is dat niet juist een manier om stelsels op te lossen?", "Bij eliminatie tel je vergelijkingen op om een onbekende weg te strepen — is dat geen echte oplosmanier?", "Twee lijnen tekenen en het snijpunt aflezen geeft de oplossing — telt dat niet als een methode?"],
         uitlegPad: {
-          stappen: [{ titel: "Pythagoras voor driehoek", tekst: "Pythagoras (a² + b² = c²) is voor rechthoekige driehoek-zijden, NIET voor stelsels. Drie methodes voor stelsels: substitutie, eliminatie, grafisch." }],
-          niveaus: { basis: "Pythagoras niet.", simpeler: "Pyth = driehoek.", nogSimpeler: "Pyth" },
+          stappen: [{ titel: "ABC-formule voor kwadratisch", tekst: "De ABC-formule gebruik je bij één kwadratische vergelijking (ax² + bx + c = 0), NIET bij een stelsel van twee vergelijkingen met twee onbekenden. Drie methodes voor stelsels: substitutie, eliminatie, grafisch." }],
+          niveaus: { basis: "De ABC-formule niet.", simpeler: "ABC = één kwadratische vergelijking.", nogSimpeler: "ABC" },
         },
       },
     ],

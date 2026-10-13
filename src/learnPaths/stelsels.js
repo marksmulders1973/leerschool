@@ -345,9 +345,9 @@ const steps = [
     checks: [
       {
         q: "*Welke methode ligt het meest voor de hand bij: y = 5x én 2x + y = 14?*",
-        options: ["Substitutie (y staat al alleen)","Eliminatie (vergelijkingen optellen)","Eliminatie (vergelijkingen aftrekken)","Grafisch (beide lijnen tekenen)"],
+        options: ["Substitutie (y staat al alleen)","Eliminatie (y staat in beide)","Eliminatie (x staat in beide)","Grafisch (twee rechte lijnen)"],
         answer: 0,
-        wrongHints: [null, "Wat valt er weg als je y = 5x en 2x + y = 14 optelt? Kijk eerst hoe de eerste vergelijking eruitziet.", "Aftrekken kan, maar dan moet je eerst omschrijven. Kijk goed naar de eerste vergelijking: wat staat er al?", "Grafisch werkt, maar is veel werk. Welke methode is sneller als je naar de eerste vergelijking kijkt?"],
+        wrongHints: [null, "y staat inderdaad in beide, maar om te elimineren moet je eerst omschrijven. Hoe ziet de eerste vergelijking er al uit?", "Om x weg te werken moet je eerst vermenigvuldigen. Kan het met minder rekenwerk? Kijk naar de eerste vergelijking.", "Grafisch werkt, maar is veel werk. Welke methode is sneller als je naar de eerste vergelijking kijkt?"],
         uitlegPad: {
           stappen: [{ titel: "Y al klaar = substitutie", tekst: "y = 5x is al netjes geïsoleerd. Vul direct in: 2x + 5x = 14 → 7x = 14 → x = 2. Substitutie is hier veruit snelste." }],
           woorden: [{ woord: "methode-keuze", uitleg: "Slim kiezen op basis van vorm vergelijkingen." }],
@@ -410,15 +410,15 @@ const steps = [
     checks: [
       {
         q: "*\"Twee getallen samen 20, hun verschil 6. Welke vergelijkingen?\"*",
-        options: ["x + y = 20 en x − y = 6","x · y = 20 en x · y = 6","x + y = 20 en 2x + 2y = 6","x − y = 20 en x − y = 6"],
+        options: ["x + y = 20 en x − y = 6","x + y = 6 en x − y = 20","x · y = 20 en x − y = 6","x + y = 20 en x : y = 6"],
         answer: 0,
-        wrongHints: [null, "Betekent 'samen' keer elkaar, of bij elkaar opgeteld?", "Wat betekent 'verschil' bij twee getallen: verdubbelen en optellen, of aftrekken?", "Is 'samen 20' een verschil of een som?"],
+        wrongHints: [null, "Welk getal hoort bij 'samen' en welk bij 'verschil'? Kijk welke vergelijking welk getal krijgt.", "Betekent 'samen' keer elkaar, of bij elkaar opgeteld?", "Is een verschil hetzelfde als een deling?"],
         uitlegPad: {
           stappen: [{ titel: "Vertaal woorden", tekst: "'Samen 20' = som = x+y=20. 'Verschil 6' = aftrekken = x−y=6 (grotere - kleinere)." }],
           woorden: [{ woord: "som", uitleg: "Resultaat optelling." }, { woord: "verschil", uitleg: "Resultaat aftrekking." }],
           theorie: "Standaard woord-vertaling: 'samen/totaal' → +. 'verschil/meer/minder' → −. 'keer zoveel' → ×.",
           voorbeelden: [{ type: "oplossen", tekst: "x+y=20 en x−y=6. Optellen: 2x=26 → x=13. y=20−13=7. Getallen: 13 en 7." }],
-          basiskennis: [{ onderwerp: "Niet anders", uitleg: "x·y=20 = product (niet som). 2x+2y=6 = onlogisch. x−y=20 voor 'samen' fout." }],
+          basiskennis: [{ onderwerp: "Niet anders", uitleg: "x·y=20 = product (niet som). x:y=6 = deling (niet verschil). x+y=6 en x−y=20 = getallen verwisseld." }],
           niveaus: { basis: "x+y=20, x−y=6.", simpeler: "Samen=+, verschil=−.", nogSimpeler: "+,−" },
         },
       },

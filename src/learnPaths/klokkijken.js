@@ -1356,9 +1356,9 @@ const steps = [
       },
       {
         q: "Wat is **middernacht** in 24-uurs format?",
-        options: ["00:00","12:00","24:00","23:00"],
+        options: ["00:00","12:00","23:59","23:00"],
         answer: 0,
-        wrongHints: [null,"12:00 is middag.","24:00 zie je bijna nooit — een nieuwe dag begint bij nul.","Dat is 23 uur, een uur voor middernacht."],
+        wrongHints: [null,"12:00 is middag.","23:59 is de laatste minuut van de dag. Welke tijd staat er één minuut later op de klok?","Dat is 23 uur, een uur voor middernacht."],
         uitlegPad: {
           stappen: [{ titel: "Middernacht = 00:00", tekst: "12 uur 's nachts = nieuwe dag begint = 00:00. 24:00 gebruik je bijna nooit." }],
           woorden: [{ woord: "middernacht", uitleg: "12 uur 's nachts. Begin van nieuwe dag." }],

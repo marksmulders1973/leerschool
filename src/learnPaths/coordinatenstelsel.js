@@ -429,14 +429,14 @@ const steps = [
     checks: [
       {
         q: "*Drie punten op exact één rechte lijn vormen geen driehoek. Hoe noem je drie punten op één lijn?*",
-        options: ["Collineair", "Concentrisch", "Parallel", "Diagonaal"],
+        options: ["Collineair", "Concentrisch", "Lineair", "Congruent"],
         answer: 0,
-        wrongHints: [null, "Concentrisch betekent met hetzelfde middelpunt (zoals cirkels die binnen elkaar liggen).", "Parallel zijn twee of meer lijnen die nooit kruisen — niet drie punten op één lijn.", "Een diagonaal is een lijnstuk tussen twee hoekpunten van een figuur. Gaat deze vraag over een figuur, of over punten?"],
+        wrongHints: [null, "Concentrisch betekent met hetzelfde middelpunt (zoals cirkels die binnen elkaar liggen).", "Lineair zeg je van een verband of formule waarvan de grafiek een rechte lijn is. Gaat deze vraag over een formule, of over losse punten?", "Congruent betekent: precies dezelfde vorm en grootte. Gaat deze vraag over twee figuren die gelijk zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Collineair = op één lijn", tekst: "Latijn 'co' (samen) + 'lineair' (lijn). Punten zijn collineair als ze allemaal op één rechte lijn liggen. Geen driehoek mogelijk." }],
           woorden: [{ woord: "collineair", uitleg: "Op één lijn liggend. Engels: collinear." }],
           theorie: "Test op collineariteit: verschillen y/x constant? Voor punten (0,0), (2,4), (4,8): per x-stap +2 wordt y +4. Constant → collineair. Liggen op $y = 2x$.",
-          voorbeelden: [{ type: "andere termen", tekst: "Concentrisch = zelfde middelpunt (cirkels). Parallel = lijnen die elkaar nooit kruisen. Diagonaal = dwarslijn." }],
+          voorbeelden: [{ type: "andere termen", tekst: "Concentrisch = zelfde middelpunt (cirkels). Lineair = een verband of formule met een rechte lijn als grafiek. Congruent = zelfde vorm en grootte." }],
           basiskennis: [{ onderwerp: "Toepassing", uitleg: "Bij rechte-lijn-formules (y=ax+b): alle (x,y) op die lijn zijn collineair. Basis lineaire algebra." }],
           niveaus: { basis: "Collineair.", simpeler: "3 punten op één lijn = collineair.", nogSimpeler: "Collineair" },
         },

@@ -58,9 +58,9 @@ const steps = [
     checks: [
       {
         q: "Wat doe je **eerst** bij een wiskunde-vraag?",
-        options: ["De vraag rustig lezen en onderstrepen", "Een schatting van het antwoord maken", "De formule op het formuleblad opzoeken", "Meteen de berekening opschrijven"],
+        options: ["De vraag twee keer rustig lezen", "Een schatting van het antwoord maken", "De formule op het formuleblad opzoeken", "Een schets van de situatie maken"],
         answer: 0,
-        wrongHints: [null, "Schatten is slim, maar wat moet je weten voordat je iets kunt schatten?", "Hoe weet je welke formule je nodig hebt als je de vraag nog niet goed kent?", "Wat ga je uitrekenen als je nog niet precies weet wat er gevraagd wordt?"],
+        wrongHints: [null, "Schatten is slim, maar wat moet je weten voordat je iets kunt schatten?", "Hoe weet je welke formule je nodig hebt als je de vraag nog niet goed kent?", "Een schets helpt zeker. Maar hoe weet je wat je moet tekenen als je de vraag nog niet goed kent?"],
       },
       {
         q: "Vraag: *'Wat betaalt hij na **30% korting** op €50?'* Wat reken je?",
@@ -70,9 +70,9 @@ const steps = [
       },
       {
         q: "Waarom **schat** je voor je rekent?",
-        options: ["Om te checken of je antwoord redelijk is", "Om sneller klaar te zijn met rekenen", "Om de rekenmachine niet te hoeven gebruiken", "Om te weten welke formule je moet kiezen"],
+        options: ["Om je uitkomst er straks mee te vergelijken", "Om sneller klaar te zijn met rekenen", "Om een antwoord klaar te hebben bij tijdnood", "Om te weten welke formule je moet kiezen"],
         answer: 0,
-        wrongHints: [null, "Schatten is juist een extra stap. Wat win je ermee, als het geen tijd is?", "Na het schatten reken je toch nog precies uit, vaak met de rekenmachine. Waar gebruik je de schatting dan voor?", "De formule kies je door de vraag goed te lezen. Wat doe je na het rekenen met je schatting?"],
+        wrongHints: [null, "Schatten is juist een extra stap. Wat win je ermee, als het geen tijd is?", "Na het schatten reken je de som toch nog precies uit. Waar gebruik je die schatting daarna voor?", "De formule kies je door de vraag goed te lezen. Wat doe je na het rekenen met je schatting?"],
       },
       {
         q: "Vraag vraagt **oppervlak in cm²** — wat schrijf je?",
@@ -82,9 +82,9 @@ const steps = [
       },
       {
         q: "Wat onderstreep je in een examenvraag **als eerste**?",
-        options: ["De gegeven getallen + wat gevraagd wordt", "De moeilijke woorden die je niet kent", "De eerste zin van elke alinea", "Alle woorden die vetgedrukt staan"],
+        options: ["De gegevens en wat er gevraagd wordt", "De moeilijke woorden die je niet kent", "Alle getallen die in de tekst staan", "De zin met het vraagteken erin"],
         answer: 0,
-        wrongHints: [null, "Moeilijke woorden zijn lastig, maar heb je die nodig om te kunnen rekenen?", "Dat is een truc voor leesteksten. Wat heb je bij een rekenvraag nodig om te kunnen beginnen?", "Vetgedrukte woorden vallen al op. Wat moet jij zelf nog terugvinden tijdens het rekenen?"],
+        wrongHints: [null, "Moeilijke woorden zijn lastig, maar heb je die nodig om te kunnen rekenen?", "Examenvragen bevatten vaak getallen die je niet nodig hebt. En waar zie je wat je moet uitrekenen?", "Daar staat wat je moet uitrekenen. Maar met welke informatie ga je dat uitrekenen?"],
       },
       {
         q: "*'Geef je antwoord in 1 decimaal'* — wat betekent **1 decimaal**?",
@@ -149,9 +149,9 @@ const steps = [
     checks: [
       {
         q: "Wanneer is **rekenmachine NIET nodig**?",
-        options: ["Eenvoudige tafel zoals 7×8", "Rekenen met lange getallen", "Een wortel zoals √17 uitrekenen", "Sinus of cosinus van een hoek"],
+        options: ["Een tafelsom zoals 7 × 8", "Een procent zoals 12% van €350", "Een wortel zoals √324", "Een sinus zoals sin(35°)"],
         answer: 0,
-        wrongHints: [null, "Getallen met veel cijfers zijn lastig uit het hoofd — helpt een rekenmachine daar juist niet bij?", "Een wortel zoals √17 kun je niet uit je hoofd uitrekenen. Heb je daar geen rekenmachine voor nodig?", "Sinus, cosinus en tangens reken je niet zomaar in je hoofd uit — komt de rekenmachine daar juist niet van pas?"],
+        wrongHints: [null, "Kun je 0,12 × 350 zeker foutloos uit je hoofd, ook onder examendruk? Wat is dan het veiligst?", "Weet je zeker welk getal keer zichzelf 324 is? Waarmee controleer je dat snel?", "Ken jij sin(35°) uit je hoofd? Waarmee reken je een sinus uit?"],
       },
       {
         q: "Veiligste manier om **25% van X** te rekenen?",
@@ -167,9 +167,9 @@ const steps = [
       },
       {
         q: "Wat doe je met **tussenstappen** in lange berekening?",
-        options: ["Meteen op papier opschrijven", "In je rekenmachine laten staan", "Onthouden en meteen doorrekenen", "Pas aan het eind netjes noteren"],
+        options: ["Elk tussenresultaat op papier zetten", "Opslaan in het geheugen met M+", "Met de Ans-knop direct doorrekenen", "Aan het eind alles netjes noteren"],
         answer: 0,
-        wrongHints: [null, "Kan de nakijker zien wat er in je rekenmachine stond? En jij nog, na de volgende som?", "Bij een lange som raak je makkelijk een getal kwijt. Waar staat het veilig?", "Weet je aan het eind nog precies welke getallen je onderweg had?"],
+        wrongHints: [null, "Het geheugen is handig, maar kan de nakijker zien wat erin stond? En als je één keer verkeerd drukt?", "Ans onthoudt alleen het laatste antwoord. Hoe controleer je later je tussenstappen?", "Weet je aan het eind nog precies welke getallen je onderweg had?"],
       },
       {
         q: "De **DEL**-knop (wissen) op een rekenmachine wist ___?",
@@ -212,9 +212,9 @@ const steps = [
       },
       {
         q: "Welk **trigger-woord** wijst op procenten-vraag?",
-        options: ["korting", "schaal", "volume", "gemiddelde"],
+        options: ["rente", "wisselgeld", "schaal", "gemiddelde"],
         answer: 0,
-        wrongHints: [null, "Schaal hoort bij kaarten en tekeningen, zoals 1 : 100. Welk woord gaat over een deel van een prijs?", "Volume gaat over hoeveel er in een ruimte past. Gaat zo'n vraag over procenten?", "Een gemiddelde reken je met optellen en delen door het aantal. Welk woord gaat over een deel van honderd?"],
+        wrongHints: [null, "Bij wisselgeld trek je de prijs af van wat je betaalt. Reken je daarbij met procenten?", "Schaal is een verhouding, zoals 1 : 100 op een kaart. Bij welk woord reken je met een deel van honderd?", "Een gemiddelde reken je met optellen en delen door het aantal. Welk woord gaat over een deel van honderd?"],
       },
       {
         q: "Formule **oppervlakte rechthoek** (l = lengte, b = breedte)?",
@@ -252,21 +252,21 @@ const steps = [
       },
       {
         q: "Wat doe je bij **5+ min op 1 vraag vastlopen**?",
-        options: ["Markeer + verder, later terug", "Nog 5 minuten extra doorzetten", "De surveillant om een tip vragen", "Overslaan en niet meer terugkomen"],
+        options: ["Markeren, doorgaan en later terugkomen", "Nog even doorzetten, je bent al ver", "Een gok invullen en verder gaan", "Rustig ademhalen en opnieuw proberen"],
         answer: 0,
-        wrongHints: [null, "Er wachten nog veel andere vragen. Wat kun je in die 5 minuten ook doen?", "De surveillant mag alleen helpen bij iets onduidelijks, zoals een typfout, niet bij de som zelf.", "Misschien heb je aan het eind nog tijd. Laat je die punten dan zomaar liggen?"],
+        wrongHints: [null, "Er wachten nog veel andere vragen. Wat kun je in die minuten ook doen?", "Een gok kan altijd nog aan het eind. Weet je zeker dat je hem later niet alsnog kunt oplossen?", "Ademhalen helpt tegen stress. Maar wat gebeurt er met je tijd als je dezelfde vraag blijft proberen?"],
       },
       {
         q: "Bij **meerkeuze** en niet zeker — wat doe je?",
-        options: ["Wegstrepen en dan één kiezen", "Leeg laten, want fout kost punten", "Twee antwoorden aankruisen", "Opschrijven waarom je twijfelt"],
+        options: ["Foute opties wegstrepen en dan kiezen", "Je allereerste ingeving aankruisen", "Leeg laten, want fout kost punten", "Kiezen wat vaak goed is, zoals C"],
         answer: 0,
-        wrongHints: [null, "Krijg je bij meerkeuze strafpunten voor een fout antwoord? Wat levert een lege vraag op?", "Mag je bij meerkeuze meer dan één antwoord geven? Hoe telt de nakijker dat?", "Bij meerkeuze kijkt de nakijker alleen naar de letter die je kiest. Levert uitleg erbij dan punten op?"],
+        wrongHints: [null, "Foute opties zijn vaak expres verleidelijk gemaakt. Hoe vergroot je je kans voordat je kiest?", "Krijg je bij meerkeuze strafpunten voor een fout antwoord? Wat levert een lege vraag op?", "Examenmakers verdelen de goede antwoorden over A, B, C en D. Heb je dan iets aan een vaste letter?"],
       },
       {
         q: "Wat doe je in de laatste **5 minuten**?",
-        options: ["Je antwoorden nog eens controleren", "Nog een nieuwe opgave beginnen", "Je kladpapier netjes overschrijven", "Inleveren en alvast vertrekken"],
+        options: ["Al je antwoorden nog eens nalopen", "Een gemarkeerde lastige vraag afmaken", "Je kladwerk netjes overschrijven", "Inleveren en alvast vertrekken"],
         answer: 0,
-        wrongHints: [null, "Lukt een hele nieuwe opgave in 5 minuten? Wat levert in die tijd meer op?", "Netjes schrijven levert geen extra punten op. Waarmee voorkom je nog puntenverlies?", "Je hebt nog 5 minuten. Waarmee kun je nog fouten uit je examen halen?"],
+        wrongHints: [null, "Een lastige vraag kost vaak meer dan 5 minuten. Wat levert in die laatste minuten zeker iets op?", "Netjes schrijven levert geen extra punten op. Waarmee voorkom je nog puntenverlies?", "Je hebt nog 5 minuten. Waarmee kun je nog fouten uit je examen halen?"],
       },
       {
         q: "Een vraag is van **3 punten** en je hebt **120 min voor 60 punten** — gem **per punt**?",
@@ -291,13 +291,13 @@ const steps = [
     checks: [
       {
         q: "**Dag voor examen** — wat is belangrijkst?",
-        options: ["Op tijd naar bed en goed slapen", "Tot laat doorleren tot alles erin zit", "Energydrinks nemen voor extra focus", "Vroeg opstaan om nog even te leren"],
+        options: ["Op tijd naar bed en goed slapen", "Alle stof nog een keer doornemen", "Nog een oud examen helemaal maken", "De formules nog eens uit je hoofd leren"],
         answer: 0,
-        wrongHints: [null, "Hoe scherp ben je de volgende dag als je laat naar bed gaat?", "Een energydrink geeft een korte opkikker. Hoe slaap je daarna, en hoe fris ben je dan?", "Vroeg opstaan kost je slaap. Wat heb je op de examendag het hardst nodig?"],
+        wrongHints: [null, "Herhalen helpt, maar wat als het daardoor laat wordt? Wat zegt de les over laatste-minuut-leren?", "Een heel examen kost twee uur en veel energie. Hoe fit ben je daarna nog voor de echte dag?", "Veel formules krijg je op het formuleblad. Wat heb je de volgende dag harder nodig dan nog één formule?"],
       },
       {
         q: "Tijd-strategie tijdens examen?",
-        options: ["Makkelijke eerst + lastige markeren", "De volgorde van het examen aanhouden", "Lastige eerst, nu je nog fris bent", "Per vraag een vaste 3 minuten nemen"],
+        options: ["Makkelijke eerst, lastige later", "De volgorde van het examen aanhouden", "Lastige eerst, nu je nog fris bent", "Per vraag een vaste 3 minuten nemen"],
         answer: 0,
         wrongHints: [null, "Wat gebeurt er met je tijd als je vroeg in het examen op een vastloper stuit?", "Wat gebeurt er met je tijd en je zelfvertrouwen als je meteen vastloopt op een lastige vraag?", "Sommige vragen zijn in 30 seconden klaar, andere duren langer. Is een vaste tijd per vraag dan handig?"],
       },
@@ -321,21 +321,21 @@ const steps = [
       },
       {
         q: "Bij **vastlopen** op 1 vraag — wat doe je?",
-        options: ["Markeer + ga verder, kom terug", "Blijf proberen tot je het weet", "Vraag de surveillant om hulp", "Overslaan en hem leeg laten"],
+        options: ["Markeren, verder en later terugkomen", "Blijven proberen, je bent al ver", "Meteen een gok invullen en verder", "Overslaan en hem leeg laten"],
         answer: 0,
-        wrongHints: [null, "Hoeveel andere vragen had je in die tijd kunnen maken?", "De surveillant helpt alleen bij iets onduidelijks, zoals een typfout, niet bij de som zelf.", "Een lege vraag levert zeker geen punten op. Wat kun je aan het eind nog met deze vraag doen?"],
+        wrongHints: [null, "Hoeveel andere vragen had je in die tijd kunnen maken?", "Gokken kan altijd nog aan het eind. Weet je zeker dat je hem straks niet alsnog snapt?", "Een lege vraag levert zeker geen punten op. Wat kun je aan het eind nog met deze vraag doen?"],
       },
       {
         q: "**Wat neem je mee** naar het CSE wiskunde-examen (VMBO)?",
-        options: ["Rekenmachine, geodriehoek en pen", "Grafische rekenmachine, liniaal en pen", "Telefoon als rekenmachine en pen", "Laptop met rekenprogramma en pen"],
+        options: ["Rekenmachine, geodriehoek en pen", "Grafische rekenmachine, geodriehoek en pen", "Rekenmachine, eigen formulekaart en pen", "Rekenmachine, geodriehoek en smartwatch"],
         answer: 0,
-        wrongHints: [null, "Een grafische rekenmachine is bij het vmbo-examen niet toegestaan. En meet je met een liniaal ook hoeken?", "Een telefoon mag niet mee de examenzaal in, ook niet als rekenmachine.", "Een laptop mag niet mee bij het examen op papier. Wat heb je bij meetkunde nodig?"],
+        wrongHints: [null, "Is elke soort rekenmachine toegestaan bij het vmbo-examen?", "Mag je eigen aantekeningen meenemen? Waar komen de formules op het examen vandaan?", "Een smartwatch kan berichten ontvangen. Mag dat mee de examenzaal in?"],
       },
       {
         q: "Op het examen mag je **geen grafische rekenmachine** voor VMBO. Wat dan wel?",
-        options: ["Wetenschappelijke rekenmachine", "Rekenapp op je telefoon", "Rekenfunctie op een smartwatch", "Rekenmachine op een laptop"],
+        options: ["Een losse wetenschappelijke rekenmachine", "Rekenapp op je telefoon in vliegtuigmodus", "Rekenmachine op een laptop zonder internet", "Een rekenmachine met eigen notities erin"],
         answer: 0,
-        wrongHints: [null, "Telefoons mogen niet mee de examenzaal in, ook niet als rekenmachine.", "Een smartwatch kan berichten ontvangen. Mag dat mee de examenzaal in?", "Een laptop mag niet mee bij een examen op papier. Welk soort losse rekenmachine mag wel?"],
+        wrongHints: [null, "Ook in vliegtuigmodus blijft het een telefoon. Mag een telefoon mee de examenzaal in?", "Een laptop mag niet mee bij een examen op papier, ook niet zonder internet. Welk apparaat mag wel?", "Eigen aantekeningen meenemen is spieken, ook als ze in een apparaat staan. Mag dat?"],
       },
       {
         q: "**Open vraag**: hoeveel minuten heeft het CSE wiskunde VMBO meestal?",

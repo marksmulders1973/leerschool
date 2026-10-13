@@ -226,18 +226,18 @@ const steps = [
       },
       {
         q: "Welke van deze is het **grootst**?",
-        options: ["1 m³", "1 liter", "1 dm³", "1000 cm³"],
+        options: ["1 m³", "900 liter", "500 dm³", "800.000 cm³"],
         answer: 0,
-        wrongHints: [null, null, "Hoeveel liter is 1 dm³?", "Reken om: hoeveel liter is 1000 cm³?"],
+        wrongHints: [null, "Reken alles om naar liters. Hoeveel liter past er in een kubus van 1 m bij 1 m bij 1 m?", "1 dm³ is 1 liter, dus 500 dm³ is 500 liter. Hoeveel liter is 1 m³?", "Een groot getal is nog geen grote inhoud. Hoeveel cm³ gaan er in 1 liter?"],
         uitlegPad: {
           stappen: [
             {
               titel: "Zet alles in liters",
-              tekst: "1 liter = 1 liter. 1 dm³ = 1 liter. 1000 cm³ = 1 liter. Die drie zijn dus even groot.",
+              tekst: "1 dm³ = 1 liter, dus 500 dm³ = 500 liter. 1000 cm³ = 1 liter, dus 800.000 cm³ = 800 liter. En 900 liter blijft 900 liter.",
             },
             {
               titel: "En 1 m³?",
-              tekst: "1 m³ = 1000 liter. Dat is veel meer.",
+              tekst: "1 m³ = 1000 liter. Dat is meer dan 900, 800 of 500 liter.",
             },
           ],
           woorden: [
@@ -250,7 +250,7 @@ const steps = [
           voorbeelden: [
             {
               type: "stap",
-              tekst: "1 liter, 1 dm³ en 1000 cm³ zijn even groot. 1 m³ is 1000 keer zo groot.",
+              tekst: "In liters: 1 m³ = 1000 L, 900 L, 500 dm³ = 500 L, 800.000 cm³ = 800 L.",
             },
           ],
           basiskennis: [
@@ -261,7 +261,7 @@ const steps = [
           ],
           niveaus: {
             basis: "1 m³ is het grootst: 1000 liter.",
-            simpeler: "Drie van de vier zijn precies 1 liter. Alleen 1 m³ is meer: 1000 liter.",
+            simpeler: "Zet alles in liters: 1000, 900, 500 en 800. 1 m³ komt het hoogst uit: 1000 liter.",
             nogSimpeler: "1 m³",
           },
         },
