@@ -344,7 +344,7 @@ const steps = [
         q: "Een **BRT** (Bus Rapid Transit) systeem zoals Curitiba (Brazilië):",
         options: [
           "Bussen op eigen baan met metro-achtige stations",
-          "Bussen die alleen op afroep via een app rijden",
+          "Bussen die op afroep via een app rijden",
           "Trams op rails die gewoon met het verkeer meerijden",
           "Treinen op een eigen spoor met stations"
         ],

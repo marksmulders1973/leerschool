@@ -108,7 +108,7 @@ const steps = [
         q: "Welke is de **sterkste stelling** voor een betoog?",
         options: ["'Leerlingen moeten hun schooladvies zelf bepalen'","'School is voor iedereen heel erg belangrijk'","'Het is vandaag in het klaslokaal erg warm'","'Misschien moeten kinderen op school meer dingen leren'"],
         answer: 0,
-        wrongHints: [null, "Niet — niet discussieerbaar.", "Niet — geen meningsstelling.", "Niet — te vaag."],
+        wrongHints: [null, "Bijna iedereen is het hiermee eens. Valt er over deze stelling echt te discussiëren?", "Dit is een waarneming over het weer in de klas. Is dat een standpunt dat je met argumenten verdedigt?", "'Misschien' en 'meer dingen' zijn vaag. Is duidelijk wat de schrijver precies vindt?"],
         uitlegPad: {
           stappen: [{ titel: "Concreet + discussieerbaar", tekst: "Goede stelling = specifiek (welke groep, welke actie) + discussieerbaar (mensen kunnen oneens zijn) + niet vanzelfsprekend. De stelling over het schooladvies scoort op alle 3." }],
           theorie: "Toets-patroon: vermijd 'is belangrijk' (te vaag), 'wel/niet doen' zonder context, of vanzelfsprekendheden.",
@@ -119,7 +119,7 @@ const steps = [
         q: "Een **goed betoog** noemt het **tegenargument** en:",
         options: ["Weerlegt het","Negeert het","Bevestigt het","Maakt het belangrijker"],
         answer: 0,
-        wrongHints: [null, "Niet — wie het negeert, lijkt de tegenargumenten niet te kennen.", "Niet — verzwakt eigen positie.", "Niet — verzwakt overtuiging."],
+        wrongHints: [null, "Niet — wie het negeert, lijkt de tegenargumenten niet te kennen.", "Als je het tegenargument gelijk geeft, wat gebeurt er dan met je eigen standpunt?", "Een tegenargument belangrijker maken helpt vooral de tegenpartij. Wat doe je er beter mee?"],
         uitlegPad: {
           stappen: [{ titel: "Tegenargument noemen + weerleggen", tekst: "Een sterk betoog **onderkent tegenargumenten** ('Critici stellen X') maar **weerlegt** ze ('Dat klopt niet omdat...'). Toont dat schrijver het hele veld kent → meer geloofwaardig." }],
           theorie: "CSE-favoriet: tegenargument-weerlegging is herkennings-vraag. Zoek 'Sommigen', 'Tegenstanders', 'Critici stellen' + zin erna.",
@@ -128,9 +128,9 @@ const steps = [
       },
       {
         q: "Welk argument-type is **sterk**?",
-        options: ["Feit-argument met onderzoek","Emotie-appel zonder bewijs","Persoonlijke ervaring zonder context","Algemene uitspraak"],
+        options: ["Feit-argument met onderzoek","Voorbeeld uit de praktijk","Uitspraak van een deskundige","Beroep op het gevoel"],
         answer: 0,
-        wrongHints: [null, "Zwak — geen bewijs.", "Niet — één losse ervaring bewijst weinig.", "Te vaag."],
+        wrongHints: [null, "Een concreet voorbeeld maakt een argument levendig, maar bewijst het iets voor alle gevallen? Wat staat hoger in de rij?", "Een deskundige noemen helpt, maar je vertrouwt dan op iemands woord. Wat is nog harder bewijs?", "Een beroep op het gevoel kan raken, maar bewijst niets. Welk soort argument kun je controleren?"],
         uitlegPad: {
           stappen: [{ titel: "Hiërarchie argumenten", tekst: "Sterkste → zwakste: **feit** (onderzoek, statistiek) > **voorbeeld** (concrete case) > **autoriteit** (expert noemt) > **logica** (als-dan) > **emotie** (gevoel). De toets waardeert feit/voorbeeld het hoogst." }],
           niveaus: { basis: "Feit.", simpeler: "Feit-argument = sterkste", nogSimpeler: "Feit" },
@@ -140,7 +140,7 @@ const steps = [
         q: "Wat hoort NIET in het **slot** van een betoog?",
         options: ["Nieuwe argumenten","Stelling herhalen","Oproep tot actie","Conclusie"],
         answer: 0,
-        wrongHints: [null, "Wel — in slot stelling herhalen.", "Wel — optioneel.", "Wel — slot is conclusie."],
+        wrongHints: [null, "Het slot herhaalt de stelling vaak, krachtiger dan eerst. Wat hoort er juist níét in?", "Een oproep tot actie past goed in een slot. Waar zou de lezer in het slot niet meer op kunnen reageren?", "Het slot is de plek voor de conclusie. Wat hoort al eerder in de tekst te staan?"],
         uitlegPad: {
           stappen: [{ titel: "Slot = afsluiten, niet openen", tekst: "Slot **sluit af**. Geen nieuwe argumenten — die horen in middenstuk. Slot herhaalt stelling (krachtiger) + eventueel oproep. Nieuw materiaal in slot = zwak betoog (lezer kan niet meer reageren)." }],
           theorie: "Toets-tip: in slot 'Concluderend...' / 'Daarom blijft...' / 'Het moet duidelijk zijn dat...' zijn signaalwoorden.",
@@ -160,7 +160,7 @@ const steps = [
         q: "*'Iedereen vindt onze school de beste.'* — welke drogreden?",
         options: ["Generalisatie","Vals dilemma","Persoonlijke aanval","Cirkelredenering"],
         answer: 0,
-        wrongHints: [null, "Niet — geen of-of-keuze.", "Niet — geen aanval op persoon.", "Niet — geen zelf-bewijs."],
+        wrongHints: [null, "Bij een vals dilemma krijg je maar twee keuzes. Zie je hier een of-of-keuze?", "Bij een persoonlijke aanval wordt iemand zelf aangevallen. Wordt hier iemand aangevallen?", "Bij een cirkelredenering komt de conclusie terug als argument. Wordt hier eigenlijk wel een reden gegeven?"],
         uitlegPad: {
           stappen: [{ titel: "'Iedereen' = ongelimiteerd", tekst: "**Generalisatie**: uitspraak over **alle leden** van een groep zonder bewijs. 'Iedereen', 'altijd', 'niemand', 'nooit', 'alle' = signaal. Probleem: 1 tegenvoorbeeld weerlegt." }],
           niveaus: { basis: "Generalisatie.", simpeler: "Iedereen-uitspraak = generalisatie", nogSimpeler: "Generalisatie" },
@@ -168,9 +168,9 @@ const steps = [
       },
       {
         q: "*'Óf je stemt voor de nieuwe sporthal, óf sport voor kinderen kan je niets schelen.'* — welke drogreden?",
-        options: ["Vals dilemma","Generalisatie","Stroman","Feit-argument"],
+        options: ["Vals dilemma","Generalisatie","Stroman","Hellend vlak"],
         answer: 0,
-        wrongHints: [null, "Niet — geen 'iedereen'-uitspraak.", "Niet — argument wordt niet verdraaid.", "Niet — geen feit."],
+        wrongHints: [null, "Bij een generalisatie doe je een uitspraak over een hele groep. Hoeveel keuzes worden hier voorgesteld?", "Bij een stroman wordt het standpunt van de ander verdraaid. Wordt hier iemands standpunt verdraaid?", "Bij een hellend vlak leidt één stap tot een keten van gevolgen. Zie je hier zo'n keten, of iets anders?"],
         uitlegPad: {
           stappen: [{ titel: "Of-of zonder middenweg", tekst: "**Vals dilemma**: doen alsof er maar 2 opties zijn (voor of tegen). In realiteit kun je tegen déze sporthal zijn en sport voor kinderen tóch belangrijk vinden. Onterecht binair maken." }],
           theorie: "Toets-favoriet: vals dilemma + 'wie niet voor is, is tegen' / 'óf X óf Y' / 'er is geen andere optie'.",
@@ -181,7 +181,7 @@ const steps = [
         q: "*'Mijn tegenstander wil het leger volledig afschaffen!'* (terwijl hij alleen bezuinigen voorstelde) — drogreden:",
         options: ["Stroman","Hellend vlak","Generalisatie","Cirkelredenering"],
         answer: 0,
-        wrongHints: [null, "Niet — geen oorzaak-keten.", "Niet — geen 'iedereen'.", "Niet — geen zelf-bewijs."],
+        wrongHints: [null, "Bij een hellend vlak voorspel je een keten van gevolgen. Wat gebeurt hier met wat de tegenstander voorstelde?", "Bij een generalisatie doe je een uitspraak over een hele groep. Gaat deze zin over een groep?", "Bij een cirkelredenering bewijst de conclusie zichzelf. Vergelijk wat de tegenstander zei met wat hier staat."],
         uitlegPad: {
           stappen: [{ titel: "Stroman = verdraaid tegenstandpunt", tekst: "**Stroman-drogreden**: argument tegenstander **verdraaien tot extreme versie** die makkelijker te verslaan is. Bezuinigen ≠ afschaffen. Vechten tegen iets dat tegenstander niet zei." }],
           theorie: "Strawman (Engels) — je schiet een stropop neer in plaats van het echte argument.",
@@ -190,9 +190,9 @@ const steps = [
       },
       {
         q: "*'Als we cannabis legaliseren, zullen jongeren heroïne gaan gebruiken.'* — drogreden:",
-        options: ["Hellend vlak","Stroman","Vals dilemma","Goed argument"],
+        options: ["Hellend vlak","Stroman","Vals dilemma","Cirkelredenering"],
         answer: 0,
-        wrongHints: [null, "Niet — geen verdraaiing.", "Niet — geen of-of.", "Niet — wel drogreden."],
+        wrongHints: [null, "Bij een stroman verdraai je wat de ander zegt. Wordt hier iemands standpunt verdraaid?", "Bij een vals dilemma krijg je maar twee keuzes. Wat doet deze zin in plaats daarvan?", "Bij een cirkelredenering komt de conclusie terug als argument. Is dat hier zo, of gebeurt er iets anders?"],
         uitlegPad: {
           stappen: [{ titel: "Hellend vlak = ongegronde oorzaak-keten", tekst: "**Hellend vlak (slippery slope)**: claim dat A onvermijdelijk leidt tot Z via B, C, D... zonder dat de keten bewezen is. Elke schakel (cannabis → heroïne) zou je met **onderzoek** moeten aantonen — en dat bewijs ontbreekt hier." }],
           theorie: "Toets-truc: 'Als we X toestaan, dan komt Y, dan Z' = hellend vlak. Bewijs voor elke schakel is nodig.",
@@ -201,11 +201,11 @@ const steps = [
       },
       {
         q: "Welk argument is het **sterkst** voor 'sport is goed'?",
-        options: ["WHO-onderzoek toont 30% minder hart- en vaatziekten bij actieve mensen","Iedereen weet toch allang dat sporten goed is voor je hart en je hoofd","Mijn vader zegt het, en hij sport al dertig jaar elke dag","Sport is gewoon heel erg leuk en je maakt er veel vrienden bij"],
+        options: ["WHO-onderzoek toont 30% minder hart- en vaatziekten bij actieve mensen","Een enquête onder 25 leden van onze sportclub laat zien dat sporten gezond is","Mijn vader sport al dertig jaar elke dag en is nog nooit ziek geweest","Een bekende voetballer zegt in een interview dat sport goed is voor je hart"],
         answer: 0,
-        wrongHints: [null, "Niet — generalisatie zonder bewijs.", "Niet — autoriteit zonder relevantie.", "Te vaag + alleen emotie."],
+        wrongHints: [null, "25 leden van één sportclub zijn een kleine en eenzijdige groep. Mag je daaruit iets concluderen over iedereen?", "Eén persoonlijk geval bewijst weinig over alle mensen. Welke optie is breder onderbouwd?", "Een voetballer is bekend, maar is hij ook deskundig op het gebied van gezondheid? Welke bron is dat wel?"],
         uitlegPad: {
-          stappen: [{ titel: "Feit-argument > rest", tekst: "**WHO-onderzoek + getallen** = feit-argument. Concreet, controleerbaar, bewezen. Andere opties zijn drogredenen (generalisatie / autoriteit / emotie)." }],
+          stappen: [{ titel: "Feit-argument > rest", tekst: "**WHO-onderzoek + getallen** = feit-argument. Concreet, controleerbaar, bewezen. De andere opties zijn zwak of drogredenen (te kleine groep / één persoonlijk geval / autoriteit zonder deskundigheid)." }],
           theorie: "Toets-patroon: bij meerkeuze-vraag 'sterkste argument' → kies optie met BRON + CIJFERS / onderzoek.",
           niveaus: { basis: "Het WHO-onderzoek.", simpeler: "Onderzoek + cijfers = sterk", nogSimpeler: "Onderzoek" },
         },
@@ -223,7 +223,7 @@ const steps = [
         q: "*'Wie wil er nou niet gezond leven?'* — welk stijlmiddel?",
         options: ["Retorische vraag","Contrast","Metafoor","Hyperbool"],
         answer: 0,
-        wrongHints: [null, "Niet — geen tegenstelling.", "Niet — geen beeldspraak.", "Niet — geen overdrijving."],
+        wrongHints: [null, "Bij contrast zet je twee tegengestelde dingen naast elkaar. Zie je hier een tegenstelling?", "Een metafoor noemt iets met een beeld. Welk beeld zie je hier?", "Een hyperbool overdrijft. Wordt hier iets overdreven? Kijk ook naar het leesteken aan het eind."],
         uitlegPad: {
           stappen: [{ titel: "Vraag waarvan antwoord duidelijk", tekst: "**Retorische vraag**: vraag NIET om info maar om effect. Antwoord ligt vast ('niemand wil ongezond leven'). Doel: lezer impliciet doen instemmen." }],
           theorie: "Toets-patroon: retorische vragen vaak in opiniestukken + speeches.",
@@ -234,7 +234,7 @@ const steps = [
         q: "*'Het leven is een rivier.'* — welk stijlmiddel?",
         options: ["Metafoor","Vergelijking","Hyperbool","Ironie"],
         answer: 0,
-        wrongHints: [null, "Niet — bij vergelijking zou 'als' of 'zoals' staan.", "Niet — geen overdrijving.", "Niet — geen tegenovergestelde bedoeling."],
+        wrongHints: [null, "Niet — bij vergelijking zou 'als' of 'zoals' staan.", "Een hyperbool overdrijft iets. Wordt het leven hier groter gemaakt dan het is?", "Bij ironie bedoel je het tegenovergestelde van wat je zegt. Bedoelt de schrijver hier het omgekeerde?"],
         uitlegPad: {
           stappen: [{ titel: "Metafoor = zonder 'als'", tekst: "**Metafoor**: beeldspraak die A = B claimt (zonder 'als'). 'Leven IS rivier'. Vergelijking gebruikt WEL 'als': 'Het leven is ALS een rivier'." }],
           theorie: "Toets-tip: ezelsbrug 'Metafoor zonder als'. Vergelijking met 'als' of 'zoals'.",
