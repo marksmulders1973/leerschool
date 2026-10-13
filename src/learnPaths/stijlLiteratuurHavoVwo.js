@@ -85,7 +85,7 @@ const steps = [
         q: "**Van den Vos Reynaerde** komt uit welke periode?",
         options: ["Middeleeuwen", "Renaissance", "Romantiek", "20e eeuw"],
         answer: 0,
-        wrongHints: [null, "De Renaissance begint rond 1500. Is de Reynaerde ouder of jonger dan dat?", "De Romantiek is van rond 1800. De Reynaerde is in het Middelnederlands geschreven — hoe oud is die taal?", "De 20e eeuw is veel te recent. De Reynaerde is in het Middelnederlands geschreven — uit welke periode komt die taal?"],
+        wrongHints: [null, "De Renaissance begint rond 1500. Is de Reynaerde ouder of jonger dan dat?", "De Romantiek is van rond 1800. Is de taal van de Reynaerde zo jong?", "De 20e eeuw is veel te recent. Hoe oud is de taal waarin de Reynaerde geschreven is?"],
         uitlegPad: {
           stappen: [{ titel: "Middelnederlands dierenepos", tekst: "Geschreven rond 1260 door Willem (achternaam onbekend). Satire op feodale samenleving via dieren-personages. Reynaert (vos) bedriegt iedereen. Klassieker uit het Middelnederlands. Net als de Karel-romans uit dezelfde periode." }],
           niveaus: { basis: "Middeleeuwen.", simpeler: "13e eeuw = ME.", nogSimpeler: "ME" },
@@ -198,12 +198,12 @@ const steps = [
         q: "**Vrije verzen** kenmerken zich door:",
         options: [
           "Geen vast rijm of metrum",
-          "Verplicht ABBA-rijm",
-          "Veertien regels lang",
-          "Strofen van vier regels"
+          "Geen rijm, wel een vast metrum",
+          "Wel eindrijm, maar geen strofen",
+          "Veertien regels lang"
         ],
         answer: 0,
-        wrongHints: [null, "ABBA-rijm hoort bij een vaste vorm zoals het sonnet. Zijn vrije verzen aan zo'n rijmschema gebonden?", "Veertien regels is de vaste lengte van een sonnet. Hebben vrije verzen een vaste lengte?", "Strofen van vier regels zijn een vaste vorm (kwatrijnen). Is een vrij vers aan zo'n vorm gebonden?"],
+        wrongHints: [null, "Rijmloze verzen met een vast metrum heten blanke verzen. Zijn vrije verzen aan een metrum gebonden?", "Eindrijm is nog steeds een vast patroon. Is een vrij vers daaraan gebonden?", "Veertien regels is de vaste lengte van een sonnet. Hebben vrije verzen een vaste lengte?"],
         uitlegPad: {
           stappen: [{ titel: "Vrijheid in vorm", tekst: "Moderne poëzie sinds de 19e eeuw: niet langer gebonden aan klassieke metriek. Whitman ('Leaves of Grass' 1855) pionier. Ritme komt uit zin-bouw + adempauze, niet uit voorgeschreven jamben." }],
           niveaus: { basis: "Geen vaste vorm.", simpeler: "Geen rijm-regel.", nogSimpeler: "Vrij" },
@@ -318,9 +318,9 @@ const steps = [
     checks: [
       {
         q: "**'De avond is ongemak'** (Marieke Lucas Rijneveld) won welke prijs?",
-        options: ["International Booker Prize", "Nobelprijs voor de Literatuur", "Pulitzer Prize for Fiction", "Hugo Award for Best Novel"],
+        options: ["International Booker Prize", "Nobelprijs voor de Literatuur", "Pulitzer Prize for Fiction", "Europese Literatuurprijs"],
         answer: 0,
-        wrongHints: [null, "Niet — die is voor een heel oeuvre, niet één roman.", "De Pulitzer Prize gaat naar Amerikaanse auteurs. Welke prijs bekroont vertaalde romans?", "De Hugo Award is voor sciencefiction en fantasy. Welke prijs bekroont vertaalde romans?"],
+        wrongHints: [null, "De Nobelprijs bekroont een heel oeuvre, niet één roman. Ging het hier om één boek?", "De Pulitzer Prize gaat naar Amerikaanse auteurs. Is Rijneveld Amerikaans?", "De Europese Literatuurprijs gaat naar een roman die ín het Nederlands vertaald is. Is 'De avond is ongemak' een vertaling naar het Nederlands?"],
         uitlegPad: {
           stappen: [{ titel: "Internationaal doorgebroken", tekst: "Eerste Nederlandstalige auteur ooit met Booker International Prize. Roman over jong meisje na verlies broer in streng-gereformeerd boeren-milieu. Rijneveld was toen 29 — jongste laureaat ooit." }],
           niveaus: { basis: "Booker International.", simpeler: "Booker 2020.", nogSimpeler: "Booker" },

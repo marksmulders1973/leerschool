@@ -52,7 +52,7 @@ const steps = [
         q: "Welke zin is een **standpunt**?",
         options: [
           "Jongeren zouden minder schermtijd moeten hebben.",
-          "Veel ouders vinden dat jongeren te veel op hun telefoon zitten.",
+          "Veel ouders vinden dat hun kind te veel op de telefoon zit.",
           "Op veel scholen moeten telefoons in de kluis blijven.",
           "Jongeren die laat op een scherm kijken, slapen vaak slechter.",
         ],

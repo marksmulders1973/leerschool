@@ -303,13 +303,13 @@ const steps = [
     checks: [
       {
         q: "*Strikvraag over ei/ij: hoe schrijf je het woord voor de witte drank die van een koe komt?*",
-        options: ["melk", "meilk", "mijlk", "mielk"],
+        options: ["melk", "mellek", "meelk", "melluk"],
         answer: 0,
         wrongHints: [
           null,
-          "'Meilk' bestaat niet. Spreek het woord langzaam uit: hoor je echt een ei-klank?",
-          "'Mijlk' bestaat ook niet. Hoor je in dit woord een ij-klank?",
-          "'Mielk' bestaat ook niet. Hoor je in dit woord een ie-klank?",
+          "In de spreektaal zeggen veel mensen 'mellek', met een extra klank tussen l en k. Schrijf je die klank ook op?",
+          "Hoor je een lange ee, zoals in 'zee', of een korte e, zoals in 'pen'?",
+          "'Melluk' schrijf je zoals sommige mensen het uitspreken. Hoort die extra klank in het geschreven woord?",
         ],
         uitlegPad: {
           stappen: [
@@ -376,13 +376,13 @@ const steps = [
     checks: [
       {
         q: "*Welke spelling is correct voor het voertuig met 4 wielen waar je in rijdt?*",
-        options: ["auto", "outo", "ouwto", "auwto"],
+        options: ["auto", "outo", "ooto", "oto"],
         answer: 0,
         wrongHints: [
           null,
           "Past dit bij de au-of-ou-regel? Denk aan andere woorden met dezelfde klank.",
-          "Ouwto bestaat niet — geen 'w' in dit woord.",
-          "Auwto bestaat ook niet — er hoort geen w in dit woord.",
+          "Veel mensen zeggen 'ooto'. Maar schrijf je een leenwoord altijd zoals je het uitspreekt?",
+          "Hoor je aan het begin één korte klinker, of een tweeklank? En schrijf je dit leenwoord zoals je het zegt?",
         ],
         uitlegPad: {
           stappen: [
@@ -391,23 +391,23 @@ const steps = [
           woorden: [{ woord: "leenwoord", uitleg: "Woord uit andere taal (auto = automobiel, Latijn). Vaak met au." }],
           theorie: "Veel au-woorden komen uit Latijn/Frans: auto, augustus, paus, applaus. Anders meestal ou.",
           voorbeelden: [{ type: "au-woord", tekst: "auto, augustus, paus, applaus, blauw, saus — leren als rijtje." }],
-          basiskennis: [{ onderwerp: "Geen W", tekst: "Bij au + klinker komt geen w. 'Auto' = au + to, geen 'auwto'.", uitleg: "Bij au + klinker komt geen w. 'Auto' = au + to, geen 'auwto'." }],
+          basiskennis: [{ onderwerp: "Uitspraak ≠ spelling", tekst: "Veel mensen zeggen 'ooto' of 'oto', maar je schrijft dit leenwoord met au: a-u-t-o.", uitleg: "Veel mensen zeggen 'ooto' of 'oto', maar je schrijft dit leenwoord met au: a-u-t-o." }],
           niveaus: {
             basis: "Auto = au-woord.",
-            simpeler: "Auto is een woord dat je VAAK ziet — gewoon onthouden: a-u-t-o. Geen w, geen ou.",
+            simpeler: "Auto is een woord dat je VAAK ziet — gewoon onthouden: a-u-t-o. Geen oo, geen ou.",
             nogSimpeler: "Auto",
           },
         },
       },
       {
         q: "*Welke spelling klopt voor het tegenovergestelde van warm?*",
-        options: ["koud", "kaud", "kowd", "cowd"],
+        options: ["koud", "kaud", "kout", "kouwd"],
         answer: 0,
         wrongHints: [
           null,
           "Hoort 'au' of 'ou' bij deze klank? Vergelijk met een woord als 'oud'.",
-          "Kowd bestaat niet in het Nederlands — de w hoort hier niet.",
-          "'Cowd' bestaat niet (Engels is 'cold'). Nederlands schrijft het anders.",
+          "Aan het eind hoor je een t-klank. Verleng het woord: 'koude'. Hoor je dan een d of een t?",
+          "In de spreektaal zeg je soms 'kouwe', maar hoort die w ook in het geschreven woord?",
         ],
         uitlegPad: {
           stappen: [
@@ -418,7 +418,7 @@ const steps = [
           ],
           theorie: "OU komt vaker voor in NL dan AU. Kerngroep: oud, koud, vrouw, hout, mouw, jou, nou. Bij twijfel: kies ou.",
           voorbeelden: [{ type: "familie", tekst: "koud → kouder, koudst, koude — alles ou." }],
-          basiskennis: [{ onderwerp: "Engels ≠ Nederlands", uitleg: "Het Engelse 'cold' is niet de Nederlandse spelling." }],
+          basiskennis: [{ onderwerp: "d of t?", uitleg: "Verleng het woord: koude → je hoort een d, dus koud. En 'kouwe' is spreektaal: geen w in het geschreven woord." }],
           niveaus: {
             basis: "Koud = ou-woord.",
             simpeler: "Tegengesteld van warm = koud. Bekend NL-woord met ou. Familie: koud, kouder, koudst — allemaal OU.",
@@ -448,13 +448,13 @@ const steps = [
     checks: [
       {
         q: "*Hoe spel je het woord voor 'een vaart met water die dwars door de stad loopt'?*",
-        options: ["gracht", "graht", "grachd", "grakt"],
+        options: ["gracht", "graht", "grachd", "gragt"],
         answer: 0,
         wrongHints: [
           null,
           "Er mist een letter: met welke twee letters schrijf je de ch-klank?",
           "Verleng het woord: 'grachten'. Hoor je dan een d of een t?",
-          "Grakt zou met k zijn — maar de klank is een 'g/ch'-klank, geen k.",
+          "Na een korte klinker schrijf je deze keelklank vóór een t bijna nooit met een g. Denk aan 'nacht' en 'licht'.",
         ],
         uitlegPad: {
           stappen: [
@@ -463,7 +463,7 @@ const steps = [
           woorden: [{ woord: "cht-combinatie", uitleg: "g/ch + t-klank wordt geschreven als 'cht'. Vast." }],
           theorie: "Vuistregel: hoor je een g/ch-klank gevolgd door t? Schrijf 'cht'. Voorbeelden: gracht, lucht, slecht, recht, vrucht, dochter.",
           voorbeelden: [{ type: "cht", tekst: "lucht, slecht, recht, vrucht, dochter, lichten — allemaal cht voor t-klank." }],
-          basiskennis: [{ onderwerp: "Niet kt, niet chd", uitleg: "De klank lijkt soms op k (grakt), en aan het eind hoor je geen verschil tussen d en t (grachd). Verleng het woord: grachten → t." }],
+          basiskennis: [{ onderwerp: "Niet gt, niet chd", uitleg: "De klank lijkt soms op een g (gragt), en aan het eind hoor je geen verschil tussen d en t (grachd). Verleng het woord: grachten → t." }],
           niveaus: {
             basis: "G/ch + t-klank = cht → gracht.",
             simpeler: "Hoor je een 'ch'-klank en daarna een 't'? Dan schrijf je bijna altijd 'cht'. Gracht hoort daarbij.",
@@ -1020,12 +1020,12 @@ const steps = [
       },
       {
         q: "*Hoe spel je het woord voor de ruimte boven je hoofd, waar de wolken drijven?*",
-        options: ["lucht", "luct", "lught", "lugt"],
+        options: ["lucht", "luct", "luch", "lugt"],
         answer: 0,
         wrongHints: [
           null,
-          "Er mist een letter in de ch-klank.",
-          "Twee letters vormen samen de ch-klank. Is 'gh' zo'n combinatie in het Nederlands?",
+          "Er mist een letter. Uit hoeveel letters bestaat de schurende keelklank in 'nacht'?",
+          "Spreek het woord langzaam uit: hoor je aan het eind nog een medeklinker na de keelklank?",
           "gt zie je vooral bij werkwoorden zoals 'zegt'. Dit woord is geen werkwoord.",
         ],
         uitlegPad: {
@@ -1033,7 +1033,7 @@ const steps = [
             { titel: "Cht-regel", tekst: "Hoor je 'g/ch'-klank gevolgd door t? Schrijf (bijna) altijd 'cht'. Lucht = lu + cht." },
           ],
           woorden: [{ woord: "cht-combinatie", uitleg: "Vaste NL-spelling voor g/ch-klank + t-klank." }],
-          theorie: "Ct en ght bestaan niet voor deze klank. Gt zie je alleen bij werkwoorden (hij zegt, ligt).",
+          theorie: "Ct bestaat niet voor deze klank, en de t aan het eind mag je niet vergeten. Gt zie je alleen bij werkwoorden (hij zegt, ligt).",
           voorbeelden: [{ type: "cht", tekst: "lucht, slecht, recht, vrucht, dochter, lichten — allemaal cht." }],
           basiskennis: [{ onderwerp: "Vast", uitleg: "G/ch + t-klank = cht. Uitzondering: werkwoorden met g in de stam (zeggen → zegt)." }],
           niveaus: {

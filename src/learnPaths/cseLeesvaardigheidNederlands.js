@@ -69,7 +69,7 @@ const steps = [
     checks: [
       {
         q: "Wat is de **eerste stap** bij een CSE-tekst?",
-        options: ["Skimmen: titel, eerste alinea en plaatjes", "Meteen vraag 1 lezen en het antwoord opzoeken", "Woord voor woord lezen en lastige woorden onderstrepen", "Eerst de conclusie in de laatste alinea lezen"],
+        options: ["Skimmen: titel, eerste alinea en plaatjes", "Meteen vraag 1 lezen en het antwoord opzoeken", "Woord voor woord lezen en lastige woorden opzoeken", "Eerst de conclusie in de laatste alinea lezen"],
         answer: 0,
         wrongHints: [null, "Zonder dat je weet waar de tekst over gaat, zoek je je snel vast. Wat heb je nodig vóór je aan vraag 1 begint?", "Grondig lezen kost veel tijd, en de vragen vragen niet naar elk woord. Wat heb je eerst nodig?", "Het slot is belangrijk, maar dan mis je het begin en de opbouw. Wat heb je nodig over de hele tekst?"],
       },

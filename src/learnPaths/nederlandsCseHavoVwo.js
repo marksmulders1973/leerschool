@@ -43,7 +43,7 @@ const steps = [
         q: "Tijdsduur **CSE Nederlands HAVO**?",
         options: ["3 uur","2 uur","2,5 uur","4 uur"],
         answer: 0,
-        wrongHints: [null, "Het CSE heeft meerdere lange teksten met veel vragen. Is dat in twee uur te doen?", "Het is iets langer dan dat. Hoeveel uur staat er voor Nederlands op het examenrooster?", "Vier uur is langer dan een gewone examenzitting. Hoeveel uur is het dan?"],
+        wrongHints: [null, "Het CSE heeft meerdere lange teksten met veel vragen. Is dat in twee uur te doen?", "Tweeënhalf uur geldt voor een aantal andere vakken. Hoeveel uur staat er voor Nederlands op het examenrooster?", "Vier uur is langer dan een gewone examenzitting. Hoeveel uur is het dan?"],
         uitlegPad: {
           stappen: [{ titel: "Drie uur", tekst: "**CSE Nederlands HAVO + VWO: 3 uur**. Met een verklaring (bv. dyslexie) kan de school maximaal 30 min verlenging geven." }],
           niveaus: { basis: "3 uur.", simpeler: "3u", nogSimpeler: "3" },
@@ -239,9 +239,9 @@ const steps = [
       },
       {
         q: "Welke is **prioriteit** in samenvatting?",
-        options: ["Hoofdpunten boven details", "Woordenaantal boven inhoud", "Mooie taal boven inhoud", "Citaten boven eigen woorden"],
+        options: ["Hoofdpunten boven details", "Volledigheid boven beknoptheid", "Voorbeelden boven uitleg", "Citaten boven eigen woorden"],
         answer: 0,
-        wrongHints: [null, "Een woordenmaximum is een grens, geen doel. Waar draait een samenvatting om?", "Goede taal telt, maar wat weegt zwaarder: hoe het klinkt of wat erin staat?", "Een samenvatting laat zien dat jij de tekst snapt. Lukt dat met citaten?"],
+        wrongHints: [null, "Een samenvatting die alles noemt, is bijna de tekst zelf. Wat moet een samenvatting juist doen met de tekst?", "Voorbeelden maken een tekst levendig, maar nemen in een samenvatting veel ruimte in. Wat weegt zwaarder?", "Een samenvatting laat zien dat jij de tekst snapt. Lukt dat met citaten?"],
         uitlegPad: {
           stappen: [{ titel: "Inhoud > vorm", tekst: "**Inhoud** eerst: de punten krijg je voor de juiste hoofdpunten. Eerst zorgen dat alle hoofdpunten erin staan, daarna verbeteren van zinsbouw + woordkeus. Details + voorbeelden weg, tenzij essentieel voor begrip hoofdpunt." }],
           niveaus: { basis: "Hoofdpunten.", simpeler: "Inhoud > vorm", nogSimpeler: "Hoofdpunten" },
