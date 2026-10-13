@@ -200,7 +200,7 @@ const steps = [
         q: "Welke organisatie regelt globale handelsregels?",
         options: ["WTO (Wereldhandelsorganisatie)", "EU (Europese Unie)", "VN (Verenigde Naties)", "ECB (Europese Centrale Bank)"],
         answer: 0,
-        wrongHints: [null, "EU = regionaal.", "VN = breder, niet handel-specifiek.", "ECB = euro."],
+        wrongHints: [null, "De EU maakt handelsregels voor Europa. De vraag gaat over de hele wereld.", "De VN gaat vooral over vrede en mensenrechten. Is er een aparte wereldorganisatie voor handel?", "De ECB gaat over de euro en de rente, niet over handelsregels."],
         uitlegPad: {
           stappen: [{ titel: "WTO = wereld-handel", tekst: "WTO = World Trade Organization. Regelt handel tussen landen + beslecht geschillen." }],
           woorden: [{ woord: "WTO", uitleg: "Wereldhandelsorganisatie. Hoofdkwartier Genève. ~166 leden." }],
@@ -212,9 +212,9 @@ const steps = [
       },
       {
         q: "**Reshoring** is:",
-        options: ["Productie terughalen naar eigen regio", "Meer toeristen naar je land halen", "Belastingen voor bedrijven verlagen", "Vrijhandel met meer landen uitbreiden"],
+        options: ["Productie terughalen naar eigen regio", "Productie verplaatsen naar lagelonenlanden", "Productie uitbesteden aan een ander bedrijf", "Vrijhandel met meer landen uitbreiden"],
         answer: 0,
-        wrongHints: [null, "Geen toerisme.", "Niet belasting.", "Tegendeel — minder vrijhandel."],
+        wrongHints: [null, "Dat heet offshoring. Wat betekent 're-' in reshoring?", "Uitbesteden heet outsourcing. Waar gaat de productie bij reshoring naartoe?", "Reshoring gaat over wáár je produceert, niet over handelsverdragen."],
         uitlegPad: {
           stappen: [{ titel: "Re- = terug", tekst: "Reshoring = productie terughalen die eerder naar lage-loon-landen ging (China, India)." }],
           woorden: [{ woord: "reshoring", uitleg: "Productie terughalen naar eigen land/continent. Tegenovergestelde van offshoring." }],
@@ -274,7 +274,7 @@ const steps = [
         q: "Welk land gebruikt de **euro NIET**?",
         options: ["Polen", "Frankrijk", "Spanje", "Duitsland"],
         answer: 0,
-        wrongHints: [null, "In Frankrijk betaal je al sinds 2002 met de euro.", "In Spanje betaal je al sinds 2002 met de euro.", "Wel — grootste eurozone-economie."],
+        wrongHints: [null, "In Frankrijk betaal je al sinds 2002 met de euro.", "In Spanje betaal je al sinds 2002 met de euro.", "Duitsland betaalt sinds 2002 met de euro; de ECB zit zelfs in Frankfurt."],
         uitlegPad: {
           stappen: [{ titel: "Polen = złoty", tekst: "Polen is EU-lid maar gebruikt eigen valuta (złoty). Geen euro." }],
           woorden: [{ woord: "eurozone", uitleg: "21 EU-landen die euro hebben (sinds 2026 ook Bulgarije). Subset EU." }],
@@ -288,7 +288,7 @@ const steps = [
         q: "Wat zijn de **4 vrijheden** EU?",
         options: ["Goederen, personen, diensten, kapitaal", "Handel, landbouw, visserij, energie", "Vrede, veiligheid, welvaart, democratie", "Meningsuiting, religie, pers, vereniging"],
         answer: 0,
-        wrongHints: [null, "Dat zijn onderwerpen waar de EU beleid op maakt, geen vrijheden. Wat mag er vrij over de grens?", "Dat zijn doelen en waarden van de EU. Bij de vier vrijheden gaat het om economie.", "Mensenrechten — andere context."],
+        wrongHints: [null, "Dat zijn onderwerpen waar de EU beleid op maakt, geen vrijheden. Wat mag er vrij over de grens?", "Dat zijn doelen en waarden van de EU. Bij de vier vrijheden gaat het om economie.", "Dat zijn grondrechten van burgers. De vier vrijheden gaan over wat er vrij over de grens mag."],
         uitlegPad: {
           stappen: [{ titel: "4 = G-P-D-K", tekst: "Goederen, Personen, Diensten, Kapitaal — vrij verkeer binnen EU." }],
           woorden: [{ woord: "4 vrijheden", uitleg: "Kern van EU-binnenmarkt sinds 1993." }],
@@ -302,7 +302,7 @@ const steps = [
         q: "Wat is de **Europese Commissie**?",
         options: ["Dagelijks bestuur van de EU, doet wetsvoorstellen", "Het parlement dat door burgers gekozen wordt", "Het hof dat rechtspreekt over EU-wetten", "De centrale bank die over de euro en de rente gaat"],
         answer: 0,
-        wrongHints: [null, "Parlement is iets anders.", "Dat is het Hof van Justitie.", "Dat is de ECB (Europese Centrale Bank)."],
+        wrongHints: [null, "Dat is het Europees Parlement, dat over wetten stemt. Wie bedenkt die wetten eerst?", "Dat is het Hof van Justitie.", "Dat is de ECB (Europese Centrale Bank)."],
         uitlegPad: {
           stappen: [{ titel: "Commissie = regering", tekst: "Europese Commissie = uitvoerende macht EU. Maakt wetsvoorstellen + voert uit." }],
           woorden: [{ woord: "Europese Commissie", uitleg: "EU-regering, 27 commissarissen (1 per land). Voorzitter: Ursula von der Leyen (2024)." }],
@@ -314,9 +314,9 @@ const steps = [
       },
       {
         q: "Wat was **Brexit**?",
-        options: ["UK verliet de EU", "UK trad toe tot de EU", "Een nieuw land kwam bij de EU", "Een nieuw handelsverdrag"],
+        options: ["UK verliet de EU", "UK trad toe tot de EU", "UK stopte met de euro", "Schotland verliet de UK"],
         answer: 0,
-        wrongHints: [null, "Tegendeel.", "Niet nieuw land.", "Geen verdrag — vertrek."],
+        wrongHints: [null, "De UK was al sinds 1973 lid. Wat betekent 'exit'?", "De UK heeft nooit met de euro betaald. Waaruit stapte het land dan?", "Schotland stemde in 2014 juist om bij de UK te blijven. Over welk vertrek ging Brexit?"],
         uitlegPad: {
           stappen: [{ titel: "Britain + Exit", tekst: "Brexit = Britain Exit. UK verliet officieel EU op 31 januari 2020." }],
           woorden: [{ woord: "Brexit", uitleg: "Vertrek UK uit EU. Referendum 2016 → exit 2020." }],
