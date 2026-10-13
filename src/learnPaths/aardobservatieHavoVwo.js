@@ -73,9 +73,9 @@ const steps = [
       },
       {
         q: "Wat veroorzaakte de **2004 Sumatra-tsunami**?",
-        options: ["Een onderzeese aardbeving", "Uitbarsting van een vulkaan", "Stormvloed door een cycloon", "Aardverschuiving langs de kust"],
+        options: ["Een onderzeese aardbeving", "Een meteorietinslag in zee", "Een ingestort vulkaaneiland", "Een onderzeese aardverschuiving"],
         answer: 0,
-        wrongHints: [null, "Bij Sumatra was in december 2004 geen grote vulkaan actief. Wat kan er nog meer gebeuren langs een subductiezone?", "Een stormvloed duwt water door harde wind de kust op, maar het weer was die dag rustig. Wat bracht zóveel water in beweging?", "Een aardverschuiving geeft een golf in de buurt. Kan die de hele Indische Oceaan oversteken tot in Afrika?"],
+        wrongHints: [null, "Een meteorietinslag kan een tsunami geven, maar die van 2004 kwam niet uit de ruimte. Wat gebeurde er op de plaatgrens bij Sumatra?", "Zo ontstond de tsunami van Krakatau in 1883. In 2004 stortte er bij Sumatra geen vulkaan in. Wat gebeurde er toen wel?", "Een aardverschuiving onder water geeft vooral een golf in de buurt. Hoe kon deze golf dan de hele Indische Oceaan oversteken?"],
         uitlegPad: {
           stappen: [{ titel: "Megathrust-aardbeving", tekst: "**26 dec 2004**: M9,1 aardbeving voor kust Sumatra → zeebodem enkele meters omhoog → tsunami → 230.000 doden in 14 landen. Subductie-grens Indische plaat onder Eurazische. Een van de dodelijkste natuurrampen van de 21e eeuw." }],
           theorie: "Vergelijkbare gebeurtenissen: Chili 1960 (M9,5, sterkste ooit gemeten), Japan 2011 (M9,0 + Fukushima), Alaska 1964.",
@@ -115,9 +115,9 @@ const steps = [
       },
       {
         q: "Wanneer + waar was de **Watersnoodramp** die Deltawerken triggerde?",
-        options: ["1953 Zeeland","1995 Limburg","1916 Zuiderzee","2021 Limburg"],
+        options: ["1953 Zeeland", "1995 Limburg", "1916 Zuiderzee", "1953 Waddenkust"],
         answer: 0,
-        wrongHints: [null, "In 1995 traden de rivieren buiten hun oevers. Werden daarna dammen in de zeearmen gebouwd?", "De ramp van 1916 leidde tot de Afsluitdijk. Waar in Nederland liggen de Deltawerken?", "In 2021 overstroomde de Geul in Limburg, maar toen waren de Deltawerken al lang af. Wanneer zijn ze begonnen?"],
+        wrongHints: [null, "In 1995 traden de rivieren buiten hun oevers. Werden daarna dammen in de zeearmen gebouwd?", "De ramp van 1916 leidde tot de Afsluitdijk. Waar in Nederland liggen de Deltawerken?", "De Afsluitdijk en de Waddenkust liggen in het noorden. Waar kwam het water in 1953 binnen?"],
         uitlegPad: {
           stappen: [{ titel: "1 feb 1953", tekst: "**Watersnoodramp 1 feb 1953**: storm + springtij → dijken Zeeland + Z-Holland breken → 1836 doden + 200.000 dieren + 47.000 huizen weg. Politieke schok → **Deltaplan** + Deltawerken-uitvoering 1958-1997." }],
           theorie: "Andere overstromings-rampen: 1916 Zuiderzee (aanleiding Afsluitdijk), 1995 Maas/Rijn/Waal (~250.000 geëvacueerd), 2021 Limburg-watersnood (relatief lichte schade).",
@@ -187,9 +187,9 @@ const steps = [
       },
       {
         q: "**NDVI** meet:",
-        options: ["Vegetatie-gezondheid", "Kracht van aardbevingen", "Temperatuur van zeewater", "Bevolkingsdichtheid"],
+        options: ["Hoe gezond en groen planten zijn", "Hoogte van bomen en struiken", "Vochtgehalte van de bodem", "Aantal plantensoorten in een gebied"],
         answer: 0,
-        wrongHints: [null, "Bevingen meet je met seismometers in de grond. Wat kan een satelliet met rood en nabij-infrarood licht zien?", "Zeetemperatuur meet je met warmtestraling. NDVI vergelijkt rood en nabij-infrarood licht: wat weerkaatst dat sterk?", "Mensen tel je niet met kleuren licht. Welk oppervlak weerkaatst veel nabij-infrarood?"],
+        wrongHints: [null, "Hoogte meet je met laserpulsen (lidar). NDVI vergelijkt alleen rood en nabij-infrarood licht: wat verraadt die verhouding?", "Bodemvocht meet je vooral met radar. Wat weerkaatst juist sterk nabij-infrarood licht en slokt rood licht op?", "Van honderden kilometers hoog zie je geen losse plantensoorten. Wat zegt de kleur van het weerkaatste licht wél?"],
         uitlegPad: {
           stappen: [{ titel: "Vegetation Index", tekst: "**NDVI** (Normalized Difference Vegetation Index) = (NIR − Rood) / (NIR + Rood). Gezonde planten reflecteren veel infrarood + absorberen rood → hoge NDVI (0,4-0,9). Bruin/dood → laag. Gebruikt voor: oogst-monitoring, droogte-detectie, ontbossings-tracking." }],
           niveaus: { basis: "Vegetatie.", simpeler: "NDVI = plant-gezond", nogSimpeler: "Planten" },
@@ -197,9 +197,9 @@ const steps = [
       },
       {
         q: "Wat is **OpenStreetMap**?",
-        options: ["Gratis kaart, gemaakt door vrijwilligers", "Kaartdienst die eigendom is van Google", "Verzameling satellietfoto's van de aarde", "Betaalde kaartdienst voor navigatie"],
+        options: ["Gratis kaart, gemaakt door vrijwilligers", "Gratis kaartdienst, eigendom van Google", "Open archief van NASA-satellietfoto's", "Gratis kaart, gemaakt door het Kadaster"],
         answer: 0,
-        wrongHints: [null, "Google Maps is van Google. Wat zegt het woord 'open' over wie OpenStreetMap maakt?", "Het is een kaart met straten en gebouwen, geen fotoalbum. Wie tekent die straten?", "Wat betekent 'open' bij open data: moet je dan betalen?"],
+        wrongHints: [null, "Google Maps is gratis te gebruiken, maar Google bezit de kaart. Wie tekent en bezit OpenStreetMap?", "NASA deelt wel satellietbeelden, maar OSM is een getekende kaart met straten en paden. Wie tekent die?", "Het Kadaster maakt officiële kaarten voor de overheid. Wie voegt bij OSM de straten, paden en gebouwen toe?"],
         uitlegPad: {
           stappen: [{ titel: "OSM = Wikipedia van kaarten", tekst: "**OpenStreetMap** (OSM) = wereld-wijde kaart gebouwd door vrijwilligers. Iedereen kan toevoegen/corrigeren. Gratis te gebruiken (open licentie). NL is volledig + zeer gedetailleerd. Gebruik: GPS-apps (Maps.me, OsmAnd), ramp-respons, planning." }],
           theorie: "Bij rampen: Humanitarian OSM Team mobiliseert vrijwilligers wereldwijd om gebied snel te karteren na aardbeving/tsunami, voor hulpverleners.",
@@ -238,9 +238,9 @@ const steps = [
       },
       {
         q: "Welke is een **nature-based solution**?",
-        options: ["Mangrovebossen planten langs de kust", "Hoge betonnen dijk langs de kust bouwen", "Diepe pompsystemen die het land droog houden", "Stormvloedkering in de monding van een rivier"],
+        options: ["Mangrovebossen planten langs de kust", "Hoge betonnen dijk langs de kust bouwen", "Kunstmatig rif van betonblokken aanleggen", "Stormvloedkering in de monding van een rivier"],
         answer: 0,
-        wrongHints: [null, "Beton is harde techniek — wat zou de natúúr zelf kunnen doen tegen golven?", "Pompen zijn machines — 'nature-based' betekent: de natuur doet het werk. Welke optie past?", "Indrukwekkende techniek, maar door mensen gebouwd — welke oplossing groeit vanzelf?"],
+        wrongHints: [null, "Een dijk houdt golven tegen, maar is door mensen van beton gebouwd. Welke kustverdediging groeit en herstelt zichzelf?", "Een rif dempt golven, maar dit is gestort beton. Bij welke oplossing doen levende planten of dieren het werk?", "Een stormvloedkering is grijze, technische bescherming. Wat is het verschil met groene bescherming?"],
         uitlegPad: {
           stappen: [{ titel: "Natuur helpt zelf", tekst: "**Nature-based solutions** = oplossingen die natuur inschakelen: mangroves (golven dempen), wadlanden (bufferen vloed), bomen (hitte verminderen), meanders herstellen. Vaak goedkoper + bio-divers + duurzaam dan beton-bouw." }],
           theorie: "Voorbeeld: Vietnam plant mangroves langs kust — kost veel minder dan zee-wering bouwen + biedt ook visserij.",
@@ -249,9 +249,9 @@ const steps = [
       },
       {
         q: "Iran en Japan worden allebei door M7-bevingen getroffen. Waarom verschilt **dodental** enorm?",
-        options: ["Kwetsbaarheid en bouwvoorschriften", "Japan ligt verder van een plaatgrens", "Iran is dichter bevolkt dan Japan", "Iran krijgt vaker zware bevingen"],
+        options: ["Kwetsbaarheid en bouwvoorschriften", "Japan heeft een beter tsunami-alarm", "In Iran liggen de haarden dieper", "Iran krijgt vaker zware bevingen"],
         answer: 0,
-        wrongHints: [null, "Japan ligt juist pal op meerdere plaatgrenzen. Kan afstand het verschil dan verklaren?", "Japan heeft zo'n 330 inwoners per km², Iran ruim 50. Wie woont er dichter op elkaar?", "Japan krijgt juist meer zware bevingen per jaar. Waarom vallen daar toch minder doden?"],
+        wrongHints: [null, "Een tsunami-alarm helpt aan de kust, maar de zware bevingen in Iran (zoals in Bam, 2003) waren landinwaarts. Wat ging daar mis?", "Ondiepe bevingen doen juist de meeste schade, en in Iran liggen de haarden vaak ondiep. Waarom vallen er dan toch meer doden?", "Japan krijgt juist meer zware bevingen per jaar. Waarom vallen daar toch minder doden?"],
         uitlegPad: {
           stappen: [{ titel: "Bouwvoorschriften beslissen", tekst: "**Japan**: strikte aardbevings-bestendige bouw + early-warning + oefeningen → weinig doden bij M7. **Iran**: oudere lemen huizen + corruptie bij vergunningen + weinig voorbereiding → tienduizenden doden bij M7. Zelfde fysieke kracht, **enorm verschil in kwetsbaarheid**." }],
           theorie: "Toets-patroon: 'leg verschil in uitkomst uit ondanks gelijke magnitude'. Bouwvoorschriften + economie + cultuur.",
@@ -260,9 +260,9 @@ const steps = [
       },
       {
         q: "Wat is **klimaatmigratie**?",
-        options: ["Mensen verhuizen door klimaatgevolgen", "Vogels die elk seizoen wegtrekken", "Toeristen die naar warme landen reizen", "Mensen die voor werk naar de stad trekken"],
+        options: ["Mensen verhuizen door klimaatgevolgen", "Klimaatzones die naar de polen opschuiven", "Ouderen die naar zonnige landen verhuizen", "Mensen die voor werk naar de stad trekken"],
         answer: 0,
-        wrongHints: [null, "In de aardrijkskunde gaat migratie over mensen. Om wie gaat het hier?", "Toeristen komen weer terug. Verhuizen zij echt?", "Werk is een bekende pull-factor. Wat is bij klimaatmigratie de reden om te vertrekken?"],
+        wrongHints: [null, "Klimaatzones schuiven inderdaad op, maar in de aardrijkskunde gaat migratie over mensen. Wie verhuist er?", "Zon is hier een pull-factor waar mensen vrijwillig voor kiezen. Wat dwingt mensen bij klimaatmigratie om te vertrekken?", "Werk is een bekende pull-factor. Wat is bij klimaatmigratie de reden om te vertrekken?"],
         uitlegPad: {
           stappen: [{ titel: "Vluchten voor klimaat", tekst: "**Klimaatmigratie** = mensen verlaten woonplaats door klimaat-impact: zeespiegelstijging (Pacific-eilanden), droogte (Sahel), bosbranden, extreme hitte. Schatting 2050: 100-300 miljoen klimaatmigranten. **Niet** formeel beschermd als 'vluchteling' onder het Vluchtelingenverdrag — juridisch grijs gebied." }],
           theorie: "Voorbeelden: Tuvalu-bewoners naar Nieuw-Zeeland en Australië (Australië biedt sinds het verdrag van 2023 als eerste een klimaatvisum). Sahel-bewoners naar Sahel-steden of Europa.",
@@ -290,9 +290,9 @@ const steps = [
       },
       {
         q: "Wat is een **Day Zero**-scenario?",
-        options: ["Dag dat een stad zonder kraanwater komt", "Dag waarop de voedselvoorraad op is", "Dag waarop de stroom in een stad uitvalt", "Dag waarop een stad door zeewater overstroomt"],
+        options: ["Dag dat een stad zonder kraanwater komt", "Dag dat de waterrekening onbetaalbaar wordt", "Dag dat de rivier buiten haar oevers treedt", "Dag dat zeewater het grondwater verzilt"],
         answer: 0,
-        wrongHints: [null, "Kaapstad telde in 2018 af naar een dag dat iets op zou raken, maar dat was geen eten. Wat dreigde er dan op te raken?", "Een stroomstoring komt plotseling. Day Zero zag Kaapstad maanden aankomen. Wat raakte daar op?", "Een overstroming is te veel water. Day Zero gaat over het omgekeerde. Wat dreigde er in Kaapstad?"],
+        wrongHints: [null, "Een hoge waterrekening speelt in veel steden. Wat maakte Day Zero in Kaapstad zo bijzonder?", "Een overstroming is te véél water. Waar had Kaapstad in 2018 last van?", "Verzilting speelt in kustgebieden, ook in Nederland. Maar wat dreigde er in Kaapstad op Day Zero?"],
         uitlegPad: {
           stappen: [{ titel: "Water op", tekst: "**Kaapstad 2018**: na 3 jaar droogte dreigden de stuwmeren van de stad leeg te raken op een 'Day Zero' → 4 mln mensen zonder kraanwater. Met rantsoenering (50 L per dag per persoon) net vermeden. Toekomst: meer steden risico (Mexico City, Lima)." }],
           theorie: "Toets-actueel: klimaatverandering verschuift neerslag-patronen → meer steden risico op water-tekort.",

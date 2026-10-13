@@ -65,9 +65,9 @@ const steps = [
     checks: [
       {
         q: "Hoeveel mensen op aarde **nu** (2024)?",
-        options: ["~8 miljard", "~1 miljard", "~80 miljard", "~100 miljoen"],
+        options: ["~8 miljard", "~6 miljard", "~10 miljard", "~4 miljard"],
         answer: 0,
-        wrongHints: [null, "Rond 1800 waren er ongeveer zoveel mensen. Is de wereldbevolking sindsdien gegroeid?", "Waar zou het voedsel voor zoveel mensen vandaan moeten komen? Hoe groot is de wereldbevolking echt?", "Nederland heeft al bijna 18 miljoen inwoners. Kan de hele wereld er dan maar 100 miljoen hebben?"],
+        wrongHints: [null, "Rond het jaar 2000 waren er zoveel mensen. Is de wereld sindsdien nog gegroeid?", "Zoveel mensen verwacht de VN pas rond 2060. Zijn we daar al?", "Zoveel mensen waren er rond 1975. Hoeveel zijn er sindsdien bijgekomen?"],
       },
       {
         q: "Welk **continent** heeft de meeste mensen?",
@@ -83,15 +83,15 @@ const steps = [
       },
       {
         q: "Wat is **vergrijzing**?",
-        options: ["Bevolking wordt gemiddeld ouder", "Bevolking wordt steeds kleiner", "Bevolking trekt naar het platteland", "Bevolking wordt gemiddeld jonger"],
+        options: ["Bevolking wordt gemiddeld ouder", "Bevolking wordt steeds kleiner", "Jongeren trekken weg naar de stad", "Er worden minder kinderen geboren"],
         answer: 0,
-        wrongHints: [null, "Krimpen is iets anders. Waar doet het woord 'grijs' je aan denken?", "Verhuizen is migratie. Waar doet het woord 'grijs' je aan denken?", "Wie krijgt er grijze haren: jonge of oude mensen?"],
+        wrongHints: [null, "Krimpen is iets anders: dan neemt het aantal inwoners af. Wat verandert er bij vergrijzing?", "Het wegtrekken van jongeren is selectieve migratie. Wat verandert er bij vergrijzing aan de hele bevolking?", "Minder geboorten heet ontgroening. Dat is een oorzaak, maar wat is vergrijzing zelf?"],
       },
       {
         q: "**Bevolkingsgroei** wordt gemeten via?",
-        options: ["Geboorten − sterften + (immigratie − emigratie)", "Geboorten − sterften (zonder migratie)", "Geboorten + sterften + immigratie + emigratie", "Immigratie − emigratie (zonder geboorten)"],
+        options: ["Geboorten − sterften + (immigratie − emigratie)", "Geboorten − sterften + (emigratie − immigratie)", "Geboorten + sterften + (immigratie − emigratie)", "Geboorten − sterften, zonder de migratie"],
         answer: 0,
-        wrongHints: [null, "Dat is de natuurlijke groei. Tellen mensen die naar of uit het land verhuizen niet mee?", "Gaat de bevolking omhoog als er iemand sterft of vertrekt?", "Onvolledig — er worden ook mensen geboren en er sterven mensen."],
+        wrongHints: [null, "Draai het eens om: komen er mensen bij als ze uit het land vertrekken?", "Gaat de bevolking omhoog als er iemand sterft?", "Dat is de natuurlijke groei. Tellen mensen die naar of uit het land verhuizen niet mee?"],
       },
       {
         q: "Een **bevolkingspiramide** met smalle top + brede basis duidt op?",
@@ -149,15 +149,15 @@ const steps = [
       },
       {
         q: "**Verstedelijking** (urbanisatie) = ?",
-        options: ["Steeds meer mensen wonen in steden", "Steeds minder mensen wonen in steden", "Steeds meer mensen wonen op het platteland", "Steden en platteland blijven even groot"],
+        options: ["Steeds meer mensen wonen in steden", "Stadsmensen verhuizen naar de randgemeenten", "Steden bouwen steeds meer de hoogte in", "Steden en platteland blijven even groot"],
         answer: 0,
-        wrongHints: [null, "'Stedelijk' komt van stad. Worden steden dan kleiner of groter?", "Dat is de andere kant op. Van welk woord komt 'verstedelijking'?", "Er verandert juist veel. Welk woord zit er in 'verstedelijking'?"],
+        wrongHints: [null, "Van de stad naar de randgemeenten heet suburbanisatie. Waar gaat verstedelijking over?", "Hoogbouw zegt iets over de gebouwen. Waar gaat verstedelijking over?", "Wegtrekken naar het platteland heet counter-urbanisatie. Is dat wat verstedelijking betekent?"],
       },
       {
         q: "Een **krimpregio** in NL is een gebied waar?",
-        options: ["Bevolking afneemt", "Bevolking groeit", "Bevolking gelijk blijft", "Veel nieuwe wijken komen"],
+        options: ["Het aantal inwoners afneemt", "Het aantal banen afneemt", "Het aantal ouderen afneemt", "Het aantal gemeenten afneemt"],
         answer: 0,
-        wrongHints: [null, "Groeiende regio's liggen vaak rond grote steden. Wat zegt het woord 'krimp'?", "Als er niets verandert, waarom zou je het dan een krimpregio noemen?", "Nieuwe wijken bouw je waar mensen bij komen. Wat gebeurt er in een krimpregio?"],
+        wrongHints: [null, "In krimpregio's verdwijnen vaak ook banen, maar dat is een gevolg. Waar slaat 'krimp' op?", "In krimpregio's als Zuid-Limburg groeit juist het aandeel ouderen. Wat neemt er dan wel af?", "Gemeenten fuseren soms in krimpregio's, maar dat is een gevolg. Wat neemt er zelf af?"],
       },
     ],
   },
@@ -176,15 +176,15 @@ const steps = [
       },
       {
         q: "Wat is een **vluchteling**?",
-        options: ["Iemand die zijn land moet verlaten door oorlog of vervolging", "Iemand die een paar weken op vakantie gaat naar een ander land", "Iemand die naar een ander land verhuist voor beter betaald werk", "Iemand die een jaar in het buitenland gaat studeren"],
+        options: ["Iemand die zijn land moet verlaten door oorlog of vervolging", "Iemand die door oorlog binnen zijn eigen land moet vluchten", "Iemand die naar een ander land verhuist voor beter betaald werk", "Iemand die naar een ander land verhuist om bij familie te wonen"],
         answer: 0,
-        wrongHints: [null, "Een toerist gaat na de vakantie gewoon terug naar huis.", "Dat is een economische migrant: die kiest zelf om te vertrekken.", "Een student vertrekt vrijwillig en voor een tijdje."],
+        wrongHints: [null, "Wie binnen zijn eigen land vlucht, heet een ontheemde. Wat is dan het verschil met een vluchteling?", "Dat is een economische migrant: die kiest zelf om te vertrekken.", "Bij familie gaan wonen heet gezinshereniging; daar kies je zelf voor. Wat is het verschil met een vluchteling?"],
       },
       {
         q: "Wat is **interne migratie**?",
-        options: ["Binnen één land verhuizen", "Naar een ander land verhuizen", "Naar een ander continent verhuizen", "Voor vakantie op reis gaan"],
+        options: ["Binnen één land verhuizen", "Naar een ander land verhuizen", "In een ander land gaan werken", "Uit het buitenland hier komen"],
         answer: 0,
-        wrongHints: [null, "Verhuizen naar een ander land heet internationale migratie. Wat betekent 'intern'?", "Dat is nog verder weg. Wat betekent 'intern'?", "Reizen is niet verhuizen: je komt weer thuis."],
+        wrongHints: [null, "Dat is emigratie, of internationale migratie. Wat is dan het verschil met interne migratie?", "Over de grens gaan werken heet arbeidsmigratie. Wat is dan het verschil met interne migratie?", "Vanuit het buitenland komen heet immigratie. Wat is dan het verschil met interne migratie?"],
       },
       {
         q: "Wat is een **diaspora**?",
@@ -205,13 +205,13 @@ const steps = [
         q: "Wat is een **push-factor**?",
         options: ["Reden om weg te gaan", "Reden om aan te komen", "Reden om te blijven", "Reden om terug te keren"],
         answer: 0,
-        wrongHints: [null, "Wat een land aantrekkelijk maakt, trekt je aan: dat is pull. Wat doet een push met je?", "Push betekent duwen. Blijf je staan als je geduwd wordt?", "Terugkeren naar je geboorteland heet remigratie. Waar duwt een push-factor je vandaan?"],
+        wrongHints: [null, "Wat een land aantrekkelijk maakt, trekt je aan: dat is pull. Wat doet een push met je?", "Wat mensen in hun land houdt, zoals familie of een huis, noem je geen push-factor. Wat doet een push-factor dan?", "Terugkeren naar je geboorteland heet remigratie. Waar duwt een push-factor je vandaan?"],
       },
       {
         q: "Welke is een **pull-factor**?",
-        options: ["Goed werk en een veilig land", "Oorlog in je eigen land", "Hongersnood door misoogst", "Een overstroming of aardbeving"],
+        options: ["Veel werk in het nieuwe land", "Weinig werk in je eigen land", "Veel werk in je eigen land", "Weinig werk in het nieuwe land"],
         answer: 0,
-        wrongHints: [null, "Oorlog duwt mensen wég — dat is een push-factor.", "Honger duwt mensen wég — push-factor.", "Een ramp duwt mensen wég — push-factor."],
+        wrongHints: [null, "Weinig werk thuis duwt je weg: dat is een push-factor. Wat is het verschil met een pull-factor?", "Veel werk thuis is juist een reden om te blijven. Trekt dat je naar een ander land?", "Weinig werk in het nieuwe land is een drempel. Trekt dat mensen aan?"],
       },
       {
         q: "Wat is **brain drain**?",
@@ -236,7 +236,7 @@ const steps = [
     checks: [
       {
         q: "Wanneer kwamen de eerste **gastarbeiders**?",
-        options: ["1950-'60", "1900-'20", "1975-'85", "1990-'00"],
+        options: ["1955-'70", "1900-'20", "1975-'85", "1990-'00"],
         answer: 0,
         wrongHints: [null, "Rond 1900 vertrokken juist veel Nederlanders naar het buitenland. Wanneer was er na de Tweede Wereldoorlog een tekort aan arbeiders?", "Rond 1975 kwamen vooral Surinamers en de gezinnen van gastarbeiders. Wanneer kwamen de arbeiders zelf?", "Rond 1990 woonden de eerste gastarbeiders al lang in Nederland. Wanneer haalden fabrieken ze voor het eerst?"],
       },
@@ -248,9 +248,9 @@ const steps = [
       },
       {
         q: "Wat is een **AZC**?",
-        options: ["Asielzoekerscentrum", "Algemeen zorgcentrum", "Arbeidsmigrantencentrum", "Vertrekcentrum asielzoekers"],
+        options: ["Asielzoekerscentrum", "Algemeen zorgcentrum", "Arbeidsmigrantencentrum", "Aanmeldcentrum asielzoekers"],
         answer: 0,
-        wrongHints: [null, "Bij een zorgcentrum denk je aan ouderen of zieken. Voor wie is een AZC bedoeld?", "Arbeidsmigranten komen voor werk en regelen zelf hun woning. Wie wacht er in een AZC op een besluit?", "In een vertrekcentrum wonen mensen bij wie het besluit al 'nee' is. Waar wacht je óp dat besluit?"],
+        wrongHints: [null, "Bij een zorgcentrum denk je aan ouderen of zieken. Voor wie is een AZC bedoeld?", "Arbeidsmigranten komen voor werk en regelen zelf hun woning. Wie wacht er in een AZC op een besluit?", "Een aanmeldcentrum is de eerste stop en heet afgekort AC. Wat is een AZC dan?"],
       },
       {
         q: "Welke **nieuwe groep** kwam vanaf **2022** in grote aantallen naar Nederland?",
@@ -269,9 +269,9 @@ const steps = [
     checks: [
       {
         q: "Wereldbevolking nu?",
-        options: ["~8 miljard", "~1 miljard", "~80 miljard", "~10 miljoen"],
+        options: ["~8 miljard", "~7 miljard", "~10 miljard", "~5 miljard"],
         answer: 0,
-        wrongHints: [null, "Rond 1800 waren er ongeveer zoveel mensen. Is de bevolking sindsdien gegroeid?", "Waar zou het voedsel voor zoveel mensen vandaan moeten komen? Is dat getal realistisch?", "Alleen Nederland heeft al bijna 18 miljoen inwoners. Kan de hele wereld dan minder hebben?"],
+        wrongHints: [null, "Die grens ging rond 2011 over. Is de wereld daarna nog gegroeid?", "Zoveel mensen verwacht de VN pas rond 2060. Zijn we daar al?", "Zoveel mensen waren er rond 1987. Hoeveel zijn er sindsdien bijgekomen?"],
       },
       {
         q: "Wat is **bevolkingsdichtheid**?",
@@ -281,9 +281,9 @@ const steps = [
       },
       {
         q: "Welke is een **push-factor**?",
-        options: ["Oorlog in het land", "Een goede school", "Veiligheid op straat", "Genoeg werk in de buurt"],
+        options: ["Oorlog in je eigen land", "Vrede in het nieuwe land", "Vrede in je eigen land", "Oorlog in het nieuwe land"],
         answer: 0,
-        wrongHints: [null, "Een goede school trekt mensen aan — dat is een pull-factor.", "Veiligheid trekt aan — pull-factor.", "Werk trekt aan — pull-factor."],
+        wrongHints: [null, "Vrede in een ander land trekt je aan: dat is een pull-factor. Wat is het verschil met een push-factor?", "Vrede thuis is een reden om te blijven. Duwt dat je weg?", "Oorlog in het land waar je naartoe wilt, schrikt je af. Duwt dat je uit je eigen land?"],
       },
       {
         q: "Welk **land** heeft sinds 2023 de meeste mensen?",
@@ -307,13 +307,13 @@ const steps = [
         q: "**Push-factoren** zorgen ervoor dat mensen ___?",
         options: ["Weggaan uit hun land", "Naar een land komen", "In hun land blijven", "Terugkeren naar hun land"],
         answer: 0,
-        wrongHints: [null, "Wat je naar een land toe trekt, heet een pull-factor. Wat doet een push-factor?", "Push betekent duwen. Blijf je staan als je geduwd wordt?", "Terugkeren naar je geboorteland heet remigratie. Waar duwt een push-factor je vandaan?"],
+        wrongHints: [null, "Wat je naar een land toe trekt, heet een pull-factor. Wat doet een push-factor?", "Wat mensen in hun land houdt, zoals familie of een huis, noem je geen push-factor. Wat doet een push-factor dan?", "Terugkeren naar je geboorteland heet remigratie. Waar duwt een push-factor je vandaan?"],
       },
       {
         q: "Welke is een **pull-factor** voor migratie?",
-        options: ["Beter werk in nieuw land", "Oorlog in eigen land", "Armoede in eigen land", "Hongersnood in eigen land"],
+        options: ["Veiligheid in het nieuwe land", "Oorlog in je eigen land", "Veiligheid in je eigen land", "Gevaar onderweg naar het nieuwe land"],
         answer: 0,
-        wrongHints: [null, "Oorlog duwt mensen wég — push-factor.", "Armoede duwt mensen wég — push-factor.", "Honger duwt mensen wég — push-factor."],
+        wrongHints: [null, "Oorlog duwt mensen weg: dat is een push-factor. Wat is het verschil met een pull-factor?", "Veiligheid thuis is een reden om te blijven. Trekt dat je naar een ander land?", "Een gevaarlijke reis is een drempel onderweg. Trekt die mensen aan?"],
       },
       {
         q: "**Open vraag**: hoeveel **inwoners** heeft Nederland ongeveer (in miljoen)?",

@@ -113,9 +113,9 @@ const steps = [
       },
       {
         q: "Wat is een **constitutionele monarchie**?",
-        options: ["Koning heeft beperkte macht door grondwet","Koning en premier hebben evenveel macht","Koning wordt elke vier jaar gekozen","Koning mag de grondwet zelf aanpassen"],
+        options: ["Koning is gebonden aan de grondwet","Koning toetst wetten aan de grondwet","Koning wordt elke vier jaar gekozen","Koning mag de grondwet zelf aanpassen"],
         answer: 0,
-        wrongHints: [null, "Wie neemt in Nederland de politieke besluiten: de koning of de ministers?", "Verkiezingen voor het staatshoofd passen bij een republiek met een president.", "Staat de koning boven de grondwet, of moet hij zich eraan houden?"],
+        wrongHints: [null, "Toetsen aan de Grondwet doen regering en parlement. Heeft de koning zelf politieke macht?", "Verkiezingen voor het staatshoofd passen bij een republiek met een president.", "Een grondwetswijziging gaat via het parlement, in twee rondes. Kan de koning dat alleen?"],
         uitlegPad: {
           stappen: [{ titel: "Koning + grondwet samen", tekst: "Constitutioneel = 'volgens grondwet'. Monarchie = koningschap. Samen: koning bestaat WEL maar zijn macht is BEPERKT door grondwet. NL voorbeeld: Willem-Alexander is staatshoofd maar mag wetten niet weigeren." }],
           woorden: [{ woord: "constitutioneel", uitleg: "Volgens (grond)wet. Met regels en limieten." }, { woord: "monarchie", uitleg: "Staatsvorm met erfelijk staatshoofd (koning of koningin)." }],
@@ -391,9 +391,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **rechtsstaat**?",
-        options: ["Land waar iedereen zich aan dezelfde wetten moet houden","Land waar het volk via verkiezingen de regering kiest","Land waar de politie overal streng toezicht houdt","Land waar de regels uit een heilig boek komen"],
+        options: ["Land waar ook de overheid zich aan de wet moet houden","Land waar het volk via verkiezingen de regering kiest","Land waar de politie overal streng toezicht houdt","Land waar de regels uit een heilig boek komen"],
         answer: 0,
-        wrongHints: [null, "Dat is een democratie. Aan wat moet in een rechtsstaat ook de overheid zich houden?", "Dat lijkt meer op een politiestaat. Wie moet zich in een rechtsstaat aan de wet houden?", "Dat is theocratie."],
+        wrongHints: [null, "Dat is een democratie. Kan een land democratisch zijn en toch geen rechtsstaat?", "Dat lijkt meer op een politiestaat. Wie houdt daar de politie zelf in toom?", "Dat heet een theocratie. Waar komen in een rechtsstaat de regels vandaan, en voor wie gelden ze?"],
         uitlegPad: {
           stappen: [{ titel: "Wet boven persoon", tekst: "Rechtsstaat = land waar IEDEREEN — ook regering, koning, rijke mensen — zich aan dezelfde wetten moet houden. Onafhankelijke rechters beoordelen. Niemand staat boven wet. Tegenovergesteld: politiestaat (overheid heeft alle macht zonder regels)." }],
           woorden: [{ woord: "rechtsstaat", uitleg: "Staatsvorm waarin overheid + burgers gelijk onder de wet staan." }, { woord: "onafhankelijke rechters", uitleg: "Rechters die door geen politicus of overheid kunnen worden ontslagen of beïnvloed." }],
@@ -563,9 +563,9 @@ const steps = [
       },
       {
         q: "Welk gebouwencomplex is de vaste thuisbasis van de Tweede Kamer?",
-        options: ["Binnenhof, Den Haag", "Paleis op de Dam", "Vredespaleis", "Catshuis"],
+        options: ["Binnenhof", "Paleis op de Dam", "Vredespaleis", "Catshuis"],
         answer: 0,
-        wrongHints: [null, "Paleis op de Dam = koninklijk paleis Amsterdam.", "Vredespaleis = Internationaal Gerechtshof.", "Catshuis = ambtswoning premier."],
+        wrongHints: [null, "Het Paleis op de Dam is een paleis van de koning in Amsterdam. Vergadert de Kamer daar?", "In het Vredespaleis zit het Internationaal Gerechtshof. Is dat een parlement?", "Het Catshuis is de ambtswoning van de premier. Waar is het vaste huis van de Kamer?"],
         uitlegPad: {
           stappen: [{ titel: "Binnenhof — 800 jaar oud", tekst: "Tweede Kamer vergadert in Binnenhof, Den Haag. Eeuwenoud complex (ouder dan NL als land). Sinds 2021 door de renovatie tijdelijk in een ander gebouw (Bezuidenhoutseweg), nog jaren. Maar STAATSRECHTELIJK is Binnenhof de plek. Ridderzaal hier (waar de koning normaal de Troonrede uitspreekt op Prinsjesdag)." }],
           woorden: [{ woord: "Binnenhof", uitleg: "Historisch parlements- en regeringscomplex Den Haag." }, { woord: "Ridderzaal", uitleg: "Belangrijkste zaal Binnenhof. Troonrede Prinsjesdag." }, { woord: "Prinsjesdag", uitleg: "3e dinsdag september. Koning houdt Troonrede. Opening parlementair jaar." }],
@@ -594,7 +594,7 @@ const steps = [
       { q: "Wat doet de **Eerste Kamer**?", options: ["Aangenomen wetten van de Tweede Kamer controleren","Zelf nieuwe wetsvoorstellen bedenken en indienen","Wetsvoorstellen aanpassen met amendementen","De ministers en de premier na de verkiezingen benoemen"], answer: 0, wrongHints: [null,"Dat recht heeft de Eerste Kamer niet.","Mag de Eerste Kamer een wet veranderen, of alleen ja of nee zeggen?","Ministers worden na de formatie door de Koning benoemd."] },
       { q: "Hoeveel zetels heeft de **Tweede Kamer** in Nederland?", options: ["150","75","100","225"], answer: 0, wrongHints: [null,"75 zetels heeft de Eerste Kamer. Is de Tweede Kamer groter of kleiner?","Dat was het aantal vóór 1956. Is het sindsdien veranderd?","225 is het aantal zetels van Eerste en Tweede Kamer samen. Hoeveel heeft de Tweede Kamer alleen?"] },
       { q: "Wat is een **coalitie**?", options: ["Meerdere partijen die samen een kabinet vormen","Eén partij die alleen het land bestuurt","Een losse politieke partij met eigen leden","Partijen die tegen het kabinet ingaan"], answer: 0, wrongHints: [null,"Komt in NL vrijwel nooit voor — geen partij haalt alleen een meerderheid.","Is een coalitie één partij, of een samenwerking?","Partijen die tegen het kabinet ingaan, heten de oppositie."] },
-      { q: "**Trias politica** verdeelt macht in?", options: ["3","2","4","5"], answer: 0, wrongHints: [null,"Welke macht oordeelt over wie de wet overtreedt? Telt die ook mee?","Hoeveel machten noemde Montesquieu als je ze opsomt?","Wat betekent het Latijnse woord 'trias'?"] },
+      { q: "**Trias politica** verdeelt macht in?", options: ["3","2","4","5"], answer: 0, wrongHints: [null,"Welke macht oordeelt over wie de wet overtreedt? Telt die ook mee?","Hoeveel machten noemde Montesquieu als je ze opsomt?","Montesquieu splitste de macht om misbruik te voorkomen. Hoeveel machten noemde hij?"] },
       { q: "**Demonstreren** is in NL een grondrecht. Op basis van welk recht?", options: ["Recht op vergadering en betoging","Recht op vrijheid van onderwijs","Vrijheid van godsdienst en levensovertuiging","Recht op bescherming van privacy"], answer: 0, wrongHints: [null,"Vrijheid van onderwijs gaat over scholen oprichten. Gaat demonstreren daarover?","Je kunt over geloof demonstreren, maar welk recht beschermt het demonstreren zélf?","Privacy beschermt je persoonlijke leven. Beschermt het ook samen de straat op gaan?"] },
       { q: "Wie kiezen de **Tweede Kamer**?", options: ["Nederlandse burgers ≥18 jaar","Alle inwoners van Nederland ≥16 jaar","De leden van de Provinciale Staten","De gemeenteraden van alle gemeenten"], answer: 0, wrongHints: [null,"In sommige landen stem je vanaf 16. Hoe zit dat in Nederland, en mag elke inwoner stemmen?","Provinciale Staten kiezen Eerste Kamer.","Gemeenteraden kiezen geen Kamerleden."] },
       { q: "**Open vraag**: hoeveel jaar zit een Tweede Kamer-periode normaal? (typ getal)", kind: "open", acceptedAnswers: ["4"], numericTolerance: 0, explanation: "Standaard zittingstermijn Tweede Kamer = 4 jaar." },

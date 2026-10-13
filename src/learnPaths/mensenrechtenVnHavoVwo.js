@@ -48,10 +48,10 @@ const steps = [
       {
         q: "**EVRM** (Europees Verdrag) wordt afgedwongen door:",
         options: [
-          "Europees Hof voor de Rechten van de Mens",
-          "VN-Mensenrechtenraad in Genève",
-          "Internationaal Strafhof in Den Haag",
-          "Hof van Justitie van de EU in Luxemburg"
+          "Het Europees Hof in Straatsburg",
+          "De VN-Mensenrechtenraad in Genève",
+          "Het Internationaal Strafhof in Den Haag",
+          "Het EU-Hof van Justitie in Luxemburg"
         ],
         answer: 0,
         wrongHints: [null, "De Mensenrechtenraad is een VN-orgaan zonder rechters. Het EVRM is Europees.", "Het Strafhof berecht personen voor oorlogsmisdaden. Wie toetst of een staat zich aan het EVRM houdt?", "Dat hof hoort bij de EU, terwijl het EVRM bij de Raad van Europa hoort."],
@@ -78,7 +78,7 @@ const steps = [
       {
         q: "Welke is GEEN UDHR-recht?",
         options: [
-          "Recht op gratis internet",
+          "Recht op een schoon milieu",
           "Recht op leven",
           "Vrijheid van meningsuiting",
           "Recht op onderwijs"
@@ -170,11 +170,11 @@ const steps = [
         options: [
           "Berecht personen voor oorlogsmisdaden",
           "Beslecht conflicten tussen staten",
-          "Maakt verdragen voor de VN-lidstaten",
+          "Berecht staten die mensenrechten schenden",
           "Stuurt vredesmissies naar conflictgebieden"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is ICJ.", "Niet — verdragen sluiten staten zelf, vaak via de Algemene Vergadering.", "Dat doet de Veiligheidsraad met blauwhelmen. Wat doet een 'court'?"],
+        wrongHints: [null, "Ruzies tussen staten gaan naar het Internationaal Gerechtshof (ICJ). Wie staat bij het ICC terecht?", "Staten worden aangesproken door bijvoorbeeld het Europees Hof in Straatsburg. Wie staat bij het ICC terecht?", "Dat doet de Veiligheidsraad met blauwhelmen. Is het ICC een leger of een rechtbank?"],
         uitlegPad: {
           stappen: [{ titel: "Permanente strafrechtbank", tekst: "Sinds 2002 (Rome-Statuut 1998). Tussen Neurenberg-processen (ad-hoc) + ICTY/ICTR (per conflict) → behoefte permanente rechtbank. ICC handelt VOOR (preventie via afschrikking) + NA (berechting). 124 leden, maar grootmachten ontbreken." }],
           niveaus: { basis: "Berecht individuen.", simpeler: "ICC = strafhof persoonlijk.", nogSimpeler: "ICC" },
@@ -183,13 +183,13 @@ const steps = [
       {
         q: "**Neurenberg-principe**:",
         options: [
-          "'Orders volgen' geen verdediging voor oorlogsmisdaden",
-          "Soldaten zijn niet strafbaar als ze orders volgden",
+          "Bevelen volgen is geen excuus voor oorlogsmisdaden",
+          "Alleen leiders zijn strafbaar, geen gewone soldaten",
           "Staten worden gestraft, geen individuele personen",
-          "Wie een oorlog wint, mag de verliezers berechten"
+          "Oorlogsmisdaden verjaren na twintig jaar"
         ],
         answer: 0,
-        wrongHints: [null, "Wat gebeurde er in Neurenberg met Duitsers die zich op bevelen beriepen?", "In Neurenberg stonden personen terecht. Wat zegt dat?", "Critici noemden Neurenberg 'overwinnaarsrecht', maar is dat het principe dat eruit voortkwam?"],
+        wrongHints: [null, "In Neurenberg stonden vooral leiders terecht. Maar gold het principe niet ook voor lagere uitvoerders?", "In Neurenberg stonden personen terecht. Wat zegt dat?", "Oorlogsmisdaden verjaren juist niet. Welk principe kwam uit de processen in Neurenberg?"],
         uitlegPad: {
           stappen: [
             { titel: "Individuele verantwoordelijkheid", tekst: "Vóór WO2: militairen volgden orders, niet persoonlijk verantwoordelijk. Neurenberg 1945-46 verwierp dit. Eichmann ('ich war nur ein Rädchen') opnieuw gepoogd 1961 — verworpen. Vandaag basis voor ICC. Plicht om duidelijk misdadige bevelen NIET uit te voeren." },
@@ -232,13 +232,13 @@ const steps = [
       {
         q: "**Universele jurisdictie**:",
         options: [
-          "Sommige misdrijven zo erg dat elke staat ze mag berechten",
+          "Elke staat mag de zwaarste misdrijven berechten",
           "Een staat berecht misdrijven op eigen grondgebied",
-          "Mensenrechten gelden overal, dus overal hetzelfde strafrecht",
+          "Elk land past hetzelfde strafrecht toe",
           "De Veiligheidsraad beslist welk land iemand berecht"
         ],
         answer: 0,
-        wrongHints: [null, "Dat is het territorialiteitsbeginsel. Wat is er dan 'universeel' aan?", "Dat is de universaliteit van mensenrechten. Jurisdictie gaat over wie mag rechtspreken.", "Moeten landen eerst toestemming van de Veiligheidsraad vragen?"],
+        wrongHints: [null, "Dat is het territorialiteitsbeginsel. Wat is er dan 'universeel' aan?", "Landen houden hun eigen strafrecht. Jurisdictie gaat over wie mag rechtspreken.", "Moeten landen eerst toestemming van de Veiligheidsraad vragen?"],
         uitlegPad: {
           stappen: [
             { titel: "Voor genocide + marteling", tekst: "Concept: bepaalde misdrijven (jus cogens) zo ernstig dat ALLE staten ze mogen berechten ongeacht plek of slachtoffer. Voorbeeld: Pinochet-arrestatie Spanje 1998 voor Chileense martelingen. NL berecht Syrische ex-officieren in Den Haag. Mogelijk preventief effect: nergens veilig." },
@@ -259,12 +259,12 @@ const steps = [
         q: "**Oeigoeren** (China-Xinjiang) volgens westerse bronnen:",
         options: [
           "Meer dan 1 miljoen vastgehouden in kampen",
-          "Vrijwillige beroepsopleiding tegen extremisme",
-          "Ongeveer 10.000 vastgehouden in gevangenissen",
-          "Vooral economische achterstand, geen kampen"
+          "Ongeveer 100.000 vastgehouden in kampen",
+          "Ongeveer 10 miljoen vastgehouden in kampen",
+          "Vrijwillige beroepsopleiding tegen extremisme"
         ],
         answer: 0,
-        wrongHints: [null, "Dat is de uitleg van China zelf. Wat zeggen westerse bronnen?", "Gelekte documenten en satellietfoto's wijzen op een veel grotere schaal.", "Gelekte documenten en satellietfoto's tonen meer dan alleen armoede."],
+        wrongHints: [null, "Er wonen ongeveer 12 miljoen Oeigoeren in Xinjiang. Zou bijna iedereen vastzitten?", "Gelekte documenten en satellietfoto's wijzen op een veel grotere schaal.", "Dat is de uitleg van China zelf. Wat zeggen westerse bronnen?"],
         uitlegPad: {
           stappen: [
             { titel: "Bekend sinds 2018", tekst: "Eerst bestreden, maar gelekte documenten 2019 + satellietfoto's tonen massale kampen. China noemt 'beroepsopleiding'. Westerse landen + ngo's spreken van massa-detentie, dwang-arbeid (katoen!), dwangsterilisatie. VS + UK + Canada noemen genocide. Reputatie China geschaad." },
@@ -341,12 +341,12 @@ const steps = [
         q: "**Art. 1 Nederlandse Grondwet** verbiedt:",
         options: [
           "Discriminatie op welke grond dan ook",
-          "Discriminatie op grond van ras en geloof",
+          "Grote verschillen tussen arm en rijk",
           "Het beledigen van de Koning en de regering",
           "Haatzaaien en bedreigen via internet"
         ],
         answer: 0,
-        wrongHints: [null, "Staan er in artikel 1 maar twee gronden?", "Dat regelt het Wetboek van Strafrecht, niet artikel 1.", "Dat regelt het strafrecht. Waar gaat artikel 1 over?"],
+        wrongHints: [null, "Artikel 1 eist gelijke behandeling, niet gelijke inkomens. Wat verbiedt het dan?", "Dat regelt het Wetboek van Strafrecht, niet artikel 1.", "Dat regelt het strafrecht. Waar gaat artikel 1 over?"],
         uitlegPad: {
           stappen: [
             { titel: "Brede tekst", tekst: "Letterlijk: '...of op welke grond dan ook'. Dus naast genoemde categorieën (geslacht, ras, religie, etc.) ook open voor toekomstige interpretatie. Beschermt onder andere ook LGBTQ+ (formeel pas 2023 expliciet toegevoegd via grondwetwijziging: 'seksuele gerichtheid + handicap')." },

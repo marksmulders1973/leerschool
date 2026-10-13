@@ -35,7 +35,7 @@ const steps = [
     checks: [
       {
         q: "Wat is **mediawijsheid**?",
-        options: ["Kritisch omgaan met alle media", "Zo min mogelijk media gebruiken", "Snel en handig met apps werken", "Vooral nieuws van bekende kranten lezen"],
+        options: ["Bewust en kritisch omgaan met media", "Je schermtijd zo laag mogelijk houden", "Handig zijn met apps en computers", "Vooral nieuws van bekende kranten lezen"],
         answer: 0,
         wrongHints: [null, "Minder kijken kan verstandig zijn, maar ben je dan ook wijs met wat je wél ziet?", "Handig zijn met apps is een digitale vaardigheid. Snap je daardoor ook wat je ziet?", "Ook bekende kranten maken fouten. Is één soort bron genoeg?"],
         uitlegPad: {
@@ -75,7 +75,7 @@ const steps = [
       },
       {
         q: "Welke is **geen** media?",
-        options: ["Een glas water", "Een krant", "De app TikTok", "De radio"],
+        options: ["Een rekenmachine", "Een krant", "De app TikTok", "De radio"],
         answer: 0,
         wrongHints: [null, "Drukmedium — letters op papier.", "Sociale-media-app met video's.", "Audiomedium — uitzendingen via lucht."],
       },
@@ -117,9 +117,9 @@ const steps = [
       },
       {
         q: "Hoe **check** je een nieuwsbericht?",
-        options: ["Meerdere bronnen vergelijken", "Kijken of er een foto bij staat", "Kijken of de kop betrouwbaar klinkt", "Kijken of de tekst foutloos is"],
+        options: ["Kijken of andere bronnen het ook melden", "Kijken of er een foto bij staat", "Kijken of de site er professioneel uitziet", "Kijken of het bericht vaak gedeeld is"],
         answer: 0,
-        wrongHints: [null, "Foto's kunnen oud of bewerkt zijn, of uit een ander verhaal komen. Bewijst een foto dan iets?", "Een kop kan heel betrouwbaar klinken en toch misleiden.", "Ook nepberichten kunnen keurig geschreven zijn. Wat zegt de spelling over de inhoud?"],
+        wrongHints: [null, "Foto's kunnen oud of bewerkt zijn, of uit een ander verhaal komen. Bewijst een foto dan iets?", "Een nepsite kan er heel echt uitzien. Wat zegt het ontwerp over de inhoud?", "Nepnieuws wordt vaak juist veel gedeeld. Bewijst delen dat het klopt?"],
       },
       {
         q: "Welke is **betrouwbaar** in NL?",
@@ -129,9 +129,9 @@ const steps = [
       },
       {
         q: "Wat is **clickbait**?",
-        options: ["Een misleidende kop om je te laten klikken", "Een virus dat je via een link binnenhaalt", "Een advertentie tussen andere berichten", "Een kop die het hele verhaal samenvat"],
+        options: ["Een kop die meer belooft dan het artikel waarmaakt", "Een virus dat je via een link binnenhaalt", "Een advertentie tussen andere berichten", "Een kop die precies zegt wat er in het artikel staat"],
         answer: 0,
-        wrongHints: [null, "Dat is malware. Bij clickbait gaat het om de tekst die je ziet — wat doet die met je?", "Er zit vaak reclame achter, maar waar gaat het woord 'bait' (lokaas) over?", "Hoef je dan nog te klikken?"],
+        wrongHints: [null, "Dat is malware. Bij clickbait gaat het om de tekst die je ziet — wat doet die met je?", "Er zit vaak reclame achter, maar clickbait gaat over iets anders: over de kop van een bericht.", "Een eerlijke kop is juist goed. Waarom zou iemand een kop anders maken dan het artikel?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is clickbait?", tekst: "**Clickbait** (Engels voor 'klik-aas') is een **misleidende kop** die je verleidt om te klikken — maar het artikel zelf is teleurstellend, saai, of niet over de belofte." },
@@ -164,9 +164,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **algoritme** op social media?",
-        options: ["Programma dat kiest wat jij ziet", "Een moderator die posts controleert", "Een lijst met verboden woorden", "Volgorde waarin posts geplaatst zijn"],
+        options: ["Programma dat kiest wat jij ziet", "Programma dat posts op tijd sorteert", "Programma dat verboden woorden wist", "Een moderator die posts controleert"],
         answer: 0,
-        wrongHints: [null, "Moderators halen soms posts weg, maar kan een mens miljoenen tijdlijnen samenstellen?", "Zo'n lijst helpt bij het weghalen van posts. Maar wie bepaalt de volgorde van jouw tijdlijn?", "Dan zag je alles op tijd — maar je feed wordt juist voor je uitgekozen."],
+        wrongHints: [null, "Dan zag iedereen dezelfde volgorde. Is jouw tijdlijn gelijk aan die van een vriend?", "Zo'n filter helpt bij het weghalen van posts. Maar wie bepaalt de volgorde van jouw tijdlijn?", "Moderators halen soms posts weg, maar kan een mens miljoenen tijdlijnen samenstellen?"],
       },
       {
         q: "Wat is een **filterbubbel**?",
@@ -176,9 +176,9 @@ const steps = [
       },
       {
         q: "Hoe **schermtijd** verminderen?",
-        options: ["App-limieten instellen en meldingen uitzetten", "Elke melding meteen afhandelen, dan is hij weg", "Je telefoon als wekker naast je bed leggen", "Je telefoon op stil zetten maar in je hand houden"],
+        options: ["App-limieten instellen en meldingen uitzetten", "Een spelletje doen in plaats van scrollen", "Je telefoon als wekker naast je bed leggen", "Donkere modus aanzetten voor je ogen"],
         answer: 0,
-        wrongHints: [null, "Elke melding trekt je weer naar je scherm. Wordt het dan minder?", "Wat doe je als eerste als je 's ochtends je wekker uitzet?", "Stil is goed, maar kijk je minder als hij in je hand ligt?"],
+        wrongHints: [null, "Ook een spelletje is schermtijd. Wordt je schermtijd zo minder?", "Wat doe je als eerste als je 's ochtends je wekker uitzet?", "Donkere modus is fijner voor je ogen, maar kijk je er minder door?"],
       },
       {
         q: "Wat doen **influencers** met merken?",
@@ -207,9 +207,9 @@ const steps = [
       },
       {
         q: "Wat is **2FA**?",
-        options: ["Tweestapsverificatie bij inloggen", "Op twee apparaten ingelogd", "Wachtwoord twee keer typen", "Wachtwoord van twee woorden"],
+        options: ["Tweestapsverificatie bij inloggen", "Je wachtwoord twee keer per jaar wijzigen", "Versleutelen met twee digitale sleutels", "Een back-up op twee plekken bewaren"],
         answer: 0,
-        wrongHints: [null, "Het gaat niet om waar je inlogt, maar hoe.", "Twee keer hetzelfde typen is nog steeds één ding dat je weet. Wat is een tweede controle?", "Een langer wachtwoord is fijn, maar het blijft één controle. Wat komt er bij 2FA bij?"],
+        wrongHints: [null, "Regelmatig wijzigen helpt soms, maar het blijft één controle. Wat komt er bij 2FA bij?", "Versleuteling schermt berichten af. Gaat 2FA over berichten, of over inloggen?", "Een back-up beschermt tegen kwijtraken, niet tegen inbrekers. Wat doet 2FA?"],
       },
       {
         q: "Welke deel je **NIET** online?",
@@ -226,9 +226,9 @@ const steps = [
     checks: [
       {
         q: "Wat doe je bij **cyberpesten**?",
-        options: ["Niet reageren, bewijs bewaren, melden", "Rustig terugschrijven dat het moet stoppen", "Je account meteen verwijderen", "Het negeren en wachten tot het overwaait"],
+        options: ["Niet reageren, bewijs bewaren, melden", "Terugschrijven, uitleggen, vragen te stoppen", "Bewijs bewaren, account verwijderen, zwijgen", "Negeren, blokkeren, wachten tot het stopt"],
         answer: 0,
-        wrongHints: [null, "Een reactie geeft de pester vaak juist aandacht. Wat werkt beter?", "Dan raak je ook je bewijs kwijt — en stopt de pester er niet door.", "Negeren helpt soms, maar wie kan je steunen als niemand het weet? En heb je dan bewijs?"],
+        wrongHints: [null, "Een reactie geeft de pester vaak juist aandacht. Wat werkt beter?", "Bewijs bewaren is goed, maar wie kan je helpen als je zwijgt?", "Blokkeren helpt soms, maar wie weet er dan van? En heb je bewijs?"],
       },
       {
         q: "**Kindertelefoon**-nummer?",
@@ -238,15 +238,15 @@ const steps = [
       },
       {
         q: "Wat is **grooming**?",
-        options: ["Volwassene bouwt online vertrouwen met kind voor misbruik", "Klasgenoten die iemand via de groepsapp pesten", "Iemand chanteren met een gestuurde naaktfoto", "Je wachtwoord stelen via een nepmail of nepsite"],
+        options: ["Volwassene wint online vertrouwen van kind voor misbruik", "Klasgenoten die iemand in de groepsapp pesten en buitensluiten", "Iemand afpersen met een naaktfoto die je hebt gekregen", "Iemand naar een nepsite lokken om zijn wachtwoord te stelen"],
         answer: 0,
-        wrongHints: [null, "Dat is cyberpesten.", "Dat is sextortion.", "Dat is phishing."],
+        wrongHints: [null, "Dat heet cyberpesten. Bij grooming gaat het om een ander soort dader: wie?", "Dat heet sextortion: afpersing. Bij grooming is er nog geen dreiging. Wat gebeurt er dan?", "Dat heet phishing. Grooming gaat niet over je account, maar over contact met een persoon."],
       },
       {
         q: "Bij **sextortion** — wat doen?",
-        options: ["Niet betalen, melden bij politie", "Betalen, want dan stopt het meestal", "Zelf contact zoeken om het uit te praten", "Alles verwijderen en het geheimhouden"],
+        options: ["Niet betalen, melden bij politie", "Een klein bedrag betalen om tijd te winnen", "Alles verwijderen en je account wissen", "Blokkeren en het verder laten rusten"],
         answer: 0,
-        wrongHints: [null, "Betalen leidt bijna altijd tot nieuwe eisen.", "Praten geeft de afperser juist meer kans om druk te zetten.", "Wie kan je dan helpen, en waar is je bewijs gebleven?"],
+        wrongHints: [null, "Betalen leidt bijna altijd tot nieuwe eisen.", "Blokkeren is een goed begin, maar is het dan klaar? Wie moet er nog van weten?", "Wie kan je dan helpen, en waar is je bewijs gebleven?"],
       },
     ],
   },
@@ -254,11 +254,11 @@ const steps = [
     title: "Eind-opdracht — mediawijsheid mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl. Door elkaar: nepnieuws, algoritmes, privacy, veiligheid.\n\nVeel succes!",
     checks: [
-      { q: "**Mediawijsheid** is?", options: ["Kritisch met media omgaan", "Zo min mogelijk media gebruiken", "Handig zijn met apps en sites", "Vooral nieuws van bekende kranten lezen"], answer: 0, wrongHints: [null, "Minder kijken kan verstandig zijn, maar ben je dan ook wijs met wat je wél ziet?", "Handig zijn met apps is een digitale vaardigheid. Snap je daardoor ook wat je ziet?", "Ook bekende kranten maken fouten. Is één soort bron genoeg?"] },
+      { q: "**Mediawijsheid** is?", options: ["Bewust en kritisch met media omgaan", "Je schermtijd zo laag mogelijk houden", "Handig zijn met apps en sites", "Vooral nieuws van bekende kranten lezen"], answer: 0, wrongHints: [null, "Minder kijken kan verstandig zijn, maar ben je dan ook wijs met wat je wél ziet?", "Handig zijn met apps is een digitale vaardigheid. Snap je daardoor ook wat je ziet?", "Ook bekende kranten maken fouten. Is één soort bron genoeg?"] },
       { q: "**Desinformatie** = ?", options: ["Opzettelijk onjuist", "Per ongeluk onjuist", "Een eerlijke mening", "Betaalde reclame"], answer: 0, wrongHints: [null, "Dat heet misinformatie. Is er dan sprake van opzet?", "Een mening mag. Is die bedoeld om te misleiden?", "Reclame wil je iets verkopen — is dat de kern van desinformatie?"] },
-      { q: "Wat doen **algoritmes**?", options: ["Kiezen wat jij ziet", "Reclame van je scherm weghalen", "Je account beveiligen tegen hackers", "Berichten sorteren op tijd"], answer: 0, wrongHints: [null, "Halen algoritmes reclame weg, of laten ze je juist gerichte reclame zien?", "Dat doen wachtwoorden en 2FA. Wat doet een algoritme op TikTok?", "Dan zou iedereen hetzelfde zien. Is jouw tijdlijn gelijk aan die van een vriend?"] },
+      { q: "Wat doen **algoritmes**?", options: ["Kiezen wat jij ziet", "Nepnieuws herkennen en weghalen", "Je account beveiligen tegen hackers", "Berichten sorteren op tijd"], answer: 0, wrongHints: [null, "Platforms proberen dat soms, maar waarom ziet jouw vriend een andere tijdlijn dan jij?", "Dat doen wachtwoorden en 2FA. Wat doet een algoritme op TikTok?", "Dan zou iedereen hetzelfde zien. Is jouw tijdlijn gelijk aan die van een vriend?"] },
       { q: "**AVG** = ?", options: ["EU-privacywet", "EU-wet tegen nepnieuws", "Wet op het auteursrecht", "Leeftijdsgrens voor sociale media"], answer: 0, wrongHints: [null, "Dat gaat over de inhoud van berichten. Waar staat de 'G' van AVG voor?", "Auteursrecht gaat over wie een foto of tekst mag gebruiken. Waar staat de 'G' van AVG voor?", "Er staat in de AVG wel iets over leeftijd, maar wat beschermt de wet in het algemeen?"] },
-      { q: "**2FA** = ?", options: ["Tweestapsverificatie bij inloggen", "Twee accounts op dezelfde app", "Wachtwoord twee keer intypen", "Een tweede e-mailadres als reserve"], answer: 0, wrongHints: [null, "Meer accounts maken je niet veiliger. Waar slaat de 'F' van factor op?", "Twee keer hetzelfde intypen is nog steeds één ding dat je weet. Is dat extra veilig?", "Een reserve-adres helpt bij herstel, maar is het een extra controle bij het inloggen?"] },
+      { q: "**2FA** = ?", options: ["Tweestapsverificatie bij inloggen", "Je wachtwoord twee keer per jaar wijzigen", "Versleutelen met twee digitale sleutels", "Een tweede e-mailadres als reserve"], answer: 0, wrongHints: [null, "Regelmatig wijzigen helpt soms, maar het blijft één controle. Waar slaat de 'F' van factor op?", "Versleuteling schermt berichten af. Gaat 2FA over berichten, of over inloggen?", "Een reserve-adres helpt bij herstel, maar is het een extra controle bij het inloggen?"] },
       { q: "Wat NOOIT delen online?", options: ["Wachtwoord", "Boekrecensie", "Vakantie-foto", "Vriendelijk bericht"], answer: 0, wrongHints: [null, "Je mening over een boek is geen privé-informatie. Wat kan een oplichter wel misbruiken?", "Een vakantiefoto kan prima, liefst zonder te laten zien waar je huis is. Wat is gevoeliger?", "Een aardig bericht verraadt niets over jou. Wat geeft iemand toegang tot je account?"] },
     ],
   },

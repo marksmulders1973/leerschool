@@ -69,7 +69,7 @@ const steps = [
     checks: [
       {
         q: "Wat is een **mensenrecht**?",
-        options: ["Recht dat iedereen heeft als mens", "Recht dat je krijgt als staatsburger", "Recht dat in de grondwet van je land staat", "Recht dat je krijgt vanaf je achttiende"],
+        options: ["Recht dat iedereen heeft, waar je ook woont", "Recht dat iedereen met een paspoort heeft", "Recht dat in de grondwet van je land staat", "Recht dat iedereen vanaf achttien jaar heeft"],
         answer: 0,
         wrongHints: [null, "Heeft een vluchteling zonder paspoort dan geen mensenrechten?", "Grondrechten staan in de grondwet van één land. Gelden mensenrechten alleen daar?", "Kinderen hebben ook mensenrechten. Hangt het af van je leeftijd?"],
         uitlegPad: {
@@ -97,7 +97,7 @@ const steps = [
       },
       {
         q: "**Universeel** betekent ... ?",
-        options: ["Geldt voor alle mensen", "Geldt voor burgers van één land", "Geldt voor alle volwassenen", "Geldt in landen die tekenden"],
+        options: ["Geldt voor alle mensen", "Geldt voor alle burgers van een land", "Geldt voor alle volwassenen", "Geldt in alle landen die tekenden"],
         answer: 0,
         wrongHints: [null, "'Universeel' komt van 'universum'. Past dat bij één land?", "Hebben kinderen dan geen mensenrechten?", "Dat gaat over verdragen. Hangt een mensenrecht af van de handtekening van je land?"],
       },
@@ -187,9 +187,9 @@ const steps = [
       },
       {
         q: "Wat is **EVRM**?",
-        options: ["Europees mensenrechtenverdrag", "Amerikaanse mensenrechtenverklaring", "Nederlandse grondwet", "VN-verklaring uit 2000"],
+        options: ["Mensenrechtenverdrag van de Raad van Europa", "Grondrechtenhandvest van de Europese Unie", "Mensenrechtenverklaring van de Verenigde Naties", "Antifolterverdrag van de Raad van Europa"],
         answer: 0,
-        wrongHints: [null, "Kijk goed naar elke letter van de afkorting.", "Een grondwet geldt voor één land — past dat bij de letters?", "Kijk goed naar elke letter van de afkorting."],
+        wrongHints: [null, "Dat is het Handvest van de EU uit 2000. Welk woord in EVRM past niet bij een handvest?", "Dat is de UVRM van de VN. Waar staat de E in EVRM voor?", "Dat verdrag (1987) gaat alleen over het voorkomen van marteling. Waar staan de R en M in EVRM voor?"],
       },
     ],
   },
@@ -202,19 +202,19 @@ const steps = [
     checks: [
       {
         q: "**Vrijheid van meningsuiting** — welke generatie?",
-        options: ["1e (burgerlijk + politiek)", "2e (sociaal-economisch)", "3e (collectief)", "4e (digitale rechten)"],
+        options: ["1e generatie", "2e generatie", "3e generatie", "4e generatie"],
         answer: 0,
         wrongHints: [null, "Moet de overheid hier iets regelen, of juist van je afblijven?", "Collectieve rechten gaan over groepen en volken, zoals vrede en milieu.", "De lesstof kent drie generaties. In welke valt dit recht?"],
       },
       {
         q: "**Recht op onderwijs** — welke generatie?",
-        options: ["2e (sociaal-economisch)", "1e (burgerlijk + politiek)", "3e (collectief)", "4e (digitale rechten)"],
+        options: ["2e generatie", "1e generatie", "3e generatie", "4e generatie"],
         answer: 0,
-        wrongHints: [null, "Klassiek = vrijheid, niet voorzieningen.", "Collectieve rechten gaan over groepen en volken, zoals vrede en milieu.", "De lesstof kent drie generaties. In welke valt dit recht?"],
+        wrongHints: [null, "De 1e generatie gaat over vrijheid: de overheid blijft van je af. Gaat onderwijs daarover, of moet de overheid iets regelen?", "Collectieve rechten gaan over groepen en volken, zoals vrede en milieu.", "De lesstof kent drie generaties. In welke valt dit recht?"],
       },
       {
         q: "**Recht op schoon milieu** — welke generatie?",
-        options: ["3e (collectief)", "1e (burgerlijk + politiek)", "2e (sociaal-economisch)", "4e (digitale rechten)"],
+        options: ["3e generatie", "1e generatie", "2e generatie", "4e generatie"],
         answer: 0,
         wrongHints: [null, "Moet de overheid van je afblijven, of gaat dit over iets wat we samen delen?", "Sociaal-economische rechten gaan over voorzieningen voor jou als persoon. Gaat milieu over één persoon?", "De lesstof kent drie generaties. In welke valt dit recht?"],
       },
@@ -235,9 +235,9 @@ const steps = [
     checks: [
       {
         q: "Wat berecht **het Internationaal Strafhof** (Den Haag)?",
-        options: ["Personen die oorlogsmisdaden plegen", "Landen die ruzie hebben over grenzen", "Grote internationale drugsbazen", "Bedrijven die mensenrechten schenden"],
+        options: ["Personen die oorlogsmisdaden plegen", "Landen die ruzie hebben over grenzen", "Personen die grote drugsnetwerken leiden", "Personen die mensen over grenzen smokkelen"],
         answer: 0,
-        wrongHints: [null, "Ruzies tussen landen gaan naar het Internationaal Gerechtshof. Wie berecht het Strafhof?", "Drugshandel berecht een nationale rechter. Voor welke allerzwaarste misdaden is een wereldhof nodig?", "Het Strafhof berecht personen, geen bedrijven. En voor welke misdaden?"],
+        wrongHints: [null, "Ruzies tussen landen gaan naar het Internationaal Gerechtshof. Wie berecht het Strafhof?", "Drugsbazen worden door landen zelf berecht. Voor welke allerzwaarste misdaden is een wereldhof nodig?", "Mensensmokkel berecht een nationale rechter. Welke misdaden zijn zo zwaar dat er een wereldhof voor is?"],
       },
       {
         q: "Wat is de **Toeslagenaffaire**?",
@@ -301,19 +301,19 @@ const steps = [
     checks: [
       {
         q: "Wat is een **mensenrecht**?",
-        options: ["Recht dat iedereen heeft als mens", "Recht dat je krijgt als staatsburger", "Recht dat je verdient door goed gedrag", "Recht dat de regering je per wet geeft"],
+        options: ["Recht dat iedereen heeft, waar je ook woont", "Recht dat iedereen met een paspoort heeft", "Recht dat je verdient door goed gedrag", "Recht dat de regering je per wet geeft"],
         answer: 0,
         wrongHints: [null, "Heeft een vluchteling zonder paspoort dan geen mensenrechten?", "Kun je mensenrechten kwijtraken door iets fout te doen?", "Kan de regering ze dan ook weer afpakken?"],
       },
       {
         q: "Wat is **UVRM**?",
-        options: ["VN-verklaring over mensenrechten", "Europese wet over mensenrechten", "Internationale rechtbank", "Nederlands grondwetsartikel"],
+        options: ["VN-verklaring over mensenrechten", "Europees verdrag over mensenrechten", "VN-raad voor de mensenrechten", "VN-verdrag over rechten van het kind"],
         answer: 0,
-        wrongHints: [null, "Waar staat de V voor: verklaring of verordening? En wie nam hem aan?", "Een rechtbank spreekt vonnissen uit; dit is een tekst.", "Geldt het voor één land, of voor iedereen?"],
+        wrongHints: [null, "Dat is het EVRM. Waar staat de U in UVRM voor?", "De Mensenrechtenraad is een orgaan in Genève, geen tekst. Waar staat de V voor?", "Dat is het Kinderrechtenverdrag (IVRK, 1989). Waar staan de U en de M voor?"],
       },
       {
         q: "**Vrijheid van meningsuiting** — welke generatie?",
-        options: ["1e (burgerlijk + politiek)", "2e (sociaal-economisch)", "3e (collectief)", "4e (digitale rechten)"],
+        options: ["1e generatie", "2e generatie", "3e generatie", "4e generatie"],
         answer: 0,
         wrongHints: [null, "Moet de overheid hier iets regelen, of juist van je afblijven?", "Collectieve rechten gaan over groepen en volken, zoals vrede en milieu.", "De lesstof kent drie generaties. In welke valt dit recht?"],
       },

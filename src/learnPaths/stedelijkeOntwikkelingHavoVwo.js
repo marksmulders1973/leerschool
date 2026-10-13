@@ -39,7 +39,7 @@ const steps = [
           "Terugkeer van de voorsteden naar de binnenstad"
         ],
         answer: 0,
-        wrongHints: [null, "Van het platteland naar de stad heet urbanisatie. Wat betekent 'sub' (rond, aan de rand) bij suburbanisatie?", "Het stedelijk gebied helemaal uit, naar het platteland, heet desurbanisatie. Waar verhuizen mensen bij suburbanisatie naartoe?", "Terug naar het centrum heet re-urbanisatie. Welke kant op gaan mensen bij suburbanisatie?"],
+        wrongHints: [null, "Van het platteland naar de stad heet urbanisatie. Welke kant op gaan mensen bij suburbanisatie?", "Het stedelijk gebied helemaal uit, naar het platteland, heet desurbanisatie. Waar verhuizen mensen bij suburbanisatie naartoe?", "Terug naar het centrum heet re-urbanisatie. Welke kant op gaan mensen bij suburbanisatie?"],
         uitlegPad: {
           stappen: [
             { titel: "Tuin + auto", tekst: "Naoorlogse trend in westen: gezinnen kopen huis met tuin in voorstad + pendelen met auto. NL: Almere (1976-) speciaal als suburbanisatie-stad gebouwd. Zoetermeer, Houten, Hoofddorp idem. Stadcentrum 'leegt' (donut-effect)." },
@@ -68,12 +68,12 @@ const steps = [
         q: "Welke regio heeft de **explosiefste verstedelijking** vandaag?",
         options: [
           "Afrika ten zuiden van de Sahara",
-          "Noordwest-Europa, zoals Nederland",
-          "Oost-Azië, zoals Japan en Korea",
+          "Latijns-Amerika, zoals Brazilië",
+          "Midden-Oosten, zoals Saoedi-Arabië",
           "Midden-Europa, zoals Duitsland"
         ],
         answer: 0,
-        wrongHints: [null, "Nederland is al grotendeels verstedelijkt. Hoeveel ruimte is er nog voor groei?", "De bevolking van Japan krimpt. Waar groeit de bevolking het snelst?", "In Duitsland woont al zo'n driekwart in steden. Waar woont nog een groot deel op het platteland?"],
+        wrongHints: [null, "In Brazilië woont al zo'n 87% in steden. Waar woont nog een groot deel van de mensen op het platteland?", "In Saoedi-Arabië woont al ruim 80% in steden. Waar is nog veel ruimte voor groei van de steden?", "In Duitsland woont al zo'n driekwart in steden. Waar woont nog een groot deel op het platteland?"],
         uitlegPad: {
           stappen: [
             { titel: "Demografische + economische druk", tekst: "Afrika: jonge bevolking + landbouw mechaniseert → mensen trekken naar steden. Lagos van 200k (1950) → ~21 mln vandaag → 35 mln in 2050 verwacht. Dhaka, Karachi, Kinshasa idem. Infrastructuur kan tempo niet bijhouden → krottenwijken." },
@@ -86,11 +86,11 @@ const steps = [
         options: [
           "Mensen verlaten stad richting platteland",
           "Mensen trekken van platteland naar stad",
-          "Mensen trekken naar een megacity",
-          "Steden bouwen steeds meer hoogbouw"
+          "Mensen trekken terug naar de binnenstad",
+          "Mensen trekken van centrum naar voorstad"
         ],
         answer: 0,
-        wrongHints: [null, "Dat is gewone urbanisatie. Wat betekent 'counter' (tegen)?", "Een megacity is juist de grootste stad. Gaat counter-urbanisatie die kant op?", "Hoogbouw gaat over bouwen, niet over verhuizen. Welke kant trekken de mensen op?"],
+        wrongHints: [null, "Dat is gewone urbanisatie. Welke kant op gaat counter-urbanisatie?", "Terug naar de binnenstad heet re-urbanisatie. Waar gaan mensen bij counter-urbanisatie heen?", "Naar de voorsteden heet suburbanisatie; je blijft dan in het stedelijk gebied. Waar gaan mensen bij counter-urbanisatie heen?"],
         uitlegPad: {
           stappen: [
             { titel: "Trend versterkt door COVID + thuiswerk", tekst: "Sommige hoogopgeleiden + welvarende families verlaten dure stad voor platteland/kleine stad. Vereist hoge huizenprijs in stad + thuiswerk-mogelijkheid. Beperkt fenomeen — netto verstedelijkt de wereld nog steeds." },
@@ -111,12 +111,12 @@ const steps = [
         q: "**CBD** staat voor:",
         options: [
           "Central Business District",
-          "Centraal Bestuur Departement",
-          "Centrale Bouw Dienst",
-          "City Bus Depot"
+          "City Border District",
+          "Central Bus Distribution",
+          "Commercial Building Design"
         ],
         answer: 0,
-        wrongHints: [null, "Het is een Engelse term uit de stadsgeografie — over welk deel van de stad gaat het?", "Denk aan het zakelijke hart van de stad, niet aan een overheidsdienst.", "Het gaat om een deel van de stad met kantoren en winkels, niet om vervoer."],
+        wrongHints: [null, "Het CBD ligt niet aan de rand. Waar in de stad staan de kantoortorens en hoofdkantoren?", "Een busremise ligt meestal juist buiten het centrum. Wat voor gebouwen vind je in het CBD?", "Het gaat om een deel van de stad, niet om een ontwerpstijl. Welk deel?"],
         uitlegPad: {
           stappen: [{ titel: "Zakelijk centrum", tekst: "Centrum met hoofdkantoren, grote winkels, restaurants. Hoge grondprijzen → hoogbouw. NL: Zuidas (A'dam-zuid), Beurs/Damrak (binnenstad). Londen: City + Canary Wharf. NYC: Manhattan-zuid." }],
           niveaus: { basis: "Central Business District.", simpeler: "Centrum kantoren.", nogSimpeler: "CBD" },
@@ -165,7 +165,7 @@ const steps = [
           "Rand loopt leeg terwijl het centrum groeit"
         ],
         answer: 0,
-        wrongHints: [null, "Hoogbouw is juist een teken van drukte in het centrum — denk aan het gat in een donut.", "Bij een donut zit er een gat in het midden — groeit alles dan even hard?", "Andersom: waar zit het gat van de donut?"],
+        wrongHints: [null, "Hoogbouw in het centrum is juist een teken van drukte daar. Wat gebeurde er in veel westerse binnensteden na 1960?", "Als centrum en rand even hard groeien, verandert de verdeling niet. Wat gebeurde er na 1960 met veel westerse binnensteden?", "Dit is precies andersom. Waar trokken gezinnen met een auto na 1960 naartoe?"],
         uitlegPad: {
           stappen: [
             { titel: "Leeg gat in midden", tekst: "Naoorlogs: gezinnen verhuizen naar voorsteden. Centrum verliest woningen, alleen kantoor + winkel. Avond: centrum LEEG. Vandaag deels omgekeerd door gentrification + re-urbanisatie." },
@@ -176,7 +176,7 @@ const steps = [
       {
         q: "**Dharavi** (Mumbai) is een:",
         options: [
-          "Een van de grootste krottenwijken van Azië",
+          "Zeer grote krottenwijk midden in Mumbai",
           "Luxe villawijk aan de kust van Mumbai",
           "Toeristisch oud centrum van Mumbai",
           "Bedrijventerrein zonder bewoners"
@@ -213,12 +213,12 @@ const steps = [
         q: "Wat is een **'global city'** (Sassen)?",
         options: [
           "Stad die de wereldeconomie aanstuurt",
-          "Toeristische topbestemming van de wereld",
+          "Stad met inwoners uit de hele wereld",
           "Stad met meer dan 5 miljoen inwoners",
           "Hoofdstad van een groot, machtig land"
         ],
         answer: 0,
-        wrongHints: [null, "Veel toeristen maakt een stad nog niet invloedrijk. Waar gaat het Sassen om?", "Grootte alleen zegt weinig: Lagos is groot maar geen global city. Wat dan wel?", "New York is geen hoofdstad, maar wel een global city. Waar gaat het dan om?"],
+        wrongHints: [null, "Veel nationaliteiten maakt een stad nog niet machtig. Waar kijkt Sassen naar?", "Grootte alleen zegt weinig: Lagos is groot maar geen global city. Wat dan wel?", "New York is geen hoofdstad, maar wel een global city. Waar gaat het dan om?"],
         uitlegPad: {
           stappen: [
             { titel: "Drie-stad-as", tekst: "Sassen identificeerde NY-LON-TOK als top-3: financiële markten wereldwijd lopen door deze drie. Vandaag uitgebreid (Hongkong, Singapore, Shanghai, Frankfurt). Hub-functie voor multinationals, banken, internationale verbindingen." },
@@ -239,13 +239,13 @@ const steps = [
       {
         q: "**Lagos** (Nigeria) is bijzonder door:",
         options: [
-          "Een van de snelst groeiende megacities ter wereld",
-          "De hoofdstad en regeringszetel van Nigeria",
-          "Een geplande stad met een strak stratenplan",
-          "Een stad die door bevolkingskrimp leegloopt"
+          "Zijn snelle groei tot een megacity",
+          "Zijn rol als hoofdstad van Nigeria",
+          "Zijn strak geplande stratenplan",
+          "Zijn ligging in de olierijke Nigerdelta"
         ],
         answer: 0,
-        wrongHints: [null, "Sinds 1991 is Abuja de hoofdstad van Nigeria. Waardoor valt Lagos dan zo op?", "Geplande steden zijn bijvoorbeeld Abuja en Brasília. Hoe zijn de wijken van Lagos ontstaan?", "Kijk naar het geboortecijfer in Nigeria en naar alle mensen die van het platteland komen. Past krimp daarbij?"],
+        wrongHints: [null, "Sinds 1991 is Abuja de hoofdstad van Nigeria. Waardoor valt Lagos dan zo op?", "Geplande steden zijn bijvoorbeeld Abuja en Brasília. Hoe zijn de wijken van Lagos ontstaan?", "De olie van Nigeria ligt in de Nigerdelta, honderden kilometers oostelijker. Waardoor valt Lagos dan op?"],
         uitlegPad: {
           stappen: [
             { titel: "Van 200k naar 21 mln in 70 jaar", tekst: "1950: 200 000 inwoners. 2024: ~21 mln. Prognose 2050: 35 mln (in 2100 mss 100 mln). Een van de snelst groeiende steden ter wereld. Mix van miljardairs en grootste krottenwijken. Olie + nieuwe industrie + Nigeriaanse film (Nollywood) trekken instroom." },
@@ -259,10 +259,10 @@ const steps = [
           "Data en sensoren voor slimmer beheer",
           "Zoveel mogelijk groen en parken in de wijk",
           "Een slim ontworpen stratenplan op papier",
-          "Een verbod op auto's in het centrum"
+          "Zonnepanelen en windmolens voor stroom"
         ],
         answer: 0,
-        wrongHints: [null, "Groen maakt een stad gezond, maar is dat wat een stad 'smart' maakt? Waar slaat 'slim' hier op?", "Een goed plan op papier is mooi, maar 'smart' slaat op digitale hulpmiddelen. Welke?", "Een autoverbod kan, maar is dat wat een stad 'smart' maakt?"],
+        wrongHints: [null, "Groen maakt een stad gezond, maar is dat wat een stad 'smart' maakt? Waar slaat 'slim' hier op?", "Een goed stratenplan is mooi, maar dat bestond al eeuwen. Wat is er nieuw aan een smart city?", "Schone energie maakt een stad duurzaam. Waarmee wordt een smart city 'slim' bestuurd?"],
         uitlegPad: {
           stappen: [
             { titel: "Data-gedreven beheer", tekst: "Singapore-voorbeeld: sensoren in straten (verkeer, lucht, vuilnis), apps voor parkeren, gemeentelijke data open beschikbaar. Songdo (KR) gepland als smart city-totaal. Barcelona, Amsterdam (Smart-City-tag) experimenteren met sensor-netwerken." },
@@ -282,13 +282,13 @@ const steps = [
       {
         q: "**Heat-island-effect** in steden:",
         options: [
-          "Stad warmer dan platteland",
-          "Stad kouder dan platteland",
-          "Stad vochtiger dan platteland",
-          "Stad winderiger dan platteland"
+          "Stad gemiddeld warmer dan het platteland",
+          "Stad 's zomers warmer, 's winters kouder",
+          "Stad vochtiger dan het platteland",
+          "Stad winderiger dan het platteland"
         ],
         answer: 0,
-        wrongHints: [null, "Steen en asfalt slaan zonnewarmte op. Wordt de stad daar kouder van?", "'Heat' betekent hitte. Gaat het dan om vocht?", "Gebouwen remmen de wind in de stad juist af. Waar gaat 'heat' over?"],
+        wrongHints: [null, "Steen en asfalt slaan warmte op. Geven ze die 's winters 's nachts ook af?", "Verharding laat regen snel weglopen. Wordt de stad daar vochtiger van?", "Gebouwen remmen de wind in de stad juist af. Waar gaat het effect dan wel over?"],
         uitlegPad: {
           stappen: [
             { titel: "Beton + asfalt + auto's", tekst: "Beton absorbeert + houdt warmte vast. Minder bomen + parken voor verkoeling. Auto's + airconditioning produceren warmte. Resultaat: stadscentrum 2-5°C warmer dan omliggend platteland. Versterkt door klimaatverandering → hittegolven extra gevaarlijk in stad (ouderen-sterfte)." },
@@ -310,12 +310,12 @@ const steps = [
         q: "**15-minuten-stad** (Parijs):",
         options: [
           "Dagelijkse voorzieningen op 15 min lopen of fietsen",
-          "Een verbod op alle auto's in de hele stad",
+          "Alle voorzieningen binnen 15 minuten met het OV",
           "Elke wijk een bus die om de 15 minuten rijdt",
           "Maximaal 15 minuten met de auto naar je werk"
         ],
         answer: 0,
-        wrongHints: [null, "Minder autoverkeer is een gevolg, maar is een verbod het hoofdidee?", "Het gaat niet om hoe vaak de bus rijdt, maar om wat er dichtbij is.", "Het idee is juist mínder autoritten — hoe kom je dan bij je voorzieningen?"],
+        wrongHints: [null, "Met de metro ben je snel ergens, maar het OV is niet het hoofdidee. Waar gaat het dan om?", "Het gaat niet om hoe vaak de bus rijdt, maar om wat er dichtbij is.", "Het idee is juist mínder autoritten — hoe kom je dan bij je voorzieningen?"],
         uitlegPad: {
           stappen: [
             { titel: "Burgemeester Hidalgo 2020", tekst: "Concept: school, dokter, winkel, park, werk binnen 15 min van huis. Minder verkeer en klimaat-impact, meer sociale binding. Parijs leidende stad. Vergelijkbaar: 'Superblocks' Barcelona (verkeers-luwe wijken)." },
@@ -327,12 +327,12 @@ const steps = [
         q: "**Kaapstad 'Day Zero'** (2018):",
         options: [
           "Stad bijna zonder drinkwater door droogte",
-          "Stad urenlang zonder stroom door een storing",
-          "Eerste dag van een lockdown door een pandemie",
-          "Stad zwaar getroffen door een aardbeving"
+          "Stad bijna zonder drinkwater door vervuiling",
+          "Stad overstroomd na dagen zware regen",
+          "Stad met verzilt grondwater door de zee"
         ],
         answer: 0,
-        wrongHints: [null, "Kaapstad had wel stroomproblemen, maar Day Zero ging over iets anders. Wat dreigde op te raken?", "Lockdowns kwamen pas in 2020. Wat speelde er in Kaapstad in 2018?", "Kaapstad ligt niet in een aardbevingsgebied. Wat dreigde er op te raken?"],
+        wrongHints: [null, "Vervuild kraanwater speelde in Flint (VS). Wat was er in Kaapstad aan de hand met de stuwmeren?", "Overstromingen treffen veel steden. Waar zag Kaapstad in 2018 een datum voor aankomen?", "Verzilting speelt in veel kustgebieden. Maar wat dreigde er in Kaapstad op een vaste datum?"],
         uitlegPad: {
           stappen: [
             { titel: "Wake-up call", tekst: "Aanhoudende droogte → stuwmeren raakten bijna leeg. Stad maakte plan om watertoevoer aan inwoners stop te zetten ('Day Zero'), inwoners moesten met emmer naar verzamelpunten. Net op tijd regende het → crisis afgewend. Een van de eerste grote steden die zoiets bijna meemaakte. Klimaatverandering maakt dit meer waarschijnlijk." },
@@ -345,11 +345,11 @@ const steps = [
         options: [
           "Bussen op eigen baan met metro-achtige stations",
           "Bussen die op afroep via een app rijden",
-          "Trams op rails die gewoon met het verkeer meerijden",
-          "Treinen op een eigen spoor met stations"
+          "Snelbussen die over de snelweg rijden",
+          "Elektrische bussen die bij de halte laden"
         ],
         answer: 0,
-        wrongHints: [null, "Een belbus rijdt op afroep. Rijdt een BRT-bus op vaste lijnen met eigen haltes?", "Een tram rijdt op rails. Waar staat de B in BRT voor?", "Lees de afkorting nog eens: welk voertuig zit erin?"],
+        wrongHints: [null, "Een belbus rijdt op afroep. Waarom zou dat in een miljoenenstad als Curitiba niet genoeg zijn?", "Een snelbus op de snelweg verbindt steden met elkaar. Hoe kom je in Curitiba snel door de drukke stad zelf?", "Elektrisch rijden is goed voor de lucht, maar maakt de bus niet sneller in de file. Wat maakt het systeem dan snel?"],
         uitlegPad: {
           stappen: [
             { titel: "Goedkoper alternatief voor metro", tekst: "Curitiba 1974 pionier. Eigen bus-baan in midden weg, vooruitbetaling bij station (snelle inscheping), grote gelede bussen (ruim 200 mensen). Veel goedkoper dan metro maar bijna zelfde capaciteit. Wereldwijd gekopieerd: Bogotá, Mexico City, Istanbul, Johannesburg." },
@@ -382,12 +382,12 @@ const steps = [
         q: "Het concept **'donut-economy'** in Amsterdam:",
         options: [
           "Balans tussen basisbehoeften en grenzen van de aarde",
-          "Zo veel mogelijk economische groei, zonder grenzen",
+          "Groei beperken tot een vast percentage per jaar",
           "Bedrijven verhuizen van het centrum naar de rand",
-          "Alle winkels concentreren in de binnenstad"
+          "Elke wijk een eigen economisch centrum"
         ],
         answer: 0,
-        wrongHints: [null, "Het model stelt juist een plafond aan wat de aarde aankan — mag groei dan onbeperkt?", "Dat is het donut-effect in de stad, iets anders dan de donut-economie.", "Het gaat om een model met een ondergrens en een bovengrens, niet om waar winkels staan."],
+        wrongHints: [null, "Een vast groeipercentage is maar een getal. Waar gaat de 'ring' van de donut over?", "Dat is het donut-effect in de stad, iets anders dan de donut-economie.", "Het gaat om een model voor de hele economie, niet om waar winkels staan. Wat betekent de ring?"],
         uitlegPad: {
           stappen: [
             { titel: "Kate Raworth 2017", tekst: "Donut-vorm: binnenste cirkel = sociale ondergrens (geen mens zonder onderdak, eten, gezondheid, etc.). Buitenste = planetaire grens (klimaat, biodiversiteit). Economie moet TUSSEN beide ringen opereren. Amsterdam eerste stad die dit officieel omarmde (2020) als beleidskader." },
@@ -399,12 +399,12 @@ const steps = [
         q: "Een **modal shift** in stadsverkeer betekent:",
         options: [
           "Verschuiving van auto naar fiets, OV en lopen",
-          "Aanleg van een nieuwe ringweg om de stad",
-          "Hogere maximumsnelheid voor auto's",
-          "Meer mensen die zelf een auto kopen"
+          "Verschuiving van spits naar daluren",
+          "Verschuiving van wegen naar tunnels",
+          "Verschuiving van diesel naar elektrisch"
         ],
         answer: 0,
-        wrongHints: [null, "Een ringweg verandert de route, niet het vervoermiddel. Waar slaat 'modal' op?", "Sneller rijden verandert niet hoe je reist. Waar slaat 'modal' op?", "Ziet een stad met een modal shift meer of minder auto's?"],
+        wrongHints: [null, "Spreiden over de dag heet spitsmijden: je reist nog op dezelfde manier. Waar slaat 'modal' op?", "Tunnels veranderen waar je rijdt, niet waarmee. Waar slaat 'modal' op?", "Elektrisch rijden verandert de brandstof, maar je blijft in de auto. Waar slaat 'modal' op?"],
         uitlegPad: {
           stappen: [
             { titel: "Cruciaal voor klimaat + lucht", tekst: "'Modus' = vervoersmiddel. 'Shift' = verschuiving. Voorbeeld: NL jaren '70 veel auto's → vanaf 1980 sterk fiets-beleid → 27% van verplaatsingen op fiets (wereldrecord). Modal shift verbetert lucht + minder CO₂ + minder ruimte voor auto's." },
@@ -417,11 +417,11 @@ const steps = [
         options: [
           "Afval wordt grondstof voor nieuwe producten",
           "Een ringweg rond de stad aanleggen",
-          "Afval zo veel mogelijk verbranden",
-          "Producten sneller vervangen door nieuwe"
+          "Afval verbranden voor stroom en warmte",
+          "Afval gescheiden inzamelen en storten"
         ],
         answer: 0,
-        wrongHints: [null, "'Circulair' slaat hier niet op een rondweg — wat gaat er rond?", "Bij verbranden is de grondstof weg. Blijft er dan iets 'rondgaan'?", "Snel vervangen levert juist meer afval op. Is dat 'rond'?"],
+        wrongHints: [null, "'Circulair' slaat hier niet op een rondweg — wat gaat er rond?", "Verbranden levert energie op, maar dan is de grondstof weg. Gaat er dan nog iets rond?", "Gescheiden inzamelen is een begin, maar wat gebeurt er met afval op een stortplaats?"],
         uitlegPad: {
           stappen: [
             { titel: "Geen lineair (maken-gebruiken-weggooien)", tekst: "In plaats van afval naar stortplaats: hergebruik, repareer, recycle. NL voorop: PET-flessen met statiegeld grotendeels gerecycled, oude kleren naar second-hand. Doel NL 2050: volledig circulaire economie." },
@@ -431,9 +431,9 @@ const steps = [
       },
       {
         q: "Welke stad heeft bijna 100% **geothermische** + waterkracht-energie?",
-        options: ["Reykjavik (IJsland)", "Lagos (Nigeria)", "Tokyo (Japan)", "Sydney (Australië)"],
+        options: ["Reykjavik (IJsland)", "Napels (Italië)", "Tokyo (Japan)", "Auckland (Nieuw-Zeeland)"],
         answer: 0,
-        wrongHints: [null, "Lagos draait vooral op olie en gas. Waar vind je veel aardwarmte?", "Japan heeft wel vulkanen, maar Tokyo gebruikt vooral gas en kolen. Welke stad haalt bijna alles uit de natuur?", "Sydney gebruikt nog veel steenkool. Waar ligt een stad op een plaatgrens met warme bronnen?"],
+        wrongHints: [null, "Napels ligt bij de Vesuvius, maar draait vooral op gas. Welke stad haalt bijna alles uit de natuur?", "Japan heeft wel vulkanen, maar Tokyo gebruikt vooral gas en kolen. Welke stad haalt bijna alles uit de natuur?", "Nieuw-Zeeland heeft aardwarmte, maar Auckland draait niet bijna helemaal op aardwarmte en waterkracht. Welke stad wel?"],
         uitlegPad: {
           stappen: [
             { titel: "Natuurlijke bron", tekst: "IJsland zit op tektonische breuk → veel vulkanische activiteit + hot springs. Reykjavik (en heel IJsland) gebruikt geothermische warmte voor verwarming + waterkracht voor elektriciteit. Bijna 100% hernieuwbaar. Klein voorbeeld dat moeilijk elders te kopiëren is." },

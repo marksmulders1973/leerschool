@@ -24,12 +24,12 @@ const steps = [
         q: "**Aardolie** ontstaat uit:",
         options: [
           "Zeeleven van miljoenen jaren geleden",
-          "Gestold magma van oude vulkanen",
-          "Afval dat pas kort geleden is begraven",
-          "Dieren die de afgelopen 1000 jaar stierven"
+          "Bossen van miljoenen jaren geleden",
+          "Gestold magma van miljoenen jaren oud",
+          "Dinosaurussen van miljoenen jaren geleden"
         ],
         answer: 0,
-        wrongHints: [null, "Magma wordt gesteente, geen olie. Welke stof bevat koolstof uit levende wezens?", "Olievorming duurt heel lang. Is recent afval al oud genoeg?", "1000 jaar is geologisch gezien heel kort. Hoe lang duurt het om olie te vormen?"],
+        wrongHints: [null, "Uit oude bossen en moerassen ontstond steenkool. Waar kwam het materiaal voor olie vandaan?", "Magma wordt gesteente, geen olie. Welke koolstof uit levende wezens zit er in olie?", "Dat olie van dinosaurussen komt, is een hardnekkige mythe. Uit welk soort leven ontstond olie dan wel?"],
         uitlegPad: {
           stappen: [
             { titel: "Geologisch proces", tekst: "Algen + plankton zonken naar zeebodem → bedekt door sediment → druk + warmte → koolwaterstoffen. Daarom 'fossiele' brandstof. Niet hernieuwbaar in mensentijdschaal. Opraking-zorg: peak oil-debat." },
@@ -58,12 +58,12 @@ const steps = [
         q: "**Aardgas** (CH₄) is **schoner** dan steenkool omdat:",
         options: [
           "Minder CO₂, roet en zwavel per eenheid energie",
-          "Het CO₂ uit aardgas wordt door planten opgenomen",
-          "Aardgas groeit weer aan, het is hernieuwbaar",
-          "Gas gaat via pijpleidingen, kolen per schip"
+          "Bij verbranding ontstaat alleen waterdamp",
+          "Aardgas bevat meer koolstof dan kolen",
+          "Het CO₂ uit aardgas wordt door planten opgenomen"
         ],
         answer: 0,
-        wrongHints: [null, "Ook CO₂ uit kolen wordt door planten opgenomen. Waar zit het echte verschil bij het verbranden?", "Aardgas ontstond in miljoenen jaren. Groeit het dan vanzelf weer aan?", "Vervoer kost wat energie, maar de meeste uitstoot komt uit de schoorsteen. Wat komt er bij gas minder uit?"],
+        wrongHints: [null, "Aardgas (CH₄) bevat koolstof. Wat ontstaat er als koolstof verbrandt?", "Tel de atomen: hoeveel koolstof zit er in CH₄, en hoeveel in kolen?", "Ook CO₂ uit kolen wordt door planten opgenomen. Waar zit het echte verschil bij het verbranden?"],
         uitlegPad: {
           stappen: [
             { titel: "Energie per CO₂", tekst: "Methaan-verbranding: CH₄ + 2 O₂ → CO₂ + 2 H₂O. Per kWh ~50% minder CO₂ dan kolen. Geen roet, weinig zwavel/stikstofoxiden. Gas dus 'transitie-brandstof' tussen kolen + hernieuwbaar. Maar methaan-lek (uit pijpleidingen) is zelf zeer sterk broeikasgas (28× CO₂)." },
@@ -75,12 +75,12 @@ const steps = [
         q: "**Fracking** = ?",
         options: [
           "Met water onder hoge druk gesteente openbreken voor gas",
-          "Gewoon recht naar beneden boren zonder hulpmiddelen",
-          "Een hernieuwbare techniek om stroom op te wekken",
-          "Het reinigen van vervuild grondwater onder de grond"
+          "Schuin boren om een veld van opzij te bereiken",
+          "Stoom injecteren om stroperige olie los te maken",
+          "CO₂ onder hoge druk opslaan in een leeg gasveld"
         ],
         answer: 0,
-        wrongHints: [null, "Gewoon boren levert uit dicht gesteente weinig op. Wat moet je met dat gesteente doen?", "Bij fracking haal je olie en gas uit de grond. Is dat hernieuwbaar?", "Bij fracking gaat er juist iets de grond in. Wordt grondwater daar schoner van?"],
+        wrongHints: [null, "Schuin of horizontaal boren is een andere techniek. Waar komt het woord 'fracking' vandaan?", "Stoom gebruik je voor dikke olie, zoals in teerzand. Wat gebeurt er bij fracking met het gesteente zelf?", "CO₂-opslag (CCS) stopt iets terug in de grond om het klimaat te helpen. Wat haal je met fracking juist naar boven?"],
         uitlegPad: {
           stappen: [
             { titel: "VS-revolutie", tekst: "Hydraulic fracturing: water + zand + chemicaliën onder hoge druk → schalie-gesteente barst → gas/olie stroomt vrij. Maakt VS sinds 2018 grootste olie- + gasproducent. Controverse: grondwater-vervuiling, methaan-lek, aardbevingen (Oklahoma). NL: winning was conventioneel (Groningen + kleine velden); schaliegas via fracking is hier nooit toegestaan." },
@@ -131,11 +131,11 @@ const steps = [
         options: [
           "Grootste waterkrachtcentrale ter wereld",
           "Grootste getijdencentrale ter wereld",
-          "Grootste kolencentrale van China",
-          "Groot olieplatform in de Gele Zee"
+          "Grootste pompcentrale voor energieopslag",
+          "Grootste drijvend zonnepark op een stuwmeer"
         ],
         answer: 0,
-        wrongHints: [null, "Een getijdencentrale gebruikt eb en vloed van de zee. Ligt de Drieklovendam aan zee of in een rivier?", "Een dam houdt water tegen. Wat verbrand je in een kolencentrale?", "Een dam ligt in een rivier, niet op zee. Wat doet een dam?"],
+        wrongHints: [null, "Een getijdencentrale gebruikt eb en vloed van de zee. Ligt de Drieklovendam aan zee of in een rivier?", "Een pompcentrale pompt water omhoog om energie op te slaan. Wat levert de Drieklovendam vooral?", "Drijvende zonneparken bestaan in China, maar dit is een dam van ruim 2 km in de Jangtse. Wat doet die met het water?"],
         uitlegPad: {
           stappen: [
             { titel: "22,5 GW capaciteit", tekst: "Yangtze-rivier, geopend 2012. Water stroomt door 32 turbines van 700 MW. Stuwdam 185 m hoog. Massief project: 1,3 mln mensen verplaatst, ecosystemen verstoord (Yangtze-dolfijn uitgestorven). Genereert ~1% China's elektriciteit." },
@@ -148,11 +148,11 @@ const steps = [
         options: [
           "Zon en wind zijn niet altijd beschikbaar",
           "Stroom opslaan in accu's voor later",
-          "Het meten hoe lang een centrale draait",
+          "Centrales die af en toe stilstaan voor onderhoud",
           "Het verlies van stroom in lange kabels"
         ],
         answer: 0,
-        wrongHints: [null, "Opslag in accu's is juist een oplossing voor dit probleem. Wat is het probleem zelf?", "Het gaat niet om meten, maar om het aanbod van stroom. Wat gebeurt er als het windstil en donker is?", "Verlies in lange kabels heet transportverlies. Wat betekent 'intermitterend': steeds aan, of af en toe?"],
+        wrongHints: [null, "Opslag in accu's is juist een oplossing voor dit probleem. Wat is het probleem zelf?", "Onderhoud plan je zelf in. Waar ligt bij intermittentie de oorzaak?", "Verlies in lange kabels heet transportverlies. Over welk probleem gaat intermittentie dan?"],
         uitlegPad: {
           stappen: [
             { titel: "Kern-uitdaging transitie", tekst: "Zon schijnt overdag. Wind waait soms wel/niet. Geen 24/7 zoals gas/kolen/kernenergie. Oplossingen: batterijen (Lithium-ion, opslag-uren), pumped hydro (water omhoog → omlaag bij vraag), waterstof (lange-termijn opslag), netwerk-koppeling (Europa: zon Spanje + wind Noordzee + waterkracht Noorwegen)." },
@@ -164,12 +164,12 @@ const steps = [
         q: "**Biobrandstof** is controversieel als:",
         options: [
           "Er bos of voedselgrond voor verdwijnt",
-          "Het goedkoper is dan benzine",
-          "Het schoner verbrandt dan diesel",
+          "Het duurder is dan gewone benzine",
+          "Het van gebruikt frituurvet wordt gemaakt",
           "Het op duurzame wijze wordt geteeld"
         ],
         answer: 0,
-        wrongHints: [null, "Een lage prijs is eerder een voordeel. Wat zou mensen boos maken?", "Schoner verbranden is een voordeel. Waar zit het nadeel?", "Duurzaam telen is juist het doel. Wanneer gaat het mis?"],
+        wrongHints: [null, "Een hoge prijs is vervelend, maar daar gaat de maatschappelijke discussie niet over. Waarover dan?", "Gebruikt frituurvet is afval dat opnieuw nuttig wordt. Wanneer wordt biobrandstof wél een probleem?", "Duurzaam telen is juist het doel. Wanneer gaat het mis?"],
         uitlegPad: {
           stappen: [
             { titel: "'Food vs Fuel' debat", tekst: "Brazilië teelt suikerriet voor bio-ethanol → minder ruimte voedsel + Amazone-ontbossing. Indonesië palmolie voor biodiesel → tropische ontbossing. VS-maïs voor ethanol gebruikt 40% van de maïs-oogst → voedselprijzen hoger. Argument: bio uit afval (mest, restproducten) OK, maar specifiek teelt voor fuel = problematisch." },
@@ -182,11 +182,11 @@ const steps = [
         options: [
           "Meer en constantere wind, minder overlast",
           "Het is goedkoper om te bouwen en onderhouden",
-          "Op zee zijn de molens kleiner en lichter",
-          "Zeewater koelt de turbines, dus ze slijten minder"
+          "Geen vergunning nodig op open zee",
+          "Kortere kabels naar het stroomnet"
         ],
         answer: 0,
-        wrongHints: [null, "Bouwen op zee is lastig: schepen, kabels, zout water. Wordt het dan goedkoper?", "Op zee staan juist de grootste windturbines ter wereld. Wat is er op zee beter dan op land?", "Zout zeewater zorgt juist voor roest en extra onderhoud. Wat is er op zee wel gunstiger?"],
+        wrongHints: [null, "Bouwen op zee is lastig: schepen, kabels, zout water. Wordt het dan goedkoper?", "Voor elk windpark op de Noordzee zijn een vergunning en een tender nodig. Wat is er op zee wél beter?", "Een windpark op zee ligt vaak tientallen kilometers uit de kust. Zijn de kabels dan korter?"],
         uitlegPad: {
           stappen: [
             { titel: "Noordzee-bonanza", tekst: "Op zee: 20-30% hogere capaciteitsfactor (meer wind). Geen 'not in my backyard' bezwaar. Maar duurder bouwen + onderhouden. NL plant 21 GW offshore 2030, 70 GW 2050 — voldoende voor halve nationale stroom-vraag. Doggersbank-veld UK = grootste wereld in aanbouw." },
@@ -225,11 +225,11 @@ const steps = [
         options: [
           "Arabische OPEC-boycot na Israël-oorlog",
           "Olievelden die plots leeg raakten",
-          "Een pandemie die de handel stillegde",
-          "Een aardbeving die raffinaderijen trof"
+          "Een staking in de Rotterdamse haven",
+          "De oorlog tussen Iran en Irak"
         ],
         answer: 0,
-        wrongHints: [null, "Er zat in 1973 nog genoeg olie in de grond. Waarom kwam die dan niet naar Europa?", "In 1973 was er geen pandemie. Wat speelde er toen in het Midden-Oosten?", "Een aardbeving raakt één gebied. Waarom kreeg heel Nederland dan autoloze zondagen?"],
+        wrongHints: [null, "Er zat in 1973 nog genoeg olie in de grond. Waarom kwam die dan niet naar Europa?", "Een staking legt één haven stil, maar dit raakte heel Europa en de VS. Wie zat er echt achter de tekorten?", "De oorlog tussen Iran en Irak begon pas in 1980, bij de tweede oliecrisis. Wat speelde er in 1973?"],
         uitlegPad: {
           stappen: [
             { titel: "Yom Kippoer-oorlog gevolg", tekst: "Egypte + Syrië vielen Israël aan okt 1973. VS + NL + andere westerse landen steunden Israël. Arabische OPEC reageerde met boycot → olie ×4. NL: autoloze zondagen, hamsteren. Begin van energie-bewustzijn West. Versnelde isolatie-techniek + alternatieven." },
@@ -241,12 +241,12 @@ const steps = [
         q: "**Oekraïne-oorlog 2022** + energie:",
         options: [
           "Minder Russisch gas → energiecrisis in de EU",
-          "Er was nauwelijks impact op de energiemarkt",
-          "De olie- en gasprijzen daalden sterk",
-          "De VS exporteerde minder gas naar Europa"
+          "Meer Russisch gas → lagere prijzen in de EU",
+          "Minder Noors gas → energiecrisis in de EU",
+          "Minder Amerikaans gas → energiecrisis in de EU"
         ],
         answer: 0,
-        wrongHints: [null, "Sancties en dichtgedraaide gaskranen raakten een EU die ~40% van zijn gas uit Rusland haalde — kun je dan echt van 'geen impact' spreken?", "Als het grootste importblok plots op zoek moet naar dure alternatieven (LNG), gaan schaarse energieprijzen dan omhoog of omlaag?", "De VS werd juist een belangrijke LNG-leverancier voor Europa in 2022 — klopt 'minder export' dan wel?"],
+        wrongHints: [null, "Kreeg de EU na de inval en de sancties meer of minder gas uit Rusland?", "Noorwegen leverde in 2022 juist méér gas aan Europa. Welk land leverde minder?", "De VS werd in 2022 juist een grote leverancier van vloeibaar gas (LNG) aan Europa. Welk land leverde minder?"],
         uitlegPad: {
           stappen: [
             { titel: "Wake-up call afhankelijkheid", tekst: "EU was ~40% afhankelijk van Russisch gas (DE bijna 60%). Sancties tegen Rusland + Russen draaiden gas dicht → prijzen 10× hoger zomer 2022. EU haastte: LNG uit VS/Qatar, hernieuwbaar versnellen, energiebesparing. Pijnlijk maar leerzaam: energie-onafhankelijkheid is strategisch belang." },
@@ -324,13 +324,13 @@ const steps = [
       {
         q: "**Groene waterstof** wordt gemaakt door:",
         options: [
-          "Elektrolyse van water met groene stroom",
+          "Elektrolyse van water met wind- of zonnestroom",
           "Aardgas splitsen in waterstof en CO₂",
-          "Restgas uit het raffineren van olie",
-          "Waterstof direct uit de lucht halen"
+          "Elektrolyse van water met stroom uit kolen",
+          "Aardgas splitsen en de CO₂ opslaan"
         ],
         answer: 0,
-        wrongHints: [null, "Waterstof uit aardgas heet grijs of blauw. Wat maakt waterstof 'groen'?", "Olie is fossiel. Kan waterstof daaruit groen zijn?", "In de lucht zit bijna geen losse waterstof (H₂). Waar haal je het dan wel uit?"],
+        wrongHints: [null, "Waterstof uit aardgas zonder CO₂-opslag heet grijs. Wat maakt waterstof 'groen'?", "Elektrolyse klopt, maar waterstof met kolenstroom heet niet groen. Wat bepaalt de kleur van waterstof?", "Aardgas splitsen en de CO₂ opslaan heet blauwe waterstof. Wat maakt waterstof 'groen'?"],
         uitlegPad: {
           stappen: [
             { titel: "Echt schoon — bij hernieuwbare bron", tekst: "Elektrolyzer: 2 elektroden in water, stroom erop, water splitst in waterstof + zuurstof. Bij gebruik (in brandstofcel of verbranding): H₂ + O₂ → H₂O + energie. **Geen CO₂ als input + output schoon water**. Maar duur — alleen rendabel bij goedkope hernieuwbare stroom + opschaling." },
