@@ -1,0 +1,1003 @@
+[
+ {
+  "nr": 151,
+  "bron": "leerpaden",
+  "waar": "schatten-afronden stap 4 vraag 7",
+  "q": "Je koopt een tas van **€ 2,95** en een bal van **€ 3,10**. Je betaalt met een briefje van **€ 10**. Hoeveel krijg je ongeveer terug?",
+  "options": [
+   "€ 4",
+   "€ 6",
+   "€ 3",
+   "€ 5"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is ongeveer wat je betaalt, niet wat je terugkrijgt.",
+   null,
+   "Schat eerst wat je betaalt, en haal dat van € 10 af."
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 152,
+  "bron": "leerpaden",
+  "waar": "schema-tekst-combi-po stap 4 vraag 5",
+  "q": "Hoe laat eindigt het buurtfeest?",
+  "options": [
+   "Om 16.00 uur",
+   "Om 15.00 uur",
+   "Om 13.30 uur",
+   "Om 17.00 uur"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Om die tijd begint er nog iets. Zoek de laatste regel van het programma.",
+   null,
+   "17.00 uur staat niet in het programma. Kijk naar de laatste tijdsvermelding."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 153,
+  "bron": "leerpaden",
+  "waar": "schemas-stappenplannen-po stap 4 vraag 5",
+  "q": "Voedselketen: blad → rups → koolmees.\n(De pijl betekent 'wordt gegeten door'.)\n\nEr komen veel **meer** koolmezen. Wat gebeurt er dan met de rupsen?",
+  "options": [
+   "Er worden meer rupsen opgegeten",
+   "Er komen meer rupsen bij",
+   "De rupsen eten de koolmezen op",
+   "Er verandert niets aan de rupsen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wie eet de rupsen? En wat gebeurt er als die er meer zijn?",
+   null,
+   "Volg de pijl. Wie eet wie?"
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 154,
+  "bron": "leerpaden",
+  "waar": "schemas-stappenplannen-po stap 5 vraag 19",
+  "q": "Welke volgorde hoort in **stappenplan 'klaarmaken brood'**?",
+  "options": [
+   "Brood pakken → besmeren → eten",
+   "Eten → brood pakken → besmeren",
+   "Besmeren → brood pakken → eten",
+   "Eten → besmeren → brood pakken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — eerst pakken.",
+   "Niet — eerst brood.",
+   "Niet — laatste = eten."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 155,
+  "bron": "leerpaden",
+  "waar": "spelling stap 3 vraag 2",
+  "q": "*Welke laatste letter heeft 'lief'?*",
+  "options": [
+   "f",
+   "v",
+   "ve",
+   "ft"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "In de lange vorm 'lieve' hoor je een v. Maar welke letter mag in het Nederlands niet aan het eind van een woord staan?",
+   "'Een lieve hond' schrijf je met -ve. Maar in 'de hond is lief' staat het woord los, zonder -e erachter. Hoe eindigt het dan?",
+   "Hoor je aan het eind van 'lief' echt een t, of denk je aan 'liefst'?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 156,
+  "bron": "leerpaden",
+  "waar": "spelling-ei-ij-au-ou stap 2 vraag 4",
+  "q": "'Het ____ speelt met haar pop.' Welk woord is goed?",
+  "options": [
+   "meisje",
+   "mijsje",
+   "maisje",
+   "meissje"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bijna — kies nog eens tussen korte ei en lange ij.",
+   "Geen Nederlandse spelling.",
+   "Tel de s'en nog eens."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 157,
+  "bron": "leerpaden",
+  "waar": "spelling-ei-ij-au-ou stap 8 vraag 6",
+  "q": "Welke twee woorden zijn **allebei** goed geschreven?",
+  "options": [
+   "plein en tijd",
+   "plijn en tijd",
+   "plein en teid",
+   "plijn en teid"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk goed naar het eerste woord.",
+   null,
+   null
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 158,
+  "bron": "leerpaden",
+  "waar": "spelling-overige-po stap 2 vraag 5",
+  "q": "*'Kijk uit, een auto___'* — welk leesteken past het best?",
+  "options": [
+   "!",
+   "?",
+   ".",
+   ","
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Is dit een vraag?",
+   null,
+   null
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 159,
+  "bron": "leerpaden",
+  "waar": "spreekwoorden-uitdrukkingen-po stap 6 vraag 15",
+  "q": "*'Een appeltje voor de dorst.'* — betekenis?",
+  "options": [
+   "Geld bewaren voor later",
+   "Een appel voor als je dorst hebt",
+   "Iets lekkers voor tussendoor",
+   "Al je geld meteen uitgeven"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Letterlijk.",
+   "Te letterlijk.",
+   "Andersom."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 160,
+  "bron": "leerpaden",
+  "waar": "staatsinrichting-1848 stap 1 vraag 1",
+  "q": "Welke koning regeerde NL in **1848** toen de grondwet werd herzien?",
+  "options": [
+   "Willem II",
+   "Willem I",
+   "Willem III",
+   "Lodewijk Napoleon"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Willem I trad al in 1840 af.",
+   "Deze koning begon pas in 1849, een jaar na de nieuwe grondwet.",
+   "Lodewijk Napoleon was koning van 1806 tot 1810, veel eerder."
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 161,
+  "bron": "leerpaden",
+  "waar": "statistiek-havo-vwo stap 5 vraag 3",
+  "q": "Een **scatterplot** toont punten in een **dalende lijn**. Wat is r?",
+  "options": [
+   "Negatief",
+   "Positief",
+   "0",
+   "Groter dan 1"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij een positieve r stijgen de punten. Wat doen de punten hier?",
+   "r = 0 betekent geen lineair verband. Zie je hier wel een lijn?",
+   "r ligt altijd tussen −1 en 1. En welk teken hoort bij een dalende lijn?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 162,
+  "bron": "leerpaden",
+  "waar": "sterren-planeten stap 7 vraag 1",
+  "q": "Wat is bizar aan **Uranus**?",
+  "options": [
+   "Hij ligt op zijn zij",
+   "Hij is hol",
+   "Hij gloeit",
+   "Hij heeft geen rotatie"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Geen planeet is hol.",
+   "Planeten gloeien niet zoals sterren.",
+   "Alle planeten roteren."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 163,
+  "bron": "leerpaden",
+  "waar": "tabellen-grafieken stap 5 vraag 8",
+  "q": "Cirkeldiagram 'wat doe je na school?': gamen 35%, lezen 30%, sporten 20%, tekenen 15%. Welk taartstuk is **het grootst**?",
+  "options": [
+   "Gamen",
+   "Lezen",
+   "Sporten",
+   "Tekenen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Vergelijk de percentages: is er een groter getal?",
+   null,
+   "Is dat het grootste of het kleinste percentage?"
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 164,
+  "bron": "leerpaden",
+  "waar": "tabellen-grafieken stap 7 vraag 7",
+  "q": "Een **lijngrafiek** wordt vooral gebruikt om wat te tonen?",
+  "options": [
+   "Verloop in de tijd",
+   "Categorieën vergelijken",
+   "Verdeling van geheel",
+   "Frequentie"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is staafdiagram.",
+   "Dat is cirkeldiagram.",
+   "Dat is histogram."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 165,
+  "bron": "leerpaden",
+  "waar": "tachtigjarige-oorlog-geschiedenis stap 10 vraag 1",
+  "q": "In welk jaar eindigde de Tachtigjarige Oorlog?",
+  "options": [
+   "1648",
+   "1568",
+   "1581",
+   "1609"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat jaar hoort bij een heel ander moment in de oorlog dan het einde.",
+   "In 1581 zwoeren de gewesten Filips II af, maar er werd daarna nog lang gevochten.",
+   "In 1609 begon het Twaalfjarig Bestand, een pauze. Wat gebeurde er toen die pauze voorbij was?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 166,
+  "bron": "leerpaden",
+  "waar": "tafels-po stap 6 vraag 15",
+  "q": "2 × 12 = ?",
+  "options": [
+   "24",
+   "14",
+   "20",
+   "6"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet.",
+   "Niet.",
+   "Helft."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 167,
+  "bron": "leerpaden",
+  "waar": "tekstdoel-schrijversdoel-po stap 3 vraag 4",
+  "q": "Waarom is de zin 'Ochtendkracht bevat zes verschillende granen' in een reclame-folder opgenomen?",
+  "options": [
+   "Om de folder betrouwbaarder te laten klinken zodat je het product eerder koopt",
+   "Omdat de schrijver kinderen iets over granen wil leren",
+   "Omdat de wet verplicht dit op verpakkingen te zetten",
+   "Omdat de schrijver per ongeluk te veel informatie gaf"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een schoolboek leert je over granen — maar wat wil een reclame-folder bereiken?",
+   "Verpakkingstekst en een folder zijn verschillende dingen. Kijk naar het doel van de folder.",
+   null
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 168,
+  "bron": "leerpaden",
+  "waar": "tekstverbanden-oorzaak-gevolg-po stap 1 vraag 1",
+  "q": "*\"Omdat het de hele nacht regende, stond het schoolplein vol plassen.\"* — Wat is de oorzaak?",
+  "options": [
+   "De regen die de hele nacht viel",
+   "De plassen op het schoolplein",
+   "De kinderen op het schoolplein",
+   "Het donker van de nacht"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Waren de plassen er eerst, of kwamen ze ergens dóór? Stel de vraag: waardoor staan ze er?",
+   "Staan er kinderen in de zin? Kijk wat er direct achter het woord 'omdat' staat.",
+   "De nacht vertelt alleen wannéér het gebeurde. Kijk wat er direct achter het woord 'omdat' staat."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 169,
+  "bron": "leerpaden",
+  "waar": "tellen-kleuters-po stap 1 vraag 6",
+  "q": "Hoeveel sterren? ⭐⭐⭐⭐",
+  "options": [
+   "4",
+   "3",
+   "5",
+   "6"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bijna! Je bent er eentje vergeten — tel nog eens met je vinger.",
+   "Dat is er eentje te veel — wijs elke ster maar één keer aan.",
+   null
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 170,
+  "bron": "leerpaden",
+  "waar": "tijd-snelheid-afstand-po stap 2 vraag 3",
+  "q": "Auto rijdt eerst 1 uur 60 km/h, dan 1 uur 90 km/h. **Gemiddelde snelheid**?",
+  "options": [
+   "75 km/h",
+   "70 km/h",
+   "65 km/h",
+   "85 km/h"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — controleer.",
+   "Niet.",
+   "Niet."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 171,
+  "bron": "leerpaden",
+  "waar": "tijd-snelheid-afstand-po stap 3 vraag 8",
+  "q": "Je wandelt **2 uur en 30 minuten** met **4 km/h**. Hoeveel km loop je?",
+  "options": [
+   "10 km",
+   "8 km",
+   "12 km",
+   "6 km"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Heb je het halve uur meegeteld?",
+   null,
+   null
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 172,
+  "bron": "leerpaden",
+  "waar": "tijdsduur-rekenen-po stap 3 vraag 10",
+  "q": "Een fietstocht heeft twee stukken: het eerste stuk duurt **1 uur 35 min** en het tweede **1 uur 45 min**. Hoe lang duurt de hele tocht?",
+  "options": [
+   "3 uur 20 min",
+   "2 uur 20 min",
+   "3 uur 10 min",
+   "4 uur 20 min"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "35 + 45 minuten is meer dan een uur. Heb je dat extra uur bij de uren opgeteld?",
+   null,
+   null
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 173,
+  "bron": "leerpaden",
+  "waar": "tijdvakken-nederland-po stap 5 vraag 11",
+  "q": "**Anne Frank** zat in onderduik in?",
+  "options": [
+   "Amsterdam",
+   "Den Haag",
+   "Rotterdam",
+   "Utrecht"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet de regeringsstad — denk aan het Achterhuis aan een gracht.",
+   "Niet de havenstad — het Achterhuis staat er nog als museum.",
+   "Niet Utrecht — Anne hield haar dagboek bij in het Achterhuis."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 174,
+  "bron": "leerpaden",
+  "waar": "topografie-europa-po stap 4 vraag 2",
+  "q": "Wat is de hoofdstad van **Denemarken**?",
+  "options": [
+   "Stockholm",
+   "Kopenhagen",
+   "Oslo",
+   "Aarhus"
+  ],
+  "answer": 1,
+  "explanation": "**Kopenhagen** = hoofdstad Denemarken. Ligt op eiland Seeland. Verbonden via brug + tunnel met Zweden (Öresundbrug).",
+  "wrongHints": [
+   null,
+   null,
+   null,
+   "Aarhus = wel grote stad in Denemarken, maar geen hoofdstad."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 175,
+  "bron": "leerpaden",
+  "waar": "topografie-nederland stap 2 vraag 4",
+  "q": "In welke provincie vind je veel **hunebedden**?",
+  "options": [
+   "Drenthe",
+   "Zeeland",
+   "Flevoland",
+   "Noord-Holland"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   null,
+   "Deze provincie is heel jong. Hunebedden zijn heel oud.",
+   null
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 176,
+  "bron": "leerpaden",
+  "waar": "trappen-van-vergelijking-po stap 3 vraag 2",
+  "q": "Welke is de **overtreffende** trap?",
+  "options": [
+   "het snelst",
+   "sneller",
+   "snel",
+   "sneller dan"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is de vergrotende trap.",
+   "Dat is de gewone vorm.",
+   "Dat is vergrotend (met 'dan')."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 177,
+  "bron": "leerpaden",
+  "waar": "verandering-groei-havo-vwo stap 2 vraag 2",
+  "q": "Tabel: x:1,2,3,4 | y: 4, 8, 16, 32. Welk model?",
+  "options": [
+   "Exponentieel met b=2",
+   "Lineair met b=4",
+   "Logistisch met grens 64",
+   "Kwadratisch met a=2"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bekijk de stappen tussen 4, 8, 16 en 32. Is het verschil elke keer 4?",
+   "Logistische groei vlakt af naar een grens. Zie je dat afvlakken in de tabel?",
+   "Reken y = 2x² eens uit voor x = 1 en x = 3. Klopt dat met de tabel?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 178,
+  "bron": "leerpaden",
+  "waar": "verhaal-diepte-lezen-po stap 3 vraag 9",
+  "q": "*\"Het meisje zat zo stil als een muis.\"* — Wat hebben het meisje en de muis hier met elkaar gemeen?",
+  "options": [
+   "Ze maken allebei bijna geen geluid",
+   "Ze zijn allebei klein en grijs",
+   "Ze eten allebei graag kaas",
+   "Ze zijn allebei bang voor katten"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Gaat de zin over hoe ze eruitzien, of over wat ze doen?",
+   null,
+   null
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 179,
+  "bron": "leerpaden",
+  "waar": "verhaal-diepte-lezen-po stap 4 vraag 6",
+  "q": "*\"Iedereen boog naar voren. Toen werd het doodstil.\"* — Wat gebeurt hier met de sfeer in de klas?",
+  "options": [
+   "Van verwachtingsvol naar geschrokken",
+   "Het blijft de hele tijd even gezellig",
+   "De kinderen vallen in slaap",
+   "Iedereen wordt boos op juf Karin"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Lees wat er ónder in de doos ligt — blijft het dan gezellig?",
+   "Betekent 'doodstil' dat iedereen slaapt, midden op een schooldag? Waaróm zegt niemand opeens meer iets?",
+   null
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 180,
+  "bron": "leerpaden",
+  "waar": "verwijswoorden-po stap 2 vraag 10",
+  "q": "*De bal rolt de straat op. ___ stuitert tegen een auto.* Welk woord past op de lege plek?",
+  "options": [
+   "Hij",
+   "Het",
+   "Haar",
+   "Hem"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zeg je 'het bal' of 'de bal'?",
+   null,
+   null
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 181,
+  "bron": "leerpaden",
+  "waar": "vlakke-figuren stap 17 vraag 6",
+  "q": "Omtrek cirkel met straal 5 = ?",
+  "options": [
+   "10π",
+   "5π",
+   "25π",
+   "π/5"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Omtrek = π × diameter. Wat is de diameter bij straal 5?",
+   "Dat is de oppervlakte (π × r²), niet de omtrek.",
+   "Je hebt π gedeeld door de straal. Bij de omtrek vermenigvuldig je."
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 182,
+  "bron": "leerpaden",
+  "waar": "vlakke-figuren-po stap 5 vraag 15",
+  "q": "Eenheid van omtrek is?",
+  "options": [
+   "m of cm",
+   "m² of cm²",
+   "kg",
+   "L"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Oppervlakte.",
+   "Gewicht.",
+   "Inhoud."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 183,
+  "bron": "leerpaden",
+  "waar": "volgorde-bewerkingen stap 5 vraag 7",
+  "q": "Bij **5 + 2 × (6 − 1)²** reken je eerst de haakjes uit: 6 − 1 = 5. Wat doe je **daarna**?",
+  "options": [
+   "5² uitrekenen",
+   "2 × 5 uitrekenen",
+   "5 + 2 uitrekenen",
+   "5 + 5 uitrekenen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wat komt na de haakjes in het rijtje H-M-V-D-O-A?",
+   "Wat komt na de haakjes in het rijtje H-M-V-D-O-A?",
+   "Wat komt na de haakjes in het rijtje H-M-V-D-O-A?"
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 184,
+  "bron": "leerpaden",
+  "waar": "volgorde-bewerkingen stap 6 vraag 3",
+  "q": "**(5 + 1)² − 4 × 3** = ?",
+  "options": [
+   "24",
+   "60",
+   "30",
+   "12"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk naar het teken tussen de twee delen: trek je af of tel je op?",
+   "Reken de twee stukken eerst apart uit: (5+1)² en 4×3 — en dán pas het teken ertussen.",
+   "Dit is alleen het tweede stuk — waar is (5+1)² gebleven?"
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 185,
+  "bron": "leerpaden",
+  "waar": "voortplanting-hormonen-biologie stap 3 vraag 3",
+  "q": "Wat gebeurt er bij de **menopauze**?",
+  "options": [
+   "De eierstokken stoppen geleidelijk met werken",
+   "De baarmoeder wordt langzaam afgebroken",
+   "De hypofyse stopt met het maken van FSH",
+   "De eileiders groeien langzaam dicht"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De baarmoeder blijft, maar functioneert niet meer voor zwangerschap.",
+   "Na de menopauze zit er juist veel FSH in het bloed. Stopt de hypofyse dan echt?",
+   "De eileiders blijven gewoon open. Waarom komt er dan toch geen eicel meer doorheen?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 186,
+  "bron": "leerpaden",
+  "waar": "voortplanting-hormonen-biologie stap 8 vraag 2",
+  "q": "Wat is het verschil tussen **diabetes type 1** en **type 2**?",
+  "options": [
+   "Type 1: geen insuline; type 2: cellen reageren er slecht op",
+   "Type 1 is een lichte vorm, type 2 een zware vorm",
+   "Type 1: door te veel suiker; type 2: aangeboren",
+   "Type 1: cellen reageren slecht; type 2: geen insuline"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Beide kunnen ernstig zijn — verschil zit in oorzaak.",
+   "Type 1 is een auto-immuunziekte. Ontstaat die door veel suiker te eten?",
+   "Bij welk type valt de afweer de cellen aan die insuline maken, zodat er geen insuline meer is?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 187,
+  "bron": "leerpaden",
+  "waar": "warmte-thermodynamica-havo-vwo stap 4 vraag 5",
+  "q": "Een warmtepomp levert 4 kJ warmte voor elke 1 kJ elektriciteit. Wat is dat?",
+  "options": [
+   "Een COP van 4",
+   "Rendement van 4%",
+   "Een vermogen van 4 kW",
+   "Een warmteverlies van 4 kJ"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — 4 kJ uit 1 kJ is méér dan 100%; hoe heet die verhouding bij een warmtepomp?",
+   "Niet — vermogen is energie per seconde; hier gaat het om een verhouding.",
+   "Van verlies is geen sprake: de pomp levert juist méér warmte dan de stroom die erin gaat."
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 188,
+  "bron": "leerpaden",
+  "waar": "weersvoorspelling-po stap 4 vraag 28",
+  "q": "Welke maanden zijn meestal **warmst** in NL?",
+  "options": [
+   "Juni-augustus",
+   "December-februari",
+   "Maart-mei",
+   "September-november"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Winter.",
+   "Lente.",
+   "Herfst."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 189,
+  "bron": "leerpaden",
+  "waar": "wereldoorlog1-geschiedenis stap 2 vraag 3",
+  "q": "Welk **plan** had Duitsland om snel te winnen?",
+  "options": [
+   "Schlieffenplan",
+   "Marshallplan",
+   "Morgenthauplan",
+   "Dawes-plan"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het Marshallplan was Amerikaanse hulp aan Europa na WO2.",
+   "Het Morgenthauplan was een Amerikaans plan voor Duitsland na WO2.",
+   "Het Dawesplan was een geldplan uit 1924, ná de oorlog."
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 190,
+  "bron": "leerpaden",
+  "waar": "werkwoord-tijden-po stap 5 vraag 14",
+  "q": "Vul in: 'Wij ___ blij.' (zijn, tegenwoordige tijd)",
+  "options": [
+   "zijn",
+   "is",
+   "bent",
+   "waren"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Hij/zij-vorm.",
+   "Jij-vorm.",
+   "Verleden."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 191,
+  "bron": "leerpaden",
+  "waar": "werkwoordsspelling-dt stap 3 vraag 7",
+  "q": "Kies de juiste vorm van **houden**: 'Mijn broer ____ zijn adem in.'",
+  "options": [
+   "houdt",
+   "houd",
+   "hout",
+   "houden"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Mijn broer = hij. Komt er een t achter de stam?",
+   "Waar is de d van de stam gebleven?",
+   null
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 192,
+  "bron": "leerpaden",
+  "waar": "werkwoordsspelling-dt stap 7 vraag 1",
+  "q": "Kies de juiste: **'____ jij vandaag jarig?'**",
+  "options": [
+   "Word",
+   "Wordt",
+   "Wordd",
+   "Worden"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij 'jij ACHTER het werkwoord' valt de t weg.",
+   "Een woord eindigt nooit op dd.",
+   "Meervoud past niet bij jij."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 193,
+  "bron": "leerpaden",
+  "waar": "werkwoordsvervoeging-duits stap 4 vraag 4",
+  "q": "Präteritum van **'spielen' (ich)** = ?",
+  "options": [
+   "spielte",
+   "spiele",
+   "gespielt",
+   "spielen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Spiele is 'ik speel', de tegenwoordige tijd. Welke vorm betekent 'ik speelde'?",
+   "Gespielt is het voltooid deelwoord, dat hoort na habe. Welke vorm staat zonder hulpwerkwoord?",
+   "Spielen is de infinitief. Welke vorm betekent 'ik speelde'?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 194,
+  "bron": "leerpaden",
+  "waar": "werkwoordsvervoeging-frans stap 5 vraag 3",
+  "q": "Participe passé van **'avoir'** = ?",
+  "options": [
+   "eu",
+   "avu",
+   "ai",
+   "été"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Avoir is onregelmatig, dus je kunt niet gewoon -u achter de stam zetten. Wat is de korte vorm?",
+   "Ai is de présent (j'ai), geen participe passé.",
+   "Été is het participe passé van être, niet van avoir."
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 195,
+  "bron": "leerpaden",
+  "waar": "werkwoordsvervoeging-frans stap 6 vraag 2",
+  "q": "**être + il** in Présent → ?",
+  "options": [
+   "il est",
+   "il a",
+   "il sont",
+   "il était"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'A' is een vorm van avoir (hebben). Welke vorm van être hoort bij il?",
+   "Sont hoort bij ils/elles (meervoud), niet bij il.",
+   "Était is de imparfait (hij was). De vraag gaat over de présent."
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 196,
+  "bron": "leerpaden",
+  "waar": "woordbetekenis-context-po stap 3 vraag 8",
+  "q": "Lees: *\"Op de muziekles leerde Ilse elke noot op de notenbalk lezen.\"* — Wat betekent 'noot' in deze zin?",
+  "options": [
+   "Een teken voor een muziektoon",
+   "Een harde vrucht met een dop",
+   "Een bladzijde uit een liedboek",
+   "Een instrument met snaren"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een walnoot is ook een noot, maar kun je een walnoot 'lezen'? Kijk naar 'muziekles' en 'notenbalk'.",
+   null,
+   null
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 197,
+  "bron": "leerpaden",
+  "waar": "woordenschat-engels-po stap 4 vraag 4",
+  "q": "Hoe schrijf je **maandag** correct?",
+  "options": [
+   "Monday",
+   "monday",
+   "MONDAY",
+   "Munday"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Engelse dagen krijgen een hoofdletter.",
+   "Niet helemaal hoofdletter.",
+   "Spelfout."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 198,
+  "bron": "leerpaden",
+  "waar": "woordenschat-po stap 1 vraag 2",
+  "q": "Welke is **GEEN deel** van woordenschat-vragen?",
+  "options": [
+   "Spelling-regels",
+   "Synoniemen",
+   "Antoniemen",
+   "Betekenis in zin"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Wel — synoniem zoeken hoort erbij.",
+   "Wel — tegenstellingen ook.",
+   "Wel — context begrijpen ook."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 199,
+  "bron": "leerpaden",
+  "waar": "woordsoorten-po stap 3 vraag 4",
+  "q": "*'De **lekkere** taart is **op**.'* — welk vetgedrukt woord is GEEN bijvoeglijk naamwoord?",
+  "options": [
+   "op",
+   "lekkere",
+   "allebei",
+   "geen van beide"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Lekkere' beschrijft de taart — wel bijvoeglijk.",
+   "Eén van de twee is wél bijvoeglijk.",
+   "Eén van de twee is géén bijvoeglijk."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 200,
+  "bron": "leerpaden",
+  "waar": "woordsoorten-po stap 5 vraag 8",
+  "q": "*'Jij **loopt** naar school.'* — Welke woordsoort is 'loopt'?",
+  "options": [
+   "Werkwoord",
+   "Zelfst. naamwoord",
+   "Bijvoeglijk",
+   "Voornaamwoord"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — geen ding.",
+   "Niet — geen eigenschap.",
+   "Niet."
+  ],
+  "niveau": "basisschool"
+ }
+]

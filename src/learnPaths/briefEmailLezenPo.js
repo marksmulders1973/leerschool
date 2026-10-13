@@ -253,16 +253,16 @@ Handig ezelsbruggetje: **de randen van de brief vertellen wie, wanneer en waarov
         q: "Wat is een verschil tussen een e-mail en een papieren brief?",
         options: [
           "Een e-mail heeft bovenaan vaste regels zoals 'Van:' en 'Aan:'",
-          "Een e-mail begint nooit met een aanhef zoals 'Beste'",
-          "Een papieren brief heeft nooit een datum erop",
-          "Een e-mail eindigt nooit met de naam van de schrijver",
+          "Een e-mail heeft geen aanhef zoals 'Beste', je begint meteen met de kern",
+          "Een papieren brief heeft geen datum, die staat alleen bij een e-mail",
+          "Alleen een papieren brief eindigt met een groet zoals 'Met vriendelijke groet'",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Een e-mail begint ook gewoon met 'Beste...'. Kijk eens naar de structuur boven de aanhef.",
           "Een papieren brief heeft een datum helemaal bovenaan, naast de plaatsnaam. Welk verschil is er dan wél?",
-          null,
+          "Ook een e-mail sluit je af met een groet en je naam. Wat staat er bij een e-mail boven de aanhef?",
         ],
         uitlegPad: {
           stappen: [

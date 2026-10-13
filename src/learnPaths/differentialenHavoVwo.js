@@ -111,7 +111,7 @@ const steps = [
         q: "Wat is **f''(x)** voor f(x) = x⁴?",
         options: ["12x²", "4x³", "24x", "12x³"],
         answer: 0,
-        wrongHints: [null, "Dat is f'(x), de eerste afgeleide. Wat krijg je als je 4x³ nog een keer differentieert?", "Dit is al de derde afgeleide. Tel hoe vaak je gedifferentieerd hebt.", "De factor 12 klopt, maar de exponent gaat bij élke keer differentiëren 1 omlaag. Hoe vaak deed je dat?"],
+        wrongHints: [null, "Dat is f'(x), de eerste afgeleide. Wat krijg je als je 4x³ nog een keer differentieert?", "Dit is al de derde afgeleide. Tel hoe vaak je gedifferentieerd hebt.", "Kijk naar de exponent: die gaat bij élke keer differentiëren 1 omlaag. Hoe vaak heb je gedifferentieerd, en klopt de exponent dan?"],
         uitlegPad: {
           stappen: [
             { titel: "Tweemaal differentiëren", tekst: "f(x) = x⁴.\nf'(x) = 4x³.\nf''(x) = 12x².\n3e afgeleide = 24x. Etc." },

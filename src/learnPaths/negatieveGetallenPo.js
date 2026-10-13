@@ -1464,7 +1464,7 @@ const steps = [
       { q: "Een hoogte onder zeeniveau is…", options: ["Negatief","Positief","Nul","Niet relevant"], answer: 0, wrongHints: [null, "Boven.", "Op niveau.", "Wel."] },
       { q: "**−7 + 7** = ?", options: ["0","−14","14","7"], answer: 0, wrongHints: [null, "Niet — tegengestelde.", "Niet — tegengestelde.", "Niet."] },
       { q: "**−3 × 2** = ?", options: ["−6","6","−1","−5"], answer: 0, wrongHints: [null, "Verkeerd teken.", "Niet zo.", "Niet."] },
-      { q: "**−2 × −3** = ?", options: ["6","−6","−5","5"], answer: 0, wrongHints: [null, "Verkeerd teken.", "Niet.", "Verkeerd teken."] },
+      { q: "**−2 × −3** = ?", options: ["6","−6","−5","5"], answer: 0, wrongHints: [null, "2 × 3 = 6 klopt, maar kijk naar het teken: min keer min wordt plus.", "Je hebt opgeteld in plaats van vermenigvuldigd, en min keer min wordt plus. Reken eerst 2 × 3.", "Het teken klopt, maar 5 is 2 + 3. Bij × reken je 2 × 3."] },
       { q: "Welk getal ligt **2 onder −5**?", options: ["−7","−3","2","7"], answer: 0, wrongHints: [null, "Andersom.", "Niet.", "Niet."] },
       { q: "**Verschil** tussen −4 en 6?", options: ["10","2","−10","−2"], answer: 0, wrongHints: [null, "Niet.", "Niet — verschil positief.", "Niet."] },
       { q: "Op getallenlijn: welke ligt **rechts** van −3?", options: ["0","−5","−10","−4"], answer: 0, wrongHints: [null, "Links.", "Verder links.", "Verder links."] },

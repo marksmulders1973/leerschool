@@ -127,10 +127,10 @@ const steps = [
         wrongHints: [null, "Zij schreef klassiekers als Jip en Janneke — dit boek gaat over groep 8.", "Zij schrijft over pesten en scheiding (Spijt!), niet over het afscheid van groep 8.", "Brits — dit is een oer-Nederlands schoolverhaal."],
       },
       {
-        q: "Wanneer **Kinderboekenweek**?",
+        q: "Wanneer is de **Kinderboekenweek**?",
         options: ["Oktober", "Februari", "Mei", "Geen vaste tijd"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Wel."],
+        wrongHints: [null, "In februari is het nog winter. De Kinderboekenweek is in de herfst, kort na het begin van het schooljaar. Welke maand is dat?", "In mei is het lente. De Kinderboekenweek is in de herfst, als de blaadjes van de bomen vallen. Welke maand past daarbij?", "De Kinderboekenweek is elk jaar rond dezelfde tijd, alleen het thema is steeds anders. In welk seizoen was het ook alweer?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is de Kinderboekenweek?", tekst: "De **Kinderboekenweek** is een jaarlijks evenement in NL om kinderen aan het LEZEN te krijgen. Sinds 1955 elk jaar in oktober." },

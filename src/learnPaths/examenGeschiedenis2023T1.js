@@ -121,7 +121,7 @@ const steps = [
         ],
         answer: 3,
         wrongHints: [
-          "1887 + Caoutchouc-artikel = grondwetswijziging die kiesrecht uitbreidde (\"Caoutchouc\" = \"rubber\" = flexibel). NIET de schoolstrijd-oplossing.",
+          "Bekijk beide delen apart. 'Caoutchouc' betekent rubber: er werd iets 'oprekbaar' gemaakt. Ging dat over het kiesrecht of over geld voor scholen?",
           "Klopt het jaartal 1887 bij de Pacificatie? Wanneer werd dat compromis gesloten?",
           "Waar ging het Caoutchouc-artikel over: kiesrecht of onderwijs? En in welk jaar kwam het?",
           null,

@@ -1,0 +1,998 @@
+[
+ {
+  "nr": 101,
+  "bron": "leerpaden",
+  "waar": "meetkunde-bouwsels stap 5 vraag 5",
+  "q": "Een **zwembad** is **10 m** lang, **5 m** breed en **2 m** diep. Hoeveel **m³** water past erin?",
+  "options": [
+   "100 m³",
+   "17 m³",
+   "50 m³",
+   "20 m³"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — heb je de getallen opgeteld? Volume is keer.",
+   "Te weinig — doet de diepte ook mee?",
+   null
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 102,
+  "bron": "leerpaden",
+  "waar": "meetkunde-bouwsels stap 6 vraag 5",
+  "q": "**2,5 liter** = ... **mL**?",
+  "options": [
+   "2500 mL",
+   "250 mL",
+   "25 mL",
+   "25.000 mL"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — hoeveel mL zit in 1 liter? Vermenigvuldig dat met 2,5.",
+   "Te weinig — dat is 0,25 L.",
+   "Te veel — dat is 25 liter. Tel de nullen nog eens na."
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 103,
+  "bron": "leerpaden",
+  "waar": "meten-gewicht-inhoud-tijd-po stap 1 vraag 7",
+  "q": "Een pak rijst weegt **2 pond**. Hoeveel gram is dat?",
+  "options": [
+   "1000 g",
+   "200 g",
+   "2000 g",
+   "500 g"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is 2 ons. Wat weegt een pond?",
+   "Dat zou 4 pond zijn.",
+   "Dat is 1 pond, maar je hebt 2 pond."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 104,
+  "bron": "leerpaden",
+  "waar": "meten-gewicht-inhoud-tijd-po stap 4 vraag 1",
+  "q": "Een recept voor **4 personen** vraagt **500 ml** melk. Hoeveel melk voor **6 personen**?",
+  "options": [
+   "750 ml",
+   "600 ml",
+   "500 ml",
+   "1000 ml"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Je voegt 2 personen toe, niet 1 — reken per persoon.",
+   "Voor meer personen heb je niet evenveel nodig.",
+   null
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 105,
+  "bron": "leerpaden",
+  "waar": "mol-stoichiometrie-havo-vwo stap 3 vraag 4",
+  "q": "Bij **2 mol H₂ + 3 mol O₂** (2H₂ + O₂ → 2 H₂O): welke is limiterend?",
+  "options": [
+   "H₂",
+   "O₂",
+   "Beide gelijk",
+   "Geen — overmaat beide"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — reken uit hoeveel mol O₂ je nodig hebt voor 2 mol H₂.",
+   "Hoeveel mol O₂ verbruikt 2 mol H₂? Is dat precies 3 mol?",
+   "Een reactie stopt zodra één stof op is. Welke stof raakt hier het eerst op?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 106,
+  "bron": "leerpaden",
+  "waar": "mol-stoichiometrie-havo-vwo stap 4 vraag 4",
+  "q": "Roesten van ijzer (Fe + O₂ + H₂O → roest): Fe **wordt**:",
+  "options": [
+   "Geoxideerd",
+   "Gereduceerd",
+   "Verzuurd",
+   "Opgelost"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — neemt Fe elektronen op of staat het ze af?",
+   "Verzuren gaat over de pH. Wat gebeurt er met de elektronen van ijzer?",
+   "Niet — er verandert iets aan de elektronen van Fe."
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 107,
+  "bron": "leerpaden",
+  "waar": "naamvallen-duits stap 3 vraag 2",
+  "q": "Hoe zeg je \"geen kind\"?",
+  "options": [
+   "kein Kind",
+   "keine Kind",
+   "keins Kind",
+   "keiner Kind"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'keine' = vrouwelijk; 'Kind' is onzijdig.",
+   "'Keins' gebruik je alleen zelfstandig ('Ich habe keins'), niet vóór een zelfstandig naamwoord. Welke vorm komt vóór 'Kind'?",
+   "'Keiner' is een naamvalsvorm (bijvoorbeeld datief vrouwelijk). Welke vorm hoort bij een onzijdig woord in de basisvorm?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 108,
+  "bron": "leerpaden",
+  "waar": "naamvallen-duits stap 9 vraag 5",
+  "q": "Welk lidwoord (mannelijk) verandert van NOM naar ACC?",
+  "options": [
+   "der → den",
+   "der → des",
+   "der → der",
+   "der → dem"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "'Des' hoort bij de genitief. Welke vorm krijgt der in de accusatief?",
+   "Bij die en das blijft het lidwoord in de accusatief gelijk. Geldt dat ook voor der?",
+   "'Dem' is de datief. In welke naamval staat het lijdend voorwerp?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 109,
+  "bron": "leerpaden",
+  "waar": "nederland-water-vo stap 4 vraag 1",
+  "q": "Wat wordt voorspeld als **zeespiegelstijging** in NL tot 2100?",
+  "options": [
+   "0,3 tot 1,2 meter",
+   "2 tot 4 meter",
+   "2 tot 5 cm",
+   "0,1 tot 0,2 meter"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "2 tot 4 meter wordt pas ná 2100 mogelijk geacht, als Antarctica snel smelt. Wat verwacht het KNMI tot 2100?",
+   "Nu stijgt de zee al zo'n 3 à 4 mm per jaar, en dat versnelt. Hoeveel is dat in ongeveer 75 jaar?",
+   "Reken: 3 à 4 mm per jaar, en de stijging versnelt nog. Kom je in 2100 dan onder de 20 cm uit?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 110,
+  "bron": "leerpaden",
+  "waar": "nederlands-cse-havo-vwo stap 3 vraag 2",
+  "q": "Welke is een **hellend-vlak-drogreden**?",
+  "options": [
+   "Als X, dan onvermijdelijk Y en daarna ramp Z",
+   "Iedereen doet X, dus X is goed",
+   "Jij bent dom, dus jouw idee over X klopt niet",
+   "X lijkt op Y, dus wat voor Y geldt, geldt voor X"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is een beroep op de meerderheid (ad populum).",
+   "Dat is een persoonlijke aanval (ad hominem).",
+   "Een vergelijking is geen kettingredenering."
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 111,
+  "bron": "leerpaden",
+  "waar": "nederlands-cse-havo-vwo stap 5 vraag 1",
+  "q": "Bij **'iedereen vindt het, dus moet het waar zijn'** is dit:",
+  "options": [
+   "Ad populum",
+   "Vals dilemma",
+   "Cirkelredenering",
+   "Hellend vlak"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Bij een vals dilemma krijg je maar twee keuzes. Zie je hier een of-of-keuze?",
+   "Bij een cirkelredenering komt de conclusie terug als argument. Waar beroept deze zin zich op?",
+   "Bij een hellend vlak voorspel je een keten van gevolgen. Waar beroept deze zin zich op?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 112,
+  "bron": "leerpaden",
+  "waar": "nederlandse-kunstenaars-po stap 2 vraag 3",
+  "q": "Welk **beroemd schilderij** is van Van Gogh?",
+  "options": [
+   "Zonnebloemen",
+   "Nachtwacht",
+   "Meisje met Parel",
+   "Watermolen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Rembrandt.",
+   "Vermeer.",
+   "Niet."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 113,
+  "bron": "leerpaden",
+  "waar": "nederlandse-staat-maatschappijleer stap 11 vraag 10",
+  "q": "**Trias politica** verdeelt macht in?",
+  "options": [
+   "3",
+   "2",
+   "4",
+   "5"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Welke macht oordeelt over wie de wet overtreedt? Telt die ook mee?",
+   "Hoeveel machten noemde Montesquieu als je ze opsomt?",
+   "Montesquieu splitste de macht om misbruik te voorkomen. Hoeveel machten noemde hij?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 114,
+  "bron": "leerpaden",
+  "waar": "negatieve-getallen stap 10 vraag 1",
+  "q": "Reken uit: (−3) × (−4) − 5.",
+  "options": [
+   "7",
+   "−17",
+   "12",
+   "−7"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Let op het teken: min × min = plus. Bereken eerst de keer-som, trek dan pas 5 af.",
+   "Dat is alleen de tussenstap — je bent er bijna, maar welke stap ontbreekt nog?",
+   "Je hebt het teken van de keer-som onjuist bepaald — denk: min × min = welk teken?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 115,
+  "bron": "leerpaden",
+  "waar": "negatieve-getallen-po stap 5 vraag 24",
+  "q": "**−2 × −3** = ?",
+  "options": [
+   "6",
+   "−6",
+   "−5",
+   "5"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Verkeerd teken.",
+   "Niet.",
+   "Verkeerd teken."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 116,
+  "bron": "leerpaden",
+  "waar": "netwerken-internet-informatica stap 2 vraag 2",
+  "q": "Wat doet **DNS** (Domain Name System)?",
+  "options": [
+   "Vertaalt een domeinnaam naar een IP-adres",
+   "Beveiligt je wachtwoorden onderweg",
+   "Registreert wie een domeinnaam bezit",
+   "Kiest de snelste route voor je pakketjes"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Beveiliging is een andere taak (bv. HTTPS).",
+   "Dat doet een registrar (zoals SIDN voor .nl). Wat gebeurt er als je een naam in je browser typt?",
+   "Routes kiezen doet een router."
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 117,
+  "bron": "leerpaden",
+  "waar": "nieuwsbericht-lezen-po stap 4 vraag 7",
+  "q": "De kop zegt: *\"Heel Zandhoven in de ban van ontsnapte alpaca\"*. Wat kun je hierover zeggen na het lezen van de tekst?",
+  "options": [
+   "De kop overdrijft: veel mensen hielpen, maar niet letterlijk iedereen",
+   "Elke inwoner van Zandhoven heeft meegezocht naar Berry",
+   "De kop klopt niet, want niemand in het dorp wist van de ontsnapping",
+   "De kop gaat eigenlijk over de storm van het weekend"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kun je in de tekst aanwijzen dat álle inwoners zochten? Er staat 'buurtbewoners hielpen mee' — is dat hetzelfde als iedereen?",
+   "De tekst noemt juist zoekende buurtbewoners en posters. Wat maakt een kop graag groter dan de tekst?",
+   null
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 118,
+  "bron": "leerpaden",
+  "waar": "olympische-spelen-po stap 4 vraag 5",
+  "q": "**Goud** medaille voor?",
+  "options": [
+   "1e plaats",
+   "2e",
+   "3e",
+   "4e"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zilver.",
+   "Brons.",
+   "Dan krijg je een diploma."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 119,
+  "bron": "leerpaden",
+  "waar": "ontdekkingsreizen-po stap 4 vraag 7",
+  "q": "Wat was het doel van **ontdekkingsreizen** (15e-17e eeuw)?",
+  "options": [
+   "Nieuwe handelsroutes + grondstoffen vinden",
+   "Nieuwe vakantieplekken + stranden vinden",
+   "Zeilwedstrijden winnen + records breken",
+   "Alleen sterren + dieren onderzoeken"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Toerisme bestond nog niet — het risico was veel te hoog.",
+   "Waren het wedstrijden? Denk aan wat de schepen mee terug namen.",
+   "Onderzoek gebeurde wel een beetje, maar was dat de hoofdreden voor zulke dure reizen?"
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 120,
+  "bron": "leerpaden",
+  "waar": "optica-havo-vwo stap 1 vraag 3",
+  "q": "Brekingsindex van diamant is 2,42. Snelheid van licht in diamant?",
+  "options": [
+   "~1,24·10⁸ m/s",
+   "~3,0·10⁸ m/s",
+   "~7,3·10⁸ m/s",
+   "~0,41·10⁸ m/s"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "3,0·10⁸ m/s is de lichtsnelheid in vacuüm. Gaat licht in diamant even snel?",
+   "Je vermenigvuldigde c met n. Kan licht in een stof sneller gaan dan in vacuüm?",
+   "Je rekende 1/n uit. Wat moet je eigenlijk door n delen?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 121,
+  "bron": "leerpaden",
+  "waar": "optica-havo-vwo stap 1 vraag 4",
+  "q": "Reflectiewet zegt:",
+  "options": [
+   "Invalshoek = reflectiehoek, t.o.v. de normaal",
+   "Invalshoek = brekingshoek, t.o.v. de normaal",
+   "Invalshoek + reflectiehoek = 90°, t.o.v. de normaal",
+   "Reflectiehoek = 2 × invalshoek, t.o.v. de normaal"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet — dat is breking, niet reflectie.",
+   "Kies een invalshoek van 30°: kaatst de straal dan onder 60° terug?",
+   "Teken een straal op een spiegel: gaat de teruggekaatste straal twee keer zo schuin weg?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 122,
+  "bron": "leerpaden",
+  "waar": "optica-havo-vwo stap 5 vraag 3",
+  "q": "Wat onthult **spectraal-analyse** van een ster?",
+  "options": [
+   "Chemische samenstelling + temperatuur + snelheid",
+   "Afstand tot de aarde + leeftijd + grootte",
+   "Kleur + helderheid + afstand tot de aarde",
+   "Massa + leeftijd + aantal planeten eromheen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een spectrum toont lijnen bij vaste golflengtes. Welke eigenschappen lees je direct af uit welke lijnen er zijn en hoe ver ze verschoven zijn?",
+   "Kleur en helderheid zie je ook zonder spectrum. Wat vertellen de losse lijnen in het spectrum je extra?",
+   "Massa en leeftijd lees je niet direct af uit spectraallijnen. Wat vertellen de lijnen en hun verschuiving wel?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 123,
+  "bron": "leerpaden",
+  "waar": "parabolen stap 7 vraag 1",
+  "q": "Bij regel y = x: ligt het punt (5, 5) op de lijn?",
+  "options": [
+   "Ja",
+   "Nee"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Vul de x- en y-waarde van dit punt in de regel y = x in — klopt die vergelijking dan?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 124,
+  "bron": "leerpaden",
+  "waar": "passe-compose-frans stap 2 vraag 1",
+  "q": "Wat is het participe passé van **manger**?",
+  "options": [
+   "mangé",
+   "manger",
+   "mangi",
+   "mangu"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is de infinitief, niet p.p.",
+   "Verkeerde uitgang — -i hoort bij -ir-werkwoorden.",
+   "-u hoort bij -re-werkwoorden zoals vendre (vendu). Op welke letters eindigt manger?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 125,
+  "bron": "leerpaden",
+  "waar": "periodiek stap 13 vraag 3",
+  "q": "*\"y = 2·cos(x − 90°). Wat is een gelijkwaardige sin-vorm?\"*",
+  "options": [
+   "y = 2·sin(x)",
+   "y = 2·sin(x − 90°)",
+   "y = 2·cos(x + 90°)",
+   "y = -2·sin(x)"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "sin(x − 90°) = −cos(x) — is dat hetzelfde als cos(x − 90°)?",
+   "cos(x+90°) = -sin(x), niet hetzelfde als cos(x-90°).",
+   "Vul x = 90° in: 2·cos(0°) = 2. Wat geeft −2·sin(90°)?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 126,
+  "bron": "leerpaden",
+  "waar": "pincode-belasting stap 6 vraag 3",
+  "q": "Een tuinman die contant betaald wordt zonder factuur:",
+  "options": [
+   "Mogelijk zwart werk zonder belasting",
+   "Een gift, die de tuinman niet hoeft op te geven",
+   "Witwassen, omdat contant betalen verboden is",
+   "Belastingontwijking: legaal gebruik van regels"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een gift krijg je zonder er iets voor te doen. De tuinman heeft gewerkt — is dit dan nog een gift?",
+   "Contant betalen mag gewoon, en witwassen gaat over geld uit misdaad. Is het geld van deze klant crimineel?",
+   "Ontwijken gebeurt binnen de regels van de wet. Valt dit binnen de regels?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 127,
+  "bron": "leerpaden",
+  "waar": "pincode-buitenland-eu stap 4 vraag 1",
+  "q": "Koers **€1 = $1,10**. Je wilt **$220** kopen. Hoeveel euro nodig?",
+  "options": [
+   "€200",
+   "€220",
+   "€242",
+   "€110"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een euro is méér waard dan een dollar. Heb je dan meer of minder euro's nodig dan dollars?",
+   "Je hebt 220 met 1,10 vermenigvuldigd. Krijg je voor één euro meer of minder dan één dollar?",
+   "Dat is precies de helft van 220. Hoeveel dollar krijg je eigenlijk voor €110?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 128,
+  "bron": "leerpaden",
+  "waar": "pincode-geld-sparen-lenen stap 4 vraag 2",
+  "q": "Wat is het **verschil tussen sparen en beleggen**?",
+  "options": [
+   "Sparen is veilig met lage rente; beleggen kan meer opleveren maar ook verlies",
+   "Beleggen is veilig met lage rente; sparen kan meer opleveren maar ook verlies",
+   "Bij sparen koop je aandelen; bij beleggen zet je geld vast op een rekening",
+   "Beide zijn veilig door de spaargarantie, maar beleggen levert meer op"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Welke van de twee kan in waarde dalen: geld op de bank of aandelen?",
+   "Wat koop je als je belegt: een stukje van een bedrijf, of zet je geld op een rekening?",
+   "De spaargarantie geldt voor spaargeld bij een bank. Geldt hij ook voor aandelen?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 129,
+  "bron": "leerpaden",
+  "waar": "pincode-ondernemen stap 1 vraag 3",
+  "q": "Welke instantie schrijft je in als nieuwe ondernemer?",
+  "options": [
+   "Kamer van Koophandel",
+   "De gemeente waar je woont",
+   "Het UWV (werk en uitkeringen)",
+   "De Belastingdienst"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "De gemeente regelt soms vergunningen, maar houdt geen register van alle bedrijven bij.",
+   "Het UWV regelt uitkeringen als je werkloos of ziek bent. Wie houdt het register van alle bedrijven bij?",
+   "De Belastingdienst krijgt je gegevens wél door, maar schrijft je niet zelf in."
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 130,
+  "bron": "leerpaden",
+  "waar": "pincode-overheid stap 4 vraag 4",
+  "q": "Bij **1% rentestijging op €500 mrd schuld** = ... extra rente per jaar?",
+  "options": [
+   "€5 miljard",
+   "€500 miljoen",
+   "€500 miljard",
+   "€50 miljoen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "€500 miljoen is 0,1% van €500 miljard. Hoeveel is 1%?",
+   "Veel te veel — dat is de hele schuld.",
+   "Reken uit: 1% van 500 miljard. Hoeveel nullen houd je over?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 131,
+  "bron": "leerpaden",
+  "waar": "pincode-werk-arbeidsmarkt stap 6 vraag 3",
+  "q": "Hogere productiviteit kan leiden tot:",
+  "options": [
+   "Lagere kosten per product of hogere lonen",
+   "Hogere prijzen en hogere lonen",
+   "Meer werkloosheid en lagere lonen",
+   "Lagere winst en minder investeringen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Als je per uur meer maakt, wordt elk product dan duurder of goedkoper om te maken?",
+   "Soms verdwijnt werk door machines, maar wat gebeurt er gemiddeld met lonen als iedereen meer per uur maakt?",
+   "Als je met hetzelfde werk meer maakt, dalen je kosten per product. Wat doet dat met de winst?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 132,
+  "bron": "leerpaden",
+  "waar": "platentektoniek-aardrijkskunde stap 4 vraag 1",
+  "q": "Wat is een **midoceanische rug**?",
+  "options": [
+   "Onderzeese bergketen waar nieuwe korst ontstaat",
+   "Diepe geul waar platen onder elkaar duiken",
+   "Een hoge bergketen midden op een continent",
+   "Een zandbank die door stroming ontstaat"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een diepe geul (trog) ontstaat waar een plaat onder een andere duikt. Gaan de platen bij een rug naar elkaar toe of uit elkaar?",
+   "Kijk naar het woord 'midoceanisch'. Ligt zo'n rug midden op een continent?",
+   "Een zandbank is los zand, laag en ondiep. Een rug is een keten van duizenden kilometers: waar komt dat gesteente vandaan?"
+  ],
+  "niveau": "middelbaar"
+ },
+ {
+  "nr": 133,
+  "bron": "leerpaden",
+  "waar": "plattegrond-legenda-po stap 1 vraag 6",
+  "q": "Een plattegrond lijkt nog het meest op...",
+  "options": [
+   "een foto recht van bovenaf",
+   "een selfie",
+   "een filmpje",
+   "een geschilderd portret"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Een selfie is van voren, niet van boven.",
+   "Een plattegrond beweegt niet.",
+   "Een portret toont een gezicht, geen indeling."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 134,
+  "bron": "leerpaden",
+  "waar": "plattegrond-legenda-po stap 3 vraag 3",
+  "q": "Je staat bij de ingang. Het winkeltje ligt eerst rechtdoor, dan linksaf. Welke kant ga je als allereerste op?",
+  "options": [
+   "rechtdoor",
+   "linksaf",
+   "rechtsaf",
+   "terug"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat is de tweede stap, niet de eerste.",
+   "Daar staat niets over in de route.",
+   "Je gaat juist vooruit, niet terug."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 135,
+  "bron": "leerpaden",
+  "waar": "recyclen-afval-po stap 4 vraag 17",
+  "q": "Wat is **circulaire economie**?",
+  "options": [
+   "Spullen steeds opnieuw gebruiken",
+   "Spullen kopen, gebruiken en weggooien",
+   "Alles na gebruik verbranden",
+   "Reclame maken voor nieuwe spullen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Circulair komt van cirkel. Is dit een rondje?",
+   "Dan gaan de grondstoffen juist verloren.",
+   "Circulair komt van cirkel. Is dit een rondje?"
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 136,
+  "bron": "leerpaden",
+  "waar": "recyclen-afval-po stap 4 vraag 19",
+  "q": "**Boyan Slat** is bekend om?",
+  "options": [
+   "Plastic uit zee halen",
+   "Racen in de Formule 1",
+   "Winnen van schaatsgoud",
+   "Politiek in de Tweede Kamer"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat doet Max Verstappen. Waar is Boyan Slat mee bezig?",
+   "Sport, geen milieu-werk.",
+   "Geen politicus — een ondernemer."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 137,
+  "bron": "leerpaden",
+  "waar": "redactiesommen-pad stap 1 vraag 4",
+  "q": "Wat is een **redactiesom**?",
+  "options": [
+   "Een rekensom in een verhaal",
+   "Een som met alleen getallen en tekens",
+   "Een som die je hardop opzegt",
+   "Een rijtje met de tafels"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zo'n som heet een kale som. Wat is er anders bij een redactiesom?",
+   null,
+   "Bij een redactiesom lees je eerst iets. Wat lees je dan?"
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 138,
+  "bron": "leerpaden",
+  "waar": "redactiesommen-pad stap 5 vraag 3",
+  "q": "*'Een vrachtwagen vervoert 24 dozen van 18 kg. Plus zijn eigen gewicht 1200 kg. **Totaal gewicht**?'*",
+  "options": [
+   "1632 kg",
+   "432 kg",
+   "1212 kg",
+   "1800 kg"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Te weinig — vergeet vrachtwagen-gewicht niet.",
+   "Klopt niet — 24 dozen van 18 kg: hoeveel kg is dat samen?",
+   "Veel te veel."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 139,
+  "bron": "leerpaden",
+  "waar": "redactiesommen-pad stap 5 vraag 24",
+  "q": "Bij **'samen'** in een redactiesom kies je?",
+  "options": [
+   "Optellen",
+   "Aftrekken",
+   "Vermenigvuldigen",
+   "Delen"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Verschil = aftrekken.",
+   "Per groep = ×.",
+   "Eerlijk verdelen = ÷."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 140,
+  "bron": "leerpaden",
+  "waar": "rekenen-tot-100-nieuwkomers stap 3 vraag 4",
+  "q": "**74 − 4 =** ?",
+  "options": [
+   "70",
+   "69",
+   "60",
+   "80"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Nee, 69 is één te weinig. Tel nog eens precies. Eerst de tientallen eraf, dan de eenheden.",
+   "Nee, 60 is tien te weinig. Kijk goed naar de tientallen. Eerst de tientallen eraf, dan de eenheden.",
+   "Nee, 80 is tien te veel. Kijk goed naar de tientallen. Eerst de tientallen eraf, dan de eenheden."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 141,
+  "bron": "leerpaden",
+  "waar": "rekenen-tot-20-nieuwkomers stap 4 vraag 3",
+  "q": "**8 + 7 =** ?",
+  "options": [
+   "15",
+   "5",
+   "16",
+   "14"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Nee, 5 is tien te weinig. Kijk goed naar de tientallen. Maak eerst 10: hoeveel moet er bij 8 om 10 te krijgen? Doe daarna de rest van 7 erbij.",
+   "Nee, 16 is één te veel. Tel nog eens precies. Maak eerst 10: hoeveel moet er bij 8 om 10 te krijgen? Doe daarna de rest van 7 erbij.",
+   "Nee, 14 is één te weinig. Tel nog eens precies. Maak eerst 10: hoeveel moet er bij 8 om 10 te krijgen? Doe daarna de rest van 7 erbij."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 142,
+  "bron": "leerpaden",
+  "waar": "rekenverhaaltjes-nieuwkomers stap 4 vraag 2",
+  "q": "Tim heeft 10 koekjes. Hij geeft de helft aan Olena. Hoeveel koekjes krijgt Olena?",
+  "options": [
+   "5",
+   "20",
+   "10",
+   "4"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Nee, 20 is het dubbele van 10. De helft is kleiner. Is het twee keer zoveel, of de helft? Of steeds hetzelfde getal?",
+   "Nee, 10 staat al in de vraag. Je moet nog rekenen. Is het twee keer zoveel, of de helft? Of steeds hetzelfde getal?",
+   "Nee, 4 is één te weinig. Tel nog eens precies. Is het twee keer zoveel, of de helft? Of steeds hetzelfde getal?"
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 143,
+  "bron": "leerpaden",
+  "waar": "rijmen-letters-kleuters-po stap 3 vraag 7",
+  "q": "In welk woord zie je de letter **o**? 👀",
+  "options": [
+   "boot ⛵",
+   "kip 🐔",
+   "bus 🚌",
+   "vis 🐟"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Kijk letter voor letter: k-i-p. Zie je ergens een dicht rondje zoals de *o*?",
+   "Kijk goed naar b-u-s — staat daar een *o* tussen?",
+   null
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 144,
+  "bron": "leerpaden",
+  "waar": "samenstellingen-tussenletters-po stap 2 vraag 8",
+  "q": "Hoe schrijf je: de borstel voor je tanden?",
+  "options": [
+   "tandenborstel",
+   "tandeborstel",
+   "tandsborstel",
+   "tanden borstel"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Hoe eindigt het meervoud van 'tand'?",
+   null,
+   "Schrijf je een samenstelling los of aan elkaar?"
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 145,
+  "bron": "leerpaden",
+  "waar": "samenstellingen-tussenletters-po stap 3 vraag 8",
+  "q": "Welk woord is FOUT gespeld, omdat de tussen-s ontbreekt?",
+  "options": [
+   "oorlogschip",
+   "fietsbel",
+   "kerstboom",
+   "dorpsstraat"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Spreek dit woord uit: hoor je een extra s tussen de twee delen?",
+   null,
+   "Kijk goed: staat de s die je hoort er al in?"
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 146,
+  "bron": "leerpaden",
+  "waar": "samenstellingen-tussenletters-po stap 4 vraag 5",
+  "q": "Hoe schrijf je: een winkel waar je schoenen koopt?",
+  "options": [
+   "schoenenwinkel",
+   "schoenewinkel",
+   "schoeneswinkel",
+   "schoenenswinkels"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Het is -en-, niet alleen -e-.",
+   "Er hoort geen -s- in.",
+   "Dat is het meervoud, en er hoort geen -s- in."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 147,
+  "bron": "leerpaden",
+  "waar": "samenvatten-hoofdgedachte-po stap 2 vraag 4",
+  "q": "De titel van een tekst is: **'Waarom slapen zo belangrijk is'**. Wat zal de hoofdgedachte waarschijnlijk zijn?",
+  "options": [
+   "Slapen is belangrijk",
+   "Dromen zijn spannend",
+   "Slapen is saai",
+   "Een bed is duur"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Zegt de titel iets over dromen?",
+   null,
+   "Waar gaat de titel over: slapen of bedden?"
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 148,
+  "bron": "leerpaden",
+  "waar": "samenvatten-hoofdgedachte-po stap 4 vraag 7",
+  "q": "Anna schrijft voor haar samenvatting alle zinnen van de tekst **precies** over. Wat gaat er mis?",
+  "options": [
+   "Ze gebruikt geen eigen woorden",
+   "Ze laat de hoofdgedachte weg",
+   "Ze voegt haar eigen mening toe",
+   "Haar samenvatting is te kort"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   null,
+   "Als ze alles overschrijft, schrijft ze haar mening dan op?",
+   "Wordt iets korter als je alles overschrijft?"
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 149,
+  "bron": "leerpaden",
+  "waar": "samenvatten-hoofdgedachte-po stap 5 vraag 8",
+  "q": "Tekst: 'Veel scholen verbieden mobieltjes in de klas. Studies tonen dat kinderen zich daardoor beter concentreren. **Dus is dit verbod een goede zaak.**' — Wat is de **hoofdgedachte**?",
+  "options": [
+   "Mobielverbod op school is positief",
+   "Mobieltjes zijn duur",
+   "Scholen zijn streng",
+   "Kinderen vinden het oneerlijk"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Niet vermeld — geen prijs-info.",
+   "Wel deels (over scholen) maar te zwak — gaat over EFFECT verbod, niet streng-zijn.",
+   "Niet vermeld — geen kind-meningen genoemd."
+  ],
+  "niveau": "basisschool"
+ },
+ {
+  "nr": 150,
+  "bron": "leerpaden",
+  "waar": "schaal-kaart-rekenen-po stap 3 vraag 8",
+  "q": "Schaal 1 : 200.000. Twee steden liggen in het echt 30 km uit elkaar. Hoe ver is dat op de kaart?",
+  "options": [
+   "15 cm",
+   "30 cm",
+   "150 cm",
+   "1,5 cm"
+  ],
+  "answer": 0,
+  "wrongHints": [
+   null,
+   "Dat zou kloppen bij schaal 1 : 100.000 — kijk nog eens naar het schaalgetal.",
+   null,
+   "Te klein — hoeveel cm zijn 30 km?"
+  ],
+  "niveau": "basisschool"
+ }
+]

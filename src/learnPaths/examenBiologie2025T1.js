@@ -192,8 +192,8 @@ const steps = [
         wrongHints: [
           "Een ader brengt bloed TERUG naar het hart. Gaat het virus in de hals van het hart naar de kop, of andersom?",
           null,
-          "Longslagader gaat VAN hart naar longen (met arm bloed) — niet vanuit longen.",
-          "Longslagader gaat van hart naar longen, niet andersom.",
+          "Bekijk elk bloedvat in de rij apart. Welk vat brengt bloed van de longen naar het hart, en welk vat brengt bloed van het hart naar de kop?",
+          "Bekijk elk bloedvat in de rij apart. Welke kant stroomt het bloed in de longslagader op: naar de longen toe of van de longen af?",
         ],
         explanation: "Vanuit longblaasje gaat zuurstofrijk bloed via **longader** terug naar het hart (linker harthelft). Hart pompt het via de **aorta** (grote slagader) richting lichaam. Naar de kop gaat het via een **halsslagader** (slagader = van hart weg). Een halsader zou bloed terug naar het hart brengen, niet ernaartoe.",
         examenBron: BRON_LABEL(46),
@@ -294,7 +294,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Producent = plant of alg (maakt zelf voedsel via fotosynthese). Vingerdier is een dier, eet larven.",
+          "Producent = plant of alg die zelf voedsel maakt met fotosynthese. Kan een vingerdier dat?",
           "Reducent = afbreker (schimmel, bacterie die dood materiaal afbreekt). Breekt een vingerdier dood materiaal af, of doet het iets anders om aan voedsel te komen?",
         ],
         explanation: "Een **vingerdier** is een primaat uit Madagaskar die larven eet. Dieren die andere organismen (planten of dieren) eten = **consumenten**. Producenten = planten/algen (fotosynthese). Reducenten = schimmels/bacteriën (afbraak van dood materiaal).",

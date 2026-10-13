@@ -57,7 +57,7 @@ const steps = [
           null,
           "Een kat is iets, geen actie. Welk woord vertelt wat de kat *doet*?",
           "Melk is een ding. Wat doet de kat met de melk?",
-          "Een lidwoord. Zoek het woord dat een **actie** beschrijft.",
+          "'De' staat vóór 'kat'. Vertelt dat woord wat de kat doet?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Werkwoord = actie", tekst: "Drinkt zegt wat de kat doet → werkwoord." }],
@@ -75,8 +75,8 @@ const steps = [
         wrongHints: [
           null,
           "Broertje is een persoon. Welk woord beschrijft wat er met hem **gebeurt**?",
-          "Een getal. Werkwoorden zijn nooit getallen — zoek het woord dat een **verandering** aangeeft.",
-          "Een tijdsaanduiding. Welk woord zegt wat er verandert?",
+          "'Zes' zegt hoeveel. Kun je 'zes' vervoegen, zoals ik werk, jij werkt?",
+          "'Jaar' kun je tellen: één jaar, twee jaren. Is het een doe-woord, of een ding?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Worden = verandering", tekst: "Wordt zegt wat er met broertje gebeurt → werkwoord." }],
@@ -105,13 +105,13 @@ const steps = [
     checks: [
       {
         q: "Wat is de stam van **fietsen**?",
-        options: ["fiets", "fietst", "fietsen", "fie"],
+        options: ["fiets", "fietst", "fietsen", "fiet"],
         answer: 0,
         wrongHints: [
           null,
           "Daar zit een -t bij. Bij de stam haal je alleen -en eraf — geen letters toevoegen.",
           "Dat is het hele werkwoord. Haal -en eraf.",
-          "Te kort. Haal alleen -en eraf, niet meer.",
+          "Je hebt de s ook weggehaald. Welk stukje haal je precies van het hele werkwoord af?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Haal -en eraf", tekst: "fietsen − en = fiets." }],
@@ -227,7 +227,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
           null,
           "Bij **ik** komt er nooit -t bij. Wat is de stam van krijgen?",
           "Hele werkwoord = niet bij \"ik\" gebruiken. Haal -en eraf.",
-          "-d achter de stam bestaat niet bij ik in de tegenwoordige tijd. Stam alleen!",
+          "Hoor je na de stam van 'krijgen' nog een d? Wat komt er bij 'ik' in de tegenwoordige tijd achter de stam?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Ik krijg = stam", tekst: "Stam van krijgen = krijg. Bij ik geen -t." }],
@@ -282,7 +282,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
           null,
           "Bij **vraag-omkering** (pv vóór 'jij') geldt: geen -t achter de stam!",
           "Hele werkwoord past niet hier. En bij vraag-omkering: stam zonder uitgang.",
-          "-d in tegenwoordige tijd bestaat niet. En bij omkering: alleen de stam.",
+          "Hoor je aan het eind van '… jij ook mee?' een d? Wat is de stam van 'gaan', en wat komt erachter als 'jij' na het werkwoord staat?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Vraag-omkering: geen t", tekst: "Ga jij? — pv vóór jij = geen -t." }],
@@ -415,7 +415,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
         wrongHints: [
           null,
           "Stam = hoor. Zit de **r** in 't kofschip? Loop het rijtje langs.",
-          "Tegenwoordige tijd, niet verleden. En r zit niet in 't kofschip.",
+          "'Hij hoort' is tegenwoordige tijd. Welke uitgang krijgt de verleden tijd van 'horen'? Toets de r aan 't kofschip.",
           "Hele werkwoord, niet vervoegd. Stam + uitgang voor de verleden tijd.",
         ],
         uitlegPad: {
@@ -434,7 +434,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
         wrongHints: [
           null,
           "De stam eindigt op de klank **ch**. Staat ch in 't kofschip?",
-          "Dit is meervoud. Vraag is naar ik-vorm.",
+          "Zo schrijf je het als wij of zij lachten. Hoe schrijf je het bij ik?",
           "Eén t is genoeg: stam lach + te. Toets aan 't kofschip.",
         ],
         uitlegPad: {
@@ -480,7 +480,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
         wrongHints: [
           null,
           "Stam = maak, eindigt op **k**. Zit k in 't kofschip?",
-          "Eerst toetsen aan 't kofschip. Welke letter is dat?",
+          "Er mist iets achter de stam. Welke letter komt er na 'gemaak', en hoe bepaal je die?",
           "Dat is verleden tijd, niet voltooid deelwoord. Voltooid begint met ge-.",
         ],
         uitlegPad: {
@@ -598,7 +598,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
         wrongHints: [
           null,
           "Doe de truc: vervang door werkt of gewerkt. \"Wat werkt er?\" of \"Wat gewerkt er?\" — wat klinkt als tegenwoordige tijd?",
-          "Verleden tijd — maar de zin zegt \"nu\". Toets de tijd!",
+          "'Gebeurde' is verleden tijd. Welk woord in de zin vertelt wanneer het gebeurt?",
           "Hele werkwoord — past niet bij \"wat\" als pv. Welke vorm hoort bij één ding ('wat') in de tegenwoordige tijd?",
         ],
         uitlegPad: {
@@ -770,7 +770,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
         wrongHints: [
           null,
           "Lezen is sterk. Geen ge + stam + d/t. Hoe vervoeg je het wel?",
-          "Niet bestaand woord. Sterke werkwoorden krijgen geen d/t.",
+          "Lezen is een sterk werkwoord. Krijgt het voltooid deelwoord dan ge- + stam + t, of iets anders?",
           "Verleden tijd, maar er staat \"heeft\" — dat vraagt om voltooid.",
         ],
         uitlegPad: {
@@ -839,7 +839,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
         wrongHints: [
           null,
           "Bij **ik** komt nooit een -t. Doe de lopen-test.",
-          "Niet bestaand woord. Ik = stam alleen.",
+          "'Wort' klinkt hetzelfde, maar met welke letter eindigt de stam van 'worden'?",
           "Hele werkwoord. Bij ik gebruik je de stam.",
         ],
         uitlegPad: {
@@ -858,7 +858,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
         wrongHints: [
           null,
           "Tegenwoordige tijd. Maar de zin zegt \"gisteren\".",
-          "Bestaat niet. Doen is sterk: in de verleden tijd komt er geen extra -t bij.",
+          "Doen is een sterk werkwoord: de klinker verandert al. Komt er bij 'hij' in de verleden tijd dan nog een -t achter?",
           "Voltooid deelwoord, maar er staat geen \"heeft\" in de zin.",
         ],
         uitlegPad: {

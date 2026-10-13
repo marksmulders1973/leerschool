@@ -199,10 +199,10 @@ const steps = [
         wrongHints: [null, "Vader, geen titel.", "Voetbal.", "Wel."],
       },
       {
-        q: "**Meeste medailles** NL ooit?",
-        options: ["Ireen Wüst", "Verstappen", "Cruijff", "Sven Kramer"],
+        q: "Welke Nederlander heeft de **meeste Olympische medailles** ooit gewonnen?",
+        options: ["Ireen Wüst", "Inge de Bruijn", "Epke Zonderland", "Sven Kramer"],
         answer: 0,
-        wrongHints: [null, "F1 wel maar geen OS-medaille.", "Niet.", "Iets minder."],
+        wrongHints: [null, "Zwemster Inge de Bruijn won 8 Olympische medailles. Knap! Toch heeft een schaatser er nog meer gewonnen.", "Turner Epke Zonderland won één Olympische medaille: goud aan de rekstok in 2012. Wie stond veel vaker op het Olympische podium?", "Sven Kramer won 9 Olympische medailles. Dat is veel, maar een andere schaatser won er nog meer."],
       },
     ],
   },

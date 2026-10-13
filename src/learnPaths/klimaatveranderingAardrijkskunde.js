@@ -96,10 +96,10 @@ const steps = [
         },
       },
       {
-        q: "Hoe weten we **historisch klimaat**?",
-        options: ["IJskernen, boomringen en koraal", "Satellieten, weerballonnen en radar", "Weerstations, thermometers en regenmeters", "Kronieken, scheepslogboeken en rotstekeningen"],
+        q: "Hoe weten we hoe het **klimaat duizenden jaren geleden** was?",
+        options: ["IJskernen, boomringen en koraal", "Satellieten, weerballonnen en radar", "Weerstations, thermometers en regenmeters", "Weermodellen, supercomputers en simulaties"],
         answer: 0,
-        wrongHints: [null, "Satellieten meten pas sinds de jaren 1970. Hoe kijk je honderdduizenden jaren terug?", "Weerstations met thermometers meten pas zo'n 150 tot 300 jaar. Hoe kijk je nog veel verder terug?", "Geschreven bronnen en tekeningen gaan hooguit een paar duizend jaar terug, en meten geen temperatuur. Welke natuurlijke 'archieven' groeien elk jaar een laagje aan?"],
+        wrongHints: [null, "Weersatellieten bestaan pas sinds ongeveer 1960. Hoe kijk je duizenden jaren terug?", "Thermometers bestaan pas zo'n 350 jaar en weerstations nog korter. Hoe kijk je nog veel verder terug?", "Een computermodel rekent, maar meet niets uit het verleden. Welke natuurlijke 'archieven' groeien elk jaar een laagje aan?"],
       },
     ],
   },
