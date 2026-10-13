@@ -245,7 +245,7 @@ const steps = [
         q: "Wat is een **understatement**?",
         options: ["Bewust afzwakken","Bewust overdrijven","Vraag stellen","Beeldspraak"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is hyperbool.", "Niet — dat is retorische vraag.", "Niet — dat is metafoor."],
+        wrongHints: [null, "Bewust overdrijven heet een hyperbool. Wat betekent 'under' in understatement?", "Een vraag waarop je geen antwoord verwacht, heet een retorische vraag. Waar gaat een understatement over?", "Beeldspraak is een metafoor of vergelijking. Wat betekent 'under' in understatement?"],
         uitlegPad: {
           stappen: [{ titel: "Understatement = onderbenadrukking", tekst: "**Understatement** = bewust afzwakken. 'Niet onaardig' = heel aardig. 'Het regent een beetje' (terwijl 't plenst). Engels: 'It's a bit chilly' (bij −20°C). Vaak ironisch effect." }],
           theorie: "Britse humor-favoriet. Tegenovergesteld van hyperbool.",
@@ -256,7 +256,7 @@ const steps = [
         q: "Tijdens een regenstorm zegt iemand: *'Wat een geweldig weer!'* Welk stijlmiddel?",
         options: ["Ironie","Hyperbool","Metafoor","Vergelijking"],
         answer: 0,
-        wrongHints: [null, "Niet — geen overdrijving.", "Niet — geen beeldspraak.", "Niet — geen 'als'."],
+        wrongHints: [null, "Een hyperbool overdrijft. Past 'geweldig' bij een regenstorm, of bedoelt de spreker iets anders?", "Een metafoor gebruikt een beeld. Welk beeld zie je in 'geweldig weer'?", "Een vergelijking gebruikt 'als' of 'zoals'. Staat dat woord hier?"],
         uitlegPad: {
           stappen: [{ titel: "Ironie = tegenovergestelde bedoeling", tekst: "**Ironie**: spreker zegt A, bedoelt **tegenovergestelde**. 'Geweldig weer' bij regenstorm betekent juist 'verschrikkelijk weer'. Lezer/luisteraar herkent contradictie." }],
           theorie: "Toets-favoriet: ironie herkennen in tekst — kijk naar context. Past gezegde bij situatie? Zo nee → mogelijk ironisch.",
@@ -285,9 +285,9 @@ const steps = [
     checks: [
       {
         q: "*'Alle moderne muziek is vreselijk, want dat zegt mijn opa.'* — drogreden:",
-        options: ["Autoriteits-misbruik + generalisatie","Vals dilemma + stroman","Hellend vlak + cirkelredenering","Geldig autoriteitsargument"],
+        options: ["Autoriteits-misbruik + generalisatie","Vals dilemma + persoonlijke aanval","Hellend vlak + cirkelredenering","Geldig autoriteitsargument"],
         answer: 0,
-        wrongHints: [null, "Niet — er is geen of-of-keuze en er wordt niets verdraaid.", "Niet — er volgt geen kettingreactie en de conclusie herhaalt zichzelf niet.", "Niet — zou jij dit als bewijs accepteren?"],
+        wrongHints: [null, "Er wordt geen of-of-keuze gegeven en niemand wordt persoonlijk aangevallen. Wie wordt hier als bron opgevoerd?", "Er volgt geen kettingreactie en de conclusie herhaalt zichzelf niet. Kijk naar het woord 'alle' en naar de bron.", "Is een opa deskundig op het gebied van moderne muziek? Wanneer is een beroep op iemand terecht?"],
         uitlegPad: {
           stappen: [{ titel: "Dubbel: opa + alle", tekst: "**Twee drogredenen**: (1) opa is geen muziek-expert → autoriteits-misbruik. (2) 'Alle moderne muziek' → generalisatie. Combinatie maakt argument extra zwak." }],
           niveaus: { basis: "Autoriteit + generalisatie.", simpeler: "Opa + alle = twee drogredenen", nogSimpeler: "Drogreden" },
@@ -297,7 +297,7 @@ const steps = [
         q: "Welke tekstsoort: *artikel waarin schrijver verschillende kanten van AI-gebruik in scholen belicht zonder eindstandpunt*?",
         options: ["Beschouwing","Betoog","Uiteenzetting","Verhaal"],
         answer: 0,
-        wrongHints: [null, "Niet — geen duidelijke mening.", "Niet — meer dan alleen feiten.", "Niet — geen fictie."],
+        wrongHints: [null, "In een betoog kiest de schrijver één standpunt. Doet deze schrijver dat?", "Een uiteenzetting legt uit hoe iets zit. Wat doet deze schrijver met de verschillende kanten?", "Een verhaal is fictie. Is dit artikel verzonnen?"],
         uitlegPad: {
           stappen: [{ titel: "Verschillende kanten = beschouwing", tekst: "**Beschouwing** = belicht meerdere perspectieven zonder definitieve conclusie. Schrijver weegt af, soms met lichte voorkeur, vaak open einde." }],
           niveaus: { basis: "Beschouwing.", simpeler: "Verschillende kanten = beschouwing", nogSimpeler: "Beschouwing" },
