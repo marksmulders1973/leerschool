@@ -69,9 +69,9 @@ const steps = [
     checks: [
       {
         q: "Wat is de **eerste stap** bij een CSE-tekst?",
-        options: ["Skimmen: titel, eerste alinea en plaatjes", "Meteen beginnen bij vraag 1", "De hele tekst woord voor woord lezen", "Eerst het slot van de tekst lezen"],
+        options: ["Skimmen: titel, eerste alinea en plaatjes", "Meteen vraag 1 lezen en het antwoord opzoeken", "Woord voor woord lezen en lastige woorden onderstrepen", "Eerst de conclusie in de laatste alinea lezen"],
         answer: 0,
-        wrongHints: [null, "Zonder dat je weet waar de tekst over gaat, maak je snel fouten. Hoe krijg je eerst overzicht?", "Woord voor woord kost veel tijd. Hoe krijg je eerst snel overzicht?", "Het slot is belangrijk, maar dan mis je het begin en de opbouw. Hoe krijg je overzicht over de hele tekst?"],
+        wrongHints: [null, "Zonder dat je weet waar de tekst over gaat, zoek je je snel vast. Wat heb je nodig vóór je aan vraag 1 begint?", "Grondig lezen kost veel tijd, en de vragen vragen niet naar elk woord. Wat heb je eerst nodig?", "Het slot is belangrijk, maar dan mis je het begin en de opbouw. Wat heb je nodig over de hele tekst?"],
       },
       {
         q: "Welk signaalwoord = **tegenstelling**?",
@@ -87,9 +87,9 @@ const steps = [
       },
       {
         q: "Wat doe je met **een lastige vraag** op CSE?",
-        options: ["Overslaan + later terugkomen", "Doorwerken tot je hem toch snapt", "Meteen het meest logische antwoord gokken", "Overslaan en de vraag laten zitten"],
+        options: ["Overslaan en er later op terugkomen", "Doorwerken tot je hem toch snapt", "Eerst de hele tekst opnieuw lezen", "Je eerste ingeving invullen en doorgaan"],
         answer: 0,
-        wrongHints: [null, "Zo verlies je kostbare tijd voor de andere vragen. Wat kun je beter doen?", "Gokken kan aan het eind nog. Wat levert het op om eerst verder te gaan?", "Overslaan is slim, maar een open vraag levert nul punten op. Wat doe je aan het eind?"],
+        wrongHints: [null, "Zo verlies je kostbare tijd voor de andere vragen. Hoeveel tijd blijft er dan nog over?", "De hele tekst opnieuw lezen kost veel tijd, terwijl er nog andere vragen wachten. Is dat de beste verdeling van je tijd?", "Bij een lastige vraag is je eerste ingeving vaak een gok. Moet je nu al kiezen, terwijl je nog tijd hebt?"],
       },
     ],
   },
@@ -108,21 +108,21 @@ const steps = [
       },
       {
         q: "*'Volgens de tekst, ___'* Wat doe je?",
-        options: ["Zoek het op in de tekst", "Gebruik je eigen kennis", "Kies wat het logischst klinkt", "Leid het af uit de titel"],
+        options: ["Zoek de passage waar het staat", "Vul het aan met je eigen kennis", "Kies wat het meest logisch klinkt", "Leid het af uit titel en kopjes"],
         answer: 0,
-        wrongHints: [null, "Je eigen kennis kan afwijken van wat de schrijver beweert. Waar moet het antwoord vandaan komen?", "Wat logisch klinkt, hoeft niet in de tekst te staan. Wat vraagt 'volgens de tekst' van je?", "De titel noemt vaak alleen het onderwerp. Staat het antwoord daar al?"],
+        wrongHints: [null, "Je eigen kennis kan afwijken van wat de schrijver beweert. Waar moet het antwoord vandaan komen?", "Wat logisch klinkt, hoeft niet in de tekst te staan. Wat vraagt 'volgens de tekst' van je?", "Titel en kopjes noemen vaak alleen het onderwerp. Staat het antwoord daar al?"],
       },
       {
         q: "Tekst over bijen: 'Bijen zijn vitaal. Ze bestuiven 90%. We moeten ze beschermen.' Hoofdgedachte?",
-        options: ["Bijen zijn vitaal en moeten worden beschermd", "Bijen bestuiven 90% van de gewassen", "Bijen sterven in hoog tempo uit", "Pesticiden zijn slecht voor bijen"],
+        options: ["Bijen zijn vitaal en moeten worden beschermd", "Bijen bestuiven 90% van de gewassen", "Bijen zijn vitaal omdat ze 90% bestuiven", "Bijen moeten beschermd worden tegen pesticiden"],
         answer: 0,
-        wrongHints: [null, "Dat getal ondersteunt de boodschap. Is het de kern van de hele tekst, of een detail?", "Staat dit eigenlijk in de tekst? Een hoofdgedachte haal je uit de tekst zelf.", "Over pesticiden zegt deze tekst niets. Wat zegt de tekst als geheel?"],
+        wrongHints: [null, "Dat getal ondersteunt de boodschap. Is het de kern van de hele tekst, of een detail?", "Dit noemt het belang van bijen en de reden. Wat vraagt de schrijver in de laatste zin van de lezer, en staat dat hier ook in?", "Over pesticiden zegt deze tekst niets. Een hoofdgedachte haal je uit de tekst zelf."],
       },
       {
         q: "Welk antwoord is **te specifiek** voor 'hoofdgedachte'?",
-        options: ["Een getal of los voorbeeld", "De algemene boodschap", "Wat in de titel staat", "De conclusie aan het eind"],
+        options: ["Eén cijfer uit de derde alinea", "De conclusie uit de laatste alinea", "De kern uit inleiding en slot samen", "De boodschap die elke alinea draagt"],
         answer: 0,
-        wrongHints: [null, "Een hoofdgedachte ís de algemene boodschap. Welke optie gaat maar over één klein onderdeel?", "De titel geeft vaak al de kern weer. Welke optie is te klein om de hele tekst samen te vatten?", "In de conclusie staat vaak de hoofdgedachte. Welke optie gaat maar over één klein onderdeel?"],
+        wrongHints: [null, "In de conclusie aan het eind staat vaak de hoofdgedachte. Is dat te specifiek, of gaat het over de hele tekst?", "Inleiding en slot samen geven vaak de kern. Is dat te specifiek, of gaat het over de hele tekst?", "Wat in elke alinea terugkomt, gaat over de hele tekst. Is dat te specifiek?"],
       },
     ],
   },
@@ -141,9 +141,9 @@ const steps = [
       },
       {
         q: "Wat is **'dit'** in *'Het regende. De weg was glad. **Dit** veroorzaakte ongelukken.'*?",
-        options: ["Regen plus gladde weg", "De regen van die dag", "De gladheid van de weg", "De ongelukken op de weg"],
+        options: ["Regen plus gladde weg", "De regen van die dag", "De weg waar het gebeurde", "De ongelukken op de weg"],
         answer: 0,
-        wrongHints: [null, "Kijk naar beide zinnen vóór 'dit'. Gaat 'dit' over één zin, of over meer?", "Dat staat vlak voor 'dit', maar waardoor werd de weg glad? Hoort dat er ook bij?", "De ongelukken zijn wat 'dit' veroorzaakte. Kan iets zichzelf veroorzaken?"],
+        wrongHints: [null, "Kijk naar beide zinnen vóór 'dit'. Gaat 'dit' over één zin, of over meer?", "Verwijst 'dit' naar een ding, zoals de weg zelf, of naar wat er gebeurde? Een weg die er gewoon ligt, veroorzaakt geen ongelukken.", "De ongelukken zijn wat 'dit' veroorzaakte. Kan iets zichzelf veroorzaken?"],
         uitlegPad: {
           stappen: [
             { titel: "'Dit' kijkt terug", tekst: "Het woord 'dit' verwijst naar wat erVOOR staat. Hier staan 2 zinnen vóór: regen + gladde weg. Beide samen zijn de oorzaak van de ongelukken." },
@@ -200,9 +200,9 @@ const steps = [
       },
       {
         q: "Wat is een **tegenwerping**?",
-        options: ["Argument tegen de stelling", "Argument voor de stelling", "Herhaling van de stelling", "Samenvatting van de tekst"],
+        options: ["Bezwaar dat een ander kan inbrengen", "Reden die de stelling direct steunt", "Reden die een ander argument steunt", "Weerlegging van een bezwaar van de ander"],
         answer: 0,
-        wrongHints: [null, "Een argument vóór de stelling ondersteunt die juist. Waar wijst 'tegen-' in tegenwerping op?", "Een herhaling voegt geen nieuwe reden toe. Waar wijst 'tegen-' in tegenwerping op?", "Een samenvatting voegt geen nieuwe reden toe."],
+        wrongHints: [null, "Een reden die de stelling direct steunt, is een hoofdargument. Van wie komt een tegenwerping?", "Een reden die een ander argument steunt, is een subargument. Van wie komt een tegenwerping?", "Een weerlegging is jouw antwoord op een bezwaar. Wat brengt de ander dan eerst in?"],
       },
     ],
   },
@@ -227,9 +227,9 @@ const steps = [
       },
       {
         q: "Een **column** met humor + mening — bedoeling?",
-        options: ["Amuseren + overtuigen", "Informeren + beschrijven", "Activeren + informeren", "Amuseren + beschrijven"],
+        options: ["Amuseren + overtuigen", "Overtuigen + informeren", "Amuseren + activeren", "Amuseren + beschrijven"],
         answer: 0,
-        wrongHints: [null, "Informeren en beschrijven = neutraal feiten geven. Maar deze schrijver laat óók zijn mening horen en maakt het grappig.", "Activeren = de lezer tot actie aanzetten. Roept een humoristische mening-column je echt op om iets te dóén?", "Beschrijven = neutraal weergeven zonder oordeel. Past dat bij een tekst met een eigen mening?"],
+        wrongHints: [null, "Informeren = neutraal feiten geven. Past dat bij een column vol humor?", "Activeren = de lezer tot een concrete actie aanzetten, zoals bij een oproep of reclame. Staat er in een column meestal zo'n oproep?", "Beschrijven = neutraal weergeven zonder oordeel. Past dat bij een tekst met een eigen mening?"],
       },
       {
         q: "*'Iedereen zou vegetariër moeten worden, omdat ...'* Welke bedoeling?",
@@ -260,9 +260,9 @@ const steps = [
       },
       {
         q: "Wat is **hoofdgedachte** typisch?",
-        options: ["Algemene boodschap van hele tekst", "Een specifiek getal uit de tekst", "Eén zin uit de tweede alinea", "Het bijschrift bij een foto"],
+        options: ["De belangrijkste boodschap van de tekst", "Het onderwerp waar de hele tekst over gaat", "De eerste zin van de eerste alinea", "De vraag die de titel aan de lezer stelt"],
         answer: 0,
-        wrongHints: [null, "Een getal is een detail. Gaat de hoofdgedachte over één detail?", "Eén zin uit het midden is meestal een detail. Wat zegt de hele tekst?", "Een bijschrift hoort bij de foto. Gaat dat over de hele tekst?"],
+        wrongHints: [null, "Het onderwerp is waar de tekst óver gaat, zoals 'bijen'. Zegt dat al wat de schrijver erover beweert?", "De eerste zin is vaak een aandachtstrekker of aanleiding. Staat de kern daar altijd?", "Een vraag in de titel maakt nieuwsgierig. Is een vraag al een boodschap?"],
       },
       {
         q: "Schrijver gebruikt **'Volgens hoogleraar Jansen van de TU Delft ...'**. Welk argument-type?",

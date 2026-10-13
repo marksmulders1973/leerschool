@@ -101,13 +101,13 @@ const steps = [
     checks: [
       {
         q: "Wat is de verleden tijd (V2) van **walk** (regelmatig werkwoord)?",
-        options: ["walked", "walk", "walken", "wolken"],
+        options: ["walked", "walks", "walkt", "walking"],
         answer: 0,
         wrongHints: [
           null,
-          "Dat is V1 (infinitive) — verleden tijd is anders.",
-          "Geen Engelse vorm — let op de uitgang.",
-          "Dat is een Nederlands woord, geen vorm van walk.",
+          "Dat is tegenwoordige tijd: he walks. Hoe maak je er verleden tijd van?",
+          "De Nederlandse uitgang -t werkt in het Engels niet. Welke uitgang krijgt een regelmatig werkwoord in de verleden tijd?",
+          "Dat is de -ing-vorm (I am walking). Welke vorm hoort bij de verleden tijd?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Regelmatig +ed", tekst: "walk + ed = walked." }],
@@ -124,7 +124,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dat is geen Engelse vorm.",
+          "Go is onregelmatig. Krijgt het dan -ed?",
           "Dat is V3 (past participle), gebruikt na 'have/had'.",
           "Dat is een -ing vorm, niet verleden tijd.",
         ],
@@ -149,14 +149,14 @@ const steps = [
         options: [
           "Na have/has/had",
           "Bij tegenwoordige tijd",
-          "Als basisvorm",
+          "Na did in een vraag",
           "Na will/can/must",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Tegenwoordige tijd = V1 (+ s).",
-          "Basisvorm is V1.",
+          "In de tegenwoordige tijd gebruik je V1 (+ s): he walks. Wanneer komt V3?",
+          "Na did volgt V1: Did you go? Na welk hulpwerkwoord komt V3?",
           "Bij will/can/must volgt V1, niet V3.",
         ],
         uitlegPad: {
@@ -198,12 +198,12 @@ const steps = [
     checks: [
       {
         q: "Wat is de V2 van **cut**?",
-        options: ["cut", "cutted", "cat", "cuts"],
+        options: ["cut", "cutted", "cutting", "cuts"],
         answer: 0,
         wrongHints: [
           null,
           "'cut' is onregelmatig — geen -ed.",
-          "Let op: dit is een ander woord (= kat), geen vorm van 'cut'.",
+          "Dat is de -ing-vorm (I am cutting). Welke vorm hoort bij de verleden tijd?",
           "Dat is 3e persoon present (he cuts).",
         ],
         uitlegPad: {
@@ -243,12 +243,12 @@ const steps = [
     checks: [
       {
         q: "Wat is V3 van **buy**?",
-        options: ["bought", "buyed", "buy", "buying"],
+        options: ["bought", "buyed", "brought", "buying"],
         answer: 0,
         wrongHints: [
           null,
           "buy is onregelmatig — geen -ed.",
-          "V3 ≠ V1 hier.",
+          "Brought hoort bij bring (brengen). Welke vorm hoort bij buy (kopen)?",
           "Dat is -ing vorm, niet V3.",
         ],
         uitlegPad: {
@@ -290,9 +290,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Onregelmatig — geen -ed.",
-          "Niet correct, V2 = thought.",
-          "V3 is hetzelfde als V2: thought.",
+          "Think is onregelmatig. Past een -ed-uitgang dan?",
+          "Think volgt niet het patroon van drink — drank — drunk. Welk ander patroon ken je met -ought?",
+          "Kijk naar de V3: is die bij think gelijk aan de V2 of anders?",
         ],
         uitlegPad: {
           stappen: [{ titel: "think-thought-thought", tekst: "ABB: V2 = V3 = thought." }],
@@ -318,7 +318,7 @@ const steps = [
           null,
           "Dat is V2 (yesterday I ate).",
           "Dat is V1.",
-          "Eat is onregelmatig.",
+          "Eat is onregelmatig. Past een -ed-uitgang dan?",
         ],
         uitlegPad: {
           stappen: [{ titel: "eat-ate-eaten", tekst: "V3 = eaten (-en aan het eind)." }],
@@ -335,14 +335,14 @@ const steps = [
           "drink — drank — drunk",
           "drink — drinked — drunk",
           "drink — drunk — drank",
-          "drink — drank — drinken",
+          "drink — drank — drank",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Onregelmatig — geen -ed.",
           "Volgorde fout — eerst V2 (drank), dan V3 (drunk).",
-          "Geen Engels.",
+          "Bij drink zijn V2 en V3 niet gelijk. Welke klinker krijgt de V3?",
         ],
         uitlegPad: {
           stappen: [{ titel: "drink-drank-drunk", tekst: "i → a → u patroon." }],
@@ -364,12 +364,12 @@ const steps = [
     checks: [
       {
         q: "Wat is V2 van **leave**?",
-        options: ["left", "leaved", "lefted", "leaving"],
+        options: ["left", "leaved", "lived", "leaving"],
         answer: 0,
         wrongHints: [
           null,
           "Onregelmatig — geen -ed.",
-          "Geen Engels.",
+          "Lived hoort bij live (wonen). Leave betekent vertrekken: wat is daarvan de V2?",
           "Dat is -ing vorm.",
         ],
         uitlegPad: {
@@ -409,12 +409,12 @@ const steps = [
     checks: [
       {
         q: "Wat is V2 van **teach**?",
-        options: ["taught", "teached", "teach", "teaching"],
+        options: ["taught", "teached", "thought", "teaching"],
         answer: 0,
         wrongHints: [
           null,
           "Geen -ed — onregelmatig.",
-          "Dat is V1.",
+          "Thought hoort bij think. Welke vorm hoort bij teach?",
           "Dat is -ing vorm.",
         ],
         uitlegPad: {
@@ -471,8 +471,8 @@ const steps = [
         wrongHints: [
           null,
           "Onregelmatig — geen -ed.",
-          "Volgorde fout: i-a-u patroon.",
-          "V3 ≠ V2 hier.",
+          "Swom bestaat niet. Denk aan drink — drank — drunk: welke klinkers volgen daar op de i?",
+          "Bij swim zijn V2 en V3 niet gelijk. Welke klinker krijgt de V3?",
         ],
         uitlegPad: {
           stappen: [{ titel: "swim-swam-swum", tekst: "i → a → u patroon." }],
@@ -595,7 +595,7 @@ const steps = [
           null,
           "Past simple V2 — maar 'have' vereist V3.",
           "V1 — past niet na 'have'.",
-          "-ing vorm voor 'be seeing'.",
+          "Na have gebruik je geen -ing-vorm. Welke vorm komt na have?",
         ],
         uitlegPad: {
           stappen: [{ titel: "have seen", tekst: "see-saw-seen. Na have → V3 = seen." }],
@@ -614,7 +614,7 @@ const steps = [
           null,
           "V3 — vereist have/had.",
           "Onregelmatig — geen -ed.",
-          "Dat is present.",
+          "Dat is tegenwoordige tijd (he breaks). Welke tijd vraagt 'last week'?",
         ],
         uitlegPad: {
           stappen: [{ titel: "break-broke-broken", tekst: "Last week → V2 = broke." }],
@@ -627,13 +627,13 @@ const steps = [
       },
       { q: "Yesterday I _____ (run) to school.", options: ["ran","runned","run","running"], answer: 0, wrongHints: [null,"Niet — 'run' is onregelmatig, geen +ed.","Dat is V1 — verleden tijd nodig.","-ing gebruik je bij continuous."] },
       { q: "She has _____ (eat) all the cookies.", options: ["eaten","ate","eated","eating"], answer: 0, wrongHints: [null,"Dat is V2 — na 'has' gebruik je V3.","Onregelmatig — geen +ed.","-ing is continuous."] },
-      { q: "**V2 van 'go'** =?", options: ["went","goed","gone","goes"], answer: 0, wrongHints: [null,"Onregelmatig.","Dat is V3.","Tegenwoordige tijd, 3e persoon."] },
-      { q: "**V2 van 'see'** =?", options: ["saw","seed","seen","sees"], answer: 0, wrongHints: [null,"Onregelmatig.","V3.","Present 3e."] },
-      { q: "**V2 van 'take'** =?", options: ["took","taked","taken","takes"], answer: 0, wrongHints: [null,"Onregelmatig.","V3.","Present 3e."] },
-      { q: "**V2 van 'do'** =?", options: ["did","done","doed","does"], answer: 0, wrongHints: [null,"V3.","Onregelmatig.","Present 3e."] },
-      { q: "**V2 van 'make'** =?", options: ["made","maked","makes","making"], answer: 0, wrongHints: [null,"Onregelmatig.","Present 3e.","-ing."] },
-      { q: "**V2 van 'give'** =?", options: ["gave","given","gived","gives"], answer: 0, wrongHints: [null,"V3.","Onregelmatig.","Present 3e."] },
-      { q: "**V2 van 'come'** =?", options: ["came","comed","come","coming"], answer: 0, wrongHints: [null,"Onregelmatig.","V1.","-ing."] },
+      { q: "**V2 van 'go'** =?", options: ["went","goed","gone","goes"], answer: 0, wrongHints: [null,"Go is onregelmatig. Past -ed er dan achter?","Gone is V3 en komt na have/has. Welke vorm gebruik je zonder have?","Goes is tegenwoordige tijd (he goes). Welke vorm hoort bij gisteren?"] },
+      { q: "**V2 van 'see'** =?", options: ["saw","seed","seen","sees"], answer: 0, wrongHints: [null,"See is onregelmatig. Past -ed er dan achter?","Seen is V3 (I have seen). Welke vorm gebruik je zonder have?","Sees is tegenwoordige tijd (she sees). Welke vorm hoort bij gisteren?"] },
+      { q: "**V2 van 'take'** =?", options: ["took","taked","taken","takes"], answer: 0, wrongHints: [null,"Take is onregelmatig. Past -ed er dan achter?","Taken is V3 (I have taken). Welke vorm gebruik je zonder have?","Takes is tegenwoordige tijd (he takes). Welke vorm hoort bij gisteren?"] },
+      { q: "**V2 van 'do'** =?", options: ["did","done","doed","does"], answer: 0, wrongHints: [null,"Done is V3 (I have done). Welke vorm gebruik je zonder have?","Do is onregelmatig. Past -ed er dan achter?","Does is tegenwoordige tijd (she does). Welke vorm hoort bij gisteren?"] },
+      { q: "**V2 van 'make'** =?", options: ["made","maked","makes","making"], answer: 0, wrongHints: [null,"Make is onregelmatig. Past -ed er dan achter?","Makes is tegenwoordige tijd (he makes). Welke vorm hoort bij gisteren?","Making is de -ing-vorm (I am making). Welke vorm hoort bij de verleden tijd?"] },
+      { q: "**V2 van 'give'** =?", options: ["gave","given","gived","gives"], answer: 0, wrongHints: [null,"Given is V3 (I have given). Welke vorm gebruik je zonder have?","Give is onregelmatig. Past -ed er dan achter?","Gives is tegenwoordige tijd (she gives). Welke vorm hoort bij gisteren?"] },
+      { q: "**V2 van 'come'** =?", options: ["came","comed","come","coming"], answer: 0, wrongHints: [null,"Come is onregelmatig. Past -ed er dan achter?","Come is V1 én V3 (I have come). Welke vorm is de V2?","Coming is de -ing-vorm (I am coming). Welke vorm hoort bij de verleden tijd?"] },
       { q: "**Open vraag**: V2 van 'have'?", kind: "open", acceptedAnswers: ["had"], explanation: "have → had → had (V1/V2/V3)." },
       { q: "**Open vraag**: V2 van 'write'?", kind: "open", acceptedAnswers: ["wrote"], explanation: "write → wrote → written." },
     ],
